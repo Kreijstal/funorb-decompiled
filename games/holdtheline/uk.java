@@ -26,20 +26,20 @@ final class uk extends IOException {
         int var3Lifetime1;
         var4 = HoldTheLine.field_D;
         try {
-          SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
-          SoftwareRasterizer.f(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (TriangleMesh.field_y == null) {
             if (null != GzipDecompressor.field_e) {
-              GzipDecompressor.field_e.a(MarkerSliderRenderer.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              GzipDecompressor.field_e.drawParagraph(MarkerSliderRenderer.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = TriangleMesh.field_y[SpriteSheetAsset.field_e];
           if (var6 != null) {
-            var6.a(245, 199);
+            var6.draw(245, 199);
           } else {
             if (GzipDecompressor.field_e != null) {
-              GzipDecompressor.field_e.a(MarkerSliderRenderer.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              GzipDecompressor.field_e.drawParagraph(MarkerSliderRenderer.field_f, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (param0 != 3979) {
@@ -48,12 +48,12 @@ final class uk extends IOException {
           if (hk.field_e < BoundedRandomAccessFile.field_g) {
             var7 = TriangleMesh.field_y[ProxySocketConnector.field_i];
             if (var7 != null) {
-              var2_int = hk.field_e * (60 + var7.field_o) / BoundedRandomAccessFile.field_g;
+              var2_int = hk.field_e * (60 + var7.canvasWidth) / BoundedRandomAccessFile.field_g;
               var3 = var2_int - 30;
               if (DualNodeHashTable.field_e) {
-                jg.a(199, 256 * (-var3 + var7.field_o) / 30, var7, true, 245, var3 * -256 / 30);
+                jg.a(199, 256 * (-var3 + var7.canvasWidth) / 30, var7, true, 245, var3 * -256 / 30);
               } else {
-                jg.a(199, -256 * var3 / 30, var7, true, 245, (var7.field_o - var3) * 256 / 30);
+                jg.a(199, -256 * var3 / 30, var7, true, 245, (var7.canvasWidth - var3) * 256 / 30);
               }
             }
           }
@@ -63,8 +63,8 @@ final class uk extends IOException {
             var3Lifetime1 = var5;
             while (var5 < TriangleMesh.field_y.length) {
               var8 = TriangleMesh.field_y[var5];
-              if (var8 != null && (var8.field_o != 365 ||
-                139 != var8.field_v)) {
+              if (var8 != null && (var8.canvasWidth != 365 ||
+                139 != var8.canvasHeight)) {
                 if (var2 != null) {
                   var2 = (String) (var2) + ", " + var5;
                 } else {
@@ -76,7 +76,7 @@ final class uk extends IOException {
             if (var2 == null) {
               return;
             }
-            GzipDecompressor.field_e.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            GzipDecompressor.field_e.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             return;
           }
           return;

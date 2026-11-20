@@ -14,7 +14,7 @@ final class RotatedSpriteSheetAsset {
         int var1 = 80 % ((param0 - 73) / 32);
     }
 
-    final static int a(byte param0, vk param1) {
+    final static int a(byte param0, CourseDefinition param1) {
         int var4 = 0;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -27,7 +27,7 @@ final class RotatedSpriteSheetAsset {
         RuntimeException var2 = null;
         int var3 = 0;
         int var5 = 0;
-        vk var6 = null;
+        CourseDefinition var6 = null;
         var5 = HoldTheLine.field_D;
         try {
           if (param1.field_r) {
@@ -39,8 +39,8 @@ final class RotatedSpriteSheetAsset {
             return stackIn_8_0;
           }
           if (param0 < 6) {
-            var6 = (vk) null;
-            RotatedSpriteSheetAsset.a((byte) 14, (vk) null);
+            var6 = (CourseDefinition) null;
+            RotatedSpriteSheetAsset.a((byte) 14, (CourseDefinition) null);
           }
           var2_int = 0;
           if (0 != param1.field_o) {
@@ -72,7 +72,7 @@ final class RotatedSpriteSheetAsset {
                         }
                       }
                     } else {
-                      if (ha.field_i.isLoaded((byte) 10)) {
+                      if (BoundaryIntersection.field_i.isLoaded((byte) 10)) {
                         var2_int += 16;
                       }
                       if (kc.field_b.isLoaded((byte) 10)) {
@@ -83,7 +83,7 @@ final class RotatedSpriteSheetAsset {
                     if (MarkerSliderRenderer.field_b.isLoaded((byte) 10)) {
                       var2_int += 16;
                     }
-                    if (ha.field_i.isLoaded((byte) 10)) {
+                    if (BoundaryIntersection.field_i.isLoaded((byte) 10)) {
                       var2_int += 16;
                     }
                   }

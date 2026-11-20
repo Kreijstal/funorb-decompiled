@@ -180,8 +180,8 @@ final class StraightRoadSegment extends RoadSegment {
         int var6 = 0;
         String var7 = null;
         try {
-          Bzip2State.field_x[0] = ha.field_n.nextInt();
-          Bzip2State.field_x[1] = ha.field_n.nextInt();
+          Bzip2State.field_x[0] = BoundaryIntersection.field_n.nextInt();
+          Bzip2State.field_x[1] = BoundaryIntersection.field_n.nextInt();
           SecondaryNodeDequeIterator.field_a.position = 0;
           Bzip2State.field_x[2] = (int)(DialogLayer.field_H >> 32);
           Bzip2State.field_x[3] = (int)DialogLayer.field_H;
@@ -262,27 +262,27 @@ final class StraightRoadSegment extends RoadSegment {
         int var9 = 0;
         var9 = HoldTheLine.field_D;
         try {
-          var5_int = param3 + (param1 * SoftwareRasterizer.field_j - 1);
+          var5_int = param3 + (param1 * SoftwareRasterizer.width - 1);
           var6 = 0;
           if (param0 != 7090) {
             return;
           }
-          for (var7 = param2.field_y; var7 > 0; var7--) {
-            for (var8 = param2.field_s; var8 > 0; var8--) {
-              if (param2.field_z[var6] != 0) {
-                if (param2.field_z[var6] == 16777215) {
+          for (var7 = param2.height; var7 > 0; var7--) {
+            for (var8 = param2.width; var8 > 0; var8--) {
+              if (param2.pixels[var6] != 0) {
+                if (param2.pixels[var6] == 16777215) {
                   var5_int++;
-                  SoftwareRasterizer.field_b[var5_int] = param4;
+                  SoftwareRasterizer.pixels[var5_int] = param4;
                 } else {
                   var5_int++;
-                  SoftwareRasterizer.field_b[var5_int] = param2.field_z[var6];
+                  SoftwareRasterizer.pixels[var5_int] = param2.pixels[var6];
                 }
               } else {
                 var5_int++;
               }
               var6++;
             }
-            var5_int = var5_int + (SoftwareRasterizer.field_j - param2.field_s);
+            var5_int = var5_int + (SoftwareRasterizer.width - param2.width);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -305,7 +305,7 @@ final class StraightRoadSegment extends RoadSegment {
           byte[] var6 = (byte[]) null;
           StraightRoadSegment.a((byte) -63, (byte[]) null);
         }
-        gh.field_i = param0;
+        ViewportSizingController.field_i = param0;
         ClientTextResources.field_b = param1;
         TickClock.field_b = param2;
     }

@@ -122,57 +122,57 @@ final class eg {
           ByteStorage.field_b == -1) {
           var1 = 256;
         }
-        if (var1 > ga.field_o) {
-          ga.field_o = ga.field_o + 2;
-          if (var1 < ga.field_o) {
-            ga.field_o = var1;
+        if (var1 > UiTheme.field_o) {
+          UiTheme.field_o = UiTheme.field_o + 2;
+          if (var1 < UiTheme.field_o) {
+            UiTheme.field_o = var1;
           }
         } else {
-          if (var1 < ga.field_o) {
-            ga.field_o = ga.field_o - 2;
-            if (ga.field_o < var1) {
-              ga.field_o = var1;
+          if (var1 < UiTheme.field_o) {
+            UiTheme.field_o = UiTheme.field_o - 2;
+            if (UiTheme.field_o < var1) {
+              UiTheme.field_o = var1;
             }
           }
         }
         if (BufferedRandomAccessFile.field_d == 1) {
           SecondaryNodeDequeIterator.a(0);
-          if (ga.field_o != 256) {
-            if (ga.field_o == 128) {
-              SoftwareRasterizer.f(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c);
+          if (UiTheme.field_o != 256) {
+            if (UiTheme.field_o == 128) {
+              SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             } else {
-              ue.a(8911, ga.field_o);
+              ue.a(8911, UiTheme.field_o);
             }
           }
           if (ma.field_k != 1) {
             var6 = o.a(ma.field_k, 2);
             if (var6 != null) {
-              var6.d(0, 0, (MouseInputHandler.field_c << 8) / 80);
+              var6.drawAlpha(0, 0, (MouseInputHandler.field_c << 8) / 80);
             }
           }
         } else {
           if (ma.field_k == 1) {
             SecondaryNodeDequeIterator.a(0);
-            if (ga.field_o != 256) {
-              if (ga.field_o != 128) {
-                ue.a(8911, ga.field_o);
+            if (UiTheme.field_o != 256) {
+              if (UiTheme.field_o != 128) {
+                ue.a(8911, UiTheme.field_o);
                 var2 = o.a(BufferedRandomAccessFile.field_d, 2);
-                var2.d(0, 0, 256 - (MouseInputHandler.field_c << 8) / 80);
+                var2.drawAlpha(0, 0, 256 - (MouseInputHandler.field_c << 8) / 80);
               } else {
-                SoftwareRasterizer.f(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c);
+                SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                 var2 = o.a(BufferedRandomAccessFile.field_d, 2);
-                var2.d(0, 0, 256 - (MouseInputHandler.field_c << 8) / 80);
+                var2.drawAlpha(0, 0, 256 - (MouseInputHandler.field_c << 8) / 80);
               }
             } else {
               var2 = o.a(BufferedRandomAccessFile.field_d, 2);
-              var2.d(0, 0, 256 - (MouseInputHandler.field_c << 8) / 80);
+              var2.drawAlpha(0, 0, 256 - (MouseInputHandler.field_c << 8) / 80);
             }
           } else {
-            o.a(BufferedRandomAccessFile.field_d, 2).b(0, 0);
+            o.a(BufferedRandomAccessFile.field_d, 2).drawUnkeyed(0, 0);
             if (BufferedRandomAccessFile.field_d != ma.field_k) {
               var5 = o.a(ma.field_k, 2);
               if (var5 != null) {
-                var5.d(0, 0, (MouseInputHandler.field_c << 8) / 80);
+                var5.drawAlpha(0, 0, (MouseInputHandler.field_c << 8) / 80);
               }
             }
           }

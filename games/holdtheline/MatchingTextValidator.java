@@ -157,19 +157,19 @@ final class MatchingTextValidator extends TextFieldValidator {
           field_j = 35;
           if (dg.field_c != 13) {
             if (dg.field_c != -1) {
-              ((ti) (l.field_a[dg.field_c])).i(param2 ^ 3923);
+              ((GameMenu) (l.field_a[dg.field_c])).beginExit(param2 ^ 3923);
             }
             LoginForm.field_G = 1;
             ValidationIndicator.field_L = param1 ? true : false;
             return;
           }
-          ((ec) (l.field_a[dg.field_c])).d((byte) -126);
+          ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -126);
           LoginForm.field_G = 1;
           ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
         if (dg.field_c == 13) {
-          ((ec) (l.field_a[dg.field_c])).d((byte) -126);
+          ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -126);
           LoginForm.field_G = 1;
           ValidationIndicator.field_L = param1 ? true : false;
           return;
@@ -179,7 +179,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           ValidationIndicator.field_L = param1 ? true : false;
           return;
         }
-        ((ti) (l.field_a[dg.field_c])).i(param2 ^ 3923);
+        ((GameMenu) (l.field_a[dg.field_c])).beginExit(param2 ^ 3923);
         LoginForm.field_G = 1;
         ValidationIndicator.field_L = param1 ? true : false;
     }

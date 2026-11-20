@@ -100,7 +100,7 @@ class EditableTextField extends TextButton {
           if (!(this.renderer instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((TextWidgetRenderer) ((Object) this.renderer)).characterAtPoint(param2, (byte) 76, NodeHashTableIterator.field_g, param0, (UiWidget) (this), rf.field_X);
+          var8_int = ((TextWidgetRenderer) ((Object) this.renderer)).characterAtPoint(param2, (byte) 76, NodeHashTableIterator.field_g, param0, (UiWidget) (this), FullscreenErrorDialog.field_X);
           stackIn_6_1 = -31523;
           if (var8_int != -1) {
             stackIn_7_2 = var8_int;
@@ -145,7 +145,7 @@ class EditableTextField extends TextButton {
           if (this.pressedButton == 1) {
             if (this.renderer instanceof TextWidgetRenderer) {
               var5 = (TextWidgetRenderer) ((Object) this.renderer);
-              var6 = var5.characterAtPoint(param2, (byte) 110, NodeHashTableIterator.field_g, param0, (UiWidget) (this), rf.field_X);
+              var6 = var5.characterAtPoint(param2, (byte) 110, NodeHashTableIterator.field_g, param0, (UiWidget) (this), FullscreenErrorDialog.field_X);
               if (var6 != -1) {
                 if (this.field_G &&
                   var6 < this.field_Q &&
@@ -235,7 +235,7 @@ class EditableTextField extends TextButton {
         this.field_H = 0L;
         try {
           this.field_N = param2;
-          this.renderer = pc.field_b.field_s;
+          this.renderer = MenuList.field_b.field_s;
           this.a(true, param0, 1471);
           this.field_I = true;
           this.field_P = bb.b(-1);

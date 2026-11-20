@@ -81,8 +81,8 @@ final class ad {
 
     final static void a(byte param0) {
         int var1 = 10 / ((-30 - param0) / 44);
-        if (ra.field_ab != -1) {
-          mn.field_b = SoundCache.field_b << 16 | ra.field_ab;
+        if (LoadProgressDialog.field_ab != -1) {
+          mn.field_b = SoundCache.field_b << 16 | LoadProgressDialog.field_ab;
         } else {
           if (na.field_k) {
             mn.field_b = -1;
@@ -90,7 +90,7 @@ final class ad {
           }
         }
         hm.a((byte) 66, mn.field_b);
-        ra.field_ab = -1;
+        LoadProgressDialog.field_ab = -1;
     }
 
     final static void a(int[] param0, float param1, byte param2, float param3, Sprite param4) {
@@ -138,33 +138,33 @@ final class ad {
               var6 = 0;
             }
             var7 = gf.field_b;
-            if (var7 >= SoftwareRasterizer.field_j) {
-              var7 = -1 + SoftwareRasterizer.field_j;
+            if (var7 >= SoftwareRasterizer.width) {
+              var7 = -1 + SoftwareRasterizer.width;
             }
             var8 = gf.field_a;
             if (var8 < 0) {
               var8 = 0;
             }
-            if (SoftwareRasterizer.field_c <= var8) {
-              var8 = -1 + SoftwareRasterizer.field_c;
+            if (SoftwareRasterizer.height <= var8) {
+              var8 = -1 + SoftwareRasterizer.height;
             }
-            var9 = var6 % param4.field_s;
-            var10 = var8 % param4.field_y;
-            var11 = var8 * SoftwareRasterizer.field_j + var6;
-            var12 = var10 * param4.field_s + var9;
-            var13 = param4.field_s - var9;
+            var9 = var6 % param4.width;
+            var10 = var8 % param4.height;
+            var11 = var8 * SoftwareRasterizer.width + var6;
+            var12 = var10 * param4.width + var9;
+            var13 = param4.width - var9;
             var14 = -var6 + var7;
             while (true) {
               var14--;
               if (0 > var14) {
                 break;
               }
-              var15 = SoftwareRasterizer.field_b[var11] & 16711680;
-              var16 = SoftwareRasterizer.field_b[var11] & 65280;
-              var17 = SoftwareRasterizer.field_b[var11] & 255;
-              var18 = 16711680 & param4.field_z[var12];
-              var19 = 65280 & param4.field_z[var12];
-              var20 = 255 & param4.field_z[var12];
+              var15 = SoftwareRasterizer.pixels[var11] & 16711680;
+              var16 = SoftwareRasterizer.pixels[var11] & 65280;
+              var17 = SoftwareRasterizer.pixels[var11] & 255;
+              var18 = 16711680 & param4.pixels[var12];
+              var19 = 65280 & param4.pixels[var12];
+              var20 = 255 & param4.pixels[var12];
               if (!(param3 < 0.0f)) {
                 var21 = (int)(param3 * 256.0f);
                 var22 = 256 - var21;
@@ -180,15 +180,15 @@ final class ad {
               var21Lifetime1 = (int)(param1 * (float)(-var15 + var18)) + var15;
               var22Lifetime1 = (int)(param1 * (float)(-var16 + var19)) + var16;
               var23 = (int)((float)(-var17 + var20) * param1) + var17;
-              SoftwareRasterizer.field_b[var11] = kc.a(LoginChoicePanel.a(255, var23), kc.a(LoginChoicePanel.a(var22Lifetime1, 65280), LoginChoicePanel.a(var21Lifetime1, 16711680)));
+              SoftwareRasterizer.pixels[var11] = kc.a(LoginChoicePanel.a(255, var23), kc.a(LoginChoicePanel.a(var22Lifetime1, 65280), LoginChoicePanel.a(var21Lifetime1, 16711680)));
               var11++;
               var12++;
               var13--;
               if (var13 != 0) {
                 continue;
               }
-              var12 = var10 * param4.field_s;
-              var13 = param4.field_s;
+              var12 = var10 * param4.width;
+              var13 = param4.width;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

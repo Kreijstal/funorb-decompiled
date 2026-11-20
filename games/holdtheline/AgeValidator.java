@@ -13,7 +13,7 @@ final class AgeValidator extends TextFieldValidator {
     final static void a(int param0, boolean param1) {
         if (!param1) {
           if (MidiPcmStream.field_U != null) {
-            om.a(-46342, MidiPcmStream.field_U);
+            TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
             MouseInputHandler.field_b.requestFocus();
             MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
             MidiPcmStream.field_U = null;
@@ -22,7 +22,7 @@ final class AgeValidator extends TextFieldValidator {
           if (MidiPcmStream.field_U != null) {
             if (!param1 &&
               MidiPcmStream.field_U != null) {
-              om.a(-46342, MidiPcmStream.field_U);
+              TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
               MouseInputHandler.field_b.requestFocus();
               MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
               MidiPcmStream.field_U = null;
@@ -31,7 +31,7 @@ final class AgeValidator extends TextFieldValidator {
             if (!of.a(-969)) {
               if (!param1 &&
                 MidiPcmStream.field_U != null) {
-                om.a(-46342, MidiPcmStream.field_U);
+                TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
                 MouseInputHandler.field_b.requestFocus();
                 MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
                 MidiPcmStream.field_U = null;
@@ -45,7 +45,7 @@ final class AgeValidator extends TextFieldValidator {
               } else {
                 if (!param1 &&
                   MidiPcmStream.field_U != null) {
-                  om.a(-46342, MidiPcmStream.field_U);
+                  TrackObjectDefinition.detachInputListeners(-46342, MidiPcmStream.field_U);
                   MouseInputHandler.field_b.requestFocus();
                   MidiPcmStream.field_U.a(wi.field_b, param0 ^ -29472);
                   MidiPcmStream.field_U = null;

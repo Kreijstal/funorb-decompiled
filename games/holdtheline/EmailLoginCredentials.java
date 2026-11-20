@@ -58,33 +58,33 @@ final class EmailLoginCredentials extends LoginCredentials {
           if (param7 != -24983) {
             field_d = (int[]) null;
           }
-          if (SoftwareRasterizer.field_d > param5) {
-            param2 = param2 - (-param5 + SoftwareRasterizer.field_d);
-            param5 = SoftwareRasterizer.field_d;
+          if (SoftwareRasterizer.clipLeft > param5) {
+            param2 = param2 - (-param5 + SoftwareRasterizer.clipLeft);
+            param5 = SoftwareRasterizer.clipLeft;
           }
-          if (param4 < SoftwareRasterizer.field_a) {
-            param1 = param1 - (SoftwareRasterizer.field_a - param4);
-            param4 = SoftwareRasterizer.field_a;
+          if (param4 < SoftwareRasterizer.clipTop) {
+            param1 = param1 - (SoftwareRasterizer.clipTop - param4);
+            param4 = SoftwareRasterizer.clipTop;
           }
-          if (param5 + param2 > SoftwareRasterizer.field_e) {
-            param2 = -param5 + SoftwareRasterizer.field_e;
+          if (param5 + param2 > SoftwareRasterizer.clipRight) {
+            param2 = -param5 + SoftwareRasterizer.clipRight;
           }
-          if (param1 + param4 > SoftwareRasterizer.field_i) {
-            param1 = -param4 + SoftwareRasterizer.field_i;
+          if (param1 + param4 > SoftwareRasterizer.clipBottom) {
+            param1 = -param4 + SoftwareRasterizer.clipBottom;
           }
           if (param2 > 0 &&
             param1 > 0) {
-            var21 = param3.e();
-            var30 = SoftwareRasterizer.field_b;
-            var10 = SoftwareRasterizer.field_j;
-            var11 = SoftwareRasterizer.field_c;
+            var21 = param3.copy();
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[4];
-            SoftwareRasterizer.b(var29);
-            param3.f();
-            SoftwareRasterizer.e(var29[0], var29[1], var29[2], var29[3]);
-            var13 = param3.field_s * param4 + param5;
-            var14 = -param2 + param3.field_s;
-            var25 = var21.field_z;
+            SoftwareRasterizer.saveClip(var29);
+            param3.bindRaster();
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
+            var13 = param3.width * param4 + param5;
+            var14 = -param2 + param3.width;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param4; param4 + param1 > var16; var16++) {
@@ -93,19 +93,19 @@ final class EmailLoginCredentials extends LoginCredentials {
                 if (var18 != 0) {
                   if (var17 > 0 &&
                     var15[var13 - 1] == 0) {
-                    SoftwareRasterizer.d(var17, var16, param0, param6);
+                    SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                   } else {
                     if (0 < var16 &&
-                      var15[-param3.field_s + var13] == 0) {
-                      SoftwareRasterizer.d(var17, var16, param0, param6);
+                      var15[-param3.width + var13] == 0) {
+                      SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                     } else {
-                      if (var17 < -1 + param3.field_s &&
+                      if (var17 < -1 + param3.width &&
                         var15[1 + var13] == 0) {
-                        SoftwareRasterizer.d(var17, var16, param0, param6);
+                        SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                       } else {
-                        if (-1 + param3.field_y > var16 &&
-                          var15[param3.field_s + var13] == 0) {
-                          SoftwareRasterizer.d(var17, var16, param0, param6);
+                        if (-1 + param3.height > var16 &&
+                          var15[param3.width + var13] == 0) {
+                          SoftwareRasterizer.fillCircle(var17, var16, param0, param6);
                         }
                       }
                     }
@@ -115,9 +115,9 @@ final class EmailLoginCredentials extends LoginCredentials {
               }
               var13 = var13 + var14;
             }
-            var21.a(-param3.field_u, -param3.field_x);
-            SoftwareRasterizer.a(var30, var10, var11);
-            SoftwareRasterizer.a(var29);
+            var21.draw(-param3.offsetX, -param3.offsetY);
+            SoftwareRasterizer.bindRaster(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

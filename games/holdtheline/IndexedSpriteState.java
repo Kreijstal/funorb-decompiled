@@ -37,30 +37,30 @@ abstract class IndexedSpriteState {
         int var6;
         int var3Lifetime1;
         var5 = HoldTheLine.field_D;
-        if (null == ra.field_X) {
-          if (!fb.field_i.b("world_images", -128)) {
+        if (null == LoadProgressDialog.field_X) {
+          if (!fb.field_i.tryLoadNamedGroup("world_images", -128)) {
             return hi.a(111, (byte) -112, 84);
           }
-          ra.field_X = StandardContentTransitionDialog.a(fb.field_i, 33, "world_images", "");
+          LoadProgressDialog.field_X = StandardContentTransitionDialog.a(fb.field_i, 33, "world_images", "");
           TutorialTransition.a(32381);
           DelegatingCanvas.field_c = new Sprite[4];
           for (var3 = 0; var3 < 4; var3++) {
-            DelegatingCanvas.field_c[var3] = ra.field_X[var3].e();
+            DelegatingCanvas.field_c[var3] = LoadProgressDialog.field_X[var3].copy();
             Point2i.scaleSpriteIntensity(DelegatingCanvas.field_c[var3], 64, -1);
-            DelegatingCanvas.field_c[var3].f();
-            rf.field_ab.a(-rf.field_ab.field_s + DelegatingCanvas.field_c[var3].field_s >> 1, -rf.field_ab.field_y + DelegatingCanvas.field_c[var3].field_y >> 1);
+            DelegatingCanvas.field_c[var3].bindRaster();
+            FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + DelegatingCanvas.field_c[var3].width >> 1, -FullscreenErrorDialog.field_ab.height + DelegatingCanvas.field_c[var3].height >> 1);
           }
           ih.field_t = new Sprite[4];
           var6 = 0;
           var3Lifetime1 = var6;
           while (var6 < 4) {
-            ih.field_t[var6] = ra.field_X[var6].e();
+            ih.field_t[var6] = LoadProgressDialog.field_X[var6].copy();
             Point2i.scaleSpriteIntensity(ih.field_t[var6], 128, -1);
-            var4 = ih.field_t[var6].e();
-            var4.f();
-            SolidRoadStripRenderer.field_q.d(17, 0, 84, 84);
-            ih.field_t[var6].f();
-            var4.d(0, 0, 64);
+            var4 = ih.field_t[var6].copy();
+            var4.bindRaster();
+            SolidRoadStripRenderer.field_q.drawDownscaledBlended(17, 0, 84, 84);
+            ih.field_t[var6].bindRaster();
+            var4.drawAlpha(0, 0, 64);
             var6++;
           }
           MarkerSliderRenderer.restoreRasterTarget(-1);
@@ -72,7 +72,7 @@ abstract class IndexedSpriteState {
           return DelegatingCanvas.field_c[param2];
         }
         if (param0 != 2) {
-          return ra.field_X[param2];
+          return LoadProgressDialog.field_X[param2];
         }
         return ih.field_t[param2];
     }
@@ -117,7 +117,7 @@ abstract class IndexedSpriteState {
         if (param0 != -61) {
           return;
         }
-        var3.d(param1, param2, var3.field_o >> 1, var3.field_v >> 1, 64);
+        var3.drawScaledAlpha(param1, param2, var3.canvasWidth >> 1, var3.canvasHeight >> 1, 64);
     }
 
     static {

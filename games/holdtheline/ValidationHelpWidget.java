@@ -258,65 +258,65 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var10 = var8.getTextOriginY(-1337403295, (UiWidget) (this), param1) + (var8.getTextLayout((byte) 20, (UiWidget) (this)).a(-93) >> 1);
         if (hh.field_d == var6Lifetime1) {
           var18 = FullscreenFocusCanvas.field_i[0];
-          var11 = var18.field_o << 1;
-          var12 = var18.field_v << 1;
+          var11 = var18.canvasWidth << 1;
+          var12 = var18.canvasHeight << 1;
           if (null == this.field_T) {
             this.field_T = new Sprite(var11, var12);
             ProxySocketConnector.a(this.field_T, -1);
           } else {
-            if (var11 > this.field_T.field_s) {
+            if (var11 > this.field_T.width) {
               this.field_T = new Sprite(var11, var12);
               ProxySocketConnector.a(this.field_T, -1);
             } else {
-              if (this.field_T.field_y < var12) {
+              if (this.field_T.height < var12) {
                 this.field_T = new Sprite(var11, var12);
                 ProxySocketConnector.a(this.field_T, -1);
               } else {
                 ProxySocketConnector.a(this.field_T, -1);
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.clear();
               }
             }
           }
-          var18.b(112, 144, var18.field_o << 4, var18.field_v << 4, -this.field_N << 10, 4096);
+          var18.drawRotatedBilinear(112, 144, var18.canvasWidth << 4, var18.canvasHeight << 4, -this.field_N << 10, 4096);
           dm.b((byte) -10);
-          this.field_T.b(-(var18.field_o >> 1) + var9, -var18.field_v + var10, 256);
+          this.field_T.drawAdditive(-(var18.canvasWidth >> 1) + var9, -var18.canvasHeight + var10, 256);
           return;
         }
         if (var6Lifetime1 != um.field_a) {
           if (LinearPointPath.field_k == var6Lifetime1) {
             var15 = FullscreenFocusCanvas.field_i[2];
-            var15.b(var9, var10 - (var15.field_y >> 1), 256);
+            var15.drawAdditive(var9, var10 - (var15.height >> 1), 256);
             return;
           }
           if (PointPath.field_d == var6Lifetime1) {
             var16 = FullscreenFocusCanvas.field_i[1];
-            var16.b(var9, var10 - (var16.field_y >> 1), 256);
+            var16.drawAdditive(var9, var10 - (var16.height >> 1), 256);
           }
           return;
         }
         var17 = FullscreenFocusCanvas.field_i[0];
-        var11Lifetime1 = var17.field_o << 1;
-        var12Lifetime1 = var17.field_v << 1;
+        var11Lifetime1 = var17.canvasWidth << 1;
+        var12Lifetime1 = var17.canvasHeight << 1;
         if (null == this.field_T) {
           this.field_T = new Sprite(var11Lifetime1, var12Lifetime1);
           ProxySocketConnector.a(this.field_T, -1);
         } else {
-          if (var11Lifetime1 > this.field_T.field_s) {
+          if (var11Lifetime1 > this.field_T.width) {
             this.field_T = new Sprite(var11Lifetime1, var12Lifetime1);
             ProxySocketConnector.a(this.field_T, -1);
           } else {
-            if (this.field_T.field_y < var12Lifetime1) {
+            if (this.field_T.height < var12Lifetime1) {
               this.field_T = new Sprite(var11Lifetime1, var12Lifetime1);
               ProxySocketConnector.a(this.field_T, -1);
             } else {
               ProxySocketConnector.a(this.field_T, -1);
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.clear();
             }
           }
         }
-        var17.b(112, 144, var17.field_o << 4, var17.field_v << 4, -this.field_N << 10, 4096);
+        var17.drawRotatedBilinear(112, 144, var17.canvasWidth << 4, var17.canvasHeight << 4, -this.field_N << 10, 4096);
         dm.b((byte) -10);
-        this.field_T.b(-(var17.field_o >> 1) + var9, -var17.field_v + var10, 256);
+        this.field_T.drawAdditive(-(var17.canvasWidth >> 1) + var9, -var17.canvasHeight + var10, 256);
         return;
     }
 

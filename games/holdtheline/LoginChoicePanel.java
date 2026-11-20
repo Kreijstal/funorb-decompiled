@@ -81,7 +81,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.x + param2;
         int var6 = param1 + this.y;
-        IntrusiveNode.field_g.a(DisplayNameForm.field_P, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
+        IntrusiveNode.field_g.drawParagraph(DisplayNameForm.field_P, var5 + 20, 20 + var6, this.width - 40, this.height - 50, 16777215, -1, 1, 0, IntrusiveNode.field_g.ascent);
         super.drawLayer(param0, param1, param2, param3);
     }
 

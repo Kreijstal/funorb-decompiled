@@ -129,8 +129,8 @@ final class WhirlpoolHasher {
         }
         try {
           IndexedSpriteState.field_j = param3;
-          WhirlpoolHasher.a(-90, SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_j / 2);
-          StraightRoadSegment.a(param1.field_s, param0.field_s, param0.field_s + param0.field_I, param1.field_I + param1.field_s, (byte) -108);
+          WhirlpoolHasher.a(-90, SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2);
+          StraightRoadSegment.a(param1.capitalHeight, param0.capitalHeight, param0.capitalHeight + param0.descent, param1.descent + param1.capitalHeight, (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "pa.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -163,8 +163,8 @@ final class WhirlpoolHasher {
         try {
           var4_int = 0;
           var5 = 0;
-          var6 = param3.field_s;
-          var7 = param3.field_y;
+          var6 = param3.width;
+          var7 = param3.height;
           if (param1 < 0) {
             var6 = var6 + param1;
             var4_int = var4_int - param1;
@@ -181,15 +181,15 @@ final class WhirlpoolHasher {
           if (param0 + var7 > 480) {
             var7 = -param0 + 480;
           }
-          var8 = var4_int + (param3.field_o * (var5 + (var7 - 1)) - 1);
-          var9 = (-1 + var7 + param0) * SoftwareRasterizer.field_j + param1 - 1;
+          var8 = var4_int + (param3.canvasWidth * (var5 + (var7 - 1)) - 1);
+          var9 = (-1 + var7 + param0) * SoftwareRasterizer.width + param1 - 1;
           var13 = var7;
           while (var13 > 0) {
             for (var12 = var6; var12 > 0; var12--) {
               var9++;
-              var11 = SoftwareRasterizer.field_b[var9];
+              var11 = SoftwareRasterizer.pixels[var9];
               var8++;
-              var10 = param3.field_z[var8];
+              var10 = param3.pixels[var8];
               if (var10 != 0) {
                 if (0 != var11) {
                   var15 = 255 & var11 >> 8;
@@ -201,15 +201,15 @@ final class WhirlpoolHasher {
                   var14 = var14 + (var17 - (var17 * var14 >> 8) - 1);
                   var16 = var16 + (-(var16 * var19 >> 8) + (var19 - 1));
                   var15 = var15 + (-1 - (var15 * var18 >> 8) + var18);
-                  SoftwareRasterizer.field_b[var9] = kc.a(kc.a(var14 << 16, var15 << 8), var16);
+                  SoftwareRasterizer.pixels[var9] = kc.a(kc.a(var14 << 16, var15 << 8), var16);
                 } else {
-                  SoftwareRasterizer.field_b[var9] = var10;
+                  SoftwareRasterizer.pixels[var9] = var10;
                 }
               }
             }
             var13--;
-            var8 = var8 - (param3.field_o + var6);
-            var9 = var9 - (var6 + SoftwareRasterizer.field_j);
+            var8 = var8 - (param3.canvasWidth + var6);
+            var9 = var9 - (var6 + SoftwareRasterizer.width);
           }
           if (param2 <= 97) {
             field_h = -97;
@@ -254,7 +254,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_g[var2] = GameKeyHandler.a(GameKeyHandler.a(gh.a(65280L, (long)this.field_f[var3 + 6] << 8), GameKeyHandler.a(gh.a((long)this.field_f[5 + var3] << 16, 16711680L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a((long)this.field_f[var3] << 56, gh.a(255L, (long)this.field_f[1 + var3]) << 48), gh.a((long)this.field_f[2 + var3], 255L) << 40), gh.a(1095216660480L, (long)this.field_f[3 + var3] << 32)), gh.a((long)this.field_f[4 + var3] << 24, 4278190080L)))), gh.a(255L, (long)this.field_f[var3 + 7]));
+          this.field_g[var2] = GameKeyHandler.a(GameKeyHandler.a(ViewportSizingController.andLong(65280L, (long)this.field_f[var3 + 6] << 8), GameKeyHandler.a(ViewportSizingController.andLong((long)this.field_f[5 + var3] << 16, 16711680L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a((long)this.field_f[var3] << 56, ViewportSizingController.andLong(255L, (long)this.field_f[1 + var3]) << 48), ViewportSizingController.andLong((long)this.field_f[2 + var3], 255L) << 40), ViewportSizingController.andLong(1095216660480L, (long)this.field_f[3 + var3] << 32)), ViewportSizingController.andLong((long)this.field_f[4 + var3] << 24, 4278190080L)))), ViewportSizingController.andLong(255L, (long)this.field_f[var3 + 7]));
           var2++;
           var3 += 8;
         }

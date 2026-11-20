@@ -25,7 +25,7 @@ final class lj {
           gf.a(param3, 0, param3.length);
           gf.c();
           while (gf.d()) {
-            SoftwareRasterizer.c(gf.field_g + param2, gf.field_a + param5, gf.field_b - gf.field_g, param0, param1);
+            SoftwareRasterizer.drawHorizontalLineAlpha(gf.field_g + param2, gf.field_a + param5, gf.field_b - gf.field_g, param0, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,12 +48,12 @@ final class lj {
           var1 = new we();
         }
         if (param0 <= -100) {
-          var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -1, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j);
+          var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipLeft, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, -1, SoftwareRasterizer.height, SoftwareRasterizer.clipTop, SoftwareRasterizer.width);
           MarkerSliderRenderer.field_g.addLast((byte) -84, var1);
           return;
         }
         field_f = 101;
-        var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_d, SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -1, SoftwareRasterizer.field_c, SoftwareRasterizer.field_a, SoftwareRasterizer.field_j);
+        var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipLeft, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, -1, SoftwareRasterizer.height, SoftwareRasterizer.clipTop, SoftwareRasterizer.width);
         MarkerSliderRenderer.field_g.addLast((byte) -84, var1);
     }
 

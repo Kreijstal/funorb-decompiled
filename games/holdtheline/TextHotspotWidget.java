@@ -144,7 +144,7 @@ class TextHotspotWidget extends TextButton {
           this.field_H = null;
           if (this.hovered) {
             var5_int = NodeHashTableIterator.field_g + (-param0 - this.x);
-            var6 = rf.field_X - param2 - this.y;
+            var6 = FullscreenErrorDialog.field_X - param2 - this.y;
             this.field_H = this.a((byte) 124, var5_int, var6);
           }
           return;
@@ -212,7 +212,7 @@ class TextHotspotWidget extends TextButton {
     final static TextWidgetStyle k(int param0) {
         int var1 = 31 % ((param0 - 66) / 35);
         if (RoadSegment.field_p == null) {
-          RoadSegment.field_p = new TextWidgetStyle(SpriteButtonRenderer.field_w, 20, 0, 0, 0, 11579568, -1, 0, 0, SpriteButtonRenderer.field_w.field_G, -1, 2147483647, true);
+          RoadSegment.field_p = new TextWidgetStyle(SpriteButtonRenderer.field_w, 20, 0, 0, 0, 11579568, -1, 0, 0, SpriteButtonRenderer.field_w.ascent, -1, 2147483647, true);
         }
         return RoadSegment.field_p;
     }

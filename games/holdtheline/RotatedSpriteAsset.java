@@ -96,9 +96,9 @@ final class RotatedSpriteAsset {
         RuntimeException var6_ref = null;
         var8 = HoldTheLine.field_D;
         try {
-          ec.field_z = param3.getParameter("overxgames");
-          if (ec.field_z == null) {
-            ec.field_z = "0";
+          RaceSetupMenu.field_z = param3.getParameter("overxgames");
+          if (RaceSetupMenu.field_z == null) {
+            RaceSetupMenu.field_z = "0";
           }
           jk.field_r = param3.getParameter("overxachievements");
           if (null == jk.field_r) {

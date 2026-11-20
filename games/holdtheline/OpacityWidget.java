@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends SingleChildWidget {
+final class OpacityWidget extends SingleChildWidget {
     static tk field_G;
-    int field_F;
+    int opacity;
 
-    final static void a(long param0, java.applet.Applet param1, String param2, int param3, String param4) {
+    final static void writeCookie(long param0, java.applet.Applet param1, String param2, int param3, String param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -78,27 +78,27 @@ final class he extends SingleChildWidget {
         }
     }
 
-    he(UiWidget param0) {
+    OpacityWidget(UiWidget param0) {
         super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
         try {
           param0.setBounds(0, (byte) 122, 0, this.height, this.width);
           this.child = param0;
-          this.field_F = 256;
+          this.opacity = 256;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public he() {
+    public OpacityWidget() {
         super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
-        this.field_F = 256;
+        this.opacity = 256;
     }
 
     public static void clearSharedReferences(int param0) {
         field_G = null;
         if (param0 != 1000) {
           String var2 = (String) null;
-          he.a(-9L, (java.applet.Applet) null, (String) null, -57, (String) null);
+          OpacityWidget.writeCookie(-9L, (java.applet.Applet) null, (String) null, -57, (String) null);
         }
     }
 
@@ -110,15 +110,15 @@ final class he extends SingleChildWidget {
         if (null == this.child) {
           return;
         }
-        if (0 == this.field_F) {
+        if (0 == this.opacity) {
           return;
         }
-        if (this.field_F != 256) {
+        if (this.opacity != 256) {
           var6 = new Sprite(this.child.width, this.child.height);
           ProxySocketConnector.a(var6, -1);
           this.child.drawLayer(param0, 0, 0, param3);
           dm.b((byte) -10);
-          var6.d(param2 + this.x, param1 + this.y, this.field_F);
+          var6.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
           return;
         }
         this.child.drawLayer(-9532, this.y + param1, this.x + param2, param3);

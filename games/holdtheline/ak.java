@@ -23,7 +23,7 @@ final class ak {
             NameCheckProgressDialog.field_vb = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "unachieved");
             hi.field_N = new Sprite(32, 32);
             vb.a(-79, hi.field_N);
-            NameCheckProgressDialog.field_vb.c(0, 0, 32, 32);
+            NameCheckProgressDialog.field_vb.drawDownscaledThreshold(0, 0, 32, 32);
             MarkerSliderRenderer.restoreRasterTarget(-1);
           }
           if (!param1) {
@@ -41,11 +41,11 @@ final class ak {
           }
           return stackIn_15_0;
         }
-        if (!fb.field_i.b("achievements_128", 89)) {
+        if (!fb.field_i.tryLoadNamedGroup("achievements_128", 89)) {
           if (param1) {
             stackIn_21_0 = hi.a(32, (byte) -106, 32);
           } else {
-            stackIn_21_0 = ra.field_hb;
+            stackIn_21_0 = LoadProgressDialog.field_hb;
           }
           return stackIn_21_0;
         }
@@ -59,8 +59,8 @@ final class ak {
             break;
           }
           nl.field_h[var3] = new Sprite(32, 32);
-          nl.field_h[var3].f();
-          cd.field_a[var3].c(0, 0, 32, 32);
+          nl.field_h[var3].bindRaster();
+          cd.field_a[var3].drawDownscaledThreshold(0, 0, 32, 32);
           var3++;
         } while (var4 == 0);
         if (param1) {
@@ -113,8 +113,8 @@ final class ak {
               break scanLoop1;
             }
             var14 = stackIn_11_0;
-            while (var14 < var13.field_z.length) {
-              var13.field_z[var14] = param0;
+            while (var14 < var13.pixels.length) {
+              var13.pixels[var14] = param0;
               var14++;
             }
             var12++;
@@ -132,10 +132,10 @@ final class ak {
             }
             var12Lifetime1 = stackIn_22_0;
             while (var9 > var12Lifetime1) {
-              var10[6].field_z[var9 * (-var11 + var9 - 1) + var12Lifetime1] = param1;
-              var10[8].field_z[var12Lifetime1 + var9 * (-1 + (-var11 + var9))] = param1;
-              var10[2].field_z[-var11 - (-var9 + (1 - var12Lifetime1 * var9))] = param1;
-              var10[8].field_z[var9 * var12Lifetime1 + (-1 + var9) - var11] = param1;
+              var10[6].pixels[var9 * (-var11 + var9 - 1) + var12Lifetime1] = param1;
+              var10[8].pixels[var12Lifetime1 + var9 * (-1 + (-var11 + var9))] = param1;
+              var10[2].pixels[-var11 - (-var9 + (1 - var12Lifetime1 * var9))] = param1;
+              var10[8].pixels[var9 * var12Lifetime1 + (-1 + var9) - var11] = param1;
               var12Lifetime1++;
             }
             var11++;
@@ -153,13 +153,13 @@ final class ak {
             if (var15 == 0) {
               var12Lifetime2 = stackIn_35_0;
               while (var9 > var12Lifetime2) {
-                var10[0].field_z[var11Lifetime1 * var9 + var12Lifetime2] = param3;
-                var10[0].field_z[var11Lifetime1 + var9 * var12Lifetime2] = param3;
+                var10[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
+                var10[0].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param3;
                 stackIn_24_0 = -var11Lifetime1 + var9;
                 stackIn_24_1 = var12Lifetime2;
                 if (stackIn_24_0 > stackIn_24_1) {
-                  var10[2].field_z[var11Lifetime1 * var9 + var12Lifetime2] = param3;
-                  var10[6].field_z[var12Lifetime2 * var9 + var11Lifetime1] = param3;
+                  var10[2].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
+                  var10[6].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param3;
                 }
                 var12Lifetime2++;
               }
@@ -178,10 +178,10 @@ final class ak {
               }
               var12Lifetime2Lifetime1 = stackIn_46_0;
               while (param5 > var12Lifetime2Lifetime1) {
-                var10[7].field_z[var11Lifetime1 + (var9 + (-var12Lifetime2Lifetime1 - 1)) * param7] = param1;
-                var10[5].field_z[var9 * var11Lifetime1 - (1 - var9 + var12Lifetime2Lifetime1)] = param1;
-                var10[1].field_z[var11Lifetime1 + var12Lifetime2Lifetime1 * param7] = param3;
-                var10[3].field_z[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param3;
+                var10[7].pixels[var11Lifetime1 + (var9 + (-var12Lifetime2Lifetime1 - 1)) * param7] = param1;
+                var10[5].pixels[var9 * var11Lifetime1 - (1 - var9 + var12Lifetime2Lifetime1)] = param1;
+                var10[1].pixels[var11Lifetime1 + var12Lifetime2Lifetime1 * param7] = param3;
+                var10[3].pixels[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param3;
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
@@ -195,10 +195,10 @@ final class ak {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (var12Lifetime2Lifetime2 < param8) {
-                var10[1].field_z[var11Lifetime1 + (var9 - (var12Lifetime2Lifetime2 + 1)) * param7] = param4;
-                var10[3].field_z[var11Lifetime1 * var9 + var9 - 1 - var12Lifetime2Lifetime2] = param4;
-                var10[7].field_z[param7 * var12Lifetime2Lifetime2 + var11Lifetime1] = param4;
-                var10[5].field_z[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param4;
+                var10[1].pixels[var11Lifetime1 + (var9 - (var12Lifetime2Lifetime2 + 1)) * param7] = param4;
+                var10[3].pixels[var11Lifetime1 * var9 + var9 - 1 - var12Lifetime2Lifetime2] = param4;
+                var10[7].pixels[param7 * var12Lifetime2Lifetime2 + var11Lifetime1] = param4;
+                var10[5].pixels[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param4;
                 var12Lifetime2Lifetime2++;
                 if (var15 == 0) {
                   continue;

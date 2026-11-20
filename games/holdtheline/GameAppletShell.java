@@ -263,7 +263,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             return;
           }
           StereoMusicSample.field_c = true;
-          vk.field_a = true;
+          CourseDefinition.field_a = true;
           TutorialAction.field_a = true;
           BufferedRandomAccessFile.field_n = false;
           UiWidget.field_n = bb.b(-1);
@@ -594,7 +594,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           var6 = this;
           synchronized (var6) {
-            vk.field_a = StereoMusicSample.field_c;
+            CourseDefinition.field_a = StereoMusicSample.field_c;
             if (param0 != 0) {
               this.e(-122);
             }

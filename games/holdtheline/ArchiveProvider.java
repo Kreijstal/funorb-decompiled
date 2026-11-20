@@ -6,7 +6,7 @@ abstract class ArchiveProvider {
     static boolean field_b;
     static int[] field_c;
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isValidDisplayName(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -33,7 +33,7 @@ abstract class ArchiveProvider {
         }
     }
 
-    abstract int a(boolean param0, int param1);
+    abstract int getGroupLoadPercent(boolean param0, int param1);
 
     public static void clearSharedReferences(int param0) {
         field_c = null;
@@ -45,9 +45,9 @@ abstract class ArchiveProvider {
         field_a = null;
     }
 
-    abstract byte[] a(byte param0, int param1);
+    abstract byte[] getGroupData(byte param0, int param1);
 
-    abstract ArchiveIndex a(byte param0);
+    abstract ArchiveIndex getIndex(byte param0);
 
     static {
         field_a = new java.math.BigInteger("65537");

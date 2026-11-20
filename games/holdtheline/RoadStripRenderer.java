@@ -77,7 +77,7 @@ abstract class RoadStripRenderer {
             var14 = (float)var4_int / var10_float;
             var8 = (int)(8192.0f * (1.0f + var14));
           }
-          var10 = PcmSampleStream.createWithStep(param3, var7, param0 * pc.field_h >> 5, var8);
+          var10 = PcmSampleStream.createWithStep(param3, var7, param0 * MenuList.field_h >> 5, var8);
           CachedTextLayout.playSoundStream(var10, (byte) -68);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,9 +105,9 @@ abstract class RoadStripRenderer {
           if (param2 != -83) {
             RoadStripRenderer.bitCount(54, -109);
           }
-          QuickChatPhraseDefinition.field_t.a(param0 - 381, param4);
-          nj.field_i.a(param0, param4);
-          nm.field_c.a(param5, param3, (nm.field_c.field_G + 30) / 2 + (param4 - 2), param1, -1);
+          QuickChatPhraseDefinition.field_t.draw(param0 - 381, param4);
+          LayeredWidgetStyle.field_i.draw(param0, param4);
+          nm.field_c.draw(param5, param3, (nm.field_c.ascent + 30) / 2 + (param4 - 2), param1, -1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rd.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

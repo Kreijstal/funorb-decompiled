@@ -119,7 +119,7 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
           this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
           var7 = LoginCredentials.substituteIndexedTokens(ta.field_b, new String[]{this.g((byte) -120), this.a((byte) -119)}, true);
           var3 = 20;
-          var4 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
+          var4 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
           this.field_F = new TextHotspotWidget(var7, var4);
           this.field_F.tooltip = "";
           this.field_F.a(0, m.field_d, true);

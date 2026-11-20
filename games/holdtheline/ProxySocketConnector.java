@@ -110,7 +110,7 @@ final class ProxySocketConnector extends SocketConnector {
         StrongCacheEntry.field_w = 0;
         nm.field_b = tk.field_c[4][0];
         LoginForm.field_P = 0;
-        eb.field_o = null;
+        PathWaypoint.field_o = null;
         if (UsernameLoginCredentials.a(nm.field_b, true)) {
           MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 3, false, false, -1, -1);
           EntitySound.field_j = true;
@@ -325,7 +325,7 @@ final class ProxySocketConnector extends SocketConnector {
             field_j = (IntrusiveDeque) null;
           }
           lj.a((byte) -111);
-          SoftwareRasterizer.a(param0.field_z, param0.field_o, param0.field_v);
+          SoftwareRasterizer.bindRaster(param0.pixels, param0.canvasWidth, param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "hf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

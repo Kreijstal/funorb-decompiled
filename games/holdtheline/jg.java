@@ -47,41 +47,41 @@ final class jg extends IntrusiveNode {
         int var14Lifetime3;
         var20 = HoldTheLine.field_D;
         try {
-          var6_int = (param5 - param1 << 8) / param2.field_o;
-          var7 = (param1 << 8) + var6_int * param2.field_u;
-          param0 = param0 + param2.field_x;
-          param4 = param4 + param2.field_u;
-          var8 = param4 + param0 * SoftwareRasterizer.field_j;
+          var6_int = (param5 - param1 << 8) / param2.canvasWidth;
+          var7 = (param1 << 8) + var6_int * param2.offsetX;
+          param0 = param0 + param2.offsetY;
+          param4 = param4 + param2.offsetX;
+          var8 = param4 + param0 * SoftwareRasterizer.width;
           var9 = 0;
           if (!param3) {
             jg.clearSharedReferences(13);
           }
-          var10 = param2.field_y;
-          var11 = param2.field_s;
-          var12 = -var11 + SoftwareRasterizer.field_j;
-          if (param0 < SoftwareRasterizer.field_a) {
-            var14 = -param0 + SoftwareRasterizer.field_a;
+          var10 = param2.height;
+          var11 = param2.width;
+          var12 = -var11 + SoftwareRasterizer.width;
+          if (param0 < SoftwareRasterizer.clipTop) {
+            var14 = -param0 + SoftwareRasterizer.clipTop;
             var9 = var9 + var14 * var11;
-            var8 = var8 + SoftwareRasterizer.field_j * var14;
+            var8 = var8 + SoftwareRasterizer.width * var14;
             var10 = var10 - var14;
-            param0 = SoftwareRasterizer.field_a;
+            param0 = SoftwareRasterizer.clipTop;
           }
           var13 = 0;
-          if (param4 < SoftwareRasterizer.field_d) {
-            var14Lifetime1 = -param4 + SoftwareRasterizer.field_d;
+          if (param4 < SoftwareRasterizer.clipLeft) {
+            var14Lifetime1 = -param4 + SoftwareRasterizer.clipLeft;
             var11 = var11 - var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var7 = var7 + var14Lifetime1 * var6_int;
             var13 = var13 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
-            param4 = SoftwareRasterizer.field_d;
+            param4 = SoftwareRasterizer.clipLeft;
           }
-          if (SoftwareRasterizer.field_i < var10 + param0) {
-            var10 = var10 - (var10 + (param0 - SoftwareRasterizer.field_i));
+          if (SoftwareRasterizer.clipBottom < var10 + param0) {
+            var10 = var10 - (var10 + (param0 - SoftwareRasterizer.clipBottom));
           }
-          if (var11 + param4 > SoftwareRasterizer.field_e) {
-            var14Lifetime2 = param4 + (var11 - SoftwareRasterizer.field_e);
+          if (var11 + param4 > SoftwareRasterizer.clipRight) {
+            var14Lifetime2 = param4 + (var11 - SoftwareRasterizer.clipRight);
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -100,14 +100,14 @@ final class jg extends IntrusiveNode {
                 } else {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param2.field_z[incrementValue$0];
+                  var17 = param2.pixels[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 <= 255) {
-                      var18 = SoftwareRasterizer.field_b[var8];
+                      var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & var16 * (16711935 & var18) + (var17 & 16711935) * var15 >> 8;
-                      SoftwareRasterizer.field_b[var8] = var19 + LoginChoicePanel.a(65280, LoginChoicePanel.a(var18, 65280) * var16 + LoginChoicePanel.a(65280, var17) * var15 >> 8);
+                      SoftwareRasterizer.pixels[var8] = var19 + LoginChoicePanel.a(65280, LoginChoicePanel.a(var18, 65280) * var16 + LoginChoicePanel.a(65280, var17) * var15 >> 8);
                     } else {
-                      SoftwareRasterizer.field_b[var8] = var17;
+                      SoftwareRasterizer.pixels[var8] = var17;
                     }
                   }
                   var8++;

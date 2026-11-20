@@ -41,63 +41,63 @@ final class ValidationIndicator extends TextButton {
         var8 = this.field_I.getValidationState(-7447);
         if (hh.field_d == var8) {
           var16 = FullscreenFocusCanvas.field_i[0];
-          var9 = var16.field_o << 1;
-          var10 = var16.field_v << 1;
+          var9 = var16.canvasWidth << 1;
+          var10 = var16.canvasHeight << 1;
           if (ShadedRoadStripRenderer.field_m == null) {
             ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
             ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
           } else {
-            if (var9 > ShadedRoadStripRenderer.field_m.field_s) {
+            if (var9 > ShadedRoadStripRenderer.field_m.width) {
               ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
               ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
             } else {
-              if (ShadedRoadStripRenderer.field_m.field_y >= var10) {
+              if (ShadedRoadStripRenderer.field_m.height >= var10) {
                 ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
-                SoftwareRasterizer.c();
+                SoftwareRasterizer.clear();
               } else {
                 ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
                 ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
               }
             }
           }
-          var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_K << 10, 4096);
+          var16.drawRotatedBilinear(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.field_K << 10, 4096);
           dm.b((byte) -10);
-          ShadedRoadStripRenderer.field_m.b(-var16.field_o + var5, -var16.field_v + var6, 256);
+          ShadedRoadStripRenderer.field_m.drawAdditive(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
         } else {
           if (var8 != um.field_a) {
             if (LinearPointPath.field_k == var8) {
               var13 = FullscreenFocusCanvas.field_i[2];
-              var13.b(-(var13.field_s >> 1) + var5, -(var13.field_y >> 1) + var6, 256);
+              var13.drawAdditive(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
             } else {
               if (PointPath.field_d == var8) {
                 var14 = FullscreenFocusCanvas.field_i[1];
-                var14.b(-(var14.field_s >> 1) + var5, var6 - (var14.field_y >> 1), 256);
+                var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
               }
             }
           } else {
             var15 = FullscreenFocusCanvas.field_i[0];
-            var9 = var15.field_o << 1;
-            var10 = var15.field_v << 1;
+            var9 = var15.canvasWidth << 1;
+            var10 = var15.canvasHeight << 1;
             if (ShadedRoadStripRenderer.field_m == null) {
               ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
               ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
             } else {
-              if (var9 > ShadedRoadStripRenderer.field_m.field_s) {
+              if (var9 > ShadedRoadStripRenderer.field_m.width) {
                 ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
                 ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
               } else {
-                if (ShadedRoadStripRenderer.field_m.field_y >= var10) {
+                if (ShadedRoadStripRenderer.field_m.height >= var10) {
                   ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
-                  SoftwareRasterizer.c();
+                  SoftwareRasterizer.clear();
                 } else {
                   ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
                   ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
                 }
               }
             }
-            var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_K << 10, 4096);
+            var15.drawRotatedBilinear(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.field_K << 10, 4096);
             dm.b((byte) -10);
-            ShadedRoadStripRenderer.field_m.b(-var15.field_o + var5, -var15.field_v + var6, 256);
+            ShadedRoadStripRenderer.field_m.drawAdditive(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           }
         }
     }

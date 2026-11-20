@@ -127,7 +127,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var9 = param0 * param0 - (var7 * var7 + var8 * var8);
             if (var9 > 0) {
               var10 = (float)Math.sqrt((double)var9) / (float)param0;
-              var6.field_z[var3 * (var8 + param0) + (param0 + var7)] = IterableSecondaryNodeDeque.a(var10, -1, param2);
+              var6.pixels[var3 * (var8 + param0) + (param0 + var7)] = IterableSecondaryNodeDeque.a(var10, -1, param2);
             }
           }
         }

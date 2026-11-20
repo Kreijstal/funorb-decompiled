@@ -13,13 +13,13 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static ga n(int param0) {
+    final static UiTheme n(int param0) {
         int var1 = 93 % ((param0 - 49) / 42);
         if (ValidatedTextField.field_X != null) {
           return ValidatedTextField.field_X;
         }
-        ValidatedTextField.field_X = new ga();
-        ValidatedTextField.field_X.a(IntrusiveNode.field_g, (byte) 39);
+        ValidatedTextField.field_X = new UiTheme();
+        ValidatedTextField.field_X.initializeStyles(IntrusiveNode.field_g, (byte) 39);
         ValidatedTextField.field_X.field_c = 7697781;
         ValidatedTextField.field_X.field_n = 0;
         ValidatedTextField.field_X.field_q = 2763306;
@@ -59,8 +59,8 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
             var6 = (String[]) null;
             StandardContentTransitionDialog.a((String) null, (String[]) null, 106, -22);
           }
-          var4_int = param0.c(param2, param1 ^ 34);
-          var5 = param0.a(var4_int, param3, false);
+          var4_int = param0.getGroupId(param2, param1 ^ 34);
+          var5 = param0.getFileId(var4_int, param3, false);
           stackIn_3_0 = MusicCrossfadeStream.a(var5, param0, var4_int, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
           if (param0 != 6) {
             field_kb = (float[]) null;
           }
-          stackIn_3_0 = CachedTextLayout.field_q.a(param1, false, "");
+          stackIn_3_0 = CachedTextLayout.field_q.getNamedFile(param1, false, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

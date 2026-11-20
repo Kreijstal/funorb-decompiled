@@ -18,7 +18,7 @@ final class oj {
         if (-1 == AccountProgressDialog.field_jb) {
           return;
         }
-        var1 = gh.field_n[AccountProgressDialog.field_jb];
+        var1 = ViewportSizingController.field_n[AccountProgressDialog.field_jb];
         if (var1 == null) {
           dupTemp$0 = MusicTrack.load(ValidationHelpWidget.field_Q, AgeValidator.field_m[AccountProgressDialog.field_jb], "");
           var3 = dupTemp$0;
@@ -26,7 +26,7 @@ final class oj {
           if (dupTemp$0 == null) {
             return;
           }
-          gh.field_n[AccountProgressDialog.field_jb] = var3;
+          ViewportSizingController.field_n[AccountProgressDialog.field_jb] = var3;
         }
         if (!SecondaryNodeDequeIterator.field_d.field_q.a(22050, jh.field_a, var1, false, UsernameLoginCredentials.field_f)) {
           return;
@@ -41,20 +41,20 @@ final class oj {
         }
         if (WeightedLruCache.field_e == 2) {
           EmailValidationResult.field_d = var1;
-          ResourceArchive.a(false, var1, (byte) 69, 30);
+          ResourceArchive.playMusicTrack(false, var1, (byte) 69, 30);
         } else {
           if (1 != WeightedLruCache.field_e) {
-            ResourceArchive.a(true, var1, (byte) 69, 30);
+            ResourceArchive.playMusicTrack(true, var1, (byte) 69, 30);
             EmailValidationResult.field_d = null;
           } else {
             if (EmailValidationResult.field_d == null) {
-              ResourceArchive.a(true, var1, (byte) 69, 30);
+              ResourceArchive.playMusicTrack(true, var1, (byte) 69, 30);
               EmailValidationResult.field_d = null;
             } else {
               if (ai.field_a.a(-98, EmailValidationResult.field_d)) {
-                ec.field_D = var1;
+                RaceSetupMenu.field_D = var1;
               } else {
-                ResourceArchive.a(true, var1, (byte) 69, 30);
+                ResourceArchive.playMusicTrack(true, var1, (byte) 69, 30);
                 EmailValidationResult.field_d = null;
               }
             }
@@ -79,22 +79,22 @@ final class oj {
         try {
           if (param0 != null &&
             param5 > 0) {
-            var6_int = param0[0].field_o;
-            var7 = param0[2].field_o;
-            var8 = param0[1].field_o;
-            param0[0].a(param2, param3, param1);
-            param0[2].a(-var7 + (param5 + param2), param3, param1);
-            SoftwareRasterizer.b(hi.field_W);
-            SoftwareRasterizer.e(param2 + var6_int, param3, param2 + param5 - var7, param3 + param0[1].field_v);
+            var6_int = param0[0].canvasWidth;
+            var7 = param0[2].canvasWidth;
+            var8 = param0[1].canvasWidth;
+            param0[0].drawTintedWithHighlights(param2, param3, param1);
+            param0[2].drawTintedWithHighlights(-var7 + (param5 + param2), param3, param1);
+            SoftwareRasterizer.saveClip(hi.field_W);
+            SoftwareRasterizer.intersectClip(param2 + var6_int, param3, param2 + param5 - var7, param3 + param0[1].canvasHeight);
             var9 = var6_int + param2;
             var10 = param2 - (-param5 + var7);
             if (param4 > -73) {
               return;
             }
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param0[1].a(param2, param3, param1);
+              param0[1].drawTintedWithHighlights(param2, param3, param1);
             }
-            SoftwareRasterizer.a(hi.field_W);
+            SoftwareRasterizer.restoreClip(hi.field_W);
             return;
           }
           return;

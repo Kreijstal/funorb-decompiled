@@ -24,8 +24,8 @@ final class oc {
           if (param2 != 32) {
             field_a = 48;
           }
-          var4_int = param1.c(param3, 3);
-          var5 = param1.a(var4_int, param0, false);
+          var4_int = param1.getGroupId(param3, 3);
+          var5 = param1.getFileId(var4_int, param0, false);
           stackIn_3_0 = il.a((byte) 21, param1, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,7 +190,7 @@ final class oc {
         var21 = HoldTheLine.field_D;
         try {
           if (param5 == 256) {
-            SoftwareRasterizer.c(param2, param1, param0, param3);
+            SoftwareRasterizer.drawCircle(param2, param1, param0, param3);
           }
           if (param5 != 256 &&
             param5 != 0) {
@@ -204,202 +204,202 @@ final class oc {
               var10 = var6_int;
               var11 = param3;
               var12 = param5;
-              if (SoftwareRasterizer.field_d <= var8 &&
-                SoftwareRasterizer.field_e > var8 &&
-                var9 >= SoftwareRasterizer.field_a &&
-                var9 < SoftwareRasterizer.field_i) {
-                var13 = SoftwareRasterizer.field_j * var9 + var8;
-                var14 = SoftwareRasterizer.field_b[var13];
+              if (SoftwareRasterizer.clipLeft <= var8 &&
+                SoftwareRasterizer.clipRight > var8 &&
+                var9 >= SoftwareRasterizer.clipTop &&
+                var9 < SoftwareRasterizer.clipBottom) {
+                var13 = SoftwareRasterizer.width * var9 + var8;
+                var14 = SoftwareRasterizer.pixels[var13];
                 var15 = var10 + (-16711936 & (var14 & 16711935) * var12);
                 var14 = var11 + (16711680 & var12 * (var14 & 65280));
-                SoftwareRasterizer.field_b[var13] = kc.a(var15, var14) >>> 8;
+                SoftwareRasterizer.pixels[var13] = kc.a(var15, var14) >>> 8;
               }
               return;
             }
             if (param0 < 0) {
               param0 = -param0;
             }
-            if (SoftwareRasterizer.field_d <= param0 + param2 &&
-              param2 - param0 < SoftwareRasterizer.field_e &&
-              SoftwareRasterizer.field_a <= param0 + param1 &&
-              -param0 + param1 < SoftwareRasterizer.field_i) {
-              var8Lifetime1 = param2 + SoftwareRasterizer.field_j * param1;
+            if (SoftwareRasterizer.clipLeft <= param0 + param2 &&
+              param2 - param0 < SoftwareRasterizer.clipRight &&
+              SoftwareRasterizer.clipTop <= param0 + param1 &&
+              -param0 + param1 < SoftwareRasterizer.clipBottom) {
+              var8Lifetime1 = param2 + SoftwareRasterizer.width * param1;
               var9Lifetime1 = var8Lifetime1;
-              var10Lifetime1 = var8Lifetime1 - SoftwareRasterizer.field_j * param0;
-              var11Lifetime1 = param0 * SoftwareRasterizer.field_j + var8Lifetime1;
+              var10Lifetime1 = var8Lifetime1 - SoftwareRasterizer.width * param0;
+              var11Lifetime1 = param0 * SoftwareRasterizer.width + var8Lifetime1;
               var12Lifetime1 = param0;
               var13Lifetime1 = 0;
               param0 = param0 * param0;
               var14Lifetime1 = -var12Lifetime1 + param0;
-              if (param2 - var12Lifetime1 >= SoftwareRasterizer.field_d &&
-                SoftwareRasterizer.field_a <= param1 &&
-                SoftwareRasterizer.field_i > param1) {
+              if (param2 - var12Lifetime1 >= SoftwareRasterizer.clipLeft &&
+                SoftwareRasterizer.clipTop <= param1 &&
+                SoftwareRasterizer.clipBottom > param1) {
                 var15Lifetime1 = -var12Lifetime1 + var8Lifetime1;
                 var16 = var6_int;
                 var17 = param3;
                 var18 = param5;
-                var19 = SoftwareRasterizer.field_b[var15Lifetime1];
+                var19 = SoftwareRasterizer.pixels[var15Lifetime1];
                 var20 = var16 + ((var19 & 16711935) * var18 & -16711936);
                 var19 = var17 + (16711680 & (var19 & 65280) * var18);
-                SoftwareRasterizer.field_b[var15Lifetime1] = kc.a(var19, var20) >>> 8;
+                SoftwareRasterizer.pixels[var15Lifetime1] = kc.a(var19, var20) >>> 8;
               }
-              if (SoftwareRasterizer.field_e > var12Lifetime1 + param2 &&
-                SoftwareRasterizer.field_a <= param1 &&
-                param1 < SoftwareRasterizer.field_i) {
+              if (SoftwareRasterizer.clipRight > var12Lifetime1 + param2 &&
+                SoftwareRasterizer.clipTop <= param1 &&
+                param1 < SoftwareRasterizer.clipBottom) {
                 var15Lifetime1Lifetime1 = var8Lifetime1 + var12Lifetime1;
                 var16Lifetime1 = var6_int;
                 var17Lifetime1 = param3;
                 var18Lifetime1 = param5;
-                var19Lifetime1 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime1];
+                var19Lifetime1 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime1];
                 var20Lifetime1 = (var18Lifetime1 * (16711935 & var19Lifetime1) & -16711936) + var16Lifetime1;
                 var19Lifetime1 = var17Lifetime1 + (16711680 & (var19Lifetime1 & 65280) * var18Lifetime1);
-                SoftwareRasterizer.field_b[var15Lifetime1Lifetime1] = kc.a(var20Lifetime1, var19Lifetime1) >>> 8;
+                SoftwareRasterizer.pixels[var15Lifetime1Lifetime1] = kc.a(var20Lifetime1, var19Lifetime1) >>> 8;
               }
-              if (SoftwareRasterizer.field_a <= param1 - var12Lifetime1 &&
-                SoftwareRasterizer.field_d <= param2 &&
-                SoftwareRasterizer.field_e > param2) {
+              if (SoftwareRasterizer.clipTop <= param1 - var12Lifetime1 &&
+                SoftwareRasterizer.clipLeft <= param2 &&
+                SoftwareRasterizer.clipRight > param2) {
                 var15Lifetime1Lifetime2 = var10Lifetime1;
                 var16Lifetime2 = var6_int;
                 var17Lifetime2 = param3;
                 var18Lifetime2 = param5;
-                var19Lifetime2 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime2];
+                var19Lifetime2 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime2];
                 var20Lifetime2 = (var18Lifetime2 * (16711935 & var19Lifetime2) & -16711936) + var16Lifetime2;
                 var19Lifetime2 = (var18Lifetime2 * (var19Lifetime2 & 65280) & 16711680) + var17Lifetime2;
-                SoftwareRasterizer.field_b[var15Lifetime1Lifetime2] = kc.a(var20Lifetime2, var19Lifetime2) >>> 8;
+                SoftwareRasterizer.pixels[var15Lifetime1Lifetime2] = kc.a(var20Lifetime2, var19Lifetime2) >>> 8;
               }
-              if (var12Lifetime1 + param1 < SoftwareRasterizer.field_i &&
-                param2 >= SoftwareRasterizer.field_d &&
-                SoftwareRasterizer.field_e > param2) {
+              if (var12Lifetime1 + param1 < SoftwareRasterizer.clipBottom &&
+                param2 >= SoftwareRasterizer.clipLeft &&
+                SoftwareRasterizer.clipRight > param2) {
                 var15Lifetime1Lifetime3 = var11Lifetime1;
                 var16Lifetime3 = var6_int;
                 var17Lifetime3 = param3;
                 var18Lifetime3 = param5;
-                var19Lifetime3 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime3];
+                var19Lifetime3 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime3];
                 var20Lifetime3 = var16Lifetime3 + (-16711936 & var18Lifetime3 * (var19Lifetime3 & 16711935));
                 var19Lifetime3 = var17Lifetime3 + (16711680 & var18Lifetime3 * (var19Lifetime3 & 65280));
-                SoftwareRasterizer.field_b[var15Lifetime1Lifetime3] = kc.a(var19Lifetime3, var20Lifetime3) >>> 8;
+                SoftwareRasterizer.pixels[var15Lifetime1Lifetime3] = kc.a(var19Lifetime3, var20Lifetime3) >>> 8;
               }
               while (true) {
-                var9Lifetime1 = var9Lifetime1 + SoftwareRasterizer.field_j;
+                var9Lifetime1 = var9Lifetime1 + SoftwareRasterizer.width;
                 incrementValue$0 = var13Lifetime1;
                 var13Lifetime1++;
                 var14Lifetime1 = var14Lifetime1 + (incrementValue$0 + var13Lifetime1);
-                var8Lifetime1 = var8Lifetime1 - SoftwareRasterizer.field_j;
+                var8Lifetime1 = var8Lifetime1 - SoftwareRasterizer.width;
                 if (param0 < var14Lifetime1) {
-                  var11Lifetime1 = var11Lifetime1 - SoftwareRasterizer.field_j;
+                  var11Lifetime1 = var11Lifetime1 - SoftwareRasterizer.width;
                   var12Lifetime1--;
                   var14Lifetime1 = var14Lifetime1 - (var12Lifetime1 + var12Lifetime1);
-                  var10Lifetime1 = var10Lifetime1 + SoftwareRasterizer.field_j;
+                  var10Lifetime1 = var10Lifetime1 + SoftwareRasterizer.width;
                 }
                 if (var12Lifetime1 < var13Lifetime1) {
                   return;
                 }
-                if (SoftwareRasterizer.field_a <= param1 - var12Lifetime1 &&
-                  -var12Lifetime1 + param1 < SoftwareRasterizer.field_i) {
-                  if (SoftwareRasterizer.field_d <= -var13Lifetime1 + param2 &&
-                    param2 - var13Lifetime1 < SoftwareRasterizer.field_e) {
+                if (SoftwareRasterizer.clipTop <= param1 - var12Lifetime1 &&
+                  -var12Lifetime1 + param1 < SoftwareRasterizer.clipBottom) {
+                  if (SoftwareRasterizer.clipLeft <= -var13Lifetime1 + param2 &&
+                    param2 - var13Lifetime1 < SoftwareRasterizer.clipRight) {
                     var15Lifetime1Lifetime4 = var10Lifetime1 - var13Lifetime1;
                     var16Lifetime4 = var6_int;
                     var17Lifetime4 = param3;
                     var18Lifetime4 = param5;
-                    var19Lifetime4 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                     var20Lifetime4 = var16Lifetime4 + (-16711936 & (16711935 & var19Lifetime4) * var18Lifetime4);
                     var19Lifetime4 = var17Lifetime4 + (16711680 & (var19Lifetime4 & 65280) * var18Lifetime4);
-                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4, var20Lifetime4) >>> 8;
+                    SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4, var20Lifetime4) >>> 8;
                   }
-                  if (SoftwareRasterizer.field_d <= var13Lifetime1 + param2 &&
-                    var13Lifetime1 + param2 < SoftwareRasterizer.field_e) {
+                  if (SoftwareRasterizer.clipLeft <= var13Lifetime1 + param2 &&
+                    var13Lifetime1 + param2 < SoftwareRasterizer.clipRight) {
                     var15Lifetime1Lifetime4 = var13Lifetime1 + var10Lifetime1;
                     var16Lifetime4 = var6_int;
                     var17Lifetime4 = param3;
                     var18Lifetime4 = param5;
-                    var19Lifetime4 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                     var20Lifetime4 = (-16711936 & var18Lifetime4 * (var19Lifetime4 & 16711935)) + var16Lifetime4;
                     var19Lifetime4 = var17Lifetime4 + (16711680 & (var19Lifetime4 & 65280) * var18Lifetime4);
-                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4, var19Lifetime4) >>> 8;
+                    SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4, var19Lifetime4) >>> 8;
                   }
                 }
-                if (-var13Lifetime1 + param1 >= SoftwareRasterizer.field_a &&
-                  param1 - var13Lifetime1 < SoftwareRasterizer.field_i) {
-                  if (SoftwareRasterizer.field_d <= param2 - var12Lifetime1 &&
-                    SoftwareRasterizer.field_e > -var12Lifetime1 + param2) {
+                if (-var13Lifetime1 + param1 >= SoftwareRasterizer.clipTop &&
+                  param1 - var13Lifetime1 < SoftwareRasterizer.clipBottom) {
+                  if (SoftwareRasterizer.clipLeft <= param2 - var12Lifetime1 &&
+                    SoftwareRasterizer.clipRight > -var12Lifetime1 + param2) {
                     var15Lifetime1Lifetime4 = -var12Lifetime1 + var8Lifetime1;
                     var16Lifetime4Lifetime1 = var6_int;
                     var17Lifetime4Lifetime1 = param3;
                     var18Lifetime4Lifetime1 = param5;
-                    var19Lifetime4Lifetime1 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime1 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime1 = var16Lifetime4Lifetime1 + ((16711935 & var19Lifetime4Lifetime1) * var18Lifetime4Lifetime1 & -16711936);
                     var19Lifetime4Lifetime1 = (16711680 & var18Lifetime4Lifetime1 * (var19Lifetime4Lifetime1 & 65280)) + var17Lifetime4Lifetime1;
-                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
+                    SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
                   }
-                  if (var12Lifetime1 + param2 >= SoftwareRasterizer.field_d &&
-                    SoftwareRasterizer.field_e > param2 + var12Lifetime1) {
+                  if (var12Lifetime1 + param2 >= SoftwareRasterizer.clipLeft &&
+                    SoftwareRasterizer.clipRight > param2 + var12Lifetime1) {
                     var15Lifetime1Lifetime4 = var8Lifetime1 + var12Lifetime1;
                     var16Lifetime4Lifetime1 = var6_int;
                     var17Lifetime4Lifetime1 = param3;
                     var18Lifetime4Lifetime1 = param5;
-                    var19Lifetime4Lifetime1 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime1 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime1 = (-16711936 & (16711935 & var19Lifetime4Lifetime1) * var18Lifetime4Lifetime1) + var16Lifetime4Lifetime1;
                     var19Lifetime4Lifetime1 = (var18Lifetime4Lifetime1 * (var19Lifetime4Lifetime1 & 65280) & 16711680) + var17Lifetime4Lifetime1;
-                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
+                    SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime1, var20Lifetime4Lifetime1) >>> 8;
                   }
                 }
-                if (SoftwareRasterizer.field_a <= var13Lifetime1 + param1 &&
-                  SoftwareRasterizer.field_i > param1 + var13Lifetime1) {
-                  if (SoftwareRasterizer.field_d <= -var12Lifetime1 + param2 &&
-                    param2 - var12Lifetime1 < SoftwareRasterizer.field_e) {
+                if (SoftwareRasterizer.clipTop <= var13Lifetime1 + param1 &&
+                  SoftwareRasterizer.clipBottom > param1 + var13Lifetime1) {
+                  if (SoftwareRasterizer.clipLeft <= -var12Lifetime1 + param2 &&
+                    param2 - var12Lifetime1 < SoftwareRasterizer.clipRight) {
                     var15Lifetime1Lifetime4 = -var12Lifetime1 + var9Lifetime1;
                     var16Lifetime4Lifetime2 = var6_int;
                     var17Lifetime4Lifetime2 = param3;
                     var18Lifetime4Lifetime2 = param5;
-                    var19Lifetime4Lifetime2 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime2 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime2 = var16Lifetime4Lifetime2 + ((16711935 & var19Lifetime4Lifetime2) * var18Lifetime4Lifetime2 & -16711936);
                     var19Lifetime4Lifetime2 = ((65280 & var19Lifetime4Lifetime2) * var18Lifetime4Lifetime2 & 16711680) + var17Lifetime4Lifetime2;
-                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
+                    SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
                   }
-                  if (param2 + var12Lifetime1 >= SoftwareRasterizer.field_d &&
-                    var12Lifetime1 + param2 < SoftwareRasterizer.field_e) {
+                  if (param2 + var12Lifetime1 >= SoftwareRasterizer.clipLeft &&
+                    var12Lifetime1 + param2 < SoftwareRasterizer.clipRight) {
                     var15Lifetime1Lifetime4 = var9Lifetime1 + var12Lifetime1;
                     var16Lifetime4Lifetime2 = var6_int;
                     var17Lifetime4Lifetime2 = param3;
                     var18Lifetime4Lifetime2 = param5;
-                    var19Lifetime4Lifetime2 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                    var19Lifetime4Lifetime2 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                     var20Lifetime4Lifetime2 = var16Lifetime4Lifetime2 + ((var19Lifetime4Lifetime2 & 16711935) * var18Lifetime4Lifetime2 & -16711936);
                     var19Lifetime4Lifetime2 = ((var19Lifetime4Lifetime2 & 65280) * var18Lifetime4Lifetime2 & 16711680) + var17Lifetime4Lifetime2;
-                    SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
+                    SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime2, var20Lifetime4Lifetime2) >>> 8;
                   }
                 }
-                if (param1 + var12Lifetime1 < SoftwareRasterizer.field_a) {
+                if (param1 + var12Lifetime1 < SoftwareRasterizer.clipTop) {
                   continue;
                 }
-                if ((param1 + var12Lifetime1) >= SoftwareRasterizer.field_i) {
+                if ((param1 + var12Lifetime1) >= SoftwareRasterizer.clipBottom) {
                   continue;
                 }
-                if (SoftwareRasterizer.field_d <= param2 - var13Lifetime1 &&
-                  SoftwareRasterizer.field_e > param2 - var13Lifetime1) {
+                if (SoftwareRasterizer.clipLeft <= param2 - var13Lifetime1 &&
+                  SoftwareRasterizer.clipRight > param2 - var13Lifetime1) {
                   var15Lifetime1Lifetime4 = -var13Lifetime1 + var11Lifetime1;
                   var16Lifetime4Lifetime3 = var6_int;
                   var17Lifetime4Lifetime3 = param3;
                   var18Lifetime4Lifetime3 = param5;
-                  var19Lifetime4Lifetime3 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                  var19Lifetime4Lifetime3 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                   var20Lifetime4Lifetime3 = var16Lifetime4Lifetime3 + (-16711936 & var18Lifetime4Lifetime3 * (16711935 & var19Lifetime4Lifetime3));
                   var19Lifetime4Lifetime3 = var17Lifetime4Lifetime3 + (var18Lifetime4Lifetime3 * (var19Lifetime4Lifetime3 & 65280) & 16711680);
-                  SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime3, var20Lifetime4Lifetime3) >>> 8;
+                  SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var19Lifetime4Lifetime3, var20Lifetime4Lifetime3) >>> 8;
                 }
-                if (SoftwareRasterizer.field_d > param2 + var13Lifetime1) {
+                if (SoftwareRasterizer.clipLeft > param2 + var13Lifetime1) {
                   continue;
                 }
-                if (SoftwareRasterizer.field_e <= var13Lifetime1 + param2) {
+                if (SoftwareRasterizer.clipRight <= var13Lifetime1 + param2) {
                   continue;
                 }
                 var15Lifetime1Lifetime4 = var13Lifetime1 + var11Lifetime1;
                 var16Lifetime4Lifetime4 = var6_int;
                 var17Lifetime4Lifetime4 = param3;
                 var18Lifetime4Lifetime4 = param5;
-                var19Lifetime4Lifetime4 = SoftwareRasterizer.field_b[var15Lifetime1Lifetime4];
+                var19Lifetime4Lifetime4 = SoftwareRasterizer.pixels[var15Lifetime1Lifetime4];
                 var20Lifetime4Lifetime4 = var16Lifetime4Lifetime4 + (var18Lifetime4Lifetime4 * (16711935 & var19Lifetime4Lifetime4) & -16711936);
                 var19Lifetime4Lifetime4 = var17Lifetime4Lifetime4 + (16711680 & var18Lifetime4Lifetime4 * (var19Lifetime4Lifetime4 & 65280));
-                SoftwareRasterizer.field_b[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4Lifetime4, var19Lifetime4Lifetime4) >>> 8;
+                SoftwareRasterizer.pixels[var15Lifetime1Lifetime4] = kc.a(var20Lifetime4Lifetime4, var19Lifetime4Lifetime4) >>> 8;
               }
             }
             return;
@@ -483,7 +483,7 @@ final class oc {
           for (var7 = 1; param4.length() > var7; var7++) {
             var8 = param4.charAt(var7);
             if (var8 == 60) {
-              var6 = param0.field_c[0] + (var5_int >> 8) + param2.a(param4.substring(0, var7));
+              var6 = param0.field_c[0] + (var5_int >> 8) + param2.measureText(param4.substring(0, var7));
             }
             if (var6 != -1) {
               param0.field_c[var7] = var6;
@@ -491,7 +491,7 @@ final class oc {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param0.field_c[var7] = (var5_int >> 8) + (param0.field_c[0] + (param2.a(param4.substring(0, 1 + var7)) - param2.a((char) var8)));
+              param0.field_c[var7] = (var5_int >> 8) + (param0.field_c[0] + (param2.measureText(param4.substring(0, 1 + var7)) - param2.getCharacterAdvance((char) var8)));
             }
             if (var8 == 62) {
               var6 = -1;

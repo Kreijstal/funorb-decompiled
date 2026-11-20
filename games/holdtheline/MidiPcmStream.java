@@ -1061,7 +1061,7 @@ final class MidiPcmStream extends PcmStream {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (SocketJs5Transport.a(-2821, param0.charAt(var2_int))) {
+            if (SocketJs5Transport.isNameSeparator(-2821, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -1069,7 +1069,7 @@ final class MidiPcmStream extends PcmStream {
           }
           var4 = 106 % ((param1 - 45) / 45);
           while (var2_int < var3) {
-            if (SocketJs5Transport.a(-2821, param0.charAt(var3 - 1))) {
+            if (SocketJs5Transport.isNameSeparator(-2821, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }

@@ -274,19 +274,19 @@ final class rk extends vd {
           }
           var2Lifetime2 = DualLinkNode.a("TEXT_POSITION,0", 0);
           if (null != var2Lifetime2) {
-            rf.field_Y[0] = rk.a((byte) 47, var2Lifetime2);
+            FullscreenErrorDialog.field_Y[0] = rk.a((byte) 47, var2Lifetime2);
           }
           var2Lifetime3 = DualLinkNode.a("TEXT_POSITION,1", 0);
           if (var2Lifetime3 != null) {
-            rf.field_Y[1] = rk.a((byte) 107, var2Lifetime3);
+            FullscreenErrorDialog.field_Y[1] = rk.a((byte) 107, var2Lifetime3);
           }
           var2Lifetime4 = DualLinkNode.a("TEXT_POSITION,2", 0);
           if (null != var2Lifetime4) {
-            rf.field_Y[2] = rk.a((byte) 86, var2Lifetime4);
+            FullscreenErrorDialog.field_Y[2] = rk.a((byte) 86, var2Lifetime4);
           }
           var2Lifetime5 = DualLinkNode.a("TEXT_POSITION,3", 0);
           if (var2Lifetime5 != null) {
-            rf.field_Y[3] = rk.a((byte) -124, var2Lifetime5);
+            FullscreenErrorDialog.field_Y[3] = rk.a((byte) -124, var2Lifetime5);
           }
           var2Lifetime6 = DualLinkNode.a("TEXT_STANDINGS_DID_NOT_FINISH", 0);
           if (var2Lifetime6 != null) {
@@ -346,7 +346,7 @@ final class rk extends vd {
           }
           var2Lifetime20 = DualLinkNode.a("TEXT_PLAY_TUTORIAL", 0);
           if (null != var2Lifetime20) {
-            eb.field_p = rk.a((byte) 116, var2Lifetime20);
+            PathWaypoint.field_p = rk.a((byte) 116, var2Lifetime20);
           }
           var2Lifetime21 = DualLinkNode.a("TEXT_ACHIEVEMENTS_THISGAME", 0);
           if (var2Lifetime21 != null) {
@@ -598,19 +598,19 @@ final class rk extends vd {
           }
           var2Lifetime83 = DualLinkNode.a("HIGHSCORE_TOOLTIPS,0", 0);
           if (null != var2Lifetime83) {
-            ga.field_k[0] = rk.a((byte) 94, var2Lifetime83);
+            UiTheme.field_k[0] = rk.a((byte) 94, var2Lifetime83);
           }
           var2Lifetime84 = DualLinkNode.a("HIGHSCORE_TOOLTIPS,1", 0);
           if (var2Lifetime84 != null) {
-            ga.field_k[1] = rk.a((byte) 100, var2Lifetime84);
+            UiTheme.field_k[1] = rk.a((byte) 100, var2Lifetime84);
           }
           var2Lifetime85 = DualLinkNode.a("HIGHSCORE_TOOLTIPS,2", 0);
           if (null != var2Lifetime85) {
-            ga.field_k[2] = rk.a((byte) -126, var2Lifetime85);
+            UiTheme.field_k[2] = rk.a((byte) -126, var2Lifetime85);
           }
           var2Lifetime86 = DualLinkNode.a("HIGHSCORE_TOOLTIPS,3", 0);
           if (var2Lifetime86 != null) {
-            ga.field_k[3] = rk.a((byte) -30, var2Lifetime86);
+            UiTheme.field_k[3] = rk.a((byte) -30, var2Lifetime86);
           }
           var2Lifetime87 = DualLinkNode.a("TEXT_INSTRUCTIONS1", 0);
           if (var2Lifetime87 != null) {
@@ -702,7 +702,7 @@ final class rk extends vd {
           }
           var2Lifetime109 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_SPEED2", 0);
           if (null != var2Lifetime109) {
-            ga.field_h = rk.a((byte) 94, var2Lifetime109);
+            UiTheme.field_h = rk.a((byte) 94, var2Lifetime109);
           }
           var2Lifetime110 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_SPEED1", 0);
           if (null != var2Lifetime110) {
@@ -750,7 +750,7 @@ final class rk extends vd {
           }
           var2Lifetime121 = DualLinkNode.a("TEXT_INSTRUCTIONS_CONTROLS_MULTI1_COLOUR", 0);
           if (var2Lifetime121 != null) {
-            gm.field_a = rk.a((byte) -32, var2Lifetime121);
+            IconToggleRenderer.field_a = rk.a((byte) -32, var2Lifetime121);
           }
           var2Lifetime122 = DualLinkNode.a("TEXT_INSTRUCTIONS_CONTROLS_ACTION", 0);
           if (null != var2Lifetime122) {
@@ -798,7 +798,7 @@ final class rk extends vd {
           }
           var2Lifetime133 = DualLinkNode.a("TEXT_INSTRUCTIONS_KEY_DOWN", 0);
           if (var2Lifetime133 != null) {
-            ra.field_fb = rk.a((byte) -122, var2Lifetime133);
+            LoadProgressDialog.field_fb = rk.a((byte) -122, var2Lifetime133);
           }
           var2Lifetime134 = DualLinkNode.a("TEXT_INSTRUCTIONS_KEY_UP", 0);
           if (null != var2Lifetime134) {
@@ -950,19 +950,19 @@ final class rk extends vd {
           }
           var2Lifetime171 = DualLinkNode.a("SETTING_NAMES,0", 0);
           if (null != var2Lifetime171) {
-            gh.field_t[0] = rk.a((byte) 67, var2Lifetime171);
+            ViewportSizingController.field_t[0] = rk.a((byte) 67, var2Lifetime171);
           }
           var2Lifetime172 = DualLinkNode.a("SETTING_NAMES,1", 0);
           if (null != var2Lifetime172) {
-            gh.field_t[1] = rk.a((byte) -33, var2Lifetime172);
+            ViewportSizingController.field_t[1] = rk.a((byte) -33, var2Lifetime172);
           }
           var2Lifetime173 = DualLinkNode.a("SETTING_NAMES,2", 0);
           if (var2Lifetime173 != null) {
-            gh.field_t[2] = rk.a((byte) -68, var2Lifetime173);
+            ViewportSizingController.field_t[2] = rk.a((byte) -68, var2Lifetime173);
           }
           var2Lifetime174 = DualLinkNode.a("SETTING_NAMES,3", 0);
           if (null != var2Lifetime174) {
-            gh.field_t[3] = rk.a((byte) 116, var2Lifetime174);
+            ViewportSizingController.field_t[3] = rk.a((byte) 116, var2Lifetime174);
           }
           if (param0 < 102) {
             return;
@@ -1041,7 +1041,7 @@ final class rk extends vd {
           }
           var2Lifetime193 = DualLinkNode.a("CARNAME_SNOWMOBILE", 0);
           if (var2Lifetime193 != null) {
-            ga.field_a = rk.a((byte) -75, var2Lifetime193);
+            UiTheme.field_a = rk.a((byte) -75, var2Lifetime193);
           }
           var2Lifetime194 = DualLinkNode.a("CARNAME_DRAGSTER", 0);
           if (null != var2Lifetime194) {

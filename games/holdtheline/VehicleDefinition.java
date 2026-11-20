@@ -280,8 +280,8 @@ final class VehicleDefinition {
                     this.field_z = GameAppletShell.field_j[1];
                     this.field_q = 0.5f;
                     this.field_b = GameAppletShell.field_j[0];
-                    this.field_u = he.field_G.field_e;
-                    this.field_L = he.field_G.field_d;
+                    this.field_u = OpacityWidget.field_G.field_e;
+                    this.field_L = OpacityWidget.field_G.field_d;
                     this.field_e = 10.0f;
                     this.field_o = false;
                     this.field_p = 3.0f;
@@ -329,13 +329,13 @@ final class VehicleDefinition {
                       this.field_n = 0.5f;
                       this.field_e = 0.0f;
                       this.field_b = LinkWidgetRenderer.field_b[0];
-                      this.field_u = ec.field_s.field_e;
+                      this.field_u = RaceSetupMenu.field_s.field_e;
                       this.field_y = 12.0f / this.field_F;
                       this.field_s = 10000.0f;
                       this.field_B = 0.0f;
                       this.field_E = 0.5f;
                       this.field_J = 13.0f;
-                      this.field_L = ec.field_s.field_d;
+                      this.field_L = RaceSetupMenu.field_s.field_d;
                     } else {
                       if (var2 != 7) {
                         throw new RuntimeException();

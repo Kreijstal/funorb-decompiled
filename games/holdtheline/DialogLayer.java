@@ -131,7 +131,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     final static void h(int param0) {
-        pc.field_b = StandardContentTransitionDialog.n(-49);
+        MenuList.field_b = StandardContentTransitionDialog.n(-49);
         ka.field_b = new DialogLayer();
         TutorialAction.a((byte) -109, true, true);
         if (param0 != -1) {

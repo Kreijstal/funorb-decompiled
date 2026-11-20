@@ -156,7 +156,7 @@ final class DraggableWidget extends SingleChildWidget {
             ((TextButton) (this.child)).field_D) &&
             this.pressedButton == 1) {
             var5_int = NodeHashTableIterator.field_g - (this.field_N + param0);
-            var6 = -param2 - this.field_H + rf.field_X;
+            var6 = -param2 - this.field_H + FullscreenErrorDialog.field_X;
             if (var5_int == this.x &&
               this.y == var6) {
               super.updateHover(param0, param1, param2, param3);
@@ -270,16 +270,16 @@ final class DraggableWidget extends SingleChildWidget {
           var1 = new Sprite(540, 140);
           ProxySocketConnector.a(var1, -1);
           TriangleRasterState.c();
-          SoftwareRasterizer.c();
+          SoftwareRasterizer.clear();
           StrongCacheEntry.field_q = 0;
           StereoMusicSample.a((byte) 121);
-          var2 = var1.e();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.e(-2, -2, 16777215);
-            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
+            var2.drawMask(-2, -2, 16777215);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          Js5Transport.field_o.f();
-          var1.c(0, param0);
+          Js5Transport.field_o.bindRaster();
+          var1.drawHalfSize(0, param0);
           dm.b((byte) -10);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jd.NA(" + param0 + ')');

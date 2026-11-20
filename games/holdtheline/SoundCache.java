@@ -30,7 +30,7 @@ final class SoundCache {
           if (param0 != -1610608641) {
             SoundCache.clearSharedReferences(64);
           }
-          if (!this.field_a.a("", true)) {
+          if (!this.field_a.containsGroup("", true)) {
             stackIn_6_0 = this.getSoundEffect(param2, param1, param0 ^ -1610592021, "");
             return stackIn_6_0;
           }
@@ -258,7 +258,7 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.b(-1) == 1) {
+          if (this.field_g.getGroupCapacity(-1) == 1) {
             stackIn_3_0 = this.getMusicSample(param1, param0, 0, 0);
             return stackIn_3_0;
           }
@@ -266,7 +266,7 @@ final class SoundCache {
             var5 = (CharSequence) null;
             SoundCache.a(false, true, (CharSequence) null);
           }
-          if (1 != this.field_g.a((byte) 120, param1)) {
+          if (1 != this.field_g.getFileCapacity((byte) 120, param1)) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.getMusicSample(0, param0, 0, param1);
@@ -322,11 +322,11 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_a.b(-1) == 1) {
+          if (this.field_a.getGroupCapacity(-1) == 1) {
             stackIn_2_0 = this.getSoundEffect(param2, param0, -14322, 0);
             return stackIn_2_0;
           }
-          if (this.field_a.a((byte) 125, param0) == 1) {
+          if (this.field_a.getFileCapacity((byte) 125, param0) == 1) {
             stackIn_6_0 = this.getSoundEffect(param2, 0, -14322, param0);
             return stackIn_6_0;
           }
@@ -361,7 +361,7 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.a("", true)) {
+          if (this.field_g.containsGroup("", true)) {
             stackIn_2_0 = this.getMusicSample(param1, param0, (byte) 104, "");
             return stackIn_2_0;
           }
@@ -405,11 +405,11 @@ final class SoundCache {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_a.c(param0, param2 - 24337);
+          var5_int = this.field_a.getGroupId(param0, param2 - 24337);
           if (var5_int < 0) {
             return null;
           }
-          var6 = this.field_a.a(var5_int, param3, false);
+          var6 = this.field_a.getFileId(var5_int, param3, false);
           if (var6 < 0) {
             return null;
           }
@@ -464,11 +464,11 @@ final class SoundCache {
             var7 = (String) null;
             discarded$1 = this.getMusicSample((String) null, (int[]) null, (byte) -52, (String) null);
           }
-          var5_int = this.field_g.c(param3, 3);
+          var5_int = this.field_g.getGroupId(param3, 3);
           if (0 > var5_int) {
             return null;
           }
-          var6 = this.field_g.a(var5_int, param0, false);
+          var6 = this.field_g.getFileId(var5_int, param0, false);
           if (var6 < 0) {
             return null;
           }
@@ -533,12 +533,12 @@ final class SoundCache {
             var4 = MidiPcmStream.a(param2, (byte) -98);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!SocketJs5Transport.a(-2821, var4.charAt(0)) &&
-                !SocketJs5Transport.a(-2821, var4.charAt(-1 + var4.length()))) {
+              if (!SocketJs5Transport.isNameSeparator(-2821, var4.charAt(0)) &&
+                !SocketJs5Transport.isNameSeparator(-2821, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (SocketJs5Transport.a(-2821, (char) var7)) {
+                  if (SocketJs5Transport.isNameSeparator(-2821, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

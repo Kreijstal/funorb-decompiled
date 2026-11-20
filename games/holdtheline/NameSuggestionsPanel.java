@@ -15,7 +15,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
         BitmapFont var5 = IntrusiveNode.field_g;
         if (null != this.field_F) {
-          var5.a(tk.field_b, param2 + this.x, this.y + param1, this.width, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_I);
+          var5.drawParagraph(tk.field_b, param2 + this.x, this.y + param1, this.width, 20, 16777215, -1, 0, 0, var5.ascent + var5.descent);
         }
     }
 
@@ -35,22 +35,22 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         try {
           if (param3 != null &&
             param4 > 0) {
-            var5_int = param3[0].field_o;
-            var6 = param3[2].field_o;
-            var7 = param3[1].field_o;
-            param3[0].a(param2, param0);
-            param3[2].a(-var6 + (param2 + param4), param0);
-            SoftwareRasterizer.b(hi.field_W);
-            SoftwareRasterizer.e(var5_int + param2, param0, -var6 + param4 + param2, param3[1].field_v + param0);
+            var5_int = param3[0].canvasWidth;
+            var6 = param3[2].canvasWidth;
+            var7 = param3[1].canvasWidth;
+            param3[0].draw(param2, param0);
+            param3[2].draw(-var6 + (param2 + param4), param0);
+            SoftwareRasterizer.saveClip(hi.field_W);
+            SoftwareRasterizer.intersectClip(var5_int + param2, param0, -var6 + param4 + param2, param3[1].canvasHeight + param0);
             if (param1 != 14191) {
               field_J = (RotatedSpriteAsset) null;
             }
             var8 = param2 + var5_int;
             var9 = param2 - (-param4 + var6);
             for (param2 = var8; var9 > param2; param2 = param2 + var7) {
-              param3[1].a(param2, param0);
+              param3[1].draw(param2, param0);
             }
-            SoftwareRasterizer.a(hi.field_W);
+            SoftwareRasterizer.restoreClip(hi.field_W);
             return;
           }
           return;
@@ -78,7 +78,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
     }
 
     final static void a(byte param0) {
-        vk.a(true);
+        CourseDefinition.a(true);
         if (param0 <= 9) {
           field_J = (RotatedSpriteAsset) null;
         }

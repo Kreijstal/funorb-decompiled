@@ -9,8 +9,8 @@ abstract class TextLayout {
     TextLineLayout[] field_b;
     static int[] field_d;
 
-    final static vk a(byte[] param0, byte param1) throws IOException {
-        vk stackIn_15_0 = null;
+    final static CourseDefinition a(byte[] param0, byte param1) throws IOException {
+        CourseDefinition stackIn_15_0 = null;
         int stackIn_16_1 = 0;
         StraightRoadSegment stackIn_28_0;
         StraightRoadSegment stackIn_28_1;
@@ -83,7 +83,7 @@ abstract class TextLayout {
         float stackIn_84_0 = 0.0f;
         float stackIn_95_0 = 0.0f;
         Object stackIn_98_0 = null;
-        vk stackIn_129_0 = null;
+        CourseDefinition stackIn_129_0 = null;
         RuntimeException stackIn_132_0 = null;
         StringBuilder stackIn_132_1 = null;
         String stackIn_133_2 = null;
@@ -146,7 +146,7 @@ abstract class TextLayout {
         Point2i var52 = null;
         int[] var53 = null;
         Object var54 = null;
-        vk var57 = null;
+        CourseDefinition var57 = null;
         char[] var58 = null;
         StraightRoadSegment var59 = null;
         StraightRoadSegment var60 = null;
@@ -217,8 +217,8 @@ abstract class TextLayout {
         var39_ref = null;
         var51 = HoldTheLine.field_D;
         try {
-          ti.c(false);
-          var57 = new vk(param0);
+          GameMenu.initializeTrackObjectDefinitions(false);
+          var57 = new CourseDefinition(param0);
           var3 = new PacketBuffer(param0);
           var75 = new byte[EmailAddressValidator.field_m.length];
           var3.readBytes(EmailAddressValidator.field_m.length, 0, (byte) 113, var75);
@@ -584,16 +584,16 @@ abstract class TextLayout {
             }
             break;
           }
-          var57.field_u = new RoadSegment[var18.size];
+          var57.roadSegments = new RoadSegment[var18.size];
           for (var13Lifetime3 = 0; var13Lifetime3 < var18.size; var13Lifetime3++) {
-            var57.field_u[var13Lifetime3] = (RoadSegment) (var18.elements[var13Lifetime3]);
+            var57.roadSegments[var13Lifetime3] = (RoadSegment) (var18.elements[var13Lifetime3]);
           }
-          var37 = var57.field_u[-1 + var57.field_u.length].field_k;
-          var38 = var57.field_u[0].field_k;
-          for (var13Lifetime4 = 0; var13Lifetime4 < var57.field_u.length; var13Lifetime4++) {
-            var39 = var57.field_u[(1 + var13Lifetime4) % var57.field_u.length].field_k;
+          var37 = var57.roadSegments[-1 + var57.roadSegments.length].field_k;
+          var38 = var57.roadSegments[0].field_k;
+          for (var13Lifetime4 = 0; var13Lifetime4 < var57.roadSegments.length; var13Lifetime4++) {
+            var39 = var57.roadSegments[(1 + var13Lifetime4) % var57.roadSegments.length].field_k;
             if (0 == var38) {
-              var57.field_u[var13Lifetime4].field_o = (float)(var39 - var37) / var57.field_u[var13Lifetime4].length(50);
+              var57.roadSegments[var13Lifetime4].field_o = (float)(var39 - var37) / var57.roadSegments[var13Lifetime4].length(50);
             }
             var37 = var38;
             var38 = var39;
@@ -603,7 +603,7 @@ abstract class TextLayout {
           var62 = new GrowableObjectList();
           var65 = new GrowableObjectList();
           var63 = new GrowableObjectList();
-          TextLineLayout.a(var62, var63, var64, var57.field_e, var57.field_u, var65, -68);
+          TextLineLayout.a(var62, var63, var64, var57.field_e, var57.roadSegments, var65, -68);
           var57.field_e = NanoTickClock.a(var57.field_e, (byte) -127);
           var67 = NanoTickClock.a(var64, (byte) -127);
           var69 = NanoTickClock.a(var65, (byte) -127);
@@ -742,14 +742,14 @@ abstract class TextLayout {
         int var4 = 0;
         int var5 = 0;
         try {
-          var2_int = HoldTheLine.field_F.d(param1, 180);
+          var2_int = HoldTheLine.field_F.getLineCount(param1, 180);
           var3 = 20 + var2_int * 20;
           var4 = 0 != (DialogLayer.field_I & 2) ? NodeHashTableIterator.field_g : -200 + NodeHashTableIterator.field_g;
-          var5 = (1 & DialogLayer.field_I) == 0 ? -var3 + rf.field_X : rf.field_X;
+          var5 = (1 & DialogLayer.field_I) == 0 ? -var3 + FullscreenErrorDialog.field_X : FullscreenErrorDialog.field_X;
           int var6 = -2 % ((param0 - 12) / 60);
-          SoftwareRasterizer.c(var4, var5, 200, var3, 0, 192);
-          SoftwareRasterizer.a(var4, var5, 200, var3, 16777215);
-          HoldTheLine.field_F.a(param1, 10 + var4, var5, 180, var3, 0, -1, 1, 1, 20);
+          SoftwareRasterizer.fillRectangleAlpha(var4, var5, 200, var3, 0, 192);
+          SoftwareRasterizer.drawRectangle(var4, var5, 200, var3, 16777215);
+          HoldTheLine.field_F.drawParagraph(param1, 10 + var4, var5, 180, var3, 0, -1, 1, 1, 20);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lm.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -117,7 +117,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
           this.field_I = param1;
           this.field_F = param0;
           this.field_M = param2;
-          var4_int = this.field_M == null ? 0 : this.field_I.b(this.field_M, 260, this.field_I.field_G);
+          var4_int = this.field_M == null ? 0 : this.field_I.getParagraphHeight(this.field_M, 260, this.field_I.ascent);
           this.setBounds(0, (byte) 122, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -153,7 +153,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, param1, param2, param3);
-        this.field_I.a(this.field_M, 14 + (this.x + param2), 10 + (this.y + param1), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_I.field_G);
+        this.field_I.drawParagraph(this.field_M, 14 + (this.x + param2), 10 + (this.y + param1), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_I.ascent);
     }
 
     final void a(int param0, String param1, byte param2) {

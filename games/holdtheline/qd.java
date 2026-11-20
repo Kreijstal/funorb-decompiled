@@ -99,7 +99,7 @@ final class qd extends vd {
         if (null != ValidationHelpWidget.field_Q &&
           i.field_k[param1] != null) {
           EmailValidationResult.field_d = null;
-          ResourceArchive.a(true, i.field_k[param1], (byte) 69, 30);
+          ResourceArchive.playMusicTrack(true, i.field_k[param1], (byte) 69, 30);
         } else {
           WeightedLruCache.field_e = 0;
           AccountProgressDialog.field_jb = param1;

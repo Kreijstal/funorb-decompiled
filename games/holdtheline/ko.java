@@ -116,7 +116,7 @@ final class ko {
         RuntimeException var3 = null;
         var4 = HoldTheLine.field_D;
         try {
-          if (10 > pf.field_d) {
+          if (10 > PolarSortVector.field_d) {
             var3_int = 0;
             if (TutorialAction.field_a) {
               TutorialAction.field_a = false;
@@ -125,14 +125,14 @@ final class ko {
             DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
           } else {
             if (!ge.a(true)) {
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.clear();
               vb.a(-76, 240, 320);
               hi.a(param1, 0, true, 0);
             } else {
               if (DiskCacheRequest.field_w != 0) {
                 MidiNote.a((byte) -97, param1);
               } else {
-                vk.a(param2, false, 86);
+                CourseDefinition.a(param2, false, 86);
                 hi.a(param1, 0, true, 0);
               }
             }
@@ -172,7 +172,7 @@ final class ko {
         RuntimeException var3 = null;
         var4 = HoldTheLine.field_D;
         try {
-          if (10 > pf.field_d) {
+          if (10 > PolarSortVector.field_d) {
             var3_int = 0;
             if (TutorialAction.field_a) {
               TutorialAction.field_a = false;
@@ -181,14 +181,14 @@ final class ko {
             DraggableWidget.a(q.b((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
           } else {
             if (!ge.a(true)) {
-              SoftwareRasterizer.c();
+              SoftwareRasterizer.clear();
               vb.a(-76, 240, 320);
               hi.a(param1, 0, true, 0);
             } else {
               if (DiskCacheRequest.field_w != 0) {
                 MidiNote.a((byte) -97, param1);
               } else {
-                vk.a(param2, false, 86);
+                CourseDefinition.a(param2, false, 86);
                 hi.a(param1, 0, true, 0);
               }
             }

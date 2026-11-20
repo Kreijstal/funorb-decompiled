@@ -10,9 +10,9 @@ final class CheckboxWidget extends TextButton {
     static NamedSoundEffect field_K;
 
     private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, pc.field_b.field_p, param1);
+        this(param0, MenuList.field_b.field_p, param1);
         try {
-          this.renderer = pc.field_b.field_f;
+          this.renderer = MenuList.field_b.field_f;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -26,11 +26,11 @@ final class CheckboxWidget extends TextButton {
     final static void a(boolean param0, String param1, float param2, int param3) {
         try {
           if (null == MidiKeyUsage.field_l) {
-            MidiKeyUsage.field_l = new ra(ka.field_b, nl.field_c);
+            MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, nl.field_c);
             ka.field_b.a(MidiKeyUsage.field_l, false);
           }
-          MidiKeyUsage.field_l.a(param2, -84, param0, param1);
-          SoftwareRasterizer.c();
+          MidiKeyUsage.field_l.setProgress(param2, -84, param0, param1);
+          SoftwareRasterizer.clear();
           if (param3 > -88) {
             field_K = (NamedSoundEffect) null;
           }
@@ -43,7 +43,7 @@ final class CheckboxWidget extends TextButton {
     private CheckboxWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.renderer = pc.field_b.field_f;
+          this.renderer = MenuList.field_b.field_f;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

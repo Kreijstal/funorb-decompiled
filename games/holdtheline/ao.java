@@ -96,10 +96,10 @@ final class ao {
         RoadSegment var12 = null;
         GrowableObjectList var13 = null;
         GrowableObjectList var14 = null;
-        ha var15 = null;
+        BoundaryIntersection var15 = null;
         GrowableObjectList var16 = null;
         Object var17 = null;
-        ha var17_ref = null;
+        BoundaryIntersection var17_ref = null;
         GrowableObjectList var18 = null;
         int var4_intLifetime1;
         int var4_intLifetime2;
@@ -117,10 +117,10 @@ final class ao {
           var6.insertionSort(false);
           var7.insertionSort(false);
           for (var4_int = 0; var6.size > var4_int; var4_int++) {
-            ((ha) (var6.elements[var4_int])).field_q = var4_int;
+            ((BoundaryIntersection) (var6.elements[var4_int])).field_q = var4_int;
           }
           for (var4_intLifetime1 = 0; var4_intLifetime1 < var7.size; var4_intLifetime1++) {
-            ((ha) (var7.elements[var4_intLifetime1])).field_q = var4_intLifetime1;
+            ((BoundaryIntersection) (var7.elements[var4_intLifetime1])).field_q = var4_intLifetime1;
           }
           var13 = new GrowableObjectList();
           SolidRoadStripRenderer.field_r = false;
@@ -137,11 +137,11 @@ final class ao {
             }
           }
           for (var4_intLifetime2 = -1 + var6.size; var4_intLifetime2 >= 0; var4_intLifetime2--) {
-            var15 = (ha) (var6.elements[var4_intLifetime2]);
+            var15 = (BoundaryIntersection) (var6.elements[var4_intLifetime2]);
             if (!var15.field_l) {
               var15.field_l = true;
-              var15.field_s.field_l = true;
-              var16 = bb.a((-1 + (var4_intLifetime2 + var6.size)) % var6.size, param0, var15.field_m, param3, false, (byte) -81, var7, var6);
+              var15.paired.field_l = true;
+              var16 = bb.a((-1 + (var4_intLifetime2 + var6.size)) % var6.size, param0, var15.parameter, param3, false, (byte) -81, var7, var6);
               if (var16.size >= 1 &&
                 qh.a((byte) -63, var16)) {
                 var13.add(var16, (byte) 6);
@@ -154,11 +154,11 @@ final class ao {
             ao.a(0.2928012013435364f, false, (RoadSegment) null, -0.7333778142929077f);
           }
           while (var4_intLifetime3 < var7.size - 1) {
-            var17_ref = (ha) (var7.elements[var4_intLifetime3]);
+            var17_ref = (BoundaryIntersection) (var7.elements[var4_intLifetime3]);
             if (!var17_ref.field_l) {
               var17_ref.field_l = true;
-              var17_ref.field_s.field_l = true;
-              var18 = bb.a((var4_intLifetime3 + 1) % var7.size, param0, var17_ref.field_m, param3, true, (byte) -94, var7, var6);
+              var17_ref.paired.field_l = true;
+              var18 = bb.a((var4_intLifetime3 + 1) % var7.size, param0, var17_ref.parameter, param3, true, (byte) -94, var7, var6);
               if (1 <= var18.size &&
                 qh.a((byte) -63, var18)) {
                 var13.add(var18, (byte) 6);

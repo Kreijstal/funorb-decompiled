@@ -34,7 +34,7 @@ final class pe {
             var10 = var4_int + (-var4_int + var6) * var9 / var8;
             var11 = var5 + var9 * (var7 - var5) / var8;
             var12 = -96 * var9 / var8 + 160;
-            SoftwareRasterizer.c(var10 + (-(param0 / 2) + param2), -(param0 / 2) + param3 + var9, var11 - var10, 16777088, var12);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var10 + (-(param0 / 2) + param2), -(param0 / 2) + param3 + var9, var11 - var10, 16777088, var12);
           }
           if (param1 != 4209) {
             field_d = (String) null;
@@ -196,7 +196,7 @@ final class pe {
                 ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
               }
               ClientException.field_b[var4 - 3] = "";
-              ClientException.field_b[-2 + var4] = vk.field_i;
+              ClientException.field_b[-2 + var4] = CourseDefinition.field_i;
               cd.field_f[var4 - 2] = 0;
               ClientException.field_e[0] = 3;
               ClientException.field_b[-1 + var4] = h.field_f;
@@ -255,7 +255,7 @@ final class pe {
               cd.field_f[var8] = -1;
             }
             ClientException.field_e = new int[2];
-            ClientException.field_b[1] = eb.field_k;
+            ClientException.field_b[1] = PathWaypoint.field_k;
             cd.field_f[1] = 0;
             ClientException.field_b[0] = rc.field_b;
             cd.field_f[3] = 1;
@@ -358,7 +358,7 @@ final class pe {
           if (WhirlpoolHasher.field_h == 2) {
             TextFieldRenderer.field_q.a(-1, 0, param1, -1);
           } else {
-            TextFieldRenderer.field_q.a(cm.a((byte) 110, rf.field_X, NodeHashTableIterator.field_g), 0, param1, 0);
+            TextFieldRenderer.field_q.a(cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 0, param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

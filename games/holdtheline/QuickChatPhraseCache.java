@@ -15,9 +15,9 @@ final class QuickChatPhraseCache {
           return var3;
         }
         if (32768 > param0) {
-          var4 = this.field_a.a(1, true, param0);
+          var4 = this.field_a.getFile(1, true, param0);
         } else {
-          var4 = this.field_d.a(1, true, param0 & 32767);
+          var4 = this.field_d.getFile(1, true, param0 & 32767);
         }
         if (param1 != 1) {
           return (QuickChatPhraseDefinition) null;

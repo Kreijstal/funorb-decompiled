@@ -14,49 +14,49 @@ final class ll {
         if (param8 == -27987) {
           if (param0 < param15) {
             if (param10 > param15) {
-              fe.a(param13, param10, param3, param4, param5, param8 + 27986, param11, param6, SoftwareRasterizer.field_b, param2, param7, param12, param15, param9, param14, param0, param1);
+              fe.a(param13, param10, param3, param4, param5, param8 + 27986, param11, param6, SoftwareRasterizer.pixels, param2, param7, param12, param15, param9, param14, param0, param1);
               return;
             }
             if (param0 < param10) {
-              fe.a(param13, param15, param14, param11, param6, -1, param4, param5, SoftwareRasterizer.field_b, param2, param7, param1, param10, param9, param3, param0, param12);
+              fe.a(param13, param15, param14, param11, param6, -1, param4, param5, SoftwareRasterizer.pixels, param2, param7, param1, param10, param9, param3, param0, param12);
               return;
             }
-            fe.a(param3, param15, param14, param2, param6, -1, param4, param9, SoftwareRasterizer.field_b, param11, param12, param1, param0, param5, param13, param10, param7);
+            fe.a(param3, param15, param14, param2, param6, -1, param4, param9, SoftwareRasterizer.pixels, param11, param12, param1, param0, param5, param13, param10, param7);
             return;
           }
           if (param10 > param0) {
-            fe.a(param14, param10, param3, param2, param5, -1, param11, param9, SoftwareRasterizer.field_b, param4, param1, param12, param0, param6, param13, param15, param7);
+            fe.a(param14, param10, param3, param2, param5, -1, param11, param9, SoftwareRasterizer.pixels, param4, param1, param12, param0, param6, param13, param15, param7);
             return;
           }
           if (param10 > param15) {
-            fe.a(param14, param0, param13, param11, param9, -1, param2, param5, SoftwareRasterizer.field_b, param4, param1, param7, param10, param6, param3, param15, param12);
+            fe.a(param14, param0, param13, param11, param9, -1, param2, param5, SoftwareRasterizer.pixels, param4, param1, param7, param10, param6, param3, param15, param12);
             return;
           }
-          fe.a(param3, param0, param13, param4, param9, -1, param2, param6, SoftwareRasterizer.field_b, param11, param12, param7, param15, param5, param14, param10, param1);
+          fe.a(param3, param0, param13, param4, param9, -1, param2, param6, SoftwareRasterizer.pixels, param11, param12, param7, param15, param5, param14, param10, param1);
           return;
         }
         ll.a(79, 8, 1, 71, -23, 82, 71, -117, -127, 70, 18, -29, -62, 31, 23, -90);
         if (param0 < param15) {
           if (param10 > param15) {
-            fe.a(param13, param10, param3, param4, param5, param8 + 27986, param11, param6, SoftwareRasterizer.field_b, param2, param7, param12, param15, param9, param14, param0, param1);
+            fe.a(param13, param10, param3, param4, param5, param8 + 27986, param11, param6, SoftwareRasterizer.pixels, param2, param7, param12, param15, param9, param14, param0, param1);
             return;
           }
           if (param0 < param10) {
-            fe.a(param13, param15, param14, param11, param6, -1, param4, param5, SoftwareRasterizer.field_b, param2, param7, param1, param10, param9, param3, param0, param12);
+            fe.a(param13, param15, param14, param11, param6, -1, param4, param5, SoftwareRasterizer.pixels, param2, param7, param1, param10, param9, param3, param0, param12);
             return;
           }
-          fe.a(param3, param15, param14, param2, param6, -1, param4, param9, SoftwareRasterizer.field_b, param11, param12, param1, param0, param5, param13, param10, param7);
+          fe.a(param3, param15, param14, param2, param6, -1, param4, param9, SoftwareRasterizer.pixels, param11, param12, param1, param0, param5, param13, param10, param7);
           return;
         }
         if (param10 > param0) {
-          fe.a(param14, param10, param3, param2, param5, -1, param11, param9, SoftwareRasterizer.field_b, param4, param1, param12, param0, param6, param13, param15, param7);
+          fe.a(param14, param10, param3, param2, param5, -1, param11, param9, SoftwareRasterizer.pixels, param4, param1, param12, param0, param6, param13, param15, param7);
           return;
         }
         if (param10 > param15) {
-          fe.a(param14, param0, param13, param11, param9, -1, param2, param5, SoftwareRasterizer.field_b, param4, param1, param7, param10, param6, param3, param15, param12);
+          fe.a(param14, param0, param13, param11, param9, -1, param2, param5, SoftwareRasterizer.pixels, param4, param1, param7, param10, param6, param3, param15, param12);
           return;
         }
-        fe.a(param3, param0, param13, param4, param9, -1, param2, param6, SoftwareRasterizer.field_b, param11, param12, param7, param15, param5, param14, param10, param1);
+        fe.a(param3, param0, param13, param4, param9, -1, param2, param6, SoftwareRasterizer.pixels, param11, param12, param7, param15, param5, param14, param10, param1);
     }
 
     final boolean a(int param0) {

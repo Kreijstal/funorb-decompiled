@@ -201,7 +201,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_J = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_Q = new TextButton(CheckboxRenderer.field_v, (WidgetListener) null);
         this.field_N = new TextButton(um.field_c, (WidgetListener) null);
-        this.field_G.tooltip = pf.field_f;
+        this.field_G.tooltip = PolarSortVector.field_f;
         this.field_L.tooltip = d.field_a;
         this.field_K.tooltip = lj.field_e;
         this.field_T.tooltip = DiskCacheStore.field_c;
@@ -222,7 +222,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_K.renderer = (WidgetRenderer) ((Object) dupTemp$0);
         this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$0);
         this.field_M.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
-        this.field_J.renderer = (WidgetRenderer) ((Object) new gm());
+        this.field_J.renderer = (WidgetRenderer) ((Object) new IconToggleRenderer());
         PasswordFieldRenderer dupTemp$1 = new PasswordFieldRenderer(10000536);
         this.field_P.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_T.renderer = (WidgetRenderer) ((Object) dupTemp$1);
@@ -237,7 +237,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, SpriteButtonRenderer.field_w, 11579568, TextLayout.field_c);
         this.a(true, var4);
         var3 = var3 + var4.height;
-        TextWidgetStyle var5 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
+        TextWidgetStyle var5 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
         this.field_O = new TextHotspotWidget(var2, var5);
         this.field_O.tooltip = "";
         this.field_O.a(0, m.field_d, true);

@@ -85,19 +85,19 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
           }
           if (null != nl.field_i) {
-            var3 = -(nl.field_i.field_v / 2) + 357;
+            var3 = -(nl.field_i.canvasHeight / 2) + 357;
             var4 = 0;
             if (ValidationIndicator.field_J != 0 &&
               ValidatedTextField.field_U > var3 &&
-              nl.field_i.field_y + var3 > ValidatedTextField.field_U) {
-              if (-nl.field_i.field_s + 269 < TrackBoundary.field_x &&
+              nl.field_i.height + var3 > ValidatedTextField.field_U) {
+              if (-nl.field_i.width + 269 < TrackBoundary.field_x &&
                 TrackBoundary.field_x < 269) {
                 var4 = 1;
                 hk.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = false;
               }
               if (TrackBoundary.field_x > 586 &&
-                TrackBoundary.field_x < nl.field_i.field_s + 586) {
+                TrackBoundary.field_x < nl.field_i.width + 586) {
                 hk.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = true;
                 var4 = 1;
@@ -105,14 +105,14 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
             if (var4 == 0 &&
               hk.field_e > BoundedRandomAccessFile.field_g &&
-              rf.field_X > var3 &&
-              rf.field_X < var3 + nl.field_i.field_y) {
-              if (-nl.field_i.field_s + 269 < NodeHashTableIterator.field_g &&
+              FullscreenErrorDialog.field_X > var3 &&
+              FullscreenErrorDialog.field_X < var3 + nl.field_i.height) {
+              if (-nl.field_i.width + 269 < NodeHashTableIterator.field_g &&
                 NodeHashTableIterator.field_g < 269) {
                 hk.field_e = BoundedRandomAccessFile.field_g;
               }
               if (NodeHashTableIterator.field_g > 586 &&
-                nl.field_i.field_s + 586 > NodeHashTableIterator.field_g) {
+                nl.field_i.width + 586 > NodeHashTableIterator.field_g) {
                 hk.field_e = BoundedRandomAccessFile.field_g;
               }
             }
@@ -120,7 +120,7 @@ class UsernameLoginCredentials extends LoginCredentials {
           if (!param1) {
             return 0;
           }
-          DualLinkNode.field_k.a(PasswordValidator.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.a(param0 + 203, rf.field_X, NodeHashTableIterator.field_g), 4);
+          DualLinkNode.field_k.a(PasswordValidator.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.a(param0 + 203, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
           if (DualLinkNode.field_k.a(-1)) {
             if (0 == DualLinkNode.field_k.field_g) {
               stackIn_63_0 = 3;
@@ -163,15 +163,15 @@ class UsernameLoginCredentials extends LoginCredentials {
 
     final static Boolean b(byte param0) {
         if (param0 != -29) {
-          vk var2 = (vk) null;
-          UsernameLoginCredentials.a((vk) null, true);
+          CourseDefinition var2 = (CourseDefinition) null;
+          UsernameLoginCredentials.a((CourseDefinition) null, true);
         }
         Boolean var1 = RoadSegment.field_u;
         RoadSegment.field_u = null;
         return var1;
     }
 
-    final static boolean a(vk param0, boolean param1) {
+    final static boolean a(CourseDefinition param0, boolean param1) {
         int var3_int = 0;
         int var5_int = 0;
         int var6_int = 0;
@@ -207,10 +207,10 @@ class UsernameLoginCredentials extends LoginCredentials {
           if (!param1) {
             field_e = (IntrusiveDeque) null;
           }
-          if (!mc.field_a[9].b((byte) 116)) {
+          if (!mc.field_a[9].pollGraphicsLoaded((byte) 116)) {
             return false;
           }
-          if (!mc.field_a[11].b((byte) 124)) {
+          if (!mc.field_a[11].pollGraphicsLoaded((byte) 124)) {
             return false;
           }
           if (LoginCredentialType.a(16616, 0)) {
@@ -233,7 +233,7 @@ class UsernameLoginCredentials extends LoginCredentials {
             var6 = var5;
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
-              var8.a();
+              var8.expandToCanvas();
             }
           }
           if (BufferedSocket.a(-74)) {
@@ -295,10 +295,10 @@ class UsernameLoginCredentials extends LoginCredentials {
             TickClock.a(param5, param0, 109, param2, param3);
             return;
           }
-          param3 = param3 - ((param4 - 1024) * param0.field_s >> 11);
-          param2 = param2 - ((param4 - 1024) * param0.field_y >> 11);
-          var6_int = param4 * param0.field_s >> 10;
-          var7 = param4 * param0.field_y >> 10;
+          param3 = param3 - ((param4 - 1024) * param0.width >> 11);
+          param2 = param2 - ((param4 - 1024) * param0.height >> 11);
+          var6_int = param4 * param0.width >> 10;
+          var7 = param4 * param0.height >> 10;
           var8 = 0;
           if (param3 < 0) {
             var6_int = var6_int + param3;
@@ -319,15 +319,15 @@ class UsernameLoginCredentials extends LoginCredentials {
           }
           var11 = 0;
           for (var12 = 0; var12 < var7; var12++) {
-            var10 = (var12 + param2) * SoftwareRasterizer.field_j + param3;
-            var11Lifetime1 = var8 + ((var9 >> 10) * param0.field_s << 10);
+            var10 = (var12 + param2) * SoftwareRasterizer.width + param3;
+            var11Lifetime1 = var8 + ((var9 >> 10) * param0.width << 10);
             for (var13 = 0; var6_int > var13; var13++) {
-              if (param0.field_z[var11Lifetime1 >> 10] != 16777215) {
-                if (param0.field_z[var11Lifetime1 >> 10] != 0) {
-                  SoftwareRasterizer.field_b[var10] = param0.field_z[var11Lifetime1 >> 10];
+              if (param0.pixels[var11Lifetime1 >> 10] != 16777215) {
+                if (param0.pixels[var11Lifetime1 >> 10] != 0) {
+                  SoftwareRasterizer.pixels[var10] = param0.pixels[var11Lifetime1 >> 10];
                 }
               } else {
-                SoftwareRasterizer.field_b[var10] = param5;
+                SoftwareRasterizer.pixels[var10] = param5;
               }
               var10++;
               var11Lifetime1 = var11Lifetime1 + 1048576 / param4;
@@ -436,19 +436,19 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
           }
           if (null != nl.field_i) {
-            var3 = -(nl.field_i.field_v / 2) + 357;
+            var3 = -(nl.field_i.canvasHeight / 2) + 357;
             var4 = 0;
             if (ValidationIndicator.field_J != 0 &&
               ValidatedTextField.field_U > var3 &&
-              nl.field_i.field_y + var3 > ValidatedTextField.field_U) {
-              if (-nl.field_i.field_s + 269 < TrackBoundary.field_x &&
+              nl.field_i.height + var3 > ValidatedTextField.field_U) {
+              if (-nl.field_i.width + 269 < TrackBoundary.field_x &&
                 TrackBoundary.field_x < 269) {
                 var4 = 1;
                 hk.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = false;
               }
               if (TrackBoundary.field_x > 586 &&
-                TrackBoundary.field_x < nl.field_i.field_s + 586) {
+                TrackBoundary.field_x < nl.field_i.width + 586) {
                 hk.field_e = BoundedRandomAccessFile.field_f;
                 DualNodeHashTable.field_e = true;
                 var4 = 1;
@@ -456,14 +456,14 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
             if (var4 == 0 &&
               hk.field_e > BoundedRandomAccessFile.field_g &&
-              rf.field_X > var3 &&
-              rf.field_X < var3 + nl.field_i.field_y) {
-              if (-nl.field_i.field_s + 269 < NodeHashTableIterator.field_g &&
+              FullscreenErrorDialog.field_X > var3 &&
+              FullscreenErrorDialog.field_X < var3 + nl.field_i.height) {
+              if (-nl.field_i.width + 269 < NodeHashTableIterator.field_g &&
                 NodeHashTableIterator.field_g < 269) {
                 hk.field_e = BoundedRandomAccessFile.field_g;
               }
               if (NodeHashTableIterator.field_g > 586 &&
-                nl.field_i.field_s + 586 > NodeHashTableIterator.field_g) {
+                nl.field_i.width + 586 > NodeHashTableIterator.field_g) {
                 hk.field_e = BoundedRandomAccessFile.field_g;
               }
             }
@@ -471,7 +471,7 @@ class UsernameLoginCredentials extends LoginCredentials {
           if (!param1) {
             return 0;
           }
-          DualLinkNode.field_k.a(PasswordValidator.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.a(param0 + 203, rf.field_X, NodeHashTableIterator.field_g), 4);
+          DualLinkNode.field_k.a(PasswordValidator.a(116, ValidatedTextField.field_U, TrackBoundary.field_x), PasswordValidator.a(param0 + 203, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
           if (DualLinkNode.field_k.a(-1)) {
             if (0 == DualLinkNode.field_k.field_g) {
               stackIn_63_0 = 3;

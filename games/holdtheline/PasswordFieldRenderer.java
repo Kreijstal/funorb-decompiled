@@ -83,7 +83,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
             }
             var4 = wl.field_c;
             if (TutorialPage.field_d != 0.0) {
-              var4 = (int)((double)var4 + ha.field_n.nextGaussian() * TutorialPage.field_d);
+              var4 = (int)((double)var4 + BoundaryIntersection.field_n.nextGaussian() * TutorialPage.field_d);
               if (var4 < 0) {
                 var4 = 0;
               }

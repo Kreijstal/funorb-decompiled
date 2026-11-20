@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh {
+final class ViewportSizingController {
     static int field_i;
     static RotatedSpriteAsset field_a;
     private int field_f;
@@ -10,7 +10,7 @@ final class gh {
     private int field_c;
     private int field_l;
     private boolean field_h;
-    private wf field_r;
+    private ViewportResizeListener field_r;
     static String[] field_t;
     private int field_d;
     private float field_e;
@@ -32,7 +32,7 @@ final class gh {
         field_a = null;
     }
 
-    final void b(byte param0) {
+    final void update(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         if (NetworkArchiveRequest.field_w != null) {
@@ -50,9 +50,9 @@ final class gh {
               this.field_h = false;
             } else {
               if (param0 != -9) {
-                this.b(50);
+                this.restoreSize(50);
               }
-              this.a((byte) 124);
+              this.applyAdaptiveSize((byte) 124);
             }
             return;
           }
@@ -64,10 +64,10 @@ final class gh {
             }
           }
           if (lj.field_f != this.field_b) {
-            this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
+            this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
           } else {
             if (LinearPointPath.field_i != this.field_c) {
-              this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
+              this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
             }
           }
           return;
@@ -84,9 +84,9 @@ final class gh {
             this.field_h = false;
           } else {
             if (param0 != -9) {
-              this.b(50);
+              this.restoreSize(50);
             }
-            this.a((byte) 124);
+            this.applyAdaptiveSize((byte) 124);
           }
           return;
         }
@@ -95,10 +95,10 @@ final class gh {
         } else {
           if (this.field_j <= 0) {
             if (lj.field_f != this.field_b) {
-              this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
+              this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
             } else {
               if (LinearPointPath.field_i != this.field_c) {
-                this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
+                this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
               }
             }
             return;
@@ -109,41 +109,41 @@ final class gh {
           LinearPointPath.field_i == this.field_c) {
           return;
         }
-        this.field_r.a(param0 ^ -96, this.field_c, this.field_b);
+        this.field_r.resizeViewport(param0 ^ -96, this.field_c, this.field_b);
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setRequestedSize(int param0, int param1, byte param2) {
         this.field_j = param0;
         if (param2 < -45) {
           this.field_d = param1;
           return;
         }
         Sprite var5 = (Sprite) null;
-        gh.a((Sprite) null, -45, 12, 37, 1.0888298749923706f, -97);
+        ViewportSizingController.drawCenteredTintedSprite((Sprite) null, -45, 12, 37, 1.0888298749923706f, -97);
         this.field_d = param1;
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, float param4, int param5) {
+    final static void drawCenteredTintedSprite(Sprite param0, int param1, int param2, int param3, float param4, int param5) {
         try {
           if (param2 != 0) {
             field_a = (RotatedSpriteAsset) null;
           }
-          param0.c(param1 - param0.field_o / 2, param5 - param0.field_v / 2, IterableSecondaryNodeDeque.a(param4, -1, param3));
+          param0.drawTinted(param1 - param0.canvasWidth / 2, param5 - param0.canvasHeight / 2, IterableSecondaryNodeDeque.a(param4, -1, param3));
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void b(int param0) {
+    final void restoreSize(int param0) {
         int var2 = 114 / ((36 - param0) / 62);
-        this.field_r.a(49, this.field_k, this.field_o);
+        this.field_r.resizeViewport(49, this.field_k, this.field_o);
     }
 
-    static long a(long param0, long param1) {
+    static long andLong(long param0, long param1) {
         return param0 & param1;
     }
 
-    final boolean a(boolean param0) {
+    final boolean canUseAdaptiveSize(boolean param0) {
         if (!param0) {
           return true;
         }
@@ -156,11 +156,11 @@ final class gh {
         return false;
     }
 
-    private gh() throws Throwable {
+    private ViewportSizingController() throws Throwable {
         throw new Error();
     }
 
-    private final void a(byte param0) {
+    private final void applyAdaptiveSize(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -173,7 +173,7 @@ final class gh {
         }
         var2 = this.field_j;
         var3 = this.field_d;
-        if (!this.a(true)) {
+        if (!this.canUseAdaptiveSize(true)) {
           this.field_h = false;
           return;
         }
@@ -194,10 +194,10 @@ final class gh {
                 }
               }
               if (var2 != lj.field_f) {
-                this.field_r.a(79, var3, var2);
+                this.field_r.resizeViewport(79, var3, var2);
               } else {
                 if (var3 != LinearPointPath.field_i) {
-                  this.field_r.a(79, var3, var2);
+                  this.field_r.resizeViewport(79, var3, var2);
                 }
               }
             } else {
@@ -213,10 +213,10 @@ final class gh {
                   }
                 }
                 if (var2 != lj.field_f) {
-                  this.field_r.a(79, var3, var2);
+                  this.field_r.resizeViewport(79, var3, var2);
                 } else {
                   if (var3 != LinearPointPath.field_i) {
-                    this.field_r.a(79, var3, var2);
+                    this.field_r.resizeViewport(79, var3, var2);
                   }
                 }
               } else {
@@ -226,10 +226,10 @@ final class gh {
                   if (var4 > var2) {
                     var3 = (int)((float)var2 / this.field_e);
                     if (var2 != lj.field_f) {
-                      this.field_r.a(79, var3, var2);
+                      this.field_r.resizeViewport(79, var3, var2);
                     } else {
                       if (var3 != LinearPointPath.field_i) {
-                        this.field_r.a(79, var3, var2);
+                        this.field_r.resizeViewport(79, var3, var2);
                       }
                     }
                     if (0 < this.field_j) {
@@ -249,7 +249,7 @@ final class gh {
                   NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
                   return;
                 }
-                this.field_r.a(79, var3, var2);
+                this.field_r.resizeViewport(79, var3, var2);
               }
             }
             if (0 < this.field_j) {
@@ -272,10 +272,10 @@ final class gh {
             }
           }
           if (var2 != lj.field_f) {
-            this.field_r.a(79, var3, var2);
+            this.field_r.resizeViewport(79, var3, var2);
           } else {
             if (var3 != LinearPointPath.field_i) {
-              this.field_r.a(79, var3, var2);
+              this.field_r.resizeViewport(79, var3, var2);
             }
           }
           if (0 < this.field_j) {
@@ -302,14 +302,14 @@ final class gh {
             if (var4Lifetime2 > var2) {
               var3 = (int)((float)var2 / this.field_e);
               if (var2 != lj.field_f) {
-                this.field_r.a(79, var3, var2);
+                this.field_r.resizeViewport(79, var3, var2);
                 if (0 < this.field_j) {
                   NameCheckProgressDialog.field_Bb = (-lj.field_f + this.field_j) / 2;
                 }
                 return;
               }
               if (var3 != LinearPointPath.field_i) {
-                this.field_r.a(79, var3, var2);
+                this.field_r.resizeViewport(79, var3, var2);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -322,10 +322,10 @@ final class gh {
         }
         if (decompiledFrameRemainder0) {
           if (var2 != lj.field_f) {
-            this.field_r.a(79, var3, var2);
+            this.field_r.resizeViewport(79, var3, var2);
           } else {
             if (var3 != LinearPointPath.field_i) {
-              this.field_r.a(79, var3, var2);
+              this.field_r.resizeViewport(79, var3, var2);
             }
           }
         }

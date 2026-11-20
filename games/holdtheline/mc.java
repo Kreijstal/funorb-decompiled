@@ -3,7 +3,7 @@
  */
 final class mc {
     static int[] field_d;
-    static om[] field_a;
+    static TrackObjectDefinition[] field_a;
     static String[][] field_b;
     static String field_c;
 
@@ -49,7 +49,7 @@ final class mc {
 
     final static void a(int param0, boolean param1) {
         if (param0 != 0) {
-          field_a = (om[]) null;
+          field_a = (TrackObjectDefinition[]) null;
           fj.field_o.complete(param1, 123);
           return;
         }

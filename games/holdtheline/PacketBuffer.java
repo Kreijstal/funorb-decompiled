@@ -271,7 +271,7 @@ class PacketBuffer extends IntrusiveNode {
         eg.a(false);
         MarkerSliderRenderer.restoreRasterTarget(-1);
         int var2 = -99 / ((25 - param0) / 63);
-        we.field_o.d(0, 0, param1);
+        we.field_o.drawAlpha(0, 0, param1);
     }
 
     final String readCp1252String(int param0) {
@@ -543,103 +543,103 @@ class PacketBuffer extends IntrusiveNode {
         Sprite var7 = null;
         int var8 = 0;
         int var9 = 0;
-        ec var10 = null;
-        vk var11 = null;
+        RaceSetupMenu var10 = null;
+        CourseDefinition var11 = null;
         Sprite var12 = null;
         Sprite var13 = null;
         Sprite[] var14 = null;
-        vk var15 = null;
+        CourseDefinition var15 = null;
         Sprite[] var16 = null;
         Sprite[] var3Lifetime1;
         int var4Lifetime1;
         var8 = HoldTheLine.field_D;
         try {
-          var10 = (ec) (l.field_a[13]);
+          var10 = (RaceSetupMenu) (l.field_a[13]);
           if (!param0) {
             field_m = (ResourceArchive) null;
           }
           if (7 == DelegatingCanvas.field_d) {
             for (var2_int = 0; var2_int < 4; var2_int++) {
-              var10.field_o[0][var2_int] = IndexedSpriteState.a(pf.a((byte) 82, var2_int), (byte) -110, var2_int);
+              var10.rowSprites[0][var2_int] = IndexedSpriteState.a(PolarSortVector.a((byte) 82, var2_int), (byte) -110, var2_int);
             }
           } else {
             if (DelegatingCanvas.field_d != 1 &&
               DelegatingCanvas.field_d != 0) {
-              var2_int = pc.field_l[5];
+              var2_int = MenuList.field_l[5];
               var14 = new Sprite[var2_int];
               var3 = var14;
               for (var4 = 0; var4 < var2_int; var4++) {
                 var11 = tk.field_c[5][var4];
-                var11.b(3);
-                var6_int = pf.a((byte) 88, var4);
+                var11.pollLoaded(3);
+                var6_int = PolarSortVector.a((byte) 88, var4);
                 if (var6_int != 0) {
                   if (2 != var6_int) {
                     if (of.a(-969)) {
-                      var13 = var11.a(9392, 2, 111).e();
+                      var13 = var11.getPreview(9392, 2, 111).copy();
                       var7 = var13;
                       Point2i.scaleSpriteIntensity(var13, 64, -1);
                     } else {
                       var7 = new Sprite(111, 84);
                     }
                     vb.a(-93, var7);
-                    rf.field_ab.a(var7.field_s - rf.field_ab.field_s >> 1, var7.field_y - rf.field_ab.field_y >> 1);
+                    FullscreenErrorDialog.field_ab.draw(var7.width - FullscreenErrorDialog.field_ab.width >> 1, var7.height - FullscreenErrorDialog.field_ab.height >> 1);
                     MarkerSliderRenderer.restoreRasterTarget(-1);
                   } else {
-                    var12 = var11.a(9392, 2, 111).e();
+                    var12 = var11.getPreview(9392, 2, 111).copy();
                     var7 = var12;
                     Point2i.scaleSpriteIntensity(var12, 64, -1);
                   }
                   var3[var4] = var7;
                 } else {
-                  var3[var4] = var11.a(9392, 2, 111);
+                  var3[var4] = var11.getPreview(9392, 2, 111);
                 }
               }
-              var10.field_o[0] = var14;
-              if (var10.field_c >= 1) {
+              var10.rowSprites[0] = var14;
+              if (var10.selectedItem >= 1) {
                 var4_ref_int__ = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p];
-                var10.field_o[1] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[1], 9, 111)};
-                if (2 <= var10.field_c) {
-                  var10.field_o[2] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + var4_ref_int__[1], 9, 111)};
+                var10.rowSprites[1] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[1], 9, 111)};
+                if (2 <= var10.selectedItem) {
+                  var10.rowSprites[2] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var4_ref_int__[0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + var4_ref_int__[1], 9, 111)};
                   return;
                 }
               }
               return;
             }
             for (var2_int = 0; var2_int < 4; var2_int++) {
-              var10.field_o[0][var2_int] = IndexedSpriteState.a(pf.a((byte) 94, var2_int), (byte) -127, var2_int);
+              var10.rowSprites[0][var2_int] = IndexedSpriteState.a(PolarSortVector.a((byte) 94, var2_int), (byte) -127, var2_int);
             }
-            if (1 <= var10.field_c) {
-              var2_int = pc.field_l[StrongCacheEntry.field_w];
+            if (1 <= var10.selectedItem) {
+              var2_int = MenuList.field_l[StrongCacheEntry.field_w];
               var16 = new Sprite[var2_int];
               var3Lifetime1 = var16;
               var9 = 0;
               var4Lifetime1 = var9;
               while (var2_int > var9) {
                 var15 = tk.field_c[StrongCacheEntry.field_w][var9];
-                var15.b(3);
+                var15.pollLoaded(3);
                 if (ArcTrackBoundary.a(var9, -117, StrongCacheEntry.field_w) != 0) {
-                  var6 = var15.a(9392, DelegatingCanvas.field_d, 111).e();
+                  var6 = var15.getPreview(9392, DelegatingCanvas.field_d, 111).copy();
                   Point2i.scaleSpriteIntensity(var6, 64, -1);
                   vb.a(-108, var6);
-                  rf.field_ab.a(-rf.field_ab.field_s + var6.field_s >> 1, -rf.field_ab.field_y + var6.field_y >> 1);
+                  FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + var6.width >> 1, -FullscreenErrorDialog.field_ab.height + var6.height >> 1);
                   MarkerSliderRenderer.restoreRasterTarget(-1);
                   var3Lifetime1[var9] = var6;
                 } else {
-                  var3Lifetime1[var9] = var15.a(9392, 1, 111);
+                  var3Lifetime1[var9] = var15.getPreview(9392, 1, 111);
                 }
                 var9++;
               }
-              var10.field_o[1] = var16;
+              var10.rowSprites[1] = var16;
             }
-            if (var10.field_c < 2) {
+            if (var10.selectedItem < 2) {
               return;
             }
             var2 = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p];
-            var10.field_o[2] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var2[0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var2[1], 9, 111)};
-            if (3 > var10.field_c) {
+            var10.rowSprites[2] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var2[0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var2[1], 9, 111)};
+            if (3 > var10.selectedItem) {
               return;
             }
-            var10.field_o[3] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var2[0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var2[1] + 8, 9, 111)};
+            var10.rowSprites[3] = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, var2[0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, var2[1] + 8, 9, 111)};
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

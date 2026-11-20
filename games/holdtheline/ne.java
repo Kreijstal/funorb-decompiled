@@ -103,7 +103,7 @@ final class ne {
         RuntimeException decompiledCaughtException = null;
         var4 = HoldTheLine.field_D;
         try {
-          if (!ra.a(param0, false, param2)) {
+          if (!LoadProgressDialog.isNormalizedNameValid(param0, false, param2)) {
             return false;
           }
           var3_int = param1;

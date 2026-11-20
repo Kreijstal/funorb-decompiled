@@ -20,15 +20,15 @@ final class TriangleRasterState {
         if (field_a.length < field_d) {
           field_a = new int[SpriteButtonRenderer.a((byte) 7, field_d)];
         }
-        int var4 = param1 * SoftwareRasterizer.field_j + param0;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_d; var5++) {
           field_a[var5] = var4;
-          var4 = var4 + SoftwareRasterizer.field_j;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 
     final static void c() {
-        TriangleRasterState.a(SoftwareRasterizer.field_d, SoftwareRasterizer.field_a, SoftwareRasterizer.field_e, SoftwareRasterizer.field_i);
+        TriangleRasterState.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     public static void clearSharedReferences() {

@@ -73,7 +73,7 @@ final class TutorialPage {
     final static void a(byte param0) {
         ka.field_b.a(false);
         if (MidiKeyUsage.field_l == null) {
-          MidiKeyUsage.field_l = new ra(ka.field_b, nl.field_c);
+          MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, nl.field_c);
         }
         ka.field_b.a(MidiKeyUsage.field_l, false);
         if (param0 > -80) {

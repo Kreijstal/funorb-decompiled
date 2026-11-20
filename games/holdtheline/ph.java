@@ -98,8 +98,8 @@ final class ph {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          if (var4 >= 0 && (ec.field_C == 0 ||
-            !(var4 > ec.field_C))) {
+          if (var4 >= 0 && (RaceSetupMenu.field_C == 0 ||
+            !(var4 > RaceSetupMenu.field_C))) {
             if (0 == var3) {
               var13 = new byte[var4];
               var11 = var13;
@@ -109,17 +109,17 @@ final class ph {
               return stackIn_24_0;
             }
             var5_int = var9.readInt(-76);
-            if (var5_int >= 0 && (ec.field_C == 0 ||
-              !(var5_int > ec.field_C))) {
+            if (var5_int >= 0 && (RaceSetupMenu.field_C == 0 ||
+              !(var5_int > RaceSetupMenu.field_C))) {
               var12 = new byte[var5_int];
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
                 Bzip2Decoder.a(var12, var5_int, param1, var4, 9);
               } else {
-                var7 = pc.field_n;
+                var7 = MenuList.field_n;
                 synchronized (var7) {
-                  pc.field_n.decompress((byte) -117, var9, var12);
+                  MenuList.field_n.decompress((byte) -117, var9, var12);
                 }
               }
               stackIn_22_0 = var6;
@@ -156,9 +156,9 @@ final class ph {
         }
         try {
           te.field_c = i.a(-113, 2000, 64, "dunebuggy", 64);
-          he.field_G = i.a(param1 - 57, 2000, 60, "snowcat", 60);
+          OpacityWidget.field_G = i.a(param1 - 57, 2000, 60, "snowcat", 60);
           ValidationIndicator.field_H = i.a(param1 ^ 50, 2000, 70, "snowmobile", 70);
-          ec.field_s = i.a(param1 - 55, 2000, 40, "bmw", 40);
+          RaceSetupMenu.field_s = i.a(param1 - 55, 2000, 40, "bmw", 40);
           MusicPatch.field_n = i.a(param1 ^ 49, 2000, 60, "suv", 60);
           discarded$0 = new NamedSoundEffect("engine_start", 70);
           StrongCacheEntry.field_s = new NamedSoundEffect("turbo_whistle", 140);
@@ -166,7 +166,7 @@ final class ph {
           Point2i.field_c = new NamedSoundEffect("tyre_squeal", 100);
           rc.field_a = new NamedSoundEffect("off_the_track", 768);
           TextFieldRenderer.field_t = new NamedSoundEffect("off_the_track_alpine", 768);
-          pf.field_g = new NamedSoundEffect("alarm_test", 100);
+          PolarSortVector.field_g = new NamedSoundEffect("alarm_test", 100);
           ArchiveLoadStage.field_i = new NamedSoundEffect("mine_landing_and_armed", 256);
           NamedSoundEffect.field_p = new NamedSoundEffect("mine_explosion", 256);
           vd.field_b = new NamedSoundEffect("machine_gun_1070ms_loop", 40);

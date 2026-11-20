@@ -46,7 +46,7 @@ final class CachedTextLayout extends TextLayout {
         var15 = HoldTheLine.field_D;
         try {
           if (0 == param2) {
-            param2 = param5.field_F;
+            param2 = param5.baseline;
           }
           if (param1 == null) {
             this.field_b = null;
@@ -71,27 +71,27 @@ final class CachedTextLayout extends TextLayout {
           this.field_g = param7;
           this.field_k = param1;
           this.field_h = false;
-          var16 = new String[param3 + param5.d(param1, param0)];
+          var16 = new String[param3 + param5.getLineCount(param1, param0)];
           var17 = var16;
-          var10 = Math.max(1, param5.a(param1, new int[]{param0}, var17));
+          var10 = Math.max(1, param5.wrapLines(param1, new int[]{param0}, var17));
           if (this.field_l == 3 &&
             1 == var10) {
             this.field_l = 1;
           }
           if (0 == this.field_l) {
-            var11 = param5.field_G;
+            var11 = param5.ascent;
           } else {
             if (1 == this.field_l) {
-              var11 = (-(var10 * this.field_m) + this.field_i >> 1) + param5.field_G;
+              var11 = (-(var10 * this.field_m) + this.field_i >> 1) + param5.ascent;
             } else {
               if (this.field_l == 2) {
-                var11 = this.field_i - param5.field_I - var10 * this.field_m;
+                var11 = this.field_i - param5.descent - var10 * this.field_m;
               } else {
                 var12 = (-(this.field_m * var10) + this.field_i) / (var10 + 1);
                 if (var12 < 0) {
                   var12 = 0;
                 }
-                var11 = var12 + param5.field_G;
+                var11 = var12 + param5.ascent;
                 this.field_m = this.field_m + var12;
               }
             }
@@ -101,8 +101,8 @@ final class CachedTextLayout extends TextLayout {
             var13 = var16[var12Lifetime1];
             stackIn_35_0 = null;
             stackIn_35_1 = null;
-            stackIn_35_2 = var11 - param5.field_G;
-            stackIn_35_3 = param5.field_I + var11;
+            stackIn_35_2 = var11 - param5.ascent;
+            stackIn_35_3 = param5.descent + var11;
             if (var13 == null) {
               stackIn_36_0 = null;
               stackIn_36_1 = null;
@@ -115,12 +115,12 @@ final class CachedTextLayout extends TextLayout {
             var14 = new TextLineLayout(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param5.a(var13);
+              var14.field_c[var13.length()] = param5.measureText(var13);
               stackIn_39_0 = var14;
               if (param7 != 3) {
                 stackIn_40_1 = 0;
               } else {
-                stackIn_40_1 = this.a(param5.a(var13), param0, var13, (byte) -115);
+                stackIn_40_1 = this.a(param5.measureText(var13), param0, var13, (byte) -115);
               }
               oc.a(stackIn_39_0, stackIn_40_1, param5, 120, var13);
             }
@@ -179,7 +179,7 @@ final class CachedTextLayout extends TextLayout {
           if (param0 <= 83) {
             CachedTextLayout.clearSharedReferences(true);
           }
-          var6 = new TextLineLayout(-param2.field_G + param3, param3 + param2.field_I, param1.length());
+          var6 = new TextLineLayout(-param2.ascent + param3, param3 + param2.descent, param1.length());
           var5 = var6;
           this.field_b = new TextLineLayout[]{var6};
           stackIn_3_0 = var5;
@@ -226,7 +226,7 @@ final class CachedTextLayout extends TextLayout {
           if (param1 != -12476) {
             field_j = (int[]) null;
           }
-          var8.field_c[param0.length()] = param4.a(param0) + param3;
+          var8.field_c[param0.length()] = param4.measureText(param0) + param3;
           oc.a(var8, 0, param4, 123, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -257,7 +257,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_k = param0;
           var8 = this.createSingleLine(122, param0, param2, param3);
           var9 = var8;
-          var9.field_c[0] = param4 - param2.a(param0);
+          var9.field_c[0] = param4 - param2.measureText(param0);
           var9.field_c[param0.length()] = param4;
           oc.a(var9, 0, param2, 113, param0);
         } catch (RuntimeException runtimeException) {
@@ -284,7 +284,7 @@ final class CachedTextLayout extends TextLayout {
           }
           this.field_g = 1;
           var8 = this.createSingleLine(117, param3, param0, param2);
-          var7 = param0.a(param3);
+          var7 = param0.measureText(param3);
           var8.field_c[0] = param4 - (var7 >> 1);
           var8.field_c[param3.length()] = param4 + (var7 >> 1);
           oc.a(var8, 0, param0, param1 ^ -93, param3);

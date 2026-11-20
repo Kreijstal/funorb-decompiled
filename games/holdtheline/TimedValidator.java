@@ -16,7 +16,7 @@ abstract class TimedValidator implements Validator {
         }
         if (ak.field_b != ImageProducerRasterBuffer.field_n) {
           int var1 = -82 / ((-21 - param0) / 40);
-          return ec.field_v;
+          return RaceSetupMenu.field_v;
         }
         return fj.field_o.getText((byte) 66);
     }

@@ -286,7 +286,7 @@ final class ArchiveIndex {
         }
     }
 
-    final static vk b(byte param0) {
+    final static CourseDefinition b(byte param0) {
         if (param0 != -49) {
           ArchiveIndex.clearSharedReferences((byte) -96);
         }

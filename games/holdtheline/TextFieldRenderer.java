@@ -28,7 +28,7 @@ class TextFieldRenderer extends TextWidgetStyle {
     }
 
     TextFieldRenderer(BitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.ascent, -1, 2147483647, false);
     }
 
     public static void clearSharedReferences(boolean param0) {

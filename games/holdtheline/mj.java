@@ -38,18 +38,18 @@ final class mj {
             param1 = param1 + param4;
             param4 = 0;
           }
-          if (param4 + param1 > SoftwareRasterizer.field_c) {
-            param1 = -param4 + SoftwareRasterizer.field_c;
+          if (param4 + param1 > SoftwareRasterizer.height) {
+            param1 = -param4 + SoftwareRasterizer.height;
           }
-          if (SoftwareRasterizer.field_j < param0 + param2) {
-            param0 = -param2 + SoftwareRasterizer.field_j;
+          if (SoftwareRasterizer.width < param0 + param2) {
+            param0 = -param2 + SoftwareRasterizer.width;
           }
           var6_int = -param5 + 256;
           var7 = param4 + param1;
           for (var8 = param4; var7 > var8; var8++) {
-            var9 = var8 * SoftwareRasterizer.field_j + param2;
+            var9 = var8 * SoftwareRasterizer.width + param2;
             for (var10 = param0; var10 > 0; var10--) {
-              var11 = SoftwareRasterizer.field_b[var9];
+              var11 = SoftwareRasterizer.pixels[var9];
               var12 = (var11 & 16711680) >> 16;
               var13 = 255 & var11 >> 8;
               var14 = var11 & 255;
@@ -58,7 +58,7 @@ final class mj {
               var17 = (var6_int * var15 >> 12) + (var13 * param5 >> 8);
               var18 = (var15 * var6_int >> 12) + (var14 * param5 >> 8);
               var19 = var16 << 16 | var17 << 8 | var18;
-              SoftwareRasterizer.field_b[var9] = var19;
+              SoftwareRasterizer.pixels[var9] = var19;
               var9++;
             }
           }

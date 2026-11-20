@@ -15,7 +15,7 @@ final class SolidRoadStripRenderer extends RoadStripRenderer {
         if (param0 != 2) {
           field_o = (String) null;
         }
-        return rf.a(param1, Vector2f.field_c, -1);
+        return FullscreenErrorDialog.nextIntBounded(param1, Vector2f.field_c, -1);
     }
 
     public static void clearSharedReferences(byte param0) {

@@ -104,10 +104,10 @@ final class ma extends IntrusiveNode {
         if (param0 != -21383) {
           ma.clearSharedReferences((byte) 26);
         }
-        if (pf.a((byte) 20, ArchiveIndex.b((byte) -49).field_p) != 0) {
+        if (PolarSortVector.a((byte) 20, ArchiveIndex.b((byte) -49).field_p) != 0) {
           return;
         }
-        eb.field_o = null;
+        PathWaypoint.field_o = null;
         ClientException.field_c = 0;
         qd.a(20830, 3 + StrongCacheEntry.field_w);
         CheckboxRenderer.field_x = 3;
@@ -139,15 +139,15 @@ final class ma extends IntrusiveNode {
           IntrusiveDeque.field_b = -1;
           TextWidgetStyle.field_g = 3;
           eg.field_a = LoginForm.field_P;
-          EntitySound.field_m = new int[pc.field_l[StrongCacheEntry.field_w]];
+          EntitySound.field_m = new int[MenuList.field_l[StrongCacheEntry.field_w]];
           ni.field_b = 859978912;
           CurvedRoadSegment.field_y = 0;
-          nj.field_d = 1913842707 + ((1 & StrongCacheEntry.field_w) << 1) + ((2 & StrongCacheEntry.field_w) >> 1);
+          LayeredWidgetStyle.field_d = 1913842707 + ((1 & StrongCacheEntry.field_w) << 1) + ((2 & StrongCacheEntry.field_w) >> 1);
           tn.field_c = -1134004831;
           cm.field_a = -1329759026;
           t.field_l = RotatedSpriteAsset.field_g[ArchiveIndex.b((byte) -49).field_p][0];
           ij.a(param1, -79);
-          ((ti) (l.field_a[10])).field_t = 480.0f;
+          ((GameMenu) (l.field_a[10])).carouselOffset = 480.0f;
         }
     }
 

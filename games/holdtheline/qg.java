@@ -91,21 +91,21 @@ final class qg {
               var4 = 0;
             }
             var5 = gf.field_b;
-            if (SoftwareRasterizer.field_j <= var5) {
-              var5 = -1 + SoftwareRasterizer.field_j;
+            if (SoftwareRasterizer.width <= var5) {
+              var5 = -1 + SoftwareRasterizer.width;
             }
             var6 = gf.field_a;
             if (var6 < 0) {
               var6 = 0;
             }
-            if (var6 >= SoftwareRasterizer.field_c) {
-              var6 = -1 + SoftwareRasterizer.field_c;
+            if (var6 >= SoftwareRasterizer.height) {
+              var6 = -1 + SoftwareRasterizer.height;
             }
-            var7 = var4 % param0.field_s;
-            var8 = var6 % param0.field_y;
-            var9 = var4 + SoftwareRasterizer.field_j * var6;
-            var10 = var7 + param0.field_s * var8;
-            var11 = param0.field_s - var7;
+            var7 = var4 % param0.width;
+            var8 = var6 % param0.height;
+            var9 = var4 + SoftwareRasterizer.width * var6;
+            var10 = var7 + param0.width * var8;
+            var11 = param0.width - var7;
             var12 = -var4 + var5;
             while (true) {
               var12--;
@@ -116,13 +116,13 @@ final class qg {
               var9++;
               incrementValue$1 = var10;
               var10++;
-              SoftwareRasterizer.field_b[incrementValue$0] = param0.field_z[incrementValue$1];
+              SoftwareRasterizer.pixels[incrementValue$0] = param0.pixels[incrementValue$1];
               var11--;
               if (0 != var11) {
                 continue;
               }
-              var10 = param0.field_s * var8;
-              var11 = param0.field_s;
+              var10 = param0.width * var8;
+              var11 = param0.width;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -191,7 +191,7 @@ final class qg {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param3.a(param0, true, param1);
+          var5 = param3.getFile(param0, true, param1);
           var4 = var5;
           if (var5 == null) {
             return false;

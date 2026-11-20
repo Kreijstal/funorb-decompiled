@@ -11,16 +11,16 @@ final class hc {
     final static void a(int param0, Sprite param1, byte param2, int param3, int param4) {
         Sprite var5 = null;
         try {
-          var5 = new Sprite(param1.field_o, param1.field_v);
+          var5 = new Sprite(param1.canvasWidth, param1.canvasHeight);
           TutorialTransition.a(32381);
-          var5.f();
-          param1.e(0, 0, 1);
+          var5.bindRaster();
+          param1.drawMask(0, 0, 1);
           if (param2 > -41) {
             Sprite var6 = (Sprite) null;
             hc.a(20, (Sprite) null, (byte) -34, 96, -42);
           }
           MarkerSliderRenderer.restoreRasterTarget(-1);
-          var5.d(param3 - (param1.field_o >> 1), param4 - (param1.field_v >> 1), param0);
+          var5.drawAlpha(param3 - (param1.canvasWidth >> 1), param4 - (param1.canvasHeight >> 1), param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -53,8 +53,8 @@ final class hc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.c(param3, 3);
-          var5 = param1.a(var4_int, param0, false);
+          var4_int = param1.getGroupId(param3, 3);
+          var5 = param1.getFileId(var4_int, param0, false);
           if (param2 > -105) {
             var6 = (Sprite) null;
             hc.a(-78, (Sprite) null, (byte) -62, 68, 71);

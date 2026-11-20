@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class l {
-    static pc[] field_a;
+    static MenuList[] field_a;
     static boolean field_b;
 
-    final static void a(int param0, vk param1) {
+    final static void a(int param0, CourseDefinition param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -39,7 +39,7 @@ abstract class l {
             }
           }
           if (param0 != 29824) {
-            field_a = (pc[]) null;
+            field_a = (MenuList[]) null;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < param1.field_t.size; var2_intLifetime1++) {
             var6 = (GrowableObjectList) (param1.field_t.elements[var2_intLifetime1]);
@@ -157,7 +157,7 @@ abstract class l {
     }
 
     static {
-        field_a = new pc[14];
+        field_a = new MenuList[14];
         field_b = false;
     }
 }

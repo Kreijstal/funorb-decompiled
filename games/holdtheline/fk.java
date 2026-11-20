@@ -97,8 +97,8 @@ final class fk {
         var19 = HoldTheLine.field_D;
         try {
           var8 = param1.length;
-          QuickChatPhraseDefinition.field_t.a(param6, param4);
-          nj.field_i.a(381 + param6, param4);
+          QuickChatPhraseDefinition.field_t.draw(param6, param4);
+          LayeredWidgetStyle.field_i.draw(381 + param6, param4);
           stackIn_4_0 = (var8 != 1) ? 2 : 1;
           var9 = stackIn_4_0;
           if (param5 != -1) {
@@ -108,44 +108,44 @@ final class fk {
               stackIn_9_0 = ContentTransitionDialog.field_ab;
             }
             var10_ref_hj = stackIn_9_0;
-            var11 = var10_ref_hj.field_s;
+            var11 = var10_ref_hj.width;
             if (param5 + 1 < var9) {
               stackIn_12_0 = DisplayNameForm.field_O;
             } else {
               stackIn_12_0 = ContentTransitionDialog.field_ab;
             }
             var12 = stackIn_12_0;
-            var13 = var12.field_s;
+            var13 = var12.width;
             var14 = param6;
             for (var7_int = 0; param5 >= var7_int; var7_int++) {
               var14 = var14 + param0[var7_int];
             }
             var15 = var14 + param0[1 + param5];
-            for (var16 = 0; QuickChatPhraseDefinition.field_t.field_y > var16; var16++) {
-              for (var17 = var10_ref_hj.field_s; var17 > 0; var17--) {
-                if (var10_ref_hj.field_z[-1 + (var11 * var16 + var17)] == 0) {
+            for (var16 = 0; QuickChatPhraseDefinition.field_t.height > var16; var16++) {
+              for (var17 = var10_ref_hj.width; var17 > 0; var17--) {
+                if (var10_ref_hj.pixels[-1 + (var11 * var16 + var17)] == 0) {
                   continue;
                 }
                 break;
               }
               var17 = var17 + var14;
-              for (var18 = 0; var12.field_s > var18; var18++) {
-                if (var12.field_z[var16 * var13 + var18] == 0) {
+              for (var18 = 0; var12.width > var18; var18++) {
+                if (var12.pixels[var16 * var13 + var18] == 0) {
                   continue;
                 }
                 break;
               }
               var18 = var18 + var15;
-              SoftwareRasterizer.c(var17, param4 + var16, var18 - var17, 16744576, 128);
+              SoftwareRasterizer.drawHorizontalLineAlpha(var17, param4 + var16, var18 - var17, 16744576, 128);
             }
           }
           var10 = param6;
           for (var7_intLifetime1 = 0; var7_intLifetime1 < param0.length; var7_intLifetime1++) {
             var10 = var10 + param0[var7_intLifetime1];
             if (var9 <= var7_intLifetime1) {
-              ContentTransitionDialog.field_ab.d(var10, param4, 153);
+              ContentTransitionDialog.field_ab.drawAlpha(var10, param4, 153);
             } else {
-              DisplayNameForm.field_O.d(var10, param4, 153);
+              DisplayNameForm.field_O.drawAlpha(var10, param4, 153);
             }
           }
           var10Lifetime1 = param6 + 11 + param0[0];
@@ -153,13 +153,13 @@ final class fk {
             stackIn_37_0 = nm.field_c;
             stackIn_37_1 = param1[var7_intLifetime2];
             stackIn_37_2 = param0[1 + var7_intLifetime2] / 2 + var10Lifetime1;
-            stackIn_37_3 = (nm.field_c.field_G + 30) / 2 + (param4 - 2);
+            stackIn_37_3 = (nm.field_c.ascent + 30) / 2 + (param4 - 2);
             if (var7_intLifetime2 != param3) {
               stackIn_38_4 = 1;
             } else {
               stackIn_38_4 = 2;
             }
-            ((PaletteBitmapFont) (Object) stackIn_37_0).b(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, -1);
+            ((PaletteBitmapFont) (Object) stackIn_37_0).drawCentered(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, -1);
             var10Lifetime1 = var10Lifetime1 + param0[1 + var7_intLifetime2];
           }
           var11Lifetime1 = -75 / ((param2 + 10) / 62);

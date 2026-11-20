@@ -115,7 +115,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
             }
             var13 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             StereoMusicSample.a(param1.x + (param0 + param1.width), param1.x + param0, param1.y + param4 + param1.height, true, param1.y + param4);
-            pc.field_b.a(this.field_a, var12, (byte) -53, var13, var11, var11);
+            MenuList.field_b.drawLine(this.field_a, var12, (byte) -53, var13, var11, var11);
             dm.b((byte) -10);
           }
           return;
@@ -276,33 +276,33 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
             var12 = this.field_d;
             if (var12 != 0) {
               if (var12 == 2) {
-                var11 = -this.field_f.field_I + var10;
+                var11 = -this.field_f.descent + var10;
               } else {
                 if (var12 != 3 &&
                   1 != var12) {
                 }
-                var11 = this.field_f.field_G + (var10 + (-this.field_f.field_G - this.field_f.field_I) >> 1);
+                var11 = this.field_f.ascent + (var10 + (-this.field_f.ascent - this.field_f.descent) >> 1);
               }
             } else {
-              var11 = this.field_f.field_G;
+              var11 = this.field_f.ascent;
             }
             var12Lifetime1 = this.field_i;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_f.b(this.getDisplayText(param6, (byte) -98), (var9_int >> 1) + this.textXToScreen((byte) 107, param0, param1, param6), this.textYToScreen(param7, (byte) -46, param6, param4) + var11, param5, param2);
+                this.field_f.drawCentered(this.getDisplayText(param6, (byte) -98), (var9_int >> 1) + this.textXToScreen((byte) 107, param0, param1, param6), this.textYToScreen(param7, (byte) -46, param6, param4) + var11, param5, param2);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_f.c(this.getDisplayText(param6, (byte) -5), this.textXToScreen((byte) 98, param0, param1, param6) + var9_int, var11 + this.textYToScreen(param7, (byte) -56, param6, param4), param5, param2);
+                  this.field_f.drawRightAligned(this.getDisplayText(param6, (byte) -5), this.textXToScreen((byte) 98, param0, param1, param6) + var9_int, var11 + this.textYToScreen(param7, (byte) -56, param6, param4), param5, param2);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_f.a(this.getDisplayText(param6, (byte) 125), this.textXToScreen((byte) -96, param0, param1, param6), var11 + this.textYToScreen(param7, (byte) 57, param6, param4), param5, param2);
+              this.field_f.draw(this.getDisplayText(param6, (byte) 125), this.textXToScreen((byte) -96, param0, param1, param6), var11 + this.textYToScreen(param7, (byte) 57, param6, param4), param5, param2);
             }
           } else {
-            this.field_f.a(this.getDisplayText(param6, (byte) -12), this.textXToScreen((byte) 101, param0, param1, param6), this.textYToScreen(param7, (byte) -114, param6, param4), var9_int, var10, param5, param2, this.field_i, this.field_d, this.field_h);
+            this.field_f.drawParagraph(this.getDisplayText(param6, (byte) -12), this.textXToScreen((byte) 101, param0, param1, param6), this.textYToScreen(param7, (byte) -114, param6, param4), var9_int, var10, param5, param2, this.field_i, this.field_d, this.field_h);
           }
           dm.b((byte) -10);
           return;
@@ -434,7 +434,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
         if (!param0) {
           this.field_n = 120;
         }
-        return this.field_f.field_I + this.field_f.field_G;
+        return this.field_f.descent + this.field_f.ascent;
     }
 
     public final int getTextOriginY(int param0, UiWidget param1, int param2) {
@@ -549,7 +549,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
                 }
               }
               var15 = stackIn_21_0;
-              pc.field_b.a(this.field_b >>> 24, 13421772, this.field_p + param5.y + (param1 + param5.field_y + var13.field_h), var13.field_k, this.textXToScreen((byte) -54, var14, param2, param5), this.field_b, -var14 + var15);
+              MenuList.field_b.fillRectangleAlpha(this.field_b >>> 24, 13421772, this.field_p + param5.y + (param1 + param5.field_y + var13.field_h), var13.field_k, this.textXToScreen((byte) -54, var14, param2, param5), this.field_b, -var14 + var15);
             }
             dm.b((byte) -10);
           }
@@ -632,12 +632,12 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
               if (var6 != 3 &&
                 var6 == 1) {
               }
-              var5 = (-this.field_f.field_I + (var4 - this.field_f.field_G) >> 1) + this.field_f.field_G;
+              var5 = (-this.field_f.descent + (var4 - this.field_f.ascent) >> 1) + this.field_f.ascent;
             } else {
-              var5 = var4 - this.field_f.field_I;
+              var5 = var4 - this.field_f.descent;
             }
           } else {
-            var5 = this.field_f.field_G;
+            var5 = this.field_f.ascent;
           }
           var6Lifetime1 = this.field_i;
           if (var6Lifetime1 != 0 &&

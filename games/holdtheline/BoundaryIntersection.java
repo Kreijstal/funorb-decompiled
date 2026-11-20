@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class ha extends IntrusiveNode implements hd {
+final class BoundaryIntersection extends IntrusiveNode implements SortableValue {
     int field_q;
     static Random field_n;
-    float field_m;
+    float parameter;
     static SpriteAsset[] field_o;
     static int[][] field_j;
-    ha field_s;
+    BoundaryIntersection paired;
     boolean field_r;
     boolean field_l;
     static int field_p;
     static SpriteAsset field_i;
     static SpriteSheetAsset field_k;
 
-    final static void a(boolean param0) {
+    final static void configurePunctuationKeyCodes(boolean param0) {
         DialogLayer.field_N[61] = 27;
         DialogLayer.field_N[47] = 73;
         DialogLayer.field_N[222] = 58;
@@ -31,7 +31,7 @@ final class ha extends IntrusiveNode implements hd {
         DialogLayer.field_N[46] = 72;
         if (param0) {
           Point2i var2 = (Point2i) null;
-          ha.a((Point2i) null, (Point2i) null, true);
+          BoundaryIntersection.angleBetweenPoints((Point2i) null, (Point2i) null, true);
         }
     }
 
@@ -46,7 +46,7 @@ final class ha extends IntrusiveNode implements hd {
         field_n = null;
     }
 
-    final static StringBuilder a(char param0, byte param1, int param2, StringBuilder param3) {
+    final static StringBuilder resizeStringBuilder(char param0, byte param1, int param2, StringBuilder param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -84,7 +84,7 @@ final class ha extends IntrusiveNode implements hd {
         }
     }
 
-    final static float a(Point2i param0, Point2i param1, boolean param2) {
+    final static float angleBetweenPoints(Point2i param0, Point2i param1, boolean param2) {
         RuntimeException var3 = null;
         float stackIn_2_0 = 0.0f;
         float stackIn_4_0 = 0.0f;
@@ -121,16 +121,16 @@ final class ha extends IntrusiveNode implements hd {
         }
     }
 
-    ha(boolean param0, float param1) {
-        this.field_s = null;
+    BoundaryIntersection(boolean param0, float param1) {
+        this.paired = null;
         this.field_l = false;
         this.field_q = 0;
         this.field_r = param0 ? true : false;
-        this.field_m = param1;
+        this.parameter = param1;
     }
 
-    public final int a(byte param0, hd param1) {
-        ha var3 = null;
+    public final int compareTo(byte param0, SortableValue param1) {
+        BoundaryIntersection var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
@@ -142,12 +142,12 @@ final class ha extends IntrusiveNode implements hd {
           if (param0 != -101) {
             this.field_l = true;
           }
-          var3 = (ha) (param1);
-          if (this.field_m < var3.field_m) {
+          var3 = (BoundaryIntersection) (param1);
+          if (this.parameter < var3.parameter) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (!(var3.field_m < this.field_m)) {
+          if (!(var3.parameter < this.parameter)) {
             return 0;
           }
           stackIn_9_0 = 1;

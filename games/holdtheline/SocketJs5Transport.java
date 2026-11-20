@@ -16,7 +16,7 @@ final class SocketJs5Transport extends Js5Transport {
         field_r = null;
     }
 
-    private final void f(int param0) {
+    private final void sendInitialization(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
@@ -53,7 +53,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void sendLoginState(boolean param0, int param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_4_0 = null;
@@ -75,7 +75,7 @@ final class SocketJs5Transport extends Js5Transport {
             }
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_4_1, stackIn_5_2);
             if (param1 != -11526) {
-              SocketJs5Transport.a(77, 'J');
+              SocketJs5Transport.isNameSeparator(77, 'J');
             }
             this.field_b.writeLong40(-483502376, 0L);
             this.field_q.write(this.field_b.payload.length, this.field_b.payload, 0, 1);
@@ -99,7 +99,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final void a(Object param0, boolean param1, int param2) {
+    final void attachConnection(Object param0, boolean param1, int param2) {
         try {
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
@@ -124,8 +124,8 @@ final class SocketJs5Transport extends Js5Transport {
               this.field_q = null;
             }
             this.field_q = (BufferedSocket) (param0);
-            this.f(param2 + 83);
-            this.a(param1, -11526);
+            this.sendInitialization(param2 + 83);
+            this.sendLoginState(param1, -11526);
             this.field_k.position = 0;
             this.field_m = null;
             while (true) {
@@ -202,7 +202,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean processRequests(byte param0) {
         try {
           int stackIn_46_0 = 0;
           int stackIn_60_0 = 0;
@@ -429,7 +429,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isNameSeparator(int param0, char param1) {
         boolean stackIn_8_0 = false;
         if (param0 != -2821) {
           return false;
@@ -438,7 +438,7 @@ final class SocketJs5Transport extends Js5Transport {
         return stackIn_8_0;
     }
 
-    final void e(int param0) {
+    final void close(int param0) {
         if (param0 != 1) {
           this.field_q = (BufferedSocket) null;
         }
@@ -450,7 +450,7 @@ final class SocketJs5Transport extends Js5Transport {
     public SocketJs5Transport() {
     }
 
-    final void a(boolean param0) {
+    final void handleCorruptResponse(boolean param0) {
         try {
           this.field_q.close(21135);
         } catch (Exception exception) {
@@ -459,7 +459,7 @@ final class SocketJs5Transport extends Js5Transport {
         this.field_f = -1;
         this.field_q = null;
         if (param0) {
-          this.a((byte) -72);
+          this.processRequests((byte) -72);
         }
         this.field_l = (byte)(int)(Math.random() * 255.0 + 1.0);
     }

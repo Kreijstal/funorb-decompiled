@@ -76,9 +76,9 @@ abstract class RoadSegment extends TrackCurve {
           }
           for (var2_int = 0; l.field_a.length > var2_int; var2_int++) {
             if (var2_int != 13) {
-              ((ti) (l.field_a[var2_int])).e(-127);
+              ((GameMenu) (l.field_a[var2_int])).rebuildItems(-127);
             } else {
-              ((ec) (l.field_a[var2_int])).a(true, 6267);
+              ((RaceSetupMenu) (l.field_a[var2_int])).refreshMenuOptions(true, 6267);
             }
           }
           return;

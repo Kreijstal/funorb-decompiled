@@ -53,7 +53,7 @@ final class co {
           if (param2 != 10302) {
             return true;
           }
-          stackIn_10_0 = (param1.a((byte) 65)) && (param0.d(0, -78)) && (param0.b("car_pass_left", -93)) && (param0.b("car_pass_right", 116)) && (param0.b("wacky_boom_kick", -111));
+          stackIn_10_0 = (param1.tryLoadAllGroups((byte) 65)) && (param0.tryLoadGroup(0, -78)) && (param0.tryLoadNamedGroup("car_pass_left", -93)) && (param0.tryLoadNamedGroup("car_pass_right", 116)) && (param0.tryLoadNamedGroup("wacky_boom_kick", -111));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

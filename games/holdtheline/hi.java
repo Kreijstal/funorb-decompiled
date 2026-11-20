@@ -52,8 +52,8 @@ class hi extends fj {
         var5 = HoldTheLine.field_D;
         var3 = (Sprite) (ProxySocketConnector.field_j.first((byte) 126));
         while (var3 != null) {
-          if (var3.field_s == param0 &&
-            param2 == var3.field_y) {
+          if (var3.width == param0 &&
+            param2 == var3.height) {
             return var3;
           }
           var3 = (Sprite) (ProxySocketConnector.field_j.next((byte) 114));
@@ -62,16 +62,16 @@ class hi extends fj {
         var4 = param0 * param2;
         while (0 < var4) {
           var4--;
-          var3Lifetime1.field_z[var4] = 1;
+          var3Lifetime1.pixels[var4] = 1;
         }
         vb.a(-74, var3Lifetime1);
         if (param1 > -37) {
           return (Sprite) null;
         }
         if (128 < param2) {
-          ra.field_hb.a(param0 - 128 >> 1, -128 + param2 >> 1);
+          LoadProgressDialog.field_hb.draw(param0 - 128 >> 1, -128 + param2 >> 1);
         } else {
-          ra.field_hb.d(-(param2 * 3 / 4) + param0 >> 1, 0, 3 * param2 / 4, param2);
+          LoadProgressDialog.field_hb.drawDownscaledBlended(-(param2 * 3 / 4) + param0 >> 1, 0, 3 * param2 / 4, param2);
         }
         ProxySocketConnector.field_j.addLast((byte) -121, var3Lifetime1);
         MarkerSliderRenderer.restoreRasterTarget(-1);
@@ -139,23 +139,23 @@ class hi extends fj {
             if (param0[3] == null) {
               stackIn_9_0 = 0;
             } else {
-              stackIn_9_0 = param0[3].field_o;
+              stackIn_9_0 = param0[3].canvasWidth;
             }
             var6_int = stackIn_9_0;
             if (param0[5] == null) {
               stackIn_12_0 = 0;
             } else {
-              stackIn_12_0 = param0[5].field_o;
+              stackIn_12_0 = param0[5].canvasWidth;
             }
             var7 = stackIn_12_0;
             if (null == param0[1]) {
               stackIn_15_0 = 0;
             } else {
-              stackIn_15_0 = param0[1].field_v;
+              stackIn_15_0 = param0[1].canvasHeight;
             }
             var8 = stackIn_15_0;
             if (param0[7] != null) {
-              stackIn_18_0 = param0[7].field_v;
+              stackIn_18_0 = param0[7].canvasHeight;
             } else {
               stackIn_18_0 = 0;
             }
@@ -177,73 +177,73 @@ class hi extends fj {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.b(AccountTermsPanel.field_L);
+            SoftwareRasterizer.saveClip(AccountTermsPanel.field_L);
             if (var19 < var18) {
               var19 = param1 * var8 / (var8 + var9) + param5;
               var18 = param1 * var8 / (var8 + var9) + param5;
             }
             if (null != param0[0]) {
-              SoftwareRasterizer.e(param4, param5, var16, var18);
-              param0[0].a(param4, param5);
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.intersectClip(param4, param5, var16, var18);
+              param0[0].draw(param4, param5);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (null != param0[2]) {
-              SoftwareRasterizer.e(var17, param5, var10, var18);
-              param0[2].a(var13, param5);
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.intersectClip(var17, param5, var10, var18);
+              param0[2].draw(var13, param5);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (null != param0[6]) {
-              SoftwareRasterizer.e(param4, var19, var16, var11);
-              param0[6].a(param4, var15);
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.intersectClip(param4, var19, var16, var11);
+              param0[6].draw(param4, var15);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (null != param0[8]) {
-              SoftwareRasterizer.e(var17, var19, var10, var11);
-              param0[8].a(var13, var15);
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
+              param0[8].draw(var13, var15);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (null != param0[1] &&
-              param0[1].field_o != 0) {
-              SoftwareRasterizer.e(var16, param5, var17, var18);
-              for (var20 = var12; var13 > var20; var20 = var20 + param0[1].field_o) {
-                param0[1].a(var20, param5);
+              param0[1].canvasWidth != 0) {
+              SoftwareRasterizer.intersectClip(var16, param5, var17, var18);
+              for (var20 = var12; var13 > var20; var20 = var20 + param0[1].canvasWidth) {
+                param0[1].draw(var20, param5);
               }
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (null != param0[7] &&
-              param0[7].field_o != 0) {
-              SoftwareRasterizer.e(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param0[7].field_o) {
-                param0[7].a(var20Lifetime1, var15);
+              param0[7].canvasWidth != 0) {
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
+              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param0[7].canvasWidth) {
+                param0[7].draw(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (null != param0[3] &&
-              0 != param0[3].field_v) {
-              SoftwareRasterizer.e(param4, var18, var16, var19);
-              for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].field_v) {
-                param0[3].a(param4, var20Lifetime2);
+              0 != param0[3].canvasHeight) {
+              SoftwareRasterizer.intersectClip(param4, var18, var16, var19);
+              for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].canvasHeight) {
+                param0[3].draw(param4, var20Lifetime2);
               }
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (param0[5] != null &&
-              0 != param0[5].field_v) {
-              SoftwareRasterizer.e(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].field_v) {
-                param0[5].a(var13, var20Lifetime3);
+              0 != param0[5].canvasHeight) {
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
+              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].canvasHeight) {
+                param0[5].draw(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
             }
             if (param0[4] != null &&
-              param0[4].field_o != 0 &&
-              0 != param0[4].field_v) {
-              SoftwareRasterizer.e(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_v) {
-                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_o) {
-                  param0[4].a(var21, var20Lifetime4);
+              param0[4].canvasWidth != 0 &&
+              0 != param0[4].canvasHeight) {
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
+              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].canvasHeight) {
+                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].canvasWidth) {
+                  param0[4].draw(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.a(AccountTermsPanel.field_L);
+              SoftwareRasterizer.restoreClip(AccountTermsPanel.field_L);
               return;
             }
             return;
@@ -512,7 +512,7 @@ class hi extends fj {
                 var16 = var12 * var12 + var13 * var13;
                 if (!(var16 < var14 * var14) &&
                   !(var16 > var15 * var15)) {
-                  var17 = ha.a(var20_ref.field_U, param5, false);
+                  var17 = BoundaryIntersection.angleBetweenPoints(var20_ref.field_U, param5, false);
                   var18 = var20_ref.a(var17, (byte) 72);
                   if (var18 >= 0.0f &&
                     1.0f >= var18) {

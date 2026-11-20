@@ -209,7 +209,7 @@ final class jn {
         if (10 > DiskCacheRequest.field_w) {
           return false;
         }
-        if (pf.field_d >= 13) {
+        if (PolarSortVector.field_d >= 13) {
           return true;
         }
         return false;
@@ -257,7 +257,7 @@ final class jn {
           if (param1 > -8) {
             jn.a((byte) -64);
           }
-          gh.field_n = new MusicTrack[7];
+          ViewportSizingController.field_n = new MusicTrack[7];
           UsernameLoginCredentials.field_f = param2;
           AgeValidator.field_m = new String[7];
           i.field_k = new MusicTrack[7];

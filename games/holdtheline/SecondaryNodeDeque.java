@@ -70,9 +70,9 @@ final class SecondaryNodeDeque {
     final static boolean b(byte param0) {
         if (param0 != 38) {
           field_i = (SpriteAsset) null;
-          return ra.field_Z.loadMasterIndex(-42);
+          return LoadProgressDialog.field_Z.loadMasterIndex(-42);
         }
-        return ra.field_Z.loadMasterIndex(-42);
+        return LoadProgressDialog.field_Z.loadMasterIndex(-42);
     }
 
     final DualLinkNode next(int param0) {

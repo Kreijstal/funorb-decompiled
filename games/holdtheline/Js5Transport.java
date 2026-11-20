@@ -66,10 +66,10 @@ abstract class Js5Transport {
           var2 = var28.readUnsignedByte((byte) -22);
           if (var2 == 0) {
             var4 = var28.readUnsignedShort(106);
-            var5 = (jg) (pc.field_e.first((byte) 115));
+            var5 = (jg) (MenuList.field_e.first((byte) 115));
             while (var5 != null) {
               if (var5.field_i != var4) {
-                var5 = (jg) (pc.field_e.next((byte) -25));
+                var5 = (jg) (MenuList.field_e.next((byte) -25));
                 continue;
               }
               break;
@@ -129,7 +129,7 @@ abstract class Js5Transport {
                     var13++;
                   }
                   if (var22 != null &&
-                    ra.a(var22, false)) {
+                    LoadProgressDialog.isLocalPlayerName(var22, false)) {
                     var9[1][var14] = QuickChatPhraseCache.field_e;
                     var10[1][var14] = null;
                     var11[1][var14] = var23;
@@ -191,7 +191,7 @@ abstract class Js5Transport {
         }
     }
 
-    abstract void a(Object param0, boolean param1, int param2);
+    abstract void attachConnection(Object param0, boolean param1, int param2);
 
     final boolean c(int param0) {
         if (param0 < 73) {
@@ -214,7 +214,7 @@ abstract class Js5Transport {
         return this.field_d.size(64) + this.field_i.size(29);
     }
 
-    abstract void a(boolean param0);
+    abstract void handleCorruptResponse(boolean param0);
 
     final NetworkArchiveRequest a(int param0, boolean param1, byte param2, byte param3, int param4) {
         long var6 = ((long)param4 << 32) + (long)param0;
@@ -257,7 +257,7 @@ abstract class Js5Transport {
         }
     }
 
-    abstract void e(int param0);
+    abstract void close(int param0);
 
     final boolean d(int param0) {
         if (param0 != 20) {
@@ -266,7 +266,7 @@ abstract class Js5Transport {
         return this.b(false) >= 20 ? true : false;
     }
 
-    abstract boolean a(byte param0);
+    abstract boolean processRequests(byte param0);
 
     public static void clearSharedReferences(int param0) {
         field_o = null;

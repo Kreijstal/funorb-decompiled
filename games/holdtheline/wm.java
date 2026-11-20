@@ -17,7 +17,7 @@ final class wm extends MovingEntity {
     private RaceVehicle field_G;
     private int field_R;
     private int[] field_S;
-    om field_E;
+    TrackObjectDefinition field_E;
     int field_O;
 
     final static void a(boolean param0, boolean param1, int param2) {
@@ -30,23 +30,23 @@ final class wm extends MovingEntity {
         if (param2 == dg.field_c) {
           if (ByteStorage.field_b == 1) {
             dg.field_c = 1;
-            ((ti) (l.field_a[1])).f(0);
+            ((GameMenu) (l.field_a[1])).beginExitFromCurrentPosition(0);
           }
           ByteStorage.field_b = param2;
         } else {
           ByteStorage.field_b = param2;
           if (13 == dg.field_c) {
-            ((ec) (l.field_a[dg.field_c])).d((byte) -116);
+            ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -116);
           } else {
             if (dg.field_c != -1) {
-              ((ti) (l.field_a[dg.field_c])).i(123);
+              ((GameMenu) (l.field_a[dg.field_c])).beginExit(123);
             }
           }
           if (ByteStorage.field_b == 13) {
-            ((ec) (l.field_a[ByteStorage.field_b])).a((byte) 69, param0);
+            ((RaceSetupMenu) (l.field_a[ByteStorage.field_b])).reset((byte) 69, param0);
           } else {
             if (ByteStorage.field_b != -1) {
-              ((ti) (l.field_a[ByteStorage.field_b])).b(param0, -110);
+              ((GameMenu) (l.field_a[ByteStorage.field_b])).reset(param0, -110);
             }
           }
         }
@@ -63,7 +63,7 @@ final class wm extends MovingEntity {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_E.field_d) {
+          if (this.field_E.rectangularCollision) {
             var3_float = (float)(-this.position.x + param1.x);
             var4 = (float)(param1.y - this.position.y);
             var5 = this.direction.y * var4 + this.direction.x * var3_float;
@@ -73,7 +73,7 @@ final class wm extends MovingEntity {
               return true;
             }
           } else {
-            if (this.field_E.field_a * this.field_E.field_a > (param1.y - this.position.y) * (-this.position.y + param1.y) + (-this.position.x + param1.x) * (-this.position.x + param1.x)) {
+            if (this.field_E.collisionRadius * this.field_E.collisionRadius > (param1.y - this.position.y) * (-this.position.y + param1.y) + (-this.position.x + param1.x) * (-this.position.x + param1.x)) {
               return true;
             }
           }
@@ -222,7 +222,7 @@ final class wm extends MovingEntity {
           }
         }
         if (this.field_G != null) {
-          var2Lifetime1 = ha.a(this.position, this.field_G.position, false);
+          var2Lifetime1 = BoundaryIntersection.angleBetweenPoints(this.position, this.field_G.position, false);
           var3 = var2Lifetime1 - this.heading;
           if ((double)var3 > 3.141592653589793) {
             var3 = (float)((double)var3 - 6.283185307179586);
@@ -328,7 +328,7 @@ final class wm extends MovingEntity {
         if (param0 >= -35) {
           this.field_J = 78;
         }
-        this.field_J = this.field_E.field_b;
+        this.field_J = this.field_E.flags;
         this.velocityY = param3;
         this.velocityX = param2;
         if ((256 & this.field_J) == 0) {
@@ -339,7 +339,7 @@ final class wm extends MovingEntity {
           this.field_M = 5;
         }
         if (0 != (8 & this.field_J)) {
-          this.field_B = this.field_E.field_a;
+          this.field_B = this.field_E.collisionRadius;
           this.field_z = true;
           if ((1024 & this.field_J) != 0) {
             this.field_B = 6;

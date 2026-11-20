@@ -103,8 +103,8 @@ abstract class TrackCurve extends IntrusiveNode {
     abstract Vector2f directionAt(byte param0, float param1);
 
     final static int e(int param0) {
-        ra.field_Z.processArchiveProviders(true);
-        if (!OutlinedRoadStripRenderer.field_n.a((byte) 83)) {
+        LoadProgressDialog.field_Z.processArchiveProviders(true);
+        if (!OutlinedRoadStripRenderer.field_n.processRequests((byte) 83)) {
           return TriangleMesh.b(1);
         }
         if (param0 != -17204) {

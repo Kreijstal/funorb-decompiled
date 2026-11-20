@@ -23,8 +23,8 @@ abstract class TickClock {
         int var13 = 0;
         var13 = HoldTheLine.field_D;
         try {
-          var5_int = param1.field_s;
-          var6 = param1.field_y;
+          var5_int = param1.width;
+          var6 = param1.height;
           var7 = 0;
           if (param4 < 0) {
             var7 = -param4;
@@ -46,25 +46,25 @@ abstract class TickClock {
           if (param2 <= 86) {
             field_b = 92;
           }
-          var9 = var8 * param1.field_s + var7;
-          var10 = param3 * SoftwareRasterizer.field_j + (param4 - 1);
+          var9 = var8 * param1.width + var7;
+          var10 = param3 * SoftwareRasterizer.width + (param4 - 1);
           for (var11 = 0; var6 > var11; var11++) {
             for (var12 = 0; var12 < var5_int; var12++) {
-              if (0 != param1.field_z[var9]) {
-                if (param1.field_z[var9] != 16777215) {
+              if (0 != param1.pixels[var9]) {
+                if (param1.pixels[var9] != 16777215) {
                   var10++;
-                  SoftwareRasterizer.field_b[var10] = param1.field_z[var9];
+                  SoftwareRasterizer.pixels[var10] = param1.pixels[var9];
                 } else {
                   var10++;
-                  SoftwareRasterizer.field_b[var10] = param0;
+                  SoftwareRasterizer.pixels[var10] = param0;
                 }
               } else {
                 var10++;
               }
               var9++;
             }
-            var9 = var9 + (param1.field_s - var5_int);
-            var10 = var10 + (SoftwareRasterizer.field_j - param1.field_s);
+            var9 = var9 + (param1.width - var5_int);
+            var10 = var10 + (SoftwareRasterizer.width - param1.width);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

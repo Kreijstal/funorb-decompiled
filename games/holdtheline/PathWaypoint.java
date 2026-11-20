@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends Point2i {
+final class PathWaypoint extends Point2i {
     boolean field_m;
     static String field_p;
     int field_l;
@@ -10,7 +10,7 @@ final class eb extends Point2i {
     static fb field_o;
     static String field_k;
 
-    eb(eb param0) {
+    PathWaypoint(PathWaypoint param0) {
         super(param0.x, param0.y);
         try {
           this.field_m = false;
@@ -89,7 +89,7 @@ final class eb extends Point2i {
           }
           if (param0 >= -67) {
             var4 = (String) null;
-            eb.createLoginCredentials((String) null, 111L, true, (String) null, true);
+            PathWaypoint.createLoginCredentials((String) null, 111L, true, (String) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ final class eb extends Point2i {
         }
     }
 
-    eb(Point2i param0, int param1) {
+    PathWaypoint(Point2i param0, int param1) {
         super(param0.x, param0.y);
         try {
           this.field_l = param1;

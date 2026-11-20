@@ -43,7 +43,7 @@ final class vf extends IntrusiveNode {
         if (param0 == -99) {
           var3 = this.field_m;
           if (3 == var3) {
-            SpriteSheetAsset.field_d[this.field_k][7 + this.field_s].getByAngle(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][7 + this.field_s].getByAngle(this.field_x, param0 ^ -27887).draw(this.field_B, this.field_i);
           } else {
             if (this.field_s >= 6) {
               stackIn_7_0 = 11 - this.field_s;
@@ -51,13 +51,13 @@ final class vf extends IntrusiveNode {
               stackIn_7_0 = this.field_s;
             }
             var2 = stackIn_7_0;
-            SpriteSheetAsset.field_d[this.field_k][var2].getByAngle(this.field_x, 27788).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][var2].getByAngle(this.field_x, 27788).draw(this.field_B, this.field_i);
           }
         } else {
           field_l = (DisplayNameForm) null;
           var3 = this.field_m;
           if (3 == var3) {
-            SpriteSheetAsset.field_d[this.field_k][7 + this.field_s].getByAngle(this.field_x, param0 ^ -27887).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][7 + this.field_s].getByAngle(this.field_x, param0 ^ -27887).draw(this.field_B, this.field_i);
           } else {
             if (this.field_s >= 6) {
               stackIn_15_0 = 11 - this.field_s;
@@ -65,7 +65,7 @@ final class vf extends IntrusiveNode {
               stackIn_15_0 = this.field_s;
             }
             var2 = stackIn_15_0;
-            SpriteSheetAsset.field_d[this.field_k][var2].getByAngle(this.field_x, 27788).a(this.field_B, this.field_i);
+            SpriteSheetAsset.field_d[this.field_k][var2].getByAngle(this.field_x, 27788).draw(this.field_B, this.field_i);
           }
         }
     }

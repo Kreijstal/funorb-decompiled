@@ -11,7 +11,7 @@ abstract class CacheEntry extends DualLinkNode {
           return;
         }
         try {
-          nj.field_e = param2;
+          LayeredWidgetStyle.field_e = param2;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

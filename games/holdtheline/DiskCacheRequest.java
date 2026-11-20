@@ -7,7 +7,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     byte[] field_v;
     static int field_w;
 
-    final int g(int param0) {
+    final int getProgress(int param0) {
         if (param0 != 0) {
           return 79;
         }
@@ -17,7 +17,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         return 100;
     }
 
-    final byte[] i(int param0) {
+    final byte[] getData(int param0) {
         if (this.field_u) {
           throw new RuntimeException();
         }

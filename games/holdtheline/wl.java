@@ -13,49 +13,49 @@ final class wl {
         if (param2 == 102) {
           if (param0 < param7) {
             if (param7 < param5) {
-              SocketConnector.a(param6, param0, param5, param4, SoftwareRasterizer.field_b, false, param3, param7, param1);
+              SocketConnector.a(param6, param0, param5, param4, SoftwareRasterizer.pixels, false, param3, param7, param1);
               return;
             }
             if (param0 >= param5) {
-              SocketConnector.a(param3, param5, param7, param6, SoftwareRasterizer.field_b, false, param4, param0, param1);
+              SocketConnector.a(param3, param5, param7, param6, SoftwareRasterizer.pixels, false, param4, param0, param1);
               return;
             }
-            SocketConnector.a(param4, param0, param7, param6, SoftwareRasterizer.field_b, false, param3, param5, param1);
+            SocketConnector.a(param4, param0, param7, param6, SoftwareRasterizer.pixels, false, param3, param5, param1);
             return;
           }
           if (param5 > param0) {
-            SocketConnector.a(param3, param7, param5, param4, SoftwareRasterizer.field_b, false, param6, param0, param1);
+            SocketConnector.a(param3, param7, param5, param4, SoftwareRasterizer.pixels, false, param6, param0, param1);
             return;
           }
           if (param7 < param5) {
-            SocketConnector.a(param4, param7, param0, param3, SoftwareRasterizer.field_b, false, param6, param5, param1);
+            SocketConnector.a(param4, param7, param0, param3, SoftwareRasterizer.pixels, false, param6, param5, param1);
             return;
           }
-          SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.field_b, false, param4, param7, param1);
+          SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.pixels, false, param4, param7, param1);
           return;
         }
         field_a = (String[]) null;
         if (param0 < param7) {
           if (param7 < param5) {
-            SocketConnector.a(param6, param0, param5, param4, SoftwareRasterizer.field_b, false, param3, param7, param1);
+            SocketConnector.a(param6, param0, param5, param4, SoftwareRasterizer.pixels, false, param3, param7, param1);
             return;
           }
           if (param0 >= param5) {
-            SocketConnector.a(param3, param5, param7, param6, SoftwareRasterizer.field_b, false, param4, param0, param1);
+            SocketConnector.a(param3, param5, param7, param6, SoftwareRasterizer.pixels, false, param4, param0, param1);
             return;
           }
-          SocketConnector.a(param4, param0, param7, param6, SoftwareRasterizer.field_b, false, param3, param5, param1);
+          SocketConnector.a(param4, param0, param7, param6, SoftwareRasterizer.pixels, false, param3, param5, param1);
           return;
         }
         if (param5 > param0) {
-          SocketConnector.a(param3, param7, param5, param4, SoftwareRasterizer.field_b, false, param6, param0, param1);
+          SocketConnector.a(param3, param7, param5, param4, SoftwareRasterizer.pixels, false, param6, param0, param1);
           return;
         }
         if (param7 < param5) {
-          SocketConnector.a(param4, param7, param0, param3, SoftwareRasterizer.field_b, false, param6, param5, param1);
+          SocketConnector.a(param4, param7, param0, param3, SoftwareRasterizer.pixels, false, param6, param5, param1);
           return;
         }
-        SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.field_b, false, param4, param7, param1);
+        SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.pixels, false, param4, param7, param1);
     }
 
     final static Class a(String param0, int param1) throws ClassNotFoundException {

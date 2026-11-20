@@ -159,8 +159,8 @@ final class MusicPatch extends IntrusiveNode {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.c(param0, 3);
-          var6 = param3.a(var5_int, param4, false);
+          var5_int = param3.getGroupId(param0, 3);
+          var6 = param3.getFileId(var5_int, param4, false);
           if (param2 == 14819) {
             stackIn_4_0 = fi.a(-17072, param1, param3, var6, var5_int);
             return stackIn_4_0;
@@ -336,7 +336,7 @@ final class MusicPatch extends IntrusiveNode {
                   ArchiveProvider.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   TextFieldValidator.field_d[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-                  om.field_p[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  TrackObjectDefinition.field_p[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
@@ -1263,7 +1263,7 @@ final class MusicPatch extends IntrusiveNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param2.e(-(param2.field_o / 2) + param3, param1 - param2.field_v / 2, param0);
+          param2.drawMask(-(param2.canvasWidth / 2) + param3, param1 - param2.canvasHeight / 2, param0);
           if (param4 != 98) {
             field_t = (String[]) null;
           }

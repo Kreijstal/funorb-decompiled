@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk {
+final class CourseDefinition {
     int field_o;
     IntrusiveDeque field_x;
     byte field_v;
@@ -10,13 +10,13 @@ final class vk {
     private int field_f;
     int field_p;
     IntrusiveDeque field_k;
-    RoadSegment[] field_u;
+    RoadSegment[] roadSegments;
     int field_n;
     String field_b;
     private int field_w;
     static int[] field_q;
     int field_l;
-    om[] field_j;
+    TrackObjectDefinition[] field_j;
     private Sprite field_g;
     static boolean field_a;
     GrowableObjectList field_e;
@@ -27,9 +27,9 @@ final class vk {
     GrowableObjectList field_t;
     String field_h;
 
-    final Sprite a(int param0, int param1, int param2) {
+    final Sprite getPreview(int param0, int param1, int param2) {
         if (param0 != 9392) {
-          vk.a(true, true, -63);
+          CourseDefinition.a(true, true, -63);
         }
         if (this.field_g == null) {
           this.field_g = LoginForm.a(param2, param1, this, -12392);
@@ -37,7 +37,7 @@ final class vk {
           this.field_f = param1;
           return this.field_g;
         }
-        if (this.field_g.field_s != param2) {
+        if (this.field_g.width != param2) {
           this.field_g = LoginForm.a(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
@@ -64,7 +64,7 @@ final class vk {
             ka.field_b.f((byte) -84);
           }
           if (null != MidiKeyUsage.field_l) {
-            MidiKeyUsage.field_l.i((byte) 33);
+            MidiKeyUsage.field_l.stopProgressAnimation((byte) 33);
           }
           pj.a((byte) -96);
           return;
@@ -74,12 +74,12 @@ final class vk {
           ka.field_b.f((byte) -84);
         }
         if (null != MidiKeyUsage.field_l) {
-          MidiKeyUsage.field_l.i((byte) 33);
+          MidiKeyUsage.field_l.stopProgressAnimation((byte) 33);
         }
         pj.a((byte) -96);
     }
 
-    final boolean b(int param0) {
+    final boolean pollLoaded(int param0) {
         if (param0 != 3) {
           this.field_n = 41;
           if (-1 == this.field_l) {
@@ -115,15 +115,15 @@ final class vk {
     final static void a(boolean param0, boolean param1, int param2) {
         int var3 = 77 / ((-38 - param2) / 56);
         if (param1) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           Bzip2State.a(0, param1);
           return;
         }
-        SoftwareRasterizer.c();
+        SoftwareRasterizer.clear();
         Bzip2State.a(0, param1);
     }
 
-    vk(byte[] param0) {
+    CourseDefinition(byte[] param0) {
         try {
           this.field_s = param0;
           this.field_g = null;
@@ -141,7 +141,7 @@ final class vk {
         }
     }
 
-    vk(String param0) {
+    CourseDefinition(String param0) {
         try {
           this.field_r = true;
           this.field_h = param0;

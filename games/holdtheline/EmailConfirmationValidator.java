@@ -67,9 +67,9 @@ final class EmailConfirmationValidator extends TextFieldValidator {
               }
               var7 = new DiskCacheStore(param0, StereoMusicSample.field_g, vb.field_a[param0], 2097152);
             }
-            var8 = ra.field_Z.getArchiveProvider(param0, param3, 113, (DiskCacheStore) (var6), (DiskCacheStore) (var7));
+            var8 = LoadProgressDialog.field_Z.getArchiveProvider(param0, param3, 113, (DiskCacheStore) (var6), (DiskCacheStore) (var7));
             if (param1) {
-              var8.b((byte) -45);
+              var8.enablePrefetch((byte) -45);
             }
             stackIn_16_0 = new ResourceArchive(var8, param2, param5);
             return stackIn_16_0;

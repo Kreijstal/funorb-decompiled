@@ -144,12 +144,12 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
           var7 = stackIn_13_0;
           stackIn_16_0 = (param0) ? 16777215 : 7105644;
           var8 = stackIn_16_0;
-          oj.a(this.field_t, var7, param3.x + param1, param4 + param3.y + (param3.height - this.field_t[0].field_v >> 1), -102, param3.width);
+          oj.a(this.field_t, var7, param3.x + param1, param4 + param3.y + (param3.height - this.field_t[0].canvasHeight >> 1), -102, param3.width);
           if (param2 >= -48) {
             var9 = (CharSequence) null;
             SpriteButtonRenderer.a((CharSequence) null, (byte) -73);
           }
-          this.field_f.a(param3.text, param1 + param3.x, -2 + (param3.y + param4), param3.width, param3.height, var8, -1, 1, 1, this.field_f.field_G);
+          this.field_f.drawParagraph(param3.text, param1 + param3.x, -2 + (param3.y + param4), param3.width, param3.height, var8, -1, 1, 1, this.field_f.ascent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

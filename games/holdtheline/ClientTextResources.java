@@ -1499,7 +1499,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "login_username_email");
                 if (var2 != null) {
-                  rf.field_bb = rk.a((byte) 83, var2);
+                  FullscreenErrorDialog.field_bb = rk.a((byte) 83, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "login_username");
                 if (null != var2) {
@@ -1535,7 +1535,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "login_no_displayname");
                 if (null != var2) {
-                  ra.field_ib = rk.a((byte) 115, var2);
+                  LoadProgressDialog.field_ib = rk.a((byte) 115, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "create_username_tooltip");
                 if (var2 != null) {
@@ -1547,7 +1547,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_displayname_tooltip");
                 if (null != var2) {
-                  pf.field_f = rk.a((byte) 116, var2);
+                  PolarSortVector.field_f = rk.a((byte) 116, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 + 5, "create_displayname_hint");
                 if (null != var2) {
@@ -1650,7 +1650,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  pc.field_i = rk.a((byte) -79, var2);
+                  MenuList.field_i = rk.a((byte) -79, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -2300,7 +2300,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "orbpoints");
                 if (null != var2) {
-                  pf.field_b = rk.a((byte) -98, var2);
+                  PolarSortVector.field_b = rk.a((byte) -98, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "orbcoins");
                 if (var2 != null) {
@@ -2680,7 +2680,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_button_accept");
                 if (null != var2) {
-                  eb.field_k = rk.a((byte) -47, var2);
+                  PathWaypoint.field_k = rk.a((byte) -47, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_accept_afteraccept");
                 if (null != var2) {
@@ -2736,7 +2736,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "fs_button_tryagain");
                 if (var2 != null) {
-                  vk.field_i = rk.a((byte) -90, var2);
+                  CourseDefinition.field_i = rk.a((byte) -90, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(param0 ^ 7, "graphics_ui_fs_countdown");
                 if (var2 != null) {

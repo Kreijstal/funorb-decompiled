@@ -12,7 +12,7 @@ final class qh {
         if (ValidationHelpWidget.field_Q != null &&
           null != i.field_k[param1]) {
           EmailValidationResult.field_d = i.field_k[param1];
-          ResourceArchive.a(false, i.field_k[param1], (byte) 69, 30);
+          ResourceArchive.playMusicTrack(false, i.field_k[param1], (byte) 69, 30);
         } else {
           if (AccountProgressDialog.field_jb == -1) {
             WeightedLruCache.field_e = 2;

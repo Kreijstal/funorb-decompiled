@@ -31,7 +31,7 @@ final class o {
           throw new RuntimeException();
         }
         if (param0 < 8) {
-          return nj.field_c[param0 - 4].getSprite(param1 + 8190);
+          return LayeredWidgetStyle.field_c[param0 - 4].getSprite(param1 + 8190);
         }
         throw new RuntimeException();
     }
@@ -65,22 +65,22 @@ final class o {
             param4 = param4 + param6;
             param6 = 0;
           }
-          if (SoftwareRasterizer.field_c < param1 + param2) {
-            param1 = SoftwareRasterizer.field_c - param2;
+          if (SoftwareRasterizer.height < param1 + param2) {
+            param1 = SoftwareRasterizer.height - param2;
           }
           if (param5 != -4441) {
             o.a((byte) -27);
           }
-          if (param6 + param4 > SoftwareRasterizer.field_j) {
-            param4 = -param6 + SoftwareRasterizer.field_j;
+          if (param6 + param4 > SoftwareRasterizer.width) {
+            param4 = -param6 + SoftwareRasterizer.width;
           }
           var7_int = param0 * param3 >> 8;
           var8 = param3 - var7_int;
           var9 = param2 + param1;
           for (var10 = param2; var9 > var10; var10++) {
-            var11 = param6 + var10 * SoftwareRasterizer.field_j;
+            var11 = param6 + var10 * SoftwareRasterizer.width;
             for (var12 = param4; 0 < var12; var12--) {
-              var13 = SoftwareRasterizer.field_b[var11];
+              var13 = SoftwareRasterizer.pixels[var11];
               var14 = var13 >> 16 & 255;
               var15 = 255 & var13 >> 8;
               var16 = 255 & var13;
@@ -89,7 +89,7 @@ final class o {
               var19 = (var7_int * var15 >> 8) + (var8 * var17 >> 12);
               var20 = (var8 * var17 >> 12) + (var16 * var7_int >> 8);
               var21 = var19 << 8 | var18 << 16 | var20;
-              SoftwareRasterizer.field_b[var11] = var21;
+              SoftwareRasterizer.pixels[var11] = var21;
               var11++;
             }
           }

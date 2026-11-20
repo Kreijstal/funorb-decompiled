@@ -41,11 +41,11 @@ final class MarkerSliderRenderer implements WidgetRenderer {
 
     final static void restoreRasterTarget(int param0) {
         MidiPcmStream.field_F = MidiPcmStream.field_F - 1;
-        SoftwareRasterizer.a(tn.field_h[MidiPcmStream.field_F], TextFieldValidator.field_c[MidiPcmStream.field_F], ValidationHelpWidget.field_V[MidiPcmStream.field_F]);
-        SoftwareRasterizer.field_d = OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F];
-        SoftwareRasterizer.field_e = dm.field_b[MidiPcmStream.field_F];
-        SoftwareRasterizer.field_a = m.field_c[MidiPcmStream.field_F];
-        SoftwareRasterizer.field_i = NanoTickClock.field_n[MidiPcmStream.field_F];
+        SoftwareRasterizer.bindRaster(tn.field_h[MidiPcmStream.field_F], TextFieldValidator.field_c[MidiPcmStream.field_F], ValidationHelpWidget.field_V[MidiPcmStream.field_F]);
+        SoftwareRasterizer.clipLeft = OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F];
+        SoftwareRasterizer.clipRight = dm.field_b[MidiPcmStream.field_F];
+        SoftwareRasterizer.clipTop = m.field_c[MidiPcmStream.field_F];
+        SoftwareRasterizer.clipBottom = NanoTickClock.field_n[MidiPcmStream.field_F];
         if (param0 != -1) {
           field_g = (IntrusiveDeque) null;
         }
@@ -225,7 +225,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
             stackIn_4_0 = (UiWidget) (param3);
           }
           var12 = (MarkerSlider) (stackIn_4_0);
-          SoftwareRasterizer.f(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_h);
+          SoftwareRasterizer.fillRectangle(param1 + param3.x, param4 + param3.y, param3.width, param3.height, this.field_h);
           if (var12 == null) {
           }
           var7 = param3.width - var12.field_I * 2;
@@ -234,12 +234,12 @@ final class MarkerSliderRenderer implements WidgetRenderer {
           }
           var8 = param3.x + param1 + var12.field_I;
           var9 = var12.field_H + (param4 + param3.y);
-          SoftwareRasterizer.d(var8, var9, var7 + var8, var9, this.field_j);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_j);
           for (var10 = var12.getMarkerCount((byte) 104) - 1; var10 >= 0; var10--) {
-            SoftwareRasterizer.d(var8 + var7 * var12.getMarker(false, var10) / var12.getMaximum(0), var9, this.field_e, this.field_l);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.getMarker(false, var10) / var12.getMaximum(0), var9, this.field_e, this.field_l);
           }
           if (this.field_c != null) {
-            this.field_c.b(var12.text, var7 / 2 + var8, var12.field_H + (var9 + this.field_c.field_F), this.field_k, this.field_a);
+            this.field_c.drawCentered(var12.text, var7 / 2 + var8, var12.field_H + (var9 + this.field_c.baseline), this.field_k, this.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
           }
           else {
             hk.field_c[param2][param1] = var4_int;
-            ha.field_j[param2][param1] = var6;
+            BoundaryIntersection.field_j[param2][param1] = var6;
           }
           boolean decompiledFrameRemainder0 = true;
           if (var8 != -1 && (var8 < var5 ||

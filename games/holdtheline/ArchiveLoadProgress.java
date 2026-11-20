@@ -31,25 +31,25 @@ final class ArchiveLoadProgress {
         var3 = HoldTheLine.field_D;
         while (this.field_f < this.field_i) {
           var4 = this.field_h[this.field_f];
-          if (!var4.field_e.b((byte) -85)) {
+          if (!var4.field_e.ensureIndexLoaded((byte) -85)) {
             this.updateProgress((byte) -52, 0, var4);
             return false;
           }
           if (0 <= var4.field_b &&
-            !var4.field_e.d(var4.field_b, -124)) {
-            this.updateProgress((byte) -52, var4.field_e.a(108, var4.field_b), var4);
+            !var4.field_e.tryLoadGroup(var4.field_b, -124)) {
+            this.updateProgress((byte) -52, var4.field_e.getGroupLoadPercent(108, var4.field_b), var4);
             return false;
           }
           if (var4.field_a != null &&
-            !var4.field_e.b(var4.field_a, -104)) {
-            this.updateProgress((byte) -52, var4.field_e.a(var4.field_a, 0), var4);
+            !var4.field_e.tryLoadNamedGroup(var4.field_a, -104)) {
+            this.updateProgress((byte) -52, var4.field_e.getNamedGroupLoadPercent(var4.field_a, 0), var4);
             return false;
           }
           if (var4.field_b < 0 &&
             var4.field_a == null &&
             null != var4.field_c &&
-            !var4.field_e.a((byte) -52)) {
-            this.updateProgress((byte) -52, var4.field_e.a(param0 + 1), var4);
+            !var4.field_e.tryLoadAllGroups((byte) -52)) {
+            this.updateProgress((byte) -52, var4.field_e.getLoadPercent(param0 + 1), var4);
             return false;
           }
           this.field_f = this.field_f + 1;
@@ -68,7 +68,7 @@ final class ArchiveLoadProgress {
             IsaacPacketBuffer var5 = (IsaacPacketBuffer) null;
             ArchiveLoadProgress.a(61, 25, -81, (IsaacPacketBuffer) null);
           }
-          param3.writeBits(91, 2, ha.field_j[param2][param1]);
+          param3.writeBits(91, 2, BoundaryIntersection.field_j[param2][param1]);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ac.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

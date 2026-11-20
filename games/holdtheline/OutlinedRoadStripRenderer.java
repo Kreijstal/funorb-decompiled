@@ -107,25 +107,25 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
               for (var6Lifetime2 = 0; var6Lifetime2 < this.field_p.size(-117); var6Lifetime2 += 2) {
                 var9 = this.field_p.get((byte) 110, var6Lifetime2);
                 var10 = this.field_p.get((byte) 13, 1 + var6Lifetime2);
-                SoftwareRasterizer.d(var7, var8, var9, var10, 4144959);
+                SoftwareRasterizer.drawLine(var7, var8, var9, var10, 4144959);
                 var7 = var9;
                 var8 = var10;
               }
               var9Lifetime1 = this.field_o.get((byte) 81, -2 + this.field_o.size(-111));
               var10Lifetime1 = this.field_o.get((byte) 46, this.field_o.size(-119) - 1);
-              SoftwareRasterizer.d(var7, var8, var9Lifetime1, var10Lifetime1, 4144959);
+              SoftwareRasterizer.drawLine(var7, var8, var9Lifetime1, var10Lifetime1, 4144959);
               var8Lifetime1 = var10Lifetime1;
               var7Lifetime1 = var9Lifetime1;
               for (var6Lifetime2Lifetime1 = -2 + this.field_o.size(-115); var6Lifetime2Lifetime1 >= 0; var6Lifetime2Lifetime1 -= 2) {
                 var9Lifetime2 = this.field_o.get((byte) 19, var6Lifetime2Lifetime1);
                 var10Lifetime2 = this.field_o.get((byte) 107, var6Lifetime2Lifetime1 + 1);
-                SoftwareRasterizer.d(var7Lifetime1, var8Lifetime1, var9Lifetime2, var10Lifetime2, 4144959);
+                SoftwareRasterizer.drawLine(var7Lifetime1, var8Lifetime1, var9Lifetime2, var10Lifetime2, 4144959);
                 var7Lifetime1 = var9Lifetime2;
                 var8Lifetime1 = var10Lifetime2;
               }
               var9Lifetime3 = this.field_p.get((byte) 28, 0);
               var10Lifetime3 = this.field_p.get((byte) 118, 1);
-              SoftwareRasterizer.d(var7Lifetime1, var8Lifetime1, var9Lifetime3, var10Lifetime3, 4144959);
+              SoftwareRasterizer.drawLine(var7Lifetime1, var8Lifetime1, var9Lifetime3, var10Lifetime3, 4144959);
               var7Lifetime2 = var9Lifetime3;
               var8Lifetime2 = var10Lifetime3;
               this.field_p = o.a((byte) 103);
@@ -224,15 +224,15 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = SoftwareRasterizer.field_b;
-          var13 = SoftwareRasterizer.field_j;
+          var45 = SoftwareRasterizer.pixels;
+          var13 = SoftwareRasterizer.width;
           if (param5 != 8) {
             stackIn_5_0 = (PaletteBitmapFont) null;
             return stackIn_5_0;
           }
-          var14 = SoftwareRasterizer.field_c;
+          var14 = SoftwareRasterizer.height;
           var44 = new int[4];
-          SoftwareRasterizer.b(var44);
+          SoftwareRasterizer.saveClip(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
             var6[var16_int] = param2[var16_int].field_k - param3;
             var7[var16_int] = -param3 + param2[var16_int].field_d;
@@ -245,18 +245,18 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
             var19 = param2[var16_int].field_i;
             var20 = param2[var16_int].field_l;
             var21 = var37[var16_int];
-            SoftwareRasterizer.a(new int[var36[var16_int] * var37[var16_int]], var37[var16_int], var36[var16_int]);
+            SoftwareRasterizer.bindRaster(new int[var36[var16_int] * var37[var16_int]], var37[var16_int], var36[var16_int]);
             var22 = -var19 + var21;
             var23 = 0;
             for (var24 = 0; var24 < var20; var24++) {
               for (var25 = 0; var25 < var19; var25++) {
                 if (var18[var23++] != 0) {
-                  SoftwareRasterizer.d(var25 + param3, var24 + param3, param3, 2);
+                  SoftwareRasterizer.fillCircle(var25 + param3, var24 + param3, param3, 2);
                 }
               }
             }
             for (var24Lifetime1 = 0; var17.length > var24Lifetime1; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)SoftwareRasterizer.field_b[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)SoftwareRasterizer.pixels[var24Lifetime1];
             }
             var23Lifetime1 = 0;
             var24Lifetime2 = (1 + var37[var16_int]) * param3;
@@ -274,11 +274,11 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
             }
           }
           var16 = new PaletteBitmapFont(param1, var38, var39, var37, var36, var10, var40);
-          var16.field_I = var16.field_I - param3;
-          var16.field_s = var16.field_s - param3;
-          var16.field_G = var16.field_G - param3;
-          SoftwareRasterizer.a(var45, var13, var14);
-          SoftwareRasterizer.a(var44);
+          var16.descent = var16.descent - param3;
+          var16.capitalHeight = var16.capitalHeight - param3;
+          var16.ascent = var16.ascent - param3;
+          SoftwareRasterizer.bindRaster(var45, var13, var14);
+          SoftwareRasterizer.restoreClip(var44);
           stackIn_31_0 = var16;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -328,8 +328,8 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.c(param2, 3);
-          var5 = param3.a(var4_int, param0, false);
+          var4_int = param3.getGroupId(param2, 3);
+          var5 = param3.getFileId(var4_int, param0, false);
           stackIn_4_0 = jc.a(-1, var5, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -358,7 +358,7 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
         }
     }
 
-    final static int a(int param0, vk param1) {
+    final static int a(int param0, CourseDefinition param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

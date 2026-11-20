@@ -24,7 +24,7 @@ final class cd {
           var7 = ArchiveIndex.field_f.get(11);
           var8 = ArchiveIndex.field_f.get(12);
           var9 = ArchiveIndex.field_f.get(13);
-          return IntrusiveDequeCursor.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + eb.field_n[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return IntrusiveDequeCursor.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + PathWaypoint.field_n[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
@@ -41,19 +41,19 @@ final class cd {
           hk.field_c = new int[4][];
           d.field_c = new int[4];
           QuickChatPhraseDefinition.field_v = new int[4][];
-          ha.field_j = new int[4][];
+          BoundaryIntersection.field_j = new int[4][];
           for (var1_int = 0; var1_int < 4; var1_int++) {
-            var2 = pc.field_l[var1_int];
+            var2 = MenuList.field_l[var1_int];
             array$0 = new int[var2];
             hk.field_c[var1_int] = array$0;
             array$1 = new int[var2];
             QuickChatPhraseDefinition.field_v[var1_int] = array$1;
             array$2 = new int[var2];
-            ha.field_j[var1_int] = array$2;
+            BoundaryIntersection.field_j[var1_int] = array$2;
             for (var3 = 0; var2 > var3; var3++) {
               hk.field_c[var1_int][var3] = -1;
               QuickChatPhraseDefinition.field_v[var1_int][var3] = -1;
-              ha.field_j[var1_int][var3] = 3;
+              BoundaryIntersection.field_j[var1_int][var3] = 3;
             }
             d.field_c[var1_int] = -1;
           }
@@ -92,31 +92,31 @@ final class cd {
     }
 
     final static void a(Sprite param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9_int = -param7 + param2 + param8 + param0.field_u;
-        int var10 = param4 + (param0.field_u + (param8 + param2));
-        int var11 = param3 + param0.field_x + (param0.field_y >> 1);
-        SoftwareRasterizer.e(var9_int, 0, var10, var11 + param5);
-        param0.b(-1 + param8, -1 + param3, param6);
-        param0.b(param8 - 1, 1 + param3, param6);
-        SoftwareRasterizer.a(ValidationHelpWidget.field_R);
-        SoftwareRasterizer.e(var9_int + 1, 0, var10 + 1, param5 + var11);
-        param0.b(param8 + 1, param3 - 1, param6);
-        param0.b(1 + param8, param3 + 1, param6);
-        SoftwareRasterizer.a(ValidationHelpWidget.field_R);
-        var9_int = param8 + (param0.field_u + param0.field_s) - (param2 + param4);
-        var10 = -param2 + param8 + (param0.field_u + param0.field_s) - param7;
-        SoftwareRasterizer.e(var9_int, var11 - param5, var10, 480);
+        int var9_int = -param7 + param2 + param8 + param0.offsetX;
+        int var10 = param4 + (param0.offsetX + (param8 + param2));
+        int var11 = param3 + param0.offsetY + (param0.height >> 1);
+        SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param5);
+        param0.drawAdditive(-1 + param8, -1 + param3, param6);
+        param0.drawAdditive(param8 - 1, 1 + param3, param6);
+        SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
+        SoftwareRasterizer.intersectClip(var9_int + 1, 0, var10 + 1, param5 + var11);
+        param0.drawAdditive(param8 + 1, param3 - 1, param6);
+        param0.drawAdditive(1 + param8, param3 + 1, param6);
+        SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
+        var9_int = param8 + (param0.offsetX + param0.width) - (param2 + param4);
+        var10 = -param2 + param8 + (param0.offsetX + param0.width) - param7;
+        SoftwareRasterizer.intersectClip(var9_int, var11 - param5, var10, 480);
         if (param1 <= 111) {
           return;
         }
         try {
-          param0.b(-1 + param8, param3 - 1, param6);
-          param0.b(param8 - 1, 1 + param3, param6);
-          SoftwareRasterizer.a(ValidationHelpWidget.field_R);
-          SoftwareRasterizer.e(1 + var9_int, var11 - param5, 1 + var10, 480);
-          param0.b(param8 + 1, -1 + param3, param6);
-          param0.b(1 + param8, param3 + 1, param6);
-          SoftwareRasterizer.a(ValidationHelpWidget.field_R);
+          param0.drawAdditive(-1 + param8, param3 - 1, param6);
+          param0.drawAdditive(param8 - 1, 1 + param3, param6);
+          SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
+          SoftwareRasterizer.intersectClip(1 + var9_int, var11 - param5, 1 + var10, 480);
+          param0.drawAdditive(param8 + 1, -1 + param3, param6);
+          param0.drawAdditive(1 + param8, param3 + 1, param6);
+          SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "cd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

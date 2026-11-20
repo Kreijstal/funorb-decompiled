@@ -1,60 +1,60 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends pc {
+final class RaceSetupMenu extends MenuList {
     private boolean field_w;
-    private int[] field_J;
-    private int[] field_V;
-    int[][] field_F;
+    private int[] controlActions;
+    private int[] rowWidths;
+    int[][] rowItemIds;
     static MusicTrack field_D;
     static String field_z;
     private int[] field_S;
-    private int field_W;
+    private int transitionTicks;
     static int field_C;
-    private int[] field_p;
-    private int field_Y;
-    String[] field_Q;
+    private int[] rowScrollTargets;
+    private int hoveredControl;
+    String[] rowTitles;
     private int field_ab;
     private boolean field_t;
     private int field_Z;
     private int[] field_K;
-    private int[] field_T;
+    private int[] rowColors;
     private String field_L;
     private String[] field_O;
-    String[][] field_X;
-    private float[] field_A;
+    String[][] rowLabels;
+    private float[] rowScrollPositions;
     private int[] field_B;
-    private int field_u;
+    private int pendingSelection;
     static String field_v;
-    private float field_r;
+    private float verticalOffset;
     private float[] field_x;
-    String[][] field_G;
-    private int field_M;
-    private int field_q;
-    Sprite[][] field_o;
-    private int field_R;
+    String[][] rowDescriptions;
+    private int targetVerticalOffset;
+    private int hoveredRow;
+    Sprite[][] rowSprites;
+    private int hoveredItem;
     static tk field_s;
-    private int[] field_N;
-    private int[] field_H;
-    private int field_E;
+    private int[] selectedValues;
+    private int[] selectedIndices;
+    private int menuId;
     private int[] field_I;
-    int field_P;
+    int transitionState;
     static fo field_y;
 
-    final void c(int param0, int param1) {
+    final void activateItem(int param0, int param1) {
         if (param1 != -3565) {
           return;
         }
-        this.a(param0, true, (byte) 122, false);
+        this.activateRowSelection(param0, true, (byte) 122, false);
     }
 
-    final void a(int param0, int param1, boolean param2, byte param3) {
+    final void drawItem(int param0, int param1, boolean param2, byte param3) {
         if (param3 >= -75) {
-          this.field_A = (float[]) null;
+          this.rowScrollPositions = (float[]) null;
         }
     }
 
-    final void a(boolean param0) {
+    final void handleKey(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -68,9 +68,9 @@ final class ec extends pc {
         int var5;
         var5 = HoldTheLine.field_D;
         if (!param0) {
-          this.field_A = (float[]) null;
+          this.rowScrollPositions = (float[]) null;
         }
-        if (this.field_k) {
+        if (this.mouseHeld) {
           return;
         }
         if (DelayedServerPacket.field_n == 1 &&
@@ -79,106 +79,106 @@ final class ec extends pc {
           LoginCredentialType.field_c = stackIn_10_0;
         }
         if (!pj.b((byte) 116) &&
-          this.field_a <= 1) {
+          this.itemCount <= 1) {
           stackIn_16_0 = 0;
         } else {
           stackIn_16_0 = 1;
         }
         var2 = stackIn_16_0;
-        stackIn_19_0 = (this.field_a > 1) ? 0 : 2;
+        stackIn_19_0 = (this.itemCount > 1) ? 0 : 2;
         var3 = stackIn_19_0;
         if (DelayedServerPacket.field_n == 98) {
-          fieldTemp$0 = this.field_q - 1;
-          this.field_q = this.field_q - 1;
+          fieldTemp$0 = this.hoveredRow - 1;
+          this.hoveredRow = this.hoveredRow - 1;
           if (0 > fieldTemp$0) {
-            if (1 != this.field_Y) {
-              if (0 == this.field_Y &&
+            if (1 != this.hoveredControl) {
+              if (0 == this.hoveredControl &&
                 var2 != 0) {
-                this.field_Y = 1;
+                this.hoveredControl = 1;
                 this.field_Z = var3;
-                this.field_q = -1;
+                this.hoveredRow = -1;
                 return;
               }
-              this.field_Y = 0;
-              this.field_q = -1;
+              this.hoveredControl = 0;
+              this.hoveredRow = -1;
               return;
             }
-            if (this.field_R == -1) {
-              this.field_R = 0;
+            if (this.hoveredItem == -1) {
+              this.hoveredItem = 0;
             }
-            this.field_q = this.field_c;
-            this.field_Y = -1;
+            this.hoveredRow = this.selectedItem;
+            this.hoveredControl = -1;
           } else {
-            this.field_Y = -1;
-            this.field_g = true;
-            if (this.field_F[this.field_q].length != this.field_F[this.field_q + 1].length) {
-              var4 = this.field_F[this.field_q].length - this.field_F[1 + this.field_q].length;
-              this.field_R = this.field_R + var4 / 2;
-              if (0 > this.field_R) {
-                this.field_R = 0;
+            this.hoveredControl = -1;
+            this.keyboardSelection = true;
+            if (this.rowItemIds[this.hoveredRow].length != this.rowItemIds[this.hoveredRow + 1].length) {
+              var4 = this.rowItemIds[this.hoveredRow].length - this.rowItemIds[1 + this.hoveredRow].length;
+              this.hoveredItem = this.hoveredItem + var4 / 2;
+              if (0 > this.hoveredItem) {
+                this.hoveredItem = 0;
               }
-              if (this.field_R <= this.field_F[this.field_q].length - 1) {
+              if (this.hoveredItem <= this.rowItemIds[this.hoveredRow].length - 1) {
                 return;
               }
-              this.field_R = -1 + this.field_F[this.field_q].length;
+              this.hoveredItem = -1 + this.rowItemIds[this.hoveredRow].length;
               return;
             }
           }
         } else {
           if (DelayedServerPacket.field_n == 84) {
-            if (this.field_Y != -1) {
-              this.a(this.field_Y, this.field_J[this.field_Y], 2, -79);
+            if (this.hoveredControl != -1) {
+              this.handleControlAction(this.hoveredControl, this.controlActions[this.hoveredControl], 2, -79);
               return;
             }
-            if (this.field_q == -1) {
+            if (this.hoveredRow == -1) {
               return;
             }
-            if (this.field_R == -1) {
+            if (this.hoveredItem == -1) {
               return;
             }
-            this.b(this.field_R, this.field_q, 16777215);
-            this.a(this.field_q, true, (byte) 122, false);
-            this.field_g = true;
+            this.selectItem(this.hoveredItem, this.hoveredRow, 16777215);
+            this.activateRowSelection(this.hoveredRow, true, (byte) 122, false);
+            this.keyboardSelection = true;
             return;
           }
           if (99 == DelayedServerPacket.field_n) {
-            if (-1 != this.field_q) {
-              fieldTemp$1 = this.field_q + 1;
-              this.field_q = this.field_q + 1;
-              if (fieldTemp$1 < this.field_a) {
-                this.field_g = true;
-                this.field_Y = -1;
-                if (this.field_F[this.field_q].length == this.field_F[-1 + this.field_q].length) {
+            if (-1 != this.hoveredRow) {
+              fieldTemp$1 = this.hoveredRow + 1;
+              this.hoveredRow = this.hoveredRow + 1;
+              if (fieldTemp$1 < this.itemCount) {
+                this.keyboardSelection = true;
+                this.hoveredControl = -1;
+                if (this.rowItemIds[this.hoveredRow].length == this.rowItemIds[-1 + this.hoveredRow].length) {
                   return;
                 }
-                var4 = -this.field_F[-1 + this.field_q].length + this.field_F[this.field_q].length;
-                this.field_R = this.field_R + var4 / 2;
-                if (this.field_R < 0) {
-                  this.field_R = 0;
+                var4 = -this.rowItemIds[-1 + this.hoveredRow].length + this.rowItemIds[this.hoveredRow].length;
+                this.hoveredItem = this.hoveredItem + var4 / 2;
+                if (this.hoveredItem < 0) {
+                  this.hoveredItem = 0;
                 }
-                if ((-1 + this.field_F[this.field_q].length) >= this.field_R) {
+                if ((-1 + this.rowItemIds[this.hoveredRow].length) >= this.hoveredItem) {
                   return;
                 }
-                this.field_R = this.field_F[this.field_q].length - 1;
+                this.hoveredItem = this.rowItemIds[this.hoveredRow].length - 1;
                 return;
               }
             }
-            if (this.field_Y != 0) {
-              if (this.field_Y != 1 &&
+            if (this.hoveredControl != 0) {
+              if (this.hoveredControl != 1 &&
                 var2 != 0) {
-                this.field_q = -1;
+                this.hoveredRow = -1;
                 this.field_Z = var3;
-                this.field_Y = 1;
+                this.hoveredControl = 1;
                 return;
               }
-              this.field_q = -1;
-              this.field_Y = 0;
+              this.hoveredRow = -1;
+              this.hoveredControl = 0;
               return;
             }
-            this.field_q = 0;
-            this.field_Y = -1;
-            if (this.field_R == -1) {
-              this.field_R = 0;
+            this.hoveredRow = 0;
+            this.hoveredControl = -1;
+            if (this.hoveredItem == -1) {
+              this.hoveredItem = 0;
               return;
             }
           } else {
@@ -186,38 +186,38 @@ final class ec extends pc {
               IterableSecondaryNodeDeque.field_g[82] &&
               RotatedSpriteCache.field_c) {
               l.field_b = true;
-              hk.field_d = -1 + pc.field_l[3];
+              hk.field_d = -1 + MenuList.field_l[3];
               ao.field_b = 3;
               h.b((byte) -78);
-              this.d((byte) -77, 0);
+              this.truncateAfterRow((byte) -77, 0);
               return;
             }
-            if (this.field_Y != -1) {
+            if (this.hoveredControl != -1) {
               if (DelayedServerPacket.field_n == 96) {
-                this.a(this.field_Y, this.field_J[this.field_Y], 1, -45);
+                this.handleControlAction(this.hoveredControl, this.controlActions[this.hoveredControl], 1, -45);
               }
               if (97 == DelayedServerPacket.field_n) {
-                this.a(this.field_Y, this.field_J[this.field_Y], 0, 3);
+                this.handleControlAction(this.hoveredControl, this.controlActions[this.hoveredControl], 0, 3);
                 return;
               }
             } else {
-              if (this.field_q == -1) {
+              if (this.hoveredRow == -1) {
                 return;
               }
               if (DelayedServerPacket.field_n == 96) {
-                fieldTemp$2 = this.field_R - 1;
-                this.field_R = this.field_R - 1;
+                fieldTemp$2 = this.hoveredItem - 1;
+                this.hoveredItem = this.hoveredItem - 1;
                 if (fieldTemp$2 < 0) {
-                  this.field_R = this.field_R + 1;
+                  this.hoveredItem = this.hoveredItem + 1;
                 }
               }
               if (97 != DelayedServerPacket.field_n) {
                 return;
               }
-              fieldTemp$3 = this.field_R + 1;
-              this.field_R = this.field_R + 1;
-              if (fieldTemp$3 >= this.field_F[this.field_q].length) {
-                this.field_R = this.field_R - 1;
+              fieldTemp$3 = this.hoveredItem + 1;
+              this.hoveredItem = this.hoveredItem + 1;
+              if (fieldTemp$3 >= this.rowItemIds[this.hoveredRow].length) {
+                this.hoveredItem = this.hoveredItem - 1;
                 return;
               }
             }
@@ -226,12 +226,12 @@ final class ec extends pc {
         return;
     }
 
-    final boolean b(byte param0) {
+    final boolean isClosed(byte param0) {
         int var2 = 78 / ((param0 - 19) / 59);
-        return this.field_P == 3 ? true : false;
+        return this.transitionState == 3 ? true : false;
     }
 
-    private final void d(int param0) {
+    private final void handleChoiceMouse(int param0) {
         int var6 = 0;
         int discarded$0 = 0;
         int stackIn_39_1 = 0;
@@ -249,22 +249,22 @@ final class ec extends pc {
         int var3Lifetime1;
         int var4Lifetime1;
         var8 = HoldTheLine.field_D;
-        if (this.field_P == 1) {
-          var2 = this.d(rf.field_X, -110, NodeHashTableIterator.field_g);
+        if (this.transitionState == 1) {
+          var2 = this.hitTestControl(FullscreenErrorDialog.field_X, -110, NodeHashTableIterator.field_g);
           if (var2 != -1 ||
-            !this.field_g) {
-            this.field_Y = var2;
-            this.field_g = false;
+            !this.keyboardSelection) {
+            this.hoveredControl = var2;
+            this.keyboardSelection = false;
           }
-          var3 = this.a(rf.field_X, false);
+          var3 = this.hitTestRow(FullscreenErrorDialog.field_X, false);
           if (0 <= var3 &&
-            this.field_a > var3) {
-            var4 = rf.field_X - this.c((byte) -113, var3);
+            this.itemCount > var3) {
+            var4 = FullscreenErrorDialog.field_X - this.getRowY((byte) -113, var3);
             var5 = -1;
             if (var4 > 18 &&
               var4 < 102) {
-              for (var6 = 0; this.field_F[var3].length > var6; var6++) {
-                var7 = NodeHashTableIterator.field_g - this.a(var3, 4, var6);
+              for (var6 = 0; this.rowItemIds[var3].length > var6; var6++) {
+                var7 = NodeHashTableIterator.field_g - this.getItemX(var3, 4, var6);
                 if (var7 > 24 &&
                   var7 < 136) {
                   var5 = var6;
@@ -273,66 +273,66 @@ final class ec extends pc {
               }
             }
             if (var5 != -1 ||
-              !this.field_g) {
-              this.field_q = var3;
-              this.field_R = var5;
-              this.field_g = false;
-              if (this.field_R != -1 &&
-                this.field_a - 1 == this.field_q) {
-                this.b(this.field_R, this.field_q, 16777215);
-                ArchiveCatalog.a(1, (byte) 125, 13, this.field_R);
+              !this.keyboardSelection) {
+              this.hoveredRow = var3;
+              this.hoveredItem = var5;
+              this.keyboardSelection = false;
+              if (this.hoveredItem != -1 &&
+                this.itemCount - 1 == this.hoveredRow) {
+                this.selectItem(this.hoveredItem, this.hoveredRow, 16777215);
+                ArchiveCatalog.a(1, (byte) 125, 13, this.hoveredItem);
               }
             }
           }
         }
-        if (this.field_a - 1 == this.field_q) {
+        if (this.itemCount - 1 == this.hoveredRow) {
           var2_float = (float)NodeHashTableIterator.field_g / 640.0f;
-          this.c(this.field_a - 1, -1, (int)((float)this.field_V[-1 + this.field_a] * var2_float));
+          this.scrollRowTo(this.itemCount - 1, -1, (int)((float)this.rowWidths[-1 + this.itemCount] * var2_float));
         }
         if (ValidationIndicator.field_J != 0) {
-          if (0 == this.field_P) {
-            this.field_W = 0;
-            this.field_r = (float)this.field_M;
-            this.field_P = 1;
+          if (0 == this.transitionState) {
+            this.transitionTicks = 0;
+            this.verticalOffset = (float)this.targetVerticalOffset;
+            this.transitionState = 1;
             return;
           }
-          if (this.field_P == 2) {
-            this.field_W = 0;
-            this.field_P = 3;
-            this.field_r = (float)this.field_M;
+          if (this.transitionState == 2) {
+            this.transitionTicks = 0;
+            this.transitionState = 3;
+            this.verticalOffset = (float)this.targetVerticalOffset;
             return;
           }
-          if (this.field_Y != -1) {
-            var2Lifetime1 = this.d(rf.field_X, -108, NodeHashTableIterator.field_g);
-            if (var2Lifetime1 != this.field_Y) {
+          if (this.hoveredControl != -1) {
+            var2Lifetime1 = this.hitTestControl(FullscreenErrorDialog.field_X, -108, NodeHashTableIterator.field_g);
+            if (var2Lifetime1 != this.hoveredControl) {
               return;
             }
-            stackIn_39_1 = this.field_Y;
-            stackIn_39_2 = this.field_J[this.field_Y];
+            stackIn_39_1 = this.hoveredControl;
+            stackIn_39_2 = this.controlActions[this.hoveredControl];
             if (1 != ValidationIndicator.field_J) {
               stackIn_40_3 = 4;
             } else {
               stackIn_40_3 = 3;
             }
-            this.a(stackIn_39_1, stackIn_39_2, stackIn_40_3, -69);
+            this.handleControlAction(stackIn_39_1, stackIn_39_2, stackIn_40_3, -69);
             return;
           }
         }
         if (ValidationIndicator.field_J == 1 &&
           NodeHashTableIterator.field_g != -1) {
-          this.field_q = this.a(ValidatedTextField.field_U, false);
-          if (this.field_q >= 0 &&
-            this.field_q < this.field_a) {
-            var2Lifetime2 = ValidatedTextField.field_U - this.c((byte) -113, this.field_q);
+          this.hoveredRow = this.hitTestRow(ValidatedTextField.field_U, false);
+          if (this.hoveredRow >= 0 &&
+            this.hoveredRow < this.itemCount) {
+            var2Lifetime2 = ValidatedTextField.field_U - this.getRowY((byte) -113, this.hoveredRow);
             if (var2Lifetime2 > 18 &&
               94 > var2Lifetime2) {
-              for (var3Lifetime1 = 0; this.field_F[this.field_q].length > var3Lifetime1; var3Lifetime1++) {
-                var4Lifetime1 = TrackBoundary.field_x - this.a(this.field_q, 4, var3Lifetime1);
+              for (var3Lifetime1 = 0; this.rowItemIds[this.hoveredRow].length > var3Lifetime1; var3Lifetime1++) {
+                var4Lifetime1 = TrackBoundary.field_x - this.getItemX(this.hoveredRow, 4, var3Lifetime1);
                 if (var4Lifetime1 > 24 &&
-                  136 > var4Lifetime1 && (this.field_q == -1 + this.field_a ||
-                  this.field_H[this.field_q] != var3Lifetime1)) {
-                  this.b(var3Lifetime1, this.field_q, 16777215);
-                  this.a(this.field_q, false, (byte) 122, false);
+                  136 > var4Lifetime1 && (this.hoveredRow == -1 + this.itemCount ||
+                  this.selectedIndices[this.hoveredRow] != var3Lifetime1)) {
+                  this.selectItem(var3Lifetime1, this.hoveredRow, 16777215);
+                  this.activateRowSelection(this.hoveredRow, false, (byte) 122, false);
                   break;
                 }
               }
@@ -340,42 +340,42 @@ final class ec extends pc {
           }
         }
         if (param0 <= 85) {
-          discarded$0 = this.a(81, true);
+          discarded$0 = this.hitTestRow(81, true);
         }
     }
 
-    private final void d(byte param0, int param1) {
+    private final void truncateAfterRow(byte param0, int param1) {
         int var3 = 0;
         int[] var10 = null;
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
-        this.field_u = -1;
+        this.pendingSelection = -1;
         if (param0 >= -74) {
-          this.a((byte) -107, false);
+          this.reset((byte) -107, false);
         }
-        for (var3 = param1 + 1; var3 < this.field_a; var3++) {
-          var10 = this.field_H;
+        for (var3 = param1 + 1; var3 < this.itemCount; var3++) {
+          var10 = this.selectedIndices;
           var5 = var3;
-          this.field_N[var3] = -1;
+          this.selectedValues[var3] = -1;
           var10[var5] = -1;
-          this.field_p[var3] = (-640 + this.field_V[var3]) / 2;
+          this.rowScrollTargets[var3] = (-640 + this.rowWidths[var3]) / 2;
         }
-        this.field_a = param1 + 1;
-        if (this.field_c > param1) {
-          this.field_c = param1;
+        this.itemCount = param1 + 1;
+        if (this.selectedItem > param1) {
+          this.selectedItem = param1;
         }
-        if (this.field_q > param1) {
-          this.field_q = param1;
-          this.field_R = this.field_N[param1];
-          if (this.field_R == -1) {
-            this.field_R = 0;
+        if (this.hoveredRow > param1) {
+          this.hoveredRow = param1;
+          this.hoveredItem = this.selectedValues[param1];
+          if (this.hoveredItem == -1) {
+            this.hoveredItem = 0;
           }
         }
-        om.a(new String[][]{this.field_O, this.field_G[this.field_c]}, 103, 13);
-        this.field_M = 312 + (112 - 112 * this.field_a);
+        TrackObjectDefinition.setMenuDescriptions(new String[][]{this.field_O, this.rowDescriptions[this.selectedItem]}, 103, 13);
+        this.targetVerticalOffset = 312 + (112 - 112 * this.itemCount);
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var3_int = 0;
         int var2;
         String var3;
@@ -384,38 +384,38 @@ final class ec extends pc {
         int var6;
         int var2Lifetime1;
         var6 = HoldTheLine.field_D;
-        if (3 == this.field_P) {
+        if (3 == this.transitionState) {
           return;
         }
         for (var2 = 0; var2 < 4; var2++) {
-          if (null != this.field_F[var2]) {
-            this.b((byte) 47, var2);
+          if (null != this.rowItemIds[var2]) {
+            this.drawChoiceRow((byte) 47, var2);
           }
         }
         var2Lifetime1 = 0;
         if (param0 != -55) {
           return;
         }
-        if (this.field_P == 2) {
-          var2Lifetime1 = (int)((double)we.field_n * (-Math.exp((double)(0.20000000298023224f * (float)(this.field_W - 5))) + 1.0));
+        if (this.transitionState == 2) {
+          var2Lifetime1 = (int)((double)we.field_n * (-Math.exp((double)(0.20000000298023224f * (float)(this.transitionTicks - 5))) + 1.0));
         }
         fl.a(this.field_L.toUpperCase(), var2Lifetime1, 1, param0 - 1698, 8);
-        for (var3_int = 0; var3_int < this.field_J.length; var3_int++) {
-          this.a(this.a((byte) -128, var3_int), this.field_J[var3_int], true, var3_int);
+        for (var3_int = 0; var3_int < this.controlActions.length; var3_int++) {
+          this.drawControl(this.getControlY((byte) -128, var3_int), this.controlActions[var3_int], true, var3_int);
         }
-        var3 = this.field_Q[this.field_a - 1];
+        var3 = this.rowTitles[this.itemCount - 1];
         if (var3 != null) {
-          var4 = HoldTheLine.field_F.a(var3);
-          var5 = this.c((byte) -113, this.field_a - 1);
-          SoftwareRasterizer.c(0, var5, 20 + var4, 28, 0, 192);
-          SoftwareRasterizer.a(0, var5, 20 + var4, 28, 16777215);
-          HoldTheLine.field_F.a(var3, 10, 18 + var5, 4, -1);
+          var4 = HoldTheLine.field_F.measureText(var3);
+          var5 = this.getRowY((byte) -113, this.itemCount - 1);
+          SoftwareRasterizer.fillRectangleAlpha(0, var5, 20 + var4, 28, 0, 192);
+          SoftwareRasterizer.drawRectangle(0, var5, 20 + var4, 28, 16777215);
+          HoldTheLine.field_F.draw(var3, 10, 18 + var5, 4, -1);
         }
         oi.a(1, 13);
         return;
     }
 
-    private final int a(int param0, boolean param1) {
+    private final int hitTestRow(int param0, boolean param1) {
         int var3 = 0;
         int var4;
         int var5;
@@ -423,8 +423,8 @@ final class ec extends pc {
         if (param1) {
           return -38;
         }
-        for (var3 = -1 + this.field_a; var3 >= 0; var3--) {
-          var4 = this.c((byte) -113, var3);
+        for (var3 = -1 + this.itemCount; var3 >= 0; var3--) {
+          var4 = this.getRowY((byte) -113, var3);
           if (param0 >= var4 &&
             var4 + 112 > param0) {
             return var3;
@@ -433,60 +433,60 @@ final class ec extends pc {
         return -1;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int getItemX(int param0, int param1, int param2) {
         if (param1 != 4) {
-          this.field_R = -9;
+          this.hoveredItem = -9;
         }
-        return 160 * param2 + (240 - (int)this.field_A[param0]);
+        return 160 * param2 + (240 - (int)this.rowScrollPositions[param0]);
     }
 
-    private final void a(int param0, byte param1) {
-        this.field_V[param0] = this.field_F[param0].length * 160;
-        this.c(param0, -1, 0);
-        this.field_A[param0] = (float)this.field_p[param0];
+    private final void initializeRowLayout(int param0, byte param1) {
+        this.rowWidths[param0] = this.rowItemIds[param0].length * 160;
+        this.scrollRowTo(param0, -1, 0);
+        this.rowScrollPositions[param0] = (float)this.rowScrollTargets[param0];
         int var3 = -102 / ((-66 - param1) / 45);
     }
 
-    final void a(byte param0, boolean param1) {
+    final void reset(byte param0, boolean param1) {
         int var3 = 0;
         int var4 = HoldTheLine.field_D;
-        this.field_P = 0;
-        this.field_W = 0;
+        this.transitionState = 0;
+        this.transitionTicks = 0;
         for (var3 = 0; var3 < 4; var3++) {
           this.field_B[var3] = 0;
         }
-        this.field_M = 312;
-        this.field_u = -1;
-        this.field_q = !param1 ? 0 : -1;
-        this.field_r = 480.0f;
+        this.targetVerticalOffset = 312;
+        this.pendingSelection = -1;
+        this.hoveredRow = !param1 ? 0 : -1;
+        this.verticalOffset = 480.0f;
         if (param0 != 69) {
           return;
         }
         this.field_ab = 0;
-        this.field_a = 1;
-        this.field_c = 0;
+        this.itemCount = 1;
+        this.selectedItem = 0;
         this.field_Z = 0;
-        this.field_R = !param1 ? 0 : -1;
-        this.a(true, 6267);
-        om.a(new String[][]{this.field_O, this.field_G[0]}, 67, 13);
+        this.hoveredItem = !param1 ? 0 : -1;
+        this.refreshMenuOptions(true, 6267);
+        TrackObjectDefinition.setMenuDescriptions(new String[][]{this.field_O, this.rowDescriptions[0]}, 67, 13);
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void selectItem(int param0, int param1, int param2) {
         if (param0 < 0) {
           param0 = 0;
         }
-        if (this.field_F[param1].length <= param0) {
-          param0 = -1 + this.field_F[param1].length;
+        if (this.rowItemIds[param1].length <= param0) {
+          param0 = -1 + this.rowItemIds[param1].length;
         }
         if (param2 != 16777215) {
-          this.field_Y = -76;
+          this.hoveredControl = -76;
         }
-        this.field_H[param1] = param0;
-        this.field_N[param1] = this.field_F[param1][param0];
-        this.c(param1, -1, param0 * 160 + 80);
+        this.selectedIndices[param1] = param0;
+        this.selectedValues[param1] = this.rowItemIds[param1][param0];
+        this.scrollRowTo(param1, -1, param0 * 160 + 80);
     }
 
-    final static void b(int param0, byte param1) {
+    final static void resendPendingDataRequests(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         fl var4 = null;
@@ -499,7 +499,7 @@ final class ec extends pc {
           }
           var4 = (fl) (UsernameLoginCredentials.field_e.first((byte) 125));
           while (var4 != null) {
-            om.a(27391, var4, param0);
+            TrackObjectDefinition.a(27391, var4, param0);
             var4 = (fl) (UsernameLoginCredentials.field_e.next((byte) -89));
           }
           var2 = oc.field_d.first((byte) 121);
@@ -515,7 +515,7 @@ final class ec extends pc {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void increaseItemValue(int param0, int param1) {
         if (param0 < 97) {
           this.field_S = (int[]) null;
         }
@@ -532,12 +532,12 @@ final class ec extends pc {
         field_D = null;
     }
 
-    private final int e(byte param0, int param1) {
+    private final int getRowX(byte param0, int param1) {
         int var3 = 78 % ((74 - param0) / 33);
-        return 240 - (int)this.field_A[param1];
+        return 240 - (int)this.rowScrollPositions[param1];
     }
 
-    final void c(byte param0) {
+    final void update(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         float var2;
@@ -546,39 +546,39 @@ final class ec extends pc {
         int var5;
         int var3Lifetime1;
         var4 = HoldTheLine.field_D;
-        if (this.field_P == 3) {
+        if (this.transitionState == 3) {
           return;
         }
-        if (this.field_P == 0) {
-          if (this.field_W == 0) {
+        if (this.transitionState == 0) {
+          if (this.transitionTicks == 0) {
             ValidationHelpWidget.a(17405, 64, 0, HuffmanDecoder.field_c.field_f);
             ValidationHelpWidget.a(param0 + 17514, 64, 256, HuffmanDecoder.field_c.field_h);
           }
-          fieldTemp$0 = this.field_W + 1;
-          this.field_W = this.field_W + 1;
-          if (fieldTemp$0 == 5 * this.field_J.length + 50) {
-            this.field_P = 1;
-            this.field_W = 0;
+          fieldTemp$0 = this.transitionTicks + 1;
+          this.transitionTicks = this.transitionTicks + 1;
+          if (fieldTemp$0 == 5 * this.controlActions.length + 50) {
+            this.transitionState = 1;
+            this.transitionTicks = 0;
           }
         } else {
-          if (this.field_P == 2) {
-            fieldTemp$1 = this.field_W + 1;
-            this.field_W = this.field_W + 1;
+          if (this.transitionState == 2) {
+            fieldTemp$1 = this.transitionTicks + 1;
+            this.transitionTicks = this.transitionTicks + 1;
             if (-260.0 > (double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)(fieldTemp$1 - 5))))) {
-              this.field_P = 3;
-              this.field_W = 0;
+              this.transitionState = 3;
+              this.transitionTicks = 0;
             }
           }
         }
-        var2 = (float)this.field_M - this.field_r;
-        this.field_r = this.field_r + 0.20000000298023224f * var2;
-        if (this.field_u != -1 &&
+        var2 = (float)this.targetVerticalOffset - this.verticalOffset;
+        this.verticalOffset = this.verticalOffset + 0.20000000298023224f * var2;
+        if (this.pendingSelection != -1 &&
           Math.abs(var2) < 5.0f) {
-          this.a(-1 + this.field_a, this.field_w, (byte) 122, true);
+          this.activateRowSelection(-1 + this.itemCount, this.field_w, (byte) 122, true);
         }
-        for (var3 = 0; this.field_a > var3; var3++) {
-          if ((float)this.field_p[var3] != this.field_A[var3]) {
-            this.field_A[var3] = this.field_A[var3] + ((float)this.field_p[var3] - this.field_A[var3]) * 0.05000000074505806f;
+        for (var3 = 0; this.itemCount > var3; var3++) {
+          if ((float)this.rowScrollTargets[var3] != this.rowScrollPositions[var3]) {
+            this.rowScrollPositions[var3] = this.rowScrollPositions[var3] + ((float)this.rowScrollTargets[var3] - this.rowScrollPositions[var3]) * 0.05000000074505806f;
           }
           if (this.field_B[var3] > 0) {
             this.field_B[var3] = this.field_B[var3] - 1;
@@ -586,50 +586,50 @@ final class ec extends pc {
         }
         var5 = 0;
         var3Lifetime1 = var5;
-        while (var5 < this.field_J.length) {
+        while (var5 < this.controlActions.length) {
           this.field_x[var5] = this.field_x[var5] + (-this.field_x[var5] + (float)this.field_I[var5]) * 0.20000000298023224f;
           var5++;
         }
         if (param0 != -109) {
-          ec.clearSharedReferences((byte) 121);
+          RaceSetupMenu.clearSharedReferences((byte) 121);
         }
-        if (1 >= this.field_P) {
+        if (1 >= this.transitionState) {
           if (na.field_k &&
             -1 != NodeHashTableIterator.field_g) {
-            this.d(86);
+            this.handleChoiceMouse(86);
           }
           while (qh.c(-85)) {
-            this.a(true);
+            this.handleKey(true);
           }
         }
         PacketBuffer.b(true);
         return;
     }
 
-    private final int c(byte param0, int param1) {
+    private final int getRowY(byte param0, int param1) {
         if (param0 != -113) {
           return -39;
         }
-        return 112 * param1 + (int)this.field_r;
+        return 112 * param1 + (int)this.verticalOffset;
     }
 
-    final void d(byte param0) {
-        if (this.field_P != 2) {
-          if (3 == this.field_P) {
+    final void beginExit(byte param0) {
+        if (this.transitionState != 2) {
+          if (3 == this.transitionState) {
             return;
           }
           bn.a(1, -107);
-          this.field_P = 2;
+          this.transitionState = 2;
           if (param0 >= -104) {
             return;
           }
-          this.field_W = 0;
-          this.field_M = 480;
+          this.transitionTicks = 0;
+          this.targetVerticalOffset = 480;
           return;
         }
     }
 
-    private final void a(String param0, int param1, int[] param2, Sprite[] param3, boolean param4, String[] param5, String[] param6, int param7) {
+    private final void addChoiceRow(String param0, int param1, int[] param2, Sprite[] param3, boolean param4, String[] param5, String[] param6, int param7) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -645,25 +645,25 @@ final class ec extends pc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         try {
-          this.field_F[this.field_a] = param2;
-          this.field_o[this.field_a] = param3;
-          this.field_X[this.field_a] = param6;
-          this.field_G[this.field_a] = param5;
-          this.field_Q[this.field_a] = param0;
-          this.field_T[this.field_a] = param1;
-          this.field_H[this.field_a] = -1;
-          this.field_N[this.field_a] = -1;
+          this.rowItemIds[this.itemCount] = param2;
+          this.rowSprites[this.itemCount] = param3;
+          this.rowLabels[this.itemCount] = param6;
+          this.rowDescriptions[this.itemCount] = param5;
+          this.rowTitles[this.itemCount] = param0;
+          this.rowColors[this.itemCount] = param1;
+          this.selectedIndices[this.itemCount] = -1;
+          this.selectedValues[this.itemCount] = -1;
           if (param4) {
-            this.field_q = this.field_a;
-            this.field_R = 0;
+            this.hoveredRow = this.itemCount;
+            this.hoveredItem = 0;
           }
-          this.a(this.field_a, (byte) 126);
-          fieldTemp$0 = this.field_a;
-          this.field_a = this.field_a + 1;
-          this.field_c = fieldTemp$0;
-          om.a(new String[][]{this.field_O, this.field_G[this.field_c]}, param7 ^ 374, 13);
-          this.field_M = -(112 * (this.field_a - 1)) + param7;
-          this.field_u = -1;
+          this.initializeRowLayout(this.itemCount, (byte) 126);
+          fieldTemp$0 = this.itemCount;
+          this.itemCount = this.itemCount + 1;
+          this.selectedItem = fieldTemp$0;
+          TrackObjectDefinition.setMenuDescriptions(new String[][]{this.field_O, this.rowDescriptions[this.selectedItem]}, param7 ^ 374, 13);
+          this.targetVerticalOffset = -(112 * (this.itemCount - 1)) + param7;
+          this.pendingSelection = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -703,7 +703,7 @@ final class ec extends pc {
         }
     }
 
-    private final void b(byte param0, int param1) {
+    private final void drawChoiceRow(byte param0, int param1) {
         int[] var3;
         Sprite[] var4;
         String[] var5;
@@ -718,42 +718,42 @@ final class ec extends pc {
         int[] var14;
         int var10Lifetime1;
         var11 = HoldTheLine.field_D;
-        var14 = this.field_F[param1];
+        var14 = this.rowItemIds[param1];
         var13 = var14;
         var3 = var13;
-        var4 = this.field_o[param1];
-        var5 = this.field_X[param1];
+        var4 = this.rowSprites[param1];
+        var5 = this.rowLabels[param1];
         if (param0 != 47) {
           field_y = (fo) null;
         }
         if (var3 == null) {
           return;
         }
-        var6 = this.e((byte) 17, param1) + 24;
-        var7 = this.c((byte) -113, param1);
+        var6 = this.getRowX((byte) 17, param1) + 24;
+        var7 = this.getRowY((byte) -113, param1);
         var8 = 18 + var7;
         var9 = (424 - var7) * 256 / 112;
         if (16 >= var9) {
           return;
         }
         if (var9 < 256) {
-          hh.field_e.d(0, var7, var9);
+          hh.field_e.drawAlpha(0, var7, var9);
           for (var10 = 0; var10 < var14.length; var10++) {
-            if (var10 == this.field_H[param1] &&
-              this.field_Y == -1) {
-              SoftwareRasterizer.c(var6 - 5, -5 + var8, 121, 94, 16777215, var9 >> 1);
-              var4[var10].d(var6, var8, var9);
+            if (var10 == this.selectedIndices[param1] &&
+              this.hoveredControl == -1) {
+              SoftwareRasterizer.fillRectangleAlpha(var6 - 5, -5 + var8, 121, 94, 16777215, var9 >> 1);
+              var4[var10].drawAlpha(var6, var8, var9);
               if (this.field_B[param1] > 0 &&
                 (-this.field_B[param1] + 90) % 30 <= 15) {
-                SoftwareRasterizer.c(var6, var8, 111, 84, 16777215, var9 >> 1);
+                SoftwareRasterizer.fillRectangleAlpha(var6, var8, 111, 84, 16777215, var9 >> 1);
               }
-            } else if (this.field_q == param1 &&
-              this.field_R == var10 &&
-              this.field_Y == -1) {
-              SoftwareRasterizer.c(-5 + var6, -5 + var8, 121, 94, 16777215, var9 >> 1);
-              var4[var10].d(var6, var8, var9);
+            } else if (this.hoveredRow == param1 &&
+              this.hoveredItem == var10 &&
+              this.hoveredControl == -1) {
+              SoftwareRasterizer.fillRectangleAlpha(-5 + var6, -5 + var8, 121, 94, 16777215, var9 >> 1);
+              var4[var10].drawAlpha(var6, var8, var9);
             } else {
-              var4[var10].d(var6, var8, var9);
+              var4[var10].drawAlpha(var6, var8, var9);
               o.a(128, 84, var8, 128, 111, param0 - 4488, var6);
             }
             Vector2i.a(20, var5[var10], 4, 2, 111, var8, var6, 74, param0 ^ -48, 1, HoldTheLine.field_F);
@@ -761,25 +761,25 @@ final class ec extends pc {
           }
           return;
         }
-        hh.field_e.b(0, var7);
+        hh.field_e.drawUnkeyed(0, var7);
         var12 = 0;
         var10Lifetime1 = var12;
         while (var12 < var14.length) {
-          if (param1 == this.field_q &&
-            this.field_R == var12 &&
-            this.field_Y == -1) {
-            SoftwareRasterizer.c(-5 + var6, -5 + var8, 121, 94, 16744576, 128);
-            var4[var12].b(var6, var8);
-          } else if (this.field_H[param1] == var12 &&
-            this.field_Y == -1) {
-            SoftwareRasterizer.c(var6 - 5, -5 + var8, 121, 94, 16777215, 128);
-            var4[var12].b(var6, var8);
+          if (param1 == this.hoveredRow &&
+            this.hoveredItem == var12 &&
+            this.hoveredControl == -1) {
+            SoftwareRasterizer.fillRectangleAlpha(-5 + var6, -5 + var8, 121, 94, 16744576, 128);
+            var4[var12].drawUnkeyed(var6, var8);
+          } else if (this.selectedIndices[param1] == var12 &&
+            this.hoveredControl == -1) {
+            SoftwareRasterizer.fillRectangleAlpha(var6 - 5, -5 + var8, 121, 94, 16777215, 128);
+            var4[var12].drawUnkeyed(var6, var8);
             if (this.field_B[param1] > 0 &&
               (-this.field_B[param1] + 90) % 30 <= 15) {
-              SoftwareRasterizer.c(var6, var8, 111, 84, 16777215, 128);
+              SoftwareRasterizer.fillRectangleAlpha(var6, var8, 111, 84, 16777215, 128);
             }
           } else {
-            var4[var12].b(var6, var8);
+            var4[var12].drawUnkeyed(var6, var8);
             o.a(128, 84, var8, 128, 111, -4441, var6);
           }
           Vector2i.a(20, var5[var12], 4, 2, 111, var8, var6, 74, -1, 1, HoldTheLine.field_F);
@@ -789,9 +789,9 @@ final class ec extends pc {
         return;
     }
 
-    private final void c(int param0, int param1, int param2) {
-        if (this.field_V[param0] <= 640) {
-          this.field_p[param0] = (-160 + this.field_V[param0]) / 2;
+    private final void scrollRowTo(int param0, int param1, int param2) {
+        if (this.rowWidths[param0] <= 640) {
+          this.rowScrollTargets[param0] = (-160 + this.rowWidths[param0]) / 2;
           return;
         }
         int var4 = -80 + param2;
@@ -801,20 +801,20 @@ final class ec extends pc {
         if (var4 < 240) {
           var4 = 240;
         }
-        if (-400 + this.field_V[param0] < var4) {
-          var4 = this.field_V[param0] - 400;
+        if (-400 + this.rowWidths[param0] < var4) {
+          var4 = this.rowWidths[param0] - 400;
         }
-        this.field_p[param0] = var4;
+        this.rowScrollTargets[param0] = var4;
     }
 
-    final void a(int param0, int param1) {
+    final void decreaseItemValue(int param0, int param1) {
         if (param0 != 1) {
           String[] var4 = (String[]) null;
-          this.a((String) null, 117, (int[]) null, (Sprite[]) null, true, (String[]) null, (String[]) null, 115);
+          this.addChoiceRow((String) null, 117, (int[]) null, (Sprite[]) null, true, (String[]) null, (String[]) null, 115);
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3) {
+    private final void drawControl(int param0, int param1, boolean param2, int param3) {
         String[] array$0 = null;
         String stackIn_16_0 = null;
         String stackIn_19_0 = null;
@@ -846,11 +846,11 @@ final class ec extends pc {
         int var10;
         var10 = HoldTheLine.field_D;
         var5 = 0;
-        if (0 == this.field_P) {
-          var5 = 50 - this.field_W + 5 * param3;
+        if (0 == this.transitionState) {
+          var5 = 50 - this.transitionTicks + 5 * param3;
         } else {
-          if (this.field_P == 2) {
-            var5 = this.field_W - (-25 + 5 * (this.field_J.length - param3));
+          if (this.transitionState == 2) {
+            var5 = this.transitionTicks - (-25 + 5 * (this.controlActions.length - param3));
           }
         }
         if (!param2) {
@@ -912,7 +912,7 @@ final class ec extends pc {
           stackIn_46_0 = this.field_K;
           stackIn_46_1 = var9;
           stackIn_46_2 = 120;
-          if (this.field_Y == param3) {
+          if (this.hoveredControl == param3) {
             stackIn_47_3 = this.field_ab;
           } else {
             stackIn_47_3 = -1;
@@ -920,7 +920,7 @@ final class ec extends pc {
           fk.a(stackIn_46_0, stackIn_46_1, stackIn_46_2, stackIn_47_3, param0, -1, var6);
         } else {
           if (param1 == 23) {
-            if (this.field_a > 1) {
+            if (this.itemCount > 1) {
               stackIn_16_0 = CachedTextLayout.field_r;
             } else {
               stackIn_16_0 = "";
@@ -940,7 +940,7 @@ final class ec extends pc {
             stackIn_21_0 = this.field_K;
             stackIn_21_1 = var7_array;
             stackIn_21_2 = 72;
-            if (this.field_Y != param3) {
+            if (this.hoveredControl != param3) {
               stackIn_22_3 = -1;
             } else {
               stackIn_22_3 = this.field_Z;
@@ -951,7 +951,7 @@ final class ec extends pc {
         return;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void handleControlAction(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_3_0 = 0;
@@ -1008,10 +1008,10 @@ final class ec extends pc {
         MatchingTextValidator.a(293, StrongCacheEntry.field_r);
         if (param1 != 22) {
           if (param1 == 23) {
-            stackIn_97_0 = (0 < this.field_c) ? 0 : 2;
+            stackIn_97_0 = (0 < this.selectedItem) ? 0 : 2;
             var12 = stackIn_97_0;
             if (pj.b((byte) 90)) {
-              stackIn_102_0 = (this.field_c <= 0) ? 0 : 1;
+              stackIn_102_0 = (this.selectedItem <= 0) ? 0 : 1;
             } else {
               stackIn_102_0 = 0;
             }
@@ -1031,10 +1031,10 @@ final class ec extends pc {
             }
             if (var10 != 0) {
               if (0 == this.field_Z) {
-                if (this.field_c != 0) {
-                  this.d((byte) -92, -1 + this.field_c);
-                  this.field_g = true;
-                  this.field_Y = -1;
+                if (this.selectedItem != 0) {
+                  this.truncateAfterRow((byte) -92, -1 + this.selectedItem);
+                  this.keyboardSelection = true;
+                  this.hoveredControl = -1;
                 }
               } else {
                 if (this.field_Z == 2 &&
@@ -1142,11 +1142,11 @@ final class ec extends pc {
               var8 != 0) {
               h.b((byte) 125);
               this.field_O[param0] = NetworkArchiveRequest.field_C[DelegatingCanvas.field_d];
-              this.a(false, 6267);
-              this.a(0, (byte) -124);
-              this.field_H[0] = -1;
-              this.field_N[0] = -1;
-              this.d((byte) -96, 0);
+              this.refreshMenuOptions(false, 6267);
+              this.initializeRowLayout(0, (byte) -124);
+              this.selectedIndices[0] = -1;
+              this.selectedValues[0] = -1;
+              this.truncateAfterRow((byte) -96, 0);
             }
           } else {
             if (1 != this.field_ab) {
@@ -1166,7 +1166,7 @@ final class ec extends pc {
 
     }
 
-    private final int d(int param0, int param1, int param2) {
+    private final int hitTestControl(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -1175,8 +1175,8 @@ final class ec extends pc {
           this.field_L = (String) null;
         }
         var4 = 0;
-        while (this.field_J.length > var4) {
-          var5 = this.a((byte) -128, var4);
+        while (this.controlActions.length > var4) {
+          var5 = this.getControlY((byte) -128, var4);
           if (param0 < var5 ||
             30 + var5 < param0) {
             var4++;
@@ -1184,12 +1184,12 @@ final class ec extends pc {
           }
           break;
         }
-        if (this.field_J.length == var4) {
+        if (this.controlActions.length == var4) {
           return -1;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (22 != this.field_J[var4]) {
-          if ((this.field_J[var4] != 23) &&
+        if (22 != this.controlActions[var4]) {
+          if ((this.controlActions[var4] != 23) &&
             (decompiledFrameRemainder0 = (!(param2 >= 15) ||
             !(param2 <= 355)))) {
             return -1;
@@ -1211,19 +1211,19 @@ final class ec extends pc {
         return var4;
     }
 
-    final void a(boolean param0, int param1) {
+    final void refreshMenuOptions(boolean param0, int param1) {
         int discarded$0 = 0;
-        this.field_J = AgeValidator.field_i[this.field_E];
+        this.controlActions = AgeValidator.field_i[this.menuId];
         this.field_t = Vector2i.field_c;
         if (param1 != 6267) {
-          discarded$0 = this.d(20, 52, -61);
+          discarded$0 = this.hitTestControl(20, 52, -61);
         }
         this.field_t = this.field_t | (DelegatingCanvas.field_d == 1 ? true : false);
         this.field_t = this.field_t & (DelegatingCanvas.field_d != 7 ? true : false);
         this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};
     }
 
-    private final void a(int param0, boolean param1, byte param2, boolean param3) {
+    private final void activateRowSelection(int param0, boolean param1, byte param2, boolean param3) {
         boolean stackIn_4_1 = false;
         int stackIn_19_0 = 0;
         boolean stackIn_20_1 = false;
@@ -1249,21 +1249,21 @@ final class ec extends pc {
         Sprite[] var14;
         Sprite[] var15;
         var11 = HoldTheLine.field_D;
-        this.field_Y = -1;
-        if (this.field_a - 1 > param0) {
-          this.d((byte) -75, param0);
-          this.field_u = this.field_H[param0];
+        this.hoveredControl = -1;
+        if (this.itemCount - 1 > param0) {
+          this.truncateAfterRow((byte) -75, param0);
+          this.pendingSelection = this.selectedIndices[param0];
           stackIn_4_1 = (param1);
           this.field_w = stackIn_4_1;
           return;
         }
-        this.field_u = -1;
+        this.pendingSelection = -1;
         MatchingTextValidator.a(293, StrongCacheEntry.field_r);
-        var5 = this.field_H[param0];
+        var5 = this.selectedIndices[param0];
         if (param2 != 122) {
-          this.field_p = (int[]) null;
+          this.rowScrollTargets = (int[]) null;
         }
-        var6 = this.field_N[param0];
+        var6 = this.selectedValues[param0];
         if (-1 == var5) {
           return;
         }
@@ -1273,7 +1273,7 @@ final class ec extends pc {
             if (param3) {
               return;
             }
-            var7 = pf.a((byte) 60, var6);
+            var7 = PolarSortVector.a((byte) 60, var6);
             if (var7 != 0) {
               return;
             }
@@ -1290,7 +1290,7 @@ final class ec extends pc {
             if (param0 == 0) {
               LoginForm.field_P = var6;
               StrongCacheEntry.field_w = var6;
-              var7 = pf.a((byte) 92, StrongCacheEntry.field_w);
+              var7 = PolarSortVector.a((byte) 92, StrongCacheEntry.field_w);
               if (0 == var7) {
                 var8 = StrongCacheEntry.field_w;
                 var13 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var8][1], param2 ^ 115, 111)};
@@ -1300,7 +1300,7 @@ final class ec extends pc {
                   stackIn_34_0 = SoundPlayback.field_m + " " + ArchiveLoadProgress.field_g;
                 }
                 var10 = stackIn_34_0;
-                this.a(var10, 16711680, RotatedSpriteAsset.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
+                this.addChoiceRow(var10, 16711680, RotatedSpriteAsset.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
               }
               bn.a(4 + StrongCacheEntry.field_w, param2 ^ -16);
               return;
@@ -1322,7 +1322,7 @@ final class ec extends pc {
             if (Vector2i.field_c) {
               var7 = StrongCacheEntry.field_w;
               var12 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][0] + 8, 9, 111), ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][1], 9, 111)};
-              this.a(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var12, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
+              this.addChoiceRow(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var12, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
               return;
             }
             if (param3) {
@@ -1334,12 +1334,12 @@ final class ec extends pc {
             return;
           }
           if (0 == param0) {
-            var7 = pf.a((byte) 65, var6);
+            var7 = PolarSortVector.a((byte) 65, var6);
             if (var7 == 0) {
               StrongCacheEntry.field_w = var6;
               bn.a(4 + var6, -112);
               h.b((byte) 101);
-              this.a(NodeHashTableIterator.field_a, Point2i.field_i[var5], this.field_F[1], this.field_o[1], param1, this.field_G[1], this.field_X[1], 312);
+              this.addChoiceRow(NodeHashTableIterator.field_a, Point2i.field_i[var5], this.rowItemIds[1], this.rowSprites[1], param1, this.rowDescriptions[1], this.rowLabels[1], 312);
             }
           }
           if (param0 == 1) {
@@ -1353,7 +1353,7 @@ final class ec extends pc {
                 stackIn_47_0 = SoundPlayback.field_m;
               }
               var9 = stackIn_47_0;
-              this.a(var9, 16711680, RotatedSpriteAsset.field_g[var7], var14, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
+              this.addChoiceRow(var9, 16711680, RotatedSpriteAsset.field_g[var7], var14, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             }
           }
           if (param0 == 2) {
@@ -1361,7 +1361,7 @@ final class ec extends pc {
             var7 = ArchiveIndex.b((byte) -49).field_p;
             if (Vector2i.field_c) {
               var15 = new Sprite[]{ua.field_b.getSpriteOrPlaceholder(84, 8 + RotatedSpriteAsset.field_g[var7][0], 9, 111), ua.field_b.getSpriteOrPlaceholder(84, RotatedSpriteAsset.field_g[var7][1] + 8, 9, 111)};
-              this.a(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var15, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
+              this.addChoiceRow(SoundPlayback.field_m + " " + SocketConnector.field_e, 65280, RotatedSpriteAsset.field_g[var7], var15, param1, WidgetContainer.field_A[var7], RaceWorld.field_gb[var7], 312);
             } else {
               if (!param3) {
                 stackIn_54_0 = -21383;
@@ -1382,61 +1382,61 @@ final class ec extends pc {
         return;
     }
 
-    private final int a(byte param0, int param1) {
-        if (this.field_J[param1] == 23) {
+    private final int getControlY(byte param0, int param1) {
+        if (this.controlActions[param1] == 23) {
           return 448;
         }
         if (param0 > -123) {
-          this.a((byte) -56, true);
+          this.reset((byte) -56, true);
         }
         return 35 * (1 + param1) + 8;
     }
 
-    ec(int param0, int[] param1, Sprite[] param2, String[] param3, String[] param4, String param5, int param6) {
+    RaceSetupMenu(int param0, int[] param1, Sprite[] param2, String[] param3, String[] param4, String param5, int param6) {
         int var8_int = 0;
         this.field_S = new int[]{0, 240, 140, 240};
         this.field_K = new int[]{0, 240, 140, 240};
         try {
-          this.field_F = new int[4][];
-          this.field_o = new Sprite[4][];
-          this.field_X = new String[4][];
-          this.field_G = new String[4][];
-          this.field_E = param0;
-          this.field_J = AgeValidator.field_i[param0];
-          this.field_x = new float[this.field_J.length];
-          this.field_I = new int[this.field_J.length];
-          this.field_T = new int[4];
+          this.rowItemIds = new int[4][];
+          this.rowSprites = new Sprite[4][];
+          this.rowLabels = new String[4][];
+          this.rowDescriptions = new String[4][];
+          this.menuId = param0;
+          this.controlActions = AgeValidator.field_i[param0];
+          this.field_x = new float[this.controlActions.length];
+          this.field_I = new int[this.controlActions.length];
+          this.rowColors = new int[4];
           this.field_B = new int[4];
-          this.field_V = new int[4];
-          this.field_A = new float[4];
-          this.field_N = new int[4];
-          this.field_H = new int[4];
-          this.field_Q = new String[4];
-          this.field_p = new int[4];
+          this.rowWidths = new int[4];
+          this.rowScrollPositions = new float[4];
+          this.selectedValues = new int[4];
+          this.selectedIndices = new int[4];
+          this.rowTitles = new String[4];
+          this.rowScrollTargets = new int[4];
           this.field_L = SocketConnector.field_g[param0];
           for (var8_int = 0; var8_int < 4; var8_int++) {
-            this.field_V[var8_int] = 0;
-            this.field_A[var8_int] = 0.0f;
-            this.field_p[var8_int] = 0;
-            this.field_H[var8_int] = -1;
-            this.field_N[var8_int] = -1;
+            this.rowWidths[var8_int] = 0;
+            this.rowScrollPositions[var8_int] = 0.0f;
+            this.rowScrollTargets[var8_int] = 0;
+            this.selectedIndices[var8_int] = -1;
+            this.selectedValues[var8_int] = -1;
           }
-          this.field_F[0] = param1;
-          this.field_o[0] = param2;
-          this.field_X[0] = param3;
-          this.field_G[0] = param4;
+          this.rowItemIds[0] = param1;
+          this.rowSprites[0] = param2;
+          this.rowLabels[0] = param3;
+          this.rowDescriptions[0] = param4;
           if (pj.b((byte) 93)) {
             this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], null, cd.field_c};
           } else {
             this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};
           }
-          this.field_Q[0] = param5;
-          this.field_T[0] = param6;
-          this.field_H[0] = -1;
-          this.field_a = 1;
-          this.field_N[0] = param1[0];
-          this.a(0, (byte) -122);
-          this.a((byte) 69, false);
+          this.rowTitles[0] = param5;
+          this.rowColors[0] = param6;
+          this.selectedIndices[0] = -1;
+          this.itemCount = 1;
+          this.selectedValues[0] = param1[0];
+          this.initializeRowLayout(0, (byte) -122);
+          this.reset((byte) 69, false);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

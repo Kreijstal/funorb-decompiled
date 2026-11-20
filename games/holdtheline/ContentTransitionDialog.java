@@ -12,7 +12,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     static Sprite field_ab;
     static int field_bb;
     private int field_Y;
-    private he field_eb;
+    private OpacityWidget field_eb;
     static String field_hb;
 
     final void b(boolean param0) {
@@ -25,12 +25,12 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           this.d(this.field_X, -100);
         } else {
           this.field_db = null;
-          this.field_eb.field_F = 256;
+          this.field_eb.opacity = 256;
           super.b(param0);
           return;
         }
         this.field_db = null;
-        this.field_eb.field_F = 256;
+        this.field_eb.opacity = 256;
         super.b(param0);
     }
 
@@ -50,10 +50,10 @@ abstract class ContentTransitionDialog extends ResizableDialog {
               this.field_db = DialogLayer.field_M;
               this.b(117, 12 + this.field_X.width, this.field_Y, 12 + (this.field_Z + this.field_X.height));
               this.field_gb = 0;
-              this.field_eb.field_F = 0;
+              this.field_eb.opacity = 0;
               return super.g((byte) 39);
             }
-            this.field_eb.field_F = -((this.field_gb << 8) / this.field_fb) + 256;
+            this.field_eb.opacity = -((this.field_gb << 8) / this.field_fb) + 256;
             return super.g((byte) 39);
           }
           if (CurvedRoadSegment.field_G != this.field_db) {
@@ -62,11 +62,11 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           fieldTemp$1 = this.field_gb + 1;
           this.field_gb = this.field_gb + 1;
           if (this.field_cb != fieldTemp$1) {
-            this.field_eb.field_F = (this.field_gb << 8) / this.field_cb;
+            this.field_eb.opacity = (this.field_gb << 8) / this.field_cb;
             return super.g((byte) 39);
           }
           this.field_db = null;
-          this.field_eb.field_F = 256;
+          this.field_eb.opacity = 256;
           return super.g((byte) 39);
         }
         field_hb = (String) null;
@@ -80,10 +80,10 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.field_db = DialogLayer.field_M;
             this.b(117, 12 + this.field_X.width, this.field_Y, 12 + (this.field_Z + this.field_X.height));
             this.field_gb = 0;
-            this.field_eb.field_F = 0;
+            this.field_eb.opacity = 0;
             return super.g((byte) 39);
           }
-          this.field_eb.field_F = -((this.field_gb << 8) / this.field_fb) + 256;
+          this.field_eb.opacity = -((this.field_gb << 8) / this.field_fb) + 256;
           return super.g((byte) 39);
         }
         if (CurvedRoadSegment.field_G != this.field_db) {
@@ -92,11 +92,11 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         int fieldTemp$3 = this.field_gb + 1;
         this.field_gb = this.field_gb + 1;
         if (this.field_cb != fieldTemp$3) {
-          this.field_eb.field_F = (this.field_gb << 8) / this.field_cb;
+          this.field_eb.opacity = (this.field_gb << 8) / this.field_cb;
           return super.g((byte) 39);
         }
         this.field_db = null;
-        this.field_eb.field_F = 256;
+        this.field_eb.opacity = 256;
         return super.g((byte) 39);
     }
 
@@ -141,10 +141,10 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.field_eb.unlink(0);
           }
           if (param0 == null) {
-            this.field_eb = new he();
+            this.field_eb = new OpacityWidget();
           } else {
             param0.setBounds(6, (byte) 122, this.field_Z + 6, param0.height, param0.width);
-            this.field_eb = new he(param0);
+            this.field_eb = new OpacityWidget(param0);
           }
           this.a(true, this.field_eb);
           if (param1 != -100) {
@@ -225,14 +225,14 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         if (param0 < -100) {
           this.d(this.field_X, -100);
           this.field_X = null;
-          this.field_eb.field_F = 0;
+          this.field_eb.opacity = 0;
           return;
         }
         UiWidget var3 = (UiWidget) null;
         this.a((UiWidget) null, (byte) -61);
         this.d(this.field_X, -100);
         this.field_X = null;
-        this.field_eb.field_F = 0;
+        this.field_eb.opacity = 0;
     }
 
     ContentTransitionDialog(DialogLayer param0, UiWidget param1, int param2, int param3, int param4) {

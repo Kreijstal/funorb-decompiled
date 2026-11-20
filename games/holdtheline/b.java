@@ -13,11 +13,11 @@ final class b {
         int var4_int = 0;
         RuntimeException var4 = null;
         try {
-          NodeHashTableIterator.field_h.a(param1, param2);
+          NodeHashTableIterator.field_h.draw(param1, param2);
           if (param3) {
-            var4_int = AccountFormText.field_b % NodeHashTableIterator.field_h.field_s * 2;
-            if (NodeHashTableIterator.field_h.field_s <= var4_int) {
-              var4_int = NodeHashTableIterator.field_h.field_s + (-var4_int + NodeHashTableIterator.field_h.field_s);
+            var4_int = AccountFormText.field_b % NodeHashTableIterator.field_h.width * 2;
+            if (NodeHashTableIterator.field_h.width <= var4_int) {
+              var4_int = NodeHashTableIterator.field_h.width + (-var4_int + NodeHashTableIterator.field_h.width);
             }
             boolean decompiledSharedTail0 = !(var4_int < 10);
             if (!decompiledSharedTail0) {
@@ -25,8 +25,8 @@ final class b {
               decompiledSharedTail0 = (HoldTheLine.field_D != 0);
             }
             if ((decompiledSharedTail0) &&
-              (var4_int > NodeHashTableIterator.field_h.field_s - 40)) {
-              var4_int = NodeHashTableIterator.field_h.field_s - 40;
+              (var4_int > NodeHashTableIterator.field_h.width - 40)) {
+              var4_int = NodeHashTableIterator.field_h.width - 40;
             }
             cd.a(NodeHashTableIterator.field_h, (byte) 121, var4_int, param2, 30, 0, 80, 0, param1);
           }
@@ -154,9 +154,9 @@ final class b {
           }
           var4_ref_StringLifetime1 = var1.readCp1252String(-1231);
           var5 = var1.readCp1252String(-1231);
-          var6 = ra.a(var4_ref_StringLifetime1, param0 ^ 85);
+          var6 = LoadProgressDialog.a(var4_ref_StringLifetime1, param0 ^ 85);
           if (null == var6) {
-            var6 = ra.a(var5, param0 ^ 101);
+            var6 = LoadProgressDialog.a(var5, param0 ^ 101);
             if (var6 != null) {
               jo.field_b.put((long)MidiPcmStream.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
             }
@@ -209,11 +209,11 @@ final class b {
         }
     }
 
-    final static void a(hd[] param0, byte param1, int param2) {
-        hd var3 = null;
+    final static void a(SortableValue[] param0, byte param1, int param2) {
+        SortableValue var3 = null;
         int var4 = 0;
         int var5 = 0;
-        hd[] stackIn_14_0 = null;
+        SortableValue[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -229,10 +229,10 @@ final class b {
           var4 = -1 + param2;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (0 > var4))) {
-            stackIn_14_0 = (hd[]) (param0);
+            stackIn_14_0 = (SortableValue[]) (param0);
             stackIn_14_1 = var4;
             if (var5 == 0) {
-              if (((hd) (Object) stackIn_14_0[stackIn_14_1]).a((byte) -101, var3) < 0) {
+              if (((SortableValue) (Object) stackIn_14_0[stackIn_14_1]).compareTo((byte) -101, var3) < 0) {
                 param0[var4 + 1] = var3;
                 return;
               }
@@ -243,7 +243,7 @@ final class b {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_14_0 = (hd[]) (param0);
+            stackIn_14_0 = (SortableValue[]) (param0);
             stackIn_14_1 = 0;
           }
           stackIn_14_0[stackIn_14_1] = var3;

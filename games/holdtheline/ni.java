@@ -31,56 +31,56 @@ final class ni {
         if (param0 >= -54) {
           ni.a((byte) -3);
         }
-        if (pf.field_d < 2) {
+        if (PolarSortVector.field_d < 2) {
           return 0;
         }
         if (WidgetContainer.field_C != 0) {
           if (null != ml.field_a) {
-            if (!ml.field_a.b((byte) -107)) {
+            if (!ml.field_a.ensureIndexLoaded((byte) -107)) {
               return 14;
             }
-            if (!ml.field_a.a("", true)) {
+            if (!ml.field_a.containsGroup("", true)) {
               return 29;
             }
-            if (!ml.field_a.b("", 93)) {
+            if (!ml.field_a.tryLoadNamedGroup("", 93)) {
               return 29;
             }
           }
-          if (!IntrusiveDeque.field_d.b((byte) -92)) {
+          if (!IntrusiveDeque.field_d.ensureIndexLoaded((byte) -92)) {
             return 43;
           }
-          if (!IntrusiveDeque.field_d.b("commonui", 104)) {
+          if (!IntrusiveDeque.field_d.tryLoadNamedGroup("commonui", 104)) {
             return 57;
           }
-          if (!LinkWidgetRenderer.field_d.b((byte) -104)) {
+          if (!LinkWidgetRenderer.field_d.ensureIndexLoaded((byte) -104)) {
             return 71;
           }
-          if (!LinkWidgetRenderer.field_d.b("commonui", 59)) {
+          if (!LinkWidgetRenderer.field_d.tryLoadNamedGroup("commonui", 59)) {
             return 80;
           }
-          if (!ArchiveRequest.field_p.b((byte) -76)) {
+          if (!ArchiveRequest.field_p.ensureIndexLoaded((byte) -76)) {
             return 82;
           }
-          if (!ArchiveRequest.field_p.a((byte) 77)) {
+          if (!ArchiveRequest.field_p.tryLoadAllGroups((byte) 77)) {
             return 86;
           }
         } else {
-          if (!IntrusiveDeque.field_d.b((byte) -92)) {
+          if (!IntrusiveDeque.field_d.ensureIndexLoaded((byte) -92)) {
             return 20;
           }
-          if (!IntrusiveDeque.field_d.b("commonui", -91)) {
+          if (!IntrusiveDeque.field_d.tryLoadNamedGroup("commonui", -91)) {
             return 40;
           }
-          if (!LinkWidgetRenderer.field_d.b((byte) -66)) {
+          if (!LinkWidgetRenderer.field_d.ensureIndexLoaded((byte) -66)) {
             return 50;
           }
-          if (!LinkWidgetRenderer.field_d.b("commonui", 110)) {
+          if (!LinkWidgetRenderer.field_d.tryLoadNamedGroup("commonui", 110)) {
             return 60;
           }
-          if (!ArchiveRequest.field_p.b((byte) -122)) {
+          if (!ArchiveRequest.field_p.ensureIndexLoaded((byte) -122)) {
             return 70;
           }
-          if (!ArchiveRequest.field_p.a((byte) -93)) {
+          if (!ArchiveRequest.field_p.tryLoadAllGroups((byte) -93)) {
             return 80;
           }
         }

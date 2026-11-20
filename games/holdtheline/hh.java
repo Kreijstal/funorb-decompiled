@@ -5,7 +5,7 @@ final class hh {
     static ValidationState field_d;
     static Sprite field_e;
     static QuickChatDynamicCommand field_a;
-    static gh field_c;
+    static ViewportSizingController field_c;
     static String field_b;
 
     final static int a(int param0) {

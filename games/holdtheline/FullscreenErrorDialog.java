@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class rf extends ResizableDialog implements ButtonActionListener {
+final class FullscreenErrorDialog extends ResizableDialog implements ButtonActionListener {
     static Sprite field_ab;
     private TextButton field_Z;
     static int field_X;
     static String field_bb;
     static String[] field_Y;
 
-    private final TextButton a(WidgetListener param0, String param1, int param2) {
+    private final TextButton addButton(WidgetListener param0, String param1, int param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -69,7 +69,7 @@ final class rf extends ResizableDialog implements ButtonActionListener {
           if (param1 != this.field_Z) {
             return;
           }
-          this.h((byte) 49);
+          this.dismiss((byte) 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class rf extends ResizableDialog implements ButtonActionListener {
         }
     }
 
-    rf(DialogLayer param0, h param1) {
+    FullscreenErrorDialog(DialogLayer param0, h param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -121,7 +121,7 @@ final class rf extends ResizableDialog implements ButtonActionListener {
           var4.x = 0;
           var4.renderer = (WidgetRenderer) ((Object) new TextWidgetStyle(SpriteButtonRenderer.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(true, var4);
-          this.field_Z = this.a((WidgetListener) (this), h.field_f, 25105);
+          this.field_Z = this.addButton((WidgetListener) (this), h.field_f, 25105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class rf extends ResizableDialog implements ButtonActionListener {
         field_ab = null;
     }
 
-    private final void h(byte param0) {
+    private final void dismiss(byte param0) {
         if (param0 < 39) {
           return;
         }
@@ -162,7 +162,7 @@ final class rf extends ResizableDialog implements ButtonActionListener {
         this.field_F = false;
     }
 
-    final static int a(int param0, Random param1, int param2) {
+    final static int nextIntBounded(int param0, Random param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

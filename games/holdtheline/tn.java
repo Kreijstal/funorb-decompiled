@@ -99,7 +99,7 @@ final class tn {
         if (!fj.field_o.isComplete(250)) {
           return RoadStripRenderer.field_j;
         }
-        return ec.field_v;
+        return RaceSetupMenu.field_v;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -451,24 +451,24 @@ final class tn {
         RuntimeException var5 = null;
         var10 = HoldTheLine.field_D;
         try {
-          SoftwareRasterizer.b(param0, param3, param1 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param0, param3, param1 + 1, 10000536);
           if (param2 != 152) {
             field_h = (int[][]) null;
           }
-          SoftwareRasterizer.b(param0, param3 + param4, 1 + param1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param0, param3 + param4, 1 + param1, 12105912);
           var5_int = 1;
-          if (SoftwareRasterizer.field_a > var5_int + param3) {
-            var5_int = -param3 + SoftwareRasterizer.field_a;
+          if (SoftwareRasterizer.clipTop > var5_int + param3) {
+            var5_int = -param3 + SoftwareRasterizer.clipTop;
           }
           var6 = param4;
-          if (var6 + param3 > SoftwareRasterizer.field_i) {
-            var6 = -param3 + SoftwareRasterizer.field_i;
+          if (var6 + param3 > SoftwareRasterizer.clipBottom) {
+            var6 = -param3 + SoftwareRasterizer.clipBottom;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + 48 * var7 / param4;
             var9 = var8 << 16 | var8 << 8 | var8;
-            SoftwareRasterizer.field_b[param0 + SoftwareRasterizer.field_j * (param3 + var7)] = var9;
-            SoftwareRasterizer.field_b[SoftwareRasterizer.field_j * (var7 + param3) + (param0 + param1)] = var9;
+            SoftwareRasterizer.pixels[param0 + SoftwareRasterizer.width * (param3 + var7)] = var9;
+            SoftwareRasterizer.pixels[SoftwareRasterizer.width * (var7 + param3) + (param0 + param1)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

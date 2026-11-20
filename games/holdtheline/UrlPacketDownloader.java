@@ -39,7 +39,7 @@ final class UrlPacketDownloader implements Runnable {
           }
           stackIn_5_0 = gf.d();
           while (stackIn_5_0) {
-            SoftwareRasterizer.c(gf.field_g, gf.field_a, gf.field_b - gf.field_g, param3, param2);
+            SoftwareRasterizer.drawHorizontalLineAlpha(gf.field_g, gf.field_a, gf.field_b - gf.field_g, param3, param2);
             stackIn_5_0 = gf.d();
           }
           return;
@@ -113,8 +113,8 @@ final class UrlPacketDownloader implements Runnable {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.c(param1, 3);
-          var5 = param0.a(var4_int, param3, param2);
+          var4_int = param0.getGroupId(param1, 3);
+          var5 = param0.getFileId(var4_int, param3, param2);
           stackIn_1_0 = ll.a(-1, var5, var4_int, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

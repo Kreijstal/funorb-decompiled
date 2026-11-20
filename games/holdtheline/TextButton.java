@@ -103,11 +103,11 @@ class TextButton extends UiWidget {
             if (this.pressedButton == RoadStripRenderer.field_f) {
               return;
             }
-            if (this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, rf.field_X) &&
+            if (this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, FullscreenErrorDialog.field_X) &&
               RoadStripRenderer.field_f == 0) {
-              this.a(this.pressedButton, -param2 + rf.field_X, true, NodeHashTableIterator.field_g - param0);
+              this.a(this.pressedButton, -param2 + FullscreenErrorDialog.field_X, true, NodeHashTableIterator.field_g - param0);
             }
-            this.handleMouseRelease(NodeHashTableIterator.field_g, param1, param2, param0, (byte) -9, rf.field_X);
+            this.handleMouseRelease(NodeHashTableIterator.field_g, param1, param2, param0, (byte) -9, FullscreenErrorDialog.field_X);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rm.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -182,7 +182,7 @@ class TextButton extends UiWidget {
     }
 
     TextButton(String param0, WidgetListener param1) {
-        this(param0, pc.field_b.field_p, param1);
+        this(param0, MenuList.field_b.field_p, param1);
     }
 
     final StringBuilder appendDebugTree(int param0, byte param1, Hashtable param2, StringBuilder param3) {
@@ -278,7 +278,7 @@ class TextButton extends UiWidget {
         this.focused = false;
         this.field_F = true;
         this.field_D = true;
-        this.renderer = pc.field_b.field_d;
+        this.renderer = MenuList.field_b.field_d;
     }
 
     static {

@@ -10,47 +10,47 @@ final class q {
     static int[] field_b;
 
     final static String b(byte param0) {
-        if (!(pf.field_d >= 2)) {
+        if (!(PolarSortVector.field_d >= 2)) {
           return aj.field_d;
         }
         if (ml.field_a != null) {
-          if (!ml.field_a.b((byte) -115)) {
+          if (!ml.field_a.ensureIndexLoaded((byte) -115)) {
             return DualNodeHashTable.field_f;
           }
           return pb.field_d;
         }
-        if (!IntrusiveDeque.field_d.b((byte) -115)) {
+        if (!IntrusiveDeque.field_d.ensureIndexLoaded((byte) -115)) {
           return Vector2f.field_d;
         }
-        if (!IntrusiveDeque.field_d.b("commonui", param0 ^ 54)) {
-          return ge.field_a + " - " + IntrusiveDeque.field_d.a("commonui", 0) + "%";
+        if (!IntrusiveDeque.field_d.tryLoadNamedGroup("commonui", param0 ^ 54)) {
+          return ge.field_a + " - " + IntrusiveDeque.field_d.getNamedGroupLoadPercent("commonui", 0) + "%";
         }
-        if (!LinkWidgetRenderer.field_d.b((byte) -63)) {
+        if (!LinkWidgetRenderer.field_d.ensureIndexLoaded((byte) -63)) {
           return SpriteAsset.field_d;
         }
-        if (!LinkWidgetRenderer.field_d.b("commonui", 108)) {
-          return wl.field_b + " - " + LinkWidgetRenderer.field_d.a("commonui", param0 - 118) + "%";
+        if (!LinkWidgetRenderer.field_d.tryLoadNamedGroup("commonui", 108)) {
+          return wl.field_b + " - " + LinkWidgetRenderer.field_d.getNamedGroupLoadPercent("commonui", param0 - 118) + "%";
         }
-        if (!ArchiveRequest.field_p.b((byte) -102)) {
+        if (!ArchiveRequest.field_p.ensureIndexLoaded((byte) -102)) {
           return LinearPointPath.field_l;
         }
         if (param0 != 118) {
           field_b = (int[]) null;
         }
-        if (!ArchiveRequest.field_p.a((byte) -63)) {
-          return uj.field_b + " - " + ArchiveRequest.field_p.a(param0 - 118) + "%";
+        if (!ArchiveRequest.field_p.tryLoadAllGroups((byte) -63)) {
+          return uj.field_b + " - " + ArchiveRequest.field_p.getLoadPercent(param0 - 118) + "%";
         }
         return QuickChatPhraseCache.field_b;
     }
 
     final static void a(String param0, PaletteBitmapFont param1, int param2, int param3, byte param4, int param5) {
         try {
-          param1.a(param0, param3 + 1, 1 + param5, 8, -1, 114);
+          param1.drawCenteredAlpha(param0, param3 + 1, 1 + param5, 8, -1, 114);
           if (param4 > -126) {
             PacketBuffer var7 = (PacketBuffer) null;
             q.a(-69, (PacketBuffer) null);
           }
-          param1.b(param0, param3, param5, param2, -1);
+          param1.drawCentered(param0, param3, param5, param2, -1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

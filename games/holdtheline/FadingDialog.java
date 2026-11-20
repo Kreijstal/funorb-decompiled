@@ -114,15 +114,15 @@ abstract class FadingDialog extends WidgetContainer {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = Math.max(param4.field_s, param3 + param2.field_s);
-          var6 = Math.max(param4.field_y, param2.field_y + param1);
+          var5_int = Math.max(param4.width, param3 + param2.width);
+          var6 = Math.max(param4.height, param2.height + param1);
           var7 = new Sprite(var5_int, var6);
           TutorialTransition.a(32381);
-          var7.f();
+          var7.bindRaster();
           if (param0 != -5936) {
             field_I = 52;
           }
-          param4.b(0, 0);
+          param4.drawUnkeyed(0, 0);
           WhirlpoolHasher.a(param1, param3, 107, param2);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           stackIn_3_0 = var7;
@@ -155,49 +155,49 @@ abstract class FadingDialog extends WidgetContainer {
           if (param3 != 0) {
             return;
           }
-          this.a(param2 + this.x, this.y + param1, (byte) 20);
+          this.drawFrame(param2 + this.x, this.y + param1, (byte) 20);
           super.drawLayer(-9532, param1, param2, param3);
           return;
         }
         if (jh.field_c == null) {
           jh.field_c = new Sprite(this.width, this.height);
           ProxySocketConnector.a(jh.field_c, -1);
-          SoftwareRasterizer.c();
-          this.a(0, 0, (byte) 20);
+          SoftwareRasterizer.clear();
+          this.drawFrame(0, 0, (byte) 20);
           super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
           dm.b((byte) -10);
-          jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
+          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
           return;
         }
-        if (jh.field_c.field_s < this.width) {
+        if (jh.field_c.width < this.width) {
           jh.field_c = new Sprite(this.width, this.height);
           ProxySocketConnector.a(jh.field_c, -1);
-          SoftwareRasterizer.c();
-          this.a(0, 0, (byte) 20);
+          SoftwareRasterizer.clear();
+          this.drawFrame(0, 0, (byte) 20);
           super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
           dm.b((byte) -10);
-          jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
+          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
           return;
         }
-        if (this.height > jh.field_c.field_y) {
+        if (this.height > jh.field_c.height) {
           jh.field_c = new Sprite(this.width, this.height);
           ProxySocketConnector.a(jh.field_c, -1);
-          SoftwareRasterizer.c();
-          this.a(0, 0, (byte) 20);
+          SoftwareRasterizer.clear();
+          this.drawFrame(0, 0, (byte) 20);
           super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
           dm.b((byte) -10);
-          jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
+          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
           return;
         }
         ProxySocketConnector.a(jh.field_c, -1);
-        SoftwareRasterizer.c();
-        this.a(0, 0, (byte) 20);
+        SoftwareRasterizer.clear();
+        this.drawFrame(0, 0, (byte) 20);
         super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
         dm.b((byte) -10);
-        jh.field_c.d(param2 + this.x, param1 + this.y, this.field_G);
+        jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
     }
 
-    abstract void a(int param0, int param1, byte param2);
+    abstract void drawFrame(int param0, int param1, byte param2);
 
     FadingDialog(DialogLayer param0, int param1, int param2) {
         super(-param1 + EmailAddressValidator.field_i >> 1, -param2 + pe.field_e >> 1, param1, param2, (WidgetRenderer) null);

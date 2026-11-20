@@ -4,7 +4,7 @@
 final class MonochromeBitmapFont extends BitmapFont {
     private byte[][] field_M;
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitGlyphMask(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -46,35 +46,35 @@ final class MonochromeBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * SoftwareRasterizer.field_j;
-        int var10 = SoftwareRasterizer.field_j - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer.width;
+        int var10 = SoftwareRasterizer.width - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < SoftwareRasterizer.field_a) {
-          var13 = SoftwareRasterizer.field_a - param2;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var13 = SoftwareRasterizer.clipTop - param2;
           param4 = param4 - var13;
-          param2 = SoftwareRasterizer.field_a;
+          param2 = SoftwareRasterizer.clipTop;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRasterizer.field_j;
+          var9 = var9 + var13 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > SoftwareRasterizer.field_i) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_i);
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_d) {
-          var13Lifetime1 = SoftwareRasterizer.field_d - param1;
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer.clipLeft - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = SoftwareRasterizer.field_d;
+          param1 = SoftwareRasterizer.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > SoftwareRasterizer.field_e) {
-          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_e;
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.clipRight;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -83,10 +83,10 @@ final class MonochromeBitmapFont extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        MonochromeBitmapFont.a(SoftwareRasterizer.field_b, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.pixels, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitGlyphScanlineMask(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -97,8 +97,8 @@ final class MonochromeBitmapFont extends BitmapFont {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - SoftwareRasterizer.field_d;
-        var14 = param3 - SoftwareRasterizer.field_a;
+        var13 = param2 - SoftwareRasterizer.clipLeft;
+        var14 = param3 - SoftwareRasterizer.clipTop;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -140,7 +140,7 @@ final class MonochromeBitmapFont extends BitmapFont {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                SoftwareRasterizer.field_b[incrementValue$1] = param6;
+                SoftwareRasterizer.pixels[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -155,7 +155,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         this.field_M = param5;
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitGlyphMaskAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -178,7 +178,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -186,41 +186,41 @@ final class MonochromeBitmapFont extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * SoftwareRasterizer.field_j;
-        var9 = SoftwareRasterizer.field_j - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.width;
+        var9 = SoftwareRasterizer.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < SoftwareRasterizer.field_a) {
-          var12 = SoftwareRasterizer.field_a - param2;
+        if (param2 < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop - param2;
           param4 = param4 - var12;
-          param2 = SoftwareRasterizer.field_a;
+          param2 = SoftwareRasterizer.clipTop;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRasterizer.field_j;
+          var8 = var8 + var12 * SoftwareRasterizer.width;
         }
-        if (param2 + param4 > SoftwareRasterizer.field_i) {
-          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_i);
+        if (param2 + param4 > SoftwareRasterizer.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < SoftwareRasterizer.field_d) {
-          var12Lifetime1 = SoftwareRasterizer.field_d - param1;
+        if (param1 < SoftwareRasterizer.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer.clipLeft - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = SoftwareRasterizer.field_d;
+          param1 = SoftwareRasterizer.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > SoftwareRasterizer.field_e) {
-          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_e;
+        if (param1 + param3 > SoftwareRasterizer.clipRight) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.clipRight;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (SoftwareRasterizer.field_f == null) {
-            MonochromeBitmapFont.a(SoftwareRasterizer.field_b, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer.scanlineStarts == null) {
+            MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.pixels, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            MonochromeBitmapFont.a(SoftwareRasterizer.field_b, this.field_M[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h);
+            MonochromeBitmapFont.blitGlyphScanlineMask(SoftwareRasterizer.pixels, this.field_M[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.scanlineStarts, SoftwareRasterizer.scanlineWidths);
           }
           return;
         }

@@ -40,8 +40,8 @@ class Point2i {
           if (param2 != -1) {
             field_c = (NamedSoundEffect) null;
           }
-          while (param0.field_s * param0.field_y > var3_int) {
-            var4 = param0.field_z[var3_int];
+          while (param0.width * param0.height > var3_int) {
+            var4 = param0.pixels[var3_int];
             var5 = 16711935 & var4;
             var5 = var5 * param1;
             var4 = var4 & 65280;
@@ -49,7 +49,7 @@ class Point2i {
             var5 = var5 & -16711936;
             var4 = var4 & 16711680;
             var4 = var4 | var5;
-            param0.field_z[var3_int] = var4 >>> 8;
+            param0.pixels[var3_int] = var4 >>> 8;
             var3_int++;
           }
           return;

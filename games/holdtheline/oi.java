@@ -55,7 +55,7 @@ final class oi {
         if (320 > NodeHashTableIterator.field_g) {
           DialogLayer.field_I = DialogLayer.field_I | 2;
         }
-        if (rf.field_X >= 240) {
+        if (FullscreenErrorDialog.field_X >= 240) {
           var3Lifetime1 = var2 >>> 16;
           if (param0 != 1) {
             return;

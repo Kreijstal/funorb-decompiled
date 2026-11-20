@@ -62,7 +62,7 @@ final class dg {
           uk.field_c[17] = uk.field_d;
           uk.field_c[1] = RotatedSpriteCache.field_i;
           uk.field_c[2] = IsaacPacketBuffer.field_s;
-          uk.field_c[26] = eb.field_p;
+          uk.field_c[26] = PathWaypoint.field_p;
           uk.field_c[4] = hk.field_b;
           uk.field_c[19] = nm.field_a;
           uk.field_c[9] = SoundCache.field_f;
@@ -92,15 +92,15 @@ final class dg {
           BufferedSocket.field_g[0] = DelegatingCanvas.field_h;
           DirectByteStorage.field_f[0] = jh.a(MusicPatchPcmStream.field_n, param0 + 9217, DelegatingCanvas.field_h);
           BufferedSocket.field_g[1] = qh.field_a;
-          DirectByteStorage.field_f[1] = jh.a(ra.field_cb, -125, qh.field_a);
+          DirectByteStorage.field_f[1] = jh.a(LoadProgressDialog.field_cb, -125, qh.field_a);
           BufferedSocket.field_g[2] = ResizableDialog.field_Q;
           DirectByteStorage.field_f[2] = jh.a(q.field_b, -119, ResizableDialog.field_Q);
           BufferedSocket.field_g[3] = TextLineLayout.field_d;
-          DirectByteStorage.field_f[3] = jh.a(vk.field_d, Vector2i.xor(param0, 9219), TextLineLayout.field_d);
+          DirectByteStorage.field_f[3] = jh.a(CourseDefinition.field_d, Vector2i.xor(param0, 9219), TextLineLayout.field_d);
           BufferedSocket.field_g[5] = fj.field_p;
           DirectByteStorage.field_f[5] = jh.a(PointPath.field_a, -128, fj.field_p);
-          BufferedSocket.field_g[4] = ga.field_a;
-          DirectByteStorage.field_f[4] = jh.a(jk.field_l, -120, ga.field_a);
+          BufferedSocket.field_g[4] = UiTheme.field_a;
+          DirectByteStorage.field_f[4] = jh.a(jk.field_l, -120, UiTheme.field_a);
           BufferedSocket.field_g[7] = fe.field_a;
           DirectByteStorage.field_f[7] = jh.a(i.field_l, param0 + 9221, fe.field_a);
           BufferedSocket.field_g[6] = DualNodeHashTable.field_d;
@@ -164,7 +164,7 @@ final class dg {
 
     final static int a(int param0, int param1, int param2) {
         if (param1 == -1) {
-          return param0 + rf.a(param2 - param0 + 1, Vector2f.field_c, param1 + 0);
+          return param0 + FullscreenErrorDialog.nextIntBounded(param2 - param0 + 1, Vector2f.field_c, param1 + 0);
         }
         return -64;
     }
@@ -192,9 +192,9 @@ final class dg {
         ih var4 = null;
         int var3 = HoldTheLine.field_D;
         try {
-          if (eb.field_o != null &&
+          if (PathWaypoint.field_o != null &&
             !l.field_b) {
-            LinkWidgetRenderer.a(3, (byte) -67, eb.field_o);
+            LinkWidgetRenderer.a(3, (byte) -67, PathWaypoint.field_o);
           }
           int var2 = 96 / ((-25 - param0) / 60);
           var4 = (ih) (fb.field_n.first((byte) 121));
@@ -203,7 +203,7 @@ final class dg {
             var4 = (ih) (fb.field_n.next((byte) -75));
           }
           if (of.a(-969)) {
-            ec.field_y = ie.a(10, 31043, 2, 0);
+            RaceSetupMenu.field_y = ie.a(10, 31043, 2, 0);
           }
           h.b((byte) -92);
           RoadSegment.a(of.a(-969), (byte) 97);

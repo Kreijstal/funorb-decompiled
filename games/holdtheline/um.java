@@ -26,7 +26,7 @@ final class um {
             return (CoverageBitmapFont) (stackIn_2_0);
           }
           if (param4 == 0) {
-            stackIn_7_0 = fe.a(param2.a(param3, true, param0), 1092937296);
+            stackIn_7_0 = fe.a(param2.getFile(param3, true, param0), 1092937296);
             return stackIn_7_0;
           }
           stackIn_5_0 = (CoverageBitmapFont) null;

@@ -43,10 +43,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.b(param1, param2, 92);
+            param0.tryLoadNamedFile(param1, param2, 92);
             return null;
           }
-          byte[] var3 = param0.a(param2, false, param1);
+          byte[] var3 = param0.getNamedFile(param2, false, param1);
           if (var3 == null) {
             return null;
           }
@@ -68,10 +68,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.b(param1, param2, -1);
+            param0.tryLoadFile(param1, param2, -1);
             return null;
           }
-          byte[] var3 = param0.a(param1, true, param2);
+          byte[] var3 = param0.getFile(param1, true, param2);
           if (var3 == null) {
             return null;
           }
@@ -497,7 +497,7 @@ final class VorbisSample extends IntrusiveNode {
     private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_r) {
-          var1 = param0.a(0, true, 0);
+          var1 = param0.getFile(0, true, 0);
           if (var1 == null) {
             return false;
           }

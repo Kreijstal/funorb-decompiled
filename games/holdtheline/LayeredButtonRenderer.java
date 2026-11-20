@@ -3,10 +3,10 @@
  */
 final class LayeredButtonRenderer extends TextWidgetStyle {
     static DraggableWidget field_q;
-    private nj[] field_s;
+    private LayeredWidgetStyle[] field_s;
     static int field_v;
     static float[] field_u;
-    private nj field_r;
+    private LayeredWidgetStyle field_r;
     static RotatedSpriteSheetAsset field_t;
 
     final void a(Sprite[] param0, int param1, int param2) {
@@ -19,11 +19,11 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         try {
           var4_int = param2;
           if (this.field_s[var4_int] == null) {
-            this.field_s[var4_int] = new nj();
+            this.field_s[var4_int] = new LayeredWidgetStyle();
           }
-          this.field_s[param2].field_j = param0;
+          this.field_s[param2].borderSprites = param0;
           if (param1 != 6821) {
-            this.field_r = (nj) null;
+            this.field_r = (LayeredWidgetStyle) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,13 +47,13 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        nj var7 = null;
-        nj var9 = null;
+        LayeredWidgetStyle var7 = null;
+        LayeredWidgetStyle var9 = null;
         TextButton var10 = null;
-        nj var11 = null;
-        nj var12 = null;
-        nj var13 = null;
-        nj var14 = null;
+        LayeredWidgetStyle var11 = null;
+        LayeredWidgetStyle var12 = null;
+        LayeredWidgetStyle var13 = null;
+        LayeredWidgetStyle var14 = null;
         try {
           if (!(param3 instanceof TextButton)) {
             stackIn_3_0 = null;
@@ -66,24 +66,24 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
             param0 = param0 & var10.field_D;
           }
           var7 = this.field_s[0];
-          this.field_r.a((byte) -121);
-          var7.a(this, this.field_r, param4, param1, -28063, param3);
+          this.field_r.reset((byte) -121);
+          var7.applyTo(this, this.field_r, param4, param1, -28063, param3);
           if (var10 != null) {
             if (var10.field_B) {
               var11 = this.field_s[1];
               if (var11 != null) {
-                var11.a(this, this.field_r, param4, param1, -28063, param3);
+                var11.applyTo(this, this.field_r, param4, param1, -28063, param3);
               }
             }
             if (var10.hovered) {
               var12 = this.field_s[3];
               if (var10.pressedButton != 0 &&
                 var12 != null) {
-                var12.a(this, this.field_r, param4, param1, -28063, param3);
+                var12.applyTo(this, this.field_r, param4, param1, -28063, param3);
               } else {
                 var9 = this.field_s[2];
                 if (var9 != null) {
-                  var9.a(this, this.field_r, param4, param1, -28063, param3);
+                  var9.applyTo(this, this.field_r, param4, param1, -28063, param3);
                 }
               }
             }
@@ -91,16 +91,16 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
           if (param3.isFocused((byte) -20)) {
             var13 = this.field_s[5];
             if (var13 != null) {
-              var13.a(this, this.field_r, param4, param1, -28063, param3);
+              var13.applyTo(this, this.field_r, param4, param1, -28063, param3);
             }
           }
           if (!param0) {
             var14 = this.field_s[4];
             if (var14 != null) {
-              var14.a(this, this.field_r, param4, param1, -28063, param3);
+              var14.applyTo(this, this.field_r, param4, param1, -28063, param3);
             }
           }
-          this.field_r.a(param3, param4, param1, -1, this);
+          this.field_r.draw(param3, param4, param1, -1, this);
           if (param2 > -48) {
             field_u = (float[]) null;
           }
@@ -136,25 +136,25 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         }
     }
 
-    final nj a(int param0, int param1) {
+    final LayeredWidgetStyle a(int param0, int param1) {
         int var3 = 98 % ((-14 - param1) / 45);
-        nj dupTemp$0 = new nj();
+        LayeredWidgetStyle dupTemp$0 = new LayeredWidgetStyle();
         this.field_s[param0] = dupTemp$0;
         return dupTemp$0;
     }
 
     final void a(byte param0, Sprite[] param1) {
-        nj[] var7 = null;
+        LayeredWidgetStyle[] var7 = null;
         int var4 = 0;
-        nj var5 = null;
+        LayeredWidgetStyle var5 = null;
         int var6 = HoldTheLine.field_D;
         try {
           var7 = this.field_s;
-          nj[] var3 = var7;
+          LayeredWidgetStyle[] var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null) {
-              var5.field_j = param1;
+              var5.borderSprites = param1;
             }
           }
           if (param0 != -2) {
@@ -166,20 +166,20 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
     }
 
     private final void a(LayeredButtonRenderer param0, boolean param1, int param2) {
-        nj dupTemp$0 = null;
-        nj stackIn_8_0 = null;
-        nj stackIn_9_1 = null;
+        LayeredWidgetStyle dupTemp$0 = null;
+        LayeredWidgetStyle stackIn_8_0 = null;
+        LayeredWidgetStyle stackIn_9_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        nj var5 = null;
-        nj var6 = null;
+        LayeredWidgetStyle var5 = null;
+        LayeredWidgetStyle var6 = null;
         int var7 = 0;
-        nj var6Lifetime1;
-        nj var6Lifetime2;
+        LayeredWidgetStyle var6Lifetime1;
+        LayeredWidgetStyle var6Lifetime2;
         int var4_intLifetime1;
         var7 = HoldTheLine.field_D;
         try {
@@ -195,11 +195,11 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
                 if (var6Lifetime2 != null) {
                   stackIn_9_1 = var6Lifetime2;
                 } else {
-                  dupTemp$0 = new nj();
+                  dupTemp$0 = new LayeredWidgetStyle();
                   param0.field_s[var4_int] = dupTemp$0;
                   stackIn_9_1 = dupTemp$0;
                 }
-                ((nj) (Object) stackIn_8_0).a(stackIn_9_1, -1);
+                ((LayeredWidgetStyle) (Object) stackIn_8_0).copyTo(stackIn_9_1, -1);
               } else {
                 param0.field_s[var4_int] = null;
               }
@@ -225,10 +225,10 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
 
     final void a(Sprite param0, int param1) {
         int var4 = 0;
-        nj[] var3 = null;
-        nj var5 = null;
+        LayeredWidgetStyle[] var3 = null;
+        LayeredWidgetStyle var5 = null;
         int var6 = 0;
-        nj[] var7 = null;
+        LayeredWidgetStyle[] var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -241,7 +241,7 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
           for (var4 = param1; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null) {
-              var5.field_b = param0;
+              var5.icon = param0;
             }
           }
           return;
@@ -260,12 +260,12 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
     }
 
     public LayeredButtonRenderer() {
-        this.field_s = new nj[6];
-        this.field_r = new nj();
-        nj dupTemp$0 = new nj();
+        this.field_s = new LayeredWidgetStyle[6];
+        this.field_r = new LayeredWidgetStyle();
+        LayeredWidgetStyle dupTemp$0 = new LayeredWidgetStyle();
         this.field_s[0] = dupTemp$0;
-        nj var1 = dupTemp$0;
-        var1.a((byte) -121);
+        LayeredWidgetStyle var1 = dupTemp$0;
+        var1.reset((byte) -121);
     }
 
     static {

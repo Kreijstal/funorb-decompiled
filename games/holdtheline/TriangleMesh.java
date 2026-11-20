@@ -138,13 +138,13 @@ final class TriangleMesh {
         int var5 = 0;
         int var6 = 0;
         int[] var7 = null;
-        pf var8 = null;
-        pf var9 = null;
+        PolarSortVector var8 = null;
+        PolarSortVector var9 = null;
         int var10 = 0;
         int var11 = 0;
         int[] var12 = null;
         int var13 = 0;
-        pf var14 = null;
+        PolarSortVector var14 = null;
         int var6Lifetime1;
         int var5Lifetime1;
         int var5Lifetime2;
@@ -164,14 +164,14 @@ final class TriangleMesh {
           }
           if (null == qn.field_l ||
             !(var4 <= qn.field_l.length)) {
-            qn.field_l = new pf[var4];
+            qn.field_l = new PolarSortVector[var4];
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < var4; var5Lifetime1++) {
-            qn.field_l[var5Lifetime1] = new pf();
+            qn.field_l[var5Lifetime1] = new PolarSortVector();
           }
           for (var5Lifetime2 = 0; var4 > var5Lifetime2; var5Lifetime2++) {
-            qn.field_l[var5Lifetime2].field_a = -var2_int + param0[var5Lifetime2 * 2];
-            qn.field_l[var5Lifetime2].field_e = param0[var5Lifetime2 * 2 + 1] - var3;
+            qn.field_l[var5Lifetime2].x = -var2_int + param0[var5Lifetime2 * 2];
+            qn.field_l[var5Lifetime2].y = param0[var5Lifetime2 * 2 + 1] - var3;
           }
           if (param1 >= -110) {
             TriangleMesh.clearSharedReferences(-8);
@@ -183,7 +183,7 @@ final class TriangleMesh {
             var14 = qn.field_l[-2 + var5Lifetime3];
             var8 = qn.field_l[var5Lifetime3 - 1];
             var9 = qn.field_l[var6];
-            var10 = -((-var14.field_e + var8.field_e) * (var9.field_a - var14.field_a)) + (-var14.field_a + var8.field_a) * (var9.field_e - var14.field_e);
+            var10 = -((-var14.y + var8.y) * (var9.x - var14.x)) + (-var14.x + var8.x) * (var9.y - var14.y);
             if (var10 <= 0 &&
               var5Lifetime3 >= 3) {
               var5Lifetime3--;
@@ -199,8 +199,8 @@ final class TriangleMesh {
           var13 = 0;
           var6Lifetime1 = var13;
           while (var5Lifetime3 > var13) {
-            var12[var13 * 2] = var2_int + qn.field_l[var13].field_a;
-            var12[2 * var13 + 1] = qn.field_l[var13].field_e + var3;
+            var12[var13 * 2] = var2_int + qn.field_l[var13].x;
+            var12[2 * var13 + 1] = qn.field_l[var13].y + var3;
             var13++;
           }
           stackIn_36_0 = var7;
@@ -382,7 +382,7 @@ final class TriangleMesh {
               stackIn_34_0 = -1;
               return stackIn_34_0;
             }
-            OutlinedRoadStripRenderer.field_n.a(oc.field_c, ka.field_d, 20);
+            OutlinedRoadStripRenderer.field_n.attachConnection(oc.field_c, ka.field_d, 20);
             oc.field_c = null;
             PasswordFieldRenderer.field_y = null;
             EmailValidationResult.field_g = 0;

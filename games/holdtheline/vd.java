@@ -33,7 +33,7 @@ abstract class vd {
             stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
-          var4 = param0.b(15950, param2);
+          var4 = param0.getFileFlat(15950, param2);
           var3 = var4;
           if (var4 == null) {
             return null;

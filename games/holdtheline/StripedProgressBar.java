@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends UiWidget {
+final class StripedProgressBar extends UiWidget {
     private Sprite field_E;
-    int field_B;
+    int progress;
     private int field_F;
     private int field_C;
     private Sprite field_I;
@@ -13,12 +13,12 @@ final class ea extends UiWidget {
     private Sprite field_L;
     private int field_H;
     private int field_M;
-    boolean field_K;
+    boolean animating;
 
-    private final void a(byte param0) {
-        this.field_D = new Sprite[]{this.b(127, this.field_C, this.field_A), this.b(127, this.field_M, this.field_G)};
-        this.field_I = this.a(-127);
-        this.field_E = this.field_I.d();
+    private final void rebuildSprites(byte param0) {
+        this.field_D = new Sprite[]{this.createStripeTile(127, this.field_C, this.field_A), this.createStripeTile(127, this.field_M, this.field_G)};
+        this.field_I = this.createEndMask(-127);
+        this.field_E = this.field_I.flippedHorizontally();
         this.field_L = new Sprite(this.height >> 1, this.height);
         int var2 = 22 % ((param0 - 6) / 63);
     }
@@ -32,15 +32,15 @@ final class ea extends UiWidget {
         }
         int var5 = this.x + param2;
         int var6 = this.y + param1;
-        this.a(2, var6, this.field_D[0], var5);
-        if (65536 > this.field_B) {
-          StereoMusicSample.a(this.width + var5, (this.width * this.field_B >> 16) + var5, this.height + var6, true, var6);
-          this.a(param0 ^ -9530, var6, this.field_D[1], var5);
+        this.drawStripeRegion(2, var6, this.field_D[0], var5);
+        if (65536 > this.progress) {
+          StereoMusicSample.a(this.width + var5, (this.width * this.progress >> 16) + var5, this.height + var6, true, var6);
+          this.drawStripeRegion(param0 ^ -9530, var6, this.field_D[1], var5);
           dm.b((byte) -10);
         }
     }
 
-    private final void a(int param0, int param1, Sprite param2, int param3) {
+    private final void drawStripeRegion(int param0, int param1, Sprite param2, int param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -53,33 +53,33 @@ final class ea extends UiWidget {
         var8 = HoldTheLine.field_D;
         try {
           var5_int = this.width + param3;
-          StereoMusicSample.a(-this.field_I.field_s + var5_int, this.field_I.field_s + param3, this.height + param1, true, param1);
+          StereoMusicSample.a(-this.field_I.width + var5_int, this.field_I.width + param3, this.height + param1, true, param1);
           var6 = -this.field_H + param3;
           if (param0 != 2) {
             this.field_I = (Sprite) null;
           }
           while (var5_int > var6) {
-            param2.a(var6, param1);
-            var6 = var6 + param2.field_s;
+            param2.draw(var6, param1);
+            var6 = var6 + param2.width;
           }
           dm.b((byte) -10);
-          if (SoftwareRasterizer.field_d <= param3 + this.field_I.field_s) {
+          if (SoftwareRasterizer.clipLeft <= param3 + this.field_I.width) {
             ProxySocketConnector.a(this.field_L, -1);
-            param2.a(-this.field_H, 0);
-            param2.a(this.field_F * 2 - this.field_H, 0);
-            this.field_E.d(0, 0);
+            param2.draw(-this.field_H, 0);
+            param2.draw(this.field_F * 2 - this.field_H, 0);
+            this.field_E.drawMultiply(0, 0);
             dm.b((byte) -10);
-            this.field_L.a(param3, param1);
+            this.field_L.draw(param3, param1);
           }
-          if (-this.field_I.field_s + var5_int <= SoftwareRasterizer.field_e) {
+          if (-this.field_I.width + var5_int <= SoftwareRasterizer.clipRight) {
             ProxySocketConnector.a(this.field_L, param0 ^ -3);
-            for (var7 = this.width + (-this.field_I.field_s + this.field_H); var7 > this.field_F * 2; var7 = var7 - this.field_F * 2) {
+            for (var7 = this.width + (-this.field_I.width + this.field_H); var7 > this.field_F * 2; var7 = var7 - this.field_F * 2) {
             }
-            param2.a(-var7, 0);
-            param2.a(-var7 + this.field_F * 2, 0);
-            this.field_I.d(0, 0);
+            param2.draw(-var7, 0);
+            param2.draw(-var7 + this.field_F * 2, 0);
+            this.field_I.drawMultiply(0, 0);
             dm.b((byte) -10);
-            this.field_L.a(var5_int - this.field_I.field_s, param1);
+            this.field_L.draw(var5_int - this.field_I.width, param1);
             return;
           }
           return;
@@ -97,7 +97,7 @@ final class ea extends UiWidget {
         }
     }
 
-    private final Sprite b(int param0, int param1, int param2) {
+    private final Sprite createStripeTile(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -122,19 +122,19 @@ final class ea extends UiWidget {
           var10 = -var5 + var6;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = var11 < 256 ? (var11 * var9 & 16711680 | -16711936 & var8 * var11) >>> 8 : var8 | var9;
-          SoftwareRasterizer.b(var7, var6, this.field_F, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_F, var12);
           var9Lifetime1 = 65280 & param2;
           var8Lifetime1 = param2 & 16711935;
-          SoftwareRasterizer.b(-(this.field_F * 2) + var7, var6, this.field_F, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(this.field_F * 2) + var7, var6, this.field_F, var12);
           var12Lifetime1 = var11 < 256 ? (var11 * var9Lifetime1 & 16711680 | -16711936 & var11 * var8Lifetime1) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          SoftwareRasterizer.b(var7 + this.field_F, var6, this.field_F, var12Lifetime1);
-          SoftwareRasterizer.b(var7 - this.field_F, var6, this.field_F, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 + this.field_F, var6, this.field_F, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var7 - this.field_F, var6, this.field_F, var12Lifetime1);
         }
         dm.b((byte) -10);
         return var14;
     }
 
-    private final Sprite a(int param0) {
+    private final Sprite createEndMask(int param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -152,7 +152,7 @@ final class ea extends UiWidget {
               var7 = Math.sqrt(1.0 - var7);
               var9 = var7 >= 1.0 ? 255 : (int)(var7 * 255.0);
             }
-            SoftwareRasterizer.a(var6, var5, var9 << 16 | (var9 | var9 << 8));
+            SoftwareRasterizer.setPixel(var6, var5, var9 << 16 | (var9 | var9 << 8));
           }
         }
         dm.b((byte) -10);
@@ -161,10 +161,10 @@ final class ea extends UiWidget {
 
     final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.a((byte) -96);
+        this.rebuildSprites((byte) -96);
     }
 
-    ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
@@ -176,14 +176,14 @@ final class ea extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (this.field_K) {
+          if (this.animating) {
             this.field_H = this.field_H + 1;
             if (this.field_F * 2 < this.field_H) {
               this.field_H = this.field_H - this.field_F * 2;
             }
           }
           if (param3 != -3) {
-            discarded$1 = this.b(-85, 81, -16);
+            discarded$1 = this.createStripeTile(-85, 81, -16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,7 +200,7 @@ final class ea extends UiWidget {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void pollKeyState(boolean param0) {
         int var2 = 0;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
@@ -245,7 +245,7 @@ final class ea extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void setColors(int param0, int param1, boolean param2) {
         this.field_G = param1 >> 1 & 8355711;
         this.field_A = param1;
         this.field_M = 8355711 & param0 >> 1;
@@ -254,10 +254,10 @@ final class ea extends UiWidget {
           UiWidget var5 = (UiWidget) null;
           this.updateHover(-23, (UiWidget) null, 66, (byte) -6);
         }
-        this.a((byte) 70);
+        this.rebuildSprites((byte) 70);
     }
 
-    private ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private StripedProgressBar(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_F = param4;
         this.field_C = param5;
         this.field_M = param7;

@@ -61,7 +61,7 @@ final class lh {
           int var3_int = -54 % ((param1 - 11) / 55);
           TrackCurve.a((byte) -111, param0, param2, 22050, 1102, true, 22050, SecondaryNodeDequeIterator.field_d);
           ll.a(-114, 160);
-          pc.field_h = 256;
+          MenuList.field_h = 256;
           MovingEntity var4 = (MovingEntity) null;
           sa.a((MovingEntity) null, -15676);
         } catch (RuntimeException runtimeException) {

@@ -22,10 +22,10 @@ final class i extends NineSlicePanel {
         SpriteState.field_t = UrlPacketDownloader.a(param3, "commonui", false, "jagex_logo_grey");
         NameCheckProgressDialog.field_Ab = StandardContentTransitionDialog.a(param3, 33, "commonui", "button");
         FullscreenFocusCanvas.field_i = OutlinedRoadStripRenderer.loadNamedSprites("validation", 17870, "commonui", param3);
-        SpriteButtonRenderer.field_w = (BitmapFont) ((Object) ga.a("commonui", "arezzo12", param1, (byte) 35, param3));
-        IntrusiveNode.field_g = (BitmapFont) ((Object) ga.a("commonui", "arezzo14", param1, (byte) 35, param3));
-        DisplayNameForm.field_I = (BitmapFont) ((Object) ga.a("commonui", "arezzo14bold", param1, (byte) 35, param3));
-        Sprite var17 = new Sprite(param2.a("", !param0 ? true : false, "button.gif"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
+        SpriteButtonRenderer.field_w = (BitmapFont) ((Object) UiTheme.loadNamedCoverageFont("commonui", "arezzo12", param1, (byte) 35, param3));
+        IntrusiveNode.field_g = (BitmapFont) ((Object) UiTheme.loadNamedCoverageFont("commonui", "arezzo14", param1, (byte) 35, param3));
+        DisplayNameForm.field_I = (BitmapFont) ((Object) UiTheme.loadNamedCoverageFont("commonui", "arezzo14bold", param1, (byte) 35, param3));
+        Sprite var17 = new Sprite(param2.getNamedFile("", !param0 ? true : false, "button.gif"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
         hc.a("dropdown", param3, -120, "commonui");
         IndexedSprite[] var5 = oc.a("screen_options", param3, (byte) 32, "commonui");
         FullscreenFocusCanvas.field_g = new IndexedSprite[4];
@@ -50,24 +50,24 @@ final class i extends NineSlicePanel {
             var14[var11_int] = FadingDialog.a(var19[var11_int], -116, var5[var9]);
           }
         }
-        var9 = var17.field_y;
+        var9 = var17.height;
         lj.a((byte) -124);
-        var17.f();
-        SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c);
+        var17.bindRaster();
+        SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         Sprite var15 = new Sprite(var9, var9);
         Sprite var18 = var15;
-        var18.f();
+        var18.bindRaster();
         if (!param0) {
           return;
         }
         try {
-          var17.b(0, 0);
+          var17.drawUnkeyed(0, 0);
           var11 = new Sprite(var9, var9);
-          var11.f();
-          var17.b(-var17.field_s + var9, 0);
-          var12 = new Sprite(var17.field_s - 2 * var9, var9);
-          var12.f();
-          var17.b(-var9, 0);
+          var11.bindRaster();
+          var17.drawUnkeyed(-var17.width + var9, 0);
+          var12 = new Sprite(var17.width - 2 * var9, var9);
+          var12.bindRaster();
+          var17.drawUnkeyed(-var9, 0);
           dm.b((byte) -10);
           NameCheckProgressDialog.field_Ab = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
@@ -120,8 +120,8 @@ final class i extends NineSlicePanel {
           var11 = new Point2i(param1.center);
           var11.translate(var6, (byte) 109);
           if (0.0010000000474974513f > var9) {
-            RasterBuffer.field_d = ha.a(param1.center, var11, false);
-            IterableSecondaryNodeDeque.field_b = ha.a(param0.center, var11, false);
+            RasterBuffer.field_d = BoundaryIntersection.angleBetweenPoints(param1.center, var11, false);
+            IterableSecondaryNodeDeque.field_b = BoundaryIntersection.angleBetweenPoints(param0.center, var11, false);
             if (param1.containsAngle(RasterBuffer.field_d, param2 ^ -10910) &&
               param0.containsAngle(IterableSecondaryNodeDeque.field_b, param2 ^ -10910)) {
               stackIn_19_0 = 1;
@@ -133,15 +133,15 @@ final class i extends NineSlicePanel {
           var12 = new Point2i(var11);
           var11.translate(var7, (byte) 122);
           var12.subtractVector(var7, -13201);
-          RasterBuffer.field_d = ha.a(param1.center, var11, false);
+          RasterBuffer.field_d = BoundaryIntersection.angleBetweenPoints(param1.center, var11, false);
           var13 = 0;
-          IterableSecondaryNodeDeque.field_b = ha.a(param0.center, var11, false);
+          IterableSecondaryNodeDeque.field_b = BoundaryIntersection.angleBetweenPoints(param0.center, var11, false);
           if (param1.containsAngle(RasterBuffer.field_d, 13012) &&
             param0.containsAngle(IterableSecondaryNodeDeque.field_b, 13012)) {
             var13++;
           }
-          CachedArchiveProvider.field_g = ha.a(param1.center, var12, false);
-          TextHotspotWidget.field_G = ha.a(param0.center, var12, false);
+          CachedArchiveProvider.field_g = BoundaryIntersection.angleBetweenPoints(param1.center, var12, false);
+          TextHotspotWidget.field_G = BoundaryIntersection.angleBetweenPoints(param0.center, var12, false);
           if (param1.containsAngle(CachedArchiveProvider.field_g, param2 + 19230) &&
             param0.containsAngle(TextHotspotWidget.field_G, 13012)) {
             var13++;
@@ -179,10 +179,10 @@ final class i extends NineSlicePanel {
           i.a(100, -42, -85, (String) null, -48);
         }
         if (dg.field_c == 13) {
-          ((ec) (l.field_a[dg.field_c])).d((byte) -120);
+          ((RaceSetupMenu) (l.field_a[dg.field_c])).beginExit((byte) -120);
         } else {
           if (dg.field_c != -1) {
-            ((ti) (l.field_a[dg.field_c])).i(105);
+            ((GameMenu) (l.field_a[dg.field_c])).beginExit(105);
           }
         }
         ValidationIndicator.field_L = param1;

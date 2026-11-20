@@ -33,14 +33,14 @@ final class vb {
         }
         ProxySocketConnector.a(SolidRoadStripRenderer.field_p, -1);
         TriangleRasterState.c();
-        SoftwareRasterizer.c();
+        SoftwareRasterizer.clear();
         StereoMusicSample.a((byte) -111);
         if (var5 < 256) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_c, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
         dm.b((byte) -10);
         if (StrongCacheEntry.field_q >= 150) {
-          TickClock.field_c.d(15 + var3, 10 + var4, var5);
+          TickClock.field_c.drawAlpha(15 + var3, 10 + var4, var5);
           var6 = -125 + StrongCacheEntry.field_q;
           if (var6 <= 0) {
             var6 = -140 + StrongCacheEntry.field_q;
@@ -49,7 +49,7 @@ final class vb {
               if (var6 < 20) {
                 var7 = 256 * var6 / 20;
               }
-              EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+              EmailConfirmationValidator.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7 >> 8);
             }
           } else {
             if (50 <= var6) {
@@ -59,41 +59,41 @@ final class vb {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                EmailConfirmationValidator.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7 >> 8);
               }
             } else {
               if (var6 < 20) {
                 var7 = var6 * 256 / 20;
-                Js5Transport.field_o.b(var3, var4, var7);
+                Js5Transport.field_o.drawAdditive(var3, var4, var7);
                 var6 = -140 + StrongCacheEntry.field_q;
                 if (var6 > 0) {
                   var7 = 256;
                   if (var6 < 20) {
                     var7 = 256 * var6 / 20;
                   }
-                  EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                  EmailConfirmationValidator.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7 >> 8);
                 }
               } else {
                 if (var6 < 30) {
-                  Js5Transport.field_o.b(var3, var4, 256);
+                  Js5Transport.field_o.drawAdditive(var3, var4, 256);
                   var6 = -140 + StrongCacheEntry.field_q;
                   if (var6 > 0) {
                     var7 = 256;
                     if (var6 < 20) {
                       var7 = 256 * var6 / 20;
                     }
-                    EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                    EmailConfirmationValidator.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7 >> 8);
                   }
                 } else {
                   var7 = 256 * (-var6 + 50) / 20;
-                  Js5Transport.field_o.b(var3, var4, var7);
+                  Js5Transport.field_o.drawAdditive(var3, var4, var7);
                   var6 = -140 + StrongCacheEntry.field_q;
                   if (var6 > 0) {
                     var7 = 256;
                     if (var6 < 20) {
                       var7 = 256 * var6 / 20;
                     }
-                    EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                    EmailConfirmationValidator.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7 >> 8);
                   }
                 }
               }
@@ -101,19 +101,19 @@ final class vb {
           }
           return;
         }
-        SolidRoadStripRenderer.field_p.c(var3, var4);
+        SolidRoadStripRenderer.field_p.drawHalfSize(var3, var4);
         var6Lifetime1 = -125 + StrongCacheEntry.field_q;
         if (var6Lifetime1 > 0 &&
           50 > var6Lifetime1) {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
-            Js5Transport.field_o.b(var3, var4, var7Lifetime1);
+            Js5Transport.field_o.drawAdditive(var3, var4, var7Lifetime1);
           } else {
             if (var6Lifetime1 < 30) {
-              Js5Transport.field_o.b(var3, var4, 256);
+              Js5Transport.field_o.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime1 = 256 * (-var6Lifetime1 + 50) / 20;
-              Js5Transport.field_o.b(var3, var4, var7Lifetime1);
+              Js5Transport.field_o.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
         }
@@ -123,7 +123,7 @@ final class vb {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          EmailConfirmationValidator.field_l.d(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
+          EmailConfirmationValidator.field_l.drawAlpha(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
         }
         return;
     }
@@ -134,7 +134,7 @@ final class vb {
           if (param0 > -44) {
             vb.clearSharedReferences(51);
           }
-          param1.f();
+          param1.bindRaster();
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

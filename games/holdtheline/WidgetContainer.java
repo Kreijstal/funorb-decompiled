@@ -74,8 +74,8 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
 
     final static void a(byte param0, String param1, int param2, int param3, int param4) {
         try {
-          nj.field_i.a(param3, param4);
-          nm.field_c.a(param1, 15 + param3, -2 + (param4 + (nm.field_c.field_G + 30) / 2), param2, -1);
+          LayeredWidgetStyle.field_i.draw(param3, param4);
+          nm.field_c.draw(param1, 15 + param3, -2 + (param4 + (nm.field_c.ascent + 30) / 2), param2, -1);
           int var5_int = 72 / ((param0 + 43) / 61);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "v.PB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -121,7 +121,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             if (AccountCreationForm.field_S == d.field_f) {
               if (param4) {
                 var10 = (String) null;
-                TriangleMesh.field_j = eb.createLoginCredentials((String) null, vd.field_a, false, param3, true);
+                TriangleMesh.field_j = PathWaypoint.createLoginCredentials((String) null, vd.field_a, false, param3, true);
               } else {
                 TriangleMesh.field_j = wi.createLoginCredentials((byte) 126, false, param2, param3);
               }

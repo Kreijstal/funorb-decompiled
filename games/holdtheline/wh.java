@@ -67,7 +67,7 @@ final class wh extends vd {
           for (var7Lifetime2 = 0; var7Lifetime2 < var15.length; var7Lifetime2 += 2) {
             var10 = var15[var7Lifetime2];
             var11 = var6[var7Lifetime2 + 1];
-            SoftwareRasterizer.d(var8, var9, var10, var11, this.field_f);
+            SoftwareRasterizer.drawLine(var8, var9, var10, var11, this.field_f);
             var8 = var10;
             var9 = var11;
           }

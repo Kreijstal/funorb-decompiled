@@ -71,11 +71,11 @@ final class DropTargetWidget extends SingleChildWidget {
             if (var19 == 0) {
               if (stackIn_11_0) {
                 var12 = TextFieldValidator.field_d[var9];
-                var13 = om.field_p[var9];
+                var13 = TrackObjectDefinition.field_p[var9];
                 var14 = -var12 + TextFieldValidator.field_d[var10];
                 var15 = TextFieldValidator.field_d[var11] - var12;
-                var16 = -var13 + om.field_p[var10];
-                var17 = om.field_p[var11] - var13;
+                var16 = -var13 + TrackObjectDefinition.field_p[var10];
+                var17 = TrackObjectDefinition.field_p[var11] - var13;
               }
               if (!stackIn_11_0 ||
                 !(var14 * var17 - var16 * var15 >= 0)) {
@@ -203,7 +203,7 @@ final class DropTargetWidget extends SingleChildWidget {
             return;
           }
           ka.field_b.a(false);
-          lh.field_a = new LoginForm(ec.field_v, (String) null, ArchiveCatalog.field_o, param3, param0);
+          lh.field_a = new LoginForm(RaceSetupMenu.field_v, (String) null, ArchiveCatalog.field_o, param3, param0);
           sm.field_c = new StandardContentTransitionDialog(ka.field_b, lh.field_a);
           ka.field_b.a(sm.field_c, false);
           return;
@@ -270,7 +270,7 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static void a(ResourceArchive param0, int param1) {
         try {
-          vk[] array$0 = null;
+          CourseDefinition[] array$0 = null;
           int stackIn_5_0 = 0;
           boolean stackIn_10_0 = false;
           int stackIn_19_0 = 0;
@@ -291,7 +291,7 @@ final class DropTargetWidget extends SingleChildWidget {
           int var10 = 0;
           var10 = HoldTheLine.field_D;
           try {
-            var2 = param0.a((byte) -96, "level_progression.txt");
+            var2 = param0.getFileByName((byte) -96, "level_progression.txt");
             var3 = MusicPatchEnvelope.a(var2, 0);
             var4 = new String[6][];
             var4[0] = QuickChatDynamicCommand.readConfigSection(var3, 0, "s1");
@@ -301,8 +301,8 @@ final class DropTargetWidget extends SingleChildWidget {
             var4[4] = QuickChatDynamicCommand.readConfigSection(var3, 0, "tutorial");
             var4[5] = QuickChatDynamicCommand.readConfigSection(var3, 0, "demolition");
             vf.field_v = false;
-            tk.field_c = new vk[6][];
-            pc.field_l = new int[6];
+            tk.field_c = new CourseDefinition[6][];
+            MenuList.field_l = new int[6];
             var5 = 0;
             if (param1 >= -85) {
               DropTargetWidget.a((String) null, (byte) 88);
@@ -311,22 +311,22 @@ final class DropTargetWidget extends SingleChildWidget {
               stackIn_5_0 = -7;
               if (stackIn_5_0 < ~var5) {
                 var6 = var4[var5].length;
-                pc.field_l[var5] = var6;
-                array$0 = new vk[var6];
+                MenuList.field_l[var5] = var6;
+                array$0 = new CourseDefinition[var6];
                 tk.field_c[var5] = array$0;
                 stackIn_19_0 = 0;
                 if (var10 == 0) {
                   var7 = stackIn_19_0;
                   while (var7 < var6) {
                     var8 = var4[var5][var7];
-                    stackOut_9_0 = param0.a(var8, "", 23158);
+                    stackOut_9_0 = param0.containsNamedFile(var8, "", 23158);
                     stackIn_5_0 = stackOut_9_0 ? 1 : 0;
                     stackIn_10_0 = stackOut_9_0;
                     if (!stackIn_10_0) {
-                      tk.field_c[var5][var7] = new vk(var8);
+                      tk.field_c[var5][var7] = new CourseDefinition(var8);
                     } else {
                       try {
-                        tk.field_c[var5][var7] = TextLayout.a(param0.a((byte) 125, var4[var5][var7]), (byte) 121);
+                        tk.field_c[var5][var7] = TextLayout.a(param0.getFileByName((byte) 125, var4[var5][var7]), (byte) 121);
                       } catch (java.io.IOException decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         var9 = (IOException) (Object) decompiledCaughtException;
@@ -341,7 +341,7 @@ final class DropTargetWidget extends SingleChildWidget {
               } else {
                 stackIn_19_0 = -117;
               }
-              HuffmanDecoder.parseTutorialScriptWithIntGuard(stackIn_19_0, MusicPatchEnvelope.a(param0.a((byte) 58, "tutorial.txt"), 0));
+              HuffmanDecoder.parseTutorialScriptWithIntGuard(stackIn_19_0, MusicPatchEnvelope.a(param0.getFileByName((byte) 58, "tutorial.txt"), 0));
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -487,13 +487,13 @@ final class DropTargetWidget extends SingleChildWidget {
           fb.field_i = param2;
           Js5Transport.field_n = param1;
           FullscreenFocusCanvas.field_c = param3;
-          var4 = FullscreenFocusCanvas.field_c.a("", false, "font");
+          var4 = FullscreenFocusCanvas.field_c.getNamedFile("", false, "font");
           var5 = oc.a("", fb.field_i, (byte) 32, "font");
           MatchingTextValidator.a(param0 ^ param0, -1, var4);
           ni.field_a = OutlinedRoadStripRenderer.a(0, var4, var5, 1, 16777215, param0 - 30857);
           MatchingTextValidator.a(param0 ^ 30865, 2, var4);
           nm.field_c = OutlinedRoadStripRenderer.a(0, var4, var5, 2, 16777215, 8);
-          HoldTheLine.field_F = om.a("font12", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
+          HoldTheLine.field_F = TrackObjectDefinition.loadNamedFont("font12", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
           var6 = nm.field_c.field_N[0];
           nm.field_c.field_N = new int[10][];
           nm.field_c.field_N[0] = var6;
@@ -518,21 +518,21 @@ final class DropTargetWidget extends SingleChildWidget {
             if (!(NodeHashTableIterator.field_j.length > var8_int)) {
               IterableNodeHashTable.field_b = UrlPacketDownloader.a(fb.field_i, "logo", false, "");
               StereoMusicSample.field_a = UrlPacketDownloader.a(fb.field_i, "logo_large", false, "");
-              uk.field_a = new Sprite(IterableNodeHashTable.field_b.field_s, IterableNodeHashTable.field_b.field_y);
+              uk.field_a = new Sprite(IterableNodeHashTable.field_b.width, IterableNodeHashTable.field_b.height);
               break;
             }
             nm.field_c.field_N[6 + var8_int] = LoginMethodPreference.a(1, (byte) 103, NodeHashTableIterator.field_j[var8_int], var6);
             HoldTheLine.field_F.field_N[var8_int + 9] = LoginMethodPreference.a(1, (byte) 114, NodeHashTableIterator.field_j[var8_int], var7);
             var8_int++;
           } while (var16 == 0);
-          var8_int = IterableNodeHashTable.field_b.field_z.length;
+          var8_int = IterableNodeHashTable.field_b.pixels.length;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8_int <= 0))) {
             var8_int--;
-            stackIn_19_0 = uk.field_a.field_z;
+            stackIn_19_0 = uk.field_a.pixels;
             if (var16 == 0) {
               stackIn_16_1 = var8_int;
-              if (IterableNodeHashTable.field_b.field_z[var8_int] == 0) {
+              if (IterableNodeHashTable.field_b.pixels[var8_int] == 0) {
                 stackIn_17_2 = 0;
               } else {
                 stackIn_17_2 = 1;
@@ -543,9 +543,9 @@ final class DropTargetWidget extends SingleChildWidget {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            rf.field_ab = UrlPacketDownloader.a(fb.field_i, "locked", false, "");
+            FullscreenErrorDialog.field_ab = UrlPacketDownloader.a(fb.field_i, "locked", false, "");
             SolidRoadStripRenderer.field_q = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "locked");
-            ra.field_hb = UrlPacketDownloader.a(fb.field_i, "loading", false, "");
+            LoadProgressDialog.field_hb = UrlPacketDownloader.a(fb.field_i, "loading", false, "");
             ai.field_c = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "orbcoin");
             ProxySocketConnector.field_j = new IntrusiveDeque();
             qn.field_m = new IndexedSprite[14];
@@ -569,17 +569,17 @@ final class DropTargetWidget extends SingleChildWidget {
           var9_int = 0;
           do {
             if (!(qn.field_m.length > var9_int)) {
-              HoldTheLine.field_F.a(qn.field_m, var8);
+              HoldTheLine.field_F.setInlineImages(qn.field_m, var8);
               ka.field_f = new Sprite(32, 32);
               vb.a(-114, ka.field_f);
-              SolidRoadStripRenderer.field_q.c(0, 0, 32, 32);
+              SolidRoadStripRenderer.field_q.drawDownscaledThreshold(0, 0, 32, 32);
               MarkerSliderRenderer.restoreRasterTarget(param0 ^ -30866);
               cm.field_d = UrlPacketDownloader.a(fb.field_i, "flag", false, "");
               kc.field_a = new SpriteSheetAsset("benefits");
               TextButton.field_A = new SpriteAsset("mb_template");
               MouseWheelInput.field_a = new SpriteAsset("mb_buttonframe");
               bo.field_d = new SpriteAsset("mb_logotext");
-              nj.field_i = UrlPacketDownloader.a(fb.field_i, "menubar", false, "");
+              LayeredWidgetStyle.field_i = UrlPacketDownloader.a(fb.field_i, "menubar", false, "");
               QuickChatPhraseDefinition.field_t = UrlPacketDownloader.a(fb.field_i, "titlebar", false, "");
               DisplayNameForm.field_O = UrlPacketDownloader.a(fb.field_i, "titlebar_divleft", false, "");
               ContentTransitionDialog.field_ab = UrlPacketDownloader.a(fb.field_i, "titlebar_divright", false, "");
@@ -599,29 +599,29 @@ final class DropTargetWidget extends SingleChildWidget {
             }
             var10_int = (2166 + var9_int * 44) / 17;
             var10_int = var10_int << 16 | (var10_int | var10_int << 8);
-            SoftwareRasterizer.b(1, var9_int, 18, var10_int);
+            SoftwareRasterizer.drawHorizontalLine(1, var9_int, 18, var10_int);
             var9_int++;
           } while (var16 == 0);
           do {
             if (var9_int >= 18) {
-              SoftwareRasterizer.a(0, 0, 20, 20, 65793);
+              SoftwareRasterizer.drawRectangle(0, 0, 20, 20, 65793);
               MarkerSliderRenderer.restoreRasterTarget(param0 ^ -30866);
               SecondaryNodeDeque.field_i = new SpriteAsset("win");
               sm.field_a = new SpriteAsset("loss");
-              nj.field_c = new SpriteAsset[4];
-              nj.field_c[0] = new SpriteAsset("splash_s1");
-              nj.field_c[1] = new SpriteAsset("splash_s2");
-              nj.field_c[2] = new SpriteAsset("splash_s3");
-              nj.field_c[3] = new SpriteAsset("splash_s4");
-              ha.field_o = new SpriteAsset[3];
-              ha.field_o[0] = new SpriteAsset("wreath1");
-              ha.field_o[1] = new SpriteAsset("wreath2");
-              ha.field_o[2] = new SpriteAsset("wreath3");
+              LayeredWidgetStyle.field_c = new SpriteAsset[4];
+              LayeredWidgetStyle.field_c[0] = new SpriteAsset("splash_s1");
+              LayeredWidgetStyle.field_c[1] = new SpriteAsset("splash_s2");
+              LayeredWidgetStyle.field_c[2] = new SpriteAsset("splash_s3");
+              LayeredWidgetStyle.field_c[3] = new SpriteAsset("splash_s4");
+              BoundaryIntersection.field_o = new SpriteAsset[3];
+              BoundaryIntersection.field_o[0] = new SpriteAsset("wreath1");
+              BoundaryIntersection.field_o[1] = new SpriteAsset("wreath2");
+              BoundaryIntersection.field_o[2] = new SpriteAsset("wreath3");
               break;
             }
             var10_int = (77 * var9_int - 4) / 15;
             var10_int = var10_int | var10_int << 8 | var10_int << 16;
-            SoftwareRasterizer.b(2, var9_int, 16, var10_int);
+            SoftwareRasterizer.drawHorizontalLine(2, var9_int, 16, var10_int);
             var9_int++;
           } while (var16 == 0);
           var9 = UrlPacketDownloader.a(fb.field_i, "frame", false, "");
@@ -638,9 +638,9 @@ final class DropTargetWidget extends SingleChildWidget {
           var10 = UrlPacketDownloader.a(fb.field_i, "frame_textured", false, "");
           var11 = UrlPacketDownloader.a(fb.field_i, "tarmac", false, "");
           var12 = 14;
-          var13 = -(2 * var12) + var10.field_s;
+          var13 = -(2 * var12) + var10.width;
           jc.field_h = new Sprite[9];
-          var14 = var10.field_y - 2 * var12;
+          var14 = var10.height - 2 * var12;
           jc.field_h[0] = fj.a(0, 0, var10, var12, 0, var12);
           jc.field_h[1] = fj.a(0, var12, var10, var12, 0, var13);
           jc.field_h[2] = fj.a(0, var12 + var13, var10, var12, 0, var12);
@@ -654,7 +654,7 @@ final class DropTargetWidget extends SingleChildWidget {
           QuadraticPointPath.field_i = new SpriteSheetAsset("vehicle_select_large");
           IsaacRandom.field_f = LoginCredentialType.a("mine", (byte) -53);
           Vector2i.field_d = hm.a(5499, "missile");
-          ha.field_k = LoginCredentialType.a("powerup_red", (byte) -53);
+          BoundaryIntersection.field_k = LoginCredentialType.a("powerup_red", (byte) -53);
           LoginChoicePanel.field_O = LoginCredentialType.a("powerup_green", (byte) -53);
           na.field_q = LoginCredentialType.a("powerup_blue", (byte) -53);
           StrongCacheEntry.field_u = LoginCredentialType.a("powerup_black", (byte) -53);
@@ -680,8 +680,8 @@ final class DropTargetWidget extends SingleChildWidget {
           aj.field_a = DraggableWidget.a("s1_bridge_support", param0 ^ 30864);
           kc.field_b = DraggableWidget.a("s3_background", 1);
           MarkerSliderRenderer.field_b = DraggableWidget.a("s3_background2", 1);
-          ha.field_i = DraggableWidget.a("s3_background3", 1);
-          om.field_i = DraggableWidget.a("s3_rock20", param0 ^ 30864);
+          BoundaryIntersection.field_i = DraggableWidget.a("s3_background3", 1);
+          TrackObjectDefinition.field_i = DraggableWidget.a("s3_rock20", param0 ^ 30864);
           GameKeyHandler.field_e = DraggableWidget.a("s3_rock30", param0 ^ 30864);
           q.field_d = DraggableWidget.a("s3_rock40", 1);
           co.field_b = DraggableWidget.a("s3_tree20", 1);
@@ -694,7 +694,7 @@ final class DropTargetWidget extends SingleChildWidget {
           IterableSecondaryNodeDeque.field_a = DraggableWidget.a("s2_background", 1);
           ProxySocketConnector.field_h = DraggableWidget.a("s2_background2", 1);
           AccountCreationForm.field_F = DraggableWidget.a("s2_background3", 1);
-          gh.field_a = TutorialPage.createRotatedSpriteAsset("s2_bones1", (byte) 99);
+          ViewportSizingController.field_a = TutorialPage.createRotatedSpriteAsset("s2_bones1", (byte) 99);
           SocketJs5Transport.field_r = TutorialPage.createRotatedSpriteAsset("s2_bones2", (byte) -126);
           TickClock.field_a = DraggableWidget.a("s2_cacti20", 1);
           UiWidget.field_r = DraggableWidget.a("s2_cacti30", param0 - 30864);
@@ -959,7 +959,7 @@ final class DropTargetWidget extends SingleChildWidget {
             return;
           }
           ka.field_b.a(false);
-          lh.field_a = new LoginForm(ec.field_v, (String) null, ArchiveCatalog.field_o, param3, param0);
+          lh.field_a = new LoginForm(RaceSetupMenu.field_v, (String) null, ArchiveCatalog.field_o, param3, param0);
           sm.field_c = new StandardContentTransitionDialog(ka.field_b, lh.field_a);
           ka.field_b.a(sm.field_c, false);
           return;

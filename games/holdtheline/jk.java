@@ -40,7 +40,7 @@ final class jk extends IntrusiveNode {
           var3 = HoldTheLine.field_D;
           try {
             if (OutlinedRoadStripRenderer.field_n != null) {
-              OutlinedRoadStripRenderer.field_n.e(param0 ^ 27371);
+              OutlinedRoadStripRenderer.field_n.close(param0 ^ 27371);
             }
             if (null != IterableSecondaryNodeDeque.field_d) {
               IterableSecondaryNodeDeque.field_d.a(true);
@@ -121,7 +121,7 @@ final class jk extends IntrusiveNode {
         int var4Lifetime1;
         var7 = HoldTheLine.field_D;
         try {
-          var8 = new IsaacPacketBuffer(param0.a("", false, "logo.fo3d"));
+          var8 = new IsaacPacketBuffer(param0.getNamedFile("", false, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -16);
           var10.beginBitReading(true);

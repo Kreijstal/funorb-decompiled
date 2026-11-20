@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends ResizableDialog {
+final class LoadProgressDialog extends ResizableDialog {
     static ArchiveCatalog field_Z;
     static String field_fb;
     static int[] field_cb;
@@ -11,13 +11,13 @@ final class ra extends ResizableDialog {
     static Sprite[] field_X;
     private boolean field_Y;
     static long field_bb;
-    private ea field_jb;
+    private StripedProgressBar field_jb;
     static int field_ab;
     static String field_ib;
     static Sprite field_hb;
 
-    final void i(byte param0) {
-        this.field_jb.field_K = false;
+    final void stopProgressAnimation(byte param0) {
+        this.field_jb.animating = false;
         this.field_db = true;
         int var2 = -107 % ((param0 + 20) / 43);
     }
@@ -37,7 +37,7 @@ final class ra extends ResizableDialog {
         field_cb = (int[]) null;
     }
 
-    final static boolean a(CharSequence param0, boolean param1, boolean param2) {
+    final static boolean isNormalizedNameValid(CharSequence param0, boolean param1, boolean param2) {
         int var6 = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
@@ -65,16 +65,16 @@ final class ra extends ResizableDialog {
           var4 = MidiPcmStream.a(param0, (byte) 122);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!SocketJs5Transport.a(-2821, var4.charAt(0)) &&
-              !SocketJs5Transport.a(-2821, var4.charAt(var4.length() - 1))) {
+            if (!SocketJs5Transport.isNameSeparator(-2821, var4.charAt(0)) &&
+              !SocketJs5Transport.isNameSeparator(-2821, var4.charAt(var4.length() - 1))) {
               if (param1) {
                 var9 = (String) null;
-                ra.a((String) null, false);
+                LoadProgressDialog.isLocalPlayerName((String) null, false);
               }
               var5 = 0;
               for (var6 = 0; param0.length() > var6; var6++) {
                 var7 = param0.charAt(var6);
-                if (SocketJs5Transport.a(-2821, (char) var7)) {
+                if (SocketJs5Transport.isNameSeparator(-2821, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -124,16 +124,16 @@ final class ra extends ResizableDialog {
         field_X = null;
     }
 
-    final void a(int param0, int param1, byte param2) {
-        super.a(param0, param1, param2);
-        DisplayNameForm.field_I.b(this.field_eb, (this.width >> 1) + param0, param1 + 103, 16777215, -1);
+    final void drawFrame(int param0, int param1, byte param2) {
+        super.drawFrame(param0, param1, param2);
+        DisplayNameForm.field_I.drawCentered(this.field_eb, (this.width >> 1) + param0, param1 + 103, 16777215, -1);
         if (null != this.field_gb) {
-          SoftwareRasterizer.b(20 + param0, -7 + (param1 + 120), 260, 8421504);
-          DisplayNameForm.field_I.a(this.field_gb, 20 + param0, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, DisplayNameForm.field_I.field_G);
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + (param1 + 120), 260, 8421504);
+          DisplayNameForm.field_I.drawParagraph(this.field_gb, 20 + param0, 120 + param1 + 8, 260, 100, 16777215, -1, 1, 0, DisplayNameForm.field_I.ascent);
         }
     }
 
-    final void a(float param0, int param1, boolean param2, String param3) {
+    final void setProgress(float param0, int param1, boolean param2, String param3) {
         RuntimeException runtimeException = null;
         String var6 = null;
         boolean stackIn_5_1 = false;
@@ -146,20 +146,20 @@ final class ra extends ResizableDialog {
             stackIn_5_1 = (param2);
             this.field_Y = stackIn_5_1;
             if (this.field_Y) {
-              this.field_jb.a(8405024, 4210752, false);
-              this.field_jb.field_K = true;
+              this.field_jb.setColors(8405024, 4210752, false);
+              this.field_jb.animating = true;
             } else {
-              this.field_jb.a(2113632, 4210752, false);
+              this.field_jb.setColors(2113632, 4210752, false);
               if (this.field_db) {
-                this.field_jb.field_K = false;
+                this.field_jb.animating = false;
               }
             }
           }
           if (param1 >= -43) {
             var6 = (String) null;
-            ra.a((String) null, 66);
+            LoadProgressDialog.a((String) null, 66);
           }
-          this.field_jb.field_B = (int)(param0 / 100.0f * 65536.0f);
+          this.field_jb.progress = (int)(param0 / 100.0f * 65536.0f);
           this.field_eb = param3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,17 +176,17 @@ final class ra extends ResizableDialog {
         }
     }
 
-    ra(DialogLayer param0, String param1) {
+    LoadProgressDialog(DialogLayer param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_gb = param1;
           if (null != this.field_gb) {
-            var3_int = DisplayNameForm.field_I.b(this.field_gb, 260, DisplayNameForm.field_I.field_G);
+            var3_int = DisplayNameForm.field_I.getParagraphHeight(this.field_gb, 260, DisplayNameForm.field_I.ascent);
             this.b(537342017, 300, var3_int + 150);
           }
-          this.field_jb = new ea(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_jb.field_K = true;
+          this.field_jb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_jb.animating = true;
           this.field_Y = false;
           this.field_db = false;
           this.a(true, this.field_jb);
@@ -195,7 +195,7 @@ final class ra extends ResizableDialog {
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean isLocalPlayerName(String param0, boolean param1) {
         RuntimeException var2 = null;
         String var3 = null;
         CharSequence var4 = null;
@@ -207,7 +207,7 @@ final class ra extends ResizableDialog {
         try {
           if (param1) {
             var3 = (String) null;
-            ra.a((String) null, -94);
+            LoadProgressDialog.a((String) null, -94);
           }
           var4 = (CharSequence) ((Object) param0);
           stackIn_3_0 = co.field_e.equals(MidiPcmStream.a(var4, (byte) -102));

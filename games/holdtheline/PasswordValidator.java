@@ -138,46 +138,46 @@ final class PasswordValidator extends TextFieldValidator {
           if (LoginForm.field_J > param2) {
             return -1;
           }
-          if (param2 >= NodeHashTableIterator.field_h.field_s + LoginForm.field_J) {
+          if (param2 >= NodeHashTableIterator.field_h.width + LoginForm.field_J) {
             return -1;
           }
           if (param1 < ShadedRoadStripRenderer.field_t) {
             return -1;
           }
-          if (ShadedRoadStripRenderer.field_t + NodeHashTableIterator.field_h.field_y > param1) {
+          if (ShadedRoadStripRenderer.field_t + NodeHashTableIterator.field_h.height > param1) {
             return 1;
           }
           return -1;
         }
-        if (param2 >= NodeHashTableIterator.field_h.field_s + Point2i.field_b) {
+        if (param2 >= NodeHashTableIterator.field_h.width + Point2i.field_b) {
           if (LoginForm.field_J > param2) {
             return -1;
           }
-          if (param2 >= NodeHashTableIterator.field_h.field_s + LoginForm.field_J) {
+          if (param2 >= NodeHashTableIterator.field_h.width + LoginForm.field_J) {
             return -1;
           }
           if (param1 < ShadedRoadStripRenderer.field_t) {
             return -1;
           }
-          if (ShadedRoadStripRenderer.field_t + NodeHashTableIterator.field_h.field_y > param1) {
+          if (ShadedRoadStripRenderer.field_t + NodeHashTableIterator.field_h.height > param1) {
             return 1;
           }
           return -1;
         }
         if (param1 >= LoginChoicePanel.field_L &&
-          LoginChoicePanel.field_L + NodeHashTableIterator.field_h.field_y > param1) {
+          LoginChoicePanel.field_L + NodeHashTableIterator.field_h.height > param1) {
           return 0;
         }
         if (LoginForm.field_J > param2) {
           return -1;
         }
-        if (param2 >= NodeHashTableIterator.field_h.field_s + LoginForm.field_J) {
+        if (param2 >= NodeHashTableIterator.field_h.width + LoginForm.field_J) {
           return -1;
         }
         if (param1 < ShadedRoadStripRenderer.field_t) {
           return -1;
         }
-        if (ShadedRoadStripRenderer.field_t + NodeHashTableIterator.field_h.field_y <= param1) {
+        if (ShadedRoadStripRenderer.field_t + NodeHashTableIterator.field_h.height <= param1) {
           return -1;
         }
         return 1;
@@ -226,7 +226,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_15_0;
           }
           if (this.containsEmailPart(param0, (byte) -57)) {
-            stackIn_19_0 = pc.field_i;
+            stackIn_19_0 = MenuList.field_i;
             return stackIn_19_0;
           }
           if (0 >= var6.length()) {

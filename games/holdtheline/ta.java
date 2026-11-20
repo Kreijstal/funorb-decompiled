@@ -21,7 +21,7 @@ final class ta {
           if (!qg.a(param0, param1, (byte) -27, param2)) {
             return null;
           }
-          stackIn_6_0 = StraightRoadSegment.a((byte) -100, param3.a(param0, true, param1));
+          stackIn_6_0 = StraightRoadSegment.a((byte) -100, param3.getFile(param0, true, param1));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class ta {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param1.position = param1.position + ti.field_u.decode(var3_int, true, 0, var4, param1.payload, param1.position);
+            param1.position = param1.position + GameMenu.field_u.decode(var3_int, true, 0, var4, param1.payload, param1.position);
             var5 = sm.decodeCp1252(var3_int, 0, -129, var4);
             stackIn_5_0 = var5;
             return stackIn_5_0;

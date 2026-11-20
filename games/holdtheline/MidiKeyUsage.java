@@ -3,7 +3,7 @@
  */
 final class MidiKeyUsage extends IntrusiveNode {
     static ResourceArchive field_i;
-    static ra field_l;
+    static LoadProgressDialog field_l;
     static IntrusiveDeque field_j;
     byte[] field_k;
 
@@ -24,7 +24,7 @@ final class MidiKeyUsage extends IntrusiveNode {
         field_i = null;
         field_j = null;
         if (param0 != 5751) {
-          field_l = (ra) null;
+          field_l = (LoadProgressDialog) null;
           field_l = null;
           return;
         }

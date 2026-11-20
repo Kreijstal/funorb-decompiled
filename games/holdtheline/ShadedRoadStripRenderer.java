@@ -107,7 +107,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             var12 = var12 / var14;
             var15 = (var12 - var13 + 4.0f) * 0.25f;
             var16 = IterableSecondaryNodeDeque.a(var15, -1, var7);
-            SoftwareRasterizer.d(var8, var9, var10, var11, var16);
+            SoftwareRasterizer.drawLine(var8, var9, var10, var11, var16);
             var9 = var11;
             var8 = var10;
           }
@@ -123,7 +123,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             var13Lifetime1 = var13Lifetime1 / var14Lifetime1;
             var15Lifetime1 = (4.0f - var12Lifetime1 + var13Lifetime1) * 0.25f;
             var16Lifetime1 = IterableSecondaryNodeDeque.a(var15Lifetime1, -1, var7);
-            SoftwareRasterizer.d(var8Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var16Lifetime1);
+            SoftwareRasterizer.drawLine(var8Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var16Lifetime1);
             var8Lifetime1 = var10Lifetime1;
             var9Lifetime1 = var11Lifetime1;
           }

@@ -48,19 +48,19 @@ final class il {
     final static jg a(int param0, int param1, int param2, int param3, byte param4) {
         jg var10 = null;
         int var6 = HoldTheLine.field_D;
-        jg var5 = (jg) (pc.field_e.first((byte) 120));
+        jg var5 = (jg) (MenuList.field_e.first((byte) 120));
         while (var5 != null) {
           if (var5.field_i == param2) {
             return var5;
           }
-          var5 = (jg) (pc.field_e.next((byte) -45));
+          var5 = (jg) (MenuList.field_e.next((byte) -45));
         }
         if (param4 == -66) {
           var10 = new jg();
           var10.field_n = param0;
           var10.field_l = param3;
           var10.field_i = param2;
-          pc.field_e.addLast((byte) -114, var10);
+          MenuList.field_e.addLast((byte) -114, var10);
           TextFieldValidator.a(var10, (byte) 86, param1);
           return var10;
         }
@@ -69,7 +69,7 @@ final class il {
         var9.field_n = param0;
         var9.field_l = param3;
         var9.field_i = param2;
-        pc.field_e.addLast((byte) -114, var9);
+        MenuList.field_e.addLast((byte) -114, var9);
         TextFieldValidator.a(var9, (byte) 86, param1);
         return var9;
     }

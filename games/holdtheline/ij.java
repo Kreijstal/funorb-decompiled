@@ -56,10 +56,10 @@ final class ij {
         int var19Lifetime1;
         var22 = HoldTheLine.field_D;
         try {
-          var4_int = param2[0].field_o;
-          var5 = param2[2].field_o;
-          var6 = param2[0].field_v;
-          var7 = param2[6].field_v;
+          var4_int = param2[0].canvasWidth;
+          var5 = param2[2].canvasWidth;
+          var6 = param2[0].canvasHeight;
+          var7 = param2[6].canvasHeight;
           var8 = 16;
           var9 = 16;
           if (0 != param1 % var8) {
@@ -76,8 +76,8 @@ final class ij {
           for (var13 = 0; var13 < 4; var13++) {
             var23 = TrackBoundary.field_t[var13];
             if (var23 != null &&
-              var23.field_s == var11 &&
-              var12 == var23.field_y) {
+              var23.width == var11 &&
+              var12 == var23.height) {
               for (var14 = var13; var14 > 0; var14--) {
                 TrackBoundary.field_t[var14] = TrackBoundary.field_t[var14 - 1];
               }
@@ -94,13 +94,13 @@ final class ij {
           var24 = dupTemp$0;
           var10 = var24;
           vb.a(-98, var24);
-          SoftwareRasterizer.a(10, 10, var4_int + param1 - (-var5 + 10), -10 + (var7 + var6 + param3));
-          for (var13Lifetime2 = 0; var4_int + (param1 + var5) > var13Lifetime2; var13Lifetime2 = var13Lifetime2 + param2[4].field_s) {
-            for (var14Lifetime1 = 0; var7 + (var6 + param3) > var14Lifetime1; var14Lifetime1 = var14Lifetime1 + param2[4].field_y) {
-              param2[4].a(var13Lifetime2, var14Lifetime1);
+          SoftwareRasterizer.setClip(10, 10, var4_int + param1 - (-var5 + 10), -10 + (var7 + var6 + param3));
+          for (var13Lifetime2 = 0; var4_int + (param1 + var5) > var13Lifetime2; var13Lifetime2 = var13Lifetime2 + param2[4].width) {
+            for (var14Lifetime1 = 0; var7 + (var6 + param3) > var14Lifetime1; var14Lifetime1 = var14Lifetime1 + param2[4].height) {
+              param2[4].draw(var13Lifetime2, var14Lifetime1);
             }
           }
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.resetClip();
           hi.drawNineSlice(param2, var7 + var6 + param3, true, var5 + (var4_int + param1), 0, 0);
           var13Lifetime3 = (param1 * param1 + param3 * param3) / 4;
           for (var14Lifetime2 = -4; param1 + 4 > var14Lifetime2; var14Lifetime2++) {
@@ -110,8 +110,8 @@ final class ij {
               if (var17 > 256) {
                 var17 = 256;
               }
-              var18 = var14Lifetime2 + (var4_int + SoftwareRasterizer.field_j * (var6 + var15));
-              var19 = SoftwareRasterizer.field_b[var18];
+              var18 = var14Lifetime2 + (var4_int + SoftwareRasterizer.width * (var6 + var15));
+              var19 = SoftwareRasterizer.pixels[var18];
               var20 = var19 & 16711935;
               var20 = var20 * var17;
               var21 = 65280 & var19;
@@ -119,7 +119,7 @@ final class ij {
               var20 = var20 & -16711936;
               var21 = var21 & 16711680;
               var19Lifetime1 = (var20 | var21) >> 8;
-              SoftwareRasterizer.field_b[var18] = var19Lifetime1;
+              SoftwareRasterizer.pixels[var18] = var19Lifetime1;
             }
           }
           MarkerSliderRenderer.restoreRasterTarget(-1);
@@ -143,14 +143,14 @@ final class ij {
         if (null == NetworkArchiveRequest.field_w) {
           return;
         }
-        om.a(-46342, NetworkArchiveRequest.field_w);
+        TrackObjectDefinition.detachInputListeners(-46342, NetworkArchiveRequest.field_w);
         NetworkArchiveRequest.field_w.a(wi.field_b, 50);
         NetworkArchiveRequest.field_w = null;
         if (param0 != 4) {
           ij.c(-47);
         }
         if (hh.field_c != null) {
-          hh.field_c.b(125);
+          hh.field_c.restoreSize(125);
         }
         MouseInputHandler.field_b.requestFocus();
     }
@@ -194,7 +194,7 @@ final class ij {
           if (param0 > -36) {
             return 80;
           }
-          if (this.field_f == ra.field_bb) {
+          if (this.field_f == LoadProgressDialog.field_bb) {
             return 1;
           }
           if (eg.field_b != 2) {
@@ -212,7 +212,7 @@ final class ij {
         if (7 != DelegatingCanvas.field_d) {
           throw new RuntimeException();
         }
-        int var2 = pf.a((byte) 65, ArchiveIndex.b((byte) -49).field_p);
+        int var2 = PolarSortVector.a((byte) 65, ArchiveIndex.b((byte) -49).field_p);
         if (var2 == 2) {
           wm.a(param0, false, 12);
         }
@@ -233,7 +233,7 @@ final class ij {
         }
         EntitySound.field_j = true;
         wm.a(param0, false, 10);
-        ((ti) (l.field_a[10])).field_p = 480;
+        ((GameMenu) (l.field_a[10])).targetCarouselOffset = 480;
         if (param1 >= -72) {
           field_k = (String) null;
         }

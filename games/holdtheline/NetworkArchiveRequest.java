@@ -64,8 +64,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             IsaacPacketBuffer.field_p.position = 0;
             if (param5 == null) {
               SecondaryNodeDequeIterator.field_a.position = 0;
-              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, ha.field_n.nextInt());
-              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, ha.field_n.nextInt());
+              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, BoundaryIntersection.field_n.nextInt());
+              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, BoundaryIntersection.field_n.nextInt());
               stackIn_18_0 = SecondaryNodeDequeIterator.field_a;
               stackIn_18_1 = 29336;
               if (!param3.shouldSubmitText((byte) -80)) {
@@ -93,8 +93,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 var9 = var9 | 1;
               }
               SecondaryNodeDequeIterator.field_a.position = 0;
-              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, ha.field_n.nextInt());
-              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, ha.field_n.nextInt());
+              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, BoundaryIntersection.field_n.nextInt());
+              SecondaryNodeDequeIterator.field_a.writeInt((byte) -58, BoundaryIntersection.field_n.nextInt());
               SecondaryNodeDequeIterator.field_a.writePrefixedCp1252String(29336, var14);
               SecondaryNodeDequeIterator.field_a.writePrefixedCp1252String(param0 - 36164, var8);
               var15 = (CharSequence) ((Object) param5);
@@ -140,7 +140,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               } else {
                 NineSlicePanel.field_c = var9Lifetime1;
                 ad.field_c = -1;
-                d.field_f = ti.field_x;
+                d.field_f = GameMenu.field_x;
               }
             }
           }
@@ -161,7 +161,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               }
             }
           }
-          if (d.field_f == ti.field_x &&
+          if (d.field_f == GameMenu.field_x &&
             TutorialTransition.a((byte) 55)) {
             if (255 != NineSlicePanel.field_c) {
               um.field_b = RoadStripRenderer.field_e.readCp1252String(param0 ^ -64275);
@@ -220,7 +220,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final byte[] i(int param0) {
+    final byte[] getData(int param0) {
         if (this.field_u) {
           throw new RuntimeException();
         }
@@ -250,7 +250,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int var4Lifetime1;
         var7 = HoldTheLine.field_D;
         try {
-          if (null != eb.field_o) {
+          if (null != PathWaypoint.field_o) {
             return;
           }
           var11 = new int[param0.length + 1];
@@ -289,10 +289,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             var4Lifetime1 = 32;
             var5 = 65503;
           }
-          eb.field_o = new fb(var4Lifetime1, var5, nj.field_d, ni.field_b, cm.field_a, tn.field_c, var14);
+          PathWaypoint.field_o = new fb(var4Lifetime1, var5, LayeredWidgetStyle.field_d, ni.field_b, cm.field_a, tn.field_c, var14);
           if (!l.field_b &&
             !pj.b((byte) 109)) {
-            LinkWidgetRenderer.a(3, (byte) -37, eb.field_o);
+            LinkWidgetRenderer.a(3, (byte) -37, PathWaypoint.field_o);
             return;
           }
           return;
@@ -366,7 +366,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         if (hk.field_c[param1][param2] == -1 ||
           hk.field_c[param1][param2] > param3) {
           hk.field_c[param1][param2] = param3;
-          ha.field_j[param1][param2] = param0;
+          BoundaryIntersection.field_j[param1][param2] = param0;
           tn.a(0);
         }
         if (param4 >= -107) {
@@ -377,7 +377,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     NetworkArchiveRequest() {
     }
 
-    final int g(int param0) {
+    final int getProgress(int param0) {
         if (param0 != 0) {
           return 123;
         }

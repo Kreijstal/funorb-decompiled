@@ -34,19 +34,19 @@ abstract class ByteStorage {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.b((byte) -122)) {
+          if (!param0.ensureIndexLoaded((byte) -122)) {
             return false;
           }
-          if (!param0.b("commonui", -108)) {
+          if (!param0.tryLoadNamedGroup("commonui", -108)) {
             return false;
           }
-          if (param1.b((byte) -111) &&
-            param1.b("commonui", -83)) {
+          if (param1.ensureIndexLoaded((byte) -111) &&
+            param1.tryLoadNamedGroup("commonui", -83)) {
             if (param2 < 125) {
               field_e = (String) null;
             }
-            if (param3.b((byte) -75) &&
-              param3.b("button.gif", -85)) {
+            if (param3.ensureIndexLoaded((byte) -75) &&
+              param3.tryLoadNamedGroup("button.gif", -85)) {
               return true;
             }
             return false;
@@ -93,14 +93,14 @@ abstract class ByteStorage {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param4.b((byte) -94)) {
+          if (!param4.ensureIndexLoaded((byte) -94)) {
             stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }
           if (param3) {
             field_c = (TriangleMesh[]) null;
           }
-          stackIn_6_0 = param1 + " - " + param4.a(param2, 0) + "%";
+          stackIn_6_0 = param1 + " - " + param4.getNamedGroupLoadPercent(param2, 0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

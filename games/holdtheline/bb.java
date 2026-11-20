@@ -114,7 +114,7 @@ final class bb {
         Object var10 = null;
         int var11 = 0;
         int var12 = 0;
-        ha var13 = null;
+        BoundaryIntersection var13 = null;
         float var14 = 0.0f;
         int var15 = 0;
         GrowableObjectList var16 = null;
@@ -469,8 +469,8 @@ final class bb {
                 }
                 case 32: {
                     try {
-                        var13 = (ha) (((GrowableObjectList) (var10)).elements[param0]);
-                        var14 = var13.field_m;
+                        var13 = (BoundaryIntersection) (((GrowableObjectList) (var10)).elements[param0]);
+                        var14 = var13.parameter;
                         fc.a(2, var14, param2, var9, var18);
                         if (var13.field_l) {
                             statePc = 50;
@@ -489,7 +489,7 @@ final class bb {
                 }
                 case 33: {
                     try {
-                        stackIn_35_0 = var13.field_s.field_r;
+                        stackIn_35_0 = var13.paired.field_r;
                         stackIn_34_0 = stackIn_35_0;
                         if (param4) {
                             /* Inlined CFG state: 35. */
@@ -568,9 +568,9 @@ final class bb {
                 case 41: {
                     try {
                         var13.field_l = true;
-                        var13.field_s.field_l = true;
-                        param4 = var13.field_s.field_r;
-                        param2 = var13.field_s.field_m;
+                        var13.paired.field_l = true;
+                        param4 = var13.paired.field_r;
+                        param2 = var13.paired.parameter;
                         if (!param4) {
                             /* Inlined CFG state: 43. */
                             {
@@ -645,7 +645,7 @@ final class bb {
                 case 47: {
                     try {
                         var9 = stackIn_47_0;
-                        param0 = var13.field_s.field_q;
+                        param0 = var13.paired.field_q;
                         if (var12 == 0) {
                             /* Inlined CFG state: 49. */
                             {

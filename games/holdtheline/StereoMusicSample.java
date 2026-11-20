@@ -33,7 +33,7 @@ final class StereoMusicSample {
           if (param0 > -52) {
             StereoMusicSample.clearSharedReferences(7);
           }
-          stackIn_3_0 = param1.a((byte) 105);
+          stackIn_3_0 = param1.tryLoadAllGroups((byte) 105);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ final class StereoMusicSample {
           return;
         }
         lj.a((byte) -107);
-        SoftwareRasterizer.e(param1, param4, param0, param2);
+        SoftwareRasterizer.intersectClip(param1, param4, param0, param2);
     }
 
     final static void a(int param0, int param1) {
@@ -179,10 +179,10 @@ final class StereoMusicSample {
           var9Lifetime1 = hc.a(0, var6Lifetime1) >> 8;
           var10Lifetime1 = 68 / ((param0 - 5) / 52);
           if (-1 != NodeHashTableIterator.field_g &&
-            rf.field_X != -1) {
+            FullscreenErrorDialog.field_X != -1) {
             var7Lifetime1 = -320 + NodeHashTableIterator.field_g;
             var9Lifetime1 = -128;
-            var8Lifetime1 = -rf.field_X + 240;
+            var8Lifetime1 = -FullscreenErrorDialog.field_X + 240;
           }
           var11 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1));
           var8Lifetime1 = (int)((double)var8Lifetime1 * var11);

@@ -112,7 +112,7 @@ final class HuffmanDecoder {
           return;
         }
         try {
-          ra.field_Z = new ArchiveCatalog(OutlinedRoadStripRenderer.field_n, IterableSecondaryNodeDeque.field_d);
+          LoadProgressDialog.field_Z = new ArchiveCatalog(OutlinedRoadStripRenderer.field_n, IterableSecondaryNodeDeque.field_d);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "j.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -147,7 +147,7 @@ final class HuffmanDecoder {
             var11 = 1.0f - Math.abs(var10);
             if (!(0.0f >= var11)) {
               var12 = var11;
-              var6.field_z[var9 + (var7 * var4 + param3)] = IterableSecondaryNodeDeque.a(var12, -1, param2);
+              var6.pixels[var9 + (var7 * var4 + param3)] = IterableSecondaryNodeDeque.a(var12, -1, param2);
             }
           }
         }

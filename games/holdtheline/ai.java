@@ -26,10 +26,10 @@ final class ai {
               ai.a(-18);
             }
             for (var3_int = 0; var3_int < 6; var3_int++) {
-              for (var4 = 0; pc.field_l[var3_int] > var4; var4++) {
+              for (var4 = 0; MenuList.field_l[var3_int] > var4; var4++) {
                 if (tk.field_c[var3_int][var4].field_r) {
                   try {
-                    tk.field_c[var3_int][var4] = TextLayout.a(param0.a(tk.field_c[var3_int][var4].field_h, 0, param1, ""), (byte) 123);
+                    tk.field_c[var3_int][var4] = TextLayout.a(param0.getNamedFileWithKey(tk.field_c[var3_int][var4].field_h, 0, param1, ""), (byte) 123);
                   } catch (IOException iOException) {
                     String var7 = (String) null;
                     throw new RuntimeException((String) null);
@@ -201,11 +201,11 @@ final class ai {
             }
             var21 = stackIn_39_0;
             var22 = TextFieldValidator.field_d[var15Lifetime1];
-            var23 = om.field_p[var15Lifetime1];
+            var23 = TrackObjectDefinition.field_p[var15Lifetime1];
             var24 = TextFieldValidator.field_d[var16];
-            var25 = om.field_p[var16];
+            var25 = TrackObjectDefinition.field_p[var16];
             var26 = TextFieldValidator.field_d[var17];
-            var27 = om.field_p[var17];
+            var27 = TrackObjectDefinition.field_p[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var55[var18];

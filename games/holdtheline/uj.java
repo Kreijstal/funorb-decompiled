@@ -41,14 +41,14 @@ final class uj {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b((byte) -86)) {
+          if (!param1.ensureIndexLoaded((byte) -86)) {
             stackIn_2_0 = (String) (param3);
             return stackIn_2_0;
           }
           if (param0 >= -6) {
             uj.clearSharedReferences((byte) -56);
           }
-          stackIn_6_0 = param2 + " - " + param1.a(0) + "%";
+          stackIn_6_0 = param2 + " - " + param1.getLoadPercent(0) + "%";
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

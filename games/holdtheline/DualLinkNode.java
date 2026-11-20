@@ -61,7 +61,7 @@ class DualLinkNode extends IntrusiveNode {
           if (param1 != 0) {
             DualLinkNode.signumFloat(11, 0.5669122934341431f);
           }
-          stackIn_3_0 = PasswordFieldRenderer.field_w.a(param0, false, "");
+          stackIn_3_0 = PasswordFieldRenderer.field_w.getNamedFile(param0, false, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ class DualLinkNode extends IntrusiveNode {
           if (null != NetworkArchiveRequest.field_w &&
             NetworkArchiveRequest.field_w.field_a) {
             ij.c(4);
-            r.field_a.a(new rf(r.field_a, DiskCacheStore.field_a), false);
+            r.field_a.a(new FullscreenErrorDialog(r.field_a, DiskCacheStore.field_a), false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

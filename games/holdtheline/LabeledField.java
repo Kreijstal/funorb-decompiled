@@ -22,7 +22,7 @@ final class LabeledField extends SingleChildWidget {
     final static void a(boolean param0, String param1, int param2, String param3) {
         try {
           o.field_d = param1;
-          ec.field_v = param3;
+          RaceSetupMenu.field_v = param3;
           IsaacPacketBuffer.a(param0, qd.field_g, 22676);
           if (param2 >= -5) {
             LabeledField.clearSharedReferences(108);
@@ -58,7 +58,7 @@ final class LabeledField extends SingleChildWidget {
           stackIn_4_1 = (param5);
           this.field_M = stackIn_4_1;
           var12_int = -this.field_G + this.field_L;
-          var13 = this.field_J.b(param10, var12_int, this.field_J.field_G) + this.field_G * 2;
+          var13 = this.field_J.getParagraphHeight(param10, var12_int, this.field_J.ascent) + this.field_G * 2;
           if (var13 > param3) {
             this.setBounds(param0, (byte) 122, param1, var13, param2);
           } else {
@@ -106,7 +106,7 @@ final class LabeledField extends SingleChildWidget {
         field_N = null;
     }
 
-    final static void a(int param0, vk param1, boolean param2) {
+    final static void a(int param0, CourseDefinition param1, boolean param2) {
         int var15 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_31_0 = null;
@@ -133,36 +133,36 @@ final class LabeledField extends SingleChildWidget {
           if (param1.field_o != 0) {
             if (param1.field_o != 1) {
               if (param1.field_o == 2) {
-                AccountCreationForm.field_F.field_b.b(0, 0);
-                mn.a(param1.field_u, new qd(IterableSecondaryNodeDeque.field_a.field_b), (byte) -40);
+                AccountCreationForm.field_F.field_b.drawUnkeyed(0, 0);
+                mn.a(param1.roadSegments, new qd(IterableSecondaryNodeDeque.field_a.field_b), (byte) -40);
               } else {
                 if (param1.field_o == 3) {
-                  kc.field_b.field_b.b(0, 0);
-                  mn.a(param1.field_u, new qd(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
+                  kc.field_b.field_b.drawUnkeyed(0, 0);
+                  mn.a(param1.roadSegments, new qd(MarkerSliderRenderer.field_b.field_b, 0.5f), (byte) -102);
                 } else {
                   if (4 == param1.field_o) {
-                    MarkerSliderRenderer.field_b.field_b.b(0, 0);
-                    mn.a(param1.field_u, new qd(ha.field_i.field_b, 0.5f), (byte) -30);
+                    MarkerSliderRenderer.field_b.field_b.drawUnkeyed(0, 0);
+                    mn.a(param1.roadSegments, new qd(BoundaryIntersection.field_i.field_b, 0.5f), (byte) -30);
                   } else {
                     if (param1.field_o != 5) {
                       if (param1.field_o == 6) {
-                        DialWidget.field_Q.field_b.b(0, 0);
-                        tn.a(param1.field_u, 10000536, new qd(ValidationState.field_e.field_b));
+                        DialWidget.field_Q.field_b.drawUnkeyed(0, 0);
+                        tn.a(param1.roadSegments, 10000536, new qd(ValidationState.field_e.field_b));
                       }
                     } else {
-                      ha.field_i.field_b.b(0, 0);
-                      mn.a(param1.field_u, new qd(kc.field_b.field_b, 0.5f), (byte) -125);
+                      BoundaryIntersection.field_i.field_b.drawUnkeyed(0, 0);
+                      mn.a(param1.roadSegments, new qd(kc.field_b.field_b, 0.5f), (byte) -125);
                     }
                   }
                 }
               }
             } else {
-              AccountCreationForm.field_F.field_b.b(0, 0);
-              mn.a(param1.field_u, new qd(ProxySocketConnector.field_h.field_b), (byte) -15);
+              AccountCreationForm.field_F.field_b.drawUnkeyed(0, 0);
+              mn.a(param1.roadSegments, new qd(ProxySocketConnector.field_h.field_b), (byte) -15);
             }
           } else {
-            SecondaryNodeDeque.field_h.field_b.b(0, 0);
-            mn.a(param1.field_u, new qd(ValidationState.field_e.field_b), (byte) -23);
+            SecondaryNodeDeque.field_h.field_b.drawUnkeyed(0, 0);
+            mn.a(param1.roadSegments, new qd(ValidationState.field_e.field_b), (byte) -23);
           }
           if (param0 != 2 &&
             param0 != 6) {
@@ -172,7 +172,7 @@ final class LabeledField extends SingleChildWidget {
               stackIn_23_0 = 8372223;
             }
             var3_int = stackIn_23_0;
-            var4 = param1.field_u[0];
+            var4 = param1.roadSegments[0];
             var5 = var4.c(true);
             var6 = var4.o(-14);
             var7 = (float)((var6.x + var5.x) / 2) + 0.5f;
@@ -296,7 +296,7 @@ final class LabeledField extends SingleChildWidget {
           var4 = 1;
           var5 = 1;
         }
-        fe.field_b = ti.a(var2 * var5, var4 * var2, (byte) -90);
+        fe.field_b = GameMenu.createRotationMatrix(var2 * var5, var4 * var2, (byte) -90);
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
@@ -309,7 +309,7 @@ final class LabeledField extends SingleChildWidget {
         super.drawLayer(param0 ^ 0, param1, param2, param3);
         if (param3 == 0) {
           var7 = this.field_M ? -(this.field_G * 2) + (-this.field_L + this.width) : 0;
-          this.field_J.a(this.field_K, this.field_G + (var7 + var5), var6 + this.field_G, this.field_L - this.field_G, -(this.field_G * 2) + this.height, this.field_I, -1, this.field_M ? 0 : 2, 1, this.field_J.field_G);
+          this.field_J.drawParagraph(this.field_K, this.field_G + (var7 + var5), var6 + this.field_G, this.field_L - this.field_G, -(this.field_G * 2) + this.height, this.field_I, -1, this.field_M ? 0 : 2, 1, this.field_J.ascent);
           return;
         }
     }

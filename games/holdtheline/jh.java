@@ -109,21 +109,21 @@ final class jh {
               var4_int = 0;
             }
             var5 = gf.field_b;
-            if (SoftwareRasterizer.field_j <= var5) {
-              var5 = -1 + SoftwareRasterizer.field_j;
+            if (SoftwareRasterizer.width <= var5) {
+              var5 = -1 + SoftwareRasterizer.width;
             }
             var6 = gf.field_a;
             if (var6 < 0) {
               var6 = 0;
             }
-            if (SoftwareRasterizer.field_c <= var6) {
-              var6 = SoftwareRasterizer.field_c - 1;
+            if (SoftwareRasterizer.height <= var6) {
+              var6 = SoftwareRasterizer.height - 1;
             }
-            var7 = var4_int % param0.field_s;
-            var8 = var6 % param0.field_y;
-            var9 = var6 * SoftwareRasterizer.field_j + var4_int;
-            var10 = param0.field_s * var8 + var7;
-            var11 = -var7 + param0.field_s;
+            var7 = var4_int % param0.width;
+            var8 = var6 % param0.height;
+            var9 = var6 * SoftwareRasterizer.width + var4_int;
+            var10 = param0.width * var8 + var7;
+            var11 = -var7 + param0.width;
             var12 = var5 - var4_int;
             while (true) {
               var12--;
@@ -131,24 +131,24 @@ final class jh {
                 stackIn_5_0 = gf.d();
                 break;
               }
-              var13 = SoftwareRasterizer.field_b[var9] & 16711680;
-              var14 = SoftwareRasterizer.field_b[var9] & 65280;
-              var15 = 255 & SoftwareRasterizer.field_b[var9];
-              var16 = param0.field_z[var10] & 16711680;
-              var17 = 65280 & param0.field_z[var10];
-              var18 = param0.field_z[var10] & 255;
+              var13 = SoftwareRasterizer.pixels[var9] & 16711680;
+              var14 = SoftwareRasterizer.pixels[var9] & 65280;
+              var15 = 255 & SoftwareRasterizer.pixels[var9];
+              var16 = param0.pixels[var10] & 16711680;
+              var17 = 65280 & param0.pixels[var10];
+              var18 = param0.pixels[var10] & 255;
               var19 = var13 + (int)(param2 * (float)(var16 - var13));
               var20 = var14 + (int)((float)(-var14 + var17) * param2);
               var21 = (int)((float)(var18 - var15) * param2) + var15;
-              SoftwareRasterizer.field_b[var9] = kc.a(kc.a(LoginChoicePanel.a(65280, var20), LoginChoicePanel.a(16711680, var19)), LoginChoicePanel.a(255, var21));
+              SoftwareRasterizer.pixels[var9] = kc.a(kc.a(LoginChoicePanel.a(65280, var20), LoginChoicePanel.a(16711680, var19)), LoginChoicePanel.a(255, var21));
               var9++;
               var10++;
               var11--;
               if (var11 != 0) {
                 continue;
               }
-              var10 = var8 * param0.field_s;
-              var11 = param0.field_s;
+              var10 = var8 * param0.width;
+              var11 = param0.width;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

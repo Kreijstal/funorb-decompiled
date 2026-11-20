@@ -112,29 +112,29 @@ final class DialWidgetRenderer implements WidgetRenderer {
           var14 = (DialWidget) (stackIn_3_0);
           if (var14 == null) {
           }
-          SoftwareRasterizer.f(param3.x + param1, param4 + param3.y, param3.width, param3.height, this.field_k);
+          SoftwareRasterizer.fillRectangle(param3.x + param1, param4 + param3.y, param3.width, param3.height, this.field_k);
           var7 = var14.field_G + (param3.x + param1);
           var8 = var14.field_J + (param4 + param3.y);
-          SoftwareRasterizer.d(var7, var8, var14.field_P, this.field_j);
+          SoftwareRasterizer.fillCircle(var7, var8, var14.field_P, this.field_j);
           if (var14.field_L != -1) {
             var9 = 2.0 * ((double)var14.field_L * 3.141592653589793) / (double)var14.field_O;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_P);
             var12 = (int)(Math.cos(var9) * (double)var14.field_P);
-            SoftwareRasterizer.d(var7 + var11, var12 + var8, 1, this.field_b);
+            SoftwareRasterizer.fillCircle(var7 + var11, var12 + var8, 1, this.field_b);
           }
-          SoftwareRasterizer.d(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var14.field_K * 3.141592653589793) / (double)var14.field_O;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_P);
           if (param2 > -48) {
             this.field_g = -87;
           }
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_P);
-          SoftwareRasterizer.d(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
           if (this.field_h == null) {
             return;
           }
           var13 = var14.field_P + var14.field_G + this.field_d;
-          this.field_h.a(param3.text, param1 + (param3.x + var13), param4 + param3.y + this.field_g, -this.field_d + (-var13 + param3.width), param3.height - (this.field_d << 1), this.field_e, this.field_c, 1, 1, 0);
+          this.field_h.drawParagraph(param3.text, param1 + (param3.x + var13), param4 + param3.y + this.field_g, -this.field_d + (-var13 + param3.width), param3.height - (this.field_d << 1), this.field_e, this.field_c, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

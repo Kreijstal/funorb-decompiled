@@ -37,7 +37,7 @@ final class wi {
             var7 = (CharSequence) ((Object) param2);
             var4_long = ko.a(var7, -13820);
           }
-          stackIn_6_0 = eb.createLoginCredentials((String) (var6), var4_long, param1, param3, true);
+          stackIn_6_0 = PathWaypoint.createLoginCredentials((String) (var6), var4_long, param1, param3, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

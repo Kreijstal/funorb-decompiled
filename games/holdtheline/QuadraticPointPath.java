@@ -114,21 +114,21 @@ final class QuadraticPointPath extends PointPath {
         RuntimeException var6 = null;
         int var8 = 0;
         int var9 = 0;
-        ha var10 = null;
-        ha var11 = null;
-        ha var12 = null;
-        ha var13 = null;
-        ha var14 = null;
-        ha var15 = null;
+        BoundaryIntersection var10 = null;
+        BoundaryIntersection var11 = null;
+        BoundaryIntersection var12 = null;
+        BoundaryIntersection var13 = null;
+        BoundaryIntersection var14 = null;
+        BoundaryIntersection var15 = null;
         var9 = HoldTheLine.field_D;
         try {
           var8 = param1;
           if (var8 == 0) {
             if (param0 > param4) {
-              var11 = new ha(false, param4);
-              var10 = new ha(false, param0);
-              var11.field_s = var10;
-              var10.field_s = var11;
+              var11 = new BoundaryIntersection(false, param4);
+              var10 = new BoundaryIntersection(false, param0);
+              var11.paired = var10;
+              var10.paired = var11;
               param5.add(var11, (byte) 6);
               param5.add(var10, (byte) 6);
             }
@@ -136,18 +136,18 @@ final class QuadraticPointPath extends PointPath {
             if (var8 != 1) {
               if (var8 == 2 &&
                 param4 < param0) {
-                var15 = new ha(true, param4);
-                var14 = new ha(true, param0);
-                var15.field_s = var14;
-                var14.field_s = var15;
+                var15 = new BoundaryIntersection(true, param4);
+                var14 = new BoundaryIntersection(true, param0);
+                var15.paired = var14;
+                var14.paired = var15;
                 param2.add(var15, (byte) 6);
                 param2.add(var14, (byte) 6);
               }
             } else {
-              var13 = new ha(false, param4);
-              var12 = new ha(true, param0);
-              var13.field_s = var12;
-              var12.field_s = var13;
+              var13 = new BoundaryIntersection(false, param4);
+              var12 = new BoundaryIntersection(true, param0);
+              var13.paired = var12;
+              var12.paired = var13;
               param5.add(var13, (byte) 6);
               param2.add(var12, (byte) 6);
             }

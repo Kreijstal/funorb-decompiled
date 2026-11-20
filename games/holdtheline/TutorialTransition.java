@@ -84,13 +84,13 @@ final class TutorialTransition {
     }
 
     final static void a(int param0) {
-        tn.field_h[MidiPcmStream.field_F] = SoftwareRasterizer.field_b;
-        OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F] = SoftwareRasterizer.field_d;
-        dm.field_b[MidiPcmStream.field_F] = SoftwareRasterizer.field_e;
-        m.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.field_a;
-        NanoTickClock.field_n[MidiPcmStream.field_F] = SoftwareRasterizer.field_i;
-        TextFieldValidator.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.field_j;
-        ValidationHelpWidget.field_V[MidiPcmStream.field_F] = SoftwareRasterizer.field_c;
+        tn.field_h[MidiPcmStream.field_F] = SoftwareRasterizer.pixels;
+        OutlinedRoadStripRenderer.field_q[MidiPcmStream.field_F] = SoftwareRasterizer.clipLeft;
+        dm.field_b[MidiPcmStream.field_F] = SoftwareRasterizer.clipRight;
+        m.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.clipTop;
+        NanoTickClock.field_n[MidiPcmStream.field_F] = SoftwareRasterizer.clipBottom;
+        TextFieldValidator.field_c[MidiPcmStream.field_F] = SoftwareRasterizer.width;
+        ValidationHelpWidget.field_V[MidiPcmStream.field_F] = SoftwareRasterizer.height;
         MidiPcmStream.field_F = MidiPcmStream.field_F + 1;
         if (param0 != 32381) {
           field_e = 50;

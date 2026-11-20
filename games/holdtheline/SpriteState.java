@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SpriteState extends DualLinkNode {
-    int field_u;
-    int field_v;
+    int offsetX;
+    int canvasHeight;
     static ValidationState field_q;
     static int[] field_p;
-    int field_y;
-    int field_x;
-    int field_s;
+    int height;
+    int offsetY;
+    int width;
     static Sprite field_t;
     static int field_r;
     static String field_w;
-    int field_o;
+    int canvasWidth;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.field_o << 3;
+    final void drawRotatedCenteredNearest(int param0, int param1, int param2, int param3, int param4) {
+        int var6 = this.canvasWidth << 3;
         param3 = (param3 << 4) + (param0 & var6);
-        int var7 = this.field_v << 3;
+        int var7 = this.canvasHeight << 3;
         param4 = (param4 << 4) + (15 & var7);
-        this.a(var6, var7, param3, param4, param1, param2);
+        this.drawRotatedNearest(var6, var7, param3, param4, param1, param2);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRotatedNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     public static void clearSharedReferences(int param0) {
         field_q = null;

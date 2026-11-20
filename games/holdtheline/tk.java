@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tk {
-    static vk[][] field_c;
+    static CourseDefinition[][] field_c;
     NamedSoundEffect field_d;
     NamedSoundEffect field_e;
     static String field_b;
@@ -93,11 +93,11 @@ final class tk {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_c = (vk[][]) null;
+        field_c = (CourseDefinition[][]) null;
         field_a = null;
         field_b = null;
         if (param0 != -7689) {
-          field_c = (vk[][]) null;
+          field_c = (CourseDefinition[][]) null;
         }
     }
 

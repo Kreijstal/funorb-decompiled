@@ -90,14 +90,14 @@ final class ArchiveCatalog {
         }
         for (var2 = 0; this.field_i.length > var2; var2++) {
           if (null != this.field_i[var2]) {
-            this.field_i[var2].c(2);
+            this.field_i[var2].processQueuedPrefetch(2);
           }
         }
         var4 = 0;
         var2Lifetime1 = var4;
         while (var4 < this.field_i.length) {
           if (this.field_i[var4] != null) {
-            this.field_i[var4].b(2);
+            this.field_i[var4].processBackgroundRequests(2);
           }
           var4++;
         }
@@ -112,7 +112,7 @@ final class ArchiveCatalog {
         field_k = null;
     }
 
-    final static om a(int param0, byte param1) {
+    final static TrackObjectDefinition a(int param0, byte param1) {
         if (param1 != 17) {
           field_k = (SpriteAsset) null;
         }
@@ -129,12 +129,12 @@ final class ArchiveCatalog {
         if (param3 < -1) {
           throw new RuntimeException();
         }
-        if (ra.field_ab != param3 ||
+        if (LoadProgressDialog.field_ab != param3 ||
           SoundCache.field_b != param0) {
           DialogLayer.field_I = -1;
         }
         SoundCache.field_b = param0;
-        ra.field_ab = param3;
+        LoadProgressDialog.field_ab = param3;
     }
 
     final static void b(byte param0) {
@@ -241,7 +241,7 @@ final class ArchiveCatalog {
         if (this.field_c.field_u) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_c.i(-20324));
+        var10 = new PacketBuffer(this.field_c.getData(-20324));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) -40);
         var10.position = var10.position + var3 * 72;

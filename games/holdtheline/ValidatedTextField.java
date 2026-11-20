@@ -5,7 +5,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
     static NamedSoundEffect field_T;
     static int[] field_Y;
     private int field_V;
-    static ga field_X;
+    static UiTheme field_X;
     static String field_S;
     private Validator field_W;
     static int field_U;
@@ -41,7 +41,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
         try {
           this.field_W = param1;
           if (param0 <= 35) {
-            field_X = (ga) null;
+            field_X = (UiTheme) null;
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -78,7 +78,7 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
           return null;
         }
         if (null != this.tooltip) {
-          GrowableIntList.a(rf.field_X, param0, this.width - this.field_V + NodeHashTableIterator.field_g);
+          GrowableIntList.a(FullscreenErrorDialog.field_X, param0, this.width - this.field_V + NodeHashTableIterator.field_g);
           return this.tooltip;
         }
         return null;

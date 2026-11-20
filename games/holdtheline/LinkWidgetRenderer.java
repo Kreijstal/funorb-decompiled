@@ -15,8 +15,8 @@ final class LinkWidgetRenderer implements WidgetRenderer {
           if (!param2) {
             field_f = (String) null;
           }
-          param3.c(param1, param0 + 1, 1 + param4, 8, -1, 114);
-          param3.c(param1, param0, param4, param5, -1);
+          param3.drawRightAlignedAlpha(param1, param0 + 1, 1 + param4, 8, -1, 114);
+          param3.drawRightAligned(param1, param0, param4, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "am.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -80,10 +80,10 @@ final class LinkWidgetRenderer implements WidgetRenderer {
             stackIn_8_0 = 3249872;
           }
           var6_int = stackIn_8_0;
-          this.field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.text + "</u>", param3.x + param1, param3.y + param4, param3.width, param3.height, var6_int, -1, this.field_e, this.field_g, this.field_a.field_G + this.field_a.field_I);
+          this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.text + "</u>", param3.x + param1, param3.y + param4, param3.width, param3.height, var6_int, -1, this.field_e, this.field_g, this.field_a.ascent + this.field_a.descent);
           if (param3.isFocused((byte) -20)) {
-            var7 = this.field_a.a(param3.text);
-            var8 = this.field_a.field_I + this.field_a.field_G;
+            var7 = this.field_a.measureText(param3.text);
+            var8 = this.field_a.descent + this.field_a.ascent;
             var9 = param1 + param3.x;
             var10 = param4 + param3.y;
             if (this.field_e == 2) {

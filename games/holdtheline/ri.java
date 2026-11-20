@@ -82,7 +82,7 @@ final class ri {
         field_f[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = -8 + var0 * 8;
-            field_f[var0] = GameKeyHandler.a(GameKeyHandler.a(gh.a(65280L, field_g[6][var1 + 6]), GameKeyHandler.a(gh.a(16711680L, field_g[5][var1 + 5]), GameKeyHandler.a(gh.a(field_g[4][4 + var1], 4278190080L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(gh.a(field_g[1][1 + var1], 71776119061217280L), gh.a(field_g[0][var1], -72057594037927936L)), gh.a(field_g[2][2 + var1], 280375465082880L)), gh.a(1095216660480L, field_g[3][3 + var1]))))), gh.a(255L, field_g[7][7 + var1]));
+            field_f[var0] = GameKeyHandler.a(GameKeyHandler.a(ViewportSizingController.andLong(65280L, field_g[6][var1 + 6]), GameKeyHandler.a(ViewportSizingController.andLong(16711680L, field_g[5][var1 + 5]), GameKeyHandler.a(ViewportSizingController.andLong(field_g[4][4 + var1], 4278190080L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(ViewportSizingController.andLong(field_g[1][1 + var1], 71776119061217280L), ViewportSizingController.andLong(field_g[0][var1], -72057594037927936L)), ViewportSizingController.andLong(field_g[2][2 + var1], 280375465082880L)), ViewportSizingController.andLong(1095216660480L, field_g[3][3 + var1]))))), ViewportSizingController.andLong(255L, field_g[7][7 + var1]));
         }
         field_c = (RoadStripRenderer) ((Object) new ShadedRoadStripRenderer(7, 30.0f, new int[]{16711680, 16777215}));
         field_d = "Service unavailable";

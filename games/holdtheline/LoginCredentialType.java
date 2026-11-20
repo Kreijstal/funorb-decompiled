@@ -13,10 +13,10 @@ final class LoginCredentialType {
             RotatedSpriteAsset.field_k = SpriteSheetAsset.a((byte) -103, 4);
           }
           if (RotatedSpriteAsset.field_k.field_i) {
-            ti.field_z = RotatedSpriteAsset.field_k.field_m;
+            GameMenu.field_z = RotatedSpriteAsset.field_k.field_m;
             RotatedSpriteAsset.field_k = null;
             if (!ll.field_a) {
-              ClientException.field_c = ClientException.field_c & ~ti.field_z;
+              ClientException.field_c = ClientException.field_c & ~GameMenu.field_z;
             }
             ll.field_a = true;
           }

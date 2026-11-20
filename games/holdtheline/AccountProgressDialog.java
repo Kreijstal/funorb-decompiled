@@ -4,7 +4,7 @@
 class AccountProgressDialog extends ContentTransitionDialog implements ButtonActionListener {
     private boolean field_ob;
     static int field_pb;
-    private ea field_rb;
+    private StripedProgressBar field_rb;
     static int field_jb;
     private boolean field_mb;
     static int field_lb;
@@ -62,7 +62,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
     }
 
     final void o(int param0) {
-        this.field_rb.a(2121792, 4210752, false);
+        this.field_rb.setColors(2121792, 4210752, false);
         MessagePanel var2 = new MessagePanel(this, this.field_nb, DiskCacheStore.field_b);
         if (param0 <= -12) {
           var2.a(15, ge.field_d, (byte) 69);
@@ -79,8 +79,8 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           this.field_mb = false;
           this.field_kb = param3 ? true : false;
           this.field_nb = param1;
-          this.field_rb = new ea(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_rb.field_K = true;
+          this.field_rb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_rb.animating = true;
           this.a(true, this.field_rb);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -299,7 +299,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           this.field_mb = stackIn_7_1;
           stackIn_10_1 = (param0);
           this.field_qb = stackIn_10_1;
-          this.field_rb.a(8405024, 4210752, false);
+          this.field_rb.setColors(8405024, 4210752, false);
           var6 = new MessagePanel(this, this.field_nb, param1);
           var4 = var6;
           if (5 != param2) {

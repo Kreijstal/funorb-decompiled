@@ -42,8 +42,8 @@ final class RotatedSpriteCache {
         int[] var11;
         int[] var12;
         var9 = HoldTheLine.field_D;
-        var10 = this.field_b.e();
-        var12 = var10.field_z;
+        var10 = this.field_b.copy();
+        var12 = var10.pixels;
         var11 = var12;
         var4 = var11;
         var5 = param1 & 16711935;
@@ -116,7 +116,7 @@ final class RotatedSpriteCache {
         var14 = HoldTheLine.field_D;
         try {
           var5_int = 62 / ((param3 - 29) / 60);
-          var6 = param0.a(param1);
+          var6 = param0.measureText(param1);
           if (param4 >= var6 &&
             param1.indexOf("<br>") == -1) {
             param2[0] = param1;
@@ -133,7 +133,7 @@ final class RotatedSpriteCache {
             if (32 == var11 ||
               var11 == 45) {
               var12 = param1.substring(var8, 1 + var10).trim();
-              var13 = param0.a(var12);
+              var13 = param0.measureText(var12);
               if (param4 <= var13) {
                 var8 = var10 + 1;
                 incrementValue$1 = var7Lifetime1;
@@ -254,20 +254,20 @@ final class RotatedSpriteCache {
         int var3 = 40 % ((2 - param1) / 63);
         if (this.field_h[param0] != null) {
         } else {
-          var5 = this.field_b.field_o + this.field_b.field_v;
-          var4 = this.field_b.field_o + this.field_b.field_v;
+          var5 = this.field_b.canvasWidth + this.field_b.canvasHeight;
+          var4 = this.field_b.canvasWidth + this.field_b.canvasHeight;
           var6 = new Sprite(var4, var5);
           vb.a(-128, var6);
           if (this.field_d) {
-            this.field_b.a(15, 16384 + param0 * 1024, this.field_a, var4 >> 1, var5 >> 1);
+            this.field_b.drawRotatedCenteredNearest(15, 16384 + param0 * 1024, this.field_a, var4 >> 1, var5 >> 1);
           } else {
-            this.field_b.b(var4 >> 1, var5 >> 1, 16384 + param0 * 1024, this.field_a);
+            this.field_b.drawRotatedCentered(var4 >> 1, var5 >> 1, 16384 + param0 * 1024, this.field_a);
           }
           if (!this.field_j) {
-            var6.c();
+            var6.trimTransparentEdges();
           }
-          this.field_h[param0] = new Sprite(var6.field_s, var6.field_y);
-          this.field_h[param0].field_z = var6.field_z;
+          this.field_h[param0] = new Sprite(var6.width, var6.height);
+          this.field_h[param0].pixels = var6.pixels;
           MarkerSliderRenderer.restoreRasterTarget(-1);
         }
         return this.field_h[param0];

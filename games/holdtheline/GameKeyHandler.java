@@ -62,11 +62,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         var10 = HoldTheLine.field_D;
         try {
           if (MidiKeyUsage.field_i != null &&
-            MidiKeyUsage.field_i.b((byte) -123) &&
-            MidiKeyUsage.field_i.b("benefits", 108) &&
+            MidiKeyUsage.field_i.ensureIndexLoaded((byte) -123) &&
+            MidiKeyUsage.field_i.tryLoadNamedGroup("benefits", 108) &&
             null != UiWidget.field_w &&
-            UiWidget.field_w.b((byte) -95) &&
-            UiWidget.field_w.b("benefits", -114)) {
+            UiWidget.field_w.ensureIndexLoaded((byte) -95) &&
+            UiWidget.field_w.tryLoadNamedGroup("benefits", -114)) {
             NamedSoundEffect.field_s = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "headline");
             IterableNodeHashTable.field_k = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "blurbpane");
             eg.field_c = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "button");
@@ -76,57 +76,57 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             nl.field_i = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "arrow");
             tk.field_a = (BitmapFont) ((Object) MusicPatch.a("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "large_font"));
             GzipDecompressor.field_e = (BitmapFont) ((Object) MusicPatch.a("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "small_font"));
-            var28 = SoftwareRasterizer.field_b;
-            var2 = SoftwareRasterizer.field_j;
-            var3 = SoftwareRasterizer.field_c;
-            SoftwareRasterizer.b(ValidationHelpWidget.field_R);
-            var11 = new Sprite(nl.field_i.field_s + 4, 4 + nl.field_i.field_y);
-            var11.f();
-            nl.field_i.c(2, 2, t.field_n);
-            EmailLoginCredentials.a(2, var11.field_y, var11.field_s, var11, 0, 0, 1, -24983);
+            var28 = SoftwareRasterizer.pixels;
+            var2 = SoftwareRasterizer.width;
+            var3 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
+            var11 = new Sprite(nl.field_i.width + 4, 4 + nl.field_i.height);
+            var11.bindRaster();
+            nl.field_i.drawTinted(2, 2, t.field_n);
+            EmailLoginCredentials.a(2, var11.height, var11.width, var11, 0, 0, 1, -24983);
             nl.field_i = var11;
-            NetworkGameClient.field_m = nl.field_i.d();
+            NetworkGameClient.field_m = nl.field_i.flippedHorizontally();
             var12 = new Sprite(195, 221);
-            var6 = var12.field_s / 2;
-            var12.f();
-            tk.field_a.b(LoginCredentials.substituteIndexedTokens(NetworkArchiveRequest.field_v, new String[]{ec.field_z}, true), var6, 40, 16777215, -1);
-            GzipDecompressor.field_e.b(LoginCredentials.substituteIndexedTokens(fb.field_l, new String[]{ec.field_z}, true), var6, 60, 16777215, -1);
-            tk.field_a.b(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{jk.field_r}, true), var6, 110, 16777215, -1);
-            GzipDecompressor.field_e.b(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{jk.field_r}, true), var6, 130, 16777215, -1);
-            tk.field_a.b(jg.field_q, var6, 180, 16777215, -1);
-            GzipDecompressor.field_e.b(fi.field_jb, var6, 200, 16777215, -1);
-            EmailLoginCredentials.a(3, var12.field_y, var12.field_s, var12, 0, 0, 1, -24983);
-            IterableNodeHashTable.field_k.f();
-            var12.a(-IterableNodeHashTable.field_k.field_u + 18, 241 - IterableNodeHashTable.field_k.field_x);
+            var6 = var12.width / 2;
+            var12.bindRaster();
+            tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(NetworkArchiveRequest.field_v, new String[]{RaceSetupMenu.field_z}, true), var6, 40, 16777215, -1);
+            GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(fb.field_l, new String[]{RaceSetupMenu.field_z}, true), var6, 60, 16777215, -1);
+            tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{jk.field_r}, true), var6, 110, 16777215, -1);
+            GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{jk.field_r}, true), var6, 130, 16777215, -1);
+            tk.field_a.drawCentered(jg.field_q, var6, 180, 16777215, -1);
+            GzipDecompressor.field_e.drawCentered(fi.field_jb, var6, 200, 16777215, -1);
+            EmailLoginCredentials.a(3, var12.height, var12.width, var12, 0, 0, 1, -24983);
+            IterableNodeHashTable.field_k.bindRaster();
+            var12.draw(-IterableNodeHashTable.field_k.offsetX + 18, 241 - IterableNodeHashTable.field_k.offsetY);
             for (var7 = 0; qh.field_b.length > var7; var7++) {
-              TextLineLayout.field_a[var7].f();
-              GzipDecompressor.field_e.a(qh.field_b[var7], 3, 3, TextLineLayout.field_a[var7].field_s - 6, -6 + TextLineLayout.field_a[var7].field_y, t.field_n, -1, 1, 1, GzipDecompressor.field_e.field_I + GzipDecompressor.field_e.field_G);
-              EmailLoginCredentials.a(3, TextLineLayout.field_a[var7].field_y, TextLineLayout.field_a[var7].field_s, TextLineLayout.field_a[var7], 0, 0, 1, -24983);
+              TextLineLayout.field_a[var7].bindRaster();
+              GzipDecompressor.field_e.drawParagraph(qh.field_b[var7], 3, 3, TextLineLayout.field_a[var7].width - 6, -6 + TextLineLayout.field_a[var7].height, t.field_n, -1, 1, 1, GzipDecompressor.field_e.descent + GzipDecompressor.field_e.ascent);
+              EmailLoginCredentials.a(3, TextLineLayout.field_a[var7].height, TextLineLayout.field_a[var7].width, TextLineLayout.field_a[var7], 0, 0, 1, -24983);
             }
             qh.field_b = null;
-            CheckboxRenderer.field_m = IntrusiveNode.field_d.e();
-            CheckboxRenderer.field_m.f();
-            NanoTickClock.a(255, SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_c / 3, 0, 0, 64);
-            SoftwareRasterizer.a(var28, var2, var3);
-            SoftwareRasterizer.a(ValidationHelpWidget.field_R);
-            Point2i.field_b = (eg.field_c.field_s - NodeHashTableIterator.field_h.field_s) / 2 + 231;
-            LoginChoicePanel.field_L = 390 + (eg.field_c.field_y - NodeHashTableIterator.field_h.field_y) / 2;
-            LoginForm.field_J = 434 + (-NodeHashTableIterator.field_h.field_s + eg.field_c.field_s) / 2;
+            CheckboxRenderer.field_m = IntrusiveNode.field_d.copy();
+            CheckboxRenderer.field_m.bindRaster();
+            NanoTickClock.a(255, SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 0, 0, 64);
+            SoftwareRasterizer.bindRaster(var28, var2, var3);
+            SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
+            Point2i.field_b = (eg.field_c.width - NodeHashTableIterator.field_h.width) / 2 + 231;
+            LoginChoicePanel.field_L = 390 + (eg.field_c.height - NodeHashTableIterator.field_h.height) / 2;
+            LoginForm.field_J = 434 + (-NodeHashTableIterator.field_h.width + eg.field_c.width) / 2;
             MidiKeyUsage.field_i = null;
-            ShadedRoadStripRenderer.field_t = (eg.field_c.field_y - NodeHashTableIterator.field_h.field_y) / 2 + 390;
+            ShadedRoadStripRenderer.field_t = (eg.field_c.height - NodeHashTableIterator.field_h.height) / 2 + 390;
           }
           if (TextLineLayout.field_e == null) {
             return;
           }
           if (null != IsaacRandom.field_a &&
             null != tk.field_a) {
-            var29 = SoftwareRasterizer.field_b;
-            var2Lifetime1 = SoftwareRasterizer.field_j;
-            var3Lifetime1 = SoftwareRasterizer.field_c;
-            SoftwareRasterizer.b(ValidationHelpWidget.field_R);
+            var29 = SoftwareRasterizer.pixels;
+            var2Lifetime1 = SoftwareRasterizer.width;
+            var3Lifetime1 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
             var14 = LoginCredentials.substituteIndexedTokens(CheckboxRenderer.field_d, new String[]{TextLineLayout.field_i[ShadedRoadStripRenderer.field_r]}, true);
-            var5 = tk.field_a.b(var14, vb.field_d);
-            var6Lifetime1 = tk.field_a.b(var14, vb.field_d, tk.field_a.field_G + tk.field_a.field_I);
+            var5 = tk.field_a.getParagraphWidth(var14, vb.field_d);
+            var6Lifetime1 = tk.field_a.getParagraphHeight(var14, vb.field_d, tk.field_a.ascent + tk.field_a.descent);
             var7Lifetime1 = ih.field_m + (vb.field_d - var5) / 2;
             var8 = cd.field_b + (-var6Lifetime1 + mj.field_a) / 2;
             var7Lifetime1 -= 3;
@@ -137,113 +137,113 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               ih.field_m = ih.field_m + var9_int;
               EmailLoginCredentials.field_e = EmailLoginCredentials.field_e - var9_int;
               var5 = var5 + 2 * var9_int;
-              IsaacRandom.field_a.field_u = IsaacRandom.field_a.field_u + var9_int;
-              IsaacRandom.field_a.field_o = IsaacRandom.field_a.field_o + var9_int * 2;
+              IsaacRandom.field_a.offsetX = IsaacRandom.field_a.offsetX + var9_int;
+              IsaacRandom.field_a.canvasWidth = IsaacRandom.field_a.canvasWidth + var9_int * 2;
               var7Lifetime1 = var7Lifetime1 + var9_int;
             }
             var8 -= 3;
-            if (IsaacRandom.field_a.field_o < var7Lifetime1 + var5) {
-              var9_intLifetime1 = var5 + var7Lifetime1 - IsaacRandom.field_a.field_o;
+            if (IsaacRandom.field_a.canvasWidth < var7Lifetime1 + var5) {
+              var9_intLifetime1 = var5 + var7Lifetime1 - IsaacRandom.field_a.canvasWidth;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               EmailLoginCredentials.field_e = EmailLoginCredentials.field_e - var9_intLifetime1;
               var5 = var5 + 2 * var9_intLifetime1;
               ih.field_m = ih.field_m + var9_intLifetime1;
-              IsaacRandom.field_a.field_u = IsaacRandom.field_a.field_u + var9_intLifetime1;
-              IsaacRandom.field_a.field_o = IsaacRandom.field_a.field_o + var9_intLifetime1 * 2;
+              IsaacRandom.field_a.offsetX = IsaacRandom.field_a.offsetX + var9_intLifetime1;
+              IsaacRandom.field_a.canvasWidth = IsaacRandom.field_a.canvasWidth + var9_intLifetime1 * 2;
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
               AccountTermsPanel.field_G = AccountTermsPanel.field_G - var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
-              IsaacRandom.field_a.field_x = IsaacRandom.field_a.field_x + var9_intLifetime2;
-              IsaacRandom.field_a.field_v = IsaacRandom.field_a.field_v + 2 * var9_intLifetime2;
+              IsaacRandom.field_a.offsetY = IsaacRandom.field_a.offsetY + var9_intLifetime2;
+              IsaacRandom.field_a.canvasHeight = IsaacRandom.field_a.canvasHeight + 2 * var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
               cd.field_b = cd.field_b + var9_intLifetime2;
             }
-            if (IsaacRandom.field_a.field_v < var8 + var6Lifetime1) {
-              var9_intLifetime3 = var8 + var6Lifetime1 - IsaacRandom.field_a.field_v;
+            if (IsaacRandom.field_a.canvasHeight < var8 + var6Lifetime1) {
+              var9_intLifetime3 = var8 + var6Lifetime1 - IsaacRandom.field_a.canvasHeight;
               AccountTermsPanel.field_G = AccountTermsPanel.field_G - var9_intLifetime3;
               cd.field_b = cd.field_b + var9_intLifetime3;
-              IsaacRandom.field_a.field_v = IsaacRandom.field_a.field_v + 2 * var9_intLifetime3;
+              IsaacRandom.field_a.canvasHeight = IsaacRandom.field_a.canvasHeight + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
-              IsaacRandom.field_a.field_x = IsaacRandom.field_a.field_x + var9_intLifetime3;
+              IsaacRandom.field_a.offsetY = IsaacRandom.field_a.offsetY + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
             }
-            IsaacRandom.field_a.a();
-            var9 = new Sprite(IsaacRandom.field_a.field_o, IsaacRandom.field_a.field_v);
-            var9.f();
-            tk.field_a.a(var14, ih.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.field_I + tk.field_a.field_G);
-            EmailLoginCredentials.a(3, var9.field_v, var9.field_o, var9, 0, 0, 1, -24983);
-            IsaacRandom.field_a.f();
-            var9.a(0, 0);
+            IsaacRandom.field_a.expandToCanvas();
+            var9 = new Sprite(IsaacRandom.field_a.canvasWidth, IsaacRandom.field_a.canvasHeight);
+            var9.bindRaster();
+            tk.field_a.drawParagraph(var14, ih.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.descent + tk.field_a.ascent);
+            EmailLoginCredentials.a(3, var9.canvasHeight, var9.canvasWidth, var9, 0, 0, 1, -24983);
+            IsaacRandom.field_a.bindRaster();
+            var9.draw(0, 0);
             na.field_t = new Sprite(640, 480);
-            na.field_t.f();
-            IsaacRandom.field_a.b((IsaacRandom.field_a.field_o >> 1) + EmailLoginCredentials.field_e, AccountTermsPanel.field_G + (IsaacRandom.field_a.field_v >> 1), ValidationHelpWidget.field_W, 4096);
+            na.field_t.bindRaster();
+            IsaacRandom.field_a.drawRotatedCentered((IsaacRandom.field_a.canvasWidth >> 1) + EmailLoginCredentials.field_e, AccountTermsPanel.field_G + (IsaacRandom.field_a.canvasHeight >> 1), ValidationHelpWidget.field_W, 4096);
             IsaacRandom.field_a = null;
-            na.field_t.c();
-            SoftwareRasterizer.a(var29, var2Lifetime1, var3Lifetime1);
-            SoftwareRasterizer.a(ValidationHelpWidget.field_R);
+            na.field_t.trimTransparentEdges();
+            SoftwareRasterizer.bindRaster(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
           }
           if (UrlPacketDownloader.field_j != null &&
             GzipDecompressor.field_e != null) {
-            var30 = SoftwareRasterizer.field_b;
-            var2Lifetime2 = SoftwareRasterizer.field_j;
-            var3Lifetime2 = SoftwareRasterizer.field_c;
-            SoftwareRasterizer.b(ValidationHelpWidget.field_R);
+            var30 = SoftwareRasterizer.pixels;
+            var2Lifetime2 = SoftwareRasterizer.width;
+            var3Lifetime2 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
             var16 = new Sprite(412, 43);
             var17 = LoginCredentials.substituteIndexedTokens(gk.field_a, new String[]{UrlPacketDownloader.field_j}, true);
             UrlPacketDownloader.field_j = null;
-            var16.f();
-            GzipDecompressor.field_e.a(var17, 3, 3, var16.field_s - 6, -6 + var16.field_y, 16777215, -1, 0, 1, GzipDecompressor.field_e.field_G + GzipDecompressor.field_e.field_I);
-            EmailLoginCredentials.a(3, var16.field_y, var16.field_s, var16, 0, 0, 1, -24983);
-            TextLineLayout.field_e.f();
-            var16.a(199 - TextLineLayout.field_e.field_u, 83 - TextLineLayout.field_e.field_x);
-            SoftwareRasterizer.a(var30, var2Lifetime2, var3Lifetime2);
-            SoftwareRasterizer.a(ValidationHelpWidget.field_R);
+            var16.bindRaster();
+            GzipDecompressor.field_e.drawParagraph(var17, 3, 3, var16.width - 6, -6 + var16.height, 16777215, -1, 0, 1, GzipDecompressor.field_e.ascent + GzipDecompressor.field_e.descent);
+            EmailLoginCredentials.a(3, var16.height, var16.width, var16, 0, 0, 1, -24983);
+            TextLineLayout.field_e.bindRaster();
+            var16.draw(199 - TextLineLayout.field_e.offsetX, 83 - TextLineLayout.field_e.offsetY);
+            SoftwareRasterizer.bindRaster(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
           }
-          if (gm.field_b != null &&
+          if (IconToggleRenderer.field_b != null &&
             null != GzipDecompressor.field_e) {
-            var31 = SoftwareRasterizer.field_b;
-            var2Lifetime3 = SoftwareRasterizer.field_j;
-            var3Lifetime3 = SoftwareRasterizer.field_c;
-            SoftwareRasterizer.b(ValidationHelpWidget.field_R);
-            var4 = GzipDecompressor.field_e.b(ValidatedTextField.field_S, 640) + 6;
-            var5Lifetime1 = gm.field_b.field_o + var4 + 20;
+            var31 = SoftwareRasterizer.pixels;
+            var2Lifetime3 = SoftwareRasterizer.width;
+            var3Lifetime3 = SoftwareRasterizer.height;
+            SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
+            var4 = GzipDecompressor.field_e.getParagraphWidth(ValidatedTextField.field_S, 640) + 6;
+            var5Lifetime1 = IconToggleRenderer.field_b.canvasWidth + var4 + 20;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
-            var7Lifetime2 = var6Lifetime2 + (gm.field_b.field_o + 20);
-            TextLineLayout.field_e.f();
-            GzipDecompressor.field_e.a(ValidatedTextField.field_S, -TextLineLayout.field_e.field_u + var7Lifetime2, GzipDecompressor.field_e.field_I + (GzipDecompressor.field_e.field_G + 155 - TextLineLayout.field_e.field_x), 16777215, -1);
-            EmailLoginCredentials.a(3, 50, var4, TextLineLayout.field_e, 155 - TextLineLayout.field_e.field_x, -TextLineLayout.field_e.field_u + (var7Lifetime2 - 4), 1, -24983);
-            var8Lifetime1 = -((-3 + gm.field_b.field_v + (-GzipDecompressor.field_e.field_G - GzipDecompressor.field_e.field_I)) / 2) - TextLineLayout.field_e.field_x + 155;
-            gm.field_b.a(-TextLineLayout.field_e.field_u + var6Lifetime2, var8Lifetime1);
-            SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
-            SoftwareRasterizer.a(ValidationHelpWidget.field_R);
-            gm.field_b = null;
+            var7Lifetime2 = var6Lifetime2 + (IconToggleRenderer.field_b.canvasWidth + 20);
+            TextLineLayout.field_e.bindRaster();
+            GzipDecompressor.field_e.draw(ValidatedTextField.field_S, -TextLineLayout.field_e.offsetX + var7Lifetime2, GzipDecompressor.field_e.descent + (GzipDecompressor.field_e.ascent + 155 - TextLineLayout.field_e.offsetY), 16777215, -1);
+            EmailLoginCredentials.a(3, 50, var4, TextLineLayout.field_e, 155 - TextLineLayout.field_e.offsetY, -TextLineLayout.field_e.offsetX + (var7Lifetime2 - 4), 1, -24983);
+            var8Lifetime1 = -((-3 + IconToggleRenderer.field_b.canvasHeight + (-GzipDecompressor.field_e.ascent - GzipDecompressor.field_e.descent)) / 2) - TextLineLayout.field_e.offsetY + 155;
+            IconToggleRenderer.field_b.draw(-TextLineLayout.field_e.offsetX + var6Lifetime2, var8Lifetime1);
+            SoftwareRasterizer.bindRaster(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
+            IconToggleRenderer.field_b = null;
           }
-          SoftwareRasterizer.b(ValidationHelpWidget.field_R);
-          SoftwareRasterizer.a(16, 16, 608, 112, 15, SecondaryNodeDeque.field_g, SocketConnector.field_b);
-          SoftwareRasterizer.a(231, 144, 393, 232, 15, SecondaryNodeDeque.field_g, SocketConnector.field_b);
+          SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, SecondaryNodeDeque.field_g, SocketConnector.field_b);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, SecondaryNodeDeque.field_g, SocketConnector.field_b);
           if (param0 <= 25) {
             GameKeyHandler.a((byte) -48);
           }
           if (NamedSoundEffect.field_s != null) {
-            NamedSoundEffect.field_s.a(0, 0);
+            NamedSoundEffect.field_s.draw(0, 0);
           }
           if (null != IterableNodeHashTable.field_k) {
-            IterableNodeHashTable.field_k.a(0, 0);
+            IterableNodeHashTable.field_k.draw(0, 0);
           }
-          TextLineLayout.field_e.a(0, 0);
+          TextLineLayout.field_e.draw(0, 0);
           if (null != na.field_t) {
-            na.field_t.a(0, 0);
+            na.field_t.draw(0, 0);
           }
           if (null != eg.field_c &&
             NodeHashTableIterator.field_h != null) {
-            eg.field_c.a(231, 390);
+            eg.field_c.draw(231, 390);
             var1 = IntrusiveNode.field_d;
             if (DualLinkNode.field_k.field_g == 0) {
               var1 = CheckboxRenderer.field_m;
             }
-            var1.a(0, 0);
+            var1.draw(0, 0);
             stackIn_54_0 = AccountFormText.field_b;
             if (DualLinkNode.field_k.field_g == 0) {
               stackIn_55_1 = 4;
@@ -252,14 +252,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             var2Lifetime4 = (QuadraticPointPath.a(stackIn_54_0 << stackIn_55_1, 2) * 40 >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              eg.field_c.b(230, 389, var2Lifetime4);
-              eg.field_c.b(232, 389, var2Lifetime4);
-              eg.field_c.b(232, 391, var2Lifetime4);
-              eg.field_c.b(230, 391, var2Lifetime4);
-              var1.b(1, 1, var2Lifetime4);
-              var1.b(-1, 1, var2Lifetime4);
-              var1.b(1, -1, var2Lifetime4);
-              var1.b(-1, -1, var2Lifetime4);
+              eg.field_c.drawAdditive(230, 389, var2Lifetime4);
+              eg.field_c.drawAdditive(232, 389, var2Lifetime4);
+              eg.field_c.drawAdditive(232, 391, var2Lifetime4);
+              eg.field_c.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_60_0 = 80;
             stackIn_60_1 = Point2i.field_b;
@@ -269,10 +269,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (eg.field_c != null &&
             null != NodeHashTableIterator.field_h) {
-            eg.field_c.a(434, 390);
-            mn.field_c.a(0, 0);
+            eg.field_c.draw(434, 390);
+            mn.field_c.draw(0, 0);
             if (1 == DualLinkNode.field_k.field_g) {
-              NanoTickClock.a(255, eg.field_c.field_s - 4, 7 * eg.field_c.field_y / 12, 392, 436, 64);
+              NanoTickClock.a(255, eg.field_c.width - 4, 7 * eg.field_c.height / 12, 392, 436, 64);
             }
             stackIn_69_0 = 80;
             stackIn_69_1 = LoginForm.field_J;
@@ -281,37 +281,37 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             b.a(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_70_3);
           }
           if (nl.field_i != null) {
-            var1_int = 357 - nl.field_i.field_v / 2;
-            nl.field_i.a(269 - nl.field_i.field_o, var1_int);
-            NetworkGameClient.field_m.a(586, var1_int);
-            if (rf.field_X > var1_int &&
-              nl.field_i.field_y + var1_int > rf.field_X) {
+            var1_int = 357 - nl.field_i.canvasHeight / 2;
+            nl.field_i.draw(269 - nl.field_i.canvasWidth, var1_int);
+            NetworkGameClient.field_m.draw(586, var1_int);
+            if (FullscreenErrorDialog.field_X > var1_int &&
+              nl.field_i.height + var1_int > FullscreenErrorDialog.field_X) {
               var2Lifetime5 = (QuadraticPointPath.a(AccountFormText.field_b << 4, 2) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (NodeHashTableIterator.field_g > 269 - nl.field_i.field_s &&
+                if (NodeHashTableIterator.field_g > 269 - nl.field_i.width &&
                   NodeHashTableIterator.field_g < 269) {
-                  nl.field_i.b(-1 + (269 - nl.field_i.field_o), -1 + var1_int, var2Lifetime5);
-                  nl.field_i.b(1 + (269 - nl.field_i.field_o), var1_int - 1, var2Lifetime5);
-                  nl.field_i.b(-1 + (269 - nl.field_i.field_o), 1 + var1_int, var2Lifetime5);
-                  nl.field_i.b(269 + (-nl.field_i.field_o + 1), 1 + var1_int, var2Lifetime5);
+                  nl.field_i.drawAdditive(-1 + (269 - nl.field_i.canvasWidth), -1 + var1_int, var2Lifetime5);
+                  nl.field_i.drawAdditive(1 + (269 - nl.field_i.canvasWidth), var1_int - 1, var2Lifetime5);
+                  nl.field_i.drawAdditive(-1 + (269 - nl.field_i.canvasWidth), 1 + var1_int, var2Lifetime5);
+                  nl.field_i.drawAdditive(269 + (-nl.field_i.canvasWidth + 1), 1 + var1_int, var2Lifetime5);
                 } else {
                   if (NodeHashTableIterator.field_g > 586) {
-                    if (NodeHashTableIterator.field_g >= 586 + nl.field_i.field_s) {
+                    if (NodeHashTableIterator.field_g >= 586 + nl.field_i.width) {
                       uk.a(3979);
-                      TextLineLayout.field_a[SpriteSheetAsset.field_e].a(269, 340);
+                      TextLineLayout.field_a[SpriteSheetAsset.field_e].draw(269, 340);
                       return;
                     }
-                    NetworkGameClient.field_m.b(585, -1 + var1_int, var2Lifetime5);
-                    NetworkGameClient.field_m.b(587, -1 + var1_int, var2Lifetime5);
-                    NetworkGameClient.field_m.b(585, 1 + var1_int, var2Lifetime5);
-                    NetworkGameClient.field_m.b(587, var1_int + 1, var2Lifetime5);
+                    NetworkGameClient.field_m.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                    NetworkGameClient.field_m.drawAdditive(587, -1 + var1_int, var2Lifetime5);
+                    NetworkGameClient.field_m.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                    NetworkGameClient.field_m.drawAdditive(587, var1_int + 1, var2Lifetime5);
                   }
                 }
               }
             }
           }
           uk.a(3979);
-          TextLineLayout.field_a[SpriteSheetAsset.field_e].a(269, 340);
+          TextLineLayout.field_a[SpriteSheetAsset.field_e].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -530,7 +530,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         return (java.applet.Applet) ((Object) vf.field_j);
     }
 
-    final static void a(int param0, hd[] param1, int param2) {
+    final static void a(int param0, SortableValue[] param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

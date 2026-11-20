@@ -68,10 +68,10 @@ abstract class ArchiveRequest extends DualLinkNode {
     }
 
     final static void h(int param0) {
-        if (null != ec.field_D && (EmailValidationResult.field_d == null ||
+        if (null != RaceSetupMenu.field_D && (EmailValidationResult.field_d == null ||
           !ai.field_a.a(-54, EmailValidationResult.field_d))) {
-          ResourceArchive.a(true, ec.field_D, (byte) 69, 30);
-          ec.field_D = null;
+          ResourceArchive.playMusicTrack(true, RaceSetupMenu.field_D, (byte) 69, 30);
+          RaceSetupMenu.field_D = null;
           EmailValidationResult.field_d = null;
         }
         if (param0 != -11875) {
@@ -88,9 +88,9 @@ abstract class ArchiveRequest extends DualLinkNode {
         field_p = null;
     }
 
-    abstract int g(int param0);
+    abstract int getProgress(int param0);
 
-    abstract byte[] i(int param0);
+    abstract byte[] getData(int param0);
 
     final static boolean a(Point2i param0, int param1, Point2i param2, int param3, Vector2f param4, int param5, int param6) {
         RuntimeException var7 = null;

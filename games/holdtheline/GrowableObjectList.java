@@ -88,8 +88,8 @@ final class GrowableObjectList {
 
     final static void a(int param0, int param1, String param2, int param3, int param4, PaletteBitmapFont param5) {
         try {
-          param5.b(param2, 1 + param0, param4 + param1, 8, -1, 114);
-          param5.a(param2, param0, param4, param3, -1);
+          param5.drawAlpha(param2, 1 + param0, param4 + param1, 8, -1, 114);
+          param5.draw(param2, param0, param4, param3, -1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ei.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -124,79 +124,79 @@ final class GrowableObjectList {
             return;
           }
           var6 = param0 + param3;
-          if (param2 <= SoftwareRasterizer.field_d) {
-            stackIn_6_0 = SoftwareRasterizer.field_d;
+          if (param2 <= SoftwareRasterizer.clipLeft) {
+            stackIn_6_0 = SoftwareRasterizer.clipLeft;
           } else {
             stackIn_6_0 = param2;
           }
           var7 = stackIn_6_0;
-          if (param3 > SoftwareRasterizer.field_a) {
+          if (param3 > SoftwareRasterizer.clipTop) {
             stackIn_9_0 = param3;
           } else {
-            stackIn_9_0 = SoftwareRasterizer.field_a;
+            stackIn_9_0 = SoftwareRasterizer.clipTop;
           }
           var8 = stackIn_9_0;
-          if (var5_int >= SoftwareRasterizer.field_e) {
-            stackIn_12_0 = SoftwareRasterizer.field_e;
+          if (var5_int >= SoftwareRasterizer.clipRight) {
+            stackIn_12_0 = SoftwareRasterizer.clipRight;
           } else {
             stackIn_12_0 = var5_int;
           }
           var9 = stackIn_12_0;
-          if (var6 < SoftwareRasterizer.field_i) {
+          if (var6 < SoftwareRasterizer.clipBottom) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = SoftwareRasterizer.field_i;
+            stackIn_15_0 = SoftwareRasterizer.clipBottom;
           }
           var10 = stackIn_15_0;
-          if (param2 >= SoftwareRasterizer.field_d &&
-            param2 < SoftwareRasterizer.field_e) {
-            var11 = param2 + SoftwareRasterizer.field_j * var8;
+          if (param2 >= SoftwareRasterizer.clipLeft &&
+            param2 < SoftwareRasterizer.clipRight) {
+            var11 = param2 + SoftwareRasterizer.width * var8;
             var12 = -var8 + (1 + var10) >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              SoftwareRasterizer.field_b[var11] = 16777215;
-              var11 = var11 + 2 * SoftwareRasterizer.field_j;
+              SoftwareRasterizer.pixels[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRasterizer.width;
             }
           }
-          if (SoftwareRasterizer.field_a <= param3 &&
-            var6 < SoftwareRasterizer.field_i) {
-            var11Lifetime1 = SoftwareRasterizer.field_j * param3 + var7;
+          if (SoftwareRasterizer.clipTop <= param3 &&
+            var6 < SoftwareRasterizer.clipBottom) {
+            var11Lifetime1 = SoftwareRasterizer.width * param3 + var7;
             var12Lifetime1 = -var7 + (var9 + 1) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              SoftwareRasterizer.field_b[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.pixels[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= SoftwareRasterizer.field_d &&
-            SoftwareRasterizer.field_e > var5_int) {
-            var11Lifetime2 = var5_int + SoftwareRasterizer.field_j * (var8 + (1 & var5_int - param2));
+          if (var5_int >= SoftwareRasterizer.clipLeft &&
+            SoftwareRasterizer.clipRight > var5_int) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.width * (var8 + (1 & var5_int - param2));
             var12Lifetime2 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              SoftwareRasterizer.field_b[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_j * 2;
+              SoftwareRasterizer.pixels[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.width * 2;
             }
           }
-          if (SoftwareRasterizer.field_a <= param3 &&
-            SoftwareRasterizer.field_i > var6) {
-            var11Lifetime3 = var7 + (SoftwareRasterizer.field_j * var6 + (var6 - param3 & 1));
+          if (SoftwareRasterizer.clipTop <= param3 &&
+            SoftwareRasterizer.clipBottom > var6) {
+            var11Lifetime3 = var7 + (SoftwareRasterizer.width * var6 + (var6 - param3 & 1));
             var12Lifetime3 = 1 - (-var9 + var7) >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              SoftwareRasterizer.field_b[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.pixels[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -215,7 +215,7 @@ final class GrowableObjectList {
           ((boolean[]) (this.elements[23]))[18] = false;
         }
         for (var2 = 1; var2 < this.size; var2++) {
-          this.insertIntoSortedPrefix((byte) -108, (hd) (this.elements[var2]), var2);
+          this.insertIntoSortedPrefix((byte) -108, (SortableValue) (this.elements[var2]), var2);
         }
     }
 
@@ -232,7 +232,7 @@ final class GrowableObjectList {
         }
     }
 
-    private final void insertIntoSortedPrefix(byte param0, hd param1, int param2) {
+    private final void insertIntoSortedPrefix(byte param0, SortableValue param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -246,7 +246,7 @@ final class GrowableObjectList {
             this.elements = (Object[]) null;
           }
           for (var4_int = param2 - 1; 0 <= var4_int; var4_int--) {
-            if (((hd) (this.elements[var4_int])).a((byte) -101, param1) < 0) {
+            if (((SortableValue) (this.elements[var4_int])).compareTo((byte) -101, param1) < 0) {
               this.elements[1 + var4_int] = param1;
               return;
             }

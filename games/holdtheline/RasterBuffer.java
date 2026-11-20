@@ -24,8 +24,8 @@ abstract class RasterBuffer {
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static boolean a(vk param0, int param1) {
-        vk stackIn_95_0 = null;
+    final static boolean a(CourseDefinition param0, int param1) {
+        CourseDefinition stackIn_95_0 = null;
         RuntimeException stackIn_105_0 = null;
         StringBuilder stackIn_105_1 = null;
         String stackIn_106_2 = null;
@@ -69,9 +69,9 @@ abstract class RasterBuffer {
             var3_refLifetime1 = (wm) (param0.field_k.first((byte) 101));
             while (true) {
               if (var3_refLifetime1 == null) {
-                param0.field_j = new om[var6.size];
+                param0.field_j = new TrackObjectDefinition[var6.size];
                 for (var4Lifetime1 = 0; var6.size > var4Lifetime1; var4Lifetime1++) {
-                  param0.field_j[var4Lifetime1] = (om) (var6.elements[var4Lifetime1]);
+                  param0.field_j[var4Lifetime1] = (TrackObjectDefinition) (var6.elements[var4Lifetime1]);
                 }
                 param0.field_n = 0;
                 break;
@@ -99,7 +99,7 @@ abstract class RasterBuffer {
                     boolean decompiledFrameRemainder0 = true;
                     if (param0.field_o != 4) {
                       if (param0.field_o == 5) {
-                        if (null == ha.field_i.getSprite(8192)) {
+                        if (null == BoundaryIntersection.field_i.getSprite(8192)) {
                           return false;
                         }
                         if (null == kc.field_b.getSprite(8192)) {
@@ -117,7 +117,7 @@ abstract class RasterBuffer {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        stackIn_95_0 = (vk) (param0);
+                        stackIn_95_0 = (CourseDefinition) (param0);
                         break regionExit1;
                       }
                     }
@@ -125,11 +125,11 @@ abstract class RasterBuffer {
                       if (MarkerSliderRenderer.field_b.getSprite(8192) == null) {
                         return false;
                       }
-                      if (ha.field_i.getSprite(8192) == null) {
+                      if (BoundaryIntersection.field_i.getSprite(8192) == null) {
                         return false;
                       }
                     }
-                    stackIn_95_0 = (vk) (param0);
+                    stackIn_95_0 = (CourseDefinition) (param0);
                     break regionExit1;
                   }
                   if (null == kc.field_b.getSprite(8192)) {
@@ -146,7 +146,7 @@ abstract class RasterBuffer {
                     return false;
                   }
                 }
-                stackIn_95_0 = (vk) (param0);
+                stackIn_95_0 = (CourseDefinition) (param0);
                 break regionExit1;
               }
               if (AccountCreationForm.field_F.getSprite(param1 + 8257) == null) {
@@ -163,14 +163,14 @@ abstract class RasterBuffer {
                 return false;
               }
             }
-            stackIn_95_0 = (vk) (param0);
+            stackIn_95_0 = (CourseDefinition) (param0);
           }
           while (stackIn_95_0.field_j.length > param0.field_n) {
-            if (!param0.field_j[param0.field_n].b((byte) 48)) {
+            if (!param0.field_j[param0.field_n].pollGraphicsLoaded((byte) 48)) {
               return false;
             }
             param0.field_n = param0.field_n + 1;
-            stackIn_95_0 = (vk) (param0);
+            stackIn_95_0 = (CourseDefinition) (param0);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ abstract class RasterBuffer {
         if (param0) {
           field_d = -1.6866915225982666f;
         }
-        SoftwareRasterizer.a(this.field_h, this.field_f, this.field_c);
+        SoftwareRasterizer.bindRaster(this.field_h, this.field_f, this.field_c);
     }
 
     static {

@@ -6,7 +6,7 @@ import java.io.*;
 final class qn extends IntrusiveNode {
     int field_i;
     static boolean field_k;
-    static pf[] field_l;
+    static PolarSortVector[] field_l;
     int field_j;
     static IndexedSprite[] field_m;
     static String field_n;
@@ -45,7 +45,7 @@ final class qn extends IntrusiveNode {
     public static void clearSharedReferences(int param0) {
         field_n = null;
         if (param0 >= -41) {
-          field_l = (pf[]) null;
+          field_l = (PolarSortVector[]) null;
         }
         field_l = null;
         field_m = null;
@@ -174,7 +174,7 @@ final class qn extends IntrusiveNode {
             }
             return;
           }
-          ((ti) (l.field_a[3])).g(0, StrongCacheEntry.field_w);
+          ((GameMenu) (l.field_a[3])).initializeChampionshipCarousel(0, StrongCacheEntry.field_w);
           if (MusicPatchPcmStream.field_r.field_U &&
             !param2) {
             NetworkArchiveRequest.a(MusicPatchPcmStream.field_r.vehicles[0].field_R, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -122);
@@ -226,7 +226,7 @@ final class qn extends IntrusiveNode {
               hk.field_d == LoginForm.field_P) {
               fieldTemp$1 = hk.field_d + 1;
               hk.field_d = hk.field_d + 1;
-              if (fieldTemp$1 == pc.field_l[ao.field_b]) {
+              if (fieldTemp$1 == MenuList.field_l[ao.field_b]) {
                 hk.field_d = hk.field_d - 1;
               }
               tn.a(0);
@@ -234,7 +234,7 @@ final class qn extends IntrusiveNode {
             }
             var3_intLifetime1Lifetime1 = MusicPatchPcmStream.field_r.field_ob;
             EntitySound.field_m[LoginForm.field_P] = var3_intLifetime1Lifetime1;
-            nj.field_d = MusicPatchPcmStream.field_r.field_t;
+            LayeredWidgetStyle.field_d = MusicPatchPcmStream.field_r.field_t;
             CurvedRoadSegment.field_y = CurvedRoadSegment.field_y + var3_intLifetime1Lifetime1;
             ni.field_b = MusicPatchPcmStream.field_r.field_hb;
             cm.field_a = MusicPatchPcmStream.field_r.field_y;
@@ -242,10 +242,10 @@ final class qn extends IntrusiveNode {
             ni.field_b = ni.field_b - 1;
             tn.field_c = tn.field_c + 1;
             cm.field_a = cm.field_a - (tn.field_c + CurvedRoadSegment.field_y);
-            nj.field_d = nj.field_d + ni.field_b;
+            LayeredWidgetStyle.field_d = LayeredWidgetStyle.field_d + ni.field_b;
             fieldTemp$2 = LoginForm.field_P + 1;
             LoginForm.field_P = LoginForm.field_P + 1;
-            if (fieldTemp$2 == pc.field_l[StrongCacheEntry.field_w]) {
+            if (fieldTemp$2 == MenuList.field_l[StrongCacheEntry.field_w]) {
               if (eg.field_a == 0) {
                 NetworkArchiveRequest.a(EntitySound.field_m, (byte) -89, StrongCacheEntry.field_w);
                 if (StrongCacheEntry.field_w == ao.field_b &&

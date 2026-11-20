@@ -37,7 +37,7 @@ public final class HoldTheLine extends NetworkGameClient {
           co.clearSharedReferences(-112);
           sl.clearSharedReferences(18668);
           pe.clearSharedReferences(param0 - 128);
-          ti.clearSharedReferences(param0 - 21134);
+          GameMenu.clearSharedReferences(param0 - 21134);
           l.clearSharedReferences(param0 ^ 17182);
           NetworkGameClient.clearSharedReferences(8);
           ClientException.clearSharedReferences(8388479);
@@ -64,8 +64,8 @@ public final class HoldTheLine extends NetworkGameClient {
           RasterBuffer.clearSharedReferences(false);
           ArchiveLoadProgress.clearSharedReferences(-3646);
           FullscreenFocusCanvas.clearSharedReferences(0);
-          gh.clearSharedReferences(121);
-          pc.clearSharedReferences(param0 ^ -129);
+          ViewportSizingController.clearSharedReferences(121);
+          MenuList.clearSharedReferences(param0 ^ -129);
           Js5Transport.clearSharedReferences(16831);
           DiskCacheWorker.clearSharedReferences(-3);
           ArchiveCatalog.clearSharedReferences((byte) 100);
@@ -74,7 +74,7 @@ public final class HoldTheLine extends NetworkGameClient {
           vb.clearSharedReferences(-1);
           mn.clearSharedReferences(-103);
           MusicCrossfadeStream.clearSharedReferences(119);
-          ec.clearSharedReferences((byte) -122);
+          RaceSetupMenu.clearSharedReferences((byte) -122);
           MovingEntity.clearSharedReferences(0);
           m.clearSharedReferences(true);
           tn.clearSharedReferences(1);
@@ -105,13 +105,13 @@ public final class HoldTheLine extends NetworkGameClient {
           dg.clearSharedReferences(param0 + 32009);
           DialogLayer.clearSharedReferences(true);
           NameCheckProgressDialog.clearSharedReferences(param0 - 135);
-          ra.clearSharedReferences((byte) -125);
+          LoadProgressDialog.clearSharedReferences((byte) -125);
           StandardContentTransitionDialog.clearSharedReferences((byte) 79);
           AccountCreationForm.clearSharedReferences((byte) -16);
           LoginChoicePanel.clearSharedReferences(-25335);
           LoginForm.clearSharedReferences(param0 - 100);
           DisplayNameForm.clearSharedReferences(-1);
-          ga.clearSharedReferences(1);
+          UiTheme.clearSharedReferences(1);
           mj.clearSharedReferences(126);
           gk.clearSharedReferences((byte) 115);
           ArchiveIndex.clearSharedReferences((byte) 118);
@@ -145,7 +145,7 @@ public final class HoldTheLine extends NetworkGameClient {
           hc.clearSharedReferences(24816);
           ArchiveRequest.clearSharedReferences(-1010);
           ka.clearSharedReferences(5);
-          rf.clearSharedReferences(-56);
+          FullscreenErrorDialog.clearSharedReferences(-56);
           fe.clearSharedReferences(-754077296);
           TextWidgetStyle.clearSharedReferences(true);
           TriangleRasterState.clearSharedReferences();
@@ -229,7 +229,7 @@ public final class HoldTheLine extends NetworkGameClient {
           NodeHashTableIterator.clearSharedReferences((byte) 86);
           SecondaryNodeDequeIterator.clearSharedReferences((byte) 68);
           i.clearSharedReferences((byte) -3);
-          vk.clearSharedReferences(3);
+          CourseDefinition.clearSharedReferences(3);
           sb.clearSharedReferences(74);
           ue.clearSharedReferences(param0 + 19729);
           RoadStripRenderer.clearSharedReferences(0);
@@ -238,7 +238,7 @@ public final class HoldTheLine extends NetworkGameClient {
           qd.clearSharedReferences((byte) 82);
           ShadedRoadStripRenderer.clearSharedReferences(true);
           OutlinedRoadStripRenderer.clearSharedReferences(-10162);
-          pf.clearSharedReferences((byte) 38);
+          PolarSortVector.clearSharedReferences((byte) 38);
           RotatedSpriteCache.clearSharedReferences((byte) -28);
           SpriteAsset.clearSharedReferences((byte) -99);
           SpriteSheetAsset.clearSharedReferences((byte) -120);
@@ -262,13 +262,13 @@ public final class HoldTheLine extends NetworkGameClient {
           StraightRoadSegment.clearSharedReferences((byte) -87);
           ArcTrackBoundary.clearSharedReferences(false);
           CurvedRoadSegment.clearSharedReferences(-127);
-          ha.clearSharedReferences(69);
+          BoundaryIntersection.clearSharedReferences(69);
           SpriteButtonRenderer.clearSharedReferences(-1351579448);
           LinkWidgetRenderer.clearSharedReferences(1);
           TextFieldRenderer.clearSharedReferences(true);
           PasswordFieldRenderer.clearSharedReferences(true);
-          gm.clearSharedReferences(4);
-          he.clearSharedReferences(1000);
+          IconToggleRenderer.clearSharedReferences(4);
+          OpacityWidget.clearSharedReferences(1000);
           fi.clearSharedReferences(true);
           qn.clearSharedReferences(param0 - 179);
           SoundPlayback.clearSharedReferences(param0);
@@ -292,16 +292,16 @@ public final class HoldTheLine extends NetworkGameClient {
           sa.clearSharedReferences((byte) -125);
           NameAvailabilityResult.clearSharedReferences(-4496);
           MessagePanel.clearSharedReferences((byte) 25);
-          eb.clearSharedReferences(param0 - 120);
+          PathWaypoint.clearSharedReferences(param0 - 120);
           PointPath.clearSharedReferences((byte) -16);
           LinearPointPath.clearSharedReferences((byte) -52);
           QuadraticPointPath.clearSharedReferences(param0 - 128);
-          om.clearSharedReferences((byte) -6);
+          TrackObjectDefinition.clearSharedReferences((byte) -6);
           h.clearSharedReferences((byte) 99);
           we.clearSharedReferences((byte) 61);
           t.clearSharedReferences(param0 ^ 128);
           se.clearSharedReferences(true);
-          nj.clearSharedReferences(param0 - 33);
+          LayeredWidgetStyle.clearSharedReferences(param0 - 33);
           TextLineLayout.clearSharedReferences((byte) 5);
           EmailAddressValidator.clearSharedReferences((byte) -76);
           EmailConfirmationValidator.clearSharedReferences(0);
@@ -355,7 +355,7 @@ public final class HoldTheLine extends NetworkGameClient {
           if (MidiPcmStream.field_U != null) {
             AgeValidator.a(-29486, false);
           }
-          pf.a(false);
+          PolarSortVector.a(false);
           if (param0 != 30) {
             this.field_C = -31;
           }
@@ -410,7 +410,7 @@ public final class HoldTheLine extends NetworkGameClient {
             this.init();
           }
           lh.a(wi.field_b, -81, (java.awt.Component) ((Object) MouseInputHandler.field_b));
-          ec.field_y = null;
+          RaceSetupMenu.field_y = null;
           RotatedSpriteAsset.a(0, 16777215, co.field_a, (java.applet.Applet) (this), 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -490,7 +490,7 @@ public final class HoldTheLine extends NetworkGameClient {
               StraightRoadSegment.a(2, (byte) 86);
               DirectByteStorage.a(3, 0);
               b.a(true, 4);
-              ec.b(6, (byte) 51);
+              RaceSetupMenu.resendPendingDataRequests(6, (byte) 51);
             }
             if (2 == var3 ||
               var2_int != 0) {
@@ -510,8 +510,8 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           if (!vf.field_v &&
             of.a(-969) &&
-            null != ec.field_y.field_i) {
-            ai.a(NetworkArchiveRequest.field_y, ec.field_y.field_i, -106);
+            null != RaceSetupMenu.field_y.field_i) {
+            ai.a(NetworkArchiveRequest.field_y, RaceSetupMenu.field_y.field_i, -106);
             NetworkArchiveRequest.field_y = null;
           }
           if (!RotatedSpriteAsset.a(113)) {
@@ -556,39 +556,39 @@ public final class HoldTheLine extends NetworkGameClient {
                     if (EntitySound.field_j ||
                       1 != BufferedRandomAccessFile.field_d &&
                       ma.field_k != 1) {
-                      fieldTemp$0 = pc.field_h - 2;
-                      pc.field_h = pc.field_h - 2;
+                      fieldTemp$0 = MenuList.field_h - 2;
+                      MenuList.field_h = MenuList.field_h - 2;
                       if (!(0 <= fieldTemp$0)) {
-                        pc.field_h = 0;
+                        MenuList.field_h = 0;
                         if (var5 != 0) {
-                          ra.m(126);
-                          fieldTemp$1 = pc.field_h + 2;
-                          pc.field_h = pc.field_h + 2;
+                          LoadProgressDialog.m(126);
+                          fieldTemp$1 = MenuList.field_h + 2;
+                          MenuList.field_h = MenuList.field_h + 2;
                           if (fieldTemp$1 > 255) {
-                            pc.field_h = 255;
+                            MenuList.field_h = 255;
                           }
                         }
                       }
                     } else {
-                      ra.m(126);
-                      fieldTemp$1 = pc.field_h + 2;
-                      pc.field_h = pc.field_h + 2;
+                      LoadProgressDialog.m(126);
+                      fieldTemp$1 = MenuList.field_h + 2;
+                      MenuList.field_h = MenuList.field_h + 2;
                       if (fieldTemp$1 > 255) {
-                        pc.field_h = 255;
+                        MenuList.field_h = 255;
                       }
                     }
                     decompiledFrameRemainder1 = (-1 != dg.field_c);
                     if (decompiledFrameRemainder1) {
                       boolean decompiledSharedTail2 = (13 != dg.field_c);
                       if (!decompiledSharedTail2) {
-                        ((ec) (l.field_a[dg.field_c])).c((byte) -109);
-                        stackIn_152_0 = (((ec) (l.field_a[dg.field_c])).field_P != 1) ? 0 : 1;
+                        ((RaceSetupMenu) (l.field_a[dg.field_c])).update((byte) -109);
+                        stackIn_152_0 = (((RaceSetupMenu) (l.field_a[dg.field_c])).transitionState != 1) ? 0 : 1;
                         var4 = stackIn_152_0;
                         decompiledSharedTail2 = (var5 != 0);
                       }
                       if (decompiledSharedTail2) {
-                        ((ti) (l.field_a[dg.field_c])).a(116, false);
-                        stackIn_159_0 = (((ti) (l.field_a[dg.field_c])).field_y != 1) ? 0 : 1;
+                        ((GameMenu) (l.field_a[dg.field_c])).update(116, false);
+                        stackIn_159_0 = (((GameMenu) (l.field_a[dg.field_c])).transitionState != 1) ? 0 : 1;
                         var4 = stackIn_159_0;
                       }
                       if (var4 != 0 &&
@@ -600,7 +600,7 @@ public final class HoldTheLine extends NetworkGameClient {
                     }
                   }
                   if (decompiledFrameRemainder1) {
-                    ra.m(121);
+                    LoadProgressDialog.m(121);
                     decompiledFrameRemainder1 = (var5 != 0);
                   }
                 }
@@ -610,36 +610,36 @@ public final class HoldTheLine extends NetworkGameClient {
                     if (EntitySound.field_j ||
                       1 != BufferedRandomAccessFile.field_d &&
                       ma.field_k != 1) {
-                      fieldTemp$2 = pc.field_h - 2;
-                      pc.field_h = pc.field_h - 2;
+                      fieldTemp$2 = MenuList.field_h - 2;
+                      MenuList.field_h = MenuList.field_h - 2;
                       if (!(fieldTemp$2 >= 0)) {
-                        pc.field_h = 0;
+                        MenuList.field_h = 0;
                         if (var5 != 0) {
-                          fieldTemp$3 = pc.field_h + 2;
-                          pc.field_h = pc.field_h + 2;
+                          fieldTemp$3 = MenuList.field_h + 2;
+                          MenuList.field_h = MenuList.field_h + 2;
                           if (255 < fieldTemp$3) {
-                            pc.field_h = 255;
+                            MenuList.field_h = 255;
                           }
-                          ra.m(123);
+                          LoadProgressDialog.m(123);
                         }
                       }
                     } else {
-                      fieldTemp$3 = pc.field_h + 2;
-                      pc.field_h = pc.field_h + 2;
+                      fieldTemp$3 = MenuList.field_h + 2;
+                      MenuList.field_h = MenuList.field_h + 2;
                       if (255 < fieldTemp$3) {
-                        pc.field_h = 255;
+                        MenuList.field_h = 255;
                       }
-                      ra.m(123);
+                      LoadProgressDialog.m(123);
                     }
                     boolean decompiledSharedTail1 = (dg.field_c != 13);
                     if (!decompiledSharedTail1) {
-                      ((ec) (l.field_a[dg.field_c])).c((byte) -109);
-                      var4 = ((ec) (l.field_a[dg.field_c])).b((byte) -77) ? 1 : 0;
+                      ((RaceSetupMenu) (l.field_a[dg.field_c])).update((byte) -109);
+                      var4 = ((RaceSetupMenu) (l.field_a[dg.field_c])).isClosed((byte) -77) ? 1 : 0;
                       decompiledSharedTail1 = (var5 != 0);
                     }
                     if (decompiledSharedTail1) {
-                      ((ti) (l.field_a[dg.field_c])).a(73, true);
-                      var4 = ((ti) (l.field_a[dg.field_c])).b(false) ? 1 : 0;
+                      ((GameMenu) (l.field_a[dg.field_c])).update(73, true);
+                      var4 = ((GameMenu) (l.field_a[dg.field_c])).isClosed(false) ? 1 : 0;
                     }
                     boolean decompiledFrameRemainder0 = true;
                     if (var4 != 0) {
@@ -676,11 +676,11 @@ public final class HoldTheLine extends NetworkGameClient {
                           }
                           boolean decompiledSharedTail0 = (dg.field_c != 13);
                           if (!decompiledSharedTail0) {
-                            ((ec) (l.field_a[dg.field_c])).a((byte) 69, false);
+                            ((RaceSetupMenu) (l.field_a[dg.field_c])).reset((byte) 69, false);
                             decompiledSharedTail0 = (var5 != 0);
                           }
                           if (decompiledSharedTail0) {
-                            ((ti) (l.field_a[dg.field_c])).b(false, -121);
+                            ((GameMenu) (l.field_a[dg.field_c])).reset(false, -121);
                           }
                           LoginForm.field_G = 0;
                         }
@@ -695,7 +695,7 @@ public final class HoldTheLine extends NetworkGameClient {
                     } else {
                       stackIn_253_0 = ie.field_n * 256 / 80;
                     }
-                    pc.field_h = stackIn_253_0;
+                    MenuList.field_h = stackIn_253_0;
                     if (ie.field_n == 80) {
                       ie.field_n = 0;
                       dg.field_c = ByteStorage.field_b;
@@ -704,21 +704,21 @@ public final class HoldTheLine extends NetworkGameClient {
                     if (decompiledFrameRemainder1) {
                       if (dg.field_c != -1) {
                         if (13 == dg.field_c) {
-                          ((ec) (l.field_a[dg.field_c])).c((byte) -109);
+                          ((RaceSetupMenu) (l.field_a[dg.field_c])).update((byte) -109);
                           decompiledFrameRemainder1 = (var5 != 0);
                         }
                         if (decompiledFrameRemainder1) {
-                          ((ti) (l.field_a[dg.field_c])).a(102, true);
+                          ((GameMenu) (l.field_a[dg.field_c])).update(102, true);
                           decompiledFrameRemainder1 = (var5 != 0);
                         }
                       }
                       if (decompiledFrameRemainder1) {
                         if (ByteStorage.field_b == 13) {
-                          ((ec) (l.field_a[ByteStorage.field_b])).c((byte) -109);
+                          ((RaceSetupMenu) (l.field_a[ByteStorage.field_b])).update((byte) -109);
                           decompiledFrameRemainder1 = (var5 != 0);
                         }
                         if (decompiledFrameRemainder1) {
-                          ((ti) (l.field_a[ByteStorage.field_b])).a(50, true);
+                          ((GameMenu) (l.field_a[ByteStorage.field_b])).update(50, true);
                           decompiledFrameRemainder1 = (var5 != 0);
                         }
                       }
@@ -807,7 +807,7 @@ public final class HoldTheLine extends NetworkGameClient {
           h.b((byte) 115);
           this.field_z = true;
           var3 = new i();
-          eg.a(20, 0, 480, field_F.field_G, 0, 0, 5, field_F.field_G, 0, field_F, field_F, 2, (NineSlicePanel) null, 320, 0, 240, (NineSlicePanel) null, 20, 0, 1, var3);
+          eg.a(20, 0, 480, field_F.ascent, 0, 0, 5, field_F.ascent, 0, field_F, field_F, 2, (NineSlicePanel) null, 320, 0, 240, (NineSlicePanel) null, 20, 0, 1, var3);
           stackIn_7_0 = !(CachedArchiveProvider.field_x < 2);
           RotatedSpriteCache.field_c = stackIn_7_0;
           qd.a(20830, 0);
@@ -866,7 +866,7 @@ public final class HoldTheLine extends NetworkGameClient {
           if (BufferedSocket.a((byte) -128)) {
             stackIn_20_0 = -63;
             stackIn_20_1 = var2;
-            stackIn_23_2 = (null != MidiPcmStream.field_U) || (vk.field_a);
+            stackIn_23_2 = (null != MidiPcmStream.field_U) || (CourseDefinition.field_a);
             ko.drawClientLoadingOrMenuWithIntGuard(stackIn_20_0, (java.awt.Canvas) (stackIn_20_1), stackIn_23_2);
             return;
           }
@@ -881,15 +881,15 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           oj.a((byte) 120);
           if (this.field_C > 0) {
-            SoftwareRasterizer.c();
-            StereoMusicSample.field_a.b(0, 0);
+            SoftwareRasterizer.clear();
+            StereoMusicSample.field_a.drawUnkeyed(0, 0);
             if (this.field_C < 25) {
               var3_int = 1280 * this.field_C / 25 - 640;
               if (var3_int < 0) {
                 SecondaryNodeDequeIterator.a(param0 - 256);
                 o.a(128, 480, 0, 128, 640, param0 - 4697, 0);
               }
-              cm.field_d.a(var3_int, 0);
+              cm.field_d.draw(var3_int, 0);
             }
             hi.a((java.awt.Canvas) (var2), 0, true, 0);
             return;
@@ -905,7 +905,7 @@ public final class HoldTheLine extends NetworkGameClient {
             }
             if (decompiledFrameRemainder0) {
               eg.a(false);
-              l.field_a[dg.field_c].a(-55);
+              l.field_a[dg.field_c].draw(-55);
               decompiledFrameRemainder0 = (var10 != 0);
             }
           }
@@ -914,20 +914,20 @@ public final class HoldTheLine extends NetworkGameClient {
               if (!EntitySound.field_j) {
                 if (ie.field_n < 40) {
                   SecondaryNodeDequeIterator.a(0);
-                  SoftwareRasterizer.c(0, 0, 640, 480, 12566463, ie.field_n * 512 / 80);
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 12566463, ie.field_n * 512 / 80);
                   decompiledFrameRemainder0 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   eg.a(false);
-                  l.field_a[ByteStorage.field_b].a(param0 ^ -311);
-                  SoftwareRasterizer.c(0, 0, 640, 480, 12566463, -(512 * ie.field_n / 80) + 512);
+                  l.field_a[ByteStorage.field_b].draw(param0 ^ -311);
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 12566463, -(512 * ie.field_n / 80) + 512);
                   decompiledFrameRemainder0 = (var10 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 SecondaryNodeDequeIterator.a(0);
                 PacketBuffer.e(param0 - 152, (ie.field_n << 8) / 80);
-                l.field_a[ByteStorage.field_b].a(-55);
+                l.field_a[ByteStorage.field_b].draw(-55);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
             }
@@ -936,33 +936,33 @@ public final class HoldTheLine extends NetworkGameClient {
                 if (EntitySound.field_j) {
                   SecondaryNodeDequeIterator.a(0);
                   PacketBuffer.e(116, 256 - (ie.field_n << 8) / 80);
-                  l.field_a[dg.field_c].a(-55);
+                  l.field_a[dg.field_c].draw(-55);
                   decompiledFrameRemainder0 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   if (ie.field_n >= 40) {
                     SecondaryNodeDequeIterator.a(0);
-                    SoftwareRasterizer.c(0, 0, 640, 480, 12566463, -((ie.field_n << 9) / 80) + 512);
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 12566463, -((ie.field_n << 9) / 80) + 512);
                     if (var10 != 0) {
                       eg.a(false);
-                      l.field_a[dg.field_c].a(param0 ^ -311);
-                      SoftwareRasterizer.c(0, 0, 640, 480, 12566463, (ie.field_n << 9) / 80);
+                      l.field_a[dg.field_c].draw(param0 ^ -311);
+                      SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 12566463, (ie.field_n << 9) / 80);
                       eg.a(false);
-                      l.field_a[dg.field_c].a(-55);
+                      l.field_a[dg.field_c].draw(-55);
                     }
                   } else {
                     eg.a(false);
-                    l.field_a[dg.field_c].a(param0 ^ -311);
-                    SoftwareRasterizer.c(0, 0, 640, 480, 12566463, (ie.field_n << 9) / 80);
+                    l.field_a[dg.field_c].draw(param0 ^ -311);
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 12566463, (ie.field_n << 9) / 80);
                     if (var10 != 0) {
                       eg.a(false);
-                      l.field_a[dg.field_c].a(-55);
+                      l.field_a[dg.field_c].draw(-55);
                     }
                   }
                 }
               } else {
                 eg.a(false);
-                l.field_a[dg.field_c].a(-55);
+                l.field_a[dg.field_c].draw(-55);
               }
             }
           }
@@ -974,16 +974,16 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           if ((decompiledSharedTail0) &&
             (ki.a(false))) {
-            stackIn_103_0 = (MidiPcmStream.field_U != null) || (vk.field_a);
+            stackIn_103_0 = (MidiPcmStream.field_U != null) || (CourseDefinition.field_a);
             fj.a(stackIn_103_0, true);
           }
           if (LoginCredentialType.field_c) {
-            nm.field_c.a(Integer.toString(IterableSecondaryNodeDeque.field_f), 10, 30, 0, -1);
+            nm.field_c.draw(Integer.toString(IterableSecondaryNodeDeque.field_f), 10, 30, 0, -1);
             var3 = Runtime.getRuntime().totalMemory();
             var5 = Runtime.getRuntime().freeMemory();
             var7 = var3 - var5;
             var9 = (int)(var7 >> 10) + "kB";
-            nm.field_c.a(var9, 10, 50, 0, -1);
+            nm.field_c.draw(var9, 10, 50, 0, -1);
           }
           hi.a((java.awt.Canvas) (var2), 0, true, 0);
           return;
@@ -1005,9 +1005,9 @@ public final class HoldTheLine extends NetworkGameClient {
           if (param0) {
             DiskCacheWorker.a(LoginForm.field_T, (byte) -81);
           }
-          if (ec.field_y == null &&
+          if (RaceSetupMenu.field_y == null &&
             of.a(-969)) {
-            ec.field_y = ie.a(10, 31043, 2, 0);
+            RaceSetupMenu.field_y = ie.a(10, 31043, 2, 0);
           }
           if (null == RotatedSpriteCache.field_g) {
             MusicPatchEnvelope.field_f = false;
@@ -1019,12 +1019,12 @@ public final class HoldTheLine extends NetworkGameClient {
             }
           }
           if (null != b.field_d &&
-            !b.field_d.b((byte) -90)) {
+            !b.field_d.ensureIndexLoaded((byte) -90)) {
             CacheEntry.a(107, NetworkGameClient.field_r, 2.0f);
             return;
           }
           if (null != PacketBuffer.field_m) {
-            if (!PacketBuffer.field_m.b((byte) -49)) {
+            if (!PacketBuffer.field_m.ensureIndexLoaded((byte) -49)) {
               CacheEntry.a(125, NetworkGameClient.field_r, 3.0f);
               return;
             }
@@ -1033,21 +1033,21 @@ public final class HoldTheLine extends NetworkGameClient {
               return;
             }
           }
-          if (null != EntitySound.field_i && (!EntitySound.field_i.b((byte) -94) ||
-            !SoundCache.field_c.b((byte) -111))) {
+          if (null != EntitySound.field_i && (!EntitySound.field_i.ensureIndexLoaded((byte) -94) ||
+            !SoundCache.field_c.ensureIndexLoaded((byte) -111))) {
             CacheEntry.a(91, SolidRoadStripRenderer.field_o, 10.0f);
             return;
           }
           if (null != DropTargetWidget.field_J) {
-            if (!DropTargetWidget.field_J.b((byte) -67)) {
+            if (!DropTargetWidget.field_J.ensureIndexLoaded((byte) -67)) {
               CacheEntry.a(117, Vector2f.field_d, 12.0f);
               return;
             }
-            if (!StandardContentTransitionDialog.field_lb.b((byte) -86)) {
+            if (!StandardContentTransitionDialog.field_lb.ensureIndexLoaded((byte) -86)) {
               CacheEntry.a(104, Vector2f.field_d, 14.0f);
               return;
             }
-            if (!ta.field_a.b((byte) -102)) {
+            if (!ta.field_a.ensureIndexLoaded((byte) -102)) {
               CacheEntry.a(119, SpriteAsset.field_d, 15.0f);
               return;
             }
@@ -1058,10 +1058,10 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != QuadraticPointPath.field_j) {
-            if ((QuadraticPointPath.field_j.b((byte) -73) &&
-              QuadraticPointPath.field_j.a((byte) 108)) &&
-              (decompiledFrameRemainder0 = (!(NetworkArchiveRequest.field_y.b((byte) -53)) ||
-              !(NetworkArchiveRequest.field_y.a((byte) 126))))) {
+            if ((QuadraticPointPath.field_j.ensureIndexLoaded((byte) -73) &&
+              QuadraticPointPath.field_j.tryLoadAllGroups((byte) 108)) &&
+              (decompiledFrameRemainder0 = (!(NetworkArchiveRequest.field_y.ensureIndexLoaded((byte) -53)) ||
+              !(NetworkArchiveRequest.field_y.tryLoadAllGroups((byte) 126))))) {
               CacheEntry.a(89, ByteStorage.a(TextButton.field_E, RoadStripRenderer.field_a, "", false, NetworkArchiveRequest.field_y), 35.0f);
               return;
             }
@@ -1117,10 +1117,10 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           if (null != NetworkArchiveRequest.field_y &&
             of.a(-969) &&
-            ec.field_y.field_i != null) {
+            RaceSetupMenu.field_y.field_i != null) {
             CacheEntry.a(106, fj.field_r, 95.0f);
             this.renderGameFrame(256);
-            ai.a(NetworkArchiveRequest.field_y, ec.field_y.field_i, -95);
+            ai.a(NetworkArchiveRequest.field_y, RaceSetupMenu.field_y.field_i, -95);
             NetworkArchiveRequest.field_y = null;
             qd.d(88);
             return;
@@ -1143,13 +1143,13 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           var3_int = 0;
           while (var3_int < 13) {
-            l.field_a[var3_int] = (pc) ((Object) new ti(var3_int));
+            l.field_a[var3_int] = (MenuList) ((Object) new GameMenu(var3_int));
             var3_int++;
             if (var4 != 0) {
               return;
             }
           }
-          l.field_a[13] = (pc) ((Object) new ec(13, new int[]{0, 1, 2, 3}, new Sprite[4], gh.field_t, new String[6], vb.field_c, 8355711));
+          l.field_a[13] = (MenuList) ((Object) new RaceSetupMenu(13, new int[]{0, 1, 2, 3}, new Sprite[4], ViewportSizingController.field_t, new String[6], vb.field_c, 8355711));
           dg.field_c = 0;
           this.finishGameLoading((byte) 107);
           return;

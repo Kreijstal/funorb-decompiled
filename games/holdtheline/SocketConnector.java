@@ -100,7 +100,7 @@ abstract class SocketConnector {
                   if (param1 >= TriangleRasterState.field_d) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -134,7 +134,7 @@ abstract class SocketConnector {
                   if (param1 >= TriangleRasterState.field_d) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
                 }
@@ -217,7 +217,7 @@ abstract class SocketConnector {
               if (TriangleRasterState.field_d <= param1) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_j;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.width;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

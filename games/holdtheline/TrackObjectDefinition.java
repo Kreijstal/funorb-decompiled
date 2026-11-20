@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om {
+final class TrackObjectDefinition {
     int field_h;
     int[] field_l;
-    int field_a;
+    int collisionRadius;
     private RotatedSpriteSheetAsset field_q;
     private static int[] field_e;
     int field_m;
     Sprite[] field_g;
     static PacketBuffer field_n;
-    boolean field_d;
+    boolean rectangularCollision;
     static SpriteAsset field_i;
     boolean field_c;
     static int[] field_p;
     private SpriteAsset field_k;
     private RotatedSpriteAsset field_j;
     private SpriteSheetAsset field_o;
-    int field_b;
+    int flags;
     RotatedSpriteCache[] field_f;
 
-    private final void a(int param0, RotatedSpriteAsset param1) {
+    private final void setRotatedSprite(int param0, RotatedSpriteAsset param1) {
         try {
           this.field_j = param1;
           this.field_c = false;
           if (param0 != 1) {
             fl var4 = (fl) null;
-            om.a(74, (fl) null, -105);
+            TrackObjectDefinition.a(74, (fl) null, -105);
           }
           this.field_g = null;
           this.field_l = null;
@@ -36,7 +36,7 @@ final class om {
         }
     }
 
-    private final void a(int param0, SpriteAsset param1) {
+    private final void setSprite(int param0, SpriteAsset param1) {
         try {
           this.field_l = null;
           int var3_int = 125 % ((param0 + 14) / 34);
@@ -49,7 +49,7 @@ final class om {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean pollGraphicsLoaded(byte param0) {
         RotatedSpriteCache var5 = null;
         RotatedSpriteCache var3 = null;
         RotatedSpriteCache[] var7 = null;
@@ -112,9 +112,9 @@ final class om {
         field_i = null;
     }
 
-    final static void a(String[][] param0, int param1, int param2) {
+    final static void setMenuDescriptions(String[][] param0, int param1, int param2) {
         try {
-          ra.field_ab = -1;
+          LoadProgressDialog.field_ab = -1;
           MusicPatchEnvelope.field_i = param2;
           DialogLayer.field_I = -1;
           mc.field_b = param0;
@@ -122,14 +122,14 @@ final class om {
           MessagePanel.h(0);
           if (param1 <= 10) {
             ResourceArchive var4 = (ResourceArchive) null;
-            om.a((String) null, (ResourceArchive) null, (String) null, 14, (ResourceArchive) null);
+            TrackObjectDefinition.loadNamedFont((String) null, (ResourceArchive) null, (String) null, 14, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final void a(SpriteSheetAsset param0, int[] param1, boolean param2) {
+    private final void setSpriteSheet(SpriteSheetAsset param0, int[] param1, boolean param2) {
         this.field_l = param1;
         this.field_c = false;
         this.field_o = param0;
@@ -144,7 +144,7 @@ final class om {
         }
     }
 
-    final static PaletteBitmapFont a(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
+    final static PaletteBitmapFont loadNamedFont(String param0, ResourceArchive param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -165,8 +165,8 @@ final class om {
             stackIn_2_0 = (PaletteBitmapFont) null;
             return stackIn_2_0;
           }
-          var5_int = param4.c(param0, 3);
-          var6 = param4.a(var5_int, param2, false);
+          var5_int = param4.getGroupId(param0, 3);
+          var6 = param4.getFileId(var5_int, param2, false);
           stackIn_4_0 = ta.a(var5_int, var6, param4, param1, -105);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -207,7 +207,7 @@ final class om {
         try {
           if (param0 != 27391) {
             fl var5 = (fl) null;
-            om.a(-52, (fl) null, -89);
+            TrackObjectDefinition.a(-52, (fl) null, -89);
           }
           var6 = IsaacPacketBuffer.field_p;
           var6.writeCipheredOpcode((byte) 33, param2);
@@ -229,31 +229,31 @@ final class om {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void setCollisionRadius(int param0, int param1) {
         if (param0 == 32768) {
-          this.field_d = false;
-          this.field_a = param1;
+          this.rectangularCollision = false;
+          this.collisionRadius = param1;
           return;
         }
         field_i = (SpriteAsset) null;
-        this.field_d = false;
-        this.field_a = param1;
+        this.rectangularCollision = false;
+        this.collisionRadius = param1;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setCollisionRectangle(int param0, int param1, int param2) {
         this.field_h = param1;
         this.field_m = param2;
-        this.field_d = true;
+        this.rectangularCollision = true;
         if (param0 == 92682) {
-          this.field_a = (int)Math.sqrt((double)(this.field_m * this.field_m + this.field_h * this.field_h));
+          this.collisionRadius = (int)Math.sqrt((double)(this.field_m * this.field_m + this.field_h * this.field_h));
           return;
         }
         int[] var5 = (int[]) null;
-        this.a((SpriteSheetAsset) null, (int[]) null, true);
-        this.field_a = (int)Math.sqrt((double)(this.field_m * this.field_m + this.field_h * this.field_h));
+        this.setSpriteSheet((SpriteSheetAsset) null, (int[]) null, true);
+        this.collisionRadius = (int)Math.sqrt((double)(this.field_m * this.field_m + this.field_h * this.field_h));
     }
 
-    private final void a(int param0, RotatedSpriteSheetAsset param1, int[] param2) {
+    private final void setRotatedSpriteSheet(int param0, RotatedSpriteSheetAsset param1, int[] param2) {
         this.field_l = param2;
         this.field_g = null;
         this.field_q = param1;
@@ -268,17 +268,17 @@ final class om {
         }
     }
 
-    om(int param0, int param1, SpriteSheetAsset param2, int[] param3, int param4) {
+    TrackObjectDefinition(int param0, int param1, SpriteSheetAsset param2, int[] param3, int param4) {
         try {
-          this.field_b = param1;
-          this.a(32768, param0);
-          this.a(param2, param3, true);
+          this.flags = param1;
+          this.setCollisionRadius(32768, param0);
+          this.setSpriteSheet(param2, param3, true);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void detachInputListeners(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         java.awt.Canvas var3 = null;
         RuntimeException stackIn_8_0 = null;
@@ -295,7 +295,7 @@ final class om {
             return;
           }
           var3 = (java.awt.Canvas) null;
-          om.a(93, (java.awt.Canvas) null);
+          TrackObjectDefinition.detachInputListeners(93, (java.awt.Canvas) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -311,69 +311,69 @@ final class om {
         }
     }
 
-    om(int param0, int param1, RotatedSpriteSheetAsset param2, int[] param3, int param4) {
+    TrackObjectDefinition(int param0, int param1, RotatedSpriteSheetAsset param2, int[] param3, int param4) {
         try {
-          this.field_b = param1;
-          this.a(32768, param0);
-          this.a(4, param2, param3);
+          this.flags = param1;
+          this.setCollisionRadius(32768, param0);
+          this.setRotatedSpriteSheet(4, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    om(int param0, int param1, int param2, RotatedSpriteSheetAsset param3, int[] param4, int param5) {
+    TrackObjectDefinition(int param0, int param1, int param2, RotatedSpriteSheetAsset param3, int[] param4, int param5) {
         try {
-          this.field_b = param2;
-          this.a(92682, param1, param0);
-          this.a(4, param3, param4);
+          this.flags = param2;
+          this.setCollisionRectangle(92682, param1, param0);
+          this.setRotatedSpriteSheet(4, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    om(int param0, int param1, SpriteAsset param2, int param3) {
+    TrackObjectDefinition(int param0, int param1, SpriteAsset param2, int param3) {
         try {
-          this.field_b = param1;
-          this.a(32768, param0);
-          this.a(-103, param2);
+          this.flags = param1;
+          this.setCollisionRadius(32768, param0);
+          this.setSprite(-103, param2);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    om(int param0, int param1, int param2, SpriteAsset param3, int param4) {
+    TrackObjectDefinition(int param0, int param1, int param2, SpriteAsset param3, int param4) {
         try {
-          this.field_b = param2;
-          this.a(92682, param1, param0);
-          this.a(-57, param3);
+          this.flags = param2;
+          this.setCollisionRectangle(92682, param1, param0);
+          this.setSprite(-57, param3);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    om(int param0, int param1, RotatedSpriteAsset param2, int param3) {
+    TrackObjectDefinition(int param0, int param1, RotatedSpriteAsset param2, int param3) {
         try {
-          this.field_b = param1;
-          this.a(32768, param0);
-          this.a(1, param2);
+          this.flags = param1;
+          this.setCollisionRadius(32768, param0);
+          this.setRotatedSprite(1, param2);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    om(int param0, int param1, int param2, RotatedSpriteAsset param3, int param4) {
+    TrackObjectDefinition(int param0, int param1, int param2, RotatedSpriteAsset param3, int param4) {
         try {
-          this.field_b = param2;
-          this.a(92682, param1, param0);
-          this.a(1, param3);
+          this.flags = param2;
+          this.setCollisionRectangle(92682, param1, param0);
+          this.setRotatedSprite(1, param3);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "om.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    om(int param0, int param1, int param2, int param3) {
-        this.field_b = param2;
-        this.a(92682, param1, param0);
+    TrackObjectDefinition(int param0, int param1, int param2, int param3) {
+        this.flags = param2;
+        this.setCollisionRectangle(92682, param1, param0);
         this.field_g = null;
         this.field_f = null;
     }

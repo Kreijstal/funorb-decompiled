@@ -57,7 +57,7 @@ class IntrusiveNode {
               if (var8 * var8 < var9) {
                 return false;
               }
-              var10 = ha.a(var11.field_U, param3, param0);
+              var10 = BoundaryIntersection.angleBetweenPoints(var11.field_U, param3, param0);
               stackIn_17_0 = var11.b((byte) -113, var10);
               return stackIn_17_0;
             }

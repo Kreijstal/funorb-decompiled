@@ -18,7 +18,7 @@ final class ba {
         try {
           if (param1 == ~ak.field_c &&
             MouseWheelInput.field_b == -1) {
-            MouseWheelInput.field_b = rf.field_X;
+            MouseWheelInput.field_b = FullscreenErrorDialog.field_X;
             ak.field_c = NodeHashTableIterator.field_g;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -128,7 +128,7 @@ final class ba {
           RasterBuffer.field_d = ((float)var5 + var10) / (float)var7;
           if (RasterBuffer.field_d >= 0.0f &&
             1.0f >= RasterBuffer.field_d) {
-            IterableSecondaryNodeDeque.field_b = ha.a(param2.center, param0.pointAt(false, RasterBuffer.field_d), false);
+            IterableSecondaryNodeDeque.field_b = BoundaryIntersection.angleBetweenPoints(param2.center, param0.pointAt(false, RasterBuffer.field_d), false);
             if (param2.containsAngle(IterableSecondaryNodeDeque.field_b, 13012)) {
               var9++;
             }
@@ -137,7 +137,7 @@ final class ba {
             CachedArchiveProvider.field_g = ((float)var5 - var10) / (float)var7;
             if (CachedArchiveProvider.field_g >= 0.0f &&
               CachedArchiveProvider.field_g <= 1.0f) {
-              TextHotspotWidget.field_G = ha.a(param2.center, param0.pointAt(false, CachedArchiveProvider.field_g), false);
+              TextHotspotWidget.field_G = BoundaryIntersection.angleBetweenPoints(param2.center, param0.pointAt(false, CachedArchiveProvider.field_g), false);
               if (param2.containsAngle(TextHotspotWidget.field_G, 13012)) {
                 var9++;
               }

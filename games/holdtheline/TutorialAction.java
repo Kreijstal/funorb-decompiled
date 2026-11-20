@@ -40,15 +40,15 @@ final class TutorialAction {
         Sprite[] var5 = jc.field_h;
         Sprite var6 = ij.a(param3 - 8137, param2, var5, param4);
         if (param3 == 41) {
-          param0 = param0 - (var6.field_s - param2 >> 1);
-          param1 = param1 - (var6.field_y - param4 >> 1);
-          var6.a(param0, param1);
+          param0 = param0 - (var6.width - param2 >> 1);
+          param1 = param1 - (var6.height - param4 >> 1);
+          var6.draw(param0, param1);
           return;
         }
         TutorialAction.a(78, -110, -63, (byte) -36, 2);
-        param0 = param0 - (var6.field_s - param2 >> 1);
-        param1 = param1 - (var6.field_y - param4 >> 1);
-        var6.a(param0, param1);
+        param0 = param0 - (var6.width - param2 >> 1);
+        param1 = param1 - (var6.height - param4 >> 1);
+        var6.draw(param0, param1);
     }
 
     final static boolean a(int param0, String param1) {
@@ -62,7 +62,7 @@ final class TutorialAction {
           if (param0 != 2113942113) {
             field_f = (ll) null;
           }
-          stackIn_5_0 = (ra.a(param1, 85) != null);
+          stackIn_5_0 = (LoadProgressDialog.a(param1, 85) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class TutorialAction {
           RoadStripRenderer.field_f = ResizableDialog.field_R;
           SpriteAsset.field_a = SpriteAsset.field_a + 1;
           NodeHashTableIterator.field_g = Vector2f.field_f;
-          rf.field_X = LinearPointPath.field_m;
+          FullscreenErrorDialog.field_X = LinearPointPath.field_m;
           na.field_k = LoginCredentials.field_a;
           LoginCredentials.field_a = false;
           ValidationIndicator.field_J = DelegatingCanvas.field_a;

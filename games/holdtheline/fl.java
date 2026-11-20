@@ -70,9 +70,9 @@ final class fl extends IntrusiveNode {
 
     final static void a(String param0, int param1, int param2, int param3, int param4) {
         try {
-          QuickChatPhraseDefinition.field_t.a(param1, param4);
-          nj.field_i.a(381 + param1, param4);
-          nm.field_c.b(param0, param1 + 320, -2 + ((30 + nm.field_c.field_G) / 2 + param4), param2, -1);
+          QuickChatPhraseDefinition.field_t.draw(param1, param4);
+          LayeredWidgetStyle.field_i.draw(381 + param1, param4);
+          nm.field_c.drawCentered(param0, param1 + 320, -2 + ((30 + nm.field_c.ascent) / 2 + param4), param2, -1);
           if (param3 != -1753) {
             field_i = (IntrusiveDeque) null;
           }

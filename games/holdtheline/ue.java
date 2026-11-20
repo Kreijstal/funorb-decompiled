@@ -18,8 +18,8 @@ final class ue {
           if (param0 != 8911) {
             ue.clearSharedReferences(16);
           }
-          for (var2_int = SoftwareRasterizer.field_j * SoftwareRasterizer.field_c - 1; var2_int >= 0; var2_int--) {
-            var3 = SoftwareRasterizer.field_b[var2_int];
+          for (var2_int = SoftwareRasterizer.width * SoftwareRasterizer.height - 1; var2_int >= 0; var2_int--) {
+            var3 = SoftwareRasterizer.pixels[var2_int];
             var4 = 16711935 & var3;
             var3 = var3 & 65280;
             var4 = var4 * param1;
@@ -27,7 +27,7 @@ final class ue {
             var3 = var3 * param1;
             var3 = var3 & 16711680;
             var3 = var3 | var4;
-            SoftwareRasterizer.field_b[var2_int] = var3 >>> 8;
+            SoftwareRasterizer.pixels[var2_int] = var3 >>> 8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

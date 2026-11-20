@@ -175,7 +175,7 @@ final class DiskCacheStore {
             }
             var2 = 1;
           }
-          TextFieldRenderer.field_q.a(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, rf.field_X, NodeHashTableIterator.field_g), 4);
+          TextFieldRenderer.field_q.a(cm.a((byte) 110, ValidatedTextField.field_U, TrackBoundary.field_x), cm.a((byte) 110, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g), 4);
           if (TextFieldRenderer.field_q.a(-1)) {
             var1_int = 1;
           }

@@ -118,7 +118,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetContainerMark
             return stackIn_2_0;
           }
           UsernameLoginCredentials.field_e.addLast((byte) -86, var3);
-          om.a(27391, var3, param1);
+          TrackObjectDefinition.a(27391, var3, param1);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

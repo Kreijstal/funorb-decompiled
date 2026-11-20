@@ -83,17 +83,17 @@ final class DelayedServerPacket extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new Sprite(param1.a("", false, "final_frame.jpg"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
-          var3 = var2.field_s;
-          var4 = var2.field_y;
+          var2 = new Sprite(param1.getNamedFile("", false, "final_frame.jpg"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
+          var3 = var2.width;
+          var4 = var2.height;
           lj.a((byte) -120);
           TickClock.field_c = new Sprite(var3, var4 * 3 / 4);
-          TickClock.field_c.f();
-          var2.b(0, 0);
-          EmailConfirmationValidator.field_l = new Sprite(var3, var4 - TickClock.field_c.field_y);
-          EmailConfirmationValidator.field_l.f();
-          var2.b(0, -TickClock.field_c.field_y);
-          EmailConfirmationValidator.field_l.field_x = TickClock.field_c.field_y;
+          TickClock.field_c.bindRaster();
+          var2.drawUnkeyed(0, 0);
+          EmailConfirmationValidator.field_l = new Sprite(var3, var4 - TickClock.field_c.height);
+          EmailConfirmationValidator.field_l.bindRaster();
+          var2.drawUnkeyed(0, -TickClock.field_c.height);
+          EmailConfirmationValidator.field_l.offsetY = TickClock.field_c.height;
           dm.b((byte) -10);
           if (param0 == -18916) {
             return;

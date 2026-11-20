@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm implements WidgetRenderer {
+final class IconToggleRenderer implements WidgetRenderer {
     static Sprite field_b;
     static String field_a;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 4) {
-          gm.clearSharedReferences(4);
+          IconToggleRenderer.clearSharedReferences(4);
           field_a = null;
           field_b = null;
           return;
@@ -27,7 +27,7 @@ final class gm implements WidgetRenderer {
         Sprite var8 = null;
         try {
           if (param2 >= -48) {
-            gm.clearSharedReferences(36);
+            IconToggleRenderer.clearSharedReferences(36);
           }
           var6_int = param3.x + param1;
           var7 = param3.y + param4;
@@ -35,7 +35,7 @@ final class gm implements WidgetRenderer {
           var8 = FullscreenFocusCanvas.field_i[1];
           if (param3 instanceof TextButton &&
             ((TextButton) (param3)).field_B) {
-            var8.b((-var8.field_o + param3.width >> 1) + 1 + var6_int, (-var8.field_v + param3.height >> 1) + (var7 + 1), 256);
+            var8.drawAdditive((-var8.canvasWidth + param3.width >> 1) + 1 + var6_int, (-var8.canvasHeight + param3.height >> 1) + (var7 + 1), 256);
           }
           if (!param3.isFocused((byte) -20)) {
             return;

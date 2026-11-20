@@ -63,81 +63,81 @@ final class t extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (!param0.a((byte) 78)) {
+          if (!param0.tryLoadAllGroups((byte) 78)) {
             return false;
           }
-          if (!param1.b("font", -121)) {
+          if (!param1.tryLoadNamedGroup("font", -121)) {
             return false;
           }
-          if (!param1.b("font12", -97)) {
+          if (!param1.tryLoadNamedGroup("font12", -97)) {
             return false;
           }
-          if (!param1.b("logo", 51)) {
+          if (!param1.tryLoadNamedGroup("logo", 51)) {
             return false;
           }
-          if (!param1.b("logo_large", param2 ^ 30)) {
+          if (!param1.tryLoadNamedGroup("logo_large", param2 ^ 30)) {
             return false;
           }
-          if (!param1.b("flag", 64)) {
+          if (!param1.tryLoadNamedGroup("flag", 64)) {
             return false;
           }
-          if (!param1.b("menubar", -109)) {
+          if (!param1.tryLoadNamedGroup("menubar", -109)) {
             return false;
           }
-          if (!param1.b("titlebar", 95)) {
+          if (!param1.tryLoadNamedGroup("titlebar", 95)) {
             return false;
           }
-          if (!param1.b("titlebar_divleft", param2 ^ 26)) {
+          if (!param1.tryLoadNamedGroup("titlebar_divleft", param2 ^ 26)) {
             return false;
           }
-          if (!param1.b("titlebar_divright", param2 ^ 91)) {
+          if (!param1.tryLoadNamedGroup("titlebar_divright", param2 ^ 91)) {
             return false;
           }
-          if (!param1.b("courseselect_bar", 115)) {
+          if (!param1.tryLoadNamedGroup("courseselect_bar", 115)) {
             return false;
           }
-          if (!param1.b("locked", -119)) {
+          if (!param1.tryLoadNamedGroup("locked", -119)) {
             return false;
           }
-          if (!param1.b("loading", param2 - 227)) {
+          if (!param1.tryLoadNamedGroup("loading", param2 - 227)) {
             return false;
           }
-          if (!param3.b("basic", -83)) {
+          if (!param3.tryLoadNamedGroup("basic", -83)) {
             return false;
           }
           if (param2 != 111) {
             field_i = (SpriteAsset) null;
           }
-          if (param1.b("keyboard_space", -98) &&
-            param1.b("keyboard_esc", param2 ^ 31) &&
-            param1.b("keyboard_right", 81) &&
-            param1.b("keyboard_left", param2 ^ 56) &&
-            param1.b("keyboard_down", -92) &&
-            param1.b("keyboard_up", -103) &&
-            param1.b("keyboard_enter", 53) &&
-            param1.b("keyboard_ctrl", param2 + 2) &&
-            param1.b("keyboard_alt", -109) &&
-            param1.b("keyboard_tab", -119) &&
-            param1.b("keyboard_q", 51) &&
-            param1.b("keyboard_a", -95) &&
-            param1.b("keyboard_x", 86) &&
-            param1.b("keyboard_c", param2 - 226)) {
-            if (!param1.b("frame", param2 - 191)) {
+          if (param1.tryLoadNamedGroup("keyboard_space", -98) &&
+            param1.tryLoadNamedGroup("keyboard_esc", param2 ^ 31) &&
+            param1.tryLoadNamedGroup("keyboard_right", 81) &&
+            param1.tryLoadNamedGroup("keyboard_left", param2 ^ 56) &&
+            param1.tryLoadNamedGroup("keyboard_down", -92) &&
+            param1.tryLoadNamedGroup("keyboard_up", -103) &&
+            param1.tryLoadNamedGroup("keyboard_enter", 53) &&
+            param1.tryLoadNamedGroup("keyboard_ctrl", param2 + 2) &&
+            param1.tryLoadNamedGroup("keyboard_alt", -109) &&
+            param1.tryLoadNamedGroup("keyboard_tab", -119) &&
+            param1.tryLoadNamedGroup("keyboard_q", 51) &&
+            param1.tryLoadNamedGroup("keyboard_a", -95) &&
+            param1.tryLoadNamedGroup("keyboard_x", 86) &&
+            param1.tryLoadNamedGroup("keyboard_c", param2 - 226)) {
+            if (!param1.tryLoadNamedGroup("frame", param2 - 191)) {
               return false;
             }
-            if (!param1.b("frame_textured", -111)) {
+            if (!param1.tryLoadNamedGroup("frame_textured", -111)) {
               return false;
             }
-            if (!param1.b("tarmac", -95)) {
+            if (!param1.tryLoadNamedGroup("tarmac", -95)) {
               return false;
             }
             if (!LoginCredentialType.a(16616, 0)) {
               return true;
             }
-            if (!param1.b("halloween_zombie", param2 - 70)) {
+            if (!param1.tryLoadNamedGroup("halloween_zombie", param2 - 70)) {
               return false;
             }
-            if (param1.b("halloween_blood", 85)) {
+            if (param1.tryLoadNamedGroup("halloween_blood", 85)) {
               return true;
             }
             return false;

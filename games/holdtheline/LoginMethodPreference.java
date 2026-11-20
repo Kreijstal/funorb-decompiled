@@ -8,7 +8,7 @@ final class LoginMethodPreference {
     final static void preloadLogoAudio(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.decodeSetup(param0.a("", false, "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.getNamedFile("", false, "headers.packvorbis"));
           var2 = VorbisSample.loadNamed(param0, "jagex logo2.packvorbis", "");
           if (param1 != 0) {
             field_b = (String) null;
@@ -24,7 +24,7 @@ final class LoginMethodPreference {
           return;
         }
         try {
-          he.a(31536000L, param0, this.field_a, -100, "jagex-last-login-method");
+          OpacityWidget.writeCookie(31536000L, param0, this.field_a, -100, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

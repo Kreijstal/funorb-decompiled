@@ -118,7 +118,7 @@ final class DisplayNameValidator extends TextFieldValidator {
             field_i = true;
           }
           var4 = (CharSequence) ((Object) param0);
-          if (!ArchiveProvider.a(var4, 8192)) {
+          if (!ArchiveProvider.isValidDisplayName(var4, 8192)) {
             stackIn_5_0 = LinearPointPath.field_k;
             return stackIn_5_0;
           }

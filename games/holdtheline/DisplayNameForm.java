@@ -18,11 +18,11 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_F = new ValidatedTextField("", (WidgetListener) null, 12);
-        TextWidgetStyle var1 = new TextWidgetStyle(SpriteButtonRenderer.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.field_G, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(ra.field_ib, var1, (WidgetListener) null);
+        TextWidgetStyle var1 = new TextWidgetStyle(SpriteButtonRenderer.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(LoadProgressDialog.field_ib, var1, (WidgetListener) null);
         this.field_M = new TextButton(h.field_d, (WidgetListener) null);
         this.field_N = new TextButton(hh.field_b, (WidgetListener) null);
-        this.field_F.tooltip = pf.field_f;
+        this.field_F.tooltip = PolarSortVector.field_f;
         this.field_F.a((byte) 42, new DisplayNameValidator(this.field_F));
         this.field_M.field_D = false;
         this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());

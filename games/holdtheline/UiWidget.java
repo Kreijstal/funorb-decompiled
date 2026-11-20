@@ -160,7 +160,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetListener param1) {
-        this(param0, pc.field_b.field_r, param1);
+        this(param0, MenuList.field_b.field_r, param1);
     }
 
     void updateHover(int param0, UiWidget param1, int param2, byte param3) {
@@ -173,7 +173,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, rf.field_X) ? 1 : 0;
+          var5_int = this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, FullscreenErrorDialog.field_X) ? 1 : 0;
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
           if (stackIn_3_0 == (this.hovered ? 1 : 0)) {
             stackIn_8_1 = (var5_int != 0);
@@ -311,7 +311,7 @@ class UiWidget extends IntrusiveNode {
             if (var5 == null) {
               return;
             }
-            pc.field_b.a(7829367, var5, ArchiveLoadProgress.field_e, AgeValidator.field_l);
+            MenuList.field_b.drawTooltip(7829367, var5, ArchiveLoadProgress.field_e, AgeValidator.field_l);
             return;
           }
           this.drawLayer(-9532, param1, param2, var5_int);
@@ -321,7 +321,7 @@ class UiWidget extends IntrusiveNode {
             if (var5Lifetime1 == null) {
               return;
             }
-            pc.field_b.a(7829367, var5Lifetime1, ArchiveLoadProgress.field_e, AgeValidator.field_l);
+            MenuList.field_b.drawTooltip(7829367, var5Lifetime1, ArchiveLoadProgress.field_e, AgeValidator.field_l);
             return;
           }
         }
@@ -381,12 +381,12 @@ class UiWidget extends IntrusiveNode {
         if (param2) {
           if (LoginForm.field_T != 0 &&
             var5 != 0) {
-            this.handleScrollInput(param0, this, LoginForm.field_T, param1, rf.field_X, NodeHashTableIterator.field_g, -24898);
+            this.handleScrollInput(param0, this, LoginForm.field_T, param1, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g, -24898);
           }
           if (ValidationIndicator.field_J == 0) {
             if (0 == RoadStripRenderer.field_f &&
               0 != DialogLayer.field_L) {
-              this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+              this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, FullscreenErrorDialog.field_X);
               var8 = LayeredButtonRenderer.field_q;
               if (var8 != null) {
                 if (var8.listener instanceof DropListener) {
@@ -400,7 +400,7 @@ class UiWidget extends IntrusiveNode {
               if (var5 == 0) {
                 if (0 == RoadStripRenderer.field_f &&
                   0 != DialogLayer.field_L) {
-                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, FullscreenErrorDialog.field_X);
                   var9 = LayeredButtonRenderer.field_q;
                   if (var9 != null) {
                     if (!(var9.listener instanceof DropListener)) {
@@ -427,7 +427,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (0 == RoadStripRenderer.field_f &&
               0 != DialogLayer.field_L) {
-              this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+              this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, FullscreenErrorDialog.field_X);
               var10 = LayeredButtonRenderer.field_q;
               if (var10 != null) {
                 if (var10.listener instanceof DropListener) {
@@ -449,12 +449,12 @@ class UiWidget extends IntrusiveNode {
             this.clearFocus(117);
             if (var7 != 0) {
               if (LoginForm.field_T != 0) {
-                this.handleScrollInput(param0, this, LoginForm.field_T, param1, rf.field_X, NodeHashTableIterator.field_g, -24898);
+                this.handleScrollInput(param0, this, LoginForm.field_T, param1, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g, -24898);
               }
               if (ValidationIndicator.field_J == 0) {
                 if (0 == RoadStripRenderer.field_f &&
                   0 != DialogLayer.field_L) {
-                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, FullscreenErrorDialog.field_X);
                   var11 = LayeredButtonRenderer.field_q;
                   if (var11 != null) {
                     if (var11.listener instanceof DropListener) {
@@ -470,7 +470,7 @@ class UiWidget extends IntrusiveNode {
                 param2 = false;
                 if (0 == RoadStripRenderer.field_f &&
                   0 != DialogLayer.field_L) {
-                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, rf.field_X);
+                  this.handleMouseRelease(NodeHashTableIterator.field_g, this, param1, param0, (byte) -9, FullscreenErrorDialog.field_X);
                   var13 = LayeredButtonRenderer.field_q;
                   if (var13 != null) {
                     if (var13.listener instanceof DropListener) {

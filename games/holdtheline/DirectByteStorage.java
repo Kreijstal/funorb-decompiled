@@ -22,10 +22,10 @@ final class DirectByteStorage extends ByteStorage {
             VehicleDefinition.a(var4, param0, 111);
             var4 = (fb) (AccountTermsPanel.field_O.next((byte) 87));
           }
-          var5 = (jg) (pc.field_e.first((byte) 86));
+          var5 = (jg) (MenuList.field_e.first((byte) 86));
           while (var5 != null) {
             TextFieldValidator.a(var5, (byte) 86, param0);
-            var5 = (jg) (pc.field_e.next((byte) 90));
+            var5 = (jg) (MenuList.field_e.next((byte) 90));
           }
           if (param1 == 0) {
             return;

@@ -120,7 +120,7 @@ final class BufferedSocket implements Runnable {
               var18[0][1 + var10 * 4] = IsaacPacketBuffer.field_u[var11];
               var18[0][2 + var10 * 4] = ua.field_c[var11];
               var18[0][4 * var10 + 3] = fj.field_q[var11];
-              if (ra.a(RoadSegment.field_v[var11], false) &&
+              if (LoadProgressDialog.isLocalPlayerName(RoadSegment.field_v[var11], false) &&
                 fj.field_q[var11] + (IsaacPacketBuffer.field_u[var11] + ua.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -138,7 +138,7 @@ final class BufferedSocket implements Runnable {
               var18[1][var13 * 4 + 1] = IsaacPacketBuffer.field_u[var11Lifetime1];
               var18[1][4 * var13 + 2] = ua.field_c[var11Lifetime1];
               var18[1][var13 * 4 + 3] = fj.field_q[var11Lifetime1];
-              if (ra.a(RoadSegment.field_v[var11Lifetime1], false) &&
+              if (LoadProgressDialog.isLocalPlayerName(RoadSegment.field_v[var11Lifetime1], false) &&
                 fj.field_q[var11Lifetime1] + IsaacPacketBuffer.field_u[var11Lifetime1] + ua.field_c[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
@@ -387,7 +387,7 @@ final class BufferedSocket implements Runnable {
           BufferedSocket.a(-24);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (pf.field_d >= 20 &&
+        if (PolarSortVector.field_d >= 20 &&
           jn.a((byte) -30) && (!(q.field_c > 0) ||
           ai.a(-118))) {
           stackIn_9_0 = false;
@@ -425,14 +425,14 @@ final class BufferedSocket implements Runnable {
         if (param0 > -3) {
           field_f = (char[]) null;
         }
-        if (!fb.field_i.b("font24", 118)) {
+        if (!fb.field_i.tryLoadNamedGroup("font24", 118)) {
           return false;
         }
-        if (!fb.field_i.b("overlayfont", -118)) {
+        if (!fb.field_i.tryLoadNamedGroup("overlayfont", -118)) {
           return false;
         }
         hk.field_a = ko.a(false);
-        EmailAddressValidator.field_j = om.a("font24", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
+        EmailAddressValidator.field_j = TrackObjectDefinition.loadNamedFont("font24", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
         return true;
     }
 

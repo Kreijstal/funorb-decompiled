@@ -275,10 +275,10 @@ final class NanoTickClock extends TickClock {
               var1_int = var1_int + vf.field_w;
             }
             if (0 <= var4) {
-              q.field_a.a(var6, var8Lifetime1, var1_int + ClientTextResources.field_b, var5, -1);
+              q.field_a.draw(var6, var8Lifetime1, var1_int + ClientTextResources.field_b, var5, -1);
               var1_int = var1_int + (TickClock.field_b + vf.field_w + ContentTransitionDialog.field_bb);
             } else {
-              CheckboxWidget.field_G.a(var6, var8Lifetime1, var1_int + gh.field_i, var5, -1);
+              CheckboxWidget.field_G.draw(var6, var8Lifetime1, var1_int + ViewportSizingController.field_i, var5, -1);
               var1_int = var1_int + CurvedRoadSegment.field_M;
             }
           }
@@ -293,13 +293,13 @@ final class NanoTickClock extends TickClock {
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         Sprite[] var5 = jc.field_h;
         Sprite var6 = ij.a(-8096, param0, var5, param1);
-        param2 = param2 - (var6.field_y - param1 >> 1);
-        param4 = param4 - (-param0 + var6.field_s >> 1);
-        SoftwareRasterizer.c(10 + param4, 10 + param2, var6.field_s, var6.field_y, 0, 128);
+        param2 = param2 - (var6.height - param1 >> 1);
+        param4 = param4 - (-param0 + var6.width >> 1);
+        SoftwareRasterizer.fillRectangleAlpha(10 + param4, 10 + param2, var6.width, var6.height, 0, 128);
         if (param3 != -42) {
           return;
         }
-        var6.a(param4, param2);
+        var6.draw(param4, param2);
     }
 
     final static void a(int param0, int param1, ih param2) {
@@ -336,30 +336,30 @@ final class NanoTickClock extends TickClock {
         int var12 = 0;
         var12 = HoldTheLine.field_D;
         try {
-          if (SoftwareRasterizer.field_d > param4) {
-            param1 = param1 - (-param4 + SoftwareRasterizer.field_d);
-            param4 = SoftwareRasterizer.field_d;
+          if (SoftwareRasterizer.clipLeft > param4) {
+            param1 = param1 - (-param4 + SoftwareRasterizer.clipLeft);
+            param4 = SoftwareRasterizer.clipLeft;
           }
-          if (param4 + param1 > SoftwareRasterizer.field_e) {
-            param1 = -param4 + SoftwareRasterizer.field_e;
+          if (param4 + param1 > SoftwareRasterizer.clipRight) {
+            param1 = -param4 + SoftwareRasterizer.clipRight;
           }
-          if (SoftwareRasterizer.field_a > param3) {
-            param2 = param2 - (SoftwareRasterizer.field_a - param3);
-            param3 = SoftwareRasterizer.field_a;
+          if (SoftwareRasterizer.clipTop > param3) {
+            param2 = param2 - (SoftwareRasterizer.clipTop - param3);
+            param3 = SoftwareRasterizer.clipTop;
           }
-          if (SoftwareRasterizer.field_i < param2 + param3) {
-            param2 = SoftwareRasterizer.field_i - param3;
+          if (SoftwareRasterizer.clipBottom < param2 + param3) {
+            param2 = SoftwareRasterizer.clipBottom - param3;
           }
           if (0 < param1 &&
             param2 > 0) {
-            var6_int = SoftwareRasterizer.field_j * param3 + param4;
-            var7 = -param1 + SoftwareRasterizer.field_j;
+            var6_int = SoftwareRasterizer.width * param3 + param4;
+            var7 = -param1 + SoftwareRasterizer.width;
             if (param0 != 255) {
               return;
             }
             for (param3 = -param2; param3 < 0; param3++) {
               for (param4 = -param1; param4 < 0; param4++) {
-                var8 = SoftwareRasterizer.field_b[var6_int];
+                var8 = SoftwareRasterizer.pixels[var6_int];
                 if (((var8 & 65280) >> 8) > param5 &&
                   (var8 & 65280) >> 8 >= (var8 & 16711680) >> 16) {
                   var9 = -60 + ((var8 & 16711680) >> 15);
@@ -369,7 +369,7 @@ final class NanoTickClock extends TickClock {
                   var10 = var8 & 65280;
                   var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.field_b[var6_int] = kc.a(kc.a(var10, var9 << 16), var11);
+                  SoftwareRasterizer.pixels[var6_int] = kc.a(kc.a(var10, var9 << 16), var11);
                 }
                 var6_int++;
               }
@@ -454,7 +454,7 @@ final class NanoTickClock extends TickClock {
                 param1 = RaceWorld.field_Z;
               }
               param0 = 2;
-              lh.field_a.a(param2 ^ 2795, ec.field_v);
+              lh.field_a.a(param2 ^ 2795, RaceSetupMenu.field_v);
             }
             var3_int = 1;
             if (10 == param0) {
@@ -501,8 +501,8 @@ final class NanoTickClock extends TickClock {
         int var4 = -105 / ((66 - param1) / 56);
         Sprite var7 = new Sprite(param2, param2);
         Sprite var3 = var7;
-        for (var5 = 0; var3.field_z.length > var5; var5++) {
-          var7.field_z[var5] = param0;
+        for (var5 = 0; var3.pixels.length > var5; var5++) {
+          var7.pixels[var5] = param0;
         }
         return var3;
     }

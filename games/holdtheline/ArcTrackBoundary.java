@@ -101,7 +101,7 @@ final class ArcTrackBoundary extends BoundaryCurve {
         int var3Lifetime1;
         if (param1 >= -5) {
           field_s = (LoginMethodPreference) null;
-          var3 = pf.a((byte) 35, param2);
+          var3 = PolarSortVector.a((byte) 35, param2);
           if (var3 != 0) {
             return var3;
           }
@@ -113,7 +113,7 @@ final class ArcTrackBoundary extends BoundaryCurve {
           }
           return 0;
         }
-        var3Lifetime1 = pf.a((byte) 35, param2);
+        var3Lifetime1 = PolarSortVector.a((byte) 35, param2);
         if (var3Lifetime1 != 0) {
           return var3Lifetime1;
         }

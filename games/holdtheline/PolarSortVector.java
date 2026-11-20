@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf implements hd {
+final class PolarSortVector implements SortableValue {
     static NamedSoundEffect field_g;
     static String field_b;
     static int[] field_c;
-    int field_e;
+    int y;
     static int field_d;
     static String field_f;
-    int field_a;
+    int x;
 
     final static void a(boolean param0) {
         ij.c(4);
         if (null != MouseInputHandler.field_b) {
-          om.a(-46342, MouseInputHandler.field_b);
+          TrackObjectDefinition.detachInputListeners(-46342, MouseInputHandler.field_b);
         }
         co.a(param0);
         CachedTextLayout.b(true);
@@ -41,7 +41,7 @@ final class pf implements hd {
           if (param0 > 0) {
             return 0;
           }
-          pf.a((byte) -18);
+          PolarSortVector.a((byte) -18);
           return 0;
         }
         if (!of.a(-969)) {
@@ -53,12 +53,12 @@ final class pf implements hd {
         if (param0 > 0) {
           return 0;
         }
-        pf.a((byte) -18);
+        PolarSortVector.a((byte) -18);
         return 0;
     }
 
-    public final int a(byte param0, hd param1) {
-        pf var3 = null;
+    public final int compareTo(byte param0, SortableValue param1) {
+        PolarSortVector var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int stackIn_5_0 = 0;
@@ -67,13 +67,13 @@ final class pf implements hd {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (pf) (param1);
-          var4 = -(var3.field_e * this.field_a) + this.field_e * var3.field_a;
+          var3 = (PolarSortVector) (param1);
+          var4 = -(var3.y * this.x) + this.y * var3.x;
           if (param0 != -101) {
-            pf.a((byte) 83, 126);
+            PolarSortVector.a((byte) 83, 126);
           }
           if (var4 == 0) {
-            var4 = var3.field_a * var3.field_a + (-(this.field_a * this.field_a) + var3.field_e * var3.field_e) - this.field_e * this.field_e;
+            var4 = var3.x * var3.x + (-(this.x * this.x) + var3.y * var3.y) - this.y * this.y;
           }
           stackIn_5_0 = var4;
           return stackIn_5_0;
@@ -96,7 +96,7 @@ final class pf implements hd {
         field_g = null;
         field_f = null;
         if (param0 <= 8) {
-          pf.clearSharedReferences((byte) -9);
+          PolarSortVector.clearSharedReferences((byte) -9);
           field_c = null;
           return;
         }

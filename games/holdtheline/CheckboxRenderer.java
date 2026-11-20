@@ -56,20 +56,20 @@ final class CheckboxRenderer implements WidgetRenderer {
           if (param2 >= -48) {
             return;
           }
-          SoftwareRasterizer.f(param1 + param3.x, param3.y + param4, param3.width, param3.height, this.field_k);
+          SoftwareRasterizer.fillRectangle(param1 + param3.x, param3.y + param4, param3.width, param3.height, this.field_k);
           var8 = this.field_t + (param3.x + param1);
           var9 = param3.y + param4 + this.field_g;
-          SoftwareRasterizer.e(var8, var9, this.field_s, this.field_i, 5592405);
-          SoftwareRasterizer.f(var8, var9, this.field_s, this.field_i, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_s, this.field_i, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_s, this.field_i, var7);
           if (var11.field_B) {
-            SoftwareRasterizer.d(var8, var9, var8 + this.field_s, this.field_i + var9, 1);
-            SoftwareRasterizer.d(this.field_s + var8, var9, var8, this.field_i + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_s, this.field_i + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_s + var8, var9, var8, this.field_i + var9, 1);
           }
           if (this.field_h == null) {
             return;
           }
           var10 = this.field_r + this.field_s + this.field_t;
-          this.field_h.a(param3.text, param1 - (-param3.x - var10), this.field_f + param3.y + param4, param3.width + (-var10 - this.field_r), -(this.field_r << 1) + param3.height, this.field_a, this.field_p, this.field_e, this.field_b, 0);
+          this.field_h.drawParagraph(param3.text, param1 - (-param3.x - var10), this.field_f + param3.y + param4, param3.width + (-var10 - this.field_r), -(this.field_r << 1) + param3.height, this.field_a, this.field_p, this.field_e, this.field_b, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,22 +122,22 @@ final class CheckboxRenderer implements WidgetRenderer {
             StraightRoadSegment.a(param0 + 7091, param5, param2, param3, param4);
             return;
           }
-          param5 = param5 - ((-1024 + param1) * param2.field_y >> 11);
-          param3 = param3 - (param2.field_s * (-1024 + param1) >> 11);
-          var6_int = param0 + SoftwareRasterizer.field_j * param5 + param3;
+          param5 = param5 - ((-1024 + param1) * param2.height >> 11);
+          param3 = param3 - (param2.width * (-1024 + param1) >> 11);
+          var6_int = param0 + SoftwareRasterizer.width * param5 + param3;
           var8 = 0;
           var9 = 0;
-          for (var10 = param1 * param2.field_y >> 10; var10 > 0; var10--) {
-            var8Lifetime1 = param2.field_s * (var9 >> 10) << 10;
+          for (var10 = param1 * param2.height >> 10; var10 > 0; var10--) {
+            var8Lifetime1 = param2.width * (var9 >> 10) << 10;
             var7 = var6_int - 1;
-            for (var11 = param1 * param2.field_s >> 10; 0 < var11; var11--) {
-              if (param2.field_z[var8Lifetime1 >> 10] != 0) {
-                if (16777215 == param2.field_z[var8Lifetime1 >> 10]) {
+            for (var11 = param1 * param2.width >> 10; 0 < var11; var11--) {
+              if (param2.pixels[var8Lifetime1 >> 10] != 0) {
+                if (16777215 == param2.pixels[var8Lifetime1 >> 10]) {
                   var7++;
-                  SoftwareRasterizer.field_b[var7] = param4;
+                  SoftwareRasterizer.pixels[var7] = param4;
                 } else {
                   var7++;
-                  SoftwareRasterizer.field_b[var7] = param2.field_z[var8Lifetime1 >> 10];
+                  SoftwareRasterizer.pixels[var7] = param2.pixels[var8Lifetime1 >> 10];
                 }
               } else {
                 var7++;
@@ -145,7 +145,7 @@ final class CheckboxRenderer implements WidgetRenderer {
               var8Lifetime1 = var8Lifetime1 + 1048576 / param1;
             }
             var9 = var9 + 1048576 / param1;
-            var6_int = var6_int + SoftwareRasterizer.field_j;
+            var6_int = var6_int + SoftwareRasterizer.width;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

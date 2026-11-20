@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj {
-    private int field_l;
-    private int field_a;
+final class LayeredWidgetStyle {
+    private int textColor;
+    private int offsetX;
     static int field_d;
     private boolean field_f;
-    private int field_h;
-    private int field_k;
-    Sprite[] field_j;
+    private int shadowColor;
+    private int alpha;
+    Sprite[] borderSprites;
     static float field_e;
-    Sprite field_b;
+    Sprite icon;
     static SpriteAsset[] field_c;
     static Sprite field_i;
-    private int field_g;
+    private int offsetY;
 
-    final void a(nj param0, int param1) {
+    final void copyTo(LayeredWidgetStyle param0, int param1) {
         try {
-          param0.field_j = this.field_j;
-          param0.field_k = this.field_k;
-          param0.field_g = this.field_g;
-          param0.field_a = this.field_a;
+          param0.borderSprites = this.borderSprites;
+          param0.alpha = this.alpha;
+          param0.offsetY = this.offsetY;
+          param0.offsetX = this.offsetX;
           param0.field_f = this.field_f;
-          param0.field_l = this.field_l;
+          param0.textColor = this.textColor;
           if (param1 != -1) {
-            this.b(88, -100);
+            this.setTextColor(88, -100);
           }
-          param0.field_h = this.field_h;
-          param0.field_b = this.field_b;
+          param0.shadowColor = this.shadowColor;
+          param0.icon = this.icon;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "nj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final nj b(int param0, int param1) {
-        this.field_l = param0;
+    final LayeredWidgetStyle setTextColor(int param0, int param1) {
+        this.textColor = param0;
         if (param1 != -26228) {
-          this.a(39, 17);
+          this.setOffsetX(39, 17);
           return this;
         }
         return this;
     }
 
-    final static void a(int param0, int param1, String[] param2, String param3) {
+    final static void handleNameAvailabilityResponse(int param0, int param1, String[] param2, String param3) {
         int var5 = 0;
         String[] var6 = null;
         boolean stackIn_5_0 = false;
@@ -78,7 +78,7 @@ final class nj {
           if (param0 == 256) {
             return;
           }
-          nj.clearSharedReferences(58);
+          LayeredWidgetStyle.clearSharedReferences(58);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class nj {
         }
     }
 
-    final void a(LayeredButtonRenderer param0, nj param1, int param2, int param3, int param4, UiWidget param5) {
+    final void applyTo(LayeredButtonRenderer param0, LayeredWidgetStyle param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -112,34 +112,34 @@ final class nj {
         RuntimeException var7 = null;
         try {
           if (this.field_f) {
-            param1.a(param5, param2, param3, -1, param0);
-            param1.a((byte) -121);
+            param1.draw(param5, param2, param3, -1, param0);
+            param1.reset((byte) -121);
           }
-          if (this.field_a != -2147483648) {
-            param1.field_a = this.field_a;
+          if (this.offsetX != -2147483648) {
+            param1.offsetX = this.offsetX;
           }
           if (param4 != -28063) {
             field_e = -1.5048772096633911f;
           }
-          if (this.field_g != -2147483648) {
-            param1.field_g = this.field_g;
+          if (this.offsetY != -2147483648) {
+            param1.offsetY = this.offsetY;
           }
-          if (this.field_j != null) {
-            param1.field_j = this.field_j;
+          if (this.borderSprites != null) {
+            param1.borderSprites = this.borderSprites;
           }
-          if (-1 <= this.field_l) {
-            param1.field_l = this.field_l;
+          if (-1 <= this.textColor) {
+            param1.textColor = this.textColor;
           }
-          if (-2147483648 != this.field_k) {
-            param1.field_k = this.field_k;
+          if (-2147483648 != this.alpha) {
+            param1.alpha = this.alpha;
           }
-          if (null != this.field_b) {
-            param1.field_b = this.field_b;
+          if (null != this.icon) {
+            param1.icon = this.icon;
           }
-          if (this.field_h < -1) {
+          if (this.shadowColor < -1) {
             return;
           }
-          param1.field_h = this.field_h;
+          param1.shadowColor = this.shadowColor;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,24 +167,24 @@ final class nj {
         }
     }
 
-    final nj a(int param0, boolean param1) {
-        this.field_g = param0;
+    final LayeredWidgetStyle setOffsetY(int param0, boolean param1) {
+        this.offsetY = param0;
         if (!param1) {
-          return (nj) null;
+          return (LayeredWidgetStyle) null;
         }
         return this;
     }
 
-    final nj a(int param0, Sprite[] param1) {
+    final LayeredWidgetStyle setBorderSprites(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_j = param1;
+          this.borderSprites = param1;
           if (param0 != 29536) {
-            this.a((byte) 115);
+            this.reset((byte) 115);
           }
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,39 +201,39 @@ final class nj {
         }
     }
 
-    final nj a(int param0, int param1) {
-        this.field_a = param0;
+    final LayeredWidgetStyle setOffsetX(int param0, int param1) {
+        this.offsetX = param0;
         if (param1 > -115) {
-          return (nj) null;
+          return (LayeredWidgetStyle) null;
         }
         return this;
     }
 
-    final nj a(boolean param0, int param1) {
+    final LayeredWidgetStyle setFlushBeforeApply(boolean param0, int param1) {
         if (param1 == -2147483648) {
           this.field_f = param0 ? true : false;
           return this;
         }
         String var4 = (String) null;
-        nj.a(33, -24, (String[]) null, (String) null);
+        LayeredWidgetStyle.handleNameAvailabilityResponse(33, -24, (String[]) null, (String) null);
         this.field_f = param0 ? true : false;
         return this;
     }
 
-    final void a(byte param0) {
-        this.field_g = 0;
-        this.field_j = null;
-        this.field_h = -1;
-        this.field_l = 0;
+    final void reset(byte param0) {
+        this.offsetY = 0;
+        this.borderSprites = null;
+        this.shadowColor = -1;
+        this.textColor = 0;
         if (param0 == -121) {
-          this.field_b = null;
-          this.field_k = 256;
-          this.field_a = 0;
+          this.icon = null;
+          this.alpha = 256;
+          this.offsetX = 0;
           return;
         }
     }
 
-    final void a(UiWidget param0, int param1, int param2, int param3, LayeredButtonRenderer param4) {
+    final void draw(UiWidget param0, int param1, int param2, int param3, LayeredButtonRenderer param4) {
         BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
@@ -256,23 +256,23 @@ final class nj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hi.drawNineSlice(this.field_j, param0.height, true, param0.width, param2 + param0.x, param1 + param0.y);
-          if (null != this.field_b) {
-            var6_int = param2 + param0.x + this.field_a;
-            var7 = this.field_g + param0.y + param1;
+          hi.drawNineSlice(this.borderSprites, param0.height, true, param0.width, param2 + param0.x, param1 + param0.y);
+          if (null != this.icon) {
+            var6_int = param2 + param0.x + this.offsetX;
+            var7 = this.offsetY + param0.y + param1;
             if (param4.field_i == 1) {
-              var6_int = var6_int + (-this.field_b.field_o + param0.width) / 2;
+              var6_int = var6_int + (-this.icon.canvasWidth + param0.width) / 2;
             }
             if (param4.field_d == 1) {
-              var7 = var7 + (-this.field_b.field_v + param0.height) / 2;
+              var7 = var7 + (-this.icon.canvasHeight + param0.height) / 2;
             }
             if (param4.field_i == 2) {
-              var6_int = var6_int + (param0.width - this.field_b.field_o);
+              var6_int = var6_int + (param0.width - this.icon.canvasWidth);
             }
             if (2 == param4.field_d) {
-              var7 = var7 + (-this.field_b.field_v + param0.height);
+              var7 = var7 + (-this.icon.canvasHeight + param0.height);
             }
-            this.field_b.a(var6_int, var7);
+            this.icon.draw(var6_int, var7);
           }
           if (param3 != -1) {
             return;
@@ -280,31 +280,31 @@ final class nj {
           var6 = param4.getDisplayText(param0, (byte) -15);
           if (var6 != null &&
             null != param4.field_f &&
-            this.field_l >= 0) {
+            this.textColor >= 0) {
             stackIn_20_0 = param4.field_f;
             stackIn_20_1 = var6;
-            if (this.field_a == -2147483648) {
+            if (this.offsetX == -2147483648) {
               stackIn_21_2 = 0;
             } else {
-              stackIn_21_2 = this.field_a;
+              stackIn_21_2 = this.offsetX;
             }
             stackIn_23_2 = stackIn_21_2 + param4.field_j + param0.x + param2;
-            if (this.field_g != -2147483648) {
-              stackIn_24_3 = this.field_g;
+            if (this.offsetY != -2147483648) {
+              stackIn_24_3 = this.offsetY;
             } else {
               stackIn_24_3 = 0;
             }
             stackIn_26_3 = stackIn_24_3 + param4.field_p + (param0.y + param1);
             stackIn_26_4 = -param4.field_n + (-param4.field_j + param0.width);
             stackIn_26_5 = -param4.field_e + param0.height - param4.field_p;
-            stackIn_26_6 = this.field_l;
-            stackIn_26_7 = this.field_h;
-            if (this.field_k == -2147483648) {
+            stackIn_26_6 = this.textColor;
+            stackIn_26_7 = this.shadowColor;
+            if (this.alpha == -2147483648) {
               stackIn_27_8 = 256;
             } else {
-              stackIn_27_8 = this.field_k;
+              stackIn_27_8 = this.alpha;
             }
-            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param4.field_i, param4.field_d, param4.field_h);
+            ((BitmapFont) (Object) stackIn_20_0).drawParagraph(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param4.field_i, param4.field_d, param4.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -335,21 +335,21 @@ final class nj {
         }
     }
 
-    nj() {
-        this.field_h = -2;
-        this.field_a = -2147483648;
+    LayeredWidgetStyle() {
+        this.shadowColor = -2;
+        this.offsetX = -2147483648;
         this.field_f = false;
-        this.field_j = null;
-        this.field_k = -2147483648;
-        this.field_l = -2;
-        this.field_b = null;
-        this.field_g = -2147483648;
+        this.borderSprites = null;
+        this.alpha = -2147483648;
+        this.textColor = -2;
+        this.icon = null;
+        this.offsetY = -2147483648;
     }
 
-    final nj b(int param0, boolean param1) {
-        this.field_h = param0;
+    final LayeredWidgetStyle setShadowColor(int param0, boolean param1) {
+        this.shadowColor = param0;
         if (param1) {
-          return (nj) null;
+          return (LayeredWidgetStyle) null;
         }
         return this;
     }

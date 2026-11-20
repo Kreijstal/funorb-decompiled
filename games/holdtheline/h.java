@@ -24,10 +24,10 @@ final class h {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = q.field_a.a(param0);
+            stackIn_7_0 = q.field_a.measureText(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = CheckboxWidget.field_G.a(param0);
+          stackIn_5_0 = CheckboxWidget.field_G.measureText(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,15 +115,15 @@ final class h {
         int var14 = 0;
         StringBuilder var15 = null;
         Object var16 = null;
-        ec var16_ref = null;
+        RaceSetupMenu var16_ref = null;
         StringBuilder var17 = null;
-        vk var19 = null;
+        CourseDefinition var19 = null;
         String[] var20 = null;
         Sprite var21 = null;
         StringBuilder var22 = null;
         String[] var23 = null;
         Sprite[] var24 = null;
-        vk var26 = null;
+        CourseDefinition var26 = null;
         String[] var27 = null;
         Sprite var28 = null;
         StringBuilder var29 = null;
@@ -143,14 +143,14 @@ final class h {
         var13 = HoldTheLine.field_D;
         try {
           var2 = -127 % ((45 - param0) / 55);
-          var16_ref = (ec) (l.field_a[13]);
+          var16_ref = (RaceSetupMenu) (l.field_a[13]);
           if (DelegatingCanvas.field_d == 7) {
             for (var3 = 0; var3 < 4; var3++) {
               var15 = new StringBuilder(20);
               discarded$24 = var15.append("<col=1>");
-              discarded$25 = var15.append(gh.field_t[var3]);
+              discarded$25 = var15.append(ViewportSizingController.field_t[var3]);
               discarded$26 = var15.append("</col><br><br>");
-              var5_int = pf.a((byte) 105, var3);
+              var5_int = PolarSortVector.a((byte) 105, var3);
               if (2 != var5_int) {
                 if (var5_int == 1) {
                   discarded$27 = var15.append(ArchiveLoadProgress.field_a[var3]);
@@ -168,16 +168,16 @@ final class h {
               } else {
                 discarded$33 = var15.append(MarkerSliderRenderer.field_m);
               }
-              var16_ref.field_X[0][var3] = gh.field_t[var3];
-              var16_ref.field_G[0][var3] = var15.toString();
-              var16_ref.field_o[0][var3] = IndexedSpriteState.a(pf.a((byte) 30, var3), (byte) -37, var3);
+              var16_ref.rowLabels[0][var3] = ViewportSizingController.field_t[var3];
+              var16_ref.rowDescriptions[0][var3] = var15.toString();
+              var16_ref.rowSprites[0][var3] = IndexedSpriteState.a(PolarSortVector.a((byte) 30, var3), (byte) -37, var3);
             }
-            var16_ref.field_Q[0] = TutorialCondition.field_a;
+            var16_ref.rowTitles[0] = TutorialCondition.field_a;
             return;
           }
           if (1 != DelegatingCanvas.field_d &&
             DelegatingCanvas.field_d != 0) {
-            var3Lifetime1 = pc.field_l[5];
+            var3Lifetime1 = MenuList.field_l[5];
             var37 = new int[var3Lifetime1];
             var27 = new String[var3Lifetime1];
             var5 = var27;
@@ -190,7 +190,7 @@ final class h {
             while (var3Lifetime1 > var14) {
               var37[var14] = var14;
               var26 = tk.field_c[5][var14];
-              var10 = pf.a((byte) 55, var14);
+              var10 = PolarSortVector.a((byte) 55, var14);
               if (var10 == 0 &&
                 !var26.field_r) {
                 var5[var14] = var26.field_b;
@@ -198,10 +198,10 @@ final class h {
                 discarded$0 = var29.append("<col=1>");
                 discarded$1 = var29.append(var26.field_b);
                 discarded$2 = var29.append("</col><br>(");
-                discarded$3 = var29.append(gh.field_t[var26.field_p]);
+                discarded$3 = var29.append(ViewportSizingController.field_t[var26.field_p]);
                 discarded$4 = var29.append(")");
                 var6[var14] = var29.toString();
-                var7[var14] = var26.a(9392, 2, 111);
+                var7[var14] = var26.getPreview(9392, 2, 111);
               } else {
                 var27[var14] = "";
                 stackIn_49_0 = var6;
@@ -212,28 +212,28 @@ final class h {
                   stackIn_50_2 = TextLineLayout.field_f[var14];
                 }
                 stackIn_49_0[stackIn_49_1] = stackIn_50_2;
-                var28 = var26.a(9392, 2, 111).e();
+                var28 = var26.getPreview(9392, 2, 111).copy();
                 Point2i.scaleSpriteIntensity(var28, 64, -1);
                 vb.a(-109, var28);
-                rf.field_ab.a(-rf.field_ab.field_s + var28.field_s >> 1, var28.field_y - rf.field_ab.field_y >> 1);
+                FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + var28.width >> 1, var28.height - FullscreenErrorDialog.field_ab.height >> 1);
                 MarkerSliderRenderer.restoreRasterTarget(-1);
                 var7[var14] = var28;
               }
               var14++;
             }
-            var16_ref.field_F[0] = var37;
-            var16_ref.field_X[0] = var27;
-            var16_ref.field_G[0] = var30;
-            var16_ref.field_o[0] = var31;
-            var16_ref.field_Q[0] = NodeHashTableIterator.field_a;
+            var16_ref.rowItemIds[0] = var37;
+            var16_ref.rowLabels[0] = var27;
+            var16_ref.rowDescriptions[0] = var30;
+            var16_ref.rowSprites[0] = var31;
+            var16_ref.rowTitles[0] = NodeHashTableIterator.field_a;
             return;
           }
           for (var3Lifetime2 = 0; var3Lifetime2 < 4; var3Lifetime2++) {
             var17 = new StringBuilder(20);
             discarded$18 = var17.append("<col=1>");
-            discarded$19 = var17.append(gh.field_t[var3Lifetime2]);
+            discarded$19 = var17.append(ViewportSizingController.field_t[var3Lifetime2]);
             discarded$20 = var17.append("</col><br><br>");
-            var5_intLifetime1 = pf.a((byte) 2, var3Lifetime2);
+            var5_intLifetime1 = PolarSortVector.a((byte) 2, var3Lifetime2);
             if (var5_intLifetime1 != 2) {
               if (var5_intLifetime1 != 1) {
                 discarded$21 = var17.append(sa.field_d[var3Lifetime2]);
@@ -243,11 +243,11 @@ final class h {
             } else {
               discarded$23 = var17.append(MarkerSliderRenderer.field_m);
             }
-            var16_ref.field_X[0][var3Lifetime2] = gh.field_t[var3Lifetime2];
-            var16_ref.field_G[0][var3Lifetime2] = var17.toString();
-            var16_ref.field_o[0][var3Lifetime2] = IndexedSpriteState.a(pf.a((byte) 41, var3Lifetime2), (byte) -109, var3Lifetime2);
+            var16_ref.rowLabels[0][var3Lifetime2] = ViewportSizingController.field_t[var3Lifetime2];
+            var16_ref.rowDescriptions[0][var3Lifetime2] = var17.toString();
+            var16_ref.rowSprites[0][var3Lifetime2] = IndexedSpriteState.a(PolarSortVector.a((byte) 41, var3Lifetime2), (byte) -109, var3Lifetime2);
           }
-          var3Lifetime3 = pc.field_l[StrongCacheEntry.field_w];
+          var3Lifetime3 = MenuList.field_l[StrongCacheEntry.field_w];
           var36 = new int[var3Lifetime3];
           var20 = new String[var3Lifetime3];
           var5Lifetime1 = var20;
@@ -273,9 +273,9 @@ final class h {
                 discarded$10 = var22.append(DisplayNameValidator.formatPreciseRaceTime(53, var11));
                 discarded$11 = var22.append(' ');
                 discarded$12 = var22.append('(');
-                if (ha.field_j[StrongCacheEntry.field_w][var8Lifetime1] >= 0 &&
-                  ha.field_j[StrongCacheEntry.field_w][var8Lifetime1] < 4) {
-                  discarded$13 = var22.append(rf.field_Y[ha.field_j[StrongCacheEntry.field_w][var8Lifetime1]]);
+                if (BoundaryIntersection.field_j[StrongCacheEntry.field_w][var8Lifetime1] >= 0 &&
+                  BoundaryIntersection.field_j[StrongCacheEntry.field_w][var8Lifetime1] < 4) {
+                  discarded$13 = var22.append(FullscreenErrorDialog.field_Y[BoundaryIntersection.field_j[StrongCacheEntry.field_w][var8Lifetime1]]);
                 }
                 discarded$14 = var22.append(')');
                 discarded$15 = var22.append(NameCheckProgressDialog.field_zb);
@@ -287,23 +287,23 @@ final class h {
                 }
               }
               var6Lifetime1[var8Lifetime1] = var22.toString();
-              var7Lifetime1[var8Lifetime1] = var19.a(9392, 1, 111);
+              var7Lifetime1[var8Lifetime1] = var19.getPreview(9392, 1, 111);
             } else {
               var20[var8Lifetime1] = "";
               var6Lifetime1[var8Lifetime1] = HoldTheLine.field_G[StrongCacheEntry.field_w];
-              var21 = var19.a(9392, DelegatingCanvas.field_d, 111).e();
+              var21 = var19.getPreview(9392, DelegatingCanvas.field_d, 111).copy();
               Point2i.scaleSpriteIntensity(var21, 64, -1);
               vb.a(-97, var21);
-              rf.field_ab.a(-rf.field_ab.field_s + var21.field_s >> 1, var21.field_y - rf.field_ab.field_y >> 1);
+              FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + var21.width >> 1, var21.height - FullscreenErrorDialog.field_ab.height >> 1);
               MarkerSliderRenderer.restoreRasterTarget(-1);
               var7Lifetime1[var8Lifetime1] = var21;
             }
           }
-          var16_ref.field_F[1] = var36;
-          var16_ref.field_X[1] = var20;
-          var16_ref.field_G[1] = var23;
-          var16_ref.field_o[1] = var24;
-          var16_ref.field_Q[0] = vb.field_c;
+          var16_ref.rowItemIds[1] = var36;
+          var16_ref.rowLabels[1] = var20;
+          var16_ref.rowDescriptions[1] = var23;
+          var16_ref.rowSprites[1] = var24;
+          var16_ref.rowTitles[0] = vb.field_c;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -336,10 +336,10 @@ final class h {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = q.field_a.a(param0);
+            stackIn_7_0 = q.field_a.measureText(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = CheckboxWidget.field_G.a(param0);
+          stackIn_5_0 = CheckboxWidget.field_G.measureText(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

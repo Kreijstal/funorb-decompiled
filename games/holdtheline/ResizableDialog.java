@@ -15,7 +15,7 @@ abstract class ResizableDialog extends FadingDialog {
     static volatile int field_R;
     private int field_W;
 
-    void a(int param0, int param1, byte param2) {
+    void drawFrame(int param0, int param1, byte param2) {
         int var4;
         int var5;
         int var6;
@@ -44,15 +44,15 @@ abstract class ResizableDialog extends FadingDialog {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = HoldTheLine.field_D;
-        SoftwareRasterizer.a(6 + param0, param1 + 35, -12 + this.width, this.height - 40, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(6 + param0, param1 + 35, -12 + this.width, this.height - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var7 < var4) {
-          if (var8 >= SoftwareRasterizer.field_a &&
-            var8 < SoftwareRasterizer.field_i) {
+          if (var8 >= SoftwareRasterizer.clipTop &&
+            var8 < SoftwareRasterizer.clipBottom) {
             var9 = var5 + var7 * (-var5 + var6) / var4;
             var10 = 0;
             var11 = this.width;
@@ -65,7 +65,7 @@ abstract class ResizableDialog extends FadingDialog {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  SoftwareRasterizer.field_b[SoftwareRasterizer.field_j * var8 - (-param0 - var10)] = var13;
+                  SoftwareRasterizer.pixels[SoftwareRasterizer.width * var8 - (-param0 - var10)] = var13;
                 }
                 var10++;
               }
@@ -80,7 +80,7 @@ abstract class ResizableDialog extends FadingDialog {
                   if (var14 >= 420) {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    SoftwareRasterizer.field_b[param0 + (SoftwareRasterizer.field_j * var8 + var11)] = var15;
+                    SoftwareRasterizer.pixels[param0 + (SoftwareRasterizer.width * var8 + var11)] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -93,7 +93,7 @@ abstract class ResizableDialog extends FadingDialog {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            SoftwareRasterizer.b(param0 + var10, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(param0 + var10, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -109,12 +109,12 @@ abstract class ResizableDialog extends FadingDialog {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRasterizer.b(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer.b(-6 + (param0 + this.width), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param0 + this.width), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        SpriteState.field_t.a(param0 + this.width - 90, param1 + 10);
+        SpriteState.field_t.draw(param0 + this.width - 90, param1 + 10);
         NameSuggestionsPanel.a(param1 + 35, 14191, param0 + 5, RaceVehicle.field_Db, -10 + this.width);
         NameSuggestionsPanel.a(-22 + this.height + param1, 14191, param0, te.field_b, this.width);
         var4Lifetime2 = this.height - 79;
@@ -125,8 +125,8 @@ abstract class ResizableDialog extends FadingDialog {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          SoftwareRasterizer.b(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer.b(-6 + this.width + param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + this.width + param0, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

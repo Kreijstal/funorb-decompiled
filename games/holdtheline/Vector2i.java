@@ -157,8 +157,8 @@ final class Vector2i {
 
     final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PaletteBitmapFont param10) {
         try {
-          param10.a(param1, 1 + param6, 1 + param5, param4, param7, 8, -1, 114, param9, param3, param0);
-          param10.a(param1, param6, param5, param4, param7, param2, param8, param9, param3, param0);
+          param10.drawParagraph(param1, 1 + param6, 1 + param5, param4, param7, 8, -1, 114, param9, param3, param0);
+          param10.drawParagraph(param1, param6, param5, param4, param7, param2, param8, param9, param3, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ')');
         }

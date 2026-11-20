@@ -36,7 +36,7 @@ class fj extends DualLinkNode {
     }
 
     final static void a(boolean param0, boolean param1) {
-        vk.a(param0, param1, -113);
+        CourseDefinition.a(param0, param1, -113);
     }
 
     final static void f(int param0) {
@@ -100,7 +100,7 @@ class fj extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new Sprite(param5, param3);
-          Sprite.a(param2, var6, param1, param4, 0, param0, param5, param3);
+          Sprite.copyRegion(param2, var6, param1, param4, 0, param0, param5, param3);
           stackIn_1_0 = var6;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

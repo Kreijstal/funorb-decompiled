@@ -114,7 +114,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             if (null == var4.field_p) {
               var4.field_p = CachedTextLayout.playSoundStream(var4.field_o, (byte) -68);
             }
-            var4.field_p.setInternalVolume(pc.field_h * var4.field_n * var1_int >> 16, true);
+            var4.field_p.setInternalVolume(MenuList.field_h * var4.field_n * var1_int >> 16, true);
             var4.field_p.setPan(var2, -64);
             var4.field_p.setPlaybackStep(var3, false);
             var4 = (EntitySound) (FadingDialog.field_J.next((byte) 125));
@@ -231,9 +231,9 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           this.y = 15;
           var7 = IntrusiveNode.field_g;
           if (this.field_R != null) {
-            this.y = this.y + (var7.b(this.field_R, this.width - 40, var7.field_G) + 5);
+            this.y = this.y + (var7.getParagraphHeight(this.field_R, this.width - 40, var7.ascent) + 5);
           }
-          var8 = rf.field_bb;
+          var8 = FullscreenErrorDialog.field_bb;
           var9 = CacheEntry.a(GameKeyHandler.a(110), (byte) 124);
           if (var9 == RaceVehicle.field_Wb) {
             var8 = rc.field_d;
@@ -307,7 +307,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final static Sprite a(int param0, int param1, vk param2, int param3) {
+    final static Sprite a(int param0, int param1, CourseDefinition param2, int param3) {
         int var13 = 0;
         Sprite stackIn_10_0 = null;
         Sprite stackIn_27_0 = null;
@@ -348,21 +348,21 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             var7_int = var5 * 3 / 4;
             var8 = var7_int * 3 / 4;
             if (!param2.field_r) {
-              ra.field_hb.a((var4_int - var8) / 2, 3 * var5 / 16, var8, var7_int);
+              LoadProgressDialog.field_hb.drawScaled((var4_int - var8) / 2, 3 * var5 / 16, var8, var7_int);
               var9_int = var5 / 16;
               var10 = var4_int / 2;
               var11 = -(var9_int / 4) + var4_int / 2 - var10 / 2;
               var12 = 3 * var5 / 16 - var9_int / 2;
               for (var13 = 0; var13 < var9_int; var13++) {
                 var14 = var10 * param2.field_l >> 8;
-                SoftwareRasterizer.b(var13 / 2 + var11, -var13 + var12, var14, 12517567);
-                SoftwareRasterizer.b(var14 + var13 / 2 + var11, var12 - var13, -var14 + var10, 7274607);
+                SoftwareRasterizer.drawHorizontalLine(var13 / 2 + var11, -var13 + var12, var14, 12517567);
+                SoftwareRasterizer.drawHorizontalLine(var14 + var13 / 2 + var11, var12 - var13, -var14 + var10, 7274607);
               }
             } else {
               if (var5 <= 128) {
-                SolidRoadStripRenderer.field_q.d(-var5 + var4_int >> 1, 0, var5, var5);
+                SolidRoadStripRenderer.field_q.drawDownscaledBlended(-var5 + var4_int >> 1, 0, var5, var5);
               } else {
-                SolidRoadStripRenderer.field_q.a(-128 + var4_int >> 1, var5 - 128 >> 1);
+                SolidRoadStripRenderer.field_q.draw(-128 + var4_int >> 1, var5 - 128 >> 1);
               }
             }
             MarkerSliderRenderer.restoreRasterTarget(-1);
@@ -381,7 +381,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             while (var9 != null) {
               if (~var8Lifetime1 == ~var9.field_q) {
                 var17 = var9.a((byte) -124);
-                var17.a(-(var17.field_s >> 1) + var9.position.x, var9.position.y - (var17.field_y >> 1));
+                var17.draw(-(var17.width >> 1) + var9.position.x, var9.position.y - (var17.height >> 1));
               }
               var9 = (wm) (param2.field_m.next((byte) -122));
             }
@@ -389,13 +389,13 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             while (var9Lifetime1 != null) {
               if (var9Lifetime1.field_q == var8Lifetime1) {
                 var18 = var9Lifetime1.a((byte) -121);
-                var18.a(var9Lifetime1.position.x - (var18.field_s >> 1), var9Lifetime1.position.y - (var18.field_y >> 1));
+                var18.draw(var9Lifetime1.position.x - (var18.width >> 1), var9Lifetime1.position.y - (var18.height >> 1));
               }
               var9Lifetime1 = (wm) (param2.field_k.next((byte) 96));
             }
           }
-          var19.f();
-          var7.c(0, 0, var4_int, var5);
+          var19.bindRaster();
+          var7.drawDownscaledThreshold(0, 0, var4_int, var5);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           stackIn_27_0 = var6;
           return stackIn_27_0;
@@ -426,7 +426,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         if (!param0) {
           field_L = (String) null;
         }
-        stackIn_6_0 = (null != hh.field_c) && (hh.field_c.a(true));
+        stackIn_6_0 = (null != hh.field_c) && (hh.field_c.canUseAdaptiveSize(true));
         return stackIn_6_0;
     }
 
@@ -554,10 +554,10 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         if (null != this.field_R) {
-          IntrusiveNode.field_g.a(this.field_R, 20 + param2 + this.x, 15 + (param1 + this.y), this.width - 40, this.height, 16777215, -1, 1, 0, IntrusiveNode.field_g.field_G);
+          IntrusiveNode.field_g.drawParagraph(this.field_R, 20 + param2 + this.x, 15 + (param1 + this.y), this.width - 40, this.height, 16777215, -1, 1, 0, IntrusiveNode.field_g.ascent);
         }
         if (null != this.field_N) {
-          SoftwareRasterizer.b(10 + param2, 134 + param1, -20 + this.width, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param2, 134 + param1, -20 + this.width, 4210752);
         }
         super.drawLayer(param0, param1, param2, param3);
     }

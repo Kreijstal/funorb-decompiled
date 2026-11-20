@@ -66,7 +66,7 @@ final class RaceVehicle extends MovingEntity {
     int field_tc;
     private float field_wc;
     static LoginMethodPreference field_Wb;
-    private eb[] field_sc;
+    private PathWaypoint[] field_sc;
     private int field_dc;
     private int field_gc;
     private int field_mb;
@@ -107,10 +107,10 @@ final class RaceVehicle extends MovingEntity {
     private final void f(byte param0) {
         int stackIn_20_1 = 0;
         int stackIn_20_2 = 0;
-        eb stackIn_21_3 = null;
+        PathWaypoint stackIn_21_3 = null;
         int stackIn_30_0 = 0;
         int stackIn_39_1 = 0;
-        eb[] stackIn_39_2 = null;
+        PathWaypoint[] stackIn_39_2 = null;
         Object stackIn_40_0;
         boolean stackIn_40_3;
         RuntimeException decompiledCaughtException = null;
@@ -118,7 +118,7 @@ final class RaceVehicle extends MovingEntity {
         RuntimeException var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
-        eb[] var5 = null;
+        PathWaypoint[] var5 = null;
         int var6 = 0;
         float var7_float = 0.0f;
         int var7 = 0;
@@ -175,11 +175,11 @@ final class RaceVehicle extends MovingEntity {
           } else {
             stackIn_30_0 = this.field_G;
           }
-          var5 = new eb[stackIn_30_0];
+          var5 = new PathWaypoint[stackIn_30_0];
           var6 = 0;
           scanLoop1: while (true) {
             if (var5.length > var6) {
-              var5[var6] = new eb(this.field_sc[var6]);
+              var5[var6] = new PathWaypoint(this.field_sc[var6]);
               var6++;
               if (var20 != 0) {
                 break scanLoop1;
@@ -202,7 +202,7 @@ final class RaceVehicle extends MovingEntity {
           }
           regionExit2: {
             if (this.field_G > 0) {
-              var7_float = ha.a(this.position, var5[0], false);
+              var7_float = BoundaryIntersection.angleBetweenPoints(this.position, var5[0], false);
               if (this.direction.y * this.velocityY + this.direction.x * this.velocityX < 0.0f) {
                 var7_float = (float)((double)var7_float + 3.141592653589793);
               }
@@ -528,7 +528,7 @@ final class RaceVehicle extends MovingEntity {
           this.d(3, -1065046232);
           this.field_oc = this.field_oc + 1;
           this.field_J = -1;
-          ValidationHelpWidget.a((byte) 4, (MovingEntity) (this), pf.field_g, pf.field_g.field_q);
+          ValidationHelpWidget.a((byte) 4, (MovingEntity) (this), PolarSortVector.field_g, PolarSortVector.field_g.field_q);
           this.d((byte) 116);
           ArchiveIndex.a(0, this.position.y, 0, 128, 1, -1, this.position.x, 3, MusicPatchPcmStream.field_r.field_M, 16777215, 0, 32, 400);
           ArchiveIndex.a(0, this.position.y, 0, 128, 1, -4, this.position.x, 3, MusicPatchPcmStream.field_r.field_M, 16777215, 0, 128, 60);
@@ -705,7 +705,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(eb[] param0, GrowableObjectList param1, int param2) {
+    private final void a(PathWaypoint[] param0, GrowableObjectList param1, int param2) {
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         float stackIn_56_0 = 0.0f;
@@ -733,12 +733,12 @@ final class RaceVehicle extends MovingEntity {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        eb[] var16 = null;
+        PathWaypoint[] var16 = null;
         float var17 = 0.0f;
         float var18 = 0.0f;
         float var19 = 0.0f;
-        eb[] var20 = null;
-        eb[] var21 = null;
+        PathWaypoint[] var20 = null;
+        PathWaypoint[] var21 = null;
         int var22 = 0;
         int stackIn_33_0Lifetime1;
         int stackIn_33_1Lifetime1;
@@ -797,10 +797,10 @@ final class RaceVehicle extends MovingEntity {
               var13Lifetime1 = var7.field_B + (this.field_C.field_k + 5);
               var14 = var7.field_B + this.field_C.field_k + 90;
               if (var11 < var14 * var14) {
-                var16 = new eb[var4_int];
+                var16 = new PathWaypoint[var4_int];
                 var15 = 0;
                 while (var4_int > var15) {
-                  var16[var15] = new eb(param0[var15]);
+                  var16[var15] = new PathWaypoint(param0[var15]);
                   var15++;
                 }
                 var6.x = var7.position.x;
@@ -837,12 +837,12 @@ final class RaceVehicle extends MovingEntity {
                   var19 = (float)Math.sqrt((double)(var18Lifetime1 * var18Lifetime1 + var17Lifetime1 * var17Lifetime1));
                   var17Lifetime1 = var17Lifetime1 / var19;
                   var18Lifetime1 = var18Lifetime1 / var19;
-                  var20 = new eb[var4_int];
-                  var21 = new eb[var4_int];
+                  var20 = new PathWaypoint[var4_int];
+                  var21 = new PathWaypoint[var4_int];
                   var15Lifetime1 = 0;
                   while (var15Lifetime1 < var4_int) {
-                    var20[var15Lifetime1] = new eb(param0[var15Lifetime1]);
-                    var21[var15Lifetime1] = new eb(param0[var15Lifetime1]);
+                    var20[var15Lifetime1] = new PathWaypoint(param0[var15Lifetime1]);
+                    var21[var15Lifetime1] = new PathWaypoint(param0[var15Lifetime1]);
                     var15Lifetime1++;
                   }
                   var6.y = (int)((float)var7.position.y - (float)(15 + var13Lifetime1) * var17Lifetime1);
@@ -1224,7 +1224,7 @@ final class RaceVehicle extends MovingEntity {
           this.field_tb = 0;
           this.field_xc = 0.0f;
           this.field_Jb = 0;
-          this.field_sc = new eb[32];
+          this.field_sc = new PathWaypoint[32];
           this.field_ic = 0.0f;
           this.field_V = false;
           this.heading = this.field_D;
@@ -1253,7 +1253,7 @@ final class RaceVehicle extends MovingEntity {
           this.field_Ab = true;
           this.field_nb = this.position.x - (int)((float)this.field_C.field_K * this.direction.x + (float)this.field_C.field_k * this.direction.y);
           if (param0 != 554646678) {
-            this.a((byte) -40, 71, (eb) null);
+            this.a((byte) -40, 71, (PathWaypoint) null);
           }
           this.field_I = false;
           this.field_Tb = -(int)(-((float)this.field_C.field_k * this.direction.x) + this.direction.y * (float)this.field_C.field_K) + this.position.y;
@@ -1631,11 +1631,11 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(Point2i param0, int param1, eb[] param2, int param3) {
-        eb dupTemp$0 = null;
-        eb dupTemp$1 = null;
-        eb dupTemp$2 = null;
-        eb dupTemp$3 = null;
+    private final void a(Point2i param0, int param1, PathWaypoint[] param2, int param3) {
+        PathWaypoint dupTemp$0 = null;
+        PathWaypoint dupTemp$1 = null;
+        PathWaypoint dupTemp$2 = null;
+        PathWaypoint dupTemp$3 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -2059,7 +2059,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(byte param0, int param1, eb param2) {
+    private final void a(byte param0, int param1, PathWaypoint param2) {
         int stackIn_11_0 = 0;
         int stackIn_29_0 = 0;
         float stackIn_31_0 = 0.0f;
@@ -2077,10 +2077,10 @@ final class RaceVehicle extends MovingEntity {
         float var5 = 0.0f;
         Vector2f var6 = null;
         GrowableObjectList var6_ref = null;
-        eb[] var7 = null;
+        PathWaypoint[] var7 = null;
         int var8_int = 0;
-        eb[] var8 = null;
-        eb[] var9_ref_eb__ = null;
+        PathWaypoint[] var8 = null;
+        PathWaypoint[] var9_ref_eb__ = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -2159,10 +2159,10 @@ final class RaceVehicle extends MovingEntity {
           var6_ref = stackIn_53_0;
           this.field_sb = new GrowableObjectList();
           this.a(param2, (byte) 39, this.field_sb, var6_ref);
-          this.field_gb = this.a(89, (eb[]) (this.field_sb.elements[0]), this.field_yc);
+          this.field_gb = this.a(89, (PathWaypoint[]) (this.field_sb.elements[0]), this.field_yc);
           this.field_cc = this.field_gb;
           this.field_Nb = new int[this.field_sb.size];
-          var7 = (eb[]) (this.field_sb.elements[0]);
+          var7 = (PathWaypoint[]) (this.field_sb.elements[0]);
           if (param0 != 41) {
             this.field_D = -0.24020713567733765f;
           }
@@ -2170,7 +2170,7 @@ final class RaceVehicle extends MovingEntity {
           var8_int = 1;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8_int < this.field_sb.size)))) {
-            var9_ref_eb__ = (eb[]) (this.field_sb.elements[var8_int]);
+            var9_ref_eb__ = (PathWaypoint[]) (this.field_sb.elements[var8_int]);
             var10 = this.a(param0 + 51, var9_ref_eb__, this.field_yc);
             stackIn_68_0 = ~var10;
             stackIn_68_1 = ~this.field_cc;
@@ -2192,7 +2192,7 @@ final class RaceVehicle extends MovingEntity {
             stackIn_68_0 = var7.length;
             stackIn_68_1 = this.field_G;
           }
-          var8 = new eb[stackIn_68_0 + stackIn_68_1];
+          var8 = new PathWaypoint[stackIn_68_0 + stackIn_68_1];
           var9 = 0;
           do {
             if (var9 >= this.field_G) {
@@ -2305,7 +2305,7 @@ final class RaceVehicle extends MovingEntity {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
-        eb[] var6 = null;
+        PathWaypoint[] var6 = null;
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -2319,7 +2319,7 @@ final class RaceVehicle extends MovingEntity {
           var4_int = param1.size;
           var5 = 0;
           while (var4_int > var5) {
-            var6 = (eb[]) (param1.elements[var5]);
+            var6 = (PathWaypoint[]) (param1.elements[var5]);
             this.a(var6, param1, 0);
             var5++;
             if (var7 != 0) {
@@ -2383,7 +2383,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final int a(int param0, eb[] param1, int[] param2) {
+    private final int a(int param0, PathWaypoint[] param1, int[] param2) {
         int stackIn_47_0 = 0;
         int stackIn_48_0 = 0;
         int stackIn_48_1 = 0;
@@ -2678,7 +2678,7 @@ final class RaceVehicle extends MovingEntity {
           this.field_Bb = null;
           this.field_Lb = 0;
           this.field_Xb = this.position.x - (int)(-((float)this.field_C.field_k * this.direction.y) + this.direction.x * (float)this.field_C.field_K);
-          this.field_sc = new eb[32];
+          this.field_sc = new PathWaypoint[32];
           this.field_xb = 0;
           this.field_Sb = 0;
           this.field_Tb = this.position.y - (int)(-(this.direction.x * (float)this.field_C.field_k) + (float)this.field_C.field_K * this.direction.y);
@@ -3336,7 +3336,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final void a(byte param0, eb[] param1, boolean param2, int param3) {
+    private final void a(byte param0, PathWaypoint[] param1, boolean param2, int param3) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_37_0 = 0;
@@ -3519,7 +3519,7 @@ final class RaceVehicle extends MovingEntity {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 96) {
-            this.a((byte) -121, (eb[]) null, false, -122);
+            this.a((byte) -121, (PathWaypoint[]) null, false, -122);
           }
           if (this.field_J == 2) {
             stackIn_5_0 = param1[3];
@@ -4034,7 +4034,7 @@ final class RaceVehicle extends MovingEntity {
         }
     }
 
-    private final float a(eb[] param0, byte param1, float param2) {
+    private final float a(PathWaypoint[] param0, byte param1, float param2) {
         float stackIn_13_1 = 0.0f;
         float stackIn_19_0 = 0.0f;
         RuntimeException stackIn_23_0 = null;
@@ -4314,8 +4314,8 @@ final class RaceVehicle extends MovingEntity {
             }
             var7 = stackIn_70_0;
             vb.a(-68, MusicPatchPcmStream.field_r.field_qb);
-            SoftwareRasterizer.e(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, var7, var7 >>> 24);
-            SoftwareRasterizer.e(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, var7, var7 >>> 24);
+            SoftwareRasterizer.drawLineAlpha(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, var7, var7 >>> 24);
+            SoftwareRasterizer.drawLineAlpha(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, var7, var7 >>> 24);
             var8_ref_wm = (wm) (MusicPatchPcmStream.field_r.field_d.first((byte) 105));
             while (null != var8_ref_wm) {
               stackIn_85_0 = this.field_q;
@@ -4327,11 +4327,11 @@ final class RaceVehicle extends MovingEntity {
               if (stackIn_85_0 >= stackIn_85_1 &&
                 (1048576 & var8_ref_wm.field_J) != 0) {
                 var9_ref_hj = var8_ref_wm.field_H;
-                var9_ref_hj.f();
-                var10 = var8_ref_wm.position.x - (var9_ref_hj.field_s >> 1);
-                var11 = var8_ref_wm.position.y - (var9_ref_hj.field_y >> 1);
-                SoftwareRasterizer.e(this.field_nb - var10, this.field_Tb - var11, -var10 + var3Lifetime2, -var11 + var4Lifetime3, var7, var7 >>> 24);
-                SoftwareRasterizer.e(this.field_Xb - var10, -var11 + this.field_Ob, var5Lifetime3 - var10, var6Lifetime3 - var11, var7, var7 >>> 24);
+                var9_ref_hj.bindRaster();
+                var10 = var8_ref_wm.position.x - (var9_ref_hj.width >> 1);
+                var11 = var8_ref_wm.position.y - (var9_ref_hj.height >> 1);
+                SoftwareRasterizer.drawLineAlpha(this.field_nb - var10, this.field_Tb - var11, -var10 + var3Lifetime2, -var11 + var4Lifetime3, var7, var7 >>> 24);
+                SoftwareRasterizer.drawLineAlpha(this.field_Xb - var10, -var11 + this.field_Ob, var5Lifetime3 - var10, var6Lifetime3 - var11, var7, var7 >>> 24);
               }
               var8_ref_wm = (wm) (MusicPatchPcmStream.field_r.field_d.next((byte) -107));
             }
@@ -4346,8 +4346,8 @@ final class RaceVehicle extends MovingEntity {
           if (stackIn_85_0 > stackIn_85_1) {
             vb.a(-100, MusicPatchPcmStream.field_r.field_qb);
             var7 = (this.field_Q << 8) / 50;
-            SoftwareRasterizer.e(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, 0, var7);
-            SoftwareRasterizer.e(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, 0, var7);
+            SoftwareRasterizer.drawLineAlpha(this.field_nb, this.field_Tb, var3Lifetime2, var4Lifetime3, 0, var7);
+            SoftwareRasterizer.drawLineAlpha(this.field_Xb, this.field_Ob, var5Lifetime3, var6Lifetime3, 0, var7);
             MarkerSliderRenderer.restoreRasterTarget(-1);
           }
           this.field_Xb = var5Lifetime3;
@@ -4390,7 +4390,7 @@ final class RaceVehicle extends MovingEntity {
                 var10Lifetime2 < 480) {
                 var16 = IterableSecondaryNodeDeque.field_a.getSprite(8192);
                 if (var16 != null) {
-                  var15 = var16.field_z[640 * var10Lifetime2 + var9Lifetime1];
+                  var15 = var16.pixels[640 * var10Lifetime2 + var9Lifetime1];
                 }
               }
               ArchiveIndex.a(var11Lifetime1, var10Lifetime2, 512, 64, 1, 0, var9Lifetime1, this.field_q, MusicPatchPcmStream.field_r.field_O, var15, var12, 24, 20);
@@ -4839,10 +4839,10 @@ final class RaceVehicle extends MovingEntity {
         PointPath var8 = null;
         float var9 = 0.0f;
         Object var10 = null;
-        eb[] var10_array = null;
+        PathWaypoint[] var10_array = null;
         int var11_int = 0;
         float var11 = 0.0f;
-        eb var12 = null;
+        PathWaypoint var12 = null;
         int var13 = 0;
         var13 = HoldTheLine.field_D;
         try {
@@ -4862,10 +4862,10 @@ final class RaceVehicle extends MovingEntity {
                 var7 = stackIn_18_0;
                 var6++;
                 if (param3.size <= var6) {
-                  var10_array = new eb[var5.size];
+                  var10_array = new PathWaypoint[var5.size];
                   var11_int = 0;
                   while (var5.size > var11_int) {
-                    var10_array[var11_int] = (eb) (var5.elements[var11_int]);
+                    var10_array[var11_int] = (PathWaypoint) (var5.elements[var11_int]);
                     var11_int++;
                   }
                   param2.add(var10_array, (byte) 6);
@@ -4880,7 +4880,7 @@ final class RaceVehicle extends MovingEntity {
               stackIn_18_0 = var7 / var9;
             }
             var11 = stackIn_18_0;
-            var12 = new eb(var8.pointAt(false, var11), var8.field_b);
+            var12 = new PathWaypoint(var8.pointAt(false, var11), var8.field_b);
             var5.add(var12, (byte) 6);
             if (100 <= var5.size) {
               throw new RuntimeException();
@@ -5303,7 +5303,7 @@ final class RaceVehicle extends MovingEntity {
             RaceVehicle.clearSharedReferences(59);
           }
           var4 = -1L;
-          he.a(var4, param1, var3, -118, var2);
+          OpacityWidget.writeCookie(var4, param1, var3, -118, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
