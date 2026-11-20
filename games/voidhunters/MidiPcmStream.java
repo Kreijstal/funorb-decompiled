@@ -314,7 +314,7 @@ class MidiPcmStream extends PcmStream {
             var9 = (int)var8.key;
             var10 = (MusicPatch) (this.patches.get((long)var9, param1 ^ -29517));
             if (var10 == null) {
-              var10 = waa.a(param2, (byte) 115, var9);
+              var10 = ChoosePlayerNameForm.loadMusicPatch(param2, (byte) 115, var9);
               if (var10 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;

@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1371/1572 classes and 6901/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 201 opaque classes and 1314 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1378/1572 classes and 6925/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 194 opaque classes and 1290 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -76,6 +76,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `GameResourceLoader` requests archives and stages sound, music, patches, graphics, Huffman and toolkit initialization; `ArchiveRequestQueue` polls `ArchiveLoadRequest` entries and reports progress. `DateOfBirthInput`, `DateOfBirthTextFields` and `DateOfBirthValidator` name the existing day/month/year form and calendar checks. `Particle` names drawing, initialization, lifetime and pool replacement priority; `World` exposes particle spawning, debris queries, body destruction and nebula removal. `FeatheredLineRasterizer` retains its toolkit gradient and flat software fallback. The legacy Microsoft JVM path resolves `LegacyDirectSoundBuffers` through the existing checked class-name literal policy.
 
 `NetworkMessageState` names the shared incoming opcode and selected chat channel; `ChatChannelControl` changes the channel. `GameSession.sendDrawAction` and `sendRematchAction` preserve the existing state-dependent offer, accept and cancel packets. `LegacyOpenGlTextureCache` names texture lookup, generation, caching and ageing. `ArchiveIndexLoaderState`, `LoadingAnimationControl`, `BaseObjectiveLabel`, `UnratedRematchText` and `LogoFinalFrameBottom` identify small shared state and text owners. Generic `throwUnchecked` helpers preserve original exception identity and control flow.
+
+`ReportAbuseDialog` names rule categories, the reported player, dismissal and the original optional mute control. `ChoosePlayerNameForm`, `NameSuggestionsPanel`, `LabeledInputContainer` and `ValidationStatusWidget` expose the original name-selection and validation UI. `MidiCrossfadeStream` names the existing track sides, gains, temporary-track behavior and overlay path. `GzipCodec` names reusable compression/decompression state and retains the original framing, buffer growth and guard behavior; its unrelated alternate carousel-history configuration remains on the same owner.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

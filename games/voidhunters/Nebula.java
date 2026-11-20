@@ -80,7 +80,7 @@ final class Nebula implements DiffableState {
         if (SetPointDefenceLaserAimarc.field_o != null) {
           SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
         }
-        OpenGlEnvironmentMappedWaterEffect.field_j = new waa();
+        OpenGlEnvironmentMappedWaterEffect.field_j = new ChoosePlayerNameForm();
         GetMissionVariablesHudX.field_o.transitionToContent(OpenGlEnvironmentMappedWaterEffect.field_j, -116);
     }
 

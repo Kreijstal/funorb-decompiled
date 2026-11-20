@@ -9,7 +9,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
     private ValidatedTextField passwordField;
     private ValidatedTextField emailConfirmationField;
     static String field_G;
-    rcb nameSuggestions;
+    NameSuggestionsPanel nameSuggestions;
     private ValidatedTextField ageField;
     private UiToggleButton emailUpdatesToggle;
     private UiFocusableComponent submitButton;
@@ -60,7 +60,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
     }
 
     private final int addFieldRow(UiComponent param0, int param1, String param2, int param3, byte param4) {
-        sca var6 = null;
+        LabeledInputContainer var6 = null;
         RuntimeException var6_ref = null;
         String var7 = null;
         int stackIn_3_0 = 0;
@@ -71,7 +71,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new sca(20, param1, param3 + 120, 25, param0, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
+          var6 = new LabeledInputContainer(20, param1, param3 + 120, 25, param0, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
           this.addChild(-18756, var6);
           if (param4 > -27) {
             var7 = (String) null;
@@ -201,7 +201,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
     private final int addFieldWithStatusIcon(int param0, UiComponent param1, byte param2, String param3, int param4) {
         RuntimeException var6 = null;
         pla var7 = null;
-        sca var8 = null;
+        LabeledInputContainer var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -210,7 +210,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new sca(20, param4, param0 + 120, 25, param1, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
+          var8 = new LabeledInputContainer(20, param4, param0 + 120, 25, param1, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
           this.addChild(param2 - 18860, var8);
           var7 = new pla(((ValidatableInput) ((Object) param1)).getValidator(-782444220));
           this.addChild(-18756, var7);
@@ -285,7 +285,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         var3 = var3 + (this.addFieldWithHelp(-41, OpenGlVertexNormal.field_e, 170, ScramblerPulseOrderDefinition.field_d, var3, this.passwordConfirmationField) + 5);
         var3 = var3 + (5 + this.addFieldWithHelp(-103, Projectile.field_r, 170, ffb.field_c, var3, this.usernameField));
         var3 = var3 + this.addFieldWithStatusIcon(170, this.ageField, (byte) 104, CarouselSystemEventFactory.field_a, var3);
-        sca var4 = new sca(46, var3, -90 + this.width, 25, this.emailUpdatesToggle, true, this.width - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, UiComponent.field_m);
+        LabeledInputContainer var4 = new LabeledInputContainer(46, var3, -90 + this.width, 25, this.emailUpdatesToggle, true, this.width - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, UiComponent.field_m);
         this.addChild(-18756, var4);
         var3 = var3 + var4.height;
         UiTextStyle var5 = new UiTextStyle(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
@@ -305,7 +305,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         this.submitButton.listener = (UiListener) (this);
         this.addChild(-18756, this.submitButton);
         this.addChild(-18756, this.cancelButton);
-        this.nameSuggestions = new rcb((NameSuggestionTarget) (this));
+        this.nameSuggestions = new NameSuggestionsPanel((NameSuggestionTarget) (this));
         this.nameSuggestions.setBounds(60 + (this.usernameField.width + this.usernameField.x), -60 + (-this.usernameField.width + this.width) - this.usernameField.x, 150, 1, 20 + this.usernameField.y);
         this.addChild(-18756, this.nameSuggestions);
         this.setBounds(0, 496, var3 + 55 + var6, 1, 0);
@@ -364,8 +364,8 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
 
     private final int addFieldWithHelp(UiComponent param0, int param1, int param2, String param3, boolean param4, int param5, String param6) {
         RuntimeException var8 = null;
-        gm var9 = null;
-        sca var10 = null;
+        ValidationStatusWidget var9 = null;
+        LabeledInputContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -376,9 +376,9 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new sca(20, param1, 120 + param2, 25, param0, param4, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
+          var10 = new LabeledInputContainer(20, param1, 120 + param2, 25, param0, param4, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
           this.addChild(-18756, var10);
-          var9 = new gm(((ValidatableInput) ((Object) param0)).getValidator(-782444220), param6, 126, param1 + var10.height, param2 + 50, param5);
+          var9 = new ValidationStatusWidget(((ValidatableInput) ((Object) param0)).getValidator(-782444220), param6, 126, param1 + var10.height, param2 + 50, param5);
           var9.listener = (UiListener) (this);
           this.addChild(-18756, var9);
           stackIn_1_0 = var9.height + var10.height;

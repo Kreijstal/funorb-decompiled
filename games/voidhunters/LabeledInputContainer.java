@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sca extends UiSingleChildContainer {
-    private String field_A;
-    private int field_z;
-    private BitmapFont field_v;
-    private int field_w;
-    private boolean field_y;
-    private int field_x;
+final class LabeledInputContainer extends UiSingleChildContainer {
+    private String labelText;
+    private int labelColor;
+    private BitmapFont font;
+    private int labelWidth;
+    private boolean labelOnRight;
+    private int padding;
 
-    sca(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+    LabeledInputContainer(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (UiRenderer) null, (UiListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -26,28 +26,28 @@ final class sca extends UiSingleChildContainer {
         int var13 = 0;
         int var14 = 0;
         try {
-          this.field_z = param9;
+          this.labelColor = param9;
           this.child = param4;
-          this.field_v = param8;
-          this.field_w = param6;
+          this.font = param8;
+          this.labelWidth = param6;
           stackIn_4_1 = (param5);
-          this.field_y = stackIn_4_1;
-          this.field_A = param10;
-          this.field_x = param7;
-          var12_int = this.field_w - this.field_x;
-          var13 = this.field_v.getParagraphHeight(param10, var12_int, this.field_v.maxAscent) + this.field_x * 2;
+          this.labelOnRight = stackIn_4_1;
+          this.labelText = param10;
+          this.padding = param7;
+          var12_int = this.labelWidth - this.padding;
+          var13 = this.font.getParagraphHeight(param10, var12_int, this.font.maxAscent) + this.padding * 2;
           if (var13 <= param3) {
             var13 = param3;
           } else {
             this.setBounds(param0, param2, var13, 1, param1);
           }
-          if (!this.field_y) {
-            stackIn_10_0 = this.field_w + this.field_x * 2;
+          if (!this.labelOnRight) {
+            stackIn_10_0 = this.labelWidth + this.padding * 2;
           } else {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.child.setBounds(var14, -this.field_w + (param2 - 3 * this.field_x), param3 - this.field_x * 2, 1, this.field_x + (var13 - param3 >> 1));
+          this.child.setBounds(var14, -this.labelWidth + (param2 - 3 * this.padding), param3 - this.padding * 2, 1, this.padding + (var13 - param3 >> 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,8 +85,8 @@ final class sca extends UiSingleChildContainer {
         if (param1 != 0) {
           return;
         }
-        int var7 = this.field_y ? this.width - this.field_w - this.field_x * 2 : 0;
-        this.field_v.drawParagraph(this.field_A, this.field_x + (var7 + var5), var6 + this.field_x, this.field_w - this.field_x, -(this.field_x * 2) + this.height, this.field_z, -1, this.field_y ? 0 : 2, 1, this.field_v.maxAscent);
+        int var7 = this.labelOnRight ? this.width - this.labelWidth - this.padding * 2 : 0;
+        this.font.drawParagraph(this.labelText, this.padding + (var7 + var5), var6 + this.padding, this.labelWidth - this.padding, -(this.padding * 2) + this.height, this.labelColor, -1, this.labelOnRight ? 0 : 2, 1, this.font.maxAscent);
     }
 
     final String getTooltip(byte param0) {

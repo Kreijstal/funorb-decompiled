@@ -105,7 +105,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           ClientException.field_c = param10;
           ea.field_k = param13;
           SetShipAimLines.field_o = param5;
-          gm.field_M = param0;
+          ValidationStatusWidget.field_M = param0;
           SetRepairModeRadius.field_o = param6;
           vva.field_u = param11;
           SetPointDefenceLaserAimarc.field_p = param8;
@@ -237,10 +237,10 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             GetLaserAimarc.field_o[var17_intLifetime3 + 4] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, ClientException.field_c[var17_intLifetime3]);
-            array$2 = new IconTextWidget[dla.andBits(255, (int) gm.field_M[var17_intLifetime3]) + 1];
+            array$2 = new IconTextWidget[dla.andBits(255, (int) ValidationStatusWidget.field_M[var17_intLifetime3]) + 1];
             SetReloadBarHeight.field_q[var17_intLifetime3 + 4] = array$2;
             SetReloadBarHeight.field_q[var17_intLifetime3 + 4][0] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
-            for (var18 = 0; var18 < (gm.field_M[var17_intLifetime3] & 255); var18++) {
+            for (var18 = 0; var18 < (ValidationStatusWidget.field_M[var17_intLifetime3] & 255); var18++) {
               if (SetRepairModeRadius.field_o == null) {
                 var19_ref = null;
               } else {

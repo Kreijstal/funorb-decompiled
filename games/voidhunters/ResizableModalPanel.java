@@ -200,10 +200,10 @@ abstract class ResizableModalPanel extends ModalPanel {
         try {
           var14 = qga.field_b;
           var2 = var14.readUnsignedByte((byte) -87);
-          var3 = (fa) (gm.field_H.first(param0 + 38));
+          var3 = (fa) (ValidationStatusWidget.field_H.first(param0 + 38));
           while (var3 != null) {
             if (~var3.field_f != ~var2) {
-              var3 = (fa) (gm.field_H.next((byte) 95));
+              var3 = (fa) (ValidationStatusWidget.field_H.next((byte) 95));
               continue;
             }
             break;

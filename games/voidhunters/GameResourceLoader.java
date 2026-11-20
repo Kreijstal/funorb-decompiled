@@ -260,12 +260,12 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ComponentCollision.a("Unpacking patches", (byte) -123);
           for (var4_int = 0; var4_int < 4; var4_int++) {
             if (pab.field_k[var4_int] != null &&
-              !GetBurstFireMaxEnergy.field_p.field_k.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, pab.field_k[var4_int])) {
+              !GetBurstFireMaxEnergy.field_p.firstStream.loadMusicPatches(this.soundCache, -29476, this.patchArchive, 176400, pab.field_k[var4_int])) {
               MidiNote.resetFrameTiming(param0 ^ 2164);
               return false;
             }
           }
-          GetBurstFireMaxEnergy.field_p.field_k.clearPatchSampleIds(false);
+          GetBurstFireMaxEnergy.field_p.firstStream.clearPatchSampleIds(false);
           this.patchArchive = null;
           this.soundCache = null;
           MidiNote.resetFrameTiming(2096);
@@ -285,7 +285,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ModelData.loadGameSprites(this.jpegArchive, param0 ^ 57, this.graphicsArchive);
           ko.field_e = WorldPoint.a("frame", -124, "basic", this.graphicsArchive);
           ScreenSizeController.field_d = WorldPoint.a("frame_filled", 52, "basic", this.graphicsArchive);
-          dra.field_v = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.graphicsArchive);
+          MidiCrossfadeStream.buttonFrameSprites = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.graphicsArchive);
           SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.graphicsArchive);
           WorldPoint.a("button_depressed", 80, "basic", this.graphicsArchive);
           lo.field_c = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", "achievements_large");

@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class lla {
-    private int field_g;
+final class GzipCodec {
+    private int initialBufferSize;
     static int field_h;
-    static int field_e;
-    private java.util.zip.Inflater field_j;
-    PacketBuffer field_f;
-    private java.util.zip.Deflater field_i;
-    private java.util.zip.CRC32 field_a;
-    private int field_d;
-    static int field_b;
-    private int field_c;
+    static int alternateChecksumDelay;
+    private java.util.zip.Inflater inflater;
+    PacketBuffer compressedOutput;
+    private java.util.zip.Deflater deflater;
+    private java.util.zip.CRC32 crc32;
+    private int bufferGrowth;
+    static int alternateHistoryLength;
+    private int compressionLevel;
 
-    final byte[] a(int param0, byte[] param1) {
+    final byte[] decompress(int param0, byte[] param1) {
         PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -31,7 +31,7 @@ final class lla {
           var4 = var3.readIntLE(11468);
           var3.position = param0;
           var5 = new byte[var4];
-          this.a(20773, var5, var3);
+          this.decompress(20773, var5, var3);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,31 +48,31 @@ final class lla {
         }
     }
 
-    public lla() {
+    public GzipCodec() {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
             if (param2.payload[param2.position] != 31 ||
               -117 != param2.payload[param2.position + 1]) {
               throw new RuntimeException("");
             }
-            if (this.field_j == null) {
-              this.field_j = new java.util.zip.Inflater(true);
+            if (this.inflater == null) {
+              this.inflater = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_j.setInput(param2.payload, param2.position + 10, -10 - (param2.position + 8) + param2.payload.length);
+              this.inflater.setInput(param2.payload, param2.position + 10, -10 - (param2.position + 8) + param2.payload.length);
               if (param0 != 20773) {
-                field_e = 59;
+                alternateChecksumDelay = 59;
               }
-              this.field_j.inflate(param1);
+              this.inflater.inflate(param1);
             } catch (Exception exception) {
-              this.field_j.reset();
+              this.inflater.reset();
               throw new RuntimeException("");
             }
-            this.field_j.reset();
+            this.inflater.reset();
           } catch (RuntimeException runtimeException) {
             throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lla.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -83,7 +83,7 @@ final class lla {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) {
+    final void compress(int param0, int param1, byte[] param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -97,45 +97,45 @@ final class lla {
         byte[] var10 = null;
         var8 = VoidHunters.field_G;
         try {
-          if (null == this.field_f) {
-            this.field_i = new java.util.zip.Deflater(this.field_c, true);
-            this.field_a = new java.util.zip.CRC32();
-            this.field_f = new PacketBuffer(this.field_g);
-            this.field_f.writeBytes(0, VertexAttribute.field_f, -1, VertexAttribute.field_f.length);
+          if (null == this.compressedOutput) {
+            this.deflater = new java.util.zip.Deflater(this.compressionLevel, true);
+            this.crc32 = new java.util.zip.CRC32();
+            this.compressedOutput = new PacketBuffer(this.initialBufferSize);
+            this.compressedOutput.writeBytes(0, VertexAttribute.gzipHeader, -1, VertexAttribute.gzipHeader.length);
           } else {
-            this.field_f.position = VertexAttribute.field_f.length;
+            this.compressedOutput.position = VertexAttribute.gzipHeader.length;
           }
-          this.field_a.update(param2, param1, param3);
-          this.field_i.setInput(param2, param1, param3);
-          this.field_i.finish();
+          this.crc32.update(param2, param1, param3);
+          this.deflater.setInput(param2, param1, param3);
+          this.deflater.finish();
           var5_int = 1;
           while (true) {
-            var6 = this.field_f.payload.length - this.field_f.position;
+            var6 = this.compressedOutput.payload.length - this.compressedOutput.position;
             if (var6 < 8) {
-              var10 = new byte[this.field_d + this.field_f.payload.length];
+              var10 = new byte[this.bufferGrowth + this.compressedOutput.payload.length];
               var9 = var10;
               var7 = var9;
-              ArrayOperations.copy(this.field_f.payload, 0, var10, 0, this.field_f.position);
-              var6 = var6 + this.field_d;
-              this.field_f.payload = var7;
+              ArrayOperations.copy(this.compressedOutput.payload, 0, var10, 0, this.compressedOutput.position);
+              var6 = var6 + this.bufferGrowth;
+              this.compressedOutput.payload = var7;
               if (var5_int != 0) {
                 var5_int = 0;
                 System.out.println("[blue]Warning: GZIP deflate buffer required expanding[/blue]");
               }
             }
-            if (!this.field_i.finished()) {
-              this.field_f.position = this.field_f.position + this.field_i.deflate(this.field_f.payload, this.field_f.position, var6);
+            if (!this.deflater.finished()) {
+              this.compressedOutput.position = this.compressedOutput.position + this.deflater.deflate(this.compressedOutput.payload, this.compressedOutput.position, var6);
               continue;
             }
             break;
           }
-          this.field_f.writeIntLE((byte) 103, (int)this.field_a.getValue());
+          this.compressedOutput.writeIntLE((byte) 103, (int)this.crc32.getValue());
           if (param0 < 72) {
             return;
           }
-          this.field_f.writeIntLE((byte) 93, this.field_i.getTotalIn());
-          this.field_i.reset();
-          this.field_a.reset();
+          this.compressedOutput.writeIntLE((byte) 93, this.deflater.getTotalIn());
+          this.deflater.reset();
+          this.crc32.reset();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,15 +151,15 @@ final class lla {
         }
     }
 
-    private lla(int param0, int param1, int param2) {
-        this.field_d = param2;
-        this.field_g = param1;
-        this.field_c = param0;
+    private GzipCodec(int param0, int param1, int param2) {
+        this.bufferGrowth = param2;
+        this.initialBufferSize = param1;
+        this.compressionLevel = param0;
     }
 
     static {
         field_h = 2;
-        field_b = 200;
-        field_e = field_b / 2;
+        alternateHistoryLength = 200;
+        alternateChecksumDelay = alternateHistoryLength / 2;
     }
 }

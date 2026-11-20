@@ -79,7 +79,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[29] = LoginForm.field_C;
           SetSpinningBladeSpinupSpeed.field_o[38] = SetArmageddonWarning.field_p;
           SetSpinningBladeSpinupSpeed.field_o[54] = GetPedrosRepairMode.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[9] = gm.field_I;
+          SetSpinningBladeSpinupSpeed.field_o[9] = ValidationStatusWidget.field_I;
           SetSpinningBladeSpinupSpeed.field_o[2] = SetFighterRepairAmount.field_q;
           SetSpinningBladeSpinupSpeed.field_o[42] = GetDetachmentMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[34] = PlayerGameData.field_a;

@@ -48,7 +48,7 @@ final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
               if (1 != var3) {
                 var7 = OpenGlVertexBufferObject.field_h;
                 synchronized (var7) {
-                  OpenGlVertexBufferObject.field_h.a(20773, var13, var9);
+                  OpenGlVertexBufferObject.field_h.decompress(20773, var13, var9);
                 }
               } else {
                 Bzip2Decompressor.decompress(var13, var5, param1, var4, 9);

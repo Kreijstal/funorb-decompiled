@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rcb extends UiContainer implements UiActionListener {
-    private UiFocusableComponent[] field_v;
-    private NameSuggestionTarget field_x;
-    private String[] field_w;
+final class NameSuggestionsPanel extends UiContainer implements UiActionListener {
+    private UiFocusableComponent[] buttons;
+    private NameSuggestionTarget target;
+    private String[] suggestions;
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         super.drawLayer(param0, param1, 96, param3);
@@ -16,7 +16,7 @@ final class rcb extends UiContainer implements UiActionListener {
           return;
         }
         BitmapFont var5 = SetShipToShipRamDamage.field_o;
-        if (null != this.field_w) {
+        if (null != this.suggestions) {
           var5.drawParagraph(SetShipTeamAction.field_a, this.x + param0, this.y + param3, this.width, 20, 16777215, -1, 0, 0, var5.maxAscent + var5.maxDescent);
         }
     }
@@ -34,13 +34,13 @@ final class rcb extends UiContainer implements UiActionListener {
           if (param0 != 11) {
             return;
           }
-          for (var6_int = 0; this.field_w.length > var6_int; var6_int++) {
-            if (this.field_v[var6_int] == param3) {
-              this.field_x.setSuggestedName((byte) 41, this.field_w[var6_int]);
+          for (var6_int = 0; this.suggestions.length > var6_int; var6_int++) {
+            if (this.buttons[var6_int] == param3) {
+              this.target.setSuggestedName((byte) 41, this.suggestions[var6_int]);
             }
           }
-          if (param3 == this.field_v[this.field_w.length]) {
-            this.field_x.invalidateNameAvailability(1546);
+          if (param3 == this.buttons[this.suggestions.length]) {
+            this.target.invalidateNameAvailability(1546);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,7 +57,7 @@ final class rcb extends UiContainer implements UiActionListener {
         }
     }
 
-    final void a(String[] param0, int param1) {
+    final void setSuggestions(String[] param0, int param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -74,26 +74,26 @@ final class rcb extends UiContainer implements UiActionListener {
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
-            this.field_w = new String[var3_int];
+            this.suggestions = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_w[var4_int] = joa.a((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
+              this.suggestions[var4_int] = joa.a((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
             }
             var4 = new meb(SetShipToShipRamDamage.field_o, param1, 1);
-            this.field_v = new UiFocusableComponent[1 + var3_int];
+            this.buttons = new UiFocusableComponent[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_v[var5] = new UiFocusableComponent(this.field_w[var5], (UiListener) (this));
-              this.field_v[var5].renderer = (UiRenderer) ((Object) var4);
-              this.field_v[var5].tooltip = OpenGlRenderbuffer.field_p;
-              this.field_v[var5].setBounds(0, 80, 15, 1, var5 * 16 + 20);
-              this.addChild(-18756, this.field_v[var5]);
+              this.buttons[var5] = new UiFocusableComponent(this.suggestions[var5], (UiListener) (this));
+              this.buttons[var5].renderer = (UiRenderer) ((Object) var4);
+              this.buttons[var5].tooltip = OpenGlRenderbuffer.field_p;
+              this.buttons[var5].setBounds(0, 80, 15, 1, var5 * 16 + 20);
+              this.addChild(-18756, this.buttons[var5]);
             }
-            this.field_v[var3_int] = new UiFocusableComponent(GetPointDefenceLaserRandomness.field_o, (UiListener) (this));
-            this.field_v[var3_int].renderer = (UiRenderer) ((Object) var4);
-            this.field_v[var3_int].setBounds(0, 100, 15, 1, 16 + var3_int * 16 + 20);
-            this.addChild(-18756, this.field_v[var3_int]);
+            this.buttons[var3_int] = new UiFocusableComponent(GetPointDefenceLaserRandomness.field_o, (UiListener) (this));
+            this.buttons[var3_int].renderer = (UiRenderer) ((Object) var4);
+            this.buttons[var3_int].setBounds(0, 100, 15, 1, 16 + var3_int * 16 + 20);
+            this.addChild(-18756, this.buttons[var3_int]);
             return;
           }
-          this.field_w = null;
+          this.suggestions = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,10 +109,10 @@ final class rcb extends UiContainer implements UiActionListener {
         }
     }
 
-    rcb(NameSuggestionTarget param0) {
+    NameSuggestionsPanel(NameSuggestionTarget param0) {
         super(0, 0, 0, 0, (UiRenderer) null);
         try {
-          this.field_x = param0;
+          this.target = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rcb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

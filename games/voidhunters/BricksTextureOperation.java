@@ -114,9 +114,9 @@ final class BricksTextureOperation extends TextureOperation {
           TileTextureOperation.d(0);
           return true;
         }
-        if (Asteroid.field_v != null &&
-          Asteroid.field_v.h(-15244)) {
-          Asteroid.field_v = null;
+        if (Asteroid.activeReportDialog != null &&
+          Asteroid.activeReportDialog.pollPending(-15244)) {
+          Asteroid.activeReportDialog = null;
           TileTextureOperation.d(0);
           return true;
         }

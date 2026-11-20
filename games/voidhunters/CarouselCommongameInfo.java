@@ -101,7 +101,7 @@ final class CarouselCommongameInfo implements DiffableState {
         try {
           var4_int = ArchiveRequestQueue.field_b;
           if (param1) {
-            var4_int = lla.field_b;
+            var4_int = GzipCodec.alternateHistoryLength;
           }
           this.history = new CarouselSlot[var4_int];
           for (var5 = 0; this.history.length > var5; var5++) {

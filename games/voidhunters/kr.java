@@ -60,7 +60,7 @@ final class kr {
         }
     }
 
-    final static void a(byte param0, boolean param1, PlatformService param2, java.awt.Component param3, dra param4, int param5) {
+    final static void a(byte param0, boolean param1, PlatformService param2, java.awt.Component param3, MidiCrossfadeStream param4, int param5) {
         if (param0 != -32) {
           return;
         }

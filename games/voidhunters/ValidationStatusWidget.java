@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm extends HotspotTextWidget {
-    private Sprite field_N;
+final class ValidationStatusWidget extends HotspotTextWidget {
+    private Sprite spinnerSprite;
     static IntrusiveDeque field_H;
-    private int field_K;
-    private InputValidator field_L;
+    private int animationTick;
+    private InputValidator validator;
     static byte[] field_M;
     static String field_I;
-    private String field_J;
+    private String defaultMessage;
 
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
-          this.field_K = this.field_K + 1;
+          this.animationTick = this.animationTick + 1;
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -81,21 +81,21 @@ final class gm extends HotspotTextWidget {
         var25 = null;
         var30 = null;
         var13 = VoidHunters.field_G;
-        var6 = this.field_L.getValidationState((byte) 35);
+        var6 = this.validator.getValidationState((byte) 35);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput != var6 &&
           var6 != SetFighterRepairTime.pendingValidation) {
-          var5 = this.field_L.getValidationMessage((byte) -79);
+          var5 = this.validator.getValidationMessage((byte) -79);
           if (var5 == null) {
-            var5 = this.field_J;
+            var5 = this.defaultMessage;
           }
         } else {
           var5 = IntrusiveNodeHashTable.field_c;
         }
         if (var5.equals(this.text)) {
           if (param2 < 47) {
-            this.field_L = (InputValidator) null;
+            this.validator = (InputValidator) null;
             super.drawLayer(param0, param1, 111, param3);
-            var6Lifetime1 = this.field_L.getValidationState((byte) 35);
+            var6Lifetime1 = this.validator.getValidationState((byte) 35);
             var34 = (UiTextRenderer) ((Object) this.renderer);
             var9 = param0 + this.x;
             var10 = var34.getTextOriginY(-3, param3, (UiComponent) (this)) + (var34.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
@@ -116,22 +116,22 @@ final class gm extends HotspotTextWidget {
             var20 = ByteStorage.field_a[0];
             var11 = var20.paddedWidth << 1;
             var12 = var20.paddedHeight << 1;
-            if (this.field_N != null &&
-              var11 <= this.field_N.width &&
-              var12 <= this.field_N.height) {
-              SetTorpedoEnergyUsed.a(94, this.field_N);
+            if (this.spinnerSprite != null &&
+              var11 <= this.spinnerSprite.width &&
+              var12 <= this.spinnerSprite.height) {
+              SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
               SoftwareRasterizer2D.clear();
             } else {
-              this.field_N = new Sprite(var11, var12);
-              SetTorpedoEnergyUsed.a(99, this.field_N);
+              this.spinnerSprite = new Sprite(var11, var12);
+              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
             }
-            var20.drawRotatedScaledBilinear(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.field_K << 10, 4096);
+            var20.drawRotatedScaledBilinear(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.animationTick << 10, 4096);
             bia.popRasterState((byte) 124);
-            this.field_N.drawAdditive(var9 - (var20.paddedWidth >> 1), -var20.paddedHeight + var10, 256);
+            this.spinnerSprite.drawAdditive(var9 - (var20.paddedWidth >> 1), -var20.paddedHeight + var10, 256);
             return;
           }
           super.drawLayer(param0, param1, 111, param3);
-          var6Lifetime1Lifetime1 = this.field_L.getValidationState((byte) 35);
+          var6Lifetime1Lifetime1 = this.validator.getValidationState((byte) 35);
           var35 = (UiTextRenderer) ((Object) this.renderer);
           var9Lifetime3 = param0 + this.x;
           var10Lifetime3 = var35.getTextOriginY(-3, param3, (UiComponent) (this)) + (var35.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
@@ -152,33 +152,33 @@ final class gm extends HotspotTextWidget {
           var24 = ByteStorage.field_a[0];
           var11Lifetime4 = var24.paddedWidth << 1;
           var12Lifetime4 = var24.paddedHeight << 1;
-          if (this.field_N == null) {
-            this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
-            SetTorpedoEnergyUsed.a(99, this.field_N);
+          if (this.spinnerSprite == null) {
+            this.spinnerSprite = new Sprite(var11Lifetime4, var12Lifetime4);
+            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
           } else {
-            if (var11Lifetime4 > this.field_N.width) {
-              this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
-              SetTorpedoEnergyUsed.a(99, this.field_N);
+            if (var11Lifetime4 > this.spinnerSprite.width) {
+              this.spinnerSprite = new Sprite(var11Lifetime4, var12Lifetime4);
+              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
             } else {
-              if (var12Lifetime4 > this.field_N.height) {
-                this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
-                SetTorpedoEnergyUsed.a(99, this.field_N);
+              if (var12Lifetime4 > this.spinnerSprite.height) {
+                this.spinnerSprite = new Sprite(var11Lifetime4, var12Lifetime4);
+                SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
               } else {
-                SetTorpedoEnergyUsed.a(94, this.field_N);
+                SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
                 SoftwareRasterizer2D.clear();
               }
             }
           }
-          var24.drawRotatedScaledBilinear(112, 144, var24.paddedWidth << 4, var24.paddedHeight << 4, -this.field_K << 10, 4096);
+          var24.drawRotatedScaledBilinear(112, 144, var24.paddedWidth << 4, var24.paddedHeight << 4, -this.animationTick << 10, 4096);
           bia.popRasterState((byte) 124);
-          this.field_N.drawAdditive(var9Lifetime3 - (var24.paddedWidth >> 1), -var24.paddedHeight + var10Lifetime3, 256);
+          this.spinnerSprite.drawAdditive(var9Lifetime3 - (var24.paddedWidth >> 1), -var24.paddedHeight + var10Lifetime3, 256);
           return;
         }
         this.text = var5;
         this.rebuildHotspots((byte) 115);
         if (param2 >= 47) {
           super.drawLayer(param0, param1, 111, param3);
-          var6Lifetime2 = this.field_L.getValidationState((byte) 35);
+          var6Lifetime2 = this.validator.getValidationState((byte) 35);
           var37 = (UiTextRenderer) ((Object) this.renderer);
           var9Lifetime1 = param0 + this.x;
           var10Lifetime1 = var37.getTextOriginY(-3, param3, (UiComponent) (this)) + (var37.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
@@ -199,31 +199,31 @@ final class gm extends HotspotTextWidget {
           var33 = ByteStorage.field_a[0];
           var11Lifetime1 = var33.paddedWidth << 1;
           var12Lifetime1 = var33.paddedHeight << 1;
-          if (this.field_N == null) {
-            this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
-            SetTorpedoEnergyUsed.a(99, this.field_N);
+          if (this.spinnerSprite == null) {
+            this.spinnerSprite = new Sprite(var11Lifetime1, var12Lifetime1);
+            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
           } else {
-            if (var11Lifetime1 > this.field_N.width) {
-              this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
-              SetTorpedoEnergyUsed.a(99, this.field_N);
+            if (var11Lifetime1 > this.spinnerSprite.width) {
+              this.spinnerSprite = new Sprite(var11Lifetime1, var12Lifetime1);
+              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
             } else {
-              if (var12Lifetime1 <= this.field_N.height) {
-                SetTorpedoEnergyUsed.a(94, this.field_N);
+              if (var12Lifetime1 <= this.spinnerSprite.height) {
+                SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
                 SoftwareRasterizer2D.clear();
               } else {
-                this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
-                SetTorpedoEnergyUsed.a(99, this.field_N);
+                this.spinnerSprite = new Sprite(var11Lifetime1, var12Lifetime1);
+                SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
               }
             }
           }
-          var33.drawRotatedScaledBilinear(112, 144, var33.paddedWidth << 4, var33.paddedHeight << 4, -this.field_K << 10, 4096);
+          var33.drawRotatedScaledBilinear(112, 144, var33.paddedWidth << 4, var33.paddedHeight << 4, -this.animationTick << 10, 4096);
           bia.popRasterState((byte) 124);
-          this.field_N.drawAdditive(var9Lifetime1 - (var33.paddedWidth >> 1), -var33.paddedHeight + var10Lifetime1, 256);
+          this.spinnerSprite.drawAdditive(var9Lifetime1 - (var33.paddedWidth >> 1), -var33.paddedHeight + var10Lifetime1, 256);
           return;
         }
-        this.field_L = (InputValidator) null;
+        this.validator = (InputValidator) null;
         super.drawLayer(param0, param1, 111, param3);
-        var6Lifetime3 = this.field_L.getValidationState((byte) 35);
+        var6Lifetime3 = this.validator.getValidationState((byte) 35);
         var36 = (UiTextRenderer) ((Object) this.renderer);
         var9Lifetime2 = param0 + this.x;
         var10Lifetime2 = var36.getTextOriginY(-3, param3, (UiComponent) (this)) + (var36.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
@@ -231,18 +231,18 @@ final class gm extends HotspotTextWidget {
           var26 = ByteStorage.field_a[0];
           var11Lifetime2 = var26.paddedWidth << 1;
           var12Lifetime2 = var26.paddedHeight << 1;
-          if (this.field_N != null &&
-            var11Lifetime2 <= this.field_N.width &&
-            var12Lifetime2 <= this.field_N.height) {
-            SetTorpedoEnergyUsed.a(94, this.field_N);
+          if (this.spinnerSprite != null &&
+            var11Lifetime2 <= this.spinnerSprite.width &&
+            var12Lifetime2 <= this.spinnerSprite.height) {
+            SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
             SoftwareRasterizer2D.clear();
           } else {
-            this.field_N = new Sprite(var11Lifetime2, var12Lifetime2);
-            SetTorpedoEnergyUsed.a(99, this.field_N);
+            this.spinnerSprite = new Sprite(var11Lifetime2, var12Lifetime2);
+            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
           }
-          var26.drawRotatedScaledBilinear(112, 144, var26.paddedWidth << 4, var26.paddedHeight << 4, -this.field_K << 10, 4096);
+          var26.drawRotatedScaledBilinear(112, 144, var26.paddedWidth << 4, var26.paddedHeight << 4, -this.animationTick << 10, 4096);
           bia.popRasterState((byte) 124);
-          this.field_N.drawAdditive(var9Lifetime2 - (var26.paddedWidth >> 1), -var26.paddedHeight + var10Lifetime2, 256);
+          this.spinnerSprite.drawAdditive(var9Lifetime2 - (var26.paddedWidth >> 1), -var26.paddedHeight + var10Lifetime2, 256);
           return;
         }
         if (SetFighterRepairTime.pendingValidation != var6Lifetime3) {
@@ -262,26 +262,26 @@ final class gm extends HotspotTextWidget {
         var16 = var29;
         var11Lifetime3 = var29.paddedWidth << 1;
         var12Lifetime3 = var29.paddedHeight << 1;
-        if (this.field_N == null) {
-          this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
-          SetTorpedoEnergyUsed.a(99, this.field_N);
+        if (this.spinnerSprite == null) {
+          this.spinnerSprite = new Sprite(var11Lifetime3, var12Lifetime3);
+          SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
         } else {
-          if (var11Lifetime3 > this.field_N.width) {
-            this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
-            SetTorpedoEnergyUsed.a(99, this.field_N);
+          if (var11Lifetime3 > this.spinnerSprite.width) {
+            this.spinnerSprite = new Sprite(var11Lifetime3, var12Lifetime3);
+            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
           } else {
-            if (var12Lifetime3 > this.field_N.height) {
-              this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
-              SetTorpedoEnergyUsed.a(99, this.field_N);
+            if (var12Lifetime3 > this.spinnerSprite.height) {
+              this.spinnerSprite = new Sprite(var11Lifetime3, var12Lifetime3);
+              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
             } else {
-              SetTorpedoEnergyUsed.a(94, this.field_N);
+              SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
               SoftwareRasterizer2D.clear();
             }
           }
         }
-        var29.drawRotatedScaledBilinear(112, 144, var29.paddedWidth << 4, var29.paddedHeight << 4, -this.field_K << 10, 4096);
+        var29.drawRotatedScaledBilinear(112, 144, var29.paddedWidth << 4, var29.paddedHeight << 4, -this.animationTick << 10, 4096);
         bia.popRasterState((byte) 124);
-        this.field_N.drawAdditive(var9Lifetime2 - (var29.paddedWidth >> 1), -var29.paddedHeight + var10Lifetime2, 256);
+        this.spinnerSprite.drawAdditive(var9Lifetime2 - (var29.paddedWidth >> 1), -var29.paddedHeight + var10Lifetime2, 256);
         return;
     }
 
@@ -315,7 +315,7 @@ final class gm extends HotspotTextWidget {
         if (param0 == 125) {
           return null;
         }
-        this.field_J = (String) null;
+        this.defaultMessage = (String) null;
         return null;
     }
 
@@ -359,11 +359,11 @@ final class gm extends HotspotTextWidget {
         }
     }
 
-    gm(InputValidator param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationStatusWidget(InputValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, cfa.b((byte) -111));
         try {
-          this.field_J = param1;
-          this.field_L = param0;
+          this.defaultMessage = param1;
+          this.validator = param0;
           this.setBounds(param2, param4, param5, 1, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

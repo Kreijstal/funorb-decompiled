@@ -94,7 +94,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         CharSequence var5 = null;
         try {
           NetworkMessageState.chatChannel = 2;
-          waa.field_x = param2;
+          ChoosePlayerNameForm.field_x = param2;
           var5 = (CharSequence) ((Object) param2);
           GetDebrisThrowable.field_o = ConstantColorTextureOperation.normalizeName(false, var5);
           SetFightersPerPlayerMaximum.field_p = true;

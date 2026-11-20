@@ -49,7 +49,7 @@ final class GetReverbDry extends ConsoleCommand {
           if (OpenGlVertexBufferObject.a((byte) -128)) {
             return true;
           }
-          if (null != Asteroid.field_v) {
+          if (null != Asteroid.activeReportDialog) {
             return true;
           }
           if (!MapZoneFactory.a(-26243)) {
@@ -63,7 +63,7 @@ final class GetReverbDry extends ConsoleCommand {
         if (OpenGlVertexBufferObject.a((byte) -128)) {
           return true;
         }
-        if (null != Asteroid.field_v) {
+        if (null != Asteroid.activeReportDialog) {
           return true;
         }
         if (!MapZoneFactory.a(-26243)) {

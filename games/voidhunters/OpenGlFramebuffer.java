@@ -78,7 +78,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           var4 = new ShipComponent(param0);
           var5 = param0;
           if (var5 == 3) {
-            waa.a(var4, 18632);
+            ChoosePlayerNameForm.attachPresetComponents(var4, 18632);
           } else {
             if (var5 != 7) {
               if (var5 == 8) {

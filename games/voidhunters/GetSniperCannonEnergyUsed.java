@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetSniperCannonEnergyUsed extends ConsoleCommand {
-    static String[] field_o;
+    static String[] reportReasonLabels;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -32,7 +32,7 @@ final class GetSniperCannonEnergyUsed extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        reportReasonLabels = null;
         int var1 = -35 % ((param0 - 27) / 50);
     }
 

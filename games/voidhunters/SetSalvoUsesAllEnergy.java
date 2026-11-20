@@ -101,8 +101,8 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
         }
         SetLaserReload.a(79, param0);
         int var2 = 103 / ((16 - param1) / 32);
-        if (null != Asteroid.field_v) {
-          Asteroid.field_v.draw(param0, -117);
+        if (null != Asteroid.activeReportDialog) {
+          Asteroid.activeReportDialog.draw(param0, -117);
         }
         PasswordValidator.a(param0, 124);
     }

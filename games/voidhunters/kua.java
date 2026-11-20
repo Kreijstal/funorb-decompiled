@@ -11,10 +11,10 @@ final class kua {
 
     final static int a(byte param0) {
         if (param0 == 75) {
-          return (ActivateSelfDestructOrderDefinition.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + lla.field_h);
+          return (ActivateSelfDestructOrderDefinition.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + GzipCodec.field_h);
         }
         kua.clearSharedReferences(108);
-        return (ActivateSelfDestructOrderDefinition.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + lla.field_h);
+        return (ActivateSelfDestructOrderDefinition.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + GzipCodec.field_h);
     }
 
     public static void clearSharedReferences(int param0) {

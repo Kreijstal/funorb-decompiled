@@ -7,7 +7,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
     static String field_p;
 
     final static IsaacPacketBuffer a(int param0, byte[] param1) {
-        lla var2 = null;
+        GzipCodec var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         IsaacPacketBuffer stackIn_4_0 = null;
@@ -16,11 +16,11 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new lla();
+          var2 = new GzipCodec();
           if (param0 != 9) {
             field_o = (String) null;
           }
-          var3 = var2.a(param0 - 9, param1);
+          var3 = var2.decompress(param0 - 9, param1);
           stackIn_4_0 = new IsaacPacketBuffer(var3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

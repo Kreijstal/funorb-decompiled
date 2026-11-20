@@ -10,14 +10,14 @@ abstract class vjb {
         if (param0 > 75) {
           TileTextureOperation.d(0);
           ebb.a((byte) -74);
-          Asteroid.field_v = null;
+          Asteroid.activeReportDialog = null;
           GetUseExtraBackground.a(-1);
           return;
         }
         vjb.a((byte) 48);
         TileTextureOperation.d(0);
         ebb.a((byte) -74);
-        Asteroid.field_v = null;
+        Asteroid.activeReportDialog = null;
         GetUseExtraBackground.a(-1);
     }
 

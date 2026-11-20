@@ -45,22 +45,22 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
     }
 
     final static void f(byte param0) {
-        GetSniperCannonEnergyUsed.field_o = new String[SetFightersPerPlayerMaximum.field_o];
-        GetSniperCannonEnergyUsed.field_o[5] = GetMachineGunAimspeed.field_q;
-        GetSniperCannonEnergyUsed.field_o[21] = bda.field_a;
-        GetSniperCannonEnergyUsed.field_o[15] = AccountCreationForm.field_G;
-        GetSniperCannonEnergyUsed.field_o[17] = SetBots.field_p;
-        GetSniperCannonEnergyUsed.field_o[9] = MatchingFieldValidator.field_j;
+        GetSniperCannonEnergyUsed.reportReasonLabels = new String[SetFightersPerPlayerMaximum.field_o];
+        GetSniperCannonEnergyUsed.reportReasonLabels[5] = GetMachineGunAimspeed.field_q;
+        GetSniperCannonEnergyUsed.reportReasonLabels[21] = bda.field_a;
+        GetSniperCannonEnergyUsed.reportReasonLabels[15] = AccountCreationForm.field_G;
+        GetSniperCannonEnergyUsed.reportReasonLabels[17] = SetBots.field_p;
+        GetSniperCannonEnergyUsed.reportReasonLabels[9] = MatchingFieldValidator.field_j;
         if (param0 <= -75) {
-          GetSniperCannonEnergyUsed.field_o[11] = fk.field_d;
-          GetSniperCannonEnergyUsed.field_o[7] = SetUseExtraBackground.field_o;
-          GetSniperCannonEnergyUsed.field_o[19] = cfa.field_e;
-          GetSniperCannonEnergyUsed.field_o[20] = GetSelfDestructTimer.field_o;
-          GetSniperCannonEnergyUsed.field_o[4] = GetDebrisCarryOver.field_q;
-          GetSniperCannonEnergyUsed.field_o[16] = SetExplosionProjectileDamage.field_p;
-          GetSniperCannonEnergyUsed.field_o[18] = SettingsInstance.field_b;
-          GetSniperCannonEnergyUsed.field_o[13] = SetKeepTeamColours.field_q;
-          GetSniperCannonEnergyUsed.field_o[6] = UiStatefulStyle.field_p;
+          GetSniperCannonEnergyUsed.reportReasonLabels[11] = fk.field_d;
+          GetSniperCannonEnergyUsed.reportReasonLabels[7] = SetUseExtraBackground.field_o;
+          GetSniperCannonEnergyUsed.reportReasonLabels[19] = cfa.field_e;
+          GetSniperCannonEnergyUsed.reportReasonLabels[20] = GetSelfDestructTimer.field_o;
+          GetSniperCannonEnergyUsed.reportReasonLabels[4] = GetDebrisCarryOver.field_q;
+          GetSniperCannonEnergyUsed.reportReasonLabels[16] = SetExplosionProjectileDamage.field_p;
+          GetSniperCannonEnergyUsed.reportReasonLabels[18] = SettingsInstance.field_b;
+          GetSniperCannonEnergyUsed.reportReasonLabels[13] = SetKeepTeamColours.field_q;
+          GetSniperCannonEnergyUsed.reportReasonLabels[6] = UiStatefulStyle.field_p;
           return;
         }
     }

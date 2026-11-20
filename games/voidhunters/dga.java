@@ -1500,7 +1500,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_no_displayname", 23100);
                 if (var2 != null) {
-                  waa.field_y = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.instructionsText = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_username_tooltip", 23100);
                 if (null != var2) {
@@ -2903,31 +2903,31 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,1", 23100);
                 if (var2 != null) {
-                  waa.field_w[1] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[1] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,2", 23100);
                 if (null != var2) {
-                  waa.field_w[2] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[2] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,3", 23100);
                 if (null != var2) {
-                  waa.field_w[3] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[3] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,4", 23100);
                 if (var2 != null) {
-                  waa.field_w[4] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[4] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,5", 23100);
                 if (null != var2) {
-                  waa.field_w[5] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[5] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,6", 23100);
                 if (null != var2) {
-                  waa.field_w[6] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[6] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin4,7", 23100);
                 if (null != var2) {
-                  waa.field_w[7] = Cp1252Strings.decode((byte) -125, var2);
+                  ChoosePlayerNameForm.field_w[7] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_notloggedin", 23100);
                 if (var2 != null) {

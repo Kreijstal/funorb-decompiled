@@ -158,8 +158,8 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
 
     LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (UiRenderer) null);
-        sca dupTemp$0 = null;
-        sca dupTemp$1 = null;
+        LabeledInputContainer dupTemp$0 = null;
+        LabeledInputContainer dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -179,8 +179,8 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
         BitmapFont var7 = null;
         String var8 = null;
         khb var9 = null;
-        sca var12 = null;
-        sca var13 = null;
+        LabeledInputContainer var12 = null;
+        LabeledInputContainer var13 = null;
         try {
           stackIn_4_1 = (param4);
           this.showGuestOption = stackIn_4_1;
@@ -255,11 +255,11 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
           } else {
             var8 = fj.field_a;
           }
-          dupTemp$0 = new sca(10, this.y, this.width - 20, 25, this.loginField, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledInputContainer(10, this.y, this.width - 20, 25, this.loginField, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild(-18756, dupTemp$0);
           this.y = this.y + (((UiComponent) ((Object) var12)).height + 5);
-          dupTemp$1 = new sca(10, this.y, -20 + this.width, 25, this.passwordField, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
+          dupTemp$1 = new LabeledInputContainer(10, this.y, -20 + this.width, 25, this.passwordField, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
           var13 = dupTemp$1;
           this.addChild(-18756, dupTemp$1);
           this.y = this.y + (((UiComponent) ((Object) var13)).height + 5);

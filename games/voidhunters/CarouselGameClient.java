@@ -117,13 +117,13 @@ final class CarouselGameClient {
         CarouselSlot var11_ref = null;
         int var12 = 0;
         CarouselSlotStateDump var13 = null;
-        lla var14 = null;
+        GzipCodec var14 = null;
         int var16 = 0;
         byte[] var20 = null;
         var16 = VoidHunters.field_G;
         try {
           if (param4) {
-            param3 = param3 - lla.field_e;
+            param3 = param3 - GzipCodec.alternateChecksumDelay;
           }
           if (this.readyTick >= param3) {
             return;
@@ -165,9 +165,9 @@ final class CarouselGameClient {
               if (this.dataSender.isIdle(param2 - 1000)) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
                 var13 = new CarouselSlotStateDump(-var10 + param0.tick, UiViewport.field_w);
-                var14 = new lla();
-                var14.a(84, 0, var13.field_d, var13.field_d.length);
-                var20 = GameApplet.copyWrittenBytes((byte) 10, var14.field_f);
+                var14 = new GzipCodec();
+                var14.compress(84, 0, var13.field_d, var13.field_d.length);
+                var20 = GameApplet.copyWrittenBytes((byte) 10, var14.compressedOutput);
                 this.dataSender.setData(var20, 0);
               }
             }

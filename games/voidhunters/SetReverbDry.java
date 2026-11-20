@@ -105,13 +105,13 @@ final class SetReverbDry extends ConsoleCommand {
         }
         if (param1 == 19) {
           if (param0 == 2) {
-            var2 = lla.field_h;
+            var2 = GzipCodec.field_h;
           }
           return var2;
         }
         field_o = -2;
         if (param0 == 2) {
-          var2 = lla.field_h;
+          var2 = GzipCodec.field_h;
         }
         return var2;
     }

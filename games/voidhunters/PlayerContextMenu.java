@@ -50,7 +50,7 @@ final class PlayerContextMenu {
         if (17 != param1) {
           return false;
         }
-        Asteroid.field_v = new bwa(this.sourceWidget.screenX, this.sourceWidget.screenY, this.sourceWidget.width, this.sourceWidget.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.targetName, this.targetPlayerKey);
+        Asteroid.activeReportDialog = new ReportAbuseDialog(this.sourceWidget.screenX, this.sourceWidget.screenY, this.sourceWidget.width, this.sourceWidget.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.targetName, this.targetPlayerKey);
         return true;
     }
 
@@ -434,7 +434,7 @@ final class PlayerContextMenu {
             this.menu.addItem(PasswordValidator.field_j, (byte) -53, 13);
           }
           if (param0.channelType == 2) {
-            if (0 == lla.field_h) {
+            if (0 == GzipCodec.field_h) {
               this.menu.addItem(SetMissilesAcceleration.field_o, (byte) -53, 12);
             }
             this.menu.addItem(SetMissionDebrisVotingChancestep.field_o, (byte) -53, 13);

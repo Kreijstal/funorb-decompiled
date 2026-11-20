@@ -1622,7 +1622,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.setMultisampleEnabled(-112, false);
         this.setVertexBuffer((byte) -6, this.circleVertexBuffer, 0);
         this.setVertexDeclaration(115, this.circleVertexDeclaration);
-        this.drawPrimitive(GetFightersPerPlayerMaximum.field_o, 1, 256, -114);
+        this.drawPrimitive(GetFightersPerPlayerMaximum.reportReasonCount, 1, 256, -114);
         this.setMultisampleEnabled(-27, true);
         this.setAlphaCombineSource(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
         this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
@@ -2013,7 +2013,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.modelTransform.translate(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
         this.markModelTransformChanged(20837);
         this.setMultisampleEnabled(-118, false);
-        this.drawUnitQuad(0, GetFightersPerPlayerMaximum.field_o, 4);
+        this.drawUnitQuad(0, GetFightersPerPlayerMaximum.reportReasonCount, 4);
         this.setMultisampleEnabled(-110, true);
         this.setAlphaCombineSource(0, (byte) -67, SetGrapplingHookMaxExtension8Force.field_q);
         this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);

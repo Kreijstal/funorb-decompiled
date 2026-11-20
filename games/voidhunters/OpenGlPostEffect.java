@@ -106,11 +106,11 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
             if (2 != param3) {
               return;
             }
-            if (lla.field_h == param0) {
+            if (GzipCodec.field_h == param0) {
               return;
             }
             ebb.field_b = true;
-            lla.field_h = param0;
+            GzipCodec.field_h = param0;
             LaserWeaponDefinition.a(40, param2);
             return;
           }
@@ -132,11 +132,11 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
               if (2 != param3) {
                 return;
               }
-              if (lla.field_h == param0) {
+              if (GzipCodec.field_h == param0) {
                 return;
               }
               ebb.field_b = true;
-              lla.field_h = param0;
+              GzipCodec.field_h = param0;
               LaserWeaponDefinition.a(40, param2);
               return;
             }
@@ -146,11 +146,11 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
           }
         }
         if (2 == param3) {
-          if (lla.field_h == param0) {
+          if (GzipCodec.field_h == param0) {
             return;
           }
           ebb.field_b = true;
-          lla.field_h = param0;
+          GzipCodec.field_h = param0;
           LaserWeaponDefinition.a(40, param2);
         }
     }

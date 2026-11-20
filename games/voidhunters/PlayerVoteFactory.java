@@ -100,7 +100,7 @@ final class PlayerVoteFactory implements GameStateFactory {
     final static void a(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
-          waa.field_x = param0;
+          ChoosePlayerNameForm.field_x = param0;
           int var4_int = -104 / ((-6 - param2) / 42);
           NetworkMessageState.chatChannel = 2;
           var5 = (CharSequence) ((Object) param0);

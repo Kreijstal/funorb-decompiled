@@ -129,7 +129,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (2 == SetReverbDry.a(var5, (byte) 19)) {
               OpenGlPostEffect.a(1, (byte) -76, param1, var5);
             }
-            SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, NetworkMessageState.chatChannel, waa.field_x);
+            SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, NetworkMessageState.chatChannel, ChoosePlayerNameForm.field_x);
           } else {
             var13 = (String) null;
             var12 = (String) null;
@@ -233,7 +233,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           var45 = var7 + var19 + ": ";
           var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var45);
         } else {
-          var47 = (CharSequence) ((Object) waa.field_x);
+          var47 = (CharSequence) ((Object) ChoosePlayerNameForm.field_x);
           var18 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{joa.a(var47, false)}, 108);
           var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var16}, param2 ^ -30);
           var9 = DebrisFactory.field_c.getStringWidth(var18);

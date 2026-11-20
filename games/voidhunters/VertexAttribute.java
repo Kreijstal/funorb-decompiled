@@ -15,11 +15,11 @@ final class VertexAttribute {
     static VertexAttribute field_b;
     static int field_m;
     static String field_n;
-    static byte[] field_f;
+    static byte[] gzipHeader;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 <= -20) {
-          field_f = null;
+          gzipHeader = null;
           field_h = null;
           field_n = null;
           field_k = null;
@@ -31,7 +31,7 @@ final class VertexAttribute {
           return;
         }
         VertexAttribute.fromId((byte) 99, -109);
-        field_f = null;
+        gzipHeader = null;
         field_h = null;
         field_n = null;
         field_k = null;
@@ -116,7 +116,7 @@ final class VertexAttribute {
         field_h = new VertexAttribute(5, 3, GpuDataType.FLOAT);
         field_b = new VertexAttribute(6, 4, GpuDataType.FLOAT);
         field_m = SetMutatorVotes.a(16, -111);
-        field_f = new byte[]{(byte)31, (byte)-117, (byte)8, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        gzipHeader = new byte[]{(byte)31, (byte)-117, (byte)8, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         field_n = "Launches a fighter for harrassment";
     }
 }

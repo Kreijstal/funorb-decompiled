@@ -1162,7 +1162,7 @@ final class OpenGlModel extends Model3D {
           this.field_J = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_J);
           this.field_k = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_k);
           if (param1.vertexLabels != null &&
-            bwa.a(param2, (byte) 121, this.field_u)) {
+            ReportAbuseDialog.needsVertexGroups(param2, (byte) 121, this.field_u)) {
             param1.groupVertexIndices((byte) -37, false);
           }
           if (param1.faceAttachments != null &&

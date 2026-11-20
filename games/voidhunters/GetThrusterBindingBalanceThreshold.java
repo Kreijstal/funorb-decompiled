@@ -34,12 +34,12 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           if (NetworkMessageState.chatChannel == 2 &&
             !SetAutozoomAmountMultiply.a(0)) {
             if (GetTorqueDownshift.a(GetDebrisThrowable.field_o, (byte) -47)) {
-              var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{waa.field_x}, 78);
+              var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.field_x}, 78);
               if (var10 != 0) {
-                var2 = SetReverbGain.a(fab.field_b, new String[]{waa.field_x}, 114);
+                var2 = SetReverbGain.a(fab.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
               }
             } else {
-              var2 = SetReverbGain.a(fab.field_b, new String[]{waa.field_x}, 114);
+              var2 = SetReverbGain.a(fab.field_b, new String[]{ChoosePlayerNameForm.field_x}, 114);
             }
             if (LegacyOpenGlTurbulenceEffect.field_d) {
               lh.a((byte) -112, 0, (String) null, (String) null, (String) (var2), 2);
@@ -61,7 +61,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var6 = NetworkMessageState.chatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{waa.field_x}, 91);
+              var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{ChoosePlayerNameForm.field_x}, 91);
               var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var3}, 79);
               var7 = WidgetNode.field_l.width + (UiComboBoxRenderer.field_c.width - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
               if (0 > var7) {
@@ -130,7 +130,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               WidgetNode.field_l.field_O = false;
             }
             if (WidgetNode.field_l.field_O) {
-              var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, waa.field_x}, 100);
+              var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, ChoosePlayerNameForm.field_x}, 100);
             }
           }
           stackIn_94_0 = var1;

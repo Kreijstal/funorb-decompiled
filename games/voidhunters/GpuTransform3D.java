@@ -595,14 +595,14 @@ final class GpuTransform3D extends Transform3D {
         if (param0 != -127) {
           return;
         }
-        if (null != Asteroid.field_v) {
-          var3 = Asteroid.field_v.c(param1, -8703);
+        if (null != Asteroid.activeReportDialog) {
+          var3 = Asteroid.activeReportDialog.updateAndGetReportReason(param1, -8703);
           if (var3 != -2) {
             if (-1 != var3) {
-              var4 = Asteroid.field_v.e((byte) -108) ? 1 : 0;
-              SecondaryNodeQueue.a(var3, (byte) -119, Asteroid.field_v.i(0), Asteroid.field_v.field_yb, param2, var4 != 0);
+              var4 = Asteroid.activeReportDialog.isMuteSelected((byte) -108) ? 1 : 0;
+              SecondaryNodeQueue.a(var3, (byte) -119, Asteroid.activeReportDialog.getReportedName(0), Asteroid.activeReportDialog.targetPlayerKey, param2, var4 != 0);
             }
-            Asteroid.field_v = null;
+            Asteroid.activeReportDialog = null;
             TileTextureOperation.d(0);
           }
           return;

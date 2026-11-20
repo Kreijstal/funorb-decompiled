@@ -630,7 +630,7 @@ public final class VoidHunters extends NetworkGameClient {
         GetThrusterParticleLife.field_o = new fdb();
         LegacyOpenGlTurbulenceEffect.field_g = new fdb(GetThrusterParticleLife.field_o);
         MidiPcmStream var3 = new MidiPcmStream();
-        dra var4 = new dra(GetThrusterParticleLife.field_o, LegacyOpenGlTurbulenceEffect.field_g, var3);
+        MidiCrossfadeStream var4 = new MidiCrossfadeStream(GetThrusterParticleLife.field_o, LegacyOpenGlTurbulenceEffect.field_g, var3);
         kr.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
         ScreenSizeController var5 = new ScreenSizeController(new GameCanvasResizeListener());
         var5.minimumMemoryMegabytes = 0;
@@ -687,14 +687,14 @@ public final class VoidHunters extends NetworkGameClient {
         var2 = stackIn_5_0;
         var3 = 28 / ((-54 - param0) / 37);
         if (var2 != 0) {
-          if (GetBurstFireMaxEnergy.field_p.field_n != LegacyOpenGlTurbulenceEffect.field_g &&
+          if (GetBurstFireMaxEnergy.field_p.selectedStream != LegacyOpenGlTurbulenceEffect.field_g &&
             this.field_B <= 0) {
-            GetBurstFireMaxEnergy.field_p.a(-126, pab.field_k[1], 100, 1000000);
+            GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-126, pab.field_k[1], 100, 1000000);
           }
           this.field_D = -1;
         } else {
-          if (GetBurstFireMaxEnergy.field_p.field_n != GetThrusterParticleLife.field_o) {
-            GetBurstFireMaxEnergy.field_p.a(-127, pab.field_k[0], 100, 1000000);
+          if (GetBurstFireMaxEnergy.field_p.selectedStream != GetThrusterParticleLife.field_o) {
+            GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-127, pab.field_k[0], 100, 1000000);
           }
           this.field_C = -1;
         }
@@ -855,7 +855,7 @@ public final class VoidHunters extends NetworkGameClient {
         fab.clearSharedReferences(10970);
         pa.clearSharedReferences(2);
         fdb.clearSharedReferences(0);
-        dra.clearSharedReferences(98);
+        MidiCrossfadeStream.clearSharedReferences(98);
         btb.clearSharedReferences((byte) 94);
         bda.clearSharedReferences(-12407);
         sh.clearSharedReferences((byte) 89);
@@ -1000,7 +1000,7 @@ public final class VoidHunters extends NetworkGameClient {
         AccountCreationForm.clearSharedReferences(112);
         GuestPlayNoticePanel.clearSharedReferences((byte) 61);
         LoginForm.clearSharedReferences(3);
-        waa.clearSharedReferences((byte) 115);
+        ChoosePlayerNameForm.clearSharedReferences((byte) 115);
         dj.clearSharedReferences((byte) -114);
         UiTheme.clearSharedReferences((byte) -29);
         kr.clearSharedReferences(-127);
@@ -1117,7 +1117,7 @@ public final class VoidHunters extends NetworkGameClient {
         UiTextField.clearSharedReferences((byte) -128);
         StripedProgressBar.clearSharedReferences(16711935);
         HotspotTextWidget.clearSharedReferences(-30);
-        gm.clearSharedReferences(-2459);
+        ValidationStatusWidget.clearSharedReferences(-2459);
         UiToggleButton.clearSharedReferences(-125);
         TextFieldValidator.clearSharedReferences(-27183);
         LogoFinalFrameBottom.clearSharedReferences(false);

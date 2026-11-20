@@ -43,7 +43,7 @@ final class GetTorpedoProjectileDamage extends ConsoleCommand {
           return;
         }
         try {
-          GetBurstFireMaxEnergy.field_p.a(param2, param0, !param1 ? true : false, param4, -47, 1000000);
+          GetBurstFireMaxEnergy.field_p.crossfadeToTrack(param2, param0, !param1 ? true : false, param4, -47, 1000000);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

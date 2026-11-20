@@ -59,7 +59,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             return;
           }
           if (meb.field_d != param1) {
-            var3_int = gm.toOpenGlTextureCoordinateMode(param1, 9216);
+            var3_int = ValidationStatusWidget.toOpenGlTextureCoordinateMode(param1, 9216);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -100,7 +100,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         try {
           var5_int = -83 / ((-4 - param3) / 32);
           if (TextureFilterMode.field_b != param0) {
-            if (GetFightersPerPlayerMaximum.field_o != param0) {
+            if (GetFightersPerPlayerMaximum.reportReasonCount != param0) {
               if (FlipTextureOperation.field_i == param0) {
                 var6 = 4;
                 var7 = 3 * param2;

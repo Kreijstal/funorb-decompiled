@@ -482,7 +482,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param0 == TextureFilterMode.field_b) {
           return 2;
         }
-        if (param0 == GetFightersPerPlayerMaximum.field_o) {
+        if (param0 == GetFightersPerPlayerMaximum.reportReasonCount) {
           return 3;
         }
         if (SetThrusterParticleLife.field_p == param0) {

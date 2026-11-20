@@ -45,7 +45,7 @@ final class SetMassDriverAimarc extends ConsoleCommand {
         int var8 = SetMissilesDamageSourceTeam.field_o.get(11);
         int var9 = SetMissilesDamageSourceTeam.field_o.get(12);
         int var10 = SetMissilesDamageSourceTeam.field_o.get(13);
-        return waa.field_D[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + GetPhasedEnergyBeamReload.field_o[var6] + "-" + var7 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
+        return ChoosePlayerNameForm.field_D[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + GetPhasedEnergyBeamReload.field_o[var6] + "-" + var7 + " " + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
     }
 
     public static void clearSharedReferences(byte param0) {

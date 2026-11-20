@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetFightersPerPlayerMaximum extends ConsoleCommand {
-    static PrimitiveType field_o;
+    static PrimitiveType reportReasonCount;
     static int field_p;
     static boolean field_r;
     static String field_q;
@@ -38,7 +38,7 @@ final class GetFightersPerPlayerMaximum extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_s = null;
         field_q = null;
-        field_o = null;
+        reportReasonCount = null;
         if (param0 != 42) {
           field_p = -66;
         }
@@ -49,7 +49,7 @@ final class GetFightersPerPlayerMaximum extends ConsoleCommand {
     }
 
     static {
-        field_o = new PrimitiveType();
+        reportReasonCount = new PrimitiveType();
         field_p = 1;
         field_q = "Log in / Create account";
         field_s = "Scavengers";

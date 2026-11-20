@@ -7,7 +7,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
 
     final static void a(int param0, boolean param1, boolean param2) {
         SetLag.a(param2, 62, 71, 64, GetSniperCannonProjectileOndamageParticles.field_o, 66, Under13AccountNoticePanel.field_v, 2000, 70, 65, 69, 72, GetPhasedEnergyBeamReload.field_p, 68, (byte) 91);
-        dra.a((byte) 125, 3);
+        MidiCrossfadeStream.setAlternateHistoryLength((byte) 125, 3);
         if (param1) {
           SpecialOrderButtonState.field_f = true;
           OpenGlToolkit.a(62, true);

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class waa extends UiContainer implements NameSuggestionTarget, UiActionListener {
-    rcb field_v;
-    private ValidatedTextField field_A;
-    static String field_y;
+final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTarget, UiActionListener {
+    NameSuggestionsPanel suggestionsPanel;
+    private ValidatedTextField nameField;
+    static String instructionsText;
     static String[] field_w;
     static String field_x;
     static String[] field_D;
-    private UiFocusableComponent field_z;
-    private UiFocusableComponent field_C;
+    private UiFocusableComponent okButton;
+    private UiFocusableComponent cancelButton;
 
-    private final int a(int param0, int param1, String param2, String param3, int param4, UiComponent param5) {
+    private final int addValidatedField(int param0, int param1, String param2, String param3, int param4, UiComponent param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -26,7 +26,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
           if (param0 != 35) {
             field_D = (String[]) null;
           }
-          stackIn_3_0 = this.a(param1, 35, param2, param5, param3, 126, param4);
+          stackIn_3_0 = this.addValidatedField(param1, 35, param2, param5, param3, 126, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,16 +65,16 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         try {
           if (param0 != 11) {
             var7 = (ValidatableInput) null;
-            discarded$1 = this.a((ValidatableInput) null, (byte) 100);
+            discarded$1 = this.isInputValid((ValidatableInput) null, (byte) 100);
           }
-          if (param3 == this.field_C) {
+          if (param3 == this.cancelButton) {
             LoginFormNavigation.showEmptyLoginForm(-116);
             return;
           }
-          if (this.field_z != param3) {
+          if (this.okButton != param3) {
             return;
           }
-          this.e(25);
+          this.submitName(25);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,59 +128,59 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         }
     }
 
-    public waa() {
+    public ChoosePlayerNameForm() {
         super(0, 0, 496, 0, (UiRenderer) null);
-        this.field_A = new ValidatedTextField("", (UiListener) null, 12);
+        this.nameField = new ValidatedTextField("", (UiListener) null, 12);
         UiTextStyle var1 = new UiTextStyle(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
-        UiComponent var2 = new UiComponent(field_y, var1, (UiListener) null);
-        this.field_z = new UiFocusableComponent(UiComboBoxList.field_K, (UiListener) null);
-        this.field_C = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
-        this.field_A.tooltip = gna.field_m;
-        this.field_A.setValidator(6614, new UsernameAvailabilityValidator(this.field_A));
-        this.field_z.enabled = false;
-        this.field_z.renderer = (UiRenderer) ((Object) new vva());
-        this.field_C.renderer = (UiRenderer) ((Object) new meb());
-        this.field_A.renderer = (UiRenderer) ((Object) new io(10000536));
+        UiComponent var2 = new UiComponent(instructionsText, var1, (UiListener) null);
+        this.okButton = new UiFocusableComponent(UiComboBoxList.field_K, (UiListener) null);
+        this.cancelButton = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
+        this.nameField.tooltip = gna.field_m;
+        this.nameField.setValidator(6614, new UsernameAvailabilityValidator(this.nameField));
+        this.okButton.enabled = false;
+        this.okButton.renderer = (UiRenderer) ((Object) new vva());
+        this.cancelButton.renderer = (UiRenderer) ((Object) new meb());
+        this.nameField.renderer = (UiRenderer) ((Object) new io(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
         var2.setBounds(20, 270, 50, 1, var3);
         this.addChild(-18756, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(35, var3, ffb.field_c, Projectile.field_r, 170, this.field_A));
-        this.field_z.setBounds(-var5 + 496 >> 1, var5, 40, 1, var3);
-        this.field_C.setBounds(var4 + 3, 60, 40, 1, 15 + var3);
-        this.field_C.listener = (UiListener) (this);
-        this.field_z.listener = (UiListener) (this);
-        this.addChild(-18756, this.field_z);
-        this.addChild(-18756, this.field_C);
-        this.field_v = new rcb((NameSuggestionTarget) (this));
-        this.field_v.setBounds(60 + (this.field_A.x + this.field_A.width), -60 - this.field_A.x + (this.width - this.field_A.width), 150, 1, 20);
-        this.addChild(-18756, this.field_v);
+        var3 = var3 + (5 + this.addValidatedField(35, var3, ffb.field_c, Projectile.field_r, 170, this.nameField));
+        this.okButton.setBounds(-var5 + 496 >> 1, var5, 40, 1, var3);
+        this.cancelButton.setBounds(var4 + 3, 60, 40, 1, 15 + var3);
+        this.cancelButton.listener = (UiListener) (this);
+        this.okButton.listener = (UiListener) (this);
+        this.addChild(-18756, this.okButton);
+        this.addChild(-18756, this.cancelButton);
+        this.suggestionsPanel = new NameSuggestionsPanel((NameSuggestionTarget) (this));
+        this.suggestionsPanel.setBounds(60 + (this.nameField.x + this.nameField.width), -60 - this.nameField.x + (this.width - this.nameField.width), 150, 1, 20);
+        this.addChild(-18756, this.suggestionsPanel);
         this.setBounds(0, 496, var4 + var3 + 55, 1, 0);
     }
 
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_z.enabled = this.d(-31927);
+          this.okButton.enabled = this.canSubmit(-31927);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "waa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final boolean d(int param0) {
+    private final boolean canSubmit(int param0) {
         if (param0 == -31927) {
-          return this.a((ValidatableInput) (this.field_A), (byte) -92) ? true : false;
+          return this.isInputValid((ValidatableInput) (this.nameField), (byte) -92) ? true : false;
         }
-        field_y = (String) null;
-        if (!this.a((ValidatableInput) (this.field_A), (byte) -92)) {
+        instructionsText = (String) null;
+        if (!this.isInputValid((ValidatableInput) (this.nameField), (byte) -92)) {
           return false;
         }
         return true;
     }
 
-    private final boolean a(ValidatableInput param0, byte param1) {
+    private final boolean isInputValid(ValidatableInput param0, byte param1) {
         InputValidator var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -216,10 +216,10 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         }
     }
 
-    private final int a(int param0, int param1, String param2, UiComponent param3, String param4, int param5, int param6) {
+    private final int addValidatedField(int param0, int param1, String param2, UiComponent param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
-        gm var9 = null;
-        sca var10 = null;
+        ValidationStatusWidget var9 = null;
+        LabeledInputContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -230,9 +230,9 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new sca(20, param0, 120 + param6, 25, param3, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
+          var10 = new LabeledInputContainer(20, param0, 120 + param6, 25, param3, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
           this.addChild(-18756, var10);
-          var9 = new gm(((ValidatableInput) ((Object) param3)).getValidator(-782444220), param4, param5, param0 + var10.height, 25 + param6, param1);
+          var9 = new ValidationStatusWidget(((ValidatableInput) ((Object) param3)).getValidator(-782444220), param4, param5, param0 + var10.height, 25 + param6, param1);
           var9.listener = (UiListener) (this);
           this.addChild(-18756, var9);
           stackIn_1_0 = var10.height + var9.height;
@@ -263,7 +263,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         }
     }
 
-    final static MusicPatch a(ResourceArchive param0, byte param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -301,10 +301,10 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         int var1 = -52 % ((6 - param0) / 55);
         field_x = null;
         field_w = null;
-        field_y = null;
+        instructionsText = null;
     }
 
-    final static void a(ShipComponent param0, int param1) {
+    final static void attachPresetComponents(ShipComponent param0, int param1) {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         try {
@@ -312,7 +312,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
           param0.attachToHardpoint(param1 ^ 18633, 14, new ShipComponent(15));
           if (param1 != 18632) {
             ResourceArchive var3 = (ResourceArchive) null;
-            waa.a((ResourceArchive) null, (byte) -43, -58);
+            ChoosePlayerNameForm.loadMusicPatch((ResourceArchive) null, (byte) -43, -58);
           }
           param0.attachToHardpoint(param1 - 18631, 5, new ShipComponent(13));
           param0.attachToHardpoint(1, 6, new ShipComponent(13));
@@ -335,17 +335,17 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
 
     public final void invalidateNameAvailability(int param0) {
         int discarded$0 = 0;
-        ((UsernameAvailabilityValidator) (this.field_A.getValidator(-782444220))).invalidateAvailabilityCache((byte) 127);
+        ((UsernameAvailabilityValidator) (this.nameField.getValidator(-782444220))).invalidateAvailabilityCache((byte) 127);
         if (param0 != 1546) {
           UiComponent var3 = (UiComponent) null;
-          discarded$0 = this.a(25, 1, (String) null, (String) null, 83, (UiComponent) null);
+          discarded$0 = this.addValidatedField(25, 1, (String) null, (String) null, 83, (UiComponent) null);
         }
     }
 
-    private final void e(int param0) {
+    private final void submitName(int param0) {
         int var2 = 71 / ((78 - param0) / 41);
-        if (this.d(-31927)) {
-          GetMachineGunAimspeed.a(this.field_A.text, -127);
+        if (this.canSubmit(-31927)) {
+          GetMachineGunAimspeed.a(this.nameField.text, -127);
           return;
         }
     }
@@ -361,14 +361,14 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_A;
+          var3 = this.nameField;
           var4 = param1;
           ((UiTextField) ((Object) var3)).setText(false, 0, var4);
           if (param0 == 41) {
             return;
           }
           var5 = (String) null;
-          discarded$1 = this.a(37, 125, (String) null, (UiComponent) null, (String) null, 67, -21);
+          discarded$1 = this.addValidatedField(37, 125, (String) null, (UiComponent) null, (String) null, 67, -21);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -386,7 +386,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
 
     static {
         field_w = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
-        field_y = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
+        instructionsText = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_D = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }
 }

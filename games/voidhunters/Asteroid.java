@@ -4,7 +4,7 @@
 final class Asteroid extends ShipBody implements DiffableState, CompactGameState, SpatialStateMarker {
     static int[][] field_w;
     private int field_u;
-    static bwa field_v;
+    static ReportAbuseDialog activeReportDialog;
 
     final int getBodyKind(int param0) {
         if (param0 <= 42) {
@@ -84,11 +84,11 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         if (param0 != 3) {
           Asteroid.a(123, true);
           field_w = (int[][]) null;
-          field_v = null;
+          activeReportDialog = null;
           return;
         }
         field_w = (int[][]) null;
-        field_v = null;
+        activeReportDialog = null;
     }
 
     public final void copyTo(byte param0, SerializableGameState param1) {
@@ -100,7 +100,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
           var3.field_u = this.field_u;
           super.copyTo((byte) 94, param1);
           if (param0 <= 54) {
-            field_v = (bwa) null;
+            activeReportDialog = (ReportAbuseDialog) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

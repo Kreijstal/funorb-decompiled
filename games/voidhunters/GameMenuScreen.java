@@ -507,7 +507,7 @@ final class GameMenuScreen {
           if (var10_int == 1) {
             if (this.inputState.isActivationRequested((byte) -126)) {
               if (GetPhasedEnergyBeamPulsetime.e((byte) 85)) {
-                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
+                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, MidiCrossfadeStream.buttonFrameSprites, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
               } else {
                 var10_int = param1 ? 1 : 0;
                 GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, -4);

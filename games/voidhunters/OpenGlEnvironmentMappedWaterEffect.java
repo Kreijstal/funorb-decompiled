@@ -5,7 +5,7 @@ final class OpenGlEnvironmentMappedWaterEffect extends GpuMaterialEffect {
     static String field_h;
     private OpenGlShaderProgram field_f;
     private boolean field_e;
-    static waa field_j;
+    static ChoosePlayerNameForm field_j;
     private boolean field_i;
     private WaterTextures field_g;
 
@@ -157,7 +157,7 @@ final class OpenGlEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         field_h = null;
         field_j = null;
         if (param0 > -66) {
-          field_j = (waa) null;
+          field_j = (ChoosePlayerNameForm) null;
         }
     }
 

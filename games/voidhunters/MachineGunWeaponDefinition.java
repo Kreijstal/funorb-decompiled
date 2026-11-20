@@ -54,35 +54,35 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
         if (ActivateSelfDestructOrderDefinition.field_d > 2) {
           ActivateSelfDestructOrderDefinition.field_d = 2;
           GetThrusterSmallForce.field_p = (13 & param0) >> 2;
-          lla.field_h = param0 & 3;
+          GzipCodec.field_h = param0 & 3;
           if (GetThrusterSmallForce.field_p <= 2) {
-            if (2 >= lla.field_h) {
+            if (2 >= GzipCodec.field_h) {
               return;
             }
-            lla.field_h = 2;
+            GzipCodec.field_h = 2;
             return;
           }
           GetThrusterSmallForce.field_p = 2;
-          if (2 < lla.field_h) {
-            lla.field_h = 2;
+          if (2 < GzipCodec.field_h) {
+            GzipCodec.field_h = 2;
             return;
           }
           return;
         }
         GetThrusterSmallForce.field_p = (13 & param0) >> 2;
-        lla.field_h = param0 & 3;
+        GzipCodec.field_h = param0 & 3;
         if (GetThrusterSmallForce.field_p > 2) {
           GetThrusterSmallForce.field_p = 2;
-          if (2 >= lla.field_h) {
+          if (2 >= GzipCodec.field_h) {
             return;
           }
-          lla.field_h = 2;
+          GzipCodec.field_h = 2;
           return;
         }
-        if (2 >= lla.field_h) {
+        if (2 >= GzipCodec.field_h) {
           return;
         }
-        lla.field_h = 2;
+        GzipCodec.field_h = 2;
     }
 
     public static void clearSharedReferences(int param0) {

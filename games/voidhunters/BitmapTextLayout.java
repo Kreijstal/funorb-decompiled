@@ -300,24 +300,24 @@ final class BitmapTextLayout extends TextLayout {
           if (param1 >= -93) {
             BitmapTextLayout.clearSharedReferences(-100);
             if (null != GetBurstFireMaxEnergy.field_p) {
-              GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
+              GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, param0);
             }
             return;
           }
           if (null != GetBurstFireMaxEnergy.field_p) {
-            GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
+            GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, param0);
           }
           return;
         }
         if (param1 < -93) {
           if (null != GetBurstFireMaxEnergy.field_p) {
-            GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
+            GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, param0);
           }
           return;
         }
         BitmapTextLayout.clearSharedReferences(-100);
         if (null != GetBurstFireMaxEnergy.field_p) {
-          GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
+          GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, param0);
         }
     }
 

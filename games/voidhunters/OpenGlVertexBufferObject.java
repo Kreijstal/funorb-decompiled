@@ -4,7 +4,7 @@
 final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenGlVertexBufferBinding {
     static Sprite field_j;
     static IntrusiveDeque field_k;
-    static lla field_h;
+    static GzipCodec field_h;
     static int field_i;
 
     public final int getBufferId(boolean param0) {
@@ -48,7 +48,7 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
 
     static {
         field_k = new IntrusiveDeque();
-        field_h = new lla();
+        field_h = new GzipCodec();
         field_i = 100;
     }
 }
