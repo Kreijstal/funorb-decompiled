@@ -76,10 +76,10 @@ final class GetMassDriverRandomness extends ConsoleCommand {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (null == nga.field_e) {
+            if (null == IntrusiveNodeHashTable.field_e) {
               return param1.getParameter("settings");
             }
-            stackIn_16_0 = nga.field_e;
+            stackIn_16_0 = IntrusiveNodeHashTable.field_e;
             return stackIn_16_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

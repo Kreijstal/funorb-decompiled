@@ -280,7 +280,7 @@ abstract class GraphicsToolkit {
           return;
         }
         GetGrapplingHookFireForce.field_o.updateInput(param0, param3 ^ 1329);
-        var4 = MidiNote.field_m.h(-25675) ? 1 : 0;
+        var4 = MidiNote.field_m.hasClickedItem(-25675) ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
         if (SetDebrisPartitioned.field_o != 0) {
           if (var4 != 0) {
@@ -288,7 +288,7 @@ abstract class GraphicsToolkit {
               return;
             }
             if ((param0)) {
-              MidiNote.field_m.a(param2, param1, (byte) 115);
+              MidiNote.field_m.updateSelection(param2, param1, (byte) 115);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -302,13 +302,13 @@ abstract class GraphicsToolkit {
             return;
           }
           if (param0) {
-            MidiNote.field_m.a(param2, param1, (byte) 115);
+            MidiNote.field_m.updateSelection(param2, param1, (byte) 115);
           }
         }
         if (var4 != 0) {
           GetGrapplingHookFireForce.field_o.updateInput(param0, param3 ^ 1329);
         }
-        var5 = MidiNote.field_m.k(-4109) + MidiNote.field_m.screenX;
+        var5 = MidiNote.field_m.getOpenMenuWidth(-4109) + MidiNote.field_m.screenX;
         if (var5 > 640) {
           GetLaserAimspeed.field_p = GetLaserAimspeed.field_p + 5;
           return;

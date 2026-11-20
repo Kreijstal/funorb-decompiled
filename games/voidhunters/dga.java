@@ -474,7 +474,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("unrated_game", 23100);
                 if (null != var2) {
-                  dda.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  OpenGlClientVertexBuffer.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rated_game_tips", 23100);
                 if (var2 != null) {
@@ -618,7 +618,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("asking_to_join_xs_game", 23100);
                 if (var2 != null) {
-                  bna.field_m = Cp1252Strings.decode((byte) -125, var2);
+                  SoftCacheReference.field_m = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("who_can_join", 23100);
                 if (null != var2) {
@@ -654,7 +654,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("show_players_in_xs_game", 23100);
                 if (null != var2) {
-                  nga.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  IntrusiveNodeHashTable.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("connecting_to_friend_server_twoline", 23100);
                 if (null != var2) {
@@ -1228,7 +1228,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("checking", 23100);
                 if (null != var2) {
-                  nga.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  IntrusiveNodeHashTable.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_namealreadytaken", 23100);
                 if (null != var2) {
@@ -1660,7 +1660,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("invalid_name", 23100);
                 if (null != var2) {
-                  tjb.field_Cb = Cp1252Strings.decode((byte) -125, var2);
+                  QuickChatMenuWidget.field_Cb = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("cannot_add_yourself", 23100);
                 if (var2 != null) {
@@ -2935,31 +2935,31 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,1", 23100);
                 if (null != var2) {
-                  ska.field_n[1] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[1] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,2", 23100);
                 if (null != var2) {
-                  ska.field_n[2] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[2] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,3", 23100);
                 if (null != var2) {
-                  ska.field_n[3] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[3] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,4", 23100);
                 if (null != var2) {
-                  ska.field_n[4] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[4] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,5", 23100);
                 if (null != var2) {
-                  ska.field_n[5] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[5] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,6", 23100);
                 if (var2 != null) {
-                  ska.field_n[6] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[6] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin_alternate,7", 23100);
                 if (null != var2) {
-                  ska.field_n[7] = Cp1252Strings.decode((byte) -125, var2);
+                  StrongCacheReference.field_n[7] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("subscription_cost_monthly,0", 23100);
                 if (var2 != null) {

@@ -128,31 +128,31 @@ final class kda {
           if (this.field_h >= param3) {
             return;
           }
-          var6_int = -param0.field_g + param3;
+          var6_int = -param0.tick + param3;
           var7 = this.c(param2 - 1000) / 2;
           var8 = GetBombletSprayProjectileOndamageParticles.field_p * var7 / param2;
           var9 = SetMissionResnetResourceTickTime.field_q / 2 + 2 * var8;
           if (-var9 > var6_int) {
             var10 = -var6_int + shb.field_k;
-            if (var10 >= param0.c((byte) 114)) {
+            if (var10 >= param0.getHistoryLength((byte) 114)) {
               GetSniperCannonAimarc.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
               return;
             }
-            var11 = (CarouselEvent) (param0.field_f.first(0));
+            var11 = (CarouselEvent) (param0.events.first(0));
             while (var11 != null) {
-              if (!var11.a(115) &&
-                -var10 + param0.field_g >= var11.field_e) {
-                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
+              if (!var11.isConfirmed(115) &&
+                -var10 + param0.tick >= var11.tick) {
+                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.tick + param0.tick));
                 return;
               }
-              var11 = (CarouselEvent) (param0.field_f.next((byte) 36));
+              var11 = (CarouselEvent) (param0.events.next((byte) 36));
             }
-            var11_ref = param0.a(var10, param2 ^ -949);
+            var11_ref = param0.getStateStepsAgo(var10, param2 ^ -949);
             var12 = SetTestActionLag.a(var11_ref, (byte) -70);
             stackIn_22_0 = (CarouselCommongameInfo) (param0);
             stackIn_23_1 = (var12 != param1);
-            stackIn_22_0.field_k = stackIn_23_1;
-            if (param0.field_k &&
+            stackIn_22_0.outOfSync = stackIn_23_1;
+            if (param0.outOfSync &&
               !this.field_e) {
               if (!lw.field_f) {
                 return;
@@ -164,7 +164,7 @@ final class kda {
               }
               if (this.field_j.a(param2 - 1000)) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
-                var13 = new CarouselSlotStateDump(-var10 + param0.field_g, bk.field_w);
+                var13 = new CarouselSlotStateDump(-var10 + param0.tick, bk.field_w);
                 var14 = new lla();
                 var14.a(84, 0, var13.field_d, var13.field_d.length);
                 var20 = GameApplet.copyWrittenBytes((byte) 10, var14.field_f);
@@ -199,7 +199,7 @@ final class kda {
         try {
           var3_int = this.c(0) * GetBombletSprayProjectileOndamageParticles.field_p / param1;
           var4 = wsb.field_f - var3_int;
-          if (param0.field_c <= var4) {
+          if (param0.ticksBehind <= var4) {
             return false;
           }
           return true;
@@ -232,8 +232,8 @@ final class kda {
             !this.field_p) {
             GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending ready packet");
             var5 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 77));
-            var5.field_e = param1.field_g;
-            var5.a(param2, -125);
+            var5.tick = param1.tick;
+            var5.setPlayerReadyEvent(param2, -125);
             this.a(var5, param3, 1000);
             this.field_p = true;
           }
@@ -294,23 +294,23 @@ final class kda {
             !this.field_l) {
             return;
           }
-          if (!param2.f(1)) {
+          if (!param2.isReplay(1)) {
             stackIn_8_0 = (CarouselEvent) (param1);
             stackIn_9_1 = !(param4);
-            stackIn_8_0.field_f = stackIn_9_1;
+            stackIn_8_0.confirmed = stackIn_9_1;
             if (!param0) {
               var9 = (CarouselCommongameInfo) null;
               this.b((CarouselCommongameInfo) null, 33);
             }
-            param1.field_e = -param5 + param2.field_g;
+            param1.tick = -param5 + param2.tick;
             if (PlayerAction.field_s == 1 &&
-              this.field_f >= param1.field_e) {
+              this.field_f >= param1.tick) {
               return;
             }
             if (this.a(param2, 1000)) {
               return;
             }
-            this.field_f = param1.field_e;
+            this.field_f = param1.tick;
             if (param4) {
               if (param3) {
                 var8 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 49));
@@ -320,7 +320,7 @@ final class kda {
                 this.a(param1, param6, 1000);
               }
             }
-            if (!param2.a(1, param1)) {
+            if (!param2.addEvent(1, param1)) {
               SetDebrisGrabbingRange.a((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + param1);
             }
             return;
@@ -432,7 +432,7 @@ final class kda {
             var16.readState(param1, false);
             param1.endBitRead((byte) -38);
             if (param5 != null &&
-              param5.f(1)) {
+              param5.isReplay(1)) {
               return true;
             }
             if (param5 != null &&
@@ -444,7 +444,7 @@ final class kda {
               if (param2) {
                 var8_int = var8_int + SetMissionResnetResourceTickTime.field_q;
               }
-              param5.a(var8_int, var16.field_e, 0);
+              param5.requestCatchUpToTick(var8_int, var16.field_e, 0);
               if (!var16.field_e) {
                 if (this.field_l) {
                   stackIn_22_0 = this;
@@ -462,13 +462,13 @@ final class kda {
                   this.a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_23_5);
                 }
               } else {
-                GetSniperCannonAimarc.a(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.field_g + var8_int) + "), playinggame=" + param2);
-                param5.g(-1);
-                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param5.field_g);
+                GetSniperCannonAimarc.a(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.tick + var8_int) + "), playinggame=" + param2);
+                param5.catchUp(-1);
+                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param5.tick);
                 if (!this.field_l) {
                   GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Is ready");
                 }
-                this.field_h = param5.field_g;
+                this.field_h = param5.tick;
                 this.field_l = true;
               }
             }
@@ -480,23 +480,23 @@ final class kda {
             var17_ref.readState(param1, false);
             param1.endBitRead((byte) -114);
             if (param5 != null &&
-              param5.f(1)) {
+              param5.isReplay(1)) {
               return true;
             }
             if (param5 != null &&
               !this.field_a &&
               !this.field_o) {
-              if (!param5.a(1, var17_ref)) {
+              if (!param5.addEvent(1, var17_ref)) {
                 var9_int = -1;
                 if (var17_ref instanceof CarouselPlayerEvent) {
                   var9_int = ((CarouselPlayerEvent) (var17_ref)).field_k;
                 }
-                var18 = param5.e(param3 + 101).getPlayerName(param3 ^ 6, var9_int);
+                var18 = param5.getPlayerNames(param3 + 101).getPlayerName(param3 ^ 6, var9_int);
                 SetDebrisGrabbingRange.a((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
                 ifb.l(-118);
               }
-            } else if (!var17_ref.c(120) ||
-              !var17_ref.field_d.field_c) {
+            } else if (!var17_ref.isSystemEvent(120) ||
+              !var17_ref.systemEvent.field_c) {
               this.field_c.addLast(-10258, var17_ref);
             }
             return true;
@@ -512,7 +512,7 @@ final class kda {
               !this.field_o) {
               param0.writeIsaacByte(24335, PrintSettings.field_o);
               param0.writeInt(var7_int, 332614536);
-              param0.writeInt(param5.field_g, 332614536);
+              param0.writeInt(param5.tick, 332614536);
             }
             return true;
           }
@@ -526,7 +526,7 @@ final class kda {
               if (param5 != null &&
                 !this.field_a &&
                 !this.field_o &&
-                !param5.f(1)) {
+                !param5.isReplay(1)) {
                 this.a(var12, false, var11);
               }
             }
@@ -534,8 +534,8 @@ final class kda {
               !this.field_a &&
               !this.field_o) {
               stackIn_76_0 = (CarouselCommongameInfo) (param5);
-              if (!((CarouselCommongameInfo) (Object) stackIn_76_0).f(1)) {
-                param5.a(false, var7_intLifetime1);
+              if (!((CarouselCommongameInfo) (Object) stackIn_76_0).isReplay(1)) {
+                param5.adjustTickOffset(false, var7_intLifetime1);
                 this.a((byte) 85, var8_intLifetime1);
               }
             }
@@ -558,7 +558,7 @@ final class kda {
               if (var20.field_b instanceof BlackBoxRecording) {
                 GetSniperCannonAimarc.a(param3 - 6947, "Received black box recording");
                 var15 = (BlackBoxRecording) (var20.field_b);
-                param5.field_d = var15;
+                param5.recording = var15;
                 this.b(param5, -125);
               } else {
                 if (var20.field_b instanceof DebugRequest) {
@@ -677,22 +677,22 @@ final class kda {
                   SetDebrisGrabbingRange.a((byte) -122, "Carousel_clientgame: Recieved a client catchup packet which still connecting");
                 }
                 var5++;
-                param2.a(var9, false, 0);
+                param2.requestCatchUpToTick(var9, false, 0);
               }
             } else {
               var12 = (CarouselEvent) (var6);
               var13 = var12;
               if (MonochromeRowCacheEntry.field_e) {
-                var13.field_g = false;
+                var13.pendingApplication = false;
               }
               var4_int++;
-              param2.a(param0 ^ 1, (CarouselEvent) (var6));
+              param2.addEvent(param0 ^ 1, (CarouselEvent) (var6));
             }
             var6 = this.field_c.next((byte) 62);
           }
-          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.field_g + ", Ticks behind=" + param2.field_c);
-          param2.g(param0 - 1);
-          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param2.field_g);
+          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.tick + ", Ticks behind=" + param2.ticksBehind);
+          param2.catchUp(param0 - 1);
+          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param2.tick);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -827,10 +827,10 @@ final class kda {
           if (param1 >= -117) {
             return;
           }
-          if (param0.field_d != null) {
-            param0.field_d.getServerCarousel(108).copyTo((byte) 96, param0);
-            param0.c(-64);
-            param0.field_h = true;
+          if (param0.recording != null) {
+            param0.recording.getServerCarousel(108).copyTo((byte) 96, param0);
+            param0.rewindToOldestState(-64);
+            param0.replay = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

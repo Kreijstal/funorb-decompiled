@@ -50,7 +50,7 @@ final class SetMutatorVotes extends ConsoleCommand {
             var8 = -(var7 >> 1) + alb.field_b;
             if (0 <= var4) {
               if (ei.field_c.field_j == var4) {
-                stackIn_18_0 = ska.field_o;
+                stackIn_18_0 = StrongCacheReference.field_o;
               } else {
                 stackIn_18_0 = vhb.field_d;
               }

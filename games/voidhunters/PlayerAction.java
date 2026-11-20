@@ -353,7 +353,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         }
     }
 
-    final void a(mfa param0, int param1, CarouselSlot param2) {
+    final void applyCustomEvent(PlayerNameRegistry param0, int param1, CarouselSlot param2) {
         Player stackIn_26_0 = null;
         int stackIn_27_1 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -372,7 +372,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         Ship var11 = null;
         var8 = VoidHunters.field_G;
         try {
-          if (this.c(-12)) {
+          if (this.isSystemEvent(-12)) {
             return;
           }
           if (param1 != 0) {
@@ -384,7 +384,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             var9.settings.a(param1 ^ 42, this.specialOrderSubmessage.settingsChange);
             return;
           }
-          var5 = var9.a(this.field_k, (byte) 59);
+          var5 = var9.getPlayer(this.field_k, (byte) 59);
           if (this.specialOrderSubmessage != null &&
             this.specialOrderSubmessage.spawnchoice != null) {
             if (var5.spawnChoice == this.specialOrderSubmessage.spawnchoice.choice) {
@@ -472,7 +472,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
     }
 
     public final String toString() {
-        return "Tick=" + this.field_e + ", system=" + this.field_d + ", playerid=" + this.field_k + ",triggers=" + this.triggers + ", mousex=" + this.mousex + ", mousey=" + this.mousey + " specialorder=" + this.specialOrderSubmessage;
+        return "Tick=" + this.tick + ", system=" + this.systemEvent + ", playerid=" + this.field_k + ",triggers=" + this.triggers + ", mousex=" + this.mousex + ", mousey=" + this.mousey + " specialorder=" + this.specialOrderSubmessage;
     }
 
     public PlayerAction() {

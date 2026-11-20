@@ -7,7 +7,7 @@ final class SetLaserReload extends ConsoleCommand {
           return;
         }
         try {
-          oaa.field_k.addLast(-10258, param1);
+          OpenGlVertexBufferObject.field_k.addLast(-10258, param1);
           GetCountermeasureLauncherAimspeed.a(param1, 1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dba.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

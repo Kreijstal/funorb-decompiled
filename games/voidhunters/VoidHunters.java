@@ -440,7 +440,7 @@ public final class VoidHunters extends NetworkGameClient {
               WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
             }
           } else {
-            if (tjb.l(0)) {
+            if (QuickChatMenuWidget.l(0)) {
               stackIn_27_1 = (psb.field_b != null);
               var3 = this.c(stackIn_27_1, -9288);
               if (1 == var3 ||
@@ -501,9 +501,9 @@ public final class VoidHunters extends NetworkGameClient {
         boolean decompiledFrameRemainder0 = true;
         if ((ssa.b(2) ||
           (vqa.field_g != null &&
-          vqa.field_g.state.carouselInfo.field_k ||
+          vqa.field_g.state.carouselInfo.outOfSync ||
           ProxyAuthenticationException.field_a != null &&
-          ProxyAuthenticationException.field_a.state.carouselInfo.field_k) &&
+          ProxyAuthenticationException.field_a.state.carouselInfo.outOfSync) &&
           null != di.field_l &&
           null == di.field_l.field_j) && (SocketNetworkArchiveClient.g(-114) &&
           SetMachineGunEnergyUsed.field_o[82] &&
@@ -1039,7 +1039,7 @@ public final class VoidHunters extends NetworkGameClient {
         uc.clearSharedReferences(0);
         lm.clearSharedReferences(127);
         wk.clearSharedReferences((byte) 80);
-        tjb.clearSharedReferences(85);
+        QuickChatMenuWidget.clearSharedReferences(85);
         jv.clearSharedReferences((byte) -33);
         tgb.clearSharedReferences((byte) -58);
         eua.clearSharedReferences(-128);
@@ -1090,7 +1090,7 @@ public final class VoidHunters extends NetworkGameClient {
         fia.clearSharedReferences((byte) -28);
         VorbisFloor.clearSharedReferences();
         qd.clearSharedReferences((byte) 66);
-        pfb.clearSharedReferences(118);
+        SoftLruCache.clearSharedReferences(118);
         bbb.clearSharedReferences(0);
         jw.clearSharedReferences(false);
         SocketConnector.clearSharedReferences((byte) -109);
@@ -1129,14 +1129,14 @@ public final class VoidHunters extends NetworkGameClient {
         ita.clearSharedReferences((byte) 106);
         vq.clearSharedReferences((byte) -81);
         sha.clearSharedReferences(1);
-        nga.clearSharedReferences((byte) -126);
+        IntrusiveNodeHashTable.clearSharedReferences((byte) -126);
         SecondaryNodeDeque.clearSharedReferences(!param0 ? true : false);
         SoftwareFramebuffer.clearSharedReferences(true);
         rlb.clearSharedReferences(-120);
         fbb.clearSharedReferences(param0);
         OpenGlPostProcessor.clearSharedReferences(1);
         OpenGlBloomEffect.clearSharedReferences(0);
-        vf.clearSharedReferences((byte) -26);
+        OpenGlInterleavedVertexBuffer.clearSharedReferences((byte) -26);
         OpenGlSprite.clearSharedReferences(1);
         rpa.clearSharedReferences(1);
         OpenGlTransform3D.clearSharedReferences(13);
@@ -1167,9 +1167,9 @@ public final class VoidHunters extends NetworkGameClient {
         vcb.clearSharedReferences((byte) -7);
         ta.clearSharedReferences((byte) -109);
         DirectByteStorage.clearSharedReferences(-27982);
-        ri.clearSharedReferences(41);
-        ska.clearSharedReferences(5697);
-        bna.clearSharedReferences(!param0 ? true : false);
+        QuickChatDynamicCommand.clearSharedReferences(41);
+        StrongCacheReference.clearSharedReferences(5697);
+        SoftCacheReference.clearSharedReferences(!param0 ? true : false);
         ProxySocketConnector.clearSharedReferences(true);
         MonochromeRowCache.clearSharedReferences(15325);
         pja.clearSharedReferences(-1);
@@ -1223,9 +1223,9 @@ public final class VoidHunters extends NetworkGameClient {
         bt.clearSharedReferences(-4509);
         ArbProgram.clearSharedReferences(false);
         EnvironmentMapSource.clearSharedReferences(26);
-        oaa.clearSharedReferences(124);
-        mnb.clearSharedReferences(117);
-        dda.clearSharedReferences(0);
+        OpenGlVertexBufferObject.clearSharedReferences(124);
+        OpenGlBufferObject.clearSharedReferences(117);
+        OpenGlClientVertexBuffer.clearSharedReferences(0);
         uga.clearSharedReferences((byte) -9);
         iib.clearSharedReferences(1);
         ku.clearSharedReferences((byte) 108);
@@ -1917,10 +1917,10 @@ public final class VoidHunters extends NetworkGameClient {
               } else {
                 pla.a(0);
               }
-              wp.field_a = tjb.field_wb;
+              wp.field_a = QuickChatMenuWidget.field_wb;
             }
           } else {
-            if (tjb.field_wb == wp.field_a) {
+            if (QuickChatMenuWidget.field_wb == wp.field_a) {
               if (!GetPhasedEnergyBeamPulsetime.e((byte) 102)) {
                 SetMissionTerrainSpaceProbability.b(false);
                 wgb.field_f = Transform3D.field_a;
@@ -2306,7 +2306,7 @@ public final class VoidHunters extends NetworkGameClient {
               if (!GetDebrisGroupColour.field_r.isBloomEnabled()) {
                 GetDebrisGroupColour.field_r.enableBloom();
               }
-              GetDebrisGroupColour.field_r.setBloomParameters((float)pab.field_m / 100.0f, 1.0f, (float)oaa.field_i / 100.0f);
+              GetDebrisGroupColour.field_r.setBloomParameters((float)pab.field_m / 100.0f, 1.0f, (float)OpenGlVertexBufferObject.field_i / 100.0f);
             }
             GetDebrisGroupColour.field_r.clearColor(0);
             GetDebrisGroupColour.field_r.clearDepth();
@@ -2362,7 +2362,7 @@ public final class VoidHunters extends NetworkGameClient {
             vfa.a(false, 20637);
             RoundResult.field_e = true;
           }
-          if (tjb.l(0)) {
+          if (QuickChatMenuWidget.l(0)) {
             var4_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);

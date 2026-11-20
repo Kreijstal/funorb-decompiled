@@ -255,11 +255,11 @@ final class GameSession {
         var22 = VoidHunters.field_G;
         var2 = 100;
         var3 = 15;
-        var4 = this.state.carouselInfo.field_g;
-        var5 = this.state.carouselInfo.field_c;
+        var4 = this.state.carouselInfo.tick;
+        var5 = this.state.carouselInfo.ticksBehind;
         var6 = di.field_l.c(0);
         SetSelfDestructPrepareToggleCooldown.a(var2, -1, var3, "Tick=" + var4 + ", ticksbehind=" + var5 + ", lag=" + var6, 3, 16711935, (byte) -121);
-        var7 = this.state.carouselInfo.c((byte) 110);
+        var7 = this.state.carouselInfo.getHistoryLength((byte) 110);
         var8 = -var7 + var4;
         var9 = var7 + var4;
         var10 = 3;
@@ -282,20 +282,20 @@ final class GameSession {
           }
           var12 = var12 + (-1 + var10);
         }
-        var16 = this.state.carouselInfo.field_f;
+        var16 = this.state.carouselInfo.events;
         var17_ref = (PlayerAction) (var16.first(0));
         while (var17_ref != null) {
-          var18 = var17_ref.field_e - var4;
+          var18 = var17_ref.tick - var4;
           var19 = 65280;
-          if (var17_ref.c((byte) 53)) {
+          if (var17_ref.needsApplication((byte) 53)) {
             var19 = 16711935;
           }
-          if (var17_ref.c(112)) {
+          if (var17_ref.isSystemEvent(112)) {
             var19 = 255;
           }
           var20 = var18 * (-1 + var10) + var2 + 1 + (-1 + var10) * var7;
           var21 = var3 + 1;
-          if (!var17_ref.a(122)) {
+          if (!var17_ref.isConfirmed(122)) {
             GetMachineGunPulsetime.a(16755200, -55, var14, var21, 4 + var15, var20);
           }
           GetMachineGunPulsetime.a(var19, -50, var14, var21, var15, var20);
@@ -303,7 +303,7 @@ final class GameSession {
             PlayerGameData.field_b <= var20 + var14 &&
             var21 <= uia.field_b &&
             uia.field_b <= var21 + var15) {
-            stackIn_24_0 = new StringBuilder().append("tick=").append(var17_ref.field_e).append(",player=").append(var17_ref.field_k).append(",mousex=").append(var17_ref.mousex).append(",y=").append(var17_ref.mousey).append(",triggers=").append(var17_ref.triggers).append(",specialorder=");
+            stackIn_24_0 = new StringBuilder().append("tick=").append(var17_ref.tick).append(",player=").append(var17_ref.field_k).append(",mousex=").append(var17_ref.mousex).append(",y=").append(var17_ref.mousey).append(",triggers=").append(var17_ref.triggers).append(",specialorder=");
             if (var17_ref.specialOrderSubmessage != null) {
               stackIn_25_1 = "yes";
             } else {
@@ -995,7 +995,7 @@ final class GameSession {
           if (this.localPlayerIndex == var13) {
             var14 = 0;
           }
-          var15 = (GameSnapshot) (this.state.carouselInfo.a(var14, -121));
+          var15 = (GameSnapshot) (this.state.carouselInfo.getStateStepsAgo(var14, -121));
           var16 = var10;
           var17 = var11;
           if (param1 &&
@@ -1007,10 +1007,10 @@ final class GameSession {
             var17 = this.field_k;
             var16 = this.field_Q;
           }
-          var18_ref_tfa = (Player) (var15.field_c[var13]);
+          var18_ref_tfa = (Player) (var15.players[var13]);
           var19_int = 0;
           if (var13 == this.localPlayerIndex &&
-            !this.state.carouselInfo.f(1)) {
+            !this.state.carouselInfo.isReplay(1)) {
             if (var9 != null &&
               fra.field_a == 1 &&
               (128 & var18_ref_tfa.triggers) == 0 &&
@@ -1028,7 +1028,7 @@ final class GameSession {
             var17 = var18_ref_tfa.aimtargety;
             var16 = var18_ref_tfa.aimtargetx;
           }
-          if (this.state.carouselInfo.f(1)) {
+          if (this.state.carouselInfo.isReplay(1)) {
             var20 = var15.world.findShipByOwner(var13, 75);
             if (var20 != null) {
               GetCountermeasureLauncherAimarc.a(var20.x, ShipTeamConditionFactory.field_a, var17, 3, var20.y, 16755200, 255, var16);
@@ -1044,7 +1044,7 @@ final class GameSession {
           }
           ((World) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_58_2, stackIn_59_3, ShipTeamConditionFactory.field_a, (byte) 19, (Ship) (var9), SetMinimapWidth.field_o, var16, var13);
         }
-        var13Lifetime1 = this.state.carouselInfo.field_g;
+        var13Lifetime1 = this.state.carouselInfo.tick;
         var24.world.a(ShipTeamConditionFactory.field_a, (byte) 122, var13Lifetime1, (Ship) (var9));
         var24.world.a(ShipTeamConditionFactory.field_a, -950, var24.missionState);
         if (var9 != null &&
@@ -1069,7 +1069,7 @@ final class GameSession {
           -1 == this.field_p &&
           var9 != null &&
           GetBots.field_o != 1) {
-          var14Lifetime1 = this.a((byte) 36, var11, var10, var24.a(this.localPlayerIndex, (byte) 59), (Ship) (var9), var24.world);
+          var14Lifetime1 = this.a((byte) 36, var11, var10, var24.getPlayer(this.localPlayerIndex, (byte) 59), (Ship) (var9), var24.world);
         }
         if (this.field_ab) {
           this.field_ab = false;
@@ -1384,7 +1384,7 @@ final class GameSession {
           var6 = this.lastPlayerShipY[var3];
           var7 = ShipTeamConditionFactory.field_a.a(var5, (byte) 127);
           var8 = ShipTeamConditionFactory.field_a.b(true, -(3 * NebulaField.field_d) + var6);
-          var9 = this.getPlayerChatLines((byte) 120, var30.a(var3, (byte) 59).selectedTeam, var3);
+          var9 = this.getPlayerChatLines((byte) 120, var30.getPlayer(var3, (byte) 59).selectedTeam, var3);
           if (var9 != null) {
             stackIn_12_0 = (var9.length > 0) ? 1 : 0;
           } else {
@@ -1674,7 +1674,7 @@ final class GameSession {
             if (var17Lifetime1 == this.localPlayerIndex) {
               var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], GetBoostersActiveTime.field_o);
             }
-            var35 = var7.a(var17Lifetime1, (byte) 59);
+            var35 = var7.getPlayer(var17Lifetime1, (byte) 59);
             if (!var35.connected &&
               this.state.field_h[var17Lifetime1] == null &&
               SetMissionResnetResourceTickTime.field_p == 0) {
@@ -2135,7 +2135,7 @@ final class GameSession {
               var5_int = GetUseDetailLines.field_o;
               var6 = GetTorpedoReload.field_q;
               var7 = 16777215;
-              var8 = param1.a(this.localPlayerIndex, (byte) 59).triggers;
+              var8 = param1.getPlayer(this.localPlayerIndex, (byte) 59).triggers;
               if ((param0 != 0 ||
                 (var8 & 128) != 0 ||
                 this.field_p != -1) && 1 != param0) {
@@ -2456,7 +2456,7 @@ final class GameSession {
                   var33 = (String) (var33) + " " + ti.field_i;
                 } else {
                   if (!ujb.a(-118)) {
-                    var33 = ri.field_b;
+                    var33 = QuickChatDynamicCommand.field_b;
                   }
                 }
               }
@@ -2466,8 +2466,8 @@ final class GameSession {
               }
               SetMissileLauncherEnergyUsed.a(54236, (byte) 7, 25 + var27, 14.0f, this.field_U, var7 + var13 - 25);
               var34 = 0;
-              for (var35_int = 0; param1.field_c.length > var35_int; var35_int++) {
-                var36_ref = (Player) (param1.field_c[var35_int]);
+              for (var35_int = 0; param1.players.length > var35_int; var35_int++) {
+                var36_ref = (Player) (param1.players[var35_int]);
                 if (var36_ref.connected &&
                   var36_ref.votes != null) {
                   var37 = 0;
@@ -2488,7 +2488,7 @@ final class GameSession {
           if (param2) {
             if (var40.hasNextRound(24416)) {
               var18Lifetime1 = var40.getVotedObjective(6472);
-              var45 = pfb.field_a + "<col=01b5cc>" + ShipTeamCondition.field_f[var18Lifetime1] + "</col>";
+              var45 = SoftLruCache.field_a + "<col=01b5cc>" + ShipTeamCondition.field_f[var18Lifetime1] + "</col>";
               var19 = var45;
               var20 = GetTorqueDownshift.a(var18Lifetime1, -58);
               if (var20 > 1) {
@@ -2497,7 +2497,7 @@ final class GameSession {
               SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(4, var19, 13879) >> 1), 1, GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + var14 + var15 - GetPointDefenceLaserProjectiles.a(false, 4), var19, 4, 16777215, (byte) -85);
               var21Lifetime1 = -1;
               if (0 <= this.localPlayerIndex) {
-                var21Lifetime1 = param1.a(this.localPlayerIndex, (byte) 59).selectedTeam;
+                var21Lifetime1 = param1.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
                 if (GetDefaultFiringLeeway.a(param1, (byte) 116)) {
                   var21Lifetime1 = GpuSprite.b(21957, var21Lifetime1);
                 }
@@ -2746,7 +2746,7 @@ final class GameSession {
                   this.submitPlayerAction(0, true, var9_ref_hna);
                   return false;
                 }
-                var9Lifetime1 = param0.a(this.localPlayerIndex, (byte) 59).spawnChoice;
+                var9Lifetime1 = param0.getPlayer(this.localPlayerIndex, (byte) 59).spawnChoice;
                 var10 = 3 + var9Lifetime1;
                 var11Lifetime1 = 14;
                 var12 = 350;
@@ -2812,7 +2812,7 @@ final class GameSession {
                 var26Lifetime1 = this.state.a((byte) 70).getObjectiveType(false);
                 var27Lifetime1 = -1;
                 if (this.localPlayerIndex >= 0) {
-                  var27Lifetime1 = param0.a(this.localPlayerIndex, (byte) 59).selectedTeam;
+                  var27Lifetime1 = param0.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
                   if (this.state.a((byte) 26).areTeamsSwapped((byte) -49)) {
                     var27Lifetime1 = GpuSprite.b(21957, var27Lifetime1);
                   }
@@ -2889,7 +2889,7 @@ final class GameSession {
                           }
                         } else {
                           if (var39 == 0) {
-                            GetMassDriverReload.a(ri.field_b, -20);
+                            GetMassDriverReload.a(QuickChatDynamicCommand.field_b, -20);
                           } else {
                             var49 = GetDebrisCollisionDamage.field_o;
                             var43_ref_String = var49;
@@ -3466,7 +3466,7 @@ final class GameSession {
             }
           }
           if (this.localPlayerIndex >= 0) {
-            var3 = param0.a(this.localPlayerIndex, (byte) 59);
+            var3 = param0.getPlayer(this.localPlayerIndex, (byte) 59);
             var4 = var3.unassignedForAutobalanceTimer;
             if (var3 != null) {
               if (var4 <= 0) {
@@ -3557,7 +3557,7 @@ final class GameSession {
           if (this.field_x) {
             this.field_v.a(MissionVariableFactory.field_a, var9, 127, PartitionZoneFactory.field_a, var24, this.localPlayerIndex, ShipTeamConditionFactory.field_a);
           }
-          var25 = var9.a(this.localPlayerIndex, (byte) 59);
+          var25 = var9.getPlayer(this.localPlayerIndex, (byte) 59);
           var7 = var25.aimtargetx;
           var4 = var25.triggers;
           var8 = var25.aimtargety;
@@ -3619,7 +3619,7 @@ final class GameSession {
         }
         sh.a(20824);
         this.a(var5, var8, var3, var4, var6, var7, param1, 109);
-        if (this.state.carouselInfo.f(1) &&
+        if (this.state.carouselInfo.isReplay(1) &&
           SetMachineGunEnergyUsed.field_o[35] &&
           !this.previousKeyStates[35]) {
           di.field_l.b(this.state.carouselInfo, -128);
@@ -3745,7 +3745,7 @@ final class GameSession {
               stackIn_33_0 = 1;
             } else {
               if (!param2.world.getDebug((byte) 33)) {
-                stackIn_33_0 = (this.state.carouselInfo.f(1)) ? 1 : 0;
+                stackIn_33_0 = (this.state.carouselInfo.isReplay(1)) ? 1 : 0;
               } else {
                 stackIn_33_0 = 1;
               }
@@ -3820,9 +3820,9 @@ final class GameSession {
           }
           var9 = 0.00006103515625f;
           var10 = 0.0078125f;
-          var11 = (GameSnapshot) (this.state.carouselInfo.b(28120));
+          var11 = (GameSnapshot) (this.state.carouselInfo.getVisibleState(28120));
           if (var11 != null && (var11.world.getDebug((byte) 41) ||
-            this.state.carouselInfo.f(1))) {
+            this.state.carouselInfo.isReplay(1))) {
             var10 = var10 * 8.0f;
           }
           if (!(var9 > this.field_w)) {
@@ -4098,7 +4098,7 @@ final class GameSession {
           }
         }
         if (GetPointDefenceLaserProjectiles.a(128, 11284)) {
-          var16 = (Player[]) (this.state.b(1).field_c);
+          var16 = (Player[]) (this.state.b(1).players);
           var2_ref_tfa__ = var16;
           var3 = "null";
           if (var2_ref_tfa__ != null) {
@@ -4121,7 +4121,7 @@ final class GameSession {
         if (GetPointDefenceLaserProjectiles.a(1, 11284)) {
           this.drawCarouselDebug(-106);
         }
-        if (this.state.carouselInfo.field_k) {
+        if (this.state.carouselInfo.outOfSync) {
           var20 = SetHealthBarHeight.field_o.toUpperCase();
           var3Lifetime1 = var20;
           var3Lifetime1Lifetime1 = var20;
@@ -4179,7 +4179,7 @@ final class GameSession {
         }
         this.drawSpatialPartitionDebug(-115);
         var2Lifetime1 = 0;
-        var3_ref = (PlayerAction) (this.state.carouselInfo.field_f.first(0));
+        var3_ref = (PlayerAction) (this.state.carouselInfo.events.first(0));
         while (var3_ref != null) {
           if (var3_ref.specialOrderSubmessage != null &&
             var3_ref.specialOrderSubmessage.settingsChange != null) {
@@ -4189,18 +4189,18 @@ final class GameSession {
             var2Lifetime1++;
             GetLagStandardDeviationOut.a(-1, var35, 16777215, 20 * incrementValue$0 + 300, SetMassDriverReload.field_p - (GetPhasedEnergyBeamProjectiles.a(-37, var35) >> 1), 4266);
           }
-          var3_ref = (PlayerAction) (this.state.carouselInfo.field_f.next((byte) 22));
+          var3_ref = (PlayerAction) (this.state.carouselInfo.events.next((byte) 22));
         }
         if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
           SetMachineGunFireForce.a((byte) -99, ShipTeamConditionFactory.field_a);
         }
-        if (this.state.carouselInfo.f(1)) {
+        if (this.state.carouselInfo.isReplay(1)) {
           if (SetMinimapWidth.field_o % 20 > 10) {
             var24 = "Replay";
             var3Lifetime2 = var24;
             GetLagStandardDeviationOut.a(-1, var3Lifetime2, 16711680, 40, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-24, var24) / 2, 4266);
           }
-          if (this.state.carouselInfo.d(33)) {
+          if (this.state.carouselInfo.isShowingClientState(33)) {
             var25 = "Client state";
             var3Lifetime2Lifetime1 = var25;
             GetLagStandardDeviationOut.a(-1, var3Lifetime2Lifetime1, 16777215, 80, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-71, var25) / 2, 4266);
@@ -4211,7 +4211,7 @@ final class GameSession {
           var4Lifetime3 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
           GetLagStandardDeviationOut.a(1, "x=" + var3_intLifetime2, 16777215, GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           GetLagStandardDeviationOut.a(1, "y=" + var4Lifetime3, 16777215, 12 + GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
-          var26 = this.state.carouselInfo.a((byte) -75);
+          var26 = this.state.carouselInfo.getDebugDifferences((byte) -75);
           if (var26 != null) {
             var17 = SetFighterBayAimspeed.a((byte) -67, '\n', var26);
             var7Lifetime1 = 5;
@@ -4549,7 +4549,7 @@ final class GameSession {
         int var3 = 81 % ((-32 - param0) / 52);
         if (this.localPlayerIndex >= 0) {
           var4 = this.state.b(1);
-          var2 = ((Player) (var4.field_c[this.localPlayerIndex])).selectedTeam;
+          var2 = ((Player) (var4.players[this.localPlayerIndex])).selectedTeam;
           if (!qab.a(59, var4.world.getObjectiveType(false))) {
             var2 = this.localPlayerIndex;
           }
@@ -5544,7 +5544,7 @@ final class GameSession {
                 }
                 this.field_n = false;
                 this.field_g = 0;
-                var8 = param3.a(this.localPlayerIndex, (byte) 59).spawnChoice;
+                var8 = param3.getPlayer(this.localPlayerIndex, (byte) 59).spawnChoice;
                 var9 = this.getPressedActionHotkey(102);
                 if (0 == var9) {
                   var9 = 10;
@@ -5771,8 +5771,8 @@ final class GameSession {
           var15 = 0;
           var16 = 0;
           var17 = "";
-          for (var18_int = 0; var18_int < param3.field_c.length; var18_int++) {
-            var19_ref_tfa = (Player) (param3.field_c[var18_int]);
+          for (var18_int = 0; var18_int < param3.players.length; var18_int++) {
+            var19_ref_tfa = (Player) (param3.players[var18_int]);
             if (var19_ref_tfa.connected &&
               var19_ref_tfa.votes != null) {
               var20 = 0;
@@ -6062,7 +6062,7 @@ final class GameSession {
         int var8Lifetime1;
         var12 = VoidHunters.field_G;
         try {
-          var14 = param1.a(this.localPlayerIndex, (byte) 59);
+          var14 = param1.getPlayer(this.localPlayerIndex, (byte) 59);
           if (var14 != null) {
             var7 = 1;
             for (var8 = param4; var8 < param3; var8++) {
@@ -6156,7 +6156,7 @@ final class GameSession {
                 var12 = var9.getY((byte) 1);
               }
               if (!var8.getDebug((byte) 96) &&
-                !this.state.carouselInfo.f(1)) {
+                !this.state.carouselInfo.isReplay(1)) {
                 var13 = 30.0f;
                 var14 = (float)var11 + var13 * (float)var9.getVelocityX((byte) -117);
                 var15 = (float)var12 + (float)var9.getVelocityY(0) * var13;
@@ -6223,7 +6223,7 @@ final class GameSession {
             }
           }
           if (!var8.getDebug((byte) 39) &&
-            !this.state.carouselInfo.f(1)) {
+            !this.state.carouselInfo.isReplay(1)) {
             if (ShipTeamConditionFactory.field_a.field_c < (float)(-var8.getWidth((byte) -122) / 2)) {
               ShipTeamConditionFactory.field_a.field_c = (float)(-var8.getWidth((byte) -122) / 2);
             }
@@ -6986,7 +6986,7 @@ final class GameSession {
         var3 = var16.world;
         stackIn_8_0 = (qab.a(106, var3.getObjectiveType(false))) ? 0 : 1;
         var4Lifetime1 = stackIn_8_0;
-        var5 = (GameSnapshot) (this.state.carouselInfo.a(20, param0 ^ 18637));
+        var5 = (GameSnapshot) (this.state.carouselInfo.getStateStepsAgo(20, param0 ^ 18637));
         if (this.localPlayerIndex >= 0) {
           var6_int = this.getLocalTeam((byte) 115);
           if (null != var5.missionState &&
@@ -7164,7 +7164,7 @@ final class GameSession {
             SetSelfDestructPrepareToggleCooldown.a(var9, 1, var10_int, var7Lifetime1, var3_int, 112076, (byte) -108);
             var11Lifetime2 = -1;
             if (0 <= this.localPlayerIndex) {
-              var11Lifetime2 = param0.a(this.localPlayerIndex, (byte) 59).selectedTeam;
+              var11Lifetime2 = param0.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
               if (this.state.a((byte) 77).areTeamsSwapped((byte) -106)) {
                 var11Lifetime2 = GpuSprite.b(21957, var11Lifetime2);
               }
@@ -7532,8 +7532,8 @@ final class GameSession {
         if (this.networked) {
           var3Lifetime1 = -2;
           if (this.localPlayerIndex >= 0) {
-            var7 = (GameSnapshot) (this.state.carouselInfo.b(28120));
-            var8 = var7.a(this.localPlayerIndex, (byte) 59);
+            var7 = (GameSnapshot) (this.state.carouselInfo.getVisibleState(28120));
+            var8 = var7.getPlayer(this.localPlayerIndex, (byte) 59);
             if (var8 != null) {
               var3Lifetime1 = var8.selectedTeam;
             }
@@ -8194,7 +8194,7 @@ final class GameSession {
           }
           if (GetDebrisCarryOver.field_p > 0) {
             var5 += 6;
-            var13 = (GameSnapshot) (this.state.carouselInfo.a(this.state.carouselInfo.c((byte) 121) - 1, -87));
+            var13 = (GameSnapshot) (this.state.carouselInfo.getStateStepsAgo(this.state.carouselInfo.getHistoryLength((byte) 121) - 1, -87));
             for (var14 = 0; GetDebrisCarryOver.field_p > var14; var14++) {
               var43 = SetKeepTeamColours.field_p[var14];
               var16 = var43.target;
@@ -8770,7 +8770,7 @@ final class GameSession {
           stackIn_10_1 = (param3);
           this.field_h = stackIn_10_1;
           this.localPlayerIndex = param2;
-          var13 = ska.field_m;
+          var13 = StrongCacheReference.field_m;
           var12 = var13;
           var11 = var12;
           var8 = var11;

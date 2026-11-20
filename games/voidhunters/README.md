@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1074/1572 classes and 5150/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 498 opaque classes and 3065 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1091/1572 classes and 5239/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 481 opaque classes and 2976 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -12,6 +12,10 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `Widget` owns clipped mouse processing, styled sprite/text drawing, child layout and selection. `IntrusiveDequeIterator` provides independent forward/backward traversal. `NativeSoftwareRenderContext` binds rendering to a thread; `NativeSoftwareSurface` separates canvas resizing and presentation. Native toolkit wrappers name texture uploads, render targets, heaps and context selection.
 
 `SerializableGameState` names `readState`, `writeState`, `copyTo` and `differsFrom` across the simulation. `CompactGameState` exposes its additional packed representation. `PacketBuffer`, `IsaacPacketBuffer` and `IsaacCipher` separate byte codecs, bit codecs and encoded protocol bytes.
+
+`CarouselCommongameInfo` retains the history ring and event deque, names replay/catch-up and current/history serialization, and selects recorded client states for diagnostics. `CarouselEvent.applyTo` dispatches system events or custom player actions; slots expose `prepareTick` and `advanceSimulation`. `SoftLruCache` separates weighted capacity, strong/soft references, aging and hit promotion from its `IntrusiveNodeHashTable` index.
+
+`QuickChatPhraseLoader` caches `QuickChatPhraseDefinition` records from primary and alternate archives. Definitions expose text previews, placeholder segments, linked phrases and `QuickChatDynamicCommand` configuration. `QuickChatMenuWidget` separates layout, shortcut handling, submenu activation and click updates. The standalone `OpenGlToolkit` vertex path uses `OpenGlVertexBufferBinding` with buffer-object and client-memory implementations.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

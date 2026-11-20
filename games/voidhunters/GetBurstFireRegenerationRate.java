@@ -6,11 +6,11 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static ri[] e(byte param0) {
+    final static QuickChatDynamicCommand[] e(byte param0) {
         if (param0 < -40) {
-          return new ri[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, MissionConditionFactory.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, tpa.field_a, ppb.field_c, ae.field_g, qw.field_g, GetBloomThresholdPercentage.field_o, qc.field_g};
+          return new QuickChatDynamicCommand[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, MissionConditionFactory.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, tpa.field_a, ppb.field_c, ae.field_g, qw.field_g, GetBloomThresholdPercentage.field_o, qc.field_g};
         }
-        return (ri[]) null;
+        return (QuickChatDynamicCommand[]) null;
     }
 
     final static void b(boolean param0) {

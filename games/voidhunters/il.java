@@ -87,7 +87,7 @@ final class il extends TextureOperation {
         int var24Lifetime1;
         var25 = VoidHunters.field_G;
         try {
-          dda.a(param3, 74);
+          OpenGlClientVertexBuffer.ensureIntScratchCapacity(param3, 74);
           var7_int = 0;
           var8 = param3 - param6;
           if (var8 < 0) {

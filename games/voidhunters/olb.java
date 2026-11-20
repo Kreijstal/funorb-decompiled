@@ -203,7 +203,7 @@ final class olb extends TextureOperation {
             for (var2 = 0; var2 < 8; var2++) {
               var9[var2] = 0;
             }
-            var10 = ska.field_m;
+            var10 = StrongCacheReference.field_m;
             var8 = var10;
             var5 = var8;
             var1Lifetime1 = var5;

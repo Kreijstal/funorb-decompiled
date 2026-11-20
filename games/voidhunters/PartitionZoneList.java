@@ -15,7 +15,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         RuntimeException var3_ref = null;
         try {
           var3 = (PartitionZoneList) (other);
-          CarouselSlot.a(var3.zones, 1, this.zones, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.zones, 1, this.zones, false, 5547);
           if (obfuscationGuard > -19) {
             this.zones = (PartitionZone[]) null;
           }

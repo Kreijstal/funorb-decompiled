@@ -1229,8 +1229,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.behaviour.getClass() == var5.behaviour.getClass()) {
             this.behaviour.reportDifferences(var5.behaviour, -36);
           }
-          CarouselSlot.a(var5.subcomponents, 1, this.subcomponents, false, 5547);
-          CarouselSlot.a(var5.hardpoints, 1, this.hardpoints, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.subcomponents, 1, this.subcomponents, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.hardpoints, 1, this.hardpoints, false, 5547);
           var4 = 0;
           if (this.componentTypeId != var5.componentTypeId) {
             System.out.println("int component_type_id has changed. before=" + var5.componentTypeId + ", now=" + this.componentTypeId);

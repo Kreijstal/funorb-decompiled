@@ -26,7 +26,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         try {
           var6 = (CharSequence) ((Object) param0);
           if (!mn.a(var6, (byte) -122)) {
-            stackIn_3_0 = tjb.field_Cb;
+            stackIn_3_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_3_0;
           }
           if (iwa.field_b != 2) {

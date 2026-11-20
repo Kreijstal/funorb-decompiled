@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od {
+final class OpenGlVertexAttribute {
     static int field_a;
 
-    od(uq param0, int param1, int param2, int param3) {
+    OpenGlVertexAttribute(OpenGlVertexBufferBinding param0, int param1, int param2, int param3) {
     }
 
     final static int toOpenGlDataType(boolean param0, GpuDataType param1) {

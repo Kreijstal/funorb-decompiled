@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
-    static ri field_r;
+    static QuickChatDynamicCommand field_r;
     static int field_o;
     static GameKeyHandler field_q;
     static Widget field_p;
@@ -96,7 +96,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         field_r = null;
         field_q = null;
         if (param0 != 0) {
-          field_r = (ri) null;
+          field_r = (QuickChatDynamicCommand) null;
           field_p = null;
           return;
         }
@@ -132,7 +132,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
 
     static {
         field_o = 0;
-        field_r = new ri(1, 2, 2, 0);
+        field_r = new QuickChatDynamicCommand(1, 2, 2, 0);
         field_q = new GameKeyHandler();
     }
 }

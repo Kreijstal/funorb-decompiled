@@ -1,57 +1,57 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class voa {
+final class QuickChatPhraseLoader {
     static int field_d;
     static int field_b;
-    private pfb field_c;
-    private ResourceArchive field_e;
-    private ResourceArchive field_a;
+    private SoftLruCache cache;
+    private ResourceArchive alternateArchive;
+    private ResourceArchive primaryArchive;
 
-    final pi a(int param0, int param1) {
-        pi var3;
+    final QuickChatPhraseDefinition getPhrase(int param0, int param1) {
+        QuickChatPhraseDefinition var3;
         byte[] var4;
-        pi var5;
-        pi var6;
+        QuickChatPhraseDefinition var5;
+        QuickChatPhraseDefinition var6;
         byte[] var4Lifetime1;
-        var3 = (pi) (this.field_c.b(0, (long)param0));
+        var3 = (QuickChatPhraseDefinition) (this.cache.get(0, (long)param0));
         if (var3 != null) {
           return var3;
         }
         if (param1 < -99) {
           if (32768 > param0) {
-            var4 = this.field_a.fetchFile(1, param0, (byte) 13);
+            var4 = this.primaryArchive.fetchFile(1, param0, (byte) 13);
           } else {
-            var4 = this.field_e.fetchFile(1, param0 & 32767, (byte) 13);
+            var4 = this.alternateArchive.fetchFile(1, param0 & 32767, (byte) 13);
           }
-          var6 = new pi();
+          var6 = new QuickChatPhraseDefinition();
           if (var4 != null) {
-            var6.a(new PacketBuffer(var4), -1);
+            var6.decode(new PacketBuffer(var4), -1);
           }
           if (param0 >= 32768) {
-            var6.e((byte) 97);
+            var6.markAlternateArchiveReferences((byte) 97);
           }
-          this.field_c.a(var6, (long)param0, (byte) -117);
+          this.cache.put(var6, (long)param0, (byte) -117);
           return var6;
         }
-        this.field_c = (pfb) null;
+        this.cache = (SoftLruCache) null;
         if (32768 > param0) {
-          var4Lifetime1 = this.field_a.fetchFile(1, param0, (byte) 13);
+          var4Lifetime1 = this.primaryArchive.fetchFile(1, param0, (byte) 13);
         } else {
-          var4Lifetime1 = this.field_e.fetchFile(1, param0 & 32767, (byte) 13);
+          var4Lifetime1 = this.alternateArchive.fetchFile(1, param0 & 32767, (byte) 13);
         }
-        var5 = new pi();
+        var5 = new QuickChatPhraseDefinition();
         if (var4Lifetime1 != null) {
-          var5.a(new PacketBuffer(var4Lifetime1), -1);
+          var5.decode(new PacketBuffer(var4Lifetime1), -1);
         }
         if (param0 >= 32768) {
-          var5.e((byte) 97);
+          var5.markAlternateArchiveReferences((byte) 97);
         }
-        this.field_c.a(var5, (long)param0, (byte) -117);
+        this.cache.put(var5, (long)param0, (byte) -117);
         return var5;
     }
 
-    voa(int param0, ResourceArchive param1, ResourceArchive param2, rs param3) {
+    QuickChatPhraseLoader(int param0, ResourceArchive param1, ResourceArchive param2, rs param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -61,17 +61,17 @@ final class voa {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_c = new pfb(64);
+        this.cache = new SoftLruCache(64);
         try {
-          this.field_a = param1;
-          this.field_e = param2;
-          if (this.field_a != null) {
-            this.field_a.getGroupFileCapacity(1, -6942);
+          this.primaryArchive = param1;
+          this.alternateArchive = param2;
+          if (this.primaryArchive != null) {
+            this.primaryArchive.getGroupFileCapacity(1, -6942);
           }
-          if (null == this.field_e) {
+          if (null == this.alternateArchive) {
             return;
           }
-          this.field_e.getGroupFileCapacity(1, -6942);
+          this.alternateArchive.getGroupFileCapacity(1, -6942);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

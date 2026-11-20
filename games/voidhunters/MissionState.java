@@ -41,7 +41,7 @@ final class MissionState implements DiffableState {
         MissionState var5 = null;
         try {
           var5 = (MissionState) (other);
-          CarouselSlot.a(var5.customVariables, 1, this.customVariables, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.customVariables, 1, this.customVariables, false, 5547);
           if (null != this.nextround &&
             var5.nextround != null) {
             this.nextround.reportDifferences(var5.nextround, -123);
@@ -162,8 +162,8 @@ final class MissionState implements DiffableState {
           this.setMissionPhase(5, -7, 0);
           this.winner = -1;
           this.phaseChangeCountdown = 0;
-          for (var4 = param0; var4 < param1.field_c.length; var4++) {
-            var5 = param1.a(var4, (byte) 59);
+          for (var4 = param0; var4 < param1.players.length; var4++) {
+            var5 = param1.getPlayer(var4, (byte) 59);
             var5.clearVotes((byte) 127);
             var5.resetRoundStatistics(-1);
             var5.carriedOverComponents = null;
@@ -210,8 +210,8 @@ final class MissionState implements DiffableState {
           if (param0) {
             return true;
           }
-          for (var3_int = 0; var3_int < param1.field_c.length; var3_int++) {
-            var4 = param1.a(var3_int, (byte) 59);
+          for (var3_int = 0; var3_int < param1.players.length; var3_int++) {
+            var4 = param1.getPlayer(var3_int, (byte) 59);
             if (var4.connected &&
               54 == var4.specialorder) {
               return true;
@@ -265,8 +265,8 @@ final class MissionState implements DiffableState {
           var4 = var17;
           var5 = 0;
           var6 = 0;
-          for (var7 = 0; param2.field_c.length > var7; var7++) {
-            var8_ref_tfa = param2.a(var7, (byte) 59);
+          for (var7 = 0; param2.players.length > var7; var7++) {
+            var8_ref_tfa = param2.getPlayer(var7, (byte) 59);
             if (var8_ref_tfa.connected ||
               SetMissionResnetResourceTickTime.field_p != 0) {
               var5++;
@@ -286,8 +286,8 @@ final class MissionState implements DiffableState {
               var10 = hob.a(param0, var9Lifetime1, 122);
             }
             var11 = 0;
-            for (var12 = 0; param2.field_c.length > var12; var12++) {
-              var13 = param2.a(var12, (byte) 59);
+            for (var12 = 0; param2.players.length > var12; var12++) {
+              var13 = param2.getPlayer(var12, (byte) 59);
               var14 = var13.selectedTeam;
               if ((var13.connected ||
                 SetMissionResnetResourceTickTime.field_p != 0) && (var14 < 0 ||
@@ -537,8 +537,8 @@ final class MissionState implements DiffableState {
           var4_int = -2147483648;
           var5 = -1;
           var7 = 28 / ((-37 - param1) / 47);
-          for (var6 = 0; param0.field_c.length > var6; var6++) {
-            var8 = param0.a(var6, (byte) 59);
+          for (var6 = 0; param0.players.length > var6; var6++) {
+            var8 = param0.getPlayer(var6, (byte) 59);
             if (var8.isParticipating((byte) -43) &&
               param2 == var8.selectedTeam) {
               var9 = var8.assists + var8.kills;
@@ -549,7 +549,7 @@ final class MissionState implements DiffableState {
             }
           }
           if (var5 >= 0) {
-            param0.a(var5, (byte) 59).unassignForAutobalance(255);
+            param0.getPlayer(var5, (byte) 59).unassignForAutobalance(255);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -610,8 +610,8 @@ final class MissionState implements DiffableState {
         var7 = VoidHunters.field_G;
         try {
           var3 = new int[2];
-          for (var4 = 0; param1.field_c.length > var4; var4++) {
-            var5 = param1.a(var4, (byte) 59);
+          for (var4 = 0; param1.players.length > var4; var4++) {
+            var5 = param1.getPlayer(var4, (byte) 59);
             if (var5.isParticipating((byte) -119)) {
               var6 = var5.selectedTeam;
               if (var6 >= 0 &&
@@ -756,8 +756,8 @@ final class MissionState implements DiffableState {
           var9 = -90 % ((-72 - param1) / 52);
           var8 = 0;
           scanLoop1: while (true) {
-            if (var8 < param3.field_c.length) {
-              var10 = param3.a(var8, (byte) 59);
+            if (var8 < param3.players.length) {
+              var10 = param3.getPlayer(var8, (byte) 59);
               if (var10.connected) {
                 var11 = var10.countVotesInRange(param5, 11863, param5);
                 var12 = var10.countVotesInRange(param4, 11863, param0);
@@ -897,8 +897,8 @@ final class MissionState implements DiffableState {
           var3 = var9;
           var4 = 0;
           var5 = 126 / ((-8 - param1) / 48);
-          while (var4 < param0.field_c.length) {
-            var6 = param0.a(var4, (byte) 59);
+          while (var4 < param0.players.length) {
+            var6 = param0.getPlayer(var4, (byte) 59);
             if (var6.connected &&
               var6.votes != null &&
               var6.votes.length > 0) {
@@ -1105,8 +1105,8 @@ final class MissionState implements DiffableState {
           }
           if (qrb.field_a == 1 &&
             5 != this.missionPhase) {
-            for (var5 = 0; var5 < param0.field_c.length; var5++) {
-              param0.a(var5, (byte) 59).savedShip = null;
+            for (var5 = 0; var5 < param0.players.length; var5++) {
+              param0.getPlayer(var5, (byte) 59).savedShip = null;
             }
           }
           if (this.missionPhase == 0) {
@@ -1172,10 +1172,10 @@ final class MissionState implements DiffableState {
                 var11 = var13;
                 var5_ref_int__ = var11;
                 var6 = 1;
-                for (var7 = 0; param0.field_c.length > var7; var7++) {
-                  if (param0.field_c[var7].connected ||
+                for (var7 = 0; param0.players.length > var7; var7++) {
+                  if (param0.players[var7].connected ||
                     SetMissionResnetResourceTickTime.field_p != 0) {
-                    var8Lifetime1 = param0.a(var7, (byte) 59).selectedTeam;
+                    var8Lifetime1 = param0.getPlayer(var7, (byte) 59).selectedTeam;
                     if (var8Lifetime1 >= 0 &&
                       var8Lifetime1 < var19.length) {
                       var11[var8Lifetime1] = var11[var8Lifetime1] + 1;
@@ -1220,8 +1220,8 @@ final class MissionState implements DiffableState {
                 if (0 != SetMachineGunAimspeed.field_o) {
                   return;
                 }
-                for (var5Lifetime1 = 0; var5Lifetime1 < param0.field_c.length; var5Lifetime1++) {
-                  param0.a(var5Lifetime1, (byte) 59).selectedTeam = -1;
+                for (var5Lifetime1 = 0; var5Lifetime1 < param0.players.length; var5Lifetime1++) {
+                  param0.getPlayer(var5Lifetime1, (byte) 59).selectedTeam = -1;
                 }
               }
             } else {

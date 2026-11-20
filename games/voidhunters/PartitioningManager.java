@@ -344,7 +344,7 @@ final class PartitioningManager implements DiffableState, ofa {
         RuntimeException var3_ref = null;
         try {
           var3 = (PartitioningManager) (other);
-          CarouselSlot.a(var3.zonelists, 1, this.zonelists, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.zonelists, 1, this.zonelists, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.zonelists, false, 1, this.zonelists, -99)) {
             var4 = 1;

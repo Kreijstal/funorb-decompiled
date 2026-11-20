@@ -47,7 +47,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
           return;
         }
         try {
-          mnb.field_g = param0;
+          OpenGlBufferObject.field_g = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

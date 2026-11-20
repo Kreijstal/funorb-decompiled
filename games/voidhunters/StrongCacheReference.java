@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ska extends is {
+final class StrongCacheReference extends CacheReference {
     static String[] field_n;
     static int[] field_m;
     static long field_p;
-    private Object field_l;
+    private Object value;
     static bc field_o;
 
-    final Object a(int param0) {
+    final Object getValue(int param0) {
         if (param0 < 85) {
-          this.a(-70);
-          return this.field_l;
+          this.getValue(-70);
+          return this.value;
         }
-        return this.field_l;
+        return this.value;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -25,18 +25,18 @@ final class ska extends is {
         field_n = null;
     }
 
-    ska(Object param0, int param1) {
+    StrongCacheReference(Object param0, int param1) {
         super(param1);
         try {
-          this.field_l = param0;
+          this.value = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean isSoft(byte param0) {
         if (param0 < 29) {
-          this.a(-56);
+          this.getValue(-56);
           return false;
         }
         return false;

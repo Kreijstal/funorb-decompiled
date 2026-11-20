@@ -9,7 +9,7 @@ final class GetBombletSprayRandomness extends ConsoleCommand {
 
     final static boolean a(int param0) {
         int var1 = -35 % ((-29 - param0) / 38);
-        return tjb.l(0);
+        return QuickChatMenuWidget.l(0);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

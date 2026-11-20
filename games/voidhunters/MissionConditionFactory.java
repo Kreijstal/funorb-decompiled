@@ -3,12 +3,12 @@
  */
 final class MissionConditionFactory implements GameStateFactory {
     static vfa field_b;
-    static ri field_c;
+    static QuickChatDynamicCommand field_c;
     static Widget field_a;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          field_c = (ri) null;
+          field_c = (QuickChatDynamicCommand) null;
           return (SerializableGameState[]) ((Object) new MissionCondition[param1]);
         }
         return (SerializableGameState[]) ((Object) new MissionCondition[param1]);
@@ -26,7 +26,7 @@ final class MissionConditionFactory implements GameStateFactory {
           field_c = null;
           return;
         }
-        field_c = (ri) null;
+        field_c = (QuickChatDynamicCommand) null;
         field_b = null;
         field_a = null;
         field_c = null;
@@ -34,6 +34,6 @@ final class MissionConditionFactory implements GameStateFactory {
 
     static {
         field_b = null;
-        field_c = new ri(4, 1, 1, 1);
+        field_c = new QuickChatDynamicCommand(4, 1, 1, 1);
     }
 }

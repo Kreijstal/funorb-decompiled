@@ -77,7 +77,7 @@ final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D 
           this.height = param4;
           this.width = param3;
           this.toolkit.setTexture((GpuTexture) (this), -118);
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), OpenGlVertexAttribute.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

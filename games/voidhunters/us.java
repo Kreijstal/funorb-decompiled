@@ -4,7 +4,7 @@
 class us extends oib {
     static int field_f;
     private long field_g;
-    static pfb field_d;
+    static SoftLruCache field_d;
     private String field_e;
 
     public static void clearSharedReferences(byte param0) {
@@ -42,6 +42,6 @@ class us extends oib {
 
     static {
         field_f = 8;
-        field_d = new pfb(64);
+        field_d = new SoftLruCache(64);
     }
 }

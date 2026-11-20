@@ -25,7 +25,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
             }
             var1_int++;
           }
-          mmb.field_d[30] = GetBombletSprayPushMultiplier.a((byte) -62, GetDebrisGroupColour.field_r, oaa.field_j);
+          mmb.field_d[30] = GetBombletSprayPushMultiplier.a((byte) -62, GetDebrisGroupColour.field_r, OpenGlVertexBufferObject.field_j);
           GetDebrisThrowable.a(false, "Finished building sprites");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

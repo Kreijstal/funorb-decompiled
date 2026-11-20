@@ -64,7 +64,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param0 == ida.field_x) {
           return 1;
         }
-        if (param0 == vf.field_a) {
+        if (param0 == OpenGlInterleavedVertexBuffer.field_a) {
           return 2;
         }
         if (LoadSettings.field_o == param0) {
@@ -329,7 +329,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
         if (null == this.field_Tc &&
           SetGrappleDebris.field_o != this.textureTransformModes[this.activeTextureUnit]) {
-          if (vf.field_a != this.textureTransformModes[this.activeTextureUnit]) {
+          if (OpenGlInterleavedVertexBuffer.field_a != this.textureTransformModes[this.activeTextureUnit]) {
             this.field_Mc.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].writeColumnMajorMatrix(field_Bc, (byte) 114));
           } else {
             this.field_Mc.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].c(field_Bc, (byte) -80));

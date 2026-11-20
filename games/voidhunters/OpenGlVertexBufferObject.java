@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oaa extends mnb implements uq {
+final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenGlVertexBufferBinding {
     static Sprite field_j;
     static IntrusiveDeque field_k;
     static lla field_h;
     static int field_i;
 
-    public final int a(boolean param0) {
+    public final int getBufferId(boolean param0) {
         if (!param0) {
           return 121;
         }
-        return this.field_f;
+        return this.bufferId;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -23,12 +23,12 @@ final class oaa extends mnb implements uq {
         field_h = null;
     }
 
-    oaa(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
+    OpenGlVertexBufferObject(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34962, param2, param3, param4);
     }
 
-    final void a(int param0) {
-        this.field_c.a(param0, (uq) (this));
+    final void bind(int param0) {
+        this.toolkit.bindVertexBuffer(param0, (OpenGlVertexBufferBinding) (this));
     }
 
     final static boolean a(byte param0) {
@@ -40,7 +40,7 @@ final class oaa extends mnb implements uq {
 
     final static double b(byte param0) {
         if (param0 >= -43) {
-          oaa.a((byte) 83);
+          OpenGlVertexBufferObject.a((byte) 83);
           return ServerTickFactory.field_c;
         }
         return ServerTickFactory.field_c;

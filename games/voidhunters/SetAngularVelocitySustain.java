@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetAngularVelocitySustain extends ConsoleCommand {
-    static ri field_o;
+    static QuickChatDynamicCommand field_o;
     static int field_p;
     static Widget field_q;
 
@@ -52,6 +52,6 @@ final class SetAngularVelocitySustain extends ConsoleCommand {
     }
 
     static {
-        field_o = new ri(2, 4, 4, 0);
+        field_o = new QuickChatDynamicCommand(2, 4, 4, 0);
     }
 }

@@ -39,7 +39,7 @@ class uf extends htb {
         int var3 = 0;
         var3 = VoidHunters.field_G;
         try {
-          od.field_a = od.field_a + 1;
+          OpenGlVertexAttribute.field_a = OpenGlVertexAttribute.field_a + 1;
           if (GetBombletSprayProjectileOndamageParticles.field_o == -1 &&
             -1 == gi.field_b) {
             gi.field_b = uia.field_b;
@@ -53,8 +53,8 @@ class uf extends htb {
           }
           if (decompiledFrameRemainder0) {
             if (!GetMissileLauncherAimarc.field_o) {
-              if (fra.field_b <= od.field_a) {
-                stackIn_17_0 = (od.field_a < fra.field_b + GetMessageMaxage.field_r) ? 1 : 0;
+              if (fra.field_b <= OpenGlVertexAttribute.field_a) {
+                stackIn_17_0 = (OpenGlVertexAttribute.field_a < fra.field_b + GetMessageMaxage.field_r) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -63,15 +63,15 @@ class uf extends htb {
             }
             var2_int = stackIn_17_0;
             if (param0 == null) {
-              od.field_a = 0;
+              OpenGlVertexAttribute.field_a = 0;
             } else {
               if (GetMissileLauncherAimarc.field_o) {
-                od.field_a = fra.field_b;
+                OpenGlVertexAttribute.field_a = fra.field_b;
               } else {
                 if (var2_int != 0) {
-                  od.field_a = fra.field_b;
+                  OpenGlVertexAttribute.field_a = fra.field_b;
                 } else {
-                  od.field_a = 0;
+                  OpenGlVertexAttribute.field_a = 0;
                 }
               }
             }
@@ -87,16 +87,16 @@ class uf extends htb {
           }
           GetReadyRoomMutatorTime.field_o = param0;
           if (!GetMissileLauncherAimarc.field_o &&
-            od.field_a < fra.field_b &&
+            OpenGlVertexAttribute.field_a < fra.field_b &&
             VariableConditionFactory.field_c) {
-            od.field_a = 0;
+            OpenGlVertexAttribute.field_a = 0;
             GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;
             SetTestActionLag.field_o = gi.field_b;
           }
           if (GetMissileLauncherAimarc.field_o &&
-            GetBombletSprayProjectileDamage.field_o == od.field_a) {
+            GetBombletSprayProjectileDamage.field_o == OpenGlVertexAttribute.field_a) {
             GetMissileLauncherAimarc.field_o = false;
-            od.field_a = 0;
+            OpenGlVertexAttribute.field_a = 0;
           }
           gi.field_b = -1;
           GetBombletSprayProjectileOndamageParticles.field_o = -1;

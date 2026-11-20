@@ -3,7 +3,7 @@
  */
 class CarouselSlot implements DiffableState {
     static String field_b;
-    CarouselPlayerInfo[] field_c;
+    CarouselPlayerInfo[] players;
     static soa field_a;
 
     public static void clearSharedReferences(boolean param0) {
@@ -20,7 +20,7 @@ class CarouselSlot implements DiffableState {
         int var4;
         IsaacPacketBuffer var5;
         var4 = VoidHunters.field_G;
-        if (null == this.field_c) {
+        if (null == this.players) {
           return 0;
         }
         if (param0 != -5358) {
@@ -28,8 +28,8 @@ class CarouselSlot implements DiffableState {
           this.writeState((IsaacPacketBuffer) null, -13);
         }
         var2 = 0;
-        for (var3 = 0; this.field_c.length > var3; var3++) {
-          if (this.field_c[var3].connected) {
+        for (var3 = 0; this.players.length > var3; var3++) {
+          if (this.players[var3].connected) {
             var2++;
           }
         }
@@ -57,10 +57,10 @@ class CarouselSlot implements DiffableState {
         var10 = VoidHunters.field_G;
         try {
           if (param1 >= -109) {
-            this.field_c = (CarouselPlayerInfo[]) null;
+            this.players = (CarouselPlayerInfo[]) null;
           }
           var3 = param0;
-          var4 = this.field_c;
+          var4 = this.players;
           var5 = EnvironmentReflectionGpuMaterialEffect.field_h;
           if (var4 == null) {
             stackIn_6_0 = 0;
@@ -97,7 +97,7 @@ class CarouselSlot implements DiffableState {
         }
     }
 
-    final static boolean a(DiffableState[] param0, int param1, DiffableState[] param2, boolean param3, int param4) {
+    final static boolean reportStateArrayDifferences(DiffableState[] param0, int param1, DiffableState[] param2, boolean param3, int param4) {
         int var8 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -134,7 +134,7 @@ class CarouselSlot implements DiffableState {
           var7 = 0;
           if (param4 != 5547) {
             var10 = (DiffableState[]) null;
-            CarouselSlot.a((DiffableState[]) null, 96, (DiffableState[]) null, true, 70);
+            CarouselSlot.reportStateArrayDifferences((DiffableState[]) null, 96, (DiffableState[]) null, true, 70);
           }
           for (var8 = 0; var8 < var5_int; var8++) {
             if (param3 &&
@@ -195,8 +195,8 @@ class CarouselSlot implements DiffableState {
           }
           var3 = (CarouselSlot) (other);
           var4 = 0;
-          CarouselSlot.a(var3.field_c, 1, this.field_c, false, 5547);
-          if (SetCountermeasureLauncherAimspeed.a(var3.field_c, false, 1, this.field_c, 126)) {
+          CarouselSlot.reportStateArrayDifferences(var3.players, 1, this.players, false, 5547);
+          if (SetCountermeasureLauncherAimspeed.a(var3.players, false, 1, this.players, 126)) {
             var4 = 1;
             GetSniperCannonAimarc.a(-6940, "CarouselPlayerInfo[] players has changed. ");
           }
@@ -230,7 +230,7 @@ class CarouselSlot implements DiffableState {
         try {
           var3_int = -83 % ((22 - param0) / 59);
           var4 = (CarouselSlot) (param1);
-          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var4.field_c, false, 1, this.field_c, -93);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var4.players, false, 1, this.players, -93);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -246,7 +246,7 @@ class CarouselSlot implements DiffableState {
         }
     }
 
-    void a(CarouselSlot param0, int param1, int param2, boolean param3) {
+    void advanceSimulation(CarouselSlot param0, int param1, int param2, boolean param3) {
         try {
           if (param2 != 1) {
             this.countConnectedPlayers(-32);
@@ -265,9 +265,9 @@ class CarouselSlot implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (CarouselSlot) (param1);
-          var3.field_c = (CarouselPlayerInfo[]) (SpriteDimensions.copyStateArrayByMode(var3.field_c, this.field_c, 1, GetLoadingMissions.field_q, false));
+          var3.players = (CarouselPlayerInfo[]) (SpriteDimensions.copyStateArrayByMode(var3.players, this.players, 1, GetLoadingMissions.field_q, false));
           if (param0 < 54) {
-            this.field_c = (CarouselPlayerInfo[]) null;
+            this.players = (CarouselPlayerInfo[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ class CarouselSlot implements DiffableState {
         }
     }
 
-    void a(boolean param0, int param1) {
+    void prepareTick(boolean param0, int param1) {
         if (param0) {
           field_b = (String) null;
         }
@@ -346,9 +346,9 @@ class CarouselSlot implements DiffableState {
         if (param1 <= 93) {
           field_a = (soa) null;
         }
-        this.field_c = (CarouselPlayerInfo[]) (GetLoadingMissions.field_q.createArray(11995, param0));
+        this.players = (CarouselPlayerInfo[]) (GetLoadingMissions.field_q.createArray(11995, param0));
         for (var3 = 0; var3 < param0; var3++) {
-          this.field_c[var3] = (CarouselPlayerInfo) (GetLoadingMissions.field_q.create((byte) 15));
+          this.players[var3] = (CarouselPlayerInfo) (GetLoadingMissions.field_q.create((byte) 15));
         }
     }
 
@@ -357,7 +357,7 @@ class CarouselSlot implements DiffableState {
           return;
         }
         try {
-          this.field_c = (CarouselPlayerInfo[]) (SetAutoDetail.a(EnvironmentReflectionGpuMaterialEffect.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.field_c));
+          this.players = (CarouselPlayerInfo[]) (SetAutoDetail.a(EnvironmentReflectionGpuMaterialEffect.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.players));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tja.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

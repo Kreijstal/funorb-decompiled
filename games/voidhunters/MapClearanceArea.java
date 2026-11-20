@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MapClearanceArea implements DiffableState {
-    static ri field_b;
+    static QuickChatDynamicCommand field_b;
     static int field_c;
     static int field_a;
 
@@ -55,7 +55,7 @@ abstract class MapClearanceArea implements DiffableState {
     public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard >= -19) {
-            field_b = (ri) null;
+            field_b = (QuickChatDynamicCommand) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dmb.F(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -118,6 +118,6 @@ abstract class MapClearanceArea implements DiffableState {
     abstract void a(World param0, boolean param1);
 
     static {
-        field_b = new ri(7, 0, 1, 1);
+        field_b = new QuickChatDynamicCommand(7, 0, 1, 1);
     }
 }

@@ -44,7 +44,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         int var19Lifetime1Lifetime1;
         var23 = VoidHunters.field_G;
         try {
-          dda.a(param1, 98);
+          OpenGlClientVertexBuffer.ensureIntScratchCapacity(param1, 98);
           if (param3 >= -6) {
             return;
           }

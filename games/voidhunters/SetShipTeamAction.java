@@ -250,7 +250,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, Bo
           if (var4 != null &&
             var4 instanceof Ship) {
             var5 = (Ship) (var4);
-            if (!param2.a(this.team, 0, var5.getTeam((byte) 110))) {
+            if (!param2.canSelectTeam(this.team, 0, var5.getTeam((byte) 110))) {
               if (-1 != fw.field_a &&
                 SetShieldsDirectionalArcParticleSpeedDownshift.field_o != var5.getTeam((byte) 122)) {
                 GetAngleset.b(false);
@@ -262,8 +262,8 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, Bo
             }
             var5.setTeam(17704, this.team);
             if (var5.getOwner((byte) -117) >= 0 &&
-              var5.getOwner((byte) -117) < param2.field_c.length) {
-              param2.a(var5.getOwner((byte) -117), (byte) 59).selectedTeam = this.team;
+              var5.getOwner((byte) -117) < param2.players.length) {
+              param2.getPlayer(var5.getOwner((byte) -117), (byte) 59).selectedTeam = this.team;
             }
           }
           if (param1 != 32) {

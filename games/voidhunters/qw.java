@@ -10,7 +10,7 @@ final class qw extends IntrusiveNode {
     int field_d;
     static gl field_e;
     static lkb field_j;
-    static ri field_g;
+    static QuickChatDynamicCommand field_g;
     static Widget field_l;
     private static String field_z;
 
@@ -31,6 +31,6 @@ final class qw extends IntrusiveNode {
         field_z = "qw.A(";
         field_e = new gl(8);
         field_j = new lkb();
-        field_g = new ri(13, 0, 1, 0);
+        field_g = new QuickChatDynamicCommand(13, 0, 1, 0);
     }
 }

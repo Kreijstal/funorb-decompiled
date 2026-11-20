@@ -5,13 +5,13 @@ final class jv {
     static GameStateFactory field_d;
     private ResourceArchive field_e;
     private ResourceArchive field_a;
-    private pfb field_c;
+    private SoftLruCache field_c;
     static int field_b;
     static String field_f;
 
     final rn a(byte param0, int param1) {
         byte[] var4 = null;
-        rn var3 = (rn) (this.field_c.b(0, (long)param1));
+        rn var3 = (rn) (this.field_c.get(0, (long)param1));
         if (var3 != null) {
           return var3;
         }
@@ -28,18 +28,18 @@ final class jv {
           var5.a(new PacketBuffer(var4), param0 + 8524);
           if (32768 <= param1) {
             var5.a(0);
-            this.field_c.a(var5, (long)param1, (byte) -117);
+            this.field_c.put(var5, (long)param1, (byte) -117);
             return var5;
           }
-          this.field_c.a(var5, (long)param1, (byte) -117);
+          this.field_c.put(var5, (long)param1, (byte) -117);
           return var5;
         }
         if (32768 > param1) {
-          this.field_c.a(var5, (long)param1, (byte) -117);
+          this.field_c.put(var5, (long)param1, (byte) -117);
           return var5;
         }
         var5.a(0);
-        this.field_c.a(var5, (long)param1, (byte) -117);
+        this.field_c.put(var5, (long)param1, (byte) -117);
         return var5;
     }
 
@@ -76,7 +76,7 @@ final class jv {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_c = new pfb(64);
+        this.field_c = new SoftLruCache(64);
         try {
           this.field_a = param1;
           this.field_e = param2;

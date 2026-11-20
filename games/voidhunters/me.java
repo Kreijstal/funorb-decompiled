@@ -545,7 +545,7 @@ final class me extends pja {
                 var31 = var31 + nna.field_w;
               }
               if (var12.field_Qb) {
-                var12.field_vb.text = SetReverbGain.a(bna.field_m, new String[]{var32}, 79);
+                var12.field_vb.text = SetReverbGain.a(SoftCacheReference.field_m, new String[]{var32}, 79);
                 var12.field_vb.setBounds(qs.field_c, 0, var12.width - 2 * qs.field_c, var31, nna.field_w);
                 var31 = var31 + nna.field_w;
               }
@@ -594,7 +594,7 @@ final class me extends pja {
             }
             if (var12.field_Rb.field_O) {
               if (!var12.field_xb) {
-                stackIn_152_0 = dda.field_c;
+                stackIn_152_0 = OpenGlClientVertexBuffer.field_c;
               } else {
                 stackIn_152_0 = GetTorpedoAimspeed.field_p;
               }

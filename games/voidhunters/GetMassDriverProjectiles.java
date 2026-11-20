@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMassDriverProjectiles extends ConsoleCommand {
-    static ri field_p;
+    static QuickChatDynamicCommand field_p;
     static String field_o;
     static int field_q;
 
@@ -72,7 +72,7 @@ final class GetMassDriverProjectiles extends ConsoleCommand {
 
     static {
         field_o = "<%0> has lost connection.";
-        field_p = new ri(9, 0, 4, 1);
+        field_p = new QuickChatDynamicCommand(9, 0, 4, 1);
         field_q = 1;
     }
 }

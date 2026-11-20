@@ -280,7 +280,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetPhasedEnergyBeamProjectiles.field_o[2] = GetDebrisCollisionDamage.field_o;
           SetPhasedEnergyBeamProjectiles.field_o[8] = igb.field_b + " " + ti.field_i;
           SetPhasedEnergyBeamProjectiles.field_o[4] = ppb.field_d;
-          SetPhasedEnergyBeamProjectiles.field_o[5] = ri.field_b;
+          SetPhasedEnergyBeamProjectiles.field_o[5] = QuickChatDynamicCommand.field_b;
           SetPhasedEnergyBeamProjectiles.field_o[0] = DualLinkNode.field_h;
           SetPhasedEnergyBeamProjectiles.field_o[3] = igb.field_b;
           SetPhasedEnergyBeamProjectiles.field_o[6] = MapClearanceRectangle.field_f + " " + ti.field_i;

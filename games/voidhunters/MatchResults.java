@@ -288,7 +288,7 @@ final class MatchResults implements DiffableState {
             this.a(118, (RoundResult) null);
           }
           var3 = (MatchResults) (other);
-          CarouselSlot.a(var3.results, 1, this.results, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.results, 1, this.results, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.results, false, 1, this.results, -12)) {
             System.out.println("RoundResult[] results has changed. ");

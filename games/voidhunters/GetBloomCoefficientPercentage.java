@@ -32,7 +32,7 @@ final class GetBloomCoefficientPercentage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(oaa.field_i);
+            stackIn_4_0 = new ConsoleValue(OpenGlVertexBufferObject.field_i);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tpa {
-    static ri field_a;
+    static QuickChatDynamicCommand field_a;
     String[] field_e;
     int field_d;
     boolean field_g;
@@ -24,6 +24,6 @@ final class tpa {
     }
 
     static {
-        field_a = new ri(10, 2, 2, 0);
+        field_a = new QuickChatDynamicCommand(10, 2, 2, 0);
     }
 }

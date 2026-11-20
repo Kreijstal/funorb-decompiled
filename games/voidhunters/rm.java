@@ -10,10 +10,10 @@ final class rm extends eca {
           if (GetMissileLauncherAimarc.field_o) {
             return null;
           }
-          if (fra.field_b > od.field_a) {
+          if (fra.field_b > OpenGlVertexAttribute.field_a) {
             return null;
           }
-          if (!(od.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
+          if (!(OpenGlVertexAttribute.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
             return GetReadyRoomMutatorTime.field_o;
           }
           return null;
@@ -21,10 +21,10 @@ final class rm extends eca {
         if (GetMissileLauncherAimarc.field_o) {
           return null;
         }
-        if (fra.field_b > od.field_a) {
+        if (fra.field_b > OpenGlVertexAttribute.field_a) {
           return null;
         }
-        if (!(od.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
+        if (!(OpenGlVertexAttribute.field_a >= fra.field_b + GetMessageMaxage.field_r)) {
           return GetReadyRoomMutatorTime.field_o;
         }
         return null;

@@ -91,7 +91,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
               var12.unlink(-3846);
             }
           } else {
-            var11 = (ea) (oaa.field_k.first(0));
+            var11 = (ea) (OpenGlVertexBufferObject.field_k.first(0));
             if (var11 == null) {
               ifb.l(-125);
               return;

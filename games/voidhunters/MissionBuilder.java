@@ -36,8 +36,8 @@ final class MissionBuilder implements DiffableState {
           if (param2 != 13145) {
             this.a(false, -19, -17, false, (World) null, false, (Random) null);
           }
-          for (var6 = 0; param0.field_c.length > var6; var6++) {
-            var7_ref_tfa = param0.a(var6, (byte) 59);
+          for (var6 = 0; param0.players.length > var6; var6++) {
+            var7_ref_tfa = param0.getPlayer(var6, (byte) 59);
             if ((var7_ref_tfa.connected ||
               SetMissionResnetResourceTickTime.field_p == 1) && var7_ref_tfa.selectedTeam == param1) {
               var5_int++;
@@ -49,8 +49,8 @@ final class MissionBuilder implements DiffableState {
           }
           var6Lifetime1 = hob.a(param3, var5_int, 118);
           var5_intLifetime1 = 0;
-          for (var7 = 0; param0.field_c.length > var7; var7++) {
-            var8 = param0.a(var7, (byte) 59);
+          for (var7 = 0; param0.players.length > var7; var7++) {
+            var8 = param0.getPlayer(var7, (byte) 59);
             if ((var8.connected ||
               SetMissionResnetResourceTickTime.field_p == 1) && param1 == var8.selectedTeam) {
               if (var5_intLifetime1 == var6Lifetime1) {
@@ -2860,8 +2860,8 @@ final class MissionBuilder implements DiffableState {
           var13 = null;
           var14 = 1;
           var15 = 0;
-          for (var16_int = 0; param4.field_c.length > var16_int; var16_int++) {
-            var23 = param4.field_c[var16_int];
+          for (var16_int = 0; param4.players.length > var16_int; var16_int++) {
+            var23 = param4.players[var16_int];
             if (var23.connected ||
               1 == SetMissionResnetResourceTickTime.field_p) {
               var15++;
@@ -3433,7 +3433,7 @@ final class MissionBuilder implements DiffableState {
         RuntimeException var3 = null;
         try {
           var5 = (MissionBuilder) (other);
-          CarouselSlot.a(var5.clearanceAreas, 1, this.clearanceAreas, true, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.clearanceAreas, 1, this.clearanceAreas, true, 5547);
           var4 = 0;
           if (var5.seed != this.seed) {
             System.out.println("int seed has changed. before=" + var5.seed + ", now=" + this.seed);

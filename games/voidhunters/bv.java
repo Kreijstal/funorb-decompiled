@@ -670,11 +670,11 @@ final class bv {
         var43 = VoidHunters.field_G;
         try {
           if (0 <= param11 &&
-            param0.field_c.length > param11) {
+            param0.players.length > param11) {
             var14_int = param0.missionState.getMissionPhase(8);
             if (1 != var14_int &&
               var14_int != 2) {
-              var15 = param0.a(param11, (byte) 59);
+              var15 = param0.getPlayer(param11, (byte) 59);
               var17 = 0;
               boolean decompiledNaturalLoopExit1 = false;
               while (!(decompiledNaturalLoopExit1 = (!(HardpointMatch.field_f.length > var17)))) {

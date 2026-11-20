@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class is extends DualLinkNode {
-    int field_k;
+abstract class CacheReference extends DualLinkNode {
+    int weight;
 
-    abstract Object a(int param0);
+    abstract Object getValue(int param0);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawClippedRectangleBorder(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -25,7 +25,7 @@ abstract class is extends DualLinkNode {
         var17 = VoidHunters.field_G;
         try {
           if (param4 != 20408) {
-            is.a(62, 42, -59, 39, 23, 69, 36);
+            CacheReference.drawClippedRectangleBorder(62, 42, -59, 39, 23, 69, 36);
           }
           var11 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5);
           var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param6);
@@ -54,11 +54,11 @@ abstract class is extends DualLinkNode {
         }
     }
 
-    is(int param0) {
-        this.field_k = param0;
+    CacheReference(int param0) {
+        this.weight = param0;
     }
 
-    abstract boolean e(byte param0);
+    abstract boolean isSoft(byte param0);
 
     static {
     }

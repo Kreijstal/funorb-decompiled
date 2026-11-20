@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetTorpedoAimarc extends ConsoleCommand {
-    static voa field_o;
+    static QuickChatPhraseLoader field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

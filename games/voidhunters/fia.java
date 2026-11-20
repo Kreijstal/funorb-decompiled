@@ -60,7 +60,7 @@ final class fia {
     final static boolean a(int[] param0, int param1, byte param2, long param3, String param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        tjb var7 = null;
+        QuickChatMenuWidget var7 = null;
         CharSequence var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -81,7 +81,7 @@ final class fia {
           var8 = (CharSequence) ((Object) param4);
           GetDebrisThrowable.field_o = jwa.a(false, var8);
           lsa.field_f = param3;
-          var7 = MessageLog.a(jwa.field_k, param0, 0, DebrisFactory.field_a, wdb.field_Ab);
+          var7 = MessageLog.createQuickChatPhraseMenu(jwa.field_k, param0, 0, DebrisFactory.field_a, wdb.field_Ab);
           AsteroidFieldFactory.a((byte) -28, var7);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

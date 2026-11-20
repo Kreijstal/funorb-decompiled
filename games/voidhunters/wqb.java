@@ -75,7 +75,7 @@ final class wqb extends mfb {
         if (param0 != 2769) {
           return 46;
         }
-        return voa.field_b;
+        return QuickChatPhraseLoader.field_b;
     }
 
     final int a(boolean param0) {

@@ -14,7 +14,7 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oaa.field_i = arguments[0].intValue(8);
+          OpenGlVertexBufferObject.field_i = arguments[0].intValue(8);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

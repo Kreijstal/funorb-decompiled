@@ -61,7 +61,7 @@ final class GpuSprite extends ToolkitSprite {
         }
         var11.setScale(5557, (float)param2, (float)param3, 0.0f);
         var11.translate(param1, 16383, 0, param0);
-        this.toolkit.setTextureTransformMode(vf.field_a, true);
+        this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.drawUnitQuadTriangles((byte) -79);
         this.toolkit.resetTextureTransform((byte) 74);
@@ -96,7 +96,7 @@ final class GpuSprite extends ToolkitSprite {
         var8.setScale(5557, (float)this.width, (float)this.height, 0.0f);
         var8.translate(param1, 16383, 0, param0);
         var7.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 117), 1.0f);
-        this.toolkit.setTextureTransformMode(vf.field_a, true);
+        this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.drawUnitQuadTriangles((byte) -72);
         this.toolkit.resetTextureTransform((byte) 85);
@@ -170,7 +170,7 @@ final class GpuSprite extends ToolkitSprite {
         var27.setRotation(0.0f, 0.0f, (byte) 101, param2 - param0, 0.0f, 0.0f, -param1 + param5, param3 - param1, 1.0f, -param0 + param4);
         var27.translate(0.0f, param0, param1, (byte) 13);
         var12.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 110), 1.0f);
-        this.toolkit.setTextureTransformMode(vf.field_a, true);
+        this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.drawUnitQuadTriangles((byte) -102);
         this.toolkit.resetTextureTransform((byte) 72);
@@ -236,7 +236,7 @@ final class GpuSprite extends ToolkitSprite {
             var12 = param3 + param1;
             var13 = this.getPaddedHeight();
             var9.setScale(5557, this.texture.getU((float)param2, -1080), this.texture.getV((float)this.height, 91), 1.0f);
-            this.toolkit.setTextureTransformMode(vf.field_a, true);
+            this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
             var14 = param1 + this.paddingTop;
             for (var15 = var14 + this.height; var15 <= var12; var15 = var15 + var13) {
               var23.setScale(5557, (float)param2, (float)this.height, 0.0f);
@@ -248,7 +248,7 @@ final class GpuSprite extends ToolkitSprite {
             if (var12 > var14) {
               var16 = var12 - var14;
               var9.setScale(5557, this.texture.getU((float)param2, -1080), this.texture.getV((float)var16, 90), 1.0f);
-              this.toolkit.setTextureTransformMode(vf.field_a, true);
+              this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
               var23.setScale(5557, (float)param2, (float)var16, 0.0f);
               var23.translate(var14, 16383, 0, param0);
               this.toolkit.markModelTransformChanged(20837);
@@ -258,7 +258,7 @@ final class GpuSprite extends ToolkitSprite {
             var12 = param2 + param0;
             var13 = this.getPaddedWidth();
             var9.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)param3, 75), 1.0f);
-            this.toolkit.setTextureTransformMode(vf.field_a, true);
+            this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
             var14 = this.paddingLeft + param0;
             var15 = this.width + var14;
             while (var12 >= var15) {
@@ -272,7 +272,7 @@ final class GpuSprite extends ToolkitSprite {
             if (var12 > var14) {
               var16 = -var14 + var12;
               var9.setScale(5557, this.texture.getU((float)var16, -1080), this.texture.getV((float)param3, 121), 1.0f);
-              this.toolkit.setTextureTransformMode(vf.field_a, true);
+              this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
               var23.setScale(5557, (float)var16, (float)param3, 0.0f);
               var23.translate(param1, 16383, 0, var14);
               this.toolkit.markModelTransformChanged(20837);
@@ -286,7 +286,7 @@ final class GpuSprite extends ToolkitSprite {
             var16 = this.paddingTop + param1;
             for (var17 = this.height + var16; var17 <= var12; var17 = var17 + var15) {
               var9.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 107), 1.0f);
-              this.toolkit.setTextureTransformMode(vf.field_a, true);
+              this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
               var18 = param0 + this.paddingLeft;
               var19 = this.width + var18;
               while (var19 <= var13) {
@@ -300,7 +300,7 @@ final class GpuSprite extends ToolkitSprite {
               if (var13 > var18) {
                 var20 = -var18 + var13;
                 var9.setScale(5557, this.texture.getU((float)var20, -1080), this.texture.getV((float)this.height, 78), 1.0f);
-                this.toolkit.setTextureTransformMode(vf.field_a, true);
+                this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
                 var23.setScale(5557, (float)var20, (float)this.height, 0.0f);
                 var23.translate(var16, 16383, 0, var18);
                 this.toolkit.markModelTransformChanged(20837);
@@ -311,7 +311,7 @@ final class GpuSprite extends ToolkitSprite {
             if (var12 > var16) {
               var18Lifetime1 = -var16 + var12;
               var9.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)var18Lifetime1, 104), 1.0f);
-              this.toolkit.setTextureTransformMode(vf.field_a, true);
+              this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
               var19Lifetime1 = this.paddingLeft + param0;
               for (var20Lifetime1 = var19Lifetime1 + this.width; var13 >= var20Lifetime1; var20Lifetime1 = var20Lifetime1 + var14) {
                 var23.setScale(5557, (float)this.width, (float)var18Lifetime1, 0.0f);
@@ -329,7 +329,7 @@ final class GpuSprite extends ToolkitSprite {
               else {
                 var21 = -var19Lifetime1 + var13;
                 var9.setScale(5557, this.texture.getU((float)var21, -1080), this.texture.getV((float)var18Lifetime1, 92), 1.0f);
-                this.toolkit.setTextureTransformMode(vf.field_a, true);
+                this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
                 var23.setScale(5557, (float)var21, (float)var18Lifetime1, 0.0f);
                 var23.translate(var16, 16383, 0, var19Lifetime1);
                 this.toolkit.markModelTransformChanged(20837);
@@ -341,7 +341,7 @@ final class GpuSprite extends ToolkitSprite {
           var9.setScale(5557, this.texture.getU((float)param2, -1080), this.texture.getV((float)param3, 88), 1.0f);
           var23.setScale(5557, (float)param2, (float)param3, 0.0f);
           var23.translate(param1, 16383, 0, param0);
-          this.toolkit.setTextureTransformMode(vf.field_a, true);
+          this.toolkit.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
           this.toolkit.markModelTransformChanged(20837);
           this.toolkit.drawUnitQuadTriangles((byte) -66);
         }

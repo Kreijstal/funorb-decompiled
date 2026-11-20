@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetShieldsDamageEnergyConversion extends ConsoleCommand {
-    static tjb field_o;
+    static QuickChatMenuWidget field_o;
     static int field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -40,7 +40,7 @@ final class GetShieldsDamageEnergyConversion extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 > -79) {
-          field_o = (tjb) null;
+          field_o = (QuickChatMenuWidget) null;
           field_o = null;
           return;
         }

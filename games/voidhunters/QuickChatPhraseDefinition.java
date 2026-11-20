@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends DualLinkNode {
-    int[] field_n;
-    private String[] field_k;
-    private int[][] field_l;
-    private int[] field_m;
+final class QuickChatPhraseDefinition extends DualLinkNode {
+    int[] linkedPhraseIds;
+    private String[] textSegments;
+    private int[][] dynamicCommandArguments;
+    private int[] dynamicCommandIds;
 
-    private final void a(PacketBuffer param0, int param1, int param2) {
+    private final void decodeOpcode(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -18,35 +18,35 @@ final class pi extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ri var7 = null;
+        QuickChatDynamicCommand var7 = null;
         int var9 = 0;
         var9 = VoidHunters.field_G;
         try {
           if (param2 != 0) {
-            pi.a((byte) 3, false, false);
+            QuickChatPhraseDefinition.a((byte) 3, false, false);
           }
           if (param1 == 1) {
-            this.field_k = SetFighterBayAimspeed.a((byte) -67, '<', param0.readString(-1));
+            this.textSegments = SetFighterBayAimspeed.a((byte) -67, '<', param0.readString(-1));
           } else {
             if (param1 == 2) {
               var4_int = param0.readUnsignedByte((byte) -113);
-              this.field_n = new int[var4_int];
+              this.linkedPhraseIds = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_n[var5] = param0.readUnsignedShort(1869);
+                this.linkedPhraseIds[var5] = param0.readUnsignedShort(1869);
               }
             } else if (param1 == 3) {
               var4_int = param0.readUnsignedByte((byte) -107);
-              this.field_m = new int[var4_int];
-              this.field_l = new int[var4_int][];
+              this.dynamicCommandIds = new int[var4_int];
+              this.dynamicCommandArguments = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param0.readUnsignedShort(param2 ^ 1869);
                 var7 = SetPhasedEnergyBeamPulseFadetime.a(0, var6);
                 if (var7 != null) {
-                  this.field_m[var5] = var6;
-                  array$0 = new int[var7.field_c];
-                  this.field_l[var5] = array$0;
-                  for (var8 = 0; var8 < var7.field_c; var8++) {
-                    this.field_l[var5][var8] = param0.readUnsignedShort(1869);
+                  this.dynamicCommandIds[var5] = var6;
+                  array$0 = new int[var7.parameterCount];
+                  this.dynamicCommandArguments[var5] = array$0;
+                  for (var8 = 0; var8 < var7.parameterCount; var8++) {
+                    this.dynamicCommandArguments[var5][var8] = param0.readUnsignedShort(1869);
                   }
                 }
               }
@@ -71,38 +71,38 @@ final class pi extends DualLinkNode {
         }
     }
 
-    final String a(int param0) {
+    final String getPreviewText(int param0) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         int var4 = VoidHunters.field_G;
         StringBuilder var5 = new StringBuilder(param0);
         StringBuilder var2 = var5;
-        if (null == this.field_k) {
+        if (null == this.textSegments) {
           return "";
         }
-        StringBuilder discarded$0 = var5.append(this.field_k[0]);
-        for (var3 = 1; this.field_k.length > var3; var3++) {
+        StringBuilder discarded$0 = var5.append(this.textSegments[0]);
+        for (var3 = 1; this.textSegments.length > var3; var3++) {
           discarded$1 = var2.append("...");
-          discarded$2 = var5.append(this.field_k[var3]);
+          discarded$2 = var5.append(this.textSegments[var3]);
         }
         return var2.toString();
     }
 
-    final void e(byte param0) {
+    final void markAlternateArchiveReferences(byte param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (param0 != 97) {
           return;
         }
-        if (null != this.field_n) {
-          for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = SetAngularForceDownshift.a(this.field_n[var2], 32768);
+        if (null != this.linkedPhraseIds) {
+          for (var2 = 0; this.linkedPhraseIds.length > var2; var2++) {
+            this.linkedPhraseIds[var2] = SetAngularForceDownshift.a(this.linkedPhraseIds[var2], 32768);
           }
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -115,13 +115,13 @@ final class pi extends DualLinkNode {
           while (true) {
             var3_int = param0.readUnsignedByte((byte) -104);
             if (var3_int != 0) {
-              this.a(param0, var3_int, 0);
+              this.decodeOpcode(param0, var3_int, 0);
               continue;
             }
             break;
           }
           if (param1 != -1) {
-            this.field_n = (int[]) null;
+            this.linkedPhraseIds = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,7 +150,7 @@ final class pi extends DualLinkNode {
         GetPointDefenceLaserProjectileDamage.a(param1, 76);
     }
 
-    pi() {
+    QuickChatPhraseDefinition() {
     }
 
     static {

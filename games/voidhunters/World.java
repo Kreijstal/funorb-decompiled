@@ -906,21 +906,21 @@ final class World implements DiffableState, CompactGameState {
         World var5 = null;
         try {
           var5 = (World) (other);
-          CarouselSlot.a(var5.ships, 1, this.ships, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.ships, 1, this.ships, false, 5547);
           SetUseFilledPolygons.a(1, this.projectiles, 13, false, var5.projectiles);
-          CarouselSlot.a(var5.debris, 1, this.debris, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.debris, 1, this.debris, false, 5547);
           if (this.asteroidField != null &&
             var5.asteroidField != null) {
             this.asteroidField.reportDifferences(var5.asteroidField, -46);
           }
           SetUseFilledPolygons.a(1, this.spawnPoints, 13, false, var5.spawnPoints);
-          CarouselSlot.a(var5.grapplingHooks, 1, this.grapplingHooks, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.grapplingHooks, 1, this.grapplingHooks, false, 5547);
           if (null != this.missionControl &&
             var5.missionControl != null) {
             this.missionControl.reportDifferences(var5.missionControl, -105);
           }
-          CarouselSlot.a(var5.mapZones, 1, this.mapZones, false, 5547);
-          CarouselSlot.a(var5.resNodes, 1, this.resNodes, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.mapZones, 1, this.mapZones, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.resNodes, 1, this.resNodes, false, 5547);
           if (null != this.nebulaField &&
             null != var5.nebulaField) {
             this.nebulaField.reportDifferences(var5.nebulaField, -109);
@@ -932,7 +932,7 @@ final class World implements DiffableState, CompactGameState {
           if (obfuscationGuard >= -19) {
             this.getHeight(-81);
           }
-          CarouselSlot.a(var5.escapePods, 1, this.escapePods, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.escapePods, 1, this.escapePods, false, 5547);
           if (this.missionBuilder != null &&
             var5.missionBuilder != null) {
             this.missionBuilder.reportDifferences(var5.missionBuilder, -25);
@@ -3614,7 +3614,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.ships)) {
               System.err.println("Ship[] ships the actual object has a duplicate reference");
             }
-            var7 = tjb.a(this.ships, 0);
+            var7 = QuickChatMenuWidget.findDuplicateReference(this.ships, 0);
             if (null != var7) {
               System.err.println("An element of Ship[] ships has a duplicate reference - " + var7.toString());
             }
@@ -3624,7 +3624,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.field_s)) {
               System.err.println("Particle[] particles the actual object has a duplicate reference");
             }
-            var8 = tjb.a(this.field_s, 0);
+            var8 = QuickChatMenuWidget.findDuplicateReference(this.field_s, 0);
             if (var8 != null) {
               System.err.println("An element of Particle[] particles has a duplicate reference - " + var8.toString());
             }
@@ -3669,7 +3669,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.grapplingHooks)) {
               System.err.println("GrapplingHook[] grappling_hooks the actual object has a duplicate reference");
             }
-            var11 = tjb.a(this.grapplingHooks, 0);
+            var11 = QuickChatMenuWidget.findDuplicateReference(this.grapplingHooks, 0);
             if (null != var11) {
               System.err.println("An element of GrapplingHook[] grappling_hooks has a duplicate reference - " + var11.toString());
             }
@@ -3698,7 +3698,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.mapZones)) {
               System.err.println("MapZone[] map_zones the actual object has a duplicate reference");
             }
-            var12 = tjb.a(this.mapZones, 0);
+            var12 = QuickChatMenuWidget.findDuplicateReference(this.mapZones, 0);
             if (null != var12) {
               System.err.println("An element of MapZone[] map_zones has a duplicate reference - " + var12.toString());
             }
@@ -3708,7 +3708,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.resNodes)) {
               System.err.println("ResourceNode[] res_nodes the actual object has a duplicate reference");
             }
-            var13 = tjb.a(this.resNodes, 0);
+            var13 = QuickChatMenuWidget.findDuplicateReference(this.resNodes, 0);
             if (var13 != null) {
               System.err.println("An element of ResourceNode[] res_nodes has a duplicate reference - " + var13.toString());
             }
@@ -3735,7 +3735,7 @@ final class World implements DiffableState, CompactGameState {
             if (VoidHunters.checkDuplicateReference(true, this.escapePods)) {
               System.err.println("EscapePod[] escape_pods the actual object has a duplicate reference");
             }
-            var14 = tjb.a(this.escapePods, 0);
+            var14 = QuickChatMenuWidget.findDuplicateReference(this.escapePods, 0);
             if (var14 != null) {
               System.err.println("An element of EscapePod[] escape_pods has a duplicate reference - " + var14.toString());
             }
@@ -5365,7 +5365,7 @@ final class World implements DiffableState, CompactGameState {
               }
               break;
             }
-            if (1 == voa.field_d &&
+            if (1 == QuickChatPhraseLoader.field_d &&
               !MonochromeRowCache.field_b.hasHit((byte) 111)) {
               var12Lifetime1 = this.partitioningManager.collectBodyIdsInCurrentBounds(-122, 2);
               for (var13Lifetime1 = 0; var13Lifetime1 < var12Lifetime1; var13Lifetime1++) {
@@ -6716,7 +6716,7 @@ final class World implements DiffableState, CompactGameState {
             }
           }
         }
-        if (1 == voa.field_d) {
+        if (1 == QuickChatPhraseLoader.field_d) {
           var17 = this.debris;
           var14 = 0;
           var8Lifetime1 = var14;

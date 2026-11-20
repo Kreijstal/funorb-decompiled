@@ -305,7 +305,7 @@ final class fcb implements oob {
             SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.a(this.field_i, true, "basic", ei.field_i[var5]);
             var9[var5] = SetTorpedoProjectileDamage.field_p[var5];
           }
-          dda.a(18090, false);
+          OpenGlClientVertexBuffer.a(18090, false);
           SetComponentBreakingExplosionForceMultiplier.a(MonochromeRowCache.field_j, param0 + 29073);
           var10 = GetExplosionProjectileDamage.a(98, "basic", "extra_crowns", this.field_i);
           var15 = var10;

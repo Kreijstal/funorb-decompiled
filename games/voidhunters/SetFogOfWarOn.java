@@ -111,7 +111,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_use_filled_polygons(" + SetVariableActionFactory.field_c + ")");
         System.out.println("set_use_detail_lines(" + ResourceArchive.field_f + ")");
         System.out.println("set_bloom_threshold_percentage(" + pab.field_m + ")");
-        System.out.println("set_bloom_coefficient_percentage(" + oaa.field_i + ")");
+        System.out.println("set_bloom_coefficient_percentage(" + OpenGlVertexBufferObject.field_i + ")");
         System.out.println("set_autozoom_speed_divide(" + SetMassDriverProjectileDamage.field_o + ")");
         System.out.println("set_autozoom_amount_multiply(" + rw.field_n + ")");
         System.out.println("set_nebula_proximity_fade_downshift(" + SetAutoDetail.field_o + ")");
@@ -125,7 +125,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_debris_collision(" + gl.field_d + ")");
         System.out.println("set_debris_partitioned(" + hw.field_b + ")");
         System.out.println("set_debris_collision_damage(" + GetTeamSelectionSpeedup.field_p + ")");
-        System.out.println("set_debris_projectile_collision(" + voa.field_d + ")");
+        System.out.println("set_debris_projectile_collision(" + QuickChatPhraseLoader.field_d + ")");
         System.out.println("set_debris_throwable(" + GetPedrosRepairModeSwitchtime.field_o + ")");
         System.out.println("set_missiles_hit_source_team(" + GpuEnvironmentMapSource.field_d + ")");
         System.out.println("set_missiles_damage_source_team(" + SetPointDefenceLaserPulsetime.field_o + ")");
@@ -258,7 +258,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_point_defence_laser_aimarc(" + GetMaxShipSize.field_o + ")");
         System.out.println("set_countermeasure_launcher_aimarc(" + rlb.field_e + ")");
         System.out.println("set_mass_driver_projectile_damage(" + GetMissionTerrainNebulaProbability.field_p + ")");
-        System.out.println("set_torpedo_projectile_damage(" + voa.field_b + ")");
+        System.out.println("set_torpedo_projectile_damage(" + QuickChatPhraseLoader.field_b + ")");
         System.out.println("set_laser_beam_projectile_damage(" + hrb.field_a + ")");
         System.out.println("set_machine_gun_projectile_damage(" + ServerInfo.field_f + ")");
         System.out.println("set_sniper_cannon_projectile_damage(" + ArchiveRequest.field_m + ")");

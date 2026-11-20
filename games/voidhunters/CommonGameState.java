@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CommonGameState implements DiffableState, mfa {
+final class CommonGameState implements DiffableState, PlayerNameRegistry {
     private int field_d;
     int field_k;
     boolean field_e;
@@ -15,7 +15,7 @@ final class CommonGameState implements DiffableState, mfa {
     String[] field_h;
     static float field_i;
 
-    public final void a(String param0, int param1, byte param2) {
+    public final void setPlayerName(String param0, int param1, byte param2) {
         try {
           this.field_h[param1] = param0;
           if (param2 >= -112) {
@@ -37,7 +37,7 @@ final class CommonGameState implements DiffableState, mfa {
           if (!kv.readBoolean(false, param0)) {
             this.carouselInfo = null;
           } else {
-            this.carouselInfo = new CarouselCommongameInfo((mfa) (this));
+            this.carouselInfo = new CarouselCommongameInfo((PlayerNameRegistry) (this));
             this.carouselInfo.readState(param0, false);
           }
           return;
@@ -71,7 +71,7 @@ final class CommonGameState implements DiffableState, mfa {
             var3.carouselInfo = null;
           } else {
             if (null == var3.carouselInfo) {
-              var3.carouselInfo = new CarouselCommongameInfo((mfa) (this));
+              var3.carouselInfo = new CarouselCommongameInfo((PlayerNameRegistry) (this));
             }
             this.carouselInfo.copyTo((byte) 91, var3.carouselInfo);
           }
@@ -100,7 +100,7 @@ final class CommonGameState implements DiffableState, mfa {
 
     final void c(int param0) {
         pr.field_c = this;
-        this.carouselInfo.a(SetMinimapWidth.field_o, (byte) 106);
+        this.carouselInfo.updateTimeline(SetMinimapWidth.field_o, (byte) 106);
         int var2 = 5 % ((67 - param0) / 57);
     }
 
@@ -108,7 +108,7 @@ final class CommonGameState implements DiffableState, mfa {
         if (param0 < 20) {
           field_i = 1.3303049802780151f;
         }
-        return ((GameSnapshot) (this.carouselInfo.b(28120))).world;
+        return ((GameSnapshot) (this.carouselInfo.getVisibleState(28120))).world;
     }
 
     final void a(int param0, IsaacPacketBuffer param1) {
@@ -223,7 +223,7 @@ final class CommonGameState implements DiffableState, mfa {
 
     public final String getPlayerName(int param0, int param1) {
         if (SetMissionResnetResourceTickTime.field_p == param0 &&
-          !this.b(1).a(param1, (byte) 59).connected) {
+          !this.b(1).getPlayer(param1, (byte) 59).connected) {
           return "Bot " + param1;
         }
         if (this.field_h[param1] == null) {
@@ -356,7 +356,7 @@ final class CommonGameState implements DiffableState, mfa {
         if (param0 != 1) {
           this.a((byte) -95);
         }
-        return (GameSnapshot) (this.carouselInfo.b(28120));
+        return (GameSnapshot) (this.carouselInfo.getVisibleState(28120));
     }
 
     CommonGameState(String[] param0, int param1, int param2, int param3, boolean param4) {
@@ -382,9 +382,9 @@ final class CommonGameState implements DiffableState, mfa {
           this.field_d = param3;
           this.field_h = param0;
           this.field_g = param2;
-          this.carouselInfo = new CarouselCommongameInfo((mfa) (this), param4);
-          this.carouselInfo.b(this.field_a, 107);
-          var10 = (GameSnapshot) (this.carouselInfo.b(28120));
+          this.carouselInfo = new CarouselCommongameInfo((PlayerNameRegistry) (this), param4);
+          this.carouselInfo.initializePlayers(this.field_a, 107);
+          var10 = (GameSnapshot) (this.carouselInfo.getVisibleState(28120));
           var12 = var10;
           if (this.field_g != 0 &&
             this.field_g != 1) {
@@ -418,7 +418,7 @@ final class CommonGameState implements DiffableState, mfa {
             }
           }
           for (var7 = 0; var7 < this.field_a; var7++) {
-            stackIn_16_0 = var10.field_c[var7];
+            stackIn_16_0 = var10.players[var7];
             stackIn_17_1 = (null != this.field_h[var7]) && (0 < this.field_h[var7].length()) && ((1 << var7 & this.field_j) == 0);
             stackIn_16_0.connected = stackIn_17_1;
           }

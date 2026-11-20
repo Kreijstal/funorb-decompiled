@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tjb extends Widget {
-    private int field_Jb;
+final class QuickChatMenuWidget extends Widget {
+    private int contentWidth;
     static String field_Cb;
     static int field_wb;
-    private int field_zb;
-    private int field_Ib;
-    private int field_Hb;
-    private int field_Eb;
-    private int field_Gb;
-    private int field_vb;
-    private char[] field_yb;
-    private tjb[] field_Db;
-    private int field_Fb;
-    private tjb field_xb;
-    private IconTextWidget[] field_Bb;
-    private int[] field_Ab;
+    private int menuHeight;
+    private int rowHeight;
+    private int parentItemY;
+    private int menuWidth;
+    private int itemCount;
+    private int selectedItem;
+    private char[] shortcutKeys;
+    private QuickChatMenuWidget[] submenus;
+    private int animationStep;
+    private QuickChatMenuWidget openSubmenu;
+    private IconTextWidget[] items;
+    private int[] phraseIds;
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean handleKeyboard(int param0, int param1, int param2) {
         int var6 = 0;
         int var4;
         int var5;
@@ -26,20 +26,20 @@ final class tjb extends Widget {
         int stackIn_5_0 = 0;
         var7 = VoidHunters.field_G;
         if (param1 > -60) {
-          this.field_Eb = 67;
+          this.menuWidth = 67;
         }
         stackIn_5_0 = (SetBombletSprayProjectileDamage.field_o != 85) ? 0 : 1;
         var4 = stackIn_5_0;
-        if (this.field_xb != null) {
+        if (this.openSubmenu != null) {
           if (var4 != 0 &&
-            this.field_xb.field_vb == -1) {
-            this.j(16384);
-            this.a((byte) 112, 0);
+            this.openSubmenu.selectedItem == -1) {
+            this.closeSubmenu(16384);
+            this.setAnimationStep((byte) 112, 0);
             return true;
           }
-          return this.field_xb.a(param0, -126, param2);
+          return this.openSubmenu.handleKeyboard(param0, -126, param2);
         }
-        if (null == this.field_xb &&
+        if (null == this.openSubmenu &&
           this == MidiNote.field_m &&
           var4 != 0) {
           GetUseExtraBackground.a(-1);
@@ -50,9 +50,9 @@ final class tjb extends Widget {
           if (ttb.field_B == var5) {
             var5 = 63;
           }
-          for (var6 = 0; var6 < this.field_yb.length; var6++) {
-            if (var5 == this.field_yb[var6]) {
-              this.a(var6, true, param0, param2);
+          for (var6 = 0; var6 < this.shortcutKeys.length; var6++) {
+            if (var5 == this.shortcutKeys[var6]) {
+              this.activateItem(var6, true, param0, param2);
               return true;
             }
           }
@@ -60,7 +60,7 @@ final class tjb extends Widget {
         return false;
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3) {
+    private final void activateItem(int param0, boolean param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -73,17 +73,17 @@ final class tjb extends Widget {
         if (!param1) {
           return;
         }
-        if (this.field_vb != param0) {
-          if (this.field_Db[param0] != null) {
-            this.j(16384);
-            this.a((byte) 116, 0);
-            this.field_vb = param0;
-            this.field_xb = this.field_Db[this.field_vb];
-            SetVariableActionFactory.a(this.field_xb, 6);
-            this.field_xb.a((byte) 121, 12);
+        if (this.selectedItem != param0) {
+          if (this.submenus[param0] != null) {
+            this.closeSubmenu(16384);
+            this.setAnimationStep((byte) 116, 0);
+            this.selectedItem = param0;
+            this.openSubmenu = this.submenus[this.selectedItem];
+            SetVariableActionFactory.a(this.openSubmenu, 6);
+            this.openSubmenu.setAnimationStep((byte) 121, 12);
           } else {
-            if (this.field_Ab[param0] != -1) {
-              var5 = 32768 | this.field_Ab[param0];
+            if (this.phraseIds[param0] != -1) {
+              var5 = 32768 | this.phraseIds[param0];
               var6 = ow.field_b;
               if (var6 == 0 &&
                 null != SetSpinningBladeSpindamageMultiplier.field_o) {
@@ -107,12 +107,12 @@ final class tjb extends Widget {
             }
           }
         } else {
-          this.j(16384);
-          this.a((byte) 121, 0);
+          this.closeSubmenu(16384);
+          this.setAnimationStep((byte) 121, 0);
         }
     }
 
-    tjb(long param0, Widget param1, Widget param2, Widget param3, tjb[] param4, int[] param5, String[] param6, char[] param7) {
+    QuickChatMenuWidget(long param0, Widget param1, Widget param2, Widget param3, QuickChatMenuWidget[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -138,38 +138,38 @@ final class tjb extends Widget {
         int var15 = 0;
         BitmapFont var17 = null;
         BitmapFont var18 = null;
-        this.field_vb = -1;
+        this.selectedItem = -1;
         try {
-          this.field_yb = param7;
-          this.field_Ab = param5;
-          this.field_Db = param4;
-          this.field_Gb = this.field_Ab.length;
+          this.shortcutKeys = param7;
+          this.phraseIds = param5;
+          this.submenus = param4;
+          this.itemCount = this.phraseIds.length;
           var17 = param3.font;
           var18 = var17;
-          this.field_Ib = var18.maxDescent + (var18.maxAscent + 2);
-          this.field_Jb = 0;
-          this.field_Bb = new IconTextWidget[this.field_Gb];
-          this.field_zb = this.field_Ib * this.field_Gb;
+          this.rowHeight = var18.maxDescent + (var18.maxAscent + 2);
+          this.contentWidth = 0;
+          this.items = new IconTextWidget[this.itemCount];
+          this.menuHeight = this.rowHeight * this.itemCount;
           var11 = "<col=999999>";
           var12 = "</col>";
-          for (var13 = 0; this.field_Gb > var13; var13++) {
-            if (this.field_yb[var13] > 0) {
-              param6[var13] = var11 + MissionActionFactory.a(this.field_yb[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
+          for (var13 = 0; this.itemCount > var13; var13++) {
+            if (this.shortcutKeys[var13] > 0) {
+              param6[var13] = var11 + MissionActionFactory.a(this.shortcutKeys[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
-            if (this.field_Db[var13] != null ||
-              this.field_Ab[var13] == -1) {
+            if (this.submenus[var13] != null ||
+              this.phraseIds[var13] == -1) {
               var14 = GetTeamSelectionSpeedup.field_o;
             }
-            this.field_Bb[var13] = new IconTextWidget(0L, param2, (Widget) null, param3, (Sprite) (var14), param6[var13]);
-            this.addChild(-561, this.field_Bb[var13]);
+            this.items[var13] = new IconTextWidget(0L, param2, (Widget) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild(-561, this.items[var13]);
             var15 = var17.getStringWidth(param6[var13]);
-            if (this.field_Jb < var15) {
-              this.field_Jb = var15;
+            if (this.contentWidth < var15) {
+              this.contentWidth = var15;
             }
           }
-          this.field_Jb = this.field_Jb + (10 + GetTeamSelectionSpeedup.field_o.paddedWidth);
-          this.a((byte) 120, 12);
+          this.contentWidth = this.contentWidth + (10 + GetTeamSelectionSpeedup.field_o.paddedWidth);
+          this.setAnimationStep((byte) 120, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,27 +221,27 @@ final class tjb extends Widget {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void setAnimationStep(byte param0, int param1) {
         int var5 = 0;
         int var4 = 0;
         int var3 = 0;
         int var6 = VoidHunters.field_G;
-        this.field_Fb = param1;
+        this.animationStep = param1;
         if (param0 < 109) {
-          this.field_Eb = -122;
+          this.menuWidth = -122;
         }
-        for (var5 = 0; var5 < this.field_Gb; var5++) {
-          var4 = this.field_Fb * this.field_Fb;
-          var3 = var5 * this.field_Ib;
-          this.field_Bb[var5].y = ((this.field_Hb - this.screenY) * var4 + (-var4 + 144) * var3) / 144;
+        for (var5 = 0; var5 < this.itemCount; var5++) {
+          var4 = this.animationStep * this.animationStep;
+          var3 = var5 * this.rowHeight;
+          this.items[var5].y = ((this.parentItemY - this.screenY) * var4 + (-var4 + 144) * var3) / 144;
         }
     }
 
-    final int k(int param0) {
+    final int getOpenMenuWidth(int param0) {
         if (param0 != -4109) {
-          this.a(-122, 20, 102);
+          this.handleKeyboard(-122, 20, 102);
         }
-        return this.field_Eb + (null != this.field_xb ? this.field_xb.k(-4109) : 0);
+        return this.menuWidth + (null != this.openSubmenu ? this.openSubmenu.getOpenMenuWidth(-4109) : 0);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -251,27 +251,27 @@ final class tjb extends Widget {
         field_Cb = null;
     }
 
-    final void j(int param0) {
+    final void closeSubmenu(int param0) {
         int var3 = 0;
         IconTextWidget var4 = null;
         int var5 = VoidHunters.field_G;
-        IconTextWidget[] var6 = this.field_Bb;
+        IconTextWidget[] var6 = this.items;
         IconTextWidget[] var2 = var6;
         if (param0 != 16384) {
-          this.field_zb = -32;
+          this.menuHeight = -32;
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           var4.field_o = 0;
           var4.field_J = false;
         }
-        if (this.field_xb != null) {
-          this.field_xb.j(16384);
-          this.field_xb.unlink(param0 - 20230);
+        if (this.openSubmenu != null) {
+          this.openSubmenu.closeSubmenu(16384);
+          this.openSubmenu.unlink(param0 - 20230);
         }
-        this.field_xb = null;
-        this.field_vb = -1;
-        this.a((byte) 113, 12);
+        this.openSubmenu = null;
+        this.selectedItem = -1;
+        this.setAnimationStep((byte) 113, 12);
     }
 
     final static boolean l(int param0) {
@@ -279,43 +279,43 @@ final class tjb extends Widget {
           return false;
         }
         SetAudioRangeCutoff.field_q = true;
-        ska.field_p = wt.a(false) + 15000L;
+        StrongCacheReference.field_p = wt.a(false) + 15000L;
         return GetSpinningBladeAimspeed.field_q == 11 ? true : false;
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void updateSelection(int param0, int param1, byte param2) {
         int var5 = 0;
         int var4_int;
         IconTextWidget var6;
         int var7;
         IconTextWidget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        tjb var4;
-        tjb var8;
+        QuickChatMenuWidget var4;
+        QuickChatMenuWidget var8;
         var7 = VoidHunters.field_G;
         var4_int = -84 / ((-12 - param2) / 44);
-        for (var5 = 0; this.field_Bb.length > var5; var5++) {
-          var6 = this.field_Bb[var5];
+        for (var5 = 0; this.items.length > var5; var5++) {
+          var6 = this.items[var5];
           if (var6.field_o == 1) {
-            this.a(var5, true, param0, param1);
+            this.activateItem(var5, true, param0, param1);
             stackIn_7_0 = var6;
-            stackIn_8_1 = (var5 == this.field_vb);
+            stackIn_8_1 = (var5 == this.selectedItem);
             stackIn_7_0.field_J = stackIn_8_1;
           }
         }
-        if (this.field_vb != -1) {
-          var8 = this.field_Db[this.field_vb];
+        if (this.selectedItem != -1) {
+          var8 = this.submenus[this.selectedItem];
           var4 = var8;
           if (var4 != null) {
-            var8.a(param0, param1, (byte) 78);
+            var8.updateSelection(param0, param1, (byte) 78);
           }
         }
-        if (0 < this.field_Fb) {
-          this.a((byte) 123, this.field_Fb - 1);
+        if (0 < this.animationStep) {
+          this.setAnimationStep((byte) 123, this.animationStep - 1);
         }
     }
 
-    final boolean h(int param0) {
+    final boolean hasClickedItem(int param0) {
         int var2;
         IconTextWidget[] var3;
         int var4;
@@ -327,7 +327,7 @@ final class tjb extends Widget {
         int stackIn_18_0 = 0;
         var6 = VoidHunters.field_G;
         var2 = 0;
-        var3 = this.field_Bb;
+        var3 = this.items;
         var4 = 0;
         while (var4 < var3.length) {
           var5 = var3[var4];
@@ -342,47 +342,47 @@ final class tjb extends Widget {
           var4++;
         }
         if (param0 != -25675) {
-          tjb.l(52);
+          QuickChatMenuWidget.l(52);
         }
         if (var2 == 0 &&
-          -1 != this.field_vb &&
-          this.field_Db[this.field_vb] != null) {
-          stackIn_18_0 = (!this.field_Db[this.field_vb].h(-25675)) ? 0 : 1;
+          -1 != this.selectedItem &&
+          this.submenus[this.selectedItem] != null) {
+          stackIn_18_0 = (!this.submenus[this.selectedItem].hasClickedItem(-25675)) ? 0 : 1;
           var2 = stackIn_18_0;
         }
         return var2 != 0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void layoutMenu(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
         int var7Lifetime1;
         var9 = VoidHunters.field_G;
-        this.field_Eb = this.field_Jb + 2 * param3;
+        this.menuWidth = this.contentWidth + 2 * param3;
         if (param0 != 12) {
           return;
         }
-        this.setBounds(param2, param0 - 41, this.field_Eb, param1 - this.field_zb, this.field_zb);
-        if (param4 != this.field_Hb) {
-          this.field_Hb = param4;
-          this.a((byte) 116, this.field_Fb);
+        this.setBounds(param2, param0 - 41, this.menuWidth, param1 - this.menuHeight, this.menuHeight);
+        if (param4 != this.parentItemY) {
+          this.parentItemY = param4;
+          this.setAnimationStep((byte) 116, this.animationStep);
         }
-        for (var7 = 0; var7 < this.field_Gb; var7++) {
-          this.field_Bb[var7].setBoundsAndLayout(this.field_Bb[var7].y, 0, -127, param3, param5, this.field_Eb, this.field_Ib);
+        for (var7 = 0; var7 < this.itemCount; var7++) {
+          this.items[var7].setBoundsAndLayout(this.items[var7].y, 0, -127, param3, param5, this.menuWidth, this.rowHeight);
         }
-        if (this.field_vb != -1 &&
-          this.field_Db[this.field_vb] != null) {
-          var7Lifetime1 = this.field_Db[this.field_vb].field_Gb;
-          for (var8 = this.y + (this.field_vb + var7Lifetime1) * this.field_Ib; param1 < var8; var8 = var8 - this.field_Ib) {
+        if (this.selectedItem != -1 &&
+          this.submenus[this.selectedItem] != null) {
+          var7Lifetime1 = this.submenus[this.selectedItem].itemCount;
+          for (var8 = this.y + (this.selectedItem + var7Lifetime1) * this.rowHeight; param1 < var8; var8 = var8 - this.rowHeight) {
           }
-          this.field_Db[this.field_vb].a(12, var8, this.field_Eb + param2, param3, this.field_Bb[this.field_vb].screenY, param5);
+          this.submenus[this.selectedItem].layoutMenu(12, var8, this.menuWidth + param2, param3, this.items[this.selectedItem].screenY, param5);
           return;
         }
         return;
     }
 
-    final static Object a(Object[] param0, int param1) {
+    final static Object findDuplicateReference(Object[] param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         Object stackIn_3_0 = null;

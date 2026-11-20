@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dda extends dg implements uq {
+final class OpenGlClientVertexBuffer extends OpenGlClientBuffer implements OpenGlVertexBufferBinding {
     static mka[] field_d;
     static String field_c;
 
-    public final int a(boolean param0) {
+    public final int getBufferId(boolean param0) {
         if (!param0) {
           return 79;
         }
@@ -23,7 +23,7 @@ final class dda extends dg implements uq {
         field_c = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void ensureIntScratchCapacity(int param0, int param1) {
         if (null == dw.field_a) {
           dw.field_a = new int[param0];
         } else {
@@ -46,7 +46,7 @@ final class dda extends dg implements uq {
         GetGrapplingHooksDamageableBySourcePlayer.field_o = param1;
     }
 
-    dda(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
+    OpenGlClientVertexBuffer(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
     }
 

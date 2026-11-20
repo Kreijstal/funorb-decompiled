@@ -365,7 +365,7 @@ final class MissionControl implements DiffableState {
         MissionControl var5 = null;
         try {
           var5 = (MissionControl) (other);
-          CarouselSlot.a(var5.events, 1, this.events, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var5.events, 1, this.events, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var5.events, false, 1, this.events, 115)) {
             var4 = 1;

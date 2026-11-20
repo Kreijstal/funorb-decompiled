@@ -5,7 +5,7 @@ import java.io.*;
 
 final class MidiNote extends IntrusiveNode {
     int samplesUntilUpdate;
-    static tjb field_m;
+    static QuickChatMenuWidget field_m;
     int releasePosition;
     PcmSample sample;
     MidiEnvelope envelope;
@@ -77,7 +77,7 @@ final class MidiNote extends IntrusiveNode {
             SetSniperCannonFiringLeeway.field_o[var1_int] = 0L;
           }
           if (param0 != 2096) {
-            field_m = (tjb) null;
+            field_m = (QuickChatMenuWidget) null;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             fm.field_b[var1_intLifetime1] = 0L;

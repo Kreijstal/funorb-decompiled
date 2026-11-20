@@ -18,14 +18,14 @@ final class SoftwareToolkit extends GraphicsToolkit {
     private int projectionCenterX;
     private int field_q;
     int clipTop;
-    private pfb field_d;
+    private SoftLruCache field_d;
     private float[] field_G;
     private int projectionScaleX;
     private int field_u;
     private int field_F;
     int clipRight;
     private int field_v;
-    private pfb field_f;
+    private SoftLruCache field_f;
     private SoftwareRenderContext[] threadContexts;
     private int projectionCenterY;
     private int height;
@@ -1298,7 +1298,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         int var5 = 0;
         TextureMetadata var6 = null;
         int var2 = param0 - this.field_E;
-        Object var3 = this.field_f.a((byte) 67);
+        Object var3 = this.field_f.first((byte) 67);
         while (var3 != null) {
           var4 = (uva) (var3);
           if (var4.field_h) {
@@ -1311,11 +1311,11 @@ final class SoftwareToolkit extends GraphicsToolkit {
             }
             var4.field_h = false;
           }
-          var3 = this.field_f.a(false);
+          var3 = this.field_f.next(false);
         }
         this.field_E = param0;
-        this.field_d.a(true, 5);
-        this.field_f.a(true, 5);
+        this.field_d.age(true, 5);
+        this.field_f.age(true, 5);
     }
 
     private final void bindThreadContext(int param0) {
@@ -1626,9 +1626,9 @@ final class SoftwareToolkit extends GraphicsToolkit {
         this.clipRight = 0;
         this.farPlane = 3500;
         this.nearPlane = 50;
-        this.field_d = new pfb(16);
+        this.field_d = new SoftLruCache(16);
         try {
-          this.field_f = new pfb(256);
+          this.field_f = new SoftLruCache(256);
           discarded$0 = new SoftwareTransform3D();
           this.setThreadContextCount(1);
           this.bindThreadContext(0);

@@ -40,7 +40,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!mn.a(var6, (byte) -121)) {
-            stackIn_2_0 = tjb.field_Cb;
+            stackIn_2_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_2_0;
           }
           if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, param1)) {

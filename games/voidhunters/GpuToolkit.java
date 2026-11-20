@@ -1940,7 +1940,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
               var12 = 50 * var11;
               var13 = this.getTextureTransform((byte) 24);
               var13.setTranslation((float)(var10.field_p * (this.field_pc % var12)) / (float)var12, (float)(this.field_pc % var12 * var10.field_d) / (float)var12, 49, 0.0f);
-              this.setTextureTransformMode(vf.field_a, true);
+              this.setTextureTransformMode(OpenGlInterleavedVertexBuffer.field_a, true);
             }
             var6 = var10.field_f;
             if (!this.field_Tb) {

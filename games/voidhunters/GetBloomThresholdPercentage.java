@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBloomThresholdPercentage extends ConsoleCommand {
-    static ri field_o;
+    static QuickChatDynamicCommand field_o;
     static boolean field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -49,6 +49,6 @@ final class GetBloomThresholdPercentage extends ConsoleCommand {
 
     static {
         field_p = true;
-        field_o = new ri(14, 0, 4, 1);
+        field_o = new QuickChatDynamicCommand(14, 0, 4, 1);
     }
 }

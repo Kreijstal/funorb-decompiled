@@ -133,7 +133,7 @@ final class TrailHolder implements DiffableState {
         Exception var6 = null;
         int var7 = 0;
         IsaacPacketBuffer var8 = null;
-        pi var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = VoidHunters.field_G;
         var8 = qga.field_b;
         var2 = var8;
@@ -180,12 +180,12 @@ final class TrailHolder implements DiffableState {
         }
         var5 = var8.readUnsignedShort(1869);
         try {
-          var9 = GetTorpedoAimarc.field_o.a(var5, -119);
-          SetCountermeasureLauncherProjectiles.field_p = var9.a(80);
+          var9 = GetTorpedoAimarc.field_o.getPhrase(var5, -119);
+          SetCountermeasureLauncherProjectiles.field_p = var9.getPreviewText(80);
           if (TextureCoordinateMode.field_a.equals(IntIndexTable.field_a)) {
             stackIn_26_0 = null;
           } else {
-            stackIn_26_0 = var9.field_n;
+            stackIn_26_0 = var9.linkedPhraseIds;
           }
           un.field_h = stackIn_26_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class CarouselEvent extends IntrusiveNode implements DiffableState {
-    boolean field_f;
+    boolean confirmed;
     static int field_h;
-    int field_e;
-    CarouselSystemEvent field_d;
-    boolean field_g;
+    int tick;
+    CarouselSystemEvent systemEvent;
+    boolean pendingApplication;
 
     public void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
@@ -18,17 +18,17 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.writeBits(-632, this.field_e, SetMissilesTopSpeed.field_p);
+          param0.writeBits(-632, this.tick, SetMissilesTopSpeed.field_p);
           if (param1 >= -109) {
             return;
           }
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = 59;
-          stackIn_5_2 = (this.field_d != null);
+          stackIn_5_2 = (this.systemEvent != null);
           if (!vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             return;
           }
-          this.field_d.writeState(param0, -113);
+          this.systemEvent.writeState(param0, -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,7 +44,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final void a(byte param0, mfa param1, CarouselSlot param2) {
+    final void applyTo(byte param0, PlayerNameRegistry param1, CarouselSlot param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -63,32 +63,32 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
             var7 = (SerializableGameState) null;
             this.differsFrom((byte) 62, (SerializableGameState) null);
           }
-          if (this.field_d != null &&
-            this.field_d.field_e != null) {
-            var8 = this.field_d.field_e;
+          if (this.systemEvent != null &&
+            this.systemEvent.field_e != null) {
+            var8 = this.systemEvent.field_e;
             var5 = var8.field_a;
-            var9 = param2.field_c[var5];
+            var9 = param2.players[var5];
             if (param1 != null) {
-              param1.a(var8.field_b, var5, (byte) -117);
+              param1.setPlayerName(var8.field_b, var5, (byte) -117);
             }
             var9.connected = true;
-            var9.onJoin(param2, var5, -24354, this.field_e);
+            var9.onJoin(param2, var5, -24354, this.tick);
             GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied join for " + var8.field_b);
           } else {
-            if (null != this.field_d &&
-              this.field_d.field_d != null) {
-              var10 = this.field_d.field_d;
+            if (null != this.systemEvent &&
+              this.systemEvent.field_d != null) {
+              var10 = this.systemEvent.field_d;
               var5 = var10.field_d;
-              var11 = param2.field_c[var5];
+              var11 = param2.players[var5];
               var11.connected = false;
-              var11.onLeave(true, param2, this.field_e, var5);
+              var11.onLeave(true, param2, this.tick, var5);
               GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied leave for player " + var5);
             }
           }
-          if (null != this.field_d) {
+          if (null != this.systemEvent) {
             return;
           }
-          this.a(param1, 0, param2);
+          this.applyCustomEvent(param1, 0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,15 +125,15 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
           boolean decompiledFrameRemainder0 = true;
           var3 = (CarouselEvent) (param1);
           var4 = 72 % ((22 - param0) / 59);
-          if (var3.field_e == this.field_e) {
-            stackIn_4_0 = (this.field_d != null) ? 0 : 1;
-            if (var3.field_d != null) {
+          if (var3.tick == this.tick) {
+            stackIn_4_0 = (this.systemEvent != null) ? 0 : 1;
+            if (var3.systemEvent != null) {
               stackIn_7_1 = 0;
             } else {
               stackIn_7_1 = 1;
             }
-            if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (null == this.field_d ||
-              !this.field_d.differsFrom((byte) 121, var3.field_d))) {
+            if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (null == this.systemEvent ||
+              !this.systemEvent.differsFrom((byte) 121, var3.systemEvent))) {
               stackIn_13_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -170,29 +170,29 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         try {
           var6 = (CarouselEvent) (other);
           var4 = 0;
-          if (this.field_e != var6.field_e) {
-            GetSniperCannonAimarc.a(-6940, "int tick has changed. before=" + var6.field_e + ", now=" + this.field_e);
+          if (this.tick != var6.tick) {
+            GetSniperCannonAimarc.a(-6940, "int tick has changed. before=" + var6.tick + ", now=" + this.tick);
             var4 = 1;
           }
           if (obfuscationGuard > -19) {
             var5 = (IsaacPacketBuffer) null;
             this.writeState((IsaacPacketBuffer) null, 67);
           }
-          if (this.field_d != null &&
-            null != var6.field_d) {
-            this.field_d.reportDifferences(var6.field_d, -70);
+          if (this.systemEvent != null &&
+            null != var6.systemEvent) {
+            this.systemEvent.reportDifferences(var6.systemEvent, -70);
           }
-          stackIn_12_0 = (null != this.field_d) ? 0 : 1;
-          if (var6.field_d != null) {
+          stackIn_12_0 = (null != this.systemEvent) ? 0 : 1;
+          if (var6.systemEvent != null) {
             stackIn_15_1 = 0;
           } else {
             stackIn_15_1 = 1;
           }
           if ((stackIn_12_0 ^ stackIn_15_1) != 0 ||
-            this.field_d != null &&
-            this.field_d.differsFrom((byte) 108, var6.field_d)) {
+            this.systemEvent != null &&
+            this.systemEvent.differsFrom((byte) 108, var6.systemEvent)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.field_d + ", now=" + this.field_d);
+            GetSniperCannonAimarc.a(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.systemEvent + ", now=" + this.systemEvent);
           }
           if (var4 == 0) {
             return;
@@ -213,15 +213,15 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSystemEvent(int param0) {
         int var2 = -71 / ((param0 - 59) / 43);
-        return null != this.field_d ? true : false;
+        return null != this.systemEvent ? true : false;
     }
 
-    final void a(int param0, int param1) {
+    final void setPlayerReadyEvent(int param0, int param1) {
         int var3 = -106 % ((-71 - param1) / 44);
-        this.field_d = new CarouselSystemEvent();
-        this.field_d.field_f = new PlayerReady(param0);
+        this.systemEvent = new CarouselSystemEvent();
+        this.systemEvent.field_f = new PlayerReady(param0);
     }
 
     public void copyTo(byte param0, SerializableGameState param1) {
@@ -235,19 +235,19 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         try {
           var4 = (CarouselEvent) (param1);
           var3 = var4;
-          var4.field_e = this.field_e;
+          var4.tick = this.tick;
           if (param0 < 54) {
             return;
           }
-          if (this.field_d == null) {
-            var4.field_d = null;
+          if (this.systemEvent == null) {
+            var4.systemEvent = null;
             return;
           }
-          if (null == var3.field_d ||
-            var3.field_d.getClass() != this.field_d.getClass()) {
-            var3.field_d = new CarouselSystemEvent();
+          if (null == var3.systemEvent ||
+            var3.systemEvent.getClass() != this.systemEvent.getClass()) {
+            var3.systemEvent = new CarouselSystemEvent();
           }
-          this.field_d.copyTo((byte) 121, var3.field_d);
+          this.systemEvent.copyTo((byte) 121, var3.systemEvent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         }
     }
 
-    void a(mfa param0, int param1, CarouselSlot param2) {
+    void applyCustomEvent(PlayerNameRegistry param0, int param1, CarouselSlot param2) {
         try {
           if (param1 != 0) {
             SerializableGameState var5 = (SerializableGameState) null;
@@ -274,12 +274,12 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean needsApplication(byte param0) {
         if (param0 <= 21) {
-          this.a(52, -95);
-          return this.field_g;
+          this.setPlayerReadyEvent(52, -95);
+          return this.pendingApplication;
         }
-        return this.field_g;
+        return this.pendingApplication;
     }
 
     public void readState(IsaacPacketBuffer param0, boolean param1) {
@@ -289,18 +289,18 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = param0.readBits(0, SetMissilesTopSpeed.field_p);
+          this.tick = param0.readBits(0, SetMissilesTopSpeed.field_p);
           if (param1) {
             return;
           }
           if (!kv.readBoolean(param1, param0)) {
-            this.field_d = null;
+            this.systemEvent = null;
             return;
           }
-          if (this.field_d == null) {
-            this.field_d = new CarouselSystemEvent();
+          if (this.systemEvent == null) {
+            this.systemEvent = new CarouselSystemEvent();
           }
-          this.field_d.readState(param0, param1);
+          this.systemEvent.readState(param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,14 +316,14 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isConfirmed(int param0) {
         int var2 = -72 % ((param0 - 70) / 40);
-        return this.field_f;
+        return this.confirmed;
     }
 
     CarouselEvent() {
-        this.field_f = true;
-        this.field_g = true;
+        this.confirmed = true;
+        this.pendingApplication = true;
     }
 
     static {

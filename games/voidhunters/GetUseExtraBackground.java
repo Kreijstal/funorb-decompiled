@@ -9,7 +9,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
     final static void a(int param0) {
         uga.field_d = false;
         if (null != MidiNote.field_m) {
-          MidiNote.field_m.j(16384);
+          MidiNote.field_m.closeSubmenu(16384);
           if (~ow.field_b != param0) {
             dr.a(26718);
             GetLaserAimspeed.field_p = 0;

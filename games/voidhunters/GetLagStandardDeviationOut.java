@@ -38,7 +38,7 @@ final class GetLagStandardDeviationOut extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(oaa.b((byte) -51));
+            stackIn_4_0 = new ConsoleValue(OpenGlVertexBufferObject.b((byte) -51));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

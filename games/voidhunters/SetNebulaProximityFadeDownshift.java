@@ -37,7 +37,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            nga.field_e = param1;
+            IntrusiveNodeHashTable.field_e = param1;
             try {
               var6 = param0.getParameter("cookieprefix");
               var5 = var6;

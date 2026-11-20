@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameApplet {
           NetworkArchiveRequest.f((byte) -119);
           SetMessageFadetime.a(dgb.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
-          ska.field_p = wt.a(false) + 15000L;
+          StrongCacheReference.field_p = wt.a(false) + 15000L;
         } else {
           if (GetSpinningBladeAimspeed.field_q == 11 &&
             0 == MapClearanceArea.field_a) {
@@ -151,7 +151,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.a(-10560);
             GetSpinningBladeAimarc.field_o = true;
-            ska.field_p = 15000L + wt.a(false);
+            StrongCacheReference.field_p = 15000L + wt.a(false);
           }
         }
         if (-1 == MapClearanceArea.field_a ||
@@ -167,7 +167,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (MapClearanceArea.field_a != -1 &&
             MapClearanceArea.field_a != 0) {
-            ska.field_p = wt.a(false) + 15000L;
+            StrongCacheReference.field_p = wt.a(false) + 15000L;
           }
         }
         if (-1 != MapClearanceArea.field_a &&
@@ -217,12 +217,12 @@ abstract class NetworkGameClient extends GameApplet {
         if ((-1 != MapClearanceArea.field_a &&
           MapClearanceArea.field_a != 0 ||
           SetWeaponProjectileSpeedMultiply.b(true)) &&
-          wt.a(false) >= ska.field_p) {
+          wt.a(false) >= StrongCacheReference.field_p) {
           GetSpinningBladeAimarc.field_o = false;
           if (-1 != MapClearanceArea.field_a &&
             MapClearanceArea.field_a != 0) {
             MapClearanceArea.field_a = -1;
-            bna.e(0);
+            SoftCacheReference.setArchiveErrorStatus(0);
           }
         }
         if (MapClearanceArea.field_a == 0 &&
@@ -266,7 +266,7 @@ abstract class NetworkGameClient extends GameApplet {
           GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
           MissionFactory.b((byte) 123);
           GetPhasedEnergyBeamFireForce.b(false);
-          mnb.field_g = SetFighterRepairTime.field_o;
+          OpenGlBufferObject.field_g = SetFighterRepairTime.field_o;
           djb.field_r = false;
           GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, BufferedFile.field_i, false);
           if (jb.field_a ||
@@ -700,7 +700,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (MapClearanceArea.field_a != -1 &&
               MapClearanceArea.field_a != 0) {
               MapClearanceArea.field_a = -1;
-              bna.e(0);
+              SoftCacheReference.setArchiveErrorStatus(0);
             }
             if (param1) {
               GetSpinningBladeAimarc.field_o = false;

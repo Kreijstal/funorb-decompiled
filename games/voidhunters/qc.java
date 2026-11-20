@@ -10,7 +10,7 @@ abstract class qc implements kd {
     BitmapFont field_n;
     soa field_h;
     private IntrusiveDeque field_i;
-    static ri field_g;
+    static QuickChatDynamicCommand field_g;
     static Widget field_q;
     private String[] field_d;
     private int field_l;
@@ -403,7 +403,7 @@ abstract class qc implements kd {
           }
         }
         if (!param0) {
-          field_g = (ri) null;
+          field_g = (QuickChatDynamicCommand) null;
         }
     }
 
@@ -540,6 +540,6 @@ abstract class qc implements kd {
     }
 
     static {
-        field_g = new ri(15, 0, 1, 0);
+        field_g = new QuickChatDynamicCommand(15, 0, 1, 0);
     }
 }

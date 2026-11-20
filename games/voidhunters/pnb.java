@@ -6,24 +6,24 @@ import java.util.*;
 final class pnb implements Iterator {
     private IntrusiveNode field_d;
     private IntrusiveNode field_a;
-    private nga field_b;
+    private IntrusiveNodeHashTable field_b;
     private int field_c;
 
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
         var2 = VoidHunters.field_G;
-        if (this.field_d != this.field_b.field_h[-1 + this.field_c]) {
+        if (this.field_d != this.field_b.buckets[-1 + this.field_c]) {
           return true;
         }
-        while (this.field_c < this.field_b.field_f) {
+        while (this.field_c < this.field_b.bucketCount) {
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_b.field_h[fieldTemp$0].next != this.field_b.field_h[-1 + this.field_c]) {
-            this.field_d = this.field_b.field_h[this.field_c - 1].next;
+          if (this.field_b.buckets[fieldTemp$0].next != this.field_b.buckets[-1 + this.field_c]) {
+            this.field_d = this.field_b.buckets[this.field_c - 1].next;
             return true;
           }
-          this.field_d = this.field_b.field_h[this.field_c - 1];
+          this.field_d = this.field_b.buckets[this.field_c - 1];
         }
         return false;
     }
@@ -33,20 +33,20 @@ final class pnb implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = VoidHunters.field_G;
-        if (this.field_b.field_h[this.field_c - 1] != this.field_d) {
+        if (this.field_b.buckets[this.field_c - 1] != this.field_d) {
           var1 = this.field_d;
           this.field_d = var1.next;
           this.field_a = var1;
           return var1;
         }
         do {
-          if (this.field_c >= this.field_b.field_f) {
+          if (this.field_c >= this.field_b.bucketCount) {
             return null;
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var1 = this.field_b.field_h[fieldTemp$0].next;
-        } while (this.field_b.field_h[this.field_c - 1] == var1);
+          var1 = this.field_b.buckets[fieldTemp$0].next;
+        } while (this.field_b.buckets[this.field_c - 1] == var1);
         this.field_d = var1.next;
         this.field_a = var1;
         return var1;
@@ -54,18 +54,18 @@ final class pnb implements Iterator {
 
     private final void a(int param0) {
         if (param0 == 1) {
-          this.field_d = this.field_b.field_h[0].next;
+          this.field_d = this.field_b.buckets[0].next;
           this.field_a = null;
           this.field_c = 1;
           return;
         }
         this.field_a = (IntrusiveNode) null;
-        this.field_d = this.field_b.field_h[0].next;
+        this.field_d = this.field_b.buckets[0].next;
         this.field_a = null;
         this.field_c = 1;
     }
 
-    pnb(nga param0) {
+    pnb(IntrusiveNodeHashTable param0) {
         this.field_a = null;
         try {
           this.field_b = param0;

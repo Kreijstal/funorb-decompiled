@@ -48,7 +48,7 @@ final class AsteroidFieldFactory implements GameStateFactory {
         }
     }
 
-    final static void a(byte param0, tjb param1) {
+    final static void a(byte param0, QuickChatMenuWidget param1) {
         if (param1 == null) {
           return;
         }

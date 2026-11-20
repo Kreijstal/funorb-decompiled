@@ -70,7 +70,7 @@ final class ServerTickFactory implements GameStateFactory {
         try {
           var10 = (CharSequence) ((Object) param1);
           if (!mn.a(var10, (byte) -118)) {
-            stackIn_4_0 = tjb.field_Cb;
+            stackIn_4_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_4_0;
           }
           if (iwa.field_b != 2) {

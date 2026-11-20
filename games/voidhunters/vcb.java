@@ -409,12 +409,12 @@ final class vcb extends oda implements oo {
         this.field_P.field_g = ((var3 - var2) * this.field_M >> 16) + var2;
     }
 
-    final static tjb a(int param0, Widget param1, Widget param2, Widget param3, rn param4) {
+    final static QuickChatMenuWidget a(int param0, Widget param1, Widget param2, Widget param3, rn param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        tjb stackIn_27_0 = null;
+        QuickChatMenuWidget stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -432,12 +432,12 @@ final class vcb extends oda implements oo {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        tjb[] var11 = null;
+        QuickChatMenuWidget[] var11 = null;
         int var12 = 0;
         rn var13_ref_rn = null;
         int var13 = 0;
         int var15 = 0;
-        pi var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -448,7 +448,7 @@ final class vcb extends oda implements oo {
         try {
           if (param4 == null) {
             stackIn_3_0 = null;
-            return (tjb) (stackIn_3_0);
+            return (QuickChatMenuWidget) (stackIn_3_0);
           }
           if (param4.field_l != null) {
             stackIn_7_0 = param4.field_l.length;
@@ -473,7 +473,7 @@ final class vcb extends oda implements oo {
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new tjb[var7];
+          var11 = new QuickChatMenuWidget[var7];
           if (null != param4.field_l) {
             for (var12 = 0; var12 < param4.field_l.length; var12++) {
               var13_ref_rn = lnb.field_i.a((byte) -72, param4.field_l[var12]);
@@ -492,8 +492,8 @@ final class vcb extends oda implements oo {
                 var9[var14 + var12Lifetime1] = param4.field_m[var14];
                 var10[var12Lifetime1 + var14] = param4.field_n[var14];
               } else {
-                var16 = GetTorpedoAimarc.field_o.a(var15, -118);
-                var8[var14 + var12Lifetime1] = var16.a(80);
+                var16 = GetTorpedoAimarc.field_o.getPhrase(var15, -118);
+                var8[var14 + var12Lifetime1] = var16.getPreviewText(80);
                 var9[var14 + var12Lifetime1] = param4.field_m[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);
@@ -503,7 +503,7 @@ final class vcb extends oda implements oo {
               }
             }
           }
-          stackIn_27_0 = new tjb(0L, param1, param2, param3, var11, var20, var8, var21);
+          stackIn_27_0 = new QuickChatMenuWidget(0L, param1, param2, param3, var11, var20, var8, var21);
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

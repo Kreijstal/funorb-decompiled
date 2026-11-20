@@ -69,17 +69,17 @@ final class GetLaserAimspeed extends ConsoleCommand {
             var5 = var27.readUnsignedByte((byte) -97);
             if (0 != var5) {
               var6 = var4_ref.field_i;
-              dda.field_d[0].field_b = null;
-              dda.field_d[0].field_a = IntIndexTable.field_a;
+              OpenGlClientVertexBuffer.field_d[0].field_b = null;
+              OpenGlClientVertexBuffer.field_d[0].field_a = IntIndexTable.field_a;
               var7 = var4_ref.field_g;
-              dda.field_d[0].field_c = false;
+              OpenGlClientVertexBuffer.field_d[0].field_c = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                dda.field_d[var8_int].field_a = var27.readString(param0 - 2);
-                dda.field_d[var8_int].field_c = false;
+                OpenGlClientVertexBuffer.field_d[var8_int].field_a = var27.readString(param0 - 2);
+                OpenGlClientVertexBuffer.field_d[var8_int].field_c = false;
                 if (var27.readUnsignedByte((byte) -119) == 1) {
-                  dda.field_d[var8_int].field_b = var27.readString(param0 ^ -2);
+                  OpenGlClientVertexBuffer.field_d[var8_int].field_b = var27.readString(param0 ^ -2);
                 } else {
-                  dda.field_d[var8_int].field_b = null;
+                  OpenGlClientVertexBuffer.field_d[var8_int].field_b = null;
                 }
               }
               var8 = new String[3][var6];
@@ -96,12 +96,12 @@ final class GetLaserAimspeed extends ConsoleCommand {
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte((byte) -114);
-                  var21 = dda.field_d[var20].field_a;
+                  var21 = OpenGlClientVertexBuffer.field_d[var20].field_a;
                   var22 = var27.readLong(255);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = dda.field_d[var20].field_b;
+                    var9[0][var12] = OpenGlClientVertexBuffer.field_d[var20].field_b;
                     var34[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$0 = var15;
@@ -124,10 +124,10 @@ final class GetLaserAimspeed extends ConsoleCommand {
                     }
                   }
                   if (var14 < var6 &&
-                    !dda.field_d[var20].field_c) {
-                    dda.field_d[var20].field_c = true;
+                    !OpenGlClientVertexBuffer.field_d[var20].field_c) {
+                    OpenGlClientVertexBuffer.field_d[var20].field_c = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = dda.field_d[var20].field_b;
+                    var9[2][var14] = OpenGlClientVertexBuffer.field_d[var20].field_b;
                     var34[2][var14] = var22;
                     var14++;
                     var27.position = var24;

@@ -55,7 +55,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
             stackIn_7_0 = 100;
             return stackIn_7_0;
           }
-          var10 = CarouselCommongameInfo.a((byte) -33, param0);
+          var10 = CarouselCommongameInfo.getNativeLibraryName((byte) -33, param0);
           if (var10 == null) {
             stackIn_10_0 = -1;
             return stackIn_10_0;
@@ -186,7 +186,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
             if (var6 instanceof SetShipTeamAction) {
               var14 = (SetShipTeamAction) (var6);
               var8 = var14.getParameter(1, -116);
-              if (param0.a(var8, 0, -1)) {
+              if (param0.canSelectTeam(var8, 0, -1)) {
                 var4_int = var8;
               }
             } else {

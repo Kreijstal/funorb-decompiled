@@ -125,7 +125,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           param1.releasePackedGroups = false;
           param1.fileRetentionMode = 0;
           lnb.field_i = new jv(var3_int, param1, param1);
-          GetTorpedoAimarc.field_o = new voa(var3_int, param1, param1, new wk());
+          GetTorpedoAimarc.field_o = new QuickChatPhraseLoader(var3_int, param1, param1, new wk());
           var4 = VariableCondition.d(10);
           if (var4 == null) {
             var11 = (Throwable) null;

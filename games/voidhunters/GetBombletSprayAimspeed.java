@@ -12,18 +12,18 @@ final class GetBombletSprayAimspeed extends ConsoleCommand {
     }
 
     final static sr a(int param0, int param1) {
-        sr var2 = (sr) (us.field_d.b(param1, (long)param0));
+        sr var2 = (sr) (us.field_d.get(param1, (long)param0));
         if (var2 != null) {
           return var2;
         }
         byte[] var3 = rw.field_l.fetchFile(0, param0, (byte) 13);
         var2 = new sr();
         if (var3 == null) {
-          us.field_d.a(var2, (long)param0, (byte) -117);
+          us.field_d.put(var2, (long)param0, (byte) -117);
           return var2;
         }
         var2.a(param0, new PacketBuffer(var3), (byte) 11);
-        us.field_d.a(var2, (long)param0, (byte) -117);
+        us.field_d.put(var2, (long)param0, (byte) -117);
         return var2;
     }
 

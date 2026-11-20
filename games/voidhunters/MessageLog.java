@@ -51,19 +51,19 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    final static tjb a(Widget param0, int[] param1, int param2, Widget param3, Widget param4) {
+    final static QuickChatMenuWidget createQuickChatPhraseMenu(Widget param0, int[] param1, int param2, Widget param3, Widget param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
         char[] var7 = null;
-        tjb[] var8 = null;
+        QuickChatMenuWidget[] var8 = null;
         int var9 = 0;
-        pi var11 = null;
+        QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
         Object stackIn_7_0 = null;
-        tjb stackIn_9_0 = null;
+        QuickChatMenuWidget stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -83,12 +83,12 @@ final class MessageLog implements DiffableState {
           var14 = new char[var5_int];
           var13 = var14;
           var7 = var13;
-          var8 = new tjb[var5_int];
+          var8 = new QuickChatMenuWidget[var5_int];
           var9 = 49;
           try {
             for (var10_int = param2; var10_int < var5_int; var10_int++) {
-              var11 = GetTorpedoAimarc.field_o.a(param1[var10_int], -122);
-              var6[var10_int] = var11.a(80);
+              var11 = GetTorpedoAimarc.field_o.getPhrase(param1[var10_int], -122);
+              var6[var10_int] = var11.getPreviewText(80);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;
@@ -97,9 +97,9 @@ final class MessageLog implements DiffableState {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_7_0 = null;
-            return (tjb) (stackIn_7_0);
+            return (QuickChatMenuWidget) (stackIn_7_0);
           }
-          stackIn_9_0 = new tjb(0L, param0, param4, param3, var8, param1, var6, var14);
+          stackIn_9_0 = new QuickChatMenuWidget(0L, param0, param4, param3, var8, param1, var6, var14);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -214,7 +214,7 @@ final class MessageLog implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (MessageLog) (other);
-          CarouselSlot.a(var3.messages, 1, this.messages, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.messages, 1, this.messages, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.messages, false, 1, this.messages, 121)) {
             System.out.println("Message[] messages has changed. ");

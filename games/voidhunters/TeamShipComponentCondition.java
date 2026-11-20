@@ -4,7 +4,7 @@
 final class TeamShipComponentCondition extends MissionCondition implements DiffableState {
     private int componentTypeId;
     private int teamId;
-    static ri field_e;
+    static QuickChatDynamicCommand field_e;
 
     final void setParameter(World param0, int param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
@@ -70,7 +70,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
             System.out.println("int team_id has changed. before=" + var5.teamId + ", now=" + this.teamId);
           }
           if (obfuscationGuard > -19) {
-            field_e = (ri) null;
+            field_e = (QuickChatDynamicCommand) null;
           }
           if (this.componentTypeId != var5.componentTypeId) {
             System.out.println("int component_type_id has changed. before=" + var5.componentTypeId + ", now=" + this.componentTypeId);
@@ -306,6 +306,6 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
     }
 
     static {
-        field_e = new ri(0, 2, 2, 1);
+        field_e = new QuickChatDynamicCommand(0, 2, 2, 1);
     }
 }

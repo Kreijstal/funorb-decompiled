@@ -254,7 +254,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ComponentContact.field_d = param1[40];
           ehb.field_e = param1[152];
           GetFullMissionSet.field_p = param1[36];
-          voa.field_b = param1[144];
+          QuickChatPhraseLoader.field_b = param1[144];
           sib.field_i = param1[130];
           AsteroidFactory.field_a = param1[61];
           SetLaserAimarc.field_o = param1[160];
@@ -268,7 +268,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           CarouselSystemEvent.field_b = param1[170];
           SetMissilesCooldown.field_o = param1[174];
           GetAutoAfkTimeout.field_o = param1[97];
-          voa.field_d = param1[11];
+          QuickChatPhraseLoader.field_d = param1[11];
           GetRadialMenuRadius.field_p = param1[79];
           vdb.field_d = param1[45];
           GetAngularForceDownshift.field_q = param1[150];

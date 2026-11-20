@@ -19,7 +19,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     int field_X;
     int field_Kc;
     private OpenGlBloomEffect field_A;
-    private vf field_Ec;
+    private OpenGlInterleavedVertexBuffer field_Ec;
     private fbb field_d;
     private IntrusiveDeque field_D;
     nk field_yb;
@@ -64,7 +64,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private float[] field_L;
     boolean field_I;
     private int field_t;
-    private uq field_T;
+    private OpenGlVertexBufferBinding boundVertexBuffer;
     int field_jc;
     private OpenGlEnvironmentMapSource field_s;
     boolean field_bc;
@@ -104,7 +104,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     int field_M;
     private float field_mb;
     boolean field_gb;
-    private uq field_z;
+    private OpenGlVertexBufferBinding field_z;
     private boolean field_sc;
     private float field_u;
     private boolean field_k;
@@ -351,8 +351,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void setHeap(GraphicsHeap param0) {
         mb var3 = null;
-        od discarded$0 = null;
-        od discarded$1 = null;
+        OpenGlVertexAttribute discarded$0 = null;
+        OpenGlVertexAttribute discarded$1 = null;
         try {
           this.field_Kb = ((OpenGlNativeHeap) (param0)).heap;
           if (this.field_z == null) {
@@ -400,10 +400,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var3.a(0.0f, 1059949744);
               var3.a(0.0f, 1059949744);
             }
-            this.field_z = this.a(var3.payload, 20, var3.position, false, (byte) 121);
-            discarded$0 = new od(this.field_z, 5126, 3, 0);
-            discarded$1 = new od(this.field_z, 5126, 2, 12);
-            this.field_Ec.a(8, this);
+            this.field_z = this.createVertexBuffer(var3.payload, 20, var3.position, false, (byte) 121);
+            discarded$0 = new OpenGlVertexAttribute(this.field_z, 5126, 3, 0);
+            discarded$1 = new OpenGlVertexAttribute(this.field_z, 5126, 2, 12);
+            this.field_Ec.initialize(8, this);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qfa.GB(" + (param0 != null ? "{...}" : "null") + ')');
@@ -451,7 +451,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, uq param1) {
+    final void bindVertexBuffer(int param0, OpenGlVertexBufferBinding param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -461,11 +461,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (param0 != 34962) {
             this.a(0.2658414840698242f, 1.4282253980636597f, 20);
           }
-          if (param1 != this.field_T) {
+          if (param1 != this.boundVertexBuffer) {
             if (this.field_cb) {
-              jaggl.OpenGL.glBindBufferARB(34962, param1.a(true));
+              jaggl.OpenGL.glBindBufferARB(34962, param1.getBufferId(true));
             }
-            this.field_T = param1;
+            this.boundVertexBuffer = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -992,11 +992,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glTexEnvi(8960, param1 + param0, param2);
     }
 
-    final uq a(byte[] param0, int param1, int param2, boolean param3, byte param4) {
+    final OpenGlVertexBufferBinding createVertexBuffer(byte[] param0, int param1, int param2, boolean param3, byte param4) {
         RuntimeException var6 = null;
-        oaa stackIn_5_0 = null;
-        uq stackIn_8_0 = null;
-        dda stackIn_10_0 = null;
+        OpenGlVertexBufferObject stackIn_5_0 = null;
+        OpenGlVertexBufferBinding stackIn_8_0 = null;
+        OpenGlClientVertexBuffer stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -1004,14 +1004,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           if (this.field_cb && (!param3 ||
             this.field_k)) {
-            stackIn_5_0 = new oaa(this, param1, param0, param2, param3);
-            return (uq) ((Object) stackIn_5_0);
+            stackIn_5_0 = new OpenGlVertexBufferObject(this, param1, param0, param2, param3);
+            return (OpenGlVertexBufferBinding) ((Object) stackIn_5_0);
           }
           if (param4 >= 115) {
-            stackIn_10_0 = new dda(this, param1, param0, param2);
-            return (uq) ((Object) stackIn_10_0);
+            stackIn_10_0 = new OpenGlClientVertexBuffer(this, param1, param0, param2);
+            return (OpenGlVertexBufferBinding) ((Object) stackIn_10_0);
           }
-          stackIn_8_0 = (uq) null;
+          stackIn_8_0 = (OpenGlVertexBufferBinding) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1731,7 +1731,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         var20 = null;
         this.field_hb = new Hashtable();
         this.field_X = 128;
-        this.field_Ec = new vf();
+        this.field_Ec = new OpenGlInterleavedVertexBuffer();
         OpenGlTransform3D discarded$0 = new OpenGlTransform3D();
         OpenGlTransform3D discarded$1 = new OpenGlTransform3D();
         this.field_m = false;

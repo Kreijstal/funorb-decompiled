@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ppb {
-    static ri field_c;
+    static QuickChatDynamicCommand field_c;
     static String field_d;
     static ResourceArchive field_a;
     static PartitionZoneList field_b;
@@ -94,6 +94,6 @@ final class ppb {
 
     static {
         field_d = "Invisible";
-        field_c = new ri(11, 0, 1, 2);
+        field_c = new QuickChatDynamicCommand(11, 0, 1, 2);
     }
 }

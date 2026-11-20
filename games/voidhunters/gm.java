@@ -89,7 +89,7 @@ final class gm extends kja {
             var5 = this.field_J;
           }
         } else {
-          var5 = nga.field_c;
+          var5 = IntrusiveNodeHashTable.field_c;
         }
         if (var5.equals(this.field_j)) {
           if (param2 < 47) {

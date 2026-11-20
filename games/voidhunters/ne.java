@@ -7,7 +7,7 @@ final class ne extends ka {
     private float[] field_k;
     private byte[] field_q;
     private short[] field_E;
-    private od field_i;
+    private OpenGlVertexAttribute field_i;
     private short[] field_G;
     private uia[] field_D;
     private int field_w;
@@ -319,9 +319,9 @@ final class ne extends ka {
         try {
           var3_int = -60 / ((param1 + 49) / 39);
           var4 = null;
-          if (nga.field_e != null &&
-            !nga.field_e.equals(param2.getParameter("settings"))) {
-            var4 = nga.field_e;
+          if (IntrusiveNodeHashTable.field_e != null &&
+            !IntrusiveNodeHashTable.field_e.equals(param2.getParameter("settings"))) {
+            var4 = IntrusiveNodeHashTable.field_e;
             var5 = var4;
             var5Lifetime2 = var4;
           }
@@ -395,9 +395,9 @@ final class ne extends ka {
     }
 
     ne(OpenGlToolkit param0) {
-        od discarded$0 = null;
-        od discarded$1 = null;
-        od discarded$2 = null;
+        OpenGlVertexAttribute discarded$0 = null;
+        OpenGlVertexAttribute discarded$1 = null;
+        OpenGlVertexAttribute discarded$2 = null;
         dgb discarded$3 = null;
         this.field_B = 0;
         this.field_f = 0;
@@ -405,10 +405,10 @@ final class ne extends ka {
         this.field_p = false;
         this.field_x = 0;
         try {
-          this.field_i = new od((uq) null, 5126, 3, 0);
-          discarded$0 = new od((uq) null, 5126, 2, 0);
-          discarded$1 = new od((uq) null, 5126, 3, 0);
-          discarded$2 = new od((uq) null, 5121, 4, 0);
+          this.field_i = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
+          discarded$0 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 2, 0);
+          discarded$1 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
+          discarded$2 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5121, 4, 0);
           discarded$3 = new dgb();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -416,9 +416,9 @@ final class ne extends ka {
     }
 
     ne(OpenGlToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
-        od discarded$0 = null;
-        od discarded$1 = null;
-        od discarded$2 = null;
+        OpenGlVertexAttribute discarded$0 = null;
+        OpenGlVertexAttribute discarded$1 = null;
+        OpenGlVertexAttribute discarded$2 = null;
         dgb discarded$3 = null;
         int var9_int = 0;
         int fieldTemp$9 = 0;
@@ -600,16 +600,16 @@ final class ne extends ka {
           this.field_w = param2;
           this.field_u = param5;
           if (GetCountermeasureLauncherEnergyUsed.a(param5, 82, param2)) {
-            this.field_i = new od((uq) null, 5126, 3, 0);
+            this.field_i = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
           }
           if (OpenGlIndexBuffer.a(param5, param2, false)) {
-            discarded$0 = new od((uq) null, 5126, 2, 0);
+            discarded$0 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 2, 0);
           }
           if (toa.a(-8636, param2, param5)) {
-            discarded$1 = new od((uq) null, 5126, 3, 0);
+            discarded$1 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
           }
           if (SocketConnector.a(-6070, param5, param2)) {
-            discarded$2 = new od((uq) null, 5121, 4, 0);
+            discarded$2 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5121, 4, 0);
           }
           if (GetMissionDebrisVotingChancestep.a(param2, param5, false)) {
             discarded$3 = new dgb();

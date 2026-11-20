@@ -46,7 +46,7 @@ final class GetReverbDry extends ConsoleCommand {
           if (null != GetLagStandardDeviationOut.field_o) {
             return true;
           }
-          if (oaa.a((byte) -128)) {
+          if (OpenGlVertexBufferObject.a((byte) -128)) {
             return true;
           }
           if (null != Asteroid.field_v) {
@@ -60,7 +60,7 @@ final class GetReverbDry extends ConsoleCommand {
         if (null != GetLagStandardDeviationOut.field_o) {
           return true;
         }
-        if (oaa.a((byte) -128)) {
+        if (OpenGlVertexBufferObject.a((byte) -128)) {
           return true;
         }
         if (null != Asteroid.field_v) {

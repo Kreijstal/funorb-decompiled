@@ -145,8 +145,8 @@ final class MissionEvent implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (MissionEvent) (other);
-          CarouselSlot.a(var3.conditions, 1, this.conditions, true, 5547);
-          CarouselSlot.a(var3.actions, 1, this.actions, true, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.conditions, 1, this.conditions, true, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.actions, 1, this.actions, true, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.conditions, true, 1, this.conditions, -64)) {
             System.out.println("MissionCondition[] conditions has changed. ");

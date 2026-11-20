@@ -5,7 +5,7 @@ final class ae {
     private int field_a;
     private int field_d;
     int field_c;
-    static ri field_g;
+    static QuickChatDynamicCommand field_g;
     private int field_i;
     private int field_h;
     private boolean field_b;
@@ -598,7 +598,7 @@ final class ae {
           var2.chassis.updateWorldTransforms(true, 0, 0, 0, 0, var2.getBoundingbox((byte) -123));
           var2.chassis.configureThrusterBindings((byte) 21, (ShipBody) (var2));
           if (param1 <= 21) {
-            field_g = (ri) null;
+            field_g = (QuickChatDynamicCommand) null;
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -658,6 +658,6 @@ final class ae {
     }
 
     static {
-        field_g = new ri(12, 0, 1, 0);
+        field_g = new QuickChatDynamicCommand(12, 0, 1, 0);
     }
 }

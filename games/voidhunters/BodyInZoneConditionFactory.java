@@ -34,7 +34,7 @@ final class BodyInZoneConditionFactory implements GameStateFactory {
         try {
           vhb.field_d = param1;
           SetPointDefenceLaserAimarc.field_q = param3;
-          ska.field_o = param4;
+          StrongCacheReference.field_o = param4;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

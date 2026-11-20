@@ -429,7 +429,7 @@ final class rw extends TextureOperation {
         if (param1 != 71) {
           return;
         }
-        pi.a((byte) -121, true, param0);
+        QuickChatPhraseDefinition.a((byte) -121, true, param0);
     }
 
     static {

@@ -167,7 +167,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = (AsteroidField) (other);
-          CarouselSlot.a(var3.asteroids, 1, this.asteroids, false, 5547);
+          CarouselSlot.reportStateArrayDifferences(var3.asteroids, 1, this.asteroids, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.asteroids, false, 1, this.asteroids, 127)) {
             System.out.println("Asteroid[] asteroids has changed. ");
@@ -713,7 +713,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime44 = HuffmanCodec.fetchLocalizedResource((byte) -81, "option_state_members_only");
           if (null != var2Lifetime44) {
-            ri.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime44);
+            QuickChatDynamicCommand.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime44);
           }
           var2Lifetime45 = HuffmanCodec.fetchLocalizedResource((byte) -86, "crown_tooltips,4");
           if (null != var2Lifetime45) {
@@ -909,7 +909,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime93 = HuffmanCodec.fetchLocalizedResource((byte) -124, "next_mission_colon");
           if (var2Lifetime93 != null) {
-            pfb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime93);
+            SoftLruCache.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime93);
           }
           var2Lifetime94 = HuffmanCodec.fetchLocalizedResource((byte) -44, "round_x");
           if (null != var2Lifetime94) {

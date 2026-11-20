@@ -7,17 +7,17 @@ final class rlb {
     static int field_e;
     static Widget field_a;
     private TextureProvider field_c;
-    private pfb field_f;
+    private SoftLruCache field_f;
 
     final void b(int param0) {
-        this.field_f.b((byte) 94);
+        this.field_f.clear((byte) 94);
         if (param0 >= 0) {
           field_a = (Widget) null;
         }
     }
 
     final void a(boolean param0) {
-        this.field_f.a(param0, 5);
+        this.field_f.age(param0, 5);
     }
 
     final aia a(byte param0, int param1) {
@@ -37,7 +37,7 @@ final class rlb {
         aia var25 = null;
         int var9 = VoidHunters.field_G;
         int var3 = -84 % ((param0 + 54) / 60);
-        Object var4 = this.field_f.b(0, (long)param1);
+        Object var4 = this.field_f.get(0, (long)param1);
         if (var4 != null) {
           return (aia) (var4);
         }
@@ -51,20 +51,20 @@ final class rlb {
             var27 = this.field_c.generateArgbPixels(88, var7, var7, false, param1, 0.699999988079071f);
             var15 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var27, 0, 0, false);
             var15.a(var6.field_s, var6.field_k, 10497);
-            this.field_f.a(var15, (long)param1, (byte) -117);
+            this.field_f.put(var15, (long)param1, (byte) -117);
             return var15;
           }
           if (SoftwareGlyphMask.a(97, (int) var6.field_c)) {
             var29 = this.field_c.generateRgbPixels(var7, 0.699999988079071f, true, param1, var7, true);
             var19 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var29, 0, 0, false);
             var19.a(var6.field_s, var6.field_k, 10497);
-            this.field_f.a(var19, (long)param1, (byte) -117);
+            this.field_f.put(var19, (long)param1, (byte) -117);
             return var19;
           }
           var28 = this.field_c.generateArgbPixels(88, var7, var7, false, param1, 0.699999988079071f);
           var17 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var28, 0, 0, false);
           var17.a(var6.field_s, var6.field_k, 10497);
-          this.field_f.a(var17, (long)param1, (byte) -117);
+          this.field_f.put(var17, (long)param1, (byte) -117);
           return var17;
         }
         if (this.field_b.isBloomEnabled()) {
@@ -74,27 +74,27 @@ final class rlb {
           float[] var8 = var10;
           var5 = new aia(this.field_b, 3553, 34842, var7, var7, var6.field_j != 0 ? true : false, var12, 6408);
           var5.a(var6.field_s, var6.field_k, 10497);
-          this.field_f.a(var5, (long)param1, (byte) -117);
+          this.field_f.put(var5, (long)param1, (byte) -117);
           return var5;
         }
         if (var6.field_q == 2) {
           var30 = this.field_c.generateArgbPixels(88, var7, var7, false, param1, 0.699999988079071f);
           var21 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var30, 0, 0, false);
           var21.a(var6.field_s, var6.field_k, 10497);
-          this.field_f.a(var21, (long)param1, (byte) -117);
+          this.field_f.put(var21, (long)param1, (byte) -117);
           return var21;
         }
         if (SoftwareGlyphMask.a(97, (int) var6.field_c)) {
           var32 = this.field_c.generateRgbPixels(var7, 0.699999988079071f, true, param1, var7, true);
           var25 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var32, 0, 0, false);
           var25.a(var6.field_s, var6.field_k, 10497);
-          this.field_f.a(var25, (long)param1, (byte) -117);
+          this.field_f.put(var25, (long)param1, (byte) -117);
           return var25;
         }
         int[] var31 = this.field_c.generateArgbPixels(88, var7, var7, false, param1, 0.699999988079071f);
         aia var23 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var31, 0, 0, false);
         var23.a(var6.field_s, var6.field_k, 10497);
-        this.field_f.a(var23, (long)param1, (byte) -117);
+        this.field_f.put(var23, (long)param1, (byte) -117);
         return var23;
     }
 
@@ -105,7 +105,7 @@ final class rlb {
     }
 
     rlb(OpenGlToolkit param0, TextureProvider param1) {
-        this.field_f = new pfb(256);
+        this.field_f = new SoftLruCache(256);
         try {
           this.field_c = param1;
           this.field_b = param0;

@@ -58,7 +58,7 @@ final class ik extends IntrusiveNode {
         var2[56] = OpenGlGpuTexture.field_g;
         var2[154] = pea.field_b;
         var2[147] = ArchiveRequest.field_m;
-        var2[144] = voa.field_b;
+        var2[144] = QuickChatPhraseLoader.field_b;
         var2[195] = SetMissionDebrisDefaultProbability.field_o;
         var2[193] = ComponentBehaviourFactory.field_c;
         var2[37] = GetMomentOfInertiaPredivideDownshift.field_q;
@@ -92,7 +92,7 @@ final class ik extends IntrusiveNode {
         var2[18] = WeaponBehaviour.field_d;
         var2[181] = wf.field_e;
         var2[134] = SetLaserRandomness.field_o;
-        var2[11] = voa.field_d;
+        var2[11] = QuickChatPhraseLoader.field_d;
         var2[12] = GetPedrosRepairModeSwitchtime.field_o;
         var2[229] = GetBombletSprayProjectileOndamageParticles.field_q;
         var2[150] = GetAngularForceDownshift.field_q;

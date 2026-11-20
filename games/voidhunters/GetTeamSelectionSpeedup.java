@@ -141,7 +141,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               var8_ref_jk.field_Bb = var10 >> 1;
               var8_ref_jk.field_vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
               var8_ref_jk.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -113);
-              mnb.a(var8_ref_jk, true);
+              OpenGlBufferObject.a(var8_ref_jk, true);
               return;
             }
             if (var2 == 6) {
@@ -314,7 +314,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                   var23.field_yb = GetMomentOfInertiaPredivideDownshift.field_p;
                   var23.field_Db = var5Lifetime1Lifetime1;
                 }
-                mnb.a(var23, true);
+                OpenGlBufferObject.a(var23, true);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(255);
@@ -328,7 +328,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 } else {
                   var22.field_Eb = true;
                 }
-                mnb.a(var22, true);
+                OpenGlBufferObject.a(var22, true);
               }
               return;
             }
@@ -360,7 +360,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 var3_ref_jkLifetime1.field_Fb = false;
               }
               var3_ref_jkLifetime1.field_Eb = false;
-              mnb.a(var3_ref_jkLifetime1, true);
+              OpenGlBufferObject.a(var3_ref_jkLifetime1, true);
             }
             var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.d(-1));
           }

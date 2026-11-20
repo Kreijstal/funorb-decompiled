@@ -81,7 +81,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
         try {
           var5 = OpenGlGpuRectangleTexture.a(param2 ^ param2, param1);
           var6 = OpenGlGpuRectangleTexture.a(0, param4);
-          stackIn_1_0 = CarouselSlot.a(var6, param0, var5, param3, param2 ^ 5542);
+          stackIn_1_0 = CarouselSlot.reportStateArrayDifferences(var6, param0, var5, param3, param2 ^ 5542);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

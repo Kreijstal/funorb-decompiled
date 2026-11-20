@@ -46,10 +46,10 @@ final class GetSalvoDamageMultiplier extends ConsoleCommand {
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (ea) (oaa.field_k.first(0));
+          var4 = (ea) (OpenGlVertexBufferObject.field_k.first(0));
           while (var4 != null) {
             GetCountermeasureLauncherAimspeed.a(var4, 1, param1);
-            var4 = (ea) (oaa.field_k.next((byte) 28));
+            var4 = (ea) (OpenGlVertexBufferObject.field_k.next((byte) 28));
           }
           if (param0 != 50) {
             field_p = -54;

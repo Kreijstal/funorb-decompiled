@@ -4,7 +4,7 @@
 final class atb {
     static int field_d;
     static Sprite[] field_b;
-    private pfb field_c;
+    private SoftLruCache field_c;
     private GpuToolkit field_a;
     private TextureProvider field_e;
 
@@ -63,7 +63,7 @@ final class atb {
         int[] var27;
         int[] var28;
         var8 = VoidHunters.field_G;
-        var3 = this.field_c.b(0, (long)param1);
+        var3 = this.field_c.get(0, (long)param1);
         if (var3 != null) {
           return (GpuTexture2D) (var3);
         }
@@ -88,7 +88,7 @@ final class atb {
               this.a(100, 49);
             }
             var11.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-            this.field_c.a(var11, (long)param1, (byte) -117);
+            this.field_c.put(var11, (long)param1, (byte) -117);
             return var11;
           }
           if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
@@ -101,7 +101,7 @@ final class atb {
               this.a(100, 49);
             }
             var13.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-            this.field_c.a(var13, (long)param1, (byte) -117);
+            this.field_c.put(var13, (long)param1, (byte) -117);
             return var13;
           }
           var25 = this.field_e.generateRgbPixels(var6, 0.699999988079071f, true, param1, var6, true);
@@ -114,7 +114,7 @@ final class atb {
             this.a(100, 49);
           }
           var15.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-          this.field_c.a(var15, (long)param1, (byte) -117);
+          this.field_c.put(var15, (long)param1, (byte) -117);
           return var15;
         }
         if (this.field_a.isBloomEnabled()) {
@@ -130,7 +130,7 @@ final class atb {
             this.a(100, 49);
           }
           var22.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-          this.field_c.a(var22, (long)param1, (byte) -117);
+          this.field_c.put(var22, (long)param1, (byte) -117);
           return var22;
         }
         if (var5.field_q == 2) {
@@ -143,7 +143,7 @@ final class atb {
             this.a(100, 49);
           }
           var17.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-          this.field_c.a(var17, (long)param1, (byte) -117);
+          this.field_c.put(var17, (long)param1, (byte) -117);
           return var17;
         }
         if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
@@ -156,7 +156,7 @@ final class atb {
             this.a(100, 49);
           }
           var19.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-          this.field_c.a(var19, (long)param1, (byte) -117);
+          this.field_c.put(var19, (long)param1, (byte) -117);
           return var19;
         }
         var28 = this.field_e.generateRgbPixels(var6, 0.699999988079071f, true, param1, var6, true);
@@ -168,21 +168,21 @@ final class atb {
           this.a(100, 49);
         }
         var21.setRepeat(var5.field_k, (byte) -98, var5.field_s);
-        this.field_c.a(var21, (long)param1, (byte) -117);
+        this.field_c.put(var21, (long)param1, (byte) -117);
         return var21;
     }
 
     final void a(byte param0) {
         if (param0 == -106) {
-          this.field_c.a(true, 5);
+          this.field_c.age(true, 5);
           return;
         }
         this.field_a = (GpuToolkit) null;
-        this.field_c.a(true, 5);
+        this.field_c.age(true, 5);
     }
 
     atb(GpuToolkit param0, TextureProvider param1) {
-        this.field_c = new pfb(256);
+        this.field_c = new SoftLruCache(256);
         try {
           this.field_e = param1;
           this.field_a = param0;

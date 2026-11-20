@@ -42,7 +42,7 @@ final class aaa {
           if (param3) {
             if (GetLagStandardDeviationOut.field_o.field_h != GetMachineGunPulsetime.field_q) {
               var11 = GetLagStandardDeviationOut.field_o;
-              var12 = SetReverbGain.a(nga.field_a, new String[]{param2}, param0 ^ 57);
+              var12 = SetReverbGain.a(IntrusiveNodeHashTable.field_a, new String[]{param2}, param0 ^ 57);
               var11.field_i.addItem(var12, (byte) -53, 15);
             } else {
               var9 = GetLagStandardDeviationOut.field_o;

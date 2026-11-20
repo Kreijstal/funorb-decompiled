@@ -37,7 +37,7 @@ final class iab implements nka {
         try {
           var8 = (CharSequence) ((Object) param2);
           if (!mn.a(var8, (byte) -114)) {
-            stackIn_3_0 = tjb.field_Cb;
+            stackIn_3_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_3_0;
           }
           if (2 != iwa.field_b) {

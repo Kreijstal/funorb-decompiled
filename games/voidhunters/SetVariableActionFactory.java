@@ -31,7 +31,7 @@ final class SetVariableActionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new SetVariableAction());
     }
 
-    final static void a(tjb param0, int param1) {
+    final static void a(QuickChatMenuWidget param0, int param1) {
         try {
           GetGrapplingHookFireForce.field_o.addChild(-561, param0);
           if (param1 != 6) {

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSniperCannonAimarc extends ConsoleCommand {
-    static ri field_r;
-    static ri field_o;
+    static QuickChatDynamicCommand field_r;
+    static QuickChatDynamicCommand field_o;
     static String field_q;
     static int field_p;
 
@@ -86,9 +86,9 @@ final class SetSniperCannonAimarc extends ConsoleCommand {
     }
 
     static {
-        field_r = new ri(6, 0, 4, 2);
+        field_r = new QuickChatDynamicCommand(6, 0, 4, 2);
         field_q = "<%0> is not on your friend list.";
         field_p = 0;
-        field_o = new ri(8, 0, 4, 1);
+        field_o = new QuickChatDynamicCommand(8, 0, 4, 1);
     }
 }

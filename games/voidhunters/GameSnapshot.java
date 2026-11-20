@@ -69,7 +69,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean canSelectTeam(int param0, int param1, int param2) {
         int stackIn_33_0 = 0;
         int[] var4;
         int var5;
@@ -95,11 +95,11 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         var9 = var10;
         var8 = var9;
         var4 = var8;
-        for (var5 = 0; var5 < this.field_c.length; var5++) {
-          if (this.field_c[var5].connected ||
+        for (var5 = 0; var5 < this.players.length; var5++) {
+          if (this.players[var5].connected ||
             SetMissionResnetResourceTickTime.field_p == 1) {
             var10Lifetime1 = var9;
-            var6 = ((Player) (this.field_c[var5])).selectedTeam;
+            var6 = ((Player) (this.players[var5])).selectedTeam;
             if (0 <= var6 &&
               var10Lifetime1.length > var6) {
               var8[var6] = var8[var6] + 1;
@@ -192,7 +192,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         this.messageLog = new MessageLog();
     }
 
-    final Player a(int param0, byte param1) {
+    final Player getPlayer(int param0, byte param1) {
         if (param1 != 59) {
           SerializableGameState var4 = (SerializableGameState) null;
           this.reportDifferences((SerializableGameState) null, -70);
@@ -200,10 +200,10 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         if (param0 < 0) {
           return null;
         }
-        if (param0 >= this.field_c.length) {
+        if (param0 >= this.players.length) {
           return null;
         }
-        return (Player) (this.field_c[param0]);
+        return (Player) (this.players[param0]);
     }
 
     public final void copyTo(byte param0, SerializableGameState param1) {
@@ -377,7 +377,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         }
     }
 
-    final void a(CarouselSlot param0, int param1, int param2, boolean param3) {
+    final void advanceSimulation(CarouselSlot param0, int param1, int param2, boolean param3) {
         Player var6 = null;
         int var8 = 0;
         int var5_int = 0;
@@ -386,20 +386,20 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         try {
           ka.a(param1, param2 ^ -19265);
           this.settings.a((byte) 125);
-          this.world.a(1799937864, param3, this.messageLog, (Player[]) (param0.field_c), this.missionState, param1, (Player[]) (this.field_c));
+          this.world.a(1799937864, param3, this.messageLog, (Player[]) (param0.players), this.missionState, param1, (Player[]) (this.players));
           this.missionState.updateMissionPhases(this, param1, (byte) -19);
           if (param2 == fra.field_a) {
-            for (var5_int = 0; this.field_c.length > var5_int; var5_int++) {
-              var6 = (Player) (this.field_c[var5_int]);
+            for (var5_int = 0; this.players.length > var5_int; var5_int++) {
+              var6 = (Player) (this.players[var5_int]);
               var6.triggers = -17 & var6.triggers;
             }
           }
-          if (null != this.field_c) {
+          if (null != this.players) {
             var8 = 0;
             var5_intLifetime1 = var8;
-            while (this.field_c.length > var8) {
-              if (this.field_c[var8] != null) {
-                ((Player) (this.field_c[var8])).updateAutobalanceTimer((byte) 11);
+            while (this.players.length > var8) {
+              if (this.players[var8] != null) {
+                ((Player) (this.players[var8])).updateAutobalanceTimer((byte) 11);
               }
               var8++;
             }
@@ -613,12 +613,12 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
     GameSnapshot() {
     }
 
-    final void a(boolean param0, int param1) {
+    final void prepareTick(boolean param0, int param1) {
         int var3 = 0;
         Player var4 = null;
         int var5 = VoidHunters.field_G;
-        for (var3 = 0; this.field_c.length > var3; var3++) {
-          var4 = (Player) (this.field_c[var3]);
+        for (var3 = 0; this.players.length > var3; var3++) {
+          var4 = (Player) (this.players[var3]);
           var4.specialorder = -1;
         }
         if (param0) {

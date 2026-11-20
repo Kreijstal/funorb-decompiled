@@ -33,16 +33,16 @@ final class SetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
         }
     }
 
-    final static ri a(int param0, int param1) {
+    final static QuickChatDynamicCommand a(int param0, int param1) {
         int var3 = 0;
-        ri[] var2;
+        QuickChatDynamicCommand[] var2;
         int var4;
-        ri[] var5;
+        QuickChatDynamicCommand[] var5;
         var4 = VoidHunters.field_G;
         var5 = GetBurstFireRegenerationRate.e((byte) -66);
         var2 = var5;
         for (var3 = param0; var3 < var5.length; var3++) {
-          if (param1 == var5[var3].field_a) {
+          if (param1 == var5[var3].id) {
             return var5[var3];
           }
         }

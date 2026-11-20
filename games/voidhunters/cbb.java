@@ -235,7 +235,7 @@ final class cbb {
         try {
           var8 = new ArgbSprite(param0.fetchNamedFile("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
           var8.trimTransparentBorders();
-          oaa.field_j = (Sprite) ((Object) var8);
+          OpenGlVertexBufferObject.field_j = (Sprite) ((Object) var8);
           SetPointDefenceLaserAimarc.field_r = new IndexedSpriteData[138];
           SetPointDefenceLaserAimarc.field_r[0] = IndexedSpriteData.b(param2, "basic", "objective_icon_attack");
           SetPointDefenceLaserAimarc.field_r[1] = IndexedSpriteData.b(param2, "basic", "objective_icon_defend");

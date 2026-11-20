@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mnb {
-    private int field_b;
+abstract class OpenGlBufferObject {
+    private int byteSize;
     static boolean field_d;
-    private boolean field_a;
+    private boolean streamDraw;
     static String field_g;
-    private boolean field_e;
-    int field_f;
-    OpenGlToolkit field_c;
+    private boolean disposed;
+    int bufferId;
+    OpenGlToolkit toolkit;
 
-    abstract void a(int param0);
+    abstract void bind(int param0);
 
     protected final void finalize() throws Throwable {
-        if (this.field_e) {
+        if (this.disposed) {
           super.finalize();
           return;
         }
-        this.field_c.b(-100, this.field_b, this.field_f);
-        this.field_e = true;
+        this.toolkit.b(-100, this.byteSize, this.bufferId);
+        this.disposed = true;
         super.finalize();
     }
 
-    mnb(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
-        this.field_e = false;
+    OpenGlBufferObject(OpenGlToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
+        this.disposed = false;
         try {
-          this.field_b = param3;
-          this.field_c = param0;
-          this.field_a = param4 ? true : false;
+          this.byteSize = param3;
+          this.toolkit = param0;
+          this.streamDraw = param4 ? true : false;
           jaggl.OpenGL.glGenBuffersARB(1, SetLaserAimarc.field_p, 0);
-          this.field_f = SetLaserAimarc.field_p[0];
-          this.a(34962);
-          jaggl.OpenGL.glBufferDataARBub(param1, this.field_b, param2, 0, !this.field_a ? 35044 : 35040);
-          this.field_c.field_mc = this.field_c.field_mc + this.field_b;
+          this.bufferId = SetLaserAimarc.field_p[0];
+          this.bind(34962);
+          jaggl.OpenGL.glBufferDataARBub(param1, this.byteSize, param2, 0, !this.streamDraw ? 35044 : 35040);
+          this.toolkit.field_mc = this.toolkit.field_mc + this.byteSize;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mnb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

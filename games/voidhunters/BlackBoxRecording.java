@@ -217,7 +217,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
     private final void a(IsaacPacketBuffer param0, byte param1) {
         try {
           this.serverCarousel = new CarouselCommongameInfo();
-          this.serverCarousel.field_h = true;
+          this.serverCarousel.replay = true;
           ParticleFactory.field_a = MonochromeRowCacheEntry.field_e;
           if (param1 >= -3) {
             IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;

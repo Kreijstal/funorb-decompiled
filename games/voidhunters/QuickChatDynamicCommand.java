@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri {
-    int field_a;
+final class QuickChatDynamicCommand {
+    int id;
     static String field_b;
-    int field_c;
+    int parameterCount;
 
     public static void clearSharedReferences(int param0) {
         int var1 = 24 / ((param0 + 53) / 32);
@@ -15,9 +15,9 @@ final class ri {
         throw new IllegalStateException();
     }
 
-    ri(int param0, int param1, int param2, int param3) {
-        this.field_c = param3;
-        this.field_a = param0;
+    QuickChatDynamicCommand(int param0, int param1, int param2, int param3) {
+        this.parameterCount = param3;
+        this.id = param0;
     }
 
     static {

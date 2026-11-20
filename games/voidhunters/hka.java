@@ -106,7 +106,7 @@ final class hka extends uj {
               SetSniperCannonAimarc.a(param1, 0, 0, 0);
             } else {
               if (GetSpinningBladeAimspeed.field_q == 0) {
-                pi.a((byte) -70, false, param2);
+                QuickChatPhraseDefinition.a((byte) -70, false, param2);
                 SetSniperCannonAimarc.a(param1, 0, 0, 0);
               } else {
                 GetPhasedEnergyBeamAimspeed.a(param1, true);
