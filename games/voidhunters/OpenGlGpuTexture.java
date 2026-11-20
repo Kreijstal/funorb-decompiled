@@ -218,7 +218,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
           return;
         }
         this.toolkit.setTexture((GpuTexture) (this), -114);
-        if (cs.field_a == this.filterMode) {
+        if (SoftwareFaceAttachmentState.field_a == this.filterMode) {
           jaggl.OpenGL.glTexParameteri(this.target, 10241, !this.mipmapped ? 9729 : 9987);
           jaggl.OpenGL.glTexParameteri(this.target, 10240, 9729);
         } else {
@@ -342,7 +342,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
           UiComboBoxRenderer.field_c.field_qb = -1;
           UiComboBoxRenderer.field_c.field_ib = -1;
         }
-        hp.field_b = null;
+        StringBuilderOutputStream.field_b = null;
         SetThrusterAutobalancing.field_p = null;
         if (param0 > -15) {
           OpenGlGpuTexture.disposeChatInputDialog((byte) -19);
@@ -482,7 +482,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
     }
 
     OpenGlGpuTexture(OpenGlGpuToolkit param0, int param1, TextureFormat param2, GpuDataType param3, int param4, boolean param5) {
-        this.filterMode = cs.field_a;
+        this.filterMode = SoftwareFaceAttachmentState.field_a;
         try {
           this.toolkit = param0;
           this.pixelCount = param4;

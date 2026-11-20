@@ -6,7 +6,7 @@ import java.io.*;
 final class OpenGlGlyphMask extends GlyphMask {
     static String field_d;
     static TextureCombineOperation field_a;
-    static long field_c;
+    static long tickIntervalNanos;
     OpenGlSpriteTexture texture;
     static int field_e;
 
@@ -85,7 +85,7 @@ final class OpenGlGlyphMask extends GlyphMask {
 
     static {
         field_d = "Data array";
-        field_c = 20000000L;
+        tickIntervalNanos = 20000000L;
         field_a = new TextureCombineOperation();
         field_e = 128;
     }

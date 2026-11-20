@@ -27,7 +27,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
           var1 = var6 + ":";
           for (var2 = 0; var2 < PartitioningManagerFactory.field_a; var2++) {
             var7 = var1 + ' ';
-            var3 = qga.field_b.payload[var2] & 255;
+            var3 = AccountNameAvailabilityReplies.field_b.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

@@ -105,7 +105,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         var16 = null;
         var11 = VoidHunters.field_G;
         try {
-          var1 = qga.field_b;
+          var1 = AccountNameAvailabilityReplies.field_b;
           if (param0 != 13) {
             return;
           }
@@ -276,10 +276,10 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                   if (21 == var2) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 ^ 1856);
                     if (var3Lifetime5 == 0) {
-                      qga.field_a = 0L;
+                      AccountNameAvailabilityReplies.field_a = 0L;
                       return;
                     }
-                    qga.field_a = MonotonicMillisClock.currentTimeMillis(false) + (long)var3Lifetime5;
+                    AccountNameAvailabilityReplies.field_a = MonotonicMillisClock.currentTimeMillis(false) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {
@@ -375,7 +375,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             SetSpinningBladeSpindamageMultiplier.field_o = new LobbyGameEntry(PasswordValidator.field_l);
             SetSpinningBladeSpindamageMultiplier.field_o.setSecondaryKey((long)var3Lifetime1, (byte) 83);
             SetShipAimLines.a(-123, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
-            qga.field_a = 0L;
+            AccountNameAvailabilityReplies.field_a = 0L;
           }
           if (var2 != 2 &&
             3 != var2) {

@@ -95,8 +95,8 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
 
     final static Boolean a(int param0) {
         int var1 = 118 % ((param0 - 12) / 55);
-        Boolean var2 = ehb.field_f;
-        ehb.field_f = null;
+        Boolean var2 = LruNodeCache.field_f;
+        LruNodeCache.field_f = null;
         return var2;
     }
 

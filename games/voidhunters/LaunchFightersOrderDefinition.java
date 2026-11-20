@@ -75,7 +75,7 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
             0 <= UiAngleDialRenderer.field_c.selectedIndex) {
             var2 = PlayerGameData.field_e[UiAngleDialRenderer.field_c.selectedIndex];
             if (var2 == 2) {
-              SetMissionTerrainSpaceProbability.b(false);
+              SetMissionTerrainSpaceProbability.setMessageBoxOpen(false);
             }
           }
           stackIn_15_0 = var2;

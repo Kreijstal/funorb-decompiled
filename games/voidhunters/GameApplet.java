@@ -428,7 +428,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
-            ffa.field_a = ((var6_int >> 1) + 32000) / var6_int;
+            SoftwareFaceAttachment.field_a = ((var6_int >> 1) + 32000) / var6_int;
           }
           fieldTemp$1 = ncb.field_b;
           ncb.field_b = ncb.field_b + 1;
@@ -681,7 +681,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    SetCountermeasureLauncherAimspeed.field_p = GetPedrosRepairMode.field_p.waitForTicks(false, OpenGlGlyphMask.field_c);
+                    SetCountermeasureLauncherAimspeed.field_p = GetPedrosRepairMode.field_p.waitForTicks(false, OpenGlGlyphMask.tickIntervalNanos);
                     stackIn_95_0 = 0;
                   }
                   var3 = stackIn_95_0;

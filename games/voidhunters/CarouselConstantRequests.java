@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kmb {
+final class CarouselConstantRequests {
     static String field_b;
     static String field_e;
     static boolean field_c;
@@ -9,7 +9,7 @@ final class kmb {
     static int field_f;
     static String field_d;
 
-    final static void a(String param0, int param1) {
+    final static void sendCarouselConstant(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -17,7 +17,7 @@ final class kmb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 18700) {
-            kmb.clearSharedReferences(9);
+            CarouselConstantRequests.clearSharedReferences(9);
           }
           if (FlipTextureOperation.field_l == null) {
             return;

@@ -200,7 +200,7 @@ final class PlayerContextMenu {
             if (var5 != null) {
               if (!qs.a(0, this.targetName) &&
                 !GetBloomThresholdPercentage.field_p) {
-                if (!hb.field_c) {
+                if (!ConsoleSettingsScript.field_c) {
                   this.menu.addItem(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
                 }
                 this.menu.addItem(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);

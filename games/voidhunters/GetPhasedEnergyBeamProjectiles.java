@@ -157,7 +157,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_n = param1[220];
           Particle.field_I = param1[32];
           GetLagStandardDeviationIn.field_p = param1[85];
-          gib.field_a = param1[206];
+          GpuFaceAttachmentState.field_a = param1[206];
           ByteIndexedRecordWriteRequest.field_j = param1[187];
           SetMachineGunAimspeed.field_o = param1[7];
           PlayerReady.field_c = param1[138];
@@ -170,7 +170,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           MovingObjectFactory.field_b = param1[194];
           GetSalvoHoldable.field_p = param1[176];
           ava.field_a = param1[129];
-          kmb.field_f = param1[49];
+          CarouselConstantRequests.field_f = param1[49];
           ComponentBehaviourFactory.field_c = param1[193];
           Particle.field_p = param1[219];
           OpenGlGlyphMask.field_e = param1[128];
@@ -217,7 +217,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ArchiveLoadRequest.field_h = param1[108];
           GetTeamSelectionSpeedup.field_p = param1[10];
           SetAutoDetail.field_o = param1[0];
-          khb.field_c = param1[140];
+          LoginMethod.field_c = param1[140];
           SetBombletSprayFireForce.field_o = param1[190];
           SetMassDriverEnergyUsed.field_o = param1[179];
           PartitionZone.field_e = param1[43];
@@ -252,7 +252,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetThrusterBindingMoveAndTurnHasOppositeMove.field_p = param1[120];
           MatchResults.field_b = param1[68];
           ComponentContact.field_d = param1[40];
-          ehb.field_e = param1[152];
+          LruNodeCache.field_e = param1[152];
           GetFullMissionSet.field_p = param1[36];
           QuickChatPhraseLoader.field_b = param1[144];
           ImageProducerAppletRasterBuffer.field_i = param1[130];
@@ -281,7 +281,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_m = param1[205];
           qh.field_J = param1[88];
           GetMissionTerrainNebulaProbability.field_p = param1[143];
-          ffa.field_b = param1[161];
+          SoftwareFaceAttachment.field_b = param1[161];
           AsteroidFieldFactory.field_a = param1[57];
           SetVariableActionFactory.field_b = param1[133];
           ConsoleCommandRegistry.field_a = param1[172];

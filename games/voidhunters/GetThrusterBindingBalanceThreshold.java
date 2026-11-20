@@ -52,7 +52,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var2 = SetMomentOfInertiaPerpointCalcDownshift.field_o;
           }
           if (var2 != null) {
-            SetSelfDestructTimer.a(19204, (String) (var2), 0, (String) null, kmb.field_a);
+            SetSelfDestructTimer.a(19204, (String) (var2), 0, (String) null, CarouselConstantRequests.field_a);
           } else {
             var3 = IntIndexTable.field_a;
             var3 = EscapePodFactory.a(1, var3);
@@ -96,7 +96,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               var8Lifetime1 = stackIn_56_0;
               var4 = var4 + var3 + var8Lifetime1;
               if (!GetBloomThresholdPercentage.field_p) {
-                if (hb.field_c) {
+                if (ConsoleSettingsScript.field_c) {
                   var5 = "";
                   var4 = "<col=999999>" + var4 + DateOfBirthInput.field_y + "</col>";
                   if (var10 != 0) {

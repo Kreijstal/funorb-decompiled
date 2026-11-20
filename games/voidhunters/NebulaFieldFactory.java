@@ -47,7 +47,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         vu var6Lifetime1;
         var9 = VoidHunters.field_G;
         try {
-          var1 = qga.field_b;
+          var1 = AccountNameAvailabilityReplies.field_b;
           if (!param0) {
             field_b = -108;
           }

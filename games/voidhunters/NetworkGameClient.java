@@ -596,7 +596,7 @@ abstract class NetworkGameClient extends GameApplet {
                 SoftwareFramebuffer.a(-113);
                 break;
               case 8:
-                SetSalvoDamageMultiplier.decodeReflectionCheck(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, qga.field_b, false);
+                SetSalvoDamageMultiplier.decodeReflectionCheck(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, AccountNameAvailabilityReplies.field_b, false);
                 break;
               case 6:
                 ResizableModalPanel.k((byte) -38);
@@ -626,11 +626,11 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void handleOpenUrlPacket(int param0) {
-        int var2 = qga.field_b.readUnsignedByte((byte) -124);
+        int var2 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -124);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + PartitioningManagerFactory.field_a;
         byte[] var5 = new byte[var4];
-        qga.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
+        AccountNameAvailabilityReplies.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
         ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), Cp1252Strings.decode((byte) -125, var5));
     }
 
@@ -678,7 +678,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (var4 == 1) {
             var5 = ComponentAttachmentPlan.a(GetFixedaim.g((byte) -65), true, SetMachineGunFireForce.e(120));
             if (var5 != -1) {
-              qga.handleNameAvailabilityReply(dgb.field_b, var5, (byte) 70, gob.field_a);
+              AccountNameAvailabilityReplies.handleNameAvailabilityReply(dgb.field_b, var5, (byte) 70, gob.field_a);
               gob.field_a = null;
               dgb.field_b = null;
             }

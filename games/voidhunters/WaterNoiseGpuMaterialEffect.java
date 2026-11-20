@@ -150,13 +150,13 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           var3 = new String[]{var2, null, null, null, null, null};
         }
         var4 = 2;
-        if (ssa.b(2)) {
+        if (DeveloperAccess.hasDeveloperAccess(2)) {
           if (!SetMachineGunEnergyUsed.field_o[81]) {
-            if (ssa.b(2) &&
+            if (DeveloperAccess.hasDeveloperAccess(2) &&
               SetMachineGunEnergyUsed.field_o[82]) {
               var4 = 1;
             }
-            if (!ssa.b(2)) {
+            if (!DeveloperAccess.hasDeveloperAccess(2)) {
               var5 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
               if (param0) {
                 var4 = 3;
@@ -204,11 +204,11 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           }
           var4 = 0;
         }
-        if (ssa.b(2) &&
+        if (DeveloperAccess.hasDeveloperAccess(2) &&
           SetMachineGunEnergyUsed.field_o[82]) {
           var4 = 1;
         }
-        if (!ssa.b(2)) {
+        if (!DeveloperAccess.hasDeveloperAccess(2)) {
           var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
           if (param0) {
             var4 = 3;

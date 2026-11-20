@@ -47,7 +47,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
           var27 = new int[1];
           jaggl.OpenGL.glGetIntegerv(3379, var27, 0);
           System.out.println("GL_MAX_TEXTURE_SIZE: " + var27[0]);
-          if (ssa.b(param0 ^ -9936)) {
+          if (DeveloperAccess.hasDeveloperAccess(param0 ^ -9936)) {
             System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.supportsMemoryPools());
             System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.hasVolatileBackbuffer());
             System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.supportsResizableBackbuffer());
@@ -86,7 +86,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
             var28 = new int[1];
             jaggl.OpenGL.glGetIntegerv(3379, var28, 0);
             System.out.println("GL_MAX_TEXTURE_SIZE: " + var28[0]);
-            if (ssa.b(param0 ^ -9936)) {
+            if (DeveloperAccess.hasDeveloperAccess(param0 ^ -9936)) {
               System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.supportsMemoryPools());
               System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.hasVolatileBackbuffer());
               System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.supportsResizableBackbuffer());
@@ -123,7 +123,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         int[] var29 = new int[1];
         jaggl.OpenGL.glGetIntegerv(3379, var29, 0);
         System.out.println("GL_MAX_TEXTURE_SIZE: " + var29[0]);
-        if (ssa.b(param0 ^ -9936)) {
+        if (DeveloperAccess.hasDeveloperAccess(param0 ^ -9936)) {
           System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.supportsMemoryPools());
           System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.hasVolatileBackbuffer());
           System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.supportsResizableBackbuffer());

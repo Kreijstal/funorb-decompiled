@@ -18,7 +18,7 @@ final class OpenGlCubeTexture extends OpenGlTexture {
           if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
             return true;
           }
-          if (hb.field_c) {
+          if (ConsoleSettingsScript.field_c) {
             return false;
           }
           return SetFighterRepairAmount.b(param0, param3, -85);
@@ -32,7 +32,7 @@ final class OpenGlCubeTexture extends OpenGlTexture {
         if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
           return true;
         }
-        if (hb.field_c) {
+        if (ConsoleSettingsScript.field_c) {
           return false;
         }
         return SetFighterRepairAmount.b(param0, param3, -85);

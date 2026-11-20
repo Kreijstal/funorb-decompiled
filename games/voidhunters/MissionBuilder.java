@@ -2890,7 +2890,7 @@ final class MissionBuilder implements DiffableState {
                   var14 = 0;
                 } else if (var16_intLifetime1 == 12) {
                   var14 = 0;
-                  this.addReinforcementLimitEvents(var22, var8, -1, lga.getArmageddonStartTick((byte) -2, param2), 2, var15, var7);
+                  this.addReinforcementLimitEvents(var22, var8, -1, GpuFaceAttachment.getArmageddonStartTick((byte) -2, param2), 2, var15, var7);
                 } else if (var16_intLifetime1 == 11) {
                   this.addTimedWinnerEvents(var22, param0 + 3, var15);
                   var14 = 0;
@@ -3625,7 +3625,7 @@ final class MissionBuilder implements DiffableState {
         MissionEvent var11 = null;
         int[] var13 = null;
         try {
-          this.addReinforcementLimitEvents(param1, param3, 1, lga.getArmageddonStartTick((byte) -2, 3), param5 - 2097150, param0, param2);
+          this.addReinforcementLimitEvents(param1, param3, 1, GpuFaceAttachment.getArmageddonStartTick((byte) -2, 3), param5 - 2097150, param0, param2);
           try {
             var7_int = TextHotspotRegion.randomBoundedInt(param4, field_a.length, 127);
             var8 = field_a[var7_int];

@@ -89,7 +89,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
           EnvironmentReflectionGpuMaterialEffect.field_j = SetShieldsDirectionalArc.a(0, new CharSequence[]{(CharSequence) ((Object) EnvironmentReflectionGpuMaterialEffect.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
         }
         SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
-        gib.a((byte) -89);
+        GpuFaceAttachmentState.showProgressDialog((byte) -89);
         if (param0 > 30) {
           return;
         }

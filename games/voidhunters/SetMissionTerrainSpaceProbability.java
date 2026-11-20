@@ -918,8 +918,8 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
         return var12Lifetime3;
     }
 
-    final static void b(boolean param0) {
-        wia.field_a = param0 ? true : false;
+    final static void setMessageBoxOpen(boolean param0) {
+        MessageBoxState.open = param0 ? true : false;
     }
 
     static {

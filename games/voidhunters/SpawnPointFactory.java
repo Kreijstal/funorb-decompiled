@@ -150,7 +150,7 @@ final class SpawnPointFactory implements GameStateFactory {
         if (!param1) {
           return;
         }
-        lga.a(param0, -24055);
+        GpuFaceAttachment.a(param0, -24055);
         SetSalvoUsesAllEnergy.a(param0, (byte) -93);
     }
 

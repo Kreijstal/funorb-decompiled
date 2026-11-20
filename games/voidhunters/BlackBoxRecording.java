@@ -82,9 +82,9 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         return this.serverCarousel;
     }
 
-    private final void a(byte param0, IsaacPacketBuffer param1) {
+    private final void beforeStateWrite(byte param0, IsaacPacketBuffer param1) {
         try {
-          ParticleFactory.field_a = MonochromeRowCacheEntry.currentStateOnlyMode;
+          ParticleFactory.savedCurrentStateOnlyMode = MonochromeRowCacheEntry.currentStateOnlyMode;
           int var3_int = -88 % ((12 - param0) / 49);
           MonochromeRowCacheEntry.currentStateOnlyMode = false;
         } catch (RuntimeException runtimeException) {
@@ -101,7 +101,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          this.a(param0, (byte) -122);
+          this.beforeStateRead(param0, (byte) -122);
           super.readState(param0, param1);
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.serverCarousel = null;
@@ -121,7 +121,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
           } else {
             this.clientStateDump = null;
           }
-          this.a(116, param0);
+          this.afterStateRead(116, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,9 +137,9 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         }
     }
 
-    private final void a(IsaacPacketBuffer param0, int param1) {
+    private final void afterStateWrite(IsaacPacketBuffer param0, int param1) {
         try {
-          MonochromeRowCacheEntry.currentStateOnlyMode = ParticleFactory.field_a;
+          MonochromeRowCacheEntry.currentStateOnlyMode = ParticleFactory.savedCurrentStateOnlyMode;
           if (param1 <= 25) {
             this.getClientStateDump(-23);
           }
@@ -148,11 +148,11 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         }
     }
 
-    private final void a(int param0, IsaacPacketBuffer param1) {
+    private final void afterStateRead(int param0, IsaacPacketBuffer param1) {
         try {
-          MonochromeRowCacheEntry.currentStateOnlyMode = ParticleFactory.field_a;
+          MonochromeRowCacheEntry.currentStateOnlyMode = ParticleFactory.savedCurrentStateOnlyMode;
           if (param0 != 116) {
-            BlackBoxRecording.a((byte) 124, -116, -59, -4, 46, 82);
+            BlackBoxRecording.drawPanelBackground((byte) 124, -116, -59, -4, 46, 82);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -214,11 +214,11 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         }
     }
 
-    private final void a(IsaacPacketBuffer param0, byte param1) {
+    private final void beforeStateRead(IsaacPacketBuffer param0, byte param1) {
         try {
           this.serverCarousel = new CarouselCommongameInfo();
           this.serverCarousel.replay = true;
-          ParticleFactory.field_a = MonochromeRowCacheEntry.currentStateOnlyMode;
+          ParticleFactory.savedCurrentStateOnlyMode = MonochromeRowCacheEntry.currentStateOnlyMode;
           if (param1 >= -3) {
             IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
             this.readState((IsaacPacketBuffer) null, true);
@@ -229,10 +229,10 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
-        SetAiFiringRangeUpshift.a(param4, param5, param2, (byte) 51, 116, param1, param3);
+    final static void drawPanelBackground(byte param0, int param1, int param2, int param3, int param4, int param5) {
+        SetAiFiringRangeUpshift.drawSkinnedPanelBackground(param4, param5, param2, (byte) 51, 116, param1, param3);
         if (param0 != -115) {
-          BlackBoxRecording.a((byte) 25, -61, 61, -7, -52, -26);
+          BlackBoxRecording.drawPanelBackground((byte) 25, -61, 61, -7, -52, -26);
         }
     }
 
@@ -298,7 +298,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          this.a((byte) -85, param0);
+          this.beforeStateWrite((byte) -85, param0);
           if (param1 > -109) {
             SerializableGameState var4 = (SerializableGameState) null;
             this.differsFrom((byte) 94, (SerializableGameState) null);
@@ -310,7 +310,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
           if (DateOfBirthInput.writeBoolean(param0, -35, this.clientStateDump != null ? true : false)) {
             this.clientStateDump.writeState(param0, -120);
           }
-          this.a(param0, 92);
+          this.afterStateWrite(param0, 92);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "af.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

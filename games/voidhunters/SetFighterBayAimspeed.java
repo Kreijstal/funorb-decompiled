@@ -3,7 +3,7 @@
  */
 final class SetFighterBayAimspeed extends ConsoleCommand {
     static String field_p;
-    static khb field_o;
+    static LoginMethod field_o;
 
     public static void clearSharedReferences(byte param0) {
         field_p = null;
@@ -98,6 +98,6 @@ final class SetFighterBayAimspeed extends ConsoleCommand {
 
     static {
         field_p = "Message team";
-        field_o = new khb("email");
+        field_o = new LoginMethod("email");
     }
 }

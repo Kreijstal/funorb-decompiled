@@ -142,7 +142,7 @@ final class MessageLog implements DiffableState {
         try {
           param0.tick = IncrementVariableActionFactory.field_a;
           this.messages = (Message[]) (SoftwareSprite2D.a(param0, this.messages, 0, UiTextStyle.field_e));
-          if (hb.field_a < this.messages.length) {
+          if (ConsoleSettingsScript.field_a < this.messages.length) {
             this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, 0, 15667, this.messages));
           }
           if (!param1) {

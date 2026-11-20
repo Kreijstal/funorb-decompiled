@@ -7,7 +7,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
     private int previousShieldX;
     private int previousShieldY;
 
-    final void a(boolean param0, int param1, ShipBody param2, int[] param3, World param4, int param5, int param6, int param7) {
+    final void update(boolean param0, int param1, ShipBody param2, int[] param3, World param4, int param5, int param6, int param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -85,7 +85,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
         }
     }
 
-    final void a(ShipBody param0, int[] param1, int param2, int param3, int param4, int param5, int param6, World param7, int param8, int param9, int param10) {
+    final void activate(ShipBody param0, int[] param1, int param2, int param3, int param4, int param5, int param6, World param7, int param8, int param9, int param10) {
         Ship var13 = null;
         Object var12 = null;
         if (param0 instanceof Ship) {
@@ -159,7 +159,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
         try {
           if (param0 <= 54) {
             World var4 = (World) null;
-            this.a((ShipBody) null, (int[]) null, -13, 109, 122, -45, -75, (World) null, -117, 73, 98);
+            this.activate((ShipBody) null, (int[]) null, -13, 109, 122, -45, -75, (World) null, -117, 73, 98);
           }
           super.copyTo((byte) 85, param1);
           var6 = (ShieldBehaviour) (param1);
@@ -238,7 +238,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
         }
     }
 
-    final int a(int param0, Ship param1) {
+    final int getSpecialOrderState(int param0, Ship param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

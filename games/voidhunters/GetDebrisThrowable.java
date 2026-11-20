@@ -80,7 +80,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
           if (param0) {
             GetDebrisThrowable.clearSharedReferences((byte) 12);
           }
-          if (!ssa.b(2)) {
+          if (!DeveloperAccess.hasDeveloperAccess(2)) {
             return;
           }
           System.out.println(param1);

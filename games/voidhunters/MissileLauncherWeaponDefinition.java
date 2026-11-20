@@ -91,7 +91,7 @@ final class MissileLauncherWeaponDefinition extends WeaponDefinition {
 
     final int getAimArc(int param0) {
         int var2 = -98 / ((7 - param0) / 47);
-        return khb.field_c;
+        return LoginMethod.field_c;
     }
 
     final int getAimSpeed(int param0) {

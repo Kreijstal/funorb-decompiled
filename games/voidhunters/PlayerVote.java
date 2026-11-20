@@ -45,11 +45,11 @@ final class PlayerVote implements DiffableState {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param3 >= 97) {
-          SetAiFiringRangeUpshift.a(param5, param4, param1, (byte) -122, 31, param2, param0);
+          SetAiFiringRangeUpshift.drawSkinnedPanelBackground(param5, param4, param1, (byte) -122, 31, param2, param0);
           return;
         }
         PlayerVote.clearSharedReferences((byte) -23);
-        SetAiFiringRangeUpshift.a(param5, param4, param1, (byte) -122, 31, param2, param0);
+        SetAiFiringRangeUpshift.drawSkinnedPanelBackground(param5, param4, param1, (byte) -122, 31, param2, param0);
     }
 
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {

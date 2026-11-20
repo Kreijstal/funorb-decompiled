@@ -46,7 +46,7 @@ final class SetAiFiringRangeUpshift extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
+    final static void drawSkinnedPanelBackground(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         ToolkitSprite var8 = null;
         int var9 = 0;
         int var10 = 0;

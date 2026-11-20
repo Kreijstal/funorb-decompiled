@@ -95,7 +95,7 @@ final class PopupMenuWidget extends Widget {
         }
         var7Lifetime1 = this.field_yb + (this.field_yb + this.field_wb * this.itemCount);
         var8Lifetime1 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param3, var6);
-        var9 = lma.a(param4, param2, var7Lifetime1, (byte) -16);
+        var9 = PopupPositioning.adjustPopupY(param4, param2, var7Lifetime1, (byte) -16);
         this.setBounds(var8Lifetime1, 32, var6, var9, var7Lifetime1);
         for (var10 = 0; this.itemCount > var10; var10++) {
           this.items[var10].setBoundsAndLayout(this.field_yb + this.field_wb * var10, this.field_zb, -124, this.field_vb, this.field_Hb, -(2 * this.field_zb) + var6, this.field_wb);

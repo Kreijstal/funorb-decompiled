@@ -170,7 +170,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           VariableCondition.field_e = param7;
           TargetLock.field_b = param6;
           SetLaserEnergyUsed.field_p[1] = 6356832;
-          kmb.field_a = 8421504;
+          CarouselConstantRequests.field_a = 8421504;
           SetLaserEnergyUsed.field_p[0] = 16764000;
           SetLaserEnergyUsed.field_p[3] = 16736511;
           SetLaserEnergyUsed.field_p[2] = 16736352;

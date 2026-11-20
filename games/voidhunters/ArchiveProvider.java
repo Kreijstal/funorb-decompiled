@@ -59,7 +59,7 @@ abstract class ArchiveProvider {
             if (1 < LegacyOpenGlMaterialEffectManager.field_j[param4]) {
               var8Lifetime1 = param4 + TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, LegacyOpenGlMaterialEffectManager.field_j[param4], 117);
             }
-            var9 = ServerInfo.playPannedSample(var7Lifetime1, 100, var6_int, fa.field_d[var8Lifetime1]);
+            var9 = ServerInfo.playPannedSample(var7Lifetime1, 100, var6_int, PendingScoreboardRequest.soundEffects[var8Lifetime1]);
             var10 = new OneShotSound();
             var10.positional = true;
             var10.y = param1;

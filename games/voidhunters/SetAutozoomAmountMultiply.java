@@ -74,7 +74,7 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
           }
           while (param1.length() > var2_int) {
             var3 = param1.charAt(var2_int);
-            if (!cs.a((char) var3, 0) &&
+            if (!SoftwareFaceAttachmentState.isAsciiLetter((char) var3, 0) &&
               !GetRepairModeCooldown.a((char) var3, true)) {
               return true;
             }

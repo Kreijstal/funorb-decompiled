@@ -14,7 +14,7 @@ final class SetLag extends ConsoleCommand {
     final static void a(boolean param0, int param1, int param2, int param3, GameStateFactory param4, int param5, GameStateFactory param6, int param7, int param8, int param9, int param10, int param11, GameStateFactory param12, int param13, byte param14) {
         try {
           GetAngleset.field_o = param11;
-          ehb.field_g = param8;
+          LruNodeCache.field_g = param8;
           if (param14 != 91) {
             field_o = 34;
           }
@@ -56,7 +56,7 @@ final class SetLag extends ConsoleCommand {
         var8 = VoidHunters.field_G;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = qga.field_b;
+          var9 = AccountNameAvailabilityReplies.field_b;
           var2 = var9.readUnsignedByte((byte) -117);
           var3 = var9.readUnsignedByte((byte) -94);
           if (0 == var2) {

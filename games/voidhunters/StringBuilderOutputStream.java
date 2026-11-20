@@ -3,20 +3,20 @@
  */
 import java.io.*;
 
-final class hp extends OutputStream {
+final class StringBuilderOutputStream extends OutputStream {
     static Widget field_b;
-    private StringBuilder field_a;
+    private StringBuilder buffer;
 
     public final void write(int param0) {
-        StringBuilder discarded$0 = this.field_a.append((char)param0);
+        StringBuilder discarded$0 = this.buffer.append((char)param0);
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static void layoutQuickChatMenuArea(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         GetGrapplingHookFireForce.field_o.setBounds(param5, -6, param0, param6, param1);
         if (null != MidiNote.field_m) {
           MidiNote.field_m.layoutMenu(12, param1, -GetLaserAimspeed.field_p + param2, param2, param1, param4);
           if (param3) {
-            hp.a(-122, 15, -4, false, -81, -103, -22);
+            StringBuilderOutputStream.layoutQuickChatMenuArea(-122, 15, -4, false, -81, -103, -22);
             return;
           }
           return;
@@ -24,19 +24,19 @@ final class hp extends OutputStream {
         if (!param3) {
           return;
         }
-        hp.a(-122, 15, -4, false, -81, -103, -22);
+        StringBuilderOutputStream.layoutQuickChatMenuArea(-122, 15, -4, false, -81, -103, -22);
     }
 
     public static void clearSharedReferences(boolean param0) {
         field_b = null;
         if (param0) {
-          hp.clearSharedReferences(true);
+          StringBuilderOutputStream.clearSharedReferences(true);
         }
     }
 
-    hp(StringBuilder param0) {
+    StringBuilderOutputStream(StringBuilder param0) {
         try {
-          this.field_a = param0;
+          this.buffer = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

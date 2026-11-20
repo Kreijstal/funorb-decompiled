@@ -5,7 +5,7 @@ final class ArchiveTextureProvider implements TextureProvider {
     static String field_g;
     static GameStateFactory field_d;
     private TextureMetadata[] metadata;
-    private ehb field_f;
+    private LruNodeCache field_f;
     private ResourceArchive spriteArchive;
     private ResourceArchive textureArchive;
     static boolean field_h;
@@ -39,7 +39,7 @@ final class ArchiveTextureProvider implements TextureProvider {
     }
 
     private final ProceduralTexture getProceduralTexture(int param0, int param1) {
-        DualLinkNode var3 = this.field_f.a((long)param1, 77);
+        DualLinkNode var3 = this.field_f.get((long)param1, 77);
         if (param0 != -2) {
           this.isTextureReady(-32, (byte) 119);
         }
@@ -51,7 +51,7 @@ final class ArchiveTextureProvider implements TextureProvider {
           return null;
         }
         ProceduralTexture var5 = new ProceduralTexture(new PacketBuffer(var4));
-        this.field_f.a((long)param1, (byte) -22, var5);
+        this.field_f.put((long)param1, (byte) -22, var5);
         return var5;
     }
 
@@ -129,7 +129,7 @@ final class ArchiveTextureProvider implements TextureProvider {
         int var5Lifetime17;
         int var5Lifetime18;
         int var5Lifetime19;
-        this.field_f = new ehb(256);
+        this.field_f = new LruNodeCache(256);
         try {
           this.spriteArchive = param2;
           this.textureArchive = param1;

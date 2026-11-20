@@ -55,11 +55,11 @@ final class npb {
           var5_int = param3.isReloading((byte) -90) ? 1 : 0;
           if (this.field_g &&
             var5_int == 0) {
-            GetNebulaFadesOutWhenClose.a(-112, fa.field_d[18]);
+            GetNebulaFadesOutWhenClose.a(-112, PendingScoreboardRequest.soundEffects[18]);
           } else {
             if (var5_int != 0 &&
               !this.field_g) {
-              GetNebulaFadesOutWhenClose.a(-86, fa.field_d[10]);
+              GetNebulaFadesOutWhenClose.a(-86, PendingScoreboardRequest.soundEffects[10]);
             }
           }
           stackIn_15_1 = (var5_int != 0);
@@ -69,7 +69,7 @@ final class npb {
           if (var6 < var7 &&
             var7 < this.field_d &&
             this.field_f <= 0) {
-            GetNebulaFadesOutWhenClose.a(-87, fa.field_d[16]);
+            GetNebulaFadesOutWhenClose.a(-87, PendingScoreboardRequest.soundEffects[16]);
             this.field_f = Particle.field_l;
           }
           if (this.field_f > 0) {
@@ -113,13 +113,13 @@ final class npb {
             }
           }
           if (this.field_e < var8) {
-            GetNebulaFadesOutWhenClose.a(param1 - 186, fa.field_d[9]);
+            GetNebulaFadesOutWhenClose.a(param1 - 186, PendingScoreboardRequest.soundEffects[9]);
           }
           this.field_e = var8;
           var10 = param3.getSelfDestructPrepared((byte) -86) ? 1 : 0;
           if (var10 != 0 &&
             !this.field_b) {
-            GetNebulaFadesOutWhenClose.a(-90, fa.field_d[83]);
+            GetNebulaFadesOutWhenClose.a(-90, PendingScoreboardRequest.soundEffects[83]);
           }
           stackIn_58_1 = (var10 != 0);
           this.field_b = stackIn_58_1;
@@ -127,7 +127,7 @@ final class npb {
           var11Lifetime1 = stackIn_61_0;
           if (var11Lifetime1 != 0 &&
             !this.field_c) {
-            GetNebulaFadesOutWhenClose.a(-103, fa.field_d[84]);
+            GetNebulaFadesOutWhenClose.a(-103, PendingScoreboardRequest.soundEffects[84]);
           }
           stackIn_68_1 = (var11Lifetime1 != 0);
           this.field_c = stackIn_68_1;
@@ -139,7 +139,7 @@ final class npb {
             var12 = 0;
           }
           if (this.field_a > var12) {
-            GetNebulaFadesOutWhenClose.a(-98, fa.field_d[85]);
+            GetNebulaFadesOutWhenClose.a(-98, PendingScoreboardRequest.soundEffects[85]);
           }
           this.field_a = var12;
           return;

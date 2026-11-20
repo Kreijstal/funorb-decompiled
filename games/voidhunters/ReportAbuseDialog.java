@@ -319,7 +319,7 @@ final class ReportAbuseDialog extends Widget {
             var23 = 26 + var19;
             var24 = 10 + (24 + (var22 + var17Lifetime5));
             var25 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var23);
-            var26 = lma.a(param3, param1, var24, (byte) -16);
+            var26 = PopupPositioning.adjustPopupY(param3, param1, var24, (byte) -16);
             this.setBounds(var25, 0, var23, var26, var24);
             return;
           }
@@ -337,7 +337,7 @@ final class ReportAbuseDialog extends Widget {
           var18Lifetime1 = 13 + (var15_int + 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var18Lifetime1);
-          var21Lifetime1 = lma.a(param3, param1, var19Lifetime1, (byte) -16);
+          var21Lifetime1 = PopupPositioning.adjustPopupY(param3, param1, var19Lifetime1, (byte) -16);
           this.setBounds(var20Lifetime1, -77, var18Lifetime1, var21Lifetime1, var19Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

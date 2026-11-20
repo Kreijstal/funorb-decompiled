@@ -59,7 +59,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (SetCountermeasureLauncherAimarc.field_r != null) {
             try {
               SetCountermeasureLauncherAimarc.field_r.seek(0, 0L);
-              SetCountermeasureLauncherAimarc.field_r.write(24, qga.field_b.position, (byte) -88, qga.field_b.payload);
+              SetCountermeasureLauncherAimarc.field_r.write(24, AccountNameAvailabilityReplies.field_b.position, (byte) -88, AccountNameAvailabilityReplies.field_b.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -68,7 +68,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param0 < 53) {
             return;
           }
-          qga.field_b.position = qga.field_b.position + 24;
+          AccountNameAvailabilityReplies.field_b.position = AccountNameAvailabilityReplies.field_b.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

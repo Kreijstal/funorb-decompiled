@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lma {
+final class PopupPositioning {
     private static String field_z;
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int adjustPopupY(int param0, int param1, int param2, byte param3) {
         if (!(param1 + param0 + param2 > SoftwareRasterizer2D.height)) {
           return param0 + param1;
         }

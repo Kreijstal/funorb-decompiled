@@ -111,7 +111,7 @@ final class ComponentCollision extends IntrusiveNode {
               ObjectiveMarker.field_b.setBounds(var9, 119, ThreeSliceButtonStyle.field_r.width - var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
               ObjectiveMarker.field_b.text = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
               stackIn_20_0 = ObjectiveMarker.field_b;
-              stackIn_21_1 = (param2) && (qga.field_a == 0L);
+              stackIn_21_1 = (param2) && (AccountNameAvailabilityReplies.field_a == 0L);
               stackIn_20_0.enabled = stackIn_21_1;
               var8 = ObjectiveMarker.field_b;
               var10 = 2;
@@ -327,8 +327,8 @@ final class ComponentCollision extends IntrusiveNode {
               SetAutozoomSpeedDivide.field_p.text = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
               var8 = SetAutozoomSpeedDivide.field_p;
             }
-            if (qga.field_a != 0L) {
-              var9 = (int)(-MonotonicMillisClock.currentTimeMillis(false) + qga.field_a);
+            if (AccountNameAvailabilityReplies.field_a != 0L) {
+              var9 = (int)(-MonotonicMillisClock.currentTimeMillis(false) + AccountNameAvailabilityReplies.field_a);
               var9 = (999 + var9) / 1000;
               if (1 > var9) {
                 var9 = 1;

@@ -87,9 +87,9 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
     final static int e(int param0) {
         if (param0 != 204) {
           field_p = 19;
-          return (int)(1000000000L / OpenGlGlyphMask.field_c);
+          return (int)(1000000000L / OpenGlGlyphMask.tickIntervalNanos);
         }
-        return (int)(1000000000L / OpenGlGlyphMask.field_c);
+        return (int)(1000000000L / OpenGlGlyphMask.tickIntervalNanos);
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8, int param9, int param10, int param11) {

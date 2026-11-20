@@ -21,7 +21,7 @@ final class SetMessageMax extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          hb.field_a = arguments[0].intValue(107);
+          ConsoleSettingsScript.field_a = arguments[0].intValue(107);
           if (obfuscationGuard > -119) {
             SetMessageMax.clearSharedReferences(-49);
           }

@@ -37,9 +37,9 @@ final class GetUseCircleFill extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (null == hb.field_d ||
-          !(hb.field_d.length >= param1)) {
-          hb.field_d = new int[2 * param1];
+        if (null == ConsoleSettingsScript.field_d ||
+          !(ConsoleSettingsScript.field_d.length >= param1)) {
+          ConsoleSettingsScript.field_d = new int[2 * param1];
         }
         if (GetLaserEnergyUsed.field_o == null) {
           GetLaserEnergyUsed.field_o = new int[param1 * 2];

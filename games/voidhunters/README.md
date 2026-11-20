@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1458/1572 classes and 7312/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 114 opaque classes and 903 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1474/1572 classes and 7351/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 98 opaque classes and 864 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -112,6 +112,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `GameInterfaceAssembler` and `SocialTabsPanel` identify shared game/tips, friends and ignore containers; interface text and panel-width/factory holders have descriptive names. `ByteIndexedRecordWriteRequest`, `IntegerRecordReadQueueEntry` and `IntegerRecordWritePackets` expose record queues and framing helpers. Ellipse rasterization, texture-combine mappings, component-state submission and text encoding/drawing also have named entrypoints. Original packet bytes/CRC, byte-index versus signed-smart framing, queue ordering, private constructor failures, layout arithmetic and guards remain unchanged.
 
 `UiValueTrack` and its renderer expose multiple marker values and their track/caption geometry. Asteroid definitions, incoming/outgoing simulated lag, packet reading/flushing, decoded sprite construction/cleanup and loading-message language selection have named helpers and fields. Original Gaussian jitter, FIFO release rules, keepalives, asteroid geometry/RNG, sprite alpha math, language tables, constructor failures and guards remain unchanged.
+
+`ComponentBehaviour` and `ShieldBehaviour` expose activation, per-tick updates, independent aiming and special-order state. `BlackBoxRecording` names its serialization-mode hooks; software/GPU face attachments, `LruNodeCache`, `LoginMethod`, tutorial/developer access checks and context-menu/popup builders have descriptive names. Shared message-box state, settings scripts, music playback, skinned panel drawing, progress dialogs and tick-rate helpers are named without changing the original empty constructors, queue/sentinel behavior, shared save slot, cookies, guards or UI/network policy.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

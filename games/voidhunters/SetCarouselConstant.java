@@ -24,7 +24,7 @@ final class SetCarouselConstant extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetCarouselConstant.clearSharedReferences((byte) 125);
           }
-          kmb.a((String) (arguments[0].value), 18700);
+          CarouselConstantRequests.sendCarouselConstant((String) (arguments[0].value), 18700);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

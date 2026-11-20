@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aaa {
+final class LobbyGameContextMenuBuilder {
     static String field_a;
     static AudioOutput field_b;
 
@@ -13,7 +13,7 @@ final class aaa {
         field_a = null;
     }
 
-    final static void a(byte param0, LobbyGameEntry param1, String param2, boolean param3) {
+    final static void showGameContextMenu(byte param0, LobbyGameEntry param1, String param2, boolean param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;

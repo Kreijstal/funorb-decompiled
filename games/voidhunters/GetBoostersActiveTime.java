@@ -11,7 +11,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           pendingClientDataReads = (IntrusiveDeque) null;
         }
         ArmBehaviour.a(GrapplingHook.field_x, true, -17833, SetResourceNodeCaptureTime.field_p);
-        kmb.field_c = true;
+        CarouselConstantRequests.field_c = true;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -101,7 +101,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             return stackIn_6_0;
           }
           if (TextureCombineMappings.field_c == SetBombletSprayReload.field_p) {
-            ehb.field_f = null;
+            LruNodeCache.field_f = null;
             RequestNewestBlackboxRecording.field_p.position = 0;
             if (param5 == null) {
               SetTorpedoAcceleration.field_p.position = 0;
@@ -159,8 +159,8 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           }
           if (TextureCombineMappings.field_c == SocialTabsPanel.field_d &&
             ShipBlueprint.a(1, 30000)) {
-            var9Lifetime1 = qga.field_b.readUnsignedByte((byte) -124);
-            qga.field_b.position = 0;
+            var9Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -124);
+            AccountNameAvailabilityReplies.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               TextureCombineMappings.field_c = ComponentWordEncoder.field_a;
@@ -180,20 +180,20 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
                 ShipBlueprint.a(SetWorldWidthUpshift.a(param4 + 24655), 30000);
-                ehb.field_f = new Boolean(SetSpecialOrderBarYOffset.a(param4 - 2, qga.field_b));
-                qga.field_b.position = 0;
+                LruNodeCache.field_f = new Boolean(SetSpecialOrderBarYOffset.a(param4 - 2, AccountNameAvailabilityReplies.field_b));
+                AccountNameAvailabilityReplies.field_b.position = 0;
               }
             }
           }
           if (TextureCombineMappings.field_c == ComponentWordEncoder.field_a) {
             var9Lifetime2 = 2;
             if (ShipBlueprint.a(var9Lifetime2, param4 ^ 30000)) {
-              var10Lifetime1 = qga.field_b.readUnsignedShort(1869);
-              qga.field_b.position = 0;
+              var10Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
+              AccountNameAvailabilityReplies.field_b.position = 0;
               if (ShipBlueprint.a(var10Lifetime1, param4 + 30000)) {
                 var11 = gob.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  gob.field_a[var12] = qga.field_b.readCircumfixedString(-1609246200);
+                  gob.field_a[var12] = AccountNameAvailabilityReplies.field_b.readCircumfixedString(-1609246200);
                 }
                 FighterBayWeaponDefinition.l(-122);
                 SetShowTutorial.field_o = false;
@@ -208,12 +208,12 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (TextureCombineMappings.field_c == OpenGlGpuCubeTexture.field_k &&
             PlayerJoinFactory.b((byte) 46)) {
             if (NetworkMessageState.incomingOpcode == 255) {
-              var9_ref_String = qga.field_b.readNullableString(0);
+              var9_ref_String = AccountNameAvailabilityReplies.field_b.readNullableString(0);
               if (var9_ref_String != null) {
                 SetNebulaProximityFadeDownshift.a(MissionList.b((byte) -123), var9_ref_String, -1);
               }
             } else {
-              dgb.field_b = qga.field_b.readString(-1);
+              dgb.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
             }
             FighterBayWeaponDefinition.l(-122);
             SetShowTutorial.field_o = false;

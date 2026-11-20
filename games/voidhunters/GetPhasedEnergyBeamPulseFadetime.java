@@ -96,7 +96,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (SetSpecialOrderBoxHeight.field_o == TextureCombineMappings.field_c &&
               ShipBlueprint.a(1, 30000)) {
-              var6_int = qga.field_b.readUnsignedByte((byte) -121);
+              var6_int = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -121);
               if (var6_int != 0) {
                 PartitioningManagerFactory.field_a = -1;
                 TextureCombineMappings.field_c = TextInputWidget.field_xb;
@@ -104,21 +104,21 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               } else {
                 TextureCombineMappings.field_c = ModalStack.field_w;
               }
-              qga.field_b.position = 0;
+              AccountNameAvailabilityReplies.field_b.position = 0;
             }
             if (ModalStack.field_w == TextureCombineMappings.field_c &&
               ShipBlueprint.a(8, param3 ^ 30013)) {
-              SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
-              qga.field_b.position = 0;
+              SetMissileLauncherRandomness.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
+              AccountNameAvailabilityReplies.field_b.position = 0;
               UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.loginCredentials, param1);
               TextureCombineMappings.field_c = LegacyOpenGlShaderProgram.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
             if (TextureCombineMappings.field_c == LegacyOpenGlShaderProgram.field_a &&
               ShipBlueprint.a(1, 30000)) {
-              var6_intLifetime1 = qga.field_b.readUnsignedByte((byte) -110);
+              var6_intLifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -110);
               NetworkMessageState.incomingOpcode = var6_intLifetime1;
-              qga.field_b.position = 0;
+              AccountNameAvailabilityReplies.field_b.position = 0;
               GetFighterBayAimspeed.field_o = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -141,13 +141,13 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (TextureCombineMappings.field_c == UiFocusableComponent.field_A &&
               PlayerJoinFactory.b((byte) 113)) {
-              SetTorpedoAimarc.field_p = qga.field_b.readLong(255);
+              SetTorpedoAimarc.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
               SetLagVariant.passwordForChatFilter = param5;
-              SetAngularVelocitySustain.field_p = qga.field_b.readUnsignedByte((byte) -94);
-              FireGrapplesOrderDefinition.field_d = qga.field_b.readUnsignedByte((byte) -106);
-              GetDebrisCarryOver.field_o = qga.field_b.readUnsignedShort(param3 + 1856);
-              var12 = qga.field_b.readNullableString(0);
-              var7 = qga.field_b.readUnsignedByte((byte) -106);
+              SetAngularVelocitySustain.field_p = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -94);
+              FireGrapplesOrderDefinition.field_d = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -106);
+              GetDebrisCarryOver.field_o = AccountNameAvailabilityReplies.field_b.readUnsignedShort(param3 + 1856);
+              var12 = AccountNameAvailabilityReplies.field_b.readNullableString(0);
+              var7 = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -106);
               if ((var7 & 1) != 0) {
                 ImageProducerRasterBuffer.d((byte) 111);
               }
@@ -155,35 +155,35 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 stackIn_39_0 = ((8 & var7) != 0);
                 GetBloomThresholdPercentage.field_p = stackIn_39_0;
                 stackIn_42_0 = ((var7 & 2) != 0);
-                hb.field_c = stackIn_42_0;
+                ConsoleSettingsScript.field_c = stackIn_42_0;
                 stackIn_45_0 = ((var7 & 4) != 0);
                 GetFightersPerPlayerMaximum.field_r = stackIn_45_0;
                 if (GetBloomThresholdPercentage.field_p) {
-                  hb.field_c = true;
+                  ConsoleSettingsScript.field_c = true;
                 }
               }
               stackIn_50_0 = ((16 & var7) != 0);
               SetMissilesHitSourceTeam.field_p = stackIn_50_0;
               if (GetBombletSprayReload.field_q) {
-                qga.field_b.readUnsignedByte((byte) -117);
-                qga.field_b.readUnsignedByte((byte) -91);
-                qga.field_b.readInt(86);
-                TeamNodeCondition.field_e = qga.field_b.readUnsignedShort(1869);
+                AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -117);
+                AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -91);
+                AccountNameAvailabilityReplies.field_b.readInt(86);
+                TeamNodeCondition.field_e = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
                 GetRepairModeActiveTime.field_o = new byte[TeamNodeCondition.field_e];
                 for (var8 = 0; TeamNodeCondition.field_e > var8; var8++) {
-                  GetRepairModeActiveTime.field_o[var8] = qga.field_b.readByte((byte) -114);
+                  GetRepairModeActiveTime.field_o[var8] = AccountNameAvailabilityReplies.field_b.readByte((byte) -114);
                 }
               }
-              IntIndexTable.field_a = qga.field_b.readString(param3 ^ -14);
+              IntIndexTable.field_a = AccountNameAvailabilityReplies.field_b.readString(param3 ^ -14);
               var13 = (CharSequence) ((Object) IntIndexTable.field_a);
               ffb.field_e = ConstantColorTextureOperation.normalizeName(false, var13);
-              SetClientSideDragging.field_p = qga.field_b.readUnsignedByte((byte) -94);
+              SetClientSideDragging.field_p = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -94);
               TextureCombineMappings.field_c = GetOndamageParticleSpeed.field_o;
               if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 124) == GetSalvoDamageMultiplier.emailCredentialType) {
-                SetFighterBayAimspeed.field_o.a(MissionList.b((byte) -106), param3 ^ 13);
+                SetFighterBayAimspeed.field_o.writeCookie(MissionList.b((byte) -106), param3 ^ 13);
               } else {
                 if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 112) == GetTorpedoReload.numericCredentialType) {
-                  SetShowTutorial.field_p.a(MissionList.b((byte) -103), 0);
+                  SetShowTutorial.field_p.writeCookie(MissionList.b((byte) -103), 0);
                 }
               }
               SetShowTutorial.field_o = false;
@@ -213,7 +213,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 FireGrapplesOrderDefinition.field_e[var8Lifetime1] = FireGrapplesOrderDefinition.field_e[var8Lifetime1] + 50;
               }
-              qga.field_b.initializeCipher(18794, FireGrapplesOrderDefinition.field_e);
+              AccountNameAvailabilityReplies.field_b.initializeCipher(18794, FireGrapplesOrderDefinition.field_e);
               stackIn_77_0 = NetworkMessageState.incomingOpcode;
               return stackIn_77_0;
             }
@@ -229,7 +229,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (NetworkMessageState.incomingOpcode == 7) {
                 NetworkMessageState.incomingOpcode = 3;
               }
-              dgb.field_b = qga.field_b.readString(-1);
+              dgb.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
               SetShowTutorial.field_o = false;
               stackIn_87_0 = NetworkMessageState.incomingOpcode;
               return stackIn_87_0;

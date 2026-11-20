@@ -28,7 +28,7 @@ final class ArmBehaviour extends ComponentBehaviour implements DiffableState {
         try {
           MusicPatchPcmStream.field_h = param0;
           ToggleShieldsOrderDefinition.field_d = param3;
-          fa.a(SetMissionDebrisVotingChancestep.field_p, -127, param1);
+          PendingScoreboardRequest.showAccountStatusDialog(SetMissionDebrisVotingChancestep.field_p, -127, param1);
           if (param2 != -17833) {
             field_d = (String) null;
           }
@@ -61,7 +61,7 @@ final class ArmBehaviour extends ComponentBehaviour implements DiffableState {
             var5 = (String) null;
             ArmBehaviour.a((String) null, false, -23, (String) null);
           }
-          stackIn_3_0 = SetBombletSprayEnergyUsed.a(param1, (byte) -126, param0, param3, 200);
+          stackIn_3_0 = SetBombletSprayEnergyUsed.drawCenteredMessagePanel(param1, (byte) -126, param0, param3, 200);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

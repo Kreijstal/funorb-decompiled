@@ -22,7 +22,7 @@ final class GpuModel extends Model3D {
     private short[] field_d;
     private int field_I;
     private int maxZ;
-    private int field_u;
+    private int faceAttachmentCount;
     private float[] field_y;
     private int[] field_t;
     private short[] field_c;
@@ -36,14 +36,14 @@ final class GpuModel extends Model3D {
     private short[] field_A;
     private short[] field_f;
     private short[] field_J;
-    private gib[] field_E;
+    private GpuFaceAttachmentState[] faceAttachmentStates;
     private short[] field_N;
     private GpuIndexBufferOwner field_H;
     private int[] field_w;
     private GpuVertexBufferOwner field_q;
     private short[] field_F;
     private byte[] field_n;
-    private lga[] field_k;
+    private GpuFaceAttachment[] faceAttachments;
     private int field_s;
 
     final int getMinZ() {
@@ -370,10 +370,10 @@ final class GpuModel extends Model3D {
           this.vertexX = param1.vertexX;
           var11 = new GpuVertexNormal[this.vertexCount];
           if (null != param1.faceAttachments) {
-            this.field_u = param1.faceAttachments.length;
-            this.field_k = new lga[this.field_u];
-            this.field_E = new gib[this.field_u];
-            for (var12Lifetime1 = 0; this.field_u > var12Lifetime1; var12Lifetime1++) {
+            this.faceAttachmentCount = param1.faceAttachments.length;
+            this.faceAttachments = new GpuFaceAttachment[this.faceAttachmentCount];
+            this.faceAttachmentStates = new GpuFaceAttachmentState[this.faceAttachmentCount];
+            for (var12Lifetime1 = 0; this.faceAttachmentCount > var12Lifetime1; var12Lifetime1++) {
               var69 = param1.faceAttachments[var12Lifetime1];
               var70 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var69.definitionId, 0);
               var15_intLifetime1 = -1;
@@ -395,8 +395,8 @@ final class GpuModel extends Model3D {
                 stackIn_64_1 = param1.field_r[var69.faceIndex];
               }
               var16Lifetime1Lifetime2 = stackIn_63_0 | -stackIn_64_1 + 255 << 24;
-              this.field_k[var12Lifetime1] = new lga(var15_intLifetime1, (int) param1.faceVertexA[var69.faceIndex], (int) param1.faceVertexB[var69.faceIndex], (int) param1.faceVertexC[var69.faceIndex], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
-              this.field_E[var12Lifetime1] = new gib(var16Lifetime1Lifetime2);
+              this.faceAttachments[var12Lifetime1] = new GpuFaceAttachment(var15_intLifetime1, (int) param1.faceVertexA[var69.faceIndex], (int) param1.faceVertexB[var69.faceIndex], (int) param1.faceVertexC[var69.faceIndex], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
+              this.faceAttachmentStates[var12Lifetime1] = new GpuFaceAttachmentState(var16Lifetime1Lifetime2);
             }
           }
           var12Lifetime2 = 3 * this.field_v;
@@ -1111,7 +1111,7 @@ final class GpuModel extends Model3D {
           this.field_s = param2;
           if (param3 ||
             SetDebrisThrowable.a((byte) -89, this.field_I, this.field_s)) {
-            this.field_o = new GpuVertexBufferOwner(lga.a(14216, this.field_s, this.field_I));
+            this.field_o = new GpuVertexBufferOwner(GpuFaceAttachment.a(14216, this.field_s, this.field_I));
           }
           if (param3 ||
             SetHealthBarWidth.a(this.field_s, false, this.field_I)) {

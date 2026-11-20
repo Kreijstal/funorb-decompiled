@@ -590,7 +590,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               } else {
                 var34Lifetime2 = GetDebrisGroupColour.field_p;
               }
-              NebulaFieldFactory.field_a = gib.field_c + " - " + var34Lifetime2;
+              NebulaFieldFactory.field_a = GpuFaceAttachmentState.field_c + " - " + var34Lifetime2;
             }
             if (var12.field_Rb.field_O) {
               if (!var12.field_xb) {
@@ -625,7 +625,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
             if (var12.field_o != 0 &&
               !var12.isSecondaryDetached((byte) 34)) {
               if (var12.field_Sb.field_o == 0) {
-                aaa.a((byte) 112, var12, var32, param3);
+                LobbyGameContextMenuBuilder.showGameContextMenu((byte) 112, var12, var32, param3);
               } else {
                 if (var12.field_fc && (!var12.field_Gb ||
                   !var12.field_cc &&

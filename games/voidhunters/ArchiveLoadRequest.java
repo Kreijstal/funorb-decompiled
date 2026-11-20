@@ -109,7 +109,7 @@ final class ArchiveLoadRequest {
         int var6Lifetime1;
         int var7Lifetime1;
         int var7Lifetime2;
-        hb.field_d[MissionBuilder.field_e] = param4;
+        ConsoleSettingsScript.field_d[MissionBuilder.field_e] = param4;
         UnlitGpuMaterialEffect.field_f[MissionBuilder.field_e] = MissionBuilder.field_e;
         GetLaserEnergyUsed.field_o[MissionBuilder.field_e] = param1;
         if (WeaponBehaviourFactory.field_b < param1) {

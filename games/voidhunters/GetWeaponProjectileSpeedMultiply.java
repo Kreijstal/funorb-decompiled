@@ -4,7 +4,7 @@
 final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
     static Sprite field_o;
 
-    final static void a(MusicTrack param0, boolean param1, int param2, byte param3) {
+    final static void playMusicTrack(MusicTrack param0, boolean param1, int param2, byte param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_19_0 = null;
@@ -50,14 +50,14 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 > -90) {
-          GetWeaponProjectileSpeedMultiply.e((byte) 79);
+          GetWeaponProjectileSpeedMultiply.decreaseMusicVolume((byte) 79);
           field_o = null;
           return;
         }
         field_o = null;
     }
 
-    final static void e(byte param0) {
+    final static void decreaseMusicVolume(byte param0) {
         int var1;
         if (param0 == -81) {
           if (GetMutatorVotes.field_p > 32) {

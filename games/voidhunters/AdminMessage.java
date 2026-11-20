@@ -90,13 +90,13 @@ final class AdminMessage implements DiffableState {
         }
     }
 
-    final static void a(int param0, boolean param1, MusicTrack param2) {
+    final static void playMusicTrack(int param0, boolean param1, MusicTrack param2) {
         try {
           if (param0 != 32) {
             MusicTrack var4 = (MusicTrack) null;
-            AdminMessage.a(-122, false, (MusicTrack) null);
+            AdminMessage.playMusicTrack(-122, false, (MusicTrack) null);
           }
-          GetWeaponProjectileSpeedMultiply.a(param2, param1, 256, (byte) 97);
+          GetWeaponProjectileSpeedMultiply.playMusicTrack(param2, param1, 256, (byte) 97);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "be.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -138,7 +138,7 @@ final class AdminMessage implements DiffableState {
         try {
           if (param1) {
             MusicTrack var4 = (MusicTrack) null;
-            AdminMessage.a(-84, true, (MusicTrack) null);
+            AdminMessage.playMusicTrack(-84, true, (MusicTrack) null);
           }
           this.index = param0.readBits(0, 32);
           this.value = param0.readBits(0, 32);

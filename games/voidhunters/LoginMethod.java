@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class khb {
+final class LoginMethod {
     static int field_c;
-    private String field_a;
+    private String cookieValue;
     static boolean field_b;
 
-    final boolean a(int param0, String param1) {
+    final boolean matchesCookieValue(int param0, String param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -15,9 +15,9 @@ final class khb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_a = (String) null;
+            this.cookieValue = (String) null;
           }
-          stackIn_3_0 = this.field_a.equals(param1);
+          stackIn_3_0 = this.cookieValue.equals(param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,20 +37,20 @@ final class khb {
         throw new IllegalStateException();
     }
 
-    final void a(java.applet.Applet param0, int param1) {
+    final void writeCookie(java.applet.Applet param0, int param1) {
         if (param1 != 0) {
           return;
         }
         try {
-          qs.writeCookie(param0, param1 ^ -124, this.field_a, "jagex-last-login-method", 31536000L);
+          qs.writeCookie(param0, param1 ^ -124, this.cookieValue, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "khb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    khb(String param0) {
+    LoginMethod(String param0) {
         try {
-          this.field_a = param0;
+          this.cookieValue = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "khb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

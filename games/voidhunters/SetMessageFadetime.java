@@ -75,7 +75,7 @@ final class SetMessageFadetime extends ConsoleCommand {
               if (vu.field_xb) {
                 param0 = SetReverbGain.a(SetPointDefenceLaserFireForce.field_o, new String[]{param0}, 107);
               }
-              if (kmb.field_c) {
+              if (CarouselConstantRequests.field_c) {
                 param0 = SpritePadding.field_a;
               }
               SetPointDefenceLaserAimarc.field_o.showStatusMessage(true, param0, param2);

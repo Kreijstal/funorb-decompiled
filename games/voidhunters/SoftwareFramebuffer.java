@@ -13,13 +13,13 @@ final class SoftwareFramebuffer implements Framebuffer {
     final static void a(int param0) {
         CharSequence var3 = null;
         if (param0 < -84) {
-          IntIndexTable.field_a = qga.field_b.readString(-1);
+          IntIndexTable.field_a = AccountNameAvailabilityReplies.field_b.readString(-1);
           var3 = (CharSequence) ((Object) IntIndexTable.field_a);
           ffb.field_e = ConstantColorTextureOperation.normalizeName(false, var3);
           return;
         }
         field_a = (String) null;
-        IntIndexTable.field_a = qga.field_b.readString(-1);
+        IntIndexTable.field_a = AccountNameAvailabilityReplies.field_b.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) IntIndexTable.field_a);
         ffb.field_e = ConstantColorTextureOperation.normalizeName(false, var2);
     }

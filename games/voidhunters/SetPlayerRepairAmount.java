@@ -17,24 +17,24 @@ final class SetPlayerRepairAmount extends ConsoleCommand {
           if (param0 > ~tb.field_b) {
             tb.field_b = tb.field_b - 1;
             if (!(tb.field_b <= 0)) {
-              cs.b((byte) -31);
+              SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
             }
             return;
           }
           if (!(tb.field_b <= 0)) {
-            cs.b((byte) -31);
+            SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
           }
           return;
         }
         if (param0 <= ~tb.field_b) {
           if (!(tb.field_b <= 0)) {
-            cs.b((byte) -31);
+            SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
           }
           return;
         }
         tb.field_b = tb.field_b - 1;
         if (!(tb.field_b <= 0)) {
-          cs.b((byte) -31);
+          SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
         }
     }
 

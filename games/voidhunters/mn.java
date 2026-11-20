@@ -26,7 +26,7 @@ final class mn {
           if (tb.field_b <= 0) {
             return;
           }
-          cs.b((byte) 71);
+          SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) 71);
           SetToggledScoreboard.field_o.updateInput(param0, 1332);
           if (PartitionZoneListFactory.field_b != null) {
             if (GetBloomThresholdPercentage.field_p) {

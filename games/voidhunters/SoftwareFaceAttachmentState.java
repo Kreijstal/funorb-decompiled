@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cs {
-    static ehb field_c;
+final class SoftwareFaceAttachmentState {
+    static LruNodeCache field_c;
     static String field_b;
     static TextureFilterMode field_a;
 
-    final static void b(byte param0) {
+    final static void updateAnimatedPanelLayout(byte param0) {
         int var1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         int var2 = var1 - tb.field_b * tb.field_b;
         int var3 = (-GetPhasedEnergyBeamProjectiles.field_o + GetAngularForceDownshift.field_p) * var2 / var1 + GetPhasedEnergyBeamProjectiles.field_o;
         SetToggledScoreboard.field_o.setBounds(SetUseDetailLines.field_o, 118, 640, var3, 120);
         int var4 = 81 / ((31 - param0) / 40);
-        hp.a(640, -24 + GetAngularForceDownshift.field_p, qs.field_c, false, MissionListFactory.field_a, 5, 0);
+        StringBuilderOutputStream.layoutQuickChatMenuArea(640, -24 + GetAngularForceDownshift.field_p, qs.field_c, false, MissionListFactory.field_a, 5, 0);
     }
 
-    cs(int param0) {
+    SoftwareFaceAttachmentState(int param0) {
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isAsciiLetter(char param0, int param1) {
         if (param1 != 0) {
           field_a = (TextureFilterMode) null;
           if (param0 < 65) {
@@ -69,14 +69,14 @@ final class cs {
           field_a = null;
           return;
         }
-        cs.b((byte) -34);
+        SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -34);
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
     static {
-        field_c = new ehb(16);
+        field_c = new LruNodeCache(16);
         field_b = "More armour";
         field_a = new TextureFilterMode();
     }

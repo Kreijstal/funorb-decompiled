@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ssa {
+final class DeveloperAccess {
     static BitmapFont field_a;
     static String field_b;
 
-    final static boolean b(int param0) {
+    final static boolean hasDeveloperAccess(int param0) {
         if (param0 == 2) {
           return 2 <= SetAngularVelocitySustain.field_p ? true : false;
         }
-        ssa.b(104);
+        DeveloperAccess.hasDeveloperAccess(104);
         return 2 <= SetAngularVelocitySustain.field_p ? true : false;
     }
 

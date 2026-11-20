@@ -46,7 +46,7 @@ abstract class ComponentBehaviour implements DiffableState {
         return 0;
     }
 
-    int a(int param0, Ship param1) {
+    int getSpecialOrderState(int param0, Ship param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -89,14 +89,14 @@ abstract class ComponentBehaviour implements DiffableState {
         try {
           if (param0 <= 54) {
             World var4 = (World) null;
-            this.a((ShipBody) null, (int[]) null, 60, -22, 108, 110, 29, (World) null, 19, -10, 19);
+            this.activate((ShipBody) null, (int[]) null, 60, -22, 108, 110, 29, (World) null, 19, -10, 19);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eka.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0) {
+    final boolean canAimIndependently(int param0) {
         if (param0 != 0) {
           this.getAimArc((byte) 90);
           return false;
@@ -116,14 +116,14 @@ abstract class ComponentBehaviour implements DiffableState {
         try {
           if (param1) {
             World var4 = (World) null;
-            this.a(true, -75, (ShipBody) null, (int[]) null, (World) null, 110, -14, 79);
+            this.update(true, -75, (ShipBody) null, (int[]) null, (World) null, 110, -14, 79);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eka.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(boolean param0, int param1, ShipBody param2, int[] param3, World param4, int param5, int param6, int param7) {
+    void update(boolean param0, int param1, ShipBody param2, int[] param3, World param4, int param5, int param6, int param7) {
         try {
           if (param6 < 74) {
             field_a = (String) null;
@@ -133,7 +133,7 @@ abstract class ComponentBehaviour implements DiffableState {
         }
     }
 
-    void a(ShipBody param0, int[] param1, int param2, int param3, int param4, int param5, int param6, World param7, int param8, int param9, int param10) {
+    void activate(ShipBody param0, int[] param1, int param2, int param3, int param4, int param5, int param6, World param7, int param8, int param9, int param10) {
         try {
           if (param2 != -9151) {
             field_b = true;

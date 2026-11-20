@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lga {
-    lga(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
+final class GpuFaceAttachment {
+    GpuFaceAttachment(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
     }
 
     final static void a(boolean param0, int param1) {
         Asteroid.a(3, param0);
         if (param1 != -24055) {
-          lga.getArmageddonStartTick((byte) 71, -57);
+          GpuFaceAttachment.getArmageddonStartTick((byte) 71, -57);
           SetSpecialOrderBoxWidth.a((byte) 91, param0);
           return;
         }
@@ -19,7 +19,7 @@ final class lga {
         if (param0 == 14216) {
           return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
         }
-        lga.a(-124, 11, -116);
+        GpuFaceAttachment.a(-124, 11, -116);
         return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
     }
 
@@ -42,7 +42,7 @@ final class lga {
         if (param0 == -2) {
           return Cp1252CharacterEncoder.armageddonTimerStart * Particle.field_l;
         }
-        lga.getArmageddonStartTick((byte) 36, 1);
+        GpuFaceAttachment.getArmageddonStartTick((byte) 36, 1);
         return Cp1252CharacterEncoder.armageddonTimerStart * Particle.field_l;
     }
 

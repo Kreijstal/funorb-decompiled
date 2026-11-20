@@ -43,7 +43,7 @@ final class SetVelocitySustainMax extends ConsoleCommand {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ssa.b(2)) {
+          if (DeveloperAccess.hasDeveloperAccess(2)) {
             System.out.println(param2);
             param0.printStackTrace(System.out);
           }

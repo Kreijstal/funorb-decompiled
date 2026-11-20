@@ -736,7 +736,7 @@ final class CarouselCommongameInfo implements DiffableState {
           if (var6 == this.tick) {
             var7 = System.out;
             var14 = new StringBuilder();
-            var9 = new PrintStream((OutputStream) ((Object) new hp(var14)));
+            var9 = new PrintStream((OutputStream) ((Object) new StringBuilderOutputStream(var14)));
             System.setOut(var9);
             var10 = ((CarouselSlotStateDump) (var3)).d(0);
             var10.reportDifferences(this.history[this.currentIndex], -100);

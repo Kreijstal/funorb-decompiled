@@ -57,7 +57,7 @@ final class ShipBlueprint implements DiffableState {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (qga.field_b.position >= param0) {
+          if (AccountNameAvailabilityReplies.field_b.position >= param0) {
             return true;
           }
           if (param1 != 30000) {
@@ -68,16 +68,16 @@ final class ShipBlueprint implements DiffableState {
           }
           int var2_int = SetShipSpawnInvulnerabilityTime.field_o.available(0);
           if (var2_int > 0) {
-            if (var2_int > -qga.field_b.position + param0) {
-              var2_int = param0 - qga.field_b.position;
+            if (var2_int > -AccountNameAvailabilityReplies.field_b.position + param0) {
+              var2_int = param0 - AccountNameAvailabilityReplies.field_b.position;
             }
-            SetShipSpawnInvulnerabilityTime.field_o.readFully(param1 ^ -30026, qga.field_b.position, var2_int, qga.field_b.payload);
+            SetShipSpawnInvulnerabilityTime.field_o.readFully(param1 ^ -30026, AccountNameAvailabilityReplies.field_b.position, var2_int, AccountNameAvailabilityReplies.field_b.payload);
             ModelData.lastNetworkReadTimeMillis = MonotonicMillisClock.currentTimeMillis(false);
-            qga.field_b.position = qga.field_b.position + var2_int;
-            if (param0 > qga.field_b.position) {
+            AccountNameAvailabilityReplies.field_b.position = AccountNameAvailabilityReplies.field_b.position + var2_int;
+            if (param0 > AccountNameAvailabilityReplies.field_b.position) {
               return false;
             }
-            qga.field_b.position = 0;
+            AccountNameAvailabilityReplies.field_b.position = 0;
             return true;
           }
           try {

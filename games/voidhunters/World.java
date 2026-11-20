@@ -244,7 +244,7 @@ final class World implements DiffableState, CompactGameState {
                   var2_ref_tj.unlink(-3846);
                   if (var2_ref_tj.getType((byte) -104) == 6 &&
                     var4.getType((byte) -104) == 5) {
-                    this.spawnRadialProjectiles(0, gib.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.getFiredPlayer(false), false, var2_ref_tj.getX(111), var2_ref_tj.getY((byte) -107));
+                    this.spawnRadialProjectiles(0, GpuFaceAttachmentState.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.getFiredPlayer(false), false, var2_ref_tj.getX(111), var2_ref_tj.getY((byte) -107));
                     break;
                   }
                   BlendTextureOperation.a(20382, var2_ref_tj.getX(113), 81, var2_ref_tj.getY((byte) -107), 50);
@@ -6277,7 +6277,7 @@ final class World implements DiffableState, CompactGameState {
           }
           if (param1.getMissionPhase(param2 ^ -14360) == 5) {
             var5 = param1.getPhaseTimer((byte) -97);
-            var6 = lga.getArmageddonStartTick((byte) -2, this.objectiveType);
+            var6 = GpuFaceAttachment.getArmageddonStartTick((byte) -2, this.objectiveType);
             if (var6 < var5) {
               return false;
             }
@@ -7010,7 +7010,7 @@ final class World implements DiffableState, CompactGameState {
           boolean decompiledFrameRemainder0 = true;
           if (param1.getMissionPhase(8) == 5) {
             var5_int = param1.getPhaseTimer((byte) -102);
-            var6 = lga.getArmageddonStartTick((byte) -2, this.objectiveType);
+            var6 = GpuFaceAttachment.getArmageddonStartTick((byte) -2, this.objectiveType);
             if (var6 < var5_int) {
               var7 = MissileLauncherWeaponDefinition.getArmageddonDurationTicks(this.objectiveType, (byte) -78);
               var8 = var5_int - var6;

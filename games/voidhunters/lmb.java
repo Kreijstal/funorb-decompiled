@@ -7,7 +7,7 @@ final class lmb {
 
     final static boolean a(int param0) {
         int var1 = -95 % ((65 - param0) / 43);
-        return !hb.field_c ? true : false;
+        return !ConsoleSettingsScript.field_c ? true : false;
     }
 
     public static void clearSharedReferences(byte param0) {

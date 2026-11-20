@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb {
+final class ConsoleSettingsScript {
     static int[] field_d;
     static long field_b;
     static int field_a;
@@ -14,7 +14,7 @@ final class hb {
         field_d = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void applySettingsScript(String param0, int param1) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -67,9 +67,9 @@ final class hb {
         }
     }
 
-    final static void a(MusicTrack param0, byte param1) {
+    final static void playLoopingMusicTrack(MusicTrack param0, byte param1) {
         try {
-          AdminMessage.a(32, true, param0);
+          AdminMessage.playMusicTrack(32, true, param0);
           int var2_int = -81 / ((param1 + 42) / 61);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

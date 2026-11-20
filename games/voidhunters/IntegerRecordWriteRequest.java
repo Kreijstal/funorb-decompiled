@@ -42,7 +42,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[89] = RenderResourceNode.field_k;
         var2[178] = EmailAvailabilityCheck.field_c;
         var2[100] = WorldFactory.field_a;
-        var2[49] = kmb.field_f;
+        var2[49] = CarouselConstantRequests.field_f;
         var2[153] = UiSingleChildContainer.field_u;
         var2[135] = SetThrusterBindingBalanceThreshold.field_p;
         var2[41] = OpenGlShader.field_a;
@@ -85,7 +85,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[216] = GetMinimapWidth.field_o;
         var2[36] = GetFullMissionSet.field_p;
         var2[71] = Particle.field_v;
-        var2[140] = khb.field_c;
+        var2[140] = LoginMethod.field_c;
         var2[174] = SetMissilesCooldown.field_o;
         var2[122] = ArmSelfDestructOrderDefinition.field_e;
         var2[1] = veb.field_b;
@@ -105,7 +105,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[98] = MassDriverFireForceSetting.fireForce;
         var2[182] = SetRepairModePower.field_r;
         var2[106] = SetShipPersistence.field_s;
-        var2[161] = ffa.field_b;
+        var2[161] = SoftwareFaceAttachment.field_b;
         var2[74] = tea.field_b;
         var2[209] = Particle.field_w;
         var2[107] = SetMissileLauncherEnergyUsed.field_o;
@@ -162,7 +162,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[207] = IntegerRecordReadQueueEntry.field_d;
         var2[47] = GetUseNiceTrails.fogOfWarSensorRange;
         var2[208] = LegacyOpenGlUnderwaterEffect.field_k;
-        var2[206] = gib.field_a;
+        var2[206] = GpuFaceAttachmentState.field_a;
         var2[228] = TextureCoordinateMode.field_b;
         var2[155] = GetShipAimLines.field_p;
         var2[139] = MenuBackgroundBattle.field_c;
@@ -191,7 +191,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[173] = OpenGlShaderProgram.field_a;
         var2[21] = SetSniperCannonProjectiles.field_o;
         var2[28] = SetShipTeamAction.field_e;
-        var2[152] = ehb.field_e;
+        var2[152] = LruNodeCache.field_e;
         var2[57] = AsteroidFieldFactory.field_a;
         var2[2] = MatchingFieldValidator.field_k;
         var2[130] = ImageProducerAppletRasterBuffer.field_i;

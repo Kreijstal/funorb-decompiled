@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ehb {
+final class LruNodeCache {
     static Boolean field_f;
     static int field_g;
     static int field_e;
-    private DualLinkNode field_b;
-    private SecondaryNodeQueue field_c;
-    private NodeHashTable field_d;
-    private int field_a;
+    private DualLinkNode evictionSentinel;
+    private SecondaryNodeQueue recencyQueue;
+    private NodeHashTable index;
+    private int remainingCapacity;
 
-    final void a(long param0, byte param1, DualLinkNode param2) {
+    final void put(long param0, byte param1, DualLinkNode param2) {
         DualLinkNode var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -19,22 +19,22 @@ final class ehb {
         RuntimeException var5_ref = null;
         try {
           if (param1 > -9) {
-            this.field_a = 91;
+            this.remainingCapacity = 91;
           }
-          if (0 != this.field_a) {
-            this.field_a = this.field_a - 1;
+          if (0 != this.remainingCapacity) {
+            this.remainingCapacity = this.remainingCapacity - 1;
           } else {
-            var5 = this.field_c.removeFirst((byte) 77);
+            var5 = this.recencyQueue.removeFirst((byte) 77);
             var5.unlink(-3846);
             var5.unlinkSecondary((byte) -35);
-            if (var5 == this.field_b) {
-              var5 = this.field_c.removeFirst((byte) -128);
+            if (var5 == this.evictionSentinel) {
+              var5 = this.recencyQueue.removeFirst((byte) -128);
               var5.unlink(-3846);
               var5.unlinkSecondary((byte) -35);
             }
           }
-          this.field_d.put(param0, param2, (byte) -126);
-          this.field_c.addLast(param2, -94);
+          this.index.put(param0, param2, (byte) -126);
+          this.recencyQueue.addLast(param2, -94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,15 +50,15 @@ final class ehb {
         }
     }
 
-    final DualLinkNode a(long param0, int param1) {
+    final DualLinkNode get(long param0, int param1) {
         int var5 = 0;
-        DualLinkNode var4 = (DualLinkNode) (this.field_d.get(param0, 117));
+        DualLinkNode var4 = (DualLinkNode) (this.index.get(param0, 117));
         int var5Lifetime1;
         if (var4 == null) {
           var5 = -104 % ((-26 - param1) / 38);
           return var4;
         }
-        this.field_c.addLast(var4, -74);
+        this.recencyQueue.addLast(var4, -74);
         var5Lifetime1 = -104 % ((-26 - param1) / 38);
         return var4;
     }
@@ -66,18 +66,18 @@ final class ehb {
     public static void clearSharedReferences(boolean param0) {
         field_f = null;
         if (param0) {
-          ehb.clearSharedReferences(false);
+          LruNodeCache.clearSharedReferences(false);
         }
     }
 
-    ehb(int param0) {
+    LruNodeCache(int param0) {
         int var2 = 0;
-        this.field_b = new DualLinkNode();
-        this.field_c = new SecondaryNodeQueue();
-        this.field_a = param0;
+        this.evictionSentinel = new DualLinkNode();
+        this.recencyQueue = new SecondaryNodeQueue();
+        this.remainingCapacity = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
-        this.field_d = new NodeHashTable(var2);
+        this.index = new NodeHashTable(var2);
     }
 
     static {

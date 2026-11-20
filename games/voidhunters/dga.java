@@ -498,7 +498,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rated_game_tips_setup_singular", 23100);
                 if (null != var2) {
-                  aaa.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  LobbyGameContextMenuBuilder.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rated_game_tips_setup_plural", 23100);
                 if (null != var2) {
@@ -622,7 +622,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("who_can_join", 23100);
                 if (null != var2) {
-                  gib.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  GpuFaceAttachmentState.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_join", 23100);
                 if (null != var2) {
@@ -774,7 +774,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_1moreratedgame", 23100);
                 if (var2 != null) {
-                  wia.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  MessageBoxState.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_moreratedgames", 23100);
                 if (null != var2) {
@@ -1576,7 +1576,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_username_available", 23100);
                 if (null != var2) {
-                  uc.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  TutorialHintStatus.nameAvailableText = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_namelength", 23100);
                 if (var2 != null) {

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc {
-    static String field_a;
+final class TutorialHintStatus {
+    static String nameAvailableText;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          field_a = (String) null;
+          nameAvailableText = (String) null;
         }
-        field_a = null;
+        nameAvailableText = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean hasAnyCompletedHints(int param0) {
         boolean[] var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
@@ -46,6 +46,6 @@ final class uc {
     }
 
     static {
-        field_a = "Name is available";
+        nameAvailableText = "Name is available";
     }
 }

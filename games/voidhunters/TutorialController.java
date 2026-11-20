@@ -966,7 +966,7 @@ final class TutorialController {
                       }
                     }
                   }
-                  if (ssa.b(2) &&
+                  if (DeveloperAccess.hasDeveloperAccess(2) &&
                     SetMachineGunEnergyUsed.field_o[101]) {
                     this.completeHint((byte) 118, 10);
                   }
@@ -1036,7 +1036,7 @@ final class TutorialController {
                       if (var21 > 200) {
                         var21 = 200;
                       }
-                      SetBombletSprayEnergyUsed.a(165, (byte) -127, 2, SetMassDriverProjectileDamage.field_p, var21);
+                      SetBombletSprayEnergyUsed.drawCenteredMessagePanel(165, (byte) -127, 2, SetMassDriverProjectileDamage.field_p, var21);
                     }
                   }
                 }

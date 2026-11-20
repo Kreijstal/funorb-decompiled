@@ -18,7 +18,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     final static void a(int param0, int param1, long param2, boolean param3, String param4) {
         try {
           GetWaitForPlayers.field_p = param1;
-          hb.field_b = param2;
+          ConsoleSettingsScript.field_b = param2;
           cwa.field_b = param4;
           SetThrusterBindingBalanceThreshold.field_o = true;
           EmailAvailabilityCheckFactory.field_a = param0;

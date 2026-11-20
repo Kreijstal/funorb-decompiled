@@ -68,7 +68,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
           if (LegacyOpenGlMaterialEffectManager.field_j[param2] > 1) {
             var8 = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, LegacyOpenGlMaterialEffectManager.field_j[param2], 121) + param2;
           }
-          var9 = fa.field_d[var8];
+          var9 = PendingScoreboardRequest.soundEffects[var8];
           var10 = ServerInfo.playPannedSample(var7, 100, var6, var9);
           var10.stream.setLoopCount(-1);
           var5 = new LoopingSound();

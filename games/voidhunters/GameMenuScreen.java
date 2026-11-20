@@ -270,7 +270,7 @@ final class GameMenuScreen {
         var11 = -10 / ((param2 - 55) / 34);
         if (var6 == 23) {
           if (ArchiveIndexLoader.field_g.copyToClipboardHidden &&
-            !ssa.b(2)) {
+            !DeveloperAccess.hasDeveloperAccess(2)) {
             if (param1) {
               GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -33);
             }
@@ -438,7 +438,7 @@ final class GameMenuScreen {
         var7 = 20;
         var8 = 20;
         var10 = -32 % ((param0 - 3) / 51);
-        BlackBoxRecording.a((byte) -115, 200, var8 * 2 + FloatGradientNoiseSliceGenerator.field_e[6].paddedHeight + (FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight + 180 + 55), 80 + var5 + (-FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth - var7), -var8 + (160 + var6 - FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight) - 55, 2 * var7 + (480 + FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth) + FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth);
+        BlackBoxRecording.drawPanelBackground((byte) -115, 200, var8 * 2 + FloatGradientNoiseSliceGenerator.field_e[6].paddedHeight + (FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight + 180 + 55), 80 + var5 + (-FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth - var7), -var8 + (160 + var6 - FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight) - 55, 2 * var7 + (480 + FloatGradientNoiseSliceGenerator.field_e[0].paddedWidth) + FloatGradientNoiseSliceGenerator.field_e[2].paddedWidth);
         var9 = 16;
         var11 = 50;
         var12 = var11 + (-55 - FloatGradientNoiseSliceGenerator.field_e[0].paddedHeight) + (var6 + 160) - var8;
@@ -641,7 +641,7 @@ final class GameMenuScreen {
                                                         var4 = 0;
                                                         if (MatchingFieldValidator.field_g != null &&
                                                           SocketNetworkArchiveClient.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
-                                                          ssa.b(2))) {
+                                                          DeveloperAccess.hasDeveloperAccess(2))) {
                                                           var10 = MatchingFieldValidator.field_g.state.getVisibleSnapshot(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 93);
                                                           if (var10 != null) {
                                                             if (SetTorpedoProjectiles.field_o == null) {
@@ -772,7 +772,7 @@ final class GameMenuScreen {
                                 }
                               }
                               if (this.inputState.isLeftPressed((byte) -7)) {
-                                GetWeaponProjectileSpeedMultiply.e((byte) -81);
+                                GetWeaponProjectileSpeedMultiply.decreaseMusicVolume((byte) -81);
                               }
                               if (this.inputState.isRightPressed(-80)) {
                                 UiScrollBar.increaseMusicVolume(32);
@@ -823,7 +823,7 @@ final class GameMenuScreen {
                             if (var6 != 0) {
                               if (!this.inputState.isMouseButtonHeld((byte) 119) ||
                                 !(mba.field_b >= SetMinimapWidth.field_o)) {
-                                GetNebulaFadesOutWhenClose.a(-124, fa.field_d[1]);
+                                GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[1]);
                                 mba.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (UiDraggableContainer.field_E) {
@@ -874,7 +874,7 @@ final class GameMenuScreen {
         }
         if (var4 != 0 &&
           this.inputState.isActivationRequested((byte) -102)) {
-          GetNebulaFadesOutWhenClose.a(param0 ^ -106, fa.field_d[7]);
+          GetNebulaFadesOutWhenClose.a(param0 ^ -106, PendingScoreboardRequest.soundEffects[7]);
         }
     }
 
@@ -924,7 +924,7 @@ final class GameMenuScreen {
             var5_int = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
             var6 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             var3 = var3 + var4 * 2;
-            BlackBoxRecording.a((byte) -115, 255, var3, var5_int + (80 - var4), -var4 + (var6 + 160), var4 * 2 + 480);
+            BlackBoxRecording.drawPanelBackground((byte) -115, 255, var3, var5_int + (80 - var4), -var4 + (var6 + 160), var4 * 2 + 480);
             SetAutoaim.a(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
           }
         }
@@ -1087,7 +1087,7 @@ final class GameMenuScreen {
             this.updateKeyboardSelection((byte) -51);
             if (0 <= this.inputState.selectedIndex &&
               var2Lifetime1 != this.inputState.selectedIndex) {
-              GetNebulaFadesOutWhenClose.a(-110, fa.field_d[0]);
+              GetNebulaFadesOutWhenClose.a(-110, PendingScoreboardRequest.soundEffects[0]);
             }
             if (this.inputState.selectedIndex == -1) {
               continue;
@@ -1098,7 +1098,7 @@ final class GameMenuScreen {
           this.inputState.updatePointerSelection(this.hitTestItem(qs.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(uia.field_b, PlayerGameData.field_b, param0 ^ 6868));
           if (this.inputState.selectedIndex >= 0 &&
             var2Lifetime1Lifetime1 != this.inputState.selectedIndex) {
-            GetNebulaFadesOutWhenClose.a(-124, fa.field_d[0]);
+            GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[0]);
           }
           if (this.inputState.selectedIndex != -1) {
             this.handleItemInput(24, true, this.inputState.selectedIndex);

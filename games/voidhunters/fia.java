@@ -152,31 +152,31 @@ final class fia {
         try {
           boolean decompiledFrameRemainder1 = true;
           if (SetMachineGunEnergyUsed.field_o[80]) {
-            if (!khb.field_b) {
+            if (!LoginMethod.field_b) {
               BoundedRandomAccessFile.field_c = (1 + BoundedRandomAccessFile.field_c) % 3;
             }
-            khb.field_b = true;
+            LoginMethod.field_b = true;
           } else {
             if (!SetMachineGunEnergyUsed.field_o[87] &&
               GetPointDefenceLaserPulsetime.field_o >= 0) {
               if (!SetMachineGunEnergyUsed.field_o[88] &&
                 GetPointDefenceLaserPulsetime.field_o <= 0) {
                 if (SetMachineGunEnergyUsed.field_o[9]) {
-                  if (!khb.field_b) {
+                  if (!LoginMethod.field_b) {
                     System.out.println("Reloading game types");
                     GetCountermeasureLauncherAimarc.e((byte) 113);
                   }
-                  khb.field_b = true;
+                  LoginMethod.field_b = true;
                 } else {
                   if (SetMachineGunEnergyUsed.field_o[5]) {
-                    if (!khb.field_b) {
+                    if (!LoginMethod.field_b) {
                       GetDebrisThrowable.a(false, "Saving content data");
                       SetTorpedoProjectileLife.a(-118);
                     }
-                    khb.field_b = true;
+                    LoginMethod.field_b = true;
                   } else {
                     if (SetMachineGunEnergyUsed.field_o[97]) {
-                      if (!khb.field_b) {
+                      if (!LoginMethod.field_b) {
                         SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p + 1;
                         LegacyOpenGlEnvironmentReflectionEffect.field_g = new int[1][0];
                         TimingGraph.field_d = new int[1][0];
@@ -184,10 +184,10 @@ final class fia {
                           SetMissileLauncherProjectileLife.field_p = -1;
                         }
                       }
-                      khb.field_b = true;
+                      LoginMethod.field_b = true;
                     } else {
                       if (SetMachineGunEnergyUsed.field_o[96]) {
-                        if (!khb.field_b) {
+                        if (!LoginMethod.field_b) {
                           LegacyOpenGlEnvironmentReflectionEffect.field_g = new int[1][0];
                           SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p - 1;
                           TimingGraph.field_d = new int[1][0];
@@ -195,10 +195,10 @@ final class fia {
                             SetMissileLauncherProjectileLife.field_p = EnvironmentReflectionGpuMaterialEffect.field_g.length - 1;
                           }
                         }
-                        khb.field_b = true;
+                        LoginMethod.field_b = true;
                       } else {
                         if (SetMachineGunEnergyUsed.field_o[85]) {
-                          if (!khb.field_b &&
+                          if (!LoginMethod.field_b &&
                             SetMissileLauncherProjectileLife.field_p >= 0 &&
                             BoundedRandomAccessFile.field_c == 2) {
                             var17 = LegacyOpenGlEnvironmentReflectionEffect.field_g[LegacyOpenGlEnvironmentReflectionEffect.field_g.length - 1];
@@ -212,12 +212,12 @@ final class fia {
                               LegacyOpenGlEnvironmentReflectionEffect.field_g[LegacyOpenGlEnvironmentReflectionEffect.field_g.length - 1] = var26;
                             }
                           }
-                          khb.field_b = true;
+                          LoginMethod.field_b = true;
                         } else {
                           if (!SetMachineGunEnergyUsed.field_o[41]) {
-                            khb.field_b = false;
+                            LoginMethod.field_b = false;
                           } else {
-                            if (!khb.field_b &&
+                            if (!LoginMethod.field_b &&
                               SetMissileLauncherProjectileLife.field_p >= 0) {
                               if (BoundedRandomAccessFile.field_c == 1) {
                                 System.out.print("int[][] convex_outlines=new int[][]{");
@@ -257,7 +257,7 @@ final class fia {
                                 }
                               }
                             }
-                            khb.field_b = true;
+                            LoginMethod.field_b = true;
                           }
                         }
                       }
@@ -265,18 +265,18 @@ final class fia {
                   }
                 }
               } else {
-                if (!khb.field_b) {
+                if (!LoginMethod.field_b) {
                   GetUseTrails.field_o = GetUseTrails.field_o / 2.0f;
                 }
-                khb.field_b = true;
+                LoginMethod.field_b = true;
               }
               decompiledFrameRemainder1 = false;
             }
             else {
-              if (!khb.field_b) {
+              if (!LoginMethod.field_b) {
                 GetUseTrails.field_o = GetUseTrails.field_o * 2.0f;
               }
-              khb.field_b = true;
+              LoginMethod.field_b = true;
             }
           }
           if (SetMachineGunEnergyUsed.field_o[33]) {

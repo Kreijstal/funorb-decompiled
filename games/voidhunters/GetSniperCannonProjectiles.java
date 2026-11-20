@@ -50,7 +50,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             !spb.a(-121) &&
             SetSpinningBladeSpindamageMultiplier.field_o == null &&
             SetThrusterParticleSpeedDownshift.field_o == null) {
-            if (!hb.field_c) {
+            if (!ConsoleSettingsScript.field_c) {
               var5 = GetLagStandardDeviationOut.field_o;
               var6 = FlipTextureOperation.field_k;
               var5.menu.addItem(var6, (byte) -53, 14);
@@ -63,7 +63,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             !spb.a(-78) &&
             null != SetSpinningBladeSpindamageMultiplier.field_o &&
             param0.field_q == SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13)) {
-            if (!hb.field_c) {
+            if (!ConsoleSettingsScript.field_c) {
               var9 = GetLagStandardDeviationOut.field_o;
               var10 = kia.field_b;
               var9.menu.addItem(var10, (byte) -53, 14);

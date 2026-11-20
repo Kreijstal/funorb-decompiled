@@ -87,7 +87,7 @@ final class ProjectileHit {
           if (this.projectile.getType((byte) -104) == 6) {
             if (param3 ||
               SetPointDefenceLaserPulsetime.field_o == 1) {
-              param0.spawnRadialProjectiles(0, gib.field_a, this.projectile.getFiredTeam(512), this.projectile.getFiredPlayer(false), false, this.impactX, this.impactY);
+              param0.spawnRadialProjectiles(0, GpuFaceAttachmentState.field_a, this.projectile.getFiredTeam(512), this.projectile.getFiredPlayer(false), false, this.impactX, this.impactY);
             }
             param3 = false;
           }
@@ -114,7 +114,7 @@ final class ProjectileHit {
             var8 = this.projectile.getType((byte) -104);
             if (var8 != 1) {
               if (var8 == 0) {
-                var7 = ehb.field_e;
+                var7 = LruNodeCache.field_e;
               } else {
                 if (var8 != 2) {
                   if (var8 != 3) {

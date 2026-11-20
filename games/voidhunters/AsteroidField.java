@@ -917,7 +917,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime95 = HuffmanCodec.fetchLocalizedResource((byte) -65, "waiting_for_players");
           if (null != var2Lifetime95) {
-            kmb.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime95);
+            CarouselConstantRequests.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime95);
           }
           var2Lifetime96 = HuffmanCodec.fetchLocalizedResource((byte) -116, "respawning_timer");
           if (var2Lifetime96 != null) {
@@ -1085,7 +1085,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime137 = HuffmanCodec.fetchLocalizedResource((byte) -40, "COMPONENT_CHASSIS_MOSQUITO_TEXT");
           if (null != var2Lifetime137) {
-            kmb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime137);
+            CarouselConstantRequests.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime137);
           }
           var2Lifetime138 = HuffmanCodec.fetchLocalizedResource((byte) -58, "COMPONENT_CHASSIS_CARRIER_TEXT");
           if (var2Lifetime138 != null) {
@@ -1309,7 +1309,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime193 = HuffmanCodec.fetchLocalizedResource((byte) -94, "ORDER_FIGHTERS_LAUNCH");
           if (null != var2Lifetime193) {
-            ssa.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime193);
+            DeveloperAccess.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime193);
           }
           var2Lifetime194 = HuffmanCodec.fetchLocalizedResource((byte) -72, "ORDER_COUNTERMEASURES_LAUNCH_SHORT");
           if (null != var2Lifetime194) {
@@ -1569,7 +1569,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime258 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_MORE_ARMOUR");
           if (null != var2Lifetime258) {
-            cs.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime258);
+            SoftwareFaceAttachmentState.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime258);
           }
           var2Lifetime259 = HuffmanCodec.fetchLocalizedResource((byte) -126, "VOTE_MORE_HULL_PIECES");
           if (var2Lifetime259 != null) {

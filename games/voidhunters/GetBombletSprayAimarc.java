@@ -132,7 +132,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           if (!param5) {
             field_p = (String) null;
           }
-          qga.field_a = 0L;
+          AccountNameAvailabilityReplies.field_a = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

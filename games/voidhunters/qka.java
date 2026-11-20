@@ -32,7 +32,7 @@ final class qka extends Widget {
             boolean decompiledFrameRemainder0 = true;
             if (var2 == 95) {
               if (0 >= this.field_yb.length()) {
-                if (cs.a((char) var2, 0)) {
+                if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2, 0)) {
                   discarded$6 = this.field_yb.append((char) var2);
                 } else {
                   if (GetRepairModeCooldown.a((char) var2, true)) {
@@ -46,7 +46,7 @@ final class qka extends Widget {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (cs.a((char) var2, 0)) {
+              if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2, 0)) {
                 discarded$8 = this.field_yb.append((char) var2);
                 if (SetBombletSprayProjectileDamage.field_o == 84) {
                   if (this.field_yb.length() <= 0) {
@@ -126,7 +126,7 @@ final class qka extends Widget {
         }
         if (var2Lifetime1 == 95) {
           if (0 >= this.field_yb.length()) {
-            if (cs.a((char) var2Lifetime1, 0)) {
+            if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2Lifetime1, 0)) {
               discarded$1 = this.field_yb.append((char) var2Lifetime1);
             } else {
               if (GetRepairModeCooldown.a((char) var2Lifetime1, true)) {
@@ -151,7 +151,7 @@ final class qka extends Widget {
           }
           discarded$0 = this.field_yb.append((char) var2Lifetime1);
         }
-        if (cs.a((char) var2Lifetime1, 0)) {
+        if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2Lifetime1, 0)) {
           discarded$3 = this.field_yb.append((char) var2Lifetime1);
           if (SetBombletSprayProjectileDamage.field_o == 84) {
             if (this.field_yb.length() <= 0) {
@@ -308,7 +308,7 @@ final class qka extends Widget {
           var10 = 10 + var9_int;
           var11 = 3 + 2 * DialogMessagePanel.field_w + 3;
           var12 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var10);
-          var13 = lma.a(param3, param1, var11, (byte) -16);
+          var13 = PopupPositioning.adjustPopupY(param3, param1, var11, (byte) -16);
           this.setBounds(var12, 122, var10, var13, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

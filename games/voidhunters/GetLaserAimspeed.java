@@ -50,7 +50,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
           if (param0 != 1) {
             GetLaserAimspeed.clearSharedReferences(-77);
           }
-          var27 = qga.field_b;
+          var27 = AccountNameAvailabilityReplies.field_b;
           var2 = var27.readUnsignedByte((byte) -93);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(param0 + 1868);

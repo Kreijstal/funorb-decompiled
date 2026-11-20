@@ -43,7 +43,7 @@ final class GetReverbFeedback extends ConsoleCommand {
         int var2_intLifetime1;
         var3 = VoidHunters.field_G;
         try {
-          var2_int = kmb.field_a;
+          var2_int = CarouselConstantRequests.field_a;
           if (param1.channelType != param0) {
             if (param1.channelType == 4) {
               var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.channelType];
@@ -56,7 +56,7 @@ final class GetReverbFeedback extends ConsoleCommand {
             }
           } else {
             if (param1.unfiltered) {
-              var2_intLifetime1 = kmb.field_a;
+              var2_intLifetime1 = CarouselConstantRequests.field_a;
             } else {
               if (0 == param1.field_f &&
                 param1.field_h == 0) {

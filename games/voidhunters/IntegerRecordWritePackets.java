@@ -32,13 +32,13 @@ final class IntegerRecordWritePackets {
     final static void selectLoadingMessageLanguage(int param0, int param1) {
         if (param1 == 1) {
           GetSpinningBladeTopSpeed.connectingToUpdateServerText = GrayscaleTextureOperation.connectingMessages[param0];
-          PasswordValidator.waitingForTextMessage = gib.waitingForTextMessages[param0];
+          PasswordValidator.waitingForTextMessage = GpuFaceAttachmentState.waitingForTextMessages[param0];
           lo.loadingTextMessage = SpawnChoice.loadingTextMessages[param0];
           return;
         }
         field_a = false;
         GetSpinningBladeTopSpeed.connectingToUpdateServerText = GrayscaleTextureOperation.connectingMessages[param0];
-        PasswordValidator.waitingForTextMessage = gib.waitingForTextMessages[param0];
+        PasswordValidator.waitingForTextMessage = GpuFaceAttachmentState.waitingForTextMessages[param0];
         lo.loadingTextMessage = SpawnChoice.loadingTextMessages[param0];
     }
 

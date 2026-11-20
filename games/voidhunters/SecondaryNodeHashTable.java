@@ -116,7 +116,7 @@ final class SecondaryNodeHashTable {
     }
 
     final static void continueAsGuest(int param0) {
-        gib.a((byte) -104);
+        GpuFaceAttachmentState.showProgressDialog((byte) -104);
         if (param0 != 17496) {
           return;
         }

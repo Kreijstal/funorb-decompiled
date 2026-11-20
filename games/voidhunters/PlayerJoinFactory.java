@@ -50,15 +50,15 @@ final class PlayerJoinFactory implements GameStateFactory {
           if (!ShipBlueprint.a(1, 30000)) {
             return false;
           }
-          PartitioningManagerFactory.field_a = qga.field_b.readUnsignedByte((byte) -126);
-          qga.field_b.position = 0;
+          PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -126);
+          AccountNameAvailabilityReplies.field_b.position = 0;
         }
         if (param0 <= 9) {
           PlayerJoinFactory.b((byte) -116);
           if (PartitioningManagerFactory.field_a == -2) {
             if (ShipBlueprint.a(2, 30000)) {
-              PartitioningManagerFactory.field_a = qga.field_b.readUnsignedShort(1869);
-              qga.field_b.position = 0;
+              PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
+              AccountNameAvailabilityReplies.field_b.position = 0;
               return ShipBlueprint.a(PartitioningManagerFactory.field_a, 30000);
             }
             return false;
@@ -67,8 +67,8 @@ final class PlayerJoinFactory implements GameStateFactory {
         }
         if (PartitioningManagerFactory.field_a == -2) {
           if (ShipBlueprint.a(2, 30000)) {
-            PartitioningManagerFactory.field_a = qga.field_b.readUnsignedShort(1869);
-            qga.field_b.position = 0;
+            PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
+            AccountNameAvailabilityReplies.field_b.position = 0;
             return ShipBlueprint.a(PartitioningManagerFactory.field_a, 30000);
           }
           return false;

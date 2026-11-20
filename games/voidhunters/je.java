@@ -97,7 +97,7 @@ final class je {
           FighterBayWeaponDefinition.l(-116);
           return;
         }
-        IsaacPacketBuffer var2 = qga.field_b;
+        IsaacPacketBuffer var2 = AccountNameAvailabilityReplies.field_b;
         var2.readInt(62);
         var2.readInt(90);
         var2.readInt(60);

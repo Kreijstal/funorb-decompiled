@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gib {
+final class GpuFaceAttachmentState {
     static String[] waitingForTextMessages;
     static int field_a;
     static String field_c;
@@ -10,14 +10,14 @@ final class gib {
         waitingForTextMessages = null;
         field_c = null;
         if (param0 != 15) {
-          gib.a(100, 43);
+          GpuFaceAttachmentState.setTicksPerSecond(100, 43);
         }
     }
 
-    gib(int param0) {
+    GpuFaceAttachmentState(int param0) {
     }
 
-    final static void a(byte param0) {
+    final static void showProgressDialog(byte param0) {
         GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
         if (null == MatchingFieldValidator.field_i) {
           MatchingFieldValidator.field_i = new ProgressDialog(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
@@ -29,16 +29,16 @@ final class gib {
         field_c = (String) null;
     }
 
-    final static khb a(int param0, java.applet.Applet param1) {
+    final static LoginMethod readLastLoginMethod(int param0, java.applet.Applet param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        khb[] var3 = null;
-        khb var5 = null;
+        LoginMethod[] var3 = null;
+        LoginMethod var5 = null;
         int var6 = 0;
-        khb stackIn_6_0 = null;
-        khb stackIn_12_0 = null;
-        khb stackIn_15_0 = null;
+        LoginMethod stackIn_6_0 = null;
+        LoginMethod stackIn_12_0 = null;
+        LoginMethod stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -53,10 +53,10 @@ final class gib {
             stackIn_6_0 = SetMassDriverFireForce.field_p;
             return stackIn_6_0;
           }
-          var3 = pl.c((byte) 123);
+          var3 = pl.getLoginMethods((byte) 123);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.a(0, var2)) {
+            if (var5.matchesCookieValue(0, var2)) {
               stackIn_12_0 = var5;
               return stackIn_12_0;
             }
@@ -77,8 +77,8 @@ final class gib {
         }
     }
 
-    final static void a(int param0, int param1) {
-        OpenGlGlyphMask.field_c = 1000000000L / (long)param1;
+    final static void setTicksPerSecond(int param0, int param1) {
+        OpenGlGlyphMask.tickIntervalNanos = 1000000000L / (long)param1;
         int var2 = 38 % ((param0 + 37) / 54);
     }
 

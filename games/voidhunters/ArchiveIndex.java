@@ -533,7 +533,7 @@ final class ArchiveIndex {
                     if (null != var7.field_Ab &&
                       !qs.a(0, GetLagStandardDeviationOut.field_o.targetName) &&
                       !GetBloomThresholdPercentage.field_p) {
-                      if (!hb.field_c) {
+                      if (!ConsoleSettingsScript.field_c) {
                         var17 = GetLagStandardDeviationOut.field_o;
                         var18 = SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
                         var17.menu.addItem(var18, (byte) -53, 8);

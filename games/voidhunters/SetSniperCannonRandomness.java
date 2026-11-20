@@ -57,7 +57,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         IntegerRecordReadQueueEntry var14 = null;
         var8 = VoidHunters.field_G;
         try {
-          var13 = qga.field_b;
+          var13 = AccountNameAvailabilityReplies.field_b;
           var2 = var13.readUnsignedByte((byte) -89);
           if (var2 == param0) {
             var10 = SetSniperCannonEnergyUsed.f((byte) -85);

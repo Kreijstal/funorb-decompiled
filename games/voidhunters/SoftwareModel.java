@@ -9,7 +9,7 @@ final class SoftwareModel extends Model3D {
     private short minX;
     private short maxZ;
     private boolean boundsValid;
-    private cs[] field_p;
+    private SoftwareFaceAttachmentState[] faceAttachmentStates;
     private int[] vertexZ;
     private short maxX;
     private short[] field_l;
@@ -22,10 +22,10 @@ final class SoftwareModel extends Model3D {
     private int[] vertexY;
     private short[] field_g;
     private short[] field_b;
-    private int field_t;
+    private int faceAttachmentCount;
     private short[] field_s;
     private int field_x;
-    private ffa[] field_i;
+    private SoftwareFaceAttachment[] faceAttachments;
     private int field_u;
     private int field_c;
     private int[] vertexX;
@@ -388,9 +388,9 @@ final class SoftwareModel extends Model3D {
         }
         GetFighterBayReload.a((byte) -24, var74, var68);
         if (param1.faceAttachments != null) {
-          this.field_t = param1.faceAttachments.length;
-          this.field_i = new ffa[this.field_t];
-          this.field_p = new cs[this.field_t];
+          this.faceAttachmentCount = param1.faceAttachments.length;
+          this.faceAttachments = new SoftwareFaceAttachment[this.faceAttachmentCount];
+          this.faceAttachmentStates = new SoftwareFaceAttachmentState[this.faceAttachmentCount];
           var54 = 0;
           var11_intLifetime1 = var54;
           while (var54 < param1.faceAttachments.length) {
@@ -405,8 +405,8 @@ final class SoftwareModel extends Model3D {
               stackIn_58_2 = param1.field_r[var59.faceIndex] & 255;
             }
             var14Lifetime1Lifetime1 = stackIn_57_0 | stackIn_57_1 - stackIn_58_2 << 24;
-            this.field_i[var54] = new ffa(var59.faceIndex, (int) param1.faceVertexA[var59.faceIndex], (int) param1.faceVertexB[var59.faceIndex], (int) param1.faceVertexC[var59.faceIndex], var60.field_g, var60.field_b, var60.field_e, var60.field_d, var60.field_f, var60.field_a, var59.field_c);
-            this.field_p[var54] = new cs(var14Lifetime1Lifetime1);
+            this.faceAttachments[var54] = new SoftwareFaceAttachment(var59.faceIndex, (int) param1.faceVertexA[var59.faceIndex], (int) param1.faceVertexB[var59.faceIndex], (int) param1.faceVertexC[var59.faceIndex], var60.field_g, var60.field_b, var60.field_e, var60.field_d, var60.field_f, var60.field_a, var59.field_c);
+            this.faceAttachmentStates[var54] = new SoftwareFaceAttachmentState(var14Lifetime1Lifetime1);
             var54++;
           }
         }
@@ -680,7 +680,7 @@ final class SoftwareModel extends Model3D {
             this.field_g[var15Lifetime3] = (short)var74[var15Lifetime3];
           }
         } else {
-          if (this.field_i != null) {
+          if (this.faceAttachments != null) {
             this.field_g = new short[this.field_c];
             for (var15Lifetime3 = 0; var15Lifetime3 < this.field_c; var15Lifetime3++) {
               this.field_g[var15Lifetime3] = (short)var74[var15Lifetime3];

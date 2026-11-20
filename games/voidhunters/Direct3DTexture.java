@@ -18,7 +18,7 @@ abstract class Direct3DTexture {
     }
 
     Direct3DTexture(Direct3DToolkit param0, TextureFormat param1, GpuDataType param2, boolean param3, int param4) {
-        this.filterMode = cs.field_a;
+        this.filterMode = SoftwareFaceAttachmentState.field_a;
         this.toolkit = param0;
         this.field_b = param3 ? true : false;
         this.format = param1;

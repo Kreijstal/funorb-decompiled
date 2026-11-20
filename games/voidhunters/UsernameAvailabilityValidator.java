@@ -108,7 +108,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             this.checkedName = param0;
           }
           if (this.nameAvailable) {
-            stackIn_19_0 = uc.field_a;
+            stackIn_19_0 = TutorialHintStatus.nameAvailableText;
             return stackIn_19_0;
           }
           stackIn_17_0 = GetLaserReload.field_p;

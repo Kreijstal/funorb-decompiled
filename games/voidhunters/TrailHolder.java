@@ -135,7 +135,7 @@ final class TrailHolder implements DiffableState {
         IsaacPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = VoidHunters.field_G;
-        var8 = qga.field_b;
+        var8 = AccountNameAvailabilityReplies.field_b;
         var2 = var8;
         if (param0 < 4) {
           return (ChatMessage) null;

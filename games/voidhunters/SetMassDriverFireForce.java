@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMassDriverFireForce extends ConsoleCommand {
-    static khb field_p;
+    static LoginMethod field_p;
     static boolean field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -37,7 +37,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 < 88) {
-          field_p = (khb) null;
+          field_p = (LoginMethod) null;
           field_p = null;
           return;
         }
@@ -83,6 +83,6 @@ final class SetMassDriverFireForce extends ConsoleCommand {
     }
 
     static {
-        field_p = new khb("");
+        field_p = new LoginMethod("");
     }
 }

@@ -12,7 +12,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         if (!BodyInZoneConditionFactory.a(false, AgeValidator.field_f)) {
           return;
         }
-        GetNebulaFadesOutWhenClose.a(-103, fa.field_d[75]);
+        GetNebulaFadesOutWhenClose.a(-103, PendingScoreboardRequest.soundEffects[75]);
         int var4 = 0;
         if (AgeValidator.field_f == 7) {
           var4 = -1;

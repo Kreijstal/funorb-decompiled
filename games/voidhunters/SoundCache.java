@@ -147,7 +147,7 @@ final class SoundCache {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            qga.field_b = new IsaacPacketBuffer(param13);
+            AccountNameAvailabilityReplies.field_b = new IsaacPacketBuffer(param13);
             RequestNewestBlackboxRecording.field_p = new IsaacPacketBuffer(param0);
             bia.field_d = param1;
             GetAutozoomAmountMultiply.field_p = param6;

@@ -88,9 +88,9 @@ final class LaserWeaponDefinition extends WeaponDefinition {
     final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
-          return ffa.field_b;
+          return SoftwareFaceAttachment.field_b;
         }
-        return ffa.field_b;
+        return SoftwareFaceAttachment.field_b;
     }
 
     final int getAimSpeed(int param0) {

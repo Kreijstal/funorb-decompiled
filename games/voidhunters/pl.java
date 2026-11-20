@@ -4,12 +4,12 @@
 final class pl extends bia {
     static String field_e;
 
-    final static khb[] c(byte param0) {
+    final static LoginMethod[] getLoginMethods(byte param0) {
         if (param0 > 73) {
-          return new khb[]{SetFighterBayAimspeed.field_o, SetShowTutorial.field_p, SetMassDriverFireForce.field_p};
+          return new LoginMethod[]{SetFighterBayAimspeed.field_o, SetShowTutorial.field_p, SetMassDriverFireForce.field_p};
         }
         field_e = (String) null;
-        return new khb[]{SetFighterBayAimspeed.field_o, SetShowTutorial.field_p, SetMassDriverFireForce.field_p};
+        return new LoginMethod[]{SetFighterBayAimspeed.field_o, SetShowTutorial.field_p, SetMassDriverFireForce.field_p};
     }
 
     public static void clearSharedReferences(byte param0) {

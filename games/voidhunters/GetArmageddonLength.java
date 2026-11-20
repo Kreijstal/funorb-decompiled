@@ -35,7 +35,7 @@ final class GetArmageddonLength extends ConsoleCommand {
         byte[] var12 = null;
         var7 = VoidHunters.field_G;
         try {
-          var10 = qga.field_b;
+          var10 = AccountNameAvailabilityReplies.field_b;
           var2 = var10.readUnsignedByte((byte) -113);
           var3 = 44 % ((-49 - param0) / 63);
           if (var2 != 0) {

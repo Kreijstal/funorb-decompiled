@@ -505,7 +505,7 @@ final class CarouselGameClient {
             var14 = (CarouselCommongameInfo) null;
             discarded$0 = this.isTooFarBehind((CarouselCommongameInfo) null, -70);
           }
-          if (ehb.field_g == param4) {
+          if (LruNodeCache.field_g == param4) {
             var7_int = param1.readInt(94);
             if (param5 != null &&
               !this.receivingGameState &&

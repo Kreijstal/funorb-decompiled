@@ -939,13 +939,13 @@ final class GameSession {
           }
         }
         if (0 == SetMinimapWidth.field_o % 50) {
-          this.field_R = ffa.field_a;
+          this.field_R = SoftwareFaceAttachment.field_a;
         }
         if (GraphicsPresentException.field_a) {
           ShipTeamConditionFactory.field_a.screenOriginY = ShipTeamConditionFactory.field_a.screenOriginY - (-SetToggledScoreboard.field_o.screenY + SoftwareRasterizer2D.height >> 1);
         }
         if (SetPhasedEnergyBeamAimspeed.field_q == 1 &&
-          ffa.field_a < 20 &&
+          SoftwareFaceAttachment.field_a < 20 &&
           20 > this.field_R &&
           SetMinimapWidth.field_o % 50 == 49) {
           if (1 == GetUseSprites.field_o) {
@@ -1258,7 +1258,7 @@ final class GameSession {
           }
           if (param0.world.getDebug((byte) -113) &&
             !param1 &&
-            ssa.b(2)) {
+            DeveloperAccess.hasDeveloperAccess(2)) {
             for (var4_int = 0; SetFogOfWarSensorRange.field_o.length > var4_int; var4_int++) {
               var5 = TorpedoWeaponDefinition.field_c[var4_int];
               var6 = GetPhasedEnergyBeamProjectiles.a(96, var5);
@@ -1808,12 +1808,12 @@ final class GameSession {
           var23Lifetime1 = var7.missionState.getTeamScore(false, 1);
           var25_ref_String = VoidHunters.getTeamName(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var26Lifetime1 = GetPointDefenceLaserProjectiles.a(false, 1);
-          BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
+          BlackBoxRecording.drawPanelBackground((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
           SetSelfDestructPrepareToggleCooldown.a((var20Lifetime1 >> 1) + (var6 - tea.a(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, AlphaContainer.getTeamColor(false, 0, 13894143), (byte) -124);
           SetSelfDestructPrepareToggleCooldown.a(-(tea.a(1, var25_ref_String, 13879) / 2) + var6 - (-(var20Lifetime1 >> 1) - var20Lifetime1 / 4), 1, -10 + var4Lifetime1, var25_ref_String, 1, AlphaContainer.getTeamColor(false, 1, 13894143), (byte) -95);
         } else {
           var23Lifetime1 = 4;
-          BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + 2 * var23Lifetime1, var6, -var23Lifetime1 + (var4Lifetime1 - 5), var20Lifetime1);
+          BlackBoxRecording.drawPanelBackground((byte) -115, 200, var14Lifetime1 + 2 * var23Lifetime1, var6, -var23Lifetime1 + (var4Lifetime1 - 5), var20Lifetime1);
         }
         var23Lifetime2 = var18Lifetime1 + var6;
         var24Lifetime1 = var4Lifetime1;
@@ -2735,8 +2735,8 @@ final class GameSession {
                   var9_ref_hna.specialOrderSubmessage = new SpecialOrderSubmessage();
                   if (var8 == 0) {
                     var10_ref_Random = new Random();
-                    var11 = TextHotspotRegion.randomBoundedInt(var10_ref_Random, fa.field_e.length, 122);
-                    var12_ref_String = fa.field_e[var11];
+                    var11 = TextHotspotRegion.randomBoundedInt(var10_ref_Random, PendingScoreboardRequest.presetBlueprints.length, 122);
+                    var12_ref_String = PendingScoreboardRequest.presetBlueprints[var11];
                     var13_ref_int__ = GetResourceNodeCaptureTime.a(var12_ref_String, false, true);
                     var9_ref_hna.specialOrderSubmessage.blueprint = new ShipBlueprint();
                     var9_ref_hna.specialOrderSubmessage.blueprint.description = var13_ref_int__;
@@ -2757,7 +2757,7 @@ final class GameSession {
                   var15 = var15 - (SoftwareRasterizer2D.height - SetToggledScoreboard.field_o.screenY);
                 }
                 var16 = 260;
-                BlackBoxRecording.a((byte) -115, 200, var16, var14, var15, var12);
+                BlackBoxRecording.drawPanelBackground((byte) -115, 200, var16, var14, var15, var12);
                 var17 = 2.0f;
                 if (var10 == 11 ||
                   var10 == 9) {
@@ -2854,7 +2854,7 @@ final class GameSession {
                     var38 = ArchiveIndexLoader.field_g.isComponentOptionAvailable(ArchiveLoadRequest.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
                     var39 = ArchiveIndexLoader.field_g.isComponentOptionComingSoon(-22549, 3 + var34_int) ? 1 : 0;
                     var40 = ArchiveIndexLoader.field_g.isComponentOptionMembersOnly(3 + var34_int, (byte) 24) ? 1 : 0;
-                    BlackBoxRecording.a((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
+                    BlackBoxRecording.drawPanelBackground((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
                     if (param2) {
                       if (GetUseDetailLines.field_o >= var36) {
                         if (GetUseDetailLines.field_o < var30Lifetime1 + var36) {
@@ -2910,13 +2910,13 @@ final class GameSession {
                       var50.specialOrderSubmessage = new SpecialOrderSubmessage();
                       var50.specialOrderSubmessage.spawnchoice = new SpawnChoice(var42);
                       this.submitPlayerAction(0, true, var50);
-                      GetNebulaFadesOutWhenClose.a(-119, fa.field_d[7]);
+                      GetNebulaFadesOutWhenClose.a(-119, PendingScoreboardRequest.soundEffects[7]);
                     }
                     if (var41 != 0 &&
                       var38 != 0) {
                       if (var34_int != this.hoveredRespawnOption &&
                         var34_int != var9Lifetime1) {
-                        GetNebulaFadesOutWhenClose.a(-112, fa.field_d[0]);
+                        GetNebulaFadesOutWhenClose.a(-112, PendingScoreboardRequest.soundEffects[0]);
                       }
                       var31Lifetime1 = 1;
                       this.hoveredRespawnOption = var34_int;
@@ -2998,14 +2998,14 @@ final class GameSession {
                         var53.specialOrderSubmessage.spawnchoice = new SpawnChoice(var9Lifetime1);
                         this.submitPlayerAction(0, true, var53);
                       }
-                      GetNebulaFadesOutWhenClose.a(-116, fa.field_d[7]);
+                      GetNebulaFadesOutWhenClose.a(-116, PendingScoreboardRequest.soundEffects[7]);
                       this.field_X = true;
                     }
                     var31Lifetime1 = 1;
                     var37Lifetime1 = var19;
                     if (this.hoveredRespawnOption != var37Lifetime1 &&
                       var37Lifetime1 != var9Lifetime1) {
-                      GetNebulaFadesOutWhenClose.a(-119, fa.field_d[0]);
+                      GetNebulaFadesOutWhenClose.a(-119, PendingScoreboardRequest.soundEffects[0]);
                     }
                     this.hoveredRespawnOption = var37Lifetime1;
                   }
@@ -3473,7 +3473,7 @@ final class GameSession {
                 return;
               }
               var5 = this.calculateScaledEdgeFadeAlpha(255, var4, 50, -8464);
-              SetBombletSprayEnergyUsed.a(var5, (byte) -124, 1, ResourceArchive.field_b, 200);
+              SetBombletSprayEnergyUsed.drawCenteredMessagePanel(var5, (byte) -124, 1, ResourceArchive.field_b, 200);
             }
           }
           return;
@@ -3523,7 +3523,7 @@ final class GameSession {
         int var13_intLifetime1;
         var17 = VoidHunters.field_G;
         this.uiBlocksWorldInput = false;
-        if (ssa.b(2)) {
+        if (DeveloperAccess.hasDeveloperAccess(2)) {
           GetPointDefenceLaserProjectileInterceptDamage.a(SetMachineGunEnergyUsed.field_o, this.previousKeyStates, (byte) 79);
         }
         this.updateChatControls((byte) 119, param1);
@@ -4134,7 +4134,7 @@ final class GameSession {
           SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(2, var3Lifetime1Lifetime2, 13879) / 2, 1, 200, var3Lifetime1Lifetime2, 2, 16711935, (byte) -127);
         }
         if (this.state.getVisibleWorld((byte) 54).getDebug((byte) -77) &&
-          ssa.b(2)) {
+          DeveloperAccess.hasDeveloperAccess(2)) {
           var21 = "DEBUG MODE";
           var2_ref_String = var21;
           SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(2, var21, 13879) / 2, -1, 100, var2_ref_String, 2, 16777215, (byte) -105);
@@ -4228,7 +4228,7 @@ final class GameSession {
             }
           }
         }
-        if (ssa.b(2) &&
+        if (DeveloperAccess.hasDeveloperAccess(2) &&
           SetMachineGunEnergyUsed.field_o[12]) {
           GetMachineGunPulsetime.a(1118481, -88, PartitionZoneFactory.field_a, 0, 200, 0);
           var3Lifetime3 = "Help:<br>F1 for gfx2, F2 for gfx1, F3 to rebuild toolkit, F4 for java toolkit<br>Alt 0-9, and Alt&Shift 0-9 to toggle debug flags.<br>Alt 0=Carousel, 1=Forces, 2=Hardpoints, 3=IDs, 4=Bounding boxes, 5=Teams and owners<br>Alt 6=Mission, 7=Connected players, 8=Spatial partitioning, 9=Spatial partitioning with ships<br>Alt Shift 0=FPS, 1=Mission generation, 2=AI<br><br>Hold 0 and press middle mouse to toggle debug mode<br><br>Press ` to toggle the console.<br>Type print_settings() to print all ingame settings to the java console<br>Type request_newest_blackbox_recording() to print the latest recording filename to the java console<br>Type load_blackbox_recording(id) to load the recording with that id<br>Press r to restart the recording playback<br><br>Useful console commands: set_lag(lag,deviation)";
@@ -4766,7 +4766,7 @@ final class GameSession {
         try {
           if (param2.getMissionPhase(8) == 5) {
             var4_int = param2.getPhaseTimer((byte) -122);
-            var5 = lga.getArmageddonStartTick((byte) -2, param1.getObjectiveType(false));
+            var5 = GpuFaceAttachment.getArmageddonStartTick((byte) -2, param1.getObjectiveType(false));
             var6 = var5 - Particle.field_l * AsteroidFactory.armageddonWarning;
             if (var6 < var4_int &&
               var5 >= var4_int) {
@@ -6978,7 +6978,7 @@ final class GameSession {
         if (null != var16.missionState &&
           5 == var16.missionState.getMissionPhase(8)) {
           var3_int = var16.missionState.getPhaseTimer((byte) -125);
-          var4 = lga.getArmageddonStartTick((byte) -2, var16.world.getObjectiveType(false));
+          var4 = GpuFaceAttachment.getArmageddonStartTick((byte) -2, var16.world.getObjectiveType(false));
           if (var3_int > var4) {
             return 3;
           }
@@ -7110,7 +7110,7 @@ final class GameSession {
         try {
           var3_int = 2;
           if (!SetGrapplingHookAimarc.a(param0, (byte) -71)) {
-            var4_ref_String = kmb.field_d.toUpperCase();
+            var4_ref_String = CarouselConstantRequests.field_d.toUpperCase();
             var7 = var4_ref_String;
             var7Lifetime2 = var4_ref_String;
             var5 = MissionVariableFactory.field_a;
@@ -7764,7 +7764,7 @@ final class GameSession {
             return false;
           }
           var4_intLifetime1 = param2.getPhaseTimer((byte) -116);
-          var5 = lga.getArmageddonStartTick((byte) -2, param1.getObjectiveType(false));
+          var5 = GpuFaceAttachment.getArmageddonStartTick((byte) -2, param1.getObjectiveType(false));
           return !(var5 >= var4_intLifetime1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7896,7 +7896,7 @@ final class GameSession {
         Ship var2 = null;
         int[] var3 = null;
         String var4 = null;
-        if (ssa.b(2) &&
+        if (DeveloperAccess.hasDeveloperAccess(2) &&
           SetDebrisPartitioned.field_o == 1 &&
           2 == PacketBuffer.field_g) {
           var2_int = this.getHeldActionHotkey(30);
@@ -7908,7 +7908,7 @@ final class GameSession {
           Ship var5 = (Ship) null;
           this.drawBlueprintSaveStatus(false, (Ship) null);
         }
-        if (ssa.b(2) &&
+        if (DeveloperAccess.hasDeveloperAccess(2) &&
           SetMachineGunEnergyUsed.field_o[6]) {
           var2 = this.state.getVisibleSnapshot(1).world.findShipByOwner(this.localPlayerIndex, 124);
           if (var2 != null) {
@@ -8310,7 +8310,7 @@ final class GameSession {
           if (-1 != var4Lifetime1 &&
             var4Lifetime1 < GetGrapplingHookSpringConstant.specialOrderLabels.length && (this.state.getVisibleWorld((byte) 90).getDebug((byte) 6) ||
             var4Lifetime1 == 13 &&
-            ssa.b(2))) {
+            DeveloperAccess.hasDeveloperAccess(2))) {
             var12 = GetGrapplingHookSpringConstant.specialOrderLabels[var4Lifetime1];
             var3Lifetime1 = var12;
             var3Lifetime1Lifetime1 = var12;
@@ -8764,7 +8764,7 @@ final class GameSession {
           this.specialOrderButtons = new IntrusiveDeque();
           this.pendingSpecialOrderId = -1;
           this.debugOrderCategory = -1;
-          ssa.b(2);
+          DeveloperAccess.hasDeveloperAccess(2);
           stackIn_7_1 = (param0);
           this.networked = stackIn_7_1;
           stackIn_10_1 = (param3);

@@ -81,7 +81,7 @@ final class GetMessageMaxage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, boolean param1, String param2, boolean param3, byte param4) {
+    final static void openMessageBox(int param0, boolean param1, String param2, boolean param3, byte param4) {
         String stackIn_4_0 = null;
         String stackIn_25_0 = null;
         int stackIn_25_1 = 0;
@@ -105,7 +105,7 @@ final class GetMessageMaxage extends ConsoleCommand {
         int var8Lifetime2;
         var10 = VoidHunters.field_G;
         try {
-          wia.field_a = true;
+          MessageBoxState.open = true;
           GpuRidgedNoiseVolume.field_t = param0;
           var11 = param2;
           if (param1) {

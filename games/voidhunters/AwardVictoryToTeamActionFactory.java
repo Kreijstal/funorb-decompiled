@@ -94,7 +94,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[1] = iob.field_e;
           SetSpinningBladeSpinupSpeed.field_o[25] = SetShieldsDirectionalArcParticleLife.field_p;
           SetSpinningBladeSpinupSpeed.field_o[3] = FadingMidiPcmStream.field_S;
-          SetSpinningBladeSpinupSpeed.field_o[6] = kmb.field_b;
+          SetSpinningBladeSpinupSpeed.field_o[6] = CarouselConstantRequests.field_b;
           SetSpinningBladeSpinupSpeed.field_o[50] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[41] = WeaponBehaviourFactory.field_a;
           SetSpinningBladeSpinupSpeed.field_o[27] = Lo.field_p;
@@ -164,7 +164,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[12] = GetSalvoDamageMultiplier.field_o;
           GetGrapplingHookSpringConstant.specialOrderLabels[2] = SetBombletSprayAimspeed.field_p;
           GetGrapplingHookSpringConstant.specialOrderLabels[18] = SetSniperCannonRandomness.field_p;
-          GetGrapplingHookSpringConstant.specialOrderLabels[13] = kmb.field_e;
+          GetGrapplingHookSpringConstant.specialOrderLabels[13] = CarouselConstantRequests.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[23] = PlayerVoteFactory.field_b;
           GetGrapplingHookSpringConstant.specialOrderLabels[33] = SetClientSideDragging.field_o;
           GetGrapplingHookSpringConstant.specialOrderLabels[38] = MatchingFieldValidator.field_f;
@@ -218,7 +218,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[47] = ScrollBarWidget.field_Db;
           GetGrapplingHookSpringConstant.specialOrderLabels[15] = MidiNote.field_z;
           GetGrapplingHookSpringConstant.specialOrderLabels[29] = HighscoreValueRequest.field_e;
-          GetGrapplingHookSpringConstant.specialOrderLabels[6] = ssa.field_b;
+          GetGrapplingHookSpringConstant.specialOrderLabels[6] = DeveloperAccess.field_b;
           GetGrapplingHookSpringConstant.specialOrderLabels[11] = ShipBlueprint.field_b;
           for (var1_int = 0; var1_int < SetSpinningBladeSpinupSpeed.field_o.length; var1_int++) {
             GetGrapplingHookSpringConstant.specialOrderLabels[var1_int + 72] = SetReverbGain.a(SetMachineGunFireForce.field_o, new String[]{SetSpinningBladeSpinupSpeed.field_o[var1_int]}, 126);
@@ -246,7 +246,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[1] = SetThrusterAutobalancing.field_o;
           ShipTeamCondition.field_f[25] = ThrusterBehaviourFactory.field_b;
           ShipTeamCondition.field_f[10] = UiAngleDial.field_G;
-          ShipTeamCondition.field_f[23] = cs.field_b;
+          ShipTeamCondition.field_f[23] = SoftwareFaceAttachmentState.field_b;
           ShipTeamCondition.field_f[16] = SetPointDefenceLaserEnergyUsed.field_p;
           ShipTeamCondition.field_f[9] = GetMessageMaxage.field_o;
           ShipTeamCondition.field_f[12] = PartitionZone.field_g;

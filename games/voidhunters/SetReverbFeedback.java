@@ -58,7 +58,7 @@ final class SetReverbFeedback extends ConsoleCommand {
             return;
           }
           SetSelfDestructTimer.field_o.service();
-          aaa.field_b.service();
+          LobbyGameContextMenuBuilder.field_b.service();
           GetShieldsDirectionalRadius.field_o = GetShieldsDirectionalRadius.field_o - 1;
           if (GetShieldsDirectionalRadius.field_o == 0) {
             GetShieldsDirectionalRadius.field_o = 200;

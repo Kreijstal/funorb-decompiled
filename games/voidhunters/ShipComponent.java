@@ -111,7 +111,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.grapplebehaviour.fireOrRecall(param3, this.finaly, var8.outline, param1, this.finalangle, this.finalx, var8.connectionY, (byte) 77, param2, var8.connectionX, param0);
           }
           if (null != this.behaviour) {
-            this.behaviour.a(param0, var8.outline, -9151, param1, this.finaly, this.finalangle, var8.connectionX, param2, var8.connectionY, this.finalx, param3);
+            this.behaviour.activate(param0, var8.outline, -9151, param1, this.finaly, this.finalangle, var8.connectionX, param2, var8.connectionY, this.finalx, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -341,7 +341,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.grapplebehaviour.update(param3, param2, this.finaly, var5_intLifetime1 != 0, (byte) 126, this.finalx, this.finalangle, var25.outline);
           }
           if (null != this.behaviour) {
-            this.behaviour.a(var5_intLifetime1 != 0, this.finaly, param3, var25.outline, param2, this.finalangle, 123, this.finalx);
+            this.behaviour.update(var5_intLifetime1 != 0, this.finaly, param3, var25.outline, param2, this.finalangle, 123, this.finalx);
           }
           if (var25.field_d > 0 &&
             param0) {
@@ -2600,7 +2600,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             stackIn_14_0 = 0;
             return stackIn_14_0;
           }
-          stackIn_12_0 = this.behaviour.a(param1 ^ 10317, param0);
+          stackIn_12_0 = this.behaviour.getSpecialOrderState(param1 ^ 10317, param0);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3742,7 +3742,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
 
     private final boolean canAimIndependently(boolean param0) {
         if (this.behaviour != null &&
-          this.behaviour.a(0)) {
+          this.behaviour.canAimIndependently(0)) {
           return true;
         }
         if (null != this.weaponbehaviour &&
@@ -4426,7 +4426,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           var7 = param2.dx;
           var8 = param2.dy;
-          var9 = kmb.field_f * this.getDefinition((byte) -112).field_h >> 8;
+          var9 = CarouselConstantRequests.field_f * this.getDefinition((byte) -112).field_h >> 8;
           var10 = new Random((long)this.finalx);
           if (null != this.subcomponents &&
             param0) {

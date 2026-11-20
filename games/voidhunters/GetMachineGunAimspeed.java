@@ -50,7 +50,7 @@ final class GetMachineGunAimspeed extends ConsoleCommand {
     final static void a(String param0, int param1) {
         try {
           SoftwareRasterState.a((byte) -74, param0);
-          fa.a(SetMissionDebrisVotingChancestep.field_p, -124, false);
+          PendingScoreboardRequest.showAccountStatusDialog(SetMissionDebrisVotingChancestep.field_p, -124, false);
           if (param1 > -39) {
             GetMachineGunAimspeed.clearSharedReferences(10);
           }

@@ -14,13 +14,13 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
         try {
           AudioOutput.configure(param7, param3, 10);
           SetSelfDestructTimer.field_o = AudioOutput.create(param0, param2, 0, param4);
-          aaa.field_b = AudioOutput.create(param0, param2, 1, param5);
+          LobbyGameContextMenuBuilder.field_b = AudioOutput.create(param0, param2, 1, param5);
           if (param6 != 21) {
             field_q = (String) null;
           }
           MaskedPasswordTextStyle.field_q = new PcmStreamMixer();
           LegacyOpenGlWaveWaterEffect.field_e = param5;
-          aaa.field_b.setStream(MaskedPasswordTextStyle.field_q);
+          LobbyGameContextMenuBuilder.field_b.setStream(MaskedPasswordTextStyle.field_q);
           GetBurstFireMaxEnergy.field_p = param1;
           GetBurstFireMaxEnergy.field_p.setMasterGain((byte) -108, GetMutatorVotes.field_p);
           SetSelfDestructTimer.field_o.setStream(GetBurstFireMaxEnergy.field_p);

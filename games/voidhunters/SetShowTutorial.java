@@ -3,7 +3,7 @@
  */
 final class SetShowTutorial extends ConsoleCommand {
     static boolean field_o;
-    static khb field_p;
+    static LoginMethod field_p;
 
     SetShowTutorial(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -66,6 +66,6 @@ final class SetShowTutorial extends ConsoleCommand {
     }
 
     static {
-        field_p = new khb("usename");
+        field_p = new LoginMethod("usename");
     }
 }

@@ -621,7 +621,7 @@ final class ResourceArchive {
                     if (var11 != 0) {
                       var22_int = GetPhasedEnergyBeamRandomness.field_p[var7][var9] - IncrementVariableActionFactory.field_b;
                       if (var22_int == 1) {
-                        var21 = wia.field_b;
+                        var21 = MessageBoxState.field_b;
                         var32 = var21;
                         var21 = var32;
                         var32Lifetime1 = var21;

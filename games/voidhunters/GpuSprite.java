@@ -40,7 +40,7 @@ final class GpuSprite extends ToolkitSprite {
         if (!this.field_j &&
           !this.field_i &&
           (1 & param7) != 0) {
-          stackIn_6_1 = cs.field_a;
+          stackIn_6_1 = SoftwareFaceAttachmentState.field_a;
         } else {
           stackIn_6_1 = SetLagVariant.field_o;
         }
@@ -133,7 +133,7 @@ final class GpuSprite extends ToolkitSprite {
         if (!this.field_j &&
           !this.field_i &&
           (param9 & 1) != 0) {
-          stackIn_5_1 = cs.field_a;
+          stackIn_5_1 = SoftwareFaceAttachmentState.field_a;
         } else {
           stackIn_5_1 = SetLagVariant.field_o;
         }

@@ -179,7 +179,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        fa var3 = null;
+        PendingScoreboardRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -198,12 +198,12 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var11Lifetime1;
         var12 = VoidHunters.field_G;
         try {
-          var14 = qga.field_b;
+          var14 = AccountNameAvailabilityReplies.field_b;
           var2 = var14.readUnsignedByte((byte) -87);
-          var3 = (fa) (ValidationStatusWidget.field_H.first(param0 + 38));
+          var3 = (PendingScoreboardRequest) (ValidationStatusWidget.field_H.first(param0 + 38));
           while (var3 != null) {
-            if (~var3.field_f != ~var2) {
-              var3 = (fa) (ValidationStatusWidget.field_H.next((byte) 95));
+            if (~var3.requestId != ~var2) {
+              var3 = (PendingScoreboardRequest) (ValidationStatusWidget.field_H.next((byte) 95));
               continue;
             }
             break;
@@ -218,7 +218,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var4 = var14.readUnsignedByte((byte) -118);
           if (var4 != 0) {
             SetAudioRangeCutoff.field_o[0] = IntIndexTable.field_a;
-            var5 = var3.field_g;
+            var5 = var3.requestedRowCount;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               SetAudioRangeCutoff.field_o[var6_int] = var14.readString(param0 + 37);
             }

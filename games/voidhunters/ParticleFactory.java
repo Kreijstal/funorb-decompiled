@@ -4,7 +4,7 @@
 final class ParticleFactory implements GameStateFactory {
     static String[] field_c;
     static String field_b;
-    static boolean field_a;
+    static boolean savedCurrentStateOnlyMode;
 
     public final SerializableGameState create(byte param0) {
         int var2 = -51 / ((param0 + 64) / 50);

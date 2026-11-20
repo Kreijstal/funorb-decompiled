@@ -42,9 +42,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               var4_ref_c.releaseTimeMillis < var2_long) {
               var4_ref_c.unlink(-3846);
               PartitioningManagerFactory.field_a = var4_ref_c.payload.length;
-              qga.field_b.position = 0;
+              AccountNameAvailabilityReplies.field_b.position = 0;
               for (var5_int = 0; var5_int < PartitioningManagerFactory.field_a; var5_int++) {
-                qga.field_b.payload[var5_int] = var4_ref_c.payload[var5_int];
+                AccountNameAvailabilityReplies.field_b.payload[var5_int] = var4_ref_c.payload[var5_int];
               }
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
@@ -55,12 +55,12 @@ final class GetSelfDestructTimer extends ConsoleCommand {
           }
           while (true) {
             if (0 > SetAutoDetail.field_p) {
-              qga.field_b.position = 0;
+              AccountNameAvailabilityReplies.field_b.position = 0;
               if (!ShipBlueprint.a(1, 30000)) {
                 return false;
               }
-              SetAutoDetail.field_p = qga.field_b.readIsaacByte(255);
-              qga.field_b.position = 0;
+              SetAutoDetail.field_p = AccountNameAvailabilityReplies.field_b.readIsaacByte(255);
+              AccountNameAvailabilityReplies.field_b.position = 0;
               PartitioningManagerFactory.field_a = param1[SetAutoDetail.field_p];
             }
             if (!PlayerJoinFactory.b((byte) 51)) {
@@ -83,7 +83,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             }
             var5 = new DelayedPacket((long)var4 + var2_long, SetAutoDetail.field_p, new byte[PartitioningManagerFactory.field_a]);
             for (var6 = 0; var6 < PartitioningManagerFactory.field_a; var6++) {
-              var5.payload[var6] = qga.field_b.payload[var6];
+              var5.payload[var6] = AccountNameAvailabilityReplies.field_b.payload[var6];
             }
             GetSpinningBladeAimarc.delayedIncomingPackets.addLast(param0 ^ -10258, var5);
             SetAutoDetail.field_p = -1;

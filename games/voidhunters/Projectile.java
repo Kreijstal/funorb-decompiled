@@ -130,7 +130,7 @@ final class Projectile extends MovingObject implements DiffableState {
           if (this.life < 0) {
             this.unlink(param0 ^ -3929);
             if (this.type == 6) {
-              param1.spawnRadialProjectiles(0, gib.field_a, this.firedTeam, this.firedPlayer, false, this.x, this.y);
+              param1.spawnRadialProjectiles(0, GpuFaceAttachmentState.field_a, this.firedTeam, this.firedPlayer, false, this.x, this.y);
             }
           } else {
             if (3 != this.type &&

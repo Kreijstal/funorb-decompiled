@@ -35,7 +35,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param0 != 31365) {
           return -23;
         }
-        if (param1 == cs.field_a) {
+        if (param1 == SoftwareFaceAttachmentState.field_a) {
           return 2;
         }
         if (SetLagVariant.field_o == param1) {
@@ -735,7 +735,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           this.device.SetSamplerState(var2, 5, 2);
           this.device.SetSamplerState(var2, 1, 1);
           this.device.SetSamplerState(var2, 2, 1);
-          this.field_Wc[var2] = cs.field_a;
+          this.field_Wc[var2] = SoftwareFaceAttachmentState.field_a;
           var3 = this.field_Vc;
           var4 = var2;
           this.field_Lc[var2] = true;

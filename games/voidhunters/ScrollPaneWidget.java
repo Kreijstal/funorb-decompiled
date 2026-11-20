@@ -141,7 +141,7 @@ final class ScrollPaneWidget extends Widget {
               if (var8 != 0) {
                 stackIn_40_1 = Cp1252Strings.field_b;
               } else {
-                stackIn_40_1 = aaa.field_a;
+                stackIn_40_1 = LobbyGameContextMenuBuilder.field_a;
               }
               stackIn_39_0.text = SetReverbGain.a(stackIn_40_1, new String[]{ObjectiveMarker.field_b.text}, 76);
               TickClock.field_b = true;

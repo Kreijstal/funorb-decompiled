@@ -19,16 +19,16 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         }
         if (null != SetSelfDestructTimer.field_o) {
           SetSelfDestructTimer.field_o.shutdown();
-          if (aaa.field_b != null) {
-            aaa.field_b.shutdown();
+          if (LobbyGameContextMenuBuilder.field_b != null) {
+            LobbyGameContextMenuBuilder.field_b.shutdown();
             return;
           }
           return;
         }
-        if (aaa.field_b == null) {
+        if (LobbyGameContextMenuBuilder.field_b == null) {
           return;
         }
-        aaa.field_b.shutdown();
+        LobbyGameContextMenuBuilder.field_b.shutdown();
     }
 
     final static Sprite[] createCenterSpriteTile(boolean param0, int param1) {
