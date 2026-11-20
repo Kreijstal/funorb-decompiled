@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMessageMax extends ConsoleCommand {
-    static int[] field_o;
+    static int[] menuActionIds;
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        menuActionIds = null;
         int var1 = 7 / ((param0 + 46) / 57);
     }
 

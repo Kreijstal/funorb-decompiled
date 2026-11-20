@@ -163,7 +163,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             qga.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              tc.field_c = ct.field_a;
+              tc.field_c = ComponentWordEncoder.field_a;
               gob.field_a = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -185,7 +185,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               }
             }
           }
-          if (tc.field_c == ct.field_a) {
+          if (tc.field_c == ComponentWordEncoder.field_a) {
             var9Lifetime2 = 2;
             if (ShipBlueprint.a(var9Lifetime2, param4 ^ 30000)) {
               var10Lifetime1 = qga.field_b.readUnsignedShort(1869);

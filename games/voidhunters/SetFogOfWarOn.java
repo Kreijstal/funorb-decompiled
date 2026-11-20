@@ -133,7 +133,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_thruster_binding_move_and_turn_has_opposite_move(" + GetGrapplingHookAimspeed.field_p + ")");
         System.out.println("set_nebula_fades_out_when_close(" + ColorRowCacheEntry.field_d + ")");
         System.out.println("set_debris_found_in_pairs(" + WeaponBehaviour.field_d + ")");
-        System.out.println("set_fog_of_war_on(" + GuestPlayNoticePanel.field_x + ")");
+        System.out.println("set_fog_of_war_on(" + GuestPlayNoticePanel.fogOfWarOn + ")");
         System.out.println("set_use_models(" + MachineGunWeaponDefinition.field_b + ")");
         System.out.println("set_innate_thrusters(" + SetSniperCannonProjectiles.field_o + ")");
         System.out.println("set_thruster_autobalancing(" + BodyInZoneConditionFactory.field_b + ")");
@@ -174,8 +174,8 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mission_votes(" + AsteroidFieldFactory.field_a + ")");
         System.out.println("set_mutator_votes(" + GetPhasedEnergyBeamReload.field_q + ")");
         System.out.println("set_mission_time_limit(" + SetTorpedoEnergyUsed.field_p + ")");
-        System.out.println("set_armageddon_timer_start(" + Cp1252CharacterEncoder.field_b + ")");
-        System.out.println("set_armageddon_warning(" + AsteroidFactory.field_a + ")");
+        System.out.println("set_armageddon_timer_start(" + Cp1252CharacterEncoder.armageddonTimerStart + ")");
+        System.out.println("set_armageddon_warning(" + AsteroidFactory.armageddonWarning + ")");
         System.out.println("set_armageddon_length(" + SetVariableActionFactory.field_a + ")");
         System.out.println("set_mission_terrain_nebula_probability(" + LegacyOpenGlUnlitEffect.field_c + ")");
         System.out.println("set_mission_terrain_asteroid_probability(" + GetDebrisFoundInPairs.field_o + ")");

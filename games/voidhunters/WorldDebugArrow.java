@@ -5,13 +5,13 @@ final class WorldDebugArrow extends IntrusiveNode {
     int endY;
     int endX;
     int startY;
-    static int[][] field_g;
+    static int[][] debugPolygons;
     int remainingTicks;
     int startX;
 
     public static void clearSharedReferences(byte param0) {
         int var1 = 2 % ((param0 - 73) / 41);
-        field_g = (int[][]) null;
+        debugPolygons = (int[][]) null;
     }
 
     WorldDebugArrow(int param0, int param1, int param2, int param3) {

@@ -22,11 +22,11 @@ final class GameSession {
     private int field_Q;
     private boolean field_T;
     boolean field_h;
-    private int field_d;
+    private int blueprintSaveStatus;
     private int field_R;
     private int[] lastPlayerShipX;
-    private int field_A;
-    private int field_M;
+    private int blueprintSaveTick;
+    private int blueprintSizeBytes;
     private boolean scoreboardVisible;
     private boolean field_ab;
     int localPlayerIndex;
@@ -44,21 +44,21 @@ final class GameSession {
     private float field_w;
     private int field_H;
     CommonGameState state;
-    private TutorialController field_v;
+    private TutorialController tutorialController;
     private int field_J;
     private int radialMenuX;
     private boolean field_n;
     private int field_g;
     private boolean field_l;
-    private IntrusiveDeque field_E;
+    private IntrusiveDeque specialOrderStatuses;
     private int lastEnemyShipSpawnTick;
     private int field_i;
     private int[] field_V;
-    private IntrusiveDeque field_P;
+    private IntrusiveDeque specialOrderButtons;
     private hw field_b;
     private int field_O;
 
-    private final Ship a(int param0, Ship param1, int param2, int param3) {
+    private final Ship prepareInspectionShip(int param0, Ship param1, int param2, int param3) {
         Ship var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -99,7 +99,7 @@ final class GameSession {
         }
     }
 
-    private final void b(byte param0, Ship param1) {
+    private final void updateBlueprintSize(byte param0, Ship param1) {
         RuntimeException runtimeException = null;
         int[] var3 = null;
         ShipBlueprint var4 = null;
@@ -114,12 +114,12 @@ final class GameSession {
           }
           if (param1 != null &&
             param1.chassis != null &&
-            this.field_A <= -Particle.field_d + SetMinimapWidth.field_o) {
-            var5 = SetOndamageParticleLife.a(param1.chassis, -115);
+            this.blueprintSaveTick <= -Particle.field_d + SetMinimapWidth.field_o) {
+            var5 = SetOndamageParticleLife.encodeComponentWords(param1.chassis, -115);
             var3 = var5;
             var4 = new ShipBlueprint();
             var4.description = var5;
-            this.field_M = (var4.a((byte) 115) + 7) / 8;
+            this.blueprintSizeBytes = (var4.getEncodedBitLength((byte) 115) + 7) / 8;
             return;
           }
           return;
@@ -137,7 +137,7 @@ final class GameSession {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2, byte param3, int param4) {
+    private final boolean clearFogCircle(int param0, int param1, int param2, byte param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -315,7 +315,7 @@ final class GameSession {
         }
     }
 
-    private final void f(byte param0) {
+    private final void drawDebugPolygons(byte param0) {
         boolean discarded$0 = false;
         int[][] var12 = null;
         int[][] var18 = null;
@@ -331,10 +331,10 @@ final class GameSession {
         int var10 = VoidHunters.field_G;
         if (param0 != 121) {
           GameSnapshot var11 = (GameSnapshot) null;
-          discarded$0 = this.a((byte) 34, (GameSnapshot) null);
+          discarded$0 = this.isFogOfWarActive((byte) 34, (GameSnapshot) null);
         }
         if (GetPointDefenceLaserProjectiles.a(2048, param0 + 11163)) {
-          var12 = WorldDebugArrow.field_g;
+          var12 = WorldDebugArrow.debugPolygons;
           var18 = var12;
           if (var12 != null) {
             for (var3 = 0; var3 < var18.length; var3++) {
@@ -354,7 +354,7 @@ final class GameSession {
         }
     }
 
-    private final void a(Ship param0, int param1) {
+    private final void saveShipBlueprint(Ship param0, int param1) {
         RuntimeException runtimeException = null;
         int[] var3 = null;
         ShipBlueprint var4 = null;
@@ -366,9 +366,9 @@ final class GameSession {
         try {
           if (param0 != null &&
             null != param0.chassis &&
-            this.field_A <= SetMinimapWidth.field_o - Particle.field_d) {
+            this.blueprintSaveTick <= SetMinimapWidth.field_o - Particle.field_d) {
             GetDebrisThrowable.a(false, "Saving ship blueprint...");
-            var5 = SetOndamageParticleLife.a(param0.chassis, -126);
+            var5 = SetOndamageParticleLife.encodeComponentWords(param0.chassis, -126);
             var3 = var5;
             if (param1 >= -34) {
               return;
@@ -376,9 +376,9 @@ final class GameSession {
             var4 = new ShipBlueprint();
             var4.description = var5;
             GetLaserRandomness.a((byte) 103, var4);
-            this.field_M = IntrusiveNode.a((byte) -6).payload.length;
-            if (this.field_M <= 192) {
-              this.field_d = 0;
+            this.blueprintSizeBytes = IntrusiveNode.a((byte) -6).payload.length;
+            if (this.blueprintSizeBytes <= 192) {
+              this.blueprintSaveStatus = 0;
               if (es.field_b == null) {
                 es.field_b = new PlayerGameData();
               }
@@ -387,9 +387,9 @@ final class GameSession {
                 GetMissionResnetResourceTickTime.savePlayerGameData((byte) -39);
               }
             } else {
-              this.field_d = 1;
+              this.blueprintSaveStatus = 1;
             }
-            this.field_A = SetMinimapWidth.field_o;
+            this.blueprintSaveTick = SetMinimapWidth.field_o;
             return;
           }
           return;
@@ -535,7 +535,7 @@ final class GameSession {
         ToolkitPolygonRasterizer.fillPolygon(GetDebrisGroupColour.field_r, var9, param4 << 24 | param1);
     }
 
-    private final void a(Ship param0, int param1, GameSnapshot param2, boolean param3) {
+    private final void drawFogOfWar(Ship param0, int param1, GameSnapshot param2, boolean param3) {
         int stackIn_4_0 = 0;
         int stackIn_85_0 = 0;
         Object stackIn_99_0 = null;
@@ -716,7 +716,7 @@ final class GameSession {
                         var15Lifetime4 = ShipTeamConditionFactory.field_a.worldToScreenX(var26Lifetime1.getX(false), (byte) 125);
                         var16Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var26Lifetime1.getY((byte) 127));
                         var17Lifetime2 = (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
-                        stackIn_85_0 = (!this.a(255, var15Lifetime4, var17Lifetime2, (byte) -126, var16Lifetime2)) ? 0 : 1;
+                        stackIn_85_0 = (!this.clearFogCircle(255, var15Lifetime4, var17Lifetime2, (byte) -126, var16Lifetime2)) ? 0 : 1;
                         var7 = stackIn_85_0;
                         if (var7 != 0) {
                           break regionExit3;
@@ -757,7 +757,7 @@ final class GameSession {
                             var15Lifetime4 = ShipTeamConditionFactory.field_a.worldToScreenX(var14_ref_rbaLifetime1.x, (byte) 126);
                             var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var14_ref_rbaLifetime1.y);
                             var17Lifetime2Lifetime1 = (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
-                            stackIn_105_0 = (!this.a(255, var15Lifetime4, var17Lifetime2Lifetime1, (byte) -40, var16Lifetime2Lifetime1)) ? 0 : 1;
+                            stackIn_105_0 = (!this.clearFogCircle(255, var15Lifetime4, var17Lifetime2Lifetime1, (byte) -40, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_105_0;
                             if (var7 != 0) {
                               break;
@@ -777,7 +777,7 @@ final class GameSession {
                             var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var30.y);
                             var17Lifetime2Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.scale);
                             var18 = var17Lifetime2Lifetime1 * var30.hyperdriveTimer / (3 * Particle.field_l);
-                            stackIn_131_0 = (!this.a(var30.hyperdriveTimer, var15Lifetime4, var18, (byte) -101, var16Lifetime2Lifetime1)) ? 0 : 1;
+                            stackIn_131_0 = (!this.clearFogCircle(var30.hyperdriveTimer, var15Lifetime4, var18, (byte) -101, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_131_0;
                             if (var7 != 0) {
                               break scanLoop2;
@@ -805,9 +805,9 @@ final class GameSession {
                     }
                   }
                   OpenGlTexture1D.field_i = var5_int != 0;
-                  if (((null != this.field_v)) &&
+                  if (((null != this.tutorialController)) &&
                     ((param0 != null)) &&
-                    (!(!this.field_v.isHintVisible(4, -53)))) {
+                    (!(!this.tutorialController.isHintVisible(4, -53)))) {
                     var8 = ShipTeamConditionFactory.field_a.worldToScreenX(param0.getX(false), (byte) 114);
                     var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param0.getY((byte) -121));
                     var10 = 1 + (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
@@ -839,10 +839,10 @@ final class GameSession {
                 }
               }
               OpenGlTexture1D.field_i = var5_int != 0;
-              if (null != this.field_v) {
+              if (null != this.tutorialController) {
                 stackIn_144_0 = (Ship) (param0);
                 if (stackIn_144_0 != null &&
-                  this.field_v.isHintVisible(4, -53)) {
+                  this.tutorialController.isHintVisible(4, -53)) {
                   var8Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenX(param0.getX(false), (byte) 114);
                   var9Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param0.getY((byte) -121));
                   var10Lifetime1 = 1 + (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
@@ -988,7 +988,7 @@ final class GameSession {
         if (this.localPlayerIndex >= 0) {
           var9 = var24.world.findShipByOwner(this.localPlayerIndex, 126);
         }
-        var12 = this.a((byte) 46, var24) ? 1 : 0;
+        var12 = this.isFogOfWarActive((byte) 46, var24) ? 1 : 0;
         this.a(false, var7, (Ship) (var9), var8, var6, var12 != 0);
         for (var13 = 0; var13 < this.state.field_a; var13++) {
           var14 = 0;
@@ -1049,7 +1049,7 @@ final class GameSession {
         var24.world.a(ShipTeamConditionFactory.field_a, -950, var24.missionState);
         if (var9 != null &&
           GetPointDefenceLaserProjectileInterceptDamage.field_o) {
-          this.a((byte) -95, (Ship) (var9));
+          this.drawShipHeadingArrow((byte) -95, (Ship) (var9));
         }
         var14Lifetime1 = 0;
         if (ul.field_a == 1 &&
@@ -1060,7 +1060,7 @@ final class GameSession {
         if (param0 < 73) {
           this.playerChatOffsets = (int[]) null;
         }
-        this.a((Ship) (var9), -15614, var24, var12 != 0);
+        this.drawFogOfWar((Ship) (var9), -15614, var24, var12 != 0);
         this.drawObjectiveMarkers(var24.missionState, (Ship) (var9), true, var24, this.getLocalTeam((byte) -88));
         if (this.localPlayerIndex >= 0 &&
           param1 &&
@@ -1069,7 +1069,7 @@ final class GameSession {
           -1 == this.field_p &&
           var9 != null &&
           GetBots.field_o != 1) {
-          var14Lifetime1 = this.a((byte) 36, var11, var10, var24.getPlayer(this.localPlayerIndex, (byte) 59), (Ship) (var9), var24.world);
+          var14Lifetime1 = this.drawComponentInspection((byte) 36, var11, var10, var24.getPlayer(this.localPlayerIndex, (byte) 59), (Ship) (var9), var24.world);
         }
         if (this.field_ab) {
           this.field_ab = false;
@@ -1081,11 +1081,11 @@ final class GameSession {
         }
         this.a(var24.world, 0, var6);
         this.drawPlayerNamesAndChat(4096);
-        this.a(1, var24.world, var24.missionState);
+        this.drawArmageddonCountdown(1, var24.world, var24.missionState);
         this.a(var24, 16731136);
-        this.a(var24, false, var13Lifetime1);
+        this.drawEventMessages(var24, false, var13Lifetime1);
         if (!this.a(var24, (byte) -67, param1) && (!this.field_x ||
-          this.field_v.isHintCompleteAndHidden((byte) 11, 1))) {
+          this.tutorialController.isHintCompleteAndHidden((byte) 11, 1))) {
           this.c(var24, 200);
         }
         var16Lifetime1 = 2 * Particle.field_l;
@@ -1102,9 +1102,9 @@ final class GameSession {
         }
         this.b(var24, 1);
         this.drawControlHints((byte) 70, (Ship) (var9));
-        if (this.field_v != null &&
+        if (this.tutorialController != null &&
           param1) {
-          this.field_v.updateAndDrawHints(var24, this.radialMenuX, this.field_x, ShipTeamConditionFactory.field_a, this.radialMenuY, MissionVariableFactory.field_a, this.radialMenuAlpha, this.field_p, (byte) -32, this.field_P, PartitionZoneFactory.field_a, this.localPlayerIndex, (Ship) (var9));
+          this.tutorialController.updateAndDrawHints(var24, this.radialMenuX, this.field_x, ShipTeamConditionFactory.field_a, this.radialMenuY, MissionVariableFactory.field_a, this.radialMenuAlpha, this.field_p, (byte) -32, this.specialOrderButtons, PartitionZoneFactory.field_a, this.localPlayerIndex, (Ship) (var9));
         }
         if (var9 != null) {
           var18Lifetime1 = ((Ship) (var9)).getDragging(57);
@@ -1119,7 +1119,7 @@ final class GameSession {
           var14Lifetime1 = 4;
         }
         this.drawDebugOverlay(false);
-        this.b((byte) -41);
+        this.drawChatButton((byte) -41);
         if (1 == SetShipTeamAction.field_e) {
           this.a((Ship) (var9), false, var10, var11);
         }
@@ -1128,7 +1128,7 @@ final class GameSession {
           this.a(var14Lifetime1, var24, (byte) -96, (Ship) (var9));
         }
         this.drawSessionNotifications(var24, -1);
-        this.a(true, (Ship) (var9));
+        this.drawBlueprintSaveStatus(true, (Ship) (var9));
         this.field_K.a(this.localPlayerIndex, 84, var24, (Ship) (var9));
         this.a(91);
         var19 = SetUseTriFill.field_o.nanoTime((byte) -110);
@@ -1139,7 +1139,7 @@ final class GameSession {
         }
     }
 
-    private final void a(boolean param0, Ship param1) {
+    private final void drawBlueprintSaveStatus(boolean param0, Ship param1) {
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
@@ -1162,18 +1162,18 @@ final class GameSession {
             return;
           }
           var3_int = 0;
-          if (this.field_A != -1) {
-            var4 = -this.field_A + SetMinimapWidth.field_o;
+          if (this.blueprintSaveTick != -1) {
+            var4 = -this.blueprintSaveTick + SetMinimapWidth.field_o;
             if (var4 < Particle.field_d) {
               var5 = "No save result text";
               var8 = var5;
               var5Lifetime2 = var8;
-              if (this.field_d != 0) {
-                if (1 != this.field_d) {
+              if (this.blueprintSaveStatus != 0) {
+                if (1 != this.blueprintSaveStatus) {
                   var5Lifetime3 = ro.field_b;
                 } else {
                   var9 = SetArmageddonTimerStart.field_o;
-                  var6 = (100 * this.field_M + 96) / 192;
+                  var6 = (100 * this.blueprintSizeBytes + 96) / 192;
                   var5Lifetime3 = var9 + "<br>" + SetReverbGain.a(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var6)}, 105);
                 }
               } else {
@@ -1194,19 +1194,19 @@ final class GameSession {
             !this.networked &&
             param1 != null) {
             if (0 == SetMinimapWidth.field_o % Particle.field_l) {
-              this.b((byte) 109, param1);
+              this.updateBlueprintSize((byte) 109, param1);
             }
-            if (this.field_v != null &&
-              !this.field_v.isHintVisible(3, -75) &&
-              !this.field_v.isHintComplete(3, true)) {
+            if (this.tutorialController != null &&
+              !this.tutorialController.isHintVisible(3, -75) &&
+              !this.tutorialController.isHintComplete(3, true)) {
               return;
             }
-            if (null != this.field_v &&
-              this.field_v.isHintVisible(3, -88) &&
+            if (null != this.tutorialController &&
+              this.tutorialController.isHintVisible(3, -88) &&
               SetMinimapWidth.field_o % 20 > 10) {
               return;
             }
-            var4 = (100 * this.field_M + 96) / 192;
+            var4 = (100 * this.blueprintSizeBytes + 96) / 192;
             var5Lifetime1 = SetReverbGain.a(GetMassDriverEnergyUsed.field_o, new String[]{Integer.toString(var4)}, 77);
             GetLagStandardDeviationOut.a(-1, var5Lifetime1, 16777215, 20, 11, 4266);
           }
@@ -1632,7 +1632,7 @@ final class GameSession {
         var4 = 4;
         var5 = 20;
         if (param0) {
-          this.field_d = 75;
+          this.blueprintSaveStatus = 75;
         }
         var6 = 2;
         var7 = this.state.b(1);
@@ -2502,7 +2502,7 @@ final class GameSession {
                   var21Lifetime1 = GpuSprite.swapTeamId(21957, var21Lifetime1);
                 }
               }
-              this.a(GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + (var15 + var14), 255, var18Lifetime1, var21Lifetime1, 2);
+              this.drawObjectiveInstructions(GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + (var15 + var14), 255, var18Lifetime1, var21Lifetime1, 2);
               var49 = var40.getVotedOptions(true);
               var46 = var49;
               var22 = var46;
@@ -3375,9 +3375,9 @@ final class GameSession {
                 var4_int = GetSniperCannonAimarc.field_p;
                 var5 = PartitionZoneFactory.field_a - (12 + var4_int);
                 var6 = -HighscoreValueRequest.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height);
-                if ((this.field_v != null &&
-                  !this.field_v.isHintComplete(1, true)) &&
-                  (decompiledFrameRemainder0 = !(!this.field_v.isHintVisible(1, -34)))) {
+                if ((this.tutorialController != null &&
+                  !this.tutorialController.isHintComplete(1, true)) &&
+                  (decompiledFrameRemainder0 = !(!this.tutorialController.isHintVisible(1, -34)))) {
                   decompiledFrameRemainder0 = !(SetMinimapWidth.field_o % 20 <= 10);
                 }
                 if (decompiledFrameRemainder0) {
@@ -3418,8 +3418,8 @@ final class GameSession {
                     }
                   }
                 }
-                if (null != this.field_v &&
-                  this.field_v.isHintVisible(1, -53)) {
+                if (null != this.tutorialController &&
+                  this.tutorialController.isHintVisible(1, -53)) {
                   var7 = TorpedoWeaponDefinition.field_d;
                   GetLagStandardDeviationOut.a(-1, var7, 16777215, -10 + var6, var4_int / 2 + var5 - GetPhasedEnergyBeamProjectiles.a(-112, var7) / 2, 4266);
                 }
@@ -3555,7 +3555,7 @@ final class GameSession {
             }
           }
           if (this.field_x) {
-            this.field_v.updatePracticeScenario(MissionVariableFactory.field_a, var9, 127, PartitionZoneFactory.field_a, var24, this.localPlayerIndex, ShipTeamConditionFactory.field_a);
+            this.tutorialController.updatePracticeScenario(MissionVariableFactory.field_a, var9, 127, PartitionZoneFactory.field_a, var24, this.localPlayerIndex, ShipTeamConditionFactory.field_a);
           }
           var25 = var9.getPlayer(this.localPlayerIndex, (byte) 59);
           var7 = var25.aimtargetx;
@@ -3853,7 +3853,7 @@ final class GameSession {
         }
     }
 
-    private final boolean a(byte param0, GameSnapshot param1) {
+    private final boolean isFogOfWarActive(byte param0, GameSnapshot param1) {
         RuntimeException var3 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -3864,7 +3864,7 @@ final class GameSession {
           if (param0 != 46) {
             this.field_a = (int[]) null;
           }
-          stackIn_9_0 = (GuestPlayNoticePanel.field_x == 1) && (null != param1.missionState) && (param1.missionState.getMissionPhase(param0 ^ 38) == 5) && (!SetMissionTerrainDebrisProbability.field_p) && (!this.a((byte) 94, param1.world, param1.missionState));
+          stackIn_9_0 = (GuestPlayNoticePanel.fogOfWarOn == 1) && (null != param1.missionState) && (param1.missionState.getMissionPhase(param0 ^ 38) == 5) && (!SetMissionTerrainDebrisProbability.field_p) && (!this.hasArmageddonStarted((byte) 94, param1.world, param1.missionState));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4172,7 +4172,7 @@ final class GameSession {
             }
           }
         }
-        this.f((byte) 121);
+        this.drawDebugPolygons((byte) 121);
         this.drawMissionControlDebug(-94);
         if (param0) {
           return;
@@ -4305,7 +4305,7 @@ final class GameSession {
         }
     }
 
-    private final void a(byte param0, Ship param1) {
+    private final void drawShipHeadingArrow(byte param0, Ship param1) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -4408,7 +4408,7 @@ final class GameSession {
         }
     }
 
-    private final int a(byte param0, int param1, int param2, Player param3, Ship param4, World param5) {
+    private final int drawComponentInspection(byte param0, int param1, int param2, Player param3, Ship param4, World param5) {
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
@@ -4450,7 +4450,7 @@ final class GameSession {
           if ((param3.triggers & 128) == 0 &&
             (16 & param3.triggers) == 0 && (-1 != GetUseDetailLines.field_o ||
             -1 != GetTorpedoReload.field_q) && null == param4.getTargetBlueprint((byte) 28)) {
-            param4 = this.a(param1, param4, -11788, param2);
+            param4 = this.prepareInspectionShip(param1, param4, -11788, param2);
             var14 = param4.chassis.findComponentAtPoint(param1, param2, true);
             var15 = var14;
             if (var15 != null &&
@@ -4458,14 +4458,14 @@ final class GameSession {
               var15.drawTree((byte) 100, ShipTeamConditionFactory.field_a, true, param5, AlphaContainer.getTeamColor(true, param4.getTeam((byte) 105), 13894143));
               var8_int = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 120);
               var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param1) + 10;
-              this.a(var8_int, 92, var9);
+              this.drawInspectionMarker(var8_int, 92, var9);
               if (this.field_J != var15.getComponentTypeId(0)) {
                 this.field_o = 0;
               }
               this.field_ab = true;
               this.field_J = var15.getComponentTypeId(param0 ^ 36);
               var10_ref_String__ = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var14, (byte) -120), GetSelfDestructActivateCooldown.a(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
-              this.a(var15.getFinalx(true), var15.getFinaly((byte) 85), var10_ref_String__, (byte) -96);
+              this.drawWorldInspectionText(var15.getFinalx(true), var15.getFinaly((byte) 85), var10_ref_String__, (byte) -96);
               stackIn_21_0 = 1;
               return stackIn_21_0;
             }
@@ -4578,7 +4578,7 @@ final class GameSession {
         try {
           if (!param1) {
             var7 = (MissionState) null;
-            discarded$1 = this.a((byte) -74, (World) null, (MissionState) null);
+            discarded$1 = this.hasArmageddonStarted((byte) -74, (World) null, (MissionState) null);
           }
           if (TextureFilterMode.field_d > 0) {
             if (0 >= NebulaField.field_d) {
@@ -4641,7 +4641,7 @@ final class GameSession {
         var19 = VoidHunters.field_G;
         try {
           if (param1 != 18398) {
-            this.a(36, 17, 14);
+            this.drawInspectionMarker(36, 17, 14);
           }
           for (var13_int = 0; param11.length > var13_int; var13_int++) {
             var14 = param2;
@@ -4748,7 +4748,7 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0, World param1, MissionState param2) {
+    private final void drawArmageddonCountdown(int param0, World param1, MissionState param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -4766,8 +4766,8 @@ final class GameSession {
         try {
           if (param2.getMissionPhase(8) == 5) {
             var4_int = param2.getPhaseTimer((byte) -122);
-            var5 = lga.a((byte) -2, param1.getObjectiveType(false));
-            var6 = var5 - Particle.field_l * AsteroidFactory.field_a;
+            var5 = lga.getArmageddonStartTick((byte) -2, param1.getObjectiveType(false));
+            var6 = var5 - Particle.field_l * AsteroidFactory.armageddonWarning;
             if (var6 < var4_int &&
               var5 >= var4_int) {
               var7 = (-var4_int + var5) / Particle.field_l;
@@ -4883,8 +4883,8 @@ final class GameSession {
             }
             var15Lifetime2 = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 112);
             var16Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param0) + 10;
-            this.a(var15Lifetime2, 78, var16Lifetime2);
-            this.a(param1, param5, param4, (byte) -96);
+            this.drawInspectionMarker(var15Lifetime2, 78, var16Lifetime2);
+            this.drawWorldInspectionText(param1, param5, param4, (byte) -96);
             return true;
           }
           var13Lifetime1 = GameSnapshotFactory.a(var9, (byte) -77, var8_int);
@@ -4963,8 +4963,8 @@ final class GameSession {
           }
           var42Lifetime1 = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 113);
           var43Lifetime1 = 10 + ShipTeamConditionFactory.field_a.worldToScreenY(true, param0);
-          this.a(var42Lifetime1, 124, var43Lifetime1);
-          this.a(param1, param5, param4, (byte) -96);
+          this.drawInspectionMarker(var42Lifetime1, 124, var43Lifetime1);
+          this.drawWorldInspectionText(param1, param5, param4, (byte) -96);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5128,7 +5128,7 @@ final class GameSession {
         }
     }
 
-    private final void b(byte param0) {
+    private final void drawChatButton(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -5167,7 +5167,7 @@ final class GameSession {
           GameSnapshot var4 = (GameSnapshot) null;
           discarded$0 = this.a((GameSnapshot) null, true, -81, 32);
         }
-        this.field_v.saveHintProgress((byte) 111);
+        this.tutorialController.saveHintProgress((byte) 111);
         if (this.networked) {
         } else {
           if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 118)) {
@@ -5212,8 +5212,8 @@ final class GameSession {
           }
           var10 = stackIn_8_0;
           if (this.field_H == 0 &&
-            null != this.field_v) {
-            this.field_v.completeHint((byte) 79, 8);
+            null != this.tutorialController) {
+            this.tutorialController.completeHint((byte) 79, 8);
           }
           if (fra.field_a == 1) {
             var11 = 0;
@@ -5243,9 +5243,9 @@ final class GameSession {
           if ((param2 & 16) != 0) {
             this.field_T = true;
             if (var10 != 0 &&
-              this.field_v != null &&
-              this.field_v.isHintVisible(1, -23)) {
-              this.field_v.completeHint((byte) 109, 1);
+              this.tutorialController != null &&
+              this.tutorialController.isHintVisible(1, -23)) {
+              this.tutorialController.completeHint((byte) 109, 1);
             }
           } else {
             this.field_T = false;
@@ -5287,7 +5287,7 @@ final class GameSession {
                   es.field_b.blueprint != null) {
                   this.field_s = true;
                 } else {
-                  this.a(this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 99), -90);
+                  this.saveShipBlueprint(this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 99), -90);
                   this.field_s = false;
                 }
               }
@@ -5427,7 +5427,7 @@ final class GameSession {
         return stackIn_6_0;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawInspectionMarker(int param0, int param1, int param2) {
         ToolkitSprite var4 = null;
         if (OpenGlTexture1D.field_i) {
           var4 = OpenGlVertexNormal.field_d[5];
@@ -5449,7 +5449,7 @@ final class GameSession {
         int var10;
         var10 = VoidHunters.field_G;
         if (param0 <= 26) {
-          discarded$0 = this.a(-96, -60, -66, (byte) 53, 121);
+          discarded$0 = this.clearFogCircle(-96, -60, -66, (byte) 53, 121);
         }
         if (null == NullUiRenderer.field_b) {
           return null;
@@ -5497,7 +5497,7 @@ final class GameSession {
         int var4 = 45 + (2 * param0 + param2);
         if (param1) {
           GameSnapshot var5 = (GameSnapshot) null;
-          this.a((Ship) null, 120, (GameSnapshot) null, false);
+          this.drawFogOfWar((Ship) null, 120, (GameSnapshot) null, false);
         }
         if (OpenGlVertexNormal.field_d.length <= var4) {
           return null;
@@ -5595,7 +5595,7 @@ final class GameSession {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int getMenuActionAtPoint(boolean param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5613,10 +5613,10 @@ final class GameSession {
             field_D = (String) null;
           }
           var4 = SetUseOffscreenRendering.field_o;
-          while (bra.field_f.length > var3_int) {
-            var5 = GetMessageMax.field_o[var3_int];
+          while (bra.menuLabels.length > var3_int) {
+            var5 = GetMessageMax.menuActionIds[var3_int];
             if (var5 >= 0) {
-              var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, bra.field_f[var3_int]);
+              var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, bra.menuLabels[var3_int]);
               var4 = var4 + ro.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
               if (SetMachineGunAimarc.a(var4, (GraphicsHeap.field_d << 1) + var6, (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {
@@ -6423,12 +6423,12 @@ final class GameSession {
         int var33Lifetime1Lifetime1;
         var40 = VoidHunters.field_G;
         try {
-          if (null != this.field_v &&
-            !this.field_v.isHintComplete(9, true) &&
-            !this.field_v.isHintComplete(5, true) && ((!this.field_v.isHintVisible(9, -106) ||
+          if (null != this.tutorialController &&
+            !this.tutorialController.isHintComplete(9, true) &&
+            !this.tutorialController.isHintComplete(5, true) && ((!this.tutorialController.isHintVisible(9, -106) ||
             !(SetMinimapWidth.field_o % 20 <= 10) &&
             param1) &&
-            (!this.field_v.isHintVisible(5, -99) ||
+            (!this.tutorialController.isHintVisible(5, -99) ||
             !(SetMinimapWidth.field_o % 20 <= 10) &&
             param1))) {
             return false;
@@ -6442,12 +6442,12 @@ final class GameSession {
             !var5.isSpecialOrderActive(9, 90) &&
             param2.missionState.getMissionPhase(8) == 5) {
             if (param1) {
-              this.field_E.clear(96);
-              var5.collectSpecialOrderStatuses(this.field_E, 9, this.field_x, param2.world.isBodyIdReserved(var5.getId(false), (byte) 21));
-              if (this.field_v.isHintComplete(10, true)) {
+              this.specialOrderStatuses.clear(96);
+              var5.collectSpecialOrderStatuses(this.specialOrderStatuses, 9, this.field_x, param2.world.isBodyIdReserved(var5.getId(false), (byte) 21));
+              if (this.tutorialController.isHintComplete(10, true)) {
                 stackIn_33_0 = 1;
               } else {
-                if (this.field_v.isHintVisible(10, -16)) {
+                if (this.tutorialController.isHintVisible(10, -16)) {
                   if (SetMinimapWidth.field_o % 20 > 10) {
                     stackIn_33_0 = (param1) ? 1 : 0;
                   } else {
@@ -6462,10 +6462,10 @@ final class GameSession {
                 if (!this.field_x &&
                   13 == param2.world.getObjectiveType(false) && (!this.networked ||
                   ComponentContact.field_d != 0)) {
-                  this.field_E.addLast(-10258, new SpecialOrderStatus(10, 0));
+                  this.specialOrderStatuses.addLast(-10258, new SpecialOrderStatus(10, 0));
                 }
                 if (SetShipTeamActionFactory.field_b) {
-                  this.field_E.addLast(-10258, new SpecialOrderStatus(11, 0));
+                  this.specialOrderStatuses.addLast(-10258, new SpecialOrderStatus(11, 0));
                   if (es.field_b != null &&
                     es.field_b.blueprint != null) {
                     var7 = 0;
@@ -6476,20 +6476,20 @@ final class GameSession {
                       es.field_b.blueprint.description[0] != var5.chassis.getComponentTypeId(0)) {
                       var7 = 50;
                     }
-                    this.field_E.addLast(-10258, new SpecialOrderStatus(12, var7));
+                    this.specialOrderStatuses.addLast(-10258, new SpecialOrderStatus(12, var7));
                   }
                 }
               }
               stackIn_54_1 = (-1 != var5.getDragging(-108)) && (var5.getTargetBlueprint((byte) 28) == null);
-              this.a(stackIn_54_1, this.field_E, this.field_P, -65);
+              this.synchronizeSpecialOrderButtons(stackIn_54_1, this.specialOrderStatuses, this.specialOrderButtons, -65);
               this.drawSpecialOrderTooltip(15097);
             }
             var6Lifetime1 = 0;
-            var7_ref_lw = (SpecialOrderButtonState) (this.field_P.first(0));
+            var7_ref_lw = (SpecialOrderButtonState) (this.specialOrderButtons.first(0));
             while (var7_ref_lw != null) {
               if (var7_ref_lw.specialOrderId != 9 &&
                 var7_ref_lw.specialOrderId != 8) {
-                var7_ref_lw = (SpecialOrderButtonState) (this.field_P.next((byte) 50));
+                var7_ref_lw = (SpecialOrderButtonState) (this.specialOrderButtons.next((byte) 50));
                 continue;
               }
               var6Lifetime1 = 1;
@@ -6514,7 +6514,7 @@ final class GameSession {
               var14 = var14 + (255 - this.field_i) / 4;
               var12 = var12 - (-this.field_i + 255) / 6;
             }
-            var15 = (SpecialOrderButtonState) (this.field_P.first(0));
+            var15 = (SpecialOrderButtonState) (this.specialOrderButtons.first(0));
             while (var15 != null) {
               var16 = chb.field_a;
               var17 = CarouselSlotStateDump.field_g;
@@ -6760,7 +6760,7 @@ final class GameSession {
               if (var22Lifetime1 != 0) {
                 var11++;
               }
-              var15 = (SpecialOrderButtonState) (this.field_P.next((byte) 124));
+              var15 = (SpecialOrderButtonState) (this.specialOrderButtons.next((byte) 124));
             }
           }
           stackIn_223_0 = var4_int;
@@ -6861,7 +6861,7 @@ final class GameSession {
         }
     }
 
-    private final void a(boolean param0, IntrusiveDeque param1, IntrusiveDeque param2, int param3) {
+    private final void synchronizeSpecialOrderButtons(boolean param0, IntrusiveDeque param1, IntrusiveDeque param2, int param3) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -6946,7 +6946,7 @@ final class GameSession {
         return var4;
     }
 
-    final int k(int param0) {
+    final int getMusicState(int param0) {
         int var10_int = 0;
         int var9 = 0;
         int stackIn_8_0 = 0;
@@ -6978,7 +6978,7 @@ final class GameSession {
         if (null != var16.missionState &&
           5 == var16.missionState.getMissionPhase(8)) {
           var3_int = var16.missionState.getPhaseTimer((byte) -125);
-          var4 = lga.a((byte) -2, var16.world.getObjectiveType(false));
+          var4 = lga.getArmageddonStartTick((byte) -2, var16.world.getObjectiveType(false));
           if (var3_int > var4) {
             return 3;
           }
@@ -7169,7 +7169,7 @@ final class GameSession {
                 var11Lifetime2 = GpuSprite.swapTeamId(21957, var11Lifetime2);
               }
             }
-            this.a(-78 + GetLaserAimarc.field_q, var8, var4, var11Lifetime2, 2);
+            this.drawObjectiveInstructions(-78 + GetLaserAimarc.field_q, var8, var4, var11Lifetime2, 2);
           }
           var24 = this.state.b(param1 - 199).missionState;
           if (6 == var24.getMissionPhase(param1 ^ 192)) {
@@ -7590,7 +7590,7 @@ final class GameSession {
         return -1;
     }
 
-    private final void a(int param0, int param1, String[] param2, byte param3) {
+    private final void drawWorldInspectionText(int param0, int param1, String[] param2, byte param3) {
         int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -7612,8 +7612,8 @@ final class GameSession {
           for (var7 = 0; var7 < var5_int; var7++) {
             var8 = ShipTeamConditionFactory.field_a.worldToScreenX(param0, (byte) 114) - (GetPhasedEnergyBeamProjectiles.a(param3 + 215, param2[0]) >> 1);
             var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -10000 + param1) - (var5_int - var7) * UsernameAvailabilityValidator.getFontAscent(true, var6);
-            if (null != this.field_v &&
-              this.field_v.isHintVisible(3, -22)) {
+            if (null != this.tutorialController &&
+              this.tutorialController.isHintVisible(3, -22)) {
               var9 -= 20;
             }
             if (var7 > 0) {
@@ -7747,7 +7747,7 @@ final class GameSession {
         }
     }
 
-    private final boolean a(byte param0, World param1, MissionState param2) {
+    private final boolean hasArmageddonStarted(byte param0, World param1, MissionState param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -7764,7 +7764,7 @@ final class GameSession {
             return false;
           }
           var4_intLifetime1 = param2.getPhaseTimer((byte) -116);
-          var5 = lga.a((byte) -2, param1.getObjectiveType(false));
+          var5 = lga.getArmageddonStartTick((byte) -2, param1.getObjectiveType(false));
           return !(var5 >= var4_intLifetime1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7906,13 +7906,13 @@ final class GameSession {
         }
         if (param0 != -19706) {
           Ship var5 = (Ship) null;
-          this.a(false, (Ship) null);
+          this.drawBlueprintSaveStatus(false, (Ship) null);
         }
         if (ssa.b(2) &&
           SetMachineGunEnergyUsed.field_o[6]) {
           var2 = this.state.b(1).world.findShipByOwner(this.localPlayerIndex, 124);
           if (var2 != null) {
-            var3 = SetOndamageParticleLife.a(var2.chassis, -111);
+            var3 = SetOndamageParticleLife.encodeComponentWords(var2.chassis, -111);
             if (var3 != null) {
               var4 = SetFightersPerPlayerMaximum.a(var3, false);
               GetDebrisThrowable.a(false, "Ship=new int[]" + var4 + ";");
@@ -7965,7 +7965,7 @@ final class GameSession {
               pa.a(11, (byte) -123, param3.getGameId((byte) -13));
             }
             if (MatchingFieldValidator.field_g != null) {
-              this.field_v.saveHintProgress((byte) -111);
+              this.tutorialController.saveHintProgress((byte) -111);
               GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, true, (byte) -85, -2);
             }
             GetMessageFadetime.field_o = false;
@@ -8226,7 +8226,7 @@ final class GameSession {
         }
         if (param0 > -21) {
           var27 = (Ship) null;
-          this.b((byte) -93, (Ship) null);
+          this.updateBlueprintSize((byte) -93, (Ship) null);
         }
     }
 
@@ -8328,7 +8328,7 @@ final class GameSession {
                 var7 = GrappleLauncherBehaviour.field_b;
               }
               var8 = SetTorpedoProjectileDamage.field_q[var7].toUpperCase();
-              var5_array = new String[]{ct.field_b, FireBoostersOrderDefinition.field_d, var8};
+              var5_array = new String[]{ComponentWordEncoder.field_b, FireBoostersOrderDefinition.field_d, var8};
               var3Lifetime2Lifetime2 = ProxyAuthenticationException.field_b + "<br>" + DirectByteStorage.field_b + "<br>" + var13;
               var6 = var6 + GetPointDefenceLaserProjectiles.a(false, 0);
               var9 = SpawnLocation.field_a;
@@ -8498,7 +8498,7 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawObjectiveInstructions(int param0, int param1, int param2, int param3, int param4) {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -8662,7 +8662,7 @@ final class GameSession {
         }
     }
 
-    private final void a(GameSnapshot param0, boolean param1, int param2) {
+    private final void drawEventMessages(GameSnapshot param0, boolean param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -8689,7 +8689,7 @@ final class GameSession {
           var4 = var16;
           var5 = Particle.field_s;
           if (param1) {
-            this.field_M = 17;
+            this.blueprintSizeBytes = 17;
           }
           var6 = -var5 + Particle.field_c;
           if (var4 != null) {
@@ -8741,9 +8741,9 @@ final class GameSession {
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
-        this.field_A = -1;
-        this.field_d = 2;
-        this.field_M = 0;
+        this.blueprintSaveTick = -1;
+        this.blueprintSaveStatus = 2;
+        this.blueprintSizeBytes = 0;
         this.field_X = false;
         this.field_R = 50;
         this.field_ab = false;
@@ -8760,8 +8760,8 @@ final class GameSession {
         try {
           stackIn_4_1 = (param6);
           this.field_x = stackIn_4_1;
-          this.field_E = new IntrusiveDeque();
-          this.field_P = new IntrusiveDeque();
+          this.specialOrderStatuses = new IntrusiveDeque();
+          this.specialOrderButtons = new IntrusiveDeque();
           this.field_p = -1;
           this.field_C = -1;
           ssa.b(2);
@@ -8806,7 +8806,7 @@ final class GameSession {
               this.playerChatOffsets[var8_int] = -1;
             }
           }
-          this.field_v = new TutorialController();
+          this.tutorialController = new TutorialController();
           this.field_a = new int[31];
           this.field_y = -1;
           this.field_K = new npb();

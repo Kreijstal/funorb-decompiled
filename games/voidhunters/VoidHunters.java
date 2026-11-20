@@ -715,7 +715,7 @@ public final class VoidHunters extends NetworkGameClient {
                 var4 = ProxyAuthenticationException.field_a;
               }
               if (var4 != null) {
-                var5 = var4.k(-18620);
+                var5 = var4.getMusicState(-18620);
                 if (var5 == 5) {
                   if (this.musicStingCooldown <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
@@ -1207,7 +1207,7 @@ public final class VoidHunters extends NetworkGameClient {
         cs.clearSharedReferences((byte) 111);
         ImageProducerRasterBuffer.clearSharedReferences((byte) -128);
         RenderResourceNode.clearSharedReferences((byte) -123);
-        ct.clearSharedReferences((byte) -96);
+        ComponentWordEncoder.clearSharedReferences((byte) -96);
         mb.clearSharedReferences((byte) -122);
         LegacyOpenGlShaderProgram.clearSharedReferences(8345);
         OpenGlTexture3D.clearSharedReferences((byte) 42);

@@ -1431,7 +1431,7 @@ final class MissionBuilder implements DiffableState {
           if (param3) {
             this.a(param6, param4, var10Lifetime2, param2 - 27942, var11);
           }
-          WorldDebugArrow.field_g = var10Lifetime2;
+          WorldDebugArrow.debugPolygons = var10Lifetime2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2890,7 +2890,7 @@ final class MissionBuilder implements DiffableState {
                   var14 = 0;
                 } else if (var16_intLifetime1 == 12) {
                   var14 = 0;
-                  this.a(var22, var8, -1, lga.a((byte) -2, param2), 2, var15, var7);
+                  this.a(var22, var8, -1, lga.getArmageddonStartTick((byte) -2, param2), 2, var15, var7);
                 } else if (var16_intLifetime1 == 11) {
                   this.a(var22, param0 + 3, var15);
                   var14 = 0;
@@ -3625,7 +3625,7 @@ final class MissionBuilder implements DiffableState {
         MissionEvent var11 = null;
         int[] var13 = null;
         try {
-          this.a(param1, param3, 1, lga.a((byte) -2, 3), param5 - 2097150, param0, param2);
+          this.a(param1, param3, 1, lga.getArmageddonStartTick((byte) -2, 3), param5 - 2097150, param0, param2);
           try {
             var7_int = TextHotspotRegion.randomBoundedInt(param4, field_a.length, 127);
             var8 = field_a[var7_int];

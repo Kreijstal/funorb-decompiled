@@ -100,7 +100,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[13] = GpuEnvironmentMapSource.field_d;
         var2[103] = TextFieldValidator.field_e;
         var2[218] = Particle.field_g;
-        var2[61] = AsteroidFactory.field_a;
+        var2[61] = AsteroidFactory.armageddonWarning;
         var2[227] = SetSniperCannonFireForce.field_q;
         var2[98] = MassDriverFireForceSetting.fireForce;
         var2[182] = SetRepairModePower.field_r;
@@ -202,7 +202,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[75] = GetSalvoRepairTimeMultiplier.field_o;
         var2[105] = SoundPlayback.field_f;
         var2[226] = GetTorpedoAcceleration.field_p;
-        var2[60] = Cp1252CharacterEncoder.field_b;
+        var2[60] = Cp1252CharacterEncoder.armageddonTimerStart;
         var2[171] = enb.field_c;
         var2[76] = SelectableIconLabelWidget.field_yb;
         var2[23] = SetMissionResnetResourceTickTime.field_p;
@@ -223,7 +223,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[44] = ToolkitRasterState.field_b;
         var2[184] = SetUseRectFill.field_p;
         var2[158] = BodyDestroyedConditionFactory.field_b;
-        var2[19] = GuestPlayNoticePanel.field_x;
+        var2[19] = GuestPlayNoticePanel.fogOfWarOn;
         var2[125] = dr.field_a;
         var2[46] = Particle.field_A;
         var2[45] = LaunchFightersOrderDefinition.field_d;

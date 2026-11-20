@@ -6,7 +6,7 @@ final class GuestPlayNoticePanel extends UiContainer implements UiActionListener
     private UiFocusableComponent playGuestButton;
     private UiFocusableComponent backButton;
     static GameStateFactory field_v;
-    static int field_x;
+    static int fogOfWarOn;
 
     final static boolean hasActivePointerPosition(boolean param0) {
         if (param0) {
@@ -105,7 +105,7 @@ final class GuestPlayNoticePanel extends UiContainer implements UiActionListener
           if (param0 == -15834) {
             return false;
           }
-          field_x = -28;
+          fogOfWarOn = -28;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,6 +162,6 @@ final class GuestPlayNoticePanel extends UiContainer implements UiActionListener
 
     static {
         field_v = (GameStateFactory) ((Object) new ShipTeamConditionFactory());
-        field_x = 1;
+        fogOfWarOn = 1;
     }
 }

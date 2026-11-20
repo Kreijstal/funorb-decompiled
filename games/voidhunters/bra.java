@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bra {
-    static String[] field_f;
+    static String[] menuLabels;
     private t field_c;
     java.awt.Canvas field_a;
     GraphicsToolkit field_g;
@@ -39,10 +39,10 @@ final class bra {
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           bra.clearSharedReferences(true);
-          field_f = null;
+          menuLabels = null;
           return;
         }
-        field_f = null;
+        menuLabels = null;
     }
 
     static {

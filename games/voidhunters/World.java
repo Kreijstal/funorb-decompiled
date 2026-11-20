@@ -6277,7 +6277,7 @@ final class World implements DiffableState, CompactGameState {
           }
           if (param1.getMissionPhase(param2 ^ -14360) == 5) {
             var5 = param1.getPhaseTimer((byte) -97);
-            var6 = lga.a((byte) -2, this.objectiveType);
+            var6 = lga.getArmageddonStartTick((byte) -2, this.objectiveType);
             if (var6 < var5) {
               return false;
             }
@@ -7010,7 +7010,7 @@ final class World implements DiffableState, CompactGameState {
           boolean decompiledFrameRemainder0 = true;
           if (param1.getMissionPhase(8) == 5) {
             var5_int = param1.getPhaseTimer((byte) -102);
-            var6 = lga.a((byte) -2, this.objectiveType);
+            var6 = lga.getArmageddonStartTick((byte) -2, this.objectiveType);
             if (var6 < var5_int) {
               var7 = MissileLauncherWeaponDefinition.a(this.objectiveType, (byte) -78);
               var8 = var5_int - var6;

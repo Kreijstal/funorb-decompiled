@@ -4,7 +4,7 @@
 final class SetOndamageParticleLife extends ConsoleCommand {
     static Widget field_o;
 
-    final static int[] a(ShipComponent param0, int param1) {
+    final static int[] encodeComponentWords(ShipComponent param0, int param1) {
         int incrementValue$1 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
@@ -21,7 +21,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         var7 = VoidHunters.field_G;
         try {
           var2 = new IntrusiveDeque();
-          ct.a(param0, 83, var2);
+          ComponentWordEncoder.appendComponentWords(param0, 83, var2);
           var3 = (IntegerNode) (var2.removeLast((byte) -103));
           if (var3.value != -1) {
             var2.addLast(-10258, var3);

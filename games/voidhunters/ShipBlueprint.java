@@ -37,7 +37,7 @@ final class ShipBlueprint implements DiffableState {
         }
     }
 
-    final int a(byte param0) {
+    final int getEncodedBitLength(byte param0) {
         if (param0 > 113) {
           return GetArmageddonTimerStart.a(-95, 8, this.description, null != this.description ? this.description.length : 0);
         }

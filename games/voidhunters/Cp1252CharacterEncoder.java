@@ -3,7 +3,7 @@
  */
 final class Cp1252CharacterEncoder {
     static int field_a;
-    static int field_b;
+    static int armageddonTimerStart;
     private static String field_z;
 
     final static byte encodeCp1252Character(int param0, char param1) {
@@ -96,7 +96,7 @@ final class Cp1252CharacterEncoder {
 
     static {
         field_z = "aea.A(";
-        field_b = 600;
+        armageddonTimerStart = 600;
         field_a = 0;
     }
 }

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ct {
+final class ComponentWordEncoder {
     static gj field_a;
     static String field_b;
 
-    final static int a(int param0, int param1) {
+    final static int getSpriteHeightOrFallback(int param0, int param1) {
         if (param0 != 19143) {
           IntrusiveDeque var3 = (IntrusiveDeque) null;
-          ct.a((ShipComponent) null, 95, (IntrusiveDeque) null);
+          ComponentWordEncoder.appendComponentWords((ShipComponent) null, 95, (IntrusiveDeque) null);
         }
         if (OpenGlTexture1D.field_i) {
           return OpenGlVertexNormal.field_d[param1].getHeight();
@@ -16,7 +16,7 @@ final class ct {
         return 100;
     }
 
-    final static void a(ShipComponent param0, int param1, IntrusiveDeque param2) {
+    final static void appendComponentWords(ShipComponent param0, int param1, IntrusiveDeque param2) {
         int var4 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -43,7 +43,7 @@ final class ct {
               var5 = param0.hardpoints[var4];
               if (var5.connectedComponentIdx != -1) {
                 param2.addLast(-10258, new IntegerNode(var4));
-                ct.a(param0.subcomponents[var5.connectedComponentIdx], 108, param2);
+                ComponentWordEncoder.appendComponentWords(param0.subcomponents[var5.connectedComponentIdx], 108, param2);
                 if (-1 + param0.hardpoints.length == var4) {
                   var3_int = 1;
                 }

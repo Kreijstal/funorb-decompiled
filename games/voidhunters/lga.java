@@ -8,7 +8,7 @@ final class lga {
     final static void a(boolean param0, int param1) {
         Asteroid.a(3, param0);
         if (param1 != -24055) {
-          lga.a((byte) 71, -57);
+          lga.getArmageddonStartTick((byte) 71, -57);
           SetSpecialOrderBoxWidth.a((byte) 91, param0);
           return;
         }
@@ -23,15 +23,15 @@ final class lga {
         return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
     }
 
-    final static int a(byte param0, int param1) {
+    final static int getArmageddonStartTick(byte param0, int param1) {
         if (param1 == 13) {
           return 2147483647;
         }
         if (param1 == 9) {
-          return Cp1252CharacterEncoder.field_b * Particle.field_l * 2;
+          return Cp1252CharacterEncoder.armageddonTimerStart * Particle.field_l * 2;
         }
         if (11 == param1) {
-          return 1 + Particle.field_l * (AsteroidFactory.field_a + 300);
+          return 1 + Particle.field_l * (AsteroidFactory.armageddonWarning + 300);
         }
         if (param1 == 3) {
           return 120 * Particle.field_l;
@@ -40,10 +40,10 @@ final class lga {
           return Particle.field_l * 120;
         }
         if (param0 == -2) {
-          return Cp1252CharacterEncoder.field_b * Particle.field_l;
+          return Cp1252CharacterEncoder.armageddonTimerStart * Particle.field_l;
         }
-        lga.a((byte) 36, 1);
-        return Cp1252CharacterEncoder.field_b * Particle.field_l;
+        lga.getArmageddonStartTick((byte) 36, 1);
+        return Cp1252CharacterEncoder.armageddonTimerStart * Particle.field_l;
     }
 
     static {

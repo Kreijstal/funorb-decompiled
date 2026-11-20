@@ -140,7 +140,7 @@ final class GameMenuScreen {
           if (param0 >= 2) {
             param0 -= 2;
           } else {
-            var4 = ct.a(param1 ^ 3900, 128);
+            var4 = ComponentWordEncoder.getSpriteHeightOrFallback(param1 ^ 3900, 128);
             return var3 + SetReloadBarWidth.menuTopOffsets[this.menuId] + (5 + var4) * param0;
           }
         }
@@ -339,7 +339,7 @@ final class GameMenuScreen {
           var22++;
         }
         var23 = GetSniperCannonAimspeed.a(100, var22);
-        var24 = ct.a(19143, var22);
+        var24 = ComponentWordEncoder.getSpriteHeightOrFallback(19143, var22);
         if (var16 != 0) {
           var25 = var15 + var18 / 2 - 1;
           PlayerActionFactory.a(131, var17, (byte) 93, var25);
@@ -350,11 +350,11 @@ final class GameMenuScreen {
           }
           var26 = stackIn_91_0;
           if (var21 == 1) {
-            SaveShipDesignOrderDefinition.pushClip(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
+            SaveShipDesignOrderDefinition.pushClip(var25, ComponentWordEncoder.getSpriteHeightOrFallback(19143, 131) + var25, true, var17 + var26, var17);
             PlayerActionFactory.a(132, var17, (byte) 122, var25);
             GetMissionTerrainSpaceProbability.a(126);
           }
-          PlayerActionFactory.a(var22, -1 + var17 - (-var26 + var23 / 2), (byte) 92, var25 + (ct.a(19143, 132) - var24) / 2);
+          PlayerActionFactory.a(var22, -1 + var17 - (-var26 + var23 / 2), (byte) 92, var25 + (ComponentWordEncoder.getSpriteHeightOrFallback(19143, 132) - var24) / 2);
         } else {
           PlayerActionFactory.a(var22, var19 / 2 + (var12 - var23 / 2), (byte) 108, var15 + var20 / 2 - var24 / 2);
           IncrementVariableAction.a(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
@@ -647,7 +647,7 @@ final class GameMenuScreen {
                                                             if (SetTorpedoProjectiles.field_o == null) {
                                                               return;
                                                             }
-                                                            var23 = SetOndamageParticleLife.a(var10.chassis, param0 ^ -98);
+                                                            var23 = SetOndamageParticleLife.encodeComponentWords(var10.chassis, param0 ^ -98);
                                                             var18 = GetWeaponParticleSpeedDownshift.a(65535, var23);
                                                             var14 = var18;
                                                             var13 = var14;

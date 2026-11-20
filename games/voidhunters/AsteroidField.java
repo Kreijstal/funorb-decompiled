@@ -881,7 +881,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime86 = HuffmanCodec.fetchLocalizedResource((byte) -40, "cursor_keys_shortname");
           if (var2Lifetime86 != null) {
-            ct.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime86);
+            ComponentWordEncoder.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime86);
           }
           var2Lifetime87 = HuffmanCodec.fetchLocalizedResource((byte) -106, "mouse_wheel_shortname");
           if (var2Lifetime87 != null) {

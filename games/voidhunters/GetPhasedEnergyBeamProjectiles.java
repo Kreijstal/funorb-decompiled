@@ -256,7 +256,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetFullMissionSet.field_p = param1[36];
           QuickChatPhraseLoader.field_b = param1[144];
           ImageProducerAppletRasterBuffer.field_i = param1[130];
-          AsteroidFactory.field_a = param1[61];
+          AsteroidFactory.armageddonWarning = param1[61];
           SetLaserAimarc.field_o = param1[160];
           SetPointDefenceLaserReload.field_q = param1[132];
           MenuBackgroundBattle.field_c = param1[139];
@@ -291,7 +291,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_z = param1[233];
           joa.field_a = param1[199];
           GetMissileLauncherEnergyUsed.field_q = param1[175];
-          Cp1252CharacterEncoder.field_b = param1[60];
+          Cp1252CharacterEncoder.armageddonTimerStart = param1[60];
           SetPhasedEnergyBeamPulseFadetime.field_o = param1[77];
           Particle.field_o = param1[223];
           GetMachineGunAimspeed.field_p = param1[101];
@@ -327,7 +327,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GrappleLauncherBehaviour.field_d = param1[39];
           SetArmageddonWarning.field_o = param1[54];
           bia.field_c = param1[197];
-          GuestPlayNoticePanel.field_x = param1[19];
+          GuestPlayNoticePanel.fogOfWarOn = param1[19];
           Particle.field_A = param1[46];
           QuickChatCategoryDefinition.field_o = param1[162];
           SelectableIconLabelWidget.field_yb = param1[76];
