@@ -206,7 +206,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         if (GetReverbDry.isSocialDialogOpen((byte) 105)) {
           param1 = false;
         }
-        UiSingleChildContainer.a(-119, param1);
+        UiSingleChildContainer.drawSlidingLobbyPanels(-119, param1);
         SetPedrosRepairModeSwitchtime.drawQuickChatMenu((byte) 89);
         int var2 = 103 / ((param0 + 19) / 55);
     }

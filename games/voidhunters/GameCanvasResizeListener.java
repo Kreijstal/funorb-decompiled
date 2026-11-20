@@ -44,7 +44,7 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
             stackIn_6_0 = CarouselPlayerEventFactory.field_b;
             return stackIn_6_0;
           }
-          var7 = CarouselPlayerEventFactory.a(param1, false);
+          var7 = CarouselPlayerEventFactory.findIgnoreEntry(param1, false);
           if (var7 == null) {
             stackIn_10_0 = SetReverbGain.a(DisplayModeErrorDialog.field_L, new String[]{param1}, 122);
             return stackIn_10_0;

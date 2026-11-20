@@ -63,7 +63,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               AccountNameAvailabilityReplies.field_b.position = 0;
               PartitioningManagerFactory.field_a = param1[SetAutoDetail.field_p];
             }
-            if (!PlayerJoinFactory.b((byte) 51)) {
+            if (!PlayerJoinFactory.pollIncomingPacketPayload((byte) 51)) {
               return false;
             }
             if (PanelHeightQuery.incomingLagMillis == 0) {

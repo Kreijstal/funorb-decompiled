@@ -450,13 +450,13 @@ final class GameMenuScreen {
         var17 = 13421772;
         if (SetFps.helpPageIndex == 0) {
           var12 += 50;
-          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 0, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
-          SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
+          SetAutoaim.drawParagraph(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 0, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
+          SetAutoaim.drawParagraph(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
         } else {
           var12 -= 10;
           var20 = this.formatShortcutHint("<savekey>", (byte) 119, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], SetDetachmentMode.field_p);
           var21 = this.formatShortcutHint("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
-          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
+          SetAutoaim.drawParagraph(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
         SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.helpPageIndex, -98), 1, 16738305, (byte) -96);
     }
@@ -510,7 +510,7 @@ final class GameMenuScreen {
                 GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, MidiCrossfadeStream.buttonFrameSprites, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
               } else {
                 var10_int = param1 ? 1 : 0;
-                GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, -4);
+                GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, -4);
               }
             }
           } else {
@@ -519,7 +519,7 @@ final class GameMenuScreen {
                 if (16 == var10_int) {
                   if (this.inputState.isActivationRequested((byte) -78)) {
                     var10_int = param1 ? 1 : 0;
-                    GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 7);
+                    GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, 7);
                     GetMachineGunAimarc.field_p = true;
                   }
                 } else {
@@ -527,14 +527,14 @@ final class GameMenuScreen {
                     if (this.inputState.isActivationRequested((byte) -86)) {
                       SetFps.helpPageIndex = 0;
                       var10_int = param1 ? 1 : 0;
-                      GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 5);
+                      GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, 5);
                     }
                   } else {
                     if (var10_int != 6) {
                       if (20 == var10_int) {
                         if (this.inputState.isActivationRequested((byte) -95)) {
                           var10_int = param1 ? 1 : 0;
-                          GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 8);
+                          GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, 8);
                         }
                       } else {
                         if (var10_int != 21) {
@@ -591,7 +591,7 @@ final class GameMenuScreen {
                                             MatchingFieldValidator.field_g.beginPacket(60);
                                             var10_int = param1 ? 1 : 0;
                                             stackIn_161_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
-                                            GetNebulaFadesOutWhenClose.a(stackIn_161_0, var10_int != 0, (byte) -85, -1);
+                                            GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_161_0, var10_int != 0, (byte) -85, -1);
                                           }
                                         } else {
                                           if (var10_int == 10) {
@@ -599,14 +599,14 @@ final class GameMenuScreen {
                                               MatchingFieldValidator.field_g.sendRematchAction(true);
                                               var10_int = param1 ? 1 : 0;
                                               stackIn_166_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-                                              GetNebulaFadesOutWhenClose.a(stackIn_166_0, var10_int != 0, (byte) -85, -1);
+                                              GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_166_0, var10_int != 0, (byte) -85, -1);
                                             }
                                           } else {
                                             if (var10_int == 11) {
                                               if (this.inputState.isActivationRequested((byte) -98)) {
                                                 if (GetThrusterSmallForce.field_o) {
                                                   var10_int = param1 ? 1 : 0;
-                                                  GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, -5);
+                                                  GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, -5);
                                                 }
                                                 if (SetMissionTerrainDebrisProbability.field_p) {
                                                   ArmBehaviourFactory.a(0, 11, 20694);
@@ -719,7 +719,7 @@ final class GameMenuScreen {
                                           MatchingFieldValidator.field_g.sendDrawAction(true);
                                           var10_int = param1 ? 1 : 0;
                                           stackIn_156_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-                                          GetNebulaFadesOutWhenClose.a(stackIn_156_0, var10_int != 0, (byte) -85, -1);
+                                          GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_156_0, var10_int != 0, (byte) -85, -1);
                                         }
                                       }
                                     }
@@ -823,7 +823,7 @@ final class GameMenuScreen {
                             if (var6 != 0) {
                               if (!this.inputState.isMouseButtonHeld((byte) 119) ||
                                 !(ReferenceTrackingControl.field_b >= SetMinimapWidth.field_o)) {
-                                GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[1]);
+                                GetNebulaFadesOutWhenClose.playSample(-124, PendingScoreboardRequest.soundEffects[1]);
                                 ReferenceTrackingControl.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (UiDraggableContainer.field_E) {
@@ -835,7 +835,7 @@ final class GameMenuScreen {
                         } else {
                           if (this.inputState.isActivationRequested((byte) -107)) {
                             var10_int = param1 ? 1 : 0;
-                            GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 9);
+                            GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, 9);
                           }
                         }
                       }
@@ -843,7 +843,7 @@ final class GameMenuScreen {
                       if (this.inputState.isActivationRequested((byte) -105)) {
                         var10_int = SetCountermeasureLauncherProjectileLife.field_o;
                         var11 = param1 ? 1 : 0;
-                        GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var11 != 0, (byte) -85, var10_int);
+                        GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var11 != 0, (byte) -85, var10_int);
                       }
                     }
                   }
@@ -851,14 +851,14 @@ final class GameMenuScreen {
               } else {
                 if (this.inputState.isActivationRequested((byte) -83)) {
                   var10_int = param1 ? 1 : 0;
-                  GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 0);
+                  GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, var10_int != 0, (byte) -85, 0);
                 }
               }
             } else {
               if (this.inputState.isActivationRequested((byte) -97)) {
                 var10_int = param1 ? 1 : 0;
                 stackIn_51_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-                GetNebulaFadesOutWhenClose.a(stackIn_51_0, var10_int != 0, (byte) -85, -1);
+                GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_51_0, var10_int != 0, (byte) -85, -1);
               }
             }
           }
@@ -866,7 +866,7 @@ final class GameMenuScreen {
           if (this.inputState.isActivationRequested((byte) -78)) {
             var10_int = param1 ? 1 : 0;
             stackIn_40_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-            GetNebulaFadesOutWhenClose.a(stackIn_40_0, var10_int != 0, (byte) -85, -3);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_40_0, var10_int != 0, (byte) -85, -3);
           }
         }
         if (param0 != 24) {
@@ -874,7 +874,7 @@ final class GameMenuScreen {
         }
         if (var4 != 0 &&
           this.inputState.isActivationRequested((byte) -102)) {
-          GetNebulaFadesOutWhenClose.a(param0 ^ -106, PendingScoreboardRequest.soundEffects[7]);
+          GetNebulaFadesOutWhenClose.playSample(param0 ^ -106, PendingScoreboardRequest.soundEffects[7]);
         }
     }
 
@@ -925,7 +925,7 @@ final class GameMenuScreen {
             var6 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             var3 = var3 + var4 * 2;
             BlackBoxRecording.drawPanelBackground((byte) -115, 255, var3, var5_int + (80 - var4), -var4 + (var6 + 160), var4 * 2 + 480);
-            SetAutoaim.a(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.getFontAscent(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
+            SetAutoaim.drawParagraph(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.getFontAscent(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
           }
         }
         var2Lifetime2 = SetVariableAction.field_b;
@@ -1002,7 +1002,7 @@ final class GameMenuScreen {
             var4 = SetReloadBarWidth.menuActions[this.menuId][var3];
             if (var4 == 6) {
               var5 = SetCountermeasureLauncherProjectileLife.field_o;
-              GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, var5);
+              GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, false, (byte) -85, var5);
             }
           }
         } else {
@@ -1059,10 +1059,10 @@ final class GameMenuScreen {
             SetMaxShipSize.a(MissionList.getApplet((byte) -105), 0);
           }
           if (var2 == 1) {
-            GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, false, (byte) -85, 0);
           }
           if (var2 == 2) {
-            GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, true, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, true, (byte) -85, 0);
           }
           return;
         }
@@ -1080,14 +1080,14 @@ final class GameMenuScreen {
                 continue;
               }
               stackIn_41_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
-              GetNebulaFadesOutWhenClose.a(stackIn_41_0, false, (byte) -85, -1);
+              GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_41_0, false, (byte) -85, -1);
               continue;
             }
             var2Lifetime1 = this.inputState.selectedIndex;
             this.updateKeyboardSelection((byte) -51);
             if (0 <= this.inputState.selectedIndex &&
               var2Lifetime1 != this.inputState.selectedIndex) {
-              GetNebulaFadesOutWhenClose.a(-110, PendingScoreboardRequest.soundEffects[0]);
+              GetNebulaFadesOutWhenClose.playSample(-110, PendingScoreboardRequest.soundEffects[0]);
             }
             if (this.inputState.selectedIndex == -1) {
               continue;
@@ -1098,7 +1098,7 @@ final class GameMenuScreen {
           this.inputState.updatePointerSelection(this.hitTestItem(AppletCookieWriter.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(OpenGlFaceAttachment.field_b, PlayerGameData.field_b, param0 ^ 6868));
           if (this.inputState.selectedIndex >= 0 &&
             var2Lifetime1Lifetime1 != this.inputState.selectedIndex) {
-            GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[0]);
+            GetNebulaFadesOutWhenClose.playSample(-124, PendingScoreboardRequest.soundEffects[0]);
           }
           if (this.inputState.selectedIndex != -1) {
             this.handleItemInput(24, true, this.inputState.selectedIndex);

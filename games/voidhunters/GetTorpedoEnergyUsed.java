@@ -44,7 +44,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           return;
         }
         if (param6 != 1) {
-          RemoveEventActionFactory.a(param5, param0, param1, param2, param3, param6, 120);
+          RemoveEventActionFactory.drawRectangleBorderUnclipped(param5, param0, param1, param2, param3, param6, 120);
           return;
         }
         OpenGlRenderbuffer.a(param2, 102, param3, param0, param1, param5);

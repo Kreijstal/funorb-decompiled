@@ -107,7 +107,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
         if (Projectile.isReconnecting((byte) -21) ||
           !(this.loginField.text.length() <= 0) &&
           !(this.passwordField.text.length() <= 0)) {
-          PartitionZoneList.a(-41, this.passwordField.text, this.loginField.text);
+          PartitionZoneList.submitLogin(-41, this.passwordField.text, this.loginField.text);
         }
     }
 

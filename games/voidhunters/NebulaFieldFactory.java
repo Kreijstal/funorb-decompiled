@@ -67,14 +67,14 @@ final class NebulaFieldFactory implements GameStateFactory {
               var9 != 0) {
               var5 = var1.readString(-1);
             }
-            var6 = CarouselPlayerEventFactory.a(var4_ref_String, false);
+            var6 = CarouselPlayerEventFactory.findIgnoreEntry(var4_ref_String, false);
             var7 = var1.readString(-1);
             var8 = ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = CarouselPlayerEventFactory.a(var7, false);
+              var6 = CarouselPlayerEventFactory.findIgnoreEntry(var7, false);
               if (null != var6) {
                 TeamNodeCondition.field_c.put(var6, (byte) -124, (long)var8.hashCode());
               }
@@ -156,7 +156,7 @@ final class NebulaFieldFactory implements GameStateFactory {
               if (var9 != 0) {
                 break scanLoop1;
               }
-              if (Nebula.a(stackIn_66_0, 7569, var6Lifetime1)) {
+              if (Nebula.comesBeforeSocialEntry(stackIn_66_0, 7569, var6Lifetime1)) {
                 var7_ref = (SocialListEntry) (DisplayModeErrorDialog.field_M.next((byte) 78));
                 continue;
               }

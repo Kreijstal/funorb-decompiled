@@ -81,7 +81,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
                 }
                 stackIn_14_0 = var5;
                 stackIn_15_1 = !(GetPointDefenceLaserProjectiles.a(var5, 11284));
-                WorldPoint.a(stackIn_14_0, stackIn_15_1, 11585);
+                WorldPoint.setDebugFlag(stackIn_14_0, stackIn_15_1, 11585);
               }
             }
           }

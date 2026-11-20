@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicPatchPcmStream extends PcmStream {
-    static String field_h;
+    static String loginPassword;
     IntrusiveDeque notes;
     private MidiPcmStream midiStream;
     PcmStreamMixer fadingStreams;
@@ -101,7 +101,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param1 == -1) {
             return;
           }
-          field_h = (String) null;
+          loginPassword = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -255,7 +255,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_h = null;
+        loginPassword = null;
         if (!param0) {
           return;
         }

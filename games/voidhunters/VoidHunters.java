@@ -285,7 +285,7 @@ public final class VoidHunters extends NetworkGameClient {
               GetDebrisThrowable.a(false, "Game finished packet");
               if (var3 != null) {
                 stackIn_59_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-                GetNebulaFadesOutWhenClose.a(stackIn_59_0, false, (byte) -85, -1);
+                GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_59_0, false, (byte) -85, -1);
               }
               return;
             }
@@ -334,7 +334,7 @@ public final class VoidHunters extends NetworkGameClient {
                   (MatchingFieldValidator.field_g != null &&
                   MatchingFieldValidator.field_g.networked &&
                   GetThrusterSmallForce.field_o)) {
-                  GetNebulaFadesOutWhenClose.a(-118, PendingScoreboardRequest.soundEffects[5]);
+                  GetNebulaFadesOutWhenClose.playSample(-118, PendingScoreboardRequest.soundEffects[5]);
                 }
                 var5 = null;
                 if (var3 != null) {
@@ -541,11 +541,11 @@ public final class VoidHunters extends NetworkGameClient {
                 GetMessageFadetime.field_o = false;
                 if (!GetThrusterSmallForce.field_o) {
                   stackIn_85_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
-                  GetNebulaFadesOutWhenClose.a(stackIn_85_0, false, (byte) -85, 0);
+                  GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_85_0, false, (byte) -85, 0);
                 } else {
                   BodyInZoneCondition.field_c = GetMissilesDamageSourceTeam.field_o;
                   stackIn_81_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-                  GetNebulaFadesOutWhenClose.a(stackIn_81_0, false, (byte) -85, 6);
+                  GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_81_0, false, (byte) -85, 6);
                 }
                 ColorKeyScaleTextureOperation.d(991426348);
                 WorldSpriteTiler.field_a[GetArmageddonTimerStart.field_o].resetSelection(false, 320, 0);
@@ -637,7 +637,7 @@ public final class VoidHunters extends NetworkGameClient {
         var5.resizable = false;
         SetMissionTimeLimit.setScreenSizeController(var5, 20);
         DebugRequestFactory.a((byte) 90, HardpointGeometry.serverPacketLengths, (NetworkGameClient) (this));
-        SetNebulaProximityFadeDownshift.a(114, param0, false);
+        SetNebulaProximityFadeDownshift.initializeCarouselProtocol(114, param0, false);
         FlipTextureOperation.field_l = new CarouselGameClient();
         GetCountermeasureLauncherAimarc.e((byte) 117);
         this.applyShipCookie(false);
@@ -1906,7 +1906,7 @@ public final class VoidHunters extends NetworkGameClient {
           0 == AgeValidator.field_f) {
           GetDebrisThrowable.a(false, "Cookie ship found, so starting game");
           stackIn_10_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-          GetNebulaFadesOutWhenClose.a(stackIn_10_0, false, (byte) -85, -3);
+          GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_10_0, false, (byte) -85, -3);
         }
         if (ClassNameFormatter.field_b != ClassNameFormatter.field_a) {
           if (~ClassNameFormatter.field_a == ~SetBombletSprayEnergyUsed.field_o) {
@@ -1928,7 +1928,7 @@ public final class VoidHunters extends NetworkGameClient {
                   AwardVictoryToTeamAction.a(-356, false);
                 }
                 if (TextureMappingData.field_e) {
-                  GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, -4);
+                  GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, false, (byte) -85, -4);
                 }
                 if (BodyInZoneConditionFactory.isMenuScreenActive(false, AgeValidator.field_f)) {
                   ColorKeyScaleTextureOperation.d(991426348);
@@ -2205,7 +2205,7 @@ public final class VoidHunters extends NetworkGameClient {
           SetMachineGunEnergyUsed.field_o[82]) {
           BodyInZoneCondition.field_c = "This is a forced error, you pressed some crazy button combo";
           stackIn_200_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
-          GetNebulaFadesOutWhenClose.a(stackIn_200_0, false, (byte) -85, 6);
+          GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_200_0, false, (byte) -85, 6);
         }
     }
 
@@ -2314,12 +2314,12 @@ public final class VoidHunters extends NetworkGameClient {
           SoftwareRasterizer2D.clear();
           if (~AgeValidator.field_f != ~GetArmageddonTimerStart.field_o) {
             if (SetVariableAction.field_b < 16) {
-              UiStatefulStyle.a((byte) 88, SetShipTeamAction.field_f, false, GetArmageddonTimerStart.field_o);
+              UiStatefulStyle.drawMenuScreen((byte) 88, SetShipTeamAction.field_f, false, GetArmageddonTimerStart.field_o);
             } else {
-              UiStatefulStyle.a((byte) 88, GetMessageFadetime.field_o, false, AgeValidator.field_f);
+              UiStatefulStyle.drawMenuScreen((byte) 88, GetMessageFadetime.field_o, false, AgeValidator.field_f);
             }
           } else {
-            UiStatefulStyle.a((byte) 88, SetShipTeamAction.field_f, true, GetArmageddonTimerStart.field_o);
+            UiStatefulStyle.drawMenuScreen((byte) 88, SetShipTeamAction.field_f, true, GetArmageddonTimerStart.field_o);
           }
           if (!SetShipTeamAction.field_f ||
             !GetMessageFadetime.field_o) {
@@ -2415,7 +2415,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (SetReloadBarWidth.isCachedFrameAvailable((byte) -116) &&
               this.cachedFrame != null) {
               var6Lifetime1 = GetExplosionProjectileOndamageParticles.e((byte) -24);
-              var7Lifetime1 = RemoveEventActionFactory.b((byte) 102);
+              var7Lifetime1 = RemoveEventActionFactory.getCachedTopPanelY((byte) 102);
             }
             var8_ref_kla = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
             var8_ref_kla.pushClip(var6Lifetime1, var6Lifetime1 + var4_int, var7Lifetime1, var7Lifetime1 + var5_intLifetime3, (byte) -76);

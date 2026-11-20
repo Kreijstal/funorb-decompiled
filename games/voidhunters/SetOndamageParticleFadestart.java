@@ -87,7 +87,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
             var14 = var6[var9];
             SoftwareIndexedSprite2D[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = SetSalvoHoldable.a(94, var5[var9], var19[var11_int]);
+              var14[var11_int] = SetSalvoHoldable.copyWithPalette(94, var5[var9], var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.height;

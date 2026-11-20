@@ -21,7 +21,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
           SetMachineGunEnergyUsed.a(202, 62, arguments[0].intValue(32));
           if (obfuscationGuard >= -119) {
             var4 = (java.awt.Canvas) null;
-            SetGrapplingHookCooldown.a((byte) -17, (java.awt.Canvas) null);
+            SetGrapplingHookCooldown.attachInputListeners((byte) -17, (java.awt.Canvas) null);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -39,7 +39,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, java.awt.Canvas param1) {
+    final static void attachInputListeners(byte param0, java.awt.Canvas param1) {
         try {
           ReflectionCheck.installKeyboardListeners(10009, (java.awt.Component) ((Object) param1));
           LegacyOpenGlShader.attachMouseListeners((java.awt.Component) ((Object) param1), 1);
@@ -62,7 +62,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
         field_p = null;
     }
 
-    final static void a(int param0, String param1, int param2) {
+    final static void addReleaseCounter(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -78,7 +78,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
             return;
           }
           var4 = (String) null;
-          SetGrapplingHookCooldown.a(-93, (String) null, -78);
+          SetGrapplingHookCooldown.addReleaseCounter(-93, (String) null, -78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

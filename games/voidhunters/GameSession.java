@@ -1111,7 +1111,7 @@ final class GameSession {
           var26 = var24.world.getDebrisById(21363, var18Lifetime1);
           if (var26 != null &&
             ((Ship) (var9)).chassis.countComponents(1) + var26.chassis.countComponents(1) > OpenGlShader.field_a) {
-            ArmBehaviour.a(2, 0, 200, MissionControl.field_a.toUpperCase());
+            ArmBehaviour.drawCenteredMessagePanel(2, 0, 200, MissionControl.field_a.toUpperCase());
           }
         }
         if (this.updateVotingPanel(-12, var24) ||
@@ -1187,7 +1187,7 @@ final class GameSession {
                 }
               }
               var3_int = 1;
-              ArmBehaviour.a(1, 116, 200, var5Lifetime3);
+              ArmBehaviour.drawCenteredMessagePanel(1, 116, 200, var5Lifetime3);
             }
           }
           if (var3_int == 0 &&
@@ -2910,13 +2910,13 @@ final class GameSession {
                       var50.specialOrderSubmessage = new SpecialOrderSubmessage();
                       var50.specialOrderSubmessage.spawnchoice = new SpawnChoice(var42);
                       this.submitPlayerAction(0, true, var50);
-                      GetNebulaFadesOutWhenClose.a(-119, PendingScoreboardRequest.soundEffects[7]);
+                      GetNebulaFadesOutWhenClose.playSample(-119, PendingScoreboardRequest.soundEffects[7]);
                     }
                     if (var41 != 0 &&
                       var38 != 0) {
                       if (var34_int != this.hoveredRespawnOption &&
                         var34_int != var9Lifetime1) {
-                        GetNebulaFadesOutWhenClose.a(-112, PendingScoreboardRequest.soundEffects[0]);
+                        GetNebulaFadesOutWhenClose.playSample(-112, PendingScoreboardRequest.soundEffects[0]);
                       }
                       var31Lifetime1 = 1;
                       this.hoveredRespawnOption = var34_int;
@@ -2998,14 +2998,14 @@ final class GameSession {
                         var53.specialOrderSubmessage.spawnchoice = new SpawnChoice(var9Lifetime1);
                         this.submitPlayerAction(0, true, var53);
                       }
-                      GetNebulaFadesOutWhenClose.a(-116, PendingScoreboardRequest.soundEffects[7]);
+                      GetNebulaFadesOutWhenClose.playSample(-116, PendingScoreboardRequest.soundEffects[7]);
                       this.field_X = true;
                     }
                     var31Lifetime1 = 1;
                     var37Lifetime1 = var19;
                     if (this.hoveredRespawnOption != var37Lifetime1 &&
                       var37Lifetime1 != var9Lifetime1) {
-                      GetNebulaFadesOutWhenClose.a(-119, PendingScoreboardRequest.soundEffects[0]);
+                      GetNebulaFadesOutWhenClose.playSample(-119, PendingScoreboardRequest.soundEffects[0]);
                     }
                     this.hoveredRespawnOption = var37Lifetime1;
                   }
@@ -3392,7 +3392,7 @@ final class GameSession {
                     var6 = var6 + ((-this.field_i + 255) * (2 * HighscoreValueRequest.field_d) >> 8);
                     var5 = var5 + ((32 + var4_int) * (-this.field_i + 255) >> 8);
                   }
-                  PlayerJoinFactory.a(var6, HighscoreValueRequest.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
+                  PlayerJoinFactory.fillGradientRectangle(var6, HighscoreValueRequest.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
                   for (var11 = 125; var11 < var8; var11 += 125) {
                     var12 = var11 * var4_int / var8 + var5;
                     DelayedPacket.drawLine(var6 + 2, var12, var12, var6, -16777216, 4473924);
@@ -3462,7 +3462,7 @@ final class GameSession {
           if (this.lastEnemyShipSpawnTick != param1) {
             var3_int = SetMinimapWidth.field_o - this.lastEnemyShipSpawnTick;
             if (Particle.field_d > var3_int) {
-              ArmBehaviour.a(1, 116, param1 ^ -201, GetMachineGunPulsetime.field_p);
+              ArmBehaviour.drawCenteredMessagePanel(1, 116, param1 ^ -201, GetMachineGunPulsetime.field_p);
             }
           }
           if (this.localPlayerIndex >= 0) {
@@ -3660,7 +3660,7 @@ final class GameSession {
           var19 = (String) null;
           var18 = (String) null;
           ChatMessages.appendMessage((byte) -123, 0, (String) null, (String) null, var13, 2);
-          GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, -5);
+          GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, false, (byte) -85, -5);
         }
         return;
     }
@@ -5172,10 +5172,10 @@ final class GameSession {
         } else {
           if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 118)) {
             var3 = param0 ? 1 : 0;
-            GetNebulaFadesOutWhenClose.a(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           } else {
             var3 = param0 ? 1 : 0;
-            GetNebulaFadesOutWhenClose.a(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           }
         }
     }
@@ -5887,7 +5887,7 @@ final class GameSession {
             }
             var27Lifetime2 = 2;
             var28Lifetime2 = -(var27Lifetime2 * 2) + (var20Lifetime1 - var19);
-            SetAutoaim.a(-1, var21Lifetime1, var19 + (var22 + var27Lifetime2), 10, 1, var37, var25, var28Lifetime2, 98, var23 - var21Lifetime1, 1, 4);
+            SetAutoaim.drawParagraph(-1, var21Lifetime1, var19 + (var22 + var27Lifetime2), 10, 1, var37, var25, var28Lifetime2, 98, var23 - var21Lifetime1, 1, 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7812,7 +7812,7 @@ final class GameSession {
             }
           }
           var3 = var2;
-          GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, var3);
+          GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, false, (byte) -85, var3);
           return;
         }
         var2Lifetime1 = 61 / ((param0 + 72) / 38);
@@ -7966,7 +7966,7 @@ final class GameSession {
             }
             if (MatchingFieldValidator.field_g != null) {
               this.tutorialController.saveHintProgress((byte) -111);
-              GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, true, (byte) -85, -2);
+              GetNebulaFadesOutWhenClose.selectMenuScreen(AgeValidator.field_f, true, (byte) -85, -2);
             }
             GetMessageFadetime.field_o = false;
             IntegerRecordWritePackets.field_a = true;
@@ -8332,7 +8332,7 @@ final class GameSession {
               var3Lifetime2Lifetime2 = ProxyAuthenticationException.field_b + "<br>" + DirectByteStorage.field_b + "<br>" + var13;
               var6 = var6 + GetPointDefenceLaserProjectiles.getFontAscent(false, 0);
               var9 = SpawnLocation.field_a;
-              SetAutoaim.a(1, 100, 10, 0, 0, var9, 16777215, 100, -114, 0, 0, 0);
+              SetAutoaim.drawParagraph(1, 100, 10, 0, 0, var9, 16777215, 100, -114, 0, 0, 0);
             } else {
               if (TiledSpriteTextureOperation.field_r) {
                 var3Lifetime2Lifetime2 = SetTeamSelectionSpeedup.field_p + "<br>" + GetDebrisCarryOverPercentage.field_p + "<br>" + var13;
@@ -8342,7 +8342,7 @@ final class GameSession {
                 var5_array = new String[]{SetTorpedoProjectileDamage.field_q[GetHealthBarWidth.field_q].toUpperCase(), SetTorpedoProjectileDamage.field_q[GetGrappleDebris.field_p].toUpperCase(), " " + SetTorpedoProjectileDamage.field_q[DebugRequestFactory.field_a].toUpperCase()};
               }
             }
-            SetAutoaim.a(1, 100, 40, 0, 0, var3Lifetime2Lifetime2, 16777215, 100, 122, var6, 0, 0);
+            SetAutoaim.drawParagraph(1, 100, 40, 0, 0, var3Lifetime2Lifetime2, 16777215, 100, 122, var6, 0, 0);
             if (var5_array != null) {
               for (var7Lifetime1 = 0; var7Lifetime1 < var5_array.length; var7Lifetime1++) {
                 if (var5_array[var7Lifetime1] != null &&

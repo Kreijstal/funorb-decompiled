@@ -95,7 +95,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var15Lifetime2 = SetVariableLabelAction.field_a;
             var3Lifetime2 = var15Lifetime2;
             CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
-            var5 = ArmBehaviour.a(var2, 0, 200, var15Lifetime2);
+            var5 = ArmBehaviour.drawCenteredMessagePanel(var2, 0, 200, var15Lifetime2);
             var16 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var18 = new Camera2D();
             var18.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1) >> 1));
@@ -181,7 +181,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           if (0 == AgeValidator.field_f) {
             var4 = 1;
             CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
-            var5Lifetime2 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
+            var5Lifetime2 = ArmBehaviour.drawCenteredMessagePanel(var2, 0, 200, var3Lifetime2);
             var19 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var21 = new Camera2D();
             var21.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
@@ -223,7 +223,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           var3Lifetime2 = SetVariableLabelAction.field_a;
         }
         CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
-        var5Lifetime1 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
+        var5Lifetime1 = ArmBehaviour.drawCenteredMessagePanel(var2, 0, 200, var3Lifetime2);
         var22 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
         var24 = new Camera2D();
         var24.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));

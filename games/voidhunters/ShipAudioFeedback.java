@@ -55,11 +55,11 @@ final class ShipAudioFeedback {
           var5_int = param3.isReloading((byte) -90) ? 1 : 0;
           if (this.reloading &&
             var5_int == 0) {
-            GetNebulaFadesOutWhenClose.a(-112, PendingScoreboardRequest.soundEffects[18]);
+            GetNebulaFadesOutWhenClose.playSample(-112, PendingScoreboardRequest.soundEffects[18]);
           } else {
             if (var5_int != 0 &&
               !this.reloading) {
-              GetNebulaFadesOutWhenClose.a(-86, PendingScoreboardRequest.soundEffects[10]);
+              GetNebulaFadesOutWhenClose.playSample(-86, PendingScoreboardRequest.soundEffects[10]);
             }
           }
           stackIn_15_1 = (var5_int != 0);
@@ -69,7 +69,7 @@ final class ShipAudioFeedback {
           if (var6 < var7 &&
             var7 < this.previousEnergyProgress &&
             this.lowEnergyWarningCooldown <= 0) {
-            GetNebulaFadesOutWhenClose.a(-87, PendingScoreboardRequest.soundEffects[16]);
+            GetNebulaFadesOutWhenClose.playSample(-87, PendingScoreboardRequest.soundEffects[16]);
             this.lowEnergyWarningCooldown = Particle.field_l;
           }
           if (this.lowEnergyWarningCooldown > 0) {
@@ -113,13 +113,13 @@ final class ShipAudioFeedback {
             }
           }
           if (this.trackedShipCount < var8) {
-            GetNebulaFadesOutWhenClose.a(param1 - 186, PendingScoreboardRequest.soundEffects[9]);
+            GetNebulaFadesOutWhenClose.playSample(param1 - 186, PendingScoreboardRequest.soundEffects[9]);
           }
           this.trackedShipCount = var8;
           var10 = param3.getSelfDestructPrepared((byte) -86) ? 1 : 0;
           if (var10 != 0 &&
             !this.selfDestructPrepared) {
-            GetNebulaFadesOutWhenClose.a(-90, PendingScoreboardRequest.soundEffects[83]);
+            GetNebulaFadesOutWhenClose.playSample(-90, PendingScoreboardRequest.soundEffects[83]);
           }
           stackIn_58_1 = (var10 != 0);
           this.selfDestructPrepared = stackIn_58_1;
@@ -127,7 +127,7 @@ final class ShipAudioFeedback {
           var11Lifetime1 = stackIn_61_0;
           if (var11Lifetime1 != 0 &&
             !this.selfDestructActive) {
-            GetNebulaFadesOutWhenClose.a(-103, PendingScoreboardRequest.soundEffects[84]);
+            GetNebulaFadesOutWhenClose.playSample(-103, PendingScoreboardRequest.soundEffects[84]);
           }
           stackIn_68_1 = (var11Lifetime1 != 0);
           this.selfDestructActive = stackIn_68_1;
@@ -139,7 +139,7 @@ final class ShipAudioFeedback {
             var12 = 0;
           }
           if (this.lastSelfDestructSecond > var12) {
-            GetNebulaFadesOutWhenClose.a(-98, PendingScoreboardRequest.soundEffects[85]);
+            GetNebulaFadesOutWhenClose.playSample(-98, PendingScoreboardRequest.soundEffects[85]);
           }
           this.lastSelfDestructSecond = var12;
           return;

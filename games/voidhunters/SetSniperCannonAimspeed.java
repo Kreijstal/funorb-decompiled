@@ -11,7 +11,7 @@ final class SetSniperCannonAimspeed extends ConsoleCommand {
           return;
         }
         try {
-          SetAiFiringRangeUpshift.field_o = new LoginForm(ToggleShieldsOrderDefinition.field_d, (String) null, OpenGlSprite.reconnecting, param0, param2);
+          SetAiFiringRangeUpshift.field_o = new LoginForm(ToggleShieldsOrderDefinition.loginName, (String) null, OpenGlSprite.reconnecting, param0, param2);
           GetMissionVariablesHudX.field_o = new LoginTransitionDialog(GetLagStandardDeviationIn.modalStack, SetAiFiringRangeUpshift.field_o);
           GetLagStandardDeviationIn.modalStack.pushPanel(false, GetMissionVariablesHudX.field_o);
         } catch (RuntimeException runtimeException) {

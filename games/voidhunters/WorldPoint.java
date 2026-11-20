@@ -10,7 +10,7 @@ final class WorldPoint {
         this.x = param0;
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
+    final static Sprite[] loadNineSliceSprites(String param0, int param1, String param2, ResourceArchive param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -60,7 +60,7 @@ final class WorldPoint {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void setDebugFlag(int param0, boolean param1, int param2) {
         if (param2 != 11585) {
           return;
         }

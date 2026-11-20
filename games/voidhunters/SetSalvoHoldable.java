@@ -4,7 +4,7 @@
 final class SetSalvoHoldable extends ConsoleCommand {
     static IntrusiveDeque pendingIntegerRecordWrites;
 
-    final static SoftwareIndexedSprite2D a(int param0, SoftwareIndexedSprite2D param1, int[] param2) {
+    final static SoftwareIndexedSprite2D copyWithPalette(int param0, SoftwareIndexedSprite2D param1, int[] param2) {
         SoftwareIndexedSprite2D var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -48,7 +48,7 @@ final class SetSalvoHoldable extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean needsFaceGroups(int param0, int param1, int param2) {
         if (param2 == -2679) {
           return (384 & param1) != 0 ? true : false;
         }
@@ -58,7 +58,7 @@ final class SetSalvoHoldable extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != -127) {
-          SetSalvoHoldable.a(8, 67, -87);
+          SetSalvoHoldable.needsFaceGroups(8, 67, -87);
           pendingIntegerRecordWrites = null;
           return;
         }

@@ -75,7 +75,7 @@ final class Nebula implements DiffableState {
         }
     }
 
-    final static void a(int param0) {
+    final static void showChoosePlayerNameForm(int param0) {
         int var1 = -119 / ((param0 + 46) / 50);
         if (SetPointDefenceLaserAimarc.field_o != null) {
           SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
@@ -109,7 +109,7 @@ final class Nebula implements DiffableState {
         }
     }
 
-    final static boolean a(SocialListEntry param0, int param1, SocialListEntry param2) {
+    final static boolean comesBeforeSocialEntry(SocialListEntry param0, int param1, SocialListEntry param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -130,7 +130,7 @@ final class Nebula implements DiffableState {
             var3_int -= 200;
           }
           if (param1 != 7569) {
-            Nebula.a(-48);
+            Nebula.showChoosePlayerNameForm(-48);
           }
           if (HslAdjustTextureOperation.field_q != param0.field_Ab) {
             if (param0.field_Ab == null) {

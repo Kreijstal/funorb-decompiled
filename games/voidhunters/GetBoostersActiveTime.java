@@ -6,11 +6,11 @@ final class GetBoostersActiveTime extends ConsoleCommand {
     static int field_p;
     static int field_o;
 
-    final static void f(byte param0) {
+    final static void showCreatedAccountStatus(byte param0) {
         if (param0 != -74) {
           pendingClientDataReads = (IntrusiveDeque) null;
         }
-        ArmBehaviour.a(GrapplingHook.field_x, true, -17833, SetResourceNodeCaptureTime.field_p);
+        ArmBehaviour.showAccountStatusWithCredentials(GrapplingHook.pendingAccountPassword, true, -17833, SetResourceNodeCaptureTime.pendingAccountEmail);
         CarouselConstantRequests.field_c = true;
     }
 
@@ -203,14 +203,14 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             }
           }
           if (param4 != 0) {
-            GetBoostersActiveTime.f((byte) 86);
+            GetBoostersActiveTime.showCreatedAccountStatus((byte) 86);
           }
           if (TextureCombineMappings.loginStage == OpenGlGpuCubeTexture.field_k &&
-            PlayerJoinFactory.b((byte) 46)) {
+            PlayerJoinFactory.pollIncomingPacketPayload((byte) 46)) {
             if (NetworkMessageState.incomingOpcode == 255) {
               var9_ref_String = AccountNameAvailabilityReplies.field_b.readNullableString(0);
               if (var9_ref_String != null) {
-                SetNebulaProximityFadeDownshift.a(MissionList.getApplet((byte) -123), var9_ref_String, -1);
+                SetNebulaProximityFadeDownshift.writeSettingsCookie(MissionList.getApplet((byte) -123), var9_ref_String, -1);
               }
             } else {
               GameJoinNotificationText.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);

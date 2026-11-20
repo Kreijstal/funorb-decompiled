@@ -70,7 +70,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var10 = PendingScoreboardRequest.soundEffects[var4];
           var12 = var10;
           var12Lifetime2 = var10;
-          var11 = GetNebulaFadesOutWhenClose.a(-102, var10);
+          var11 = GetNebulaFadesOutWhenClose.playSample(-102, var10);
           var11.stream.setLoopCount(-1);
           var3 = new LoopingSound();
           var3.refreshed = true;
@@ -90,7 +90,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var4Lifetime1 = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, LegacyOpenGlMaterialEffectManager.field_j[param0], 123) + param0;
         }
         var12Lifetime1 = PendingScoreboardRequest.soundEffects[var4Lifetime1];
-        SoundPlayback var13 = GetNebulaFadesOutWhenClose.a(-102, var12Lifetime1);
+        SoundPlayback var13 = GetNebulaFadesOutWhenClose.playSample(-102, var12Lifetime1);
         var13.stream.setLoopCount(-1);
         var3Lifetime1 = new LoopingSound();
         var3Lifetime1.refreshed = true;

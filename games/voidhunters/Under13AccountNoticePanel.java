@@ -140,7 +140,7 @@ final class Under13AccountNoticePanel extends UiContainer implements UiHotspotLi
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.continueButton == param3) {
-            GetBoostersActiveTime.f((byte) -74);
+            GetBoostersActiveTime.showCreatedAccountStatus((byte) -74);
             this.dialog.closeDialog((byte) -106);
           }
           if (param0 == 11) {

@@ -804,11 +804,11 @@ final class CarouselCommongameInfo implements DiffableState {
           stackIn_24_4 = (this.tick == var4);
           ((CarouselSlot) (Object) stackIn_23_0).advanceSimulation(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4);
           if (GetUseOffscreenRendering.field_o) {
-            UiStatefulStyle.c(9487);
+            UiStatefulStyle.swapStateSerializationBuffers(9487);
             var8 = SetTestActionLag.a(this.history[var5], (byte) -117);
             if (var8 != var7) {
               var9 = ClientDataWriteRequest.readCarouselState((byte) -39);
-              UiStatefulStyle.c(9487);
+              UiStatefulStyle.swapStateSerializationBuffers(9487);
               this.swapSlotsForDebug(var5, var6, 42);
               this.history[var5] = ClientDataWriteRequest.readCarouselState((byte) -39);
               if (!this.shallowCopyFailed) {

@@ -88,7 +88,7 @@ final class ModalStack extends UiSingleChildContainer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          SetExplosionProjectileDamage.a(param1, 0, param0);
+          SetExplosionProjectileDamage.drawDialogText(param1, 0, param0);
           if (NebulaFieldFactory.field_a != null) {
             SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 92);
           }

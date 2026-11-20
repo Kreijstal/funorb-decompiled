@@ -65,10 +65,10 @@ final class SetMessageFadetime extends ConsoleCommand {
                 param0 = GetTorqueDownshift.field_p;
               }
               param2 = 2;
-              SetAiFiringRangeUpshift.field_o.setLoginName((byte) 9, ToggleShieldsOrderDefinition.field_d);
+              SetAiFiringRangeUpshift.field_o.setLoginName((byte) 9, ToggleShieldsOrderDefinition.loginName);
             }
             if (param2 == 10) {
-              Nebula.a(92);
+              Nebula.showChoosePlayerNameForm(92);
               var3_int = 0;
             }
             if (var3_int != 0) {

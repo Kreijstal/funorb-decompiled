@@ -62,7 +62,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
             this.y = 34;
           }
           param0.writeBits(-632, this.y, 32);
-          this.b(param0, false);
+          this.writeOptionalVelocity(param0, false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ara.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -163,7 +163,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
         }
     }
 
-    private final void b(IsaacPacketBuffer param0, boolean param1) {
+    private final void writeOptionalVelocity(IsaacPacketBuffer param0, boolean param1) {
         IsaacPacketBuffer stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         boolean stackIn_7_2 = false;
@@ -202,7 +202,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
     MovingObject() {
     }
 
-    private final void c(IsaacPacketBuffer param0, int param1) {
+    private final void readOptionalVelocity(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -239,7 +239,7 @@ class MovingObject extends IntrusiveNode implements DiffableState {
             field_g = (String) null;
           }
           this.y = param0.readBits(0, 32);
-          this.c(param0, 32);
+          this.readOptionalVelocity(param0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ara.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

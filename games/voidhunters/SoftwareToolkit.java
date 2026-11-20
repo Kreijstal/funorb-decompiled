@@ -1512,19 +1512,19 @@ final class SoftwareToolkit extends GraphicsToolkit {
           if (param6 != 1) {
             throw new IllegalArgumentException();
           }
-          var9.field_a = 255 - (param4 >>> 24);
+          var9.transparency = 255 - (param4 >>> 24);
         } else {
-          var9.field_a = 0;
+          var9.transparency = 0;
         }
         this.a(false);
         stackIn_25_0 = var9;
-        stackIn_27_1 = !(var21 >= 0) || !(var21 <= var9.field_b) || !(var22 >= 0) || !(var22 <= var9.field_b) || !(var23 >= 0) || !(var23 <= var9.field_b);
-        stackIn_25_0.field_n = stackIn_27_1;
-        var9.a((float)var25, (float)var26, (float)var27, (float)var21, (float)var22, (float)var23, 100.0f, 100.0f, 100.0f, param4);
+        stackIn_27_1 = !(var21 >= 0) || !(var21 <= var9.clipWidth) || !(var22 >= 0) || !(var22 <= var9.clipWidth) || !(var23 >= 0) || !(var23 <= var9.clipWidth);
+        stackIn_25_0.clipHorizontally = stackIn_27_1;
+        var9.drawFlatTriangle((float)var25, (float)var26, (float)var27, (float)var21, (float)var22, (float)var23, 100.0f, 100.0f, 100.0f, param4);
         stackIn_34_0 = var9;
-        stackIn_36_1 = !(var21 >= 0) || !(var21 <= var9.field_b) || !(var23 >= 0) || !(var23 <= var9.field_b) || !(var24 >= 0) || !(var24 <= var9.field_b);
-        stackIn_34_0.field_n = stackIn_36_1;
-        var9.a((float)var25, (float)var27, (float)var28, (float)var21, (float)var23, (float)var24, 100.0f, 100.0f, 100.0f, param4);
+        stackIn_36_1 = !(var21 >= 0) || !(var21 <= var9.clipWidth) || !(var23 >= 0) || !(var23 <= var9.clipWidth) || !(var24 >= 0) || !(var24 <= var9.clipWidth);
+        stackIn_34_0.clipHorizontally = stackIn_36_1;
+        var9.drawFlatTriangle((float)var25, (float)var27, (float)var28, (float)var21, (float)var23, (float)var24, 100.0f, 100.0f, 100.0f, param4);
         this.a(true);
         return;
     }
@@ -1778,7 +1778,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         int var13;
         var11 = this.getThreadContext((Runnable) ((Object) Thread.currentThread()));
         var12 = var11.rasterizer;
-        var12.field_j = false;
+        var12.coarseShading = false;
         param0 = param0 - this.field_C;
         param2 = param2 - this.field_C;
         param4 = param4 - this.field_C;
@@ -1786,34 +1786,34 @@ final class SoftwareToolkit extends GraphicsToolkit {
         param3 = param3 - this.field_h;
         param5 = param5 - this.field_h;
         stackIn_7_0 = var12;
-        stackIn_9_1 = !(param0 >= 0) || !(param0 <= var12.field_b) || !(param2 >= 0) || !(param2 <= var12.field_b) || !(param4 >= 0) || !(param4 <= var12.field_b);
+        stackIn_9_1 = !(param0 >= 0) || !(param0 <= var12.clipWidth) || !(param2 >= 0) || !(param2 <= var12.clipWidth) || !(param4 >= 0) || !(param4 <= var12.clipWidth);
         boolean decompiledFrameRemainder0 = true;
-        stackIn_7_0.field_n = stackIn_9_1;
-        var12.field_i = true;
+        stackIn_7_0.clipHorizontally = stackIn_9_1;
+        var12.depthTestDisabled = true;
         var13 = param6 >>> 24;
         if (param9 != 0 && (param9 != 1 ||
           var13 != 255)) {
           if (param9 == 1) {
-            var12.field_a = 255 - var13;
-            var12.field_d = false;
-            var12.a((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
+            var12.transparency = 255 - var13;
+            var12.additiveBlending = false;
+            var12.drawGouraudTriangle((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
           } else {
             if (param9 != 2) {
               throw new IllegalArgumentException();
             }
-            var12.field_a = 128;
-            var12.field_d = true;
-            var12.a((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
+            var12.transparency = 128;
+            var12.additiveBlending = true;
+            var12.drawGouraudTriangle((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
           }
           decompiledFrameRemainder0 = false;
         }
         else {
-          var12.field_a = 0;
-          var12.field_d = false;
-          var12.a((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
+          var12.transparency = 0;
+          var12.additiveBlending = false;
+          var12.drawGouraudTriangle((float)param1, (float)param3, (float)param5, (float)param0, (float)param2, (float)param4, 0.0f, 0.0f, 0.0f, param6, param7, param8);
         }
-        var12.field_j = true;
-        var12.field_i = false;
+        var12.coarseShading = true;
+        var12.depthTestDisabled = false;
     }
 
     SoftwareToolkit(java.awt.Canvas param0, TextureProvider param1, int param2, int param3) {
@@ -2541,13 +2541,13 @@ final class SoftwareToolkit extends GraphicsToolkit {
         this.field_h = this.clipTop - this.projectionCenterY;
         for (var1 = 0; var1 < this.threadContextCount; var1++) {
           var2_ref_daa = this.threadContexts[var1].rasterizer;
-          var2_ref_daa.field_b = this.clipRight - this.clipLeft;
-          var2_ref_daa.field_g = this.clipBottom - this.clipTop;
+          var2_ref_daa.clipWidth = this.clipRight - this.clipLeft;
+          var2_ref_daa.clipHeight = this.clipBottom - this.clipTop;
         }
         var1Lifetime1 = this.clipTop * this.width + this.clipLeft;
         for (var2 = this.clipTop; var2 < this.clipBottom; var2++) {
           for (var3 = 0; var3 < this.threadContextCount; var3++) {
-            this.threadContexts[var3].rasterizer.field_k[var2 - this.clipTop] = var1Lifetime1;
+            this.threadContexts[var3].rasterizer.rowOffsets[var2 - this.clipTop] = var1Lifetime1;
           }
           var1Lifetime1 = var1Lifetime1 + this.width;
         }

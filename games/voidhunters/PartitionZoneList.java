@@ -163,12 +163,12 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         }
     }
 
-    final static void a(int param0, String param1, String param2) {
+    final static void submitLogin(int param0, String param1, String param2) {
         if (param0 > -11) {
           return;
         }
         try {
-          ArmBehaviour.a(param1, false, -17833, param2);
+          ArmBehaviour.showAccountStatusWithCredentials(param1, false, -17833, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "cda.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

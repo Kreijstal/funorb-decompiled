@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareTriangleRasterizer {
-    boolean field_n;
-    int[] field_k;
-    private int[] field_e;
-    boolean field_i;
-    private float[] field_h;
-    private SoftwareToolkit field_f;
-    int field_g;
-    private boolean field_l;
-    private SoftwareRenderContext field_c;
-    int field_b;
-    private int field_m;
-    boolean field_d;
-    boolean field_j;
-    int field_a;
+    boolean clipHorizontally;
+    int[] rowOffsets;
+    private int[] pixels;
+    boolean depthTestDisabled;
+    private float[] depthBuffer;
+    private SoftwareToolkit toolkit;
+    int clipHeight;
+    private boolean wireframe;
+    private SoftwareRenderContext context;
+    int clipWidth;
+    private int rasterStride;
+    boolean additiveBlending;
+    boolean coarseShading;
+    int transparency;
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
-        if (this.field_l) {
-          this.field_f.drawLineTo((int)param4, 1, param9, (int)param1, (int)param3, (int)param0);
-          this.field_f.drawLineTo((int)param5, 1, param9, (int)param2, (int)param4, (int)param1);
-          this.field_f.drawLineTo((int)param3, 1, param9, (int)param0, (int)param5, (int)param2);
+    final void drawFlatTriangle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9) {
+        if (this.wireframe) {
+          this.toolkit.drawLineTo((int)param4, 1, param9, (int)param1, (int)param3, (int)param0);
+          this.toolkit.drawLineTo((int)param5, 1, param9, (int)param2, (int)param4, (int)param1);
+          this.toolkit.drawLineTo((int)param3, 1, param9, (int)param0, (int)param5, (int)param2);
           return;
         }
         float var11 = param4 - param3;
@@ -50,14 +50,14 @@ final class SoftwareTriangleRasterizer {
         float var22 = (var16 * var11 - var15 * var13) / var20;
         if (param0 <= param1 &&
           param0 <= param2) {
-          if (param0 >= (float)this.field_g) {
+          if (param0 >= (float)this.clipHeight) {
             return;
           }
-          if (param1 > (float)this.field_g) {
-            param1 = (float)this.field_g;
+          if (param1 > (float)this.clipHeight) {
+            param1 = (float)this.clipHeight;
           }
-          if (param2 > (float)this.field_g) {
-            param2 = (float)this.field_g;
+          if (param2 > (float)this.clipHeight) {
+            param2 = (float)this.clipHeight;
           }
           param6 = param6 - var21 * param3 + var21;
           if (param1 < param2) {
@@ -76,111 +76,111 @@ final class SoftwareTriangleRasterizer {
               var19 < var17) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = (float)this.field_k[(int)param0];
+              param0 = (float)this.rowOffsets[(int)param0];
               while (true) {
                 param1 = param1 - 1.0f;
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               return;
             }
             if (param0 != param1) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = (float)this.field_k[(int)param0];
+              param0 = (float)this.rowOffsets[(int)param0];
               while (true) {
                 param1 = param1 - 1.0f;
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               return;
             }
             if (!(var19 > var18)) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = (float)this.field_k[(int)param0];
+              param0 = (float)this.rowOffsets[(int)param0];
               while (true) {
                 param1 = param1 - 1.0f;
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param3 = param3 + var17;
                 param6 = param6 + var22;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param4, (int)param5, param6, var21);
                 param5 = param5 + var19;
                 param4 = param4 + var18;
                 param6 = param6 + var22;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               return;
             }
             param2 = param2 - param1;
             param1 = param1 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
               param5 = param5 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param5, (int)param4, param6, var21);
               param5 = param5 + var19;
               param4 = param4 + var18;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
@@ -199,123 +199,123 @@ final class SoftwareTriangleRasterizer {
             var19 < var17) {
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
           if (param0 != param2) {
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
           if (!(var18 > var17)) {
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param3, (int)param4, param6, var21);
               param4 = param4 + var19;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param3, (int)param5, param6, var21);
               param5 = param5 + var18;
               param3 = param3 + var17;
               param6 = param6 + var22;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
           param1 = param1 - param2;
           param2 = param2 - param0;
-          param0 = (float)this.field_k[(int)param0];
+          param0 = (float)this.rowOffsets[(int)param0];
           while (true) {
             param2 = param2 - 1.0f;
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param4, (int)param3, param6, var21);
             param4 = param4 + var19;
             param3 = param3 + var17;
             param6 = param6 + var22;
-            param0 = param0 + (float)this.field_m;
+            param0 = param0 + (float)this.rasterStride;
           }
           while (true) {
             param1 = param1 - 1.0f;
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param0, param9, 0, (int)param5, (int)param3, param6, var21);
             param5 = param5 + var18;
             param3 = param3 + var17;
             param6 = param6 + var22;
-            param0 = param0 + (float)this.field_m;
+            param0 = param0 + (float)this.rasterStride;
           }
           return;
         }
         if (param1 <= param2) {
-          if (param1 >= (float)this.field_g) {
+          if (param1 >= (float)this.clipHeight) {
             return;
           }
-          if (param2 > (float)this.field_g) {
-            param2 = (float)this.field_g;
+          if (param2 > (float)this.clipHeight) {
+            param2 = (float)this.clipHeight;
           }
-          if (param0 > (float)this.field_g) {
-            param0 = (float)this.field_g;
+          if (param0 > (float)this.clipHeight) {
+            param0 = (float)this.clipHeight;
           }
           param7 = param7 - var21 * param4 + var21;
           if (param2 < param0) {
@@ -334,111 +334,111 @@ final class SoftwareTriangleRasterizer {
               var17 < var18) {
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)this.field_k[(int)param1];
+              param1 = (float)this.rowOffsets[(int)param1];
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               while (true) {
                 param0 = param0 - 1.0f;
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               return;
             }
             if (param1 != param2) {
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)this.field_k[(int)param1];
+              param1 = (float)this.rowOffsets[(int)param1];
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               while (true) {
                 param0 = param0 - 1.0f;
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               return;
             }
             if (!(var17 > var19)) {
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)this.field_k[(int)param1];
+              param1 = (float)this.rowOffsets[(int)param1];
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param4 = param4 + var18;
                 param7 = param7 + var22;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               while (true) {
                 param0 = param0 - 1.0f;
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
+                this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param5, (int)param3, param7, var21);
                 param3 = param3 + var17;
                 param5 = param5 + var19;
                 param7 = param7 + var22;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               return;
             }
             param0 = param0 - param2;
             param2 = param2 - param1;
-            param1 = (float)this.field_k[(int)param1];
+            param1 = (float)this.rowOffsets[(int)param1];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
               param3 = param3 + var17;
               param4 = param4 + var18;
               param7 = param7 + var22;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             while (true) {
               param0 = param0 - 1.0f;
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param3, (int)param5, param7, var21);
               param3 = param3 + var17;
               param5 = param5 + var19;
               param7 = param7 + var22;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             return;
           }
@@ -456,66 +456,66 @@ final class SoftwareTriangleRasterizer {
           if (!(var17 < var18)) {
             param2 = param2 - param0;
             param0 = param0 - param1;
-            param1 = (float)this.field_k[(int)param1];
+            param1 = (float)this.rowOffsets[(int)param1];
             while (true) {
               param0 = param0 - 1.0f;
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param4, (int)param5, param7, var21);
               param5 = param5 + var17;
               param4 = param4 + var18;
               param7 = param7 + var22;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param4, (int)param3, param7, var21);
               param3 = param3 + var19;
               param4 = param4 + var18;
               param7 = param7 + var22;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             return;
           }
           param2 = param2 - param0;
           param0 = param0 - param1;
-          param1 = (float)this.field_k[(int)param1];
+          param1 = (float)this.rowOffsets[(int)param1];
           while (true) {
             param0 = param0 - 1.0f;
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param5, (int)param4, param7, var21);
             param5 = param5 + var17;
             param4 = param4 + var18;
             param7 = param7 + var22;
-            param1 = param1 + (float)this.field_m;
+            param1 = param1 + (float)this.rasterStride;
           }
           while (true) {
             param2 = param2 - 1.0f;
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param1, param9, 0, (int)param3, (int)param4, param7, var21);
             param3 = param3 + var19;
             param4 = param4 + var18;
             param7 = param7 + var22;
-            param1 = param1 + (float)this.field_m;
+            param1 = param1 + (float)this.rasterStride;
           }
           return;
         }
-        if (param2 >= (float)this.field_g) {
+        if (param2 >= (float)this.clipHeight) {
           return;
         }
-        if (param0 > (float)this.field_g) {
-          param0 = (float)this.field_g;
+        if (param0 > (float)this.clipHeight) {
+          param0 = (float)this.clipHeight;
         }
-        if (param1 > (float)this.field_g) {
-          param1 = (float)this.field_g;
+        if (param1 > (float)this.clipHeight) {
+          param1 = (float)this.clipHeight;
         }
         param8 = param8 - var21 * param5 + var21;
         if (param0 < param1) {
@@ -533,55 +533,55 @@ final class SoftwareTriangleRasterizer {
           if (!(var18 < var19)) {
             param1 = param1 - param0;
             param0 = param0 - param2;
-            param2 = (float)this.field_k[(int)param2];
+            param2 = (float)this.rowOffsets[(int)param2];
             while (true) {
               param0 = param0 - 1.0f;
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
               param4 = param4 + var18;
               param5 = param5 + var19;
               param8 = param8 + var22;
-              param2 = param2 + (float)this.field_m;
+              param2 = param2 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
+              this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param3, (int)param4, param8, var21);
               param4 = param4 + var18;
               param3 = param3 + var17;
               param8 = param8 + var22;
-              param2 = param2 + (float)this.field_m;
+              param2 = param2 + (float)this.rasterStride;
             }
             return;
           }
           param1 = param1 - param0;
           param0 = param0 - param2;
-          param2 = (float)this.field_k[(int)param2];
+          param2 = (float)this.rowOffsets[(int)param2];
           while (true) {
             param0 = param0 - 1.0f;
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
             param4 = param4 + var18;
             param5 = param5 + var19;
             param8 = param8 + var22;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           while (true) {
             param1 = param1 - 1.0f;
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param4, (int)param3, param8, var21);
             param4 = param4 + var18;
             param3 = param3 + var17;
             param8 = param8 + var22;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           return;
         }
@@ -599,59 +599,59 @@ final class SoftwareTriangleRasterizer {
         if (!(var18 < var19)) {
           param0 = param0 - param1;
           param1 = param1 - param2;
-          param2 = (float)this.field_k[(int)param2];
+          param2 = (float)this.rowOffsets[(int)param2];
           while (true) {
             param1 = param1 - 1.0f;
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param5, (int)param3, param8, var21);
             param3 = param3 + var18;
             param5 = param5 + var19;
             param8 = param8 + var22;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           while (true) {
             param0 = param0 - 1.0f;
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
+            this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param5, (int)param4, param8, var21);
             param4 = param4 + var17;
             param5 = param5 + var19;
             param8 = param8 + var22;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           return;
         }
         param0 = param0 - param1;
         param1 = param1 - param2;
-        param2 = (float)this.field_k[(int)param2];
+        param2 = (float)this.rowOffsets[(int)param2];
         while (true) {
           param1 = param1 - 1.0f;
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
+          this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param3, (int)param5, param8, var21);
           param3 = param3 + var18;
           param5 = param5 + var19;
           param8 = param8 + var22;
-          param2 = param2 + (float)this.field_m;
+          param2 = param2 + (float)this.rasterStride;
         }
         while (true) {
           param0 = param0 - 1.0f;
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.a(this.field_e, this.field_h, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
+          this.drawFlatScanline(this.pixels, this.depthBuffer, (int)param2, param9, 0, (int)param4, (int)param5, param8, var21);
           param4 = param4 + var17;
           param5 = param5 + var19;
           param8 = param8 + var22;
-          param2 = param2 + (float)this.field_m;
+          param2 = param2 + (float)this.rasterStride;
         }
     }
 
-    private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8) {
+    private final void drawFlatScanline(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8) {
         int var10;
         int var11;
         int var12;
@@ -666,9 +666,9 @@ final class SoftwareTriangleRasterizer {
         int var12Lifetime1Lifetime2;
         int var12Lifetime1Lifetime3;
         int var12Lifetime1Lifetime4;
-        if (this.field_n) {
-          if (param6 > this.field_b) {
-            param6 = this.field_b;
+        if (this.clipHorizontally) {
+          if (param6 > this.clipWidth) {
+            param6 = this.clipWidth;
           }
           if (param5 < 0) {
             param5 = 0;
@@ -680,8 +680,8 @@ final class SoftwareTriangleRasterizer {
         param2 = param2 + (param5 - 1);
         param4 = param6 - param5 >> 2;
         param7 = param7 + param8 * (float)param5;
-        if (!this.field_c.field_f) {
-          if (this.field_a == 0) {
+        if (!this.context.field_f) {
+          if (this.transparency == 0) {
             while (true) {
               param4--;
               if (param4 < 0) {
@@ -720,11 +720,11 @@ final class SoftwareTriangleRasterizer {
               param7 = param7 + param8;
             }
           }
-          if (this.field_a == 254) {
+          if (this.transparency == 254) {
             if (param5 == 0) {
               return;
             }
-            if (param6 > this.field_b - 1) {
+            if (param6 > this.clipWidth - 1) {
               return;
             }
             param4--;
@@ -764,8 +764,8 @@ final class SoftwareTriangleRasterizer {
               param7 = param7 + param8;
             }
           }
-          var10 = this.field_a;
-          var11 = 256 - this.field_a;
+          var10 = this.transparency;
+          var11 = 256 - this.transparency;
           param3 = ((param3 & 16711935) * var11 >> 8 & 16711935) + ((param3 & 65280) * var11 >> 8 & 65280);
           while (true) {
             param4--;
@@ -810,7 +810,7 @@ final class SoftwareTriangleRasterizer {
             param7 = param7 + param8;
           }
         }
-        if (this.field_a == 0) {
+        if (this.transparency == 0) {
           while (true) {
             param4--;
             if (param4 < 0) {
@@ -854,11 +854,11 @@ final class SoftwareTriangleRasterizer {
             param7 = param7 + param8;
           }
         }
-        if (this.field_a == 254) {
+        if (this.transparency == 254) {
           if (param5 == 0) {
             return;
           }
-          if (param6 > this.field_b - 1) {
+          if (param6 > this.clipWidth - 1) {
             return;
           }
           param4--;
@@ -898,8 +898,8 @@ final class SoftwareTriangleRasterizer {
             param7 = param7 + param8;
           }
         }
-        var10Lifetime1 = this.field_a;
-        var11Lifetime1 = 256 - this.field_a;
+        var10Lifetime1 = this.transparency;
+        var11Lifetime1 = 256 - this.transparency;
         param3 = ((param3 & 16711935) * var11Lifetime1 >> 8 & 16711935) + ((param3 & 65280) * var11Lifetime1 >> 8 & 65280);
         while (true) {
           param4--;
@@ -951,10 +951,10 @@ final class SoftwareTriangleRasterizer {
     }
 
     final int getOriginX() {
-        return this.field_k[0] % this.field_m;
+        return this.rowOffsets[0] % this.rasterStride;
     }
 
-    final void a(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
+    final void drawGouraudTriangle(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7, float param8, int param9, int param10, int param11) {
         float var25 = 0.0f;
         float var26 = 0.0f;
         float var27 = 0.0f;
@@ -967,10 +967,10 @@ final class SoftwareTriangleRasterizer {
         float var38Lifetime2;
         float var39Lifetime1;
         float var39Lifetime2;
-        if (this.field_l) {
-          this.field_f.drawLineTo((int)param4, 1, -16777216 | param9, (int)param1, (int)param3, (int)param0);
-          this.field_f.drawLineTo((int)param5, 1, -16777216 | param9, (int)param2, (int)param4, (int)param1);
-          this.field_f.drawLineTo((int)param3, 1, -16777216 | param9, (int)param0, (int)param5, (int)param2);
+        if (this.wireframe) {
+          this.toolkit.drawLineTo((int)param4, 1, -16777216 | param9, (int)param1, (int)param3, (int)param0);
+          this.toolkit.drawLineTo((int)param5, 1, -16777216 | param9, (int)param2, (int)param4, (int)param1);
+          this.toolkit.drawLineTo((int)param3, 1, -16777216 | param9, (int)param0, (int)param5, (int)param2);
           return;
         }
         float var13 = param4 - param3;
@@ -1014,14 +1014,14 @@ final class SoftwareTriangleRasterizer {
         float var36 = (var24 * var13 - var23 * var15) / var28;
         if (param0 <= param1 &&
           param0 <= param2) {
-          if (param0 >= (float)this.field_g) {
+          if (param0 >= (float)this.clipHeight) {
             return;
           }
-          if (param1 > (float)this.field_g) {
-            param1 = (float)this.field_g;
+          if (param1 > (float)this.clipHeight) {
+            param1 = (float)this.clipHeight;
           }
-          if (param2 > (float)this.field_g) {
-            param2 = (float)this.field_g;
+          if (param2 > (float)this.clipHeight) {
+            param2 = (float)this.clipHeight;
           }
           param6 = param6 - var29 * param3 + var29;
           var37 = (float)(param9 & 16711680) - var31 * param3 + var31;
@@ -1046,135 +1046,135 @@ final class SoftwareTriangleRasterizer {
               var27 < var26) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = (float)this.field_k[(int)param0];
+              param0 = (float)this.rowOffsets[(int)param0];
               while (true) {
                 param1 = param1 - 1.0f;
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
                 var37 = var37 + var32;
                 var38 = var38 + var34;
                 var39 = var39 + var36;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
                 var37 = var37 + var32;
                 var38 = var38 + var34;
                 var39 = var39 + var36;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               return;
             }
             if (param0 != param1) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = (float)this.field_k[(int)param0];
+              param0 = (float)this.rowOffsets[(int)param0];
               while (true) {
                 param1 = param1 - 1.0f;
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
                 var37 = var37 + var32;
                 var38 = var38 + var34;
                 var39 = var39 + var36;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
                 var37 = var37 + var32;
                 var38 = var38 + var34;
                 var39 = var39 + var36;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               return;
             }
             if (!(var27 > var25)) {
               param2 = param2 - param1;
               param1 = param1 - param0;
-              param0 = (float)this.field_k[(int)param0];
+              param0 = (float)this.rowOffsets[(int)param0];
               while (true) {
                 param1 = param1 - 1.0f;
                 if (!(param1 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var30;
                 var37 = var37 + var32;
                 var38 = var38 + var34;
                 var39 = var39 + var36;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param4, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
                 param5 = param5 + var27;
                 param4 = param4 + var25;
                 param6 = param6 + var30;
                 var37 = var37 + var32;
                 var38 = var38 + var34;
                 var39 = var39 + var36;
-                param0 = param0 + (float)this.field_m;
+                param0 = param0 + (float)this.rasterStride;
               }
               return;
             }
             param2 = param2 - param1;
             param1 = param1 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param5, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var27;
               param4 = param4 + var25;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
@@ -1196,147 +1196,147 @@ final class SoftwareTriangleRasterizer {
             var27 < var26) {
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
           if (param0 != param2) {
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
           if (!(var25 > var26)) {
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = (float)this.field_k[(int)param0];
+            param0 = (float)this.rowOffsets[(int)param0];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param3, (int)param4, param6, var29, var37, var31, var38, var33, var39, var35);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param3, (int)param5, param6, var29, var37, var31, var38, var33, var39, var35);
               param5 = param5 + var25;
               param3 = param3 + var26;
               param6 = param6 + var30;
               var37 = var37 + var32;
               var38 = var38 + var34;
               var39 = var39 + var36;
-              param0 = param0 + (float)this.field_m;
+              param0 = param0 + (float)this.rasterStride;
             }
             return;
           }
           param1 = param1 - param2;
           param2 = param2 - param0;
-          param0 = (float)this.field_k[(int)param0];
+          param0 = (float)this.rowOffsets[(int)param0];
           while (true) {
             param2 = param2 - 1.0f;
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param4, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
             param4 = param4 + var27;
             param3 = param3 + var26;
             param6 = param6 + var30;
             var37 = var37 + var32;
             var38 = var38 + var34;
             var39 = var39 + var36;
-            param0 = param0 + (float)this.field_m;
+            param0 = param0 + (float)this.rasterStride;
           }
           while (true) {
             param1 = param1 - 1.0f;
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param0, 0, 0, (int)param5, (int)param3, param6, var29, var37, var31, var38, var33, var39, var35);
             param5 = param5 + var25;
             param3 = param3 + var26;
             param6 = param6 + var30;
             var37 = var37 + var32;
             var38 = var38 + var34;
             var39 = var39 + var36;
-            param0 = param0 + (float)this.field_m;
+            param0 = param0 + (float)this.rasterStride;
           }
           return;
         }
         if (param1 <= param2) {
-          if (param1 >= (float)this.field_g) {
+          if (param1 >= (float)this.clipHeight) {
             return;
           }
-          if (param2 > (float)this.field_g) {
-            param2 = (float)this.field_g;
+          if (param2 > (float)this.clipHeight) {
+            param2 = (float)this.clipHeight;
           }
-          if (param0 > (float)this.field_g) {
-            param0 = (float)this.field_g;
+          if (param0 > (float)this.clipHeight) {
+            param0 = (float)this.clipHeight;
           }
           param7 = param7 - var29 * param4 + var29;
           var37Lifetime1 = (float)(param10 & 16711680) - var31 * param4 + var31;
@@ -1361,135 +1361,135 @@ final class SoftwareTriangleRasterizer {
               var26 < var25) {
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)this.field_k[(int)param1];
+              param1 = (float)this.rowOffsets[(int)param1];
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
                 var37Lifetime1 = var37Lifetime1 + var32;
                 var38Lifetime1 = var38Lifetime1 + var34;
                 var39Lifetime1 = var39Lifetime1 + var36;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               while (true) {
                 param0 = param0 - 1.0f;
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
                 var37Lifetime1 = var37Lifetime1 + var32;
                 var38Lifetime1 = var38Lifetime1 + var34;
                 var39Lifetime1 = var39Lifetime1 + var36;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               return;
             }
             if (param1 != param2) {
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)this.field_k[(int)param1];
+              param1 = (float)this.rowOffsets[(int)param1];
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
                 var37Lifetime1 = var37Lifetime1 + var32;
                 var38Lifetime1 = var38Lifetime1 + var34;
                 var39Lifetime1 = var39Lifetime1 + var36;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               while (true) {
                 param0 = param0 - 1.0f;
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
                 var37Lifetime1 = var37Lifetime1 + var32;
                 var38Lifetime1 = var38Lifetime1 + var34;
                 var39Lifetime1 = var39Lifetime1 + var36;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               return;
             }
             if (!(var26 > var27)) {
               param0 = param0 - param2;
               param2 = param2 - param1;
-              param1 = (float)this.field_k[(int)param1];
+              param1 = (float)this.rowOffsets[(int)param1];
               while (true) {
                 param2 = param2 - 1.0f;
                 if (!(param2 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param4 = param4 + var25;
                 param7 = param7 + var30;
                 var37Lifetime1 = var37Lifetime1 + var32;
                 var38Lifetime1 = var38Lifetime1 + var34;
                 var39Lifetime1 = var39Lifetime1 + var36;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               while (true) {
                 param0 = param0 - 1.0f;
                 if (!(param0 >= 0.0f)) {
                   break;
                 }
-                this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+                this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param5, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
                 param3 = param3 + var26;
                 param5 = param5 + var27;
                 param7 = param7 + var30;
                 var37Lifetime1 = var37Lifetime1 + var32;
                 var38Lifetime1 = var38Lifetime1 + var34;
                 var39Lifetime1 = var39Lifetime1 + var36;
-                param1 = param1 + (float)this.field_m;
+                param1 = param1 + (float)this.rasterStride;
               }
               return;
             }
             param0 = param0 - param2;
             param2 = param2 - param1;
-            param1 = (float)this.field_k[(int)param1];
+            param1 = (float)this.rowOffsets[(int)param1];
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var26;
               param4 = param4 + var25;
               param7 = param7 + var30;
               var37Lifetime1 = var37Lifetime1 + var32;
               var38Lifetime1 = var38Lifetime1 + var34;
               var39Lifetime1 = var39Lifetime1 + var36;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             while (true) {
               param0 = param0 - 1.0f;
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param3, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var26;
               param5 = param5 + var27;
               param7 = param7 + var30;
               var37Lifetime1 = var37Lifetime1 + var32;
               var38Lifetime1 = var38Lifetime1 + var34;
               var39Lifetime1 = var39Lifetime1 + var36;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             return;
           }
@@ -1510,78 +1510,78 @@ final class SoftwareTriangleRasterizer {
           if (!(var26 < var25)) {
             param2 = param2 - param0;
             param0 = param0 - param1;
-            param1 = (float)this.field_k[(int)param1];
+            param1 = (float)this.rowOffsets[(int)param1];
             while (true) {
               param0 = param0 - 1.0f;
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param4, (int)param5, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param5 = param5 + var26;
               param4 = param4 + var25;
               param7 = param7 + var30;
               var37Lifetime1 = var37Lifetime1 + var32;
               var38Lifetime1 = var38Lifetime1 + var34;
               var39Lifetime1 = var39Lifetime1 + var36;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             while (true) {
               param2 = param2 - 1.0f;
               if (!(param2 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param4, (int)param3, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
               param3 = param3 + var27;
               param4 = param4 + var25;
               param7 = param7 + var30;
               var37Lifetime1 = var37Lifetime1 + var32;
               var38Lifetime1 = var38Lifetime1 + var34;
               var39Lifetime1 = var39Lifetime1 + var36;
-              param1 = param1 + (float)this.field_m;
+              param1 = param1 + (float)this.rasterStride;
             }
             return;
           }
           param2 = param2 - param0;
           param0 = param0 - param1;
-          param1 = (float)this.field_k[(int)param1];
+          param1 = (float)this.rowOffsets[(int)param1];
           while (true) {
             param0 = param0 - 1.0f;
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param5, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
             param5 = param5 + var26;
             param4 = param4 + var25;
             param7 = param7 + var30;
             var37Lifetime1 = var37Lifetime1 + var32;
             var38Lifetime1 = var38Lifetime1 + var34;
             var39Lifetime1 = var39Lifetime1 + var36;
-            param1 = param1 + (float)this.field_m;
+            param1 = param1 + (float)this.rasterStride;
           }
           while (true) {
             param2 = param2 - 1.0f;
             if (!(param2 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param1, 0, 0, (int)param3, (int)param4, param7, var29, var37Lifetime1, var31, var38Lifetime1, var33, var39Lifetime1, var35);
             param3 = param3 + var27;
             param4 = param4 + var25;
             param7 = param7 + var30;
             var37Lifetime1 = var37Lifetime1 + var32;
             var38Lifetime1 = var38Lifetime1 + var34;
             var39Lifetime1 = var39Lifetime1 + var36;
-            param1 = param1 + (float)this.field_m;
+            param1 = param1 + (float)this.rasterStride;
           }
           return;
         }
-        if (param2 >= (float)this.field_g) {
+        if (param2 >= (float)this.clipHeight) {
           return;
         }
-        if (param0 > (float)this.field_g) {
-          param0 = (float)this.field_g;
+        if (param0 > (float)this.clipHeight) {
+          param0 = (float)this.clipHeight;
         }
-        if (param1 > (float)this.field_g) {
-          param1 = (float)this.field_g;
+        if (param1 > (float)this.clipHeight) {
+          param1 = (float)this.clipHeight;
         }
         param8 = param8 - var29 * param5 + var29;
         var37Lifetime2 = (float)(param11 & 16711680) - var31 * param5 + var31;
@@ -1605,67 +1605,67 @@ final class SoftwareTriangleRasterizer {
           if (!(var25 < var27)) {
             param1 = param1 - param0;
             param0 = param0 - param2;
-            param2 = (float)this.field_k[(int)param2];
+            param2 = (float)this.rowOffsets[(int)param2];
             while (true) {
               param0 = param0 - 1.0f;
               if (!(param0 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
               param4 = param4 + var25;
               param5 = param5 + var27;
               param8 = param8 + var30;
               var37Lifetime2 = var37Lifetime2 + var32;
               var38Lifetime2 = var38Lifetime2 + var34;
               var39Lifetime2 = var39Lifetime2 + var36;
-              param2 = param2 + (float)this.field_m;
+              param2 = param2 + (float)this.rasterStride;
             }
             while (true) {
               param1 = param1 - 1.0f;
               if (!(param1 >= 0.0f)) {
                 break;
               }
-              this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+              this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param3, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
               param4 = param4 + var25;
               param3 = param3 + var26;
               param8 = param8 + var30;
               var37Lifetime2 = var37Lifetime2 + var32;
               var38Lifetime2 = var38Lifetime2 + var34;
               var39Lifetime2 = var39Lifetime2 + var36;
-              param2 = param2 + (float)this.field_m;
+              param2 = param2 + (float)this.rasterStride;
             }
             return;
           }
           param1 = param1 - param0;
           param0 = param0 - param2;
-          param2 = (float)this.field_k[(int)param2];
+          param2 = (float)this.rowOffsets[(int)param2];
           while (true) {
             param0 = param0 - 1.0f;
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var25;
             param5 = param5 + var27;
             param8 = param8 + var30;
             var37Lifetime2 = var37Lifetime2 + var32;
             var38Lifetime2 = var38Lifetime2 + var34;
             var39Lifetime2 = var39Lifetime2 + var36;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           while (true) {
             param1 = param1 - 1.0f;
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param4, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var25;
             param3 = param3 + var26;
             param8 = param8 + var30;
             var37Lifetime2 = var37Lifetime2 + var32;
             var38Lifetime2 = var38Lifetime2 + var34;
             var39Lifetime2 = var39Lifetime2 + var36;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           return;
         }
@@ -1686,71 +1686,71 @@ final class SoftwareTriangleRasterizer {
         if (!(var25 < var27)) {
           param0 = param0 - param1;
           param1 = param1 - param2;
-          param2 = (float)this.field_k[(int)param2];
+          param2 = (float)this.rowOffsets[(int)param2];
           while (true) {
             param1 = param1 - 1.0f;
             if (!(param1 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param5, (int)param3, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param3 = param3 + var25;
             param5 = param5 + var27;
             param8 = param8 + var30;
             var37Lifetime2 = var37Lifetime2 + var32;
             var38Lifetime2 = var38Lifetime2 + var34;
             var39Lifetime2 = var39Lifetime2 + var36;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           while (true) {
             param0 = param0 - 1.0f;
             if (!(param0 >= 0.0f)) {
               break;
             }
-            this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+            this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param5, (int)param4, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
             param4 = param4 + var26;
             param5 = param5 + var27;
             param8 = param8 + var30;
             var37Lifetime2 = var37Lifetime2 + var32;
             var38Lifetime2 = var38Lifetime2 + var34;
             var39Lifetime2 = var39Lifetime2 + var36;
-            param2 = param2 + (float)this.field_m;
+            param2 = param2 + (float)this.rasterStride;
           }
           return;
         }
         param0 = param0 - param1;
         param1 = param1 - param2;
-        param2 = (float)this.field_k[(int)param2];
+        param2 = (float)this.rowOffsets[(int)param2];
         while (true) {
           param1 = param1 - 1.0f;
           if (!(param1 >= 0.0f)) {
             break;
           }
-          this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+          this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param3, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
           param3 = param3 + var25;
           param5 = param5 + var27;
           param8 = param8 + var30;
           var37Lifetime2 = var37Lifetime2 + var32;
           var38Lifetime2 = var38Lifetime2 + var34;
           var39Lifetime2 = var39Lifetime2 + var36;
-          param2 = param2 + (float)this.field_m;
+          param2 = param2 + (float)this.rasterStride;
         }
         while (true) {
           param0 = param0 - 1.0f;
           if (!(param0 >= 0.0f)) {
             break;
           }
-          this.a(this.field_e, this.field_h, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
+          this.drawGouraudScanline(this.pixels, this.depthBuffer, (int)param2, 0, 0, (int)param4, (int)param5, param8, var29, var37Lifetime2, var31, var38Lifetime2, var33, var39Lifetime2, var35);
           param4 = param4 + var26;
           param5 = param5 + var27;
           param8 = param8 + var30;
           var37Lifetime2 = var37Lifetime2 + var32;
           var38Lifetime2 = var38Lifetime2 + var34;
           var39Lifetime2 = var39Lifetime2 + var36;
-          param2 = param2 + (float)this.field_m;
+          param2 = param2 + (float)this.rasterStride;
         }
     }
 
-    private final void a(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
+    private final void drawGouraudScanline(int[] param0, float[] param1, int param2, int param3, int param4, int param5, int param6, float param7, float param8, float param9, float param10, float param11, float param12, float param13, float param14) {
         int incrementValue$36 = 0;
         int incrementValue$35 = 0;
         int incrementValue$34 = 0;
@@ -1789,9 +1789,9 @@ final class SoftwareTriangleRasterizer {
         int[] var37 = null;
         int[] var38 = null;
         int[] var39 = null;
-        if (this.field_n) {
-          if (param6 > this.field_b) {
-            param6 = this.field_b;
+        if (this.clipHorizontally) {
+          if (param6 > this.clipWidth) {
+            param6 = this.clipWidth;
           }
           if (param5 < 0) {
             param5 = 0;
@@ -1800,14 +1800,14 @@ final class SoftwareTriangleRasterizer {
         if (param5 >= param6) {
           return;
         }
-        if (this.field_i) {
+        if (this.depthTestDisabled) {
           param2 = param2 + param5;
           param9 = param9 + param10 * (float)param5;
           param11 = param11 + param12 * (float)param5;
           param13 = param13 + param14 * (float)param5;
-          if (!this.field_j) {
+          if (!this.coarseShading) {
             param4 = param6 - param5;
-            if (this.field_a == 0) {
+            if (this.transparency == 0) {
               do {
                 incrementValue$36 = param2;
                 param2++;
@@ -1819,9 +1819,9 @@ final class SoftwareTriangleRasterizer {
               } while (param4 > 0);
               return;
             }
-            if (!this.field_d) {
-              var16_int = this.field_a;
-              var17 = 256 - this.field_a;
+            if (!this.additiveBlending) {
+              var16_int = this.transparency;
+              var17 = 256 - this.transparency;
               do {
                 param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
                 param9 = param9 + param10;
@@ -1859,7 +1859,7 @@ final class SoftwareTriangleRasterizer {
           param10 = param10 * 4.0f;
           param12 = param12 * 4.0f;
           param14 = param14 * 4.0f;
-          if (this.field_a == 0) {
+          if (this.transparency == 0) {
             if (param4 > 0) {
               do {
                 param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
@@ -1884,7 +1884,7 @@ final class SoftwareTriangleRasterizer {
             } while (param4 > 0);
             return;
           }
-          if (this.field_d) {
+          if (this.additiveBlending) {
             if (param4 > 0) {
               do {
                 param3 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
@@ -1958,8 +1958,8 @@ final class SoftwareTriangleRasterizer {
               return;
             }
           } else {
-            var16_int = this.field_a;
-            var17 = 256 - this.field_a;
+            var16_int = this.transparency;
+            var17 = 256 - this.transparency;
             if (param4 > 0) {
               do {
                 param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
@@ -2007,10 +2007,10 @@ final class SoftwareTriangleRasterizer {
         param9 = param9 + param10 * (float)param5;
         param11 = param11 + param12 * (float)param5;
         param13 = param13 + param14 * (float)param5;
-        if (!this.field_c.field_f) {
-          if (!this.field_j) {
+        if (!this.context.field_f) {
+          if (!this.coarseShading) {
             param4 = param6 - param5;
-            if (this.field_a == 0) {
+            if (this.transparency == 0) {
               do {
                 param2++;
                 if (param7 < param1[param2]) {
@@ -2024,9 +2024,9 @@ final class SoftwareTriangleRasterizer {
               } while (param4 > 0);
               return;
             }
-            if (!this.field_d) {
-              var16_int = this.field_a;
-              var17 = 256 - this.field_a;
+            if (!this.additiveBlending) {
+              var16_int = this.transparency;
+              var17 = 256 - this.transparency;
               do {
                 param2++;
                 if (param7 < param1[param2]) {
@@ -2068,7 +2068,7 @@ final class SoftwareTriangleRasterizer {
           param10 = param10 * 4.0f;
           param12 = param12 * 4.0f;
           param14 = param14 * 4.0f;
-          if (this.field_a == 0) {
+          if (this.transparency == 0) {
             if (param4 > 0) {
               do {
                 param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
@@ -2113,7 +2113,7 @@ final class SoftwareTriangleRasterizer {
             } while (param4 > 0);
             return;
           }
-          if (this.field_d) {
+          if (this.additiveBlending) {
             if (param4 > 0) {
               do {
                 param3 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
@@ -2197,8 +2197,8 @@ final class SoftwareTriangleRasterizer {
               return;
             }
           } else {
-            var16_int = this.field_a;
-            var17 = 256 - this.field_a;
+            var16_int = this.transparency;
+            var17 = 256 - this.transparency;
             if (param4 > 0) {
               do {
                 param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
@@ -2251,9 +2251,9 @@ final class SoftwareTriangleRasterizer {
           }
           return;
         }
-        if (!this.field_j) {
+        if (!this.coarseShading) {
           param4 = param6 - param5;
-          if (this.field_a == 0) {
+          if (this.transparency == 0) {
             do {
               param2++;
               if (param7 < param1[param2]) {
@@ -2268,9 +2268,9 @@ final class SoftwareTriangleRasterizer {
             } while (param4 > 0);
             return;
           }
-          if (!this.field_d) {
-            var16_int = this.field_a;
-            var17 = 256 - this.field_a;
+          if (!this.additiveBlending) {
+            var16_int = this.transparency;
+            var17 = 256 - this.transparency;
             do {
               param2++;
               if (param7 < param1[param2]) {
@@ -2315,7 +2315,7 @@ final class SoftwareTriangleRasterizer {
         param10 = param10 * 4.0f;
         param12 = param12 * 4.0f;
         param14 = param14 * 4.0f;
-        if (this.field_a == 0) {
+        if (this.transparency == 0) {
           if (param4 > 0) {
             do {
               param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
@@ -2366,7 +2366,7 @@ final class SoftwareTriangleRasterizer {
           decompiledFrameRemainder0 = false;
         }
         else {
-          if (this.field_d) {
+          if (this.additiveBlending) {
             if (param4 > 0) {
               do {
                 param3 = (int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255;
@@ -2454,8 +2454,8 @@ final class SoftwareTriangleRasterizer {
               } while (param4 > 0);
             }
           } else {
-            var16_int = this.field_a;
-            var17 = 256 - this.field_a;
+            var16_int = this.transparency;
+            var17 = 256 - this.transparency;
             if (param4 > 0) {
               do {
                 param3 = -16777216 | ((int)param9 & 16711680 | (int)param11 & 65280 | (int)param13 & 255);
@@ -2515,21 +2515,21 @@ final class SoftwareTriangleRasterizer {
     }
 
     final int getOriginY() {
-        return this.field_k[0] / this.field_m;
+        return this.rowOffsets[0] / this.rasterStride;
     }
 
     SoftwareTriangleRasterizer(SoftwareToolkit param0, SoftwareRenderContext param1) {
-        this.field_k = new int[4096];
-        this.field_i = false;
-        this.field_l = false;
-        this.field_n = false;
-        this.field_d = false;
-        this.field_j = true;
-        this.field_a = 0;
-        this.field_f = param0;
-        this.field_c = param1;
-        this.field_m = this.field_f.width;
-        this.field_e = this.field_f.pixels;
-        this.field_h = this.field_f.depth;
+        this.rowOffsets = new int[4096];
+        this.depthTestDisabled = false;
+        this.wireframe = false;
+        this.clipHorizontally = false;
+        this.additiveBlending = false;
+        this.coarseShading = true;
+        this.transparency = 0;
+        this.toolkit = param0;
+        this.context = param1;
+        this.rasterStride = this.toolkit.width;
+        this.pixels = this.toolkit.pixels;
+        this.depthBuffer = this.toolkit.depth;
     }
 }

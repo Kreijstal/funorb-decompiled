@@ -847,7 +847,7 @@ final class GpuModel extends Model3D {
             param1.groupFaceAttachmentIndices(-126);
           }
           if (null != param1.faceLabels &&
-            SetSalvoHoldable.a(this.field_s, param2, -2679)) {
+            SetSalvoHoldable.needsFaceGroups(this.field_s, param2, -2679)) {
             var16Lifetime5 = 0;
             var84 = new int[256];
             var80 = var84;

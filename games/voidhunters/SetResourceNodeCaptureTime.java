@@ -3,7 +3,7 @@
  */
 final class SetResourceNodeCaptureTime extends ConsoleCommand {
     static IntrusiveDeque delayedOutgoingPackets;
-    static String field_p;
+    static String pendingAccountEmail;
 
     SetResourceNodeCaptureTime(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -38,7 +38,7 @@ final class SetResourceNodeCaptureTime extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        pendingAccountEmail = null;
         delayedOutgoingPackets = null;
         if (param0 != 70) {
           delayedOutgoingPackets = (IntrusiveDeque) null;

@@ -57,7 +57,7 @@ final class UiStatefulStyle extends UiTextStyle {
         }
     }
 
-    final static void c(int param0) {
+    final static void swapStateSerializationBuffers(int param0) {
         IsaacPacketBuffer var2 = UiViewport.serializedStateBuffer;
         IsaacPacketBuffer var1 = var2;
         UiViewport.serializedStateBuffer = OpenGlSpriteTexture.field_q;
@@ -134,7 +134,7 @@ final class UiStatefulStyle extends UiTextStyle {
     public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 != -18) {
-          UiStatefulStyle.a((byte) 52, true, false, 58);
+          UiStatefulStyle.drawMenuScreen((byte) 52, true, false, 58);
         }
     }
 
@@ -177,7 +177,7 @@ final class UiStatefulStyle extends UiTextStyle {
         }
     }
 
-    final static void a(byte param0, boolean param1, boolean param2, int param3) {
+    final static void drawMenuScreen(byte param0, boolean param1, boolean param2, int param3) {
         int var4;
         int var8;
         MenuBackgroundBattle stackIn_10_0 = null;

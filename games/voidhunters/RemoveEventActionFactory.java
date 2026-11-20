@@ -11,7 +11,7 @@ final class RemoveEventActionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new RemoveEventAction());
     }
 
-    final static int b(byte param0) {
+    final static int getCachedTopPanelY(byte param0) {
         int var1 = 8 % ((param0 - 63) / 33);
         if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -89) ||
           null == HighscoreTableRequest.field_h.getTopPanel(0)) {
@@ -27,7 +27,7 @@ final class RemoveEventActionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new RemoveEventAction[param1]);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void drawRectangleBorderUnclipped(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;

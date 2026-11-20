@@ -12,7 +12,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
           WaterTextures.showLoginForm(false, true, false);
           return;
         }
-        GetBoostersActiveTime.f((byte) -74);
+        GetBoostersActiveTime.showCreatedAccountStatus((byte) -74);
         if (param0 != 11) {
           return;
         }

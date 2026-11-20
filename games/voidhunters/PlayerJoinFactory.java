@@ -6,7 +6,7 @@ final class PlayerJoinFactory implements GameStateFactory {
     static int pendingAccountUiResult;
     static String field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillGradientRectangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (OpenGlTexture1D.field_i) {
           param5 = param5 | -16777216;
           param2 = param2 | -16777216;
@@ -45,7 +45,7 @@ final class PlayerJoinFactory implements GameStateFactory {
         field_c = null;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean pollIncomingPacketPayload(byte param0) {
         if (PartitioningManagerFactory.field_a == -1) {
           if (!ShipBlueprint.a(1, 30000)) {
             return false;
@@ -54,7 +54,7 @@ final class PlayerJoinFactory implements GameStateFactory {
           AccountNameAvailabilityReplies.field_b.position = 0;
         }
         if (param0 <= 9) {
-          PlayerJoinFactory.b((byte) -116);
+          PlayerJoinFactory.pollIncomingPacketPayload((byte) -116);
           if (PartitioningManagerFactory.field_a == -2) {
             if (ShipBlueprint.a(2, 30000)) {
               PartitioningManagerFactory.field_a = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);

@@ -22,7 +22,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void clearMouseHandlerReference(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -38,7 +38,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
         }
     }
 
-    final static SocialListEntry a(String param0, boolean param1) {
+    final static SocialListEntry findIgnoreEntry(String param0, boolean param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         String var4 = null;

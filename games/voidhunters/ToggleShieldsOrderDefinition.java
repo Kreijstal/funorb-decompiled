@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ToggleShieldsOrderDefinition extends SpecialOrderDefinition {
-    static String field_d;
+    static String loginName;
 
     final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
-          field_d = (String) null;
+          loginName = (String) null;
           return false;
         }
         return false;
@@ -23,10 +23,10 @@ final class ToggleShieldsOrderDefinition extends SpecialOrderDefinition {
     public static void clearSharedReferences(int param0) {
         if (param0 != 104) {
           ToggleShieldsOrderDefinition.clearSharedReferences(122);
-          field_d = null;
+          loginName = null;
           return;
         }
-        field_d = null;
+        loginName = null;
     }
 
     ToggleShieldsOrderDefinition() {
@@ -41,7 +41,7 @@ final class ToggleShieldsOrderDefinition extends SpecialOrderDefinition {
 
     final int getShortcutKey(int param0) {
         if (param0 != -1) {
-          field_d = (String) null;
+          loginName = (String) null;
           return GetSpinningBladeAimarc.field_r;
         }
         return GetSpinningBladeAimarc.field_r;

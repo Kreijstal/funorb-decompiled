@@ -17,7 +17,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
           if (param4 > -30) {
             GetMachineGunPulsetime.a((String) null, 23, -125, 6, -23, 39, -65, -95, 6, 44, -47);
           }
-          stackIn_3_0 = SetAutoaim.a(param6, param2, param3, param8, param7, param0, param1, param9, -20, param5, param10, SetAutoaim.field_p);
+          stackIn_3_0 = SetAutoaim.drawParagraph(param6, param2, param3, param8, param7, param0, param1, param9, -20, param5, param10, SetAutoaim.field_p);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -140,7 +140,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               }
             }
             if (TextureCombineMappings.loginStage == UiFocusableComponent.readingAccountDetails &&
-              PlayerJoinFactory.b((byte) 113)) {
+              PlayerJoinFactory.pollIncomingPacketPayload((byte) 113)) {
               SetTorpedoAimarc.field_p = AccountNameAvailabilityReplies.field_b.readLong(255);
               SetLagVariant.passwordForChatFilter = param5;
               SetAngularVelocitySustain.field_p = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -94);
@@ -188,7 +188,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               }
               SetShowTutorial.field_o = false;
               if (var12 != null) {
-                SetNebulaProximityFadeDownshift.a(MissionList.getApplet((byte) -94), var12, -1);
+                SetNebulaProximityFadeDownshift.writeSettingsCookie(MissionList.getApplet((byte) -94), var12, -1);
               }
               if (GetDebrisCarryOver.field_o <= 0 &&
                 !GetFightersPerPlayerMaximum.field_r) {
@@ -218,7 +218,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               return stackIn_77_0;
             }
             if (TextureCombineMappings.loginStage == TextInputWidget.field_xb &&
-              PlayerJoinFactory.b((byte) 113)) {
+              PlayerJoinFactory.pollIncomingPacketPayload((byte) 113)) {
               FighterBayWeaponDefinition.closeGameConnection(-117);
               if (NetworkMessageState.incomingOpcode == 7 &&
                 !SetShowTutorial.field_o) {

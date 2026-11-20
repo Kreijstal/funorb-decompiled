@@ -99,14 +99,14 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
         return ImageProducerAppletRasterBuffer.field_i;
     }
 
-    final static String d(boolean param0) {
+    final static String getCurrentLoginPassword(boolean param0) {
         if (!param0) {
           field_d = (byte[][]) null;
         }
         if (ActiveIconBorderRenderer.pendingAccountRequest == SetCountermeasureLauncherAimspeed.field_r) {
-          return GrapplingHook.field_x;
+          return GrapplingHook.pendingAccountPassword;
         }
-        return MusicPatchPcmStream.field_h;
+        return MusicPatchPcmStream.loginPassword;
     }
 
     final int getFiringSoundId(boolean param0) {

@@ -167,7 +167,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               FlipTextureOperation.field_l.startGame(false, -13027);
               var6 = OpenGlBufferObject.field_d ? 1 : 0;
               stackIn_34_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-              GetNebulaFadesOutWhenClose.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
+              GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_34_0, var6 != 0, (byte) -85, -1);
               SetMassDriverFireForce.field_o = false;
               GetSniperCannonProjectiles.chatVisible = false;
               GetMessageFadetime.field_o = true;
@@ -191,7 +191,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime2 = OpenGlBufferObject.field_d ? 1 : 0;
             stackIn_22_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-            GetNebulaFadesOutWhenClose.a(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
             SetMassDriverFireForce.field_o = false;
             GetSniperCannonProjectiles.chatVisible = false;
             GetMessageFadetime.field_o = true;
@@ -219,7 +219,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           FlipTextureOperation.field_l.startGame(false, -13027);
           var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
           stackIn_52_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-          GetNebulaFadesOutWhenClose.a(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
+          GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
         } else {
           if (!SetMachineGunEnergyUsed.field_o[86]) {
             var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
@@ -232,7 +232,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
             stackIn_77_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-            GetNebulaFadesOutWhenClose.a(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
           } else {
             param0 = true;
             var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
@@ -245,7 +245,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
             stackIn_65_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
-            GetNebulaFadesOutWhenClose.a(stackIn_65_0, var6Lifetime1 != 0, (byte) -85, -1);
+            GetNebulaFadesOutWhenClose.selectMenuScreen(stackIn_65_0, var6Lifetime1 != 0, (byte) -85, -1);
           }
         }
         SetMassDriverFireForce.field_o = false;

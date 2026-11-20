@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
-    final static void a(int param0, boolean param1, byte param2, int param3) {
+    final static void selectMenuScreen(int param0, boolean param1, byte param2, int param3) {
         SetCountermeasureLauncherProjectileLife.field_o = param0;
         SetVariableAction.field_b = 0;
         AgeValidator.field_f = param3;
@@ -12,7 +12,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         if (!BodyInZoneConditionFactory.isMenuScreenActive(false, AgeValidator.field_f)) {
           return;
         }
-        GetNebulaFadesOutWhenClose.a(-103, PendingScoreboardRequest.soundEffects[75]);
+        GetNebulaFadesOutWhenClose.playSample(-103, PendingScoreboardRequest.soundEffects[75]);
         int var4 = 0;
         if (AgeValidator.field_f == 7) {
           var4 = -1;
@@ -31,7 +31,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static SoundPlayback a(int param0, PcmSample param1) {
+    final static SoundPlayback playSample(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         SoundPlayback stackIn_2_0 = null;
         SoundPlayback stackIn_4_0 = null;
@@ -71,7 +71,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         try {
           if (obfuscationGuard >= -119) {
             var4 = (PcmSample) null;
-            GetNebulaFadesOutWhenClose.a(-99, (PcmSample) null);
+            GetNebulaFadesOutWhenClose.playSample(-99, (PcmSample) null);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(17, 86));
           return stackIn_3_0;

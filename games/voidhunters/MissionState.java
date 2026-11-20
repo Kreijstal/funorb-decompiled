@@ -149,12 +149,12 @@ final class MissionState implements DiffableState {
           var9.generateMission(91, param1);
           if (MissionList.hasReleaseStatistics((byte) -125)) {
             var11 = ShipTeamCondition.field_f[param1.missionState.getVotedObjective(6472)];
-            SetGrapplingHookCooldown.a(202, "missions_started_" + var11, 1);
-            SetGrapplingHookCooldown.a(param0 + 202, "missions_started", 1);
+            SetGrapplingHookCooldown.addReleaseCounter(202, "missions_started_" + var11, 1);
+            SetGrapplingHookCooldown.addReleaseCounter(param0 + 202, "missions_started", 1);
             for (var5_int = 0; var5_int < var9.optionTotals.length; var5_int++) {
               var6 = var8.optionTotals[var5_int];
               if (0 < var6) {
-                SetGrapplingHookCooldown.a(param0 + 202, "votes_for_" + ShipTeamCondition.field_f[var5_int], var6);
+                SetGrapplingHookCooldown.addReleaseCounter(param0 + 202, "votes_for_" + ShipTeamCondition.field_f[var5_int], var6);
               }
             }
           }

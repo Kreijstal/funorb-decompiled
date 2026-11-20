@@ -283,11 +283,11 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");
           HslAdjustTextureOperation.a(var12, this.fontMetricsArchive, this.graphicsArchive, (byte) 88, var11);
           ModelData.loadGameSprites(this.jpegArchive, param0 ^ 57, this.graphicsArchive);
-          FloatGradientNoiseSliceGenerator.field_e = WorldPoint.a("frame", -124, "basic", this.graphicsArchive);
-          ScreenSizeController.field_d = WorldPoint.a("frame_filled", 52, "basic", this.graphicsArchive);
-          MidiCrossfadeStream.buttonFrameSprites = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.graphicsArchive);
-          SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.graphicsArchive);
-          WorldPoint.a("button_depressed", 80, "basic", this.graphicsArchive);
+          FloatGradientNoiseSliceGenerator.field_e = WorldPoint.loadNineSliceSprites("frame", -124, "basic", this.graphicsArchive);
+          ScreenSizeController.field_d = WorldPoint.loadNineSliceSprites("frame_filled", 52, "basic", this.graphicsArchive);
+          MidiCrossfadeStream.buttonFrameSprites = WorldPoint.loadNineSliceSprites("button_frame", param0 ^ 21, "basic", this.graphicsArchive);
+          SetDebrisGroupColour.field_o = WorldPoint.loadNineSliceSprites("button_raised", -95, "basic", this.graphicsArchive);
+          WorldPoint.loadNineSliceSprites("button_depressed", 80, "basic", this.graphicsArchive);
           WorldSpriteTiler.field_c = SetGrapplingHookRopeBreakLength.loadNamedSprites(this.graphicsArchive, true, "basic", "achievements_large");
           OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
           WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);

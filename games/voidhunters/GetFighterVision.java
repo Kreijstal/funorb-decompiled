@@ -59,7 +59,7 @@ final class GetFighterVision extends ConsoleCommand {
             if (LegacyOpenGlMaterialEffectManager.field_j[param1] > 1) {
               var3_int = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, LegacyOpenGlMaterialEffectManager.field_j[param1], 117) + param1;
             }
-            var4 = GetNebulaFadesOutWhenClose.a(param0 ^ -6902, PendingScoreboardRequest.soundEffects[var3_int]);
+            var4 = GetNebulaFadesOutWhenClose.playSample(param0 ^ -6902, PendingScoreboardRequest.soundEffects[var3_int]);
             var5 = new OneShotSound();
             var5.playback = var4;
             var5.positional = false;

@@ -82,7 +82,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           } else {
             if (var5 != 7) {
               if (var5 == 8) {
-                UiSingleChildContainer.a(var4, 27);
+                UiSingleChildContainer.attachPresetComponents(var4, 27);
               } else {
                 if (var5 != 9) {
                   if (10 == var5) {
@@ -113,7 +113,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                                 } else {
                                   if (param1 != 1) {
                                     if (param1 == 2) {
-                                      LoadBlackboxRecording.a(var4, (byte) -10);
+                                      LoadBlackboxRecording.attachPresetComponents(var4, (byte) -10);
                                     }
                                   } else {
                                     CustomBase64Alphabet.attachTripleSniperPreset(var4, 14670);

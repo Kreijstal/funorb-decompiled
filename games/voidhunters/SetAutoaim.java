@@ -37,7 +37,7 @@ final class SetAutoaim extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    final static int drawParagraph(int param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var12_int = 0;
         RuntimeException var12 = null;
         int stackIn_2_0 = 0;

@@ -4172,9 +4172,9 @@ final class World implements DiffableState, CompactGameState {
                           !param3.isPreGamePhase((byte) 112)) {
                           var27 = SetSpinningBladeSpinupSpeed.field_o[var11_ref.chassis.getComponentTypeId(0)];
                           if (var12 != 0) {
-                            SetGrapplingHookCooldown.a(202, "spawns_as_saved_" + var27, 1);
+                            SetGrapplingHookCooldown.addReleaseCounter(202, "spawns_as_saved_" + var27, 1);
                           } else {
-                            SetGrapplingHookCooldown.a(202, "spawns_as_new_" + var27, 1);
+                            SetGrapplingHookCooldown.addReleaseCounter(202, "spawns_as_new_" + var27, 1);
                           }
                         }
                         this.spawnPlayerShip(-200000, var5_int, param3.isPreGamePhase((byte) 116), var7, param2.length, var11_ref);

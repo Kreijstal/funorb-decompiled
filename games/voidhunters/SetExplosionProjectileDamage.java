@@ -5,7 +5,7 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
     static int field_o;
     static String field_p;
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean isAsciiAlphanumeric(char param0, boolean param1) {
         boolean stackIn_27_0 = false;
         if (param1) {
           return true;
@@ -74,7 +74,7 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(String param0, int param1, boolean param2) {
+    final static void drawDialogText(String param0, int param1, boolean param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

@@ -21,7 +21,7 @@ final class SetUseLines extends ConsoleCommand {
           if (param0 != -94) {
             field_p = 16;
           }
-          stackIn_5_0 = (null != CarouselPlayerEventFactory.a(param1, false));
+          stackIn_5_0 = (null != CarouselPlayerEventFactory.findIgnoreEntry(param1, false));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

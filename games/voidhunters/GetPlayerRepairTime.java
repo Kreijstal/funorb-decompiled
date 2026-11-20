@@ -45,7 +45,7 @@ final class GetPlayerRepairTime extends ConsoleCommand {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void initializeWeaponDefinitions(boolean param0) {
         SetShipDirectionArrow.weaponDefinitions = new WeaponDefinition[12];
         SetShipDirectionArrow.weaponDefinitions[0] = (WeaponDefinition) ((Object) new MassDriverWeaponDefinition());
         SetShipDirectionArrow.weaponDefinitions[1] = (WeaponDefinition) ((Object) new LaserWeaponDefinition());
@@ -60,17 +60,17 @@ final class GetPlayerRepairTime extends ConsoleCommand {
         SetShipDirectionArrow.weaponDefinitions[9] = (WeaponDefinition) ((Object) new PointDefenceLaserWeaponDefinition());
         SetShipDirectionArrow.weaponDefinitions[10] = (WeaponDefinition) ((Object) new CountermeasureLauncherWeaponDefinition());
         if (param0) {
-          GetPlayerRepairTime.b(false);
+          GetPlayerRepairTime.initializeWeaponDefinitions(false);
         }
     }
 
-    final static void a(ResourceArchive param0, boolean param1) {
+    final static void decodeLogoAudio(ResourceArchive param0, boolean param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.decodeSetup(param0.fetchNamedFile("", true, "headers.packvorbis"));
           if (param1) {
             ResourceArchive var3 = (ResourceArchive) null;
-            GetPlayerRepairTime.a((ResourceArchive) null, false);
+            GetPlayerRepairTime.decodeLogoAudio((ResourceArchive) null, false);
           }
           var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
           var2.decodeFully();

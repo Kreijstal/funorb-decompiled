@@ -48,7 +48,7 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
 
     final static String getCurrentAccountEmail(int param0) {
         if (ActiveIconBorderRenderer.pendingAccountRequest == SetCountermeasureLauncherAimspeed.field_r) {
-          return SetResourceNodeCaptureTime.field_p;
+          return SetResourceNodeCaptureTime.pendingAccountEmail;
         }
         if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
           return GetBombletSprayPushMultiplier.emailAvailabilityCheck.getEmail(4);
@@ -58,12 +58,12 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
           if (ActiveIconBorderRenderer.pendingAccountRequest == SetShipTeamAction.field_b) {
             return GetBombletSprayPushMultiplier.emailAvailabilityCheck.getEmail(4);
           }
-          return ToggleShieldsOrderDefinition.field_d;
+          return ToggleShieldsOrderDefinition.loginName;
         }
         if (ActiveIconBorderRenderer.pendingAccountRequest == SetShipTeamAction.field_b) {
           return GetBombletSprayPushMultiplier.emailAvailabilityCheck.getEmail(4);
         }
-        return ToggleShieldsOrderDefinition.field_d;
+        return ToggleShieldsOrderDefinition.loginName;
     }
 
     static {

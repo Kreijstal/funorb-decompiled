@@ -92,7 +92,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
             EmailAvailabilityChecks.fullscreenCanvas = OpenGlTexture3D.createFullscreenCanvas(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
             if (EmailAvailabilityChecks.fullscreenCanvas != null) {
               var2 = 2;
-              SetGrapplingHookCooldown.a((byte) 77, EmailAvailabilityChecks.fullscreenCanvas);
+              SetGrapplingHookCooldown.attachInputListeners((byte) 77, EmailAvailabilityChecks.fullscreenCanvas);
             } else {
               var2 = 3;
             }
@@ -101,7 +101,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
             FloatPacketBuffer.notifyBrowserResizeState(2, 117);
             if (EmailAvailabilityChecks.fullscreenCanvas != null) {
               var2 = 2;
-              SetGrapplingHookCooldown.a((byte) 77, EmailAvailabilityChecks.fullscreenCanvas);
+              SetGrapplingHookCooldown.attachInputListeners((byte) 77, EmailAvailabilityChecks.fullscreenCanvas);
             } else {
               var2 = 3;
             }

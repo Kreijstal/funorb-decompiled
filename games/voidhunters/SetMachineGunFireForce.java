@@ -42,15 +42,15 @@ final class SetMachineGunFireForce extends ConsoleCommand {
 
     final static AccountRequestText e(int param0) {
         int var2 = -9 % ((param0 + 52) / 62);
-        String var1 = LoadBlackboxRecording.a(87);
+        String var1 = LoadBlackboxRecording.getCurrentLoginName(87);
         if (var1 == null) {
-          return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
+          return new AccountRequestText(LoadBlackboxRecording.getCurrentLoginName(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
+          return new AccountRequestText(LoadBlackboxRecording.getCurrentLoginName(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
         }
-        return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
+        return new AccountRequestText(LoadBlackboxRecording.getCurrentLoginName(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
     }
 
     final static void drawDebugArrows(byte param0, Camera2D param1) {

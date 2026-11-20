@@ -113,7 +113,7 @@ abstract class UiSingleChildContainer extends UiComponent implements UiContainer
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawSlidingLobbyPanels(int param0, boolean param1) {
         if (!(SoftwareTransform3D.field_b <= 0) &&
           TutorialController.field_d) {
           SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.screenY);
@@ -121,7 +121,7 @@ abstract class UiSingleChildContainer extends UiComponent implements UiContainer
         }
         if (param0 >= -117) {
           ShipComponent var3 = (ShipComponent) null;
-          UiSingleChildContainer.a((ShipComponent) null, -56);
+          UiSingleChildContainer.attachPresetComponents((ShipComponent) null, -56);
         }
         if ((CarouselPlayerEventFactory.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
           GetTorpedoProjectileDamage.field_o) {
@@ -130,7 +130,7 @@ abstract class UiSingleChildContainer extends UiComponent implements UiContainer
         }
     }
 
-    final static void a(ShipComponent param0, int param1) {
+    final static void attachPresetComponents(ShipComponent param0, int param1) {
         ShipComponent var3 = null;
         ShipComponent var4 = null;
         try {

@@ -7,7 +7,7 @@ final class LoadBlackboxRecording extends ConsoleCommand {
     static int field_q;
     static String field_r;
 
-    final static void a(ShipComponent param0, byte param1) {
+    final static void attachPresetComponents(ShipComponent param0, byte param1) {
         int var3 = 0;
         int[] var2 = null;
         ShipComponent var4 = null;
@@ -58,13 +58,13 @@ final class LoadBlackboxRecording extends ConsoleCommand {
           return;
         }
         ShipComponent var2 = (ShipComponent) null;
-        LoadBlackboxRecording.a((ShipComponent) null, (byte) 45);
+        LoadBlackboxRecording.attachPresetComponents((ShipComponent) null, (byte) 45);
         field_o = null;
         field_r = null;
         field_p = null;
     }
 
-    final static String a(int param0) {
+    final static String getCurrentLoginName(int param0) {
         if (ActiveIconBorderRenderer.pendingAccountRequest == SetCountermeasureLauncherAimspeed.field_r) {
           return GetTabForScores.field_o;
         }
@@ -76,12 +76,12 @@ final class LoadBlackboxRecording extends ConsoleCommand {
           if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
             return SetCountermeasureLauncherAimarc.field_q;
           }
-          return ToggleShieldsOrderDefinition.field_d;
+          return ToggleShieldsOrderDefinition.loginName;
         }
         if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
           return SetCountermeasureLauncherAimarc.field_q;
         }
-        return ToggleShieldsOrderDefinition.field_d;
+        return ToggleShieldsOrderDefinition.loginName;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

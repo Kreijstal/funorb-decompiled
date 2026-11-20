@@ -4,7 +4,7 @@
 final class GrapplingHook extends ShipBody implements DiffableState, CompactGameState {
     private boolean retracting;
     private int firedFromId;
-    static String field_x;
+    static String pendingAccountPassword;
     private int grabbedObjectId;
     private int firedFromPlayer;
     private int grabbedComponentId;
@@ -145,7 +145,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
         if (param0 != -116) {
           return;
         }
-        field_x = null;
+        pendingAccountPassword = null;
         field_C = null;
     }
 

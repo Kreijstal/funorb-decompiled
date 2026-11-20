@@ -24,10 +24,10 @@ final class ArmBehaviour extends ComponentBehaviour implements DiffableState {
         return 1024;
     }
 
-    final static void a(String param0, boolean param1, int param2, String param3) {
+    final static void showAccountStatusWithCredentials(String param0, boolean param1, int param2, String param3) {
         try {
-          MusicPatchPcmStream.field_h = param0;
-          ToggleShieldsOrderDefinition.field_d = param3;
+          MusicPatchPcmStream.loginPassword = param0;
+          ToggleShieldsOrderDefinition.loginName = param3;
           PendingScoreboardRequest.showAccountStatusDialog(SetMissionDebrisVotingChancestep.field_p, -127, param1);
           if (param2 != -17833) {
             field_d = (String) null;
@@ -48,7 +48,7 @@ final class ArmBehaviour extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    final static int a(int param0, int param1, int param2, String param3) {
+    final static int drawCenteredMessagePanel(int param0, int param1, int param2, String param3) {
         RuntimeException var4 = null;
         String var5 = null;
         int stackIn_3_0 = 0;
@@ -59,7 +59,7 @@ final class ArmBehaviour extends ComponentBehaviour implements DiffableState {
         try {
           if (param2 != 200) {
             var5 = (String) null;
-            ArmBehaviour.a((String) null, false, -23, (String) null);
+            ArmBehaviour.showAccountStatusWithCredentials((String) null, false, -23, (String) null);
           }
           stackIn_3_0 = SetBombletSprayEnergyUsed.drawCenteredMessagePanel(param1, (byte) -126, param0, param3, 200);
           return stackIn_3_0;

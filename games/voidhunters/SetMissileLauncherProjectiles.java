@@ -9,7 +9,7 @@ final class SetMissileLauncherProjectiles extends ConsoleCommand {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (SetExplosionProjectileDamage.a(param1, false)) {
+        if (SetExplosionProjectileDamage.isAsciiAlphanumeric(param1, false)) {
           return true;
         }
         if (param0 != 16647) {

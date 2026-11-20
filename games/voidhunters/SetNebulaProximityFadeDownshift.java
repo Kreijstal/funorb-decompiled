@@ -5,7 +5,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
     static boolean field_o;
     static int field_p;
 
-    final static void a(int param0, boolean param1, boolean param2) {
+    final static void initializeCarouselProtocol(int param0, boolean param1, boolean param2) {
         SetLag.configureCarouselProtocol(param2, 62, 71, 64, GetSniperCannonProjectileOndamageParticles.field_o, 66, Under13AccountNoticePanel.field_v, 2000, 70, 65, 69, 72, GetPhasedEnergyBeamReload.field_p, 68, (byte) 91);
         MidiCrossfadeStream.setAlternateHistoryLength((byte) 125, 3);
         if (param1) {
@@ -24,7 +24,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
         field_p = 55;
     }
 
-    final static void a(java.applet.Applet param0, String param1, int param2) {
+    final static void writeSettingsCookie(java.applet.Applet param0, String param1, int param2) {
         try {
           String var6 = null;
           String var5 = null;
@@ -81,7 +81,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(0, 62, arguments[0].intValue(22));
           if (obfuscationGuard > -119) {
-            SetNebulaProximityFadeDownshift.a(57, true, true);
+            SetNebulaProximityFadeDownshift.initializeCarouselProtocol(57, true, true);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
