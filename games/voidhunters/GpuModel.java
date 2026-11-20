@@ -1110,12 +1110,12 @@ final class GpuModel extends Model3D {
           this.field_I = param1;
           this.field_s = param2;
           if (param3 ||
-            SetDebrisThrowable.a((byte) -89, this.field_I, this.field_s)) {
-            this.field_o = new GpuVertexBufferOwner(GpuFaceAttachment.a(14216, this.field_s, this.field_I));
+            SetDebrisThrowable.requestsVertexBuffer((byte) -89, this.field_I, this.field_s)) {
+            this.field_o = new GpuVertexBufferOwner(GpuFaceAttachment.matchesVertexBufferMask(14216, this.field_s, this.field_I));
           }
           if (param3 ||
-            SetHealthBarWidth.a(this.field_s, false, this.field_I)) {
-            this.field_q = new GpuVertexBufferOwner(cma.a(this.field_s, this.field_I, -22785));
+            SetHealthBarWidth.requestsVertexBuffer(this.field_s, false, this.field_I)) {
+            this.field_q = new GpuVertexBufferOwner(TeamObjectiveFormatter.matchesVertexBufferOptionMask(this.field_s, this.field_I, -22785));
           }
           if (param3 ||
             GetUseCircleFill.a(this.field_I, (byte) -111, this.field_s)) {

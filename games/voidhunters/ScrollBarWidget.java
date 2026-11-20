@@ -92,11 +92,11 @@ final class ScrollBarWidget extends Widget {
                     continue;
                   }
                   param0.writeBits(-632, var11, var7);
-                  GetComponentBreakingExplosionForceMultiplier.a(2, param3, param0, var10);
+                  GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, param3, param0, var10);
                   break;
                 }
                 if (decompiledNaturalLoopExit0) {
-                  GetComponentBreakingExplosionForceMultiplier.a(2, param3, param0, var10);
+                  GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, param3, param0, var10);
                 }
               }
             }

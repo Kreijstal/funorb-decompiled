@@ -79,7 +79,7 @@ final class MatchResults implements DiffableState {
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
               if (DateOfBirthInput.writeBoolean(var3, 86, var8 != null ? true : false)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
           }
@@ -118,7 +118,7 @@ final class MatchResults implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.results = (RoundResult[]) (SetAutoDetail.a(8, LogoAnimationStatus.roundResultFactory, param0, 1, -62, this.results));
+          this.results = (RoundResult[]) (SetAutoDetail.readStateArrayByMode(8, LogoAnimationStatus.roundResultFactory, param0, 1, -62, this.results));
           if (param1) {
             field_b = 39;
           }

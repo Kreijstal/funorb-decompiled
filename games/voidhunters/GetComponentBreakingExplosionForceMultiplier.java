@@ -51,7 +51,7 @@ final class GetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
         var2.writeByte(0, 3);
     }
 
-    final static void a(int param0, int param1, IsaacPacketBuffer param2, SerializableGameState param3) {
+    final static void writeStateByMode(int param0, int param1, IsaacPacketBuffer param2, SerializableGameState param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -64,12 +64,12 @@ final class GetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
             param3.writeState(param2, -126);
           }
           if (param1 == param0) {
-            ((tva) (param3)).c(param2, 19537);
+            ((AlternateSerializableGameState) (param3)).writeAlternateState(param2, 19537);
           }
           if (param1 != 3) {
             return;
           }
-          ((sjb) (param3)).a(param2, (byte) -30);
+          ((ExtendedSerializableGameState) (param3)).writeExtendedState(param2, (byte) -30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

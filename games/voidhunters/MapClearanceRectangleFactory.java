@@ -10,7 +10,7 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new MapClearanceRectangle());
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
+    final static void drawSortedHalfAlphaTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
@@ -118,14 +118,14 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
                         var19 = -1 + (SoftwareFlatTriangleRasterizer.clipWidth - var18);
                       }
                       if (var18 >= 0) {
-                        RoundResultFactory.a(true, var18 + var17Lifetime2, param2, var19, param7);
+                        RoundResultFactory.blendHalfAlphaSpan(true, var18 + var17Lifetime2, param2, var19, param7);
                       } else {
-                        RoundResultFactory.a(true, var17Lifetime2, param2, var18 + var19, param7);
+                        RoundResultFactory.blendHalfAlphaSpan(true, var17Lifetime2, param2, var18 + var19, param7);
                       }
                     } else {
                       if (0 <= var18 &&
                         var18 < SoftwareFlatTriangleRasterizer.clipWidth) {
-                        RoundResultFactory.a(true, var17Lifetime2 + var18, param2, var19, param7);
+                        RoundResultFactory.blendHalfAlphaSpan(true, var17Lifetime2 + var18, param2, var19, param7);
                       }
                     }
                   }
@@ -167,16 +167,16 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
                 if (var18Lifetime1 == 0) {
                   if (0 <= var17Lifetime1 &&
                     SoftwareFlatTriangleRasterizer.clipWidth > var17Lifetime1) {
-                    RoundResultFactory.a(true, var17Lifetime1 + var16Lifetime1, param2, var18Lifetime1, param7);
+                    RoundResultFactory.blendHalfAlphaSpan(true, var17Lifetime1 + var16Lifetime1, param2, var18Lifetime1, param7);
                   }
                 } else {
                   if (SoftwareFlatTriangleRasterizer.clipWidth <= var18Lifetime1 + var17Lifetime1) {
                     var18Lifetime1 = -1 + SoftwareFlatTriangleRasterizer.clipWidth - var17Lifetime1;
                   }
                   if (0 > var17Lifetime1) {
-                    RoundResultFactory.a(true, var16Lifetime1, param2, var17Lifetime1 + var18Lifetime1, param7);
+                    RoundResultFactory.blendHalfAlphaSpan(true, var16Lifetime1, param2, var17Lifetime1 + var18Lifetime1, param7);
                   } else {
-                    RoundResultFactory.a(true, var17Lifetime1 + var16Lifetime1, param2, var18Lifetime1, param7);
+                    RoundResultFactory.blendHalfAlphaSpan(true, var17Lifetime1 + var16Lifetime1, param2, var18Lifetime1, param7);
                   }
                 }
               }
@@ -208,7 +208,7 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
           int[] var4 = (int[]) null;
-          MapClearanceRectangleFactory.a(35, 80, -54, 13, 73, 4, -14, (int[]) null, -74);
+          MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(35, 80, -54, 13, 73, 4, -14, (int[]) null, -74);
         }
         return (SerializableGameState[]) ((Object) new MapClearanceRectangle[param1]);
     }

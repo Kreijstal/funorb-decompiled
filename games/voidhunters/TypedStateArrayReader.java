@@ -54,10 +54,10 @@ final class TypedStateArrayReader {
                   var14.readState(var15, false);
                 }
                 if (2 == var13) {
-                  ((tva) (var14)).a(-128, var15);
+                  ((AlternateSerializableGameState) (var14)).readAlternateState(-128, var15);
                 }
                 if (var13 == 3) {
-                  ((sjb) (var14)).a(var15, -97);
+                  ((ExtendedSerializableGameState) (var14)).readExtendedState(var15, -97);
                 }
               }
             }

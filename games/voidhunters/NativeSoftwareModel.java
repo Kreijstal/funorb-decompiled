@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NativeSoftwareModel extends Model3D implements NativeResource {
-    private qeb[] field_a;
+    private NativeModelIntTriple[] nativeIntTriples;
     long nativeHandle;
     private NativeSoftwareHeap heap;
-    private tn[] field_c;
+    private NativeModelIntValue[] nativeIntValues;
     private NativeSoftwareToolkit toolkit;
 
     protected final void finalize() {
@@ -56,10 +56,10 @@ final class NativeSoftwareModel extends Model3D implements NativeResource {
         int var12Lifetime2;
         this.toolkit = param0;
         this.heap = param1;
-        this.field_a = param2.field_c;
-        this.field_c = param2.field_l;
-        int var8 = param2.field_c == null ? 0 : param2.field_c.length;
-        int var9 = param2.field_l == null ? 0 : param2.field_l.length;
+        this.nativeIntTriples = param2.nativeIntTriples;
+        this.nativeIntValues = param2.nativeIntValues;
+        int var8 = param2.nativeIntTriples == null ? 0 : param2.nativeIntTriples.length;
+        int var9 = param2.nativeIntValues == null ? 0 : param2.nativeIntValues.length;
         int var10 = 0;
         int[] var24 = new int[var8 * 3 + var9];
         int[] var22 = var24;
@@ -67,18 +67,18 @@ final class NativeSoftwareModel extends Model3D implements NativeResource {
         for (var12 = 0; var12 < var8; var12++) {
           incrementValue$0 = var10;
           var10++;
-          var11[incrementValue$0] = this.field_a[var12].field_d;
+          var11[incrementValue$0] = this.nativeIntTriples[var12].firstValue;
           incrementValue$1 = var10;
           var10++;
-          var11[incrementValue$1] = this.field_a[var12].field_a;
+          var11[incrementValue$1] = this.nativeIntTriples[var12].secondValue;
           incrementValue$2 = var10;
           var10++;
-          var11[incrementValue$2] = this.field_a[var12].field_b;
+          var11[incrementValue$2] = this.nativeIntTriples[var12].thirdValue;
         }
         for (var12Lifetime1 = 0; var12Lifetime1 < var9; var12Lifetime1++) {
           incrementValue$3 = var10;
           var10++;
-          var11[incrementValue$3] = this.field_c[var12Lifetime1].field_a;
+          var11[incrementValue$3] = this.nativeIntValues[var12Lifetime1].value;
         }
         var12Lifetime2 = param2.faceAttachments == null ? 0 : param2.faceAttachments.length;
         int[] var25 = new int[var12Lifetime2 * 8];

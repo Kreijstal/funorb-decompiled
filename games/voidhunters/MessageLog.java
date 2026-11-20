@@ -182,7 +182,7 @@ final class MessageLog implements DiffableState {
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
               if (DateOfBirthInput.writeBoolean(var3, -74, var8 != null ? true : false)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
           }
@@ -193,7 +193,7 @@ final class MessageLog implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.messages = (Message[]) (SetAutoDetail.a(8, UiTextStyle.field_e, param0, 1, -69, this.messages));
+          this.messages = (Message[]) (SetAutoDetail.readStateArrayByMode(8, UiTextStyle.field_e, param0, 1, -69, this.messages));
           if (param1) {
             SerializableGameState var4 = (SerializableGameState) null;
             this.differsFrom((byte) -113, (SerializableGameState) null);

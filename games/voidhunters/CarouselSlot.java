@@ -77,7 +77,7 @@ class CarouselSlot implements DiffableState {
               stackIn_12_1 = -110;
               stackIn_13_2 = (var9 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var9);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var9);
               }
             }
             return;
@@ -357,7 +357,7 @@ class CarouselSlot implements DiffableState {
           return;
         }
         try {
-          this.players = (CarouselPlayerInfo[]) (SetAutoDetail.a(EnvironmentReflectionGpuMaterialEffect.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.players));
+          this.players = (CarouselPlayerInfo[]) (SetAutoDetail.readStateArrayByMode(EnvironmentReflectionGpuMaterialEffect.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.players));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tja.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -269,7 +269,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ThrusterBehaviour.field_a[6] = GrappleLauncherBehaviour.field_c;
           AppletReload.field_a = new String[5];
           ThrusterBehaviour.field_a[4] = LoginCredentials.field_b;
-          ThrusterBehaviour.field_a[12] = qeb.field_c;
+          ThrusterBehaviour.field_a[12] = NativeModelIntTriple.field_c;
           ThrusterBehaviour.field_a[11] = GetPhasedEnergyBeamAimarc.field_o;
           AppletReload.field_a[1] = SetReverbDamp.field_p;
           AppletReload.field_a[0] = DebugRequestFactory.field_c;

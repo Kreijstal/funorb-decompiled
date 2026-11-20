@@ -411,7 +411,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
               stackIn_12_1 = 53;
               stackIn_13_2 = (var8 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
             return;
@@ -621,7 +621,7 @@ final class PartitioningManager implements DiffableState, SpatialStateMarker {
           return;
         }
         try {
-          this.zonelists = (PartitionZoneList[]) (SetAutoDetail.a(10, GpuSprite.field_c, param0, 1, -102, this.zonelists));
+          this.zonelists = (PartitionZoneList[]) (SetAutoDetail.readStateArrayByMode(10, GpuSprite.field_c, param0, 1, -102, this.zonelists));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

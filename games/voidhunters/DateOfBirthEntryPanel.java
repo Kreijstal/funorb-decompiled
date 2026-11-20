@@ -33,7 +33,7 @@ final class DateOfBirthEntryPanel extends UiArrayContainer implements UiActionLi
         super(param0, param1, param2, param3, (UiRenderer) null);
         this.dateFields = new DateOfBirthTextFields(new GradientBorderTextStyle(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
         this.dateFields.setValidator(99, new DateOfBirthValidator());
-        this.continueButton = new UiFocusableComponent(tn.field_b, (UiListener) (this));
+        this.continueButton = new UiFocusableComponent(NativeModelIntValue.field_b, (UiListener) (this));
         this.children = new UiComponent[]{(UiComponent) ((Object) this.dateFields), (UiComponent) ((Object) this.continueButton)};
         this.continueButton.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
         this.refreshLayout(false);

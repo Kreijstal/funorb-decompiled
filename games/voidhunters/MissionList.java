@@ -76,7 +76,7 @@ final class MissionList implements DiffableState {
               stackIn_11_1 = -88;
               stackIn_12_2 = (var8 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_11_0, stackIn_11_1, stackIn_12_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
             return;
@@ -218,7 +218,7 @@ final class MissionList implements DiffableState {
           return;
         }
         try {
-          this.missions = (Mission[]) (SetAutoDetail.a(8, GetThrusterParticleLife.field_p, param0, 1, -92, this.missions));
+          this.missions = (Mission[]) (SetAutoDetail.readStateArrayByMode(8, GetThrusterParticleLife.field_p, param0, 1, -92, this.missions));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vpa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

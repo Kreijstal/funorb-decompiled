@@ -110,7 +110,7 @@ final class MissionControl implements DiffableState {
             SerializableGameState var4 = (SerializableGameState) null;
             this.copyTo((byte) -44, (SerializableGameState) null);
           }
-          this.events = (MissionEvent[]) (SetAutoDetail.a(8, GetExplosionPushMultiplier.field_o, param0, 1, -115, this.events));
+          this.events = (MissionEvent[]) (SetAutoDetail.readStateArrayByMode(8, GetExplosionPushMultiplier.field_o, param0, 1, -115, this.events));
           this.selectedEvent = param0.readBits(0, 32);
           this.selectedConditionOrAction = param0.readBits(0, 32);
           this.reservedIds = SetVariableActionFactory.readPackedIntArray((byte) 37, this.reservedIds, param0, 8);
@@ -142,7 +142,7 @@ final class MissionControl implements DiffableState {
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
               if (DateOfBirthInput.writeBoolean(var3, -126, var8 != null ? true : false)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var10, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var10, var8);
               }
             }
           }

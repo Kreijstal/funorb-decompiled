@@ -169,7 +169,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetLaserEnergyUsed.field_r = param1[157];
           MovingObjectFactory.field_b = param1[194];
           GetSalvoHoldable.field_p = param1[176];
-          ava.field_a = param1[129];
+          GpuModelFlagChecks.field_a = param1[129];
           CarouselConstantRequests.field_f = param1[49];
           ComponentBehaviourFactory.field_c = param1[193];
           Particle.field_p = param1[219];

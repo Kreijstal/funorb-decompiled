@@ -120,7 +120,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[160] = SetLaserAimarc.field_o;
         var2[210] = SetMissilesCooldown.field_p;
         var2[93] = SetAiFiringRangeUpshift.field_p;
-        var2[129] = ava.field_a;
+        var2[129] = GpuModelFlagChecks.field_a;
         var2[138] = PlayerReady.field_c;
         var2[121] = SetTorpedoFireForce.field_o;
         var2[95] = OpenGlIndexBuffer.field_j;

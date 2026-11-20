@@ -102,10 +102,10 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
               this.transitionToContent(new Under13AccountNoticePanel(this), -99);
               return;
             }
-            var5.addButton((byte) 107, tn.field_b, (UiListener) (this));
+            var5.addButton((byte) 107, NativeModelIntValue.field_b, (UiListener) (this));
           } else {
             if (this.ineligible) {
-              var5.addButton((byte) 98, tn.field_b, (UiListener) (this));
+              var5.addButton((byte) 98, NativeModelIntValue.field_b, (UiListener) (this));
             } else {
               if (param2.responseCode == 5) {
                 var5.addButton(-128, PhasedEnergyBeamWeaponDefinition.field_c, 11);

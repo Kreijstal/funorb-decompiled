@@ -2086,7 +2086,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("cont", 23100);
                 if (null != resourceBytes) {
-                  tn.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  NativeModelIntValue.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("continue_spectating", 23100);
                 if (null != resourceBytes) {

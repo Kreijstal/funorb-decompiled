@@ -35,7 +35,7 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         }
     }
 
-    final static IntrusiveDeque a(IntrusiveDeque param0, IntrusiveDeque param1, int param2, GameStateFactory param3, int param4) {
+    final static IntrusiveDeque copyStateDequeByMode(IntrusiveDeque param0, IntrusiveDeque param1, int param2, GameStateFactory param3, int param4) {
         Object stackIn_3_0 = null;
         IntrusiveDeque stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -87,14 +87,14 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
             var11 = var6;
             if (var9 != 1) {
               if (var9 == 2) {
-                ((tva) (var10)).a(var11, 29106);
+                ((AlternateSerializableGameState) (var10)).copyAlternateStateTo(var11, 29106);
               } else {
                 if (var9 != 3) {
                   var6 = (SerializableGameState) ((Object) param0.next((byte) 94));
                   var8 = (SerializableGameState) ((Object) param1.next((byte) 116));
                   continue;
                 }
-                ((sjb) (var10)).a(var11, (byte) 39);
+                ((ExtendedSerializableGameState) (var10)).copyExtendedStateTo(var11, (byte) 39);
               }
             } else {
               var10.copyTo((byte) 105, var11);
@@ -135,7 +135,7 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         field_p = null;
         if (param0 <= 94) {
           GameStateFactory var2 = (GameStateFactory) null;
-          SetBloomCoefficientPercentage.a((IntrusiveDeque) null, (IntrusiveDeque) null, 83, (GameStateFactory) null, 17);
+          SetBloomCoefficientPercentage.copyStateDequeByMode((IntrusiveDeque) null, (IntrusiveDeque) null, 83, (GameStateFactory) null, 17);
         }
     }
 

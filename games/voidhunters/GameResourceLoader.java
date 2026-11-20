@@ -313,7 +313,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           for (var7 = 0; var19.length > var7; var7++) {
             var19[var7] = 9;
           }
-          cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.quickChatArchive, var15, UiComponent.field_o, DebugSendable.field_d);
+          TeamObjectiveFormatter.initializeLobbyInterface(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.quickChatArchive, var15, UiComponent.field_o, DebugSendable.field_d);
           ShieldInfoPool.field_c = SetSniperCannonProjectiles.a(this.graphicsArchive, "lobby_game_logo", "basic", true);
           EdgeMagnitudeTextureOperation.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);

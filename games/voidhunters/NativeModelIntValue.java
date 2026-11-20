@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn {
+final class NativeModelIntValue {
     static String field_b;
-    int field_a;
+    int value;
 
     public static void clearSharedReferences(byte param0) {
         field_b = null;
@@ -12,7 +12,7 @@ final class tn {
         }
     }
 
-    private tn() throws Throwable {
+    private NativeModelIntValue() throws Throwable {
         throw new Error();
     }
 

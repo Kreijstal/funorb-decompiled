@@ -2176,8 +2176,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
               this.behaviour.readState(param0, false);
             }
           }
-          this.subcomponents = (ShipComponent[]) (SetAutoDetail.a(5, ArchiveTextureProvider.field_d, param0, 1, -85, this.subcomponents));
-          this.hardpoints = (Hardpoint[]) (SetAutoDetail.a(5, HardpointGeometry.hardpointFactory, param0, 1, -63, this.hardpoints));
+          this.subcomponents = (ShipComponent[]) (SetAutoDetail.readStateArrayByMode(5, ArchiveTextureProvider.field_d, param0, 1, -85, this.subcomponents));
+          this.hardpoints = (Hardpoint[]) (SetAutoDetail.readStateArrayByMode(5, HardpointGeometry.hardpointFactory, param0, 1, -63, this.hardpoints));
           this.readPackedAttributes(0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4122,7 +4122,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               stackIn_36_1 = 113;
               stackIn_37_2 = (var8 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_36_0, stackIn_36_1, stackIn_37_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
           }
@@ -4148,7 +4148,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               stackIn_51_1 = 53;
               stackIn_52_2 = (var8_ref != null);
               if (DateOfBirthInput.writeBoolean(stackIn_51_0, stackIn_51_1, stackIn_52_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime1, var8_ref);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3Lifetime1, var8_ref);
               }
               var10++;
             }

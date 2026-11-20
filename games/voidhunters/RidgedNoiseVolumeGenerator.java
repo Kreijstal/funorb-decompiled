@@ -215,7 +215,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
               var32 = 65280 & var30;
               var33 = (-16711864 & var28 * var31) >>> 8 | (16711880 & var28 * var32) >>> 8;
               var33 = var33 + 65793 * var29;
-              cma.a(var24, var26, false, var27, (16711422 & var33) >> 1, var23, var22, var25);
+              TeamObjectiveFormatter.drawHalfAlphaTriangle(var24, var26, false, var27, (16711422 & var33) >> 1, var23, var22, var25);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

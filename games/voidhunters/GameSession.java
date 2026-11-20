@@ -613,7 +613,7 @@ final class GameSession {
           stackIn_4_0 = (!CombatHelpText.field_c) ? 0 : 1;
           var6 = stackIn_4_0;
           if (OpenGlTexture1D.field_i &&
-            !GetWorldWidthUpshift.a(param1 + 15684)) {
+            !GetWorldWidthUpshift.isLegacyOpenGlSelected(param1 + 15684)) {
             var6 = 1;
           }
           if (var6 == 0) {

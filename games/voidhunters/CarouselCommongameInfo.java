@@ -185,7 +185,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
         try {
           var3 = (CarouselCommongameInfo) (param0);
-          var3.events = SetBloomCoefficientPercentage.a(var3.events, this.events, 1, IntrusiveDequeIterator.field_a, 77);
+          var3.events = SetBloomCoefficientPercentage.copyStateDequeByMode(var3.events, this.events, 1, IntrusiveDequeIterator.field_a, 77);
           var3.tick = this.tick;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -451,7 +451,7 @@ final class CarouselCommongameInfo implements DiffableState {
         try {
           this.events = new IntrusiveDeque();
           var8 = (SerializableGameState[]) null;
-          var9 = (CarouselEvent[]) (SetAutoDetail.a(12, IntrusiveDequeIterator.field_a, param0, 1, -71, (SerializableGameState[]) null));
+          var9 = (CarouselEvent[]) (SetAutoDetail.readStateArrayByMode(12, IntrusiveDequeIterator.field_a, param0, 1, -71, (SerializableGameState[]) null));
           var3 = var9;
           if (var3 != null) {
             for (var4 = 0; var9.length > var4; var4++) {
@@ -614,7 +614,7 @@ final class CarouselCommongameInfo implements DiffableState {
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
               if (DateOfBirthInput.writeBoolean(var3, 93, var8 != null ? true : false)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var11, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var11, var8);
               }
             }
           }

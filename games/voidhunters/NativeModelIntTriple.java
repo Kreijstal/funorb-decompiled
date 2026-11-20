@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qeb {
-    int field_d;
-    int field_a;
+final class NativeModelIntTriple {
+    int firstValue;
+    int secondValue;
     static String field_c;
-    int field_b;
+    int thirdValue;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 >= -115) {
@@ -14,7 +14,7 @@ final class qeb {
         field_c = null;
     }
 
-    private qeb() throws Throwable {
+    private NativeModelIntTriple() throws Throwable {
         throw new Error();
     }
 

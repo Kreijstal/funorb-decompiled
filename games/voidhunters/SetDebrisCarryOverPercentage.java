@@ -5,7 +5,7 @@ final class SetDebrisCarryOverPercentage extends ConsoleCommand {
     static String field_o;
     static int field_p;
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean supportsVertexBufferOption(int param0, byte param1, int param2) {
         if (param1 != 119) {
           SetDebrisCarryOverPercentage.clearSharedReferences((byte) 34);
           return false;

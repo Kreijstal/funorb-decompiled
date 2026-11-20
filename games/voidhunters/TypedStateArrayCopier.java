@@ -65,10 +65,10 @@ final class TypedStateArrayCopier {
               } else {
                 if (2 != var12) {
                   if (var12 == 3) {
-                    ((sjb) (var13)).a(var14, (byte) 39);
+                    ((ExtendedSerializableGameState) (var13)).copyExtendedStateTo(var14, (byte) 39);
                   }
                 } else {
-                  ((tva) (var13)).a(var14, 29106);
+                  ((AlternateSerializableGameState) (var13)).copyAlternateStateTo(var14, 29106);
                 }
               }
             }

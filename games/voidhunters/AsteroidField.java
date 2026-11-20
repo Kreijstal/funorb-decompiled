@@ -134,7 +134,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
               stackIn_14_1 = 68;
               stackIn_15_2 = (null != var8);
               if (DateOfBirthInput.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
               var7++;
             }
@@ -1513,7 +1513,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime244 = HuffmanCodec.fetchLocalizedResource((byte) -120, "VOTE_SHOWDOWN_DESC");
           if (null != var2Lifetime244) {
-            qeb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime244);
+            NativeModelIntTriple.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime244);
           }
           var2Lifetime245 = HuffmanCodec.fetchLocalizedResource((byte) -47, "VOTE_ARENA");
           if (var2Lifetime245 != null) {
@@ -1899,7 +1899,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           stackIn_7_1 = !(param1);
           this.selectForRevisionUpdates(stackIn_7_1);
-          this.asteroids = (Asteroid[]) (SetAutoDetail.a(10, OpenGlPbuffer.field_o, param0, 1, -70, this.asteroids));
+          this.asteroids = (Asteroid[]) (SetAutoDetail.readStateArrayByMode(10, OpenGlPbuffer.field_o, param0, 1, -70, this.asteroids));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

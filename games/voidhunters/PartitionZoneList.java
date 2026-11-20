@@ -79,7 +79,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.zones = (PartitionZone[]) (SetAutoDetail.a(8, PartitionZoneFactoryHolder.partitionZoneFactory, param0, 1, -76, this.zones));
+          this.zones = (PartitionZone[]) (SetAutoDetail.readStateArrayByMode(8, PartitionZoneFactoryHolder.partitionZoneFactory, param0, 1, -76, this.zones));
           if (param1) {
             this.markChanged(-8);
           }
@@ -143,7 +143,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
               stackIn_12_1 = 46;
               stackIn_13_2 = (var8 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
             return;

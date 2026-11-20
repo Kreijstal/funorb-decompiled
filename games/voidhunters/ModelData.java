@@ -4,7 +4,7 @@
 final class ModelData {
     short[] field_w;
     byte[] field_r;
-    qeb[] field_c;
+    NativeModelIntTriple[] nativeIntTriples;
     short[] field_t;
     int[] field_L;
     short[] field_u;
@@ -30,7 +30,7 @@ final class ModelData {
     int[] field_a;
     short[] faceVertexC;
     byte field_d;
-    tn[] field_l;
+    NativeModelIntValue[] nativeIntValues;
     int[] faceLabels;
     int[] vertexX;
     int[] field_F;

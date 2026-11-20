@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetDebrisThrowable extends ConsoleCommand {
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean requestsVertexBuffer(byte param0, int param1, int param2) {
         if (param0 >= -42) {
           return true;
         }
@@ -19,7 +19,7 @@ final class SetDebrisThrowable extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(12, 62, arguments[0].intValue(109));
           if (obfuscationGuard >= -119) {
-            SetDebrisThrowable.a((byte) 67, -35, -21);
+            SetDebrisThrowable.requestsVertexBuffer((byte) 67, -35, -21);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cma {
+final class TeamObjectiveFormatter {
     static volatile int field_a;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesVertexBufferOptionMask(int param0, int param1, int param2) {
         if (param2 != -22785) {
           return false;
         }
-        return SetDebrisCarryOverPercentage.a(param0, (byte) 119, param1) & SetHealthBarWidth.a(param0, false, param1);
+        return SetDebrisCarryOverPercentage.supportsVertexBufferOption(param0, (byte) 119, param1) & SetHealthBarWidth.requestsVertexBuffer(param0, false, param1);
     }
 
     final static String formatTeamObjective(String param0, String param1, String param2, byte param3) {
@@ -56,37 +56,37 @@ final class cma {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawHalfAlphaTriangle(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7) {
         int var9;
         var9 = VoidHunters.field_G;
         if (param7 <= param5) {
           if (param3 > param5) {
-            MapClearanceRectangleFactory.a(param3, 65, param4, param7, param0, param1, param6, SoftwareRasterizer2D.pixels, param5);
+            MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(param3, 65, param4, param7, param0, param1, param6, SoftwareRasterizer2D.pixels, param5);
           } else {
             if (param3 > param7) {
-              MapClearanceRectangleFactory.a(param5, -107, param4, param7, param0, param6, param1, SoftwareRasterizer2D.pixels, param3);
+              MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(param5, -107, param4, param7, param0, param6, param1, SoftwareRasterizer2D.pixels, param3);
             } else {
-              MapClearanceRectangleFactory.a(param5, -117, param4, param3, param1, param6, param0, SoftwareRasterizer2D.pixels, param7);
+              MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(param5, -117, param4, param3, param1, param6, param0, SoftwareRasterizer2D.pixels, param7);
             }
           }
         } else {
           if (param7 < param3) {
-            MapClearanceRectangleFactory.a(param3, 46, param4, param5, param6, param1, param0, SoftwareRasterizer2D.pixels, param7);
+            MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(param3, 46, param4, param5, param6, param1, param0, SoftwareRasterizer2D.pixels, param7);
           } else {
             if (param3 <= param5) {
-              MapClearanceRectangleFactory.a(param7, 61, param4, param3, param1, param0, param6, SoftwareRasterizer2D.pixels, param5);
+              MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(param7, 61, param4, param3, param1, param0, param6, SoftwareRasterizer2D.pixels, param5);
             } else {
-              MapClearanceRectangleFactory.a(param7, -99, param4, param5, param6, param0, param1, SoftwareRasterizer2D.pixels, param3);
+              MapClearanceRectangleFactory.drawSortedHalfAlphaTriangle(param7, -99, param4, param5, param6, param0, param1, SoftwareRasterizer2D.pixels, param3);
             }
           }
         }
         if (!param2) {
           return;
         }
-        cma.a(64, 30, false, -122, 108, -24, -111, 16);
+        TeamObjectiveFormatter.drawHalfAlphaTriangle(64, 30, false, -122, 108, -24, -111, 16);
     }
 
-    final static void a(ResourceArchive param0, Sprite[][] param1, int[] param2, boolean param3, byte param4, byte[] param5, String[][] param6, int[] param7, String[][] param8, int param9, Sprite[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, SoftwareIndexedSprite2D[] param14, byte[] param15, String[] param16) {
+    final static void initializeLobbyInterface(ResourceArchive param0, Sprite[][] param1, int[] param2, boolean param3, byte param4, byte[] param5, String[][] param6, int[] param7, String[][] param8, int param9, Sprite[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, SoftwareIndexedSprite2D[] param14, byte[] param15, String[] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -119,7 +119,7 @@ final class cma {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          GetWorldWidthUpshift.a((String[]) null, param5, param11, param13, param0, param1, param16, param12, param6, param15, param9, 1, param3, param7, 1, param2, param8, param10, param14);
+          GetWorldWidthUpshift.initializeLobbyInterface((String[]) null, param5, param11, param13, param0, param1, param16, param12, param6, param15, param9, 1, param3, param7, 1, param2, param8, param10, param14);
           if (param4 >= -68) {
             field_a = -108;
           }

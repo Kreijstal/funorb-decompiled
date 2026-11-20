@@ -55,7 +55,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isLegacyOpenGlSelected(int param0) {
         if (param0 != 70) {
           field_p = (Sprite) null;
           if (DateOfBirthInput.field_x == null) {
@@ -108,7 +108,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
         }
     }
 
-    final static void a(String[] args, byte[] param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4, Sprite[][] param5, String[] param6, int param7, String[][] param8, byte[] param9, int param10, int param11, boolean param12, int[] param13, int param14, int[] param15, String[][] param16, Sprite[][] param17, SoftwareIndexedSprite2D[] param18) {
+    final static void initializeLobbyInterface(String[] args, byte[] param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4, Sprite[][] param5, String[] param6, int param7, String[][] param8, byte[] param9, int param10, int param11, boolean param12, int[] param13, int param14, int[] param15, String[][] param16, Sprite[][] param17, SoftwareIndexedSprite2D[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -143,7 +143,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
         String[] var20 = null;
         try {
           var20 = (String[]) null;
-          SetBurstFireMaxEnergy.a((byte) 25, param15, param3, param4, param18, param13, param8, param2, param16, param1, param9, args, param17, param14, param5, param10, (String[]) null, param12, param7, param6);
+          SetBurstFireMaxEnergy.initializeLobbyInterface((byte) 25, param15, param3, param4, param18, param13, param8, param2, param16, param1, param9, args, param17, param14, param5, param10, (String[]) null, param12, param7, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

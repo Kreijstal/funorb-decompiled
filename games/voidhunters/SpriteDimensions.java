@@ -59,10 +59,10 @@ abstract class SpriteDimensions extends DualLinkNode {
                 var9.copyTo((byte) 124, var10);
               } else {
                 if (2 == var8) {
-                  ((tva) (var9)).a(var10, 29106);
+                  ((AlternateSerializableGameState) (var9)).copyAlternateStateTo(var10, 29106);
                 } else {
                   if (var8 == 3) {
-                    ((sjb) (var9)).a(var10, (byte) 39);
+                    ((ExtendedSerializableGameState) (var9)).copyExtendedStateTo(var10, (byte) 39);
                   }
                 }
               }

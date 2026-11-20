@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ava {
+final class GpuModelFlagChecks {
     static int field_a;
     private static String field_z;
 
-    final static boolean a(int param0, int param1, boolean param2) {
+    final static boolean matchesVertexDataMask(int param0, int param1, boolean param2) {
         if (param2) {
           return true;
         }

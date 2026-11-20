@@ -386,7 +386,7 @@ final class MissionState implements DiffableState {
               stackIn_12_1 = 80;
               stackIn_13_2 = (var8 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var10, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var10, var8);
               }
             }
           }
@@ -1032,7 +1032,7 @@ final class MissionState implements DiffableState {
           this.phaseChangeCountdown = param0.readBits(0, 32);
           this.phaseTimer = param0.readBits(0, 32);
           this.winner = param0.readBits(0, 32);
-          this.customVariables = (MissionVariable[]) (SetAutoDetail.a(8, SetUseTrails.field_p, param0, 1, -128, this.customVariables));
+          this.customVariables = (MissionVariable[]) (SetAutoDetail.readStateArrayByMode(8, SetUseTrails.field_p, param0, 1, -128, this.customVariables));
           if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (null == this.nextround) {
               this.nextround = new MissionGenerationData();

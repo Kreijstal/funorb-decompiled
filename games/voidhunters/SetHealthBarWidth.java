@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetHealthBarWidth extends ConsoleCommand {
-    final static boolean a(int param0, boolean param1, int param2) {
+    final static boolean requestsVertexBuffer(int param0, boolean param1, int param2) {
         if (!param1) {
           return (param2 & 2048) != 0 ? true : false;
         }

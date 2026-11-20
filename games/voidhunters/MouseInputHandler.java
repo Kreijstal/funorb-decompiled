@@ -132,7 +132,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != GetDebrisFoundInPairs.field_q) {
             OpenGlFramebuffer.field_b = 0;
-            cma.field_a = param0.getX();
+            TeamObjectiveFormatter.field_a = param0.getX();
             SetBombletSprayAimarc.field_p = param0.getY();
             MonotonicMillisClock.currentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {

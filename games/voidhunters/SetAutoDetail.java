@@ -5,7 +5,7 @@ final class SetAutoDetail extends ConsoleCommand {
     static int field_o;
     static int field_p;
 
-    final static SerializableGameState[] a(int param0, GameStateFactory param1, IsaacPacketBuffer param2, int param3, int param4, SerializableGameState[] param5) {
+    final static SerializableGameState[] readStateArrayByMode(int param0, GameStateFactory param1, IsaacPacketBuffer param2, int param3, int param4, SerializableGameState[] param5) {
         int var7 = 0;
         SerializableGameState[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -25,7 +25,7 @@ final class SetAutoDetail extends ConsoleCommand {
         var11 = VoidHunters.field_G;
         try {
           if (param4 >= -45) {
-            SetAutoDetail.a(-101, (GameStateFactory) null, (IsaacPacketBuffer) null, -50, 54, (SerializableGameState[]) null);
+            SetAutoDetail.readStateArrayByMode(-101, (GameStateFactory) null, (IsaacPacketBuffer) null, -50, 54, (SerializableGameState[]) null);
           }
           var6_int = param2.readBits(0, param0);
           if (0 != var6_int) {
@@ -47,10 +47,10 @@ final class SetAutoDetail extends ConsoleCommand {
                   var9.readState(var10, false);
                 }
                 if (2 == var8) {
-                  ((tva) (var9)).a(-81, var10);
+                  ((AlternateSerializableGameState) (var9)).readAlternateState(-81, var10);
                 }
                 if (var8 == 3) {
-                  ((sjb) (var9)).a(var10, 67);
+                  ((ExtendedSerializableGameState) (var9)).readExtendedState(var10, 67);
                 }
               }
             }

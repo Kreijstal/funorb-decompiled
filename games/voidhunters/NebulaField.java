@@ -100,7 +100,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
               stackIn_10_1 = -68;
               stackIn_11_2 = (var8 != null);
               if (DateOfBirthInput.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
-                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
+                GetComponentBreakingExplosionForceMultiplier.writeStateByMode(2, 1, var3, var8);
               }
             }
           }
@@ -215,7 +215,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
           if (param1) {
             NebulaField.acquireTemporaryObjective((byte) 76);
           }
-          this.nebulae = (Nebula[]) (SetAutoDetail.a(12, MachineGunWeaponDefinition.field_c, param0, 1, -65, this.nebulae));
+          this.nebulae = (Nebula[]) (SetAutoDetail.readStateArrayByMode(12, MachineGunWeaponDefinition.field_c, param0, 1, -65, this.nebulae));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

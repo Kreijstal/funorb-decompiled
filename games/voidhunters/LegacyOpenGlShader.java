@@ -19,7 +19,7 @@ final class LegacyOpenGlShader {
           VariableConditionFactory.field_c = MouseActivityState.changed;
           MouseActivityState.changed = false;
           SetDebrisPartitioned.field_o = AppletCookieReader.field_a;
-          Particle.field_H = cma.field_a;
+          Particle.field_H = TeamObjectiveFormatter.field_a;
           if (param0 != 1001) {
             return;
           }

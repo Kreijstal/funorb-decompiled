@@ -31,11 +31,11 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlMaterialEffect {
             return stackIn_2_0;
           }
           if (param2 == 2) {
-            stackIn_5_0 = ((tva) (param1)).a(true, (tva) (param0));
+            stackIn_5_0 = ((AlternateSerializableGameState) (param1)).differsFromAlternate(true, (AlternateSerializableGameState) (param0));
             return stackIn_5_0;
           }
           if (3 == param2) {
-            stackIn_9_0 = ((sjb) (param1)).a((sjb) (param0), -25725);
+            stackIn_9_0 = ((ExtendedSerializableGameState) (param1)).differsFromExtended((ExtendedSerializableGameState) (param0), -25725);
             return stackIn_9_0;
           }
           if (param3 >= -50) {

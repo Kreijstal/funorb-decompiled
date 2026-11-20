@@ -1103,8 +1103,8 @@ public final class VoidHunters extends NetworkGameClient {
         TeamShipComponentCondition.clearSharedReferences(-2404);
         LruNodeCache.clearSharedReferences(false);
         ProceduralTexture.clearSharedReferences(!param0 ? true : false);
-        qeb.clearSharedReferences((byte) -122);
-        tn.clearSharedReferences((byte) 110);
+        NativeModelIntTriple.clearSharedReferences((byte) -122);
+        NativeModelIntValue.clearSharedReferences((byte) 110);
         ModelFaceAttachment.clearSharedReferences((byte) 124);
         AwardVictoryToWinnerAction.clearSharedReferences(0);
         OneShotSound.clearSharedReferences(true);

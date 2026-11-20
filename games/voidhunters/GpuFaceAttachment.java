@@ -15,12 +15,12 @@ final class GpuFaceAttachment {
         SetSpecialOrderBoxWidth.a((byte) 91, param0);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesVertexBufferMask(int param0, int param1, int param2) {
         if (param0 == 14216) {
-          return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
+          return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | GpuModelFlagChecks.matchesVertexDataMask(param1, param2, false)) & SetDebrisThrowable.requestsVertexBuffer((byte) -49, param2, param1);
         }
-        GpuFaceAttachment.a(-124, 11, -116);
-        return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
+        GpuFaceAttachment.matchesVertexBufferMask(-124, 11, -116);
+        return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | GpuModelFlagChecks.matchesVertexDataMask(param1, param2, false)) & SetDebrisThrowable.requestsVertexBuffer((byte) -49, param2, param1);
     }
 
     final static int getArmageddonStartTick(byte param0, int param1) {

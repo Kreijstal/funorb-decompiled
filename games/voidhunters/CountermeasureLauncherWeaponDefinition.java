@@ -10,9 +10,9 @@ final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
     final int getAimSpeed(int param0) {
         if (param0 != 0) {
           this.getFiringSoundId(true);
-          return ava.field_a;
+          return GpuModelFlagChecks.field_a;
         }
-        return ava.field_a;
+        return GpuModelFlagChecks.field_a;
     }
 
     final int getAimArc(int param0) {

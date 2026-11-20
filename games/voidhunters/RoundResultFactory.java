@@ -4,7 +4,7 @@
 final class RoundResultFactory implements GameStateFactory {
     static QuickChatHelpWindow field_a;
 
-    final static void a(boolean param0, int param1, int param2, int param3, int[] param4) {
+    final static void blendHalfAlphaSpan(boolean param0, int param1, int param2, int param3, int[] param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
