@@ -26,26 +26,26 @@ final class pb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0.0f) {
-            stackIn_3_0 = param2.field_R;
+            stackIn_3_0 = param2.start;
           } else {
             stackIn_3_0 = param2.pointAt(false, param0);
           }
           var4 = stackIn_3_0;
           if (1.0f == param3) {
-            stackIn_6_0 = param2.field_P;
+            stackIn_6_0 = param2.end;
           } else {
             stackIn_6_0 = param2.pointAt(false, param3);
           }
           var5 = stackIn_6_0;
-          var6 = (int)((float)param2.field_Q + (float)(param2.field_M - param2.field_Q) * param0);
-          var7 = (int)((float)(param2.field_M - param2.field_Q) * param3 + (float)param2.field_Q);
-          var8 = param2.field_G + param0 * (-param2.field_G + param2.field_y);
+          var6 = (int)((float)param2.controlPathStartOffset + (float)(param2.controlPathEndOffset - param2.controlPathStartOffset) * param0);
+          var7 = (int)((float)(param2.controlPathEndOffset - param2.controlPathStartOffset) * param3 + (float)param2.controlPathStartOffset);
+          var8 = param2.blendStartAngle + param0 * (-param2.blendStartAngle + param2.blendEndAngle);
           var10 = 122 / ((-59 - param1) / 49);
-          var9 = param2.field_G + (param2.field_y - param2.field_G) * param3;
-          var11 = new StraightRoadSegment(var4, var5, param2.field_k, param2.field_O, param2.field_I, param2.field_N, param2.field_C, param2.field_K, param2.field_z, param2.field_L, param2.field_A, var6, var7, param2.field_w, param2.field_s, param2.field_m, param2.field_x, param2.field_t, param2.field_q, 0.0f, var8, var9);
-          var11.field_D = param2.field_D;
-          var11.field_B = param2.field_B;
-          var11.field_o = param2.field_o;
+          var9 = param2.blendStartAngle + (param2.blendEndAngle - param2.blendStartAngle) * param3;
+          var11 = new StraightRoadSegment(var4, var5, param2.layer, param2.leftRoadStartOffset, param2.rightRoadStartOffset, param2.leftRoadEndOffset, param2.rightRoadEndOffset, param2.leftCollisionStartOffset, param2.rightCollisionStartOffset, param2.leftCollisionEndOffset, param2.rightCollisionEndOffset, var6, var7, param2.field_w, param2.field_s, param2.field_m, param2.field_x, param2.field_t, param2.field_q, 0.0f, var8, var9);
+          var11.offsetDirectionX = param2.offsetDirectionX;
+          var11.offsetDirectionY = param2.offsetDirectionY;
+          var11.layerSlope = param2.layerSlope;
           stackIn_7_0 = var11;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

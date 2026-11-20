@@ -581,7 +581,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             IsaacPacketBuffer.field_p = new IsaacPacketBuffer(param3);
             DisplayNameForm.field_L = param11;
             ArchiveCatalog.field_n = param13;
-            na.field_s = param6;
+            PointLight.field_s = param6;
             hc.field_b = param1;
             OutlinedRoadStripRenderer.field_m = param10;
             ArchiveCatalog.field_b = param4;
@@ -589,13 +589,13 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               field_E = 98;
             }
             uj.field_f = param9;
-            ih.field_i = param8;
+            AchievementUnlockRequest.field_i = param8;
             bo.field_e = param5;
             oi.field_b = param0;
             DelegatingCanvas.field_f = param7;
-            if (null != na.field_s.field_a) {
+            if (null != PointLight.field_s.field_a) {
               try {
-                ao.field_c = new BufferedRandomAccessFile(na.field_s.field_a, 64, 0);
+                ao.field_c = new BufferedRandomAccessFile(PointLight.field_s.field_a, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

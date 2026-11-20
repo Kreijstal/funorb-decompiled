@@ -100,9 +100,9 @@ final class RotatedSpriteAsset {
           if (RaceSetupMenu.field_z == null) {
             RaceSetupMenu.field_z = "0";
           }
-          jk.field_r = param3.getParameter("overxachievements");
-          if (null == jk.field_r) {
-            jk.field_r = "0";
+          Particle.field_r = param3.getParameter("overxachievements");
+          if (null == Particle.field_r) {
+            Particle.field_r = "0";
           }
           var6 = param3.getParameter("currency");
           if (var6 == null) {

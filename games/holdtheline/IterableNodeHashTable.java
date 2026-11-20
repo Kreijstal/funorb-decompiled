@@ -82,31 +82,31 @@ final class IterableNodeHashTable implements Iterable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!param0.field_z) {
+          if (!param0.collidable) {
             return false;
           }
-          if (!param1.field_z) {
+          if (!param1.collidable) {
             return false;
           }
-          if (-param1.field_q + param0.field_q <= 1 &&
-            -1 <= -param1.field_q + param0.field_q) {
-            if ((param1.field_B + param0.field_B) * (param0.field_B + param1.field_B) < (-param0.position.y + param1.position.y) * (param1.position.y - param0.position.y) + (-param0.position.x + param1.position.x) * (-param0.position.x + param1.position.x)) {
+          if (-param1.layer + param0.layer <= 1 &&
+            -1 <= -param1.layer + param0.layer) {
+            if ((param1.collisionRadius + param0.collisionRadius) * (param0.collisionRadius + param1.collisionRadius) < (-param0.position.y + param1.position.y) * (param1.position.y - param0.position.y) + (-param0.position.x + param1.position.x) * (-param0.position.x + param1.position.x)) {
               return false;
             }
             if (param2 != 32758) {
               return true;
             }
-            if (param0.field_p &&
-              param1.field_p) {
-              stackIn_19_0 = l.a(0, param0.field_i, param1.field_k, param0.field_k, param0.direction, param1.field_i, param0.position, param1.direction, param1.position);
+            if (param0.rectangularCollision &&
+              param1.rectangularCollision) {
+              stackIn_19_0 = l.a(0, param0.halfWidth, param1.halfLength, param0.halfLength, param0.direction, param1.halfWidth, param0.position, param1.direction, param1.position);
               return stackIn_19_0;
             }
-            if (param0.field_p) {
-              stackIn_22_0 = ArchiveRequest.a(param1.position, param0.field_i, param0.position, param1.field_B, param0.direction, param0.field_k, 107);
+            if (param0.rectangularCollision) {
+              stackIn_22_0 = ArchiveRequest.a(param1.position, param0.halfWidth, param0.position, param1.collisionRadius, param0.direction, param0.halfLength, 107);
               return stackIn_22_0;
             }
-            if (param1.field_p) {
-              stackIn_27_0 = ArchiveRequest.a(param0.position, param1.field_i, param1.position, param0.field_B, param1.direction, param1.field_k, 109);
+            if (param1.rectangularCollision) {
+              stackIn_27_0 = ArchiveRequest.a(param0.position, param1.halfWidth, param1.position, param0.collisionRadius, param1.direction, param1.halfLength, 109);
               return stackIn_27_0;
             }
             return true;

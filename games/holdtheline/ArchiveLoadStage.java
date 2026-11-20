@@ -19,8 +19,8 @@ final class ArchiveLoadStage {
           return;
         }
         try {
-          na.field_p = param1;
-          vf.field_w = param4;
+          PointLight.field_p = param1;
+          ZombiePedestrian.field_w = param4;
           ContentTransitionDialog.field_bb = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

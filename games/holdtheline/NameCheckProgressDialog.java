@@ -176,7 +176,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
     }
 
     NameCheckProgressDialog(DialogLayer param0, AccountCreationForm param1) {
-        super(param0, DisplayNameForm.field_I, na.field_o, false, false);
+        super(param0, DisplayNameForm.field_I, PointLight.field_o, false, false);
         try {
           this.field_sb = param1;
         } catch (RuntimeException runtimeException) {

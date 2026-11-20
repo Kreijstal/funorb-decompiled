@@ -130,7 +130,7 @@ final class ma extends IntrusiveNode {
             BlobWriteRequest.field_j = Vector2i.field_c;
           }
           EntitySound.field_j = true;
-          wm.a(param1, false, -1);
+          TrackObject.switchMenu(param1, false, -1);
         } else {
           Vector2i.field_c = false;
           EntitySound.field_l = 4;

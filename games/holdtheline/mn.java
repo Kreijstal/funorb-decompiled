@@ -89,8 +89,8 @@ final class mn {
           var22 = o.a((byte) 7);
           var4 = var22;
           var5 = param0[-1 + param0.length];
-          var21 = var5.c(true);
-          var23 = var5.o(-14);
+          var21 = var5.getLeftRoadStart(true);
+          var23 = var5.getRightRoadStart(-14);
           var20.add(var21.x, (byte) 77);
           var20.add(var21.y, (byte) 104);
           var22.add(var23.x, (byte) 85);
@@ -109,9 +109,9 @@ final class mn {
             var16 = var14 / (float)var15;
             var17 = 1.0f / (float)var15;
             for (var18 = var17; 1.0f > var18; var18 = var18 + var17) {
-              var24 = var13.a(var18, 255);
+              var24 = var13.leftRoadEdgeAt(var18, 255);
               var6 = var24;
-              var25 = var13.a(var18, false);
+              var25 = var13.rightRoadEdgeAt(var18, false);
               var7 = var25;
               var3.add(var24.x, (byte) 110);
               var3.add(var24.y, (byte) 122);
@@ -119,7 +119,7 @@ final class mn {
               var11 = var11 - var16;
               var4.add(var25.y, (byte) 110);
               if (var11 < 0.0f) {
-                param1.drawRoadFill(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.toArray(-50), var13.field_k, var3.toArray(-90), (byte) 49);
+                param1.drawRoadFill(FullscreenFocusCanvas.a(var18, var13, 14, var18 - var17), var4.toArray(-50), var13.layer, var3.toArray(-90), (byte) 49);
                 var26 = o.a((byte) 51);
                 var3 = var26;
                 var27 = o.a((byte) 21);
@@ -131,15 +131,15 @@ final class mn {
                 var27.add(var25.y, (byte) 77);
               }
             }
-            var28 = var13.h(7560980);
+            var28 = var13.getLeftRoadEnd(7560980);
             var6Lifetime1 = var28;
-            var29 = var13.a((byte) 29);
+            var29 = var13.getRightRoadEnd((byte) 29);
             var7Lifetime1 = var29;
             var3.add(var28.x, (byte) 117);
             var3.add(var28.y, (byte) 66);
             var4.add(var29.x, (byte) 95);
             var4.add(var29.y, (byte) 121);
-            param1.drawRoadFill(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.toArray(-60), var13.field_k, var3.toArray(-127), (byte) 49);
+            param1.drawRoadFill(FullscreenFocusCanvas.a(1.0f, var13, 14, -var17 + var18), var4.toArray(-60), var13.layer, var3.toArray(-127), (byte) 49);
             var3 = o.a((byte) 17);
             var30 = o.a((byte) -128);
             var3.add(var6Lifetime1.x, (byte) 71);

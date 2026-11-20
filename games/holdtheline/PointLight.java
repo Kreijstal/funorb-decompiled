@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends IntrusiveNode {
-    int field_m;
+final class PointLight extends IntrusiveNode {
+    int layer;
     static boolean field_k;
-    boolean field_j;
+    boolean enabled;
     static PlatformTaskDispatcher field_s;
     static Sprite field_t;
-    int field_n;
+    int y;
     static SpriteSheetAsset field_q;
     static NineSlicePanel field_p;
-    int field_i;
-    int field_l;
+    int radius;
+    int x;
     static String field_o;
     static int[] field_r;
 
-    final static void a(int param0, ih param1, byte param2) {
+    final static void queueAchievementUnlock(int param0, AchievementUnlockRequest param1, byte param2) {
         try {
           AccountFormText.field_c.addLast((byte) -105, param1);
-          NanoTickClock.a(1, param0, param1);
+          NanoTickClock.sendAchievementUnlock(1, param0, param1);
           if (param2 != -79) {
-            na.clearSharedReferences(54);
+            PointLight.clearSharedReferences(54);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "na.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -39,13 +39,13 @@ final class na extends IntrusiveNode {
         }
     }
 
-    na(int param0, int param1, int param2, int param3, Sprite param4) {
+    PointLight(int param0, int param1, int param2, int param3, Sprite param4) {
         try {
-          this.field_l = param0;
-          this.field_j = false;
-          this.field_i = param3;
-          this.field_n = param1;
-          this.field_m = param2;
+          this.x = param0;
+          this.enabled = false;
+          this.radius = param3;
+          this.y = param1;
+          this.layer = param2;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "na.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

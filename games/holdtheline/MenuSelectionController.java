@@ -108,7 +108,7 @@ final class MenuSelectionController {
             if (ValidationIndicator.field_J != 0) {
               if (this.heldMouseButton == 0) {
                 if (!this.mouseSelection &&
-                  !na.field_k) {
+                  !PointLight.field_k) {
                   return;
                 }
                 if (param1 < 0) {
@@ -130,7 +130,7 @@ final class MenuSelectionController {
             if (RoadStripRenderer.field_f != 0) {
               if (this.heldMouseButton == 0) {
                 if (!this.mouseSelection &&
-                  !na.field_k) {
+                  !PointLight.field_k) {
                   return;
                 }
                 if (param1 < 0) {
@@ -154,7 +154,7 @@ final class MenuSelectionController {
               return;
             }
             if (!this.mouseSelection &&
-              !na.field_k) {
+              !PointLight.field_k) {
               return;
             }
             if (param1 < 0) {
@@ -186,7 +186,7 @@ final class MenuSelectionController {
           return;
         }
         if (!this.mouseSelection &&
-          !na.field_k) {
+          !PointLight.field_k) {
           return;
         }
         if (param1 < 0) {

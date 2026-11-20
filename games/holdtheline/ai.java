@@ -37,7 +37,7 @@ final class ai {
                 }
               }
             }
-            vf.field_v = true;
+            ZombiePedestrian.field_v = true;
           } catch (RuntimeException runtimeException) {
             throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }

@@ -156,10 +156,10 @@ final class qg {
         field_a = (String) null;
     }
 
-    final static jk a(int param0, int param1, int param2, int param3, int param4, IntrusiveDeque[] param5, int param6, int param7, int param8, int param9, byte param10) {
+    final static Particle a(int param0, int param1, int param2, int param3, int param4, IntrusiveDeque[] param5, int param6, int param7, int param8, int param9, byte param10) {
         int var11_int = 0;
         RuntimeException var11 = null;
-        jk stackIn_1_0 = null;
+        Particle stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

@@ -114,28 +114,28 @@ final class qn extends IntrusiveNode {
             NameAvailabilityResult.field_e = false;
             GrowableStringList.a(param0 - 7);
           }
-          if (3 == MusicPatchPcmStream.field_r.field_J) {
-            wm.a(param1, false, 0);
+          if (3 == MusicPatchPcmStream.field_r.gameMode) {
+            TrackObject.switchMenu(param1, false, 0);
             return;
           }
           OutlinedRoadStripRenderer.field_r = -1;
           if (DelegatingCanvas.field_d != 7) {
-            if (MusicPatchPcmStream.field_r.field_U &&
+            if (MusicPatchPcmStream.field_r.raceFinished &&
               !param2) {
               if (0 == DelegatingCanvas.field_d) {
                 CheckboxRenderer.field_x = 4;
                 for (var3_int = 0; var3_int < 4; var3_int++) {
                   var10 = MusicPatchPcmStream.field_r.vehicles[var3_int];
                   var12 = var10;
-                  if (MusicPatchPcmStream.field_r.field_B >= var12.field_bc) {
-                    if (var12.field_vb < var12.field_Ib) {
-                      stackIn_31_0 = var12.field_vb;
+                  if (MusicPatchPcmStream.field_r.lapLimit >= var12.lapsCompleted) {
+                    if (var12.courseProgress < var12.furthestCourseProgress) {
+                      stackIn_31_0 = var12.courseProgress;
                     } else {
-                      stackIn_31_0 = var12.field_Ib;
+                      stackIn_31_0 = var12.furthestCourseProgress;
                     }
                     var5 = stackIn_31_0;
                     var6 = cd.a(MusicPatchPcmStream.field_r.roadSegments, 1, var5);
-                    var7 = (-1.0f + ((float)var12.field_bc + var6)) / (float)MusicPatchPcmStream.field_r.field_B;
+                    var7 = (-1.0f + ((float)var12.lapsCompleted + var6)) / (float)MusicPatchPcmStream.field_r.lapLimit;
                     if (0.0f == var7) {
                       pe.field_g[var3_int] = -1;
                     } else {
@@ -148,51 +148,51 @@ final class qn extends IntrusiveNode {
                     pe.field_g[var3_int] = var10.field_Pb;
                   }
                 }
-                NetworkArchiveRequest.a(MusicPatchPcmStream.field_r.vehicles[0].field_R, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -126);
+                NetworkArchiveRequest.a(MusicPatchPcmStream.field_r.vehicles[0].racePosition, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -126);
               } else {
                 if (2 != DelegatingCanvas.field_d) {
                   throw new RuntimeException();
                 }
                 CheckboxRenderer.field_x = 5;
               }
-              wm.a(param1, false, 11);
+              TrackObject.switchMenu(param1, false, 11);
               return;
             }
             if (pj.b((byte) 121)) {
               if (0 == ClientException.field_c &&
                 !ad.field_a) {
-                wm.a(param1, false, 0);
+                TrackObject.switchMenu(param1, false, 0);
                 return;
               }
-              wm.a(param1, false, 9);
+              TrackObject.switchMenu(param1, false, 9);
             } else {
               if (ClientException.field_c == 0) {
-                wm.a(param1, false, 0);
+                TrackObject.switchMenu(param1, false, 0);
               } else {
-                wm.a(param1, false, 8);
+                TrackObject.switchMenu(param1, false, 8);
               }
             }
             return;
           }
           ((GameMenu) (l.field_a[3])).initializeChampionshipCarousel(0, StrongCacheEntry.field_w);
-          if (MusicPatchPcmStream.field_r.field_U &&
+          if (MusicPatchPcmStream.field_r.raceFinished &&
             !param2) {
-            NetworkArchiveRequest.a(MusicPatchPcmStream.field_r.vehicles[0].field_R, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -122);
+            NetworkArchiveRequest.a(MusicPatchPcmStream.field_r.vehicles[0].racePosition, StrongCacheEntry.field_w, LoginForm.field_P, MusicPatchPcmStream.field_r.field_ob, -122);
             for (var3_intLifetime1 = 0; var3_intLifetime1 < 4; var3_intLifetime1++) {
               var11 = MusicPatchPcmStream.field_r.vehicles[var3_intLifetime1];
               var13 = var11;
-              IntArrayReadRequest.field_j[var3_intLifetime1] = IntArrayReadRequest.field_j[var3_intLifetime1] + SingleChildWidget.field_C[var11.field_R];
-              if (var13.field_bc > MusicPatchPcmStream.field_r.field_B) {
+              IntArrayReadRequest.field_j[var3_intLifetime1] = IntArrayReadRequest.field_j[var3_intLifetime1] + SingleChildWidget.field_C[var11.racePosition];
+              if (var13.lapsCompleted > MusicPatchPcmStream.field_r.lapLimit) {
                 pe.field_g[var3_intLifetime1] = var11.field_Pb;
               } else {
-                if (!(var13.field_Ib > var13.field_vb)) {
-                  stackIn_59_0 = var13.field_Ib;
+                if (!(var13.furthestCourseProgress > var13.courseProgress)) {
+                  stackIn_59_0 = var13.furthestCourseProgress;
                 } else {
-                  stackIn_59_0 = var13.field_vb;
+                  stackIn_59_0 = var13.courseProgress;
                 }
                 var5Lifetime1 = stackIn_59_0;
                 var6Lifetime1 = cd.a(MusicPatchPcmStream.field_r.roadSegments, param0 ^ 6, var5Lifetime1);
-                var7Lifetime1 = (var6Lifetime1 + (float)var13.field_bc - 1.0f) / (float)MusicPatchPcmStream.field_r.field_B;
+                var7Lifetime1 = (var6Lifetime1 + (float)var13.lapsCompleted - 1.0f) / (float)MusicPatchPcmStream.field_r.lapLimit;
                 if (0.0f == var7Lifetime1) {
                   pe.field_g[var3_intLifetime1] = -1;
                 } else {
@@ -203,17 +203,17 @@ final class qn extends IntrusiveNode {
                 }
               }
             }
-            if (MusicPatchPcmStream.field_r.vehicles[0].field_R >= 2) {
+            if (MusicPatchPcmStream.field_r.vehicles[0].racePosition >= 2) {
               DropTargetWidget.a(3, (byte) 102, true);
               fieldTemp$0 = EntitySound.field_l - 1;
               EntitySound.field_l = EntitySound.field_l - 1;
               if (1 > fieldTemp$0) {
                 CheckboxRenderer.field_x = 6;
-                wm.a(param1, false, 11);
+                TrackObject.switchMenu(param1, false, 11);
               } else {
                 CheckboxRenderer.field_x = 1;
                 TextWidgetStyle.field_g = TextWidgetStyle.field_g - 1;
-                wm.a(param1, false, 10);
+                TrackObject.switchMenu(param1, false, 10);
               }
               return;
             }
@@ -266,25 +266,25 @@ final class qn extends IntrusiveNode {
             }
             if (CheckboxRenderer.field_x != 0 &&
               1 != CheckboxRenderer.field_x) {
-              wm.a(param1, false, 11);
+              TrackObject.switchMenu(param1, false, 11);
               return;
             }
-            wm.a(param1, false, 10);
+            TrackObject.switchMenu(param1, false, 10);
             return;
           }
           bn.a(1, param0 - 121);
           if (pj.b((byte) 102)) {
             if (0 == ClientException.field_c &&
               !ad.field_a) {
-              wm.a(param1, false, 12);
+              TrackObject.switchMenu(param1, false, 12);
               return;
             }
-            wm.a(param1, false, 9);
+            TrackObject.switchMenu(param1, false, 9);
           } else {
             if (0 != ClientException.field_c) {
-              wm.a(param1, false, 7);
+              TrackObject.switchMenu(param1, false, 7);
             } else {
-              wm.a(param1, false, 3);
+              TrackObject.switchMenu(param1, false, 3);
             }
           }
           return;

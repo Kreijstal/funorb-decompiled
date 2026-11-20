@@ -126,21 +126,21 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
           var21 = o.a((byte) 18);
           var7 = var21;
           var8 = param0[param1];
-          var20 = var8.k(255);
+          var20 = var8.getLeftCollisionStart(255);
           var9 = var20;
           if (param3 <= 103) {
             return;
           }
-          var22 = var8.n(3337);
+          var22 = var8.getRightCollisionStart(3337);
           var10 = var22;
           var19.add(var20.x, (byte) 67);
           var19.add(var20.y, (byte) 88);
           var21.add(var22.x, (byte) 94);
           var21.add(var22.y, (byte) 92);
-          var11 = var8.field_k;
+          var11 = var8.layer;
           for (var12 = param1; param5 > var12; var12++) {
             var13 = param0[var12];
-            if (var13.field_k != var11 &&
+            if (var13.layer != var11 &&
               param2) {
               param4.drawRoadFill(0.0f, var7.toArray(-92), var11, var6.toArray(-81), (byte) 49);
               var23 = o.a((byte) 29);
@@ -151,21 +151,21 @@ final class ValidatedTextField extends EditableTextField implements ValidatorPro
               var23.add(var9.y, (byte) 104);
               var24.add(var10.x, (byte) 100);
               var24.add(var10.y, (byte) 99);
-              var11 = var13.field_k;
+              var11 = var13.layer;
             }
             var14 = var13.length(50);
             var15 = (int)(var14 / 5.0f) + 1;
             var16 = 1.0f / (float)var15;
             for (var17 = var16; 1.0f > var17; var17 = var17 + var16) {
-              var25 = var13.c(var17, 109);
-              var26 = var13.a(-851, var17);
+              var25 = var13.leftCollisionEdgeAt(var17, 109);
+              var26 = var13.rightCollisionEdgeAt(-851, var17);
               var6.add(var25.x, (byte) 123);
               var6.add(var25.y, (byte) 123);
               var7.add(var26.x, (byte) 83);
               var7.add(var26.y, (byte) 93);
             }
-            var27 = var13.l(8421504);
-            var28 = var13.m(-14);
+            var27 = var13.getLeftCollisionEnd(8421504);
+            var28 = var13.getRightCollisionEnd(-14);
             var6.add(var27.x, (byte) 101);
             var6.add(var27.y, (byte) 67);
             var7.add(var28.x, (byte) 95);

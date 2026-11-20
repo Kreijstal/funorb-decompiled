@@ -49,7 +49,7 @@ final class GrowableObjectList {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = StraightRoadSegment.field_E[LoginChoicePanel.a((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var22);
+            var1[var2] = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var22);
           } else {
             var15 = TrackCurve.field_i[var2];
             var11 = var15;
@@ -61,7 +61,7 @@ final class GrowableObjectList {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = kc.a(LoginChoicePanel.a(-16777216, var15[var7] << 24), StraightRoadSegment.field_E[LoginChoicePanel.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var17));
           }
         }
         tk.clearDecodedSpriteSheet(false);

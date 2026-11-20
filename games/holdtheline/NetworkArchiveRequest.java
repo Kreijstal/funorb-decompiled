@@ -114,9 +114,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               IsaacPacketBuffer.field_p.backpatchShortLength(-29190, -var10 + IsaacPacketBuffer.field_p.position);
             }
             qn.a(-1, 0);
-            d.field_f = wm.field_U;
+            d.field_f = TrackObject.field_U;
           }
-          if (wm.field_U == d.field_f &&
+          if (TrackObject.field_U == d.field_f &&
             hi.readServerBytes(1, (byte) 40)) {
             var9Lifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -56);
             RoadStripRenderer.field_e.position = 0;
@@ -126,7 +126,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               d.field_f = TutorialAction.field_f;
             } else {
               if (248 == var9Lifetime1) {
-                RaceVehicle.a(-1848651292, GameKeyHandler.a(106));
+                RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.a(106));
                 um.field_b = LabeledField.field_N;
                 r.a(-28036);
                 uk.field_e = false;

@@ -3,24 +3,24 @@
  */
 import java.io.*;
 
-final class jk extends IntrusiveNode {
-    private int field_n;
-    private int field_s;
-    int field_i;
+final class Particle extends IntrusiveNode {
+    private int velocityY;
+    private int alphaStep;
+    int lifetime;
     static RotatedSpriteSheetAsset field_p;
-    int field_o;
+    int color;
     static String field_r;
-    private int field_m;
-    int field_q;
-    private int field_j;
-    int field_t;
-    int field_u;
-    int field_k;
+    private int radiusStep;
+    int alpha;
+    private int velocityX;
+    int fixedX;
+    int fixedRadius;
+    int fixedY;
     static int[] field_l;
 
-    final void a(byte param0) {
+    final void recycle(byte param0) {
         if (param0 >= -4) {
-          this.field_i = -41;
+          this.lifetime = -41;
           this.unlink(0);
           RasterBuffer.field_e.addLast((byte) -112, (IntrusiveNode) (this));
           return;
@@ -29,7 +29,7 @@ final class jk extends IntrusiveNode {
         RasterBuffer.field_e.addLast((byte) -112, (IntrusiveNode) (this));
     }
 
-    final static void a(int param0) {
+    final static void closeCacheResources(int param0) {
         try {
           int var1_int = 0;
           Throwable decompiledCaughtException = null;
@@ -66,7 +66,7 @@ final class jk extends IntrusiveNode {
               }
             }
             if (param0 != 27370) {
-              jk.a((ResourceArchive) null, -66);
+              Particle.loadLogoModels((ResourceArchive) null, -66);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -81,14 +81,14 @@ final class jk extends IntrusiveNode {
         }
     }
 
-    final void f(int param0) {
-        this.field_u = this.field_u + this.field_m;
-        this.field_t = this.field_t + this.field_j;
-        this.field_i = this.field_i - 1;
-        this.field_k = this.field_k + this.field_n;
-        this.field_q = this.field_q + this.field_s;
+    final void update(int param0) {
+        this.fixedRadius = this.fixedRadius + this.radiusStep;
+        this.fixedX = this.fixedX + this.velocityX;
+        this.lifetime = this.lifetime - 1;
+        this.fixedY = this.fixedY + this.velocityY;
+        this.alpha = this.alpha + this.alphaStep;
         if (param0 >= -56) {
-          this.field_k = 46;
+          this.fixedY = 46;
         }
     }
 
@@ -96,14 +96,14 @@ final class jk extends IntrusiveNode {
         field_p = null;
         field_r = null;
         if (param0 != 1288) {
-          jk.a(27);
+          Particle.closeCacheResources(27);
           field_l = null;
           return;
         }
         field_l = null;
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadLogoModels(ResourceArchive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
@@ -161,22 +161,22 @@ final class jk extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
-        this.field_k = param2 << 10;
-        this.field_u = param8 << 10;
-        this.field_m = param0;
+    final void initialize(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
+        this.fixedY = param2 << 10;
+        this.fixedRadius = param8 << 10;
+        this.radiusStep = param0;
         int var12 = 105 / ((-81 - param5) / 39);
-        this.field_t = param6 << 10;
-        this.field_i = param1;
-        this.field_s = param10;
-        this.field_o = param7;
-        this.field_n = param3;
-        this.field_j = param4;
-        this.field_q = param9 << 2;
+        this.fixedX = param6 << 10;
+        this.lifetime = param1;
+        this.alphaStep = param10;
+        this.color = param7;
+        this.velocityY = param3;
+        this.velocityX = param4;
+        this.alpha = param9 << 2;
     }
 
-    jk(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        this.a(param7, param4, param1, param3, param2, (byte) 79, param0, param5, param6, param8, param9);
+    Particle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        this.initialize(param7, param4, param1, param3, param2, (byte) 79, param0, param5, param6, param8, param9);
     }
 
     static {

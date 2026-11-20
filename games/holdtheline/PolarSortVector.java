@@ -17,7 +17,7 @@ final class PolarSortVector implements SortableValue {
         }
         co.a(param0);
         CachedTextLayout.b(true);
-        jk.a(27370);
+        Particle.closeCacheResources(27370);
         if (cm.a(-2043140287)) {
           IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, 1);
           qn.a(0, 0);

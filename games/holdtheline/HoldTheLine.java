@@ -120,15 +120,15 @@ public final class HoldTheLine extends NetworkGameClient {
           ClientTextResources.clearSharedReferences(true);
           d.clearSharedReferences(119);
           RaceVehicle.clearSharedReferences(param0 ^ -129);
-          wm.clearSharedReferences(-20668);
-          vf.clearSharedReferences(127);
-          na.clearSharedReferences(param0 ^ -200);
+          TrackObject.clearSharedReferences(-20668);
+          ZombiePedestrian.clearSharedReferences(127);
+          PointLight.clearSharedReferences(param0 ^ -200);
           kc.clearSharedReferences(true);
           oi.clearSharedReferences((byte) 114);
           IsaacRandom.clearSharedReferences(28820);
           FullscreenDisplayMode.clearSharedReferences((byte) -92);
           SpriteState.clearSharedReferences(-13503);
-          jk.clearSharedReferences(1288);
+          Particle.clearSharedReferences(1288);
           AudioOutput.clearSharedReferences();
           MidiPcmStream.clearSharedReferences((byte) -104);
           hk.clearSharedReferences(-67);
@@ -274,7 +274,7 @@ public final class HoldTheLine extends NetworkGameClient {
           SoundPlayback.clearSharedReferences(param0);
           ArchiveLoadStage.clearSharedReferences((byte) 114);
           ma.clearSharedReferences((byte) -85);
-          ih.clearSharedReferences((byte) 119);
+          AchievementUnlockRequest.clearSharedReferences((byte) 119);
           BlobReadRequest.clearSharedReferences((byte) 89);
           BlobWriteRequest.clearSharedReferences(381);
           TutorialCalloutAnchor.clearSharedReferences((byte) 112);
@@ -499,7 +499,7 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           if (null != MidiPcmStream.field_U &&
             MidiPcmStream.field_U.field_a) {
-            RaceWorld.b(false);
+            RaceWorld.openPauseMenu(false);
             AgeValidator.a(-29486, false);
           }
           if (LoginForm.field_G == 2) {
@@ -508,7 +508,7 @@ public final class HoldTheLine extends NetworkGameClient {
             }
             LoginForm.field_G = 3;
           }
-          if (!vf.field_v &&
+          if (!ZombiePedestrian.field_v &&
             of.a(-969) &&
             null != RaceSetupMenu.field_y.key) {
             ai.loadEncryptedCourses(NetworkArchiveRequest.field_y, RaceSetupMenu.field_y.key, -106);
@@ -789,7 +789,7 @@ public final class HoldTheLine extends NetworkGameClient {
         try {
           GameKeyHandler.a((byte) -105, 50);
           if (!pj.b((byte) 107)) {
-            RoadSegment.a(of.a(-969), (byte) 97);
+            RoadSegment.setAlternateMenuItems(of.a(-969), (byte) 97);
           }
           OutlinedRoadStripRenderer.field_r = -1;
           LoginCredentialType.field_c = false;

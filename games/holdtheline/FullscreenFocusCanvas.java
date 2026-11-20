@@ -102,7 +102,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_k != 0) {
+          if (param1.layer != 0) {
             stackIn_3_0 = 0.0f;
             return stackIn_3_0;
           }
@@ -113,7 +113,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var5 = param1.pointAt(false, param0);
           var6 = (float)(var5.x - var13.x);
           var7 = (float)(var5.y - var13.y);
-          var8 = (-param3 + param0) * param1.length(param2 ^ 60) * param1.field_o;
+          var8 = (-param3 + param0) * param1.length(param2 ^ 60) * param1.layerSlope;
           var9 = var8 * -var6;
           var10 = -var7 * var8;
           var11 = var7 * var7 + var6 * var6;

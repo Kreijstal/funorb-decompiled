@@ -18,8 +18,8 @@ final class ri {
           return;
         }
         try {
-          if (vf.field_l != null) {
-            vf.field_l.field_H.a(param1, (byte) 43);
+          if (ZombiePedestrian.field_l != null) {
+            ZombiePedestrian.field_l.field_H.a(param1, (byte) 43);
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

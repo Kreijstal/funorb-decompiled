@@ -260,12 +260,12 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_float = param3.field_E + (param3.field_I - param3.field_E) * param0;
-          var5 = param3.field_E + (-param3.field_E + param3.field_I) * param2;
-          var6 = new CurvedRoadSegment(param3.field_U, param3.field_z, var4_float, var5, param3.field_k, param3.field_N, param3.field_B, param3.field_P, param3.field_L, param3.field_F, param3.field_Q, param3.field_H, param3.field_w, param3.field_s, param3.field_m, param3.field_x, param3.field_t, param3.field_q);
-          var6.field_A = (param3.field_K - param3.field_A) * param0 + param3.field_A;
-          var6.field_o = param3.field_o;
-          var6.field_K = (-param3.field_A + param3.field_K) * param2 + param3.field_A;
+          var4_float = param3.startAngle + (param3.endAngle - param3.startAngle) * param0;
+          var5 = param3.startAngle + (-param3.startAngle + param3.endAngle) * param2;
+          var6 = new CurvedRoadSegment(param3.center, param3.radius, var4_float, var5, param3.layer, param3.leftRoadOffset, param3.rightRoadOffset, param3.leftCollisionOffset, param3.rightCollisionOffset, param3.controlPathStart, param3.controlPathEnd, param3.controlPathControl, param3.field_w, param3.field_s, param3.field_m, param3.field_x, param3.field_t, param3.field_q);
+          var6.controlPathStartParameter = (param3.controlPathEndParameter - param3.controlPathStartParameter) * param0 + param3.controlPathStartParameter;
+          var6.layerSlope = param3.layerSlope;
+          var6.controlPathEndParameter = (-param3.controlPathStartParameter + param3.controlPathEndParameter) * param2 + param3.controlPathStartParameter;
           if (param1 == -18895) {
             stackIn_4_0 = var6;
             return stackIn_4_0;

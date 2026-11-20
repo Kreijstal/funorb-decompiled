@@ -263,20 +263,20 @@ final class NanoTickClock extends TickClock {
             var8Lifetime1 = -(var7Lifetime1 >> 1) + field_i;
             if (0 <= var4) {
               if (var4 == TextFieldRenderer.field_q.selectedIndex) {
-                stackIn_45_0 = na.field_p;
+                stackIn_45_0 = PointLight.field_p;
               } else {
                 stackIn_45_0 = Point2i.field_e;
               }
               var9 = stackIn_45_0;
               var1_int = var1_int + ContentTransitionDialog.field_bb;
               if (var9 != null) {
-                var9.draw(var1_int, TickClock.field_b + (vf.field_w << 1), -51, (DropTargetWidget.field_G << 1) + var7Lifetime1, -DropTargetWidget.field_G + var8Lifetime1);
+                var9.draw(var1_int, TickClock.field_b + (ZombiePedestrian.field_w << 1), -51, (DropTargetWidget.field_G << 1) + var7Lifetime1, -DropTargetWidget.field_G + var8Lifetime1);
               }
-              var1_int = var1_int + vf.field_w;
+              var1_int = var1_int + ZombiePedestrian.field_w;
             }
             if (0 <= var4) {
               q.field_a.draw(var6, var8Lifetime1, var1_int + ClientTextResources.field_b, var5, -1);
-              var1_int = var1_int + (TickClock.field_b + vf.field_w + ContentTransitionDialog.field_bb);
+              var1_int = var1_int + (TickClock.field_b + ZombiePedestrian.field_w + ContentTransitionDialog.field_bb);
             } else {
               CheckboxWidget.field_G.draw(var6, var8Lifetime1, var1_int + ViewportSizingController.field_i, var5, -1);
               var1_int = var1_int + CurvedRoadSegment.field_M;
@@ -302,7 +302,7 @@ final class NanoTickClock extends TickClock {
         var6.draw(param4, param2);
     }
 
-    final static void a(int param0, int param1, ih param2) {
+    final static void sendAchievementUnlock(int param0, int param1, AchievementUnlockRequest param2) {
         IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -311,8 +311,8 @@ final class NanoTickClock extends TickClock {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(111, param0);
-          var5.writeByte(111, param2.field_r);
-          var5.writeByte(111, param2.field_s);
+          var5.writeByte(111, param2.achievementId);
+          var5.writeByte(111, param2.value);
           var5.writeInt((byte) -58, param2.field_l);
           var5.writeInt((byte) -58, param2.field_q);
           var5.writeInt((byte) -58, param2.field_k);

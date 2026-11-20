@@ -3,17 +3,17 @@
  */
 import java.io.*;
 
-final class ih extends IntrusiveNode {
+final class AchievementUnlockRequest extends IntrusiveNode {
     static int field_p;
     static IntrusiveDeque field_n;
     static IntrusiveDeque field_j;
     static int field_o;
-    int field_r;
+    int achievementId;
     int field_l;
     static int field_m;
     int field_k;
     static Sprite[] field_t;
-    int field_s;
+    int value;
     int field_u;
     int field_q;
     static long field_i;
@@ -22,7 +22,7 @@ final class ih extends IntrusiveNode {
         DialWidget.field_I = param3;
         LoginCredentials.field_c = param2;
         if (param0 != 14893) {
-          ih.a(-62, -61, 42, 74);
+          AchievementUnlockRequest.a(-62, -61, 42, 74);
         }
         ge.field_b = param1;
     }
@@ -36,7 +36,7 @@ final class ih extends IntrusiveNode {
         field_t = null;
     }
 
-    final static String a(Throwable param0, int param1) throws IOException {
+    final static String formatCompactStackTrace(Throwable param0, int param1) throws IOException {
         String var2;
         PrintWriter var4;
         String var5;
@@ -157,9 +157,9 @@ final class ih extends IntrusiveNode {
         return var2.toString();
     }
 
-    ih(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_r = param0;
-        this.field_s = param1;
+    AchievementUnlockRequest(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.achievementId = param0;
+        this.value = param1;
         this.field_q = param3;
         this.field_l = param2;
         this.field_u = param5;

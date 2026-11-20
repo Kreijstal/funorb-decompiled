@@ -65,11 +65,11 @@ final class StereoMusicSample {
           }
           if (param2 instanceof TrackBoundary) {
             var3_ref = (TrackBoundary) (param2);
-            stackIn_6_0 = new TrackBoundary(var3_ref.start, var3_ref.pointAt(false, param1), param2.field_k, param2.field_p, param2.field_q);
+            stackIn_6_0 = new TrackBoundary(var3_ref.start, var3_ref.pointAt(false, param1), param2.layer, param2.field_p, param2.field_q);
             return (BoundaryCurve) ((Object) stackIn_6_0);
           }
           var3 = (ArcTrackBoundary) (param2);
-          stackIn_4_0 = new ArcTrackBoundary(var3.center, var3.radius, var3.startAngle, var3.startAngle + (var3.endAngle - var3.startAngle) * param1, param2.field_k, param2.field_p, param2.field_q);
+          stackIn_4_0 = new ArcTrackBoundary(var3.center, var3.radius, var3.startAngle, var3.startAngle + (var3.endAngle - var3.startAngle) * param1, param2.layer, param2.field_p, param2.field_q);
           return (BoundaryCurve) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

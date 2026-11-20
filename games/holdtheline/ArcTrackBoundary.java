@@ -35,7 +35,7 @@ final class ArcTrackBoundary extends BoundaryCurve {
 
     final BoundaryCurve reversed(boolean param0) {
         if (!param0) {
-          return (BoundaryCurve) ((Object) new ArcTrackBoundary(this.center, this.radius, this.endAngle, this.startAngle, this.field_k, this.field_p, this.field_q));
+          return (BoundaryCurve) ((Object) new ArcTrackBoundary(this.center, this.radius, this.endAngle, this.startAngle, this.layer, this.field_p, this.field_q));
         }
         return (BoundaryCurve) null;
     }
@@ -134,7 +134,7 @@ final class ArcTrackBoundary extends BoundaryCurve {
           this.startAngle = param2;
           this.field_p = param5 ? true : false;
           this.endAngle = param3;
-          this.field_k = param4;
+          this.layer = param4;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

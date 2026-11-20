@@ -82,9 +82,9 @@ final class DialWidget extends TextButton {
     final static int a(byte param0) {
         if (param0 <= 36) {
           field_H = (QuickChatPhraseCache) null;
-          return -NanoTickClock.field_d + vf.field_t;
+          return -NanoTickClock.field_d + ZombiePedestrian.field_t;
         }
-        return -NanoTickClock.field_d + vf.field_t;
+        return -NanoTickClock.field_d + ZombiePedestrian.field_t;
     }
 
     static {

@@ -41,8 +41,8 @@ final class MatchingTextValidator extends TextFieldValidator {
         var16 = null;
         var13 = HoldTheLine.field_D;
         try {
-          if (param1.field_k - param5.field_k <= 1 &&
-            param1.field_k - param5.field_k >= -1) {
+          if (param1.layer - param5.layer <= 1 &&
+            param1.layer - param5.layer >= -1) {
             if (param1 instanceof TrackBoundary) {
               var15 = (TrackBoundary) (param1);
               if (param5 instanceof TrackBoundary) {
@@ -145,7 +145,7 @@ final class MatchingTextValidator extends TextFieldValidator {
 
     final static void a(int param0, boolean param1, int param2, boolean param3) {
         if (!pj.b((byte) 80)) {
-          wm.a(param3, false, param0);
+          TrackObject.switchMenu(param3, false, param0);
           return;
         }
         ByteStorage.field_b = param0;
@@ -271,7 +271,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     final static void a(boolean param0) {
-        RaceVehicle.a(-1848651292, GameKeyHandler.a(95));
+        RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.a(95));
         if (!param0) {
           MatchingTextValidator.clearSharedReferences(33);
         }
@@ -324,33 +324,33 @@ final class MatchingTextValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!param1.field_z) {
+          if (!param1.collidable) {
             return false;
           }
-          if (!param2.field_z) {
+          if (!param2.collidable) {
             return false;
           }
           if (param0 >= -60) {
             return false;
           }
-          if (param1.field_q - param2.field_q <= 1 &&
-            param1.field_q - param2.field_q >= -1) {
-            if ((param2.position.y - param1.position.y) * (param2.position.y - param1.position.y) + (-param1.position.x + param2.position.x) * (-param1.position.x + param2.position.x) > (param2.field_B + param1.field_B) * (param2.field_B + param1.field_B)) {
+          if (param1.layer - param2.layer <= 1 &&
+            param1.layer - param2.layer >= -1) {
+            if ((param2.position.y - param1.position.y) * (param2.position.y - param1.position.y) + (-param1.position.x + param2.position.x) * (-param1.position.x + param2.position.x) > (param2.collisionRadius + param1.collisionRadius) * (param2.collisionRadius + param1.collisionRadius)) {
               return false;
             }
-            if (param1.field_p &&
-              param2.field_p) {
-              stackIn_19_0 = MouseWheelInput.a(param1.direction, param1.position, param2.field_i, param1.field_k, param2.direction, param2.field_k, param1.field_i, param2.position, 7527);
+            if (param1.rectangularCollision &&
+              param2.rectangularCollision) {
+              stackIn_19_0 = MouseWheelInput.a(param1.direction, param1.position, param2.halfWidth, param1.halfLength, param2.direction, param2.halfLength, param1.halfWidth, param2.position, 7527);
               return stackIn_19_0;
             }
-            if (param1.field_p) {
-              stackIn_27_0 = MidiNote.a(param2.field_B, true, param1.field_i, param2.position, param1.position, param1.field_k, param1.direction);
+            if (param1.rectangularCollision) {
+              stackIn_27_0 = MidiNote.a(param2.collisionRadius, true, param1.halfWidth, param2.position, param1.position, param1.halfLength, param1.direction);
               return stackIn_27_0;
             }
-            if (!param2.field_p) {
+            if (!param2.rectangularCollision) {
               return true;
             }
-            stackIn_23_0 = ArchiveRequest.a(param1.position, param2.field_i, param2.position, param1.field_B, param2.direction, param2.field_k, 110);
+            stackIn_23_0 = ArchiveRequest.a(param1.position, param2.halfWidth, param2.position, param1.collisionRadius, param2.direction, param2.halfLength, 110);
             return stackIn_23_0;
           }
           return false;

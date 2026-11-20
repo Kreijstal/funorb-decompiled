@@ -61,11 +61,11 @@ final class eg {
         RuntimeException var21 = null;
         try {
           WhirlpoolHasher.a(param10, param9, (byte) -112, param2);
-          StraightRoadSegment.a(param3, param7, param17, param0, (byte) -96);
+          StraightRoadSegment.setUiFontMetrics(param3, param7, param17, param0, (byte) -96);
           WhirlpoolHasher.a(-76, param15, param13);
           ArchiveLoadStage.a(param18, param12, param16, 19362, param8, param14);
           MenuSelectionController.a(param1, param20, param4, 0);
-          ih.a(14893, param6, param19, param5);
+          AchievementUnlockRequest.a(14893, param6, param19, param5);
           if (param11 != 2) {
             field_b = 37;
           }
@@ -188,7 +188,7 @@ final class eg {
         int var3 = HoldTheLine.field_D;
         IndexedSprite[] var1 = new IndexedSprite[NineSlicePanel.field_d];
         for (var2 = 0; var2 < NineSlicePanel.field_d; var2++) {
-          var1[var2] = new IndexedSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], IterableSecondaryNodeDeque.field_e[var2], StraightRoadSegment.field_E);
+          var1[var2] = new IndexedSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], IterableSecondaryNodeDeque.field_e[var2], StraightRoadSegment.field_E);
         }
         tk.clearDecodedSpriteSheet(param0);
         if (param0) {

@@ -94,8 +94,8 @@ final class oc {
         }
     }
 
-    final static void a(int param0, String param1) {
-        RaceWorld.field_Y = param1;
+    final static void showNavigationMenu(int param0, String param1) {
+        RaceWorld.navigationUrl = param1;
         if (param0 != 16711680) {
           return;
         }

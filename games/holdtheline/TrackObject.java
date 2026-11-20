@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm extends MovingEntity {
-    int field_P;
-    private int field_K;
-    private int field_Q;
-    int field_T;
-    int field_J;
-    private int field_M;
+final class TrackObject extends MovingEntity {
+    int transitionOffsetX;
+    private int animationFrameCount;
+    private int spriteIndex;
+    int transitionLayer;
+    int flags;
+    private int homingDelay;
     static ll field_U;
-    int field_F;
-    int field_D;
-    private int field_I;
-    Sprite field_H;
-    int field_C;
-    private RaceVehicle field_G;
-    private int field_R;
-    private int[] field_S;
-    TrackObjectDefinition field_E;
-    int field_O;
+    int transitionY;
+    int transitionX;
+    private int animationFrame;
+    Sprite sprite;
+    int transitionTicks;
+    private RaceVehicle homingTarget;
+    private int frameTicks;
+    private int[] animation;
+    TrackObjectDefinition definition;
+    int transitionOffsetY;
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void switchMenu(boolean param0, boolean param1, int param2) {
         int var4;
         var4 = HoldTheLine.field_D;
         if (param1) {
@@ -52,7 +52,7 @@ final class wm extends MovingEntity {
         }
     }
 
-    final boolean a(int param0, Point2i param1) {
+    final boolean containsPoint(int param0, Point2i param1) {
         float var3_float = 0.0f;
         RuntimeException var3 = null;
         float var4 = 0.0f;
@@ -63,24 +63,24 @@ final class wm extends MovingEntity {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_E.rectangularCollision) {
+          if (this.definition.rectangularCollision) {
             var3_float = (float)(-this.position.x + param1.x);
             var4 = (float)(param1.y - this.position.y);
             var5 = this.direction.y * var4 + this.direction.x * var3_float;
             var6 = var3_float * this.direction.y - var4 * this.direction.x;
-            if (Math.abs(var5) < (float)this.field_E.field_m &&
-              Math.abs(var6) < (float)this.field_E.field_h) {
+            if (Math.abs(var5) < (float)this.definition.field_m &&
+              Math.abs(var6) < (float)this.definition.field_h) {
               return true;
             }
           } else {
-            if (this.field_E.collisionRadius * this.field_E.collisionRadius > (param1.y - this.position.y) * (-this.position.y + param1.y) + (-this.position.x + param1.x) * (-this.position.x + param1.x)) {
+            if (this.definition.collisionRadius * this.definition.collisionRadius > (param1.y - this.position.y) * (-this.position.y + param1.y) + (-this.position.x + param1.x) * (-this.position.x + param1.x)) {
               return true;
             }
           }
           if (param0 == 2048) {
             return false;
           }
-          this.a((byte) -59);
+          this.getCurrentSprite((byte) -59);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,72 +96,72 @@ final class wm extends MovingEntity {
         }
     }
 
-    final void g(int param0) {
+    final void update(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         boolean stackIn_23_1 = false;
         float var2;
         float var3;
-        if (this.field_S != null) {
-          fieldTemp$0 = this.field_R - 1;
-          this.field_R = this.field_R - 1;
+        if (this.animation != null) {
+          fieldTemp$0 = this.frameTicks - 1;
+          this.frameTicks = this.frameTicks - 1;
           if (fieldTemp$0 <= 0) {
-            fieldTemp$1 = this.field_I + 1;
-            this.field_I = this.field_I + 1;
-            if (this.field_K <= fieldTemp$1) {
-              this.field_I = 0;
+            fieldTemp$1 = this.animationFrame + 1;
+            this.animationFrame = this.animationFrame + 1;
+            if (this.animationFrameCount <= fieldTemp$1) {
+              this.animationFrame = 0;
             }
-            this.field_Q = this.field_S[this.field_I * 2];
-            this.field_R = this.field_S[1 + this.field_I * 2];
+            this.spriteIndex = this.animation[this.animationFrame * 2];
+            this.frameTicks = this.animation[1 + this.animationFrame * 2];
           }
         }
-        if ((4 & this.field_J) != param0) {
+        if ((4 & this.flags) != param0) {
           this.advanceMotion(0);
-          if ((this.field_J & 16) != 0) {
+          if ((this.flags & 16) != 0) {
             this.velocityY = this.velocityY * o.field_c;
             this.velocityX = this.velocityX * o.field_c;
             if (this.velocityX * this.velocityX + this.velocityY * this.velocityY < 0.25f) {
-              this.field_J = this.field_J & -5;
-              if ((this.field_J & 1024) != 0) {
-                this.field_J = this.field_J | 2048;
-                this.a(EmailLoginCredentials.field_d, 98);
+              this.flags = this.flags & -5;
+              if ((this.flags & 1024) != 0) {
+                this.flags = this.flags | 2048;
+                this.setAnimation(EmailLoginCredentials.field_d, 98);
               }
             }
           }
         }
-        if ((8192 & this.field_J) != 0) {
-          this.a(false);
+        if ((8192 & this.flags) != 0) {
+          this.updateHoming(false);
         }
-        if (0 != (this.field_J & 131072)) {
-          fieldTemp$2 = this.field_C - 1;
-          this.field_C = this.field_C - 1;
+        if (0 != (this.flags & 131072)) {
+          fieldTemp$2 = this.transitionTicks - 1;
+          this.transitionTicks = this.transitionTicks - 1;
           if (0 == fieldTemp$2) {
-            this.field_J = this.field_J & -131073;
-            this.field_q = this.field_T;
-            stackIn_23_1 = ((this.field_J & 8) != 0);
-            this.field_z = stackIn_23_1;
+            this.flags = this.flags & -131073;
+            this.layer = this.transitionLayer;
+            stackIn_23_1 = ((this.flags & 8) != 0);
+            this.collidable = stackIn_23_1;
           }
-          var2 = (float)this.field_C / 150.0f;
+          var2 = (float)this.transitionTicks / 150.0f;
           var3 = 0.1428571343421936f * var2 + (-(var2 * (-2.5714285373687744f * var2)) + var2 * -1.7142857313156128f * var2 * var2);
-          this.position.x = this.field_D - (int)(var3 * (float)this.field_P);
-          this.position.y = -(int)(var3 * (float)this.field_O) + this.field_F;
+          this.position.x = this.transitionX - (int)(var3 * (float)this.transitionOffsetX);
+          this.position.y = -(int)(var3 * (float)this.transitionOffsetY) + this.transitionY;
         }
     }
 
-    final Sprite a(byte param0) {
+    final Sprite getCurrentSprite(byte param0) {
         if (param0 > -107) {
-          this.field_K = -60;
+          this.animationFrameCount = -60;
         }
-        if ((32 & this.field_J) == 0) {
-          this.field_H = this.field_E.field_g[this.field_Q];
+        if ((32 & this.flags) == 0) {
+          this.sprite = this.definition.field_g[this.spriteIndex];
         } else {
-          this.field_H = this.field_E.field_f[this.field_Q].getByAngle(this.heading, 27788);
+          this.sprite = this.definition.field_f[this.spriteIndex].getByAngle(this.heading, 27788);
         }
-        return this.field_H;
+        return this.sprite;
     }
 
-    private final void a(boolean param0) {
+    private final void updateHoming(boolean param0) {
         int fieldTemp$0 = 0;
         int var3_int = 0;
         int var9 = 0;
@@ -189,31 +189,31 @@ final class wm extends MovingEntity {
         float var2Lifetime2;
         float var3Lifetime1;
         var16 = HoldTheLine.field_D;
-        if (this.field_M > 0) {
-          fieldTemp$0 = this.field_M - 1;
-          this.field_M = this.field_M - 1;
+        if (this.homingDelay > 0) {
+          fieldTemp$0 = this.homingDelay - 1;
+          this.homingDelay = this.homingDelay - 1;
           if (fieldTemp$0 == 0) {
-            this.field_J = this.field_J | 2048;
+            this.flags = this.flags | 2048;
           }
         }
-        if (this.field_G == null &&
-          (this.field_J & 2048) != 0) {
+        if (this.homingTarget == null &&
+          (this.flags & 2048) != 0) {
           var2 = -1.0f;
-          for (var3_int = 0; var3_int < MusicPatchPcmStream.field_r.field_h; var3_int++) {
-            if (var3_int != (this.field_J & 3)) {
+          for (var3_int = 0; var3_int < MusicPatchPcmStream.field_r.playerCount; var3_int++) {
+            if (var3_int != (this.flags & 3)) {
               var4_ref_ja = MusicPatchPcmStream.field_r.vehicles[var3_int];
               if (var4_ref_ja != null &&
-                -1 <= this.field_q - var4_ref_ja.field_q &&
-                this.field_q - var4_ref_ja.field_q <= 1) {
+                -1 <= this.layer - var4_ref_ja.layer &&
+                this.layer - var4_ref_ja.layer <= 1) {
                 var5_float = var4_ref_ja.worldX - this.worldX;
                 var6_float = var4_ref_ja.worldY - this.worldY;
                 var7_float = this.direction.x * var5_float + this.direction.y * var6_float;
                 var8_float = var5_float * this.direction.y - this.direction.x * var6_float;
                 if (2.0f * Math.abs(var8_float) < var7_float) {
                   var9_float = Math.abs(var8_float) + var7_float;
-                  if (null == this.field_G ||
+                  if (null == this.homingTarget ||
                     var9_float < var2) {
-                    this.field_G = var4_ref_ja;
+                    this.homingTarget = var4_ref_ja;
                     var2 = var9_float;
                   }
                 }
@@ -221,8 +221,8 @@ final class wm extends MovingEntity {
             }
           }
         }
-        if (this.field_G != null) {
-          var2Lifetime1 = BoundaryIntersection.angleBetweenPoints(this.position, this.field_G.position, false);
+        if (this.homingTarget != null) {
+          var2Lifetime1 = BoundaryIntersection.angleBetweenPoints(this.position, this.homingTarget.position, false);
           var3 = var2Lifetime1 - this.heading;
           if ((double)var3 > 3.141592653589793) {
             var3 = (float)((double)var3 - 6.283185307179586);
@@ -243,14 +243,14 @@ final class wm extends MovingEntity {
         var2Lifetime2 = var2Lifetime2 + 0.05000000074505806f * (55.0f - var2Lifetime2);
         this.velocityX = this.direction.x * var2Lifetime2;
         this.velocityY = var2Lifetime2 * this.direction.y;
-        var3Lifetime1 = 4.0f * (float)Math.cos((double)((float)this.field_M / 10.0f));
+        var3Lifetime1 = 4.0f * (float)Math.cos((double)((float)this.homingDelay / 10.0f));
         var4 = this.position.x - (int)(this.direction.x * 5.0f) + (int)(this.direction.y * var3Lifetime1);
         var5 = this.position.y - ((int)(this.direction.y * 5.0f) + (int)(this.direction.x * var3Lifetime1));
         if (param0) {
-          this.field_S = (int[]) null;
+          this.animation = (int[]) null;
         }
-        if (MusicPatchPcmStream.field_r.d((byte) 47)) {
-          var6 = MusicPatchPcmStream.field_r.vehicles[this.field_J & 3].field_Eb;
+        if (MusicPatchPcmStream.field_r.useParticleOnlyMissileEffects((byte) 47)) {
+          var6 = MusicPatchPcmStream.field_r.vehicles[this.flags & 3].field_Eb;
           var7 = (int)(-this.direction.x * 1024.0f);
           var8 = (int)(-this.direction.y * 1024.0f);
           for (var9 = 0; var9 < 4; var9++) {
@@ -266,47 +266,47 @@ final class wm extends MovingEntity {
             var13 = dg.a(-2, -1, 2) + var5;
             var14 = var7 + dg.a(-512, -1, 512);
             var15 = dg.a(-512, -1, 512) + var8;
-            ArchiveIndex.a(var14, var13, 0, 16, 1, -16, var12, this.field_q, MusicPatchPcmStream.field_r.field_O, var10, var15, 128, 2);
+            ArchiveIndex.a(var14, var13, 0, 16, 1, -16, var12, this.layer, MusicPatchPcmStream.field_r.trailParticles, var10, var15, 128, 2);
           }
         } else {
-          if (MusicPatchPcmStream.field_r.field_ab % 2 == 0) {
-            ArchiveIndex.a((int)(-this.direction.x * 2048.0f), var5, 1, 64, 1, -2, var4, this.field_q, MusicPatchPcmStream.field_r.field_O, 12632256, (int)(-this.direction.y * 2048.0f), 32, 4);
+          if (MusicPatchPcmStream.field_r.raceTicks % 2 == 0) {
+            ArchiveIndex.a((int)(-this.direction.x * 2048.0f), var5, 1, 64, 1, -2, var4, this.layer, MusicPatchPcmStream.field_r.trailParticles, 12632256, (int)(-this.direction.y * 2048.0f), 32, 4);
           }
           var6 = (int)(1024.0f * -this.direction.x);
           var7 = (int)(-this.direction.y * 1024.0f);
           var6 = var6 + (-256 + SolidRoadStripRenderer.b(2, 512));
           var7 = var7 + (SolidRoadStripRenderer.b(2, 512) - 256);
           var8 = (SolidRoadStripRenderer.b(2, 128) | 520159104) << 8;
-          ArchiveIndex.a(var6, var5, 0, 16, 1, -16, var4, this.field_q, MusicPatchPcmStream.field_r.field_O, var8, var7, 128, 1);
+          ArchiveIndex.a(var6, var5, 0, 16, 1, -16, var4, this.layer, MusicPatchPcmStream.field_r.trailParticles, var8, var7, 128, 1);
         }
     }
 
-    wm(Point2i param0, int param1, int param2) {
+    TrackObject(Point2i param0, int param1, int param2) {
         super((float)param0.x, (float)param0.y, param2);
         try {
-          this.a(-43, param1, 0.0f, 0.0f);
+          this.setDefinitionAndVelocity(-43, param1, 0.0f, 0.0f);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void a(int[] param0, int param1) {
+    final void setAnimation(int[] param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_Q = 0;
-          this.field_S = param0;
-          if (null != this.field_S) {
-            this.field_K = this.field_S.length / 2;
-            this.field_I = 0;
-            this.field_Q = this.field_S[0];
-            this.field_R = this.field_S[1];
+          this.spriteIndex = 0;
+          this.animation = param0;
+          if (null != this.animation) {
+            this.animationFrameCount = this.animation.length / 2;
+            this.animationFrame = 0;
+            this.spriteIndex = this.animation[0];
+            this.frameTicks = this.animation[1];
           }
           if (param1 < 3) {
-            this.field_K = -78;
+            this.animationFrameCount = -78;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,26 +323,26 @@ final class wm extends MovingEntity {
         }
     }
 
-    private final void a(int param0, int param1, float param2, float param3) {
-        this.field_E = ArchiveCatalog.a(param1, (byte) 17);
+    private final void setDefinitionAndVelocity(int param0, int param1, float param2, float param3) {
+        this.definition = ArchiveCatalog.a(param1, (byte) 17);
         if (param0 >= -35) {
-          this.field_J = 78;
+          this.flags = 78;
         }
-        this.field_J = this.field_E.flags;
+        this.flags = this.definition.flags;
         this.velocityY = param3;
         this.velocityX = param2;
-        if ((256 & this.field_J) == 0) {
-          this.a(this.field_E.field_l, 71);
+        if ((256 & this.flags) == 0) {
+          this.setAnimation(this.definition.field_l, 71);
         }
-        if (0 != (8192 & this.field_J)) {
-          this.field_G = null;
-          this.field_M = 5;
+        if (0 != (8192 & this.flags)) {
+          this.homingTarget = null;
+          this.homingDelay = 5;
         }
-        if (0 != (8 & this.field_J)) {
-          this.field_B = this.field_E.collisionRadius;
-          this.field_z = true;
-          if ((1024 & this.field_J) != 0) {
-            this.field_B = 6;
+        if (0 != (8 & this.flags)) {
+          this.collisionRadius = this.definition.collisionRadius;
+          this.collidable = true;
+          if ((1024 & this.flags) != 0) {
+            this.collisionRadius = 6;
           }
         }
     }
@@ -354,10 +354,10 @@ final class wm extends MovingEntity {
         }
     }
 
-    wm(Point2i param0, int param1, int param2, float param3, float param4, float param5) {
+    TrackObject(Point2i param0, int param1, int param2, float param3, float param4, float param5) {
         super((float)param0.x, (float)param0.y, param2, param3);
         try {
-          this.a(-62, param1, param4, param5);
+          this.setDefinitionAndVelocity(-62, param1, param4, param5);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

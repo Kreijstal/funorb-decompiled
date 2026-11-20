@@ -100,7 +100,7 @@ final class dg {
           BufferedSocket.field_g[5] = fj.field_p;
           DirectByteStorage.field_f[5] = jh.a(PointPath.field_a, -128, fj.field_p);
           BufferedSocket.field_g[4] = UiTheme.field_a;
-          DirectByteStorage.field_f[4] = jh.a(jk.field_l, -120, UiTheme.field_a);
+          DirectByteStorage.field_f[4] = jh.a(Particle.field_l, -120, UiTheme.field_a);
           BufferedSocket.field_g[7] = fe.field_a;
           DirectByteStorage.field_f[7] = jh.a(i.field_l, param0 + 9221, fe.field_a);
           BufferedSocket.field_g[6] = DualNodeHashTable.field_d;
@@ -189,7 +189,7 @@ final class dg {
     }
 
     final static void a(byte param0) {
-        ih var4 = null;
+        AchievementUnlockRequest var4 = null;
         int var3 = HoldTheLine.field_D;
         try {
           if (PathWaypoint.field_o != null &&
@@ -197,16 +197,16 @@ final class dg {
             LinkWidgetRenderer.a(3, (byte) -67, PathWaypoint.field_o);
           }
           int var2 = 96 / ((-25 - param0) / 60);
-          var4 = (ih) (fb.field_n.first((byte) 121));
+          var4 = (AchievementUnlockRequest) (fb.field_n.first((byte) 121));
           while (var4 != null) {
-            na.a(4, var4, (byte) -79);
-            var4 = (ih) (fb.field_n.next((byte) -75));
+            PointLight.queueAchievementUnlock(4, var4, (byte) -79);
+            var4 = (AchievementUnlockRequest) (fb.field_n.next((byte) -75));
           }
           if (of.a(-969)) {
             RaceSetupMenu.field_y = BlobReadRequest.requestArchiveKey(10, 31043, 2, 0);
           }
           h.b((byte) -92);
-          RoadSegment.a(of.a(-969), (byte) 97);
+          RoadSegment.setAlternateMenuItems(of.a(-969), (byte) 97);
           NameSuggestionsPanel.a((byte) 80);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ')');

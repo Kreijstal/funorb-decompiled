@@ -78,7 +78,7 @@ final class q {
           var2 = var9.readUnsignedByte((byte) -62);
           var3 = var9.readUnsignedByte((byte) -86);
           if (0 == var2) {
-            var4 = (IntArrayReadRequest) (ih.field_j.first((byte) 100));
+            var4 = (IntArrayReadRequest) (AchievementUnlockRequest.field_j.first((byte) 100));
             if (var4 == null) {
               r.a(-28036);
               return;

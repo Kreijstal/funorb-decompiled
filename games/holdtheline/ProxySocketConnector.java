@@ -114,7 +114,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (UsernameLoginCredentials.a(nm.field_b, true)) {
           MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, 3, false, false, -1, -1);
           EntitySound.field_j = true;
-          wm.a(false, false, -1);
+          TrackObject.switchMenu(false, false, -1);
           return;
         }
         qn.field_k = false;
@@ -124,7 +124,7 @@ final class ProxySocketConnector extends SocketConnector {
         BlobWriteRequest.field_j = false;
         DiskCacheStore.field_i = -1;
         EntitySound.field_j = true;
-        wm.a(false, false, -1);
+        TrackObject.switchMenu(false, false, -1);
     }
 
     final java.net.Socket b(int param0) throws IOException {

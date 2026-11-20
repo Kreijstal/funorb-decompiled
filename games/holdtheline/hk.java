@@ -43,26 +43,26 @@ final class hk {
           }
           if (param0 instanceof StraightRoadSegment) {
             var7 = (StraightRoadSegment) (param0);
-            var4_ref = new LinearPointPath(param0.length(50), param0.field_k, param2);
-            var4_ref.field_n = var7.p(-1);
-            var4_ref.field_j = var7.b((byte) -105);
+            var4_ref = new LinearPointPath(param0.length(50), param0.layer, param2);
+            var4_ref.field_n = var7.getControlPathStart(-1);
+            var4_ref.field_j = var7.getControlPathEnd((byte) -105);
             stackIn_5_0 = var4_ref;
             return (PointPath) ((Object) stackIn_5_0);
           }
           var8 = (CurvedRoadSegment) (param0);
-          var9 = new QuadraticPointPath(param0.length(50), param0.field_k, param2);
+          var9 = new QuadraticPointPath(param0.length(50), param0.layer, param2);
           var4 = var9;
-          var5 = var8.field_A;
-          var6 = var8.field_K;
-          var9.field_l = var8.field_H;
+          var5 = var8.controlPathStartParameter;
+          var6 = var8.controlPathEndParameter;
+          var9.field_l = var8.controlPathControl;
           if (var6 < var5) {
             var5 = 1.0f - var5;
-            var9.field_k = var8.field_Q;
+            var9.field_k = var8.controlPathEnd;
             var6 = -var6 + 1.0f;
-            var9.field_m = var8.field_F;
+            var9.field_m = var8.controlPathStart;
           } else {
-            var9.field_k = var8.field_F;
-            var9.field_m = var8.field_Q;
+            var9.field_k = var8.controlPathStart;
+            var9.field_m = var8.controlPathEnd;
           }
           if (0.0f != var5) {
             var4 = oc.a(var5, param1 ^ 16711934, var9);

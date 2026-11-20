@@ -98,7 +98,7 @@ final class fc {
     final static IndexedSprite a(boolean param0) {
         IndexedSprite var1 = null;
         if (param0) {
-          var1 = new IndexedSprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
+          var1 = new IndexedSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
           tk.clearDecodedSpriteSheet(false);
           return var1;
         }

@@ -136,8 +136,8 @@ class Point2i {
             var9 = (GrowableObjectList) (param1.elements[var8]);
             for (var10 = 0; var9.size > var10; var10++) {
               var11 = (TrackBoundary) (var9.elements[var10]);
-              if ((param0 - 1) <= var11.field_k &&
-                param0 + 1 >= var11.field_k &&
+              if ((param0 - 1) <= var11.layer &&
+                param0 + 1 >= var11.layer &&
                 PacketBuffer.intersectsSegments(-1, var7, var11)) {
                 if (var5_float > RasterBuffer.field_d ||
                   var6 == 0) {

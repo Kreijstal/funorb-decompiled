@@ -378,7 +378,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime28 = DualLinkNode.a("TEXT_KILLS", 0);
           if (null != var2Lifetime28) {
-            vf.field_u = RoadLayerMaskRenderer.decodeCp1252((byte) 118, var2Lifetime28);
+            ZombiePedestrian.field_u = RoadLayerMaskRenderer.decodeCp1252((byte) 118, var2Lifetime28);
           }
           var2Lifetime29 = DualLinkNode.a("TEXT_DEATHS", 0);
           if (null != var2Lifetime29) {

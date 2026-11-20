@@ -226,7 +226,7 @@ final class StripedProgressBar extends UiWidget {
               DraggableWidget.field_J = PacketBuffer.field_j;
             } else {
               while (PacketBuffer.field_j != DraggableWidget.field_J) {
-                var2 = na.field_r[PacketBuffer.field_j];
+                var2 = PointLight.field_r[PacketBuffer.field_j];
                 PacketBuffer.field_j = 127 & PacketBuffer.field_j + 1;
                 if (var2 >= 0) {
                   IterableSecondaryNodeDeque.field_g[var2] = true;

@@ -1335,7 +1335,7 @@ final class ClientTextResources {
                 }
                 var2 = StandardContentTransitionDialog.a(6, "creatingyouraccount");
                 if (null != var2) {
-                  na.field_o = RoadLayerMaskRenderer.decodeCp1252((byte) 113, var2);
+                  PointLight.field_o = RoadLayerMaskRenderer.decodeCp1252((byte) 113, var2);
                 }
                 var2 = StandardContentTransitionDialog.a(6, "create_youmustaccept");
                 if (null != var2) {

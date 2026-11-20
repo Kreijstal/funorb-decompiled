@@ -107,7 +107,7 @@ final class MarkerSliderRenderer implements WidgetRenderer {
           ad.field_d = new int[NineSlicePanel.field_d];
           var17.position = -7 + param1.length - 8 * NineSlicePanel.field_d;
           bo.field_b = var17.readUnsignedShort(-85);
-          ih.field_o = var17.readUnsignedShort(59);
+          AchievementUnlockRequest.field_o = var17.readUnsignedShort(59);
           var3 = 1 + (var17.readUnsignedByte((byte) -64) & 255);
           for (var4 = 0; var4 < NineSlicePanel.field_d; var4++) {
             DirectByteStorage.field_j[var4] = var16.readUnsignedShort(123);

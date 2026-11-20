@@ -15,7 +15,7 @@ final class SocialListEntry extends hi {
         try {
           TextLineLayout.field_l = param0 * NodeHashTableIterator.a(855) / 1000;
           LoginMethodPreference.preloadLogoAudio(param1, 0);
-          jk.a(param1, -64);
+          Particle.loadLogoModels(param1, -64);
           DelayedServerPacket.a(-18916, param1);
           dm.a(255);
           DraggableWidget.j(param2 ^ 0);

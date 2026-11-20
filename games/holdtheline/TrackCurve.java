@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TrackCurve extends IntrusiveNode {
-    int field_k;
+    int layer;
     static byte[][] field_i;
     static String field_j;
 

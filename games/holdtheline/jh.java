@@ -20,7 +20,7 @@ final class jh {
           if (param1 > -118) {
             field_b = (String) null;
           }
-          stackIn_3_0 = LoginCredentials.substituteIndexedTokens(pe.field_d, new String[]{param2, ih.a(param0[0], 5), ih.a(param0[1], 5), ih.a(param0[2], 5)}, true);
+          stackIn_3_0 = LoginCredentials.substituteIndexedTokens(pe.field_d, new String[]{param2, AchievementUnlockRequest.a(param0[0], 5), AchievementUnlockRequest.a(param0[1], 5), AchievementUnlockRequest.a(param0[2], 5)}, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

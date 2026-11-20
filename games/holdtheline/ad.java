@@ -84,7 +84,7 @@ final class ad {
         if (LoadProgressDialog.field_ab != -1) {
           mn.field_b = SoundCache.field_b << 16 | LoadProgressDialog.field_ab;
         } else {
-          if (na.field_k) {
+          if (PointLight.field_k) {
             mn.field_b = -1;
             DialogLayer.field_I = -1;
           }

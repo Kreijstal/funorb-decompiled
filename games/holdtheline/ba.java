@@ -64,7 +64,7 @@ final class ba {
           }
           if (!DiskCacheStore.field_h &&
             LinearPointPath.field_h > dm.field_a &&
-            na.field_k) {
+            PointLight.field_k) {
             ArchiveLoadProgress.field_e = ak.field_c;
             dm.field_a = 0;
             AgeValidator.field_l = MouseWheelInput.field_b;

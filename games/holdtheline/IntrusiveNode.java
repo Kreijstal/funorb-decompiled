@@ -35,20 +35,20 @@ class IntrusiveNode {
         float var8Lifetime1;
         float var9Lifetime1;
         try {
-          if (-param2.field_k + param1 <= 1 &&
-            param1 - param2.field_k >= -1) {
+          if (-param2.layer + param1 <= 1 &&
+            param1 - param2.layer >= -1) {
             if (param0) {
               return false;
             }
             if (!(param2 instanceof StraightRoadSegment)) {
               var11 = (CurvedRoadSegment) (param2);
-              var5 = (float)(param3.x - var11.field_U.x);
-              var6 = (float)(param3.y - var11.field_U.y);
-              var7 = (float)var11.field_D;
-              var8 = (float)var11.field_R;
-              if (var11.field_E > var11.field_I) {
-                var7 = (float)var11.field_R;
-                var8 = (float)var11.field_D;
+              var5 = (float)(param3.x - var11.center.x);
+              var6 = (float)(param3.y - var11.center.y);
+              var7 = (float)var11.leftCollisionRadius;
+              var8 = (float)var11.rightCollisionRadius;
+              if (var11.startAngle > var11.endAngle) {
+                var7 = (float)var11.rightCollisionRadius;
+                var8 = (float)var11.leftCollisionRadius;
               }
               var9 = var6 * var6 + var5 * var5;
               if (var7 * var7 > var9) {
@@ -57,19 +57,19 @@ class IntrusiveNode {
               if (var8 * var8 < var9) {
                 return false;
               }
-              var10 = BoundaryIntersection.angleBetweenPoints(var11.field_U, param3, param0);
+              var10 = BoundaryIntersection.angleBetweenPoints(var11.center, param3, param0);
               stackIn_17_0 = var11.containsAngle((byte) -113, var10);
               return stackIn_17_0;
             }
             var12 = (StraightRoadSegment) (param2);
-            var5Lifetime1 = (float)(-var12.field_R.x + param3.x);
-            var6Lifetime1 = (float)(param3.y - var12.field_R.y);
-            var7Lifetime1 = -(var6Lifetime1 * var12.field_D) + var5Lifetime1 * var12.field_B;
+            var5Lifetime1 = (float)(-var12.start.x + param3.x);
+            var6Lifetime1 = (float)(param3.y - var12.start.y);
+            var7Lifetime1 = -(var6Lifetime1 * var12.offsetDirectionX) + var5Lifetime1 * var12.offsetDirectionY;
             if (!(0.0f > var7Lifetime1) &&
-              !(var12.field_J < var7Lifetime1)) {
-              var8Lifetime1 = var7Lifetime1 / var12.field_J;
-              var9Lifetime1 = var12.field_D * var5Lifetime1 + var12.field_B * var6Lifetime1;
-              stackIn_27_0 = ((float)var12.d(var8Lifetime1, 0) <= var9Lifetime1) && (var9Lifetime1 <= (float)var12.c(95, var8Lifetime1));
+              !(var12.segmentLength < var7Lifetime1)) {
+              var8Lifetime1 = var7Lifetime1 / var12.segmentLength;
+              var9Lifetime1 = var12.offsetDirectionX * var5Lifetime1 + var12.offsetDirectionY * var6Lifetime1;
+              stackIn_27_0 = ((float)var12.leftCollisionOffsetAt(var8Lifetime1, 0) <= var9Lifetime1) && (var9Lifetime1 <= (float)var12.rightCollisionOffsetAt(95, var8Lifetime1));
               return stackIn_27_0;
             }
             return false;

@@ -26,22 +26,22 @@ final class ArchiveIndex {
     private byte[] field_d;
     static int[] field_b;
 
-    final static jk a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IntrusiveDeque[] param8, int param9, int param10, int param11, int param12) {
-        jk var13 = null;
+    final static Particle a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IntrusiveDeque[] param8, int param9, int param10, int param11, int param12) {
+        Particle var13 = null;
         RuntimeException var13_ref = null;
-        jk var14 = null;
-        jk stackIn_4_0 = null;
+        Particle var14 = null;
+        Particle stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!RasterBuffer.field_e.isEmpty(0)) {
-            var14 = (jk) (RasterBuffer.field_e.removeLast((byte) 74));
+            var14 = (Particle) (RasterBuffer.field_e.removeLast((byte) 74));
             var13 = var14;
-            var14.a(param2, param3, param1, param10, param0, (byte) -126, param6, param9, param12, param11, param5);
+            var14.initialize(param2, param3, param1, param10, param0, (byte) -126, param6, param9, param12, param11, param5);
           } else {
-            var13 = new jk(param6, param1, param0, param10, param3, param9, param12, param2, param11, param5);
+            var13 = new Particle(param6, param1, param0, param10, param3, param9, param12, param2, param11, param5);
           }
           param8[param4 + param7].addLast((byte) -113, var13);
           stackIn_4_0 = var13;

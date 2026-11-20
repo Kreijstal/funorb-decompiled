@@ -379,10 +379,10 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
           var2_int = RotatedSpriteSheetAsset.a((byte) 26, param1);
           var3 = RotatedSpriteAsset.field_g[param1.field_p];
           for (var4 = 0; var3.length > var4; var4++) {
-            if (ge.field_c[var3[var4]].field_b.isLoaded((byte) 58)) {
+            if (ge.field_c[var3[var4]].spriteAsset.isLoaded((byte) 58)) {
               var2_int += 8;
             }
-            if (ge.field_c[var3[var4]].field_z.isLoaded((byte) 58)) {
+            if (ge.field_c[var3[var4]].shadowAsset.isLoaded((byte) 58)) {
               var2_int += 8;
             }
           }

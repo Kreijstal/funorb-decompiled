@@ -2,81 +2,81 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StraightRoadSegment extends RoadSegment {
-    Point2i field_P;
-    float field_G;
+    Point2i end;
+    float blendStartAngle;
     static String field_H;
-    int field_I;
-    int field_A;
-    int field_z;
-    float field_y;
-    float field_D;
-    int field_K;
-    int field_L;
+    int rightRoadStartOffset;
+    int rightCollisionEndOffset;
+    int rightCollisionStartOffset;
+    float blendEndAngle;
+    float offsetDirectionX;
+    int leftCollisionStartOffset;
+    int leftCollisionEndOffset;
     static int[] field_E;
-    int field_N;
-    int field_M;
-    int field_C;
-    int field_O;
-    float field_J;
-    float field_B;
-    Point2i field_R;
-    int field_Q;
+    int leftRoadEndOffset;
+    int controlPathEndOffset;
+    int rightRoadEndOffset;
+    int leftRoadStartOffset;
+    float segmentLength;
+    float offsetDirectionY;
+    Point2i start;
+    int controlPathStartOffset;
 
-    final Point2i l(int param0) {
+    final Point2i getLeftCollisionEnd(int param0) {
         if (param0 != 8421504) {
-          this.field_C = 36;
+          this.rightRoadEndOffset = 36;
         }
-        if (3.141592653589793 == (double)this.field_y) {
-          return new Point2i((int)((float)this.field_P.x + (float)this.field_L * this.field_D), (int)((float)this.field_P.y + (float)this.field_L * this.field_B));
+        if (3.141592653589793 == (double)this.blendEndAngle) {
+          return new Point2i((int)((float)this.end.x + (float)this.leftCollisionEndOffset * this.offsetDirectionX), (int)((float)this.end.y + (float)this.leftCollisionEndOffset * this.offsetDirectionY));
         }
-        return this.c(1.0f, 94);
+        return this.leftCollisionEdgeAt(1.0f, 94);
     }
 
-    final Point2i a(int param0, float param1) {
-        float var3 = (float)this.c(36, param1);
+    final Point2i rightCollisionEdgeAt(int param0, float param1) {
+        float var3 = (float)this.rightCollisionOffsetAt(36, param1);
         if (param0 != -851) {
-          this.a(0.5826309323310852f, true);
+          this.rightRoadEdgeAt(0.5826309323310852f, true);
         }
-        float var4 = var3 * this.field_D + (param1 * (float)(this.field_P.x - this.field_R.x) + (float)this.field_R.x);
-        float var5 = var3 * this.field_B + ((float)this.field_R.y + (float)(this.field_P.y - this.field_R.y) * param1);
+        float var4 = var3 * this.offsetDirectionX + (param1 * (float)(this.end.x - this.start.x) + (float)this.start.x);
+        float var5 = var3 * this.offsetDirectionY + ((float)this.start.y + (float)(this.end.y - this.start.y) * param1);
         return new Point2i((int)var4, (int)var5);
     }
 
-    final Point2i p(int param0) {
-        float var2 = -((float)this.field_Q * this.field_D) + (float)this.field_R.x;
+    final Point2i getControlPathStart(int param0) {
+        float var2 = -((float)this.controlPathStartOffset * this.offsetDirectionX) + (float)this.start.x;
         if (param0 != -1) {
-          this.a((byte) -67);
+          this.getRightRoadEnd((byte) -67);
         }
-        float var3 = (float)this.field_R.y - (float)this.field_Q * this.field_B;
+        float var3 = (float)this.start.y - (float)this.controlPathStartOffset * this.offsetDirectionY;
         return new Point2i((int)var2, (int)var3);
     }
 
     final Point2i pointAt(boolean param0, float param1) {
-        float var3 = (float)this.field_R.x + (float)(-this.field_R.x + this.field_P.x) * param1;
-        float var4 = (float)this.field_R.y + (float)(this.field_P.y - this.field_R.y) * param1;
+        float var3 = (float)this.start.x + (float)(-this.start.x + this.end.x) * param1;
+        float var4 = (float)this.start.y + (float)(this.end.y - this.start.y) * param1;
         if (param0) {
-          this.a(-19, -1.8915660381317139f);
+          this.rightCollisionEdgeAt(-19, -1.8915660381317139f);
         }
         return new Point2i((int)var3, (int)var4);
     }
 
-    final Point2i a(byte param0) {
-        if (3.141592653589793 == (double)this.field_y) {
-          return new Point2i((int)((float)this.field_P.x + (float)this.field_C * this.field_D), (int)((float)this.field_P.y + this.field_B * (float)this.field_C));
+    final Point2i getRightRoadEnd(byte param0) {
+        if (3.141592653589793 == (double)this.blendEndAngle) {
+          return new Point2i((int)((float)this.end.x + (float)this.rightRoadEndOffset * this.offsetDirectionX), (int)((float)this.end.y + this.offsetDirectionY * (float)this.rightRoadEndOffset));
         }
         if (param0 != 29) {
-          this.o(-11);
+          this.getRightRoadStart(-11);
         }
-        return this.a(1.0f, false);
+        return this.rightRoadEdgeAt(1.0f, false);
     }
 
-    final Point2i a(float param0, int param1) {
-        float var3 = (float)this.b((byte) -125, param0);
+    final Point2i leftRoadEdgeAt(float param0, int param1) {
+        float var3 = (float)this.leftRoadOffsetAt((byte) -125, param0);
         if (param1 != 255) {
-          this.field_J = 0.6247459650039673f;
+          this.segmentLength = 0.6247459650039673f;
         }
-        float var4 = (float)(-this.field_R.x + this.field_P.x) * param0 + (float)this.field_R.x + this.field_D * var3;
-        float var5 = this.field_B * var3 + (param0 * (float)(this.field_P.y - this.field_R.y) + (float)this.field_R.y);
+        float var4 = (float)(-this.start.x + this.end.x) * param0 + (float)this.start.x + this.offsetDirectionX * var3;
+        float var5 = this.offsetDirectionY * var3 + (param0 * (float)(this.end.y - this.start.y) + (float)this.start.y);
         return new Point2i((int)var4, (int)var5);
     }
 
@@ -84,28 +84,28 @@ final class StraightRoadSegment extends RoadSegment {
         if (param0 <= 12) {
           return;
         }
-        this.field_D = (float)Math.cos((double)param1);
-        this.field_B = -(float)Math.sin((double)param1);
+        this.offsetDirectionX = (float)Math.cos((double)param1);
+        this.offsetDirectionY = -(float)Math.sin((double)param1);
     }
 
-    private final int b(byte param0, float param1) {
+    private final int leftRoadOffsetAt(byte param0, float param1) {
         if (param0 > -120) {
           byte[] var4 = (byte[]) null;
           StraightRoadSegment.buildDecodedPaletteFont((byte) -17, (byte[]) null);
         }
-        return (int)((float)this.field_O + this.widthBlendAt(param1, 6) * (float)(-this.field_O + this.field_N));
+        return (int)((float)this.leftRoadStartOffset + this.widthBlendAt(param1, 6) * (float)(-this.leftRoadStartOffset + this.leftRoadEndOffset));
     }
 
     private final float widthBlendAt(float param0, int param1) {
         int var3 = -12 / ((86 - param1) / 38);
-        return (1.0f - (float)Math.cos((double)((-this.field_G + this.field_y) * param0 + this.field_G))) / 2.0f;
+        return (1.0f - (float)Math.cos((double)((-this.blendStartAngle + this.blendEndAngle) * param0 + this.blendStartAngle))) / 2.0f;
     }
 
-    final int c(int param0, float param1) {
+    final int rightCollisionOffsetAt(int param0, float param1) {
         if (param0 < 33) {
           StraightRoadSegment.resendArchiveKeyRequests(55, (byte) -61);
         }
-        return (int)((float)this.field_z + this.widthBlendAt(param1, 124) * (float)(this.field_A - this.field_z));
+        return (int)((float)this.rightCollisionStartOffset + this.widthBlendAt(param1, 124) * (float)(this.rightCollisionEndOffset - this.rightCollisionStartOffset));
     }
 
     final static PaletteBitmapFont buildDecodedPaletteFont(byte param0, byte[] param1) {
@@ -140,34 +140,34 @@ final class StraightRoadSegment extends RoadSegment {
         }
     }
 
-    final Point2i c(float param0, int param1) {
-        float var3 = (float)this.d(param0, 0);
-        float var4 = var3 * this.field_D + ((float)this.field_R.x + (float)(-this.field_R.x + this.field_P.x) * param0);
+    final Point2i leftCollisionEdgeAt(float param0, int param1) {
+        float var3 = (float)this.leftCollisionOffsetAt(param0, 0);
+        float var4 = var3 * this.offsetDirectionX + ((float)this.start.x + (float)(-this.start.x + this.end.x) * param0);
         if (param1 < 90) {
-          this.field_Q = 69;
+          this.controlPathStartOffset = 69;
         }
-        float var5 = this.field_B * var3 + (param0 * (float)(-this.field_R.y + this.field_P.y) + (float)this.field_R.y);
+        float var5 = this.offsetDirectionY * var3 + (param0 * (float)(-this.start.y + this.end.y) + (float)this.start.y);
         return new Point2i((int)var4, (int)var5);
     }
 
-    final Point2i m(int param0) {
-        if ((double)this.field_y == 3.141592653589793) {
-          return new Point2i((int)((float)this.field_A * this.field_D + (float)this.field_P.x), (int)((float)this.field_P.y + this.field_B * (float)this.field_A));
+    final Point2i getRightCollisionEnd(int param0) {
+        if ((double)this.blendEndAngle == 3.141592653589793) {
+          return new Point2i((int)((float)this.rightCollisionEndOffset * this.offsetDirectionX + (float)this.end.x), (int)((float)this.end.y + this.offsetDirectionY * (float)this.rightCollisionEndOffset));
         }
         if (param0 != -14) {
-          StraightRoadSegment.a(-103, -92, 89, -67, (byte) -96);
+          StraightRoadSegment.setUiFontMetrics(-103, -92, 89, -67, (byte) -96);
         }
-        return this.a(-851, 1.0f);
+        return this.rightCollisionEdgeAt(-851, 1.0f);
     }
 
-    final Point2i h(int param0) {
-        if (3.141592653589793 == (double)this.field_y) {
-          return new Point2i((int)((float)this.field_P.x + this.field_D * (float)this.field_N), (int)(this.field_B * (float)this.field_N + (float)this.field_P.y));
+    final Point2i getLeftRoadEnd(int param0) {
+        if (3.141592653589793 == (double)this.blendEndAngle) {
+          return new Point2i((int)((float)this.end.x + this.offsetDirectionX * (float)this.leftRoadEndOffset), (int)(this.offsetDirectionY * (float)this.leftRoadEndOffset + (float)this.end.y));
         }
         if (param0 != 7560980) {
-          this.field_A = 66;
+          this.rightCollisionEndOffset = 66;
         }
-        return this.a(1.0f, 255);
+        return this.leftRoadEdgeAt(1.0f, 255);
     }
 
     final static void writeLoginPacket(int param0, int param1, boolean param2, LoginCredentials param3, boolean param4) {
@@ -201,7 +201,7 @@ final class StraightRoadSegment extends RoadSegment {
           IsaacPacketBuffer.field_p.position = IsaacPacketBuffer.field_p.position + 2;
           var5_int = IsaacPacketBuffer.field_p.position;
           IsaacPacketBuffer.field_p.writeInt((byte) -58, oi.field_b);
-          IsaacPacketBuffer.field_p.writeLong((byte) -84, ih.field_i);
+          IsaacPacketBuffer.field_p.writeLong((byte) -84, AchievementUnlockRequest.field_i);
           var6 = param0;
           if (hc.field_b) {
             var6 = var6 | 1;
@@ -246,7 +246,7 @@ final class StraightRoadSegment extends RoadSegment {
         if (param0 != 0) {
           return (Point2i) null;
         }
-        return this.field_P;
+        return this.end;
     }
 
     final static void drawWhiteRecoloredSprite(int param0, int param1, Sprite param2, int param3, int param4) {
@@ -299,7 +299,7 @@ final class StraightRoadSegment extends RoadSegment {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void setUiFontMetrics(int param0, int param1, int param2, int param3, byte param4) {
         CurvedRoadSegment.field_M = param3;
         if (param4 > -55) {
           byte[] var6 = (byte[]) null;
@@ -310,14 +310,14 @@ final class StraightRoadSegment extends RoadSegment {
         TickClock.field_b = param2;
     }
 
-    final Point2i c(boolean param0) {
+    final Point2i getLeftRoadStart(boolean param0) {
         if (!param0) {
           this.getStartDirection(34);
         }
-        if (0.0f == this.field_G) {
-          return new Point2i((int)(this.field_D * (float)this.field_O + (float)this.field_R.x), (int)((float)this.field_R.y + (float)this.field_O * this.field_B));
+        if (0.0f == this.blendStartAngle) {
+          return new Point2i((int)(this.offsetDirectionX * (float)this.leftRoadStartOffset + (float)this.start.x), (int)((float)this.start.y + (float)this.leftRoadStartOffset * this.offsetDirectionY));
         }
-        return this.a(0.0f, 255);
+        return this.leftRoadEdgeAt(0.0f, 255);
     }
 
     final static void resendArchiveKeyRequests(int param0, byte param1) {
@@ -343,75 +343,75 @@ final class StraightRoadSegment extends RoadSegment {
         }
     }
 
-    final Point2i n(int param0) {
-        if (this.field_G == 0.0f) {
-          return new Point2i((int)((float)this.field_z * this.field_D + (float)this.field_R.x), (int)((float)this.field_z * this.field_B + (float)this.field_R.y));
+    final Point2i getRightCollisionStart(int param0) {
+        if (this.blendStartAngle == 0.0f) {
+          return new Point2i((int)((float)this.rightCollisionStartOffset * this.offsetDirectionX + (float)this.start.x), (int)((float)this.rightCollisionStartOffset * this.offsetDirectionY + (float)this.start.y));
         }
         if (param0 != 3337) {
-          this.field_K = -37;
+          this.leftCollisionStartOffset = -37;
         }
-        return this.a(-851, 0.0f);
+        return this.rightCollisionEdgeAt(-851, 0.0f);
     }
 
-    final Point2i k(int param0) {
+    final Point2i getLeftCollisionStart(int param0) {
         if (param0 != 255) {
           return (Point2i) null;
         }
-        if (0.0f == this.field_G) {
-          return new Point2i((int)((float)this.field_R.x + this.field_D * (float)this.field_K), (int)((float)this.field_R.y + (float)this.field_K * this.field_B));
+        if (0.0f == this.blendStartAngle) {
+          return new Point2i((int)((float)this.start.x + this.offsetDirectionX * (float)this.leftCollisionStartOffset), (int)((float)this.start.y + (float)this.leftCollisionStartOffset * this.offsetDirectionY));
         }
-        return this.c(0.0f, 112);
+        return this.leftCollisionEdgeAt(0.0f, 112);
     }
 
-    final Point2i b(byte param0) {
-        float var2 = (float)this.field_P.x - (float)this.field_M * this.field_D;
-        float var3 = (float)this.field_P.y - this.field_B * (float)this.field_M;
+    final Point2i getControlPathEnd(byte param0) {
+        float var2 = (float)this.end.x - (float)this.controlPathEndOffset * this.offsetDirectionX;
+        float var3 = (float)this.end.y - this.offsetDirectionY * (float)this.controlPathEndOffset;
         if (param0 >= -65) {
-          this.field_Q = -102;
+          this.controlPathStartOffset = -102;
         }
         return new Point2i((int)var2, (int)var3);
     }
 
-    final Point2i a(float param0, boolean param1) {
-        float var3 = (float)this.b(param0, true);
-        float var4 = (float)this.field_R.x + param0 * (float)(this.field_P.x - this.field_R.x) + this.field_D * var3;
+    final Point2i rightRoadEdgeAt(float param0, boolean param1) {
+        float var3 = (float)this.rightRoadOffsetAt(param0, true);
+        float var4 = (float)this.start.x + param0 * (float)(this.end.x - this.start.x) + this.offsetDirectionX * var3;
         if (param1) {
           field_H = (String) null;
         }
-        float var5 = (float)this.field_R.y + (float)(-this.field_R.y + this.field_P.y) * param0 + this.field_B * var3;
+        float var5 = (float)this.start.y + (float)(-this.start.y + this.end.y) * param0 + this.offsetDirectionY * var3;
         return new Point2i((int)var4, (int)var5);
     }
 
     final Vector2f getEndDirection(boolean param0) {
         if (param0) {
-          this.c(93, -0.584915816783905f);
+          this.rightCollisionOffsetAt(93, -0.584915816783905f);
         }
         return this.getStartDirection(-1);
     }
 
-    private final int b(float param0, boolean param1) {
+    private final int rightRoadOffsetAt(float param0, boolean param1) {
         if (!param1) {
-          this.field_G = -0.8879954218864441f;
+          this.blendStartAngle = -0.8879954218864441f;
         }
-        return (int)((float)this.field_I + this.widthBlendAt(param0, 124) * (float)(-this.field_I + this.field_C));
+        return (int)((float)this.rightRoadStartOffset + this.widthBlendAt(param0, 124) * (float)(-this.rightRoadStartOffset + this.rightRoadEndOffset));
     }
 
     public static void clearSharedReferences(byte param0) {
         field_H = null;
         field_E = null;
         if (param0 > -14) {
-          StraightRoadSegment.a(-28, -9, -41, 91, (byte) 43);
+          StraightRoadSegment.setUiFontMetrics(-28, -9, -41, 91, (byte) 43);
         }
     }
 
-    final Point2i o(int param0) {
+    final Point2i getRightRoadStart(int param0) {
         if (param0 != -14) {
           return (Point2i) null;
         }
-        if (0.0f == this.field_G) {
-          return new Point2i((int)((float)this.field_R.x + this.field_D * (float)this.field_I), (int)(this.field_B * (float)this.field_I + (float)this.field_R.y));
+        if (0.0f == this.blendStartAngle) {
+          return new Point2i((int)((float)this.start.x + this.offsetDirectionX * (float)this.rightRoadStartOffset), (int)(this.offsetDirectionY * (float)this.rightRoadStartOffset + (float)this.start.y));
         }
-        return this.a(0.0f, false);
+        return this.rightRoadEdgeAt(0.0f, false);
     }
 
     final Vector2f directionAt(byte param0, float param1) {
@@ -421,14 +421,14 @@ final class StraightRoadSegment extends RoadSegment {
         return this.getStartDirection(-1);
     }
 
-    final int d(float param0, int param1) {
+    final int leftCollisionOffsetAt(float param0, int param1) {
         if (param1 != 0) {
           return -16;
         }
-        return (int)((float)this.field_K + this.widthBlendAt(param0, param1 + 35) * (float)(this.field_L - this.field_K));
+        return (int)((float)this.leftCollisionStartOffset + this.widthBlendAt(param0, param1 + 35) * (float)(this.leftCollisionEndOffset - this.leftCollisionStartOffset));
     }
 
-    final static Point2i a(int param0, Vector2f param1, GrowableObjectList param2, int param3, Point2i param4) {
+    final static Point2i closestBoundaryPoint(int param0, Vector2f param1, GrowableObjectList param2, int param3, Point2i param4) {
         int var7 = 0;
         int var9 = 0;
         Point2i stackIn_19_0 = null;
@@ -462,8 +462,8 @@ final class StraightRoadSegment extends RoadSegment {
             for (var9 = 0; var9 < var8.size; var9++) {
               boolean decompiledFrameRemainder0 = true;
               var10 = (TrackBoundary) (var8.elements[var9]);
-              if (-var10.field_k + param3 >= -1 &&
-                param3 - var10.field_k <= 1) {
+              if (-var10.layer + param3 >= -1 &&
+                param3 - var10.layer <= 1) {
                 var11 = (-var10.start.y + param4.y) * (-var10.start.y + var10.end.y) + (param4.x - var10.start.x) * (var10.end.x - var10.start.x);
                 if (0 <= var11 &&
                   var10.lengthSquared(-120) >= var11) {
@@ -534,13 +534,13 @@ final class StraightRoadSegment extends RoadSegment {
         }
     }
 
-    final Point2i b(float param0, int param1) {
+    final Point2i controlPathAt(float param0, int param1) {
         if (param1 != 7560980) {
-          this.field_A = -56;
+          this.rightCollisionEndOffset = -56;
         }
-        float var3 = (float)(this.field_M - this.field_Q) * param0 + (float)this.field_Q;
-        float var4 = (float)(-this.field_R.x + this.field_P.x) * param0 + (float)this.field_R.x - var3 * this.field_D;
-        float var5 = (float)this.field_R.y + param0 * (float)(this.field_P.y - this.field_R.y) - this.field_B * var3;
+        float var3 = (float)(this.controlPathEndOffset - this.controlPathStartOffset) * param0 + (float)this.controlPathStartOffset;
+        float var4 = (float)(-this.start.x + this.end.x) * param0 + (float)this.start.x - var3 * this.offsetDirectionX;
+        float var5 = (float)this.start.y + param0 * (float)(this.end.y - this.start.y) - this.offsetDirectionY * var3;
         return new Point2i((int)var4, (int)var5);
     }
 
@@ -548,14 +548,14 @@ final class StraightRoadSegment extends RoadSegment {
         if (param0 != 50) {
           return 1.8018358945846558f;
         }
-        return this.field_J;
+        return this.segmentLength;
     }
 
     final Vector2f getStartDirection(int param0) {
         if (param0 != -1) {
-          this.field_M = 97;
+          this.controlPathEndOffset = 97;
         }
-        return new Vector2f(this.field_B, -this.field_D);
+        return new Vector2f(this.offsetDirectionY, -this.offsetDirectionX);
     }
 
     StraightRoadSegment(Point2i param0, Point2i param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, boolean param13, boolean param14, boolean param15, boolean param16, boolean param17, boolean param18, float param19, float param20, float param21) {
@@ -573,35 +573,35 @@ final class StraightRoadSegment extends RoadSegment {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var23 = null;
         try {
-          this.field_o = 0.0f;
-          this.field_R = param0;
-          this.field_L = param9;
-          this.field_z = param8;
-          this.field_N = param5;
-          this.field_Q = param11;
-          this.field_A = param10;
-          this.field_C = param6;
+          this.layerSlope = 0.0f;
+          this.start = param0;
+          this.leftCollisionEndOffset = param9;
+          this.rightCollisionStartOffset = param8;
+          this.leftRoadEndOffset = param5;
+          this.controlPathStartOffset = param11;
+          this.rightCollisionEndOffset = param10;
+          this.rightRoadEndOffset = param6;
           stackIn_4_1 = (param18);
           this.field_q = stackIn_4_1;
           stackIn_7_1 = (param16);
           this.field_x = stackIn_7_1;
-          this.field_y = param21;
+          this.blendEndAngle = param21;
           stackIn_10_1 = (param14);
           this.field_s = stackIn_10_1;
           stackIn_13_1 = (param17);
           this.field_t = stackIn_13_1;
-          this.field_G = param20;
-          this.field_K = param7;
-          this.field_P = param1;
+          this.blendStartAngle = param20;
+          this.leftCollisionStartOffset = param7;
+          this.end = param1;
           stackIn_16_1 = (param13);
           this.field_w = stackIn_16_1;
-          this.field_I = param4;
-          this.field_O = param3;
-          this.field_M = param12;
-          this.field_k = param2;
+          this.rightRoadStartOffset = param4;
+          this.leftRoadStartOffset = param3;
+          this.controlPathEndOffset = param12;
+          this.layer = param2;
           stackIn_19_1 = (param15);
           this.field_m = stackIn_19_1;
-          this.field_J = (float)Math.sqrt((double)((this.field_P.y - this.field_R.y) * (-this.field_R.y + this.field_P.y) + (-this.field_R.x + this.field_P.x) * (this.field_P.x - this.field_R.x)));
+          this.segmentLength = (float)Math.sqrt((double)((this.end.y - this.start.y) * (-this.start.y + this.end.y) + (-this.start.x + this.end.x) * (this.end.x - this.start.x)));
           this.setOffsetDirection(51, param19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

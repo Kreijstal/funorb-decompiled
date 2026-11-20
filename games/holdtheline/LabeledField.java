@@ -173,8 +173,8 @@ final class LabeledField extends SingleChildWidget {
             }
             var3_int = stackIn_23_0;
             var4 = param1.roadSegments[0];
-            var5 = var4.c(true);
-            var6 = var4.o(-14);
+            var5 = var4.getLeftRoadStart(true);
+            var6 = var4.getRightRoadStart(-14);
             var7 = (float)((var6.x + var5.x) / 2) + 0.5f;
             var8 = (float)((var6.y + var5.y) / 2) + 0.5f;
             var9 = (float)(var6.x - var5.x);

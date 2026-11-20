@@ -133,7 +133,7 @@ final class fe {
                     if (0 == var38) {
                       if (var37 >= 0 &&
                         TriangleRasterState.field_i > var37) {
-                        RaceWorld.a(0, var37 + var36Lifetime2, 0, var25, 0, param8, var38, var29, param5 ^ 122, var21);
+                        RaceWorld.blendRgbGradientSpan(0, var37 + var36Lifetime2, 0, var25, 0, param8, var38, var29, param5 ^ 122, var21);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -143,9 +143,9 @@ final class fe {
                         var38 = -1 + (-var37 + TriangleRasterState.field_i);
                       }
                       if (var37 >= 0) {
-                        RaceWorld.a(var41, var36Lifetime2 + var37, var39, var25, var40, param8, var38, var29, -123, var21);
+                        RaceWorld.blendRgbGradientSpan(var41, var36Lifetime2 + var37, var39, var25, var40, param8, var38, var29, -123, var21);
                       } else {
-                        RaceWorld.a(var41, var36Lifetime2, var39, -(var37 * var40) + var25, var40, param8, var38 + var37, var29 - var41 * var37, param5 ^ 126, -(var37 * var39) + var21);
+                        RaceWorld.blendRgbGradientSpan(var41, var36Lifetime2, var39, -(var37 * var40) + var25, var40, param8, var38 + var37, var29 - var41 * var37, param5 ^ 126, -(var37 * var39) + var21);
                       }
                     }
                   }
@@ -289,7 +289,7 @@ final class fe {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     TriangleRasterState.field_i > var36Lifetime1) {
-                    RaceWorld.a(0, var36Lifetime1 + var35Lifetime1, 0, var25, 0, param8, var37Lifetime1, var29, -127, var21);
+                    RaceWorld.blendRgbGradientSpan(0, var36Lifetime1 + var35Lifetime1, 0, var25, 0, param8, var37Lifetime1, var29, -127, var21);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
@@ -299,9 +299,9 @@ final class fe {
                     var37Lifetime1 = TriangleRasterState.field_i + (-var36Lifetime1 - 1);
                   }
                   if (0 > var36Lifetime1) {
-                    RaceWorld.a(var40Lifetime1, var35Lifetime1, var38Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var39Lifetime1, param8, var37Lifetime1 + var36Lifetime1, var29 - var40Lifetime1 * var36Lifetime1, -118, var21 - var36Lifetime1 * var38Lifetime1);
+                    RaceWorld.blendRgbGradientSpan(var40Lifetime1, var35Lifetime1, var38Lifetime1, var25 - var39Lifetime1 * var36Lifetime1, var39Lifetime1, param8, var37Lifetime1 + var36Lifetime1, var29 - var40Lifetime1 * var36Lifetime1, -118, var21 - var36Lifetime1 * var38Lifetime1);
                   } else {
-                    RaceWorld.a(var40Lifetime1, var35Lifetime1 + var36Lifetime1, var38Lifetime1, var25, var39Lifetime1, param8, var37Lifetime1, var29, param5 ^ 121, var21);
+                    RaceWorld.blendRgbGradientSpan(var40Lifetime1, var35Lifetime1 + var36Lifetime1, var38Lifetime1, var25, var39Lifetime1, param8, var37Lifetime1, var29, param5 ^ 121, var21);
                   }
                 }
               }

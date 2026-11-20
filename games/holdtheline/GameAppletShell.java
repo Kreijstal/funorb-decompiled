@@ -18,7 +18,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vf.field_j == this &&
+          if (ZombiePedestrian.field_j == this &&
             !StrongCacheEntry.field_y) {
             IterableNodeHashTable.field_c = 4000L + bb.b(-1);
             return;
@@ -230,11 +230,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (ne.field_b != null) {
                 var2 = ne.field_b;
                 if (var4 != 0) {
-                  var2 = vf.field_j;
+                  var2 = ZombiePedestrian.field_j;
                   var2 = fm.field_a;
                 }
               } else {
-                var2 = vf.field_j;
+                var2 = ZombiePedestrian.field_j;
                 if (var4 != 0) {
                   var2 = fm.field_a;
                 }
@@ -364,7 +364,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     }
 
     public final void start() {
-        if (this != vf.field_j ||
+        if (this != ZombiePedestrian.field_j ||
           StrongCacheEntry.field_y) {
           return;
         }
@@ -409,7 +409,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (vf.field_j == this &&
+          if (ZombiePedestrian.field_j == this &&
             !StrongCacheEntry.field_y) {
             TutorialAction.field_a = true;
             if (IntrusiveNode.field_b &&
@@ -456,7 +456,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var9 = HoldTheLine.field_D;
           try {
             try {
-              if (null != vf.field_j) {
+              if (null != ZombiePedestrian.field_j) {
                 DisplayNameValidator.field_l = DisplayNameValidator.field_l + 1;
                 if (DisplayNameValidator.field_l >= 3) {
                   this.a("alreadyloaded", 221);
@@ -466,7 +466,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               ko.field_b = 0;
-              vf.field_j = this;
+              ZombiePedestrian.field_j = this;
               if (param4 >= -74) {
                 this.update((java.awt.Graphics) null);
               }
@@ -615,7 +615,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vf.field_j == this &&
+          if (ZombiePedestrian.field_j == this &&
             !StrongCacheEntry.field_y) {
             IterableNodeHashTable.field_c = bb.b(-1);
             SocketConnector.sleepMillis(5000L, (byte) 45);
@@ -804,7 +804,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = vf.field_j;
+                var1 = ZombiePedestrian.field_j;
                 if (null != ne.field_b) {
                   var1 = ne.field_b;
                 }

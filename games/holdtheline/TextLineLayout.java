@@ -114,10 +114,10 @@ final class TextLineLayout {
         var32 = HoldTheLine.field_D;
         try {
           var33 = param4[param4.length - 1];
-          var8 = var33.h(7560980);
-          var9 = var33.l(8421504);
-          var10 = var33.a((byte) 29);
-          var11 = var33.m(-14);
+          var8 = var33.getLeftRoadEnd(7560980);
+          var9 = var33.getLeftCollisionEnd(8421504);
+          var10 = var33.getRightRoadEnd((byte) 29);
+          var11 = var33.getRightCollisionEnd(-14);
           var12 = var33.getEndPoint(0);
           if (param6 > -33) {
             field_d = (String) null;
@@ -137,21 +137,21 @@ final class TextLineLayout {
               var24 = var11;
               var25 = var12;
               for (var26 = 0; var26 < -1 + var18_int; var26++) {
-                var27 = var34_ref.a(var20_float, 255);
-                var28 = var34_ref.a(var20_float, false);
-                var29 = var34_ref.c(var20_float, 105);
-                var30 = var34_ref.a(-851, var20_float);
+                var27 = var34_ref.leftRoadEdgeAt(var20_float, 255);
+                var28 = var34_ref.rightRoadEdgeAt(var20_float, false);
+                var29 = var34_ref.leftCollisionEdgeAt(var20_float, 105);
+                var30 = var34_ref.rightCollisionEdgeAt(-851, var20_float);
                 var31 = var34_ref.pointAt(false, var20_float);
-                var35 = new TrackBoundary(var21, var27, var34_ref.field_k, var34_ref.field_w, var34_ref.field_t);
+                var35 = new TrackBoundary(var21, var27, var34_ref.layer, var34_ref.field_w, var34_ref.field_t);
                 var20_float = var20_float + var19_float;
                 param2.add(var35, (byte) 6);
-                var36 = new TrackBoundary(var22, var29, var34_ref.field_k, var34_ref.field_m, var34_ref.field_t);
+                var36 = new TrackBoundary(var22, var29, var34_ref.layer, var34_ref.field_m, var34_ref.field_t);
                 param5.add(var36, (byte) 6);
-                var37 = new TrackBoundary(var23, var28, var34_ref.field_k, var34_ref.field_s, var34_ref.field_q);
+                var37 = new TrackBoundary(var23, var28, var34_ref.layer, var34_ref.field_s, var34_ref.field_q);
                 param0.add(var37, (byte) 6);
-                var38 = new TrackBoundary(var24, var30, var34_ref.field_k, var34_ref.field_x, var34_ref.field_q);
+                var38 = new TrackBoundary(var24, var30, var34_ref.layer, var34_ref.field_x, var34_ref.field_q);
                 param1.add(var38, (byte) 6);
-                var39 = new TrackBoundary(var25, var31, var34_ref.field_k, true, true);
+                var39 = new TrackBoundary(var25, var31, var34_ref.layer, true, true);
                 var22 = var29;
                 var23 = var28;
                 var25 = var31;
@@ -159,86 +159,86 @@ final class TextLineLayout {
                 var24 = var30;
                 param3.add(var39, (byte) 6);
               }
-              var40 = new TrackBoundary(var21, var34_ref.h(7560980), var34_ref.field_k, var34_ref.field_w, var34_ref.field_t);
+              var40 = new TrackBoundary(var21, var34_ref.getLeftRoadEnd(7560980), var34_ref.layer, var34_ref.field_w, var34_ref.field_t);
               param2.add(var40, (byte) 6);
-              var41 = new TrackBoundary(var22, var34_ref.l(8421504), var34_ref.field_k, var34_ref.field_m, var34_ref.field_t);
+              var41 = new TrackBoundary(var22, var34_ref.getLeftCollisionEnd(8421504), var34_ref.layer, var34_ref.field_m, var34_ref.field_t);
               param5.add(var41, (byte) 6);
-              var42 = new TrackBoundary(var23, var34_ref.a((byte) 29), var34_ref.field_k, var34_ref.field_s, var34_ref.field_q);
+              var42 = new TrackBoundary(var23, var34_ref.getRightRoadEnd((byte) 29), var34_ref.layer, var34_ref.field_s, var34_ref.field_q);
               param0.add(var42, (byte) 6);
-              var43 = new TrackBoundary(var24, var34_ref.m(-14), var34_ref.field_k, var34_ref.field_x, var34_ref.field_q);
+              var43 = new TrackBoundary(var24, var34_ref.getRightCollisionEnd(-14), var34_ref.layer, var34_ref.field_x, var34_ref.field_q);
               param1.add(var43, (byte) 6);
-              var44 = new TrackBoundary(var25, var34_ref.getEndPoint(0), var34_ref.field_k, true, true);
+              var44 = new TrackBoundary(var25, var34_ref.getEndPoint(0), var34_ref.layer, true, true);
               param3.add(var44, (byte) 6);
-              var8 = var34_ref.h(7560980);
-              var9 = var34_ref.l(8421504);
-              var10 = var34_ref.a((byte) 29);
-              var11 = var34_ref.m(-14);
+              var8 = var34_ref.getLeftRoadEnd(7560980);
+              var9 = var34_ref.getLeftCollisionEnd(8421504);
+              var10 = var34_ref.getRightRoadEnd((byte) 29);
+              var11 = var34_ref.getRightCollisionEnd(-14);
               var12 = var34_ref.getEndPoint(0);
             } else {
               var45_ref = (StraightRoadSegment) (var14);
-              param3.add(new TrackBoundary(var12, var45_ref.field_P, var45_ref.field_k, true, true), (byte) 6);
-              var12 = var45_ref.field_P;
-              if (var45_ref.field_N != var45_ref.field_O) {
+              param3.add(new TrackBoundary(var12, var45_ref.end, var45_ref.layer, true, true), (byte) 6);
+              var12 = var45_ref.end;
+              if (var45_ref.leftRoadEndOffset != var45_ref.leftRoadStartOffset) {
                 var16 = 1 + (int)(var45_ref.length(50) / 5.0f);
                 var17 = 1.0f / (float)var16;
                 var18 = var17;
                 var19 = var8;
                 for (var20 = 1; var16 > var20; var20++) {
-                  var46 = var45_ref.a(var18, 255);
+                  var46 = var45_ref.leftRoadEdgeAt(var18, 255);
                   var8 = var46;
-                  param2.add(new TrackBoundary(var19, var46, var45_ref.field_k, var45_ref.field_w, var45_ref.field_t), (byte) 6);
+                  param2.add(new TrackBoundary(var19, var46, var45_ref.layer, var45_ref.field_w, var45_ref.field_t), (byte) 6);
                   var18 = var18 + var17;
                   var19 = var46;
                 }
               } else {
-                param2.add(new TrackBoundary(var8, var45_ref.h(7560980), var45_ref.field_k, var45_ref.field_w, var45_ref.field_t), (byte) 6);
-                var8 = var45_ref.h(7560980);
+                param2.add(new TrackBoundary(var8, var45_ref.getLeftRoadEnd(7560980), var45_ref.layer, var45_ref.field_w, var45_ref.field_t), (byte) 6);
+                var8 = var45_ref.getLeftRoadEnd(7560980);
               }
-              if (var45_ref.field_L != var45_ref.field_K) {
+              if (var45_ref.leftCollisionEndOffset != var45_ref.leftCollisionStartOffset) {
                 var16Lifetime1 = 1 + (int)(var45_ref.length(50) / 5.0f);
                 var17 = 1.0f / (float)var16Lifetime1;
                 var18Lifetime1 = var17;
                 var19Lifetime1 = var9;
                 for (var20Lifetime1 = 1; var16Lifetime1 > var20Lifetime1; var20Lifetime1++) {
-                  var47 = var45_ref.c(var18Lifetime1, 124);
-                  param5.add(new TrackBoundary(var19Lifetime1, var47, var45_ref.field_k, var45_ref.field_m, var45_ref.field_t), (byte) 6);
+                  var47 = var45_ref.leftCollisionEdgeAt(var18Lifetime1, 124);
+                  param5.add(new TrackBoundary(var19Lifetime1, var47, var45_ref.layer, var45_ref.field_m, var45_ref.field_t), (byte) 6);
                   var18Lifetime1 = var18Lifetime1 + var17;
                   var19Lifetime1 = var47;
                 }
               } else {
-                param5.add(new TrackBoundary(var9, var45_ref.l(8421504), var45_ref.field_k, var45_ref.field_m, var45_ref.field_t), (byte) 6);
-                var9 = var45_ref.l(8421504);
+                param5.add(new TrackBoundary(var9, var45_ref.getLeftCollisionEnd(8421504), var45_ref.layer, var45_ref.field_m, var45_ref.field_t), (byte) 6);
+                var9 = var45_ref.getLeftCollisionEnd(8421504);
               }
-              if (var45_ref.field_C != var45_ref.field_I) {
+              if (var45_ref.rightRoadEndOffset != var45_ref.rightRoadStartOffset) {
                 var16Lifetime2 = 1 + (int)(var45_ref.length(50) / 5.0f);
                 var17 = 1.0f / (float)var16Lifetime2;
                 var18Lifetime2 = var17;
                 var19Lifetime2 = var10;
                 for (var20Lifetime2 = 1; var16Lifetime2 > var20Lifetime2; var20Lifetime2++) {
-                  var48 = var45_ref.a(var18Lifetime2, false);
-                  param0.add(new TrackBoundary(var19Lifetime2, var48, var45_ref.field_k, var45_ref.field_s, var45_ref.field_q), (byte) 6);
+                  var48 = var45_ref.rightRoadEdgeAt(var18Lifetime2, false);
+                  param0.add(new TrackBoundary(var19Lifetime2, var48, var45_ref.layer, var45_ref.field_s, var45_ref.field_q), (byte) 6);
                   var18Lifetime2 = var18Lifetime2 + var17;
                   var19Lifetime2 = var48;
                 }
               } else {
-                param0.add(new TrackBoundary(var10, var45_ref.a((byte) 29), var45_ref.field_k, var45_ref.field_s, var45_ref.field_q), (byte) 6);
-                var10 = var45_ref.a((byte) 29);
+                param0.add(new TrackBoundary(var10, var45_ref.getRightRoadEnd((byte) 29), var45_ref.layer, var45_ref.field_s, var45_ref.field_q), (byte) 6);
+                var10 = var45_ref.getRightRoadEnd((byte) 29);
               }
-              if (var45_ref.field_z != var45_ref.field_A) {
+              if (var45_ref.rightCollisionStartOffset != var45_ref.rightCollisionEndOffset) {
                 var16Lifetime3 = (int)(var45_ref.length(50) / 5.0f) + 1;
                 var17 = 1.0f / (float)var16Lifetime3;
                 var18Lifetime3 = var17;
                 var19Lifetime3 = var11;
                 for (var20Lifetime3 = 1; var16Lifetime3 > var20Lifetime3; var20Lifetime3++) {
-                  var49 = var45_ref.a(-851, var18Lifetime3);
+                  var49 = var45_ref.rightCollisionEdgeAt(-851, var18Lifetime3);
                   var11 = var49;
-                  param1.add(new TrackBoundary(var19Lifetime3, var49, var45_ref.field_k, var45_ref.field_x, var45_ref.field_q), (byte) 6);
+                  param1.add(new TrackBoundary(var19Lifetime3, var49, var45_ref.layer, var45_ref.field_x, var45_ref.field_q), (byte) 6);
                   var18Lifetime3 = var18Lifetime3 + var17;
                   var19Lifetime3 = var49;
                 }
               } else {
-                param1.add(new TrackBoundary(var11, var45_ref.m(-14), var45_ref.field_k, var45_ref.field_x, var45_ref.field_q), (byte) 6);
-                var11 = var45_ref.m(-14);
+                param1.add(new TrackBoundary(var11, var45_ref.getRightCollisionEnd(-14), var45_ref.layer, var45_ref.field_x, var45_ref.field_q), (byte) 6);
+                var11 = var45_ref.getRightCollisionEnd(-14);
               }
             }
           }

@@ -197,10 +197,10 @@ class UsernameLoginCredentials extends LoginCredentials {
           var10 = RotatedSpriteAsset.field_g[param0.field_p];
           var2 = var10;
           for (var3_int = 0; var10.length > var3_int; var3_int++) {
-            if (ge.field_c[var10[var3_int]].field_b.getRotatedSprites((byte) 41) == null) {
+            if (ge.field_c[var10[var3_int]].spriteAsset.getRotatedSprites((byte) 41) == null) {
               return false;
             }
-            if (ge.field_c[var10[var3_int]].field_z.getRotatedSprites((byte) -117) == null) {
+            if (ge.field_c[var10[var3_int]].shadowAsset.getRotatedSprites((byte) -117) == null) {
               return false;
             }
           }

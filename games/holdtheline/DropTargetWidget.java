@@ -300,7 +300,7 @@ final class DropTargetWidget extends SingleChildWidget {
             var4[3] = QuickChatDynamicCommand.readConfigSection(var3, 0, "s4");
             var4[4] = QuickChatDynamicCommand.readConfigSection(var3, 0, "tutorial");
             var4[5] = QuickChatDynamicCommand.readConfigSection(var3, 0, "demolition");
-            vf.field_v = false;
+            ZombiePedestrian.field_v = false;
             tk.field_c = new CourseDefinition[6][];
             MenuList.field_l = new int[6];
             var5 = 0;
@@ -656,7 +656,7 @@ final class DropTargetWidget extends SingleChildWidget {
           Vector2i.field_d = hm.a(5499, "missile");
           BoundaryIntersection.field_k = LoginCredentialType.a("powerup_red", (byte) -53);
           LoginChoicePanel.field_O = LoginCredentialType.a("powerup_green", (byte) -53);
-          na.field_q = LoginCredentialType.a("powerup_blue", (byte) -53);
+          PointLight.field_q = LoginCredentialType.a("powerup_blue", (byte) -53);
           StrongCacheEntry.field_u = LoginCredentialType.a("powerup_black", (byte) -53);
           SecondaryNodeDeque.field_h = DraggableWidget.a("s1_background", 1);
           ValidationState.field_e = DraggableWidget.a("s1_track", param0 ^ 30864);
@@ -726,7 +726,7 @@ final class DropTargetWidget extends SingleChildWidget {
           LinkWidgetRenderer.field_b = TrackBoundary.b("vehicle_hatchback", (byte) -90);
           BufferedRandomAccessFile.field_h = TrackBoundary.b("vehicle_suv", (byte) 72);
           field_K = hm.a(5499, "booster");
-          jk.field_p = hm.a(5499, "slowdown");
+          Particle.field_p = hm.a(5499, "slowdown");
           DirectByteStorage.field_g = TutorialPage.createRotatedSpriteAsset("oilslick", (byte) -98);
           wi.field_a = new RotatedSpriteSheetAsset("halloween_zombie");
           GrowableStringList.field_b = new SpriteSheetAsset("halloween_blood");

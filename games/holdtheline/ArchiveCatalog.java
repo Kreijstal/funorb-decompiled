@@ -149,7 +149,7 @@ final class ArchiveCatalog {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        ih var11 = null;
+        AchievementUnlockRequest var11 = null;
         IsaacPacketBuffer var12 = null;
         ma var13 = null;
         int[] var14 = null;
@@ -186,7 +186,7 @@ final class ArchiveCatalog {
             return;
           }
           if (var2 == 1) {
-            var11 = (ih) (AccountFormText.field_c.first((byte) 116));
+            var11 = (AchievementUnlockRequest) (AccountFormText.field_c.first((byte) 116));
             if (var11 == null) {
               r.a(-28036);
               return;

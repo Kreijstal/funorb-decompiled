@@ -352,12 +352,12 @@ final class GrowableStringList {
           var23 = o.a((byte) -125);
           var4 = var23;
           var5 = param0[param0.length - 1];
-          var22 = var5.k(param1 ^ 10000487);
+          var22 = var5.getLeftCollisionStart(param1 ^ 10000487);
           var6 = var22;
           if (param1 != 10000536) {
             return;
           }
-          var24 = var5.n(param1 - 9997199);
+          var24 = var5.getRightCollisionStart(param1 - 9997199);
           var7 = var24;
           var21.add(var22.x, (byte) 124);
           var21.add(var22.y, (byte) 62);
@@ -367,10 +367,10 @@ final class GrowableStringList {
           var9 = (int)(var8 / 40.0f) + 1;
           var10 = var8 / (float)var9;
           var11 = var10;
-          var12 = var5.field_k;
+          var12 = var5.layer;
           for (var13 = 0; param0.length > var13; var13++) {
             var14 = param0[var13];
-            if (var12 != var14.field_k) {
+            if (var12 != var14.layer) {
               param2.drawRoadFill(0.0f, var4.toArray(param1 ^ -10000584), var12, var3.toArray(param1 ^ -10000572), (byte) 49);
               var25 = o.a((byte) 26);
               var3 = var25;
@@ -381,7 +381,7 @@ final class GrowableStringList {
               var26.add(var7.x, (byte) 64);
               var26.add(var7.y, (byte) 72);
               var11 = var10;
-              var12 = var14.field_k;
+              var12 = var14.layer;
             }
             var15 = var14.length(param1 - 10000486);
             var16 = 1 + (int)(var15 / 5.0f);
@@ -389,8 +389,8 @@ final class GrowableStringList {
             var18 = 1.0f / (float)var16;
             var19 = var18;
             while (1.0f > var19) {
-              var27 = var14.c(var19, 99);
-              var28 = var14.a(-851, var19);
+              var27 = var14.leftCollisionEdgeAt(var19, 99);
+              var28 = var14.rightCollisionEdgeAt(-851, var19);
               var3.add(var27.x, (byte) 90);
               var3.add(var27.y, (byte) 93);
               var4.add(var28.x, (byte) 89);
@@ -411,8 +411,8 @@ final class GrowableStringList {
               var11 = var11 + var10;
               var30.add(var28.y, (byte) 69);
             }
-            var31 = var14.l(param1 ^ 1579032);
-            var32 = var14.m(param1 - 10000550);
+            var31 = var14.getLeftCollisionEnd(param1 ^ 1579032);
+            var32 = var14.getRightCollisionEnd(param1 - 10000550);
             var3.add(var31.x, (byte) 106);
             var3.add(var31.y, (byte) 64);
             var4.add(var32.x, (byte) 81);

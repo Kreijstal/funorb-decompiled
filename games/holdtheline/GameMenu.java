@@ -307,7 +307,7 @@ final class GameMenu extends MenuList {
                           oi.field_a.drawUnkeyed(408 - (param2 + 20 * var6), var4 + 10 + 5);
                           BoundaryIntersection.field_k.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(var6 * 20) + (-param2 + 170), -20 + (var4 + 7));
                           LoginChoicePanel.field_O.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).draw(-param2 + 410 - var6 * 20, 7 + var4 - 20);
-                          na.field_q.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(var6 * 20) - param2 + 170, 10 + (var4 + 7));
+                          PointLight.field_q.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(var6 * 20) - param2 + 170, 10 + (var4 + 7));
                           StrongCacheEntry.field_u.getSpriteOrPlaceholder(16, var5, param1 + 9, 16).draw(-param2 + 410 - var6 * 20, 10 + (var4 + 7));
                           var6++;
                           if (var8 == 0) {
@@ -345,7 +345,7 @@ final class GameMenu extends MenuList {
                             oi.field_a.drawUnkeyed(288 - param2 - var7 * 20, 20 * var6 + (60 + var4 + 5));
                             BoundaryIntersection.field_k.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-(20 * var7) + (95 - param2), 20 * var6 + (var4 - 20 + 7));
                             LoginChoicePanel.field_O.getSpriteOrPlaceholder(16, var5, 9, 16).draw(-param2 + (385 - 20 * var7), 7 + (-20 + var4) + 20 * var6);
-                            na.field_q.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).draw(290 - param2 - 20 * var7, var6 * 20 + var4 + 60 + 7);
+                            PointLight.field_q.getSpriteOrPlaceholder(16, var5, param1 ^ 9, 16).draw(290 - param2 - 20 * var7, var6 * 20 + var4 + 60 + 7);
                             var7++;
                           }
                           var6++;
@@ -610,9 +610,9 @@ final class GameMenu extends MenuList {
             if ((this.selectedItem != 0) &&
               (decompiledFrameRemainder0 = (MusicPatchPcmStream.field_r != null))) {
               if (IntArrayReadRequest.field_l != -1) {
-                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[IntArrayReadRequest.field_l]);
+                MusicPatchPcmStream.field_r.vehicles[0].setVehicleDefinition(20385, ge.field_c[IntArrayReadRequest.field_l]);
               }
-              wm.a(false, false, -1);
+              TrackObject.switchMenu(false, false, -1);
               MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               decompiledFrameRemainder0 = (var3 != 0);
             }
@@ -910,7 +910,7 @@ final class GameMenu extends MenuList {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.transitionState != 1) {
-          this.drawHelpPage(ih.field_p, 0, param0);
+          this.drawHelpPage(AchievementUnlockRequest.field_p, 0, param0);
           decompiledFrameRemainder0 = (var4 != 0);
         }
         if (decompiledFrameRemainder0) {
@@ -1237,7 +1237,7 @@ final class GameMenu extends MenuList {
         } while (var5 == 0);
         if (this.menuId == 4 ||
           this.menuId == 5) {
-          ih.field_p = 0;
+          AchievementUnlockRequest.field_p = 0;
         }
         boolean decompiledFrameCompleted0 = true;
         if (this.menuId == 2 ||
@@ -1367,7 +1367,7 @@ final class GameMenu extends MenuList {
             fieldTemp$2 = TexturedRoadFillRenderer.field_h + 1;
             TexturedRoadFillRenderer.field_h = TexturedRoadFillRenderer.field_h + 1;
             stackIn_24_0 = ~fieldTemp$2;
-            if (ih.field_p != -1 + TextHotspotRange.field_i.length) {
+            if (AchievementUnlockRequest.field_p != -1 + TextHotspotRange.field_i.length) {
               stackIn_25_1 = 2;
             } else {
               stackIn_25_1 = 1;
@@ -1375,7 +1375,7 @@ final class GameMenu extends MenuList {
             if (stackIn_24_0 >= ~stackIn_25_1) {
               break;
             }
-            stackIn_30_0 = (ih.field_p == 0) ? 1 : 0;
+            stackIn_30_0 = (AchievementUnlockRequest.field_p == 0) ? 1 : 0;
             TexturedRoadFillRenderer.field_h = stackIn_30_0;
             if (var4 == 0) {
               break;
@@ -1533,30 +1533,30 @@ final class GameMenu extends MenuList {
                                                           break;
                                                       }
                                                     }
-                                                    wm.a(param1, false, -1);
+                                                    TrackObject.switchMenu(param1, false, -1);
                                                     if (var7 == 0) {
                                                       break regionExit2;
                                                     }
                                                   }
-                                                  wm.a(param1, false, 2);
+                                                  TrackObject.switchMenu(param1, false, 2);
                                                   this.field_v = param0;
                                                   if (var7 == 0) {
                                                     break regionExit2;
                                                   }
                                                 }
-                                                wm.a(param1, false, 6);
+                                                TrackObject.switchMenu(param1, false, 6);
                                                 this.field_v = param0;
                                                 if (var7 == 0) {
                                                   break regionExit2;
                                                 }
                                               }
-                                              wm.a(param1, false, 4);
+                                              TrackObject.switchMenu(param1, false, 4);
                                               this.field_v = param0;
                                               if (var7 == 0) {
                                                 break regionExit2;
                                               }
                                             }
-                                            wm.a(param1, false, 5);
+                                            TrackObject.switchMenu(param1, false, 5);
                                             this.field_v = param0;
                                             if (var7 == 0) {
                                               break regionExit2;
@@ -1578,22 +1578,22 @@ final class GameMenu extends MenuList {
                                           7 != this.menuId &&
                                           8 != this.menuId &&
                                           this.menuId != 3) {
-                                          wm.a(param1, false, 0);
+                                          TrackObject.switchMenu(param1, false, 0);
                                           if (var7 == 0) {
                                             break regionExit2;
                                           }
                                         }
-                                        wm.a(param1, false, 12);
+                                        TrackObject.switchMenu(param1, false, 12);
                                         if (var7 == 0) {
                                           break regionExit2;
                                         }
                                       }
-                                      wm.a(param1, false, TextLayout.field_a);
+                                      TrackObject.switchMenu(param1, false, TextLayout.field_a);
                                       if (var7 == 0) {
                                         break regionExit2;
                                       }
                                     }
-                                    MusicPatchPcmStream.field_r.field_mb = -1;
+                                    MusicPatchPcmStream.field_r.tutorialPage = -1;
                                     qn.a(7, param1, true);
                                     if (var7 == 0) {
                                       break regionExit2;
@@ -1602,7 +1602,7 @@ final class GameMenu extends MenuList {
                                   if (this.menuId == 10 &&
                                     0.0f < this.carouselOffset &&
                                     3 == CheckboxRenderer.field_x) {
-                                    wm.a(param1, false, 13);
+                                    TrackObject.switchMenu(param1, false, 13);
                                     if (var7 == 0) {
                                       break regionExit2;
                                     }
@@ -1612,7 +1612,7 @@ final class GameMenu extends MenuList {
                                     break regionExit2;
                                   }
                                 }
-                                wm.a(param1, false, 3);
+                                TrackObject.switchMenu(param1, false, 3);
                                 if (var7 == 0) {
                                   break regionExit2;
                                 }
@@ -1669,7 +1669,7 @@ final class GameMenu extends MenuList {
                         PathWaypoint.field_o = null;
                         field_z = 0;
                         ClientException.field_c = 0;
-                        wm.a(param1, false, 12);
+                        TrackObject.switchMenu(param1, false, 12);
                         if (var7 == 0) {
                           break regionExit2;
                         }
@@ -1702,15 +1702,15 @@ final class GameMenu extends MenuList {
                     }
                     if (TexturedRoadFillRenderer.field_h != 0) {
                       if (2 == TexturedRoadFillRenderer.field_h) {
-                        if (ih.field_p >= 6) {
+                        if (AchievementUnlockRequest.field_p >= 6) {
                           break regionExit1;
                         }
-                        fieldTemp$0 = ih.field_p + 1;
-                        ih.field_p = ih.field_p + 1;
+                        fieldTemp$0 = AchievementUnlockRequest.field_p + 1;
+                        AchievementUnlockRequest.field_p = AchievementUnlockRequest.field_p + 1;
                         if (fieldTemp$0 == 6) {
                           TexturedRoadFillRenderer.field_h = 1;
                         }
-                        this.targetCarouselOffset = 640 * ih.field_p;
+                        this.targetCarouselOffset = 640 * AchievementUnlockRequest.field_p;
                         if (var7 == 0) {
                           break regionExit2;
                         }
@@ -1718,26 +1718,26 @@ final class GameMenu extends MenuList {
                       if (TexturedRoadFillRenderer.field_h != 1) {
                         break regionExit1;
                       }
-                      wm.a(param1, false, TextLayout.field_a);
+                      TrackObject.switchMenu(param1, false, TextLayout.field_a);
                       if (var7 == 0) {
                         break regionExit2;
                       }
                     }
-                    if (0 >= ih.field_p) {
+                    if (0 >= AchievementUnlockRequest.field_p) {
                       break regionExit1;
                     }
-                    fieldTemp$1 = ih.field_p - 1;
-                    ih.field_p = ih.field_p - 1;
+                    fieldTemp$1 = AchievementUnlockRequest.field_p - 1;
+                    AchievementUnlockRequest.field_p = AchievementUnlockRequest.field_p - 1;
                     if (0 == fieldTemp$1) {
                       TexturedRoadFillRenderer.field_h = 2;
                     }
-                    this.targetCarouselOffset = ih.field_p * 640;
+                    this.targetCarouselOffset = AchievementUnlockRequest.field_p * 640;
                     if (var7 == 0) {
                       break regionExit2;
                     }
                   }
                   if (!NameAvailabilityResult.field_e) {
-                    wm.a(param1, false, 13);
+                    TrackObject.switchMenu(param1, false, 13);
                     this.field_v = param0;
                     if (var7 == 0) {
                       break regionExit2;
@@ -1760,12 +1760,12 @@ final class GameMenu extends MenuList {
                   if (pj.b((byte) 108)) {
                     if (0 != ClientException.field_c ||
                       ad.field_a) {
-                      wm.a(param1, false, 9);
+                      TrackObject.switchMenu(param1, false, 9);
                       if (var7 == 0) {
                         break regionExit2;
                       }
                     }
-                    wm.a(param1, false, 12);
+                    TrackObject.switchMenu(param1, false, 12);
                     if (var7 == 0) {
                       break regionExit2;
                     }
@@ -1778,29 +1778,29 @@ final class GameMenu extends MenuList {
                     } else {
                       stackIn_161_2 = 12;
                     }
-                    wm.a(stackIn_160_0, stackIn_160_1, stackIn_161_2);
+                    TrackObject.switchMenu(stackIn_160_0, stackIn_160_1, stackIn_161_2);
                     if (var7 == 0) {
                       break regionExit2;
                     }
                   }
-                  wm.a(param1, false, 8);
+                  TrackObject.switchMenu(param1, false, 8);
                   if (var7 == 0) {
                     break regionExit2;
                   }
                 }
                 if (pj.b((byte) 102)) {
-                  wm.a(param1, false, 9);
+                  TrackObject.switchMenu(param1, false, 9);
                   if (var7 == 0) {
                     break regionExit2;
                   }
                 }
                 if (ClientException.field_c == 0) {
-                  wm.a(param1, false, 3);
+                  TrackObject.switchMenu(param1, false, 3);
                   if (var7 == 0) {
                     break regionExit2;
                   }
                 }
-                wm.a(param1, false, 7);
+                TrackObject.switchMenu(param1, false, 7);
                 if (var7 == 0) {
                   break regionExit2;
                 }
@@ -1823,7 +1823,7 @@ final class GameMenu extends MenuList {
         mc.field_a[1] = new TrackObjectDefinition(5, 543, StrongCacheEntry.field_u, i.field_j, -1);
         mc.field_a[2] = new TrackObjectDefinition(5, 540, BoundaryIntersection.field_k, i.field_j, -1);
         mc.field_a[3] = new TrackObjectDefinition(5, 541, LoginChoicePanel.field_O, i.field_j, -1);
-        mc.field_a[4] = new TrackObjectDefinition(5, 542, na.field_q, i.field_j, -1);
+        mc.field_a[4] = new TrackObjectDefinition(5, 542, PointLight.field_q, i.field_j, -1);
         mc.field_a[5] = new TrackObjectDefinition(12, 6, 352, 0);
         mc.field_a[6] = new TrackObjectDefinition(12, 6, 352, 0);
         mc.field_a[7] = new TrackObjectDefinition(12, 6, 352, 0);
@@ -1893,7 +1893,7 @@ final class GameMenu extends MenuList {
         mc.field_a[68] = new TrackObjectDefinition(12, 6, 352, 0);
         mc.field_a[69] = new TrackObjectDefinition(12, 6, 352, 0);
         mc.field_a[70] = new TrackObjectDefinition(10, 10, 360488, DropTargetWidget.field_K, fk.field_c, -1);
-        mc.field_a[71] = new TrackObjectDefinition(10, 10, 360489, jk.field_p, fk.field_c, -1);
+        mc.field_a[71] = new TrackObjectDefinition(10, 10, 360489, Particle.field_p, fk.field_c, -1);
         mc.field_a[72] = new TrackObjectDefinition(12, 360490, DirectByteStorage.field_g, -1);
     }
 
@@ -2094,7 +2094,7 @@ final class GameMenu extends MenuList {
             if (RotatedSpriteCache.field_c) {
               if (DelayedServerPacket.field_n == 28) {
                 CurvedRoadSegment.field_T = false;
-                wm.a(false, false, 12);
+                TrackObject.switchMenu(false, false, 12);
               }
               if (DelayedServerPacket.field_n == 1) {
                 stackIn_33_0 = !(LoginCredentialType.field_c);
@@ -2129,11 +2129,11 @@ final class GameMenu extends MenuList {
                 continue;
               }
               if (!(2 <= TexturedRoadFillRenderer.field_h) ||
-                ih.field_p != -1 + TextHotspotRange.field_i.length) {
+                AchievementUnlockRequest.field_p != -1 + TextHotspotRange.field_i.length) {
                 if (TexturedRoadFillRenderer.field_h > 0) {
                   continue;
                 }
-                if (0 != ih.field_p) {
+                if (0 != AchievementUnlockRequest.field_p) {
                   continue;
                 }
               }
@@ -2143,7 +2143,7 @@ final class GameMenu extends MenuList {
             this.handleChampionshipKeys(-1);
           }
           if ((decompiledFrameCompleted0) &&
-            (na.field_k)) {
+            (PointLight.field_k)) {
             this.handleMouse(12515);
             if (this.menuId == 2 ||
               this.menuId == 3) {
@@ -2802,7 +2802,7 @@ final class GameMenu extends MenuList {
             fieldTemp$2 = TexturedRoadFillRenderer.field_h - 1;
             TexturedRoadFillRenderer.field_h = TexturedRoadFillRenderer.field_h - 1;
             stackIn_25_0 = ~fieldTemp$2;
-            if (ih.field_p != 0) {
+            if (AchievementUnlockRequest.field_p != 0) {
               stackIn_26_1 = 0;
             } else {
               stackIn_26_1 = 1;
@@ -2810,7 +2810,7 @@ final class GameMenu extends MenuList {
             if (stackIn_25_0 <= ~stackIn_26_1) {
               break;
             }
-            stackIn_30_0 = (-1 + TextHotspotRange.field_i.length != ih.field_p) ? 2 : 1;
+            stackIn_30_0 = (-1 + TextHotspotRange.field_i.length != AchievementUnlockRequest.field_p) ? 2 : 1;
             TexturedRoadFillRenderer.field_h = stackIn_30_0;
             if (var4 == 0) {
               break;
@@ -2976,7 +2976,7 @@ final class GameMenu extends MenuList {
         }
         if (var5 == 7 &&
           MusicPatchPcmStream.field_r != null &&
-          3 == MusicPatchPcmStream.field_r.field_J) {
+          3 == MusicPatchPcmStream.field_r.gameMode) {
           var8 = sa.field_c.toUpperCase();
         }
         if (var5 == 8) {
@@ -3093,7 +3093,7 @@ final class GameMenu extends MenuList {
             stackIn_102_0 = array$0;
             stackIn_102_1 = array$0;
             stackIn_102_2 = 0;
-            if (0 >= ih.field_p) {
+            if (0 >= AchievementUnlockRequest.field_p) {
               stackIn_103_3 = "";
             } else {
               stackIn_103_3 = CachedTextLayout.field_r;
@@ -3101,7 +3101,7 @@ final class GameMenu extends MenuList {
             stackIn_102_1[stackIn_102_2] = stackIn_103_3;
             stackIn_102_0[1] = var10_ref_String;
             stackIn_105_2 = 2;
-            if (ih.field_p >= 6) {
+            if (AchievementUnlockRequest.field_p >= 6) {
               stackIn_106_3 = "";
             } else {
               stackIn_106_3 = ByteStorage.field_d;
@@ -3277,7 +3277,7 @@ final class GameMenu extends MenuList {
         MarkerSliderRenderer.restoreRasterTarget(param0 + 10966);
         SoftwareRasterizer.fillRectangleAlpha(var6 - 5, var7 - 5, 10 + var4Lifetime1, var5 + 10, 0, 128);
         if (MusicPatchPcmStream.field_r != null &&
-          MusicPatchPcmStream.field_r.field_r == 3) {
+          MusicPatchPcmStream.field_r.courseTheme == 3) {
           SoftwareRasterizer.fillRectangle(var6, var7, var4Lifetime1, var5, 0);
         }
         we.field_o.drawScaled(var6, var7, var4Lifetime1, var5);
@@ -3493,7 +3493,7 @@ final class GameMenu extends MenuList {
         }
         boolean decompiledFrameRemainder0 = true;
         var7 = stackIn_7_0;
-        if (MusicPatchPcmStream.field_r.field_E) {
+        if (MusicPatchPcmStream.field_r.twoPlayerMode) {
           var8 = (int)((double)(300.0f * var6) * (Math.exp((double)((float)var7 * var5)) - 1.0));
           stackIn_10_0 = (double)(var6 * 300.0f);
           if (var7 > 10) {
@@ -3502,8 +3502,8 @@ final class GameMenu extends MenuList {
             stackIn_11_1 = 0;
           }
           var9_int = (int)(stackIn_10_0 * (Math.exp((double)((float)stackIn_11_1 * var5)) - 1.0));
-          if (MusicPatchPcmStream.field_r.vehicles[0].field_R < 3) {
-            var14 = BoundaryIntersection.field_o[MusicPatchPcmStream.field_r.vehicles[0].field_R];
+          if (MusicPatchPcmStream.field_r.vehicles[0].racePosition < 3) {
+            var14 = BoundaryIntersection.field_o[MusicPatchPcmStream.field_r.vehicles[0].racePosition];
             if (null == var14.getSprite(8192)) {
               LoadProgressDialog.field_hb.draw(352, var2 + (-var8 - 64));
               if (var13 != 0) {
@@ -3513,8 +3513,8 @@ final class GameMenu extends MenuList {
               var14.field_b.draw(336, var2 - (var8 + 64));
             }
           }
-          if (3 > MusicPatchPcmStream.field_r.vehicles[1].field_R) {
-            var15 = BoundaryIntersection.field_o[MusicPatchPcmStream.field_r.vehicles[1].field_R];
+          if (3 > MusicPatchPcmStream.field_r.vehicles[1].racePosition) {
+            var15 = BoundaryIntersection.field_o[MusicPatchPcmStream.field_r.vehicles[1].racePosition];
             if (var15.getSprite(8192) == null) {
               LoadProgressDialog.field_hb.draw(192, var2 + (-var9_int - 64));
               if (var13 != 0) {
@@ -3528,8 +3528,8 @@ final class GameMenu extends MenuList {
         }
         if (decompiledFrameRemainder0) {
           var8Lifetime3 = (int)((-1.0 + Math.exp((double)(var5 * (float)var7))) * (double)(300.0f * var6));
-          if (MusicPatchPcmStream.field_r.vehicles[0].field_R < 3) {
-            var16 = BoundaryIntersection.field_o[MusicPatchPcmStream.field_r.vehicles[0].field_R];
+          if (MusicPatchPcmStream.field_r.vehicles[0].racePosition < 3) {
+            var16 = BoundaryIntersection.field_o[MusicPatchPcmStream.field_r.vehicles[0].racePosition];
             if (var16.getSprite(param0 + 8180) == null) {
               LoadProgressDialog.field_hb.draw(272, -64 + (-var8Lifetime3 + var2));
               if (var13 != 0) {
@@ -3554,7 +3554,7 @@ final class GameMenu extends MenuList {
           }
           var8Lifetime1 = 320 + (int)((double)(var6 * 500.0f) * (Math.exp((double)((float)var7Lifetime1 * var5)) - 1.0));
           nm.field_c.drawCentered("-", var8Lifetime1 + 2, var2, 0, -1);
-          nm.field_c.drawRightAligned(vf.field_u, -8 + var8Lifetime1, var2, 0, -1);
+          nm.field_c.drawRightAligned(ZombiePedestrian.field_u, -8 + var8Lifetime1, var2, 0, -1);
           nm.field_c.draw(MusicPatchPcmStream.field_o, 12 + var8Lifetime1, var2, 0, -1);
           var2 += 30;
         }
@@ -3566,7 +3566,7 @@ final class GameMenu extends MenuList {
             stackIn_75_0 = 0;
             if (var13 == 0) {
               var10 = stackIn_75_0;
-              while (MusicPatchPcmStream.field_r.field_h > var10) {
+              while (MusicPatchPcmStream.field_r.playerCount > var10) {
                 stackIn_39_0 = this.transitionState;
                 stackIn_39_1 = 1;
                 if (stackIn_39_0 > stackIn_39_1) {
@@ -3585,7 +3585,7 @@ final class GameMenu extends MenuList {
                 } else {
                   var8Lifetime2 = -var8Lifetime2 + 320;
                 }
-                if (~var9_intLifetime1 == ~MusicPatchPcmStream.field_r.vehicles[var10].field_R) {
+                if (~var9_intLifetime1 == ~MusicPatchPcmStream.field_r.vehicles[var10].racePosition) {
                   if (CheckboxRenderer.field_x != 4) {
                     if (CheckboxRenderer.field_x != 5) {
                       var11 = SingleChildWidget.field_C[var9_intLifetime1];
@@ -3606,9 +3606,9 @@ final class GameMenu extends MenuList {
                       nm.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], var8Lifetime2 - 15, var2, var10 + 6, -1);
                       stackIn_66_0 = (LoginCredentialType.a(param0 + 16604, 0)) ? 3 : 1;
                       var11 = stackIn_66_0;
-                      nm.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].field_Sb), 15 + var8Lifetime2, var2, 6 + var10, -1);
+                      nm.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].kills), 15 + var8Lifetime2, var2, 6 + var10, -1);
                       nm.field_c.draw("-", 16 + var8Lifetime2 + 14 * var11, var2, 6 + var10, -1);
-                      nm.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].field_oc), 31 + var8Lifetime2 + var11 * 14, var2, var10 + 6, -1);
+                      nm.field_c.draw(Integer.toString(MusicPatchPcmStream.field_r.vehicles[var10].deaths), 31 + var8Lifetime2 + var11 * 14, var2, var10 + 6, -1);
                     }
                   } else {
                     nm.field_c.drawRightAligned(FullscreenErrorDialog.field_Y[var9_intLifetime1], -15 + var8Lifetime2, var2, var10 + 6, -1);
@@ -3750,8 +3750,8 @@ final class GameMenu extends MenuList {
               this.selectedItem = 1;
               if (((ValidationIndicator.field_J == 1)) &&
                 ((null != MusicPatchPcmStream.field_r))) {
-                MusicPatchPcmStream.field_r.vehicles[0].a(20385, ge.field_c[IntArrayReadRequest.field_l]);
-                wm.a(true, false, -1);
+                MusicPatchPcmStream.field_r.vehicles[0].setVehicleDefinition(20385, ge.field_c[IntArrayReadRequest.field_l]);
+                TrackObject.switchMenu(true, false, -1);
                 MatchingTextValidator.a(293, StrongCacheEntry.field_r);
               }
               decompiledFrameRemainder0 = false;
@@ -3767,7 +3767,7 @@ final class GameMenu extends MenuList {
         }
         if (stackIn_26_0 == stackIn_26_1 &&
           this.carouselOffset > 0.0f &&
-          na.field_k &&
+          PointLight.field_k &&
           NodeHashTableIterator.field_g > this.left &&
           this.right >= NodeHashTableIterator.field_g &&
           FullscreenErrorDialog.field_X >= 35 &&

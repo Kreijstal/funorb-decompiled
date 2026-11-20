@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CurvedRoadSegment extends RoadSegment {
-    int field_D;
-    int field_L;
-    int field_P;
-    float field_E;
-    float field_A;
-    private int field_O;
-    Point2i field_H;
-    int field_z;
-    Point2i field_U;
-    float field_K;
+    int leftCollisionRadius;
+    int rightCollisionOffset;
+    int leftCollisionOffset;
+    float startAngle;
+    float controlPathStartParameter;
+    private int leftRoadRadius;
+    Point2i controlPathControl;
+    int radius;
+    Point2i center;
+    float controlPathEndParameter;
     static int field_y;
     static ge field_G;
     static String field_J;
-    int field_B;
-    int field_N;
-    int field_R;
-    Point2i field_F;
+    int rightRoadOffset;
+    int leftRoadOffset;
+    int rightCollisionRadius;
+    Point2i controlPathStart;
     static boolean field_T;
-    private int field_S;
-    Point2i field_Q;
-    float field_I;
+    private int rightRoadRadius;
+    Point2i controlPathEnd;
+    float endAngle;
     static int field_M;
 
     final static boolean openUrlOnWindows(boolean param0, String param1) {
@@ -82,105 +82,105 @@ final class CurvedRoadSegment extends RoadSegment {
     }
 
     final Vector2f getStartDirection(int param0) {
-        float var2 = this.field_E;
-        var2 = var2 + (this.field_I < this.field_E ? 1.5707963705062866f : -1.5707963705062866f);
+        float var2 = this.startAngle;
+        var2 = var2 + (this.endAngle < this.startAngle ? 1.5707963705062866f : -1.5707963705062866f);
         if (param0 != -1) {
           return (Vector2f) null;
         }
         return new Vector2f(var2);
     }
 
-    final Point2i l(int param0) {
+    final Point2i getLeftCollisionEnd(int param0) {
         if (param0 != 8421504) {
-          this.field_E = 0.36725643277168274f;
+          this.startAngle = 0.36725643277168274f;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_D * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_D * Math.sin((double)this.field_I)));
+        return new Point2i((int)((double)this.center.x + (double)this.leftCollisionRadius * Math.cos((double)this.endAngle)), (int)((double)this.center.y - (double)this.leftCollisionRadius * Math.sin((double)this.endAngle)));
     }
 
     final Vector2f getEndDirection(boolean param0) {
-        float var2 = this.field_I;
-        var2 = var2 + (!(this.field_E > this.field_I) ? -1.5707963705062866f : 1.5707963705062866f);
+        float var2 = this.endAngle;
+        var2 = var2 + (!(this.startAngle > this.endAngle) ? -1.5707963705062866f : 1.5707963705062866f);
         if (param0) {
-          this.field_S = -21;
+          this.rightRoadRadius = -21;
         }
         return new Vector2f(var2);
     }
 
-    final Point2i a(float param0, int param1) {
-        float var3 = this.field_E + (-this.field_E + this.field_I) * param0;
+    final Point2i leftRoadEdgeAt(float param0, int param1) {
+        float var3 = this.startAngle + (-this.startAngle + this.endAngle) * param0;
         if (param1 != 255) {
-          this.h(78);
+          this.getLeftRoadEnd(78);
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_O * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_O * Math.sin((double)var3)));
+        return new Point2i((int)((double)this.center.x + (double)this.leftRoadRadius * Math.cos((double)var3)), (int)((double)this.center.y - (double)this.leftRoadRadius * Math.sin((double)var3)));
     }
 
-    final Point2i a(float param0, boolean param1) {
-        float var3 = this.field_E + (this.field_I - this.field_E) * param0;
+    final Point2i rightRoadEdgeAt(float param0, boolean param1) {
+        float var3 = this.startAngle + (this.endAngle - this.startAngle) * param0;
         if (param1) {
           return (Point2i) null;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_S * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_S * Math.sin((double)var3)));
+        return new Point2i((int)((double)this.center.x + (double)this.rightRoadRadius * Math.cos((double)var3)), (int)((double)this.center.y - (double)this.rightRoadRadius * Math.sin((double)var3)));
     }
 
-    final Point2i h(int param0) {
+    final Point2i getLeftRoadEnd(int param0) {
         if (param0 != 7560980) {
           this.parameterAtAngle(0.218789204955101f, (byte) 23);
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_O * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_O * Math.sin((double)this.field_I)));
+        return new Point2i((int)((double)this.center.x + (double)this.leftRoadRadius * Math.cos((double)this.endAngle)), (int)((double)this.center.y - (double)this.leftRoadRadius * Math.sin((double)this.endAngle)));
     }
 
     final Point2i getEndPoint(int param0) {
         if (param0 != 0) {
           return (Point2i) null;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_z * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_z * Math.sin((double)this.field_I)));
+        return new Point2i((int)((double)this.center.x + (double)this.radius * Math.cos((double)this.endAngle)), (int)((double)this.center.y - (double)this.radius * Math.sin((double)this.endAngle)));
     }
 
-    final Point2i n(int param0) {
+    final Point2i getRightCollisionStart(int param0) {
         if (param0 != 3337) {
-          this.a(1.24961256980896f, -83);
+          this.leftRoadEdgeAt(1.24961256980896f, -83);
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_R * Math.cos((double)this.field_E)), (int)((double)this.field_U.y - (double)this.field_R * Math.sin((double)this.field_E)));
+        return new Point2i((int)((double)this.center.x + (double)this.rightCollisionRadius * Math.cos((double)this.startAngle)), (int)((double)this.center.y - (double)this.rightCollisionRadius * Math.sin((double)this.startAngle)));
     }
 
-    final Point2i c(float param0, int param1) {
+    final Point2i leftCollisionEdgeAt(float param0, int param1) {
         if (param1 < 90) {
-          this.field_F = (Point2i) null;
+          this.controlPathStart = (Point2i) null;
         }
-        float var3 = this.field_E + (-this.field_E + this.field_I) * param0;
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_D * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_D * Math.sin((double)var3)));
+        float var3 = this.startAngle + (-this.startAngle + this.endAngle) * param0;
+        return new Point2i((int)((double)this.center.x + (double)this.leftCollisionRadius * Math.cos((double)var3)), (int)((double)this.center.y - (double)this.leftCollisionRadius * Math.sin((double)var3)));
     }
 
-    final Point2i a(byte param0) {
+    final Point2i getRightRoadEnd(byte param0) {
         if (param0 != 29) {
-          this.field_Q = (Point2i) null;
+          this.controlPathEnd = (Point2i) null;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_S * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_S * Math.sin((double)this.field_I)));
+        return new Point2i((int)((double)this.center.x + (double)this.rightRoadRadius * Math.cos((double)this.endAngle)), (int)((double)this.center.y - (double)this.rightRoadRadius * Math.sin((double)this.endAngle)));
     }
 
     final Vector2f directionAt(byte param0, float param1) {
-        float var3 = (this.field_I - this.field_E) * param1 + this.field_E;
-        var3 = var3 + (this.field_I < this.field_E ? -1.5707963705062866f : 1.5707963705062866f);
+        float var3 = (this.endAngle - this.startAngle) * param1 + this.startAngle;
+        var3 = var3 + (this.endAngle < this.startAngle ? -1.5707963705062866f : 1.5707963705062866f);
         if (param0 < 117) {
-          this.field_Q = (Point2i) null;
+          this.controlPathEnd = (Point2i) null;
         }
         return new Vector2f(var3);
     }
 
-    final Point2i a(int param0, float param1) {
+    final Point2i rightCollisionEdgeAt(int param0, float param1) {
         if (param0 != -851) {
-          this.field_O = 100;
+          this.leftRoadRadius = 100;
         }
-        float var3 = this.field_E + (this.field_I - this.field_E) * param1;
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_R * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_R * Math.sin((double)var3)));
+        float var3 = this.startAngle + (this.endAngle - this.startAngle) * param1;
+        return new Point2i((int)((double)this.center.x + (double)this.rightCollisionRadius * Math.cos((double)var3)), (int)((double)this.center.y - (double)this.rightCollisionRadius * Math.sin((double)var3)));
     }
 
     final Point2i pointAt(boolean param0, float param1) {
-        float var3 = this.field_E + param1 * (-this.field_E + this.field_I);
+        float var3 = this.startAngle + param1 * (-this.startAngle + this.endAngle);
         if (param0) {
           return (Point2i) null;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_z * Math.cos((double)var3)), (int)((double)this.field_U.y - (double)this.field_z * Math.sin((double)var3)));
+        return new Point2i((int)((double)this.center.x + (double)this.radius * Math.cos((double)var3)), (int)((double)this.center.y - (double)this.radius * Math.sin((double)var3)));
     }
 
     final float parameterAtAngle(float param0, byte param1) {
@@ -188,29 +188,29 @@ final class CurvedRoadSegment extends RoadSegment {
         if (param1 < 33) {
           field_y = 109;
         }
-        if (this.field_I < this.field_E) {
-          while (param0 < this.field_I) {
+        if (this.endAngle < this.startAngle) {
+          while (param0 < this.endAngle) {
             param0 = (float)((double)param0 + 6.283185307179586);
           }
-          while (this.field_E < param0) {
+          while (this.startAngle < param0) {
             param0 = (float)((double)param0 - 6.283185307179586);
           }
-          return (-this.field_E + param0) / (this.field_I - this.field_E);
+          return (-this.startAngle + param0) / (this.endAngle - this.startAngle);
         }
-        while (this.field_I < param0) {
+        while (this.endAngle < param0) {
           param0 = (float)((double)param0 - 6.283185307179586);
         }
-        while (this.field_E > param0) {
+        while (this.startAngle > param0) {
           param0 = (float)((double)param0 + 6.283185307179586);
         }
-        return (param0 - this.field_E) / (this.field_I - this.field_E);
+        return (param0 - this.startAngle) / (this.endAngle - this.startAngle);
     }
 
     final float length(int param0) {
         if (param0 != 50) {
-          this.l(-4);
+          this.getLeftCollisionEnd(-4);
         }
-        return Math.abs(this.field_I - this.field_E) * (float)this.field_z;
+        return Math.abs(this.endAngle - this.startAngle) * (float)this.radius;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -221,32 +221,32 @@ final class CurvedRoadSegment extends RoadSegment {
         field_G = null;
     }
 
-    final Point2i m(int param0) {
+    final Point2i getRightCollisionEnd(int param0) {
         if (param0 != -14) {
-          this.field_S = 113;
+          this.rightRoadRadius = 113;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_R * Math.cos((double)this.field_I)), (int)((double)this.field_U.y - (double)this.field_R * Math.sin((double)this.field_I)));
+        return new Point2i((int)((double)this.center.x + (double)this.rightCollisionRadius * Math.cos((double)this.endAngle)), (int)((double)this.center.y - (double)this.rightCollisionRadius * Math.sin((double)this.endAngle)));
     }
 
-    final Point2i o(int param0) {
+    final Point2i getRightRoadStart(int param0) {
         if (param0 != -14) {
           return (Point2i) null;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_S * Math.cos((double)this.field_E)), (int)((double)this.field_U.y - (double)this.field_S * Math.sin((double)this.field_E)));
+        return new Point2i((int)((double)this.center.x + (double)this.rightRoadRadius * Math.cos((double)this.startAngle)), (int)((double)this.center.y - (double)this.rightRoadRadius * Math.sin((double)this.startAngle)));
     }
 
-    final Point2i k(int param0) {
+    final Point2i getLeftCollisionStart(int param0) {
         if (param0 != 255) {
           this.pointAt(true, -0.0722532868385315f);
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_D * Math.cos((double)this.field_E)), (int)((double)this.field_U.y - (double)this.field_D * Math.sin((double)this.field_E)));
+        return new Point2i((int)((double)this.center.x + (double)this.leftCollisionRadius * Math.cos((double)this.startAngle)), (int)((double)this.center.y - (double)this.leftCollisionRadius * Math.sin((double)this.startAngle)));
     }
 
-    final Point2i c(boolean param0) {
+    final Point2i getLeftRoadStart(boolean param0) {
         if (!param0) {
           return (Point2i) null;
         }
-        return new Point2i((int)((double)this.field_U.x + (double)this.field_O * Math.cos((double)this.field_E)), (int)((double)this.field_U.y - (double)this.field_O * Math.sin((double)this.field_E)));
+        return new Point2i((int)((double)this.center.x + (double)this.leftRoadRadius * Math.cos((double)this.startAngle)), (int)((double)this.center.y - (double)this.leftRoadRadius * Math.sin((double)this.startAngle)));
     }
 
     CurvedRoadSegment(Point2i param0, int param1, float param2, float param3, int param4, int param5, int param6, int param7, int param8, Point2i param9, Point2i param10, Point2i param11, boolean param12, boolean param13, boolean param14, boolean param15, boolean param16, boolean param17) {
@@ -281,54 +281,54 @@ final class CurvedRoadSegment extends RoadSegment {
           this.field_w = stackIn_7_1;
           stackIn_10_1 = (param17);
           this.field_q = stackIn_10_1;
-          this.field_E = param2;
-          this.field_U = param0;
-          this.field_Q = param10;
-          this.field_L = param8;
-          this.field_N = param5;
-          this.field_H = param11;
-          this.field_B = param6;
-          this.field_P = param7;
-          this.field_I = param3;
+          this.startAngle = param2;
+          this.center = param0;
+          this.controlPathEnd = param10;
+          this.rightCollisionOffset = param8;
+          this.leftRoadOffset = param5;
+          this.controlPathControl = param11;
+          this.rightRoadOffset = param6;
+          this.leftCollisionOffset = param7;
+          this.endAngle = param3;
           stackIn_13_1 = (param15);
           this.field_x = stackIn_13_1;
-          this.field_k = param4;
+          this.layer = param4;
           stackIn_16_1 = (param16);
           this.field_t = stackIn_16_1;
-          this.field_F = param9;
-          this.field_z = param1;
+          this.controlPathStart = param9;
+          this.radius = param1;
           stackIn_19_1 = (param14);
           this.field_m = stackIn_19_1;
-          stackIn_21_1 = this.field_z;
-          if (this.field_E >= this.field_I) {
-            stackIn_22_2 = -this.field_L;
+          stackIn_21_1 = this.radius;
+          if (this.startAngle >= this.endAngle) {
+            stackIn_22_2 = -this.rightCollisionOffset;
           } else {
-            stackIn_22_2 = this.field_L;
+            stackIn_22_2 = this.rightCollisionOffset;
           }
-          this.field_R = stackIn_21_1 + stackIn_22_2;
-          stackIn_24_1 = this.field_z;
-          if (this.field_E >= this.field_I) {
-            stackIn_25_2 = -this.field_B;
+          this.rightCollisionRadius = stackIn_21_1 + stackIn_22_2;
+          stackIn_24_1 = this.radius;
+          if (this.startAngle >= this.endAngle) {
+            stackIn_25_2 = -this.rightRoadOffset;
           } else {
-            stackIn_25_2 = this.field_B;
+            stackIn_25_2 = this.rightRoadOffset;
           }
-          this.field_S = stackIn_24_1 + stackIn_25_2;
-          this.field_K = 1.0f;
-          stackIn_27_1 = this.field_z;
-          if (!(this.field_I <= this.field_E)) {
-            stackIn_28_2 = this.field_P;
+          this.rightRoadRadius = stackIn_24_1 + stackIn_25_2;
+          this.controlPathEndParameter = 1.0f;
+          stackIn_27_1 = this.radius;
+          if (!(this.endAngle <= this.startAngle)) {
+            stackIn_28_2 = this.leftCollisionOffset;
           } else {
-            stackIn_28_2 = -this.field_P;
+            stackIn_28_2 = -this.leftCollisionOffset;
           }
-          this.field_D = stackIn_27_1 + stackIn_28_2;
-          this.field_o = 0.0f;
-          if (this.field_I <= this.field_E) {
-            stackIn_31_1 = -this.field_N;
+          this.leftCollisionRadius = stackIn_27_1 + stackIn_28_2;
+          this.layerSlope = 0.0f;
+          if (this.endAngle <= this.startAngle) {
+            stackIn_31_1 = -this.leftRoadOffset;
           } else {
-            stackIn_31_1 = this.field_N;
+            stackIn_31_1 = this.leftRoadOffset;
           }
-          this.field_O = stackIn_31_1 + this.field_z;
-          this.field_A = 0.0f;
+          this.leftRoadRadius = stackIn_31_1 + this.radius;
+          this.controlPathStartParameter = 0.0f;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -365,30 +365,30 @@ final class CurvedRoadSegment extends RoadSegment {
     final boolean containsAngle(byte param0, float param1) {
         int var4 = HoldTheLine.field_D;
         if (param0 != -113) {
-          this.field_P = 69;
+          this.leftCollisionOffset = 69;
         }
-        if (this.field_E > this.field_I) {
-          while (this.field_I < param1) {
+        if (this.startAngle > this.endAngle) {
+          while (this.endAngle < param1) {
             param1 = (float)((double)param1 - 6.283185307179586);
           }
-          while (param1 < this.field_I) {
+          while (param1 < this.endAngle) {
             param1 = (float)((double)param1 + 6.283185307179586);
           }
-          return this.field_E > param1 ? true : false;
+          return this.startAngle > param1 ? true : false;
         }
-        while (this.field_E < param1) {
+        while (this.startAngle < param1) {
           param1 = (float)((double)param1 - 6.283185307179586);
         }
-        while (this.field_E > param1) {
+        while (this.startAngle > param1) {
           param1 = (float)((double)param1 + 6.283185307179586);
         }
-        return this.field_I > param1 ? true : false;
+        return this.endAngle > param1 ? true : false;
     }
 
-    final Point2i b(float param0, int param1) {
-        float var3 = this.field_A + (-this.field_A + this.field_K) * param0;
-        int var4 = (int)((float)this.field_F.x * (-var3 + 1.0f) * (-var3 + 1.0f) + (-var3 + 1.0f) * (float)(2 * this.field_H.x) * var3 + var3 * (float)this.field_Q.x * var3);
-        int var5 = (int)(var3 * (float)this.field_Q.y * var3 + (var3 * ((float)(2 * this.field_H.y) * (1.0f - var3)) + (float)this.field_F.y * (-var3 + 1.0f) * (1.0f - var3)));
+    final Point2i controlPathAt(float param0, int param1) {
+        float var3 = this.controlPathStartParameter + (-this.controlPathStartParameter + this.controlPathEndParameter) * param0;
+        int var4 = (int)((float)this.controlPathStart.x * (-var3 + 1.0f) * (-var3 + 1.0f) + (-var3 + 1.0f) * (float)(2 * this.controlPathControl.x) * var3 + var3 * (float)this.controlPathEnd.x * var3);
+        int var5 = (int)(var3 * (float)this.controlPathEnd.y * var3 + (var3 * ((float)(2 * this.controlPathControl.y) * (1.0f - var3)) + (float)this.controlPathStart.y * (-var3 + 1.0f) * (1.0f - var3)));
         if (param1 != 7560980) {
           return (Point2i) null;
         }

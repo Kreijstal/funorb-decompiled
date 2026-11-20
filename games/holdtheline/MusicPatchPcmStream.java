@@ -102,7 +102,7 @@ final class MusicPatchPcmStream extends PcmStream {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = ih.a(param0, -12895);
+              var3 = AchievementUnlockRequest.formatCompactStackTrace(param0, -12895);
             }
             if (param2 != null) {
               if (param0 != null) {

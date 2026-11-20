@@ -273,7 +273,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             return -101;
           }
           if (var4 == 12) {
-            sh.a((byte) -68, GameKeyHandler.a(116), RoadSegment.j(-14));
+            sh.a((byte) -68, GameKeyHandler.a(116), RoadSegment.getNavigationUrl(-14));
           }
           if (var4 == 13) {
             try {

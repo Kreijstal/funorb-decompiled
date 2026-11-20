@@ -138,10 +138,10 @@ abstract class TextLayout {
         Point2i var44 = null;
         int var45 = 0;
         float var46 = 0.0f;
-        wm var47 = null;
+        TrackObject var47 = null;
         int var48 = 0;
         int var49 = 0;
-        na var50 = null;
+        PointLight var50 = null;
         int var51 = 0;
         Point2i var52 = null;
         int[] var53 = null;
@@ -512,57 +512,57 @@ abstract class TextLayout {
           var61_ref = (CurvedRoadSegment) (var18.elements[var18.size - 1]);
           var18.add(var60, (byte) 6);
           var25Lifetime1 = var60.length(50) / (var60.length(50) + var77.length(50));
-          var26 = var61_ref.field_N;
-          var27 = var23_ref.field_N;
-          var28 = var61_ref.field_P;
-          var29 = var23_ref.field_P;
-          var30 = var61_ref.field_B;
-          var31 = var23_ref.field_B;
-          var32 = var61_ref.field_L;
-          var33 = var23_ref.field_L;
+          var26 = var61_ref.leftRoadOffset;
+          var27 = var23_ref.leftRoadOffset;
+          var28 = var61_ref.leftCollisionOffset;
+          var29 = var23_ref.leftCollisionOffset;
+          var30 = var61_ref.rightRoadOffset;
+          var31 = var23_ref.rightRoadOffset;
+          var32 = var61_ref.rightCollisionOffset;
+          var33 = var23_ref.rightCollisionOffset;
           var34 = (float)(3.141592653589793 * (double)var25Lifetime1);
-          if (var23_ref.field_E < var23_ref.field_I) {
-            stackIn_84_0 = var23_ref.field_E;
+          if (var23_ref.startAngle < var23_ref.endAngle) {
+            stackIn_84_0 = var23_ref.startAngle;
           } else {
-            stackIn_84_0 = 3.1415927410125732f + var23_ref.field_E;
+            stackIn_84_0 = 3.1415927410125732f + var23_ref.startAngle;
           }
           var35 = stackIn_84_0;
-          var77.field_G = var34;
-          var60.field_z = var61_ref.field_L;
+          var77.blendStartAngle = var34;
+          var60.rightCollisionStartOffset = var61_ref.rightCollisionOffset;
           var13Lifetime2 = 0;
-          var60.field_I = var61_ref.field_B;
-          var60.field_y = var34;
-          var60.field_O = var61_ref.field_N;
-          var60.field_K = var61_ref.field_P;
+          var60.rightRoadStartOffset = var61_ref.rightRoadOffset;
+          var60.blendEndAngle = var34;
+          var60.leftRoadStartOffset = var61_ref.leftRoadOffset;
+          var60.leftCollisionStartOffset = var61_ref.leftCollisionOffset;
           var36 = null;
           while (true) {
             var37_ref_dd = (StraightRoadSegment) (var18.elements[var13Lifetime2]);
             var37_ref_dd.setOffsetDirection(58, var35);
-            if (var37_ref_dd.field_P.x == var37_ref_dd.field_R.x &&
-              ~var37_ref_dd.field_R.y == ~var37_ref_dd.field_P.y) {
+            if (var37_ref_dd.end.x == var37_ref_dd.start.x &&
+              ~var37_ref_dd.start.y == ~var37_ref_dd.end.y) {
               var18.removeAt(true, var13Lifetime2);
             } else {
               var13Lifetime2++;
-              var37_ref_dd.field_O = var26;
-              var37_ref_dd.field_C = var31;
-              var37_ref_dd.field_L = var29;
-              var37_ref_dd.field_N = var27;
-              var37_ref_dd.field_z = var32;
-              var37_ref_dd.field_K = var28;
-              var37_ref_dd.field_I = var30;
-              var37_ref_dd.field_A = var33;
+              var37_ref_dd.leftRoadStartOffset = var26;
+              var37_ref_dd.rightRoadEndOffset = var31;
+              var37_ref_dd.leftCollisionEndOffset = var29;
+              var37_ref_dd.leftRoadEndOffset = var27;
+              var37_ref_dd.rightCollisionStartOffset = var32;
+              var37_ref_dd.leftCollisionStartOffset = var28;
+              var37_ref_dd.rightRoadStartOffset = var30;
+              var37_ref_dd.rightCollisionEndOffset = var33;
             }
             if (var36 != null) {
-              ((CurvedRoadSegment) (var36)).field_Q = var37_ref_dd.p(-1);
+              ((CurvedRoadSegment) (var36)).controlPathEnd = var37_ref_dd.getControlPathStart(-1);
             }
             if (var13Lifetime2 < var18.size) {
               var38_ref_hn = (CurvedRoadSegment) (var18.elements[var13Lifetime2]);
-              var38_ref_hn.field_F = var37_ref_dd.b((byte) -77);
+              var38_ref_hn.controlPathStart = var37_ref_dd.getControlPathEnd((byte) -77);
               var13Lifetime2++;
-              if (!(var38_ref_hn.field_E < var38_ref_hn.field_I)) {
-                stackIn_95_0 = 3.1415927410125732f + var38_ref_hn.field_I;
+              if (!(var38_ref_hn.startAngle < var38_ref_hn.endAngle)) {
+                stackIn_95_0 = 3.1415927410125732f + var38_ref_hn.endAngle;
               } else {
-                stackIn_95_0 = var38_ref_hn.field_I;
+                stackIn_95_0 = var38_ref_hn.endAngle;
               }
               var35 = stackIn_95_0;
               if (-1 + var18.size <= var13Lifetime2) {
@@ -573,12 +573,12 @@ abstract class TextLayout {
               var39_ref_hn = (CurvedRoadSegment) (stackIn_98_0);
               var26 = var27;
               var28 = var29;
-              var27 = var39_ref_hn.field_N;
+              var27 = var39_ref_hn.leftRoadOffset;
               var30 = var31;
-              var29 = var39_ref_hn.field_P;
+              var29 = var39_ref_hn.leftCollisionOffset;
               var32 = var33;
-              var31 = var39_ref_hn.field_B;
-              var33 = var39_ref_hn.field_L;
+              var31 = var39_ref_hn.rightRoadOffset;
+              var33 = var39_ref_hn.rightCollisionOffset;
               var36 = var38_ref_hn;
               continue;
             }
@@ -588,12 +588,12 @@ abstract class TextLayout {
           for (var13Lifetime3 = 0; var13Lifetime3 < var18.size; var13Lifetime3++) {
             var57.roadSegments[var13Lifetime3] = (RoadSegment) (var18.elements[var13Lifetime3]);
           }
-          var37 = var57.roadSegments[-1 + var57.roadSegments.length].field_k;
-          var38 = var57.roadSegments[0].field_k;
+          var37 = var57.roadSegments[-1 + var57.roadSegments.length].layer;
+          var38 = var57.roadSegments[0].layer;
           for (var13Lifetime4 = 0; var13Lifetime4 < var57.roadSegments.length; var13Lifetime4++) {
-            var39 = var57.roadSegments[(1 + var13Lifetime4) % var57.roadSegments.length].field_k;
+            var39 = var57.roadSegments[(1 + var13Lifetime4) % var57.roadSegments.length].layer;
             if (0 == var38) {
-              var57.roadSegments[var13Lifetime4].field_o = (float)(var39 - var37) / var57.roadSegments[var13Lifetime4].length(50);
+              var57.roadSegments[var13Lifetime4].layerSlope = (float)(var39 - var37) / var57.roadSegments[var13Lifetime4].length(50);
             }
             var37 = var38;
             var38 = var39;
@@ -623,8 +623,8 @@ abstract class TextLayout {
             if ((var45 < 5 ||
               var45 > 8) && (var45 < 62 ||
               var45 > 69)) {
-              var47 = new wm(var44, var45, var14Lifetime2, var46, 0.0f, 0.0f);
-              if ((32768 & var47.field_J) == 0) {
+              var47 = new TrackObject(var44, var45, var14Lifetime2, var46, 0.0f, 0.0f);
+              if ((32768 & var47.flags) == 0) {
                 var57.field_k.addLast((byte) -88, var47);
               } else {
                 var57.field_m.addLast((byte) -103, var47);
@@ -632,17 +632,17 @@ abstract class TextLayout {
               if (var45 == 53) {
                 var48 = var44.x - (int)(Math.sin((double)var46) * 10.0);
                 var49 = var44.y - (int)(10.0 * Math.cos((double)var46));
-                var50 = new na(var48, var49, var14Lifetime2, 60, DisplayNameForm.field_Q);
+                var50 = new PointLight(var48, var49, var14Lifetime2, 60, DisplayNameForm.field_Q);
                 var57.field_x.addLast((byte) -78, var50);
               } else {
                 if (var45 == 54) {
                   var48 = var44.x - (int)(35.0 * Math.sin((double)var46));
                   var49 = var44.y - (int)(35.0 * Math.cos((double)var46));
-                  var50 = new na(var48, var49, var14Lifetime2, 60, DisplayNameForm.field_Q);
+                  var50 = new PointLight(var48, var49, var14Lifetime2, 60, DisplayNameForm.field_Q);
                   var57.field_x.addLast((byte) -99, var50);
                   var48 = var44.x + (int)(35.0 * Math.sin((double)var46));
                   var49 = var44.y + (int)(35.0 * Math.cos((double)var46));
-                  var50 = new na(var48, var49, var14Lifetime2, 60, DisplayNameForm.field_Q);
+                  var50 = new PointLight(var48, var49, var14Lifetime2, 60, DisplayNameForm.field_Q);
                   var57.field_x.addLast((byte) -114, var50);
                 }
               }

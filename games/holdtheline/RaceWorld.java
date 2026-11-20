@@ -8,76 +8,76 @@ final class RaceWorld {
     int field_g;
     int field_N;
     boolean field_f;
-    private IndexedSprite field_lb;
+    private IndexedSprite roadLayerMask;
     private boolean field_c;
     private int field_P;
-    int field_z;
-    int field_B;
-    private Sprite field_R;
+    int vehicleCount;
+    int lapLimit;
+    private Sprite bannerSprite;
     private boolean field_b;
-    IntrusiveDeque field_W;
-    int field_r;
+    IntrusiveDeque resultObjects;
+    int courseTheme;
     private int field_n;
-    IntrusiveDeque[] field_O;
+    IntrusiveDeque[] trailParticles;
     private int[] field_x;
-    int field_h;
+    int playerCount;
     private ue[] field_m;
-    private int field_a;
-    private IntrusiveDeque field_Q;
+    private int previousTutorialPage;
+    private IntrusiveDeque pointLights;
     RoadSegment[] roadSegments;
-    GrowableObjectList field_nb;
-    private int field_s;
+    GrowableObjectList collisionBoundaryLoops;
+    private int bannerTicks;
     int field_y;
-    IntrusiveDeque[] field_M;
-    int field_ab;
-    private int field_o;
-    private int field_D;
-    static String field_Y;
+    IntrusiveDeque[] lightParticles;
+    int raceTicks;
+    private int tutorialFlags;
+    private int tutorialHighlight;
+    static String navigationUrl;
     int field_p;
     private boolean field_kb;
     int field_l;
     static String field_K;
-    private int field_F;
-    private Vector2i field_db;
+    private int lightningBrightness;
+    private Vector2i shadowOffset;
     private int[] field_w;
-    int field_mb;
-    int field_J;
+    int tutorialPage;
+    int gameMode;
     int field_t;
     private float field_A;
     private int[] field_eb;
     private int[] field_u;
     int[] field_rb;
-    private int[] field_V;
-    IntrusiveDeque field_cb;
-    private int field_k;
+    private int[] achievementQueue;
+    IntrusiveDeque courseObjects;
+    private int tutorialPageTicks;
     RaceVehicle[] vehicles;
-    private int field_j;
+    private int bannerCount;
     private byte field_L;
-    private int field_bb;
-    private boolean field_S;
+    private int ticks;
+    private boolean paused;
     int field_hb;
-    private int field_G;
-    IntrusiveDeque field_d;
-    IntrusiveDeque[] field_q;
-    private Sprite field_I;
+    private int achievementTicks;
+    IntrusiveDeque dynamicObjects;
+    IntrusiveDeque[] sparkParticles;
+    private Sprite lightMap;
     static IntrusiveDeque field_v;
     static String[][] field_gb;
-    boolean field_U;
-    private String[] field_ib;
-    private GrowableObjectList field_jb;
-    private boolean field_pb;
-    private int field_fb;
-    boolean field_E;
+    boolean raceFinished;
+    private String[] banners;
+    private GrowableObjectList roadBoundaryLoops;
+    private boolean shadowsEnabled;
+    private int achievementCount;
+    boolean twoPlayerMode;
     boolean field_T;
     private int field_e;
-    Sprite field_qb;
-    private int field_tb;
+    Sprite courseImage;
+    private int tutorialHighlightAlpha;
     int field_ob;
     static String field_Z;
     sb[] field_i;
     private int field_X;
 
-    private final void a(byte param0, int[] param1, CourseDefinition param2) {
+    private final void loadCourse(byte param0, int[] param1, CourseDefinition param2) {
         try {
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
@@ -89,9 +89,9 @@ final class RaceWorld {
           RuntimeException var4_ref = null;
           try {
             try {
-              this.a(param2, param1, param0 ^ 39);
+              this.decodeCourse(param2, param1, param0 ^ 39);
               if (param0 != 7) {
-                this.a((String) null, -0.27448931336402893f, 32, (TutorialCalloutAnchor) null, (String) null);
+                this.drawTutorialCallout((String) null, -0.27448931336402893f, 32, (TutorialCalloutAnchor) null, (String) null);
               }
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ final class RaceWorld {
         }
     }
 
-    private final void b(byte param0) {
+    private final void applyLightMap(byte param0) {
         int dupTemp$1 = 0;
         RuntimeException runtimeException = null;
         int var2_int = 0;
@@ -137,10 +137,10 @@ final class RaceWorld {
         RuntimeException decompiledCaughtException = null;
         var8 = HoldTheLine.field_D;
         try {
-          this.field_I.pixels[0] = 1;
+          this.lightMap.pixels[0] = 1;
           var7 = 307200;
           if (param0 > -7) {
-            this.field_o = -116;
+            this.tutorialFlags = -116;
           }
           while (var7 > 0) {
             while (true) {
@@ -148,7 +148,7 @@ final class RaceWorld {
                 return;
               }
               var7--;
-              dupTemp$1 = this.field_I.pixels[var7];
+              dupTemp$1 = this.lightMap.pixels[var7];
               var3 = dupTemp$1;
               if (dupTemp$1 == 0) {
                 SoftwareRasterizer.pixels[var7] = 0;
@@ -170,7 +170,7 @@ final class RaceWorld {
         }
     }
 
-    private final int a(String param0, int param1) {
+    private final int findTutorialPage(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -211,7 +211,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void queueBanner(String param0, byte param1) {
         int fieldTemp$1 = 0;
         int var3_int = 0;
         String[] var4 = null;
@@ -225,13 +225,13 @@ final class RaceWorld {
         var6 = HoldTheLine.field_D;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (null == this.field_ib ||
-            this.field_j >= this.field_ib.length) {
-            var3_int = this.field_j + 1;
+          if (null == this.banners ||
+            this.bannerCount >= this.banners.length) {
+            var3_int = this.bannerCount + 1;
             var4 = new String[var3_int];
             var5 = 0;
-            while (var5 < this.field_j) {
-              var4[var5] = this.field_ib[var5];
+            while (var5 < this.bannerCount) {
+              var4[var5] = this.banners[var5];
               var5++;
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -239,15 +239,15 @@ final class RaceWorld {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.field_ib = var4;
+              this.banners = var4;
             }
           }
           if (param1 != 53) {
-            this.field_q = (IntrusiveDeque[]) null;
+            this.sparkParticles = (IntrusiveDeque[]) null;
           }
-          fieldTemp$1 = this.field_j;
-          this.field_j = this.field_j + 1;
-          this.field_ib[fieldTemp$1] = param0;
+          fieldTemp$1 = this.bannerCount;
+          this.bannerCount = this.bannerCount + 1;
+          this.banners[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(CourseDefinition param0, int param1) {
+    private final void prepareCourseRendering(CourseDefinition param0, int param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -271,7 +271,7 @@ final class RaceWorld {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param0, 28978, false);
+          this.prepareCourseRendering(param0, 28978, false);
           var3_int = -22 / ((-32 - param1) / 43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3, wm param4, int param5) {
+    private final void drawObjectLightShadow(int param0, int param1, int param2, byte param3, TrackObject param4, int param5) {
         RuntimeException runtimeException = null;
         int var7_int = 0;
         int var8 = 0;
@@ -325,7 +325,7 @@ final class RaceWorld {
         float var14Lifetime1;
         var18 = HoldTheLine.field_D;
         try {
-          if (0 != (196608 & param4.field_J)) {
+          if (0 != (196608 & param4.flags)) {
             return;
           }
           var7_int = param4.position.x - param0;
@@ -342,8 +342,8 @@ final class RaceWorld {
           if (var10 > 1.0f) {
             var10 = 1.0f;
           }
-          if (!param4.field_E.rectangularCollision) {
-            var11_int = param4.field_E.collisionRadius / 2;
+          if (!param4.definition.rectangularCollision) {
+            var11_int = param4.definition.collisionRadius / 2;
             if (var11_int < 4) {
               var11_int = 4;
             }
@@ -353,9 +353,9 @@ final class RaceWorld {
             var15_int = 0;
             while (true) {
               if (var11_int > var15_int) {
-                var16_int = (int)((double)param4.position.x + (double)param4.field_E.collisionRadius * Math.cos((double)var14));
+                var16_int = (int)((double)param4.position.x + (double)param4.definition.collisionRadius * Math.cos((double)var14));
                 var7_intLifetime1 = var16_int - param0;
-                var17_int = (int)((double)param4.position.y - (double)param4.field_E.collisionRadius * Math.sin((double)var14));
+                var17_int = (int)((double)param4.position.y - (double)param4.definition.collisionRadius * Math.sin((double)var14));
                 var13_ref_int__[var15_int * 4] = var16_int;
                 var8Lifetime1 = var17_int - param1;
                 var13_ref_int__[var15_int * 4 + 1] = var17_int;
@@ -387,8 +387,8 @@ final class RaceWorld {
           var13 = param4.direction.y;
           var14Lifetime1 = -var13;
           var15 = var12Lifetime1;
-          var16 = (float)param4.field_E.field_m;
-          var17 = (float)param4.field_E.field_h;
+          var16 = (float)param4.definition.field_m;
+          var17 = (float)param4.definition.field_h;
           NodeHashTableIterator.field_g = (int)((float)param4.position.x + var16 * var12Lifetime1 + var14Lifetime1 * var17);
           FullscreenErrorDialog.field_X = (int)(var16 * var13 + (float)param4.position.y + var15 * var17);
           var8Lifetime2 = -param1 + FullscreenErrorDialog.field_X;
@@ -452,7 +452,7 @@ final class RaceWorld {
         }
     }
 
-    private final int a(int param0, int param1, int param2, wm param3, int param4, float param5) {
+    private final int applyBlast(int param0, int param1, int param2, TrackObject param3, int param4, float param5) {
         RaceVehicle stackIn_7_0 = null;
         Object stackIn_33_0 = null;
         int stackIn_44_0 = 0;
@@ -465,7 +465,7 @@ final class RaceWorld {
         RuntimeException var7_ref = null;
         int var8 = 0;
         int var9_int = 0;
-        vf var9 = null;
+        ZombiePedestrian var9 = null;
         RaceVehicle var10_ref_ja = null;
         int var10 = 0;
         int var11 = 0;
@@ -486,64 +486,64 @@ final class RaceWorld {
         int var14Lifetime1;
         var22 = HoldTheLine.field_D;
         try {
-          var7 = this.vehicles[3 & param3.field_J];
+          var7 = this.vehicles[3 & param3.flags];
           if (param0 != -30808) {
-            this.a((CourseDefinition) null, 51, false);
+            this.prepareCourseRendering((CourseDefinition) null, 51, false);
           }
           var8 = 0;
           var9_int = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var9_int < this.field_z) {
+            if (var9_int < this.vehicleCount) {
               var10_ref_ja = this.vehicles[var9_int];
               stackOut_6_0 = var10_ref_ja;
               stackIn_33_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var22 == 0) {
                 if (stackIn_7_0 != null &&
-                  1 >= -var10_ref_ja.field_q + param3.field_q &&
-                  -var10_ref_ja.field_q + param3.field_q >= -1) {
+                  1 >= -var10_ref_ja.layer + param3.layer &&
+                  -var10_ref_ja.layer + param3.layer >= -1) {
                   var11 = var10_ref_ja.position.x - param3.position.x;
                   var12 = -param3.position.y + var10_ref_ja.position.y;
-                  var13 = param4 + param3.field_B + var10_ref_ja.field_B;
+                  var13 = param4 + param3.collisionRadius + var10_ref_ja.collisionRadius;
                   var14 = var11 * var11 + var12 * var12;
                   if (var14 < var13 * var13) {
-                    if (var10_ref_ja.field_rc == 0) {
+                    if (var10_ref_ja.lifeState == 0) {
                       var8++;
                     }
                     var15 = (float)Math.sqrt((double)var14);
-                    if (var15 < (float)(var10_ref_ja.field_B + param3.field_B)) {
-                      var15 = (float)(param3.field_B + var10_ref_ja.field_B);
+                    if (var15 < (float)(var10_ref_ja.collisionRadius + param3.collisionRadius)) {
+                      var15 = (float)(param3.collisionRadius + var10_ref_ja.collisionRadius);
                     }
-                    var16 = 1.0f - ((float)(-param3.field_B) + (var15 - (float)var10_ref_ja.field_B)) / (float)(2 * param4);
+                    var16 = 1.0f - ((float)(-param3.collisionRadius) + (var15 - (float)var10_ref_ja.collisionRadius)) / (float)(2 * param4);
                     var17 = param5 * var16;
-                    if (var10_ref_ja.field_J != 2) {
-                      var18 = var10_ref_ja.field_C.field_l * var10_ref_ja.a((byte) 118, CheckboxRenderer.field_c);
+                    if (var10_ref_ja.specialPowerup != 2) {
+                      var18 = var10_ref_ja.definition.mass * var10_ref_ja.getDefenseMultiplier((byte) 118, CheckboxRenderer.field_c);
                       var19 = var17 / var18;
                       var20 = (float)(-param3.position.x + var10_ref_ja.position.x) / var15 * var19;
                       var21 = (float)(var10_ref_ja.position.y - param3.position.y) / var15 * var19;
                       var10_ref_ja.velocityX = var10_ref_ja.velocityX + var20;
                       var10_ref_ja.velocityY = var10_ref_ja.velocityY + var21;
                       var10_ref_ja.angularVelocity = DualLinkNode.signumFloat(-29407, var17) * 5.0f;
-                      var10_ref_ja.a(2, param2);
+                      var10_ref_ja.applyImpactStun(2, param2);
                     }
-                    var10_ref_ja.a(var16, param0 ^ -30808, var7, param1);
+                    var10_ref_ja.applyDamage(var16, param0 ^ -30808, var7, param1);
                   }
                 }
                 var9_int++;
                 continue;
               }
             } else {
-              decompiledFrameRemainder0 = (null != ih.field_n);
+              decompiledFrameRemainder0 = (null != AchievementUnlockRequest.field_n);
               if (decompiledFrameRemainder0) {
-                stackIn_33_0 = ih.field_n.first((byte) 125);
+                stackIn_33_0 = AchievementUnlockRequest.field_n.first((byte) 125);
               }
             }
             if (decompiledFrameRemainder0) {
-              var9 = (vf) (stackIn_33_0);
+              var9 = (ZombiePedestrian) (stackIn_33_0);
               while (var9 != null) {
-                SpriteButtonRenderer.field_q.y = 12 + var9.field_i;
-                SpriteButtonRenderer.field_q.x = 12 + var9.field_B;
+                SpriteButtonRenderer.field_q.y = 12 + var9.y;
+                SpriteButtonRenderer.field_q.x = 12 + var9.x;
                 var10 = SpriteButtonRenderer.field_q.x - param3.position.x;
                 var11Lifetime1 = -param3.position.y + SpriteButtonRenderer.field_q.y;
                 var12Lifetime1 = var11Lifetime1 * var11Lifetime1 + var10 * var10;
@@ -556,9 +556,9 @@ final class RaceWorld {
                   var14Lifetime1 = (var13Lifetime1 * 2 - var12Lifetime1) * 4096;
                   var10 = var14Lifetime1 * var10 / (var13Lifetime1 * 2);
                   var11Lifetime1 = var11Lifetime1 * var14Lifetime1 / (var13Lifetime1 * 2);
-                  var9.a(var7, var10, (byte) 24, var11Lifetime1);
+                  var9.hit(var7, var10, (byte) 24, var11Lifetime1);
                 }
-                var9 = (vf) (ih.field_n.next((byte) -94));
+                var9 = (ZombiePedestrian) (AchievementUnlockRequest.field_n.next((byte) -94));
               }
             }
             stackIn_44_0 = var8;
@@ -579,7 +579,7 @@ final class RaceWorld {
         }
     }
 
-    private final boolean a(byte param0, wm param1, RaceVehicle param2) {
+    private final boolean handleVehicleObjectCollision(byte param0, TrackObject param1, RaceVehicle param2) {
         RaceVehicle stackIn_33_0 = null;
         boolean stackIn_34_1 = false;
         NamedSoundEffect stackIn_49_0 = null;
@@ -605,36 +605,36 @@ final class RaceWorld {
             return false;
           }
           if (param0 >= -86) {
-            this.field_a = -68;
+            this.previousTutorialPage = -68;
           }
-          if ((param1.field_J & 512) == 0) {
-            if (0 != (1024 & param1.field_J)) {
-              if ((2048 & param1.field_J) != 0 &&
-                ~param2.field_mc != ~(param1.field_J & 3)) {
-                this.a(param1, false);
+          if ((param1.flags & 512) == 0) {
+            if (0 != (1024 & param1.flags)) {
+              if ((2048 & param1.flags) != 0 &&
+                ~param2.playerIndex != ~(param1.flags & 3)) {
+                this.detonateSmallProjectile(param1, false);
                 return true;
               }
               return false;
             }
-            if ((param1.field_J & 8192) != 0) {
-              if ((param1.field_J & 2048) != 0 &&
-                (param1.field_J & 3) != param2.field_mc) {
-                this.d(param1, 28977);
-                if ((3 & param1.field_J) == 0) {
-                  this.field_o = this.field_o | 8;
+            if ((param1.flags & 8192) != 0) {
+              if ((param1.flags & 2048) != 0 &&
+                (param1.flags & 3) != param2.playerIndex) {
+                this.detonateLargeProjectile(param1, 28977);
+                if ((3 & param1.flags) == 0) {
+                  this.tutorialFlags = this.tutorialFlags | 8;
                 }
                 return true;
               }
               return false;
             }
-            if ((262144 & param1.field_J) != 0) {
+            if ((262144 & param1.flags) != 0) {
               return false;
             }
             param2.field_T = 20;
             stackIn_33_0 = (RaceVehicle) (param2);
-            stackIn_34_1 = (this.field_J != 2) && (this.field_J != 6);
+            stackIn_34_1 = (this.gameMode != 2) && (this.gameMode != 6);
             stackIn_33_0.field_V = stackIn_34_1;
-            param2.field_H = param2.e((byte) 45);
+            param2.field_H = param2.getCourseHeading((byte) 45);
             SecondaryNodeDequeIterator.field_c.y = (float)(-(-param2.position.y + param1.position.y));
             SecondaryNodeDequeIterator.field_c.x = (float)(-(param1.position.x - param2.position.x));
             if (0.0f != SecondaryNodeDequeIterator.field_c.x ||
@@ -642,33 +642,33 @@ final class RaceWorld {
               SecondaryNodeDequeIterator.field_c.normalize(-1);
               var4_float = SecondaryNodeDequeIterator.field_c.y * param2.velocityY + SecondaryNodeDequeIterator.field_c.x * param2.velocityX;
               if (0.0f >= var4_float) {
-                var5_float = 0.800000011920929f * param2.a((byte) 112, sl.field_c);
+                var5_float = 0.800000011920929f * param2.getDefenseMultiplier((byte) 112, sl.field_c);
                 var6 = var4_float * -(1.0f + var5_float);
                 param2.velocityY = param2.velocityY + var6 * SecondaryNodeDequeIterator.field_c.y;
                 param2.velocityX = param2.velocityX + var6 * SecondaryNodeDequeIterator.field_c.x;
-                param2.a(-var4_float, 0, (RaceVehicle) null, 0);
-                if (-30 + this.field_ab > param2.field_cb) {
-                  if (2 != param2.field_J &&
-                    param2.field_Fb[2] <= 0) {
+                param2.applyDamage(-var4_float, 0, (RaceVehicle) null, 0);
+                if (-30 + this.raceTicks > param2.lastCollisionTick) {
+                  if (2 != param2.specialPowerup &&
+                    param2.powerupLevels[2] <= 0) {
                     stackIn_49_0 = CheckboxWidget.field_K;
                   } else {
                     stackIn_49_0 = NineSlicePanel.field_h;
                   }
                   var7 = stackIn_49_0;
                   ValidationHelpWidget.a((byte) 54, param2, var7, var7.field_q);
-                  param2.field_cb = this.field_ab;
+                  param2.lastCollisionTick = this.raceTicks;
                 }
-                param2.a((byte) 109, param1);
+                param2.recordCollisionForAiRecovery((byte) 109, param1);
               }
             }
             return true;
           }
-          var4_int = 3 & param1.field_J;
-          if ((-1 == this.field_mb ||
-            (this.field_o & 4) == 0 &&
-            param2.field_W != null) && param2.c(3, var4_int)) {
+          var4_int = 3 & param1.flags;
+          if ((-1 == this.tutorialPage ||
+            (this.tutorialFlags & 4) == 0 &&
+            param2.keyBindings != null) && param2.collectPowerup(3, var4_int)) {
             param1.unlink(0);
-            if (param2.field_mc == 0) {
+            if (param2.playerIndex == 0) {
               this.field_rb[11] = -1;
               var5 = 0;
               while (true) {
@@ -865,7 +865,7 @@ final class RaceWorld {
         }
     }
 
-    private final void c(wm param0, int param1) {
+    private final void drawObjectSideShadow(TrackObject param0, int param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -882,33 +882,33 @@ final class RaceWorld {
         var10 = HoldTheLine.field_D;
         try {
           if (param1 >= -32) {
-            this.field_lb = (IndexedSprite) null;
+            this.roadLayerMask = (IndexedSprite) null;
           }
-          if (0 == (param0.field_J & 65536) &&
-            this.field_pb) {
-            if ((param0.field_J & 16384) == 0 &&
-              param0.field_E.rectangularCollision) {
+          if (0 == (param0.flags & 65536) &&
+            this.shadowsEnabled) {
+            if ((param0.flags & 16384) == 0 &&
+              param0.definition.rectangularCollision) {
               var3 = new int[8];
               var4 = param0.direction.x;
               var5 = param0.direction.y;
               var6 = -var5;
               var7 = var4;
-              var8 = param0.field_E.field_h;
+              var8 = param0.definition.field_h;
               if (0.0f < var4 + var5) {
                 var8 = -var8;
               }
-              var3[4] = (int)((float)param0.position.x - (float)(param0.field_E.field_m >> 1) * var4 + (float)var8 * var6);
-              var3[0] = (int)((float)param0.position.x + (float)param0.field_E.field_m * var4 + (float)var8 * var6);
-              var3[2] = (int)((float)param0.position.x - (float)param0.field_E.field_m * var4 + (float)var8 * var6);
-              var3[3] = (int)(-(var5 * (float)param0.field_E.field_m) + (float)param0.position.y + (float)var8 * var7);
-              var3[5] = (int)((float)param0.position.y - (float)(param0.field_E.field_m >> 1) * var5 + (float)var8 * var7);
-              var3[1] = (int)((float)var8 * var7 + ((float)param0.position.y + var5 * (float)param0.field_E.field_m));
-              var3[6] = (int)((float)(param0.field_E.field_m >> 1) * var4 + (float)param0.position.x + var6 * (float)var8);
-              var3[7] = (int)((float)param0.position.y + (float)(param0.field_E.field_m >> 1) * var5 + (float)var8 * var7);
+              var3[4] = (int)((float)param0.position.x - (float)(param0.definition.field_m >> 1) * var4 + (float)var8 * var6);
+              var3[0] = (int)((float)param0.position.x + (float)param0.definition.field_m * var4 + (float)var8 * var6);
+              var3[2] = (int)((float)param0.position.x - (float)param0.definition.field_m * var4 + (float)var8 * var6);
+              var3[3] = (int)(-(var5 * (float)param0.definition.field_m) + (float)param0.position.y + (float)var8 * var7);
+              var3[5] = (int)((float)param0.position.y - (float)(param0.definition.field_m >> 1) * var5 + (float)var8 * var7);
+              var3[1] = (int)((float)var8 * var7 + ((float)param0.position.y + var5 * (float)param0.definition.field_m));
+              var3[6] = (int)((float)(param0.definition.field_m >> 1) * var4 + (float)param0.position.x + var6 * (float)var8);
+              var3[7] = (int)((float)param0.position.y + (float)(param0.definition.field_m >> 1) * var5 + (float)var8 * var7);
               var9 = 4;
               while (var9 < 8) {
-                var3[var9] = var3[var9] + this.field_db.x * 2;
-                var3[1 + var9] = var3[1 + var9] + this.field_db.y * 2;
+                var3[var9] = var3[var9] + this.shadowOffset.x * 2;
+                var3[1 + var9] = var3[1 + var9] + this.shadowOffset.y * 2;
                 var9 += 2;
                 if (var10 != 0) {
                   return;
@@ -934,7 +934,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(byte param0, long param1) {
+    private final void updateLightning(byte param0, long param1) {
         int stackIn_18_0 = 0;
         int stackIn_28_0 = 0;
         NamedSoundEffect stackIn_29_1 = null;
@@ -948,9 +948,9 @@ final class RaceWorld {
         var8 = HoldTheLine.field_D;
         try {
           if (param0 != -3) {
-            this.a(-112);
+            this.drawTutorialOverlay(-112);
           }
-          if (this.field_F <= 0) {
+          if (this.lightningBrightness <= 0) {
             boolean decompiledFrameRemainder0 = true;
             var4_int = (int)(param1 % 157L);
             if ((var4_int < 2 ||
@@ -978,8 +978,8 @@ final class RaceWorld {
                   var7.setVolume((byte) -126, var6);
                 }
                 if (var8 != 0) {
-                  this.field_F = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
-                  var6 = this.field_F;
+                  this.lightningBrightness = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
+                  var6 = this.lightningBrightness;
                   var7 = MatchingTextValidator.a(293, TexturedRoadFillRenderer.field_j);
                   if (null != var7) {
                     var7.setVolume((byte) -125, var6);
@@ -988,8 +988,8 @@ final class RaceWorld {
                 }
               }
             } else {
-              this.field_F = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
-              var6 = this.field_F;
+              this.lightningBrightness = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
+              var6 = this.lightningBrightness;
               var7 = MatchingTextValidator.a(293, TexturedRoadFillRenderer.field_j);
               if (null != var7) {
                 var7.setVolume((byte) -125, var6);
@@ -1000,9 +1000,9 @@ final class RaceWorld {
               return;
             }
           }
-          this.field_F = this.field_F - 14;
-          if (0 > this.field_F) {
-            this.field_F = 0;
+          this.lightningBrightness = this.lightningBrightness - 14;
+          if (0 > this.lightningBrightness) {
+            this.lightningBrightness = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1012,7 +1012,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, RaceVehicle param1, RaceVehicle param2) {
+    private final void resolveVehicleCollision(int param0, RaceVehicle param1, RaceVehicle param2) {
         RaceVehicle stackIn_31_0;
         float stackIn_31_1;
         int stackIn_31_2;
@@ -1060,8 +1060,8 @@ final class RaceWorld {
           if (!MatchingTextValidator.a((byte) -73, param2, param1)) {
             return;
           }
-          this.a(param2, 0.0f, param0 ^ param0, -0.5f * EntitySound.field_k * SecondaryNodeDequeIterator.field_c.x, -0.5f * EntitySound.field_k * SecondaryNodeDequeIterator.field_c.y);
-          this.a(param1, 0.0f, 0, SecondaryNodeDequeIterator.field_c.x * (EntitySound.field_k * 0.5f), EntitySound.field_k * 0.5f * SecondaryNodeDequeIterator.field_c.y);
+          this.moveVehicle(param2, 0.0f, param0 ^ param0, -0.5f * EntitySound.field_k * SecondaryNodeDequeIterator.field_c.x, -0.5f * EntitySound.field_k * SecondaryNodeDequeIterator.field_c.y);
+          this.moveVehicle(param1, 0.0f, 0, SecondaryNodeDequeIterator.field_c.x * (EntitySound.field_k * 0.5f), EntitySound.field_k * 0.5f * SecondaryNodeDequeIterator.field_c.y);
           param2.position.y = (int)param2.worldY;
           param2.position.x = (int)param2.worldX;
           param1.position.x = (int)param1.worldX;
@@ -1081,44 +1081,44 @@ final class RaceWorld {
           var12 = (-(SecondaryNodeDequeIterator.field_c.x * var11) + SecondaryNodeDequeIterator.field_c.y * var10) / 3.5f;
           var13 = var7 * param2.velocityX + param2.velocityY * var8;
           var14 = var11 * param1.velocityY + var10 * param1.velocityX;
-          var15 = param2.field_C.field_l * param2.a((byte) 97, DiskCacheWorker.field_f);
-          var16 = param2.field_C.field_a * param2.a((byte) 113, DiskCacheWorker.field_e);
-          var17 = param1.field_C.field_l * param1.a((byte) 116, DiskCacheWorker.field_f);
-          var18 = param1.field_C.field_a * param1.a((byte) 127, DiskCacheWorker.field_e);
-          var19 = 0.800000011920929f * Math.max(param2.a((byte) 109, UrlPacketDownloader.field_m), param1.a((byte) 125, UrlPacketDownloader.field_m));
-          if (param2.field_J != 2 &&
-            param1.field_J != 2 ||
-            param2.field_J == 2 &&
-            param1.field_J == 2) {
+          var15 = param2.definition.mass * param2.getDefenseMultiplier((byte) 97, DiskCacheWorker.field_f);
+          var16 = param2.definition.momentOfInertia * param2.getDefenseMultiplier((byte) 113, DiskCacheWorker.field_e);
+          var17 = param1.definition.mass * param1.getDefenseMultiplier((byte) 116, DiskCacheWorker.field_f);
+          var18 = param1.definition.momentOfInertia * param1.getDefenseMultiplier((byte) 127, DiskCacheWorker.field_e);
+          var19 = 0.800000011920929f * Math.max(param2.getDefenseMultiplier((byte) 109, UrlPacketDownloader.field_m), param1.getDefenseMultiplier((byte) 125, UrlPacketDownloader.field_m));
+          if (param2.specialPowerup != 2 &&
+            param1.specialPowerup != 2 ||
+            param2.specialPowerup == 2 &&
+            param1.specialPowerup == 2) {
             var20_float = var12 * var12 / var18 + (1.0f / var17 + 1.0f / var15 + var9 * var9 / var16);
             var21 = 1.7999999523162842f * var6 / var20_float;
             param2.velocityY = param2.velocityY + var21 / var15 * SecondaryNodeDequeIterator.field_c.y;
             param2.velocityX = param2.velocityX + var21 / var15 * SecondaryNodeDequeIterator.field_c.x;
             param1.velocityX = param1.velocityX - SecondaryNodeDequeIterator.field_c.x * (var21 / var17);
             param1.velocityY = param1.velocityY - SecondaryNodeDequeIterator.field_c.y * (var21 / var17);
-            if (param2.field_J == 2) {
+            if (param2.specialPowerup == 2) {
               param2.angularVelocity = DualLinkNode.signumFloat(-29407, var9) * 5.0f;
-              param2.a(param0 + 2, 100);
+              param2.applyImpactStun(param0 + 2, 100);
               param1.angularVelocity = 5.0f * DualLinkNode.signumFloat(-29407, var12);
-              param1.a(2, 100);
+              param1.applyImpactStun(2, 100);
             }
             decompiledFrameRemainder0 = (var22 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (param2.field_J != 2) {
+            if (param2.specialPowerup != 2) {
               var20_floatLifetime1 = var16 + var9 * (var9 * var15);
               var21Lifetime1 = var16 * (var6 * -(1.0f + var19)) / var20_floatLifetime1;
               param2.velocityX = param2.velocityX - var21Lifetime1 * SecondaryNodeDequeIterator.field_c.x;
               param2.velocityY = param2.velocityY - var21Lifetime1 * SecondaryNodeDequeIterator.field_c.y;
               param2.angularVelocity = DualLinkNode.signumFloat(-29407, var9) * 5.0f;
-              param2.a(param0 ^ 2, 100);
+              param2.applyImpactStun(param0 ^ 2, 100);
               if (var22 != 0) {
                 var20_floatLifetime1 = var12 * (var12 * var17) + var18;
                 var21Lifetime1 = var18 * (-(var19 + 1.0f) * var6) / var20_floatLifetime1;
                 param1.velocityY = param1.velocityY + SecondaryNodeDequeIterator.field_c.y * var21Lifetime1;
                 param1.velocityX = param1.velocityX + var21Lifetime1 * SecondaryNodeDequeIterator.field_c.x;
                 param1.angularVelocity = 5.0f * DualLinkNode.signumFloat(-29407, var12);
-                param1.a(param0 + 2, 100);
+                param1.applyImpactStun(param0 + 2, 100);
               }
             } else {
               var20_floatLifetime1 = var12 * (var12 * var17) + var18;
@@ -1126,10 +1126,10 @@ final class RaceWorld {
               param1.velocityY = param1.velocityY + SecondaryNodeDequeIterator.field_c.y * var21Lifetime1;
               param1.velocityX = param1.velocityX + var21Lifetime1 * SecondaryNodeDequeIterator.field_c.x;
               param1.angularVelocity = 5.0f * DualLinkNode.signumFloat(-29407, var12);
-              param1.a(param0 + 2, 100);
+              param1.applyImpactStun(param0 + 2, 100);
             }
           }
-          if (param1.field_J != 2) {
+          if (param1.specialPowerup != 2) {
             stackIn_31_0 = (RaceVehicle) (param2);
             stackIn_31_1 = -var6;
             stackIn_31_2 = 0;
@@ -1139,14 +1139,14 @@ final class RaceWorld {
             } else {
               stackIn_32_4 = 1;
             }
-            ((RaceVehicle) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4);
+            ((RaceVehicle) (Object) stackIn_31_0).applyDamage(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_32_4);
             if (var22 != 0) {
-              param2.a(1.0f, param0 ^ 0, param1, 5);
+              param2.applyDamage(1.0f, param0 ^ 0, param1, 5);
             }
           } else {
-            param2.a(1.0f, param0 ^ 0, param1, 5);
+            param2.applyDamage(1.0f, param0 ^ 0, param1, 5);
           }
-          if (param2.field_J != 2) {
+          if (param2.specialPowerup != 2) {
             stackIn_41_0 = (RaceVehicle) (param1);
             stackIn_41_1 = -var6;
             stackIn_41_2 = 0;
@@ -1156,37 +1156,37 @@ final class RaceWorld {
             } else {
               stackIn_42_4 = 2;
             }
-            ((RaceVehicle) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_42_4);
+            ((RaceVehicle) (Object) stackIn_41_0).applyDamage(stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_42_4);
             if (var22 != 0) {
-              param1.a(1.0f, 0, param2, 5);
+              param1.applyDamage(1.0f, 0, param2, 5);
             }
           } else {
-            param1.a(1.0f, 0, param2, 5);
+            param1.applyDamage(1.0f, 0, param2, 5);
           }
-          if (param2.field_cb < this.field_ab - 30) {
-            if (param2.field_J != 2 &&
-              0 >= param2.field_Fb[2]) {
+          if (param2.lastCollisionTick < this.raceTicks - 30) {
+            if (param2.specialPowerup != 2 &&
+              0 >= param2.powerupLevels[2]) {
               stackIn_55_0 = CheckboxWidget.field_K;
             } else {
               stackIn_55_0 = NineSlicePanel.field_h;
             }
             var20 = stackIn_55_0;
             ValidationHelpWidget.a((byte) 20, param2, var20, var20.field_q);
-            param2.field_cb = this.field_ab;
+            param2.lastCollisionTick = this.raceTicks;
           }
-          if (this.field_ab - 30 > param1.field_cb) {
-            if (param1.field_J != 2 &&
-              param1.field_Fb[2] <= 0) {
+          if (this.raceTicks - 30 > param1.lastCollisionTick) {
+            if (param1.specialPowerup != 2 &&
+              param1.powerupLevels[2] <= 0) {
               stackIn_66_0 = CheckboxWidget.field_K;
             } else {
               stackIn_66_0 = NineSlicePanel.field_h;
             }
             var20Lifetime1 = stackIn_66_0;
             ValidationHelpWidget.a((byte) 63, param1, var20Lifetime1, var20Lifetime1.field_q);
-            param1.field_cb = this.field_ab;
+            param1.lastCollisionTick = this.raceTicks;
           }
-          param2.a((byte) 103, param1);
-          param1.a((byte) 68, param2);
+          param2.recordCollisionForAiRecovery((byte) 103, param1);
+          param1.recordCollisionForAiRecovery((byte) 68, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1208,34 +1208,34 @@ final class RaceWorld {
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void unlockAchievement(int param0, int param1, byte param2) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
         int var4_int = 0;
-        ih var5 = null;
+        AchievementUnlockRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_E) {
+          if (this.twoPlayerMode) {
             throw new RuntimeException((String) null);
           }
           if ((GameMenu.field_z & 1 << param0) != 0) {
             return;
           }
-          fieldTemp$1 = this.field_fb;
-          this.field_fb = this.field_fb + 1;
-          this.field_V[fieldTemp$1] = param0;
+          fieldTemp$1 = this.achievementCount;
+          this.achievementCount = this.achievementCount + 1;
+          this.achievementQueue[fieldTemp$1] = param0;
           ClientException.field_c = ClientException.field_c | 1 << param0;
           var4_int = -19 / ((param2 - 36) / 62);
           GameMenu.field_z = GameMenu.field_z | 1 << param0;
           if (!l.field_b) {
-            var5 = new ih(param0, param1, this.field_l, this.field_N, this.field_p, this.field_H);
+            var5 = new AchievementUnlockRequest(param0, param1, this.field_l, this.field_N, this.field_p, this.field_H);
             if (pj.b((byte) 92)) {
               fb.field_n.addLast((byte) -117, var5);
               if (HoldTheLine.field_D == 0) {
                 return;
               }
             }
-            na.a(4, var5, (byte) -79);
+            PointLight.queueAchievementUnlock(4, var5, (byte) -79);
             RotatedSpriteAsset.field_k = SpriteSheetAsset.a((byte) -101, 4);
           }
           return;
@@ -1246,7 +1246,7 @@ final class RaceWorld {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9) {
+    final static void blendRgbGradientSpan(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -1262,7 +1262,7 @@ final class RaceWorld {
         var16 = HoldTheLine.field_D;
         try {
           if (param8 > -117) {
-            RaceWorld.b(true);
+            RaceWorld.openPauseMenu(true);
           }
           while (true) {
             param6--;
@@ -1300,12 +1300,12 @@ final class RaceWorld {
         }
     }
 
-    final boolean d(byte param0) {
+    final boolean useParticleOnlyMissileEffects(byte param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 47) {
-            this.field_W = (IntrusiveDeque) null;
+            this.resultObjects = (IntrusiveDeque) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1315,7 +1315,7 @@ final class RaceWorld {
         }
     }
 
-    final int d(int param0, int param1, int param2) {
+    final int getRoadLayerMask(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte stackIn_13_0 = 0;
@@ -1327,11 +1327,11 @@ final class RaceWorld {
             param0 >= 0 &&
             param1 < 640 &&
             480 > param0) {
-            stackIn_13_0 = this.field_lb.field_m[param1 + 640 * param0];
+            stackIn_13_0 = this.roadLayerMask.field_m[param1 + 640 * param0];
             return stackIn_13_0;
           }
-          if (b.a(false, param1, param0, this.field_nb)) {
-            stackIn_21_0 = (!b.a(false, param1, param0, this.field_jb)) ? 8 : 12;
+          if (b.a(false, param1, param0, this.collisionBoundaryLoops)) {
+            stackIn_21_0 = (!b.a(false, param1, param0, this.roadBoundaryLoops)) ? 8 : 12;
             return stackIn_21_0;
           }
           var4_int = 94 / ((12 - param2) / 42);
@@ -1344,20 +1344,20 @@ final class RaceWorld {
         }
     }
 
-    private final void e(int param0) {
+    private final void clearRaceParticipants(int param0) {
         RuntimeException runtimeException = null;
-        wm var2 = null;
+        TrackObject var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          this.field_B = -1;
-          this.field_k = 0;
-          this.field_ab = 0;
-          this.field_mb = 0;
-          this.field_h = 0;
-          this.field_z = 0;
-          var2 = (wm) (this.field_cb.first((byte) 89));
+          this.lapLimit = -1;
+          this.tutorialPageTicks = 0;
+          this.raceTicks = 0;
+          this.tutorialPage = 0;
+          this.playerCount = 0;
+          this.vehicleCount = 0;
+          var2 = (TrackObject) (this.courseObjects.first((byte) 89));
           if (param0 != 4) {
             return;
           }
@@ -1365,12 +1365,12 @@ final class RaceWorld {
             if (var3 != 0) {
               return;
             }
-            if ((var2.field_J & 512) != 0) {
+            if ((var2.flags & 512) != 0) {
               var2.unlink(param0 ^ 4);
             }
-            var2 = (wm) (this.field_cb.next((byte) 114));
+            var2 = (TrackObject) (this.courseObjects.next((byte) 114));
           }
-          this.field_S = true;
+          this.paused = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1379,7 +1379,7 @@ final class RaceWorld {
         }
     }
 
-    private final Point2i a(RaceVehicle param0, int param1) {
+    private final Point2i findVehicleOutsideBounds(RaceVehicle param0, int param1) {
         Sprite var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -1397,36 +1397,36 @@ final class RaceWorld {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param0.field_C.field_v.getByAngle(param0.heading, 27788);
+          var3 = param0.definition.sprite.getByAngle(param0.heading, 27788);
           var4 = -(var3.width >> 1) + param0.position.x;
           var5 = param0.position.y - (var3.height >> 1);
-          var6 = this.a(var5, var4, var3, -95, param0.field_q);
+          var6 = this.findSpriteOutsideBounds(var5, var4, var3, -95, param0.layer);
           if (var6 != null) {
             stackIn_4_0 = var6;
             return stackIn_4_0;
           }
           var7 = new Point2i(0, param1);
-          var7.x = (int)(-((float)param0.field_C.field_k * param0.direction.y) + param0.worldX + (float)param0.field_C.field_K * param0.direction.x);
-          var7.y = (int)(param0.direction.y * (float)param0.field_C.field_K + ((float)param0.field_C.field_k * param0.direction.x + param0.worldY));
-          if (!this.a(param0.field_q, var7.y, true, var7.x)) {
+          var7.x = (int)(-((float)param0.definition.halfWidth * param0.direction.y) + param0.worldX + (float)param0.definition.halfLength * param0.direction.x);
+          var7.y = (int)(param0.direction.y * (float)param0.definition.halfLength + ((float)param0.definition.halfWidth * param0.direction.x + param0.worldY));
+          if (!this.isInsideCollisionBounds(param0.layer, var7.y, true, var7.x)) {
             stackIn_7_0 = var7;
             return stackIn_7_0;
           }
-          var7.x = (int)(param0.direction.y * (float)param0.field_C.field_k + param0.worldX + param0.direction.x * (float)param0.field_C.field_K);
-          var7.y = (int)((float)param0.field_C.field_K * param0.direction.y + (param0.worldY - param0.direction.x * (float)param0.field_C.field_k));
-          if (!this.a(param0.field_q, var7.y, true, var7.x)) {
+          var7.x = (int)(param0.direction.y * (float)param0.definition.halfWidth + param0.worldX + param0.direction.x * (float)param0.definition.halfLength);
+          var7.y = (int)((float)param0.definition.halfLength * param0.direction.y + (param0.worldY - param0.direction.x * (float)param0.definition.halfWidth));
+          if (!this.isInsideCollisionBounds(param0.layer, var7.y, true, var7.x)) {
             stackIn_12_0 = var7;
             return stackIn_12_0;
           }
-          var7.x = (int)(-((float)param0.field_C.field_K * param0.direction.x) + (-(param0.direction.y * (float)param0.field_C.field_k) + param0.worldX));
-          var7.y = (int)(-((float)param0.field_C.field_K * param0.direction.y) + ((float)param0.field_C.field_k * param0.direction.x + param0.worldY));
-          if (!this.a(param0.field_q, var7.y, true, var7.x)) {
+          var7.x = (int)(-((float)param0.definition.halfLength * param0.direction.x) + (-(param0.direction.y * (float)param0.definition.halfWidth) + param0.worldX));
+          var7.y = (int)(-((float)param0.definition.halfLength * param0.direction.y) + ((float)param0.definition.halfWidth * param0.direction.x + param0.worldY));
+          if (!this.isInsideCollisionBounds(param0.layer, var7.y, true, var7.x)) {
             stackIn_17_0 = var7;
             return stackIn_17_0;
           }
-          var7.x = (int)(param0.worldX + (float)param0.field_C.field_k * param0.direction.y - param0.direction.x * (float)param0.field_C.field_K);
-          var7.y = (int)(-(param0.direction.y * (float)param0.field_C.field_K) + (param0.worldY - param0.direction.x * (float)param0.field_C.field_k));
-          if (!this.a(param0.field_q, var7.y, true, var7.x)) {
+          var7.x = (int)(param0.worldX + (float)param0.definition.halfWidth * param0.direction.y - param0.direction.x * (float)param0.definition.halfLength);
+          var7.y = (int)(-(param0.direction.y * (float)param0.definition.halfLength) + (param0.worldY - param0.direction.x * (float)param0.definition.halfWidth));
+          if (!this.isInsideCollisionBounds(param0.layer, var7.y, true, var7.x)) {
             stackIn_22_0 = var7;
             return stackIn_22_0;
           }
@@ -1446,7 +1446,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(wm param0, int param1) {
+    private final void drawObject(TrackObject param0, int param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -1461,52 +1461,52 @@ final class RaceWorld {
         var8 = HoldTheLine.field_D;
         try {
           if (param1 < 39) {
-            this.a(-16, (na) null);
+            this.drawPointLight(-16, (PointLight) null);
           }
-          if ((8192 & param0.field_J) != 0 &&
-            this.d((byte) 47)) {
+          if ((8192 & param0.flags) != 0 &&
+            this.useParticleOnlyMissileEffects((byte) 47)) {
             return;
           }
-          if (0 == (1048576 & param0.field_J)) {
-            var3 = param0.a((byte) -124);
+          if (0 == (1048576 & param0.flags)) {
+            var3 = param0.getCurrentSprite((byte) -124);
             if (var8 != 0) {
-              var3 = param0.field_H;
+              var3 = param0.sprite;
             }
           } else {
-            var3 = param0.field_H;
+            var3 = param0.sprite;
           }
-          if (0 == (131072 & param0.field_J)) {
-            boolean decompiledSharedTail1 = ((param0.field_J & 128) != 0);
+          if (0 == (131072 & param0.flags)) {
+            boolean decompiledSharedTail1 = ((param0.flags & 128) != 0);
             if (!decompiledSharedTail1) {
               var3.draw(-(var3.canvasWidth >> 1) + param0.position.x, param0.position.y - (var3.canvasHeight >> 1));
               decompiledSharedTail1 = (var8 != 0);
             }
             if (decompiledSharedTail1) {
-              var3.drawTinted(-(var3.canvasWidth >> 1) + param0.position.x, param0.position.y - (var3.canvasHeight >> 1), this.vehicles[param0.field_J & 3].field_Eb);
+              var3.drawTinted(-(var3.canvasWidth >> 1) + param0.position.x, param0.position.y - (var3.canvasHeight >> 1), this.vehicles[param0.flags & 3].field_Eb);
             }
             TutorialTransition.a(32381);
-            this.field_I.bindRaster();
+            this.lightMap.bindRaster();
             var3.drawMask(-(var3.canvasWidth >> 1) + param0.position.x, -(var3.canvasHeight >> 1) + param0.position.y, 0);
             MarkerSliderRenderer.restoreRasterTarget(-1);
             if (var8 == 0) {
               return;
             }
           }
-          var4 = (float)param0.field_C / 150.0f;
+          var4 = (float)param0.transitionTicks / 150.0f;
           var5 = 4.0f * var4 * (-var4 + 1.0f) + 1.0f;
-          var6 = (int)((float)param0.field_H.canvasWidth * var5);
-          var7 = (int)((float)param0.field_H.canvasHeight * var5);
-          param0.a((byte) -118);
-          boolean decompiledSharedTail0 = ((param0.field_J & 128) == 0);
+          var6 = (int)((float)param0.sprite.canvasWidth * var5);
+          var7 = (int)((float)param0.sprite.canvasHeight * var5);
+          param0.getCurrentSprite((byte) -118);
+          boolean decompiledSharedTail0 = ((param0.flags & 128) == 0);
           if (!decompiledSharedTail0) {
-            var3.drawScaledTinted(-(var6 >> 1) + param0.position.x, -(var7 >> 1) + param0.position.y, var6, var7, this.vehicles[param0.field_J & 3].field_Eb);
+            var3.drawScaledTinted(-(var6 >> 1) + param0.position.x, -(var7 >> 1) + param0.position.y, var6, var7, this.vehicles[param0.flags & 3].field_Eb);
             decompiledSharedTail0 = (var8 != 0);
           }
           if (decompiledSharedTail0) {
             var3.drawScaled(-(var6 >> 1) + param0.position.x, param0.position.y - (var7 >> 1), var6, var7);
           }
           TutorialTransition.a(32381);
-          this.field_I.bindRaster();
+          this.lightMap.bindRaster();
           var3.drawScaledMask(param0.position.x - (var6 >> 1), param0.position.y - (var7 >> 1), var6, var7, 0);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           return;
@@ -1524,7 +1524,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(byte param0, Vector2f param1, int param2, int param3, int param4) {
+    private final void drawDirectionArrow(byte param0, Vector2f param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
@@ -1599,7 +1599,7 @@ final class RaceWorld {
         }
     }
 
-    private final void c(int param0) {
+    private final void drawHud(int param0) {
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
         int stackIn_48_0 = 0;
@@ -1624,7 +1624,7 @@ final class RaceWorld {
         int var5 = 0;
         int var6 = 0;
         float var6_float = 0.0f;
-        wm var7_ref_wm = null;
+        TrackObject var7_ref_wm = null;
         int var7 = 0;
         Sprite var7_ref_hj = null;
         int var8 = 0;
@@ -1642,7 +1642,7 @@ final class RaceWorld {
         float var17 = 0.0f;
         int var18 = 0;
         int var19 = 0;
-        wm var7_ref_wmLifetime1;
+        TrackObject var7_ref_wmLifetime1;
         int stackIn_31_0Lifetime1;
         int stackIn_31_0Lifetime2;
         int stackIn_31_1Lifetime1;
@@ -1662,39 +1662,39 @@ final class RaceWorld {
         var19 = HoldTheLine.field_D;
         try {
           if (param0 != -16) {
-            this.a((wm) null, 58);
+            this.drawObject((TrackObject) null, 58);
           }
-          this.a((byte) -109);
-          this.a(true);
+          this.drawPlayerHud((byte) -109);
+          this.drawRaceTimer(true);
           var4 = 0;
-          scanLoop1: while (var4 < this.field_h) {
+          scanLoop1: while (var4 < this.playerCount) {
             var5_ref_ja = this.vehicles[var4];
             var6 = 0;
             if (var19 == 0) {
-              var7_ref_wm = (wm) (this.field_cb.first((byte) 102));
+              var7_ref_wm = (TrackObject) (this.courseObjects.first((byte) 102));
               while (var7_ref_wm != null) {
-                stackIn_31_0 = ~var5_ref_ja.field_q;
-                stackIn_31_1 = ~var7_ref_wm.field_q;
+                stackIn_31_0 = ~var5_ref_ja.layer;
+                stackIn_31_1 = ~var7_ref_wm.layer;
                 if (stackIn_31_0 > stackIn_31_1 &&
-                  var7_ref_wm.a(2048, var5_ref_ja.position)) {
+                  var7_ref_wm.containsPoint(2048, var5_ref_ja.position)) {
                   var6 = 1;
                 } else {
-                  var7_ref_wm = (wm) (this.field_cb.next((byte) 90));
+                  var7_ref_wm = (TrackObject) (this.courseObjects.next((byte) 90));
                   continue;
                 }
                 break;
               }
               if (var6 == 0) {
-                var7_ref_wmLifetime1 = (wm) (this.field_d.first((byte) 107));
+                var7_ref_wmLifetime1 = (TrackObject) (this.dynamicObjects.first((byte) 107));
                 while (var7_ref_wmLifetime1 != null) {
-                  stackIn_31_0Lifetime1 = var7_ref_wmLifetime1.field_q;
-                  stackIn_31_1Lifetime1 = var5_ref_ja.field_q;
+                  stackIn_31_0Lifetime1 = var7_ref_wmLifetime1.layer;
+                  stackIn_31_1Lifetime1 = var5_ref_ja.layer;
                   if (stackIn_31_0Lifetime1 > stackIn_31_1Lifetime1 &&
-                    var7_ref_wmLifetime1.a(2048, var5_ref_ja.position)) {
+                    var7_ref_wmLifetime1.containsPoint(2048, var5_ref_ja.position)) {
                     var6 = 1;
                     break;
                   }
-                  var7_ref_wmLifetime1 = (wm) (this.field_d.next((byte) -63));
+                  var7_ref_wmLifetime1 = (TrackObject) (this.dynamicObjects.next((byte) -63));
                 }
               }
               stackIn_31_0Lifetime2 = -265;
@@ -1704,7 +1704,7 @@ final class RaceWorld {
                 var5_ref_ja.position.y < 40) {
                 var6 = 1;
               }
-              if (2 == this.field_J) {
+              if (2 == this.gameMode) {
                 stackIn_48_0 = (480 >= var5_ref_ja.position.x) ? 0 : 1;
                 var9 = stackIn_48_0;
                 stackIn_52_0 = (160 <= var5_ref_ja.position.x) ? 0 : 1;
@@ -1729,14 +1729,14 @@ final class RaceWorld {
                 if (var9 != 0) {
                   var12++;
                 }
-                if (this.field_h > var12) {
+                if (this.playerCount > var12) {
                   var6 = 1;
                 }
               }
-              if (0 < this.field_ab &&
-                var5_ref_ja.field_W != null &&
-                var5_ref_ja.field_tb > 50 &&
-                0 == var5_ref_ja.field_O) {
+              if (0 < this.raceTicks &&
+                var5_ref_ja.keyBindings != null &&
+                var5_ref_ja.activeTicks > 50 &&
+                0 == var5_ref_ja.courseRecoveryTicks) {
                 stackIn_106_0 = 1;
               } else {
                 stackIn_106_0 = 0;
@@ -1746,21 +1746,21 @@ final class RaceWorld {
                 stackIn_115_1 = -72;
                 stackIn_115_2 = var5_ref_ja.direction;
                 if (var12Lifetime1 != 0 &&
-                  this.field_bb / 10 % 2 == 0) {
+                  this.ticks / 10 % 2 == 0) {
                   stackIn_116_0 = this;
                   stackIn_116_3 = 16777215;
                 } else {
                   stackIn_116_0 = this;
                   stackIn_116_3 = var5_ref_ja.field_Eb;
                 }
-                this.a((byte) stackIn_115_1, stackIn_115_2, stackIn_116_3, var5_ref_ja.position.x, var5_ref_ja.position.y);
+                this.drawDirectionArrow((byte) stackIn_115_1, stackIn_115_2, stackIn_116_3, var5_ref_ja.position.x, var5_ref_ja.position.y);
               }
-              if (this.field_bb % 20 < 10 &&
-                null != var5_ref_ja.field_W &&
-                var5_ref_ja.field_Lb > 50 &&
-                this.field_J != 2) {
-                var13 = (int)var5_ref_ja.field_Ib;
-                var14 = (float)(-var13) + var5_ref_ja.field_Ib;
+              if (this.ticks % 20 < 10 &&
+                null != var5_ref_ja.keyBindings &&
+                var5_ref_ja.ticksWithoutForwardProgress > 50 &&
+                this.gameMode != 2) {
+                var13 = (int)var5_ref_ja.furthestCourseProgress;
+                var14 = (float)(-var13) + var5_ref_ja.furthestCourseProgress;
                 if (0.0f == var14 &&
                   ~var13 == ~this.roadSegments.length) {
                   var13--;
@@ -1770,29 +1770,29 @@ final class RaceWorld {
                 var16_ref_qm = var15_ref_wd.pointAt(false, var14);
                 var17_ref_in = var15_ref_wd.directionAt((byte) 120, var14);
                 var18 = var5_ref_ja.field_Eb;
-                this.a((byte) 13, var17_ref_in, var18, var16_ref_qm.x, var16_ref_qm.y);
+                this.drawDirectionArrow((byte) 13, var17_ref_in, var18, var16_ref_qm.x, var16_ref_qm.y);
               }
-              var13Lifetime1 = var5_ref_ja.field_Fb[2] + var5_ref_ja.field_Fb[0] + (var5_ref_ja.field_Fb[1] + var5_ref_ja.field_Fb[3]);
+              var13Lifetime1 = var5_ref_ja.powerupLevels[2] + var5_ref_ja.powerupLevels[0] + (var5_ref_ja.powerupLevels[1] + var5_ref_ja.powerupLevels[3]);
               var14Lifetime1 = 0.0f;
               var15 = 0;
               while (var15 < 3) {
                 var16 = 0;
-                stackIn_157_0 = var5_ref_ja.field_hc[var15];
+                stackIn_157_0 = var5_ref_ja.heldPowerups[var15];
                 stackIn_157_1 = -1;
                 if (stackIn_157_0 != stackIn_157_1) {
-                  if (var5_ref_ja.field_hc[var15] != 0) {
-                    if (var5_ref_ja.field_hc[var15] == 1) {
+                  if (var5_ref_ja.heldPowerups[var15] != 0) {
+                    if (var5_ref_ja.heldPowerups[var15] == 1) {
                       var16 = 65280;
-                    } else if (var5_ref_ja.field_hc[var15] == 2) {
+                    } else if (var5_ref_ja.heldPowerups[var15] == 2) {
                       var16 = 255;
                     }
                   } else {
                     var16 = 16711680;
                   }
-                  var17 = 3.1415927410125732f * (2.0f * (float)(this.field_bb % 100)) / 100.0f + var14Lifetime1;
-                  var2_int = var5_ref_ja.position.x + (int)((double)var5_ref_ja.field_B * Math.cos((double)var17));
+                  var17 = 3.1415927410125732f * (2.0f * (float)(this.ticks % 100)) / 100.0f + var14Lifetime1;
+                  var2_int = var5_ref_ja.position.x + (int)((double)var5_ref_ja.collisionRadius * Math.cos((double)var17));
                   var14Lifetime1 = var14Lifetime1 + 6.2831854820251465f / (float)var13Lifetime1;
-                  var3 = var5_ref_ja.position.y - (int)((double)var5_ref_ja.field_B * Math.sin((double)var17));
+                  var3 = var5_ref_ja.position.y - (int)((double)var5_ref_ja.collisionRadius * Math.sin((double)var17));
                   SoftwareRasterizer.fillCircle(var2_int, var3, 3, var16);
                   var16 = var16 >> 1 & 8355711;
                   SoftwareRasterizer.drawCircle(var2_int, var3, 3, var16);
@@ -1802,31 +1802,31 @@ final class RaceWorld {
               stackIn_157_0Lifetime1 = ~var5_ref_ja.field_ob;
               stackIn_157_1Lifetime1 = -26;
               if (stackIn_157_0Lifetime1 >= stackIn_157_1Lifetime1 &&
-                0 < this.field_ab) {
-                UsernameLoginCredentials.a(hk.field_a[20 + var5_ref_ja.field_R], param0 - 12, var5_ref_ja.position.y - 15, -25 + var5_ref_ja.position.x, 200 - (var5_ref_ja.field_ob * 8 - 512), 16777215);
+                0 < this.raceTicks) {
+                UsernameLoginCredentials.a(hk.field_a[20 + var5_ref_ja.racePosition], param0 - 12, var5_ref_ja.position.y - 15, -25 + var5_ref_ja.position.x, 200 - (var5_ref_ja.field_ob * 8 - 512), 16777215);
               }
               var4++;
               continue scanLoop1;
             }
             break;
           }
-          if (this.field_fb > 0) {
+          if (this.achievementCount > 0) {
             var5 = 0;
-            if (50 <= this.field_G) {
-              if (!(this.field_G <= 150)) {
+            if (50 <= this.achievementTicks) {
+              if (!(this.achievementTicks <= 150)) {
                 var6_float = (float)Math.exp(0.04000000283122063);
-                var7 = -100 + (this.field_G - 50);
+                var7 = -100 + (this.achievementTicks - 50);
                 var5 = (int)((double)(640.0f / (-1.0f + var6_float)) * (1.0 - Math.exp((double)((float)var7 * 0.0020000000949949026f))));
                 if (var19 != 0) {
                   var6_float = (float)Math.exp(1.0);
-                  var5 = (int)((double)(640.0f / (var6_float - 1.0f)) * ((double)var6_float * Math.exp((double)(-0.019999999552965164f * (float)this.field_G)) - 1.0));
+                  var5 = (int)((double)(640.0f / (var6_float - 1.0f)) * ((double)var6_float * Math.exp((double)(-0.019999999552965164f * (float)this.achievementTicks)) - 1.0));
                 }
               }
             } else {
               var6_float = (float)Math.exp(1.0);
-              var5 = (int)((double)(640.0f / (var6_float - 1.0f)) * ((double)var6_float * Math.exp((double)(-0.019999999552965164f * (float)this.field_G)) - 1.0));
+              var5 = (int)((double)(640.0f / (var6_float - 1.0f)) * ((double)var6_float * Math.exp((double)(-0.019999999552965164f * (float)this.achievementTicks)) - 1.0));
             }
-            var6Lifetime1 = this.field_V[0];
+            var6Lifetime1 = this.achievementQueue[0];
             var7_ref_hj = ak.a(-40, false, var6Lifetime1);
             var8Lifetime1 = nm.field_c.measureText(ae.field_c[var6Lifetime1]) + 48;
             SoftwareRasterizer.fillRectangle(3 + var5, 3, var8Lifetime1, 36, 0);
@@ -1837,19 +1837,19 @@ final class RaceWorld {
             }
             nm.field_c.draw(ae.field_c[var6Lifetime1], 48 + var5, 30, 0, -1);
           }
-          if (this.field_j > 0) {
-            if (null == this.field_R) {
-              var5Lifetime1 = EmailAddressValidator.field_j.measureText(this.field_ib[0]);
+          if (this.bannerCount > 0) {
+            if (null == this.bannerSprite) {
+              var5Lifetime1 = EmailAddressValidator.field_j.measureText(this.banners[0]);
               var6Lifetime2 = EmailAddressValidator.field_j.baseline;
-              this.field_R = new Sprite(var5Lifetime1, var6Lifetime2);
-              vb.a(-121, this.field_R);
-              EmailAddressValidator.field_j.draw(this.field_ib[0], 0, EmailAddressValidator.field_j.ascent, 0, -1);
+              this.bannerSprite = new Sprite(var5Lifetime1, var6Lifetime2);
+              vb.a(-121, this.bannerSprite);
+              EmailAddressValidator.field_j.draw(this.banners[0], 0, EmailAddressValidator.field_j.ascent, 0, -1);
               MarkerSliderRenderer.restoreRasterTarget(param0 + 15);
             }
-            var5Lifetime1Lifetime1 = 4096 - (this.field_s << 12) / 50;
-            var6Lifetime2Lifetime1 = var5Lifetime1Lifetime1 * this.field_R.width >> 12;
-            var7Lifetime1 = this.field_R.height * var5Lifetime1Lifetime1 >> 12;
-            this.field_R.drawScaled(640 - var6Lifetime2Lifetime1 >> 1, 480 - var7Lifetime1 >> 1, var6Lifetime2Lifetime1, var7Lifetime1);
+            var5Lifetime1Lifetime1 = 4096 - (this.bannerTicks << 12) / 50;
+            var6Lifetime2Lifetime1 = var5Lifetime1Lifetime1 * this.bannerSprite.width >> 12;
+            var7Lifetime1 = this.bannerSprite.height * var5Lifetime1Lifetime1 >> 12;
+            this.bannerSprite.drawScaled(640 - var6Lifetime2Lifetime1 >> 1, 480 - var7Lifetime1 >> 1, var6Lifetime2Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1859,7 +1859,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(TutorialAction param0, int param1) {
+    private final void executeTutorialAction(TutorialAction param0, int param1) {
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
         int[] dupTemp$2 = null;
@@ -1874,7 +1874,7 @@ final class RaceWorld {
         String stackIn_195_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        wm var3 = null;
+        TrackObject var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -1886,12 +1886,12 @@ final class RaceWorld {
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted0 = true;
           if (0 == param0.opcode) {
-            var3_int = this.field_h;
-            this.field_z = 1 + param0.field_d;
-            this.field_h = 1 + param0.field_d;
+            var3_int = this.playerCount;
+            this.vehicleCount = 1 + param0.field_d;
+            this.playerCount = 1 + param0.field_d;
             var4 = var3_int;
-            while (var4 < this.field_h) {
-              this.vehicles[var4].l(554646678);
+            while (var4 < this.playerCount) {
+              this.vehicles[var4].reset(554646678);
               var4++;
               if (var5 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -1907,29 +1907,29 @@ final class RaceWorld {
             if (param0.opcode != 1) {
               if (param0.opcode == 6) {
                 if (param0.field_d != -1) {
-                  this.field_o = this.field_o & -5;
+                  this.tutorialFlags = this.tutorialFlags & -5;
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.field_o = this.field_o | 4;
+                  this.tutorialFlags = this.tutorialFlags | 4;
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (param0.opcode == 2) {
                   if (-114 != param0.field_d) {
-                    this.field_D = param0.field_d;
+                    this.tutorialHighlight = param0.field_d;
                     if (-101 != param0.field_d) {
-                      this.field_tb = 256;
+                      this.tutorialHighlightAlpha = 256;
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      this.field_tb = 0;
+                      this.tutorialHighlightAlpha = 0;
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    this.field_tb = 255;
+                    this.tutorialHighlightAlpha = 255;
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                 }
@@ -1945,22 +1945,22 @@ final class RaceWorld {
                                 var3_int = 0;
                                 break;
                               }
-                              this.vehicles[param0.field_h].field_Fb[var3_int] = 0;
+                              this.vehicles[param0.field_h].powerupLevels[var3_int] = 0;
                               var3_int++;
                             } while (var5 == 0);
                             do {
                               if (3 <= var3_int) {
-                                this.vehicles[param0.field_h].field_J = -1;
+                                this.vehicles[param0.field_h].specialPowerup = -1;
                                 break;
                               }
-                              this.vehicles[param0.field_h].field_hc[var3_int] = -1;
+                              this.vehicles[param0.field_h].heldPowerups[var3_int] = -1;
                               var3_int++;
                             } while (var5 == 0);
                             decompiledFrameRemainder0 = (var5 != 0);
                           }
                           if (decompiledFrameRemainder0) {
                             var4 = 0;
-                            while (this.field_h > var4) {
+                            while (this.playerCount > var4) {
                               stackIn_186_0 = 0;
                               if (var5 != 0) {
                                 decompiledFrameCompleted2 = false;
@@ -1968,15 +1968,15 @@ final class RaceWorld {
                               }
                               var3_int = stackIn_186_0;
                               while (var3_int < 4) {
-                                this.vehicles[var4].field_Fb[var3_int] = 0;
+                                this.vehicles[var4].powerupLevels[var3_int] = 0;
                                 var3_int++;
                               }
                               var3_int = 0;
                               while (var3_int < 3) {
-                                this.vehicles[var4].field_hc[var3_int] = -1;
+                                this.vehicles[var4].heldPowerups[var3_int] = -1;
                                 var3_int++;
                               }
-                              this.vehicles[var4].field_J = -1;
+                              this.vehicles[var4].specialPowerup = -1;
                               var4++;
                             }
                             if (decompiledFrameCompleted2) {
@@ -1986,19 +1986,19 @@ final class RaceWorld {
                         }
                         if ((decompiledFrameRemainder0) &&
                           (decompiledFrameCompleted2)) {
-                          var3 = (wm) (this.field_cb.first((byte) 106));
+                          var3 = (TrackObject) (this.courseObjects.first((byte) 106));
                           while (null != var3) {
                             stackIn_187_0 = 0;
-                            stackIn_187_1 = var3.field_J & 512;
+                            stackIn_187_1 = var3.flags & 512;
                             if (var5 != 0) {
                               decompiledFrameCompleted1 = false;
                               break;
                             }
                             if (stackIn_187_0 != stackIn_187_1 && (param0.field_d == -106 ||
-                              (var3.field_J & 3) == param0.field_d)) {
+                              (var3.flags & 3) == param0.field_d)) {
                               var3.unlink(0);
                             }
-                            var3 = (wm) (this.field_cb.next((byte) -52));
+                            var3 = (TrackObject) (this.courseObjects.next((byte) -52));
                           }
                           if (decompiledFrameCompleted1) {
                             decompiledFrameRemainder0 = (var5 != 0);
@@ -2012,28 +2012,28 @@ final class RaceWorld {
                           var3_int = 0;
                           while (true) {
                             if (var3_int < 4) {
-                              this.vehicles[param0.field_d].field_Fb[var3_int] = 0;
+                              this.vehicles[param0.field_d].powerupLevels[var3_int] = 0;
                               var3_int++;
                               if (var5 == 0) {
                                 continue;
                               }
                             } else {
-                              this.vehicles[param0.field_d].field_hc[0] = param0.field_h;
-                              this.vehicles[param0.field_d].field_hc[1] = param0.field_e;
-                              this.vehicles[param0.field_d].field_hc[2] = param0.field_k;
+                              this.vehicles[param0.field_d].heldPowerups[0] = param0.field_h;
+                              this.vehicles[param0.field_d].heldPowerups[1] = param0.field_e;
+                              this.vehicles[param0.field_d].heldPowerups[2] = param0.field_k;
                             }
                             break;
                           }
                           if (param0.field_h != -1) {
-                            dupTemp$0 = this.vehicles[param0.field_d].field_Fb;
+                            dupTemp$0 = this.vehicles[param0.field_d].powerupLevels;
                             dupTemp$0[param0.field_h] = dupTemp$0[param0.field_h] + 1;
                           }
                           if (param0.field_e != -1) {
-                            dupTemp$1 = this.vehicles[param0.field_d].field_Fb;
+                            dupTemp$1 = this.vehicles[param0.field_d].powerupLevels;
                             dupTemp$1[param0.field_e] = dupTemp$1[param0.field_e] + 1;
                           }
                           if (-1 != param0.field_k) {
-                            dupTemp$2 = this.vehicles[param0.field_d].field_Fb;
+                            dupTemp$2 = this.vehicles[param0.field_d].powerupLevels;
                             dupTemp$2[param0.field_k] = dupTemp$2[param0.field_k] + 1;
                           }
                           decompiledFrameRemainder0 = (var5 != 0);
@@ -2050,31 +2050,31 @@ final class RaceWorld {
                             if (decompiledFrameRemainder0) {
                               if (10 != param0.opcode) {
                                 if (param0.opcode == 11) {
-                                  this.field_B = param0.field_d;
-                                  this.field_U = false;
+                                  this.lapLimit = param0.field_d;
+                                  this.raceFinished = false;
                                   this.field_ob = -1;
                                   decompiledFrameRemainder0 = (var5 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
                                   if (param0.opcode == 12) {
-                                    this.field_S = false;
-                                    this.field_mb = -1;
+                                    this.paused = false;
+                                    this.tutorialPage = -1;
                                     decompiledFrameRemainder0 = (var5 != 0);
                                   }
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (param0.opcode == 13))) {
-                                    this.field_mb = -1;
+                                    this.tutorialPage = -1;
                                     qn.a(7, false, false);
                                     decompiledFrameRemainder0 = (var5 != 0);
                                   }
                                 }
                               }
                               if (decompiledFrameRemainder0) {
-                                this.field_z = param0.field_d;
-                                this.field_h = param0.field_d;
+                                this.vehicleCount = param0.field_d;
+                                this.playerCount = param0.field_d;
                                 var3_int = 0;
-                                while (var3_int < this.field_h) {
-                                  this.vehicles[var3_int].l(554646678);
+                                while (var3_int < this.playerCount) {
+                                  this.vehicles[var3_int].reset(554646678);
                                   var3_int++;
                                   if (var5 != 0) {
                                     decompiledFrameCompleted0 = false;
@@ -2089,36 +2089,36 @@ final class RaceWorld {
                           }
                           if ((decompiledFrameRemainder0) &&
                             (decompiledFrameCompleted0)) {
-                            this.vehicles[param0.field_d].field_bc = param0.field_h;
+                            this.vehicles[param0.field_d].lapsCompleted = param0.field_h;
                             if (var5 != 0) {
-                              this.b(24936, param0.field_h, param0.field_d);
-                              this.a(param0.field_d, -1, param0.field_h);
+                              this.placePickupRows(24936, param0.field_h, param0.field_d);
+                              this.placePickupRing(param0.field_d, -1, param0.field_h);
                               stackIn_184_1 = (param0.field_d == -1);
-                              this.field_S = stackIn_184_1;
+                              this.paused = stackIn_184_1;
                             }
                           }
                         }
                       }
                     } else {
-                      this.b(24936, param0.field_h, param0.field_d);
+                      this.placePickupRows(24936, param0.field_h, param0.field_d);
                       if (var5 != 0) {
-                        this.a(param0.field_d, -1, param0.field_h);
+                        this.placePickupRing(param0.field_d, -1, param0.field_h);
                         stackIn_184_1 = (param0.field_d == -1);
-                        this.field_S = stackIn_184_1;
+                        this.paused = stackIn_184_1;
                       }
                     }
                   } else {
-                    this.a(param0.field_d, -1, param0.field_h);
+                    this.placePickupRing(param0.field_d, -1, param0.field_h);
                     if (var5 != 0) {
                       stackIn_184_1 = (param0.field_d == -1);
-                      this.field_S = stackIn_184_1;
+                      this.paused = stackIn_184_1;
                     }
                   }
                 }
               }
             } else {
               stackIn_184_1 = (param0.field_d == -1);
-              this.field_S = stackIn_184_1;
+              this.paused = stackIn_184_1;
             }
           }
           if ((decompiledFrameCompleted2) &&
@@ -2130,7 +2130,7 @@ final class RaceWorld {
             stackIn_187_1 = -88;
           }
           if (stackIn_187_0 >= stackIn_187_1) {
-            this.b(-43);
+            this.updateTutorialTransitions(-43);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2147,7 +2147,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0) {
+    private final void drawTutorialOverlay(int param0) {
         int stackIn_5_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_9_0 = 0;
@@ -2171,7 +2171,7 @@ final class RaceWorld {
         float var4 = 0.0f;
         int var5_int = 0;
         float var5 = 0.0f;
-        wm var6 = null;
+        TrackObject var6 = null;
         int var6_int = 0;
         RaceVehicle var6_ref = null;
         TutorialPage var6_ref2 = null;
@@ -2180,7 +2180,7 @@ final class RaceWorld {
         TutorialCalloutAnchor var7_ref = null;
         int var8 = 0;
         int var9 = 0;
-        wm var6Lifetime1;
+        TrackObject var6Lifetime1;
         int var4_intLifetime1;
         var9 = HoldTheLine.field_D;
         try {
@@ -2188,8 +2188,8 @@ final class RaceWorld {
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameCompleted1 = true;
-          if (this.field_D != -101) {
-            var2_int = this.field_bb % 60;
+          if (this.tutorialHighlight != -101) {
+            var2_int = this.ticks % 60;
             stackIn_5_0 = 10;
             if (var2_int > 30) {
               stackIn_6_1 = 60 - var2_int;
@@ -2197,7 +2197,7 @@ final class RaceWorld {
               stackIn_6_1 = var2_int;
             }
             var3_int = stackIn_5_0 + stackIn_6_1 / 2;
-            var4_int = (30 + this.field_bb) % 60;
+            var4_int = (30 + this.ticks) % 60;
             stackIn_9_0 = 10;
             if (var4_int <= 30) {
               stackIn_10_1 = var4_int;
@@ -2205,38 +2205,38 @@ final class RaceWorld {
               stackIn_10_1 = -var4_int + 60;
             }
             var5_int = stackIn_9_0 + stackIn_10_1 / 2;
-            if (-101 >= this.field_D ||
-              15 <= this.field_bb % 30) {
-              if (-106 > this.field_D) {
-                if (-111 >= this.field_D) {
-                  if ((this.field_D != -111) &&
-                    (decompiledFrameRemainder0 = !(this.field_D < -113))) {
-                    var6 = (wm) (this.field_cb.first((byte) 114));
+            if (-101 >= this.tutorialHighlight ||
+              15 <= this.ticks % 30) {
+              if (-106 > this.tutorialHighlight) {
+                if (-111 >= this.tutorialHighlight) {
+                  if ((this.tutorialHighlight != -111) &&
+                    (decompiledFrameRemainder0 = !(this.tutorialHighlight < -113))) {
+                    var6 = (TrackObject) (this.courseObjects.first((byte) 114));
                     while (var6 != null) {
                       if (var9 != 0) {
                         decompiledFrameCompleted3 = false;
                         break;
                       }
                       stackIn_31_0 = 0;
-                      stackIn_31_1 = var6.field_J & 32768;
-                      if (stackIn_31_0 != stackIn_31_1 && (this.field_D == -112 &&
-                        (var6.field_J & 3) == 0 ||
-                        this.field_D == -113 &&
-                        (3 & var6.field_J) == 1)) {
+                      stackIn_31_1 = var6.flags & 32768;
+                      if (stackIn_31_0 != stackIn_31_1 && (this.tutorialHighlight == -112 &&
+                        (var6.flags & 3) == 0 ||
+                        this.tutorialHighlight == -113 &&
+                        (3 & var6.flags) == 1)) {
                         var7_int = 0;
                         while (var7_int < 2) {
                           stackIn_31_0 = ~var7_int;
                           stackIn_31_1 = -1;
                           stackIn_51_0 = (stackIn_31_0 == stackIn_31_1) ? var3_int : var5_int;
                           var8 = stackIn_51_0;
-                          SoftwareRasterizer.drawLineAlpha(var6.position.x + (int)(var6.direction.x * (float)(var6.field_k + var8) + var6.direction.y * (float)(var8 + var6.field_i)), var6.position.y + (int)((float)(var6.field_k + var8) * var6.direction.y - var6.direction.x * (float)(var6.field_i + var8)), (int)(var6.direction.x * (float)(var8 + var6.field_k) - var6.direction.y * (float)(var6.field_i + var8)) + var6.position.x, (int)((float)(var8 + var6.field_i) * var6.direction.x + (float)(var8 + var6.field_k) * var6.direction.y) + var6.position.y, 16777087, this.field_tb);
-                          SoftwareRasterizer.drawLineAlpha(var6.position.x + (int)(var6.direction.x * (float)(var8 + var6.field_k) - (float)(var8 + var6.field_i) * var6.direction.y), var6.position.y + (int)((float)(var6.field_k + var8) * var6.direction.y + (float)(var6.field_i + var8) * var6.direction.x), var6.position.x + (int)((float)(var6.field_k + var8) * -var6.direction.x - (float)(var6.field_i + var8) * var6.direction.y), var6.position.y + (int)(-var6.direction.y * (float)(var6.field_k + var8) + var6.direction.x * (float)(var8 + var6.field_i)), 16777087, this.field_tb);
-                          SoftwareRasterizer.drawLineAlpha((int)(-(var6.direction.y * (float)(var6.field_i + var8)) + (float)(var6.field_k + var8) * -var6.direction.x) + var6.position.x, (int)(-var6.direction.y * (float)(var6.field_k + var8) + (float)(var8 + var6.field_i) * var6.direction.x) + var6.position.y, var6.position.x + (int)(var6.direction.y * (float)(var8 + var6.field_i) + (float)(var6.field_k + var8) * -var6.direction.x), var6.position.y + (int)(-var6.direction.y * (float)(var8 + var6.field_k) - var6.direction.x * (float)(var6.field_i + var8)), 16777087, this.field_tb);
-                          SoftwareRasterizer.drawLineAlpha((int)(var6.direction.y * (float)(var6.field_i + var8) + -var6.direction.x * (float)(var6.field_k + var8)) + var6.position.x, var6.position.y + (int)(-((float)(var8 + var6.field_i) * var6.direction.x) + -var6.direction.y * (float)(var8 + var6.field_k)), var6.position.x + (int)(var6.direction.x * (float)(var8 + var6.field_k) + (float)(var8 + var6.field_i) * var6.direction.y), (int)((float)(var8 + var6.field_k) * var6.direction.y - var6.direction.x * (float)(var6.field_i + var8)) + var6.position.y, 16777087, this.field_tb);
+                          SoftwareRasterizer.drawLineAlpha(var6.position.x + (int)(var6.direction.x * (float)(var6.halfLength + var8) + var6.direction.y * (float)(var8 + var6.halfWidth)), var6.position.y + (int)((float)(var6.halfLength + var8) * var6.direction.y - var6.direction.x * (float)(var6.halfWidth + var8)), (int)(var6.direction.x * (float)(var8 + var6.halfLength) - var6.direction.y * (float)(var6.halfWidth + var8)) + var6.position.x, (int)((float)(var8 + var6.halfWidth) * var6.direction.x + (float)(var8 + var6.halfLength) * var6.direction.y) + var6.position.y, 16777087, this.tutorialHighlightAlpha);
+                          SoftwareRasterizer.drawLineAlpha(var6.position.x + (int)(var6.direction.x * (float)(var8 + var6.halfLength) - (float)(var8 + var6.halfWidth) * var6.direction.y), var6.position.y + (int)((float)(var6.halfLength + var8) * var6.direction.y + (float)(var6.halfWidth + var8) * var6.direction.x), var6.position.x + (int)((float)(var6.halfLength + var8) * -var6.direction.x - (float)(var6.halfWidth + var8) * var6.direction.y), var6.position.y + (int)(-var6.direction.y * (float)(var6.halfLength + var8) + var6.direction.x * (float)(var8 + var6.halfWidth)), 16777087, this.tutorialHighlightAlpha);
+                          SoftwareRasterizer.drawLineAlpha((int)(-(var6.direction.y * (float)(var6.halfWidth + var8)) + (float)(var6.halfLength + var8) * -var6.direction.x) + var6.position.x, (int)(-var6.direction.y * (float)(var6.halfLength + var8) + (float)(var8 + var6.halfWidth) * var6.direction.x) + var6.position.y, var6.position.x + (int)(var6.direction.y * (float)(var8 + var6.halfWidth) + (float)(var6.halfLength + var8) * -var6.direction.x), var6.position.y + (int)(-var6.direction.y * (float)(var8 + var6.halfLength) - var6.direction.x * (float)(var6.halfWidth + var8)), 16777087, this.tutorialHighlightAlpha);
+                          SoftwareRasterizer.drawLineAlpha((int)(var6.direction.y * (float)(var6.halfWidth + var8) + -var6.direction.x * (float)(var6.halfLength + var8)) + var6.position.x, var6.position.y + (int)(-((float)(var8 + var6.halfWidth) * var6.direction.x) + -var6.direction.y * (float)(var8 + var6.halfLength)), var6.position.x + (int)(var6.direction.x * (float)(var8 + var6.halfLength) + (float)(var8 + var6.halfWidth) * var6.direction.y), (int)((float)(var8 + var6.halfLength) * var6.direction.y - var6.direction.x * (float)(var6.halfWidth + var8)) + var6.position.y, 16777087, this.tutorialHighlightAlpha);
                           var7_int++;
                         }
                       }
-                      var6 = (wm) (this.field_cb.next((byte) -84));
+                      var6 = (TrackObject) (this.courseObjects.next((byte) -84));
                       continue;
                     }
                     if (decompiledFrameCompleted3) {
@@ -2246,10 +2246,10 @@ final class RaceWorld {
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameCompleted3)) {
                     var6_int = 0;
-                    while (var6_int < this.field_h) {
+                    while (var6_int < this.playerCount) {
                       var7 = this.vehicles[var6_int];
-                      oc.a(var3_int, var7.position.y, var7.position.x, 16777087, (byte) -95, this.field_tb);
-                      oc.a(var5_int, var7.position.y, var7.position.x, 16777087, (byte) -92, this.field_tb);
+                      oc.a(var3_int, var7.position.y, var7.position.x, 16777087, (byte) -95, this.tutorialHighlightAlpha);
+                      oc.a(var5_int, var7.position.y, var7.position.x, 16777087, (byte) -92, this.tutorialHighlightAlpha);
                       var6_int++;
                       if (var9 != 0) {
                         decompiledFrameCompleted2 = false;
@@ -2264,50 +2264,50 @@ final class RaceWorld {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameCompleted3) &&
                   (decompiledFrameCompleted2)) {
-                  var6_ref = this.vehicles[-107 - this.field_D];
-                  oc.a(var3_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) -102, this.field_tb);
-                  oc.a(var5_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) 108, this.field_tb);
+                  var6_ref = this.vehicles[-107 - this.tutorialHighlight];
+                  oc.a(var3_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) -102, this.tutorialHighlightAlpha);
+                  oc.a(var5_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) 108, this.tutorialHighlightAlpha);
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
               }
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted3) &&
                 (decompiledFrameCompleted2)) {
-                var6Lifetime1 = (wm) (this.field_cb.first((byte) 116));
+                var6Lifetime1 = (TrackObject) (this.courseObjects.first((byte) 116));
                 while (null != var6Lifetime1) {
                   if (var9 != 0) {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
-                  if (0 != (512 & var6Lifetime1.field_J) && (-106 == this.field_D ||
-                    -this.field_D - 102 == (3 & var6Lifetime1.field_J))) {
-                    oc.a(var3_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 109, this.field_tb);
-                    oc.a(var5_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 93, this.field_tb);
+                  if (0 != (512 & var6Lifetime1.flags) && (-106 == this.tutorialHighlight ||
+                    -this.tutorialHighlight - 102 == (3 & var6Lifetime1.flags))) {
+                    oc.a(var3_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 109, this.tutorialHighlightAlpha);
+                    oc.a(var5_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 93, this.tutorialHighlightAlpha);
                   }
-                  var6Lifetime1 = (wm) (this.field_cb.next((byte) -61));
+                  var6Lifetime1 = (TrackObject) (this.courseObjects.next((byte) -61));
                 }
                 if ((decompiledFrameCompleted1) &&
                   (var9 != 0)) {
-                  if (this.field_D >= 0) {
-                    stackIn_85_0 = this.field_D;
+                  if (this.tutorialHighlight >= 0) {
+                    stackIn_85_0 = this.tutorialHighlight;
                   } else {
-                    stackIn_85_0 = this.roadSegments.length + this.field_D;
+                    stackIn_85_0 = this.roadSegments.length + this.tutorialHighlight;
                   }
                   var6_int = stackIn_85_0;
                   ValidatedTextField.a(this.roadSegments, var6_int, false, 115, bn.field_l, var6_int + 1);
                 }
               }
             } else {
-              if (this.field_D >= 0) {
-                stackIn_85_0 = this.field_D;
+              if (this.tutorialHighlight >= 0) {
+                stackIn_85_0 = this.tutorialHighlight;
               } else {
-                stackIn_85_0 = this.roadSegments.length + this.field_D;
+                stackIn_85_0 = this.roadSegments.length + this.tutorialHighlight;
               }
               var6_int = stackIn_85_0;
               ValidatedTextField.a(this.roadSegments, var6_int, false, 115, bn.field_l, var6_int + 1);
             }
           }
-          var2 = RasterBuffer.field_a[this.field_mb];
+          var2 = RasterBuffer.field_a[this.tutorialPage];
           if (param0 != -3) {
             return;
           }
@@ -2350,14 +2350,14 @@ final class RaceWorld {
             var3 = var2.field_j;
           }
           if (decompiledFrameCompleted0) {
-            stackIn_124_0 = ~this.field_a;
-            stackIn_124_1 = ~this.field_mb;
+            stackIn_124_0 = ~this.previousTutorialPage;
+            stackIn_124_1 = ~this.tutorialPage;
           }
           if (stackIn_124_0 != stackIn_124_1) {
-            var4 = (float)Math.exp((double)(-0.20000000298023224f * (float)this.field_k));
+            var4 = (float)Math.exp((double)(-0.20000000298023224f * (float)this.tutorialPageTicks));
             var5 = -var4 + 1.0f;
-            if (-1 != this.field_a) {
-              var6_ref2 = RasterBuffer.field_a[this.field_a];
+            if (-1 != this.previousTutorialPage) {
+              var6_ref2 = RasterBuffer.field_a[this.previousTutorialPage];
               if (this.field_n == 1) {
                 stackIn_132_0 = var6_ref2.field_g;
               } else {
@@ -2365,18 +2365,18 @@ final class RaceWorld {
               }
               var7_ref = stackIn_132_0;
               if (var7_ref != null) {
-                this.a(var6_ref2.name, var5, param0 - 11237, var7_ref, var6_ref2.text);
+                this.drawTutorialCallout(var6_ref2.name, var5, param0 - 11237, var7_ref, var6_ref2.text);
               }
             }
             if (var3 != null) {
-              this.a(var2.name, var4, param0 ^ 11237, var3, var2.text);
+              this.drawTutorialCallout(var2.name, var4, param0 ^ 11237, var3, var2.text);
             }
             if (var9 == 0) {
               return;
             }
           }
           if (null != var3) {
-            this.a(var2.name, 0.0f, -11240, var3, var2.text);
+            this.drawTutorialCallout(var2.name, 0.0f, -11240, var3, var2.text);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2386,7 +2386,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, byte param3, int param4, CourseDefinition param5, boolean param6) {
+    private final void initializeRace(boolean param0, int param1, int param2, byte param3, int param4, CourseDefinition param5, boolean param6) {
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         int stackIn_67_0 = 0;
@@ -2396,47 +2396,47 @@ final class RaceWorld {
         int stackIn_148_0 = 0;
         int stackIn_150_0 = 0;
         RaceVehicle stackIn_201_0 = null;
-        wm stackIn_205_0 = null;
+        TrackObject stackIn_205_0 = null;
         Object stackIn_211_0 = null;
         Object stackIn_216_0 = null;
         StringBuilder stackIn_216_1 = null;
         String stackIn_217_2 = null;
         RuntimeException decompiledCaughtException = null;
-        wm stackOut_204_0;
+        TrackObject stackOut_204_0;
         Object var8 = null;
         int var9_int = 0;
         Object var9 = null;
-        vf var10_ref_vf = null;
+        ZombiePedestrian var10_ref_vf = null;
         int var10 = 0;
         Point2i var10_ref_qm = null;
         int var11_int = 0;
-        wm var11 = null;
+        TrackObject var11 = null;
         int var12 = 0;
-        wm var13 = null;
+        TrackObject var13 = null;
         int var14 = 0;
         int var10Lifetime1;
         var14 = HoldTheLine.field_D;
         try {
           MusicPatch.a(9);
-          this.field_J = param2;
+          this.gameMode = param2;
           this.field_kb = false;
-          this.field_E = param6;
-          this.field_I = new Sprite(640, 480);
-          this.c((byte) -69);
-          this.field_U = false;
-          this.field_B = 8;
+          this.twoPlayerMode = param6;
+          this.lightMap = new Sprite(640, 480);
+          this.resetParticleQueues((byte) -69);
+          this.raceFinished = false;
+          this.lapLimit = 8;
           this.field_b = false;
           if (param3 < 3) {
-            this.field_I = (Sprite) null;
+            this.lightMap = (Sprite) null;
           }
           boolean decompiledFrameCompleted4 = true;
           this.vehicles = new RaceVehicle[64];
           this.field_P = 0;
-          this.field_bb = 0;
-          this.field_S = false;
-          this.field_ab = -150;
+          this.ticks = 0;
+          this.paused = false;
+          this.raceTicks = -150;
           var8 = null;
-          if (this.field_J == 0 &&
+          if (this.gameMode == 0 &&
             DelegatingCanvas.field_d == 7) {
             var8 = new int[4];
             var9_int = 0;
@@ -2458,18 +2458,18 @@ final class RaceWorld {
             }
           }
           if (decompiledFrameCompleted4) {
-            this.a((byte) 7, (int[]) (var8), param5);
+            this.loadCourse((byte) 7, (int[]) (var8), param5);
             stackIn_29_0 = 16616;
             stackIn_29_1 = 0;
           }
           boolean decompiledFrameCompleted3 = true;
           if (LoginCredentialType.a(stackIn_29_0, stackIn_29_1) &&
-            2 == this.field_J) {
-            ih.field_n = new IntrusiveDeque();
+            2 == this.gameMode) {
+            AchievementUnlockRequest.field_n = new IntrusiveDeque();
             var9_int = 0;
             while (var9_int < 200) {
-              var10_ref_vf = new vf();
-              ih.field_n.addLast((byte) -94, var10_ref_vf);
+              var10_ref_vf = new ZombiePedestrian();
+              AchievementUnlockRequest.field_n.addLast((byte) -94, var10_ref_vf);
               var9_int++;
               if (var14 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -2478,20 +2478,20 @@ final class RaceWorld {
             }
           }
           if (decompiledFrameCompleted3) {
-            this.field_V = new int[16];
+            this.achievementQueue = new int[16];
             this.field_rb = new int[16];
             this.field_rb[6] = -1;
             this.field_t = LayeredWidgetStyle.field_d;
-            this.field_j = 0;
+            this.bannerCount = 0;
             this.field_g = GrowableStringList.field_c;
             this.field_hb = ni.field_b;
-            this.field_s = 0;
+            this.bannerTicks = 0;
             this.field_rb[11] = 1;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (this.field_r != 0) {
-            if (this.field_r != 1) {
-              if (this.field_r != 2) {
+          if (this.courseTheme != 0) {
+            if (this.courseTheme != 1) {
+              if (this.courseTheme != 2) {
                 this.field_H = -2084705208;
                 this.field_N = 1884993344;
                 this.field_p = 1744876195;
@@ -2533,13 +2533,13 @@ final class RaceWorld {
             this.field_p = -1996410128;
           }
           boolean decompiledFrameCompleted2 = true;
-          this.field_G = 0;
+          this.achievementTicks = 0;
           this.field_y = cm.field_a;
           this.field_rb[7] = -1;
           if (param0) {
-            stackIn_67_0 = (this.field_E) ? 2 : 1;
+            stackIn_67_0 = (this.twoPlayerMode) ? 2 : 1;
             var9_int = stackIn_67_0;
-            var10 = -var9_int + this.field_h;
+            var10 = -var9_int + this.playerCount;
             if (var10 > 0) {
               var11_int = 0;
               while (var11_int < var10) {
@@ -2549,57 +2549,57 @@ final class RaceWorld {
                   break;
                 }
                 var12 = stackIn_82_0;
-                while (var12 < (-1 + this.field_z)) {
+                while (var12 < (-1 + this.vehicleCount)) {
                   this.vehicles[var12] = this.vehicles[1 + var12];
                   var12++;
                 }
-                this.field_z = this.field_z - 1;
-                this.field_h = this.field_h - 1;
+                this.vehicleCount = this.vehicleCount - 1;
+                this.playerCount = this.playerCount - 1;
                 var11_int++;
               }
             }
           }
           if (decompiledFrameCompleted2) {
-            stackIn_82_0 = this.field_E ? 1 : 0;
+            stackIn_82_0 = this.twoPlayerMode ? 1 : 0;
           }
           if (stackIn_82_0 != 0) {
-            this.vehicles[0].field_W = ae.field_f;
-            this.vehicles[1].field_W = ij.field_c;
+            this.vehicles[0].keyBindings = ae.field_f;
+            this.vehicles[1].keyBindings = ij.field_c;
             if (param4 != -1) {
-              this.vehicles[0].a(20385, ge.field_c[param4]);
+              this.vehicles[0].setVehicleDefinition(20385, ge.field_c[param4]);
             }
             if (param1 != -1) {
-              this.vehicles[1].a(20385, ge.field_c[param1]);
-              if ((var14 != 0) && (5 != this.field_J &&
-                this.field_J != 6 &&
-                this.field_J != 4)) {
-                this.vehicles[0].field_W = ValidationState.field_a;
+              this.vehicles[1].setVehicleDefinition(20385, ge.field_c[param1]);
+              if ((var14 != 0) && (5 != this.gameMode &&
+                this.gameMode != 6 &&
+                this.gameMode != 4)) {
+                this.vehicles[0].keyBindings = ValidationState.field_a;
                 if (-1 != param4) {
-                  this.vehicles[0].a(20385, ge.field_c[param4]);
+                  this.vehicles[0].setVehicleDefinition(20385, ge.field_c[param4]);
                 }
               }
             }
           } else {
-            if (5 != this.field_J &&
-              this.field_J != 6 &&
-              this.field_J != 4) {
-              this.vehicles[0].field_W = ValidationState.field_a;
+            if (5 != this.gameMode &&
+              this.gameMode != 6 &&
+              this.gameMode != 4) {
+              this.vehicles[0].keyBindings = ValidationState.field_a;
               if (-1 != param4) {
-                this.vehicles[0].a(20385, ge.field_c[param4]);
+                this.vehicles[0].setVehicleDefinition(20385, ge.field_c[param4]);
               }
             }
           }
           var9_int = 0;
           scanLoop1: while (true) {
-            if (var9_int < this.field_z) {
-              this.vehicles[var9_int].field_mc = var9_int;
+            if (var9_int < this.vehicleCount) {
+              this.vehicles[var9_int].playerIndex = var9_int;
               stackIn_201_0 = this.vehicles[var9_int];
               if (var14 == 0) {
-                if (stackIn_201_0.field_C.field_v == null) {
-                  this.vehicles[var9_int].field_C.field_v = this.vehicles[var9_int].field_C.field_b.getRotatedSprites((byte) 51);
+                if (stackIn_201_0.definition.sprite == null) {
+                  this.vehicles[var9_int].definition.sprite = this.vehicles[var9_int].definition.spriteAsset.getRotatedSprites((byte) 51);
                 }
-                if (null == this.vehicles[var9_int].field_C.field_h) {
-                  this.vehicles[var9_int].field_C.field_h = this.vehicles[var9_int].field_C.field_z.getRotatedSprites((byte) 7);
+                if (null == this.vehicles[var9_int].definition.shadowSprite) {
+                  this.vehicles[var9_int].definition.shadowSprite = this.vehicles[var9_int].definition.shadowAsset.getRotatedSprites((byte) 7);
                 }
                 var9_int++;
                 continue;
@@ -2607,21 +2607,21 @@ final class RaceWorld {
             } else {
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (this.field_J == 5) {
-                var9 = (wm) (this.field_cb.first((byte) 125));
+              if (this.gameMode == 5) {
+                var9 = (TrackObject) (this.courseObjects.first((byte) 125));
                 while (null != var9) {
-                  stackIn_150_0 = ~(((wm) (var9)).field_J & 512);
+                  stackIn_150_0 = ~(((TrackObject) (var9)).flags & 512);
                   if (var14 != 0) {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
                   if (stackIn_150_0 != -1) {
-                    ((wm) (var9)).unlink(0);
+                    ((TrackObject) (var9)).unlink(0);
                   }
-                  var9 = (wm) (this.field_cb.next((byte) -57));
+                  var9 = (TrackObject) (this.courseObjects.next((byte) -57));
                 }
               } else {
-                if (this.field_J == 6) {
+                if (this.gameMode == 6) {
                   var9_int = 0;
                   while (8 > var9_int) {
                     var10_ref_qm = new Point2i(0, 0);
@@ -2634,7 +2634,7 @@ final class RaceWorld {
                     do {
                       var10_ref_qm.x = SolidRoadStripRenderer.b(2, 640);
                       var10_ref_qm.y = SolidRoadStripRenderer.b(2, 480);
-                      var11_int = this.d(var10_ref_qm.y, var10_ref_qm.x, -118);
+                      var11_int = this.getRoadLayerMask(var10_ref_qm.y, var10_ref_qm.x, -118);
                       stackIn_139_0 = -1;
                       stackIn_139_1 = ~var11_int;
                     } while (stackIn_139_0 == stackIn_139_1);
@@ -2646,8 +2646,8 @@ final class RaceWorld {
                       stackIn_148_0 = 1;
                     }
                     var12 = stackIn_148_0;
-                    var13 = new wm(var10_ref_qm, 1, var12);
-                    this.field_cb.addLast((byte) -120, var13);
+                    var13 = new TrackObject(var10_ref_qm, 1, var12);
+                    this.courseObjects.addLast((byte) -120, var13);
                     var9_int++;
                   }
                 }
@@ -2658,46 +2658,46 @@ final class RaceWorld {
               }
               var9_int = stackIn_150_0;
               while (true) {
-                if (var9_int < this.field_z) {
-                  this.vehicles[var9_int].field_hb = SolidRoadStripRenderer.b(2, 3);
+                if (var9_int < this.vehicleCount) {
+                  this.vehicles[var9_int].preferredPickup = SolidRoadStripRenderer.b(2, 3);
                   var9_int++;
                   if (var14 == 0) {
                     continue;
                   }
                 } else {
-                  this.field_mb = -1;
-                  this.field_a = -1;
-                  this.field_o = 0;
-                  this.field_D = -101;
+                  this.tutorialPage = -1;
+                  this.previousTutorialPage = -1;
+                  this.tutorialFlags = 0;
+                  this.tutorialHighlight = -101;
                 }
                 boolean decompiledFrameRemainder0 = true;
-                if (this.field_J == 3) {
-                  this.e(4);
+                if (this.gameMode == 3) {
+                  this.clearRaceParticipants(4);
                   decompiledFrameRemainder0 = (var14 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  boolean decompiledSharedTail0 = (2 != this.field_J ||
+                  boolean decompiledSharedTail0 = (2 != this.gameMode ||
                     LoginCredentialType.a(16616, 0) ||
                     param6 ||
                     !(QuickChatPhraseDefinition.field_s));
                   if (!decompiledSharedTail0) {
                     QuickChatPhraseDefinition.field_s = false;
                     GrowableStringList.a(0);
-                    this.b("demolition", (byte) 8);
+                    this.enterTutorialPage("demolition", (byte) 8);
                     decompiledSharedTail0 = (var14 != 0);
                   }
-                  if ((decompiledSharedTail0) && (this.field_r == 3 &&
+                  if ((decompiledSharedTail0) && (this.courseTheme == 3 &&
                     ij.field_l &&
-                    this.field_J != 5 &&
-                    this.field_J != 6 &&
-                    this.field_J != 2)) {
+                    this.gameMode != 5 &&
+                    this.gameMode != 6 &&
+                    this.gameMode != 2)) {
                     ij.field_l = false;
                     GrowableStringList.a(0);
-                    this.b("night", (byte) 8);
+                    this.enterTutorialPage("night", (byte) 8);
                   }
                 }
-                this.field_W = new IntrusiveDeque();
-                if (this.field_J >= 5) {
+                this.resultObjects = new IntrusiveDeque();
+                if (this.gameMode >= 5) {
                   break scanLoop1;
                 }
                 if (param6) {
@@ -2716,7 +2716,7 @@ final class RaceWorld {
           }
           var9 = null;
           var10Lifetime1 = 0;
-          var11 = (wm) (this.field_cb.first((byte) 89));
+          var11 = (TrackObject) (this.courseObjects.first((byte) 89));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var11))) {
             stackOut_204_0 = var11;
@@ -2727,7 +2727,7 @@ final class RaceWorld {
                 var10Lifetime1 = var11.position.x;
                 var9 = var11;
               }
-              var11 = (wm) (this.field_cb.next((byte) -80));
+              var11 = (TrackObject) (this.courseObjects.next((byte) -80));
               continue;
             }
             break;
@@ -2751,7 +2751,7 @@ final class RaceWorld {
         }
     }
 
-    final void a(wm param0, boolean param1) {
+    final void detonateSmallProjectile(TrackObject param0, boolean param1) {
         int discarded$6 = 0;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -2761,10 +2761,10 @@ final class RaceWorld {
         try {
           param0.unlink(0);
           RoadStripRenderer.playPositionalSound(NamedSoundEffect.field_p.field_q, param0.position, -78, NamedSoundEffect.field_p);
-          ArchiveIndex.a(0, param0.position.y, 0, 64, 1, -16, param0.position.x, param0.field_q, this.field_M, 16776960, 0, 255, 20);
-          discarded$6 = this.a(-30808, 3, 25, param0, 32, 100000.0f);
+          ArchiveIndex.a(0, param0.position.y, 0, 64, 1, -16, param0.position.x, param0.layer, this.lightParticles, 16776960, 0, 255, 20);
+          discarded$6 = this.applyBlast(-30808, 3, 25, param0, 32, 100000.0f);
           if (param1) {
-            this.g(-25);
+            this.drawCourseBackground(-25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2781,7 +2781,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, RaceVehicle param1) {
+    private final void drawVehicleHeadlights(int param0, RaceVehicle param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -2796,7 +2796,7 @@ final class RaceWorld {
         int var9 = 0;
         var9 = HoldTheLine.field_D;
         try {
-          var3_int = 70 + param1.field_C.field_K;
+          var3_int = 70 + param1.definition.halfLength;
           var4 = param1.heading;
           var4 = (float)((double)var4 * 10.185916357881302);
           var5 = Math.round(var4);
@@ -2819,7 +2819,7 @@ final class RaceWorld {
           }
           var6 = param1.position.x + (int)((double)var3_int * Math.cos((double)var4));
           var7 = param1.position.y + (int)(-Math.sin((double)var4) * (double)var3_int);
-          vb.a(param0 ^ -7, this.field_I);
+          vb.a(param0 ^ -7, this.lightMap);
           var8 = TriangleMesh.field_f.getByAngle(param1.heading, param0 + 27724);
           WhirlpoolHasher.drawScreenBlendedSprite(-(var8.canvasHeight >> 1) + var7, -(var8.canvasWidth >> 1) + var6, 121, var8);
           MarkerSliderRenderer.restoreRasterTarget(param0 - 65);
@@ -2838,7 +2838,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(byte param0) {
+    private final void drawPlayerHud(byte param0) {
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_40_0 = 0;
@@ -2883,16 +2883,16 @@ final class RaceWorld {
           var2_int = 0;
           scanLoop1: while (true) {
             stackIn_6_0 = ~var2_int;
-            stackIn_6_1 = ~this.field_h;
+            stackIn_6_1 = ~this.playerCount;
             if (stackIn_6_0 > stackIn_6_1) {
               var6 = this.vehicles[var2_int];
               if (var18 != 0) {
                 return;
               }
               boolean decompiledFrameRemainder0 = true;
-              if (0 == this.field_J ||
-                this.field_J == 3) {
-                var7 = var6.field_mc;
+              if (0 == this.gameMode ||
+                this.gameMode == 3) {
+                var7 = var6.playerIndex;
                 switch ((var18 == 0
                   || var7 == 1
                   || var7 == 2
@@ -2921,15 +2921,15 @@ final class RaceWorld {
                 }
                 var7 = var6.field_tc;
                 if (var6.field_ob <= 10 &&
-                  !this.field_S &&
+                  !this.paused &&
                   dg.field_c == -1) {
                   stackIn_40_0 = -var6.field_ob + 10;
                 } else {
                   stackIn_40_0 = 0;
                 }
                 var8 = stackIn_40_0;
-                CheckboxRenderer.a(-1, 1024 + var8 * 16, hk.field_a[20 + var6.field_R], var3, var7, var4);
-                var9 = var6.field_mc;
+                CheckboxRenderer.a(-1, 1024 + var8 * 16, hk.field_a[20 + var6.racePosition], var3, var7, var4);
+                var9 = var6.playerIndex;
                 switch ((var18 == 0
                   || var9 == 1
                   || var9 == 2
@@ -2956,24 +2956,24 @@ final class RaceWorld {
                     var3 = 615;
                     var4 = 453;
                 }
-                var9 = var6.field_bc % 10;
+                var9 = var6.lapsCompleted % 10;
                 if (10 >= var6.field_X &&
-                  !this.field_S &&
+                  !this.paused &&
                   dg.field_c == -1) {
                   stackIn_66_0 = 10 - var6.field_X;
                 } else {
                   stackIn_66_0 = 0;
                 }
                 var8 = stackIn_66_0;
-                if (this.field_B < var6.field_bc &&
-                  this.field_B != -1) {
-                  var9 = this.field_B;
-                  if (10 > this.field_bb % 20) {
+                if (this.lapLimit < var6.lapsCompleted &&
+                  this.lapLimit != -1) {
+                  var9 = this.lapLimit;
+                  if (10 > this.ticks % 20) {
                     var7 = 16777215;
                   }
                 }
                 UsernameLoginCredentials.a(hk.field_a[var9 + 10], -100, var4, var3, 1024 + var8 * 16, var7);
-                var10 = var6.field_mc;
+                var10 = var6.playerIndex;
                 switch ((var18 == 0
                   || var10 == 1
                   || var10 == 2
@@ -3002,8 +3002,8 @@ final class RaceWorld {
                 }
                 hk.field_a[24].draw(var3, var4);
               } else {
-                if (this.field_J == 2) {
-                  var7 = var6.field_mc;
+                if (this.gameMode == 2) {
+                  var7 = var6.playerIndex;
                   switch ((var18 == 0
                     || var7 == 1
                     || var7 == 2
@@ -3032,15 +3032,15 @@ final class RaceWorld {
                   }
                   var7 = var6.field_tc;
                   if (var6.field_ob <= 10 &&
-                    !this.field_S &&
+                    !this.paused &&
                     dg.field_c == -1) {
                     stackIn_120_0 = -var6.field_ob + 10;
                   } else {
                     stackIn_120_0 = 0;
                   }
                   var8 = stackIn_120_0;
-                  CheckboxRenderer.a(-1, 16 * var8 + 1024, hk.field_a[var6.field_R + 20], var3, var7, var4);
-                  var9 = var6.field_mc;
+                  CheckboxRenderer.a(-1, 16 * var8 + 1024, hk.field_a[var6.racePosition + 20], var3, var7, var4);
+                  var9 = var6.playerIndex;
                   switch ((var18 == 0
                     || var9 == 2
                     ) ? var9 : -1) {
@@ -3067,7 +3067,7 @@ final class RaceWorld {
                       var3 = 615;
                   }
                   if (var6.field_X <= 10 &&
-                    !this.field_S &&
+                    !this.paused &&
                     dg.field_c == -1) {
                     stackIn_149_0 = -var6.field_X + 10;
                   } else {
@@ -3076,11 +3076,11 @@ final class RaceWorld {
                   var8 = stackIn_149_0;
                   stackIn_153_0 = (!LoginCredentialType.a(16616, 0)) ? 2 : 3;
                   var9 = stackIn_153_0;
-                  if (var6.field_mc == 0 ||
-                    var6.field_mc == 2) {
+                  if (var6.playerIndex == 0 ||
+                    var6.playerIndex == 2) {
                     var3 = var3 + 12 * var9;
                   }
-                  var10 = var6.field_Sb;
+                  var10 = var6.kills;
                   var11 = 0;
                   while (var9 > var11) {
                     var12 = var10 % 10;
@@ -3088,7 +3088,7 @@ final class RaceWorld {
                     var10 = var10 / 10;
                     var11++;
                   }
-                  var11 = var6.field_mc;
+                  var11 = var6.playerIndex;
                   switch ((var18 == 0
                     || var11 == 1
                     || var11 == 2
@@ -3119,8 +3119,8 @@ final class RaceWorld {
                       var5 = 1;
                       var3 = 505;
                   }
-                  var11 = (int)(var6.field_N * 80.0f / (float)var6.field_C.field_i);
-                  var12 = (int)(var6.field_lc * 80.0f / (float)var6.field_C.field_i);
+                  var11 = (int)(var6.displayHealth * 80.0f / (float)var6.definition.maxHealth);
+                  var12 = (int)(var6.health * 80.0f / (float)var6.definition.maxHealth);
                   var13 = 0;
                   scanLoop2: while (true) {
                     if (var13 >= 2) {
@@ -3212,9 +3212,9 @@ final class RaceWorld {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (this.field_J == 1 &&
-                    var6.field_bc > 0) {
-                    var7 = var6.field_mc;
+                  if (this.gameMode == 1 &&
+                    var6.lapsCompleted > 0) {
+                    var7 = var6.playerIndex;
                     switch ((var18 == 0
                       || var7 == 2
                       ) ? var7 : -1) {
@@ -3270,7 +3270,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, na param1) {
+    private final void drawPointLight(int param0, PointLight param1) {
         RuntimeException runtimeException = null;
         Sprite var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -3279,12 +3279,12 @@ final class RaceWorld {
         RuntimeException decompiledCaughtException = null;
         try {
           TutorialTransition.a(32381);
-          this.field_I.bindRaster();
+          this.lightMap.bindRaster();
           var3 = DisplayNameForm.field_Q;
-          WhirlpoolHasher.drawScreenBlendedSprite(-(var3.height >> 1) + param1.field_n, param1.field_l - (var3.width >> 1), 103, var3);
+          WhirlpoolHasher.drawScreenBlendedSprite(-(var3.height >> 1) + param1.y, param1.x - (var3.width >> 1), 103, var3);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           if (param0 >= -24) {
-            this.field_W = (IntrusiveDeque) null;
+            this.resultObjects = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3301,14 +3301,14 @@ final class RaceWorld {
         }
     }
 
-    private final void e(byte param0) {
+    private final void drawCourseBackground(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 <= 96) {
             this.field_eb = (int[]) null;
           }
-          this.g(0);
+          this.drawCourseBackground(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3317,7 +3317,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void drawRaceTimer(boolean param0) {
         int stackIn_31_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_45_0 = 0;
@@ -3349,26 +3349,26 @@ final class RaceWorld {
         try {
           var2_int = 264;
           var3 = 22;
-          var4 = this.field_ab;
-          var5 = this.field_ab;
-          if (this.field_J != 0 &&
-            3 != this.field_J) {
-            if (this.field_J == 1 &&
-              0 < this.field_ab) {
+          var4 = this.raceTicks;
+          var5 = this.raceTicks;
+          if (this.gameMode != 0 &&
+            3 != this.gameMode) {
+            if (this.gameMode == 1 &&
+              0 < this.raceTicks) {
               var5 = this.vehicles[0].field_X;
               var4 = this.vehicles[0].field_X;
               if (HoldTheLine.field_D != 0 &&
-                this.field_U) {
+                this.raceFinished) {
                 var4 = this.field_ob;
               }
             }
           } else {
-            if (this.field_U) {
+            if (this.raceFinished) {
               var4 = this.field_ob;
             }
           }
-          if (this.field_ab < 0) {
-            var4 = -this.field_ab;
+          if (this.raceTicks < 0) {
+            var4 = -this.raceTicks;
           }
           var6 = var4 / 50;
           var7 = var6 / 60;
@@ -3381,9 +3381,9 @@ final class RaceWorld {
           var13 = 2 * (var4 % 5);
           var14 = NamedSoundEffect.a(50, var5, -3248);
           if (!param0) {
-            this.a((byte) -128, (Vector2f) null, 61, -5, 7);
+            this.drawDirectionArrow((byte) -128, (Vector2f) null, 61, -5, 7);
           }
-          if (!this.field_U &&
+          if (!this.raceFinished &&
             var14 <= 10) {
             stackIn_31_0 = -(var14 / 2) + 5;
           } else {
@@ -3391,7 +3391,7 @@ final class RaceWorld {
           }
           var15 = stackIn_31_0;
           var16 = NamedSoundEffect.a(500, var5, -3248);
-          if (!this.field_U &&
+          if (!this.raceFinished &&
             var16 <= 10) {
             stackIn_38_0 = -(var16 / 2) + 5;
           } else {
@@ -3399,7 +3399,7 @@ final class RaceWorld {
           }
           var17 = stackIn_38_0;
           var18 = NamedSoundEffect.a(3000, var5, -3248);
-          if (!this.field_U &&
+          if (!this.raceFinished &&
             var18 <= 10) {
             stackIn_45_0 = -(var18 / 2) + 5;
           } else {
@@ -3407,21 +3407,21 @@ final class RaceWorld {
           }
           var19 = stackIn_45_0;
           var20 = NamedSoundEffect.a(30000, var5, -3248);
-          if (!this.field_U &&
+          if (!this.raceFinished &&
             var20 <= 10) {
             stackIn_52_0 = 5 - var20 / 2;
           } else {
             stackIn_52_0 = 0;
           }
           var21 = stackIn_52_0;
-          if (this.field_S ||
+          if (this.paused ||
             dg.field_c != -1) {
             var17 = 0;
             var19 = 0;
             var21 = 0;
             var15 = 0;
           }
-          stackIn_63_0 = (this.field_ab < 0) ? 16760576 : 16777215;
+          stackIn_63_0 = (this.raceTicks < 0) ? 16760576 : 16777215;
           var22 = stackIn_63_0;
           CheckboxRenderer.a(-1, 1024, hk.field_a[27], var3 * 2 + var2_int, var22, 20);
           CheckboxRenderer.a(-1, 64 * var21 + 1024, hk.field_a[0 + var8], var2_int, var22, 10);
@@ -3447,7 +3447,7 @@ final class RaceWorld {
             RaceWorld.clearSharedReferences(-48);
           }
           field_gb = (String[][]) null;
-          field_Y = null;
+          navigationUrl = null;
           field_Z = null;
           field_K = null;
           return;
@@ -3458,7 +3458,7 @@ final class RaceWorld {
         }
     }
 
-    private final Point2i a(int param0, int param1, Sprite param2, int param3, int param4) {
+    private final Point2i findSpriteOutsideBounds(int param0, int param1, Sprite param2, int param3, int param4) {
         Object stackIn_6_0 = null;
         Object stackIn_12_0 = null;
         int stackIn_17_0 = 0;
@@ -3517,12 +3517,12 @@ final class RaceWorld {
               var9 = var9 - var8;
               var10 = var8 * 640 + var6_int;
               if (param3 >= -57) {
-                this.field_k = 21;
+                this.tutorialPageTicks = 21;
               }
               var11 = 640 - var7;
               var12 = var6_int - (param1 - (-param0 + var8) * param2.width);
               var13 = param2.width - var7;
-              var14 = this.field_lb.field_m;
+              var14 = this.roadLayerMask.field_m;
               if (param4 >= 1) {
                 stackIn_40_0 = 60;
               } else {
@@ -3592,21 +3592,21 @@ final class RaceWorld {
         }
     }
 
-    private final void b(int param0, RaceVehicle param1) {
+    private final void drawVehicleLight(int param0, RaceVehicle param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1.field_kb == null) {
-            param1.field_kb = ImageProducerRasterBuffer.a(param1.field_C.field_d, (byte) 27, param1.field_Eb);
+          if (param1.lightSprite == null) {
+            param1.lightSprite = ImageProducerRasterBuffer.a(param1.definition.field_d, (byte) 27, param1.field_Eb);
           }
-          vb.a(-67, this.field_I);
+          vb.a(-67, this.lightMap);
           if (param0 != 32249) {
-            this.a(false);
+            this.drawRaceTimer(false);
           }
-          WhirlpoolHasher.drawScreenBlendedSprite(param1.position.y - (param1.field_kb.height >> 1), param1.position.x - (param1.field_kb.width >> 1), 108, param1.field_kb);
+          WhirlpoolHasher.drawScreenBlendedSprite(param1.position.y - (param1.lightSprite.height >> 1), param1.position.x - (param1.lightSprite.width >> 1), 108, param1.lightSprite);
           MarkerSliderRenderer.restoreRasterTarget(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3623,7 +3623,7 @@ final class RaceWorld {
         }
     }
 
-    private final void c(byte param0) {
+    private final void resetParticleQueues(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -3636,11 +3636,11 @@ final class RaceWorld {
         try {
           boolean decompiledFrameCompleted1 = true;
           var2_int = 5;
-          if (null == this.field_O) {
-            this.field_O = new IntrusiveDeque[var2_int];
+          if (null == this.trailParticles) {
+            this.trailParticles = new IntrusiveDeque[var2_int];
             var3 = 0;
-            while (this.field_O.length > var3) {
-              this.field_O[var3] = new IntrusiveDeque();
+            while (this.trailParticles.length > var3) {
+              this.trailParticles[var3] = new IntrusiveDeque();
               var3++;
               if (var4 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -3649,17 +3649,17 @@ final class RaceWorld {
             }
             if ((decompiledFrameCompleted1) &&
               (var4 != 0)) {
-              PathWaypoint.a(false, this.field_O);
+              PathWaypoint.a(false, this.trailParticles);
             }
           } else {
-            PathWaypoint.a(false, this.field_O);
+            PathWaypoint.a(false, this.trailParticles);
           }
           boolean decompiledFrameCompleted0 = true;
-          if (this.field_q == null) {
-            this.field_q = new IntrusiveDeque[var2_int];
+          if (this.sparkParticles == null) {
+            this.sparkParticles = new IntrusiveDeque[var2_int];
             var3Lifetime1 = 0;
-            while (var3Lifetime1 < this.field_q.length) {
-              this.field_q[var3Lifetime1] = new IntrusiveDeque();
+            while (var3Lifetime1 < this.sparkParticles.length) {
+              this.sparkParticles[var3Lifetime1] = new IntrusiveDeque();
               var3Lifetime1++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3668,28 +3668,28 @@ final class RaceWorld {
             }
             if ((decompiledFrameCompleted0) &&
               (var4 != 0)) {
-              PathWaypoint.a(false, this.field_q);
+              PathWaypoint.a(false, this.sparkParticles);
             }
           } else {
-            PathWaypoint.a(false, this.field_q);
+            PathWaypoint.a(false, this.sparkParticles);
           }
-          if (this.field_M == null) {
-            this.field_M = new IntrusiveDeque[var2_int];
+          if (this.lightParticles == null) {
+            this.lightParticles = new IntrusiveDeque[var2_int];
             var3Lifetime2 = 0;
-            while (this.field_M.length > var3Lifetime2) {
-              this.field_M[var3Lifetime2] = new IntrusiveDeque();
+            while (this.lightParticles.length > var3Lifetime2) {
+              this.lightParticles[var3Lifetime2] = new IntrusiveDeque();
               var3Lifetime2++;
               if (var4 != 0) {
                 return;
               }
             }
             if (var4 != 0) {
-              PathWaypoint.a(false, this.field_M);
+              PathWaypoint.a(false, this.lightParticles);
             }
           } else {
-            PathWaypoint.a(false, this.field_M);
+            PathWaypoint.a(false, this.lightParticles);
           }
-          this.field_Q = new IntrusiveDeque();
+          this.pointLights = new IntrusiveDeque();
           var3Lifetime3 = -112 % ((param0 + 8) / 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3699,7 +3699,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(wm param0, RaceVehicle param1, byte param2) {
+    private final void applyDirectionalObjectEffect(TrackObject param0, RaceVehicle param1, byte param2) {
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -3720,8 +3720,8 @@ final class RaceWorld {
           if (param2 != 7) {
             this.field_f = false;
           }
-          if ((3 & param0.field_J) != 0) {
-            if (1 == (3 & param0.field_J)) {
+          if ((3 & param0.flags) != 0) {
+            if (1 == (3 & param0.flags)) {
               var4_float = param0.direction.y * param1.velocityY + param1.velocityX * param0.direction.x;
               if (10.0f < var4_float) {
                 param1.velocityX = param1.velocityX * 0.949999988079071f;
@@ -3731,13 +3731,13 @@ final class RaceWorld {
                 return;
               }
             }
-            if ((3 & param0.field_J) != 2) {
+            if ((3 & param0.flags) != 2) {
               return;
             }
-            var4_int = (int)(param1.worldX - (float)param1.field_C.field_K * param1.direction.x);
-            var5 = (int)(param1.worldY - (float)param1.field_C.field_K * param1.direction.y);
-            if ((param0.field_B * param0.field_B) > ((-param0.position.x + var4_int) * (-param0.position.x + var4_int) + (-param0.position.y + var5) * (var5 - param0.position.y))) {
-              param1.field_Q = 50;
+            var4_int = (int)(param1.worldX - (float)param1.definition.halfLength * param1.direction.x);
+            var5 = (int)(param1.worldY - (float)param1.definition.halfLength * param1.direction.y);
+            if ((param0.collisionRadius * param0.collisionRadius) > ((-param0.position.x + var4_int) * (-param0.position.x + var4_int) + (-param0.position.y + var5) * (var5 - param0.position.y))) {
+              param1.steeringRecoveryTicks = 50;
             }
             if (var6 == 0) {
               return;
@@ -3776,13 +3776,13 @@ final class RaceWorld {
         }
     }
 
-    final void f(int param0) {
+    final void update(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         boolean stackIn_24_0 = false;
         boolean stackIn_32_1 = false;
-        wm stackIn_70_0 = null;
+        TrackObject stackIn_70_0 = null;
         int stackIn_71_1 = 0;
         int stackIn_88_0 = 0;
         int stackIn_88_1 = 0;
@@ -3794,7 +3794,7 @@ final class RaceWorld {
         RaceVehicle stackIn_179_0 = null;
         RaceVehicle stackIn_201_0 = null;
         Object stackIn_227_0 = null;
-        vf stackIn_231_0 = null;
+        ZombiePedestrian stackIn_231_0 = null;
         Object stackIn_240_0 = null;
         int stackIn_249_0 = 0;
         int stackIn_253_1 = 0;
@@ -3813,17 +3813,17 @@ final class RaceWorld {
         RuntimeException decompiledCaughtException = null;
         RaceVehicle stackOut_178_0;
         RaceVehicle stackOut_200_0;
-        vf stackOut_230_0;
+        ZombiePedestrian stackOut_230_0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        wm var4 = null;
+        TrackObject var4 = null;
         int var4_int = 0;
-        vf var4_ref = null;
-        wm var5 = null;
+        ZombiePedestrian var4_ref = null;
+        TrackObject var5 = null;
         int var5_int = 0;
         RaceVehicle var5_ref = null;
-        na var5_ref2 = null;
+        PointLight var5_ref2 = null;
         int var6 = 0;
         int var7_int = 0;
         float var7 = 0.0f;
@@ -3833,8 +3833,8 @@ final class RaceWorld {
         float var11 = 0.0f;
         float var12 = 0.0f;
         int var13 = 0;
-        wm var4Lifetime1;
-        vf var4_refLifetime1;
+        TrackObject var4Lifetime1;
+        ZombiePedestrian var4_refLifetime1;
         int stackIn_88_0Lifetime1;
         int stackIn_88_1Lifetime1;
         int stackIn_303_0Lifetime1;
@@ -3846,12 +3846,12 @@ final class RaceWorld {
         int var5_intLifetime2;
         var13 = HoldTheLine.field_D;
         try {
-          if (this.field_mb != -1) {
-            this.b(31782);
+          if (this.tutorialPage != -1) {
+            this.updateTutorialTransitions(31782);
           }
           boolean decompiledFrameCompleted4 = true;
           boolean decompiledFrameCompleted5 = true;
-          if (5 > this.field_J) {
+          if (5 > this.gameMode) {
             while (qh.c(-64)) {
               stackIn_148_0 = DelayedServerPacket.field_n;
               stackIn_148_1 = 13;
@@ -3861,7 +3861,7 @@ final class RaceWorld {
               }
               if (stackIn_148_0 == stackIn_148_1) {
                 DropTargetWidget.a(1, (byte) 100, true);
-                wm.a(true, false, 1);
+                TrackObject.switchMenu(true, false, 1);
                 return;
               }
               if (RotatedSpriteCache.field_c) {
@@ -3875,14 +3875,14 @@ final class RaceWorld {
                 }
                 if (IterableSecondaryNodeDeque.field_g[82]) {
                   if (DelayedServerPacket.field_n == 9) {
-                    var4 = (wm) (this.field_cb.first((byte) 110));
+                    var4 = (TrackObject) (this.courseObjects.first((byte) 110));
                     while (null != var4) {
-                      stackIn_88_0 = ~(var4.field_J & 512);
+                      stackIn_88_0 = ~(var4.flags & 512);
                       stackIn_88_1 = -1;
                       if (stackIn_88_0 != stackIn_88_1) {
                         var4.unlink(0);
                       }
-                      var4 = (wm) (this.field_cb.next((byte) 127));
+                      var4 = (TrackObject) (this.courseObjects.next((byte) 127));
                     }
                     l.field_b = true;
                   } else {
@@ -3901,36 +3901,36 @@ final class RaceWorld {
                     }
                     if (-1 != var4_int) {
                       l.field_b = true;
-                      var5 = (wm) (this.field_cb.first((byte) 112));
+                      var5 = (TrackObject) (this.courseObjects.first((byte) 112));
                       while (null != var5) {
                         stackIn_88_0 = 0;
-                        stackIn_88_1 = 512 & var5.field_J;
+                        stackIn_88_1 = 512 & var5.flags;
                         if (stackIn_88_0 != stackIn_88_1) {
-                          var5.field_J = var5.field_J & -4;
-                          var5.field_J = var5.field_J | var4_int;
+                          var5.flags = var5.flags & -4;
+                          var5.flags = var5.flags | var4_int;
                           stackIn_70_0 = var5;
                           if (3 != var4_int) {
                             stackIn_71_1 = 2 + var4_int;
                           } else {
                             stackIn_71_1 = 1;
                           }
-                          stackIn_70_0.field_E = ArchiveCatalog.a(stackIn_71_1, (byte) 17);
+                          stackIn_70_0.definition = ArchiveCatalog.a(stackIn_71_1, (byte) 17);
                         }
-                        var5 = (wm) (this.field_cb.next((byte) -72));
+                        var5 = (TrackObject) (this.courseObjects.next((byte) -72));
                       }
                     }
                   }
                 } else {
                   if (5 == DelayedServerPacket.field_n) {
-                    this.vehicles[0].c(3, 0);
+                    this.vehicles[0].collectPowerup(3, 0);
                     l.field_b = true;
                   }
                   if (DelayedServerPacket.field_n == 6) {
-                    this.vehicles[0].c(3, 1);
+                    this.vehicles[0].collectPowerup(3, 1);
                     l.field_b = true;
                   }
                   if (DelayedServerPacket.field_n == 7) {
-                    this.vehicles[0].c(3, 2);
+                    this.vehicles[0].collectPowerup(3, 2);
                     l.field_b = true;
                   }
                 }
@@ -3943,15 +3943,15 @@ final class RaceWorld {
                 }
                 if (DelayedServerPacket.field_n == 10) {
                   var2_int = 1;
-                  while (var2_int < this.field_h) {
-                    this.vehicles[var2_int].field_bc = this.field_B;
+                  while (var2_int < this.playerCount) {
+                    this.vehicles[var2_int].lapsCompleted = this.lapLimit;
                     var2_int++;
                   }
                   l.field_b = true;
                 }
                 if (DelayedServerPacket.field_n == 11) {
                   l.field_b = true;
-                  this.vehicles[0].field_bc = this.field_B;
+                  this.vehicles[0].lapsCompleted = this.lapLimit;
                 }
                 if (27 == DelayedServerPacket.field_n) {
                   stackIn_114_1 = !(this.field_c);
@@ -3960,7 +3960,7 @@ final class RaceWorld {
                 }
                 if (28 == DelayedServerPacket.field_n) {
                   l.field_b = true;
-                  this.vehicles[0].field_W = (int[][]) null;
+                  this.vehicles[0].keyBindings = (int[][]) null;
                 }
                 if (DelayedServerPacket.field_n == 89) {
                   stackIn_125_1 = !(this.field_f);
@@ -3969,10 +3969,10 @@ final class RaceWorld {
                 }
               }
               if (DelayedServerPacket.field_n == 84) {
-                this.field_o = this.field_o | 1;
+                this.tutorialFlags = this.tutorialFlags | 1;
               }
               if (DelayedServerPacket.field_n == 83) {
-                this.field_o = this.field_o | 2;
+                this.tutorialFlags = this.tutorialFlags | 2;
               }
               if (DelayedServerPacket.field_n % 2 != 0) {
                 this.field_N = this.field_N + this.field_l * this.field_H;
@@ -3988,12 +3988,12 @@ final class RaceWorld {
             }
           }
           if (decompiledFrameCompleted5) {
-            this.field_bb = this.field_bb + 1;
-            if (ih.field_n != null) {
-              var4_ref = (vf) (ih.field_n.first((byte) 113));
+            this.ticks = this.ticks + 1;
+            if (AchievementUnlockRequest.field_n != null) {
+              var4_ref = (ZombiePedestrian) (AchievementUnlockRequest.field_n.first((byte) 113));
               while (null != var4_ref) {
-                var4_ref.g(-19895);
-                var4_ref = (vf) (ih.field_n.next((byte) -43));
+                var4_ref.update(-19895);
+                var4_ref = (ZombiePedestrian) (AchievementUnlockRequest.field_n.next((byte) -43));
                 if (var13 != 0) {
                   decompiledFrameCompleted4 = false;
                   break;
@@ -4001,73 +4001,73 @@ final class RaceWorld {
               }
             }
             if (decompiledFrameCompleted4) {
-              stackIn_148_0 = ~this.field_fb;
+              stackIn_148_0 = ~this.achievementCount;
               stackIn_148_1 = -1;
             }
           }
           if ((decompiledFrameCompleted4) &&
             (stackIn_148_0 < stackIn_148_1)) {
-            fieldTemp$0 = this.field_G + 1;
-            this.field_G = this.field_G + 1;
+            fieldTemp$0 = this.achievementTicks + 1;
+            this.achievementTicks = this.achievementTicks + 1;
             if (170 <= fieldTemp$0) {
               var2_int = 0;
               while (true) {
-                if (this.field_fb - 1 > var2_int) {
-                  this.field_V[var2_int] = this.field_V[1 + var2_int];
+                if (this.achievementCount - 1 > var2_int) {
+                  this.achievementQueue[var2_int] = this.achievementQueue[1 + var2_int];
                   var2_int++;
                   if (var13 == 0) {
                     continue;
                   }
                 } else {
-                  this.field_G = 0;
+                  this.achievementTicks = 0;
                 }
                 break;
               }
-              this.field_fb = this.field_fb - 1;
+              this.achievementCount = this.achievementCount - 1;
             }
           }
-          if (this.field_j > 0) {
-            fieldTemp$1 = this.field_s + 1;
-            this.field_s = this.field_s + 1;
+          if (this.bannerCount > 0) {
+            fieldTemp$1 = this.bannerTicks + 1;
+            this.bannerTicks = this.bannerTicks + 1;
             if (50 <= fieldTemp$1) {
               var2_int = 0;
               while (true) {
-                if ((-1 + this.field_j) > var2_int) {
-                  this.field_ib[var2_int] = this.field_ib[1 + var2_int];
+                if ((-1 + this.bannerCount) > var2_int) {
+                  this.banners[var2_int] = this.banners[1 + var2_int];
                   var2_int++;
                   if (var13 == 0) {
                     continue;
                   }
                 } else {
-                  this.field_j = this.field_j - 1;
-                  this.field_R = null;
+                  this.bannerCount = this.bannerCount - 1;
+                  this.bannerSprite = null;
                 }
                 break;
               }
-              this.field_s = 0;
+              this.bannerTicks = 0;
             }
           }
-          if (this.field_S) {
+          if (this.paused) {
             return;
           }
           var2_int = 0;
           scanLoop1: while (true) {
-            if (this.field_z > var2_int) {
+            if (this.vehicleCount > var2_int) {
               stackOut_178_0 = this.vehicles[var2_int];
               stackIn_240_0 = stackOut_178_0;
               stackIn_179_0 = stackOut_178_0;
               if (var13 == 0) {
                 if (stackIn_179_0 != null) {
-                  this.vehicles[var2_int].g(-1245);
+                  this.vehicles[var2_int].update(-1245);
                 }
                 var2_int++;
                 continue;
               }
             } else {
               boolean decompiledFrameCompleted3 = true;
-              if (this.field_ab > 0) {
+              if (this.raceTicks > 0) {
                 var2_int = 0;
-                while (var2_int < this.field_z) {
+                while (var2_int < this.vehicleCount) {
                   stackIn_227_0 = null;
                   if (var13 != 0) {
                     decompiledFrameCompleted3 = false;
@@ -4075,15 +4075,15 @@ final class RaceWorld {
                   }
                   if (stackIn_227_0 != this.vehicles[var2_int] ||
                     var13 != 0) {
-                    this.vehicles[var2_int].j(0);
-                    this.a(this.vehicles[var2_int], 0.019999999552965164f * this.vehicles[var2_int].angularVelocity, 0, 3.5f * this.vehicles[var2_int].velocityX * 0.019999999552965164f, this.vehicles[var2_int].velocityY * 3.5f * 0.019999999552965164f);
+                    this.vehicles[var2_int].updatePhysics(0);
+                    this.moveVehicle(this.vehicles[var2_int], 0.019999999552965164f * this.vehicles[var2_int].angularVelocity, 0, 3.5f * this.vehicles[var2_int].velocityX * 0.019999999552965164f, this.vehicles[var2_int].velocityY * 3.5f * 0.019999999552965164f);
                   }
                   var2_int++;
                 }
               }
               if (decompiledFrameCompleted3) {
                 var2_int = 0;
-                while (this.field_z > var2_int) {
+                while (this.vehicleCount > var2_int) {
                   stackOut_200_0 = this.vehicles[var2_int];
                   stackIn_240_0 = stackOut_200_0;
                   stackIn_201_0 = stackOut_200_0;
@@ -4093,10 +4093,10 @@ final class RaceWorld {
                   if (stackIn_201_0 != null ||
                     var13 != 0) {
                     var3 = 1 + var2_int;
-                    while (this.field_z > var3) {
+                    while (this.vehicleCount > var3) {
                       stackIn_227_0 = null;
                       if (stackIn_227_0 != this.vehicles[var3]) {
-                        this.a(0, this.vehicles[var3], this.vehicles[var2_int]);
+                        this.resolveVehicleCollision(0, this.vehicles[var3], this.vehicles[var2_int]);
                       }
                       if (this.vehicles[var2_int] != null) {
                         var3++;
@@ -4105,20 +4105,20 @@ final class RaceWorld {
                       break;
                     }
                     if (this.vehicles[var2_int] != null) {
-                      this.vehicles[var2_int].b((byte) 56);
+                      this.vehicles[var2_int].updateCourseProgress((byte) 56);
                     }
                   }
                   var2_int++;
                 }
                 if (param0 > -35) {
-                  this.a((byte) 52);
+                  this.drawPlayerHud((byte) 52);
                 }
                 stackIn_227_0 = null;
               }
-              if (stackIn_227_0 != ih.field_n) {
+              if (stackIn_227_0 != AchievementUnlockRequest.field_n) {
                 var2_int = 0;
-                while (var2_int < this.field_h) {
-                  stackOut_230_0 = (vf) (ih.field_n.first((byte) 113));
+                while (var2_int < this.playerCount) {
+                  stackOut_230_0 = (ZombiePedestrian) (AchievementUnlockRequest.field_n.first((byte) 113));
                   stackIn_240_0 = stackOut_230_0;
                   stackIn_231_0 = stackOut_230_0;
                   if (var13 != 0) {
@@ -4126,45 +4126,45 @@ final class RaceWorld {
                   }
                   var4_refLifetime1 = stackIn_231_0;
                   while (null != var4_refLifetime1) {
-                    this.a(var4_refLifetime1, -103, this.vehicles[var2_int]);
-                    var4_refLifetime1 = (vf) (ih.field_n.next((byte) -73));
+                    this.handleZombieCollision(var4_refLifetime1, -103, this.vehicles[var2_int]);
+                    var4_refLifetime1 = (ZombiePedestrian) (AchievementUnlockRequest.field_n.next((byte) -73));
                   }
                   var2_int++;
                 }
               }
-              stackIn_240_0 = this.field_cb.first((byte) 86);
+              stackIn_240_0 = this.courseObjects.first((byte) 86);
             }
             break;
           }
-          var4Lifetime1 = (wm) (stackIn_240_0);
+          var4Lifetime1 = (TrackObject) (stackIn_240_0);
           while (true) {
             if (null != var4Lifetime1) {
-              var4Lifetime1.g(0);
-              stackIn_266_0 = 8 & var4Lifetime1.field_J;
+              var4Lifetime1.update(0);
+              stackIn_266_0 = 8 & var4Lifetime1.flags;
               if (var13 == 0) {
                 stackIn_249_0 = (stackIn_266_0 == 0) ? 0 : 1;
-                if ((var4Lifetime1.field_J & 4) == 0) {
+                if ((var4Lifetime1.flags & 4) == 0) {
                   stackIn_253_1 = 0;
                 } else {
                   stackIn_253_1 = 1;
                 }
                 if ((stackIn_249_0 & stackIn_253_1) != 0) {
-                  this.a(-1, var4Lifetime1);
+                  this.resolveObjectBoundaryCollision(-1, var4Lifetime1);
                 }
-                var4Lifetime1 = (wm) (this.field_cb.next((byte) -95));
+                var4Lifetime1 = (TrackObject) (this.courseObjects.next((byte) -95));
                 continue;
               }
             } else {
-              var4Lifetime1 = (wm) (this.field_d.first((byte) 127));
+              var4Lifetime1 = (TrackObject) (this.dynamicObjects.first((byte) 127));
               while (true) {
                 if (null != var4Lifetime1) {
-                  var4Lifetime1.g(0);
-                  var4Lifetime1 = (wm) (this.field_d.next((byte) 95));
+                  var4Lifetime1.update(0);
+                  var4Lifetime1 = (TrackObject) (this.dynamicObjects.next((byte) 95));
                   if (var13 == 0) {
                     continue;
                   }
                 } else {
-                  this.field_W.moveAllTo(-30510, this.field_cb);
+                  this.resultObjects.moveAllTo(-30510, this.courseObjects);
                 }
                 break;
               }
@@ -4178,45 +4178,45 @@ final class RaceWorld {
               boolean decompiledFrameCompleted2 = true;
               boolean decompiledFrameCompleted1 = true;
               if (var2_int < 5) {
-                this.a(false, this.field_O[var2_int]);
-                this.a(false, this.field_M[var2_int]);
-                this.a(false, this.field_q[var2_int]);
+                this.updateParticleQueue(false, this.trailParticles[var2_int]);
+                this.updateParticleQueue(false, this.lightParticles[var2_int]);
+                this.updateParticleQueue(false, this.sparkParticles[var2_int]);
                 var2_int++;
                 if (var13 == 0) {
                   continue;
                 }
               } else {
-                if (this.field_J != 0) {
-                  if (this.field_J != 2) {
-                    if (this.field_J != 3) {
+                if (this.gameMode != 0) {
+                  if (this.gameMode != 2) {
+                    if (this.gameMode != 3) {
                       break regionExit3;
                     }
-                    if (this.field_B != -1) {
+                    if (this.lapLimit != -1) {
                       var5_int = 0;
                       var2_int = 0;
-                      while (var2_int < this.field_h) {
-                        stackIn_303_0 = ~this.field_B;
-                        stackIn_303_1 = ~this.vehicles[var2_int].field_bc;
+                      while (var2_int < this.playerCount) {
+                        stackIn_303_0 = ~this.lapLimit;
+                        stackIn_303_1 = ~this.vehicles[var2_int].lapsCompleted;
                         if (var13 != 0) {
                           if (stackIn_303_0 > stackIn_303_1) {
                             stackIn_535_0 = this.field_P;
-                            stackIn_535_1 = this.vehicles[var2_int].field_bc;
+                            stackIn_535_1 = this.vehicles[var2_int].lapsCompleted;
                             break scanLoop2;
                           }
                           decompiledFrameCompleted2 = false;
                           break;
                         }
                         if (stackIn_303_0 <= stackIn_303_1 &&
-                          null != this.vehicles[var2_int].field_W) {
+                          null != this.vehicles[var2_int].keyBindings) {
                           var5_int = 1;
                         }
                         var2_int++;
                       }
-                      if ((decompiledFrameCompleted2) && (!this.field_U &&
+                      if ((decompiledFrameCompleted2) && (!this.raceFinished &&
                         var5_int == 0)) {
-                        this.field_U = true;
-                        this.field_ob = this.field_ab;
-                        this.a(MovingEntity.field_o, (byte) 53);
+                        this.raceFinished = true;
+                        this.field_ob = this.raceTicks;
+                        this.queueBanner(MovingEntity.field_o, (byte) 53);
                         qh.a(0, 1);
                       }
                     }
@@ -4224,20 +4224,20 @@ final class RaceWorld {
                       var2_int = 0;
                       while (true) {
                         stackIn_303_0Lifetime1 = ~var2_int;
-                        stackIn_303_1Lifetime1 = ~this.field_h;
+                        stackIn_303_1Lifetime1 = ~this.playerCount;
                         if (stackIn_303_0Lifetime1 <= stackIn_303_1Lifetime1) {
                           decompiledFrameCompleted1 = false;
                           break;
                         }
                         stackIn_535_0 = this.field_P;
-                        stackIn_535_1 = this.vehicles[var2_int].field_bc;
+                        stackIn_535_1 = this.vehicles[var2_int].lapsCompleted;
                         if (var13 != 0) {
                           break scanLoop2;
                         }
                         if (stackIn_535_0 < stackIn_535_1) {
-                          this.field_P = this.vehicles[var2_int].field_bc;
-                          if (~this.field_B == ~this.field_P) {
-                            this.a(hc.field_d, (byte) 53);
+                          this.field_P = this.vehicles[var2_int].lapsCompleted;
+                          if (~this.lapLimit == ~this.field_P) {
+                            this.queueBanner(hc.field_d, (byte) 53);
                           }
                         }
                         var2_int++;
@@ -4250,13 +4250,13 @@ final class RaceWorld {
                     var2_int = 0;
                     scanLoop4: while (true) {
                       boolean decompiledFrameRemainder2 = true;
-                      if (var2_int < this.field_h) {
-                        stackIn_345_0 = this.vehicles[var2_int].field_Sb;
+                      if (var2_int < this.playerCount) {
+                        stackIn_345_0 = this.vehicles[var2_int].kills;
                         stackIn_345_1 = 5;
                         if (var13 != 0) {
                           if (stackIn_345_0 > stackIn_345_1) {
                             stackIn_356_0 = ~this.field_P;
-                            stackIn_356_1 = ~this.vehicles[var2_int].field_Sb;
+                            stackIn_356_1 = ~this.vehicles[var2_int].kills;
                             break scanLoop4;
                           }
                           decompiledFrameRemainder2 = false;
@@ -4265,9 +4265,9 @@ final class RaceWorld {
                           if (stackIn_345_0 >= stackIn_345_1) {
                             var5_intLifetime2 = 1;
                             if (var2_int == 0 &&
-                              !this.field_E &&
+                              !this.twoPlayerMode &&
                               LoginCredentialType.a(16616, 0)) {
-                              this.a(15, 240, (byte) 118);
+                              this.unlockAchievement(15, 240, (byte) 118);
                             }
                           }
                           var2_int++;
@@ -4275,12 +4275,12 @@ final class RaceWorld {
                         }
                       }
                       if (decompiledFrameRemainder2) {
-                        if (!this.field_U &&
+                        if (!this.raceFinished &&
                           var5_intLifetime2 != 0) {
-                          this.field_ob = this.field_ab;
-                          this.field_U = true;
-                          this.a(MovingEntity.field_o, (byte) 53);
-                          if (2 <= this.vehicles[0].field_R) {
+                          this.field_ob = this.raceTicks;
+                          this.raceFinished = true;
+                          this.queueBanner(MovingEntity.field_o, (byte) 53);
+                          if (2 <= this.vehicles[0].racePosition) {
                             qh.a(0, 2);
                             if (var13 != 0) {
                               qh.a(0, 1);
@@ -4291,18 +4291,18 @@ final class RaceWorld {
                         }
                         var2_int = 0;
                         while (true) {
-                          stackIn_345_0Lifetime1 = this.field_h;
+                          stackIn_345_0Lifetime1 = this.playerCount;
                           stackIn_345_1Lifetime1 = var2_int;
                           if (stackIn_345_0Lifetime1 <= stackIn_345_1Lifetime1) {
                             break;
                           }
                           stackIn_356_0 = ~this.field_P;
-                          stackIn_356_1 = ~this.vehicles[var2_int].field_Sb;
+                          stackIn_356_1 = ~this.vehicles[var2_int].kills;
                           if (var13 != 0) {
                             break scanLoop4;
                           }
                           if (stackIn_356_0 > stackIn_356_1) {
-                            this.field_P = this.vehicles[var2_int].field_Sb;
+                            this.field_P = this.vehicles[var2_int].kills;
                           }
                           var2_int++;
                         }
@@ -4325,7 +4325,7 @@ final class RaceWorld {
                             }
                             if (stackIn_535_0 < stackIn_535_1 &&
                               this.field_P >= var7_int) {
-                              this.a(LoginCredentials.substituteIndexedTokens(SocketJs5Transport.field_p, new String[]{Integer.toString(var6)}, true), (byte) 53);
+                              this.queueBanner(LoginCredentials.substituteIndexedTokens(SocketJs5Transport.field_p, new String[]{Integer.toString(var6)}, true), (byte) 53);
                             } else {
                               var6 += 25;
                               continue;
@@ -4337,10 +4337,10 @@ final class RaceWorld {
                       }
                       if (decompiledSharedTail0) {
                         if (this.field_P == 3) {
-                          this.a(ij.field_n, (byte) 53);
+                          this.queueBanner(ij.field_n, (byte) 53);
                         }
                         if (4 == this.field_P) {
-                          this.a(UsernameLoginCredentials.field_g, (byte) 53);
+                          this.queueBanner(UsernameLoginCredentials.field_g, (byte) 53);
                         }
                       }
                       this.field_e = this.field_P;
@@ -4356,44 +4356,44 @@ final class RaceWorld {
                 var5_intLifetime1 = 0;
                 var2_int = 0;
                 scanLoop5: while (true) {
-                  if (var2_int < this.field_h) {
-                    stackIn_505_0 = ~this.vehicles[var2_int].field_bc;
-                    stackIn_505_1 = ~this.field_B;
+                  if (var2_int < this.playerCount) {
+                    stackIn_505_0 = ~this.vehicles[var2_int].lapsCompleted;
+                    stackIn_505_1 = ~this.lapLimit;
                     if (var13 == 0) {
                       if (stackIn_505_0 >= stackIn_505_1 &&
-                        this.vehicles[var2_int].field_W != null) {
+                        this.vehicles[var2_int].keyBindings != null) {
                         var5_intLifetime1 = 1;
                       }
                       var2_int++;
                       continue;
                     }
                   } else {
-                    if (!this.field_U &&
+                    if (!this.raceFinished &&
                       var5_intLifetime1 == 0) {
-                      this.field_U = true;
-                      this.field_ob = this.field_ab;
-                      this.a(MovingEntity.field_o, (byte) 53);
-                      if (!this.field_E) {
-                        stackIn_413_1 = (this.vehicles[0].field_R == 0);
+                      this.raceFinished = true;
+                      this.field_ob = this.raceTicks;
+                      this.queueBanner(MovingEntity.field_o, (byte) 53);
+                      if (!this.twoPlayerMode) {
+                        stackIn_413_1 = (this.vehicles[0].racePosition == 0);
                         this.field_b = stackIn_413_1;
                         if (this.field_b) {
                           if (this.field_rb[11] == 1) {
-                            this.a(11, 244, (byte) -60);
+                            this.unlockAchievement(11, 244, (byte) -60);
                           }
                           if (this.field_rb[8] == 1) {
-                            this.a(8, 247, (byte) -38);
+                            this.unlockAchievement(8, 247, (byte) -38);
                           }
                           if (1 == this.field_rb[9]) {
-                            this.a(9, 246, (byte) 99);
+                            this.unlockAchievement(9, 246, (byte) 99);
                           }
                           if (this.field_rb[10] == 1) {
-                            this.a(10, 245, (byte) 99);
+                            this.unlockAchievement(10, 245, (byte) 99);
                           }
                           if (this.field_rb[12] == 1) {
-                            this.a(12, 243, (byte) 100);
+                            this.unlockAchievement(12, 243, (byte) 100);
                           }
                         }
-                        if (this.vehicles[0].field_R < 2) {
+                        if (this.vehicles[0].racePosition < 2) {
                           qh.a(0, 1);
                           if (var13 != 0) {
                             qh.a(0, 2);
@@ -4402,24 +4402,24 @@ final class RaceWorld {
                           qh.a(0, 2);
                         }
                         if ((7 == DelegatingCanvas.field_d) &&
-                          (!(2 <= this.vehicles[0].field_R)) &&
+                          (!(2 <= this.vehicles[0].racePosition)) &&
                           (~(MenuList.field_l[StrongCacheEntry.field_w] - 1) == ~LoginForm.field_P)) {
                           var6 = CurvedRoadSegment.field_y + this.field_ob;
                           if (StrongCacheEntry.field_w == 0 &&
                             22500 > var6) {
-                            this.a(2, 253, (byte) -119);
+                            this.unlockAchievement(2, 253, (byte) -119);
                           }
                           if (StrongCacheEntry.field_w == 1 &&
                             30500 > var6) {
-                            this.a(4, 251, (byte) 119);
+                            this.unlockAchievement(4, 251, (byte) 119);
                           }
                           if (StrongCacheEntry.field_w == 2 &&
                             var6 < 29000) {
-                            this.a(3, 252, (byte) -34);
+                            this.unlockAchievement(3, 252, (byte) -34);
                           }
                           if (StrongCacheEntry.field_w == 3 &&
                             var6 < 34000) {
-                            this.a(5, 250, (byte) -105);
+                            this.unlockAchievement(5, 250, (byte) -105);
                           }
                           PointPath.a(StrongCacheEntry.field_w, 5, var6);
                           var7_intLifetime1 = 1;
@@ -4443,14 +4443,14 @@ final class RaceWorld {
                             break;
                           }
                           if (var7_intLifetime1 != 0) {
-                            this.a(0, 255, (byte) -94);
+                            this.unlockAchievement(0, 255, (byte) -94);
                             if (var8 < 109500) {
-                              this.a(1, 254, (byte) -83);
+                              this.unlockAchievement(1, 254, (byte) -83);
                             }
                           }
                           if (var13 != 0) {
-                            if (this.vehicles[0].field_R == 0 ||
-                              this.vehicles[1].field_R == 0) {
+                            if (this.vehicles[0].racePosition == 0 ||
+                              this.vehicles[1].racePosition == 0) {
                               qh.a(0, 1);
                               qh.a(0, 2);
                             } else {
@@ -4459,8 +4459,8 @@ final class RaceWorld {
                           }
                         }
                       } else {
-                        if (this.vehicles[0].field_R == 0 ||
-                          this.vehicles[1].field_R == 0) {
+                        if (this.vehicles[0].racePosition == 0 ||
+                          this.vehicles[1].racePosition == 0) {
                           qh.a(0, 1);
                           if (var13 != 0) {
                             qh.a(0, 2);
@@ -4473,19 +4473,19 @@ final class RaceWorld {
                     var2_int = 0;
                     while (true) {
                       stackIn_505_0 = ~var2_int;
-                      stackIn_505_1 = ~this.field_h;
+                      stackIn_505_1 = ~this.playerCount;
                       if (stackIn_505_0 <= stackIn_505_1) {
                         break regionExit3;
                       }
                       stackIn_535_0 = this.field_P;
-                      stackIn_535_1 = this.vehicles[var2_int].field_bc;
+                      stackIn_535_1 = this.vehicles[var2_int].lapsCompleted;
                       if (var13 != 0) {
                         break scanLoop2;
                       }
                       if (stackIn_535_0 < stackIn_535_1) {
-                        this.field_P = this.vehicles[var2_int].field_bc;
-                        if (~this.field_P == ~this.field_B) {
-                          this.a(hc.field_d, (byte) 53);
+                        this.field_P = this.vehicles[var2_int].lapsCompleted;
+                        if (~this.field_P == ~this.lapLimit) {
+                          this.queueBanner(hc.field_d, (byte) 53);
                         }
                       }
                       var2_int++;
@@ -4495,30 +4495,30 @@ final class RaceWorld {
                 }
                 while (stackIn_505_0 > stackIn_505_1) {
                   stackIn_535_0 = this.field_P;
-                  stackIn_535_1 = this.vehicles[var2_int].field_bc;
+                  stackIn_535_1 = this.vehicles[var2_int].lapsCompleted;
                   if (var13 != 0) {
                     break scanLoop2;
                   }
                   if (stackIn_535_0 < stackIn_535_1) {
-                    this.field_P = this.vehicles[var2_int].field_bc;
-                    if (~this.field_P == ~this.field_B) {
-                      this.a(hc.field_d, (byte) 53);
+                    this.field_P = this.vehicles[var2_int].lapsCompleted;
+                    if (~this.field_P == ~this.lapLimit) {
+                      this.queueBanner(hc.field_d, (byte) 53);
                     }
                   }
                   var2_int++;
                   stackIn_505_0 = ~var2_int;
-                  stackIn_505_1 = ~this.field_h;
+                  stackIn_505_1 = ~this.playerCount;
                 }
               }
             }
-            if (this.field_U &&
-              -this.field_ob + this.field_ab >= 150 &&
+            if (this.raceFinished &&
+              -this.field_ob + this.raceTicks >= 150 &&
               !this.field_T &&
-              this.field_J != 3 &&
-              this.field_fb == 0) {
+              this.gameMode != 3 &&
+              this.achievementCount == 0) {
               qn.a(7, false, false);
             }
-            stackIn_535_0 = this.field_r;
+            stackIn_535_0 = this.courseTheme;
             stackIn_535_1 = 3;
             break;
           }
@@ -4526,7 +4526,7 @@ final class RaceWorld {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_535_0 == stackIn_535_1 &&
-            this.field_J != 2) {
+            this.gameMode != 2) {
             var2_int = 0;
             do {
               if (this.field_w.length <= var2_int) {
@@ -4536,23 +4536,23 @@ final class RaceWorld {
               this.field_eb[var2_int] = 0;
               var2_int++;
             } while (var13 == 0);
-            while (var2_int < this.field_h) {
+            while (var2_int < this.playerCount) {
               var5_ref = this.vehicles[var2_int];
               if (var13 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (null != var5_ref.field_W ||
+              if (null != var5_ref.keyBindings ||
                 var13 != 0) {
                 var6 = var5_ref.field_Eb;
                 var7 = 0.0f;
                 var3 = 0;
-                while (var3 < (int)var5_ref.field_Ib) {
+                while (var3 < (int)var5_ref.furthestCourseProgress) {
                   var7 = var7 + this.roadSegments[var3].length(50);
                   var3++;
                 }
-                if ((int)var5_ref.field_Ib != this.roadSegments.length) {
-                  var7 = var7 + this.roadSegments[(int)var5_ref.field_Ib].length(50) * (var5_ref.field_Ib - (float)(int)var5_ref.field_Ib);
+                if ((int)var5_ref.furthestCourseProgress != this.roadSegments.length) {
+                  var7 = var7 + this.roadSegments[(int)var5_ref.furthestCourseProgress].length(50) * (var5_ref.furthestCourseProgress - (float)(int)var5_ref.furthestCourseProgress);
                 }
                 var8 = (int)(var7 / this.field_A);
                 var3 = 1;
@@ -4563,7 +4563,7 @@ final class RaceWorld {
                   var12 = (float)Math.sqrt((double)(var10 * var10 + var11 * var11));
                   var10 = var10 / var12;
                   var11 = var11 / var12;
-                  this.field_eb[var9] = this.c(this.field_eb[var9], 6293, var6);
+                  this.field_eb[var9] = this.orInts(this.field_eb[var9], 6293, var6);
                   var3++;
                 }
               }
@@ -4572,56 +4572,56 @@ final class RaceWorld {
           }
           if (decompiledFrameCompleted0) {
             decompiledFrameRemainder0 = (!(LoginCredentialType.a(16616, 0)) ||
-              2 != this.field_J);
+              2 != this.gameMode);
           }
           if (decompiledFrameRemainder0) {
-            if (this.field_ab == -100) {
-              this.a(TextHotspotWidget.field_L, (byte) 53);
+            if (this.raceTicks == -100) {
+              this.queueBanner(TextHotspotWidget.field_L, (byte) 53);
             }
-            if (-50 == this.field_ab) {
-              this.a(AccountFormText.field_a, (byte) 53);
+            if (-50 == this.raceTicks) {
+              this.queueBanner(AccountFormText.field_a, (byte) 53);
             }
-            decompiledFrameRemainder1 = (this.field_ab == 0);
+            decompiledFrameRemainder1 = (this.raceTicks == 0);
             if (decompiledFrameRemainder1) {
-              this.a(il.field_b, (byte) 53);
+              this.queueBanner(il.field_b, (byte) 53);
               decompiledFrameRemainder1 = (var13 != 0);
             }
           }
           if (decompiledFrameRemainder1) {
-            if (this.field_ab == -100) {
-              this.a(BoundaryCurve.field_n, (byte) 53);
+            if (this.raceTicks == -100) {
+              this.queueBanner(BoundaryCurve.field_n, (byte) 53);
             }
-            if (this.field_ab == 0) {
-              this.a(il.field_b, (byte) 53);
+            if (this.raceTicks == 0) {
+              this.queueBanner(il.field_b, (byte) 53);
             }
           }
-          fieldTemp$2 = this.field_ab + 1;
-          this.field_ab = this.field_ab + 1;
+          fieldTemp$2 = this.raceTicks + 1;
+          this.raceTicks = this.raceTicks + 1;
           if (fieldTemp$2 > 0 &&
-            !this.field_U) {
+            !this.raceFinished) {
             this.field_t = this.field_t + this.field_hb;
             this.field_N = this.field_N - this.field_p * this.field_l;
             this.field_H = this.field_H + 1;
-            this.field_y = this.field_y - (CurvedRoadSegment.field_y + (this.field_ab + this.field_g));
+            this.field_y = this.field_y - (CurvedRoadSegment.field_y + (this.raceTicks + this.field_g));
             this.field_hb = this.field_hb - 1;
           }
-          if (this.field_ab <= -50 &&
-            this.field_r == 3) {
-            var5_ref2 = (na) (this.field_Q.first((byte) 104));
+          if (this.raceTicks <= -50 &&
+            this.courseTheme == 3) {
+            var5_ref2 = (PointLight) (this.pointLights.first((byte) 104));
             while (null != var5_ref2) {
               if (var13 != 0) {
                 return;
               }
-              if (!var5_ref2.field_j) {
-                if (!(SolidRoadStripRenderer.b(2, 400) >= this.field_ab + 150)) {
-                  var5_ref2.field_j = true;
+              if (!var5_ref2.enabled) {
+                if (!(SolidRoadStripRenderer.b(2, 400) >= this.raceTicks + 150)) {
+                  var5_ref2.enabled = true;
                 }
               } else {
-                if (SolidRoadStripRenderer.b(2, 400) < (-50 - this.field_ab)) {
-                  var5_ref2.field_j = false;
+                if (SolidRoadStripRenderer.b(2, 400) < (-50 - this.raceTicks)) {
+                  var5_ref2.enabled = false;
                 }
               }
-              var5_ref2 = (na) (this.field_Q.next((byte) 96));
+              var5_ref2 = (PointLight) (this.pointLights.next((byte) 96));
             }
           }
           return;
@@ -4632,7 +4632,7 @@ final class RaceWorld {
         }
     }
 
-    private final void d(wm param0, int param1) {
+    private final void detonateLargeProjectile(TrackObject param0, int param1) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -4643,18 +4643,18 @@ final class RaceWorld {
         try {
           param0.unlink(0);
           RoadStripRenderer.playPositionalSound(ResizableDialog.field_O.field_q, param0.position, -124, ResizableDialog.field_O);
-          ArchiveIndex.a(0, param0.position.y, 0, 128, param1 - 28976, -1, param0.position.x, 3, this.field_M, 16777215, 0, 32, 400);
-          ArchiveIndex.a(0, param0.position.y, 0, 128, param1 ^ 28976, -4, param0.position.x, 3, this.field_M, 16777215, 0, 128, 60);
-          ArchiveIndex.a(0, param0.position.y, 0, 128, param1 - 28976, -8, param0.position.x, 3, this.field_M, 16777215, 0, 255, 20);
-          var3_int = this.a(param1 ^ -2407, 4, 250, param0, 32, 200000.0f);
+          ArchiveIndex.a(0, param0.position.y, 0, 128, param1 - 28976, -1, param0.position.x, 3, this.lightParticles, 16777215, 0, 32, 400);
+          ArchiveIndex.a(0, param0.position.y, 0, 128, param1 ^ 28976, -4, param0.position.x, 3, this.lightParticles, 16777215, 0, 128, 60);
+          ArchiveIndex.a(0, param0.position.y, 0, 128, param1 - 28976, -8, param0.position.x, 3, this.lightParticles, 16777215, 0, 255, 20);
+          var3_int = this.applyBlast(param1 ^ -2407, 4, 250, param0, 32, 200000.0f);
           if (param1 != 28977) {
-            this.b((wm) null, 63);
+            this.drawObjectShadow((TrackObject) null, 63);
           }
-          var4 = param0.field_J & 3;
+          var4 = param0.flags & 3;
           if (0 == var4 &&
-            !this.field_E &&
+            !this.twoPlayerMode &&
             var3_int >= 3) {
-            this.a(13, 242, (byte) 112);
+            this.unlockAchievement(13, 242, (byte) 112);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4671,7 +4671,7 @@ final class RaceWorld {
         }
     }
 
-    final boolean a(int param0, boolean param1, Point2i param2) {
+    final boolean isOnRoad(int param0, boolean param1, Point2i param2) {
         RuntimeException var4 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -4680,7 +4680,7 @@ final class RaceWorld {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_4_0 = this.a(param0, param2.x, -3, param2.y);
+            stackIn_4_0 = this.isOnRoad(param0, param2.x, -3, param2.y);
             return stackIn_4_0;
           }
           return false;
@@ -4698,7 +4698,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(String param0, float param1, int param2, TutorialCalloutAnchor param3, String param4) {
+    private final void drawTutorialCallout(String param0, float param1, int param2, TutorialCalloutAnchor param3, String param4) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -4765,7 +4765,7 @@ final class RaceWorld {
           var10 = var10 + (5 + 20 * var11);
           HoldTheLine.field_F.drawParagraph(param4, var6_int, var10, var8, var9, 0, -1, 1, 0, 18);
           if (param2 != -11240) {
-            this.field_o = 33;
+            this.tutorialFlags = 33;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4794,68 +4794,68 @@ final class RaceWorld {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void drawParticles(boolean param0, int param1) {
         Point2i discarded$0 = null;
         RuntimeException decompiledCaughtException = null;
-        jk var3 = null;
+        Particle var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         var4 = HoldTheLine.field_D;
         try {
           param1++;
           if (param0) {
-            discarded$0 = this.a((RaceVehicle) null, 102);
+            discarded$0 = this.findVehicleOutsideBounds((RaceVehicle) null, 102);
           }
-          var3 = (jk) (this.field_O[param1].first((byte) 118));
+          var3 = (Particle) (this.trailParticles[param1].first((byte) 118));
           do {
             if (var3 == null) {
-              var3 = (jk) (this.field_M[param1].first((byte) 99));
+              var3 = (Particle) (this.lightParticles[param1].first((byte) 99));
               break;
             }
-            SoftwareRasterizer.fillCircleAlpha(var3.field_t >> 10, var3.field_k >> 10, var3.field_u >> 10, var3.field_o, var3.field_q >> 2);
-            var3 = (jk) (this.field_O[param1].next((byte) -23));
+            SoftwareRasterizer.fillCircleAlpha(var3.fixedX >> 10, var3.fixedY >> 10, var3.fixedRadius >> 10, var3.color, var3.alpha >> 2);
+            var3 = (Particle) (this.trailParticles[param1].next((byte) -23));
           } while (var4 == 0);
           do {
             if (null == var3) {
-              var3 = (jk) (this.field_q[param1].first((byte) 87));
+              var3 = (Particle) (this.sparkParticles[param1].first((byte) 87));
               break;
             }
-            SoftwareRasterizer.fillCircleAlpha(var3.field_t >> 10, var3.field_k >> 10, var3.field_u >> 10, var3.field_o, var3.field_q >> 2);
-            var3 = (jk) (this.field_M[param1].next((byte) 88));
+            SoftwareRasterizer.fillCircleAlpha(var3.fixedX >> 10, var3.fixedY >> 10, var3.fixedRadius >> 10, var3.color, var3.alpha >> 2);
+            var3 = (Particle) (this.lightParticles[param1].next((byte) 88));
           } while (var4 == 0);
           do {
             if (null == var3) {
-              if (this.field_r != 3) {
+              if (this.courseTheme != 3) {
                 return;
               }
-              vb.a(-76, this.field_I);
+              vb.a(-76, this.lightMap);
               break;
             }
-            SoftwareRasterizer.drawLineAlpha(-var3.field_u + var3.field_t >> 10, var3.field_k >> 10, var3.field_u + var3.field_t >> 10, var3.field_k >> 10, var3.field_o, var3.field_q >> 2);
-            SoftwareRasterizer.drawLineAlpha(var3.field_t >> 10, var3.field_k - var3.field_u >> 10, var3.field_t >> 10, var3.field_k + var3.field_u >> 10, var3.field_o, var3.field_q >> 2);
-            var3 = (jk) (this.field_q[param1].next((byte) -44));
+            SoftwareRasterizer.drawLineAlpha(-var3.fixedRadius + var3.fixedX >> 10, var3.fixedY >> 10, var3.fixedRadius + var3.fixedX >> 10, var3.fixedY >> 10, var3.color, var3.alpha >> 2);
+            SoftwareRasterizer.drawLineAlpha(var3.fixedX >> 10, var3.fixedY - var3.fixedRadius >> 10, var3.fixedX >> 10, var3.fixedY + var3.fixedRadius >> 10, var3.color, var3.alpha >> 2);
+            var3 = (Particle) (this.sparkParticles[param1].next((byte) -44));
           } while (var4 == 0);
-          var3 = (jk) (this.field_O[param1].first((byte) 94));
+          var3 = (Particle) (this.trailParticles[param1].first((byte) 94));
           do {
             if (null == var3) {
-              var3 = (jk) (this.field_M[param1].first((byte) 120));
+              var3 = (Particle) (this.lightParticles[param1].first((byte) 120));
               break;
             }
-            SoftwareRasterizer.fillCircleAlpha(var3.field_t >> 10, var3.field_k >> 10, var3.field_u >> 10, 16777215, var3.field_q >> 2);
-            var3 = (jk) (this.field_O[param1].next((byte) -68));
+            SoftwareRasterizer.fillCircleAlpha(var3.fixedX >> 10, var3.fixedY >> 10, var3.fixedRadius >> 10, 16777215, var3.alpha >> 2);
+            var3 = (Particle) (this.trailParticles[param1].next((byte) -68));
           } while (var4 == 0);
           do {
             if (var3 == null) {
-              var3 = (jk) (this.field_q[param1].first((byte) 85));
+              var3 = (Particle) (this.sparkParticles[param1].first((byte) 85));
               break;
             }
-            SoftwareRasterizer.fillCircleAlpha(var3.field_t >> 10, var3.field_k >> 10, var3.field_u >> 10, 16777215, var3.field_q >> 2);
-            var3 = (jk) (this.field_M[param1].next((byte) -84));
+            SoftwareRasterizer.fillCircleAlpha(var3.fixedX >> 10, var3.fixedY >> 10, var3.fixedRadius >> 10, 16777215, var3.alpha >> 2);
+            var3 = (Particle) (this.lightParticles[param1].next((byte) -84));
           } while (var4 == 0);
           while (var3 != null) {
-            SoftwareRasterizer.drawLineAlpha(var3.field_t - var3.field_u >> 10, var3.field_k >> 10, var3.field_t + var3.field_u >> 10, var3.field_k >> 10, 16777215, var3.field_q >> 2);
-            SoftwareRasterizer.drawLineAlpha(var3.field_t >> 10, -var3.field_u + var3.field_k >> 10, var3.field_t >> 10, var3.field_u + var3.field_k >> 10, 16777215, var3.field_q >> 2);
-            var3 = (jk) (this.field_q[param1].next((byte) -32));
+            SoftwareRasterizer.drawLineAlpha(var3.fixedX - var3.fixedRadius >> 10, var3.fixedY >> 10, var3.fixedX + var3.fixedRadius >> 10, var3.fixedY >> 10, 16777215, var3.alpha >> 2);
+            SoftwareRasterizer.drawLineAlpha(var3.fixedX >> 10, -var3.fixedRadius + var3.fixedY >> 10, var3.fixedX >> 10, var3.fixedRadius + var3.fixedY >> 10, 16777215, var3.alpha >> 2);
+            var3 = (Particle) (this.sparkParticles[param1].next((byte) -32));
             if (var4 != 0) {
               return;
             }
@@ -4869,172 +4869,172 @@ final class RaceWorld {
         }
     }
 
-    private final void g(int param0) {
+    private final void drawCourseBackground(int param0) {
         try {
-          this.field_qb.drawUnkeyed(0, param0);
+          this.courseImage.drawUnkeyed(0, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sg.TA(" + param0 + ')');
         }
     }
 
-    final void a() {
+    final void render() {
         int var4_int = 0;
         int var1;
         int var2;
-        wm var3;
-        na var4;
-        vf var4_ref;
+        TrackObject var3;
+        PointLight var4;
+        ZombiePedestrian var4_ref;
         int var1Lifetime1;
         int var2Lifetime1;
         int var1Lifetime1Lifetime1;
         int var1Lifetime1Lifetime2;
         int var1Lifetime1Lifetime3;
-        wm var3Lifetime1;
-        wm var3Lifetime2;
-        wm var3Lifetime3;
-        if (this.field_r == 3) {
+        TrackObject var3Lifetime1;
+        TrackObject var3Lifetime2;
+        TrackObject var3Lifetime3;
+        if (this.courseTheme == 3) {
           if (!LoginCredentialType.a(16616, 0)) {
             var1 = 307200;
             while (var1 > 0) {
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
               var1--;
-              this.field_I.pixels[var1] = 0;
+              this.lightMap.pixels[var1] = 0;
             }
           } else {
-            var2 = this.field_F * 65793;
+            var2 = this.lightningBrightness * 65793;
             var1 = 307200;
             while (var1 > 0) {
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
               var1--;
-              this.field_I.pixels[var1] = var2;
+              this.lightMap.pixels[var1] = var2;
             }
           }
         }
-        this.e((byte) 106);
+        this.drawCourseBackground((byte) 106);
         for (var2Lifetime1 = -1; var2Lifetime1 <= 3; var2Lifetime1++) {
-          var3 = (wm) (this.field_d.first((byte) 102));
+          var3 = (TrackObject) (this.dynamicObjects.first((byte) 102));
           while (var3 != null) {
-            if (var3.field_q == var2Lifetime1) {
-              this.c(var3, -127);
+            if (var3.layer == var2Lifetime1) {
+              this.drawObjectSideShadow(var3, -127);
             }
-            var3 = (wm) (this.field_d.next((byte) -126));
+            var3 = (TrackObject) (this.dynamicObjects.next((byte) -126));
           }
-          var3Lifetime1 = (wm) (this.field_d.first((byte) 105));
+          var3Lifetime1 = (TrackObject) (this.dynamicObjects.first((byte) 105));
           while (var3Lifetime1 != null) {
-            if (var3Lifetime1.field_q == var2Lifetime1) {
-              this.a(var3Lifetime1, 115);
+            if (var3Lifetime1.layer == var2Lifetime1) {
+              this.drawObject(var3Lifetime1, 115);
             }
-            var3Lifetime1 = (wm) (this.field_d.next((byte) -59));
+            var3Lifetime1 = (TrackObject) (this.dynamicObjects.next((byte) -59));
           }
-          if (this.field_r == 3 &&
-            this.field_J != 2) {
+          if (this.courseTheme == 3 &&
+            this.gameMode != 2) {
             for (var1Lifetime1 = 0; var1Lifetime1 < this.field_w.length; var1Lifetime1++) {
-              if (this.roadSegments[this.field_w[var1Lifetime1]].field_k == var2Lifetime1 &&
+              if (this.roadSegments[this.field_w[var1Lifetime1]].layer == var2Lifetime1 &&
                 this.field_eb[var1Lifetime1] != 0) {
                 SoftwareRasterizer.fillRectangle(this.field_x[var1Lifetime1] - 1, this.field_u[var1Lifetime1] - 1, 3, 3, this.field_eb[var1Lifetime1]);
                 TutorialTransition.a(32381);
-                this.field_I.bindRaster();
+                this.lightMap.bindRaster();
                 SoftwareRasterizer.fillRectangle(this.field_x[var1Lifetime1] - 1, this.field_u[var1Lifetime1] - 1, 3, 3, 16777215);
                 MarkerSliderRenderer.restoreRasterTarget(-1);
               }
             }
           }
-          var4 = (na) (this.field_Q.first((byte) 94));
+          var4 = (PointLight) (this.pointLights.first((byte) 94));
           while (var4 != null) {
-            if (var4.field_j &&
-              var4.field_m == var2Lifetime1) {
-              this.a(-28, var4);
+            if (var4.enabled &&
+              var4.layer == var2Lifetime1) {
+              this.drawPointLight(-28, var4);
             }
-            var4 = (na) (this.field_Q.next((byte) -125));
+            var4 = (PointLight) (this.pointLights.next((byte) -125));
           }
-          var3Lifetime2 = (wm) (this.field_cb.first((byte) 114));
+          var3Lifetime2 = (TrackObject) (this.courseObjects.first((byte) 114));
           while (var3Lifetime2 != null) {
-            if (var3Lifetime2.field_q == var2Lifetime1) {
-              this.b(var3Lifetime2, 8192);
+            if (var3Lifetime2.layer == var2Lifetime1) {
+              this.drawObjectShadow(var3Lifetime2, 8192);
             }
-            var3Lifetime2 = (wm) (this.field_cb.next((byte) 127));
+            var3Lifetime2 = (TrackObject) (this.courseObjects.next((byte) 127));
           }
-          for (var1Lifetime1Lifetime1 = 0; var1Lifetime1Lifetime1 < this.field_h; var1Lifetime1Lifetime1++) {
+          for (var1Lifetime1Lifetime1 = 0; var1Lifetime1Lifetime1 < this.playerCount; var1Lifetime1Lifetime1++) {
             if (this.vehicles[var1Lifetime1Lifetime1] != null &&
-              this.vehicles[var1Lifetime1Lifetime1].field_q == var2Lifetime1) {
+              this.vehicles[var1Lifetime1Lifetime1].layer == var2Lifetime1) {
               for (var4_int = 0; var4_int < 8; var4_int++) {
-                this.a(var4_int, -403, this.vehicles[var1Lifetime1Lifetime1]);
+                this.drawVehiclePowerupGlow(var4_int, -403, this.vehicles[var1Lifetime1Lifetime1]);
               }
             }
           }
-          if (ih.field_n != null &&
+          if (AchievementUnlockRequest.field_n != null &&
             var2Lifetime1 == 0) {
-            var4_ref = (vf) (ih.field_n.first((byte) 105));
+            var4_ref = (ZombiePedestrian) (AchievementUnlockRequest.field_n.first((byte) 105));
             while (var4_ref != null) {
-              var4_ref.d((byte) -99);
-              var4_ref = (vf) (ih.field_n.next((byte) -59));
+              var4_ref.draw((byte) -99);
+              var4_ref = (ZombiePedestrian) (AchievementUnlockRequest.field_n.next((byte) -59));
             }
           }
-          var3Lifetime3 = (wm) (this.field_cb.first((byte) 126));
+          var3Lifetime3 = (TrackObject) (this.courseObjects.first((byte) 126));
           while (var3Lifetime3 != null) {
-            if (var3Lifetime3.field_q == var2Lifetime1) {
-              this.a(var3Lifetime3, 122);
+            if (var3Lifetime3.layer == var2Lifetime1) {
+              this.drawObject(var3Lifetime3, 122);
             }
-            var3Lifetime3 = (wm) (this.field_cb.next((byte) -108));
+            var3Lifetime3 = (TrackObject) (this.courseObjects.next((byte) -108));
           }
-          for (var1Lifetime1Lifetime2 = 0; var1Lifetime1Lifetime2 < this.field_z; var1Lifetime1Lifetime2++) {
+          for (var1Lifetime1Lifetime2 = 0; var1Lifetime1Lifetime2 < this.vehicleCount; var1Lifetime1Lifetime2++) {
             if (this.vehicles[var1Lifetime1Lifetime2] != null &&
-              this.vehicles[var1Lifetime1Lifetime2].field_q == var2Lifetime1) {
-              this.a(this.vehicles[var1Lifetime1Lifetime2], (byte) 101);
+              this.vehicles[var1Lifetime1Lifetime2].layer == var2Lifetime1) {
+              this.drawVehicle(this.vehicles[var1Lifetime1Lifetime2], (byte) 101);
             }
           }
-          if (this.field_r == 3) {
-            for (var1Lifetime1Lifetime3 = 0; var1Lifetime1Lifetime3 < this.field_h; var1Lifetime1Lifetime3++) {
+          if (this.courseTheme == 3) {
+            for (var1Lifetime1Lifetime3 = 0; var1Lifetime1Lifetime3 < this.playerCount; var1Lifetime1Lifetime3++) {
               if (this.vehicles[var1Lifetime1Lifetime3] != null &&
-                this.vehicles[var1Lifetime1Lifetime3].field_q == var2Lifetime1) {
-                this.a(64, this.vehicles[var1Lifetime1Lifetime3]);
+                this.vehicles[var1Lifetime1Lifetime3].layer == var2Lifetime1) {
+                this.drawVehicleHeadlights(64, this.vehicles[var1Lifetime1Lifetime3]);
               }
             }
           }
-          this.a(false, var2Lifetime1);
+          this.drawParticles(false, var2Lifetime1);
         }
         if (LoginCredentialType.a(16616, 0)) {
-          this.a((long)this.field_bb, true);
+          this.drawRain((long)this.ticks, true);
         }
-        if (this.field_r == 3 &&
+        if (this.courseTheme == 3 &&
           !this.field_c) {
-          this.b((byte) -96);
+          this.applyLightMap((byte) -96);
         }
-        if (this.field_J < 5) {
-          this.c(-16);
+        if (this.gameMode < 5) {
+          this.drawHud(-16);
         }
-        if (this.field_mb != -1) {
-          this.a(-3);
+        if (this.tutorialPage != -1) {
+          this.drawTutorialOverlay(-3);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3) {
+    final boolean isOnRoad(int param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_25_0 = false;
@@ -5044,7 +5044,7 @@ final class RaceWorld {
             0 <= param3 &&
             param1 < 640 &&
             param3 < 480) {
-            var5_int = this.field_lb.field_m[param3 * 640 + param1] & 85;
+            var5_int = this.roadLayerMask.field_m[param3 * 640 + param1] & 85;
             if (param0 >= 1) {
               var5_int = var5_int & 60;
             }
@@ -5054,9 +5054,9 @@ final class RaceWorld {
             return (var5_int != 0);
           }
           if (param2 != -3) {
-            this.b((String) null, (byte) -127);
+            this.enterTutorialPage((String) null, (byte) -127);
           }
-          stackIn_25_0 = b.a(false, param1, param3, this.field_jb);
+          stackIn_25_0 = b.a(false, param1, param3, this.roadBoundaryLoops);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5065,7 +5065,7 @@ final class RaceWorld {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void openPauseMenu(boolean param0) {
         if (!LoginCredentialType.b(92)) {
           return;
         }
@@ -5076,7 +5076,7 @@ final class RaceWorld {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void placePickupRows(int param0, int param1, int param2) {
         float dupTemp$0 = 0.0f;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
@@ -5099,14 +5099,14 @@ final class RaceWorld {
         int var17 = 0;
         var17 = HoldTheLine.field_D;
         try {
-          var4_float = this.vehicles[0].field_vb;
+          var4_float = this.vehicles[0].courseProgress;
           var5 = OutlinedRoadStripRenderer.totalCurveLength(-1, this.roadSegments) / (float)(param1 + 1);
           var6 = (int)var4_float;
           var7 = this.roadSegments[var6].length(50);
           var8 = (-var4_float + (float)(var6 + 1)) * var7;
           var9 = var5;
           if (param0 != 24936) {
-            this.a(33, 114, (RaceVehicle) null);
+            this.drawVehiclePowerupGlow(33, 114, (RaceVehicle) null);
           }
           var10 = 0;
           scanLoop1: while (true) {
@@ -5154,7 +5154,7 @@ final class RaceWorld {
                   stackIn_25_0 = 3 & var10 + (var15 + 1);
                 }
                 var16 = stackIn_25_0;
-                this.field_cb.addLast((byte) -64, new wm(var14, var16 + 1, -1));
+                this.courseObjects.addLast((byte) -64, new TrackObject(var14, var16 + 1, -1));
                 var15++;
               }
               var10++;
@@ -5170,7 +5170,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(RaceVehicle param0, byte param1) {
+    private final void drawVehicle(RaceVehicle param0, byte param1) {
         Point2i discarded$0 = null;
         int stackIn_8_0 = 0;
         int stackIn_17_0 = 0;
@@ -5194,7 +5194,7 @@ final class RaceWorld {
         int var5 = 0;
         float var5_float = 0.0f;
         int var6_int = 0;
-        na var6 = null;
+        PointLight var6 = null;
         int var7_int = 0;
         float var7 = 0.0f;
         Sprite var8_ref_hj = null;
@@ -5207,34 +5207,34 @@ final class RaceWorld {
         int var3_intLifetime3;
         var11 = HoldTheLine.field_D;
         try {
-          if (this.field_ab < 0 &&
-            null != param0.field_W) {
+          if (this.raceTicks < 0 &&
+            null != param0.keyBindings) {
             stackIn_8_0 = 1;
           } else {
             stackIn_8_0 = 0;
           }
           var3_int = stackIn_8_0;
           stackIn_17_0 = var3_int;
-          if (this.field_J == 2 &&
-            this.field_ab > 0 &&
-            param0.field_L > 0) {
+          if (this.gameMode == 2 &&
+            this.raceTicks > 0 &&
+            param0.respawnTicks > 0) {
             stackIn_18_1 = 1;
           } else {
             stackIn_18_1 = 0;
           }
           var3_intLifetime1 = stackIn_17_0 | stackIn_18_1;
           stackIn_30_0 = var3_intLifetime1;
-          if (this.field_ab > 0 &&
-            null != param0.field_W &&
-            param0.field_tb > 50 &&
-            param0.field_O == 0) {
+          if (this.raceTicks > 0 &&
+            null != param0.keyBindings &&
+            param0.activeTicks > 50 &&
+            param0.courseRecoveryTicks == 0) {
             stackIn_31_1 = 1;
           } else {
             stackIn_31_1 = 0;
           }
           var3_intLifetime2 = stackIn_30_0 | stackIn_31_1;
           stackIn_34_0 = var3_intLifetime2;
-          if (this.field_bb / 10 % 2 != 0) {
+          if (this.ticks / 10 % 2 != 0) {
             stackIn_35_1 = 0;
           } else {
             stackIn_35_1 = 1;
@@ -5242,10 +5242,10 @@ final class RaceWorld {
           boolean decompiledFrameCompleted0 = true;
           var3_intLifetime3 = stackIn_34_0 & stackIn_35_1;
           var3_intLifetime3 = var3_intLifetime3 & 1;
-          if (param0.field_rc != 2) {
-            var4 = param0.field_C.field_v.getByAngle(param0.heading, 27788);
-            if (2 == this.field_J) {
-              var5 = (param0.field_L << 12) / 150 + 4096;
+          if (param0.lifeState != 2) {
+            var4 = param0.definition.sprite.getByAngle(param0.heading, 27788);
+            if (2 == this.gameMode) {
+              var5 = (param0.respawnTicks << 12) / 150 + 4096;
               if (var5 != 4096) {
                 TutorialTransition.a(32381);
                 var6_int = var4.width * var5 >> 12;
@@ -5258,11 +5258,11 @@ final class RaceWorld {
               }
             }
             if (var3_intLifetime3 == 0) {
-              stackIn_48_0 = (!this.field_pb) ? 0.5f : 1.0f;
+              stackIn_48_0 = (!this.shadowsEnabled) ? 0.5f : 1.0f;
               var5_float = stackIn_48_0;
-              var6 = (na) (this.field_Q.first((byte) 87));
+              var6 = (PointLight) (this.pointLights.first((byte) 87));
               while (null != var6) {
-                stackOut_50_0 = var6.field_j;
+                stackOut_50_0 = var6.enabled;
                 stackIn_68_0 = stackOut_50_0 ? 1 : 0;
                 stackIn_51_0 = stackOut_50_0;
                 if (var11 != 0) {
@@ -5270,17 +5270,17 @@ final class RaceWorld {
                   break;
                 }
                 if (stackIn_51_0) {
-                  var7 = (float)(param0.position.x - var6.field_l);
-                  var8 = (float)(param0.position.y - var6.field_n);
+                  var7 = (float)(param0.position.x - var6.x);
+                  var8 = (float)(param0.position.y - var6.y);
                   var9 = (float)Math.sqrt((double)(var7 * var7 + var8 * var8));
                   var7 = var7 / var9;
                   var8 = var8 / var9;
-                  var10 = -(var9 / (float)(2 * var6.field_i)) + 1.0f;
+                  var10 = -(var9 / (float)(2 * var6.radius)) + 1.0f;
                   if (0.0f < var10) {
                     var5_float = var5_float + var10;
                   }
                 }
-                var6 = (na) (this.field_Q.next((byte) 94));
+                var6 = (PointLight) (this.pointLights.next((byte) 94));
               }
               if (decompiledFrameCompleted0) {
                 ViewportSizingController.drawCenteredTintedSprite(var4, param0.position.x, 0, param0.field_Eb, var5_float, param0.position.y);
@@ -5292,8 +5292,8 @@ final class RaceWorld {
                 MusicPatch.drawCenteredSpriteMask(param0.field_Eb, param0.position.y, var4, param0.position.x, (byte) 98);
               }
               if (var11 != 0) {
-                var4 = param0.field_C.field_h.getByAngle(param0.heading, 27788);
-                var5 = (30000 - param0.field_L) * 256 / 180;
+                var4 = param0.definition.shadowSprite.getByAngle(param0.heading, 27788);
+                var5 = (30000 - param0.respawnTicks) * 256 / 180;
                 if (256 <= var5) {
                   var4.draw(-(var4.width >> 1) + param0.position.x, -(var4.height >> 1) + param0.position.y);
                   var4.drawAlpha(-(var4.width >> 1) + param0.position.x, param0.position.y - (var4.height >> 1), var5);
@@ -5303,8 +5303,8 @@ final class RaceWorld {
               }
             }
           } else {
-            var4 = param0.field_C.field_h.getByAngle(param0.heading, 27788);
-            var5 = (30000 - param0.field_L) * 256 / 180;
+            var4 = param0.definition.shadowSprite.getByAngle(param0.heading, 27788);
+            var5 = (30000 - param0.respawnTicks) * 256 / 180;
             boolean decompiledSharedTail0 = !(256 <= var5);
             if (!decompiledSharedTail0) {
               var4.draw(-(var4.width >> 1) + param0.position.x, -(var4.height >> 1) + param0.position.y);
@@ -5318,33 +5318,33 @@ final class RaceWorld {
             stackIn_68_0 = param1;
           }
           if (stackIn_68_0 < 96) {
-            discarded$0 = this.a(-17, 85, (Sprite) null, -39, 48);
+            discarded$0 = this.findSpriteOutsideBounds(-17, 85, (Sprite) null, -39, 48);
           }
           if (this.field_kb &&
-            param0.field_Ib != -1.0f) {
-            var4_ref = ShadedRoadStripRenderer.pointAlongCurves(this.roadSegments, param0.field_Ib, (byte) -112);
+            param0.furthestCourseProgress != -1.0f) {
+            var4_ref = ShadedRoadStripRenderer.pointAlongCurves(this.roadSegments, param0.furthestCourseProgress, (byte) -112);
             SoftwareRasterizer.fillCircle(var4_ref.x, var4_ref.y, 5, param0.field_Eb);
           }
-          if (param0.field_J != 2) {
-            if (param0.field_Fb[2] < 2) {
-              if (param0.field_Fb[2] == 1) {
-                SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, param0.field_C.field_d, 255, 32);
+          if (param0.specialPowerup != 2) {
+            if (param0.powerupLevels[2] < 2) {
+              if (param0.powerupLevels[2] == 1) {
+                SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, param0.definition.field_d, 255, 32);
                 if (var11 != 0) {
-                  SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, param0.field_C.field_d, 8355839, 128);
-                  SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, (int)((float)param0.field_C.field_d * 1.2999999523162842f), 8355839, 128);
+                  SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, param0.definition.field_d, 8355839, 128);
+                  SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, (int)((float)param0.definition.field_d * 1.2999999523162842f), 8355839, 128);
                 }
               }
             } else {
-              SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, param0.field_C.field_d, 8355839, 128);
+              SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, param0.definition.field_d, 8355839, 128);
               if (var11 != 0) {
-                SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, (int)((float)param0.field_C.field_d * 1.2999999523162842f), 8355839, 128);
+                SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, (int)((float)param0.definition.field_d * 1.2999999523162842f), 8355839, 128);
               }
             }
           } else {
-            SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, (int)((float)param0.field_C.field_d * 1.2999999523162842f), 8355839, 128);
+            SoftwareRasterizer.fillCircleAlpha(param0.position.x, param0.position.y, (int)((float)param0.definition.field_d * 1.2999999523162842f), 8355839, 128);
           }
-          if (this.field_r == 3) {
-            this.b(32249, param0);
+          if (this.courseTheme == 3) {
+            this.drawVehicleLight(32249, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5361,7 +5361,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, wm param1) {
+    private final void resolveObjectBoundaryCollision(int param0, TrackObject param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -5375,15 +5375,15 @@ final class RaceWorld {
           if (param0 != -1) {
             field_Z = (String) null;
           }
-          if (!this.a(param1.field_q, param1.position.y, true, param1.position.x)) {
+          if (!this.isInsideCollisionBounds(param1.layer, param1.position.y, true, param1.position.x)) {
             var3 = new Vector2f(0.0f, 0.0f);
-            var4 = StraightRoadSegment.a(0, var3, this.field_nb, param1.field_q, param1.position);
-            if ((8192 & param1.field_J) != 0) {
-              this.d(param1, param0 ^ -28978);
-              if ((3 & param1.field_J) != 0) {
+            var4 = StraightRoadSegment.closestBoundaryPoint(0, var3, this.collisionBoundaryLoops, param1.layer, param1.position);
+            if ((8192 & param1.flags) != 0) {
+              this.detonateLargeProjectile(param1, param0 ^ -28978);
+              if ((3 & param1.flags) != 0) {
                 return;
               }
-              this.field_o = this.field_o | 16;
+              this.tutorialFlags = this.tutorialFlags | 16;
               if (HoldTheLine.field_D == 0) {
                 return;
               }
@@ -5410,7 +5410,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(CourseDefinition param0, int[] param1, int param2) throws IOException {
+    private final void decodeCourse(CourseDefinition param0, int[] param1, int param2) throws IOException {
         Point2i discarded$0 = null;
         int incrementValue$3 = 0;
         int fieldTemp$1 = 0;
@@ -5590,11 +5590,11 @@ final class RaceWorld {
         float var45 = 0.0f;
         VehicleDefinition var46 = null;
         float var46_float = 0.0f;
-        wm var46_ref = null;
+        TrackObject var46_ref = null;
         float var47_float = 0.0f;
         int var47 = 0;
         int var48 = 0;
-        na var49 = null;
+        PointLight var49 = null;
         int var50 = 0;
         StraightRoadSegment stackIn_35_0Lifetime1;
         StraightRoadSegment stackIn_35_0Lifetime2;
@@ -5677,7 +5677,7 @@ final class RaceWorld {
           } else {
             stackIn_23_1 = 0;
           }
-          this.field_r = stackIn_23_1;
+          this.courseTheme = stackIn_23_1;
           var8 = var4.readUnsignedByte((byte) -47);
           var9 = var4.readUnsignedByte((byte) -123);
           var10 = 0;
@@ -5690,8 +5690,8 @@ final class RaceWorld {
           var13 = new byte[var8 * 2];
           var4.readBytes(var8 * 2, 0, (byte) 115, var13);
           var20 = new GrowableObjectList();
-          this.field_cb = new IntrusiveDeque();
-          this.field_d = new IntrusiveDeque();
+          this.courseObjects = new IntrusiveDeque();
+          this.dynamicObjects = new IntrusiveDeque();
           var14 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 <= var14))) {
@@ -5939,19 +5939,19 @@ final class RaceWorld {
           var26_ref = (CurvedRoadSegment) (var20.elements[-1 + var20.size]);
           var20.add(var23, (byte) 6);
           var27Lifetime1 = var23.length(50) / (var23.length(50) + var24_ref.length(50));
-          var28 = var26_ref.field_N;
-          var29 = var25.field_N;
-          var30 = var26_ref.field_P;
-          var31 = var25.field_P;
-          var32 = var26_ref.field_B;
-          var33 = var25.field_B;
-          var34 = var26_ref.field_L;
-          var35 = var25.field_L;
+          var28 = var26_ref.leftRoadOffset;
+          var29 = var25.leftRoadOffset;
+          var30 = var26_ref.leftCollisionOffset;
+          var31 = var25.leftCollisionOffset;
+          var32 = var26_ref.rightRoadOffset;
+          var33 = var25.rightRoadOffset;
+          var34 = var26_ref.rightCollisionOffset;
+          var35 = var25.rightCollisionOffset;
           var36 = (float)((double)var27Lifetime1 * 3.141592653589793);
-          if (!(var25.field_I > var25.field_E)) {
-            stackIn_94_0 = 3.1415927410125732f + var25.field_E;
+          if (!(var25.endAngle > var25.startAngle)) {
+            stackIn_94_0 = 3.1415927410125732f + var25.startAngle;
           } else {
-            stackIn_94_0 = var25.field_E;
+            stackIn_94_0 = var25.startAngle;
           }
           boolean decompiledFrameCompleted3 = true;
           var37 = stackIn_94_0;
@@ -5993,13 +5993,13 @@ final class RaceWorld {
             }
           }
           if (decompiledFrameCompleted3) {
-            var23.field_z = var26_ref.field_L;
+            var23.rightCollisionStartOffset = var26_ref.rightCollisionOffset;
             var14 = 0;
-            var23.field_y = var36;
-            var24_ref.field_G = var36;
-            var23.field_O = var26_ref.field_N;
-            var23.field_K = var26_ref.field_P;
-            var23.field_I = var26_ref.field_B;
+            var23.blendEndAngle = var36;
+            var24_ref.blendStartAngle = var36;
+            var23.leftRoadStartOffset = var26_ref.leftRoadOffset;
+            var23.leftCollisionStartOffset = var26_ref.leftCollisionOffset;
+            var23.rightRoadStartOffset = var26_ref.rightRoadOffset;
           }
           var39 = null;
           while (true) {
@@ -6007,9 +6007,9 @@ final class RaceWorld {
             boolean decompiledFrameRemainder4 = true;
             var40_ref_dd = (StraightRoadSegment) (var20.elements[var14]);
             var40_ref_dd.setOffsetDirection(param2 + 43, var37);
-            if (~var40_ref_dd.field_R.x == ~var40_ref_dd.field_P.x) {
-              stackIn_127_0 = ~var40_ref_dd.field_R.y;
-              stackIn_127_1 = ~var40_ref_dd.field_P.y;
+            if (~var40_ref_dd.start.x == ~var40_ref_dd.end.x) {
+              stackIn_127_0 = ~var40_ref_dd.start.y;
+              stackIn_127_1 = ~var40_ref_dd.end.y;
               decompiledFrameRemainder0 = (var50 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_127_0 == stackIn_127_1)) {
@@ -6019,19 +6019,19 @@ final class RaceWorld {
             }
             if ((decompiledFrameRemainder4) &&
               (decompiledFrameRemainder0)) {
-              var40_ref_dd.field_L = var31;
+              var40_ref_dd.leftCollisionEndOffset = var31;
               var14++;
-              var40_ref_dd.field_z = var34;
-              var40_ref_dd.field_O = var28;
-              var40_ref_dd.field_K = var30;
-              var40_ref_dd.field_A = var35;
-              var40_ref_dd.field_I = var32;
-              var40_ref_dd.field_N = var29;
-              var40_ref_dd.field_C = var33;
+              var40_ref_dd.rightCollisionStartOffset = var34;
+              var40_ref_dd.leftRoadStartOffset = var28;
+              var40_ref_dd.leftCollisionStartOffset = var30;
+              var40_ref_dd.rightCollisionEndOffset = var35;
+              var40_ref_dd.rightRoadStartOffset = var32;
+              var40_ref_dd.leftRoadEndOffset = var29;
+              var40_ref_dd.rightRoadEndOffset = var33;
             }
             if (decompiledFrameRemainder0) {
               if (var39 != null) {
-                ((CurvedRoadSegment) (var39)).field_Q = var40_ref_dd.p(-1);
+                ((CurvedRoadSegment) (var39)).controlPathEnd = var40_ref_dd.getControlPathStart(-1);
               }
               stackIn_127_0 = ~var14;
               stackIn_127_1 = ~var20.size;
@@ -6039,12 +6039,12 @@ final class RaceWorld {
             if (stackIn_127_0 > stackIn_127_1 ||
               var50 != 0) {
               var41_ref_hn = (CurvedRoadSegment) (var20.elements[var14]);
-              var41_ref_hn.field_F = var40_ref_dd.b((byte) -128);
+              var41_ref_hn.controlPathStart = var40_ref_dd.getControlPathEnd((byte) -128);
               var14++;
-              if (!(var41_ref_hn.field_I > var41_ref_hn.field_E)) {
-                stackIn_135_0 = 3.1415927410125732f + var41_ref_hn.field_I;
+              if (!(var41_ref_hn.endAngle > var41_ref_hn.startAngle)) {
+                stackIn_135_0 = 3.1415927410125732f + var41_ref_hn.endAngle;
               } else {
-                stackIn_135_0 = var41_ref_hn.field_I;
+                stackIn_135_0 = var41_ref_hn.endAngle;
               }
               var37 = stackIn_135_0;
               var28 = var29;
@@ -6054,14 +6054,14 @@ final class RaceWorld {
                 stackIn_139_0 = var25;
               }
               var42_ref_hn = (CurvedRoadSegment) (stackIn_139_0);
-              var29 = var42_ref_hn.field_N;
+              var29 = var42_ref_hn.leftRoadOffset;
               var30 = var31;
-              var31 = var42_ref_hn.field_P;
+              var31 = var42_ref_hn.leftCollisionOffset;
               var32 = var33;
               var34 = var35;
-              var33 = var42_ref_hn.field_B;
+              var33 = var42_ref_hn.rightRoadOffset;
               var39 = var41_ref_hn;
-              var35 = var42_ref_hn.field_L;
+              var35 = var42_ref_hn.rightCollisionOffset;
               if (var50 == 0) {
                 continue;
               }
@@ -6089,7 +6089,7 @@ final class RaceWorld {
                   while (var15 < this.roadSegments.length) {
                     stackIn_162_0 = this.roadSegments[var15];
                     if (stackIn_162_0 == ((Object[]) (var38))[var14]) {
-                      this.roadSegments[var15].b(this.field_i[var14].field_b, param2 ^ 7561012);
+                      this.roadSegments[var15].controlPathAt(this.field_i[var14].field_b, param2 ^ 7561012);
                     }
                     var15++;
                   }
@@ -6098,18 +6098,18 @@ final class RaceWorld {
               }
             }
             stackIn_162_0Lifetime1 = this.roadSegments[this.roadSegments.length - 1];
-            stackIn_163_0 = stackIn_162_0Lifetime1.field_k;
+            stackIn_163_0 = stackIn_162_0Lifetime1.layer;
             break;
           }
           var40 = stackIn_163_0;
-          var41 = this.roadSegments[0].field_k;
+          var41 = this.roadSegments[0].layer;
           var14 = 0;
           scanLoop2: while (true) {
             boolean decompiledFrameRemainder3 = true;
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted1 = true;
             if (var14 < this.roadSegments.length) {
-              var42 = this.roadSegments[(1 + var14) % this.roadSegments.length].field_k;
+              var42 = this.roadSegments[(1 + var14) % this.roadSegments.length].layer;
               stackIn_174_0 = 0;
               stackIn_174_1 = var41;
               if (var50 != 0) {
@@ -6126,7 +6126,7 @@ final class RaceWorld {
               }
               else {
                 if (stackIn_174_0 == stackIn_174_1) {
-                  this.roadSegments[var14].field_o = (float)(var42 - var40) / this.roadSegments[var14].length(50);
+                  this.roadSegments[var14].layerSlope = (float)(var42 - var40) / this.roadSegments[var14].length(50);
                 }
                 var40 = var41;
                 var41 = var42;
@@ -6155,13 +6155,13 @@ final class RaceWorld {
                 }
                 if (stackIn_223_0 >= stackIn_223_1 &&
                   var44_intLifetime1 <= 8) {
-                  var46 = ge.field_c[this.field_r * 2];
+                  var46 = ge.field_c[this.courseTheme * 2];
                   var47_float = hi.a(this.roadSegments.length, 0.0f, -1, this.roadSegments, -24659, var43_ref_qmLifetime1, var16Lifetime1Lifetime1);
                   if (var47_float == -1.0f) {
                     break;
                   }
-                  fieldTemp$1 = this.field_z;
-                  this.field_z = this.field_z + 1;
+                  fieldTemp$1 = this.vehicleCount;
+                  this.vehicleCount = this.vehicleCount + 1;
                   stackIn_189_0 = this.vehicles;
                   stackIn_189_1 = fieldTemp$1;
                   stackIn_189_2 = null;
@@ -6188,8 +6188,8 @@ final class RaceWorld {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
-                  fieldTemp$2 = this.field_z;
-                  this.field_z = this.field_z + 1;
+                  fieldTemp$2 = this.vehicleCount;
+                  this.vehicleCount = this.vehicleCount + 1;
                   stackIn_203_0 = this.vehicles;
                   stackIn_203_1 = fieldTemp$2;
                   stackIn_203_2 = null;
@@ -6210,33 +6210,33 @@ final class RaceWorld {
                   }
                   stackIn_203_0[stackIn_203_1] = new RaceVehicle(stackIn_203_4, stackIn_203_5, stackIn_203_6, stackIn_203_7, stackIn_203_8, stackIn_204_9, ge.field_c[-62 + var44_intLifetime1], 1);
                 } else {
-                  var46_ref = new wm(var43_ref_qmLifetime1, var44_intLifetime1, var16Lifetime1Lifetime1, var45Lifetime1, 0.0f, 0.0f);
-                  if ((1048576 & var46_ref.field_J) != 0) {
-                    var46_ref.a((byte) -113);
-                    var46_ref.field_H = var46_ref.field_H.copy();
+                  var46_ref = new TrackObject(var43_ref_qmLifetime1, var44_intLifetime1, var16Lifetime1Lifetime1, var45Lifetime1, 0.0f, 0.0f);
+                  if ((1048576 & var46_ref.flags) != 0) {
+                    var46_ref.getCurrentSprite((byte) -113);
+                    var46_ref.sprite = var46_ref.sprite.copy();
                   }
-                  if ((var46_ref.field_J & 32768) == 0) {
-                    this.field_cb.addLast((byte) -84, var46_ref);
+                  if ((var46_ref.flags & 32768) == 0) {
+                    this.courseObjects.addLast((byte) -84, var46_ref);
                   } else {
-                    this.field_d.addLast((byte) -92, var46_ref);
+                    this.dynamicObjects.addLast((byte) -92, var46_ref);
                   }
-                  var46_ref.a(-1, sb.field_a);
+                  var46_ref.updateCourseMembership(-1, sb.field_a);
                   if (53 != var44_intLifetime1) {
                     if (54 == var44_intLifetime1) {
                       var47 = var43_ref_qmLifetime1.x - (int)(Math.sin((double)var45Lifetime1) * 35.0);
                       var48 = var43_ref_qmLifetime1.y - (int)(Math.cos((double)var45Lifetime1) * 35.0);
-                      var49 = new na(var47, var48, var16Lifetime1Lifetime1, 60, DisplayNameForm.field_Q);
-                      this.field_Q.addLast((byte) -117, var49);
+                      var49 = new PointLight(var47, var48, var16Lifetime1Lifetime1, 60, DisplayNameForm.field_Q);
+                      this.pointLights.addLast((byte) -117, var49);
                       var47 = var43_ref_qmLifetime1.x + (int)(Math.sin((double)var45Lifetime1) * 35.0);
                       var48 = var43_ref_qmLifetime1.y + (int)(Math.cos((double)var45Lifetime1) * 35.0);
-                      var49 = new na(var47, var48, var16Lifetime1Lifetime1, 60, DisplayNameForm.field_Q);
-                      this.field_Q.addLast((byte) -118, var49);
+                      var49 = new PointLight(var47, var48, var16Lifetime1Lifetime1, 60, DisplayNameForm.field_Q);
+                      this.pointLights.addLast((byte) -118, var49);
                     }
                   } else {
                     var47 = var43_ref_qmLifetime1.x - (int)(10.0 * Math.sin((double)var45Lifetime1));
                     var48 = var43_ref_qmLifetime1.y - (int)(Math.cos((double)var45Lifetime1) * 10.0);
-                    var49 = new na(var47, var48, var16Lifetime1Lifetime1, 60, DisplayNameForm.field_Q);
-                    this.field_Q.addLast((byte) -81, var49);
+                    var49 = new PointLight(var47, var48, var16Lifetime1Lifetime1, 60, DisplayNameForm.field_Q);
+                    this.pointLights.addLast((byte) -81, var49);
                   }
                 }
                 var14++;
@@ -6250,7 +6250,7 @@ final class RaceWorld {
               (decompiledFrameCompleted2)) {
               throw new RuntimeException((String) null);
             }
-            stackIn_223_0 = ~this.field_z;
+            stackIn_223_0 = ~this.vehicleCount;
             stackIn_223_1 = -1;
             break;
           }
@@ -6260,22 +6260,22 @@ final class RaceWorld {
           var14 = 0;
           while (true) {
             stackIn_228_0 = var14;
-            if (stackIn_228_0 < this.field_z) {
+            if (stackIn_228_0 < this.vehicleCount) {
               stackIn_247_0 = 0;
               if (var50 == 0) {
-                if (stackIn_247_0 == this.vehicles[var14].field_rc) {
-                  this.field_h = this.field_h + 1;
+                if (stackIn_247_0 == this.vehicles[var14].lifeState) {
+                  this.playerCount = this.playerCount + 1;
                   var43 = 0;
                   var15Lifetime1 = 0;
-                  while (this.field_z > var15Lifetime1) {
-                    stackIn_228_0 = this.vehicles[var15Lifetime1].field_rc;
+                  while (this.vehicleCount > var15Lifetime1) {
+                    stackIn_228_0 = this.vehicles[var15Lifetime1].lifeState;
                     if (stackIn_228_0 == 0 &&
-                      this.vehicles[var15Lifetime1].field_Ib > this.vehicles[var14].field_Ib) {
+                      this.vehicles[var15Lifetime1].furthestCourseProgress > this.vehicles[var14].furthestCourseProgress) {
                       var43++;
                     }
                     var15Lifetime1++;
                   }
-                  this.vehicles[var14].field_R = var43;
+                  this.vehicles[var14].racePosition = var43;
                 }
                 var14++;
                 continue;
@@ -6284,18 +6284,18 @@ final class RaceWorld {
               stackIn_247_0 = 0;
             }
             var15Lifetime1Lifetime1 = stackIn_247_0;
-            var14 = this.field_h;
+            var14 = this.playerCount;
             scanLoop3: while (true) {
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameRemainder5 = true;
               boolean decompiledFrameCompleted0 = true;
               regionExit4: {
-                if (this.field_z > var14) {
+                if (this.vehicleCount > var14) {
                   stackIn_259_0 = 0;
-                  stackIn_259_1 = this.vehicles[var14].field_rc;
+                  stackIn_259_1 = this.vehicles[var14].lifeState;
                   if (var50 != 0) {
                     if (stackIn_259_0 < stackIn_259_1) {
-                      var43Lifetime1 = param1[this.vehicles[var14].field_R];
+                      var43Lifetime1 = param1[this.vehicles[var14].racePosition];
                       stackIn_269_0 = var43Lifetime1;
                       stackIn_269_1 = var14;
                       break regionExit4;
@@ -6321,12 +6321,12 @@ final class RaceWorld {
                   var14 = 0;
                   while (true) {
                     stackIn_259_0Lifetime1 = var14;
-                    stackIn_259_1Lifetime1 = this.field_h;
+                    stackIn_259_1Lifetime1 = this.playerCount;
                     if (stackIn_259_0Lifetime1 >= stackIn_259_1Lifetime1) {
                       decompiledFrameCompleted0 = false;
                       break;
                     }
-                    var43Lifetime1 = param1[this.vehicles[var14].field_R];
+                    var43Lifetime1 = param1[this.vehicles[var14].racePosition];
                     stackIn_269_0 = var43Lifetime1;
                     stackIn_269_1 = var14;
                     if (var50 != 0) {
@@ -6346,7 +6346,7 @@ final class RaceWorld {
                 while (stackIn_269_0 > stackIn_269_1) {
                   this.vehicles[var14].field_Eb = NodeHashTableIterator.field_j[var14];
                   this.vehicles[var14].field_tc = ClientException.field_d[var14];
-                  var43Lifetime1 = PolarSortVector.field_c[this.field_r];
+                  var43Lifetime1 = PolarSortVector.field_c[this.courseTheme];
                   stackIn_277_0 = var14 & 1;
                   if (var50 != 0) {
                     break scanLoop3;
@@ -6354,10 +6354,10 @@ final class RaceWorld {
                   if (stackIn_277_0 == 0) {
                     var43Lifetime1 = var43Lifetime1 ^ 1;
                   }
-                  this.vehicles[var14].a(param2 + 20353, ge.field_c[var43Lifetime1]);
+                  this.vehicles[var14].setVehicleDefinition(param2 + 20353, ge.field_c[var43Lifetime1]);
                   var14++;
                   stackIn_269_0 = ~var14;
-                  stackIn_269_1 = ~this.field_h;
+                  stackIn_269_1 = ~this.playerCount;
                 }
                 decompiledFrameRemainder2 = false;
               }
@@ -6365,13 +6365,13 @@ final class RaceWorld {
                 var14 = 0;
                 while (true) {
                   stackIn_269_0 = ~var14;
-                  stackIn_269_1 = ~this.field_h;
+                  stackIn_269_1 = ~this.playerCount;
                   if (stackIn_269_0 <= stackIn_269_1) {
                     break;
                   }
                   this.vehicles[var14].field_Eb = NodeHashTableIterator.field_j[var14];
                   this.vehicles[var14].field_tc = ClientException.field_d[var14];
-                  var43Lifetime1Lifetime1 = PolarSortVector.field_c[this.field_r];
+                  var43Lifetime1Lifetime1 = PolarSortVector.field_c[this.courseTheme];
                   stackIn_277_0 = var14 & 1;
                   if (var50 != 0) {
                     break scanLoop3;
@@ -6379,16 +6379,16 @@ final class RaceWorld {
                   if (stackIn_277_0 == 0) {
                     var43Lifetime1Lifetime1 = var43Lifetime1Lifetime1 ^ 1;
                   }
-                  this.vehicles[var14].a(param2 + 20353, ge.field_c[var43Lifetime1Lifetime1]);
+                  this.vehicles[var14].setVehicleDefinition(param2 + 20353, ge.field_c[var43Lifetime1Lifetime1]);
                   var14++;
                 }
               }
-              stackIn_277_0 = this.field_h;
+              stackIn_277_0 = this.playerCount;
               break;
             }
             var14 = stackIn_277_0;
             scanLoop5: while (true) {
-              if (var14 < this.field_z) {
+              if (var14 < this.vehicleCount) {
                 this.vehicles[var14].field_Eb = 8421504;
                 this.vehicles[var14].field_tc = 0;
                 var14++;
@@ -6396,18 +6396,18 @@ final class RaceWorld {
                   continue;
                 }
               } else {
-                if (3 == this.field_r) {
-                  this.field_pb = false;
+                if (3 == this.courseTheme) {
+                  this.shadowsEnabled = false;
                   if (var50 == 0) {
                     break scanLoop5;
                   }
                 }
-                this.field_pb = true;
+                this.shadowsEnabled = true;
               }
-              this.field_db = new Vector2i(5, 5);
+              this.shadowOffset = new Vector2i(5, 5);
               break;
             }
-            this.a(param0, -77);
+            this.prepareCourseRendering(param0, -77);
             sb.field_a = null;
             return;
           }
@@ -6431,9 +6431,9 @@ final class RaceWorld {
         }
     }
 
-    private final void a(boolean param0, IntrusiveDeque param1) {
+    private final void updateParticleQueue(boolean param0, IntrusiveDeque param1) {
         RuntimeException runtimeException = null;
-        jk var3 = null;
+        Particle var3 = null;
         int var4 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -6441,21 +6441,21 @@ final class RaceWorld {
         RuntimeException decompiledCaughtException = null;
         var4 = HoldTheLine.field_D;
         try {
-          var3 = (jk) (param1.first((byte) 124));
+          var3 = (Particle) (param1.first((byte) 124));
           if (param0) {
-            this.field_J = 78;
+            this.gameMode = 78;
           }
           while (var3 != null) {
             if (var4 != 0) {
               return;
             }
-            if (var3.field_i != 0) {
-              var3.f(-115);
-              if (0 >= var3.field_i) {
-                var3.a((byte) -21);
+            if (var3.lifetime != 0) {
+              var3.update(-115);
+              if (0 >= var3.lifetime) {
+                var3.recycle((byte) -21);
               }
             }
-            var3 = (jk) (param1.next((byte) -76));
+            var3 = (Particle) (param1.next((byte) -76));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6472,7 +6472,7 @@ final class RaceWorld {
         }
     }
 
-    private final int c(int param0, int param1, int param2) {
+    private final int orInts(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -6489,7 +6489,7 @@ final class RaceWorld {
         }
     }
 
-    private final void b(wm param0, int param1) {
+    private final void drawObjectShadow(TrackObject param0, int param1) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -6497,7 +6497,7 @@ final class RaceWorld {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
-        jk var4 = null;
+        Particle var4 = null;
         int[] var5 = null;
         float var6 = 0.0f;
         float var7 = 0.0f;
@@ -6510,31 +6510,31 @@ final class RaceWorld {
         int var3_intLifetime1;
         var13 = HoldTheLine.field_D;
         try {
-          if ((param0.field_J & 65536) != 0) {
+          if ((param0.flags & 65536) != 0) {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_pb) {
+          if (this.shadowsEnabled) {
             var3_int = param0.position.x;
             var4_int = param0.position.y;
-            if ((131072 & param0.field_J) != 0) {
-              var4_int = param0.field_F;
-              var3_int = param0.field_D;
+            if ((131072 & param0.flags) != 0) {
+              var4_int = param0.transitionY;
+              var3_int = param0.transitionX;
             }
-            if ((16384 & param0.field_J) != 0) {
-              hc.a(128, param0.a((byte) -110), (byte) -108, this.field_db.x + var3_int, this.field_db.y + var4_int);
+            if ((16384 & param0.flags) != 0) {
+              hc.a(128, param0.getCurrentSprite((byte) -110), (byte) -108, this.shadowOffset.x + var3_int, this.shadowOffset.y + var4_int);
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if (decompiledFrameRemainder0) {
-              boolean decompiledSharedTail0 = !(param0.field_E.rectangularCollision);
+              boolean decompiledSharedTail0 = !(param0.definition.rectangularCollision);
               if (!decompiledSharedTail0) {
                 var5 = new int[16];
                 var6 = param0.direction.x;
                 var7 = param0.direction.y;
                 var8 = -var7;
                 var9 = var6;
-                var10 = (float)param0.field_E.field_m;
-                var11 = (float)param0.field_E.field_h;
+                var10 = (float)param0.definition.field_m;
+                var11 = (float)param0.definition.field_h;
                 var5[7] = (int)((float)var4_int + var10 * var7 - var11 * var9);
                 var5[2] = (int)(-(var10 * var6) + (float)var3_int + var8 * var11);
                 var5[3] = (int)(-(var10 * var7) + (float)var4_int + var9 * var11);
@@ -6546,8 +6546,8 @@ final class RaceWorld {
                 var12 = 0;
                 while (true) {
                   if (8 > var12) {
-                    var5[var12 + 8] = var5[var12] + this.field_db.x;
-                    var5[var12 + 9] = var5[var12 + 1] + this.field_db.y;
+                    var5[var12 + 8] = var5[var12] + this.shadowOffset.x;
+                    var5[var12 + 9] = var5[var12 + 1] + this.shadowOffset.y;
                     var12 += 2;
                     if (var13 == 0) {
                       continue;
@@ -6561,22 +6561,22 @@ final class RaceWorld {
                 decompiledSharedTail0 = (var13 != 0);
               }
               if (decompiledSharedTail0) {
-                SoftwareRasterizer.fillCircleAlpha(var3_int + this.field_db.x, var4_int + this.field_db.y, param0.field_E.collisionRadius, 0, 128);
+                SoftwareRasterizer.fillCircleAlpha(var3_int + this.shadowOffset.x, var4_int + this.shadowOffset.y, param0.definition.collisionRadius, 0, 128);
               }
             }
           }
           if (param1 != 8192) {
             return;
           }
-          var3_intLifetime1 = param0.field_q + 1;
+          var3_intLifetime1 = param0.layer + 1;
           while (var3_intLifetime1 < 4) {
             if (var13 != 0) {
               return;
             }
-            var4 = (jk) (this.field_M[var3_intLifetime1].first((byte) 111));
+            var4 = (Particle) (this.lightParticles[var3_intLifetime1].first((byte) 111));
             while (var4 != null) {
-              this.a(var4.field_t >> 10, var4.field_k >> 10, var4.field_u >> 10, (byte) -35, param0, var4.field_q * 2 >> 2);
-              var4 = (jk) (this.field_M[var3_intLifetime1].next((byte) 121));
+              this.drawObjectLightShadow(var4.fixedX >> 10, var4.fixedY >> 10, var4.fixedRadius >> 10, (byte) -35, param0, var4.alpha * 2 >> 2);
+              var4 = (Particle) (this.lightParticles[var3_intLifetime1].next((byte) 121));
             }
             var3_intLifetime1++;
           }
@@ -6595,7 +6595,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(long param0, boolean param1) {
+    private final void drawRain(long param0, boolean param1) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         int stackIn_36_0 = 0;
@@ -6611,11 +6611,11 @@ final class RaceWorld {
         int var6Lifetime2;
         var7 = HoldTheLine.field_D;
         try {
-          this.a((byte) -3, param0);
-          if (3 != this.field_r) {
-            var4_int = this.field_F + 128;
-            if (this.field_J == 2 ||
-              this.field_J == 6) {
+          this.updateLightning((byte) -3, param0);
+          if (3 != this.courseTheme) {
+            var4_int = this.lightningBrightness + 128;
+            if (this.gameMode == 2 ||
+              this.gameMode == 6) {
               var4_int = var4_int + 256 >> 1;
             }
             o.a(128, 480, 0, var4_int, 640, -4441, 0);
@@ -6668,7 +6668,7 @@ final class RaceWorld {
             stackIn_36_0 = param1 ? 1 : 0;
           }
           if (stackIn_36_0 != 1) {
-            this.field_qb = (Sprite) null;
+            this.courseImage = (Sprite) null;
           }
           var5Lifetime1 = (640 * (int)param0 - 1) % 593;
           var6Lifetime2 = var5Lifetime1 / 640;
@@ -6694,7 +6694,7 @@ final class RaceWorld {
         }
     }
 
-    private final void b(String param0, byte param1) {
+    private final void enterTutorialPage(String param0, byte param1) {
         int fieldTemp$1 = 0;
         TutorialPage var3 = null;
         int var4 = 0;
@@ -6707,28 +6707,28 @@ final class RaceWorld {
         var5 = HoldTheLine.field_D;
         try {
           boolean decompiledFrameRemainder0 = true;
-          this.field_a = this.field_mb;
+          this.previousTutorialPage = this.tutorialPage;
           if (param0 != null) {
-            this.field_mb = this.a(param0, -118);
+            this.tutorialPage = this.findTutorialPage(param0, -118);
             decompiledFrameRemainder0 = (var5 != 0);
           }
           if (decompiledFrameRemainder0) {
-            fieldTemp$1 = this.field_mb + 1;
-            this.field_mb = this.field_mb + 1;
+            fieldTemp$1 = this.tutorialPage + 1;
+            this.tutorialPage = this.tutorialPage + 1;
             if (~fieldTemp$1 == ~RasterBuffer.field_a.length) {
               throw new RuntimeException();
             }
           }
-          if (this.field_mb != this.field_a) {
-            this.field_k = 0;
+          if (this.tutorialPage != this.previousTutorialPage) {
+            this.tutorialPageTicks = 0;
           }
-          var3 = RasterBuffer.field_a[this.field_mb];
+          var3 = RasterBuffer.field_a[this.tutorialPage];
           if (param1 != 8) {
-            this.b((String) null, (byte) 71);
+            this.enterTutorialPage((String) null, (byte) 71);
           }
           var4 = 0;
           while (var4 < var3.field_c) {
-            this.a(var3.field_e[var4], -99);
+            this.executeTutorialAction(var3.field_e[var4], -99);
             var4++;
             if (var5 != 0) {
               return;
@@ -6749,7 +6749,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, int param1, RaceVehicle param2) {
+    private final void drawVehiclePowerupGlow(int param0, int param1, RaceVehicle param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -6766,7 +6766,7 @@ final class RaceWorld {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4_int >= 3))) {
-            stackIn_22_0 = param2.field_Fb[var4_int];
+            stackIn_22_0 = param2.powerupLevels[var4_int];
             stackIn_22_1 = 3;
             if (var7 == 0) {
               if (stackIn_22_0 == stackIn_22_1) {
@@ -6799,7 +6799,7 @@ final class RaceWorld {
             stackIn_22_1 = -403;
           }
           if (stackIn_22_0 != stackIn_22_1) {
-            this.field_lb = (IndexedSprite) null;
+            this.roadLayerMask = (IndexedSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6816,7 +6816,7 @@ final class RaceWorld {
         }
     }
 
-    private final void b(int param0) {
+    private final void updateTutorialTransitions(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -6848,7 +6848,7 @@ final class RaceWorld {
         int stackIn_165_0Lifetime1;
         var10 = HoldTheLine.field_D;
         try {
-          var2 = RasterBuffer.field_a[this.field_mb];
+          var2 = RasterBuffer.field_a[this.tutorialPage];
           var3 = 0;
           scanLoop1: while (true) {
             if (var3 < var2.field_b) {
@@ -6865,7 +6865,7 @@ final class RaceWorld {
                   stackIn_165_0 = var7.opcode;
                   if (stackIn_165_0 == 0) {
                     stackIn_15_0 = var5;
-                    if ((this.field_o & 1) == 0) {
+                    if ((this.tutorialFlags & 1) == 0) {
                       stackIn_16_1 = 0;
                     } else {
                       stackIn_16_1 = 1;
@@ -6879,7 +6879,7 @@ final class RaceWorld {
                         stackIn_29_0 = var7.field_b;
                       }
                       var8 = stackIn_29_0;
-                      var9 = (int)this.vehicles[0].field_vb;
+                      var9 = (int)this.vehicles[0].courseProgress;
                       if (var9 < var8 &&
                         (var7.field_c & 1) == 0) {
                         var5 = 0;
@@ -6894,11 +6894,11 @@ final class RaceWorld {
                       }
                     } else if (3 != var7.opcode) {
                       if (var7.opcode == 4) {
-                        if (this.vehicles[var7.field_c].field_J != var7.field_b) {
+                        if (this.vehicles[var7.field_c].specialPowerup != var7.field_b) {
                           var5 = 0;
                         }
                       } else if (var7.opcode == 5) {
-                        var8 = this.vehicles[var7.field_c].field_bc;
+                        var8 = this.vehicles[var7.field_c].lapsCompleted;
                         var9 = var7.field_e;
                         if (var8 < var9 &&
                           (var7.field_b & 1) == 0) {
@@ -6915,7 +6915,7 @@ final class RaceWorld {
                       } else if (var7.opcode != 9) {
                         if (var7.opcode == 6) {
                           stackIn_93_0 = var5;
-                          if ((8 & this.field_o) == 0) {
+                          if ((8 & this.tutorialFlags) == 0) {
                             stackIn_94_1 = 0;
                           } else {
                             stackIn_94_1 = 1;
@@ -6923,7 +6923,7 @@ final class RaceWorld {
                           var5 = stackIn_93_0 & stackIn_94_1;
                         } else if (7 == var7.opcode) {
                           stackIn_103_0 = var5;
-                          if (0 == (16 & this.field_o)) {
+                          if (0 == (16 & this.tutorialFlags)) {
                             stackIn_104_1 = 0;
                           } else {
                             stackIn_104_1 = 1;
@@ -6931,8 +6931,8 @@ final class RaceWorld {
                           var5 = stackIn_103_0 & stackIn_104_1;
                         } else if (8 == var7.opcode) {
                           stackIn_116_0 = var5;
-                          if (this.field_U &&
-                            -this.field_ob + this.field_ab >= 150) {
+                          if (this.raceFinished &&
+                            -this.field_ob + this.raceTicks >= 150) {
                             stackIn_117_1 = 1;
                           } else {
                             stackIn_117_1 = 0;
@@ -6940,7 +6940,7 @@ final class RaceWorld {
                           var5 = stackIn_116_0 & stackIn_117_1;
                         }
                       } else {
-                        var8 = this.vehicles[var7.field_c].field_R;
+                        var8 = this.vehicles[var7.field_c].racePosition;
                         var9 = var7.field_e;
                         if (var9 > var8 &&
                           0 == (1 & var7.field_b)) {
@@ -6956,7 +6956,7 @@ final class RaceWorld {
                         }
                       }
                     } else {
-                      var8 = this.vehicles[0].field_Fb[var7.field_c];
+                      var8 = this.vehicles[0].powerupLevels[var7.field_c];
                       var9 = var7.field_e;
                       if (var9 > var8 &&
                         (1 & var7.field_b) == 0) {
@@ -6973,7 +6973,7 @@ final class RaceWorld {
                     }
                   } else {
                     stackIn_161_0 = var5;
-                    if (0 == (2 & this.field_o)) {
+                    if (0 == (2 & this.tutorialFlags)) {
                       stackIn_162_1 = 0;
                     } else {
                       stackIn_162_1 = 1;
@@ -6985,7 +6985,7 @@ final class RaceWorld {
                 }
                 stackIn_165_0Lifetime1 = var5;
                 if (stackIn_165_0Lifetime1 != 0) {
-                  this.b(var4.targetPage, (byte) 8);
+                  this.enterTutorialPage(var4.targetPage, (byte) 8);
                   break;
                 }
                 var3++;
@@ -6996,31 +6996,31 @@ final class RaceWorld {
             break;
           }
           if (stackIn_172_0 != 31782) {
-            field_Y = (String) null;
+            navigationUrl = (String) null;
           }
-          if (0 < this.field_tb &&
-            this.field_tb < 256) {
-            fieldTemp$0 = this.field_tb - 3;
-            this.field_tb = this.field_tb - 3;
+          if (0 < this.tutorialHighlightAlpha &&
+            this.tutorialHighlightAlpha < 256) {
+            fieldTemp$0 = this.tutorialHighlightAlpha - 3;
+            this.tutorialHighlightAlpha = this.tutorialHighlightAlpha - 3;
             if (fieldTemp$0 <= 0) {
-              this.field_D = -101;
+              this.tutorialHighlight = -101;
             }
           }
-          if (~this.field_a != ~this.field_mb) {
-            fieldTemp$1 = this.field_k + 1;
-            this.field_k = this.field_k + 1;
+          if (~this.previousTutorialPage != ~this.tutorialPage) {
+            fieldTemp$1 = this.tutorialPageTicks + 1;
+            this.tutorialPageTicks = this.tutorialPageTicks + 1;
             if (fieldTemp$1 == 40) {
-              this.field_a = this.field_mb;
+              this.previousTutorialPage = this.tutorialPage;
             }
           }
-          this.field_o = this.field_o & -28;
-          if (this.field_mb == -1) {
+          this.tutorialFlags = this.tutorialFlags & -28;
+          if (this.tutorialPage == -1) {
             MenuList.field_h = 255;
             if (var10 == 0) {
               return;
             }
           }
-          if (null != RasterBuffer.field_a[this.field_mb].field_j) {
+          if (null != RasterBuffer.field_a[this.tutorialPage].field_j) {
             fieldTemp$2 = MenuList.field_h - 4;
             MenuList.field_h = MenuList.field_h - 4;
             if (fieldTemp$2 >= 0) {
@@ -7044,7 +7044,7 @@ final class RaceWorld {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3) {
+    final boolean isInsideCollisionBounds(int param0, int param1, boolean param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_31_0 = false;
@@ -7057,7 +7057,7 @@ final class RaceWorld {
             param1 >= 0 &&
             640 > param3 &&
             param1 < 480) {
-            var5_int = this.field_lb.field_m[param3 + 640 * param1];
+            var5_int = this.roadLayerMask.field_m[param3 + 640 * param1];
             if (param0 >= 1) {
               var5_int = var5_int & 60;
             }
@@ -7068,7 +7068,7 @@ final class RaceWorld {
             }
             return (0 != var5_int);
           }
-          stackIn_31_0 = b.a(!param2, param3, param1, this.field_nb);
+          stackIn_31_0 = b.a(!param2, param3, param1, this.collisionBoundaryLoops);
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7077,7 +7077,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(RaceVehicle param0, float param1, int param2, float param3, float param4) {
+    private final void moveVehicle(RaceVehicle param0, float param1, int param2, float param3, float param4) {
         int stackIn_24_0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -7087,7 +7087,7 @@ final class RaceWorld {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8_int = 0;
-        wm var8 = null;
+        TrackObject var8 = null;
         int var9 = 0;
         var9 = HoldTheLine.field_D;
         try {
@@ -7106,7 +7106,7 @@ final class RaceWorld {
             param0.worldY = param0.worldY + param4;
             param0.position.y = (int)param0.worldY;
             param0.position.x = (int)param0.worldX;
-            if (!this.a(true, param0) ||
+            if (!this.resolveVehicleWorldCollision(true, param0) ||
               var9 != 0) {
               var8_int++;
               if (var9 == 0) {
@@ -7115,25 +7115,25 @@ final class RaceWorld {
             }
             break;
           }
-          var8 = (wm) (this.field_d.first((byte) 108));
+          var8 = (TrackObject) (this.dynamicObjects.first((byte) 108));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var8))) {
-            stackIn_24_0 = 262144 & var8.field_J;
+            stackIn_24_0 = 262144 & var8.flags;
             if (var9 == 0) {
               if (stackIn_24_0 != 0) {
-                this.a(var8, param0, (byte) 7);
+                this.applyDirectionalObjectEffect(var8, param0, (byte) 7);
               }
-              var8 = (wm) (this.field_d.next((byte) 92));
+              var8 = (TrackObject) (this.dynamicObjects.next((byte) 92));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            param0.a(-1, MusicPatchPcmStream.field_r.roadSegments);
+            param0.updateCourseMembership(-1, MusicPatchPcmStream.field_r.roadSegments);
             stackIn_24_0 = param2;
           }
-          if (stackIn_24_0 != ~param0.field_v) {
-            param0.field_q = MusicPatchPcmStream.field_r.roadSegments[param0.field_v].field_k;
+          if (stackIn_24_0 != ~param0.courseSegment) {
+            param0.layer = MusicPatchPcmStream.field_r.roadSegments[param0.courseSegment].layer;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -7150,7 +7150,7 @@ final class RaceWorld {
         }
     }
 
-    private final boolean a(boolean param0, RaceVehicle param1) {
+    private final boolean resolveVehicleWorldCollision(boolean param0, RaceVehicle param1) {
         int fieldTemp$0 = 0;
         RaceVehicle stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
@@ -7169,7 +7169,7 @@ final class RaceWorld {
         int var5 = 0;
         int var6_int = 0;
         float var6_float = 0.0f;
-        wm var6 = null;
+        TrackObject var6 = null;
         Point2i var7 = null;
         float var7_float = 0.0f;
         float var8_float = 0.0f;
@@ -7190,19 +7190,19 @@ final class RaceWorld {
         var17 = HoldTheLine.field_D;
         try {
           boolean decompiledFrameCompleted0 = true;
-          var3 = param1.field_C;
-          var4 = this.a(param1, 0);
+          var3 = param1.definition;
+          var4 = this.findVehicleOutsideBounds(param1, 0);
           if (var4 != null) {
             var5_ref_in = new Vector2f(0.0f, 0.0f);
             var6_int = 0;
             while (true) {
               if (var6_int < 10) {
-                StraightRoadSegment.a(0, var5_ref_in, this.field_nb, param1.field_q, var4);
+                StraightRoadSegment.closestBoundaryPoint(0, var5_ref_in, this.collisionBoundaryLoops, param1.layer, var4);
                 param1.worldY = param1.worldY + var5_ref_in.y;
                 param1.worldX = param1.worldX + var5_ref_in.x;
                 param1.position.y = (int)param1.worldY;
                 param1.position.x = (int)param1.worldX;
-                var7 = this.a(param1, 0);
+                var7 = this.findVehicleOutsideBounds(param1, 0);
                 stackIn_47_0 = var7;
                 if (var17 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -7222,35 +7222,35 @@ final class RaceWorld {
               param1.field_T = 20;
               var7_float = -param1.worldY + (float)var4.y;
               stackIn_20_0 = (RaceVehicle) (param1);
-              stackIn_21_1 = (this.field_J != 2) && (this.field_J != 6);
+              stackIn_21_1 = (this.gameMode != 2) && (this.gameMode != 6);
               stackIn_20_0.field_V = stackIn_21_1;
-              param1.field_H = param1.e((byte) 45);
+              param1.field_H = param1.getCourseHeading((byte) 45);
               var8_float = (-(var7_float * var5_ref_in.x) + var6_float * var5_ref_in.y) / 3.5f;
               var9_float = param1.angularVelocity * (-var7_float / 3.5f);
               var10_float = var6_float / 3.5f * param1.angularVelocity;
-              var11_float = var8_float * (var8_float * var3.field_l) + var3.field_a;
+              var11_float = var8_float * (var8_float * var3.mass) + var3.momentOfInertia;
               var12 = var5_ref_in.y * (param1.velocityY + var10_float) + var5_ref_in.x * (param1.velocityX + var9_float);
               if (0.0f > var12) {
-                var13 = 0.800000011920929f * param1.a((byte) 114, sl.field_c);
-                var14 = -(1.0f + var13) * var12 * var3.field_a / var11_float;
+                var13 = 0.800000011920929f * param1.getDefenseMultiplier((byte) 114, sl.field_c);
+                var14 = -(1.0f + var13) * var12 * var3.momentOfInertia / var11_float;
                 param1.velocityX = param1.velocityX + var14 * var5_ref_in.x;
                 param1.velocityY = param1.velocityY + var14 * var5_ref_in.y;
-                var15 = var12 * (-var8_float * -(var13 + 1.0f)) * var3.field_l / var11_float;
+                var15 = var12 * (-var8_float * -(var13 + 1.0f)) * var3.mass / var11_float;
                 param1.angularVelocity = param1.angularVelocity + var15;
-                param1.a(-var12, 0, (RaceVehicle) null, 0);
-                if ((this.field_ab - 30) > param1.field_cb) {
-                  if (param1.field_J != 2 &&
-                    0 >= param1.field_Fb[2]) {
+                param1.applyDamage(-var12, 0, (RaceVehicle) null, 0);
+                if ((this.raceTicks - 30) > param1.lastCollisionTick) {
+                  if (param1.specialPowerup != 2 &&
+                    0 >= param1.powerupLevels[2]) {
                     stackIn_34_0 = CheckboxWidget.field_K;
                   } else {
                     stackIn_34_0 = NineSlicePanel.field_h;
                   }
                   var16 = stackIn_34_0;
                   ValidationHelpWidget.a((byte) 113, param1, var16, var16.field_q);
-                  param1.field_cb = this.field_ab;
+                  param1.lastCollisionTick = this.raceTicks;
                 }
-                param1.a((byte) 67, (MovingEntity) null);
-                if (param1.field_W != null) {
+                param1.recordCollisionForAiRecovery((byte) 67, (MovingEntity) null);
+                if (param1.keyBindings != null) {
                   this.field_rb[7] = -1;
                   this.field_rb[6] = -1;
                   if ((this.field_H & 134217728) == 0) {
@@ -7272,18 +7272,18 @@ final class RaceWorld {
           }
           stackIn_51_0 = (stackIn_47_0 == null) ? 0 : 1;
           var5 = stackIn_51_0;
-          var6 = (wm) (this.field_cb.first((byte) 98));
+          var6 = (TrackObject) (this.courseObjects.first((byte) 98));
           do {
             if (null == var6) {
-              var6 = (wm) (this.field_d.first((byte) 117));
+              var6 = (TrackObject) (this.dynamicObjects.first((byte) 117));
               break;
             }
-            var5 = var5 != 0 | this.a((byte) -96, var6, param1) ? 1 : 0;
-            var6 = (wm) (this.field_cb.next((byte) -25));
+            var5 = var5 != 0 | this.handleVehicleObjectCollision((byte) -96, var6, param1) ? 1 : 0;
+            var6 = (TrackObject) (this.courseObjects.next((byte) -25));
           } while (var17 == 0);
           while (var6 != null) {
-            var5 = var5 != 0 | this.a((byte) -109, var6, param1) ? 1 : 0;
-            var6 = (wm) (this.field_d.next((byte) 86));
+            var5 = var5 != 0 | this.handleVehicleObjectCollision((byte) -109, var6, param1) ? 1 : 0;
+            var6 = (TrackObject) (this.dynamicObjects.next((byte) 86));
             if (var17 == 0) {
               continue;
             }
@@ -7293,28 +7293,28 @@ final class RaceWorld {
           var8 = new Point2i(0, 0);
           var9 = new Point2i(0, 0);
           var10 = new Point2i(0, 0);
-          var7Lifetime1.y = (int)(param1.direction.y * (float)param1.field_C.field_K + ((float)param1.field_C.field_k * param1.direction.x + param1.worldY));
-          var7Lifetime1.x = (int)(-(param1.direction.y * (float)param1.field_C.field_k) + param1.worldX + param1.direction.x * (float)param1.field_C.field_K);
-          var8.x = (int)((float)param1.field_C.field_K * param1.direction.x + (param1.worldX + param1.direction.y * (float)param1.field_C.field_k));
-          var8.y = (int)(-((float)param1.field_C.field_k * param1.direction.x) + param1.worldY + (float)param1.field_C.field_K * param1.direction.y);
-          var9.x = (int)(-((float)param1.field_C.field_K * param1.direction.x) + (-((float)param1.field_C.field_k * param1.direction.y) + param1.worldX));
-          var9.y = (int)(-((float)param1.field_C.field_K * param1.direction.y) + (param1.worldY + (float)param1.field_C.field_k * param1.direction.x));
-          var10.y = (int)(-((float)param1.field_C.field_k * param1.direction.x) + param1.worldY - param1.direction.y * (float)param1.field_C.field_K);
-          var10.x = (int)(-((float)param1.field_C.field_K * param1.direction.x) + (param1.worldX + param1.direction.y * (float)param1.field_C.field_k));
+          var7Lifetime1.y = (int)(param1.direction.y * (float)param1.definition.halfLength + ((float)param1.definition.halfWidth * param1.direction.x + param1.worldY));
+          var7Lifetime1.x = (int)(-(param1.direction.y * (float)param1.definition.halfWidth) + param1.worldX + param1.direction.x * (float)param1.definition.halfLength);
+          var8.x = (int)((float)param1.definition.halfLength * param1.direction.x + (param1.worldX + param1.direction.y * (float)param1.definition.halfWidth));
+          var8.y = (int)(-((float)param1.definition.halfWidth * param1.direction.x) + param1.worldY + (float)param1.definition.halfLength * param1.direction.y);
+          var9.x = (int)(-((float)param1.definition.halfLength * param1.direction.x) + (-((float)param1.definition.halfWidth * param1.direction.y) + param1.worldX));
+          var9.y = (int)(-((float)param1.definition.halfLength * param1.direction.y) + (param1.worldY + (float)param1.definition.halfWidth * param1.direction.x));
+          var10.y = (int)(-((float)param1.definition.halfWidth * param1.direction.x) + param1.worldY - param1.direction.y * (float)param1.definition.halfLength);
+          var10.x = (int)(-((float)param1.definition.halfLength * param1.direction.x) + (param1.worldX + param1.direction.y * (float)param1.definition.halfWidth));
           var11 = 0;
-          if (!this.a(param1.field_q, var7Lifetime1.y, param0, var7Lifetime1.x)) {
+          if (!this.isInsideCollisionBounds(param1.layer, var7Lifetime1.y, param0, var7Lifetime1.x)) {
             var11++;
           }
-          if (!this.a(param1.field_q, var8.y, param0, var8.x)) {
+          if (!this.isInsideCollisionBounds(param1.layer, var8.y, param0, var8.x)) {
             var11++;
           }
-          if (!this.a(param1.field_q, var9.y, true, var9.x)) {
+          if (!this.isInsideCollisionBounds(param1.layer, var9.y, true, var9.x)) {
             var11++;
           }
-          if (!this.a(param1.field_q, var10.y, param0, var10.x)) {
+          if (!this.isInsideCollisionBounds(param1.layer, var10.y, param0, var10.x)) {
             var11++;
           }
-          boolean decompiledSharedTail0 = (!(this.a(param1.field_q, (int)param1.worldY, true, (int)param1.worldX)) ||
+          boolean decompiledSharedTail0 = (!(this.isInsideCollisionBounds(param1.layer, (int)param1.worldY, true, (int)param1.worldX)) ||
             !(3 > var11));
           if (!decompiledSharedTail0) {
             param1.field_Zb.x = (int)param1.worldX;
@@ -7346,7 +7346,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void placePickupRing(int param0, int param1, int param2) {
         float dupTemp$0 = 0.0f;
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
@@ -7365,7 +7365,7 @@ final class RaceWorld {
         int var13 = 0;
         var13 = HoldTheLine.field_D;
         try {
-          var4_float = this.vehicles[0].field_vb;
+          var4_float = this.vehicles[0].courseProgress;
           var5 = OutlinedRoadStripRenderer.totalCurveLength(param1, this.roadSegments) / (float)(param2 + 1);
           var6 = (int)var4_float;
           var7 = this.roadSegments[var6].length(50);
@@ -7408,7 +7408,7 @@ final class RaceWorld {
                 }
               }
               var12 = stackIn_21_0;
-              this.field_cb.addLast((byte) -91, new wm(var11, 1 + var12, -1));
+              this.courseObjects.addLast((byte) -91, new TrackObject(var11, 1 + var12, -1));
               var10++;
               continue scanLoop1;
             }
@@ -7422,7 +7422,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(CourseDefinition param0, int param1, boolean param2) {
+    private final void prepareCourseRendering(CourseDefinition param0, int param1, boolean param2) {
         int stackIn_7_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
@@ -7452,8 +7452,8 @@ final class RaceWorld {
         int var16 = 0;
         var16 = HoldTheLine.field_D;
         try {
-          if (this.field_lb == null) {
-            this.field_lb = new IndexedSprite(640, 480, 256);
+          if (this.roadLayerMask == null) {
+            this.roadLayerMask = new IndexedSprite(640, 480, 256);
           }
           var4_int = 0;
           while (true) {
@@ -7472,29 +7472,29 @@ final class RaceWorld {
                     var6_int = stackIn_7_0;
                     while (var6_int < 4) {
                       var7_int = 16 * var6_int + 4 * var5_int + var4_int;
-                      this.field_lb.field_n[var7_int] = 0;
+                      this.roadLayerMask.field_n[var7_int] = 0;
                       stackIn_11_0 = ~var4_int;
                       stackIn_11_1 = -4;
                       if (stackIn_11_0 != stackIn_11_1) {
                         if (var4_int == 2) {
-                          this.field_lb.field_n[var7_int] = kc.a(this.field_lb.field_n[var7_int], 128);
+                          this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 128);
                         }
                       } else {
-                        this.field_lb.field_n[var7_int] = kc.a(this.field_lb.field_n[var7_int], 255);
+                        this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 255);
                       }
                       if (var5_int == 3) {
-                        this.field_lb.field_n[var7_int] = kc.a(this.field_lb.field_n[var7_int], 65280);
+                        this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 65280);
                       } else {
                         if (var5_int == 2) {
-                          this.field_lb.field_n[var7_int] = kc.a(this.field_lb.field_n[var7_int], 32768);
+                          this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 32768);
                         }
                       }
                       if (3 != var6_int) {
                         if (2 == var6_int) {
-                          this.field_lb.field_n[var7_int] = kc.a(this.field_lb.field_n[var7_int], 8388608);
+                          this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 8388608);
                         }
                       } else {
-                        this.field_lb.field_n[var7_int] = kc.a(this.field_lb.field_n[var7_int], 16711680);
+                        this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 16711680);
                       }
                       var6_int++;
                     }
@@ -7508,22 +7508,22 @@ final class RaceWorld {
               }
             }
             if (decompiledFrameRemainder0) {
-              stackIn_47_0 = ~this.field_r;
+              stackIn_47_0 = ~this.courseTheme;
             }
             if (stackIn_47_0 == -4) {
-              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.field_lb, (byte) 3));
+              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 3));
             }
             if (stackIn_47_0 != -4 ||
               var16 != 0) {
-              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.field_lb, (byte) 2));
-              mn.a(this.roadSegments, new RoadLayerMaskRenderer(this.field_lb, (byte) 3), (byte) -20);
+              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 2));
+              mn.a(this.roadSegments, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 3), (byte) -20);
             }
             TutorialTransition.a(32381);
-            if (this.field_qb == null) {
-              this.field_qb = new Sprite(640, 480);
+            if (this.courseImage == null) {
+              this.courseImage = new Sprite(640, 480);
             }
-            this.field_qb.bindRaster();
-            LabeledField.a(this.field_J, param0, false);
+            this.courseImage.bindRaster();
+            LabeledField.a(this.gameMode, param0, false);
             var4 = new GrowableObjectList();
             if (param1 != 28978) {
               return;
@@ -7538,10 +7538,10 @@ final class RaceWorld {
               var7 = NanoTickClock.removeShortBoundaryEdges(var7, (byte) -127);
               var6 = NanoTickClock.removeShortBoundaryEdges(var6, (byte) -127);
               var8 = NanoTickClock.removeShortBoundaryEdges(var8, (byte) -127);
-              this.field_jb = ao.a(var6, (byte) 21, param2, var5);
-              this.field_nb = ao.a(var8, (byte) 21, param2, var7);
+              this.roadBoundaryLoops = ao.a(var6, (byte) 21, param2, var5);
+              this.collisionBoundaryLoops = ao.a(var8, (byte) 21, param2, var7);
               l.a(29824, param0);
-              if (3 == this.field_r) {
+              if (3 == this.courseTheme) {
                 var9 = OutlinedRoadStripRenderer.totalCurveLength(-1, this.roadSegments);
                 var10 = 1 + (int)(var9 / 72.0f);
                 this.field_A = var9 / (float)var10;
@@ -7595,7 +7595,7 @@ final class RaceWorld {
         }
     }
 
-    private final void a(vf param0, int param1, RaceVehicle param2) {
+    private final void handleZombieCollision(ZombiePedestrian param0, int param1, RaceVehicle param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -7607,23 +7607,23 @@ final class RaceWorld {
         int var5 = 0;
         int var6 = 0;
         try {
-          if (param2.field_z &&
-            param0.c((byte) -111)) {
-            SpriteButtonRenderer.field_q.x = param0.field_B + 12;
-            SpriteButtonRenderer.field_q.y = param0.field_i + 12;
+          if (param2.collidable &&
+            param0.isAlive((byte) -111)) {
+            SpriteButtonRenderer.field_q.x = param0.x + 12;
+            SpriteButtonRenderer.field_q.y = param0.y + 12;
             var4_int = -param2.position.x + SpriteButtonRenderer.field_q.x;
             var5 = SpriteButtonRenderer.field_q.y - param2.position.y;
-            var6 = param2.field_B + 8;
+            var6 = param2.collisionRadius + 8;
             if ((var6 * var6) <= (var5 * var5 + var4_int * var4_int)) {
               return;
             }
-            if (!ArchiveRequest.a(SpriteButtonRenderer.field_q, param2.field_i, param2.position, 8, param2.direction, param2.field_k, 83)) {
+            if (!ArchiveRequest.a(SpriteButtonRenderer.field_q, param2.halfWidth, param2.position, 8, param2.direction, param2.halfLength, 83)) {
               return;
             }
-            param2.field_Sb = param2.field_Sb + 1;
-            param0.a(param2, (int)(param2.velocityX * 8192.0f), (byte) 62, (int)(param2.velocityY * 8192.0f));
+            param2.kills = param2.kills + 1;
+            param0.hit(param2, (int)(param2.velocityX * 8192.0f), (byte) 62, (int)(param2.velocityY * 8192.0f));
             if (param1 >= -73) {
-              this.field_jb = (GrowableObjectList) null;
+              this.roadBoundaryLoops = (GrowableObjectList) null;
             }
             return;
           }
@@ -7655,7 +7655,7 @@ final class RaceWorld {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param3, param5, param1, (byte) 113, param4, param0, param2);
+          this.initializeRace(param3, param5, param1, (byte) 113, param4, param0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7672,7 +7672,7 @@ final class RaceWorld {
     }
 
     static {
-        field_Y = null;
+        navigationUrl = null;
         field_K = "Rocket boost";
         field_Z = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_v = new IntrusiveDeque();

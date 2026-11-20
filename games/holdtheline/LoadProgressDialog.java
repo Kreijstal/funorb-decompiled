@@ -24,7 +24,7 @@ final class LoadProgressDialog extends ResizableDialog {
 
     final static void m(int param0) {
         if (MusicPatchPcmStream.field_r != null) {
-          MusicPatchPcmStream.field_r.f(-38);
+          MusicPatchPcmStream.field_r.update(-38);
           if (param0 < 95) {
             field_cb = (int[]) null;
             return;

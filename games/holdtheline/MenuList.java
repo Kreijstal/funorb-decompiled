@@ -69,7 +69,7 @@ abstract class MenuList {
           return;
         }
         this.mouseHeld = false;
-        if (!na.field_k) {
+        if (!PointLight.field_k) {
           return;
         }
         var2Lifetime2 = this.hitTestItem(false, FullscreenErrorDialog.field_X, NodeHashTableIterator.field_g);

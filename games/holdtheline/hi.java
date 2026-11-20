@@ -480,19 +480,19 @@ class hi extends fj {
               var9 = var9 + param3.length;
             }
             var10 = param3[var9];
-            if (-var10.field_k + param6 <= 1 &&
-              -1 <= param6 - var10.field_k) {
+            if (-var10.layer + param6 <= 1 &&
+              -1 <= param6 - var10.layer) {
               if (var10 instanceof StraightRoadSegment) {
                 var21_ref = (StraightRoadSegment) (var10);
-                var12 = (float)(param5.x - var21_ref.field_R.x);
-                var13 = (float)(-var21_ref.field_R.y + param5.y);
-                var14 = var21_ref.field_B * var12 - var13 * var21_ref.field_D;
+                var12 = (float)(param5.x - var21_ref.start.x);
+                var13 = (float)(-var21_ref.start.y + param5.y);
+                var14 = var21_ref.offsetDirectionY * var12 - var13 * var21_ref.offsetDirectionX;
                 if (!(0.0f > var14) &&
-                  !(var21_ref.field_J < var14)) {
-                  var15 = var14 / var21_ref.field_J;
-                  var16 = var12 * var21_ref.field_D + var13 * var21_ref.field_B;
-                  var17 = (float)var21_ref.d(var15, 0);
-                  var18 = (float)var21_ref.c(96, var15);
+                  !(var21_ref.segmentLength < var14)) {
+                  var15 = var14 / var21_ref.segmentLength;
+                  var16 = var12 * var21_ref.offsetDirectionX + var13 * var21_ref.offsetDirectionY;
+                  var17 = (float)var21_ref.leftCollisionOffsetAt(var15, 0);
+                  var18 = (float)var21_ref.rightCollisionOffsetAt(96, var15);
                   if (var17 <= var16 &&
                     var16 <= var18) {
                     stackIn_45_0 = var15 + (float)var9;
@@ -501,18 +501,18 @@ class hi extends fj {
                 }
               } else {
                 var20_ref = (CurvedRoadSegment) (var10);
-                var12 = (float)(-var20_ref.field_U.x + param5.x);
-                var13 = (float)(-var20_ref.field_U.y + param5.y);
-                var14 = (float)var20_ref.field_D;
-                var15 = (float)var20_ref.field_R;
-                if (var20_ref.field_E > var20_ref.field_I) {
-                  var15 = (float)var20_ref.field_D;
-                  var14 = (float)var20_ref.field_R;
+                var12 = (float)(-var20_ref.center.x + param5.x);
+                var13 = (float)(-var20_ref.center.y + param5.y);
+                var14 = (float)var20_ref.leftCollisionRadius;
+                var15 = (float)var20_ref.rightCollisionRadius;
+                if (var20_ref.startAngle > var20_ref.endAngle) {
+                  var15 = (float)var20_ref.leftCollisionRadius;
+                  var14 = (float)var20_ref.rightCollisionRadius;
                 }
                 var16 = var12 * var12 + var13 * var13;
                 if (!(var16 < var14 * var14) &&
                   !(var16 > var15 * var15)) {
-                  var17 = BoundaryIntersection.angleBetweenPoints(var20_ref.field_U, param5, false);
+                  var17 = BoundaryIntersection.angleBetweenPoints(var20_ref.center, param5, false);
                   var18 = var20_ref.parameterAtAngle(var17, (byte) 72);
                   if (var18 >= 0.0f &&
                     1.0f >= var18) {

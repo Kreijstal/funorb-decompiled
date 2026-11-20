@@ -2,12 +2,16 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable.
 
-Resolved declarations: 261/357 classes and 1590/2503 methods have readable names; 286 constructors follow their class names.
-Remaining: 96 opaque classes and 913 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 266/357 classes and 1767/2503 methods have readable names; 286 constructors follow their class names.
+Remaining: 91 opaque classes and 736 opaque methods. The complete naming goal is still in progress.
 
 Start at `HoldTheLine`, a `NetworkGameClient` and `GameAppletShell`. Its `initializeGame`, `loadGameResources`, `updateGameTick`, `renderGameFrame` and `shutdownGame` methods expose the client lifecycle.
 
 `RaceWorld` owns the course, vehicles and world collections. `RaceVehicle` and `VehicleDefinition` describe vehicle state and tuning; `MovingEntity` supplies shared motion. `RoadSegment`, `StraightRoadSegment`, `CurvedRoadSegment`, `TrackBoundary`, `Point2i` and `Vector2f` expose the course geometry.
+
+`RaceWorld` names course decoding, layered rendering, vehicle/object collisions, blasts, rain and lighting, tutorial actions and transitions, achievements and HUD updates. `RaceVehicle` names path planning, driving controls, damage, powerups and the distinct car, snowcat and snowmobile physics implementations. `TrackObject`, `ZombiePedestrian`, `Particle` and `PointLight` expose the other world entities.
+
+Road geometry distinguishes the left/right visible-road edges from the left/right collision edges. Edge orientation follows increasing curve parameter; it does not assume that every `directionAt` implementation has the same tangent convention. Each segment also retains its separate control path. The original interpolation, rounding and guard behavior remain intact.
 
 `MenuList` provides shared mouse and keyboard selection. `GameMenu` handles the main/options menus, championship carousel, help, achievements and race results; `RaceSetupMenu` handles cascading course and car choices. `CourseDefinition` owns decoded course data and previews, while `TrackObjectDefinition` supplies object collision shapes and graphics.
 

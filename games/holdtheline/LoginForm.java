@@ -322,7 +322,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         Sprite var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        wm var9 = null;
+        TrackObject var9 = null;
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -333,7 +333,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         Sprite var17 = null;
         Sprite var18 = null;
         Sprite var19 = null;
-        wm var9Lifetime1;
+        TrackObject var9Lifetime1;
         int var8Lifetime1;
         var15 = HoldTheLine.field_D;
         try {
@@ -377,21 +377,21 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             LoginForm.h(0);
           }
           for (var8Lifetime1 = -1; var8Lifetime1 <= 3; var8Lifetime1++) {
-            var9 = (wm) (param2.field_m.first((byte) 97));
+            var9 = (TrackObject) (param2.field_m.first((byte) 97));
             while (var9 != null) {
-              if (~var8Lifetime1 == ~var9.field_q) {
-                var17 = var9.a((byte) -124);
+              if (~var8Lifetime1 == ~var9.layer) {
+                var17 = var9.getCurrentSprite((byte) -124);
                 var17.draw(-(var17.width >> 1) + var9.position.x, var9.position.y - (var17.height >> 1));
               }
-              var9 = (wm) (param2.field_m.next((byte) -122));
+              var9 = (TrackObject) (param2.field_m.next((byte) -122));
             }
-            var9Lifetime1 = (wm) (param2.field_k.first((byte) 123));
+            var9Lifetime1 = (TrackObject) (param2.field_k.first((byte) 123));
             while (var9Lifetime1 != null) {
-              if (var9Lifetime1.field_q == var8Lifetime1) {
-                var18 = var9Lifetime1.a((byte) -121);
+              if (var9Lifetime1.layer == var8Lifetime1) {
+                var18 = var9Lifetime1.getCurrentSprite((byte) -121);
                 var18.draw(var9Lifetime1.position.x - (var18.width >> 1), var9Lifetime1.position.y - (var18.height >> 1));
               }
-              var9Lifetime1 = (wm) (param2.field_k.next((byte) 96));
+              var9Lifetime1 = (TrackObject) (param2.field_k.next((byte) 96));
             }
           }
           var19.bindRaster();

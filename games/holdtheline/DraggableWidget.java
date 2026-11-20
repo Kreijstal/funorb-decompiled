@@ -34,7 +34,7 @@ final class DraggableWidget extends SingleChildWidget {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(bo.field_b, ih.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
+          var1[var2] = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
         }
         tk.clearDecodedSpriteSheet(false);
         return var1;

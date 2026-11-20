@@ -91,8 +91,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var12.bindRaster();
             tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(NetworkArchiveRequest.field_v, new String[]{RaceSetupMenu.field_z}, true), var6, 40, 16777215, -1);
             GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(fb.field_l, new String[]{RaceSetupMenu.field_z}, true), var6, 60, 16777215, -1);
-            tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{jk.field_r}, true), var6, 110, 16777215, -1);
-            GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{jk.field_r}, true), var6, 130, 16777215, -1);
+            tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{Particle.field_r}, true), var6, 110, 16777215, -1);
+            GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{Particle.field_r}, true), var6, 130, 16777215, -1);
             tk.field_a.drawCentered(jg.field_q, var6, 180, 16777215, -1);
             GzipDecompressor.field_e.drawCentered(SocialListEntry.field_jb, var6, 200, 16777215, -1);
             EmailLoginCredentials.a(3, var12.height, var12.width, var12, 0, 0, 1, -24983);
@@ -127,14 +127,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var14 = LoginCredentials.substituteIndexedTokens(CheckboxRenderer.field_d, new String[]{TextLineLayout.field_i[ShadedRoadStripRenderer.field_r]}, true);
             var5 = tk.field_a.getParagraphWidth(var14, vb.field_d);
             var6Lifetime1 = tk.field_a.getParagraphHeight(var14, vb.field_d, tk.field_a.ascent + tk.field_a.descent);
-            var7Lifetime1 = ih.field_m + (vb.field_d - var5) / 2;
+            var7Lifetime1 = AchievementUnlockRequest.field_m + (vb.field_d - var5) / 2;
             var8 = cd.field_b + (-var6Lifetime1 + mj.field_a) / 2;
             var7Lifetime1 -= 3;
             var5 += 6;
             var6Lifetime1 += 6;
             if (var7Lifetime1 < 0) {
               var9_int = -var7Lifetime1;
-              ih.field_m = ih.field_m + var9_int;
+              AchievementUnlockRequest.field_m = AchievementUnlockRequest.field_m + var9_int;
               EmailLoginCredentials.field_e = EmailLoginCredentials.field_e - var9_int;
               var5 = var5 + 2 * var9_int;
               IsaacRandom.field_a.offsetX = IsaacRandom.field_a.offsetX + var9_int;
@@ -147,7 +147,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               EmailLoginCredentials.field_e = EmailLoginCredentials.field_e - var9_intLifetime1;
               var5 = var5 + 2 * var9_intLifetime1;
-              ih.field_m = ih.field_m + var9_intLifetime1;
+              AchievementUnlockRequest.field_m = AchievementUnlockRequest.field_m + var9_intLifetime1;
               IsaacRandom.field_a.offsetX = IsaacRandom.field_a.offsetX + var9_intLifetime1;
               IsaacRandom.field_a.canvasWidth = IsaacRandom.field_a.canvasWidth + var9_intLifetime1 * 2;
             }
@@ -172,15 +172,15 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             IsaacRandom.field_a.expandToCanvas();
             var9 = new Sprite(IsaacRandom.field_a.canvasWidth, IsaacRandom.field_a.canvasHeight);
             var9.bindRaster();
-            tk.field_a.drawParagraph(var14, ih.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.descent + tk.field_a.ascent);
+            tk.field_a.drawParagraph(var14, AchievementUnlockRequest.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.descent + tk.field_a.ascent);
             EmailLoginCredentials.a(3, var9.canvasHeight, var9.canvasWidth, var9, 0, 0, 1, -24983);
             IsaacRandom.field_a.bindRaster();
             var9.draw(0, 0);
-            na.field_t = new Sprite(640, 480);
-            na.field_t.bindRaster();
+            PointLight.field_t = new Sprite(640, 480);
+            PointLight.field_t.bindRaster();
             IsaacRandom.field_a.drawRotatedCentered((IsaacRandom.field_a.canvasWidth >> 1) + EmailLoginCredentials.field_e, AccountTermsPanel.field_G + (IsaacRandom.field_a.canvasHeight >> 1), ValidationHelpWidget.field_W, 4096);
             IsaacRandom.field_a = null;
-            na.field_t.trimTransparentEdges();
+            PointLight.field_t.trimTransparentEdges();
             SoftwareRasterizer.bindRaster(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ValidationHelpWidget.field_R);
           }
@@ -233,8 +233,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             IterableNodeHashTable.field_k.draw(0, 0);
           }
           TextLineLayout.field_e.draw(0, 0);
-          if (null != na.field_t) {
-            na.field_t.draw(0, 0);
+          if (null != PointLight.field_t) {
+            PointLight.field_t.draw(0, 0);
           }
           if (null != eg.field_c &&
             NodeHashTableIterator.field_h != null) {
@@ -430,7 +430,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (DraggableWidget.field_J >= 0 &&
               var2_int >= 0) {
-              na.field_r[DraggableWidget.field_J] = var2_int;
+              PointLight.field_r[DraggableWidget.field_J] = var2_int;
               DraggableWidget.field_J = 1 + DraggableWidget.field_J & 127;
               if (DraggableWidget.field_J == PacketBuffer.field_j) {
                 DraggableWidget.field_J = -1;
@@ -497,7 +497,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (DraggableWidget.field_J >= 0 &&
               var2_int >= 0) {
-              na.field_r[DraggableWidget.field_J] = ~var2_int;
+              PointLight.field_r[DraggableWidget.field_J] = ~var2_int;
               DraggableWidget.field_J = DraggableWidget.field_J + 1 & 127;
               if (DraggableWidget.field_J == PacketBuffer.field_j) {
                 DraggableWidget.field_J = -1;
@@ -527,7 +527,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param0 < 72) {
           field_e = (SpriteAsset) null;
         }
-        return (java.applet.Applet) ((Object) vf.field_j);
+        return (java.applet.Applet) ((Object) ZombiePedestrian.field_j);
     }
 
     final static void a(int param0, SortableValue[] param1, int param2) {

@@ -11,13 +11,13 @@ final class MidiKeyUsage extends IntrusiveNode {
         if (null != sb.field_c) {
           sb.field_c.h((byte) -80);
         }
-        vf.field_l = new DisplayNameForm();
+        ZombiePedestrian.field_l = new DisplayNameForm();
         if (param0 == 17902) {
-          sm.field_c.a((UiWidget) (vf.field_l), (byte) -104);
+          sm.field_c.a((UiWidget) (ZombiePedestrian.field_l), (byte) -104);
           return;
         }
         field_j = (IntrusiveDeque) null;
-        sm.field_c.a((UiWidget) (vf.field_l), (byte) -104);
+        sm.field_c.a((UiWidget) (ZombiePedestrian.field_l), (byte) -104);
     }
 
     public static void clearSharedReferences(int param0) {

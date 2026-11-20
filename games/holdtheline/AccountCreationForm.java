@@ -120,17 +120,17 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
             field_S = (ll) null;
           }
           if (0 == param1) {
-            oc.a(16711680, "terms.ws");
+            oc.showNavigationMenu(16711680, "terms.ws");
             return;
           }
           if (param1 == 1) {
-            oc.a(param2 + 16711786, "privacy.ws");
+            oc.showNavigationMenu(param2 + 16711786, "privacy.ws");
             return;
           }
           if (2 != param1) {
             return;
           }
-          oc.a(16711680, "conduct.ws");
+          oc.showNavigationMenu(16711680, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

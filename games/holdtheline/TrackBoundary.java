@@ -12,7 +12,7 @@ final class TrackBoundary extends BoundaryCurve {
 
     final BoundaryCurve reversed(boolean param0) {
         if (!param0) {
-          return (BoundaryCurve) ((Object) new TrackBoundary(this.end, this.start, this.field_k, this.field_p, this.field_q));
+          return (BoundaryCurve) ((Object) new TrackBoundary(this.end, this.start, this.layer, this.field_p, this.field_q));
         }
         return (BoundaryCurve) null;
     }
@@ -77,7 +77,7 @@ final class TrackBoundary extends BoundaryCurve {
         try {
           this.field_p = param3 ? true : false;
           this.end = param1;
-          this.field_k = param2;
+          this.layer = param2;
           this.field_q = param4 ? true : false;
           this.start = param0;
         } catch (RuntimeException runtimeException) {

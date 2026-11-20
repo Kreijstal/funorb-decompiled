@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class MovingEntity extends IntrusiveNode {
-    boolean field_z;
+    boolean collidable;
     static int field_n;
     float velocityY;
     Point2i position;
@@ -10,32 +10,32 @@ class MovingEntity extends IntrusiveNode {
     float angularVelocity;
     static String field_o;
     int field_s;
-    int field_k;
-    int field_v;
+    int halfLength;
+    int courseSegment;
     int field_m;
-    int field_q;
-    int field_B;
+    int layer;
+    int collisionRadius;
     float heading;
-    int field_i;
+    int halfWidth;
     Vector2f direction;
     int field_l;
     float worldX;
-    boolean field_p;
+    boolean rectangularCollision;
     float worldY;
 
-    private final void a(float param0, byte param1, int param2, float param3, float param4) {
+    private final void initializeMotion(float param0, byte param1, int param2, float param3, float param4) {
         this.worldX = param3;
         if (param1 > 35) {
           this.worldY = param0;
           this.heading = param4;
           this.position = new Point2i((int)this.worldX, (int)this.worldY);
-          this.field_v = -1;
-          this.field_q = param2;
+          this.courseSegment = -1;
+          this.layer = param2;
           this.field_s = -1;
           this.field_l = -1;
           this.field_m = -1;
           this.direction = new Vector2f(this.heading);
-          this.field_z = false;
+          this.collidable = false;
           this.angularVelocity = 0.0f;
           this.velocityX = 0.0f;
           this.velocityY = 0.0f;
@@ -51,7 +51,7 @@ class MovingEntity extends IntrusiveNode {
         MovingEntity.clearSharedReferences(-50);
     }
 
-    final void a(int param0, RoadSegment[] param1) {
+    final void updateCourseMembership(int param0, RoadSegment[] param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -63,21 +63,21 @@ class MovingEntity extends IntrusiveNode {
         int var6 = 0;
         var6 = HoldTheLine.field_D;
         try {
-          var3_float = ka.a(this.field_q, 77, this.position, param1);
+          var3_float = ka.a(this.layer, 77, this.position, param1);
           if ((float)param0 != var3_float) {
-            this.field_v = (int)var3_float;
-            if (this.field_v == param1.length) {
-              this.field_v = 0;
+            this.courseSegment = (int)var3_float;
+            if (this.courseSegment == param1.length) {
+              this.courseSegment = 0;
             }
             var4 = 0;
             while (true) {
               var4++;
               if (var4 < param1.length) {
-                var5 = var4 + this.field_v;
+                var5 = var4 + this.courseSegment;
                 if (param1.length <= var5) {
                   var5 = var5 - param1.length;
                 }
-                if (!IntrusiveNode.a(false, this.field_q, param1[var5], this.position)) {
+                if (!IntrusiveNode.a(false, this.layer, param1[var5], this.position)) {
                   continue;
                 }
                 this.field_m = var5;
@@ -87,11 +87,11 @@ class MovingEntity extends IntrusiveNode {
             while (true) {
               var4++;
               if (param1.length > var4) {
-                var5 = var4 + this.field_v;
+                var5 = var4 + this.courseSegment;
                 if (var5 >= param1.length) {
                   var5 = var5 - param1.length;
                 }
-                if (!IntrusiveNode.a(false, this.field_q, param1[var5], this.position)) {
+                if (!IntrusiveNode.a(false, this.layer, param1[var5], this.position)) {
                   continue;
                 }
                 this.field_l = var5;
@@ -103,11 +103,11 @@ class MovingEntity extends IntrusiveNode {
               if (param1.length <= var4) {
                 return;
               }
-              var5 = var4 + this.field_v;
+              var5 = var4 + this.courseSegment;
               if (var5 >= param1.length) {
                 var5 = var5 - param1.length;
               }
-            } while (!IntrusiveNode.a(false, this.field_q, param1[var5], this.position));
+            } while (!IntrusiveNode.a(false, this.layer, param1[var5], this.position));
             this.field_s = var5;
             return;
           }
@@ -134,9 +134,9 @@ class MovingEntity extends IntrusiveNode {
           this.worldX = this.worldX + 0.019999999552965164f * (3.5f * this.velocityX);
           this.position.x = (int)this.worldX;
           this.position.y = (int)this.worldY;
-          this.a(-1, MusicPatchPcmStream.field_r.roadSegments);
-          if (~this.field_v != param0) {
-            this.field_q = MusicPatchPcmStream.field_r.roadSegments[this.field_v].field_k;
+          this.updateCourseMembership(-1, MusicPatchPcmStream.field_r.roadSegments);
+          if (~this.courseSegment != param0) {
+            this.layer = MusicPatchPcmStream.field_r.roadSegments[this.courseSegment].layer;
             return;
           }
           return;
@@ -145,19 +145,19 @@ class MovingEntity extends IntrusiveNode {
         this.worldX = this.worldX + 0.019999999552965164f * (3.5f * this.velocityX);
         this.position.x = (int)this.worldX;
         this.position.y = (int)this.worldY;
-        this.a(-1, MusicPatchPcmStream.field_r.roadSegments);
-        if (~this.field_v != param0) {
-          this.field_q = MusicPatchPcmStream.field_r.roadSegments[this.field_v].field_k;
+        this.updateCourseMembership(-1, MusicPatchPcmStream.field_r.roadSegments);
+        if (~this.courseSegment != param0) {
+          this.layer = MusicPatchPcmStream.field_r.roadSegments[this.courseSegment].layer;
           return;
         }
     }
 
     MovingEntity(float param0, float param1, int param2) {
-        this.a(param1, (byte) 81, param2, param0, 0.0f);
+        this.initializeMotion(param1, (byte) 81, param2, param0, 0.0f);
     }
 
     MovingEntity(float param0, float param1, int param2, float param3) {
-        this.a(param1, (byte) 39, param2, param0, param3);
+        this.initializeMotion(param1, (byte) 39, param2, param0, param3);
     }
 
     static {

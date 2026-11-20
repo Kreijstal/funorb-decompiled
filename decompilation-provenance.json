@@ -10780,17 +10780,17 @@
       "inputTreeSha256": "441bb34e6eedfe35fdfa1e973e1e58c222bab2930234cb835b96ae38efcf0b12",
       "sources": {
         "files": 356,
-        "sha256": "26f613268e40ae19088d2b28628eec7eea07932531f85a8ee4533eaccfab9911"
+        "sha256": "37cb46d75a6388aecae796d563c2e5f4c75444cdcd7dd8afcdd5ad1efb233963"
       },
       "dictionary": {
         "path": "decompilation/holdtheline-naming.json",
-        "sha256": "9a7c2ecbba6b7baf393c0bb474a4ed3f9b744687a05fabd6c323adf5c17f8293"
+        "sha256": "8dbdecc2535bea6491991c2d01727e9d4b5e4ca46ddb2923690f079928dc966f"
       },
       "readingGuide": {
         "path": "games/holdtheline/README.md",
-        "sha256": "67be0e1b63e1dc0f5376431d034b38865035e9191a64f474f6f768fa43c2954e"
+        "sha256": "f07bf7e30fb17dfce1149b527b722c8be8ae3fe8b2a5e88197903423bda81967"
       },
-      "rulesSha256": "c9c4ea3fc9b0dfc2b23e3178e62c0c86937c48a1bcf9276ab495e7b9ec2e205a",
+      "rulesSha256": "210ea0197aca24466399a4d86ecbbd08b96d84665e8edf666a4b8fe1fed0187d",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12478,7 +12478,7 @@
         },
         "publishedSources": {
           "files": 356,
-          "sha256": "26f613268e40ae19088d2b28628eec7eea07932531f85a8ee4533eaccfab9911"
+          "sha256": "37cb46d75a6388aecae796d563c2e5f4c75444cdcd7dd8afcdd5ad1efb233963"
         }
       },
       "hostilespawn_vengeance": {

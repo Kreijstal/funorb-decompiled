@@ -40,11 +40,11 @@ final class fk {
           }
           if (param2 instanceof TrackBoundary) {
             var5 = (TrackBoundary) (param2);
-            stackIn_6_0 = new TrackBoundary(var5.pointAt(false, param3), var5.pointAt(false, param1), param2.field_k, param2.field_p, param2.field_q);
+            stackIn_6_0 = new TrackBoundary(var5.pointAt(false, param3), var5.pointAt(false, param1), param2.layer, param2.field_p, param2.field_q);
             return (BoundaryCurve) ((Object) stackIn_6_0);
           }
           var6 = (ArcTrackBoundary) (param2);
-          stackIn_4_0 = new ArcTrackBoundary(var6.center, var6.radius, var6.startAngle + (-var6.startAngle + var6.endAngle) * param3, var6.startAngle + (var6.endAngle - var6.startAngle) * param1, param2.field_k, param2.field_p, param2.field_q);
+          stackIn_4_0 = new ArcTrackBoundary(var6.center, var6.radius, var6.startAngle + (-var6.startAngle + var6.endAngle) * param3, var6.startAngle + (var6.endAngle - var6.startAngle) * param1, param2.layer, param2.field_p, param2.field_q);
           return (BoundaryCurve) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

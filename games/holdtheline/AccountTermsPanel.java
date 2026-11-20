@@ -36,17 +36,17 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
             this.field_F = (TextHotspotWidget) null;
           }
           if (param1 == 0) {
-            oc.a(param2 + 16711786, "terms.ws");
+            oc.showNavigationMenu(param2 + 16711786, "terms.ws");
             return;
           }
           if (param1 == 1) {
-            oc.a(16711680, "privacy.ws");
+            oc.showNavigationMenu(16711680, "privacy.ws");
             return;
           }
           if (2 != param1) {
             return;
           }
-          oc.a(16711680, "conduct.ws");
+          oc.showNavigationMenu(16711680, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

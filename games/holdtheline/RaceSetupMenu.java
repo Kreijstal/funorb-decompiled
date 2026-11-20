@@ -594,7 +594,7 @@ final class RaceSetupMenu extends MenuList {
           RaceSetupMenu.clearSharedReferences((byte) 121);
         }
         if (1 >= this.transitionState) {
-          if (na.field_k &&
+          if (PointLight.field_k &&
             -1 != NodeHashTableIterator.field_g) {
             this.handleChoiceMouse(86);
           }
@@ -1158,7 +1158,7 @@ final class RaceSetupMenu extends MenuList {
               }
             } else {
               if (var10 != 0) {
-                wm.a(var11 != 0, false, 0);
+                TrackObject.switchMenu(var11 != 0, false, 0);
               }
             }
           }

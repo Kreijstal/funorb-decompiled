@@ -320,13 +320,13 @@ final class b {
 
     final static void a(boolean param0, int param1) {
         RuntimeException runtimeException = null;
-        ih var2 = null;
+        AchievementUnlockRequest var2 = null;
         IntrusiveNode var2_ref = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          var2 = (ih) (AccountFormText.field_c.first((byte) 121));
+          var2 = (AchievementUnlockRequest) (AccountFormText.field_c.first((byte) 121));
           do {
             if (null == var2) {
               if (!param0) {
@@ -334,8 +334,8 @@ final class b {
               }
               break;
             }
-            NanoTickClock.a(1, param1, var2);
-            var2 = (ih) (AccountFormText.field_c.next((byte) -108));
+            NanoTickClock.sendAchievementUnlock(1, param1, var2);
+            var2 = (AchievementUnlockRequest) (AccountFormText.field_c.next((byte) -108));
           } while (var3 == 0);
           var2_ref = RaceWorld.field_v.first((byte) 127);
           while (var2_ref != null) {

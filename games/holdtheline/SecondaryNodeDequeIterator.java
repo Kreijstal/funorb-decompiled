@@ -60,7 +60,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             field_h = (int[]) null;
           }
           if (MusicPatchPcmStream.field_r != null) {
-            MusicPatchPcmStream.field_r.a();
+            MusicPatchPcmStream.field_r.render();
             return;
           }
           SoftwareRasterizer.clear();

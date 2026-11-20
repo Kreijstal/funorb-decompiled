@@ -50,16 +50,16 @@ abstract class IndexedSpriteState {
             DelegatingCanvas.field_c[var3].bindRaster();
             FullscreenErrorDialog.field_ab.draw(-FullscreenErrorDialog.field_ab.width + DelegatingCanvas.field_c[var3].width >> 1, -FullscreenErrorDialog.field_ab.height + DelegatingCanvas.field_c[var3].height >> 1);
           }
-          ih.field_t = new Sprite[4];
+          AchievementUnlockRequest.field_t = new Sprite[4];
           var6 = 0;
           var3Lifetime1 = var6;
           while (var6 < 4) {
-            ih.field_t[var6] = LoadProgressDialog.field_X[var6].copy();
-            Point2i.scaleSpriteIntensity(ih.field_t[var6], 128, -1);
-            var4 = ih.field_t[var6].copy();
+            AchievementUnlockRequest.field_t[var6] = LoadProgressDialog.field_X[var6].copy();
+            Point2i.scaleSpriteIntensity(AchievementUnlockRequest.field_t[var6], 128, -1);
+            var4 = AchievementUnlockRequest.field_t[var6].copy();
             var4.bindRaster();
             SolidRoadStripRenderer.field_q.drawDownscaledBlended(17, 0, 84, 84);
-            ih.field_t[var6].bindRaster();
+            AchievementUnlockRequest.field_t[var6].bindRaster();
             var4.drawAlpha(0, 0, 64);
             var6++;
           }
@@ -74,7 +74,7 @@ abstract class IndexedSpriteState {
         if (param0 != 2) {
           return LoadProgressDialog.field_X[param2];
         }
-        return ih.field_t[param2];
+        return AchievementUnlockRequest.field_t[param2];
     }
 
     final static void a(int param0) {

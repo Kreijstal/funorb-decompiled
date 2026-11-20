@@ -214,7 +214,7 @@ final class ij {
         }
         int var2 = PolarSortVector.a((byte) 65, ArchiveIndex.b((byte) -49).field_p);
         if (var2 == 2) {
-          wm.a(param0, false, 12);
+          TrackObject.switchMenu(param0, false, 12);
         }
         if (var2 != 0) {
           return;
@@ -232,7 +232,7 @@ final class ij {
           DiskCacheStore.field_i = -1;
         }
         EntitySound.field_j = true;
-        wm.a(param0, false, 10);
+        TrackObject.switchMenu(param0, false, 10);
         ((GameMenu) (l.field_a[10])).targetCarouselOffset = 480;
         if (param1 >= -72) {
           field_k = (String) null;

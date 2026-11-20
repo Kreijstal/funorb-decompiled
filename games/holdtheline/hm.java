@@ -33,7 +33,7 @@ final class hm {
               }
               if (!SpriteSheetAsset.field_k &&
                 HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-                na.field_k) {
+                PointLight.field_k) {
                 SecondaryNodeDeque.field_f = 0;
               }
               AccountCreationForm.field_I = param1;
@@ -62,7 +62,7 @@ final class hm {
                 if (var3 == 0) {
                   if (!SpriteSheetAsset.field_k &&
                     HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-                    na.field_k) {
+                    PointLight.field_k) {
                     SecondaryNodeDeque.field_f = 0;
                   }
                   AccountCreationForm.field_I = param1;
@@ -79,7 +79,7 @@ final class hm {
             }
             if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-              na.field_k) {
+              PointLight.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
@@ -105,7 +105,7 @@ final class hm {
             }
             if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-              na.field_k) {
+              PointLight.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
@@ -125,7 +125,7 @@ final class hm {
             }
             if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-              na.field_k) {
+              PointLight.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
@@ -141,7 +141,7 @@ final class hm {
             SpriteSheetAsset.field_k = false;
             if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-              na.field_k) {
+              PointLight.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
@@ -156,7 +156,7 @@ final class hm {
             SpriteSheetAsset.field_k = true;
             if (!SpriteSheetAsset.field_k &&
               HoldTheLine.field_A > SecondaryNodeDeque.field_f &&
-              na.field_k) {
+              PointLight.field_k) {
               SecondaryNodeDeque.field_f = 0;
             }
             AccountCreationForm.field_I = param1;
@@ -170,7 +170,7 @@ final class hm {
         }
         if (!SpriteSheetAsset.field_k &&
           HoldTheLine.field_A > SecondaryNodeDeque.field_f) {
-          if (!na.field_k) {
+          if (!PointLight.field_k) {
             AccountCreationForm.field_I = param1;
             if (SpriteSheetAsset.field_k &&
               SecondaryNodeDeque.field_f == ValidationState.field_d) {

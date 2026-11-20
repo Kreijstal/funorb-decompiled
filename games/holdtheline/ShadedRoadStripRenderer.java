@@ -186,7 +186,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             return true;
           }
           if (null == ValidationIndicator.field_N) {
-            ValidationIndicator.field_N = na.field_s.openSocket(0, bo.field_e, uj.field_f);
+            ValidationIndicator.field_N = PointLight.field_s.openSocket(0, bo.field_e, uj.field_f);
           }
           if (ValidationIndicator.field_N.field_d == 0) {
             return false;
@@ -198,7 +198,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             d.field_f = DialWidgetRenderer.field_a;
           } else {
             try {
-              IterableSecondaryNodeDeque.field_h = new BufferedSocket((java.net.Socket) (ValidationIndicator.field_N.field_b), na.field_s);
+              IterableSecondaryNodeDeque.field_h = new BufferedSocket((java.net.Socket) (ValidationIndicator.field_N.field_b), PointLight.field_s);
               var4 = RoadStripRenderer.field_e;
               var5 = var4;
               IsaacPacketBuffer.field_p.position = 0;

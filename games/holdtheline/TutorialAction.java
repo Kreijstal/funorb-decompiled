@@ -87,7 +87,7 @@ final class TutorialAction {
           SpriteAsset.field_a = SpriteAsset.field_a + 1;
           NodeHashTableIterator.field_g = Vector2f.field_f;
           FullscreenErrorDialog.field_X = LinearPointPath.field_m;
-          na.field_k = LoginCredentials.field_a;
+          PointLight.field_k = LoginCredentials.field_a;
           LoginCredentials.field_a = false;
           ValidationIndicator.field_J = DelegatingCanvas.field_a;
           TrackBoundary.field_x = IterableNodeHashTable.field_e;

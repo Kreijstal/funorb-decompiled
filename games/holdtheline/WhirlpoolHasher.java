@@ -130,7 +130,7 @@ final class WhirlpoolHasher {
         try {
           IndexedSpriteState.field_j = param3;
           WhirlpoolHasher.a(-90, SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2);
-          StraightRoadSegment.a(param1.capitalHeight, param0.capitalHeight, param0.capitalHeight + param0.descent, param1.descent + param1.capitalHeight, (byte) -108);
+          StraightRoadSegment.setUiFontMetrics(param1.capitalHeight, param0.capitalHeight, param0.capitalHeight + param0.descent, param1.descent + param1.capitalHeight, (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "pa.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

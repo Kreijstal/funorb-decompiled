@@ -7,7 +7,7 @@ abstract class RoadSegment extends TrackCurve {
     static String[] field_v;
     boolean field_q;
     static TextWidgetStyle field_p;
-    float field_o;
+    float layerSlope;
     boolean field_t;
     static int field_n;
     static int[] field_l;
@@ -16,13 +16,13 @@ abstract class RoadSegment extends TrackCurve {
     boolean field_w;
     boolean field_x;
 
-    abstract Point2i c(float param0, int param1);
+    abstract Point2i leftCollisionEdgeAt(float param0, int param1);
 
-    abstract Point2i a(byte param0);
+    abstract Point2i getRightRoadEnd(byte param0);
 
-    abstract Point2i k(int param0);
+    abstract Point2i getLeftCollisionStart(int param0);
 
-    abstract Point2i a(float param0, boolean param1);
+    abstract Point2i rightRoadEdgeAt(float param0, boolean param1);
 
     final static Sprite loadSpriteByName(String param0, byte param1) {
         RuntimeException var2 = null;
@@ -53,11 +53,11 @@ abstract class RoadSegment extends TrackCurve {
         }
     }
 
-    abstract Point2i a(int param0, float param1);
+    abstract Point2i rightCollisionEdgeAt(int param0, float param1);
 
-    abstract Point2i o(int param0);
+    abstract Point2i getRightRoadStart(int param0);
 
-    final static void a(boolean param0, byte param1) {
+    final static void setAlternateMenuItems(boolean param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int[][] stackIn_4_0 = null;
@@ -89,7 +89,7 @@ abstract class RoadSegment extends TrackCurve {
         }
     }
 
-    abstract Point2i h(int param0);
+    abstract Point2i getLeftRoadEnd(int param0);
 
     public static void clearSharedReferences(int param0) {
         field_u = null;
@@ -101,24 +101,24 @@ abstract class RoadSegment extends TrackCurve {
         field_l = null;
     }
 
-    final static String j(int param0) {
+    final static String getNavigationUrl(int param0) {
         if (param0 != -14) {
           return (String) null;
         }
-        return RaceWorld.field_Y;
+        return RaceWorld.navigationUrl;
     }
 
-    abstract Point2i m(int param0);
+    abstract Point2i getRightCollisionEnd(int param0);
 
-    abstract Point2i a(float param0, int param1);
+    abstract Point2i leftRoadEdgeAt(float param0, int param1);
 
-    abstract Point2i l(int param0);
+    abstract Point2i getLeftCollisionEnd(int param0);
 
-    abstract Point2i c(boolean param0);
+    abstract Point2i getLeftRoadStart(boolean param0);
 
-    abstract Point2i b(float param0, int param1);
+    abstract Point2i controlPathAt(float param0, int param1);
 
-    abstract Point2i n(int param0);
+    abstract Point2i getRightCollisionStart(int param0);
 
     RoadSegment() {
     }

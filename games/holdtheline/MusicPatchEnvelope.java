@@ -116,11 +116,11 @@ final class MusicPatchEnvelope {
           }
           if (param1 instanceof TrackBoundary) {
             var6 = (TrackBoundary) (param1);
-            stackIn_6_0 = new TrackBoundary(var6.pointAt(false, param2), var6.end, param1.field_k, param1.field_p, param1.field_q);
+            stackIn_6_0 = new TrackBoundary(var6.pointAt(false, param2), var6.end, param1.layer, param1.field_p, param1.field_q);
             return (BoundaryCurve) ((Object) stackIn_6_0);
           }
           var5 = (ArcTrackBoundary) (param1);
-          stackIn_4_0 = new ArcTrackBoundary(var5.center, var5.radius, (-var5.startAngle + var5.endAngle) * param2 + var5.startAngle, var5.endAngle, param1.field_k, param1.field_p, param1.field_q);
+          stackIn_4_0 = new ArcTrackBoundary(var5.center, var5.radius, (-var5.startAngle + var5.endAngle) * param2 + var5.startAngle, var5.endAngle, param1.layer, param1.field_p, param1.field_q);
           return (BoundaryCurve) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

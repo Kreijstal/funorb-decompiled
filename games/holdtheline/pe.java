@@ -323,8 +323,8 @@ final class pe {
           }
           var4Lifetime2 = 95 / ((-38 - param2) / 48);
           NanoTickClock.field_d = NanoTickClock.field_i - (var3_intLifetime1 >> 1);
-          vf.field_t = var3_intLifetime1 + (NanoTickClock.field_i - (var3_intLifetime1 >> 1));
-          TrackBoundary.field_v = (vf.field_w + ContentTransitionDialog.field_bb << 1) * TextFieldRenderer.field_q.itemCount;
+          ZombiePedestrian.field_t = var3_intLifetime1 + (NanoTickClock.field_i - (var3_intLifetime1 >> 1));
+          TrackBoundary.field_v = (ZombiePedestrian.field_w + ContentTransitionDialog.field_bb << 1) * TextFieldRenderer.field_q.itemCount;
           for (var5Lifetime3 = 0; var5Lifetime3 < ClientException.field_b.length; var5Lifetime3++) {
             stackIn_113_0 = TrackBoundary.field_v;
             if (0 <= cd.field_f[var5Lifetime3]) {
@@ -348,8 +348,8 @@ final class pe {
               SocialListEntry.field_lb[var5Lifetime4][0] = var9 - DropTargetWidget.field_G;
               SocialListEntry.field_lb[var5Lifetime4][1] = var6Lifetime1;
               SocialListEntry.field_lb[var5Lifetime4][2] = (DropTargetWidget.field_G << 1) + var8Lifetime1;
-              SocialListEntry.field_lb[var5Lifetime4][3] = (vf.field_w << 1) + TickClock.field_b;
-              var6Lifetime1 = var6Lifetime1 + (ContentTransitionDialog.field_bb + ((vf.field_w << 1) + TickClock.field_b));
+              SocialListEntry.field_lb[var5Lifetime4][3] = (ZombiePedestrian.field_w << 1) + TickClock.field_b;
+              var6Lifetime1 = var6Lifetime1 + (ContentTransitionDialog.field_bb + ((ZombiePedestrian.field_w << 1) + TickClock.field_b));
             } else {
               var6Lifetime1 = var6Lifetime1 + CurvedRoadSegment.field_M;
             }

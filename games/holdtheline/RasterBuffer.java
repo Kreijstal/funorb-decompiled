@@ -32,11 +32,11 @@ abstract class RasterBuffer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         Object var3 = null;
-        wm var3_ref = null;
+        TrackObject var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         GrowableObjectList var6 = null;
-        wm var3_refLifetime1;
+        TrackObject var3_refLifetime1;
         int var4Lifetime1;
         int var4Lifetime1Lifetime1;
         var3 = null;
@@ -50,23 +50,23 @@ abstract class RasterBuffer {
           }
           if (param0.field_j == null) {
             var6 = new GrowableObjectList();
-            var3_ref = (wm) (param0.field_m.first((byte) 85));
+            var3_ref = (TrackObject) (param0.field_m.first((byte) 85));
             while (var3_ref != null) {
               var4 = 0;
               while (true) {
                 if (!(var4 >= var6.size)) {
-                  if (var6.elements[var4] != var3_ref.field_E) {
+                  if (var6.elements[var4] != var3_ref.definition) {
                     var4++;
                     continue;
                   }
                   break;
                 }
-                var6.add(var3_ref.field_E, (byte) 6);
+                var6.add(var3_ref.definition, (byte) 6);
                 break;
               }
-              var3_ref = (wm) (param0.field_m.next((byte) -70));
+              var3_ref = (TrackObject) (param0.field_m.next((byte) -70));
             }
-            var3_refLifetime1 = (wm) (param0.field_k.first((byte) 101));
+            var3_refLifetime1 = (TrackObject) (param0.field_k.first((byte) 101));
             while (true) {
               if (var3_refLifetime1 == null) {
                 param0.field_j = new TrackObjectDefinition[var6.size];
@@ -79,16 +79,16 @@ abstract class RasterBuffer {
               var4Lifetime1Lifetime1 = 0;
               while (true) {
                 if (!(var4Lifetime1Lifetime1 >= var6.size)) {
-                  if (var6.elements[var4Lifetime1Lifetime1] != var3_refLifetime1.field_E) {
+                  if (var6.elements[var4Lifetime1Lifetime1] != var3_refLifetime1.definition) {
                     var4Lifetime1Lifetime1++;
                     continue;
                   }
                   break;
                 }
-                var6.add(var3_refLifetime1.field_E, (byte) 6);
+                var6.add(var3_refLifetime1.definition, (byte) 6);
                 break;
               }
-              var3_refLifetime1 = (wm) (param0.field_k.next((byte) 105));
+              var3_refLifetime1 = (TrackObject) (param0.field_k.next((byte) 105));
             }
           }
           regionExit1: {
