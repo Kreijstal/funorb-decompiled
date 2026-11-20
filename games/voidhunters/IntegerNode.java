@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hua extends IntrusiveNode {
-    int field_d;
+final class IntegerNode extends IntrusiveNode {
+    int value;
 
-    hua(int param0) {
-        this.field_d = param0;
+    IntegerNode(int param0) {
+        this.value = param0;
     }
 
-    final static void a(AsteroidField param0, byte param1) {
+    final static void setAsteroidFieldForRevisionUpdates(AsteroidField param0, byte param1) {
         try {
-          PlayerLeave.field_b = param0;
+          PlayerLeave.asteroidFieldForRevisionUpdates = param0;
           int var2_int = -25 % ((param1 + 15) / 51);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

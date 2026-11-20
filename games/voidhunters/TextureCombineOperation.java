@@ -45,9 +45,9 @@ final class TextureCombineOperation {
                 var12 = var20;
                 if (var20 != null) {
                   if (param3 == param5) {
-                    SetRadialMenuRadius.a((byte) -100, 0, var20);
+                    SetRadialMenuRadius.addObjectiveMarker((byte) -100, 0, var20);
                   } else {
-                    SetRadialMenuRadius.a((byte) -100, 1, var20);
+                    SetRadialMenuRadius.addObjectiveMarker((byte) -100, 1, var20);
                   }
                 }
               } else {
@@ -58,9 +58,9 @@ final class TextureCombineOperation {
                   var12 = var19;
                   if (var19 != null) {
                     if (param3 != param5) {
-                      SetRadialMenuRadius.a((byte) -100, 1, var19);
+                      SetRadialMenuRadius.addObjectiveMarker((byte) -100, 1, var19);
                     } else {
-                      SetRadialMenuRadius.a((byte) -100, 3, var19);
+                      SetRadialMenuRadius.addObjectiveMarker((byte) -100, 3, var19);
                     }
                   }
                 }
@@ -71,7 +71,7 @@ final class TextureCombineOperation {
                 var11 = var14.getParameter((byte) -122, 0);
                 var17 = param6.world.getBodyById((byte) -27, var11);
                 if (var17 != null) {
-                  SetRadialMenuRadius.a((byte) -100, 2, var17);
+                  SetRadialMenuRadius.addObjectiveMarker((byte) -100, 2, var17);
                 }
               }
               var11 = var14.getParameter((byte) -124, 1);
@@ -81,7 +81,7 @@ final class TextureCombineOperation {
                   var18.a(32, qpb.a(false, param3, 13894143), param2);
                 } else {
                   if (param5 == param3) {
-                    SetRadialMenuRadius.a((byte) -100, 2, var18);
+                    SetRadialMenuRadius.addObjectiveMarker((byte) -100, 2, var18);
                     var18.a(32, qpb.a(false, param3, 13894143), param2);
                   } else {
                     var18.a(32, qpb.a(false, param3, 13894143), param2);

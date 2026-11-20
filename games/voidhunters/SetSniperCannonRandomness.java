@@ -116,7 +116,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -116) {
-            stackIn_4_0 = ac.a(1, param0.length, 0, param0);
+            stackIn_4_0 = TextEncodings.encodeBase64Unpadded(1, param0.length, 0, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

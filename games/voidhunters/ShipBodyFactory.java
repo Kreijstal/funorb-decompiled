@@ -43,7 +43,7 @@ final class ShipBodyFactory implements GameStateFactory {
             stackIn_4_0 = SetExplosionPushMultiplier.field_p;
           }
           lkb.a(stackIn_4_0, (byte) -106);
-          GetReverbWidth.field_o.a(0, -92, -2 + rga.field_g.field_G - 40, 0, rga.field_g.field_hb);
+          GetReverbWidth.field_o.a(0, -92, -2 + WaterTextures.field_g.field_G - 40, 0, WaterTextures.field_g.field_hb);
           SetPhasedEnergyBeamPulsetime.field_o.a(0, -11, SetOndamageParticleLife.field_o.field_hb, 0, nna.field_w);
           stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
           stackIn_6_1 = 0;
@@ -56,8 +56,8 @@ final class ShipBodyFactory implements GameStateFactory {
           }
           ((llb) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + nna.field_w, 18);
           GetPointDefenceLaserProjectileDamage.field_o.a(-40 + (-2 + SetOndamageParticleLife.field_o.field_hb) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, nna.field_w + 2, 18);
-          rga.field_f.a(SetOndamageParticleLife.field_o.field_hb, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.field_G - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
-          GetShipToShipRamDamage.field_q.a(0, -41, rga.field_g.field_hb, rga.field_g.field_G - 40, 40);
+          WaterTextures.field_f.a(SetOndamageParticleLife.field_o.field_hb, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.field_G - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
+          GetShipToShipRamDamage.field_q.a(0, -41, WaterTextures.field_g.field_hb, WaterTextures.field_g.field_G - 40, 40);
           GetWeaponParticleSpeedDownshift.field_q.a(0, 121, vva.field_r.field_hb, 0, 30);
           if (param0 != 100) {
             ShipBodyFactory.a((byte) -23, true);

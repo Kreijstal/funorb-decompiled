@@ -61,7 +61,7 @@ class CarouselSlot implements DiffableState {
           }
           var3 = param0;
           var4 = this.field_c;
-          var5 = hab.field_h;
+          var5 = EnvironmentReflectionGpuMaterialEffect.field_h;
           if (var4 == null) {
             stackIn_6_0 = 0;
           } else {
@@ -290,7 +290,7 @@ class CarouselSlot implements DiffableState {
         }
     }
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeCp1252(int param0, int param1, int param2, byte[] param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -357,7 +357,7 @@ class CarouselSlot implements DiffableState {
           return;
         }
         try {
-          this.field_c = (CarouselPlayerInfo[]) (SetAutoDetail.a(hab.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.field_c));
+          this.field_c = (CarouselPlayerInfo[]) (SetAutoDetail.a(EnvironmentReflectionGpuMaterialEffect.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.field_c));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tja.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

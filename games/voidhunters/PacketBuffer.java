@@ -234,7 +234,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + ac.a(0, param0, param1.length(), var4, this.payload, this.position);
+          this.position = this.position + TextEncodings.encodeCp1252(0, param0, param1.length(), var4, this.payload, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -326,7 +326,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + ac.a(0, true, param1.length(), var4, this.payload, this.position);
+          this.position = this.position + TextEncodings.encodeCp1252(0, true, param1.length(), var4, this.payload, this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte)param0;
@@ -588,7 +588,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return CarouselSlot.a(var3, 0, var4, this.payload);
+          return CarouselSlot.decodeCp1252(var3, 0, var4, this.payload);
         }
         return "";
     }
@@ -757,7 +757,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return CarouselSlot.a(var2, param0 + 1, var3, this.payload);
+        return CarouselSlot.decodeCp1252(var2, param0 + 1, var3, this.payload);
     }
 
     final int readShort(boolean param0) {

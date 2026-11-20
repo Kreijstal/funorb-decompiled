@@ -504,7 +504,7 @@ final class bv {
         int var12 = 0;
         Object var13 = null;
         Ship var14 = null;
-        rca var15 = null;
+        SpawnLocation var15 = null;
         MissionEvent var16 = null;
         int var17 = 0;
         Object var13Lifetime1;
@@ -557,7 +557,7 @@ final class bv {
               var14.setTeam(17704, 1);
               var14.setAi(new ShipAI(), 4);
               var15 = param1.world.findSpawnLocation(0, param1.world.getHeight(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);
-              var14.setPosition(var15.field_c, var15.field_b, (byte) 80);
+              var14.setPosition(var15.x, var15.y, (byte) 80);
               param1.world.addShip(var14, (byte) 72);
               var14.endSpawnProtection(-2);
               var16 = new MissionEvent();

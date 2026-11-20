@@ -105,10 +105,10 @@ final class ffb {
               var11 = -var6 + param2;
               var12 = param2 + var6;
               if (NebulaField.field_c <= var12 &&
-                hab.field_i >= var11) {
+                EnvironmentReflectionGpuMaterialEffect.field_i >= var11) {
                 var13 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var5_int + param4);
                 var14 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var5_int);
-                if (var12 <= hab.field_i) {
+                if (var12 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
                   GetSalvoRepairTimeMultiplier.a(param3, var13, ResourceNode.field_b[var12], (byte) 75, var14);
                 }
                 if (var11 >= NebulaField.field_c) {
@@ -122,12 +122,12 @@ final class ffb {
             if (NebulaField.field_c > var12Lifetime1) {
               continue;
             }
-            if (var11Lifetime1 > hab.field_i) {
+            if (var11Lifetime1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
               continue;
             }
             var13Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + var6);
             var14Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var6);
-            if (hab.field_i >= var12Lifetime1) {
+            if (EnvironmentReflectionGpuMaterialEffect.field_i >= var12Lifetime1) {
               GetSalvoRepairTimeMultiplier.a(param3, var13Lifetime1, ResourceNode.field_b[var12Lifetime1], (byte) 75, var14Lifetime1);
             }
             if (NebulaField.field_c > var11Lifetime1) {

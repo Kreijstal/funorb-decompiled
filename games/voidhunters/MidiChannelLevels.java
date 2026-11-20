@@ -16,8 +16,8 @@ final class MidiChannelLevels {
         RuntimeException decompiledCaughtException = null;
         var11 = VoidHunters.field_G;
         try {
-          var6_int = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param3);
-          var7 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param2);
+          var6_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param3);
+          var7 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param2);
           var8 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5);
           var9 = IntrusiveNode.clamp(param0 ^ -29743, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
           for (var10 = var6_int; var7 >= var10; var10++) {

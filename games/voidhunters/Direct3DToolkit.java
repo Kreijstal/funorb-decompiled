@@ -1054,12 +1054,12 @@ public final class Direct3DToolkit extends GpuToolkit {
           return (GpuMaterialEffect) ((Object) new Direct3DUnderwaterMaterialEffect(this, this.field_Ab));
         }
         if (4 == var4) {
-          return (GpuMaterialEffect) ((Object) new wcb(this, this.field_Ab, this.field_Mb));
+          return (GpuMaterialEffect) ((Object) new Direct3DTransparentWaterEffect(this, this.field_Ab, this.field_Mb));
         }
         if (var4 != 8) {
           return super.createMaterialEffect((byte) 99, param1);
         }
-        return (GpuMaterialEffect) ((Object) new hl(this, this.field_Ab, this.field_Mb));
+        return (GpuMaterialEffect) ((Object) new Direct3DEnvironmentMappedWaterEffect(this, this.field_Ab, this.field_Mb));
     }
 
     final void applyAlphaTestEnabled(int param0) {

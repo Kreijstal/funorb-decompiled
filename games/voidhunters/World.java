@@ -553,7 +553,7 @@ final class World implements DiffableState, CompactGameState {
                     }
                   }
                   if (var15 != 0) {
-                    var19_array = this.asteroidField.c(0);
+                    var19_array = this.asteroidField.getAsteroids(0);
                     var20_ref_crb__ = var19_array;
                     for (var21 = 0; var21 < var20_ref_crb__.length; var21++) {
                       var22 = var20_ref_crb__[var21];
@@ -1098,7 +1098,7 @@ final class World implements DiffableState, CompactGameState {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.partitioningManager.a(param2.boundingbox, (byte) 94, param2.id, param0);
+          this.partitioningManager.addBodyPartitions(param2.boundingbox, (byte) 94, param2.id, param0);
           if (param1 <= 123) {
             this.field_y = -45;
           }
@@ -1430,7 +1430,7 @@ final class World implements DiffableState, CompactGameState {
           return;
         }
         if (param1) {
-          this.partitioningManager.a(new int[]{var6.getX(true) - 16384, 16384 + var6.getX(true), var6.getY((byte) -123) - 16384, var6.getY((byte) -81) + 16384}, param2, 0, true, 0);
+          this.partitioningManager.removeBodyPartitions(new int[]{var6.getX(true) - 16384, 16384 + var6.getX(true), var6.getY((byte) -123) - 16384, var6.getY((byte) -81) + 16384}, param2, 0, true, 0);
         }
     }
 
@@ -1526,7 +1526,7 @@ final class World implements DiffableState, CompactGameState {
           GetSniperCannonFireForce.field_o = param5;
           GetFogOfWarSensorRange.field_o = new Random((long)(10234 * GetSniperCannonFireForce.field_o));
           ShipFactory.field_a.c(39);
-          this.asteroidField.a(true);
+          this.asteroidField.selectForRevisionUpdates(true);
           this.a(param4, param6, (byte) -40, param2);
           this.a(param3, 1, param6, param5);
           var8_int = this.width >> 1;
@@ -1631,7 +1631,7 @@ final class World implements DiffableState, CompactGameState {
               break;
             }
           }
-          var15Lifetime1 = this.asteroidField.c(0);
+          var15Lifetime1 = this.asteroidField.getAsteroids(0);
           var25 = (Object[]) var15Lifetime1;
           var16_ref = var25;
           for (var17Lifetime1 = 0; var25.length > var17Lifetime1; var17Lifetime1++) {
@@ -2026,7 +2026,7 @@ final class World implements DiffableState, CompactGameState {
               var5.chassis != null &&
               !var5.chassis.isDestroyed((byte) 72) &&
               var5.isMoving(995401160)) {
-              var6 = this.partitioningManager.a(var5.id, var5.boundingbox, 3, -100);
+              var6 = this.partitioningManager.collectBodyIds(var5.id, var5.boundingbox, 3, -100);
               for (var7 = 0; var7 < var6; var7++) {
                 var8 = PartitionZoneListFactory.field_a[var7] - field_c[2];
                 var9 = param0[var8];
@@ -2035,7 +2035,7 @@ final class World implements DiffableState, CompactGameState {
                   !var9.chassis.isDestroyed((byte) 68) && (var4_int > var8 ||
                   !var9.isMoving(995401160))) {
                   if (this.a(true, 2, SetPointDefenceLaserProjectiles.field_o, (byte) 76, true, var9, 2, var5, param2)) {
-                    this.asteroidField.b(-101);
+                    this.asteroidField.markChanged(-101);
                   }
                   if (null == var5.chassis) {
                     break;
@@ -2255,7 +2255,7 @@ final class World implements DiffableState, CompactGameState {
             stackIn_10_1[1] = var4.getX(true) + 16384;
             stackIn_10_1[2] = -16384 + var4.getY((byte) -119);
             stackIn_10_1[3] = var4.getY((byte) -114) + 16384;
-            ((PartitioningManager) (Object) stackIn_10_0).a(stackIn_10_1, (byte) 51, var3, 0);
+            ((PartitioningManager) (Object) stackIn_10_0).addBodyPartitions(stackIn_10_1, (byte) 51, var3, 0);
           }
         }
         stackIn_15_1 = this.ships;
@@ -2264,7 +2264,7 @@ final class World implements DiffableState, CompactGameState {
         if (hw.field_b == 1) {
           this.registerBodyPartitions(this.debris, true, 2);
         }
-        this.registerBodyPartitions(this.asteroidField.c(0), true, 3);
+        this.registerBodyPartitions(this.asteroidField.getAsteroids(0), true, 3);
     }
 
     private final ShipBody getBodyAtIndex(ShipBody[] param0, boolean param1, int param2) {
@@ -2339,7 +2339,7 @@ final class World implements DiffableState, CompactGameState {
         }
         var7 = (SpawnPoint) (this.spawnPoints.first(param0 + param0));
         while (var7 != null) {
-          this.a(var7.a(71), (byte) 4, var7.a(true), 51200);
+          this.a(var7.getY(71), (byte) 4, var7.getX(true), 51200);
           var7 = (SpawnPoint) (this.spawnPoints.next((byte) 100));
         }
         if (null != this.resNodes) {
@@ -2543,7 +2543,7 @@ final class World implements DiffableState, CompactGameState {
                 }
                 break;
               }
-              var16_ref_crb__ = this.asteroidField.c(0);
+              var16_ref_crb__ = this.asteroidField.getAsteroids(0);
               var31 = var16_ref_crb__;
               var18 = 0;
               while (var31.length > var18) {
@@ -2620,7 +2620,7 @@ final class World implements DiffableState, CompactGameState {
               }
               else {
                 if (var9 == 15) {
-                  var32 = this.asteroidField.c(0);
+                  var32 = this.asteroidField.getAsteroids(0);
                   for (var11_int = 0; var32.length > var11_int; var11_int++) {
                     var33 = var32[var11_int];
                     if (var33 != null &&
@@ -2648,7 +2648,7 @@ final class World implements DiffableState, CompactGameState {
                   }
                   var84 = (SpawnPoint) (this.spawnPoints.first(0));
                   while (var84 != null) {
-                    if (var84.a(var7, (byte) -81, var8)) {
+                    if (var84.containsPoint(var7, (byte) -81, var8)) {
                       var84.unlink(-3846);
                     }
                     var84 = (SpawnPoint) (this.spawnPoints.next((byte) 106));
@@ -2712,8 +2712,8 @@ final class World implements DiffableState, CompactGameState {
                     }
                     var10_ref2 = (SpawnPoint) (this.spawnPoints.first(0));
                     while (null != var10_ref2) {
-                      if (var10_ref2.a(var7, (byte) -124, var8)) {
-                        var10_ref2.a((1 + var10_ref2.getTeam(-29)) % SettingsChange.field_b, (byte) -93);
+                      if (var10_ref2.containsPoint(var7, (byte) -124, var8)) {
+                        var10_ref2.setTeam((1 + var10_ref2.getTeam(-29)) % SettingsChange.field_b, (byte) -93);
                       }
                       var10_ref2 = (SpawnPoint) (this.spawnPoints.next((byte) 117));
                     }
@@ -3035,7 +3035,7 @@ final class World implements DiffableState, CompactGameState {
                         var11_int = var42.getX(false);
                         var12 = var42.getY((byte) -107);
                         var46 = new IntrusiveDeque();
-                        var14_ref_crb__ = this.asteroidField.c(0);
+                        var14_ref_crb__ = this.asteroidField.getAsteroids(0);
                         var43 = var14_ref_crb__;
                         for (var16 = 0; var43.length > var16; var16++) {
                           var44 = var43[var16];
@@ -3217,8 +3217,8 @@ final class World implements DiffableState, CompactGameState {
         }
         while (null != var5_ref) {
           if (var5_ref != null) {
-            var6Lifetime1 = -param3 + var5_ref.a(true);
-            var7 = var5_ref.a(82) - param1;
+            var6Lifetime1 = -param3 + var5_ref.getX(true);
+            var7 = var5_ref.getY(82) - param1;
             var8Lifetime1 = ar.a(var6Lifetime1, (byte) 104, var7);
             if (var8Lifetime1 <= 51200 + param0) {
               return true;
@@ -3491,7 +3491,7 @@ final class World implements DiffableState, CompactGameState {
           return var3Lifetime1;
         }
         param1 = param1 - field_w[1];
-        var3Lifetime2 = this.getBodyAtIndex(this.asteroidField.c(0), true, param1);
+        var3Lifetime2 = this.getBodyAtIndex(this.asteroidField.getAsteroids(0), true, param1);
         if (var3Lifetime2 != null) {
           return var3Lifetime2;
         }
@@ -3545,8 +3545,8 @@ final class World implements DiffableState, CompactGameState {
             if (var7 != 1) {
               if (var7 == 2) {
                 var6 = 3;
-                var5 = this.asteroidField.c(0);
-                this.asteroidField.b(-89);
+                var5 = this.asteroidField.getAsteroids(0);
+                this.asteroidField.markChanged(-89);
               } else {
                 if (3 == var7) {
                   var5 = this.grapplingHooks;
@@ -3571,7 +3571,7 @@ final class World implements DiffableState, CompactGameState {
             ((Object[]) (var5))[var4_int] = null;
           }
           if (var6 != -1) {
-            this.partitioningManager.a(param2.id, param2.boundingbox, var6, (byte) -94);
+            this.partitioningManager.removeBodyPartitions(param2.id, param2.boundingbox, var6, (byte) -94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3961,12 +3961,12 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final rca findSpawnLocation(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final SpawnLocation findSpawnLocation(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int var7;
         int var8;
         Asteroid[] var9;
-        rca var10;
+        SpawnLocation var10;
         int var11;
         int var12;
         int var13;
@@ -3992,8 +3992,8 @@ final class World implements DiffableState, CompactGameState {
         var26 = VoidHunters.field_G;
         var7 = 32768;
         var8 = 0;
-        var9 = this.asteroidField.c(param2);
-        var10 = new rca();
+        var9 = this.asteroidField.getAsteroids(param2);
+        var10 = new SpawnLocation();
         var11 = -(param5 / 2) + param3;
         var11 = Math.max(var11, var7 - this.width / 2);
         var12 = param5 / 2 + param3;
@@ -4046,9 +4046,9 @@ final class World implements DiffableState, CompactGameState {
               }
             }
             if (var19 > var8) {
-              var10.field_b = var17;
+              var10.y = var17;
               var8 = var19;
-              var10.field_c = var16;
+              var10.x = var16;
             }
           }
           var15++;
@@ -4628,7 +4628,7 @@ final class World implements DiffableState, CompactGameState {
         for (var2Lifetime1 = 0; this.debris.length > var2Lifetime1; var2Lifetime1++) {
           this.debris[var2Lifetime1] = null;
         }
-        this.asteroidField.a(121);
+        this.asteroidField.clearAsteroids(121);
         this.projectiles.clear(127);
         for (var2Lifetime2 = 0; this.field_s.length > var2Lifetime2; var2Lifetime2++) {
           this.field_s[var2Lifetime2].a((byte) 121);
@@ -4865,7 +4865,7 @@ final class World implements DiffableState, CompactGameState {
           if (this.debug) {
             var13 = (SpawnPoint) (this.spawnPoints.first(0));
             while (null != var13) {
-              var13.a(param0, false);
+              var13.draw(param0, false);
               var13 = (SpawnPoint) (this.spawnPoints.next((byte) 85));
             }
             if (this.mapZones != null) {
@@ -4924,7 +4924,7 @@ final class World implements DiffableState, CompactGameState {
               this.a((byte) -76, var21, param0);
             }
           }
-          var5 = this.asteroidField.c(0);
+          var5 = this.asteroidField.getAsteroids(0);
           var22 = var5;
           for (var7 = 0; var22.length > var7; var7++) {
             var8 = var22[var7];
@@ -5016,14 +5016,14 @@ final class World implements DiffableState, CompactGameState {
               if (var6.chassis.componentTypeId == 0) {
                 var7 = var7 / 4;
               }
-              var8 = this.partitioningManager.a(-1, var6.boundingbox, 3, 127);
+              var8 = this.partitioningManager.collectBodyIds(-1, var6.boundingbox, 3, 127);
               for (var9 = 0; var9 < var8; var9++) {
                 var10 = param2[-field_c[2] + PartitionZoneListFactory.field_a[var9]];
                 if (var10 != null &&
                   var10.chassis != null &&
                   !var10.chassis.isDestroyed((byte) 42)) {
                   if (this.a(true, 2, var7, (byte) 77, true, var10, 0, var6, param0)) {
-                    this.asteroidField.b(-64);
+                    this.asteroidField.markChanged(-64);
                   }
                   if (null == var6.chassis) {
                     break;
@@ -5345,14 +5345,14 @@ final class World implements DiffableState, CompactGameState {
               var10 = var8;
             }
             GetLaserEnergyUsed.a(45, var10, var6, var11, var7);
-            var12 = this.partitioningManager.a(-128, 1);
+            var12 = this.partitioningManager.collectBodyIdsInCurrentBounds(-128, 1);
             var13 = 0;
             while (var13 < var12) {
               var20 = this.ships[PartitionZoneListFactory.field_a[var13] - field_c[0]];
               var14 = var20;
               if (null == var14 ||
                 6 == var3_ref.getType((byte) -104) &&
-                as.field_d == 0 &&
+                GpuEnvironmentMapSource.field_d == 0 &&
                 var20.getTeam((byte) 99) == var3_ref.getFiredTeam(512) &&
                 (var20.getTeam((byte) 84) != sja.field_c ||
                 var20.getOwner((byte) -117) == var3_ref.b(false) ||
@@ -5367,7 +5367,7 @@ final class World implements DiffableState, CompactGameState {
             }
             if (1 == voa.field_d &&
               !MonochromeRowCache.field_b.hasHit((byte) 111)) {
-              var12Lifetime1 = this.partitioningManager.a(-122, 2);
+              var12Lifetime1 = this.partitioningManager.collectBodyIdsInCurrentBounds(-122, 2);
               for (var13Lifetime1 = 0; var13Lifetime1 < var12Lifetime1; var13Lifetime1++) {
                 var21 = this.debris[PartitionZoneListFactory.field_a[var13Lifetime1] - field_c[1]];
                 var14_ref = var21;
@@ -5390,7 +5390,7 @@ final class World implements DiffableState, CompactGameState {
               }
             }
             if (!MonochromeRowCache.field_b.hasHit((byte) -18)) {
-              var12Lifetime2 = this.partitioningManager.a(-110, 3);
+              var12Lifetime2 = this.partitioningManager.collectBodyIdsInCurrentBounds(-110, 3);
               for (var13Lifetime2 = 0; var13Lifetime2 < var12Lifetime2; var13Lifetime2++) {
                 var22 = param0[-field_c[2] + PartitionZoneListFactory.field_a[var13Lifetime2]];
                 var14_ref2 = var22;
@@ -6024,7 +6024,7 @@ final class World implements DiffableState, CompactGameState {
         if (var4Lifetime1 != null) {
           return var4Lifetime1;
         }
-        var5 = this.asteroidField.c(0);
+        var5 = this.asteroidField.getAsteroids(0);
         var4Lifetime2 = this.findBodyAtPoint(param1, (byte) -111, param2, var5);
         if (var4Lifetime2 != null) {
           return var4Lifetime2;
@@ -6037,7 +6037,7 @@ final class World implements DiffableState, CompactGameState {
         if (!param0) {
           return (Asteroid[]) null;
         }
-        return this.asteroidField.c(0);
+        return this.asteroidField.getAsteroids(0);
     }
 
     private final void addNebula(Nebula param0, int param1) {
@@ -6367,7 +6367,7 @@ final class World implements DiffableState, CompactGameState {
         var8 = VoidHunters.field_G;
         try {
           var3_int = 0;
-          var4 = this.partitioningManager.a(-1, param0.getBoundingbox((byte) -91), 0, 88);
+          var4 = this.partitioningManager.collectBodyIds(-1, param0.getBoundingbox((byte) -91), 0, 88);
           var5 = 0;
           var6 = 118 / ((56 - param1) / 59);
           while (var5 < var4) {
@@ -6500,7 +6500,7 @@ final class World implements DiffableState, CompactGameState {
             if (-1 == var4_int) {
               return;
             }
-            this.partitioningManager.a(new int[]{-16384 + param1.getX(true), param1.getX(true) + 16384, param1.getY((byte) -99) - 16384, param1.getY((byte) -127) + 16384}, (byte) 43, var4_int, 0);
+            this.partitioningManager.addBodyPartitions(new int[]{-16384 + param1.getX(true), param1.getX(true) + 16384, param1.getY((byte) -99) - 16384, param1.getY((byte) -127) + 16384}, (byte) 43, var4_int, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6619,14 +6619,14 @@ final class World implements DiffableState, CompactGameState {
           var7 = new IntrusiveDeque();
           this.a(var7, false);
           this.a(var7, (byte) 25);
-          var5 = this.asteroidField.c(0);
+          var5 = this.asteroidField.getAsteroids(0);
           this.a(var7, -1, var5);
           this.a(var5, true, var7);
           if (SetArmageddonWarning.field_o == 1) {
             discarded$3 = this.a(var7, this.debris, this.grapplingHooks, 20521, 3, 1, sja.field_i);
           }
           if (this.a(var7, var5, this.grapplingHooks, param0 + 20519, 3, param0, sja.field_i)) {
-            this.asteroidField.b(-67);
+            this.asteroidField.markChanged(-67);
           }
           discarded$4 = this.a(var7, this.ships, this.grapplingHooks, 20521, 3, 0, sja.field_i);
           this.a(var5, param0 ^ 44);
@@ -7040,7 +7040,7 @@ final class World implements DiffableState, CompactGameState {
                   }
                   var26++;
                 }
-                var14 = this.asteroidField.c(0);
+                var14 = this.asteroidField.getAsteroids(0);
                 var24 = var14;
                 var15_ref_crb__ = var14;
                 for (var16 = 0; var16 < var24.length; var16++) {
@@ -7354,7 +7354,7 @@ final class World implements DiffableState, CompactGameState {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        rca var13 = null;
+        SpawnLocation var13 = null;
         int var13_int = 0;
         SpawnPoint var14_ref_rdb = null;
         int var14 = 0;
@@ -7372,7 +7372,7 @@ final class World implements DiffableState, CompactGameState {
         int var22 = 0;
         int var23 = 0;
         Ship[] var24 = null;
-        rca var25 = null;
+        SpawnLocation var25 = null;
         int var15Lifetime1;
         int var17Lifetime1;
         int var20Lifetime1;
@@ -7392,8 +7392,8 @@ final class World implements DiffableState, CompactGameState {
             while (null != var14_ref_rdb) {
               if (~param3 == ~var14_ref_rdb.getTeam(-92)) {
                 var13_int++;
-                var11 = var11 + var14_ref_rdb.a(true);
-                var12 = var12 + var14_ref_rdb.a(94);
+                var11 = var11 + var14_ref_rdb.getX(true);
+                var12 = var12 + var14_ref_rdb.getY(94);
                 var15 = 1;
                 var24 = this.ships;
                 var17 = 0;
@@ -7401,8 +7401,8 @@ final class World implements DiffableState, CompactGameState {
                   if (var24.length > var17) {
                     var18_ref_sg = var24[var17];
                     if (var18_ref_sg != null) {
-                      var19_int = var14_ref_rdb.a(true) - var18_ref_sg.x;
-                      var20 = var14_ref_rdb.a(74) - var18_ref_sg.y;
+                      var19_int = var14_ref_rdb.getX(true) - var18_ref_sg.x;
+                      var20 = var14_ref_rdb.getY(74) - var18_ref_sg.y;
                       var21 = ar.a(var19_int, (byte) 126, var20);
                       var22 = var18_ref_sg.getBoundingRadius(true) + 51200;
                       if (param3 != var18_ref_sg.getTeam((byte) 93) &&
@@ -7421,22 +7421,22 @@ final class World implements DiffableState, CompactGameState {
                 }
                 if (var15 == 0) {
                   if (var15 != 0) {
-                    var7_int = var14_ref_rdb.a(true);
+                    var7_int = var14_ref_rdb.getX(true);
                     var9 = 1;
-                    var8 = var14_ref_rdb.a(102);
+                    var8 = var14_ref_rdb.getY(102);
                   }
                   var14_ref_rdb = (SpawnPoint) (this.spawnPoints.next((byte) 11));
                   continue;
                 }
-                var16_ref_crb__ = this.asteroidField.c(0);
+                var16_ref_crb__ = this.asteroidField.getAsteroids(0);
                 var17_ref_crb__ = var16_ref_crb__;
                 var18 = 0;
                 scanLoop2: while (true) {
                   if (var18 < var17_ref_crb__.length) {
                     var19 = var17_ref_crb__[var18];
                     if (null != var19) {
-                      var20Lifetime1 = var14_ref_rdb.a(true) - var19.x;
-                      var21Lifetime1 = var14_ref_rdb.a(param0 ^ -200015) - var19.y;
+                      var20Lifetime1 = var14_ref_rdb.getX(true) - var19.x;
+                      var21Lifetime1 = var14_ref_rdb.getY(param0 ^ -200015) - var19.y;
                       var22Lifetime1 = ar.a(var20Lifetime1, (byte) 125, var21Lifetime1);
                       if (51200 + var19.chassis.getDefinition((byte) -112).boundingRadius > var22Lifetime1) {
                         var15 = 0;
@@ -7449,9 +7449,9 @@ final class World implements DiffableState, CompactGameState {
                   break;
                 }
                 if (var15 != 0) {
-                  var7_int = var14_ref_rdb.a(true);
+                  var7_int = var14_ref_rdb.getX(true);
                   var9 = 1;
-                  var8 = var14_ref_rdb.a(102);
+                  var8 = var14_ref_rdb.getY(102);
                 }
               }
               var14_ref_rdb = (SpawnPoint) (this.spawnPoints.next((byte) 11));
@@ -7462,8 +7462,8 @@ final class World implements DiffableState, CompactGameState {
                 var12 = var12 / var13_int;
                 var11 = var11 / var13_int;
                 var25 = this.findSpawnLocation(var12, this.height, 0, var11, param3, this.width / 4);
-                var8 = var25.field_b;
-                var7_int = var25.field_c;
+                var8 = var25.y;
+                var7_int = var25.x;
               } else {
                 var14 = this.width / param4;
                 var15Lifetime1 = this.height / param4;
@@ -7496,8 +7496,8 @@ final class World implements DiffableState, CompactGameState {
               var12 = var12 / 2;
             }
             var13 = this.findSpawnLocation(0, var12, 0, 0, param3, var11);
-            var8 = var13.field_b;
-            var7_int = var13.field_c;
+            var8 = var13.y;
+            var7_int = var13.x;
             param5.setAngle(hob.a(GetFogOfWarSensorRange.field_o, 8192, 117), -29);
           }
           param5.setPosition(var7_int, var8, (byte) 65);
@@ -8478,7 +8478,7 @@ final class World implements DiffableState, CompactGameState {
           if (!this.debug) {
             var5 = (SpawnPoint) (this.spawnPoints.first(0));
             while (var5 != null) {
-              var5.a(3128, this);
+              var5.update(3128, this);
               var5 = (SpawnPoint) (this.spawnPoints.next((byte) 113));
             }
             this.updateResourceNodeCapture(99);
@@ -8945,7 +8945,7 @@ final class World implements DiffableState, CompactGameState {
         if (param1 != 4) {
           this.a((Asteroid[]) null, false, (IntrusiveDeque) null);
         }
-        var12 = this.asteroidField.c(0);
+        var12 = this.asteroidField.getAsteroids(0);
         var5 = var12;
         for (var6 = 0; var6 < var12.length; var6++) {
           var7 = var12[var6];
@@ -8976,7 +8976,7 @@ final class World implements DiffableState, CompactGameState {
           var3_int = param1.x;
           var4 = param1.y;
           var5 = param1.getBoundingExtent(param0 + 11886);
-          if (this.overlapsBodyBoundingCircles(var3_int, var4, -80, this.asteroidField.c(0), var5)) {
+          if (this.overlapsBodyBoundingCircles(var3_int, var4, -80, this.asteroidField.getAsteroids(0), var5)) {
             return true;
           }
           if (this.overlapsBodyBoundingCircles(var3_int, var4, param0 + 11833, this.ships, var5)) {
@@ -9050,7 +9050,7 @@ final class World implements DiffableState, CompactGameState {
                 if (var4.chassis.componentTypeId == 0) {
                   var5 = var5 >> 2;
                 }
-                var6 = this.partitioningManager.a(var4.id, var4.boundingbox, 1, -90);
+                var6 = this.partitioningManager.collectBodyIds(var4.id, var4.boundingbox, 1, -90);
                 for (var7 = 0; var6 > var7; var7++) {
                   var8 = -field_c[0] + PartitionZoneListFactory.field_a[var7];
                   var9Lifetime2 = this.ships[var8];
@@ -9226,7 +9226,7 @@ final class World implements DiffableState, CompactGameState {
               if (null != var16 &&
                 null != var16.chassis &&
                 !var16.chassis.isDestroyed((byte) 82)) {
-                var7 = this.partitioningManager.a(-1, var16.boundingbox, 2, 77);
+                var7 = this.partitioningManager.collectBodyIds(-1, var16.boundingbox, 2, 77);
                 for (var8 = 0; var8 < var7; var8++) {
                   var9Lifetime1 = this.getDebrisById(21363, PartitionZoneListFactory.field_a[var8]);
                   if (var9Lifetime1 != null &&
@@ -9364,7 +9364,7 @@ final class World implements DiffableState, CompactGameState {
         int var11;
         int var12;
         var13 = VoidHunters.field_G;
-        var14 = this.asteroidField.c(0);
+        var14 = this.asteroidField.getAsteroids(0);
         var7 = param1 + param3 / 2;
         var8 = param0 + param2 / 2;
         for (var9 = 0; var14.length > var9; var9++) {
@@ -9537,7 +9537,7 @@ final class World implements DiffableState, CompactGameState {
             this.field_y = 54;
           }
           param1.updateTick(this, true, (byte) 67, false);
-          if (this.asteroidField.a(this, 16520, param1)) {
+          if (this.asteroidField.addAsteroid(this, 16520, param1)) {
             this.registerBodyPartition(3, (byte) 126, param1);
           }
           return;

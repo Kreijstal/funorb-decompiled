@@ -137,7 +137,7 @@ final class mw extends qg {
     final void a(boolean param0, int param1) {
         float var4 = 0.0f;
         long var5 = 0L;
-        rtb var3 = this.field_b.a(false);
+        OpenGlCubeTexture var3 = this.field_b.a(false);
         float var4Lifetime1;
         long var5Lifetime1;
         if (param1 <= 18) {

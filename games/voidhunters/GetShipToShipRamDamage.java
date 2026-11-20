@@ -26,7 +26,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }
-        if (hab.field_i >= param1 + param7) {
+        if (EnvironmentReflectionGpuMaterialEffect.field_i >= param1 + param7) {
           GetBots.a(param2, param1, param5, param7, param6, param3, param4, 21601);
           return;
         }

@@ -919,7 +919,7 @@ final class wf {
         } else {
           if (this.field_c == 6) {
             var2Lifetime1 = 3;
-            var3 = AsteroidField.a((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), var2Lifetime1, 480);
+            var3 = AsteroidField.getParagraphHeight((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), var2Lifetime1, 480);
             var4 = 16;
             var5_int = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
             var6 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;

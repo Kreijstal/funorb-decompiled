@@ -18,7 +18,7 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
             if (NebulaField.field_c > param3) {
               MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
             } else {
-              if (param6 <= hab.field_i) {
+              if (param6 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
                 ul.a(param3, param5, param2, param6, param4, param1, param7 + 7, param0);
               } else {
                 MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);

@@ -27,12 +27,12 @@ abstract class is extends DualLinkNode {
           if (param4 != 20408) {
             is.a(62, 42, -59, 39, 23, 69, 36);
           }
-          var11 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param5);
-          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param6);
+          var11 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5);
+          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param6);
           var13 = IntrusiveNode.clamp(param4 + 10715, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param2);
           var14 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
-          var7_int = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param5 + param3);
-          var8 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, -param3 + param6);
+          var7_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5 + param3);
+          var8 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, -param3 + param6);
           for (var15 = var11; var15 < var7_int; var15++) {
             GetSalvoRepairTimeMultiplier.a(param1, var14, ResourceNode.field_b[var15], (byte) 75, var13);
           }

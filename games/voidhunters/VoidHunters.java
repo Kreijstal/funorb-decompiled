@@ -437,7 +437,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (ar.field_d &&
               this.l(0) &&
               !uc.b(-116)) {
-              wu.a(true, false);
+              WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
             }
           } else {
             if (tjb.l(0)) {
@@ -914,7 +914,7 @@ public final class VoidHunters extends NetworkGameClient {
         MissionEvent.clearSharedReferences((byte) -76);
         MissionState.clearSharedReferences(!param0 ? true : false);
         MissionVariable.clearSharedReferences((byte) -102);
-        qsa.clearSharedReferences(30089);
+        ObjectiveMarker.clearSharedReferences(30089);
         Asteroid.clearSharedReferences(3);
         Debris.clearSharedReferences((byte) -127);
         EscapePod.clearSharedReferences(3);
@@ -967,14 +967,14 @@ public final class VoidHunters extends NetworkGameClient {
         AsteroidField.clearSharedReferences((byte) 48);
         GrapplingHook.clearSharedReferences((byte) -116);
         SpawnPoint.clearSharedReferences(51200);
-        rca.clearSharedReferences(12035);
+        SpawnLocation.clearSharedReferences(12035);
         Hardpoint.clearSharedReferences(64);
         kra.clearSharedReferences((byte) 70);
         pea.clearSharedReferences(true);
         sra.clearSharedReferences(96);
         ArchiveTextureProvider.clearSharedReferences(25498);
         SoundCache.clearSharedReferences((byte) -120);
-        dqb.clearSharedReferences(15060);
+        HuffmanCodec.clearSharedReferences(15060);
         tea.clearSharedReferences(!param0 ? true : false);
         MidiPcmStream.clearSharedReferences(!param0 ? true : false);
         NodeHashTable.clearSharedReferences((byte) 19);
@@ -1005,7 +1005,7 @@ public final class VoidHunters extends NetworkGameClient {
         rbb.clearSharedReferences((byte) -29);
         kr.clearSharedReferences(-127);
         RemoveEventAction.clearSharedReferences(-125);
-        qpa.clearSharedReferences(!param0 ? true : false);
+        Cp1252Strings.clearSharedReferences(!param0 ? true : false);
         bc.clearSharedReferences(-22113);
         BufferedFile.clearSharedReferences(-73);
         lo.clearSharedReferences(true);
@@ -1140,17 +1140,17 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlSprite.clearSharedReferences(1);
         rpa.clearSharedReferences(1);
         OpenGlTransform3D.clearSharedReferences(13);
-        rtb.clearSharedReferences((byte) 81);
+        OpenGlCubeTexture.clearSharedReferences((byte) 81);
         GpuToolkit.clearSharedReferences((byte) -101);
         VertexAttribute.clearSharedReferences((byte) -84);
         GpuDataType.clearSharedReferences(17);
-        rga.clearSharedReferences((byte) 108);
+        WaterTextures.clearSharedReferences((byte) 108);
         GpuTransform3D.clearSharedReferences(108);
         TextureTransformMode.clearSharedReferences(17121);
         TextureCombineOperation.clearSharedReferences(-3696);
         atb.clearSharedReferences(true);
         GpuMaterialEffect.clearSharedReferences((byte) -96);
-        as.clearSharedReferences(0);
+        GpuEnvironmentMapSource.clearSharedReferences(0);
         je.clearSharedReferences((byte) 117);
         GpuVertexDeclaration.clearSharedReferences(8192);
         TextureCombineSource.clearSharedReferences((byte) 13);
@@ -1222,7 +1222,7 @@ public final class VoidHunters extends NetworkGameClient {
         tob.clearSharedReferences(91);
         bt.clearSharedReferences(-4509);
         ArbProgram.clearSharedReferences(false);
-        bkb.clearSharedReferences(26);
+        EnvironmentMapSource.clearSharedReferences(26);
         oaa.clearSharedReferences(124);
         mnb.clearSharedReferences(117);
         dda.clearSharedReferences(0);
@@ -1239,8 +1239,8 @@ public final class VoidHunters extends NetworkGameClient {
         ko.clearSharedReferences(-35);
         GpuSprite.clearSharedReferences(-81);
         UnlitGpuMaterialEffect.clearSharedReferences(0);
-        wu.clearSharedReferences((byte) 46);
-        hab.clearSharedReferences(-18951);
+        WaterNoiseGpuMaterialEffect.clearSharedReferences((byte) 46);
+        EnvironmentReflectionGpuMaterialEffect.clearSharedReferences(-18951);
         UnsupportedGpuMaterialEffect.clearSharedReferences(param0);
         kt.clearSharedReferences((byte) -19);
         gna.clearSharedReferences(false);
@@ -1251,7 +1251,7 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlGpuCubeTexture.clearSharedReferences(6);
         OpenGlGpuTexture3D.clearSharedReferences(148);
         OpenGlArbProgram.clearSharedReferences(-5709);
-        fib.clearSharedReferences(-113);
+        OpenGlEnvironmentMappedWaterEffect.clearSharedReferences(-113);
         OpenGlVertexDeclaration.clearSharedReferences(23008);
         tb.clearSharedReferences(-75);
         pl.clearSharedReferences((byte) -109);
@@ -1846,7 +1846,7 @@ public final class VoidHunters extends NetworkGameClient {
         ComponentCollision.a("Finished loadloop", (byte) -128);
         if (this.l(0) &&
           GetPhasedEnergyBeamPulsetime.e((byte) 116)) {
-          wu.a(true, false);
+          WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
         }
         return true;
     }
@@ -1999,7 +1999,7 @@ public final class VoidHunters extends NetworkGameClient {
                   stackIn_43_0 = vqa.field_g;
                   stackIn_43_1 = 81;
                   stackIn_44_2 = (var5 == 0);
-                  ((GameSession) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_44_2);
+                  ((GameSession) (Object) stackIn_43_0).updateSession((byte) stackIn_43_1, stackIn_44_2);
                   if (!GraphicsPresentException.field_a) {
                     while (ata.e(127)) {
                       stackOut_47_0 = GetSpinningBladeAimspeed.a(-22029);
@@ -2042,7 +2042,7 @@ public final class VoidHunters extends NetworkGameClient {
             }
             GetShieldsDirectionalRadius.a((byte) 21, var3 != 0);
             if (SetMissionTerrainDebrisProbability.field_p) {
-              ProxyAuthenticationException.field_a.a((byte) 98, var4 != 0);
+              ProxyAuthenticationException.field_a.updateSession((byte) 98, var4 != 0);
             }
             if (GetThrusterSmallForce.field_o) {
               if (vqa.field_g == null) {
@@ -2054,7 +2054,7 @@ public final class VoidHunters extends NetworkGameClient {
                 GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.e((byte) 93), var4 != 0, SetThrusterForce.a(-99), 123);
                 BodyDestroyedCondition.b(-1);
                 if (vqa.field_g.networked) {
-                  vqa.field_g.a((byte) 89, var4 != 0);
+                  vqa.field_g.updateSession((byte) 89, var4 != 0);
                 }
               }
             }
@@ -2157,7 +2157,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
         }
         if (wgb.field_f == -3) {
-          wu.a(false, false);
+          WaterNoiseGpuMaterialEffect.startOfflineGame(false, false);
         }
         if (-4 == wgb.field_f) {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 9);
@@ -2251,7 +2251,7 @@ public final class VoidHunters extends NetworkGameClient {
           boolean stackIn_82_1 = false;
           Throwable decompiledCaughtException = null;
           int var3_int = 0;
-          hua var3 = null;
+          IntegerNode var3 = null;
           int var4_int = 0;
           GraphicsPresentException var4 = null;
           int var5_int = 0;
@@ -2329,7 +2329,7 @@ public final class VoidHunters extends NetworkGameClient {
             SpawnPointFactory.a(SetSalvoDamageMultiplier.e(83), true);
             BodyDestroyedCondition.b(-1);
           }
-          var3 = (hua) (PlayerVote.field_c.first(0));
+          var3 = (IntegerNode) (PlayerVote.field_c.first(0));
           if (var3 != null) {
             var5_int = MatchResultsFactory.field_b;
             if (var5_int < 80) {
@@ -2341,7 +2341,7 @@ public final class VoidHunters extends NetworkGameClient {
                 var4_int = -(var5_int / 2) + 123;
               }
             }
-            lo.field_c[var3.field_d].drawScaled(8, var4_int, 32, 32);
+            lo.field_c[var3.value].drawScaled(8, var4_int, 32, 32);
           }
           if (param0 >= -79) {
             return;

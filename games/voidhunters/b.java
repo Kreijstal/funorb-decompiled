@@ -533,13 +533,13 @@ final class b extends ka {
                   }
                 } else {
                   var32 = (float)param1.field_C[var17Lifetime1] / 1024.0f;
-                  ac.a(var75, var27, var30, var31, this.field_e[var23], this.field_o[var23], (byte) -52, var32, var28, var76, var26, this.field_y[var23]);
+                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.field_e[var23], this.field_o[var23], (byte) -52, var32, var28, var76, var26, this.field_y[var23]);
                   var19[0] = var76[0];
                   var20[0] = var76[1];
-                  ac.a(var75, var27, var30, var31, this.field_e[var24], this.field_o[var24], (byte) -52, var32, var28, var76, var26, this.field_y[var24]);
+                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.field_e[var24], this.field_o[var24], (byte) -52, var32, var28, var76, var26, this.field_y[var24]);
                   var19[1] = var76[0];
                   var20[1] = var76[1];
-                  ac.a(var75, var27, var30, var31, this.field_e[var25], this.field_o[var25], (byte) -52, var32, var28, var76, var26, this.field_y[var25]);
+                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.field_e[var25], this.field_o[var25], (byte) -52, var32, var28, var76, var26, this.field_y[var25]);
                   var19[2] = var76[0];
                   var20[2] = var76[1];
                   var33 = var32 / 2.0f;

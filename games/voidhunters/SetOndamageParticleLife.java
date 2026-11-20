@@ -8,10 +8,10 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         int incrementValue$1 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
-        hua var3 = null;
+        IntegerNode var3 = null;
         int[] var4 = null;
         int var5 = 0;
-        hua var6 = null;
+        IntegerNode var6 = null;
         int var7 = 0;
         int[] stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -22,8 +22,8 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         try {
           var2 = new IntrusiveDeque();
           ct.a(param0, 83, var2);
-          var3 = (hua) (var2.removeLast((byte) -103));
-          if (var3.field_d != -1) {
+          var3 = (IntegerNode) (var2.removeLast((byte) -103));
+          if (var3.value != -1) {
             var2.addLast(-10258, var3);
           }
           var4 = new int[var2.size(3)];
@@ -31,12 +31,12 @@ final class SetOndamageParticleLife extends ConsoleCommand {
           if (param1 >= -109) {
             field_o = (llb) null;
           }
-          var6 = (hua) (var2.first(0));
+          var6 = (IntegerNode) (var2.first(0));
           while (var6 != null) {
             incrementValue$1 = var5;
             var5++;
-            var4[incrementValue$1] = var6.field_d;
-            var6 = (hua) (var2.next((byte) 55));
+            var4[incrementValue$1] = var6.value;
+            var6 = (IntegerNode) (var2.next((byte) 55));
           }
           stackIn_9_0 = var4;
           return stackIn_9_0;

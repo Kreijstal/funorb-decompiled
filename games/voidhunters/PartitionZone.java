@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PartitionZone implements DiffableState, ofa, iu {
+final class PartitionZone implements DiffableState, ofa, SortableValue {
     int[] ids;
     static java.security.SecureRandom field_a;
     int gridx;
     int type;
     static String field_g;
     int gridy;
-    private int field_c;
+    private int revision;
     static int field_e;
 
-    final int a(int param0, int param1, int param2) {
+    final int collectUniqueIds(int param0, int param1, int param2) {
         int var7_int = 0;
         int incrementValue$0 = 0;
         int var4;
@@ -22,7 +22,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         var8 = VoidHunters.field_G;
         var4 = 0;
         if (param0 > -9) {
-          this.c(105, -29);
+          this.removeId(105, -29);
         }
         while (this.ids.length > var4) {
           var5 = this.ids[var4];
@@ -59,9 +59,9 @@ final class PartitionZone implements DiffableState, ofa, iu {
         field_a = null;
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean removeId(int param0, int param1) {
         this.ids = MissionCondition.removeFirstValue(param0, (byte) 116, this.ids);
-        this.a((byte) -119);
+        this.markChanged((byte) -119);
         if (null == this.ids) {
           return true;
         }
@@ -85,7 +85,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         }
     }
 
-    public final int a(Object param0, boolean param1) {
+    public final int compareTo(Object param0, boolean param1) {
         PartitionZone var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_2_0 = 0;
@@ -196,11 +196,11 @@ final class PartitionZone implements DiffableState, ofa, iu {
 
     public final void copyTo(byte param0, SerializableGameState param1) {
         PartitionZone var3 = (PartitionZone) (param1);
-        if (this.field_c == var3.field_c) {
+        if (this.revision == var3.revision) {
           return;
         }
         try {
-          var3.field_c = this.field_c;
+          var3.revision = this.revision;
           var3.ids = SetTeamSelectionSpeedup.a(var3.ids, (byte) -55, this.ids);
           var3.gridy = this.gridy;
           var3.gridx = this.gridx;
@@ -214,7 +214,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void decrementIdsAbove(int param0, int param1) {
         int var3 = 0;
         int var4;
         IsaacPacketBuffer var5;
@@ -222,7 +222,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         for (var3 = 0; var3 < this.ids.length; var3++) {
           if (param1 < this.ids[var3]) {
             this.ids[var3] = this.ids[var3] - 1;
-            this.a((byte) -82);
+            this.markChanged((byte) -82);
           }
         }
         if (param0 != 11964) {
@@ -273,31 +273,31 @@ final class PartitionZone implements DiffableState, ofa, iu {
         }
     }
 
-    private final void a(byte param0) {
+    private final void markChanged(byte param0) {
         if (param0 >= -57) {
-          this.field_c = -117;
+          this.revision = -117;
         }
         int fieldTemp$0 = PlayerLeaveFactory.field_a;
         PlayerLeaveFactory.field_a = PlayerLeaveFactory.field_a + 1;
-        this.field_c = fieldTemp$0;
+        this.revision = fieldTemp$0;
     }
 
-    final void a(int param0, int param1) {
+    final void addId(int param0, int param1) {
         if (param1 != -13251) {
-          this.a(-116, 102, -62);
+          this.collectUniqueIds(-116, 102, -62);
         }
         this.ids = AwardVictoryToTeamActionFactory.a(true, this.ids, param0, param1 + 42100, true);
-        this.a((byte) -77);
+        this.markChanged((byte) -77);
     }
 
     PartitionZone() {
-        this.field_c = 0;
-        this.a((byte) -92);
+        this.revision = 0;
+        this.markChanged((byte) -92);
     }
 
     PartitionZone(int param0, int param1, int param2) {
-        this.field_c = 0;
-        this.a((byte) -92);
+        this.revision = 0;
+        this.markChanged((byte) -92);
         this.type = param2;
         this.gridy = param1;
         this.gridx = param0;

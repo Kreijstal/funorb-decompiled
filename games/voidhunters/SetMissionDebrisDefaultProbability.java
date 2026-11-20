@@ -79,7 +79,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           var8_ref_pgb = nrb.field_b[var7];
           var9 = 0;
           if (!GetBloomThresholdPercentage.field_p &&
-            var5 < hab.field_k) {
+            var5 < EnvironmentReflectionGpuMaterialEffect.field_k) {
             var10_int = SetReverbDry.a(var8_ref_pgb.field_a, (byte) 19);
             if (var10_int <= var8_ref_pgb.a(1) && (var8_ref_pgb.field_k ||
               !SetUseLines.a((byte) -94, var8_ref_pgb.field_n))) {

@@ -25,9 +25,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != ira.field_c) {
           return null;
         }
-        if (null != bkb.field_b &&
-          bkb.field_b != this) {
-          return bkb.field_b.getCodeBase();
+        if (null != EnvironmentMapSource.field_b &&
+          EnvironmentMapSource.field_b != this) {
+          return EnvironmentMapSource.field_b.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -59,7 +59,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          bkb.field_b = param0;
+          EnvironmentMapSource.field_b = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,9 +86,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (null != bkb.field_b &&
-            this != bkb.field_b) {
-            stackIn_12_0 = bkb.field_b.getAppletContext();
+          if (null != EnvironmentMapSource.field_b &&
+            this != EnvironmentMapSource.field_b) {
+            stackIn_12_0 = EnvironmentMapSource.field_b.getAppletContext();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getAppletContext();
@@ -143,9 +143,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (bkb.field_b != null &&
-            this != bkb.field_b) {
-            stackIn_10_0 = bkb.field_b.getDocumentBase();
+          if (EnvironmentMapSource.field_b != null &&
+            this != EnvironmentMapSource.field_b) {
+            stackIn_10_0 = EnvironmentMapSource.field_b.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -292,15 +292,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (uf.field_E == null) {
             if (ira.field_c == null) {
-              if (null == bkb.field_b) {
+              if (null == EnvironmentMapSource.field_b) {
                 var2 = TextureFilterMode.field_a;
                 if (var4 != 0) {
-                  var2 = bkb.field_b;
+                  var2 = EnvironmentMapSource.field_b;
                   var2 = ira.field_c;
                   var2 = uf.field_E;
                 }
               } else {
-                var2 = bkb.field_b;
+                var2 = EnvironmentMapSource.field_b;
                 if (var4 != 0) {
                   var2 = ira.field_c;
                   var2 = uf.field_E;
@@ -653,8 +653,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = TextureFilterMode.field_a;
-                if (null != bkb.field_b) {
-                  var1 = bkb.field_b;
+                if (null != EnvironmentMapSource.field_b) {
+                  var1 = EnvironmentMapSource.field_b;
                 }
                 var2_ref = eab.field_q;
                 if (var2_ref != null) {
@@ -780,9 +780,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (null != bkb.field_b &&
-            this != bkb.field_b) {
-            stackIn_8_0 = bkb.field_b.getParameter(param0);
+          if (null != EnvironmentMapSource.field_b &&
+            this != EnvironmentMapSource.field_b) {
+            stackIn_8_0 = EnvironmentMapSource.field_b.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -841,8 +841,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             mb.field_i = true;
           }
-          if (null != bkb.field_b) {
-            bkb.field_b.destroy();
+          if (null != EnvironmentMapSource.field_b) {
+            EnvironmentMapSource.field_b.destroy();
           }
           try {
             this.shutdownGame(-121);

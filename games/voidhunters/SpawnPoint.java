@@ -7,15 +7,15 @@ final class SpawnPoint extends IntrusiveNode implements DiffableState {
     private int y;
     static String field_f;
 
-    final int a(boolean param0) {
+    final int getX(boolean param0) {
         if (!param0) {
-          this.a(46);
+          this.getY(46);
           return this.x;
         }
         return this.x;
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean containsPoint(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -41,7 +41,7 @@ final class SpawnPoint extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final void a(lta param0, boolean param1) {
+    final void draw(lta param0, boolean param1) {
         int var3_int = 0;
         try {
           var3_int = qpb.a(param1, this.team, 13894143);
@@ -56,10 +56,10 @@ final class SpawnPoint extends IntrusiveNode implements DiffableState {
         return this.team;
     }
 
-    final void a(int param0, World param1) {
+    final void update(int param0, World param1) {
         try {
           if (param0 != 3128) {
-            this.a(-54, (byte) 92, -6);
+            this.containsPoint(-54, (byte) 92, -6);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -97,12 +97,12 @@ final class SpawnPoint extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setTeam(int param0, byte param1) {
         int var3 = -111 % ((param1 + 20) / 61);
         this.team = param0;
     }
 
-    final int a(int param0) {
+    final int getY(int param0) {
         if (param0 < 56) {
           this.y = -12;
           return this.y;

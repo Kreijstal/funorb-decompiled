@@ -78,7 +78,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
           var18 = var11 * ((var7 << 1) - 3);
           var19 = var16 * (1 + var6_int);
           if (NebulaField.field_c <= param1 &&
-            hab.field_i >= param1) {
+            EnvironmentReflectionGpuMaterialEffect.field_i >= param1) {
             var21 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param5);
             var22 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param5);
             GetSalvoRepairTimeMultiplier.a(param2, var21, ResourceNode.field_b[param1], (byte) 75, var22);
@@ -117,7 +117,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
             if (var22Lifetime1 < NebulaField.field_c) {
               continue;
             }
-            if (hab.field_i < var21Lifetime1) {
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var21Lifetime1) {
               continue;
             }
             var23 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + var6_int);
@@ -125,7 +125,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
             if (NebulaField.field_c <= var21Lifetime1) {
               GetSalvoRepairTimeMultiplier.a(param2, var23, ResourceNode.field_b[var21Lifetime1], (byte) 75, var24);
             }
-            if (hab.field_i < var22Lifetime1) {
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var22Lifetime1) {
               continue;
             }
             GetSalvoRepairTimeMultiplier.a(param2, var23, ResourceNode.field_b[var22Lifetime1], (byte) 75, var24);

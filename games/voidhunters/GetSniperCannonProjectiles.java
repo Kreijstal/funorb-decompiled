@@ -104,7 +104,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     }
 
     final static void a(boolean param0, int param1) {
-        rga.a(param0, false, false);
+        WaterTextures.a(param0, false, false);
         if (param1 > -121) {
           field_p = true;
         }

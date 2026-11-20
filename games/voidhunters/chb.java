@@ -49,7 +49,7 @@ final class chb {
 
     final static void a(int param0) {
         if (null == SetKeepTeamColours.field_p) {
-          SetKeepTeamColours.field_p = new qsa[32];
+          SetKeepTeamColours.field_p = new ObjectiveMarker[32];
           GetDebrisCarryOver.field_p = param0;
           return;
         }

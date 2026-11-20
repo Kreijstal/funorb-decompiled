@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qpa {
+final class Cp1252Strings {
     static String field_b;
     static String field_a;
 
@@ -16,7 +16,7 @@ final class qpa {
         field_a = null;
     }
 
-    final static String a(byte param0, byte[] param1) {
+    final static String decode(byte param0, byte[] param1) {
         RuntimeException var2 = null;
         byte[] var3 = null;
         String stackIn_3_0 = null;
@@ -27,9 +27,9 @@ final class qpa {
         try {
           if (param0 != -125) {
             var3 = (byte[]) null;
-            qpa.a((byte) -116, (byte[]) null);
+            Cp1252Strings.decode((byte) -116, (byte[]) null);
           }
-          stackIn_3_0 = CarouselSlot.a(0, 0, param1.length, param1);
+          stackIn_3_0 = CarouselSlot.decodeCp1252(0, 0, param1.length, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

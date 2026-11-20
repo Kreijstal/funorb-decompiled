@@ -20,7 +20,7 @@ final class fbb {
         if (param0 <= 3) {
           return false;
         }
-        if (!hab.field_g[param0].field_f) {
+        if (!EnvironmentReflectionGpuMaterialEffect.field_g[param0].field_f) {
           return true;
         }
         return false;

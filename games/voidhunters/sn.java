@@ -9,7 +9,7 @@ final class sn extends os implements oo {
 
     public final void a(int param0, int param1, int param2, htb param3, int param4) {
         if (this.field_ab) {
-          rga.a(false, true, false);
+          WaterTextures.a(false, true, false);
           return;
         }
         GetBoostersActiveTime.f((byte) -74);

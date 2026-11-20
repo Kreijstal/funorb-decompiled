@@ -106,7 +106,7 @@ final class ConsoleValue {
             if (-param4 + param1 < NebulaField.field_c) {
               ffb.a(param4, (byte) -89, param1, param2, param3);
             } else {
-              if (hab.field_i < param4 + param1) {
+              if (EnvironmentReflectionGpuMaterialEffect.field_i < param4 + param1) {
                 ffb.a(param4, (byte) -89, param1, param2, param3);
               } else {
                 GetFixedaim.a(param2, param3, param1, param4, 2);

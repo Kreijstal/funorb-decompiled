@@ -46,16 +46,16 @@ final class hka extends uj {
         re.field_n = new wdb(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
         vra.field_b = new wdb(0L, rbb.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
         PlayerJoinFactory.field_c = new llb(0L, (llb) null);
-        rtb.field_h = new llb(0L, qc.field_q);
-        rtb.field_h.field_F = 1;
+        OpenGlCubeTexture.field_h = new llb(0L, qc.field_q);
+        OpenGlCubeTexture.field_h.field_F = 1;
         if (param1 >= -96) {
           return;
         }
         try {
           SetCountermeasureLauncherRandomness.field_o = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
-          GameKeyHandler.field_b = new llb(0L, qsa.field_d, mab.field_e);
+          GameKeyHandler.field_b = new llb(0L, ObjectiveMarker.field_d, mab.field_e);
           CarouselPlayerEventFactory.field_c = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
-          PlayerJoinFactory.field_c.b(-561, rtb.field_h);
+          PlayerJoinFactory.field_c.b(-561, OpenGlCubeTexture.field_h);
           PlayerJoinFactory.field_c.b(-561, SetCountermeasureLauncherRandomness.field_o);
           PlayerJoinFactory.field_c.b(-561, GameKeyHandler.field_b);
           PlayerJoinFactory.field_c.b(-561, re.field_n);

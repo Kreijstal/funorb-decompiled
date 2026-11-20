@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vsb extends GpuMaterialEffect {
-    private rga field_e;
+final class OpenGlTransparentWaterEffect extends GpuMaterialEffect {
+    private WaterTextures field_e;
     private OpenGlGpuToolkit field_f;
     private OpenGlArbProgram field_g;
 
@@ -23,7 +23,7 @@ final class vsb extends GpuMaterialEffect {
 
     final static void e(int param0) {
         if (param0 != -24248) {
-          vsb.e(30);
+          OpenGlTransparentWaterEffect.e(30);
           GetSelfDestructPrepareToggleCooldown.a(113, 4);
           return;
         }
@@ -40,13 +40,13 @@ final class vsb extends GpuMaterialEffect {
     final void setParameters(int param0, int param1, int param2) {
         int var4 = 0;
         float var4_float = 0.0f;
-        if (this.field_e.field_b) {
+        if (this.field_e.usesVolumeTexture) {
           var4_float = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
-          this.toolkit.setTexture(this.field_e.field_d, -125);
+          this.toolkit.setTexture(this.field_e.noiseVolume, -125);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
           var4 = 16 * (this.toolkit.field_pc % 4000) / 4000;
-          this.toolkit.setTexture(this.field_e.field_a[var4], -116);
+          this.toolkit.setTexture(this.field_e.noiseFrames[var4], -116);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
         if (param2 == 5) {
@@ -58,14 +58,14 @@ final class vsb extends GpuMaterialEffect {
     final void setTexture(byte param0, int param1, GpuTexture param2) {
         try {
           if (param0 <= 42) {
-            this.field_e = (rga) null;
+            this.field_e = (WaterTextures) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vsb.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    vsb(OpenGlGpuToolkit param0, ResourceArchive param1, rga param2) {
+    OpenGlTransparentWaterEffect(OpenGlGpuToolkit param0, ResourceArchive param1, WaterTextures param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
@@ -80,7 +80,7 @@ final class vsb extends GpuMaterialEffect {
           this.field_f = param0;
           this.field_e = param2;
           if (param1 != null &&
-            this.field_e.c((byte) -65) &&
+            this.field_e.hasNoiseTextures((byte) -65) &&
             this.field_f.field_Ac) {
             this.field_g = mha.a(0, param1.fetchNamedFile("transparent_water", true, "gl"), 34336, this.field_f);
             return;

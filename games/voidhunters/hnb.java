@@ -307,7 +307,7 @@ final class hnb extends iw implements oo {
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
-              stackIn_74_0 = bkb.field_a;
+              stackIn_74_0 = EnvironmentMapSource.field_a;
             } else {
               stackIn_74_0 = GetMissionVariablesHudY.field_q;
             }

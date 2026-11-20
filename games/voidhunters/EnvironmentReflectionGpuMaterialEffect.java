@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hab extends GpuMaterialEffect {
+final class EnvironmentReflectionGpuMaterialEffect extends GpuMaterialEffect {
     private boolean field_f;
     static int field_k;
     static int field_i;
@@ -32,7 +32,7 @@ final class hab extends GpuMaterialEffect {
         }
     }
 
-    hab(GpuToolkit param0) {
+    EnvironmentReflectionGpuMaterialEffect(GpuToolkit param0) {
         super(param0);
         this.field_f = false;
     }

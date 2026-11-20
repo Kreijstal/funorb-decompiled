@@ -35,7 +35,7 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
           if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
-          this.field_k = param0.readBits(param1 + 0, hab.field_h);
+          this.field_k = param0.readBits(param1 + 0, EnvironmentReflectionGpuMaterialEffect.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
           if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
-          param1.writeBits(-632, this.field_k, hab.field_h);
+          param1.writeBits(-632, this.field_k, EnvironmentReflectionGpuMaterialEffect.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

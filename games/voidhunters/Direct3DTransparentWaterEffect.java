@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wcb extends GpuMaterialEffect {
+final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
     private jagdx.IDirect3DVertexShader field_g;
     private static float[] field_h;
-    private rga field_f;
+    private WaterTextures field_f;
     private Direct3DToolkit field_e;
 
     final void onDepthRangeChanged(boolean param0) {
@@ -47,12 +47,12 @@ final class wcb extends GpuMaterialEffect {
         this.field_e = (Direct3DToolkit) null;
     }
 
-    wcb(Direct3DToolkit param0, ResourceArchive param1, rga param2) {
+    Direct3DTransparentWaterEffect(Direct3DToolkit param0, ResourceArchive param1, WaterTextures param2) {
         super(param0);
         this.field_f = param2;
         this.field_e = param0;
         if (param1 != null &&
-          this.field_f.c((byte) 60) &&
+          this.field_f.hasNoiseTextures((byte) 60) &&
           (65535 & this.field_e.field_Hc.VertexShaderVersion) >= 257) {
           this.field_g = this.field_e.field_Mc.createVertexShader(param1.fetchNamedFile("transparent_water", true, "dx"));
         } else {
@@ -138,7 +138,7 @@ final class wcb extends GpuMaterialEffect {
           }
           return;
         }
-        this.field_f = (rga) null;
+        this.field_f = (WaterTextures) null;
         if (null != this.field_g) {
           var2Lifetime1 = this.field_e.field_Mc;
           var3Lifetime1 = this.field_e.getModelViewTransform(0);
@@ -154,26 +154,26 @@ final class wcb extends GpuMaterialEffect {
         int var5Lifetime1;
         if (param2 == 5) {
           var7 = this.field_e.field_Mc;
-          if (this.field_f.field_b) {
+          if (this.field_f.usesVolumeTexture) {
             var5_float = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
-            this.toolkit.setTexture(this.field_f.field_d, -124);
+            this.toolkit.setTexture(this.field_f.noiseVolume, -124);
             var7.setVertexShaderConstant(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
             var5 = 16 * (this.toolkit.field_pc % 4000) / 4000;
-            this.toolkit.setTexture(this.field_f.field_a[var5], param2 - 127);
+            this.toolkit.setTexture(this.field_f.noiseFrames[var5], param2 - 127);
             var7.setVertexShaderConstant(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
         }
         this.disable(-112);
         jagdx.IDirect3DDevice var6 = this.field_e.field_Mc;
-        if (this.field_f.field_b) {
+        if (this.field_f.usesVolumeTexture) {
           var5_floatLifetime1 = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
-          this.toolkit.setTexture(this.field_f.field_d, -124);
+          this.toolkit.setTexture(this.field_f.noiseVolume, -124);
           var6.setVertexShaderConstant(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
           var5Lifetime1 = 16 * (this.toolkit.field_pc % 4000) / 4000;
-          this.toolkit.setTexture(this.field_f.field_a[var5Lifetime1], param2 - 127);
+          this.toolkit.setTexture(this.field_f.noiseFrames[var5Lifetime1], param2 - 127);
           var6.setVertexShaderConstant(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }

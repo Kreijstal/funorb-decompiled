@@ -49,7 +49,7 @@ final class vla extends dqa implements en, oo {
               if (param3 == this.field_A) {
                 if (!this.field_B) {
                   if (!this.field_w) {
-                    vsb.e(-24248);
+                    OpenGlTransparentWaterEffect.e(-24248);
                   } else {
                     GetGrapplingHookRopeBreakLength.e((byte) -91);
                   }

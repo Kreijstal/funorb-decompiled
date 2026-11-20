@@ -4,15 +4,15 @@
 import java.util.*;
 
 final class GameSession {
-    private int[] field_e;
-    private int field_I;
+    private int[] playerChatTimers;
+    private int radialMenuY;
     private int field_y;
-    private int[] field_c;
+    private int[] lastPlayerShipY;
     private int[] field_a;
     private int field_C;
     private int field_p;
     private int field_k;
-    private boolean[] field_q;
+    private boolean[] previousKeyStates;
     private int field_u;
     private boolean field_x;
     private npb field_K;
@@ -24,29 +24,29 @@ final class GameSession {
     boolean field_h;
     private int field_d;
     private int field_R;
-    private int[] field_j;
+    private int[] lastPlayerShipX;
     private int field_A;
     private int field_M;
-    private boolean field_f;
+    private boolean scoreboardVisible;
     private boolean field_ab;
     int localPlayerIndex;
     private boolean field_G;
     private boolean field_X;
     boolean networked;
     private int field_r;
-    private int field_F;
+    private int radialMenuAlpha;
     private Ship field_W;
-    private int[] field_Y;
+    private int[] playerChatOffsets;
     int field_B;
     static String field_D;
-    private boolean field_z;
+    private boolean radialMenuActive;
     private int field_o;
     private float field_w;
     private int field_H;
     CommonGameState state;
     private bv field_v;
     private int field_J;
-    private int field_t;
+    private int radialMenuX;
     private boolean field_n;
     private int field_g;
     private boolean field_l;
@@ -110,7 +110,7 @@ final class GameSession {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 108) {
-            this.field_e = (int[]) null;
+            this.playerChatTimers = (int[]) null;
           }
           if (param1 != null &&
             param1.chassis != null &&
@@ -168,7 +168,7 @@ final class GameSession {
         return false;
     }
 
-    private final String[] a(byte param0, String[] param1) {
+    private final String[] removeNullStrings(byte param0, String[] param1) {
         int var4_int = 0;
         int var5 = 0;
         int incrementValue$1 = 0;
@@ -223,7 +223,7 @@ final class GameSession {
         }
     }
 
-    private final void h(int param0) {
+    private final void drawCarouselDebug(int param0) {
         int discarded$0 = 0;
         int var16_int = 0;
         StringBuilder stackIn_24_0 = null;
@@ -452,7 +452,7 @@ final class GameSession {
             var4 = 20;
           }
           if (SetMachineGunEnergyUsed.field_o[var3] &&
-            !this.field_q[var3]) {
+            !this.previousKeyStates[var3]) {
             return var2 + var4;
           }
           var2++;
@@ -477,7 +477,7 @@ final class GameSession {
               if (this.field_p == -1 &&
                 param1) {
                 this.field_p = param0.field_l;
-                this.field_z = false;
+                this.radialMenuActive = false;
               } else {
                 this.field_p = -1;
               }
@@ -523,10 +523,10 @@ final class GameSession {
         return var6;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final void fillRadialSegment(int param0, int param1, int param2, int param3, int param4, int param5) {
         boolean discarded$0 = false;
         param1 = param1 & 16777215;
-        int[] var9 = this.a(param5, param2, param0, (byte) -118);
+        int[] var9 = this.buildRadialSegmentPolygon(param5, param2, param0, (byte) -118);
         int[] var7 = var9;
         if (param3 >= -40) {
           GameSnapshot var8 = (GameSnapshot) null;
@@ -882,7 +882,7 @@ final class GameSession {
         }
     }
 
-    final void c(byte param0, boolean param1) {
+    final void renderSession(byte param0, boolean param1) {
         World stackIn_58_0 = null;
         Player stackIn_58_1 = null;
         int stackIn_58_2 = 0;
@@ -1056,16 +1056,16 @@ final class GameSession {
           li.field_i) {
           GetDebrisGroupColour.field_r.applyPostProcessing();
         }
-        this.a(var6, true);
+        this.drawShipHealthBars(var6, true);
         if (param0 < 73) {
-          this.field_Y = (int[]) null;
+          this.playerChatOffsets = (int[]) null;
         }
         this.a((Ship) (var9), -15614, var24, var12 != 0);
-        this.a(var24.missionState, (Ship) (var9), true, var24, this.getLocalTeam((byte) -88));
+        this.drawObjectiveMarkers(var24.missionState, (Ship) (var9), true, var24, this.getLocalTeam((byte) -88));
         if (this.localPlayerIndex >= 0 &&
           param1 &&
           !this.field_l &&
-          !this.field_z &&
+          !this.radialMenuActive &&
           -1 == this.field_p &&
           var9 != null &&
           GetBots.field_o != 1) {
@@ -1080,7 +1080,7 @@ final class GameSession {
           this.field_o = this.field_o + 1;
         }
         this.a(var24.world, 0, var6);
-        this.j(4096);
+        this.drawPlayerNamesAndChat(4096);
         this.a(1, var24.world, var24.missionState);
         this.a(var24, 16731136);
         this.a(var24, false, var13Lifetime1);
@@ -1101,10 +1101,10 @@ final class GameSession {
           var25.draw(SetMassDriverReload.field_p - var25.getPaddedWidth() / 2, 0, 0, 16777215 | var18 << 24, 1);
         }
         this.b(var24, 1);
-        this.c((byte) 70, (Ship) (var9));
+        this.drawControlHints((byte) 70, (Ship) (var9));
         if (this.field_v != null &&
           param1) {
-          this.field_v.a(var24, this.field_t, this.field_x, ShipTeamConditionFactory.field_a, this.field_I, MissionVariableFactory.field_a, this.field_F, this.field_p, (byte) -32, this.field_P, PartitionZoneFactory.field_a, this.localPlayerIndex, (Ship) (var9));
+          this.field_v.a(var24, this.radialMenuX, this.field_x, ShipTeamConditionFactory.field_a, this.radialMenuY, MissionVariableFactory.field_a, this.radialMenuAlpha, this.field_p, (byte) -32, this.field_P, PartitionZoneFactory.field_a, this.localPlayerIndex, (Ship) (var9));
         }
         if (var9 != null) {
           var18Lifetime1 = ((Ship) (var9)).getDragging(57);
@@ -1118,12 +1118,12 @@ final class GameSession {
           this.field_l) {
           var14Lifetime1 = 4;
         }
-        this.d(false);
+        this.drawDebugOverlay(false);
         this.b((byte) -41);
         if (1 == SetShipTeamAction.field_e) {
           this.a((Ship) (var9), false, var10, var11);
         }
-        this.c(false);
+        this.drawScoreboard(false);
         if (param1) {
           this.a(var14Lifetime1, var24, (byte) -96, (Ship) (var9));
         }
@@ -1211,7 +1211,7 @@ final class GameSession {
             GetLagStandardDeviationOut.a(-1, var5Lifetime1, 16777215, 20, 11, 4266);
           }
           if (!param0) {
-            this.field_f = false;
+            this.scoreboardVisible = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1328,7 +1328,7 @@ final class GameSession {
         }
     }
 
-    private final void j(int param0) {
+    private final void drawPlayerNamesAndChat(int param0) {
         boolean discarded$0 = false;
         int var3 = 0;
         int var25 = 0;
@@ -1377,14 +1377,14 @@ final class GameSession {
         for (var3 = 0; this.state.field_a > var3; var3++) {
           var4 = var30.world.findShipByOwner(var3, 96);
           if (var4 != null) {
-            this.field_j[var3] = var4.getX(false);
-            this.field_c[var3] = var4.getY((byte) 118);
+            this.lastPlayerShipX[var3] = var4.getX(false);
+            this.lastPlayerShipY[var3] = var4.getY((byte) 118);
           }
-          var5 = this.field_j[var3];
-          var6 = this.field_c[var3];
+          var5 = this.lastPlayerShipX[var3];
+          var6 = this.lastPlayerShipY[var3];
           var7 = ShipTeamConditionFactory.field_a.a(var5, (byte) 127);
           var8 = ShipTeamConditionFactory.field_a.b(true, -(3 * NebulaField.field_d) + var6);
-          var9 = this.a((byte) 120, var30.a(var3, (byte) 59).selectedTeam, var3);
+          var9 = this.getPlayerChatLines((byte) 120, var30.a(var3, (byte) 59).selectedTeam, var3);
           if (var9 != null) {
             stackIn_12_0 = (var9.length > 0) ? 1 : 0;
           } else {
@@ -1447,7 +1447,7 @@ final class GameSession {
         }
     }
 
-    private final String[] a(int param0, boolean param1, String[] param2) {
+    private final String[] revealStringLines(int param0, boolean param1, String[] param2) {
         int var7 = 0;
         String[] stackIn_8_0 = null;
         String[] stackIn_16_0 = null;
@@ -1464,7 +1464,7 @@ final class GameSession {
         int var9 = 0;
         var9 = VoidHunters.field_G;
         try {
-          param2 = this.a((byte) -15, param2);
+          param2 = this.removeNullStrings((byte) -15, param2);
           var4_int = 0;
           while (true) {
             if (var4_int >= param2.length) {
@@ -1492,7 +1492,7 @@ final class GameSession {
               var6[var7] = param2[var7];
             } else {
               var8 = (1 + var4_int - 1) * 30;
-              var6[var7] = this.a(param0, var8, (byte) 32, param2[var7]);
+              var6[var7] = this.revealString(param0, var8, (byte) 32, param2[var7]);
             }
           }
           stackIn_16_0 = var6;
@@ -1511,7 +1511,7 @@ final class GameSession {
         }
     }
 
-    private final String a(int param0, int param1, byte param2, String param3) {
+    private final String revealString(int param0, int param1, byte param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String stackIn_8_0 = null;
@@ -1546,7 +1546,7 @@ final class GameSession {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void drawScoreboard(boolean param0) {
         int var3;
         int var4;
         int var5;
@@ -1624,7 +1624,7 @@ final class GameSession {
         int var29Lifetime1;
         int var19_intLifetime1;
         var31 = VoidHunters.field_G;
-        if (!this.field_f) {
+        if (!this.scoreboardVisible) {
           return;
         }
         var32 = new int[]{0, 1, 2, 3, 4, 5};
@@ -1839,7 +1839,7 @@ final class GameSession {
         return;
     }
 
-    private final void g(int param0) {
+    private final void drawMissionControlDebug(int param0) {
         int var4_int = 0;
         int var12 = 0;
         int stackIn_29_0 = 0;
@@ -2155,7 +2155,7 @@ final class GameSession {
                 param0 = 1;
               }
               if (param2 >= -56) {
-                this.a((byte) 106, true);
+                this.updateSession((byte) 106, true);
               }
               if (this.field_p != -1) {
                 param0 = 5;
@@ -3052,7 +3052,7 @@ final class GameSession {
         }
     }
 
-    private final void l(int param0) {
+    private final void drawSpecialOrderTooltip(int param0) {
         uj var2 = null;
         int var3 = 0;
         String var4 = null;
@@ -3065,7 +3065,7 @@ final class GameSession {
           SetSelfDestructPrepareToggleCooldown.a(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
         }
         if (param0 != 15097) {
-          this.d(true);
+          this.drawDebugOverlay(true);
         }
     }
 
@@ -3126,7 +3126,7 @@ final class GameSession {
         try {
           if (param0) {
             var17 = (String) null;
-            discarded$0 = this.a(111, 15, (byte) -20, (String) null);
+            discarded$0 = this.revealString(111, 15, (byte) -20, (String) null);
           }
           var7_int = this.getLocalTeam((byte) -126);
           var18 = param4;
@@ -3162,7 +3162,7 @@ final class GameSession {
               var12 = var23[var11];
               if (var12 != null &&
                 var22.partitioningManager != null) {
-                var13 = var22.partitioningManager.a(-1, var12.getBoundingbox((byte) -63), 0, -122);
+                var13 = var22.partitioningManager.collectBodyIds(-1, var12.getBoundingbox((byte) -63), 0, -122);
                 for (var14 = 0; var14 < var13; var14++) {
                   var15 = var9[PartitionZoneListFactory.field_a[var14]];
                   if (var15 != null &&
@@ -3186,7 +3186,7 @@ final class GameSession {
               var12Lifetime1 = var23Lifetime1[var11Lifetime1];
               if (var12Lifetime1 != null &&
                 var22Lifetime1.partitioningManager != null) {
-                var13Lifetime1 = var22Lifetime1.partitioningManager.a(-1, var12Lifetime1.getBoundingbox((byte) -63), 0, -122);
+                var13Lifetime1 = var22Lifetime1.partitioningManager.collectBodyIds(-1, var12Lifetime1.getBoundingbox((byte) -63), 0, -122);
                 for (var14Lifetime1 = 0; var14Lifetime1 < var13Lifetime1; var14Lifetime1++) {
                   var15Lifetime1 = var9Lifetime1[PartitionZoneListFactory.field_a[var14Lifetime1]];
                   if (var15Lifetime1 != null &&
@@ -3208,7 +3208,7 @@ final class GameSession {
                 if (var22Lifetime1.partitioningManager == null) {
                   continue;
                 }
-                var13Lifetime1Lifetime1 = var22Lifetime1.partitioningManager.a(-1, var12Lifetime1Lifetime1.getBoundingbox((byte) -63), 0, -122);
+                var13Lifetime1Lifetime1 = var22Lifetime1.partitioningManager.collectBodyIds(-1, var12Lifetime1Lifetime1.getBoundingbox((byte) -63), 0, -122);
                 var14Lifetime1Lifetime1 = 0;
                 while (var14Lifetime1Lifetime1 < var13Lifetime1Lifetime1) {
                   var15Lifetime1Lifetime1 = var9Lifetime1[PartitionZoneListFactory.field_a[var14Lifetime1Lifetime1]];
@@ -3491,7 +3491,7 @@ final class GameSession {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void updateSession(byte param0, boolean param1) {
         boolean stackIn_25_1 = false;
         int stackIn_38_0 = 0;
         int stackIn_53_0 = 0;
@@ -3524,7 +3524,7 @@ final class GameSession {
         var17 = VoidHunters.field_G;
         this.field_l = false;
         if (ssa.b(2)) {
-          GetPointDefenceLaserProjectileInterceptDamage.a(SetMachineGunEnergyUsed.field_o, this.field_q, (byte) 79);
+          GetPointDefenceLaserProjectileInterceptDamage.a(SetMachineGunEnergyUsed.field_o, this.previousKeyStates, (byte) 79);
         }
         this.b((byte) 119, param1);
         var3 = 0;
@@ -3570,12 +3570,12 @@ final class GameSession {
           }
           if (SetRepairModeCooldown.field_o) {
             if (SetMachineGunEnergyUsed.field_o[var12] &&
-              !this.field_q[var12]) {
-              stackIn_25_1 = !(this.field_f);
-              this.field_f = stackIn_25_1;
+              !this.previousKeyStates[var12]) {
+              stackIn_25_1 = !(this.scoreboardVisible);
+              this.scoreboardVisible = stackIn_25_1;
             }
           } else {
-            this.field_f = SetMachineGunEnergyUsed.field_o[var12];
+            this.scoreboardVisible = SetMachineGunEnergyUsed.field_o[var12];
           }
           if (GraphicsPresentException.field_a) {
             if (!SetFightersPerPlayerMaximum.field_p &&
@@ -3621,7 +3621,7 @@ final class GameSession {
         this.a(var5, var8, var3, var4, var6, var7, param1, 109);
         if (this.state.carouselInfo.f(1) &&
           SetMachineGunEnergyUsed.field_o[35] &&
-          !this.field_q[35]) {
+          !this.previousKeyStates[35]) {
           di.field_l.b(this.state.carouselInfo, -128);
         }
         if (param0 < 61) {
@@ -3645,7 +3645,7 @@ final class GameSession {
         var20 = 0;
         var13_intLifetime1 = var20;
         while (SetMachineGunEnergyUsed.field_o.length > var20) {
-          this.field_q[var20] = SetMachineGunEnergyUsed.field_o[var20];
+          this.previousKeyStates[var20] = SetMachineGunEnergyUsed.field_o[var20];
           var20++;
         }
         if (this.localPlayerIndex >= 0 &&
@@ -3780,9 +3780,9 @@ final class GameSession {
           }
           boolean decompiledFrameRemainder1 = true;
           if (var4_int != 0 && (SetMachineGunEnergyUsed.field_o[GetUseCircleOutline.field_p] &&
-            !this.field_q[GetUseCircleOutline.field_p] ||
+            !this.previousKeyStates[GetUseCircleOutline.field_p] ||
             SetMachineGunEnergyUsed.field_o[GetPointDefenceLaserRandomness.field_r] &&
-            !this.field_q[GetPointDefenceLaserRandomness.field_r])) {
+            !this.previousKeyStates[GetPointDefenceLaserRandomness.field_r])) {
             stackIn_70_0 = 1;
             decompiledFrameRemainder1 = false;
           }
@@ -3792,9 +3792,9 @@ final class GameSession {
           boolean decompiledFrameRemainder0 = true;
           var7 = stackIn_70_0;
           if (var4_int != 0 && (SetMachineGunEnergyUsed.field_o[GetTorpedoProjectileLife.field_o] &&
-            !this.field_q[GetTorpedoProjectileLife.field_o] ||
+            !this.previousKeyStates[GetTorpedoProjectileLife.field_o] ||
             SetMachineGunEnergyUsed.field_o[PlayerAction.field_n] &&
-            !this.field_q[PlayerAction.field_n])) {
+            !this.previousKeyStates[PlayerAction.field_n])) {
             stackIn_79_0 = 1;
             decompiledFrameRemainder0 = false;
           }
@@ -4029,7 +4029,7 @@ final class GameSession {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void drawDebugOverlay(boolean param0) {
         int var12 = 0;
         int incrementValue$0 = 0;
         StringBuilder stackIn_14_0 = null;
@@ -4119,7 +4119,7 @@ final class GameSession {
           GetLagStandardDeviationOut.a(-1, var19, 16711935, 80, SetMassDriverReload.field_p, 4266);
         }
         if (GetPointDefenceLaserProjectiles.a(1, 11284)) {
-          this.h(-106);
+          this.drawCarouselDebug(-106);
         }
         if (this.state.carouselInfo.field_k) {
           var20 = SetHealthBarHeight.field_o.toUpperCase();
@@ -4173,11 +4173,11 @@ final class GameSession {
           }
         }
         this.f((byte) 121);
-        this.g(-94);
+        this.drawMissionControlDebug(-94);
         if (param0) {
           return;
         }
-        this.e(-115);
+        this.drawSpatialPartitionDebug(-115);
         var2Lifetime1 = 0;
         var3_ref = (PlayerAction) (this.state.carouselInfo.field_f.first(0));
         while (var3_ref != null) {
@@ -4240,12 +4240,12 @@ final class GameSession {
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           int[] var2 = (int[]) null;
-          GameSession.a(120, (byte) 120, (int[]) null, -35);
+          GameSession.buildPathPolyline(120, (byte) 120, (int[]) null, -35);
         }
         field_D = null;
     }
 
-    final static int[] a(int param0, byte param1, int[] param2, int param3) {
+    final static int[] buildPathPolyline(int param0, byte param1, int[] param2, int param3) {
         int var8 = 0;
         int incrementValue$8 = 0;
         int dupTemp$9 = 0;
@@ -4334,7 +4334,7 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0, World param1, int param2, Ship param3) {
+    private final void drawPartitionBodiesDebug(int param0, World param1, int param2, Ship param3) {
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -4358,7 +4358,7 @@ final class GameSession {
           if (param0 != -927) {
             return;
           }
-          var5_int = param1.partitioningManager.a((byte) -46, param3.getBoundingbox((byte) -82), param2);
+          var5_int = param1.partitioningManager.findZonesInBounds((byte) -46, param3.getBoundingbox((byte) -82), param2);
           for (var6 = 0; var5_int > var6; var6++) {
             var7 = kpb.field_s[var6];
             var8 = 0;
@@ -4380,7 +4380,7 @@ final class GameSession {
                 }
                 var15++;
               }
-              this.a(44, var7);
+              this.drawPartitionZoneDebug(44, var7);
             } else {
               var9 = ShipTeamConditionFactory.field_a.a(65536 * var7.gridx, (byte) 113);
               var10 = 20 + (ShipTeamConditionFactory.field_a.b(true, var7.gridy * 65536) + var8 * pib.b((byte) 118));
@@ -4464,7 +4464,7 @@ final class GameSession {
               }
               this.field_ab = true;
               this.field_J = var15.getComponentTypeId(param0 ^ 36);
-              var10_ref_String__ = this.a(this.field_o, true, new String[]{me.a(var14, (byte) -120), GetSelfDestructActivateCooldown.a(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
+              var10_ref_String__ = this.revealStringLines(this.field_o, true, new String[]{me.a(var14, (byte) -120), GetSelfDestructActivateCooldown.a(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
               this.a(var15.getFinalx(true), var15.getFinaly((byte) 85), var10_ref_String__, (byte) -96);
               stackIn_21_0 = 1;
               return stackIn_21_0;
@@ -4479,7 +4479,7 @@ final class GameSession {
               }
               this.field_ab = true;
               this.field_J = var8.chassis.getComponentTypeId(param0 - 36);
-              var12 = this.a(this.field_o, true, new String[]{me.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.a(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
+              var12 = this.revealStringLines(this.field_o, true, new String[]{me.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.a(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
               if (this.a(param1, var10, param2, false, var12, var11, var9Lifetime1)) {
                 stackIn_28_0 = 1;
                 return stackIn_28_0;
@@ -4561,7 +4561,7 @@ final class GameSession {
         return var2;
     }
 
-    private final void a(Ship[] param0, boolean param1) {
+    private final void drawShipHealthBars(Ship[] param0, boolean param1) {
         boolean discarded$1 = false;
         int var4 = 0;
         Ship[] var3 = null;
@@ -5327,7 +5327,7 @@ final class GameSession {
         }
     }
 
-    private final void e(int param0) {
+    private final void drawSpatialPartitionDebug(int param0) {
         int var5 = 0;
         int var7 = 0;
         int var2;
@@ -5354,7 +5354,7 @@ final class GameSession {
             var3 = var13.findShipByOwner(this.localPlayerIndex, 59);
             if (var3 != null) {
               if (GetPointDefenceLaserProjectiles.a(256, 11284)) {
-                var4 = var13.partitioningManager.a((byte) 115, var3.getBoundingbox((byte) -60), 0);
+                var4 = var13.partitioningManager.findZonesInBounds((byte) 115, var3.getBoundingbox((byte) -60), 0);
                 for (var5 = 0; var4 > var5; var5++) {
                   var6 = kpb.field_s[var5];
                   for (var7 = 0; var7 < var6.ids.length; var7++) {
@@ -5364,13 +5364,13 @@ final class GameSession {
                     var11 = ShipTeamConditionFactory.field_a.b(true, var9.getY((byte) -116));
                     SetMissileLauncherEnergyUsed.a(16777215, (byte) 7, var11, 16384.0f * ShipTeamConditionFactory.field_a.field_a, 100, var10);
                   }
-                  this.a(105, var6);
+                  this.drawPartitionZoneDebug(105, var6);
                 }
-                this.a(-927, var13, 2, var3);
-                this.a(-927, var13, 3, var3);
+                this.drawPartitionBodiesDebug(-927, var13, 2, var3);
+                this.drawPartitionBodiesDebug(-927, var13, 3, var3);
               }
               if (GetPointDefenceLaserProjectiles.a(512, 11284)) {
-                this.a(-927, var13, 1, var3);
+                this.drawPartitionBodiesDebug(-927, var13, 1, var3);
               }
             }
           }
@@ -5381,7 +5381,7 @@ final class GameSession {
 
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void activateHoveredOrder(boolean param0, int param1) {
         if (param1 >= -95) {
           return;
         }
@@ -5438,7 +5438,7 @@ final class GameSession {
         }
     }
 
-    private final String[] a(byte param0, int param1, int param2) {
+    private final String[] getPlayerChatLines(byte param0, int param1, int param2) {
         boolean discarded$0 = false;
         int var7 = 0;
         String var4;
@@ -5461,7 +5461,7 @@ final class GameSession {
           var8 = nrb.field_b[var7];
           if (var8 != null &&
             SetPhasedEnergyBeamFireForce.a(true, var8.field_e, this.state.getPlayerName(1, param2))) {
-            if (var5 >= this.field_Y[param2]) {
+            if (var5 >= this.playerChatOffsets[param2]) {
               if (var6 > 0) {
                 var4 = var4 + "\n";
               }
@@ -5477,12 +5477,12 @@ final class GameSession {
           }
         }
         if (0 < var6 &&
-          this.field_e[param2] > 0) {
-          this.field_e[param2] = this.field_e[param2] - 1;
+          this.playerChatTimers[param2] > 0) {
+          this.playerChatTimers[param2] = this.playerChatTimers[param2] - 1;
         }
-        if (0 >= this.field_e[param2]) {
-          this.field_Y[param2] = this.field_Y[param2] + 1;
-          this.field_e[param2] = 250;
+        if (0 >= this.playerChatTimers[param2]) {
+          this.playerChatOffsets[param2] = this.playerChatOffsets[param2] + 1;
+          this.playerChatTimers[param2] = 250;
         }
         if (var4.length() > 0) {
           return SetFighterBayAimspeed.a((byte) -67, '\n', var4);
@@ -5540,7 +5540,7 @@ final class GameSession {
                 if (!param3.world.getDebug((byte) -124)) {
                   this.field_p = -1;
                 } else {
-                  this.b(this.field_l, -96);
+                  this.activateHoveredOrder(this.field_l, -96);
                 }
                 this.field_n = false;
                 this.field_g = 0;
@@ -5571,7 +5571,7 @@ final class GameSession {
                 if (var8 != 0) {
                   this.field_l = true;
                 }
-                this.b(var8 != 0, -116);
+                this.activateHoveredOrder(var8 != 0, -116);
                 param5 = this.a(param3, this.field_l, param5, 8186);
               }
               this.field_H = this.b(-19706);
@@ -5638,7 +5638,7 @@ final class GameSession {
         }
     }
 
-    private final int[] a(int param0, int param1, int param2, byte param3) {
+    private final int[] buildRadialSegmentPolygon(int param0, int param1, int param2, byte param3) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -5663,16 +5663,16 @@ final class GameSession {
         for (var10 = 0; var6 > var10; var10++) {
           var11 = var10 << 1;
           var12 = GameKeyHandler.a(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
-          var13 = this.field_t + (GetNumStars.a(var12, (byte) -99) * var9 >> 16);
-          var14 = this.field_I + (var9 * eu.a(var12, 69) >> 16);
+          var13 = this.radialMenuX + (GetNumStars.a(var12, (byte) -99) * var9 >> 16);
+          var14 = this.radialMenuY + (var9 * eu.a(var12, 69) >> 16);
           var17[var11] = var13;
           var8[var11 + 1] = var14;
         }
         for (var10Lifetime1 = 0; var6 > var10Lifetime1; var10Lifetime1++) {
           var11Lifetime1 = (var10Lifetime1 << 1) + var7;
           var12Lifetime1 = GameKeyHandler.a(22433, var5 + var10Lifetime1 * param2 / var6);
-          var13Lifetime1 = this.field_t + (param1 * GetNumStars.a(var12Lifetime1, (byte) -106) >> 16);
-          var14Lifetime1 = this.field_I + (param1 * eu.a(var12Lifetime1, param3 + 188) >> 16);
+          var13Lifetime1 = this.radialMenuX + (param1 * GetNumStars.a(var12Lifetime1, (byte) -106) >> 16);
+          var14Lifetime1 = this.radialMenuY + (param1 * eu.a(var12Lifetime1, param3 + 188) >> 16);
           var17[var11Lifetime1] = var13Lifetime1;
           var8[var11Lifetime1 + 1] = var14Lifetime1;
         }
@@ -5691,7 +5691,7 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0, PartitionZone param1) {
+    private final void drawPartitionZoneDebug(int param0, PartitionZone param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -6014,27 +6014,27 @@ final class GameSession {
         var3 = VoidHunters.field_G;
         if (this.field_p == -1 &&
           SetMachineGunEnergyUsed.field_o[81] &&
-          !this.field_q[81] &&
+          !this.previousKeyStates[81] &&
           GetUseDetailLines.field_o != -1 &&
           GetTorpedoReload.field_q != -1 &&
           (GetBots.field_o & 2) == 0) {
-          this.field_z = true;
-          this.field_I = GetTorpedoReload.field_q;
-          this.field_t = GetUseDetailLines.field_o;
+          this.radialMenuActive = true;
+          this.radialMenuY = GetTorpedoReload.field_q;
+          this.radialMenuX = GetUseDetailLines.field_o;
         } else {
           if (!SetMachineGunEnergyUsed.field_o[81]) {
-            this.field_z = false;
+            this.radialMenuActive = false;
           }
         }
-        if (this.field_z) {
-          this.field_F = this.field_F + 32;
-          if (255 < this.field_F) {
-            this.field_F = 255;
+        if (this.radialMenuActive) {
+          this.radialMenuAlpha = this.radialMenuAlpha + 32;
+          if (255 < this.radialMenuAlpha) {
+            this.radialMenuAlpha = 255;
           }
         } else {
-          this.field_F = this.field_F - 32;
-          if (this.field_F < 0) {
-            this.field_F = 0;
+          this.radialMenuAlpha = this.radialMenuAlpha - 32;
+          if (this.radialMenuAlpha < 0) {
+            this.radialMenuAlpha = 0;
           }
         }
         if (param0 != -17410) {
@@ -6482,7 +6482,7 @@ final class GameSession {
               }
               stackIn_54_1 = (-1 != var5.getDragging(-108)) && (var5.getTargetBlueprint((byte) 28) == null);
               this.a(stackIn_54_1, this.field_E, this.field_P, -65);
-              this.l(15097);
+              this.drawSpecialOrderTooltip(15097);
             }
             var6Lifetime1 = 0;
             var7_ref_lw = (lw) (this.field_P.first(0));
@@ -6502,9 +6502,9 @@ final class GameSession {
             var8 = var7Lifetime1 + CarouselSlotStateDump.field_g;
             var9 = 8;
             var10 = 7680 / var9;
-            if (this.field_F > 0 &&
+            if (this.radialMenuAlpha > 0 &&
               param1) {
-              this.a(-97, var8, var10, var9);
+              this.drawRadialMenuBackground(-97, var8, var10, var9);
             }
             var11 = 0;
             var12 = SetFighterBayAimarc.field_o;
@@ -6521,14 +6521,14 @@ final class GameSession {
               var18 = var12 + (var11 * var16 + 6 * var11);
               var19 = var14;
               var20 = this.getRadialSegmentAngle(false, var9, var15.field_l);
-              if (this.field_F > 0) {
-                var21 = this.field_t + (GetNumStars.a(var20, (byte) 47) * var7Lifetime1 >> 16) - var16 / 2;
-                var22 = -(var17 / 2) + this.field_I + (eu.a(var20, 95) * var7Lifetime1 >> 16);
-                if (this.field_F < 255) {
+              if (this.radialMenuAlpha > 0) {
+                var21 = this.radialMenuX + (GetNumStars.a(var20, (byte) 47) * var7Lifetime1 >> 16) - var16 / 2;
+                var22 = -(var17 / 2) + this.radialMenuY + (eu.a(var20, 95) * var7Lifetime1 >> 16);
+                if (this.radialMenuAlpha < 255) {
                   var23_int = -var18 + var21;
                   var24 = var22 - var19;
-                  var18 = (this.field_F * var23_int >> 8) + var18;
-                  var19 = var19 + (this.field_F * var24 >> 8);
+                  var18 = (this.radialMenuAlpha * var23_int >> 8) + var18;
+                  var19 = var19 + (this.radialMenuAlpha * var24 >> 8);
                 } else {
                   var19 = var22;
                   var18 = var21;
@@ -6635,7 +6635,7 @@ final class GameSession {
               var24Lifetime1 = stackIn_143_0;
               var25 = 0;
               if (var15.field_l < 8) {
-                stackIn_149_0 = (this.field_F > 0) ? 1 : 0;
+                stackIn_149_0 = (this.radialMenuAlpha > 0) ? 1 : 0;
               } else {
                 stackIn_149_0 = 0;
               }
@@ -6697,12 +6697,12 @@ final class GameSession {
                       var33Lifetime1 = -16744305;
                     }
                     if (var26 != 0) {
-                      this.a(var10, var33Lifetime1, var8, -122, this.field_F >> 1, var20);
+                      this.fillRadialSegment(var10, var33Lifetime1, var8, -122, this.radialMenuAlpha >> 1, var20);
                       if (var25 != 0) {
-                        this.a(var10, var33Lifetime1, var8, -62, this.field_F >> 1, var20);
+                        this.fillRadialSegment(var10, var33Lifetime1, var8, -62, this.radialMenuAlpha >> 1, var20);
                       }
                       var34_ref_String = GetBlueprintSaveTime.field_o[var15.field_l];
-                      OpenGlShaderProgram.a(16777215, this.field_F, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
+                      OpenGlShaderProgram.a(16777215, this.radialMenuAlpha, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
                     } else {
                       mmb.field_d[101].draw(var18, var19, 0, var33Lifetime1, 1);
                       if (var25 != 0) {
@@ -6812,7 +6812,7 @@ final class GameSession {
           var15 = 0;
           if (param7 > -74) {
             var26 = (boolean[]) null;
-            GameSession.a((boolean[]) null, (boolean[]) null, -109);
+            GameSession.reportBooleanArrayDifferences((boolean[]) null, (boolean[]) null, -109);
           }
           for (var16 = 0; var16 < param10.length; var16++) {
             var14_intLifetime1 = 0;
@@ -7124,7 +7124,7 @@ final class GameSession {
           var5Lifetime1 = param0.missionState.getPhaseTimer((byte) -123);
           if (param1 != 200) {
             var22 = (Ship) null;
-            this.c((byte) 78, (Ship) null);
+            this.drawControlHints((byte) 78, (Ship) null);
           }
           var6 = param0.missionState.getMissionPhase(8);
           if (4 == var6 ||
@@ -7527,7 +7527,7 @@ final class GameSession {
           AdjustVariableActionFactory.field_a.field_u = var4;
         }
         if (param0 <= 32) {
-          this.a(-112, -67, 51, 21);
+          this.drawRadialMenuBackground(-112, -67, 51, 21);
         }
         if (this.networked) {
           var3Lifetime1 = -2;
@@ -7558,7 +7558,7 @@ final class GameSession {
         }
         if (param0) {
           boolean[] var3 = (boolean[]) null;
-          GameSession.a((boolean[]) null, (boolean[]) null, 123);
+          GameSession.reportBooleanArrayDifferences((boolean[]) null, (boolean[]) null, 123);
         }
     }
 
@@ -7568,7 +7568,7 @@ final class GameSession {
         int var5 = VoidHunters.field_G;
         int var2 = 0;
         if (param0 != 30) {
-          this.field_e = (int[]) null;
+          this.playerChatTimers = (int[]) null;
         }
         while (var2 < GameSnapshotFactory.field_a.length) {
           var3 = GameSnapshotFactory.field_a[var2];
@@ -7636,22 +7636,22 @@ final class GameSession {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawRadialMenuBackground(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = VoidHunters.field_G;
-        int var5 = this.field_F >> 2;
-        SetMissileLauncherEnergyUsed.a(1118481, (byte) 7, this.field_I, (float)(param1 + 2), var5, this.field_t);
+        int var5 = this.radialMenuAlpha >> 2;
+        SetMissileLauncherEnergyUsed.a(1118481, (byte) 7, this.radialMenuY, (float)(param1 + 2), var5, this.radialMenuX);
         int var6 = 20 / ((59 - param0) / 60);
         for (var7 = 0; var7 < param3; var7++) {
           var8 = var7;
           var9 = var8 * 8192 / param3;
-          this.a(param2, 3092271, param1, -108, var5, var9);
+          this.fillRadialSegment(param2, 3092271, param1, -108, var5, var9);
         }
     }
 
-    final static boolean a(boolean[] param0, boolean[] param1, int param2) {
+    final static boolean reportBooleanArrayDifferences(boolean[] param0, boolean[] param1, int param2) {
         try {
           StringBuilder discarded$0 = null;
           int var5 = 0;
@@ -7715,7 +7715,7 @@ final class GameSession {
             discarded$1 = var4.append("}");
             if (param2 > -12) {
               var7 = (boolean[]) null;
-              GameSession.a((boolean[]) null, (boolean[]) null, -20);
+              GameSession.reportBooleanArrayDifferences((boolean[]) null, (boolean[]) null, -20);
             }
             if (var3_intLifetime1 != 0) {
               System.out.println(var4);
@@ -7818,7 +7818,7 @@ final class GameSession {
         var2Lifetime1 = 61 / ((param0 + 72) / 38);
     }
 
-    private final void a(int param0, int[] param1, int param2, int param3, int param4) {
+    private final void drawObjectiveMarker(int param0, int[] param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -8085,12 +8085,12 @@ final class GameSession {
         String var35;
         String var36;
         String var37;
-        qsa var38;
+        ObjectiveMarker var38;
         MissionVariable var39;
         String var40;
         String var41;
         String var42;
-        qsa var43;
+        ObjectiveMarker var43;
         Ship var44;
         Ship var45;
         Ship var46;
@@ -8147,7 +8147,7 @@ final class GameSession {
           if (GetDebrisCarryOver.field_p > 0) {
             for (var13_intLifetime1 = 0; GetDebrisCarryOver.field_p > var13_intLifetime1; var13_intLifetime1++) {
               var38 = SetKeepTeamColours.field_p[var13_intLifetime1];
-              var15 = var38.field_c;
+              var15 = var38.target;
               if (var15 instanceof Ship) {
                 var44 = (Ship) (var15);
                 var17_ref_String = GetSniperCannonAimarc.a((byte) -87, param1, var44) + ":";
@@ -8197,7 +8197,7 @@ final class GameSession {
             var13 = (GameSnapshot) (this.state.carouselInfo.a(this.state.carouselInfo.c((byte) 121) - 1, -87));
             for (var14 = 0; GetDebrisCarryOver.field_p > var14; var14++) {
               var43 = SetKeepTeamColours.field_p[var14];
-              var16 = var43.field_c;
+              var16 = var43.target;
               if (var16 instanceof Ship) {
                 var45 = (Ship) (var16);
                 var18 = GetSniperCannonAimarc.a((byte) -38, param1, var45) + ":";
@@ -8231,8 +8231,8 @@ final class GameSession {
     }
 
     private final boolean isMouseInRadialSegment(int param0, byte param1, int param2, int param3) {
-        int var5 = GetUseDetailLines.field_o - this.field_t;
-        int var6 = GetTorpedoReload.field_q - this.field_I;
+        int var5 = GetUseDetailLines.field_o - this.radialMenuX;
+        int var6 = GetTorpedoReload.field_q - this.radialMenuY;
         int var7 = GameSnapshotFactory.a(var6, (byte) -77, var5);
         int var8 = ar.a(var5, (byte) 112, var6);
         int var9 = -41 / ((param1 - 48) / 45);
@@ -8244,7 +8244,7 @@ final class GameSession {
         return false;
     }
 
-    private final void c(byte param0, Ship param1) {
+    private final void drawControlHints(byte param0, Ship param1) {
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_48_2 = null;
@@ -8331,7 +8331,7 @@ final class GameSession {
               var5_array = new String[]{ct.field_b, uw.field_d, var8};
               var3Lifetime2Lifetime2 = ProxyAuthenticationException.field_b + "<br>" + DirectByteStorage.field_b + "<br>" + var13;
               var6 = var6 + GetPointDefenceLaserProjectiles.a(false, 0);
-              var9 = rca.field_a;
+              var9 = SpawnLocation.field_a;
               SetAutoaim.a(1, 100, 10, 0, 0, var9, 16777215, 100, -114, 0, 0, 0);
             } else {
               if (me.field_r) {
@@ -8376,17 +8376,17 @@ final class GameSession {
         RuntimeException var5 = null;
         try {
           if (param1 >= -76) {
-            this.a((byte) -40, true);
+            this.updateSession((byte) -40, true);
           }
           if (-1 != param2 &&
             SetMachineGunEnergyUsed.field_o[param2] &&
-            !this.field_q[param2]) {
+            !this.previousKeyStates[param2]) {
             if (SetMachineGunEnergyUsed.field_o[82]) {
               return;
             }
             if (this.field_p == -1 &&
               param3) {
-              this.field_z = false;
+              this.radialMenuActive = false;
               this.field_p = param0.field_l;
               return;
             }
@@ -8533,7 +8533,7 @@ final class GameSession {
         }
     }
 
-    private final void a(MissionState param0, Ship param1, boolean param2, GameSnapshot param3, int param4) {
+    private final void drawObjectiveMarkers(MissionState param0, Ship param1, boolean param2, GameSnapshot param3, int param4) {
         int var6_int = 0;
         int var9 = 0;
         RuntimeException stackIn_34_0 = null;
@@ -8546,7 +8546,7 @@ final class GameSession {
         RuntimeException decompiledCaughtException = null;
         ResourceNode[] var6 = null;
         RuntimeException var6_ref = null;
-        qsa var7 = null;
+        ObjectiveMarker var7 = null;
         Object var8 = null;
         int var11 = 0;
         int var12 = 0;
@@ -8570,19 +8570,19 @@ final class GameSession {
           LoadSettings.a(param3, param4, ShipTeamConditionFactory.field_a, (byte) -84, param0);
           for (var6_int = 0; GetDebrisCarryOver.field_p > var6_int; var6_int++) {
             var7 = SetKeepTeamColours.field_p[var6_int];
-            var8 = var7.field_c;
+            var8 = var7.target;
             if (!(var8 instanceof ShipBody)) {
               if (var8 instanceof MapZone) {
                 var15 = (MapZone) (var8);
                 var16 = new int[]{var15.x, var15.width + var15.x, var15.y, var15.y + var15.height};
-                this.a(var15.y + var15.height / 2, var16, -4298, var7.field_a, var15.width / 2 + var15.x);
+                this.drawObjectiveMarker(var15.y + var15.height / 2, var16, -4298, var7.markerType, var15.width / 2 + var15.x);
               }
             } else {
               var14 = (ShipBody) (var8);
               if (param1 == null ||
                 !(param1.getDragging(-118) >= 0) ||
                 param1.getDragging(110) != var14.getId(false)) {
-                this.a(var14.y, var14.getBoundingbox((byte) -94), -4298, var7.field_a, var14.x);
+                this.drawObjectiveMarker(var14.y, var14.getBoundingbox((byte) -94), -4298, var7.markerType, var14.x);
               }
             }
           }
@@ -8605,7 +8605,7 @@ final class GameSession {
               if (var18.team == param4) {
                 var11 = 1;
               }
-              this.a(var18.y, var20, -4298, var11, var18.x);
+              this.drawObjectiveMarker(var18.y, var20, -4298, var11, var18.x);
             }
           }
           return;
@@ -8747,7 +8747,7 @@ final class GameSession {
         this.field_X = false;
         this.field_R = 50;
         this.field_ab = false;
-        this.field_f = false;
+        this.scoreboardVisible = false;
         this.field_n = false;
         this.field_J = -1;
         this.field_o = 0;
@@ -8791,19 +8791,19 @@ final class GameSession {
           this.field_g = 0;
           this.field_r = 0;
           GetDebrisCarryOver.b(false);
-          this.field_q = new boolean[SetMachineGunEnergyUsed.field_o.length];
-          this.field_j = new int[param1.length];
-          this.field_c = new int[param1.length];
-          this.field_e = new int[param1.length];
-          this.field_Y = new int[param1.length];
+          this.previousKeyStates = new boolean[SetMachineGunEnergyUsed.field_o.length];
+          this.lastPlayerShipX = new int[param1.length];
+          this.lastPlayerShipY = new int[param1.length];
+          this.playerChatTimers = new int[param1.length];
+          this.playerChatOffsets = new int[param1.length];
           this.field_u = SetRepairModePower.field_q;
-          for (var8_int = 0; var8_int < this.field_Y.length; var8_int++) {
-            var9 = this.a((byte) 86, 0, var8_int);
+          for (var8_int = 0; var8_int < this.playerChatOffsets.length; var8_int++) {
+            var9 = this.getPlayerChatLines((byte) 86, 0, var8_int);
             if (var9 != null &&
               var9.length != 0) {
-              this.field_Y[var8_int] = var9.length;
+              this.playerChatOffsets[var8_int] = var9.length;
             } else {
-              this.field_Y[var8_int] = -1;
+              this.playerChatOffsets[var8_int] = -1;
             }
           }
           this.field_v = new bv();

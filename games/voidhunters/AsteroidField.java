@@ -5,7 +5,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
     private Asteroid[] asteroids;
     static double field_c;
     static String field_b;
-    private int field_d;
+    private int revision;
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
@@ -44,12 +44,12 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         RuntimeException var3_ref = null;
         try {
           var3 = (AsteroidField) (param1);
-          if (~this.field_d == ~var3.field_d) {
+          if (~this.revision == ~var3.revision) {
             return;
           }
-          var3.field_d = this.field_d;
+          var3.revision = this.revision;
           if (param0 < 54) {
-            this.b(116);
+            this.markChanged(116);
           }
           var3.asteroids = (Asteroid[]) (SpriteDimensions.copyStateArrayByMode(var3.asteroids, this.asteroids, 1, tob.field_o, false));
           return;
@@ -67,7 +67,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final void a(int param0) {
+    final void clearAsteroids(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -85,7 +85,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             break;
           }
           var3 = 13 / ((-10 - param0) / 43);
-          this.b(-119);
+          this.markChanged(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,7 +174,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             var4 = 1;
           }
           if (obfuscationGuard > -19) {
-            AsteroidField.a((byte) 79, (String) null, 92, 121, -57);
+            AsteroidField.getParagraphHeight((byte) 79, (String) null, 92, 121, -57);
           }
           if (var4 != 0) {
             System.out.println("This instance of AsteroidContainer has changed");
@@ -194,7 +194,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadLocalizedTextAndKeyBindings(byte param0, ResourceArchive param1) {
         RuntimeException stackIn_1173_0 = null;
         StringBuilder stackIn_1173_1 = null;
         String stackIn_1174_2 = null;
@@ -534,1343 +534,1343 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         byte[] var2Lifetime331;
         byte[] var2Lifetime332;
         try {
-          MidiEnvelope.field_j = param1;
-          var2 = dqb.a((byte) -59, "text_benefits,0");
+          MidiEnvelope.localizationArchive = param1;
+          var2 = HuffmanCodec.fetchLocalizedResource((byte) -59, "text_benefits,0");
           if (var2 != null) {
-            GetShieldsDirectionalArcParticleSpeedDownshift.field_o[0] = qpa.a((byte) -125, var2);
+            GetShieldsDirectionalArcParticleSpeedDownshift.field_o[0] = Cp1252Strings.decode((byte) -125, var2);
           }
-          var2Lifetime1 = dqb.a((byte) -104, "gameoptlabels,0");
+          var2Lifetime1 = HuffmanCodec.fetchLocalizedResource((byte) -104, "gameoptlabels,0");
           if (null != var2Lifetime1) {
-            DebugSendable.field_d[0] = qpa.a((byte) -125, var2Lifetime1);
+            DebugSendable.field_d[0] = Cp1252Strings.decode((byte) -125, var2Lifetime1);
           }
-          var2Lifetime2 = dqb.a((byte) -84, "gameoptnames,0,0");
+          var2Lifetime2 = HuffmanCodec.fetchLocalizedResource((byte) -84, "gameoptnames,0,0");
           if (null != var2Lifetime2) {
-            GetDebugLineLife.field_o[0][0] = qpa.a((byte) -125, var2Lifetime2);
+            GetDebugLineLife.field_o[0][0] = Cp1252Strings.decode((byte) -125, var2Lifetime2);
           }
-          var2Lifetime3 = dqb.a((byte) -45, "gameoptnames,0,1");
+          var2Lifetime3 = HuffmanCodec.fetchLocalizedResource((byte) -45, "gameoptnames,0,1");
           if (var2Lifetime3 != null) {
-            GetDebugLineLife.field_o[0][1] = qpa.a((byte) -125, var2Lifetime3);
+            GetDebugLineLife.field_o[0][1] = Cp1252Strings.decode((byte) -125, var2Lifetime3);
           }
-          var2Lifetime4 = dqb.a((byte) -76, "gameoptnames,0,2");
+          var2Lifetime4 = HuffmanCodec.fetchLocalizedResource((byte) -76, "gameoptnames,0,2");
           if (var2Lifetime4 != null) {
-            GetDebugLineLife.field_o[0][2] = qpa.a((byte) -125, var2Lifetime4);
+            GetDebugLineLife.field_o[0][2] = Cp1252Strings.decode((byte) -125, var2Lifetime4);
           }
-          var2Lifetime5 = dqb.a((byte) -98, "gameopttooltips,0,0");
+          var2Lifetime5 = HuffmanCodec.fetchLocalizedResource((byte) -98, "gameopttooltips,0,0");
           if (null != var2Lifetime5) {
-            GetBombletSprayRandomness.field_q[0][0] = qpa.a((byte) -125, var2Lifetime5);
+            GetBombletSprayRandomness.field_q[0][0] = Cp1252Strings.decode((byte) -125, var2Lifetime5);
           }
-          var2Lifetime6 = dqb.a((byte) -8, "gameopttooltips,0,1");
+          var2Lifetime6 = HuffmanCodec.fetchLocalizedResource((byte) -8, "gameopttooltips,0,1");
           if (var2Lifetime6 != null) {
-            GetBombletSprayRandomness.field_q[0][1] = qpa.a((byte) -125, var2Lifetime6);
+            GetBombletSprayRandomness.field_q[0][1] = Cp1252Strings.decode((byte) -125, var2Lifetime6);
           }
-          var2Lifetime7 = dqb.a((byte) -48, "gameopttooltips,0,2");
+          var2Lifetime7 = HuffmanCodec.fetchLocalizedResource((byte) -48, "gameopttooltips,0,2");
           if (null != var2Lifetime7) {
-            GetBombletSprayRandomness.field_q[0][2] = qpa.a((byte) -125, var2Lifetime7);
+            GetBombletSprayRandomness.field_q[0][2] = Cp1252Strings.decode((byte) -125, var2Lifetime7);
           }
-          var2Lifetime8 = dqb.a((byte) -99, "practice");
+          var2Lifetime8 = HuffmanCodec.fetchLocalizedResource((byte) -99, "practice");
           if (var2Lifetime8 != null) {
-            SetPhasedEnergyBeamPulsetime.field_p = qpa.a((byte) -125, var2Lifetime8);
+            SetPhasedEnergyBeamPulsetime.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime8);
           }
-          var2Lifetime9 = dqb.a((byte) -31, "multiplayer_lobby");
+          var2Lifetime9 = HuffmanCodec.fetchLocalizedResource((byte) -31, "multiplayer_lobby");
           if (null != var2Lifetime9) {
-            GetAiFiringRangeUpshift.field_p = qpa.a((byte) -125, var2Lifetime9);
+            GetAiFiringRangeUpshift.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime9);
           }
-          var2Lifetime10 = dqb.a((byte) -5, "chat_bar");
+          var2Lifetime10 = HuffmanCodec.fetchLocalizedResource((byte) -5, "chat_bar");
           if (null != var2Lifetime10) {
-            SetWeaponProjectileSpeedMultiply.field_o = qpa.a((byte) -125, var2Lifetime10);
+            SetWeaponProjectileSpeedMultiply.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime10);
           }
-          var2Lifetime11 = dqb.a((byte) -15, "no_votes");
+          var2Lifetime11 = HuffmanCodec.fetchLocalizedResource((byte) -15, "no_votes");
           if (null != var2Lifetime11) {
-            PartitioningManager.field_c = qpa.a((byte) -125, var2Lifetime11);
+            PartitioningManager.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime11);
           }
-          var2Lifetime12 = dqb.a((byte) -102, "voters_colon");
+          var2Lifetime12 = HuffmanCodec.fetchLocalizedResource((byte) -102, "voters_colon");
           if (null != var2Lifetime12) {
-            ShipBodyFactory.field_a = qpa.a((byte) -125, var2Lifetime12);
+            ShipBodyFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime12);
           }
-          var2Lifetime13 = dqb.a((byte) -13, "out_of_sync");
+          var2Lifetime13 = HuffmanCodec.fetchLocalizedResource((byte) -13, "out_of_sync");
           if (var2Lifetime13 != null) {
-            SetHealthBarHeight.field_o = qpa.a((byte) -125, var2Lifetime13);
+            SetHealthBarHeight.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime13);
           }
-          var2Lifetime14 = dqb.a((byte) -46, "sending_state_dump_to_server");
+          var2Lifetime14 = HuffmanCodec.fetchLocalizedResource((byte) -46, "sending_state_dump_to_server");
           if (var2Lifetime14 != null) {
-            SetWeaponParticleSpeedDownshift.field_o = qpa.a((byte) -125, var2Lifetime14);
+            SetWeaponParticleSpeedDownshift.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime14);
           }
-          var2Lifetime15 = dqb.a((byte) -76, "press_control_r_to_reconnect");
+          var2Lifetime15 = HuffmanCodec.fetchLocalizedResource((byte) -76, "press_control_r_to_reconnect");
           if (var2Lifetime15 != null) {
-            GetPhasedEnergyBeamPulseFadetime.field_o = qpa.a((byte) -125, var2Lifetime15);
+            GetPhasedEnergyBeamPulseFadetime.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime15);
           }
-          var2Lifetime16 = dqb.a((byte) -38, "external_ship_design_loaded");
+          var2Lifetime16 = HuffmanCodec.fetchLocalizedResource((byte) -38, "external_ship_design_loaded");
           if (var2Lifetime16 != null) {
-            NetworkArchiveRequest.field_s = qpa.a((byte) -125, var2Lifetime16);
+            NetworkArchiveRequest.field_s = Cp1252Strings.decode((byte) -125, var2Lifetime16);
           }
-          var2Lifetime17 = dqb.a((byte) -66, "need_to_be_in_menu_or_sandbox");
+          var2Lifetime17 = HuffmanCodec.fetchLocalizedResource((byte) -66, "need_to_be_in_menu_or_sandbox");
           if (var2Lifetime17 != null) {
-            SetVariableLabelAction.field_a = qpa.a((byte) -125, var2Lifetime17);
+            SetVariableLabelAction.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime17);
           }
-          var2Lifetime18 = dqb.a((byte) -49, "beta_uppercase");
+          var2Lifetime18 = HuffmanCodec.fetchLocalizedResource((byte) -49, "beta_uppercase");
           if (null != var2Lifetime18) {
-            qpa.a((byte) -125, var2Lifetime18);
+            Cp1252Strings.decode((byte) -125, var2Lifetime18);
           }
-          var2Lifetime19 = dqb.a((byte) -100, "save_confirmation");
+          var2Lifetime19 = HuffmanCodec.fetchLocalizedResource((byte) -100, "save_confirmation");
           if (var2Lifetime19 != null) {
-            veb.field_a = qpa.a((byte) -125, var2Lifetime19);
+            veb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime19);
           }
-          var2Lifetime20 = dqb.a((byte) -4, "scores");
+          var2Lifetime20 = HuffmanCodec.fetchLocalizedResource((byte) -4, "scores");
           if (null != var2Lifetime20) {
-            SetThrusterParticleLife.field_o = qpa.a((byte) -125, var2Lifetime20);
+            SetThrusterParticleLife.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime20);
           }
-          var2Lifetime21 = dqb.a((byte) -126, "chat");
+          var2Lifetime21 = HuffmanCodec.fetchLocalizedResource((byte) -126, "chat");
           if (var2Lifetime21 != null) {
-            SetTeamSelectionSpeedup.field_p = qpa.a((byte) -125, var2Lifetime21);
+            SetTeamSelectionSpeedup.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime21);
           }
-          var2Lifetime22 = dqb.a((byte) -69, "team");
+          var2Lifetime22 = HuffmanCodec.fetchLocalizedResource((byte) -69, "team");
           if (null != var2Lifetime22) {
-            GetDebrisCarryOverPercentage.field_p = qpa.a((byte) -125, var2Lifetime22);
+            GetDebrisCarryOverPercentage.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime22);
           }
-          var2Lifetime23 = dqb.a((byte) -5, "move");
+          var2Lifetime23 = HuffmanCodec.fetchLocalizedResource((byte) -5, "move");
           if (null != var2Lifetime23) {
-            ProxyAuthenticationException.field_b = qpa.a((byte) -125, var2Lifetime23);
+            ProxyAuthenticationException.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime23);
           }
-          var2Lifetime24 = dqb.a((byte) -76, "zoom");
+          var2Lifetime24 = HuffmanCodec.fetchLocalizedResource((byte) -76, "zoom");
           if (var2Lifetime24 != null) {
-            DirectByteStorage.field_b = qpa.a((byte) -125, var2Lifetime24);
+            DirectByteStorage.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime24);
           }
-          var2Lifetime25 = dqb.a((byte) -90, "you_are_spectating");
+          var2Lifetime25 = HuffmanCodec.fetchLocalizedResource((byte) -90, "you_are_spectating");
           if (null != var2Lifetime25) {
-            rca.field_a = qpa.a((byte) -125, var2Lifetime25);
+            SpawnLocation.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime25);
           }
-          var2Lifetime26 = dqb.a((byte) -39, "downloading_at_x");
+          var2Lifetime26 = HuffmanCodec.fetchLocalizedResource((byte) -39, "downloading_at_x");
           if (var2Lifetime26 != null) {
-            GetGrapplingHookRopeBreakLength.field_q = qpa.a((byte) -125, var2Lifetime26);
+            GetGrapplingHookRopeBreakLength.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime26);
           }
-          var2Lifetime27 = dqb.a((byte) -120, "disconnected_for_x_minutes_idle");
+          var2Lifetime27 = HuffmanCodec.fetchLocalizedResource((byte) -120, "disconnected_for_x_minutes_idle");
           if (null != var2Lifetime27) {
-            mmb.field_b = qpa.a((byte) -125, var2Lifetime27);
+            mmb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime27);
           }
-          var2Lifetime28 = dqb.a((byte) -74, "unknown");
+          var2Lifetime28 = HuffmanCodec.fetchLocalizedResource((byte) -74, "unknown");
           if (null != var2Lifetime28) {
-            SetMomentOfInertiaPredivideDownshift.field_o = qpa.a((byte) -125, var2Lifetime28);
+            SetMomentOfInertiaPredivideDownshift.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime28);
           }
-          var2Lifetime29 = dqb.a((byte) -62, "saved_blueprint");
+          var2Lifetime29 = HuffmanCodec.fetchLocalizedResource((byte) -62, "saved_blueprint");
           if (null != var2Lifetime29) {
-            SetShipTeamActionFactory.field_d = qpa.a((byte) -125, var2Lifetime29);
+            SetShipTeamActionFactory.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime29);
           }
-          var2Lifetime30 = dqb.a((byte) -10, "saved_ship");
+          var2Lifetime30 = HuffmanCodec.fetchLocalizedResource((byte) -10, "saved_ship");
           if (null != var2Lifetime30) {
-            GetMissionTimeLimit.field_q = qpa.a((byte) -125, var2Lifetime30);
+            GetMissionTimeLimit.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime30);
           }
-          var2Lifetime31 = dqb.a((byte) -57, "stored_ship");
+          var2Lifetime31 = HuffmanCodec.fetchLocalizedResource((byte) -57, "stored_ship");
           if (null != var2Lifetime31) {
-            deb.field_b = qpa.a((byte) -125, var2Lifetime31);
+            deb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime31);
           }
-          var2Lifetime32 = dqb.a((byte) -10, "become_a_member_to_permenantly_save");
+          var2Lifetime32 = HuffmanCodec.fetchLocalizedResource((byte) -10, "become_a_member_to_permenantly_save");
           if (null != var2Lifetime32) {
-            SetCountermeasureLauncherProjectiles.field_o = qpa.a((byte) -125, var2Lifetime32);
+            SetCountermeasureLauncherProjectiles.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime32);
           }
-          var2Lifetime33 = dqb.a((byte) -55, "ship_too_complex");
+          var2Lifetime33 = HuffmanCodec.fetchLocalizedResource((byte) -55, "ship_too_complex");
           if (null != var2Lifetime33) {
-            SetArmageddonTimerStart.field_o = qpa.a((byte) -125, var2Lifetime33);
+            SetArmageddonTimerStart.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime33);
           }
-          var2Lifetime34 = dqb.a((byte) -112, "ship_complexity");
+          var2Lifetime34 = HuffmanCodec.fetchLocalizedResource((byte) -112, "ship_complexity");
           if (null != var2Lifetime34) {
-            GetMassDriverEnergyUsed.field_o = qpa.a((byte) -125, var2Lifetime34);
+            GetMassDriverEnergyUsed.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime34);
           }
-          var2Lifetime35 = dqb.a((byte) -81, "max_ship_size_reached");
+          var2Lifetime35 = HuffmanCodec.fetchLocalizedResource((byte) -81, "max_ship_size_reached");
           if (var2Lifetime35 != null) {
-            MissionControl.field_a = qpa.a((byte) -125, var2Lifetime35);
+            MissionControl.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime35);
           }
-          var2Lifetime36 = dqb.a((byte) -104, "enemy_ship_spawned");
+          var2Lifetime36 = HuffmanCodec.fetchLocalizedResource((byte) -104, "enemy_ship_spawned");
           if (null != var2Lifetime36) {
-            GetMachineGunPulsetime.field_p = qpa.a((byte) -125, var2Lifetime36);
+            GetMachineGunPulsetime.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime36);
           }
-          var2Lifetime37 = dqb.a((byte) -3, "teams_have_been_balanced");
+          var2Lifetime37 = HuffmanCodec.fetchLocalizedResource((byte) -3, "teams_have_been_balanced");
           if (null != var2Lifetime37) {
-            ResourceArchive.field_b = qpa.a((byte) -125, var2Lifetime37);
+            ResourceArchive.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime37);
           }
-          var2Lifetime38 = dqb.a((byte) -87, "option_state_free");
+          var2Lifetime38 = HuffmanCodec.fetchLocalizedResource((byte) -87, "option_state_free");
           if (null != var2Lifetime38) {
-            DualLinkNode.field_h = qpa.a((byte) -125, var2Lifetime38);
+            DualLinkNode.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime38);
           }
-          var2Lifetime39 = dqb.a((byte) -126, "option_state_new");
+          var2Lifetime39 = HuffmanCodec.fetchLocalizedResource((byte) -126, "option_state_new");
           if (var2Lifetime39 != null) {
-            MapClearanceRectangle.field_f = qpa.a((byte) -125, var2Lifetime39);
+            MapClearanceRectangle.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime39);
           }
-          var2Lifetime40 = dqb.a((byte) -69, "option_state_coming_soon");
+          var2Lifetime40 = HuffmanCodec.fetchLocalizedResource((byte) -69, "option_state_coming_soon");
           if (null != var2Lifetime40) {
-            GetDebrisCollisionDamage.field_o = qpa.a((byte) -125, var2Lifetime40);
+            GetDebrisCollisionDamage.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime40);
           }
-          var2Lifetime41 = dqb.a((byte) -36, "option_state_limited_time_only");
+          var2Lifetime41 = HuffmanCodec.fetchLocalizedResource((byte) -36, "option_state_limited_time_only");
           if (null != var2Lifetime41) {
-            igb.field_b = qpa.a((byte) -125, var2Lifetime41);
+            igb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime41);
           }
-          var2Lifetime42 = dqb.a((byte) -59, "option_state_invisible");
+          var2Lifetime42 = HuffmanCodec.fetchLocalizedResource((byte) -59, "option_state_invisible");
           if (var2Lifetime42 != null) {
-            ppb.field_d = qpa.a((byte) -125, var2Lifetime42);
+            ppb.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime42);
           }
-          var2Lifetime43 = dqb.a((byte) -8, "option_state_for_members");
+          var2Lifetime43 = HuffmanCodec.fetchLocalizedResource((byte) -8, "option_state_for_members");
           if (null != var2Lifetime43) {
-            ti.field_i = qpa.a((byte) -125, var2Lifetime43);
+            ti.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime43);
           }
-          var2Lifetime44 = dqb.a((byte) -81, "option_state_members_only");
+          var2Lifetime44 = HuffmanCodec.fetchLocalizedResource((byte) -81, "option_state_members_only");
           if (null != var2Lifetime44) {
-            ri.field_b = qpa.a((byte) -125, var2Lifetime44);
+            ri.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime44);
           }
-          var2Lifetime45 = dqb.a((byte) -86, "crown_tooltips,4");
+          var2Lifetime45 = HuffmanCodec.fetchLocalizedResource((byte) -86, "crown_tooltips,4");
           if (null != var2Lifetime45) {
-            MonochromeRowCache.field_j[4] = qpa.a((byte) -125, var2Lifetime45);
+            MonochromeRowCache.field_j[4] = Cp1252Strings.decode((byte) -125, var2Lifetime45);
           }
-          var2Lifetime46 = dqb.a((byte) -45, "scoreboard_column_type_names,0");
+          var2Lifetime46 = HuffmanCodec.fetchLocalizedResource((byte) -45, "scoreboard_column_type_names,0");
           if (null != var2Lifetime46) {
-            SetVariableActionFactory.field_e[0] = qpa.a((byte) -125, var2Lifetime46);
+            SetVariableActionFactory.field_e[0] = Cp1252Strings.decode((byte) -125, var2Lifetime46);
           }
-          var2Lifetime47 = dqb.a((byte) -36, "scoreboard_column_type_names,1");
+          var2Lifetime47 = HuffmanCodec.fetchLocalizedResource((byte) -36, "scoreboard_column_type_names,1");
           if (var2Lifetime47 != null) {
-            SetVariableActionFactory.field_e[1] = qpa.a((byte) -125, var2Lifetime47);
+            SetVariableActionFactory.field_e[1] = Cp1252Strings.decode((byte) -125, var2Lifetime47);
           }
-          var2Lifetime48 = dqb.a((byte) -6, "scoreboard_column_type_names,2");
+          var2Lifetime48 = HuffmanCodec.fetchLocalizedResource((byte) -6, "scoreboard_column_type_names,2");
           if (var2Lifetime48 != null) {
-            SetVariableActionFactory.field_e[2] = qpa.a((byte) -125, var2Lifetime48);
+            SetVariableActionFactory.field_e[2] = Cp1252Strings.decode((byte) -125, var2Lifetime48);
           }
-          var2Lifetime49 = dqb.a((byte) -103, "scoreboard_column_type_names,3");
+          var2Lifetime49 = HuffmanCodec.fetchLocalizedResource((byte) -103, "scoreboard_column_type_names,3");
           if (var2Lifetime49 != null) {
-            SetVariableActionFactory.field_e[3] = qpa.a((byte) -125, var2Lifetime49);
+            SetVariableActionFactory.field_e[3] = Cp1252Strings.decode((byte) -125, var2Lifetime49);
           }
-          var2Lifetime50 = dqb.a((byte) -35, "scoreboard_column_type_names,4");
+          var2Lifetime50 = HuffmanCodec.fetchLocalizedResource((byte) -35, "scoreboard_column_type_names,4");
           if (null != var2Lifetime50) {
-            SetVariableActionFactory.field_e[4] = qpa.a((byte) -125, var2Lifetime50);
+            SetVariableActionFactory.field_e[4] = Cp1252Strings.decode((byte) -125, var2Lifetime50);
           }
-          var2Lifetime51 = dqb.a((byte) -40, "scoreboard_column_type_names,5");
+          var2Lifetime51 = HuffmanCodec.fetchLocalizedResource((byte) -40, "scoreboard_column_type_names,5");
           if (null != var2Lifetime51) {
-            SetVariableActionFactory.field_e[5] = qpa.a((byte) -125, var2Lifetime51);
+            SetVariableActionFactory.field_e[5] = Cp1252Strings.decode((byte) -125, var2Lifetime51);
           }
-          var2Lifetime52 = dqb.a((byte) -114, "controls");
+          var2Lifetime52 = HuffmanCodec.fetchLocalizedResource((byte) -114, "controls");
           if (var2Lifetime52 != null) {
-            HardpointMatch.field_a = qpa.a((byte) -125, var2Lifetime52);
+            HardpointMatch.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime52);
           }
-          var2Lifetime53 = dqb.a((byte) -37, "instructions_pages,0");
+          var2Lifetime53 = HuffmanCodec.fetchLocalizedResource((byte) -37, "instructions_pages,0");
           if (var2Lifetime53 != null) {
-            mb.field_k[0] = qpa.a((byte) -125, var2Lifetime53);
+            mb.field_k[0] = Cp1252Strings.decode((byte) -125, var2Lifetime53);
           }
-          var2Lifetime54 = dqb.a((byte) -117, "instructions_pages,1");
+          var2Lifetime54 = HuffmanCodec.fetchLocalizedResource((byte) -117, "instructions_pages,1");
           if (var2Lifetime54 != null) {
-            mb.field_k[1] = qpa.a((byte) -125, var2Lifetime54);
+            mb.field_k[1] = Cp1252Strings.decode((byte) -125, var2Lifetime54);
           }
-          var2Lifetime55 = dqb.a((byte) -44, "instructions_pages,2");
+          var2Lifetime55 = HuffmanCodec.fetchLocalizedResource((byte) -44, "instructions_pages,2");
           if (var2Lifetime55 != null) {
-            mb.field_k[2] = qpa.a((byte) -125, var2Lifetime55);
+            mb.field_k[2] = Cp1252Strings.decode((byte) -125, var2Lifetime55);
           }
-          var2Lifetime56 = dqb.a((byte) -63, "instructions_pages,3");
+          var2Lifetime56 = HuffmanCodec.fetchLocalizedResource((byte) -63, "instructions_pages,3");
           if (null != var2Lifetime56) {
-            mb.field_k[3] = qpa.a((byte) -125, var2Lifetime56);
+            mb.field_k[3] = Cp1252Strings.decode((byte) -125, var2Lifetime56);
           }
-          var2Lifetime57 = dqb.a((byte) -105, "instructions_pages,4");
+          var2Lifetime57 = HuffmanCodec.fetchLocalizedResource((byte) -105, "instructions_pages,4");
           if (null != var2Lifetime57) {
-            mb.field_k[4] = qpa.a((byte) -125, var2Lifetime57);
+            mb.field_k[4] = Cp1252Strings.decode((byte) -125, var2Lifetime57);
           }
-          var2Lifetime58 = dqb.a((byte) -106, "keycode_move_forward");
+          var2Lifetime58 = HuffmanCodec.fetchLocalizedResource((byte) -106, "keycode_move_forward");
           if (var2Lifetime58 != null) {
             SetFixedaim.field_q = var2Lifetime58[0] & 255;
           }
-          var2Lifetime59 = dqb.a((byte) -59, "keycode_move_backward");
+          var2Lifetime59 = HuffmanCodec.fetchLocalizedResource((byte) -59, "keycode_move_backward");
           if (null != var2Lifetime59) {
             SetCountermeasureLauncherAimspeed.field_q = 255 & var2Lifetime59[0];
           }
-          var2Lifetime60 = dqb.a((byte) -4, "keycode_move_rotate_left");
+          var2Lifetime60 = HuffmanCodec.fetchLocalizedResource((byte) -4, "keycode_move_rotate_left");
           if (var2Lifetime60 != null) {
             SetSalvoaim.field_p = var2Lifetime60[0] & 255;
           }
-          var2Lifetime61 = dqb.a((byte) -123, "keycode_move_rotate_right");
+          var2Lifetime61 = HuffmanCodec.fetchLocalizedResource((byte) -123, "keycode_move_rotate_right");
           if (null != var2Lifetime61) {
             UnsupportedGpuMaterialEffect.field_f = var2Lifetime61[0] & 255;
           }
-          var2Lifetime62 = dqb.a((byte) -47, "keycode_move_strafe_left");
+          var2Lifetime62 = HuffmanCodec.fetchLocalizedResource((byte) -47, "keycode_move_strafe_left");
           if (var2Lifetime62 != null) {
             vn.field_m = 255 & var2Lifetime62[0];
           }
-          var2Lifetime63 = dqb.a((byte) -84, "keycode_move_strafe_right");
+          var2Lifetime63 = HuffmanCodec.fetchLocalizedResource((byte) -84, "keycode_move_strafe_right");
           if (var2Lifetime63 != null) {
             SetUseRectOutline.field_o = 255 & var2Lifetime63[0];
           }
-          var2Lifetime64 = dqb.a((byte) -25, "keycode_grapples_fire");
+          var2Lifetime64 = HuffmanCodec.fetchLocalizedResource((byte) -25, "keycode_grapples_fire");
           if (var2Lifetime64 != null) {
             SetMassDriverAimarc.field_o = 255 & var2Lifetime64[0];
           }
-          var2Lifetime65 = dqb.a((byte) -55, "keycode_missiles_fire");
+          var2Lifetime65 = HuffmanCodec.fetchLocalizedResource((byte) -55, "keycode_missiles_fire");
           if (var2Lifetime65 != null) {
             GetResourceNodeCaptureTime.field_o = var2Lifetime65[0] & 255;
           }
-          var2Lifetime66 = dqb.a((byte) -122, "keycode_shields_toggle");
+          var2Lifetime66 = HuffmanCodec.fetchLocalizedResource((byte) -122, "keycode_shields_toggle");
           if (null != var2Lifetime66) {
             GetSpinningBladeAimarc.field_r = var2Lifetime66[0] & 255;
           }
-          var2Lifetime67 = dqb.a((byte) -107, "keycode_repair_mode");
+          var2Lifetime67 = HuffmanCodec.fetchLocalizedResource((byte) -107, "keycode_repair_mode");
           if (var2Lifetime67 != null) {
             SetSelfDestructActivateCooldown.field_o = var2Lifetime67[0] & 255;
           }
-          var2Lifetime68 = dqb.a((byte) -57, "keycode_boosters_fire");
+          var2Lifetime68 = HuffmanCodec.fetchLocalizedResource((byte) -57, "keycode_boosters_fire");
           if (var2Lifetime68 != null) {
             GetUseDetailLines.field_p = 255 & var2Lifetime68[0];
           }
-          var2Lifetime69 = dqb.a((byte) -78, "keycode_fighters_launch");
+          var2Lifetime69 = HuffmanCodec.fetchLocalizedResource((byte) -78, "keycode_fighters_launch");
           if (null != var2Lifetime69) {
             SetPedrosRepairMode.field_p = var2Lifetime69[0] & 255;
           }
-          var2Lifetime70 = dqb.a((byte) -44, "keycode_countermeasures_launch");
+          var2Lifetime70 = HuffmanCodec.fetchLocalizedResource((byte) -44, "keycode_countermeasures_launch");
           if (null != var2Lifetime70) {
             cbb.field_h = 255 & var2Lifetime70[0];
           }
-          var2Lifetime71 = dqb.a((byte) -94, "keycode_self_destruct_prepare_toggle");
+          var2Lifetime71 = HuffmanCodec.fetchLocalizedResource((byte) -94, "keycode_self_destruct_prepare_toggle");
           if (var2Lifetime71 != null) {
             GetPointDefenceLaserRandomness.field_p = var2Lifetime71[0] & 255;
           }
-          var2Lifetime72 = dqb.a((byte) -101, "keycode_self_destruct_activate");
+          var2Lifetime72 = HuffmanCodec.fetchLocalizedResource((byte) -101, "keycode_self_destruct_activate");
           if (var2Lifetime72 != null) {
             GameKeyHandler.field_a = var2Lifetime72[0] & 255;
           }
-          var2Lifetime73 = dqb.a((byte) -100, "keycode_spawn_enemy");
+          var2Lifetime73 = HuffmanCodec.fetchLocalizedResource((byte) -100, "keycode_spawn_enemy");
           if (var2Lifetime73 != null) {
             GetMomentOfInertiaPredivideDownshift.field_r = var2Lifetime73[0] & 255;
           }
-          var2Lifetime74 = dqb.a((byte) -19, "keycode_save_blueprint");
+          var2Lifetime74 = HuffmanCodec.fetchLocalizedResource((byte) -19, "keycode_save_blueprint");
           if (null != var2Lifetime74) {
             SetDetachmentMode.field_p = var2Lifetime74[0] & 255;
           }
-          var2Lifetime75 = dqb.a((byte) -81, "keycode_load_blueprint");
+          var2Lifetime75 = HuffmanCodec.fetchLocalizedResource((byte) -81, "keycode_load_blueprint");
           if (null != var2Lifetime75) {
             gg.field_j = var2Lifetime75[0] & 255;
           }
-          var2Lifetime76 = dqb.a((byte) -45, "keycode_chat_all_primary");
+          var2Lifetime76 = HuffmanCodec.fetchLocalizedResource((byte) -45, "keycode_chat_all_primary");
           if (var2Lifetime76 != null) {
             GetHealthBarWidth.field_q = var2Lifetime76[0] & 255;
           }
-          var2Lifetime77 = dqb.a((byte) -84, "keycode_chat_team_primary");
+          var2Lifetime77 = HuffmanCodec.fetchLocalizedResource((byte) -84, "keycode_chat_team_primary");
           if (null != var2Lifetime77) {
             GetGrappleDebris.field_p = var2Lifetime77[0] & 255;
           }
-          var2Lifetime78 = dqb.a((byte) -114, "keycode_scoreboard_primary");
+          var2Lifetime78 = HuffmanCodec.fetchLocalizedResource((byte) -114, "keycode_scoreboard_primary");
           if (var2Lifetime78 != null) {
             DebugRequestFactory.field_a = var2Lifetime78[0] & 255;
           }
-          var2Lifetime79 = dqb.a((byte) -16, "keycode_chat_all_secondary");
+          var2Lifetime79 = HuffmanCodec.fetchLocalizedResource((byte) -16, "keycode_chat_all_secondary");
           if (var2Lifetime79 != null) {
             vu.field_Db = 255 & var2Lifetime79[0];
           }
-          var2Lifetime80 = dqb.a((byte) -49, "keycode_chat_team_secondary");
+          var2Lifetime80 = HuffmanCodec.fetchLocalizedResource((byte) -49, "keycode_chat_team_secondary");
           if (var2Lifetime80 != null) {
             GetBombletSprayProjectiles.field_p = var2Lifetime80[0] & 255;
           }
-          var2Lifetime81 = dqb.a((byte) -27, "keycode_scoreboard_secondary");
+          var2Lifetime81 = HuffmanCodec.fetchLocalizedResource((byte) -27, "keycode_scoreboard_secondary");
           if (null != var2Lifetime81) {
             GrappleLauncherBehaviour.field_b = var2Lifetime81[0] & 255;
           }
-          var2Lifetime82 = dqb.a((byte) -75, "keycode_zoom_in");
+          var2Lifetime82 = HuffmanCodec.fetchLocalizedResource((byte) -75, "keycode_zoom_in");
           if (var2Lifetime82 != null) {
             GetUseCircleOutline.field_p = var2Lifetime82[0] & 255;
           }
-          var2Lifetime83 = dqb.a((byte) -27, "keycode_zoom_in_2");
+          var2Lifetime83 = HuffmanCodec.fetchLocalizedResource((byte) -27, "keycode_zoom_in_2");
           if (var2Lifetime83 != null) {
             GetPointDefenceLaserRandomness.field_r = 255 & var2Lifetime83[0];
           }
-          var2Lifetime84 = dqb.a((byte) -93, "keycode_zoom_out");
+          var2Lifetime84 = HuffmanCodec.fetchLocalizedResource((byte) -93, "keycode_zoom_out");
           if (null != var2Lifetime84) {
             GetTorpedoProjectileLife.field_o = var2Lifetime84[0] & 255;
           }
-          var2Lifetime85 = dqb.a((byte) -50, "keycode_zoom_out_2");
+          var2Lifetime85 = HuffmanCodec.fetchLocalizedResource((byte) -50, "keycode_zoom_out_2");
           if (var2Lifetime85 != null) {
             PlayerAction.field_n = var2Lifetime85[0] & 255;
           }
-          var2Lifetime86 = dqb.a((byte) -40, "cursor_keys_shortname");
+          var2Lifetime86 = HuffmanCodec.fetchLocalizedResource((byte) -40, "cursor_keys_shortname");
           if (var2Lifetime86 != null) {
-            ct.field_b = qpa.a((byte) -125, var2Lifetime86);
+            ct.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime86);
           }
-          var2Lifetime87 = dqb.a((byte) -106, "mouse_wheel_shortname");
+          var2Lifetime87 = HuffmanCodec.fetchLocalizedResource((byte) -106, "mouse_wheel_shortname");
           if (var2Lifetime87 != null) {
-            uw.field_d = qpa.a((byte) -125, var2Lifetime87);
+            uw.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime87);
           }
-          var2Lifetime88 = dqb.a((byte) -105, "options");
+          var2Lifetime88 = HuffmanCodec.fetchLocalizedResource((byte) -105, "options");
           if (var2Lifetime88 != null) {
-            SetCountermeasureLauncherFireForce.field_q = qpa.a((byte) -125, var2Lifetime88);
+            SetCountermeasureLauncherFireForce.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime88);
           }
-          var2Lifetime89 = dqb.a((byte) -109, "editor");
+          var2Lifetime89 = HuffmanCodec.fetchLocalizedResource((byte) -109, "editor");
           if (var2Lifetime89 != null) {
-            veb.field_c = qpa.a((byte) -125, var2Lifetime89);
+            veb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime89);
           }
-          var2Lifetime90 = dqb.a((byte) -33, "reloading");
+          var2Lifetime90 = HuffmanCodec.fetchLocalizedResource((byte) -33, "reloading");
           if (var2Lifetime90 != null) {
-            qpa.a((byte) -125, var2Lifetime90);
+            Cp1252Strings.decode((byte) -125, var2Lifetime90);
           }
-          var2Lifetime91 = dqb.a((byte) -75, "missile_lock");
+          var2Lifetime91 = HuffmanCodec.fetchLocalizedResource((byte) -75, "missile_lock");
           if (var2Lifetime91 != null) {
-            SpawnChoiceFactory.field_a = qpa.a((byte) -125, var2Lifetime91);
+            SpawnChoiceFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime91);
           }
-          var2Lifetime92 = dqb.a((byte) -100, "armageddon_in");
+          var2Lifetime92 = HuffmanCodec.fetchLocalizedResource((byte) -100, "armageddon_in");
           if (var2Lifetime92 != null) {
-            bt.field_b = qpa.a((byte) -125, var2Lifetime92);
+            bt.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime92);
           }
-          var2Lifetime93 = dqb.a((byte) -124, "next_mission_colon");
+          var2Lifetime93 = HuffmanCodec.fetchLocalizedResource((byte) -124, "next_mission_colon");
           if (var2Lifetime93 != null) {
-            pfb.field_a = qpa.a((byte) -125, var2Lifetime93);
+            pfb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime93);
           }
-          var2Lifetime94 = dqb.a((byte) -44, "round_x");
+          var2Lifetime94 = HuffmanCodec.fetchLocalizedResource((byte) -44, "round_x");
           if (null != var2Lifetime94) {
-            bw.field_c = qpa.a((byte) -125, var2Lifetime94);
+            bw.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime94);
           }
-          var2Lifetime95 = dqb.a((byte) -65, "waiting_for_players");
+          var2Lifetime95 = HuffmanCodec.fetchLocalizedResource((byte) -65, "waiting_for_players");
           if (null != var2Lifetime95) {
-            kmb.field_d = qpa.a((byte) -125, var2Lifetime95);
+            kmb.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime95);
           }
-          var2Lifetime96 = dqb.a((byte) -116, "respawning_timer");
+          var2Lifetime96 = HuffmanCodec.fetchLocalizedResource((byte) -116, "respawning_timer");
           if (var2Lifetime96 != null) {
-            qpa.a((byte) -125, var2Lifetime96);
+            Cp1252Strings.decode((byte) -125, var2Lifetime96);
           }
-          var2Lifetime97 = dqb.a((byte) -70, "spawning_as");
+          var2Lifetime97 = HuffmanCodec.fetchLocalizedResource((byte) -70, "spawning_as");
           if (var2Lifetime97 != null) {
-            qpa.a((byte) -125, var2Lifetime97);
+            Cp1252Strings.decode((byte) -125, var2Lifetime97);
           }
-          var2Lifetime98 = dqb.a((byte) -54, "respawn_selection_hint");
+          var2Lifetime98 = HuffmanCodec.fetchLocalizedResource((byte) -54, "respawn_selection_hint");
           if (var2Lifetime98 != null) {
-            qpa.a((byte) -125, var2Lifetime98);
+            Cp1252Strings.decode((byte) -125, var2Lifetime98);
           }
-          var2Lifetime99 = dqb.a((byte) -93, "team_cannot_respawn");
+          var2Lifetime99 = HuffmanCodec.fetchLocalizedResource((byte) -93, "team_cannot_respawn");
           if (var2Lifetime99 != null) {
-            llb.field_H = qpa.a((byte) -125, var2Lifetime99);
+            llb.field_H = Cp1252Strings.decode((byte) -125, var2Lifetime99);
           }
-          var2Lifetime100 = dqb.a((byte) -46, "all_teams_cannot_respawn");
+          var2Lifetime100 = HuffmanCodec.fetchLocalizedResource((byte) -46, "all_teams_cannot_respawn");
           if (var2Lifetime100 != null) {
-            GetLaserReload.field_o = qpa.a((byte) -125, var2Lifetime100);
+            GetLaserReload.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime100);
           }
-          var2Lifetime101 = dqb.a((byte) -56, "repair_mode_in_x");
+          var2Lifetime101 = HuffmanCodec.fetchLocalizedResource((byte) -56, "repair_mode_in_x");
           if (var2Lifetime101 != null) {
-            SetMessageFadetime.field_o = qpa.a((byte) -125, var2Lifetime101);
+            SetMessageFadetime.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime101);
           }
-          var2Lifetime102 = dqb.a((byte) -66, "repairing");
+          var2Lifetime102 = HuffmanCodec.fetchLocalizedResource((byte) -66, "repairing");
           if (null != var2Lifetime102) {
-            qd.field_c = qpa.a((byte) -125, var2Lifetime102);
+            qd.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime102);
           }
-          var2Lifetime103 = dqb.a((byte) -71, "mouse_over_to_repair");
+          var2Lifetime103 = HuffmanCodec.fetchLocalizedResource((byte) -71, "mouse_over_to_repair");
           if (null != var2Lifetime103) {
-            SetPlayerRepairTime.field_o = qpa.a((byte) -125, var2Lifetime103);
+            SetPlayerRepairTime.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime103);
           }
-          var2Lifetime104 = dqb.a((byte) -2, "combat_mode_in_x");
+          var2Lifetime104 = HuffmanCodec.fetchLocalizedResource((byte) -2, "combat_mode_in_x");
           if (null != var2Lifetime104) {
-            SetRepairModePower.field_o = qpa.a((byte) -125, var2Lifetime104);
+            SetRepairModePower.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime104);
           }
-          var2Lifetime105 = dqb.a((byte) -9, "missile_locked_on");
+          var2Lifetime105 = HuffmanCodec.fetchLocalizedResource((byte) -9, "missile_locked_on");
           if (null != var2Lifetime105) {
-            qpa.a((byte) -125, var2Lifetime105);
+            Cp1252Strings.decode((byte) -125, var2Lifetime105);
           }
-          var2Lifetime106 = dqb.a((byte) -125, "TYPE_WEAPON");
+          var2Lifetime106 = HuffmanCodec.fetchLocalizedResource((byte) -125, "TYPE_WEAPON");
           if (var2Lifetime106 != null) {
-            uf.field_F = qpa.a((byte) -125, var2Lifetime106);
+            uf.field_F = Cp1252Strings.decode((byte) -125, var2Lifetime106);
           }
-          var2Lifetime107 = dqb.a((byte) -110, "TYPE_DEFENCE");
+          var2Lifetime107 = HuffmanCodec.fetchLocalizedResource((byte) -110, "TYPE_DEFENCE");
           if (null != var2Lifetime107) {
-            GetBombletSprayProjectileLife.field_r = qpa.a((byte) -125, var2Lifetime107);
+            GetBombletSprayProjectileLife.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime107);
           }
-          var2Lifetime108 = dqb.a((byte) -126, "TYPE_HULL");
+          var2Lifetime108 = HuffmanCodec.fetchLocalizedResource((byte) -126, "TYPE_HULL");
           if (null != var2Lifetime108) {
-            qpa.a((byte) -125, var2Lifetime108);
+            Cp1252Strings.decode((byte) -125, var2Lifetime108);
           }
-          var2Lifetime109 = dqb.a((byte) -28, "TYPE_ARMOUR");
+          var2Lifetime109 = HuffmanCodec.fetchLocalizedResource((byte) -28, "TYPE_ARMOUR");
           if (null != var2Lifetime109) {
-            DebugMessage.field_d = qpa.a((byte) -125, var2Lifetime109);
+            DebugMessage.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime109);
           }
-          var2Lifetime110 = dqb.a((byte) -43, "TYPE_SPECIAL_WEAPON");
+          var2Lifetime110 = HuffmanCodec.fetchLocalizedResource((byte) -43, "TYPE_SPECIAL_WEAPON");
           if (null != var2Lifetime110) {
-            SetTorpedoProjectileDamage.field_o = qpa.a((byte) -125, var2Lifetime110);
+            SetTorpedoProjectileDamage.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime110);
           }
-          var2Lifetime111 = dqb.a((byte) -115, "TYPE_THRUSTER");
+          var2Lifetime111 = HuffmanCodec.fetchLocalizedResource((byte) -115, "TYPE_THRUSTER");
           if (var2Lifetime111 != null) {
-            qpa.a((byte) -125, var2Lifetime111);
+            Cp1252Strings.decode((byte) -125, var2Lifetime111);
           }
-          var2Lifetime112 = dqb.a((byte) -97, "TYPE_OTHER");
+          var2Lifetime112 = HuffmanCodec.fetchLocalizedResource((byte) -97, "TYPE_OTHER");
           if (var2Lifetime112 != null) {
-            qpa.a((byte) -125, var2Lifetime112);
+            Cp1252Strings.decode((byte) -125, var2Lifetime112);
           }
-          var2Lifetime113 = dqb.a((byte) -90, "COMPONENT_USE_THRUSTER_STANDARD_TEXT");
+          var2Lifetime113 = HuffmanCodec.fetchLocalizedResource((byte) -90, "COMPONENT_USE_THRUSTER_STANDARD_TEXT");
           if (null != var2Lifetime113) {
-            GetSpinningBladeAimspeed.field_o = qpa.a((byte) -125, var2Lifetime113);
+            GetSpinningBladeAimspeed.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime113);
           }
-          var2Lifetime114 = dqb.a((byte) -27, "COMPONENT_USE_WEAPON_MASSDRIVER_TEXT");
+          var2Lifetime114 = HuffmanCodec.fetchLocalizedResource((byte) -27, "COMPONENT_USE_WEAPON_MASSDRIVER_TEXT");
           if (var2Lifetime114 != null) {
-            CarouselSystemEvent.field_a = qpa.a((byte) -125, var2Lifetime114);
+            CarouselSystemEvent.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime114);
           }
-          var2Lifetime115 = dqb.a((byte) -71, "COMPONENT_USE_WEAPON_PLASMABALL_TEXT");
+          var2Lifetime115 = HuffmanCodec.fetchLocalizedResource((byte) -71, "COMPONENT_USE_WEAPON_PLASMABALL_TEXT");
           if (null != var2Lifetime115) {
-            jw.field_a = qpa.a((byte) -125, var2Lifetime115);
+            jw.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime115);
           }
-          var2Lifetime116 = dqb.a((byte) -77, "COMPONENT_USE_WEAPON_FIGHTERBAY_TEXT");
+          var2Lifetime116 = HuffmanCodec.fetchLocalizedResource((byte) -77, "COMPONENT_USE_WEAPON_FIGHTERBAY_TEXT");
           if (var2Lifetime116 != null) {
-            VertexAttribute.field_n = qpa.a((byte) -125, var2Lifetime116);
+            VertexAttribute.field_n = Cp1252Strings.decode((byte) -125, var2Lifetime116);
           }
-          var2Lifetime117 = dqb.a((byte) -77, "COMPONENT_USE_WEAPON_SPINNING_BLADE_TEXT");
+          var2Lifetime117 = HuffmanCodec.fetchLocalizedResource((byte) -77, "COMPONENT_USE_WEAPON_SPINNING_BLADE_TEXT");
           if (var2Lifetime117 != null) {
-            SetPhysicsCollisionPhantomForceMultiplier.field_o = qpa.a((byte) -125, var2Lifetime117);
+            SetPhysicsCollisionPhantomForceMultiplier.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime117);
           }
-          var2Lifetime118 = dqb.a((byte) -83, "COMPONENT_USE_WEAPON_BOMBLET_SPRAY_TEXT");
+          var2Lifetime118 = HuffmanCodec.fetchLocalizedResource((byte) -83, "COMPONENT_USE_WEAPON_BOMBLET_SPRAY_TEXT");
           if (null != var2Lifetime118) {
-            GetSniperCannonProjectileLife.field_o = qpa.a((byte) -125, var2Lifetime118);
+            GetSniperCannonProjectileLife.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime118);
           }
-          var2Lifetime119 = dqb.a((byte) -63, "COMPONENT_USE_WEAPON_LASER_BEAM_TEXT");
+          var2Lifetime119 = HuffmanCodec.fetchLocalizedResource((byte) -63, "COMPONENT_USE_WEAPON_LASER_BEAM_TEXT");
           if (null != var2Lifetime119) {
-            Hardpoint.field_b = qpa.a((byte) -125, var2Lifetime119);
+            Hardpoint.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime119);
           }
-          var2Lifetime120 = dqb.a((byte) -47, "COMPONENT_USE_WEAPON_SNIPER_CANNON_TEXT");
+          var2Lifetime120 = HuffmanCodec.fetchLocalizedResource((byte) -47, "COMPONENT_USE_WEAPON_SNIPER_CANNON_TEXT");
           if (var2Lifetime120 != null) {
-            RemoveEventActionFactory.field_c = qpa.a((byte) -125, var2Lifetime120);
+            RemoveEventActionFactory.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime120);
           }
-          var2Lifetime121 = dqb.a((byte) -125, "COMPONENT_USE_WEAPON_GRAPPLING_HOOK_TEXT");
+          var2Lifetime121 = HuffmanCodec.fetchLocalizedResource((byte) -125, "COMPONENT_USE_WEAPON_GRAPPLING_HOOK_TEXT");
           if (null != var2Lifetime121) {
-            SetBombletSprayAimspeed.field_o = qpa.a((byte) -125, var2Lifetime121);
+            SetBombletSprayAimspeed.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime121);
           }
-          var2Lifetime122 = dqb.a((byte) -98, "COMPONENT_USE_WEAPON_MISSILE_LAUNCHER_TEXT");
+          var2Lifetime122 = HuffmanCodec.fetchLocalizedResource((byte) -98, "COMPONENT_USE_WEAPON_MISSILE_LAUNCHER_TEXT");
           if (var2Lifetime122 != null) {
-            DebrisFactory.field_b = qpa.a((byte) -125, var2Lifetime122);
+            DebrisFactory.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime122);
           }
-          var2Lifetime123 = dqb.a((byte) -44, "COMPONENT_USE_HULL_TEXT");
+          var2Lifetime123 = HuffmanCodec.fetchLocalizedResource((byte) -44, "COMPONENT_USE_HULL_TEXT");
           if (var2Lifetime123 != null) {
-            fib.field_h = qpa.a((byte) -125, var2Lifetime123);
+            OpenGlEnvironmentMappedWaterEffect.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime123);
           }
-          var2Lifetime124 = dqb.a((byte) -33, "COMPONENT_USE_ARMOUR_TEXT");
+          var2Lifetime124 = HuffmanCodec.fetchLocalizedResource((byte) -33, "COMPONENT_USE_ARMOUR_TEXT");
           if (var2Lifetime124 != null) {
-            SetSpecialOrderBoxHeight.field_q = qpa.a((byte) -125, var2Lifetime124);
+            SetSpecialOrderBoxHeight.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime124);
           }
-          var2Lifetime125 = dqb.a((byte) -47, "COMPONENT_USE_POWER_PLANT_TEXT");
+          var2Lifetime125 = HuffmanCodec.fetchLocalizedResource((byte) -47, "COMPONENT_USE_POWER_PLANT_TEXT");
           if (var2Lifetime125 != null) {
-            ifa.field_h = qpa.a((byte) -125, var2Lifetime125);
+            ifa.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime125);
           }
-          var2Lifetime126 = dqb.a((byte) -5, "COMPONENT_USE_ENERGY_SHIELD_DIRECTIONAL_TEXT");
+          var2Lifetime126 = HuffmanCodec.fetchLocalizedResource((byte) -5, "COMPONENT_USE_ENERGY_SHIELD_DIRECTIONAL_TEXT");
           if (var2Lifetime126 != null) {
-            OpenGlPostProcessor.field_d = qpa.a((byte) -125, var2Lifetime126);
+            OpenGlPostProcessor.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime126);
           }
-          var2Lifetime127 = dqb.a((byte) -38, "COMPONENT_USE_POINT_DEFENCE_LASER_TEXT");
+          var2Lifetime127 = HuffmanCodec.fetchLocalizedResource((byte) -38, "COMPONENT_USE_POINT_DEFENCE_LASER_TEXT");
           if (var2Lifetime127 != null) {
-            GetMissionVariablesHudY.field_p = qpa.a((byte) -125, var2Lifetime127);
+            GetMissionVariablesHudY.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime127);
           }
-          var2Lifetime128 = dqb.a((byte) -52, "COMPONENT_USE_COUNTERMEASURE_TEXT");
+          var2Lifetime128 = HuffmanCodec.fetchLocalizedResource((byte) -52, "COMPONENT_USE_COUNTERMEASURE_TEXT");
           if (null != var2Lifetime128) {
-            nva.field_I = qpa.a((byte) -125, var2Lifetime128);
+            nva.field_I = Cp1252Strings.decode((byte) -125, var2Lifetime128);
           }
-          var2Lifetime129 = dqb.a((byte) -120, "COMPONENT_USE_THRUSTER_BOOSTER_TEXT");
+          var2Lifetime129 = HuffmanCodec.fetchLocalizedResource((byte) -120, "COMPONENT_USE_THRUSTER_BOOSTER_TEXT");
           if (null != var2Lifetime129) {
-            jjb.field_f = qpa.a((byte) -125, var2Lifetime129);
+            jjb.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime129);
           }
-          var2Lifetime130 = dqb.a((byte) -7, "COMPONENT_USE_SPECIAL_COMPONENT_TEXT");
+          var2Lifetime130 = HuffmanCodec.fetchLocalizedResource((byte) -7, "COMPONENT_USE_SPECIAL_COMPONENT_TEXT");
           if (var2Lifetime130 != null) {
-            SetGrapplingHookSpringConstant.field_o = qpa.a((byte) -125, var2Lifetime130);
+            SetGrapplingHookSpringConstant.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime130);
           }
-          var2Lifetime131 = dqb.a((byte) -47, "COMPONENT_CHASSIS_FIGHTER_TEXT");
+          var2Lifetime131 = HuffmanCodec.fetchLocalizedResource((byte) -47, "COMPONENT_CHASSIS_FIGHTER_TEXT");
           if (null != var2Lifetime131) {
-            ev.field_c = qpa.a((byte) -125, var2Lifetime131);
+            ev.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime131);
           }
-          var2Lifetime132 = dqb.a((byte) -100, "COMPONENT_CHASSIS_TURRETBASE_TEXT");
+          var2Lifetime132 = HuffmanCodec.fetchLocalizedResource((byte) -100, "COMPONENT_CHASSIS_TURRETBASE_TEXT");
           if (var2Lifetime132 != null) {
-            iob.field_e = qpa.a((byte) -125, var2Lifetime132);
+            iob.field_e = Cp1252Strings.decode((byte) -125, var2Lifetime132);
           }
-          var2Lifetime133 = dqb.a((byte) -100, "COMPONENT_CHASSIS_EDITINGDRONE_TEXT");
+          var2Lifetime133 = HuffmanCodec.fetchLocalizedResource((byte) -100, "COMPONENT_CHASSIS_EDITINGDRONE_TEXT");
           if (var2Lifetime133 != null) {
-            SetFighterRepairAmount.field_q = qpa.a((byte) -125, var2Lifetime133);
+            SetFighterRepairAmount.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime133);
           }
-          var2Lifetime134 = dqb.a((byte) -123, "COMPONENT_CHASSIS_POLYGONAL_FRIGATE_TEXT");
+          var2Lifetime134 = HuffmanCodec.fetchLocalizedResource((byte) -123, "COMPONENT_CHASSIS_POLYGONAL_FRIGATE_TEXT");
           if (var2Lifetime134 != null) {
-            fdb.field_S = qpa.a((byte) -125, var2Lifetime134);
+            fdb.field_S = Cp1252Strings.decode((byte) -125, var2Lifetime134);
           }
-          var2Lifetime135 = dqb.a((byte) -9, "COMPONENT_CHASSIS_CONVOY_TEXT");
+          var2Lifetime135 = HuffmanCodec.fetchLocalizedResource((byte) -9, "COMPONENT_CHASSIS_CONVOY_TEXT");
           if (var2Lifetime135 != null) {
-            ArchiveDiskWorker.field_a = qpa.a((byte) -125, var2Lifetime135);
+            ArchiveDiskWorker.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime135);
           }
-          var2Lifetime136 = dqb.a((byte) -4, "COMPONENT_CHASSIS_DRAGON_TEXT");
+          var2Lifetime136 = HuffmanCodec.fetchLocalizedResource((byte) -4, "COMPONENT_CHASSIS_DRAGON_TEXT");
           if (null != var2Lifetime136) {
-            GetAngularForceDownshift.field_r = qpa.a((byte) -125, var2Lifetime136);
+            GetAngularForceDownshift.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime136);
           }
-          var2Lifetime137 = dqb.a((byte) -40, "COMPONENT_CHASSIS_MOSQUITO_TEXT");
+          var2Lifetime137 = HuffmanCodec.fetchLocalizedResource((byte) -40, "COMPONENT_CHASSIS_MOSQUITO_TEXT");
           if (null != var2Lifetime137) {
-            kmb.field_b = qpa.a((byte) -125, var2Lifetime137);
+            kmb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime137);
           }
-          var2Lifetime138 = dqb.a((byte) -58, "COMPONENT_CHASSIS_CARRIER_TEXT");
+          var2Lifetime138 = HuffmanCodec.fetchLocalizedResource((byte) -58, "COMPONENT_CHASSIS_CARRIER_TEXT");
           if (var2Lifetime138 != null) {
-            SetAutozoomAmountMultiply.field_o = qpa.a((byte) -125, var2Lifetime138);
+            SetAutozoomAmountMultiply.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime138);
           }
-          var2Lifetime139 = dqb.a((byte) -21, "COMPONENT_CHASSIS_HYDRA_TEXT");
+          var2Lifetime139 = HuffmanCodec.fetchLocalizedResource((byte) -21, "COMPONENT_CHASSIS_HYDRA_TEXT");
           if (null != var2Lifetime139) {
-            GetBoostersCooldown.field_q = qpa.a((byte) -125, var2Lifetime139);
+            GetBoostersCooldown.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime139);
           }
-          var2Lifetime140 = dqb.a((byte) -53, "COMPONENT_CHASSIS_STINGRAY_TEXT");
+          var2Lifetime140 = HuffmanCodec.fetchLocalizedResource((byte) -53, "COMPONENT_CHASSIS_STINGRAY_TEXT");
           if (null != var2Lifetime140) {
-            gm.field_I = qpa.a((byte) -125, var2Lifetime140);
+            gm.field_I = Cp1252Strings.decode((byte) -125, var2Lifetime140);
           }
-          var2Lifetime141 = dqb.a((byte) -58, "COMPONENT_CHASSIS_BUTTERFLY_TEXT");
+          var2Lifetime141 = HuffmanCodec.fetchLocalizedResource((byte) -58, "COMPONENT_CHASSIS_BUTTERFLY_TEXT");
           if (var2Lifetime141 != null) {
-            wgb.field_h = qpa.a((byte) -125, var2Lifetime141);
+            wgb.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime141);
           }
-          var2Lifetime142 = dqb.a((byte) -64, "COMPONENT_CHASSIS_WASP_TEXT");
+          var2Lifetime142 = HuffmanCodec.fetchLocalizedResource((byte) -64, "COMPONENT_CHASSIS_WASP_TEXT");
           if (var2Lifetime142 != null) {
-            ufb.field_c = qpa.a((byte) -125, var2Lifetime142);
+            ufb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime142);
           }
-          var2Lifetime143 = dqb.a((byte) -55, "COMPONENT_THRUSTER_SMALL_TEXT");
+          var2Lifetime143 = HuffmanCodec.fetchLocalizedResource((byte) -55, "COMPONENT_THRUSTER_SMALL_TEXT");
           if (null != var2Lifetime143) {
-            ne.field_m = qpa.a((byte) -125, var2Lifetime143);
+            ne.field_m = Cp1252Strings.decode((byte) -125, var2Lifetime143);
           }
-          var2Lifetime144 = dqb.a((byte) -116, "COMPONENT_THRUSTER_STANDARD_TEXT");
+          var2Lifetime144 = HuffmanCodec.fetchLocalizedResource((byte) -116, "COMPONENT_THRUSTER_STANDARD_TEXT");
           if (null != var2Lifetime144) {
-            vn.field_i = qpa.a((byte) -125, var2Lifetime144);
+            vn.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime144);
           }
-          var2Lifetime145 = dqb.a((byte) -46, "COMPONENT_WEAPON_MACHINEGUN_TEXT");
+          var2Lifetime145 = HuffmanCodec.fetchLocalizedResource((byte) -46, "COMPONENT_WEAPON_MACHINEGUN_TEXT");
           if (null != var2Lifetime145) {
-            SetDebrisSurvives.field_o = qpa.a((byte) -125, var2Lifetime145);
+            SetDebrisSurvives.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime145);
           }
-          var2Lifetime146 = dqb.a((byte) -90, "COMPONENT_WEAPON_MASSDRIVER_TEXT");
+          var2Lifetime146 = HuffmanCodec.fetchLocalizedResource((byte) -90, "COMPONENT_WEAPON_MASSDRIVER_TEXT");
           if (null != var2Lifetime146) {
-            GetLaserEnergyUsed.field_q = qpa.a((byte) -125, var2Lifetime146);
+            GetLaserEnergyUsed.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime146);
           }
-          var2Lifetime147 = dqb.a((byte) -7, "COMPONENT_WEAPON_PLASMABALL_TEXT");
+          var2Lifetime147 = HuffmanCodec.fetchLocalizedResource((byte) -7, "COMPONENT_WEAPON_PLASMABALL_TEXT");
           if (null != var2Lifetime147) {
-            bc.field_a = qpa.a((byte) -125, var2Lifetime147);
+            bc.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime147);
           }
-          var2Lifetime148 = dqb.a((byte) -102, "COMPONENT_WEAPON_UBERCANNON_TEXT");
+          var2Lifetime148 = HuffmanCodec.fetchLocalizedResource((byte) -102, "COMPONENT_WEAPON_UBERCANNON_TEXT");
           if (var2Lifetime148 != null) {
-            SetGrapplingHookMaxLength.field_o = qpa.a((byte) -125, var2Lifetime148);
+            SetGrapplingHookMaxLength.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime148);
           }
-          var2Lifetime149 = dqb.a((byte) -52, "COMPONENT_WEAPON_FIGHTERBAY_TEXT");
+          var2Lifetime149 = HuffmanCodec.fetchLocalizedResource((byte) -52, "COMPONENT_WEAPON_FIGHTERBAY_TEXT");
           if (var2Lifetime149 != null) {
-            SetPlayerRepairAmount.field_o = qpa.a((byte) -125, var2Lifetime149);
+            SetPlayerRepairAmount.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime149);
           }
-          var2Lifetime150 = dqb.a((byte) -88, "COMPONENT_WEAPON_SPINNING_BLADE_TEXT");
+          var2Lifetime150 = HuffmanCodec.fetchLocalizedResource((byte) -88, "COMPONENT_WEAPON_SPINNING_BLADE_TEXT");
           if (var2Lifetime150 != null) {
-            SetAutoAfkTimeout.field_o = qpa.a((byte) -125, var2Lifetime150);
+            SetAutoAfkTimeout.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime150);
           }
-          var2Lifetime151 = dqb.a((byte) -105, "COMPONENT_WEAPON_BOMBLET_SPRAY_TEXT");
+          var2Lifetime151 = HuffmanCodec.fetchLocalizedResource((byte) -105, "COMPONENT_WEAPON_BOMBLET_SPRAY_TEXT");
           if (var2Lifetime151 != null) {
-            kl.field_a = qpa.a((byte) -125, var2Lifetime151);
+            kl.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime151);
           }
-          var2Lifetime152 = dqb.a((byte) -49, "COMPONENT_WEAPON_LASER_BEAM_TEXT");
+          var2Lifetime152 = HuffmanCodec.fetchLocalizedResource((byte) -49, "COMPONENT_WEAPON_LASER_BEAM_TEXT");
           if (null != var2Lifetime152) {
-            grb.field_i = qpa.a((byte) -125, var2Lifetime152);
+            grb.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime152);
           }
-          var2Lifetime153 = dqb.a((byte) -18, "COMPONENT_WEAPON_SNIPER_CANNON_TEXT");
+          var2Lifetime153 = HuffmanCodec.fetchLocalizedResource((byte) -18, "COMPONENT_WEAPON_SNIPER_CANNON_TEXT");
           if (null != var2Lifetime153) {
-            SetShieldsDirectionalArcParticleLife.field_p = qpa.a((byte) -125, var2Lifetime153);
+            SetShieldsDirectionalArcParticleLife.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime153);
           }
-          var2Lifetime154 = dqb.a((byte) -46, "COMPONENT_WEAPON_GRAPPLING_HOOK_TEXT");
+          var2Lifetime154 = HuffmanCodec.fetchLocalizedResource((byte) -46, "COMPONENT_WEAPON_GRAPPLING_HOOK_TEXT");
           if (var2Lifetime154 != null) {
-            dqb.field_c = qpa.a((byte) -125, var2Lifetime154);
+            HuffmanCodec.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime154);
           }
-          var2Lifetime155 = dqb.a((byte) -80, "COMPONENT_WEAPON_MISSILE_LAUNCHER_TEXT");
+          var2Lifetime155 = HuffmanCodec.fetchLocalizedResource((byte) -80, "COMPONENT_WEAPON_MISSILE_LAUNCHER_TEXT");
           if (null != var2Lifetime155) {
-            Lo.field_p = qpa.a((byte) -125, var2Lifetime155);
+            Lo.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime155);
           }
-          var2Lifetime156 = dqb.a((byte) -88, "COMPONENT_ARM_LONG_TEXT");
+          var2Lifetime156 = HuffmanCodec.fetchLocalizedResource((byte) -88, "COMPONENT_ARM_LONG_TEXT");
           if (var2Lifetime156 != null) {
-            SetUseExtraBackground.field_r = qpa.a((byte) -125, var2Lifetime156);
+            SetUseExtraBackground.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime156);
           }
-          var2Lifetime157 = dqb.a((byte) -94, "COMPONENT_ARM_SHORT_TEXT");
+          var2Lifetime157 = HuffmanCodec.fetchLocalizedResource((byte) -94, "COMPONENT_ARM_SHORT_TEXT");
           if (null != var2Lifetime157) {
-            OpenGlGpuTexture2D.field_k = qpa.a((byte) -125, var2Lifetime157);
+            OpenGlGpuTexture2D.field_k = Cp1252Strings.decode((byte) -125, var2Lifetime157);
           }
-          var2Lifetime158 = dqb.a((byte) -8, "COMPONENT_ASTEROID_0_TEXT");
+          var2Lifetime158 = HuffmanCodec.fetchLocalizedResource((byte) -8, "COMPONENT_ASTEROID_0_TEXT");
           if (null != var2Lifetime158) {
-            GetPedrosRepairMode.field_o = qpa.a((byte) -125, var2Lifetime158);
+            GetPedrosRepairMode.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime158);
           }
-          var2Lifetime159 = dqb.a((byte) -63, "COMPONENT_GRAPPLING_HOOK_TEXT");
+          var2Lifetime159 = HuffmanCodec.fetchLocalizedResource((byte) -63, "COMPONENT_GRAPPLING_HOOK_TEXT");
           if (null != var2Lifetime159) {
-            SetPhysicsCollisionForceMultiplier.field_o = qpa.a((byte) -125, var2Lifetime159);
+            SetPhysicsCollisionForceMultiplier.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime159);
           }
-          var2Lifetime160 = dqb.a((byte) -83, "COMPONENT_ARMOUR_BLOCK_TEXT");
+          var2Lifetime160 = HuffmanCodec.fetchLocalizedResource((byte) -83, "COMPONENT_ARMOUR_BLOCK_TEXT");
           if (null != var2Lifetime160) {
-            vla.field_C = qpa.a((byte) -125, var2Lifetime160);
+            vla.field_C = Cp1252Strings.decode((byte) -125, var2Lifetime160);
           }
-          var2Lifetime161 = dqb.a((byte) -10, "COMPONENT_HULL_TRIANGLE_TEXT");
+          var2Lifetime161 = HuffmanCodec.fetchLocalizedResource((byte) -10, "COMPONENT_HULL_TRIANGLE_TEXT");
           if (var2Lifetime161 != null) {
-            wsb.field_c = qpa.a((byte) -125, var2Lifetime161);
+            wsb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime161);
           }
-          var2Lifetime162 = dqb.a((byte) -97, "COMPONENT_HULL_SPIKE_TEXT");
+          var2Lifetime162 = HuffmanCodec.fetchLocalizedResource((byte) -97, "COMPONENT_HULL_SPIKE_TEXT");
           if (null != var2Lifetime162) {
-            GetWorldWidthUpshift.field_r = qpa.a((byte) -125, var2Lifetime162);
+            GetWorldWidthUpshift.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime162);
           }
-          var2Lifetime163 = dqb.a((byte) -82, "COMPONENT_HULL_PLATE2_TEXT");
+          var2Lifetime163 = HuffmanCodec.fetchLocalizedResource((byte) -82, "COMPONENT_HULL_PLATE2_TEXT");
           if (var2Lifetime163 != null) {
-            SetTeamSelectionSpeedup.field_q = qpa.a((byte) -125, var2Lifetime163);
+            SetTeamSelectionSpeedup.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime163);
           }
-          var2Lifetime164 = dqb.a((byte) -127, "COMPONENT_HULL_DIAMOND_TEXT");
+          var2Lifetime164 = HuffmanCodec.fetchLocalizedResource((byte) -127, "COMPONENT_HULL_DIAMOND_TEXT");
           if (null != var2Lifetime164) {
-            SetBombletSprayProjectileDamage.field_p = qpa.a((byte) -125, var2Lifetime164);
+            SetBombletSprayProjectileDamage.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime164);
           }
-          var2Lifetime165 = dqb.a((byte) -110, "COMPONENT_HULL_LATTICE_TEXT");
+          var2Lifetime165 = HuffmanCodec.fetchLocalizedResource((byte) -110, "COMPONENT_HULL_LATTICE_TEXT");
           if (var2Lifetime165 != null) {
-            PlayerGameData.field_a = qpa.a((byte) -125, var2Lifetime165);
+            PlayerGameData.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime165);
           }
-          var2Lifetime166 = dqb.a((byte) -37, "COMPONENT_ARMOUR_BIG_TEXT");
+          var2Lifetime166 = HuffmanCodec.fetchLocalizedResource((byte) -37, "COMPONENT_ARMOUR_BIG_TEXT");
           if (null != var2Lifetime166) {
-            SetLaserProjectiles.field_p = qpa.a((byte) -125, var2Lifetime166);
+            SetLaserProjectiles.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime166);
           }
-          var2Lifetime167 = dqb.a((byte) -75, "COMPONENT_ARMOUR_SMALL_TEXT");
+          var2Lifetime167 = HuffmanCodec.fetchLocalizedResource((byte) -75, "COMPONENT_ARMOUR_SMALL_TEXT");
           if (null != var2Lifetime167) {
-            GetRepairModeActiveTime.field_q = qpa.a((byte) -125, var2Lifetime167);
+            GetRepairModeActiveTime.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime167);
           }
-          var2Lifetime168 = dqb.a((byte) -86, "COMPONENT_HULL_RIGHT_WING_TEXT");
+          var2Lifetime168 = HuffmanCodec.fetchLocalizedResource((byte) -86, "COMPONENT_HULL_RIGHT_WING_TEXT");
           if (null != var2Lifetime168) {
-            SetArmageddonWarning.field_p = qpa.a((byte) -125, var2Lifetime168);
+            SetArmageddonWarning.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime168);
           }
-          var2Lifetime169 = dqb.a((byte) -85, "COMPONENT_HULL_LEFT_WING_TEXT");
+          var2Lifetime169 = HuffmanCodec.fetchLocalizedResource((byte) -85, "COMPONENT_HULL_LEFT_WING_TEXT");
           if (var2Lifetime169 != null) {
-            GetMutatorVotes.field_o = qpa.a((byte) -125, var2Lifetime169);
+            GetMutatorVotes.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime169);
           }
-          var2Lifetime170 = dqb.a((byte) -27, "COMPONENT_POWER_PLANT_TEXT");
+          var2Lifetime170 = HuffmanCodec.fetchLocalizedResource((byte) -27, "COMPONENT_POWER_PLANT_TEXT");
           if (var2Lifetime170 != null) {
-            GetGrapplingHookCooldown.field_o = qpa.a((byte) -125, var2Lifetime170);
+            GetGrapplingHookCooldown.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime170);
           }
-          var2Lifetime171 = dqb.a((byte) -105, "COMPONENT_ENERGY_SHIELD_DIRECTIONAL_TEXT");
+          var2Lifetime171 = HuffmanCodec.fetchLocalizedResource((byte) -105, "COMPONENT_ENERGY_SHIELD_DIRECTIONAL_TEXT");
           if (var2Lifetime171 != null) {
-            GetDetachmentMode.field_o = qpa.a((byte) -125, var2Lifetime171);
+            GetDetachmentMode.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime171);
           }
-          var2Lifetime172 = dqb.a((byte) -87, "COMPONENT_POINT_DEFENCE_LASER_TEXT");
+          var2Lifetime172 = HuffmanCodec.fetchLocalizedResource((byte) -87, "COMPONENT_POINT_DEFENCE_LASER_TEXT");
           if (null != var2Lifetime172) {
-            SoftwareDepthBuffer.field_e = qpa.a((byte) -125, var2Lifetime172);
+            SoftwareDepthBuffer.field_e = Cp1252Strings.decode((byte) -125, var2Lifetime172);
           }
-          var2Lifetime173 = dqb.a((byte) -2, "COMPONENT_COUNTERMEASURE_TEXT");
+          var2Lifetime173 = HuffmanCodec.fetchLocalizedResource((byte) -2, "COMPONENT_COUNTERMEASURE_TEXT");
           if (var2Lifetime173 != null) {
-            GetPhasedEnergyBeamReload.field_r = qpa.a((byte) -125, var2Lifetime173);
+            GetPhasedEnergyBeamReload.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime173);
           }
-          var2Lifetime174 = dqb.a((byte) -102, "COMPONENT_THRUSTER_BOOSTER_TEXT");
+          var2Lifetime174 = HuffmanCodec.fetchLocalizedResource((byte) -102, "COMPONENT_THRUSTER_BOOSTER_TEXT");
           if (null != var2Lifetime174) {
-            SetMpSandboxEnemySpawnLimit.field_o = qpa.a((byte) -125, var2Lifetime174);
+            SetMpSandboxEnemySpawnLimit.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime174);
           }
-          var2Lifetime175 = dqb.a((byte) -71, "COMPONENT_SPECIAL_COMPONENT_TEXT");
+          var2Lifetime175 = HuffmanCodec.fetchLocalizedResource((byte) -71, "COMPONENT_SPECIAL_COMPONENT_TEXT");
           if (var2Lifetime175 != null) {
-            OpenGlGlyphMask.field_d = qpa.a((byte) -125, var2Lifetime175);
+            OpenGlGlyphMask.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime175);
           }
-          var2Lifetime176 = dqb.a((byte) -97, "COMPONENT_ARMOUR_PLATE_TEXT");
+          var2Lifetime176 = HuffmanCodec.fetchLocalizedResource((byte) -97, "COMPONENT_ARMOUR_PLATE_TEXT");
           if (var2Lifetime176 != null) {
-            lm.field_a = qpa.a((byte) -125, var2Lifetime176);
+            lm.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime176);
           }
-          var2Lifetime177 = dqb.a((byte) -16, "COMPONENT_HULL_BEAM_TEXT");
+          var2Lifetime177 = HuffmanCodec.fetchLocalizedResource((byte) -16, "COMPONENT_HULL_BEAM_TEXT");
           if (null != var2Lifetime177) {
-            kab.field_p = qpa.a((byte) -125, var2Lifetime177);
+            kab.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime177);
           }
-          var2Lifetime178 = dqb.a((byte) -120, "COMPONENT_HULL_HEXAGON_TEXT");
+          var2Lifetime178 = HuffmanCodec.fetchLocalizedResource((byte) -120, "COMPONENT_HULL_HEXAGON_TEXT");
           if (null != var2Lifetime178) {
-            WeaponBehaviourFactory.field_a = qpa.a((byte) -125, var2Lifetime178);
+            WeaponBehaviourFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime178);
           }
-          var2Lifetime179 = dqb.a((byte) -95, "hull_piece");
+          var2Lifetime179 = HuffmanCodec.fetchLocalizedResource((byte) -95, "hull_piece");
           if (null != var2Lifetime179) {
-            pa.field_c = qpa.a((byte) -125, var2Lifetime179);
+            pa.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime179);
           }
-          var2Lifetime180 = dqb.a((byte) -102, "armour_piece");
+          var2Lifetime180 = HuffmanCodec.fetchLocalizedResource((byte) -102, "armour_piece");
           if (var2Lifetime180 != null) {
-            GetMpSandboxEnemySpawnLimit.field_o = qpa.a((byte) -125, var2Lifetime180);
+            GetMpSandboxEnemySpawnLimit.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime180);
           }
-          var2Lifetime181 = dqb.a((byte) -112, "ORDER_GRAPPLES_FIRE_SHORT");
+          var2Lifetime181 = HuffmanCodec.fetchLocalizedResource((byte) -112, "ORDER_GRAPPLES_FIRE_SHORT");
           if (var2Lifetime181 != null) {
-            SetDebrisFoundInPairs.field_o = qpa.a((byte) -125, var2Lifetime181);
+            SetDebrisFoundInPairs.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime181);
           }
-          var2Lifetime182 = dqb.a((byte) -59, "ORDER_GRAPPLES_FIRE");
+          var2Lifetime182 = HuffmanCodec.fetchLocalizedResource((byte) -59, "ORDER_GRAPPLES_FIRE");
           if (null != var2Lifetime182) {
-            qh.field_L = qpa.a((byte) -125, var2Lifetime182);
+            qh.field_L = Cp1252Strings.decode((byte) -125, var2Lifetime182);
           }
-          var2Lifetime183 = dqb.a((byte) -20, "ORDER_GRAPPLES_RECALL");
+          var2Lifetime183 = HuffmanCodec.fetchLocalizedResource((byte) -20, "ORDER_GRAPPLES_RECALL");
           if (var2Lifetime183 != null) {
-            dfa.field_c = qpa.a((byte) -125, var2Lifetime183);
+            dfa.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime183);
           }
-          var2Lifetime184 = dqb.a((byte) -3, "ORDER_MISSILES_FIRE_SHORT");
+          var2Lifetime184 = HuffmanCodec.fetchLocalizedResource((byte) -3, "ORDER_MISSILES_FIRE_SHORT");
           if (var2Lifetime184 != null) {
-            qpa.field_a = qpa.a((byte) -125, var2Lifetime184);
+            Cp1252Strings.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime184);
           }
-          var2Lifetime185 = dqb.a((byte) -9, "ORDER_MISSILES_FIRE");
+          var2Lifetime185 = HuffmanCodec.fetchLocalizedResource((byte) -9, "ORDER_MISSILES_FIRE");
           if (null != var2Lifetime185) {
-            SetBombletSprayAimspeed.field_p = qpa.a((byte) -125, var2Lifetime185);
+            SetBombletSprayAimspeed.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime185);
           }
-          var2Lifetime186 = dqb.a((byte) -12, "ORDER_SHIELDS_TOGGLE_SHORT");
+          var2Lifetime186 = HuffmanCodec.fetchLocalizedResource((byte) -12, "ORDER_SHIELDS_TOGGLE_SHORT");
           if (var2Lifetime186 != null) {
-            gl.field_c = qpa.a((byte) -125, var2Lifetime186);
+            gl.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime186);
           }
-          var2Lifetime187 = dqb.a((byte) -78, "ORDER_SHIELDS_TOGGLE");
+          var2Lifetime187 = HuffmanCodec.fetchLocalizedResource((byte) -78, "ORDER_SHIELDS_TOGGLE");
           if (var2Lifetime187 != null) {
-            ComponentBehaviourFactory.field_b = qpa.a((byte) -125, var2Lifetime187);
+            ComponentBehaviourFactory.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime187);
           }
-          var2Lifetime188 = dqb.a((byte) -126, "ORDER_REPAIR_MODE_SHORT");
+          var2Lifetime188 = HuffmanCodec.fetchLocalizedResource((byte) -126, "ORDER_REPAIR_MODE_SHORT");
           if (var2Lifetime188 != null) {
-            hla.field_b = qpa.a((byte) -125, var2Lifetime188);
+            hla.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime188);
           }
-          var2Lifetime189 = dqb.a((byte) -85, "ORDER_REPAIR_MODE");
+          var2Lifetime189 = HuffmanCodec.fetchLocalizedResource((byte) -85, "ORDER_REPAIR_MODE");
           if (null != var2Lifetime189) {
-            llb.field_kb = qpa.a((byte) -125, var2Lifetime189);
+            llb.field_kb = Cp1252Strings.decode((byte) -125, var2Lifetime189);
           }
-          var2Lifetime190 = dqb.a((byte) -55, "ORDER_BOOSTERS_FIRE_SHORT");
+          var2Lifetime190 = HuffmanCodec.fetchLocalizedResource((byte) -55, "ORDER_BOOSTERS_FIRE_SHORT");
           if (null != var2Lifetime190) {
-            gia.field_j = qpa.a((byte) -125, var2Lifetime190);
+            gia.field_j = Cp1252Strings.decode((byte) -125, var2Lifetime190);
           }
-          var2Lifetime191 = dqb.a((byte) -67, "ORDER_BOOSTERS_FIRE");
+          var2Lifetime191 = HuffmanCodec.fetchLocalizedResource((byte) -67, "ORDER_BOOSTERS_FIRE");
           if (var2Lifetime191 != null) {
-            jb.field_b = qpa.a((byte) -125, var2Lifetime191);
+            jb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime191);
           }
-          var2Lifetime192 = dqb.a((byte) -45, "ORDER_FIGHTERS_LAUNCH_SHORT");
+          var2Lifetime192 = HuffmanCodec.fetchLocalizedResource((byte) -45, "ORDER_FIGHTERS_LAUNCH_SHORT");
           if (var2Lifetime192 != null) {
-            SetBloomCoefficientPercentage.field_p = qpa.a((byte) -125, var2Lifetime192);
+            SetBloomCoefficientPercentage.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime192);
           }
-          var2Lifetime193 = dqb.a((byte) -94, "ORDER_FIGHTERS_LAUNCH");
+          var2Lifetime193 = HuffmanCodec.fetchLocalizedResource((byte) -94, "ORDER_FIGHTERS_LAUNCH");
           if (null != var2Lifetime193) {
-            ssa.field_b = qpa.a((byte) -125, var2Lifetime193);
+            ssa.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime193);
           }
-          var2Lifetime194 = dqb.a((byte) -72, "ORDER_COUNTERMEASURES_LAUNCH_SHORT");
+          var2Lifetime194 = HuffmanCodec.fetchLocalizedResource((byte) -72, "ORDER_COUNTERMEASURES_LAUNCH_SHORT");
           if (null != var2Lifetime194) {
-            abb.field_b = qpa.a((byte) -125, var2Lifetime194);
+            abb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime194);
           }
-          var2Lifetime195 = dqb.a((byte) -97, "ORDER_COUNTERMEASURES_LAUNCH");
+          var2Lifetime195 = HuffmanCodec.fetchLocalizedResource((byte) -97, "ORDER_COUNTERMEASURES_LAUNCH");
           if (null != var2Lifetime195) {
-            SpecialOrderSubmessageFactory.field_a = qpa.a((byte) -125, var2Lifetime195);
+            SpecialOrderSubmessageFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime195);
           }
-          var2Lifetime196 = dqb.a((byte) -60, "ORDER_SELF_DESTRUCT_PREPARE_TOGGLE");
+          var2Lifetime196 = HuffmanCodec.fetchLocalizedResource((byte) -60, "ORDER_SELF_DESTRUCT_PREPARE_TOGGLE");
           if (null != var2Lifetime196) {
-            kl.field_e = qpa.a((byte) -125, var2Lifetime196);
+            kl.field_e = Cp1252Strings.decode((byte) -125, var2Lifetime196);
           }
-          var2Lifetime197 = dqb.a((byte) -124, "ORDER_SELF_DESTRUCT_ACTIVATE");
+          var2Lifetime197 = HuffmanCodec.fetchLocalizedResource((byte) -124, "ORDER_SELF_DESTRUCT_ACTIVATE");
           if (var2Lifetime197 != null) {
-            SetShieldsDirectionalArcParticleSpeedDownshift.field_s = qpa.a((byte) -125, var2Lifetime197);
+            SetShieldsDirectionalArcParticleSpeedDownshift.field_s = Cp1252Strings.decode((byte) -125, var2Lifetime197);
           }
-          var2Lifetime198 = dqb.a((byte) -57, "ORDER_SPAWN_ENEMY");
+          var2Lifetime198 = HuffmanCodec.fetchLocalizedResource((byte) -57, "ORDER_SPAWN_ENEMY");
           if (var2Lifetime198 != null) {
-            jw.field_d = qpa.a((byte) -125, var2Lifetime198);
+            jw.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime198);
           }
-          var2Lifetime199 = dqb.a((byte) -87, "ORDER_SAVE_BLUEPRINT");
+          var2Lifetime199 = HuffmanCodec.fetchLocalizedResource((byte) -87, "ORDER_SAVE_BLUEPRINT");
           if (var2Lifetime199 != null) {
-            ShipBlueprint.field_b = qpa.a((byte) -125, var2Lifetime199);
+            ShipBlueprint.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime199);
           }
-          var2Lifetime200 = dqb.a((byte) -28, "ORDER_LOAD_BLUEPRINT");
+          var2Lifetime200 = HuffmanCodec.fetchLocalizedResource((byte) -28, "ORDER_LOAD_BLUEPRINT");
           if (var2Lifetime200 != null) {
-            GetSalvoDamageMultiplier.field_o = qpa.a((byte) -125, var2Lifetime200);
+            GetSalvoDamageMultiplier.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime200);
           }
-          var2Lifetime201 = dqb.a((byte) -100, "ORDER_SELF_DESTRUCT_UNPREPARE_TOGGLE");
+          var2Lifetime201 = HuffmanCodec.fetchLocalizedResource((byte) -100, "ORDER_SELF_DESTRUCT_UNPREPARE_TOGGLE");
           if (var2Lifetime201 != null) {
-            SecondaryNodeDequeIterator.field_c = qpa.a((byte) -125, var2Lifetime201);
+            SecondaryNodeDequeIterator.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime201);
           }
-          var2Lifetime202 = dqb.a((byte) -63, "mission_options");
+          var2Lifetime202 = HuffmanCodec.fetchLocalizedResource((byte) -63, "mission_options");
           if (var2Lifetime202 != null) {
-            SetReloadBarWidth.field_t = qpa.a((byte) -125, var2Lifetime202);
+            SetReloadBarWidth.field_t = Cp1252Strings.decode((byte) -125, var2Lifetime202);
           }
-          var2Lifetime203 = dqb.a((byte) -80, "extra_options");
+          var2Lifetime203 = HuffmanCodec.fetchLocalizedResource((byte) -80, "extra_options");
           if (null != var2Lifetime203) {
-            WeaponBehaviour.field_a = qpa.a((byte) -125, var2Lifetime203);
+            WeaponBehaviour.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime203);
           }
-          var2Lifetime204 = dqb.a((byte) -120, "choose_team");
+          var2Lifetime204 = HuffmanCodec.fetchLocalizedResource((byte) -120, "choose_team");
           if (var2Lifetime204 != null) {
-            GetPhasedEnergyBeamRandomness.field_o = qpa.a((byte) -125, var2Lifetime204);
+            GetPhasedEnergyBeamRandomness.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime204);
           }
-          var2Lifetime205 = dqb.a((byte) -79, "mission_voting_titles,0");
+          var2Lifetime205 = HuffmanCodec.fetchLocalizedResource((byte) -79, "mission_voting_titles,0");
           if (null != var2Lifetime205) {
-            tga.field_M[0] = qpa.a((byte) -125, var2Lifetime205);
+            tga.field_M[0] = Cp1252Strings.decode((byte) -125, var2Lifetime205);
           }
-          var2Lifetime206 = dqb.a((byte) -109, "mission_voting_titles,1");
+          var2Lifetime206 = HuffmanCodec.fetchLocalizedResource((byte) -109, "mission_voting_titles,1");
           if (var2Lifetime206 != null) {
-            tga.field_M[1] = qpa.a((byte) -125, var2Lifetime206);
+            tga.field_M[1] = Cp1252Strings.decode((byte) -125, var2Lifetime206);
           }
-          var2Lifetime207 = dqb.a((byte) -23, "mission_voting_titles,2");
+          var2Lifetime207 = HuffmanCodec.fetchLocalizedResource((byte) -23, "mission_voting_titles,2");
           if (var2Lifetime207 != null) {
-            tga.field_M[2] = qpa.a((byte) -125, var2Lifetime207);
+            tga.field_M[2] = Cp1252Strings.decode((byte) -125, var2Lifetime207);
           }
-          var2Lifetime208 = dqb.a((byte) -112, "mission_objective_ordering");
+          var2Lifetime208 = HuffmanCodec.fetchLocalizedResource((byte) -112, "mission_objective_ordering");
           if (var2Lifetime208 != null) {
-            SetTeamSelectionSpeedup.field_o = qpa.a((byte) -125, var2Lifetime208);
+            SetTeamSelectionSpeedup.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime208);
           }
-          var2Lifetime209 = dqb.a((byte) -68, "mission_objective_base");
+          var2Lifetime209 = HuffmanCodec.fetchLocalizedResource((byte) -68, "mission_objective_base");
           if (var2Lifetime209 != null) {
-            cib.field_a = qpa.a((byte) -125, var2Lifetime209);
+            cib.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime209);
           }
-          var2Lifetime210 = dqb.a((byte) -55, "mission_objective_turret");
+          var2Lifetime210 = HuffmanCodec.fetchLocalizedResource((byte) -55, "mission_objective_turret");
           if (var2Lifetime210 != null) {
-            SetDebrisCarryOverPercentage.field_o = qpa.a((byte) -125, var2Lifetime210);
+            SetDebrisCarryOverPercentage.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime210);
           }
-          var2Lifetime211 = dqb.a((byte) -48, "mission_objective_vip");
+          var2Lifetime211 = HuffmanCodec.fetchLocalizedResource((byte) -48, "mission_objective_vip");
           if (var2Lifetime211 != null) {
-            GetLaserBeamProjectileDamage.field_t = qpa.a((byte) -125, var2Lifetime211);
+            GetLaserBeamProjectileDamage.field_t = Cp1252Strings.decode((byte) -125, var2Lifetime211);
           }
-          var2Lifetime212 = dqb.a((byte) -121, "mission_objective_target");
+          var2Lifetime212 = HuffmanCodec.fetchLocalizedResource((byte) -121, "mission_objective_target");
           if (var2Lifetime212 != null) {
-            GetReadyRoomMissionTime.field_o = qpa.a((byte) -125, var2Lifetime212);
+            GetReadyRoomMissionTime.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime212);
           }
-          var2Lifetime213 = dqb.a((byte) -81, "VOTE_DESTROY_BASE");
+          var2Lifetime213 = HuffmanCodec.fetchLocalizedResource((byte) -81, "VOTE_DESTROY_BASE");
           if (var2Lifetime213 != null) {
-            ArchiveTextureProvider.field_a = qpa.a((byte) -125, var2Lifetime213);
+            ArchiveTextureProvider.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime213);
           }
-          var2Lifetime214 = dqb.a((byte) -59, "VOTE_DESTROY_BASE_DESC");
+          var2Lifetime214 = HuffmanCodec.fetchLocalizedResource((byte) -59, "VOTE_DESTROY_BASE_DESC");
           if (var2Lifetime214 != null) {
-            SetMissilesHitSourceTeam.field_q = qpa.a((byte) -125, var2Lifetime214);
+            SetMissilesHitSourceTeam.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime214);
           }
-          var2Lifetime215 = dqb.a((byte) -88, "VOTE_DESTROY_BASE_DESC_A");
+          var2Lifetime215 = HuffmanCodec.fetchLocalizedResource((byte) -88, "VOTE_DESTROY_BASE_DESC_A");
           if (null != var2Lifetime215) {
-            SetMachineGunAimarc.field_r = qpa.a((byte) -125, var2Lifetime215);
+            SetMachineGunAimarc.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime215);
           }
-          var2Lifetime216 = dqb.a((byte) -8, "VOTE_DESTROY_BASE_DESC_B");
+          var2Lifetime216 = HuffmanCodec.fetchLocalizedResource((byte) -8, "VOTE_DESTROY_BASE_DESC_B");
           if (null != var2Lifetime216) {
-            fcb.field_g = qpa.a((byte) -125, var2Lifetime216);
+            fcb.field_g = Cp1252Strings.decode((byte) -125, var2Lifetime216);
           }
-          var2Lifetime217 = dqb.a((byte) -81, "VOTE_DESTROY_BASE_BALANCED");
+          var2Lifetime217 = HuffmanCodec.fetchLocalizedResource((byte) -81, "VOTE_DESTROY_BASE_BALANCED");
           if (null != var2Lifetime217) {
-            GetTorpedoAcceleration.field_o = qpa.a((byte) -125, var2Lifetime217);
+            GetTorpedoAcceleration.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime217);
           }
-          var2Lifetime218 = dqb.a((byte) -31, "VOTE_DESTROY_BASE_BALANCED_DESC");
+          var2Lifetime218 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_DESTROY_BASE_BALANCED_DESC");
           if (var2Lifetime218 != null) {
-            oib.field_b = qpa.a((byte) -125, var2Lifetime218);
+            oib.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime218);
           }
-          var2Lifetime219 = dqb.a((byte) -38, "VOTE_CONVOY");
+          var2Lifetime219 = HuffmanCodec.fetchLocalizedResource((byte) -38, "VOTE_CONVOY");
           if (var2Lifetime219 != null) {
-            SetThrusterAutobalancing.field_o = qpa.a((byte) -125, var2Lifetime219);
+            SetThrusterAutobalancing.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime219);
           }
-          var2Lifetime220 = dqb.a((byte) -17, "VOTE_CONVOY_DESC");
+          var2Lifetime220 = HuffmanCodec.fetchLocalizedResource((byte) -17, "VOTE_CONVOY_DESC");
           if (null != var2Lifetime220) {
-            fia.field_a = qpa.a((byte) -125, var2Lifetime220);
+            fia.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime220);
           }
-          var2Lifetime221 = dqb.a((byte) -98, "VOTE_CONVOY_DESC_A");
+          var2Lifetime221 = HuffmanCodec.fetchLocalizedResource((byte) -98, "VOTE_CONVOY_DESC_A");
           if (null != var2Lifetime221) {
-            fdb.field_T = qpa.a((byte) -125, var2Lifetime221);
+            fdb.field_T = Cp1252Strings.decode((byte) -125, var2Lifetime221);
           }
-          var2Lifetime222 = dqb.a((byte) -110, "VOTE_CONVOY_DESC_B");
+          var2Lifetime222 = HuffmanCodec.fetchLocalizedResource((byte) -110, "VOTE_CONVOY_DESC_B");
           if (var2Lifetime222 != null) {
-            csa.field_a = qpa.a((byte) -125, var2Lifetime222);
+            csa.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime222);
           }
-          var2Lifetime223 = dqb.a((byte) -106, "VOTE_CONVOY_BALANCED");
+          var2Lifetime223 = HuffmanCodec.fetchLocalizedResource((byte) -106, "VOTE_CONVOY_BALANCED");
           if (null != var2Lifetime223) {
-            GetReloadBarHeight.field_o = qpa.a((byte) -125, var2Lifetime223);
+            GetReloadBarHeight.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime223);
           }
-          var2Lifetime224 = dqb.a((byte) -38, "VOTE_CONVOY_BALANCED_DESC");
+          var2Lifetime224 = HuffmanCodec.fetchLocalizedResource((byte) -38, "VOTE_CONVOY_BALANCED_DESC");
           if (var2Lifetime224 != null) {
-            ola.field_q = qpa.a((byte) -125, var2Lifetime224);
+            ola.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime224);
           }
-          var2Lifetime225 = dqb.a((byte) -26, "VOTE_ASSASSINATE_VIP");
+          var2Lifetime225 = HuffmanCodec.fetchLocalizedResource((byte) -26, "VOTE_ASSASSINATE_VIP");
           if (null != var2Lifetime225) {
-            enb.field_a = qpa.a((byte) -125, var2Lifetime225);
+            enb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime225);
           }
-          var2Lifetime226 = dqb.a((byte) -111, "VOTE_ASSASSINATE_VIP_DESC");
+          var2Lifetime226 = HuffmanCodec.fetchLocalizedResource((byte) -111, "VOTE_ASSASSINATE_VIP_DESC");
           if (var2Lifetime226 != null) {
-            ArmBehaviour.field_c = qpa.a((byte) -125, var2Lifetime226);
+            ArmBehaviour.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime226);
           }
-          var2Lifetime227 = dqb.a((byte) -116, "VOTE_ASSASSINATE_VIP_DESC_A");
+          var2Lifetime227 = HuffmanCodec.fetchLocalizedResource((byte) -116, "VOTE_ASSASSINATE_VIP_DESC_A");
           if (null != var2Lifetime227) {
-            jlb.field_t = qpa.a((byte) -125, var2Lifetime227);
+            jlb.field_t = Cp1252Strings.decode((byte) -125, var2Lifetime227);
           }
-          var2Lifetime228 = dqb.a((byte) -13, "VOTE_ASSASSINATE_VIP_DESC_B");
+          var2Lifetime228 = HuffmanCodec.fetchLocalizedResource((byte) -13, "VOTE_ASSASSINATE_VIP_DESC_B");
           if (var2Lifetime228 != null) {
-            pbb.field_a = qpa.a((byte) -125, var2Lifetime228);
+            pbb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime228);
           }
-          var2Lifetime229 = dqb.a((byte) -34, "VOTE_ASSASSINATE_VIP_BALANCED");
+          var2Lifetime229 = HuffmanCodec.fetchLocalizedResource((byte) -34, "VOTE_ASSASSINATE_VIP_BALANCED");
           if (var2Lifetime229 != null) {
-            GetSniperCannonAimspeed.field_o = qpa.a((byte) -125, var2Lifetime229);
+            GetSniperCannonAimspeed.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime229);
           }
-          var2Lifetime230 = dqb.a((byte) -64, "VOTE_ASSASSINATE_VIP_BALANCED_DESC");
+          var2Lifetime230 = HuffmanCodec.fetchLocalizedResource((byte) -64, "VOTE_ASSASSINATE_VIP_BALANCED_DESC");
           if (var2Lifetime230 != null) {
-            GrappleLauncherBehaviour.field_c = qpa.a((byte) -125, var2Lifetime230);
+            GrappleLauncherBehaviour.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime230);
           }
-          var2Lifetime231 = dqb.a((byte) -34, "VOTE_BLITZ");
+          var2Lifetime231 = HuffmanCodec.fetchLocalizedResource((byte) -34, "VOTE_BLITZ");
           if (var2Lifetime231 != null) {
-            iwa.field_a = qpa.a((byte) -125, var2Lifetime231);
+            iwa.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime231);
           }
-          var2Lifetime232 = dqb.a((byte) -40, "VOTE_BLITZ_DESC");
+          var2Lifetime232 = HuffmanCodec.fetchLocalizedResource((byte) -40, "VOTE_BLITZ_DESC");
           if (null != var2Lifetime232) {
-            LoadBlackboxRecording.field_p = qpa.a((byte) -125, var2Lifetime232);
+            LoadBlackboxRecording.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime232);
           }
-          var2Lifetime233 = dqb.a((byte) -51, "VOTE_BLITZ_DESC_A");
+          var2Lifetime233 = HuffmanCodec.fetchLocalizedResource((byte) -51, "VOTE_BLITZ_DESC_A");
           if (null != var2Lifetime233) {
-            GetThrusterParticleSpeedDownshift.field_q = qpa.a((byte) -125, var2Lifetime233);
+            GetThrusterParticleSpeedDownshift.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime233);
           }
-          var2Lifetime234 = dqb.a((byte) -48, "VOTE_BLITZ_DESC_B");
+          var2Lifetime234 = HuffmanCodec.fetchLocalizedResource((byte) -48, "VOTE_BLITZ_DESC_B");
           if (null != var2Lifetime234) {
-            vm.field_q = qpa.a((byte) -125, var2Lifetime234);
+            vm.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime234);
           }
-          var2Lifetime235 = dqb.a((byte) -67, "VOTE_HOARD_TECHNOLOGY_BALANCED");
+          var2Lifetime235 = HuffmanCodec.fetchLocalizedResource((byte) -67, "VOTE_HOARD_TECHNOLOGY_BALANCED");
           if (null != var2Lifetime235) {
-            SetCarouselConstant.field_o = qpa.a((byte) -125, var2Lifetime235);
+            SetCarouselConstant.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime235);
           }
-          var2Lifetime236 = dqb.a((byte) -45, "VOTE_HOARD_TECHNOLOGY_BALANCED_DESC");
+          var2Lifetime236 = HuffmanCodec.fetchLocalizedResource((byte) -45, "VOTE_HOARD_TECHNOLOGY_BALANCED_DESC");
           if (null != var2Lifetime236) {
-            MissionBuilderFactory.field_a = qpa.a((byte) -125, var2Lifetime236);
+            MissionBuilderFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime236);
           }
-          var2Lifetime237 = dqb.a((byte) -54, "VOTE_SCAVENGERS");
+          var2Lifetime237 = HuffmanCodec.fetchLocalizedResource((byte) -54, "VOTE_SCAVENGERS");
           if (var2Lifetime237 != null) {
-            GetFightersPerPlayerMaximum.field_s = qpa.a((byte) -125, var2Lifetime237);
+            GetFightersPerPlayerMaximum.field_s = Cp1252Strings.decode((byte) -125, var2Lifetime237);
           }
-          var2Lifetime238 = dqb.a((byte) -65, "VOTE_SCAVENGERS_DESC");
+          var2Lifetime238 = HuffmanCodec.fetchLocalizedResource((byte) -65, "VOTE_SCAVENGERS_DESC");
           if (null != var2Lifetime238) {
-            LoadSettings.field_r = qpa.a((byte) -125, var2Lifetime238);
+            LoadSettings.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime238);
           }
-          var2Lifetime239 = dqb.a((byte) -32, "VOTE_RESNET");
+          var2Lifetime239 = HuffmanCodec.fetchLocalizedResource((byte) -32, "VOTE_RESNET");
           if (var2Lifetime239 != null) {
-            GetMessageMaxage.field_o = qpa.a((byte) -125, var2Lifetime239);
+            GetMessageMaxage.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime239);
           }
-          var2Lifetime240 = dqb.a((byte) -21, "VOTE_RESNET_DESC");
+          var2Lifetime240 = HuffmanCodec.fetchLocalizedResource((byte) -21, "VOTE_RESNET_DESC");
           if (null != var2Lifetime240) {
-            GetReloadBarWidth.field_p = qpa.a((byte) -125, var2Lifetime240);
+            GetReloadBarWidth.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime240);
           }
-          var2Lifetime241 = dqb.a((byte) -121, "VOTE_HOLD_THE_COMPONENT");
+          var2Lifetime241 = HuffmanCodec.fetchLocalizedResource((byte) -121, "VOTE_HOLD_THE_COMPONENT");
           if (var2Lifetime241 != null) {
-            ata.field_G = qpa.a((byte) -125, var2Lifetime241);
+            ata.field_G = Cp1252Strings.decode((byte) -125, var2Lifetime241);
           }
-          var2Lifetime242 = dqb.a((byte) -110, "VOTE_HOLD_THE_COMPONENT_DESC");
+          var2Lifetime242 = HuffmanCodec.fetchLocalizedResource((byte) -110, "VOTE_HOLD_THE_COMPONENT_DESC");
           if (var2Lifetime242 != null) {
-            fpb.field_c = qpa.a((byte) -125, var2Lifetime242);
+            fpb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime242);
           }
-          var2Lifetime243 = dqb.a((byte) -14, "VOTE_SHOWDOWN");
+          var2Lifetime243 = HuffmanCodec.fetchLocalizedResource((byte) -14, "VOTE_SHOWDOWN");
           if (null != var2Lifetime243) {
-            PartitionZone.field_g = qpa.a((byte) -125, var2Lifetime243);
+            PartitionZone.field_g = Cp1252Strings.decode((byte) -125, var2Lifetime243);
           }
-          var2Lifetime244 = dqb.a((byte) -120, "VOTE_SHOWDOWN_DESC");
+          var2Lifetime244 = HuffmanCodec.fetchLocalizedResource((byte) -120, "VOTE_SHOWDOWN_DESC");
           if (null != var2Lifetime244) {
-            qeb.field_c = qpa.a((byte) -125, var2Lifetime244);
+            qeb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime244);
           }
-          var2Lifetime245 = dqb.a((byte) -47, "VOTE_ARENA");
+          var2Lifetime245 = HuffmanCodec.fetchLocalizedResource((byte) -47, "VOTE_ARENA");
           if (var2Lifetime245 != null) {
-            SetReloadBarHeight.field_o = qpa.a((byte) -125, var2Lifetime245);
+            SetReloadBarHeight.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime245);
           }
-          var2Lifetime246 = dqb.a((byte) -88, "VOTE_ARENA_DESC");
+          var2Lifetime246 = HuffmanCodec.fetchLocalizedResource((byte) -88, "VOTE_ARENA_DESC");
           if (null != var2Lifetime246) {
-            GetPhasedEnergyBeamAimarc.field_o = qpa.a((byte) -125, var2Lifetime246);
+            GetPhasedEnergyBeamAimarc.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime246);
           }
-          var2Lifetime247 = dqb.a((byte) -120, "VOTE_SANDBOX");
+          var2Lifetime247 = HuffmanCodec.fetchLocalizedResource((byte) -120, "VOTE_SANDBOX");
           if (var2Lifetime247 != null) {
-            MovingObject.field_g = qpa.a((byte) -125, var2Lifetime247);
+            MovingObject.field_g = Cp1252Strings.decode((byte) -125, var2Lifetime247);
           }
-          var2Lifetime248 = dqb.a((byte) -103, "VOTE_SANDBOX_DESC");
+          var2Lifetime248 = HuffmanCodec.fetchLocalizedResource((byte) -103, "VOTE_SANDBOX_DESC");
           if (null != var2Lifetime248) {
-            GetMomentOfInertiaPredivideDownshift.field_o = qpa.a((byte) -125, var2Lifetime248);
+            GetMomentOfInertiaPredivideDownshift.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime248);
           }
-          var2Lifetime249 = dqb.a((byte) -102, "VOTE_LARGER_MAP_WIDTH");
+          var2Lifetime249 = HuffmanCodec.fetchLocalizedResource((byte) -102, "VOTE_LARGER_MAP_WIDTH");
           if (var2Lifetime249 != null) {
-            GetSpecialOrderBarX.field_o = qpa.a((byte) -125, var2Lifetime249);
+            GetSpecialOrderBarX.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime249);
           }
-          var2Lifetime250 = dqb.a((byte) -9, "VOTE_SMALLER_MAP_WIDTH");
+          var2Lifetime250 = HuffmanCodec.fetchLocalizedResource((byte) -9, "VOTE_SMALLER_MAP_WIDTH");
           if (null != var2Lifetime250) {
-            qn.field_d = qpa.a((byte) -125, var2Lifetime250);
+            qn.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime250);
           }
-          var2Lifetime251 = dqb.a((byte) -50, "VOTE_LARGER_MAP_HEIGHT");
+          var2Lifetime251 = HuffmanCodec.fetchLocalizedResource((byte) -50, "VOTE_LARGER_MAP_HEIGHT");
           if (var2Lifetime251 != null) {
-            SetPointDefenceLaserEnergyUsed.field_p = qpa.a((byte) -125, var2Lifetime251);
+            SetPointDefenceLaserEnergyUsed.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime251);
           }
-          var2Lifetime252 = dqb.a((byte) -60, "VOTE_SMALLER_MAP_HEIGHT");
+          var2Lifetime252 = HuffmanCodec.fetchLocalizedResource((byte) -60, "VOTE_SMALLER_MAP_HEIGHT");
           if (var2Lifetime252 != null) {
-            SetBombletSprayProjectiles.field_o = qpa.a((byte) -125, var2Lifetime252);
+            SetBombletSprayProjectiles.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime252);
           }
-          var2Lifetime253 = dqb.a((byte) -74, "VOTE_MORE_ASTEROIDS");
+          var2Lifetime253 = HuffmanCodec.fetchLocalizedResource((byte) -74, "VOTE_MORE_ASTEROIDS");
           if (null != var2Lifetime253) {
-            SetMinimapHeight.field_o = qpa.a((byte) -125, var2Lifetime253);
+            SetMinimapHeight.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime253);
           }
-          var2Lifetime254 = dqb.a((byte) -31, "VOTE_MORE_NEBULAE");
+          var2Lifetime254 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_MORE_NEBULAE");
           if (var2Lifetime254 != null) {
-            SetUseBackgroundInFullscreen.field_p = qpa.a((byte) -125, var2Lifetime254);
+            SetUseBackgroundInFullscreen.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime254);
           }
-          var2Lifetime255 = dqb.a((byte) -20, "VOTE_MORE_POWER_PLANTS");
+          var2Lifetime255 = HuffmanCodec.fetchLocalizedResource((byte) -20, "VOTE_MORE_POWER_PLANTS");
           if (null != var2Lifetime255) {
-            ThrusterBehaviourFactory.field_a = qpa.a((byte) -125, var2Lifetime255);
+            ThrusterBehaviourFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime255);
           }
-          var2Lifetime256 = dqb.a((byte) -66, "VOTE_MORE_SHIELDS");
+          var2Lifetime256 = HuffmanCodec.fetchLocalizedResource((byte) -66, "VOTE_MORE_SHIELDS");
           if (var2Lifetime256 != null) {
-            oe.field_a = qpa.a((byte) -125, var2Lifetime256);
+            oe.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime256);
           }
-          var2Lifetime257 = dqb.a((byte) -31, "VOTE_MORE_MISSILE_DEFENCE");
+          var2Lifetime257 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_MORE_MISSILE_DEFENCE");
           if (null != var2Lifetime257) {
-            kla.field_b = qpa.a((byte) -125, var2Lifetime257);
+            kla.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime257);
           }
-          var2Lifetime258 = dqb.a((byte) -31, "VOTE_MORE_ARMOUR");
+          var2Lifetime258 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_MORE_ARMOUR");
           if (null != var2Lifetime258) {
-            cs.field_b = qpa.a((byte) -125, var2Lifetime258);
+            cs.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime258);
           }
-          var2Lifetime259 = dqb.a((byte) -126, "VOTE_MORE_HULL_PIECES");
+          var2Lifetime259 = HuffmanCodec.fetchLocalizedResource((byte) -126, "VOTE_MORE_HULL_PIECES");
           if (var2Lifetime259 != null) {
-            GetComponentBreakingExplosionForceMultiplier.field_o = qpa.a((byte) -125, var2Lifetime259);
+            GetComponentBreakingExplosionForceMultiplier.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime259);
           }
-          var2Lifetime260 = dqb.a((byte) -17, "VOTE_MORE_SAWBLADES");
+          var2Lifetime260 = HuffmanCodec.fetchLocalizedResource((byte) -17, "VOTE_MORE_SAWBLADES");
           if (var2Lifetime260 != null) {
-            ThrusterBehaviourFactory.field_b = qpa.a((byte) -125, var2Lifetime260);
+            ThrusterBehaviourFactory.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime260);
           }
-          var2Lifetime261 = dqb.a((byte) -118, "VOTE_MORE_SPECIAL_WEAPONS");
+          var2Lifetime261 = HuffmanCodec.fetchLocalizedResource((byte) -118, "VOTE_MORE_SPECIAL_WEAPONS");
           if (var2Lifetime261 != null) {
-            tob.field_l = qpa.a((byte) -125, var2Lifetime261);
+            tob.field_l = Cp1252Strings.decode((byte) -125, var2Lifetime261);
           }
-          var2Lifetime262 = dqb.a((byte) -21, "VOTE_MORE_THRUSTERS");
+          var2Lifetime262 = HuffmanCodec.fetchLocalizedResource((byte) -21, "VOTE_MORE_THRUSTERS");
           if (null != var2Lifetime262) {
-            GetBombletSprayEnergyUsed.field_o = qpa.a((byte) -125, var2Lifetime262);
+            GetBombletSprayEnergyUsed.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime262);
           }
-          var2Lifetime263 = dqb.a((byte) -9, "VOTE_MORE_WEAPONS");
+          var2Lifetime263 = HuffmanCodec.fetchLocalizedResource((byte) -9, "VOTE_MORE_WEAPONS");
           if (null != var2Lifetime263) {
-            CarouselPlayerEvent.field_l = qpa.a((byte) -125, var2Lifetime263);
+            CarouselPlayerEvent.field_l = Cp1252Strings.decode((byte) -125, var2Lifetime263);
           }
-          var2Lifetime264 = dqb.a((byte) -98, "VOTE_MORE_NEUTRALS");
+          var2Lifetime264 = HuffmanCodec.fetchLocalizedResource((byte) -98, "VOTE_MORE_NEUTRALS");
           if (null != var2Lifetime264) {
-            ob.field_m = qpa.a((byte) -125, var2Lifetime264);
+            ob.field_m = Cp1252Strings.decode((byte) -125, var2Lifetime264);
           }
-          var2Lifetime265 = dqb.a((byte) -72, "VOTE_LESS_NEUTRALS");
+          var2Lifetime265 = HuffmanCodec.fetchLocalizedResource((byte) -72, "VOTE_LESS_NEUTRALS");
           if (null != var2Lifetime265) {
-            GetMachineGunPulsetime.field_o = qpa.a((byte) -125, var2Lifetime265);
+            GetMachineGunPulsetime.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime265);
           }
-          var2Lifetime266 = dqb.a((byte) -65, "tutorial_mission_name_caps");
+          var2Lifetime266 = HuffmanCodec.fetchLocalizedResource((byte) -65, "tutorial_mission_name_caps");
           if (var2Lifetime266 != null) {
-            GetWeaponParticleSpeedDownshift.field_p = qpa.a((byte) -125, var2Lifetime266);
+            GetWeaponParticleSpeedDownshift.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime266);
           }
-          var2Lifetime267 = dqb.a((byte) -21, "tutorial_mission_desc");
+          var2Lifetime267 = HuffmanCodec.fetchLocalizedResource((byte) -21, "tutorial_mission_desc");
           if (var2Lifetime267 != null) {
-            SetPointDefenceLaserProjectileInterceptDamage.field_o = qpa.a((byte) -125, var2Lifetime267);
+            SetPointDefenceLaserProjectileInterceptDamage.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime267);
           }
-          var2Lifetime268 = dqb.a((byte) -96, "tutorial_mission_ending_caps");
+          var2Lifetime268 = HuffmanCodec.fetchLocalizedResource((byte) -96, "tutorial_mission_ending_caps");
           if (var2Lifetime268 != null) {
-            SetMassDriverProjectileDamage.field_p = qpa.a((byte) -125, var2Lifetime268);
+            SetMassDriverProjectileDamage.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime268);
           }
-          var2Lifetime269 = dqb.a((byte) -124, "spawn_x");
+          var2Lifetime269 = HuffmanCodec.fetchLocalizedResource((byte) -124, "spawn_x");
           if (null != var2Lifetime269) {
-            SetMachineGunFireForce.field_o = qpa.a((byte) -125, var2Lifetime269);
+            SetMachineGunFireForce.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime269);
           }
-          var2Lifetime270 = dqb.a((byte) -13, "spawn_caps");
+          var2Lifetime270 = HuffmanCodec.fetchLocalizedResource((byte) -13, "spawn_caps");
           if (var2Lifetime270 != null) {
-            mna.field_c = qpa.a((byte) -125, var2Lifetime270);
+            mna.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime270);
           }
-          var2Lifetime271 = dqb.a((byte) -13, "win_round_message");
+          var2Lifetime271 = HuffmanCodec.fetchLocalizedResource((byte) -13, "win_round_message");
           if (null != var2Lifetime271) {
-            kia.field_a = qpa.a((byte) -125, var2Lifetime271);
+            kia.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime271);
           }
-          var2Lifetime272 = dqb.a((byte) -79, "win_match_message");
+          var2Lifetime272 = HuffmanCodec.fetchLocalizedResource((byte) -79, "win_match_message");
           if (null != var2Lifetime272) {
-            lh.field_a = qpa.a((byte) -125, var2Lifetime272);
+            lh.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime272);
           }
-          var2Lifetime273 = dqb.a((byte) -100, "win_match_with_less_time_message");
+          var2Lifetime273 = HuffmanCodec.fetchLocalizedResource((byte) -100, "win_match_with_less_time_message");
           if (null != var2Lifetime273) {
-            gl.field_b = qpa.a((byte) -125, var2Lifetime273);
+            gl.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime273);
           }
-          var2Lifetime274 = dqb.a((byte) -107, "win_match_with_more_wins_message");
+          var2Lifetime274 = HuffmanCodec.fetchLocalizedResource((byte) -107, "win_match_with_more_wins_message");
           if (var2Lifetime274 != null) {
-            SetWaitForPlayers.field_o = qpa.a((byte) -125, var2Lifetime274);
+            SetWaitForPlayers.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime274);
           }
-          var2Lifetime275 = dqb.a((byte) -44, "win");
+          var2Lifetime275 = HuffmanCodec.fetchLocalizedResource((byte) -44, "win");
           if (null != var2Lifetime275) {
-            SetMachineGunProjectileDamage.field_o = qpa.a((byte) -125, var2Lifetime275);
+            SetMachineGunProjectileDamage.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime275);
           }
-          var2Lifetime276 = dqb.a((byte) -39, "win_plural");
+          var2Lifetime276 = HuffmanCodec.fetchLocalizedResource((byte) -39, "win_plural");
           if (var2Lifetime276 != null) {
-            uj.field_b = qpa.a((byte) -125, var2Lifetime276);
+            uj.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime276);
           }
-          var2Lifetime277 = dqb.a((byte) -71, "draw_round_message");
+          var2Lifetime277 = HuffmanCodec.fetchLocalizedResource((byte) -71, "draw_round_message");
           if (var2Lifetime277 != null) {
-            SetGrapplingHookMaxExtension8Force.field_r = qpa.a((byte) -125, var2Lifetime277);
+            SetGrapplingHookMaxExtension8Force.field_r = Cp1252Strings.decode((byte) -125, var2Lifetime277);
           }
-          var2Lifetime278 = dqb.a((byte) -42, "draw_match_message");
+          var2Lifetime278 = HuffmanCodec.fetchLocalizedResource((byte) -42, "draw_match_message");
           if (var2Lifetime278 != null) {
-            SetCountermeasureLauncherFireForce.field_p = qpa.a((byte) -125, var2Lifetime278);
+            SetCountermeasureLauncherFireForce.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime278);
           }
-          var2Lifetime279 = dqb.a((byte) -30, "team_names,0");
+          var2Lifetime279 = HuffmanCodec.fetchLocalizedResource((byte) -30, "team_names,0");
           if (var2Lifetime279 != null) {
-            glb.field_c[0] = qpa.a((byte) -125, var2Lifetime279);
+            glb.field_c[0] = Cp1252Strings.decode((byte) -125, var2Lifetime279);
           }
-          var2Lifetime280 = dqb.a((byte) -9, "team_names,1");
+          var2Lifetime280 = HuffmanCodec.fetchLocalizedResource((byte) -9, "team_names,1");
           if (null != var2Lifetime280) {
-            glb.field_c[1] = qpa.a((byte) -125, var2Lifetime280);
+            glb.field_c[1] = Cp1252Strings.decode((byte) -125, var2Lifetime280);
           }
-          var2Lifetime281 = dqb.a((byte) -39, "team_names,2");
+          var2Lifetime281 = HuffmanCodec.fetchLocalizedResource((byte) -39, "team_names,2");
           if (null != var2Lifetime281) {
-            glb.field_c[2] = qpa.a((byte) -125, var2Lifetime281);
+            glb.field_c[2] = Cp1252Strings.decode((byte) -125, var2Lifetime281);
           }
-          var2Lifetime282 = dqb.a((byte) -40, "game_restart_timer");
+          var2Lifetime282 = HuffmanCodec.fetchLocalizedResource((byte) -40, "game_restart_timer");
           if (var2Lifetime282 != null) {
-            GetMaxShipSize.field_p = qpa.a((byte) -125, var2Lifetime282);
+            GetMaxShipSize.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime282);
           }
-          var2Lifetime283 = dqb.a((byte) -109, "tutorial_movement");
+          var2Lifetime283 = HuffmanCodec.fetchLocalizedResource((byte) -109, "tutorial_movement");
           if (var2Lifetime283 != null) {
-            ge.field_b = qpa.a((byte) -125, var2Lifetime283);
+            ge.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime283);
           }
-          var2Lifetime284 = dqb.a((byte) -105, "tutorial_shooting");
+          var2Lifetime284 = HuffmanCodec.fetchLocalizedResource((byte) -105, "tutorial_shooting");
           if (var2Lifetime284 != null) {
-            CarouselSlotStateDump.field_e = qpa.a((byte) -125, var2Lifetime284);
+            CarouselSlotStateDump.field_e = Cp1252Strings.decode((byte) -125, var2Lifetime284);
           }
-          var2Lifetime285 = dqb.a((byte) -43, "tutorial_zooming");
+          var2Lifetime285 = HuffmanCodec.fetchLocalizedResource((byte) -43, "tutorial_zooming");
           if (null != var2Lifetime285) {
-            ei.field_f = qpa.a((byte) -125, var2Lifetime285);
+            ei.field_f = Cp1252Strings.decode((byte) -125, var2Lifetime285);
           }
-          var2Lifetime286 = dqb.a((byte) -95, "tutorial_fogofwar_label");
+          var2Lifetime286 = HuffmanCodec.fetchLocalizedResource((byte) -95, "tutorial_fogofwar_label");
           if (null != var2Lifetime286) {
-            uia.field_a = qpa.a((byte) -125, var2Lifetime286);
+            uia.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime286);
           }
-          var2Lifetime287 = dqb.a((byte) -60, "tutorial_grabbing");
+          var2Lifetime287 = HuffmanCodec.fetchLocalizedResource((byte) -60, "tutorial_grabbing");
           if (var2Lifetime287 != null) {
-            GetMissionVotes.field_o = qpa.a((byte) -125, var2Lifetime287);
+            GetMissionVotes.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime287);
           }
           if (param0 > -23) {
             return;
           }
-          var2Lifetime288 = dqb.a((byte) -89, "tutorial_repair_mode_on");
+          var2Lifetime288 = HuffmanCodec.fetchLocalizedResource((byte) -89, "tutorial_repair_mode_on");
           if (null != var2Lifetime288) {
-            SetMissionVotes.field_o = qpa.a((byte) -125, var2Lifetime288);
+            SetMissionVotes.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime288);
           }
-          var2Lifetime289 = dqb.a((byte) -30, "tutorial_repair_mode_off");
+          var2Lifetime289 = HuffmanCodec.fetchLocalizedResource((byte) -30, "tutorial_repair_mode_off");
           if (var2Lifetime289 != null) {
-            GetMissionTerrainVotingChancestep.field_p = qpa.a((byte) -125, var2Lifetime289);
+            GetMissionTerrainVotingChancestep.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime289);
           }
-          var2Lifetime290 = dqb.a((byte) -64, "tutorial_launch_fighters");
+          var2Lifetime290 = HuffmanCodec.fetchLocalizedResource((byte) -64, "tutorial_launch_fighters");
           if (var2Lifetime290 != null) {
-            qpa.a((byte) -125, var2Lifetime290);
+            Cp1252Strings.decode((byte) -125, var2Lifetime290);
           }
-          var2Lifetime291 = dqb.a((byte) -30, "tutorial_grappling_hook_select");
+          var2Lifetime291 = HuffmanCodec.fetchLocalizedResource((byte) -30, "tutorial_grappling_hook_select");
           if (null != var2Lifetime291) {
-            OpenGlArbProgram.field_b = qpa.a((byte) -125, var2Lifetime291);
+            OpenGlArbProgram.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime291);
           }
-          var2Lifetime292 = dqb.a((byte) -16, "tutorial_grappling_hook_fire");
+          var2Lifetime292 = HuffmanCodec.fetchLocalizedResource((byte) -16, "tutorial_grappling_hook_fire");
           if (null != var2Lifetime292) {
-            pja.field_i = qpa.a((byte) -125, var2Lifetime292);
+            pja.field_i = Cp1252Strings.decode((byte) -125, var2Lifetime292);
           }
-          var2Lifetime293 = dqb.a((byte) -6, "tutorial_radial_menu");
+          var2Lifetime293 = HuffmanCodec.fetchLocalizedResource((byte) -6, "tutorial_radial_menu");
           if (var2Lifetime293 != null) {
-            TextureCombineSource.field_b = qpa.a((byte) -125, var2Lifetime293);
+            TextureCombineSource.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime293);
           }
-          var2Lifetime294 = dqb.a((byte) -26, "tutorial_save_blueprint");
+          var2Lifetime294 = HuffmanCodec.fetchLocalizedResource((byte) -26, "tutorial_save_blueprint");
           if (var2Lifetime294 != null) {
-            SetCountermeasureLauncherAimarc.field_o = qpa.a((byte) -125, var2Lifetime294);
+            SetCountermeasureLauncherAimarc.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime294);
           }
-          var2Lifetime295 = dqb.a((byte) -111, "tutorial_weapon_energy");
+          var2Lifetime295 = HuffmanCodec.fetchLocalizedResource((byte) -111, "tutorial_weapon_energy");
           if (var2Lifetime295 != null) {
-            wqb.field_d = qpa.a((byte) -125, var2Lifetime295);
+            wqb.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime295);
           }
-          var2Lifetime296 = dqb.a((byte) -99, "message_a_destroyed_b");
+          var2Lifetime296 = HuffmanCodec.fetchLocalizedResource((byte) -99, "message_a_destroyed_b");
           if (var2Lifetime296 != null) {
-            DebugRequestFactory.field_c = qpa.a((byte) -125, var2Lifetime296);
+            DebugRequestFactory.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime296);
           }
-          var2Lifetime297 = dqb.a((byte) -58, "message_a_connected");
+          var2Lifetime297 = HuffmanCodec.fetchLocalizedResource((byte) -58, "message_a_connected");
           if (var2Lifetime297 != null) {
-            SetReverbDamp.field_p = qpa.a((byte) -125, var2Lifetime297);
+            SetReverbDamp.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime297);
           }
-          var2Lifetime298 = dqb.a((byte) -47, "message_a_left");
+          var2Lifetime298 = HuffmanCodec.fetchLocalizedResource((byte) -47, "message_a_left");
           if (null != var2Lifetime298) {
-            SetGrapplingHookCooldown.field_p = qpa.a((byte) -125, var2Lifetime298);
+            SetGrapplingHookCooldown.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime298);
           }
-          var2Lifetime299 = dqb.a((byte) -106, "message_a_exploded");
+          var2Lifetime299 = HuffmanCodec.fetchLocalizedResource((byte) -106, "message_a_exploded");
           if (var2Lifetime299 != null) {
-            SetMachineGunReload.field_q = qpa.a((byte) -125, var2Lifetime299);
+            SetMachineGunReload.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime299);
           }
-          var2Lifetime300 = dqb.a((byte) -14, "custom_variable_labels,0");
+          var2Lifetime300 = HuffmanCodec.fetchLocalizedResource((byte) -14, "custom_variable_labels,0");
           if (var2Lifetime300 != null) {
-            ParticleFactory.field_c[0] = qpa.a((byte) -125, var2Lifetime300);
+            ParticleFactory.field_c[0] = Cp1252Strings.decode((byte) -125, var2Lifetime300);
           }
-          var2Lifetime301 = dqb.a((byte) -92, "custom_variable_labels,1");
+          var2Lifetime301 = HuffmanCodec.fetchLocalizedResource((byte) -92, "custom_variable_labels,1");
           if (var2Lifetime301 != null) {
-            ParticleFactory.field_c[1] = qpa.a((byte) -125, var2Lifetime301);
+            ParticleFactory.field_c[1] = Cp1252Strings.decode((byte) -125, var2Lifetime301);
           }
-          var2Lifetime302 = dqb.a((byte) -106, "custom_variable_labels,2");
+          var2Lifetime302 = HuffmanCodec.fetchLocalizedResource((byte) -106, "custom_variable_labels,2");
           if (null != var2Lifetime302) {
-            ParticleFactory.field_c[2] = qpa.a((byte) -125, var2Lifetime302);
+            ParticleFactory.field_c[2] = Cp1252Strings.decode((byte) -125, var2Lifetime302);
           }
-          var2Lifetime303 = dqb.a((byte) -49, "custom_variable_labels,3");
+          var2Lifetime303 = HuffmanCodec.fetchLocalizedResource((byte) -49, "custom_variable_labels,3");
           if (null != var2Lifetime303) {
-            ParticleFactory.field_c[3] = qpa.a((byte) -125, var2Lifetime303);
+            ParticleFactory.field_c[3] = Cp1252Strings.decode((byte) -125, var2Lifetime303);
           }
-          var2Lifetime304 = dqb.a((byte) -112, "custom_variable_labels,4");
+          var2Lifetime304 = HuffmanCodec.fetchLocalizedResource((byte) -112, "custom_variable_labels,4");
           if (null != var2Lifetime304) {
-            ParticleFactory.field_c[4] = qpa.a((byte) -125, var2Lifetime304);
+            ParticleFactory.field_c[4] = Cp1252Strings.decode((byte) -125, var2Lifetime304);
           }
-          var2Lifetime305 = dqb.a((byte) -13, "custom_variable_labels,5");
+          var2Lifetime305 = HuffmanCodec.fetchLocalizedResource((byte) -13, "custom_variable_labels,5");
           if (null != var2Lifetime305) {
-            ParticleFactory.field_c[5] = qpa.a((byte) -125, var2Lifetime305);
+            ParticleFactory.field_c[5] = Cp1252Strings.decode((byte) -125, var2Lifetime305);
           }
-          var2Lifetime306 = dqb.a((byte) -13, "custom_variable_labels,6");
+          var2Lifetime306 = HuffmanCodec.fetchLocalizedResource((byte) -13, "custom_variable_labels,6");
           if (null != var2Lifetime306) {
-            ParticleFactory.field_c[6] = qpa.a((byte) -125, var2Lifetime306);
+            ParticleFactory.field_c[6] = Cp1252Strings.decode((byte) -125, var2Lifetime306);
           }
-          var2Lifetime307 = dqb.a((byte) -33, "custom_variable_labels,7");
+          var2Lifetime307 = HuffmanCodec.fetchLocalizedResource((byte) -33, "custom_variable_labels,7");
           if (null != var2Lifetime307) {
-            ParticleFactory.field_c[7] = qpa.a((byte) -125, var2Lifetime307);
+            ParticleFactory.field_c[7] = Cp1252Strings.decode((byte) -125, var2Lifetime307);
           }
-          var2Lifetime308 = dqb.a((byte) -83, "custom_variable_labels,8");
+          var2Lifetime308 = HuffmanCodec.fetchLocalizedResource((byte) -83, "custom_variable_labels,8");
           if (var2Lifetime308 != null) {
-            ParticleFactory.field_c[8] = qpa.a((byte) -125, var2Lifetime308);
+            ParticleFactory.field_c[8] = Cp1252Strings.decode((byte) -125, var2Lifetime308);
           }
-          var2Lifetime309 = dqb.a((byte) -65, "custom_variable_labels,9");
+          var2Lifetime309 = HuffmanCodec.fetchLocalizedResource((byte) -65, "custom_variable_labels,9");
           if (var2Lifetime309 != null) {
-            ParticleFactory.field_c[9] = qpa.a((byte) -125, var2Lifetime309);
+            ParticleFactory.field_c[9] = Cp1252Strings.decode((byte) -125, var2Lifetime309);
           }
-          var2Lifetime310 = dqb.a((byte) -74, "custom_variable_labels,10");
+          var2Lifetime310 = HuffmanCodec.fetchLocalizedResource((byte) -74, "custom_variable_labels,10");
           if (null != var2Lifetime310) {
-            ParticleFactory.field_c[10] = qpa.a((byte) -125, var2Lifetime310);
+            ParticleFactory.field_c[10] = Cp1252Strings.decode((byte) -125, var2Lifetime310);
           }
-          var2Lifetime311 = dqb.a((byte) -6, "custom_variable_labels,11");
+          var2Lifetime311 = HuffmanCodec.fetchLocalizedResource((byte) -6, "custom_variable_labels,11");
           if (null != var2Lifetime311) {
-            ParticleFactory.field_c[11] = qpa.a((byte) -125, var2Lifetime311);
+            ParticleFactory.field_c[11] = Cp1252Strings.decode((byte) -125, var2Lifetime311);
           }
-          var2Lifetime312 = dqb.a((byte) -21, "short_millisecond");
+          var2Lifetime312 = HuffmanCodec.fetchLocalizedResource((byte) -21, "short_millisecond");
           if (null != var2Lifetime312) {
-            GetFps.field_p = qpa.a((byte) -125, var2Lifetime312);
+            GetFps.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime312);
           }
-          var2Lifetime313 = dqb.a((byte) -63, "short_second");
+          var2Lifetime313 = HuffmanCodec.fetchLocalizedResource((byte) -63, "short_second");
           if (null != var2Lifetime313) {
-            htb.field_v = qpa.a((byte) -125, var2Lifetime313);
+            htb.field_v = Cp1252Strings.decode((byte) -125, var2Lifetime313);
           }
-          var2Lifetime314 = dqb.a((byte) -5, "short_minute");
+          var2Lifetime314 = HuffmanCodec.fetchLocalizedResource((byte) -5, "short_minute");
           if (null != var2Lifetime314) {
-            iw.field_D = qpa.a((byte) -125, var2Lifetime314);
+            iw.field_D = Cp1252Strings.decode((byte) -125, var2Lifetime314);
           }
-          var2Lifetime315 = dqb.a((byte) -95, "custom_variable_postlabels,0");
+          var2Lifetime315 = HuffmanCodec.fetchLocalizedResource((byte) -95, "custom_variable_postlabels,0");
           if (null != var2Lifetime315) {
-            SetUseBackgroundInFullscreen.field_o[0] = qpa.a((byte) -125, var2Lifetime315);
+            SetUseBackgroundInFullscreen.field_o[0] = Cp1252Strings.decode((byte) -125, var2Lifetime315);
           }
-          var2Lifetime316 = dqb.a((byte) -34, "custom_variable_postlabels,1");
+          var2Lifetime316 = HuffmanCodec.fetchLocalizedResource((byte) -34, "custom_variable_postlabels,1");
           if (var2Lifetime316 != null) {
-            SetUseBackgroundInFullscreen.field_o[1] = qpa.a((byte) -125, var2Lifetime316);
+            SetUseBackgroundInFullscreen.field_o[1] = Cp1252Strings.decode((byte) -125, var2Lifetime316);
           }
-          var2Lifetime317 = dqb.a((byte) -122, "custom_variable_postlabels,2");
+          var2Lifetime317 = HuffmanCodec.fetchLocalizedResource((byte) -122, "custom_variable_postlabels,2");
           if (null != var2Lifetime317) {
-            SetUseBackgroundInFullscreen.field_o[2] = qpa.a((byte) -125, var2Lifetime317);
+            SetUseBackgroundInFullscreen.field_o[2] = Cp1252Strings.decode((byte) -125, var2Lifetime317);
           }
-          var2Lifetime318 = dqb.a((byte) -96, "custom_variable_postlabels,3");
+          var2Lifetime318 = HuffmanCodec.fetchLocalizedResource((byte) -96, "custom_variable_postlabels,3");
           if (var2Lifetime318 != null) {
-            SetUseBackgroundInFullscreen.field_o[3] = qpa.a((byte) -125, var2Lifetime318);
+            SetUseBackgroundInFullscreen.field_o[3] = Cp1252Strings.decode((byte) -125, var2Lifetime318);
           }
-          var2Lifetime319 = dqb.a((byte) -44, "custom_variable_postlabels,4");
+          var2Lifetime319 = HuffmanCodec.fetchLocalizedResource((byte) -44, "custom_variable_postlabels,4");
           if (var2Lifetime319 != null) {
-            SetUseBackgroundInFullscreen.field_o[4] = qpa.a((byte) -125, var2Lifetime319);
+            SetUseBackgroundInFullscreen.field_o[4] = Cp1252Strings.decode((byte) -125, var2Lifetime319);
           }
-          var2Lifetime320 = dqb.a((byte) -103, "custom_variable_postlabels,5");
+          var2Lifetime320 = HuffmanCodec.fetchLocalizedResource((byte) -103, "custom_variable_postlabels,5");
           if (null != var2Lifetime320) {
-            SetUseBackgroundInFullscreen.field_o[5] = qpa.a((byte) -125, var2Lifetime320);
+            SetUseBackgroundInFullscreen.field_o[5] = Cp1252Strings.decode((byte) -125, var2Lifetime320);
           }
-          var2Lifetime321 = dqb.a((byte) -87, "custom_variable_postlabels,6");
+          var2Lifetime321 = HuffmanCodec.fetchLocalizedResource((byte) -87, "custom_variable_postlabels,6");
           if (null != var2Lifetime321) {
-            SetUseBackgroundInFullscreen.field_o[6] = qpa.a((byte) -125, var2Lifetime321);
+            SetUseBackgroundInFullscreen.field_o[6] = Cp1252Strings.decode((byte) -125, var2Lifetime321);
           }
-          var2Lifetime322 = dqb.a((byte) -85, "custom_variable_postlabels,7");
+          var2Lifetime322 = HuffmanCodec.fetchLocalizedResource((byte) -85, "custom_variable_postlabels,7");
           if (var2Lifetime322 != null) {
-            SetUseBackgroundInFullscreen.field_o[7] = qpa.a((byte) -125, var2Lifetime322);
+            SetUseBackgroundInFullscreen.field_o[7] = Cp1252Strings.decode((byte) -125, var2Lifetime322);
           }
-          var2Lifetime323 = dqb.a((byte) -19, "custom_variable_postlabels,8");
+          var2Lifetime323 = HuffmanCodec.fetchLocalizedResource((byte) -19, "custom_variable_postlabels,8");
           if (var2Lifetime323 != null) {
-            SetUseBackgroundInFullscreen.field_o[8] = qpa.a((byte) -125, var2Lifetime323);
+            SetUseBackgroundInFullscreen.field_o[8] = Cp1252Strings.decode((byte) -125, var2Lifetime323);
           }
-          var2Lifetime324 = dqb.a((byte) -33, "custom_variable_postlabels,9");
+          var2Lifetime324 = HuffmanCodec.fetchLocalizedResource((byte) -33, "custom_variable_postlabels,9");
           if (null != var2Lifetime324) {
-            SetUseBackgroundInFullscreen.field_o[9] = qpa.a((byte) -125, var2Lifetime324);
+            SetUseBackgroundInFullscreen.field_o[9] = Cp1252Strings.decode((byte) -125, var2Lifetime324);
           }
-          var2Lifetime325 = dqb.a((byte) -124, "custom_variable_postlabels,10");
+          var2Lifetime325 = HuffmanCodec.fetchLocalizedResource((byte) -124, "custom_variable_postlabels,10");
           if (null != var2Lifetime325) {
-            SetUseBackgroundInFullscreen.field_o[10] = qpa.a((byte) -125, var2Lifetime325);
+            SetUseBackgroundInFullscreen.field_o[10] = Cp1252Strings.decode((byte) -125, var2Lifetime325);
           }
-          var2Lifetime326 = dqb.a((byte) -8, "custom_variable_postlabels,11");
+          var2Lifetime326 = HuffmanCodec.fetchLocalizedResource((byte) -8, "custom_variable_postlabels,11");
           if (null != var2Lifetime326) {
-            SetUseBackgroundInFullscreen.field_o[11] = qpa.a((byte) -125, var2Lifetime326);
+            SetUseBackgroundInFullscreen.field_o[11] = Cp1252Strings.decode((byte) -125, var2Lifetime326);
           }
-          var2Lifetime327 = dqb.a((byte) -45, "gamename");
+          var2Lifetime327 = HuffmanCodec.fetchLocalizedResource((byte) -45, "gamename");
           if (var2Lifetime327 != null) {
-            PlayerVoteFactory.field_a = qpa.a((byte) -125, var2Lifetime327);
+            PlayerVoteFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime327);
           }
-          var2Lifetime328 = dqb.a((byte) -120, "error");
+          var2Lifetime328 = HuffmanCodec.fetchLocalizedResource((byte) -120, "error");
           if (var2Lifetime328 != null) {
-            ro.field_b = qpa.a((byte) -125, var2Lifetime328);
+            ro.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime328);
           }
-          var2Lifetime329 = dqb.a((byte) -105, "toggle_tips_on");
+          var2Lifetime329 = HuffmanCodec.fetchLocalizedResource((byte) -105, "toggle_tips_on");
           if (var2Lifetime329 != null) {
-            GetSalvoaim.field_p = qpa.a((byte) -125, var2Lifetime329);
+            GetSalvoaim.field_p = Cp1252Strings.decode((byte) -125, var2Lifetime329);
           }
-          var2Lifetime330 = dqb.a((byte) -52, "toggle_tips_off");
+          var2Lifetime330 = HuffmanCodec.fetchLocalizedResource((byte) -52, "toggle_tips_off");
           if (var2Lifetime330 != null) {
-            SetBombletSprayProjectileOndamageParticles.field_o = qpa.a((byte) -125, var2Lifetime330);
+            SetBombletSprayProjectileOndamageParticles.field_o = Cp1252Strings.decode((byte) -125, var2Lifetime330);
           }
-          var2Lifetime331 = dqb.a((byte) -22, "copy_to_clipboard");
+          var2Lifetime331 = HuffmanCodec.fetchLocalizedResource((byte) -22, "copy_to_clipboard");
           if (var2Lifetime331 != null) {
-            SpawnChoiceFactory.field_b = qpa.a((byte) -125, var2Lifetime331);
+            SpawnChoiceFactory.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime331);
           }
-          var2Lifetime332 = dqb.a((byte) -100, "copied_to_clipboard");
+          var2Lifetime332 = HuffmanCodec.fetchLocalizedResource((byte) -100, "copied_to_clipboard");
           if (var2Lifetime332 != null) {
-            ParticleFactory.field_b = qpa.a((byte) -125, var2Lifetime332);
+            ParticleFactory.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime332);
           }
-          MidiEnvelope.field_j = null;
+          MidiEnvelope.localizationArchive = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1898,7 +1898,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             this.writeCompactState((IsaacPacketBuffer) null, (byte) 39);
           }
           stackIn_7_1 = !(param1);
-          this.a(stackIn_7_1);
+          this.selectForRevisionUpdates(stackIn_7_1);
           this.asteroids = (Asteroid[]) (SetAutoDetail.a(10, tob.field_o, param0, 1, -70, this.asteroids));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1915,7 +1915,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final static int a(byte param0, String param1, int param2, int param3, int param4) {
+    final static int getParagraphHeight(byte param0, String param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
@@ -1925,7 +1925,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -37) {
-            AsteroidField.a((byte) 0, (String) null, -53, 66, 33);
+            AsteroidField.getParagraphHeight((byte) 0, (String) null, -53, 66, 33);
           }
           if (!li.field_i) {
             stackIn_7_0 = ita.a(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
@@ -1963,13 +1963,13 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final Asteroid[] c(int param0) {
+    final Asteroid[] getAsteroids(int param0) {
         RuntimeException var2 = null;
         Asteroid[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.b(20);
+            this.markChanged(20);
           }
           stackIn_4_0 = this.asteroids;
           return stackIn_4_0;
@@ -1980,7 +1980,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final boolean a(World param0, int param1, Asteroid param2) {
+    final boolean addAsteroid(World param0, int param1, Asteroid param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_7_0 = 0;
@@ -1996,7 +1996,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var4_int = param0.addBodyToArray(param1 + 13131, param2, this.asteroids, 2) ? 1 : 0;
           if (var4_int != 0) {
-            this.b(param1 ^ -16566);
+            this.markChanged(param1 ^ -16566);
           }
           stackIn_7_0 = var4_int;
           return stackIn_7_0 != 0;
@@ -2020,25 +2020,25 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final void a(boolean param0) {
+    final void selectForRevisionUpdates(boolean param0) {
         try {
-          hua.a(this, (byte) 96);
+          IntegerNode.setAsteroidFieldForRevisionUpdates(this, (byte) 96);
           if (!param0) {
-            AsteroidField.a((byte) 105, (ResourceArchive) null);
+            AsteroidField.loadLocalizedTextAndKeyBindings((byte) 105, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.O(" + param0 + ')');
         }
     }
 
-    final void b(int param0) {
+    final void markChanged(int param0) {
         int fieldTemp$0 = 0;
         try {
           fieldTemp$0 = LoadBlackboxRecording.field_q;
           LoadBlackboxRecording.field_q = LoadBlackboxRecording.field_q + 1;
-          this.field_d = fieldTemp$0;
+          this.revision = fieldTemp$0;
           if (param0 >= -37) {
-            this.a((World) null, 6, (Asteroid) null);
+            this.addAsteroid((World) null, 6, (Asteroid) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.J(" + param0 + ')');
@@ -2135,13 +2135,13 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
     }
 
     AsteroidField() {
-        this.field_d = 0;
-        this.b(-41);
+        this.revision = 0;
+        this.markChanged(-41);
     }
 
     AsteroidField(int param0) {
-        this.field_d = 0;
-        this.b(-41);
+        this.revision = 0;
+        this.markChanged(-41);
         try {
           this.asteroids = new Asteroid[param0];
         } catch (RuntimeException runtimeException) {

@@ -131,7 +131,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
           var37 = var30;
           var38 = var29 * (-1 + var12);
           if (param2 >= NebulaField.field_c &&
-            param2 <= hab.field_i) {
+            param2 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
             var57 = ResourceNode.field_b[param2];
             var40 = IntrusiveNode.clamp(param0 ^ 2051537426, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param5 + param6);
             var41 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + param6);
@@ -195,7 +195,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
             if (var41Lifetime1 < NebulaField.field_c) {
               continue;
             }
-            if (var40Lifetime1 > hab.field_i) {
+            if (var40Lifetime1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
               continue;
             }
             var42Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var8_int + param6);
@@ -204,7 +204,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
               if (var40Lifetime1 >= NebulaField.field_c) {
                 GetSalvoRepairTimeMultiplier.a(param1, var42Lifetime1, ResourceNode.field_b[var40Lifetime1], (byte) 75, var43Lifetime1);
               }
-              if (var41Lifetime1 > hab.field_i) {
+              if (var41Lifetime1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
                 continue;
               }
               GetSalvoRepairTimeMultiplier.a(param1, var42Lifetime1, ResourceNode.field_b[var41Lifetime1], (byte) 75, var43Lifetime1);
@@ -218,7 +218,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
               GetSalvoRepairTimeMultiplier.a(param4, var44, var58, (byte) 75, var45);
               GetSalvoRepairTimeMultiplier.a(param1, var42Lifetime1, var58, (byte) 75, var44);
             }
-            if (var41Lifetime1 > hab.field_i) {
+            if (var41Lifetime1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
               continue;
             }
             var59 = ResourceNode.field_b[var41Lifetime1];

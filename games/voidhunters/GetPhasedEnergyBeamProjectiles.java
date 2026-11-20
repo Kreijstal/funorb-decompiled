@@ -247,7 +247,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetTorpedoEnergyUsed.field_p = param1[59];
           di.field_p = param1[27];
           GetMinimapWidth.field_o = param1[216];
-          as.field_d = param1[13];
+          GpuEnvironmentMapSource.field_d = param1[13];
           SetMomentOfInertiaPerpointCalcDownshift.field_p = param1[111];
           SetThrusterBindingMoveAndTurnHasOppositeMove.field_p = param1[120];
           MatchResults.field_b = param1[68];

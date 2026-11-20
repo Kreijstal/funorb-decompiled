@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qsa {
+final class ObjectiveMarker {
     static llb field_b;
     static llb field_d;
-    Object field_c;
-    int field_a;
+    Object target;
+    int markerType;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {

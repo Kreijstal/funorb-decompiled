@@ -134,12 +134,12 @@ final class GetCountermeasuresCooldown extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void markSelectedAsteroidFieldChanged(byte param0) {
         if (param0 > -116) {
           return;
         }
-        if (null != PlayerLeave.field_b) {
-          PlayerLeave.field_b.b(-85);
+        if (null != PlayerLeave.asteroidFieldForRevisionUpdates) {
+          PlayerLeave.asteroidFieldForRevisionUpdates.markChanged(-85);
         }
     }
 

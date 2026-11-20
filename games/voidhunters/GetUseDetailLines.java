@@ -42,7 +42,7 @@ final class GetUseDetailLines extends ConsoleCommand {
         }
         GetCountermeasureLauncherProjectiles.field_o = param4;
         ob.field_j = param3;
-        hab.field_i = param0;
+        EnvironmentReflectionGpuMaterialEffect.field_i = param0;
         NebulaField.field_c = param1;
     }
 

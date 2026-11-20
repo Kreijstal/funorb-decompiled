@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rga {
-    GpuTexture3D field_e;
+final class WaterTextures {
+    GpuTexture3D normalMapVolume;
     static soa field_f;
     private GpuTexture2D[] field_c;
     static llb field_g;
-    private GpuToolkit field_h;
-    GpuTexture2D[] field_a;
-    boolean field_b;
-    GpuTexture3D field_d;
+    private GpuToolkit toolkit;
+    GpuTexture2D[] noiseFrames;
+    boolean usesVolumeTexture;
+    GpuTexture3D noiseVolume;
 
-    final boolean b(byte param0) {
+    final boolean ensureNormalMap(byte param0) {
         byte[] var23 = null;
         byte[] var20 = null;
         byte[] var19 = null;
@@ -40,7 +40,7 @@ final class rga {
         int var17 = VoidHunters.field_G;
         int var2 = 59 % ((param0 + 26) / 42);
         byte[] var3Lifetime1;
-        if (this.field_e == null) {
+        if (this.normalMapVolume == null) {
           if (ti.field_c == null) {
             var23 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 97, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
             var20 = var23;
@@ -80,9 +80,9 @@ final class rga {
               }
             }
           }
-          this.field_e = this.field_h.createTexture3D(128, 16, var25, ComponentAttachmentPlan.field_d, 128, -16539);
+          this.normalMapVolume = this.toolkit.createTexture3D(128, 16, var25, ComponentAttachmentPlan.field_d, 128, -16539);
         }
-        return null != this.field_e ? true : false;
+        return null != this.normalMapVolume ? true : false;
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -93,12 +93,12 @@ final class rga {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean hasNoiseTextures(byte param0) {
         int var2 = -51 % ((param0 + 8) / 49);
-        return !this.field_b ? null != this.field_a ? true : false : null != this.field_d ? true : false;
+        return !this.usesVolumeTexture ? null != this.noiseFrames ? true : false : null != this.noiseVolume ? true : false;
     }
 
-    rga(GpuToolkit param0) {
+    WaterTextures(GpuToolkit param0) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -110,39 +110,39 @@ final class rga {
         byte[] var17 = null;
         byte[] var18 = null;
         int var2_intLifetime1;
-        this.field_e = null;
+        this.normalMapVolume = null;
         this.field_c = null;
-        this.field_a = null;
-        this.field_d = null;
+        this.noiseFrames = null;
+        this.noiseVolume = null;
         try {
-          this.field_h = param0;
-          this.field_b = this.field_h.field_uc;
-          if (this.field_b &&
-            !this.field_h.supportsTexture3DFormat(GpuDataType.UNSIGNED_BYTE, SocketNetworkArchiveClient.field_o, -92)) {
-            this.field_b = false;
+          this.toolkit = param0;
+          this.usesVolumeTexture = this.toolkit.field_uc;
+          if (this.usesVolumeTexture &&
+            !this.toolkit.supportsTexture3DFormat(GpuDataType.UNSIGNED_BYTE, SocketNetworkArchiveClient.field_o, -92)) {
+            this.usesVolumeTexture = false;
           }
-          if (!this.field_b &&
-            !this.field_h.supportsTexture2DFormat(-10, SocketNetworkArchiveClient.field_o, GpuDataType.UNSIGNED_BYTE)) {
+          if (!this.usesVolumeTexture &&
+            !this.toolkit.supportsTexture2DFormat(-10, SocketNetworkArchiveClient.field_o, GpuDataType.UNSIGNED_BYTE)) {
             return;
           }
           MissionFactory.c((byte) 111);
-          if (!this.field_b) {
-            this.field_a = new GpuTexture2D[16];
+          if (!this.usesVolumeTexture) {
+            this.noiseFrames = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var15 = ppb.a(PlayerVote.field_b, var2_int * 32768, true, 32768);
-              this.field_a[var2_int] = this.field_h.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var15);
+              this.noiseFrames[var2_int] = this.toolkit.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var15);
             }
             this.field_c = new GpuTexture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               var16 = ppb.a(GetPointDefenceLaserRandomness.field_q, 32768 * var2_intLifetime1, true, 32768);
-              this.field_c[var2_intLifetime1] = this.field_h.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var16);
+              this.field_c[var2_intLifetime1] = this.toolkit.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var16);
             }
             return;
           }
           var17 = ffb.extractBytes(false, PlayerVote.field_b, true);
-          this.field_d = this.field_h.createTexture3D(128, 16, var17, SocketNetworkArchiveClient.field_o, 128, -16539);
+          this.noiseVolume = this.toolkit.createTexture3D(128, 16, var17, SocketNetworkArchiveClient.field_o, 128, -16539);
           var18 = ffb.extractBytes(false, GetPointDefenceLaserRandomness.field_q, true);
-          this.field_h.createTexture3D(128, 16, var18, SocketNetworkArchiveClient.field_o, 128, -16539);
+          this.toolkit.createTexture3D(128, 16, var18, SocketNetworkArchiveClient.field_o, 128, -16539);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

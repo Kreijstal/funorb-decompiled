@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rca {
-    int field_b;
+final class SpawnLocation {
+    int y;
     static String field_a;
-    int field_c;
+    int x;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {

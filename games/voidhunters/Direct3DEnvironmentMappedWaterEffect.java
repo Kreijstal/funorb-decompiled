@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends GpuMaterialEffect {
-    private rga field_i;
+final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
+    private WaterTextures field_i;
     private jagdx.IDirect3DPixelShader field_h;
     private jagdx.IDirect3DVertexShader field_g;
     private static float[] field_f;
@@ -77,7 +77,7 @@ final class hl extends GpuMaterialEffect {
               this.toolkit.setActiveTextureUnit(1, -88);
               this.toolkit.setTexture(var3, -108);
               this.toolkit.setActiveTextureUnit(0, -99);
-              this.toolkit.setTexture(this.field_i.field_e, param0 ^ -115);
+              this.toolkit.setTexture(this.field_i.normalMapVolume, param0 ^ -115);
               this.field_k = true;
               this.onViewTransformChanged((byte) 15);
               this.onTextureTransformChanged(8);
@@ -102,7 +102,7 @@ final class hl extends GpuMaterialEffect {
           this.toolkit.setActiveTextureUnit(1, -88);
           this.toolkit.setTexture(var3Lifetime1, -108);
           this.toolkit.setActiveTextureUnit(0, -99);
-          this.toolkit.setTexture(this.field_i.field_e, param0 ^ -115);
+          this.toolkit.setTexture(this.field_i.normalMapVolume, param0 ^ -115);
           this.field_k = true;
           this.onViewTransformChanged((byte) 15);
           this.onTextureTransformChanged(8);
@@ -205,7 +205,7 @@ final class hl extends GpuMaterialEffect {
         this.field_e = (Direct3DToolkit) null;
     }
 
-    hl(Direct3DToolkit param0, ResourceArchive param1, rga param2) {
+    Direct3DEnvironmentMappedWaterEffect(Direct3DToolkit param0, ResourceArchive param1, WaterTextures param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_e = param0;
@@ -236,7 +236,7 @@ final class hl extends GpuMaterialEffect {
         }
         this.field_g = this.field_e.field_Mc.createVertexShader(param1.fetchNamedFile("environment_mapped_water_v", true, "dx"));
         this.field_h = this.field_e.field_Mc.createPixelShader(param1.fetchNamedFile("environment_mapped_water_f", true, "dx"));
-        stackIn_9_1 = (null != this.field_g) && (null != this.field_h) && (this.field_i.b((byte) 107));
+        stackIn_9_1 = (null != this.field_g) && (null != this.field_h) && (this.field_i.ensureNormalMap((byte) 107));
         this.field_j = stackIn_9_1;
     }
 

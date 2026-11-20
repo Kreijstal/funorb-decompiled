@@ -127,7 +127,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_debris_collision_damage(" + GetTeamSelectionSpeedup.field_p + ")");
         System.out.println("set_debris_projectile_collision(" + voa.field_d + ")");
         System.out.println("set_debris_throwable(" + GetPedrosRepairModeSwitchtime.field_o + ")");
-        System.out.println("set_missiles_hit_source_team(" + as.field_d + ")");
+        System.out.println("set_missiles_hit_source_team(" + GpuEnvironmentMapSource.field_d + ")");
         System.out.println("set_missiles_damage_source_team(" + SetPointDefenceLaserPulsetime.field_o + ")");
         System.out.println("set_grappling_hooks_damageable_by_source_player(" + SetThrusterAutobalancing.field_r + ")");
         System.out.println("set_thruster_binding_move_and_turn_has_opposite_move(" + GetGrapplingHookAimspeed.field_p + ")");

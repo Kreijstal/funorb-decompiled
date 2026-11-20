@@ -87,7 +87,7 @@ final class hk extends TextureOperation {
         }
         SetRepairModePower.field_q = 0;
         GetPlayerRepairAmount.field_q = new int[3];
-        hab.field_k = param0;
+        EnvironmentReflectionGpuMaterialEffect.field_k = param0;
     }
 
     public static void clearSharedReferences(int param0) {

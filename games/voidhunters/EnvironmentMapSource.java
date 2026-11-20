@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bkb {
+abstract class EnvironmentMapSource {
     static java.applet.Applet field_b;
     static String field_a;
 
@@ -11,7 +11,7 @@ abstract class bkb {
         int var1 = -115 / ((param0 + 34) / 45);
     }
 
-    final static Mission a(int param0) {
+    final static Mission createTeamSwitchingMission(int param0) {
         World var10 = new World(1);
         var10.setWidth(var10.getWidth((byte) -122) / 2, (byte) -66);
         var10.setHeight(var10.getHeight(1) / 2, 0);
@@ -47,7 +47,7 @@ abstract class bkb {
         return var9;
     }
 
-    protected bkb() throws Throwable {
+    protected EnvironmentMapSource() throws Throwable {
         throw new Error();
     }
 

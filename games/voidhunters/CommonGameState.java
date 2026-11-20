@@ -410,7 +410,7 @@ final class CommonGameState implements DiffableState, mfa {
             }
           } else {
             if (!SetMissionTerrainAsteroidProbability.field_o) {
-              var13 = bkb.a(0);
+              var13 = EnvironmentMapSource.createTeamSwitchingMission(0);
               var13.a(false, var12, -48);
             } else {
               var11 = SetDebrisPartitioned.b(false).a(3, false);

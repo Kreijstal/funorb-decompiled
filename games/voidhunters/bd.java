@@ -130,9 +130,9 @@ final class bd {
           GetUseSprites.field_p = new llb(0L, var10);
           GetUseSprites.field_p.field_w = 2;
           GetUseSprites.field_p.field_gb = GetFighterVision.a(false, false, 2039583, 24436, 3815994, 30);
-          qsa.field_d = new llb(0L, var10);
-          qsa.field_d.field_w = 2;
-          qsa.field_d.field_gb = GetFighterVision.a(false, true, 2039583, 24436, 3815994, 30);
+          ObjectiveMarker.field_d = new llb(0L, var10);
+          ObjectiveMarker.field_d.field_w = 2;
+          ObjectiveMarker.field_d.field_gb = GetFighterVision.a(false, true, 2039583, 24436, 3815994, 30);
           qc.field_q = new llb(0L, (llb) null);
           qc.field_q.field_B = 1;
           qc.field_q.field_eb = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
@@ -178,9 +178,9 @@ final class bd {
           vhb.field_c.field_nb = var14;
           EscapePodFactory.field_a = new llb(0L, (llb) null);
           EscapePodFactory.field_a.field_gb = uwa.a(1856141, 206, -1, 1127256, 105, 3);
-          as.field_c = new llb(0L, (llb) null);
+          GpuEnvironmentMapSource.field_c = new llb(0L, (llb) null);
           var17 = -115 % ((param0 + 71) / 37);
-          as.field_c.field_gb = uwa.a(11579568, 290, -1, 6052956, 120, 3);
+          GpuEnvironmentMapSource.field_c.field_gb = uwa.a(11579568, 290, -1, 6052956, 120, 3);
           SetGrapplingHookMaxExtension8Force.field_p = new llb(0L, var15);
           SetGrapplingHookMaxExtension8Force.field_p.field_rb = 1;
           SetGrapplingHookMaxExtension8Force.field_p.field_P = 1;

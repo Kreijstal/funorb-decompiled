@@ -6,7 +6,7 @@ import java.util.*;
 abstract class GpuToolkit extends GraphicsToolkit {
     private jaclib.memory.heap.NativeHeap field_jc;
     static String[] field_Yb;
-    rga field_Mb;
+    WaterTextures field_Mb;
     private IntrusiveDeque field_s;
     Object field_qc;
     private Hashtable field_rb;
@@ -78,7 +78,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     private je field_Ib;
     private jaclib.memory.Stream bufferWriter;
     boolean lightingEnabled;
-    private as field_kc;
+    private GpuEnvironmentMapSource field_kc;
     private int field_e;
     float antiSunIntensity;
     private int materialParameter2;
@@ -165,7 +165,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     final void drawUnitQuadTriangles(byte param0) {
         if (param0 > -51) {
-          this.field_kc = (as) null;
+          this.field_kc = (GpuEnvironmentMapSource) null;
         }
         this.drawUnitQuad(0, bk.field_v, 2);
     }
@@ -861,7 +861,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_Ib = new je(this);
         this.field_T = this.createIndexBuffer((byte) -19, true);
         this.recreateGpuResources(param0 ^ -31089);
-        this.field_Mb = new rga(this);
+        this.field_Mb = new WaterTextures(this);
         this.materialEffects[1] = this.createMaterialEffect((byte) -123, 1);
         this.materialEffects[2] = this.createMaterialEffect((byte) 33, 2);
         this.materialEffects[4] = this.createMaterialEffect((byte) 119, 4);
@@ -1599,15 +1599,15 @@ abstract class GpuToolkit extends GraphicsToolkit {
           return (GpuMaterialEffect) ((Object) new UnlitGpuMaterialEffect(this));
         }
         if (var4 == 1) {
-          return (GpuMaterialEffect) ((Object) new qr(this));
+          return (GpuMaterialEffect) ((Object) new SpecularGpuMaterialEffect(this));
         }
         if (var4 == 2) {
-          return (GpuMaterialEffect) ((Object) new wu(this, this.field_Mb));
+          return (GpuMaterialEffect) ((Object) new WaterNoiseGpuMaterialEffect(this, this.field_Mb));
         }
         if (var4 != 7) {
           return (GpuMaterialEffect) ((Object) new UnsupportedGpuMaterialEffect(this));
         }
-        return (GpuMaterialEffect) ((Object) new hab(this));
+        return (GpuMaterialEffect) ((Object) new EnvironmentReflectionGpuMaterialEffect(this));
     }
 
     final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
@@ -1882,7 +1882,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (param0 != 10) {
           this.pointLights = (PointLight[]) null;
         }
-        return this.field_kc == null ? null : this.field_kc.a((byte) -118);
+        return this.field_kc == null ? null : this.field_kc.getCubeTexture((byte) -118);
     }
 
     final int getUnderwaterDepthScale(int param0) {

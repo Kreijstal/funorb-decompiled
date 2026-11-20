@@ -125,14 +125,14 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           this.dy = this.dy * OpenGlShaderProgram.field_a / SetMissilesCooldown.field_o;
           this.dx = OpenGlShaderProgram.field_a * this.dx / SetMissilesCooldown.field_o;
           if (param0) {
-            param2.partitioningManager.a(this.boundingbox, (byte) -105);
+            param2.partitioningManager.saveBoundsForUpdate(this.boundingbox, (byte) -105);
           }
           this.clearBounds(16);
           var4_int = this.x - this.getCenterOfMassOffsetX(995401160);
           var5 = this.y - this.getCenterOfMassOffsetY((byte) 5);
           this.chassis.updateWorldTransforms(this instanceof Ship, var4_int, var5, this.angle >> 8, 0, this.boundingbox);
           if (param0) {
-            param2.partitioningManager.a(1, this.getBodyKind(82), this.id, this.boundingbox);
+            param2.partitioningManager.updateBodyPartitions(1, this.getBodyKind(82), this.id, this.boundingbox);
             this.onStateChanged((byte) 124);
           } else {
             this.onStateChanged((byte) 124);

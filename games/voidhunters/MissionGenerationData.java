@@ -41,12 +41,12 @@ final class MissionGenerationData implements DiffableState {
         int var16Lifetime2;
         var18 = VoidHunters.field_G;
         try {
-          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param5);
-          var13 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param7);
+          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5);
+          var13 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param7);
           var14 = IntrusiveNode.clamp(param2 ^ 31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
           var15 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
-          var8_int = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param5 + param1);
-          var9 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param7 - param1);
+          var8_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5 + param1);
+          var9 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param7 - param1);
           for (var16 = var12; var16 < var8_int; var16++) {
             GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16], (byte) 75, var14);
           }

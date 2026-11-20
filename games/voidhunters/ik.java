@@ -97,7 +97,7 @@ final class ik extends IntrusiveNode {
         var2[229] = GetBombletSprayProjectileOndamageParticles.field_q;
         var2[150] = GetAngularForceDownshift.field_q;
         var2[53] = SetTorpedoAimspeed.field_o;
-        var2[13] = as.field_d;
+        var2[13] = GpuEnvironmentMapSource.field_d;
         var2[103] = eca.field_e;
         var2[218] = Particle.field_g;
         var2[61] = AsteroidFactory.field_a;

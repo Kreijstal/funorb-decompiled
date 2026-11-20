@@ -70,7 +70,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         int var2;
         var2 = VoidHunters.field_G;
         RemoveEventActionFactory.field_b = false;
-        hab.field_j = null;
+        EnvironmentReflectionGpuMaterialEffect.field_j = null;
         if (OpenGlSprite.field_c) {
           SetPointDefenceLaserAimarc.field_o.g(-123);
           if (param0 > 30) {
@@ -82,11 +82,11 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         var1 = SetClientSideDragging.field_p;
         if (var1 > 0) {
           if (var1 == 1) {
-            hab.field_j = nnb.field_d;
+            EnvironmentReflectionGpuMaterialEffect.field_j = nnb.field_d;
           } else {
-            hab.field_j = SetReverbGain.a(OpenGlVertexDeclaration.field_g, new String[]{Integer.toString(var1)}, 119);
+            EnvironmentReflectionGpuMaterialEffect.field_j = SetReverbGain.a(OpenGlVertexDeclaration.field_g, new String[]{Integer.toString(var1)}, 119);
           }
-          hab.field_j = SetShieldsDirectionalArc.a(0, new CharSequence[]{(CharSequence) ((Object) hab.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
+          EnvironmentReflectionGpuMaterialEffect.field_j = SetShieldsDirectionalArc.a(0, new CharSequence[]{(CharSequence) ((Object) EnvironmentReflectionGpuMaterialEffect.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
         }
         SetPointDefenceLaserAimarc.field_o.l((byte) -106);
         gib.a((byte) -89);

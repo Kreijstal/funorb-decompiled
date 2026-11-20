@@ -108,9 +108,9 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
             }
           }
           if (NebulaField.field_c <= var11) {
-            if (hab.field_i < var11) {
-              var11 = hab.field_i;
-              var9 = (hab.field_i - var13 << 12) / var12;
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var11) {
+              var11 = EnvironmentReflectionGpuMaterialEffect.field_i;
+              var9 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
             }
           } else {
             var11 = NebulaField.field_c;
@@ -120,9 +120,9 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
             var10 = NebulaField.field_c;
             var8 = (-var13 + NebulaField.field_c << 12) / var12;
           } else {
-            if (hab.field_i < var10) {
-              var8 = (hab.field_i - var13 << 12) / var12;
-              var10 = hab.field_i;
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var10) {
+              var8 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+              var10 = EnvironmentReflectionGpuMaterialEffect.field_i;
             }
           }
           SetOndamageParticleLife.a(param5, var9, -1, var10, var11, var8);
@@ -147,18 +147,18 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
             var11Lifetime1 = NebulaField.field_c;
             var9Lifetime1 = (NebulaField.field_c - var13 << 12) / var12;
           } else {
-            if (hab.field_i < var11Lifetime1) {
-              var11Lifetime1 = hab.field_i;
-              var9Lifetime1 = (hab.field_i - var13 << 12) / var12;
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var11Lifetime1) {
+              var11Lifetime1 = EnvironmentReflectionGpuMaterialEffect.field_i;
+              var9Lifetime1 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
             }
           }
           if (NebulaField.field_c > var10Lifetime1) {
             var10Lifetime1 = NebulaField.field_c;
             var8Lifetime1 = (-var13 + NebulaField.field_c << 12) / var12;
           } else {
-            if (hab.field_i < var10Lifetime1) {
-              var8Lifetime1 = (hab.field_i - var13 << 12) / var12;
-              var10Lifetime1 = hab.field_i;
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var10Lifetime1) {
+              var8Lifetime1 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+              var10Lifetime1 = EnvironmentReflectionGpuMaterialEffect.field_i;
             }
           }
           SetOndamageParticleLife.a(param5, var9Lifetime1, -1, var10Lifetime1, var11Lifetime1, var8Lifetime1);
@@ -173,18 +173,18 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
             var11Lifetime2 = NebulaField.field_c;
             var9Lifetime2 = (NebulaField.field_c - var13 << 12) / var12;
           } else {
-            if (hab.field_i < var11Lifetime2) {
-              var11Lifetime2 = hab.field_i;
-              var9Lifetime2 = (hab.field_i - var13 << 12) / var12;
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var11Lifetime2) {
+              var11Lifetime2 = EnvironmentReflectionGpuMaterialEffect.field_i;
+              var9Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
             }
           }
           if (NebulaField.field_c > var10Lifetime2) {
             var10Lifetime2 = NebulaField.field_c;
             var8Lifetime2 = (-var13 + NebulaField.field_c << 12) / var12;
           } else {
-            if (hab.field_i < var10Lifetime2) {
-              var8Lifetime2 = (hab.field_i - var13 << 12) / var12;
-              var10Lifetime2 = hab.field_i;
+            if (EnvironmentReflectionGpuMaterialEffect.field_i < var10Lifetime2) {
+              var8Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+              var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.field_i;
             }
           }
           SetOndamageParticleLife.a(param5, var9Lifetime2, -1, var10Lifetime2, var11Lifetime2, var8Lifetime2);
@@ -201,18 +201,18 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
           var11Lifetime3 = NebulaField.field_c;
           var9Lifetime3 = (NebulaField.field_c - var13 << 12) / var12;
         } else {
-          if (hab.field_i < var11Lifetime3) {
-            var11Lifetime3 = hab.field_i;
-            var9Lifetime3 = (hab.field_i - var13 << 12) / var12;
+          if (EnvironmentReflectionGpuMaterialEffect.field_i < var11Lifetime3) {
+            var11Lifetime3 = EnvironmentReflectionGpuMaterialEffect.field_i;
+            var9Lifetime3 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
           }
         }
         if (NebulaField.field_c > var10Lifetime2) {
           var10Lifetime2 = NebulaField.field_c;
           var8Lifetime2 = (-var13 + NebulaField.field_c << 12) / var12;
         } else {
-          if (hab.field_i < var10Lifetime2) {
-            var8Lifetime2 = (hab.field_i - var13 << 12) / var12;
-            var10Lifetime2 = hab.field_i;
+          if (EnvironmentReflectionGpuMaterialEffect.field_i < var10Lifetime2) {
+            var8Lifetime2 = (EnvironmentReflectionGpuMaterialEffect.field_i - var13 << 12) / var12;
+            var10Lifetime2 = EnvironmentReflectionGpuMaterialEffect.field_i;
           }
         }
         SetOndamageParticleLife.a(param5, var9Lifetime3, -1, var10Lifetime2, var11Lifetime3, var8Lifetime2);

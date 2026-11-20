@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PartitionZoneList implements DiffableState, ofa {
-    private int field_b;
+    private int revision;
     private PartitionZone[] zones;
 
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
@@ -42,15 +42,15 @@ final class PartitionZoneList implements DiffableState, ofa {
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void decrementIdsAbove(int param0, int param1, byte param2) {
         int var4 = 0;
         int var5;
         var5 = VoidHunters.field_G;
         if (null != this.zones) {
           for (var4 = 0; var4 < this.zones.length; var4++) {
             if (~param1 == ~this.zones[var4].type) {
-              this.zones[var4].b(11964, param0);
-              this.a(-104);
+              this.zones[var4].decrementIdsAbove(11964, param0);
+              this.markChanged(-104);
             }
           }
         }
@@ -59,7 +59,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         }
     }
 
-    final PartitionZone a(int param0, int param1, int param2, int param3) {
+    final PartitionZone findZone(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6;
         var6 = VoidHunters.field_G;
@@ -73,7 +73,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         if (param0 >= 98) {
           return null;
         }
-        this.a(83);
+        this.markChanged(83);
         return null;
     }
 
@@ -81,7 +81,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         try {
           this.zones = (PartitionZone[]) (SetAutoDetail.a(8, dp.field_b, param0, 1, -76, this.zones));
           if (param1) {
-            this.a(-8);
+            this.markChanged(-8);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cda.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -90,14 +90,14 @@ final class PartitionZoneList implements DiffableState, ofa {
 
     public final void copyTo(byte param0, SerializableGameState param1) {
         if (param0 < 54) {
-          this.field_b = -73;
+          this.revision = -73;
         }
         PartitionZoneList var3 = (PartitionZoneList) (param1);
-        if (this.field_b == var3.field_b) {
+        if (this.revision == var3.revision) {
           return;
         }
         try {
-          var3.field_b = this.field_b;
+          var3.revision = this.revision;
           var3.zones = (PartitionZone[]) (SpriteDimensions.copyStateArrayByMode(var3.zones, this.zones, 1, dp.field_b, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cda.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -202,7 +202,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         }
     }
 
-    final PartitionZone a(byte param0, int param1, int param2, int param3) {
+    final PartitionZone getOrCreateZone(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6;
         PartitionZone var7;
@@ -218,26 +218,26 @@ final class PartitionZoneList implements DiffableState, ofa {
         }
         var7 = new PartitionZone(param1, param2, param3);
         if (param0 <= 118) {
-          this.field_b = -59;
+          this.revision = -59;
         }
         this.zones = (PartitionZone[]) (MapClearanceAreaFactory.a(this.zones, var7, dp.field_b, true, true, 1));
-        this.a(125);
+        this.markChanged(125);
         return var7;
     }
 
-    final void a(int param0) {
+    final void markChanged(int param0) {
         int fieldTemp$0 = ggb.field_a;
         ggb.field_a = ggb.field_a + 1;
-        this.field_b = fieldTemp$0;
+        this.revision = fieldTemp$0;
         int var2 = -124 % ((-66 - param0) / 32);
     }
 
     PartitionZoneList() {
-        this.field_b = 0;
-        this.a(-33);
+        this.revision = 0;
+        this.markChanged(-33);
     }
 
-    final boolean b(int param0, int param1, int param2, int param3) {
+    final boolean removeZone(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -262,7 +262,7 @@ final class PartitionZoneList implements DiffableState, ofa {
           return false;
         }
         this.zones = (PartitionZone[]) (GetSalvoUsesAllEnergy.a(dp.field_b, var5, 15667, this.zones));
-        this.a(-100);
+        this.markChanged(-100);
         if (this.zones != null &&
           this.zones.length != 0) {
           return false;

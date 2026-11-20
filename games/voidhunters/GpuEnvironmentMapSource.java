@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class as extends bkb {
+abstract class GpuEnvironmentMapSource extends EnvironmentMapSource {
     static llb field_c;
     static int field_d;
 
-    private as() throws Throwable {
+    private GpuEnvironmentMapSource() throws Throwable {
         throw new Error();
     }
 
@@ -16,7 +16,7 @@ abstract class as extends bkb {
         field_c = null;
     }
 
-    abstract GpuCubeTexture a(byte param0);
+    abstract GpuCubeTexture getCubeTexture(byte param0);
 
     static {
         field_d = 0;

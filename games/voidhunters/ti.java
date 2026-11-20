@@ -145,7 +145,7 @@ final class ti extends qg {
         if (param1 < 18) {
           return;
         }
-        rtb var3 = this.field_b.a(false);
+        OpenGlCubeTexture var3 = this.field_b.a(false);
         if (!this.field_e) {
           return;
         }

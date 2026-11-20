@@ -9,7 +9,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
         if (param0 != 0) {
           return (llb) null;
         }
-        return rga.field_f.field_wb;
+        return WaterTextures.field_f.field_wb;
     }
 
     public static void clearSharedReferences(int param0) {

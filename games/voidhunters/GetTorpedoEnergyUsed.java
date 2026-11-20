@@ -35,7 +35,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
           return;
         }
-        if (param0 > hab.field_i) {
+        if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
           if (param6 != 1) {
             is.a(param5, param2, param1, param6, 20408, param3, param0);
             return;

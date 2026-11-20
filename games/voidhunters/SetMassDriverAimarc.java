@@ -57,7 +57,7 @@ final class SetMassDriverAimarc extends ConsoleCommand {
         if (param0 != 130) {
           return true;
         }
-        return hab.field_g[param1].field_f;
+        return EnvironmentReflectionGpuMaterialEffect.field_g[param1].field_f;
     }
 
     SetMassDriverAimarc(String param0, Class[] param1, String param2) {

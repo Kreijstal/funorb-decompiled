@@ -144,7 +144,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         int fieldTemp$0 = SetLag.field_o;
         SetLag.field_o = SetLag.field_o + 1;
         this.field_u = fieldTemp$0;
-        GetCountermeasuresCooldown.e((byte) -125);
+        GetCountermeasuresCooldown.markSelectedAsteroidFieldChanged((byte) -125);
         int var2 = -58 / ((param0 + 4) / 38);
     }
 

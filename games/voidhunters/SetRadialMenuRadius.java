@@ -96,10 +96,10 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, int param1, Object param2) {
+    final static void addObjectiveMarker(byte param0, int param1, Object param2) {
         int var3_int = 0;
-        qsa var3 = null;
-        qsa var4 = null;
+        ObjectiveMarker var3 = null;
+        ObjectiveMarker var4 = null;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -116,20 +116,20 @@ final class SetRadialMenuRadius extends ConsoleCommand {
               }
               var3 = NebulaField.acquireTemporaryObjective((byte) -86);
               if (var3 != null) {
-                var3.field_c = param2;
-                var3.field_a = param1;
+                var3.target = param2;
+                var3.markerType = param1;
               }
               return;
             }
             var4 = SetKeepTeamColours.field_p[var3_int];
-            if (param2 != var4.field_c) {
+            if (param2 != var4.target) {
               var3_int++;
               continue;
             }
             break;
           }
-          if (1 == var4.field_a) {
-            var4.field_a = param1;
+          if (1 == var4.markerType) {
+            var4.markerType = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

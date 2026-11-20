@@ -221,12 +221,12 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    final static qsa acquireTemporaryObjective(byte param0) {
-        qsa[] fieldTemp$0 = null;
+    final static ObjectiveMarker acquireTemporaryObjective(byte param0) {
+        ObjectiveMarker[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         if (SetKeepTeamColours.field_p.length > GetDebrisCarryOver.field_p) {
           if (SetKeepTeamColours.field_p[GetDebrisCarryOver.field_p] == null) {
-            SetKeepTeamColours.field_p[GetDebrisCarryOver.field_p] = new qsa();
+            SetKeepTeamColours.field_p[GetDebrisCarryOver.field_p] = new ObjectiveMarker();
           }
           int var1 = 28 / ((15 - param0) / 47);
           fieldTemp$0 = SetKeepTeamColours.field_p;

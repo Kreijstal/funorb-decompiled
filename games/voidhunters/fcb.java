@@ -19,7 +19,7 @@ final class fcb implements oob {
     final void b(byte param0) {
         ComponentCollision.a("Very start of requestdata", (byte) -56);
         if (OpenGlVertexBuffer.field_j != null) {
-          AsteroidField.a((byte) -100, OpenGlVertexBuffer.field_j);
+          AsteroidField.loadLocalizedTextAndKeyBindings((byte) -100, OpenGlVertexBuffer.field_j);
           OpenGlVertexBuffer.field_j = null;
           MidiNote.resetFrameTiming(param0 + 2095);
         }
@@ -290,14 +290,14 @@ final class fcb implements oob {
           WorldPoint.a("button_depressed", 80, "basic", this.field_i);
           lo.field_c = SetGrapplingHookRopeBreakLength.a(this.field_i, true, "basic", "achievements_large");
           OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
-          wu.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
+          WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
           un.a(OpenGlGpuTexture2D.field_j, 121);
-          un.a(wu.field_h, 126);
+          un.a(WaterNoiseGpuMaterialEffect.field_h, 126);
           kua.field_a = new Sprite(32, 32);
           kua.field_a.setRasterTarget();
-          wu.field_h.drawDownscaled(0, 0, 32, 32);
+          WaterNoiseGpuMaterialEffect.field_h.drawDownscaled(0, 0, 32, 32);
           SetClientSideDragging.field_q.a((byte) -108);
-          wu.field_h = null;
+          WaterNoiseGpuMaterialEffect.field_h = null;
           SetTorpedoProjectileDamage.field_p = new Sprite[ei.field_i.length][];
           var9 = new Sprite[ei.field_i.length][];
           var14 = var9;
@@ -329,7 +329,7 @@ final class fcb implements oob {
         }
         if (this.field_f != null) {
           ComponentCollision.a("Loading huffman wordpack", (byte) -123);
-          spb.a((byte) -22, new dqb(this.field_f.fetchNamedFile("huffman", true, "")));
+          spb.a((byte) -22, new HuffmanCodec(this.field_f.fetchNamedFile("huffman", true, "")));
           this.field_f = null;
           MidiNote.resetFrameTiming(2096);
           return false;
@@ -357,7 +357,7 @@ final class fcb implements oob {
         if (param3 >= ob.field_j &&
           GetCountermeasureLauncherProjectiles.field_o >= param4 &&
           NebulaField.field_c <= param2 &&
-          param1 <= hab.field_i) {
+          param1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
           CarouselPlayerInfoFactory.a(param3, param4, param2, 112, param0, param1);
         } else {
           MidiChannelLevels.a(-3518, param0, param1, param2, param4, param3);

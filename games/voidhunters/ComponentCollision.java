@@ -78,8 +78,8 @@ final class ComponentCollision extends IntrusiveNode {
             var21 = vw.field_a;
             var25 = var21;
             var25.field_hb = 0;
-            var6 = qsa.field_b;
-            qsa.field_b.field_G = 0;
+            var6 = ObjectiveMarker.field_b;
+            ObjectiveMarker.field_b.field_G = 0;
             var6.field_hb = 0;
             SetAutozoomSpeedDivide.field_p.field_G = 0;
             var7 = SetAutozoomSpeedDivide.field_p;
@@ -108,12 +108,12 @@ final class ComponentCollision extends IntrusiveNode {
                 }
                 vw.field_a.field_R = vw.field_a.field_R + "<br>" + var10_ref_String;
               }
-              qsa.field_b.a(var9, 119, vva.field_r.field_hb - var9, vva.field_r.field_G - 40, 40);
-              qsa.field_b.field_R = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
-              stackIn_20_0 = qsa.field_b;
+              ObjectiveMarker.field_b.a(var9, 119, vva.field_r.field_hb - var9, vva.field_r.field_G - 40, 40);
+              ObjectiveMarker.field_b.field_R = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
+              stackIn_20_0 = ObjectiveMarker.field_b;
               stackIn_21_1 = (param2) && (qga.field_a == 0L);
               stackIn_20_0.field_y = stackIn_21_1;
-              var8 = qsa.field_b;
+              var8 = ObjectiveMarker.field_b;
               var10 = 2;
               if (ncb.field_a != null) {
                 if (null == tib.field_i) {
@@ -237,7 +237,7 @@ final class ComponentCollision extends IntrusiveNode {
                     }
                   }
                   var16Lifetime1Lifetime1 = 0;
-                  var17 = rga.field_f.field_wb.field_lb;
+                  var17 = WaterTextures.field_f.field_wb.field_lb;
                   var18_ref = (jk) (var17.first(0));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
@@ -274,8 +274,8 @@ final class ComponentCollision extends IntrusiveNode {
                     var16Lifetime1Lifetime1 = 0;
                   }
                   if ((var16Lifetime1Lifetime1 != 0)) {
-                    qsa.field_b.field_y = false;
-                    if (!(!qsa.field_b.field_Q)) {
+                    ObjectiveMarker.field_b.field_y = false;
+                    if (!(!ObjectiveMarker.field_b.field_Q)) {
                       if (0 == GetReverbWidth.field_o.field_a.field_Ab) {
                         NebulaFieldFactory.field_a = kob.field_e;
                       } else {
@@ -287,8 +287,8 @@ final class ComponentCollision extends IntrusiveNode {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                qsa.field_b.field_y = false;
-                if (qsa.field_b.field_Q) {
+                ObjectiveMarker.field_b.field_y = false;
+                if (ObjectiveMarker.field_b.field_Q) {
                   var11_ref = null;
                   var12Lifetime2 = 0;
                   for (var13Lifetime1 = 0; ocb.field_l > var13Lifetime1; var13Lifetime1++) {
@@ -340,7 +340,7 @@ final class ComponentCollision extends IntrusiveNode {
           if (param1 < 8) {
             ComponentCollision.a(-44, (byte) 40, true, false, true);
           }
-          stackIn_165_0 = rga.field_g;
+          stackIn_165_0 = WaterTextures.field_g;
           stackIn_166_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
           ((llb) (Object) stackIn_165_0).a(stackIn_166_1, 1332);
           stackIn_170_0 = vva.field_r;
@@ -357,7 +357,7 @@ final class ComponentCollision extends IntrusiveNode {
             if (vw.field_a.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = true;
             }
-            if (qsa.field_b.field_o != 0) {
+            if (ObjectiveMarker.field_b.field_o != 0) {
               GetExplosionProjectileDamage.field_o = true;
             }
             if (rlb.field_a.field_o != 0) {

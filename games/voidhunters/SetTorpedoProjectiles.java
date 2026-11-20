@@ -245,7 +245,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var12.field_wb.field_U = var24_int;
               var12.field_wb.field_ib = var24_int;
               var12.field_wb.field_qb = var24_int;
-              if (rga.field_f == param2) {
+              if (WaterTextures.field_f == param2) {
                 if (!SetSpinningBladeSpindamageMultiplier.field_o.field_fc) {
                   var12.field_Nb.field_R = GetBombletSprayRandomness.field_r;
                 }
@@ -273,7 +273,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Nb.field_R != null) {
-                  if (rga.field_f != param2) {
+                  if (WaterTextures.field_f != param2) {
                     var26Lifetime2 = var12.field_Nb.e(101) + qs.field_c * 2;
                   } else {
                     var26Lifetime2 = 40;
@@ -467,7 +467,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                     }
                   }
                 }
-                if (rga.field_f == param2 &&
+                if (WaterTextures.field_f == param2 &&
                   nmb.b(param1 - 106)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + SetMissilesHitSourceTeam.field_r + (String) (var25);
@@ -481,7 +481,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                     var24Lifetime2 = var34 + "<br>" + SetReverbGain.a(GetCountermeasureLauncherRandomness.field_o, new String[]{(String) (var25)}, 122);
                   }
                 }
-                if (param2 == rga.field_f &&
+                if (param2 == WaterTextures.field_f &&
                   !nmb.b(90)) {
                   var27 = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + SetReverbGain.a(SetMassDriverProjectileLife.field_o, new String[]{var27}, 125);

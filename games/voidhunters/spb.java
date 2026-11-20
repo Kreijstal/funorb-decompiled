@@ -42,7 +42,7 @@ final class spb {
         return false;
     }
 
-    final static void a(byte param0, dqb param1) {
+    final static void a(byte param0, HuffmanCodec param1) {
         try {
           GetMissileLauncherAimspeed.field_o = param1;
           int var2_int = 12 % ((param0 - 19) / 37);

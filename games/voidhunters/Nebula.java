@@ -80,8 +80,8 @@ final class Nebula implements DiffableState {
         if (SetPointDefenceLaserAimarc.field_o != null) {
           SetPointDefenceLaserAimarc.field_o.l((byte) -106);
         }
-        fib.field_j = new waa();
-        GetMissionVariablesHudX.field_o.b(fib.field_j, -116);
+        OpenGlEnvironmentMappedWaterEffect.field_j = new waa();
+        GetMissionVariablesHudX.field_o.b(OpenGlEnvironmentMappedWaterEffect.field_j, -116);
     }
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {

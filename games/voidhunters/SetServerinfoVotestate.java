@@ -61,7 +61,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
             return stackIn_6_0;
           }
           if (param0 == 3) {
-            stackIn_10_0 = SetReverbGain.a(wu.field_e, new String[]{param1}, param2 ^ -3290);
+            stackIn_10_0 = SetReverbGain.a(WaterNoiseGpuMaterialEffect.field_e, new String[]{param1}, param2 ^ -3290);
             return stackIn_10_0;
           }
           if (param0 == 4) {

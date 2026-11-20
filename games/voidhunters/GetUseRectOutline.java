@@ -163,7 +163,7 @@ final class GetUseRectOutline extends ConsoleCommand {
           }
         }
         me.a(param2, param6, param4, param9, param5, param3, (byte) 119);
-        SetTorpedoProjectiles.a(param6, (byte) 1, rga.field_f, param4, param5);
+        SetTorpedoProjectiles.a(param6, (byte) 1, WaterTextures.field_f, param4, param5);
         GetMissionTerrainNebulaProbability.field_o = GetMissionTerrainNebulaProbability.field_o + 1;
     }
 

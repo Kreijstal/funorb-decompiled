@@ -987,13 +987,13 @@ final class ne extends ka {
                     }
                   } else {
                     var41 = (float)param1.field_C[var19_intLifetime2] / 1024.0f;
-                    ac.a(var86, var36, var39, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var32_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var32_int]);
                     var22 = MissionBuilder.field_f[0];
                     var23 = MissionBuilder.field_f[1];
-                    ac.a(var86, var36, var39, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var33_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var33_int]);
                     var24 = MissionBuilder.field_f[0];
                     var25 = MissionBuilder.field_f[1];
-                    ac.a(var86, var36, var39, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var34]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var34]);
                     var27 = MissionBuilder.field_f[1];
                     var26 = MissionBuilder.field_f[0];
                     var42 = var41 / 2.0f;

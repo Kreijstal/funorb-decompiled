@@ -28,7 +28,7 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
             if (MessageLogFactory.field_a[var1_int] != null) {
               GetHealthBarWidth.field_p[var1_int] = GetDebrisGroupColour.field_r.createModel(MessageLogFactory.field_a[var1_int], -1, -1, 100, 100);
               if (!dm.field_b) {
-                var2 = hab.field_g[var1_int];
+                var2 = EnvironmentReflectionGpuMaterialEffect.field_g[var1_int];
                 var14 = GetBombletSprayProjectileOndamageParticles.a((byte) -109, var2.outline);
                 var4 = -var14[0] + var14[1];
                 var5 = var14[3] - var14[2];

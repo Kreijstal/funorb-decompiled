@@ -2326,7 +2326,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var7;
         ShipComponent var6;
         var7 = VoidHunters.field_G;
-        var2 = hab.field_g[this.componentTypeId];
+        var2 = EnvironmentReflectionGpuMaterialEffect.field_g[this.componentTypeId];
         this.finaloutline = new int[var2.outline.length];
         if (!param0) {
           this.getWorldConnectionX((ShipComponentDefinition) null, (byte) -94);
@@ -4028,7 +4028,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param0 != -112) {
           return (ShipComponentDefinition) null;
         }
-        return hab.field_g[this.componentTypeId];
+        return EnvironmentReflectionGpuMaterialEffect.field_g[this.componentTypeId];
     }
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
@@ -4549,7 +4549,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var3 = 0;
         ShipComponentDefinition var2;
         this.componentTypeId = param0;
-        var2 = hab.field_g[this.componentTypeId];
+        var2 = EnvironmentReflectionGpuMaterialEffect.field_g[this.componentTypeId];
         if (null != var2.field_c) {
           this.weaponbehaviour = new WeaponBehaviour();
           var2.field_c.copyTo((byte) 94, this.weaponbehaviour);

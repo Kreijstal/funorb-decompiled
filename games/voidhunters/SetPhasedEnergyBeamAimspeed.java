@@ -97,15 +97,15 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           if (!(CarouselPlayerEventFactory.field_a <= 0) ||
             !(SetExplosionPushMultiplier.field_p <= 0)) {
             if (null == kl.field_c) {
-              stackIn_79_0 = rga.field_g;
+              stackIn_79_0 = WaterTextures.field_g;
               stackIn_80_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_79_0).b(stackIn_80_1, 101);
               stackIn_83_0 = vva.field_r;
               stackIn_84_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_83_0).b(stackIn_84_1, 101);
             } else {
-              kl.field_c.drawOpaque(rga.field_g.field_L, 0);
-              stackIn_88_0 = rga.field_g;
+              kl.field_c.drawOpaque(WaterTextures.field_g.field_L, 0);
+              stackIn_88_0 = WaterTextures.field_g;
               stackIn_89_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_88_0).b(stackIn_89_1, 101);
               stackIn_92_0 = vva.field_r;
@@ -129,15 +129,15 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           }
           if (CarouselPlayerEventFactory.field_a > 0) {
             if (null == kl.field_c) {
-              stackIn_20_0 = rga.field_g;
+              stackIn_20_0 = WaterTextures.field_g;
               stackIn_21_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_20_0).b(stackIn_21_1, 101);
               stackIn_24_0 = vva.field_r;
               stackIn_25_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_24_0).b(stackIn_25_1, 101);
             } else {
-              kl.field_c.drawOpaque(rga.field_g.field_L, 0);
-              stackIn_29_0 = rga.field_g;
+              kl.field_c.drawOpaque(WaterTextures.field_g.field_L, 0);
+              stackIn_29_0 = WaterTextures.field_g;
               stackIn_30_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_29_0).b(stackIn_30_1, 101);
               stackIn_33_0 = vva.field_r;
@@ -147,15 +147,15 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           } else {
             if (SetExplosionPushMultiplier.field_p > 0) {
               if (null == kl.field_c) {
-                stackIn_42_0 = rga.field_g;
+                stackIn_42_0 = WaterTextures.field_g;
                 stackIn_43_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((llb) (Object) stackIn_42_0).b(stackIn_43_1, 101);
                 stackIn_46_0 = vva.field_r;
                 stackIn_47_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((llb) (Object) stackIn_46_0).b(stackIn_47_1, 101);
               } else {
-                kl.field_c.drawOpaque(rga.field_g.field_L, 0);
-                stackIn_51_0 = rga.field_g;
+                kl.field_c.drawOpaque(WaterTextures.field_g.field_L, 0);
+                stackIn_51_0 = WaterTextures.field_g;
                 stackIn_52_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((llb) (Object) stackIn_51_0).b(stackIn_52_1, 101);
                 stackIn_55_0 = vva.field_r;

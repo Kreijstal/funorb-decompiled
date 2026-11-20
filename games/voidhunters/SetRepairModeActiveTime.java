@@ -121,7 +121,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetHealthBarHeight.field_p[4] = GetCountermeasuresCooldown.field_o;
           DualLinkNode.field_f = new llb(0L, (llb) null);
           me.field_q = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
-          GetDebrisGrabbingRange.field_o = new llb(0L, qsa.field_d, GetMessageMaxage.field_p);
+          GetDebrisGrabbingRange.field_o = new llb(0L, ObjectiveMarker.field_d, GetMessageMaxage.field_p);
           CarouselSlot.field_a = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
           DualLinkNode.field_f.b(-561, me.field_q);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
@@ -137,13 +137,13 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           nna.field_v.field_F = 1;
           SpawnChoiceFactory.field_c = new llb(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
           qpb.field_w = new llb(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
-          sra.field_a = new llb(0L, as.field_c);
+          sra.field_a = new llb(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new llb(0L, GetUseSprites.field_p, lw.field_e);
           SettingsChangeFactory.field_b = new llb(0L, GetUseSprites.field_p, sc.field_b);
           GrapplingHook.field_C = new llb(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new llb(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
-          uga.field_h = new llb(0L, qsa.field_d, tea.field_c);
+          uga.field_h = new llb(0L, ObjectiveMarker.field_d, tea.field_c);
           MapClearanceCircle.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
           GetMomentOfInertiaPerpointCalcDownshift.field_p = new llb(0L, SetGrapplingHookMaxExtension8Force.field_p, ev.field_b.toUpperCase());
           GetMomentOfInertiaPerpointCalcDownshift.field_p.field_y = GetGrapplingHooksDamageableBySourcePlayer.field_o;
@@ -196,17 +196,17 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetPhasedEnergyBeamPulsetime.field_o = new llb(0L, qc.field_q);
           SetPhasedEnergyBeamPulsetime.field_o.field_F = 1;
           SecondaryNodeDequeIterator.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
-          GetPointDefenceLaserProjectileDamage.field_o = new llb(0L, qsa.field_d, GetMessageMaxage.field_p);
-          rga.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
+          GetPointDefenceLaserProjectileDamage.field_o = new llb(0L, ObjectiveMarker.field_d, GetMessageMaxage.field_p);
+          WaterTextures.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
           SetOndamageParticleLife.field_o.b(-561, SetPhasedEnergyBeamPulsetime.field_o);
           SetOndamageParticleLife.field_o.b(-561, SecondaryNodeDequeIterator.field_a);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             SetOndamageParticleLife.field_o.b(-561, GetPointDefenceLaserProjectileDamage.field_o);
           }
-          SetOndamageParticleLife.field_o.b(-561, rga.field_f);
+          SetOndamageParticleLife.field_o.b(-561, WaterTextures.field_f);
           GetShipToShipRamDamage.field_q = new llb(0L, SetPlayerRepairAmount.field_q, tua.field_b.toUpperCase());
           GetWeaponParticleSpeedDownshift.field_q = new llb(0L, pa.field_a);
-          SetPhysicsCollisionGrapplingHookForceMultiplier.field_o = new llb(0L, as.field_c);
+          SetPhysicsCollisionGrapplingHookForceMultiplier.field_o = new llb(0L, GpuEnvironmentMapSource.field_c);
           ProxySocketConnector.field_e = new llb(0L, bv.field_b, mr.field_J.toUpperCase());
           GetLaserAimarc.field_o = new llb[4 + param12];
           SetReloadBarHeight.field_q = new cna[4 + param12][];
@@ -276,7 +276,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             }
           }
           vw.field_a = new llb(0L, SetGrapplingHookMaxExtension8Force.field_p);
-          qsa.field_b = new llb(0L, SetGrapplingHookMaxExtension8Force.field_p);
+          ObjectiveMarker.field_b = new llb(0L, SetGrapplingHookMaxExtension8Force.field_p);
           SetAutozoomSpeedDivide.field_p = new llb(0L, SetAutoAfkTimeout.field_q);
           SetAutozoomSpeedDivide.field_p.a(18445, qc.field_q);
           SetAutozoomSpeedDivide.field_p.field_B = 1;
@@ -299,7 +299,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             }
           }
           vva.field_r.b(param1 - 10792, vw.field_a);
-          vva.field_r.b(-561, qsa.field_b);
+          vva.field_r.b(-561, ObjectiveMarker.field_b);
           vva.field_r.b(-561, SetAutozoomSpeedDivide.field_p);
           ProjectileHit.field_d = new llb(0L, lo.field_b, ko.field_d.toUpperCase());
           rlb.field_a = new llb(0L, hnb.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());

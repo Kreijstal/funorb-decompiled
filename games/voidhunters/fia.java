@@ -180,7 +180,7 @@ final class fia {
                         SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p + 1;
                         uob.field_g = new int[1][0];
                         hw.field_d = new int[1][0];
-                        if (hab.field_g.length <= SetMissileLauncherProjectileLife.field_p) {
+                        if (EnvironmentReflectionGpuMaterialEffect.field_g.length <= SetMissileLauncherProjectileLife.field_p) {
                           SetMissileLauncherProjectileLife.field_p = -1;
                         }
                       }
@@ -192,7 +192,7 @@ final class fia {
                           SetMissileLauncherProjectileLife.field_p = SetMissileLauncherProjectileLife.field_p - 1;
                           hw.field_d = new int[1][0];
                           if (SetMissileLauncherProjectileLife.field_p < -1) {
-                            SetMissileLauncherProjectileLife.field_p = hab.field_g.length - 1;
+                            SetMissileLauncherProjectileLife.field_p = EnvironmentReflectionGpuMaterialEffect.field_g.length - 1;
                           }
                         }
                         khb.field_b = true;
@@ -296,7 +296,7 @@ final class fia {
           }
           if (SetMissileLauncherProjectileLife.field_p >= 0) {
             boolean decompiledFrameRemainder0 = true;
-            var19 = hab.field_g[SetMissileLauncherProjectileLife.field_p];
+            var19 = EnvironmentReflectionGpuMaterialEffect.field_g[SetMissileLauncherProjectileLife.field_p];
             if (var19 != null) {
               var21 = new lta();
               var21.field_b = SetTorpedoEnergyUsed.field_o;

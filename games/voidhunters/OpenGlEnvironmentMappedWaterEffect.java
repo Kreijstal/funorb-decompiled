@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fib extends GpuMaterialEffect {
+final class OpenGlEnvironmentMappedWaterEffect extends GpuMaterialEffect {
     static String field_h;
     private OpenGlShaderProgram field_f;
     private boolean field_e;
     static waa field_j;
     private boolean field_i;
-    private rga field_g;
+    private WaterTextures field_g;
 
     final void setTexture(byte param0, int param1, GpuTexture param2) {
         RuntimeException var4 = null;
@@ -77,7 +77,7 @@ final class fib extends GpuMaterialEffect {
             this.toolkit.setActiveTextureUnit(1, -123);
             this.toolkit.setTexture(var3, -111);
             this.toolkit.setActiveTextureUnit(0, -108);
-            this.toolkit.setTexture(this.field_g.field_e, -107);
+            this.toolkit.setTexture(this.field_g.normalMapVolume, -107);
             var4 = this.field_f.field_b;
             jaggl.OpenGL.glUseProgramObjectARB(var4);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
@@ -91,7 +91,7 @@ final class fib extends GpuMaterialEffect {
         }
     }
 
-    fib(OpenGlGpuToolkit param0, ResourceArchive param1, rga param2) {
+    OpenGlEnvironmentMappedWaterEffect(OpenGlGpuToolkit param0, ResourceArchive param1, WaterTextures param2) {
         super(param0);
         OpenGlShader var4 = null;
         RuntimeException var4_ref = null;
@@ -124,7 +124,7 @@ final class fib extends GpuMaterialEffect {
           var4 = var6;
           var5 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.fetchNamedFile("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
           this.field_f = NodeHashTable.linkShaderProgram(0, new OpenGlShader[]{var6, var5}, param0);
-          stackIn_8_1 = (this.field_f != null) && (this.field_g.b((byte) 63));
+          stackIn_8_1 = (this.field_f != null) && (this.field_g.ensureNormalMap((byte) 63));
           this.field_e = stackIn_8_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

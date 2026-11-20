@@ -16,10 +16,10 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         if (GetUseNiceTrails.field_r > param2) {
           if (param0 != -1) {
             GetGrapplingHookAimspeed.a(109, -32, 51);
-            if (qr.field_g > param2) {
+            if (SpecularGpuMaterialEffect.field_g > param2) {
               return -1;
             }
-            if (param2 >= qr.field_g + GetRadialMenuRadius.field_o.width) {
+            if (param2 >= SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width) {
               return -1;
             }
             if (SetShipPersistence.field_q > param1) {
@@ -30,8 +30,8 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
             }
             return 1;
           }
-          if (qr.field_g <= param2 &&
-            param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
+          if (SpecularGpuMaterialEffect.field_g <= param2 &&
+            param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
             GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
             return 1;
@@ -41,16 +41,16 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         if (GetRadialMenuRadius.field_o.width + GetUseNiceTrails.field_r <= param2) {
           if (param0 != -1) {
             GetGrapplingHookAimspeed.a(109, -32, 51);
-            if (qr.field_g <= param2 &&
-              param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
+            if (SpecularGpuMaterialEffect.field_g <= param2 &&
+              param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
               SetShipPersistence.field_q <= param1 &&
               GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
               return 1;
             }
             return -1;
           }
-          if (qr.field_g <= param2 &&
-            param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
+          if (SpecularGpuMaterialEffect.field_g <= param2 &&
+            param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
             GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
             return 1;
@@ -63,16 +63,16 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         }
         if (param0 != -1) {
           GetGrapplingHookAimspeed.a(109, -32, 51);
-          if (qr.field_g <= param2 &&
-            param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
+          if (SpecularGpuMaterialEffect.field_g <= param2 &&
+            param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
             GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
             return 1;
           }
           return -1;
         }
-        if (qr.field_g <= param2 &&
-          param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
+        if (SpecularGpuMaterialEffect.field_g <= param2 &&
+          param2 < SpecularGpuMaterialEffect.field_g + GetRadialMenuRadius.field_o.width &&
           SetShipPersistence.field_q <= param1 &&
           GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
           return 1;

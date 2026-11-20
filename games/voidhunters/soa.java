@@ -89,8 +89,8 @@ final class soa extends llb {
             var17 = var15;
             vw.field_a.field_G = 0;
             var17.field_hb = 0;
-            var5 = qsa.field_b;
-            qsa.field_b.field_G = 0;
+            var5 = ObjectiveMarker.field_b;
+            ObjectiveMarker.field_b.field_G = 0;
             var5.field_hb = 0;
             SetAutozoomSpeedDivide.field_p.field_G = 0;
             var6 = SetAutozoomSpeedDivide.field_p;
@@ -98,7 +98,7 @@ final class soa extends llb {
             GetWeaponParticleSpeedDownshift.field_q.field_R = GetTorpedoAimspeed.field_p.toUpperCase();
             var7 = (2 + vva.field_r.field_hb) / 2;
             SetAutozoomSpeedDivide.field_p.a(0, 6, var7 - 2, vva.field_r.field_G - 40, 40);
-            qsa.field_b.a(var7, -120, vva.field_r.field_hb - var7, -40 + vva.field_r.field_G, 40);
+            ObjectiveMarker.field_b.a(var7, -120, vva.field_r.field_hb - var7, -40 + vva.field_r.field_G, 40);
             if (SetMutatorVotes.field_o.length == 1 &&
               SetMutatorVotes.field_o[0] == 2) {
               var8 = 0;
@@ -128,9 +128,9 @@ final class soa extends llb {
                 break;
               }
             }
-            qsa.field_b.field_y = true;
+            ObjectiveMarker.field_b.field_y = true;
             if (!ArchiveTextureProvider.field_h) {
-              stackIn_36_0 = qsa.field_b;
+              stackIn_36_0 = ObjectiveMarker.field_b;
               if (var8 != 0) {
                 stackIn_37_1 = SetAudioRangeCutoff.field_p;
               } else {
@@ -139,11 +139,11 @@ final class soa extends llb {
               stackIn_36_0.field_R = ((String) (Object) stackIn_37_1).toUpperCase();
               stackIn_39_0 = GetTorpedoProjectileDamage.field_p;
               if (var8 != 0) {
-                stackIn_40_1 = qpa.field_b;
+                stackIn_40_1 = Cp1252Strings.field_b;
               } else {
                 stackIn_40_1 = aaa.field_a;
               }
-              stackIn_39_0.field_R = SetReverbGain.a(stackIn_40_1, new String[]{qsa.field_b.field_R}, 76);
+              stackIn_39_0.field_R = SetReverbGain.a(stackIn_40_1, new String[]{ObjectiveMarker.field_b.field_R}, 76);
               hrb.field_b = true;
               GetShipToShipRamDamage.field_q.field_y = true;
               SetAutozoomSpeedDivide.field_p.field_R = nva.field_D;
@@ -167,8 +167,8 @@ final class soa extends llb {
                 }
               }
               if (!hrb.field_b) {
-                qsa.field_b.field_y = false;
-                if (qsa.field_b.field_Q) {
+                ObjectiveMarker.field_b.field_y = false;
+                if (ObjectiveMarker.field_b.field_Q) {
                   var9 = null;
                   if (GetMissionVotes.field_p) {
                     var9 = "<col=A00000>" + GpuMaterialEffect.field_a + "</col>";
@@ -217,10 +217,10 @@ final class soa extends llb {
                 var9 = (String) (var9) + "...";
               }
               SetAutozoomSpeedDivide.field_p.field_R = (String) (var9);
-              qsa.field_b.field_R = SetMissileLauncherProjectiles.field_p.toUpperCase();
+              ObjectiveMarker.field_b.field_R = SetMissileLauncherProjectiles.field_p.toUpperCase();
             }
           }
-          stackIn_71_0 = rga.field_g;
+          stackIn_71_0 = WaterTextures.field_g;
           stackIn_72_1 = (param0) && (!param2) && (!GetTorpedoProjectileDamage.field_o);
           ((llb) (Object) stackIn_71_0).a(stackIn_72_1, 1332);
           stackIn_76_0 = vva.field_r;
@@ -237,7 +237,7 @@ final class soa extends llb {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
               ts.a(false, param3);
             }
-            if (qsa.field_b.field_o != 0) {
+            if (ObjectiveMarker.field_b.field_o != 0) {
               if (ArchiveTextureProvider.field_h) {
                 GetComponentBreakingExplosionForceMultiplier.a(38, param3);
               } else {

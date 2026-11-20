@@ -98,8 +98,8 @@ class mfb {
           if (GetFighterRepairAmount.field_p != null) {
             GetFighterRepairAmount.field_p.field_C.a(args, 0);
           }
-          if (null != fib.field_j) {
-            fib.field_j.field_v.a(args, param1 - 11113);
+          if (null != OpenGlEnvironmentMappedWaterEffect.field_j) {
+            OpenGlEnvironmentMappedWaterEffect.field_j.field_v.a(args, param1 - 11113);
           }
           if (param1 == 11113) {
             return;

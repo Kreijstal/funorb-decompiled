@@ -29,8 +29,8 @@ final class MapClearanceAreaFactory implements GameStateFactory {
         int var10 = 0;
         SerializableGameState[] var12 = null;
         int var13 = 0;
-        iu var14 = null;
-        iu var15 = null;
+        SortableValue var14 = null;
+        SortableValue var15 = null;
         SerializableGameState[] var6Lifetime1;
         int var7Lifetime1;
         int var9Lifetime1;
@@ -53,9 +53,9 @@ final class MapClearanceAreaFactory implements GameStateFactory {
               decompiledFrameRemainder0 = (param4);
               if (decompiledFrameRemainder0) {
                 var7 = 0;
-                var14 = (iu) (param1);
+                var14 = (SortableValue) (param1);
                 for (var9 = 0; param0.length > var9; var9++) {
-                  if (var14.a(param0[var9], true) <= 0) {
+                  if (var14.compareTo(param0[var9], true) <= 0) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
@@ -84,9 +84,9 @@ final class MapClearanceAreaFactory implements GameStateFactory {
               decompiledFrameRemainder0 = (param4);
               if (decompiledFrameRemainder0) {
                 var7 = 0;
-                var15 = (iu) (param1);
+                var15 = (SortableValue) (param1);
                 for (var9Lifetime3 = 0; param0.length > var9Lifetime3; var9Lifetime3++) {
-                  if (var15.a(param0[var9Lifetime3], true) <= 0) {
+                  if (var15.compareTo(param0[var9Lifetime3], true) <= 0) {
                     break;
                   }
                   var7++;

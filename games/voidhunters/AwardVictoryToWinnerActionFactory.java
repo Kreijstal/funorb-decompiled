@@ -20,7 +20,7 @@ final class AwardVictoryToWinnerActionFactory implements GameStateFactory {
             if (NebulaField.field_c > -param3 + param1) {
               SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);
             } else {
-              if (hab.field_i >= param1 + param3) {
+              if (EnvironmentReflectionGpuMaterialEffect.field_i >= param1 + param3) {
                 il.a(param2, param5, (byte) -103, param3, param0, param1, param6);
               } else {
                 SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);

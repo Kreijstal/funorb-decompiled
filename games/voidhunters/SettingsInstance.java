@@ -136,7 +136,7 @@ final class SettingsInstance implements DiffableState {
 
     final static boolean a(int param0, int param1) {
         int var2 = 100 / ((-57 - param0) / 61);
-        return hab.field_g[param1].field_r;
+        return EnvironmentReflectionGpuMaterialEffect.field_g[param1].field_r;
     }
 
     public static void clearSharedReferences(int param0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlayerLeave implements DiffableState {
-    static AsteroidField field_b;
+    static AsteroidField asteroidFieldForRevisionUpdates;
     int field_d;
     static int[] field_a;
     static int field_c;
@@ -55,7 +55,7 @@ final class PlayerLeave implements DiffableState {
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_b = null;
+        asteroidFieldForRevisionUpdates = null;
         field_a = null;
         if (param0) {
           java.applet.Applet var2 = (java.applet.Applet) null;

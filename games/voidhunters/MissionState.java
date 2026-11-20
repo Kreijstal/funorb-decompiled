@@ -1213,7 +1213,7 @@ final class MissionState implements DiffableState {
                   var16 = SetDebrisPartitioned.b(false).a(3, false);
                   var16.a(true, param0, param2 ^ -112);
                 } else {
-                  var15 = bkb.a(0);
+                  var15 = EnvironmentMapSource.createTeamSwitchingMission(0);
                   var15.a(true, param0, param2 ^ 104);
                 }
                 this.c(0, param2 ^ 20, Particle.field_l * 1);

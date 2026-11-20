@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qr extends GpuMaterialEffect {
+final class SpecularGpuMaterialEffect extends GpuMaterialEffect {
     private boolean field_e;
     static int field_g;
     private boolean field_h;
@@ -18,7 +18,7 @@ final class qr extends GpuMaterialEffect {
         }
     }
 
-    qr(GpuToolkit param0) {
+    SpecularGpuMaterialEffect(GpuToolkit param0) {
         super(param0);
         int var14 = 0;
         int var15 = 0;

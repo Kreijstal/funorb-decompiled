@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dqb {
-    private int[] field_d;
-    private byte[] field_a;
+final class HuffmanCodec {
+    private int[] codes;
+    private byte[] codeLengths;
     static String field_c;
-    private int[] field_b;
+    private int[] decodeTree;
 
-    final int b(int param0, byte[] param1, byte[] param2, int param3, int param4, int param5) {
+    final int compress(int param0, byte[] param1, byte[] param2, int param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -32,7 +32,7 @@ final class dqb {
           var7_int = 0;
           if (param3 <= 1) {
             var16 = (byte[]) null;
-            this.a(15, (byte[]) null, (byte[]) null, 34, 99, 31);
+            this.decompress(15, (byte[]) null, (byte[]) null, 34, 99, 31);
           }
           param0 = param0 + param5;
           var8 = param4 << 3;
@@ -42,8 +42,8 @@ final class dqb {
               return stackIn_21_0;
             }
             var9 = 255 & param1[param5];
-            var10 = this.field_d[var9];
-            var11 = this.field_a[var9];
+            var10 = this.codes[var9];
+            var11 = this.codeLengths[var9];
             if (var11 == 0) {
               throw new RuntimeException("" + var9);
             }
@@ -102,7 +102,7 @@ final class dqb {
         }
     }
 
-    final static byte[] a(byte param0, String param1) {
+    final static byte[] fetchLocalizedResource(byte param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] stackIn_3_0 = null;
@@ -113,9 +113,9 @@ final class dqb {
         try {
           if (param0 >= -1) {
             var3 = (String) null;
-            dqb.a((byte) 2, (String) null);
+            HuffmanCodec.fetchLocalizedResource((byte) 2, (String) null);
           }
-          stackIn_3_0 = MidiEnvelope.field_j.fetchNamedFile(param1, true, "");
+          stackIn_3_0 = MidiEnvelope.localizationArchive.fetchNamedFile(param1, true, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ final class dqb {
         }
     }
 
-    dqb(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_39_0 = null;
@@ -158,9 +158,9 @@ final class dqb {
         int var12Lifetime1;
         try {
           var2_int = param0.length;
-          this.field_a = param0;
-          this.field_d = new int[var2_int];
-          this.field_b = new int[8];
+          this.codeLengths = param0;
+          this.codes = new int[var2_int];
+          this.decodeTree = new int[8];
           var17 = new int[33];
           var16 = var17;
           var3 = var16;
@@ -173,7 +173,7 @@ final class dqb {
               boolean decompiledFrameCompleted0 = true;
               var7 = 1 << 32 - var6;
               var8 = var17[var6];
-              this.field_d[var5] = var8;
+              this.codes[var5] = var8;
               if (0 == (var8 & var7)) {
                 var9 = var8 | var7;
                 var10 = -1 + var6;
@@ -213,24 +213,24 @@ final class dqb {
                 if (0 == (var12Lifetime1 & var8)) {
                   var10Lifetime2++;
                 } else {
-                  if (this.field_b[var10Lifetime2] == 0) {
-                    this.field_b[var10Lifetime2] = var4;
+                  if (this.decodeTree[var10Lifetime2] == 0) {
+                    this.decodeTree[var10Lifetime2] = var4;
                   }
-                  var10Lifetime2 = this.field_b[var10Lifetime2];
+                  var10Lifetime2 = this.decodeTree[var10Lifetime2];
                 }
                 var12Lifetime1 = var12Lifetime1 >>> 1;
-                if (this.field_b.length <= var10Lifetime2) {
-                  var13 = new int[this.field_b.length * 2];
-                  for (var14 = 0; this.field_b.length > var14; var14++) {
-                    var13[var14] = this.field_b[var14];
+                if (this.decodeTree.length <= var10Lifetime2) {
+                  var13 = new int[this.decodeTree.length * 2];
+                  for (var14 = 0; this.decodeTree.length > var14; var14++) {
+                    var13[var14] = this.decodeTree[var14];
                   }
-                  this.field_b = var13;
+                  this.decodeTree = var13;
                 }
               }
               if (var10Lifetime2 >= var4) {
                 var4 = var10Lifetime2 + 1;
               }
-              this.field_b[var10Lifetime2] = ~var5;
+              this.decodeTree[var10Lifetime2] = ~var5;
             }
           }
           return;
@@ -252,11 +252,11 @@ final class dqb {
         field_c = null;
         if (param0 != 15060) {
           String var2 = (String) null;
-          dqb.a((byte) 32, (String) null);
+          HuffmanCodec.fetchLocalizedResource((byte) 32, (String) null);
         }
     }
 
-    final int a(int param0, byte[] param1, byte[] param2, int param3, int param4, int param5) {
+    final int decompress(int param0, byte[] param1, byte[] param2, int param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -308,9 +308,9 @@ final class dqb {
             if (var9 >= 0) {
               var7_int++;
             } else {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             }
-            dupTemp$0 = this.field_b[var7_int];
+            dupTemp$0 = this.decodeTree[var7_int];
             var10 = dupTemp$0;
             if (dupTemp$0 < 0) {
               incrementValue$1 = param0;
@@ -324,9 +324,9 @@ final class dqb {
             if ((64 & var9) == 0) {
               var7_int++;
             } else {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             }
-            dupTemp$2 = this.field_b[var7_int];
+            dupTemp$2 = this.decodeTree[var7_int];
             var10Lifetime1 = dupTemp$2;
             if (dupTemp$2 < 0) {
               incrementValue$3 = param0;
@@ -338,11 +338,11 @@ final class dqb {
               var7_int = 0;
             }
             if ((32 & var9) != 0) {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             } else {
               var7_int++;
             }
-            dupTemp$4 = this.field_b[var7_int];
+            dupTemp$4 = this.decodeTree[var7_int];
             var10Lifetime2 = dupTemp$4;
             if (dupTemp$4 < 0) {
               incrementValue$5 = param0;
@@ -354,11 +354,11 @@ final class dqb {
               var7_int = 0;
             }
             if ((var9 & 16) != 0) {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             } else {
               var7_int++;
             }
-            dupTemp$6 = this.field_b[var7_int];
+            dupTemp$6 = this.decodeTree[var7_int];
             var10Lifetime3 = dupTemp$6;
             if (dupTemp$6 < 0) {
               incrementValue$7 = param0;
@@ -372,9 +372,9 @@ final class dqb {
             if (0 == (8 & var9)) {
               var7_int++;
             } else {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             }
-            dupTemp$8 = this.field_b[var7_int];
+            dupTemp$8 = this.decodeTree[var7_int];
             var10Lifetime4 = dupTemp$8;
             if (dupTemp$8 < 0) {
               incrementValue$9 = param0;
@@ -386,11 +386,11 @@ final class dqb {
               var7_int = 0;
             }
             if ((4 & var9) != 0) {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             } else {
               var7_int++;
             }
-            dupTemp$10 = this.field_b[var7_int];
+            dupTemp$10 = this.decodeTree[var7_int];
             var10Lifetime5 = dupTemp$10;
             if (dupTemp$10 < 0) {
               incrementValue$11 = param0;
@@ -404,9 +404,9 @@ final class dqb {
             if ((var9 & 2) == 0) {
               var7_int++;
             } else {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             }
-            dupTemp$12 = this.field_b[var7_int];
+            dupTemp$12 = this.decodeTree[var7_int];
             var10Lifetime6 = dupTemp$12;
             if (dupTemp$12 < 0) {
               incrementValue$13 = param0;
@@ -418,11 +418,11 @@ final class dqb {
               var7_int = 0;
             }
             if ((var9 & 1) != 0) {
-              var7_int = this.field_b[var7_int];
+              var7_int = this.decodeTree[var7_int];
             } else {
               var7_int++;
             }
-            dupTemp$14 = this.field_b[var7_int];
+            dupTemp$14 = this.decodeTree[var7_int];
             var10Lifetime7 = dupTemp$14;
             if (0 > dupTemp$14) {
               incrementValue$15 = param0;

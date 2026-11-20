@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kv extends qg {
-    private rtb[] field_f;
+    private OpenGlCubeTexture[] field_f;
     static volatile int field_e;
     private boolean field_c;
     private bt field_g;
@@ -212,10 +212,10 @@ final class kv extends qg {
                 var9++;
               }
             }
-            this.field_f = new rtb[3];
-            this.field_f[0] = new rtb(this.field_b, 6406, 64, false, var27, 6406);
-            this.field_f[1] = new rtb(this.field_b, 6406, 64, false, var28, 6406);
-            this.field_f[2] = new rtb(this.field_b, 6406, 64, false, var29, 6406);
+            this.field_f = new OpenGlCubeTexture[3];
+            this.field_f[0] = new OpenGlCubeTexture(this.field_b, 6406, 64, false, var27, 6406);
+            this.field_f[1] = new OpenGlCubeTexture(this.field_b, 6406, 64, false, var28, 6406);
+            this.field_f[2] = new OpenGlCubeTexture(this.field_b, 6406, 64, false, var29, 6406);
             this.d(-14667);
             return;
           }

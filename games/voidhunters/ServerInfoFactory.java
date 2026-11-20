@@ -121,9 +121,9 @@ final class ServerInfoFactory implements GameStateFactory {
         int var5Lifetime1Lifetime1Lifetime1Lifetime1;
         int var6Lifetime1Lifetime1Lifetime1Lifetime1;
         if (null != vqa.field_g) {
-          vqa.field_g.c((byte) 120, param1);
+          vqa.field_g.renderSession((byte) 120, param1);
           if (null != ProxyAuthenticationException.field_a) {
-            ProxyAuthenticationException.field_a.c((byte) 111, param1);
+            ProxyAuthenticationException.field_a.renderSession((byte) 111, param1);
           }
           if (SetShipTeamAction.field_f &&
             GetMessageFadetime.field_o &&
@@ -194,7 +194,7 @@ final class ServerInfoFactory implements GameStateFactory {
           return;
         }
         if (null != ProxyAuthenticationException.field_a) {
-          ProxyAuthenticationException.field_a.c((byte) 111, param1);
+          ProxyAuthenticationException.field_a.renderSession((byte) 111, param1);
         }
         if (SetShipTeamAction.field_f &&
           GetMessageFadetime.field_o &&

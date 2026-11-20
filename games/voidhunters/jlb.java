@@ -126,7 +126,7 @@ final class jlb extends TextureOperation {
         if (param1 != -2048) {
           jlb.clearSharedReferences(false);
         }
-        if (rtb.a(param0, -94, param3, param2)) {
+        if (OpenGlCubeTexture.a(param0, -94, param3, param2)) {
           return true;
         }
         return false;

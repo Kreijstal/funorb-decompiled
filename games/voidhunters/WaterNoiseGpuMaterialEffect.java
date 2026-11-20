@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class wu extends GpuMaterialEffect {
+final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
     private float field_f;
     static Sprite field_h;
     static String field_e;
-    private rga field_g;
+    private WaterTextures field_g;
 
     final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
@@ -30,22 +30,22 @@ final class wu extends GpuMaterialEffect {
             return;
           }
           if ((1 & param0) != 1) {
-            if (!this.field_g.field_b) {
-              this.toolkit.setTexture(this.field_g.field_a[0], -128);
+            if (!this.field_g.usesVolumeTexture) {
+              this.toolkit.setTexture(this.field_g.noiseFrames[0], -128);
             } else {
-              this.toolkit.setTexture(this.field_g.field_d, -122);
+              this.toolkit.setTexture(this.field_g.noiseVolume, -122);
             }
             this.toolkit.setActiveTextureUnit(0, -64);
             return;
           }
-          if (this.field_g.field_b) {
+          if (this.field_g.usesVolumeTexture) {
             this.field_f = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
-            this.toolkit.setTexture(this.field_g.field_d, -118);
+            this.toolkit.setTexture(this.field_g.noiseVolume, -118);
             this.toolkit.setActiveTextureUnit(0, -64);
             return;
           }
           var4 = this.toolkit.field_pc % 4000 * 16 / 4000;
-          this.toolkit.setTexture(this.field_g.field_a[var4], param2 - 126);
+          this.toolkit.setTexture(this.field_g.noiseFrames[var4], param2 - 126);
           this.toolkit.setActiveTextureUnit(0, -64);
           return;
         }
@@ -55,18 +55,18 @@ final class wu extends GpuMaterialEffect {
           this.toolkit.setTexture((GpuTexture) null, -123);
         } else {
           if ((1 & param0) != 1) {
-            if (!this.field_g.field_b) {
-              this.toolkit.setTexture(this.field_g.field_a[0], -128);
+            if (!this.field_g.usesVolumeTexture) {
+              this.toolkit.setTexture(this.field_g.noiseFrames[0], -128);
             } else {
-              this.toolkit.setTexture(this.field_g.field_d, -122);
+              this.toolkit.setTexture(this.field_g.noiseVolume, -122);
             }
           } else {
-            if (this.field_g.field_b) {
+            if (this.field_g.usesVolumeTexture) {
               this.field_f = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
-              this.toolkit.setTexture(this.field_g.field_d, -118);
+              this.toolkit.setTexture(this.field_g.noiseVolume, -118);
             } else {
               var4Lifetime1 = this.toolkit.field_pc % 4000 * 16 / 4000;
-              this.toolkit.setTexture(this.field_g.field_a[var4Lifetime1], param2 - 126);
+              this.toolkit.setTexture(this.field_g.noiseFrames[var4Lifetime1], param2 - 126);
             }
           }
         }
@@ -80,7 +80,7 @@ final class wu extends GpuMaterialEffect {
         field_e = null;
     }
 
-    wu(GpuToolkit param0, rga param1) {
+    WaterNoiseGpuMaterialEffect(GpuToolkit param0, WaterTextures param1) {
         super(param0);
         this.field_f = 0.0f;
         try {
@@ -109,7 +109,7 @@ final class wu extends GpuMaterialEffect {
 
     final boolean isSupported(byte param0) {
         int var2 = -105 % ((param0 - 34) / 63);
-        return this.field_g.c((byte) 85);
+        return this.field_g.hasNoiseTextures((byte) 85);
     }
 
     final void disable(int param0) {
@@ -126,7 +126,7 @@ final class wu extends GpuMaterialEffect {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void startOfflineGame(boolean param0, boolean param1) {
         int stackIn_22_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_52_0 = 0;

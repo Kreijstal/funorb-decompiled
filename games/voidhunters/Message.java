@@ -45,8 +45,8 @@ final class Message implements DiffableState {
             }
             return;
           }
-          param4 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param4);
-          param3 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param3);
+          param4 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param4);
+          param3 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param3);
           GetPhasedEnergyBeamProjectileOndamageParticles.a(-105, param4, param1, param3, param2);
         }
         if (param0 <= -18) {

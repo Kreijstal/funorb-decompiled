@@ -631,7 +631,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = -1 + PartitioningManagerFactory.field_a;
         byte[] var5 = new byte[var4];
         qga.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
-        ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), qpa.a((byte) -125, var5));
+        ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), Cp1252Strings.decode((byte) -125, var5));
     }
 
     private final void a(byte param0, boolean param1) {
@@ -760,7 +760,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (SetPhasedEnergyBeamReload.field_p.c(104)) {
                 var7 = SetPhasedEnergyBeamReload.field_p.a(43);
                 if (var7 != null) {
-                  var8 = CarouselSlot.a(0, 0, var7.position, var7.payload);
+                  var8 = CarouselSlot.decodeCp1252(0, 0, var7.position, var7.payload);
                   GetMissionTerrainNebulaProbability.a(var8, (byte) 122);
                 } else {
                   var10 = (String) null;

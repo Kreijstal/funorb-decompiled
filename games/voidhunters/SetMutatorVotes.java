@@ -111,7 +111,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         }
         GetDebrisMax.field_s = SetSpinningBladeAimarc.f((byte) 62);
         GetLagStandardDeviationIn.field_r = new ida();
-        rga.a(true, true, false);
+        WaterTextures.a(true, true, false);
     }
 
     final static int a(int param0, int param1) {

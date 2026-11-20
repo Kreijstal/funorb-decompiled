@@ -66,25 +66,25 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
                           if (NebulaField.field_c > param1) {
                             ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                           } else {
-                            if (param1 > hab.field_i) {
+                            if (param1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
                               ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                             } else {
                               if (param5 < NebulaField.field_c) {
                                 ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                               } else {
-                                if (hab.field_i < param5) {
+                                if (EnvironmentReflectionGpuMaterialEffect.field_i < param5) {
                                   ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                 } else {
                                   if (param0 < NebulaField.field_c) {
                                     ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                   } else {
-                                    if (param0 > hab.field_i) {
+                                    if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
                                       ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                     } else {
                                       if (param8 < NebulaField.field_c) {
                                         ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
-                                        if (hab.field_i < param8) {
+                                        if (EnvironmentReflectionGpuMaterialEffect.field_i < param8) {
                                           ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                         } else {
                                           SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
@@ -133,25 +133,25 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
                           if (NebulaField.field_c > param1) {
                             ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                           } else {
-                            if (param1 > hab.field_i) {
+                            if (param1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
                               ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                             } else {
                               if (param5 < NebulaField.field_c) {
                                 ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                               } else {
-                                if (hab.field_i < param5) {
+                                if (EnvironmentReflectionGpuMaterialEffect.field_i < param5) {
                                   ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                 } else {
                                   if (param0 < NebulaField.field_c) {
                                     ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                   } else {
-                                    if (param0 > hab.field_i) {
+                                    if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
                                       ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                     } else {
                                       if (param8 < NebulaField.field_c) {
                                         ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
-                                        if (hab.field_i >= param8) {
+                                        if (EnvironmentReflectionGpuMaterialEffect.field_i >= param8) {
                                           SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         } else {
                                           ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);

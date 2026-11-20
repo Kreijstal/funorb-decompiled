@@ -28,8 +28,8 @@ final class MissionList implements DiffableState {
     }
 
     final static java.applet.Applet b(byte param0) {
-        if (bkb.field_b != null) {
-          return bkb.field_b;
+        if (EnvironmentMapSource.field_b != null) {
+          return EnvironmentMapSource.field_b;
         }
         if (param0 >= -81) {
           return (java.applet.Applet) null;

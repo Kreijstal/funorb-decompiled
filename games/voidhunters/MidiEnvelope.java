@@ -3,7 +3,7 @@
  */
 final class MidiEnvelope {
     byte[] amplitudeEnvelope;
-    static ResourceArchive field_j;
+    static ResourceArchive localizationArchive;
     int decayPitchScale;
     int envelopePitchScale;
     int vibratoSpeed;
@@ -18,7 +18,7 @@ final class MidiEnvelope {
         if (param0 != -17719) {
           return;
         }
-        field_j = null;
+        localizationArchive = null;
     }
 
     static {

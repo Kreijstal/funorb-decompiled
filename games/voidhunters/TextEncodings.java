@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac {
-    final static void a(float[] param0, int param1, int param2, float param3, int param4, int param5, byte param6, float param7, int param8, float[] param9, int param10, int param11) {
+final class TextEncodings {
+    final static void computeCylindricalTextureCoordinates(float[] param0, int param1, int param2, float param3, int param4, int param5, byte param6, float param7, int param8, float[] param9, int param10, int param11) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -75,7 +75,7 @@ final class ac {
         }
     }
 
-    final static int a(int param0, boolean param1, int param2, CharSequence param3, byte[] param4, int param5) {
+    final static int encodeCp1252(int param0, boolean param1, int param2, CharSequence param3, byte[] param4, int param5) {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_70_0 = 0;
@@ -215,7 +215,7 @@ final class ac {
         }
     }
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String encodeBase64Unpadded(int param0, int param1, int param2, byte[] param3) {
         int var5 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

@@ -55,7 +55,7 @@ final class fpb extends mfb {
             boolean decompiledFrameRemainder0 = true;
             if (nrb.field_b[var3].field_a == param0.field_a) {
               var4 = nrb.field_b[var3].a(1);
-              if (GetPlayerRepairAmount.field_q[var4] > hab.field_k) {
+              if (GetPlayerRepairAmount.field_q[var4] > EnvironmentReflectionGpuMaterialEffect.field_k) {
                 GetPlayerRepairAmount.field_q[var4] = GetPlayerRepairAmount.field_q[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

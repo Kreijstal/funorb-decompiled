@@ -530,7 +530,7 @@ final class MissionBuilder implements DiffableState {
           var6 = var20.getSpawnPoints((byte) 24);
           var7 = (SpawnPoint) (var6.first(0));
           while (var7 != null) {
-            var7.a(GpuSprite.b(param0 + 21958, var7.getTeam(121)), (byte) -96);
+            var7.setTeam(GpuSprite.b(param0 + 21958, var7.getTeam(121)), (byte) -96);
             var7 = (SpawnPoint) (var6.next((byte) 66));
           }
           if (param0 != -1) {

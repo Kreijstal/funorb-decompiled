@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rtb extends pib {
+final class OpenGlCubeTexture extends pib {
     static llb field_h;
     private int field_j;
     private int field_i;
@@ -54,7 +54,7 @@ final class rtb extends pib {
         }
     }
 
-    rtb(OpenGlToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
+    OpenGlCubeTexture(OpenGlToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * (param2 * param2), param3);
         int var7_int = 0;
         this.field_j = -1;

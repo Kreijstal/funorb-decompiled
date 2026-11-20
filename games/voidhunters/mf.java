@@ -23,7 +23,7 @@ final class mf {
             SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
             return;
           }
-          if (param1 + param5 <= hab.field_i) {
+          if (param1 + param5 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
             ToolkitFontMetrics.a((byte) -117, param5, param1, param0, param4, param3);
             return;
           }
@@ -42,7 +42,7 @@ final class mf {
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }
-        if (param1 + param5 <= hab.field_i) {
+        if (param1 + param5 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
           ToolkitFontMetrics.a((byte) -117, param5, param1, param0, param4, param3);
           return;
         }

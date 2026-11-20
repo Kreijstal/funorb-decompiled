@@ -4,7 +4,7 @@
 final class SetKeepTeamColours extends ConsoleCommand {
     static int field_o;
     static String field_q;
-    static qsa[] field_p;
+    static ObjectiveMarker[] field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

@@ -441,7 +441,7 @@ final class ArchiveIndex {
           var5 = null;
           if (iwa.field_b == 2) {
             PlayerJoinFactory.field_c.field_y = true;
-            rtb.field_h.field_R = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
+            OpenGlCubeTexture.field_h.field_R = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
             re.field_n.field_xb.field_xb.field_R = null;
             var6 = null;
             var7 = (vu) (var4.first(0));
@@ -569,7 +569,7 @@ final class ArchiveIndex {
             decompiledFrameRemainder0 = false;
           }
           else {
-            rtb.field_h.field_R = SetUseModels.field_p;
+            OpenGlCubeTexture.field_h.field_R = SetUseModels.field_p;
             PlayerJoinFactory.field_c.field_y = false;
             if (iwa.field_b == 1) {
               re.field_n.field_xb.field_xb.field_R = SetMachineGunPulsetime.field_o;

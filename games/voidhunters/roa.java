@@ -680,13 +680,13 @@ final class roa extends ka {
                     }
                   } else {
                     var41 = (float)param1.field_C[var19Lifetime2] / 1024.0f;
-                    ac.a(var86, var36, var39_int, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var32_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var32_int]);
                     var22_float = GetAutozoomSpeedDivide.field_o[0];
                     var23 = GetAutozoomSpeedDivide.field_o[1];
-                    ac.a(var86, var36, var39_int, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var33_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var33_int]);
                     var25 = GetAutozoomSpeedDivide.field_o[1];
                     var24 = GetAutozoomSpeedDivide.field_o[0];
-                    ac.a(var86, var36, var39_int, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var34]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var34]);
                     var27 = GetAutozoomSpeedDivide.field_o[1];
                     var26 = GetAutozoomSpeedDivide.field_o[0];
                     var42 = var41 / 2.0f;

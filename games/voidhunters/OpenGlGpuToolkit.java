@@ -180,7 +180,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           ToolkitSprite var5 = (ToolkitSprite) null;
           this.setRenderTarget((ToolkitSprite) null, true);
         }
-        hua var4 = new hua(param1);
+        IntegerNode var4 = new IntegerNode(param1);
         var4.key = (long)param0;
         this.field_Ic.addLast(-10258, var4);
     }
@@ -449,7 +449,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         if (param1 <= 89) {
           this.field_Gc = (IntrusiveDeque) null;
         }
-        hua var4 = new hua(param2);
+        IntegerNode var4 = new IntegerNode(param2);
         var4.key = (long)param0;
         this.field_Uc.addLast(-10258, var4);
     }
@@ -536,12 +536,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           return (GpuMaterialEffect) ((Object) new OpenGlUnderwaterMaterialEffect(this, this.field_Ab));
         }
         if (var4 == 4) {
-          return (GpuMaterialEffect) ((Object) new vsb(this, this.field_Ab, this.field_Mb));
+          return (GpuMaterialEffect) ((Object) new OpenGlTransparentWaterEffect(this, this.field_Ab, this.field_Mb));
         }
         if (var4 != 8) {
           return super.createMaterialEffect((byte) 54, param1);
         }
-        return (GpuMaterialEffect) ((Object) new fib(this, this.field_Ab, this.field_Mb));
+        return (GpuMaterialEffect) ((Object) new OpenGlEnvironmentMappedWaterEffect(this, this.field_Ab, this.field_Mb));
     }
 
     final void setRgbCombineSource(boolean param0, int param1, boolean param2, TextureCombineSource param3, int param4) {
@@ -770,23 +770,23 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         int incrementValue$0 = 0;
         int var2;
         int var4;
-        hua var5;
-        hua var6;
-        hua var7;
-        hua var8;
-        hua var9;
+        IntegerNode var5;
+        IntegerNode var6;
+        IntegerNode var7;
+        IntegerNode var8;
+        IntegerNode var9;
         IntrusiveNode var10;
         IntrusiveNode var11;
-        hua var12;
+        IntegerNode var12;
         var4 = VoidHunters.field_G;
         var2 = 0;
         param0 = param0 & 2147483647;
         while (!this.field_Ic.isEmpty(112)) {
-          var5 = (hua) (this.field_Ic.removeFirst(true));
+          var5 = (IntegerNode) (this.field_Ic.removeFirst(true));
           incrementValue$3 = var2;
           var2++;
           tgb.field_c[incrementValue$3] = (int)var5.key;
-          this.field_ob = this.field_ob - var5.field_d;
+          this.field_ob = this.field_ob - var5.value;
           if (1000 != var2) {
             continue;
           }
@@ -798,11 +798,11 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var2 = 0;
         }
         while (!this.field_Uc.isEmpty(120)) {
-          var6 = (hua) (this.field_Uc.removeFirst(true));
+          var6 = (IntegerNode) (this.field_Uc.removeFirst(true));
           incrementValue$2 = var2;
           var2++;
           tgb.field_c[incrementValue$2] = (int)var6.key;
-          this.field_Nb = this.field_Nb - var6.field_d;
+          this.field_Nb = this.field_Nb - var6.value;
           if (var2 != 1000) {
             continue;
           }
@@ -814,10 +814,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var2 = 0;
         }
         while (!this.field_Cc.isEmpty(112)) {
-          var7 = (hua) (this.field_Cc.removeFirst(true));
+          var7 = (IntegerNode) (this.field_Cc.removeFirst(true));
           incrementValue$1 = var2;
           var2++;
-          tgb.field_c[incrementValue$1] = var7.field_d;
+          tgb.field_c[incrementValue$1] = var7.value;
           if (1000 != var2) {
             continue;
           }
@@ -829,11 +829,11 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var2 = 0;
         }
         while (!this.field_bd.isEmpty(123)) {
-          var8 = (hua) (this.field_bd.removeFirst(true));
+          var8 = (IntegerNode) (this.field_bd.removeFirst(true));
           incrementValue$0 = var2;
           var2++;
           tgb.field_c[incrementValue$0] = (int)var8.key;
-          this.field_mb = this.field_mb - var8.field_d;
+          this.field_mb = this.field_mb - var8.value;
           if (var2 != 1000) {
             continue;
           }
@@ -845,8 +845,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var2 = 0;
         }
         while (!this.field_yc.isEmpty(-94)) {
-          var9 = (hua) (this.field_yc.removeFirst(true));
-          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_d);
+          var9 = (IntegerNode) (this.field_yc.removeFirst(true));
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
         }
         while (!this.field_Ec.isEmpty(-96)) {
           var10 = this.field_Ec.removeFirst(true);
@@ -857,8 +857,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
         while (!this.field_yc.isEmpty(-126)) {
-          var12 = (hua) (this.field_yc.removeFirst(true));
-          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_d);
+          var12 = (IntegerNode) (this.field_yc.removeFirst(true));
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
         }
         if (100663296 < this.getGpuMemoryUsage(3554) &&
           (this.field_Tc + 60000L) < wt.a(false)) {
