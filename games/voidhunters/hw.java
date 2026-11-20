@@ -57,10 +57,10 @@ final class hw {
           var14 = this.field_c[var12];
           var16 = -(int)(var14 * (long)param0 / var7) + param3;
           if (~var12 == ~this.field_a) {
-            c.a(10 + param3, var13, var13, param3, -16777216, 16711680);
+            DelayedPacket.drawLine(10 + param3, var13, var13, param3, -16777216, 16711680);
           }
           if (var12 > 0) {
-            c.a(var16, var13, var9, var10, -16777216, var11);
+            DelayedPacket.drawLine(var16, var13, var9, var10, -16777216, var11);
           }
           var10 = var16;
           var9 = var13;

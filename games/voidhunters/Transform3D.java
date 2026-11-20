@@ -110,7 +110,7 @@ abstract class Transform3D {
               GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.field_p[var15][var18];
             }
             SetCountermeasuresPulseRadius.a(var17Lifetime1, GetMissileLauncherAimspeed.field_p, false, true, false, SetBloomThresholdPercentage.field_p, false);
-            kt.a(var17Lifetime1, var13Lifetime1, var12Lifetime1, -119, var14, var8Lifetime1, var9Lifetime1, var7Lifetime1);
+            RidgedNoiseVolumeGenerator.drawLitMesh(var17Lifetime1, var13Lifetime1, var12Lifetime1, -119, var14, var8Lifetime1, var9Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

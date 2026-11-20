@@ -135,7 +135,7 @@ final class ChoosePlayerNameForm extends UiContainer implements NameSuggestionTa
         UiComponent var2 = new UiComponent(instructionsText, var1, (UiListener) null);
         this.okButton = new UiFocusableComponent(UiComboBoxList.field_K, (UiListener) null);
         this.cancelButton = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
-        this.nameField.tooltip = gna.field_m;
+        this.nameField.tooltip = FractalNoiseVolumeGenerator.field_m;
         this.nameField.setValidator(6614, new UsernameAvailabilityValidator(this.nameField));
         this.okButton.enabled = false;
         this.okButton.renderer = (UiRenderer) ((Object) new vva());

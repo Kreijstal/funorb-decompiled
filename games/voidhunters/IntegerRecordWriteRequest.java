@@ -32,7 +32,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[157] = GetLaserEnergyUsed.field_r;
         var2[50] = SetPointDefenceLaserProjectiles.field_o;
         var2[131] = OpenGlVertexNormal.field_i;
-        var2[211] = rjb.field_u;
+        var2[211] = LegacyRidgedNoiseVolume.field_u;
         var2[220] = Particle.field_n;
         var2[33] = ValidationState.field_a;
         var2[189] = VariableConditionFactory.field_a;

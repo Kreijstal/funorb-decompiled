@@ -346,7 +346,7 @@ final class GameMenuScreen {
           if (var6 != 13) {
             stackIn_91_0 = var10 * GetMutatorVotes.field_p / 256;
           } else {
-            stackIn_91_0 = var10 * kt.soundEffectVolume / 256;
+            stackIn_91_0 = var10 * RidgedNoiseVolumeGenerator.soundEffectVolume / 256;
           }
           var26 = stackIn_91_0;
           if (var21 == 1) {
@@ -786,12 +786,12 @@ final class GameMenuScreen {
                           } else {
                             var6 = 0;
                             if (this.inputState.isHomePressed(true) &&
-                              kt.soundEffectVolume > 0) {
+                              RidgedNoiseVolumeGenerator.soundEffectVolume > 0) {
                               LoopingSound.setSoundEffectVolume(0, -13205);
                               var6 = 1;
                             }
                             if (this.inputState.isEndPressed(12465) &&
-                              256 > kt.soundEffectVolume) {
+                              256 > RidgedNoiseVolumeGenerator.soundEffectVolume) {
                               var6 = 1;
                               LoopingSound.setSoundEffectVolume(256, -13205);
                             }
@@ -811,13 +811,13 @@ final class GameMenuScreen {
                               }
                             }
                             if (this.inputState.isLeftPressed((byte) -7) &&
-                              kt.soundEffectVolume > 0) {
+                              RidgedNoiseVolumeGenerator.soundEffectVolume > 0) {
                               var6 = 1;
                               ShieldBehaviourFactory.b((byte) 64);
                             }
                             if (this.inputState.isRightPressed(-86) &&
-                              kt.soundEffectVolume < 256) {
-                              ft.b(18941);
+                              RidgedNoiseVolumeGenerator.soundEffectVolume < 256) {
+                              GpuRidgedNoiseVolume.increaseSoundEffectVolume(18941);
                               var6 = 1;
                             }
                             if (var6 != 0) {
@@ -827,7 +827,7 @@ final class GameMenuScreen {
                                 mba.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (UiDraggableContainer.field_E) {
-                                MissionBuilder.setIntegerPreference((byte) 3, "fx_volume", kt.soundEffectVolume);
+                                MissionBuilder.setIntegerPreference((byte) 3, "fx_volume", RidgedNoiseVolumeGenerator.soundEffectVolume);
                                 SetLaserAimarc.savePreferences(-108);
                               }
                             }

@@ -106,7 +106,7 @@ final class NebulaFieldFactory implements GameStateFactory {
               return;
             }
             if (var2 != 4) {
-              gna.a((Throwable) null, "F1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "F1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               FighterBayWeaponDefinition.l(-125);
               return;
             }

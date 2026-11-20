@@ -63,7 +63,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           field_p = (ToolkitSprite) null;
         }
         try {
-          var1_ref = lfb.a(ata.field_L, (byte) 34);
+          var1_ref = CacheFiles.resolveCacheFile(ata.field_L, (byte) 34);
         } catch (Exception exception) {
         }
         if (var1_ref == null) {

@@ -30,16 +30,16 @@ final class cfa extends oib {
 
     final static UiTextStyle b(byte param0) {
         if (param0 <= -66) {
-          if (null == elb.field_f) {
-            elb.field_f = new UiTextStyle(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.maxAscent, -1, 2147483647, true);
+          if (null == PerlinNoiseVolumeGenerator.field_f) {
+            PerlinNoiseVolumeGenerator.field_f = new UiTextStyle(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.maxAscent, -1, 2147483647, true);
           }
-          return elb.field_f;
+          return PerlinNoiseVolumeGenerator.field_f;
         }
         cfa.clearSharedReferences((byte) 108);
-        if (null == elb.field_f) {
-          elb.field_f = new UiTextStyle(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.maxAscent, -1, 2147483647, true);
+        if (null == PerlinNoiseVolumeGenerator.field_f) {
+          PerlinNoiseVolumeGenerator.field_f = new UiTextStyle(SetTorpedoProjectileLife.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, SetTorpedoProjectileLife.field_o.maxAscent, -1, 2147483647, true);
         }
-        return elb.field_f;
+        return PerlinNoiseVolumeGenerator.field_f;
     }
 
     cfa(String param0, String param1) {

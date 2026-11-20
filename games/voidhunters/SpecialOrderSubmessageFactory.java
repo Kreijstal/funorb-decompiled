@@ -17,7 +17,7 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
             return null;
           }
           var4_int = -44 % ((param1 - 53) / 50);
-          stackIn_4_0 = ola.d((byte) -91);
+          stackIn_4_0 = GpuFractalNoiseVolume.createIndexedSprites((byte) -91);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -524,7 +524,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
-              gna.a(var8, (String) null, 0);
+              FractalNoiseVolumeGenerator.reportClientError(var8, (String) null, 0);
               this.showGameError("crash", 0);
             }
             return;
@@ -699,7 +699,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              gna.a((Throwable) (var1), (String) null, 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) (var1), (String) null, 0);
               this.showGameError("crash", 0);
             }
             this.shutdownApplet(true, 10);

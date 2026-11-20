@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c extends IntrusiveNode {
-    long field_e;
-    byte[] field_f;
-    int field_d;
+final class DelayedPacket extends IntrusiveNode {
+    long releaseTimeMillis;
+    byte[] payload;
+    int opcodeOrLength;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (OpenGlTexture1D.field_i) {
           SetMassDriverProjectileLife.a(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
           return;
@@ -17,11 +17,11 @@ final class c extends IntrusiveNode {
         }
     }
 
-    c(long param0, int param1, byte[] param2) {
+    DelayedPacket(long param0, int param1, byte[] param2) {
         try {
-          this.field_d = param1;
-          this.field_e = param0;
-          this.field_f = param2;
+          this.opcodeOrLength = param1;
+          this.releaseTimeMillis = param0;
+          this.payload = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

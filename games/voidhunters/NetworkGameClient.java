@@ -492,7 +492,7 @@ abstract class NetworkGameClient extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            gna.a((Throwable) ((Object) var6_ref), (String) null, 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var6_ref), (String) null, 0);
             this.showGameError("crash", 0);
           }
           return;
@@ -582,7 +582,7 @@ abstract class NetworkGameClient extends GameApplet {
                       GetAiRepairAmount.e(-96);
                       break regionExit1;
                     default:
-                      gna.a((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+                      FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
                       FighterBayWeaponDefinition.l(-123);
                       break regionExit1;
                   }
@@ -617,7 +617,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           return;
         }
-        gna.a((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.e(-13514), 0);
+        FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.e(-13514), 0);
         FighterBayWeaponDefinition.l(-125);
     }
 
@@ -771,7 +771,7 @@ abstract class NetworkGameClient extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              gna.a((Throwable) ((Object) var6), "S1", 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var6), "S1", 0);
               var11 = (String) null;
               GetMissionTerrainNebulaProbability.a((String) null, (byte) 122);
               SetPhasedEnergyBeamReload.field_p = null;

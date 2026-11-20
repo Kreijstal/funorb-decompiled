@@ -11,7 +11,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(byte param0, int param1) {
+    final static int perlinFade(byte param0, int param1) {
         int var4 = 0;
         int var2 = param1 * (param1 * param1 >> 12) >> 12;
         int var3 = param1 * 6 - 61440;

@@ -74,7 +74,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
           var4 = var12;
           var5 = null;
           try {
-            var11 = lfb.a(var10, (byte) 34);
+            var11 = CacheFiles.resolveCacheFile(var10, (byte) 34);
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref_RuntimeException = (RuntimeException) (Object) decompiledCaughtException;

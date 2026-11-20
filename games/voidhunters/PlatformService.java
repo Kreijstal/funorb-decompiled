@@ -632,14 +632,14 @@ final class PlatformService implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        lfb.a(buildId, -109, gameName);
+        CacheFiles.initialize(buildId, -109, gameName);
         if (this.privilegedAccess) {
-          this.randomFile = new BoundedRandomAccessFile(lfb.resolveCacheFile("random.dat", -1, (String) null, buildId), "rw", 25L);
-          this.cacheDataFile = new BoundedRandomAccessFile(lfb.a("main_file_cache.dat2", (byte) 34), "rw", 314572800L);
-          this.masterIndexFile = new BoundedRandomAccessFile(lfb.a("main_file_cache.idx255", (byte) 34), "rw", 1048576L);
+          this.randomFile = new BoundedRandomAccessFile(CacheFiles.resolveCacheFile("random.dat", -1, (String) null, buildId), "rw", 25L);
+          this.cacheDataFile = new BoundedRandomAccessFile(CacheFiles.resolveCacheFile("main_file_cache.dat2", (byte) 34), "rw", 314572800L);
+          this.masterIndexFile = new BoundedRandomAccessFile(CacheFiles.resolveCacheFile("main_file_cache.idx255", (byte) 34), "rw", 1048576L);
           this.cacheIndexFiles = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.cacheIndexFiles[var5_int] = new BoundedRandomAccessFile(lfb.a("main_file_cache.idx" + var5_int, (byte) 34), "rw", 1048576L);
+            this.cacheIndexFiles[var5_int] = new BoundedRandomAccessFile(CacheFiles.resolveCacheFile("main_file_cache.idx" + var5_int, (byte) 34), "rw", 1048576L);
           }
           if (this.microsoftJvm) {
             try {

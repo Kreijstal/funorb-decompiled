@@ -136,7 +136,7 @@ final class dla {
                 var14 = var11_ref_ml.getFinaly((byte) 111);
                 var15 = this.field_b.worldToScreenX(var13, (byte) 115);
                 GetLagStandardDeviationOut.a(1, var12_ref_String, 16777215, this.field_b.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
-                c.a(this.field_b.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.field_b.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
+                DelayedPacket.drawLine(this.field_b.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.field_b.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
                 return;
               }
             }
@@ -154,7 +154,7 @@ final class dla {
             if (var14Lifetime1 <= var8Lifetime1) {
               var15Lifetime1 = this.field_b.worldToScreenX(var10, (byte) 116);
               GetLagStandardDeviationOut.a(1, var9, 16777215, this.field_b.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
-              c.a(this.field_b.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.field_b.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
+              DelayedPacket.drawLine(this.field_b.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.field_b.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
             }
           }
           return;
@@ -356,7 +356,7 @@ final class dla {
             exception = (Exception) (Object) decompiledCaughtException;
             es.field_b.blueprint = null;
             GetMissionResnetResourceTickTime.savePlayerGameData((byte) -111);
-            gna.a((Throwable) ((Object) exception), "player_gamedata version " + es.field_b.version + " blueprint is corrupted", 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) exception), "player_gamedata version " + es.field_b.version + " blueprint is corrupted", 0);
           }
         } else {
           for (var4 = 0; var4 < 2; var4++) {

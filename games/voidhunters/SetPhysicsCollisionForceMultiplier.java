@@ -199,7 +199,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             var8 = param0[1].paddedWidth;
             param0[0].drawRecolored(param4, param2, param1);
             param0[2].drawRecolored(param3 + param4 - var7, param2, param1);
-            SoftwareRasterizer2D.getClip(ola.field_o);
+            SoftwareRasterizer2D.getClip(GpuFractalNoiseVolume.field_o);
             SoftwareRasterizer2D.intersectClip(var6_int + param4, param2, param3 + (param4 - var7), param2 + param0[1].paddedHeight);
             if (!param5) {
               SetPhysicsCollisionForceMultiplier.a(27, -59, -55);
@@ -209,7 +209,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param0[1].drawRecolored(param4, param2, param1);
             }
-            SoftwareRasterizer2D.restoreClip(ola.field_o);
+            SoftwareRasterizer2D.restoreClip(GpuFractalNoiseVolume.field_o);
             return;
           }
           return;

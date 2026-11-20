@@ -94,7 +94,7 @@ final class SoundPlayback extends IntrusiveNode {
           this.stream = param0;
           this.baseGain = param0.getTargetGain();
           this.lifetimeNode = param1;
-          this.stream.setGain(128 + this.baseGain * kt.soundEffectVolume >> 8);
+          this.stream.setGain(128 + this.baseGain * RidgedNoiseVolumeGenerator.soundEffectVolume >> 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ana.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -104,7 +104,7 @@ final class SoundPlayback extends IntrusiveNode {
         param2 = param2 << 6;
         param1 = param1 << 6;
         this.baseGain = param1;
-        this.stream.setGainAndPan(param0 + param1 * kt.soundEffectVolume >> 8, param2);
+        this.stream.setGainAndPan(param0 + param1 * RidgedNoiseVolumeGenerator.soundEffectVolume >> 8, param2);
     }
 
     static {

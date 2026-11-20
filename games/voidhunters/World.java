@@ -5925,7 +5925,7 @@ final class World implements DiffableState, CompactGameState {
                   var13 = (TextureLineShape.sinAngle(var12 * (10 * param2), 78) >> 8) * (var5.field_i >> 8) + var5.field_b;
                   var14 = (GetNumStars.cosAngle(var13, (byte) 105) >> 8) * (var5.field_d >> 8);
                   var15 = (TextureLineShape.sinAngle(var13, 45) >> 8) * (var5.field_d >> 8);
-                  c.a(param1.worldToScreenY(true, var15 + var5.field_f), param1.worldToScreenX(var14 + var5.field_g, (byte) 120), var6, var7, -16777216, 4473924);
+                  DelayedPacket.drawLine(param1.worldToScreenY(true, var15 + var5.field_f), param1.worldToScreenX(var14 + var5.field_g, (byte) 120), var6, var7, -16777216, 4473924);
                 }
                 for (var12Lifetime1 = -var8; var8 >= var12Lifetime1; var12Lifetime1++) {
                   var13Lifetime1 = var5.field_b + var5.field_i * var12Lifetime1 / var8;
@@ -5934,7 +5934,7 @@ final class World implements DiffableState, CompactGameState {
                   var16 = var5.field_g + var14Lifetime1;
                   var17 = var5.field_f + var15Lifetime1;
                   if (-var8 < var12Lifetime1) {
-                    c.a(param1.worldToScreenY(true, var17), param1.worldToScreenX(var16, (byte) 112), param1.worldToScreenX(var9, (byte) 125), param1.worldToScreenY(true, var10), -16777216, var11);
+                    DelayedPacket.drawLine(param1.worldToScreenY(true, var17), param1.worldToScreenX(var16, (byte) 112), param1.worldToScreenX(var9, (byte) 125), param1.worldToScreenY(true, var10), -16777216, var11);
                   }
                   var10 = var17;
                   var9 = var16;
@@ -8859,8 +8859,8 @@ final class World implements DiffableState, CompactGameState {
                 var18_int = param7.worldToScreenX(var16Lifetime1 + var15_ref_imb.worldx, (byte) 115);
                 var19 = param7.worldToScreenY(true, -var16Lifetime1 + var15_ref_imb.worldy);
                 var20 = param7.worldToScreenY(true, var16Lifetime1 + var15_ref_imb.worldy);
-                c.a(var20, var18_int, var17_int, var19, -16777216, 16711680);
-                c.a(var19, var18_int, var17_int, var20, -16777216, 16711680);
+                DelayedPacket.drawLine(var20, var18_int, var17_int, var19, -16777216, 16711680);
+                DelayedPacket.drawLine(var19, var18_int, var17_int, var20, -16777216, 16711680);
                 for (var21 = 0; var21 < var14_ref_ml__.length; var21++) {
                   var14_ref_ml__[var21].drawTree((byte) 26, param7, true, this, 16711680);
                 }
@@ -8885,7 +8885,7 @@ final class World implements DiffableState, CompactGameState {
                 var21Lifetime1 = var18[var26 + 1];
                 var22 = var18[(var26 + 2) % var31.length];
                 var23 = var18[(3 + var26) % var31.length];
-                c.a(param7.worldToScreenY(true, var23), param7.worldToScreenX(var22, (byte) 122), param7.worldToScreenX(var20Lifetime1, (byte) 121), param7.worldToScreenY(true, var21Lifetime1), -16777216, 65280);
+                DelayedPacket.drawLine(param7.worldToScreenY(true, var23), param7.worldToScreenX(var22, (byte) 122), param7.worldToScreenX(var20Lifetime1, (byte) 121), param7.worldToScreenY(true, var21Lifetime1), -16777216, 65280);
                 var26 += 2;
               }
             }

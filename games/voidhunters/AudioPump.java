@@ -86,7 +86,7 @@ final class AudioPump implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var6 = (String) null;
-            gna.a((Throwable) ((Object) var1), (String) null, 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var1), (String) null, 0);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

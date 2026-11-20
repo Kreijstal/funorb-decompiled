@@ -191,7 +191,7 @@ final class TrailHolder implements DiffableState {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          gna.a((Throwable) ((Object) var6), "CC1", 0);
+          FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var6), "CC1", 0);
           un.field_h = null;
           SetCountermeasureLauncherProjectiles.field_p = null;
           return new ChatMessage(param1);

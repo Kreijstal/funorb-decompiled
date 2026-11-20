@@ -291,7 +291,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     BodyInZoneConditionFactory.field_a = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 242);
                     return;
                   }
-                  gna.a((Throwable) null, "L1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+                  FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "L1: " + SetCountermeasuresPulsetime.e(-13514), 0);
                   FighterBayWeaponDefinition.l(-123);
                   return;
                 }

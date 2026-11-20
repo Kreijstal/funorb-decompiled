@@ -118,7 +118,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                         var9 = var6[var7 + 1];
                         var10 = var6[(var7 + 2) % var24.length];
                         var11 = var6[(3 + var7) % var24.length];
-                        c.a(var11, var10, var8, var9, -16777216, 16711935);
+                        DelayedPacket.drawLine(var11, var10, var8, var9, -16777216, 16711935);
                       }
                       ToolkitPolygonRasterizer.fillPolygon(GetDebrisGroupColour.field_r, var24, -16777216 | (1 + var4) * 16436957);
                     }
@@ -144,9 +144,9 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                         var11 = var6[var9 + 1];
                         var12 = var6[(var9 + 2) % var25.length];
                         var13 = var6[(3 + var9) % var25.length];
-                        c.a(var2.worldToScreenY(true, var13), var2.worldToScreenX(var12, (byte) 121), var2.worldToScreenX(var10, (byte) 121), var2.worldToScreenY(true, var11), -16777216, var8);
+                        DelayedPacket.drawLine(var2.worldToScreenY(true, var13), var2.worldToScreenX(var12, (byte) 121), var2.worldToScreenX(var10, (byte) 121), var2.worldToScreenY(true, var11), -16777216, var8);
                         if (var3_ref_wfb.field_k) {
-                          c.a(var2.worldToScreenY(true, -var13), var2.worldToScreenX(var12, (byte) 123), var2.worldToScreenX(var10, (byte) 126), var2.worldToScreenY(true, -var11), -16777216, var8);
+                          DelayedPacket.drawLine(var2.worldToScreenY(true, -var13), var2.worldToScreenX(var12, (byte) 123), var2.worldToScreenX(var10, (byte) 126), var2.worldToScreenY(true, -var11), -16777216, var8);
                         }
                       }
                       if (var7 != 0) {

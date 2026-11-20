@@ -3,19 +3,19 @@
  */
 import java.io.*;
 
-class gna extends elb {
-    private int field_j;
-    private int field_l;
+class FractalNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
+    private int accumulatedValue;
+    private int outputIndex;
     static String field_m;
-    private byte[] field_i;
-    private int[] field_k;
+    private byte[] output;
+    private int[] octaveAmplitudes;
 
-    final void a(int param0, int param1, int param2) {
+    final void accumulateOctave(int param0, int param1, int param2) {
         int var4 = -50 / ((-53 - param0) / 48);
-        this.field_j = this.field_j + (param2 * this.field_k[param1] >> 12);
+        this.accumulatedValue = this.accumulatedValue + (param2 * this.octaveAmplitudes[param1] >> 12);
     }
 
-    final static void a(Throwable param0, String param1, int param2) {
+    final static void reportClientError(Throwable param0, String param1, int param2) {
         try {
           PlatformService stackIn_13_0;
           java.net.URL stackIn_13_1;
@@ -89,58 +89,58 @@ class gna extends elb {
         }
     }
 
-    void a(int param0, int param1, byte param2) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_i[fieldTemp$0] = (byte)((dla.andBits((int) param2, 255) >> 1) + 127);
+    void writeSample(int param0, int param1, byte param2) {
+        int fieldTemp$0 = this.outputIndex;
+        this.outputIndex = this.outputIndex + 1;
+        this.output[fieldTemp$0] = (byte)((dla.andBits((int) param2, 255) >> 1) + 127);
         if (param0 != 1111320769) {
-          this.a(-23, -5, 87);
+          this.accumulateOctave(-23, -5, 87);
         }
     }
 
-    final void a(int param0) {
+    final void finishSample(int param0) {
         int fieldTemp$0 = 0;
-        this.field_j = Math.abs(this.field_j);
-        if (this.field_j >= 4096) {
-          this.field_j = 4095;
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.a(1111320769, fieldTemp$0, (byte)(this.field_j >> 4));
+        this.accumulatedValue = Math.abs(this.accumulatedValue);
+        if (this.accumulatedValue >= 4096) {
+          this.accumulatedValue = 4095;
+          fieldTemp$0 = this.outputIndex;
+          this.outputIndex = this.outputIndex + 1;
+          this.writeSample(1111320769, fieldTemp$0, (byte)(this.accumulatedValue >> 4));
           if (param0 != 1424903724) {
             return;
           }
-          this.field_j = 0;
+          this.accumulatedValue = 0;
           return;
         }
-        int fieldTemp$1 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.a(1111320769, fieldTemp$1, (byte)(this.field_j >> 4));
+        int fieldTemp$1 = this.outputIndex;
+        this.outputIndex = this.outputIndex + 1;
+        this.writeSample(1111320769, fieldTemp$1, (byte)(this.accumulatedValue >> 4));
         if (param0 != 1424903724) {
           return;
         }
-        this.field_j = 0;
+        this.accumulatedValue = 0;
     }
 
-    final void a(boolean param0) {
-        this.field_j = 0;
+    final void resetGeneration(boolean param0) {
+        this.accumulatedValue = 0;
         if (!param0) {
           return;
         }
-        this.field_l = 0;
+        this.outputIndex = 0;
     }
 
-    gna(int param0, int param1, int param2, int param3, int param4, float param5) {
+    FractalNoiseVolumeGenerator(int param0, int param1, int param2, int param3, int param4, float param5) {
         super(param0, param1, param2, param3, param4);
         int var7 = 0;
-        this.field_k = new int[this.field_a];
-        for (var7 = 0; var7 < this.field_a; var7++) {
-          this.field_k[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
+        this.octaveAmplitudes = new int[this.octaveCount];
+        for (var7 = 0; var7 < this.octaveCount; var7++) {
+          this.octaveAmplitudes[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
         }
     }
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          gna.clearSharedReferences(false);
+          FractalNoiseVolumeGenerator.clearSharedReferences(false);
           field_m = null;
           return;
         }

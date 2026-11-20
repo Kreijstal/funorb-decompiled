@@ -15,18 +15,18 @@ final class PrimitiveType {
         CharSequence var11;
         Object var5Lifetime1;
         Object var5Lifetime2;
-        if (ola.field_p != null) {
-          var3 = ola.field_p.a(0, param1);
+        if (GpuFractalNoiseVolume.field_p != null) {
+          var3 = GpuFractalNoiseVolume.field_p.a(0, param1);
           if (0 != var3) {
             if (var3 == 2 &&
-              ola.field_p.text != null &&
-              !ola.field_p.text.equals("")) {
-              if (91 == ola.field_p.text.charAt(0)) {
-                var4 = ola.field_p.text;
+              GpuFractalNoiseVolume.field_p.text != null &&
+              !GpuFractalNoiseVolume.field_p.text.equals("")) {
+              if (91 == GpuFractalNoiseVolume.field_p.text.charAt(0)) {
+                var4 = GpuFractalNoiseVolume.field_p.text;
                 var5 = var4;
                 var5Lifetime2 = var4;
               } else {
-                var11 = (CharSequence) ((Object) ola.field_p.text);
+                var11 = (CharSequence) ((Object) GpuFractalNoiseVolume.field_p.text);
                 var4 = ConstantColorTextureOperation.normalizeName(false, var11);
               }
               var5Lifetime1 = null;
@@ -48,7 +48,7 @@ final class PrimitiveType {
               }
             }
             MissionGenerationDataFactory.field_b = -1;
-            ola.field_p = null;
+            GpuFractalNoiseVolume.field_p = null;
           }
         }
         if (param2 == 19717) {

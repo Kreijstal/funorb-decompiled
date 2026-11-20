@@ -8,13 +8,13 @@ final class SetReverbWidth extends ConsoleCommand {
         RuntimeException var2 = null;
         int var4 = 0;
         int var6 = 0;
-        c var6_ref_c = null;
+        DelayedPacket var6_ref_c = null;
         int var7 = 0;
         byte[] var8 = null;
-        c var9 = null;
+        DelayedPacket var9 = null;
         int var10 = 0;
         byte[] var11 = null;
-        c var13 = null;
+        DelayedPacket var13 = null;
         byte[] var14 = null;
         byte[] var17 = null;
         int var6Lifetime1;
@@ -37,22 +37,22 @@ final class SetReverbWidth extends ConsoleCommand {
               for (var6 = 0; var6 < var14.length; var6++) {
                 var8[var6] = RequestNewestBlackboxRecording.field_p.payload[var6];
               }
-              var6_ref_c = new c((long)var4 + var2_long, RequestNewestBlackboxRecording.field_p.position, var17);
+              var6_ref_c = new DelayedPacket((long)var4 + var2_long, RequestNewestBlackboxRecording.field_p.position, var17);
               SetResourceNodeCaptureTime.field_o.addLast(param1 ^ 22878, var6_ref_c);
               RequestNewestBlackboxRecording.field_p.position = 0;
             }
-            var9 = (c) (SetResourceNodeCaptureTime.field_o.first(0));
+            var9 = (DelayedPacket) (SetResourceNodeCaptureTime.field_o.first(0));
             var13 = var9;
             if (var13 != null &&
-              var13.field_e < var2_long) {
+              var13.releaseTimeMillis < var2_long) {
               var13.unlink(-3846);
               var10 = 0;
               var6Lifetime1 = var10;
-              while (var13.field_d > var10) {
-                RequestNewestBlackboxRecording.field_p.payload[var10] = var9.field_f[var10];
+              while (var13.opcodeOrLength > var10) {
+                RequestNewestBlackboxRecording.field_p.payload[var10] = var9.payload[var10];
                 var10++;
               }
-              RequestNewestBlackboxRecording.field_p.position = var13.field_d;
+              RequestNewestBlackboxRecording.field_p.position = var13.opcodeOrLength;
             }
           }
           if (param1 != -29008) {

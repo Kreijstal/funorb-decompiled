@@ -84,8 +84,8 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
 
     final static void a(OpenGlToolkit param0, int param1) {
         RuntimeException var2 = null;
-        rjb var7 = null;
-        krb var9 = null;
+        LegacyRidgedNoiseVolume var7 = null;
+        LegacyFractalNoiseVolume var9 = null;
         LegacyOpenGlNormalMapGenerator var11 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -96,13 +96,13 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (GetMissionTimeLimit.field_p == null) {
-            var7 = new rjb();
-            var19 = var7.b(128, (byte) -66, 128, 16);
+            var7 = new LegacyRidgedNoiseVolume();
+            var19 = var7.generateVolume(128, (byte) -66, 128, 16);
             GetMissionTimeLimit.field_p = EscapePodFactory.storeBytes(false, var19, -12445);
           }
           if (ScrollBarWidget.field_vb == null) {
-            var9 = new krb();
-            var20 = var9.b(128, (byte) -29, 128, 16);
+            var9 = new LegacyFractalNoiseVolume();
+            var20 = var9.generateVolume(128, (byte) -29, 128, 16);
             ScrollBarWidget.field_vb = EscapePodFactory.storeBytes(false, var20, -12445);
           }
           var11 = param0.field_yb;

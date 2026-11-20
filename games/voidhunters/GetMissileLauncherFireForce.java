@@ -119,7 +119,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           GetGrapplingHookFireForce.field_o = new Widget(0L, (Widget) null);
           if (param1 == null) {
             var10 = (Throwable) null;
-            gna.a((Throwable) null, "QC1", 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "QC1", 0);
             return;
           }
           param1.releasePackedGroups = false;
@@ -129,7 +129,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           var4 = VariableCondition.d(10);
           if (var4 == null) {
             var11 = (Throwable) null;
-            gna.a((Throwable) null, "QC2", 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "QC2", 0);
             return;
           }
           jka.a(var4, (byte) -111);

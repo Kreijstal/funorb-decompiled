@@ -174,7 +174,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            gna.a((Throwable) ((Object) var1_ref), (String) null, 0);
+            FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var1_ref), (String) null, 0);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

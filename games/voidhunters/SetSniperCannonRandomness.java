@@ -79,7 +79,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           }
           if (var2 != 1) {
             if (var2 != 2) {
-              gna.a((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               FighterBayWeaponDefinition.l(param0 - 117);
             } else {
               var12 = (iea) (GetLagStandardDeviationIn.field_q.first(0));

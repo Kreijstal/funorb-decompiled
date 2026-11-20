@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kt extends elb {
-    private int field_p;
-    private int field_s;
-    private int field_o;
+class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
+    private int accumulatedValue;
+    private int amplitudeMultiplier;
+    private int ridgeOffset;
     static int[] field_r;
-    private int field_j;
+    private int ridgeWeight;
     static int soundEffectVolume;
-    private byte[] field_k;
-    private int field_n;
-    private int field_m;
-    private int field_i;
-    private int field_q;
+    private byte[] output;
+    private int signal;
+    private int outputIndex;
+    private int octaveAmplitude;
+    private int ridgeGain;
 
-    final void a(int param0, int param1, int param2) {
+    final void accumulateOctave(int param0, int param1, int param2) {
         int var5 = VoidHunters.field_G;
         int var4 = 102 / ((-53 - param0) / 48);
         if (0 == param1) {
-          this.field_n = -(param2 >= 0 ? param2 : -param2) + this.field_o;
-          this.field_n = this.field_n * this.field_n >> 12;
-          this.field_j = 4096;
-          this.field_p = this.field_n;
+          this.signal = -(param2 >= 0 ? param2 : -param2) + this.ridgeOffset;
+          this.signal = this.signal * this.signal >> 12;
+          this.ridgeWeight = 4096;
+          this.accumulatedValue = this.signal;
         } else {
-          this.field_j = this.field_n * this.field_q >> 12;
-          if (this.field_j < 0) {
-            this.field_j = 0;
+          this.ridgeWeight = this.signal * this.ridgeGain >> 12;
+          if (this.ridgeWeight < 0) {
+            this.ridgeWeight = 0;
           } else {
-            if (this.field_j > 4096) {
-              this.field_j = 4096;
+            if (this.ridgeWeight > 4096) {
+              this.ridgeWeight = 4096;
             }
           }
-          this.field_n = this.field_o - (param2 >= 0 ? param2 : -param2);
-          this.field_n = this.field_n * this.field_n >> 12;
-          this.field_n = this.field_n * this.field_j >> 12;
-          this.field_p = this.field_p + (this.field_n * this.field_i >> 12);
-          this.field_i = this.field_s * this.field_i >> 12;
+          this.signal = this.ridgeOffset - (param2 >= 0 ? param2 : -param2);
+          this.signal = this.signal * this.signal >> 12;
+          this.signal = this.signal * this.ridgeWeight >> 12;
+          this.accumulatedValue = this.accumulatedValue + (this.signal * this.octaveAmplitude >> 12);
+          this.octaveAmplitude = this.amplitudeMultiplier * this.octaveAmplitude >> 12;
         }
     }
 
@@ -44,22 +44,22 @@ class kt extends elb {
         field_r = null;
     }
 
-    void a(int param0, byte param1, int param2) {
-        this.field_k[param2] = (byte)param1;
+    void writeSample(int param0, byte param1, int param2) {
+        this.output[param2] = (byte)param1;
         if (param0 != 0) {
-          this.a(59, (byte) -51, -30);
+          this.writeSample(59, (byte) -51, -30);
         }
     }
 
-    final void a(boolean param0) {
-        this.field_p = 0;
+    final void resetGeneration(boolean param0) {
+        this.accumulatedValue = 0;
         if (!param0) {
           return;
         }
-        this.field_m = 0;
+        this.outputIndex = 0;
     }
 
-    final static void a(wma param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawLitMesh(wma param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -258,32 +258,32 @@ class kt extends elb {
         }
     }
 
-    kt(int param0, int param1, int param2, int param3, int param4, float param5, float param6, float param7) {
+    RidgedNoiseVolumeGenerator(int param0, int param1, int param2, int param3, int param4, float param5, float param6, float param7) {
         super(param0, param1, param2, param3, param4);
-        this.field_q = (int)(param7 * 4096.0f);
-        this.field_o = (int)(4096.0f * param6);
+        this.ridgeGain = (int)(param7 * 4096.0f);
+        this.ridgeOffset = (int)(4096.0f * param6);
         int dupTemp$0 = (int)(Math.pow(0.5, (double)(-param5)) * 4096.0);
-        this.field_s = dupTemp$0;
-        this.field_i = dupTemp$0;
+        this.amplitudeMultiplier = dupTemp$0;
+        this.octaveAmplitude = dupTemp$0;
     }
 
-    final void a(int param0) {
-        this.field_p = this.field_p >> 4;
-        this.field_i = this.field_s;
-        if (this.field_p < 0) {
-          this.field_p = 0;
+    final void finishSample(int param0) {
+        this.accumulatedValue = this.accumulatedValue >> 4;
+        this.octaveAmplitude = this.amplitudeMultiplier;
+        if (this.accumulatedValue < 0) {
+          this.accumulatedValue = 0;
         } else {
-          if (this.field_p > 255) {
-            this.field_p = 255;
+          if (this.accumulatedValue > 255) {
+            this.accumulatedValue = 255;
           }
         }
         if (param0 != 1424903724) {
-          this.a(113, 123, 40);
+          this.accumulateOctave(113, 123, 40);
         }
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.a(0, (byte)this.field_p, fieldTemp$0);
-        this.field_p = 0;
+        int fieldTemp$0 = this.outputIndex;
+        this.outputIndex = this.outputIndex + 1;
+        this.writeSample(0, (byte)this.accumulatedValue, fieldTemp$0);
+        this.accumulatedValue = 0;
     }
 
     static {

@@ -1512,7 +1512,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_displayname_tooltip", 23100);
                 if (var2 != null) {
-                  gna.field_m = Cp1252Strings.decode((byte) -125, var2);
+                  FractalNoiseVolumeGenerator.field_m = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_displayname_hint", 23100);
                 if (var2 != null) {

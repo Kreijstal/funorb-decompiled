@@ -62,7 +62,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var18 = param1.worldToScreenY(true, var23.getY((byte) 119));
             var19 = param1.worldToScreenX(var10, (byte) 122);
             var20 = param1.worldToScreenY(true, var11);
-            c.a(var18, var17Lifetime1, var19, var20, -16777216, var16);
+            DelayedPacket.drawLine(var18, var17Lifetime1, var19, var20, -16777216, var16);
             if (var23.getGrabbedObjectId((byte) -68) >= 0) {
               var21 = param4.getBodyById((byte) -27, var23.getGrabbedObjectId((byte) -102));
               if (var21 == null) {

@@ -246,7 +246,7 @@ final class Projectile extends MovingObject implements DiffableState {
             if (this.type == 4) {
               var5 = param1.worldToScreenX(-this.dx + this.x, (byte) 119);
               var6 = param1.worldToScreenY(true, this.y - this.dy);
-              c.a(var6, var5, var3_int, var4, param0 ^ -16777216, 16746632);
+              DelayedPacket.drawLine(var6, var5, var3_int, var4, param0 ^ -16777216, 16746632);
               return;
             }
             if (this.type == 3) {
@@ -293,7 +293,7 @@ final class Projectile extends MovingObject implements DiffableState {
           } else {
             var5 = param1.worldToScreenX(this.x - this.dx, (byte) 123);
             var6 = param1.worldToScreenY(true, -this.dy + this.y);
-            c.a(var6, var5, var3_int, var4, -16777216, 16776977);
+            DelayedPacket.drawLine(var6, var5, var3_int, var4, -16777216, 16776977);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

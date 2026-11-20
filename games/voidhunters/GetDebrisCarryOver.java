@@ -32,7 +32,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 15) {
-            GetDebrisCarryOver.a(108, -16, -68, (byte) 20, 33);
+            GetDebrisCarryOver.perlinGradientDot(108, -16, -68, (byte) 20, 33);
           }
           if (param0 != null &&
             param0.length() >= cd.field_b) {
@@ -83,7 +83,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte param3, int param4) {
+    final static int perlinGradientDot(int param0, int param1, int param2, byte param3, int param4) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;

@@ -1433,7 +1433,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime224 = HuffmanCodec.fetchLocalizedResource((byte) -38, "VOTE_CONVOY_BALANCED_DESC");
           if (var2Lifetime224 != null) {
-            ola.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime224);
+            GpuFractalNoiseVolume.field_q = Cp1252Strings.decode((byte) -125, var2Lifetime224);
           }
           var2Lifetime225 = HuffmanCodec.fetchLocalizedResource((byte) -26, "VOTE_ASSASSINATE_VIP");
           if (null != var2Lifetime225) {

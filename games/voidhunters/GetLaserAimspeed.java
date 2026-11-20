@@ -163,7 +163,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
             var4.unlink(-3846);
             return;
           }
-          gna.a((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+          FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
           FighterBayWeaponDefinition.l(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

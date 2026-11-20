@@ -25,9 +25,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        c var4_ref_c = null;
+        DelayedPacket var4_ref_c = null;
         int var4 = 0;
-        c var5 = null;
+        DelayedPacket var5 = null;
         int var7 = 0;
         var7 = VoidHunters.field_G;
         try {
@@ -37,19 +37,19 @@ final class GetSelfDestructTimer extends ConsoleCommand {
           var2_long = MonotonicMillisClock.currentTimeMillis(false);
           if (param0 != cd.field_c &&
             SetAutoDetail.field_p < 0) {
-            var4_ref_c = (c) (GetSpinningBladeAimarc.field_q.first(param0 + 0));
+            var4_ref_c = (DelayedPacket) (GetSpinningBladeAimarc.field_q.first(param0 + 0));
             if (var4_ref_c != null &&
-              var4_ref_c.field_e < var2_long) {
+              var4_ref_c.releaseTimeMillis < var2_long) {
               var4_ref_c.unlink(-3846);
-              PartitioningManagerFactory.field_a = var4_ref_c.field_f.length;
+              PartitioningManagerFactory.field_a = var4_ref_c.payload.length;
               qga.field_b.position = 0;
               for (var5_int = 0; var5_int < PartitioningManagerFactory.field_a; var5_int++) {
-                qga.field_b.payload[var5_int] = var4_ref_c.field_f[var5_int];
+                qga.field_b.payload[var5_int] = var4_ref_c.payload[var5_int];
               }
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
               SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
-              NetworkMessageState.incomingOpcode = var4_ref_c.field_d;
+              NetworkMessageState.incomingOpcode = var4_ref_c.opcodeOrLength;
               return true;
             }
           }
@@ -81,9 +81,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
                 var4 = 0;
               }
             }
-            var5 = new c((long)var4 + var2_long, SetAutoDetail.field_p, new byte[PartitioningManagerFactory.field_a]);
+            var5 = new DelayedPacket((long)var4 + var2_long, SetAutoDetail.field_p, new byte[PartitioningManagerFactory.field_a]);
             for (var6 = 0; var6 < PartitioningManagerFactory.field_a; var6++) {
-              var5.field_f[var6] = qga.field_b.payload[var6];
+              var5.payload[var6] = qga.field_b.payload[var6];
             }
             GetSpinningBladeAimarc.field_q.addLast(param0 ^ -10258, var5);
             SetAutoDetail.field_p = -1;

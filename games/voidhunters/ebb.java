@@ -6,7 +6,7 @@ final class ebb {
     static boolean field_b;
 
     final static void a(byte param0) {
-        ola.field_p = null;
+        GpuFractalNoiseVolume.field_p = null;
         if (param0 != -74) {
           field_a = (GameStateFactory) null;
         }

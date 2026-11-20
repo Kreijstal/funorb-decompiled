@@ -261,7 +261,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ThrusterBehaviour.field_a[7] = MissionBuilderFactory.field_a;
           ThrusterBehaviour.field_a[8] = LoadSettings.field_r;
           ThrusterBehaviour.field_a[1] = fia.field_a;
-          ThrusterBehaviour.field_a[5] = ola.field_q;
+          ThrusterBehaviour.field_a[5] = GpuFractalNoiseVolume.field_q;
           ThrusterBehaviour.field_a[3] = LoadBlackboxRecording.field_p;
           ThrusterBehaviour.field_a[2] = ArmBehaviour.field_c;
           ThrusterBehaviour.field_a[13] = GetMomentOfInertiaPredivideDownshift.field_o;

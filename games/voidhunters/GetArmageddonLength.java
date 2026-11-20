@@ -40,7 +40,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           var3 = 44 % ((-49 - param0) / 63);
           if (var2 != 0) {
             if (var2 != 1) {
-              gna.a((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               FighterBayWeaponDefinition.l(-126);
               return;
             }

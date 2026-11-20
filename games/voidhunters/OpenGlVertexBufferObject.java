@@ -35,7 +35,7 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
         if (param0 > -33) {
           return false;
         }
-        return ola.field_p != null ? true : false;
+        return GpuFractalNoiseVolume.field_p != null ? true : false;
     }
 
     final static double b(byte param0) {

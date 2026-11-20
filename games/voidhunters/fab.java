@@ -19,13 +19,13 @@ final class fab {
           var4 = TextNode.formatByteArray(param1, param0 ^ 29411);
           var2_ref = new PlayerGameData();
           GetMissionResnetResourceTickTime.savePlayerGameData((byte) -69);
-          gna.a((Throwable) ((Object) exception), "Gamedata is corrupted - " + var4, 0);
+          FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) exception), "Gamedata is corrupted - " + var4, 0);
         }
         if (var2_ref == null) {
           return;
         }
         if (!(1 >= var2_ref.version)) {
-          gna.a((Throwable) null, "Gamedata is for a version that doesn't exist yet (" + var2_ref.version + ")! The clientdata is probably corrupted.", 0);
+          FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "Gamedata is for a version that doesn't exist yet (" + var2_ref.version + ")! The clientdata is probably corrupted.", 0);
           return;
         }
         try {

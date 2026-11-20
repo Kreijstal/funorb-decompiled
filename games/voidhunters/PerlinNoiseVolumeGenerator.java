@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-abstract class elb {
-    private int field_e;
-    int field_a;
-    private short[] field_c;
-    private int field_b;
-    private short[] field_d;
-    private int field_g;
-    private int field_h;
+abstract class PerlinNoiseVolumeGenerator {
+    private int seed;
+    int octaveCount;
+    private short[] octaveFrequencies;
+    private int yScale;
+    private short[] permutation;
+    private int zScale;
+    private int xScale;
     static UiTextStyle field_f;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void accumulateOctave(int param0, int param1, int param2);
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void generate(int param0, byte param1, int param2, int param3) {
         int var37 = 0;
         int var36 = 0;
         int var35 = 0;
@@ -84,21 +84,21 @@ abstract class elb {
         for (var42Lifetime2 = 0; param3 > var42Lifetime2; var42Lifetime2++) {
           var41[var42Lifetime2] = (var42Lifetime2 << 12) / param3;
         }
-        this.a(true);
+        this.resetGeneration(true);
         for (var37 = 0; param3 > var37; var37++) {
           for (var36 = 0; param2 > var36; var36++) {
             for (var35 = 0; var35 < param0; var35++) {
-              for (var38 = 0; this.field_a > var38; var38++) {
-                var42Lifetime3 = this.field_c[var38] << 12;
+              for (var38 = 0; this.octaveCount > var38; var38++) {
+                var42Lifetime3 = this.octaveFrequencies[var38] << 12;
                 var6 = var47[var36] * var42Lifetime3 >> 12;
                 var7 = var48[var37] * var42Lifetime3 >> 12;
-                var9 = var42Lifetime3 * this.field_b >> 12;
-                var10 = this.field_g * var42Lifetime3 >> 12;
+                var9 = var42Lifetime3 * this.yScale >> 12;
+                var10 = this.zScale * var42Lifetime3 >> 12;
                 var5 = var42Lifetime3 * var49[var35] >> 12;
-                var8 = this.field_h * var42Lifetime3 >> 12;
-                var6 = var6 * this.field_b;
-                var5 = var5 * this.field_h;
-                var7 = var7 * this.field_g;
+                var8 = this.xScale * var42Lifetime3 >> 12;
+                var6 = var6 * this.yScale;
+                var5 = var5 * this.xScale;
+                var7 = var7 * this.zScale;
                 var11 = var5 >> 12;
                 var12 = 1 + var11;
                 var11 = var11 & 255;
@@ -127,42 +127,42 @@ abstract class elb {
                 var15 = var15 & 255;
                 var5 = var5 & 4095;
                 var20 = var5 - 4096;
-                var18 = PasswordValidator.field_h[var6];
-                var19 = PasswordValidator.field_h[var7];
+                var18 = PasswordValidator.perlinFadeTable[var6];
+                var19 = PasswordValidator.perlinFadeTable[var7];
                 var22 = var7 - 4096;
-                var17 = PasswordValidator.field_h[var5];
-                var23 = this.field_d[var15];
-                var24 = this.field_d[var16];
+                var17 = PasswordValidator.perlinFadeTable[var5];
+                var23 = this.permutation[var15];
+                var24 = this.permutation[var16];
                 var21 = -4096 + var6;
-                var25 = this.field_d[var23 + var13];
-                var28 = this.field_d[var24 + var14];
-                var27 = this.field_d[var13 + var24];
-                var26 = this.field_d[var14 + var23];
-                var29 = GetDebrisCarryOver.a(var7, var6, var5, (byte) -113, (int) this.field_d[var25 + var11]);
-                var30 = GetDebrisCarryOver.a(var7, var6, var20, (byte) 47, (int) this.field_d[var12 + var25]);
+                var25 = this.permutation[var23 + var13];
+                var28 = this.permutation[var24 + var14];
+                var27 = this.permutation[var13 + var24];
+                var26 = this.permutation[var14 + var23];
+                var29 = GetDebrisCarryOver.perlinGradientDot(var7, var6, var5, (byte) -113, (int) this.permutation[var25 + var11]);
+                var30 = GetDebrisCarryOver.perlinGradientDot(var7, var6, var20, (byte) 47, (int) this.permutation[var12 + var25]);
                 var31 = var29 + ((-var29 + var30) * var17 >> 12);
-                var29Lifetime1 = GetDebrisCarryOver.a(var7, var21, var5, (byte) -89, (int) this.field_d[var11 + var26]);
-                var30Lifetime1 = GetDebrisCarryOver.a(var7, var21, var20, (byte) -121, (int) this.field_d[var26 + var12]);
+                var29Lifetime1 = GetDebrisCarryOver.perlinGradientDot(var7, var21, var5, (byte) -89, (int) this.permutation[var11 + var26]);
+                var30Lifetime1 = GetDebrisCarryOver.perlinGradientDot(var7, var21, var20, (byte) -121, (int) this.permutation[var26 + var12]);
                 var32 = var29Lifetime1 + (var17 * (-var29Lifetime1 + var30Lifetime1) >> 12);
-                var29Lifetime2 = GetDebrisCarryOver.a(var22, var6, var5, (byte) 63, (int) this.field_d[var27 + var11]);
+                var29Lifetime2 = GetDebrisCarryOver.perlinGradientDot(var22, var6, var5, (byte) 63, (int) this.permutation[var27 + var11]);
                 var33 = var31 + ((var32 - var31) * var18 >> 12);
-                var30Lifetime2 = GetDebrisCarryOver.a(var22, var6, var20, (byte) -95, (int) this.field_d[var12 + var27]);
+                var30Lifetime2 = GetDebrisCarryOver.perlinGradientDot(var22, var6, var20, (byte) -95, (int) this.permutation[var12 + var27]);
                 var31Lifetime1 = var29Lifetime2 + (var17 * (-var29Lifetime2 + var30Lifetime2) >> 12);
-                var29Lifetime3 = GetDebrisCarryOver.a(var22, var21, var5, (byte) -122, (int) this.field_d[var11 + var28]);
-                var30Lifetime3 = GetDebrisCarryOver.a(var22, var21, var20, (byte) -122, (int) this.field_d[var28 + var12]);
+                var29Lifetime3 = GetDebrisCarryOver.perlinGradientDot(var22, var21, var5, (byte) -122, (int) this.permutation[var11 + var28]);
+                var30Lifetime3 = GetDebrisCarryOver.perlinGradientDot(var22, var21, var20, (byte) -122, (int) this.permutation[var28 + var12]);
                 var32Lifetime1 = var29Lifetime3 + (var17 * (-var29Lifetime3 + var30Lifetime3) >> 12);
                 var34 = var31Lifetime1 + (var18 * (var32Lifetime1 - var31Lifetime1) >> 12);
-                this.a(-115, var38, (var19 * (var34 - var33) >> 12) + var33);
+                this.accumulateOctave(-115, var38, (var19 * (var34 - var33) >> 12) + var33);
               }
-              this.a(1424903724);
+              this.finishSample(1424903724);
             }
           }
         }
     }
 
-    abstract void a(int param0);
+    abstract void finishSample(int param0);
 
-    private final void b(byte param0) {
+    private final void initializePermutation(byte param0) {
         Random var2;
         int var3;
         int var4;
@@ -171,57 +171,57 @@ abstract class elb {
         int var7;
         int var3Lifetime1;
         var7 = VoidHunters.field_G;
-        var2 = new Random((long)this.field_e);
+        var2 = new Random((long)this.seed);
         for (var3 = 0; var3 < 255; var3++) {
-          this.field_d[var3] = (short)var3;
+          this.permutation[var3] = (short)var3;
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = 255 - var3Lifetime1;
           var5 = TextHotspotRegion.randomBoundedInt(var2, var4, 116);
-          var6 = this.field_d[var5];
-          this.field_d[var5] = this.field_d[var4];
-          this.field_d[var4 + 256] = (short) var6;
-          this.field_d[var4] = (short) var6;
+          var6 = this.permutation[var5];
+          this.permutation[var5] = this.permutation[var4];
+          this.permutation[var4 + 256] = (short) var6;
+          this.permutation[var4] = (short) var6;
         }
         if (param0 != 23) {
-          elb.clearSharedReferences((byte) 43);
+          PerlinNoiseVolumeGenerator.clearSharedReferences((byte) 43);
         }
     }
 
-    private final void a(byte param0) {
+    private final void initializeFrequencies(byte param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
-        this.field_c = new short[this.field_a];
+        this.octaveFrequencies = new short[this.octaveCount];
         if (param0 <= 82) {
           return;
         }
-        for (var2 = 0; var2 < this.field_a; var2++) {
-          this.field_c[var2] = (short)(int)Math.pow(2.0, (double)var2);
+        for (var2 = 0; var2 < this.octaveCount; var2++) {
+          this.octaveFrequencies[var2] = (short)(int)Math.pow(2.0, (double)var2);
         }
     }
 
-    abstract void a(boolean param0);
+    abstract void resetGeneration(boolean param0);
 
-    elb(int param0, int param1, int param2, int param3, int param4) {
-        this.field_a = 4;
-        this.field_d = new short[512];
-        this.field_g = 4;
-        this.field_b = 4;
-        this.field_e = 0;
-        this.field_h = 4;
-        this.field_b = param3;
-        this.field_a = param1;
-        this.field_g = param4;
-        this.field_h = param2;
-        this.field_e = param0;
-        this.a((byte) 109);
-        this.b((byte) 23);
+    PerlinNoiseVolumeGenerator(int param0, int param1, int param2, int param3, int param4) {
+        this.octaveCount = 4;
+        this.permutation = new short[512];
+        this.zScale = 4;
+        this.yScale = 4;
+        this.seed = 0;
+        this.xScale = 4;
+        this.yScale = param3;
+        this.octaveCount = param1;
+        this.zScale = param4;
+        this.xScale = param2;
+        this.seed = param0;
+        this.initializeFrequencies((byte) 109);
+        this.initializePermutation((byte) 23);
     }
 
     public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 < 35) {
-          elb.clearSharedReferences((byte) 62);
+          PerlinNoiseVolumeGenerator.clearSharedReferences((byte) 62);
         }
     }
 

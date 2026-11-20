@@ -37,36 +37,36 @@ final class MissionFactory implements GameStateFactory {
     }
 
     final static void c(byte param0) {
-        ft var1 = null;
+        GpuRidgedNoiseVolume var1 = null;
         byte[] var3 = null;
-        ola var1_ref = null;
+        GpuFractalNoiseVolume var1_ref = null;
         byte[] var4 = null;
-        ft var1Lifetime1;
+        GpuRidgedNoiseVolume var1Lifetime1;
         byte[] var3Lifetime1;
-        ola var1_refLifetime1;
+        GpuFractalNoiseVolume var1_refLifetime1;
         byte[] var4Lifetime1;
         if (param0 >= 89) {
           if (null == PlayerVote.field_b) {
-            var1 = new ft();
-            var3 = var1.a(128, 16, false, 128);
+            var1 = new GpuRidgedNoiseVolume();
+            var3 = var1.generateVolume(128, 16, false, 128);
             PlayerVote.field_b = EscapePodFactory.storeBytes(false, var3, -12445);
           }
           if (null == GetPointDefenceLaserRandomness.field_q) {
-            var1_ref = new ola();
-            var4 = var1_ref.a(128, 16, -15281, 128);
+            var1_ref = new GpuFractalNoiseVolume();
+            var4 = var1_ref.generateVolume(128, 16, -15281, 128);
             GetPointDefenceLaserRandomness.field_q = EscapePodFactory.storeBytes(false, var4, -12445);
           }
           return;
         }
         MissionFactory.clearSharedReferences(false);
         if (null == PlayerVote.field_b) {
-          var1Lifetime1 = new ft();
-          var3Lifetime1 = var1Lifetime1.a(128, 16, false, 128);
+          var1Lifetime1 = new GpuRidgedNoiseVolume();
+          var3Lifetime1 = var1Lifetime1.generateVolume(128, 16, false, 128);
           PlayerVote.field_b = EscapePodFactory.storeBytes(false, var3Lifetime1, -12445);
         }
         if (null == GetPointDefenceLaserRandomness.field_q) {
-          var1_refLifetime1 = new ola();
-          var4Lifetime1 = var1_refLifetime1.a(128, 16, -15281, 128);
+          var1_refLifetime1 = new GpuFractalNoiseVolume();
+          var4Lifetime1 = var1_refLifetime1.generateVolume(128, 16, -15281, 128);
           GetPointDefenceLaserRandomness.field_q = EscapePodFactory.storeBytes(false, var4Lifetime1, -12445);
         }
     }

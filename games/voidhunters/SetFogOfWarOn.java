@@ -325,7 +325,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_missiles_top_speed(" + LegacyOpenGlUnderwaterEffect.field_k + ")");
         System.out.println("set_shields_toggle_cooldown(" + Particle.field_w + ")");
         System.out.println("set_shields_directional_idle_energy_usage(" + SetMissilesCooldown.field_p + ")");
-        System.out.println("set_shields_directional_radius(" + rjb.field_u + ")");
+        System.out.println("set_shields_directional_radius(" + LegacyRidgedNoiseVolume.field_u + ")");
         System.out.println("set_shields_directional_arc(" + SetMissileLauncherFireForce.field_q + ")");
         System.out.println("set_shields_damage_energy_conversion(" + GetPhysicsCollisionPhantomForceMultiplier.field_o + ")");
         System.out.println("set_repair_mode_cooldown(" + Particle.field_q + ")");

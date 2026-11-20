@@ -153,7 +153,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetFightersPerPlayerMaximum.field_p = param1[31];
           LegacyOpenGlUnderwaterEffect.field_m = param1[83];
           SetTorpedoEnergyUsed.field_q = param1[94];
-          rjb.field_u = param1[211];
+          LegacyRidgedNoiseVolume.field_u = param1[211];
           Particle.field_n = param1[220];
           Particle.field_I = param1[32];
           GetLagStandardDeviationIn.field_p = param1[85];

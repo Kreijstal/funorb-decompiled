@@ -96,7 +96,7 @@ final class SetLag extends ConsoleCommand {
               decompiledFrameRemainder0 = false;
             }
             else {
-              gna.a((Throwable) null, "LR1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "LR1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               FighterBayWeaponDefinition.l(-116);
             }
           }

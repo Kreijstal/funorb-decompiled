@@ -5,7 +5,7 @@ final class PasswordValidator extends TextFieldValidator {
     static String field_j;
     static String[] field_m;
     private UiTextField usernameField;
-    static int[] field_h;
+    static int[] perlinFadeTable;
     private UiTextField emailField;
     static String field_i;
     static String field_g;
@@ -151,7 +151,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param0 < 125) {
           return;
         }
-        field_h = null;
+        perlinFadeTable = null;
         field_i = null;
         field_j = null;
     }
@@ -276,9 +276,9 @@ final class PasswordValidator extends TextFieldValidator {
     static {
         int var0 = 0;
         field_j = "Hide game chat";
-        field_h = new int[4096];
+        perlinFadeTable = new int[4096];
         for (var0 = 0; var0 < 4096; var0++) {
-          field_h[var0] = GetMomentOfInertiaPerpointCalcDownshift.a((byte) 60, var0);
+          perlinFadeTable[var0] = GetMomentOfInertiaPerpointCalcDownshift.perlinFade((byte) 60, var0);
         }
         field_g = "Chat is currently disabled.";
     }

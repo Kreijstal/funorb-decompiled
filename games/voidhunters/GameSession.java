@@ -346,7 +346,7 @@ final class GameSession {
                 var7 = var4[var5 + 1];
                 var8 = var4[(2 + var5) % var16.length];
                 var9 = var4[(var5 + 3) % var16.length];
-                c.a(ShipTeamConditionFactory.field_a.worldToScreenY(true, var9), ShipTeamConditionFactory.field_a.worldToScreenX(var8, (byte) 121), ShipTeamConditionFactory.field_a.worldToScreenX(var6, (byte) 120), ShipTeamConditionFactory.field_a.worldToScreenY(true, var7), -16777216, 16777215);
+                DelayedPacket.drawLine(ShipTeamConditionFactory.field_a.worldToScreenY(true, var9), ShipTeamConditionFactory.field_a.worldToScreenX(var8, (byte) 121), ShipTeamConditionFactory.field_a.worldToScreenX(var6, (byte) 120), ShipTeamConditionFactory.field_a.worldToScreenY(true, var7), -16777216, 16777215);
                 SetMissileLauncherEnergyUsed.a(16711680, (byte) 7, ShipTeamConditionFactory.field_a.worldToScreenY(true, var7), (float)(int)(ShipTeamConditionFactory.field_a.scale * 16384.0f), 100, ShipTeamConditionFactory.field_a.worldToScreenX(var6, (byte) 115));
               }
             }
@@ -1440,7 +1440,7 @@ final class GameSession {
               var15Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -8192 + (var6 - (var11 << 1))) - OpenGlTexture.b((byte) 118);
               var16Lifetime1 = var14Lifetime1 - (var13Lifetime1 >> 1);
               var17Lifetime1 = var15Lifetime1 + -16 * (-var25 + var9.length - 1);
-              c.a(var27 + var19, var26 + var18, var7, -(OpenGlTexture.b((byte) 118) * 2) + var8, -16777216, 16777215);
+              DelayedPacket.drawLine(var27 + var19, var26 + var18, var7, -(OpenGlTexture.b((byte) 118) * 2) + var8, -16777216, 16777215);
               GetLagStandardDeviationOut.a(2, var32, 16777215, var17Lifetime1 + var19, var18 + var16Lifetime1, 4266);
             }
           }
@@ -2036,7 +2036,7 @@ final class GameSession {
                           } else {
                             stackIn_63_5 = var11;
                           }
-                          c.a(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_62_4, stackIn_63_5);
+                          DelayedPacket.drawLine(stackIn_62_0, stackIn_62_1, stackIn_62_2, stackIn_62_3, stackIn_62_4, stackIn_63_5);
                         }
                       }
                     }
@@ -2090,7 +2090,7 @@ final class GameSession {
                         } else {
                           stackIn_97_5 = var9;
                         }
-                        c.a(stackIn_96_0, stackIn_96_1, stackIn_96_2, stackIn_96_3, stackIn_96_4, stackIn_97_5);
+                        DelayedPacket.drawLine(stackIn_96_0, stackIn_96_1, stackIn_96_2, stackIn_96_3, stackIn_96_4, stackIn_97_5);
                       }
                     }
                     if (-1 + var17.length > var30) {
@@ -2178,25 +2178,25 @@ final class GameSession {
                 if (5 != param0) {
                   if (param0 == -1) {
                     var7 = 16711680;
-                    c.a(8 + var6, 8 + var5_int, var5_int - 8, var6 - 8, -16777216, var7);
-                    c.a(-8 + var6, 8 + var5_int, var5_int - 8, var6 + 8, -16777216, var7);
+                    DelayedPacket.drawLine(8 + var6, 8 + var5_int, var5_int - 8, var6 - 8, -16777216, var7);
+                    DelayedPacket.drawLine(-8 + var6, 8 + var5_int, var5_int - 8, var6 + 8, -16777216, var7);
                   } else {
                     if (param0 != 1) {
                       SetNumStars.a(6.0f, (byte) 95, var6, var7, var5_int);
                     } else {
-                      c.a(var6, 8 + var5_int, -8 + var5_int, var6, -16777216, var7);
-                      c.a(var6 + 8, var5_int, var5_int, -8 + var6, -16777216, var7);
+                      DelayedPacket.drawLine(var6, 8 + var5_int, -8 + var5_int, var6, -16777216, var7);
+                      DelayedPacket.drawLine(var6 + 8, var5_int, var5_int, -8 + var6, -16777216, var7);
                     }
                   }
                 } else {
                   var7 = 16746496;
-                  c.a(var6, var5_int + 8, var5_int - 8, var6, -16777216, var7);
-                  c.a(var6 + 8, var5_int, var5_int, -8 + var6, -16777216, var7);
+                  DelayedPacket.drawLine(var6, var5_int + 8, var5_int - 8, var6, -16777216, var7);
+                  DelayedPacket.drawLine(var6 + 8, var5_int, var5_int, -8 + var6, -16777216, var7);
                   SetNumStars.a(6.0f, (byte) 83, var6, var7, var5_int);
                 }
               } else {
-                c.a(var6, var5_int + 8, -8 + var5_int, var6, -16777216, var7);
-                c.a(8 + var6, var5_int, var5_int, -8 + var6, -16777216, var7);
+                DelayedPacket.drawLine(var6, var5_int + 8, -8 + var5_int, var6, -16777216, var7);
+                DelayedPacket.drawLine(8 + var6, var5_int, var5_int, -8 + var6, -16777216, var7);
                 SetNumStars.a(6.0f, (byte) 98, var6, var7, var5_int);
               }
               return;
@@ -3395,7 +3395,7 @@ final class GameSession {
                   PlayerJoinFactory.a(var6, HighscoreValueRequest.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
                   for (var11 = 125; var11 < var8; var11 += 125) {
                     var12 = var11 * var4_int / var8 + var5;
-                    c.a(var6 + 2, var12, var12, var6, -16777216, 4473924);
+                    DelayedPacket.drawLine(var6 + 2, var12, var12, var6, -16777216, 4473924);
                   }
                   var11Lifetime1 = 17;
                   var12Lifetime1 = 2;
@@ -4660,7 +4660,7 @@ final class GameSession {
                     GetPhasedEnergyBeamReload.a(var18, 2.0f, -52, param4 + param10, param6[var16]);
                   }
                   if ((param7[var16] & bsb.field_a) != 0) {
-                    c.a(var18, param9 - (-param3 - GetPhasedEnergyBeamProjectiles.a(99, var17)), param3 + param9, var18, -16777216, param6[var16]);
+                    DelayedPacket.drawLine(var18, param9 - (-param3 - GetPhasedEnergyBeamProjectiles.a(99, var17)), param3 + param9, var18, -16777216, param6[var16]);
                   }
                 }
               }
@@ -6317,7 +6317,7 @@ final class GameSession {
                   var17 = ShipTeamConditionFactory.field_a.worldToScreenX(var10, (byte) 122);
                   var18 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var11);
                   if (Math.abs(var16) <= var8) {
-                    c.a(ShipTeamConditionFactory.field_a.worldToScreenY(true, param3), ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 124), var17, var18, -16777216, 16711680);
+                    DelayedPacket.drawLine(ShipTeamConditionFactory.field_a.worldToScreenY(true, param3), ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 124), var17, var18, -16777216, 16711680);
                   }
                   var19 = 16777215;
                   var20 = GameKeyHandler.a(22433, var12 - var8);
@@ -6327,10 +6327,10 @@ final class GameSession {
                   var24 = (var22 >> 8) * (TextureLineShape.sinAngle(var20, 70) >> 8) + var11;
                   var25 = (GetNumStars.cosAngle(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
                   var26 = (var22 >> 8) * (TextureLineShape.sinAngle(var21, 86) >> 8) + var11;
-                  c.a(ShipTeamConditionFactory.field_a.worldToScreenY(true, var24), ShipTeamConditionFactory.field_a.worldToScreenX(var23, (byte) 124), var17, var18, -16777216, var19);
+                  DelayedPacket.drawLine(ShipTeamConditionFactory.field_a.worldToScreenY(true, var24), ShipTeamConditionFactory.field_a.worldToScreenX(var23, (byte) 124), var17, var18, -16777216, var19);
                   stackIn_18_0 = ShipTeamConditionFactory.field_a;
                   stackIn_19_1 = !(param1);
-                  c.a(((Camera2D) (Object) stackIn_18_0).worldToScreenY(stackIn_19_1, var26), ShipTeamConditionFactory.field_a.worldToScreenX(var25, (byte) 115), var17, var18, -16777216, var19);
+                  DelayedPacket.drawLine(((Camera2D) (Object) stackIn_18_0).worldToScreenY(stackIn_19_1, var26), ShipTeamConditionFactory.field_a.worldToScreenX(var25, (byte) 115), var17, var18, -16777216, var19);
                 }
               }
             }

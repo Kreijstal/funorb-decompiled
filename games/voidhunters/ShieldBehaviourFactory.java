@@ -11,12 +11,12 @@ final class ShieldBehaviourFactory implements GameStateFactory {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (32 < kt.soundEffectVolume) {
-          var1 = kt.soundEffectVolume % 32;
+        if (32 < RidgedNoiseVolumeGenerator.soundEffectVolume) {
+          var1 = RidgedNoiseVolumeGenerator.soundEffectVolume % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          LoopingSound.setSoundEffectVolume(-var1 + kt.soundEffectVolume, -13205);
+          LoopingSound.setSoundEffectVolume(-var1 + RidgedNoiseVolumeGenerator.soundEffectVolume, -13205);
           if (param0 != 64) {
             field_a = 29;
             return;

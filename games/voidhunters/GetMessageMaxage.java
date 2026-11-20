@@ -106,7 +106,7 @@ final class GetMessageMaxage extends ConsoleCommand {
         var10 = VoidHunters.field_G;
         try {
           wia.field_a = true;
-          ft.field_t = param0;
+          GpuRidgedNoiseVolume.field_t = param0;
           var11 = param2;
           if (param1) {
             stackIn_4_0 = GetFightersPerPlayerMaximum.field_q;
@@ -114,7 +114,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             stackIn_4_0 = GetLaserBeamProjectileDamage.field_s;
           }
           var6 = stackIn_4_0;
-          if (ft.field_t == 0) {
+          if (GpuRidgedNoiseVolume.field_t == 0) {
             var7 = MatchResultsFactory.a(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = 3 + var7;
             GetSniperCannonProjectiles.field_o = new int[var8];
@@ -134,7 +134,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             GetSniperCannonProjectiles.field_o[-1 + var8] = 1;
             PlayerGameData.field_e[1] = 2;
           } else {
-            if (ft.field_t != 1) {
+            if (GpuRidgedNoiseVolume.field_t != 1) {
               throw new IllegalArgumentException();
             }
             var7 = MatchResultsFactory.a(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);

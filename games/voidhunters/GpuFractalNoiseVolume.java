@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ola extends gna {
+final class GpuFractalNoiseVolume extends FractalNoiseVolumeGenerator {
     static qka field_p;
-    private byte[] field_n;
+    private byte[] voxels;
     static int[] field_o;
     static String field_q;
 
-    final void a(int param0, int param1, byte param2) {
+    final void writeSample(int param0, int param1, byte param2) {
         int var4 = 0;
         int incrementValue$0 = 0;
         if (param0 == 1111320769) {
@@ -15,20 +15,20 @@ final class ola extends gna {
           param2 = (byte)((127 & param2 >> 1) + 127);
           incrementValue$0 = var4;
           var4++;
-          this.field_n[incrementValue$0] = (byte)param2;
-          this.field_n[var4] = (byte)param2;
+          this.voxels[incrementValue$0] = (byte)param2;
+          this.voxels[var4] = (byte)param2;
           return;
         }
     }
 
-    final static SoftwareIndexedSprite2D[] d(byte param0) {
+    final static SoftwareIndexedSprite2D[] createIndexedSprites(byte param0) {
         SoftwareIndexedSprite2D[] var1 = null;
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         SoftwareIndexedSprite2D[] var1Lifetime1;
         int var2Lifetime1;
         if (param0 != -91) {
-          ola.d((byte) 67);
+          GpuFractalNoiseVolume.createIndexedSprites((byte) 67);
         } else {
           var1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
@@ -49,26 +49,26 @@ final class ola extends gna {
         field_q = null;
         field_o = null;
         if (param0 != 2) {
-          ola.d((byte) -116);
+          GpuFractalNoiseVolume.createIndexedSprites((byte) -116);
           field_p = null;
           return;
         }
         field_p = null;
     }
 
-    ola() {
+    GpuFractalNoiseVolume() {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    final byte[] a(int param0, int param1, int param2, int param3) {
-        this.field_n = new byte[param1 * param3 * param0 * 2];
+    final byte[] generateVolume(int param0, int param1, int param2, int param3) {
+        this.voxels = new byte[param1 * param3 * param0 * 2];
         if (param2 == -15281) {
-          this.a(param3, (byte) -10, param0, param1);
-          return this.field_n;
+          this.generate(param3, (byte) -10, param0, param1);
+          return this.voxels;
         }
         field_p = (qka) null;
-        this.a(param3, (byte) -10, param0, param1);
-        return this.field_n;
+        this.generate(param3, (byte) -10, param0, param1);
+        return this.voxels;
     }
 
     static {

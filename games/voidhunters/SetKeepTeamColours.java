@@ -38,7 +38,7 @@ final class SetKeepTeamColours extends ConsoleCommand {
 
     final static void a(int param0) {
         if (ssa.b(2)) {
-          GetFullMissionSet.a(kt.field_r, 2182, 0);
+          GetFullMissionSet.a(RidgedNoiseVolumeGenerator.field_r, 2182, 0);
         }
         if (!SetRepairModeActiveTime.a(-116)) {
           GetFullMissionSet.a(SetCountermeasureLauncherEnergyUsed.field_o, 2182, 1);

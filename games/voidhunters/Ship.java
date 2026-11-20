@@ -1087,7 +1087,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
                 var10 = this.y + (TextureLineShape.sinAngle(var8, 77) >> 8) * (var5 >> 8);
                 var11 = this.x + (GetNumStars.cosAngle(var8 + var6, (byte) -73) >> 8) * (var5 >> 8);
                 var12 = this.y + (var5 >> 8) * (TextureLineShape.sinAngle(var6 + var8, 56) >> 8);
-                c.a(param0.worldToScreenY(true, var12), param0.worldToScreenX(var11, (byte) 122), param0.worldToScreenX(var9, (byte) 116), param0.worldToScreenY(true, var10), -16777216, var4_int);
+                DelayedPacket.drawLine(param0.worldToScreenY(true, var12), param0.worldToScreenX(var11, (byte) 122), param0.worldToScreenX(var9, (byte) 116), param0.worldToScreenY(true, var10), -16777216, var4_int);
               }
             }
             if ((this.spawnTimer & 8) != 0) {

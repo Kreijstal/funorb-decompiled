@@ -90,7 +90,7 @@ final class SpawnPointFactory implements GameStateFactory {
             var7 = var14[var5 + 1];
             var8 = var14[(2 + var5) % var18.length];
             var9 = var14[(3 + var5) % var18.length];
-            c.a(param0.worldToScreenY(true, var9), param0.worldToScreenX(var8, (byte) 121), param0.worldToScreenX(var6, (byte) 114), param0.worldToScreenY(true, var7), -16777216, 16711680);
+            DelayedPacket.drawLine(param0.worldToScreenY(true, var9), param0.worldToScreenX(var8, (byte) 121), param0.worldToScreenX(var6, (byte) 114), param0.worldToScreenY(true, var7), -16777216, 16711680);
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < var19.length; var5Lifetime1 += 2) {
             var6Lifetime1 = var19[var5Lifetime1];
@@ -115,7 +115,7 @@ final class SpawnPointFactory implements GameStateFactory {
                 GetPhasedEnergyBeamReload.a(var10, (float)(int)(param0.scale * 256.0f), -104, var9Lifetime2, 65280);
                 var11 = 8 * GetNumStars.cosAngle(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
                 var12 = TextureLineShape.sinAngle(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
-                c.a(param0.worldToScreenY(true, var12 + var8Lifetime2), param0.worldToScreenX(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
+                DelayedPacket.drawLine(param0.worldToScreenY(true, var12 + var8Lifetime2), param0.worldToScreenX(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
                 GetLagStandardDeviationOut.a(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
               }
             }

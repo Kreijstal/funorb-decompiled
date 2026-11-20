@@ -18,8 +18,8 @@ final class SetLaserReload extends ConsoleCommand {
         if (param0 < 44) {
           return;
         }
-        if (null != ola.field_p) {
-          ola.field_p.draw(param1, -96);
+        if (null != GpuFractalNoiseVolume.field_p) {
+          GpuFractalNoiseVolume.field_p.draw(param1, -96);
         }
     }
 

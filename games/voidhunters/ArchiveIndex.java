@@ -557,13 +557,13 @@ final class ArchiveIndex {
             }
             if (decompiledNaturalLoopExit0) {
               if (BitmapTextLayout.field_n.firstButton.field_o != 0) {
-                ola.field_p = new qka(BitmapTextLayout.field_n.firstButton.screenX, BitmapTextLayout.field_n.firstButton.screenY, BitmapTextLayout.field_n.firstButton.width, BitmapTextLayout.field_n.firstButton.height, EdgeMagnitudeTextureOperation.field_i, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
+                GpuFractalNoiseVolume.field_p = new qka(BitmapTextLayout.field_n.firstButton.screenX, BitmapTextLayout.field_n.firstButton.screenY, BitmapTextLayout.field_n.firstButton.width, BitmapTextLayout.field_n.firstButton.height, EdgeMagnitudeTextureOperation.field_i, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
                 MissionGenerationDataFactory.field_b = 0;
               }
               stackIn_89_0 = BitmapTextLayout.field_n.secondButton;
             }
             if (((Widget) (stackIn_89_0)).field_o != 0) {
-              ola.field_p = new qka(BitmapTextLayout.field_n.secondButton.screenX, BitmapTextLayout.field_n.secondButton.screenY, BitmapTextLayout.field_n.secondButton.width, BitmapTextLayout.field_n.secondButton.height, MissionEvent.field_e, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
+              GpuFractalNoiseVolume.field_p = new qka(BitmapTextLayout.field_n.secondButton.screenX, BitmapTextLayout.field_n.secondButton.screenY, BitmapTextLayout.field_n.secondButton.width, BitmapTextLayout.field_n.secondButton.height, MissionEvent.field_e, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
               MissionGenerationDataFactory.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -614,7 +614,7 @@ final class ArchiveIndex {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              gna.a((Throwable) null, "MGR1: " + param3, 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGR1: " + param3, 0);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

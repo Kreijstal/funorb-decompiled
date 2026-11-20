@@ -63,7 +63,7 @@ final class ShipAI implements DiffableState {
     final void drawSteeringDebug(Ship param0, int param1, Camera2D param2, World param3) {
         try {
           int var5_int = -5 / ((-71 - param1) / 50);
-          c.a(param2.worldToScreenY(true, param0.y + this.desiredVelocityY), param2.worldToScreenX(param0.x + this.desiredVelocityX, (byte) 124), param2.worldToScreenX(param0.x, (byte) 127), param2.worldToScreenY(true, param0.y), -16777216, 16776960);
+          DelayedPacket.drawLine(param2.worldToScreenY(true, param0.y + this.desiredVelocityY), param2.worldToScreenX(param0.x + this.desiredVelocityX, (byte) 124), param2.worldToScreenX(param0.x, (byte) 127), param2.worldToScreenY(true, param0.y), -16777216, 16776960);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

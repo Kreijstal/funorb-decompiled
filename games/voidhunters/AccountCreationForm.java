@@ -252,7 +252,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         this.emailUpdatesToggle = new UiToggleButton("", (UiListener) null, var1 != 0);
         this.submitButton = new UiFocusableComponent(SettingsChange.field_d, (UiListener) null);
         this.cancelButton = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
-        this.usernameField.tooltip = gna.field_m;
+        this.usernameField.tooltip = FractalNoiseVolumeGenerator.field_m;
         this.emailField.tooltip = GetPointDefenceLaserProjectileInterceptDamage.field_s;
         this.emailConfirmationField.tooltip = dj.field_a;
         this.passwordField.tooltip = UiScrollPane.field_x;

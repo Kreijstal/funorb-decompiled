@@ -46,7 +46,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
                 var11 = -this.previousShieldX + param7;
                 var12 = -this.previousShieldY + param1;
               }
-              var10.a(SetMissileLauncherFireForce.field_q, param1, param7, rjb.field_u, 0, var11, (byte) 38, param2, param5, var12);
+              var10.a(SetMissileLauncherFireForce.field_q, param1, param7, LegacyRidgedNoiseVolume.field_u, 0, var11, (byte) 38, param2, param5, var12);
               this.operationalLastFrame = true;
               this.previousShieldY = param1;
               this.previousShieldX = param7;

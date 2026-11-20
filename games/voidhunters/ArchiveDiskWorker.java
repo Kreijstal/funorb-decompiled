@@ -251,7 +251,7 @@ final class ArchiveDiskWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              gna.a((Throwable) ((Object) var2_ref), (String) null, 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var2_ref), (String) null, 0);
               decompiledRegionSelector1 = 0;
             }
             if (decompiledRegionSelector1 != 0) {
