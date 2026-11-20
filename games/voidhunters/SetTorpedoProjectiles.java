@@ -66,7 +66,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        jk var12 = null;
+        LobbyPlayerEntry var12 = null;
         int var13 = 0;
         Widget var14 = null;
         Widget var15 = null;
@@ -163,7 +163,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           var9Lifetime1 = stackIn_47_0;
           var10 = param2.content.children;
           var11 = null;
-          var12 = (jk) (var10.first(0));
+          var12 = (LobbyPlayerEntry) (var10.first(0));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.children) {
@@ -222,7 +222,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
             }
             var12.field_Ib.text = var20;
-            if (!var12.i(-120)) {
+            if (!var12.isSecondaryUnlinked(-120)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
@@ -329,7 +329,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               param2.content.positionBelow((Widget) (var11), 2, var12, 101);
             }
             if (var12.field_o != 0 &&
-              !var12.i(61)) {
+              !var12.isSecondaryUnlinked(61)) {
               if (var12.field_wb.field_o == 0) {
                 if (0 != var12.field_Nb.field_o) {
                   World.sendLobbyPlayerRemovalRequest(param4, var12.field_zb, -125);
@@ -341,7 +341,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
             }
             if (var12.field_Q &&
-              !var12.i(121)) {
+              !var12.isSecondaryUnlinked(121)) {
               var24Lifetime2 = null;
               if (~var12.field_zb != ~BodyInZoneConditionFactory.field_a) {
                 if (var5_int != 0 &&
@@ -490,7 +490,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
             }
             var11 = var12;
-            var12 = (jk) (var10.next((byte) 23));
+            var12 = (LobbyPlayerEntry) (var10.next((byte) 23));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

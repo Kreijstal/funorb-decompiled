@@ -465,7 +465,7 @@ public final class VoidHunters extends NetworkGameClient {
                   var3 = LaunchFightersOrderDefinition.pollMenuAction(-31515);
                   if (var3 == 1) {
                     kua.field_e = true;
-                    ta.a((byte) -121, 0);
+                    HardpointGeometry.beginScreenTransition((byte) -121, 0);
                   }
                   this.updateClientStateAndInput(true, -127);
                 } else {
@@ -485,7 +485,7 @@ public final class VoidHunters extends NetworkGameClient {
             SetLaserReload.enqueueByteIndexedRecordWrite(4, var7, 0);
           }
         }
-        while (GetSelfDestructTimer.readServerPacket(0, ta.serverPacketLengths)) {
+        while (GetSelfDestructTimer.readServerPacket(0, HardpointGeometry.serverPacketLengths)) {
           var3Lifetime1 = NetworkMessageState.incomingOpcode;
           this.handleServerPacket(var3Lifetime1, 12);
         }
@@ -636,7 +636,7 @@ public final class VoidHunters extends NetworkGameClient {
         var5.minimumMemoryMegabytes = 0;
         var5.resizable = false;
         SetMissionTimeLimit.a(var5, 20);
-        DebugRequestFactory.a((byte) 90, ta.serverPacketLengths, (NetworkGameClient) (this));
+        DebugRequestFactory.a((byte) 90, HardpointGeometry.serverPacketLengths, (NetworkGameClient) (this));
         SetNebulaProximityFadeDownshift.a(114, param0, false);
         FlipTextureOperation.field_l = new CarouselGameClient();
         GetCountermeasureLauncherAimarc.e((byte) 117);
@@ -892,7 +892,7 @@ public final class VoidHunters extends NetworkGameClient {
         CommandConsole.clearSharedReferences((byte) -107);
         GameResourceLoader.clearSharedReferences(111);
         MenuBackgroundBattle.clearSharedReferences((byte) 101);
-        mn.clearSharedReferences(-49);
+        ChatPanelUpdater.clearSharedReferences(-49);
         ShipComponent.clearSharedReferences(24388);
         iwa.clearSharedReferences((byte) -116);
         igb.clearSharedReferences(0);
@@ -904,7 +904,7 @@ public final class VoidHunters extends NetworkGameClient {
         fra.clearSharedReferences(2147483647);
         BoosterOrderText.clearSharedReferences(12472);
         SpecialOrderDefinition.clearSharedReferences((byte) -95);
-        eqb.clearSharedReferences(65);
+        CustomBase64Alphabet.clearSharedReferences(65);
         TooltipDisplay.clearSharedReferences(param0);
         WorldDebugArrow.clearSharedReferences((byte) 26);
         CommonGameState.clearSharedReferences(28801);
@@ -1165,7 +1165,7 @@ public final class VoidHunters extends NetworkGameClient {
         FullscreenMembershipDialog.clearSharedReferences((byte) -123);
         UiViewport.clearSharedReferences(80);
         UiScrollBar.clearSharedReferences((byte) -7);
-        ta.clearSharedReferences((byte) -109);
+        HardpointGeometry.clearSharedReferences((byte) -109);
         DirectByteStorage.clearSharedReferences(-27982);
         QuickChatDynamicCommand.clearSharedReferences(41);
         StrongCacheReference.clearSharedReferences(5697);
@@ -1174,7 +1174,7 @@ public final class VoidHunters extends NetworkGameClient {
         MonochromeRowCache.clearSharedReferences(15325);
         SpriteTextureOperation.clearSharedReferences(-1);
         TextureSourceOperation.clearSharedReferences(65280);
-        ul.clearSharedReferences(-23460);
+        BeveledSpriteTileFactory.clearSharedReferences(-23460);
         ConstantMonochromeTextureOperation.clearSharedReferences((byte) -85);
         ConstantColorTextureOperation.clearSharedReferences(-122);
         BricksTextureOperation.clearSharedReferences(true);
@@ -1208,7 +1208,7 @@ public final class VoidHunters extends NetworkGameClient {
         ImageProducerRasterBuffer.clearSharedReferences((byte) -128);
         RenderResourceNode.clearSharedReferences((byte) -123);
         ComponentWordEncoder.clearSharedReferences((byte) -96);
-        mb.clearSharedReferences((byte) -122);
+        FloatPacketBuffer.clearSharedReferences((byte) -122);
         LegacyOpenGlShaderProgram.clearSharedReferences(8345);
         OpenGlTexture3D.clearSharedReferences((byte) 42);
         OpenGlRenderbuffer.clearSharedReferences(33);
@@ -2302,7 +2302,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (OpenGlTexture1D.field_i) {
             GetDebrisGroupColour.field_r.updateFrame((int)(-GetSalvoaim.field_q + MonotonicMillisClock.currentTimeMillis(false)));
-            if (ul.field_a == 1) {
+            if (BeveledSpriteTileFactory.field_a == 1) {
               if (!GetDebrisGroupColour.field_r.isBloomEnabled()) {
                 GetDebrisGroupColour.field_r.enableBloom();
               }

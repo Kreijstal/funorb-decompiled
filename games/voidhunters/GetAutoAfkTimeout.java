@@ -8,7 +8,7 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
         if (param1 > -26) {
           GetAutoAfkTimeout.a(-66, 68);
         }
-        return "0" + (param0 + 1) + "/" + "0" + mb.helpPages.length;
+        return "0" + (param0 + 1) + "/" + "0" + FloatPacketBuffer.helpPages.length;
     }
 
     final static SerializableGameState[] a(int param0, int param1, SerializableGameState[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5) {

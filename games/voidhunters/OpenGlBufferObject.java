@@ -47,8 +47,8 @@ abstract class OpenGlBufferObject {
         field_g = null;
     }
 
-    final static void a(jk param0, boolean param1) {
-        jk var2 = null;
+    final static void insertLobbyPlayerSorted(LobbyPlayerEntry param0, boolean param1) {
+        LobbyPlayerEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -61,10 +61,10 @@ abstract class OpenGlBufferObject {
             field_d = false;
           }
           param0.unlink(-3846);
-          var2 = (jk) (SetMachineGunAimarc.field_q.first(0));
+          var2 = (LobbyPlayerEntry) (SetMachineGunAimarc.field_q.first(0));
           while (var2 != null) {
-            if (var2.a(26344, param0)) {
-              var2 = (jk) (SetMachineGunAimarc.field_q.next((byte) 114));
+            if (var2.sortsBefore(26344, param0)) {
+              var2 = (LobbyPlayerEntry) (SetMachineGunAimarc.field_q.next((byte) 114));
               continue;
             }
             break;

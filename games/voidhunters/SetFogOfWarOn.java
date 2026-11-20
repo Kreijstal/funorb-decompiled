@@ -100,7 +100,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_build_view_autozoom_timeout(" + SetShipTeamActionFactory.field_c + ")");
         System.out.println("set_build_view_autozoom_end_on_action(" + SetSniperCannonReload.field_o + ")");
         System.out.println("set_num_stars(" + MidiPcmStream.field_z + ")");
-        System.out.println("set_use_bloom(" + ul.field_a + ")");
+        System.out.println("set_use_bloom(" + BeveledSpriteTileFactory.field_a + ")");
         System.out.println("set_use_sprites(" + GetUseSprites.field_o + ")");
         System.out.println("set_use_background(" + AwardVictoryToWinnerAction.field_b + ")");
         System.out.println("set_use_background_in_fullscreen(" + GetMissilesExplosionPower.field_p + ")");

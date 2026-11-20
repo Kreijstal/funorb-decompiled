@@ -37,7 +37,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == TextureFilterMode.field_a &&
-            !mb.field_i) {
+            !FloatPacketBuffer.field_i) {
             GetCountermeasureLauncherAimarc.field_p = MonotonicMillisClock.currentTimeMillis(false);
             BufferedFile.sleep(-65, 5000L);
             MissionList.field_b = null;
@@ -399,7 +399,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void start() {
         if (TextureFilterMode.field_a != this ||
-          mb.field_i) {
+          FloatPacketBuffer.field_i) {
           return;
         }
         try {
@@ -462,7 +462,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == TextureFilterMode.field_a &&
-            !mb.field_i) {
+            !FloatPacketBuffer.field_i) {
             GetCountermeasureLauncherAimarc.field_p = 4000L + MonotonicMillisClock.currentTimeMillis(false);
             return;
           }
@@ -734,7 +734,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (this == TextureFilterMode.field_a &&
-            !mb.field_i) {
+            !FloatPacketBuffer.field_i) {
             GetShowTutorial.field_o = true;
             if (GetCountermeasureLauncherAimarc.field_o &&
               -KaleidoscopeTextureOperation.field_k + MonotonicMillisClock.currentTimeMillis(false) > 1000L) {
@@ -836,10 +836,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (mb.field_i) {
+            if (FloatPacketBuffer.field_i) {
               return;
             }
-            mb.field_i = true;
+            FloatPacketBuffer.field_i = true;
           }
           if (null != EnvironmentMapSource.field_b) {
             EnvironmentMapSource.field_b.destroy();

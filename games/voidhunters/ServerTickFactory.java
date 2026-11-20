@@ -69,7 +69,7 @@ final class ServerTickFactory implements GameStateFactory {
         var6 = VoidHunters.field_G;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!mn.a(var10, (byte) -118)) {
+          if (!ChatPanelUpdater.isValidNormalizablePlayerName(var10, (byte) -118)) {
             stackIn_4_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_4_0;
           }

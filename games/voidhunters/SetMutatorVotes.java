@@ -35,7 +35,7 @@ final class SetMutatorVotes extends ConsoleCommand {
             var4 = GetSniperCannonProjectiles.field_o[var3];
             if (0 <= var4) {
               if (var4 == UiAngleDialRenderer.field_c.selectedIndex) {
-                var5 = mb.menuSelectedItemColor;
+                var5 = FloatPacketBuffer.menuSelectedItemColor;
               } else {
                 var5 = SetUsePolygonFill.menuItemColor;
               }

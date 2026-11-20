@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta {
-    static GameStateFactory field_a;
+final class HardpointGeometry {
+    static GameStateFactory hardpointFactory;
     static int[] serverPacketLengths;
 
-    final static void a(byte param0, int param1) {
+    final static void beginScreenTransition(byte param0, int param1) {
         ClassNameFormatter.field_a = SetBombletSprayEnergyUsed.field_o;
         if (param0 > -101) {
-          ta.clearSharedReferences((byte) -35);
+          HardpointGeometry.clearSharedReferences((byte) -35);
           Transform3D.field_a = param1;
           return;
         }
@@ -16,14 +16,14 @@ final class ta {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_a = null;
+        hardpointFactory = null;
         serverPacketLengths = null;
         if (param0 != -109) {
           serverPacketLengths = (int[]) null;
         }
     }
 
-    final static void a(int[] param0, int param1, ShipComponentDefinition param2) {
+    final static void addPolygonEdgeHardpoints(int[] param0, int param1, ShipComponentDefinition param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -103,7 +103,7 @@ final class ta {
     }
 
     static {
-        field_a = (GameStateFactory) ((Object) new HardpointFactory());
+        hardpointFactory = (GameStateFactory) ((Object) new HardpointFactory());
         serverPacketLengths = new int[256];
     }
 }

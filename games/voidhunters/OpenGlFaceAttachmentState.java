@@ -1708,7 +1708,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("removeignorefirst", 23100);
                 if (resourceBytes != null) {
-                  mn.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  ChatPanelUpdater.removeFromIgnoreListFirstText = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("removefriendfirst", 23100);
                 if (null != resourceBytes) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends PacketBuffer {
+final class FloatPacketBuffer extends PacketBuffer {
     static String[] helpPages;
     static boolean field_i;
     static int menuSelectedItemColor;
@@ -13,7 +13,7 @@ final class mb extends PacketBuffer {
         }
     }
 
-    final void b(float param0, int param1) {
+    final void writeFloatBE(float param0, int param1) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
@@ -41,11 +41,11 @@ final class mb extends PacketBuffer {
         this.payload[fieldTemp$5] = (byte)var3;
     }
 
-    mb(int param0) {
+    FloatPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void a(float param0, int param1) {
+    final void writeFloatLE(float param0, int param1) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
@@ -67,7 +67,7 @@ final class mb extends PacketBuffer {
         }
     }
 
-    final static void a(int param0, ShipComponent param1) {
+    final static void attachPhasedBeamPreset(int param0, ShipComponent param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ShipComponent var3 = null;
@@ -86,7 +86,7 @@ final class mb extends PacketBuffer {
           if (param0 == -1688588312) {
             return;
           }
-          mb.clearSharedReferences((byte) 4);
+          FloatPacketBuffer.clearSharedReferences((byte) 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -102,7 +102,7 @@ final class mb extends PacketBuffer {
         }
     }
 
-    final static void h(int param0, int param1) {
+    final static void notifyBrowserResizeState(int param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;

@@ -450,11 +450,11 @@ final class GameMenuScreen {
         var17 = 13421772;
         if (SetFps.helpPageIndex == 0) {
           var12 += 50;
-          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, mb.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
+          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
           SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
         } else {
           var12 -= 10;
-          var20 = this.formatShortcutHint("<savekey>", (byte) 119, mb.helpPages[SetFps.helpPageIndex], SetDetachmentMode.field_p);
+          var20 = this.formatShortcutHint("<savekey>", (byte) 119, FloatPacketBuffer.helpPages[SetFps.helpPageIndex], SetDetachmentMode.field_p);
           var21 = this.formatShortcutHint("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
           SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
@@ -983,7 +983,7 @@ final class GameMenuScreen {
           return false;
         }
         if (param0 == 2 &&
-          SetFps.helpPageIndex == mb.helpPages.length - 1) {
+          SetFps.helpPageIndex == FloatPacketBuffer.helpPages.length - 1) {
           return false;
         }
         return true;

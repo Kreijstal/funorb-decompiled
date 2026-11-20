@@ -2177,7 +2177,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
           }
           this.subcomponents = (ShipComponent[]) (SetAutoDetail.a(5, ArchiveTextureProvider.field_d, param0, 1, -85, this.subcomponents));
-          this.hardpoints = (Hardpoint[]) (SetAutoDetail.a(5, ta.field_a, param0, 1, -63, this.hardpoints));
+          this.hardpoints = (Hardpoint[]) (SetAutoDetail.a(5, HardpointGeometry.hardpointFactory, param0, 1, -63, this.hardpoints));
           this.readPackedAttributes(0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2972,7 +2972,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.behaviour.readState(param0, false);
           }
           this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.a(127, 1, this.subcomponents, ArchiveTextureProvider.field_d, 5, param0));
-          this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.a(param1 ^ 93, 1, this.hardpoints, ta.field_a, 5, param0));
+          this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.a(param1 ^ 93, 1, this.hardpoints, HardpointGeometry.hardpointFactory, 5, param0));
           this.connectedangle = param0.readBits(0, 32);
           this.currentconnectedangle = ShieldInfo.readSignedBits(14, param0, (byte) 20);
           this.health = param0.readBits(0, 32);
@@ -3148,7 +3148,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var5.behaviour = null;
           }
           var5.subcomponents = (ShipComponent[]) (SpriteDimensions.copyStateArrayByMode(var5.subcomponents, this.subcomponents, 1, ArchiveTextureProvider.field_d, false));
-          var5.hardpoints = (Hardpoint[]) (SpriteDimensions.copyStateArrayByMode(var5.hardpoints, this.hardpoints, 1, ta.field_a, false));
+          var5.hardpoints = (Hardpoint[]) (SpriteDimensions.copyStateArrayByMode(var5.hardpoints, this.hardpoints, 1, HardpointGeometry.hardpointFactory, false));
           var5.connectedangle = this.connectedangle;
           var5.finalangle = this.finalangle;
           var5.finalx = this.finalx;

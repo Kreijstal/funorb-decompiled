@@ -45,9 +45,9 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
 
     final static void a(int param0) {
         int stackIn_12_0 = 0;
-        jk stackIn_18_0 = null;
+        LobbyPlayerEntry stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        jk stackIn_84_0 = null;
+        LobbyPlayerEntry stackIn_84_0 = null;
         boolean stackIn_85_1 = false;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
@@ -55,18 +55,18 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         int var2 = 0;
         long var3_long = 0L;
         int var3 = 0;
-        jk var3_ref_jk = null;
+        LobbyPlayerEntry var3_ref_jk = null;
         int var4 = 0;
         LobbyGameEntry var4_ref_mm = null;
         int var5 = 0;
         LobbyGameEntry var6 = null;
-        jk var7 = null;
+        LobbyPlayerEntry var7 = null;
         int var8 = 0;
-        jk var8_ref_jk = null;
+        LobbyPlayerEntry var8_ref_jk = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        jk var12 = null;
+        LobbyPlayerEntry var12 = null;
         LobbyGameEntry var13 = null;
         LobbyGameEntry var14 = null;
         LobbyGameEntry var15 = null;
@@ -74,20 +74,20 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         String var17 = null;
         String var18 = null;
         String var19 = null;
-        jk var20 = null;
+        LobbyPlayerEntry var20 = null;
         Object var21 = null;
-        jk var22 = null;
-        jk var23 = null;
-        jk var24 = null;
+        LobbyPlayerEntry var22 = null;
+        LobbyPlayerEntry var23 = null;
+        LobbyPlayerEntry var24 = null;
         String var25 = null;
         String var26 = null;
         Object var27 = null;
         LobbyGameEntry var27_ref = null;
         LobbyGameEntry var28 = null;
-        jk var29 = null;
+        LobbyPlayerEntry var29 = null;
         LobbyGameEntry var30 = null;
-        jk var31 = null;
-        jk var3_ref_jkLifetime1;
+        LobbyPlayerEntry var31 = null;
+        LobbyPlayerEntry var3_ref_jkLifetime1;
         long var3_longLifetime1;
         long var3_longLifetime2;
         int var3Lifetime1;
@@ -126,10 +126,10 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               var9 = stackIn_12_0;
               if (var20 != null) {
                 if (var9 != 0) {
-                  var20.a(var19, var18, -424);
+                  var20.updateNames(var19, var18, -424);
                 }
               } else {
-                var8_ref_jk = new jk(var18, var19, var3_long);
+                var8_ref_jk = new LobbyPlayerEntry(var18, var19, var3_long);
                 GetReverbWet.field_o.put(var8_ref_jk, (byte) -86, var3_long);
               }
               var8_ref_jk.field_Kb = MonotonicMillisClock.currentTimeMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(77);
@@ -141,7 +141,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               var8_ref_jk.field_Bb = var10 >> 1;
               var8_ref_jk.field_vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
               var8_ref_jk.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -113);
-              OpenGlBufferObject.a(var8_ref_jk, true);
+              OpenGlBufferObject.insertLobbyPlayerSorted(var8_ref_jk, true);
               return;
             }
             if (var2 == 6) {
@@ -165,11 +165,11 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               return;
             }
             if (var2 == 7) {
-              var31 = (jk) (SetMachineGunAimarc.field_q.first(param0 ^ 13));
+              var31 = (LobbyPlayerEntry) (SetMachineGunAimarc.field_q.first(param0 ^ 13));
               while (var31 != null) {
                 var31.unlink(param0 - 3859);
                 var31.unlinkSecondary((byte) -35);
-                var31 = (jk) (SetMachineGunAimarc.field_q.next((byte) 11));
+                var31 = (LobbyPlayerEntry) (SetMachineGunAimarc.field_q.next((byte) 11));
               }
               SetLaserRandomness.field_p = 0;
               return;
@@ -238,7 +238,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var26 = ((PacketBuffer) ((Object) var1)).readString(param0 ^ -14);
                     var7 = ScrollBarWidget.a(var3_longLifetime2, true);
                     if (var7 == null) {
-                      var7 = new jk(var25, var26, var3_longLifetime2);
+                      var7 = new LobbyPlayerEntry(var25, var26, var3_longLifetime2);
                       SetUseDetailLines.field_p.put(var7, (byte) -76, var3_longLifetime2);
                       SetSpinningBladeSpindamageMultiplier.field_o.field_zb = SetSpinningBladeSpindamageMultiplier.field_o.field_zb + 1;
                     }
@@ -314,7 +314,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                   var23.field_yb = GetMomentOfInertiaPredivideDownshift.field_p;
                   var23.field_Db = var5Lifetime1Lifetime1;
                 }
-                OpenGlBufferObject.a(var23, true);
+                OpenGlBufferObject.insertLobbyPlayerSorted(var23, true);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(255);
@@ -328,7 +328,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 } else {
                   var22.field_Eb = true;
                 }
-                OpenGlBufferObject.a(var22, true);
+                OpenGlBufferObject.insertLobbyPlayerSorted(var22, true);
               }
               return;
             }
@@ -345,13 +345,13 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             }
             return;
           }
-          var3_ref_jk = (jk) (OpenGlPostEffect.field_e.first(0));
+          var3_ref_jk = (LobbyPlayerEntry) (OpenGlPostEffect.field_e.first(0));
           while (var3_ref_jk != null) {
             var3_ref_jk.unlink(-3846);
             var3_ref_jk.unlinkSecondary((byte) -35);
-            var3_ref_jk = (jk) (OpenGlPostEffect.field_e.next((byte) 80));
+            var3_ref_jk = (LobbyPlayerEntry) (OpenGlPostEffect.field_e.next((byte) 80));
           }
-          var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.first(-31));
+          var3_ref_jkLifetime1 = (LobbyPlayerEntry) (GetReverbWet.field_o.first(-31));
           while (var3_ref_jkLifetime1 != null) {
             if (var3_ref_jkLifetime1.field_Eb ||
               var3_ref_jkLifetime1.field_Fb) {
@@ -360,9 +360,9 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 var3_ref_jkLifetime1.field_Fb = false;
               }
               var3_ref_jkLifetime1.field_Eb = false;
-              OpenGlBufferObject.a(var3_ref_jkLifetime1, true);
+              OpenGlBufferObject.insertLobbyPlayerSorted(var3_ref_jkLifetime1, true);
             }
-            var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.next(-1));
+            var3_ref_jkLifetime1 = (LobbyPlayerEntry) (GetReverbWet.field_o.next(-1));
           }
           if (var2 == 1 &&
             null != SetSpinningBladeSpindamageMultiplier.field_o) {

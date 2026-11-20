@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eqb {
-    static char[] field_a;
+final class CustomBase64Alphabet {
+    static char[] alphabet;
 
-    final static void a(ShipComponent param0, int param1) {
+    final static void attachTripleSniperPreset(ShipComponent param0, int param1) {
         int var2_int = 0;
         ShipComponent var3 = null;
         ShipComponent var4 = null;
@@ -26,7 +26,7 @@ final class eqb {
             param0.attachToHardpoint(param1 ^ 14671, var2_int, var3);
           }
           if (param1 != 14670) {
-            field_a = (char[]) null;
+            alphabet = (char[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -45,26 +45,26 @@ final class eqb {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 65) {
-          field_a = (char[]) null;
+          alphabet = (char[]) null;
         }
-        field_a = null;
+        alphabet = null;
     }
 
     static {
         int var0 = 0;
         int var0Lifetime1;
         int var0Lifetime2;
-        field_a = new char[64];
+        alphabet = new char[64];
         for (var0 = 0; var0 < 26; var0++) {
-          field_a[var0] = (char)(65 + var0);
+          alphabet[var0] = (char)(65 + var0);
         }
         for (var0Lifetime1 = 26; var0Lifetime1 < 52; var0Lifetime1++) {
-          field_a[var0Lifetime1] = (char)(var0Lifetime1 + 97 - 26);
+          alphabet[var0Lifetime1] = (char)(var0Lifetime1 + 97 - 26);
         }
         for (var0Lifetime2 = 52; 62 > var0Lifetime2; var0Lifetime2++) {
-          field_a[var0Lifetime2] = (char)(-52 + (var0Lifetime2 + 48));
+          alphabet[var0Lifetime2] = (char)(-52 + (var0Lifetime2 + 48));
         }
-        field_a[63] = (char)45;
-        field_a[62] = (char)42;
+        alphabet[63] = (char)45;
+        alphabet[62] = (char)42;
     }
 }

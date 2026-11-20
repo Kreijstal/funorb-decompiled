@@ -25,7 +25,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!mn.a(var6, (byte) -122)) {
+          if (!ChatPanelUpdater.isValidNormalizablePlayerName(var6, (byte) -122)) {
             stackIn_3_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_3_0;
           }
@@ -51,7 +51,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             return stackIn_24_0;
           }
           if (SetUseLines.a((byte) -94, param0)) {
-            stackIn_28_0 = SetReverbGain.a(mn.field_a, new String[]{param0}, 111);
+            stackIn_28_0 = SetReverbGain.a(ChatPanelUpdater.removeFromIgnoreListFirstText, new String[]{param0}, 111);
             return stackIn_28_0;
           }
           var5 = RequestNewestBlackboxRecording.field_p;

@@ -478,7 +478,7 @@ final class UiComboBox extends UiContainer implements UiActionListener {
 
     final static void setMenuTextColors(int param0, boolean param1, int param2, int param3) {
         GetPhasedEnergyBeamPulsetime.menuHeadingColor = param2;
-        mb.menuSelectedItemColor = param0;
+        FloatPacketBuffer.menuSelectedItemColor = param0;
         if (!param1) {
           UiComboBox.repeatCharacter('W', true, -7);
         }

@@ -93,7 +93,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             var4 = ArchiveProvider.field_b / 2;
             var30 = GameSession.buildPathPolyline(var4, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 4, 6, 8, 9, 10, 0, 2, 0, 10, 0, 2, 0, 10, 0}, var3);
             var22 = new ShipComponentDefinition(var30, 0, 0);
-            ta.a(var30, param0 + 12, var22);
+            HardpointGeometry.addPolygonEdgeHardpoints(var30, param0 + 12, var22);
             var22.scaleMassDown(102, 15);
             SpawnPointFactory.a(var2, var22, false);
           } else {

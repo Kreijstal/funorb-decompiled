@@ -39,12 +39,12 @@ final class SetReverbDry extends ConsoleCommand {
           var11 = 0;
           for (var12 = 0; 6 > var12; var12++) {
             if (var12 >= 5 ||
-              ul.field_b[var12] != null) {
+              BeveledSpriteTileFactory.field_b[var12] != null) {
               var13 = var11 * (-4 + SetToggledScoreboard.field_o.height) / (1 + SetSniperCannonRandomness.field_o) + 3;
               var11++;
               var7Lifetime1 = 3 + (var11 * (2 + (SetToggledScoreboard.field_o.height - 6)) / (1 + SetSniperCannonRandomness.field_o) - 2) - var13;
               if (var12 < 5) {
-                ul.field_b[var12].setBounds(var6_int, -100, var8, var13, var7Lifetime1);
+                BeveledSpriteTileFactory.field_b[var12].setBounds(var6_int, -100, var8, var13, var7Lifetime1);
                 SetMissionVariablesHudX.field_o[var12].setBounds(param3, -110, -param3 + var9, 0, var7Lifetime1);
                 SecondaryNodeDeque.field_c[var12].setBounds(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
                 NebulaFieldFactory.field_c[var12].setBounds(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));

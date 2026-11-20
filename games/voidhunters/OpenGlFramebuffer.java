@@ -109,14 +109,14 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                             } else {
                               if (var5 == 2) {
                                 if (param1 == 0) {
-                                  mb.a(-1688588312, var4);
+                                  FloatPacketBuffer.attachPhasedBeamPreset(-1688588312, var4);
                                 } else {
                                   if (param1 != 1) {
                                     if (param1 == 2) {
                                       LoadBlackboxRecording.a(var4, (byte) -10);
                                     }
                                   } else {
-                                    eqb.a(var4, 14670);
+                                    CustomBase64Alphabet.attachTripleSniperPreset(var4, 14670);
                                   }
                                 }
                               }

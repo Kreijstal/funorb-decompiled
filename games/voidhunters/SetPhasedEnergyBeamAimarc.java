@@ -34,11 +34,11 @@ final class SetPhasedEnergyBeamAimarc extends ConsoleCommand {
         }
     }
 
-    final static jk a(byte param0, long param1) {
+    final static LobbyPlayerEntry a(byte param0, long param1) {
         if (param0 != 80) {
-          return (jk) null;
+          return (LobbyPlayerEntry) null;
         }
-        return (jk) (GetReverbWet.field_o.get(-1, param1));
+        return (LobbyPlayerEntry) (GetReverbWet.field_o.get(-1, param1));
     }
 
     static {

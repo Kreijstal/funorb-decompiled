@@ -9,7 +9,7 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
     final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        jk var3 = null;
+        LobbyPlayerEntry var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
@@ -37,10 +37,10 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (GetReverbWet.field_o == null) {
             return;
           }
-          var3 = (jk) (GetReverbWet.field_o.first(param0 - 99));
+          var3 = (LobbyPlayerEntry) (GetReverbWet.field_o.first(param0 - 99));
           while (var3 != null) {
             var3.unlinkSecondary((byte) -35);
-            var3 = (jk) (GetReverbWet.field_o.next(param0 - 16));
+            var3 = (LobbyPlayerEntry) (GetReverbWet.field_o.next(param0 - 16));
           }
           GetReverbWet.field_o = null;
           return;

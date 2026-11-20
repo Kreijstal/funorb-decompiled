@@ -93,7 +93,7 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, boolean param7, boolean param8, int param9, int param10, int param11) {
-        MissionGenerationData.a(param2, param10, 16777215, param9, param8, param4, param7, param0, -128, param3, param5, param1, param11, param6);
+        MissionGenerationData.updateSocialPanels(param2, param10, 16777215, param9, param8, param4, param7, param0, -128, param3, param5, param1, param11, param6);
     }
 
     SetGrapplingHookRopeBreakLength(String param0, Class[] param1, String param2) {

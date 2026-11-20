@@ -38,7 +38,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
         }
     }
 
-    final static void showPlayerContextMenu(int param0, int param1, jk param2, byte param3, int param4, ScrollPaneWidget param5, int param6) {
+    final static void showPlayerContextMenu(int param0, int param1, LobbyPlayerEntry param2, byte param3, int param4, ScrollPaneWidget param5, int param6) {
         PlayerContextMenu var13 = null;
         int var8 = 0;
         int var9 = 0;
@@ -124,7 +124,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
           }
           if (param1) {
             var7 = (ScrollPaneWidget) null;
-            AccountCreationDialog.showPlayerContextMenu(-93, 7, (jk) null, (byte) 42, -22, (ScrollPaneWidget) null, 46);
+            AccountCreationDialog.showPlayerContextMenu(-93, 7, (LobbyPlayerEntry) null, (byte) 42, -22, (ScrollPaneWidget) null, 46);
           }
           this.transitionToContent(var5, 99);
           return;

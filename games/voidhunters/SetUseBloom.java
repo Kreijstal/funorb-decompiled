@@ -11,7 +11,7 @@ final class SetUseBloom extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ul.field_a = arguments[0].intValue(51);
+          BeveledSpriteTileFactory.field_a = arguments[0].intValue(51);
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 78);

@@ -11,7 +11,7 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
         if (param2 <= 110) {
           return (Sprite[]) null;
         }
-        return ul.createBeveledSpriteTiles(param0, param1, 1, param3, true);
+        return BeveledSpriteTileFactory.createBeveledSpriteTiles(param0, param1, 1, param3, true);
     }
 
     final int getIconId(byte param0) {

@@ -98,7 +98,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
             }
           } else {
             psb.field_b = MissionConditionFactory.field_b.createFullscreenCanvas((byte) 124);
-            mb.h(2, 117);
+            FloatPacketBuffer.notifyBrowserResizeState(2, 117);
             if (psb.field_b != null) {
               var2 = 2;
               SetGrapplingHookCooldown.a((byte) 77, psb.field_b);

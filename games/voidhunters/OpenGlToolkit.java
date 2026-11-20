@@ -350,55 +350,55 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void setHeap(GraphicsHeap param0) {
-        mb var3 = null;
+        FloatPacketBuffer var3 = null;
         OpenGlVertexAttribute discarded$0 = null;
         OpenGlVertexAttribute discarded$1 = null;
         try {
           this.field_Kb = ((OpenGlNativeHeap) (param0)).heap;
           if (this.field_z == null) {
-            var3 = new mb(80);
+            var3 = new FloatPacketBuffer(80);
             if (this.field_ac) {
-              var3.b(-1.0f, 1724347896);
-              var3.b(-1.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(-1.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(-1.0f, 1724347896);
-              var3.b(1.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
-              var3.b(0.0f, 1724347896);
+              var3.writeFloatBE(-1.0f, 1724347896);
+              var3.writeFloatBE(-1.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(-1.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(-1.0f, 1724347896);
+              var3.writeFloatBE(1.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
+              var3.writeFloatBE(0.0f, 1724347896);
             } else {
-              var3.a(-1.0f, 1059949744);
-              var3.a(-1.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(-1.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(-1.0f, 1059949744);
-              var3.a(1.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
-              var3.a(0.0f, 1059949744);
+              var3.writeFloatLE(-1.0f, 1059949744);
+              var3.writeFloatLE(-1.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(-1.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(-1.0f, 1059949744);
+              var3.writeFloatLE(1.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
+              var3.writeFloatLE(0.0f, 1059949744);
             }
             this.field_z = this.createVertexBuffer(var3.payload, 20, var3.position, false, (byte) 121);
             discarded$0 = new OpenGlVertexAttribute(this.field_z, 5126, 3, 0);
@@ -1793,7 +1793,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Bc = 8448;
         this.field_Q = 1.0f;
         this.field_Tb = new float[4];
-        mb discarded$2 = new mb(8192);
+        FloatPacketBuffer discarded$2 = new FloatPacketBuffer(8192);
         try {
           this.field_ib = param0;
           this.field_Kc = param2;

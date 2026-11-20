@@ -48,7 +48,7 @@ final class ComponentCollision extends IntrusiveNode {
         int var17_int = 0;
         IntrusiveDeque var17 = null;
         Object var18 = null;
-        jk var18_ref = null;
+        LobbyPlayerEntry var18_ref = null;
         int var18_int = 0;
         int var19 = 0;
         Widget var21 = null;
@@ -238,10 +238,10 @@ final class ComponentCollision extends IntrusiveNode {
                   }
                   var16Lifetime1Lifetime1 = 0;
                   var17 = WaterTextures.field_f.content.children;
-                  var18_ref = (jk) (var17.first(0));
+                  var18_ref = (LobbyPlayerEntry) (var17.first(0));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
-                      if (!var18_ref.i(56)) {
+                      if (!var18_ref.isSecondaryUnlinked(56)) {
                         if (var11Lifetime1 != 0 &&
                           !var18_ref.field_Lb) {
                           var16Lifetime1Lifetime1 = 1;
@@ -264,7 +264,7 @@ final class ComponentCollision extends IntrusiveNode {
                           break scanLoop4;
                         }
                       }
-                      var18_ref = (jk) (var17.next((byte) 98));
+                      var18_ref = (LobbyPlayerEntry) (var17.next((byte) 98));
                       continue;
                     }
                     break;

@@ -243,18 +243,18 @@ final class TextEncodings {
           var10 = new StringBuilder();
           for (var5 = param2; var5 < param2 + param1; var5 += 3) {
             var6 = param3[var5] & 255;
-            discarded$0 = var10.append(eqb.field_a[var6 >>> 2]);
+            discarded$0 = var10.append(CustomBase64Alphabet.alphabet[var6 >>> 2]);
             if (var5 < param1 - 1) {
               var7 = param3[var5 + 1] & 255;
-              discarded$1 = var10.append(eqb.field_a[var7 >>> 4 | 48 & var6 << 4]);
+              discarded$1 = var10.append(CustomBase64Alphabet.alphabet[var7 >>> 4 | 48 & var6 << 4]);
               if (param1 - 2 <= var5) {
-                discarded$2 = var10.append(eqb.field_a[60 & var7 << 2]);
+                discarded$2 = var10.append(CustomBase64Alphabet.alphabet[60 & var7 << 2]);
               } else {
                 var8 = param3[2 + var5] & 255;
-                discarded$3 = var10.append(eqb.field_a[var8 >>> 6 | var7 << 2 & 60]).append(eqb.field_a[63 & var8]);
+                discarded$3 = var10.append(CustomBase64Alphabet.alphabet[var8 >>> 6 | var7 << 2 & 60]).append(CustomBase64Alphabet.alphabet[63 & var8]);
               }
             } else {
-              discarded$4 = var10.append(eqb.field_a[(3 & var6) << 4]);
+              discarded$4 = var10.append(CustomBase64Alphabet.alphabet[(3 & var6) << 4]);
             }
           }
           stackIn_13_0 = var10.toString();

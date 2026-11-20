@@ -23,25 +23,25 @@ final class SetRepairModeRadius extends ConsoleCommand {
 
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
-        jk var1 = null;
+        LobbyPlayerEntry var1 = null;
         LobbyGameEntry var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
-        jk var1Lifetime1;
+        LobbyPlayerEntry var1Lifetime1;
         var2 = VoidHunters.field_G;
         try {
-          var1 = (jk) (SetMachineGunAimarc.field_q.first(0));
+          var1 = (LobbyPlayerEntry) (SetMachineGunAimarc.field_q.first(0));
           while (var1 != null) {
             if (var1.field_yb > 0) {
               var1.field_yb = var1.field_yb - 1;
               if (var1.field_yb == 0) {
                 var1.field_Db = 0;
-                if (var1.i(param0 ^ -124)) {
+                if (var1.isSecondaryUnlinked(param0 ^ -124)) {
                   var1.unlink(param0 ^ -3846);
                 }
               }
             }
-            var1 = (jk) (SetMachineGunAimarc.field_q.next((byte) 62));
+            var1 = (LobbyPlayerEntry) (SetMachineGunAimarc.field_q.next((byte) 62));
           }
           var1_ref = (LobbyGameEntry) (HotspotTextWidget.field_E.first(0));
           while (var1_ref != null) {
@@ -56,20 +56,20 @@ final class SetRepairModeRadius extends ConsoleCommand {
             }
             var1_ref = (LobbyGameEntry) (HotspotTextWidget.field_E.next((byte) 118));
           }
-          var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.first(param0));
+          var1Lifetime1 = (LobbyPlayerEntry) (OpenGlPostEffect.field_e.first(param0));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_yb > 0) {
               var1Lifetime1.field_yb = var1Lifetime1.field_yb - 1;
               if (0 != var1Lifetime1.field_yb) {
-                var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.next((byte) 11));
+                var1Lifetime1 = (LobbyPlayerEntry) (OpenGlPostEffect.field_e.next((byte) 11));
                 continue;
               }
               var1Lifetime1.field_Db = 0;
-              if (var1Lifetime1.i(param0 - 128)) {
+              if (var1Lifetime1.isSecondaryUnlinked(param0 - 128)) {
                 var1Lifetime1.unlink(-3846);
               }
             }
-            var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.next((byte) 11));
+            var1Lifetime1 = (LobbyPlayerEntry) (OpenGlPostEffect.field_e.next((byte) 11));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

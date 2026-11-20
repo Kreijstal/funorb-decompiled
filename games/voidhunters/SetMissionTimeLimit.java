@@ -66,7 +66,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
           } else {
             stackIn_7_0 = 0;
           }
-          mb.h(stackIn_7_0, 124);
+          FloatPacketBuffer.notifyBrowserResizeState(stackIn_7_0, 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

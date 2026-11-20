@@ -201,7 +201,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           WidgetNode.field_l = new Widget(0L, (Widget) null);
           WidgetNode.field_l.field_gb = var16;
           UiValueTrackRenderer.field_b.addChild(-561, WidgetNode.field_l);
-          ul.field_b = new Widget[5];
+          BeveledSpriteTileFactory.field_b = new Widget[5];
           NebulaFieldFactory.field_c = new Widget[5];
           SetMissionVariablesHudX.field_o = new Widget[5];
           SecondaryNodeDeque.field_c = new Widget[5];
@@ -230,17 +230,17 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
                 var19 = stackIn_24_0;
               }
               if (decompiledFrameRemainder0) {
-                ul.field_b[var18] = new Widget(0L, param8);
+                BeveledSpriteTileFactory.field_b[var18] = new Widget(0L, param8);
                 SetMissionVariablesHudX.field_o[var18] = new Widget(0L, TargetLock.field_b, var19);
                 SecondaryNodeDeque.field_c[var18] = new Widget(0L, (Widget) null);
                 SecondaryNodeDeque.field_c[var18].field_B = 1;
                 NebulaFieldFactory.field_c[var18] = new Widget(0L, TargetLock.field_b);
                 NebulaFieldFactory.field_c[var18].field_B = 1;
-                ul.field_b[var18].addChild(-561, SetMissionVariablesHudX.field_o[var18]);
-                ul.field_b[var18].addChild(-561, SecondaryNodeDeque.field_c[var18]);
-                ul.field_b[var18].addChild(-561, NebulaFieldFactory.field_c[var18]);
-                ul.field_b[var18].inheritInteractionStateInDescendants(112);
-                SetToggledScoreboard.field_o.addChild(param1 ^ -561, ul.field_b[var18]);
+                BeveledSpriteTileFactory.field_b[var18].addChild(-561, SetMissionVariablesHudX.field_o[var18]);
+                BeveledSpriteTileFactory.field_b[var18].addChild(-561, SecondaryNodeDeque.field_c[var18]);
+                BeveledSpriteTileFactory.field_b[var18].addChild(-561, NebulaFieldFactory.field_c[var18]);
+                BeveledSpriteTileFactory.field_b[var18].inheritInteractionStateInDescendants(112);
+                SetToggledScoreboard.field_o.addChild(param1 ^ -561, BeveledSpriteTileFactory.field_b[var18]);
                 SetSniperCannonRandomness.field_o = SetSniperCannonRandomness.field_o + 1;
               }
               var18++;

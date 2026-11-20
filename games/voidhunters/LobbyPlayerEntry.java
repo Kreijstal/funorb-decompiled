@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk extends Widget {
+final class LobbyPlayerEntry extends Widget {
     static int field_Cb;
     Widget field_Ib;
     boolean field_Lb;
@@ -22,7 +22,7 @@ final class jk extends Widget {
     int field_Bb;
     Widget field_Mb;
 
-    final boolean a(int param0, jk param1) {
+    final boolean sortsBefore(int param0, LobbyPlayerEntry param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_5_0 = false;
@@ -69,19 +69,19 @@ final class jk extends Widget {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean isSecondaryUnlinked(int param0) {
         int var2 = -19 / ((-46 - param0) / 57);
         return !this.isSecondaryLinked((byte) 97) ? true : false;
     }
 
-    final void a(String param0, String param1, int param2) {
+    final void updateNames(String param0, String param1, int param2) {
         CharSequence var6 = null;
         try {
           this.field_xb = param0;
           this.field_Hb = param1;
           if (param2 != -424) {
-            jk var5 = (jk) null;
-            this.a(-116, (jk) null);
+            LobbyPlayerEntry var5 = (LobbyPlayerEntry) null;
+            this.sortsBefore(-116, (LobbyPlayerEntry) null);
           }
           var6 = (CharSequence) ((Object) this.field_Hb);
           ConstantColorTextureOperation.normalizeName(false, var6);
@@ -90,7 +90,7 @@ final class jk extends Widget {
         }
     }
 
-    jk(String param0, String param1, long param2) {
+    LobbyPlayerEntry(String param0, String param1, long param2) {
         super(0L, (Widget) null);
         CharSequence var6 = null;
         try {
@@ -104,7 +104,7 @@ final class jk extends Widget {
         }
     }
 
-    final static void h(int param0) {
+    final static void captureSettingsSnapshot(int param0) {
         GetOndamageParticleSpeed.field_p = IntegerRecordWriteRequest.captureSettingsValues(param0 - 21167);
         if (param0 != 118) {
           field_Cb = 85;

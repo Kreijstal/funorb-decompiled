@@ -48,7 +48,7 @@ final class MapClearanceRectangle extends MapClearanceArea implements DiffableSt
         }
     }
 
-    final static int a(byte param0, boolean param1, String param2) {
+    final static int getStringWidth(byte param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -200,7 +200,7 @@ final class MapClearanceRectangle extends MapClearanceArea implements DiffableSt
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$62abead39cee(int param0, boolean param1, String param2) {
+    final static int getStringWidth(int param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

@@ -960,7 +960,7 @@ final class GameSession {
             }
           }
         }
-        if (1 == ul.field_a &&
+        if (1 == BeveledSpriteTileFactory.field_a &&
           OpenGlTexture1D.field_i &&
           GetDebrisGroupColour.field_r.isBloomEnabled()) {
           GetDebrisGroupColour.field_r.beginPostProcessing(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a);
@@ -1052,7 +1052,7 @@ final class GameSession {
           this.drawShipHeadingArrow((byte) -95, (Ship) (var9));
         }
         var14Lifetime1 = 0;
-        if (ul.field_a == 1 &&
+        if (BeveledSpriteTileFactory.field_a == 1 &&
           OpenGlTexture1D.field_i) {
           GetDebrisGroupColour.field_r.applyPostProcessing();
         }
@@ -5616,7 +5616,7 @@ final class GameSession {
           while (ToolkitCanvasContext.menuLabels.length > var3_int) {
             var5 = GetMessageMax.menuActionIds[var3_int];
             if (var5 >= 0) {
-              var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, ToolkitCanvasContext.menuLabels[var3_int]);
+              var6 = MapClearanceRectangle.getStringWidth(-107, true, ToolkitCanvasContext.menuLabels[var3_int]);
               var4 = var4 + AppletCookieReader.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
               if (SetMachineGunAimarc.a(var4, (GraphicsHeap.field_d << 1) + var6, (ColorizeTextureOperation.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {

@@ -39,7 +39,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!mn.a(var6, (byte) -121)) {
+          if (!ChatPanelUpdater.isValidNormalizablePlayerName(var6, (byte) -121)) {
             stackIn_2_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_2_0;
           }

@@ -371,10 +371,10 @@ final class PlayerContextMenu {
     }
 
     final void addLobbyOwnerOptions(boolean param0, int param1) {
-        jk var4;
+        LobbyPlayerEntry var4;
         String var5;
         int var6;
-        jk var7;
+        LobbyPlayerEntry var7;
         var6 = VoidHunters.field_G;
         if (param1 <= 1) {
           this.sourceWidget = (Widget) null;

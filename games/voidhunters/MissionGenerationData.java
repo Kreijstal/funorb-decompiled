@@ -23,7 +23,7 @@ final class MissionGenerationData implements DiffableState {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedRectangleClipped(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -91,7 +91,7 @@ final class MissionGenerationData implements DiffableState {
         field_e = null;
         field_a = null;
         if (param0 >= -116) {
-          MissionGenerationData.a(-38, -12, 117, 53, true, 38, true, false, -13, true, 95, 127, 29, true);
+          MissionGenerationData.updateSocialPanels(-38, -12, 117, 53, true, 38, true, false, -13, true, 95, 127, 29, true);
         }
     }
 
@@ -137,7 +137,7 @@ final class MissionGenerationData implements DiffableState {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11, int param12, boolean param13) {
+    final static void updateSocialPanels(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11, int param12, boolean param13) {
         NebulaFieldFactory.field_a = null;
         SettingsInstance.showRemovedFromGameNotice(6939);
         if (param8 >= -118) {
@@ -146,7 +146,7 @@ final class MissionGenerationData implements DiffableState {
         param4 = GetPedrosRepairModeSwitchtime.a(33, param11, param1, param12, param3, param0, param4);
         GetUseRectOutline.a(param4, -1, param2, param10, param7, param11, param5, param6, param13, param9);
         SocialListUpdater.updateSocialLists(0, param5, param7);
-        mn.a(param4, param5, param12, 97);
+        ChatPanelUpdater.updateChatPanel(param4, param5, param12, 97);
     }
 
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {

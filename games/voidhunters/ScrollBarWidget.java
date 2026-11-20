@@ -173,11 +173,11 @@ final class ScrollBarWidget extends Widget {
         field_Db = null;
     }
 
-    final static jk a(long param0, boolean param1) {
+    final static LobbyPlayerEntry a(long param0, boolean param1) {
         if (!param1) {
-          return (jk) null;
+          return (LobbyPlayerEntry) null;
         }
-        return (jk) (SetUseDetailLines.field_p.get(-1, param0));
+        return (LobbyPlayerEntry) (SetUseDetailLines.field_p.get(-1, param0));
     }
 
     final boolean pollPageUp(int param0) {

@@ -10,7 +10,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         if (MissionConditionFactory.field_b != null) {
           MissionConditionFactory.field_b.resizable = false;
         }
-        mb.h(param0, param0 + 101);
+        FloatPacketBuffer.notifyBrowserResizeState(param0, param0 + 101);
     }
 
     final int getParameter(int param0, int param1) {

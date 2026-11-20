@@ -85,7 +85,7 @@ final class LobbyThemeBuilder {
           AppletCookieWriter.field_c = 4;
           DialogMessagePanel.field_w = 15;
           atb.field_d = 11;
-          jk.field_Cb = 2;
+          LobbyPlayerEntry.field_Cb = 2;
           var7 = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "largefont", 0, param3, "lobby");
           GetDebrisCarryOverPercentage.field_o = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "generalfont", 0, param3, "lobby");
           UiDraggableContainer.field_y = GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(param2, "chatfont", 0, param3, "lobby");

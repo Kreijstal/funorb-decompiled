@@ -8,20 +8,20 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedRectangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param5 < OpenGlTexture3D.field_j) {
-          MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+          MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
         } else {
           if (GetCountermeasureLauncherProjectiles.field_o < param1) {
-            MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+            MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
           } else {
             if (NebulaField.field_c > param3) {
-              MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+              MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
             } else {
               if (param6 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
-                ul.a(param3, param5, param2, param6, param4, param1, param7 + 7, param0);
+                BeveledSpriteTileFactory.fillBorderedRectangleUnclipped(param3, param5, param2, param6, param4, param1, param7 + 7, param0);
               } else {
-                MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+                MissionGenerationData.fillBorderedRectangleClipped(param1, param0, 0, param2, param5, param3, param4, param6);
               }
             }
           }
@@ -29,7 +29,7 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
         if (param7 == 0) {
           return;
         }
-        SetMachineGunProjectileDamage.a(-123, 19, -27, 40, -88, 106, 33, 78);
+        SetMachineGunProjectileDamage.fillBorderedRectangle(-123, 19, -27, 40, -88, 106, 33, 78);
     }
 
     public static void clearSharedReferences(int param0) {

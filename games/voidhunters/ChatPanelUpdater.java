@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn {
-    static String field_a;
+final class ChatPanelUpdater {
+    static String removeFromIgnoreListFirstText;
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void updateChatPanel(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -36,7 +36,7 @@ final class mn {
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
-            var5 = ul.field_b[var4_int];
+            var5 = BeveledSpriteTileFactory.field_b[var4_int];
             if (var5 != null) {
               if (var5.field_o != 0) {
                 SetShieldsDirectionalArcParticleSpeedDownshift.a(101, var5, var4_int);
@@ -68,10 +68,10 @@ final class mn {
 
     public static void clearSharedReferences(int param0) {
         int var1 = 19 / ((29 - param0) / 59);
-        field_a = null;
+        removeFromIgnoreListFirstText = null;
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isValidNormalizablePlayerName(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -85,7 +85,7 @@ final class mn {
             return false;
           }
           if (param1 > -107) {
-            field_a = (String) null;
+            removeFromIgnoreListFirstText = (String) null;
           }
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             if (!GetAngularVelocitySustainMax.isNormalizableNameCharacter((byte) -108, param0.charAt(var2_int))) {
@@ -108,6 +108,6 @@ final class mn {
     }
 
     static {
-        field_a = "Please remove <%0> from your ignore list first.";
+        removeFromIgnoreListFirstText = "Please remove <%0> from your ignore list first.";
     }
 }

@@ -579,7 +579,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var21 = new int[]{localTemp$177, localTemp$174, localTemp$178, localTemp$175, localTemp$179, localTemp$176, localTemp$180, localTemp$181, localTemp$185, localTemp$182, localTemp$186, localTemp$183, localTemp$187, localTemp$184, localTemp$188, var5};
                                 var6 = var21;
                                 var22_ref = new ShipComponentDefinition(var6, -var1_int, 0);
-                                ta.a(var21, 124, var22_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var21, 124, var22_ref);
                                 var22_ref.scaleMassDown(105, 15);
                                 var22_ref.field_a = 2;
                                 EnvironmentReflectionGpuMaterialEffect.field_g[32] = var22_ref;
@@ -589,7 +589,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var23 = var64;
                                 var6 = var23;
                                 var24_ref = new ShipComponentDefinition(var6, 3 * -var1_int, 0);
-                                ta.a(var64, 119, var24_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var64, 119, var24_ref);
                                 var24_ref.scaleMassDown(127, 15);
                                 var24_ref.field_a = 2;
                                 EnvironmentReflectionGpuMaterialEffect.field_g[40] = var24_ref;
@@ -628,7 +628,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var26 = new int[]{localTemp$189, localTemp$191, localTemp$190, localTemp$192, localTemp$194, localTemp$193, localTemp$195, localTemp$196, localTemp$197, localTemp$198, var4, localTemp$199};
                                 var6 = var26;
                                 var27_ref = new ShipComponentDefinition(var6, -var1_int, 0);
-                                ta.a(var26, 127, var27_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var26, 127, var27_ref);
                                 var27_ref.scaleMassDown(118, 15);
                                 EnvironmentReflectionGpuMaterialEffect.field_g[33] = var27_ref;
                                 var27_ref.field_a = 2;
@@ -667,7 +667,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var28 = new int[]{localTemp$200, localTemp$202, localTemp$201, localTemp$203, localTemp$204, localTemp$205, localTemp$207, localTemp$206, localTemp$208, localTemp$210, localTemp$209, localTemp$211, localTemp$212, localTemp$213, var5, localTemp$214};
                                 var7_ref_int__ = var28;
                                 var29_ref = new ShipComponentDefinition(var7_ref_int__, -var4 / 2, 0);
-                                ta.a(var28, 114, var29_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var28, 114, var29_ref);
                                 var29_ref.scaleMassDown(110, 15);
                                 var29_ref.field_a = 2;
                                 EnvironmentReflectionGpuMaterialEffect.field_g[34] = var29_ref;
@@ -708,7 +708,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var33 = var65;
                                 var6 = var33;
                                 var34_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, ArchiveProvider.field_b / 2);
-                                ta.a(var65, 120, var34_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var65, 120, var34_ref);
                                 var34_ref.scaleMassDown(param0 + 63, 15);
                                 var34_ref.field_a = 2;
                                 var34_ref.field_A = new int[][]{new int[]{0, 1, 4, 5, 6}, new int[]{1, 2, 3, 4}};
@@ -719,7 +719,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var35 = var66;
                                 var6 = var35;
                                 var36_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, -ArchiveProvider.field_b / 2);
-                                ta.a(var66, 119, var36_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var66, 119, var36_ref);
                                 var36_ref.scaleMassDown(param0 + 44, 15);
                                 var36_ref.field_A = new int[][]{new int[]{0, 1, 2, 5, 6}, new int[]{2, 3, 4, 5}};
                                 EnvironmentReflectionGpuMaterialEffect.field_g[39] = var36_ref;
@@ -730,7 +730,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var37 = var67;
                                 var6 = var37;
                                 var38_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_a, 0);
-                                ta.a(var67, 118, var38_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var67, 118, var38_ref);
                                 var38_ref.scaleMassDown(114, 15);
                                 EnvironmentReflectionGpuMaterialEffect.field_g[41] = var38_ref;
                                 var38_ref.field_a = 2;
@@ -797,7 +797,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var90 = GetGrapplingHookCooldown.a((byte) 104, var41);
                                 var91 = OpenGlToolkit.reflectXAndReversePoints(1, var90);
                                 var44_ref = new ShipComponentDefinition(var91, 0, 0);
-                                ta.a(var91, 114, var44_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var91, 114, var44_ref);
                                 var44_ref.scaleMassDown(param0 ^ 49, 15);
                                 var44_ref.field_s = true;
                                 var8_ref_wfb = var44_ref;
@@ -808,7 +808,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = -ArchiveProvider.field_b / 2;
                                 var92 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{5, 7, 6, 5, 6, 6, 7, 9, 11, 0, 0, 1, 0, 11, 1}, var4);
                                 var46_ref = new ShipComponentDefinition(var92, 0, 0);
-                                ta.a(var92, 127, var46_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var92, 127, var46_ref);
                                 var46_ref.addHardpoint(-113, new HardpointDefinition(ArchiveProvider.field_b, 0, 4096));
                                 var46_ref.addHardpoint(-117, new HardpointDefinition(3 * -ArchiveProvider.field_b, 0, 4096));
                                 var46_ref.scaleMassDown(119, 15);
@@ -821,7 +821,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = 0;
                                 var93 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{3, 5, 2, 5, 8, 9, 6, 6, 7, 9, 11, 0, 0, 9, 10, 1, 4, 1}, var4);
                                 var48_ref = new ShipComponentDefinition(var93, 0, 0);
-                                ta.a(var93, 116, var48_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var93, 116, var48_ref);
                                 var48_ref.scaleMassDown(param0 + 42, 15);
                                 var8_ref_wfb = var48_ref;
                                 var48_ref.field_s = true;
@@ -832,7 +832,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = -ArchiveProvider.field_b;
                                 var94 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{5, 7, 6, 7, 9, 11, 0, 11, 1, 3}, var4);
                                 var50_ref = new ShipComponentDefinition(var94, 0, 0);
-                                ta.a(var94, 124, var50_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var94, 124, var50_ref);
                                 var50_ref.addHardpoint(param0 ^ 92, new HardpointDefinition(-ArchiveProvider.field_b, 0, 0));
                                 var50_ref.scaleMassDown(120, 15);
                                 var50_ref.field_s = true;
@@ -844,7 +844,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = -ArchiveProvider.field_b / 2;
                                 var95 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{1, 1, 4, 7, 7, 6, 7, 8, 10, 11, 0, 11, 11, 2, 5, 5}, var4);
                                 var52_ref = new ShipComponentDefinition(var95, 0, 0);
-                                ta.a(var95, 122, var52_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var95, 122, var52_ref);
                                 var52_ref.scaleMassDown(param0 ^ 37, 15);
                                 var8_ref_wfb = var52_ref;
                                 var52_ref.field_s = true;
@@ -855,7 +855,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = -ArchiveProvider.field_b / 2;
                                 var96 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{5, 5, 5, 7, 9, 9, 9, 11, 1, 1, 1}, var4);
                                 var54_ref = new ShipComponentDefinition(var96, 0, 0);
-                                ta.a(var96, param0 ^ 51, var54_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var96, param0 ^ 51, var54_ref);
                                 var54_ref.scaleMassDown(104, 15);
                                 var8_ref_wfb = var54_ref;
                                 var54_ref.field_s = true;
@@ -865,7 +865,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = 0;
                                 var97 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{5, 6, 6, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 10, 11, 11, 0, 0, 1, 1, 2, 2, 0, 0}, var4);
                                 var56_ref = new ShipComponentDefinition(var97, 0, 0);
-                                ta.a(var97, 121, var56_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var97, 121, var56_ref);
                                 var56_ref.scaleMassDown(107, 15);
                                 var56_ref.energyCapacity = 125;
                                 var56_ref.field_y = 50;
@@ -879,7 +879,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = -ArchiveProvider.field_b / 2;
                                 var98 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{5, 6, 7, 6, 9, 0, 11, 0, 1}, var4);
                                 var58_ref = new ShipComponentDefinition(var98, 0, 0);
-                                ta.a(var98, 120, var58_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var98, 120, var58_ref);
                                 var58_ref.scaleMassDown(114, 15);
                                 var8_ref_wfb = var58_ref;
                                 var58_ref.field_s = true;
@@ -890,7 +890,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = ArchiveProvider.field_b / 2;
                                 var99 = GameSession.buildPathPolyline(var5, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 6, 4, 6, 8, 9, 10, 0, 2, 0, 0, 10, 0, 2, 0, 10, 0}, var4);
                                 var60_ref = new ShipComponentDefinition(var99, 0, 0);
-                                ta.a(var99, 114, var60_ref);
+                                HardpointGeometry.addPolygonEdgeHardpoints(var99, 114, var60_ref);
                                 var60_ref.scaleMassDown(120, 15);
                                 var60_ref.field_s = true;
                                 var8_ref_wfb = var60_ref;

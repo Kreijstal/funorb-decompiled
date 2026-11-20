@@ -254,7 +254,7 @@ final class AsteroidFactory implements GameStateFactory {
           for (var4Lifetime1 = 0; ToolkitCanvasContext.menuLabels.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_87_0 = -107;
             stackIn_88_1 = !(GetMessageMax.menuActionIds[var4Lifetime1] < 0);
-            var5Lifetime1 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(stackIn_87_0, stackIn_88_1, ToolkitCanvasContext.menuLabels[var4Lifetime1]);
+            var5Lifetime1 = MapClearanceRectangle.getStringWidth(stackIn_87_0, stackIn_88_1, ToolkitCanvasContext.menuLabels[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -264,7 +264,7 @@ final class AsteroidFactory implements GameStateFactory {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, false, var11);
+              var7Lifetime1 = MapClearanceRectangle.getStringWidth(-107, false, var11);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -272,7 +272,7 @@ final class AsteroidFactory implements GameStateFactory {
             var4_ref_String__Lifetime1 = GetFogOfWarSensorRange.field_p;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, false, var12);
+              var7Lifetime1Lifetime1 = MapClearanceRectangle.getStringWidth(-107, false, var12);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -297,7 +297,7 @@ final class AsteroidFactory implements GameStateFactory {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + GetSniperCannonProjectileLife.field_r;
             } else {
-              var7Lifetime2 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, ToolkitCanvasContext.menuLabels[var4Lifetime3]);
+              var7Lifetime2 = MapClearanceRectangle.getStringWidth(-107, true, ToolkitCanvasContext.menuLabels[var4Lifetime3]);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + PlayerVote.field_f;
               var5Lifetime3 = var5Lifetime3 + AppletCookieReader.field_c;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3] = new int[4];

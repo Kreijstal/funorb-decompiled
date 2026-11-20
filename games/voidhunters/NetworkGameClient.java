@@ -350,25 +350,25 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void initializeCommonPacketLengths(int param0) {
-        ta.serverPacketLengths[12] = -1;
-        ta.serverPacketLengths[18] = 1;
-        ta.serverPacketLengths[10] = -1;
-        ta.serverPacketLengths[4] = -1;
-        ta.serverPacketLengths[1] = 16;
-        ta.serverPacketLengths[6] = -2;
-        ta.serverPacketLengths[3] = -1;
-        ta.serverPacketLengths[8] = -2;
-        ta.serverPacketLengths[2] = -2;
-        ta.serverPacketLengths[9] = -1;
+        HardpointGeometry.serverPacketLengths[12] = -1;
+        HardpointGeometry.serverPacketLengths[18] = 1;
+        HardpointGeometry.serverPacketLengths[10] = -1;
+        HardpointGeometry.serverPacketLengths[4] = -1;
+        HardpointGeometry.serverPacketLengths[1] = 16;
+        HardpointGeometry.serverPacketLengths[6] = -2;
+        HardpointGeometry.serverPacketLengths[3] = -1;
+        HardpointGeometry.serverPacketLengths[8] = -2;
+        HardpointGeometry.serverPacketLengths[2] = -2;
+        HardpointGeometry.serverPacketLengths[9] = -1;
         if (param0 >= -80) {
           this.field_s = true;
         }
-        ta.serverPacketLengths[11] = -1;
-        ta.serverPacketLengths[7] = -1;
-        ta.serverPacketLengths[13] = -1;
-        ta.serverPacketLengths[17] = -1;
-        ta.serverPacketLengths[16] = -1;
-        ta.serverPacketLengths[5] = -1;
+        HardpointGeometry.serverPacketLengths[11] = -1;
+        HardpointGeometry.serverPacketLengths[7] = -1;
+        HardpointGeometry.serverPacketLengths[13] = -1;
+        HardpointGeometry.serverPacketLengths[17] = -1;
+        HardpointGeometry.serverPacketLengths[16] = -1;
+        HardpointGeometry.serverPacketLengths[5] = -1;
     }
 
     final void configureCommonPacketHandlers(boolean param0, boolean param1, boolean param2, boolean param3, int param4, boolean param5, boolean param6) {

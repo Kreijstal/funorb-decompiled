@@ -153,14 +153,14 @@ final class TextureRectangleShape extends TextureRasterShape {
           var5 = this.right * param2 >> 12;
           var6 = param0 * this.top >> 12;
           var7 = this.bottom * param0 >> 12;
-          SetMachineGunProjectileDamage.a(this.outlineWidth, var5, this.fillColor, var6, this.outlineColor, var4, var7, 0);
+          SetMachineGunProjectileDamage.fillBorderedRectangle(this.outlineWidth, var5, this.fillColor, var6, this.outlineColor, var4, var7, 0);
           return;
         }
         field_j = (String) null;
         var5Lifetime1 = this.right * param2 >> 12;
         var6Lifetime1 = param0 * this.top >> 12;
         var7Lifetime1 = this.bottom * param0 >> 12;
-        SetMachineGunProjectileDamage.a(this.outlineWidth, var5Lifetime1, this.fillColor, var6Lifetime1, this.outlineColor, var4, var7Lifetime1, 0);
+        SetMachineGunProjectileDamage.fillBorderedRectangle(this.outlineWidth, var5Lifetime1, this.fillColor, var6Lifetime1, this.outlineColor, var4, var7Lifetime1, 0);
     }
 
     final static boolean a(int param0, int param1) {

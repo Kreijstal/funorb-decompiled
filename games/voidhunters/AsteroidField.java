@@ -749,23 +749,23 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime53 = HuffmanCodec.fetchLocalizedResource((byte) -37, "instructions_pages,0");
           if (var2Lifetime53 != null) {
-            mb.helpPages[0] = Cp1252Strings.decode((byte) -125, var2Lifetime53);
+            FloatPacketBuffer.helpPages[0] = Cp1252Strings.decode((byte) -125, var2Lifetime53);
           }
           var2Lifetime54 = HuffmanCodec.fetchLocalizedResource((byte) -117, "instructions_pages,1");
           if (var2Lifetime54 != null) {
-            mb.helpPages[1] = Cp1252Strings.decode((byte) -125, var2Lifetime54);
+            FloatPacketBuffer.helpPages[1] = Cp1252Strings.decode((byte) -125, var2Lifetime54);
           }
           var2Lifetime55 = HuffmanCodec.fetchLocalizedResource((byte) -44, "instructions_pages,2");
           if (var2Lifetime55 != null) {
-            mb.helpPages[2] = Cp1252Strings.decode((byte) -125, var2Lifetime55);
+            FloatPacketBuffer.helpPages[2] = Cp1252Strings.decode((byte) -125, var2Lifetime55);
           }
           var2Lifetime56 = HuffmanCodec.fetchLocalizedResource((byte) -63, "instructions_pages,3");
           if (null != var2Lifetime56) {
-            mb.helpPages[3] = Cp1252Strings.decode((byte) -125, var2Lifetime56);
+            FloatPacketBuffer.helpPages[3] = Cp1252Strings.decode((byte) -125, var2Lifetime56);
           }
           var2Lifetime57 = HuffmanCodec.fetchLocalizedResource((byte) -105, "instructions_pages,4");
           if (null != var2Lifetime57) {
-            mb.helpPages[4] = Cp1252Strings.decode((byte) -125, var2Lifetime57);
+            FloatPacketBuffer.helpPages[4] = Cp1252Strings.decode((byte) -125, var2Lifetime57);
           }
           var2Lifetime58 = HuffmanCodec.fetchLocalizedResource((byte) -106, "keycode_move_forward");
           if (var2Lifetime58 != null) {

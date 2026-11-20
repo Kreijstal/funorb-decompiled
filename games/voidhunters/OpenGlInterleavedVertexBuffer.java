@@ -20,7 +20,7 @@ final class OpenGlInterleavedVertexBuffer {
     }
 
     OpenGlInterleavedVertexBuffer() {
-        mb discarded$0 = new mb(786336);
+        FloatPacketBuffer discarded$0 = new FloatPacketBuffer(786336);
         SetMutatorVotes.a(1600, -61);
     }
 
