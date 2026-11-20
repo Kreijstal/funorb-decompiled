@@ -3115,7 +3115,7 @@ final class MissionBuilder implements DiffableState {
                   stackIn_24_0[stackIn_24_1] = stackIn_25_2;
                 }
                 for (var19 = 0; var19 < 56; var19++) {
-                  if (SettingsInstance.a(param3 - 127, var19)) {
+                  if (SettingsInstance.isAsteroidComponentType(param3 - 127, var19)) {
                     var18[var19] = 0;
                   }
                 }

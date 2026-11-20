@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class jba implements UiRenderer {
-    private int field_i;
-    private int field_a;
-    private int field_f;
-    private BitmapFont field_g;
-    private int field_d;
+final class UiValueTrackRenderer implements UiRenderer {
+    private int textShadowColor;
+    private int textColor;
+    private int trackColor;
+    private BitmapFont font;
+    private int markerColor;
     static Widget field_b;
-    private int field_c;
+    private int markerRadius;
     static Widget field_h;
-    private int field_e;
+    private int backgroundColor;
 
-    final static ShipComponentDefinition a(int[][] param0, long param1, int param2, Random param3, int param4, long param5) {
+    final static ShipComponentDefinition createAsteroidDefinition(int[][] param0, long param1, int param2, Random param3, int param4, long param5) {
         int var18 = 0;
         ShipComponentDefinition stackIn_32_0 = null;
         Object stackIn_35_0 = null;
@@ -124,7 +124,7 @@ final class jba implements UiRenderer {
           var10Lifetime1 = 71 / ((param4 - 45) / 63);
           var24.scaleMassDown(121, 8);
           var24.field_B = 16;
-          var24.field_r = true;
+          var24.asteroid = true;
           stackIn_32_0 = var24;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,30 +160,30 @@ final class jba implements UiRenderer {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        v var13 = null;
+        UiValueTrack var13 = null;
         var12 = VoidHunters.field_G;
         try {
-          if (!(param1 instanceof v)) {
+          if (!(param1 instanceof UiValueTrack)) {
             stackIn_4_0 = null;
           } else {
             stackIn_4_0 = (UiComponent) (param1);
           }
-          var13 = (v) (stackIn_4_0);
-          SoftwareRasterizer2D.fillRectangle(param2 + param1.x, param1.y + param3, param1.width, param1.height, this.field_e);
+          var13 = (UiValueTrack) (stackIn_4_0);
+          SoftwareRasterizer2D.fillRectangle(param2 + param1.x, param1.y + param3, param1.width, param1.height, this.backgroundColor);
           if (var13 == null) {
           }
-          var7 = param1.width - var13.field_C * 2;
-          var8 = var13.field_C + (param1.x + param2);
-          var9 = var13.field_F + (param1.y + param3);
-          SoftwareRasterizer2D.drawLine(var8, var9, var8 + var7, var9, this.field_f);
-          var10 = var13.a(0) - 1;
+          var7 = param1.width - var13.horizontalPadding * 2;
+          var8 = var13.horizontalPadding + (param1.x + param2);
+          var9 = var13.trackY + (param1.y + param3);
+          SoftwareRasterizer2D.drawLine(var8, var9, var8 + var7, var9, this.trackColor);
+          var10 = var13.getValueCount(0) - 1;
           var11 = 112 / ((-27 - param0) / 35);
           while (0 <= var10) {
-            SoftwareRasterizer2D.fillCircle(var8 + var7 * var13.a(-115, var10) / var13.e(-111), var9, this.field_c, this.field_d);
+            SoftwareRasterizer2D.fillCircle(var8 + var7 * var13.getValue(-115, var10) / var13.getMaximumValue(-111), var9, this.markerRadius, this.markerColor);
             var10--;
           }
-          if (null != this.field_g) {
-            this.field_g.drawCentered(var13.text, var7 / 2 + var8, var13.field_F + (this.field_g.ascent + var9), this.field_a, this.field_i);
+          if (null != this.font) {
+            this.font.drawCentered(var13.text, var7 / 2 + var8, var13.trackY + (this.font.ascent + var9), this.textColor, this.textShadowColor);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,15 +208,15 @@ final class jba implements UiRenderer {
         }
     }
 
-    jba(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    UiValueTrackRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-          this.field_e = param4;
-          this.field_g = param0;
-          this.field_c = param5;
-          this.field_f = param3;
-          this.field_i = param2;
-          this.field_d = param6;
-          this.field_a = param1;
+          this.backgroundColor = param4;
+          this.font = param0;
+          this.markerRadius = param5;
+          this.trackColor = param3;
+          this.textShadowColor = param2;
+          this.markerColor = param6;
+          this.textColor = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

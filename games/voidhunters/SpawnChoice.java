@@ -3,7 +3,7 @@
  */
 final class SpawnChoice implements DiffableState {
     int choice;
-    static String[] field_b;
+    static String[] loadingTextMessages;
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
@@ -18,7 +18,7 @@ final class SpawnChoice implements DiffableState {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_b = null;
+        loadingTextMessages = null;
         if (param0 != 32) {
           SpawnChoice.clearSharedReferences(-98);
         }
@@ -46,7 +46,7 @@ final class SpawnChoice implements DiffableState {
         try {
           var3 = (SpawnChoice) (other);
           if (obfuscationGuard >= -19) {
-            field_b = (String[]) null;
+            loadingTextMessages = (String[]) null;
           }
           var4 = 0;
           if (var3.choice != this.choice) {
@@ -96,7 +96,7 @@ final class SpawnChoice implements DiffableState {
           fa.a(SetCountermeasureLauncherEnergyUsed.field_p, -122, false);
           return;
         }
-        field_b = (String[]) null;
+        loadingTextMessages = (String[]) null;
         OpenGlSprite.reconnecting = true;
         vu.field_xb = true;
         GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
@@ -139,6 +139,6 @@ final class SpawnChoice implements DiffableState {
     }
 
     static {
-        field_b = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
+        loadingTextMessages = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
     }
 }

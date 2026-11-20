@@ -206,7 +206,7 @@ final class UiTheme {
         UiStatefulStyle var6 = null;
         UiStatefulStyle var7 = null;
         UiAngleDialRenderer discarded$0 = null;
-        jba discarded$1 = null;
+        UiValueTrackRenderer discarded$1 = null;
         UiStatefulStyle var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
@@ -260,7 +260,7 @@ final class UiTheme {
           var7.createStateStyle(1, -1).setBackgroundSprites(true, GetBurstFireRegenerationRate.createCenterSpriteTile(true, 11184810)).setTextColor(2236962, -2147483648);
           this.field_d = (UiRenderer) ((Object) new UiToggleButtonRenderer(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new UiAngleDialRenderer(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new jba(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          discarded$1 = new UiValueTrackRenderer(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new UiStatefulStyle();
           var17.copyTo(-122, var8);
           var8.createStateStyle(0, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(7829367, 15658734, param1 + 24884, 10066329)).setTextColor(1118481, -2147483648).setTextShadowColor(-1, param1 - 2147458885);

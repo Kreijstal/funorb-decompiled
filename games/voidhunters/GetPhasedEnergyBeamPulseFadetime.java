@@ -91,7 +91,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.position = 0;
               RequestNewestBlackboxRecording.field_p.writeByte(param3 ^ 13, 14);
               RequestNewestBlackboxRecording.field_p.writeByte(0, OpenGlGpuCubeTexture.loginCredentials.getType((byte) 56).wireId);
-              TileTextureOperation.b(-1, 117);
+              TileTextureOperation.flushSocketOutput(-1, 117);
               TextureCombineMappings.field_c = SetSpecialOrderBoxHeight.field_o;
             }
             if (SetSpecialOrderBoxHeight.field_o == TextureCombineMappings.field_c &&

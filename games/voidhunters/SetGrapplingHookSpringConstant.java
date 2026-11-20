@@ -17,7 +17,7 @@ final class SetGrapplingHookSpringConstant extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetGrapplingHookSpringConstant.a(69, 32, 84);
+            SetGrapplingHookSpringConstant.configureSymmetricSimulatedLag(69, 32, 84);
           }
           SetMachineGunEnergyUsed.a(200, 62, arguments[0].intValue(110));
           stackIn_3_0 = new ConsoleValue("void");
@@ -43,8 +43,8 @@ final class SetGrapplingHookSpringConstant extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        GetMissionTerrainDebrisProbability.a(param0, -1, (double)param2, param0, (double)param2);
+    final static void configureSymmetricSimulatedLag(int param0, int param1, int param2) {
+        GetMissionTerrainDebrisProbability.configureSimulatedLag(param0, -1, (double)param2, param0, (double)param2);
         if (param1 != 0) {
           field_o = (String) null;
         }

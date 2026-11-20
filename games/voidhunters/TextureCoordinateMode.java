@@ -29,7 +29,7 @@ final class TextureCoordinateMode {
           }
           var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var5);
         }
-        MatchResults.a(84);
+        MatchResults.clearDecodedSpriteData(84);
         if (param0) {
           TextureCoordinateMode.a(false);
         }

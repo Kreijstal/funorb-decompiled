@@ -5,7 +5,7 @@ final class ServerTickFactory implements GameStateFactory {
     static int field_d;
     static byte[][] field_b;
     static int[] field_a;
-    static double field_c;
+    static double outgoingLagStdDevMillis;
 
     public final SerializableGameState create(byte param0) {
         int var2 = -15 / ((-64 - param0) / 50);
@@ -96,7 +96,7 @@ final class ServerTickFactory implements GameStateFactory {
           GetBoostersCooldown.field_p = GetBoostersCooldown.field_p - 1;
           var9 = RequestNewestBlackboxRecording.field_p;
           if (param0 != 90) {
-            field_c = 0.9397013753078566;
+            outgoingLagStdDevMillis = 0.9397013753078566;
           }
           var9.writeIsaacByte(param0 ^ 24405, param2);
           var9.position = var9.position + 1;
@@ -179,6 +179,6 @@ final class ServerTickFactory implements GameStateFactory {
     static {
         field_b = new byte[50][];
         field_a = new int[128];
-        field_c = 0.0;
+        outgoingLagStdDevMillis = 0.0;
     }
 }

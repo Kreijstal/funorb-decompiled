@@ -16,7 +16,7 @@ final class MatchResults implements DiffableState {
           var3 = 0;
           var4 = 0;
           if (param0 > -49) {
-            MatchResults.a(-126);
+            MatchResults.clearDecodedSpriteData(-126);
           }
           while (this.results.length > var4) {
             var5 = this.results[var4];
@@ -163,7 +163,7 @@ final class MatchResults implements DiffableState {
         }
     }
 
-    final static void a(int param0) {
+    final static void clearDecodedSpriteData(int param0) {
         hla.field_a = null;
         if (param0 <= 36) {
           return;

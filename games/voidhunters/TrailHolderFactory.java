@@ -4,7 +4,7 @@
 final class TrailHolderFactory implements GameStateFactory {
     final static int b(byte param0) {
         int var1 = 41 % ((5 - param0) / 52);
-        return PerlinNoiseTextureOperation.field_q;
+        return PerlinNoiseTextureOperation.outgoingLagMillis;
     }
 
     public final SerializableGameState create(byte param0) {

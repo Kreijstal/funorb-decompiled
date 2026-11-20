@@ -45,7 +45,7 @@ abstract class MapClearanceArea implements DiffableState {
         try {
           if (param1) {
             ResourceArchive var4 = (ResourceArchive) null;
-            MapClearanceArea.a(-64, (byte) 110, (ResourceArchive) null, -56);
+            MapClearanceArea.loadSprites(-64, (byte) 110, (ResourceArchive) null, -56);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dmb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -65,7 +65,7 @@ abstract class MapClearanceArea implements DiffableState {
     public static void clearSharedReferences(byte param0) {
         if (param0 > -99) {
           ResourceArchive var2 = (ResourceArchive) null;
-          MapClearanceArea.a(-84, (byte) -24, (ResourceArchive) null, 25);
+          MapClearanceArea.loadSprites(-84, (byte) -24, (ResourceArchive) null, 25);
           field_b = null;
           return;
         }
@@ -76,14 +76,14 @@ abstract class MapClearanceArea implements DiffableState {
         try {
           if (param1 > -109) {
             ResourceArchive var4 = (ResourceArchive) null;
-            MapClearanceArea.a(34, (byte) -8, (ResourceArchive) null, 110);
+            MapClearanceArea.loadSprites(34, (byte) -8, (ResourceArchive) null, 110);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dmb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadSprites(int param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -96,7 +96,7 @@ abstract class MapClearanceArea implements DiffableState {
             MapClearanceArea.clearSharedReferences((byte) -84);
           }
           if (pa.decodeSpriteArchiveFile(param3, 2, param2, param0)) {
-            stackIn_6_0 = v.b(false);
+            stackIn_6_0 = UiValueTrack.createDecodedSprites(false);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

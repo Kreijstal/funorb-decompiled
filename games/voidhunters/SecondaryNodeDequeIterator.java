@@ -22,7 +22,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           GetPedrosRepairModeSwitchtime.a(16928);
           if (GetRepairModeActiveTime.e(215)) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
-            TileTextureOperation.b(0, 127);
+            TileTextureOperation.flushSocketOutput(0, 127);
             FighterBayWeaponDefinition.l(-125);
             return;
           }
@@ -37,7 +37,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           return;
         }
         RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
-        TileTextureOperation.b(0, 127);
+        TileTextureOperation.flushSocketOutput(0, 127);
         FighterBayWeaponDefinition.l(-125);
     }
 

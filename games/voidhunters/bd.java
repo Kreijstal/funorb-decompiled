@@ -194,7 +194,7 @@ final class bd {
           GetShieldsDirectionalArc.field_o.field_fb = 1;
           GetShieldsDirectionalArc.field_o.field_X = 1;
           GetShieldsDirectionalArc.field_o.field_rb = 1;
-          jba.field_h = new Widget(0L, GetShieldsDirectionalArc.field_o);
+          UiValueTrackRenderer.field_h = new Widget(0L, GetShieldsDirectionalArc.field_o);
           GrappleLauncherBehaviourFactory.field_a = new Widget(0L, GetShieldsDirectionalArc.field_o);
           SetPlayerRepairAmount.field_q = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
           SpawnEnemyShipOrderDefinition.field_d = new Widget(0L, GetShieldsDirectionalArc.field_o);
@@ -213,9 +213,9 @@ final class bd {
           SetGrapplingHookMaxExtension8Force.field_p.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "bigbutton_mouseover"), (byte) -63);
           SetGrapplingHookMaxExtension8Force.field_p.field_A = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "bigbutton_mouseheld"), (byte) -54);
           SetGrapplingHookMaxExtension8Force.field_p.field_ub = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "bigbutton_disabled"), (byte) 49);
-          jba.field_h.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton"), (byte) -84);
-          jba.field_h.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton_mouseover"), (byte) 69);
-          jba.field_h.field_A = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton_mouseheld"), (byte) -63);
+          UiValueTrackRenderer.field_h.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton"), (byte) -84);
+          UiValueTrackRenderer.field_h.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton_mouseover"), (byte) 69);
+          UiValueTrackRenderer.field_h.field_A = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton_mouseheld"), (byte) -63);
           GrappleLauncherBehaviourFactory.field_a.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton"), (byte) -89);
           GrappleLauncherBehaviourFactory.field_a.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton_mouseover"), (byte) 52);
           GrappleLauncherBehaviourFactory.field_a.field_A = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton_mouseheld"), (byte) 79);

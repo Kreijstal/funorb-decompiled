@@ -10,7 +10,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
     static float field_n;
     private short[] frequencies;
     private int seed;
-    static int field_q;
+    static int outgoingLagMillis;
     int octaveCount;
     private byte[] permutation;
     static ResourceArchive field_l;
@@ -434,6 +434,6 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
 
     static {
         field_n = 1.0f;
-        field_q = 0;
+        outgoingLagMillis = 0;
     }
 }

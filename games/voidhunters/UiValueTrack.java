@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v extends UiFocusableComponent {
-    private int field_E;
-    int field_F;
-    private GrowableIntArray field_G;
-    int field_C;
+final class UiValueTrack extends UiFocusableComponent {
+    private int maximumValue;
+    int trackY;
+    private GrowableIntArray values;
+    int horizontalPadding;
 
-    final int a(int param0) {
+    final int getValueCount(int param0) {
         if (param0 != 0) {
-          this.a(-12);
-          return this.field_G.size((byte) -118);
+          this.getValueCount(-12);
+          return this.values.size((byte) -118);
         }
-        return this.field_G.size((byte) -118);
+        return this.values.size((byte) -118);
     }
 
-    final static Sprite[] b(boolean param0) {
+    final static Sprite[] createDecodedSprites(boolean param0) {
         Sprite[] var1;
         int var2;
         int var3;
@@ -62,7 +62,7 @@ final class v extends UiFocusableComponent {
             }
           }
         } else {
-          v.b(true);
+          UiValueTrack.createDecodedSprites(true);
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
             var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
             var23 = sh.field_a[var2];
@@ -88,26 +88,26 @@ final class v extends UiFocusableComponent {
             }
           }
         }
-        MatchResults.a(105);
+        MatchResults.clearDecodedSpriteData(105);
         return var1;
     }
 
-    final int a(int param0, int param1) {
+    final int getValue(int param0, int param1) {
         if (param0 > -89) {
-          v.b(false);
+          UiValueTrack.createDecodedSprites(false);
           if (0 > param1) {
             return -1;
           }
-          if (param1 < this.field_G.size((byte) 108)) {
-            return this.field_G.get(param1, (byte) 106);
+          if (param1 < this.values.size((byte) 108)) {
+            return this.values.get(param1, (byte) 106);
           }
           return -1;
         }
         if (0 > param1) {
           return -1;
         }
-        if (param1 < this.field_G.size((byte) 108)) {
-          return this.field_G.get(param1, (byte) 106);
+        if (param1 < this.values.size((byte) 108)) {
+          return this.values.get(param1, (byte) 106);
         }
         return -1;
     }
@@ -129,27 +129,27 @@ final class v extends UiFocusableComponent {
         try {
           if (!super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -67)) {
             if (param6 >= -17) {
-              this.e(-69);
+              this.getMaximumValue(-69);
             }
             return false;
           }
-          var8_int = -this.field_C + (-param1 + param0);
-          var9 = -(this.field_C * 2) + this.width;
+          var8_int = -this.horizontalPadding + (-param1 + param0);
+          var9 = -(this.horizontalPadding * 2) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }
           if (var8_int < 0) {
             var8_int = 0;
           }
-          var8_int = this.field_E * var8_int / var9;
+          var8_int = this.maximumValue * var8_int / var9;
           if (1 == param3) {
-            this.field_G.add((byte) -73, var8_int);
+            this.values.add((byte) -73, var8_int);
           } else {
             if (param3 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_G.size((byte) -102) > var12; var12++) {
-                var13 = this.field_G.get(var12, (byte) 106) - var8_int;
+              for (var12 = 0; this.values.size((byte) -102) > var12; var12++) {
+                var13 = this.values.get(var12, (byte) 106) - var8_int;
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var11 = var12;
@@ -159,7 +159,7 @@ final class v extends UiFocusableComponent {
               if (0 > var11) {
                 return true;
               }
-              this.field_G.removeAt(var11, (byte) 70);
+              this.values.removeAt(var11, (byte) 70);
             }
           }
           return true;
@@ -177,12 +177,12 @@ final class v extends UiFocusableComponent {
         }
     }
 
-    final int e(int param0) {
+    final int getMaximumValue(int param0) {
         int var2 = -42 / ((param0 + 44) / 52);
-        return this.field_E;
+        return this.maximumValue;
     }
 
-    private v() throws Throwable {
+    private UiValueTrack() throws Throwable {
         throw new Error();
     }
 

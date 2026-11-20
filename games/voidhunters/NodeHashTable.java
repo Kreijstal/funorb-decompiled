@@ -73,7 +73,7 @@ final class NodeHashTable {
         try {
           var2_int = TextHotspotRegion.randomBoundedInt(param0, SetSniperCannonEnergyUsed.field_o, 120);
           for (var3 = 0; 56 > var3; var3++) {
-            if (SettingsInstance.a(108, var3)) {
+            if (SettingsInstance.isAsteroidComponentType(108, var3)) {
               if (0 == var2_int) {
                 stackIn_7_0 = var3;
                 return stackIn_7_0;

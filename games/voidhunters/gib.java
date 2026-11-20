@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gib {
-    static String[] field_b;
+    static String[] waitingForTextMessages;
     static int field_a;
     static String field_c;
 
     public static void clearSharedReferences(int param0) {
-        field_b = null;
+        waitingForTextMessages = null;
         field_c = null;
         if (param0 != 15) {
           gib.a(100, 43);
@@ -47,7 +47,7 @@ final class gib {
         try {
           var2 = AppletCookieReader.readCookie("jagex-last-login-method", param0 ^ 19227, param1);
           if (param0 != 19314) {
-            field_b = (String[]) null;
+            waitingForTextMessages = (String[]) null;
           }
           if (var2 == null) {
             stackIn_6_0 = SetMassDriverFireForce.field_p;
@@ -83,7 +83,7 @@ final class gib {
     }
 
     static {
-        field_b = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
+        waitingForTextMessages = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_c = "Who can join";
         field_a = 15;
     }

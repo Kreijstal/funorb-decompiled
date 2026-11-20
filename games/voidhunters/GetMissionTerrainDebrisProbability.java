@@ -36,70 +36,70 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, double param2, int param3, double param4) {
+    final static void configureSimulatedLag(int param0, int param1, double param2, int param3, double param4) {
         int var8;
         var8 = VoidHunters.field_G;
-        if (param1 != ~PanelHeightQuery.field_c) {
+        if (param1 != ~PanelHeightQuery.incomingLagMillis) {
           if (param0 != 0) {
-            PanelHeightQuery.field_c = param0;
-            AsteroidField.field_c = param4;
-            if (PerlinNoiseTextureOperation.field_q == 0 &&
+            PanelHeightQuery.incomingLagMillis = param0;
+            AsteroidField.incomingLagStdDevMillis = param4;
+            if (PerlinNoiseTextureOperation.outgoingLagMillis == 0 &&
               param3 > 0) {
-              SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
+              SetResourceNodeCaptureTime.delayedOutgoingPackets = new IntrusiveDeque();
             } else {
               if (param3 == 0) {
-                SetResourceNodeCaptureTime.field_o = null;
+                SetResourceNodeCaptureTime.delayedOutgoingPackets = null;
               }
             }
           } else {
-            GetSpinningBladeAimarc.field_q = null;
-            PanelHeightQuery.field_c = param0;
-            AsteroidField.field_c = param4;
-            if (PerlinNoiseTextureOperation.field_q == 0 &&
+            GetSpinningBladeAimarc.delayedIncomingPackets = null;
+            PanelHeightQuery.incomingLagMillis = param0;
+            AsteroidField.incomingLagStdDevMillis = param4;
+            if (PerlinNoiseTextureOperation.outgoingLagMillis == 0 &&
               param3 > 0) {
-              SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
+              SetResourceNodeCaptureTime.delayedOutgoingPackets = new IntrusiveDeque();
             } else {
               if (param3 == 0) {
-                SetResourceNodeCaptureTime.field_o = null;
+                SetResourceNodeCaptureTime.delayedOutgoingPackets = null;
               }
             }
           }
         } else {
           if (param0 > 0) {
-            GetSpinningBladeAimarc.field_q = new IntrusiveDeque();
-            PanelHeightQuery.field_c = param0;
-            AsteroidField.field_c = param4;
-            if (PerlinNoiseTextureOperation.field_q == 0 &&
+            GetSpinningBladeAimarc.delayedIncomingPackets = new IntrusiveDeque();
+            PanelHeightQuery.incomingLagMillis = param0;
+            AsteroidField.incomingLagStdDevMillis = param4;
+            if (PerlinNoiseTextureOperation.outgoingLagMillis == 0 &&
               param3 > 0) {
-              SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
+              SetResourceNodeCaptureTime.delayedOutgoingPackets = new IntrusiveDeque();
             } else {
               if (param3 == 0) {
-                SetResourceNodeCaptureTime.field_o = null;
+                SetResourceNodeCaptureTime.delayedOutgoingPackets = null;
               }
             }
           } else {
             if (param0 == 0) {
-              GetSpinningBladeAimarc.field_q = null;
+              GetSpinningBladeAimarc.delayedIncomingPackets = null;
             }
-            PanelHeightQuery.field_c = param0;
-            AsteroidField.field_c = param4;
-            if (PerlinNoiseTextureOperation.field_q != 0) {
+            PanelHeightQuery.incomingLagMillis = param0;
+            AsteroidField.incomingLagStdDevMillis = param4;
+            if (PerlinNoiseTextureOperation.outgoingLagMillis != 0) {
               if (param3 == 0) {
-                SetResourceNodeCaptureTime.field_o = null;
+                SetResourceNodeCaptureTime.delayedOutgoingPackets = null;
               }
             } else {
               if (param3 > 0) {
-                SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
+                SetResourceNodeCaptureTime.delayedOutgoingPackets = new IntrusiveDeque();
               } else {
                 if (param3 == 0) {
-                  SetResourceNodeCaptureTime.field_o = null;
+                  SetResourceNodeCaptureTime.delayedOutgoingPackets = null;
                 }
               }
             }
           }
         }
-        PerlinNoiseTextureOperation.field_q = param3;
-        ServerTickFactory.field_c = param2;
+        PerlinNoiseTextureOperation.outgoingLagMillis = param3;
+        ServerTickFactory.outgoingLagStdDevMillis = param2;
     }
 
     public static void clearSharedReferences(boolean param0) {

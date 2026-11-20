@@ -3,7 +3,7 @@
  */
 final class PanelHeightQuery {
     static int field_b;
-    static int field_c;
+    static int incomingLagMillis;
     static String field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -29,7 +29,7 @@ final class PanelHeightQuery {
 
     static {
         field_b = 5;
-        field_c = 0;
+        incomingLagMillis = 0;
         field_a = "Create random message";
     }
 }

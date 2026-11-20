@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lo {
-    static String field_d;
+    static String loadingTextMessage;
     static Widget field_b;
     static GameMenuScreen[] field_a;
     static Sprite[] field_c;
 
     public static void clearSharedReferences(boolean param0) {
-        field_d = null;
+        loadingTextMessage = null;
         field_b = null;
         field_c = null;
         if (!param0) {

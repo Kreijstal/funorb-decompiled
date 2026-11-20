@@ -142,7 +142,7 @@ final class TileTextureOperation extends TextureOperation {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void flushSocketOutput(int param0, int param1) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;

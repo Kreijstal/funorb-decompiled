@@ -50,13 +50,13 @@ final class SetMassDriverFireForce extends ConsoleCommand {
 
     final static String e(byte param0) {
         if (UiDraggableContainer.field_z < 2) {
-          return GetSpinningBladeTopSpeed.field_p;
+          return GetSpinningBladeTopSpeed.connectingToUpdateServerText;
         }
         if (ppb.field_a != null) {
           if (!ppb.field_a.loadIndex((byte) -37)) {
-            return PasswordValidator.field_i;
+            return PasswordValidator.waitingForTextMessage;
           }
-          return lo.field_d;
+          return lo.loadingTextMessage;
         }
         if (!btb.field_b.loadIndex((byte) 115)) {
           return SetTorpedoProjectileOndamageParticles.field_o;

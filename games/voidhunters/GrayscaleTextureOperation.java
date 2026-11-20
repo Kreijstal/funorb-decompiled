@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GrayscaleTextureOperation extends TextureOperation {
-    static String[] field_i;
+    static String[] connectingMessages;
 
     public static void clearSharedReferences(byte param0) {
         int var1 = 59 % ((-48 - param0) / 43);
-        field_i = null;
+        connectingMessages = null;
     }
 
     final static void a(boolean param0, byte param1) {
@@ -60,11 +60,11 @@ final class GrayscaleTextureOperation extends TextureOperation {
         if (param1) {
           return var3;
         }
-        field_i = (String[]) null;
+        connectingMessages = (String[]) null;
         return var3;
     }
 
     static {
-        field_i = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
+        connectingMessages = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
     }
 }

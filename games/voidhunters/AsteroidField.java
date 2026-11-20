@@ -3,7 +3,7 @@
  */
 final class AsteroidField implements DiffableState, SpatialStateMarker, CompactGameState {
     private Asteroid[] asteroids;
-    static double field_c;
+    static double incomingLagStdDevMillis;
     static String field_b;
     private int revision;
 
@@ -2150,7 +2150,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
     }
 
     static {
-        field_c = 0.0;
+        incomingLagStdDevMillis = 0.0;
         field_b = "Reject <%0> from this game";
     }
 }

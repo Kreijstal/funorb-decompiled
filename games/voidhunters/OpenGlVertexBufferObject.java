@@ -41,9 +41,9 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
     final static double b(byte param0) {
         if (param0 >= -43) {
           OpenGlVertexBufferObject.a((byte) 83);
-          return ServerTickFactory.field_c;
+          return ServerTickFactory.outgoingLagStdDevMillis;
         }
-        return ServerTickFactory.field_c;
+        return ServerTickFactory.outgoingLagStdDevMillis;
     }
 
     static {

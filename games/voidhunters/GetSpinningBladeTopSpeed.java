@@ -3,7 +3,7 @@
  */
 final class GetSpinningBladeTopSpeed extends ConsoleCommand {
     static float[] field_o;
-    static String field_p;
+    static String connectingToUpdateServerText;
 
     GetSpinningBladeTopSpeed(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -42,11 +42,11 @@ final class GetSpinningBladeTopSpeed extends ConsoleCommand {
         if (param0 > -79) {
           GetSpinningBladeTopSpeed.clearSharedReferences(-52);
           field_o = null;
-          field_p = null;
+          connectingToUpdateServerText = null;
           return;
         }
         field_o = null;
-        field_p = null;
+        connectingToUpdateServerText = null;
     }
 
     static {

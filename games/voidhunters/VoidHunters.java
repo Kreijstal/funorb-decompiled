@@ -117,7 +117,7 @@ public final class VoidHunters extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         try {
-          if (0 != jba.field_b.field_o &&
+          if (0 != UiValueTrackRenderer.field_b.field_o &&
             !GetBloomThresholdPercentage.field_p) {
             SetFightersPerPlayerMaximum.field_p = true;
           }
@@ -485,11 +485,11 @@ public final class VoidHunters extends NetworkGameClient {
             SetLaserReload.enqueueByteIndexedRecordWrite(4, var7, 0);
           }
         }
-        while (GetSelfDestructTimer.a(0, ta.serverPacketLengths)) {
+        while (GetSelfDestructTimer.readServerPacket(0, ta.serverPacketLengths)) {
           var3Lifetime1 = NetworkMessageState.incomingOpcode;
           this.handleServerPacket(var3Lifetime1, 12);
         }
-        SetReverbWidth.a(0, -29008);
+        SetReverbWidth.flushNetworkOutput(0, -29008);
         if (GetSniperCannonProjectiles.chatVisible) {
         }
         if (null != FlipTextureOperation.field_l &&
@@ -1048,7 +1048,7 @@ public final class VoidHunters extends NetworkGameClient {
         UiToggleButtonRenderer.clearSharedReferences(22089);
         UiStatefulStyle.clearSharedReferences((byte) -18);
         UiAngleDialRenderer.clearSharedReferences(false);
-        jba.clearSharedReferences(true);
+        UiValueTrackRenderer.clearSharedReferences(true);
         UiTextStyle.clearSharedReferences(22540);
         UiComponent.clearSharedReferences((byte) 71);
         ModalPanel.clearSharedReferences((byte) -17);

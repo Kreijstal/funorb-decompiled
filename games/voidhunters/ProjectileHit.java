@@ -97,7 +97,7 @@ final class ProjectileHit {
               if (this.projectile.getType((byte) -104) == 1) {
                 GetGrapplingHookAimarc.updateLoopingSound(this.impactY, param2.getId(false), 40, 106, this.impactX);
               } else {
-                if (!var6.field_r) {
+                if (!var6.asteroid) {
                   if (var6.field_B == 0) {
                     BlendTextureOperation.a(20382, this.impactX, 60, this.impactY, 1);
                   } else {

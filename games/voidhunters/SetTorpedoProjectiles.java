@@ -177,7 +177,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var12.field_Mb = new Widget(0L, DeveloperConsole.field_q);
               var12.addChild(-561, var12.field_Mb);
               var12.inheritInteractionStateInDescendants(121);
-              var12.field_wb = new Widget(0L, jba.field_h);
+              var12.field_wb = new Widget(0L, UiValueTrackRenderer.field_h);
               var12.addChild(-561, var12.field_wb);
               var12.field_Nb = new Widget(0L, GrappleLauncherBehaviourFactory.field_a);
               var13 = 1;

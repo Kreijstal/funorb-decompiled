@@ -40,7 +40,7 @@ final class GrowableIntArray {
           var4_int = param2.getGroupId(param0, -112);
           var6 = -104 / ((-47 - param1) / 40);
           var5 = param2.getFileId(true, var4_int, param3);
-          stackIn_1_0 = MapClearanceArea.a(var5, (byte) 75, param2, var4_int);
+          stackIn_1_0 = MapClearanceArea.loadSprites(var5, (byte) 75, param2, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

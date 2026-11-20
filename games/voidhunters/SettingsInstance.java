@@ -55,8 +55,8 @@ final class SettingsInstance implements DiffableState {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4) {
-        GetMissionTerrainDebrisProbability.a(param4, -1, (double)param0, param2, (double)param3);
+    final static void configureSimulatedLag(int param0, boolean param1, int param2, int param3, int param4) {
+        GetMissionTerrainDebrisProbability.configureSimulatedLag(param4, -1, (double)param0, param2, (double)param3);
         if (param1) {
           field_b = (String) null;
         }
@@ -134,9 +134,9 @@ final class SettingsInstance implements DiffableState {
         GetPhasedEnergyBeamProjectiles.applyRuntimeSettings(107, this.values);
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isAsteroidComponentType(int param0, int param1) {
         int var2 = 100 / ((-57 - param0) / 61);
-        return EnvironmentReflectionGpuMaterialEffect.field_g[param1].field_r;
+        return EnvironmentReflectionGpuMaterialEffect.field_g[param1].asteroid;
     }
 
     public static void clearSharedReferences(int param0) {

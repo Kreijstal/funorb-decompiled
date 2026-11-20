@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetResourceNodeCaptureTime extends ConsoleCommand {
-    static IntrusiveDeque field_o;
+    static IntrusiveDeque delayedOutgoingPackets;
     static String field_p;
 
     SetResourceNodeCaptureTime(String param0, Class[] param1, String param2) {
@@ -18,7 +18,7 @@ final class SetResourceNodeCaptureTime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (IntrusiveDeque) null;
+            delayedOutgoingPackets = (IntrusiveDeque) null;
           }
           SetMachineGunEnergyUsed.a(70, 62, arguments[0].intValue(123));
           stackIn_3_0 = new ConsoleValue("void");
@@ -39,9 +39,9 @@ final class SetResourceNodeCaptureTime extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         field_p = null;
-        field_o = null;
+        delayedOutgoingPackets = null;
         if (param0 != 70) {
-          field_o = (IntrusiveDeque) null;
+          delayedOutgoingPackets = (IntrusiveDeque) null;
         }
     }
 

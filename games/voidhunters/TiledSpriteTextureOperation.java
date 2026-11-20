@@ -301,7 +301,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               var12.field_bc = new Widget(0L, DeveloperConsole.field_q);
               var12.addChild(-561, var12.field_bc);
               var12.inheritInteractionStateInDescendants(127);
-              var12.field_Sb = new Widget(0L, jba.field_h);
+              var12.field_Sb = new Widget(0L, UiValueTrackRenderer.field_h);
               var12.addChild(-561, var12.field_Sb);
               var13 = 1;
             }

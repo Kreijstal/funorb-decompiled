@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetSpinningBladeAimarc extends ConsoleCommand {
-    static IntrusiveDeque field_q;
+    static IntrusiveDeque delayedIncomingPackets;
     static boolean field_o;
     static int field_r;
     static String field_p;
@@ -12,7 +12,7 @@ final class GetSpinningBladeAimarc extends ConsoleCommand {
         if (param0 < 55) {
           return;
         }
-        field_q = null;
+        delayedIncomingPackets = null;
     }
 
     GetSpinningBladeAimarc(String param0, Class[] param1, String param2) {

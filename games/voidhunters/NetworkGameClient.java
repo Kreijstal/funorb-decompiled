@@ -301,7 +301,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (UiDraggableContainer.field_z == 11) {
           if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
             !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
-            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.field_i, lo.field_d), -1, 0.0f);
+            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, lo.loadingTextMessage), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -516,7 +516,7 @@ abstract class NetworkGameClient extends GameApplet {
         var11.dispose();
         this.setBackground(java.awt.Color.black);
         SetGrapplingHookAimarc.field_p = this.languageId;
-        IntegerRecordWritePackets.a(SetGrapplingHookAimarc.field_p, 1);
+        IntegerRecordWritePackets.selectLoadingMessageLanguage(SetGrapplingHookAimarc.field_p, 1);
         int var10 = -52 / ((-72 - param0) / 33);
         SoundCache.initializeClientProtocol(5000, this.secondaryGamePort, 60, this.serverNumber, SetTorpedoProjectiles.field_o, this.instanceId, this.host, this.member, this.primaryGamePort, this.gameCrc, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
         UiScrollPane.initializeArchiveSystem(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);

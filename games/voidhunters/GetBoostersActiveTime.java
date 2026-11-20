@@ -154,7 +154,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
               RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
-            TileTextureOperation.b(-1, 113);
+            TileTextureOperation.flushSocketOutput(-1, 113);
             TextureCombineMappings.field_c = SocialTabsPanel.field_d;
           }
           if (TextureCombineMappings.field_c == SocialTabsPanel.field_d &&

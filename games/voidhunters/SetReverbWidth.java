@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetReverbWidth extends ConsoleCommand {
-    final static void a(int param0, int param1) {
+    final static void flushNetworkOutput(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
@@ -20,11 +20,11 @@ final class SetReverbWidth extends ConsoleCommand {
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          if (PerlinNoiseTextureOperation.field_q != 0) {
+          if (PerlinNoiseTextureOperation.outgoingLagMillis != 0) {
             var2_long = MonotonicMillisClock.currentTimeMillis(false);
-            var4 = PerlinNoiseTextureOperation.field_q;
-            if (0.0 != ServerTickFactory.field_c) {
-              var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * ServerTickFactory.field_c);
+            var4 = PerlinNoiseTextureOperation.outgoingLagMillis;
+            if (0.0 != ServerTickFactory.outgoingLagStdDevMillis) {
+              var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * ServerTickFactory.outgoingLagStdDevMillis);
               if (0 > var4) {
                 var4 = 0;
               }
@@ -38,10 +38,10 @@ final class SetReverbWidth extends ConsoleCommand {
                 var8[var6] = RequestNewestBlackboxRecording.field_p.payload[var6];
               }
               var6_ref_c = new DelayedPacket((long)var4 + var2_long, RequestNewestBlackboxRecording.field_p.position, var17);
-              SetResourceNodeCaptureTime.field_o.addLast(param1 ^ 22878, var6_ref_c);
+              SetResourceNodeCaptureTime.delayedOutgoingPackets.addLast(param1 ^ 22878, var6_ref_c);
               RequestNewestBlackboxRecording.field_p.position = 0;
             }
-            var9 = (DelayedPacket) (SetResourceNodeCaptureTime.field_o.first(0));
+            var9 = (DelayedPacket) (SetResourceNodeCaptureTime.delayedOutgoingPackets.first(0));
             var13 = var9;
             if (var13 != null &&
               var13.releaseTimeMillis < var2_long) {
@@ -56,9 +56,9 @@ final class SetReverbWidth extends ConsoleCommand {
             }
           }
           if (param1 != -29008) {
-            SetReverbWidth.a(-118, -73);
+            SetReverbWidth.flushNetworkOutput(-118, -73);
           }
-          TileTextureOperation.b(param0, 115);
+          TileTextureOperation.flushSocketOutput(param0, 115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

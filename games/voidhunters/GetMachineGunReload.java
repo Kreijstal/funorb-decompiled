@@ -34,7 +34,7 @@ final class GetMachineGunReload extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1, int param2) {
-        SetGrapplingHookSpringConstant.a(param1, 0, param2);
+        SetGrapplingHookSpringConstant.configureSymmetricSimulatedLag(param1, 0, param2);
         int var3 = 28 / ((-50 - param0) / 58);
     }
 

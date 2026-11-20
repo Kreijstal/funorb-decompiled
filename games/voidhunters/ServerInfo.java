@@ -499,7 +499,7 @@ final class ServerInfo implements DiffableState {
             var3 = (byte[]) null;
             ServerInfo.createFontFromDecodedSprites((byte[]) null, -100);
           }
-          MatchResults.a(69);
+          MatchResults.clearDecodedSpriteData(69);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -121,7 +121,7 @@ final class SetLag extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SettingsInstance.a(arguments[3].intValue(55), false, arguments[2].intValue(84), arguments[1].intValue(115), arguments[0].intValue(88));
+          SettingsInstance.configureSimulatedLag(arguments[3].intValue(55), false, arguments[2].intValue(84), arguments[1].intValue(115), arguments[0].intValue(88));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

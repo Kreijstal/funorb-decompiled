@@ -57,7 +57,7 @@ final class SetMaxShipSize extends ConsoleCommand {
         if (param0 != -97) {
           return -0.6867473510386889;
         }
-        return AsteroidField.field_c;
+        return AsteroidField.incomingLagStdDevMillis;
     }
 
     final static void a(java.applet.Applet param0, int param1) {

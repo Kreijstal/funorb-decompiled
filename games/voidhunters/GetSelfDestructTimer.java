@@ -8,7 +8,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
         field_o = null;
         if (param0 != 225) {
           int[] var2 = (int[]) null;
-          GetSelfDestructTimer.a(52, (int[]) null);
+          GetSelfDestructTimer.readServerPacket(52, (int[]) null);
         }
     }
 
@@ -16,7 +16,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0, int[] param1) {
+    final static boolean readServerPacket(int param0, int[] param1) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_36_0 = null;
@@ -35,9 +35,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             return false;
           }
           var2_long = MonotonicMillisClock.currentTimeMillis(false);
-          if (param0 != PanelHeightQuery.field_c &&
+          if (param0 != PanelHeightQuery.incomingLagMillis &&
             SetAutoDetail.field_p < 0) {
-            var4_ref_c = (DelayedPacket) (GetSpinningBladeAimarc.field_q.first(param0 + 0));
+            var4_ref_c = (DelayedPacket) (GetSpinningBladeAimarc.delayedIncomingPackets.first(param0 + 0));
             if (var4_ref_c != null &&
               var4_ref_c.releaseTimeMillis < var2_long) {
               var4_ref_c.unlink(-3846);
@@ -66,7 +66,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             if (!PlayerJoinFactory.b((byte) 51)) {
               return false;
             }
-            if (PanelHeightQuery.field_c == 0) {
+            if (PanelHeightQuery.incomingLagMillis == 0) {
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
               SetMissionResnetResourceTickTime.field_o = SetSalvoRepairTimeMultiplier.field_r;
               SetSalvoRepairTimeMultiplier.field_r = NetworkMessageState.incomingOpcode;
@@ -74,9 +74,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               SetAutoDetail.field_p = -1;
               return true;
             }
-            var4 = PanelHeightQuery.field_c;
-            if (AsteroidField.field_c != 0.0) {
-              var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * AsteroidField.field_c);
+            var4 = PanelHeightQuery.incomingLagMillis;
+            if (AsteroidField.incomingLagStdDevMillis != 0.0) {
+              var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * AsteroidField.incomingLagStdDevMillis);
               if (var4 < 0) {
                 var4 = 0;
               }
@@ -85,7 +85,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             for (var6 = 0; var6 < PartitioningManagerFactory.field_a; var6++) {
               var5.payload[var6] = qga.field_b.payload[var6];
             }
-            GetSpinningBladeAimarc.field_q.addLast(param0 ^ -10258, var5);
+            GetSpinningBladeAimarc.delayedIncomingPackets.addLast(param0 ^ -10258, var5);
             SetAutoDetail.field_p = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

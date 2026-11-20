@@ -3340,10 +3340,10 @@ final class World implements DiffableState, CompactGameState {
             var17 = 1;
             var13 = var18Lifetime1 * var10.field_q;
           }
-          if (var20.getDefinition((byte) -112).field_r) {
+          if (var20.getDefinition((byte) -112).asteroid) {
             var15 = 1;
           }
-          if (var9.getDefinition((byte) -112).field_r) {
+          if (var9.getDefinition((byte) -112).asteroid) {
             var17 = 1;
           }
           stackIn_36_0 = (!var20.isDestroyed((byte) 69)) ? 0 : 1;

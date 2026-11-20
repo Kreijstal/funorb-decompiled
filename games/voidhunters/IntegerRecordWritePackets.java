@@ -21,7 +21,7 @@ final class IntegerRecordWritePackets {
           var5.writeInt(param2.field_i, 332614536);
           var5.writeCrc(param1 ^ -21109, var4);
           if (param1 != -21584) {
-            IntegerRecordWritePackets.a(47, -32);
+            IntegerRecordWritePackets.selectLoadingMessageLanguage(47, -32);
           }
           var5.writeLengthByte(var5.position - var4, -129);
         } catch (RuntimeException runtimeException) {
@@ -29,17 +29,17 @@ final class IntegerRecordWritePackets {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void selectLoadingMessageLanguage(int param0, int param1) {
         if (param1 == 1) {
-          GetSpinningBladeTopSpeed.field_p = GrayscaleTextureOperation.field_i[param0];
-          PasswordValidator.field_i = gib.field_b[param0];
-          lo.field_d = SpawnChoice.field_b[param0];
+          GetSpinningBladeTopSpeed.connectingToUpdateServerText = GrayscaleTextureOperation.connectingMessages[param0];
+          PasswordValidator.waitingForTextMessage = gib.waitingForTextMessages[param0];
+          lo.loadingTextMessage = SpawnChoice.loadingTextMessages[param0];
           return;
         }
         field_a = false;
-        GetSpinningBladeTopSpeed.field_p = GrayscaleTextureOperation.field_i[param0];
-        PasswordValidator.field_i = gib.field_b[param0];
-        lo.field_d = SpawnChoice.field_b[param0];
+        GetSpinningBladeTopSpeed.connectingToUpdateServerText = GrayscaleTextureOperation.connectingMessages[param0];
+        PasswordValidator.waitingForTextMessage = gib.waitingForTextMessages[param0];
+        lo.loadingTextMessage = SpawnChoice.loadingTextMessages[param0];
     }
 
     static {

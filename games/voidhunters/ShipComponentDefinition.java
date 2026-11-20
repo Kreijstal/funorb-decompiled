@@ -9,7 +9,7 @@ final class ShipComponentDefinition {
     int energyCapacity;
     int field_a;
     ArmBehaviour field_e;
-    boolean field_r;
+    boolean asteroid;
     HardpointDefinition[] hardpoints;
     boolean field_k;
     GrappleLauncherBehaviour field_x;
@@ -214,7 +214,7 @@ final class ShipComponentDefinition {
     ShipComponentDefinition(int[] param0, int param1, int param2) {
         this.field_f = false;
         this.field_h = 256;
-        this.field_r = false;
+        this.asteroid = false;
         try {
           this.outline = param0;
           this.connectionY = param2;

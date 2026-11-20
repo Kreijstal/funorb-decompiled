@@ -7,7 +7,7 @@ final class PasswordValidator extends TextFieldValidator {
     private UiTextField usernameField;
     static int[] perlinFadeTable;
     private UiTextField emailField;
-    static String field_i;
+    static String waitingForTextMessage;
     static String field_g;
     static int field_l;
 
@@ -97,7 +97,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           var13 = new Widget(0L, (Widget) null);
           if (param2 != 10204) {
-            field_i = (String) null;
+            waitingForTextMessage = (String) null;
           }
           var13.field_gb = SetBurstFireReload.createBorderedSpriteTiles(-26998, param4, param11);
           var13.field_mb = SetBurstFireReload.createBorderedSpriteTiles(param2 - 37202, param5, param6);
@@ -152,7 +152,7 @@ final class PasswordValidator extends TextFieldValidator {
           return;
         }
         perlinFadeTable = null;
-        field_i = null;
+        waitingForTextMessage = null;
         field_j = null;
     }
 

@@ -63,7 +63,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
           var3[var4_int] = LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], hla.field_a[0], var3);
-        MatchResults.a(58);
+        MatchResults.clearDecodedSpriteData(58);
         return var4;
     }
 
