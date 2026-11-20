@@ -283,7 +283,7 @@ final class wf {
             var8 = SpawnChoiceFactory.field_b.toUpperCase();
             if (SetTorpedoProjectiles.field_o == null ||
               null == vqa.field_g ||
-              null == vqa.field_g.field_m.b(1).world.findShipByOwner(vqa.field_g.field_L, 107)) {
+              null == vqa.field_g.state.b(1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 107)) {
               var9 = 1;
             }
           }
@@ -588,7 +588,7 @@ final class wf {
                                       if (var10_int != 8) {
                                         if (var10_int == 9) {
                                           if (this.field_b.e((byte) -94)) {
-                                            vqa.field_g.i(60);
+                                            vqa.field_g.beginPacket(60);
                                             var10_int = param1 ? 1 : 0;
                                             stackIn_161_0 = (!bqa.a(false)) ? 0 : 7;
                                             GetNebulaFadesOutWhenClose.a(stackIn_161_0, var10_int != 0, (byte) -85, -1);
@@ -642,7 +642,7 @@ final class wf {
                                                         if (vqa.field_g != null &&
                                                           SocketNetworkArchiveClient.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
-                                                          var10 = vqa.field_g.field_m.b(1).world.findShipByOwner(vqa.field_g.field_L, 93);
+                                                          var10 = vqa.field_g.state.b(1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 93);
                                                           if (var10 != null) {
                                                             if (SetTorpedoProjectiles.field_o == null) {
                                                               return;

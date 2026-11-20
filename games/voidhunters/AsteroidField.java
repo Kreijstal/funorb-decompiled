@@ -1704,7 +1704,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime291 = dqb.a((byte) -30, "tutorial_grappling_hook_select");
           if (null != var2Lifetime291) {
-            gla.field_b = qpa.a((byte) -125, var2Lifetime291);
+            OpenGlArbProgram.field_b = qpa.a((byte) -125, var2Lifetime291);
           }
           var2Lifetime292 = dqb.a((byte) -16, "tutorial_grappling_hook_fire");
           if (null != var2Lifetime292) {
@@ -1994,7 +1994,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           if (param1 != 16520) {
             this.copyTo((byte) -73, (SerializableGameState) null);
           }
-          var4_int = param0.a(param1 + 13131, param2, this.asteroids, 2) ? 1 : 0;
+          var4_int = param0.addBodyToArray(param1 + 13131, param2, this.asteroids, 2) ? 1 : 0;
           if (var4_int != 0) {
             this.b(param1 ^ -16566);
           }

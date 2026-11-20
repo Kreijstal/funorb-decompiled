@@ -56,7 +56,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
               var5.field_i.a(var6, (byte) -53, 14);
             }
             var7 = GetLagStandardDeviationOut.field_o;
-            var8 = uca.field_D;
+            var8 = GameSession.field_D;
             var7.field_i.a(var8, (byte) -53, 20);
           }
           if (param0.field_a == 1 &&

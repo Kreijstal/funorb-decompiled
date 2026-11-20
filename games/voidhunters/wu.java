@@ -162,7 +162,7 @@ final class wu extends GpuMaterialEffect {
                 var4 = 3;
                 qqa.a(true, (byte) -41);
               }
-              vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
+              vqa.field_g = new GameSession(false, var3, 0, false, var4, var5, param0);
               GpuSprite.field_e = param1;
               di.field_l.a(false, -13027);
               var6 = mnb.field_d ? 1 : 0;
@@ -186,7 +186,7 @@ final class wu extends GpuMaterialEffect {
               var4 = 3;
               qqa.a(true, (byte) -41);
             }
-            vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime2, param0);
+            vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime2, param0);
             GpuSprite.field_e = param1;
             di.field_l.a(false, -13027);
             var6Lifetime2 = mnb.field_d ? 1 : 0;
@@ -214,7 +214,7 @@ final class wu extends GpuMaterialEffect {
             var4 = 3;
             qqa.a(true, (byte) -41);
           }
-          vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
+          vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
           GpuSprite.field_e = param1;
           di.field_l.a(false, -13027);
           var6Lifetime1 = mnb.field_d ? 1 : 0;
@@ -227,7 +227,7 @@ final class wu extends GpuMaterialEffect {
               var4 = 3;
               qqa.a(true, (byte) -41);
             }
-            vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
+            vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
             di.field_l.a(false, -13027);
             var6Lifetime1 = mnb.field_d ? 1 : 0;
@@ -240,7 +240,7 @@ final class wu extends GpuMaterialEffect {
               var4 = 3;
               qqa.a(true, (byte) -41);
             }
-            vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
+            vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
             di.field_l.a(false, -13027);
             var6Lifetime1 = mnb.field_d ? 1 : 0;

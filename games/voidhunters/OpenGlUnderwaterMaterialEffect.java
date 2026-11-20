@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bma extends GpuMaterialEffect {
+final class OpenGlUnderwaterMaterialEffect extends GpuMaterialEffect {
     private GpuTexture2D field_e;
     private boolean field_i;
     private boolean field_l;
-    private gla field_p;
+    private OpenGlArbProgram field_p;
     private boolean field_g;
-    private gla field_m;
-    private gla field_k;
+    private OpenGlArbProgram field_m;
+    private OpenGlArbProgram field_k;
     static int field_n;
     static int field_o;
     private float[] field_h;
     private boolean field_f;
-    private gla field_j;
+    private OpenGlArbProgram field_j;
 
     final void disable(int param0) {
         this.toolkit.setActiveTextureUnit(1, -64);
@@ -77,12 +77,12 @@ final class bma extends GpuMaterialEffect {
         this.toolkit.setAlphaCombineSource(0, (byte) -104, pja.field_l);
         this.toolkit.setActiveTextureUnit(0, -93);
         if (param0 != 5) {
-          this.field_j = (gla) null;
+          this.field_j = (OpenGlArbProgram) null;
         } else {
-          this.e(0);
+          this.applyUnderwaterProgram(0);
           return;
         }
-        this.e(0);
+        this.applyUnderwaterProgram(0);
     }
 
     final void onDepthRangeChanged(boolean param0) {
@@ -95,9 +95,9 @@ final class bma extends GpuMaterialEffect {
           var3 = this.toolkit.getNearPlane();
           var4 = -((float)(var2 - var3) * 0.125f) + (float)var2;
           var5 = (float)var2 - (float)(var2 - var3) * 0.25f;
-          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.D(100), (float)this.toolkit.a(!param0 ? true : false) / 255.0f);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.getUnderwaterDepthScale(100), (float)this.toolkit.getUnderwaterFogStrength(!param0 ? true : false) / 255.0f);
           this.toolkit.setActiveTextureUnit(1, -42);
-          this.toolkit.setTextureConstantColor(-122, this.toolkit.D((byte) -124));
+          this.toolkit.setTextureConstantColor(-122, this.toolkit.getUnderwaterFogColor((byte) -124));
           this.toolkit.setActiveTextureUnit(0, -81);
         }
         if (param0) {
@@ -106,7 +106,7 @@ final class bma extends GpuMaterialEffect {
         this.field_i = true;
     }
 
-    bma(OpenGlGpuToolkit param0, ResourceArchive param1) {
+    OpenGlUnderwaterMaterialEffect(OpenGlGpuToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
@@ -184,17 +184,17 @@ final class bma extends GpuMaterialEffect {
 
     final void setParameters(int param0, int param1, int param2) {
         if (param2 != 5) {
-          this.field_k = (gla) null;
+          this.field_k = (OpenGlArbProgram) null;
         }
     }
 
-    private final void e(int param0) {
-        int var2 = this.toolkit.u((byte) 127);
+    private final void applyUnderwaterProgram(int param0) {
+        int var2 = this.toolkit.getWaterPlaneDistance((byte) 127);
         GpuTransform3D var3 = this.toolkit.getViewTransform((byte) 47);
         if (this.field_i) {
-          jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_j.field_c : this.field_k.field_c);
+          jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_j.programId : this.field_k.programId);
         } else {
-          jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != var2 ? this.field_m.field_c : this.field_p.field_c);
+          jaggl.OpenGL.glBindProgramARB(34336, 2147483647 != var2 ? this.field_m.programId : this.field_p.programId);
         }
         jaggl.OpenGL.glEnable(34336);
         this.field_g = true;
@@ -205,7 +205,7 @@ final class bma extends GpuMaterialEffect {
 
     final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
-          this.e(18);
+          this.applyUnderwaterProgram(18);
         }
     }
 

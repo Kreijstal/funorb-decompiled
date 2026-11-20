@@ -88,7 +88,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         var3Lifetime2 = var15Lifetime1;
         var4 = 0;
         if (vqa.field_g != null &&
-          !vqa.field_g.field_N) {
+          !vqa.field_g.networked) {
           var4 = 1;
         } else {
           if (GetArmageddonTimerStart.field_o != 0) {
@@ -110,8 +110,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var18.field_b = (float)((var25[3] + var25[2]) / 2);
             var16.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
-              !vqa.field_g.field_N &&
-              vqa.field_g.field_m.b(param0 + 1).world.findShipByOwner(vqa.field_g.field_L, 76) != null) {
+              !vqa.field_g.networked &&
+              vqa.field_g.state.b(param0 + 1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 76) != null) {
               var16.setTeam(17704, 1);
               var16.integrateMotion(false, true, (World) null);
               var16.draw(var18, 121, (World) null);
@@ -196,8 +196,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var21.field_b = (float)((var26[3] + var26[2]) / 2);
             var19.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
-              !vqa.field_g.field_N &&
-              vqa.field_g.field_m.b(param0 + 1).world.findShipByOwner(vqa.field_g.field_L, 76) != null) {
+              !vqa.field_g.networked &&
+              vqa.field_g.state.b(param0 + 1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 76) != null) {
               var19.setTeam(17704, 1);
             }
             var19.integrateMotion(false, true, (World) null);
@@ -262,7 +262,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             SetFixedaim.field_o = true;
           }
         } else {
-          if (vqa.field_g.field_N) {
+          if (vqa.field_g.networked) {
             var22.integrateMotion(false, true, (World) null);
             var22.draw(var24, 121, (World) null);
             if (0 == GetBots.field_o &&
@@ -287,7 +287,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               SetFixedaim.field_o = true;
             }
           } else {
-            if (vqa.field_g.field_m.b(param0 + 1).world.findShipByOwner(vqa.field_g.field_L, 76) != null) {
+            if (vqa.field_g.state.b(param0 + 1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 76) != null) {
               var22.setTeam(17704, 1);
               var22.integrateMotion(false, true, (World) null);
               var22.draw(var24, 121, (World) null);

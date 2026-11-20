@@ -5,7 +5,7 @@ final class vqa extends eca {
     static int field_k;
     static goa field_i;
     static String field_f;
-    static uca field_g;
+    static GameSession field_g;
     static String field_j;
     private uf field_h;
 

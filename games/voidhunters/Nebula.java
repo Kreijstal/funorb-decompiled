@@ -160,7 +160,7 @@ final class Nebula implements DiffableState {
         }
     }
 
-    final int a(boolean param0) {
+    final int getX(boolean param0) {
         if (!param0) {
           this.x = 7;
           return this.x;
@@ -168,7 +168,7 @@ final class Nebula implements DiffableState {
         return this.x;
     }
 
-    final boolean a(byte param0, int param1, int param2) {
+    final boolean containsPoint(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -188,7 +188,7 @@ final class Nebula implements DiffableState {
         return this.y;
     }
 
-    private final int a(int param0, boolean param1) {
+    private final int getParticleRadius(int param0, boolean param1) {
         if (param1) {
           return 8192 * (-(param0 % 3) + 3);
         }
@@ -201,7 +201,7 @@ final class Nebula implements DiffableState {
         Nebula var6 = null;
         try {
           if (param0 < 54) {
-            this.a(false);
+            this.getX(false);
           }
           var5 = (Nebula) (param1);
           var6 = var5;
@@ -220,7 +220,7 @@ final class Nebula implements DiffableState {
         this.x = param0;
     }
 
-    final void a(Ship param0, int param1, int param2, lta param3, int param4) {
+    final void drawParticle(Ship param0, int param1, int param2, lta param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -247,7 +247,7 @@ final class Nebula implements DiffableState {
           if (param1 <= 42) {
             return;
           }
-          var9 = this.a(param4, true);
+          var9 = this.getParticleRadius(param4, true);
           var10 = 200;
           var11 = 7842355;
           if (li.field_i &&

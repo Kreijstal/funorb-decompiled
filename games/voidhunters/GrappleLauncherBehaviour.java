@@ -64,7 +64,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var20 = param1.b(true, var11);
             c.a(var18, var17Lifetime1, var19, var20, -16777216, var16);
             if (var23.l((byte) -68) >= 0) {
-              var21 = param4.d((byte) -27, var23.l((byte) -102));
+              var21 = param4.getBodyById((byte) -27, var23.l((byte) -102));
               if (var21 == null) {
                 return;
               }
@@ -180,7 +180,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var23 = GetNumStars.a(param4, (byte) -127) * var14Lifetime1 >> 16;
             var24 = eu.a(param4, 77) * var14Lifetime1 >> 16;
             var22.setPosition(var23 * 2 + var15, var24 * 2 + var16, (byte) 100);
-            param8.a((byte) 67, var22);
+            param8.addGrapplingHook((byte) 67, var22);
             var22.dy = param10.dy;
             var22.dx = param10.dx;
             qba.a(20382, var15, 12, var16, 50);
@@ -316,7 +316,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
               }
             }
             if (var33.l((byte) 120) >= 0) {
-              var17 = param1.d((byte) -27, var33.l((byte) 121));
+              var17 = param1.getBodyById((byte) -27, var33.l((byte) 121));
               if (var17 == null) {
                 var33.f(true);
                 return;

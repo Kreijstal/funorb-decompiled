@@ -35,9 +35,9 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static uca a(int param0, kda param1, IsaacPacketBuffer param2, byte param3) {
+    final static GameSession a(int param0, kda param1, IsaacPacketBuffer param2, byte param3) {
         int var11_int = 0;
-        uca stackIn_3_0 = null;
+        GameSession stackIn_3_0 = null;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_25_0 = 0;
@@ -55,7 +55,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         int var8 = 0;
         String[] var9 = null;
         int var10 = 0;
-        uca var11 = null;
+        GameSession var11 = null;
         int var12 = 0;
         int var13 = 0;
         byte[] var14 = null;
@@ -66,7 +66,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         var13 = VoidHunters.field_G;
         try {
           if (param3 < 96) {
-            stackIn_3_0 = (uca) null;
+            stackIn_3_0 = (GameSession) null;
             return stackIn_3_0;
           }
           var16 = param1.b(param2, 1000);
@@ -94,16 +94,16 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
           if (-1 == var10Lifetime1) {
             var10Lifetime1 = -2;
           }
-          var11 = new uca(true, var9, var10Lifetime1, var8 != 0, var6, var7, false);
+          var11 = new GameSession(true, var9, var10Lifetime1, var8 != 0, var6, var7, false);
           stackIn_25_0 = (var5.readUnsignedByte((byte) -116) != 1) ? 0 : 1;
           var12Lifetime1 = stackIn_25_0;
           if (var12Lifetime1 != 0) {
             var5.beginBitRead(-23497);
-            var11.field_m.a(-62, var5);
+            var11.state.a(-62, var5);
             var5.endBitRead((byte) -81);
-            param1.a(0, GetThrusterSmallForce.field_o, var11.field_m.carouselInfo);
+            param1.a(0, GetThrusterSmallForce.field_o, var11.state.carouselInfo);
           }
-          var11.field_m.field_j = param1.a(true, -13027);
+          var11.state.field_j = param1.a(true, -13027);
           if (!param1.b((byte) 85)) {
             return var11;
           }

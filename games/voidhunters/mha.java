@@ -4,11 +4,11 @@
 final class mha {
     static int field_a;
 
-    final static gla a(int param0, byte[] param1, int param2, OpenGlGpuToolkit param3) {
+    final static OpenGlArbProgram a(int param0, byte[] param1, int param2, OpenGlGpuToolkit param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_5_0 = null;
-        gla stackIn_7_0 = null;
+        OpenGlArbProgram stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -25,12 +25,12 @@ final class mha {
           jaggl.OpenGL.glGetIntegerv(34379, VoidHunters.field_E, 0);
           if (-1 == VoidHunters.field_E[0]) {
             jaggl.OpenGL.glBindProgramARB(param2, param0);
-            stackIn_7_0 = new gla(param3, param2, var4_int);
+            stackIn_7_0 = new OpenGlArbProgram(param3, param2, var4_int);
             return stackIn_7_0;
           }
           jaggl.OpenGL.glBindProgramARB(param2, 0);
           stackIn_5_0 = null;
-          return (gla) (stackIn_5_0);
+          return (OpenGlArbProgram) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

@@ -232,7 +232,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_fighter_bay_reload(" + MapClearanceRectangleFactory.field_b + ")");
         System.out.println("set_point_defence_laser_reload(" + GetFighterRepairAmount.field_o + ")");
         System.out.println("set_mass_driver_aimspeed(" + qca.field_wb + ")");
-        System.out.println("set_torpedo_aimspeed(" + bma.field_n + ")");
+        System.out.println("set_torpedo_aimspeed(" + OpenGlUnderwaterMaterialEffect.field_n + ")");
         System.out.println("set_laser_aimspeed(" + GpuMaterialEffect.field_b + ")");
         System.out.println("set_fighter_bay_aimspeed(" + SetThrusterBindingMoveAndTurnHasOppositeMove.field_p + ")");
         System.out.println("set_spinning_blade_aimspeed(" + SetTorpedoFireForce.field_o + ")");

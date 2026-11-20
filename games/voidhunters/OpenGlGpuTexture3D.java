@@ -40,7 +40,7 @@ final class OpenGlGpuTexture3D extends OpenGlGpuTexture implements GpuTexture3D 
           this.field_j = param2;
           this.toolkit.setTexture((GpuTexture) (this), -116);
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.getInternalFormat((byte) -31), this.field_j, this.field_l, this.field_k, 0, MissionControl.a(-29328, this.format), 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.getInternalFormat((byte) -31), this.field_j, this.field_l, this.field_k, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

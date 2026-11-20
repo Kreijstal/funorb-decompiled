@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gla {
-    int field_c;
+final class OpenGlArbProgram {
+    int programId;
     static String field_b;
-    private OpenGlGpuToolkit field_a;
+    private OpenGlGpuToolkit toolkit;
 
     protected final void finalize() throws Throwable {
-        this.field_a.a(this.field_c, (byte) 98);
+        this.toolkit.a(this.programId, (byte) 98);
         super.finalize();
     }
 
     public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -5709) {
-          gla.clearSharedReferences(-15);
+          OpenGlArbProgram.clearSharedReferences(-15);
         }
     }
 
-    gla(OpenGlGpuToolkit param0, int param1, int param2) {
+    OpenGlArbProgram(OpenGlGpuToolkit param0, int param1, int param2) {
         try {
-          this.field_a = param0;
-          this.field_c = param2;
+          this.toolkit = param0;
+          this.programId = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -585,7 +585,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 hab.field_g[32] = var22_ref;
                                 var4 = -var1_int * 3;
                                 var5 = -var1_int;
-                                var64 = uca.a(var5, (byte) 9, new int[]{6, 6, 6, 9, 0, 0, 0}, var4);
+                                var64 = GameSession.a(var5, (byte) 9, new int[]{6, 6, 6, 9, 0, 0, 0}, var4);
                                 var23 = var64;
                                 var6 = var23;
                                 var24_ref = new ShipComponentDefinition(var6, 3 * -var1_int, 0);
@@ -595,7 +595,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 hab.field_g[40] = var24_ref;
                                 var4 = -var2;
                                 var5 = var1_int;
-                                var6 = uca.a(var5, (byte) 9, new int[]{3, 3, 7, 9, 9, 11}, var4);
+                                var6 = GameSession.a(var5, (byte) 9, new int[]{3, 3, 7, 9, 9, 11}, var4);
                                 var25_ref = new ShipComponentDefinition(var6, -var2, 0);
                                 var25_ref.scaleMassDown(param0 + 43, 15);
                                 var25_ref.field_a = 3;
@@ -674,7 +674,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var29_ref.field_A = new int[][]{new int[]{0, 1, 4, 5, 6, 7}, new int[]{1, 2, 3, 4}};
                                 var4 = -ArchiveProvider.field_b / 2;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var6 = uca.a(var5, (byte) 9, new int[]{1, 4, 7, 8, 9, 10, 11, 2, 5}, var4);
+                                var6 = GameSession.a(var5, (byte) 9, new int[]{1, 4, 7, 8, 9, 10, 11, 2, 5}, var4);
                                 var30_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, 0);
                                 var30_ref.scaleMassDown(111, 15);
                                 var30_ref.field_A = new int[][]{new int[]{0, 1, 2, 3}, new int[]{0, 3, 4, 5, 6, 9}, new int[]{6, 7, 8, 9}};
@@ -684,7 +684,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var30_ref.field_q = 0;
                                 var4 = -ArchiveProvider.field_b / 2;
                                 var5 = 0;
-                                var6 = uca.a(var5, (byte) 9, new int[]{3, 7, 8, 11, 0}, var4);
+                                var6 = GameSession.a(var5, (byte) 9, new int[]{3, 7, 8, 11, 0}, var4);
                                 var31_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, -ArchiveProvider.field_b / 2);
                                 var31_ref.scaleMassDown(113, 15);
                                 var31_ref.field_A = new int[][]{new int[]{0, 1, 2, 3, 4}, new int[]{4, 5, 0}};
@@ -694,7 +694,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var31_ref.field_q = 0;
                                 var4 = -ArchiveProvider.field_b / 2;
                                 var5 = 0;
-                                var6 = uca.a(var5, (byte) 9, new int[]{2, 6, 7, 10, 11}, var4);
+                                var6 = GameSession.a(var5, (byte) 9, new int[]{2, 6, 7, 10, 11}, var4);
                                 var32_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, ArchiveProvider.field_b / 2);
                                 var32_ref.scaleMassDown(101, 15);
                                 var32_ref.field_B = 0;
@@ -704,7 +704,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var32_ref.field_a = 3;
                                 var4 = -ArchiveProvider.field_b / 2;
                                 var5 = 0;
-                                var65 = uca.a(var5, (byte) 9, new int[]{4, 3, 7, 9, 10, 11}, var4);
+                                var65 = GameSession.a(var5, (byte) 9, new int[]{4, 3, 7, 9, 10, 11}, var4);
                                 var33 = var65;
                                 var6 = var33;
                                 var34_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, ArchiveProvider.field_b / 2);
@@ -715,7 +715,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 hab.field_g[38] = var34_ref;
                                 var4 = -ArchiveProvider.field_b / 2;
                                 var5 = -ArchiveProvider.field_b;
-                                var66 = uca.a(var5, (byte) 9, new int[]{7, 8, 9, 11, 3, 2}, var4);
+                                var66 = GameSession.a(var5, (byte) 9, new int[]{7, 8, 9, 11, 3, 2}, var4);
                                 var35 = var66;
                                 var6 = var35;
                                 var36_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_b / 2, -ArchiveProvider.field_b / 2);
@@ -726,7 +726,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var36_ref.field_a = 2;
                                 var4 = -ArchiveProvider.field_a;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var67 = uca.a(var5, (byte) 9, new int[]{5, 7, 9, 11, 1}, var4);
+                                var67 = GameSession.a(var5, (byte) 9, new int[]{5, 7, 9, 11, 1}, var4);
                                 var37 = var67;
                                 var6 = var37;
                                 var38_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_a, 0);
@@ -736,7 +736,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var38_ref.field_a = 2;
                                 var4 = -ArchiveProvider.field_a;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var6 = uca.a(var5, (byte) 9, new int[]{5, 7, 11, 7, 11, 1}, var4);
+                                var6 = GameSession.a(var5, (byte) 9, new int[]{5, 7, 11, 7, 11, 1}, var4);
                                 var39_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_a, 0);
                                 var39_ref.scaleMassDown(108, 15);
                                 var39_ref.field_a = 4;
@@ -748,7 +748,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 hab.field_g[18].setSpecialOrderId((byte) -121, 6);
                                 var4 = -ArchiveProvider.field_a;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var6 = uca.a(var5, (byte) 9, new int[]{5, 7, 9, 11, 1}, var4);
+                                var6 = GameSession.a(var5, (byte) 9, new int[]{5, 7, 9, 11, 1}, var4);
                                 var40_ref = new ShipComponentDefinition(var6, -ArchiveProvider.field_a, 0);
                                 var40_ref.scaleMassDown(111, 15);
                                 var40_ref.energyCapacity = 125;
@@ -806,7 +806,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var8_ref_wfb.field_f = true;
                                 var4 = -ArchiveProvider.field_b * 4;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var92 = uca.a(var5, (byte) 9, new int[]{5, 7, 6, 5, 6, 6, 7, 9, 11, 0, 0, 1, 0, 11, 1}, var4);
+                                var92 = GameSession.a(var5, (byte) 9, new int[]{5, 7, 6, 5, 6, 6, 7, 9, 11, 0, 0, 1, 0, 11, 1}, var4);
                                 var46_ref = new ShipComponentDefinition(var92, 0, 0);
                                 ta.a(var92, 127, var46_ref);
                                 var46_ref.addHardpoint(-113, new HardpointDefinition(ArchiveProvider.field_b, 0, 4096));
@@ -819,7 +819,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var46_ref.field_A = new int[][]{new int[]{0, 1, 2, 13, 14, 15}, new int[]{2, 3, 12, 13}, new int[]{3, 4, 5, 6, 7, 8, 9, 10, 11, 12}};
                                 var4 = 2 * -ArchiveProvider.field_b;
                                 var5 = 0;
-                                var93 = uca.a(var5, (byte) 9, new int[]{3, 5, 2, 5, 8, 9, 6, 6, 7, 9, 11, 0, 0, 9, 10, 1, 4, 1}, var4);
+                                var93 = GameSession.a(var5, (byte) 9, new int[]{3, 5, 2, 5, 8, 9, 6, 6, 7, 9, 11, 0, 0, 9, 10, 1, 4, 1}, var4);
                                 var48_ref = new ShipComponentDefinition(var93, 0, 0);
                                 ta.a(var93, 116, var48_ref);
                                 var48_ref.scaleMassDown(param0 + 42, 15);
@@ -830,7 +830,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var48_ref.field_A = new int[][]{new int[]{1, 5, 14, 18}, new int[]{2, 3, 4, 5}, new int[]{6, 8, 9, 10, 11, 13}, new int[]{14, 15, 16, 17}};
                                 var4 = -ArchiveProvider.field_b * 2;
                                 var5 = -ArchiveProvider.field_b;
-                                var94 = uca.a(var5, (byte) 9, new int[]{5, 7, 6, 7, 9, 11, 0, 11, 1, 3}, var4);
+                                var94 = GameSession.a(var5, (byte) 9, new int[]{5, 7, 6, 7, 9, 11, 0, 11, 1, 3}, var4);
                                 var50_ref = new ShipComponentDefinition(var94, 0, 0);
                                 ta.a(var94, 124, var50_ref);
                                 var50_ref.addHardpoint(param0 ^ 92, new HardpointDefinition(-ArchiveProvider.field_b, 0, 0));
@@ -842,7 +842,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var8_ref_wfb.field_f = true;
                                 var4 = -ArchiveProvider.field_b;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var95 = uca.a(var5, (byte) 9, new int[]{1, 1, 4, 7, 7, 6, 7, 8, 10, 11, 0, 11, 11, 2, 5, 5}, var4);
+                                var95 = GameSession.a(var5, (byte) 9, new int[]{1, 1, 4, 7, 7, 6, 7, 8, 10, 11, 0, 11, 11, 2, 5, 5}, var4);
                                 var52_ref = new ShipComponentDefinition(var95, 0, 0);
                                 ta.a(var95, 122, var52_ref);
                                 var52_ref.scaleMassDown(param0 ^ 37, 15);
@@ -853,7 +853,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var52_ref.field_A = new int[][]{new int[]{0, 2, 3, 5}, new int[]{0, 5, 6, 7, 8, 9, 10, 11, 16}, new int[]{11, 13, 14, 16}};
                                 var4 = 2 * -ArchiveProvider.field_b;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var96 = uca.a(var5, (byte) 9, new int[]{5, 5, 5, 7, 9, 9, 9, 11, 1, 1, 1}, var4);
+                                var96 = GameSession.a(var5, (byte) 9, new int[]{5, 5, 5, 7, 9, 9, 9, 11, 1, 1, 1}, var4);
                                 var54_ref = new ShipComponentDefinition(var96, 0, 0);
                                 ta.a(var96, param0 ^ 51, var54_ref);
                                 var54_ref.scaleMassDown(104, 15);
@@ -863,7 +863,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var8_ref_wfb.field_f = true;
                                 var4 = -ArchiveProvider.field_b * 6;
                                 var5 = 0;
-                                var97 = uca.a(var5, (byte) 9, new int[]{5, 6, 6, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 10, 11, 11, 0, 0, 1, 1, 2, 2, 0, 0}, var4);
+                                var97 = GameSession.a(var5, (byte) 9, new int[]{5, 6, 6, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 10, 11, 11, 0, 0, 1, 1, 2, 2, 0, 0}, var4);
                                 var56_ref = new ShipComponentDefinition(var97, 0, 0);
                                 ta.a(var97, 121, var56_ref);
                                 var56_ref.scaleMassDown(107, 15);
@@ -877,7 +877,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var8_ref_wfb.field_f = true;
                                 var4 = -ArchiveProvider.field_a * 2;
                                 var5 = -ArchiveProvider.field_b / 2;
-                                var98 = uca.a(var5, (byte) 9, new int[]{5, 6, 7, 6, 9, 0, 11, 0, 1}, var4);
+                                var98 = GameSession.a(var5, (byte) 9, new int[]{5, 6, 7, 6, 9, 0, 11, 0, 1}, var4);
                                 var58_ref = new ShipComponentDefinition(var98, 0, 0);
                                 ta.a(var98, 120, var58_ref);
                                 var58_ref.scaleMassDown(114, 15);
@@ -888,7 +888,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 hab.field_g[10] = var58_ref;
                                 var4 = -(ArchiveProvider.field_b / 2) + 4 * -ArchiveProvider.field_b;
                                 var5 = ArchiveProvider.field_b / 2;
-                                var99 = uca.a(var5, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 6, 4, 6, 8, 9, 10, 0, 2, 0, 0, 10, 0, 2, 0, 10, 0}, var4);
+                                var99 = GameSession.a(var5, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 6, 4, 6, 8, 9, 10, 0, 2, 0, 0, 10, 0, 2, 0, 10, 0}, var4);
                                 var60_ref = new ShipComponentDefinition(var99, 0, 0);
                                 ta.a(var99, 114, var60_ref);
                                 var60_ref.scaleMassDown(120, 15);

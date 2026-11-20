@@ -1051,7 +1051,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         var3 = 33 % ((param0 + 34) / 63);
         var4 = param1;
         if (3 == var4) {
-          return (GpuMaterialEffect) ((Object) new fta(this, this.field_Ab));
+          return (GpuMaterialEffect) ((Object) new Direct3DUnderwaterMaterialEffect(this, this.field_Ab));
         }
         if (4 == var4) {
           return (GpuMaterialEffect) ((Object) new wcb(this, this.field_Ab, this.field_Mb));

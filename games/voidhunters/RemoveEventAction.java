@@ -110,7 +110,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
             IsaacPacketBuffer var5 = (IsaacPacketBuffer) null;
             this.readState((IsaacPacketBuffer) null, true);
           }
-          param2.world.getMissionControl(0).c((byte) 55);
+          param2.world.getMissionControl(0).removeEvent((byte) 55);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oca.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

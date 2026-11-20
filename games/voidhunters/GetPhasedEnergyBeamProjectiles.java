@@ -187,7 +187,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetMaxShipSize.field_o = param1[34];
           GetPedrosRepairModeSwitchtime.field_o = param1[12];
           fra.field_a = param1[26];
-          bma.field_n = param1[118];
+          OpenGlUnderwaterMaterialEffect.field_n = param1[118];
           GetMissionTerrainNebulaProbability.field_r = param1[198];
           SetVariableActionFactory.field_a = param1[62];
           ana.field_f = param1[105];

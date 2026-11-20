@@ -33,12 +33,12 @@ final class GetLaserFireForce extends ConsoleCommand {
           PacketBuffer var3 = (PacketBuffer) null;
           GetLaserFireForce.a((PacketBuffer) null, (byte) -91);
           if (vqa.field_g != null) {
-            return Integer.toString(vqa.field_g.field_m.b(1).settings.values[param0]);
+            return Integer.toString(vqa.field_g.state.b(1).settings.values[param0]);
           }
           return "Unknown";
         }
         if (vqa.field_g != null) {
-          return Integer.toString(vqa.field_g.field_m.b(1).settings.values[param0]);
+          return Integer.toString(vqa.field_g.state.b(1).settings.values[param0]);
         }
         return "Unknown";
     }

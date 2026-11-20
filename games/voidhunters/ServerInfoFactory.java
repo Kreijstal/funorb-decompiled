@@ -129,7 +129,7 @@ final class ServerInfoFactory implements GameStateFactory {
             GetMessageFadetime.field_o &&
             vqa.field_g != null) {
             if (GetThrusterSmallForce.field_o) {
-              if (!vqa.field_g.field_N &&
+              if (!vqa.field_g.networked &&
                 !GraphicsPresentException.field_a) {
                 stackIn_20_0 = 0;
               } else {
@@ -200,7 +200,7 @@ final class ServerInfoFactory implements GameStateFactory {
           GetMessageFadetime.field_o &&
           vqa.field_g != null) {
           if (GetThrusterSmallForce.field_o) {
-            if (vqa.field_g.field_N) {
+            if (vqa.field_g.networked) {
               if (SetFightersPerPlayerMaximum.field_p) {
                 stackIn_108_0 = (!tob.g(0)) ? 0 : 1;
               } else {

@@ -4,13 +4,13 @@
 final class MissionControl implements DiffableState {
     static String field_f;
     int selectedEvent;
-    private int field_c;
+    private int currentEventIndex;
     private MissionEvent[] events;
     static String field_a;
     private int[] reservedIds;
     int selectedConditionOrAction;
 
-    final void f(byte param0) {
+    final void moveSelectedEventUp(byte param0) {
         MissionEvent var3 = null;
         MissionEvent var4 = null;
         int var2 = 19 / ((param0 - 35) / 63);
@@ -24,7 +24,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean isIdAvailable(int param0, byte param1) {
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         if (null == this.reservedIds) {
@@ -39,7 +39,7 @@ final class MissionControl implements DiffableState {
         return true;
     }
 
-    final void b(byte param0) {
+    final void selectNextItem(byte param0) {
         MissionEvent var2 = null;
         MissionCondition[] var3 = null;
         MissionAction[] var4 = null;
@@ -58,7 +58,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void e(byte param0) {
+    final void removeSelectedItem(byte param0) {
         MissionEvent var2 = null;
         if (this.events != null && this.selectedEvent >= 0 &&
           this.selectedEvent < this.events.length) {
@@ -70,11 +70,11 @@ final class MissionControl implements DiffableState {
           }
         }
         if (param0 != -99) {
-          this.g((byte) -104);
+          this.selectNextEvent((byte) -104);
         }
     }
 
-    final void a(byte param0, MissionCondition param1) {
+    final void addCondition(byte param0, MissionCondition param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -87,7 +87,7 @@ final class MissionControl implements DiffableState {
             this.events[this.selectedEvent].addCondition((byte) -105, param1);
           }
           if (param0 > -112) {
-            this.a(121, (byte) -5);
+            this.isIdAvailable(121, (byte) -5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void a(int param0, GameSnapshot param1) {
+    final void processEvents(int param0, GameSnapshot param1) {
         int var4 = VoidHunters.field_G;
         try {
           GetAngleset.b(false);
@@ -162,19 +162,19 @@ final class MissionControl implements DiffableState {
             this.selectedConditionOrAction = 104;
           }
           if (null != this.events) {
-            this.field_c = 0;
-            while (this.events.length > this.field_c) {
-              this.events[this.field_c].evaluateAndExecute(param1, -40);
-              this.field_c = this.field_c + 1;
+            this.currentEventIndex = 0;
+            while (this.events.length > this.currentEventIndex) {
+              this.events[this.currentEventIndex].evaluateAndExecute(param1, -40);
+              this.currentEventIndex = this.currentEventIndex + 1;
             }
-            this.field_c = -1;
+            this.currentEventIndex = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, TextureFormat param1) {
+    final static int toOpenGlTextureFormat(int param0, TextureFormat param1) {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -229,7 +229,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1, World param2) {
+    final void decrementSelectedItemParameter(int param0, int param1, World param2) {
         MissionEvent var4 = null;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -307,7 +307,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void a(MissionAction param0, int param1) {
+    final void addAction(MissionAction param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -337,7 +337,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void g(byte param0) {
+    final void selectNextEvent(byte param0) {
         if (param0 != 82) {
           return;
         }
@@ -404,21 +404,21 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void c(int param0) {
+    final void createEvent(int param0) {
         MissionEvent var2 = new MissionEvent();
         this.events = (MissionEvent[]) (ija.a(var2, this.events, param0, GetExplosionPushMultiplier.field_o));
         this.selectedEvent = -1 + this.events.length;
     }
 
-    final void c(byte param0) {
+    final void removeEvent(byte param0) {
         SerializableGameState var3;
         if (param0 != 55) {
           var3 = (SerializableGameState) null;
           this.differsFrom((byte) -25, (SerializableGameState) null);
         }
-        if (this.field_c >= 0) {
-          this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.a(GetExplosionPushMultiplier.field_o, this.field_c, param0 ^ 15620, this.events));
-          this.field_c = this.field_c - 1;
+        if (this.currentEventIndex >= 0) {
+          this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.a(GetExplosionPushMultiplier.field_o, this.currentEventIndex, param0 ^ 15620, this.events));
+          this.currentEventIndex = this.currentEventIndex - 1;
         } else {
           this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.a(GetExplosionPushMultiplier.field_o, this.selectedEvent, 15667, this.events));
           if (null != this.events &&
@@ -432,7 +432,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void a(boolean param0, World param1, int param2) {
+    final void incrementSelectedItemParameter(boolean param0, World param1, int param2) {
         MissionEvent var4 = null;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -466,7 +466,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    private final void d(byte param0) {
+    private final void rebuildReservedIds(byte param0) {
         int var4 = 0;
         int var2;
         MissionEvent[] var3;
@@ -484,8 +484,8 @@ final class MissionControl implements DiffableState {
         Object var17;
         MissionAction var18;
         Object var19;
-        hd var20;
-        hd var21;
+        BodyIdReferences var20;
+        BodyIdReferences var21;
         int var9Lifetime1;
         var17 = null;
         var19 = null;
@@ -503,8 +503,8 @@ final class MissionControl implements DiffableState {
               for (var9 = 0; var9 < var13.length; var9++) {
                 var16 = var13[var9];
                 var10 = var16;
-                if (var10 instanceof hd) {
-                  var20 = (hd) ((Object) var16);
+                if (var10 instanceof BodyIdReferences) {
+                  var20 = (BodyIdReferences) ((Object) var16);
                   this.reservedIds = var20.collectReferencedBodyIds(121, this.reservedIds);
                 }
               }
@@ -516,8 +516,8 @@ final class MissionControl implements DiffableState {
               while (var14.length > var15) {
                 var18 = var14[var15];
                 var10_ref = var18;
-                if (var10_ref instanceof hd) {
-                  var21 = (hd) ((Object) var18);
+                if (var10_ref instanceof BodyIdReferences) {
+                  var21 = (BodyIdReferences) ((Object) var18);
                   this.reservedIds = var21.collectReferencedBodyIds(114, this.reservedIds);
                 }
                 var15++;
@@ -530,16 +530,16 @@ final class MissionControl implements DiffableState {
     final MissionEvent[] getEvents(int param0) {
         if (param0 != 1) {
           GameSnapshot var3 = (GameSnapshot) null;
-          this.a(23, (GameSnapshot) null);
+          this.processEvents(23, (GameSnapshot) null);
         }
         return this.events;
     }
 
     public MissionControl() {
-        this.field_c = -1;
+        this.currentEventIndex = -1;
     }
 
-    final void a(int param0) {
+    final void toggleSelectedConditionNegation(int param0) {
         MissionEvent var2 = null;
         if (param0 != -828) {
           this.selectedEvent = 33;
@@ -551,10 +551,10 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final void a(int param0, MissionEvent param1) {
+    final void addEvent(int param0, MissionEvent param1) {
         try {
           this.events = (MissionEvent[]) (ija.a(param1, this.events, param0, GetExplosionPushMultiplier.field_o));
-          this.d((byte) -111);
+          this.rebuildReservedIds((byte) -111);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

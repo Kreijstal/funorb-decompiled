@@ -113,7 +113,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
           }
           for (var4_int = 0; var4_int < param1.length; var4_int++) {
             var5 = param1[var4_int];
-            var6 = param2.world.d((byte) -27, var5);
+            var6 = param2.world.getBodyById((byte) -27, var5);
             if (var6 != null) {
               var7 = 1;
               var8 = this.mode;

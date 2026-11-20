@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SetShipTeamAction extends MissionAction implements DiffableState, hd {
+final class SetShipTeamAction extends MissionAction implements DiffableState, BodyIdReferences {
     static dfa field_b;
     static String field_a;
     private int targetBody;
@@ -93,7 +93,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
             var8 = param3;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var8 == var7))) {
-              if (null == param0.d((byte) -27, var8) &&
+              if (null == param0.getBodyById((byte) -27, var8) &&
                 var8 != -1) {
                 var8 = var8 + var5_int;
                 continue;
@@ -246,7 +246,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = param2.world.d((byte) -27, param0);
+          var4 = param2.world.getBodyById((byte) -27, param0);
           if (var4 != null &&
             var4 instanceof Ship) {
             var5 = (Ship) (var4);
@@ -294,7 +294,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param0.d((byte) -27, this.targetBody);
+          var3 = param0.getBodyById((byte) -27, this.targetBody);
           if (param1 != 26964) {
             this.targetBody = -27;
           }

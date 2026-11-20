@@ -533,7 +533,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         var3 = -123 / ((-34 - param0) / 63);
         var4 = param1;
         if (3 == var4) {
-          return (GpuMaterialEffect) ((Object) new bma(this, this.field_Ab));
+          return (GpuMaterialEffect) ((Object) new OpenGlUnderwaterMaterialEffect(this, this.field_Ab));
         }
         if (var4 == 4) {
           return (GpuMaterialEffect) ((Object) new vsb(this, this.field_Ab, this.field_Mb));

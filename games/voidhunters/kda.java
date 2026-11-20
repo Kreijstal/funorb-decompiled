@@ -491,7 +491,7 @@ final class kda {
                 if (var17_ref instanceof CarouselPlayerEvent) {
                   var9_int = ((CarouselPlayerEvent) (var17_ref)).field_k;
                 }
-                var18 = param5.e(param3 + 101).a(param3 ^ 6, var9_int);
+                var18 = param5.e(param3 + 101).getPlayerName(param3 ^ 6, var9_int);
                 SetDebrisGrabbingRange.a((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
                 ifb.l(-118);
               }

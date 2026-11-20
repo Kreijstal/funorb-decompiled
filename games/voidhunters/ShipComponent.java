@@ -254,7 +254,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                     if (var7 != null) {
                       var8 = param3;
                       if (var7.targetId >= 0) {
-                        var8 = param2.d((byte) -27, var7.targetId);
+                        var8 = param2.getBodyById((byte) -27, var7.targetId);
                       }
                       if (var8 != null) {
                         this.aimAt(var8.getX(false) + var7.targetX, true, 0, var8.getY((byte) -87) + var7.targetY, 21750, 0);
@@ -1917,7 +1917,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var8 = new Debris(param1, param0);
                 var8.dx = param4.dx;
                 var8.dy = param4.dy;
-                param2.a(var8, (byte) 37);
+                param2.addDebris(var8, (byte) 37);
                 if (!param0 &&
                   SetTorpedoAimspeed.field_o > 0) {
                   var8.addDirectionalForce(var8.y, var7, var8.x, var8.getMass(false) * SetTorpedoAimspeed.field_o >> 8, 1948934248);
@@ -3262,7 +3262,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               }
               var7.detachFromBody(param0, -19625, param3);
               var9 = new Debris(var7, false);
-              param0.a(var9, (byte) 124);
+              param0.addDebris(var9, (byte) 124);
               this.removeSubcomponent(121, var6_int);
               param3.recalculateMassProperties((byte) 119);
               stackIn_9_0 = var9;
@@ -3921,7 +3921,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var13.dx = param5.dx;
           }
           var13.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var11 + hob.a(param0, 200, 118))), this.finalx, var12, 1948934248);
-          param1.a(var13, (byte) 50);
+          param1.addDebris(var13, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -310,7 +310,7 @@ final class AsteroidFactory implements GameStateFactory {
             var4Lifetime3++;
           }
           if (param0 != GetMassDriverAimspeed.field_o) {
-            mba.field_a.a(param1, -1, 0, uca.a(true, PlayerGameData.field_b, uia.field_b));
+            mba.field_a.a(param1, -1, 0, GameSession.a(true, PlayerGameData.field_b, uia.field_b));
           } else {
             mba.field_a.a(param1, -1, -1, -1);
           }

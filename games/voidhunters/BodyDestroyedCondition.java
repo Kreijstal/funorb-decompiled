@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BodyDestroyedCondition extends MissionCondition implements DiffableState, hd {
+final class BodyDestroyedCondition extends MissionCondition implements DiffableState, BodyIdReferences {
     private int bodyId;
     static String field_d;
 
@@ -71,7 +71,7 @@ final class BodyDestroyedCondition extends MissionCondition implements DiffableS
             if (var8 == var7) {
               return;
             }
-            if (null == param0.d((byte) -27, var8)) {
+            if (null == param0.getBodyById((byte) -27, var8)) {
               var8 = var8 + var5_int;
               continue;
             }
@@ -139,7 +139,7 @@ final class BodyDestroyedCondition extends MissionCondition implements DiffableS
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_6_0 = (null == param2.d((byte) -27, this.bodyId));
+            stackIn_6_0 = (null == param2.getBodyById((byte) -27, this.bodyId));
             return stackIn_6_0;
           }
           return false;
@@ -296,7 +296,7 @@ final class BodyDestroyedCondition extends MissionCondition implements DiffableS
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.d((byte) -27, this.bodyId);
+          var4 = param0.getBodyById((byte) -27, this.bodyId);
           var3 = var4;
           if (param1 != -20605) {
             stackIn_2_0 = (WorldPoint[]) null;

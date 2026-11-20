@@ -114,7 +114,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
               if (param0 != -100) {
                 return;
               }
-              var3 = NebulaField.a((byte) -86);
+              var3 = NebulaField.acquireTemporaryObjective((byte) -86);
               if (var3 != null) {
                 var3.field_c = param2;
                 var3.field_a = param1;

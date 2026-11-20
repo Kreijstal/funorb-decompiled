@@ -64,7 +64,7 @@ final class CommonGameState implements DiffableState, mfa {
         RuntimeException var3_ref = null;
         try {
           if (param0 <= 54) {
-            this.a(125, -119);
+            this.getPlayerName(125, -119);
           }
           var3 = (CommonGameState) (param1);
           if (null == this.carouselInfo) {
@@ -221,7 +221,7 @@ final class CommonGameState implements DiffableState, mfa {
         }
     }
 
-    public final String a(int param0, int param1) {
+    public final String getPlayerName(int param0, int param1) {
         if (SetMissionResnetResourceTickTime.field_p == param0 &&
           !this.b(1).a(param1, (byte) 59).field_a) {
           return "Bot " + param1;
@@ -403,10 +403,10 @@ final class CommonGameState implements DiffableState, mfa {
               var12.world.a(var14, -38);
               var15 = new Asteroid(new ShipComponent(54));
               var15.setPosition(65536, 81920, (byte) -60);
-              var12.world.a((byte) 126, var15);
+              var12.world.addAsteroid((byte) 126, var15);
               var16 = new Asteroid(new ShipComponent(50));
               var16.setPosition(-131072, 65536, (byte) 69);
-              var12.world.a((byte) 126, var16);
+              var12.world.addAsteroid((byte) 126, var16);
             }
           } else {
             if (!SetMissionTerrainAsteroidProbability.field_o) {

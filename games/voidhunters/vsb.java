@@ -4,10 +4,10 @@
 final class vsb extends GpuMaterialEffect {
     private rga field_e;
     private OpenGlGpuToolkit field_f;
-    private gla field_g;
+    private OpenGlArbProgram field_g;
 
     final void enable(int param0, boolean param1) {
-        jaggl.OpenGL.glBindProgramARB(34336, this.field_g.field_c);
+        jaggl.OpenGL.glBindProgramARB(34336, this.field_g.programId);
         jaggl.OpenGL.glEnable(34336);
         this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
         if (param0 != 5) {

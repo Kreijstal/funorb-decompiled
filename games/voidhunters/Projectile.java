@@ -140,7 +140,7 @@ final class Projectile extends MovingObject implements DiffableState {
                 if (this.type == 6) {
                   var3 = null;
                   if (this.targetBody < 0) {
-                    var16 = param1.a(true, this.y, this.x, this.firedTeam);
+                    var16 = param1.findNearestEnemyOrDebris(true, this.y, this.x, this.firedTeam);
                     var3 = var16;
                     if (var16 != null) {
                       var4 = 0;
@@ -157,7 +157,7 @@ final class Projectile extends MovingObject implements DiffableState {
                       }
                     }
                   } else {
-                    var15 = param1.d((byte) -27, this.targetBody);
+                    var15 = param1.getBodyById((byte) -27, this.targetBody);
                     var3 = var15;
                     if (var15 == null ||
                       param1.a(var15, -76)) {

@@ -546,7 +546,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("quickchat_lobby", 23100);
                 if (null != var2) {
-                  uca.field_D = qpa.a((byte) -125, var2);
+                  GameSession.field_D = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("message_game", 23100);
                 if (null != var2) {

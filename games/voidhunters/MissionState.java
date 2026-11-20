@@ -1192,7 +1192,7 @@ final class MissionState implements DiffableState {
               if (this.phaseChangeCountdown == 0) {
                 this.a(0, param0);
               }
-              var14.a((byte) 127, param0);
+              var14.updateMissionLogic((byte) 127, param0);
               return;
             }
             if (this.missionPhase != 5) {
@@ -1225,7 +1225,7 @@ final class MissionState implements DiffableState {
                 }
               }
             } else {
-              var14.a((byte) 127, param0);
+              var14.updateMissionLogic((byte) 127, param0);
               if (this.a(false, param0)) {
                 this.b(false, -1);
                 return;

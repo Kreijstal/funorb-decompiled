@@ -57,7 +57,7 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
           var3 = new PlayerAction();
           var3.specialOrderSubmessage = new SpecialOrderSubmessage();
           var3.specialOrderSubmessage.settingsChange = new SettingsChange(param0, param2);
-          vqa.field_g.a(param1 ^ 62, true, var3);
+          vqa.field_g.submitPlayerAction(param1 ^ 62, true, var3);
         }
     }
 

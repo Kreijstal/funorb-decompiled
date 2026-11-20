@@ -20,9 +20,9 @@ final class wqb extends mfb {
     final int c(int param0) {
         if (param0 != 0) {
           field_e = (Hashtable) null;
-          return bma.field_n;
+          return OpenGlUnderwaterMaterialEffect.field_n;
         }
-        return bma.field_n;
+        return OpenGlUnderwaterMaterialEffect.field_n;
     }
 
     public static void clearSharedReferences(byte param0) {

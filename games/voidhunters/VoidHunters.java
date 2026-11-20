@@ -175,7 +175,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var4;
         Object var5;
         int var7;
-        uca var8;
+        GameSession var8;
         int var4Lifetime1;
         int var4Lifetime2;
         Object var3Lifetime1;
@@ -196,7 +196,7 @@ public final class VoidHunters extends NetworkGameClient {
           GraphicsPresentException.field_a = true;
           HardpointMatch.field_d = false;
           if (vqa.field_g != null &&
-            !vqa.field_g.field_N) {
+            !vqa.field_g.networked) {
             SecondaryNodeQueue.field_b = 0;
             GetSniperCannonProjectiles.field_p = false;
             SetDebrisSurvives.e((byte) -86);
@@ -244,7 +244,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (59 == param0) {
               GetDebrisThrowable.a(false, "Stop game packet");
               if (null != vqa.field_g &&
-                !vqa.field_g.field_N) {
+                !vqa.field_g.networked) {
                 return;
               }
               GetDebrisThrowable.a(false, "Stop game! playing=" + GetThrusterSmallForce.field_o + ", spectating=" + SetMissionTerrainDebrisProbability.field_p);
@@ -292,7 +292,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (param0 == 63) {
               var4 = qga.field_b.readUnsignedByte((byte) -107);
               if (var3 != null) {
-                ((uca) (var3)).field_m.field_f = var4;
+                ((GameSession) (var3)).state.field_f = var4;
                 decompiledFrameRemainder0 = (null != vqa.field_g);
                 if (decompiledFrameRemainder0) {
                   sna.d(-19057);
@@ -307,7 +307,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (param0 == 65) {
                   var4Lifetime1 = qga.field_b.readUnsignedByte((byte) -110);
                   if (var3 != null) {
-                    ((uca) (var3)).field_m.field_k = var4Lifetime1;
+                    ((GameSession) (var3)).state.field_k = var4Lifetime1;
                     if (null == vqa.field_g) {
                       return;
                     }
@@ -318,7 +318,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (param0 == 66) {
                   var4Lifetime1Lifetime1 = qga.field_b.readUnsignedByte((byte) -128);
                   if (var3 != null) {
-                    ((uca) (var3)).field_B = var4Lifetime1Lifetime1;
+                    ((GameSession) (var3)).field_B = var4Lifetime1Lifetime1;
                     if (null == vqa.field_g) {
                       return;
                     }
@@ -332,13 +332,13 @@ public final class VoidHunters extends NetworkGameClient {
                 if ((param0 == 11 ||
                   12 == param0) &&
                   (vqa.field_g != null &&
-                  vqa.field_g.field_N &&
+                  vqa.field_g.networked &&
                   GetThrusterSmallForce.field_o)) {
                   GetNebulaFadesOutWhenClose.a(-118, fa.field_d[5]);
                 }
                 var5 = null;
                 if (var3 != null) {
-                  var5 = ((uca) (var3)).field_m.carouselInfo;
+                  var5 = ((GameSession) (var3)).state.carouselInfo;
                 }
                 if (di.field_l.a(RequestNewestBlackboxRecording.field_p, qga.field_b, GetThrusterSmallForce.field_o, (byte) 7, param0, (CarouselCommongameInfo) (var5))) {
                   return;
@@ -349,7 +349,7 @@ public final class VoidHunters extends NetworkGameClient {
               var4Lifetime2 = qga.field_b.readUnsignedByte((byte) -90);
               if (var3 != null &&
                 !di.field_l.a(-28208)) {
-                ((uca) (var3)).field_m.field_j = var4Lifetime2;
+                ((GameSession) (var3)).state.field_j = var4Lifetime2;
                 return;
               }
               di.field_l.a(-29804, var4Lifetime2);
@@ -367,7 +367,7 @@ public final class VoidHunters extends NetworkGameClient {
               GpuSprite.field_e = false;
               GetSniperCannonProjectiles.field_p = false;
               if (param0 == 57) {
-                vqa.field_g = (uca) (var3Lifetime1);
+                vqa.field_g = (GameSession) (var3Lifetime1);
                 GetThrusterSmallForce.field_o = true;
                 sna.d(-19057);
                 VariableCondition.b(-126);
@@ -501,9 +501,9 @@ public final class VoidHunters extends NetworkGameClient {
         boolean decompiledFrameRemainder0 = true;
         if ((ssa.b(2) ||
           (vqa.field_g != null &&
-          vqa.field_g.field_m.carouselInfo.field_k ||
+          vqa.field_g.state.carouselInfo.field_k ||
           ProxyAuthenticationException.field_a != null &&
-          ProxyAuthenticationException.field_a.field_m.carouselInfo.field_k) &&
+          ProxyAuthenticationException.field_a.state.carouselInfo.field_k) &&
           null != di.field_l &&
           null == di.field_l.field_j) && (SocketNetworkArchiveClient.g(-114) &&
           SetMachineGunEnergyUsed.field_o[82] &&
@@ -530,7 +530,7 @@ public final class VoidHunters extends NetworkGameClient {
             GetReverbDry.a(-115);
             if (1 == var4) {
               if (vqa.field_g == null ||
-                vqa.field_g.field_N) {
+                vqa.field_g.networked) {
                 SetMassDriverFireForce.field_o = true;
                 HardpointMatch.field_d = true;
               }
@@ -668,7 +668,7 @@ public final class VoidHunters extends NetworkGameClient {
         int stackIn_5_0 = 0;
         int var2;
         int var3;
-        uca var4;
+        GameSession var4;
         int var5;
         int var6_int;
         MidiChannelLevels var6;
@@ -887,7 +887,7 @@ public final class VoidHunters extends NetworkGameClient {
         ufb.clearSharedReferences(false);
         vfa.clearSharedReferences((byte) 120);
         wf.clearSharedReferences(3);
-        uca.clearSharedReferences(!param0 ? true : false);
+        GameSession.clearSharedReferences(!param0 ? true : false);
         PlayerGameData.clearSharedReferences(-106);
         djb.clearSharedReferences((byte) -107);
         fcb.clearSharedReferences(111);
@@ -1250,7 +1250,7 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlGpuRectangleTexture.clearSharedReferences(106);
         OpenGlGpuCubeTexture.clearSharedReferences(6);
         OpenGlGpuTexture3D.clearSharedReferences(148);
-        gla.clearSharedReferences(-5709);
+        OpenGlArbProgram.clearSharedReferences(-5709);
         fib.clearSharedReferences(-113);
         OpenGlVertexDeclaration.clearSharedReferences(23008);
         tb.clearSharedReferences(-75);
@@ -1867,7 +1867,7 @@ public final class VoidHunters extends NetworkGameClient {
         int stackIn_10_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_32_0 = 0;
-        uca stackIn_43_0 = null;
+        GameSession stackIn_43_0 = null;
         int stackIn_43_1 = 0;
         boolean stackIn_44_2 = false;
         boolean stackIn_48_0 = false;
@@ -1962,7 +1962,7 @@ public final class VoidHunters extends NetworkGameClient {
             wgb.field_f == GetArmageddonTimerStart.field_o &&
             var5 == 0 && ((psb.field_b != null ||
             SetReverbDamp.field_o) &&
-            (!vqa.field_g.field_N ||
+            (!vqa.field_g.networked ||
             !GetSniperCannonProjectiles.field_p &&
             !SetFightersPerPlayerMaximum.field_p))) {
             stackIn_32_0 = 1;
@@ -1995,11 +1995,11 @@ public final class VoidHunters extends NetworkGameClient {
                 }
                 if (!GraphicsPresentException.field_a ||
                   null != vqa.field_g &&
-                  !vqa.field_g.field_N) {
+                  !vqa.field_g.networked) {
                   stackIn_43_0 = vqa.field_g;
                   stackIn_43_1 = 81;
                   stackIn_44_2 = (var5 == 0);
-                  ((uca) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_44_2);
+                  ((GameSession) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_44_2);
                   if (!GraphicsPresentException.field_a) {
                     while (ata.e(127)) {
                       stackOut_47_0 = GetSpinningBladeAimspeed.a(-22029);
@@ -2053,7 +2053,7 @@ public final class VoidHunters extends NetworkGameClient {
                 GetBombletSprayReload.a(-119, var8, var7);
                 GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.e((byte) 93), var4 != 0, SetThrusterForce.a(-99), 123);
                 BodyDestroyedCondition.b(-1);
-                if (vqa.field_g.field_N) {
+                if (vqa.field_g.networked) {
                   vqa.field_g.a((byte) 89, var4 != 0);
                 }
               }

@@ -14,7 +14,7 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
           this.width = param2;
           this.toolkit.setTexture((GpuTexture) (this), -108);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Df(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5126, param4, 4 * param5);
+          jaggl.OpenGL.glTexImage2Df(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), 5126, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
@@ -61,7 +61,7 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
           this.toolkit.setTexture((GpuTexture) (this), -108);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5121, param4, param5);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), 5121, param4, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
@@ -173,7 +173,7 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
           this.height = param4;
           this.width = param3;
           this.toolkit.setTexture((GpuTexture) (this), -109);
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

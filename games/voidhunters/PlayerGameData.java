@@ -318,7 +318,7 @@ final class PlayerGameData implements DiffableState {
           if (obfuscationGuard >= -19) {
             this.a((byte) 101);
           }
-          if (uca.a(this.tipsDone, var5.tipsDone, -48)) {
+          if (GameSession.a(this.tipsDone, var5.tipsDone, -48)) {
             System.out.println("boolean[] tips_done has changed. ");
             var4 = 1;
           }

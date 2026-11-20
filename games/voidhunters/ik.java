@@ -238,7 +238,7 @@ final class ik extends IntrusiveNode {
         var2[126] = GetRepairModePower.field_q;
         var2[212] = SetMissileLauncherFireForce.field_q;
         var2[200] = SetPointDefenceLaserEnergyUsed.field_o;
-        var2[118] = bma.field_n;
+        var2[118] = OpenGlUnderwaterMaterialEffect.field_n;
         var2[168] = GetMissionResnetResourceTickTime.field_o;
         var2[55] = SettingsChangeFactory.field_c;
         var2[27] = di.field_p;

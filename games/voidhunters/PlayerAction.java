@@ -123,12 +123,12 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           if (param3 != -59) {
             return;
           }
-          var5 = param0.m(1) >> 1;
+          var5 = param0.getHeight(1) >> 1;
           if (MidiPcmStream.field_z > 0) {
             var14 = new Random(234890L);
             for (var7 = 0; var7 < MidiPcmStream.field_z; var7++) {
               var8 = hob.a(var14, param0.getWidth((byte) -122), 127) - var4_int;
-              var9 = -var5 + hob.a(var14, param0.m(1), param3 + 175);
+              var9 = -var5 + hob.a(var14, param0.getHeight(1), param3 + 175);
               var10 = hob.a(var14, 800, param3 + 179) + 200;
               var11 = (int)(param1.field_a * (float)(var10 << 8));
               if (var11 > 255) {
@@ -431,7 +431,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var7 = (Exception) (Object) decompiledCaughtException;
-              SetVelocitySustainMax.a((Throwable) ((Object) var7), true, "Invalid blueprint action from player " + this.field_k + " AKA " + param0.a(1, this.field_k));
+              SetVelocitySustainMax.a((Throwable) ((Object) var7), true, "Invalid blueprint action from player " + this.field_k + " AKA " + param0.getPlayerName(1, this.field_k));
             }
             return;
           }

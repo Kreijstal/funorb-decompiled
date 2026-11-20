@@ -4,14 +4,14 @@
 final class NebulaField implements DiffableState, ofa {
     private Nebula[] nebulae;
     static int field_d;
-    private int field_a;
+    private int revision;
     static int field_c;
 
-    final Nebula a(byte param0, int param1) {
+    final Nebula removeNebula(byte param0, int param1) {
         Nebula var3 = this.nebulae[param1];
         int var4 = -90 / ((param0 - 0) / 38);
         this.nebulae = (Nebula[]) (GetSalvoUsesAllEnergy.a(rma.field_c, param1, 15667, this.nebulae));
-        this.a(125);
+        this.markChanged(125);
         return var3;
     }
 
@@ -55,12 +55,12 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    private final void a(int param0) {
+    private final void markChanged(int param0) {
         int fieldTemp$0 = sja.field_g;
         sja.field_g = sja.field_g + 1;
-        this.field_a = fieldTemp$0;
+        this.revision = fieldTemp$0;
         if (param0 <= 118) {
-          NebulaField.a((byte) 80);
+          NebulaField.acquireTemporaryObjective((byte) 80);
         }
     }
 
@@ -156,18 +156,18 @@ final class NebulaField implements DiffableState, ofa {
           return;
         }
         NebulaField var3 = (NebulaField) (param1);
-        if (var3.field_a == this.field_a) {
+        if (var3.revision == this.revision) {
           return;
         }
         try {
-          var3.field_a = this.field_a;
+          var3.revision = this.revision;
           var3.nebulae = (Nebula[]) (SpriteDimensions.copyStateArrayByMode(var3.nebulae, this.nebulae, 1, rma.field_c, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(Nebula param0, int param1) {
+    final int addNebula(Nebula param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
@@ -182,9 +182,9 @@ final class NebulaField implements DiffableState, ofa {
             return stackIn_4_0;
           }
           this.nebulae = (Nebula[]) (ija.a(param0, this.nebulae, 0, rma.field_c));
-          this.a(124);
+          this.markChanged(124);
           if (param1 <= 73) {
-            this.a(60);
+            this.markChanged(60);
           }
           stackIn_8_0 = -1 + this.nebulae.length;
           return stackIn_8_0;
@@ -202,9 +202,9 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    final Nebula[] a(boolean param0) {
+    final Nebula[] getNebulae(boolean param0) {
         if (param0) {
-          this.field_a = -112;
+          this.revision = -112;
           return this.nebulae;
         }
         return this.nebulae;
@@ -213,7 +213,7 @@ final class NebulaField implements DiffableState, ofa {
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            NebulaField.a((byte) 76);
+            NebulaField.acquireTemporaryObjective((byte) 76);
           }
           this.nebulae = (Nebula[]) (SetAutoDetail.a(12, rma.field_c, param0, 1, -65, this.nebulae));
         } catch (RuntimeException runtimeException) {
@@ -221,7 +221,7 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    final static qsa a(byte param0) {
+    final static qsa acquireTemporaryObjective(byte param0) {
         qsa[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         if (SetKeepTeamColours.field_p.length > GetDebrisCarryOver.field_p) {
@@ -239,8 +239,8 @@ final class NebulaField implements DiffableState, ofa {
     }
 
     NebulaField() {
-        this.field_a = 0;
-        this.a(123);
+        this.revision = 0;
+        this.markChanged(123);
         this.nebulae = null;
     }
 

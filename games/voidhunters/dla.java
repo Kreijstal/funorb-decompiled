@@ -39,10 +39,10 @@ final class dla {
             return;
           }
           var7 = -this.field_f.getWidth((byte) -122) / 2 + hob.a(param1, this.field_f.getWidth((byte) -122), 119);
-          var8 = -this.field_f.m(1) / 2 + hob.a(param1, this.field_f.m(1), 120);
+          var8 = -this.field_f.getHeight(1) / 2 + hob.a(param1, this.field_f.getHeight(1), 120);
           var6.setPosition(var7, var8, (byte) -72);
           var6.setAngle(hob.a(param1, 8192, 126), -85);
-          this.field_f.a(var6, (byte) 125);
+          this.field_f.addShip(var6, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,11 +103,11 @@ final class dla {
         var4 = this.field_b.a(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.a(0, 0);
         if (var3 != this.field_f.getWidth((byte) -122)) {
           this.field_f.setWidth(var3, (byte) 113);
-          this.field_f.e(var4, 0);
+          this.field_f.setHeight(var4, 0);
         } else {
-          if (this.field_f.m(1) != var4) {
+          if (this.field_f.getHeight(1) != var4) {
             this.field_f.setWidth(var3, (byte) 113);
-            this.field_f.e(var4, 0);
+            this.field_f.setHeight(var4, 0);
           }
         }
         this.field_b.field_e = GetBombletSprayEnergyUsed.field_p.height / 2;
@@ -263,7 +263,7 @@ final class dla {
             if (var7 == null) {
               break;
             }
-            this.field_f.a(-118, 1, (ShipBody) (var7));
+            this.field_f.removeBody(-118, 1, (ShipBody) (var7));
             break;
           }
         }
@@ -340,7 +340,7 @@ final class dla {
         var1 = this.field_b.a(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.a(true, 0);
         var2 = this.field_b.a(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.a(0, 0);
         this.field_f.setWidth(var1, (byte) -93);
-        this.field_f.e(var2, 0);
+        this.field_f.setHeight(var2, 0);
         var3 = new Random();
         if (null != es.field_b &&
           null != es.field_b.blueprint) {
@@ -350,7 +350,7 @@ final class dla {
             var5_ref_sg.setTeam(17704, 3);
             var5_ref_sg.setAi(new ShipAI(), 4);
             var5_ref_sg.setAngle(hob.a(var3, 8192, 122), -67);
-            this.field_f.a(var5_ref_sg, (byte) 107);
+            this.field_f.addShip(var5_ref_sg, (byte) 107);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -366,9 +366,9 @@ final class dla {
         }
         var9 = new Asteroid(new ShipComponent(49));
         var5 = -this.field_f.getWidth((byte) -122) / 2 + hob.a(var3, this.field_f.getWidth((byte) -122), 120);
-        var6 = -this.field_f.m(1) / 2 + hob.a(var3, this.field_f.m(1), 123);
+        var6 = -this.field_f.getHeight(1) / 2 + hob.a(var3, this.field_f.getHeight(1), 123);
         var9.setPosition(var5, var6, (byte) 43);
-        this.field_f.a((byte) 126, var9);
+        this.field_f.addAsteroid((byte) 126, var9);
     }
 
     static {

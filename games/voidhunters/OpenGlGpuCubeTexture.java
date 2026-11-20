@@ -32,7 +32,7 @@ final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeText
           var7 = 0;
           var5_intLifetime1 = var7;
           while (var7 < 6) {
-            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.getInternalFormat((byte) -31), param1, param1, 0, MissionControl.a(-29328, this.format), this.toolkit.field_Nc, param3[var7], 0);
+            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.getInternalFormat((byte) -31), param1, param1, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), this.toolkit.field_Nc, param3[var7], 0);
             var7++;
           }
           return;

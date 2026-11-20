@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fta extends GpuMaterialEffect {
+final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
     private jagdx.IDirect3DVertexShader field_e;
     private jagdx.IDirect3DVertexShader field_g;
     private Direct3DToolkit field_m;
@@ -21,7 +21,7 @@ final class fta extends GpuMaterialEffect {
         }
     }
 
-    fta(Direct3DToolkit param0, ResourceArchive param1) {
+    Direct3DUnderwaterMaterialEffect(Direct3DToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -108,14 +108,14 @@ final class fta extends GpuMaterialEffect {
         this.toolkit.setTextureCombineMode(75, param1);
     }
 
-    private final void d(byte param0) {
+    private final void applyUnderwaterShader(byte param0) {
         jagdx.IDirect3DDevice var3 = null;
         int var4 = 0;
         GpuTransform3D var5 = null;
         jagdx.IDirect3DVertexShader var2 = null;
         if (param0 == -46) {
           var3 = this.field_m.field_Mc;
-          var4 = this.toolkit.u((byte) 95);
+          var4 = this.toolkit.getWaterPlaneDistance((byte) 95);
           var5 = this.toolkit.getViewTransform((byte) 20);
           if (!this.field_j) {
             var2 = 2147483647 == var4 ? this.field_e : this.field_i;
@@ -188,7 +188,7 @@ final class fta extends GpuMaterialEffect {
         if (param0 == 8) {
           return;
         }
-        this.d((byte) 92);
+        this.applyUnderwaterShader((byte) 92);
     }
 
     final boolean isSupported(byte param0) {
@@ -234,7 +234,7 @@ final class fta extends GpuMaterialEffect {
           this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
           this.toolkit.setAlphaCombineSource(0, (byte) -108, pja.field_l);
           this.toolkit.setActiveTextureUnit(0, -72);
-          this.d((byte) -46);
+          this.applyUnderwaterShader((byte) -46);
           return;
         }
         this.field_l = (jagdx.IDirect3DVertexShader) null;
@@ -243,7 +243,7 @@ final class fta extends GpuMaterialEffect {
         this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
         this.toolkit.setAlphaCombineSource(0, (byte) -108, pja.field_l);
         this.toolkit.setActiveTextureUnit(0, -72);
-        this.d((byte) -46);
+        this.applyUnderwaterShader((byte) -46);
     }
 
     final void onModelTransformChanged(int param0) {
@@ -273,8 +273,8 @@ final class fta extends GpuMaterialEffect {
           var5 = (float)var3 - 0.125f * (float)(-var4 + var3);
           var6 = -((float)(var3 - var4) * 0.25f) + (float)var3;
           var2.setVertexShaderConstant(10, var6, 1.0f / (var5 - var6), var5, 1.0f / (-var5 + (float)var3));
-          var2.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.D(117), (float)this.toolkit.a(false) / 255.0f, this.toolkit.field_r, 1.0f / (this.toolkit.field_r - this.toolkit.field_p));
-          this.toolkit.setTextureConstantColor(-125, this.toolkit.D((byte) -126));
+          var2.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.getUnderwaterDepthScale(117), (float)this.toolkit.getUnderwaterFogStrength(false) / 255.0f, this.toolkit.field_r, 1.0f / (this.toolkit.field_r - this.toolkit.field_p));
+          this.toolkit.setTextureConstantColor(-125, this.toolkit.getUnderwaterFogColor((byte) -126));
         }
         if (param0) {
           return;

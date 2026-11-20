@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BodyInZoneCondition extends MissionCondition implements DiffableState, hd {
+final class BodyInZoneCondition extends MissionCondition implements DiffableState, BodyIdReferences {
     static String field_c;
     private int bodyId;
     private int zoneId;
@@ -35,7 +35,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           if (param1 != -20605) {
             this.readState((IsaacPacketBuffer) null, true);
           }
-          var5 = param0.d((byte) -27, this.bodyId);
+          var5 = param0.getBodyById((byte) -27, this.bodyId);
           var3 = var5;
           var4 = param0.getMapZone((byte) -126, this.zoneId);
           if (var3 != null &&
@@ -323,7 +323,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
             if (var7Lifetime1 == var8Lifetime1) {
               return;
             }
-            if (param0.d((byte) -27, var8Lifetime1) == null &&
+            if (param0.getBodyById((byte) -27, var8Lifetime1) == null &&
               var8Lifetime1 != -1) {
               var8Lifetime1 = var8Lifetime1 + var5_intLifetime1;
               continue;
@@ -434,7 +434,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
             return false;
           }
           if (param0 != ~this.bodyId) {
-            var10 = param2.d((byte) -27, this.bodyId);
+            var10 = param2.getBodyById((byte) -27, this.bodyId);
             if (var10 != null) {
               stackIn_9_0 = var4.a(var10.getY((byte) -62), var10.getX(false), (byte) -98);
               return stackIn_9_0;

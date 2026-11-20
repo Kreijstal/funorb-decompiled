@@ -264,7 +264,7 @@ final class WeaponBehaviour implements DiffableState {
               var35Lifetime1 = -var19 + hob.a(var29, var19 << 1, 121);
             }
             var36 = new Projectile(var30, var31, var26 + var34Lifetime1, var27 + var35Lifetime1, param12, var22, param3, param9, var23, var32);
-            param15.a(var36, false);
+            param15.addProjectile(var36, false);
           }
           if (this.weapontype != 6 &&
             this.weapontype != 9 &&
@@ -416,7 +416,7 @@ final class WeaponBehaviour implements DiffableState {
             var26.a(var23, true);
             var25.setAi(var26, 4);
             var25.addDirectionalForce(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
-            param0.a(var25, (byte) 72);
+            param0.addShip(var25, (byte) 72);
             this.reload = var34.f((byte) 77);
             GetFighterVision.a(6811, var34.a(false), 1 + this.reload / 2);
             return;
@@ -476,7 +476,7 @@ final class WeaponBehaviour implements DiffableState {
             if (this.targetLock == null) {
               this.targetLock = new TargetLock();
             }
-            var29 = param0.a(true, param6, param3, ((Ship) (var24)).getTeam((byte) 83));
+            var29 = param0.findNearestEnemyOrDebris(true, param6, param3, ((Ship) (var24)).getTeam((byte) 83));
             var30 = 0;
             if (var29 != null) {
               var31 = -param3 + var29.x;

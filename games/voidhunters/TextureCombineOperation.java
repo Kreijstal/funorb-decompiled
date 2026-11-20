@@ -41,7 +41,7 @@ final class TextureCombineOperation {
               if (var9 instanceof BodyDestroyedCondition) {
                 var21 = (BodyDestroyedCondition) (var9);
                 var11 = var21.getParameter((byte) -123, 0);
-                var20 = param6.world.d((byte) -27, var11);
+                var20 = param6.world.getBodyById((byte) -27, var11);
                 var12 = var20;
                 if (var20 != null) {
                   if (param3 == param5) {
@@ -54,7 +54,7 @@ final class TextureCombineOperation {
                 if (var9 instanceof TeamShipComponentCondition) {
                   var15 = (TeamShipComponentCondition) (var9);
                   var11 = var15.getParameter((byte) -106, 1);
-                  var19 = param6.world.g((byte) 118, var11);
+                  var19 = param6.world.findBodyWithComponentType((byte) 118, var11);
                   var12 = var19;
                   if (var19 != null) {
                     if (param3 != param5) {
@@ -69,7 +69,7 @@ final class TextureCombineOperation {
               var14 = (BodyInZoneCondition) (var9);
               if (param3 == param5) {
                 var11 = var14.getParameter((byte) -122, 0);
-                var17 = param6.world.d((byte) -27, var11);
+                var17 = param6.world.getBodyById((byte) -27, var11);
                 if (var17 != null) {
                   SetRadialMenuRadius.a((byte) -100, 2, var17);
                 }

@@ -139,7 +139,7 @@ final class CarouselCommongameInfo implements DiffableState {
         if (this.field_g < param0) {
           var4 = -this.field_g + param0;
           if (var4 > this.field_c &&
-            (1 == bma.field_o || param1)) {
+            (1 == OpenGlUnderwaterMaterialEffect.field_o || param1)) {
             this.field_c = var4;
           }
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ShipTeamCondition extends MissionCondition implements DiffableState, hd {
+final class ShipTeamCondition extends MissionCondition implements DiffableState, BodyIdReferences {
     static String[] field_f;
     private int teamId;
     static int field_e;
@@ -159,7 +159,7 @@ final class ShipTeamCondition extends MissionCondition implements DiffableState,
               if (var7 == var8) {
                 return;
               }
-              var9 = param0.d((byte) -27, var8);
+              var9 = param0.getBodyById((byte) -27, var8);
               if ((var9 == null ||
                 !(var9 instanceof Ship)) && -1 != var8) {
                 var8 = var8 + var5_int;

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ProxyAuthenticationException extends IOException {
     static int field_c;
-    static uca field_a;
+    static GameSession field_a;
     static String field_b;
 
     public static void clearSharedReferences(int param0) {

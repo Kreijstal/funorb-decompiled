@@ -70,7 +70,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
           var11 = param2;
           var12 = new byte[var6_int * var9 * var10];
           while (true) {
-            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.getInternalFormat((byte) -31), param4, param1, 0, MissionControl.a(param3 - 29328, this.format), 5121, var11, 0);
+            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.getInternalFormat((byte) -31), param4, param1, 0, MissionControl.toOpenGlTextureFormat(param3 - 29328, this.format), 5121, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -273,7 +273,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
           var11 = param1;
           var12 = new float[var6_int * (var9 * var10)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Df(param0, var7, this.getInternalFormat((byte) -31), param3, param2, 0, MissionControl.a(param4 - 29261, this.format), 5126, var11, 0);
+            jaggl.OpenGL.glTexImage2Df(param0, var7, this.getInternalFormat((byte) -31), param3, param2, 0, MissionControl.toOpenGlTextureFormat(param4 - 29261, this.format), 5126, var11, 0);
             if (var8 <= 1) {
               return;
             }

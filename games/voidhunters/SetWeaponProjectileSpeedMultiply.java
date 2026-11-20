@@ -91,7 +91,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
           if (SetMissileLauncherProjectileLife.field_p == -1) {
             var3 = 4 * -ArchiveProvider.field_b;
             var4 = ArchiveProvider.field_b / 2;
-            var30 = uca.a(var4, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 4, 6, 8, 9, 10, 0, 2, 0, 10, 0, 2, 0, 10, 0}, var3);
+            var30 = GameSession.a(var4, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 4, 6, 8, 9, 10, 0, 2, 0, 10, 0, 2, 0, 10, 0}, var3);
             var22 = new ShipComponentDefinition(var30, 0, 0);
             ta.a(var30, param0 + 12, var22);
             var22.scaleMassDown(102, 15);

@@ -29,7 +29,7 @@ final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D 
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5126, param5, 4 * param6);
+          jaggl.OpenGL.glTexImage2Df(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), 5126, param5, 4 * param6);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D 
           this.toolkit.setTexture((GpuTexture) (this), -116);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(param6, param0);
-          jaggl.OpenGL.glTexSubImage2Dub(this.target, 0, param7, param5, param3, param2, MissionControl.a(param6 ^ -32382, param8), 5121, param1, param4);
+          jaggl.OpenGL.glTexSubImage2Dub(this.target, 0, param7, param5, param3, param2, MissionControl.toOpenGlTextureFormat(param6 ^ -32382, param8), 5121, param1, param4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
@@ -77,7 +77,7 @@ final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D 
           this.height = param4;
           this.width = param3;
           this.toolkit.setTexture((GpuTexture) (this), -118);
-          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -176,7 +176,7 @@ final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D 
             this.uploadByteMipmaps(this.target, param3, param5, 0, param2);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.toOpenGlTextureFormat(-29328, this.format), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -303,7 +303,7 @@ final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D 
         try {
           this.toolkit.setTexture((GpuTexture) (this), -122);
           jaggl.OpenGL.glPixelStorei(3314, param3);
-          jaggl.OpenGL.glTexSubImage2Df(this.target, 0, param6, param5, param7, param0, MissionControl.a(-29328, param1), 5121, param4, param8);
+          jaggl.OpenGL.glTexSubImage2Df(this.target, 0, param6, param5, param7, param0, MissionControl.toOpenGlTextureFormat(-29328, param1), 5121, param4, param8);
           if (param2 >= -35) {
             OpenGlGpuTexture2D.clearSharedReferences((byte) -66);
           }

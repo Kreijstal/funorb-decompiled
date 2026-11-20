@@ -38,7 +38,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     int field_L;
     float lightRed;
     boolean field_uc;
-    private int field_v;
+    private int underwaterFogColor;
     boolean lightingSuppressed;
     private boolean modelViewValid;
     private int field_lb;
@@ -53,7 +53,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     int field_lc;
     private float[] perspectiveProjection;
     float[] projectionMatrix;
-    private int field_Pb;
+    private int waterPlaneDistance;
     float field_p;
     PointLight[] pointLights;
     private boolean orthographicProjectionValid;
@@ -73,7 +73,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     int scissorRight;
     private int field_k;
     int scissorTop;
-    private int field_Ob;
+    private int underwaterFogStrength;
     private int field_V;
     private je field_Ib;
     private jaclib.memory.Stream bufferWriter;
@@ -90,7 +90,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     float lightBlue;
     int field_j;
     boolean field_g;
-    private int field_ib;
+    private int underwaterDepthScale;
     private int field_K;
     boolean alphaTestEnabled;
     private float field_Z;
@@ -561,7 +561,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.lightingSuppressed = false;
         this.depthWriteEnabled = false;
         this.viewportX = 0;
-        this.field_v = -1;
+        this.underwaterFogColor = -1;
         this.field_h = 50;
         this.screenProjection = new float[16];
         this.modelViewValid = false;
@@ -584,7 +584,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.scissorRight = 0;
         this.field_Gb = 0;
         this.antiSunIntensity = -1.0f;
-        this.field_ib = -1;
+        this.underwaterDepthScale = -1;
         this.lightBlue = 1.0f;
         this.lightingEnabled = false;
         this.field_hc = false;
@@ -610,7 +610,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_tb = 16777215;
         this.alphaTestEnabled = true;
         this.effectFogEnabled = true;
-        this.field_Ob = 0;
+        this.underwaterFogStrength = 0;
         this.materialParameter1 = 0;
         this.sunIntensity = -1.0f;
         this.lightRed = 1.0f;
@@ -1885,11 +1885,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_kc == null ? null : this.field_kc.a((byte) -118);
     }
 
-    final int D(int param0) {
+    final int getUnderwaterDepthScale(int param0) {
         if (param0 < 78) {
           this.applyAmbientLight(true);
         }
-        return this.field_ib;
+        return this.underwaterDepthScale;
     }
 
     final void setMaterial(boolean param0, byte param1, boolean param2, int param3) {
@@ -2119,12 +2119,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void setVertexBuffer(byte param0, GpuVertexBuffer param1, int param2);
 
-    final int D(byte param0) {
+    final int getUnderwaterFogColor(byte param0) {
         boolean discarded$0 = false;
         if (param0 > -109) {
           discarded$0 = this.uploadLineVertices(-0.3812601566314697f, 0.24077846109867096f, (byte) 10, 0.3140295147895813f, 0.6470803022384644f, 1.3212025165557861f, 0.2246333807706833f);
         }
-        return this.field_v;
+        return this.underwaterFogColor;
     }
 
     abstract GpuTexture2D createTexture2DFromPixels(int param0, boolean param1, int[] param2, int param3, int param4, boolean param5, int param6);
@@ -2379,20 +2379,20 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return (GraphicsHeap) ((Object) var2);
     }
 
-    final int a(boolean param0) {
+    final int getUnderwaterFogStrength(boolean param0) {
         if (param0) {
           this.materialEffectId = -18;
         }
-        return this.field_Ob;
+        return this.underwaterFogStrength;
     }
 
     abstract GpuTexture2D createTexture2DFromFloats(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7);
 
-    final int u(byte param0) {
+    final int getWaterPlaneDistance(byte param0) {
         if (param0 <= 78) {
           this.field_Z = -0.38502317667007446f;
         }
-        return this.field_Pb;
+        return this.waterPlaneDistance;
     }
 
     final void setViewTransform(Transform3D param0) {

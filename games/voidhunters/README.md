@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1040/1572 classes and 4863/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 532 opaque classes and 3352 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1045/1572 classes and 4944/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 527 opaque classes and 3271 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 

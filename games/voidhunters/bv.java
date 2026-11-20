@@ -556,9 +556,9 @@ final class bv {
               var14 = ae.a((int[]) (var13Lifetime1), (byte) 56);
               var14.setTeam(17704, 1);
               var14.setAi(new ShipAI(), 4);
-              var15 = param1.world.a(0, param1.world.m(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);
+              var15 = param1.world.findSpawnLocation(0, param1.world.getHeight(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);
               var14.setPosition(var15.field_c, var15.field_b, (byte) 80);
-              param1.world.a(var14, (byte) 72);
+              param1.world.addShip(var14, (byte) 72);
               var14.endSpawnProtection(-2);
               var16 = new MissionEvent();
               var16.addCondition((byte) -106, (MissionCondition) (new BodyDestroyedCondition(var14.getId(false))));
@@ -939,7 +939,7 @@ final class bv {
                     GetMassDriverFireForce.field_o = var24_intLifetime1;
                   }
                   var20_ref2 = new IntrusiveDeque();
-                  param12.collectSpecialOrderStatuses(var20_ref2, 9, param2, param0.world.d(param12.getId(false), (byte) 21));
+                  param12.collectSpecialOrderStatuses(var20_ref2, 9, param2, param0.world.isBodyIdReserved(param12.getId(false), (byte) 21));
                   if (var20_ref2.size(3) > 1) {
                     this.a(-26476, 9);
                     if (SetMachineGunEnergyUsed.field_o[81]) {
@@ -1025,7 +1025,7 @@ final class bv {
                       }
                     }
                     if (this.b(7, -106)) {
-                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[7], 255), param0, true, gla.field_b, var16, (byte) 60);
+                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.a(HardpointMatch.field_f[7], 255), param0, true, OpenGlArbProgram.field_b, var16, (byte) 60);
                     }
                   }
                   if (this.b((byte) 11, 10) &&

@@ -151,10 +151,10 @@ final class sna extends TextureOperation {
 
     final static void d(int param0) {
         int var2 = VoidHunters.field_G;
-        if ((1 << vqa.field_g.field_L & vqa.field_g.field_m.field_f) != 0) {
+        if ((1 << vqa.field_g.localPlayerIndex & vqa.field_g.state.field_f) != 0) {
           ifa.field_g[8] = ut.field_a;
         } else {
-          if (vqa.field_g.field_m.field_f != 0) {
+          if (vqa.field_g.state.field_f != 0) {
             ifa.field_g[8] = SetShipDirectionArrow.field_q;
           } else {
             ifa.field_g[8] = PacketBuffer.field_f;
