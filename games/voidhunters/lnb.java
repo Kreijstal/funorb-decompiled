@@ -162,7 +162,7 @@ final class lnb extends TextureOperation {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                ifb.l(-122);
+                FighterBayWeaponDefinition.l(-122);
               }
               RequestNewestBlackboxRecording.field_p.position = 0;
             }

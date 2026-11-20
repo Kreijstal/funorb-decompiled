@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fpb extends mfb {
+final class MassDriverWeaponDefinition extends WeaponDefinition {
     static String field_b;
     static String field_c;
     static byte[][] field_d;
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
-          this.f((byte) -51);
+          this.getReloadTime((byte) -51);
           return 0;
         }
         return 0;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
-          this.b(true);
+          this.getProjectileCount(true);
         }
         return GetPointDefenceLaserAimspeed.field_p;
     }
@@ -94,7 +94,7 @@ final class fpb extends mfb {
         }
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = -52 / ((param0 - 7) / 47);
         return sib.field_i;
     }
@@ -109,59 +109,59 @@ final class fpb extends mfb {
         return MusicPatchPcmStream.field_h;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
-          this.k(-51);
+          this.getProjectileType(-51);
         }
         return 35;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 > -12) {
           return 70;
         }
         return aea.field_a;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
           field_d = (byte[][]) null;
         }
         return adb.field_a;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           field_d = (byte[][]) null;
         }
         return SetSalvoRepairTimeMultiplier.field_p;
     }
 
-    fpb() {
+    MassDriverWeaponDefinition() {
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
-          this.d((byte) -39);
+          this.getProjectileSpeed((byte) -39);
         }
         return ujb.field_h;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           return 14;
         }
         return SelectableIconLabelWidget.field_wb;
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           field_c = (String) null;
         }
         return GetMissionTerrainNebulaProbability.field_p;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = 43 / ((param0 + 48) / 43);
         return Particle.field_x;
     }

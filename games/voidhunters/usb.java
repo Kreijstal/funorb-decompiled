@@ -119,7 +119,7 @@ final class usb extends UiArrayContainer {
         }
     }
 
-    final void d(int param0) {
+    final void layoutChildren(int param0) {
         int incrementValue$0 = 0;
         int var2;
         int var3;
@@ -428,19 +428,19 @@ final class usb extends UiArrayContainer {
           }
           var5_int = param1;
           if (var5_int == 98) {
-            stackIn_11_0 = this.a(param2, 103, this.field_y.length);
+            stackIn_11_0 = this.focusPreviousChild(param2, 103, this.field_y.length);
             return stackIn_11_0;
           }
           if (var5_int == 99) {
-            stackIn_13_0 = this.a(this.field_y.length, param2, 0);
+            stackIn_13_0 = this.focusNextChild(this.field_y.length, param2, 0);
             return stackIn_13_0;
           }
           if (96 == var5_int) {
-            stackIn_15_0 = this.a(param2, (byte) -123);
+            stackIn_15_0 = this.focusPreviousChild(param2, (byte) -123);
             return stackIn_15_0;
           }
           if (97 == var5_int) {
-            stackIn_17_0 = this.b(param2, (byte) 39);
+            stackIn_17_0 = this.focusNextChild(param2, (byte) 39);
             return stackIn_17_0;
           }
           if (param0 != -15834) {

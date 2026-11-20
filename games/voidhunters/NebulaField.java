@@ -10,7 +10,7 @@ final class NebulaField implements DiffableState, ofa {
     final Nebula removeNebula(byte param0, int param1) {
         Nebula var3 = this.nebulae[param1];
         int var4 = -90 / ((param0 - 0) / 38);
-        this.nebulae = (Nebula[]) (GetSalvoUsesAllEnergy.a(rma.field_c, param1, 15667, this.nebulae));
+        this.nebulae = (Nebula[]) (GetSalvoUsesAllEnergy.a(MachineGunWeaponDefinition.field_c, param1, 15667, this.nebulae));
         this.markChanged(125);
         return var3;
     }
@@ -161,7 +161,7 @@ final class NebulaField implements DiffableState, ofa {
         }
         try {
           var3.revision = this.revision;
-          var3.nebulae = (Nebula[]) (SpriteDimensions.copyStateArrayByMode(var3.nebulae, this.nebulae, 1, rma.field_c, false));
+          var3.nebulae = (Nebula[]) (SpriteDimensions.copyStateArrayByMode(var3.nebulae, this.nebulae, 1, MachineGunWeaponDefinition.field_c, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -181,7 +181,7 @@ final class NebulaField implements DiffableState, ofa {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          this.nebulae = (Nebula[]) (ija.a(param0, this.nebulae, 0, rma.field_c));
+          this.nebulae = (Nebula[]) (ija.a(param0, this.nebulae, 0, MachineGunWeaponDefinition.field_c));
           this.markChanged(124);
           if (param1 <= 73) {
             this.markChanged(60);
@@ -215,7 +215,7 @@ final class NebulaField implements DiffableState, ofa {
           if (param1) {
             NebulaField.acquireTemporaryObjective((byte) 76);
           }
-          this.nebulae = (Nebula[]) (SetAutoDetail.a(12, rma.field_c, param0, 1, -65, this.nebulae));
+          this.nebulae = (Nebula[]) (SetAutoDetail.a(12, MachineGunWeaponDefinition.field_c, param0, 1, -65, this.nebulae));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

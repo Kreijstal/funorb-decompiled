@@ -237,8 +237,8 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var6 = 0;
         String var7 = null;
         try {
-          nfa.field_e[0] = jeb.field_b.nextInt();
-          nfa.field_e[1] = jeb.field_b.nextInt();
+          nfa.field_e[0] = CountermeasureLauncherWeaponDefinition.field_b.nextInt();
+          nfa.field_e[1] = CountermeasureLauncherWeaponDefinition.field_b.nextInt();
           nfa.field_e[2] = (int)(SetMissileLauncherRandomness.field_p >> 32);
           SetTorpedoAcceleration.field_p.position = 0;
           nfa.field_e[3] = (int)SetMissileLauncherRandomness.field_p;

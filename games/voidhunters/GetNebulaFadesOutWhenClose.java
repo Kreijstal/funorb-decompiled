@@ -22,7 +22,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         }
         lo.field_a[wgb.field_f].a(param1, 320, var4);
         if (wgb.field_f == 7) {
-          mna.a(param1, (byte) 90);
+          BombletSprayWeaponDefinition.a(param1, (byte) 90);
           return;
         }
     }

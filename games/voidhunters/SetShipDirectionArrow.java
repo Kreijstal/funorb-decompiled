@@ -4,7 +4,7 @@
 final class SetShipDirectionArrow extends ConsoleCommand {
     static String field_q;
     static GameStateFactory field_p;
-    static mfb[] field_o;
+    static WeaponDefinition[] weaponDefinitions;
     static String field_r;
 
     public static void clearSharedReferences(int param0) {
@@ -13,10 +13,10 @@ final class SetShipDirectionArrow extends ConsoleCommand {
         field_p = null;
         if (param0 != 0) {
           field_q = (String) null;
-          field_o = null;
+          weaponDefinitions = null;
           return;
         }
-        field_o = null;
+        weaponDefinitions = null;
     }
 
     SetShipDirectionArrow(String param0, Class[] param1, String param2) {
@@ -33,7 +33,7 @@ final class SetShipDirectionArrow extends ConsoleCommand {
         try {
           GetPointDefenceLaserProjectileInterceptDamage.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
-            field_o = (mfb[]) null;
+            weaponDefinitions = (WeaponDefinition[]) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

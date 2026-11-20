@@ -176,7 +176,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   pja.field_n[var23Lifetime2] = -2147483648;
                 }
                 if (param6) {
-                  teb.field_b[var23Lifetime2] = var27Lifetime1 >> iob.field_f;
+                  SpinningBladeWeaponDefinition.field_b[var23Lifetime2] = var27Lifetime1 >> iob.field_f;
                   gw.field_i[var23Lifetime2] = var28Lifetime1 >> iob.field_f;
                   HardpointFactory.field_a[var23Lifetime2] = var29Lifetime1;
                 }

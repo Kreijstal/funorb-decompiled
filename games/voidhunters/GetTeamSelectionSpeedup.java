@@ -292,7 +292,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     return;
                   }
                   gna.a((Throwable) null, "L1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-                  ifb.l(-123);
+                  FighterBayWeaponDefinition.l(-123);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);

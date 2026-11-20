@@ -35,7 +35,7 @@ final class ShipAI implements DiffableState {
               var7 != 8 &&
               9 != var7 &&
               var7 != 10) {
-              var8 = var6.weaponbehaviour.a((byte) 24).j(118);
+              var8 = var6.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(118);
               if (var8 > var4_int) {
                 var4_int = var8;
               }
@@ -345,7 +345,7 @@ final class ShipAI implements DiffableState {
                   var20 != 8 &&
                   9 != var20 &&
                   var20 != 10 &&
-                  var8 >> 3 <= var19_ref_ml.weaponbehaviour.a((byte) 24).j(127)) {
+                  var8 >> 3 <= var19_ref_ml.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(127)) {
                   var21 = var19_ref_ml.getUnrotatedWorldAngle((byte) -127);
                   var22 = GameKeyHandler.a(param1 + 22506, var15 - var21);
                   if (var17 > Math.abs(var22)) {

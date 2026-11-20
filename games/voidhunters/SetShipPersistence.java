@@ -44,12 +44,12 @@ final class SetShipPersistence extends ConsoleCommand {
             if (var4 == 45) {
               if (var3 == 0 ||
                 var3 == var2_int - 1) {
-                stackIn_18_0 = ira.field_b;
+                stackIn_18_0 = PointDefenceLaserWeaponDefinition.field_b;
                 return stackIn_18_0;
               }
             } else {
               if (tea.field_a.indexOf(var4) == -1) {
-                stackIn_22_0 = ira.field_b;
+                stackIn_22_0 = PointDefenceLaserWeaponDefinition.field_b;
                 return stackIn_22_0;
               }
             }

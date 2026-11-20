@@ -24,7 +24,7 @@ final class SetReverbWidth extends ConsoleCommand {
             var2_long = wt.a(false);
             var4 = rw.field_q;
             if (0.0 != ServerTickFactory.field_c) {
-              var4 = (int)((double)var4 + jeb.field_b.nextGaussian() * ServerTickFactory.field_c);
+              var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * ServerTickFactory.field_c);
               if (0 > var4) {
                 var4 = 0;
               }

@@ -48,7 +48,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, gi.field_a, cwa.field_b);
               return true;
             }
-            if (ira.a(hb.field_b, cwa.field_b, 41)) {
+            if (PointDefenceLaserWeaponDefinition.a(hb.field_b, cwa.field_b, 41)) {
               if (gi.field_a != 2) {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {
@@ -74,7 +74,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
           }
           return false;
         }
-        if (!jeb.a(NanosecondClock.field_a, GetSniperCannonAimspeed.field_p, SetPhasedEnergyBeamPulseFadetime.field_p, rea.field_d, (byte) -93)) {
+        if (!CountermeasureLauncherWeaponDefinition.a(NanosecondClock.field_a, GetSniperCannonAimspeed.field_p, SetPhasedEnergyBeamPulseFadetime.field_p, rea.field_d, (byte) -93)) {
           if (SetBombletSprayProjectileDamage.field_o == 10) {
             if (var3 != 0) {
               return false;
@@ -108,7 +108,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               }
               return true;
             }
-            if (ira.a(hb.field_b, cwa.field_b, 41)) {
+            if (PointDefenceLaserWeaponDefinition.a(hb.field_b, cwa.field_b, 41)) {
               if (gi.field_a != 2) {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {

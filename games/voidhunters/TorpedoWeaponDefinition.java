@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class wqb extends mfb {
+final class TorpedoWeaponDefinition extends WeaponDefinition {
     static String field_d;
     static Hashtable field_e;
     static String[] field_c;
     static String field_b;
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
           return SetLaserAimarc.field_o;
@@ -17,7 +17,7 @@ final class wqb extends mfb {
         return SetLaserAimarc.field_o;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           field_e = (Hashtable) null;
           return OpenGlUnderwaterMaterialEffect.field_n;
@@ -35,7 +35,7 @@ final class wqb extends mfb {
         field_c = null;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 <= 0) {
           field_b = (String) null;
           return GetPhysicsCollisionGrapplingHookForceMultiplier.field_o;
@@ -43,55 +43,55 @@ final class wqb extends mfb {
         return GetPhysicsCollisionGrapplingHookForceMultiplier.field_o;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
           return 98;
         }
         return 1;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
-          this.b(23);
+          this.getAimArc(23);
           return GetLagStandardDeviationIn.field_p;
         }
         return GetLagStandardDeviationIn.field_p;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = 57 % ((7 - param0) / 47);
         return mmb.field_i;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
-          this.a(true);
+          this.getFiringSoundId(true);
           return SetArmageddonLength.field_p;
         }
         return SetArmageddonLength.field_p;
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           return 46;
         }
         return QuickChatPhraseLoader.field_b;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
-          this.f((byte) -9);
+          this.getReloadTime((byte) -9);
           return 3;
         }
         return 3;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = 126 % ((-48 - param0) / 43);
         return SetGrapplingHookRopeChangeRate.field_o;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_e = (Hashtable) null;
           return GetBombletSprayProjectileDamage.field_p;
@@ -99,7 +99,7 @@ final class wqb extends mfb {
         return GetBombletSprayProjectileDamage.field_p;
     }
 
-    wqb() {
+    TorpedoWeaponDefinition() {
     }
 
     static {

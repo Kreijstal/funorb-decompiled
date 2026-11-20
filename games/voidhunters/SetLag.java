@@ -62,7 +62,7 @@ final class SetLag extends ConsoleCommand {
           if (0 == var2) {
             var4 = (br) (SetDebugLineLife.field_p.first(param0 ^ -8999));
             if (var4 == null) {
-              ifb.l(-128);
+              FighterBayWeaponDefinition.l(-128);
               return;
             }
             var5 = -var9.position + PartitioningManagerFactory.field_a;
@@ -89,7 +89,7 @@ final class SetLag extends ConsoleCommand {
                 break;
               }
               if (var5_ref_ik == null) {
-                ifb.l(-121);
+                FighterBayWeaponDefinition.l(-121);
                 return;
               }
               var5_ref_ik.unlink(param0 ^ 11299);
@@ -97,7 +97,7 @@ final class SetLag extends ConsoleCommand {
             }
             else {
               gna.a((Throwable) null, "LR1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              ifb.l(-116);
+              FighterBayWeaponDefinition.l(-116);
             }
           }
           if (param0 == -8999) {

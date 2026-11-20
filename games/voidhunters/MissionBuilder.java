@@ -674,7 +674,7 @@ final class MissionBuilder implements DiffableState {
 
     final static void a(byte param0, Object param1, int param2) {
         try {
-          wqb.field_e.put(param1, new Integer(param2));
+          TorpedoWeaponDefinition.field_e.put(param1, new Integer(param2));
           int var3_int = -38 / ((param0 - 80) / 33);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -1229,7 +1229,7 @@ final class MissionBuilder implements DiffableState {
           this.seed = param0.readBits(0, 32);
           this.optionTotals = SetVariableActionFactory.a((byte) 37, this.optionTotals, param0, 8);
           var3 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
-          var4 = new GameStateFactory[]{rma.field_d, GetFighterBayReload.field_q};
+          var4 = new GameStateFactory[]{MachineGunWeaponDefinition.field_d, GetFighterBayReload.field_q};
           this.clearanceAreas = (MapClearanceArea[]) (iq.a(var4, this.clearanceAreas, var3, SetCountermeasureLauncherFireForce.field_o, 8, param0, 1, -25));
           if (param1) {
             this.clearanceAreas = (MapClearanceArea[]) null;
@@ -2183,7 +2183,7 @@ final class MissionBuilder implements DiffableState {
             discarded$0 = this.a(87, -72, (World) null, 18);
           }
           var4 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
-          var5 = new GameStateFactory[]{rma.field_d, GetFighterBayReload.field_q};
+          var5 = new GameStateFactory[]{MachineGunWeaponDefinition.field_d, GetFighterBayReload.field_q};
           var3.clearanceAreas = (MapClearanceArea[]) (hla.a(var4, this.clearanceAreas, var5, -115, var3.clearanceAreas, 1, SetCountermeasureLauncherFireForce.field_o));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

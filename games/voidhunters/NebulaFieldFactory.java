@@ -107,14 +107,14 @@ final class NebulaFieldFactory implements GameStateFactory {
             }
             if (var2 != 4) {
               gna.a((Throwable) null, "F1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              ifb.l(-125);
+              FighterBayWeaponDefinition.l(-125);
               return;
             }
             iwa.field_b = 1;
             var3 = var1.readString(-1);
             kbb.field_q = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -126);
-            rma.b(var4, (byte) 71);
+            MachineGunWeaponDefinition.b(var4, (byte) 71);
             return;
           }
           if (ae.field_f == null) {

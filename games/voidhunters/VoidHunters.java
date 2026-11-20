@@ -192,7 +192,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (param0 == 14) {
           GetDebrisThrowable.a(false, "Entering lobby");
           GetBombletSprayAimarc.a(UiComponent.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
-          GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), dm.i((byte) -90), true);
+          GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), MissileLauncherWeaponDefinition.i((byte) -90), true);
           GraphicsPresentException.field_a = true;
           HardpointMatch.field_d = false;
           if (vqa.field_g != null &&
@@ -516,7 +516,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
         var3Lifetime2 = stackIn_69_0;
         if (var3Lifetime2 != 0) {
-          ifb.l(-118);
+          FighterBayWeaponDefinition.l(-118);
         }
         if (SetWeaponProjectileSpeedMultiply.b(true)) {
           di.field_l.suspendServerUpdates((byte) -94);
@@ -1303,16 +1303,16 @@ public final class VoidHunters extends NetworkGameClient {
         MissionBuilderFactory.clearSharedReferences((byte) 124);
         MissionConditionFactory.clearSharedReferences((byte) -80);
         MissionEventFactory.clearSharedReferences((byte) 21);
-        fpb.clearSharedReferences(62);
-        deb.clearSharedReferences((byte) -125);
-        wqb.clearSharedReferences((byte) 75);
-        mna.clearSharedReferences((byte) 9);
-        teb.clearSharedReferences(8192);
-        fma.clearSharedReferences((byte) -22);
-        rma.clearSharedReferences(3);
-        wca.clearSharedReferences(-36);
-        ira.clearSharedReferences(17036);
-        jeb.clearSharedReferences((byte) -81);
+        MassDriverWeaponDefinition.clearSharedReferences(62);
+        LaserWeaponDefinition.clearSharedReferences((byte) -125);
+        TorpedoWeaponDefinition.clearSharedReferences((byte) 75);
+        BombletSprayWeaponDefinition.clearSharedReferences((byte) 9);
+        SpinningBladeWeaponDefinition.clearSharedReferences(8192);
+        PhasedEnergyBeamWeaponDefinition.clearSharedReferences((byte) -22);
+        MachineGunWeaponDefinition.clearSharedReferences(3);
+        SniperCannonWeaponDefinition.clearSharedReferences(-36);
+        PointDefenceLaserWeaponDefinition.clearSharedReferences(17036);
+        CountermeasureLauncherWeaponDefinition.clearSharedReferences((byte) -81);
         ShipBodyFactory.clearSharedReferences((byte) -103);
         DebrisFactory.clearSharedReferences((byte) 124);
         EscapePodFactory.clearSharedReferences((byte) 80);
@@ -2017,8 +2017,8 @@ public final class VoidHunters extends NetworkGameClient {
           }
           stackIn_59_0Lifetime1 = 17043;
           glb.c(stackIn_59_0Lifetime1);
-          if (null != wca.field_b) {
-            wca.field_b.b(0);
+          if (null != SniperCannonWeaponDefinition.field_b) {
+            SniperCannonWeaponDefinition.field_b.b(0);
           }
           if (null != nna.field_C &&
             nna.field_C.c(13462)) {

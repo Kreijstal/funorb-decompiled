@@ -105,7 +105,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.thrusterbehaviour.activate(true, var8.connectionY, this.finalx, this.finaly, var8.connectionX, param0, var8.outline, this.finaloutline, param2, this.finalangle, param1, param5, param3, this.componentTypeId);
           }
           if (this.weaponbehaviour != null) {
-            this.weaponbehaviour.a(param2, false, var8.connectionX, param3, -97, param0, param1, this.finaly, this.finalangle, this.finalx, var8.connectionY, var8.outline);
+            this.weaponbehaviour.fire(param2, false, var8.connectionX, param3, -97, param0, param1, this.finaly, this.finalangle, this.finalx, var8.connectionY, var8.outline);
           }
           if (this.grapplebehaviour != null) {
             this.grapplebehaviour.a(param3, this.finaly, var8.outline, param1, this.finalangle, this.finalx, var8.connectionY, (byte) 77, param2, var8.connectionX, param0);
@@ -151,10 +151,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           param0.a(15520, this, param2);
           if (this.weaponbehaviour != null) {
-            if (this.weaponbehaviour.b(true)) {
-              this.weaponbehaviour.reload = this.weaponbehaviour.a((byte) 24).f((byte) 12) - this.weaponbehaviour.a((byte) 24).c((byte) 122);
+            if (this.weaponbehaviour.isFiring(true)) {
+              this.weaponbehaviour.reload = this.weaponbehaviour.getDefinition((byte) 24).getReloadTime((byte) 12) - this.weaponbehaviour.getDefinition((byte) 24).getPulseDuration((byte) 122);
             }
-            this.weaponbehaviour.b(2048);
+            this.weaponbehaviour.clearTargetLock(2048);
           }
           if (null != this.subcomponents) {
             for (var4_int = 0; this.subcomponents.length > var4_int; var4_int++) {
@@ -220,7 +220,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         Ship[] var19 = null;
         int var20 = 0;
         Object var21 = null;
-        mfb var22 = null;
+        WeaponDefinition var22 = null;
         ShipComponentDefinition var23 = null;
         IntrusiveDeque var24 = null;
         ShipComponentDefinition var25 = null;
@@ -240,17 +240,17 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (null != this.weaponbehaviour &&
             param0) {
             var23 = this.getDefinition((byte) -112);
-            var22 = this.weaponbehaviour.a((byte) 24);
-            if (0 < var22.b((byte) 97) &&
+            var22 = this.weaponbehaviour.getDefinition((byte) 24);
+            if (0 < var22.getMaxSpinSpeed((byte) 97) &&
               this.weaponbehaviour.reload != 0) {
               this.currentconnectedangle = this.currentconnectedangle + this.weaponbehaviour.reload;
-              this.weaponbehaviour.a(this.finalx, param3, var23.outline, var23.connectionY, this.finaly, true, var23.connectionX, this.finalangle, param2);
+              this.weaponbehaviour.update(this.finalx, param3, var23.outline, var23.connectionY, this.finaly, true, var23.connectionX, this.finalangle, param2);
               param3.onStateChanged((byte) -76);
             } else {
               if (!this.isDestroyed((byte) 127)) {
-                if (this.weaponbehaviour.c((byte) 101)) {
-                  if (this.weaponbehaviour.b(true)) {
-                    var7 = this.weaponbehaviour.c(2);
+                if (this.weaponbehaviour.usesTargetLock((byte) 101)) {
+                  if (this.weaponbehaviour.isFiring(true)) {
+                    var7 = this.weaponbehaviour.getTargetLock(2);
                     if (var7 != null) {
                       var8 = param3;
                       if (var7.targetId >= 0) {
@@ -261,16 +261,16 @@ final class ShipComponent implements DiffableState, CompactGameState {
                       }
                     }
                   } else {
-                    this.weaponbehaviour.b(param1 + 2172);
+                    this.weaponbehaviour.clearTargetLock(param1 + 2172);
                   }
                 }
-                this.weaponbehaviour.a(this.finalx, param3, var23.outline, var23.connectionY, this.finaly, true, var23.connectionX, this.finalangle, param2);
-                if (var22.h(param1 ^ 2185)) {
+                this.weaponbehaviour.update(this.finalx, param3, var23.outline, var23.connectionY, this.finaly, true, var23.connectionX, this.finalangle, param2);
+                if (var22.autoTargetsThreats(param1 ^ 2185)) {
                   var26 = (Ship) (param3);
                   var24 = param2.getProjectiles(true);
                   var9 = param2.getShips(1000);
                   var10 = null;
-                  var11 = var22.j(param1 ^ 107);
+                  var11 = var22.getProjectileRange(param1 ^ 107);
                   var12 = (Projectile) (var24.first(0));
                   while (var12 != null) {
                     var13 = var12.getType((byte) -104);
@@ -283,7 +283,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                       var15 = var12.y - this.finaly;
                       var16 = ar.a(var14_int, (byte) 104, var15);
                       if (var11 > var16 &&
-                        this.weaponbehaviour.a(-26772, var12.y, var12.x, var23, this)) {
+                        this.weaponbehaviour.canAimAtTarget(-26772, var12.y, var12.x, var23, this)) {
                         var10 = var12;
                         var11 = var16;
                       }
@@ -303,7 +303,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                       var16Lifetime1 = var14.y - this.finaly;
                       var17 = ar.a(var15Lifetime1, (byte) 109, var16Lifetime1);
                       if (var17 < var11 &&
-                        this.weaponbehaviour.a(param1 ^ 26856, var14.y, var14.x, var23, this)) {
+                        this.weaponbehaviour.canAimAtTarget(param1 ^ 26856, var14.y, var14.x, var23, this)) {
                         var11 = var17;
                         var10 = var14;
                       }
@@ -318,9 +318,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 }
               }
             }
-            if (0 < var22.b((byte) 72) &&
+            if (0 < var22.getMaxSpinSpeed((byte) 72) &&
               !this.isDestroyed((byte) 106)) {
-              this.weaponbehaviour.a(param2, true, var23.connectionX, 0, -78, param3, 0, this.finaly, this.finalangle, this.finalx, var23.connectionY, var23.outline);
+              this.weaponbehaviour.fire(param2, true, var23.connectionX, 0, -78, param3, 0, this.finaly, this.finalangle, this.finalx, var23.connectionY, var23.outline);
             }
           }
           stackIn_65_0 = (!this.isDestroyed((byte) 46)) ? 0 : 1;
@@ -330,8 +330,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (var5_intLifetime1 != 0 &&
             this.weaponbehaviour != null &&
-            this.weaponbehaviour.b(true)) {
-            this.weaponbehaviour.reload = this.weaponbehaviour.a((byte) 24).f((byte) 57) - this.weaponbehaviour.a((byte) 24).c((byte) 124);
+            this.weaponbehaviour.isFiring(true)) {
+            this.weaponbehaviour.reload = this.weaponbehaviour.getDefinition((byte) 24).getReloadTime((byte) 57) - this.weaponbehaviour.getDefinition((byte) 24).getPulseDuration((byte) 124);
           }
           if (null != this.thrusterbehaviour) {
             this.thrusterbehaviour.update(var5_intLifetime1 != 0, param3, this.finalangle, this.finaly, this.componentTypeId, this.finaloutline, param1 - 31377, this.finalx, param2);
@@ -1156,8 +1156,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.connectedangle = 110;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.weaponbehaviour != null && (this.weaponbehaviour.a((byte) 24).h((byte) 55) ||
-            !(this.weaponbehaviour.a((byte) 24).b((byte) 29) <= 0))) {
+          if (this.weaponbehaviour != null && (this.weaponbehaviour.getDefinition((byte) 24).hasRecoil((byte) 55) ||
+            !(this.weaponbehaviour.getDefinition((byte) 24).getMaxSpinSpeed((byte) 29) <= 0))) {
             this.transformGeometry(param5, param3, 0, param1, param2, param6, param0, param7, param8);
             decompiledFrameRemainder0 = false;
           }
@@ -1575,7 +1575,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param0 &&
             this.weaponbehaviour != null &&
             this.weaponbehaviour.reload > 0) {
-            var5 = this.weaponbehaviour.a(89);
+            var5 = this.weaponbehaviour.getRecoilFraction(89);
             if (var5 > 0) {
               var4_int = param1.boundingRadius * var5 >> 8;
             }
@@ -2303,7 +2303,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           return this.behaviour.getAimSpeed((byte) 118);
         }
         if (this.weaponbehaviour != null) {
-          return this.weaponbehaviour.e((byte) -4);
+          return this.weaponbehaviour.getAimSpeed((byte) -4);
         }
         if (null == this.grapplebehaviour) {
           return 0;
@@ -2635,7 +2635,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var2 = 17 / ((56 - param0) / 56);
         if (null == this.behaviour) {
           if (null != this.weaponbehaviour) {
-            return this.weaponbehaviour.d((byte) 120);
+            return this.weaponbehaviour.getAimArc((byte) 120);
           }
           if (this.grapplebehaviour == null) {
             return 0;
@@ -3183,7 +3183,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = -112 / ((param0 - 25) / 51);
-        stackIn_4_0 = (this.weaponbehaviour != null) && (this.weaponbehaviour.a((byte) 24).b((byte) 127) > 0);
+        stackIn_4_0 = (this.weaponbehaviour != null) && (this.weaponbehaviour.getDefinition((byte) 24).getMaxSpinSpeed((byte) 127) > 0);
         return stackIn_4_0;
     }
 
@@ -3507,7 +3507,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var17 = VoidHunters.field_G;
         if (fra.field_a == 1 &&
           null != this.weaponbehaviour &&
-          this.weaponbehaviour.b(true) &&
+          this.weaponbehaviour.isFiring(true) &&
           !param1) {
           return 0;
         }
@@ -3746,7 +3746,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           return true;
         }
         if (null != this.weaponbehaviour &&
-          this.weaponbehaviour.d(6)) {
+          this.weaponbehaviour.canAimIndependently(6)) {
           return true;
         }
         if (this.grapplebehaviour != null &&
@@ -4554,7 +4554,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.weaponbehaviour = new WeaponBehaviour();
           var2.field_c.copyTo((byte) 94, this.weaponbehaviour);
           if (var2.getSpecialOrderId(-1) == -1 &&
-            !var2.field_c.a((byte) 24).e(-3)) {
+            !var2.field_c.getDefinition((byte) 24).usesTargetDisplacementVelocity(-3)) {
             this.setTriggerMap((byte) 124, 16);
           }
         }

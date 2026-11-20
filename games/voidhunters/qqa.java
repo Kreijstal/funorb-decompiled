@@ -21,7 +21,7 @@ final class qqa extends TextureOperation {
             qqa.clearSharedReferences((byte) 81);
           }
           nqa.field_c = !param0 ? true : false;
-          mfb.field_a = !param0 ? true : false;
+          WeaponDefinition.field_a = !param0 ? true : false;
           SetUseTrails.field_o = !param0 ? true : false;
           ComponentBehaviour.field_b = !param0 ? true : false;
           OpenGlVertexDeclaration.field_d = !param0 ? true : false;

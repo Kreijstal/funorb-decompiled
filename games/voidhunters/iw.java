@@ -209,7 +209,7 @@ abstract class iw extends bl {
             break;
           }
           if (var3 == null) {
-            ifb.l(-117);
+            FighterBayWeaponDefinition.l(-117);
             return;
           }
           if (param0 != -38) {

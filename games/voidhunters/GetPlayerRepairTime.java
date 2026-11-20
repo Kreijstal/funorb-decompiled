@@ -46,19 +46,19 @@ final class GetPlayerRepairTime extends ConsoleCommand {
     }
 
     final static void b(boolean param0) {
-        SetShipDirectionArrow.field_o = new mfb[12];
-        SetShipDirectionArrow.field_o[0] = (mfb) ((Object) new fpb());
-        SetShipDirectionArrow.field_o[1] = (mfb) ((Object) new deb());
-        SetShipDirectionArrow.field_o[2] = (mfb) ((Object) new ifb());
-        SetShipDirectionArrow.field_o[3] = (mfb) ((Object) new wqb());
-        SetShipDirectionArrow.field_o[4] = (mfb) ((Object) new mna());
-        SetShipDirectionArrow.field_o[5] = (mfb) ((Object) new teb());
-        SetShipDirectionArrow.field_o[6] = (mfb) ((Object) new fma());
-        SetShipDirectionArrow.field_o[11] = (mfb) ((Object) new rma());
-        SetShipDirectionArrow.field_o[7] = (mfb) ((Object) new wca());
-        SetShipDirectionArrow.field_o[8] = (mfb) ((Object) new dm());
-        SetShipDirectionArrow.field_o[9] = (mfb) ((Object) new ira());
-        SetShipDirectionArrow.field_o[10] = (mfb) ((Object) new jeb());
+        SetShipDirectionArrow.weaponDefinitions = new WeaponDefinition[12];
+        SetShipDirectionArrow.weaponDefinitions[0] = (WeaponDefinition) ((Object) new MassDriverWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[1] = (WeaponDefinition) ((Object) new LaserWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[2] = (WeaponDefinition) ((Object) new FighterBayWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[3] = (WeaponDefinition) ((Object) new TorpedoWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[4] = (WeaponDefinition) ((Object) new BombletSprayWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[5] = (WeaponDefinition) ((Object) new SpinningBladeWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[6] = (WeaponDefinition) ((Object) new PhasedEnergyBeamWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[11] = (WeaponDefinition) ((Object) new MachineGunWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[7] = (WeaponDefinition) ((Object) new SniperCannonWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[8] = (WeaponDefinition) ((Object) new MissileLauncherWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[9] = (WeaponDefinition) ((Object) new PointDefenceLaserWeaponDefinition());
+        SetShipDirectionArrow.weaponDefinitions[10] = (WeaponDefinition) ((Object) new CountermeasureLauncherWeaponDefinition());
         if (param0) {
           GetPlayerRepairTime.b(false);
         }

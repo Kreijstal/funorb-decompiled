@@ -152,7 +152,7 @@ class os extends gea implements UiActionListener {
           var6 = new nna(this, this.field_T, param1);
           var4 = var6;
           if (param2 == 5) {
-            var6.a(-123, fma.field_c, 11);
+            var6.a(-123, PhasedEnergyBeamWeaponDefinition.field_c, 11);
             var6.a(-115, GetFighterBayAimspeed.field_q, 17);
           } else {
             if (param2 == 256) {

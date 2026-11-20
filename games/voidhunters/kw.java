@@ -326,7 +326,7 @@ final class kw extends Widget {
           return this.field_Ab;
         }
         for (var2 = this.field_Ab - 1; var2 > 0; var2--) {
-          if (!deb.a(-126, this.field_Eb.charAt(var2 - 1))) {
+          if (!LaserWeaponDefinition.a(-126, this.field_Eb.charAt(var2 - 1))) {
             continue;
           }
           break;
@@ -573,7 +573,7 @@ final class kw extends Widget {
           return this.field_Ab;
         }
         for (var3 = 1 + this.field_Ab; var3 < var2; var3++) {
-          if (!deb.a(-113, this.field_Eb.charAt(var3 - 1))) {
+          if (!LaserWeaponDefinition.a(-113, this.field_Eb.charAt(var3 - 1))) {
             continue;
           }
           break;

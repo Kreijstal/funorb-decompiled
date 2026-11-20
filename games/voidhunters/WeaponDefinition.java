@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mfb {
+class WeaponDefinition {
     static boolean field_a;
 
-    final int j(int param0) {
+    final int getProjectileRange(int param0) {
         int var2 = 86 % ((param0 - 55) / 58);
-        return this.d((byte) -56) * this.a((byte) 118);
+        return this.getProjectileSpeed((byte) -56) * this.getProjectileLifetime((byte) 118);
     }
 
-    int g(byte param0) {
+    int getProjectileVelocityRandomness(byte param0) {
         if (param0 > -12) {
           return 45;
         }
         return 0;
     }
 
-    int a(boolean param0) {
+    int getFiringSoundId(boolean param0) {
         if (param0) {
           field_a = true;
           return -1;
@@ -24,15 +24,15 @@ class mfb {
         return -1;
     }
 
-    boolean h(int param0) {
+    boolean autoTargetsThreats(int param0) {
         if (param0 != -2291) {
-          this.d(62);
+          this.getFiringLeeway(62);
           return false;
         }
         return false;
     }
 
-    boolean h(byte param0) {
+    boolean hasRecoil(byte param0) {
         if (param0 < 18) {
           field_a = true;
           return true;
@@ -40,20 +40,20 @@ class mfb {
         return true;
     }
 
-    int a(byte param0) {
+    int getProjectileLifetime(byte param0) {
         int var2 = 66 % ((param0 + 48) / 43);
         return Particle.field_x;
     }
 
-    int f(int param0) {
+    int getSpinUpSpeed(int param0) {
         if (param0 != 1024) {
-          this.f((byte) 1);
+          this.getReloadTime((byte) 1);
           return 0;
         }
         return 0;
     }
 
-    int a(int param0) {
+    int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_a = false;
           return 50;
@@ -61,28 +61,28 @@ class mfb {
         return 50;
     }
 
-    int f(byte param0) {
+    int getReloadTime(byte param0) {
         if (param0 <= 0) {
           return -15;
         }
         return 0;
     }
 
-    boolean e(int param0) {
+    boolean usesTargetDisplacementVelocity(int param0) {
         int var2 = -12 / ((54 - param0) / 54);
         return false;
     }
 
-    int c(int param0) {
+    int getAimSpeed(int param0) {
         if (param0 != 0) {
           return -113;
         }
         return 128;
     }
 
-    int k(int param0) {
+    int getProjectileType(int param0) {
         if (param0 != 0) {
-          this.f(-94);
+          this.getSpinUpSpeed(-94);
           return 0;
         }
         return 0;
@@ -120,15 +120,15 @@ class mfb {
         }
     }
 
-    final int d(int param0) {
+    final int getFiringLeeway(int param0) {
         if (param0 != 27918) {
-          this.c(84);
+          this.getAimSpeed(84);
           return NebulaFieldFactory.field_b;
         }
         return NebulaFieldFactory.field_b;
     }
 
-    int b(byte param0) {
+    int getMaxSpinSpeed(byte param0) {
         if (param0 <= 27) {
           field_a = true;
           return 0;
@@ -136,28 +136,28 @@ class mfb {
         return 0;
     }
 
-    int b(boolean param0) {
+    int getProjectileCount(boolean param0) {
         if (param0) {
           String[] var3 = (String[]) null;
-          mfb.a((String[]) null, 41);
+          WeaponDefinition.a((String[]) null, 41);
           return 1;
         }
         return 1;
     }
 
-    int c(byte param0) {
+    int getPulseDuration(byte param0) {
         int var2 = 71 % ((param0 - 75) / 46);
         return 0;
     }
 
-    int g(int param0) {
+    int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           return 83;
         }
         return 5;
     }
 
-    boolean c(boolean param0) {
+    boolean aimsDirectlyAtTarget(boolean param0) {
         if (!param0) {
           field_a = false;
           return false;
@@ -165,27 +165,27 @@ class mfb {
         return false;
     }
 
-    boolean i(int param0) {
+    boolean hasSustainedPulse(int param0) {
         if (param0 != 1024) {
           return true;
         }
         return false;
     }
 
-    int d(byte param0) {
+    int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
-          this.c((byte) 118);
+          this.getPulseDuration((byte) 118);
           return 256;
         }
         return 256;
     }
 
-    int b(int param0) {
+    int getAimArc(int param0) {
         int var2 = -40 / ((7 - param0) / 47);
         return 1024;
     }
 
-    int e(byte param0) {
+    int getPulseFadeTime(byte param0) {
         if (param0 != -63) {
           field_a = true;
           return 0;

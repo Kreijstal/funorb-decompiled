@@ -71,7 +71,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         }
         Object var2 = OpenGlGlyphMask.a(var1_ref, (byte) -48);
         if (var2 instanceof Hashtable) {
-          wqb.field_e = (Hashtable) (var2);
+          TorpedoWeaponDefinition.field_e = (Hashtable) (var2);
           return;
         }
     }

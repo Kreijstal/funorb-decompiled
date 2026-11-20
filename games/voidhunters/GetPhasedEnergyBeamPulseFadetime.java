@@ -128,7 +128,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ifb.l(-122);
+                  FighterBayWeaponDefinition.l(-122);
                   SetShowTutorial.field_o = false;
                   stackIn_28_0 = var6_intLifetime1;
                   return stackIn_28_0;
@@ -219,7 +219,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (tc.field_c == kw.field_xb &&
               PlayerJoinFactory.b((byte) 113)) {
-              ifb.l(-117);
+              FighterBayWeaponDefinition.l(-117);
               if (ow.field_a == 7 &&
                 !SetShowTutorial.field_o) {
                 SetShowTutorial.field_o = true;

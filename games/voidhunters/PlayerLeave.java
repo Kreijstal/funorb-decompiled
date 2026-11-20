@@ -124,7 +124,7 @@ final class PlayerLeave implements DiffableState {
             NanosecondClock.field_a = param1.field_a;
             GetSniperCannonAimspeed.field_p = param1.field_m;
           }
-          fpb.a(param1, 0);
+          MassDriverWeaponDefinition.a(param1, 0);
           if (param0 <= 105) {
             PlayerLeave.clearSharedReferences(true);
           }

@@ -105,8 +105,8 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             RequestNewestBlackboxRecording.field_p.position = 0;
             if (param5 == null) {
               SetTorpedoAcceleration.field_p.position = 0;
-              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
-              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), param4 + 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), param4 + 332614536);
               stackIn_17_0 = SetTorpedoAcceleration.field_p;
               stackIn_17_1 = 0;
               if (!param1.a(true)) {
@@ -134,8 +134,8 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 var9 = var9 | 1;
               }
               SetTorpedoAcceleration.field_p.position = 0;
-              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
-              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), param4 ^ 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), param4 ^ 332614536);
               SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, var14);
               SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, var8);
               var15 = (CharSequence) ((Object) param5);
@@ -169,7 +169,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               if (var9Lifetime1 == 248) {
                 kl.a(MissionList.b((byte) -124), param4 ^ 0);
                 dgb.field_b = owa.field_j;
-                ifb.l(param4 - 125);
+                FighterBayWeaponDefinition.l(param4 - 125);
                 SetShowTutorial.field_o = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
@@ -195,7 +195,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 for (var12 = 0; var12 < var11; var12++) {
                   gob.field_a[var12] = qga.field_b.readCircumfixedString(-1609246200);
                 }
-                ifb.l(-122);
+                FighterBayWeaponDefinition.l(-122);
                 SetShowTutorial.field_o = false;
                 stackIn_43_0 = var11 + 100;
                 return stackIn_43_0;
@@ -215,7 +215,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             } else {
               dgb.field_b = qga.field_b.readString(-1);
             }
-            ifb.l(-122);
+            FighterBayWeaponDefinition.l(-122);
             SetShowTutorial.field_o = false;
             stackIn_55_0 = ow.field_a;
             return stackIn_55_0;

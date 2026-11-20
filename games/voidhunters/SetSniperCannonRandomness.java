@@ -74,17 +74,17 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
               var14.unlink(param0 ^ -3846);
               return;
             }
-            ifb.l(-121);
+            FighterBayWeaponDefinition.l(-121);
             return;
           }
           if (var2 != 1) {
             if (var2 != 2) {
               gna.a((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              ifb.l(param0 - 117);
+              FighterBayWeaponDefinition.l(param0 - 117);
             } else {
               var12 = (iea) (GetLagStandardDeviationIn.field_q.first(0));
               if (var12 == null) {
-                ifb.l(-119);
+                FighterBayWeaponDefinition.l(-119);
                 return;
               }
               SetSniperCannonEnergyUsed.f((byte) -80);
@@ -93,7 +93,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           } else {
             var11 = (ea) (OpenGlVertexBufferObject.field_k.first(0));
             if (var11 == null) {
-              ifb.l(-125);
+              FighterBayWeaponDefinition.l(-125);
               return;
             }
             var11.unlink(-3846);

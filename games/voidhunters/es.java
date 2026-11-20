@@ -47,7 +47,7 @@ final class es {
             }
           } else {
             PlayerLeave.field_c = PlayerLeave.field_c + 1;
-            if (PlayerLeave.field_c > mna.field_b) {
+            if (PlayerLeave.field_c > BombletSprayWeaponDefinition.field_b) {
               GetAngularVelocitySustain.field_o = 0;
             }
           }

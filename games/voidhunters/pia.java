@@ -11,7 +11,7 @@ final class pia extends UiArrayContainer implements UiActionListener {
         field_x = null;
     }
 
-    final void d(int param0) {
+    final void layoutChildren(int param0) {
         int var2 = 250;
         if (param0 == 16777215) {
           this.field_v.setBounds(-var2 + this.width >> 1, 140, 25, param0 - 16777214, this.height + 20 - 25 >> 1);

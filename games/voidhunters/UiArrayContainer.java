@@ -81,7 +81,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         }
     }
 
-    abstract void d(int param0);
+    abstract void layoutChildren(int param0);
 
     final StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
@@ -98,7 +98,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
           }
           if (this.beginDebugVisit(param1, param2, (byte) -113, param3)) {
             this.appendDebugProperties(72, param2, param1, param3);
-            this.a(false, param3, param1, param2);
+            this.appendChildDebugTrees(false, param3, param1, param2);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -166,7 +166,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         }
     }
 
-    final boolean a(int param0, UiComponent param1, int param2) {
+    final boolean focusNextChild(int param0, UiComponent param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiComponent var5 = null;
@@ -247,9 +247,9 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
             return false;
           }
           if (SetMachineGunEnergyUsed.field_o[81]) {
-            stackIn_19_0 = this.a(param2, (byte) -63);
+            stackIn_19_0 = this.focusPreviousChild(param2, (byte) -63);
           } else {
-            stackIn_19_0 = this.b(param2, (byte) 39);
+            stackIn_19_0 = this.focusNextChild(param2, (byte) 39);
           }
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -266,7 +266,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         }
     }
 
-    final boolean a(UiComponent param0, int param1, int param2) {
+    final boolean focusPreviousChild(UiComponent param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiComponent var5 = null;
@@ -318,7 +318,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         }
     }
 
-    private final UiComponent g(byte param0) {
+    private final UiComponent getFocusedChild(byte param0) {
         int var3 = 0;
         UiComponent[] var2;
         UiComponent var4;
@@ -344,7 +344,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         return null;
     }
 
-    final boolean b(UiComponent param0, byte param1) {
+    final boolean focusNextChild(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -355,7 +355,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
           if (param1 != 39) {
             field_t = (String) null;
           }
-          stackIn_3_0 = this.a(1, param0, 0);
+          stackIn_3_0 = this.focusNextChild(1, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -373,7 +373,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
 
     void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.d(16777215);
+        this.layoutChildren(16777215);
     }
 
     UiArrayContainer(int param0, int param1, int param2, int param3, UiRenderer param4) {
@@ -391,7 +391,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         if (param0 != -120) {
           return false;
         }
-        return this.g((byte) -127) != null ? true : false;
+        return this.getFocusedChild((byte) -127) != null ? true : false;
     }
 
     final void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
@@ -494,7 +494,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         }
     }
 
-    private final void a(boolean param0, StringBuilder param1, Hashtable param2, int param3) {
+    private final void appendChildDebugTrees(boolean param0, StringBuilder param1, Hashtable param2, int param3) {
         int var6 = 0;
         StringBuilder discarded$3 = null;
         int var8 = 0;
@@ -602,7 +602,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
             return false;
           }
           var12 = (UiComponent) null;
-          this.b((UiComponent) null, (byte) -24);
+          this.focusNextChild((UiComponent) null, (byte) -24);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +618,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         }
     }
 
-    final boolean a(UiComponent param0, byte param1) {
+    final boolean focusPreviousChild(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -627,7 +627,7 @@ abstract class UiArrayContainer extends UiComponent implements UiContainerMarker
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < -55) {
-            stackIn_4_0 = this.a(param0, 100, 1);
+            stackIn_4_0 = this.focusPreviousChild(param0, 100, 1);
             return stackIn_4_0;
           }
           return true;

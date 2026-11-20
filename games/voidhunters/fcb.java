@@ -53,13 +53,13 @@ final class fcb implements oob {
         ComponentCollision.a("requesting basic common graphics group", (byte) -68);
         OpenGlGpuTexture3D.field_m.a(var4, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
         ComponentCollision.a("requesting common arialish12", (byte) -66);
-        OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "arialish12", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting common arialish12 fontmetric", (byte) -59);
-        OpenGlGpuTexture3D.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "arialish12", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting common lobbyfont", (byte) -79);
-        OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "lobby", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting common lobbyfont metric", (byte) -72);
-        OpenGlGpuTexture3D.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "lobby", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting jfx sounds", (byte) -66);
         OpenGlGpuTexture3D.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_l);
         ComponentCollision.a("requesting vorbis sounds", (byte) -53);
@@ -76,7 +76,7 @@ final class fcb implements oob {
         ComponentCollision.a("requesting jpeg graphics", (byte) -87);
         OpenGlGpuTexture3D.field_m.a(SetTorpedoProjectileOndamageParticles.field_o, -1, SetTorpedoProjectileOndamageParticles.field_o, this.field_d);
         ComponentCollision.a("requesting font graphics", (byte) -64);
-        OpenGlGpuTexture3D.field_m.a(this.field_e, GetBombletSprayAimarc.field_p, false, "basic", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(this.field_e, GetBombletSprayAimarc.field_p, false, "basic", TorpedoWeaponDefinition.field_b);
         ComponentCollision.a("requesting textures", (byte) -107);
         OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_a);
         ComponentCollision.a("requesting texturemetrics", (byte) -66);

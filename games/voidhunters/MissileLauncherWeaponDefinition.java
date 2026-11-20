@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends mfb {
+final class MissileLauncherWeaponDefinition extends WeaponDefinition {
     static boolean field_b;
 
     final static Widget i(byte param0) {
@@ -12,12 +12,12 @@ final class dm extends mfb {
         return re.field_n.content;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = 70 / ((param0 + 48) / 43);
         return SetTorpedoEnergyUsed.field_q;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
           return -51;
         }
@@ -26,7 +26,7 @@ final class dm extends mfb {
 
     final static int a(int param0, byte param1) {
         if (param1 != -78) {
-          dm.a(-119, (byte) -85);
+          MissileLauncherWeaponDefinition.a(-119, (byte) -85);
           if (param0 == 3) {
             return Particle.field_l * SetVariableActionFactory.field_a;
           }
@@ -44,36 +44,36 @@ final class dm extends mfb {
         return SetVariableActionFactory.field_a * Particle.field_l;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
-          this.b(-118);
+          this.getAimArc(-118);
           return Particle.field_m;
         }
         return Particle.field_m;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 > -52) {
           return 120;
         }
         return ana.field_f;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           return -12;
         }
         return GetPlayerRepairAmount.field_o;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           return -72;
         }
         return 39;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_b = true;
           return LoadSettings.field_s;
@@ -81,27 +81,27 @@ final class dm extends mfb {
         return LoadSettings.field_s;
     }
 
-    final boolean c(boolean param0) {
+    final boolean aimsDirectlyAtTarget(boolean param0) {
         if (!param0) {
-          this.c(false);
+          this.aimsDirectlyAtTarget(false);
           return true;
         }
         return true;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = -98 / ((7 - param0) / 47);
         return khb.field_c;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           return 125;
         }
         return GetMissileLauncherRandomness.field_p;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_b = false;
           return SetShipAimLines.field_q;
@@ -109,7 +109,7 @@ final class dm extends mfb {
         return SetShipAimLines.field_q;
     }
 
-    dm() {
+    MissileLauncherWeaponDefinition() {
     }
 
     static {

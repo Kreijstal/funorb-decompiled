@@ -79,8 +79,8 @@ final class SetArmageddonWarning extends ConsoleCommand {
     final static void b(int param0, int param1, int param2, int param3) {
         SetTorpedoAcceleration.field_p.position = 0;
         SetTorpedoAcceleration.field_p.writeByte(0, 12);
-        SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
-        SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
+        SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), 332614536);
+        SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), 332614536);
         SetTorpedoAcceleration.field_p.writeByte(param0, param1);
         SetTorpedoAcceleration.field_p.writeByte(0, param2);
         SetTorpedoAcceleration.field_p.writeShort(param3, true);

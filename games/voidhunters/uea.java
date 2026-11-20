@@ -200,12 +200,12 @@ final class uea extends bob {
             if (param1) {
               ServerInfoFactory.a(-30428, false);
             } else {
-              if (null == wca.field_b) {
-                wca.field_b = new dla();
+              if (null == SniperCannonWeaponDefinition.field_b) {
+                SniperCannonWeaponDefinition.field_b = new dla();
               }
               var4 = 1;
-              if (null != wca.field_b) {
-                stackIn_10_0 = wca.field_b;
+              if (null != SniperCannonWeaponDefinition.field_b) {
+                stackIn_10_0 = SniperCannonWeaponDefinition.field_b;
                 stackIn_11_1 = (lo.field_a[param3].a(GetTorpedoReload.field_q, GetUseDetailLines.field_o, 6868) != -1) ? false : true;
                 ((dla) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 55);
               }
@@ -214,7 +214,7 @@ final class uea extends bob {
           }
         }
         if (var4 == 0) {
-          wca.field_b = null;
+          SniperCannonWeaponDefinition.field_b = null;
         }
         var5 = 1;
         var6 = 13421772;

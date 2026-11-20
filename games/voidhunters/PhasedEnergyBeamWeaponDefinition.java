@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fma extends mfb {
+final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     static String field_b;
     static String field_c;
 
-    final int c(byte param0) {
+    final int getPulseDuration(byte param0) {
         int var2 = 3 / ((75 - param0) / 46);
         return SetGrapplingHookMaxLength.field_p;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
           return 126;
         }
         return MissionEvent.field_a;
     }
 
-    final int e(byte param0) {
+    final int getPulseFadeTime(byte param0) {
         if (param0 != -63) {
           return 85;
         }
         return ea.field_j;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           field_c = (String) null;
           return 31;
@@ -32,7 +32,7 @@ final class fma extends mfb {
         return 31;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 > -12) {
           field_b = (String) null;
           return SelectableIconLabelWidget.field_yb;
@@ -40,15 +40,15 @@ final class fma extends mfb {
         return SelectableIconLabelWidget.field_yb;
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
-          this.b(-10);
+          this.getAimArc(-10);
           return hrb.field_a;
         }
         return hrb.field_a;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
           field_b = (String) null;
           return wja.field_b;
@@ -56,7 +56,7 @@ final class fma extends mfb {
         return wja.field_b;
     }
 
-    final boolean h(byte param0) {
+    final boolean hasRecoil(byte param0) {
         if (param0 < 18) {
           field_c = (String) null;
           return false;
@@ -64,7 +64,7 @@ final class fma extends mfb {
         return false;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
           return 3;
@@ -83,7 +83,7 @@ final class fma extends mfb {
           tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
           SetGrapplingHookMinLength.a(5);
           if (param0 != 8611) {
-            fma.clearSharedReferences((byte) -29);
+            PhasedEnergyBeamWeaponDefinition.clearSharedReferences((byte) -29);
             return;
           }
           return;
@@ -97,23 +97,23 @@ final class fma extends mfb {
         if (param0 == 8611) {
           return;
         }
-        fma.clearSharedReferences((byte) -29);
+        PhasedEnergyBeamWeaponDefinition.clearSharedReferences((byte) -29);
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
-          this.h((byte) 11);
+          this.hasRecoil((byte) 11);
           return bv.field_e;
         }
         return bv.field_e;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = 32 % ((param0 - 7) / 47);
         return qab.field_d;
     }
 
-    fma() {
+    PhasedEnergyBeamWeaponDefinition() {
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -124,7 +124,7 @@ final class fma extends mfb {
         field_b = null;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           field_c = (String) null;
           return uab.field_b;
@@ -132,21 +132,21 @@ final class fma extends mfb {
         return uab.field_b;
     }
 
-    final boolean i(int param0) {
+    final boolean hasSustainedPulse(int param0) {
         if (param0 != 1024) {
           return false;
         }
         return true;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           return -23;
         }
         return PlayerActionFactory.field_a;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = -8 / ((param0 + 48) / 43);
         return 1;
     }

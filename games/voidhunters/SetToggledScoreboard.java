@@ -84,7 +84,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_15_0 = ira.field_b;
+              stackIn_15_0 = PointDefenceLaserWeaponDefinition.field_b;
               return stackIn_15_0;
             }
             var3 = 0;
@@ -93,7 +93,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
               if (var5 != 92) {
                 if (34 == var5 &&
                   var3 == 0) {
-                  stackIn_28_0 = ira.field_b;
+                  stackIn_28_0 = PointDefenceLaserWeaponDefinition.field_b;
                   return stackIn_28_0;
                 }
                 var3 = 0;
@@ -116,13 +116,13 @@ final class SetToggledScoreboard extends ConsoleCommand {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_42_0 = ira.field_b;
+                stackIn_42_0 = PointDefenceLaserWeaponDefinition.field_b;
                 return stackIn_42_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (es.field_a.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = ira.field_b;
+                stackIn_47_0 = PointDefenceLaserWeaponDefinition.field_b;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;

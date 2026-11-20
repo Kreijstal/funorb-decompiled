@@ -3322,7 +3322,7 @@ final class World implements DiffableState, CompactGameState {
           var15 = 0;
           var16 = 0;
           if (null != var20.weaponbehaviour &&
-            0 < var20.weaponbehaviour.a((byte) 24).b((byte) 63)) {
+            0 < var20.weaponbehaviour.getDefinition((byte) 24).getMaxSpinSpeed((byte) 63)) {
             var18 = ShipSpawnedCondition.field_d * var20.weaponbehaviour.reload >> 4;
             var8 = var7.field_q * var18;
             if (1 < var18) {
@@ -3332,7 +3332,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var17 = 0;
           if (var9.weaponbehaviour != null &&
-            0 < var9.weaponbehaviour.a((byte) 24).b((byte) 71)) {
+            0 < var9.weaponbehaviour.getDefinition((byte) 24).getMaxSpinSpeed((byte) 71)) {
             var18Lifetime1 = ShipSpawnedCondition.field_d * var9.weaponbehaviour.reload >> 4;
             if (var18Lifetime1 > 1) {
               var16 = 1;
@@ -3364,11 +3364,11 @@ final class World implements DiffableState, CompactGameState {
               var9.applyScaledDamage(var8, (byte) -125);
             }
             if (null != var20.weaponbehaviour &&
-              var20.weaponbehaviour.a((byte) 24).b((byte) 101) > 0) {
+              var20.weaponbehaviour.getDefinition((byte) 24).getMaxSpinSpeed((byte) 101) > 0) {
               var20.weaponbehaviour.reload = var20.weaponbehaviour.reload * 3 / 4;
             }
             if (var9.weaponbehaviour != null &&
-              var9.weaponbehaviour.a((byte) 24).b((byte) 47) > 0) {
+              var9.weaponbehaviour.getDefinition((byte) 24).getMaxSpinSpeed((byte) 47) > 0) {
               var9.weaponbehaviour.reload = var9.weaponbehaviour.reload * 3 / 4;
             }
           }
@@ -6238,7 +6238,7 @@ final class World implements DiffableState, CompactGameState {
               return;
             }
             param3.a(var11.id, (byte) -113);
-            param3.life = SetShipDirectionArrow.field_o[8].a((byte) -99);
+            param3.life = SetShipDirectionArrow.weaponDefinitions[8].getProjectileLifetime((byte) -99);
             return;
           }
           return;
@@ -7012,7 +7012,7 @@ final class World implements DiffableState, CompactGameState {
             var5_int = param1.getPhaseTimer((byte) -102);
             var6 = lga.a((byte) -2, this.objectiveType);
             if (var6 < var5_int) {
-              var7 = dm.a(this.objectiveType, (byte) -78);
+              var7 = MissileLauncherWeaponDefinition.a(this.objectiveType, (byte) -78);
               var8 = var5_int - var6;
               if (var8 > var7) {
                 var8 = var7;
@@ -7407,7 +7407,7 @@ final class World implements DiffableState, CompactGameState {
                       var22 = var18_ref_sg.getBoundingRadius(true) + 51200;
                       if (param3 != var18_ref_sg.getTeam((byte) 93) &&
                         !param2) {
-                        var22 = var22 + (SetShipDirectionArrow.field_o[7].j(121) << 3);
+                        var22 = var22 + (SetShipDirectionArrow.weaponDefinitions[7].getProjectileRange(121) << 3);
                       }
                       if (var21 < var22) {
                         var15 = 0;

@@ -93,7 +93,7 @@ final class LoadBlackboxRecording extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rma.a(arguments[0].intValue(25), (byte) 47);
+          MachineGunWeaponDefinition.a(arguments[0].intValue(25), (byte) 47);
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

@@ -22,7 +22,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != ira.field_c) {
+        if (null != PointDefenceLaserWeaponDefinition.field_c) {
           return null;
         }
         if (null != EnvironmentMapSource.field_b &&
@@ -82,7 +82,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.applet.AppletContext stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ira.field_c != null) {
+          if (PointDefenceLaserWeaponDefinition.field_c != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -139,7 +139,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ira.field_c != null) {
+          if (PointDefenceLaserWeaponDefinition.field_c != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -291,23 +291,23 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           if (uf.field_E == null) {
-            if (ira.field_c == null) {
+            if (PointDefenceLaserWeaponDefinition.field_c == null) {
               if (null == EnvironmentMapSource.field_b) {
                 var2 = TextureFilterMode.field_a;
                 if (var4 != 0) {
                   var2 = EnvironmentMapSource.field_b;
-                  var2 = ira.field_c;
+                  var2 = PointDefenceLaserWeaponDefinition.field_c;
                   var2 = uf.field_E;
                 }
               } else {
                 var2 = EnvironmentMapSource.field_b;
                 if (var4 != 0) {
-                  var2 = ira.field_c;
+                  var2 = PointDefenceLaserWeaponDefinition.field_c;
                   var2 = uf.field_E;
                 }
               }
             } else {
-              var2 = ira.field_c;
+              var2 = PointDefenceLaserWeaponDefinition.field_c;
               if (var4 != 0) {
                 var2 = uf.field_E;
               }
@@ -320,8 +320,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) igb.field_a));
           igb.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
           igb.field_a.setVisible(true);
-          if (var2 == ira.field_c) {
-            var3 = ira.field_c.getInsets();
+          if (var2 == PointDefenceLaserWeaponDefinition.field_c) {
+            var3 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
             igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o + var3.left, var3.top + hqb.field_f);
             if (var4 != 0) {
               igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
@@ -437,9 +437,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ncb.field_b = ncb.field_b - 50;
             igb.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
             igb.field_a.setVisible(true);
-            if (ira.field_c != null &&
+            if (PointDefenceLaserWeaponDefinition.field_c != null &&
               null == uf.field_E) {
-              var6 = ira.field_c.getInsets();
+              var6 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
               igb.field_a.setLocation(var6.left + GetCountermeasuresPulseRadius.field_o, hqb.field_f + var6.top);
               if (VoidHunters.field_G != 0) {
                 igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, hqb.field_f);
@@ -776,7 +776,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ira.field_c) {
+          if (null != PointDefenceLaserWeaponDefinition.field_c) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -871,7 +871,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.errorShown = true;
           }
           this.clearClientResources(false);
-          if (null != ira.field_c) {
+          if (null != PointDefenceLaserWeaponDefinition.field_c) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {

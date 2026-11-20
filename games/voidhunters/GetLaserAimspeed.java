@@ -63,7 +63,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
               break;
             }
             if (var4_ref == null) {
-              ifb.l(-116);
+              FighterBayWeaponDefinition.l(-116);
               return;
             }
             var5 = var27.readUnsignedByte((byte) -97);
@@ -157,14 +157,14 @@ final class GetLaserAimspeed extends ConsoleCommand {
               break;
             }
             if (var4 == null) {
-              ifb.l(-126);
+              FighterBayWeaponDefinition.l(-126);
               return;
             }
             var4.unlink(-3846);
             return;
           }
           gna.a((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-          ifb.l(-119);
+          FighterBayWeaponDefinition.l(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

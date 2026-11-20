@@ -20,8 +20,8 @@ final class fia {
           GetSpecialOrderBarYOffset.field_p > 0) {
           fieldTemp$3 = GetSpecialOrderBarYOffset.field_p - 1;
           GetSpecialOrderBarYOffset.field_p = GetSpecialOrderBarYOffset.field_p - 1;
-          var2_ref_byte__ = fpb.field_d[fieldTemp$3];
-          fpb.field_d[GetSpecialOrderBarYOffset.field_p] = null;
+          var2_ref_byte__ = MassDriverWeaponDefinition.field_d[fieldTemp$3];
+          MassDriverWeaponDefinition.field_d[GetSpecialOrderBarYOffset.field_p] = null;
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
@@ -69,7 +69,7 @@ final class fia {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!jeb.a(param1, param0, param3, param4, (byte) -82)) {
+          if (!CountermeasureLauncherWeaponDefinition.a(param1, param0, param3, param4, (byte) -82)) {
             return false;
           }
           var6_int = -8 % ((param2 - 36) / 44);

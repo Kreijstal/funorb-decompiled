@@ -208,7 +208,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetMissionResnetResourceTickTime.field_o = param1[168];
           gl.field_d = param1[8];
           SetPointDefenceLaserEnergyUsed.field_o = param1[200];
-          rma.field_b = param1[20];
+          MachineGunWeaponDefinition.field_b = param1[20];
           SetUseRectFill.field_p = param1[184];
           sja.field_b = param1[44];
           OpenGlIndexBuffer.field_j = param1[95];

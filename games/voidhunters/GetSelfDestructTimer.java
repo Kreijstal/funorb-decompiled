@@ -76,7 +76,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             }
             var4 = cd.field_c;
             if (AsteroidField.field_c != 0.0) {
-              var4 = (int)((double)var4 + jeb.field_b.nextGaussian() * AsteroidField.field_c);
+              var4 = (int)((double)var4 + CountermeasureLauncherWeaponDefinition.field_b.nextGaussian() * AsteroidField.field_c);
               if (var4 < 0) {
                 var4 = 0;
               }

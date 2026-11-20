@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1122/1572 classes and 5624/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 450 opaque classes and 2591 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1135/1572 classes and 5804/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 437 opaque classes and 2411 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -22,6 +22,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `CarouselGameClient` names readiness, incoming/outgoing event buffering, server ticks/checksums and black-box replay requests. `ChunkedDataReceiver` and `ChunkedDataSender` expose transfer progress and throttled packet chunks. `ServerInfo` separates option visibility, availability, membership and new/coming-soon/limited-time badges. The legacy OpenGL texture classes distinguish one-, two- and three-dimensional storage from `OpenGlRenderbuffer`, with explicit upload, wrapping, attachment and disposal operations.
 
 `UiComponent` names pointer/key dispatch, focus, bounds, layered drawing and diagnostic trees across its overrides. `UiContainer`, `UiSingleChildContainer` and `UiArrayContainer` expose child traversal; `UiFocusableComponent` supplies action, pointer and focus callbacks. `SoftwareRasterState` supports pooled target/clip save and restore. `NineSliceSprite` draws tiled corners, edges and center; `NanosecondClock` and `SystemNanoClock` identify the profiling time source.
+
+`WeaponDefinition` and its twelve concrete weapon definitions name projectile, aiming, energy, reload, pulse, spin and recoil parameters. Their identities follow the registered setting indices consumed by each definition. `WeaponBehaviour` separates firing, projectile creation, reload updates and target locks. `UiArrayContainer` exposes forward/backward focus traversal and child layout.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

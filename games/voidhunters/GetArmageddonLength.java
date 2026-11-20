@@ -41,7 +41,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           if (var2 != 0) {
             if (var2 != 1) {
               gna.a((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              ifb.l(-126);
+              FighterBayWeaponDefinition.l(-126);
               return;
             }
             var4 = var10.readInt(100);
@@ -57,12 +57,12 @@ final class GetArmageddonLength extends ConsoleCommand {
               var5_ref_dnb.unlink(-3846);
               return;
             }
-            ifb.l(-121);
+            FighterBayWeaponDefinition.l(-121);
             return;
           }
           var9 = (kob) (GetBoostersActiveTime.field_q.first(0));
           if (var9 == null) {
-            ifb.l(-126);
+            FighterBayWeaponDefinition.l(-126);
             return;
           }
           var5 = var10.readUnsignedByte((byte) -93);
@@ -77,7 +77,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           }
           var10.position = var10.position + 4;
           if (!var10.checkCrc(-2780)) {
-            ifb.l(-126);
+            FighterBayWeaponDefinition.l(-126);
             return;
           }
           var9.field_f = (byte[]) (var6);

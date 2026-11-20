@@ -1166,7 +1166,7 @@ final class ne extends ka {
             param1.a((byte) -37, false);
           }
           if (param1.field_g != null &&
-            ifb.a(-54, param2, this.field_u)) {
+            FighterBayWeaponDefinition.a(-54, param2, this.field_u)) {
             param1.a(-96);
           }
           if (null != param1.field_y &&

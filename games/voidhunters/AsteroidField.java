@@ -661,7 +661,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime31 = HuffmanCodec.fetchLocalizedResource((byte) -57, "stored_ship");
           if (null != var2Lifetime31) {
-            deb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime31);
+            LaserWeaponDefinition.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime31);
           }
           var2Lifetime32 = HuffmanCodec.fetchLocalizedResource((byte) -10, "become_a_member_to_permenantly_save");
           if (null != var2Lifetime32) {
@@ -1505,7 +1505,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime242 = HuffmanCodec.fetchLocalizedResource((byte) -110, "VOTE_HOLD_THE_COMPONENT_DESC");
           if (var2Lifetime242 != null) {
-            fpb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime242);
+            MassDriverWeaponDefinition.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime242);
           }
           var2Lifetime243 = HuffmanCodec.fetchLocalizedResource((byte) -14, "VOTE_SHOWDOWN");
           if (null != var2Lifetime243) {
@@ -1617,7 +1617,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime270 = HuffmanCodec.fetchLocalizedResource((byte) -13, "spawn_caps");
           if (var2Lifetime270 != null) {
-            mna.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime270);
+            BombletSprayWeaponDefinition.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime270);
           }
           var2Lifetime271 = HuffmanCodec.fetchLocalizedResource((byte) -13, "win_round_message");
           if (null != var2Lifetime271) {
@@ -1720,7 +1720,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime295 = HuffmanCodec.fetchLocalizedResource((byte) -111, "tutorial_weapon_energy");
           if (var2Lifetime295 != null) {
-            wqb.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime295);
+            TorpedoWeaponDefinition.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime295);
           }
           var2Lifetime296 = HuffmanCodec.fetchLocalizedResource((byte) -99, "message_a_destroyed_b");
           if (var2Lifetime296 != null) {

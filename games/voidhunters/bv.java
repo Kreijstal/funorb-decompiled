@@ -723,14 +723,14 @@ final class bv {
                 if (SetUseTrails.field_o &&
                   ComponentBehaviour.field_b &&
                   OpenGlVertexDeclaration.field_d &&
-                  mfb.field_a) {
+                  WeaponDefinition.field_a) {
                   this.a((byte) 86, 0);
                 }
                 if ((2 & var15.triggers) != 0) {
                   ComponentBehaviour.field_b = true;
                 }
                 if ((var15.triggers & 8) != 0) {
-                  mfb.field_a = true;
+                  WeaponDefinition.field_a = true;
                 }
                 if (0 != (var15.triggers & 1)) {
                   SetUseTrails.field_o = true;
@@ -739,7 +739,7 @@ final class bv {
                   OpenGlVertexDeclaration.field_d = true;
                 }
                 if (this.b(0, -116)) {
-                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.a(-6448, UnsupportedGpuMaterialEffect.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.a(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
                   this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.b((byte) 11, 0) &&
@@ -755,7 +755,7 @@ final class bv {
                       stackIn_82_0 = stackOut_81_0;
                       if (var43 == 0) {
                         if (!stackIn_82_0 &&
-                          var23.weaponbehaviour.b((byte) 119)) {
+                          var23.weaponbehaviour.isReadyToFire((byte) 119)) {
                           var24_int = var23.getAimArc(-14);
                           if (var24_int != 0) {
                             var21 = 1;
@@ -802,7 +802,7 @@ final class bv {
                             var40 = param3.b(true, var29);
                             var41 = 11142145;
                             var42 = GetMutatorVotes.a(HardpointMatch.field_f[1], 255) >>> 2;
-                            if (!var24.weaponbehaviour.a(-26772, var18, var17, var24.getDefinition((byte) -112), var24)) {
+                            if (!var24.weaponbehaviour.canAimAtTarget(-26772, var18, var17, var24.getDefinition((byte) -112), var24)) {
                               if (PacketBuffer.field_g != 0) {
                                 var41 = 16712705;
                               }

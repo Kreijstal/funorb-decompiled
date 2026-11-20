@@ -30,7 +30,7 @@ final class qj {
               return null;
             }
           }
-          stackIn_13_0 = ira.field_b;
+          stackIn_13_0 = PointDefenceLaserWeaponDefinition.field_b;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

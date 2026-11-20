@@ -86,9 +86,9 @@ final class ShipBlueprint implements DiffableState {
               30000L >= mw.e(0)) {
               return false;
             }
-            ifb.l(param1 ^ -30026);
+            FighterBayWeaponDefinition.l(param1 ^ -30026);
           } catch (IOException iOException) {
-            ifb.l(-126);
+            FighterBayWeaponDefinition.l(-126);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

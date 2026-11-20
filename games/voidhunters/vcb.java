@@ -402,7 +402,7 @@ final class vcb extends UiArrayContainer implements UiActionListener {
 
     private final void i(byte param0) {
         if (param0 != -8) {
-          this.d(116);
+          this.layoutChildren(116);
         }
         int var2 = null == this.field_D ? this.field_N.x : this.field_D.width + this.field_D.x;
         int var3 = null != this.field_C ? -this.field_P.width + this.field_C.x : this.field_N.width + (this.field_N.x - this.field_P.width);
@@ -537,7 +537,7 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         }
     }
 
-    final void d(int param0) {
+    final void layoutChildren(int param0) {
         int var3;
         var3 = VoidHunters.field_G;
         if (null != this.field_D) {

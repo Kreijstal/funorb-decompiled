@@ -104,7 +104,7 @@ final class PopupMenuWidget extends Widget {
     }
 
     final static void applyGraphicsQualityPreset(boolean param0) {
-        rma.field_b = 0;
+        MachineGunWeaponDefinition.field_b = 0;
         GetMissilesExplosionPower.field_p = 1;
         GetSalvoDamageMultiplier.field_q = 1;
         GetUseSprites.field_o = 1;

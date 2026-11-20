@@ -3,31 +3,31 @@
  */
 import java.util.*;
 
-final class jeb extends mfb {
+final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
     static Random field_b;
     static int[] field_c;
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
-          this.a(true);
+          this.getFiringSoundId(true);
           return ava.field_a;
         }
         return ava.field_a;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = 63 % ((7 - param0) / 47);
         return rlb.field_e;
     }
 
-    final boolean h(byte param0) {
+    final boolean hasRecoil(byte param0) {
         if (param0 < 18) {
           return false;
         }
         return false;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_b = (Random) null;
           return GetShieldsDirectionalRadius.field_p;
@@ -35,51 +35,51 @@ final class jeb extends mfb {
         return GetShieldsDirectionalRadius.field_p;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = -96 / ((-48 - param0) / 43);
         return OpenGlIndexBuffer.field_j;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
           return 34;
         }
         return Particle.field_a;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
-          this.k(108);
+          this.getProjectileType(108);
           return 6;
         }
         return 6;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
-          this.h((byte) 61);
+          this.hasRecoil((byte) 61);
           return 71;
         }
         return 71;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
           return -93;
         }
         return SetMissileLauncherEnergyUsed.field_o;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          jeb.a(31, (int[]) null, 36L, (String) null, (byte) 17);
+          CountermeasureLauncherWeaponDefinition.a(31, (int[]) null, 36L, (String) null, (byte) 17);
           return RenderResourceNode.field_k;
         }
         return RenderResourceNode.field_k;
     }
 
-    jeb() {
+    CountermeasureLauncherWeaponDefinition() {
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -103,7 +103,7 @@ final class jeb extends mfb {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param0 != 2 ||
-            ira.a(param2, param3, 41))) {
+            PointDefenceLaserWeaponDefinition.a(param2, param3, 41))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -131,7 +131,7 @@ final class jeb extends mfb {
         }
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_c = (int[]) null;
           return cp.field_f;

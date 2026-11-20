@@ -131,7 +131,7 @@ final class ik extends IntrusiveNode {
         var2[58] = GetPhasedEnergyBeamReload.field_q;
         var2[176] = GetSalvoHoldable.field_p;
         var2[146] = ServerInfo.field_f;
-        var2[20] = rma.field_b;
+        var2[20] = MachineGunWeaponDefinition.field_b;
         var2[112] = MissionEvent.field_a;
         var2[0] = SetAutoDetail.field_o;
         var2[4] = ColorRowCacheEntry.field_f;

@@ -170,7 +170,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_cannot_join_full", 23100);
                 if (var2 != null) {
-                  fpb.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  MassDriverWeaponDefinition.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_cannot_join_inprogress", 23100);
                 if (null != var2) {
@@ -1032,7 +1032,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("reloadgame", 23100);
                 if (var2 != null) {
-                  fma.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  PhasedEnergyBeamWeaponDefinition.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("toserverlist", 23100);
                 if (null != var2) {
@@ -1762,7 +1762,7 @@ final class dga {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  wqb.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  TorpedoWeaponDefinition.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("waitingfor_soundeffects", 23100);
                 if (null != var2) {
@@ -2078,7 +2078,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("resign", 23100);
                 if (var2 != null) {
-                  fma.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  PhasedEnergyBeamWeaponDefinition.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("returntolobby", 23100);
                 if (var2 != null) {

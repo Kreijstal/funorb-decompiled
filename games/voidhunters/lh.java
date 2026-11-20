@@ -12,7 +12,7 @@ final class lh {
             field_a = (String) null;
           }
           var6 = new pgb(param5, param3, param1, param2, param4);
-          fpb.a(var6, 0);
+          MassDriverWeaponDefinition.a(var6, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

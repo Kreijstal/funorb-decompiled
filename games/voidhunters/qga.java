@@ -27,7 +27,7 @@ final class qga {
             stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
             PrimitiveType.field_a = rv.a(stackIn_12_0, 1);
             var6 = (String[]) null;
-            mfb.a((String[]) null, 11113);
+            WeaponDefinition.a((String[]) null, 11113);
             return;
           }
           if (param1 < 100) {
@@ -39,7 +39,7 @@ final class qga {
             return;
           }
           var4 = param3;
-          mfb.a(var4, 11113);
+          WeaponDefinition.a(var4, 11113);
           PrimitiveType.field_a = MissionCondition.a(param3, (byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

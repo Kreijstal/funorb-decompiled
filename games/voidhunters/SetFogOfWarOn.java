@@ -134,7 +134,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_nebula_fades_out_when_close(" + ColorRowCacheEntry.field_d + ")");
         System.out.println("set_debris_found_in_pairs(" + WeaponBehaviour.field_d + ")");
         System.out.println("set_fog_of_war_on(" + rla.field_x + ")");
-        System.out.println("set_use_models(" + rma.field_b + ")");
+        System.out.println("set_use_models(" + MachineGunWeaponDefinition.field_b + ")");
         System.out.println("set_innate_thrusters(" + SetSniperCannonProjectiles.field_o + ")");
         System.out.println("set_thruster_autobalancing(" + BodyInZoneConditionFactory.field_b + ")");
         System.out.println("set_bots(" + SetMissionResnetResourceTickTime.field_p + ")");

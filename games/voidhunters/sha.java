@@ -39,7 +39,7 @@ final class sha extends UiArrayContainer {
           dupTemp$0 = new bk(param0, param1, param2, param3, param6, param5);
           this.field_y = dupTemp$0;
           this.children[2] = (UiComponent) ((Object) dupTemp$0);
-          this.d(16777215);
+          this.layoutChildren(16777215);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -103,7 +103,7 @@ final class sha extends UiArrayContainer {
         }
     }
 
-    final void d(int param0) {
+    final void layoutChildren(int param0) {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         vcb stackIn_15_0 = null;

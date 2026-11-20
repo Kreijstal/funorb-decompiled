@@ -46,7 +46,7 @@ final class GetLagIn extends ConsoleCommand {
             stackIn_2_0 = 61;
             return stackIn_2_0;
           }
-          var3 = wqb.field_e.get(param2);
+          var3 = TorpedoWeaponDefinition.field_e.get(param2);
           if (!(var3 instanceof Integer)) {
             stackIn_7_0 = param0;
             return stackIn_7_0;

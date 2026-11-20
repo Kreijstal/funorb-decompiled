@@ -9,7 +9,7 @@ final class SetLaserAimarc extends ConsoleCommand {
 
     final static void a(int param0) {
         File var1_ref = null;
-        if (null == wqb.field_e) {
+        if (null == TorpedoWeaponDefinition.field_e) {
           return;
         }
         Object var1 = null;
@@ -21,7 +21,7 @@ final class SetLaserAimarc extends ConsoleCommand {
           return;
         }
         if (var1_ref != null) {
-          MidiNote.writeSerializedObject(67, wqb.field_e, var1_ref);
+          MidiNote.writeSerializedObject(67, TorpedoWeaponDefinition.field_e, var1_ref);
           return;
         }
     }

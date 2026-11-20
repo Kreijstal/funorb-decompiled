@@ -101,7 +101,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                   if (SetExplosionPushMultiplier.field_p <= 0) {
                     if (SoftwareTransform3D.field_b < GetRepairModePower.field_o) {
                       if (SoftwareTransform3D.field_b == 0) {
-                        fma.l(8611);
+                        PhasedEnergyBeamWeaponDefinition.l(8611);
                       }
                       SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + 1;
                     }

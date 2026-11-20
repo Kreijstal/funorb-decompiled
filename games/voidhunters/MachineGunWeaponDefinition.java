@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rma extends mfb {
+final class MachineGunWeaponDefinition extends WeaponDefinition {
     static GameStateFactory field_d;
     static int field_b;
     static GameStateFactory field_c;
@@ -10,7 +10,7 @@ final class rma extends mfb {
         if (di.field_l != null) {
           di.field_l.sendDebugRequest((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
           if (param1 != 47) {
-            rma.a(112, (byte) -50);
+            MachineGunWeaponDefinition.a(112, (byte) -50);
             return;
           }
           return;
@@ -18,27 +18,27 @@ final class rma extends mfb {
         if (param1 == 47) {
           return;
         }
-        rma.a(112, (byte) -50);
+        MachineGunWeaponDefinition.a(112, (byte) -50);
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           return 45;
         }
         return ServerInfo.field_f;
     }
 
-    rma() {
+    MachineGunWeaponDefinition() {
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           return -62;
         }
         return 31;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_c = (GameStateFactory) null;
           return mmb.field_g;
@@ -88,28 +88,28 @@ final class rma extends mfb {
     public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 3) {
-          rma.b(-77, (byte) 54);
+          MachineGunWeaponDefinition.b(-77, (byte) 54);
           field_d = null;
           return;
         }
         field_d = null;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           return -116;
         }
         return SelectableIconLabelWidget.field_yb;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 > -52) {
           return -3;
         }
         return eca.field_e;
     }
 
-    final boolean i(int param0) {
+    final boolean hasSustainedPulse(int param0) {
         if (param0 != 1024) {
           field_b = 100;
           return true;
@@ -117,7 +117,7 @@ final class rma extends mfb {
         return true;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           field_b = 40;
           return uab.field_b;
@@ -125,45 +125,45 @@ final class rma extends mfb {
         return uab.field_b;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = -79 % ((-48 - param0) / 43);
         return 1;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = -115 / ((param0 - 7) / 47);
         return PlayerReady.field_c;
     }
 
-    final boolean h(byte param0) {
+    final boolean hasRecoil(byte param0) {
         if (param0 < 18) {
           return true;
         }
         return false;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
-          this.h((byte) 56);
+          this.hasRecoil((byte) 56);
           return 3;
         }
         return 3;
     }
 
-    final int c(byte param0) {
+    final int getPulseDuration(byte param0) {
         int var2 = -97 % ((param0 - 75) / 46);
         return GetTorqueDownshift.field_o;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
-          this.b(true);
+          this.getProjectileCount(true);
           return SetSpinningBladeAimarc.field_o;
         }
         return SetSpinningBladeAimarc.field_o;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           field_c = (GameStateFactory) null;
           return dr.field_a;

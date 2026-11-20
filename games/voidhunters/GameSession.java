@@ -966,7 +966,7 @@ final class GameSession {
           GetDebrisGroupColour.field_r.beginPostProcessing(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a);
           GetDebrisGroupColour.field_r.clearColor(0);
         }
-        if (rma.field_b == 1) {
+        if (MachineGunWeaponDefinition.field_b == 1) {
           GetDebrisGroupColour.field_r.clearDepth();
           GetDebrisGroupColour.field_r.setAmbientLight(1.0f);
           GetDebrisGroupColour.field_r.setDirectionalLighting(14540253, 0.10000000149011612f, 0.20000000298023224f, -100.0f, -100.0f, 0.0f);
@@ -1181,7 +1181,7 @@ final class GameSession {
                 var5Lifetime3 = var8Lifetime1;
                 var5Lifetime3 = var8Lifetime1;
                 if (ujb.a(-117)) {
-                  var5Lifetime3 = deb.field_b;
+                  var5Lifetime3 = LaserWeaponDefinition.field_b;
                 } else {
                   var5Lifetime3 = var8Lifetime1 + "<br>" + SetCountermeasureLauncherProjectiles.field_o;
                 }
@@ -1260,7 +1260,7 @@ final class GameSession {
             !param1 &&
             ssa.b(2)) {
             for (var4_int = 0; SetFogOfWarSensorRange.field_o.length > var4_int; var4_int++) {
-              var5 = wqb.field_c[var4_int];
+              var5 = TorpedoWeaponDefinition.field_c[var4_int];
               var6 = GetPhasedEnergyBeamProjectiles.a(96, var5);
               var7 = OpenGlTexture.b((byte) 118);
               var8 = -10 + (PartitionZoneFactory.field_a - var6);
@@ -3010,7 +3010,7 @@ final class GameSession {
                     this.field_O = var37Lifetime1;
                   }
                   var34Lifetime2.draw(-(var34Lifetime2.getWidth() / 2) + var13, -(var34Lifetime2.getHeight() / 2) + var35Lifetime1);
-                  var55 = mna.field_c;
+                  var55 = BombletSprayWeaponDefinition.field_c;
                   stackIn_173_0 = var13 - tea.a(2, var55, 13879) / 2;
                   stackIn_173_1 = -1;
                   stackIn_173_2 = 6 + var35Lifetime1;
@@ -3420,7 +3420,7 @@ final class GameSession {
                 }
                 if (null != this.field_v &&
                   this.field_v.b(1, -53)) {
-                  var7 = wqb.field_d;
+                  var7 = TorpedoWeaponDefinition.field_d;
                   GetLagStandardDeviationOut.a(-1, var7, 16777215, -10 + var6, var4_int / 2 + var5 - GetPhasedEnergyBeamProjectiles.a(-112, var7) / 2, 4266);
                 }
               }
@@ -4141,7 +4141,7 @@ final class GameSession {
           for (var3_intLifetime1 = 0; SetFogOfWarSensorRange.field_o.length > var3_intLifetime1; var3_intLifetime1++) {
             var4Lifetime2 = SetFogOfWarSensorRange.field_o[var3_intLifetime1][0];
             var5 = SetFogOfWarSensorRange.field_o[var3_intLifetime1][-1 + SetFogOfWarSensorRange.field_o[var3_intLifetime1].length];
-            var22 = wqb.field_c[var3_intLifetime1];
+            var22 = TorpedoWeaponDefinition.field_c[var3_intLifetime1];
             stackIn_33_0 = (var3_intLifetime1 != this.field_C) ? 0 : 1;
             regionExit1: {
               var7 = stackIn_33_0;
@@ -5929,7 +5929,7 @@ final class GameSession {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        mfb var23 = null;
+        WeaponDefinition var23 = null;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
@@ -5971,12 +5971,12 @@ final class GameSession {
                     }
                     var20 = ShipTeamConditionFactory.field_a.a(var13, (byte) 113);
                     var21 = ShipTeamConditionFactory.field_a.b(true, var14);
-                    if (var10.weaponbehaviour.b((byte) 118)) {
+                    if (var10.weaponbehaviour.isReadyToFire((byte) 118)) {
                       var22 = ar.a(var16, (byte) 116, var17);
-                      var23 = SetShipDirectionArrow.field_o[var10.weaponbehaviour.weapontype];
+                      var23 = SetShipDirectionArrow.weaponDefinitions[var10.weaponbehaviour.weapontype];
                       var24 = GetUseDetailLines.field_o;
                       var25 = GetTorpedoReload.field_q;
-                      var26 = var23.j(122) << 3;
+                      var26 = var23.getProjectileRange(122) << 3;
                       if (var22 > var26) {
                         var27 = var16 * 255 / var22 * var26 / 255;
                         var24 = ShipTeamConditionFactory.field_a.a(var27 + var13, (byte) 122);
@@ -6322,7 +6322,7 @@ final class GameSession {
                   var19 = 16777215;
                   var20 = GameKeyHandler.a(22433, var12 - var8);
                   var21 = GameKeyHandler.a(22433, var12 + var8);
-                  var22 = var7.weaponbehaviour.a((byte) 24).j(123) << 3;
+                  var22 = var7.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(123) << 3;
                   var23 = var10 + (GetNumStars.a(var20, (byte) 44) >> 8) * (var22 >> 8);
                   var24 = (var22 >> 8) * (eu.a(var20, 70) >> 8) + var11;
                   var25 = (GetNumStars.a(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
@@ -7303,9 +7303,9 @@ final class GameSession {
           for (var6 = 0; var6 < var5_int; var6++) {
             var7 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var6];
             if (!var7.isDestroyed((byte) 103) &&
-              var7.weaponbehaviour.b((byte) 127)) {
+              var7.weaponbehaviour.isReadyToFire((byte) 127)) {
               var8 = var7.getDefinition((byte) -112);
-              if (var7.weaponbehaviour.a(-26772, param1, param0, var8, var7)) {
+              if (var7.weaponbehaviour.canAimAtTarget(-26772, param1, param0, var8, var7)) {
                 return true;
               }
             }

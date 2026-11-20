@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ira extends mfb {
+final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
     static lkb field_b;
     static java.awt.Frame field_c;
 
-    ira() {
+    PointDefenceLaserWeaponDefinition() {
     }
 
-    final boolean h(byte param0) {
+    final boolean hasRecoil(byte param0) {
         if (param0 <= 18) {
-          this.a(false);
+          this.getFiringSoundId(false);
           return false;
         }
         return false;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           return 72;
         }
         return qh.field_J;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           field_b = (lkb) null;
           return 41;
@@ -31,12 +31,12 @@ final class ira extends mfb {
         return 41;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = -55 / ((7 - param0) / 47);
         return GetMaxShipSize.field_o;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
           field_c = (java.awt.Frame) null;
           return GetFighterRepairAmount.field_o;
@@ -44,7 +44,7 @@ final class ira extends mfb {
         return GetFighterRepairAmount.field_o;
     }
 
-    final boolean e(int param0) {
+    final boolean usesTargetDisplacementVelocity(int param0) {
         int var2 = -111 / ((param0 - 54) / 54);
         return true;
     }
@@ -54,34 +54,34 @@ final class ira extends mfb {
         field_c = null;
         if (param0 != 17036) {
           String var2 = (String) null;
-          ira.a(25L, (String) null, -89);
+          PointDefenceLaserWeaponDefinition.a(25L, (String) null, -89);
         }
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
-          this.c((byte) -16);
+          this.getPulseDuration((byte) -16);
           return GetMissionResnetResourceTickTime.field_o;
         }
         return GetMissionResnetResourceTickTime.field_o;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 > -12) {
-          this.d((byte) -91);
+          this.getProjectileSpeed((byte) -91);
           return GetRadialMenuRadius.field_p;
         }
         return GetRadialMenuRadius.field_p;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
           return -72;
         }
         return 3;
     }
 
-    final int c(byte param0) {
+    final int getPulseDuration(byte param0) {
         int var2 = -86 % ((param0 - 75) / 46);
         return VariableConditionFactory.field_a;
     }
@@ -99,7 +99,7 @@ final class ira extends mfb {
           var4 = di.a(param1, 0);
           if (param2 != 41) {
             var5 = (String) null;
-            ira.a(1L, (String) null, 31);
+            PointDefenceLaserWeaponDefinition.a(1L, (String) null, 31);
           }
           if (var4 != null &&
             null != var4.field_Ab) {
@@ -121,14 +121,14 @@ final class ira extends mfb {
         }
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           return 6;
         }
         return GetAngularForceDownshift.field_q;
     }
 
-    final boolean h(int param0) {
+    final boolean autoTargetsThreats(int param0) {
         if (param0 != -2291) {
           field_b = (lkb) null;
           return true;
@@ -136,7 +136,7 @@ final class ira extends mfb {
         return true;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
           field_b = (lkb) null;
           return SetShipPersistence.field_s;
@@ -144,14 +144,14 @@ final class ira extends mfb {
         return SetShipPersistence.field_s;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           return -95;
         }
         return OpenGlGlyphMask.field_e;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = 106 % ((param0 + 48) / 43);
         return 1;
     }

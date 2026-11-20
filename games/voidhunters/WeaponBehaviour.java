@@ -10,25 +10,25 @@ final class WeaponBehaviour implements DiffableState {
     private TargetLock targetLock;
     static String field_a;
 
-    final int e(byte param0) {
+    final int getAimSpeed(byte param0) {
         int var2 = 114 / ((param0 - 78) / 43);
         if (1 == fra.field_a) {
           return 2048;
         }
-        return this.a((byte) 24).c(0);
+        return this.getDefinition((byte) 24).getAimSpeed(0);
     }
 
-    final int a(int param0) {
-        if (!this.a((byte) 24).h((byte) 38)) {
+    final int getRecoilFraction(int param0) {
+        if (!this.getDefinition((byte) 24).hasRecoil((byte) 38)) {
           return 0;
         }
         if (param0 < 67) {
           return 87;
         }
-        return 256 * this.reload / Math.max(1, this.a((byte) 24).f((byte) 118));
+        return 256 * this.reload / Math.max(1, this.getDefinition((byte) 24).getReloadTime((byte) 118));
     }
 
-    final boolean b(byte param0) {
+    final boolean isReadyToFire(byte param0) {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = -28 % ((74 - param0) / 38);
@@ -126,23 +126,23 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    final TargetLock c(int param0) {
+    final TargetLock getTargetLock(int param0) {
         if (param0 != 2) {
           this.reload = 37;
         }
         return this.targetLock;
     }
 
-    final boolean b(boolean param0) {
-        mfb var2;
+    final boolean isFiring(boolean param0) {
+        WeaponDefinition var2;
         boolean stackIn_8_0 = false;
         if (!param0) {
-          this.e((byte) 111);
+          this.getAimSpeed((byte) 111);
         }
         boolean decompiledFrameRemainder0 = true;
-        var2 = this.a((byte) 24);
-        if (this.reload != var2.f((byte) 127) && (!var2.i(1024) ||
-          !(this.reload > var2.f((byte) 32) - var2.c((byte) -50)))) {
+        var2 = this.getDefinition((byte) 24);
+        if (this.reload != var2.getReloadTime((byte) 127) && (!var2.hasSustainedPulse(1024) ||
+          !(this.reload > var2.getReloadTime((byte) 32) - var2.getPulseDuration((byte) -50)))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -152,36 +152,36 @@ final class WeaponBehaviour implements DiffableState {
         return stackIn_8_0;
     }
 
-    final mfb a(byte param0) {
+    final WeaponDefinition getDefinition(byte param0) {
         if (param0 != 24) {
           field_d = -84;
         }
-        return SetShipDirectionArrow.field_o[this.weapontype];
+        return SetShipDirectionArrow.weaponDefinitions[this.weapontype];
     }
 
     final void a(boolean param0, boolean param1) {
         if (!param1) {
-          this.a(73);
+          this.getRecoilFraction(73);
         }
     }
 
-    final boolean d(int param0) {
+    final boolean canAimIndependently(int param0) {
         if (param0 != 6) {
           ShipComponent var3 = (ShipComponent) null;
-          this.a(-39, -35, 81, (ShipComponentDefinition) null, (ShipComponent) null);
+          this.canAimAtTarget(-39, -35, 81, (ShipComponentDefinition) null, (ShipComponent) null);
         }
-        return !this.a((byte) 24).e(118) ? true : false;
+        return !this.getDefinition((byte) 24).usesTargetDisplacementVelocity(118) ? true : false;
     }
 
-    final int d(byte param0) {
+    final int getAimArc(byte param0) {
         if (param0 <= 106) {
-          mfb var3 = (mfb) null;
-          this.a(107, -16, 116, -66, 72, -61, -84, 43, -112, 41, (ShipBody) null, 15, 117, -19, -92, (World) null, (mfb) null);
+          WeaponDefinition var3 = (WeaponDefinition) null;
+          this.fireProjectiles(107, -16, 116, -66, 72, -61, -84, 43, -112, 41, (ShipBody) null, 15, 117, -19, -92, (World) null, (WeaponDefinition) null);
         }
-        return this.a((byte) 24).b(-105);
+        return this.getDefinition((byte) 24).getAimArc(-105);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, ShipBody param10, int param11, int param12, int param13, int param14, World param15, mfb param16) {
+    private final void fireProjectiles(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, ShipBody param10, int param11, int param12, int param13, int param14, World param15, WeaponDefinition param16) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -216,12 +216,12 @@ final class WeaponBehaviour implements DiffableState {
         int var35Lifetime1;
         var37 = VoidHunters.field_G;
         try {
-          var18_int = param16.b(false);
-          var19 = param16.g((byte) -48);
-          var20 = param16.h((byte) 105) ? 1 : 0;
-          var21 = param16.d((byte) -106);
-          var22 = param16.a((byte) 9);
-          var23 = param16.k(0);
+          var18_int = param16.getProjectileCount(false);
+          var19 = param16.getProjectileVelocityRandomness((byte) -48);
+          var20 = param16.hasRecoil((byte) 105) ? 1 : 0;
+          var21 = param16.getProjectileSpeed((byte) -106);
+          var22 = param16.getProjectileLifetime((byte) 9);
+          var23 = param16.getProjectileType(0);
           this.reload = param1;
           var24 = var21 * (param14 >> 4) >> 12;
           var25 = var21 * (param6 >> 4) >> 12;
@@ -231,23 +231,23 @@ final class WeaponBehaviour implements DiffableState {
           var26 = var24 * SetMissionDebrisDefaultProbability.field_o + param10.getVelocityX((byte) -126);
           var28 = 47 % ((15 - param2) / 63);
           var27 = var25 * SetMissionDebrisDefaultProbability.field_o + param10.getVelocityY(0);
-          if (param16.e(-34)) {
+          if (param16.usesTargetDisplacementVelocity(-34)) {
             var27 = -param7 + param11;
             var26 = param0 - param13;
           }
           var29 = new Random((long)param13);
           var30 = param13 + (param14 >> 8);
           var31 = param7 + (param6 >> 8);
-          var32 = param16.g(2769);
-          if (param16.e((byte) -63) > 0) {
-            var33 = param16.f((byte) 30) - this.reload;
-            var34 = param16.c((byte) -111);
+          var32 = param16.getProjectileDamage(2769);
+          if (param16.getPulseFadeTime((byte) -63) > 0) {
+            var33 = param16.getReloadTime((byte) 30) - this.reload;
+            var34 = param16.getPulseDuration((byte) -111);
             var35 = -var33 + var34;
-            if (var35 < param16.e((byte) -63)) {
-              var32 = var32 * var35 / param16.e((byte) -63);
+            if (var35 < param16.getPulseFadeTime((byte) -63)) {
+              var32 = var32 * var35 / param16.getPulseFadeTime((byte) -63);
             }
           }
-          if (!param16.c(true)) {
+          if (!param16.aimsDirectlyAtTarget(true)) {
             if (6 == this.weapontype ||
               11 == this.weapontype ||
               this.weapontype == 9) {
@@ -306,14 +306,14 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean usesTargetLock(byte param0) {
         if (param0 <= 71) {
-          this.a(126);
+          this.getRecoilFraction(126);
         }
         return this.weapontype == 6 ? true : false;
     }
 
-    final void a(World param0, boolean param1, int param2, int param3, int param4, ShipBody param5, int param6, int param7, int param8, int param9, int param10, int[] param11) {
+    final void fire(World param0, boolean param1, int param2, int param3, int param4, ShipBody param5, int param6, int param7, int param8, int param9, int param10, int[] param11) {
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
@@ -345,7 +345,7 @@ final class WeaponBehaviour implements DiffableState {
         int var31 = 0;
         int var32 = 0;
         int var33 = 0;
-        mfb var34 = null;
+        WeaponDefinition var34 = null;
         Object var35 = null;
         Ship var35_ref = null;
         int var14Lifetime1;
@@ -358,10 +358,10 @@ final class WeaponBehaviour implements DiffableState {
         var35 = null;
         var33 = VoidHunters.field_G;
         try {
-          var34 = this.a((byte) 24);
-          if (var34.b((byte) 34) > 0) {
-            this.reload = this.reload + var34.f(1024);
-            var14 = var34.b((byte) 82);
+          var34 = this.getDefinition((byte) 24);
+          if (var34.getMaxSpinSpeed((byte) 34) > 0) {
+            this.reload = this.reload + var34.getSpinUpSpeed(1024);
+            var14 = var34.getMaxSpinSpeed((byte) 82);
             if (this.reload > var14) {
               this.reload = var14;
             }
@@ -417,45 +417,45 @@ final class WeaponBehaviour implements DiffableState {
             var25.setAi(var26, 4);
             var25.addDirectionalForce(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
             param0.addShip(var25, (byte) 72);
-            this.reload = var34.f((byte) 77);
-            GetFighterVision.a(6811, var34.a(false), 1 + this.reload / 2);
+            this.reload = var34.getReloadTime((byte) 77);
+            GetFighterVision.a(6811, var34.getFiringSoundId(false), 1 + this.reload / 2);
             return;
           }
           if (this.weapontype == 10) {
             this.reload = Particle.field_a;
-            qba.a(20382, var20Lifetime1, var34.a(false), var21Lifetime1, this.reload / 2 + 1);
+            qba.a(20382, var20Lifetime1, var34.getFiringSoundId(false), var21Lifetime1, this.reload / 2 + 1);
             return;
           }
-          if (!var34.c(true) &&
+          if (!var34.aimsDirectlyAtTarget(true) &&
             !param1 &&
             0 == di.field_p) {
             var25_int = param3 - var17;
             var26_int = -var18 + param6;
             var27 = GameSnapshotFactory.a(var26_int, (byte) -77, var25_int);
             var28 = GameKeyHandler.a(22433, var27 - param8);
-            if (Math.abs(var28) > var34.d(27918)) {
+            if (Math.abs(var28) > var34.getFiringLeeway(27918)) {
               return;
             }
           }
           if (!param1 &&
-            var34.i(1024) &&
+            var34.hasSustainedPulse(1024) &&
             this.reload > 0) {
             return;
           }
           var25_intLifetime1 = -1;
-          var26_intLifetime1 = var34.f((byte) 64);
+          var26_intLifetime1 = var34.getReloadTime((byte) 64);
           var27Lifetime1 = 0;
-          if (0 >= var34.c((byte) -106)) {
-            var25_intLifetime1 = var34.a(false);
+          if (0 >= var34.getPulseDuration((byte) -106)) {
+            var25_intLifetime1 = var34.getFiringSoundId(false);
           } else {
             if (this.reload == 0) {
               var27Lifetime1 = 1;
-              var25_intLifetime1 = var34.a(false);
+              var25_intLifetime1 = var34.getFiringSoundId(false);
             } else {
               var26_intLifetime1 = this.reload;
             }
           }
-          var28Lifetime1 = var34.a(0);
+          var28Lifetime1 = var34.getEnergyCost(0);
           if (var24 != null &&
             !((Ship) (var24)).consumeEnergy((byte) 11, var28Lifetime1)) {
             if (fra.field_a != 1) {
@@ -468,8 +468,8 @@ final class WeaponBehaviour implements DiffableState {
               return;
             }
           }
-          if (!this.c((byte) 101)) {
-            this.a(param3, var26_intLifetime1, 113, var22, var25_intLifetime1, param9, var16, var21Lifetime1, param7, var23, param5, param6, param8, var20Lifetime1, var15, param0, var34);
+          if (!this.usesTargetLock((byte) 101)) {
+            this.fireProjectiles(param3, var26_intLifetime1, 113, var22, var25_intLifetime1, param9, var16, var21Lifetime1, param7, var23, param5, param6, param8, var20Lifetime1, var15, param0, var34);
             return;
           }
           if (!param1) {
@@ -494,7 +494,7 @@ final class WeaponBehaviour implements DiffableState {
               this.targetLock.targetY = -param5.getY((byte) 123) + param6;
             }
           }
-          this.a(param3, var26_intLifetime1, 113, var22, var25_intLifetime1, param9, var16, var21Lifetime1, param7, var23, param5, param6, param8, var20Lifetime1, var15, param0, var34);
+          this.fireProjectiles(param3, var26_intLifetime1, 113, var22, var25_intLifetime1, param9, var16, var21Lifetime1, param7, var23, param5, param6, param8, var20Lifetime1, var15, param0, var34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ final class WeaponBehaviour implements DiffableState {
         try {
           param0.writeBits(-632, this.reload, 16);
           if (param1 > -109) {
-            this.e((byte) -18);
+            this.getAimSpeed((byte) -18);
           }
           param0.writeBits(-632, this.weapontype, 4);
           stackIn_4_0 = (IsaacPacketBuffer) (param0);
@@ -654,7 +654,7 @@ final class WeaponBehaviour implements DiffableState {
     WeaponBehaviour() {
     }
 
-    final void a(int param0, ShipBody param1, int[] param2, int param3, int param4, boolean param5, int param6, int param7, World param8) {
+    final void update(int param0, ShipBody param1, int[] param2, int param3, int param4, boolean param5, int param6, int param7, World param8) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -666,7 +666,7 @@ final class WeaponBehaviour implements DiffableState {
         int var10_int = 0;
         RuntimeException var10 = null;
         uwa var11 = null;
-        mfb var12 = null;
+        WeaponDefinition var12 = null;
         try {
           if (0 < this.reload) {
             this.reload = this.reload - 1;
@@ -678,13 +678,13 @@ final class WeaponBehaviour implements DiffableState {
             var11 = ShipFactory.field_a.a(0);
             var11.a(-1, param4, param0, bpa.field_a / Particle.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
           }
-          var12 = this.a((byte) 24);
-          if (var12.i(1024) &&
-            this.reload > var12.f((byte) 113) - var12.c((byte) 124)) {
-            this.a(param8, true, param6, 0, -127, param1, 0, param4, param7, param0, param3, param2);
+          var12 = this.getDefinition((byte) 24);
+          if (var12.hasSustainedPulse(1024) &&
+            this.reload > var12.getReloadTime((byte) 113) - var12.getPulseDuration((byte) 124)) {
+            this.fire(param8, true, param6, 0, -127, param1, 0, param4, param7, param0, param3, param2);
           }
           if (!param5) {
-            this.b(-89);
+            this.clearTargetLock(-89);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -713,7 +713,7 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    final void b(int param0) {
+    final void clearTargetLock(int param0) {
         this.targetLock = null;
         if (param0 != 2048) {
           field_d = 124;
@@ -724,7 +724,7 @@ final class WeaponBehaviour implements DiffableState {
         this.weapontype = param0;
     }
 
-    final boolean a(int param0, int param1, int param2, ShipComponentDefinition param3, ShipComponent param4) {
+    final boolean canAimAtTarget(int param0, int param1, int param2, ShipComponentDefinition param3, ShipComponent param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

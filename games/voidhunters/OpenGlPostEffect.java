@@ -101,7 +101,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
               GetThrusterSmallForce.field_p != param0) {
               ebb.field_b = true;
               GetThrusterSmallForce.field_p = param0;
-              deb.a(40, param2);
+              LaserWeaponDefinition.a(40, param2);
             }
             if (2 != param3) {
               return;
@@ -111,19 +111,19 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
             }
             ebb.field_b = true;
             lla.field_h = param0;
-            deb.a(40, param2);
+            LaserWeaponDefinition.a(40, param2);
             return;
           }
           kib.field_d = param0;
           ebb.field_b = true;
-          deb.a(40, param2);
+          LaserWeaponDefinition.a(40, param2);
         }
         if (param1 <= -69) {
           if (param3 == 1 &&
             GetThrusterSmallForce.field_p != param0) {
             ebb.field_b = true;
             GetThrusterSmallForce.field_p = param0;
-            deb.a(40, param2);
+            LaserWeaponDefinition.a(40, param2);
           }
         } else {
           field_e = (IntrusiveDeque) null;
@@ -137,12 +137,12 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
               }
               ebb.field_b = true;
               lla.field_h = param0;
-              deb.a(40, param2);
+              LaserWeaponDefinition.a(40, param2);
               return;
             }
             ebb.field_b = true;
             GetThrusterSmallForce.field_p = param0;
-            deb.a(40, param2);
+            LaserWeaponDefinition.a(40, param2);
           }
         }
         if (2 == param3) {
@@ -151,7 +151,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
           }
           ebb.field_b = true;
           lla.field_h = param0;
-          deb.a(40, param2);
+          LaserWeaponDefinition.a(40, param2);
         }
     }
 

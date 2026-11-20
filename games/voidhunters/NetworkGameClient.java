@@ -38,7 +38,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (GetSpinningBladeAimarc.field_o) {
           return -1;
         }
-        var2 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(125), (byte) 13, true, fpb.d(true));
+        var2 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(125), (byte) 13, true, MassDriverWeaponDefinition.d(true));
         if (var2 == -1) {
           return -1;
         }
@@ -146,7 +146,7 @@ abstract class NetworkGameClient extends GameApplet {
             !(var3 >= SetPedrosRepairModeSwitchtime.a(32)) &&
             !(gia.d(-2) <= var3)) {
             this.field_s = false;
-            ifb.l(-123);
+            FighterBayWeaponDefinition.l(-123);
             NetworkArchiveRequest.f((byte) -119);
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.a(-10560);
@@ -583,7 +583,7 @@ abstract class NetworkGameClient extends GameApplet {
                       break regionExit1;
                     default:
                       gna.a((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-                      ifb.l(-123);
+                      FighterBayWeaponDefinition.l(-123);
                       break regionExit1;
                   }
                 }
@@ -618,7 +618,7 @@ abstract class NetworkGameClient extends GameApplet {
           return;
         }
         gna.a((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.e(-13514), 0);
-        ifb.l(-125);
+        FighterBayWeaponDefinition.l(-125);
     }
 
     private final void c(boolean param0) {
@@ -689,7 +689,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), fpb.d(true));
+            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), MassDriverWeaponDefinition.d(true));
             if (-1 != var6_int) {
               wt.a(var6_int, -19342, gob.field_a, dgb.field_b);
               gob.field_a = null;
@@ -705,7 +705,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (param1) {
               GetSpinningBladeAimarc.field_o = false;
             } else {
-              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(83), (byte) 13, false, fpb.d(true));
+              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(83), (byte) 13, false, MassDriverWeaponDefinition.d(true));
               if (var6_intLifetime1 != -1) {
                 if (var6_intLifetime1 != 0) {
                   SetMessageFadetime.a(dgb.field_b, (byte) 110, var6_intLifetime1);

@@ -31,7 +31,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
             }
           }
           ifa.field_g = new String[25];
-          ifa.field_g[9] = fma.field_b;
+          ifa.field_g[9] = PhasedEnergyBeamWeaponDefinition.field_b;
           ifa.field_g[18] = ita.field_D;
           ifa.field_g[22] = GetSalvoaim.field_p;
           ifa.field_g[20] = veb.field_c;
@@ -199,7 +199,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[53] = eca.field_d;
           GetGrapplingHookSpringConstant.field_o[32] = GetMissionDebrisVotingChancestep.field_o;
           GetGrapplingHookSpringConstant.field_o[42] = SetShipTeamActionFactory.field_a;
-          GetGrapplingHookSpringConstant.field_o[51] = wca.field_c;
+          GetGrapplingHookSpringConstant.field_o[51] = SniperCannonWeaponDefinition.field_c;
           GetGrapplingHookSpringConstant.field_o[25] = SetMinimapHeight.field_q;
           GetGrapplingHookSpringConstant.field_o[7] = SpecialOrderSubmessageFactory.field_a;
           GetGrapplingHookSpringConstant.field_o[20] = lh.field_b;
@@ -265,7 +265,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ThrusterBehaviour.field_a[3] = LoadBlackboxRecording.field_p;
           ThrusterBehaviour.field_a[2] = ArmBehaviour.field_c;
           ThrusterBehaviour.field_a[13] = GetMomentOfInertiaPredivideDownshift.field_o;
-          ThrusterBehaviour.field_a[10] = fpb.field_c;
+          ThrusterBehaviour.field_a[10] = MassDriverWeaponDefinition.field_c;
           ThrusterBehaviour.field_a[6] = GrappleLauncherBehaviour.field_c;
           kr.field_a = new String[5];
           ThrusterBehaviour.field_a[4] = oib.field_b;

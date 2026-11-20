@@ -73,7 +73,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
             return stackIn_17_0;
           }
           if (param0 == 6) {
-            stackIn_21_0 = SetReverbGain.a(fpb.field_b, new String[]{param1}, 111);
+            stackIn_21_0 = SetReverbGain.a(MassDriverWeaponDefinition.field_b, new String[]{param1}, 111);
             return stackIn_21_0;
           }
           if (param0 == 7) {

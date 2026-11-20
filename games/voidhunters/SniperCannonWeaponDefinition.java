@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wca extends mfb {
+final class SniperCannonWeaponDefinition extends WeaponDefinition {
     static String field_c;
     static dla field_b;
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
           return -53;
         }
@@ -16,45 +16,45 @@ final class wca extends mfb {
         field_c = null;
         field_b = null;
         if (param0 > -27) {
-          wca.clearSharedReferences(-69);
+          SniperCannonWeaponDefinition.clearSharedReferences(-69);
         }
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 > -52) {
           return 7;
         }
         return GetMassDriverAimarc.field_o;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = -72 % ((-48 - param0) / 43);
         return SetAiFiringRangeUpshift.field_p;
     }
 
-    wca() {
+    SniperCannonWeaponDefinition() {
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = -102 / ((param0 - 7) / 47);
         return SetThrusterBindingBalanceThreshold.field_p;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 <= 0) {
           return 27;
         }
         return SetLaserRandomness.field_q;
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           return -97;
         }
         return 42;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           field_b = (dla) null;
           return nnb.field_e;
@@ -62,7 +62,7 @@ final class wca extends mfb {
         return nnb.field_e;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_c = (String) null;
           return SetPhasedEnergyBeamPulseFadetime.field_o;
@@ -70,22 +70,22 @@ final class wca extends mfb {
         return SetPhasedEnergyBeamPulseFadetime.field_o;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
           return 87;
         }
         return ShieldBehaviourFactory.field_a;
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
-          this.g(-21);
+          this.getProjectileDamage(-21);
           return fj.field_b;
         }
         return fj.field_b;
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           return -80;
         }

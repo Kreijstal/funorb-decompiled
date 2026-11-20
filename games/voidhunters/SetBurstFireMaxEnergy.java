@@ -48,7 +48,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
           if (param0 <= 10) {
             field_o = (boolean[]) null;
           }
-          fma.l(8611);
+          PhasedEnergyBeamWeaponDefinition.l(8611);
           SetThrusterAutobalancing.e(116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

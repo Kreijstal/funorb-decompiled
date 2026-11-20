@@ -23,22 +23,22 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (GetRepairModeActiveTime.e(215)) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
             lnb.b(0, 127);
-            ifb.l(-125);
+            FighterBayWeaponDefinition.l(-125);
             return;
           }
-          ifb.l(-125);
+          FighterBayWeaponDefinition.l(-125);
           return;
         }
         nmb.d(-87);
         CarouselPlayerEventFactory.b(14194);
         GetPedrosRepairModeSwitchtime.a(16928);
         if (!GetRepairModeActiveTime.e(215)) {
-          ifb.l(-125);
+          FighterBayWeaponDefinition.l(-125);
           return;
         }
         RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
         lnb.b(0, 127);
-        ifb.l(-125);
+        FighterBayWeaponDefinition.l(-125);
     }
 
     public static void clearSharedReferences(byte param0) {

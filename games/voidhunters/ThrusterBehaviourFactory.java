@@ -11,8 +11,8 @@ final class ThrusterBehaviourFactory implements GameStateFactory {
     }
 
     final static java.awt.Container b(int param0) {
-        if (null != ira.field_c) {
-          return (java.awt.Container) ((Object) ira.field_c);
+        if (null != PointDefenceLaserWeaponDefinition.field_c) {
+          return (java.awt.Container) ((Object) PointDefenceLaserWeaponDefinition.field_c);
         }
         if (param0 != -28941) {
           field_a = (String) null;

@@ -94,7 +94,7 @@ final class je {
           je.clearSharedReferences((byte) -96);
         }
         if (var1 == null) {
-          ifb.l(-116);
+          FighterBayWeaponDefinition.l(-116);
           return;
         }
         IsaacPacketBuffer var2 = qga.field_b;

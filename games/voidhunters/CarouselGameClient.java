@@ -493,7 +493,7 @@ final class CarouselGameClient {
                 }
                 var18 = param5.getPlayerNames(param3 + 101).getPlayerName(param3 ^ 6, var9_int);
                 SetDebrisGrabbingRange.a((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
-                ifb.l(-118);
+                FighterBayWeaponDefinition.l(-118);
               }
             } else if (!var17_ref.isSystemEvent(120) ||
               !var17_ref.systemEvent.field_c) {

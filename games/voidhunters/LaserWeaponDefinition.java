@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class deb extends mfb {
+final class LaserWeaponDefinition extends WeaponDefinition {
     static String field_b;
 
-    deb() {
+    LaserWeaponDefinition() {
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
-          this.b(true);
+          this.getProjectileCount(true);
           return GetLaserBeamProjectileDamage.field_o;
         }
         return GetLaserBeamProjectileDamage.field_o;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_b = (String) null;
           return tea.field_b;
@@ -23,14 +23,14 @@ final class deb extends mfb {
         return tea.field_b;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = 84 % ((param0 - 7) / 47);
         return SetPointDefenceLaserReload.field_q;
     }
 
     final static boolean a(int param0, char param1) {
         if (param0 > -107) {
-          deb.a(-27, 5);
+          LaserWeaponDefinition.a(-27, 5);
           if (param1 == 32) {
             return true;
           }
@@ -56,28 +56,28 @@ final class deb extends mfb {
         int var1 = -124 % ((param0 + 63) / 32);
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = 106 % ((-48 - param0) / 43);
         return Particle.field_x;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 > -52) {
-          this.g((byte) 55);
+          this.getProjectileVelocityRandomness((byte) 55);
           return WorldFactory.field_a;
         }
         return WorldFactory.field_a;
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
-          deb.clearSharedReferences((byte) 112);
+          LaserWeaponDefinition.clearSharedReferences((byte) 112);
           return GetMissionTerrainNebulaProbability.field_p;
         }
         return GetMissionTerrainNebulaProbability.field_p;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
           return 0;
@@ -85,7 +85,7 @@ final class deb extends mfb {
         return 0;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_b = (String) null;
           return ffa.field_b;
@@ -93,9 +93,9 @@ final class deb extends mfb {
         return ffa.field_b;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
-          this.a(true);
+          this.getFiringSoundId(true);
           return GpuMaterialEffect.field_b;
         }
         return GpuMaterialEffect.field_b;
@@ -112,7 +112,7 @@ final class deb extends mfb {
           var2.writeByte(0, kua.a((byte) 75));
           return;
         }
-        deb.clearSharedReferences((byte) 62);
+        LaserWeaponDefinition.clearSharedReferences((byte) 62);
         var2Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var2Lifetime1.writeIsaacByte(24335, param1);
         var2Lifetime1.writeByte(0, 2);
@@ -120,16 +120,16 @@ final class deb extends mfb {
         var2Lifetime1.writeByte(0, kua.a((byte) 75));
     }
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           return 17;
         }
         return 31;
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 <= 0) {
-          deb.a(-4, 20);
+          LaserWeaponDefinition.a(-4, 20);
           return SetSniperCannonAimspeed.field_o;
         }
         return SetSniperCannonAimspeed.field_o;

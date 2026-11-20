@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mna extends mfb {
+final class BombletSprayWeaponDefinition extends WeaponDefinition {
     static int field_b;
     static String field_c;
 
-    final int a(boolean param0) {
+    final int getFiringSoundId(boolean param0) {
         if (param0) {
           return -106;
         }
         return 27;
     }
 
-    final int c(int param0) {
+    final int getAimSpeed(int param0) {
         if (param0 != 0) {
           return -34;
         }
@@ -26,34 +26,34 @@ final class mna extends mfb {
         nna.field_z = new ae(2);
         nna.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, PlayerGameData.field_b));
         if (param1 != 90) {
-          mna.clearSharedReferences((byte) 38);
+          BombletSprayWeaponDefinition.clearSharedReferences((byte) 38);
         }
     }
 
-    final int f(byte param0) {
+    final int getReloadTime(byte param0) {
         if (param0 < 0) {
-          this.b(true);
+          this.getProjectileCount(true);
           return SetMomentOfInertiaPerpointCalcDownshift.field_p;
         }
         return SetMomentOfInertiaPerpointCalcDownshift.field_p;
     }
 
-    final int g(byte param0) {
+    final int getProjectileVelocityRandomness(byte param0) {
         if (param0 > -12) {
-          this.b(true);
+          this.getProjectileCount(true);
           return GetSalvoRepairTimeMultiplier.field_o;
         }
         return GetSalvoRepairTimeMultiplier.field_o;
     }
 
-    final int a(byte param0) {
+    final int getProjectileLifetime(byte param0) {
         int var2 = 65 % ((param0 + 48) / 43);
         return GetReadyRoomMissionTime.field_p;
     }
 
-    final int k(int param0) {
+    final int getProjectileType(int param0) {
         if (param0 != 0) {
-          this.g(34);
+          this.getProjectileDamage(34);
           return 2;
         }
         return 2;
@@ -68,39 +68,39 @@ final class mna extends mfb {
         field_c = null;
     }
 
-    final int d(byte param0) {
+    final int getProjectileSpeed(byte param0) {
         if (param0 > -52) {
-          mna.clearSharedReferences((byte) 119);
+          BombletSprayWeaponDefinition.clearSharedReferences((byte) 119);
           return GetMachineGunAimspeed.field_p;
         }
         return GetMachineGunAimspeed.field_p;
     }
 
-    final int b(int param0) {
+    final int getAimArc(int param0) {
         int var2 = -1 % ((param0 - 7) / 47);
         return cia.field_a;
     }
 
-    final int g(int param0) {
+    final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
-          this.a(71);
+          this.getEnergyCost(71);
           return GetMissionTerrainAsteroidProbability.field_o;
         }
         return GetMissionTerrainAsteroidProbability.field_o;
     }
 
-    final int a(int param0) {
+    final int getEnergyCost(int param0) {
         if (param0 != 0) {
-          mna.clearSharedReferences((byte) 50);
+          BombletSprayWeaponDefinition.clearSharedReferences((byte) 50);
           return rn.field_o;
         }
         return rn.field_o;
     }
 
-    mna() {
+    BombletSprayWeaponDefinition() {
     }
 
-    final int b(boolean param0) {
+    final int getProjectileCount(boolean param0) {
         if (param0) {
           return -32;
         }
