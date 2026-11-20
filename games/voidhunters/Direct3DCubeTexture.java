@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends ora implements hdb {
-    private jagdx.IDirect3DCubeTexture field_g;
+final class Direct3DCubeTexture extends Direct3DTexture implements GpuCubeTexture {
+    private jagdx.IDirect3DCubeTexture texture;
     private int field_f;
 
-    final jagdx.IDirect3DBaseTexture c(int param0) {
+    final jagdx.IDirect3DBaseTexture getNativeTexture(int param0) {
         if (param0 != 24971) {
-          this.b(102);
+          this.bind(102);
         }
-        return (jagdx.IDirect3DBaseTexture) ((Object) this.field_g);
+        return (jagdx.IDirect3DBaseTexture) ((Object) this.texture);
     }
 
-    public final void a(tu param0, int param1) {
-        super.a(param0, param1);
+    public final void setFilterMode(TextureFilterMode param0, int param1) {
+        super.setFilterMode(param0, param1);
     }
 
-    jf(Direct3DToolkit param0, int param1, boolean param2, int[][] param3) {
+    Direct3DCubeTexture(Direct3DToolkit param0, int param1, boolean param2, int[][] param3) {
         super(null, null, null, false, param1 * (param1 * 6));
         int var6 = 0;
         int var9 = 0;
@@ -35,7 +35,7 @@ final class jf extends ora implements hdb {
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = ComponentAttachmentPlan.field_d;
-        stackIn_3_3 = GpuDataType.field_f;
+        stackIn_3_3 = GpuDataType.UNSIGNED_BYTE;
         if (param2) {
           stackIn_3_0Lifetime1 = this;
           if (param0.field_Jc) {
@@ -48,14 +48,14 @@ final class jf extends ora implements hdb {
         }
         this.field_f = param1;
         if (this.field_b) {
-          this.field_g = this.field_d.field_Mc.createCubeTexture(this.field_f, 0, 1024, 21, 1);
+          this.texture = this.toolkit.field_Mc.createCubeTexture(this.field_f, 0, 1024, 21, 1);
         } else {
-          this.field_g = this.field_d.field_Mc.createCubeTexture(this.field_f, 1, 0, 21, 1);
+          this.texture = this.toolkit.field_Mc.createCubeTexture(this.field_f, 1, 0, 21, 1);
         }
-        var10 = this.field_d.field_zc;
+        var10 = this.toolkit.field_zc;
         var11 = var10;
         for (var6 = 0; var6 < 6; var6++) {
-          var7 = this.field_g.LockRect(var6, 0, 0, 0, this.field_f, this.field_f, 0, var11);
+          var7 = this.texture.LockRect(var6, 0, 0, 0, this.field_f, this.field_f, 0, var11);
           if (jagdx.HResult.succeeded(var7, (byte) 114)) {
             var8 = var11.getRowPitch();
             if (this.field_f * 4 != var8) {
@@ -65,15 +65,15 @@ final class jf extends ora implements hdb {
             } else {
               var10.writeInts(param3[var6], 0, 0, this.field_f * this.field_f);
             }
-            this.field_g.UnlockRect(var6, 0);
+            this.texture.UnlockRect(var6, 0);
           }
         }
     }
 
-    public final void b(int param0) {
+    public final void bind(int param0) {
         if (param0 != -27445) {
           return;
         }
-        this.field_d.a(56, (ora) (this));
+        this.toolkit.a(56, (Direct3DTexture) (this));
     }
 }

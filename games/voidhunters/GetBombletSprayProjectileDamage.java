@@ -52,7 +52,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         nl var3Lifetime1;
         PcmSample var12Lifetime2;
         int var4Lifetime1;
-        if (kba.field_a == null) {
+        if (TextureTransformMode.field_a == null) {
           return;
         }
         nl var8 = SetThrusterParticleSpeedDownshift.a(param0, -26, param1);

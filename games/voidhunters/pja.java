@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class pja extends TextureOperation {
-    static slb field_l;
+    static TextureCombineSource field_l;
     static String field_o;
     int field_p;
     int[] field_k;
@@ -80,10 +80,10 @@ class pja extends TextureOperation {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var3 = (int)(-kba.field_a.field_c + (float)param1);
-        int var4 = (int)((float)param2 - kba.field_a.field_b);
+        int var3 = (int)(-TextureTransformMode.field_a.field_c + (float)param1);
+        int var4 = (int)((float)param2 - TextureTransformMode.field_a.field_b);
         if (param0 > 83) {
-          var5 = (int)(640.0 / (double)kba.field_a.field_a);
+          var5 = (int)(640.0 / (double)TextureTransformMode.field_a.field_a);
           var6 = ComponentAttachmentPlan.a(var5, (byte) 119, var4, var3);
           var7 = 33554432 / var6;
           if (var7 > 128) {
@@ -235,7 +235,7 @@ class pja extends TextureOperation {
 
     static {
         field_n = new int[8192];
-        field_l = new slb();
+        field_l = new TextureCombineSource();
         field_i = "Left click to fire/recall the grapple";
     }
 }

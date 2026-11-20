@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetUseExtraBackground extends ConsoleCommand {
-    static kba field_q;
+    static TextureTransformMode field_q;
     static String field_o;
     static String field_r;
     static String field_s;
@@ -62,7 +62,7 @@ final class SetUseExtraBackground extends ConsoleCommand {
     }
 
     static {
-        field_q = new kba();
+        field_q = new TextureTransformMode();
         field_r = "Long arm";
         field_s = "Add action (Set custom variable)";
         field_o = "Macroing or use of bots";

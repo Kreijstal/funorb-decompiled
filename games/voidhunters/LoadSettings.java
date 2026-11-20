@@ -6,7 +6,7 @@ final class LoadSettings extends ConsoleCommand {
     static int field_q;
     static int field_p;
     static int field_s;
-    static kba field_o;
+    static TextureTransformMode field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -75,7 +75,7 @@ final class LoadSettings extends ConsoleCommand {
                   var11 = PartitionZoneListFactory.a(param0, param4, false, var10);
                   if (var11 >= 0 &&
                     var11 < glb.field_c.length) {
-                    aba.a(param4, var9, param2, var11, (byte) 51, param1, param0);
+                    TextureCombineOperation.a(param4, var9, param2, var11, (byte) 51, param1, param0);
                   }
                 }
               }
@@ -126,6 +126,6 @@ final class LoadSettings extends ConsoleCommand {
         field_p = 80;
         field_s = 0;
         field_q = 5;
-        field_o = new kba();
+        field_o = new TextureTransformMode();
     }
 }

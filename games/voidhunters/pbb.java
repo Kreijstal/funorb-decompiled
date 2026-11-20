@@ -89,7 +89,7 @@ final class pbb implements wwa {
             stackIn_11_0 = (GraphicsToolkit) null;
             return stackIn_11_0;
           }
-          var8.z(-31089);
+          var8.initializeGpuResources(-31089);
           stackIn_13_0 = var8;
           return (GraphicsToolkit) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

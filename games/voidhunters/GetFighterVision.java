@@ -45,7 +45,7 @@ final class GetFighterVision extends ConsoleCommand {
         var6 = VoidHunters.field_G;
         try {
           if (NetworkGameClient.field_y != null &&
-            null != kba.field_a) {
+            null != TextureTransformMode.field_a) {
             var3 = (qw) (NetworkGameClient.field_y.first(0));
             while (var3 != null) {
               if (param1 == var3.field_f &&

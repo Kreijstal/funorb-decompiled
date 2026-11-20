@@ -7,7 +7,7 @@ final class rpa implements jaa {
     private OpenGlToolkit field_f;
     private int field_i;
     private int field_j;
-    static uja field_c;
+    static TextureCoordinateMode field_c;
     private int field_d;
     private int field_g;
     static volatile int field_b;
@@ -138,7 +138,7 @@ final class rpa implements jaa {
           }
           var7.chassis = var4;
           if (!param2) {
-            field_c = (uja) null;
+            field_c = (TextureCoordinateMode) null;
           }
           var7.recalculateMassProperties((byte) 119);
           var7.chassis.configureThrusterBindings((byte) -128, (ShipBody) (var7));
@@ -335,7 +335,7 @@ final class rpa implements jaa {
         try {
           field_c = null;
           if (param0 != 1) {
-            field_c = (uja) null;
+            field_c = (TextureCoordinateMode) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.P(" + param0 + ')');
@@ -440,7 +440,7 @@ final class rpa implements jaa {
     }
 
     static {
-        field_c = new uja();
+        field_c = new TextureCoordinateMode();
         field_b = 0;
     }
 }

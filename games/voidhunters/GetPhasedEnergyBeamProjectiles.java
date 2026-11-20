@@ -122,7 +122,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetPhasedEnergyBeamReload.field_q = param1[58];
           NebulaFieldFactory.field_b = param1[96];
           Particle.field_C = param1[196];
-          uda.field_b = param1[119];
+          GpuMaterialEffect.field_b = param1[119];
           Particle.field_t = param1[202];
           ColorRowCacheEntry.field_d = param1[17];
           PacketBuffer.field_d = param1[203];
@@ -161,7 +161,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ea.field_j = param1[187];
           SetMachineGunAimspeed.field_o = param1[7];
           PlayerReady.field_c = param1[138];
-          slb.field_a = param1[177];
+          TextureCombineSource.field_a = param1[177];
           GetTorpedoAcceleration.field_p = param1[226];
           GetInnateThrusters.field_p = param1[24];
           Particle.field_k = param1[215];
@@ -178,7 +178,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           apb.field_a = param1[65];
           GetVelocitySustain.field_o = param1[38];
           SetGrapplingHookMaxLength.field_p = param1[186];
-          kva.field_g = param1[56];
+          OpenGlGpuTexture.field_g = param1[56];
           ArchiveRequest.field_m = param1[147];
           tea.field_b = param1[74];
           GetMissilesHitSourceTeam.field_o = param1[69];
@@ -318,7 +318,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           qab.field_d = param1[137];
           Particle.field_w = param1[209];
           SetSniperCannonAimspeed.field_o = param1[110];
-          uja.field_b = param1[228];
+          TextureCoordinateMode.field_b = param1[228];
           SetLaserRandomness.field_q = param1[114];
           wja.field_b = param1[102];
           GetBombletSprayReload.field_s = param1[35];

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rga {
-    gf field_e;
+    GpuTexture3D field_e;
     static soa field_f;
-    private eb[] field_c;
+    private GpuTexture2D[] field_c;
     static llb field_g;
     private GpuToolkit field_h;
-    eb[] field_a;
+    GpuTexture2D[] field_a;
     boolean field_b;
-    gf field_d;
+    GpuTexture3D field_d;
 
     final boolean b(byte param0) {
         byte[] var23 = null;
@@ -80,7 +80,7 @@ final class rga {
               }
             }
           }
-          this.field_e = this.field_h.a(128, 16, var25, ComponentAttachmentPlan.field_d, 128, -16539);
+          this.field_e = this.field_h.createTexture3D(128, 16, var25, ComponentAttachmentPlan.field_d, 128, -16539);
         }
         return null != this.field_e ? true : false;
     }
@@ -118,31 +118,31 @@ final class rga {
           this.field_h = param0;
           this.field_b = this.field_h.field_uc;
           if (this.field_b &&
-            !this.field_h.a(GpuDataType.field_f, SocketNetworkArchiveClient.field_o, -92)) {
+            !this.field_h.supportsTexture3DFormat(GpuDataType.UNSIGNED_BYTE, SocketNetworkArchiveClient.field_o, -92)) {
             this.field_b = false;
           }
           if (!this.field_b &&
-            !this.field_h.a(-10, SocketNetworkArchiveClient.field_o, GpuDataType.field_f)) {
+            !this.field_h.supportsTexture2DFormat(-10, SocketNetworkArchiveClient.field_o, GpuDataType.UNSIGNED_BYTE)) {
             return;
           }
           MissionFactory.c((byte) 111);
           if (!this.field_b) {
-            this.field_a = new eb[16];
+            this.field_a = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var15 = ppb.a(PlayerVote.field_b, var2_int * 32768, true, 32768);
-              this.field_a[var2_int] = this.field_h.a(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var15);
+              this.field_a[var2_int] = this.field_h.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var15);
             }
-            this.field_c = new eb[16];
+            this.field_c = new GpuTexture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               var16 = ppb.a(GetPointDefenceLaserRandomness.field_q, 32768 * var2_intLifetime1, true, 32768);
-              this.field_c[var2_intLifetime1] = this.field_h.a(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var16);
+              this.field_c[var2_intLifetime1] = this.field_h.createTexture2DFromBytes(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var16);
             }
             return;
           }
           var17 = ffb.extractBytes(false, PlayerVote.field_b, true);
-          this.field_d = this.field_h.a(128, 16, var17, SocketNetworkArchiveClient.field_o, 128, -16539);
+          this.field_d = this.field_h.createTexture3D(128, 16, var17, SocketNetworkArchiveClient.field_o, 128, -16539);
           var18 = ffb.extractBytes(false, GetPointDefenceLaserRandomness.field_q, true);
-          this.field_h.a(128, 16, var18, SocketNetworkArchiveClient.field_o, 128, -16539);
+          this.field_h.createTexture3D(128, 16, var18, SocketNetworkArchiveClient.field_o, 128, -16539);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -58,7 +58,7 @@ final class SetLaserRandomness extends ConsoleCommand {
           }
           hqb.a(0, WeaponBehaviourFactory.field_b, MissionBuilder.field_e, true, param1, (byte) 24, Message.field_d);
           for (var2_int = 0; MissionBuilder.field_e > var2_int; var2_int++) {
-            sv.field_f[var2_int + param1] = var2_int;
+            UnlitGpuMaterialEffect.field_f[var2_int + param1] = var2_int;
           }
           hqb.a(param1, ShipAIFactory.field_a, MissionBuilder.field_e + param1, false, param1 + param1, (byte) 24, ServerTickFactory.field_d);
           if (MissionBuilder.field_e <= param1) {

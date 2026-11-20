@@ -58,7 +58,7 @@ abstract class pib implements mda {
             return stackIn_2_0;
           }
           if (pa.a(param2, 2, param0, param1)) {
-            return uja.a(false);
+            return TextureCoordinateMode.a(false);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

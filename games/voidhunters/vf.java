@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vf {
-    static kba field_a;
+    static TextureTransformMode field_a;
     private uq field_b;
 
     final void a(int param0, OpenGlToolkit param1) {
@@ -34,6 +34,6 @@ final class vf {
     }
 
     static {
-        field_a = new kba();
+        field_a = new TextureTransformMode();
     }
 }

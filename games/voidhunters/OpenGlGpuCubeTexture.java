@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qva extends kva implements hdb {
+final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeTexture {
     static gj field_k;
     static oib field_j;
 
-    public final void b(int param0) {
-        super.b(param0);
+    public final void bind(int param0) {
+        super.bind(param0);
     }
 
-    qva(OpenGlGpuToolkit param0, int param1, boolean param2, int[][] param3) {
-        super(param0, 34067, ComponentAttachmentPlan.field_d, GpuDataType.field_f, 6 * param1 * param1, param2);
+    OpenGlGpuCubeTexture(OpenGlGpuToolkit param0, int param1, boolean param2, int[][] param3) {
+        super(param0, 34067, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE, 6 * param1 * param1, param2);
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -22,17 +22,17 @@ final class qva extends kva implements hdb {
         int var7 = 0;
         int var5_intLifetime1;
         try {
-          this.field_h.a((ura) (this), -110);
+          this.toolkit.setTexture((GpuTexture) (this), -110);
           if (param2) {
             for (var5_int = 0; var5_int < 6; var5_int++) {
-              this.a((byte) 14, 34069 + var5_int, param1, param1, param3[var5_int]);
+              this.uploadArgbMipmaps((byte) 14, 34069 + var5_int, param1, param1, param3[var5_int]);
             }
             return;
           }
           var7 = 0;
           var5_intLifetime1 = var7;
           while (var7 < 6) {
-            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.e((byte) -31), param1, param1, 0, MissionControl.a(-29328, this.field_f), this.field_h.field_Nc, param3[var7], 0);
+            jaggl.OpenGL.glTexImage2Di(var7 + 34069, 0, this.getInternalFormat((byte) -31), param1, param1, 0, MissionControl.a(-29328, this.format), this.toolkit.field_Nc, param3[var7], 0);
             var7++;
           }
           return;
@@ -56,9 +56,9 @@ final class qva extends kva implements hdb {
         }
     }
 
-    public final void a(tu param0, int param1) {
+    public final void setFilterMode(TextureFilterMode param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.setFilterMode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -67,7 +67,7 @@ final class qva extends kva implements hdb {
     public static void clearSharedReferences(int param0) {
         field_j = null;
         if (param0 != 6) {
-          qva.clearSharedReferences(-55);
+          OpenGlGpuCubeTexture.clearSharedReferences(-55);
           field_k = null;
           return;
         }

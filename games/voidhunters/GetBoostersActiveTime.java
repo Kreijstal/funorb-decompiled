@@ -126,7 +126,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeByte(0, 16);
               RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
               var9 = RequestNewestBlackboxRecording.field_p.position;
-              GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -105, SetSalvoDamageMultiplier.field_p, bib.field_g, SetTorpedoAcceleration.field_p);
+              GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -105, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
               RequestNewestBlackboxRecording.field_p.writeLengthByte(-var9 + RequestNewestBlackboxRecording.field_p.position, -129);
             } else {
               var9 = 0;
@@ -151,7 +151,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 var11_ref_StringLifetime4 = "";
               }
               RequestNewestBlackboxRecording.field_p.writeString(true, var11_ref_StringLifetime4);
-              GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, bib.field_g, SetTorpedoAcceleration.field_p);
+              GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
               RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
             lnb.b(-1, 113);
@@ -175,7 +175,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 return stackIn_34_0;
               }
               if (99 != var9Lifetime1) {
-                tc.field_c = qva.field_k;
+                tc.field_c = OpenGlGpuCubeTexture.field_k;
                 PartitioningManagerFactory.field_a = -1;
                 ow.field_a = var9Lifetime1;
               } else {
@@ -205,7 +205,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (param4 != 0) {
             GetBoostersActiveTime.f((byte) 86);
           }
-          if (tc.field_c == qva.field_k &&
+          if (tc.field_c == OpenGlGpuCubeTexture.field_k &&
             PlayerJoinFactory.b((byte) 46)) {
             if (ow.field_a == 255) {
               var9_ref_String = qga.field_b.readNullableString(0);

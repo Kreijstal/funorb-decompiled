@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetLagVariant extends ConsoleCommand {
-    static tu field_o;
+    static TextureFilterMode field_o;
     static String field_p;
 
     public static void clearSharedReferences(int param0) {
@@ -128,6 +128,6 @@ final class SetLagVariant extends ConsoleCommand {
     }
 
     static {
-        field_o = new tu();
+        field_o = new TextureFilterMode();
     }
 }

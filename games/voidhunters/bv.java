@@ -739,7 +739,7 @@ final class bv {
                   OpenGlVertexDeclaration.field_d = true;
                 }
                 if (this.b(0, -116)) {
-                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.a(-6448, bib.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.a(-6448, UnsupportedGpuMaterialEffect.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
                   this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.b((byte) 11, 0) &&
@@ -949,7 +949,7 @@ final class bv {
                       var21 = 172;
                       var22 = param5 - 58;
                       var23_array = new int[]{var21, var22};
-                      this.a(var23_array, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[9], 255), param0, false, slb.field_b, var16, (byte) -47);
+                      this.a(var23_array, param3, false, GetMutatorVotes.a(HardpointMatch.field_f[9], 255), param0, false, TextureCombineSource.field_b, var16, (byte) -47);
                     }
                   }
                   if (this.b((byte) 11, 9)) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMassDriverFireForce extends ConsoleCommand {
-    static mma field_p;
+    static GpuProjectionMode field_p;
     static String field_q;
     static int field_o;
 
@@ -80,7 +80,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 127) {
-          field_p = (mma) null;
+          field_p = (GpuProjectionMode) null;
           field_p = null;
           field_q = null;
           return;
@@ -90,7 +90,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
     }
 
     static {
-        field_p = new mma();
+        field_p = new GpuProjectionMode();
         field_q = "You need a rating of <%1> to play with the current options.";
     }
 }

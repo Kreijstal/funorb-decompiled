@@ -36,7 +36,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == tu.field_a &&
+          if (this == TextureFilterMode.field_a &&
             !mb.field_i) {
             GetCountermeasureLauncherAimarc.field_p = wt.a(false);
             BufferedFile.sleep(-65, 5000L);
@@ -293,7 +293,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (uf.field_E == null) {
             if (ira.field_c == null) {
               if (null == bkb.field_b) {
-                var2 = tu.field_a;
+                var2 = TextureFilterMode.field_a;
                 if (var4 != 0) {
                   var2 = bkb.field_b;
                   var2 = ira.field_c;
@@ -398,7 +398,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void start() {
-        if (tu.field_a != this ||
+        if (TextureFilterMode.field_a != this ||
           mb.field_i) {
           return;
         }
@@ -461,7 +461,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == tu.field_a &&
+          if (this == TextureFilterMode.field_a &&
             !mb.field_i) {
             GetCountermeasureLauncherAimarc.field_p = 4000L + wt.a(false);
             return;
@@ -489,9 +489,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var10 = VoidHunters.field_G;
           try {
             try {
-              if (tu.field_a != null) {
-                sv.field_e = sv.field_e + 1;
-                if (sv.field_e < 3) {
+              if (TextureFilterMode.field_a != null) {
+                UnlitGpuMaterialEffect.field_e = UnlitGpuMaterialEffect.field_e + 1;
+                if (UnlitGpuMaterialEffect.field_e < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -506,7 +506,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               w.field_y = param0;
               GetDebrisSurvives.field_p = param4;
               GetPhasedEnergyBeamFireForce.field_p = param4;
-              tu.field_a = this;
+              TextureFilterMode.field_a = this;
               SetMachineGunAimspeed.field_p = MissionList.b((byte) -117);
               dupTemp$0 = new eab(param1, param5, param2, true);
               SetTorpedoProjectiles.field_o = dupTemp$0;
@@ -652,7 +652,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = tu.field_a;
+                var1 = TextureFilterMode.field_a;
                 if (null != bkb.field_b) {
                   var1 = bkb.field_b;
                 }
@@ -733,7 +733,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (this == tu.field_a &&
+          if (this == TextureFilterMode.field_a &&
             !mb.field_i) {
             GetShowTutorial.field_o = true;
             if (GetCountermeasureLauncherAimarc.field_o &&

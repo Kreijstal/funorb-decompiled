@@ -319,7 +319,7 @@ final class gm extends kja {
         return null;
     }
 
-    final static int a(uja param0, int param1) {
+    final static int toOpenGlTextureCoordinateMode(TextureCoordinateMode param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;

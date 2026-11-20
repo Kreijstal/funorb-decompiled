@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fib extends uda {
+final class fib extends GpuMaterialEffect {
     static String field_h;
     private OpenGlShaderProgram field_f;
     private boolean field_e;
@@ -9,7 +9,7 @@ final class fib extends uda {
     private boolean field_i;
     private rga field_g;
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -17,13 +17,13 @@ final class fib extends uda {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_i) {
-            this.field_d.a(param2, -107);
-            this.field_d.h(13, param1);
+            this.toolkit.setTexture(param2, -107);
+            this.toolkit.setTextureCombineMode(13, param1);
           }
           if (param0 > 42) {
             return;
           }
-          this.a(-23, false);
+          this.enable(-23, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,18 +39,18 @@ final class fib extends uda {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = 97 / ((param0 - 34) / 63);
         return this.field_e;
     }
 
-    final void a(int param0) {
+    final void disable(int param0) {
         if (param0 == 2543) {
           if (this.field_i) {
-            this.field_d.g(1, -120);
-            this.field_d.a((ura) null, -112);
-            this.field_d.g(0, -91);
-            this.field_d.a((ura) null, param0 ^ -2450);
+            this.toolkit.setActiveTextureUnit(1, -120);
+            this.toolkit.setTexture((GpuTexture) null, -112);
+            this.toolkit.setActiveTextureUnit(0, -91);
+            this.toolkit.setTexture((GpuTexture) null, param0 ^ -2450);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_i = false;
           }
@@ -58,33 +58,33 @@ final class fib extends uda {
         }
         this.field_i = true;
         if (this.field_i) {
-          this.field_d.g(1, -120);
-          this.field_d.a((ura) null, -112);
-          this.field_d.g(0, -91);
-          this.field_d.a((ura) null, param0 ^ -2450);
+          this.toolkit.setActiveTextureUnit(1, -120);
+          this.toolkit.setTexture((GpuTexture) null, -112);
+          this.toolkit.setActiveTextureUnit(0, -91);
+          this.toolkit.setTexture((GpuTexture) null, param0 ^ -2450);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_i = false;
         }
     }
 
-    final void a(int param0, boolean param1) {
-        hdb var3 = null;
+    final void enable(int param0, boolean param1) {
+        GpuCubeTexture var3 = null;
         long var4 = 0L;
         if (param0 == 5) {
-          var3 = this.field_d.J(param0 ^ 15);
+          var3 = this.toolkit.getEnvironmentCubeTexture(param0 ^ 15);
           if (this.field_e &&
             var3 != null) {
-            this.field_d.g(1, -123);
-            this.field_d.a(var3, -111);
-            this.field_d.g(0, -108);
-            this.field_d.a(this.field_g.field_e, -107);
+            this.toolkit.setActiveTextureUnit(1, -123);
+            this.toolkit.setTexture(var3, -111);
+            this.toolkit.setActiveTextureUnit(0, -108);
+            this.toolkit.setTexture(this.field_g.field_e, -107);
             var4 = this.field_f.field_b;
             jaggl.OpenGL.glUseProgramObjectARB(var4);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);
-            jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunDir"), -this.field_d.field_wc[0], -this.field_d.field_wc[1], -this.field_d.field_wc[2]);
-            jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunColour"), this.field_d.field_Sb, this.field_d.field_u, this.field_d.field_x, 1.0f);
-            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunExponent"), 96.0f + 928.0f * Math.abs(this.field_d.field_wc[1]));
+            jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunDir"), -this.toolkit.sunDirection[0], -this.toolkit.sunDirection[1], -this.toolkit.sunDirection[2]);
+            jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunColour"), this.toolkit.lightRed, this.toolkit.lightGreen, this.toolkit.lightBlue, 1.0f);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunExponent"), 96.0f + 928.0f * Math.abs(this.toolkit.sunDirection[1]));
             this.field_i = true;
           }
           return;
@@ -161,13 +161,13 @@ final class fib extends uda {
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
           this.field_i = true;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var4 = 0;
         float var5 = 0.0f;
         int var6 = 0;
@@ -185,21 +185,21 @@ final class fib extends uda {
             var6 = 65535 & param0;
             var7 = (float)((198236 & param0) >> 16) / 8.0f;
             var8 = this.field_f.field_b;
-            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.field_d.field_pc % 40000) / 40000.0f);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.toolkit.field_pc % 40000) / 40000.0f);
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterOffset"), var7);
           }
           return;
         }
-        this.a(8);
+        this.disable(8);
         if (this.field_i) {
           var4Lifetime1 = 1 << (param1 & 3);
           var5Lifetime1 = (float)(1 << (7 & param1 >> 3)) / 32.0f;
           var6Lifetime1 = 65535 & param0;
           var7Lifetime1 = (float)((198236 & param0) >> 16) / 8.0f;
           var8Lifetime1 = this.field_f.field_b;
-          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "time"), (float)(var4Lifetime1 * this.field_d.field_pc % 40000) / 40000.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "time"), (float)(var4Lifetime1 * this.toolkit.field_pc % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "scale"), var5Lifetime1);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "breakWaterDepth"), (float)var6Lifetime1);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "breakWaterOffset"), var7Lifetime1);

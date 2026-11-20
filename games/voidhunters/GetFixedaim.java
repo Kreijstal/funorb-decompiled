@@ -937,7 +937,7 @@ final class GetFixedaim extends ConsoleCommand {
                                         hab.field_g[54] = jba.a(new int[][]{new int[]{-3681, -11294, -11126, -5103, -11126, 5856, 83, 12549, 11294, 8115, 10373, -8533}, new int[]{-3011, -9202, -8700, -4433, -7445, 3681, -501, 5521, 6609, 3262, 7362, -6525}, new int[]{-2509, -7529, -6609, -3764, -2258, 585, 3262, -1422, 4099, -5688}}, 250L, 10, var4_ref_Random, SetFixedaim.a((int) param0, -108), 625L);
                                         hab.field_g[55] = jba.a(new int[][]{new int[]{-3848, -11377, -12800, -5605, -12632, 6609, -6525, 12130, 10708, 8784, 12800, -250, 4183, -11294}, new int[]{-3346, -9118, -10206, -3764, -8951, 4433, 5186, 6190, 7362, 836, 3179, -8951}, new int[]{-2844, -6943, -7027, -3346, -4099, 1840, 2426, 1338, 1840, -6776}}, 250L, 10, var4_ref_Random, 122, 625L);
                                         SetSniperCannonEnergyUsed.field_o = 0;
-                                        gn.field_m = 0;
+                                        OpenGlGpuRectangleTexture.field_m = 0;
                                         var4 = 0;
                                         var5 = 0;
                                         statePc = 13;
@@ -988,7 +988,7 @@ final class GetFixedaim extends ConsoleCommand {
                                         if (SetMassDriverAimarc.a(130, var5)) {
                                             /* Inlined CFG state: 16. */
                                             {
-                                                gn.field_m = gn.field_m + 1;
+                                                OpenGlGpuRectangleTexture.field_m = OpenGlGpuRectangleTexture.field_m + 1;
                                                 statePc = 17;
                                                 continue scanLoop1;
                                             }

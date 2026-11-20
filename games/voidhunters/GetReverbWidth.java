@@ -42,7 +42,7 @@ final class GetReverbWidth extends ConsoleCommand {
           return;
         }
         try {
-          kba.field_a = param0;
+          TextureTransformMode.field_a = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hra.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

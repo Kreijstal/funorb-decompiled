@@ -17,7 +17,7 @@ final class atb {
         field_b = null;
     }
 
-    final eb a(int param0, int param1) {
+    final GpuTexture2D a(int param0, int param1) {
         int stackIn_8_0 = 0;
         GpuToolkit stackIn_14_0 = null;
         int stackIn_14_1 = 0;
@@ -43,19 +43,19 @@ final class atb {
         float[] stackIn_56_3;
         boolean stackIn_57_4 = false;
         Object var3;
-        eb var4;
+        GpuTexture2D var4;
         TextureMetadata var5;
         int var6;
         float[] var7;
         int var8;
         float[] var9;
-        eb var11;
-        eb var13;
-        eb var15;
-        eb var17;
-        eb var19;
-        eb var21;
-        eb var22;
+        GpuTexture2D var11;
+        GpuTexture2D var13;
+        GpuTexture2D var15;
+        GpuTexture2D var17;
+        GpuTexture2D var19;
+        GpuTexture2D var21;
+        GpuTexture2D var22;
         int[] var23;
         int[] var24;
         int[] var25;
@@ -65,7 +65,7 @@ final class atb {
         var8 = VoidHunters.field_G;
         var3 = this.field_c.b(0, (long)param1);
         if (var3 != null) {
-          return (eb) (var3);
+          return (GpuTexture2D) (var3);
         }
         if (!this.field_e.isTextureReady(param1, (byte) -49)) {
           return null;
@@ -83,11 +83,11 @@ final class atb {
             stackIn_14_0 = this.field_a;
             stackIn_14_1 = var6;
             stackIn_15_2 = (var5.field_j == 0) ? false : true;
-            var11 = ((GpuToolkit) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, var6, (byte) -84, var23);
+            var11 = ((GpuToolkit) (Object) stackIn_14_0).createTexture2DFromPixels(stackIn_14_1, stackIn_15_2, var6, (byte) -84, var23);
             if (param0 != -1) {
               this.a(100, 49);
             }
-            var11.a(var5.field_k, (byte) -98, var5.field_s);
+            var11.setRepeat(var5.field_k, (byte) -98, var5.field_s);
             this.field_c.a(var11, (long)param1, (byte) -117);
             return var11;
           }
@@ -96,11 +96,11 @@ final class atb {
             stackIn_20_0 = this.field_a;
             stackIn_20_1 = var6;
             stackIn_21_2 = (var5.field_j == 0) ? false : true;
-            var13 = ((GpuToolkit) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2, var6, (byte) -84, var24);
+            var13 = ((GpuToolkit) (Object) stackIn_20_0).createTexture2DFromPixels(stackIn_20_1, stackIn_21_2, var6, (byte) -84, var24);
             if (param0 != -1) {
               this.a(100, 49);
             }
-            var13.a(var5.field_k, (byte) -98, var5.field_s);
+            var13.setRepeat(var5.field_k, (byte) -98, var5.field_s);
             this.field_c.a(var13, (long)param1, (byte) -117);
             return var13;
           }
@@ -108,12 +108,12 @@ final class atb {
           stackIn_26_0 = this.field_a;
           stackIn_26_1 = var6;
           stackIn_27_2 = (var5.field_j == 0) ? false : true;
-          var15 = ((GpuToolkit) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2, var6, (byte) -84, var25);
+          var15 = ((GpuToolkit) (Object) stackIn_26_0).createTexture2DFromPixels(stackIn_26_1, stackIn_27_2, var6, (byte) -84, var25);
           var4 = var15;
           if (param0 != -1) {
             this.a(100, 49);
           }
-          var15.a(var5.field_k, (byte) -98, var5.field_s);
+          var15.setRepeat(var5.field_k, (byte) -98, var5.field_s);
           this.field_c.a(var15, (long)param1, (byte) -117);
           return var15;
         }
@@ -125,11 +125,11 @@ final class atb {
           stackIn_56_2 = var6;
           stackIn_56_3 = var9;
           stackIn_57_4 = (var5.field_j == 0) ? false : true;
-          var22 = ((GpuToolkit) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, param0 + 0, ComponentAttachmentPlan.field_d);
+          var22 = ((GpuToolkit) (Object) stackIn_56_0).createTexture2DFromFloats(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_57_4, param0 + 0, ComponentAttachmentPlan.field_d);
           if (param0 != -1) {
             this.a(100, 49);
           }
-          var22.a(var5.field_k, (byte) -98, var5.field_s);
+          var22.setRepeat(var5.field_k, (byte) -98, var5.field_s);
           this.field_c.a(var22, (long)param1, (byte) -117);
           return var22;
         }
@@ -138,11 +138,11 @@ final class atb {
           stackIn_37_0 = this.field_a;
           stackIn_37_1 = var6;
           stackIn_38_2 = (var5.field_j == 0) ? false : true;
-          var17 = ((GpuToolkit) (Object) stackIn_37_0).a(stackIn_37_1, stackIn_38_2, var6, (byte) -84, var26);
+          var17 = ((GpuToolkit) (Object) stackIn_37_0).createTexture2DFromPixels(stackIn_37_1, stackIn_38_2, var6, (byte) -84, var26);
           if (param0 != -1) {
             this.a(100, 49);
           }
-          var17.a(var5.field_k, (byte) -98, var5.field_s);
+          var17.setRepeat(var5.field_k, (byte) -98, var5.field_s);
           this.field_c.a(var17, (long)param1, (byte) -117);
           return var17;
         }
@@ -151,11 +151,11 @@ final class atb {
           stackIn_43_0 = this.field_a;
           stackIn_43_1 = var6;
           stackIn_44_2 = (var5.field_j == 0) ? false : true;
-          var19 = ((GpuToolkit) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2, var6, (byte) -84, var27);
+          var19 = ((GpuToolkit) (Object) stackIn_43_0).createTexture2DFromPixels(stackIn_43_1, stackIn_44_2, var6, (byte) -84, var27);
           if (param0 != -1) {
             this.a(100, 49);
           }
-          var19.a(var5.field_k, (byte) -98, var5.field_s);
+          var19.setRepeat(var5.field_k, (byte) -98, var5.field_s);
           this.field_c.a(var19, (long)param1, (byte) -117);
           return var19;
         }
@@ -163,11 +163,11 @@ final class atb {
         stackIn_49_0 = this.field_a;
         stackIn_49_1 = var6;
         stackIn_50_2 = (var5.field_j == 0) ? false : true;
-        var21 = ((GpuToolkit) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, var6, (byte) -84, var28);
+        var21 = ((GpuToolkit) (Object) stackIn_49_0).createTexture2DFromPixels(stackIn_49_1, stackIn_50_2, var6, (byte) -84, var28);
         if (param0 != -1) {
           this.a(100, 49);
         }
-        var21.a(var5.field_k, (byte) -98, var5.field_s);
+        var21.setRepeat(var5.field_k, (byte) -98, var5.field_s);
         this.field_c.a(var21, (long)param1, (byte) -117);
         return var21;
     }

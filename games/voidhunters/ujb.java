@@ -110,7 +110,7 @@ final class ujb {
         int var7Lifetime1;
         int var7Lifetime2;
         hb.field_d[MissionBuilder.field_e] = param4;
-        sv.field_f[MissionBuilder.field_e] = MissionBuilder.field_e;
+        UnlitGpuMaterialEffect.field_f[MissionBuilder.field_e] = MissionBuilder.field_e;
         GetLaserEnergyUsed.field_o[MissionBuilder.field_e] = param1;
         if (WeaponBehaviourFactory.field_b < param1) {
           ShipAIFactory.field_a = param1;

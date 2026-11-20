@@ -34,7 +34,7 @@ final class MissionList implements DiffableState {
         if (param0 >= -81) {
           return (java.applet.Applet) null;
         }
-        return (java.applet.Applet) ((Object) tu.field_a);
+        return (java.applet.Applet) ((Object) TextureFilterMode.field_a);
     }
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {

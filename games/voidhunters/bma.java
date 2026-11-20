@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bma extends uda {
-    private eb field_e;
+final class bma extends GpuMaterialEffect {
+    private GpuTexture2D field_e;
     private boolean field_i;
     private boolean field_l;
     private gla field_p;
@@ -15,17 +15,17 @@ final class bma extends uda {
     private boolean field_f;
     private gla field_j;
 
-    final void a(int param0) {
-        this.field_d.g(1, -64);
-        this.field_d.a((ura) null, -114);
-        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
-        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
-        this.field_d.a(2, pea.field_d, param0 - 2536);
-        this.field_d.a(0, (byte) -72, SetGrapplingHookMaxExtension8Force.field_q);
-        this.field_d.g(0, -123);
+    final void disable(int param0) {
+        this.toolkit.setActiveTextureUnit(1, -64);
+        this.toolkit.setTexture((GpuTexture) null, -114);
+        this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.toolkit.setRgbCombineSource(2, pea.field_d, param0 - 2536);
+        this.toolkit.setAlphaCombineSource(0, (byte) -72, SetGrapplingHookMaxExtension8Force.field_q);
+        this.toolkit.setActiveTextureUnit(0, -123);
         if (this.field_f) {
-          this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
-          this.field_d.a(0, (byte) -118, SetGrapplingHookMaxExtension8Force.field_q);
+          this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+          this.toolkit.setAlphaCombineSource(0, (byte) -118, SetGrapplingHookMaxExtension8Force.field_q);
           this.field_f = false;
           if (param0 == 2543) {
             if (!this.field_g) {
@@ -67,15 +67,15 @@ final class bma extends uda {
         this.field_g = false;
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         this.field_i = param1 ? true : false;
-        this.field_d.g(1, -72);
-        this.field_d.a(this.field_e, param0 - 119);
-        this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-        this.field_d.a(0, pea.field_d, param0 ^ 2);
-        this.field_d.a(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
-        this.field_d.a(0, (byte) -104, pja.field_l);
-        this.field_d.g(0, -93);
+        this.toolkit.setActiveTextureUnit(1, -72);
+        this.toolkit.setTexture(this.field_e, param0 - 119);
+        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
+        this.toolkit.setRgbCombineSource(0, pea.field_d, param0 ^ 2);
+        this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
+        this.toolkit.setAlphaCombineSource(0, (byte) -104, pja.field_l);
+        this.toolkit.setActiveTextureUnit(0, -93);
         if (param0 != 5) {
           this.field_j = (gla) null;
         } else {
@@ -85,20 +85,20 @@ final class bma extends uda {
         this.e(0);
     }
 
-    final void b(boolean param0) {
+    final void onDepthRangeChanged(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         float var4 = 0.0f;
         float var5 = 0.0f;
         if (this.field_g) {
-          var2 = this.field_d.getFarPlane();
-          var3 = this.field_d.getNearPlane();
+          var2 = this.toolkit.getFarPlane();
+          var3 = this.toolkit.getNearPlane();
           var4 = -((float)(var2 - var3) * 0.125f) + (float)var2;
           var5 = (float)var2 - (float)(var2 - var3) * 0.25f;
-          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_d.D(100), (float)this.field_d.a(!param0 ? true : false) / 255.0f);
-          this.field_d.g(1, -42);
-          this.field_d.e(-122, this.field_d.D((byte) -124));
-          this.field_d.g(0, -81);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.D(100), (float)this.toolkit.a(!param0 ? true : false) / 255.0f);
+          this.toolkit.setActiveTextureUnit(1, -42);
+          this.toolkit.setTextureConstantColor(-122, this.toolkit.D((byte) -124));
+          this.toolkit.setActiveTextureUnit(0, -81);
         }
         if (param0) {
           return;
@@ -150,8 +150,8 @@ final class bma extends uda {
               this.field_l = false;
               return;
             }
-            this.field_e = this.field_d.a(2, false, 1, (byte) -67, new int[]{0, -1});
-            this.field_e.a(false, (byte) -98, false);
+            this.field_e = this.toolkit.createTexture2DFromPixels(2, false, 1, (byte) -67, new int[]{0, -1});
+            this.field_e.setRepeat(false, (byte) -98, false);
             this.field_l = true;
             return;
           }
@@ -177,20 +177,20 @@ final class bma extends uda {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = 100 / ((34 - param0) / 63);
         return this.field_l;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param2 != 5) {
           this.field_k = (gla) null;
         }
     }
 
     private final void e(int param0) {
-        int var2 = this.field_d.u((byte) 127);
-        GpuTransform3D var3 = this.field_d.g((byte) 47);
+        int var2 = this.toolkit.u((byte) 127);
+        GpuTransform3D var3 = this.toolkit.getViewTransform((byte) 47);
         if (this.field_i) {
           jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_j.field_c : this.field_k.field_c);
         } else {
@@ -200,16 +200,16 @@ final class bma extends uda {
         this.field_g = true;
         var3.transformPlane(this.field_h, -1.0f, (byte) 67, (float)var2, (float)param0, 0.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_h[0], this.field_h[1], this.field_h[2], this.field_h[3]);
-        this.b(true);
+        this.onDepthRangeChanged(true);
     }
 
-    final void b(int param0, boolean param1) {
+    final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
           this.e(18);
         }
     }
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -218,18 +218,18 @@ final class bma extends uda {
         try {
           if (param2 != null) {
             if (this.field_f) {
-              this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
-              this.field_d.a(0, (byte) -58, SetGrapplingHookMaxExtension8Force.field_q);
+              this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+              this.toolkit.setAlphaCombineSource(0, (byte) -58, SetGrapplingHookMaxExtension8Force.field_q);
               this.field_f = false;
             }
-            this.field_d.a(param2, -118);
-            this.field_d.h(-122, param1);
+            this.toolkit.setTexture(param2, -118);
+            this.toolkit.setTextureCombineMode(-122, param1);
           } else {
             if (!this.field_f) {
-              this.field_d.a(this.field_d.field_Q, -108);
-              this.field_d.h(-120, 1);
-              this.field_d.a(0, pja.field_l, 7);
-              this.field_d.a(0, (byte) -74, pja.field_l);
+              this.toolkit.setTexture(this.toolkit.field_Q, -108);
+              this.toolkit.setTextureCombineMode(-120, 1);
+              this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
+              this.toolkit.setAlphaCombineSource(0, (byte) -74, pja.field_l);
               this.field_f = true;
             }
           }

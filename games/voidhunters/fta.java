@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fta extends uda {
+final class fta extends GpuMaterialEffect {
     private jagdx.IDirect3DVertexShader field_e;
     private jagdx.IDirect3DVertexShader field_g;
     private Direct3DToolkit field_m;
@@ -9,13 +9,13 @@ final class fta extends uda {
     private static float[] field_p;
     private boolean field_f;
     private jagdx.IDirect3DVertexShader field_l;
-    private eb field_o;
+    private GpuTexture2D field_o;
     private static float[] field_k;
     private jagdx.IDirect3DVertexShader field_i;
     private boolean field_n;
     private boolean field_j;
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param2 != 5) {
           this.field_g = (jagdx.IDirect3DVertexShader) null;
         }
@@ -44,8 +44,8 @@ final class fta extends uda {
           if ((stackIn_6_0 & (stackIn_14_1 & stackIn_15_2)) == 0) {
             this.field_n = false;
           } else {
-            this.field_o = this.field_d.a(2, false, 1, (byte) -48, new int[]{0, -1});
-            this.field_o.a(false, (byte) -98, false);
+            this.field_o = this.toolkit.createTexture2DFromPixels(2, false, 1, (byte) -48, new int[]{0, -1});
+            this.field_o.setRepeat(false, (byte) -98, false);
             this.field_n = true;
           }
           return;
@@ -53,13 +53,13 @@ final class fta extends uda {
         this.field_n = false;
     }
 
-    final void b(int param0, boolean param1) {
+    final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
           this.field_f = false;
         }
     }
 
-    final void c(byte param0) {
+    final void onViewTransformChanged(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         jagdx.IDirect3DDevice var2Lifetime1;
@@ -67,7 +67,7 @@ final class fta extends uda {
         if (param0 == 15) {
           if (null != this.field_h) {
             var2 = this.field_m.field_Mc;
-            var3 = this.field_m.E(param0 - 15);
+            var3 = this.field_m.getModelViewTransform(param0 - 15);
             var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_p, (byte) 22));
           }
           return;
@@ -75,37 +75,37 @@ final class fta extends uda {
         this.field_l = (jagdx.IDirect3DVertexShader) null;
         if (null != this.field_h) {
           var2Lifetime1 = this.field_m.field_Mc;
-          var3Lifetime1 = this.field_m.E(param0 - 15);
+          var3Lifetime1 = this.field_m.getModelViewTransform(param0 - 15);
           var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.writeRowMajorMatrix(field_p, (byte) 22));
         }
     }
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         if (param0 <= 42) {
           return;
         }
         if (param2 == null) {
           if (!this.field_f) {
-            this.field_d.a(this.field_d.field_Q, -123);
-            this.field_d.h(116, 1);
-            this.field_d.a(0, pja.field_l, 7);
-            this.field_d.a(0, (byte) -91, pja.field_l);
+            this.toolkit.setTexture(this.toolkit.field_Q, -123);
+            this.toolkit.setTextureCombineMode(116, 1);
+            this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
+            this.toolkit.setAlphaCombineSource(0, (byte) -91, pja.field_l);
             this.field_f = true;
             return;
           }
           return;
         }
         if (this.field_f) {
-          this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
-          this.field_d.a(0, (byte) -60, SetGrapplingHookMaxExtension8Force.field_q);
+          this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+          this.toolkit.setAlphaCombineSource(0, (byte) -60, SetGrapplingHookMaxExtension8Force.field_q);
           this.field_f = false;
         } else {
-          this.field_d.a(param2, -106);
-          this.field_d.h(75, param1);
+          this.toolkit.setTexture(param2, -106);
+          this.toolkit.setTextureCombineMode(75, param1);
           return;
         }
-        this.field_d.a(param2, -106);
-        this.field_d.h(75, param1);
+        this.toolkit.setTexture(param2, -106);
+        this.toolkit.setTextureCombineMode(75, param1);
     }
 
     private final void d(byte param0) {
@@ -115,8 +115,8 @@ final class fta extends uda {
         jagdx.IDirect3DVertexShader var2 = null;
         if (param0 == -46) {
           var3 = this.field_m.field_Mc;
-          var4 = this.field_d.u((byte) 95);
-          var5 = this.field_d.g((byte) 20);
+          var4 = this.toolkit.u((byte) 95);
+          var5 = this.toolkit.getViewTransform((byte) 20);
           if (!this.field_j) {
             var2 = 2147483647 == var4 ? this.field_e : this.field_i;
           } else {
@@ -126,11 +126,11 @@ final class fta extends uda {
             this.field_h = var2;
             this.field_m.a(0, var2);
             this.e(127);
-            this.a(true);
-            this.d(8);
-            this.c(5);
-            this.c((byte) 15);
-            this.b(true);
+            this.onProjectionChanged(true);
+            this.onTextureTransformChanged(8);
+            this.onModelTransformChanged(5);
+            this.onViewTransformChanged((byte) 15);
+            this.onDepthRangeChanged(true);
           }
           var5.transformPlane(field_k, -1.0f, (byte) 67, (float)var4, 0.0f, 0.0f);
           var3.setVertexShaderConstants(12, field_k);
@@ -138,17 +138,17 @@ final class fta extends uda {
         }
     }
 
-    final void a(int param0) {
-        this.field_d.g(1, -95);
-        this.field_d.a((ura) null, param0 - 2669);
+    final void disable(int param0) {
+        this.toolkit.setActiveTextureUnit(1, -95);
+        this.toolkit.setTexture((GpuTexture) null, param0 - 2669);
         if (param0 != 2543) {
           return;
         }
-        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
-        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
-        this.field_d.a(2, pea.field_d, 7);
-        this.field_d.a(0, (byte) -106, SetGrapplingHookMaxExtension8Force.field_q);
-        this.field_d.g(0, -71);
+        this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
+        this.toolkit.setRgbCombineSource(2, pea.field_d, 7);
+        this.toolkit.setAlphaCombineSource(0, (byte) -106, SetGrapplingHookMaxExtension8Force.field_q);
+        this.toolkit.setActiveTextureUnit(0, -71);
         if (!this.field_f) {
           if (null != this.field_h) {
             this.field_m.a(0, (jagdx.IDirect3DVertexShader) null);
@@ -156,8 +156,8 @@ final class fta extends uda {
           }
           return;
         }
-        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
-        this.field_d.a(0, (byte) -65, SetGrapplingHookMaxExtension8Force.field_q);
+        this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.toolkit.setAlphaCombineSource(0, (byte) -65, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_f = false;
         if (null != this.field_h) {
           this.field_m.a(0, (jagdx.IDirect3DVertexShader) null);
@@ -165,11 +165,11 @@ final class fta extends uda {
         }
     }
 
-    final void a(boolean param0) {
+    final void onProjectionChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (null != this.field_h) {
           var2 = this.field_m.field_Mc;
-          var2.setVertexShaderConstants(4, this.field_d.a(123, field_p));
+          var2.setVertexShaderConstants(4, this.toolkit.writeTransposedProjection(123, field_p));
         }
         if (param0) {
           return;
@@ -177,12 +177,12 @@ final class fta extends uda {
         this.field_i = (jagdx.IDirect3DVertexShader) null;
     }
 
-    final void d(int param0) {
+    final void onTextureTransformChanged(int param0) {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (this.field_h != null) {
           var2 = this.field_m.field_Mc;
-          var3 = this.field_d.p(0);
+          var3 = this.toolkit.getTextureTransform(0);
           var2.SetVertexShaderConstantF(8, var3.writeFirstTwoRows((byte) 105, field_p), 2);
         }
         if (param0 == 8) {
@@ -191,7 +191,7 @@ final class fta extends uda {
         this.d((byte) 92);
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = -95 / ((param0 - 34) / 63);
         return this.field_n;
     }
@@ -202,56 +202,56 @@ final class fta extends uda {
         if (null != this.field_h) {
           if (!this.field_j) {
             if (param0 <= 111) {
-              this.a(3, -77, 116);
+              this.setParameters(3, -77, 116);
               return;
             }
             return;
           }
-          var4 = this.field_d.z((byte) 90);
+          var4 = this.toolkit.getInverseViewTransform((byte) 90);
           GpuTransform3D var2 = var4;
           var3 = this.field_m.field_Mc;
-          var3.setVertexShaderConstant(13, this.field_d.field_Rb * this.field_d.field_Sb, this.field_d.field_Rb * this.field_d.field_u, this.field_d.field_Rb * this.field_d.field_x, 1.0f);
-          var3.setVertexShaderConstant(14, this.field_d.field_oc * this.field_d.field_Sb, this.field_d.field_oc * this.field_d.field_u, this.field_d.field_oc * this.field_d.field_x, 1.0f);
-          var3.setVertexShaderConstant(16, this.field_d.field_Sb * this.field_d.field_tc, this.field_d.field_u * this.field_d.field_tc, this.field_d.field_x * this.field_d.field_tc, 1.0f);
-          var4.transformDirection(this.field_d.field_wc[1], field_k, this.field_d.field_wc[2], this.field_d.field_wc[0], false);
+          var3.setVertexShaderConstant(13, this.toolkit.ambientIntensity * this.toolkit.lightRed, this.toolkit.ambientIntensity * this.toolkit.lightGreen, this.toolkit.ambientIntensity * this.toolkit.lightBlue, 1.0f);
+          var3.setVertexShaderConstant(14, this.toolkit.sunIntensity * this.toolkit.lightRed, this.toolkit.sunIntensity * this.toolkit.lightGreen, this.toolkit.sunIntensity * this.toolkit.lightBlue, 1.0f);
+          var3.setVertexShaderConstant(16, this.toolkit.lightRed * this.toolkit.antiSunIntensity, this.toolkit.lightGreen * this.toolkit.antiSunIntensity, this.toolkit.lightBlue * this.toolkit.antiSunIntensity, 1.0f);
+          var4.transformDirection(this.toolkit.sunDirection[1], field_k, this.toolkit.sunDirection[2], this.toolkit.sunDirection[0], false);
           var3.SetVertexShaderConstantF(15, field_k, 1);
-          var4.transformDirection(this.field_d.field_cb[1], field_k, this.field_d.field_cb[2], this.field_d.field_cb[0], false);
+          var4.transformDirection(this.toolkit.antiSunDirection[1], field_k, this.toolkit.antiSunDirection[2], this.toolkit.antiSunDirection[0], false);
           var3.SetVertexShaderConstantF(17, field_k, 1);
         }
         if (param0 > 111) {
           return;
         }
-        this.a(3, -77, 116);
+        this.setParameters(3, -77, 116);
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         this.field_j = param1 ? true : false;
-        this.field_d.g(1, -109);
-        this.field_d.a(this.field_o, -110);
+        this.toolkit.setActiveTextureUnit(1, -109);
+        this.toolkit.setTexture(this.field_o, -110);
         if (param0 == 5) {
-          this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-          this.field_d.a(0, pea.field_d, 7);
-          this.field_d.a(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
-          this.field_d.a(0, (byte) -108, pja.field_l);
-          this.field_d.g(0, -72);
+          this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
+          this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
+          this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
+          this.toolkit.setAlphaCombineSource(0, (byte) -108, pja.field_l);
+          this.toolkit.setActiveTextureUnit(0, -72);
           this.d((byte) -46);
           return;
         }
         this.field_l = (jagdx.IDirect3DVertexShader) null;
-        this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-        this.field_d.a(0, pea.field_d, 7);
-        this.field_d.a(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
-        this.field_d.a(0, (byte) -108, pja.field_l);
-        this.field_d.g(0, -72);
+        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
+        this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
+        this.toolkit.setRgbCombineSource(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
+        this.toolkit.setAlphaCombineSource(0, (byte) -108, pja.field_l);
+        this.toolkit.setActiveTextureUnit(0, -72);
         this.d((byte) -46);
     }
 
-    final void c(int param0) {
+    final void onModelTransformChanged(int param0) {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (null != this.field_h) {
           var2 = this.field_m.field_Mc;
-          var3 = this.field_m.E(0);
+          var3 = this.field_m.getModelViewTransform(0);
           var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_p, (byte) 22));
         }
         if (param0 == 5) {
@@ -260,7 +260,7 @@ final class fta extends uda {
         this.field_h = (jagdx.IDirect3DVertexShader) null;
     }
 
-    final void b(boolean param0) {
+    final void onDepthRangeChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -268,18 +268,18 @@ final class fta extends uda {
         float var6 = 0.0f;
         if (this.field_h != null) {
           var2 = this.field_m.field_Mc;
-          var3 = this.field_d.getFarPlane();
-          var4 = this.field_d.getNearPlane();
+          var3 = this.toolkit.getFarPlane();
+          var4 = this.toolkit.getNearPlane();
           var5 = (float)var3 - 0.125f * (float)(-var4 + var3);
           var6 = -((float)(var3 - var4) * 0.25f) + (float)var3;
           var2.setVertexShaderConstant(10, var6, 1.0f / (var5 - var6), var5, 1.0f / (-var5 + (float)var3));
-          var2.setVertexShaderConstant(11, 1.0f / (float)this.field_d.D(117), (float)this.field_d.a(false) / 255.0f, this.field_d.field_r, 1.0f / (this.field_d.field_r - this.field_d.field_p));
-          this.field_d.e(-125, this.field_d.D((byte) -126));
+          var2.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.D(117), (float)this.toolkit.a(false) / 255.0f, this.toolkit.field_r, 1.0f / (this.toolkit.field_r - this.toolkit.field_p));
+          this.toolkit.setTextureConstantColor(-125, this.toolkit.D((byte) -126));
         }
         if (param0) {
           return;
         }
-        this.b(false);
+        this.onDepthRangeChanged(false);
     }
 
     static {

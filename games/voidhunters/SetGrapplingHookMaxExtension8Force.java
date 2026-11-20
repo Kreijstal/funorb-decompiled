@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetGrapplingHookMaxExtension8Force extends ConsoleCommand {
-    static slb field_q;
+    static TextureCombineSource field_q;
     static boolean[][] field_o;
     static String field_r;
     static llb field_p;
@@ -87,6 +87,6 @@ final class SetGrapplingHookMaxExtension8Force extends ConsoleCommand {
 
     static {
         field_r = "The round was a draw!";
-        field_q = new slb();
+        field_q = new TextureCombineSource();
     }
 }

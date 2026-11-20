@@ -43,31 +43,31 @@ final class SetUseSprites extends ConsoleCommand {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          mma.field_a = var17.readUnsignedShort(1869);
-          hla.field_a = new int[mma.field_a];
-          SetInnateThrusters.field_o = new byte[mma.field_a][];
-          sh.field_a = new byte[mma.field_a][];
-          SetBurstFireMaxEnergy.field_o = new boolean[mma.field_a];
-          SettingsChange.field_f = new int[mma.field_a];
-          SetMissionTerrainDebrisProbability.field_o = new int[mma.field_a];
-          iib.field_e = new int[mma.field_a];
-          var17.position = -(mma.field_a * 8) - 7 + param1.length;
+          GpuProjectionMode.field_a = var17.readUnsignedShort(1869);
+          hla.field_a = new int[GpuProjectionMode.field_a];
+          SetInnateThrusters.field_o = new byte[GpuProjectionMode.field_a][];
+          sh.field_a = new byte[GpuProjectionMode.field_a][];
+          SetBurstFireMaxEnergy.field_o = new boolean[GpuProjectionMode.field_a];
+          SettingsChange.field_f = new int[GpuProjectionMode.field_a];
+          SetMissionTerrainDebrisProbability.field_o = new int[GpuProjectionMode.field_a];
+          iib.field_e = new int[GpuProjectionMode.field_a];
+          var17.position = -(GpuProjectionMode.field_a * 8) - 7 + param1.length;
           fbb.field_i = var17.readUnsignedShort(1869);
           Ship.field_H = var17.readUnsignedShort(1869);
           var3 = (255 & var17.readUnsignedByte((byte) -110)) + 1;
-          for (var4 = 0; mma.field_a > var4; var4++) {
+          for (var4 = 0; GpuProjectionMode.field_a > var4; var4++) {
             iib.field_e[var4] = var16.readUnsignedShort(1869);
           }
-          for (var4Lifetime1 = 0; var4Lifetime1 < mma.field_a; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < GpuProjectionMode.field_a; var4Lifetime1++) {
             SettingsChange.field_f[var4Lifetime1] = var17.readUnsignedShort(1869);
           }
-          for (var4Lifetime2 = param0; mma.field_a > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = param0; GpuProjectionMode.field_a > var4Lifetime2; var4Lifetime2++) {
             SetMissionTerrainDebrisProbability.field_o[var4Lifetime2] = var17.readUnsignedShort(1869);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < mma.field_a; var4Lifetime3++) {
+          for (var4Lifetime3 = 0; var4Lifetime3 < GpuProjectionMode.field_a; var4Lifetime3++) {
             hla.field_a[var4Lifetime3] = var17.readUnsignedShort(1869);
           }
-          var17.position = -7 + param1.length - 8 * mma.field_a - (-1 + var3) * 3;
+          var17.position = -7 + param1.length - 8 * GpuProjectionMode.field_a - (-1 + var3) * 3;
           rlb.field_d = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             rlb.field_d[var4Lifetime4] = var17.readUnsignedMedium((byte) -87);
@@ -76,7 +76,7 @@ final class SetUseSprites extends ConsoleCommand {
             }
           }
           var17.position = 0;
-          for (var4Lifetime5 = 0; mma.field_a > var4Lifetime5; var4Lifetime5++) {
+          for (var4Lifetime5 = 0; GpuProjectionMode.field_a > var4Lifetime5; var4Lifetime5++) {
             var5 = SetMissionTerrainDebrisProbability.field_o[var4Lifetime5];
             var6 = hla.field_a[var4Lifetime5];
             var7 = var6 * var5;

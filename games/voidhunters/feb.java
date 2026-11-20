@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class feb {
-    static aba field_a;
+    static TextureCombineOperation field_a;
     static int[] field_b;
 
     public static void clearSharedReferences(byte param0) {
@@ -61,6 +61,6 @@ final class feb {
     }
 
     static {
-        field_a = new aba();
+        field_a = new TextureCombineOperation();
     }
 }

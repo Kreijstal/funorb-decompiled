@@ -4,7 +4,7 @@
 final class tib extends eca {
     private String field_f;
     private boolean field_g;
-    static mma field_h;
+    static GpuProjectionMode field_h;
     static byte[] field_i;
 
     tib(uf param0) {
@@ -66,7 +66,7 @@ final class tib extends eca {
     final void d(byte param0) {
         this.field_f = null;
         if (param0 < 7) {
-          field_h = (mma) null;
+          field_h = (GpuProjectionMode) null;
         }
     }
 
@@ -129,7 +129,7 @@ final class tib extends eca {
 
     final static int a(boolean param0, int param1) {
         if (!param0) {
-          field_h = (mma) null;
+          field_h = (GpuProjectionMode) null;
           if (!li.field_i) {
             return ita.a(param1, 7988).maxAscent;
           }
@@ -150,7 +150,7 @@ final class tib extends eca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -596) {
-            field_h = (mma) null;
+            field_h = (GpuProjectionMode) null;
           }
           stackIn_3_0 = SetMissionTerrainVotingChancestep.a(true, param1, true, param2);
           return stackIn_3_0;
@@ -181,6 +181,6 @@ final class tib extends eca {
     }
 
     static {
-        field_h = new mma();
+        field_h = new GpuProjectionMode();
     }
 }

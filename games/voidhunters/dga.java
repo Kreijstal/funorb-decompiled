@@ -126,7 +126,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_lobby", 23100);
                 if (var2 != null) {
-                  bib.field_e = qpa.a((byte) -125, var2);
+                  UnsupportedGpuMaterialEffect.field_e = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_public", 23100);
                 if (var2 != null) {
@@ -298,7 +298,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_players", 23100);
                 if (null != var2) {
-                  uda.field_a = qpa.a((byte) -125, var2);
+                  GpuMaterialEffect.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_dontmind", 23100);
                 if (var2 != null) {
@@ -334,7 +334,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("add_x_to_ignore", 23100);
                 if (null != var2) {
-                  uda.field_c = qpa.a((byte) -125, var2);
+                  GpuMaterialEffect.field_c = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rm_x_from_friends", 23100);
                 if (null != var2) {

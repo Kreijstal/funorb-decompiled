@@ -17,7 +17,7 @@ final class GetHealthBarWidth extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(tu.field_d);
+          stackIn_3_0 = new ConsoleValue(TextureFilterMode.field_d);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

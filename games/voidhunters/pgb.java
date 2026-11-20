@@ -130,7 +130,7 @@ final class pgb {
         this.field_k = TickCondition.field_e;
         this.field_e = ti.field_h;
         this.field_h = GraphicsPresentException.field_b;
-        this.field_n = uja.field_a;
+        this.field_n = TextureCoordinateMode.field_a;
         this.field_d = SetCountermeasureLauncherProjectiles.field_p;
     }
 

@@ -136,7 +136,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private boolean field_h;
     float[] field_Eb;
     private int field_ub;
-    private fsb[] field_K;
+    private PointLight[] field_K;
     private int field_fb;
     float field_nc;
     boolean field_U;
@@ -1782,7 +1782,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Eb = new float[4];
         this.field_h = true;
         this.field_Fc = -1;
-        this.field_K = new fsb[GetSniperCannonProjectileLife.field_p];
+        this.field_K = new PointLight[GetSniperCannonProjectileLife.field_p];
         this.field_ub = 0;
         this.field_Ac = -1.0f;
         this.field_fb = 0;
@@ -2174,7 +2174,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     private final void g(int param0) {
-        fsb var3 = null;
+        PointLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
@@ -2183,18 +2183,18 @@ final class OpenGlToolkit extends GraphicsToolkit {
         for (var2 = 0; this.field_P > var2; var2++) {
           var3 = this.field_K[var2];
           var4 = 16386 + var2;
-          SetSniperCannonProjectileDamage.field_o[0] = (float)var3.c((byte) -79);
-          SetSniperCannonProjectileDamage.field_o[1] = (float)var3.a(true);
-          SetSniperCannonProjectileDamage.field_o[2] = (float)var3.d((byte) 47);
+          SetSniperCannonProjectileDamage.field_o[0] = (float)var3.getX((byte) -79);
+          SetSniperCannonProjectileDamage.field_o[1] = (float)var3.getY(true);
+          SetSniperCannonProjectileDamage.field_o[2] = (float)var3.getZ((byte) 47);
           SetSniperCannonProjectileDamage.field_o[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var4, 4611, SetSniperCannonProjectileDamage.field_o, 0);
-          var5 = var3.a(-62);
-          var6 = var3.d(-392138175) / 255.0f;
+          var5 = var3.getColor(-62);
+          var6 = var3.getIntensity(-392138175) / 255.0f;
           SetSniperCannonProjectileDamage.field_o[2] = var6 * (float)dla.a(255, var5);
           SetSniperCannonProjectileDamage.field_o[0] = var6 * (float)dla.a(var5 >> 16, 255);
           SetSniperCannonProjectileDamage.field_o[1] = (float)dla.a(var5 >> 8, 255) * var6;
           jaggl.OpenGL.glLightfv(var4, 4609, SetSniperCannonProjectileDamage.field_o, 0);
-          jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.c(16777215) * var3.c(16777215)));
+          jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.getRadius(16777215) * var3.getRadius(16777215)));
           jaggl.OpenGL.glEnable(var4);
         }
         while (var2 < this.field_Rb) {

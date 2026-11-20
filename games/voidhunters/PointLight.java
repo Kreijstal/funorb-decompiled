@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fsb extends IntrusiveNode {
-    private float field_g;
-    private int field_i;
-    private int field_d;
-    private int field_e;
-    private int field_h;
-    private int field_f;
+abstract class PointLight extends IntrusiveNode {
+    private float intensity;
+    private int color;
+    private int z;
+    private int x;
+    private int radius;
+    private int y;
 
-    final int d(byte param0) {
+    final int getZ(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 15) {
-            stackIn_4_0 = this.field_d;
+            stackIn_4_0 = this.z;
             return stackIn_4_0;
           }
           stackIn_2_0 = -90;
@@ -28,15 +28,15 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    final int c(int param0) {
+    final int getRadius(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 16777215) {
-            this.field_g = -0.24781356751918793f;
+            this.intensity = -0.24781356751918793f;
           }
-          stackIn_4_0 = this.field_h;
+          stackIn_4_0 = this.radius;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,14 +45,14 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    final int c(byte param0) {
+    final int getX(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -79) {
-            stackIn_4_0 = this.field_e;
+            stackIn_4_0 = this.x;
             return stackIn_4_0;
           }
           stackIn_2_0 = 99;
@@ -64,15 +64,15 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    final int a(int param0) {
+    final int getColor(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -49) {
-            this.a(true);
+            this.getY(true);
           }
-          stackIn_4_0 = this.field_i;
+          stackIn_4_0 = this.color;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,15 +81,15 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    final float d(int param0) {
+    final float getIntensity(int param0) {
         RuntimeException var2 = null;
         float stackIn_4_0 = 0.0f;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -392138175) {
-            this.field_d = -10;
+            this.z = -10;
           }
-          stackIn_4_0 = this.field_g;
+          stackIn_4_0 = this.intensity;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int toOpenGlExternalFormat(int param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_8_0 = 0;
         int stackIn_19_0 = 0;
@@ -119,7 +119,7 @@ abstract class fsb extends IntrusiveNode {
                 if (6409 != param0 &&
                   param0 != 34846) {
                   if (param1) {
-                    fsb.a((lta) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
+                    PointLight.a((lta) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
                   }
                   if (6410 != param0 &&
                     param0 != 34847) {
@@ -416,7 +416,7 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    private fsb() throws Throwable {
+    private PointLight() throws Throwable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -428,14 +428,14 @@ abstract class fsb extends IntrusiveNode {
         }
     }
 
-    final int a(boolean param0) {
+    final int getY(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = this.field_f;
+            stackIn_4_0 = this.y;
             return stackIn_4_0;
           }
           stackIn_2_0 = 19;

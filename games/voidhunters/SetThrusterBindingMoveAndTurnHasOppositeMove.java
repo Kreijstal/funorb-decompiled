@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand {
-    static aba field_o;
+    static TextureCombineOperation field_o;
     static int field_p;
 
     public static void clearSharedReferences(byte param0) {
@@ -34,7 +34,7 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
         try {
           SetMachineGunEnergyUsed.a(16, 62, arguments[0].intValue(29));
           if (obfuscationGuard > -119) {
-            field_o = (aba) null;
+            field_o = (TextureCombineOperation) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -53,7 +53,7 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
     }
 
     static {
-        field_o = new aba();
+        field_o = new TextureCombineOperation();
         field_p = 0;
     }
 }

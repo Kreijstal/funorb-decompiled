@@ -107,7 +107,7 @@ final class World implements DiffableState, CompactGameState {
         try {
           this.ships = (Ship[]) (GetAutoAfkTimeout.a(20, 1, this.ships, MissionGenerationData.field_a, 8, param0));
           this.projectiles = new IntrusiveDeque();
-          var7 = (Projectile[]) (SetAutoDetail.a(10, aba.field_b, param0, 1, -88, (SerializableGameState[]) null));
+          var7 = (Projectile[]) (SetAutoDetail.a(10, TextureCombineOperation.field_b, param0, 1, -88, (SerializableGameState[]) null));
           var3 = var7;
           if (null != var3) {
             for (var4_int = 0; var4_int < var7.length; var4_int++) {
@@ -1597,7 +1597,7 @@ final class World implements DiffableState, CompactGameState {
             }
             var22++;
           }
-          if (var14Lifetime1 > kva.field_g) {
+          if (var14Lifetime1 > OpenGlGpuTexture.field_g) {
             var15 = null;
             var16 = hob.a(GetFogOfWarSensorRange.field_o, var14Lifetime1, 123);
             var17 = 0;
@@ -1835,7 +1835,7 @@ final class World implements DiffableState, CompactGameState {
         var17 = VoidHunters.field_G;
         try {
           var5_int = GetTorpedoAcceleration.field_p;
-          var6 = uja.field_b;
+          var6 = TextureCoordinateMode.field_b;
           if (param1 == fra.field_a) {
             var5_int = var5_int * GrappleLauncherBehaviour.field_d;
             var6 = var6 * GrappleLauncherBehaviour.field_d;
@@ -3629,7 +3629,7 @@ final class World implements DiffableState, CompactGameState {
               System.err.println("An element of Particle[] particles has a duplicate reference - " + var8.toString());
             }
           }
-          var6_ref.projectiles = SetBloomCoefficientPercentage.a(var6_ref.projectiles, this.projectiles, 1, aba.field_b, -90);
+          var6_ref.projectiles = SetBloomCoefficientPercentage.a(var6_ref.projectiles, this.projectiles, 1, TextureCombineOperation.field_b, -90);
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.projectiles)) {
               System.err.println("linklist<voidhunters.common.worldstate.Projectile> projectiles the actual object has a duplicate reference");
@@ -5211,7 +5211,7 @@ final class World implements DiffableState, CompactGameState {
         try {
           this.ships = (Ship[]) (SetAutoDetail.a(8, MissionGenerationData.field_a, param0, 1, -109, this.ships));
           this.projectiles = new IntrusiveDeque();
-          var7 = (Projectile[]) (SetAutoDetail.a(10, aba.field_b, param0, 1, -127, (SerializableGameState[]) null));
+          var7 = (Projectile[]) (SetAutoDetail.a(10, TextureCombineOperation.field_b, param0, 1, -127, (SerializableGameState[]) null));
           var3 = var7;
           if (null != var3) {
             for (var4_int = 0; var4_int < var7.length; var4_int++) {

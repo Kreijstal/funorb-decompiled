@@ -141,7 +141,7 @@ final class ocb extends eca {
         if (param0 != -10150) {
           ocb.a(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
-        uda.b(-2283);
+        GpuMaterialEffect.buildToolkitFonts(-2283);
         SetReadyRoomMutatorTime.e(-17);
     }
 

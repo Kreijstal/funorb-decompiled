@@ -3767,7 +3767,7 @@ final class uca {
             ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b + 8.0f / ShipTeamConditionFactory.field_a.field_a;
           }
           if (var5 != 0 &&
-            SetMachineGunEnergyUsed.field_o[bib.field_f] ||
+            SetMachineGunEnergyUsed.field_o[UnsupportedGpuMaterialEffect.field_f] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[97]) {
             ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c + 8.0f / ShipTeamConditionFactory.field_a.field_a;
@@ -4580,7 +4580,7 @@ final class uca {
             var7 = (MissionState) null;
             discarded$1 = this.a((byte) -74, (World) null, (MissionState) null);
           }
-          if (tu.field_d > 0) {
+          if (TextureFilterMode.field_d > 0) {
             if (0 >= NebulaField.field_d) {
               return;
             }
@@ -8430,7 +8430,7 @@ final class uca {
           }
           if (SetMachineGunEnergyUsed.field_o[97] &&
             var5_int != 0 ||
-            SetMachineGunEnergyUsed.field_o[bib.field_f]) {
+            SetMachineGunEnergyUsed.field_o[UnsupportedGpuMaterialEffect.field_f]) {
             param2 = param2 | 8;
           }
           if (SetMachineGunEnergyUsed.field_o[vn.field_m]) {

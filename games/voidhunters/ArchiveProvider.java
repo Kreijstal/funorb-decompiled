@@ -31,7 +31,7 @@ abstract class ArchiveProvider {
             ArchiveProvider.a(-3, 82, -123, true, 37, 119);
           }
           if (null != NetworkGameClient.field_y &&
-            null != kba.field_a) {
+            null != TextureTransformMode.field_a) {
             var6 = (qw) (NetworkGameClient.field_y.first(0));
             while (var6 != null) {
               if (var6.field_f == param4 &&

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ubb extends kva implements eb {
-    private int field_l;
-    private int field_m;
+final class OpenGlGpuTexture2D extends OpenGlGpuTexture implements GpuTexture2D {
+    private int width;
+    private int height;
     static Sprite field_j;
     static String field_k;
 
-    ubb(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
-        super(param0, 3553, param1, GpuDataType.field_d, param3 * param2, param4);
+    OpenGlGpuTexture2D(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+        super(param0, 3553, param1, GpuDataType.FLOAT, param3 * param2, param4);
         RuntimeException var9 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -19,17 +19,17 @@ final class ubb extends kva implements eb {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param3;
-          this.field_l = param2;
-          this.field_h.a((ura) (this), -111);
+          this.height = param3;
+          this.width = param2;
+          this.toolkit.setTexture((GpuTexture) (this), -111);
           if (!param4 &&
             param7 == 0 &&
             param6 == 0) {
-            this.a(this.field_e, param5, param3, param2, (byte) -67);
+            this.uploadFloatMipmaps(this.target, param5, param3, param2, (byte) -67);
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5126, param5, 4 * param6);
+          jaggl.OpenGL.glTexImage2Df(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5126, param5, 4 * param6);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,12 +58,12 @@ final class ubb extends kva implements eb {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, TextureFormat param8) {
+    final void updateBytePixels(int param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, TextureFormat param8) {
         try {
-          this.field_h.a((ura) (this), -116);
+          this.toolkit.setTexture((GpuTexture) (this), -116);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(param6, param0);
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param7, param5, param3, param2, MissionControl.a(param6 ^ -32382, param8), 5121, param1, param4);
+          jaggl.OpenGL.glTexSubImage2Dub(this.target, 0, param7, param5, param3, param2, MissionControl.a(param6 ^ -32382, param8), 5121, param1, param4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
@@ -71,36 +71,36 @@ final class ubb extends kva implements eb {
         }
     }
 
-    ubb(OpenGlGpuToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
+    OpenGlGpuTexture2D(OpenGlGpuToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
-          this.field_m = param4;
-          this.field_l = param3;
-          this.field_h.a((ura) (this), -118);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.field_f), od.a(true, this.field_b), (byte[]) null, 0);
+          this.height = param4;
+          this.width = param3;
+          this.toolkit.setTexture((GpuTexture) (this), -118);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final float b(float param0, int param1) {
+    public final float getV(float param0, int param1) {
         if (param1 <= 58) {
           return 0.2576850950717926f;
         }
-        return param0 / (float)this.field_m;
+        return param0 / (float)this.height;
     }
 
-    public final float a(float param0, int param1) {
+    public final float getU(float param0, int param1) {
         if (param1 == -1080) {
-          return param0 / (float)this.field_l;
+          return param0 / (float)this.width;
         }
-        this.a(false, (byte) 127, false);
-        return param0 / (float)this.field_l;
+        this.setRepeat(false, (byte) 127, false);
+        return param0 / (float)this.width;
     }
 
-    public final void a(tu param0, int param1) {
+    public final void setFilterMode(TextureFilterMode param0, int param1) {
         try {
-          super.a(param0, param1 ^ 0);
+          super.setFilterMode(param0, param1 ^ 0);
           if (param1 != -28798) {
             field_j = (Sprite) null;
           }
@@ -109,13 +109,13 @@ final class ubb extends kva implements eb {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, byte param7) {
+    public final void updatePixels(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, byte param7) {
         try {
-          this.field_h.a((ura) (this), -121);
+          this.toolkit.setTexture((GpuTexture) (this), -121);
           jaggl.OpenGL.glPixelStorei(3314, param4);
-          jaggl.OpenGL.glTexSubImage2Di(this.field_e, 0, param6, param0, param2, param1, 32993, this.field_h.field_Nc, param5, param3);
+          jaggl.OpenGL.glTexSubImage2Di(this.target, 0, param6, param0, param2, param1, 32993, this.toolkit.field_Nc, param5, param3);
           if (param7 >= -78) {
-            this.field_m = 42;
+            this.height = 42;
           }
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
@@ -123,7 +123,7 @@ final class ubb extends kva implements eb {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void printDebug(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         RuntimeException stackIn_8_0 = null;
@@ -138,7 +138,7 @@ final class ubb extends kva implements eb {
             return;
           }
           var3 = (String) null;
-          ubb.a((String) null, 70);
+          OpenGlGpuTexture2D.printDebug((String) null, 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,8 +154,8 @@ final class ubb extends kva implements eb {
         }
     }
 
-    ubb(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, 3553, param1, GpuDataType.field_f, param3 * param2, param4);
+    OpenGlGpuTexture2D(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+        super(param0, 3553, param1, GpuDataType.UNSIGNED_BYTE, param3 * param2, param4);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -166,17 +166,17 @@ final class ubb extends kva implements eb {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param3;
-          this.field_l = param2;
-          this.field_h.a((ura) (this), -110);
+          this.height = param3;
+          this.width = param2;
+          this.toolkit.setTexture((GpuTexture) (this), -110);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           if (param4 &&
             param7 == 0 &&
             param6 == 0) {
-            this.a(this.field_e, param3, param5, 0, param2);
+            this.uploadByteMipmaps(this.target, param3, param5, 0, param2);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -207,24 +207,24 @@ final class ubb extends kva implements eb {
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean usesNormalizedCoordinates(int param0) {
         int var2 = 24 % ((-92 - param0) / 34);
         return true;
     }
 
-    public final void a(boolean param0, byte param1, boolean param2) {
-        this.field_h.a((ura) (this), -121);
-        jaggl.OpenGL.glTexParameteri(this.field_e, 10242, param0 ? 10497 : 33071);
+    public final void setRepeat(boolean param0, byte param1, boolean param2) {
+        this.toolkit.setTexture((GpuTexture) (this), -121);
+        jaggl.OpenGL.glTexParameteri(this.target, 10242, param0 ? 10497 : 33071);
         if (param1 == -98) {
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10243, !param2 ? 33071 : 10497);
+          jaggl.OpenGL.glTexParameteri(this.target, 10243, !param2 ? 33071 : 10497);
           return;
         }
-        this.a((byte) 80);
-        jaggl.OpenGL.glTexParameteri(this.field_e, 10243, !param2 ? 33071 : 10497);
+        this.getHeight((byte) 80);
+        jaggl.OpenGL.glTexParameteri(this.target, 10243, !param2 ? 33071 : 10497);
     }
 
-    ubb(OpenGlGpuToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, ComponentAttachmentPlan.field_d, GpuDataType.field_f, param2 * param1, param3);
+    OpenGlGpuTexture2D(OpenGlGpuToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
+        super(param0, 3553, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE, param2 * param1, param3);
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -233,17 +233,17 @@ final class ubb extends kva implements eb {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param2;
-          this.field_l = param1;
-          this.field_h.a((ura) (this), -111);
+          this.height = param2;
+          this.width = param1;
+          this.toolkit.setTexture((GpuTexture) (this), -111);
           if (param3 &&
             param6 == 0 &&
             param5 == 0) {
-            this.a((byte) 14, this.field_e, param2, param1, param4);
+            this.uploadArgbMipmaps((byte) 14, this.target, param2, param1, param4);
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_l, this.field_m, 0, 32993, this.field_h.field_Nc, param4, 4 * param5);
+          jaggl.OpenGL.glTexImage2Di(this.target, 0, 6408, this.width, this.height, 0, 32993, this.toolkit.field_Nc, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -266,21 +266,21 @@ final class ubb extends kva implements eb {
         }
     }
 
-    public final int b(byte param0) {
+    public final int getWidth(byte param0) {
         if (param0 != 113) {
-          this.a(-1.557132363319397f, 85);
-          return this.field_l;
+          this.getU(-1.557132363319397f, 85);
+          return this.width;
         }
-        return this.field_l;
+        return this.width;
     }
 
-    public final void b(int param0) {
+    public final void bind(int param0) {
         if (param0 != -27445) {
-          this.field_m = 72;
-          super.b(param0 ^ 0);
+          this.height = 72;
+          super.bind(param0 ^ 0);
           return;
         }
-        super.b(param0 ^ 0);
+        super.bind(param0 ^ 0);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -291,21 +291,21 @@ final class ubb extends kva implements eb {
         field_j = null;
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 >= -40) {
           field_k = (String) null;
-          return this.field_m;
+          return this.height;
         }
-        return this.field_m;
+        return this.height;
     }
 
-    final void a(int param0, TextureFormat param1, byte param2, int param3, float[] param4, int param5, int param6, int param7, int param8) {
+    final void updateFloatPixels(int param0, TextureFormat param1, byte param2, int param3, float[] param4, int param5, int param6, int param7, int param8) {
         try {
-          this.field_h.a((ura) (this), -122);
+          this.toolkit.setTexture((GpuTexture) (this), -122);
           jaggl.OpenGL.glPixelStorei(3314, param3);
-          jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param6, param5, param7, param0, MissionControl.a(-29328, param1), 5121, param4, param8);
+          jaggl.OpenGL.glTexSubImage2Df(this.target, 0, param6, param5, param7, param0, MissionControl.a(-29328, param1), 5121, param4, param8);
           if (param2 >= -35) {
-            ubb.clearSharedReferences((byte) -66);
+            OpenGlGpuTexture2D.clearSharedReferences((byte) -66);
           }
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {

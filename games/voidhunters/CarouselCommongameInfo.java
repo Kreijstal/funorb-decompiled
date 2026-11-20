@@ -743,7 +743,7 @@ final class CarouselCommongameInfo implements DiffableState {
             System.setOut(var7);
             this.field_j = var14.toString();
             GetSniperCannonAimarc.a(param1 ^ -7026, "\n>>>>>> Black box recording debug diffs start");
-            ubb.a(var14.toString(), 0);
+            OpenGlGpuTexture2D.printDebug(var14.toString(), 0);
             GetSniperCannonAimarc.a(-6940, "<<<<<< Black box recording debug diffs end\n");
           }
         }

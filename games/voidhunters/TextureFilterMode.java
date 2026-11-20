@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tu {
+final class TextureFilterMode {
     static PrimitiveType field_b;
     static int field_d;
     static char[] field_c;

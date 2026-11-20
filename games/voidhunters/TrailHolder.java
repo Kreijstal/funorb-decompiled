@@ -115,7 +115,7 @@ final class TrailHolder implements DiffableState {
           if (param1 != 1325107016) {
             this.field_f = (int[]) null;
           }
-          fsb.a(param0, this.field_f, 6407, this.field_g, this.field_b, this.field_e, this.field_c, this.field_d, param2);
+          PointLight.a(param0, this.field_f, 6407, this.field_g, this.field_b, this.field_e, this.field_c, this.field_d, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tbb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -157,9 +157,9 @@ final class TrailHolder implements DiffableState {
         var4 = stackIn_11_0;
         ti.field_h = var8.readString(-1);
         if (var4 != 0) {
-          uja.field_a = var8.readString(-1);
+          TextureCoordinateMode.field_a = var8.readString(-1);
         } else {
-          uja.field_a = ti.field_h;
+          TextureCoordinateMode.field_a = ti.field_h;
         }
         if (wja.field_a == 1) {
           psb.field_a = var8.readUnsignedShort(1869);
@@ -182,7 +182,7 @@ final class TrailHolder implements DiffableState {
         try {
           var9 = GetTorpedoAimarc.field_o.a(var5, -119);
           SetCountermeasureLauncherProjectiles.field_p = var9.a(80);
-          if (uja.field_a.equals(IntIndexTable.field_a)) {
+          if (TextureCoordinateMode.field_a.equals(IntIndexTable.field_a)) {
             stackIn_26_0 = null;
           } else {
             stackIn_26_0 = var9.field_n;

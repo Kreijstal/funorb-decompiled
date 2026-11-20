@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tea {
-    static uja field_d;
+    static TextureCoordinateMode field_d;
     static int field_b;
     static String field_c;
     static String field_a;
@@ -53,7 +53,7 @@ final class tea {
     }
 
     static {
-        field_d = new uja();
+        field_d = new TextureCoordinateMode();
         field_b = 0;
         field_c = "Elapsed time";
         field_a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

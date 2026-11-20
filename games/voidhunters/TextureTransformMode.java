@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kba {
+final class TextureTransformMode {
     static lta field_a;
 
     public static void clearSharedReferences(int param0) {

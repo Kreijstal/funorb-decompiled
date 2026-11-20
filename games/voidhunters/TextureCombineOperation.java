@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aba {
+final class TextureCombineOperation {
     static GameStateFactory field_b;
     static aw field_a;
 
@@ -134,7 +134,7 @@ final class aba {
           return;
         }
         GameSnapshot var2 = (GameSnapshot) null;
-        aba.a((MissionState) null, (MissionCondition[]) null, (lta) null, -51, (byte) -22, -26, (GameSnapshot) null);
+        TextureCombineOperation.a((MissionState) null, (MissionCondition[]) null, (lta) null, -51, (byte) -22, -26, (GameSnapshot) null);
         field_b = null;
     }
 

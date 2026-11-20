@@ -52,7 +52,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
         nl var5 = null;
         int var6 = 0;
         int var6Lifetime1;
-        if (null == kba.field_a) {
+        if (null == TextureTransformMode.field_a) {
           return;
         }
         nl var12 = SetThrusterParticleSpeedDownshift.a(param2, -112, param1);

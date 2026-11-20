@@ -41,9 +41,9 @@ final class ThrusterBehaviour implements DiffableState {
           param8.addForceAtPoint(var12, param4, param7, (byte) -117, var11);
           if (veb.field_b == 0) {
             if (param6 != 46) {
-              param0.a(1, -var11 >> GetSalvoHoldable.field_p, 0, slb.field_a, 30273, param4, 0, param7, -var12 >> GetSalvoHoldable.field_p);
+              param0.a(1, -var11 >> GetSalvoHoldable.field_p, 0, TextureCombineSource.field_a, 30273, param4, 0, param7, -var12 >> GetSalvoHoldable.field_p);
             } else {
-              param0.a(5, -var11 >> GetSalvoHoldable.field_p, 0, slb.field_a, 30273, param4, 1024, param7, -var12 >> GetSalvoHoldable.field_p);
+              param0.a(5, -var11 >> GetSalvoHoldable.field_p, 0, TextureCombineSource.field_a, 30273, param4, 1024, param7, -var12 >> GetSalvoHoldable.field_p);
             }
           }
           if (this.trail != null) {

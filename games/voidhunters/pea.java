@@ -4,7 +4,7 @@
 final class pea {
     static int field_b;
     static int field_a;
-    static slb field_d;
+    static TextureCombineSource field_d;
     static String field_c;
 
     final static void a(long param0, llb param1, int param2, int[] param3, String param4, soa param5, String param6, byte param7, int param8) {
@@ -33,7 +33,7 @@ final class pea {
     static {
         field_b = 1;
         field_a = 1280;
-        field_d = new slb();
+        field_d = new TextureCombineSource();
         field_c = "Please enter your date of birth to enable chat:";
     }
 

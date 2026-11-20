@@ -10,7 +10,7 @@ final class HardpointDefinition {
         if (!param0) {
           return;
         }
-        kva.d((byte) -48);
+        OpenGlGpuTexture.d((byte) -48);
     }
 
     HardpointDefinition(int param0, int param1, int param2) {

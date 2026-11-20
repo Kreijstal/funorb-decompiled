@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uda {
+abstract class GpuMaterialEffect {
     static String field_c;
     static int field_b;
-    GpuToolkit field_d;
+    GpuToolkit toolkit;
     static String field_a;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void setParameters(int param0, int param1, int param2);
 
-    void a(boolean param0) {
+    void onProjectionChanged(boolean param0) {
         if (!param0) {
-          this.d(-18);
+          this.onTextureTransformChanged(-18);
         }
     }
 
-    abstract void b(int param0, boolean param1);
+    abstract void applyRenderState(int param0, boolean param1);
 
-    final static void b(int param0) {
+    final static void buildToolkitFonts(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -35,7 +35,7 @@ abstract class uda {
           if (param0 == -2283) {
             return;
           }
-          uda.clearSharedReferences((byte) 81);
+          GpuMaterialEffect.clearSharedReferences((byte) 81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,53 +44,53 @@ abstract class uda {
         }
     }
 
-    abstract void a(int param0, boolean param1);
+    abstract void enable(int param0, boolean param1);
 
-    void c(int param0) {
+    void onModelTransformChanged(int param0) {
         if (param0 != 5) {
-          this.a(-37);
+          this.disable(-37);
         }
     }
 
-    abstract void a(int param0);
+    abstract void disable(int param0);
 
     public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 > -6) {
-          uda.b(-56);
+          GpuMaterialEffect.buildToolkitFonts(-56);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    void b(boolean param0) {
+    void onDepthRangeChanged(boolean param0) {
         if (!param0) {
           field_b = -18;
         }
     }
 
-    void c(byte param0) {
+    void onViewTransformChanged(byte param0) {
         if (param0 != 15) {
           field_c = (String) null;
         }
     }
 
-    abstract boolean a(byte param0);
+    abstract boolean isSupported(byte param0);
 
-    abstract void a(byte param0, int param1, ura param2);
+    abstract void setTexture(byte param0, int param1, GpuTexture param2);
 
-    uda(GpuToolkit param0) {
+    GpuMaterialEffect(GpuToolkit param0) {
         try {
-          this.field_d = param0;
+          this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void d(int param0) {
+    void onTextureTransformChanged(int param0) {
         if (param0 != 8) {
-          this.a(-80, -4, -126);
+          this.setParameters(-80, -4, -126);
         }
     }
 

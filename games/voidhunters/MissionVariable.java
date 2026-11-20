@@ -3,7 +3,7 @@
  */
 final class MissionVariable implements DiffableState {
     int value;
-    static aba field_c;
+    static TextureCombineOperation field_c;
     int label;
 
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
@@ -203,6 +203,6 @@ final class MissionVariable implements DiffableState {
     }
 
     static {
-        field_c = new aba();
+        field_c = new TextureCombineOperation();
     }
 }

@@ -96,9 +96,9 @@ final class deb extends mfb {
     final int c(int param0) {
         if (param0 != 0) {
           this.a(true);
-          return uda.field_b;
+          return GpuMaterialEffect.field_b;
         }
-        return uda.field_b;
+        return GpuMaterialEffect.field_b;
     }
 
     final static void a(int param0, int param1) {

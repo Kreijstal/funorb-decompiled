@@ -4,7 +4,7 @@
 final class GpuFont extends ToolkitFont {
     private GpuVertexBuffer field_e;
     private boolean field_c;
-    private eb field_d;
+    private GpuTexture2D field_d;
     private GpuToolkit toolkit;
 
     final void drawGlyphMasked(char param0, int param1, int param2, int param3, boolean param4, GlyphMask param5, int param6, int param7) {
@@ -136,7 +136,7 @@ final class GpuFont extends ToolkitFont {
               }
             }
           }
-          this.field_d = param0.a(var6Lifetime1, false, var6Lifetime1, (byte) 123, var39);
+          this.field_d = param0.createTexture2DFromPixels(var6Lifetime1, false, var6Lifetime1, (byte) 123, var39);
           this.field_c = false;
         } else {
           var35 = new byte[var6Lifetime1 * var6Lifetime1];
@@ -179,20 +179,20 @@ final class GpuFont extends ToolkitFont {
               }
             }
           }
-          if (!param0.a(-26, GetMinimapWidth.field_p, GpuDataType.field_f)) {
+          if (!param0.supportsTexture2DFormat(-26, GetMinimapWidth.field_p, GpuDataType.UNSIGNED_BYTE)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
             for (var9 = 0; var9 < var35.length; var9++) {
               var8_ref_int__[var9] = var35[var9] << 24;
             }
-            this.field_d = param0.a(var6Lifetime1, false, var6Lifetime1, (byte) -37, var36);
+            this.field_d = param0.createTexture2DFromPixels(var6Lifetime1, false, var6Lifetime1, (byte) -37, var36);
           } else {
-            this.field_d = param0.a(var6Lifetime1, GetMinimapWidth.field_p, 0, var6Lifetime1, false, var35);
+            this.field_d = param0.createTexture2DFromBytes(var6Lifetime1, GetMinimapWidth.field_p, 0, var6Lifetime1, false, var35);
           }
           this.field_c = true;
         }
-        this.field_d.a(SetLagVariant.field_o, -28798);
+        this.field_d.setFilterMode(SetLagVariant.field_o, -28798);
         this.field_e = param0.createVertexBuffer(false, 3);
         this.field_e.allocate(20, 20480, 96);
         var7 = 0;
@@ -200,8 +200,8 @@ final class GpuFont extends ToolkitFont {
           var33 = this.field_e.lock(true, (byte) 106);
           if (var33 != null) {
             var34 = this.toolkit.getBufferWriter(var33, false);
-            var10 = this.field_d.a((float)var6Lifetime1, -1080) / (float)var6Lifetime1;
-            var11 = this.field_d.b((float)var6Lifetime1, 105) / (float)var6Lifetime1;
+            var10 = this.field_d.getU((float)var6Lifetime1, -1080) / (float)var6Lifetime1;
+            var11 = this.field_d.getV((float)var6Lifetime1, 105) / (float)var6Lifetime1;
             var24 = 0;
             var12Lifetime1 = var24;
             while (var24 < 256) {
@@ -273,25 +273,25 @@ final class GpuFont extends ToolkitFont {
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         GpuTransform3D var6;
-        this.toolkit.c((byte) 95);
-        this.toolkit.a(this.field_d, -121);
+        this.toolkit.prepareGlyphDraw((byte) 95);
+        this.toolkit.setTexture(this.field_d, -121);
         if (!this.field_c &&
           !param4) {
-          this.toolkit.a(MissionVariable.field_c, true, MissionVariable.field_c);
+          this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, MissionVariable.field_c);
         } else {
-          this.toolkit.a(OpenGlGlyphMask.field_a, true, MissionVariable.field_c);
-          this.toolkit.a(0, pea.field_d, 7);
-          this.toolkit.e(-122, param3);
+          this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, MissionVariable.field_c);
+          this.toolkit.setRgbCombineSource(0, pea.field_d, 7);
+          this.toolkit.setTextureConstantColor(-122, param3);
         }
-        var6 = this.toolkit.A(11);
+        var6 = this.toolkit.getModelTransform(11);
         var6.setTranslation(param1, param2, (byte) -54, 0);
-        this.toolkit.h(20837);
+        this.toolkit.markModelTransformChanged(20837);
         this.toolkit.setVertexBuffer((byte) -6, this.field_e, 0);
         this.toolkit.setVertexDeclaration(106, this.toolkit.field_Vb);
         this.toolkit.drawPrimitive(bk.field_v, param0 * 4, 2, 56);
         if (this.field_c ||
           param4) {
-          this.toolkit.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+          this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         }
     }
 }

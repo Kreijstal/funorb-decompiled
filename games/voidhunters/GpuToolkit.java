@@ -10,193 +10,193 @@ abstract class GpuToolkit extends GraphicsToolkit {
     private IntrusiveDeque field_s;
     Object field_qc;
     private Hashtable field_rb;
-    int field_db;
+    int viewportWidth;
     long field_peer;
-    int field_i;
+    int viewportHeight;
     private jagex3.graphics2.hw.NativeInterface field_Zb;
     ResourceArchive field_Ab;
     jaclib.memory.heap.NativeHeapBuffer field_m;
     boolean field_ec;
     int field_Nb;
-    GpuTransform3D field_O;
+    GpuTransform3D modelTransform;
     int field_mb;
     int field_ob;
     private GpuTransform3D field_t;
     private GpuTransform3D field_f;
-    GpuTransform3D field_gb;
-    private GpuTransform3D field_yb;
-    private GpuTransform3D field_vc;
-    int field_Bb;
+    GpuTransform3D viewTransform;
+    private GpuTransform3D inverseViewTransform;
+    private GpuTransform3D modelViewTransform;
+    int scissorBottom;
     int field_pc;
-    boolean field_X;
-    float field_Rb;
+    boolean depthWriteEnabled;
+    float ambientIntensity;
     int field_Qb;
-    aba[] field_z;
-    float field_u;
-    private float[] field_l;
+    TextureCombineOperation[] rgbCombineOperations;
+    float lightGreen;
+    private float[] screenProjection;
     boolean field_M;
     int field_L;
-    float field_Sb;
+    float lightRed;
     boolean field_uc;
     private int field_v;
-    boolean field_Hb;
-    private boolean field_wb;
+    boolean lightingSuppressed;
+    private boolean modelViewValid;
     private int field_lb;
-    private ura[] field_bc;
-    int field_Y;
-    private int field_W;
+    private GpuTexture[] textures;
+    int viewportX;
+    private int materialTextureId;
     private float[] field_fb;
-    int field_ab;
-    private float[] field_J;
+    int activeTextureUnit;
+    private float[] orthographicProjection;
     int field_h;
     private float[] field_Db;
     int field_lc;
-    private float[] field_c;
-    float[] field_Fb;
+    private float[] perspectiveProjection;
+    float[] projectionMatrix;
     private int field_Pb;
     float field_p;
-    fsb[] field_Lb;
-    private boolean field_Ub;
-    private int field_nb;
-    float[] field_cb;
-    float[] field_wc;
-    private uda[] field_dc;
+    PointLight[] pointLights;
+    private boolean orthographicProjectionValid;
+    private int materialEffectId;
+    float[] antiSunDirection;
+    float[] sunDirection;
+    private GpuMaterialEffect[] materialEffects;
     private atb field_I;
-    aba[] field_U;
+    TextureCombineOperation[] alphaCombineOperations;
     private float field_B;
-    int field_bb;
-    int field_H;
+    int previousPointLightCount;
+    int scissorLeft;
     boolean field_sc;
     private boolean field_hc;
     private boolean field_q;
-    private uda field_E;
-    int field_F;
+    private GpuMaterialEffect materialEffect;
+    int scissorRight;
     private int field_k;
-    int field_xc;
+    int scissorTop;
     private int field_Ob;
     private int field_V;
     private je field_Ib;
     private jaclib.memory.Stream bufferWriter;
-    boolean field_Xb;
+    boolean lightingEnabled;
     private as field_kc;
     private int field_e;
-    float field_tc;
-    private int field_d;
+    float antiSunIntensity;
+    private int materialParameter2;
     int field_Wb;
     float field_r;
     private int field_tb;
     private int field_Gb;
-    boolean field_nc;
-    float field_x;
+    boolean depthTestEnabled;
+    float lightBlue;
     int field_j;
     boolean field_g;
     private int field_ib;
     private int field_K;
-    boolean field_eb;
+    boolean alphaTestEnabled;
     private float field_Z;
     boolean field_vb;
-    private float[] field_gc;
-    int field_Cb;
-    ura field_Q;
+    private float[] clipSpaceProjection;
+    int viewportY;
+    GpuTexture field_Q;
     private float field_xb;
-    private boolean field_sb;
-    GpuTransform3D[] field_Eb;
-    private boolean field_N;
-    boolean field_cc;
-    boolean field_ub;
-    mma field_pb;
+    private boolean screenProjectionValid;
+    GpuTransform3D[] textureTransforms;
+    private boolean perspectiveProjectionValid;
+    boolean effectFogEnabled;
+    boolean fogEnabled;
+    GpuProjectionMode projectionMode;
     int field_qb;
-    private int field_mc;
-    kba[] field_A;
-    private int field_y;
-    int field_Kb;
-    int field_jb;
+    private int blendMode;
+    TextureTransformMode[] textureTransformModes;
+    private int materialParameter1;
+    int pointLightCount;
+    int textureConstantColor;
     int field_n;
-    float field_oc;
-    boolean field_zb;
+    float sunIntensity;
+    boolean blendingEnabled;
     int field_rc;
     private boolean field_Tb;
-    ConsoleCommandRegistry field_fc;
+    ConsoleCommandRegistry blendFunction;
     private GpuVertexBuffer quadVertexBuffer;
-    private GpuVertexDeclaration field_G;
+    private GpuVertexDeclaration circleVertexDeclaration;
     private roa field_w;
     private GpuVertexDeclaration quadVertexDeclaration;
-    private GpuVertexDeclaration field_o;
+    private GpuVertexDeclaration lineVertexDeclaration;
     GpuVertexDeclaration field_Vb;
     private roa field_D;
-    private GpuVertexBuffer field_P;
+    private GpuVertexBuffer circleVertexBuffer;
     private roa field_hb;
     private roa field_Jb;
     private roa field_R;
-    private GpuVertexBuffer field_S;
+    private GpuVertexBuffer lineVertexBuffer;
     private GpuIndexBuffer field_T;
-    boolean field_ac;
+    boolean scissorEnabled;
 
     final boolean supportsShadows() {
         return true;
     }
 
-    abstract void y(int param0);
+    abstract void applyDepthWriteEnabled(int param0);
 
-    void n(int param0) {
-        this.C((byte) 92);
+    void initializeRenderState(int param0) {
+        this.applyRenderState((byte) 92);
         if (param0 < 106) {
           this.supportsShadows();
         }
     }
 
     final void setClip(int param0, int param1, int param2, int param3) {
-        if (param0 <= 0 && -1 + this.field_db <= param2 && param1 <= 0 &&
-          param3 >= -1 + this.field_i) {
-          this.v(-120);
+        if (param0 <= 0 && -1 + this.viewportWidth <= param2 && param1 <= 0 &&
+          param3 >= -1 + this.viewportHeight) {
+          this.resetScissor(-120);
           return;
         }
-        this.field_xc = param1 >= 0 ? param1 : 0;
-        this.field_F = param2 > this.field_db ? 0 : param2;
-        this.field_Bb = this.field_db >= param3 ? param3 : 0;
-        this.field_H = param0 >= 0 ? param0 : 0;
-        if (!this.field_ac) {
-          this.field_ac = true;
-          this.o((byte) 81);
+        this.scissorTop = param1 >= 0 ? param1 : 0;
+        this.scissorRight = param2 > this.viewportWidth ? 0 : param2;
+        this.scissorBottom = this.viewportWidth >= param3 ? param3 : 0;
+        this.scissorLeft = param0 >= 0 ? param0 : 0;
+        if (!this.scissorEnabled) {
+          this.scissorEnabled = true;
+          this.applyScissorEnabled((byte) 81);
         }
-        this.A((byte) -99);
-        this.b((byte) -114);
+        this.applyScissorRectangle((byte) -99);
+        this.onClipChanged((byte) -114);
     }
 
-    final void r(byte param0) {
+    final void drawUnitQuadTriangles(byte param0) {
         if (param0 > -51) {
           this.field_kc = (as) null;
         }
         this.drawUnitQuad(0, bk.field_v, 2);
     }
 
-    final GpuTransform3D A(int param0) {
+    final GpuTransform3D getModelTransform(int param0) {
         if (param0 != 11) {
-          slb var3 = (slb) null;
-          this.a(-91, (byte) 122, (slb) null);
+          TextureCombineSource var3 = (TextureCombineSource) null;
+          this.setAlphaCombineSource(-91, (byte) 122, (TextureCombineSource) null);
         }
-        return this.field_O;
+        return this.modelTransform;
     }
 
     final void setAmbientLight(float param0) {
-        if (param0 != this.field_Rb) {
-          this.field_Rb = param0;
+        if (param0 != this.ambientIntensity) {
+          this.ambientIntensity = param0;
           this.field_Zb.setAmbient(param0);
-          this.h(true);
-          this.i((byte) 44);
+          this.applyAmbientLight(true);
+          this.commitDirectionalLights((byte) 44);
         }
     }
 
-    abstract void a(boolean param0, byte param1, slb param2, int param3);
+    abstract void setAlphaCombineSource(boolean param0, byte param1, TextureCombineSource param2, int param3);
 
-    abstract void v(byte param0);
+    abstract void applyTextureConstantColor(byte param0);
 
-    abstract void G(byte param0);
+    abstract void applyDirectionalLightColors(byte param0);
 
-    final void c(byte param0, boolean param1) {
-        if ((!this.field_Xb ? 1 : 0) != (!param1 ? 1 : 0)) {
-          this.field_Xb = param1 ? true : false;
-          this.B(-78);
+    final void setLightingEnabled(byte param0, boolean param1) {
+        if ((!this.lightingEnabled ? 1 : 0) != (!param1 ? 1 : 0)) {
+          this.lightingEnabled = param1 ? true : false;
+          this.applyLightingEnabled(-78);
           this.field_V = this.field_V & -8;
         }
         if (param0 >= -11) {
@@ -204,122 +204,122 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void l(int param0) {
+    private final void updateModelTransform(int param0) {
         float var2 = 0.0f;
         if (param0 != 0) {
           return;
         }
-        if (GetMassDriverFireForce.field_p == this.field_pb) {
-          var2 = this.f((byte) -128);
-          this.field_O.translate(0.0f, var2, var2, (byte) 13);
+        if (GetMassDriverFireForce.field_p == this.projectionMode) {
+          var2 = this.getPixelOffset((byte) -128);
+          this.modelTransform.translate(0.0f, var2, var2, (byte) 13);
         }
-        this.field_wb = false;
-        this.p((byte) 98);
-        if (this.field_E != null) {
-          this.field_E.c(5);
+        this.modelViewValid = false;
+        this.applyModelTransform((byte) 98);
+        if (this.materialEffect != null) {
+          this.materialEffect.onModelTransformChanged(5);
         }
     }
 
-    final GpuTransform3D E(int param0) {
-        if (!this.field_wb) {
-          this.field_vc.setProduct(this.field_O, this.field_gb, true);
-          this.field_wb = true;
+    final GpuTransform3D getModelViewTransform(int param0) {
+        if (!this.modelViewValid) {
+          this.modelViewTransform.setProduct(this.modelTransform, this.viewTransform, true);
+          this.modelViewValid = true;
         }
         if (param0 != 0) {
-          this.field_ab = 111;
+          this.activeTextureUnit = 111;
         }
-        return this.field_vc;
+        return this.modelViewTransform;
     }
 
     final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.d(false);
-        this.e(-126, param4);
-        this.a(0, pea.field_d, 7);
-        this.a(0, (byte) -108, pea.field_d);
-        this.c(99, param5);
-        this.field_O.setScale(5557, (float)param2, (float)param3, 1.0f);
-        this.field_O.translate(param1, 16383, 0, param0);
-        this.h(20837);
-        this.a(-44, false);
-        this.r((byte) -64);
-        this.a(-86, true);
-        this.a(0, (byte) -53, SetGrapplingHookMaxExtension8Force.field_q);
-        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.preparePrimitiveDraw(false);
+        this.setTextureConstantColor(-126, param4);
+        this.setRgbCombineSource(0, pea.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -108, pea.field_d);
+        this.setBlendMode(99, param5);
+        this.modelTransform.setScale(5557, (float)param2, (float)param3, 1.0f);
+        this.modelTransform.translate(param1, 16383, 0, param0);
+        this.markModelTransformChanged(20837);
+        this.setMultisampleEnabled(-44, false);
+        this.drawUnitQuadTriangles((byte) -64);
+        this.setMultisampleEnabled(-86, true);
+        this.setAlphaCombineSource(0, (byte) -53, SetGrapplingHookMaxExtension8Force.field_q);
+        this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    private final void d(int param0) {
-        if (null != this.field_E) {
-          this.field_E.b(true);
+    private final void updateDepthRange(int param0) {
+        if (null != this.materialEffect) {
+          this.materialEffect.onDepthRangeChanged(true);
         }
         if (param0 <= 105) {
-          this.field_S = (GpuVertexBuffer) null;
+          this.lineVertexBuffer = (GpuVertexBuffer) null;
         }
-        this.j(8);
+        this.applyFogParameters(8);
     }
 
-    abstract void j(int param0);
+    abstract void applyFogParameters(int param0);
 
-    abstract void o(byte param0);
+    abstract void applyScissorEnabled(byte param0);
 
-    final void a(int param0, byte param1, slb param2) {
+    final void setAlphaCombineSource(int param0, byte param1, TextureCombineSource param2) {
         try {
           if (param1 >= -48) {
-            this.field_oc = -0.04896149784326553f;
+            this.sunIntensity = -0.04896149784326553f;
           }
-          this.a(false, (byte) 94, param2, param0);
+          this.setAlphaCombineSource(false, (byte) 94, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.SE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract float f(byte param0);
+    abstract float getPixelOffset(byte param0);
 
-    private final void C(byte param0) {
+    private final void applyRenderState(byte param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
-        this.h(true);
-        this.G((byte) 65);
-        this.B(-51);
-        this.f(68);
-        this.m(3);
-        this.i((byte) -119);
-        this.e(false);
-        this.F(12614);
-        this.y(-43);
-        this.w(1);
-        this.j(8);
+        this.applyAmbientLight(true);
+        this.applyDirectionalLightColors((byte) 65);
+        this.applyLightingEnabled(-51);
+        this.applyPointLights(68);
+        this.applyDirectionalLightDirections(3);
+        this.commitDirectionalLights((byte) -119);
+        this.applyDirectionalLightsEnabled(false);
+        this.applyDepthTestEnabled(12614);
+        this.applyDepthWriteEnabled(-43);
+        this.applyFogEnabled(1);
+        this.applyFogParameters(8);
         if (param0 <= 14) {
-          this.field_wb = false;
+          this.modelViewValid = false;
         }
-        this.j((byte) -56);
-        this.s((byte) -39);
-        this.I(17634);
+        this.applyBlendingEnabled((byte) -56);
+        this.applyBlendFunction((byte) -39);
+        this.applyAlphaTestEnabled(17634);
         for (var2 = -1 + this.field_L; var2 >= 0; var2--) {
-          this.g(var2, -63);
-          this.o(-88);
-          this.l((byte) 116);
-          this.F((byte) 112);
+          this.setActiveTextureUnit(var2, -63);
+          this.applyRgbCombineOperation(-88);
+          this.applyAlphaCombineOperation((byte) 116);
+          this.resetTextureTransform((byte) 112);
         }
-        this.v((byte) -109);
-        this.m((byte) 107);
-        this.y((byte) -65);
-        this.p((byte) 114);
-        this.G(17891);
+        this.applyTextureConstantColor((byte) -109);
+        this.applyViewport((byte) 107);
+        this.applyProjectionMatrix((byte) -65);
+        this.applyModelTransform((byte) 114);
+        this.applyViewTransform(17891);
     }
 
-    abstract void B(int param0);
+    abstract void applyLightingEnabled(int param0);
 
-    final eb a(int param0, boolean param1, int param2, byte param3, int[] param4) {
+    final GpuTexture2D createTexture2DFromPixels(int param0, boolean param1, int param2, byte param3, int[] param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        eb stackIn_1_0 = null;
+        GpuTexture2D stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var6_int = -43 / ((23 - param3) / 56);
-          stackIn_1_0 = this.a(param0, param1, param4, param2, 0, true, 0);
+          stackIn_1_0 = this.createTexture2DFromPixels(param0, param1, param4, param2, 0, true, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -339,63 +339,63 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return false;
     }
 
-    private final void b(byte param0) {
+    private final void onClipChanged(byte param0) {
         if (param0 >= -61) {
-          this.g(-117);
+          this.getGpuMemoryUsage(-117);
         }
     }
 
-    final GpuTransform3D p(int param0) {
+    final GpuTransform3D getTextureTransform(int param0) {
         if (param0 != 0) {
-          this.field_sb = false;
+          this.screenProjectionValid = false;
         }
-        return this.field_Eb[this.field_ab];
+        return this.textureTransforms[this.activeTextureUnit];
     }
 
     final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
-        this.d(false);
-        this.e(-128, param3);
-        this.a(0, pea.field_d, 7);
-        this.a(0, (byte) -65, pea.field_d);
-        this.c(83, param4);
-        this.field_O.setScale(5557, (float)param2, (float)param2, 1.0f);
-        this.field_O.translate(param1, 16383, 0, param0);
-        this.h(20837);
-        this.a(-114, false);
-        this.setVertexBuffer((byte) -6, this.field_P, 0);
-        this.setVertexDeclaration(-51, this.field_G);
+        this.preparePrimitiveDraw(false);
+        this.setTextureConstantColor(-128, param3);
+        this.setRgbCombineSource(0, pea.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -65, pea.field_d);
+        this.setBlendMode(83, param4);
+        this.modelTransform.setScale(5557, (float)param2, (float)param2, 1.0f);
+        this.modelTransform.translate(param1, 16383, 0, param0);
+        this.markModelTransformChanged(20837);
+        this.setMultisampleEnabled(-114, false);
+        this.setVertexBuffer((byte) -6, this.circleVertexBuffer, 0);
+        this.setVertexDeclaration(-51, this.circleVertexDeclaration);
         this.drawPrimitive(bk.field_v, 0, 256, 66);
-        this.a(-82, true);
-        this.a(0, (byte) -122, SetGrapplingHookMaxExtension8Force.field_q);
-        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.setMultisampleEnabled(-82, true);
+        this.setAlphaCombineSource(0, (byte) -122, SetGrapplingHookMaxExtension8Force.field_q);
+        this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    abstract void I(int param0);
+    abstract void applyAlphaTestEnabled(int param0);
 
-    final void h(int param0, int param1) {
+    final void setTextureCombineMode(int param0, int param1) {
         int var3;
         int var4;
         int var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var4 = VoidHunters.field_G;
         if (param1 == 1) {
-          this.a(MissionVariable.field_c, true, MissionVariable.field_c);
+          this.setTextureCombineOperations(MissionVariable.field_c, true, MissionVariable.field_c);
         } else {
           if (param1 == 0) {
-            this.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+            this.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
           } else {
             if (param1 == 2) {
-              this.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
+              this.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
             } else {
               if (param1 == 3) {
-                this.a(OpenGlGlyphMask.field_a, true, je.field_c);
+                this.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, je.field_c);
               } else {
                 if (param1 != 4) {
                   var3 = 106 / ((-56 - param0) / 59);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.a(feb.field_a, true, feb.field_a);
+                  this.setTextureCombineOperations(feb.field_a, true, feb.field_a);
                 }
               }
             }
@@ -407,35 +407,35 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     }
 
-    void f(int param0) {
-        this.field_bb = this.field_Kb;
+    void applyPointLights(int param0) {
+        this.previousPointLightCount = this.pointLightCount;
         if (param0 < 66) {
           return;
         }
-        this.field_Kb = 0;
+        this.pointLightCount = 0;
     }
 
-    private final void u(int param0) {
+    private final void buildScreenProjection(int param0) {
         float[] var2;
         float[] var3;
         if (param0 != 1761) {
-          this.v((byte) -73);
+          this.applyTextureConstantColor((byte) -73);
         }
-        if (!this.field_sb) {
-          var3 = this.field_l;
+        if (!this.screenProjectionValid) {
+          var3 = this.screenProjection;
           var2 = var3;
-          if (this.field_db != 0 &&
-            this.field_i != 0) {
+          if (this.viewportWidth != 0 &&
+            this.viewportHeight != 0) {
             var2[9] = 0.0f;
             var2[11] = 0.0f;
             var2[3] = 0.0f;
             var2[1] = 0.0f;
             var2[10] = 0.5f;
             var2[14] = 0.5f;
-            var2[5] = -2.0f / (float)this.field_i;
+            var2[5] = -2.0f / (float)this.viewportHeight;
             var2[8] = 0.0f;
             var2[2] = 0.0f;
-            var2[0] = 2.0f / (float)this.field_db;
+            var2[0] = 2.0f / (float)this.viewportWidth;
             var2[6] = 0.0f;
             var2[13] = 1.0f;
             var2[7] = 0.0f;
@@ -460,7 +460,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             var3[10] = 1.0f;
             var3[3] = 0.0f;
           }
-          this.field_sb = true;
+          this.screenProjectionValid = true;
         }
     }
 
@@ -471,19 +471,19 @@ abstract class GpuToolkit extends GraphicsToolkit {
         stackIn_3_0 = (this.field_tb == param0) ? 0 : 1;
         var7 = stackIn_3_0;
         if (var7 != 0 ||
-          param1 != this.field_oc ||
-          this.field_tc != param2) {
-          this.field_oc = param1;
-          this.field_tc = param2;
+          param1 != this.sunIntensity ||
+          this.antiSunIntensity != param2) {
+          this.sunIntensity = param1;
+          this.antiSunIntensity = param2;
           this.field_tb = param0;
           if (var7 != 0) {
-            this.field_Sb = (float)(16711680 & this.field_tb) / 16711680.0f;
-            this.field_u = (float)(this.field_tb & 65280) / 65280.0f;
-            this.field_x = (float)(255 & this.field_tb) / 255.0f;
-            this.h(true);
+            this.lightRed = (float)(16711680 & this.field_tb) / 16711680.0f;
+            this.lightGreen = (float)(this.field_tb & 65280) / 65280.0f;
+            this.lightBlue = (float)(255 & this.field_tb) / 255.0f;
+            this.applyAmbientLight(true);
           }
-          this.field_Zb.setSunColour(this.field_Sb, this.field_u, this.field_x, param1, param2);
-          this.G((byte) 56);
+          this.field_Zb.setSunColour(this.lightRed, this.lightGreen, this.lightBlue, param1, param2);
+          this.applyDirectionalLightColors((byte) 56);
         }
         if (this.field_Db[0] != param3 ||
           this.field_Db[1] != param4 ||
@@ -495,41 +495,41 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.field_fb[1] = -param4;
           this.field_fb[0] = -param3;
           var8 = (float)(1.0 / Math.sqrt((double)(param5 * param5 + (param4 * param4 + param3 * param3))));
-          this.field_wc[1] = var8 * param4;
-          this.field_wc[0] = var8 * param3;
-          this.field_wc[2] = var8 * param5;
-          this.field_cb[0] = -this.field_wc[0];
-          this.field_cb[1] = -this.field_wc[1];
-          this.field_cb[2] = -this.field_wc[2];
-          this.field_Zb.setSunDirection(this.field_wc[0], this.field_wc[1], this.field_wc[2]);
-          this.m(3);
+          this.sunDirection[1] = var8 * param4;
+          this.sunDirection[0] = var8 * param3;
+          this.sunDirection[2] = var8 * param5;
+          this.antiSunDirection[0] = -this.sunDirection[0];
+          this.antiSunDirection[1] = -this.sunDirection[1];
+          this.antiSunDirection[2] = -this.sunDirection[2];
+          this.field_Zb.setSunDirection(this.sunDirection[0], this.sunDirection[1], this.sunDirection[2]);
+          this.applyDirectionalLightDirections(3);
         }
-        this.i((byte) -120);
+        this.commitDirectionalLights((byte) -120);
     }
 
     final int getNearPlane() {
         return this.field_h;
     }
 
-    private final void s(int param0) {
+    private final void updateViewTransform(int param0) {
         if (param0 != 0) {
-          this.field_mc = -87;
+          this.blendMode = -87;
         }
-        this.field_wb = false;
-        if (this.field_E != null) {
-          this.field_E.c((byte) 15);
+        this.modelViewValid = false;
+        if (this.materialEffect != null) {
+          this.materialEffect.onViewTransformChanged((byte) 15);
         }
-        this.G(17891);
+        this.applyViewTransform(17891);
     }
 
-    private final void f(boolean param0) {
-        this.field_Ub = false;
-        this.k((byte) 97);
-        if (tib.field_h == this.field_pb) {
-          this.x(17975);
+    private final void updateOrthographicProjection(boolean param0) {
+        this.orthographicProjectionValid = false;
+        this.buildOrthographicProjection((byte) 97);
+        if (tib.field_h == this.projectionMode) {
+          this.updateProjection(17975);
         }
         if (!param0) {
-          this.d(27);
+          this.updateDepthRange(27);
         }
     }
 
@@ -552,71 +552,71 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException var7_ref = null;
         this.field_s = new IntrusiveDeque();
         this.field_ec = true;
-        this.field_O = new GpuTransform3D();
+        this.modelTransform = new GpuTransform3D();
         this.field_t = new GpuTransform3D();
         this.field_f = new GpuTransform3D();
-        this.field_gb = new GpuTransform3D();
-        this.field_yb = new GpuTransform3D();
-        this.field_vc = new GpuTransform3D();
-        this.field_Hb = false;
-        this.field_X = false;
-        this.field_Y = 0;
+        this.viewTransform = new GpuTransform3D();
+        this.inverseViewTransform = new GpuTransform3D();
+        this.modelViewTransform = new GpuTransform3D();
+        this.lightingSuppressed = false;
+        this.depthWriteEnabled = false;
+        this.viewportX = 0;
         this.field_v = -1;
         this.field_h = 50;
-        this.field_l = new float[16];
-        this.field_wb = false;
-        this.field_Bb = 0;
-        this.field_c = new float[16];
+        this.screenProjection = new float[16];
+        this.modelViewValid = false;
+        this.scissorBottom = 0;
+        this.perspectiveProjection = new float[16];
         this.field_M = true;
         this.field_Db = new float[]{0.0f, 0.0f, 1.0f, 0.0f};
-        this.field_Rb = 1.0f;
-        this.field_ab = 0;
+        this.ambientIntensity = 1.0f;
+        this.activeTextureUnit = 0;
         this.field_B = 1.0f;
-        this.field_H = 0;
+        this.scissorLeft = 0;
         this.field_Qb = 0;
-        this.field_J = new float[16];
+        this.orthographicProjection = new float[16];
         this.field_k = 512;
         this.field_fb = new float[]{0.0f, 0.0f, 1.0f, 0.0f};
-        this.field_u = 1.0f;
+        this.lightGreen = 1.0f;
         this.field_q = false;
         this.field_j = -1;
-        this.field_d = 0;
-        this.field_F = 0;
+        this.materialParameter2 = 0;
+        this.scissorRight = 0;
         this.field_Gb = 0;
-        this.field_tc = -1.0f;
+        this.antiSunIntensity = -1.0f;
         this.field_ib = -1;
-        this.field_x = 1.0f;
-        this.field_Xb = false;
+        this.lightBlue = 1.0f;
+        this.lightingEnabled = false;
         this.field_hc = false;
         this.field_lb = 512;
         this.field_lc = -1;
-        this.field_nb = 0;
-        this.field_nc = false;
+        this.materialEffectId = 0;
+        this.depthTestEnabled = false;
         this.field_K = 0;
         this.field_Wb = 3584;
-        this.field_dc = new uda[10];
-        this.field_cb = new float[]{0.0f, 0.0f, -1.0f, 0.0f};
-        this.field_sb = false;
+        this.materialEffects = new GpuMaterialEffect[10];
+        this.antiSunDirection = new float[]{0.0f, 0.0f, -1.0f, 0.0f};
+        this.screenProjectionValid = false;
         this.field_g = true;
-        this.field_gc = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
-        this.field_pb = SetVariableAction.field_c;
-        this.field_Cb = 0;
-        this.field_mc = 1;
-        this.field_Fb = this.field_gc;
-        this.field_wc = new float[]{0.0f, 0.0f, 1.0f, 0.0f};
-        this.field_W = -1;
-        this.field_N = false;
-        this.field_Ub = false;
+        this.clipSpaceProjection = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
+        this.projectionMode = SetVariableAction.field_c;
+        this.viewportY = 0;
+        this.blendMode = 1;
+        this.projectionMatrix = this.clipSpaceProjection;
+        this.sunDirection = new float[]{0.0f, 0.0f, 1.0f, 0.0f};
+        this.materialTextureId = -1;
+        this.perspectiveProjectionValid = false;
+        this.orthographicProjectionValid = false;
         this.field_tb = 16777215;
-        this.field_eb = true;
-        this.field_cc = true;
+        this.alphaTestEnabled = true;
+        this.effectFogEnabled = true;
         this.field_Ob = 0;
-        this.field_y = 0;
-        this.field_oc = -1.0f;
-        this.field_Sb = 1.0f;
-        this.field_zb = true;
-        this.field_xc = 0;
-        this.field_fc = GetGrapplingHookRopeBreakLength.field_o;
+        this.materialParameter1 = 0;
+        this.sunIntensity = -1.0f;
+        this.lightRed = 1.0f;
+        this.blendingEnabled = true;
+        this.scissorTop = 0;
+        this.blendFunction = GetGrapplingHookRopeBreakLength.field_o;
         this.field_n = 128;
         this.bufferWriter = new jaclib.memory.Stream();
         GpuTransform3D discarded$1 = new GpuTransform3D();
@@ -627,8 +627,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
             this.field_qc = param1;
             var11 = param0.getSize();
             this.field_e = param5;
-            this.field_i = var11.height;
-            this.field_db = var11.width;
+            this.viewportHeight = var11.height;
+            this.viewportWidth = var11.width;
             ocb.a(false, (byte) 33, true);
             if (this.field_a != null) {
               this.field_I = new atb(this, this.field_a);
@@ -691,26 +691,26 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return false;
     }
 
-    final void c(byte param0) {
+    final void prepareGlyphDraw(byte param0) {
         int var2 = 42 % ((param0 + 29) / 36);
         if (this.field_V != 4) {
-          this.h((byte) 6);
-          this.d(false, -30305);
-          this.c((byte) -35, false);
-          this.b(false, -1700);
-          this.b((byte) -74, false);
-          this.a(false, (byte) 18, false, -2);
-          this.c(92, 1);
-          this.h(87, 0);
+          this.selectScreenProjection((byte) 6);
+          this.setFogEnabled(false, -30305);
+          this.setLightingEnabled((byte) -35, false);
+          this.setDepthTestEnabled(false, -1700);
+          this.setDepthWriteEnabled((byte) -74, false);
+          this.setMaterial(false, (byte) 18, false, -2);
+          this.setBlendMode(92, 1);
+          this.setTextureCombineMode(87, 0);
           this.field_V = 4;
         }
     }
 
-    abstract void a(byte param0, uja param1);
+    abstract void setTextureCoordinateMode(byte param0, TextureCoordinateMode param1);
 
-    final eb a(int param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5) {
+    final GpuTexture2D createTexture2DFromBytes(int param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5) {
         RuntimeException var7 = null;
-        eb stackIn_3_0 = null;
+        GpuTexture2D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -719,9 +719,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            this.t((byte) -110);
+            this.getActiveTextureUnit((byte) -110);
           }
-          stackIn_3_0 = this.a(0, param5, param1, 0, param0, param3, param4, param2 + 11);
+          stackIn_3_0 = this.createTexture2DFromBytes(0, param5, param1, 0, param0, param3, param4, param2 + 11);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -746,37 +746,37 @@ abstract class GpuToolkit extends GraphicsToolkit {
     final void fillGradientTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
     }
 
-    private final void d(boolean param0) {
+    private final void preparePrimitiveDraw(boolean param0) {
         if (param0) {
-          this.field_vc = (GpuTransform3D) null;
+          this.modelViewTransform = (GpuTransform3D) null;
         }
         if (this.field_V != 1) {
-          this.h((byte) -124);
-          this.d(false, -30305);
-          this.c((byte) -58, false);
-          this.b(false, -1700);
-          this.b((byte) -74, false);
-          this.a(false, (byte) 125, false, -2);
-          this.h(32, 1);
-          this.a(this.field_Q, -123);
+          this.selectScreenProjection((byte) -124);
+          this.setFogEnabled(false, -30305);
+          this.setLightingEnabled((byte) -58, false);
+          this.setDepthTestEnabled(false, -1700);
+          this.setDepthWriteEnabled((byte) -74, false);
+          this.setMaterial(false, (byte) 125, false, -2);
+          this.setTextureCombineMode(32, 1);
+          this.setTexture(this.field_Q, -123);
           this.field_V = 1;
         }
     }
 
-    abstract void A(byte param0);
+    abstract void applyScissorRectangle(byte param0);
 
-    private final void g(boolean param0) {
-        this.field_c[10] = this.field_xb;
-        this.field_c[14] = this.field_Z;
+    private final void updatePerspectiveDepthTerms(boolean param0) {
+        this.perspectiveProjection[10] = this.field_xb;
+        this.perspectiveProjection[14] = this.field_Z;
         if (!param0) {
-          this.z((byte) -70);
+          this.getInverseViewTransform((byte) -70);
         }
     }
 
-    final void c(boolean param0) {
-        this.field_O.setIdentityWithZScale(1);
+    final void resetModelTransform(boolean param0) {
+        this.modelTransform.setIdentityWithZScale(1);
         this.field_ec = param0 ? true : false;
-        this.l(0);
+        this.updateModelTransform(0);
     }
 
     final ToolkitFont createFont(ToolkitFontMetrics param0, IndexedSpriteData[] param1, boolean param2) {
@@ -815,34 +815,34 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return true;
     }
 
-    private final void x(int param0) {
-        this.y((byte) -66);
+    private final void updateProjection(int param0) {
+        this.applyProjectionMatrix((byte) -66);
         if (param0 != 17975) {
           return;
         }
-        if (null != this.field_E) {
-          this.field_E.a(true);
+        if (null != this.materialEffect) {
+          this.materialEffect.onProjectionChanged(true);
         }
     }
 
-    abstract void e(boolean param0);
+    abstract void applyDirectionalLightsEnabled(boolean param0);
 
-    final void z(int param0) {
+    final void initializeGpuResources(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
-        this.field_bc = new ura[this.field_L];
-        this.field_A = new kba[this.field_L];
-        this.field_z = new aba[this.field_L];
-        this.field_Eb = new GpuTransform3D[this.field_L];
-        this.field_U = new aba[this.field_L];
+        this.textures = new GpuTexture[this.field_L];
+        this.textureTransformModes = new TextureTransformMode[this.field_L];
+        this.rgbCombineOperations = new TextureCombineOperation[this.field_L];
+        this.textureTransforms = new GpuTransform3D[this.field_L];
+        this.alphaCombineOperations = new TextureCombineOperation[this.field_L];
         for (var2 = 0; var2 < this.field_L; var2++) {
-          this.field_U[var2] = OpenGlGlyphMask.field_a;
-          this.field_z[var2] = OpenGlGlyphMask.field_a;
-          this.field_A[var2] = SetGrappleDebris.field_o;
-          this.field_Eb[var2] = new GpuTransform3D();
+          this.alphaCombineOperations[var2] = OpenGlGlyphMask.field_a;
+          this.rgbCombineOperations[var2] = OpenGlGlyphMask.field_a;
+          this.textureTransformModes[var2] = SetGrappleDebris.field_o;
+          this.textureTransforms[var2] = new GpuTransform3D();
         }
-        this.field_Lb = new fsb[-2 + this.field_qb];
-        this.field_Q = (ura) ((Object) this.a(125, 1, 1, ComponentAttachmentPlan.field_d, GpuDataType.field_f));
+        this.pointLights = new PointLight[-2 + this.field_qb];
+        this.field_Q = (GpuTexture) ((Object) this.createTexture2D(125, 1, 1, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE));
         this.setHeap(new GpuNativeHeap(262144));
         this.field_Vb = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_l})});
         this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_d})});
@@ -860,46 +860,46 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_w = new roa(this, 0, 0, true, true);
         this.field_Ib = new je(this);
         this.field_T = this.createIndexBuffer((byte) -19, true);
-        this.i(param0 ^ -31089);
+        this.recreateGpuResources(param0 ^ -31089);
         this.field_Mb = new rga(this);
-        this.field_dc[1] = this.a((byte) -123, 1);
-        this.field_dc[2] = this.a((byte) 33, 2);
-        this.field_dc[4] = this.a((byte) 119, 4);
-        this.field_dc[5] = this.a((byte) -114, 5);
-        this.field_dc[6] = this.a((byte) 35, 6);
-        this.field_dc[7] = this.a((byte) -97, 7);
-        this.field_dc[3] = this.a((byte) 115, 3);
-        this.field_dc[8] = this.a((byte) -114, 8);
-        this.field_dc[9] = this.a((byte) -114, 9);
-        if (!this.field_dc[2].a((byte) -89)) {
-          this.field_dc[2] = this.a((byte) -115, 0);
+        this.materialEffects[1] = this.createMaterialEffect((byte) -123, 1);
+        this.materialEffects[2] = this.createMaterialEffect((byte) 33, 2);
+        this.materialEffects[4] = this.createMaterialEffect((byte) 119, 4);
+        this.materialEffects[5] = this.createMaterialEffect((byte) -114, 5);
+        this.materialEffects[6] = this.createMaterialEffect((byte) 35, 6);
+        this.materialEffects[7] = this.createMaterialEffect((byte) -97, 7);
+        this.materialEffects[3] = this.createMaterialEffect((byte) 115, 3);
+        this.materialEffects[8] = this.createMaterialEffect((byte) -114, 8);
+        this.materialEffects[9] = this.createMaterialEffect((byte) -114, 9);
+        if (!this.materialEffects[2].isSupported((byte) -89)) {
+          this.materialEffects[2] = this.createMaterialEffect((byte) -115, 0);
         }
-        if (!this.field_dc[4].a((byte) -40)) {
-          this.field_dc[4] = this.field_dc[2];
+        if (!this.materialEffects[4].isSupported((byte) -40)) {
+          this.materialEffects[4] = this.materialEffects[2];
         }
-        if (!this.field_dc[8].a((byte) 127)) {
-          this.field_dc[8] = this.field_dc[4];
+        if (!this.materialEffects[8].isSupported((byte) 127)) {
+          this.materialEffects[8] = this.materialEffects[4];
         }
-        if (!this.field_dc[9].a((byte) 110)) {
-          this.field_dc[9] = this.field_dc[8];
+        if (!this.materialEffects[9].isSupported((byte) 110)) {
+          this.materialEffects[9] = this.materialEffects[8];
         }
         if (param0 != -31089) {
-          this.field_wc = (float[]) null;
+          this.sunDirection = (float[]) null;
         }
-        this.n(125);
-        this.v(param0 + 31003);
+        this.initializeRenderState(125);
+        this.resetScissor(param0 + 31003);
         this.copyFrontToBackBuffer();
     }
 
-    abstract void p(byte param0);
+    abstract void applyModelTransform(byte param0);
 
-    final void c(boolean param0, int param1) {
-        if ((param0 ? 1 : 0) == (!this.field_Hb ? 1 : 0)) {
-          this.field_Hb = param0 ? true : false;
-          this.B(-118);
+    final void setLightingSuppressed(boolean param0, int param1) {
+        if ((param0 ? 1 : 0) == (!this.lightingSuppressed ? 1 : 0)) {
+          this.lightingSuppressed = param0 ? true : false;
+          this.applyLightingEnabled(-118);
         }
         if (param1 < 32) {
-          this.l((byte) -50);
+          this.applyAlphaCombineOperation((byte) -50);
         }
     }
 
@@ -907,7 +907,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return true;
     }
 
-    private final void k(byte param0) {
+    private final void buildOrthographicProjection(byte param0) {
         float[] var2;
         float var3;
         float var4;
@@ -919,15 +919,15 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (param0 != 97) {
           this.field_hb = (roa) null;
         }
-        if (!this.field_Ub) {
-          var9 = this.field_J;
+        if (!this.orthographicProjectionValid) {
+          var9 = this.orthographicProjection;
           var2 = var9;
           var3 = (float)this.field_h;
           var4 = (float)this.field_Wb;
           var5 = this.field_B * (float)(-this.field_Gb) / (float)this.field_k;
           var6 = this.field_B * (float)(-this.field_K) / (float)this.field_lb;
-          var7 = (float)(-this.field_K + this.field_db) * this.field_B / (float)this.field_lb;
-          var8 = (float)(this.field_i - this.field_Gb) * this.field_B / (float)this.field_k;
+          var7 = (float)(-this.field_K + this.viewportWidth) * this.field_B / (float)this.field_lb;
+          var8 = (float)(this.viewportHeight - this.field_Gb) * this.field_B / (float)this.field_k;
           if (var6 != var7 &&
             var5 != var8) {
             var2[11] = 0.0f;
@@ -964,17 +964,17 @@ abstract class GpuToolkit extends GraphicsToolkit {
             var9[9] = 0.0f;
             var9[6] = 0.0f;
           }
-          this.q((byte) 72);
-          this.field_Ub = true;
+          this.onOrthographicProjectionChanged((byte) 72);
+          this.orthographicProjectionValid = true;
         }
     }
 
     abstract GpuVertexDeclaration createVertexDeclaration(int param0, VertexStreamLayout[] param1);
 
-    abstract void o(int param0);
+    abstract void applyRgbCombineOperation(int param0);
 
-    private final boolean a(float param0, float param1, byte param2, float param3, float param4, float param5, float param6) {
-        jaclib.memory.Buffer var10 = this.field_S.lock(true, (byte) 87);
+    private final boolean uploadLineVertices(float param0, float param1, byte param2, float param3, float param4, float param5, float param6) {
+        jaclib.memory.Buffer var10 = this.lineVertexBuffer.lock(true, (byte) 87);
         if (var10 == null) {
           return false;
         }
@@ -995,20 +995,20 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var9.writeFloat(param6);
         }
         if (param2 >= -58) {
-          this.field_Bb = -117;
+          this.scissorBottom = -117;
         }
         var9.flush();
-        return this.field_S.unlock(-20836);
+        return this.lineVertexBuffer.unlock(-20836);
     }
 
-    private final void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+    private final void setMaterialEffect(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         int stackIn_10_0 = 0;
         int var8;
         TextureFormat var9;
         var8 = VoidHunters.field_G;
         if (param1) {
           var9 = (TextureFormat) null;
-          this.a(-31, -99, (byte[]) null, (TextureFormat) null, -65, -32);
+          this.createTexture3D(-31, -99, (byte[]) null, (TextureFormat) null, -65, -32);
         }
         param0 = param0 & this.supportsUnderwaterEffects();
         if (!param0 && (param2 == 4 ||
@@ -1027,65 +1027,65 @@ abstract class GpuToolkit extends GraphicsToolkit {
           param5) {
           param2 = param2 | -2147483648;
         }
-        if (this.field_nb != param2) {
-          if (this.field_nb != 0) {
-            this.field_dc[2147483647 & this.field_nb].a(2543);
+        if (this.materialEffectId != param2) {
+          if (this.materialEffectId != 0) {
+            this.materialEffects[2147483647 & this.materialEffectId].disable(2543);
           }
           if (param2 == 0) {
-            this.field_E = null;
+            this.materialEffect = null;
           } else {
-            this.field_E = this.field_dc[2147483647 & param2];
-            this.field_E.a(5, param5);
-            this.field_E.b(5, param5);
-            this.field_E.a(param4, param3, 5);
+            this.materialEffect = this.materialEffects[2147483647 & param2];
+            this.materialEffect.enable(5, param5);
+            this.materialEffect.applyRenderState(5, param5);
+            this.materialEffect.setParameters(param4, param3, 5);
           }
-          this.field_nb = param2;
-          this.field_y = param3;
-          this.field_d = param4;
+          this.materialEffectId = param2;
+          this.materialParameter1 = param3;
+          this.materialParameter2 = param4;
         } else {
-          if (this.field_nb != 0) {
-            this.field_dc[this.field_nb & 2147483647].b(5, param5);
-            if (param3 != this.field_y ||
-              param4 != this.field_d) {
-              this.field_dc[2147483647 & this.field_nb].a(param4, param3, 5);
-              this.field_d = param4;
-              this.field_y = param3;
+          if (this.materialEffectId != 0) {
+            this.materialEffects[this.materialEffectId & 2147483647].applyRenderState(5, param5);
+            if (param3 != this.materialParameter1 ||
+              param4 != this.materialParameter2) {
+              this.materialEffects[2147483647 & this.materialEffectId].setParameters(param4, param3, 5);
+              this.materialParameter2 = param4;
+              this.materialParameter1 = param3;
             }
           }
         }
     }
 
-    abstract void F(int param0);
+    abstract void applyDepthTestEnabled(int param0);
 
-    final void a(boolean param0, boolean param1) {
-        if ((!this.field_cc ? 1 : 0) != (!param0 ? 1 : 0)) {
-          this.field_cc = param0 ? true : false;
-          this.w(1);
+    final void setEffectFogEnabled(boolean param0, boolean param1) {
+        if ((!this.effectFogEnabled ? 1 : 0) != (!param0 ? 1 : 0)) {
+          this.effectFogEnabled = param0 ? true : false;
+          this.applyFogEnabled(1);
         }
         if (param1) {
           this.drawCircle(-21, -6, -111, -17, -121);
         }
     }
 
-    abstract void t(int param0);
+    abstract void applyActiveTextureUnit(int param0);
 
-    final void v(int param0) {
-        this.field_Bb = this.field_i;
-        this.field_H = 0;
-        this.field_F = this.field_db;
-        this.field_xc = 0;
-        if (this.field_ac) {
-          this.field_ac = false;
-          this.o((byte) 81);
+    final void resetScissor(int param0) {
+        this.scissorBottom = this.viewportHeight;
+        this.scissorLeft = 0;
+        this.scissorRight = this.viewportWidth;
+        this.scissorTop = 0;
+        if (this.scissorEnabled) {
+          this.scissorEnabled = false;
+          this.applyScissorEnabled((byte) 81);
         }
-        this.b((byte) -114);
+        this.onClipChanged((byte) -114);
         if (param0 > -53) {
           int[] var3 = (int[]) null;
-          this.a(-67, false, 114, (byte) 35, (int[]) null);
+          this.createTexture2DFromPixels(-67, false, 114, (byte) 35, (int[]) null);
         }
     }
 
-    final void c(int param0, int param1) {
+    final void setBlendMode(int param0, int param1) {
         int var5 = 0;
         int var4 = 0;
         ConsoleCommandRegistry var3 = null;
@@ -1093,7 +1093,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (param0 < 53) {
           return;
         }
-        if (this.field_mc == param1) {
+        if (this.blendMode == param1) {
         } else {
           if (param1 == 1) {
             var5 = 1;
@@ -1116,50 +1116,50 @@ abstract class GpuToolkit extends GraphicsToolkit {
               }
             }
           }
-          if ((var5 == 0 ? 1 : 0) != (!this.field_eb ? 1 : 0)) {
-            this.field_eb = var5 != 0 ? true : false;
-            this.I(17634);
+          if ((var5 == 0 ? 1 : 0) != (!this.alphaTestEnabled ? 1 : 0)) {
+            this.alphaTestEnabled = var5 != 0 ? true : false;
+            this.applyAlphaTestEnabled(17634);
           }
-          if ((!this.field_zb ? 1 : 0) != (var4 == 0 ? 1 : 0)) {
-            this.field_zb = var4 != 0 ? true : false;
-            this.j((byte) -56);
+          if ((!this.blendingEnabled ? 1 : 0) != (var4 == 0 ? 1 : 0)) {
+            this.blendingEnabled = var4 != 0 ? true : false;
+            this.applyBlendingEnabled((byte) -56);
           }
-          if (var3 != this.field_fc) {
-            this.field_fc = var3;
-            this.s((byte) -39);
+          if (var3 != this.blendFunction) {
+            this.blendFunction = var3;
+            this.applyBlendFunction((byte) -39);
           }
-          this.field_mc = param1;
+          this.blendMode = param1;
           this.field_V = this.field_V & -29;
         }
     }
 
-    final void h(byte param0) {
-        mma var3 = null;
+    final void selectScreenProjection(byte param0) {
+        GpuProjectionMode var3 = null;
         int var2 = -109 / ((param0 + 65) / 34);
-        if (this.field_pb != GetMassDriverFireForce.field_p) {
-          var3 = this.field_pb;
-          this.field_pb = GetMassDriverFireForce.field_p;
-          if (var3.a(-12178)) {
-            this.s(0);
+        if (this.projectionMode != GetMassDriverFireForce.field_p) {
+          var3 = this.projectionMode;
+          this.projectionMode = GetMassDriverFireForce.field_p;
+          if (var3.usesViewTransform(-12178)) {
+            this.updateViewTransform(0);
           }
-          this.u(1761);
-          this.field_Fb = this.field_l;
-          this.x(17975);
+          this.buildScreenProjection(1761);
+          this.projectionMatrix = this.screenProjection;
+          this.updateProjection(17975);
           this.field_V = this.field_V & -25;
         }
     }
 
-    final void e(int param0, int param1) {
+    final void setTextureConstantColor(int param0, int param1) {
         if (param0 > -121) {
-          this.e(-49, -58);
+          this.setTextureConstantColor(-49, -58);
         }
-        if (this.field_jb != param1) {
-          this.field_jb = param1;
-          this.v((byte) -109);
+        if (this.textureConstantColor != param1) {
+          this.textureConstantColor = param1;
+          this.applyTextureConstantColor((byte) -109);
         }
     }
 
-    abstract hdb a(boolean param0, int param1, int[][] param2, int param3);
+    abstract GpuCubeTexture createCubeTexture(boolean param0, int param1, int[][] param2, int param3);
 
     final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
@@ -1199,43 +1199,43 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var8 = var8 * var9;
           var7 = var7 * var9;
         }
-        if (!this.a(0.0f, (float)param1, (byte) -126, (float)param3 + var8, (float)param2 + var7, (float)param0, 0.0f)) {
+        if (!this.uploadLineVertices(0.0f, (float)param1, (byte) -126, (float)param3 + var8, (float)param2 + var7, (float)param0, 0.0f)) {
           return;
         }
-        this.d(false);
-        this.e(-128, param4);
-        this.a(0, pea.field_d, 7);
-        this.a(0, (byte) -118, pea.field_d);
-        this.c(72, param5);
-        this.c(true);
-        this.a(-75, false);
-        this.k(126);
-        this.a(-101, true);
-        this.a(0, (byte) -70, SetGrapplingHookMaxExtension8Force.field_q);
-        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.preparePrimitiveDraw(false);
+        this.setTextureConstantColor(-128, param4);
+        this.setRgbCombineSource(0, pea.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -118, pea.field_d);
+        this.setBlendMode(72, param5);
+        this.resetModelTransform(true);
+        this.setMultisampleEnabled(-75, false);
+        this.drawUploadedLine(126);
+        this.setMultisampleEnabled(-101, true);
+        this.setAlphaCombineSource(0, (byte) -70, SetGrapplingHookMaxExtension8Force.field_q);
+        this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     final int[] getProjectionParameters() {
         return new int[]{this.field_K, this.field_Gb, this.field_lb, this.field_k};
     }
 
-    final void w(byte param0) {
-        mma var2 = null;
-        if (SetVariableAction.field_c != this.field_pb) {
-          var2 = this.field_pb;
-          this.field_pb = SetVariableAction.field_c;
-          if (var2.a(-12178)) {
-            this.s(0);
+    final void selectClipSpaceProjection(byte param0) {
+        GpuProjectionMode var2 = null;
+        if (SetVariableAction.field_c != this.projectionMode) {
+          var2 = this.projectionMode;
+          this.projectionMode = SetVariableAction.field_c;
+          if (var2.usesViewTransform(-12178)) {
+            this.updateViewTransform(0);
           }
           this.field_V = this.field_V & -32;
-          this.field_Fb = this.field_gc;
+          this.projectionMatrix = this.clipSpaceProjection;
         }
         if (param0 != -101) {
-          this.field_S = (GpuVertexBuffer) null;
+          this.lineVertexBuffer = (GpuVertexBuffer) null;
         }
     }
 
-    abstract eb a(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7);
+    abstract GpuTexture2D createTexture2DFromBytes(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7);
 
     void releaseResources() {
         IntrusiveNode var1 = null;
@@ -1251,7 +1251,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var1_ref = this.field_rb.keys();
           while (var1_ref.hasMoreElements()) {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
-            this.a(var2, this.field_rb.get(var2), 0);
+            this.releaseSurface(var2, this.field_rb.get(var2), 0);
           }
           SetDebrisFoundInPairs.a((byte) 104, true, false);
           this.field_Zb.release();
@@ -1259,19 +1259,19 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void d(int param0, int param1);
+    abstract void setTextureCoordinateIndex(int param0, int param1);
 
-    abstract eb a(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4);
+    abstract GpuTexture2D createTexture2D(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4);
 
-    abstract void G(int param0);
+    abstract void applyViewTransform(int param0);
 
     final boolean supportsFastTexturedParticles() {
         return true;
     }
 
-    final eb a(int param0, int param1, float[] param2, boolean param3, int param4, TextureFormat param5) {
+    final GpuTexture2D createTexture2DFromFloats(int param0, int param1, float[] param2, boolean param3, int param4, TextureFormat param5) {
         RuntimeException var7 = null;
-        eb stackIn_3_0 = null;
+        GpuTexture2D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1280,9 +1280,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != -1) {
-            this.a(false, -91, (int[][]) null, -127);
+            this.createCubeTexture(false, -91, (int[][]) null, -127);
           }
-          stackIn_3_0 = this.a(param5, param2, param3, 0, param1, 0, true, param0);
+          stackIn_3_0 = this.createTexture2DFromFloats(param5, param2, param3, 0, param1, 0, true, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1304,18 +1304,18 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void E(byte param0) {
+    final void prepareSpriteDraw(byte param0) {
         if (this.field_V != 2) {
-          this.h((byte) -121);
-          this.d(false, param0 - 30416);
-          this.c((byte) -112, false);
-          this.b(false, -1700);
-          this.b((byte) -74, false);
-          this.a(false, (byte) -128, false, -2);
+          this.selectScreenProjection((byte) -121);
+          this.setFogEnabled(false, param0 - 30416);
+          this.setLightingEnabled((byte) -112, false);
+          this.setDepthTestEnabled(false, -1700);
+          this.setDepthWriteEnabled((byte) -74, false);
+          this.setMaterial(false, (byte) -128, false, -2);
           this.field_V = 2;
         }
         if (param0 != 111) {
-          this.l((byte) -103);
+          this.applyAlphaCombineOperation((byte) -103);
         }
     }
 
@@ -1326,40 +1326,40 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     final void intersectClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        if (this.field_H < param0) {
+        if (this.scissorLeft < param0) {
           var5 = 1;
-          this.field_H = param0;
+          this.scissorLeft = param0;
         }
-        if (param2 < this.field_F) {
-          this.field_F = param2;
-          var5 = 1;
-        }
-        if (param1 > this.field_xc) {
-          this.field_xc = param1;
+        if (param2 < this.scissorRight) {
+          this.scissorRight = param2;
           var5 = 1;
         }
-        if (param3 < this.field_Bb) {
-          this.field_Bb = param3;
+        if (param1 > this.scissorTop) {
+          this.scissorTop = param1;
+          var5 = 1;
+        }
+        if (param3 < this.scissorBottom) {
+          this.scissorBottom = param3;
           var5 = 1;
         }
         if (var5 != 0) {
-          if (!this.field_ac) {
-            this.field_ac = true;
-            this.o((byte) 81);
+          if (!this.scissorEnabled) {
+            this.scissorEnabled = true;
+            this.applyScissorEnabled((byte) 81);
           }
-          this.A((byte) -104);
-          this.b((byte) -89);
+          this.applyScissorRectangle((byte) -104);
+          this.onClipChanged((byte) -89);
         }
     }
 
-    final GpuTransform3D g(byte param0) {
+    final GpuTransform3D getViewTransform(byte param0) {
         if (param0 <= 5) {
           this.supportsFastTexturedParticles();
         }
-        return this.field_gb;
+        return this.viewTransform;
     }
 
-    abstract void y(byte param0);
+    abstract void applyProjectionMatrix(byte param0);
 
     final int getMaxPointLights() {
         return -2 + this.field_qb;
@@ -1373,7 +1373,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return (Transform3D) ((Object) new GpuTransform3D());
     }
 
-    private final void b(boolean param0) {
+    private final void createQuadGeometry(boolean param0) {
         int var2;
         jaclib.memory.Buffer var3;
         int var5;
@@ -1486,7 +1486,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            this.field_Eb = (GpuTransform3D[]) null;
+            this.textureTransforms = (GpuTransform3D[]) null;
           }
           this.bufferWriter.setBuffer(param0);
           stackIn_3_0 = this.bufferWriter;
@@ -1505,7 +1505,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final float[] a(int param0, float[] param1) {
+    final float[] writeTransposedProjection(int param0, float[] param1) {
         RuntimeException var3 = null;
         float[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1513,25 +1513,25 @@ abstract class GpuToolkit extends GraphicsToolkit {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param1[8] = this.field_Fb[2];
-          param1[0] = this.field_Fb[0];
-          param1[4] = this.field_Fb[1];
-          param1[12] = this.field_Fb[3];
+          param1[8] = this.projectionMatrix[2];
+          param1[0] = this.projectionMatrix[0];
+          param1[4] = this.projectionMatrix[1];
+          param1[12] = this.projectionMatrix[3];
           if (param0 < 98) {
-            this.field_x = -0.8953596949577332f;
+            this.lightBlue = -0.8953596949577332f;
           }
-          param1[13] = this.field_Fb[7];
-          param1[2] = this.field_Fb[8];
-          param1[1] = this.field_Fb[4];
-          param1[5] = this.field_Fb[5];
-          param1[9] = this.field_Fb[6];
-          param1[7] = this.field_Fb[13];
-          param1[6] = this.field_Fb[9];
-          param1[3] = this.field_Fb[12];
-          param1[14] = this.field_Fb[11];
-          param1[10] = this.field_Fb[10];
-          param1[11] = this.field_Fb[14];
-          param1[15] = this.field_Fb[15];
+          param1[13] = this.projectionMatrix[7];
+          param1[2] = this.projectionMatrix[8];
+          param1[1] = this.projectionMatrix[4];
+          param1[5] = this.projectionMatrix[5];
+          param1[9] = this.projectionMatrix[6];
+          param1[7] = this.projectionMatrix[13];
+          param1[6] = this.projectionMatrix[9];
+          param1[3] = this.projectionMatrix[12];
+          param1[14] = this.projectionMatrix[11];
+          param1[10] = this.projectionMatrix[10];
+          param1[11] = this.projectionMatrix[14];
+          param1[15] = this.projectionMatrix[15];
           stackIn_3_0 = (float[]) (param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1550,9 +1550,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void setVertexDeclaration(int param0, GpuVertexDeclaration param1);
 
-    final void a(int param0, slb param1, int param2) {
+    final void setRgbCombineSource(int param0, TextureCombineSource param1, int param2) {
         try {
-          this.a(false, param2 - 21122, false, param1, param0);
+          this.setRgbCombineSource(false, param2 - 21122, false, param1, param0);
           if (param2 != 7) {
             this.supportsMemoryPools();
           }
@@ -1561,34 +1561,34 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void B(byte param0) {
-        this.C(0);
+    private final void updateTextureTransform(byte param0) {
+        this.applyTextureTransform(0);
         if (param0 != 96) {
           this.field_Db = (float[]) null;
         }
-        if (this.field_E != null) {
-          this.field_E.d(8);
+        if (this.materialEffect != null) {
+          this.materialEffect.onTextureTransformChanged(8);
         }
     }
 
-    final void F(byte param0) {
+    final void resetTextureTransform(byte param0) {
         if (param0 <= 63) {
-          this.field_yb = (GpuTransform3D) null;
+          this.inverseViewTransform = (GpuTransform3D) null;
         }
-        if (this.field_A[this.field_ab] != SetGrappleDebris.field_o) {
-          this.field_A[this.field_ab] = SetGrappleDebris.field_o;
-          this.field_Eb[this.field_ab].setIdentityWithZScale(1);
-          this.B((byte) 96);
+        if (this.textureTransformModes[this.activeTextureUnit] != SetGrappleDebris.field_o) {
+          this.textureTransformModes[this.activeTextureUnit] = SetGrappleDebris.field_o;
+          this.textureTransforms[this.activeTextureUnit].setIdentityWithZScale(1);
+          this.updateTextureTransform((byte) 96);
         }
     }
 
-    abstract void m(byte param0);
+    abstract void applyViewport(byte param0);
 
     final boolean supportsAntialiasing() {
         return this.field_sc;
     }
 
-    uda a(byte param0, int param1) {
+    GpuMaterialEffect createMaterialEffect(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -1596,43 +1596,43 @@ abstract class GpuToolkit extends GraphicsToolkit {
         var3 = 79 % ((param0 + 34) / 63);
         var4 = param1;
         if (var4 == 6) {
-          return (uda) ((Object) new sv(this));
+          return (GpuMaterialEffect) ((Object) new UnlitGpuMaterialEffect(this));
         }
         if (var4 == 1) {
-          return (uda) ((Object) new qr(this));
+          return (GpuMaterialEffect) ((Object) new qr(this));
         }
         if (var4 == 2) {
-          return (uda) ((Object) new wu(this, this.field_Mb));
+          return (GpuMaterialEffect) ((Object) new wu(this, this.field_Mb));
         }
         if (var4 != 7) {
-          return (uda) ((Object) new bib(this));
+          return (GpuMaterialEffect) ((Object) new UnsupportedGpuMaterialEffect(this));
         }
-        return (uda) ((Object) new hab(this));
+        return (GpuMaterialEffect) ((Object) new hab(this));
     }
 
     final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
-        this.d(false);
-        this.e(-126, param3);
-        this.a(0, pea.field_d, 7);
-        this.a(0, (byte) -65, pea.field_d);
-        this.c(58, param4);
-        this.field_O.setScale(5557, (float)param2, (float)param2, 1.0f);
-        this.field_O.translate(param1, 16383, 0, param0);
-        this.h(20837);
-        this.a(-112, false);
-        this.setVertexBuffer((byte) -6, this.field_P, 0);
-        this.setVertexDeclaration(115, this.field_G);
+        this.preparePrimitiveDraw(false);
+        this.setTextureConstantColor(-126, param3);
+        this.setRgbCombineSource(0, pea.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -65, pea.field_d);
+        this.setBlendMode(58, param4);
+        this.modelTransform.setScale(5557, (float)param2, (float)param2, 1.0f);
+        this.modelTransform.translate(param1, 16383, 0, param0);
+        this.markModelTransformChanged(20837);
+        this.setMultisampleEnabled(-112, false);
+        this.setVertexBuffer((byte) -6, this.circleVertexBuffer, 0);
+        this.setVertexDeclaration(115, this.circleVertexDeclaration);
         this.drawPrimitive(GetFightersPerPlayerMaximum.field_o, 1, 256, -114);
-        this.a(-27, true);
-        this.a(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
-        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.setMultisampleEnabled(-27, true);
+        this.setAlphaCombineSource(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
+        this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    abstract boolean a(int param0, TextureFormat param1, GpuDataType param2);
+    abstract boolean supportsTexture2DFormat(int param0, TextureFormat param1, GpuDataType param2);
 
-    abstract Object a(byte param0, java.awt.Canvas param1);
+    abstract Object createSurface(byte param0, java.awt.Canvas param1);
 
-    abstract void a(int param0, boolean param1);
+    abstract void setMultisampleEnabled(int param0, boolean param1);
 
     abstract GpuIndexBuffer createIndexBuffer(byte param0, boolean param1);
 
@@ -1641,9 +1641,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
           param1 != this.field_Wb) {
           this.field_h = param0;
           this.field_Wb = param1;
-          this.x((byte) 20);
-          this.f(true);
-          this.d(112);
+          this.updatePerspectiveProjection((byte) 20);
+          this.updateOrthographicProjection(true);
+          this.updateDepthRange(112);
         }
     }
 
@@ -1654,25 +1654,25 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_pc = param0 & 2147483647;
     }
 
-    final void h(int param0) {
+    final void markModelTransformChanged(int param0) {
         if (param0 != 20837) {
           return;
         }
         this.field_ec = false;
-        this.l(0);
+        this.updateModelTransform(0);
     }
 
-    final void a(ura param0, int param1) {
+    final void setTexture(GpuTexture param0, int param1) {
         try {
           if (param1 > -105) {
             this.createSprite(91, -101, true);
           }
-          if (param0 != this.field_bc[this.field_ab]) {
-            this.field_bc[this.field_ab] = param0;
+          if (param0 != this.textures[this.activeTextureUnit]) {
+            this.textures[this.activeTextureUnit] = param0;
             if (param0 == null) {
-              this.r(3);
+              this.unbindTexture(3);
             } else {
-              param0.b(-27445);
+              param0.bind(-27445);
             }
             this.field_V = this.field_V & -2;
           }
@@ -1683,18 +1683,18 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract GpuVertexBuffer createVertexBuffer(boolean param0, int param1);
 
-    final void b(byte param0, boolean param1) {
+    final void setDepthWriteEnabled(byte param0, boolean param1) {
         if (param0 != -74) {
-          this.B((byte) 123);
+          this.updateTextureTransform((byte) 123);
         }
-        if ((!param1 ? 1 : 0) == (this.field_X ? 1 : 0)) {
-          this.field_X = param1 ? true : false;
-          this.y(param0 ^ 22);
+        if ((!param1 ? 1 : 0) == (this.depthWriteEnabled ? 1 : 0)) {
+          this.depthWriteEnabled = param1 ? true : false;
+          this.applyDepthWriteEnabled(param0 ^ 22);
           this.field_V = this.field_V & -32;
         }
     }
 
-    private final void H(int param0) {
+    private final void createCircleGeometry(int param0) {
         int var5 = 0;
         int var2;
         jaclib.memory.Buffer var3;
@@ -1704,12 +1704,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
         float var9;
         int var10;
         var10 = VoidHunters.field_G;
-        this.field_P = this.createVertexBuffer(false, param0 - 3093);
-        this.field_P.allocate(12, param0, 86);
+        this.circleVertexBuffer = this.createVertexBuffer(false, param0 - 3093);
+        this.circleVertexBuffer.allocate(12, param0, 86);
         var2 = 0;
         scanLoop1: while (true) {
           if (var2 < 4) {
-            var3 = this.field_P.lock(true, (byte) 52);
+            var3 = this.circleVertexBuffer.lock(true, (byte) 52);
             if (var3 != null) {
               var4 = this.getBufferWriter(var3, false);
               var4.writeFloat(0.0f);
@@ -1730,7 +1730,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 }
               }
               var4.flush();
-              if (this.field_P.unlock(param0 ^ -23932)) {
+              if (this.circleVertexBuffer.unlock(param0 ^ -23932)) {
                 break scanLoop1;
               }
             }
@@ -1739,7 +1739,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_G = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k)});
+        this.circleVertexDeclaration = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k)});
         return;
     }
 
@@ -1763,14 +1763,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void drawPrimitive(PrimitiveType param0, int param1, int param2, int param3);
 
-    abstract void C(int param0);
+    abstract void applyTextureTransform(int param0);
 
     final void getClip(int[] param0) {
         try {
-          param0[1] = this.field_xc;
-          param0[0] = this.field_H;
-          param0[3] = this.field_Bb;
-          param0[2] = this.field_F;
+          param0[1] = this.scissorTop;
+          param0[0] = this.scissorLeft;
+          param0[3] = this.scissorBottom;
+          param0[2] = this.scissorRight;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -1781,39 +1781,39 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_Gb = param1;
         this.field_k = param3;
         this.field_K = param0;
-        this.f(true);
-        this.x((byte) 54);
-        this.w((byte) -101);
-        this.b((byte) -103);
+        this.updateOrthographicProjection(true);
+        this.updatePerspectiveProjection((byte) 54);
+        this.selectClipSpaceProjection((byte) -101);
+        this.onClipChanged((byte) -103);
     }
 
-    abstract gf a(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5);
+    abstract GpuTexture3D createTexture3D(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5);
 
-    final GpuTransform3D H(byte param0) {
+    final GpuTransform3D getTextureTransform(byte param0) {
         int var2 = 34 % ((param0 + 63) / 51);
-        return this.field_Eb[this.field_ab];
+        return this.textureTransforms[this.activeTextureUnit];
     }
 
-    final void g(int param0, int param1) {
+    final void setActiveTextureUnit(int param0, int param1) {
         if (param1 >= -38) {
           this.field_sc = true;
         }
-        if (param0 != this.field_ab) {
-          this.field_ab = param0;
-          this.t(12);
+        if (param0 != this.activeTextureUnit) {
+          this.activeTextureUnit = param0;
+          this.applyActiveTextureUnit(12);
         }
     }
 
-    private final void x(byte param0) {
+    private final void updatePerspectiveProjection(byte param0) {
         int var2 = -18 % ((param0 + 54) / 63);
-        this.field_N = false;
-        this.e((byte) -94);
-        if (pia.field_x == this.field_pb) {
-          this.x(17975);
+        this.perspectiveProjectionValid = false;
+        this.buildPerspectiveProjection((byte) -94);
+        if (pia.field_x == this.projectionMode) {
+          this.updateProjection(17975);
         }
     }
 
-    abstract void w(int param0);
+    abstract void applyFogEnabled(int param0);
 
     final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
@@ -1853,46 +1853,46 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var11 = (float)Math.sqrt((double)(var9 * var9 + var8 * var8));
           var10 = (float)Math.atan2((double)var9, (double)var8);
         }
-        this.d(false);
-        this.e(-125, param4);
-        this.a(0, pea.field_d, 7);
-        this.a(0, (byte) -71, pea.field_d);
-        this.c(99, param6);
-        this.field_O.setScale(5557, var11, (float)param5, 1.0f);
-        this.field_O.translate(-param5 / 2, 16383, 0, 0);
-        this.field_O.rotateZ((int)((double)var10 * 2607.5945876176133) & 16383, 3);
-        this.field_O.translate(param1, 16383, 0, param0);
-        this.h(20837);
-        this.a(-72, false);
-        this.r((byte) -54);
-        this.a(-59, true);
-        this.a(0, (byte) -117, SetGrapplingHookMaxExtension8Force.field_q);
-        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.preparePrimitiveDraw(false);
+        this.setTextureConstantColor(-125, param4);
+        this.setRgbCombineSource(0, pea.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -71, pea.field_d);
+        this.setBlendMode(99, param6);
+        this.modelTransform.setScale(5557, var11, (float)param5, 1.0f);
+        this.modelTransform.translate(-param5 / 2, 16383, 0, 0);
+        this.modelTransform.rotateZ((int)((double)var10 * 2607.5945876176133) & 16383, 3);
+        this.modelTransform.translate(param1, 16383, 0, param0);
+        this.markModelTransformChanged(20837);
+        this.setMultisampleEnabled(-72, false);
+        this.drawUnitQuadTriangles((byte) -54);
+        this.setMultisampleEnabled(-59, true);
+        this.setAlphaCombineSource(0, (byte) -117, SetGrapplingHookMaxExtension8Force.field_q);
+        this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     final ToolkitSprite createSprite(int param0, int param1, boolean param2) {
         return (ToolkitSprite) ((Object) new GpuSprite(this, param0, param1, param2));
     }
 
-    abstract void r(int param0);
+    abstract void unbindTexture(int param0);
 
-    abstract void a(boolean param0, int param1, boolean param2, slb param3, int param4);
+    abstract void setRgbCombineSource(boolean param0, int param1, boolean param2, TextureCombineSource param3, int param4);
 
-    final hdb J(int param0) {
+    final GpuCubeTexture getEnvironmentCubeTexture(int param0) {
         if (param0 != 10) {
-          this.field_Lb = (fsb[]) null;
+          this.pointLights = (PointLight[]) null;
         }
         return this.field_kc == null ? null : this.field_kc.a((byte) -118);
     }
 
     final int D(int param0) {
         if (param0 < 78) {
-          this.h(true);
+          this.applyAmbientLight(true);
         }
         return this.field_ib;
     }
 
-    final void a(boolean param0, byte param1, boolean param2, int param3) {
+    final void setMaterial(boolean param0, byte param1, boolean param2, int param3) {
         int stackIn_4_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_12_0 = 0;
@@ -1910,7 +1910,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         int var14;
         boolean decompiledFrameRemainder0 = true;
         var14 = VoidHunters.field_G;
-        if (param3 == this.field_W) {
+        if (param3 == this.materialTextureId) {
           stackIn_4_0 = (this.field_Tb) ? 0 : 1;
           if (this.field_q) {
             stackIn_7_1 = 0;
@@ -1927,20 +1927,20 @@ abstract class GpuToolkit extends GraphicsToolkit {
           stackIn_12_0 = (!this.field_Tb) ? 0 : 3;
           var9 = stackIn_12_0;
           if (param3 < 0) {
-            this.F((byte) 126);
+            this.resetTextureTransform((byte) 126);
           } else {
             var5_ref = this.field_I.a(-1, param3);
             var10 = this.field_a.getTextureMetadata(-20292, param3);
             if (var10.field_p == 0 &&
               var10.field_d == 0) {
-              this.F((byte) 75);
+              this.resetTextureTransform((byte) 75);
             } else {
               stackIn_19_0 = (var10.field_h) ? 64 : 128;
               var11 = stackIn_19_0;
               var12 = 50 * var11;
-              var13 = this.H((byte) 24);
+              var13 = this.getTextureTransform((byte) 24);
               var13.setTranslation((float)(var10.field_p * (this.field_pc % var12)) / (float)var12, (float)(this.field_pc % var12 * var10.field_d) / (float)var12, 49, 0.0f);
-              this.a(vf.field_a, true);
+              this.setTextureTransformMode(vf.field_a, true);
             }
             var6 = var10.field_f;
             if (!this.field_Tb) {
@@ -1949,38 +1949,38 @@ abstract class GpuToolkit extends GraphicsToolkit {
               var7 = var10.field_n;
             }
           }
-          this.a(param2, false, var9, var7, var8, param0);
-          if (null == this.field_E) {
-            this.a((ura) (var5_ref), -113);
-            this.h(-119, var6);
+          this.setMaterialEffect(param2, false, var9, var7, var8, param0);
+          if (null == this.materialEffect) {
+            this.setTexture((GpuTexture) (var5_ref), -113);
+            this.setTextureCombineMode(-119, var6);
           } else {
-            this.field_E.a((byte) 106, var6, (ura) (var5_ref));
+            this.materialEffect.setTexture((byte) 106, var6, (GpuTexture) (var5_ref));
           }
-          this.field_W = param3;
+          this.materialTextureId = param3;
           this.field_q = this.field_Tb;
         }
         this.field_V = this.field_V & -8;
         var5 = -90 % ((-66 - param1) / 45);
     }
 
-    final void b(boolean param0, int param1) {
+    final void setDepthTestEnabled(boolean param0, int param1) {
         if (param1 != -1700) {
-          this.E((byte) 77);
+          this.prepareSpriteDraw((byte) 77);
         }
-        if (param0 != this.field_nc) {
-          this.field_nc = param0 ? true : false;
-          this.F(param1 ^ -14310);
+        if (param0 != this.depthTestEnabled) {
+          this.depthTestEnabled = param0 ? true : false;
+          this.applyDepthTestEnabled(param1 ^ -14310);
           this.field_V = this.field_V & -32;
         }
     }
 
-    final void d(boolean param0, int param1) {
+    final void setFogEnabled(boolean param0, int param1) {
         if (param1 != -30305) {
-          this.field_nc = true;
+          this.depthTestEnabled = true;
         }
-        if ((this.field_ub ? 1 : 0) == (!param0 ? 1 : 0)) {
-          this.field_ub = param0 ? true : false;
-          this.w(1);
+        if ((this.fogEnabled ? 1 : 0) == (!param0 ? 1 : 0)) {
+          this.fogEnabled = param0 ? true : false;
+          this.applyFogEnabled(1);
           this.field_V = this.field_V & -32;
         }
     }
@@ -1995,7 +1995,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final int g(int param0) {
+    final int getGpuMemoryUsage(int param0) {
         if (param0 != 3554) {
           return -16;
         }
@@ -2003,43 +2003,43 @@ abstract class GpuToolkit extends GraphicsToolkit {
     }
 
     final void drawRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = this.f((byte) -95);
-        this.d(false);
-        this.e(-123, param4);
-        this.a(0, pea.field_d, 7);
-        this.a(0, (byte) -113, pea.field_d);
-        this.c(103, param5);
-        this.field_O.setScale(5557, (float)(-1 + param2), (float)(param3 - 1), 1.0f);
-        this.field_O.translate(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
-        this.h(20837);
-        this.a(-118, false);
+        float var7 = this.getPixelOffset((byte) -95);
+        this.preparePrimitiveDraw(false);
+        this.setTextureConstantColor(-123, param4);
+        this.setRgbCombineSource(0, pea.field_d, 7);
+        this.setAlphaCombineSource(0, (byte) -113, pea.field_d);
+        this.setBlendMode(103, param5);
+        this.modelTransform.setScale(5557, (float)(-1 + param2), (float)(param3 - 1), 1.0f);
+        this.modelTransform.translate(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
+        this.markModelTransformChanged(20837);
+        this.setMultisampleEnabled(-118, false);
         this.drawUnitQuad(0, GetFightersPerPlayerMaximum.field_o, 4);
-        this.a(-110, true);
-        this.a(0, (byte) -67, SetGrapplingHookMaxExtension8Force.field_q);
-        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.setMultisampleEnabled(-110, true);
+        this.setAlphaCombineSource(0, (byte) -67, SetGrapplingHookMaxExtension8Force.field_q);
+        this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    abstract void m(int param0);
+    abstract void applyDirectionalLightDirections(int param0);
 
-    final GpuTransform3D z(byte param0) {
+    final GpuTransform3D getInverseViewTransform(byte param0) {
         if (param0 < 70) {
-          this.field_pb = (mma) null;
+          this.projectionMode = (GpuProjectionMode) null;
         }
-        return this.field_yb;
+        return this.inverseViewTransform;
     }
 
     final boolean isBloomSupported() {
         return false;
     }
 
-    final int t(byte param0) {
+    final int getActiveTextureUnit(byte param0) {
         if (param0 != 9) {
           return -4;
         }
-        return this.field_ab;
+        return this.activeTextureUnit;
     }
 
-    private final void e(byte param0) {
+    private final void buildPerspectiveProjection(byte param0) {
         float[] var2;
         float var3;
         float var4;
@@ -2047,13 +2047,13 @@ abstract class GpuToolkit extends GraphicsToolkit {
         float var6;
         float var7;
         float[] var8;
-        if (!this.field_N) {
-          var8 = this.field_c;
+        if (!this.perspectiveProjectionValid) {
+          var8 = this.perspectiveProjection;
           var2 = var8;
           var3 = (float)(this.field_h * -this.field_K) / (float)this.field_lb;
-          var4 = (float)(this.field_h * (this.field_db - this.field_K)) / (float)this.field_lb;
+          var4 = (float)(this.field_h * (this.viewportWidth - this.field_K)) / (float)this.field_lb;
           var5 = (float)(this.field_Gb * this.field_h) / (float)this.field_k;
-          var6 = (float)(this.field_h * (-this.field_i + this.field_Gb)) / (float)this.field_k;
+          var6 = (float)(this.field_h * (-this.viewportHeight + this.field_Gb)) / (float)this.field_k;
           if (var4 != var3 &&
             var5 != var6) {
             var7 = (float)this.field_h * 2.0f;
@@ -2093,11 +2093,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
             var8[0] = 1.0f;
             var8[7] = 0.0f;
           }
-          this.g(true);
-          this.field_N = true;
+          this.updatePerspectiveDepthTerms(true);
+          this.perspectiveProjectionValid = true;
         }
         if (param0 >= -80) {
-          this.s(-105);
+          this.updateViewTransform(-105);
         }
     }
 
@@ -2105,41 +2105,41 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return false;
     }
 
-    private final void k(int param0) {
-        this.setVertexBuffer((byte) -6, this.field_S, 0);
+    private final void drawUploadedLine(int param0) {
+        this.setVertexBuffer((byte) -6, this.lineVertexBuffer, 0);
         if (param0 <= 102) {
           int[] var3 = (int[]) null;
-          this.a(-65, true, (int[]) null, -35, -49, false, 126);
+          this.createTexture2DFromPixels(-65, true, (int[]) null, -35, -49, false, 126);
         }
-        this.setVertexDeclaration(124, this.field_o);
-        this.drawPrimitive(tu.field_b, 0, 1, -93);
+        this.setVertexDeclaration(124, this.lineVertexDeclaration);
+        this.drawPrimitive(TextureFilterMode.field_b, 0, 1, -93);
     }
 
-    abstract void s(byte param0);
+    abstract void applyBlendFunction(byte param0);
 
     abstract void setVertexBuffer(byte param0, GpuVertexBuffer param1, int param2);
 
     final int D(byte param0) {
         boolean discarded$0 = false;
         if (param0 > -109) {
-          discarded$0 = this.a(-0.3812601566314697f, 0.24077846109867096f, (byte) 10, 0.3140295147895813f, 0.6470803022384644f, 1.3212025165557861f, 0.2246333807706833f);
+          discarded$0 = this.uploadLineVertices(-0.3812601566314697f, 0.24077846109867096f, (byte) 10, 0.3140295147895813f, 0.6470803022384644f, 1.3212025165557861f, 0.2246333807706833f);
         }
         return this.field_v;
     }
 
-    abstract eb a(int param0, boolean param1, int[] param2, int param3, int param4, boolean param5, int param6);
+    abstract GpuTexture2D createTexture2DFromPixels(int param0, boolean param1, int[] param2, int param3, int param4, boolean param5, int param6);
 
-    final void n(byte param0) {
+    final void releaseGpuResources(byte param0) {
         java.awt.Canvas var3_ref_java_awt_Canvas = null;
         int var4 = VoidHunters.field_G;
         Enumeration var2 = this.field_rb.keys();
         while (var2.hasMoreElements()) {
           var3_ref_java_awt_Canvas = (java.awt.Canvas) (var2.nextElement());
-          this.a(var3_ref_java_awt_Canvas, this.field_rb.get(var3_ref_java_awt_Canvas), 0);
+          this.releaseSurface(var3_ref_java_awt_Canvas, this.field_rb.get(var3_ref_java_awt_Canvas), 0);
         }
         this.quadVertexBuffer.release(-96);
-        this.field_S.release(-103);
-        this.field_P.release(-117);
+        this.lineVertexBuffer.release(-103);
+        this.circleVertexBuffer.release(-117);
         int var3 = 19 % ((47 - param0) / 45);
         this.field_R.a(26385);
         this.field_D.a(26385);
@@ -2154,19 +2154,19 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return true;
     }
 
-    final void a(kba param0, boolean param1) {
+    final void setTextureTransformMode(TextureTransformMode param0, boolean param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_A[this.field_ab] = param0;
+          this.textureTransformModes[this.activeTextureUnit] = param0;
           if (!param1) {
             this.field_pc = 121;
-            this.B((byte) 96);
+            this.updateTextureTransform((byte) 96);
           } else {
-            this.B((byte) 96);
+            this.updateTextureTransform((byte) 96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2183,24 +2183,24 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void q(byte param0) {
+    private final void onOrthographicProjectionChanged(byte param0) {
         if (param0 < 66) {
-          this.k(12);
+          this.drawUploadedLine(12);
         }
     }
 
-    abstract void i(byte param0);
+    abstract void commitDirectionalLights(byte param0);
 
-    private final void q(int param0) {
-        this.field_S = this.createVertexBuffer(true, 3);
-        this.field_S.allocate(12, 24, 95);
-        this.field_o = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k)});
+    private final void createLineGeometry(int param0) {
+        this.lineVertexBuffer = this.createVertexBuffer(true, 3);
+        this.lineVertexBuffer.allocate(12, 24, 95);
+        this.lineVertexDeclaration = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k)});
         if (param0 != 27191) {
-          this.field_E = (uda) null;
+          this.materialEffect = (GpuMaterialEffect) null;
         }
     }
 
-    final void a(aba param0, boolean param1, aba param2) {
+    final void setTextureCombineOperations(TextureCombineOperation param0, boolean param1, TextureCombineOperation param2) {
         int var4_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2214,14 +2214,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
           if (!param1) {
             return;
           }
-          if (this.field_z[this.field_ab] != param2) {
-            this.field_z[this.field_ab] = param2;
+          if (this.rgbCombineOperations[this.activeTextureUnit] != param2) {
+            this.rgbCombineOperations[this.activeTextureUnit] = param2;
             var4_int = 1;
-            this.o(-97);
+            this.applyRgbCombineOperation(-97);
           }
-          if (this.field_U[this.field_ab] != param0) {
-            this.field_U[this.field_ab] = param0;
-            this.l((byte) 122);
+          if (this.alphaCombineOperations[this.activeTextureUnit] != param0) {
+            this.alphaCombineOperations[this.activeTextureUnit] = param0;
+            this.applyAlphaCombineOperation((byte) 122);
             var4_int = 1;
           }
           if (var4_int != 0) {
@@ -2248,7 +2248,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void l(byte param0);
+    abstract void applyAlphaCombineOperation(byte param0);
 
     public static void clearSharedReferences(byte param0) {
         field_Yb = null;
@@ -2257,7 +2257,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void i(int param0) {
+    final void recreateGpuResources(int param0) {
         Enumeration var3 = null;
         java.awt.Canvas var4 = null;
         int var5 = VoidHunters.field_G;
@@ -2267,16 +2267,16 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var3 = this.field_rb.keys();
           while (var3.hasMoreElements()) {
             var4 = (java.awt.Canvas) (var3.nextElement());
-            var2.put(var4, this.a((byte) -53, var4));
+            var2.put(var4, this.createSurface((byte) -53, var4));
           }
         }
         this.field_rb = var2;
-        this.b(true);
+        this.createQuadGeometry(true);
         if (param0 != 0) {
-          this.field_Xb = false;
+          this.lightingEnabled = false;
         }
-        this.q(param0 ^ 27191);
-        this.H(3096);
+        this.createLineGeometry(param0 ^ 27191);
+        this.createCircleGeometry(3096);
         this.field_Ib.a(24, this);
     }
 
@@ -2365,13 +2365,13 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return true;
     }
 
-    abstract void h(boolean param0);
+    abstract void applyAmbientLight(boolean param0);
 
     final boolean supportsUnderwaterEffects() {
-        return this.field_dc[3].a((byte) 111);
+        return this.materialEffects[3].isSupported((byte) 111);
     }
 
-    abstract void j(byte param0);
+    abstract void applyBlendingEnabled(byte param0);
 
     final GraphicsHeap createHeap(int param0) {
         GpuNativeHeap var2 = new GpuNativeHeap(param0);
@@ -2381,12 +2381,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     final int a(boolean param0) {
         if (param0) {
-          this.field_nb = -18;
+          this.materialEffectId = -18;
         }
         return this.field_Ob;
     }
 
-    abstract eb a(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7);
+    abstract GpuTexture2D createTexture2DFromFloats(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7);
 
     final int u(byte param0) {
         if (param0 <= 78) {
@@ -2403,12 +2403,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException var2 = null;
         try {
           this.field_t = (GpuTransform3D) (param0);
-          this.field_gb.set(this.field_t, 16383);
-          this.field_gb.flipYZ(16489);
-          this.field_yb.setRigidInverse(-25609, this.field_gb);
+          this.viewTransform.set(this.field_t, 16383);
+          this.viewTransform.flipYZ(16489);
+          this.inverseViewTransform.setRigidInverse(-25609, this.viewTransform);
           this.field_f.setRigidInverse(-25609, this.field_t);
-          if (this.field_pb.a(-12178)) {
-            this.s(0);
+          if (this.projectionMode.usesViewTransform(-12178)) {
+            this.updateViewTransform(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2434,9 +2434,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void a(java.awt.Canvas param0, Object param1, int param2);
+    abstract void releaseSurface(java.awt.Canvas param0, Object param1, int param2);
 
-    abstract boolean a(GpuDataType param0, TextureFormat param1, int param2);
+    abstract boolean supportsTexture3DFormat(GpuDataType param0, TextureFormat param1, int param2);
 
     static {
         field_Yb = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};

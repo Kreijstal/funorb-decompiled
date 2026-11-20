@@ -238,7 +238,7 @@ abstract class iw extends bl {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = sv.field_f[var9];
+              var11 = UnlitGpuMaterialEffect.field_f[var9];
               var6[0][var10] = SetAudioRangeCutoff.field_o[var11];
               var18[0][var10 * 4] = GetLaserEnergyUsed.field_o[var11];
               var18[0][var10 * 4 + 1] = SetPhasedEnergyBeamRandomness.field_o[var11];
@@ -256,7 +256,7 @@ abstract class iw extends bl {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = sv.field_f[var5 + var9Lifetime1];
+              var11Lifetime1 = UnlitGpuMaterialEffect.field_f[var5 + var9Lifetime1];
               var6[1][var13] = SetAudioRangeCutoff.field_o[var11Lifetime1];
               var18[1][var13 * 4] = GetLaserEnergyUsed.field_o[var11Lifetime1];
               var18[1][1 + var13 * 4] = SetPhasedEnergyBeamRandomness.field_o[var11Lifetime1];

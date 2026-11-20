@@ -47,7 +47,7 @@ final class GetMassDriverEnergyUsed extends ConsoleCommand {
           return (char)var2;
         }
         if (var2 < 160) {
-          var3Lifetime1 = tu.field_c[var2 - 128];
+          var3Lifetime1 = TextureFilterMode.field_c[var2 - 128];
           if (var3Lifetime1 == 0) {
             var3Lifetime1 = 63;
           }

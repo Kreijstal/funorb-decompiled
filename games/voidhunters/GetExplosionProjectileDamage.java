@@ -223,7 +223,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
                 }
               } else {
                 if (VariableCondition.field_e) {
-                  stackIn_24_0 = bib.field_e;
+                  stackIn_24_0 = UnsupportedGpuMaterialEffect.field_e;
                 } else {
                   stackIn_24_0 = SetTabForScores.field_o;
                 }

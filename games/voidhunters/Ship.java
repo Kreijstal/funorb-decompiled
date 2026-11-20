@@ -320,7 +320,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var9 = 0;
         try {
           var4_int = this.getHealthProgress(0);
-          var5 = (int)((float)tu.field_d * param1.field_a);
+          var5 = (int)((float)TextureFilterMode.field_d * param1.field_a);
           if (var5 < 8) {
             var5 = 8;
           }

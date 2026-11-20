@@ -289,7 +289,7 @@ class aia extends pib {
           this.field_j = param4;
           this.field_h = param3;
           this.field_g.a(102, (pib) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_b, 0, this.field_d, param3, param4, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_b, 0, this.field_d, param3, param4, 0, PointLight.toOpenGlExternalFormat(this.field_d, false), 5121, (byte[]) null, 0);
           this.a(-96, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kva implements ura {
-    private int field_a;
-    TextureFormat field_f;
-    OpenGlGpuToolkit field_h;
-    private int field_d;
-    private boolean field_c;
-    GpuDataType field_b;
-    private tu field_i;
+abstract class OpenGlGpuTexture implements GpuTexture {
+    private int textureId;
+    TextureFormat format;
+    OpenGlGpuToolkit toolkit;
+    private int pixelCount;
+    private boolean mipmapped;
+    GpuDataType dataType;
+    private TextureFilterMode filterMode;
     static int field_g;
-    int field_e;
+    int target;
 
     protected final void finalize() throws Throwable {
-        this.d(3);
+        this.release(3);
         super.finalize();
     }
 
-    private final void d(int param0) {
+    private final void release(int param0) {
         if (param0 != 3) {
           return;
         }
-        if (this.field_a > 0) {
-          this.field_h.b(this.field_a, 117, this.c((byte) 61));
-          this.field_a = 0;
+        if (this.textureId > 0) {
+          this.toolkit.b(this.textureId, 117, this.getEstimatedByteSize((byte) 61));
+          this.textureId = 0;
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3, int param4) {
+    final void uploadByteMipmaps(int param0, int param1, byte[] param2, int param3, int param4) {
         int var16 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -61,7 +61,7 @@ abstract class kva implements ura {
             !bd.a(param1, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          var6_int = this.field_f.field_a;
+          var6_int = this.format.componentCount;
           var7 = param3;
           stackIn_11_0 = (param4 < param1) ? param4 : param1;
           var8 = stackIn_11_0;
@@ -70,7 +70,7 @@ abstract class kva implements ura {
           var11 = param2;
           var12 = new byte[var6_int * var9 * var10];
           while (true) {
-            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.e((byte) -31), param4, param1, 0, MissionControl.a(param3 - 29328, this.field_f), 5121, var11, 0);
+            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.getInternalFormat((byte) -31), param4, param1, 0, MissionControl.a(param3 - 29328, this.format), 5121, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -120,69 +120,69 @@ abstract class kva implements ura {
         }
     }
 
-    final int e(byte param0) {
-        tu var3;
+    final int getInternalFormat(byte param0) {
+        TextureFilterMode var3;
         if (param0 != -31) {
-          var3 = (tu) null;
-          this.a((tu) null, 94);
+          var3 = (TextureFilterMode) null;
+          this.setFilterMode((TextureFilterMode) null, 94);
         }
-        if (GpuDataType.field_f == this.field_b) {
-          if (this.field_f == SetGrapplingHookFireForce.field_o) {
+        if (GpuDataType.UNSIGNED_BYTE == this.dataType) {
+          if (this.format == SetGrapplingHookFireForce.field_o) {
             return 6407;
           }
-          if (ComponentAttachmentPlan.field_d == this.field_f) {
+          if (ComponentAttachmentPlan.field_d == this.format) {
             return 6408;
           }
-          if (this.field_f == GetMinimapWidth.field_p) {
+          if (this.format == GetMinimapWidth.field_p) {
             return 6406;
           }
-          if (this.field_f == SetSniperCannonFireForce.field_p) {
+          if (this.format == SetSniperCannonFireForce.field_p) {
             return 6409;
           }
-          if (SocketNetworkArchiveClient.field_o == this.field_f) {
+          if (SocketNetworkArchiveClient.field_o == this.format) {
             return 6410;
           }
-          if (GetReverbGain.field_o == this.field_f) {
+          if (GetReverbGain.field_o == this.format) {
             return 6145;
           }
         } else {
-          if (this.field_b == GpuDataType.field_b) {
-            if (this.field_f == SetGrapplingHookFireForce.field_o) {
+          if (this.dataType == GpuDataType.HALF_FLOAT) {
+            if (this.format == SetGrapplingHookFireForce.field_o) {
               return 34843;
             }
-            if (this.field_f == ComponentAttachmentPlan.field_d) {
+            if (this.format == ComponentAttachmentPlan.field_d) {
               return 34842;
             }
-            if (GetMinimapWidth.field_p == this.field_f) {
+            if (GetMinimapWidth.field_p == this.format) {
               return 34844;
             }
-            if (this.field_f == SetSniperCannonFireForce.field_p) {
+            if (this.format == SetSniperCannonFireForce.field_p) {
               return 34846;
             }
-            if (this.field_f == SocketNetworkArchiveClient.field_o) {
+            if (this.format == SocketNetworkArchiveClient.field_o) {
               return 34847;
             }
-            if (GetReverbGain.field_o == this.field_f) {
+            if (GetReverbGain.field_o == this.format) {
               return 6145;
             }
           } else {
-            if (GpuDataType.field_d == this.field_b) {
-              if (SetGrapplingHookFireForce.field_o == this.field_f) {
+            if (GpuDataType.FLOAT == this.dataType) {
+              if (SetGrapplingHookFireForce.field_o == this.format) {
                 return 34837;
               }
-              if (ComponentAttachmentPlan.field_d == this.field_f) {
+              if (ComponentAttachmentPlan.field_d == this.format) {
                 return 34836;
               }
-              if (GetMinimapWidth.field_p == this.field_f) {
+              if (GetMinimapWidth.field_p == this.format) {
                 return 34838;
               }
-              if (this.field_f == SetSniperCannonFireForce.field_p) {
+              if (this.format == SetSniperCannonFireForce.field_p) {
                 return 34840;
               }
-              if (this.field_f == SocketNetworkArchiveClient.field_o) {
+              if (this.format == SocketNetworkArchiveClient.field_o) {
                 return 34841;
               }
-              if (this.field_f == GetReverbGain.field_o) {
+              if (this.format == GetReverbGain.field_o) {
                 return 6145;
               }
             }
@@ -191,43 +191,43 @@ abstract class kva implements ura {
         throw new IllegalStateException();
     }
 
-    public void a(tu param0, int param1) {
+    public void setFilterMode(TextureFilterMode param0, int param1) {
         if (param1 != -28798) {
           return;
         }
         try {
-          if (this.field_i != param0) {
-            this.field_i = param0;
-            this.c(0);
+          if (this.filterMode != param0) {
+            this.filterMode = param0;
+            this.applyFilterMode(0);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final int c(byte param0) {
-        int var2 = this.field_f.field_a * this.field_b.byteSize * this.field_d;
+    private final int getEstimatedByteSize(byte param0) {
+        int var2 = this.format.componentCount * this.dataType.byteSize * this.pixelCount;
         if (param0 != 61) {
           return -71;
         }
-        return !this.field_c ? var2 : 4 * var2 / 3;
+        return !this.mipmapped ? var2 : 4 * var2 / 3;
     }
 
-    private final void c(int param0) {
+    private final void applyFilterMode(int param0) {
         if (param0 != 0) {
           return;
         }
-        this.field_h.a((ura) (this), -114);
-        if (cs.field_a == this.field_i) {
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10241, !this.field_c ? 9729 : 9987);
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9729);
+        this.toolkit.setTexture((GpuTexture) (this), -114);
+        if (cs.field_a == this.filterMode) {
+          jaggl.OpenGL.glTexParameteri(this.target, 10241, !this.mipmapped ? 9729 : 9987);
+          jaggl.OpenGL.glTexParameteri(this.target, 10240, 9729);
         } else {
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_c ? 9984 : 9728);
-          jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9728);
+          jaggl.OpenGL.glTexParameteri(this.target, 10241, this.mipmapped ? 9984 : 9728);
+          jaggl.OpenGL.glTexParameteri(this.target, 10240, 9728);
         }
     }
 
-    final void a(int param0, float[] param1, int param2, int param3, byte param4) {
+    final void uploadFloatMipmaps(int param0, float[] param1, int param2, int param3, byte param4) {
         int var16 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -254,7 +254,7 @@ abstract class kva implements ura {
         var22 = VoidHunters.field_G;
         try {
           if (param4 != -67) {
-            this.field_d = -65;
+            this.pixelCount = -65;
           }
           if (param3 > 0 &&
             !bd.a(param3, (byte) -95)) {
@@ -264,7 +264,7 @@ abstract class kva implements ura {
             !bd.a(param2, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          var6_int = this.field_f.field_a;
+          var6_int = this.format.componentCount;
           var7 = 0;
           stackIn_13_0 = (param3 < param2) ? param3 : param2;
           var8 = stackIn_13_0;
@@ -273,7 +273,7 @@ abstract class kva implements ura {
           var11 = param1;
           var12 = new float[var6_int * (var9 * var10)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Df(param0, var7, this.e((byte) -31), param3, param2, 0, MissionControl.a(param4 - 29261, this.field_f), 5126, var11, 0);
+            jaggl.OpenGL.glTexImage2Df(param0, var7, this.getInternalFormat((byte) -31), param3, param2, 0, MissionControl.a(param4 - 29261, this.format), 5126, var11, 0);
             if (var8 <= 1) {
               return;
             }
@@ -323,12 +323,12 @@ abstract class kva implements ura {
         }
     }
 
-    private final void a(int param0, byte param1) {
+    private final void updateMemoryAccounting(int param0, byte param1) {
         if (param1 > -12) {
-          this.b(-102);
+          this.bind(-102);
         }
-        this.field_h.field_Nb = this.field_h.field_Nb - param0;
-        this.field_h.field_Nb = this.field_h.field_Nb + this.c((byte) 61);
+        this.toolkit.field_Nb = this.toolkit.field_Nb - param0;
+        this.toolkit.field_Nb = this.toolkit.field_Nb + this.getEstimatedByteSize((byte) 61);
     }
 
     final static void d(byte param0) {
@@ -345,13 +345,13 @@ abstract class kva implements ura {
         hp.field_b = null;
         SetThrusterAutobalancing.field_p = null;
         if (param0 > -15) {
-          kva.d((byte) -19);
+          OpenGlGpuTexture.d((byte) -19);
         }
         qw.field_l = null;
         SetFightersPerPlayerMaximum.field_p = true;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int[] param4) {
+    final void uploadArgbMipmaps(byte param0, int param1, int param2, int param3, int[] param4) {
         int var24 = 0;
         int var25 = 0;
         int incrementValue$4 = 0;
@@ -390,7 +390,7 @@ abstract class kva implements ura {
             !bd.a(param2, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          if (ComponentAttachmentPlan.field_d != this.field_f) {
+          if (ComponentAttachmentPlan.field_d != this.format) {
             throw new IllegalArgumentException("");
           }
           var6_int = 0;
@@ -398,13 +398,13 @@ abstract class kva implements ura {
           var7 = stackIn_14_0;
           var8 = param3 >> 1;
           if (param0 != 14) {
-            this.field_c = true;
+            this.mipmapped = true;
           }
           var9 = param2 >> 1;
           var10 = param4;
           var11 = new int[var9 * var8];
           while (true) {
-            jaggl.OpenGL.glTexImage2Di(param1, var6_int, this.e((byte) -31), param3, param2, 0, 32993, this.field_h.field_Nc, var10, 0);
+            jaggl.OpenGL.glTexImage2Di(param1, var6_int, this.getInternalFormat((byte) -31), param3, param2, 0, 32993, this.toolkit.field_Nc, var10, 0);
             if (var7 <= 1) {
               return;
             }
@@ -464,36 +464,36 @@ abstract class kva implements ura {
         }
     }
 
-    public void b(int param0) {
+    public void bind(int param0) {
         if (param0 != -27445) {
           return;
         }
-        int var2 = this.field_h.t((byte) 9);
-        int var3 = this.field_h.field_Wc[var2];
-        if (var3 != this.field_e) {
+        int var2 = this.toolkit.getActiveTextureUnit((byte) 9);
+        int var3 = this.toolkit.field_Wc[var2];
+        if (var3 != this.target) {
           if (var3 != 0) {
             jaggl.OpenGL.glBindTexture(var3, 0);
             jaggl.OpenGL.glDisable(var3);
           }
-          jaggl.OpenGL.glEnable(this.field_e);
-          this.field_h.field_Wc[var2] = this.field_e;
+          jaggl.OpenGL.glEnable(this.target);
+          this.toolkit.field_Wc[var2] = this.target;
         }
-        jaggl.OpenGL.glBindTexture(this.field_e, this.field_a);
+        jaggl.OpenGL.glBindTexture(this.target, this.textureId);
     }
 
-    kva(OpenGlGpuToolkit param0, int param1, TextureFormat param2, GpuDataType param3, int param4, boolean param5) {
-        this.field_i = cs.field_a;
+    OpenGlGpuTexture(OpenGlGpuToolkit param0, int param1, TextureFormat param2, GpuDataType param3, int param4, boolean param5) {
+        this.filterMode = cs.field_a;
         try {
-          this.field_h = param0;
-          this.field_d = param4;
-          this.field_b = param3;
-          this.field_e = param1;
-          this.field_c = param5 ? true : false;
-          this.field_f = param2;
+          this.toolkit = param0;
+          this.pixelCount = param4;
+          this.dataType = param3;
+          this.target = param1;
+          this.mipmapped = param5 ? true : false;
+          this.format = param2;
           jaggl.OpenGL.glGenTextures(1, GetLoadingMissions.field_o, 0);
-          this.field_a = GetLoadingMissions.field_o[0];
-          this.c(0);
-          this.a(0, (byte) -118);
+          this.textureId = GetLoadingMissions.field_o[0];
+          this.applyFilterMode(0);
+          this.updateMemoryAccounting(0, (byte) -118);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kva.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

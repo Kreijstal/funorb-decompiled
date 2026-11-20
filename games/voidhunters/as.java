@@ -16,7 +16,7 @@ abstract class as extends bkb {
         field_c = null;
     }
 
-    abstract hdb a(byte param0);
+    abstract GpuCubeTexture a(byte param0);
 
     static {
         field_d = 0;

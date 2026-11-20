@@ -18,7 +18,7 @@ abstract class qg {
 
     abstract void a(boolean param0, int param1);
 
-    final static int a(slb param0, boolean param1) {
+    final static int toOpenGlCombineSource(TextureCombineSource param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;

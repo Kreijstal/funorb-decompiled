@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class slb {
+final class TextureCombineSource {
     static int field_a;
     static String field_b;
 

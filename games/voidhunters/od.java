@@ -7,7 +7,7 @@ final class od {
     od(uq param0, int param1, int param2, int param3) {
     }
 
-    final static int a(boolean param0, GpuDataType param1) {
+    final static int toOpenGlDataType(boolean param0, GpuDataType param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -27,35 +27,35 @@ final class od {
             stackIn_2_0 = 25;
             return stackIn_2_0;
           }
-          if (GpuDataType.field_g == param1) {
+          if (GpuDataType.BYTE == param1) {
             stackIn_5_0 = 5120;
             return stackIn_5_0;
           }
-          if (param1 == GpuDataType.field_i) {
+          if (param1 == GpuDataType.SHORT) {
             stackIn_27_0 = 5122;
             return stackIn_27_0;
           }
-          if (GpuDataType.field_c == param1) {
+          if (GpuDataType.INT == param1) {
             stackIn_9_0 = 5124;
             return stackIn_9_0;
           }
-          if (GpuDataType.field_f == param1) {
+          if (GpuDataType.UNSIGNED_BYTE == param1) {
             stackIn_12_0 = 5121;
             return stackIn_12_0;
           }
-          if (GpuDataType.field_e == param1) {
+          if (GpuDataType.UNSIGNED_SHORT == param1) {
             stackIn_25_0 = 5123;
             return stackIn_25_0;
           }
-          if (GpuDataType.field_a == param1) {
+          if (GpuDataType.UNSIGNED_INT == param1) {
             stackIn_16_0 = 5125;
             return stackIn_16_0;
           }
-          if (GpuDataType.field_b == param1) {
+          if (GpuDataType.HALF_FLOAT == param1) {
             stackIn_23_0 = 5131;
             return stackIn_23_0;
           }
-          if (param1 != GpuDataType.field_d) {
+          if (param1 != GpuDataType.FLOAT) {
             throw new IllegalArgumentException("");
           }
           stackIn_21_0 = 5126;

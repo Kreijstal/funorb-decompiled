@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vsb extends uda {
+final class vsb extends GpuMaterialEffect {
     private rga field_e;
     private OpenGlGpuToolkit field_f;
     private gla field_g;
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.field_c);
         jaggl.OpenGL.glEnable(34336);
-        this.field_d.a(0, pja.field_l, 7);
+        this.toolkit.setRgbCombineSource(0, pja.field_l, 7);
         if (param0 != 5) {
-          ura var4 = (ura) null;
-          this.a((byte) -95, 120, (ura) null);
+          GpuTexture var4 = (GpuTexture) null;
+          this.setTexture((byte) -95, 120, (GpuTexture) null);
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = 38 / ((34 - param0) / 63);
         return this.field_g != null ? true : false;
     }
@@ -30,32 +30,32 @@ final class vsb extends uda {
         GetSelfDestructPrepareToggleCooldown.a(113, 4);
     }
 
-    final void b(int param0, boolean param1) {
-        this.field_d.a(je.field_c, true, MissionVariable.field_c);
+    final void applyRenderState(int param0, boolean param1) {
+        this.toolkit.setTextureCombineOperations(je.field_c, true, MissionVariable.field_c);
         if (param0 != 5) {
-          this.a(0, 25, 20);
+          this.setParameters(0, 25, 20);
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var4 = 0;
         float var4_float = 0.0f;
         if (this.field_e.field_b) {
-          var4_float = (float)(this.field_d.field_pc % 4000) / 4000.0f;
-          this.field_d.a(this.field_e.field_d, -125);
+          var4_float = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
+          this.toolkit.setTexture(this.field_e.field_d, -125);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
-          var4 = 16 * (this.field_d.field_pc % 4000) / 4000;
-          this.field_d.a(this.field_e.field_a[var4], -116);
+          var4 = 16 * (this.toolkit.field_pc % 4000) / 4000;
+          this.toolkit.setTexture(this.field_e.field_a[var4], -116);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
         if (param2 == 5) {
           return;
         }
-        this.b(102, true);
+        this.applyRenderState(102, true);
     }
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         try {
           if (param0 <= 42) {
             this.field_e = (rga) null;
@@ -113,8 +113,8 @@ final class vsb extends uda {
         }
     }
 
-    final void a(int param0) {
-        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
+    final void disable(int param0) {
+        this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);

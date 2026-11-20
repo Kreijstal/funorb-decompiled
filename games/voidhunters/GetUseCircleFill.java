@@ -57,9 +57,9 @@ final class GetUseCircleFill extends ConsoleCommand {
               !(param1 <= SetRespawnTime.field_o.length)) {
               SetRespawnTime.field_o = new int[2 * param1];
             }
-            if (null == sv.field_f ||
-              !(sv.field_f.length >= param0 + param1)) {
-              sv.field_f = new int[2 * (param0 + param1)];
+            if (null == UnlitGpuMaterialEffect.field_f ||
+              !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+              UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
             }
             if (uj.field_a == null ||
               !(param1 <= uj.field_a.length)) {
@@ -72,9 +72,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                 !(param1 <= SetRespawnTime.field_o.length)) {
                 SetRespawnTime.field_o = new int[2 * param1];
               }
-              if (null == sv.field_f ||
-                !(sv.field_f.length >= param0 + param1)) {
-                sv.field_f = new int[2 * (param0 + param1)];
+              if (null == UnlitGpuMaterialEffect.field_f ||
+                !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
               }
               if (uj.field_a == null ||
                 !(param1 <= uj.field_a.length)) {
@@ -83,9 +83,9 @@ final class GetUseCircleFill extends ConsoleCommand {
             } else {
               if (SetRespawnTime.field_o == null) {
                 SetRespawnTime.field_o = new int[2 * param1];
-                if (null == sv.field_f ||
-                  !(sv.field_f.length >= param0 + param1)) {
-                  sv.field_f = new int[2 * (param0 + param1)];
+                if (null == UnlitGpuMaterialEffect.field_f ||
+                  !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                  UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 }
                 if (uj.field_a == null ||
                   !(param1 <= uj.field_a.length)) {
@@ -94,29 +94,29 @@ final class GetUseCircleFill extends ConsoleCommand {
               } else {
                 if (param1 > SetRespawnTime.field_o.length) {
                   SetRespawnTime.field_o = new int[2 * param1];
-                  if (null == sv.field_f ||
-                    !(sv.field_f.length >= param0 + param1)) {
-                    sv.field_f = new int[2 * (param0 + param1)];
+                  if (null == UnlitGpuMaterialEffect.field_f ||
+                    !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                    UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                   }
                   if (uj.field_a == null ||
                     !(param1 <= uj.field_a.length)) {
                     uj.field_a = new boolean[param1 * 2];
                   }
                 } else {
-                  if (null == sv.field_f) {
-                    sv.field_f = new int[2 * (param0 + param1)];
+                  if (null == UnlitGpuMaterialEffect.field_f) {
+                    UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                     if (uj.field_a == null ||
                       !(param1 <= uj.field_a.length)) {
                       uj.field_a = new boolean[param1 * 2];
                     }
                   } else {
-                    if (sv.field_f.length >= param0 + param1) {
+                    if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
                       }
                     } else {
-                      sv.field_f = new int[2 * (param0 + param1)];
+                      UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
@@ -143,9 +143,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                 !(param1 <= SetRespawnTime.field_o.length)) {
                 SetRespawnTime.field_o = new int[2 * param1];
               }
-              if (null == sv.field_f ||
-                !(sv.field_f.length >= param0 + param1)) {
-                sv.field_f = new int[2 * (param0 + param1)];
+              if (null == UnlitGpuMaterialEffect.field_f ||
+                !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
               }
               if (uj.field_a == null ||
                 !(param1 <= uj.field_a.length)) {
@@ -158,9 +158,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                   !(param1 <= SetRespawnTime.field_o.length)) {
                   SetRespawnTime.field_o = new int[2 * param1];
                 }
-                if (null == sv.field_f ||
-                  !(sv.field_f.length >= param0 + param1)) {
-                  sv.field_f = new int[2 * (param0 + param1)];
+                if (null == UnlitGpuMaterialEffect.field_f ||
+                  !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                  UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 }
                 if (uj.field_a == null ||
                   !(param1 <= uj.field_a.length)) {
@@ -169,9 +169,9 @@ final class GetUseCircleFill extends ConsoleCommand {
               } else {
                 if (SetRespawnTime.field_o == null) {
                   SetRespawnTime.field_o = new int[2 * param1];
-                  if (null == sv.field_f ||
-                    !(sv.field_f.length >= param0 + param1)) {
-                    sv.field_f = new int[2 * (param0 + param1)];
+                  if (null == UnlitGpuMaterialEffect.field_f ||
+                    !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                    UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                   }
                   if (uj.field_a == null ||
                     !(param1 <= uj.field_a.length)) {
@@ -180,29 +180,29 @@ final class GetUseCircleFill extends ConsoleCommand {
                 } else {
                   if (param1 > SetRespawnTime.field_o.length) {
                     SetRespawnTime.field_o = new int[2 * param1];
-                    if (null == sv.field_f ||
-                      !(sv.field_f.length >= param0 + param1)) {
-                      sv.field_f = new int[2 * (param0 + param1)];
+                    if (null == UnlitGpuMaterialEffect.field_f ||
+                      !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                      UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                     }
                     if (uj.field_a == null ||
                       !(param1 <= uj.field_a.length)) {
                       uj.field_a = new boolean[param1 * 2];
                     }
                   } else {
-                    if (null == sv.field_f) {
-                      sv.field_f = new int[2 * (param0 + param1)];
+                    if (null == UnlitGpuMaterialEffect.field_f) {
+                      UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
                       }
                     } else {
-                      if (sv.field_f.length >= param0 + param1) {
+                      if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
                         if (uj.field_a == null ||
                           !(param1 <= uj.field_a.length)) {
                           uj.field_a = new boolean[param1 * 2];
                         }
                       } else {
-                        sv.field_f = new int[2 * (param0 + param1)];
+                        UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                         if (uj.field_a == null ||
                           !(param1 <= uj.field_a.length)) {
                           uj.field_a = new boolean[param1 * 2];
@@ -229,20 +229,20 @@ final class GetUseCircleFill extends ConsoleCommand {
                 !(param1 <= SetRespawnTime.field_o.length)) {
                 SetRespawnTime.field_o = new int[2 * param1];
               }
-              if (null == sv.field_f) {
-                sv.field_f = new int[2 * (param0 + param1)];
+              if (null == UnlitGpuMaterialEffect.field_f) {
+                UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 if (uj.field_a == null ||
                   !(param1 <= uj.field_a.length)) {
                   uj.field_a = new boolean[param1 * 2];
                 }
               } else {
-                if (sv.field_f.length >= param0 + param1) {
+                if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
                   if (uj.field_a == null ||
                     !(param1 <= uj.field_a.length)) {
                     uj.field_a = new boolean[param1 * 2];
                   }
                 } else {
-                  sv.field_f = new int[2 * (param0 + param1)];
+                  UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                   if (uj.field_a == null ||
                     !(param1 <= uj.field_a.length)) {
                     uj.field_a = new boolean[param1 * 2];
@@ -256,9 +256,9 @@ final class GetUseCircleFill extends ConsoleCommand {
                   !(param1 <= SetRespawnTime.field_o.length)) {
                   SetRespawnTime.field_o = new int[2 * param1];
                 }
-                if (null == sv.field_f ||
-                  !(sv.field_f.length >= param0 + param1)) {
-                  sv.field_f = new int[2 * (param0 + param1)];
+                if (null == UnlitGpuMaterialEffect.field_f ||
+                  !(UnlitGpuMaterialEffect.field_f.length >= param0 + param1)) {
+                  UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                 }
                 if (uj.field_a == null ||
                   !(param1 <= uj.field_a.length)) {
@@ -267,20 +267,20 @@ final class GetUseCircleFill extends ConsoleCommand {
               } else {
                 if (SetRespawnTime.field_o == null) {
                   SetRespawnTime.field_o = new int[2 * param1];
-                  if (null == sv.field_f) {
-                    sv.field_f = new int[2 * (param0 + param1)];
+                  if (null == UnlitGpuMaterialEffect.field_f) {
+                    UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                     if (uj.field_a == null ||
                       !(param1 <= uj.field_a.length)) {
                       uj.field_a = new boolean[param1 * 2];
                     }
                   } else {
-                    if (sv.field_f.length >= param0 + param1) {
+                    if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
                       }
                     } else {
-                      sv.field_f = new int[2 * (param0 + param1)];
+                      UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
@@ -289,20 +289,20 @@ final class GetUseCircleFill extends ConsoleCommand {
                   }
                 } else {
                   if (param1 <= SetRespawnTime.field_o.length) {
-                    if (null == sv.field_f) {
-                      sv.field_f = new int[2 * (param0 + param1)];
+                    if (null == UnlitGpuMaterialEffect.field_f) {
+                      UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
                       }
                     } else {
-                      if (sv.field_f.length >= param0 + param1) {
+                      if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
                         if (uj.field_a == null ||
                           !(param1 <= uj.field_a.length)) {
                           uj.field_a = new boolean[param1 * 2];
                         }
                       } else {
-                        sv.field_f = new int[2 * (param0 + param1)];
+                        UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                         if (uj.field_a == null ||
                           !(param1 <= uj.field_a.length)) {
                           uj.field_a = new boolean[param1 * 2];
@@ -311,20 +311,20 @@ final class GetUseCircleFill extends ConsoleCommand {
                     }
                   } else {
                     SetRespawnTime.field_o = new int[2 * param1];
-                    if (null == sv.field_f) {
-                      sv.field_f = new int[2 * (param0 + param1)];
+                    if (null == UnlitGpuMaterialEffect.field_f) {
+                      UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                       if (uj.field_a == null ||
                         !(param1 <= uj.field_a.length)) {
                         uj.field_a = new boolean[param1 * 2];
                       }
                     } else {
-                      if (sv.field_f.length >= param0 + param1) {
+                      if (UnlitGpuMaterialEffect.field_f.length >= param0 + param1) {
                         if (uj.field_a == null ||
                           !(param1 <= uj.field_a.length)) {
                           uj.field_a = new boolean[param1 * 2];
                         }
                       } else {
-                        sv.field_f = new int[2 * (param0 + param1)];
+                        UnlitGpuMaterialEffect.field_f = new int[2 * (param0 + param1)];
                         if (uj.field_a == null ||
                           !(param1 <= uj.field_a.length)) {
                           uj.field_a = new boolean[param1 * 2];

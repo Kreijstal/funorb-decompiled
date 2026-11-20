@@ -3,7 +3,7 @@
  */
 final class GpuSprite extends ToolkitSprite {
     private boolean field_k;
-    private eb texture;
+    private GpuTexture2D texture;
     private int paddingLeft;
     static GameStateFactory field_c;
     private boolean field_j;
@@ -32,10 +32,10 @@ final class GpuSprite extends ToolkitSprite {
     final void drawScaled(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         GpuTransform3D var10;
         GpuTransform3D var11;
-        eb stackIn_4_0 = null;
-        tu stackIn_6_1 = null;
-        var11 = this.toolkit.A(11);
-        var10 = this.toolkit.H((byte) -119);
+        GpuTexture2D stackIn_4_0 = null;
+        TextureFilterMode stackIn_6_1 = null;
+        var11 = this.toolkit.getModelTransform(11);
+        var10 = this.toolkit.getTextureTransform((byte) -119);
         stackIn_4_0 = this.texture;
         if (!this.field_j &&
           !this.field_i &&
@@ -44,15 +44,15 @@ final class GpuSprite extends ToolkitSprite {
         } else {
           stackIn_6_1 = SetLagVariant.field_o;
         }
-        ((eb) (Object) stackIn_4_0).a(stackIn_6_1, -28798);
-        this.toolkit.E((byte) 111);
-        this.toolkit.a(this.texture, -109);
-        this.toolkit.c(124, param6);
-        this.toolkit.h(-117, param4);
-        this.toolkit.a(1, pea.field_d, 7);
-        this.toolkit.a(1, (byte) -97, pea.field_d);
-        this.toolkit.e(-127, param5);
-        var10.setScale(5557, this.texture.a((float)this.width, -1080), this.texture.b((float)this.height, 106), 1.0f);
+        ((GpuTexture2D) (Object) stackIn_4_0).setFilterMode(stackIn_6_1, -28798);
+        this.toolkit.prepareSpriteDraw((byte) 111);
+        this.toolkit.setTexture(this.texture, -109);
+        this.toolkit.setBlendMode(124, param6);
+        this.toolkit.setTextureCombineMode(-117, param4);
+        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -97, pea.field_d);
+        this.toolkit.setTextureConstantColor(-127, param5);
+        var10.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 106), 1.0f);
         if (this.field_k) {
           param2 = this.width * param2 / this.getPaddedWidth();
           param3 = this.height * param3 / this.getPaddedHeight();
@@ -61,12 +61,12 @@ final class GpuSprite extends ToolkitSprite {
         }
         var11.setScale(5557, (float)param2, (float)param3, 0.0f);
         var11.translate(param1, 16383, 0, param0);
-        this.toolkit.a(vf.field_a, true);
-        this.toolkit.h(20837);
-        this.toolkit.r((byte) -79);
-        this.toolkit.F((byte) 74);
-        this.toolkit.a(1, pja.field_l, 7);
-        this.toolkit.a(1, (byte) -55, pja.field_l);
+        this.toolkit.setTextureTransformMode(vf.field_a, true);
+        this.toolkit.markModelTransformChanged(20837);
+        this.toolkit.drawUnitQuadTriangles((byte) -79);
+        this.toolkit.resetTextureTransform((byte) 74);
+        this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -55, pja.field_l);
     }
 
     final static int b(int param0, int param1) {
@@ -81,27 +81,27 @@ final class GpuSprite extends ToolkitSprite {
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        GpuTransform3D var8 = this.toolkit.A(11);
-        GpuTransform3D var7 = this.toolkit.H((byte) 124);
+        GpuTransform3D var8 = this.toolkit.getModelTransform(11);
+        GpuTransform3D var7 = this.toolkit.getTextureTransform((byte) 124);
         param1 = param1 + this.paddingTop;
         param0 = param0 + this.paddingLeft;
-        this.texture.a(SetLagVariant.field_o, -28798);
-        this.toolkit.E((byte) 111);
-        this.toolkit.a(this.texture, -123);
-        this.toolkit.c(121, param4);
-        this.toolkit.h(107, param2);
-        this.toolkit.a(1, pea.field_d, 7);
-        this.toolkit.a(1, (byte) -54, pea.field_d);
-        this.toolkit.e(-127, param3);
+        this.texture.setFilterMode(SetLagVariant.field_o, -28798);
+        this.toolkit.prepareSpriteDraw((byte) 111);
+        this.toolkit.setTexture(this.texture, -123);
+        this.toolkit.setBlendMode(121, param4);
+        this.toolkit.setTextureCombineMode(107, param2);
+        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -54, pea.field_d);
+        this.toolkit.setTextureConstantColor(-127, param3);
         var8.setScale(5557, (float)this.width, (float)this.height, 0.0f);
         var8.translate(param1, 16383, 0, param0);
-        var7.setScale(5557, this.texture.a((float)this.width, -1080), this.texture.b((float)this.height, 117), 1.0f);
-        this.toolkit.a(vf.field_a, true);
-        this.toolkit.h(20837);
-        this.toolkit.r((byte) -72);
-        this.toolkit.F((byte) 85);
-        this.toolkit.a(1, pja.field_l, 7);
-        this.toolkit.a(1, (byte) -72, pja.field_l);
+        var7.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 117), 1.0f);
+        this.toolkit.setTextureTransformMode(vf.field_a, true);
+        this.toolkit.markModelTransformChanged(20837);
+        this.toolkit.drawUnitQuadTriangles((byte) -72);
+        this.toolkit.resetTextureTransform((byte) 85);
+        this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -72, pja.field_l);
     }
 
     final int getPaddedWidth() {
@@ -125,10 +125,10 @@ final class GpuSprite extends ToolkitSprite {
         float var25;
         float var26;
         GpuTransform3D var27;
-        eb stackIn_4_0 = null;
-        tu stackIn_5_1 = null;
-        var27 = this.toolkit.A(11);
-        var12 = this.toolkit.H((byte) 81);
+        GpuTexture2D stackIn_4_0 = null;
+        TextureFilterMode stackIn_5_1 = null;
+        var27 = this.toolkit.getModelTransform(11);
+        var12 = this.toolkit.getTextureTransform((byte) 81);
         stackIn_4_0 = this.texture;
         if (!this.field_j &&
           !this.field_i &&
@@ -137,14 +137,14 @@ final class GpuSprite extends ToolkitSprite {
         } else {
           stackIn_5_1 = SetLagVariant.field_o;
         }
-        ((eb) (Object) stackIn_4_0).a(stackIn_5_1, -28798);
-        this.toolkit.E((byte) 111);
-        this.toolkit.a(this.texture, -122);
-        this.toolkit.c(54, param8);
-        this.toolkit.h(13, param6);
-        this.toolkit.a(1, pea.field_d, 7);
-        this.toolkit.a(1, (byte) -121, pea.field_d);
-        this.toolkit.e(-126, param7);
+        ((GpuTexture2D) (Object) stackIn_4_0).setFilterMode(stackIn_5_1, -28798);
+        this.toolkit.prepareSpriteDraw((byte) 111);
+        this.toolkit.setTexture(this.texture, -122);
+        this.toolkit.setBlendMode(54, param8);
+        this.toolkit.setTextureCombineMode(13, param6);
+        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -121, pea.field_d);
+        this.toolkit.setTextureConstantColor(-126, param7);
         if (this.field_k) {
           var13 = (float)this.getPaddedWidth();
           var14 = (float)this.getPaddedHeight();
@@ -169,13 +169,13 @@ final class GpuSprite extends ToolkitSprite {
         }
         var27.setRotation(0.0f, 0.0f, (byte) 101, param2 - param0, 0.0f, 0.0f, -param1 + param5, param3 - param1, 1.0f, -param0 + param4);
         var27.translate(0.0f, param0, param1, (byte) 13);
-        var12.setScale(5557, this.texture.a((float)this.width, -1080), this.texture.b((float)this.height, 110), 1.0f);
-        this.toolkit.a(vf.field_a, true);
-        this.toolkit.h(20837);
-        this.toolkit.r((byte) -102);
-        this.toolkit.F((byte) 72);
-        this.toolkit.a(1, pja.field_l, 7);
-        this.toolkit.a(1, (byte) -123, pja.field_l);
+        var12.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 110), 1.0f);
+        this.toolkit.setTextureTransformMode(vf.field_a, true);
+        this.toolkit.markModelTransformChanged(20837);
+        this.toolkit.drawUnitQuadTriangles((byte) -102);
+        this.toolkit.resetTextureTransform((byte) 72);
+        this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -123, pja.field_l);
     }
 
     final int getHeight() {
@@ -204,16 +204,16 @@ final class GpuSprite extends ToolkitSprite {
         int var19Lifetime1;
         int var20Lifetime1;
         var22 = VoidHunters.field_G;
-        var23 = this.toolkit.A(11);
-        var9 = this.toolkit.H((byte) -122);
-        this.texture.a(SetLagVariant.field_o, -28798);
-        this.toolkit.E((byte) 111);
-        this.toolkit.a(this.texture, -119);
-        this.toolkit.c(75, param6);
-        this.toolkit.h(-124, param4);
-        this.toolkit.a(1, pea.field_d, 7);
-        this.toolkit.a(1, (byte) -98, pea.field_d);
-        this.toolkit.e(-123, param5);
+        var23 = this.toolkit.getModelTransform(11);
+        var9 = this.toolkit.getTextureTransform((byte) -122);
+        this.texture.setFilterMode(SetLagVariant.field_o, -28798);
+        this.toolkit.prepareSpriteDraw((byte) 111);
+        this.toolkit.setTexture(this.texture, -119);
+        this.toolkit.setBlendMode(75, param6);
+        this.toolkit.setTextureCombineMode(-124, param4);
+        this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
+        this.toolkit.setAlphaCombineSource(1, (byte) -98, pea.field_d);
+        this.toolkit.setTextureConstantColor(-123, param5);
         if (this.field_a &&
           0 == this.paddingTop &&
           this.paddingBottom == 0) {
@@ -235,48 +235,48 @@ final class GpuSprite extends ToolkitSprite {
           if (var11 != 0) {
             var12 = param3 + param1;
             var13 = this.getPaddedHeight();
-            var9.setScale(5557, this.texture.a((float)param2, -1080), this.texture.b((float)this.height, 91), 1.0f);
-            this.toolkit.a(vf.field_a, true);
+            var9.setScale(5557, this.texture.getU((float)param2, -1080), this.texture.getV((float)this.height, 91), 1.0f);
+            this.toolkit.setTextureTransformMode(vf.field_a, true);
             var14 = param1 + this.paddingTop;
             for (var15 = var14 + this.height; var15 <= var12; var15 = var15 + var13) {
               var23.setScale(5557, (float)param2, (float)this.height, 0.0f);
               var23.translate(var14, 16383, 0, param0);
-              this.toolkit.h(20837);
-              this.toolkit.r((byte) -87);
+              this.toolkit.markModelTransformChanged(20837);
+              this.toolkit.drawUnitQuadTriangles((byte) -87);
               var14 = var14 + var13;
             }
             if (var12 > var14) {
               var16 = var12 - var14;
-              var9.setScale(5557, this.texture.a((float)param2, -1080), this.texture.b((float)var16, 90), 1.0f);
-              this.toolkit.a(vf.field_a, true);
+              var9.setScale(5557, this.texture.getU((float)param2, -1080), this.texture.getV((float)var16, 90), 1.0f);
+              this.toolkit.setTextureTransformMode(vf.field_a, true);
               var23.setScale(5557, (float)param2, (float)var16, 0.0f);
               var23.translate(var14, 16383, 0, param0);
-              this.toolkit.h(20837);
-              this.toolkit.r((byte) -81);
+              this.toolkit.markModelTransformChanged(20837);
+              this.toolkit.drawUnitQuadTriangles((byte) -81);
             }
           } else if (var10 != 0) {
             var12 = param2 + param0;
             var13 = this.getPaddedWidth();
-            var9.setScale(5557, this.texture.a((float)this.width, -1080), this.texture.b((float)param3, 75), 1.0f);
-            this.toolkit.a(vf.field_a, true);
+            var9.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)param3, 75), 1.0f);
+            this.toolkit.setTextureTransformMode(vf.field_a, true);
             var14 = this.paddingLeft + param0;
             var15 = this.width + var14;
             while (var12 >= var15) {
               var23.setScale(5557, (float)this.width, (float)param3, 0.0f);
               var23.translate(param1, 16383, 0, var14);
-              this.toolkit.h(20837);
-              this.toolkit.r((byte) -91);
+              this.toolkit.markModelTransformChanged(20837);
+              this.toolkit.drawUnitQuadTriangles((byte) -91);
               var15 = var15 + var13;
               var14 = var14 + var13;
             }
             if (var12 > var14) {
               var16 = -var14 + var12;
-              var9.setScale(5557, this.texture.a((float)var16, -1080), this.texture.b((float)param3, 121), 1.0f);
-              this.toolkit.a(vf.field_a, true);
+              var9.setScale(5557, this.texture.getU((float)var16, -1080), this.texture.getV((float)param3, 121), 1.0f);
+              this.toolkit.setTextureTransformMode(vf.field_a, true);
               var23.setScale(5557, (float)var16, (float)param3, 0.0f);
               var23.translate(param1, 16383, 0, var14);
-              this.toolkit.h(20837);
-              this.toolkit.r((byte) -89);
+              this.toolkit.markModelTransformChanged(20837);
+              this.toolkit.drawUnitQuadTriangles((byte) -89);
             }
           } else {
             var12 = param1 + param3;
@@ -285,70 +285,70 @@ final class GpuSprite extends ToolkitSprite {
             var15 = this.getPaddedHeight();
             var16 = this.paddingTop + param1;
             for (var17 = this.height + var16; var17 <= var12; var17 = var17 + var15) {
-              var9.setScale(5557, this.texture.a((float)this.width, -1080), this.texture.b((float)this.height, 107), 1.0f);
-              this.toolkit.a(vf.field_a, true);
+              var9.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)this.height, 107), 1.0f);
+              this.toolkit.setTextureTransformMode(vf.field_a, true);
               var18 = param0 + this.paddingLeft;
               var19 = this.width + var18;
               while (var19 <= var13) {
                 var23.setScale(5557, (float)this.width, (float)this.height, 0.0f);
                 var23.translate(var16, 16383, 0, var18);
-                this.toolkit.h(20837);
+                this.toolkit.markModelTransformChanged(20837);
                 var19 = var19 + var14;
                 var18 = var18 + var14;
-                this.toolkit.r((byte) -82);
+                this.toolkit.drawUnitQuadTriangles((byte) -82);
               }
               if (var13 > var18) {
                 var20 = -var18 + var13;
-                var9.setScale(5557, this.texture.a((float)var20, -1080), this.texture.b((float)this.height, 78), 1.0f);
-                this.toolkit.a(vf.field_a, true);
+                var9.setScale(5557, this.texture.getU((float)var20, -1080), this.texture.getV((float)this.height, 78), 1.0f);
+                this.toolkit.setTextureTransformMode(vf.field_a, true);
                 var23.setScale(5557, (float)var20, (float)this.height, 0.0f);
                 var23.translate(var16, 16383, 0, var18);
-                this.toolkit.h(20837);
-                this.toolkit.r((byte) -90);
+                this.toolkit.markModelTransformChanged(20837);
+                this.toolkit.drawUnitQuadTriangles((byte) -90);
               }
               var16 = var16 + var15;
             }
             if (var12 > var16) {
               var18Lifetime1 = -var16 + var12;
-              var9.setScale(5557, this.texture.a((float)this.width, -1080), this.texture.b((float)var18Lifetime1, 104), 1.0f);
-              this.toolkit.a(vf.field_a, true);
+              var9.setScale(5557, this.texture.getU((float)this.width, -1080), this.texture.getV((float)var18Lifetime1, 104), 1.0f);
+              this.toolkit.setTextureTransformMode(vf.field_a, true);
               var19Lifetime1 = this.paddingLeft + param0;
               for (var20Lifetime1 = var19Lifetime1 + this.width; var13 >= var20Lifetime1; var20Lifetime1 = var20Lifetime1 + var14) {
                 var23.setScale(5557, (float)this.width, (float)var18Lifetime1, 0.0f);
                 var23.translate(var16, 16383, 0, var19Lifetime1);
-                this.toolkit.h(20837);
+                this.toolkit.markModelTransformChanged(20837);
                 var19Lifetime1 = var19Lifetime1 + var14;
-                this.toolkit.r((byte) -109);
+                this.toolkit.drawUnitQuadTriangles((byte) -109);
               }
               if (var13 <= var19Lifetime1) {
-                this.toolkit.F((byte) 125);
-                this.toolkit.a(1, pja.field_l, 7);
-                this.toolkit.a(1, (byte) -101, pja.field_l);
+                this.toolkit.resetTextureTransform((byte) 125);
+                this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
+                this.toolkit.setAlphaCombineSource(1, (byte) -101, pja.field_l);
                 decompiledFrameRemainder0 = false;
               }
               else {
                 var21 = -var19Lifetime1 + var13;
-                var9.setScale(5557, this.texture.a((float)var21, -1080), this.texture.b((float)var18Lifetime1, 92), 1.0f);
-                this.toolkit.a(vf.field_a, true);
+                var9.setScale(5557, this.texture.getU((float)var21, -1080), this.texture.getV((float)var18Lifetime1, 92), 1.0f);
+                this.toolkit.setTextureTransformMode(vf.field_a, true);
                 var23.setScale(5557, (float)var21, (float)var18Lifetime1, 0.0f);
                 var23.translate(var16, 16383, 0, var19Lifetime1);
-                this.toolkit.h(20837);
-                this.toolkit.r((byte) -80);
+                this.toolkit.markModelTransformChanged(20837);
+                this.toolkit.drawUnitQuadTriangles((byte) -80);
               }
             }
           }
         } else {
-          var9.setScale(5557, this.texture.a((float)param2, -1080), this.texture.b((float)param3, 88), 1.0f);
+          var9.setScale(5557, this.texture.getU((float)param2, -1080), this.texture.getV((float)param3, 88), 1.0f);
           var23.setScale(5557, (float)param2, (float)param3, 0.0f);
           var23.translate(param1, 16383, 0, param0);
-          this.toolkit.a(vf.field_a, true);
-          this.toolkit.h(20837);
-          this.toolkit.r((byte) -66);
+          this.toolkit.setTextureTransformMode(vf.field_a, true);
+          this.toolkit.markModelTransformChanged(20837);
+          this.toolkit.drawUnitQuadTriangles((byte) -66);
         }
         if (decompiledFrameRemainder0) {
-          this.toolkit.F((byte) 125);
-          this.toolkit.a(1, pja.field_l, 7);
-          this.toolkit.a(1, (byte) -101, pja.field_l);
+          this.toolkit.resetTextureTransform((byte) 125);
+          this.toolkit.setRgbCombineSource(1, pja.field_l, 7);
+          this.toolkit.setAlphaCombineSource(1, (byte) -101, pja.field_l);
         }
 
     }
@@ -385,7 +385,7 @@ final class GpuSprite extends ToolkitSprite {
 
     final void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
-          this.texture.a(param1, param3, param2, param5, param6, param4, param0, (byte) -101);
+          this.texture.updatePixels(param1, param3, param2, param5, param6, param4, param0, (byte) -101);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mjb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -426,15 +426,15 @@ final class GpuSprite extends ToolkitSprite {
           } else {
             stackIn_4_5 = SetGrapplingHookFireForce.field_o;
           }
-          this.texture = ((GpuToolkit) (Object) stackIn_3_1).a(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, GpuDataType.field_f);
-          this.texture.a(true, (byte) -98, true);
-          stackIn_7_1 = (~param1 != ~this.texture.b((byte) 113));
+          this.texture = ((GpuToolkit) (Object) stackIn_3_1).createTexture2D(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, GpuDataType.UNSIGNED_BYTE);
+          this.texture.setRepeat(true, (byte) -98, true);
+          stackIn_7_1 = (~param1 != ~this.texture.getWidth((byte) 113));
           this.field_j = stackIn_7_1;
-          stackIn_10_1 = (param2 != this.texture.a((byte) -55));
+          stackIn_10_1 = (param2 != this.texture.getHeight((byte) -55));
           this.field_i = stackIn_10_1;
-          stackIn_14_1 = (!this.field_j) && (this.texture.a(-127));
+          stackIn_14_1 = (!this.field_j) && (this.texture.usesNormalizedCoordinates(-127));
           this.field_b = stackIn_14_1;
-          stackIn_18_1 = (!this.field_i) && (this.texture.a(36));
+          stackIn_18_1 = (!this.field_i) && (this.texture.usesNormalizedCoordinates(36));
           this.field_a = stackIn_18_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -472,15 +472,15 @@ final class GpuSprite extends ToolkitSprite {
           this.height = param2;
           this.width = param1;
           this.toolkit = param0;
-          this.texture = param0.a(param1, false, param3, param2, param5, true, param4);
-          this.texture.a(true, (byte) -98, true);
-          stackIn_4_1 = (param1 != this.texture.b((byte) 113));
+          this.texture = param0.createTexture2DFromPixels(param1, false, param3, param2, param5, true, param4);
+          this.texture.setRepeat(true, (byte) -98, true);
+          stackIn_4_1 = (param1 != this.texture.getWidth((byte) 113));
           this.field_j = stackIn_4_1;
-          stackIn_7_1 = (~this.texture.a((byte) -57) != ~param2);
+          stackIn_7_1 = (~this.texture.getHeight((byte) -57) != ~param2);
           this.field_i = stackIn_7_1;
-          stackIn_11_1 = (!this.field_j) && (this.texture.a(-13));
+          stackIn_11_1 = (!this.field_j) && (this.texture.usesNormalizedCoordinates(-13));
           this.field_b = stackIn_11_1;
-          stackIn_15_1 = (!this.field_i) && (this.texture.a(-128));
+          stackIn_15_1 = (!this.field_i) && (this.texture.usesNormalizedCoordinates(-128));
           this.field_a = stackIn_15_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -42,7 +42,7 @@ final class dpb {
           if (param1.field_a != 2) {
             if (0 == param1.field_a &&
               VariableCondition.field_e) {
-              var3Lifetime1 = "[" + bib.field_e + "] ";
+              var3Lifetime1 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
             }
             if (param1.field_a == 1) {
               var3Lifetime1 = "[" + SetReverbGain.a(wt.field_b, new String[]{param1.field_o}, 107) + "] ";

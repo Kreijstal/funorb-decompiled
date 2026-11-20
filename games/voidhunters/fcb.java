@@ -25,7 +25,7 @@ final class fcb implements oob {
         }
         AsteroidFieldFactory.field_b = true;
         ComponentCollision.a("common wordpackj", (byte) -102);
-        this.field_f = MissionBuilder.a(param0 + 0, gn.field_k.field_a);
+        this.field_f = MissionBuilder.a(param0 + 0, OpenGlGpuRectangleTexture.field_k.field_a);
         ComponentCollision.a("graphicsj", (byte) -103);
         this.field_i = MissionBuilder.a(param0 + 0, 16);
         ComponentCollision.a("fontmetricsj", (byte) -66);
@@ -49,42 +49,42 @@ final class fcb implements oob {
         ResourceArchive var4 = GetMassDriverReload.field_o;
         ResourceArchive var3 = GetShieldsDirectionalArc.field_r;
         ComponentCollision.a("creating request queue", (byte) -84);
-        rab.field_m = new wsb(82);
+        OpenGlGpuTexture3D.field_m = new wsb(82);
         ComponentCollision.a("requesting basic common graphics group", (byte) -68);
-        rab.field_m.a(var4, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
+        OpenGlGpuTexture3D.field_m.a(var4, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
         ComponentCollision.a("requesting common arialish12", (byte) -66);
-        rab.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
         ComponentCollision.a("requesting common arialish12 fontmetric", (byte) -59);
-        rab.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "arialish12", wqb.field_b);
         ComponentCollision.a("requesting common lobbyfont", (byte) -79);
-        rab.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var4, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
         ComponentCollision.a("requesting common lobbyfont metric", (byte) -72);
-        rab.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(var3, GetBombletSprayAimarc.field_p, false, "lobby", wqb.field_b);
         ComponentCollision.a("requesting jfx sounds", (byte) -66);
-        rab.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_l);
+        OpenGlGpuTexture3D.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_l);
         ComponentCollision.a("requesting vorbis sounds", (byte) -53);
-        rab.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_k);
+        OpenGlGpuTexture3D.field_m.a(LoadBlackboxRecording.field_r, -1, SetRepairModePower.field_p, this.field_k);
         ComponentCollision.a("requesting patches", (byte) -112);
-        rab.field_m.a(ttb.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.field_j);
+        OpenGlGpuTexture3D.field_m.a(ttb.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.field_j);
         ComponentCollision.a("requesting midis", (byte) -113);
-        rab.field_m.a(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.field_h);
+        OpenGlGpuTexture3D.field_m.a(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.field_h);
         ComponentCollision.a("requesting basic graphics", (byte) -108);
         if (param0 != 1) {
           this.field_a = (ResourceArchive) null;
         }
-        rab.field_m.a(this.field_i, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
+        OpenGlGpuTexture3D.field_m.a(this.field_i, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
         ComponentCollision.a("requesting jpeg graphics", (byte) -87);
-        rab.field_m.a(SetTorpedoProjectileOndamageParticles.field_o, -1, SetTorpedoProjectileOndamageParticles.field_o, this.field_d);
+        OpenGlGpuTexture3D.field_m.a(SetTorpedoProjectileOndamageParticles.field_o, -1, SetTorpedoProjectileOndamageParticles.field_o, this.field_d);
         ComponentCollision.a("requesting font graphics", (byte) -64);
-        rab.field_m.a(this.field_e, GetBombletSprayAimarc.field_p, false, "basic", wqb.field_b);
+        OpenGlGpuTexture3D.field_m.a(this.field_e, GetBombletSprayAimarc.field_p, false, "basic", wqb.field_b);
         ComponentCollision.a("requesting textures", (byte) -107);
-        rab.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_a);
+        OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_a);
         ComponentCollision.a("requesting texturemetrics", (byte) -66);
-        rab.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_m);
+        OpenGlGpuTexture3D.field_m.a(GetThrusterParticleSpeedDownshift.field_p, -1, koa.field_k, this.field_m);
         ComponentCollision.a("requesting extradata1", (byte) -94);
-        rab.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_f);
+        OpenGlGpuTexture3D.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_f);
         ComponentCollision.a("requesting extradata2", (byte) -77);
-        rab.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_b);
+        OpenGlGpuTexture3D.field_m.a(lwa.field_vb, -1, SetUseLines.field_q, this.field_b);
         ComponentCollision.a("end of requestdata", (byte) -98);
     }
 
@@ -289,9 +289,9 @@ final class fcb implements oob {
           SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.field_i);
           WorldPoint.a("button_depressed", 80, "basic", this.field_i);
           lo.field_c = SetGrapplingHookRopeBreakLength.a(this.field_i, true, "basic", "achievements_large");
-          ubb.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
+          OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
           wu.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
-          un.a(ubb.field_j, 121);
+          un.a(OpenGlGpuTexture2D.field_j, 121);
           un.a(wu.field_h, 126);
           kua.field_a = new Sprite(32, 32);
           kua.field_a.setRasterTarget();

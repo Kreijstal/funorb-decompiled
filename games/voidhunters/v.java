@@ -35,9 +35,9 @@ final class v extends htb {
         int[] var24;
         int[] var26;
         var8 = VoidHunters.field_G;
-        var1 = new Sprite[mma.field_a];
+        var1 = new Sprite[GpuProjectionMode.field_a];
         if (!param0) {
-          for (var2 = 0; mma.field_a > var2; var2++) {
+          for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
             var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
             var25 = sh.field_a[var2];
             if (!SetBurstFireMaxEnergy.field_o[var2]) {
@@ -63,7 +63,7 @@ final class v extends htb {
           }
         } else {
           v.b(true);
-          for (var2 = 0; mma.field_a > var2; var2++) {
+          for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
             var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
             var23 = sh.field_a[var2];
             if (!SetBurstFireMaxEnergy.field_o[var2]) {

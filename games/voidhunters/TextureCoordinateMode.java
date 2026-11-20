@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uja {
+final class TextureCoordinateMode {
     static int field_b;
     static String field_a;
 
     public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 > -121) {
-          uja.clearSharedReferences((byte) 103);
+          TextureCoordinateMode.clearSharedReferences((byte) 103);
         }
     }
 
@@ -19,8 +19,8 @@ final class uja {
         int[] var5 = null;
         int var6 = 0;
         int var7 = VoidHunters.field_G;
-        Sprite[] var1 = new Sprite[mma.field_a];
-        for (var2 = 0; var2 < mma.field_a; var2++) {
+        Sprite[] var1 = new Sprite[GpuProjectionMode.field_a];
+        for (var2 = 0; var2 < GpuProjectionMode.field_a; var2++) {
           var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
           var4 = sh.field_a[var2];
           var5 = new int[var3];
@@ -31,7 +31,7 @@ final class uja {
         }
         MatchResults.a(84);
         if (param0) {
-          uja.a(false);
+          TextureCoordinateMode.a(false);
         }
         return var1;
     }

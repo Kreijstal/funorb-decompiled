@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseTrails extends ConsoleCommand {
-    static kba field_p;
+    static TextureTransformMode field_p;
     static float field_o;
 
     GetUseTrails(String param0, Class[] param1, String param2) {
@@ -25,7 +25,7 @@ final class GetUseTrails extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_p = (kba) null;
+            field_p = (TextureTransformMode) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(1, 92));
           return stackIn_3_0;
@@ -45,6 +45,6 @@ final class GetUseTrails extends ConsoleCommand {
 
     static {
         field_o = 0.005976562388241291f;
-        field_p = new kba();
+        field_p = new TextureTransformMode();
     }
 }

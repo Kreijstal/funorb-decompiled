@@ -205,7 +205,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
-            var7 = "[" + bib.field_e + "] ";
+            var7 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
           }
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
             if (!nv.field_n) {

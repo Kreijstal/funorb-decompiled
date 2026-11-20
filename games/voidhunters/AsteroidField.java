@@ -781,7 +781,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime61 = dqb.a((byte) -123, "keycode_move_rotate_right");
           if (null != var2Lifetime61) {
-            bib.field_f = var2Lifetime61[0] & 255;
+            UnsupportedGpuMaterialEffect.field_f = var2Lifetime61[0] & 255;
           }
           var2Lifetime62 = dqb.a((byte) -47, "keycode_move_strafe_left");
           if (var2Lifetime62 != null) {
@@ -1165,7 +1165,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime157 = dqb.a((byte) -94, "COMPONENT_ARM_SHORT_TEXT");
           if (null != var2Lifetime157) {
-            ubb.field_k = qpa.a((byte) -125, var2Lifetime157);
+            OpenGlGpuTexture2D.field_k = qpa.a((byte) -125, var2Lifetime157);
           }
           var2Lifetime158 = dqb.a((byte) -8, "COMPONENT_ASTEROID_0_TEXT");
           if (null != var2Lifetime158) {
@@ -1712,7 +1712,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime293 = dqb.a((byte) -6, "tutorial_radial_menu");
           if (var2Lifetime293 != null) {
-            slb.field_b = qpa.a((byte) -125, var2Lifetime293);
+            TextureCombineSource.field_b = qpa.a((byte) -125, var2Lifetime293);
           }
           var2Lifetime294 = dqb.a((byte) -26, "tutorial_save_blueprint");
           if (var2Lifetime294 != null) {

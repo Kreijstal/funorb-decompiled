@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetVariableAction extends MissionAction implements DiffableState {
-    static mma field_c;
+    static GpuProjectionMode field_c;
     private int index;
     static int field_b;
     private int value;
@@ -67,7 +67,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
 
     final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
-          field_c = (mma) null;
+          field_c = (GpuProjectionMode) null;
           if (0 != param0) {
             return this.value;
           }
@@ -132,7 +132,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
             System.out.println("int value has changed. before=" + var5.value + ", now=" + this.value);
           }
           if (obfuscationGuard > -19) {
-            field_c = (mma) null;
+            field_c = (GpuProjectionMode) null;
           }
           if (var4 == 0) {
             return;
@@ -254,6 +254,6 @@ final class SetVariableAction extends MissionAction implements DiffableState {
     }
 
     static {
-        field_c = new mma();
+        field_c = new GpuProjectionMode();
     }
 }

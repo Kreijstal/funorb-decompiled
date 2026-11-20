@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetGrappleDebris extends ConsoleCommand {
-    static kba field_o;
+    static TextureTransformMode field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -48,6 +48,6 @@ final class SetGrappleDebris extends ConsoleCommand {
     }
 
     static {
-        field_o = new kba();
+        field_o = new TextureTransformMode();
     }
 }

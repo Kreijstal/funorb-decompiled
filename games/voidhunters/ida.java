@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ida extends mc {
-    static kba field_x;
+    static TextureTransformMode field_x;
     static gj field_w;
     private IntrusiveDeque field_v;
 
@@ -124,7 +124,7 @@ final class ida extends mc {
         if (param0 == 6093) {
           return null;
         }
-        field_x = (kba) null;
+        field_x = (TextureTransformMode) null;
         return null;
     }
 
@@ -408,7 +408,7 @@ final class ida extends mc {
     }
 
     static {
-        field_x = new kba();
+        field_x = new TextureTransformMode();
         field_w = new gj();
     }
 }

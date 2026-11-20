@@ -40,7 +40,7 @@ final class ob extends pib {
           this.field_i = param2;
           this.field_k = param3;
           this.field_g.a(62, (pib) (this));
-          jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, PointLight.toOpenGlExternalFormat(this.field_d, false), 5121, (byte[]) null, 0);
           this.a(-95, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

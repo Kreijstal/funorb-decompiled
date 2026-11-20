@@ -661,7 +661,7 @@ final class ResourceArchive {
                   var22 = null;
                   var23 = 0;
                   if (GetMissionVotes.field_p) {
-                    var22 = "</col>" + uda.field_a + "<col=A00000>";
+                    var22 = "</col>" + GpuMaterialEffect.field_a + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
                     var25Lifetime1Lifetime1 = var22;

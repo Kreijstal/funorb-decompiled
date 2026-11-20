@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hab extends uda {
+final class hab extends GpuMaterialEffect {
     private boolean field_f;
     static int field_k;
     static int field_i;
@@ -10,11 +10,11 @@ final class hab extends uda {
     static ShipComponentDefinition[] field_g;
     static String field_e;
 
-    final void b(int param0, boolean param1) {
+    final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
           return;
         }
-        this.field_d.a(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -26,9 +26,9 @@ final class hab extends uda {
         field_j = null;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param2 != 5) {
-          this.a(88);
+          this.disable(88);
         }
     }
 
@@ -37,71 +37,71 @@ final class hab extends uda {
         this.field_f = false;
     }
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         try {
-          this.field_d.a(param2, -121);
+          this.toolkit.setTexture(param2, -121);
           if (param0 <= 42) {
-            this.b(-13, true);
+            this.applyRenderState(-13, true);
           }
-          this.field_d.h(-126, param1);
+          this.toolkit.setTextureCombineMode(-126, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hab.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         GpuTransform3D var4 = null;
         if (param0 != 5) {
           return;
         }
-        hdb var3 = this.field_d.J(10);
+        GpuCubeTexture var3 = this.toolkit.getEnvironmentCubeTexture(10);
         if (var3 == null) {
-          this.field_d.a(0, (byte) -78, GetArmageddonLength.field_q);
+          this.toolkit.setAlphaCombineSource(0, (byte) -78, GetArmageddonLength.field_q);
           return;
         }
         if (param1) {
-          this.field_d.g(1, -97);
-          this.field_d.a(var3, param0 - 119);
-          this.field_d.a((byte) -111, GetArmageddonLength.field_p);
-          this.field_d.g(1, param0 ^ -60);
-          this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
-          this.field_d.a(true, param0 ^ -21120, false, pja.field_l, 2);
-          this.field_d.a(0, (byte) -97, GetArmageddonLength.field_q);
-          var4 = this.field_d.H((byte) -125);
-          var4.copyRotationWithXTranslation(param0 ^ 5, this.field_d.z((byte) 103));
-          this.field_d.a(LoadSettings.field_o, true);
-          this.field_d.g(0, -71);
+          this.toolkit.setActiveTextureUnit(1, -97);
+          this.toolkit.setTexture(var3, param0 - 119);
+          this.toolkit.setTextureCoordinateMode((byte) -111, GetArmageddonLength.field_p);
+          this.toolkit.setActiveTextureUnit(1, param0 ^ -60);
+          this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
+          this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, pja.field_l, 2);
+          this.toolkit.setAlphaCombineSource(0, (byte) -97, GetArmageddonLength.field_q);
+          var4 = this.toolkit.getTextureTransform((byte) -125);
+          var4.copyRotationWithXTranslation(param0 ^ 5, this.toolkit.getInverseViewTransform((byte) 103));
+          this.toolkit.setTextureTransformMode(LoadSettings.field_o, true);
+          this.toolkit.setActiveTextureUnit(0, -71);
           this.field_f = true;
           return;
         }
-        this.field_d.a(0, (byte) -78, GetArmageddonLength.field_q);
+        this.toolkit.setAlphaCombineSource(0, (byte) -78, GetArmageddonLength.field_q);
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = 26 / ((34 - param0) / 63);
         return true;
     }
 
-    final void a(int param0) {
+    final void disable(int param0) {
         if (!this.field_f) {
-          this.field_d.a(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
-          this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+          this.toolkit.setAlphaCombineSource(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
+          this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
           if (param0 != 2543) {
             field_i = -56;
             return;
           }
           return;
         }
-        this.field_d.g(1, -43);
-        this.field_d.a((byte) -111, meb.field_d);
-        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
-        this.field_d.a(2, pea.field_d, param0 - 2536);
-        this.field_d.a(0, (byte) -125, SetGrapplingHookMaxExtension8Force.field_q);
-        this.field_d.F((byte) 116);
-        this.field_d.a((ura) null, param0 - 2652);
-        this.field_d.g(0, param0 ^ -2481);
+        this.toolkit.setActiveTextureUnit(1, -43);
+        this.toolkit.setTextureCoordinateMode((byte) -111, meb.field_d);
+        this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setRgbCombineSource(2, pea.field_d, param0 - 2536);
+        this.toolkit.setAlphaCombineSource(0, (byte) -125, SetGrapplingHookMaxExtension8Force.field_q);
+        this.toolkit.resetTextureTransform((byte) 116);
+        this.toolkit.setTexture((GpuTexture) null, param0 - 2652);
+        this.toolkit.setActiveTextureUnit(0, param0 ^ -2481);
         this.field_f = false;
-        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         if (param0 != 2543) {
           field_i = -56;
           return;

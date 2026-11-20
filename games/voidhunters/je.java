@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class je {
-    static aba field_c;
+    static TextureCombineOperation field_c;
     private GpuVertexBuffer field_a;
     private GpuVertexBuffer field_d;
     private GpuIndexBuffer field_b;
@@ -213,6 +213,6 @@ final class je {
     }
 
     static {
-        field_c = new aba();
+        field_c = new TextureCombineOperation();
     }
 }

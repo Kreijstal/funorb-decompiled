@@ -125,7 +125,7 @@ final class hqb {
             var9 = param1;
             var10 = param6;
             for (var11 = param0; var11 < param2; var11++) {
-              var12 = sv.field_f[var11];
+              var12 = UnlitGpuMaterialEffect.field_f[var11];
               if (param3) {
                 stackIn_23_0 = GetLaserEnergyUsed.field_o[var12];
               } else {
@@ -133,10 +133,10 @@ final class hqb {
               }
               var13 = stackIn_23_0;
               if (var13 > var7_int) {
-                sv.field_f[var11] = sv.field_f[var8];
+                UnlitGpuMaterialEffect.field_f[var11] = UnlitGpuMaterialEffect.field_f[var8];
                 incrementValue$0 = var8;
                 var8++;
-                sv.field_f[incrementValue$0] = var12;
+                UnlitGpuMaterialEffect.field_f[incrementValue$0] = var12;
                 if (var13 < var9) {
                   var9 = var13;
                 }
@@ -152,11 +152,11 @@ final class hqb {
           }
           for (var7_intLifetime1 = param2 - 1; param0 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = sv.field_f[var8Lifetime1];
-              var10Lifetime1 = sv.field_f[1 + var8Lifetime1];
+              var9Lifetime1 = UnlitGpuMaterialEffect.field_f[var8Lifetime1];
+              var10Lifetime1 = UnlitGpuMaterialEffect.field_f[1 + var8Lifetime1];
               if (dla.a(param5 + 103, param3, var10Lifetime1, var9Lifetime1)) {
-                sv.field_f[var8Lifetime1] = var10Lifetime1;
-                sv.field_f[1 + var8Lifetime1] = var9Lifetime1;
+                UnlitGpuMaterialEffect.field_f[var8Lifetime1] = var10Lifetime1;
+                UnlitGpuMaterialEffect.field_f[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -189,7 +189,7 @@ final class hqb {
             if (var5 == null &&
               var6 == 0) {
               this.field_i.a(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
-              this.field_i.a(SetReverbGain.a(uda.field_c, new String[]{var8}, 104), (byte) -53, 6);
+              this.field_i.a(SetReverbGain.a(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
               if (param2 != null &&
                 param1 != 2 &&
                 !GetBloomThresholdPercentage.field_p) {
@@ -529,7 +529,7 @@ final class hqb {
 
     hqb(llb param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_i = new aw(aba.field_a);
+          this.field_i = new aw(TextureCombineOperation.field_a);
           this.field_d = param1;
           this.field_b = param0;
           this.field_g = param3;

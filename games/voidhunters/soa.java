@@ -171,7 +171,7 @@ final class soa extends llb {
                 if (qsa.field_b.field_Q) {
                   var9 = null;
                   if (GetMissionVotes.field_p) {
-                    var9 = "<col=A00000>" + uda.field_a + "</col>";
+                    var9 = "<col=A00000>" + GpuMaterialEffect.field_a + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;

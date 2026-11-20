@@ -1,67 +1,67 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn extends kva implements eb {
+final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTexture2D {
     static int field_m;
-    private int field_j;
-    private int field_l;
+    private int height;
+    private int width;
     static gl field_k;
 
-    gn(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, float[] param4, int param5, int param6) {
-        super(param0, 34037, param1, GpuDataType.field_d, param2 * param3, false);
+    OpenGlGpuRectangleTexture(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, float[] param4, int param5, int param6) {
+        super(param0, 34037, param1, GpuDataType.FLOAT, param2 * param3, false);
         try {
-          this.field_j = param3;
-          this.field_l = param2;
-          this.field_h.a((ura) (this), -108);
+          this.height = param3;
+          this.width = param2;
+          this.toolkit.setTexture((GpuTexture) (this), -108);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5126, param4, 4 * param5);
+          jaggl.OpenGL.glTexImage2Df(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5126, param4, 4 * param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    public final void a(tu param0, int param1) {
+    public final void setFilterMode(TextureFilterMode param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.setFilterMode(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(boolean param0, byte param1, boolean param2) {
+    public final void setRepeat(boolean param0, byte param1, boolean param2) {
         if (param1 != -98) {
           field_k = (gl) null;
         }
     }
 
-    public final void b(int param0) {
-        super.b(param0);
+    public final void bind(int param0) {
+        super.bind(param0);
     }
 
-    gn(OpenGlGpuToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
-        super(param0, 34037, ComponentAttachmentPlan.field_d, GpuDataType.field_f, param2 * param1, false);
+    OpenGlGpuRectangleTexture(OpenGlGpuToolkit param0, int param1, int param2, int[] param3, int param4, int param5) {
+        super(param0, 34037, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE, param2 * param1, false);
         try {
-          this.field_j = param2;
-          this.field_l = param1;
-          this.field_h.a((ura) (this), -112);
+          this.height = param2;
+          this.width = param1;
+          this.toolkit.setTexture((GpuTexture) (this), -112);
           jaggl.OpenGL.glPixelStorei(3314, param5);
-          jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_l, this.field_j, 0, 32993, this.field_h.field_Nc, param3, param4 * 4);
+          jaggl.OpenGL.glTexImage2Di(this.target, 0, 6408, this.width, this.height, 0, 32993, this.toolkit.field_Nc, param3, param4 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    gn(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5, int param6) {
-        super(param0, 34037, param1, GpuDataType.field_f, param3 * param2, false);
+    OpenGlGpuRectangleTexture(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5, int param6) {
+        super(param0, 34037, param1, GpuDataType.UNSIGNED_BYTE, param3 * param2, false);
         try {
-          this.field_l = param2;
-          this.field_j = param3;
-          this.field_h.a((ura) (this), -108);
+          this.width = param2;
+          this.height = param3;
+          this.toolkit.setTexture((GpuTexture) (this), -108);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5121, param4, param5);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.format), 5121, param4, param5);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
@@ -69,9 +69,9 @@ final class gn extends kva implements eb {
         }
     }
 
-    public final float a(float param0, int param1) {
+    public final float getU(float param0, int param1) {
         if (param1 != -1080) {
-          this.field_j = -47;
+          this.height = -47;
           return param0;
         }
         return param0;
@@ -84,7 +84,7 @@ final class gn extends kva implements eb {
         field_k = null;
     }
 
-    public final boolean a(int param0) {
+    public final boolean usesNormalizedCoordinates(int param0) {
         int var2 = 32 % ((param0 + 92) / 34);
         return false;
     }
@@ -130,7 +130,7 @@ final class gn extends kva implements eb {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, byte param7) {
+    public final void updatePixels(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, byte param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -138,16 +138,16 @@ final class gn extends kva implements eb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param7 >= -78) {
-            this.a(-1.5097984075546265f, 96);
+            this.getU(-1.5097984075546265f, 96);
           }
-          this.field_h.a((ura) (this), -121);
+          this.toolkit.setTexture((GpuTexture) (this), -121);
           if (param4 == 0) {
             param4 = param2;
           }
           if (param2 != param4) {
             jaggl.OpenGL.glPixelStorei(3314, param4);
           }
-          jaggl.OpenGL.glTexSubImage2Di(this.field_e, 0, param6, param0, param2, param1, 32993, this.field_h.field_Nc, param5, param3);
+          jaggl.OpenGL.glTexSubImage2Di(this.target, 0, param6, param0, param2, param1, 32993, this.toolkit.field_Nc, param5, param3);
           if (param2 == param4) {
             return;
           }
@@ -167,39 +167,39 @@ final class gn extends kva implements eb {
         }
     }
 
-    gn(OpenGlGpuToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
+    OpenGlGpuRectangleTexture(OpenGlGpuToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, 34037, param1, param2, param3 * param4, false);
         try {
-          this.field_j = param4;
-          this.field_l = param3;
-          this.field_h.a((ura) (this), -109);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.field_f), od.a(true, this.field_b), (byte[]) null, 0);
+          this.height = param4;
+          this.width = param3;
+          this.toolkit.setTexture((GpuTexture) (this), -109);
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.getInternalFormat((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.format), od.toOpenGlDataType(true, this.dataType), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final int b(byte param0) {
+    public final int getWidth(byte param0) {
         if (param0 != 113) {
-          this.field_l = -45;
-          return this.field_l;
+          this.width = -45;
+          return this.width;
         }
-        return this.field_l;
+        return this.width;
     }
 
-    public final float b(float param0, int param1) {
+    public final float getV(float param0, int param1) {
         if (param1 <= 58) {
-          this.field_l = 118;
+          this.width = 118;
           return param0;
         }
         return param0;
     }
 
-    public final int a(byte param0) {
+    public final int getHeight(byte param0) {
         if (param0 >= -40) {
           return 85;
         }
-        return this.field_j;
+        return this.height;
     }
 
     static {

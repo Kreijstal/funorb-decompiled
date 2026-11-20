@@ -77,7 +77,7 @@ final class fma extends mfb {
         if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
           lw.field_i.b(-561, nna.field_v);
           lw.field_i.b(param0 ^ -9108, DualLinkNode.field_f);
-          lc.field_b = new bs(bib.field_e, lw.field_i);
+          lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
           tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
           tb.field_a.b(-561, SpawnChoiceFactory.field_c);
@@ -89,7 +89,7 @@ final class fma extends mfb {
           return;
         }
         lw.field_i.b(param0 ^ -9108, DualLinkNode.field_f);
-        lc.field_b = new bs(bib.field_e, lw.field_i);
+        lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, lw.field_i);
         tb.field_a = new llb(0L, (llb) null);
         tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
         tb.field_a.b(-561, SpawnChoiceFactory.field_c);

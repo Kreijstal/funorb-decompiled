@@ -84,7 +84,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
         SetTorpedoAcceleration.field_p.writeByte(param0, param1);
         SetTorpedoAcceleration.field_p.writeByte(0, param2);
         SetTorpedoAcceleration.field_p.writeShort(param3, true);
-        SetTorpedoAcceleration.field_p.rsaEncrypt(SetSalvoDamageMultiplier.field_p, bib.field_g, param0 + 16711680);
+        SetTorpedoAcceleration.field_p.rsaEncrypt(SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, param0 + 16711680);
         RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24335, 18);
         int fieldTemp$0 = RequestNewestBlackboxRecording.field_p.position + 1;
         RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;

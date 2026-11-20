@@ -47,7 +47,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void a(byte param0, uja param1) {
+    final void setTextureCoordinateMode(byte param0, TextureCoordinateMode param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -59,7 +59,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             return;
           }
           if (meb.field_d != param1) {
-            var3_int = gm.a(param1, 9216);
+            var3_int = gm.toOpenGlTextureCoordinateMode(param1, 9216);
             jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);
@@ -99,7 +99,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         var8 = VoidHunters.field_G;
         try {
           var5_int = -83 / ((-4 - param3) / 32);
-          if (tu.field_b != param0) {
+          if (TextureFilterMode.field_b != param0) {
             if (GetFightersPerPlayerMaximum.field_o != param0) {
               if (di.field_i == param0) {
                 var6 = 4;
@@ -142,22 +142,22 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void j(byte param0) {
+    final void applyBlendingEnabled(byte param0) {
         if (param0 != -56) {
           this.field_Lc = false;
         }
-        if (!this.field_zb) {
+        if (!this.blendingEnabled) {
           jaggl.OpenGL.glDisable(3042);
         } else {
           jaggl.OpenGL.glEnable(3042);
         }
     }
 
-    final void o(byte param0) {
+    final void applyScissorEnabled(byte param0) {
         if (param0 != 81) {
           this.clearDepth();
         }
-        if (this.field_ac) {
+        if (this.scissorEnabled) {
           jaggl.OpenGL.glEnable(3089);
         } else {
           jaggl.OpenGL.glDisable(3089);
@@ -168,7 +168,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         if (param0 != -19) {
           return (GpuIndexBuffer) null;
         }
-        return (GpuIndexBuffer) ((Object) new OpenGlIndexBuffer(this, GpuDataType.field_e, param1));
+        return (GpuIndexBuffer) ((Object) new OpenGlIndexBuffer(this, GpuDataType.UNSIGNED_SHORT, param1));
     }
 
     final boolean enableBloom() {
@@ -185,19 +185,19 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_Ic.addLast(-10258, var4);
     }
 
-    final void a(int param0, boolean param1) {
+    final void setMultisampleEnabled(int param0, boolean param1) {
         if (!param1) {
           jaggl.OpenGL.glDisable(32925);
         } else {
           jaggl.OpenGL.glEnable(32925);
         }
         if (param0 >= -14) {
-          this.j((byte) -120);
+          this.applyBlendingEnabled((byte) -120);
         }
     }
 
     final void clearDepth() {
-        this.b((byte) -74, true);
+        this.setDepthWriteEnabled((byte) -74, true);
         jaggl.OpenGL.glClear(256);
     }
 
@@ -237,7 +237,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void e(boolean param0) {
+    final void applyDirectionalLightsEnabled(boolean param0) {
         if (param0) {
           this.field_Cc = (IntrusiveDeque) null;
         }
@@ -250,11 +250,11 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void F(int param0) {
+    final void applyDepthTestEnabled(int param0) {
         if (param0 != 12614) {
-          this.y(-43);
+          this.applyDepthWriteEnabled(-43);
         }
-        if (this.field_nc) {
+        if (this.depthTestEnabled) {
           jaggl.OpenGL.glEnable(2929);
         } else {
           jaggl.OpenGL.glDisable(2929);
@@ -275,7 +275,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void n(int param0) {
+    final void initializeRenderState(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -314,12 +314,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         jaggl.OpenGL.glFogi(2917, 9729);
         jaggl.OpenGL.glHint(3156, 4353);
         this.field_zc.setSwapInterval(0);
-        super.n(117);
+        super.initializeRenderState(117);
     }
 
-    final hdb a(boolean param0, int param1, int[][] param2, int param3) {
+    final GpuCubeTexture createCubeTexture(boolean param0, int param1, int[][] param2, int param3) {
         RuntimeException var5 = null;
-        qva stackIn_3_0 = null;
+        OpenGlGpuCubeTexture stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -328,8 +328,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           if (param1 != -5210) {
             this.applyPostProcessing();
           }
-          stackIn_3_0 = new qva(this, param3, param0, param2);
-          return (hdb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new OpenGlGpuCubeTexture(this, param3, param0, param2);
+          return (GpuCubeTexture) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -344,9 +344,9 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void B(int param0) {
-        if (this.field_Xb &&
-          !this.field_Hb) {
+    final void applyLightingEnabled(int param0) {
+        if (this.lightingEnabled &&
+          !this.lightingSuppressed) {
           jaggl.OpenGL.glEnable(2896);
         } else {
           jaggl.OpenGL.glDisable(2896);
@@ -356,35 +356,35 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final eb a(int param0, boolean param1, int[] param2, int param3, int param4, boolean param5, int param6) {
+    final GpuTexture2D createTexture2DFromPixels(int param0, boolean param1, int[] param2, int param3, int param4, boolean param5, int param6) {
         RuntimeException var8 = null;
-        ubb var9 = null;
-        eb stackIn_2_0 = null;
-        gn stackIn_9_0 = null;
-        ubb stackIn_11_0 = null;
-        ubb stackIn_13_0 = null;
+        OpenGlGpuTexture2D var9 = null;
+        GpuTexture2D stackIn_2_0 = null;
+        OpenGlGpuRectangleTexture stackIn_9_0 = null;
+        OpenGlGpuTexture2D stackIn_11_0 = null;
+        OpenGlGpuTexture2D stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param5) {
-            stackIn_2_0 = (eb) null;
+            stackIn_2_0 = (GpuTexture2D) null;
             return stackIn_2_0;
           }
           if (!this.field_Xc && (!bd.a(param0, (byte) -95) ||
             !bd.a(param3, (byte) -95))) {
             if (this.field_Zc) {
-              stackIn_9_0 = new gn(this, param0, param3, param2, param6, param4);
-              return (eb) ((Object) stackIn_9_0);
+              stackIn_9_0 = new OpenGlGpuRectangleTexture(this, param0, param3, param2, param6, param4);
+              return (GpuTexture2D) ((Object) stackIn_9_0);
             }
-            var9 = new ubb(this, ComponentAttachmentPlan.field_d, GpuDataType.field_f, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
-            var9.a(0, param3, param0, param6, param4, param2, 0, (byte) -104);
+            var9 = new OpenGlGpuTexture2D(this, ComponentAttachmentPlan.field_d, GpuDataType.UNSIGNED_BYTE, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
+            var9.updatePixels(0, param3, param0, param6, param4, param2, 0, (byte) -104);
             stackIn_11_0 = var9;
-            return (eb) ((Object) stackIn_11_0);
+            return (GpuTexture2D) ((Object) stackIn_11_0);
           }
-          stackIn_13_0 = new ubb(this, param0, param3, param1, param2, param6, param4);
-          return (eb) ((Object) stackIn_13_0);
+          stackIn_13_0 = new OpenGlGpuTexture2D(this, param0, param3, param1, param2, param6, param4);
+          return (GpuTexture2D) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -407,23 +407,23 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           jaggl.OpenGL.glPopMatrix();
         }
         var2 = -41 % ((param0 - 24) / 42);
-        if (!this.field_pb.a(-12178)) {
+        if (!this.projectionMode.usesViewTransform(-12178)) {
           if (this.field_ec) {
             jaggl.OpenGL.glLoadIdentity();
           } else {
-            jaggl.OpenGL.glLoadMatrixf(this.field_O.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.modelTransform.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
           }
           this.field_Dc = false;
         } else {
           if (!this.field_cd) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_gb.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.viewTransform.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
             this.field_cd = true;
-            this.m(3);
-            this.f(73);
+            this.applyDirectionalLightDirections(3);
+            this.applyPointLights(73);
           }
           if (!this.field_ec) {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_O.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glMultMatrixf(this.modelTransform.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
             this.field_Dc = true;
           } else {
             this.field_Dc = false;
@@ -434,10 +434,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     final void bindFramebuffer(Framebuffer param0) {
     }
 
-    final void h(boolean param0) {
-        GetPhasedEnergyBeamFireForce.field_o[2] = this.field_Rb * this.field_x;
-        GetPhasedEnergyBeamFireForce.field_o[1] = this.field_Rb * this.field_u;
-        GetPhasedEnergyBeamFireForce.field_o[0] = this.field_Rb * this.field_Sb;
+    final void applyAmbientLight(boolean param0) {
+        GetPhasedEnergyBeamFireForce.field_o[2] = this.ambientIntensity * this.lightBlue;
+        GetPhasedEnergyBeamFireForce.field_o[1] = this.ambientIntensity * this.lightGreen;
+        GetPhasedEnergyBeamFireForce.field_o[0] = this.ambientIntensity * this.lightRed;
         if (!param0) {
           field_Oc = -95;
         }
@@ -493,10 +493,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
 
     final void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
-          this.h((byte) 101);
-          this.a((ura) null, -111);
-          this.c(71, 0);
-          this.c(true);
+          this.selectScreenProjection((byte) 101);
+          this.setTexture((GpuTexture) null, -111);
+          this.setBlendMode(71, 0);
+          this.resetModelTransform(true);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
           jaggl.OpenGL.glRasterPos2i(param0, param1);
           jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, this.field_Nc, param4, param5);
@@ -514,8 +514,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         return (GpuVertexBuffer) ((Object) new OpenGlVertexBuffer(this, param0));
     }
 
-    final void I(int param0) {
-        if (!this.field_eb) {
+    final void applyAlphaTestEnabled(int param0) {
+        if (!this.alphaTestEnabled) {
           jaggl.OpenGL.glDisable(3008);
         } else {
           jaggl.OpenGL.glEnable(3008);
@@ -525,7 +525,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final uda a(byte param0, int param1) {
+    final GpuMaterialEffect createMaterialEffect(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -533,18 +533,18 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         var3 = -123 / ((-34 - param0) / 63);
         var4 = param1;
         if (3 == var4) {
-          return (uda) ((Object) new bma(this, this.field_Ab));
+          return (GpuMaterialEffect) ((Object) new bma(this, this.field_Ab));
         }
         if (var4 == 4) {
-          return (uda) ((Object) new vsb(this, this.field_Ab, this.field_Mb));
+          return (GpuMaterialEffect) ((Object) new vsb(this, this.field_Ab, this.field_Mb));
         }
         if (var4 != 8) {
-          return super.a((byte) 54, param1);
+          return super.createMaterialEffect((byte) 54, param1);
         }
-        return (uda) ((Object) new fib(this, this.field_Ab, this.field_Mb));
+        return (GpuMaterialEffect) ((Object) new fib(this, this.field_Ab, this.field_Mb));
     }
 
-    final void a(boolean param0, int param1, boolean param2, slb param3, int param4) {
+    final void setRgbCombineSource(boolean param0, int param1, boolean param2, TextureCombineSource param3, int param4) {
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
@@ -557,9 +557,9 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, param4 + 34176, qg.a(param3, false));
+          jaggl.OpenGL.glTexEnvi(8960, param4 + 34176, qg.toOpenGlCombineSource(param3, false));
           if (param1 != -21115) {
-            this.j(71);
+            this.applyFogParameters(71);
           }
           if (!param0) {
             stackIn_9_0 = 8960;
@@ -595,16 +595,16 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void y(int param0) {
+    final void applyDepthWriteEnabled(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -41) {
           this.field_Cc = (IntrusiveDeque) null;
         }
-        stackIn_6_0 = (this.field_M) && (this.field_X);
+        stackIn_6_0 = (this.field_M) && (this.depthWriteEnabled);
         jaggl.OpenGL.glDepthMask(stackIn_6_0);
     }
 
-    final void a(boolean param0, byte param1, slb param2, int param3) {
+    final void setAlphaCombineSource(boolean param0, byte param1, TextureCombineSource param2, int param3) {
         GpuVertexDeclaration var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_2_1 = 0;
@@ -615,7 +615,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, qg.a(param2, false));
+          jaggl.OpenGL.glTexEnvi(8960, param3 + 34184, qg.toOpenGlCombineSource(param2, false));
           stackIn_2_0 = 8960;
           stackIn_2_1 = param3 + 34200;
           if (param0) {
@@ -643,7 +643,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final boolean a(int param0, TextureFormat param1, GpuDataType param2) {
+    final boolean supportsTexture2DFormat(int param0, TextureFormat param1, GpuDataType param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -675,12 +675,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void w(int param0) {
+    final void applyFogEnabled(int param0) {
         if (param0 != 1) {
           this.setBloomParameters(0.3592780530452728f, 1.5894063711166382f, 0.25299444794654846f);
         }
-        if (this.field_cc &&
-          this.field_ub &&
+        if (this.effectFogEnabled &&
+          this.fogEnabled &&
           this.field_j >= 0) {
           jaggl.OpenGL.glEnable(2912);
         } else {
@@ -691,30 +691,30 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     final void setRenderTarget(ToolkitSprite param0, boolean param1) {
     }
 
-    final float f(byte param0) {
+    final float getPixelOffset(byte param0) {
         if (param0 > -90) {
           this.field_Yc = false;
         }
         return 0.0f;
     }
 
-    final void G(byte param0) {
-        GetPhasedEnergyBeamFireForce.field_o[2] = this.field_x * this.field_oc;
-        GetPhasedEnergyBeamFireForce.field_o[1] = this.field_oc * this.field_u;
-        GetPhasedEnergyBeamFireForce.field_o[0] = this.field_Sb * this.field_oc;
+    final void applyDirectionalLightColors(byte param0) {
+        GetPhasedEnergyBeamFireForce.field_o[2] = this.lightBlue * this.sunIntensity;
+        GetPhasedEnergyBeamFireForce.field_o[1] = this.sunIntensity * this.lightGreen;
+        GetPhasedEnergyBeamFireForce.field_o[0] = this.lightRed * this.sunIntensity;
         GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
         jaggl.OpenGL.glLightfv(16384, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
-        GetPhasedEnergyBeamFireForce.field_o[1] = this.field_u * -this.field_tc;
+        GetPhasedEnergyBeamFireForce.field_o[1] = this.lightGreen * -this.antiSunIntensity;
         if (param0 <= 4) {
           return;
         }
-        GetPhasedEnergyBeamFireForce.field_o[2] = -this.field_tc * this.field_x;
+        GetPhasedEnergyBeamFireForce.field_o[2] = -this.antiSunIntensity * this.lightBlue;
         GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
-        GetPhasedEnergyBeamFireForce.field_o[0] = this.field_Sb * -this.field_tc;
+        GetPhasedEnergyBeamFireForce.field_o[0] = this.lightRed * -this.antiSunIntensity;
         jaggl.OpenGL.glLightfv(16385, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
-    final void G(int param0) {
+    final void applyViewTransform(int param0) {
         this.field_cd = false;
         this.I((byte) -105);
         if (param0 != 17891) {
@@ -722,12 +722,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void y(byte param0) {
+    final void applyProjectionMatrix(byte param0) {
         jaggl.OpenGL.glMatrixMode(5889);
         if (param0 >= -17) {
-          this.s((byte) -2);
+          this.applyBlendFunction((byte) -2);
         }
-        jaggl.OpenGL.glLoadMatrixf(this.field_Fb, 0);
+        jaggl.OpenGL.glLoadMatrixf(this.projectionMatrix, 0);
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
@@ -860,7 +860,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var12 = (hua) (this.field_yc.removeFirst(true));
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_d);
         }
-        if (100663296 < this.g(3554) &&
+        if (100663296 < this.getGpuMemoryUsage(3554) &&
           (this.field_Tc + 60000L) < wt.a(false)) {
           System.gc();
           this.field_Tc = wt.a(false);
@@ -868,10 +868,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         super.updateFrame(param0);
     }
 
-    final gf a(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5) {
+    final GpuTexture3D createTexture3D(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5) {
         RuntimeException var7 = null;
-        gf stackIn_2_0 = null;
-        rab stackIn_4_0 = null;
+        GpuTexture3D stackIn_2_0 = null;
+        OpenGlGpuTexture3D stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -880,10 +880,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 == -16539) {
-            stackIn_4_0 = new rab(this, param3, param4, param0, param1, param2);
-            return (gf) ((Object) stackIn_4_0);
+            stackIn_4_0 = new OpenGlGpuTexture3D(this, param3, param4, param0, param1, param2);
+            return (GpuTexture3D) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (gf) null;
+          stackIn_2_0 = (GpuTexture3D) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -905,13 +905,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final eb a(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final GpuTexture2D createTexture2DFromFloats(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7) {
         RuntimeException var9 = null;
-        uja var10 = null;
-        ubb var11 = null;
-        ubb stackIn_7_0 = null;
-        ubb stackIn_10_0 = null;
-        gn stackIn_12_0 = null;
+        TextureCoordinateMode var10 = null;
+        OpenGlGpuTexture2D var11 = null;
+        OpenGlGpuTexture2D stackIn_7_0 = null;
+        OpenGlGpuTexture2D stackIn_10_0 = null;
+        OpenGlGpuRectangleTexture stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -920,22 +920,22 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param6) {
-            var10 = (uja) null;
-            this.a((byte) -46, (uja) null);
+            var10 = (TextureCoordinateMode) null;
+            this.setTextureCoordinateMode((byte) -46, (TextureCoordinateMode) null);
           }
           if (!this.field_Xc && (!bd.a(param7, (byte) -95) ||
             !bd.a(param4, (byte) -95))) {
             if (this.field_Zc) {
-              stackIn_12_0 = new gn(this, param0, param7, param4, param1, param3, param5);
-              return (eb) ((Object) stackIn_12_0);
+              stackIn_12_0 = new OpenGlGpuRectangleTexture(this, param0, param7, param4, param1, param3, param5);
+              return (GpuTexture2D) ((Object) stackIn_12_0);
             }
-            var11 = new ubb(this, param0, GpuDataType.field_d, GetSalvoaim.a(param7, (byte) -125), GetSalvoaim.a(param4, (byte) -101));
-            var11.a(param4, param0, (byte) -51, param5, param1, 0, 0, param7, param3);
+            var11 = new OpenGlGpuTexture2D(this, param0, GpuDataType.FLOAT, GetSalvoaim.a(param7, (byte) -125), GetSalvoaim.a(param4, (byte) -101));
+            var11.updateFloatPixels(param4, param0, (byte) -51, param5, param1, 0, 0, param7, param3);
             stackIn_10_0 = var11;
-            return (eb) ((Object) stackIn_10_0);
+            return (GpuTexture2D) ((Object) stackIn_10_0);
           }
-          stackIn_7_0 = new ubb(this, param0, param7, param4, param2, param1, param3, param5);
-          return (eb) ((Object) stackIn_7_0);
+          stackIn_7_0 = new OpenGlGpuTexture2D(this, param0, param7, param4, param2, param1, param3, param5);
+          return (GpuTexture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -960,7 +960,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         return null;
     }
 
-    final void a(java.awt.Canvas param0, Object param1, int param2) {
+    final void releaseSurface(java.awt.Canvas param0, Object param1, int param2) {
         Long var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -973,7 +973,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var4 = (Long) (param1);
           this.field_zc.releaseSurface(param0, var4.longValue());
           if (param2 != 0) {
-            this.e(false);
+            this.applyDirectionalLightsEnabled(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -996,25 +996,25 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void f(int param0) {
-        fsb var3 = null;
+    final void applyPointLights(int param0) {
+        PointLight var3 = null;
         int var4 = 0;
         int var5 = 0;
         float var6 = 0.0f;
         int var7 = VoidHunters.field_G;
-        this.c(true);
+        this.resetModelTransform(true);
         int var2 = 0;
         if (param0 <= 66) {
           return;
         }
-        while (this.field_Kb > var2) {
-          var3 = this.field_Lb[var2];
-          var4 = var3.a(-118);
+        while (this.pointLightCount > var2) {
+          var3 = this.pointLights[var2];
+          var4 = var3.getColor(-118);
           var5 = 16386 + var2;
-          var6 = var3.d(-392138175) / 255.0f;
-          GetPhasedEnergyBeamFireForce.field_o[0] = (float)var3.c((byte) -79);
-          GetPhasedEnergyBeamFireForce.field_o[1] = (float)var3.a(true);
-          GetPhasedEnergyBeamFireForce.field_o[2] = (float)var3.d((byte) 62);
+          var6 = var3.getIntensity(-392138175) / 255.0f;
+          GetPhasedEnergyBeamFireForce.field_o[0] = (float)var3.getX((byte) -79);
+          GetPhasedEnergyBeamFireForce.field_o[1] = (float)var3.getY(true);
+          GetPhasedEnergyBeamFireForce.field_o[2] = (float)var3.getZ((byte) 62);
           GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, GetPhasedEnergyBeamFireForce.field_o, 0);
           GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.a(255, var4 >> 16) * var6;
@@ -1022,15 +1022,15 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           GetPhasedEnergyBeamFireForce.field_o[1] = var6 * (float)(dla.a(var4, 65382) >> 8);
           GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
-          jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.c(16777215) * var3.c(16777215)));
+          jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.getRadius(16777215) * var3.getRadius(16777215)));
           jaggl.OpenGL.glEnable(var5);
           var2++;
         }
-        while (this.field_bb > var2) {
+        while (this.previousPointLightCount > var2) {
           jaggl.OpenGL.glDisable(var2 + 16386);
           var2++;
         }
-        super.f(75);
+        super.applyPointLights(75);
     }
 
     final synchronized void a(long param0, int param1) {
@@ -1042,7 +1042,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_Gc.addLast(-10258, var4);
     }
 
-    final Object a(byte param0, java.awt.Canvas param1) {
+    final Object createSurface(byte param0, java.awt.Canvas param1) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         Object stackIn_2_0 = null;
@@ -1076,81 +1076,81 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void C(int param0) {
+    final void applyTextureTransform(int param0) {
         if (param0 != 0) {
           return;
         }
         jaggl.OpenGL.glMatrixMode(5890);
-        if (SetGrappleDebris.field_o == this.field_A[this.field_ab]) {
+        if (SetGrappleDebris.field_o == this.textureTransformModes[this.activeTextureUnit]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
-          jaggl.OpenGL.glLoadMatrixf(this.field_Eb[this.field_ab].writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.textureTransforms[this.activeTextureUnit].writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final void v(byte param0) {
-        GetPhasedEnergyBeamFireForce.field_o[3] = (float)(this.field_jb >>> 24) / 255.0f;
-        GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.a(255, this.field_jb) / 255.0f;
-        GetPhasedEnergyBeamFireForce.field_o[1] = (float)dla.a(65280, this.field_jb) / 65280.0f;
+    final void applyTextureConstantColor(byte param0) {
+        GetPhasedEnergyBeamFireForce.field_o[3] = (float)(this.textureConstantColor >>> 24) / 255.0f;
+        GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.a(255, this.textureConstantColor) / 255.0f;
+        GetPhasedEnergyBeamFireForce.field_o[1] = (float)dla.a(65280, this.textureConstantColor) / 65280.0f;
         if (param0 != -109) {
-          uja var3 = (uja) null;
-          this.a((byte) -64, (uja) null);
+          TextureCoordinateMode var3 = (TextureCoordinateMode) null;
+          this.setTextureCoordinateMode((byte) -64, (TextureCoordinateMode) null);
         }
-        GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.a(this.field_jb, 16711680) / 16711680.0f;
+        GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.a(this.textureConstantColor, 16711680) / 16711680.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
-    final void l(byte param0) {
+    final void applyAlphaCombineOperation(byte param0) {
         if (param0 < 109) {
           return;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34162, tc.a(8448, this.field_U[this.field_ab]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, tc.toOpenGlCombineOperation(8448, this.alphaCombineOperations[this.activeTextureUnit]));
     }
 
     final void setBloomParameters(float param0, float param1, float param2) {
     }
 
     final void copyFrontToBackBuffer() {
-        if (0 >= this.field_db &&
-          !(0 < this.field_i)) {
+        if (0 >= this.viewportWidth &&
+          !(0 < this.viewportHeight)) {
           return;
         }
-        int var1 = this.field_H;
-        int var2 = this.field_F;
-        int var3 = this.field_xc;
-        int var4 = this.field_Bb;
-        this.v(-107);
+        int var1 = this.scissorLeft;
+        int var2 = this.scissorRight;
+        int var3 = this.scissorTop;
+        int var4 = this.scissorBottom;
+        this.resetScissor(-107);
         jaggl.OpenGL.glReadBuffer(1028);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.w((byte) -101);
-        this.d(false, -30305);
-        this.c((byte) -73, false);
-        this.b(false, -1700);
-        this.b((byte) -74, false);
-        this.a((ura) null, -116);
-        this.a(false, (byte) -124, false, -2);
-        this.h(45, 1);
-        this.c(84, 0);
+        this.selectClipSpaceProjection((byte) -101);
+        this.setFogEnabled(false, -30305);
+        this.setLightingEnabled((byte) -73, false);
+        this.setDepthTestEnabled(false, -1700);
+        this.setDepthWriteEnabled((byte) -74, false);
+        this.setTexture((GpuTexture) null, -116);
+        this.setMaterial(false, (byte) -124, false, -2);
+        this.setTextureCombineMode(45, 1);
+        this.setBlendMode(84, 0);
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
         jaggl.OpenGL.glMatrixMode(5888);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glRasterPos2i(0, 0);
-        jaggl.OpenGL.glCopyPixels(0, 0, this.field_db, this.field_i, 6144);
+        jaggl.OpenGL.glCopyPixels(0, 0, this.viewportWidth, this.viewportHeight, 6144);
         jaggl.OpenGL.glFlush();
         jaggl.OpenGL.glReadBuffer(1029);
         jaggl.OpenGL.glDrawBuffer(1029);
         this.setClip(var1, var3, var2, var4);
     }
 
-    final eb a(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final GpuTexture2D createTexture2DFromBytes(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7) {
         RuntimeException var9 = null;
-        ubb var10 = null;
-        ubb stackIn_7_0 = null;
-        gn stackIn_10_0 = null;
-        ubb stackIn_12_0 = null;
+        OpenGlGpuTexture2D var10 = null;
+        OpenGlGpuTexture2D stackIn_7_0 = null;
+        OpenGlGpuRectangleTexture stackIn_10_0 = null;
+        OpenGlGpuTexture2D stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -1159,21 +1159,21 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param7 != 11) {
-            this.a(true, 116, (int[][]) null, -28);
+            this.createCubeTexture(true, 116, (int[][]) null, -28);
           }
           if (!this.field_Xc && (!bd.a(param4, (byte) -95) ||
             !bd.a(param5, (byte) -95))) {
             if (this.field_Zc) {
-              stackIn_10_0 = new gn(this, param2, param4, param5, param1, param0, param3);
-              return (eb) ((Object) stackIn_10_0);
+              stackIn_10_0 = new OpenGlGpuRectangleTexture(this, param2, param4, param5, param1, param0, param3);
+              return (GpuTexture2D) ((Object) stackIn_10_0);
             }
-            var10 = new ubb(this, param2, GpuDataType.field_f, GetSalvoaim.a(param4, (byte) -107), GetSalvoaim.a(param5, (byte) -127));
-            var10.a(param3, param1, param5, param4, param0, 0, 3314, 0, param2);
+            var10 = new OpenGlGpuTexture2D(this, param2, GpuDataType.UNSIGNED_BYTE, GetSalvoaim.a(param4, (byte) -107), GetSalvoaim.a(param5, (byte) -127));
+            var10.updateBytePixels(param3, param1, param5, param4, param0, 0, 3314, 0, param2);
             stackIn_12_0 = var10;
-            return (eb) ((Object) stackIn_12_0);
+            return (GpuTexture2D) ((Object) stackIn_12_0);
           }
-          stackIn_7_0 = new ubb(this, param2, param4, param5, param6, param1, param0, param3);
-          return (eb) ((Object) stackIn_7_0);
+          stackIn_7_0 = new OpenGlGpuTexture2D(this, param2, param4, param5, param6, param1, param0, param3);
+          return (GpuTexture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -1194,19 +1194,19 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void m(byte param0) {
-        jaggl.OpenGL.glViewport(this.field_Y, this.field_Cb, this.field_db, this.field_i);
+    final void applyViewport(byte param0) {
+        jaggl.OpenGL.glViewport(this.viewportX, this.viewportY, this.viewportWidth, this.viewportHeight);
         int var2 = 105 / ((param0 + 40) / 57);
     }
 
-    final void p(byte param0) {
+    final void applyModelTransform(byte param0) {
         if (param0 <= 84) {
           return;
         }
         this.I((byte) 92);
     }
 
-    final void i(byte param0) {
+    final void commitDirectionalLights(byte param0) {
         int var2 = -60 % ((-45 - param0) / 51);
     }
 
@@ -1441,20 +1441,20 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         int[] var8 = new int[param3 * param2];
         int[] var5 = var8;
         for (var6 = 0; param3 > var6; var6++) {
-          jaggl.OpenGL.glReadPixelsi(param0, -1 + (-param1 + (this.field_i - var6)), param2, 1, 32993, this.field_Nc, var8, param2 * var6);
+          jaggl.OpenGL.glReadPixelsi(param0, -1 + (-param1 + (this.viewportHeight - var6)), param2, 1, 32993, this.field_Nc, var8, param2 * var6);
         }
         return var8;
     }
 
-    final void A(byte param0) {
+    final void applyScissorRectangle(byte param0) {
         int var2 = -28 % ((param0 + 6) / 45);
-        jaggl.OpenGL.glScissor(this.field_H + this.field_Y, this.field_i + (this.field_Cb - this.field_Bb), this.field_F - this.field_H, -this.field_xc + this.field_Bb);
+        jaggl.OpenGL.glScissor(this.scissorLeft + this.viewportX, this.viewportHeight + (this.viewportY - this.scissorBottom), this.scissorRight - this.scissorLeft, -this.scissorTop + this.scissorBottom);
     }
 
-    final void t(int param0) {
-        jaggl.OpenGL.glActiveTexture(33984 + this.field_ab);
+    final void applyActiveTextureUnit(int param0) {
+        jaggl.OpenGL.glActiveTexture(33984 + this.activeTextureUnit);
         if (param0 != 12) {
-          this.e(false);
+          this.applyDirectionalLightsEnabled(false);
         }
     }
 
@@ -1467,15 +1467,15 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_Ec.addLast(-10258, var3);
     }
 
-    final void m(int param0) {
+    final void applyDirectionalLightDirections(int param0) {
         if (param0 != 3) {
           return;
         }
-        jaggl.OpenGL.glLightfv(16384, 4611, this.field_wc, 0);
-        jaggl.OpenGL.glLightfv(16385, 4611, this.field_cb, 0);
+        jaggl.OpenGL.glLightfv(16384, 4611, this.sunDirection, 0);
+        jaggl.OpenGL.glLightfv(16385, 4611, this.antiSunDirection, 0);
     }
 
-    final void j(int param0) {
+    final void applyFogParameters(int param0) {
         this.field_r = (float)(-this.field_Qb + this.field_Wb);
         this.field_p = (float)(-this.field_j) + this.field_r;
         if (this.field_p < (float)this.field_h) {
@@ -1495,12 +1495,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     final void applyPostProcessing() {
     }
 
-    final eb a(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4) {
+    final GpuTexture2D createTexture2D(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4) {
         RuntimeException var6 = null;
-        eb stackIn_2_0 = null;
-        ubb stackIn_9_0 = null;
-        gn stackIn_11_0 = null;
-        ubb stackIn_13_0 = null;
+        GpuTexture2D stackIn_2_0 = null;
+        OpenGlGpuTexture2D stackIn_9_0 = null;
+        OpenGlGpuRectangleTexture stackIn_11_0 = null;
+        OpenGlGpuTexture2D stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -1509,20 +1509,20 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 115) {
-            stackIn_2_0 = (eb) null;
+            stackIn_2_0 = (GpuTexture2D) null;
             return stackIn_2_0;
           }
           if (!this.field_Xc && (!bd.a(param1, (byte) -95) ||
             !bd.a(param2, (byte) -95))) {
             if (this.field_Zc) {
-              stackIn_11_0 = new gn(this, param3, param4, param1, param2);
-              return (eb) ((Object) stackIn_11_0);
+              stackIn_11_0 = new OpenGlGpuRectangleTexture(this, param3, param4, param1, param2);
+              return (GpuTexture2D) ((Object) stackIn_11_0);
             }
-            stackIn_9_0 = new ubb(this, param3, param4, GetSalvoaim.a(param1, (byte) -102), GetSalvoaim.a(param2, (byte) -127));
-            return (eb) ((Object) stackIn_9_0);
+            stackIn_9_0 = new OpenGlGpuTexture2D(this, param3, param4, GetSalvoaim.a(param1, (byte) -102), GetSalvoaim.a(param2, (byte) -127));
+            return (GpuTexture2D) ((Object) stackIn_9_0);
           }
-          stackIn_13_0 = new ubb(this, param3, param4, param1, param2);
-          return (eb) ((Object) stackIn_13_0);
+          stackIn_13_0 = new OpenGlGpuTexture2D(this, param3, param4, param1, param2);
+          return (GpuTexture2D) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -1546,18 +1546,18 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     final void restoreDefaultFramebuffer() {
     }
 
-    final void o(int param0) {
+    final void applyRgbCombineOperation(int param0) {
         if (param0 > -64) {
           return;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, tc.a(8448, this.field_z[this.field_ab]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, tc.toOpenGlCombineOperation(8448, this.rgbCombineOperations[this.activeTextureUnit]));
     }
 
-    final void d(int param0, int param1) {
+    final void setTextureCoordinateIndex(int param0, int param1) {
         int var3 = 5 % ((36 - param0) / 33);
     }
 
-    final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
+    final boolean supportsTexture3DFormat(GpuDataType param0, TextureFormat param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1589,13 +1589,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void r(int param0) {
-        int var2 = this.field_Wc[this.field_ab];
+    final void unbindTexture(int param0) {
+        int var2 = this.field_Wc[this.activeTextureUnit];
         if (param0 != 3) {
           this.field_Mc = false;
         }
         if (var2 != 0) {
-          this.field_Wc[this.field_ab] = 0;
+          this.field_Wc[this.activeTextureUnit] = 0;
           jaggl.OpenGL.glBindTexture(var2, 0);
           jaggl.OpenGL.glDisable(var2);
         }
@@ -1779,17 +1779,17 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void s(byte param0) {
+    final void applyBlendFunction(byte param0) {
         int var3;
         var3 = VoidHunters.field_G;
         if (param0 != -39) {
           return;
         }
-        if (GetGrapplingHookRopeBreakLength.field_o != this.field_fc) {
-          if (this.field_fc == GpuTransform3D.field_b) {
+        if (GetGrapplingHookRopeBreakLength.field_o != this.blendFunction) {
+          if (this.blendFunction == GpuTransform3D.field_b) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
-            if (DebugSendable.field_e == this.field_fc) {
+            if (DebugSendable.field_e == this.blendFunction) {
               jaggl.OpenGL.glBlendFunc(774, 1);
             }
           }

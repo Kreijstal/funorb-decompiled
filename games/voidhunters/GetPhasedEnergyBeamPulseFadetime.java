@@ -83,14 +83,14 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (tc.field_c == SetBombletSprayReload.field_p) {
               if (!param4) {
-                qva.field_j = SetMissileLauncherProjectileLife.a(param2, param5, false, (byte) -70);
+                OpenGlGpuCubeTexture.field_j = SetMissileLauncherProjectileLife.a(param2, param5, false, (byte) -70);
               } else {
                 var11 = (String) null;
-                qva.field_j = SetFullMissionSet.a(96, SetTorpedoAimarc.field_p, (String) null, false, param5);
+                OpenGlGpuCubeTexture.field_j = SetFullMissionSet.a(96, SetTorpedoAimarc.field_p, (String) null, false, param5);
               }
               RequestNewestBlackboxRecording.field_p.position = 0;
               RequestNewestBlackboxRecording.field_p.writeByte(param3 ^ 13, 14);
-              RequestNewestBlackboxRecording.field_p.writeByte(0, qva.field_j.a((byte) 56).field_a);
+              RequestNewestBlackboxRecording.field_p.writeByte(0, OpenGlGpuCubeTexture.field_j.a((byte) 56).field_a);
               lnb.b(-1, 117);
               tc.field_c = SetSpecialOrderBoxHeight.field_o;
             }
@@ -110,7 +110,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ShipBlueprint.a(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
               qga.field_b.position = 0;
-              dqa.a(-87, param0, param4, qva.field_j, param1);
+              dqa.a(-87, param0, param4, OpenGlGpuCubeTexture.field_j, param1);
               tc.field_c = of.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -179,10 +179,10 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ffb.field_e = jwa.a(false, var13);
               SetClientSideDragging.field_p = qga.field_b.readUnsignedByte((byte) -94);
               tc.field_c = GetOndamageParticleSpeed.field_o;
-              if (qva.field_j.a((byte) 124) == GetSalvoDamageMultiplier.field_r) {
+              if (OpenGlGpuCubeTexture.field_j.a((byte) 124) == GetSalvoDamageMultiplier.field_r) {
                 SetFighterBayAimspeed.field_o.a(MissionList.b((byte) -106), param3 ^ 13);
               } else {
-                if (qva.field_j.a((byte) 112) == GetTorpedoReload.field_p) {
+                if (OpenGlGpuCubeTexture.field_j.a((byte) 112) == GetTorpedoReload.field_p) {
                   SetShowTutorial.field_p.a(MissionList.b((byte) -103), 0);
                 }
               }

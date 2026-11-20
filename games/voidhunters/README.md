@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1017/1572 classes and 4495/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 555 opaque classes and 3720 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1040/1572 classes and 4863/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 532 opaque classes and 3352 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -20,6 +20,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `ToolkitFont` exposes ordinary and masked glyph drawing. Its software palette, monochrome and alpha variants name their pixel blitters; `GlyphMask` names the software span mask and OpenGL texture mask. Renderer capability names follow the original diagnostic messages for memory pools, backbuffers, shadows, bloom, environment maps, anti-aliasing, threads, particles, underwater effects, clipping and point lights.
 
 `GpuVertexBuffer` and `GpuIndexBuffer` expose allocation, locking, unlocking and disposal in the OpenGL and Direct3D backends. `VertexStreamLayout`, `VertexAttribute`, `GpuDataType` and `GpuVertexDeclaration` describe the input streams bound by `GpuToolkit`. The separate legacy 2D path uses `BitmapFont`, `SoftwareMonochromeBitmapFont`, `SoftwareAlphaBitmapFont`, `Sprite`, `ArgbSprite` and `SoftwareRasterizer2D` for markup, kerning, wrapping, glyphs, pixel operations and sprite transforms.
+
+`GpuTexture` has 2D, rectangle, 3D and cube implementations for OpenGL and Direct3D. Texture APIs name coordinate conversion, repeat/filter settings, pixel uploads, mipmap generation, format conversion and binding. `GpuToolkit` names render-state application, shared quad/line/circle geometry, perspective/orthographic/screen projections, model-view transforms and `PointLight` uploads. `GpuMaterialEffect` names material activation, parameters and callbacks for matrix and depth-range changes; `TextureCombineSource`, `TextureCombineOperation`, `TextureTransformMode` and `TextureCoordinateMode` describe the shared fixed-function texture state.
 
 `AudioPump` services `AudioOutput`; `JavaSoundAudioOutput` submits mixed PCM through Java Sound. `PcmStreamMixer` combines child streams and scheduled listeners. `MidiPcmStream` reads `MusicTrack` events with `MidiFileReader`, manages patch notes and controllers, and mixes them through `MusicPatchPcmStream`. `PcmSampleStream` names its forward/reverse, mono/stereo, interpolated/aligned and gain-ramped mixing kernels. `SoundCache` loads music samples and synthesized `SoundEffect` samples. `SoundInstrument`, `SoundEnvelope` and `SoundFilter` expose synthesis; `VorbisSample` decodes compressed music through its codebooks, floors, residues and mappings.
 

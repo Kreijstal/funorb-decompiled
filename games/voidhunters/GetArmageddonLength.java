@@ -3,9 +3,9 @@
  */
 final class GetArmageddonLength extends ConsoleCommand {
     static IntrusiveDeque field_r;
-    static slb field_q;
+    static TextureCombineSource field_q;
     static String field_o;
-    static uja field_p;
+    static TextureCoordinateMode field_p;
 
     public static void clearSharedReferences(byte param0) {
         field_q = null;
@@ -137,7 +137,7 @@ final class GetArmageddonLength extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_q = (slb) null;
+            field_q = (TextureCombineSource) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(62, 97));
           return stackIn_3_0;
@@ -158,7 +158,7 @@ final class GetArmageddonLength extends ConsoleCommand {
     static {
         field_r = new IntrusiveDeque();
         field_o = "Players: <%0>/<%1>";
-        field_q = new slb();
-        field_p = new uja();
+        field_q = new TextureCombineSource();
+        field_p = new TextureCoordinateMode();
     }
 }

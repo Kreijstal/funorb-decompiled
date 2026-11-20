@@ -3,7 +3,7 @@
  */
 final class meb implements wwa {
     private int field_a;
-    static uja field_d;
+    static TextureCoordinateMode field_d;
     private BitmapFont field_b;
     private int field_e;
     static float[] field_c;
@@ -106,7 +106,7 @@ final class meb implements wwa {
     }
 
     static {
-        field_d = new uja();
+        field_d = new TextureCoordinateMode();
         field_c = new float[4];
     }
 }

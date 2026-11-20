@@ -3,74 +3,74 @@
  */
 import java.util.*;
 
-final class wu extends uda {
+final class wu extends GpuMaterialEffect {
     private float field_f;
     static Sprite field_h;
     static String field_e;
     private rga field_g;
 
-    final void b(int param0, boolean param1) {
+    final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
           return;
         }
-        this.field_d.a(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         int var4;
         int var5;
-        ura var6;
+        GpuTexture var6;
         int var4Lifetime1;
         var5 = VoidHunters.field_G;
-        this.field_d.g(1, -124);
+        this.toolkit.setActiveTextureUnit(1, -124);
         if (param2 == 5) {
           if ((128 & param1) != 0) {
-            this.field_d.a((ura) null, -123);
-            this.field_d.g(0, -64);
+            this.toolkit.setTexture((GpuTexture) null, -123);
+            this.toolkit.setActiveTextureUnit(0, -64);
             return;
           }
           if ((1 & param0) != 1) {
             if (!this.field_g.field_b) {
-              this.field_d.a(this.field_g.field_a[0], -128);
+              this.toolkit.setTexture(this.field_g.field_a[0], -128);
             } else {
-              this.field_d.a(this.field_g.field_d, -122);
+              this.toolkit.setTexture(this.field_g.field_d, -122);
             }
-            this.field_d.g(0, -64);
+            this.toolkit.setActiveTextureUnit(0, -64);
             return;
           }
           if (this.field_g.field_b) {
-            this.field_f = (float)(this.field_d.field_pc % 4000) / 4000.0f;
-            this.field_d.a(this.field_g.field_d, -118);
-            this.field_d.g(0, -64);
+            this.field_f = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
+            this.toolkit.setTexture(this.field_g.field_d, -118);
+            this.toolkit.setActiveTextureUnit(0, -64);
             return;
           }
-          var4 = this.field_d.field_pc % 4000 * 16 / 4000;
-          this.field_d.a(this.field_g.field_a[var4], param2 - 126);
-          this.field_d.g(0, -64);
+          var4 = this.toolkit.field_pc % 4000 * 16 / 4000;
+          this.toolkit.setTexture(this.field_g.field_a[var4], param2 - 126);
+          this.toolkit.setActiveTextureUnit(0, -64);
           return;
         }
-        var6 = (ura) null;
-        this.a((byte) -1, -12, (ura) null);
+        var6 = (GpuTexture) null;
+        this.setTexture((byte) -1, -12, (GpuTexture) null);
         if ((128 & param1) != 0) {
-          this.field_d.a((ura) null, -123);
+          this.toolkit.setTexture((GpuTexture) null, -123);
         } else {
           if ((1 & param0) != 1) {
             if (!this.field_g.field_b) {
-              this.field_d.a(this.field_g.field_a[0], -128);
+              this.toolkit.setTexture(this.field_g.field_a[0], -128);
             } else {
-              this.field_d.a(this.field_g.field_d, -122);
+              this.toolkit.setTexture(this.field_g.field_d, -122);
             }
           } else {
             if (this.field_g.field_b) {
-              this.field_f = (float)(this.field_d.field_pc % 4000) / 4000.0f;
-              this.field_d.a(this.field_g.field_d, -118);
+              this.field_f = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
+              this.toolkit.setTexture(this.field_g.field_d, -118);
             } else {
-              var4Lifetime1 = this.field_d.field_pc % 4000 * 16 / 4000;
-              this.field_d.a(this.field_g.field_a[var4Lifetime1], param2 - 126);
+              var4Lifetime1 = this.toolkit.field_pc % 4000 * 16 / 4000;
+              this.toolkit.setTexture(this.field_g.field_a[var4Lifetime1], param2 - 126);
             }
           }
         }
-        this.field_d.g(0, -64);
+        this.toolkit.setActiveTextureUnit(0, -64);
         return;
     }
 
@@ -90,37 +90,37 @@ final class wu extends uda {
         }
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_d.g(1, param0 ^ -72);
-        this.field_d.a(MissionVariable.field_c, true, je.field_c);
-        this.field_d.a(true, param0 ^ -21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
-        this.field_d.a(0, (byte) -101, pja.field_l);
-        this.field_d.d(-34, 0);
-        this.field_d.g(0, -79);
-        this.field_d.e(-128, -16777216);
-        this.field_d.a(0, (byte) -111, pea.field_d);
+    final void enable(int param0, boolean param1) {
+        this.toolkit.setActiveTextureUnit(1, param0 ^ -72);
+        this.toolkit.setTextureCombineOperations(MissionVariable.field_c, true, je.field_c);
+        this.toolkit.setRgbCombineSource(true, param0 ^ -21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
+        this.toolkit.setAlphaCombineSource(0, (byte) -101, pja.field_l);
+        this.toolkit.setTextureCoordinateIndex(-34, 0);
+        this.toolkit.setActiveTextureUnit(0, -79);
+        this.toolkit.setTextureConstantColor(-128, -16777216);
+        this.toolkit.setAlphaCombineSource(0, (byte) -111, pea.field_d);
         if (param0 == 5) {
-          this.d(param0 + 3);
+          this.onTextureTransformChanged(param0 + 3);
           return;
         }
-        this.d(-88);
-        this.d(param0 + 3);
+        this.onTextureTransformChanged(-88);
+        this.onTextureTransformChanged(param0 + 3);
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = -105 % ((param0 - 34) / 63);
         return this.field_g.c((byte) 85);
     }
 
-    final void a(int param0) {
-        this.field_d.g(1, -59);
-        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
-        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 ^ 2536);
-        this.field_d.a(0, (byte) -101, SetGrapplingHookMaxExtension8Force.field_q);
-        this.field_d.d(-70, 1);
-        this.field_d.a((ura) null, -124);
-        this.field_d.g(0, -62);
-        this.field_d.a(0, (byte) -76, SetGrapplingHookMaxExtension8Force.field_q);
+    final void disable(int param0) {
+        this.toolkit.setActiveTextureUnit(1, -59);
+        this.toolkit.setTextureCombineOperations(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
+        this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, param0 ^ 2536);
+        this.toolkit.setAlphaCombineSource(0, (byte) -101, SetGrapplingHookMaxExtension8Force.field_q);
+        this.toolkit.setTextureCoordinateIndex(-70, 1);
+        this.toolkit.setTexture((GpuTexture) null, -124);
+        this.toolkit.setActiveTextureUnit(0, -62);
+        this.toolkit.setAlphaCombineSource(0, (byte) -76, SetGrapplingHookMaxExtension8Force.field_q);
         if (param0 != 2543) {
           field_h = (Sprite) null;
         }
@@ -258,29 +258,29 @@ final class wu extends uda {
         }
     }
 
-    final void d(int param0) {
+    final void onTextureTransformChanged(int param0) {
         GpuTransform3D var2 = null;
         GpuTransform3D var3 = null;
-        if (0 == this.field_d.t((byte) 9)) {
-          var2 = this.field_d.p(0);
-          this.field_d.g(1, -90);
-          var3 = this.field_d.H((byte) 82);
+        if (0 == this.toolkit.getActiveTextureUnit((byte) 9)) {
+          var2 = this.toolkit.getTextureTransform(0);
+          this.toolkit.setActiveTextureUnit(1, -90);
+          var3 = this.toolkit.getTextureTransform((byte) 82);
           var3.set(var2, 16383);
           var3.scale(-3286, 0.125f, 0.125f, 1.0f);
           var3.translate(this.field_f, 0.0f, 0.0f, (byte) 13);
-          this.field_d.a(LoadSettings.field_o, true);
-          this.field_d.g(0, -52);
+          this.toolkit.setTextureTransformMode(LoadSettings.field_o, true);
+          this.toolkit.setActiveTextureUnit(0, -52);
         }
         if (param0 == 8) {
           return;
         }
-        ura var4 = (ura) null;
-        this.a((byte) -37, 101, (ura) null);
+        GpuTexture var4 = (GpuTexture) null;
+        this.setTexture((byte) -37, 101, (GpuTexture) null);
     }
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         try {
-          this.field_d.a(param2, -124);
+          this.toolkit.setTexture(param2, -124);
           if (param0 <= 42) {
             field_h = (Sprite) null;
           }

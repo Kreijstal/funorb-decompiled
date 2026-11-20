@@ -108,13 +108,13 @@ final class VertexAttribute {
     }
 
     static {
-        field_k = new VertexAttribute(0, 3, GpuDataType.field_d);
-        field_g = new VertexAttribute(1, 3, GpuDataType.field_d);
-        field_d = new VertexAttribute(2, 4, GpuDataType.field_f);
-        field_e = new VertexAttribute(3, 1, GpuDataType.field_d);
-        field_l = new VertexAttribute(4, 2, GpuDataType.field_d);
-        field_h = new VertexAttribute(5, 3, GpuDataType.field_d);
-        field_b = new VertexAttribute(6, 4, GpuDataType.field_d);
+        field_k = new VertexAttribute(0, 3, GpuDataType.FLOAT);
+        field_g = new VertexAttribute(1, 3, GpuDataType.FLOAT);
+        field_d = new VertexAttribute(2, 4, GpuDataType.UNSIGNED_BYTE);
+        field_e = new VertexAttribute(3, 1, GpuDataType.FLOAT);
+        field_l = new VertexAttribute(4, 2, GpuDataType.FLOAT);
+        field_h = new VertexAttribute(5, 3, GpuDataType.FLOAT);
+        field_b = new VertexAttribute(6, 4, GpuDataType.FLOAT);
         field_m = SetMutatorVotes.a(16, -111);
         field_f = new byte[]{(byte)31, (byte)-117, (byte)8, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         field_n = "Launches a fighter for harrassment";

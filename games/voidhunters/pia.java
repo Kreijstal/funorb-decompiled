@@ -4,7 +4,7 @@
 final class pia extends oda implements oo {
     private ita field_v;
     private htb field_w;
-    static mma field_x;
+    static GpuProjectionMode field_x;
 
     public static void clearSharedReferences(int param0) {
         int var1 = -60 / ((-23 - param0) / 52);
@@ -63,6 +63,6 @@ final class pia extends oda implements oo {
     }
 
     static {
-        field_x = new mma();
+        field_x = new GpuProjectionMode();
     }
 }

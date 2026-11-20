@@ -4,7 +4,7 @@
 final class cs {
     static ehb field_c;
     static String field_b;
-    static tu field_a;
+    static TextureFilterMode field_a;
 
     final static void b(byte param0) {
         int var1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
@@ -20,7 +20,7 @@ final class cs {
 
     final static boolean a(char param0, int param1) {
         if (param1 != 0) {
-          field_a = (tu) null;
+          field_a = (TextureFilterMode) null;
           if (param0 < 65) {
             if (97 > param0) {
               return false;
@@ -78,6 +78,6 @@ final class cs {
     static {
         field_c = new ehb(16);
         field_b = "More armour";
-        field_a = new tu();
+        field_a = new TextureFilterMode();
     }
 }

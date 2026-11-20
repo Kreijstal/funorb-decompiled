@@ -55,7 +55,7 @@ final class ik extends IntrusiveNode {
         var2[230] = GetDebrisFoundInPairs.field_p;
         var2[102] = wja.field_b;
         var2[191] = GetWorldWidthUpshift.field_q;
-        var2[56] = kva.field_g;
+        var2[56] = OpenGlGpuTexture.field_g;
         var2[154] = pea.field_b;
         var2[147] = ArchiveRequest.field_m;
         var2[144] = voa.field_b;
@@ -67,7 +67,7 @@ final class ik extends IntrusiveNode {
         var2[117] = qca.field_wb;
         var2[197] = bia.field_c;
         var2[114] = SetLaserRandomness.field_q;
-        var2[177] = slb.field_a;
+        var2[177] = TextureCombineSource.field_a;
         var2[124] = PlayerActionFactory.field_a;
         var2[86] = fj.field_b;
         var2[137] = qab.field_d;
@@ -163,7 +163,7 @@ final class ik extends IntrusiveNode {
         var2[47] = GetUseNiceTrails.field_p;
         var2[208] = la.field_k;
         var2[206] = gib.field_a;
-        var2[228] = uja.field_b;
+        var2[228] = TextureCoordinateMode.field_b;
         var2[155] = GetShipAimLines.field_p;
         var2[139] = dla.field_c;
         var2[175] = GetMissileLauncherEnergyUsed.field_q;
@@ -175,7 +175,7 @@ final class ik extends IntrusiveNode {
         var2[123] = dfa.field_a;
         var2[205] = Particle.field_m;
         var2[204] = CarouselSlotStateDump.field_i;
-        var2[119] = uda.field_b;
+        var2[119] = GpuMaterialEffect.field_b;
         var2[87] = GetPlayerRepairAmount.field_o;
         var2[9] = hw.field_b;
         var2[43] = PartitionZone.field_e;

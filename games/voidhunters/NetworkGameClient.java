@@ -315,10 +315,10 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (ef.field_z == 13) {
           var3Lifetime2 = 1;
-          if (null != rab.field_m) {
-            stackIn_133_0 = (!rab.field_m.a((byte) 87)) ? 0 : 1;
+          if (null != OpenGlGpuTexture3D.field_m) {
+            stackIn_133_0 = (!OpenGlGpuTexture3D.field_m.a((byte) 87)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            IncrementVariableAction.a(rab.field_m.field_a, -1, rab.field_m.field_g);
+            IncrementVariableAction.a(OpenGlGpuTexture3D.field_m.field_a, -1, OpenGlGpuTexture3D.field_m.field_g);
           }
           if (var3Lifetime2 != 0) {
             ef.field_z = 20;

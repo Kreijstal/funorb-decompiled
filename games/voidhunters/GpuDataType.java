@@ -3,28 +3,28 @@
  */
 final class GpuDataType {
     int byteSize;
-    static GpuDataType field_g;
-    static GpuDataType field_i;
-    static GpuDataType field_c;
-    static GpuDataType field_f;
-    static GpuDataType field_e;
-    static GpuDataType field_a;
-    static GpuDataType field_b;
-    static GpuDataType field_d;
+    static GpuDataType BYTE;
+    static GpuDataType SHORT;
+    static GpuDataType INT;
+    static GpuDataType UNSIGNED_BYTE;
+    static GpuDataType UNSIGNED_SHORT;
+    static GpuDataType UNSIGNED_INT;
+    static GpuDataType HALF_FLOAT;
+    static GpuDataType FLOAT;
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
     public static void clearSharedReferences(int param0) {
-        field_i = null;
-        field_a = null;
-        field_e = null;
-        field_d = null;
-        field_c = null;
-        field_b = null;
-        field_f = null;
-        field_g = null;
+        SHORT = null;
+        UNSIGNED_INT = null;
+        UNSIGNED_SHORT = null;
+        FLOAT = null;
+        INT = null;
+        HALF_FLOAT = null;
+        UNSIGNED_BYTE = null;
+        BYTE = null;
         if (param0 < 5) {
           GpuDataType.clearSharedReferences(31);
         }
@@ -35,13 +35,13 @@ final class GpuDataType {
     }
 
     static {
-        field_g = new GpuDataType(1);
-        field_i = new GpuDataType(2);
-        field_c = new GpuDataType(4);
-        field_f = new GpuDataType(1);
-        field_e = new GpuDataType(2);
-        field_a = new GpuDataType(4);
-        field_b = new GpuDataType(2);
-        field_d = new GpuDataType(4);
+        BYTE = new GpuDataType(1);
+        SHORT = new GpuDataType(2);
+        INT = new GpuDataType(4);
+        UNSIGNED_BYTE = new GpuDataType(1);
+        UNSIGNED_SHORT = new GpuDataType(2);
+        UNSIGNED_INT = new GpuDataType(4);
+        HALF_FLOAT = new GpuDataType(2);
+        FLOAT = new GpuDataType(4);
     }
 }

@@ -159,7 +159,7 @@ final class bd {
           SetReverbDamp.field_q = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p);
           SetReverbDamp.field_q.a(18445, GetMissionDebrisDefaultProbability.field_o);
           var16 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button_mouseover");
-          aba.field_a = new aw(GetDebrisMax.field_o, var12, qc.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, nna.field_w);
+          TextureCombineOperation.field_a = new aw(GetDebrisMax.field_o, var12, qc.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, nna.field_w);
           dla.field_e = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
           dla.field_e.field_mb = var16;
           dla.field_e.field_gb = var13;

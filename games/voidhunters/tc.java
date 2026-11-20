@@ -6,7 +6,7 @@ final class tc {
     static boolean field_a;
     static boolean[][] field_b;
 
-    final static int a(int param0, aba param1) {
+    final static int toOpenGlCombineOperation(int param0, TextureCombineOperation param1) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;

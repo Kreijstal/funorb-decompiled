@@ -67,7 +67,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_radial_menu_radius(" + NodeHashTable.field_a + ")");
         System.out.println("set_minimap_width(" + GetAiFiringRangeUpshift.field_o + ")");
         System.out.println("set_minimap_height(" + vv.field_c + ")");
-        System.out.println("set_health_bar_width(" + tu.field_d + ")");
+        System.out.println("set_health_bar_width(" + TextureFilterMode.field_d + ")");
         System.out.println("set_health_bar_height(" + NebulaField.field_d + ")");
         System.out.println("set_reload_bar_width(" + GetSniperCannonAimarc.field_p + ")");
         System.out.println("set_reload_bar_height(" + ifa.field_d + ")");
@@ -170,7 +170,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_debris_detachment_force_multiplier(" + SetTorpedoAimspeed.field_o + ")");
         System.out.println("set_grapple_debris(" + SetArmageddonWarning.field_o + ")");
         System.out.println("set_debris_grabbing_range(" + SettingsChangeFactory.field_c + ")");
-        System.out.println("set_debris_max(" + kva.field_g + ")");
+        System.out.println("set_debris_max(" + OpenGlGpuTexture.field_g + ")");
         System.out.println("set_mission_votes(" + AsteroidFieldFactory.field_a + ")");
         System.out.println("set_mutator_votes(" + GetPhasedEnergyBeamReload.field_q + ")");
         System.out.println("set_mission_time_limit(" + SetTorpedoEnergyUsed.field_p + ")");
@@ -233,7 +233,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_point_defence_laser_reload(" + GetFighterRepairAmount.field_o + ")");
         System.out.println("set_mass_driver_aimspeed(" + qca.field_wb + ")");
         System.out.println("set_torpedo_aimspeed(" + bma.field_n + ")");
-        System.out.println("set_laser_aimspeed(" + uda.field_b + ")");
+        System.out.println("set_laser_aimspeed(" + GpuMaterialEffect.field_b + ")");
         System.out.println("set_fighter_bay_aimspeed(" + SetThrusterBindingMoveAndTurnHasOppositeMove.field_p + ")");
         System.out.println("set_spinning_blade_aimspeed(" + SetTorpedoFireForce.field_o + ")");
         System.out.println("set_sniper_cannon_aimspeed(" + nnb.field_e + ")");
@@ -291,7 +291,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_velocity_sustain_max(" + SetMissilesCooldown.field_o + ")");
         System.out.println("set_angular_velocity_sustain(" + GetMissileLauncherEnergyUsed.field_q + ")");
         System.out.println("set_thruster_particle_speed_downshift(" + GetSalvoHoldable.field_p + ")");
-        System.out.println("set_thruster_particle_life(" + slb.field_a + ")");
+        System.out.println("set_thruster_particle_life(" + TextureCombineSource.field_a + ")");
         System.out.println("set_angular_force_downshift(" + ge.field_c + ")");
         System.out.println("set_angular_velocity_sustain_max(" + SetMassDriverEnergyUsed.field_o + ")");
         System.out.println("set_torque_downshift(" + tua.field_a + ")");
@@ -343,7 +343,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_player_repair_time(" + GetTorpedoAcceleration.field_p + ")");
         System.out.println("set_player_repair_amount(" + SetSniperCannonFireForce.field_q + ")");
         if (param0 == 106) {
-          System.out.println("set_ai_repair_time(" + uja.field_b + ")");
+          System.out.println("set_ai_repair_time(" + TextureCoordinateMode.field_b + ")");
           System.out.println("set_ai_repair_amount(" + GetBombletSprayProjectileOndamageParticles.field_q + ")");
           System.out.println("set_fighter_repair_time(" + GetDebrisFoundInPairs.field_p + ")");
           System.out.println("set_fighter_repair_amount(" + SetKeepTeamColours.field_o + ")");

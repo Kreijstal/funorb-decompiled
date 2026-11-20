@@ -108,7 +108,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[24] = grb.field_i;
           SetSpinningBladeSpinupSpeed.field_o[43] = SoftwareDepthBuffer.field_e;
           SetSpinningBladeSpinupSpeed.field_o[17] = SetGrapplingHookMaxLength.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[20] = ubb.field_k;
+          SetSpinningBladeSpinupSpeed.field_o[20] = OpenGlGpuTexture2D.field_k;
           ShipSpawnedCondition.field_e = new String[56];
           SetSpinningBladeSpinupSpeed.field_o[8] = GetBoostersCooldown.field_q;
           SetSpinningBladeSpinupSpeed.field_o[46] = SetMpSandboxEnemySpawnLimit.field_o;

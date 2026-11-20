@@ -25,9 +25,9 @@ final class hpb extends TextureOperation {
           for (var7 = 0; var7 < hob.field_d; var7++) {
             this.c(-117, var7, param1);
             var8 = this.getInputColorRow((byte) 95, 0, GetToggledScoreboard.field_q);
-            var4[var7] = var8[0][rab.field_n];
-            var5[var7] = var8[1][rab.field_n];
-            var6[var7] = var8[2][rab.field_n];
+            var4[var7] = var8[0][OpenGlGpuTexture3D.field_n];
+            var5[var7] = var8[1][OpenGlGpuTexture3D.field_n];
+            var6[var7] = var8[2][OpenGlGpuTexture3D.field_n];
           }
         }
         return var10;
@@ -83,7 +83,7 @@ final class hpb extends TextureOperation {
           for (var4 = 0; hob.field_d > var4; var4++) {
             this.c(-95, var4, param0);
             var5 = this.getInputMonochromeRow(0, GetToggledScoreboard.field_q, 255);
-            var7[var4] = var5[rab.field_n];
+            var7[var4] = var5[OpenGlGpuTexture3D.field_n];
           }
         }
         return var3;
@@ -104,40 +104,40 @@ final class hpb extends TextureOperation {
         if (-3.141592653589793 <= (double)var6 &&
           -2.356194490192345 >= (double)var6) {
           GetToggledScoreboard.field_q = param2;
-          rab.field_n = param1;
+          OpenGlGpuTexture3D.field_n = param1;
         } else if (-1.5707963267948966 >= (double)var6 &&
           -2.356194490192345 <= (double)var6) {
-          rab.field_n = param2;
+          OpenGlGpuTexture3D.field_n = param2;
           GetToggledScoreboard.field_q = param1;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
           GetToggledScoreboard.field_q = param1;
-          rab.field_n = hob.field_d - param2;
+          OpenGlGpuTexture3D.field_n = hob.field_d - param2;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
-          rab.field_n = param1;
+          OpenGlGpuTexture3D.field_n = param1;
           GetToggledScoreboard.field_q = -param2 + GetTorpedoReload.field_o;
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
           GetToggledScoreboard.field_q = GetTorpedoReload.field_o - param2;
-          rab.field_n = -param1 + hob.field_d;
+          OpenGlGpuTexture3D.field_n = -param1 + hob.field_d;
         } else if (0.7853981633974483 <= (double)var6 &&
           1.5707963267948966 >= (double)var6) {
           GetToggledScoreboard.field_q = GetTorpedoReload.field_o - param1;
-          rab.field_n = hob.field_d - param2;
+          OpenGlGpuTexture3D.field_n = hob.field_d - param2;
         } else if (1.5707963267948966 <= (double)var6 &&
           2.356194490192345 >= (double)var6) {
           GetToggledScoreboard.field_q = -param1 + GetTorpedoReload.field_o;
-          rab.field_n = param2;
+          OpenGlGpuTexture3D.field_n = param2;
         } else {
           if ((double)var6 >= 2.356194490192345 &&
             3.141592653589793 >= (double)var6) {
             GetToggledScoreboard.field_q = param2;
-            rab.field_n = hob.field_d - param1;
+            OpenGlGpuTexture3D.field_n = hob.field_d - param1;
           }
         }
         GetToggledScoreboard.field_q = GetToggledScoreboard.field_q & wf.field_d;
-        rab.field_n = rab.field_n & SetMassDriverEnergyUsed.field_q;
+        OpenGlGpuTexture3D.field_n = OpenGlGpuTexture3D.field_n & SetMassDriverEnergyUsed.field_q;
     }
 
     public hpb() {

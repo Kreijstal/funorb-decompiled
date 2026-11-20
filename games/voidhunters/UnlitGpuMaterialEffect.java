@@ -1,55 +1,55 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sv extends uda {
+final class UnlitGpuMaterialEffect extends GpuMaterialEffect {
     static int[] field_f;
     static int field_e;
 
-    final void a(int param0, boolean param1) {
+    final void enable(int param0, boolean param1) {
         if (param0 == 5) {
-          this.field_d.c(true, 44);
+          this.toolkit.setLightingSuppressed(true, 44);
           return;
         }
-        this.a(91, false);
-        this.field_d.c(true, 44);
+        this.enable(91, false);
+        this.toolkit.setLightingSuppressed(true, 44);
     }
 
-    final boolean a(byte param0) {
+    final boolean isSupported(byte param0) {
         int var2 = -118 % ((34 - param0) / 63);
         return true;
     }
 
-    sv(GpuToolkit param0) {
+    UnlitGpuMaterialEffect(GpuToolkit param0) {
         super(param0);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setParameters(int param0, int param1, int param2) {
         if (param2 != 5) {
-          sv.clearSharedReferences(80);
+          UnlitGpuMaterialEffect.clearSharedReferences(80);
         }
     }
 
-    final void a(int param0) {
-        this.field_d.c(false, 75);
+    final void disable(int param0) {
+        this.toolkit.setLightingSuppressed(false, 75);
         if (param0 != 2543) {
           field_e = 30;
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void applyRenderState(int param0, boolean param1) {
         if (param0 != 5) {
-          ura var4 = (ura) null;
-          this.a((byte) 1, -18, (ura) null);
+          GpuTexture var4 = (GpuTexture) null;
+          this.setTexture((byte) 1, -18, (GpuTexture) null);
         }
     }
 
-    final void a(byte param0, int param1, ura param2) {
+    final void setTexture(byte param0, int param1, GpuTexture param2) {
         if (param0 < 42) {
           return;
         }
         try {
-          this.field_d.a(param2, -119);
-          this.field_d.h(-127, param1);
+          this.toolkit.setTexture(param2, -119);
+          this.toolkit.setTextureCombineMode(-127, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sv.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

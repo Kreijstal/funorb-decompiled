@@ -216,7 +216,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             SetReloadBarHeight.field_q[0][1 + var17_int] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, SpriteDimensions.field_o[var17_int], SetHealthBarHeight.field_p[var17_int]);
           }
           if (SetMutatorVotes.field_o.length >= 2) {
-            GetLaserAimarc.field_o[1] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, uda.field_a);
+            GetLaserAimarc.field_o[1] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, GpuMaterialEffect.field_a);
             array$0 = new cna[1 + SetMutatorVotes.field_o.length];
             SetReloadBarHeight.field_q[1] = array$0;
             SetReloadBarHeight.field_q[1][0] = new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);

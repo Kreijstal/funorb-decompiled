@@ -73,7 +73,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               if (0 == var6) {
                 if (null == SetSpinningBladeSpindamageMultiplier.field_o &&
                   VariableCondition.field_e) {
-                  var4 = "[" + bib.field_e + "] ";
+                  var4 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
                 }
                 if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
                   var6 = 1;

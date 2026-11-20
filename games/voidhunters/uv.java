@@ -18,7 +18,7 @@ final class uv implements wwa {
     private int field_h;
 
     final static int a(int param0, int param1) {
-        int var2 = kba.field_a.a(param1, (byte) 121) - kba.field_a.field_d;
+        int var2 = TextureTransformMode.field_a.a(param1, (byte) 121) - TextureTransformMode.field_a.field_d;
         int var3 = param0 + var2 / 4;
         if (var3 > 250) {
           var3 = 250;
