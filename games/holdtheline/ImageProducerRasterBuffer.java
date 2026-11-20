@@ -8,12 +8,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     static String field_j;
     static String field_k;
     static int field_m;
-    static sa field_n;
-    private java.awt.image.ImageConsumer field_i;
-    private java.awt.image.ColorModel field_l;
+    static NameRequestState field_n;
+    private java.awt.image.ImageConsumer consumer;
+    private java.awt.image.ColorModel colorModel;
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return this.field_i == param0;
+        return this.consumer == param0;
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
@@ -38,12 +38,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    private final synchronized void b(int param0) {
-        if (this.field_i == null) {
+    private final synchronized void publishPixels(int param0) {
+        if (this.consumer == null) {
           return;
         }
-        this.field_i.setPixels(param0, 0, this.field_f, this.field_c, this.field_l, this.field_h, 0, this.field_f);
-        this.field_i.imageComplete(2);
+        this.consumer.setPixels(param0, 0, this.width, this.height, this.colorModel, this.pixels, 0, this.width);
+        this.consumer.imageComplete(2);
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3) {
@@ -53,17 +53,17 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return PasswordValidator.a(1, 1, param1, param2, param0);
     }
 
-    final static long d(int param0) {
+    final static long millisSinceServerActivity(int param0) {
         if (param0 <= 67) {
           return 77L;
         }
-        return -cm.field_b + bb.b(-1);
+        return -cm.field_b + bb.monotonicTimeMillis(-1);
     }
 
-    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
+    final void draw(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-          this.b(0);
-          param2.drawImage(this.field_b, param1, param0, (java.awt.image.ImageObserver) (this));
+          this.publishPixels(0);
+          param2.drawImage(this.image, param1, param0, (java.awt.image.ImageObserver) (this));
           if (param3 != 34) {
             field_o = (String) null;
           }
@@ -74,10 +74,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          this.field_i = param0;
-          param0.setDimensions(this.field_f, this.field_c);
+          this.consumer = param0;
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
-          param0.setColorModel(this.field_l);
+          param0.setColorModel(this.colorModel);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
@@ -99,15 +99,15 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          if (this.field_i == param0) {
-            this.field_i = null;
+          if (this.consumer == param0) {
+            this.consumer = null;
           }
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Sprite a(int param0, byte param1, int param2) {
+    final static Sprite createRadialLightSprite(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var3;
@@ -134,20 +134,20 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return var6;
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, int param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, int param3) {
         try {
-          this.field_c = param1;
-          this.field_f = param0;
-          this.field_h = new int[1 + param0 * param1];
-          this.field_l = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-          this.field_b = param2.createImage((java.awt.image.ImageProducer) (this));
-          this.b(0);
-          param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.b(0);
-          param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.b(param3);
-          param2.prepareImage(this.field_b, (java.awt.image.ImageObserver) (this));
-          this.a(false);
+          this.height = param1;
+          this.width = param0;
+          this.pixels = new int[1 + param0 * param1];
+          this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.image = param2.createImage((java.awt.image.ImageProducer) (this));
+          this.publishPixels(0);
+          param2.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.publishPixels(0);
+          param2.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.publishPixels(param3);
+          param2.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.bindRaster(false);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -161,7 +161,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void a(int param0) {
+    final static void serviceAudio(int param0) {
         SoundPlayback var1 = null;
         int var2 = HoldTheLine.field_D;
         SoundPlayback var1Lifetime1;
@@ -199,7 +199,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int divideWithNegativeBias(int param0, int param1, byte param2) {
         int var4 = 106 / ((12 - param2) / 42);
         int var3 = param0 >>> 31;
         return -var3 + (var3 + param0) / param1;
@@ -212,6 +212,6 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         field_j = "Continue";
         field_o = "Age:";
         field_k = "Your vehicle can only hold <col=1>three</col> powerups at any one time. Collecting a fourth will replace the <col=1>oldest</col> powerup. Power-ups can also be lost in collisions or by being hit by weapons.<br><br>Each colour of powerup has a different effect, and the strength of the effect depends on how many powerups of that colour you currently have.";
-        field_n = new sa();
+        field_n = new NameRequestState();
     }
 }

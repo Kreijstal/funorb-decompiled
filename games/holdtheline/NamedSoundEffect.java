@@ -15,7 +15,7 @@ final class NamedSoundEffect extends PcmSample {
         if (DiskCacheRequest.field_w < 10) {
           return false;
         }
-        if (!mn.field_a) {
+        if (!mn.guestMode) {
           return !TextFieldValidator.e((byte) 63) ? true : false;
         }
         return false;

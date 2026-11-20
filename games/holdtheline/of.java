@@ -6,7 +6,7 @@ final class of {
         if (param0 != -969) {
           return true;
         }
-        if (pj.b((byte) 87)) {
+        if (RoadShadowRenderer.isGuestMode((byte) 87)) {
           return false;
         }
         if (0 >= fc.field_a) {

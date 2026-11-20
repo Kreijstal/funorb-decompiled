@@ -6,7 +6,7 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     static QuickChatDynamicCommand field_n;
     int[] key;
     int category;
-    static sh field_k;
+    static InputValidationError field_k;
     static String field_m;
     private static String field_z;
 
@@ -25,7 +25,7 @@ final class ArchiveKeyRequest extends IntrusiveNode {
     static {
         field_z = "fo.A(";
         field_n = new QuickChatDynamicCommand(1, 2, 2, 0);
-        field_k = new sh();
+        field_k = new InputValidationError();
         field_m = "Create a free Account";
     }
 }

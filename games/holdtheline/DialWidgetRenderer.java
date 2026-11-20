@@ -11,7 +11,7 @@ final class DialWidgetRenderer implements WidgetRenderer {
     private int field_g;
     private int field_d;
     private BitmapFont field_h;
-    static ll field_a;
+    static AccountProtocolState field_a;
     static SpriteAsset field_i;
 
     public static void clearSharedReferences(boolean param0) {
@@ -152,6 +152,6 @@ final class DialWidgetRenderer implements WidgetRenderer {
 
     static {
         field_f = (RoadStripRenderer) ((Object) new ShadedRoadStripRenderer(7, 30.0f, new int[]{8372223, 16777215}));
-        field_a = new ll();
+        field_a = new AccountProtocolState();
     }
 }

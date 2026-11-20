@@ -190,7 +190,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             this.validateText((String) null, (byte) -84);
           }
           if (!param0.equals(this.field_k)) {
-            var3 = we.getEmailValidationResult((byte) -85, param0);
+            var3 = SavedRasterState.getEmailValidationResult((byte) -85, param0);
             if (!var3.isComplete(250)) {
               stackIn_9_0 = um.field_a;
               return stackIn_9_0;

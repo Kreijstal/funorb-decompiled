@@ -77,12 +77,12 @@ final class IntrusiveDequeCursor {
               if (param1.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + cd.a(param0 + 32381, bb.b(-1) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + cd.formatCookieDate(param0 + 32381, bb.monotonicTimeMillis(-1) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              eo.a(param2, -31645, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluateJavaScript(param2, -31645, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
-            bb.a(param2, (byte) 49);
+            bb.updateNavigationLinks(param2, (byte) 49);
           } catch (RuntimeException runtimeException) {
             throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "tm.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -110,7 +110,7 @@ final class IntrusiveDequeCursor {
         if (param0) {
           return false;
         }
-        return !fj.field_o.isComplete(250) ? true : false;
+        return !WidgetStyleNode.field_o.isComplete(250) ? true : false;
     }
 
     final IntrusiveNode lastOrFrom(int param0, IntrusiveNode param1) {

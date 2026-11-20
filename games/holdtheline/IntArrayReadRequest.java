@@ -131,7 +131,7 @@ final class IntArrayReadRequest extends IntrusiveNode {
             if (!param1.tryLoadNamedGroup("tarmac", -95)) {
               return false;
             }
-            if (!LoginCredentialType.a(16616, 0)) {
+            if (!LoginCredentialType.isFeatureEnabled(16616, 0)) {
               return true;
             }
             if (!param1.tryLoadNamedGroup("halloween_zombie", param2 - 70)) {

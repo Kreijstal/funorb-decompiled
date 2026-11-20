@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoundPlayback extends IntrusiveNode {
-    static ll field_l;
+    static AccountProtocolState field_l;
     private int field_n;
     IntrusiveNode field_k;
     PcmSampleStream field_j;
@@ -77,8 +77,8 @@ final class SoundPlayback extends IntrusiveNode {
     }
 
     static {
-        field_l = new ll();
+        field_l = new AccountProtocolState();
         field_m = "Select Vehicle";
-        field_i = fc.a(-109, 15, 4);
+        field_i = fc.createHorizontalPointPairs(-109, 15, 4);
     }
 }

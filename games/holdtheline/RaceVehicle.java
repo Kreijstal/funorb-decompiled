@@ -520,7 +520,7 @@ final class RaceVehicle extends MovingEntity {
         try {
           if (null != param0 &&
             0 == this.lifeState &&
-            !LoginCredentialType.a(16616, 0)) {
+            !LoginCredentialType.isFeatureEnabled(16616, 0)) {
             param0.kills = param0.kills + 1;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -1026,7 +1026,7 @@ final class RaceVehicle extends MovingEntity {
           }
           if (MusicPatchPcmStream.field_r.courseTheme != 3) {
             if (2 != MusicPatchPcmStream.field_r.courseTheme) {
-              stackIn_103_0 = rc.field_a;
+              stackIn_103_0 = TutorialScriptState.field_a;
             } else {
               stackIn_103_0 = TextFieldRenderer.field_t;
             }
@@ -1178,7 +1178,7 @@ final class RaceVehicle extends MovingEntity {
             decompiledFrameRemainder0 = (var17 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var6.add(hk.a(sa.a(var9, var8, (byte) -97), 1, false), (byte) 6);
+            var6.add(hk.a(NameRequestState.tailOfRoadSegment(var9, var8, (byte) -97), 1, false), (byte) 6);
             param2 = param2 - var10 * (-var8 + 1.0f);
             if (0.0f < param2) {
               var13 = (var7 + 1) % var5.length;
@@ -1203,7 +1203,7 @@ final class RaceVehicle extends MovingEntity {
                 break;
               }
               var16 = param2 / var15;
-              var6.add(hk.a(fj.a(false, var16, var14), 1, false), (byte) 6);
+              var6.add(hk.a(WidgetStyleNode.prefixOfRoadSegment(false, var16, var14), 1, false), (byte) 6);
             }
           }
           stackIn_38_0 = var6;
@@ -1349,11 +1349,11 @@ final class RaceVehicle extends MovingEntity {
               decompiledFrameRemainder2 = (var9 != 0);
             }
             if (decompiledFrameRemainder2) {
-              var2_int = ma.a(this.keyBindings[0], param0 + 1244) ? 1 : 0;
-              var3_int = ma.a(this.keyBindings[1], -1) ? 1 : 0;
-              var4_int = ma.a(this.keyBindings[2], param0 + 1244) ? 1 : 0;
-              var5 = ma.a(this.keyBindings[3], -1) ? 1 : 0;
-              var6 = ma.a(this.keyBindings[4], -1) ? 1 : 0;
+              var2_int = AchievementStatusRequest.isAnyKeyPressed(this.keyBindings[0], param0 + 1244) ? 1 : 0;
+              var3_int = AchievementStatusRequest.isAnyKeyPressed(this.keyBindings[1], -1) ? 1 : 0;
+              var4_int = AchievementStatusRequest.isAnyKeyPressed(this.keyBindings[2], param0 + 1244) ? 1 : 0;
+              var5 = AchievementStatusRequest.isAnyKeyPressed(this.keyBindings[3], -1) ? 1 : 0;
+              var6 = AchievementStatusRequest.isAnyKeyPressed(this.keyBindings[4], -1) ? 1 : 0;
               if (var2_int != 0 ||
                 var3_int != 0 ||
                 var4_int != 0 ||
@@ -2138,7 +2138,7 @@ final class RaceVehicle extends MovingEntity {
             }
           }
           if (decompiledFrameRemainder0) {
-            stackIn_31_0 = hi.a(stackIn_29_0, this.planningCourseProgress, 1, MusicPatchPcmStream.field_r.roadSegments, -24659, param2, param2.field_l);
+            stackIn_31_0 = InheritedWidgetStyle.findRoadParameter(stackIn_29_0, this.planningCourseProgress, 1, MusicPatchPcmStream.field_r.roadSegments, -24659, param2, param2.field_l);
           }
           var5 = stackIn_31_0;
           if (-1.0f == var5) {
@@ -2280,8 +2280,8 @@ final class RaceVehicle extends MovingEntity {
               var21 = SolidRoadStripRenderer.b(2, 128);
               var22 = (-var21 + 256) * (16711935 & this.field_Eb) & -16711936 | 16711680 & (-var21 + 256) * (this.field_Eb & 65280);
               var22 = var22 + (16711680 & 65280 * var21 | -16711936 & var21 * 16711935);
-              var23 = var11 + dg.a(-var14, -1, var14);
-              var24 = dg.a(-var15, -1, var15) + var13;
+              var23 = var11 + dg.randomIntInclusive(-var14, -1, var14);
+              var24 = dg.randomIntInclusive(-var15, -1, var15) + var13;
               ArchiveIndex.a(var23, var20, -512, 16, 1, -4, var19, this.layer, MusicPatchPcmStream.field_r.sparkParticles, var22 >>> 8, var24, 255, 4);
             }
             var16++;
@@ -2853,7 +2853,7 @@ final class RaceVehicle extends MovingEntity {
                 var2_int++;
                 continue;
               }
-              var3 = pj.a(MusicPatchPcmStream.field_r.roadSegments, (byte) -105, MusicPatchPcmStream.field_r.vehicles[var2_int].courseProgress, this.courseProgress);
+              var3 = RoadShadowRenderer.measureCurveInterval(MusicPatchPcmStream.field_r.roadSegments, (byte) -105, MusicPatchPcmStream.field_r.vehicles[var2_int].courseProgress, this.courseProgress);
               var3 = (-50.0f + var3) / 200.0f;
               if (!(0.0f > var3)) {
                 stackIn_21_0 = (!(1.0f < var3)) ? var3 : 1.0f;
@@ -2879,7 +2879,7 @@ final class RaceVehicle extends MovingEntity {
                 }
                 break;
               }
-              var3Lifetime1 = pj.a(MusicPatchPcmStream.field_r.roadSegments, (byte) -105, this.courseProgress, MusicPatchPcmStream.field_r.vehicles[var2_intLifetime1].courseProgress);
+              var3Lifetime1 = RoadShadowRenderer.measureCurveInterval(MusicPatchPcmStream.field_r.roadSegments, (byte) -105, this.courseProgress, MusicPatchPcmStream.field_r.vehicles[var2_intLifetime1].courseProgress);
               var3Lifetime1 = (var3Lifetime1 - 50.0f) / 200.0f;
               if (!(0.0f > var3Lifetime1)) {
                 stackIn_39_0 = (var3Lifetime1 > 1.0f) ? 1.0f : var3Lifetime1;
@@ -3598,9 +3598,9 @@ final class RaceVehicle extends MovingEntity {
         var12 = HoldTheLine.field_D;
         try {
           var2 = MusicPatchPcmStream.field_r;
-          var3 = hi.a(4, this.furthestCourseProgress, 1, var2.roadSegments, -24659, this.position, this.layer);
+          var3 = InheritedWidgetStyle.findRoadParameter(4, this.furthestCourseProgress, 1, var2.roadSegments, -24659, this.position, this.layer);
           if (-1.0f == var3) {
-            var3 = hi.a(var2.roadSegments.length, this.furthestCourseProgress, 0, var2.roadSegments, -24659, this.position, this.layer);
+            var3 = InheritedWidgetStyle.findRoadParameter(var2.roadSegments.length, this.furthestCourseProgress, 0, var2.roadSegments, -24659, this.position, this.layer);
           }
           if (param0 < 14) {
             this.updatePhysics(88);
@@ -3642,7 +3642,7 @@ final class RaceVehicle extends MovingEntity {
                 if (this.keyBindings != null &&
                   !var2.twoPlayerMode && (var2.gameMode == 0 ||
                   1 == var2.gameMode)) {
-                  MouseWheelInput.a(this.field_ab, StrongCacheEntry.field_w, (byte) 62, LoginForm.field_P);
+                  MouseWheelInput.recordBestLapTime(this.field_ab, StrongCacheEntry.field_w, (byte) 62, LoginForm.field_P);
                 }
               }
               this.lapsCompleted = this.lapsCompleted + 1;
@@ -4473,7 +4473,7 @@ final class RaceVehicle extends MovingEntity {
               if (this.heldPowerups[1] != -1) {
                 stackIn_21_0 = MouseWheelInput.field_d;
               } else {
-                stackIn_21_0 = ij.field_g;
+                stackIn_21_0 = ChatMessage.field_g;
               }
             } else {
               stackIn_21_0 = null;
@@ -5223,10 +5223,10 @@ final class RaceVehicle extends MovingEntity {
           }
           this.lastAttacker = param2;
           if (this.specialPowerup == 2) {
-            stackIn_15_0 = pb.field_b;
+            stackIn_15_0 = StraightRoadSlicer.field_b;
           } else {
             if (this.powerupLevels[2] == 0) {
-              stackIn_15_0 = sl.field_d;
+              stackIn_15_0 = ReflectionCheckQueue.field_d;
             } else {
               if (this.powerupLevels[2] == 1) {
                 stackIn_15_0 = StandardContentTransitionDialog.field_kb;

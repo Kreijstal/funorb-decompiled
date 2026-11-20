@@ -183,7 +183,7 @@ final class LoadProgressDialog extends ResizableDialog {
           this.field_gb = param1;
           if (null != this.field_gb) {
             var3_int = DisplayNameForm.field_I.getParagraphHeight(this.field_gb, 260, DisplayNameForm.field_I.ascent);
-            this.b(537342017, 300, var3_int + 150);
+            this.setCenteredSize(537342017, 300, var3_int + 150);
           }
           this.field_jb = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_jb.animating = true;
@@ -244,7 +244,7 @@ final class LoadProgressDialog extends ResizableDialog {
         RuntimeException var2_ref = null;
         var6 = HoldTheLine.field_D;
         try {
-          if (jo.field_b == null) {
+          if (IgnoreListIndex.entries == null) {
             return null;
           }
           if (param0 == null) {
@@ -261,7 +261,7 @@ final class LoadProgressDialog extends ResizableDialog {
             return (SocialListEntry) (stackIn_10_0);
           }
           var4 = 70 % ((param1 - 9) / 33);
-          var3 = (SocialListEntry) (jo.field_b.get(-25839, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (IgnoreListIndex.entries.get(-25839, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -269,7 +269,7 @@ final class LoadProgressDialog extends ResizableDialog {
             var8 = (CharSequence) ((Object) var3.displayName);
             var5 = MidiPcmStream.normalizeAccountName(var8, (byte) 123);
             if (!var5.equals(var2)) {
-              var3 = (SocialListEntry) (jo.field_b.getNextWithSameKey(20240));
+              var3 = (SocialListEntry) (IgnoreListIndex.entries.getNextWithSameKey(20240));
               continue;
             }
             break;

@@ -36,7 +36,7 @@ final class StripedProgressBar extends UiWidget {
         if (65536 > this.progress) {
           StereoMusicSample.a(this.width + var5, (this.width * this.progress >> 16) + var5, this.height + var6, true, var6);
           this.drawStripeRegion(param0 ^ -9530, var6, this.field_D[1], var5);
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
         }
     }
 
@@ -62,23 +62,23 @@ final class StripedProgressBar extends UiWidget {
             param2.draw(var6, param1);
             var6 = var6 + param2.width;
           }
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           if (SoftwareRasterizer.clipLeft <= param3 + this.field_I.width) {
-            ProxySocketConnector.a(this.field_L, -1);
+            ProxySocketConnector.pushSpriteRaster(this.field_L, -1);
             param2.draw(-this.field_H, 0);
             param2.draw(this.field_F * 2 - this.field_H, 0);
             this.field_E.drawMultiply(0, 0);
-            dm.b((byte) -10);
+            dm.popRasterState((byte) -10);
             this.field_L.draw(param3, param1);
           }
           if (-this.field_I.width + var5_int <= SoftwareRasterizer.clipRight) {
-            ProxySocketConnector.a(this.field_L, param0 ^ -3);
+            ProxySocketConnector.pushSpriteRaster(this.field_L, param0 ^ -3);
             for (var7 = this.width + (-this.field_I.width + this.field_H); var7 > this.field_F * 2; var7 = var7 - this.field_F * 2) {
             }
             param2.draw(-var7, 0);
             param2.draw(-var7 + this.field_F * 2, 0);
             this.field_I.drawMultiply(0, 0);
-            dm.b((byte) -10);
+            dm.popRasterState((byte) -10);
             this.field_L.draw(var5_int - this.field_I.width, param1);
             return;
           }
@@ -113,7 +113,7 @@ final class StripedProgressBar extends UiWidget {
         if (param0 <= 120) {
           return (Sprite) null;
         }
-        ProxySocketConnector.a(var14, -1);
+        ProxySocketConnector.pushSpriteRaster(var14, -1);
         int var5 = this.height >> 1;
         for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (-1 + this.field_F * 2) % (this.field_F * 2);
@@ -130,7 +130,7 @@ final class StripedProgressBar extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_F, var6, this.field_F, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(var7 - this.field_F, var6, this.field_F, var12Lifetime1);
         }
-        dm.b((byte) -10);
+        dm.popRasterState((byte) -10);
         return var14;
     }
 
@@ -143,7 +143,7 @@ final class StripedProgressBar extends UiWidget {
         int var2 = 2 / ((-72 - param0) / 48);
         int var3 = this.height >> 1;
         Sprite var4 = new Sprite(var3, this.height);
-        ProxySocketConnector.a(var4, -1);
+        ProxySocketConnector.pushSpriteRaster(var4, -1);
         for (var5 = 0; this.height > var5; var5++) {
           for (var6 = 0; var6 < var3; var6++) {
             var7 = (double)var6 * (double)var6 / (double)((-var5 + this.height) * var5);
@@ -155,7 +155,7 @@ final class StripedProgressBar extends UiWidget {
             SoftwareRasterizer.setPixel(var6, var5, var9 << 16 | (var9 | var9 << 8));
           }
         }
-        dm.b((byte) -10);
+        dm.popRasterState((byte) -10);
         return var4;
     }
 

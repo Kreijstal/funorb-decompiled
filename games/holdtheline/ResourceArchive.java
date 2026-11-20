@@ -32,7 +32,7 @@ final class ResourceArchive {
           stackIn_2_3 = (MusicTrack) (param1);
           stackIn_2_4 = -114;
           stackIn_3_5 = !(param0);
-          ((MusicCrossfadeStream) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, (byte) stackIn_2_4, stackIn_3_5, 256);
+          ((MusicCrossfadeStream) (Object) stackIn_2_0).crossfadeToTrack(stackIn_2_1, stackIn_2_2, stackIn_2_3, (byte) stackIn_2_4, stackIn_3_5, 256);
           if (param2 != 69) {
             field_h = (String) null;
           }
@@ -248,7 +248,7 @@ final class ResourceArchive {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param0 != null);
-            throw EntitySound.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(DropTargetWidget.a((byte) 120, var9, var9.length)).append(" ").append(DropTargetWidget.a((byte) 122, var9, var9.length - 2)).append(" ").append(this.field_a.field_e[param3]).append(" ").append(this.field_a.field_t).toString());
+            throw EntitySound.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(DropTargetWidget.crc32((byte) 120, var9, var9.length)).append(" ").append(DropTargetWidget.crc32((byte) 122, var9, var9.length - 2)).append(" ").append(this.field_a.field_e[param3]).append(" ").append(this.field_a.field_t).toString());
           }
           if (this.field_d) {
             this.field_c[param3] = null;
@@ -513,7 +513,7 @@ final class ResourceArchive {
           0 > param0 ||
           param1 >= this.field_a.field_k.length ||
           param0 >= this.field_a.field_k[param1]) {
-          if (uj.field_e) {
+          if (MeshMaterial.field_e) {
             throw new IllegalArgumentException(param1 + " " + param0);
           }
           return false;
@@ -718,7 +718,7 @@ final class ResourceArchive {
           ((long[]) (((Object[]) (this.field_c[28]))[0]))[4] = ((long[]) (this.field_c[0]))[1];
           return true;
         }
-        if (uj.field_e) {
+        if (MeshMaterial.field_e) {
           throw new IllegalArgumentException(Integer.toString(param1));
         }
         return false;

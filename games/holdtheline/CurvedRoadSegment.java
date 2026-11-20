@@ -13,7 +13,7 @@ final class CurvedRoadSegment extends RoadSegment {
     Point2i center;
     float controlPathEndParameter;
     static int field_y;
-    static ge field_G;
+    static ContentTransitionState field_G;
     static String field_J;
     int rightRoadOffset;
     int leftRoadOffset;
@@ -397,6 +397,6 @@ final class CurvedRoadSegment extends RoadSegment {
 
     static {
         field_J = "Sound: ";
-        field_G = new ge();
+        field_G = new ContentTransitionState();
     }
 }

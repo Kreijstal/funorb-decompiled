@@ -11,7 +11,7 @@ final class cd {
     static Sprite[] field_a;
     static byte[][] field_e;
 
-    final static String a(int param0, long param1) {
+    final static String formatCookieDate(int param0, long param1) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -29,7 +29,7 @@ final class cd {
         return (String) null;
     }
 
-    final static void b(int param0) {
+    final static void resetPlayerProgress(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int[] array$0 = null;
@@ -65,7 +65,7 @@ final class cd {
             field_a = (Sprite[]) null;
           }
           hk.field_d = 0;
-          ij.field_l = true;
+          ChatMessage.field_l = true;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "cd.F(" + param0 + ')');
         }
@@ -80,18 +80,18 @@ final class cd {
           field_e = (byte[][]) null;
           return;
         }
-        cd.a(93, -81L);
+        cd.formatCookieDate(93, -81L);
         field_e = (byte[][]) null;
     }
 
-    final static void a(int param0, String param1) {
+    final static void logClientError(int param0, String param1) {
         System.out.println("Error: " + NineSlicePanel.replaceAllLiteral("\n", "%0a", param0 - 75, param1));
         if (param0 != 12) {
-          cd.b(-37);
+          cd.resetPlayerProgress(-37);
         }
     }
 
-    final static void a(Sprite param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawSpriteHighlight(Sprite param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = -param7 + param2 + param8 + param0.offsetX;
         int var10 = param4 + (param0.offsetX + (param8 + param2));
         int var11 = param3 + param0.offsetY + (param0.height >> 1);
@@ -122,7 +122,7 @@ final class cd {
         }
     }
 
-    final static float a(TrackCurve[] param0, int param1, float param2) {
+    final static float normalizedCourseProgress(TrackCurve[] param0, int param1, float param2) {
         RuntimeException var3 = null;
         float stackIn_2_0 = 0.0f;
         float stackIn_4_0 = 0.0f;
@@ -132,7 +132,7 @@ final class cd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            stackIn_4_0 = MusicCrossfadeStream.a((byte) 117, param2, param0) / OutlinedRoadStripRenderer.totalCurveLength(-1, param0);
+            stackIn_4_0 = MusicCrossfadeStream.distanceAlongCurves((byte) 117, param2, param0) / OutlinedRoadStripRenderer.totalCurveLength(-1, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -0.11478078365325928f;
@@ -151,7 +151,7 @@ final class cd {
         }
     }
 
-    final static sh a(byte param0, String param1) {
+    final static InputValidationError validateEmailDomain(byte param0, String param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -159,13 +159,13 @@ final class cd {
         String[] var4 = null;
         int var5 = 0;
         String var7 = null;
-        sh var8 = null;
+        InputValidationError var8 = null;
         int var9 = 0;
-        sh stackIn_4_0 = null;
-        sh stackIn_7_0 = null;
-        sh stackIn_11_0 = null;
-        sh stackIn_17_0 = null;
-        sh stackIn_20_0 = null;
+        InputValidationError stackIn_4_0 = null;
+        InputValidationError stackIn_7_0 = null;
+        InputValidationError stackIn_11_0 = null;
+        InputValidationError stackIn_17_0 = null;
+        InputValidationError stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

@@ -144,14 +144,14 @@ final class eg {
               ue.a(8911, UiTheme.field_o);
             }
           }
-          if (ma.field_k != 1) {
-            var6 = o.a(ma.field_k, 2);
+          if (AchievementStatusRequest.field_k != 1) {
+            var6 = o.a(AchievementStatusRequest.field_k, 2);
             if (var6 != null) {
               var6.drawAlpha(0, 0, (MouseInputHandler.field_c << 8) / 80);
             }
           }
         } else {
-          if (ma.field_k == 1) {
+          if (AchievementStatusRequest.field_k == 1) {
             SecondaryNodeDequeIterator.a(0);
             if (UiTheme.field_o != 256) {
               if (UiTheme.field_o != 128) {
@@ -169,8 +169,8 @@ final class eg {
             }
           } else {
             o.a(BufferedRandomAccessFile.field_d, 2).drawUnkeyed(0, 0);
-            if (BufferedRandomAccessFile.field_d != ma.field_k) {
-              var5 = o.a(ma.field_k, 2);
+            if (BufferedRandomAccessFile.field_d != AchievementStatusRequest.field_k) {
+              var5 = o.a(AchievementStatusRequest.field_k, 2);
               if (var5 != null) {
                 var5.drawAlpha(0, 0, (MouseInputHandler.field_c << 8) / 80);
               }
@@ -190,7 +190,7 @@ final class eg {
         for (var2 = 0; var2 < NineSlicePanel.field_d; var2++) {
           var1[var2] = new IndexedSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], IterableSecondaryNodeDeque.field_e[var2], StraightRoadSegment.field_E);
         }
-        tk.clearDecodedSpriteSheet(param0);
+        VehicleEngineSounds.clearDecodedSpriteSheet(param0);
         if (param0) {
           NineSlicePanel var4 = (NineSlicePanel) null;
           eg.a(-72, -10, 111, 19, -41, -54, -99, -123, -100, (BitmapFont) null, (BitmapFont) null, -127, (NineSlicePanel) null, 71, 19, 60, (NineSlicePanel) null, -44, 42, -10, (NineSlicePanel) null);

@@ -100,23 +100,23 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
           var6_int = -67 % ((param3 - 57) / 49);
           if (param1.isFocused((byte) -20)) {
             var7 = this.getTextLayout((byte) 20, param1);
-            var8 = var7.b(param2, -22539);
-            var9 = var7.field_b[var8];
-            var10 = var7.a(16777215, param2);
+            var8 = var7.getLineForCharacter(param2, -22539);
+            var9 = var7.lines[var8];
+            var10 = var7.getCaretX(16777215, param2);
             var11 = this.textXToScreen((byte) -19, var10, param0, param1);
-            var12 = this.getTextOriginY(-1337403295, param1, param4) + Math.max(0, var9.field_h);
+            var12 = this.getTextOriginY(-1337403295, param1, param4) + Math.max(0, var9.top);
             stackIn_4_0 = this.getTextOriginY(-1337403295, param1, param4);
             stackIn_4_1 = this.getContentHeight((byte) -109, param1);
-            stackIn_4_2 = var9.field_k;
-            if (var7.field_b.length > 1 + var8) {
-              stackIn_5_3 = var7.field_b[1 + var8].field_h;
+            stackIn_4_2 = var9.bottom;
+            if (var7.lines.length > 1 + var8) {
+              stackIn_5_3 = var7.lines[1 + var8].top;
             } else {
-              stackIn_5_3 = var9.field_k;
+              stackIn_5_3 = var9.bottom;
             }
             var13 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             StereoMusicSample.a(param1.x + (param0 + param1.width), param1.x + param0, param1.y + param4 + param1.height, true, param1.y + param4);
             MenuList.field_b.drawLine(this.field_a, var12, (byte) -53, var13, var11, var11);
-            dm.b((byte) -10);
+            dm.popRasterState((byte) -10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,7 +209,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
             var4 = (UiWidget) null;
             this.getPreferredHeight((UiWidget) null, -60);
           }
-          stackIn_3_0 = param1.textLayout.a((byte) 108) + this.field_j + this.field_n;
+          stackIn_3_0 = param1.textLayout.getWidth((byte) 108) + this.field_j + this.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,7 +304,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
           } else {
             this.field_f.drawParagraph(this.getDisplayText(param6, (byte) -12), this.textXToScreen((byte) 101, param0, param1, param6), this.textYToScreen(param7, (byte) -114, param6, param4), var9_int, var10, param5, param2, this.field_i, this.field_d, this.field_h);
           }
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -388,7 +388,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
             return stackIn_2_0;
           }
           this.getTextLayout((byte) 20, param4);
-          stackIn_4_0 = param4.textLayout.a(-this.getTextOriginX(param4, param3, 13112) + param2, 8, -this.getTextOriginY(-1337403295, param4, param0) + param5);
+          stackIn_4_0 = param4.textLayout.hitTestCharacter(-this.getTextOriginX(param4, param3, 13112) + param2, 8, -this.getTextOriginY(-1337403295, param4, param0) + param5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -478,7 +478,7 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
           if (param1 > -82) {
             this.field_c = 115;
           }
-          stackIn_3_0 = param0.textLayout.a(-112) + (this.field_p + this.field_e);
+          stackIn_3_0 = param0.textLayout.getHeight(-112) + (this.field_p + this.field_e);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -528,30 +528,30 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
               var9 = param4;
               var8 = param3;
             }
-            var10 = var18.b(var8, -22539);
-            var11 = var18.b(var9, -22539);
+            var10 = var18.getLineForCharacter(var8, -22539);
+            var11 = var18.getLineForCharacter(var9, -22539);
             StereoMusicSample.a(param5.width + param2 + param5.x, param2 + param5.x, param1 + param5.y + param5.height, true, param5.y + param1);
             for (var12 = var10; var12 <= var11; var12++) {
-              var13 = var17.field_b[var12];
+              var13 = var17.lines[var12];
               if (var12 == var10) {
-                stackIn_16_0 = var18.a(16777215, var8);
+                stackIn_16_0 = var18.getCaretX(16777215, var8);
               } else {
-                stackIn_16_0 = var13.field_c[0];
+                stackIn_16_0 = var13.caretPositions[0];
               }
               var14 = stackIn_16_0;
               if (var11 == var12) {
-                stackIn_21_0 = var18.a(16777215, var9);
+                stackIn_21_0 = var18.getCaretX(16777215, var9);
               } else {
                 if (var13 != null) {
-                  stackIn_21_0 = var13.field_c[-1 + var13.field_c.length];
+                  stackIn_21_0 = var13.caretPositions[-1 + var13.caretPositions.length];
                 } else {
                   stackIn_21_0 = 0;
                 }
               }
               var15 = stackIn_21_0;
-              MenuList.field_b.fillRectangleAlpha(this.field_b >>> 24, 13421772, this.field_p + param5.y + (param1 + param5.field_y + var13.field_h), var13.field_k, this.textXToScreen((byte) -54, var14, param2, param5), this.field_b, -var14 + var15);
+              MenuList.field_b.fillRectangleAlpha(this.field_b >>> 24, 13421772, this.field_p + param5.y + (param1 + param5.field_y + var13.top), var13.bottom, this.textXToScreen((byte) -54, var14, param2, param5), this.field_b, -var14 + var15);
             }
-            dm.b((byte) -10);
+            dm.popRasterState((byte) -10);
           }
           if (param0 >= -23) {
             this.field_o = false;
@@ -675,12 +675,12 @@ class TextWidgetStyle implements WidgetRenderer, TextWidgetRenderer {
     }
 
     final static AccountFormText a(int param0) {
-        String var1 = GrowableStringList.d(param0 ^ param0);
+        String var1 = GrowableStringList.getPendingDisplayName(param0 ^ param0);
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new AccountFormText(GrowableStringList.d(0), AccountProgressDialog.n(112));
+        return new AccountFormText(GrowableStringList.getPendingDisplayName(0), AccountProgressDialog.n(112));
     }
 
     TextWidgetStyle(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {

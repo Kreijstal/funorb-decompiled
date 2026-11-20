@@ -3,8 +3,8 @@
  */
 final class ValidationIndicator extends TextButton {
     static int field_G;
-    static sa field_M;
-    static tk field_H;
+    static NameRequestState field_M;
+    static VehicleEngineSounds field_H;
     private Validator field_I;
     private int field_K;
     static PlatformTask field_N;
@@ -45,23 +45,23 @@ final class ValidationIndicator extends TextButton {
           var10 = var16.canvasHeight << 1;
           if (ShadedRoadStripRenderer.field_m == null) {
             ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
-            ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+            ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
           } else {
             if (var9 > ShadedRoadStripRenderer.field_m.width) {
               ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
-              ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+              ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
             } else {
               if (ShadedRoadStripRenderer.field_m.height >= var10) {
-                ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+                ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
                 SoftwareRasterizer.clear();
               } else {
                 ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
-                ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+                ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
               }
             }
           }
           var16.drawRotatedBilinear(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.field_K << 10, 4096);
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           ShadedRoadStripRenderer.field_m.drawAdditive(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
         } else {
           if (var8 != um.field_a) {
@@ -80,23 +80,23 @@ final class ValidationIndicator extends TextButton {
             var10 = var15.canvasHeight << 1;
             if (ShadedRoadStripRenderer.field_m == null) {
               ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
-              ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+              ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
             } else {
               if (var9 > ShadedRoadStripRenderer.field_m.width) {
                 ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
-                ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+                ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
               } else {
                 if (ShadedRoadStripRenderer.field_m.height >= var10) {
-                  ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+                  ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
                   SoftwareRasterizer.clear();
                 } else {
                   ShadedRoadStripRenderer.field_m = new Sprite(var9, var10);
-                  ProxySocketConnector.a(ShadedRoadStripRenderer.field_m, -1);
+                  ProxySocketConnector.pushSpriteRaster(ShadedRoadStripRenderer.field_m, -1);
                 }
               }
             }
             var15.drawRotatedBilinear(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.field_K << 10, 4096);
-            dm.b((byte) -10);
+            dm.popRasterState((byte) -10);
             ShadedRoadStripRenderer.field_m.drawAdditive(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           }
         }
@@ -162,7 +162,7 @@ final class ValidationIndicator extends TextButton {
 
     static {
         field_G = 200;
-        field_M = new sa();
+        field_M = new NameRequestState();
         field_J = 0;
     }
 }

@@ -169,7 +169,7 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             this.field_h = 0;
-            this.field_j = bb.b(-1);
+            this.field_j = bb.monotonicTimeMillis(-1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -192,11 +192,11 @@ final class SocketJs5Transport extends Js5Transport {
 
     final static void a(String param0, boolean param1, String param2) {
         try {
-          if (sb.field_c != null) {
-            sb.field_c.h((byte) -98);
+          if (RoadControlPointSpec.field_c != null) {
+            RoadControlPointSpec.field_c.h((byte) -98);
           }
           lh.field_a = new LoginForm(param2, param0, param1, true, true);
-          sm.field_c.a((UiWidget) (lh.field_a), (byte) -99);
+          sm.field_c.setContent((UiWidget) (lh.field_a), (byte) -99);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ag.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -232,7 +232,7 @@ final class SocketJs5Transport extends Js5Transport {
           NetworkArchiveRequest var3Lifetime1;
           var17 = HoldTheLine.field_D;
           if (this.field_q != null) {
-            var2_long = bb.b(-1);
+            var2_long = bb.monotonicTimeMillis(-1);
             var4 = (int)(-this.field_j + var2_long);
             this.field_j = var2_long;
             if (var4 > 200) {
@@ -250,10 +250,10 @@ final class SocketJs5Transport extends Js5Transport {
             }
           }
           if (null == this.field_q) {
-            if (this.b(20) != 0) {
+            if (this.getPriorityRequestCount(20) != 0) {
               return false;
             }
-            if (this.b(false) == 0) {
+            if (this.getPrefetchRequestCount(false) == 0) {
               return true;
             }
             return false;
@@ -414,10 +414,10 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_f = -2;
             this.field_q = null;
             this.field_c = this.field_c + 1;
-            if (this.b(126) != 0) {
+            if (this.getPriorityRequestCount(126) != 0) {
               return false;
             }
-            if (this.b(false) != 0) {
+            if (this.getPrefetchRequestCount(false) != 0) {
               return false;
             }
             return true;

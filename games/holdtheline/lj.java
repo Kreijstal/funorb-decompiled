@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lj {
-    static ij[] field_a;
+    static ChatMessage[] field_a;
     static int field_b;
     static int field_f;
     static String field_e;
     static String field_d;
     static String[] field_c;
 
-    final static void a(int param0, int param1, int param2, int[] param3, byte param4, int param5) {
+    final static void fillPolygonAlpha(int param0, int param1, int param2, int[] param3, byte param4, int param5) {
         int var7 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -42,18 +42,18 @@ final class lj {
         }
     }
 
-    final static void a(byte param0) {
-        we var1 = (we) (BlobWriteRequest.field_i.removeLast((byte) 74));
+    final static void pushRasterState(byte param0) {
+        SavedRasterState var1 = (SavedRasterState) (BlobWriteRequest.field_i.removeLast((byte) 74));
         if (var1 == null) {
-          var1 = new we();
+          var1 = new SavedRasterState();
         }
         if (param0 <= -100) {
-          var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipLeft, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, -1, SoftwareRasterizer.height, SoftwareRasterizer.clipTop, SoftwareRasterizer.width);
+          var1.setRasterState(SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipLeft, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, -1, SoftwareRasterizer.height, SoftwareRasterizer.clipTop, SoftwareRasterizer.width);
           MarkerSliderRenderer.field_g.addLast((byte) -84, var1);
           return;
         }
         field_f = 101;
-        var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipLeft, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, -1, SoftwareRasterizer.height, SoftwareRasterizer.clipTop, SoftwareRasterizer.width);
+        var1.setRasterState(SoftwareRasterizer.clipBottom, SoftwareRasterizer.clipLeft, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, -1, SoftwareRasterizer.height, SoftwareRasterizer.clipTop, SoftwareRasterizer.width);
         MarkerSliderRenderer.field_g.addLast((byte) -84, var1);
     }
 

@@ -50,11 +50,11 @@ final class SpriteAsset {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          TriangleMesh.a(param1, param0, true, true, Vector2f.field_h, MatchingTextValidator.field_j, r.field_c);
+          TriangleMesh.sortPlayerStatIndexes(param1, param0, true, true, Vector2f.field_h, MatchingTextValidator.field_j, ServerConnectionState.field_c);
           for (var2_int = 0; Vector2f.field_h > var2_int; var2_int++) {
             IterableNodeHashTable.field_h[param1 + var2_int] = var2_int;
           }
-          TriangleMesh.a(param1 + param1, param1, true, false, Vector2f.field_h + param1, we.field_j, VehicleDefinition.field_t);
+          TriangleMesh.sortPlayerStatIndexes(param1 + param1, param1, true, false, Vector2f.field_h + param1, SavedRasterState.field_j, VehicleDefinition.field_t);
           if (param1 >= Vector2f.field_h) {
             return;
           }

@@ -51,7 +51,7 @@ final class ue {
             var3[var4_int] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var7[var4_int])];
           }
           var4 = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], var3);
-          tk.clearDecodedSpriteSheet(false);
+          VehicleEngineSounds.clearDecodedSpriteSheet(false);
           return var4;
         }
         field_b = (String) null;
@@ -59,7 +59,7 @@ final class ue {
           var3[var4_intLifetime1] = StraightRoadSegment.field_E[LoginChoicePanel.a(255, (int) var7[var4_intLifetime1])];
         }
         var4Lifetime1 = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], var3);
-        tk.clearDecodedSpriteSheet(false);
+        VehicleEngineSounds.clearDecodedSpriteSheet(false);
         return var4Lifetime1;
     }
 

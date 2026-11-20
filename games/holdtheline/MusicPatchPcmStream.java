@@ -110,7 +110,7 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               var3 = var3 + param2;
             }
-            cd.a(12, var3);
+            cd.logClientError(12, var3);
             var7 = NineSlicePanel.replaceAllLiteral("%3a", ":", -104, var3);
             var8 = NineSlicePanel.replaceAllLiteral("%40", "@", -102, var7);
             var9 = NineSlicePanel.replaceAllLiteral("%26", "&", -102, var8);
@@ -238,7 +238,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (!var11.isRamping()) {
                 continue;
               }
-              this.fadeMixer.a(var11);
+              this.fadeMixer.addSubStream(var11);
             }
           }
           param0.sampleStream.mix(param1, param3, param4);

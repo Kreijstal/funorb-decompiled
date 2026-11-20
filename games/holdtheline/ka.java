@@ -27,7 +27,7 @@ final class ka {
             return stackIn_2_0;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = SpriteButtonRenderer.a(var3, (byte) -116);
+          stackIn_4_0 = SpriteButtonRenderer.parseInt(var3, (byte) -116);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class ka {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 21 % ((param1 - 4) / 58);
-          stackIn_1_0 = hi.a(param3.length, 0.0f, 1, param3, -24659, param2, param0);
+          stackIn_1_0 = InheritedWidgetStyle.findRoadParameter(param3.length, 0.0f, 1, param3, -24659, param2, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,16 +78,16 @@ final class ka {
     }
 
     final static void a(int param0) {
-        uk.b(-114);
+        ProxyAuthenticationException.resetAccountUi(-114);
         ArchiveCatalog.field_o = true;
         SocialListEntry.field_nb = true;
-        field_b.a(false);
+        field_b.closeAllDialogs(false);
         if (param0 == -1) {
-          IsaacPacketBuffer.a(false, we.field_t, 22676);
+          IsaacPacketBuffer.a(false, SavedRasterState.field_t, 22676);
           return;
         }
         field_e = (String) null;
-        IsaacPacketBuffer.a(false, we.field_t, 22676);
+        IsaacPacketBuffer.a(false, SavedRasterState.field_t, 22676);
     }
 
     final static int a(int param0, String param1) {
@@ -169,7 +169,7 @@ final class ka {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = hc.a(param2, (byte) 30);
+          var3 = hc.reverseString(param2, (byte) 30);
           if (param1 < 97) {
             var4 = (RoadSegment[]) null;
             ka.a(82, -43, (Point2i) null, (RoadSegment[]) null);

@@ -7,28 +7,28 @@ final class LoginCredentialType {
     int protocolId;
     static String field_d;
 
-    final static void a(byte param0) {
-        if (!ll.field_a) {
+    final static void pollPlayerProgress(byte param0) {
+        if (!AccountProtocolState.field_a) {
           if (null == RotatedSpriteAsset.field_k) {
-            RotatedSpriteAsset.field_k = SpriteSheetAsset.a((byte) -103, 4);
+            RotatedSpriteAsset.field_k = SpriteSheetAsset.requestAchievementStatus((byte) -103, 4);
           }
-          if (RotatedSpriteAsset.field_k.field_i) {
-            GameMenu.field_z = RotatedSpriteAsset.field_k.field_m;
+          if (RotatedSpriteAsset.field_k.completed) {
+            GameMenu.field_z = RotatedSpriteAsset.field_k.unlockedMask;
             RotatedSpriteAsset.field_k = null;
-            if (!ll.field_a) {
+            if (!AccountProtocolState.field_a) {
               ClientException.field_c = ClientException.field_c & ~GameMenu.field_z;
             }
-            ll.field_a = true;
+            AccountProtocolState.field_a = true;
           }
         }
         if (!MusicPatchEnvelope.field_f) {
           if (null == IsaacRandom.field_g) {
-            IsaacRandom.field_g = hi.requestBlobRead(6, -52);
+            IsaacRandom.field_g = InheritedWidgetStyle.requestBlobRead(6, -52);
           }
           if (IsaacRandom.field_g.completed) {
             HuffmanDecoder.decodePlayerProgress(param0 - 56, IsaacRandom.field_g.payload);
             if (ad.field_a) {
-              GrowableStringList.a(0);
+              GrowableStringList.savePlayerProgress(0);
             }
             MusicPatchEnvelope.field_f = true;
             IsaacRandom.field_g = null;
@@ -40,7 +40,7 @@ final class LoginCredentialType {
         field_d = (String) null;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isFeatureEnabled(int param0, int param1) {
         if (param1 == -1) {
           return true;
         }
@@ -66,7 +66,7 @@ final class LoginCredentialType {
         throw new IllegalStateException();
     }
 
-    final static SpriteSheetAsset a(String param0, byte param1) {
+    final static SpriteSheetAsset createSpriteSheetAsset(String param0, byte param1) {
         RuntimeException var2 = null;
         String var3 = null;
         SpriteSheetAsset stackIn_3_0 = null;
@@ -77,7 +77,7 @@ final class LoginCredentialType {
         try {
           if (param1 != -53) {
             var3 = (String) null;
-            LoginCredentialType.a((String) null, (byte) -81);
+            LoginCredentialType.createSpriteSheetAsset((String) null, (byte) -81);
           }
           stackIn_3_0 = new SpriteSheetAsset(param0);
           return stackIn_3_0;

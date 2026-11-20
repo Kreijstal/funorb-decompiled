@@ -4,19 +4,19 @@
 import java.util.*;
 
 final class dg {
-    static ge field_a;
+    static ContentTransitionState field_a;
     static long field_d;
     static String[] field_b;
     static int field_c;
 
-    final static int b(byte param0) {
+    final static int getMouseIdleTicks(byte param0) {
         if (param0 != 65) {
           return -106;
         }
         return SpriteAsset.field_a;
     }
 
-    final static void b(int param0) {
+    final static void initializeMenuItems(int param0) {
         String[] array$4 = null;
         String[] array$5 = null;
         int var6 = 0;
@@ -41,7 +41,7 @@ final class dg {
           SocketConnector.field_g[7] = WeightedLruCache.field_h;
           SocketConnector.field_g[10] = SpriteSheetAsset.field_h;
           if (param0 != -9342) {
-            field_a = (ge) null;
+            field_a = (ContentTransitionState) null;
           }
           SocketConnector.field_g[4] = StereoMusicSample.field_d;
           SocketConnector.field_g[8] = MarkerSliderRenderer.field_i;
@@ -50,45 +50,45 @@ final class dg {
           SocketConnector.field_g[5] = StereoMusicSample.field_d;
           SocketConnector.field_g[11] = SpriteSheetAsset.field_h;
           SocketConnector.field_g[0] = ArchiveRequest.field_o;
-          uk.field_c = new String[27];
+          ProxyAuthenticationException.field_c = new String[27];
           SocketConnector.field_g[3] = StraightRoadSegment.field_H;
           SocketConnector.field_g[1] = Bzip2State.field_J;
           SocketConnector.field_g[9] = lj.field_d;
           SocketConnector.field_g[2] = StraightRoadSegment.field_H;
-          uk.field_c[15] = StereoMusicSample.field_d;
-          uk.field_c[14] = MessagePanel.field_K;
-          uk.field_c[16] = StereoMusicSample.field_d;
-          uk.field_c[18] = CurvedRoadSegment.field_J;
-          uk.field_c[17] = uk.field_d;
-          uk.field_c[1] = RotatedSpriteCache.field_i;
-          uk.field_c[2] = IsaacPacketBuffer.field_s;
-          uk.field_c[26] = PathWaypoint.field_p;
-          uk.field_c[4] = hk.field_b;
-          uk.field_c[19] = nm.field_a;
-          uk.field_c[9] = SoundCache.field_f;
-          uk.field_c[13] = StraightRoadSegment.field_H;
-          uk.field_c[11] = sa.field_f;
-          uk.field_c[3] = IntrusiveNode.field_c;
-          uk.field_c[7] = ka.field_e;
-          uk.field_c[0] = ArchiveRequest.field_o;
-          uk.field_c[20] = sa.field_a;
-          uk.field_c[6] = hk.field_b;
-          uk.field_c[12] = CachedArchiveProvider.field_B;
-          uk.field_c[21] = gk.field_c;
-          PacketBuffer.field_n = new String[]{uk.field_c[4], uk.field_c[0]};
-          ReflectionCheck.field_i = new String[]{uk.field_c[9], uk.field_c[0]};
-          DropTargetWidget.field_L = new String[]{uk.field_c[0], jc.field_d, b.field_e, o.field_b};
+          ProxyAuthenticationException.field_c[15] = StereoMusicSample.field_d;
+          ProxyAuthenticationException.field_c[14] = MessagePanel.field_K;
+          ProxyAuthenticationException.field_c[16] = StereoMusicSample.field_d;
+          ProxyAuthenticationException.field_c[18] = CurvedRoadSegment.field_J;
+          ProxyAuthenticationException.field_c[17] = ProxyAuthenticationException.field_d;
+          ProxyAuthenticationException.field_c[1] = RotatedSpriteCache.field_i;
+          ProxyAuthenticationException.field_c[2] = IsaacPacketBuffer.field_s;
+          ProxyAuthenticationException.field_c[26] = PathWaypoint.field_p;
+          ProxyAuthenticationException.field_c[4] = hk.field_b;
+          ProxyAuthenticationException.field_c[19] = nm.field_a;
+          ProxyAuthenticationException.field_c[9] = SoundCache.field_f;
+          ProxyAuthenticationException.field_c[13] = StraightRoadSegment.field_H;
+          ProxyAuthenticationException.field_c[11] = NameRequestState.field_f;
+          ProxyAuthenticationException.field_c[3] = IntrusiveNode.field_c;
+          ProxyAuthenticationException.field_c[7] = ka.field_e;
+          ProxyAuthenticationException.field_c[0] = ArchiveRequest.field_o;
+          ProxyAuthenticationException.field_c[20] = NameRequestState.field_a;
+          ProxyAuthenticationException.field_c[6] = hk.field_b;
+          ProxyAuthenticationException.field_c[12] = CachedArchiveProvider.field_B;
+          ProxyAuthenticationException.field_c[21] = MouseInputRegistration.field_c;
+          PacketBuffer.field_n = new String[]{ProxyAuthenticationException.field_c[4], ProxyAuthenticationException.field_c[0]};
+          ReflectionCheck.field_i = new String[]{ProxyAuthenticationException.field_c[9], ProxyAuthenticationException.field_c[0]};
+          DropTargetWidget.field_L = new String[]{ProxyAuthenticationException.field_c[0], LeaderboardPlayer.field_d, b.field_e, o.field_b};
           var1_int = TextHotspotRange.field_i.length;
           var2 = Integer.toString(var1_int);
           for (var3 = 0; var1_int > var3; var3++) {
             TextHotspotRange.field_i[var3] = TextHotspotRange.field_i[var3] + ' ' + (var3 + 1) + "/" + var2;
           }
           DirectByteStorage.field_f = new String[8];
-          ij.field_c[3] = new int[]{TextLineLayout.field_g};
-          ij.field_c[2] = new int[]{MusicPatchEnvelope.field_a};
+          ChatMessage.field_c[3] = new int[]{TextLineLayout.field_g};
+          ChatMessage.field_c[2] = new int[]{MusicPatchEnvelope.field_a};
           BufferedSocket.field_g = new String[8];
-          ij.field_c[1] = new int[]{MarkerSlider.field_G};
-          ij.field_c[0] = new int[]{FadingDialog.field_I};
+          ChatMessage.field_c[1] = new int[]{MarkerSlider.field_G};
+          ChatMessage.field_c[0] = new int[]{FadingDialog.field_I};
           BufferedSocket.field_g[0] = DelegatingCanvas.field_h;
           DirectByteStorage.field_f[0] = jh.a(MusicPatchPcmStream.field_n, param0 + 9217, DelegatingCanvas.field_h);
           BufferedSocket.field_g[1] = qh.field_a;
@@ -97,8 +97,8 @@ final class dg {
           DirectByteStorage.field_f[2] = jh.a(q.field_b, -119, ResizableDialog.field_Q);
           BufferedSocket.field_g[3] = TextLineLayout.field_d;
           DirectByteStorage.field_f[3] = jh.a(CourseDefinition.field_d, Vector2i.xor(param0, 9219), TextLineLayout.field_d);
-          BufferedSocket.field_g[5] = fj.field_p;
-          DirectByteStorage.field_f[5] = jh.a(PointPath.field_a, -128, fj.field_p);
+          BufferedSocket.field_g[5] = WidgetStyleNode.field_p;
+          DirectByteStorage.field_f[5] = jh.a(PointPath.field_a, -128, WidgetStyleNode.field_p);
           BufferedSocket.field_g[4] = UiTheme.field_a;
           DirectByteStorage.field_f[4] = jh.a(Particle.field_l, -120, UiTheme.field_a);
           BufferedSocket.field_g[7] = fe.field_a;
@@ -128,7 +128,7 @@ final class dg {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiAlphanumeric(byte param0, char param1) {
         boolean stackIn_25_0 = false;
         int var2;
         var2 = -62 / ((param0 + 7) / 54);
@@ -162,7 +162,7 @@ final class dg {
         return true;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int randomIntInclusive(int param0, int param1, int param2) {
         if (param1 == -1) {
           return param0 + FullscreenErrorDialog.nextIntBounded(param2 - param0 + 1, Vector2f.field_c, param1 + 0);
         }
@@ -177,7 +177,7 @@ final class dg {
         field_a = null;
     }
 
-    final static void a(boolean param0, java.math.BigInteger param1, PacketBuffer param2, PacketBuffer param3, java.math.BigInteger param4) {
+    final static void writeEncryptedPacket(boolean param0, java.math.BigInteger param1, PacketBuffer param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           te.a(param1, param4, param3, 0, 126, param2.position, param2.payload);
           if (param0) {
@@ -197,15 +197,15 @@ final class dg {
             LinkWidgetRenderer.a(3, (byte) -67, PathWaypoint.field_o);
           }
           int var2 = 96 / ((-25 - param0) / 60);
-          var4 = (AchievementUnlockRequest) (fb.field_n.first((byte) 121));
+          var4 = (AchievementUnlockRequest) (ScoreSubmission.field_n.first((byte) 121));
           while (var4 != null) {
             PointLight.queueAchievementUnlock(4, var4, (byte) -79);
-            var4 = (AchievementUnlockRequest) (fb.field_n.next((byte) -75));
+            var4 = (AchievementUnlockRequest) (ScoreSubmission.field_n.next((byte) -75));
           }
           if (of.a(-969)) {
             RaceSetupMenu.field_y = BlobReadRequest.requestArchiveKey(10, 31043, 2, 0);
           }
-          h.b((byte) -92);
+          FullscreenErrorReason.b((byte) -92);
           RoadSegment.setAlternateMenuItems(of.a(-969), (byte) 97);
           NameSuggestionsPanel.a((byte) 80);
         } catch (RuntimeException runtimeException) {
@@ -214,6 +214,6 @@ final class dg {
     }
 
     static {
-        field_a = new ge();
+        field_a = new ContentTransitionState();
     }
 }

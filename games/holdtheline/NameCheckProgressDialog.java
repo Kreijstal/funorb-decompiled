@@ -13,29 +13,29 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
     static String field_tb;
     static Sprite field_vb;
 
-    final boolean g(byte param0) {
-        if (!this.field_F) {
+    final boolean updateAnimation(byte param0) {
+        if (!this.visible) {
           if (param0 == 39) {
-            return super.g((byte) 39);
+            return super.updateAnimation((byte) 39);
           }
           return false;
         }
         if (this.field_wb) {
           if (param0 == 39) {
-            return super.g((byte) 39);
+            return super.updateAnimation((byte) 39);
           }
           return false;
         }
         NameAvailabilityResult var2 = PacketBuffer.pollNameAvailabilityResult((byte) -67);
         if (var2 == null) {
           if (param0 == 39) {
-            return super.g((byte) 39);
+            return super.updateAnimation((byte) 39);
           }
           return false;
         }
         this.a((byte) 100, false, var2);
         if (param0 == 39) {
-          return super.g((byte) 39);
+          return super.updateAnimation((byte) 39);
         }
         return false;
     }
@@ -58,13 +58,13 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
             if (null != param2.field_j) {
               var4 = BufferedRandomAccessFile.field_j;
               if (this.field_sb != null) {
-                this.field_sb.a((byte) 125);
+                this.field_sb.onMoreSuggestionsRequested((byte) 125);
               }
             } else {
               var4 = param2.field_d;
               if (param2.field_b == 248) {
                 if (!param1) {
-                  MatchingTextValidator.a(true);
+                  MatchingTextValidator.persistLegacySession(true);
                 }
                 var4 = NineSlicePanel.field_e;
                 this.field_yb = true;
@@ -76,30 +76,30 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
           var5 = new MessagePanel((AccountProgressDialog) (this), DisplayNameForm.field_I, var4);
           if (param2.field_f) {
             if (param2.field_i) {
-              this.a((UiWidget) (new AccountTermsPanel(this)), (byte) 126);
+              this.setContent((UiWidget) (new AccountTermsPanel(this)), (byte) 126);
               return;
             }
-            var5.a(112, (WidgetListener) (this), ImageProducerRasterBuffer.field_j);
+            var5.addButton(112, (WidgetListener) (this), ImageProducerRasterBuffer.field_j);
           } else {
             if (this.field_yb) {
-              var5.a(81, (WidgetListener) (this), ImageProducerRasterBuffer.field_j);
+              var5.addButton(81, (WidgetListener) (this), ImageProducerRasterBuffer.field_j);
             } else {
               if (param2.field_b == 5) {
-                var5.a(11, NineSlicePanel.field_b, (byte) 66);
-                var5.a(17, UrlPacketDownloader.field_n, (byte) 120);
+                var5.addActionButton(11, NineSlicePanel.field_b, (byte) 66);
+                var5.addActionButton(17, UrlPacketDownloader.field_n, (byte) 120);
               } else {
-                var5.a(-1, ArchiveIndex.field_i, (byte) 108);
+                var5.addActionButton(-1, ArchiveIndex.field_i, (byte) 108);
               }
             }
             if (param2.field_b == 3) {
-              var5.a(7, CheckboxRenderer.field_u, (byte) 61);
+              var5.addActionButton(7, CheckboxRenderer.field_u, (byte) 61);
             } else {
               if (param2.field_b == 6) {
-                var5.a(9, Bzip2State.field_d, (byte) 77);
+                var5.addActionButton(9, Bzip2State.field_d, (byte) 77);
               }
             }
           }
-          this.a((UiWidget) (var5), (byte) 127);
+          this.setContent((UiWidget) (var5), (byte) 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
         RuntimeException var6 = null;
         try {
           if (this.field_yb) {
-            TutorialAction.a((byte) -93, true, false);
+            TutorialAction.showLoginForm((byte) -93, true, false);
             return;
           }
           hk.a(true);
@@ -172,7 +172,7 @@ final class NameCheckProgressDialog extends AccountProgressDialog implements But
         if (param0 > -113) {
           return;
         }
-        this.a((byte) -39, true, ij.a(NineSlicePanel.field_e, 256, 248));
+        this.a((byte) -39, true, ChatMessage.createNameAvailabilityResult(NineSlicePanel.field_e, 256, 248));
     }
 
     NameCheckProgressDialog(DialogLayer param0, AccountCreationForm param1) {

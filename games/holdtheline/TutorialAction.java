@@ -10,11 +10,11 @@ final class TutorialAction {
     int field_d;
     int opcode;
     static long field_g;
-    static ll field_f;
+    static AccountProtocolState field_f;
     static int[] field_j;
     static int field_i;
 
-    final static void a(byte param0, boolean param1, boolean param2) {
+    final static void showLoginForm(byte param0, boolean param1, boolean param2) {
         String var4 = null;
         String var4Lifetime1;
         if (param0 < -87) {
@@ -32,26 +32,26 @@ final class TutorialAction {
         field_j = null;
         field_f = null;
         if (param0 >= -16) {
-          TutorialAction.a((byte) 29, true, false);
+          TutorialAction.showLoginForm((byte) 29, true, false);
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        Sprite[] var5 = jc.field_h;
-        Sprite var6 = ij.a(param3 - 8137, param2, var5, param4);
+    final static void drawShadedPanel(int param0, int param1, int param2, byte param3, int param4) {
+        Sprite[] var5 = LeaderboardPlayer.field_h;
+        Sprite var6 = ChatMessage.getShadedPanelSprite(param3 - 8137, param2, var5, param4);
         if (param3 == 41) {
           param0 = param0 - (var6.width - param2 >> 1);
           param1 = param1 - (var6.height - param4 >> 1);
           var6.draw(param0, param1);
           return;
         }
-        TutorialAction.a(78, -110, -63, (byte) -36, 2);
+        TutorialAction.drawShadedPanel(78, -110, -63, (byte) -36, 2);
         param0 = param0 - (var6.width - param2 >> 1);
         param1 = param1 - (var6.height - param4 >> 1);
         var6.draw(param0, param1);
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isIgnoredPlayer(int param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -60,7 +60,7 @@ final class TutorialAction {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2113942113) {
-            field_f = (ll) null;
+            field_f = (AccountProtocolState) null;
           }
           stackIn_5_0 = (LoadProgressDialog.a(param1, 85) != null);
           return stackIn_5_0;
@@ -78,7 +78,7 @@ final class TutorialAction {
         }
     }
 
-    final static void a(int param0) {
+    final static void pollMouseInput(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = ArchiveLoadStage.field_d;
@@ -102,7 +102,7 @@ final class TutorialAction {
 
     static {
         field_a = true;
-        field_f = new ll();
+        field_f = new AccountProtocolState();
         field_i = 20;
         field_j = new int[8192];
     }

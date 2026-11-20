@@ -31,7 +31,7 @@ final class ao {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (eo.a(21896, "getcookies", param0));
+              var3 = (String) (JavaScriptBridge.callJavaScript(21896, "getcookies", param0));
               var4 = BlobWriteRequest.split(var3, (byte) -125, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -126,13 +126,13 @@ final class ao {
           SolidRoadStripRenderer.field_r = false;
           var8 = bb.a(0, param0, 0.0f, param3, true, (byte) -59, var7, var6);
           if (var8.size >= 1 &&
-            qh.a((byte) -63, var8)) {
+            qh.hasIncludedBoundary((byte) -63, var8)) {
             var13.add(var8, (byte) 6);
           }
           if (!SolidRoadStripRenderer.field_r) {
             var14 = bb.a(var6.size - 1, param0, (float)param3.size, param3, false, (byte) -46, var7, var6);
             if (1 <= var14.size &&
-              qh.a((byte) -63, var8)) {
+              qh.hasIncludedBoundary((byte) -63, var8)) {
               var13.add(var14, (byte) 6);
             }
           }
@@ -143,7 +143,7 @@ final class ao {
               var15.paired.field_l = true;
               var16 = bb.a((-1 + (var4_intLifetime2 + var6.size)) % var6.size, param0, var15.parameter, param3, false, (byte) -81, var7, var6);
               if (var16.size >= 1 &&
-                qh.a((byte) -63, var16)) {
+                qh.hasIncludedBoundary((byte) -63, var16)) {
                 var13.add(var16, (byte) 6);
               }
             }
@@ -160,7 +160,7 @@ final class ao {
               var17_ref.paired.field_l = true;
               var18 = bb.a((var4_intLifetime3 + 1) % var7.size, param0, var17_ref.parameter, param3, true, (byte) -94, var7, var6);
               if (1 <= var18.size &&
-                qh.a((byte) -63, var18)) {
+                qh.hasIncludedBoundary((byte) -63, var18)) {
                 var13.add(var18, (byte) 6);
               }
             }
@@ -210,7 +210,7 @@ final class ao {
             var5 = (RoadSegment) null;
             ao.a(1.1313912868499756f, true, (RoadSegment) null, -1.3016173839569092f);
           }
-          stackIn_3_0 = TrackCurve.a(param2, param0, param3, (byte) -115);
+          stackIn_3_0 = TrackCurve.sliceRoadSegment(param2, param0, param3, (byte) -115);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class ao {
     }
 
     static {
-        field_d = fc.a(-6, 5, 4);
+        field_d = fc.createHorizontalPointPairs(-6, 5, 4);
         field_e = "Names should contain a maximum of 12 characters";
     }
 }

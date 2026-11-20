@@ -27,9 +27,9 @@ final class ni {
         field_a = null;
     }
 
-    final static int a(byte param0) {
+    final static int getInterfaceLoadingPercent(byte param0) {
         if (param0 >= -54) {
-          ni.a((byte) -3);
+          ni.getInterfaceLoadingPercent((byte) -3);
         }
         if (PolarSortVector.field_d < 2) {
           return 0;

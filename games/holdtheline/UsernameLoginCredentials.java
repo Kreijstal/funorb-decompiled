@@ -132,7 +132,7 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
           }
           while (true) {
-            if (!qh.c(-121)) {
+            if (!qh.pollKeyEvent(-121)) {
               stackIn_83_0 = 0;
               return stackIn_83_0;
             }
@@ -191,16 +191,16 @@ class UsernameLoginCredentials extends LoginCredentials {
         int[] var10 = null;
         var9 = HoldTheLine.field_D;
         try {
-          if (!RasterBuffer.a(param0, -65)) {
+          if (!RasterBuffer.pollCourseGraphicsLoaded(param0, -65)) {
             return false;
           }
           var10 = RotatedSpriteAsset.field_g[param0.field_p];
           var2 = var10;
           for (var3_int = 0; var10.length > var3_int; var3_int++) {
-            if (ge.field_c[var10[var3_int]].spriteAsset.getRotatedSprites((byte) 41) == null) {
+            if (ContentTransitionState.field_c[var10[var3_int]].spriteAsset.getRotatedSprites((byte) 41) == null) {
               return false;
             }
-            if (ge.field_c[var10[var3_int]].shadowAsset.getRotatedSprites((byte) -117) == null) {
+            if (ContentTransitionState.field_c[var10[var3_int]].shadowAsset.getRotatedSprites((byte) -117) == null) {
               return false;
             }
           }
@@ -213,7 +213,7 @@ class UsernameLoginCredentials extends LoginCredentials {
           if (!mc.field_a[11].pollGraphicsLoaded((byte) 124)) {
             return false;
           }
-          if (LoginCredentialType.a(16616, 0)) {
+          if (LoginCredentialType.isFeatureEnabled(16616, 0)) {
             var3 = wi.field_a.getRotatedSprites(16);
             if (var3 == null) {
               return false;
@@ -483,7 +483,7 @@ class UsernameLoginCredentials extends LoginCredentials {
             }
           }
           while (true) {
-            if (!qh.c(-121)) {
+            if (!qh.pollKeyEvent(-121)) {
               stackIn_83_0 = 0;
               return stackIn_83_0;
             }

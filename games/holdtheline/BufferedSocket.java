@@ -55,7 +55,7 @@ final class BufferedSocket implements Runnable {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        qn var3 = null;
+        PlayerStatsRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -79,26 +79,26 @@ final class BufferedSocket implements Runnable {
             BufferedSocket.clearSharedReferences(25);
           }
           var2 = var14.readUnsignedByte((byte) -85);
-          var3 = (qn) (StrongCacheEntry.field_z.first((byte) 97));
+          var3 = (PlayerStatsRequest) (StrongCacheEntry.field_z.first((byte) 97));
           while (var3 != null) {
-            if (var2 != var3.field_j) {
-              var3 = (qn) (StrongCacheEntry.field_z.next((byte) 93));
+            if (var2 != var3.requestId) {
+              var3 = (PlayerStatsRequest) (StrongCacheEntry.field_z.next((byte) 93));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            r.a(-28036);
+            ServerConnectionState.closeServerConnection(-28036);
             return;
           }
           var4 = var14.readUnsignedByte((byte) -31);
           if (var4 != 0) {
             RoadSegment.field_v[0] = QuickChatPhraseCache.field_e;
-            var5 = var3.field_i;
+            var5 = var3.rowLimit;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               RoadSegment.field_v[var6_int] = var14.readCp1252String(-1231);
             }
-            NetworkArchiveRequest.a(var4, false, var5);
+            NetworkArchiveRequest.ensurePlayerStatsCapacity(var4, false, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               IterableNodeHashTable.a(76, var14);
               if (var6_intLifetime1 == 0) {
@@ -119,9 +119,9 @@ final class BufferedSocket implements Runnable {
               var18[0][var10 * 4] = SpriteSheetAsset.field_j[var11];
               var18[0][1 + var10 * 4] = IsaacPacketBuffer.field_u[var11];
               var18[0][2 + var10 * 4] = ua.field_c[var11];
-              var18[0][4 * var10 + 3] = fj.field_q[var11];
+              var18[0][4 * var10 + 3] = WidgetStyleNode.field_q[var11];
               if (LoadProgressDialog.isLocalPlayerName(RoadSegment.field_v[var11], false) &&
-                fj.field_q[var11] + (IsaacPacketBuffer.field_u[var11] + ua.field_c[var11]) == 0) {
+                WidgetStyleNode.field_q[var11] + (IsaacPacketBuffer.field_u[var11] + ua.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -137,9 +137,9 @@ final class BufferedSocket implements Runnable {
               var18[1][4 * var13] = SpriteSheetAsset.field_j[var11Lifetime1];
               var18[1][var13 * 4 + 1] = IsaacPacketBuffer.field_u[var11Lifetime1];
               var18[1][4 * var13 + 2] = ua.field_c[var11Lifetime1];
-              var18[1][var13 * 4 + 3] = fj.field_q[var11Lifetime1];
+              var18[1][var13 * 4 + 3] = WidgetStyleNode.field_q[var11Lifetime1];
               if (LoadProgressDialog.isLocalPlayerName(RoadSegment.field_v[var11Lifetime1], false) &&
-                fj.field_q[var11Lifetime1] + IsaacPacketBuffer.field_u[var11Lifetime1] + ua.field_c[var11Lifetime1] == 0) {
+                WidgetStyleNode.field_q[var11Lifetime1] + IsaacPacketBuffer.field_u[var11Lifetime1] + ua.field_c[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -425,14 +425,14 @@ final class BufferedSocket implements Runnable {
         if (param0 > -3) {
           field_f = (char[]) null;
         }
-        if (!fb.field_i.tryLoadNamedGroup("font24", 118)) {
+        if (!ScoreSubmission.field_i.tryLoadNamedGroup("font24", 118)) {
           return false;
         }
-        if (!fb.field_i.tryLoadNamedGroup("overlayfont", -118)) {
+        if (!ScoreSubmission.field_i.tryLoadNamedGroup("overlayfont", -118)) {
           return false;
         }
-        hk.field_a = ko.a(false);
-        EmailAddressValidator.field_j = TrackObjectDefinition.loadNamedFont("font24", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
+        hk.field_a = ko.loadHudSprites(false);
+        EmailAddressValidator.field_j = TrackObjectDefinition.loadNamedFont("font24", FullscreenFocusCanvas.field_c, "", 8192, ScoreSubmission.field_i);
         return true;
     }
 

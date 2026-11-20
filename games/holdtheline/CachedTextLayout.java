@@ -49,7 +49,7 @@ final class CachedTextLayout extends TextLayout {
             param2 = param5.baseline;
           }
           if (param1 == null) {
-            this.field_b = null;
+            this.lines = null;
             return;
           }
           if (this.field_o == param5 &&
@@ -96,7 +96,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          this.field_b = new TextLineLayout[var10];
+          this.lines = new TextLineLayout[var10];
           for (var12Lifetime1 = 0; var10 > var12Lifetime1; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_35_0 = null;
@@ -113,18 +113,18 @@ final class CachedTextLayout extends TextLayout {
               stackIn_36_4 = var13.length();
             }
             var14 = new TextLineLayout(stackIn_35_2, stackIn_35_3, stackIn_36_4);
-            var14.field_c[0] = 0;
+            var14.caretPositions[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param5.measureText(var13);
+              var14.caretPositions[var13.length()] = param5.measureText(var13);
               stackIn_39_0 = var14;
               if (param7 != 3) {
                 stackIn_40_1 = 0;
               } else {
-                stackIn_40_1 = this.a(param5.measureText(var13), param0, var13, (byte) -115);
+                stackIn_40_1 = this.calculateJustificationSpacing(param5.measureText(var13), param0, var13, (byte) -115);
               }
-              oc.a(stackIn_39_0, stackIn_40_1, param5, 120, var13);
+              oc.buildCaretPositions(stackIn_39_0, stackIn_40_1, param5, 120, var13);
             }
-            this.field_b[var12Lifetime1] = var14;
+            this.lines[var12Lifetime1] = var14;
             var11 = var11 + param2;
           }
           return;
@@ -181,7 +181,7 @@ final class CachedTextLayout extends TextLayout {
           }
           var6 = new TextLineLayout(-param2.ascent + param3, param3 + param2.descent, param1.length());
           var5 = var6;
-          this.field_b = new TextLineLayout[]{var6};
+          this.lines = new TextLineLayout[]{var6};
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class CachedTextLayout extends TextLayout {
         TextLineLayout var7 = null;
         TextLineLayout var8 = null;
         if (param0 == null) {
-          this.field_b = null;
+          this.lines = null;
           return;
         }
         if (param4 == this.field_o && this.field_h && this.field_g == 0 && this.field_k != null &&
@@ -222,12 +222,12 @@ final class CachedTextLayout extends TextLayout {
           this.field_h = true;
           var7 = this.createSingleLine(122, param0, param4, param2);
           var8 = var7;
-          var7.field_c[0] = param3;
+          var7.caretPositions[0] = param3;
           if (param1 != -12476) {
             field_j = (int[]) null;
           }
-          var8.field_c[param0.length()] = param4.measureText(param0) + param3;
-          oc.a(var8, 0, param4, 123, param0);
+          var8.caretPositions[param0.length()] = param4.measureText(param0) + param3;
+          oc.buildCaretPositions(var8, 0, param4, 123, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -240,7 +240,7 @@ final class CachedTextLayout extends TextLayout {
           this.field_h = false;
         }
         if (param0 == null) {
-          this.field_b = null;
+          this.lines = null;
           return;
         }
         if (param2 == this.field_o &&
@@ -257,9 +257,9 @@ final class CachedTextLayout extends TextLayout {
           this.field_k = param0;
           var8 = this.createSingleLine(122, param0, param2, param3);
           var9 = var8;
-          var9.field_c[0] = param4 - param2.measureText(param0);
-          var9.field_c[param0.length()] = param4;
-          oc.a(var9, 0, param2, 113, param0);
+          var9.caretPositions[0] = param4 - param2.measureText(param0);
+          var9.caretPositions[param0.length()] = param4;
+          oc.buildCaretPositions(var9, 0, param2, 113, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -269,7 +269,7 @@ final class CachedTextLayout extends TextLayout {
         TextLineLayout var8 = null;
         int var7 = 0;
         if (param3 == null) {
-          this.field_b = null;
+          this.lines = null;
           return;
         }
         if (this.field_o == param0 && this.field_h && this.field_g == 1 && null != this.field_k &&
@@ -285,9 +285,9 @@ final class CachedTextLayout extends TextLayout {
           this.field_g = 1;
           var8 = this.createSingleLine(117, param3, param0, param2);
           var7 = param0.measureText(param3);
-          var8.field_c[0] = param4 - (var7 >> 1);
-          var8.field_c[param3.length()] = param4 + (var7 >> 1);
-          oc.a(var8, 0, param0, param1 ^ -93, param3);
+          var8.caretPositions[0] = param4 - (var7 >> 1);
+          var8.caretPositions[param3.length()] = param4 + (var7 >> 1);
+          oc.buildCaretPositions(var8, 0, param0, param1 ^ -93, param3);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -312,7 +312,7 @@ final class CachedTextLayout extends TextLayout {
           }
           var2 = new SoundPlayback(param0, param0);
           SecondaryNodeDeque.field_b.addLast((byte) -127, var2);
-          LoginChoicePanel.field_H.a(param0);
+          LoginChoicePanel.field_H.addSubStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

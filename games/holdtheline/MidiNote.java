@@ -109,7 +109,7 @@ final class MidiNote extends IntrusiveNode {
             BufferedSocket.a(false);
           }
           CheckboxWidget.a(DisplayNameForm.field_K, DelayedServerPacket.field_m, LayeredWidgetStyle.field_e, -115);
-          hi.paintRasterBuffer(param1, 0, true, 0);
+          InheritedWidgetStyle.paintRasterBuffer(param1, 0, true, 0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ck.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

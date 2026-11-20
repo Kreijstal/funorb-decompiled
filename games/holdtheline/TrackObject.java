@@ -8,7 +8,7 @@ final class TrackObject extends MovingEntity {
     int transitionLayer;
     int flags;
     private int homingDelay;
-    static ll field_U;
+    static AccountProtocolState field_U;
     int transitionY;
     int transitionX;
     private int animationFrame;
@@ -24,7 +24,7 @@ final class TrackObject extends MovingEntity {
         int var4;
         var4 = HoldTheLine.field_D;
         if (param1) {
-          field_U = (ll) null;
+          field_U = (AccountProtocolState) null;
         }
         TextLayout.field_a = ByteStorage.field_b;
         if (param2 == dg.field_c) {
@@ -262,10 +262,10 @@ final class TrackObject extends MovingEntity {
             } else {
               var10 = 16744448 | var11 - 128 << 8;
             }
-            var12 = var4 + dg.a(-2, -1, 2);
-            var13 = dg.a(-2, -1, 2) + var5;
-            var14 = var7 + dg.a(-512, -1, 512);
-            var15 = dg.a(-512, -1, 512) + var8;
+            var12 = var4 + dg.randomIntInclusive(-2, -1, 2);
+            var13 = dg.randomIntInclusive(-2, -1, 2) + var5;
+            var14 = var7 + dg.randomIntInclusive(-512, -1, 512);
+            var15 = dg.randomIntInclusive(-512, -1, 512) + var8;
             ArchiveIndex.a(var14, var13, 0, 16, 1, -16, var12, this.layer, MusicPatchPcmStream.field_r.trailParticles, var10, var15, 128, 2);
           }
         } else {
@@ -350,7 +350,7 @@ final class TrackObject extends MovingEntity {
     public static void clearSharedReferences(int param0) {
         field_U = null;
         if (param0 != -20668) {
-          field_U = (ll) null;
+          field_U = (AccountProtocolState) null;
         }
     }
 
@@ -364,6 +364,6 @@ final class TrackObject extends MovingEntity {
     }
 
     static {
-        field_U = new ll();
+        field_U = new AccountProtocolState();
     }
 }

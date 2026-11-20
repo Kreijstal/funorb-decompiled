@@ -45,7 +45,7 @@ final class ArchiveLoadStage {
         }
     }
 
-    final static void a(int param0, ij param1) {
+    final static void appendChatMessage(int param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -67,18 +67,18 @@ final class ArchiveLoadStage {
             CheckboxRenderer.field_n[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < Vector2f.field_e; var2_intLifetime1++) {
-            if (param1.field_h == lj.field_a[var2_intLifetime1].field_h) {
-              dupTemp$3 = lj.field_a[var2_intLifetime1].a(-90);
+            if (param1.type == lj.field_a[var2_intLifetime1].type) {
+              dupTemp$3 = lj.field_a[var2_intLifetime1].getRetentionCategory(-90);
               CheckboxRenderer.field_n[dupTemp$3] = CheckboxRenderer.field_n[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.a(-65);
+          dupTemp$0 = param1.getRetentionCategory(-65);
           CheckboxRenderer.field_n[dupTemp$0] = CheckboxRenderer.field_n[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; Vector2f.field_e > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~lj.field_a[var3].field_h == ~param1.field_h) {
-              var4 = lj.field_a[var3].a(param0 ^ -21258);
+            if (~lj.field_a[var3].type == ~param1.type) {
+              var4 = lj.field_a[var3].getRetentionCategory(param0 ^ -21258);
               if (IntWriteRequest.field_i < CheckboxRenderer.field_n[var4]) {
                 CheckboxRenderer.field_n[var4] = CheckboxRenderer.field_n[var4] - 1;
                 decompiledFrameRemainder0 = false;

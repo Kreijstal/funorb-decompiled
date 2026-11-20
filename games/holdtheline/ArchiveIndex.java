@@ -19,7 +19,7 @@ final class ArchiveIndex {
     int field_t;
     int[] field_p;
     int[][] field_m;
-    static tk field_r;
+    static VehicleEngineSounds field_r;
     static int field_a;
     static Calendar field_f;
     int field_s;
@@ -291,18 +291,18 @@ final class ArchiveIndex {
           ArchiveIndex.clearSharedReferences((byte) -96);
         }
         if (DelegatingCanvas.field_d == 3) {
-          return tk.field_c[4][0];
+          return VehicleEngineSounds.field_c[4][0];
         }
         if (DelegatingCanvas.field_d != 2) {
-          return tk.field_c[StrongCacheEntry.field_w][LoginForm.field_P];
+          return VehicleEngineSounds.field_c[StrongCacheEntry.field_w][LoginForm.field_P];
         }
-        return tk.field_c[5][LoginForm.field_P];
+        return VehicleEngineSounds.field_c[5][LoginForm.field_P];
     }
 
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_t = DropTargetWidget.a((byte) -86, param0, param0.length);
+          this.field_t = DropTargetWidget.crc32((byte) -86, param0, param0.length);
           if (param1 != this.field_t) {
             throw new RuntimeException();
           }
@@ -310,7 +310,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_d = TrackCurve.a(param0, -6408, 0, param0.length);
+            this.field_d = TrackCurve.whirlpoolDigest(param0, -6408, 0, param0.length);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (this.field_d[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

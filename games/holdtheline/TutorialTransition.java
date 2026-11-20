@@ -30,7 +30,7 @@ final class TutorialTransition {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = EntitySound.a(true, ko.a(param0, -13820));
+          var2 = EntitySound.a(true, ko.encodeBase37(param0, -13820));
           if (var2 == null) {
             var2 = "";
           }
@@ -102,20 +102,20 @@ final class TutorialTransition {
           TutorialTransition.a((byte) 60);
         }
         if (ad.field_c == -1) {
-          if (!hi.readServerBytes(1, (byte) 40)) {
+          if (!InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
             return false;
           }
           ad.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -72);
           RoadStripRenderer.field_e.position = 0;
         }
         if (ad.field_c == -2) {
-          if (!hi.readServerBytes(2, (byte) 40)) {
+          if (!InheritedWidgetStyle.readServerBytes(2, (byte) 40)) {
             return false;
           }
           ad.field_c = RoadStripRenderer.field_e.readUnsignedShort(62);
           RoadStripRenderer.field_e.position = 0;
         }
-        return hi.readServerBytes(ad.field_c, (byte) 40);
+        return InheritedWidgetStyle.readServerBytes(ad.field_c, (byte) 40);
     }
 
     static {

@@ -119,7 +119,7 @@ final class TrackObjectDefinition {
           DialogLayer.field_I = -1;
           mc.field_b = param0;
           mn.field_b = -1;
-          MessagePanel.h(0);
+          MessagePanel.resetHoverTarget(0);
           if (param1 <= 10) {
             ResourceArchive var4 = (ResourceArchive) null;
             TrackObjectDefinition.loadNamedFont((String) null, (ResourceArchive) null, (String) null, 14, (ResourceArchive) null);
@@ -289,7 +289,7 @@ final class TrackObjectDefinition {
           lh.a((java.awt.Component) ((Object) param1), false);
           ArchiveLoadStage.detachMouseInput(23147, (java.awt.Component) ((Object) param1));
           if (TrackBoundary.field_u != null) {
-            TrackBoundary.field_u.a((java.awt.Component) ((Object) param1), -1);
+            TrackBoundary.field_u.detach((java.awt.Component) ((Object) param1), -1);
           }
           if (param0 == -46342) {
             return;

@@ -122,11 +122,11 @@ final class AccountTermsPanel extends WidgetContainer implements HotspotClickLis
           var4 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
           this.field_F = new TextHotspotWidget(var7, var4);
           this.field_F.tooltip = "";
-          this.field_F.a(0, m.field_d, true);
-          this.field_F.a(1, m.field_d, true);
+          this.field_F.setHotspotTooltip(0, m.field_d, true);
+          this.field_F.setHotspotTooltip(1, m.field_d, true);
           this.field_F.listener = (WidgetListener) (this);
           this.field_F.width = -40 + this.width;
-          this.field_F.a(-40 + this.width, (byte) -64, var3, 26);
+          this.field_F.setBoundsToPreferredHeight(-40 + this.width, (byte) -64, var3, 26);
           var3 = var3 + (this.field_F.height + 15);
           this.addChild(true, this.field_F);
           var5 = 4;

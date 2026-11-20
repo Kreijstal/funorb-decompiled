@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ad {
-    static ll field_b;
+    static AccountProtocolState field_b;
     static int field_c;
     static boolean field_a;
     static int[] field_d;
@@ -52,7 +52,7 @@ final class ad {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          var5 = (ReflectionCheck) (sl.field_b.first((byte) 94));
+          var5 = (ReflectionCheck) (ReflectionCheckQueue.pendingChecks.first((byte) 94));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -212,6 +212,6 @@ final class ad {
     }
 
     static {
-        field_b = new ll();
+        field_b = new AccountProtocolState();
     }
 }

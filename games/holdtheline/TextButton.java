@@ -55,7 +55,7 @@ class TextButton extends UiWidget {
           }
           if (this.isFocused((byte) -20) && (param1 == 84 ||
             param1 == 83)) {
-            this.a(1, -1, true, -1);
+            this.activate(1, -1, true, -1);
             return true;
           }
           return false;
@@ -80,7 +80,7 @@ class TextButton extends UiWidget {
           }
           if (null != this.listener &&
             this.listener instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) (this.listener)).a(param5, param0, param2, this, (byte) -71, param3);
+            ((ButtonPointerListener) (this.listener)).onButtonRelease(param5, param0, param2, this, (byte) -71, param3);
           }
           this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
@@ -105,7 +105,7 @@ class TextButton extends UiWidget {
             }
             if (this.containsPoint(param0, (byte) -105, NodeHashTableIterator.field_g, param2, FullscreenErrorDialog.field_X) &&
               RoadStripRenderer.field_f == 0) {
-              this.a(this.pressedButton, -param2 + FullscreenErrorDialog.field_X, true, NodeHashTableIterator.field_g - param0);
+              this.activate(this.pressedButton, -param2 + FullscreenErrorDialog.field_X, true, NodeHashTableIterator.field_g - param0);
             }
             this.handleMouseRelease(NodeHashTableIterator.field_g, param1, param2, param0, (byte) -9, FullscreenErrorDialog.field_X);
           }
@@ -129,7 +129,7 @@ class TextButton extends UiWidget {
               if (!(this.listener instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ButtonPointerListener) (this.listener)).a((byte) -68, this, param0, param5, param2, param6, param1);
+              ((ButtonPointerListener) (this.listener)).onButtonPress((byte) -68, this, param0, param5, param2, param6, param1);
             }
             return true;
           }
@@ -164,7 +164,7 @@ class TextButton extends UiWidget {
         SocketJs5Transport.a((String) null, false, "");
     }
 
-    void a(int param0, int param1, boolean param2, int param3) {
+    void activate(int param0, int param1, boolean param2, int param3) {
         if (null != this.listener) {
           if (!(this.listener instanceof ButtonActionListener)) {
             if (!param2) {

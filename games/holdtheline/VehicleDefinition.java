@@ -43,7 +43,7 @@ final class VehicleDefinition {
     float mass;
     float field_c;
 
-    final static void a(fb param0, int param1, int param2) {
+    final static void a(ScoreSubmission param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
@@ -57,16 +57,16 @@ final class VehicleDefinition {
         try {
           var4 = var8.position;
           var8.writeByte(111, 1);
-          var8.writeShort(-652561784, param0.field_u);
+          var8.writeShort(-652561784, param0.requestId);
           var8.writeShort(-652561784, param0.field_j);
           var8.writeShort(-652561784, param0.field_t);
           var8.writeInt((byte) -58, param0.field_q);
           var8.writeInt((byte) -58, param0.field_p);
           var8.writeInt((byte) -58, param0.field_o);
           var8.writeInt((byte) -58, param0.field_k);
-          var8.writeByte(111, param0.field_r.length);
-          for (var5 = 0; var5 < param0.field_r.length; var5++) {
-            var7.writeInt((byte) -58, param0.field_r[var5]);
+          var8.writeByte(111, param0.values.length);
+          for (var5 = 0; var5 < param0.values.length; var5++) {
+            var7.writeInt((byte) -58, param0.values[var5]);
           }
           var8.appendCrc32(var4, (byte) 110);
           var8.backpatchByteLength(-268435456, var8.position - var4);
@@ -89,22 +89,22 @@ final class VehicleDefinition {
           this.rearAxleDistance = -this.frontAxleDistance + this.wheelbase;
           this.maxSlipAngle = 0.5f;
           this.centerOfMassHeight = 0.10000000149011612f;
-          this.shadowAsset = al.field_a[1];
+          this.shadowAsset = ByteArrayPool.field_a[1];
           this.field_w = 6.0f;
           this.field_B = 0.0f;
           this.field_A = 15.0f;
           this.field_J = 13.0f;
-          this.field_L = DialogLayer.field_G.field_d;
+          this.field_L = DialogLayer.field_G.decelerate;
           this.momentOfInertia = (this.wheelbase * this.wheelbase + this.field_N * this.field_N) * this.mass / 12.0f;
           this.field_x = 0.5f;
           this.field_E = 0.5f;
-          this.spriteAsset = al.field_a[0];
+          this.spriteAsset = ByteArrayPool.field_a[0];
           this.field_r = 1.0f;
           this.field_o = false;
           this.field_e = 0.0f;
           this.field_s = 4800.0f;
           this.corneringStiffness = 12.0f / this.maxSlipAngle;
-          this.field_u = DialogLayer.field_G.field_e;
+          this.field_u = DialogLayer.field_G.accelerateLoop;
           this.field_n = 0.5f;
           this.field_I = 6.0f;
           this.field_H = 0.0f;
@@ -130,7 +130,7 @@ final class VehicleDefinition {
             this.field_q = 0.5f;
             this.momentOfInertia = (this.field_N * this.field_N + this.wheelbase * this.wheelbase) * this.mass / 12.0f;
             this.field_c = -9.0f;
-            this.field_L = ArchiveIndex.field_r.field_d;
+            this.field_L = ArchiveIndex.field_r.decelerate;
             this.field_J = 13.0f;
             this.field_B = 0.0f;
             this.field_r = 1.0f;
@@ -148,7 +148,7 @@ final class VehicleDefinition {
             this.field_A = 10.0f;
             this.shadowAsset = IterableSecondaryNodeDeque.field_c[1];
             this.field_d = 15;
-            this.field_u = ArchiveIndex.field_r.field_e;
+            this.field_u = ArchiveIndex.field_r.accelerateLoop;
             this.field_e = 0.0f;
             this.field_m = 4.0f;
           } else {
@@ -164,7 +164,7 @@ final class VehicleDefinition {
               this.centerOfMassHeight = 0.10000000149011612f;
               this.maxSlipAngle = 0.4000000059604645f;
               this.field_E = 0.5f;
-              this.spriteAsset = jg.field_o[0];
+              this.spriteAsset = LeaderboardRequest.field_o[0];
               this.field_o = false;
               this.field_d = 15;
               this.field_e = 0.0f;
@@ -176,15 +176,15 @@ final class VehicleDefinition {
               this.field_m = 0.5f;
               this.field_A = 10.0f;
               this.field_s = 6000.0f;
-              this.field_u = te.field_c.field_e;
+              this.field_u = te.field_c.accelerateLoop;
               this.field_J = 5.0f;
               this.field_I = 4.0f;
-              this.field_L = te.field_c.field_d;
+              this.field_L = te.field_c.decelerate;
               this.field_w = 10.0f;
               this.field_p = 3.0f;
               this.field_B = 40.0f;
               this.field_x = 0.6000000238418579f;
-              this.shadowAsset = jg.field_o[1];
+              this.shadowAsset = LeaderboardRequest.field_o[1];
               this.field_q = 0.8999999761581421f;
               this.field_H = 0.0f;
               this.corneringStiffness = 12.0f / this.maxSlipAngle;
@@ -202,7 +202,7 @@ final class VehicleDefinition {
                 this.maxSlipAngle = 0.30000001192092896f;
                 this.field_E = 0.5f;
                 this.field_p = 3.0f;
-                this.field_u = hm.field_a.field_e;
+                this.field_u = hm.field_a.accelerateLoop;
                 this.field_q = 0.5f;
                 this.field_f = 0.30000001192092896f;
                 this.field_A = 5.0f;
@@ -221,7 +221,7 @@ final class VehicleDefinition {
                 this.field_I = 4.0f;
                 this.corneringStiffness = 12.0f / this.maxSlipAngle;
                 this.momentOfInertia = (this.wheelbase * this.wheelbase + this.field_N * this.field_N) * this.mass / 12.0f;
-                this.field_L = hm.field_a.field_d;
+                this.field_L = hm.field_a.decelerate;
                 this.field_x = 0.6000000238418579f;
                 this.field_J = 3.0f;
                 this.field_r = 0.4000000059604645f;
@@ -248,10 +248,10 @@ final class VehicleDefinition {
                   this.rearAxleDistance = 0.25f * this.wheelbase;
                   this.spriteAsset = GrowableObjectList.field_a[0];
                   this.field_f = 0.30000001192092896f;
-                  this.field_L = ValidationIndicator.field_H.field_d;
+                  this.field_L = ValidationIndicator.field_H.decelerate;
                   this.field_r = 1.0f;
                   this.field_w = 15.0f;
-                  this.field_u = ValidationIndicator.field_H.field_e;
+                  this.field_u = ValidationIndicator.field_H.accelerateLoop;
                   this.corneringStiffness = 80.0f;
                   this.field_I = 4.0f;
                   this.field_e = 15.0f;
@@ -280,8 +280,8 @@ final class VehicleDefinition {
                     this.shadowAsset = GameAppletShell.field_j[1];
                     this.field_q = 0.5f;
                     this.spriteAsset = GameAppletShell.field_j[0];
-                    this.field_u = OpacityWidget.field_G.field_e;
-                    this.field_L = OpacityWidget.field_G.field_d;
+                    this.field_u = OpacityWidget.field_G.accelerateLoop;
+                    this.field_L = OpacityWidget.field_G.decelerate;
                     this.field_e = 10.0f;
                     this.field_o = false;
                     this.field_p = 3.0f;
@@ -329,13 +329,13 @@ final class VehicleDefinition {
                       this.field_n = 0.5f;
                       this.field_e = 0.0f;
                       this.spriteAsset = LinkWidgetRenderer.field_b[0];
-                      this.field_u = RaceSetupMenu.field_s.field_e;
+                      this.field_u = RaceSetupMenu.field_s.accelerateLoop;
                       this.corneringStiffness = 12.0f / this.maxSlipAngle;
                       this.field_s = 10000.0f;
                       this.field_B = 0.0f;
                       this.field_E = 0.5f;
                       this.field_J = 13.0f;
-                      this.field_L = RaceSetupMenu.field_s.field_d;
+                      this.field_L = RaceSetupMenu.field_s.decelerate;
                     } else {
                       if (var2 != 7) {
                         throw new RuntimeException();
@@ -353,12 +353,12 @@ final class VehicleDefinition {
                       this.field_o = false;
                       this.field_B = 0.0f;
                       this.field_m = 4.0f;
-                      this.field_L = MusicPatch.field_n.field_d;
+                      this.field_L = MusicPatch.field_n.decelerate;
                       this.field_I = 6.0f;
                       this.shadowAsset = BufferedRandomAccessFile.field_h[1];
                       this.momentOfInertia = this.mass * (this.wheelbase * this.wheelbase + this.field_N * this.field_N) / 12.0f;
                       this.field_r = 0.75f;
-                      this.field_u = MusicPatch.field_n.field_e;
+                      this.field_u = MusicPatch.field_n.accelerateLoop;
                       this.field_A = 10.0f;
                       this.field_J = 13.0f;
                       this.field_n = 0.5f;

@@ -6,14 +6,14 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
     private boolean field_S;
     static int field_G;
     static String field_L;
-    private EditableTextField field_M;
+    private EditableTextField accountField;
     private TextButton field_F;
     private boolean field_O;
     private boolean field_I;
     static int field_J;
     static String field_K;
     static int field_P;
-    private EditableTextField field_H;
+    private EditableTextField passwordField;
     private TextButton field_N;
     static int field_T;
     private String field_R;
@@ -34,18 +34,18 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    private final void a(byte param0) {
+    private final void submit(byte param0) {
         if (RoadStripRenderer.b(-106) ||
-          !(0 >= this.field_M.text.length()) &&
-          !(0 >= this.field_H.text.length())) {
-          DelegatingCanvas.a(this.field_H.text, (byte) -60, this.field_M.text);
+          !(0 >= this.accountField.text.length()) &&
+          !(0 >= this.passwordField.text.length())) {
+          DelegatingCanvas.a(this.passwordField.text, (byte) -60, this.accountField.text);
         }
         if (param0 != -23) {
-          this.a(true);
+          this.getAccountName(true);
         }
     }
 
-    final static void h(int param0) {
+    final static void updatePositionalSounds(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -127,17 +127,17 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final void a(int param0, String param1) {
+    final void setAccountName(int param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {
           if (param0 >= -86) {
-            LoginForm.b(false);
+            LoginForm.isAdaptiveViewportAvailable(false);
           }
-          var3 = this.field_M;
+          var3 = this.accountField;
           var4 = param1;
-          var3.a(false, var4, 1471);
-          this.field_H.clearText(1);
+          var3.setText(false, var4, 1471);
+          this.passwordField.clearText(1);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "vg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -180,8 +180,8 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             this.field_S)) {
             throw new IllegalStateException();
           }
-          this.field_M = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetListener) (this), 100));
-          this.field_H = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetListener) (this), 20));
+          this.accountField = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetListener) (this), 100));
+          this.passwordField = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetListener) (this), 20));
           if (!this.field_I) {
             this.field_F = new TextButton(qh.field_c, (WidgetListener) null);
             stackIn_18_1 = null;
@@ -202,16 +202,16 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           } else {
             this.field_F = new TextButton(CachedTextLayout.field_p, (WidgetListener) null);
             this.field_Q = new TextButton(UrlPacketDownloader.field_n, (WidgetListener) null);
-            this.field_M.field_D = false;
+            this.accountField.field_D = false;
           }
-          this.field_M.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
-          this.field_H.renderer = (WidgetRenderer) ((Object) new PasswordFieldRenderer(10000536));
+          this.accountField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+          this.passwordField.renderer = (WidgetRenderer) ((Object) new PasswordFieldRenderer(10000536));
           var6 = new SpriteButtonRenderer();
           this.field_F.renderer = (WidgetRenderer) ((Object) var6);
           if (this.field_Q != null) {
             this.field_Q.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_M.tooltip = Bzip2State.field_a;
+          this.accountField.tooltip = Bzip2State.field_a;
           if (null != this.field_N) {
             this.field_N.renderer = (WidgetRenderer) ((Object) var6);
           }
@@ -234,19 +234,19 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
             this.y = this.y + (var7.getParagraphHeight(this.field_R, this.width - 40, var7.ascent) + 5);
           }
           var8 = FullscreenErrorDialog.field_bb;
-          var9 = CacheEntry.a(GameKeyHandler.a(110), (byte) 124);
+          var9 = CacheEntry.a(GameKeyHandler.getApplet(110), (byte) 124);
           if (var9 == RaceVehicle.field_Wb) {
-            var8 = rc.field_d;
+            var8 = TutorialScriptState.field_d;
           } else {
             if (var9 == ArcTrackBoundary.field_s) {
               var8 = co.field_c;
             }
           }
-          dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.field_M, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledField(10, this.y, -20 + this.width, 25, this.accountField, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild(true, dupTemp$0);
           this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
-          dupTemp$1 = new LabeledField(10, this.y, this.width - 20, 25, this.field_H, false, 80, 3, var7, 16777215, EmailValidationResult.field_f);
+          dupTemp$1 = new LabeledField(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, EmailValidationResult.field_f);
           var13 = dupTemp$1;
           this.addChild(true, dupTemp$1);
           this.field_F.listener = (WidgetListener) (this);
@@ -307,7 +307,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final static Sprite a(int param0, int param1, CourseDefinition param2, int param3) {
+    final static Sprite createCoursePreview(int param0, int param1, CourseDefinition param2, int param3) {
         int var13 = 0;
         Sprite stackIn_10_0 = null;
         Sprite stackIn_27_0 = null;
@@ -374,7 +374,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           LabeledField.a(param1, param2, false);
           l.a(param3 ^ -17640, param2);
           if (param3 != -12392) {
-            LoginForm.h(0);
+            LoginForm.updatePositionalSounds(0);
           }
           for (var8Lifetime1 = -1; var8Lifetime1 <= 3; var8Lifetime1++) {
             var9 = (TrackObject) (param2.field_m.first((byte) 97));
@@ -413,15 +413,15 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final void j(int param0) {
-        this.field_M.clearText(1);
+    final void clearCredentials(int param0) {
+        this.accountField.clearText(1);
         if (param0 != 10) {
-          this.field_M = (EditableTextField) null;
+          this.accountField = (EditableTextField) null;
         }
-        this.field_H.clearText(1);
+        this.passwordField.clearText(1);
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isAdaptiveViewportAvailable(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
           field_L = (String) null;
@@ -465,14 +465,14 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         }
     }
 
-    final String a(boolean param0) {
+    final String getAccountName(boolean param0) {
         if (param0) {
           return (String) null;
         }
-        if (null == this.field_M.text) {
+        if (null == this.accountField.text) {
           return "";
         }
-        return this.field_M.text;
+        return this.accountField.text;
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -485,7 +485,7 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
         var7 = HoldTheLine.field_D;
         try {
           if (param2 != -4) {
-            this.a((byte) -70);
+            this.submit((byte) -70);
           }
           if (param1 != this.field_F) {
             if (param1 != this.field_N) {
@@ -494,17 +494,17 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
                   StrongCacheEntry.h(-110);
                 } else {
                   if (this.field_S) {
-                    NodeHashTable.a((byte) 44);
+                    NodeHashTable.showLoginChoice((byte) 44);
                   } else {
                     hk.a(-30500);
                   }
                 }
               }
             } else {
-              DialogLayer.h((byte) 124);
+              DialogLayer.showAccountCreationForm((byte) 124);
             }
           } else {
-            this.a((byte) -23);
+            this.submit((byte) -23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -531,11 +531,11 @@ final class LoginForm extends WidgetContainer implements TextChangeListener, But
           if (param0 != 19) {
             field_K = (String) null;
           }
-          if (this.field_M == param1) {
-            this.field_H.requestFocus((UiWidget) (this), -25823);
+          if (this.accountField == param1) {
+            this.passwordField.requestFocus((UiWidget) (this), -25823);
           }
-          if (this.field_H == param1) {
-            this.a((byte) -23);
+          if (this.passwordField == param1) {
+            this.submit((byte) -23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

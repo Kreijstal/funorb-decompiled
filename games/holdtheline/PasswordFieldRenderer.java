@@ -41,7 +41,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
           if (param1 != 31881) {
             PasswordFieldRenderer.clearSharedReferences(false);
           }
-          var2_long = bb.b(-1);
+          var2_long = bb.monotonicTimeMillis(-1);
           if (wl.field_c != 0 &&
             TutorialPage.field_o < 0) {
             var4_ref_aa = (DelayedServerPacket) (ByteStorage.field_a.first((byte) 111));
@@ -63,7 +63,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
           while (true) {
             if (0 > TutorialPage.field_o) {
               RoadStripRenderer.field_e.position = 0;
-              if (!hi.readServerBytes(1, (byte) 40)) {
+              if (!InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
                 return false;
               }
               TutorialPage.field_o = RoadStripRenderer.field_e.readCipheredOpcode((byte) 73);
@@ -131,7 +131,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
         String[] var7 = null;
         var4 = HoldTheLine.field_D;
         try {
-          var6 = ArchiveRequest.a((byte) -127, ' ', param0);
+          var6 = ArchiveRequest.splitTrimmedNonempty((byte) -127, ' ', param0);
           var7 = var6;
           if (var6.length == 0) {
             throw new IllegalArgumentException();
@@ -147,7 +147,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
               throw new IllegalArgumentException();
             }
             var3.opcode = 0;
-            var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var7[1]), (byte) -116);
+            var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[1]), (byte) -116);
           } else {
             if (!var6[0].equalsIgnoreCase("pause")) {
               if (var6[0].equalsIgnoreCase("highlight")) {
@@ -160,7 +160,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                 } else {
                   if (!var6[1].equalsIgnoreCase("slowdown")) {
                     if (var7[1].equalsIgnoreCase("player")) {
-                      var3.field_d = -107 - SpriteButtonRenderer.a((CharSequence) ((Object) var7[2]), (byte) -116);
+                      var3.field_d = -107 - SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[2]), (byte) -116);
                     } else {
                       if (2 < var7.length) {
                         throw new IllegalArgumentException();
@@ -183,7 +183,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                           var3.field_d = -101;
                         }
                       } else {
-                        var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var7[1]), (byte) -116);
+                        var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[1]), (byte) -116);
                       }
                     }
                   } else {
@@ -201,7 +201,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                   } else {
                     var3.field_d = -1;
                   }
-                  var3.field_h = SpriteButtonRenderer.a((CharSequence) ((Object) var7[2]), (byte) -116);
+                  var3.field_h = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[2]), (byte) -116);
                 } else {
                   if (!var6[0].equalsIgnoreCase("addpowerupstrips")) {
                     if (var6[0].equalsIgnoreCase("removepowerups")) {
@@ -218,7 +218,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                         if (var7[2].equalsIgnoreCase("all")) {
                           stackIn_94_1 = -106;
                         } else {
-                          stackIn_94_1 = SpriteButtonRenderer.a((CharSequence) ((Object) var7[2]), (byte) -116);
+                          stackIn_94_1 = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[2]), (byte) -116);
                         }
                         stackIn_93_0.field_h = stackIn_94_1;
                       } else {
@@ -258,7 +258,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                             throw new IllegalArgumentException();
                           }
                           var3.opcode = 7;
-                          var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var6[1]), (byte) -116);
+                          var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6[1]), (byte) -116);
                           stackIn_62_0 = var3;
                           if (var6[2].equalsIgnoreCase("empty")) {
                             stackIn_63_1 = -1;
@@ -286,8 +286,8 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                               throw new IllegalArgumentException();
                             }
                             var3.opcode = 8;
-                            var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var6[1]), (byte) -116);
-                            var3.field_h = SpriteButtonRenderer.a((CharSequence) ((Object) var6[2]), (byte) -116);
+                            var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6[1]), (byte) -116);
+                            var3.field_h = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6[2]), (byte) -116);
                           } else {
                             if (!var6[0].equalsIgnoreCase("spin")) {
                               if (var7[0].equalsIgnoreCase("resetplayers")) {
@@ -295,14 +295,14 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                                   throw new IllegalArgumentException();
                                 }
                                 var3.opcode = 10;
-                                var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var7[1]), (byte) -116);
+                                var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[1]), (byte) -116);
                               } else {
                                 if (var7[0].equalsIgnoreCase("setlapcount")) {
                                   if (2 != var7.length) {
                                     throw new IllegalArgumentException();
                                   }
                                   var3.opcode = 11;
-                                  var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var7[1]), (byte) -116);
+                                  var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[1]), (byte) -116);
                                 } else {
                                   if (var7[0].equalsIgnoreCase("endtutorial")) {
                                     if (var7.length != 1) {
@@ -325,11 +325,11 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                                 throw new IllegalArgumentException();
                               }
                               var3.opcode = 9;
-                              var3.field_d = SpriteButtonRenderer.a((CharSequence) ((Object) var6[1]), (byte) -116);
+                              var3.field_d = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6[1]), (byte) -116);
                               if (var6[2].equalsIgnoreCase("forever")) {
                                 var3.field_h = -1;
                               } else {
-                                var3.field_h = SpriteButtonRenderer.a((CharSequence) ((Object) var6[2]), (byte) -116);
+                                var3.field_h = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6[2]), (byte) -116);
                               }
                             }
                           }
@@ -346,7 +346,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
                     } else {
                       var3.field_d = DialWidgetRenderer.parsePowerupCategory(102, var6[1]);
                     }
-                    var3.field_h = SpriteButtonRenderer.a((CharSequence) ((Object) var7[2]), (byte) -116);
+                    var3.field_h = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7[2]), (byte) -116);
                   }
                 }
               }

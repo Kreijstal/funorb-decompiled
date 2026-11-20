@@ -100,17 +100,17 @@ class DualLinkNode extends IntrusiveNode {
             DualLinkNode.signumFloat(11, -0.14343492686748505f);
           }
           if (ClientException.a((byte) -118)) {
-            r.field_a.processInput(AccountProgressDialog.field_lb, SpriteState.field_r, true, false);
-            r.field_a.g((byte) -59);
-            while (qh.c(-44)) {
-              r.field_a.dispatchKey(DelayedServerPacket.field_n, LoginChoicePanel.field_M, (byte) 117);
+            ServerConnectionState.field_a.processInput(AccountProgressDialog.field_lb, SpriteState.field_r, true, false);
+            ServerConnectionState.field_a.updateAnimations((byte) -59);
+            while (qh.pollKeyEvent(-44)) {
+              ServerConnectionState.field_a.dispatchKey(DelayedServerPacket.field_n, LoginChoicePanel.field_M, (byte) 117);
             }
             return;
           }
           if (null != NetworkArchiveRequest.field_w &&
             NetworkArchiveRequest.field_w.field_a) {
-            ij.c(4);
-            r.field_a.a(new FullscreenErrorDialog(r.field_a, DiskCacheStore.field_a), false);
+            ChatMessage.exitFullscreen(4);
+            ServerConnectionState.field_a.showDialog(new FullscreenErrorDialog(ServerConnectionState.field_a, DiskCacheStore.field_a), false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -27,9 +27,9 @@ final class ai {
             }
             for (var3_int = 0; var3_int < 6; var3_int++) {
               for (var4 = 0; MenuList.field_l[var3_int] > var4; var4++) {
-                if (tk.field_c[var3_int][var4].field_r) {
+                if (VehicleEngineSounds.field_c[var3_int][var4].field_r) {
                   try {
-                    tk.field_c[var3_int][var4] = TextLayout.a(param0.getNamedFileWithKey(tk.field_c[var3_int][var4].field_h, 0, param1, ""), (byte) 123);
+                    VehicleEngineSounds.field_c[var3_int][var4] = TextLayout.decodeCourseDefinition(param0.getNamedFileWithKey(VehicleEngineSounds.field_c[var3_int][var4].field_h, 0, param1, ""), (byte) 123);
                   } catch (IOException iOException) {
                     String var7 = (String) null;
                     throw new RuntimeException((String) null);
@@ -53,7 +53,7 @@ final class ai {
           if (param0 != -123) {
             field_b = (RotatedSpriteAsset) null;
           }
-          LoginChoicePanel.field_H.b(param1.field_j);
+          LoginChoicePanel.field_H.removeSubStream(param1.field_j);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ai.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -66,7 +66,7 @@ final class ai {
         int stackIn_26_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
-        uj stackIn_39_0 = null;
+        MeshMaterial stackIn_39_0 = null;
         int stackIn_44_0 = 0;
         int stackIn_48_0 = 0;
         RuntimeException stackIn_53_0 = null;
@@ -83,7 +83,7 @@ final class ai {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        uj var21 = null;
+        MeshMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -168,7 +168,7 @@ final class ai {
             var65[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; CachedArchiveProvider.field_t > var13Lifetime1; var13Lifetime1++) {
-            var14Lifetime1 = al.field_b[var13Lifetime1];
+            var14Lifetime1 = ByteArrayPool.field_b[var13Lifetime1];
             var15Lifetime1 = param4.field_w[var14Lifetime1];
             var16 = param4.field_Q[var14Lifetime1];
             var17 = param4.field_P[var14Lifetime1];
@@ -213,7 +213,7 @@ final class ai {
               if (var21 == null) {
                 stackIn_44_0 = 8355711;
               } else {
-                stackIn_44_0 = var21.field_g;
+                stackIn_44_0 = var21.color;
               }
               var30 = stackIn_44_0;
               var31 = 16711935 & var30;
@@ -229,7 +229,7 @@ final class ai {
               var32 = var65[var19];
               var33 = var65[var20];
               if (var21 != null) {
-                stackIn_48_0 = var21.field_g;
+                stackIn_48_0 = var21.color;
               } else {
                 stackIn_48_0 = 8355711;
               }
@@ -242,7 +242,7 @@ final class ai {
               var39 = var30 * var36 >>> 8 & 738262784 | (-16711779 & var35 * var30) >>> 8;
               var37 = var37 + var31 * 65793;
               var39 = var39 + var33 * 65793;
-              ll.a(var23, (var38 & 65313) >> 8, var22, var39 >> 16, var24, 255 & var39, 255 & var38, 255 & var37 >> 8, -27987, 255 & var37, var27, var26, (var39 & 65402) >> 8, var37 >> 16, var38 >> 16, var25);
+              AccountProtocolState.a(var23, (var38 & 65313) >> 8, var22, var39 >> 16, var24, 255 & var39, 255 & var38, 255 & var37 >> 8, -27987, 255 & var37, var27, var26, (var39 & 65402) >> 8, var37 >> 16, var38 >> 16, var25);
             }
           }
           return;

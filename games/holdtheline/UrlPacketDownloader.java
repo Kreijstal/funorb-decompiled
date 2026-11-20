@@ -19,7 +19,7 @@ final class UrlPacketDownloader implements Runnable {
     private PlatformTask field_e;
     private PlatformTaskDispatcher field_l;
 
-    final static void a(int[] param0, byte param1, int param2, int param3) {
+    final static void fillPolygonAlpha(int[] param0, byte param1, int param2, int param3) {
         int var5 = 0;
         IsaacPacketBuffer var6 = null;
         boolean stackIn_5_0 = false;
@@ -35,7 +35,7 @@ final class UrlPacketDownloader implements Runnable {
           PolygonScanConverter.beginScan();
           if (param1 >= -53) {
             var6 = (IsaacPacketBuffer) null;
-            UrlPacketDownloader.a(20, (IsaacPacketBuffer) null);
+            UrlPacketDownloader.writeReflectionCheckReply(20, (IsaacPacketBuffer) null);
           }
           stackIn_5_0 = PolygonScanConverter.nextSpan();
           while (stackIn_5_0) {
@@ -99,7 +99,7 @@ final class UrlPacketDownloader implements Runnable {
         }
     }
 
-    final static Sprite a(ResourceArchive param0, String param1, boolean param2, String param3) {
+    final static Sprite loadSpriteByName(ResourceArchive param0, String param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -115,7 +115,7 @@ final class UrlPacketDownloader implements Runnable {
         try {
           var4_int = param0.getGroupId(param1, 3);
           var5 = param0.getFileId(var4_int, param3, param2);
-          stackIn_1_0 = ll.a(-1, var5, var4_int, param0);
+          stackIn_1_0 = AccountProtocolState.a(-1, var5, var4_int, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,7 +143,7 @@ final class UrlPacketDownloader implements Runnable {
         }
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean pollDownload(byte param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -226,7 +226,7 @@ final class UrlPacketDownloader implements Runnable {
         field_j = null;
     }
 
-    final static void a(int param0, IsaacPacketBuffer param1) {
+    final static void writeReflectionCheckReply(int param0, IsaacPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -275,7 +275,7 @@ final class UrlPacketDownloader implements Runnable {
           var22 = null;
           var12 = HoldTheLine.field_D;
           try {
-            var13 = (ReflectionCheck) (sl.field_b.first((byte) 96));
+            var13 = (ReflectionCheck) (ReflectionCheckQueue.pendingChecks.first((byte) 96));
             var18 = var13;
             if (var18 == null) {
               return;
@@ -460,9 +460,9 @@ final class UrlPacketDownloader implements Runnable {
         this.field_e = null;
     }
 
-    final PacketBuffer b(byte param0) {
+    final PacketBuffer getDownloadedPacket(byte param0) {
         if (param0 < 65) {
-          this.b((byte) -33);
+          this.getDownloadedPacket((byte) -33);
         }
         if (this.field_c == 3) {
           return this.field_g;

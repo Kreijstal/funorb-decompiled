@@ -3,13 +3,13 @@
  */
 abstract class TextFieldValidator extends TimedValidator implements TextChangeListener {
     private EditableTextField field_f;
-    static jc[] field_h;
+    static LeaderboardPlayer[] field_h;
     static int field_g;
     static int[] field_d;
     static int[] field_c;
     static int[][] field_e;
 
-    final static void a(jg param0, byte param1, int param2) {
+    final static void sendLeaderboardRequest(LeaderboardRequest param0, byte param1, int param2) {
         IsaacPacketBuffer var3 = null;
         try {
           var3 = IsaacPacketBuffer.field_p;
@@ -19,9 +19,9 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
             field_d = (int[]) null;
           }
           var3.writeByte(param1 + 25, 0);
-          var3.writeShort(-652561784, param0.field_i);
-          var3.writeByte(111, param0.field_l);
-          var3.writeByte(111, param0.field_n);
+          var3.writeShort(-652561784, param0.leaderboardId);
+          var3.writeByte(111, param0.rowLimit);
+          var3.writeByte(111, param0.valuesPerRow);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "gd.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -44,7 +44,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
         return this.validateText(this.field_f.text, (byte) 70);
     }
 
-    final static void a(String param0, Sprite param1, int param2) {
+    final static void setLoadingArtwork(String param0, Sprite param1, int param2) {
         try {
           if (param2 != 0) {
             TextFieldValidator.e((byte) -29);
@@ -58,7 +58,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
 
     abstract String getTextValidationMessage(String param0, boolean param1);
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int reverseLowBits(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -157,16 +157,16 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
             return null;
           }
           if (MidiPcmStream.field_q.charAt(0) != 91) {
-            MouseWheelInput.a(4);
+            MouseWheelInput.advanceTextLine(4);
             continue;
           }
           break;
         }
         if (param0 >= -108) {
-          field_h = (jc[]) null;
+          field_h = (LeaderboardPlayer[]) null;
         }
         var13 = MidiPcmStream.field_q.substring(1, MidiPcmStream.field_q.indexOf(']'));
-        MouseWheelInput.a(4);
+        MouseWheelInput.advanceTextLine(4);
         var2 = new TutorialPage(var13);
         var3 = new StringBuilder();
         while (MidiPcmStream.field_q != null) {
@@ -180,7 +180,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
               }
               var5 = MidiPcmStream.field_q.substring(1, var4);
               var6 = MidiPcmStream.field_q.substring(var4);
-              var7 = ArchiveRequest.a((byte) -116, ',', var6);
+              var7 = ArchiveRequest.splitTrimmedNonempty((byte) -116, ',', var6);
               if (var5.equalsIgnoreCase("left")) {
                 ArchiveLoadProgress.addTutorialCalloutAnchor(var2, var7, 1, 0);
               }
@@ -222,7 +222,7 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
                 }
               }
             }
-            MouseWheelInput.a(4);
+            MouseWheelInput.advanceTextLine(4);
             continue;
           }
           break;
@@ -235,9 +235,9 @@ abstract class TextFieldValidator extends TimedValidator implements TextChangeLi
 
     static {
         int var0 = 0;
-        field_h = new jc[255];
+        field_h = new LeaderboardPlayer[255];
         for (var0 = 0; var0 < field_h.length; var0++) {
-          field_h[var0] = new jc();
+          field_h[var0] = new LeaderboardPlayer();
         }
         field_d = new int[8192];
         field_c = new int[4];

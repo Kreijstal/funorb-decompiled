@@ -6,7 +6,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
     static int[] field_I;
     private TextButton field_K;
     static char field_M;
-    static h field_N;
+    static FullscreenErrorReason field_N;
     static AudioOutput field_G;
     private TextButton field_P;
     private TextButton field_F;
@@ -97,16 +97,16 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
         field_I = null;
     }
 
-    final static sh a(byte param0, String param1) {
+    final static InputValidationError a(byte param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        sh stackIn_4_0 = null;
-        sh stackIn_8_0 = null;
-        sh stackIn_17_0 = null;
-        sh stackIn_20_0 = null;
+        InputValidationError stackIn_4_0 = null;
+        InputValidationError stackIn_8_0 = null;
+        InputValidationError stackIn_17_0 = null;
+        InputValidationError stackIn_20_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -134,7 +134,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
                 return stackIn_17_0;
               }
             } else {
-              if (rc.field_e.indexOf(var5) == -1) {
+              if (TutorialScriptState.field_e.indexOf(var5) == -1) {
                 stackIn_20_0 = DialogLayer.field_F;
                 return stackIn_20_0;
               }
@@ -173,7 +173,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
             return;
           }
           if (param1 == this.field_K) {
-            DialogLayer.h((byte) 83);
+            DialogLayer.showAccountCreationForm((byte) 83);
             return;
           }
           if (param1 != this.field_F) {
@@ -197,7 +197,7 @@ final class LoginChoicePanel extends WidgetContainer implements ButtonActionList
 
     static {
         field_I = new int[128];
-        field_N = new h();
+        field_N = new FullscreenErrorReason();
         field_J = "Email is valid";
     }
 }

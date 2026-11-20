@@ -11,19 +11,19 @@ final class q {
 
     final static String getInterfaceLoadingStatus(byte param0) {
         if (!(PolarSortVector.field_d >= 2)) {
-          return aj.field_d;
+          return PlayerProgressEncoder.field_d;
         }
         if (ml.field_a != null) {
           if (!ml.field_a.ensureIndexLoaded((byte) -115)) {
             return DualNodeHashTable.field_f;
           }
-          return pb.field_d;
+          return StraightRoadSlicer.field_d;
         }
         if (!IntrusiveDeque.field_d.ensureIndexLoaded((byte) -115)) {
           return Vector2f.field_d;
         }
         if (!IntrusiveDeque.field_d.tryLoadNamedGroup("commonui", param0 ^ 54)) {
-          return ge.field_a + " - " + IntrusiveDeque.field_d.getNamedGroupLoadPercent("commonui", 0) + "%";
+          return ContentTransitionState.field_a + " - " + IntrusiveDeque.field_d.getNamedGroupLoadPercent("commonui", 0) + "%";
         }
         if (!LinkWidgetRenderer.field_d.ensureIndexLoaded((byte) -63)) {
           return SpriteAsset.field_d;
@@ -38,7 +38,7 @@ final class q {
           field_b = (int[]) null;
         }
         if (!ArchiveRequest.field_p.tryLoadAllGroups((byte) -63)) {
-          return uj.field_b + " - " + ArchiveRequest.field_p.getLoadPercent(param0 - 118) + "%";
+          return MeshMaterial.field_b + " - " + ArchiveRequest.field_p.getLoadPercent(param0 - 118) + "%";
         }
         return QuickChatPhraseCache.field_b;
     }
@@ -80,7 +80,7 @@ final class q {
           if (0 == var2) {
             var4 = (IntArrayReadRequest) (AchievementUnlockRequest.field_j.first((byte) 100));
             if (var4 == null) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             var5 = -var9.position + ad.field_c;
@@ -107,7 +107,7 @@ final class q {
                 break;
               }
               if (var5_ref_se == null) {
-                r.a(-28036);
+                ServerConnectionState.closeServerConnection(-28036);
                 return;
               }
               var5_ref_se.unlink(0);
@@ -115,7 +115,7 @@ final class q {
             }
             else {
               MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 59, "LR1: " + AgeValidator.b(false));
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
             }
           }
           if (param0 != -24) {
@@ -167,8 +167,8 @@ final class q {
             var2 = var6;
             if (ao.field_c != null) {
               try {
-                ao.field_c.a(25971, 0L);
-                ao.field_c.a(var6, 0);
+                ao.field_c.seek(25971, 0L);
+                ao.field_c.readFully(var6, 0);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

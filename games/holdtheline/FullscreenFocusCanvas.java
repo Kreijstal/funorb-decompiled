@@ -61,7 +61,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
+    final static void setBenefitsArchives(ResourceArchive param0, byte param1, ResourceArchive param2) {
         if (param1 >= -94) {
           return;
         }
@@ -73,7 +73,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, int param1) {
+    final void exitFullscreen(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != 50) {
             FullscreenFocusCanvas.c(62);
@@ -142,11 +142,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    final static void a(int param0) {
-        if (!mn.field_a) {
+    final static void showGuestLogin(int param0) {
+        if (!mn.guestMode) {
           throw new IllegalStateException();
         }
-        bn.field_j = true;
+        AlternateUsernameLoginCredentials.field_j = true;
         SecondaryNodeDeque.a(true, (byte) -90);
         if (param0 > 106) {
           DiskCacheRequest.field_w = 0;

@@ -32,19 +32,19 @@ final class CourseDefinition {
           CourseDefinition.a(true, true, -63);
         }
         if (this.field_g == null) {
-          this.field_g = LoginForm.a(param2, param1, this, -12392);
+          this.field_g = LoginForm.createCoursePreview(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
           return this.field_g;
         }
         if (this.field_g.width != param2) {
-          this.field_g = LoginForm.a(param2, param1, this, -12392);
+          this.field_g = LoginForm.createCoursePreview(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
           return this.field_g;
         }
         if (param1 != this.field_f) {
-          this.field_g = LoginForm.a(param2, param1, this, -12392);
+          this.field_g = LoginForm.createCoursePreview(param2, param1, this, -12392);
           this.field_w = this.field_l;
           this.field_f = param1;
           return this.field_g;
@@ -52,7 +52,7 @@ final class CourseDefinition {
         if (this.field_l == this.field_w) {
           return this.field_g;
         }
-        this.field_g = LoginForm.a(param2, param1, this, -12392);
+        this.field_g = LoginForm.createCoursePreview(param2, param1, this, -12392);
         this.field_w = this.field_l;
         this.field_f = param1;
         return this.field_g;
@@ -61,22 +61,22 @@ final class CourseDefinition {
     final static void a(boolean param0) {
         if (param0) {
           if (ka.field_b != null) {
-            ka.field_b.f((byte) -84);
+            ka.field_b.finishAnimations((byte) -84);
           }
           if (null != MidiKeyUsage.field_l) {
             MidiKeyUsage.field_l.stopProgressAnimation((byte) 33);
           }
-          pj.a((byte) -96);
+          RoadShadowRenderer.resetTooltipState((byte) -96);
           return;
         }
         field_d = (int[]) null;
         if (ka.field_b != null) {
-          ka.field_b.f((byte) -84);
+          ka.field_b.finishAnimations((byte) -84);
         }
         if (null != MidiKeyUsage.field_l) {
           MidiKeyUsage.field_l.stopProgressAnimation((byte) 33);
         }
-        pj.a((byte) -96);
+        RoadShadowRenderer.resetTooltipState((byte) -96);
     }
 
     final boolean pollLoaded(int param0) {
@@ -85,7 +85,7 @@ final class CourseDefinition {
           if (-1 == this.field_l) {
             return true;
           }
-          if (!RasterBuffer.a(this, -65)) {
+          if (!RasterBuffer.pollCourseGraphicsLoaded(this, -65)) {
             this.field_l = RotatedSpriteSheetAsset.a((byte) 47, this);
             return false;
           }
@@ -95,7 +95,7 @@ final class CourseDefinition {
         if (-1 == this.field_l) {
           return true;
         }
-        if (!RasterBuffer.a(this, -65)) {
+        if (!RasterBuffer.pollCourseGraphicsLoaded(this, -65)) {
           this.field_l = RotatedSpriteSheetAsset.a((byte) 47, this);
           return false;
         }

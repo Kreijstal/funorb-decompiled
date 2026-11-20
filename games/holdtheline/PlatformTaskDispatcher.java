@@ -60,7 +60,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_u) {
             try {
-              this.field_u.a((byte) 20);
+              this.field_u.close((byte) 20);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -68,7 +68,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_h != null) {
             try {
-              this.field_h.a((byte) 20);
+              this.field_h.close((byte) 20);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -78,7 +78,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2_int = 0; var2_int < this.field_g.length; var2_int++) {
               if (null != this.field_g[var2_int]) {
                 try {
-                  this.field_g[var2_int].a((byte) 20);
+                  this.field_g[var2_int].close((byte) 20);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -88,7 +88,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_a != null) {
             try {
-              this.field_a.a((byte) 20);
+              this.field_a.close((byte) 20);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -169,7 +169,7 @@ final class PlatformTaskDispatcher implements Runnable {
           int var3 = 0;
           Exception var3_ref_Exception = null;
           BoundedRandomAccessFile var3_ref_bg = null;
-          uk var3_ref_uk = null;
+          ProxyAuthenticationException var3_ref_uk = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -214,7 +214,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_a;
                 switch (var2_int) {
                   case 4:
-                    if (bb.b(-1) < field_w) {
+                    if (bb.monotonicTimeMillis(-1) < field_w) {
                       throw new IOException();
                     }
                     var8.field_b = new DataInputStream(((java.net.URL) (var8.field_c)).openStream());
@@ -341,13 +341,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_b = var3_ref_bg;
                         break;
                       case 21:
-                        if (field_w > bb.b(-1)) {
+                        if (field_w > bb.monotonicTimeMillis(-1)) {
                           throw new IOException();
                         }
                         var8.field_b = java.net.InetAddress.getByName((String) (var8.field_c)).getAddress();
                         break;
                       case 3:
-                        if (field_w > bb.b(-1)) {
+                        if (field_w > bb.monotonicTimeMillis(-1)) {
                           throw new IOException();
                         }
                         var10 = (var8.field_g >> 24 & 255) + "." + (255 & var8.field_g >> 16) + "." + ((var8.field_g & 65493) >> 8) + "." + (var8.field_g & 255);
@@ -363,21 +363,21 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_b = var9;
                     break;
                   case 22:
-                    if (bb.b(-1) < field_w) {
+                    if (bb.monotonicTimeMillis(-1) < field_w) {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (uk) null;
-                      var8.field_b = lh.a(var8.field_g, (String) (var8.field_c), -1).b(-64);
-                    } catch (uk decompiledCaughtParameter2) {
+                      if (false) throw (ProxyAuthenticationException) null;
+                      var8.field_b = lh.a(var8.field_g, (String) (var8.field_c), -1).connect(-64);
+                    } catch (ProxyAuthenticationException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref_uk = (uk) (Object) decompiledCaughtException;
+                      var3_ref_uk = (ProxyAuthenticationException) (Object) decompiledCaughtException;
                       var8.field_b = var3_ref_uk.getMessage();
                       throw var3_ref_uk;
                     }
                     break;
                   case 1:
-                    if (field_w > bb.b(-1)) {
+                    if (field_w > bb.monotonicTimeMillis(-1)) {
                       throw new IOException();
                     }
                     var8.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_c)), var8.field_g);

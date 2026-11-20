@@ -31,7 +31,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_4_0 = LinearPointPath.field_k;
             return stackIn_4_0;
           }
-          if (!ll.a(-103, var3, var4)) {
+          if (!AccountProtocolState.a(-103, var3, var4)) {
             stackIn_8_0 = LinearPointPath.field_k;
             return stackIn_8_0;
           }
@@ -54,7 +54,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static ij a(boolean param0, boolean param1) {
+    final static ChatMessage readChatMessage(boolean param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_24_0 = null;
@@ -70,9 +70,9 @@ final class PasswordValidator extends TextFieldValidator {
         var8 = RoadStripRenderer.field_e;
         var3 = var8.readUnsignedByte((byte) -70);
         stackIn_3_0 = ((128 & var3) != 0);
-        jc.field_f = stackIn_3_0;
+        LeaderboardPlayer.field_f = stackIn_3_0;
         MusicPatch.field_m = 127 & var3;
-        pj.field_o = var8.readUnsignedByte((byte) -104);
+        RoadShadowRenderer.field_o = var8.readUnsignedByte((byte) -104);
         fc.field_c = var8.readLong(true);
         if (MusicPatch.field_m != 2) {
           MidiPcmStream.field_H = 0;
@@ -104,7 +104,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (!param0) {
           SocialListEntry.field_kb = ta.a(80, var8, param1);
           TextLayout.field_d = null;
-          return new ij(param0);
+          return new ChatMessage(param0);
         }
         var5 = var8.readUnsignedShort(99);
         try {
@@ -122,9 +122,9 @@ final class PasswordValidator extends TextFieldValidator {
           MusicPatchPcmStream.reportClientError((Throwable) ((Object) var6), (byte) -49, "CC1");
           TextLayout.field_d = null;
           SocialListEntry.field_kb = null;
-          return new ij(param0);
+          return new ChatMessage(param0);
         }
-        return new ij(param0);
+        return new ChatMessage(param0);
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -213,7 +213,7 @@ final class PasswordValidator extends TextFieldValidator {
             field_k = -118;
           }
           var5 = var4;
-          if (TrackCurve.a(var5, (byte) -27)) {
+          if (TrackCurve.hasInvalidPasswordLength(var5, (byte) -27)) {
             stackIn_8_0 = LoginMethodPreference.field_b;
             return stackIn_8_0;
           }
@@ -237,7 +237,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_25_0 = ShadedRoadStripRenderer.field_p;
             return stackIn_25_0;
           }
-          if (jc.a(var5, var6, 95)) {
+          if (LeaderboardPlayer.containsForwardOrReversed(var5, var6, 95)) {
             stackIn_29_0 = mc.field_c;
             return stackIn_29_0;
           }

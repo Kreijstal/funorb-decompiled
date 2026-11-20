@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class FadingDialog extends WidgetContainer {
-    private DialogLayer field_H;
-    private int field_G;
-    boolean field_F;
+    private DialogLayer dialogLayer;
+    private int opacity;
+    boolean visible;
     static int field_I;
     static RotatedSpriteAsset[] field_K;
     static IntrusiveDeque field_J;
 
-    private final int a(byte param0) {
+    private final int getTargetOpacity(byte param0) {
         if (param0 <= -21) {
-          return !this.field_F ? 0 : this != this.field_H.i((byte) -75) ? 0 : 256;
+          return !this.visible ? 0 : this != this.dialogLayer.getTopDialog((byte) -75) ? 0 : 256;
         }
         return 15;
     }
 
-    final static IndexedSprite a(int[] param0, int param1, IndexedSprite param2) {
+    final static IndexedSprite withPalette(int[] param0, int param1, IndexedSprite param2) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         Sprite var4 = null;
@@ -29,18 +29,18 @@ abstract class FadingDialog extends WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new IndexedSprite(0, 0, 0);
-          var3.field_i = param2.field_i;
-          var3.field_k = param2.field_k;
-          var3.field_d = param2.field_d;
-          var3.field_e = param2.field_e;
+          var3.width = param2.width;
+          var3.offsetX = param2.offsetX;
+          var3.offsetY = param2.offsetY;
+          var3.canvasHeight = param2.canvasHeight;
           if (param1 >= -86) {
             var4 = (Sprite) null;
-            FadingDialog.a(87, -114, (Sprite) null, 117, (Sprite) null);
+            FadingDialog.composeScreenBlendedSprites(87, -114, (Sprite) null, 117, (Sprite) null);
           }
-          var3.field_c = param2.field_c;
-          var3.field_n = param0;
-          var3.field_l = param2.field_l;
-          var3.field_m = param2.field_m;
+          var3.canvasWidth = param2.canvasWidth;
+          var3.palette = param0;
+          var3.height = param2.height;
+          var3.pixels = param2.pixels;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    boolean g(byte param0) {
+    boolean updateAnimation(byte param0) {
         boolean stackIn_12_0 = false;
         boolean stackIn_25_0 = false;
         int var2;
@@ -71,37 +71,37 @@ abstract class FadingDialog extends WidgetContainer {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 != 39) {
-          this.field_G = -97;
-          var2 = this.a((byte) -57);
-          var3 = var2 - this.field_G;
+          this.opacity = -97;
+          var2 = this.getTargetOpacity((byte) -57);
+          var3 = var2 - this.opacity;
           if (0 < var3) {
-            this.field_G = this.field_G + (7 + var3) / 8;
+            this.opacity = this.opacity + (7 + var3) / 8;
           }
           if (var3 < 0) {
-            this.field_G = this.field_G + (-16 + var3 + 1) / 16;
+            this.opacity = this.opacity + (-16 + var3 + 1) / 16;
           }
-          if (0 != this.field_G) {
+          if (0 != this.opacity) {
             return false;
           }
           if (0 != var2) {
             return false;
           }
-          stackIn_25_0 = !(this.field_F);
+          stackIn_25_0 = !(this.visible);
           return stackIn_25_0;
         }
-        var2Lifetime1 = this.a((byte) -57);
-        var3Lifetime1 = var2Lifetime1 - this.field_G;
+        var2Lifetime1 = this.getTargetOpacity((byte) -57);
+        var3Lifetime1 = var2Lifetime1 - this.opacity;
         if (0 < var3Lifetime1) {
-          this.field_G = this.field_G + (7 + var3Lifetime1) / 8;
+          this.opacity = this.opacity + (7 + var3Lifetime1) / 8;
         }
         if (var3Lifetime1 < 0) {
-          this.field_G = this.field_G + (-16 + var3Lifetime1 + 1) / 16;
+          this.opacity = this.opacity + (-16 + var3Lifetime1 + 1) / 16;
         }
-        stackIn_12_0 = (0 == this.field_G) && (0 == var2Lifetime1) && (!this.field_F);
+        stackIn_12_0 = (0 == this.opacity) && (0 == var2Lifetime1) && (!this.visible);
         return stackIn_12_0;
     }
 
-    final static Sprite a(int param0, int param1, Sprite param2, int param3, Sprite param4) {
+    final static Sprite composeScreenBlendedSprites(int param0, int param1, Sprite param2, int param3, Sprite param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -148,10 +148,10 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
-        if (0 == this.field_G) {
+        if (0 == this.opacity) {
           return;
         }
-        if (256 <= this.field_G) {
+        if (256 <= this.opacity) {
           if (param3 != 0) {
             return;
           }
@@ -161,40 +161,40 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (jh.field_c == null) {
           jh.field_c = new Sprite(this.width, this.height);
-          ProxySocketConnector.a(jh.field_c, -1);
+          ProxySocketConnector.pushSpriteRaster(jh.field_c, -1);
           SoftwareRasterizer.clear();
           this.drawFrame(0, 0, (byte) 20);
           super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
-          dm.b((byte) -10);
-          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
+          dm.popRasterState((byte) -10);
+          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
           return;
         }
         if (jh.field_c.width < this.width) {
           jh.field_c = new Sprite(this.width, this.height);
-          ProxySocketConnector.a(jh.field_c, -1);
+          ProxySocketConnector.pushSpriteRaster(jh.field_c, -1);
           SoftwareRasterizer.clear();
           this.drawFrame(0, 0, (byte) 20);
           super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
-          dm.b((byte) -10);
-          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
+          dm.popRasterState((byte) -10);
+          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
           return;
         }
         if (this.height > jh.field_c.height) {
           jh.field_c = new Sprite(this.width, this.height);
-          ProxySocketConnector.a(jh.field_c, -1);
+          ProxySocketConnector.pushSpriteRaster(jh.field_c, -1);
           SoftwareRasterizer.clear();
           this.drawFrame(0, 0, (byte) 20);
           super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
-          dm.b((byte) -10);
-          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
+          dm.popRasterState((byte) -10);
+          jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
           return;
         }
-        ProxySocketConnector.a(jh.field_c, -1);
+        ProxySocketConnector.pushSpriteRaster(jh.field_c, -1);
         SoftwareRasterizer.clear();
         this.drawFrame(0, 0, (byte) 20);
         super.drawLayer(param0, -param1 - this.y, -this.x - param2, param3);
-        dm.b((byte) -10);
-        jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.field_G);
+        dm.popRasterState((byte) -10);
+        jh.field_c.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
     }
 
     abstract void drawFrame(int param0, int param1, byte param2);
@@ -202,9 +202,9 @@ abstract class FadingDialog extends WidgetContainer {
     FadingDialog(DialogLayer param0, int param1, int param2) {
         super(-param1 + EmailAddressValidator.field_i >> 1, -param2 + pe.field_e >> 1, param1, param2, (WidgetRenderer) null);
         try {
-          this.field_F = false;
-          this.field_H = param0;
-          this.field_G = 0;
+          this.visible = false;
+          this.dialogLayer = param0;
+          this.opacity = 0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -220,15 +220,15 @@ abstract class FadingDialog extends WidgetContainer {
           return;
         }
         SpriteSheetAsset.field_j[Vector2f.field_h] = param0;
-        if (param0 > r.field_c) {
+        if (param0 > ServerConnectionState.field_c) {
           VehicleDefinition.field_t = param0;
         }
         if (param0 < MatchingTextValidator.field_j) {
-          we.field_j = param0;
+          SavedRasterState.field_j = param0;
         }
         IsaacPacketBuffer.field_u[Vector2f.field_h] = param5;
         ua.field_c[Vector2f.field_h] = param1;
-        fj.field_q[Vector2f.field_h] = param2;
+        WidgetStyleNode.field_q[Vector2f.field_h] = param2;
         var6 = param2 + (param1 + param5);
         if (var6 == 0) {
           stackIn_10_0 = 0;
@@ -238,8 +238,8 @@ abstract class FadingDialog extends WidgetContainer {
         var7 = stackIn_10_0;
         NetworkGameClient.field_s[Vector2f.field_h] = var7;
         Vector2f.field_h = Vector2f.field_h + 1;
-        if (we.field_j > var7) {
-          we.field_j = var7;
+        if (SavedRasterState.field_j > var7) {
+          SavedRasterState.field_j = var7;
         }
         if (var7 > VehicleDefinition.field_t) {
           VehicleDefinition.field_t = var7;
@@ -257,10 +257,10 @@ abstract class FadingDialog extends WidgetContainer {
 
     final static void h(int param0) {
         TutorialPage.a((byte) -126);
-        RotatedSpriteAsset.a(param0 + param0, 4);
+        RotatedSpriteAsset.setAccountScreen(param0 + param0, 4);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setCenteredSize(int param0, int param1, int param2) {
         if (param0 == 537342017) {
           this.setBounds(EmailAddressValidator.field_i - param1 >> 1, (byte) 122, pe.field_e - param2 >> 1, param2, param1);
           return;
@@ -279,23 +279,23 @@ abstract class FadingDialog extends WidgetContainer {
         return (UiWidget) (this);
     }
 
-    boolean a(boolean param0) {
+    boolean finishAnimations(boolean param0) {
         if (!param0) {
           field_K = (RotatedSpriteAsset[]) null;
-          this.field_G = this.a((byte) -31);
-          if (this.field_G != 0) {
+          this.opacity = this.getTargetOpacity((byte) -31);
+          if (this.opacity != 0) {
             return false;
           }
-          if (!this.field_F) {
+          if (!this.visible) {
             return true;
           }
           return false;
         }
-        this.field_G = this.a((byte) -31);
-        if (this.field_G != 0) {
+        this.opacity = this.getTargetOpacity((byte) -31);
+        if (this.opacity != 0) {
           return false;
         }
-        if (!this.field_F) {
+        if (!this.visible) {
           return true;
         }
         return false;

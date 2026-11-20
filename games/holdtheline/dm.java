@@ -8,17 +8,17 @@ final class dm {
     static String field_c;
     static int[] field_e;
 
-    final static void b(byte param0) {
-        we var1 = (we) (MarkerSliderRenderer.field_g.removeLast((byte) 74));
+    final static void popRasterState(byte param0) {
+        SavedRasterState var1 = (SavedRasterState) (MarkerSliderRenderer.field_g.removeLast((byte) 74));
         if (param0 != -10) {
           return;
         }
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.bindRaster(var1.field_k, var1.field_s, var1.field_m);
-        SoftwareRasterizer.setClip(var1.field_i, var1.field_r, var1.field_q, var1.field_u);
-        var1.field_k = null;
+        SoftwareRasterizer.bindRaster(var1.pixels, var1.width, var1.height);
+        SoftwareRasterizer.setClip(var1.clipLeft, var1.clipTop, var1.clipRight, var1.clipBottom);
+        var1.pixels = null;
         BlobWriteRequest.field_i.addLast((byte) -101, var1);
     }
 
@@ -26,7 +26,7 @@ final class dm {
         field_b = null;
         field_d = null;
         if (param0 != -20) {
-          dm.b((byte) -112);
+          dm.popRasterState((byte) -112);
         }
         field_e = null;
         field_c = null;

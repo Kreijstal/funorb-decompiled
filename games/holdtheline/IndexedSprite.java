@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IndexedSprite extends IndexedSpriteState {
-    byte[] field_m;
-    int[] field_n;
+    byte[] pixels;
+    int[] palette;
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -31,16 +31,16 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_k;
-        param1 = param1 + this.field_d;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
-        int var5 = this.field_l;
-        int var6 = this.field_i;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -72,19 +72,19 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.b(SoftwareRasterizer.pixels, this.field_m, this.field_n, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.blitIndexed(SoftwareRasterizer.pixels, this.pixels, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_k;
-        param1 = param1 + this.field_d;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
-        int var6 = this.field_l;
-        int var7 = this.field_i;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -116,10 +116,10 @@ final class IndexedSprite extends IndexedSpriteState {
           var6 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRasterizer.pixels, this.field_m, this.field_n, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.blitIndexedAlpha(SoftwareRasterizer.pixels, this.pixels, this.palette, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -182,24 +182,24 @@ final class IndexedSprite extends IndexedSpriteState {
     }
 
     IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        this.field_c = param0;
-        this.field_e = param1;
-        this.field_k = param2;
-        this.field_d = param3;
-        this.field_i = param4;
-        this.field_l = param5;
-        this.field_m = param6;
-        this.field_n = param7;
+        this.canvasWidth = param0;
+        this.canvasHeight = param1;
+        this.offsetX = param2;
+        this.offsetY = param3;
+        this.width = param4;
+        this.height = param5;
+        this.pixels = param6;
+        this.palette = param7;
     }
 
     IndexedSprite(int param0, int param1, int param2) {
-        this.field_i = param0;
-        this.field_c = param0;
-        this.field_l = param1;
-        this.field_e = param1;
-        this.field_d = 0;
-        this.field_k = 0;
-        this.field_m = new byte[param0 * param1];
-        this.field_n = new int[param2];
+        this.width = param0;
+        this.canvasWidth = param0;
+        this.height = param1;
+        this.canvasHeight = param1;
+        this.offsetY = 0;
+        this.offsetX = 0;
+        this.pixels = new byte[param0 * param1];
+        this.palette = new int[param2];
     }
 }

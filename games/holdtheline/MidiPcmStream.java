@@ -226,10 +226,10 @@ final class MidiPcmStream extends PcmStream {
 
     final synchronized void discardPatchSampleIds(int param0) {
         int var3 = HoldTheLine.field_D;
-        MusicPatch var4 = (MusicPatch) (this.patchCache.a(param0));
+        MusicPatch var4 = (MusicPatch) (this.patchCache.first(param0));
         while (var4 != null) {
           var4.discardSampleIds(-8346);
-          var4 = (MusicPatch) (this.patchCache.b(-1));
+          var4 = (MusicPatch) (this.patchCache.next(-1));
         }
     }
 
@@ -249,7 +249,7 @@ final class MidiPcmStream extends PcmStream {
             if (var3.sampleStream != null) {
               var3.sampleStream.fadeOutAndRemove(AudioOutput.sampleRate / 100);
               if (var3.sampleStream.isRamping()) {
-                this.patchStream.fadeMixer.a(var3.sampleStream);
+                this.patchStream.fadeMixer.addSubStream(var3.sampleStream);
               }
               var3.clearVoiceReferences((byte) -110);
             }
@@ -291,11 +291,11 @@ final class MidiPcmStream extends PcmStream {
           if (0 < param0) {
             var7 = new int[]{param0};
           }
-          var8 = (MidiKeyUsage) (param2.field_i.a(0));
+          var8 = (MidiKeyUsage) (param2.field_i.first(0));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.key;
-            var12 = (MusicPatch) (this.patchCache.a((byte) 124, (long)var9));
+            var12 = (MusicPatch) (this.patchCache.get((byte) 124, (long)var9));
             if (var12 == null) {
               var13 = RoadFillRenderer.loadMusicPatch(param4, 65535, var9);
               if (var13 == null) {
@@ -303,7 +303,7 @@ final class MidiPcmStream extends PcmStream {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.patchCache.a(var13, (long)var9, param3);
+                this.patchCache.put(var13, (long)var9, param3);
                 decompiledFrameRemainder0 = !(var13.loadSamples(90, (int[]) (var7), var8.field_k, param1));
               }
             } else {
@@ -312,7 +312,7 @@ final class MidiPcmStream extends PcmStream {
             if (decompiledFrameRemainder0) {
               var6_int = 0;
             }
-            var8 = (MidiKeyUsage) (param2.field_i.b(-1));
+            var8 = (MidiKeyUsage) (param2.field_i.next(-1));
           }
           if (var6_int != 0) {
             param2.clearPatchUsage();
@@ -775,7 +775,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MidiNote) (this.patchStream.notes.previous(-4140));
           }
         }
-        var10 = (MusicPatch) (this.patchCache.a((byte) 115, (long)this.channelPrograms[param1]));
+        var10 = (MusicPatch) (this.patchCache.get((byte) 115, (long)this.channelPrograms[param1]));
         var11 = var10;
         if (var11 == null) {
           return;
@@ -958,7 +958,7 @@ final class MidiPcmStream extends PcmStream {
             param1.sampleStream.mix(param0, param4, param2);
           }
           if (param1.sampleStream.isRamping()) {
-            this.patchStream.fadeMixer.a(param1.sampleStream);
+            this.patchStream.fadeMixer.addSubStream(param1.sampleStream);
           }
           param1.clearVoiceReferences((byte) -92);
           if (param1.releaseTime >= 0) {
@@ -1087,7 +1087,7 @@ final class MidiPcmStream extends PcmStream {
           for (var7 = var2_int; var3 > var7; var7++) {
             var8 = param0.charAt(var7);
             if (LoginCredentials.a((char) var8, (byte) -116)) {
-              var9 = ba.a(true, (char) var8);
+              var9 = ba.normalizeAccountCharacter(true, (char) var8);
               if (0 != var9) {
                 discarded$0 = var6.append((char) var9);
               }

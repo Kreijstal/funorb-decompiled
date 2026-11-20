@@ -6,7 +6,7 @@ abstract class PointPath {
     boolean field_c;
     static ValidationState field_d;
     float field_e;
-    static sh field_g;
+    static InputValidationError field_g;
     static int[] field_a;
     static String field_f;
 
@@ -16,12 +16,12 @@ abstract class PointPath {
         }
         if (d.field_c[param0] == -1) {
           d.field_c[param0] = param2;
-          GrowableStringList.a(0);
+          GrowableStringList.savePlayerProgress(0);
           return;
         }
         if (d.field_c[param0] > param2) {
           d.field_c[param0] = param2;
-          GrowableStringList.a(0);
+          GrowableStringList.savePlayerProgress(0);
           return;
         }
     }
@@ -48,6 +48,6 @@ abstract class PointPath {
         field_d = new ValidationState();
         field_a = new int[]{2, 5, 5};
         field_f = "More suggestions";
-        field_g = new sh();
+        field_g = new InputValidationError();
     }
 }

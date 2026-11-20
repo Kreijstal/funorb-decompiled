@@ -199,7 +199,7 @@ final class NanoTickClock extends TickClock {
           var1_int = BlobReadRequest.field_j;
           var2 = 0;
           if (WhirlpoolHasher.field_h == 2) {
-            var3_long = -TutorialAction.field_g + bb.b(-1);
+            var3_long = -TutorialAction.field_g + bb.monotonicTimeMillis(-1);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;
@@ -214,7 +214,7 @@ final class NanoTickClock extends TickClock {
               var5 = DialWidget.field_I;
             } else {
               if (var4 == TextFieldRenderer.field_q.selectedIndex) {
-                var5 = ge.field_b;
+                var5 = ContentTransitionState.field_b;
               } else {
                 var5 = LoginCredentials.field_c;
               }
@@ -228,8 +228,8 @@ final class NanoTickClock extends TickClock {
                 stackIn_19_0 = qg.field_b.length;
               }
               var7 = stackIn_19_0;
-              if (DelayedServerPacket.field_j.length < pb.field_a.length) {
-                stackIn_22_0 = pb.field_a.length;
+              if (DelayedServerPacket.field_j.length < StraightRoadSlicer.field_a.length) {
+                stackIn_22_0 = StraightRoadSlicer.field_a.length;
               } else {
                 stackIn_22_0 = DelayedServerPacket.field_j.length;
               }
@@ -259,7 +259,7 @@ final class NanoTickClock extends TickClock {
             stackIn_40_0 = var6;
             stackIn_40_1 = -113;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = h.measureMenuTextWidthWithIntGuard(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var7Lifetime1 = FullscreenErrorReason.measureMenuTextWidthWithIntGuard(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + field_i;
             if (0 <= var4) {
               if (var4 == TextFieldRenderer.field_q.selectedIndex) {
@@ -291,8 +291,8 @@ final class NanoTickClock extends TickClock {
     }
 
     final static void drawPanelWithShadow(int param0, int param1, int param2, byte param3, int param4) {
-        Sprite[] var5 = jc.field_h;
-        Sprite var6 = ij.a(-8096, param0, var5, param1);
+        Sprite[] var5 = LeaderboardPlayer.field_h;
+        Sprite var6 = ChatMessage.getShadedPanelSprite(-8096, param0, var5, param1);
         param2 = param2 - (var6.height - param1 >> 1);
         param4 = param4 - (-param0 + var6.width >> 1);
         SoftwareRasterizer.fillRectangleAlpha(10 + param4, 10 + param2, var6.width, var6.height, 0, 128);
@@ -443,8 +443,8 @@ final class NanoTickClock extends TickClock {
             return;
           }
           SocialListEntry.field_nb = false;
-          if (sb.field_c != null) {
-            if (!sb.field_c.field_F) {
+          if (RoadControlPointSpec.field_c != null) {
+            if (!RoadControlPointSpec.field_c.visible) {
               return;
             }
             if (param0 == 8) {
@@ -454,7 +454,7 @@ final class NanoTickClock extends TickClock {
                 param1 = RaceWorld.field_Z;
               }
               param0 = 2;
-              lh.field_a.a(param2 ^ 2795, RaceSetupMenu.field_v);
+              lh.field_a.setAccountName(param2 ^ 2795, RaceSetupMenu.field_v);
             }
             var3_int = 1;
             if (10 == param0) {
@@ -468,7 +468,7 @@ final class NanoTickClock extends TickClock {
               if (ResourceArchive.field_g) {
                 param1 = DelegatingCanvas.field_g;
               }
-              sb.field_c.a(true, param1, param0);
+              RoadControlPointSpec.field_c.a(true, param1, param0);
             }
             if (param0 != 256) {
               if (10 == param0) {
@@ -477,7 +477,7 @@ final class NanoTickClock extends TickClock {
               if (ArchiveCatalog.field_o) {
                 return;
               }
-              lh.field_a.j(param2 ^ -2692);
+              lh.field_a.clearCredentials(param2 ^ -2692);
             }
           }
           return;

@@ -98,7 +98,7 @@ final class StereoMusicSample {
         if (!param3) {
           return;
         }
-        lj.a((byte) -107);
+        lj.pushRasterState((byte) -107);
         SoftwareRasterizer.intersectClip(param1, param4, param0, param2);
     }
 
@@ -157,7 +157,7 @@ final class StereoMusicSample {
           var2 = var21;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_qk = ByteStorage.field_c[var3];
-            var4_ref_qk.c(0);
+            var4_ref_qk.calculateBounds(0);
             LabeledField.b(var3, 28433);
             var5 = var4_ref_qk.field_F + var4_ref_qk.field_L >> 1;
             var6 = var4_ref_qk.field_d + var4_ref_qk.field_H >> 1;
@@ -175,7 +175,7 @@ final class StereoMusicSample {
           var5Lifetime1 = HoldTheLine.field_E[11] >> 8;
           var6Lifetime1 = StrongCacheEntry.field_q << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = GrowableStringList.a(var6Lifetime1, 5255) >> 8;
+          var8Lifetime1 = GrowableStringList.sinFixed(var6Lifetime1, 5255) >> 8;
           var9Lifetime1 = hc.a(0, var6Lifetime1) >> 8;
           var10Lifetime1 = 68 / ((param0 - 5) / 52);
           if (-1 != NodeHashTableIterator.field_g &&

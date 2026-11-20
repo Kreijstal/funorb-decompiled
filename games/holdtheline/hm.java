@@ -3,7 +3,7 @@
  */
 final class hm {
     static SpriteAsset field_b;
-    static tk field_a;
+    static VehicleEngineSounds field_a;
 
     final static void a(byte param0, int param1) {
         int stackIn_100_0 = 0;
@@ -217,7 +217,7 @@ final class hm {
           var1_int = qg.field_d[0];
           for (var2 = 1; qg.field_d.length > var2; var2++) {
             var3 = qg.field_d[var2];
-            ArrayOperations.copyInts(al.field_b, var2 << 4, al.field_b, var1_int, var3);
+            ArrayOperations.copyInts(ByteArrayPool.field_b, var2 << 4, ByteArrayPool.field_b, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -290,15 +290,15 @@ final class hm {
                 var5.unlink(0);
                 return;
               }
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 65, "A1: " + AgeValidator.b(false));
-            r.a(-28036);
+            ServerConnectionState.closeServerConnection(-28036);
           } else {
             var4_ref_ie = (BlobReadRequest) (oc.field_d.first((byte) 94));
             if (var4_ref_ie == null) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             var5_int = var9.readUnsignedByte((byte) -85);
@@ -313,7 +313,7 @@ final class hm {
             }
             var9.position = var9.position + 4;
             if (!var9.checkCrc32((byte) 78)) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             var4_ref_ie.completed = true;

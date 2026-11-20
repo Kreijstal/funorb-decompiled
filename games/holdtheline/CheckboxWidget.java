@@ -18,16 +18,16 @@ final class CheckboxWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void activate(int param0, int param1, boolean param2, int param3) {
         this.field_B = !this.field_B ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activate(param0, param1, param2, param3);
     }
 
     final static void a(boolean param0, String param1, float param2, int param3) {
         try {
           if (null == MidiKeyUsage.field_l) {
             MidiKeyUsage.field_l = new LoadProgressDialog(ka.field_b, FullscreenDisplayMode.field_c);
-            ka.field_b.a(MidiKeyUsage.field_l, false);
+            ka.field_b.showDialog(MidiKeyUsage.field_l, false);
           }
           MidiKeyUsage.field_l.setProgress(param2, -84, param0, param1);
           SoftwareRasterizer.clear();

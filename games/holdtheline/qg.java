@@ -7,14 +7,14 @@ final class qg {
     static String field_a;
     static String[] field_b;
 
-    final static sh a(String param0, int param1) {
+    final static InputValidationError a(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
-        sh stackIn_3_0 = null;
-        sh stackIn_13_0 = null;
+        InputValidationError stackIn_3_0 = null;
+        InputValidationError stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -23,7 +23,7 @@ final class qg {
         try {
           var2_int = param0.length();
           if (param1 < 34) {
-            stackIn_3_0 = (sh) null;
+            stackIn_3_0 = (InputValidationError) null;
             return stackIn_3_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

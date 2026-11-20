@@ -11,14 +11,14 @@ final class OutlinedRoadFillRenderer extends RoadFillRenderer {
           throw new IllegalStateException();
         }
         int var1 = 102 / ((24 - param0) / 33);
-        if (null != sb.field_c) {
-          sb.field_c.h((byte) -93);
+        if (null != RoadControlPointSpec.field_c) {
+          RoadControlPointSpec.field_c.h((byte) -93);
         }
-        String var2 = MusicPatch.a(false);
+        String var2 = MusicPatch.getAccountName(false);
         lh.field_a = new LoginForm(var2, (String) null, true, false, false);
-        ka.field_b.a(sm.field_c, false);
-        sm.field_c.a((UiWidget) (lh.field_a), (byte) 13);
-        sm.field_c.b(false);
+        ka.field_b.showDialog(sm.field_c, false);
+        sm.field_c.setContent((UiWidget) (lh.field_a), (byte) 13);
+        sm.field_c.finishResize(false);
     }
 
     final void drawRoadFill(float param0, int[] param1, int param2, int[] param3, byte param4) {
@@ -55,7 +55,7 @@ final class OutlinedRoadFillRenderer extends RoadFillRenderer {
             var6[2 * var7Lifetime1 + (param3.length + 1)] = param1[-1 + (param1.length - 2 * var7Lifetime1)];
           }
           if (this.alpha != 256) {
-            UrlPacketDownloader.a(var15, (byte) -127, this.alpha, this.fillColor);
+            UrlPacketDownloader.fillPolygonAlpha(var15, (byte) -127, this.alpha, this.fillColor);
           } else {
             PolygonScanConverter.fillPolygon(var15, this.fillColor);
           }

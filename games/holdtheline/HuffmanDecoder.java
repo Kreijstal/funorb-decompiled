@@ -50,7 +50,7 @@ final class HuffmanDecoder {
             ad.field_a = true;
           }
           if (var4 == 0 &&
-            ij.field_l) {
+            ChatMessage.field_l) {
             ad.field_a = true;
           }
           if (var5 == 0 &&
@@ -58,7 +58,7 @@ final class HuffmanDecoder {
             ad.field_a = true;
           }
           NameAvailabilityResult.field_e = NameAvailabilityResult.field_e & var3 != 0;
-          ij.field_l = ij.field_l & var4 != 0;
+          ChatMessage.field_l = ChatMessage.field_l & var4 != 0;
           QuickChatPhraseDefinition.field_s = QuickChatPhraseDefinition.field_s & var5 != 0;
           var6 = var11.readBits(4, 7);
           var7 = 4 * ao.field_b + hk.field_d;
@@ -78,10 +78,10 @@ final class HuffmanDecoder {
           }
           var9Lifetime1 = 117 % ((20 - param0) / 61);
           for (var8Lifetime2 = 0; 4 > var8Lifetime2; var8Lifetime2++) {
-            ma.a(false, var11, var8Lifetime2);
+            AchievementStatusRequest.readChampionshipProgress(false, var11, var8Lifetime2);
           }
           var11.endBitReading(-34);
-          h.b((byte) -115);
+          FullscreenErrorReason.b((byte) -115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,17 +167,17 @@ final class HuffmanDecoder {
         RuntimeException var2_ref = null;
         var5 = HoldTheLine.field_D;
         try {
-          rc.field_c = param1;
+          TutorialScriptState.lines = param1;
           if (param0 > -34) {
             var6 = (byte[]) null;
             HuffmanDecoder.decodePlayerProgress(-20, (byte[]) null);
           }
-          if (rc.field_c.length == 0) {
+          if (TutorialScriptState.lines.length == 0) {
             RasterBuffer.field_a = null;
             return;
           }
           ArchiveIndex.field_a = 0;
-          MouseWheelInput.a(4);
+          MouseWheelInput.advanceTextLine(4);
           var2 = new GrowableObjectList();
           var3 = TextFieldValidator.parseNextTutorialPage(-117);
           while (var3 != null) {
@@ -217,7 +217,7 @@ final class HuffmanDecoder {
           return;
         }
         String var2 = (String) null;
-        SocketJs5Transport.a((String) null, false, ij.field_k);
+        SocketJs5Transport.a((String) null, false, ChatMessage.field_k);
     }
 
     final int decode(int param0, boolean param1, int param2, byte[] param3, byte[] param4, int param5) {
@@ -437,8 +437,8 @@ final class HuffmanDecoder {
           int var1 = 89 % ((param0 + 70) / 52);
           if (null != ao.field_c) {
             try {
-              ao.field_c.a(25971, 0L);
-              ao.field_c.a((byte) 125, 24, RoadStripRenderer.field_e.position, RoadStripRenderer.field_e.payload);
+              ao.field_c.seek(25971, 0L);
+              ao.field_c.write((byte) 125, 24, RoadStripRenderer.field_e.position, RoadStripRenderer.field_e.payload);
             } catch (Exception exception) {
             }
           }
@@ -468,17 +468,17 @@ final class HuffmanDecoder {
         RuntimeException var2_ref = null;
         var5 = HoldTheLine.field_D;
         try {
-          rc.field_c = param1;
+          TutorialScriptState.lines = param1;
           if (param0 > -34) {
             var6 = (byte[]) null;
             HuffmanDecoder.decodePlayerProgress(-20, (byte[]) null);
           }
-          if (rc.field_c.length == 0) {
+          if (TutorialScriptState.lines.length == 0) {
             RasterBuffer.field_a = null;
             return;
           }
           ArchiveIndex.field_a = 0;
-          MouseWheelInput.a(4);
+          MouseWheelInput.advanceTextLine(4);
           var2 = new GrowableObjectList();
           var3 = TextFieldValidator.parseNextTutorialPage(-117);
           while (var3 != null) {

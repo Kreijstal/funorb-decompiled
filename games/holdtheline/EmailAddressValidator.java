@@ -68,7 +68,7 @@ final class EmailAddressValidator extends TextFieldValidator {
             stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
-          stackIn_6_0 = (DropTargetWidget.a(param0, (byte) -128) != null) ? 0 : 1;
+          stackIn_6_0 = (DropTargetWidget.validateEmailAddress(param0, (byte) -128) != null) ? 0 : 1;
           var3_int = stackIn_6_0;
           if (var3_int != 0) {
             return PointPath.field_d;

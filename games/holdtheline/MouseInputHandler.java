@@ -101,10 +101,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           java.applet.Applet var2 = (java.applet.Applet) null;
           MouseInputHandler.a((java.applet.Applet) null, true);
         }
-        if (!mn.field_a) {
+        if (!mn.guestMode) {
           throw new IllegalStateException();
         }
-        bn.field_j = true;
+        AlternateUsernameLoginCredentials.field_j = true;
         SecondaryNodeDeque.a(false, (byte) 71);
         DiskCacheRequest.field_w = 0;
     }
@@ -203,7 +203,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             SpriteAsset.field_a = 0;
             IterableNodeHashTable.field_e = param0.getX();
             FullscreenDisplayMode.field_f = param0.getY();
-            bb.b(-1);
+            bb.monotonicTimeMillis(-1);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DelegatingCanvas.field_a = 2;
               ResizableDialog.field_R = 2;

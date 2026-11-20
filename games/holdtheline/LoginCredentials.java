@@ -70,7 +70,7 @@ abstract class LoginCredentials {
                 continue;
               }
               var5++;
-              var8 = SpriteButtonRenderer.a((CharSequence) ((Object) var7_ref_String), (byte) -116);
+              var8 = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var7_ref_String), (byte) -116);
               var4 = var4 + (param1[var8].length() + (-var5 + var6_int));
               continue;
             }
@@ -103,7 +103,7 @@ abstract class LoginCredentials {
               continue;
             }
             var5Lifetime1++;
-            var10 = SpriteButtonRenderer.a((CharSequence) ((Object) var9), (byte) -116);
+            var10 = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var9), (byte) -116);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(param1[var10]);
@@ -181,7 +181,7 @@ abstract class LoginCredentials {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (dg.a((byte) 78, param0)) {
+          if (dg.isAsciiAlphanumeric((byte) 78, param0)) {
             return true;
           }
           var6 = DualNodeHashTable.field_h;

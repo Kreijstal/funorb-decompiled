@@ -124,7 +124,7 @@ final class TexturedRoadFillRenderer extends RoadFillRenderer {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             TrackBoundary.field_w[var1_intLifetime1] = 0L;
           }
-          uj.field_h = 0;
+          MeshMaterial.field_h = 0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ')');
         }

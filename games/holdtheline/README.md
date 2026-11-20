@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable.
 
-Resolved declarations: 266/357 classes and 1767/2503 methods have readable names; 286 constructors follow their class names.
-Remaining: 91 opaque classes and 736 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 298/357 classes and 2165/2503 methods have readable names; 286 constructors follow their class names.
+Remaining: 59 opaque classes and 338 opaque methods. The complete naming goal is still in progress.
 
 Start at `HoldTheLine`, a `NetworkGameClient` and `GameAppletShell`. Its `initializeGame`, `loadGameResources`, `updateGameTick`, `renderGameFrame` and `shutdownGame` methods expose the client lifecycle.
 
@@ -22,6 +22,16 @@ Road geometry distinguishes the left/right visible-road edges from the left/righ
 `MidiPcmStream` names note on/off, controllers, pitch bend, patch loading and envelope updates. `MidiNote`, `MusicPatch` and `MusicPatchPcmStream` expose voice state, patch samples and retriggering. `AudioOutput` names stream scheduling and device buffering; `JavaSoundAudioOutput` implements its device hooks.
 
 `NetworkGameClient` names applet parameters, account-screen processing and server-packet dispatch. `PlatformTaskDispatcher` names asynchronous socket, thread, reflection, URL and fullscreen tasks. `ArchiveKeyRequest`, `BlobReadRequest`, `BlobWriteRequest` and `ReflectionCheck` identify queued protocol state; `WhirlpoolHasher` exposes bit updates, block processing and digest finalization.
+
+`AccountCreationForm`, `DisplayNameForm`, `LoginForm` and `EditableTextField` expose validation, submission, suggested names, selection and clipboard operations. `TextLayout`, `TextLineLayout` and `TextHotspotRange` name text positions and hotspot geometry; `DialogLayer`, `FadingDialog`, `ResizableDialog` and `ContentTransitionDialog` expose stacking, fades and resize transitions.
+
+`BoundedRandomAccessFile`, `BufferedRandomAccessFile`, `DiskCacheStore`, `DiskCacheWorker` and `WeightedLruCache` expose storage and cache behavior. `SavedRasterState` records pixel targets and clipping bounds. `Bzip2Decoder` names bit reads, Huffman tables, block decoding and output-run expansion; `MusicCrossfadeStream` exposes track selection and crossfade gain.
+
+`ChatMessage`, `LeaderboardRequest`, `LeaderboardPlayer`, `ScoreSubmission` and `AchievementStatusRequest` identify protocol data and results. Leaderboard entry identifiers are separate from the integer score payload. `JavaScriptBridge` names applet-window calls and script evaluation.
+
+`VehicleEngineSounds` pairs acceleration and deceleration audio. `VorbisFloor` names floor decoding, neighboring points and spectrum application. `TriangleMesh` exposes translation, scaling and cached bounds; `MeshMaterial` supplies face colors, while `RoadShadowRenderer` fills offset road shadows.
+
+`InheritedWidgetStyle` and its `WidgetStyleNode` base retain the original style inheritance used by `SocialListEntry`. `PlayerProgressEncoder` and `ByteArrayPool` expose packed saves and reusable byte buffers. `RoadShadowRenderer.isGuestMode` names the guest-session flag: authenticated sessions write progress to blob storage, while guest progress remains pending for later login.
 
 Shared components include named UI widgets, account forms and validators, archive/cache transport, PCM/MIDI/Vorbis audio, sprites, rasterization and fonts. Unrelated static helpers remain in their original containing classes; for example, `EntitySound` also holds the shared exception wrapper.
 

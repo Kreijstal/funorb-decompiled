@@ -2,38 +2,38 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationForm extends WidgetContainer implements HotspotClickListener, ButtonActionListener, NameSelectionListener {
-    private CheckboxWidget field_J;
-    private ValidatedTextField field_P;
+    private CheckboxWidget marketingConsent;
+    private ValidatedTextField passwordConfirmationField;
     private TextHotspotWidget field_O;
-    private ValidatedTextField field_G;
-    private ValidatedTextField field_K;
-    private ValidatedTextField field_T;
+    private ValidatedTextField displayNameField;
+    private ValidatedTextField emailConfirmationField;
+    private ValidatedTextField passwordField;
     private TextButton field_N;
-    static ll field_S;
+    static AccountProtocolState field_S;
     private TextButton field_Q;
-    private ValidatedTextField field_L;
+    private ValidatedTextField emailField;
     static int field_H;
-    private ValidatedTextField field_M;
+    private ValidatedTextField ageField;
     static SpriteAsset field_F;
-    NameSuggestionsPanel field_R;
+    NameSuggestionsPanel nameSuggestions;
     static int field_I;
 
-    public final void a(String param0, int param1) {
+    public final void onNameSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
           if (param1 != 25) {
             this.field_N = (TextButton) null;
           }
-          var3 = this.field_G;
+          var3 = this.displayNameField;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, var4, 1471);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, 1471);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final int a(String param0, boolean param1, int param2, UiWidget param3, String param4, int param5, int param6) {
+    private final int addFieldWithHelp(String param0, boolean param1, int param2, UiWidget param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         LabeledField var10 = null;
@@ -80,30 +80,30 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final boolean h(int param0) {
-        if (!this.a((ValidatorProvider) (this.field_G), 16777215)) {
+    private final boolean areFieldsReady(int param0) {
+        if (!this.isFieldReady((ValidatorProvider) (this.displayNameField), 16777215)) {
           return false;
         }
-        if (!this.a((ValidatorProvider) (this.field_L), 16777215)) {
+        if (!this.isFieldReady((ValidatorProvider) (this.emailField), 16777215)) {
           return false;
         }
-        if (!this.a((ValidatorProvider) (this.field_K), 16777215)) {
+        if (!this.isFieldReady((ValidatorProvider) (this.emailConfirmationField), 16777215)) {
           return false;
         }
-        if (!this.a((ValidatorProvider) (this.field_T), 16777215)) {
+        if (!this.isFieldReady((ValidatorProvider) (this.passwordField), 16777215)) {
           return false;
         }
-        if (!this.a((ValidatorProvider) (this.field_P), 16777215)) {
+        if (!this.isFieldReady((ValidatorProvider) (this.passwordConfirmationField), 16777215)) {
           return false;
         }
-        if (!this.a((ValidatorProvider) (this.field_M), 16777215)) {
+        if (!this.isFieldReady((ValidatorProvider) (this.ageField), 16777215)) {
           return false;
         }
         if (param0 == 40) {
           return true;
         }
         ValidatorProvider var3 = (ValidatorProvider) null;
-        boolean discarded$0 = this.a((ValidatorProvider) null, 100);
+        boolean discarded$0 = this.isFieldReady((ValidatorProvider) null, 100);
         return true;
     }
 
@@ -117,7 +117,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         var6 = HoldTheLine.field_D;
         try {
           if (param2 != -106) {
-            field_S = (ll) null;
+            field_S = (AccountProtocolState) null;
           }
           if (0 == param1) {
             oc.showNavigationMenu(16711680, "terms.ws");
@@ -155,16 +155,16 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         RuntimeException var6 = null;
         try {
           if (this.field_N == param1) {
-            NodeHashTable.a((byte) 44);
+            NodeHashTable.showLoginChoice((byte) 44);
           } else {
             if (param1 == this.field_Q) {
-              discarded$1 = this.h((byte) 90);
+              discarded$1 = this.submit((byte) 90);
             }
           }
           if (param2 == -4) {
             return;
           }
-          this.field_R = (NameSuggestionsPanel) null;
+          this.nameSuggestions = (NameSuggestionsPanel) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,7 +183,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
     final void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         try {
           super.updateHover(param0, param1, param2, param3);
-          this.field_Q.field_D = this.h(40);
+          this.field_Q.field_D = this.areFieldsReady(40);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "a.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -191,59 +191,59 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
 
     public AccountCreationForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_G = new ValidatedTextField("", (WidgetListener) null, 12);
-        this.field_L = new ValidatedTextField("", (WidgetListener) null, 100);
-        this.field_K = new ValidatedTextField("", (WidgetListener) null, 100);
-        this.field_T = new ValidatedTextField("", (WidgetListener) null, 20);
-        this.field_P = new ValidatedTextField("", (WidgetListener) null, 20);
-        this.field_M = new ValidatedTextField("", (WidgetListener) null, 3);
+        this.displayNameField = new ValidatedTextField("", (WidgetListener) null, 12);
+        this.emailField = new ValidatedTextField("", (WidgetListener) null, 100);
+        this.emailConfirmationField = new ValidatedTextField("", (WidgetListener) null, 100);
+        this.passwordField = new ValidatedTextField("", (WidgetListener) null, 20);
+        this.passwordConfirmationField = new ValidatedTextField("", (WidgetListener) null, 20);
+        this.ageField = new ValidatedTextField("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_J = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
+        this.marketingConsent = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_Q = new TextButton(CheckboxRenderer.field_v, (WidgetListener) null);
         this.field_N = new TextButton(um.field_c, (WidgetListener) null);
-        this.field_G.tooltip = PolarSortVector.field_f;
-        this.field_L.tooltip = d.field_a;
-        this.field_K.tooltip = lj.field_e;
-        this.field_T.tooltip = DiskCacheStore.field_c;
-        this.field_P.tooltip = GameKeyHandler.field_d;
-        this.field_M.tooltip = StandardContentTransitionDialog.field_mb;
-        this.field_J.tooltip = DropTargetWidget.field_I;
-        this.field_G.a((byte) 64, new DisplayNameValidator(this.field_G));
-        this.field_L.a((byte) 56, new EmailAddressValidator(this.field_L));
-        this.field_K.a((byte) 58, new EmailConfirmationValidator(this.field_K, this.field_L));
-        this.field_T.a((byte) 65, new PasswordValidator(this.field_T, this.field_G, this.field_L));
-        this.field_P.a((byte) 55, new MatchingTextValidator(this.field_P, this.field_T));
-        this.field_M.a((byte) 45, new AgeValidator(this.field_M));
+        this.displayNameField.tooltip = PolarSortVector.field_f;
+        this.emailField.tooltip = d.field_a;
+        this.emailConfirmationField.tooltip = lj.field_e;
+        this.passwordField.tooltip = DiskCacheStore.field_c;
+        this.passwordConfirmationField.tooltip = GameKeyHandler.field_d;
+        this.ageField.tooltip = StandardContentTransitionDialog.field_mb;
+        this.marketingConsent.tooltip = DropTargetWidget.field_I;
+        this.displayNameField.a((byte) 64, new DisplayNameValidator(this.displayNameField));
+        this.emailField.a((byte) 56, new EmailAddressValidator(this.emailField));
+        this.emailConfirmationField.a((byte) 58, new EmailConfirmationValidator(this.emailConfirmationField, this.emailField));
+        this.passwordField.a((byte) 65, new PasswordValidator(this.passwordField, this.displayNameField, this.emailField));
+        this.passwordConfirmationField.a((byte) 55, new MatchingTextValidator(this.passwordConfirmationField, this.passwordField));
+        this.ageField.a((byte) 45, new AgeValidator(this.ageField));
         this.field_Q.field_D = false;
         this.field_Q.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
-        this.field_G.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+        this.displayNameField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
         TextFieldRenderer dupTemp$0 = new TextFieldRenderer(10000536);
-        this.field_K.renderer = (WidgetRenderer) ((Object) dupTemp$0);
-        this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$0);
-        this.field_M.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
-        this.field_J.renderer = (WidgetRenderer) ((Object) new IconToggleRenderer());
+        this.emailConfirmationField.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.emailField.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.ageField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+        this.marketingConsent.renderer = (WidgetRenderer) ((Object) new IconToggleRenderer());
         PasswordFieldRenderer dupTemp$1 = new PasswordFieldRenderer(10000536);
-        this.field_P.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        this.field_T.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = LoginCredentials.substituteIndexedTokens(DropTargetWidget.field_F, new String[]{this.a(false), this.g((byte) 105)}, true);
+        this.passwordConfirmationField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.passwordField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        String var2 = LoginCredentials.substituteIndexedTokens(DropTargetWidget.field_F, new String[]{this.getLinkMarkupStart(false), this.getLinkMarkupEnd((byte) 105)}, true);
         int var3 = 20;
-        var3 = var3 + this.a(170, this.field_L, 25, var3, cm.field_c);
-        var3 = var3 + (5 + this.a("", false, 170, this.field_K, ByteStorage.field_e, var3, 20));
-        var3 = var3 + this.a(170, this.field_T, 25, var3, EmailValidationResult.field_f);
-        var3 = var3 + (this.a(170, 21411, this.field_P, TextHotspotRange.field_o, SocialListEntry.field_ib, var3) + 5);
-        var3 = var3 + (this.a(170, 21411, this.field_G, ArchiveLoadStage.field_h, sh.field_a, var3) + 5);
-        var3 = var3 + this.a(170, (byte) -124, ImageProducerRasterBuffer.field_o, var3, this.field_M);
-        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.field_J, true, -120 + this.width, 5, SpriteButtonRenderer.field_w, 11579568, TextLayout.field_c);
+        var3 = var3 + this.addLabeledField(170, this.emailField, 25, var3, cm.field_c);
+        var3 = var3 + (5 + this.addFieldWithHelp("", false, 170, this.emailConfirmationField, ByteStorage.field_e, var3, 20));
+        var3 = var3 + this.addLabeledField(170, this.passwordField, 25, var3, EmailValidationResult.field_f);
+        var3 = var3 + (this.addFieldWithHelp(170, 21411, this.passwordConfirmationField, TextHotspotRange.field_o, SocialListEntry.field_ib, var3) + 5);
+        var3 = var3 + (this.addFieldWithHelp(170, 21411, this.displayNameField, ArchiveLoadStage.field_h, InputValidationError.field_a, var3) + 5);
+        var3 = var3 + this.addFieldWithIndicator(170, (byte) -124, ImageProducerRasterBuffer.field_o, var3, this.ageField);
+        LabeledField var4 = new LabeledField(46, var3, -90 + this.width, 25, this.marketingConsent, true, -120 + this.width, 5, SpriteButtonRenderer.field_w, 11579568, TextLayout.field_c);
         this.addChild(true, var4);
         var3 = var3 + var4.height;
         TextWidgetStyle var5 = new TextWidgetStyle(IntrusiveNode.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
         this.field_O = new TextHotspotWidget(var2, var5);
         this.field_O.tooltip = "";
-        this.field_O.a(0, m.field_d, true);
-        this.field_O.a(1, m.field_d, true);
+        this.field_O.setHotspotTooltip(0, m.field_d, true);
+        this.field_O.setHotspotTooltip(1, m.field_d, true);
         this.field_O.listener = (WidgetListener) (this);
-        this.field_O.a(-90 + this.width, (byte) 111, var3, 46);
+        this.field_O.setBoundsToPreferredHeight(-90 + this.width, (byte) 111, var3, 46);
         var3 = var3 + (15 + this.field_O.height);
         this.addChild(true, this.field_O);
         int var6 = 4;
@@ -254,13 +254,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         this.field_Q.listener = (WidgetListener) (this);
         this.addChild(true, this.field_Q);
         this.addChild(true, this.field_N);
-        this.field_R = new NameSuggestionsPanel((NameSelectionListener) (this));
-        this.field_R.setBounds(this.field_G.x + this.field_G.width + 60, (byte) 122, this.field_G.y + 20, 150, -60 + this.width - (this.field_G.x + this.field_G.width));
-        this.addChild(true, this.field_R);
+        this.nameSuggestions = new NameSuggestionsPanel((NameSelectionListener) (this));
+        this.nameSuggestions.setBounds(this.displayNameField.x + this.displayNameField.width + 60, (byte) 122, this.displayNameField.y + 20, 150, -60 + this.width - (this.displayNameField.x + this.displayNameField.width));
+        this.addChild(true, this.nameSuggestions);
         this.setBounds(0, (byte) 122, 0, var6 + (55 + var3), 496);
     }
 
-    private final String a(boolean param0) {
+    private final String getLinkMarkupStart(boolean param0) {
         if (param0) {
           field_I = -59;
           return "<u=2164A2><col=2164A2>";
@@ -268,16 +268,16 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final String g(byte param0) {
+    private final String getLinkMarkupEnd(byte param0) {
         if (param0 <= 90) {
-          this.field_L = (ValidatedTextField) null;
+          this.emailField = (ValidatedTextField) null;
           return "</col></u>";
         }
         return "</col></u>";
     }
 
-    private final boolean h(byte param0) {
-        if (!this.h(40)) {
+    private final boolean submit(byte param0) {
+        if (!this.areFieldsReady(40)) {
           return false;
         }
         if (param0 <= 28) {
@@ -285,10 +285,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
         int var2 = -1;
         try {
-          var2 = Integer.parseInt(this.field_M.text);
+          var2 = Integer.parseInt(this.ageField.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return IntrusiveNode.a(this.field_T.text, -23000, this.field_J.field_B, this.field_G.text, this, this.field_L.text, var2);
+        return IntrusiveNode.a(this.passwordField.text, -23000, this.marketingConsent.field_B, this.displayNameField.text, this, this.emailField.text, var2);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -301,7 +301,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         field_F = null;
     }
 
-    private final boolean a(ValidatorProvider param0, int param1) {
+    private final boolean isFieldReady(ValidatorProvider param0, int param1) {
         Validator var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -343,7 +343,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final int a(int param0, int param1, UiWidget param2, String param3, String param4, int param5) {
+    private final int addFieldWithHelp(int param0, int param1, UiWidget param2, String param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -358,7 +358,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           if (param1 != 21411) {
             this.field_O = (TextHotspotWidget) null;
           }
-          stackIn_3_0 = this.a(param3, false, param0, param2, param4, param5, 35);
+          stackIn_3_0 = this.addFieldWithHelp(param3, false, param0, param2, param4, param5, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -421,7 +421,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final int a(int param0, UiWidget param1, int param2, int param3, String param4) {
+    private final int addLabeledField(int param0, UiWidget param1, int param2, int param3, String param4) {
         LabeledField var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -456,7 +456,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    private final int a(int param0, byte param1, String param2, int param3, UiWidget param4) {
+    private final int addFieldWithIndicator(int param0, byte param1, String param2, int param3, UiWidget param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         ValidationIndicator var7 = null;
@@ -473,7 +473,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
           var9 = new LabeledField(20, param3, 120 + param0, 25, param4, false, 120, 3, IntrusiveNode.field_g, 16777215, param2);
           if (param1 != -124) {
             var8 = (String) null;
-            discarded$1 = this.a(71, (UiWidget) null, -15, -54, (String) null);
+            discarded$1 = this.addLabeledField(71, (UiWidget) null, -15, -54, (String) null);
           }
           this.addChild(true, var9);
           var7 = new ValidationIndicator(((ValidatorProvider) ((Object) param4)).getValidator(param1 + 125));
@@ -501,17 +501,17 @@ final class AccountCreationForm extends WidgetContainer implements HotspotClickL
         }
     }
 
-    public final void a(byte param0) {
+    public final void onMoreSuggestionsRequested(byte param0) {
         if (param0 > 124) {
-          ((DisplayNameValidator) (this.field_G.getValidator(1))).invalidateAvailability(true);
+          ((DisplayNameValidator) (this.displayNameField.getValidator(1))).invalidateAvailability(true);
           return;
         }
-        this.field_P = (ValidatedTextField) null;
-        ((DisplayNameValidator) (this.field_G.getValidator(1))).invalidateAvailability(true);
+        this.passwordConfirmationField = (ValidatedTextField) null;
+        ((DisplayNameValidator) (this.displayNameField.getValidator(1))).invalidateAvailability(true);
     }
 
     static {
-        field_S = new ll();
+        field_S = new AccountProtocolState();
         field_I = -1;
     }
 }

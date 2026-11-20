@@ -52,7 +52,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var14 = param3.getText((byte) -41);
           var8 = param6.getText((byte) -41);
           if (param0 != 65500) {
-            NetworkArchiveRequest.a(-108, 25, 4, -53, -46);
+            NetworkArchiveRequest.recordBestCourseTime(-108, 25, 4, -53, -46);
           }
           if (null == IterableSecondaryNodeDeque.field_h &&
             !ShadedRoadStripRenderer.a(false, (byte) 105)) {
@@ -85,7 +85,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               IsaacPacketBuffer.field_p.writeByte(111, 16);
               IsaacPacketBuffer.field_p.position = IsaacPacketBuffer.field_p.position + 1;
               var9 = IsaacPacketBuffer.field_p.position;
-              dg.a(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
+              dg.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
               IsaacPacketBuffer.field_p.backpatchByteLength(-268435456, IsaacPacketBuffer.field_p.position - var9);
             } else {
               var9 = 0;
@@ -105,19 +105,19 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               IsaacPacketBuffer.field_p.writeByte(111, 18);
               IsaacPacketBuffer.field_p.position = IsaacPacketBuffer.field_p.position + 2;
               var10 = IsaacPacketBuffer.field_p.position;
-              var11_ref_String = ph.a((byte) -88, GameKeyHandler.a(114));
+              var11_ref_String = ph.a((byte) -88, GameKeyHandler.getApplet(114));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               IsaacPacketBuffer.field_p.writeCp1252String(-124, var11_ref_String);
-              dg.a(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
+              dg.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
               IsaacPacketBuffer.field_p.backpatchShortLength(-29190, -var10 + IsaacPacketBuffer.field_p.position);
             }
-            qn.a(-1, 0);
+            PlayerStatsRequest.flushServerPackets(-1, 0);
             d.field_f = TrackObject.field_U;
           }
           if (TrackObject.field_U == d.field_f &&
-            hi.readServerBytes(1, (byte) 40)) {
+            InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
             var9Lifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -56);
             RoadStripRenderer.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -126,15 +126,15 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               d.field_f = TutorialAction.field_f;
             } else {
               if (248 == var9Lifetime1) {
-                RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.a(106));
+                RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.getApplet(106));
                 um.field_b = LabeledField.field_N;
-                r.a(-28036);
-                uk.field_e = false;
+                ServerConnectionState.closeServerConnection(-28036);
+                ProxyAuthenticationException.field_e = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
-                hi.readServerBytes(GrowableStringList.a((byte) 115), (byte) 40);
+                InheritedWidgetStyle.readServerBytes(GrowableStringList.a((byte) 115), (byte) 40);
                 RoadSegment.field_u = new Boolean(WidgetContainer.readBoolean(RoadStripRenderer.field_e, (byte) 87));
                 RoadStripRenderer.field_e.position = 0;
               } else {
@@ -146,16 +146,16 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           }
           if (TutorialAction.field_f == d.field_f) {
             var9Lifetime2 = 2;
-            if (hi.readServerBytes(var9Lifetime2, (byte) 40)) {
+            if (InheritedWidgetStyle.readServerBytes(var9Lifetime2, (byte) 40)) {
               var10Lifetime1 = RoadStripRenderer.field_e.readUnsignedShort(115);
               RoadStripRenderer.field_e.position = 0;
-              if (hi.readServerBytes(var10Lifetime1, (byte) 40)) {
+              if (InheritedWidgetStyle.readServerBytes(var10Lifetime1, (byte) 40)) {
                 var11 = IsaacRandom.field_h.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   IsaacRandom.field_h[var12] = RoadStripRenderer.field_e.readPrefixedCp1252String(true);
                 }
-                r.a(-28036);
-                uk.field_e = false;
+                ServerConnectionState.closeServerConnection(-28036);
+                ProxyAuthenticationException.field_e = false;
                 stackIn_45_0 = 100 + var11;
                 return stackIn_45_0;
               }
@@ -168,29 +168,29 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             } else {
               var9_ref_String = RoadStripRenderer.field_e.readNullableCp1252String(-1);
               if (var9_ref_String != null) {
-                IntrusiveDequeCursor.a(param0 - 97812, var9_ref_String, GameKeyHandler.a(116));
+                IntrusiveDequeCursor.a(param0 - 97812, var9_ref_String, GameKeyHandler.getApplet(116));
               }
             }
-            r.a(param0 ^ -37472);
-            uk.field_e = false;
+            ServerConnectionState.closeServerConnection(param0 ^ -37472);
+            ProxyAuthenticationException.field_e = false;
             stackIn_54_0 = NineSlicePanel.field_c;
             return stackIn_54_0;
           }
           if (IterableSecondaryNodeDeque.field_h == null) {
-            if (uk.field_e) {
-              if (ImageProducerRasterBuffer.d(123) > 30000L) {
+            if (ProxyAuthenticationException.field_e) {
+              if (ImageProducerRasterBuffer.millisSinceServerActivity(123) > 30000L) {
                 um.field_b = SpriteButtonRenderer.field_y;
               } else {
                 um.field_b = ContentTransitionDialog.field_hb;
               }
-              uk.field_e = false;
+              ProxyAuthenticationException.field_e = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
             var9Lifetime3 = bo.field_e;
             bo.field_e = ArchiveCatalog.field_b;
             ArchiveCatalog.field_b = var9Lifetime3;
-            uk.field_e = true;
+            ProxyAuthenticationException.field_e = true;
           }
           stackIn_64_0 = -1;
           return stackIn_64_0;
@@ -233,7 +233,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         throw new RuntimeException();
     }
 
-    final static void a(int[] param0, byte param1, int param2) {
+    final static void submitChampionshipScores(int[] param0, byte param1, int param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -289,9 +289,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             var4Lifetime1 = 32;
             var5 = 65503;
           }
-          PathWaypoint.field_o = new fb(var4Lifetime1, var5, LayeredWidgetStyle.field_d, ni.field_b, cm.field_a, GrowableStringList.field_c, var14);
+          PathWaypoint.field_o = new ScoreSubmission(var4Lifetime1, var5, LayeredWidgetStyle.field_d, ni.field_b, cm.field_a, GrowableStringList.field_c, var14);
           if (!l.field_b &&
-            !pj.b((byte) 109)) {
+            !RoadShadowRenderer.isGuestMode((byte) 109)) {
             LinkWidgetRenderer.a(3, (byte) -37, PathWaypoint.field_o);
             return;
           }
@@ -310,7 +310,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void ensurePlayerStatsCapacity(int param0, boolean param1, int param2) {
         if (ClientTextResources.field_a == null ||
           !(ClientTextResources.field_a.length >= param0)) {
           ClientTextResources.field_a = new int[param0 * 2];
@@ -327,9 +327,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           !(ua.field_c.length >= param0)) {
           ua.field_c = new int[2 * param0];
         }
-        if (fj.field_q == null ||
-          !(fj.field_q.length >= param0)) {
-          fj.field_q = new int[2 * param0];
+        if (WidgetStyleNode.field_q == null ||
+          !(WidgetStyleNode.field_q.length >= param0)) {
+          WidgetStyleNode.field_q = new int[2 * param0];
         }
         if (NetworkGameClient.field_s == null ||
           !(param0 <= NetworkGameClient.field_s.length)) {
@@ -343,13 +343,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           !(param0 <= GrowableStringList.field_d.length)) {
           GrowableStringList.field_d = new boolean[2 * param0];
         }
-        r.field_c = -2147483648;
+        ServerConnectionState.field_c = -2147483648;
         VehicleDefinition.field_t = -2147483648;
         MatchingTextValidator.field_j = 2147483647;
         if (param1) {
           return;
         }
-        we.field_j = 2147483647;
+        SavedRasterState.field_j = 2147483647;
         Vector2f.field_h = 0;
     }
 
@@ -362,12 +362,12 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int var1 = 108 % ((-30 - param0) / 35);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void recordBestCourseTime(int param0, int param1, int param2, int param3, int param4) {
         if (hk.field_c[param1][param2] == -1 ||
           hk.field_c[param1][param2] > param3) {
           hk.field_c[param1][param2] = param3;
           BoundaryIntersection.field_j[param1][param2] = param0;
-          GrowableStringList.a(0);
+          GrowableStringList.savePlayerProgress(0);
         }
         if (param4 >= -107) {
           field_w = (FullscreenFocusCanvas) null;

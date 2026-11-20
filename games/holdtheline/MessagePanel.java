@@ -41,7 +41,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
             if (-1 == var7) {
               this.field_F.h((byte) -115);
             } else {
-              RotatedSpriteAsset.a(0, this.field_J[var6_int]);
+              RotatedSpriteAsset.setAccountScreen(0, this.field_J[var6_int]);
             }
             break;
           }
@@ -64,7 +64,7 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    final TextButton a(int param0, WidgetListener param1, String param2) {
+    final TextButton addButton(int param0, WidgetListener param1, String param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -124,13 +124,13 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         }
     }
 
-    final static void h(int param0) {
+    final static void resetHoverTarget(int param0) {
         SecondaryNodeDeque.field_f = param0;
         SpriteSheetAsset.field_k = false;
         AccountCreationForm.field_I = -1;
     }
 
-    private final void a(int param0, byte param1) {
+    private final void ensureButtonCapacity(int param0, byte param1) {
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
         if (this.field_L >= param0) {
@@ -156,12 +156,12 @@ final class MessagePanel extends WidgetContainer implements ButtonActionListener
         this.field_I.drawParagraph(this.field_M, 14 + (this.x + param2), 10 + (this.y + param1), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_I.ascent);
     }
 
-    final void a(int param0, String param1, byte param2) {
+    final void addActionButton(int param0, String param1, byte param2) {
         int var4_int = 0;
         try {
           var4_int = this.field_L;
-          this.a(var4_int + 1, (byte) 127);
-          this.field_G[var4_int] = this.a(76, (WidgetListener) (this), param1);
+          this.ensureButtonCapacity(var4_int + 1, (byte) 127);
+          this.field_G[var4_int] = this.addButton(76, (WidgetListener) (this), param1);
           if (param2 <= 52) {
             this.field_G = (TextButton[]) null;
           }

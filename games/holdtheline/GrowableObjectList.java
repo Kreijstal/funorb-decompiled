@@ -64,7 +64,7 @@ final class GrowableObjectList {
             var1[var2] = (Sprite) ((Object) new ArgbSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var17));
           }
         }
-        tk.clearDecodedSpriteSheet(false);
+        VehicleEngineSounds.clearDecodedSpriteSheet(false);
         return var1;
     }
 

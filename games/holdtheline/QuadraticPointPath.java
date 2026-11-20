@@ -38,7 +38,7 @@ final class QuadraticPointPath extends PointPath {
             var1 = 1;
           } else {
             if (of.a(-969)) {
-              if (!ProxySocketConnector.a(wi.field_b, 0)) {
+              if (!ProxySocketConnector.isFullscreenSupported(wi.field_b, 0)) {
                 stackIn_23_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
                 var1 = stackIn_23_0;
               } else {
@@ -57,7 +57,7 @@ final class QuadraticPointPath extends PointPath {
           var1 = 1;
         } else {
           if (of.a(-969)) {
-            if (!ProxySocketConnector.a(wi.field_b, 0)) {
+            if (!ProxySocketConnector.isFullscreenSupported(wi.field_b, 0)) {
               stackIn_13_0 = (null == MidiPcmStream.field_U) ? 3 : 2;
               var1 = stackIn_13_0;
             } else {

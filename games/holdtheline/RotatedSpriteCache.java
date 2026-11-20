@@ -6,7 +6,7 @@ final class RotatedSpriteCache {
     private boolean field_d;
     static boolean field_c;
     static String field_i;
-    static jg[] field_g;
+    static LeaderboardRequest[] field_g;
     static java.awt.Frame field_f;
     private Sprite[] field_h;
     static String field_e;
@@ -17,9 +17,9 @@ final class RotatedSpriteCache {
     final static void a(int param0) {
         int var1 = StrongCacheEntry.field_w == -1 ? 0 : StrongCacheEntry.field_w;
         ArchiveRequest.field_r = ~SolidRoadStripRenderer.b(2, 10) == param0 ? 6 : 5;
-        nm.field_b = ArchiveRequest.field_r == 6 ? tk.field_c[5][var1] : tk.field_c[var1][0];
+        nm.field_b = ArchiveRequest.field_r == 6 ? VehicleEngineSounds.field_c[5][var1] : VehicleEngineSounds.field_c[var1][0];
         if (!UsernameLoginCredentials.a(nm.field_b, true)) {
-          qn.field_k = false;
+          PlayerStatsRequest.field_k = false;
           BlobWriteRequest.field_j = false;
           QuickChatPhraseDefinition.field_r = -1;
           MusicPatchPcmStream.field_r = null;

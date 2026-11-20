@@ -7,7 +7,7 @@ final class fc {
     static int field_a;
     static int field_d;
 
-    final static void a(int param0, float param1, float param2, GrowableObjectList param3, GrowableObjectList param4) {
+    final static void appendBoundaryInterval(int param0, float param1, float param2, GrowableObjectList param3, GrowableObjectList param4) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -75,7 +75,7 @@ final class fc {
         }
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createHorizontalPointPairs(int param0, int param1, int param2) {
         int var4 = 0;
         int[] var5 = new int[2 * param2];
         int[] var3 = var5;
@@ -95,11 +95,11 @@ final class fc {
         field_b = null;
     }
 
-    final static IndexedSprite a(boolean param0) {
+    final static IndexedSprite buildDecodedIndexedSprite(boolean param0) {
         IndexedSprite var1 = null;
         if (param0) {
           var1 = new IndexedSprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[0], Vector2i.field_g[0], EditableTextField.field_K[0], ad.field_d[0], IterableSecondaryNodeDeque.field_e[0], StraightRoadSegment.field_E);
-          tk.clearDecodedSpriteSheet(false);
+          VehicleEngineSounds.clearDecodedSpriteSheet(false);
           return var1;
         }
         return (IndexedSprite) null;

@@ -9,16 +9,16 @@ abstract class TimedValidator implements Validator {
 
     final static String d(byte param0) {
         if (bb.field_a == ImageProducerRasterBuffer.field_n) {
-          return ij.field_k;
+          return ChatMessage.field_k;
         }
-        if (!fj.field_o.isComplete(250)) {
-          return fj.field_o.getText((byte) 66);
+        if (!WidgetStyleNode.field_o.isComplete(250)) {
+          return WidgetStyleNode.field_o.getText((byte) 66);
         }
         if (ak.field_b != ImageProducerRasterBuffer.field_n) {
           int var1 = -82 / ((-21 - param0) / 40);
           return RaceSetupMenu.field_v;
         }
-        return fj.field_o.getText((byte) 66);
+        return WidgetStyleNode.field_o.getText((byte) 66);
     }
 
     public final String getValidationMessage(byte param0) {
@@ -28,7 +28,7 @@ abstract class TimedValidator implements Validator {
         if (this.isEmpty((byte) -41)) {
           return null;
         }
-        if (bb.b(-1) >= (350L + this.field_a)) {
+        if (bb.monotonicTimeMillis(-1) >= (350L + this.field_a)) {
           return this.evaluateValidationMessage(97);
         }
         return null;
@@ -38,7 +38,7 @@ abstract class TimedValidator implements Validator {
         if (this.isEmpty((byte) -114)) {
           return SpriteState.field_q;
         }
-        if (bb.b(-1) < (this.field_a + 350L)) {
+        if (bb.monotonicTimeMillis(-1) < (this.field_a + 350L)) {
           return hh.field_d;
         }
         if (param0 == -7447) {
@@ -51,10 +51,10 @@ abstract class TimedValidator implements Validator {
     public final void invalidate(int param0) {
         if (param0 != 21871) {
           field_b = (IntrusiveDeque) null;
-          this.field_a = bb.b(-1);
+          this.field_a = bb.monotonicTimeMillis(-1);
           return;
         }
-        this.field_a = bb.b(-1);
+        this.field_a = bb.monotonicTimeMillis(-1);
     }
 
     public static void clearSharedReferences(int param0) {

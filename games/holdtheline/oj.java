@@ -28,7 +28,7 @@ final class oj {
           }
           ViewportSizingController.field_n[AccountProgressDialog.field_jb] = var3;
         }
-        if (!SecondaryNodeDequeIterator.field_d.field_q.loadTrackPatches(22050, jh.field_a, var1, false, UsernameLoginCredentials.field_f)) {
+        if (!SecondaryNodeDequeIterator.field_d.firstStream.loadTrackPatches(22050, jh.field_a, var1, false, UsernameLoginCredentials.field_f)) {
           return;
         }
         i.field_k[AccountProgressDialog.field_jb] = var1;
@@ -36,7 +36,7 @@ final class oj {
         fieldTemp$1 = oc.field_a - 1;
         oc.field_a = oc.field_a - 1;
         if (fieldTemp$1 == 0) {
-          SecondaryNodeDequeIterator.field_d.field_q.discardPatchSampleIds(0);
+          SecondaryNodeDequeIterator.field_d.firstStream.discardPatchSampleIds(0);
           jh.field_a = null;
         }
         if (WeightedLruCache.field_e == 2) {
@@ -51,7 +51,7 @@ final class oj {
               ResourceArchive.playMusicTrack(true, var1, (byte) 69, 30);
               EmailValidationResult.field_d = null;
             } else {
-              if (ai.field_a.a(-98, EmailValidationResult.field_d)) {
+              if (ai.field_a.containsTrack(-98, EmailValidationResult.field_d)) {
                 RaceSetupMenu.field_D = var1;
               } else {
                 ResourceArchive.playMusicTrack(true, var1, (byte) 69, 30);
@@ -84,7 +84,7 @@ final class oj {
             var8 = param0[1].canvasWidth;
             param0[0].drawTintedWithHighlights(param2, param3, param1);
             param0[2].drawTintedWithHighlights(-var7 + (param5 + param2), param3, param1);
-            SoftwareRasterizer.saveClip(hi.field_W);
+            SoftwareRasterizer.saveClip(InheritedWidgetStyle.field_W);
             SoftwareRasterizer.intersectClip(param2 + var6_int, param3, param2 + param5 - var7, param3 + param0[1].canvasHeight);
             var9 = var6_int + param2;
             var10 = param2 - (-param5 + var7);
@@ -94,7 +94,7 @@ final class oj {
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param0[1].drawTintedWithHighlights(param2, param3, param1);
             }
-            SoftwareRasterizer.restoreClip(hi.field_W);
+            SoftwareRasterizer.restoreClip(InheritedWidgetStyle.field_W);
             return;
           }
           return;

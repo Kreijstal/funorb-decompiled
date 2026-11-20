@@ -25,15 +25,15 @@ abstract class l {
             var5 = (GrowableObjectList) (param1.field_c.elements[var2_int]);
             var3 = var5;
             if (param1.field_p == 0) {
-              jg.a(ri.field_c, var5, (byte) 92);
+              LeaderboardRequest.a(WhirlpoolTables.field_c, var5, (byte) 92);
             } else {
               if (param1.field_p == 2) {
-                jg.a(DialWidgetRenderer.field_f, var5, (byte) 18);
+                LeaderboardRequest.a(DialWidgetRenderer.field_f, var5, (byte) 18);
               } else {
                 if (param1.field_p != 3) {
-                  jg.a(new SolidRoadStripRenderer(7, 13941600), var5, (byte) 42);
+                  LeaderboardRequest.a(new SolidRoadStripRenderer(7, 13941600), var5, (byte) 42);
                 } else {
-                  jg.a(new SolidRoadStripRenderer(4, 12566272), var5, (byte) 118);
+                  LeaderboardRequest.a(new SolidRoadStripRenderer(4, 12566272), var5, (byte) 118);
                 }
               }
             }
@@ -43,14 +43,14 @@ abstract class l {
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < param1.field_t.size; var2_intLifetime1++) {
             var6 = (GrowableObjectList) (param1.field_t.elements[var2_intLifetime1]);
-            jg.a(new pj(7, 20.0f), var6, (byte) 82);
+            LeaderboardRequest.a(new RoadShadowRenderer(7, 20.0f), var6, (byte) 82);
           }
           for (var2_intLifetime2 = 0; param1.field_t.size > var2_intLifetime2; var2_intLifetime2++) {
             var7 = (GrowableObjectList) (param1.field_t.elements[var2_intLifetime2]);
-            jg.a(new OutlinedRoadStripRenderer(7, 20.0f), var7, (byte) 41);
+            LeaderboardRequest.a(new OutlinedRoadStripRenderer(7, 20.0f), var7, (byte) 41);
           }
           if (param1.field_p == 3) {
-            jg.a(ClientTextResources.field_c, param1.field_e, (byte) 95);
+            LeaderboardRequest.a(ClientTextResources.field_c, param1.field_e, (byte) 95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

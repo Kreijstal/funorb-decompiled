@@ -8,7 +8,7 @@ final class b {
     static ResourceArchive field_d;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void drawAnimatedButtonFrame(int param0, int param1, int param2, boolean param3) {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -28,10 +28,10 @@ final class b {
               (var4_int > NodeHashTableIterator.field_h.width - 40)) {
               var4_int = NodeHashTableIterator.field_h.width - 40;
             }
-            cd.a(NodeHashTableIterator.field_h, (byte) 121, var4_int, param2, 30, 0, 80, 0, param1);
+            cd.drawSpriteHighlight(NodeHashTableIterator.field_h, (byte) 121, var4_int, param2, 30, 0, 80, 0, param1);
           }
           if (param0 != 80) {
-            b.a(true, 89, -61, (GrowableObjectList) null);
+            b.containsPointInBoundaryLoops(true, 89, -61, (GrowableObjectList) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class b {
         }
     }
 
-    final static void a(int param0) {
+    final static void readSocialListPacket(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int stackIn_14_0 = 0;
@@ -96,14 +96,14 @@ final class b {
             if (var3_int != 0) {
               var1.readCp1252String(-1231);
             }
-            var5_ref = TrackCurve.a(param0 - 10, var4_ref_String);
+            var5_ref = TrackCurve.findFriend(param0 - 10, var4_ref_String);
             var6_ref = var1.readCp1252String(param0 - 1241);
             var7_ref = MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_String), (byte) 94);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (null == var5_ref) {
-              var5_ref = TrackCurve.a(0, var6_ref);
+              var5_ref = TrackCurve.findFriend(0, var6_ref);
               if (null != var5_ref) {
                 IntrusiveDeque.field_a.put((long)var7_ref.hashCode(), (byte) -75, var5_ref);
               }
@@ -134,7 +134,7 @@ final class b {
             }
             if (var2 != 4) {
               MusicPatchPcmStream.reportClientError((Throwable) null, (byte) 55, "F1: " + AgeValidator.b(false));
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             eg.field_b = 1;
@@ -144,9 +144,9 @@ final class b {
             jh.a(var4, (byte) 61);
             return;
           }
-          if (jo.field_b == null) {
-            jo.field_b = new DualNodeHashTable(128);
-            sl.field_a = 0;
+          if (IgnoreListIndex.entries == null) {
+            IgnoreListIndex.entries = new DualNodeHashTable(128);
+            ReflectionCheckQueue.field_a = 0;
           }
           var3Lifetime1 = var1.readCp1252String(-1231);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -158,14 +158,14 @@ final class b {
           if (null == var6) {
             var6 = LoadProgressDialog.a(var5, param0 ^ 101);
             if (var6 != null) {
-              jo.field_b.put((long)MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
+              IgnoreListIndex.entries.put((long)MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
             }
           }
           if (null == var6) {
             var6 = new SocialListEntry();
-            jo.field_b.put((long)MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
-            fieldTemp$0 = sl.field_a;
-            sl.field_a = sl.field_a + 1;
+            IgnoreListIndex.entries.put((long)MidiPcmStream.normalizeAccountName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 111).hashCode(), (byte) -75, var6);
+            fieldTemp$0 = ReflectionCheckQueue.field_a;
+            ReflectionCheckQueue.field_a = ReflectionCheckQueue.field_a + 1;
             var6.insertionOrder = fieldTemp$0;
             MidiKeyUsage.field_j.addLast((byte) -105, var6);
           }
@@ -209,7 +209,7 @@ final class b {
         }
     }
 
-    final static void a(SortableValue[] param0, byte param1, int param2) {
+    final static void insertSortedPrefix(SortableValue[] param0, byte param1, int param2) {
         SortableValue var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -223,7 +223,7 @@ final class b {
         var5 = HoldTheLine.field_D;
         try {
           if (param1 <= 63) {
-            b.a(true, 65, 85, (GrowableObjectList) null);
+            b.containsPointInBoundaryLoops(true, 65, 85, (GrowableObjectList) null);
           }
           var3 = param0[param2];
           var4 = -1 + param2;
@@ -262,7 +262,7 @@ final class b {
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, GrowableObjectList param3) {
+    final static boolean containsPointInBoundaryLoops(boolean param0, int param1, int param2, GrowableObjectList param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -318,7 +318,7 @@ final class b {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void resendAchievementRequests(boolean param0, int param1) {
         RuntimeException runtimeException = null;
         AchievementUnlockRequest var2 = null;
         IntrusiveNode var2_ref = null;
@@ -339,7 +339,7 @@ final class b {
           } while (var3 == 0);
           var2_ref = RaceWorld.field_v.first((byte) 127);
           while (var2_ref != null) {
-            hh.a(param1, (byte) -23);
+            hh.sendAchievementStatusRequest(param1, (byte) -23);
             var2_ref = RaceWorld.field_v.next((byte) -78);
             if (var3 != 0) {
               return;

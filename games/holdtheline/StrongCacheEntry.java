@@ -89,7 +89,7 @@ final class StrongCacheEntry extends CacheEntry {
 
     final static void h(int param0) {
         int var1 = -126 / ((10 - param0) / 43);
-        RotatedSpriteAsset.a(0, 17);
+        RotatedSpriteAsset.setAccountScreen(0, 17);
     }
 
     StrongCacheEntry(Object param0, int param1) {

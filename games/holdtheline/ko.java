@@ -14,7 +14,7 @@ final class ko {
         field_a = null;
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long encodeBase37(CharSequence param0, int param1) {
         int var5 = 0;
         long stackIn_22_0 = 0L;
         RuntimeException stackIn_25_0 = null;
@@ -33,7 +33,7 @@ final class ko {
           var4 = param0.length();
           if (param1 != -13820) {
             var8 = (CharSequence) null;
-            ko.a((CharSequence) null, -60);
+            ko.encodeBase37((CharSequence) null, -60);
           }
           for (var5 = 0; var4 > var5; var5++) {
             var2_long = var2_long * 37L;
@@ -78,35 +78,35 @@ final class ko {
         }
     }
 
-    final static LoginMethodPreference[] a(int param0) {
+    final static LoginMethodPreference[] getLoginMethodPreferences(int param0) {
         int var1 = -36 % ((param0 + 55) / 43);
         return new LoginMethodPreference[]{RaceVehicle.field_Wb, ArcTrackBoundary.field_s, EmailAddressValidator.field_n};
     }
 
-    final static Sprite[] a(boolean param0) {
+    final static Sprite[] loadHudSprites(boolean param0) {
         int var1 = 0;
         int var4 = HoldTheLine.field_D;
         Sprite[] var2 = new Sprite[28];
-        Sprite var3 = UrlPacketDownloader.a(fb.field_i, "overlayfont", param0, "");
+        Sprite var3 = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "overlayfont", param0, "");
         int var1Lifetime1;
         int var1Lifetime2;
         for (var1 = 0; var1 < 10; var1++) {
-          var2[var1 + 0] = fj.a(0, 30 * var1, var3, 50, 0, 30);
+          var2[var1 + 0] = WidgetStyleNode.copySpriteRegion(0, 30 * var1, var3, 50, 0, 30);
         }
-        var2[24] = fj.a(0, 300, var3, 20, 0, 40);
-        var2[26] = fj.a(0, 340, var3, 20, 0, 40);
+        var2[24] = WidgetStyleNode.copySpriteRegion(0, 300, var3, 20, 0, 40);
+        var2[26] = WidgetStyleNode.copySpriteRegion(0, 340, var3, 20, 0, 40);
         for (var1Lifetime1 = 0; var1Lifetime1 < 10; var1Lifetime1++) {
-          var2[var1Lifetime1 + 10] = fj.a(0, 20 * var1Lifetime1, var3, 20, 60, 20);
+          var2[var1Lifetime1 + 10] = WidgetStyleNode.copySpriteRegion(0, 20 * var1Lifetime1, var3, 20, 60, 20);
         }
-        var2[27] = fj.a(0, 300, var3, 20, 70, 15);
-        var2[25] = fj.a(0, 320, var3, 30, 60, 75);
+        var2[27] = WidgetStyleNode.copySpriteRegion(0, 300, var3, 20, 70, 15);
+        var2[25] = WidgetStyleNode.copySpriteRegion(0, 320, var3, 30, 60, 75);
         for (var1Lifetime2 = 0; var1Lifetime2 < 4; var1Lifetime2++) {
-          var2[20 + var1Lifetime2] = fj.a(0, var1Lifetime2 * 60, var3, 30, 90, 60);
+          var2[20 + var1Lifetime2] = WidgetStyleNode.copySpriteRegion(0, var1Lifetime2 * 60, var3, 30, 90, 60);
         }
         return var2;
     }
 
-    final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
+    final static void renderClientScreen(byte param0, java.awt.Canvas param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -122,18 +122,18 @@ final class ko {
               TutorialAction.field_a = false;
               var3_int = 1;
             }
-            DraggableWidget.a(q.getInterfaceLoadingStatus((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+            DraggableWidget.a(q.getInterfaceLoadingStatus((byte) 118), dm.field_d, ni.getInterfaceLoadingPercent((byte) -120), 300, var3_int != 0);
           } else {
-            if (!ge.a(true)) {
+            if (!ContentTransitionState.a(true)) {
               SoftwareRasterizer.clear();
               vb.a(-76, 240, 320);
-              hi.paintRasterBuffer(param1, 0, true, 0);
+              InheritedWidgetStyle.paintRasterBuffer(param1, 0, true, 0);
             } else {
               if (DiskCacheRequest.field_w != 0) {
                 MidiNote.a((byte) -97, param1);
               } else {
                 CourseDefinition.a(param2, false, 86);
-                hi.paintRasterBuffer(param1, 0, true, 0);
+                InheritedWidgetStyle.paintRasterBuffer(param1, 0, true, 0);
               }
             }
           }
@@ -158,7 +158,7 @@ final class ko {
     static {
         field_b = 0;
         field_a = "<col=2>You are not currently logged in.</col><br><br>To store your score, progress or achievements, you must log in or register by clicking <col=1>Log in/Register</col> above.<br><br>Otherwise, click <col=1>Discard</col> to lose them and continue.";
-        field_c = fc.a(-117, 25, 4);
+        field_c = fc.createHorizontalPointPairs(-117, 25, 4);
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
@@ -178,18 +178,18 @@ final class ko {
               TutorialAction.field_a = false;
               var3_int = 1;
             }
-            DraggableWidget.a(q.getInterfaceLoadingStatus((byte) 118), dm.field_d, ni.a((byte) -120), 300, var3_int != 0);
+            DraggableWidget.a(q.getInterfaceLoadingStatus((byte) 118), dm.field_d, ni.getInterfaceLoadingPercent((byte) -120), 300, var3_int != 0);
           } else {
-            if (!ge.a(true)) {
+            if (!ContentTransitionState.a(true)) {
               SoftwareRasterizer.clear();
               vb.a(-76, 240, 320);
-              hi.paintRasterBuffer(param1, 0, true, 0);
+              InheritedWidgetStyle.paintRasterBuffer(param1, 0, true, 0);
             } else {
               if (DiskCacheRequest.field_w != 0) {
                 MidiNote.a((byte) -97, param1);
               } else {
                 CourseDefinition.a(param2, false, 86);
-                hi.paintRasterBuffer(param1, 0, true, 0);
+                InheritedWidgetStyle.paintRasterBuffer(param1, 0, true, 0);
               }
             }
           }

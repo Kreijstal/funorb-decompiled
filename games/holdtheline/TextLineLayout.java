@@ -2,39 +2,39 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextLineLayout {
-    int field_h;
-    int[] field_c;
+    int top;
+    int[] caretPositions;
     static QuickChatDynamicCommand field_b;
     static int field_l;
     static String[] field_f;
     static String[] field_j;
     static int field_g;
-    int field_k;
+    int bottom;
     static String field_d;
     static String[] field_i;
     static Sprite[] field_a;
     static Sprite field_e;
 
-    final int a(int param0, int param1) {
+    final int hitTestCharacter(int param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = HoldTheLine.field_D;
-        if (null != this.field_c &&
-          this.field_c.length != 0) {
+        if (null != this.caretPositions &&
+          this.caretPositions.length != 0) {
           if (param1 != 1800174305) {
-            this.a((byte) -113);
+            this.getWidth((byte) -113);
           }
-          for (var3 = 1; var3 < this.field_c.length; var3++) {
-            if (param0 < this.field_c[var3] + this.field_c[-1 + var3] >> 1) {
+          for (var3 = 1; var3 < this.caretPositions.length; var3++) {
+            if (param0 < this.caretPositions[var3] + this.caretPositions[-1 + var3] >> 1) {
               return var3 - 1;
             }
           }
-          return -1 + this.field_c.length;
+          return -1 + this.caretPositions.length;
         }
         return 0;
     }
 
-    final static void a(GrowableObjectList param0, GrowableObjectList param1, GrowableObjectList param2, GrowableObjectList param3, RoadSegment[] param4, GrowableObjectList param5, int param6) {
+    final static void buildCourseBoundaries(GrowableObjectList param0, GrowableObjectList param1, GrowableObjectList param2, GrowableObjectList param3, RoadSegment[] param4, GrowableObjectList param5, int param6) {
         int var13 = 0;
         int var26 = 0;
         Point2i var8 = null;
@@ -287,14 +287,14 @@ final class TextLineLayout {
         }
     }
 
-    final int a(byte param0) {
+    final int getWidth(byte param0) {
         int stackIn_7_0 = 0;
         if (param0 != -100) {
           return -89;
         }
-        if (this.field_c != null &&
-          0 != this.field_c.length) {
-          stackIn_7_0 = this.field_c[-1 + this.field_c.length];
+        if (this.caretPositions != null &&
+          0 != this.caretPositions.length) {
+          stackIn_7_0 = this.caretPositions[-1 + this.caretPositions.length];
         } else {
           stackIn_7_0 = 0;
         }
@@ -315,9 +315,9 @@ final class TextLineLayout {
     }
 
     TextLineLayout(int param0, int param1, int param2) {
-        this.field_c = new int[param2 + 1];
-        this.field_h = param0;
-        this.field_k = param1;
+        this.caretPositions = new int[param2 + 1];
+        this.top = param0;
+        this.bottom = param1;
     }
 
     static {

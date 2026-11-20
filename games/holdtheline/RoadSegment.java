@@ -37,7 +37,7 @@ abstract class RoadSegment extends TrackCurve {
             var3 = (String) null;
             RoadSegment.loadSpriteByName((String) null, (byte) -20);
           }
-          stackIn_3_0 = UrlPacketDownloader.a(fb.field_i, param0, false, "");
+          stackIn_3_0 = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, param0, false, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -43,7 +43,7 @@ final class TutorialCalloutAnchor {
           if (param3 == 1) {
             for (var6_int = 0; param0.size > var6_int; var6_int++) {
               for (var7 = 0; var7 < param4.size; var7++) {
-                MatchingTextValidator.a(param5, (BoundaryCurve) (param0.elements[var6_int]), param3, -3, var6_int, (BoundaryCurve) (param4.elements[var7]), var7, param2);
+                MatchingTextValidator.appendBoundaryIntersections(param5, (BoundaryCurve) (param0.elements[var6_int]), param3, -3, var6_int, (BoundaryCurve) (param4.elements[var7]), var7, param2);
               }
             }
             return;
@@ -63,7 +63,7 @@ final class TutorialCalloutAnchor {
                 stackIn_18_1 = param0.size - 1;
               }
               if (stackIn_17_0 > ~stackIn_18_1) {
-                MatchingTextValidator.a(param5, (BoundaryCurve) (param0.elements[var6_intLifetime1]), param3, -3, var6_intLifetime1, (BoundaryCurve) (param0.elements[var9]), var9, param2);
+                MatchingTextValidator.appendBoundaryIntersections(param5, (BoundaryCurve) (param0.elements[var6_intLifetime1]), param3, -3, var6_intLifetime1, (BoundaryCurve) (param0.elements[var9]), var9, param2);
                 var9++;
                 continue;
               }

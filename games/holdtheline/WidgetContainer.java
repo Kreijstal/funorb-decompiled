@@ -128,23 +128,23 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               IsaacPacketBuffer.field_p.position = 0;
               IsaacPacketBuffer.field_p.writeByte(param1 ^ 110, 14);
               IsaacPacketBuffer.field_p.writeByte(param1 + 110, TriangleMesh.field_j.getType(true).protocolId);
-              qn.a(-1, param1 ^ 1);
+              PlayerStatsRequest.flushServerPackets(-1, param1 ^ 1);
               d.field_f = um.field_d;
             }
             if (um.field_d == d.field_f &&
-              hi.readServerBytes(1, (byte) 40)) {
+              InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
               var6_int = RoadStripRenderer.field_e.readUnsignedByte((byte) -102);
               RoadStripRenderer.field_e.position = 0;
               if (var6_int == 0) {
-                d.field_f = pb.field_c;
+                d.field_f = StraightRoadSlicer.field_c;
               } else {
                 NineSlicePanel.field_c = var6_int;
-                d.field_f = uj.field_d;
+                d.field_f = MeshMaterial.field_d;
                 ad.field_c = -1;
               }
             }
-            if (pb.field_c == d.field_f &&
-              hi.readServerBytes(8, (byte) 40)) {
+            if (StraightRoadSlicer.field_c == d.field_f &&
+              InheritedWidgetStyle.readServerBytes(8, (byte) 40)) {
               DialogLayer.field_H = RoadStripRenderer.field_e.readLong(true);
               RoadStripRenderer.field_e.position = 0;
               StraightRoadSegment.writeLoginPacket(param1 ^ 1, param5, param0, TriangleMesh.field_j, param4);
@@ -152,7 +152,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             }
             boolean decompiledFrameRemainder0 = true;
             if (d.field_f == SoundPlayback.field_l &&
-              hi.readServerBytes(1, (byte) 40)) {
+              InheritedWidgetStyle.readServerBytes(1, (byte) 40)) {
               var6_intLifetime1 = RoadStripRenderer.field_e.readUnsignedByte((byte) -128);
               NineSlicePanel.field_c = var6_intLifetime1;
               RoadStripRenderer.field_e.position = 0;
@@ -160,23 +160,23 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  d.field_f = uj.field_d;
+                  d.field_f = MeshMaterial.field_d;
                   ad.field_c = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  r.a(param1 ^ -28035);
-                  uk.field_e = false;
+                  ServerConnectionState.closeServerConnection(param1 ^ -28035);
+                  ProxyAuthenticationException.field_e = false;
                   stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
                 }
               }
               if (decompiledFrameRemainder0) {
                 ad.field_c = -1;
-                d.field_f = fb.field_s;
+                d.field_f = ScoreSubmission.field_s;
               }
             }
-            if (fb.field_s == d.field_f &&
+            if (ScoreSubmission.field_s == d.field_f &&
               TutorialTransition.a((byte) 55)) {
               RoadFillRenderer.field_a = RoadStripRenderer.field_e.readLong(true);
               CachedArchiveProvider.field_x = RoadStripRenderer.field_e.readUnsignedByte((byte) -33);
@@ -189,7 +189,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               }
               if (!param4) {
                 stackIn_40_0 = ((4 & var7) != 0);
-                uj.field_c = stackIn_40_0;
+                MeshMaterial.field_c = stackIn_40_0;
                 stackIn_43_0 = ((8 & var7) != 0);
                 ArchiveCatalog.field_h = stackIn_43_0;
                 if (!ArchiveCatalog.field_h) {
@@ -210,28 +210,28 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               co.field_e = MidiPcmStream.normalizeAccountName(var11, (byte) -12);
               q.field_c = RoadStripRenderer.field_e.readUnsignedByte((byte) -95);
               d.field_f = ad.field_b;
-              if (TriangleMesh.field_j.getType(true) == sb.field_d) {
-                RaceVehicle.field_Wb.writeLastLoginMethodCookie(GameKeyHandler.a(87), 127);
+              if (TriangleMesh.field_j.getType(true) == RoadControlPointSpec.field_d) {
+                RaceVehicle.field_Wb.writeLastLoginMethodCookie(GameKeyHandler.getApplet(87), 127);
               } else {
                 if (TriangleMesh.field_j.getType(true) == jh.field_d) {
-                  ArcTrackBoundary.field_s.writeLastLoginMethodCookie(GameKeyHandler.a(97), 125);
+                  ArcTrackBoundary.field_s.writeLastLoginMethodCookie(GameKeyHandler.getApplet(97), 125);
                 }
               }
-              uk.field_e = false;
+              ProxyAuthenticationException.field_e = false;
               if (var6 != null) {
-                IntrusiveDequeCursor.a(-32312, var6, GameKeyHandler.a(73));
+                IntrusiveDequeCursor.a(-32312, var6, GameKeyHandler.getApplet(73));
               }
               if (fc.field_a <= 0 &&
-                !uj.field_c) {
+                !MeshMaterial.field_c) {
                 try {
-                  eo.a(21896, "unzap", GameKeyHandler.a(92));
+                  JavaScriptBridge.callJavaScript(21896, "unzap", GameKeyHandler.getApplet(92));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  eo.a(GameKeyHandler.a(param1 ^ 79), new Object[]{EntitySound.a(true, RoadFillRenderer.field_a)}, false, "zap");
+                  JavaScriptBridge.callJavaScript(GameKeyHandler.getApplet(param1 ^ 79), new Object[]{EntitySound.a(true, RoadFillRenderer.field_a)}, false, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -248,12 +248,12 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
               stackIn_71_0 = NineSlicePanel.field_c;
               return stackIn_71_0;
             }
-            if (d.field_f == uj.field_d &&
+            if (d.field_f == MeshMaterial.field_d &&
               TutorialTransition.a((byte) 55)) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               if (NineSlicePanel.field_c == 7 &&
-                !uk.field_e) {
-                uk.field_e = true;
+                !ProxyAuthenticationException.field_e) {
+                ProxyAuthenticationException.field_e = true;
                 stackIn_78_0 = -1;
                 return stackIn_78_0;
               }
@@ -261,25 +261,25 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 NineSlicePanel.field_c = 3;
               }
               um.field_b = RoadStripRenderer.field_e.readCp1252String(param1 - 1232);
-              uk.field_e = false;
+              ProxyAuthenticationException.field_e = false;
               stackIn_82_0 = NineSlicePanel.field_c;
               return stackIn_82_0;
             }
             if (null == IterableSecondaryNodeDeque.field_h) {
-              if (uk.field_e) {
-                if (30000L < ImageProducerRasterBuffer.d(126)) {
+              if (ProxyAuthenticationException.field_e) {
+                if (30000L < ImageProducerRasterBuffer.millisSinceServerActivity(126)) {
                   um.field_b = SpriteButtonRenderer.field_y;
                 } else {
                   um.field_b = ContentTransitionDialog.field_hb;
                 }
-                uk.field_e = false;
+                ProxyAuthenticationException.field_e = false;
                 stackIn_91_0 = 3;
                 return stackIn_91_0;
               }
               var6_intLifetime2 = bo.field_e;
               bo.field_e = ArchiveCatalog.field_b;
               ArchiveCatalog.field_b = var6_intLifetime2;
-              uk.field_e = true;
+              ProxyAuthenticationException.field_e = true;
             }
             if (param1 != 1) {
               field_B = -82;
@@ -588,7 +588,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
             if (!param12) {
               field_E = 98;
             }
-            uj.field_f = param9;
+            MeshMaterial.field_f = param9;
             AchievementUnlockRequest.field_i = param8;
             bo.field_e = param5;
             oi.field_b = param0;

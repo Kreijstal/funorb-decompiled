@@ -14,14 +14,14 @@ final class SpriteSheetAsset {
     Sprite[] field_i;
     static String field_f;
 
-    final static ma a(byte param0, int param1) {
+    final static AchievementStatusRequest requestAchievementStatus(byte param0, int param1) {
         if (param0 >= -96) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
           SpriteSheetAsset.a(81, (IsaacPacketBuffer) null);
         }
-        ma var2 = new ma();
+        AchievementStatusRequest var2 = new AchievementStatusRequest();
         RaceWorld.field_v.addLast((byte) -126, var2);
-        hh.a(param1, (byte) -23);
+        hh.sendAchievementStatusRequest(param1, (byte) -23);
         return var2;
     }
 
@@ -51,7 +51,7 @@ final class SpriteSheetAsset {
         if (param2 != 9) {
           field_a = (UrlPacketDownloader) null;
         }
-        return hi.a(param3, (byte) -108, param0);
+        return InheritedWidgetStyle.getPlaceholderSprite(param3, (byte) -108, param0);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -67,18 +67,18 @@ final class SpriteSheetAsset {
         field_d = (RotatedSpriteCache[][]) null;
     }
 
-    final static uj[] a(int param0, IsaacPacketBuffer param1) {
+    final static MeshMaterial[] a(int param0, IsaacPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        uj[] var4 = null;
+        MeshMaterial[] var4 = null;
         int var5 = 0;
         int var6_int = 0;
-        uj var6 = null;
+        MeshMaterial var6 = null;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        uj[] stackIn_6_0 = null;
-        uj[] stackIn_13_0 = null;
+        MeshMaterial[] stackIn_6_0 = null;
+        MeshMaterial[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -88,21 +88,21 @@ final class SpriteSheetAsset {
           var2_int = param1.readBits(8, 7);
           if (var2_int > 0) {
             stackIn_3_0 = null;
-            return (uj[]) (stackIn_3_0);
+            return (MeshMaterial[]) (stackIn_3_0);
           }
           var3 = param1.readBits(12, param0 ^ 11661);
-          var4 = new uj[var3];
+          var4 = new MeshMaterial[var3];
           var5 = 0;
           if (param0 != 11658) {
-            stackIn_6_0 = (uj[]) null;
+            stackIn_6_0 = (MeshMaterial[]) null;
             return stackIn_6_0;
           }
           while (var5 < var3) {
             if (IntHashTable.readBooleanBit(param1, (byte) -37)) {
-              var6 = new uj();
+              var6 = new MeshMaterial();
               param1.readBits(24, 7);
               param1.readBits(24, 7);
-              var6.field_g = param1.readBits(24, 7);
+              var6.color = param1.readBits(24, 7);
               param1.readBits(9, 7);
               param1.readBits(12, 7);
               param1.readBits(12, 7);

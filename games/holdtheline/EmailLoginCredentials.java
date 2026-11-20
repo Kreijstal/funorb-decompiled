@@ -21,7 +21,7 @@ final class EmailLoginCredentials extends LoginCredentials {
         if (!param0) {
           return (LoginCredentialType) null;
         }
-        return sb.field_d;
+        return RoadControlPointSpec.field_d;
     }
 
     final void writeToPacket(int param0, PacketBuffer param1) {
@@ -145,6 +145,6 @@ final class EmailLoginCredentials extends LoginCredentials {
     }
 
     static {
-        field_d = fc.a(-29, 25, 2);
+        field_d = fc.createHorizontalPointPairs(-29, 25, 2);
     }
 }

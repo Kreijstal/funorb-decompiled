@@ -240,7 +240,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               }
               if (!(var5.equals(this.text))) {
                 this.text = var5;
-                this.j(0);
+                this.rebuildHotspots(0);
               }
               break regionExit1;
             }
@@ -248,37 +248,37 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           if (!var5.equals(this.text)) {
             this.text = var5;
-            this.j(0);
+            this.rebuildHotspots(0);
           }
         }
         super.drawLayer(param0, param1, param2, param3);
         var6Lifetime1 = this.field_U.getValidationState(-7447);
         var8 = (TextWidgetRenderer) ((Object) this.renderer);
         var9 = this.x + param2;
-        var10 = var8.getTextOriginY(-1337403295, (UiWidget) (this), param1) + (var8.getTextLayout((byte) 20, (UiWidget) (this)).a(-93) >> 1);
+        var10 = var8.getTextOriginY(-1337403295, (UiWidget) (this), param1) + (var8.getTextLayout((byte) 20, (UiWidget) (this)).getHeight(-93) >> 1);
         if (hh.field_d == var6Lifetime1) {
           var18 = FullscreenFocusCanvas.field_i[0];
           var11 = var18.canvasWidth << 1;
           var12 = var18.canvasHeight << 1;
           if (null == this.field_T) {
             this.field_T = new Sprite(var11, var12);
-            ProxySocketConnector.a(this.field_T, -1);
+            ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
           } else {
             if (var11 > this.field_T.width) {
               this.field_T = new Sprite(var11, var12);
-              ProxySocketConnector.a(this.field_T, -1);
+              ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
             } else {
               if (this.field_T.height < var12) {
                 this.field_T = new Sprite(var11, var12);
-                ProxySocketConnector.a(this.field_T, -1);
+                ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
               } else {
-                ProxySocketConnector.a(this.field_T, -1);
+                ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
                 SoftwareRasterizer.clear();
               }
             }
           }
           var18.drawRotatedBilinear(112, 144, var18.canvasWidth << 4, var18.canvasHeight << 4, -this.field_N << 10, 4096);
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           this.field_T.drawAdditive(-(var18.canvasWidth >> 1) + var9, -var18.canvasHeight + var10, 256);
           return;
         }
@@ -299,29 +299,29 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var12Lifetime1 = var17.canvasHeight << 1;
         if (null == this.field_T) {
           this.field_T = new Sprite(var11Lifetime1, var12Lifetime1);
-          ProxySocketConnector.a(this.field_T, -1);
+          ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
         } else {
           if (var11Lifetime1 > this.field_T.width) {
             this.field_T = new Sprite(var11Lifetime1, var12Lifetime1);
-            ProxySocketConnector.a(this.field_T, -1);
+            ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
           } else {
             if (this.field_T.height < var12Lifetime1) {
               this.field_T = new Sprite(var11Lifetime1, var12Lifetime1);
-              ProxySocketConnector.a(this.field_T, -1);
+              ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
             } else {
-              ProxySocketConnector.a(this.field_T, -1);
+              ProxySocketConnector.pushSpriteRaster(this.field_T, -1);
               SoftwareRasterizer.clear();
             }
           }
         }
         var17.drawRotatedBilinear(112, 144, var17.canvasWidth << 4, var17.canvasHeight << 4, -this.field_N << 10, 4096);
-        dm.b((byte) -10);
+        dm.popRasterState((byte) -10);
         this.field_T.drawAdditive(-(var17.canvasWidth >> 1) + var9, -var17.canvasHeight + var10, 256);
         return;
     }
 
     ValidationHelpWidget(Validator param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, TextHotspotWidget.k(105));
+        super(param1, TextHotspotWidget.getDefaultStyle(105));
         try {
           this.field_P = param1;
           this.field_U = param0;
@@ -342,7 +342,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = SpriteButtonRenderer.a(param3, 2931, param1, param2);
+          var4 = SpriteButtonRenderer.createEntitySound(param3, 2931, param1, param2);
           if (param0 <= 2) {
             field_W = 35;
           }

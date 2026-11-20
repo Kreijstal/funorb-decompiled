@@ -34,7 +34,7 @@ final class hh {
         return -1;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendAchievementStatusRequest(int param0, byte param1) {
         IsaacPacketBuffer var2 = IsaacPacketBuffer.field_p;
         var2.writeCipheredOpcode((byte) 33, param0);
         var2.writeByte(111, 1);

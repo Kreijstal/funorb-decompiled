@@ -6,10 +6,10 @@ import java.io.*;
 abstract class TextLayout {
     static String field_c;
     static int field_a;
-    TextLineLayout[] field_b;
+    TextLineLayout[] lines;
     static int[] field_d;
 
-    final static CourseDefinition a(byte[] param0, byte param1) throws IOException {
+    final static CourseDefinition decodeCourseDefinition(byte[] param0, byte param1) throws IOException {
         CourseDefinition stackIn_15_0 = null;
         int stackIn_16_1 = 0;
         StraightRoadSegment stackIn_28_0;
@@ -225,8 +225,8 @@ abstract class TextLayout {
           if (!NameAvailabilityResult.equalByteArrays(EmailAddressValidator.field_m, 0, var75)) {
             throw new IOException("Invalid file format!");
           }
-          var76 = new byte[rh.field_a.length];
-          var3.readBytes(rh.field_a.length, 0, (byte) 75, var76);
+          var76 = new byte[CourseVersionTag.bytes.length];
+          var3.readBytes(CourseVersionTag.bytes.length, 0, (byte) 75, var76);
           if (NameAvailabilityResult.equalByteArrays(WeightedLruCache.field_b, 0, var76)) {
             var6 = 0;
           } else {
@@ -603,7 +603,7 @@ abstract class TextLayout {
           var62 = new GrowableObjectList();
           var65 = new GrowableObjectList();
           var63 = new GrowableObjectList();
-          TextLineLayout.a(var62, var63, var64, var57.field_e, var57.roadSegments, var65, -68);
+          TextLineLayout.buildCourseBoundaries(var62, var63, var64, var57.field_e, var57.roadSegments, var65, -68);
           var57.field_e = NanoTickClock.removeShortBoundaryEdges(var57.field_e, (byte) -127);
           var67 = NanoTickClock.removeShortBoundaryEdges(var64, (byte) -127);
           var69 = NanoTickClock.removeShortBoundaryEdges(var65, (byte) -127);
@@ -664,54 +664,54 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int hitTestCharacter(int param0, int param1, int param2) {
         TextLineLayout var6 = null;
         int var7 = 0;
         int var8 = HoldTheLine.field_D;
-        if (null == this.field_b ||
-          this.field_b.length == 0 ||
-          this.field_b[0].field_h > param2) {
+        if (null == this.lines ||
+          this.lines.length == 0 ||
+          this.lines[0].top > param2) {
           return -1;
         }
-        if (param2 > this.field_b[-1 + this.field_b.length].field_k) {
+        if (param2 > this.lines[-1 + this.lines.length].bottom) {
           return -1;
         }
-        if (this.field_b.length == 1) {
-          return this.field_b[0].a(param0, 1800174305);
+        if (this.lines.length == 1) {
+          return this.lines[0].hitTestCharacter(param0, 1800174305);
         }
         int var4 = 0;
         int var5 = 0;
         if (param1 != 8) {
-          this.b(58, -57);
+          this.getLineForCharacter(58, -57);
         }
-        while (this.field_b.length > var5) {
-          var6 = this.field_b[var5];
-          if (var6.field_h <= param2 &&
-            param2 <= var6.field_k) {
-            var7 = var6.a(param0, 1800174305);
+        while (this.lines.length > var5) {
+          var6 = this.lines[var5];
+          if (var6.top <= param2 &&
+            param2 <= var6.bottom) {
+            var7 = var6.hitTestCharacter(param0, 1800174305);
             if (var7 == -1) {
               return -1;
             }
             return var4 + var7;
           }
-          var4 = var4 + (var6.field_c.length - 1);
+          var4 = var4 + (var6.caretPositions.length - 1);
           var5++;
         }
         return -1;
     }
 
-    final int a(int param0, int param1) {
+    final int getCaretX(int param0, int param1) {
         int var4 = 0;
         TextLineLayout var5 = null;
         int var6 = HoldTheLine.field_D;
-        TextLineLayout[] var7 = this.field_b;
+        TextLineLayout[] var7 = this.lines;
         TextLineLayout[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (var5.field_c.length > param1) {
-            return var5.field_c[param1];
+          if (var5.caretPositions.length > param1) {
+            return var5.caretPositions[param1];
           }
-          param1 = param1 - (-1 + var5.field_c.length);
+          param1 = param1 - (-1 + var5.caretPositions.length);
         }
         if (param0 != 16777215) {
           TextLayout.clearSharedReferences(-28);
@@ -719,24 +719,24 @@ abstract class TextLayout {
         return 0;
     }
 
-    final int b(int param0, int param1) {
+    final int getLineForCharacter(int param0, int param1) {
         int var3 = 0;
         TextLineLayout var4 = null;
         int var5 = HoldTheLine.field_D;
         if (param1 != -22539) {
           return 80;
         }
-        for (var3 = 0; this.field_b.length > var3; var3++) {
-          var4 = this.field_b[var3];
-          if (var4.field_c.length > param0) {
+        for (var3 = 0; this.lines.length > var3; var3++) {
+          var4 = this.lines[var3];
+          if (var4.caretPositions.length > param0) {
             return var3;
           }
-          param0 = param0 - (var4.field_c.length - 1);
+          param0 = param0 - (var4.caretPositions.length - 1);
         }
-        return this.field_b.length;
+        return this.lines.length;
     }
 
-    final static void a(byte param0, String param1) {
+    final static void drawTooltip(byte param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -755,7 +755,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, int param1, String param2, byte param3) {
+    final int calculateJustificationSpacing(int param0, int param1, String param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -774,7 +774,7 @@ abstract class TextLayout {
           var6 = 0;
           var7 = param2.length();
           if (param3 >= -37) {
-            this.field_b = (TextLineLayout[]) null;
+            this.lines = (TextLineLayout[]) null;
           }
           for (var8 = 0; var8 < var7; var8++) {
             var9 = param2.charAt(var8);
@@ -810,14 +810,14 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0) {
+    final int getHeight(int param0) {
         int stackIn_6_0 = 0;
         if (param0 > -32) {
           field_a = -50;
         }
-        if (this.field_b != null &&
-          0 < this.field_b.length) {
-          stackIn_6_0 = -this.field_b[0].field_h + this.field_b[this.field_b.length - 1].field_k;
+        if (this.lines != null &&
+          0 < this.lines.length) {
+          stackIn_6_0 = -this.lines[0].top + this.lines[this.lines.length - 1].bottom;
         } else {
           stackIn_6_0 = 0;
         }
@@ -832,7 +832,7 @@ abstract class TextLayout {
         field_d = null;
     }
 
-    final int a(byte param0) {
+    final int getWidth(byte param0) {
         int var5 = 0;
         int var2;
         int var3;
@@ -843,12 +843,12 @@ abstract class TextLayout {
         var8 = HoldTheLine.field_D;
         var3 = -127 % ((60 - param0) / 36);
         var2 = -1;
-        if (null != this.field_b) {
-          var4 = this.field_b;
+        if (null != this.lines) {
+          var4 = this.lines;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             if (var6 != null) {
-              var7 = var6.a((byte) -100);
+              var7 = var6.getWidth((byte) -100);
               if (var2 < var7) {
                 var2 = var7;
               }

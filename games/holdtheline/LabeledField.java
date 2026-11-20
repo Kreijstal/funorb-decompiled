@@ -147,7 +147,7 @@ final class LabeledField extends SingleChildWidget {
                     if (param1.field_o != 5) {
                       if (param1.field_o == 6) {
                         DialWidget.field_Q.field_b.drawUnkeyed(0, 0);
-                        GrowableStringList.a(param1.roadSegments, 10000536, new TexturedRoadFillRenderer(ValidationState.field_e.field_b));
+                        GrowableStringList.drawCollisionRoadFill(param1.roadSegments, 10000536, new TexturedRoadFillRenderer(ValidationState.field_e.field_b));
                       }
                     } else {
                       BoundaryIntersection.field_i.field_b.drawUnkeyed(0, 0);

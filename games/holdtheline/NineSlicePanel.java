@@ -13,11 +13,11 @@ class NineSlicePanel {
 
     void draw(int param0, int param1, int param2, int param3, int param4) {
         if (param2 == -51) {
-          hi.drawNineSlice(this.field_g, param1, true, param3, param4, param0);
+          InheritedWidgetStyle.drawNineSlice(this.field_g, param1, true, param3, param4, param0);
           return;
         }
         field_c = -23;
-        hi.drawNineSlice(this.field_g, param1, true, param3, param4, param0);
+        InheritedWidgetStyle.drawNineSlice(this.field_g, param1, true, param3, param4, param0);
     }
 
     final static void a(int param0, Object param1, PlatformTaskDispatcher param2) {

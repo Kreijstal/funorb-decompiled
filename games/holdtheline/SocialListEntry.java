@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class SocialListEntry extends hi {
+final class SocialListEntry extends InheritedWidgetStyle {
     String worldName;
     static boolean field_nb;
     static String field_jb;
@@ -16,7 +16,7 @@ final class SocialListEntry extends hi {
           TextLineLayout.field_l = param0 * NodeHashTableIterator.a(855) / 1000;
           LoginMethodPreference.preloadLogoAudio(param1, 0);
           Particle.loadLogoModels(param1, -64);
-          DelayedServerPacket.a(-18916, param1);
+          DelayedServerPacket.loadLogoFinalFrame(-18916, param1);
           dm.a(255);
           DraggableWidget.j(param2 ^ 0);
           StrongCacheEntry.field_q = param2 - TextLineLayout.field_l;
@@ -55,7 +55,7 @@ final class SocialListEntry extends hi {
             var6 = (ResourceArchive) null;
             SocialListEntry.loadMonochromeFont(25, (ResourceArchive) null, (ResourceArchive) null, 26, 41);
           }
-          stackIn_6_0 = GameAppletShell.a(param0 - 7255, param1.getFile(param4, true, param3));
+          stackIn_6_0 = GameAppletShell.buildDecodedMonochromeFont(param0 - 7255, param1.getFile(param4, true, param3));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class SocialListEntry extends hi {
     }
 
     SocialListEntry() {
-        super(0L, (hi) null);
+        super(0L, (InheritedWidgetStyle) null);
     }
 
     static {

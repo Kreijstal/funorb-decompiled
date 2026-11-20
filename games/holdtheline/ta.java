@@ -94,11 +94,11 @@ final class ta {
               }
               incrementValue$1 = var6;
               var6++;
-              param0 = al.field_b[incrementValue$1];
+              param0 = ByteArrayPool.field_b[incrementValue$1];
               dupTemp$2 = param4[param0];
               dupTemp$3 = param2[dupTemp$2];
               param2[dupTemp$2] = dupTemp$3 + 1;
-              al.field_b[dupTemp$3] = param0;
+              ByteArrayPool.field_b[dupTemp$3] = param0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

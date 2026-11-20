@@ -28,7 +28,7 @@ final class SecondaryNodeDeque {
     }
 
     final static void a(boolean param0, byte param1) {
-        TutorialAction.a((byte) -119, false, param0);
+        TutorialAction.showLoginForm((byte) -119, false, param0);
         int var2 = 99 % ((param1 + 21) / 62);
     }
 
@@ -123,7 +123,7 @@ final class SecondaryNodeDeque {
     final static boolean d(int param0) {
         if (param0 != 0) {
           field_f = 110;
-          if (pj.b((byte) 87)) {
+          if (RoadShadowRenderer.isGuestMode((byte) 87)) {
             return false;
           }
           if (0 >= fc.field_a) {
@@ -131,7 +131,7 @@ final class SecondaryNodeDeque {
           }
           return false;
         }
-        if (pj.b((byte) 87)) {
+        if (RoadShadowRenderer.isGuestMode((byte) 87)) {
           return false;
         }
         if (0 >= fc.field_a) {

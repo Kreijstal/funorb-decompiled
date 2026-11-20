@@ -6,7 +6,7 @@ final class d {
     static int field_g;
     static char[] field_b;
     static int[] field_c;
-    static ll field_f;
+    static AccountProtocolState field_f;
     static int field_e;
     static String field_d;
 

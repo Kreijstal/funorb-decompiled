@@ -73,7 +73,7 @@ abstract class CacheEntry extends DualLinkNode {
           if (param1 != 124) {
             field_p = (QuickChatDynamicCommand) null;
           }
-          var3 = ko.a(84);
+          var3 = ko.getLoginMethodPreferences(84);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5.matchesLoginMethod(param1 ^ 37, var2)) {

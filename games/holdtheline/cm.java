@@ -37,10 +37,10 @@ final class cm {
           while (var3_int < ClientException.field_b.length) {
             var5 = cd.field_f[var3_int];
             if (var5 >= 0) {
-              var6 = h.measureMenuTextWidthWithIntGuard(ClientException.field_b[var3_int], -113, true);
+              var6 = FullscreenErrorReason.measureMenuTextWidthWithIntGuard(ClientException.field_b[var3_int], -113, true);
               var7 = -(var6 >> 1) + NanoTickClock.field_i;
               var4 = var4 + ContentTransitionDialog.field_bb;
-              if (SpriteButtonRenderer.a((ZombiePedestrian.field_w << 1) + TickClock.field_b, param2, var6 + (DropTargetWidget.field_G << 1), param1, 27, -DropTargetWidget.field_G + var7, var4)) {
+              if (SpriteButtonRenderer.containsPoint((ZombiePedestrian.field_w << 1) + TickClock.field_b, param2, var6 + (DropTargetWidget.field_G << 1), param1, 27, -DropTargetWidget.field_G + var7, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }

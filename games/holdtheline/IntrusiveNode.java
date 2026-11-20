@@ -165,12 +165,12 @@ class IntrusiveNode {
             return false;
           }
           var9 = new NameCheckProgressDialog(ka.field_b, param4);
-          ka.field_b.a(var9, false);
-          if (ma.a(0)) {
+          ka.field_b.showDialog(var9, false);
+          if (AchievementStatusRequest.a(0)) {
             var9.q(-124);
             return true;
           }
-          ij.field_k = param5;
+          ChatMessage.field_k = param5;
           TexturedRoadFillRenderer.field_k = param0;
           ArchiveProvider.field_b = param2;
           bb.field_a = ImageProducerRasterBuffer.field_n;

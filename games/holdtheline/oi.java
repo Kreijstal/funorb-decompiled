@@ -45,7 +45,7 @@ final class oi {
               if (null == mc.field_b[var3][var2]) {
                 DialogLayer.field_I = -1;
               } else {
-                TextLayout.a((byte) -107, mc.field_b[var3][var2]);
+                TextLayout.drawTooltip((byte) -107, mc.field_b[var3][var2]);
               }
             }
           }
@@ -70,7 +70,7 @@ final class oi {
               if (null == mc.field_b[var3Lifetime1][var2]) {
                 DialogLayer.field_I = -1;
               } else {
-                TextLayout.a((byte) -107, mc.field_b[var3Lifetime1][var2]);
+                TextLayout.drawTooltip((byte) -107, mc.field_b[var3Lifetime1][var2]);
               }
             }
           }
@@ -91,7 +91,7 @@ final class oi {
             if (null == mc.field_b[var3Lifetime2][var2]) {
               DialogLayer.field_I = -1;
             } else {
-              TextLayout.a((byte) -107, mc.field_b[var3Lifetime2][var2]);
+              TextLayout.drawTooltip((byte) -107, mc.field_b[var3Lifetime2][var2]);
             }
           }
         }

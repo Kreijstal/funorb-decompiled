@@ -4,52 +4,52 @@
 import java.io.*;
 
 final class BufferedRandomAccessFile {
-    private long field_f;
-    private byte[] field_k;
-    private long field_b;
-    private long field_i;
-    private byte[] field_l;
-    private long field_m;
-    private int field_e;
+    private long logicalLength;
+    private byte[] readBuffer;
+    private long physicalPosition;
+    private long physicalLength;
+    private byte[] writeBuffer;
+    private long position;
+    private int readBufferLength;
     static String field_q;
-    private BoundedRandomAccessFile field_g;
+    private BoundedRandomAccessFile file;
     static RotatedSpriteAsset[] field_h;
-    private int field_c;
+    private int writeBufferLength;
     static SpriteAsset field_o;
     static volatile boolean field_n;
     static String field_j;
-    private long field_p;
-    private long field_a;
+    private long readBufferStart;
+    private long writeBufferStart;
     static int field_d;
 
-    private final void a(int param0) throws IOException {
+    private final void refillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = HoldTheLine.field_D;
         if (param0 == -1) {
-          this.field_e = 0;
-          if (~this.field_m != ~this.field_b) {
-            this.field_g.a((byte) 102, this.field_m);
-            this.field_b = this.field_m;
+          this.readBufferLength = 0;
+          if (~this.position != ~this.physicalPosition) {
+            this.file.seek((byte) 102, this.position);
+            this.physicalPosition = this.position;
           }
-          this.field_p = this.field_m;
-          while (this.field_e < this.field_k.length) {
-            var2 = this.field_k.length - this.field_e;
+          this.readBufferStart = this.position;
+          while (this.readBufferLength < this.readBuffer.length) {
+            var2 = this.readBuffer.length - this.readBufferLength;
             if (var2 > 200000000) {
               var2 = 200000000;
             }
-            var3 = this.field_g.b(this.field_e, this.field_k, var2, 11812);
+            var3 = this.file.read(this.readBufferLength, this.readBuffer, var2, 11812);
             if (var3 == -1) {
               break;
             }
-            this.field_e = this.field_e + var3;
-            this.field_b = this.field_b + (long)var3;
+            this.readBufferLength = this.readBufferLength + var3;
+            this.physicalPosition = this.physicalPosition + (long)var3;
           }
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int[] param4) {
+    final static void blendHalfIntensitySpan(int param0, int param1, int param2, byte param3, int[] param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -65,7 +65,7 @@ final class BufferedRandomAccessFile {
         try {
           if (param3 != -85) {
             var9 = (int[]) null;
-            BufferedRandomAccessFile.a(78, -120, -127, (byte) -20, (int[]) null);
+            BufferedRandomAccessFile.blendHalfIntensitySpan(78, -120, -127, (byte) -20, (int[]) null);
           }
           while (true) {
             param0--;
@@ -93,56 +93,56 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
         int var7;
         var7 = HoldTheLine.field_D;
         if (param0 != -1) {
-          this.field_i = -96L;
+          this.physicalLength = -96L;
         }
-        if (this.field_a != -1L) {
-          if (this.field_a != this.field_b) {
-            this.field_g.a((byte) 66, this.field_a);
-            this.field_b = this.field_a;
+        if (this.writeBufferStart != -1L) {
+          if (this.writeBufferStart != this.physicalPosition) {
+            this.file.seek((byte) 66, this.writeBufferStart);
+            this.physicalPosition = this.writeBufferStart;
           }
-          this.field_g.a(this.field_c, this.field_l, 0, param0 ^ 17173);
-          this.field_b = this.field_b + (long)this.field_c;
-          if (this.field_i < this.field_b) {
-            this.field_i = this.field_b;
+          this.file.write(this.writeBufferLength, this.writeBuffer, 0, param0 ^ 17173);
+          this.physicalPosition = this.physicalPosition + (long)this.writeBufferLength;
+          if (this.physicalLength < this.physicalPosition) {
+            this.physicalLength = this.physicalPosition;
           }
           var2 = -1L;
           var4 = -1L;
-          if (this.field_p <= this.field_a &&
-            (long)this.field_e + this.field_p > this.field_a) {
-            var2 = this.field_a;
+          if (this.readBufferStart <= this.writeBufferStart &&
+            (long)this.readBufferLength + this.readBufferStart > this.writeBufferStart) {
+            var2 = this.writeBufferStart;
           } else {
-            if (this.field_p >= this.field_a &&
-              this.field_p < this.field_a + (long)this.field_c) {
-              var2 = this.field_p;
+            if (this.readBufferStart >= this.writeBufferStart &&
+              this.readBufferStart < this.writeBufferStart + (long)this.writeBufferLength) {
+              var2 = this.readBufferStart;
             }
           }
-          if (this.field_a + (long)this.field_c > this.field_p &&
-            (long)this.field_e + this.field_p >= this.field_a + (long)this.field_c) {
-            var4 = (long)this.field_c + this.field_a;
+          if (this.writeBufferStart + (long)this.writeBufferLength > this.readBufferStart &&
+            (long)this.readBufferLength + this.readBufferStart >= this.writeBufferStart + (long)this.writeBufferLength) {
+            var4 = (long)this.writeBufferLength + this.writeBufferStart;
           } else {
-            if (this.field_p + (long)this.field_e > this.field_a &&
-              (this.field_p + (long)this.field_e) <= (this.field_a + (long)this.field_c)) {
-              var4 = (long)this.field_e + this.field_p;
+            if (this.readBufferStart + (long)this.readBufferLength > this.writeBufferStart &&
+              (this.readBufferStart + (long)this.readBufferLength) <= (this.writeBufferStart + (long)this.writeBufferLength)) {
+              var4 = (long)this.readBufferLength + this.readBufferStart;
             }
           }
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            ArrayOperations.copyBytes(this.field_l, (int)(-this.field_a + var2), this.field_k, (int)(-this.field_p + var2), var6);
+            ArrayOperations.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + var2), this.readBuffer, (int)(-this.readBufferStart + var2), var6);
           }
-          this.field_c = 0;
-          this.field_a = -1L;
+          this.writeBufferLength = 0;
+          this.writeBufferStart = -1L;
         }
     }
 
-    final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(byte param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
         String stackIn_53_2 = null;
@@ -157,80 +157,80 @@ final class BufferedRandomAccessFile {
         var10 = HoldTheLine.field_D;
         try {
           try {
-            if ((long)param1 + this.field_m > this.field_f) {
-              this.field_f = (long)param1 + this.field_m;
+            if ((long)param1 + this.position > this.logicalLength) {
+              this.logicalLength = (long)param1 + this.position;
             }
-            if (-1L != this.field_a && (this.field_a > this.field_m ||
-              this.field_m > (this.field_a + (long)this.field_c))) {
-              this.b(-1);
+            if (-1L != this.writeBufferStart && (this.writeBufferStart > this.position ||
+              this.position > (this.writeBufferStart + (long)this.writeBufferLength))) {
+              this.flush(-1);
             }
-            if (this.field_a != -1L &&
-              (long)param1 + this.field_m > this.field_a + (long)this.field_l.length) {
-              var5_int = (int)(this.field_a - (this.field_m - (long)this.field_l.length));
-              ArrayOperations.copyBytes(param3, param2, this.field_l, (int)(this.field_m - this.field_a), var5_int);
+            if (this.writeBufferStart != -1L &&
+              (long)param1 + this.position > this.writeBufferStart + (long)this.writeBuffer.length) {
+              var5_int = (int)(this.writeBufferStart - (this.position - (long)this.writeBuffer.length));
+              ArrayOperations.copyBytes(param3, param2, this.writeBuffer, (int)(this.position - this.writeBufferStart), var5_int);
               param1 = param1 - var5_int;
-              this.field_m = this.field_m + (long)var5_int;
+              this.position = this.position + (long)var5_int;
               param2 = param2 + var5_int;
-              this.field_c = this.field_l.length;
-              this.b(-1);
+              this.writeBufferLength = this.writeBuffer.length;
+              this.flush(-1);
             }
             if (param0 < 124) {
-              this.c(110);
+              this.length(110);
             }
-            if (this.field_l.length >= param1) {
+            if (this.writeBuffer.length >= param1) {
               if (param1 <= 0) {
                 return;
               }
-              if (-1L == this.field_a) {
-                this.field_a = this.field_m;
+              if (-1L == this.writeBufferStart) {
+                this.writeBufferStart = this.position;
               }
-              ArrayOperations.copyBytes(param3, param2, this.field_l, (int)(-this.field_a + this.field_m), param1);
-              this.field_m = this.field_m + (long)param1;
-              if ((long)this.field_c < this.field_m - this.field_a) {
-                this.field_c = (int)(-this.field_a + this.field_m);
+              ArrayOperations.copyBytes(param3, param2, this.writeBuffer, (int)(-this.writeBufferStart + this.position), param1);
+              this.position = this.position + (long)param1;
+              if ((long)this.writeBufferLength < this.position - this.writeBufferStart) {
+                this.writeBufferLength = (int)(-this.writeBufferStart + this.position);
               }
               return;
             }
-            if (~this.field_m != ~this.field_b) {
-              this.field_g.a((byte) 84, this.field_m);
-              this.field_b = this.field_m;
+            if (~this.position != ~this.physicalPosition) {
+              this.file.seek((byte) 84, this.position);
+              this.physicalPosition = this.position;
             }
-            this.field_g.a(param1, param3, param2, -17174);
-            this.field_b = this.field_b + (long)param1;
-            if (this.field_b > this.field_i) {
-              this.field_i = this.field_b;
+            this.file.write(param1, param3, param2, -17174);
+            this.physicalPosition = this.physicalPosition + (long)param1;
+            if (this.physicalPosition > this.physicalLength) {
+              this.physicalLength = this.physicalPosition;
             }
             var5_long = -1L;
             var7 = -1L;
-            if (this.field_p <= this.field_m &&
-              (long)this.field_e + this.field_p > this.field_m) {
-              var5_long = this.field_m;
+            if (this.readBufferStart <= this.position &&
+              (long)this.readBufferLength + this.readBufferStart > this.position) {
+              var5_long = this.position;
             } else {
-              if (this.field_p >= this.field_m &&
-                (long)param1 + this.field_m > this.field_p) {
-                var5_long = this.field_p;
+              if (this.readBufferStart >= this.position &&
+                (long)param1 + this.position > this.readBufferStart) {
+                var5_long = this.readBufferStart;
               }
             }
-            if ((this.field_m + (long)param1) > this.field_p &&
-              this.field_p + (long)this.field_e >= this.field_m + (long)param1) {
-              var7 = this.field_m + (long)param1;
+            if ((this.position + (long)param1) > this.readBufferStart &&
+              this.readBufferStart + (long)this.readBufferLength >= this.position + (long)param1) {
+              var7 = this.position + (long)param1;
             } else {
-              if (this.field_m < (this.field_p + (long)this.field_e) &&
-                this.field_p + (long)this.field_e <= (long)param1 + this.field_m) {
-                var7 = (long)this.field_e + this.field_p;
+              if (this.position < (this.readBufferStart + (long)this.readBufferLength) &&
+                this.readBufferStart + (long)this.readBufferLength <= (long)param1 + this.position) {
+                var7 = (long)this.readBufferLength + this.readBufferStart;
               }
             }
             if (var5_long > -1L &&
               var5_long < var7) {
               var9 = (int)(var7 - var5_long);
-              ArrayOperations.copyBytes(param3, (int)((long)param2 + (var5_long - this.field_m)), this.field_k, (int)(var5_long - this.field_p), var9);
+              ArrayOperations.copyBytes(param3, (int)((long)param2 + (var5_long - this.position)), this.readBuffer, (int)(var5_long - this.readBufferStart), var9);
             }
-            this.field_m = this.field_m + (long)param1;
+            this.position = this.position + (long)param1;
             return;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5 = (IOException) (Object) decompiledCaughtException;
-            this.field_b = -1L;
+            this.physicalPosition = -1L;
             throw var5;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -247,27 +247,27 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final long c(int param0) {
+    final long length(int param0) {
         if (param0 != -32261) {
           field_n = false;
         }
-        return this.field_f;
+        return this.logicalLength;
     }
 
-    final void a(byte[] param0, int param1) throws IOException {
+    final void readFully(byte[] param0, int param1) throws IOException {
         try {
-          this.a(-1, param1, param0.length, param0);
+          this.readFully(-1, param1, param0.length, param0);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ud.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void d(int param0) throws IOException {
-        this.b(param0);
-        this.field_g.a((byte) 20);
+    final void close(int param0) throws IOException {
+        this.flush(param0);
+        this.file.close((byte) 20);
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, int param1, int param2, byte[] param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
@@ -292,41 +292,41 @@ final class BufferedRandomAccessFile {
             if (param1 + param2 > param3.length) {
               throw new ArrayIndexOutOfBoundsException(-param3.length + (param1 + param2));
             }
-            if (this.field_a != (long)param0 &&
-              this.field_a <= this.field_m &&
-              ((long)this.field_c + this.field_a) >= ((long)param2 + this.field_m)) {
-              ArrayOperations.copyBytes(this.field_l, (int)(-this.field_a + this.field_m), param3, param1, param2);
-              this.field_m = this.field_m + (long)param2;
+            if (this.writeBufferStart != (long)param0 &&
+              this.writeBufferStart <= this.position &&
+              ((long)this.writeBufferLength + this.writeBufferStart) >= ((long)param2 + this.position)) {
+              ArrayOperations.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + this.position), param3, param1, param2);
+              this.position = this.position + (long)param2;
               return;
             }
-            var5_long = this.field_m;
+            var5_long = this.position;
             var7 = param1;
             var8 = param2;
-            if (this.field_m >= this.field_p &&
-              this.field_p + (long)this.field_e > this.field_m) {
-              var9_int = (int)((long)this.field_e + (this.field_p - this.field_m));
+            if (this.position >= this.readBufferStart &&
+              this.readBufferStart + (long)this.readBufferLength > this.position) {
+              var9_int = (int)((long)this.readBufferLength + (this.readBufferStart - this.position));
               if (var9_int > param2) {
                 var9_int = param2;
               }
-              ArrayOperations.copyBytes(this.field_k, (int)(this.field_m - this.field_p), param3, param1, var9_int);
-              this.field_m = this.field_m + (long)var9_int;
+              ArrayOperations.copyBytes(this.readBuffer, (int)(this.position - this.readBufferStart), param3, param1, var9_int);
+              this.position = this.position + (long)var9_int;
               param1 = param1 + var9_int;
               param2 = param2 - var9_int;
             }
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
-            if (this.field_k.length < param2) {
-              this.field_g.a((byte) 47, this.field_m);
-              this.field_b = this.field_m;
+            if (this.readBuffer.length < param2) {
+              this.file.seek((byte) 47, this.position);
+              this.physicalPosition = this.position;
               while (param2 > 0) {
-                var9_intLifetime1 = this.field_g.b(param1, param3, param2, 11812);
+                var9_intLifetime1 = this.file.read(param1, param3, param2, 11812);
                 if (-1 == var9_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
                 param1 = param1 + var9_intLifetime1;
-                this.field_m = this.field_m + (long)var9_intLifetime1;
-                this.field_b = this.field_b + (long)var9_intLifetime1;
+                this.position = this.position + (long)var9_intLifetime1;
+                this.physicalPosition = this.physicalPosition + (long)var9_intLifetime1;
                 param2 = param2 - var9_intLifetime1;
               }
               decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
@@ -334,20 +334,20 @@ final class BufferedRandomAccessFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param2 > 0)) {
-              this.a(-1);
+              this.refillReadBuffer(-1);
               var9_intLifetime1Lifetime1 = param2;
-              if (var9_intLifetime1Lifetime1 > this.field_e) {
-                var9_intLifetime1Lifetime1 = this.field_e;
+              if (var9_intLifetime1Lifetime1 > this.readBufferLength) {
+                var9_intLifetime1Lifetime1 = this.readBufferLength;
               }
-              ArrayOperations.copyBytes(this.field_k, 0, param3, param1, var9_intLifetime1Lifetime1);
+              ArrayOperations.copyBytes(this.readBuffer, 0, param3, param1, var9_intLifetime1Lifetime1);
               param1 = param1 + var9_intLifetime1Lifetime1;
               param2 = param2 - var9_intLifetime1Lifetime1;
-              this.field_m = this.field_m + (long)var9_intLifetime1Lifetime1;
+              this.position = this.position + (long)var9_intLifetime1Lifetime1;
             }
-            if (this.field_a != -1L) {
-              if (this.field_m < this.field_a &&
+            if (this.writeBufferStart != -1L) {
+              if (this.position < this.writeBufferStart &&
                 0 < param2) {
-                var9_intLifetime2 = param1 + (int)(this.field_a - this.field_m);
+                var9_intLifetime2 = param1 + (int)(this.writeBufferStart - this.position);
                 if (var9_intLifetime2 > param2 + param1) {
                   var9_intLifetime2 = param2 + param1;
                 }
@@ -356,43 +356,43 @@ final class BufferedRandomAccessFile {
                   param1++;
                   param3[incrementValue$0] = (byte) 0;
                   param2--;
-                  this.field_m = this.field_m + 1L;
+                  this.position = this.position + 1L;
                 }
               }
               var9 = -1L;
-              if (var5_long <= this.field_a &&
-                var5_long + (long)var8 > this.field_a) {
-                var9 = this.field_a;
+              if (var5_long <= this.writeBufferStart &&
+                var5_long + (long)var8 > this.writeBufferStart) {
+                var9 = this.writeBufferStart;
               } else {
-                if (this.field_a <= var5_long &&
-                  this.field_a + (long)this.field_c > var5_long) {
+                if (this.writeBufferStart <= var5_long &&
+                  this.writeBufferStart + (long)this.writeBufferLength > var5_long) {
                   var9 = var5_long;
                 }
               }
               var11 = -1L;
-              if (((long)this.field_c + this.field_a) > var5_long &&
-                ((long)var8 + var5_long) >= (this.field_a + (long)this.field_c)) {
-                var11 = this.field_a + (long)this.field_c;
+              if (((long)this.writeBufferLength + this.writeBufferStart) > var5_long &&
+                ((long)var8 + var5_long) >= (this.writeBufferStart + (long)this.writeBufferLength)) {
+                var11 = this.writeBufferStart + (long)this.writeBufferLength;
               } else {
-                if (this.field_a < (var5_long + (long)var8) &&
-                  this.field_a + (long)this.field_c >= var5_long + (long)var8) {
+                if (this.writeBufferStart < (var5_long + (long)var8) &&
+                  this.writeBufferStart + (long)this.writeBufferLength >= var5_long + (long)var8) {
                   var11 = var5_long + (long)var8;
                 }
               }
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                ArrayOperations.copyBytes(this.field_l, (int)(var9 - this.field_a), param3, var7 + (int)(-var5_long + var9), var13);
-                if (this.field_m < var11) {
-                  param2 = (int)((long)param2 - (-this.field_m + var11));
-                  this.field_m = var11;
+                ArrayOperations.copyBytes(this.writeBuffer, (int)(var9 - this.writeBufferStart), param3, var7 + (int)(-var5_long + var9), var13);
+                if (this.position < var11) {
+                  param2 = (int)((long)param2 - (-this.position + var11));
+                  this.position = var11;
                 }
               }
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var5 = (IOException) (Object) decompiledCaughtException;
-            this.field_b = -1L;
+            this.physicalPosition = -1L;
             throw var5;
           }
           if (param2 <= 0) {
@@ -413,12 +413,12 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param1 >= 0L) {
           if (param0 != 25971) {
-            this.c(71);
+            this.length(71);
           }
-          this.field_m = param1;
+          this.position = param1;
           return;
         }
         throw new IOException();
@@ -436,17 +436,17 @@ final class BufferedRandomAccessFile {
 
     BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
-        this.field_c = 0;
-        this.field_p = -1L;
-        this.field_a = -1L;
+        this.writeBufferLength = 0;
+        this.readBufferStart = -1L;
+        this.writeBufferStart = -1L;
         try {
-          this.field_g = param0;
-          dupTemp$0 = param0.a(false);
-          this.field_i = dupTemp$0;
-          this.field_f = dupTemp$0;
-          this.field_l = new byte[param2];
-          this.field_m = 0L;
-          this.field_k = new byte[param1];
+          this.file = param0;
+          dupTemp$0 = param0.length(false);
+          this.physicalLength = dupTemp$0;
+          this.logicalLength = dupTemp$0;
+          this.writeBuffer = new byte[param2];
+          this.position = 0L;
+          this.readBuffer = new byte[param1];
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -7,16 +7,16 @@ abstract class MouseWheelInput {
     static RotatedSpriteAsset field_c;
     static NamedSoundEffect field_d;
 
-    final static void a(int param0, int param1, byte param2, int param3) {
+    final static void recordBestLapTime(int param0, int param1, byte param2, int param3) {
         IsaacPacketBuffer var5;
         if (-1 == QuickChatPhraseDefinition.field_v[param1][param3] ||
           !(QuickChatPhraseDefinition.field_v[param1][param3] <= param0)) {
           QuickChatPhraseDefinition.field_v[param1][param3] = param0;
-          GrowableStringList.a(0);
+          GrowableStringList.savePlayerProgress(0);
         }
         if (param2 != 62) {
           var5 = (IsaacPacketBuffer) null;
-          MouseWheelInput.a((short[]) null, -26, (IsaacPacketBuffer) null, true);
+          MouseWheelInput.readPackedShortArray((short[]) null, -26, (IsaacPacketBuffer) null, true);
         }
     }
 
@@ -175,11 +175,11 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void attach(java.awt.Component param0, byte param1);
 
-    abstract int a(byte param0);
+    abstract int pollRotation(byte param0);
 
-    final static short[] a(short[] param0, int param1, IsaacPacketBuffer param2, boolean param3) {
+    final static short[] readPackedShortArray(short[] param0, int param1, IsaacPacketBuffer param2, boolean param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -244,27 +244,27 @@ abstract class MouseWheelInput {
     public static void clearSharedReferences(byte param0) {
         field_d = null;
         if (param0 != 106) {
-          MouseWheelInput.a(-4);
+          MouseWheelInput.advanceTextLine(-4);
         }
         field_a = null;
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void advanceTextLine(int param0) {
         int fieldTemp$1 = 0;
         if (param0 != 4) {
           field_c = (RotatedSpriteAsset) null;
         }
-        if (rc.field_c.length > ArchiveIndex.field_a) {
+        if (TutorialScriptState.lines.length > ArchiveIndex.field_a) {
           fieldTemp$1 = ArchiveIndex.field_a;
           ArchiveIndex.field_a = ArchiveIndex.field_a + 1;
-          MidiPcmStream.field_q = rc.field_c[fieldTemp$1];
+          MidiPcmStream.field_q = TutorialScriptState.lines[fieldTemp$1];
         } else {
           MidiPcmStream.field_q = null;
         }
     }
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
     static {
         field_b = -1;

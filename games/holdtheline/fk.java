@@ -186,7 +186,7 @@ final class fk {
 
     static {
         field_d = "Connection lost. <%0>";
-        field_c = fc.a(-39, 5, 4);
+        field_c = fc.createHorizontalPointPairs(-39, 5, 4);
         field_b = new int[14][];
         field_a = "<img=3>";
         field_b[5] = new int[]{25};

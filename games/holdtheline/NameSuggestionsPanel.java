@@ -15,11 +15,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
         BitmapFont var5 = IntrusiveNode.field_g;
         if (null != this.field_F) {
-          var5.drawParagraph(tk.field_b, param2 + this.x, this.y + param1, this.width, 20, 16777215, -1, 0, 0, var5.ascent + var5.descent);
+          var5.drawParagraph(VehicleEngineSounds.field_b, param2 + this.x, this.y + param1, this.width, 20, 16777215, -1, 0, 0, var5.ascent + var5.descent);
         }
     }
 
-    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
+    final static void drawHorizontalFrame(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -40,7 +40,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             var7 = param3[1].canvasWidth;
             param3[0].draw(param2, param0);
             param3[2].draw(-var6 + (param2 + param4), param0);
-            SoftwareRasterizer.saveClip(hi.field_W);
+            SoftwareRasterizer.saveClip(InheritedWidgetStyle.field_W);
             SoftwareRasterizer.intersectClip(var5_int + param2, param0, -var6 + param4 + param2, param3[1].canvasHeight + param0);
             if (param1 != 14191) {
               field_J = (RotatedSpriteAsset) null;
@@ -50,7 +50,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
             for (param2 = var8; var9 > param2; param2 = param2 + var7) {
               param3[1].draw(param2, param0);
             }
-            SoftwareRasterizer.restoreClip(hi.field_W);
+            SoftwareRasterizer.restoreClip(InheritedWidgetStyle.field_W);
             return;
           }
           return;
@@ -84,14 +84,14 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         }
     }
 
-    final static AccountFormText i(int param0) {
+    final static AccountFormText getAccountFormText(int param0) {
         if (param0 >= -77) {
-          NameSuggestionsPanel.i(-10);
+          NameSuggestionsPanel.getAccountFormText(-10);
         }
         return new AccountFormText(TimedValidator.d((byte) 41), IntrusiveDequeCursor.b(false));
     }
 
-    final void a(String[] param0, byte param1) {
+    final void setSuggestions(String[] param0, byte param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -208,12 +208,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
           }
           while (this.field_F.length > var6_int) {
             if (param1 == this.field_I[var6_int]) {
-              this.field_G.a(this.field_F[var6_int], 25);
+              this.field_G.onNameSelected(this.field_F[var6_int], 25);
             }
             var6_int++;
           }
           if (this.field_I[this.field_F.length] == param1) {
-            this.field_G.a((byte) 126);
+            this.field_G.onMoreSuggestionsRequested((byte) 126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -244,7 +244,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonAction
         try {
           var3_int = -param2.insertionOrder + param0.insertionOrder;
           if (param1 != 200) {
-            NameSuggestionsPanel.i(32);
+            NameSuggestionsPanel.getAccountFormText(32);
           }
           if (SecondaryNodeDequeIterator.field_g == param0.worldName) {
             var3_int -= 200;

@@ -331,7 +331,7 @@ final class ZombiePedestrian extends IntrusiveNode {
         int var2 = this.state != 1 ? 4096 : 16384;
         int var3 = -(this.fixedX >> 8) + (this.targetX << 8);
         int var4 = (this.targetY << 8) - (this.fixedY >> 8);
-        int var5 = DropTargetWidget.b(var4, 4805, var3);
+        int var5 = DropTargetWidget.approximateHypot(var4, 4805, var3);
         if (var5 < var2 >> 8) {
           return true;
         }

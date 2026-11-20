@@ -35,11 +35,11 @@ final class LinkWidgetRenderer implements WidgetRenderer {
             LinkWidgetRenderer.a(-98, (String) null, true, (PaletteBitmapFont) null, 48, -52);
           }
           RoadFillRenderer.attachKeyboard((java.awt.Component) ((Object) param0), -116);
-          gk.a((java.awt.Component) ((Object) param0), param1 ^ 109);
+          MouseInputRegistration.attachMouseInput((java.awt.Component) ((Object) param0), param1 ^ 109);
           if (null == TrackBoundary.field_u) {
             return;
           }
-          TrackBoundary.field_u.a((java.awt.Component) ((Object) param0), (byte) 106);
+          TrackBoundary.field_u.attach((java.awt.Component) ((Object) param0), (byte) 106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,12 +123,12 @@ final class LinkWidgetRenderer implements WidgetRenderer {
         this.field_a = IntrusiveNode.field_g;
     }
 
-    final static void a(int param0, byte param1, fb param2) {
+    final static void a(int param0, byte param1, ScoreSubmission param2) {
         try {
           AccountTermsPanel.field_O.addLast((byte) -103, param2);
           if (param1 >= -27) {
-            fb var4 = (fb) null;
-            LinkWidgetRenderer.a(-120, (byte) -6, (fb) null);
+            ScoreSubmission var4 = (ScoreSubmission) null;
+            LinkWidgetRenderer.a(-120, (byte) -6, (ScoreSubmission) null);
           }
           VehicleDefinition.a(param2, param0, 118);
         } catch (RuntimeException runtimeException) {

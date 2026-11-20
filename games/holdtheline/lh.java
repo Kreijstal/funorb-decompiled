@@ -54,16 +54,16 @@ final class lh {
     final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Component param2) {
         try {
           SecondaryNodeDequeIterator.field_d = new MusicCrossfadeStream();
-          SecondaryNodeDequeIterator.field_d.field_q.setChannelProgram(128, -13549, 9);
-          SecondaryNodeDequeIterator.field_d.field_q.setMasterVolume(NanoTickClock.field_e, false);
-          SecondaryNodeDequeIterator.field_d.field_C.setChannelProgram(128, -13549, 9);
-          SecondaryNodeDequeIterator.field_d.field_C.setMasterVolume(NanoTickClock.field_e, false);
+          SecondaryNodeDequeIterator.field_d.firstStream.setChannelProgram(128, -13549, 9);
+          SecondaryNodeDequeIterator.field_d.firstStream.setMasterVolume(NanoTickClock.field_e, false);
+          SecondaryNodeDequeIterator.field_d.secondStream.setChannelProgram(128, -13549, 9);
+          SecondaryNodeDequeIterator.field_d.secondStream.setMasterVolume(NanoTickClock.field_e, false);
           int var3_int = -54 % ((param1 - 11) / 55);
-          TrackCurve.a((byte) -111, param0, param2, 22050, 1102, true, 22050, SecondaryNodeDequeIterator.field_d);
-          ll.a(-114, 160);
+          TrackCurve.initializeAudioOutputs((byte) -111, param0, param2, 22050, 1102, true, 22050, SecondaryNodeDequeIterator.field_d);
+          AccountProtocolState.a(-114, 160);
           MenuList.field_h = 256;
           MovingEntity var4 = (MovingEntity) null;
-          sa.a((MovingEntity) null, -15676);
+          NameRequestState.setSoundListener((MovingEntity) null, -15676);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "lh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

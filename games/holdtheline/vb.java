@@ -31,14 +31,14 @@ final class vb {
         if (StrongCacheEntry.field_q > 200) {
           var5 = (250 - StrongCacheEntry.field_q << 8) / 50;
         }
-        ProxySocketConnector.a(SolidRoadStripRenderer.field_p, -1);
+        ProxySocketConnector.pushSpriteRaster(SolidRoadStripRenderer.field_p, -1);
         TriangleRasterState.c();
         SoftwareRasterizer.clear();
         StereoMusicSample.a((byte) -111);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
-        dm.b((byte) -10);
+        dm.popRasterState((byte) -10);
         if (StrongCacheEntry.field_q >= 150) {
           TickClock.field_c.drawAlpha(15 + var3, 10 + var4, var5);
           var6 = -125 + StrongCacheEntry.field_q;
@@ -147,7 +147,7 @@ final class vb {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (dg.a((byte) -68, param1)) {
+        if (dg.isAsciiAlphanumeric((byte) -68, param1)) {
           return true;
         }
         if (param1 == 45) {

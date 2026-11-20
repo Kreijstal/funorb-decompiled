@@ -3,13 +3,13 @@
  */
 final class LayeredButtonRenderer extends TextWidgetStyle {
     static DraggableWidget field_q;
-    private LayeredWidgetStyle[] field_s;
+    private LayeredWidgetStyle[] stateStyles;
     static int field_v;
     static float[] field_u;
-    private LayeredWidgetStyle field_r;
+    private LayeredWidgetStyle defaultStyle;
     static RotatedSpriteSheetAsset field_t;
 
-    final void a(Sprite[] param0, int param1, int param2) {
+    final void setStateBorderSprites(Sprite[] param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -18,12 +18,12 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         RuntimeException var4 = null;
         try {
           var4_int = param2;
-          if (this.field_s[var4_int] == null) {
-            this.field_s[var4_int] = new LayeredWidgetStyle();
+          if (this.stateStyles[var4_int] == null) {
+            this.stateStyles[var4_int] = new LayeredWidgetStyle();
           }
-          this.field_s[param2].borderSprites = param0;
+          this.stateStyles[param2].borderSprites = param0;
           if (param1 != 6821) {
-            this.field_r = (LayeredWidgetStyle) null;
+            this.defaultStyle = (LayeredWidgetStyle) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,46 +65,46 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
           if (var10 != null) {
             param0 = param0 & var10.field_D;
           }
-          var7 = this.field_s[0];
-          this.field_r.reset((byte) -121);
-          var7.applyTo(this, this.field_r, param4, param1, -28063, param3);
+          var7 = this.stateStyles[0];
+          this.defaultStyle.reset((byte) -121);
+          var7.applyTo(this, this.defaultStyle, param4, param1, -28063, param3);
           if (var10 != null) {
             if (var10.field_B) {
-              var11 = this.field_s[1];
+              var11 = this.stateStyles[1];
               if (var11 != null) {
-                var11.applyTo(this, this.field_r, param4, param1, -28063, param3);
+                var11.applyTo(this, this.defaultStyle, param4, param1, -28063, param3);
               }
             }
             if (var10.hovered) {
-              var12 = this.field_s[3];
+              var12 = this.stateStyles[3];
               if (var10.pressedButton != 0 &&
                 var12 != null) {
-                var12.applyTo(this, this.field_r, param4, param1, -28063, param3);
+                var12.applyTo(this, this.defaultStyle, param4, param1, -28063, param3);
               } else {
-                var9 = this.field_s[2];
+                var9 = this.stateStyles[2];
                 if (var9 != null) {
-                  var9.applyTo(this, this.field_r, param4, param1, -28063, param3);
+                  var9.applyTo(this, this.defaultStyle, param4, param1, -28063, param3);
                 }
               }
             }
           }
           if (param3.isFocused((byte) -20)) {
-            var13 = this.field_s[5];
+            var13 = this.stateStyles[5];
             if (var13 != null) {
-              var13.applyTo(this, this.field_r, param4, param1, -28063, param3);
+              var13.applyTo(this, this.defaultStyle, param4, param1, -28063, param3);
             }
           }
           if (!param0) {
-            var14 = this.field_s[4];
+            var14 = this.stateStyles[4];
             if (var14 != null) {
-              var14.applyTo(this, this.field_r, param4, param1, -28063, param3);
+              var14.applyTo(this, this.defaultStyle, param4, param1, -28063, param3);
             }
           }
-          this.field_r.draw(param3, param4, param1, -1, this);
+          this.defaultStyle.draw(param3, param4, param1, -1, this);
           if (param2 > -48) {
             field_u = (float[]) null;
           }
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,26 +130,26 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
     LayeredButtonRenderer(LayeredButtonRenderer param0, boolean param1) {
         this();
         try {
-          param0.a(this, param1, 119);
+          param0.copyTo(this, param1, 119);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final LayeredWidgetStyle a(int param0, int param1) {
+    final LayeredWidgetStyle createStateStyle(int param0, int param1) {
         int var3 = 98 % ((-14 - param1) / 45);
         LayeredWidgetStyle dupTemp$0 = new LayeredWidgetStyle();
-        this.field_s[param0] = dupTemp$0;
+        this.stateStyles[param0] = dupTemp$0;
         return dupTemp$0;
     }
 
-    final void a(byte param0, Sprite[] param1) {
+    final void setBorderSprites(byte param0, Sprite[] param1) {
         LayeredWidgetStyle[] var7 = null;
         int var4 = 0;
         LayeredWidgetStyle var5 = null;
         int var6 = HoldTheLine.field_D;
         try {
-          var7 = this.field_s;
+          var7 = this.stateStyles;
           LayeredWidgetStyle[] var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
@@ -165,7 +165,7 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         }
     }
 
-    private final void a(LayeredButtonRenderer param0, boolean param1, int param2) {
+    private final void copyTo(LayeredButtonRenderer param0, boolean param1, int param2) {
         LayeredWidgetStyle dupTemp$0 = null;
         LayeredWidgetStyle stackIn_8_0 = null;
         LayeredWidgetStyle stackIn_9_1 = null;
@@ -186,26 +186,26 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
           super.copyTo((byte) -119, param0);
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
-              var5 = this.field_s[var4_int];
+              var5 = this.stateStyles[var4_int];
               var6 = var5;
               var6Lifetime1 = var5;
               if (var5 != null) {
-                var6Lifetime2 = param0.field_s[var4_int];
+                var6Lifetime2 = param0.stateStyles[var4_int];
                 stackIn_8_0 = var5;
                 if (var6Lifetime2 != null) {
                   stackIn_9_1 = var6Lifetime2;
                 } else {
                   dupTemp$0 = new LayeredWidgetStyle();
-                  param0.field_s[var4_int] = dupTemp$0;
+                  param0.stateStyles[var4_int] = dupTemp$0;
                   stackIn_9_1 = dupTemp$0;
                 }
                 ((LayeredWidgetStyle) (Object) stackIn_8_0).copyTo(stackIn_9_1, -1);
               } else {
-                param0.field_s[var4_int] = null;
+                param0.stateStyles[var4_int] = null;
               }
             }
           } else {
-            ArrayOperations.copyObjects(this.field_s, 0, param0.field_s, 0, 6);
+            ArrayOperations.copyObjects(this.stateStyles, 0, param0.stateStyles, 0, 6);
           }
           var4_intLifetime1 = 62 % ((param2 - 28) / 32);
           return;
@@ -223,7 +223,7 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         }
     }
 
-    final void a(Sprite param0, int param1) {
+    final void setIcon(Sprite param0, int param1) {
         int var4 = 0;
         LayeredWidgetStyle[] var3 = null;
         LayeredWidgetStyle var5 = null;
@@ -236,7 +236,7 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
         RuntimeException var3_ref = null;
         var6 = HoldTheLine.field_D;
         try {
-          var7 = this.field_s;
+          var7 = this.stateStyles;
           var3 = var7;
           for (var4 = param1; var4 < var7.length; var4++) {
             var5 = var7[var4];
@@ -260,10 +260,10 @@ final class LayeredButtonRenderer extends TextWidgetStyle {
     }
 
     public LayeredButtonRenderer() {
-        this.field_s = new LayeredWidgetStyle[6];
-        this.field_r = new LayeredWidgetStyle();
+        this.stateStyles = new LayeredWidgetStyle[6];
+        this.defaultStyle = new LayeredWidgetStyle();
         LayeredWidgetStyle dupTemp$0 = new LayeredWidgetStyle();
-        this.field_s[0] = dupTemp$0;
+        this.stateStyles[0] = dupTemp$0;
         LayeredWidgetStyle var1 = dupTemp$0;
         var1.reset((byte) -121);
     }

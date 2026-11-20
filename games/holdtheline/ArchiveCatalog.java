@@ -121,7 +121,7 @@ final class ArchiveCatalog {
 
     final static void a(int param0, byte param1, int param2, int param3) {
         if (param1 <= 49) {
-          ArchiveCatalog.b((byte) 95);
+          ArchiveCatalog.readAchievementReply((byte) 95);
         }
         if (MusicPatchEnvelope.field_i != param2) {
           return;
@@ -137,7 +137,7 @@ final class ArchiveCatalog {
         LoadProgressDialog.field_ab = param3;
     }
 
-    final static void b(byte param0) {
+    final static void readAchievementReply(byte param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -151,9 +151,9 @@ final class ArchiveCatalog {
         int[] var10 = null;
         AchievementUnlockRequest var11 = null;
         IsaacPacketBuffer var12 = null;
-        ma var13 = null;
+        AchievementStatusRequest var13 = null;
         int[] var14 = null;
-        ma var15 = null;
+        AchievementStatusRequest var15 = null;
         int[] var16 = null;
         var8 = HoldTheLine.field_D;
         try {
@@ -174,38 +174,38 @@ final class ArchiveCatalog {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(-67);
             }
-            var15 = (ma) (RaceWorld.field_v.first((byte) 106));
+            var15 = (AchievementStatusRequest) (RaceWorld.field_v.first((byte) 106));
             if (var15 == null) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
-            var15.field_j = var3;
-            var15.field_i = true;
-            var15.field_m = var16[0];
+            var15.values = var3;
+            var15.completed = true;
+            var15.unlockedMask = var16[0];
             var15.unlink(0);
             return;
           }
           if (var2 == 1) {
             var11 = (AchievementUnlockRequest) (AccountFormText.field_c.first((byte) 116));
             if (var11 == null) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             var11.unlink(0);
           } else {
             if (var2 == 2) {
-              var13 = (ma) (RaceWorld.field_v.first((byte) 112));
+              var13 = (AchievementStatusRequest) (RaceWorld.field_v.first((byte) 112));
               if (var13 == null) {
-                r.a(-28036);
+                ServerConnectionState.closeServerConnection(-28036);
                 return;
               }
-              var13.field_j = RoadFillRenderer.allocateIntScratchBuffer(1023);
-              var13.field_m = var13.field_j[0];
-              var13.field_i = true;
+              var13.values = RoadFillRenderer.allocateIntScratchBuffer(1023);
+              var13.unlockedMask = var13.values[0];
+              var13.completed = true;
               var13.unlink(0);
             } else {
               MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -52, "A1: " + AgeValidator.b(false));
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
             }
           }
           return;
@@ -233,10 +233,10 @@ final class ArchiveCatalog {
           return true;
         }
         if (null == this.field_c) {
-          if (this.field_g.c(115)) {
+          if (this.field_g.isPriorityQueueFull(115)) {
             return false;
           }
-          this.field_c = this.field_g.a(255, true, (byte) 0, (byte) -60, 255);
+          this.field_c = this.field_g.request(255, true, (byte) 0, (byte) -60, 255);
         }
         if (this.field_c.field_u) {
           return false;
@@ -263,7 +263,7 @@ final class ArchiveCatalog {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = TrackCurve.a(var10.payload, -6408, 5, -5 + (var10.position - var13.length));
+        var15 = TrackCurve.whirlpoolDigest(var10.payload, -6408, 5, -5 + (var10.position - var13.length));
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();
@@ -291,8 +291,8 @@ final class ArchiveCatalog {
           this.field_f = param3;
           this.field_g = param0;
           this.field_e = param2;
-          if (!this.field_g.c(78)) {
-            this.field_c = this.field_g.a(255, true, (byte) 0, (byte) -60, 255);
+          if (!this.field_g.isPriorityQueueFull(78)) {
+            this.field_c = this.field_g.request(255, true, (byte) 0, (byte) -60, 255);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

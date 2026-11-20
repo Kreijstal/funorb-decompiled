@@ -50,10 +50,10 @@ final class mc {
     final static void a(int param0, boolean param1) {
         if (param0 != 0) {
           field_a = (TrackObjectDefinition[]) null;
-          fj.field_o.complete(param1, 123);
+          WidgetStyleNode.field_o.complete(param1, 123);
           return;
         }
-        fj.field_o.complete(param1, 123);
+        WidgetStyleNode.field_o.complete(param1, 123);
     }
 
     static {

@@ -6,13 +6,13 @@ class TextFieldRenderer extends TextWidgetStyle {
     static MenuSelectionController field_q;
     static PlatformTaskDispatcher field_v;
     static NamedSoundEffect field_t;
-    static uj[] field_s;
+    static MeshMaterial[] field_s;
     static String field_u;
 
     public final void drawWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         try {
           if (param2 >= -48) {
-            field_s = (uj[]) null;
+            field_s = (MeshMaterial[]) null;
           }
           if (param0) {
             GrowableStringList.drawGradientBorder(param1 + param3.x, param3.width, 152, param4 + param3.y, param3.height);

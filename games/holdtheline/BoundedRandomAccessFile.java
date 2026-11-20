@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class BoundedRandomAccessFile {
-    private long field_b;
-    private RandomAccessFile field_a;
+    private long position;
+    private RandomAccessFile file;
     static int field_f;
     static int field_g;
     static int field_c;
-    private long field_e;
+    private long maxLength;
     static NameAvailabilityResult field_d;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean hasAtMostOneBit(int param0, int param1) {
         if (param0 == 5) {
           return (-param1 & param1) == param1 ? true : false;
         }
@@ -20,42 +20,42 @@ final class BoundedRandomAccessFile {
         return (-param1 & param1) == param1 ? true : false;
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         try {
-          if (((long)param0 + this.field_b) > this.field_e) {
-            this.field_a.seek(this.field_e);
-            this.field_a.write(1);
+          if (((long)param0 + this.position) > this.maxLength) {
+            this.file.seek(this.maxLength);
+            this.file.write(1);
             throw new EOFException();
           }
-          this.field_a.write(param1, param2, param0);
+          this.file.write(param1, param2, param0);
           if (param3 != -17174) {
-            this.field_a = (RandomAccessFile) null;
+            this.file = (RandomAccessFile) null;
           }
-          this.field_b = this.field_b + (long)param0;
+          this.position = this.position + (long)param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "bg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
-        this.field_a.seek(param1);
+    final void seek(byte param0, long param1) throws IOException {
+        this.file.seek(param1);
         if (param0 <= 29) {
           field_f = 20;
-          this.field_b = param1;
+          this.position = param1;
           return;
         }
-        this.field_b = param1;
+        this.position = param1;
     }
 
-    final void a(byte param0) throws IOException {
-        if (this.field_a != null) {
-          this.field_a.close();
-          this.field_a = null;
+    final void close(byte param0) throws IOException {
+        if (this.file != null) {
+          this.file.close();
+          this.file = null;
         }
         if (param0 == 20) {
           return;
         }
-        BoundedRandomAccessFile.a(105, 68);
+        BoundedRandomAccessFile.hasAtMostOneBit(105, 68);
     }
 
     final static TutorialCondition parseTutorialCondition(int param0, String[] param1) {
@@ -89,9 +89,9 @@ final class BoundedRandomAccessFile {
                       throw new IllegalArgumentException();
                     }
                     var2.opcode = 9;
-                    var2.field_c = SpriteButtonRenderer.a((CharSequence) ((Object) param1[1]), (byte) -116);
+                    var2.field_c = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[1]), (byte) -116);
                     var2.field_b = ka.a(5, param1[2]);
-                    var2.field_e = SpriteButtonRenderer.a((CharSequence) ((Object) param1[3]), (byte) -116);
+                    var2.field_e = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[3]), (byte) -116);
                   } else {
                     if (param1[0].equalsIgnoreCase("playerzone")) {
                       if (param1.length != 3) {
@@ -99,7 +99,7 @@ final class BoundedRandomAccessFile {
                       }
                       var2.opcode = 2;
                       var2.field_c = ka.a(5, param1[1]);
-                      var2.field_b = SpriteButtonRenderer.a((CharSequence) ((Object) param1[2]), (byte) -116);
+                      var2.field_b = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[2]), (byte) -116);
                     } else {
                       if (!param1[0].equalsIgnoreCase("missilehit")) {
                         if (!param1[0].equalsIgnoreCase("missilemiss")) {
@@ -128,16 +128,16 @@ final class BoundedRandomAccessFile {
                     throw new IllegalArgumentException();
                   }
                   var2.opcode = 5;
-                  var2.field_c = SpriteButtonRenderer.a((CharSequence) ((Object) param1[1]), (byte) -116);
+                  var2.field_c = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[1]), (byte) -116);
                   var2.field_b = ka.a(param0 ^ 5, param1[2]);
-                  var2.field_e = SpriteButtonRenderer.a((CharSequence) ((Object) param1[3]), (byte) -116);
+                  var2.field_e = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[3]), (byte) -116);
                 }
               } else {
                 if (param1.length != 3) {
                   throw new IllegalArgumentException();
                 }
                 var4.opcode = 4;
-                var4.field_c = SpriteButtonRenderer.a((CharSequence) ((Object) param1[1]), (byte) -116);
+                var4.field_c = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[1]), (byte) -116);
                 if (!param1[2].equalsIgnoreCase("none")) {
                   var2.field_b = DialWidgetRenderer.parsePowerupCategory(114, param1[2]);
                 } else {
@@ -151,7 +151,7 @@ final class BoundedRandomAccessFile {
               var4.opcode = 3;
               var4.field_c = DialWidgetRenderer.parsePowerupCategory(122, param1[1]);
               var4.field_b = ka.a(param0 ^ 5, param1[2]);
-              var4.field_e = SpriteButtonRenderer.a((CharSequence) ((Object) param1[3]), (byte) -116);
+              var4.field_e = SpriteButtonRenderer.parseInt((CharSequence) ((Object) param1[3]), (byte) -116);
             }
           } else {
             if (param1.length != 1) {
@@ -175,11 +175,11 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final long a(boolean param0) throws IOException {
+    final long length(boolean param0) throws IOException {
         if (param0) {
           return 66L;
         }
-        return this.field_a.length();
+        return this.file.length();
     }
 
     public static void clearSharedReferences(int param0) {
@@ -192,13 +192,13 @@ final class BoundedRandomAccessFile {
     }
 
     protected final void finalize() throws Throwable {
-        if (null != this.field_a) {
+        if (null != this.file) {
           System.out.println("");
-          this.a((byte) 20);
+          this.close((byte) 20);
         }
     }
 
-    final int b(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final int read(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
@@ -212,9 +212,9 @@ final class BoundedRandomAccessFile {
             stackIn_2_0 = -58;
             return stackIn_2_0;
           }
-          var5_int = this.field_a.read(param1, param0, param2);
+          var5_int = this.file.read(param1, param0, param2);
           if (var5_int > 0) {
-            this.field_b = this.field_b + (long)var5_int;
+            this.position = this.position + (long)var5_int;
           }
           stackIn_7_0 = var5_int;
           return stackIn_7_0;
@@ -241,16 +241,16 @@ final class BoundedRandomAccessFile {
           if (param2 < param0.length()) {
             param0.delete();
           }
-          this.field_a = new RandomAccessFile(param0, param1);
-          this.field_e = param2;
-          this.field_b = 0L;
-          var5_int = this.field_a.read();
+          this.file = new RandomAccessFile(param0, param1);
+          this.maxLength = param2;
+          this.position = 0L;
+          var5_int = this.file.read();
           if (var5_int != -1 &&
             !param1.equals("r")) {
-            this.field_a.seek(0L);
-            this.field_a.write(var5_int);
+            this.file.seek(0L);
+            this.file.write(var5_int);
           }
-          this.field_a.seek(0L);
+          this.file.seek(0L);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

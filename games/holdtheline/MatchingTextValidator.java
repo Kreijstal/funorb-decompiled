@@ -8,7 +8,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static float[] field_k;
     static int field_j;
 
-    final static void a(GrowableObjectList param0, BoundaryCurve param1, int param2, int param3, int param4, BoundaryCurve param5, int param6, GrowableObjectList param7) {
+    final static void appendBoundaryIntersections(GrowableObjectList param0, BoundaryCurve param1, int param2, int param3, int param4, BoundaryCurve param5, int param6, GrowableObjectList param7) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -54,7 +54,7 @@ final class MatchingTextValidator extends TextFieldValidator {
                 }
               } else {
                 var19_ref = (ArcTrackBoundary) (param5);
-                var10_int = ba.a(var15, 0, var19_ref);
+                var10_int = ba.intersectLineAndArc(var15, 0, var19_ref);
                 if (var10_int >= 1) {
                   var11 = (float)param4 + RasterBuffer.field_d;
                   var12 = (float)param6 + var19_ref.parameterAtAngle(IterableSecondaryNodeDeque.field_b, param3 ^ 7518);
@@ -70,7 +70,7 @@ final class MatchingTextValidator extends TextFieldValidator {
               var18_ref = (ArcTrackBoundary) (param1);
               if (param5 instanceof TrackBoundary) {
                 var14 = (TrackBoundary) (param5);
-                var10_int = ba.a(var14, 0, var18_ref);
+                var10_int = ba.intersectLineAndArc(var14, 0, var18_ref);
                 if (var10_int >= 1) {
                   var11 = (float)param4 + var18_ref.parameterAtAngle(IterableSecondaryNodeDeque.field_b, -7517);
                   var12 = RasterBuffer.field_d + (float)param6;
@@ -143,8 +143,8 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3) {
-        if (!pj.b((byte) 80)) {
+    final static void transitionToMenu(int param0, boolean param1, int param2, boolean param3) {
+        if (!RoadShadowRenderer.isGuestMode((byte) 80)) {
           TrackObject.switchMenu(param3, false, param0);
           return;
         }
@@ -184,7 +184,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         ValidationIndicator.field_L = param1 ? true : false;
     }
 
-    final static void a(int param0, int param1, byte[] param2) {
+    final static void shiftFirstGlyphProfiles(int param0, int param1, byte[] param2) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         int[] var4 = null;
@@ -270,8 +270,8 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0) {
-        RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.a(95));
+    final static void persistLegacySession(boolean param0) {
+        RaceVehicle.writeLegacySessionCookie(-1848651292, GameKeyHandler.getApplet(95));
         if (!param0) {
           MatchingTextValidator.clearSharedReferences(33);
         }
@@ -285,7 +285,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         field_i = null;
     }
 
-    final static SoundPlayback a(int param0, PcmSample param1) {
+    final static SoundPlayback playDefaultSample(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -312,7 +312,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static boolean a(byte param0, MovingEntity param1, MovingEntity param2) {
+    final static boolean overlapsEntities(byte param0, MovingEntity param1, MovingEntity param2) {
         boolean stackIn_19_0 = false;
         boolean stackIn_23_0 = false;
         boolean stackIn_27_0 = false;

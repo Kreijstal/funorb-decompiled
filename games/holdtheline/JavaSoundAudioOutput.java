@@ -103,7 +103,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (RoadStripRenderer.bitCount(-699864667, param0) != 1) {
-            this.openDevice(SpriteButtonRenderer.a((byte) 7, param0));
+            this.openDevice(SpriteButtonRenderer.nextPowerOfTwo((byte) 7, param0));
             return;
           }
           this.field_w = null;

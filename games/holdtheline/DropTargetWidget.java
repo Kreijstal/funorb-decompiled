@@ -56,7 +56,7 @@ final class DropTargetWidget extends SingleChildWidget {
           IndexedSpriteState.a(80);
           if (param1.field_l > 0 &&
             null != param1.field_r) {
-            RotatedSpriteAsset.b(-92);
+            RotatedSpriteAsset.clearDepthBuffer(-92);
           }
           CachedArchiveProvider.field_t = 0;
           var8 = 0;
@@ -109,7 +109,7 @@ final class DropTargetWidget extends SingleChildWidget {
                         stackIn_39_0Lifetime1 = var17;
                         stackIn_39_1Lifetime1 = var16 << 4;
                         var18 = stackIn_39_0Lifetime1 + stackIn_39_1Lifetime1;
-                        al.field_b[var18] = var8;
+                        ByteArrayPool.field_b[var18] = var8;
                         qg.field_d[var16] = var17 + 1;
                         if (param1.field_l > 0 &&
                           param1.field_r != null) {
@@ -160,7 +160,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, byte param1, boolean param2) {
+    final static void setRequestedDisplayMode(int param0, byte param1, boolean param2) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -176,10 +176,10 @@ final class DropTargetWidget extends SingleChildWidget {
               BufferedRandomAccessFile.field_d = param0;
             }
           }
-          if (~param0 == ~ma.field_k) {
+          if (~param0 == ~AchievementStatusRequest.field_k) {
             return;
           }
-          ma.field_k = param0;
+          AchievementStatusRequest.field_k = param0;
           if (param1 <= 91) {
             field_K = (RotatedSpriteSheetAsset) null;
           }
@@ -191,21 +191,21 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(boolean param0, byte param1, String param2, boolean param3) {
+    final static void showLoginForm(boolean param0, byte param1, String param2, boolean param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          uk.b(-45);
+          ProxyAuthenticationException.resetAccountUi(-45);
           if (param1 < 82) {
             return;
           }
-          ka.field_b.a(false);
+          ka.field_b.closeAllDialogs(false);
           lh.field_a = new LoginForm(RaceSetupMenu.field_v, (String) null, ArchiveCatalog.field_o, param3, param0);
           sm.field_c = new StandardContentTransitionDialog(ka.field_b, lh.field_a);
-          ka.field_b.a(sm.field_c, false);
+          ka.field_b.showDialog(sm.field_c, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +242,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static int a(byte param0, byte[] param1, int param2) {
+    final static int crc32(byte param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -268,7 +268,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadCourseProgression(ResourceArchive param0, int param1) {
         try {
           CourseDefinition[] array$0 = null;
           int stackIn_5_0 = 0;
@@ -301,11 +301,11 @@ final class DropTargetWidget extends SingleChildWidget {
             var4[4] = QuickChatDynamicCommand.readConfigSection(var3, 0, "tutorial");
             var4[5] = QuickChatDynamicCommand.readConfigSection(var3, 0, "demolition");
             ZombiePedestrian.field_v = false;
-            tk.field_c = new CourseDefinition[6][];
+            VehicleEngineSounds.field_c = new CourseDefinition[6][];
             MenuList.field_l = new int[6];
             var5 = 0;
             if (param1 >= -85) {
-              DropTargetWidget.a((String) null, (byte) 88);
+              DropTargetWidget.validateEmailAddress((String) null, (byte) 88);
             }
             while (true) {
               stackIn_5_0 = -7;
@@ -313,7 +313,7 @@ final class DropTargetWidget extends SingleChildWidget {
                 var6 = var4[var5].length;
                 MenuList.field_l[var5] = var6;
                 array$0 = new CourseDefinition[var6];
-                tk.field_c[var5] = array$0;
+                VehicleEngineSounds.field_c[var5] = array$0;
                 stackIn_19_0 = 0;
                 if (var10 == 0) {
                   var7 = stackIn_19_0;
@@ -323,10 +323,10 @@ final class DropTargetWidget extends SingleChildWidget {
                     stackIn_5_0 = stackOut_9_0 ? 1 : 0;
                     stackIn_10_0 = stackOut_9_0;
                     if (!stackIn_10_0) {
-                      tk.field_c[var5][var7] = new CourseDefinition(var8);
+                      VehicleEngineSounds.field_c[var5][var7] = new CourseDefinition(var8);
                     } else {
                       try {
-                        tk.field_c[var5][var7] = TextLayout.a(param0.getFileByName((byte) 125, var4[var5][var7]), (byte) 121);
+                        VehicleEngineSounds.field_c[var5][var7] = TextLayout.decodeCourseDefinition(param0.getFileByName((byte) 125, var4[var5][var7]), (byte) 121);
                       } catch (java.io.IOException decompiledCaughtParameter0) {
                         decompiledCaughtException = decompiledCaughtParameter0;
                         var9 = (IOException) (Object) decompiledCaughtException;
@@ -402,17 +402,17 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static sh a(String param0, byte param1) {
+    final static InputValidationError validateEmailAddress(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
         int var5 = 0;
-        sh var6 = null;
-        sh stackIn_7_0 = null;
-        sh stackIn_10_0 = null;
-        sh stackIn_15_0 = null;
-        sh stackIn_17_0 = null;
+        InputValidationError var6 = null;
+        InputValidationError stackIn_7_0 = null;
+        InputValidationError stackIn_10_0 = null;
+        InputValidationError stackIn_15_0 = null;
+        InputValidationError stackIn_17_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -428,12 +428,12 @@ final class DropTargetWidget extends SingleChildWidget {
             var3 = param0.substring(0, var2_int);
             var5 = -101 % ((param1 + 63) / 35);
             var4 = param0.substring(var2_int + 1);
-            var6 = RasterBuffer.a(var3, 34);
+            var6 = RasterBuffer.validateEmailLocalPart(var3, 34);
             if (var6 != null) {
               stackIn_15_0 = var6;
               return stackIn_15_0;
             }
-            stackIn_17_0 = cd.a((byte) -118, var4);
+            stackIn_17_0 = cd.validateEmailDomain((byte) -118, var4);
             return stackIn_17_0;
           }
           stackIn_7_0 = PointPath.field_g;
@@ -452,7 +452,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadGameGraphics(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         RotatedSpriteCache discarded$2 = null;
         RuntimeException runtimeException = null;
         byte[] var4 = null;
@@ -484,16 +484,16 @@ final class DropTargetWidget extends SingleChildWidget {
         RuntimeException decompiledCaughtException = null;
         var16 = HoldTheLine.field_D;
         try {
-          fb.field_i = param2;
+          ScoreSubmission.field_i = param2;
           Js5Transport.field_n = param1;
           FullscreenFocusCanvas.field_c = param3;
           var4 = FullscreenFocusCanvas.field_c.getNamedFile("", false, "font");
-          var5 = oc.a("", fb.field_i, (byte) 32, "font");
-          MatchingTextValidator.a(param0 ^ param0, -1, var4);
+          var5 = oc.loadIndexedSpritesByName("", ScoreSubmission.field_i, (byte) 32, "font");
+          MatchingTextValidator.shiftFirstGlyphProfiles(param0 ^ param0, -1, var4);
           ni.field_a = OutlinedRoadStripRenderer.a(0, var4, var5, 1, 16777215, param0 - 30857);
-          MatchingTextValidator.a(param0 ^ 30865, 2, var4);
+          MatchingTextValidator.shiftFirstGlyphProfiles(param0 ^ 30865, 2, var4);
           nm.field_c = OutlinedRoadStripRenderer.a(0, var4, var5, 2, 16777215, 8);
-          HoldTheLine.field_F = TrackObjectDefinition.loadNamedFont("font12", FullscreenFocusCanvas.field_c, "", 8192, fb.field_i);
+          HoldTheLine.field_F = TrackObjectDefinition.loadNamedFont("font12", FullscreenFocusCanvas.field_c, "", 8192, ScoreSubmission.field_i);
           var6 = nm.field_c.field_N[0];
           nm.field_c.field_N = new int[10][];
           nm.field_c.field_N[0] = var6;
@@ -516,9 +516,9 @@ final class DropTargetWidget extends SingleChildWidget {
           var8_int = 0;
           do {
             if (!(NodeHashTableIterator.field_j.length > var8_int)) {
-              IterableNodeHashTable.field_b = UrlPacketDownloader.a(fb.field_i, "logo", false, "");
-              StereoMusicSample.field_a = UrlPacketDownloader.a(fb.field_i, "logo_large", false, "");
-              uk.field_a = new Sprite(IterableNodeHashTable.field_b.width, IterableNodeHashTable.field_b.height);
+              IterableNodeHashTable.field_b = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "logo", false, "");
+              StereoMusicSample.field_a = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "logo_large", false, "");
+              ProxyAuthenticationException.field_a = new Sprite(IterableNodeHashTable.field_b.width, IterableNodeHashTable.field_b.height);
               break;
             }
             nm.field_c.field_N[6 + var8_int] = LoginMethodPreference.a(1, (byte) 103, NodeHashTableIterator.field_j[var8_int], var6);
@@ -529,7 +529,7 @@ final class DropTargetWidget extends SingleChildWidget {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8_int <= 0))) {
             var8_int--;
-            stackIn_19_0 = uk.field_a.pixels;
+            stackIn_19_0 = ProxyAuthenticationException.field_a.pixels;
             if (var16 == 0) {
               stackIn_16_1 = var8_int;
               if (IterableNodeHashTable.field_b.pixels[var8_int] == 0) {
@@ -543,47 +543,47 @@ final class DropTargetWidget extends SingleChildWidget {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            FullscreenErrorDialog.field_ab = UrlPacketDownloader.a(fb.field_i, "locked", false, "");
-            SolidRoadStripRenderer.field_q = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "locked");
-            LoadProgressDialog.field_hb = UrlPacketDownloader.a(fb.field_i, "loading", false, "");
-            ai.field_c = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "orbcoin");
+            FullscreenErrorDialog.field_ab = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "locked", false, "");
+            SolidRoadStripRenderer.field_q = UrlPacketDownloader.loadSpriteByName(Js5Transport.field_n, "basic", false, "locked");
+            LoadProgressDialog.field_hb = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "loading", false, "");
+            ai.field_c = UrlPacketDownloader.loadSpriteByName(Js5Transport.field_n, "basic", false, "orbcoin");
             ProxySocketConnector.field_j = new IntrusiveDeque();
-            qn.field_m = new IndexedSprite[14];
-            qn.field_m[0] = hc.a("", fb.field_i, -123, "keyboard_space");
-            qn.field_m[1] = hc.a("", fb.field_i, -117, "keyboard_esc");
-            qn.field_m[2] = hc.a("", fb.field_i, -120, "keyboard_right");
-            qn.field_m[3] = hc.a("", fb.field_i, -123, "keyboard_left");
-            qn.field_m[4] = hc.a("", fb.field_i, -120, "keyboard_down");
-            qn.field_m[5] = hc.a("", fb.field_i, -123, "keyboard_up");
-            qn.field_m[6] = hc.a("", fb.field_i, Vector2i.xor(param0, -30976), "keyboard_enter");
-            qn.field_m[7] = hc.a("", fb.field_i, -118, "keyboard_ctrl");
-            qn.field_m[8] = hc.a("", fb.field_i, Vector2i.xor(param0, -30951), "keyboard_alt");
-            qn.field_m[9] = hc.a("", fb.field_i, -128, "keyboard_tab");
-            qn.field_m[10] = hc.a("", fb.field_i, -118, "keyboard_q");
-            qn.field_m[11] = hc.a("", fb.field_i, -121, "keyboard_a");
-            qn.field_m[12] = hc.a("", fb.field_i, Vector2i.xor(param0, -30958), "keyboard_x");
-            qn.field_m[13] = hc.a("", fb.field_i, -124, "keyboard_c");
-            stackIn_19_0 = new int[qn.field_m.length];
+            PlayerStatsRequest.field_m = new IndexedSprite[14];
+            PlayerStatsRequest.field_m[0] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -123, "keyboard_space");
+            PlayerStatsRequest.field_m[1] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -117, "keyboard_esc");
+            PlayerStatsRequest.field_m[2] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -120, "keyboard_right");
+            PlayerStatsRequest.field_m[3] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -123, "keyboard_left");
+            PlayerStatsRequest.field_m[4] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -120, "keyboard_down");
+            PlayerStatsRequest.field_m[5] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -123, "keyboard_up");
+            PlayerStatsRequest.field_m[6] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, Vector2i.xor(param0, -30976), "keyboard_enter");
+            PlayerStatsRequest.field_m[7] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -118, "keyboard_ctrl");
+            PlayerStatsRequest.field_m[8] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, Vector2i.xor(param0, -30951), "keyboard_alt");
+            PlayerStatsRequest.field_m[9] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -128, "keyboard_tab");
+            PlayerStatsRequest.field_m[10] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -118, "keyboard_q");
+            PlayerStatsRequest.field_m[11] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -121, "keyboard_a");
+            PlayerStatsRequest.field_m[12] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, Vector2i.xor(param0, -30958), "keyboard_x");
+            PlayerStatsRequest.field_m[13] = hc.loadIndexedSpriteByName("", ScoreSubmission.field_i, -124, "keyboard_c");
+            stackIn_19_0 = new int[PlayerStatsRequest.field_m.length];
           }
           var8 = stackIn_19_0;
           var9_int = 0;
           do {
-            if (!(qn.field_m.length > var9_int)) {
-              HoldTheLine.field_F.setInlineImages(qn.field_m, var8);
+            if (!(PlayerStatsRequest.field_m.length > var9_int)) {
+              HoldTheLine.field_F.setInlineImages(PlayerStatsRequest.field_m, var8);
               ka.field_f = new Sprite(32, 32);
               vb.a(-114, ka.field_f);
               SolidRoadStripRenderer.field_q.drawDownscaledThreshold(0, 0, 32, 32);
               MarkerSliderRenderer.restoreRasterTarget(param0 ^ -30866);
-              cm.field_d = UrlPacketDownloader.a(fb.field_i, "flag", false, "");
+              cm.field_d = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "flag", false, "");
               kc.field_a = new SpriteSheetAsset("benefits");
               TextButton.field_A = new SpriteAsset("mb_template");
               MouseWheelInput.field_a = new SpriteAsset("mb_buttonframe");
               bo.field_d = new SpriteAsset("mb_logotext");
-              LayeredWidgetStyle.field_i = UrlPacketDownloader.a(fb.field_i, "menubar", false, "");
-              QuickChatPhraseDefinition.field_t = UrlPacketDownloader.a(fb.field_i, "titlebar", false, "");
-              DisplayNameForm.field_O = UrlPacketDownloader.a(fb.field_i, "titlebar_divleft", false, "");
-              ContentTransitionDialog.field_ab = UrlPacketDownloader.a(fb.field_i, "titlebar_divright", false, "");
-              hh.field_e = UrlPacketDownloader.a(fb.field_i, "courseselect_bar", false, "");
+              LayeredWidgetStyle.field_i = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "menubar", false, "");
+              QuickChatPhraseDefinition.field_t = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "titlebar", false, "");
+              DisplayNameForm.field_O = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "titlebar_divleft", false, "");
+              ContentTransitionDialog.field_ab = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "titlebar_divright", false, "");
+              hh.field_e = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "courseselect_bar", false, "");
               oi.field_a = new Sprite(20, 20);
               vb.a(-53, oi.field_a);
               break;
@@ -624,103 +624,103 @@ final class DropTargetWidget extends SingleChildWidget {
             SoftwareRasterizer.drawHorizontalLine(2, var9_int, 16, var10_int);
             var9_int++;
           } while (var16 == 0);
-          var9 = UrlPacketDownloader.a(fb.field_i, "frame", false, "");
+          var9 = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "frame", false, "");
           TriangleMesh.field_E = new Sprite[9];
-          TriangleMesh.field_E[0] = fj.a(0, 0, var9, 20, 0, 20);
-          TriangleMesh.field_E[1] = fj.a(0, 20, var9, 20, 0, 16);
-          TriangleMesh.field_E[2] = fj.a(0, 36, var9, 20, 0, 20);
-          TriangleMesh.field_E[3] = fj.a(0, 0, var9, 16, 20, 20);
-          TriangleMesh.field_E[4] = fj.a(0, 20, var9, 16, 20, 16);
-          TriangleMesh.field_E[5] = fj.a(0, 36, var9, 16, 20, 20);
-          TriangleMesh.field_E[6] = fj.a(0, 0, var9, 20, 36, 20);
-          TriangleMesh.field_E[7] = fj.a(0, 20, var9, 20, 36, 16);
-          TriangleMesh.field_E[8] = fj.a(0, 36, var9, 20, 36, 20);
-          var10 = UrlPacketDownloader.a(fb.field_i, "frame_textured", false, "");
-          var11 = UrlPacketDownloader.a(fb.field_i, "tarmac", false, "");
+          TriangleMesh.field_E[0] = WidgetStyleNode.copySpriteRegion(0, 0, var9, 20, 0, 20);
+          TriangleMesh.field_E[1] = WidgetStyleNode.copySpriteRegion(0, 20, var9, 20, 0, 16);
+          TriangleMesh.field_E[2] = WidgetStyleNode.copySpriteRegion(0, 36, var9, 20, 0, 20);
+          TriangleMesh.field_E[3] = WidgetStyleNode.copySpriteRegion(0, 0, var9, 16, 20, 20);
+          TriangleMesh.field_E[4] = WidgetStyleNode.copySpriteRegion(0, 20, var9, 16, 20, 16);
+          TriangleMesh.field_E[5] = WidgetStyleNode.copySpriteRegion(0, 36, var9, 16, 20, 20);
+          TriangleMesh.field_E[6] = WidgetStyleNode.copySpriteRegion(0, 0, var9, 20, 36, 20);
+          TriangleMesh.field_E[7] = WidgetStyleNode.copySpriteRegion(0, 20, var9, 20, 36, 16);
+          TriangleMesh.field_E[8] = WidgetStyleNode.copySpriteRegion(0, 36, var9, 20, 36, 20);
+          var10 = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "frame_textured", false, "");
+          var11 = UrlPacketDownloader.loadSpriteByName(ScoreSubmission.field_i, "tarmac", false, "");
           var12 = 14;
           var13 = -(2 * var12) + var10.width;
-          jc.field_h = new Sprite[9];
+          LeaderboardPlayer.field_h = new Sprite[9];
           var14 = var10.height - 2 * var12;
-          jc.field_h[0] = fj.a(0, 0, var10, var12, 0, var12);
-          jc.field_h[1] = fj.a(0, var12, var10, var12, 0, var13);
-          jc.field_h[2] = fj.a(0, var12 + var13, var10, var12, 0, var12);
-          jc.field_h[3] = fj.a(0, 0, var10, var14, var12, var12);
-          jc.field_h[4] = var11;
-          jc.field_h[5] = fj.a(0, var13 + var12, var10, var14, var12, var12);
-          jc.field_h[6] = fj.a(Vector2i.xor(param0, 30865), 0, var10, var12, var14 + var12, var12);
-          jc.field_h[7] = fj.a(0, var12, var10, var12, var14 + var12, var13);
-          jc.field_h[8] = fj.a(0, var13 + var12, var10, var12, var12 + var14, var12);
+          LeaderboardPlayer.field_h[0] = WidgetStyleNode.copySpriteRegion(0, 0, var10, var12, 0, var12);
+          LeaderboardPlayer.field_h[1] = WidgetStyleNode.copySpriteRegion(0, var12, var10, var12, 0, var13);
+          LeaderboardPlayer.field_h[2] = WidgetStyleNode.copySpriteRegion(0, var12 + var13, var10, var12, 0, var12);
+          LeaderboardPlayer.field_h[3] = WidgetStyleNode.copySpriteRegion(0, 0, var10, var14, var12, var12);
+          LeaderboardPlayer.field_h[4] = var11;
+          LeaderboardPlayer.field_h[5] = WidgetStyleNode.copySpriteRegion(0, var13 + var12, var10, var14, var12, var12);
+          LeaderboardPlayer.field_h[6] = WidgetStyleNode.copySpriteRegion(Vector2i.xor(param0, 30865), 0, var10, var12, var14 + var12, var12);
+          LeaderboardPlayer.field_h[7] = WidgetStyleNode.copySpriteRegion(0, var12, var10, var12, var14 + var12, var13);
+          LeaderboardPlayer.field_h[8] = WidgetStyleNode.copySpriteRegion(0, var13 + var12, var10, var12, var12 + var14, var12);
           ua.field_b = new SpriteSheetAsset("vehicle_select");
           QuadraticPointPath.field_i = new SpriteSheetAsset("vehicle_select_large");
-          IsaacRandom.field_f = LoginCredentialType.a("mine", (byte) -53);
+          IsaacRandom.field_f = LoginCredentialType.createSpriteSheetAsset("mine", (byte) -53);
           Vector2i.field_d = hm.a(5499, "missile");
-          BoundaryIntersection.field_k = LoginCredentialType.a("powerup_red", (byte) -53);
-          LoginChoicePanel.field_O = LoginCredentialType.a("powerup_green", (byte) -53);
-          PointLight.field_q = LoginCredentialType.a("powerup_blue", (byte) -53);
-          StrongCacheEntry.field_u = LoginCredentialType.a("powerup_black", (byte) -53);
-          SecondaryNodeDeque.field_h = DraggableWidget.a("s1_background", 1);
-          ValidationState.field_e = DraggableWidget.a("s1_track", param0 ^ 30864);
-          DiskCacheWorker.field_b = DraggableWidget.a("s1_tree20", 1);
-          IntArrayReadRequest.field_i = DraggableWidget.a("s1_tree30", 1);
-          cd.field_d = DraggableWidget.a("s1_tree40", 1);
-          ArchiveCatalog.field_k = DraggableWidget.a("s1_tree50", 1);
-          BufferedRandomAccessFile.field_o = DraggableWidget.a("s1_tree80", param0 ^ 30864);
+          BoundaryIntersection.field_k = LoginCredentialType.createSpriteSheetAsset("powerup_red", (byte) -53);
+          LoginChoicePanel.field_O = LoginCredentialType.createSpriteSheetAsset("powerup_green", (byte) -53);
+          PointLight.field_q = LoginCredentialType.createSpriteSheetAsset("powerup_blue", (byte) -53);
+          StrongCacheEntry.field_u = LoginCredentialType.createSpriteSheetAsset("powerup_black", (byte) -53);
+          SecondaryNodeDeque.field_h = DraggableWidget.createSpriteAsset("s1_background", 1);
+          ValidationState.field_e = DraggableWidget.createSpriteAsset("s1_track", param0 ^ 30864);
+          DiskCacheWorker.field_b = DraggableWidget.createSpriteAsset("s1_tree20", 1);
+          IntArrayReadRequest.field_i = DraggableWidget.createSpriteAsset("s1_tree30", 1);
+          cd.field_d = DraggableWidget.createSpriteAsset("s1_tree40", 1);
+          ArchiveCatalog.field_k = DraggableWidget.createSpriteAsset("s1_tree50", 1);
+          BufferedRandomAccessFile.field_o = DraggableWidget.createSpriteAsset("s1_tree80", param0 ^ 30864);
           SingleChildWidget.field_A = TutorialPage.createRotatedSpriteAsset("s1_standempty", (byte) -125);
-          aj.field_c = TutorialPage.createRotatedSpriteAsset("s1_standscattered", (byte) 81);
+          PlayerProgressEncoder.field_c = TutorialPage.createRotatedSpriteAsset("s1_standscattered", (byte) 81);
           MouseWheelInput.field_c = TutorialPage.createRotatedSpriteAsset("s1_standfull", (byte) 106);
           BlobReadRequest.field_k = TutorialPage.createRotatedSpriteAsset("s1_ad1", (byte) 97);
           CheckboxWidget.field_I = TutorialPage.createRotatedSpriteAsset("s1_ad2", (byte) 87);
           MusicPatch.field_u = TutorialPage.createRotatedSpriteAsset("s1_ad3", (byte) 86);
-          MusicPatchPcmStream.field_s = DraggableWidget.a("s1_pa", 1);
-          DialWidgetRenderer.field_i = DraggableWidget.a("s1_tyreblack", 1);
-          ae.field_b = DraggableWidget.a("s1_tyrewhite", 1);
-          ma.field_l = DraggableWidget.a("s1_tyrered", param0 - 30864);
-          h.field_b = TutorialPage.createRotatedSpriteAsset("s1_bridge_top", (byte) -57);
+          MusicPatchPcmStream.field_s = DraggableWidget.createSpriteAsset("s1_pa", 1);
+          DialWidgetRenderer.field_i = DraggableWidget.createSpriteAsset("s1_tyreblack", 1);
+          ae.field_b = DraggableWidget.createSpriteAsset("s1_tyrewhite", 1);
+          AchievementStatusRequest.field_l = DraggableWidget.createSpriteAsset("s1_tyrered", param0 - 30864);
+          FullscreenErrorReason.field_b = TutorialPage.createRotatedSpriteAsset("s1_bridge_top", (byte) -57);
           UsernameLoginCredentials.field_h = TutorialPage.createRotatedSpriteAsset("s1_bridge_side", (byte) -81);
-          aj.field_a = DraggableWidget.a("s1_bridge_support", param0 ^ 30864);
-          kc.field_b = DraggableWidget.a("s3_background", 1);
-          MarkerSliderRenderer.field_b = DraggableWidget.a("s3_background2", 1);
-          BoundaryIntersection.field_i = DraggableWidget.a("s3_background3", 1);
-          TrackObjectDefinition.field_i = DraggableWidget.a("s3_rock20", param0 ^ 30864);
-          GameKeyHandler.field_e = DraggableWidget.a("s3_rock30", param0 ^ 30864);
-          q.field_d = DraggableWidget.a("s3_rock40", 1);
-          co.field_b = DraggableWidget.a("s3_tree20", 1);
-          MusicCrossfadeStream.field_A = DraggableWidget.a("s3_tree30", 1);
-          uk.field_b = DraggableWidget.a("s3_tree40", 1);
-          ArchiveLoadProgress.field_c = DraggableWidget.a("s3_tree50", 1);
-          ri.field_a = DraggableWidget.a("s3_tree80", 1);
+          PlayerProgressEncoder.field_a = DraggableWidget.createSpriteAsset("s1_bridge_support", param0 ^ 30864);
+          kc.field_b = DraggableWidget.createSpriteAsset("s3_background", 1);
+          MarkerSliderRenderer.field_b = DraggableWidget.createSpriteAsset("s3_background2", 1);
+          BoundaryIntersection.field_i = DraggableWidget.createSpriteAsset("s3_background3", 1);
+          TrackObjectDefinition.field_i = DraggableWidget.createSpriteAsset("s3_rock20", param0 ^ 30864);
+          GameKeyHandler.field_e = DraggableWidget.createSpriteAsset("s3_rock30", param0 ^ 30864);
+          q.field_d = DraggableWidget.createSpriteAsset("s3_rock40", 1);
+          co.field_b = DraggableWidget.createSpriteAsset("s3_tree20", 1);
+          MusicCrossfadeStream.field_A = DraggableWidget.createSpriteAsset("s3_tree30", 1);
+          ProxyAuthenticationException.field_b = DraggableWidget.createSpriteAsset("s3_tree40", 1);
+          ArchiveLoadProgress.field_c = DraggableWidget.createSpriteAsset("s3_tree50", 1);
+          WhirlpoolTables.field_a = DraggableWidget.createSpriteAsset("s3_tree80", 1);
           ArchiveCatalog.field_l = TutorialPage.createRotatedSpriteAsset("s3_igloo", (byte) -76);
-          fj.field_s = TutorialPage.createRotatedSpriteAsset("s3_snowman", (byte) 88);
-          IterableSecondaryNodeDeque.field_a = DraggableWidget.a("s2_background", 1);
-          ProxySocketConnector.field_h = DraggableWidget.a("s2_background2", 1);
-          AccountCreationForm.field_F = DraggableWidget.a("s2_background3", 1);
+          WidgetStyleNode.field_s = TutorialPage.createRotatedSpriteAsset("s3_snowman", (byte) 88);
+          IterableSecondaryNodeDeque.field_a = DraggableWidget.createSpriteAsset("s2_background", 1);
+          ProxySocketConnector.field_h = DraggableWidget.createSpriteAsset("s2_background2", 1);
+          AccountCreationForm.field_F = DraggableWidget.createSpriteAsset("s2_background3", 1);
           ViewportSizingController.field_a = TutorialPage.createRotatedSpriteAsset("s2_bones1", (byte) 99);
           SocketJs5Transport.field_r = TutorialPage.createRotatedSpriteAsset("s2_bones2", (byte) -126);
-          TickClock.field_a = DraggableWidget.a("s2_cacti20", 1);
-          UiWidget.field_r = DraggableWidget.a("s2_cacti30", param0 - 30864);
-          MusicCrossfadeStream.field_o = DraggableWidget.a("s2_cacti40", 1);
-          DelayedServerPacket.field_q = DraggableWidget.a("s2_tree30", 1);
-          kc.field_d = DraggableWidget.a("s2_tree40", 1);
-          NameAvailabilityResult.field_c = DraggableWidget.a("s2_tree50", 1);
-          LayeredButtonRenderer.field_t = uk.a("s2_well", false, param0 ^ 30968, true);
-          UiWidget.field_j = DraggableWidget.a("s2_tyre1", 1);
-          SpriteButtonRenderer.field_r = DraggableWidget.a("s2_tyre2", 1);
+          TickClock.field_a = DraggableWidget.createSpriteAsset("s2_cacti20", 1);
+          UiWidget.field_r = DraggableWidget.createSpriteAsset("s2_cacti30", param0 - 30864);
+          MusicCrossfadeStream.field_o = DraggableWidget.createSpriteAsset("s2_cacti40", 1);
+          DelayedServerPacket.field_q = DraggableWidget.createSpriteAsset("s2_tree30", 1);
+          kc.field_d = DraggableWidget.createSpriteAsset("s2_tree40", 1);
+          NameAvailabilityResult.field_c = DraggableWidget.createSpriteAsset("s2_tree50", 1);
+          LayeredButtonRenderer.field_t = ProxyAuthenticationException.createRotatedSpriteSheetAsset("s2_well", false, param0 ^ 30968, true);
+          UiWidget.field_j = DraggableWidget.createSpriteAsset("s2_tyre1", 1);
+          SpriteButtonRenderer.field_r = DraggableWidget.createSpriteAsset("s2_tyre2", 1);
           NameSuggestionsPanel.field_J = TutorialPage.createRotatedSpriteAsset("s2_wreckage1", (byte) -116);
-          gk.field_b = TutorialPage.createRotatedSpriteAsset("s2_wreckage2", (byte) 126);
-          DialWidget.field_Q = DraggableWidget.a("s4_background", 1);
+          MouseInputRegistration.field_b = TutorialPage.createRotatedSpriteAsset("s2_wreckage2", (byte) 126);
+          DialWidget.field_Q = DraggableWidget.createSpriteAsset("s4_background", 1);
           ResourceArchive.field_f = TutorialPage.createRotatedSpriteAsset("s4_light1", (byte) -126);
           ai.field_b = TutorialPage.createRotatedSpriteAsset("s4_light2", (byte) 91);
           um.field_e = TutorialPage.createRotatedSpriteAsset("s4_crates", (byte) 74);
-          we.field_p = TutorialPage.createRotatedSpriteAsset("s4_drain", (byte) 92);
+          SavedRasterState.field_p = TutorialPage.createRotatedSpriteAsset("s4_drain", (byte) 92);
           EmailValidationResult.field_c = TutorialPage.createRotatedSpriteAsset("s4_pa", (byte) 88);
-          jo.field_a = DraggableWidget.a("s4_tree20", 1);
-          hm.field_b = DraggableWidget.a("s4_tree30", 1);
-          Vector2f.field_b = DraggableWidget.a("s4_tree40", 1);
-          BlobReadRequest.field_i = DraggableWidget.a("s4_tree50", 1);
+          IgnoreListIndex.field_a = DraggableWidget.createSpriteAsset("s4_tree20", 1);
+          hm.field_b = DraggableWidget.createSpriteAsset("s4_tree30", 1);
+          Vector2f.field_b = DraggableWidget.createSpriteAsset("s4_tree40", 1);
+          BlobReadRequest.field_i = DraggableWidget.createSpriteAsset("s4_tree50", 1);
           IterableSecondaryNodeDeque.field_c = TrackBoundary.b("vehicle_f1", (byte) -85);
-          al.field_a = TrackBoundary.b("vehicle_tourer", (byte) -113);
+          ByteArrayPool.field_a = TrackBoundary.b("vehicle_tourer", (byte) -113);
           FadingDialog.field_K = TrackBoundary.b("vehicle_dragster", (byte) 125);
-          jg.field_o = TrackBoundary.b("vehicle_dunebuggy", (byte) -114);
+          LeaderboardRequest.field_o = TrackBoundary.b("vehicle_dunebuggy", (byte) -114);
           GameAppletShell.field_j = TrackBoundary.b("vehicle_snowcat", (byte) 110);
           GrowableObjectList.field_a = TrackBoundary.b("vehicle_snowmobile", (byte) 91);
           LinkWidgetRenderer.field_b = TrackBoundary.b("vehicle_hatchback", (byte) -90);
@@ -732,8 +732,8 @@ final class DropTargetWidget extends SingleChildWidget {
           GrowableStringList.field_b = new SpriteSheetAsset("halloween_blood");
           var15 = HuffmanDecoder.a((byte) 81, 100, 13487565, 40);
           discarded$2 = new RotatedSpriteCache(var15, true, false);
-          TriangleMesh.field_f = new RotatedSpriteCache(FadingDialog.a(-5936, 0, var15, 10, var15), true, false);
-          DisplayNameForm.field_Q = ImageProducerRasterBuffer.a(60, (byte) -108, 8355647);
+          TriangleMesh.field_f = new RotatedSpriteCache(FadingDialog.composeScreenBlendedSprites(-5936, 0, var15, 10, var15), true, false);
+          DisplayNameForm.field_Q = ImageProducerRasterBuffer.createRadialLightSprite(60, (byte) -108, 8355647);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -801,7 +801,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int approximateHypot(int param0, int param1, int param2) {
         int stackIn_2_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_41_0 = 0;
@@ -954,14 +954,14 @@ final class DropTargetWidget extends SingleChildWidget {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          uk.b(-45);
+          ProxyAuthenticationException.resetAccountUi(-45);
           if (param1 < 82) {
             return;
           }
-          ka.field_b.a(false);
+          ka.field_b.closeAllDialogs(false);
           lh.field_a = new LoginForm(RaceSetupMenu.field_v, (String) null, ArchiveCatalog.field_o, param3, param0);
           sm.field_c = new StandardContentTransitionDialog(ka.field_b, lh.field_a);
-          ka.field_b.a(sm.field_c, false);
+          ka.field_b.showDialog(sm.field_c, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

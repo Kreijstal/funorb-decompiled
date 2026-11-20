@@ -14,7 +14,7 @@ final class ua {
         field_c = null;
     }
 
-    final static QuadraticPointPath a(boolean param0, float param1, QuadraticPointPath param2) {
+    final static QuadraticPointPath sliceQuadraticPathHead(boolean param0, float param1, QuadraticPointPath param2) {
         QuadraticPointPath var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -29,20 +29,20 @@ final class ua {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new QuadraticPointPath(param2.field_e * param1, param2.field_b, param2.field_c);
-          gk.field_d[0] = (float)param2.field_k.x;
-          gk.field_d[1] = (float)param2.field_l.x;
-          gk.field_d[2] = (float)param2.field_m.x;
-          var4 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 1, -1, param1);
-          var5 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, -1, param1);
-          gk.field_d[0] = (float)param2.field_k.y;
-          gk.field_d[1] = (float)param2.field_l.y;
-          gk.field_d[2] = (float)param2.field_m.y;
+          MouseInputRegistration.field_d[0] = (float)param2.field_k.x;
+          MouseInputRegistration.field_d[1] = (float)param2.field_l.x;
+          MouseInputRegistration.field_d[2] = (float)param2.field_m.x;
+          var4 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 0, 1, -1, param1);
+          var5 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 0, 2, -1, param1);
+          MouseInputRegistration.field_d[0] = (float)param2.field_k.y;
+          MouseInputRegistration.field_d[1] = (float)param2.field_l.y;
+          MouseInputRegistration.field_d[2] = (float)param2.field_m.y;
           if (param0) {
             stackIn_2_0 = (QuadraticPointPath) null;
             return stackIn_2_0;
           }
-          var6 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 1, -1, param1);
-          var7 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, -1, param1);
+          var6 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 0, 1, -1, param1);
+          var7 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 0, 2, -1, param1);
           var3.field_k = new Point2i(param2.field_k);
           var3.field_l = new Point2i(var4, var6);
           var3.field_m = new Point2i(var5, var7);
@@ -62,7 +62,7 @@ final class ua {
         }
     }
 
-    final static String a(byte param0, char param1, String param2, String param3) {
+    final static String replaceCharacter(byte param0, char param1, String param2, String param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -103,7 +103,7 @@ final class ua {
           }
           if (param0 < 17) {
             var12 = (QuadraticPointPath) null;
-            ua.a(false, -0.35584643483161926f, (QuadraticPointPath) null);
+            ua.sliceQuadraticPathHead(false, -0.35584643483161926f, (QuadraticPointPath) null);
           }
           var8 = new StringBuilder(var6);
           var9 = 0;

@@ -294,7 +294,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime7 = DualLinkNode.a("TEXT_STANDINGS_PTS", 0);
           if (var2Lifetime7 != null) {
-            ij.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -39, var2Lifetime7);
+            ChatMessage.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -39, var2Lifetime7);
           }
           var2Lifetime8 = DualLinkNode.a("TEXT_STANDINGS_1PT", 0);
           if (var2Lifetime8 != null) {
@@ -306,7 +306,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime10 = DualLinkNode.a("TEXT_SELECT_VEHICLE", 0);
           if (var2Lifetime10 != null) {
-            jc.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -38, var2Lifetime10);
+            LeaderboardPlayer.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -38, var2Lifetime10);
           }
           var2Lifetime11 = DualLinkNode.a("TEXT_NEXT_COURSE", 0);
           if (null != var2Lifetime11) {
@@ -338,11 +338,11 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime18 = DualLinkNode.a("TEXT_AI_RACERS", 0);
           if (var2Lifetime18 != null) {
-            gk.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -26, var2Lifetime18);
+            MouseInputRegistration.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -26, var2Lifetime18);
           }
           var2Lifetime19 = DualLinkNode.a("TEXT_MODE", 0);
           if (var2Lifetime19 != null) {
-            sa.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 96, var2Lifetime19);
+            NameRequestState.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) 96, var2Lifetime19);
           }
           var2Lifetime20 = DualLinkNode.a("TEXT_PLAY_TUTORIAL", 0);
           if (null != var2Lifetime20) {
@@ -358,7 +358,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime23 = DualLinkNode.a("TEXT_RETRIES_REMAINING_ZERO", 0);
           if (null != var2Lifetime23) {
-            h.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -51, var2Lifetime23);
+            FullscreenErrorReason.field_a = RoadLayerMaskRenderer.decodeCp1252((byte) -51, var2Lifetime23);
           }
           var2Lifetime24 = DualLinkNode.a("TEXT_RETRIES_REMAINING_ONE", 0);
           if (var2Lifetime24 != null) {
@@ -366,7 +366,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime25 = DualLinkNode.a("TEXT_RETRIES_REMAINING_MULTIPLE", 0);
           if (null != var2Lifetime25) {
-            sh.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -41, var2Lifetime25);
+            InputValidationError.field_c = RoadLayerMaskRenderer.decodeCp1252((byte) -41, var2Lifetime25);
           }
           var2Lifetime26 = DualLinkNode.a("TEXT_CONTINUE", 0);
           if (null != var2Lifetime26) {
@@ -402,7 +402,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime34 = DualLinkNode.a("TEXT_HS_FETCHING", 0);
           if (var2Lifetime34 != null) {
-            fm.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -86, var2Lifetime34);
+            StandaloneWindow.field_b = RoadLayerMaskRenderer.decodeCp1252((byte) -86, var2Lifetime34);
           }
           var2Lifetime35 = DualLinkNode.a("TEXT_HS_TOTAL", 0);
           if (null != var2Lifetime35) {
@@ -586,7 +586,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime80 = DualLinkNode.a("TEXT_HIGHSCORES_ALL", 0);
           if (null != var2Lifetime80) {
-            jc.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) -71, var2Lifetime80);
+            LeaderboardPlayer.field_d = RoadLayerMaskRenderer.decodeCp1252((byte) -71, var2Lifetime80);
           }
           var2Lifetime81 = DualLinkNode.a("TEXT_HIGHSCORES_MINE", 0);
           if (null != var2Lifetime81) {
@@ -706,7 +706,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime110 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_SPEED1", 0);
           if (null != var2Lifetime110) {
-            uk.field_f = RoadLayerMaskRenderer.decodeCp1252((byte) 111, var2Lifetime110);
+            ProxyAuthenticationException.field_f = RoadLayerMaskRenderer.decodeCp1252((byte) 111, var2Lifetime110);
           }
           var2Lifetime111 = DualLinkNode.a("TEXT_INSTRUCTIONS_POWERUP_WEAPONS3", 0);
           if (null != var2Lifetime111) {
@@ -846,7 +846,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime145 = DualLinkNode.a("GAMETYPE_PLAYERS2", 0);
           if (var2Lifetime145 != null) {
-            h.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) -87, var2Lifetime145);
+            FullscreenErrorReason.field_e = RoadLayerMaskRenderer.decodeCp1252((byte) -87, var2Lifetime145);
           }
           var2Lifetime146 = DualLinkNode.a("GAMETYPE_TOOLTIPS,0", 0);
           if (null != var2Lifetime146) {
@@ -942,7 +942,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime169 = DualLinkNode.a("ALERT_TWO_KILLS", 0);
           if (null != var2Lifetime169) {
-            ij.field_n = RoadLayerMaskRenderer.decodeCp1252((byte) -74, var2Lifetime169);
+            ChatMessage.field_n = RoadLayerMaskRenderer.decodeCp1252((byte) -74, var2Lifetime169);
           }
           var2Lifetime170 = DualLinkNode.a("ALERT_X_KILLS", 0);
           if (var2Lifetime170 != null) {
@@ -969,19 +969,19 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime175 = DualLinkNode.a("SETTING_DESCRIPTIONS,0", 0);
           if (null != var2Lifetime175) {
-            sa.field_d[0] = RoadLayerMaskRenderer.decodeCp1252((byte) 69, var2Lifetime175);
+            NameRequestState.field_d[0] = RoadLayerMaskRenderer.decodeCp1252((byte) 69, var2Lifetime175);
           }
           var2Lifetime176 = DualLinkNode.a("SETTING_DESCRIPTIONS,1", 0);
           if (var2Lifetime176 != null) {
-            sa.field_d[1] = RoadLayerMaskRenderer.decodeCp1252((byte) 53, var2Lifetime176);
+            NameRequestState.field_d[1] = RoadLayerMaskRenderer.decodeCp1252((byte) 53, var2Lifetime176);
           }
           var2Lifetime177 = DualLinkNode.a("SETTING_DESCRIPTIONS,2", 0);
           if (var2Lifetime177 != null) {
-            sa.field_d[2] = RoadLayerMaskRenderer.decodeCp1252((byte) -30, var2Lifetime177);
+            NameRequestState.field_d[2] = RoadLayerMaskRenderer.decodeCp1252((byte) -30, var2Lifetime177);
           }
           var2Lifetime178 = DualLinkNode.a("SETTING_DESCRIPTIONS,3", 0);
           if (null != var2Lifetime178) {
-            sa.field_d[3] = RoadLayerMaskRenderer.decodeCp1252((byte) 115, var2Lifetime178);
+            NameRequestState.field_d[3] = RoadLayerMaskRenderer.decodeCp1252((byte) 115, var2Lifetime178);
           }
           var2Lifetime179 = DualLinkNode.a("SETTING_CH_NOT_QUALIFIED,1", 0);
           if (var2Lifetime179 != null) {
@@ -1037,7 +1037,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           }
           var2Lifetime192 = DualLinkNode.a("CARNAME_SNOWCAT", 0);
           if (var2Lifetime192 != null) {
-            fj.field_p = RoadLayerMaskRenderer.decodeCp1252((byte) -35, var2Lifetime192);
+            WidgetStyleNode.field_p = RoadLayerMaskRenderer.decodeCp1252((byte) -35, var2Lifetime192);
           }
           var2Lifetime193 = DualLinkNode.a("CARNAME_SNOWMOBILE", 0);
           if (var2Lifetime193 != null) {
@@ -1125,7 +1125,7 @@ final class RoadLayerMaskRenderer extends RoadFillRenderer {
           if (param2 >= 1) {
             var8 = (byte)(var8 << 4);
           }
-          tk.orPolygonMask(var6, (byte) -92, (byte) var8, this.maskSprite);
+          VehicleEngineSounds.orPolygonMask(var6, (byte) -92, (byte) var8, this.maskSprite);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

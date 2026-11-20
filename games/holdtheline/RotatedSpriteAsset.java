@@ -15,15 +15,15 @@ final class RotatedSpriteAsset {
     private static int[] field_d;
     private static int[] field_i;
     private boolean field_m;
-    static ma field_k;
+    static AchievementStatusRequest field_k;
 
-    final static boolean a(int param0) {
+    final static boolean isPlayerProgressLoaded(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 < 61) {
-          RotatedSpriteAsset.a(91, -85);
+          RotatedSpriteAsset.setAccountScreen(91, -85);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!pj.b((byte) 114) && (!ll.field_a ||
+        if (!RoadShadowRenderer.isGuestMode((byte) 114) && (!AccountProtocolState.field_a ||
           !MusicPatchEnvelope.field_f)) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
@@ -41,7 +41,7 @@ final class RotatedSpriteAsset {
         return this.field_f != null ? true : false;
     }
 
-    final static void b(int param0) {
+    final static void clearDepthBuffer(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -76,14 +76,14 @@ final class RotatedSpriteAsset {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setAccountScreen(int param0, int param1) {
         if (param0 != 0) {
           field_n = false;
         }
         WidgetContainer.field_B = param1;
     }
 
-    final static void a(int param0, int param1, String[] param2, java.applet.Applet param3, int param4, int param5) {
+    final static void initializeBenefitsPanel(int param0, int param1, String[] param2, java.applet.Applet param3, int param4, int param5) {
         int var7 = 0;
         String var6 = null;
         int var8 = 0;
@@ -111,7 +111,7 @@ final class RotatedSpriteAsset {
             if (!MusicPatchEnvelope.a((CharSequence) ((Object) var6), true)) {
               ShadedRoadStripRenderer.field_r = 2;
             } else {
-              ShadedRoadStripRenderer.field_r = SpriteButtonRenderer.a((CharSequence) ((Object) var6), (byte) -116);
+              ShadedRoadStripRenderer.field_r = SpriteButtonRenderer.parseInt((CharSequence) ((Object) var6), (byte) -116);
             }
           }
           SecondaryNodeDeque.field_g = param0;

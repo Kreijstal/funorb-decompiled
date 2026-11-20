@@ -65,11 +65,11 @@ final class hk {
             var9.field_m = var8.controlPathEnd;
           }
           if (0.0f != var5) {
-            var4 = oc.a(var5, param1 ^ 16711934, var9);
+            var4 = oc.sliceQuadraticPathTail(var5, param1 ^ 16711934, var9);
             var6 = (-var5 + var6) / (-var5 + 1.0f);
           }
           if (var6 != 1.0f) {
-            var4 = ua.a(false, var6, var4);
+            var4 = ua.sliceQuadraticPathHead(false, var6, var4);
           }
           if (Float.isNaN(var4.field_e)) {
             throw new RuntimeException();
@@ -91,14 +91,14 @@ final class hk {
     }
 
     final static void a(int param0) {
-        RotatedSpriteAsset.a(0, 4);
+        RotatedSpriteAsset.setAccountScreen(0, 4);
         if (param0 != -30500) {
           field_c = (int[][]) null;
         }
     }
 
     final static void a(boolean param0) {
-        LabeledField.a(param0, TexturedRoadFillRenderer.field_k, -94, ij.field_k);
+        LabeledField.a(param0, TexturedRoadFillRenderer.field_k, -94, ChatMessage.field_k);
         ResourceArchive.field_g = true;
     }
 

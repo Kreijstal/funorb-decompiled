@@ -6,16 +6,16 @@ import java.util.*;
 final class te {
     static java.util.zip.CRC32 field_a;
     static PlatformTaskDispatcher field_d;
-    static tk field_c;
+    static VehicleEngineSounds field_c;
     static Sprite[] field_b;
 
     final static void a(boolean param0) {
         if (null != MidiPcmStream.field_U) {
           AgeValidator.a(-29486, false);
-          MouseInputHandler.a(GameKeyHandler.a(76), param0);
+          MouseInputHandler.a(GameKeyHandler.getApplet(76), param0);
           return;
         }
-        MouseInputHandler.a(GameKeyHandler.a(76), param0);
+        MouseInputHandler.a(GameKeyHandler.getApplet(76), param0);
     }
 
     final static int a(int param0, byte param1, int param2) {
@@ -110,7 +110,7 @@ final class te {
         int var9Lifetime1;
         var11 = HoldTheLine.field_D;
         try {
-          var7_int = jg.a(-1, param5);
+          var7_int = LeaderboardRequest.alignToEight(-1, param5);
           if (GzipDecompressor.field_a == null) {
             GzipDecompressor.field_a = new java.security.SecureRandom();
           }
@@ -120,14 +120,14 @@ final class te {
           for (var9 = 0; 4 > var9; var9++) {
             var8[var9] = GzipDecompressor.field_a.nextInt();
           }
-          if (r.field_d == null ||
-            !(var7_int <= r.field_d.payload.length)) {
-            r.field_d = new PacketBuffer(var7_int);
+          if (ServerConnectionState.field_d == null ||
+            !(var7_int <= ServerConnectionState.field_d.payload.length)) {
+            ServerConnectionState.field_d = new PacketBuffer(var7_int);
           }
-          r.field_d.position = 0;
-          r.field_d.writeBytes(param5, 13, param6, param3);
-          r.field_d.padToPosition((byte) 127, var7_int);
-          r.field_d.xteaEncryptAll(var14, 111);
+          ServerConnectionState.field_d.position = 0;
+          ServerConnectionState.field_d.writeBytes(param5, 13, param6, param3);
+          ServerConnectionState.field_d.padToPosition((byte) 127, var7_int);
+          ServerConnectionState.field_d.xteaEncryptAll(var14, 111);
           if (TrackObjectDefinition.field_n == null ||
             !(TrackObjectDefinition.field_n.payload.length >= 100)) {
             TrackObjectDefinition.field_n = new PacketBuffer(100);
@@ -144,7 +144,7 @@ final class te {
           TrackObjectDefinition.field_n.writeShort(-652561784, param5);
           TrackObjectDefinition.field_n.rsaEncrypt(param0, param1, (byte) 114);
           param2.writeBytes(TrackObjectDefinition.field_n.position, 19, TrackObjectDefinition.field_n.payload, 0);
-          param2.writeBytes(r.field_d.position, 58, r.field_d.payload, 0);
+          param2.writeBytes(ServerConnectionState.field_d.position, 58, ServerConnectionState.field_d.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

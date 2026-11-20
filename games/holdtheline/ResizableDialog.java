@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ResizableDialog extends FadingDialog {
-    private int field_P;
-    private int field_M;
+    private int targetWidth;
+    private int resizeStartHeight;
     static NamedSoundEffect field_O;
     static int field_V;
     static String field_Q;
     static int[] field_S;
-    private int field_N;
+    private int targetHeight;
     static int[] field_U;
-    private int field_L;
-    private int field_T;
+    private int resizeTicks;
+    private int resizeStartWidth;
     static volatile int field_R;
-    private int field_W;
+    private int resizeDuration;
 
     void drawFrame(int param0, int param1, byte param2) {
         int var4;
@@ -99,7 +99,7 @@ abstract class ResizableDialog extends FadingDialog {
           var8++;
         }
         if (param2 != 20) {
-          this.field_L = 69;
+          this.resizeTicks = 69;
         }
         var5Lifetime1 = 194;
         var4Lifetime1 = 22;
@@ -115,8 +115,8 @@ abstract class ResizableDialog extends FadingDialog {
           var7Lifetime1++;
         }
         SpriteState.field_t.draw(param0 + this.width - 90, param1 + 10);
-        NameSuggestionsPanel.a(param1 + 35, 14191, param0 + 5, RaceVehicle.field_Db, -10 + this.width);
-        NameSuggestionsPanel.a(-22 + this.height + param1, 14191, param0, te.field_b, this.width);
+        NameSuggestionsPanel.drawHorizontalFrame(param1 + 35, 14191, param0 + 5, RaceVehicle.field_Db, -10 + this.width);
+        NameSuggestionsPanel.drawHorizontalFrame(-22 + this.height + param1, 14191, param0, te.field_b, this.width);
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -132,63 +132,63 @@ abstract class ResizableDialog extends FadingDialog {
         }
     }
 
-    boolean a(boolean param0) {
-        this.b(!param0 ? true : false);
+    boolean finishAnimations(boolean param0) {
+        this.finishResize(!param0 ? true : false);
         if (!param0) {
-          this.b(-69, -36, 41, 53);
+          this.animateResize(-69, -36, 41, 53);
         }
-        return super.a(true);
+        return super.finishAnimations(true);
     }
 
     ResizableDialog(DialogLayer param0, int param1, int param2) {
         super(param0, param1, param2);
-        this.field_L = 0;
-        this.field_W = 0;
+        this.resizeTicks = 0;
+        this.resizeDuration = 0;
     }
 
-    boolean g(byte param0) {
+    boolean updateAnimation(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
         int var5 = 0;
         int var4 = 0;
         if (param0 != 39) {
-          this.field_N = 59;
+          this.targetHeight = 59;
         }
-        if (this.field_W <= 0) {
+        if (this.resizeDuration <= 0) {
         } else {
-          var2 = this.field_P;
-          var3 = this.field_N;
-          fieldTemp$0 = this.field_L + 1;
-          this.field_L = this.field_L + 1;
-          if (fieldTemp$0 < this.field_W) {
-            var4 = this.field_L * (-this.field_L + this.field_W * 2);
-            var5 = this.field_W * this.field_W;
-            var3 = var4 * (this.field_N - this.field_M) / var5 + this.field_M;
-            var2 = this.field_T + var4 * (this.field_P - this.field_T) / var5;
+          var2 = this.targetWidth;
+          var3 = this.targetHeight;
+          fieldTemp$0 = this.resizeTicks + 1;
+          this.resizeTicks = this.resizeTicks + 1;
+          if (fieldTemp$0 < this.resizeDuration) {
+            var4 = this.resizeTicks * (-this.resizeTicks + this.resizeDuration * 2);
+            var5 = this.resizeDuration * this.resizeDuration;
+            var3 = var4 * (this.targetHeight - this.resizeStartHeight) / var5 + this.resizeStartHeight;
+            var2 = this.resizeStartWidth + var4 * (this.targetWidth - this.resizeStartWidth) / var5;
           } else {
-            this.field_W = 0;
-            this.k(-109);
+            this.resizeDuration = 0;
+            this.onResizeComplete(-109);
           }
-          this.b(537342017, var2, var3);
+          this.setCenteredSize(537342017, var2, var3);
         }
-        return super.g((byte) 39);
+        return super.updateAnimation((byte) 39);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void animateResize(int param0, int param1, int param2, int param3) {
         if (param2 <= 0) {
-          this.b(537342017, param1, param3);
+          this.setCenteredSize(537342017, param1, param3);
           return;
         }
-        this.field_P = param1;
+        this.targetWidth = param1;
         if (param0 <= 5) {
           return;
         }
-        this.field_L = 0;
-        this.field_N = param3;
-        this.field_W = param2;
-        this.field_M = this.height;
-        this.field_T = this.width;
+        this.resizeTicks = 0;
+        this.targetHeight = param3;
+        this.resizeDuration = param2;
+        this.resizeStartHeight = this.height;
+        this.resizeStartWidth = this.width;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -211,21 +211,21 @@ abstract class ResizableDialog extends FadingDialog {
         return QuickChatPhraseCache.field_e;
     }
 
-    void b(boolean param0) {
-        if (0 >= this.field_W) {
+    void finishResize(boolean param0) {
+        if (0 >= this.resizeDuration) {
           return;
         }
-        this.b(537342017, this.field_P, this.field_N);
-        this.field_W = 0;
-        this.k(-108);
+        this.setCenteredSize(537342017, this.targetWidth, this.targetHeight);
+        this.resizeDuration = 0;
+        this.onResizeComplete(-108);
         if (param0) {
-          this.b(true);
+          this.finishResize(true);
         }
     }
 
-    void k(int param0) {
+    void onResizeComplete(int param0) {
         if (param0 >= -100) {
-          this.g((byte) -45);
+          this.updateAnimation((byte) -45);
         }
     }
 

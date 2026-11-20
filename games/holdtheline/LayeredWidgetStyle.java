@@ -59,21 +59,21 @@ final class LayeredWidgetStyle {
           ak.field_b = ValidationState.field_c;
           if (255 != param1) {
             if (100 > param1) {
-              RaceVehicle.field_U = ij.a(param3, 256, param1);
+              RaceVehicle.field_U = ChatMessage.createNameAvailabilityResult(param3, 256, param1);
             } else {
               if (param1 <= 105) {
                 var4 = param2;
-                ri.a((byte) 102, var4);
-                RaceVehicle.field_U = ArchiveRequest.a(param2, (byte) 123);
+                WhirlpoolTables.setNameSuggestions((byte) 102, var4);
+                RaceVehicle.field_U = ArchiveRequest.createNameSuggestionsResult(param2, (byte) 123);
               } else {
-                RaceVehicle.field_U = ij.a(param3, 256, param1);
+                RaceVehicle.field_U = ChatMessage.createNameAvailabilityResult(param3, 256, param1);
               }
             }
           } else {
             stackIn_5_0 = !(ResizableDialog.field_V >= 13);
             RaceVehicle.field_U = TextFieldRenderer.a(stackIn_5_0, 0);
             var6 = (String[]) null;
-            ri.a((byte) 71, (String[]) null);
+            WhirlpoolTables.setNameSuggestions((byte) 71, (String[]) null);
           }
           if (param0 == 256) {
             return;
@@ -256,7 +256,7 @@ final class LayeredWidgetStyle {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          hi.drawNineSlice(this.borderSprites, param0.height, true, param0.width, param2 + param0.x, param1 + param0.y);
+          InheritedWidgetStyle.drawNineSlice(this.borderSprites, param0.height, true, param0.width, param2 + param0.x, param1 + param0.y);
           if (null != this.icon) {
             var6_int = param2 + param0.x + this.offsetX;
             var7 = this.offsetY + param0.y + param1;

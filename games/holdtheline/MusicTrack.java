@@ -90,10 +90,10 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (MidiKeyUsage) (this.field_i.a((byte) 126, (long)var13));
+                var14 = (MidiKeyUsage) (this.field_i.get((byte) 126, (long)var13));
                 if (var14 == null) {
                   var14 = new MidiKeyUsage(new byte[128]);
-                  this.field_i.a(var14, (long)var13, false);
+                  this.field_i.put(var14, (long)var13, false);
                 }
                 var14.field_k[var11Lifetime2] = (byte) 1;
               }

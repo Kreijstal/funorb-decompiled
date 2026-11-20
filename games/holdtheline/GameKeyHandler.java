@@ -8,7 +8,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_d;
     static int field_a;
 
-    final static void a(byte param0) {
+    final static void loadBenefitsUiResources(byte param0) {
         Sprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -67,14 +67,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             null != UiWidget.field_w &&
             UiWidget.field_w.ensureIndexLoaded((byte) -95) &&
             UiWidget.field_w.tryLoadNamedGroup("benefits", -114)) {
-            NamedSoundEffect.field_s = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "headline");
-            IterableNodeHashTable.field_k = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "blurbpane");
-            eg.field_c = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "button");
-            IntrusiveNode.field_d = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "signup_text");
-            mn.field_c = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "menu_text");
-            NodeHashTableIterator.field_h = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "button_frame");
-            FullscreenDisplayMode.field_i = UrlPacketDownloader.a(MidiKeyUsage.field_i, "benefits", false, "arrow");
-            tk.field_a = (BitmapFont) ((Object) MusicPatch.loadMonochromeFontByName("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "large_font"));
+            NamedSoundEffect.field_s = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "headline");
+            IterableNodeHashTable.field_k = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "blurbpane");
+            eg.field_c = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "button");
+            IntrusiveNode.field_d = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "signup_text");
+            mn.field_c = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "menu_text");
+            NodeHashTableIterator.field_h = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "button_frame");
+            FullscreenDisplayMode.field_i = UrlPacketDownloader.loadSpriteByName(MidiKeyUsage.field_i, "benefits", false, "arrow");
+            VehicleEngineSounds.field_a = (BitmapFont) ((Object) MusicPatch.loadMonochromeFontByName("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "large_font"));
             GzipDecompressor.field_e = (BitmapFont) ((Object) MusicPatch.loadMonochromeFontByName("benefits", UiWidget.field_w, 14819, MidiKeyUsage.field_i, "small_font"));
             var28 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
@@ -89,11 +89,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var12 = new Sprite(195, 221);
             var6 = var12.width / 2;
             var12.bindRaster();
-            tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(NetworkArchiveRequest.field_v, new String[]{RaceSetupMenu.field_z}, true), var6, 40, 16777215, -1);
-            GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(fb.field_l, new String[]{RaceSetupMenu.field_z}, true), var6, 60, 16777215, -1);
-            tk.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{Particle.field_r}, true), var6, 110, 16777215, -1);
+            VehicleEngineSounds.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(NetworkArchiveRequest.field_v, new String[]{RaceSetupMenu.field_z}, true), var6, 40, 16777215, -1);
+            GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(ScoreSubmission.field_l, new String[]{RaceSetupMenu.field_z}, true), var6, 60, 16777215, -1);
+            VehicleEngineSounds.field_a.drawCentered(LoginCredentials.substituteIndexedTokens(DraggableWidget.field_I, new String[]{Particle.field_r}, true), var6, 110, 16777215, -1);
             GzipDecompressor.field_e.drawCentered(LoginCredentials.substituteIndexedTokens(SpriteSheetAsset.field_b, new String[]{Particle.field_r}, true), var6, 130, 16777215, -1);
-            tk.field_a.drawCentered(jg.field_q, var6, 180, 16777215, -1);
+            VehicleEngineSounds.field_a.drawCentered(LeaderboardRequest.field_q, var6, 180, 16777215, -1);
             GzipDecompressor.field_e.drawCentered(SocialListEntry.field_jb, var6, 200, 16777215, -1);
             EmailLoginCredentials.a(3, var12.height, var12.width, var12, 0, 0, 1, -24983);
             IterableNodeHashTable.field_k.bindRaster();
@@ -119,14 +119,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             return;
           }
           if (null != IsaacRandom.field_a &&
-            null != tk.field_a) {
+            null != VehicleEngineSounds.field_a) {
             var29 = SoftwareRasterizer.pixels;
             var2Lifetime1 = SoftwareRasterizer.width;
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
             var14 = LoginCredentials.substituteIndexedTokens(CheckboxRenderer.field_d, new String[]{TextLineLayout.field_i[ShadedRoadStripRenderer.field_r]}, true);
-            var5 = tk.field_a.getParagraphWidth(var14, vb.field_d);
-            var6Lifetime1 = tk.field_a.getParagraphHeight(var14, vb.field_d, tk.field_a.ascent + tk.field_a.descent);
+            var5 = VehicleEngineSounds.field_a.getParagraphWidth(var14, vb.field_d);
+            var6Lifetime1 = VehicleEngineSounds.field_a.getParagraphHeight(var14, vb.field_d, VehicleEngineSounds.field_a.ascent + VehicleEngineSounds.field_a.descent);
             var7Lifetime1 = AchievementUnlockRequest.field_m + (vb.field_d - var5) / 2;
             var8 = cd.field_b + (-var6Lifetime1 + mj.field_a) / 2;
             var7Lifetime1 -= 3;
@@ -172,7 +172,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             IsaacRandom.field_a.expandToCanvas();
             var9 = new Sprite(IsaacRandom.field_a.canvasWidth, IsaacRandom.field_a.canvasHeight);
             var9.bindRaster();
-            tk.field_a.drawParagraph(var14, AchievementUnlockRequest.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.descent + tk.field_a.ascent);
+            VehicleEngineSounds.field_a.drawParagraph(var14, AchievementUnlockRequest.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, VehicleEngineSounds.field_a.descent + VehicleEngineSounds.field_a.ascent);
             EmailLoginCredentials.a(3, var9.canvasHeight, var9.canvasWidth, var9, 0, 0, 1, -24983);
             IsaacRandom.field_a.bindRaster();
             var9.draw(0, 0);
@@ -191,7 +191,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var3Lifetime2 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ValidationHelpWidget.field_R);
             var16 = new Sprite(412, 43);
-            var17 = LoginCredentials.substituteIndexedTokens(gk.field_a, new String[]{UrlPacketDownloader.field_j}, true);
+            var17 = LoginCredentials.substituteIndexedTokens(MouseInputRegistration.field_a, new String[]{UrlPacketDownloader.field_j}, true);
             UrlPacketDownloader.field_j = null;
             var16.bindRaster();
             GzipDecompressor.field_e.drawParagraph(var17, 3, 3, var16.width - 6, -6 + var16.height, 16777215, -1, 0, 1, GzipDecompressor.field_e.ascent + GzipDecompressor.field_e.descent);
@@ -224,7 +224,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, SecondaryNodeDeque.field_g, SocketConnector.field_b);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, SecondaryNodeDeque.field_g, SocketConnector.field_b);
           if (param0 <= 25) {
-            GameKeyHandler.a((byte) -48);
+            GameKeyHandler.loadBenefitsUiResources((byte) -48);
           }
           if (NamedSoundEffect.field_s != null) {
             NamedSoundEffect.field_s.draw(0, 0);
@@ -265,7 +265,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_60_1 = Point2i.field_b;
             stackIn_60_2 = LoginChoicePanel.field_L;
             stackIn_61_3 = (DualLinkNode.field_k.selectedIndex == 0);
-            b.a(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_61_3);
+            b.drawAnimatedButtonFrame(stackIn_60_0, stackIn_60_1, stackIn_60_2, stackIn_61_3);
           }
           if (eg.field_c != null &&
             null != NodeHashTableIterator.field_h) {
@@ -278,7 +278,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_69_1 = LoginForm.field_J;
             stackIn_69_2 = ShadedRoadStripRenderer.field_t;
             stackIn_70_3 = (DualLinkNode.field_k.selectedIndex == 1);
-            b.a(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_70_3);
+            b.drawAnimatedButtonFrame(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_70_3);
           }
           if (FullscreenDisplayMode.field_i != null) {
             var1_int = 357 - FullscreenDisplayMode.field_i.canvasHeight / 2;
@@ -297,7 +297,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
                 } else {
                   if (NodeHashTableIterator.field_g > 586) {
                     if (NodeHashTableIterator.field_g >= 586 + FullscreenDisplayMode.field_i.width) {
-                      uk.a(3979);
+                      ProxyAuthenticationException.drawBenefitsSlideshow(3979);
                       TextLineLayout.field_a[SpriteSheetAsset.field_e].draw(269, 340);
                       return;
                     }
@@ -310,7 +310,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
             }
           }
-          uk.a(3979);
+          ProxyAuthenticationException.drawBenefitsSlideshow(3979);
           TextLineLayout.field_a[SpriteSheetAsset.field_e].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -467,14 +467,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void setTickRate(byte param0, int param1) {
         IntrusiveDequeCursor.field_c = 1000000000L / (long)param1;
         if (param0 >= -54) {
           field_e = (SpriteAsset) null;
         }
     }
 
-    static long a(long param0, long param1) {
+    static long xorLongs(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -520,7 +520,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static java.applet.Applet a(int param0) {
+    final static java.applet.Applet getApplet(int param0) {
         if (null != ne.field_b) {
           return ne.field_b;
         }
@@ -530,7 +530,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         return (java.applet.Applet) ((Object) ZombiePedestrian.field_j);
     }
 
-    final static void a(int param0, SortableValue[] param1, int param2) {
+    final static void insertionSort(int param0, SortableValue[] param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -544,7 +544,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             field_c = (String) null;
           }
           for (var3_int = 1; var3_int < param2; var3_int++) {
-            b.a(param1, (byte) 96, var3_int);
+            b.insertSortedPrefix(param1, (byte) 96, var3_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

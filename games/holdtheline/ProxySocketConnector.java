@@ -11,7 +11,7 @@ final class ProxySocketConnector extends SocketConnector {
     static int field_i;
     static IntrusiveDeque field_j;
 
-    private final java.net.Socket a(byte param0, String param1, String param2, int param3) throws IOException {
+    private final java.net.Socket connectHttpTunnel(byte param0, String param1, String param2, int param3) throws IOException {
         java.net.Socket stackIn_11_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -69,11 +69,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new uk(var8);
+                  throw new ProxyAuthenticationException(var8);
                 }
                 break;
               }
-              throw new uk("");
+              throw new ProxyAuthenticationException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_11_0 = var13;
@@ -105,10 +105,10 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void c(int param0) {
+    final static void startMenuBackgroundRace(int param0) {
         TexturedRoadFillRenderer.selectMusicTrack(20830, param0);
         StrongCacheEntry.field_w = 0;
-        nm.field_b = tk.field_c[4][0];
+        nm.field_b = VehicleEngineSounds.field_c[4][0];
         LoginForm.field_P = 0;
         PathWaypoint.field_o = null;
         if (UsernameLoginCredentials.a(nm.field_b, true)) {
@@ -117,7 +117,7 @@ final class ProxySocketConnector extends SocketConnector {
           TrackObject.switchMenu(false, false, -1);
           return;
         }
-        qn.field_k = false;
+        PlayerStatsRequest.field_k = false;
         QuickChatPhraseDefinition.field_r = -1;
         MusicPatchPcmStream.field_r = null;
         ArchiveRequest.field_r = 3;
@@ -127,7 +127,7 @@ final class ProxySocketConnector extends SocketConnector {
         TrackObject.switchMenu(false, false, -1);
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket connect(int param0) throws IOException {
         int var9 = 0;
         int stackIn_6_0 = 0;
         java.net.ProxySelector stackIn_9_0;
@@ -156,7 +156,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        uk var12_ref = null;
+        ProxyAuthenticationException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         PlatformTaskDispatcher var14 = null;
@@ -198,7 +198,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a(675834672);
+          return this.connectDirect(675834672);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -206,21 +206,21 @@ final class ProxySocketConnector extends SocketConnector {
         var8 = var6_array;
         if (param0 >= -33) {
           var14 = (PlatformTaskDispatcher) null;
-          ProxySocketConnector.a((PlatformTaskDispatcher) null, -54);
+          ProxySocketConnector.isFullscreenSupported((PlatformTaskDispatcher) null, -54);
         }
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (uk) null;
-            var12 = this.a(var11, (byte) 110);
+            if (false) throw (ProxyAuthenticationException) null;
+            var12 = this.connectViaProxy(var11, (byte) 110);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (uk decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (uk) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -230,10 +230,10 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var7);
         }
-        return this.a(675834672);
+        return this.connectDirect(675834672);
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket connectViaProxy(java.net.Proxy param0, byte param1) throws IOException {
         java.net.Socket stackIn_3_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_13_0 = null;
@@ -258,7 +258,7 @@ final class ProxySocketConnector extends SocketConnector {
         Class var14 = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_3_0 = this.a(675834672);
+            stackIn_3_0 = this.connectDirect(675834672);
             return stackIn_3_0;
           }
           if (param1 < 12) {
@@ -303,7 +303,7 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_22_0 = this.a((byte) -113, var4.getHostName(), (String) (var5), var4.getPort());
+          stackIn_22_0 = this.connectHttpTunnel((byte) -113, var4.getHostName(), (String) (var5), var4.getPort());
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -319,19 +319,19 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void pushSpriteRaster(Sprite param0, int param1) {
         try {
           if (param1 != -1) {
             field_j = (IntrusiveDeque) null;
           }
-          lj.a((byte) -111);
+          lj.pushRasterState((byte) -111);
           SoftwareRasterizer.bindRaster(param0.pixels, param0.canvasWidth, param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "hf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(PlatformTaskDispatcher param0, int param1) {
+    final static boolean isFullscreenSupported(PlatformTaskDispatcher param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -365,7 +365,7 @@ final class ProxySocketConnector extends SocketConnector {
     public static void clearSharedReferences(byte param0) {
         field_j = null;
         if (param0 != -124) {
-          ProxySocketConnector.c(24);
+          ProxySocketConnector.startMenuBackgroundRace(24);
           field_l = null;
           field_h = null;
           return;

@@ -31,7 +31,7 @@ final class ba {
           if (decompiledFrameRemainder0) {
             if (!DiskCacheStore.field_h) {
               if (dm.field_a >= LinearPointPath.field_h) {
-                stackIn_16_0 = (we.field_l + LinearPointPath.field_h > dm.field_a) ? 1 : 0;
+                stackIn_16_0 = (SavedRasterState.field_l + LinearPointPath.field_h > dm.field_a) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -94,7 +94,7 @@ final class ba {
         }
     }
 
-    final static int a(TrackBoundary param0, int param1, ArcTrackBoundary param2) {
+    final static int intersectLineAndArc(TrackBoundary param0, int param1, ArcTrackBoundary param2) {
         int stackIn_2_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -169,7 +169,7 @@ final class ba {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long orLongs(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -181,7 +181,7 @@ final class ba {
         }
     }
 
-    final static char a(boolean param0, char param1) {
+    final static char normalizeAccountCharacter(boolean param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -419,7 +419,7 @@ final class ba {
         return '_';
     }
 
-    final static void a(int param0, String param1, boolean param2, java.applet.Applet param3) {
+    final static void openExternalUrl(int param0, String param1, boolean param2, java.applet.Applet param3) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;

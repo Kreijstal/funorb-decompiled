@@ -24,7 +24,7 @@ final class AchievementUnlockRequest extends IntrusiveNode {
         if (param0 != 14893) {
           AchievementUnlockRequest.a(-62, -61, 42, 74);
         }
-        ge.field_b = param1;
+        ContentTransitionState.field_b = param1;
     }
 
     public static void clearSharedReferences(byte param0) {

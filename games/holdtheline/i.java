@@ -17,17 +17,17 @@ final class i extends NineSlicePanel {
         int var9 = 0;
         int var13 = HoldTheLine.field_D;
         int var8Lifetime1;
-        RaceVehicle.field_Db = StandardContentTransitionDialog.a(param3, 33, "commonui", "frame_top");
-        te.field_b = StandardContentTransitionDialog.a(param3, 33, "commonui", "frame_bottom");
-        SpriteState.field_t = UrlPacketDownloader.a(param3, "commonui", false, "jagex_logo_grey");
-        NameCheckProgressDialog.field_Ab = StandardContentTransitionDialog.a(param3, 33, "commonui", "button");
+        RaceVehicle.field_Db = StandardContentTransitionDialog.loadSpritesByName(param3, 33, "commonui", "frame_top");
+        te.field_b = StandardContentTransitionDialog.loadSpritesByName(param3, 33, "commonui", "frame_bottom");
+        SpriteState.field_t = UrlPacketDownloader.loadSpriteByName(param3, "commonui", false, "jagex_logo_grey");
+        NameCheckProgressDialog.field_Ab = StandardContentTransitionDialog.loadSpritesByName(param3, 33, "commonui", "button");
         FullscreenFocusCanvas.field_i = OutlinedRoadStripRenderer.loadNamedSprites("validation", 17870, "commonui", param3);
         SpriteButtonRenderer.field_w = (BitmapFont) ((Object) UiTheme.loadNamedCoverageFont("commonui", "arezzo12", param1, (byte) 35, param3));
         IntrusiveNode.field_g = (BitmapFont) ((Object) UiTheme.loadNamedCoverageFont("commonui", "arezzo14", param1, (byte) 35, param3));
         DisplayNameForm.field_I = (BitmapFont) ((Object) UiTheme.loadNamedCoverageFont("commonui", "arezzo14bold", param1, (byte) 35, param3));
         Sprite var17 = new Sprite(param2.getNamedFile("", !param0 ? true : false, "button.gif"), (java.awt.Component) ((Object) MouseInputHandler.field_b));
-        hc.a("dropdown", param3, -120, "commonui");
-        IndexedSprite[] var5 = oc.a("screen_options", param3, (byte) 32, "commonui");
+        hc.loadIndexedSpriteByName("dropdown", param3, -120, "commonui");
+        IndexedSprite[] var5 = oc.loadIndexedSpritesByName("screen_options", param3, (byte) 32, "commonui");
         FullscreenFocusCanvas.field_g = new IndexedSprite[4];
         FullscreenFocusCanvas.field_d = new IndexedSprite[4];
         MarkerSliderRenderer.field_d = new IndexedSprite[4];
@@ -35,11 +35,11 @@ final class i extends NineSlicePanel {
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;
-        var7[0] = var5[0].field_n;
+        var7[0] = var5[0].palette;
         for (var8 = 1; var19.length > var8; var8++) {
           var7[var8] = (int[]) ((Object) var19[0].clone());
         }
-        var8Lifetime1 = var5[0].field_m[0];
+        var8Lifetime1 = var5[0].pixels[0];
         var19[2][var8Lifetime1] = 16777215;
         var19[1][var8Lifetime1] = 2394342;
         var19[3][var8Lifetime1] = 4767999;
@@ -47,11 +47,11 @@ final class i extends NineSlicePanel {
           var14 = var6[var9];
           IndexedSprite[] var10 = var14;
           for (var11_int = 0; var14.length > var11_int; var11_int++) {
-            var14[var11_int] = FadingDialog.a(var19[var11_int], -116, var5[var9]);
+            var14[var11_int] = FadingDialog.withPalette(var19[var11_int], -116, var5[var9]);
           }
         }
         var9 = var17.height;
-        lj.a((byte) -124);
+        lj.pushRasterState((byte) -124);
         var17.bindRaster();
         SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
         Sprite var15 = new Sprite(var9, var9);
@@ -68,7 +68,7 @@ final class i extends NineSlicePanel {
           var12 = new Sprite(var17.width - 2 * var9, var9);
           var12.bindRaster();
           var17.drawUnkeyed(-var9, 0);
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           NameCheckProgressDialog.field_Ab = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "i.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -189,13 +189,13 @@ final class i extends NineSlicePanel {
         LoginForm.field_G = 1;
     }
 
-    final static tk a(int param0, int param1, int param2, String param3, int param4) {
+    final static VehicleEngineSounds a(int param0, int param1, int param2, String param3, int param4) {
         String var5 = null;
         RuntimeException var5_ref = null;
         String var6 = null;
         NamedSoundEffect var7 = null;
         NamedSoundEffect var8 = null;
-        tk stackIn_3_0 = null;
+        VehicleEngineSounds stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -210,7 +210,7 @@ final class i extends NineSlicePanel {
           var8 = new NamedSoundEffect(var6, param4);
           var7.field_m = NetworkGameClient.sampleFramesForMillis(var7, param1, 89);
           var7.field_l = var7.field_n.length;
-          stackIn_3_0 = new tk(var7, var8);
+          stackIn_3_0 = new VehicleEngineSounds(var7, var8);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class i extends NineSlicePanel {
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        TutorialAction.a(param4, param0, param3, (byte) 41, param1);
+        TutorialAction.drawShadedPanel(param4, param0, param3, (byte) 41, param1);
         if (param2 != -51) {
           ResourceArchive var7 = (ResourceArchive) null;
           i.a(true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
@@ -249,7 +249,7 @@ final class i extends NineSlicePanel {
     }
 
     static {
-        field_j = fc.a(-45, 5, 36);
+        field_j = fc.createHorizontalPointPairs(-45, 5, 36);
         field_l = new int[]{4, 4, 4};
     }
 }

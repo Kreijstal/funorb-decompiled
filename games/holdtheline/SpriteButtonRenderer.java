@@ -12,7 +12,7 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
     static BitmapFont field_w;
     static SpriteAsset field_r;
 
-    final static EntitySound a(int param0, int param1, MovingEntity param2, PcmSample param3) {
+    final static EntitySound createEntitySound(int param0, int param1, MovingEntity param2, PcmSample param3) {
         EntitySound var4 = null;
         RuntimeException var4_ref = null;
         EntitySound stackIn_2_0 = null;
@@ -72,10 +72,10 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
         field_q = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPoint(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 < 4) {
           CharSequence var8 = (CharSequence) null;
-          SpriteButtonRenderer.a((CharSequence) null, (byte) 105);
+          SpriteButtonRenderer.parseInt((CharSequence) null, (byte) 105);
           if (param1 < param5) {
             return false;
           }
@@ -147,7 +147,7 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
           oj.a(this.field_t, var7, param3.x + param1, param4 + param3.y + (param3.height - this.field_t[0].canvasHeight >> 1), -102, param3.width);
           if (param2 >= -48) {
             var9 = (CharSequence) null;
-            SpriteButtonRenderer.a((CharSequence) null, (byte) -73);
+            SpriteButtonRenderer.parseInt((CharSequence) null, (byte) -73);
           }
           this.field_f.drawParagraph(param3.text, param1 + param3.x, -2 + (param3.y + param4), param3.width, param3.height, var8, -1, 1, 1, this.field_f.ascent);
           return;
@@ -165,7 +165,7 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
         }
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int parseInt(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_3_0 = 0;
@@ -176,7 +176,7 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
         try {
           if (param1 != -116) {
             var3 = (CharSequence) null;
-            SpriteButtonRenderer.a((CharSequence) null, (byte) -11);
+            SpriteButtonRenderer.parseInt((CharSequence) null, (byte) -11);
           }
           stackIn_3_0 = IntHashTable.parseRadixInteger(true, 10, (byte) 106, param0);
           return stackIn_3_0;
@@ -194,7 +194,7 @@ final class SpriteButtonRenderer extends TextWidgetStyle {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int nextPowerOfTwo(byte param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;

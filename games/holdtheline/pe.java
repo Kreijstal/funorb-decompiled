@@ -109,7 +109,7 @@ final class pe {
           oi.field_f = true;
           WhirlpoolHasher.field_h = param0;
           if (WhirlpoolHasher.field_h == 0) {
-            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, fm.field_c, GzipDecompressor.field_c, (byte) 115, IndexedSpriteState.field_j);
+            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, StandaloneWindow.field_c, GzipDecompressor.field_c, (byte) 115, IndexedSpriteState.field_j);
             var4 = var3_int + 3;
             cd.field_f = new int[var4];
             ClientException.field_b = new String[var4];
@@ -124,11 +124,11 @@ final class pe {
             ClientException.field_b[var4 - 2] = RotatedSpriteCache.field_e;
             cd.field_f[-2 + var4] = 0;
             ClientException.field_e[0] = 4;
-            ClientException.field_b[-1 + var4] = h.field_f;
+            ClientException.field_b[-1 + var4] = FullscreenErrorReason.field_f;
             cd.field_f[var4 - 1] = 1;
             ClientException.field_e[1] = 5;
           } else if (WhirlpoolHasher.field_h == 1) {
-            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, fm.field_c, GzipDecompressor.field_c, (byte) -95, IndexedSpriteState.field_j);
+            var3_int = RotatedSpriteCache.a(CheckboxWidget.field_G, StandaloneWindow.field_c, GzipDecompressor.field_c, (byte) -95, IndexedSpriteState.field_j);
             var4 = 2 + var3_int;
             cd.field_f = new int[var4];
             ClientException.field_b = new String[var4];
@@ -140,7 +140,7 @@ final class pe {
               ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
             }
             ClientException.field_b[var4 - 2] = "";
-            ClientException.field_b[-1 + var4] = h.field_f;
+            ClientException.field_b[-1 + var4] = FullscreenErrorReason.field_f;
             cd.field_f[var4 - 1] = 0;
             ClientException.field_e[0] = 5;
           } else if (WhirlpoolHasher.field_h != 2) {
@@ -161,7 +161,7 @@ final class pe {
                 ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
               }
               ClientException.field_b[-2 + var4] = "";
-              ClientException.field_b[-1 + var4] = h.field_f;
+              ClientException.field_b[-1 + var4] = FullscreenErrorReason.field_f;
               cd.field_f[-1 + var4] = 0;
               ClientException.field_e[0] = 5;
             } else if (WhirlpoolHasher.field_h == 4) {
@@ -177,7 +177,7 @@ final class pe {
                 ClientException.field_b[var5] = GzipDecompressor.field_c[var5];
               }
               ClientException.field_b[var4 - 2] = "";
-              ClientException.field_b[var4 - 1] = h.field_f;
+              ClientException.field_b[var4 - 1] = FullscreenErrorReason.field_f;
               cd.field_f[-1 + var4] = 0;
               ClientException.field_e[0] = 5;
             } else {
@@ -199,7 +199,7 @@ final class pe {
               ClientException.field_b[-2 + var4] = CourseDefinition.field_i;
               cd.field_f[var4 - 2] = 0;
               ClientException.field_e[0] = 3;
-              ClientException.field_b[-1 + var4] = h.field_f;
+              ClientException.field_b[-1 + var4] = FullscreenErrorReason.field_f;
               cd.field_f[-1 + var4] = 1;
               ClientException.field_e[1] = 5;
             }
@@ -234,16 +234,16 @@ final class pe {
             }
             dg.field_b = new String[var4];
             ArrayOperations.copyObjects(GzipDecompressor.field_c, 0, dg.field_b, 0, var4);
-            pb.field_a = new String[-1 + (-var4 + var3_int)];
-            ArrayOperations.copyObjects(GzipDecompressor.field_c, 1 + var4, pb.field_a, 0, var3_int - var4 - 1);
+            StraightRoadSlicer.field_a = new String[-1 + (-var4 + var3_int)];
+            ArrayOperations.copyObjects(GzipDecompressor.field_c, 1 + var4, StraightRoadSlicer.field_a, 0, var3_int - var4 - 1);
             if (dg.field_b.length > qg.field_b.length) {
               stackIn_36_0 = dg.field_b.length;
             } else {
               stackIn_36_0 = qg.field_b.length;
             }
             var5 = stackIn_36_0;
-            if (pb.field_a.length > DelayedServerPacket.field_j.length) {
-              stackIn_39_0 = pb.field_a.length;
+            if (StraightRoadSlicer.field_a.length > DelayedServerPacket.field_j.length) {
+              stackIn_39_0 = StraightRoadSlicer.field_a.length;
             } else {
               stackIn_39_0 = DelayedServerPacket.field_j.length;
             }
@@ -257,7 +257,7 @@ final class pe {
             ClientException.field_e = new int[2];
             ClientException.field_b[1] = PathWaypoint.field_k;
             cd.field_f[1] = 0;
-            ClientException.field_b[0] = rc.field_b;
+            ClientException.field_b[0] = TutorialScriptState.field_b;
             cd.field_f[3] = 1;
             ClientException.field_b[2] = RotatedSpriteCache.field_k;
             ClientException.field_e[0] = 5;
@@ -281,15 +281,15 @@ final class pe {
               stackIn_51_0 = ClientException.field_b;
               stackIn_51_1 = var5 + 7 + var8Lifetime3;
               stackIn_51_2 = ~var8Lifetime3;
-              stackIn_51_3 = ~pb.field_a.length;
+              stackIn_51_3 = ~StraightRoadSlicer.field_a.length;
               if (stackIn_51_2 > stackIn_51_3) {
-                stackIn_54_2 = pb.field_a[var8Lifetime3];
+                stackIn_54_2 = StraightRoadSlicer.field_a[var8Lifetime3];
               } else {
                 stackIn_54_2 = "";
               }
               stackIn_51_0[stackIn_51_1] = stackIn_54_2;
             }
-            TutorialAction.field_g = bb.b(-1);
+            TutorialAction.field_g = bb.monotonicTimeMillis(-1);
           }
           TextFieldRenderer.field_q.itemCount = ClientException.field_e.length;
           var3_intLifetime1 = 0;
@@ -297,7 +297,7 @@ final class pe {
             stackIn_88_0 = ClientException.field_b[var4Lifetime1];
             stackIn_88_1 = -113;
             stackIn_89_2 = !(cd.field_f[var4Lifetime1] < 0);
-            var5Lifetime1 = h.measureMenuTextWidthWithIntGuard(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            var5Lifetime1 = FullscreenErrorReason.measureMenuTextWidthWithIntGuard(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -307,7 +307,7 @@ final class pe {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var5Lifetime2 < var11.length; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = h.measureMenuTextWidthWithIntGuard(var12, -113, false);
+              var7Lifetime1 = FullscreenErrorReason.measureMenuTextWidthWithIntGuard(var12, -113, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -315,7 +315,7 @@ final class pe {
             var4_ref_String__Lifetime1 = DelayedServerPacket.field_j;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = h.measureMenuTextWidthWithIntGuard(var13, -113, false);
+              var7Lifetime1Lifetime1 = FullscreenErrorReason.measureMenuTextWidthWithIntGuard(var13, -113, false);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -341,7 +341,7 @@ final class pe {
           while (var5Lifetime4 < ClientException.field_b.length) {
             var7Lifetime2 = cd.field_f[var5Lifetime4];
             if (0 <= var7Lifetime2) {
-              var8Lifetime1 = h.measureMenuTextWidthWithIntGuard(ClientException.field_b[var5Lifetime4], -113, true);
+              var8Lifetime1 = FullscreenErrorReason.measureMenuTextWidthWithIntGuard(ClientException.field_b[var5Lifetime4], -113, true);
               var6Lifetime1 = var6Lifetime1 + ContentTransitionDialog.field_bb;
               var9 = -(var8Lifetime1 >> 1) + NanoTickClock.field_i;
               SocialListEntry.field_lb[var5Lifetime4] = new int[4];

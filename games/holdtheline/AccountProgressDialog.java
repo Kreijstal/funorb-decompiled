@@ -13,10 +13,10 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
     private BitmapFont field_nb;
 
     final void h(byte param0) {
-        if (!this.field_F) {
+        if (!this.visible) {
           return;
         }
-        this.field_F = false;
+        this.visible = false;
         if (this.field_kb) {
           OutlinedRoadFillRenderer.a((byte) -41);
         } else {
@@ -41,10 +41,10 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
             return;
           }
           if (!this.field_mb) {
-            sh.a((byte) -116, GameKeyHandler.a(param2 ^ -75), "tochangedisplayname.ws");
+            InputValidationError.openAppletPage((byte) -116, GameKeyHandler.getApplet(param2 ^ -75), "tochangedisplayname.ws");
             return;
           }
-          RotatedSpriteAsset.a(param2 + 4, 3);
+          RotatedSpriteAsset.setAccountScreen(param2 + 4, 3);
           this.h((byte) -89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,8 +65,8 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
         this.field_rb.setColors(2121792, 4210752, false);
         MessagePanel var2 = new MessagePanel(this, this.field_nb, DiskCacheStore.field_b);
         if (param0 <= -12) {
-          var2.a(15, ge.field_d, (byte) 69);
-          this.a((UiWidget) (var2), (byte) -104);
+          var2.addActionButton(15, ContentTransitionState.field_d, (byte) 69);
+          this.setContent((UiWidget) (var2), (byte) -104);
           return;
         }
     }
@@ -268,9 +268,9 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
     }
 
     final static void a(int param0, byte param1) {
-        aj.field_d = GrowableObjectList.field_f[param0];
+        PlayerProgressEncoder.field_d = GrowableObjectList.field_f[param0];
         DualNodeHashTable.field_f = lj.field_c[param0];
-        pb.field_d = TextFieldRenderer.field_r[param0];
+        StraightRoadSlicer.field_d = TextFieldRenderer.field_r[param0];
         if (param1 <= 76) {
           AccountProgressDialog.n(-60);
         }
@@ -304,7 +304,7 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
           var4 = var6;
           if (5 != param2) {
             if (param2 == 256) {
-              var6.a(88, (WidgetListener) (this), CachedTextLayout.field_p);
+              var6.addButton(88, (WidgetListener) (this), CachedTextLayout.field_p);
             } else {
               stackIn_15_0 = var6;
               stackIn_15_1 = -1;
@@ -313,28 +313,28 @@ class AccountProgressDialog extends ContentTransitionDialog implements ButtonAct
               } else {
                 stackIn_16_2 = ArchiveIndex.field_i;
               }
-              ((MessagePanel) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2, (byte) 59);
+              ((MessagePanel) (Object) stackIn_15_0).addActionButton(stackIn_15_1, stackIn_16_2, (byte) 59);
             }
           } else {
-            var6.a(11, NineSlicePanel.field_b, (byte) 69);
-            var6.a(17, UrlPacketDownloader.field_n, (byte) 97);
+            var6.addActionButton(11, NineSlicePanel.field_b, (byte) 69);
+            var6.addActionButton(17, UrlPacketDownloader.field_n, (byte) 97);
           }
           if (param2 == 3) {
-            var6.a(7, CheckboxRenderer.field_u, (byte) 122);
+            var6.addActionButton(7, CheckboxRenderer.field_u, (byte) 122);
           } else {
             if (param2 != 4) {
               if (param2 == 6) {
-                var6.a(9, Bzip2State.field_d, (byte) 68);
+                var6.addActionButton(9, Bzip2State.field_d, (byte) 68);
               } else {
                 if (param2 == 9) {
-                  var6.a(49, (WidgetListener) (this), GrowableIntList.field_e);
+                  var6.addButton(49, (WidgetListener) (this), GrowableIntList.field_e);
                 }
               }
             } else {
-              var6.a(8, NineSlicePanel.field_a, (byte) 65);
+              var6.addActionButton(8, NineSlicePanel.field_a, (byte) 65);
             }
           }
-          this.a((UiWidget) (var6), (byte) 79);
+          this.setContent((UiWidget) (var6), (byte) 79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

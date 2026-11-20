@@ -44,7 +44,7 @@ final class LoginMethodPreference {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ij var16 = null;
+        ChatMessage var16 = null;
         int[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -60,8 +60,8 @@ final class LoginMethodPreference {
           var9 = (65280 & param2) >> 8;
           var10 = param0 & 255;
           if (param1 <= 90) {
-            var16 = (ij) null;
-            LoginMethodPreference.a((ij) null, true);
+            var16 = (ChatMessage) null;
+            LoginMethodPreference.receiveChatMessage((ChatMessage) null, true);
           }
           var11 = 255 & param2;
           for (var12 = 0; var4_int > var12; var12++) {
@@ -85,10 +85,10 @@ final class LoginMethodPreference {
         }
     }
 
-    final static void a(ij param0, boolean param1) {
+    final static void receiveChatMessage(ChatMessage param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ij var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -96,23 +96,23 @@ final class LoginMethodPreference {
         RuntimeException decompiledCaughtException = null;
         var4 = HoldTheLine.field_D;
         try {
-          if (param0.field_o == null) {
+          if (param0.text == null) {
             return;
           }
-          if (0 != param0.field_j ||
-            param0.field_e != 0) {
+          if (0 != param0.messageIdHigh ||
+            param0.messageIdLow != 0) {
             for (var2_int = 0; Vector2f.field_e > var2_int; var2_int++) {
               var3 = lj.field_a[var2_int];
-              if (2 == var3.field_h &&
-                param0.field_j == var3.field_j &&
-                var3.field_e == param0.field_e) {
+              if (2 == var3.type &&
+                param0.messageIdHigh == var3.messageIdHigh &&
+                var3.messageIdLow == param0.messageIdLow) {
                 return;
               }
             }
           }
-          if (param0.field_b != null) {
+          if (param0.quickChatParameters != null) {
           }
-          ArchiveLoadStage.a(21325, param0);
+          ArchiveLoadStage.appendChatMessage(21325, param0);
           if (!param1) {
             return;
           }
@@ -163,8 +163,8 @@ final class LoginMethodPreference {
           if (NetworkGameClient.field_s[param2] > NetworkGameClient.field_s[param0]) {
             return false;
           }
-          var4 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
-          var5 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + fj.field_q[param0];
+          var4 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + WidgetStyleNode.field_q[param2]);
+          var5 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + WidgetStyleNode.field_q[param0];
           if (var4 < var5) {
             return true;
           }
@@ -188,8 +188,8 @@ final class LoginMethodPreference {
         if (SpriteSheetAsset.field_j[param0] < SpriteSheetAsset.field_j[param2]) {
           return false;
         }
-        var4Lifetime1 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + fj.field_q[param2]);
-        var5Lifetime1 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + fj.field_q[param0];
+        var4Lifetime1 = IsaacPacketBuffer.field_u[param2] + (ua.field_c[param2] + WidgetStyleNode.field_q[param2]);
+        var5Lifetime1 = ua.field_c[param0] + IsaacPacketBuffer.field_u[param0] + WidgetStyleNode.field_q[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

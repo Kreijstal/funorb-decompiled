@@ -24,8 +24,8 @@ public final class HoldTheLine extends NetworkGameClient {
           HoldTheLine.clearClientReferences(-20);
           RaceWorld.clearSharedReferences(-26919);
           dm.clearSharedReferences((byte) -20);
-          rh.clearSharedReferences(-123);
-          jo.clearSharedReferences((byte) 108);
+          CourseVersionTag.clearSharedReferences(-123);
+          IgnoreListIndex.clearSharedReferences((byte) 108);
           GameAppletShell.clearSharedReferences(-1);
           MouseInputHandler.clearSharedReferences((byte) -126);
           IntrusiveDeque.clearSharedReferences(true);
@@ -35,7 +35,7 @@ public final class HoldTheLine extends NetworkGameClient {
           lj.clearSharedReferences(param0 ^ -29336);
           GameKeyHandler.clearSharedReferences(param0 ^ -129);
           co.clearSharedReferences(-112);
-          sl.clearSharedReferences(18668);
+          ReflectionCheckQueue.clearSharedReferences(18668);
           pe.clearSharedReferences(param0 - 128);
           GameMenu.clearSharedReferences(param0 - 21134);
           l.clearSharedReferences(param0 ^ 17182);
@@ -52,10 +52,10 @@ public final class HoldTheLine extends NetworkGameClient {
           ak.clearSharedReferences(0);
           ai.clearSharedReferences((byte) -110);
           q.clearSharedReferences((byte) 86);
-          ri.clearSharedReferences(param0 + 1003075144);
+          WhirlpoolTables.clearSharedReferences(param0 + 1003075144);
           oc.clearSharedReferences(-1);
           wi.clearSharedReferences(28135);
-          ij.clearSharedReferences(-90);
+          ChatMessage.clearSharedReferences(-90);
           qh.clearSharedReferences(30);
           ad.clearSharedReferences((byte) -58);
           ao.clearSharedReferences(0);
@@ -84,16 +84,16 @@ public final class HoldTheLine extends NetworkGameClient {
           GrowableObjectList.clearSharedReferences(true);
           GrowableIntList.clearSharedReferences((byte) -13);
           PolygonScanConverter.clearSharedReferences();
-          r.clearSharedReferences(param0 ^ -13950);
+          ServerConnectionState.clearSharedReferences(param0 ^ -13950);
           BitmapFont.clearSharedReferences();
           ni.clearSharedReferences(0);
           ta.clearSharedReferences((byte) 16);
           NineSlicePanel.clearSharedReferences(-1);
-          fj.clearSharedReferences((byte) 96);
+          WidgetStyleNode.clearSharedReferences((byte) 96);
           nm.clearSharedReferences(param0 ^ -240);
           DualLinkNode.clearSharedReferences(0);
           IndexedSpriteState.clearSharedReferences(true);
-          aj.clearSharedReferences(76);
+          PlayerProgressEncoder.clearSharedReferences(76);
           hh.clearSharedReferences(param0 - 118);
           AccountFormText.clearSharedReferences(10);
           wl.clearSharedReferences(62);
@@ -113,7 +113,7 @@ public final class HoldTheLine extends NetworkGameClient {
           DisplayNameForm.clearSharedReferences(-1);
           UiTheme.clearSharedReferences(1);
           mj.clearSharedReferences(126);
-          gk.clearSharedReferences((byte) 115);
+          MouseInputRegistration.clearSharedReferences((byte) 115);
           ArchiveIndex.clearSharedReferences((byte) 118);
           GzipDecompressor.clearSharedReferences((byte) 40);
           ArchiveProvider.clearSharedReferences(8192);
@@ -136,7 +136,7 @@ public final class HoldTheLine extends NetworkGameClient {
           MusicPatchPcmStream.clearSharedReferences(0);
           BoundedRandomAccessFile.clearSharedReferences(param0 ^ 128);
           DelegatingCanvas.clearSharedReferences(param0 ^ -248);
-          pb.clearSharedReferences(0);
+          StraightRoadSlicer.clearSharedReferences(0);
           SocketJs5Transport.clearSharedReferences(true);
           SecondaryNodeDeque.clearSharedReferences(6985);
           NetworkArchiveRequest.clearSharedReferences(106);
@@ -150,22 +150,22 @@ public final class HoldTheLine extends NetworkGameClient {
           TextWidgetStyle.clearSharedReferences(true);
           TriangleRasterState.clearSharedReferences();
           VorbisSample.releaseStatics();
-          uj.clearSharedReferences((byte) -122);
+          MeshMaterial.clearSharedReferences((byte) -122);
           TriangleMesh.clearSharedReferences(-32768);
           hm.clearSharedReferences(0);
           te.clearSharedReferences(-4);
           il.clearSharedReferences(84);
           lh.clearSharedReferences((byte) -33);
           qg.clearSharedReferences(111);
-          fm.clearSharedReferences(param0 - 24);
-          hi.clearSharedReferences((byte) 104);
+          StandaloneWindow.clearSharedReferences(param0 - 24);
+          InheritedWidgetStyle.clearSharedReferences((byte) 104);
           DualNodeHashTable.clearSharedReferences((byte) -97);
           IntHashTable.clearSharedReferences((byte) 124);
           ByteStorage.clearSharedReferences((byte) -20);
           Bzip2Decoder.clearSharedReferences();
           Bzip2State.clearSharedReferences((byte) -125);
           ReflectionCheck.clearSharedReferences(true);
-          al.clearSharedReferences((byte) -71);
+          ByteArrayPool.clearSharedReferences((byte) -71);
           ne.clearSharedReferences(117);
           CheckboxRenderer.clearSharedReferences(true);
           LayeredButtonRenderer.clearSharedReferences((byte) 72);
@@ -188,11 +188,11 @@ public final class HoldTheLine extends NetworkGameClient {
           WeightedLruCache.clearSharedReferences(false);
           um.clearSharedReferences(119);
           HuffmanDecoder.clearSharedReferences(0);
-          rc.clearSharedReferences(true);
+          TutorialScriptState.clearSharedReferences(true);
           ba.clearSharedReferences(12031);
           AudioServiceThread.clearSharedReferences((byte) -48);
           SocketConnector.clearSharedReferences((byte) -42);
-          uk.clearSharedReferences((byte) -116);
+          ProxyAuthenticationException.clearSharedReferences((byte) -116);
           NanoTickClock.clearSharedReferences(true);
           ImageProducerRasterBuffer.clearSharedReferences(-1);
           WhirlpoolHasher.clearSharedReferences(true);
@@ -230,7 +230,7 @@ public final class HoldTheLine extends NetworkGameClient {
           SecondaryNodeDequeIterator.clearSharedReferences((byte) 68);
           i.clearSharedReferences((byte) -3);
           CourseDefinition.clearSharedReferences(3);
-          sb.clearSharedReferences(74);
+          RoadControlPointSpec.clearSharedReferences(74);
           ue.clearSharedReferences(param0 + 19729);
           RoadStripRenderer.clearSharedReferences(0);
           RoadFillRenderer.clearSharedReferences(param0 ^ -204);
@@ -246,11 +246,11 @@ public final class HoldTheLine extends NetworkGameClient {
           RotatedSpriteSheetAsset.clearSharedReferences((byte) 21);
           NamedSoundEffect.clearSharedReferences((byte) 43);
           StereoMusicSample.clearSharedReferences(1491624464);
-          tk.clearSharedReferences(-7689);
+          VehicleEngineSounds.clearSharedReferences(-7689);
           EntitySound.clearSharedReferences(0);
-          jg.clearSharedReferences(param0 - 220);
-          fb.clearSharedReferences(true);
-          jc.clearSharedReferences((byte) 5);
+          LeaderboardRequest.clearSharedReferences(param0 - 220);
+          ScoreSubmission.clearSharedReferences(true);
+          LeaderboardPlayer.clearSharedReferences((byte) 5);
           ArchiveKeyRequest.clearSharedReferences(false);
           Point2i.clearSharedReferences(-22525);
           Vector2i.clearSharedReferences((byte) 110);
@@ -270,10 +270,10 @@ public final class HoldTheLine extends NetworkGameClient {
           IconToggleRenderer.clearSharedReferences(4);
           OpacityWidget.clearSharedReferences(1000);
           SocialListEntry.clearSharedReferences(true);
-          qn.clearSharedReferences(param0 - 179);
+          PlayerStatsRequest.clearSharedReferences(param0 - 179);
           SoundPlayback.clearSharedReferences(param0);
           ArchiveLoadStage.clearSharedReferences((byte) 114);
-          ma.clearSharedReferences((byte) -85);
+          AchievementStatusRequest.clearSharedReferences((byte) -85);
           AchievementUnlockRequest.clearSharedReferences((byte) 119);
           BlobReadRequest.clearSharedReferences((byte) 89);
           BlobWriteRequest.clearSharedReferences(381);
@@ -283,13 +283,13 @@ public final class HoldTheLine extends NetworkGameClient {
           TutorialAction.clearSharedReferences(-116);
           TutorialPage.clearSharedReferences(true);
           EmailValidationResult.clearSharedReferences(-69);
-          ll.clearSharedReferences((byte) 124);
+          AccountProtocolState.clearSharedReferences((byte) 124);
           DelayedServerPacket.clearSharedReferences(param0 - 33);
           LoginMethodPreference.clearSharedReferences(-69);
           UsernameLoginCredentials.clearSharedReferences(param0 ^ -237);
-          bn.clearSharedReferences((byte) -93);
+          AlternateUsernameLoginCredentials.clearSharedReferences((byte) -93);
           EmailLoginCredentials.clearSharedReferences((byte) 61);
-          sa.clearSharedReferences((byte) -125);
+          NameRequestState.clearSharedReferences((byte) -125);
           NameAvailabilityResult.clearSharedReferences(-4496);
           MessagePanel.clearSharedReferences((byte) 25);
           PathWaypoint.clearSharedReferences(param0 - 120);
@@ -297,8 +297,8 @@ public final class HoldTheLine extends NetworkGameClient {
           LinearPointPath.clearSharedReferences((byte) -52);
           QuadraticPointPath.clearSharedReferences(param0 - 128);
           TrackObjectDefinition.clearSharedReferences((byte) -6);
-          h.clearSharedReferences((byte) 99);
-          we.clearSharedReferences((byte) 61);
+          FullscreenErrorReason.clearSharedReferences((byte) 99);
+          SavedRasterState.clearSharedReferences((byte) 61);
           IntArrayReadRequest.clearSharedReferences(param0 ^ 128);
           IntWriteRequest.clearSharedReferences(true);
           LayeredWidgetStyle.clearSharedReferences(param0 - 33);
@@ -307,11 +307,11 @@ public final class HoldTheLine extends NetworkGameClient {
           EmailConfirmationValidator.clearSharedReferences(0);
           AgeValidator.clearSharedReferences(-127);
           MatchingTextValidator.clearSharedReferences(-14);
-          ge.clearSharedReferences(-31819);
+          ContentTransitionState.clearSharedReferences(-31819);
           TextHotspotRange.clearSharedReferences(76);
           ValidationState.clearSharedReferences(115);
           TimedValidator.clearSharedReferences(param0 - 24709);
-          sh.clearSharedReferences(11);
+          InputValidationError.clearSharedReferences(11);
           this.serverHost = null;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "HoldTheLine.IA(" + param0 + ')');
@@ -330,15 +330,15 @@ public final class HoldTheLine extends NetworkGameClient {
             GameAppletShell.field_i = null;
             TexturedRoadFillRenderer.resetFrameTiming(56);
           }
-          DropTargetWidget.field_J = WeightedLruCache.a(122, 3);
-          ta.field_a = WeightedLruCache.a(param0 + 162, 4);
-          b.field_d = WeightedLruCache.a(-67, 5);
-          PacketBuffer.field_m = WeightedLruCache.a(-15, 6);
-          SoundCache.field_c = WeightedLruCache.a(121, 7);
-          EntitySound.field_i = WeightedLruCache.a(-17, 8);
-          QuadraticPointPath.field_j = WeightedLruCache.a(-16, 9);
-          NetworkArchiveRequest.field_y = WeightedLruCache.a(param0 ^ -89, 10);
-          FullscreenFocusCanvas.a(LinearPointPath.field_p, (byte) -126, StandardContentTransitionDialog.field_lb);
+          DropTargetWidget.field_J = WeightedLruCache.createResourceArchive(122, 3);
+          ta.field_a = WeightedLruCache.createResourceArchive(param0 + 162, 4);
+          b.field_d = WeightedLruCache.createResourceArchive(-67, 5);
+          PacketBuffer.field_m = WeightedLruCache.createResourceArchive(-15, 6);
+          SoundCache.field_c = WeightedLruCache.createResourceArchive(121, 7);
+          EntitySound.field_i = WeightedLruCache.createResourceArchive(-17, 8);
+          QuadraticPointPath.field_j = WeightedLruCache.createResourceArchive(-16, 9);
+          NetworkArchiveRequest.field_y = WeightedLruCache.createResourceArchive(param0 ^ -89, 10);
+          FullscreenFocusCanvas.setBenefitsArchives(LinearPointPath.field_p, (byte) -126, StandardContentTransitionDialog.field_lb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -351,7 +351,7 @@ public final class HoldTheLine extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          sb.a((byte) -66);
+          RoadControlPointSpec.a((byte) -66);
           if (MidiPcmStream.field_U != null) {
             AgeValidator.a(-29486, false);
           }
@@ -411,7 +411,7 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           lh.a(wi.field_b, -81, (java.awt.Component) ((Object) MouseInputHandler.field_b));
           RaceSetupMenu.field_y = null;
-          RotatedSpriteAsset.a(0, 16777215, co.field_a, (java.applet.Applet) (this), 0, 0);
+          RotatedSpriteAsset.initializeBenefitsPanel(0, 16777215, co.field_a, (java.applet.Applet) (this), 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -443,7 +443,7 @@ public final class HoldTheLine extends NetworkGameClient {
         var5 = field_D;
         try {
           ArchiveRequest.h(-11875);
-          LoginForm.h(-1542826527);
+          LoginForm.updatePositionalSounds(-1542826527);
           ad.a((byte) -76);
           stackIn_4_1 = 1051;
           stackIn_5_2 = (MidiPcmStream.field_U != null);
@@ -454,7 +454,7 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           do {
             if (!PasswordFieldRenderer.pollServerPacket(ae.field_e, 31881)) {
-              qn.a(0, 0);
+              PlayerStatsRequest.flushServerPackets(0, 0);
               break;
             }
             this.dispatchServerPacket(-6);
@@ -481,7 +481,7 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           var2_int = stackIn_38_0;
           if (var2_int != 0) {
-            r.a(-28036);
+            ServerConnectionState.closeServerConnection(-28036);
           }
           if (NamedSoundEffect.b((byte) 103)) {
             var3 = this.processReconnect((byte) 89);
@@ -489,7 +489,7 @@ public final class HoldTheLine extends NetworkGameClient {
               1 == var3) {
               StraightRoadSegment.resendArchiveKeyRequests(2, (byte) 86);
               DirectByteStorage.a(3, 0);
-              b.a(true, 4);
+              b.resendAchievementRequests(true, 4);
               RaceSetupMenu.resendPendingDataRequests(6, (byte) 51);
             }
             if (2 == var3 ||
@@ -503,7 +503,7 @@ public final class HoldTheLine extends NetworkGameClient {
             AgeValidator.a(-29486, false);
           }
           if (LoginForm.field_G == 2) {
-            if (!pj.b((byte) 123)) {
+            if (!RoadShadowRenderer.isGuestMode((byte) 123)) {
               dg.a((byte) -118);
             }
             LoginForm.field_G = 3;
@@ -514,8 +514,8 @@ public final class HoldTheLine extends NetworkGameClient {
             ai.loadEncryptedCourses(NetworkArchiveRequest.field_y, RaceSetupMenu.field_y.key, -106);
             NetworkArchiveRequest.field_y = null;
           }
-          if (!RotatedSpriteAsset.a(113)) {
-            LoginCredentialType.a((byte) 0);
+          if (!RotatedSpriteAsset.isPlayerProgressLoaded(113)) {
+            LoginCredentialType.pollPlayerProgress((byte) 0);
             return;
           }
           boolean decompiledFrameRemainder1 = true;
@@ -555,7 +555,7 @@ public final class HoldTheLine extends NetworkGameClient {
                     }
                     if (EntitySound.field_j ||
                       1 != BufferedRandomAccessFile.field_d &&
-                      ma.field_k != 1) {
+                      AchievementStatusRequest.field_k != 1) {
                       fieldTemp$0 = MenuList.field_h - 2;
                       MenuList.field_h = MenuList.field_h - 2;
                       if (!(0 <= fieldTemp$0)) {
@@ -609,7 +609,7 @@ public final class HoldTheLine extends NetworkGameClient {
                     -1 != ByteStorage.field_b) {
                     if (EntitySound.field_j ||
                       1 != BufferedRandomAccessFile.field_d &&
-                      ma.field_k != 1) {
+                      AchievementStatusRequest.field_k != 1) {
                       fieldTemp$2 = MenuList.field_h - 2;
                       MenuList.field_h = MenuList.field_h - 2;
                       if (!(fieldTemp$2 >= 0)) {
@@ -645,7 +645,7 @@ public final class HoldTheLine extends NetworkGameClient {
                     if (var4 != 0) {
                       if (LoginForm.field_G == 1) {
                         if (ValidationIndicator.field_L) {
-                          FullscreenFocusCanvas.a(114);
+                          FullscreenFocusCanvas.showGuestLogin(114);
                           if (var5 != 0) {
                             MouseInputHandler.b((byte) -54);
                           }
@@ -664,7 +664,7 @@ public final class HoldTheLine extends NetworkGameClient {
                           decompiledFrameRemainder0 = (var5 != 0);
                         }
                         if (decompiledFrameRemainder0) {
-                          if (!pj.b((byte) 100)) {
+                          if (!RoadShadowRenderer.isGuestMode((byte) 100)) {
                             if (12 == ByteStorage.field_b &&
                               of.a(-969)) {
                               ByteStorage.field_b = 0;
@@ -758,18 +758,18 @@ public final class HoldTheLine extends NetworkGameClient {
               this.field_C = 0;
             }
           }
-          if (~ma.field_k != ~BufferedRandomAccessFile.field_d) {
+          if (~AchievementStatusRequest.field_k != ~BufferedRandomAccessFile.field_d) {
             fieldTemp$4 = MouseInputHandler.field_c + 1;
             MouseInputHandler.field_c = MouseInputHandler.field_c + 1;
-            if (fieldTemp$4 >= 80 && (ma.field_k == 1 ||
-              o.a(ma.field_k, 2) != null)) {
-              BufferedRandomAccessFile.field_d = ma.field_k;
+            if (fieldTemp$4 >= 80 && (AchievementStatusRequest.field_k == 1 ||
+              o.a(AchievementStatusRequest.field_k, 2) != null)) {
+              BufferedRandomAccessFile.field_d = AchievementStatusRequest.field_k;
               MouseInputHandler.field_c = 0;
             }
           }
           if (ArchiveRequest.field_r != -1 &&
             UsernameLoginCredentials.a(nm.field_b, true)) {
-            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, ArchiveRequest.field_r, BlobWriteRequest.field_j, qn.field_k, QuickChatPhraseDefinition.field_r, DiskCacheStore.field_i);
+            MusicPatchPcmStream.field_r = new RaceWorld(nm.field_b, ArchiveRequest.field_r, BlobWriteRequest.field_j, PlayerStatsRequest.field_k, QuickChatPhraseDefinition.field_r, DiskCacheStore.field_i);
             ArchiveRequest.field_r = -1;
           }
           return;
@@ -787,8 +787,8 @@ public final class HoldTheLine extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          GameKeyHandler.a((byte) -105, 50);
-          if (!pj.b((byte) 107)) {
+          GameKeyHandler.setTickRate((byte) -105, 50);
+          if (!RoadShadowRenderer.isGuestMode((byte) 107)) {
             RoadSegment.setAlternateMenuItems(of.a(-969), (byte) 97);
           }
           OutlinedRoadStripRenderer.field_r = -1;
@@ -800,11 +800,11 @@ public final class HoldTheLine extends NetworkGameClient {
           var2_int = 84 / ((42 - param0) / 51);
           StrongCacheEntry.field_w = 0;
           IntrusiveDeque.field_b = -1;
-          fb.field_n = new IntrusiveDeque();
+          ScoreSubmission.field_n = new IntrusiveDeque();
           bo.field_c = false;
           LoginForm.field_G = 0;
           ValidationIndicator.field_L = true;
-          h.b((byte) 115);
+          FullscreenErrorReason.b((byte) 115);
           this.field_z = true;
           var3 = new i();
           eg.a(20, 0, 480, field_F.ascent, 0, 0, 5, field_F.ascent, 0, field_F, field_F, 2, (NineSlicePanel) null, 320, 0, 240, (NineSlicePanel) null, 20, 0, 1, var3);
@@ -874,8 +874,8 @@ public final class HoldTheLine extends NetworkGameClient {
             MidiNote.a((byte) -97, (java.awt.Canvas) (var2));
             return;
           }
-          if (!RotatedSpriteAsset.a(param0 ^ 318)) {
-            CacheEntry.a(param0 ^ 350, uj.field_b, 100.0f);
+          if (!RotatedSpriteAsset.isPlayerProgressLoaded(param0 ^ 318)) {
+            CacheEntry.a(param0 ^ 350, MeshMaterial.field_b, 100.0f);
             MidiNote.a((byte) -97, (java.awt.Canvas) (var2));
             return;
           }
@@ -891,7 +891,7 @@ public final class HoldTheLine extends NetworkGameClient {
               }
               cm.field_d.draw(var3_int, 0);
             }
-            hi.paintRasterBuffer((java.awt.Canvas) (var2), 0, true, 0);
+            InheritedWidgetStyle.paintRasterBuffer((java.awt.Canvas) (var2), 0, true, 0);
             return;
           }
           if (param0 != 256) {
@@ -975,7 +975,7 @@ public final class HoldTheLine extends NetworkGameClient {
           if ((decompiledSharedTail0) &&
             (ReflectionCheck.a(false))) {
             stackIn_103_0 = (MidiPcmStream.field_U != null) || (CourseDefinition.field_a);
-            fj.a(stackIn_103_0, true);
+            WidgetStyleNode.drawClientContent(stackIn_103_0, true);
           }
           if (LoginCredentialType.field_c) {
             nm.field_c.draw(Integer.toString(IterableSecondaryNodeDeque.field_f), 10, 30, 0, -1);
@@ -985,7 +985,7 @@ public final class HoldTheLine extends NetworkGameClient {
             var9 = (int)(var7 >> 10) + "kB";
             nm.field_c.draw(var9, 10, 50, 0, -1);
           }
-          hi.paintRasterBuffer((java.awt.Canvas) (var2), 0, true, 0);
+          InheritedWidgetStyle.paintRasterBuffer((java.awt.Canvas) (var2), 0, true, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1001,7 +1001,7 @@ public final class HoldTheLine extends NetworkGameClient {
         int var4 = 0;
         var4 = field_D;
         try {
-          dg.b(-9342);
+          dg.initializeMenuItems(-9342);
           if (param0) {
             DiskCacheWorker.a(LoginForm.field_T, (byte) -81);
           }
@@ -1011,11 +1011,11 @@ public final class HoldTheLine extends NetworkGameClient {
           }
           if (null == RotatedSpriteCache.field_g) {
             MusicPatchEnvelope.field_f = false;
-            ll.field_a = false;
-            RotatedSpriteCache.field_g = new jg[4];
-            if (!pj.b((byte) 82)) {
-              RotatedSpriteAsset.field_k = SpriteSheetAsset.a((byte) -114, 4);
-              IsaacRandom.field_g = hi.requestBlobRead(6, -91);
+            AccountProtocolState.field_a = false;
+            RotatedSpriteCache.field_g = new LeaderboardRequest[4];
+            if (!RoadShadowRenderer.isGuestMode((byte) 82)) {
+              RotatedSpriteAsset.field_k = SpriteSheetAsset.requestAchievementStatus((byte) -114, 4);
+              IsaacRandom.field_g = InheritedWidgetStyle.requestBlobRead(6, -91);
             }
           }
           if (null != b.field_d &&
@@ -1028,7 +1028,7 @@ public final class HoldTheLine extends NetworkGameClient {
               CacheEntry.a(125, NetworkGameClient.field_r, 3.0f);
               return;
             }
-            if (!co.a(PacketBuffer.field_m, b.field_d, 10302)) {
+            if (!co.pollGameAudioLoaded(PacketBuffer.field_m, b.field_d, 10302)) {
               CacheEntry.a(85, um.field_f, 4.0f);
               return;
             }
@@ -1052,7 +1052,7 @@ public final class HoldTheLine extends NetworkGameClient {
               return;
             }
             if (!IntArrayReadRequest.a(ta.field_a, DropTargetWidget.field_J, (byte) 111, StandardContentTransitionDialog.field_lb)) {
-              CacheEntry.a(98, ge.field_a, 16.0f);
+              CacheEntry.a(98, ContentTransitionState.field_a, 16.0f);
               return;
             }
           }
@@ -1100,17 +1100,17 @@ public final class HoldTheLine extends NetworkGameClient {
           if (null != DropTargetWidget.field_J) {
             CacheEntry.a(111, RasterBuffer.field_g, 65.0f);
             this.renderGameFrame(256);
-            DropTargetWidget.a(30865, StandardContentTransitionDialog.field_lb, DropTargetWidget.field_J, ta.field_a);
+            DropTargetWidget.loadGameGraphics(30865, StandardContentTransitionDialog.field_lb, DropTargetWidget.field_J, ta.field_a);
             DropTargetWidget.field_J = null;
             ta.field_a = null;
             TexturedRoadFillRenderer.resetFrameTiming(116);
             return;
           }
           if (null != QuadraticPointPath.field_j) {
-            CacheEntry.a(110, fj.field_r, 90.0f);
+            CacheEntry.a(110, WidgetStyleNode.field_r, 90.0f);
             this.renderGameFrame(256);
-            DropTargetWidget.a(QuadraticPointPath.field_j, -121);
-            cd.b(121);
+            DropTargetWidget.loadCourseProgression(QuadraticPointPath.field_j, -121);
+            cd.resetPlayerProgress(121);
             QuadraticPointPath.field_j = null;
             TexturedRoadFillRenderer.resetFrameTiming(94);
             return;
@@ -1118,14 +1118,14 @@ public final class HoldTheLine extends NetworkGameClient {
           if (null != NetworkArchiveRequest.field_y &&
             of.a(-969) &&
             RaceSetupMenu.field_y.key != null) {
-            CacheEntry.a(106, fj.field_r, 95.0f);
+            CacheEntry.a(106, WidgetStyleNode.field_r, 95.0f);
             this.renderGameFrame(256);
             ai.loadEncryptedCourses(NetworkArchiveRequest.field_y, RaceSetupMenu.field_y.key, -95);
             NetworkArchiveRequest.field_y = null;
             TexturedRoadFillRenderer.resetFrameTiming(88);
             return;
           }
-          ge.field_c = new VehicleDefinition[8];
+          ContentTransitionState.field_c = new VehicleDefinition[8];
           var3_int = 0;
           do {
             if (var3_int >= 8) {
@@ -1135,7 +1135,7 @@ public final class HoldTheLine extends NetworkGameClient {
               }
               break;
             }
-            ge.field_c[var3_int] = new VehicleDefinition(var3_int);
+            ContentTransitionState.field_c[var3_int] = new VehicleDefinition(var3_int);
             var3_int++;
           } while (var4 == 0);
           if (param1) {

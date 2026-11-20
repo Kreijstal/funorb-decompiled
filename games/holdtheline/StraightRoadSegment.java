@@ -123,7 +123,7 @@ final class StraightRoadSegment extends RoadSegment {
           }
           var2 = new PaletteBitmapFont(param1, DirectByteStorage.field_j, Vector2i.field_g, EditableTextField.field_K, ad.field_d, field_E, IterableSecondaryNodeDeque.field_e);
           var3 = 26 / ((param0 - 56) / 51);
-          tk.clearDecodedSpriteSheet(false);
+          VehicleEngineSounds.clearDecodedSpriteSheet(false);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -216,7 +216,7 @@ final class StraightRoadSegment extends RoadSegment {
             var6 = var6 | 16;
           }
           IsaacPacketBuffer.field_p.writeByte(111, var6);
-          var7 = ph.a((byte) -48, GameKeyHandler.a(113));
+          var7 = ph.a((byte) -48, GameKeyHandler.getApplet(113));
           if (var7 == null) {
             var7 = "";
           }
@@ -224,9 +224,9 @@ final class StraightRoadSegment extends RoadSegment {
           if (TutorialTransition.field_f != null) {
             IsaacPacketBuffer.field_p.writePrefixedCp1252String(29336, TutorialTransition.field_f);
           }
-          dg.a(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
+          dg.writeEncryptedPacket(false, ArchiveProvider.field_a, SecondaryNodeDequeIterator.field_a, IsaacPacketBuffer.field_p, EmailAddressValidator.field_k);
           IsaacPacketBuffer.field_p.backpatchShortLength(-29190, IsaacPacketBuffer.field_p.position - var5_int);
-          qn.a(-1, 0);
+          PlayerStatsRequest.flushServerPackets(-1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

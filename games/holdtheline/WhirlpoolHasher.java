@@ -17,7 +17,7 @@ final class WhirlpoolHasher {
     final static void readArchiveKeyReply(byte param0) {
         ArchiveKeyRequest var1 = (ArchiveKeyRequest) (TutorialPage.field_a.first((byte) 87));
         if (var1 == null) {
-          r.a(-28036);
+          ServerConnectionState.closeServerConnection(-28036);
           return;
         }
         IsaacPacketBuffer var2 = RoadStripRenderer.field_e;
@@ -254,7 +254,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.blockWords[var2] = GameKeyHandler.a(GameKeyHandler.a(ViewportSizingController.andLong(65280L, (long)this.blockBuffer[var3 + 6] << 8), GameKeyHandler.a(ViewportSizingController.andLong((long)this.blockBuffer[5 + var3] << 16, 16711680L), GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a(GameKeyHandler.a((long)this.blockBuffer[var3] << 56, ViewportSizingController.andLong(255L, (long)this.blockBuffer[1 + var3]) << 48), ViewportSizingController.andLong((long)this.blockBuffer[2 + var3], 255L) << 40), ViewportSizingController.andLong(1095216660480L, (long)this.blockBuffer[3 + var3] << 32)), ViewportSizingController.andLong((long)this.blockBuffer[4 + var3] << 24, 4278190080L)))), ViewportSizingController.andLong(255L, (long)this.blockBuffer[var3 + 7]));
+          this.blockWords[var2] = GameKeyHandler.xorLongs(GameKeyHandler.xorLongs(ViewportSizingController.andLong(65280L, (long)this.blockBuffer[var3 + 6] << 8), GameKeyHandler.xorLongs(ViewportSizingController.andLong((long)this.blockBuffer[5 + var3] << 16, 16711680L), GameKeyHandler.xorLongs(GameKeyHandler.xorLongs(GameKeyHandler.xorLongs(GameKeyHandler.xorLongs((long)this.blockBuffer[var3] << 56, ViewportSizingController.andLong(255L, (long)this.blockBuffer[1 + var3]) << 48), ViewportSizingController.andLong((long)this.blockBuffer[2 + var3], 255L) << 40), ViewportSizingController.andLong(1095216660480L, (long)this.blockBuffer[3 + var3] << 32)), ViewportSizingController.andLong((long)this.blockBuffer[4 + var3] << 24, 4278190080L)))), ViewportSizingController.andLong(255L, (long)this.blockBuffer[var3 + 7]));
           var2++;
           var3 += 8;
         }
@@ -262,7 +262,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.hash[var2Lifetime1];
           arrayValue$1 = this.blockWords[var2Lifetime1];
           this.roundKey[var2Lifetime1] = dupTemp$0;
-          this.cipherState[var2Lifetime1] = GameKeyHandler.a(arrayValue$1, dupTemp$0);
+          this.cipherState[var2Lifetime1] = GameKeyHandler.xorLongs(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -270,7 +270,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.roundScratch[var3Lifetime1] = GameKeyHandler.a(this.roundScratch[var3Lifetime1], ri.field_g[var4][LoginChoicePanel.a((int)(this.roundKey[LoginChoicePanel.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.roundScratch[var3Lifetime1] = GameKeyHandler.xorLongs(this.roundScratch[var3Lifetime1], WhirlpoolTables.roundTables[var4][LoginChoicePanel.a((int)(this.roundKey[LoginChoicePanel.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -278,14 +278,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.roundKey[var3Lifetime1Lifetime1] = this.roundScratch[var3Lifetime1Lifetime1];
           }
-          this.roundKey[0] = GameKeyHandler.a(this.roundKey[0], ri.field_f[var2Lifetime2]);
+          this.roundKey[0] = GameKeyHandler.xorLongs(this.roundKey[0], WhirlpoolTables.roundConstants[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.roundScratch[var3Lifetime1Lifetime2] = this.roundKey[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.roundScratch[var3Lifetime1Lifetime2] = GameKeyHandler.a(this.roundScratch[var3Lifetime1Lifetime2], ri.field_g[var7][LoginChoicePanel.a((int)(this.cipherState[LoginChoicePanel.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.roundScratch[var3Lifetime1Lifetime2] = GameKeyHandler.xorLongs(this.roundScratch[var3Lifetime1Lifetime2], WhirlpoolTables.roundTables[var7][LoginChoicePanel.a((int)(this.cipherState[LoginChoicePanel.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -295,7 +295,7 @@ final class WhirlpoolHasher {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.hash[var2Lifetime3] = GameKeyHandler.a(this.hash[var2Lifetime3], GameKeyHandler.a(this.cipherState[var2Lifetime3], this.blockWords[var2Lifetime3]));
+          this.hash[var2Lifetime3] = GameKeyHandler.xorLongs(this.hash[var2Lifetime3], GameKeyHandler.xorLongs(this.cipherState[var2Lifetime3], this.blockWords[var2Lifetime3]));
         }
         return;
     }

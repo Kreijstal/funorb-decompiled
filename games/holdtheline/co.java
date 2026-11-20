@@ -8,7 +8,7 @@ final class co {
     static String field_c;
     static String field_e;
 
-    final static int a(int param0) {
+    final static int getKeyboardIdleTicks(int param0) {
         if (param0 != 0) {
           field_b = (SpriteAsset) null;
           return DisplayNameValidator.field_j;
@@ -16,7 +16,7 @@ final class co {
         return DisplayNameValidator.field_j;
     }
 
-    final static void a(boolean param0) {
+    final static void releaseKeyHandler(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
         ResourceArchive var3 = null;
@@ -27,7 +27,7 @@ final class co {
             return;
           }
           var3 = (ResourceArchive) null;
-          co.a((ResourceArchive) null, (ResourceArchive) null, 26);
+          co.pollGameAudioLoaded((ResourceArchive) null, (ResourceArchive) null, 26);
           return;
         }
         var1 = MusicCrossfadeStream.field_n;
@@ -36,11 +36,11 @@ final class co {
         }
         if (param0) {
           var3Lifetime1 = (ResourceArchive) null;
-          co.a((ResourceArchive) null, (ResourceArchive) null, 26);
+          co.pollGameAudioLoaded((ResourceArchive) null, (ResourceArchive) null, 26);
         }
     }
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2) {
+    final static boolean pollGameAudioLoaded(ResourceArchive param0, ResourceArchive param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -87,7 +87,7 @@ final class co {
         }
     }
 
-    final static void c(int param0) {
+    final static void advanceLogoAnimation(int param0) {
         if (StrongCacheEntry.field_q == -TextLineLayout.field_l + param0) {
           StrongCacheEntry.field_q = StrongCacheEntry.field_q + 1;
           return;

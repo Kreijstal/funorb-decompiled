@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mn {
-    static boolean field_a;
+    static boolean guestMode;
     static Sprite field_c;
     static int field_b;
 
@@ -21,12 +21,12 @@ final class mn {
             if (0 == param0.length()) {
               var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            eo.a(param1, -31645, "document.cookie=\"" + var5 + "\"");
+            JavaScriptBridge.evaluateJavaScript(param1, -31645, "document.cookie=\"" + var5 + "\"");
             if (param2 != -1) {
               RoadFillRenderer var6 = (RoadFillRenderer) null;
               mn.a((RoadSegment[]) null, (RoadFillRenderer) null, (byte) 41);
             }
-            bb.a(param1, (byte) 49);
+            bb.updateNavigationLinks(param1, (byte) 49);
           } catch (RuntimeException runtimeException) {
             throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "mn.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
@@ -40,7 +40,7 @@ final class mn {
     public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 >= -102) {
-          field_a = false;
+          guestMode = false;
         }
     }
 
@@ -170,7 +170,7 @@ final class mn {
     }
 
     static {
-        field_a = true;
+        guestMode = true;
         field_b = -1;
     }
 }

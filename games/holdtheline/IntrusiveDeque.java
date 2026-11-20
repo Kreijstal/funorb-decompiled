@@ -88,7 +88,7 @@ final class IntrusiveDeque {
         DelayedServerPacket.field_j = null;
         dg.field_b = null;
         qg.field_b = null;
-        pb.field_a = null;
+        StraightRoadSlicer.field_a = null;
     }
 
     private final void moveSuffixTo(IntrusiveNode param0, byte param1, IntrusiveDeque param2) {

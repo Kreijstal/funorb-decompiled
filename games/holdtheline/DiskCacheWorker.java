@@ -5,14 +5,14 @@ final class DiskCacheWorker implements Runnable {
     static float[] field_e;
     static SpriteAsset field_b;
     static int[] field_a;
-    private SecondaryNodeDeque field_d;
+    private SecondaryNodeDeque requests;
     static float[] field_f;
-    int field_c;
-    private Thread field_h;
+    int pendingCount;
+    private Thread thread;
     static int field_i;
-    private boolean field_g;
+    private boolean shutdown;
 
-    final DiskCacheRequest a(int param0, DiskCacheStore param1, byte[] param2, int param3) {
+    final DiskCacheRequest enqueueWrite(int param0, DiskCacheStore param1, byte[] param2, int param3) {
         DiskCacheRequest var5 = null;
         RuntimeException var5_ref = null;
         DiskCacheRequest stackIn_2_0 = null;
@@ -34,7 +34,7 @@ final class DiskCacheWorker implements Runnable {
             return stackIn_2_0;
           }
           var5.field_t = false;
-          this.a(param3 - 39427, var5);
+          this.enqueue(param3 - 39427, var5);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,16 +69,16 @@ final class DiskCacheWorker implements Runnable {
           Exception var2_ref = null;
           String var6 = null;
           var5 = HoldTheLine.field_D;
-          while (!this.field_g) {
-            var2 = this.field_d;
+          while (!this.shutdown) {
+            var2 = this.requests;
             synchronized (var2) {
-              var7 = (DiskCacheRequest) (this.field_d.removeFirst((byte) 113));
+              var7 = (DiskCacheRequest) (this.requests.removeFirst((byte) 113));
               if (var7 != null) {
-                this.field_c = this.field_c - 1;
+                this.pendingCount = this.pendingCount - 1;
                 decompiledRegionSelector0 = 1;
               } else {
                 try {
-                  this.field_d.wait();
+                  this.requests.wait();
                 } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   interruptedException = (InterruptedException) (Object) decompiledCaughtException;
@@ -93,7 +93,7 @@ final class DiskCacheWorker implements Runnable {
               boolean decompiledFrameRemainder0 = true;
               if (var7.field_y != 2) {
                 if (var7.field_y == 3) {
-                  var7.field_v = var7.field_x.a(122, (int)var7.secondaryKey);
+                  var7.field_v = var7.field_x.read(122, (int)var7.secondaryKey);
                   decompiledRegionSelector1 = 1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -101,7 +101,7 @@ final class DiskCacheWorker implements Runnable {
                   var7.field_u = false;
                 }
               } else {
-                var7.field_x.a(var7.field_v, (int)var7.secondaryKey, var7.field_v.length, false);
+                var7.field_x.write(var7.field_v, (int)var7.secondaryKey, var7.field_v.length, false);
                 var7.field_u = false;
               }
               if (decompiledFrameRemainder0) {
@@ -145,7 +145,7 @@ final class DiskCacheWorker implements Runnable {
         field_f = null;
     }
 
-    final DiskCacheRequest a(DiskCacheStore param0, int param1, int param2) {
+    final DiskCacheRequest readNow(DiskCacheStore param0, int param1, int param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -162,9 +162,9 @@ final class DiskCacheWorker implements Runnable {
         try {
           var4 = new DiskCacheRequest();
           var4.field_y = 1;
-          var5 = this.field_d;
+          var5 = this.requests;
           synchronized (var5) {
-            var6 = (DiskCacheRequest) (this.field_d.first(param1 + 18139));
+            var6 = (DiskCacheRequest) (this.requests.first(param1 + 18139));
             while (var6 != null) {
               if ((long)param2 == var6.secondaryKey &&
                 param0 == var6.field_x &&
@@ -174,10 +174,10 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (DiskCacheRequest) (this.field_d.next(param1 ^ 17949));
+              var6 = (DiskCacheRequest) (this.requests.next(param1 ^ 17949));
             }
           }
-          var4.field_v = param0.a(117, param2);
+          var4.field_v = param0.read(117, param2);
           var4.field_t = true;
           var4.field_u = false;
           if (param1 == -18017) {
@@ -200,7 +200,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final DiskCacheRequest a(int param0, DiskCacheStore param1, int param2) {
+    final DiskCacheRequest enqueueRead(int param0, DiskCacheStore param1, int param2) {
         DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         DiskCacheRequest stackIn_1_0 = null;
@@ -214,7 +214,7 @@ final class DiskCacheWorker implements Runnable {
           var4.secondaryKey = (long)param2;
           var4.field_x = param1;
           var4.field_t = false;
-          this.a(-27429, var4);
+          this.enqueue(-27429, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -241,23 +241,23 @@ final class DiskCacheWorker implements Runnable {
         if (LinearPointPath.field_h > dm.field_a) {
           return null;
         }
-        if (we.field_l + LinearPointPath.field_h > dm.field_a) {
+        if (SavedRasterState.field_l + LinearPointPath.field_h > dm.field_a) {
           return UiWidget.field_s;
         }
         return null;
     }
 
-    final void a(boolean param0) {
+    final void shutdown(boolean param0) {
         try {
-          this.field_g = param0 ? true : false;
-          synchronized (this.field_d) {
-            this.field_d.notifyAll();
+          this.shutdown = param0 ? true : false;
+          synchronized (this.requests) {
+            this.requests.notifyAll();
           }
           try {
-            this.field_h.join();
+            this.thread.join();
           } catch (InterruptedException interruptedException) {
           }
-          this.field_h = null;
+          this.thread = null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -265,7 +265,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    private final void a(int param0, DiskCacheRequest param1) {
+    private final void enqueue(int param0, DiskCacheRequest param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -273,11 +273,11 @@ final class DiskCacheWorker implements Runnable {
         Throwable decompiledCaughtException = null;
         Object var3_ref = null;
         try {
-          var3_ref = this.field_d;
+          var3_ref = this.requests;
           synchronized (var3_ref) {
-            this.field_d.addLast(-66, param1);
-            this.field_c = this.field_c + 1;
-            this.field_d.notifyAll();
+            this.requests.addLast(-66, param1);
+            this.pendingCount = this.pendingCount + 1;
+            this.requests.notifyAll();
           }
           if (param0 == -27429) {
             return;
@@ -300,9 +300,9 @@ final class DiskCacheWorker implements Runnable {
 
     DiskCacheWorker(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
-        this.field_d = new SecondaryNodeDeque();
-        this.field_g = false;
-        this.field_c = 0;
+        this.requests = new SecondaryNodeDeque();
+        this.shutdown = false;
+        this.pendingCount = 0;
         try {
           var2 = param0.startThread((byte) -28, 5, (Runnable) (this));
           while (var2.field_d == 0) {
@@ -311,7 +311,7 @@ final class DiskCacheWorker implements Runnable {
           if (2 == var2.field_d) {
             throw new RuntimeException();
           }
-          this.field_h = (Thread) (var2.field_b);
+          this.thread = (Thread) (var2.field_b);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

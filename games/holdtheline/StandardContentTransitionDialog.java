@@ -3,7 +3,7 @@
  */
 final class StandardContentTransitionDialog extends ContentTransitionDialog {
     static ResourceArchive field_lb;
-    static h field_nb;
+    static FullscreenErrorReason field_nb;
     static String field_mb;
     static int[] field_ob;
     static float[] field_kb;
@@ -13,7 +13,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static UiTheme n(int param0) {
+    final static UiTheme getDefaultTheme(int param0) {
         int var1 = 93 % ((param0 - 49) / 42);
         if (ValidatedTextField.field_X != null) {
           return ValidatedTextField.field_X;
@@ -40,7 +40,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         field_mb = null;
     }
 
-    final static Sprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static Sprite[] loadSpritesByName(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -57,11 +57,11 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         try {
           if (param1 != 33) {
             var6 = (String[]) null;
-            StandardContentTransitionDialog.a((String) null, (String[]) null, 106, -22);
+            StandardContentTransitionDialog.completeNameRequest((String) null, (String[]) null, 106, -22);
           }
           var4_int = param0.getGroupId(param2, param1 ^ 34);
           var5 = param0.getFileId(var4_int, param3, false);
-          stackIn_3_0 = MusicCrossfadeStream.a(var5, param0, var4_int, false);
+          stackIn_3_0 = MusicCrossfadeStream.loadSprites(var5, param0, var4_int, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         }
     }
 
-    final static void a(String param0, String[] param1, int param2, int param3) {
+    final static void completeNameRequest(String param0, String[] param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
@@ -105,7 +105,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
           bb.field_a = ValidationState.field_c;
           if (param2 > -53) {
             var6 = (String) null;
-            StandardContentTransitionDialog.a(-106, (String) null);
+            StandardContentTransitionDialog.getNamedArchiveFile(-106, (String) null);
           }
           if (param3 == 255) {
             stackIn_13_0 = !(13 <= ResizableDialog.field_V);
@@ -113,14 +113,14 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
             return;
           }
           if (param3 < 100) {
-            BoundedRandomAccessFile.field_d = ij.a(param0, 256, param3);
+            BoundedRandomAccessFile.field_d = ChatMessage.createNameAvailabilityResult(param0, 256, param3);
             return;
           }
           if (param3 <= 105) {
-            BoundedRandomAccessFile.field_d = ArchiveRequest.a(param1, (byte) 119);
+            BoundedRandomAccessFile.field_d = ArchiveRequest.createNameSuggestionsResult(param1, (byte) 119);
             return;
           }
-          BoundedRandomAccessFile.field_d = ij.a(param0, 256, param3);
+          BoundedRandomAccessFile.field_d = ChatMessage.createNameAvailabilityResult(param0, 256, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,16 +142,16 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
         }
     }
 
-    final void a(UiWidget param0, byte param1) {
+    final void setContent(UiWidget param0, byte param1) {
         try {
-          super.a(param0, (byte) 99);
+          super.setContent(param0, (byte) 99);
           int var3_int = 0 / ((-38 - param1) / 50);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "si.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static byte[] a(int param0, String param1) {
+    final static byte[] getNamedArchiveFile(int param0, String param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -181,7 +181,7 @@ final class StandardContentTransitionDialog extends ContentTransitionDialog {
     static {
         field_mb = "Type your age in years";
         field_ob = new int[8192];
-        field_nb = new h();
+        field_nb = new FullscreenErrorReason();
         field_kb = new float[]{0.25f, 1.0f, 3.0f, 250.0f, 1500.0f, 150.0f, 12.0f, 10.0f};
     }
 }

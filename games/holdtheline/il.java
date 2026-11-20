@@ -14,7 +14,7 @@ final class il {
         field_a = null;
     }
 
-    final static IndexedSprite[] a(byte param0, ResourceArchive param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSprites(byte param0, ResourceArchive param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -45,32 +45,32 @@ final class il {
         }
     }
 
-    final static jg a(int param0, int param1, int param2, int param3, byte param4) {
-        jg var10 = null;
+    final static LeaderboardRequest requestLeaderboard(int param0, int param1, int param2, int param3, byte param4) {
+        LeaderboardRequest var10 = null;
         int var6 = HoldTheLine.field_D;
-        jg var5 = (jg) (MenuList.field_e.first((byte) 120));
+        LeaderboardRequest var5 = (LeaderboardRequest) (MenuList.field_e.first((byte) 120));
         while (var5 != null) {
-          if (var5.field_i == param2) {
+          if (var5.leaderboardId == param2) {
             return var5;
           }
-          var5 = (jg) (MenuList.field_e.next((byte) -45));
+          var5 = (LeaderboardRequest) (MenuList.field_e.next((byte) -45));
         }
         if (param4 == -66) {
-          var10 = new jg();
-          var10.field_n = param0;
-          var10.field_l = param3;
-          var10.field_i = param2;
+          var10 = new LeaderboardRequest();
+          var10.valuesPerRow = param0;
+          var10.rowLimit = param3;
+          var10.leaderboardId = param2;
           MenuList.field_e.addLast((byte) -114, var10);
-          TextFieldValidator.a(var10, (byte) 86, param1);
+          TextFieldValidator.sendLeaderboardRequest(var10, (byte) 86, param1);
           return var10;
         }
         il.clearSharedReferences(-18);
-        jg var9 = new jg();
-        var9.field_n = param0;
-        var9.field_l = param3;
-        var9.field_i = param2;
+        LeaderboardRequest var9 = new LeaderboardRequest();
+        var9.valuesPerRow = param0;
+        var9.rowLimit = param3;
+        var9.leaderboardId = param2;
         MenuList.field_e.addLast((byte) -114, var9);
-        TextFieldValidator.a(var9, (byte) 86, param1);
+        TextFieldValidator.sendLeaderboardRequest(var9, (byte) 86, param1);
         return var9;
     }
 

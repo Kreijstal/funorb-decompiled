@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class RasterBuffer {
-    int field_f;
-    int field_c;
+    int width;
+    int height;
     static TutorialPage[] field_a;
     static float field_d;
     static IntrusiveDeque field_e;
-    int[] field_h;
-    java.awt.Image field_b;
+    int[] pixels;
+    java.awt.Image image;
     static String field_g;
 
-    abstract void a(int param0, int param1, java.awt.Component param2, int param3);
+    abstract void initialize(int param0, int param1, java.awt.Component param2, int param3);
 
     public static void clearSharedReferences(boolean param0) {
         field_e = null;
@@ -22,9 +22,9 @@ abstract class RasterBuffer {
         field_a = null;
     }
 
-    abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void draw(int param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static boolean a(CourseDefinition param0, int param1) {
+    final static boolean pollCourseGraphicsLoaded(CourseDefinition param0, int param1) {
         CourseDefinition stackIn_95_0 = null;
         RuntimeException stackIn_105_0 = null;
         StringBuilder stackIn_105_1 = null;
@@ -187,14 +187,14 @@ abstract class RasterBuffer {
         }
     }
 
-    final static sh a(String param0, int param1) {
-        sh stackIn_3_0 = null;
-        sh stackIn_7_0 = null;
-        sh stackIn_13_0 = null;
+    final static InputValidationError validateEmailLocalPart(String param0, int param1) {
+        InputValidationError stackIn_3_0 = null;
+        InputValidationError stackIn_7_0 = null;
+        InputValidationError stackIn_13_0 = null;
         int stackIn_21_0 = 0;
-        sh stackIn_26_0 = null;
-        sh stackIn_39_0 = null;
-        sh stackIn_43_0 = null;
+        InputValidationError stackIn_26_0 = null;
+        InputValidationError stackIn_39_0 = null;
+        InputValidationError stackIn_43_0 = null;
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
@@ -280,11 +280,11 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(boolean param0) {
+    final void bindRaster(boolean param0) {
         if (param0) {
           field_d = -1.6866915225982666f;
         }
-        SoftwareRasterizer.bindRaster(this.field_h, this.field_f, this.field_c);
+        SoftwareRasterizer.bindRaster(this.pixels, this.width, this.height);
     }
 
     static {

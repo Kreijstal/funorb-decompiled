@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextHotspotRange extends IntrusiveNode {
-    TextHotspotRange field_p;
+    TextHotspotRange nextLine;
     static String field_r;
-    int field_s;
+    int y;
     static String field_o;
     static String[] field_i;
     static String field_m;
-    int field_l;
-    int field_k;
-    int field_n;
+    int height;
+    int id;
+    int width;
     static String field_q;
-    int field_j;
+    int x;
 
     public static void clearSharedReferences(int param0) {
         if (param0 > 22) {
@@ -40,11 +40,11 @@ final class TextHotspotRange extends IntrusiveNode {
     }
 
     TextHotspotRange(int param0, int param1, int param2, int param3, int param4) {
-        this.field_s = param2;
-        this.field_l = param4;
-        this.field_n = param3;
-        this.field_j = param1;
-        this.field_k = param0;
+        this.y = param2;
+        this.height = param4;
+        this.width = param3;
+        this.x = param1;
+        this.id = param0;
     }
 
     static {

@@ -4,7 +4,7 @@
 final class ak {
     static String[] field_d;
     static String field_a;
-    static sa field_b;
+    static NameRequestState field_b;
     static int field_c;
 
     final static Sprite a(int param0, boolean param1, int param2) {
@@ -20,16 +20,16 @@ final class ak {
         }
         if (param2 == -1) {
           if (null == NameCheckProgressDialog.field_vb) {
-            NameCheckProgressDialog.field_vb = UrlPacketDownloader.a(Js5Transport.field_n, "basic", false, "unachieved");
-            hi.field_N = new Sprite(32, 32);
-            vb.a(-79, hi.field_N);
+            NameCheckProgressDialog.field_vb = UrlPacketDownloader.loadSpriteByName(Js5Transport.field_n, "basic", false, "unachieved");
+            InheritedWidgetStyle.field_N = new Sprite(32, 32);
+            vb.a(-79, InheritedWidgetStyle.field_N);
             NameCheckProgressDialog.field_vb.drawDownscaledThreshold(0, 0, 32, 32);
             MarkerSliderRenderer.restoreRasterTarget(-1);
           }
           if (!param1) {
             stackIn_10_0 = NameCheckProgressDialog.field_vb;
           } else {
-            stackIn_10_0 = hi.field_N;
+            stackIn_10_0 = InheritedWidgetStyle.field_N;
           }
           return stackIn_10_0;
         }
@@ -41,15 +41,15 @@ final class ak {
           }
           return stackIn_15_0;
         }
-        if (!fb.field_i.tryLoadNamedGroup("achievements_128", 89)) {
+        if (!ScoreSubmission.field_i.tryLoadNamedGroup("achievements_128", 89)) {
           if (param1) {
-            stackIn_21_0 = hi.a(32, (byte) -106, 32);
+            stackIn_21_0 = InheritedWidgetStyle.getPlaceholderSprite(32, (byte) -106, 32);
           } else {
             stackIn_21_0 = LoadProgressDialog.field_hb;
           }
           return stackIn_21_0;
         }
-        cd.field_a = StandardContentTransitionDialog.a(fb.field_i, 33, "achievements_128", "");
+        cd.field_a = StandardContentTransitionDialog.loadSpritesByName(ScoreSubmission.field_i, 33, "achievements_128", "");
         FullscreenDisplayMode.field_h = new Sprite[cd.field_a.length];
         TutorialTransition.a(32381);
         var3 = 0;

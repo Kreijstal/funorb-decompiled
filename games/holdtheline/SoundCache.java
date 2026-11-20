@@ -181,7 +181,7 @@ final class SoundCache {
           var5_int = (param3 >>> 12 | (param3 & -1610608641) << 4) ^ param1;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_e.a((byte) 114, var6));
+          var8 = (PcmSample) (this.field_e.get((byte) 114, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -198,7 +198,7 @@ final class SoundCache {
           }
           var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
-          this.field_e.a(var8Lifetime1, var6, false);
+          this.field_e.put(var8Lifetime1, var6, false);
           if (param2 != -14322) {
             stackIn_12_0 = (PcmSample) null;
             return stackIn_12_0;
@@ -595,7 +595,7 @@ final class SoundCache {
           var5_int = param0 ^ (param3 >>> 12 | 65531 & param3 << 4);
           var5_int = var5_int | param3 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_e.a((byte) 121, var6));
+          var8 = (PcmSample) (this.field_e.get((byte) 121, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -604,13 +604,13 @@ final class SoundCache {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (VorbisSample) (this.field_d.a((byte) 120, var6));
+          var9 = (VorbisSample) (this.field_d.get((byte) 120, var6));
           if (var9 == null) {
             var9 = VorbisSample.load(this.field_g, param3, param0);
             if (var9 == null) {
               return null;
             }
-            this.field_d.a(var9, var6, false);
+            this.field_d.put(var9, var6, false);
           }
           var8Lifetime1 = var9.toPcmSample(param1);
           if (var8Lifetime1 == null) {
@@ -618,7 +618,7 @@ final class SoundCache {
             return (PcmSample) (stackIn_15_0);
           }
           var9.unlink(param2);
-          this.field_e.a(var8Lifetime1, var6, false);
+          this.field_e.put(var8Lifetime1, var6, false);
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

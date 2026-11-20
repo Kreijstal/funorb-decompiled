@@ -38,7 +38,7 @@ final class hc {
         field_a = null;
     }
 
-    final static IndexedSprite a(String param0, ResourceArchive param1, int param2, String param3) {
+    final static IndexedSprite loadIndexedSpriteByName(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -59,7 +59,7 @@ final class hc {
             var6 = (Sprite) null;
             hc.a(-78, (Sprite) null, (byte) -62, 68, 71);
           }
-          stackIn_3_0 = DisplayNameForm.a(var4_int, var5, param1, 25);
+          stackIn_3_0 = DisplayNameForm.loadIndexedSprite(var4_int, var5, param1, 25);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class hc {
         }
     }
 
-    final static String a(String param0, byte param1) {
+    final static String reverseString(String param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

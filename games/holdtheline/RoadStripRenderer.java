@@ -208,14 +208,14 @@ abstract class RoadStripRenderer {
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               var6 = -115 / ((param1 - 2) / 39);
-              var5.a(param3, param0, param2, 0);
+              var5.initialize(param3, param0, param2, 0);
               stackIn_1_0 = var5;
               return stackIn_1_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, param2, 0);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param3, param0, param2, 0);
               stackIn_3_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_3_0);
             }

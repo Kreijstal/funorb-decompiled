@@ -15,7 +15,7 @@ final class ReflectionCheck extends IntrusiveNode {
 
     final static boolean a(boolean param0) {
         RotatedSpriteAsset.field_n = true;
-        bn.field_k = 15000L + bb.b(-1);
+        AlternateUsernameLoginCredentials.field_k = 15000L + bb.monotonicTimeMillis(-1);
         if (!param0) {
           return DiskCacheRequest.field_w == 11 ? true : false;
         }

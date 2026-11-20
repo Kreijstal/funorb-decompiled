@@ -112,7 +112,7 @@ abstract class TickClock {
           var3 = args;
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
-            var6 = ArchiveRequest.a((byte) -107, ' ', var5);
+            var6 = ArchiveRequest.splitTrimmedNonempty((byte) -107, ' ', var5);
             var2.addCondition(BoundedRandomAccessFile.parseTutorialCondition(0, var6), param1 ^ 67);
           }
           if (param1 == 55) {

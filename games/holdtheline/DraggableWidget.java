@@ -16,7 +16,7 @@ final class DraggableWidget extends SingleChildWidget {
     private int field_N;
     private int field_H;
 
-    final static Sprite[] h(int param0) {
+    final static Sprite[] buildDecodedSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -36,7 +36,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           var1[var2] = new Sprite(bo.field_b, AchievementUnlockRequest.field_o, DirectByteStorage.field_j[var2], Vector2i.field_g[var2], EditableTextField.field_K[var2], ad.field_d[var2], var5);
         }
-        tk.clearDecodedSpriteSheet(false);
+        VehicleEngineSounds.clearDecodedSpriteSheet(false);
         return var1;
     }
 
@@ -75,7 +75,7 @@ final class DraggableWidget extends SingleChildWidget {
           var3 = -99 % ((param1 - 45) / 47);
           if (var2 != null) {
             var4 = (CharSequence) ((Object) var2);
-            if (ko.a(var4, -13820) != 0L) {
+            if (ko.encodeBase37(var4, -13820) != 0L) {
               return;
             }
           }
@@ -215,7 +215,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static SpriteAsset a(String param0, int param1) {
+    final static SpriteAsset createSpriteAsset(String param0, int param1) {
         RuntimeException var2 = null;
         SpriteAsset stackIn_2_0 = null;
         SpriteAsset stackIn_4_0 = null;
@@ -268,7 +268,7 @@ final class DraggableWidget extends SingleChildWidget {
         int var4 = HoldTheLine.field_D;
         try {
           var1 = new Sprite(540, 140);
-          ProxySocketConnector.a(var1, -1);
+          ProxySocketConnector.pushSpriteRaster(var1, -1);
           TriangleRasterState.c();
           SoftwareRasterizer.clear();
           StrongCacheEntry.field_q = 0;
@@ -280,7 +280,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           Js5Transport.field_o.bindRaster();
           var1.drawHalfSize(0, param0);
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "jd.NA(" + param0 + ')');
         }

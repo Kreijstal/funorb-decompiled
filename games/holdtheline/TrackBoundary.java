@@ -111,9 +111,9 @@ final class TrackBoundary extends BoundaryCurve {
         try {
           var2 = new RotatedSpriteAsset[2];
           var4 = -16 / ((param1 + 14) / 63);
-          var2[0] = WeightedLruCache.a(false, param0, true, false, 2048);
+          var2[0] = WeightedLruCache.createRotatedSpriteAsset(false, param0, true, false, 2048);
           var3 = param0 + "_destroyed";
-          var2[1] = WeightedLruCache.a(false, var3, true, false, 2048);
+          var2[1] = WeightedLruCache.createRotatedSpriteAsset(false, var3, true, false, 2048);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

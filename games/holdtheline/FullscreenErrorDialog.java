@@ -85,7 +85,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
         }
     }
 
-    FullscreenErrorDialog(DialogLayer param0, h param1) {
+    FullscreenErrorDialog(DialogLayer param0, FullscreenErrorReason param1) {
         super(param0, 200, 150);
         Object var3 = null;
         UiWidget var4 = null;
@@ -106,7 +106,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
             } else {
               var3 = TextWidgetStyle.field_m;
               this.height = this.height + 10;
-              if (LoginForm.b(true)) {
+              if (LoginForm.isAdaptiveViewportAvailable(true)) {
                 var3 = dm.field_c;
                 this.height = this.height + 20;
               }
@@ -121,7 +121,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
           var4.x = 0;
           var4.renderer = (WidgetRenderer) ((Object) new TextWidgetStyle(SpriteButtonRenderer.field_w, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(true, var4);
-          this.field_Z = this.addButton((WidgetListener) (this), h.field_f, 25105);
+          this.field_Z = this.addButton((WidgetListener) (this), FullscreenErrorReason.field_f, 25105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,10 +156,10 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
         if (param0 < 39) {
           return;
         }
-        if (!this.field_F) {
+        if (!this.visible) {
           return;
         }
-        this.field_F = false;
+        this.visible = false;
     }
 
     final static int nextIntBounded(int param0, Random param1, int param2) {
@@ -178,7 +178,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActio
           if (~param0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (BoundedRandomAccessFile.a(param2 ^ -6, param0)) {
+          if (BoundedRandomAccessFile.hasAtMostOneBit(param2 ^ -6, param0)) {
             stackIn_6_0 = (int)((long)param0 * (4294967295L & (long)param1.nextInt()) >> 32);
             return stackIn_6_0;
           }

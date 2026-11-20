@@ -151,18 +151,18 @@ abstract class MenuList {
           } else {
             this.decreaseItemValue(1, param1);
           }
-          r.field_b = TutorialAction.field_i;
+          ServerConnectionState.field_b = TutorialAction.field_i;
         } else {
-          r.field_b = r.field_b - 1;
-          if (0 >= r.field_b) {
+          ServerConnectionState.field_b = ServerConnectionState.field_b - 1;
+          if (0 >= ServerConnectionState.field_b) {
             if (1 != param2) {
               this.decreaseItemValue(1, param1);
-              r.field_b = ReflectionCheck.field_o;
+              ServerConnectionState.field_b = ReflectionCheck.field_o;
               var7 = 14 % ((param3 + 51) / 46);
               return;
             }
             this.activateItem(param1, -3565);
-            r.field_b = ReflectionCheck.field_o;
+            ServerConnectionState.field_b = ReflectionCheck.field_o;
           }
         }
         var7Lifetime1 = 14 % ((param3 + 51) / 46);

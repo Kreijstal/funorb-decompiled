@@ -49,7 +49,7 @@ final class TriangleMesh {
     short[] field_N;
     static Sprite[] field_E;
 
-    final static void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5, int param6) {
+    final static void sortPlayerStatIndexes(int param0, int param1, boolean param2, boolean param3, int param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_24_0 = 0;
@@ -102,8 +102,8 @@ final class TriangleMesh {
                 IterableNodeHashTable.field_h[incrementValue$0] = var12;
               }
             }
-            TriangleMesh.a(param0, param1, param2, param3, var8, var9, param6);
-            TriangleMesh.a(param0, var8, param2, param3, param4, param5, var10);
+            TriangleMesh.sortPlayerStatIndexes(param0, param1, param2, param3, var8, var9, param6);
+            TriangleMesh.sortPlayerStatIndexes(param0, var8, param2, param3, param4, param5, var10);
             return;
           }
           for (var7_intLifetime1 = param4 - 1; param1 < var7_intLifetime1; var7_intLifetime1--) {
@@ -124,7 +124,7 @@ final class TriangleMesh {
         }
     }
 
-    final static int[] a(int[] param0, byte param1) {
+    final static int[] convexHull(int[] param0, byte param1) {
         int incrementValue$0 = 0;
         int[] stackIn_36_0 = null;
         RuntimeException stackIn_39_0 = null;
@@ -162,27 +162,27 @@ final class TriangleMesh {
               var3 = param0[2 * var5 + 1];
             }
           }
-          if (null == qn.field_l ||
-            !(var4 <= qn.field_l.length)) {
-            qn.field_l = new PolarSortVector[var4];
+          if (null == PlayerStatsRequest.field_l ||
+            !(var4 <= PlayerStatsRequest.field_l.length)) {
+            PlayerStatsRequest.field_l = new PolarSortVector[var4];
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < var4; var5Lifetime1++) {
-            qn.field_l[var5Lifetime1] = new PolarSortVector();
+            PlayerStatsRequest.field_l[var5Lifetime1] = new PolarSortVector();
           }
           for (var5Lifetime2 = 0; var4 > var5Lifetime2; var5Lifetime2++) {
-            qn.field_l[var5Lifetime2].x = -var2_int + param0[var5Lifetime2 * 2];
-            qn.field_l[var5Lifetime2].y = param0[var5Lifetime2 * 2 + 1] - var3;
+            PlayerStatsRequest.field_l[var5Lifetime2].x = -var2_int + param0[var5Lifetime2 * 2];
+            PlayerStatsRequest.field_l[var5Lifetime2].y = param0[var5Lifetime2 * 2 + 1] - var3;
           }
           if (param1 >= -110) {
             TriangleMesh.clearSharedReferences(-8);
           }
-          GameKeyHandler.a(5433, qn.field_l, var4);
+          GameKeyHandler.insertionSort(5433, PlayerStatsRequest.field_l, var4);
           var5Lifetime3 = 2;
           var6 = 2;
           while (var4 > var6) {
-            var14 = qn.field_l[-2 + var5Lifetime3];
-            var8 = qn.field_l[var5Lifetime3 - 1];
-            var9 = qn.field_l[var6];
+            var14 = PlayerStatsRequest.field_l[-2 + var5Lifetime3];
+            var8 = PlayerStatsRequest.field_l[var5Lifetime3 - 1];
+            var9 = PlayerStatsRequest.field_l[var6];
             var10 = -((-var14.y + var8.y) * (var9.x - var14.x)) + (-var14.x + var8.x) * (var9.y - var14.y);
             if (var10 <= 0 &&
               var5Lifetime3 >= 3) {
@@ -191,7 +191,7 @@ final class TriangleMesh {
             }
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            qn.field_l[incrementValue$0] = var9;
+            PlayerStatsRequest.field_l[incrementValue$0] = var9;
             var6++;
           }
           var12 = new int[2 * var5Lifetime3];
@@ -199,8 +199,8 @@ final class TriangleMesh {
           var13 = 0;
           var6Lifetime1 = var13;
           while (var5Lifetime3 > var13) {
-            var12[var13 * 2] = var2_int + qn.field_l[var13].x;
-            var12[2 * var13 + 1] = qn.field_l[var13].y + var3;
+            var12[var13 * 2] = var2_int + PlayerStatsRequest.field_l[var13].x;
+            var12[2 * var13 + 1] = PlayerStatsRequest.field_l[var13].y + var3;
             var13++;
           }
           stackIn_36_0 = var7;
@@ -219,14 +219,14 @@ final class TriangleMesh {
         }
     }
 
-    private final void a(byte param0) {
+    private final void invalidateBounds(byte param0) {
         if (param0 >= -101) {
-          this.a((byte) -87);
+          this.invalidateBounds((byte) -87);
         }
         this.field_B = false;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void scale(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = HoldTheLine.field_D;
         if (param3 != 2) {
@@ -237,10 +237,10 @@ final class TriangleMesh {
           this.field_G[var6] = (short)(this.field_G[var6] * param1 / param4);
           this.field_k[var6] = (short)(param0 * this.field_k[var6] / param4);
         }
-        this.a((byte) -103);
+        this.invalidateBounds((byte) -103);
     }
 
-    final void c(int param0) {
+    final void calculateBounds(int param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -294,7 +294,7 @@ final class TriangleMesh {
         this.field_F = var5;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void translate(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = HoldTheLine.field_D;
         if (param2 != -26608) {
@@ -305,7 +305,7 @@ final class TriangleMesh {
           this.field_G[var5] = (short)(this.field_G[var5] + param0);
           this.field_k[var5] = (short)(this.field_k[var5] + param3);
         }
-        this.a((byte) -109);
+        this.invalidateBounds((byte) -109);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -319,7 +319,7 @@ final class TriangleMesh {
         field_I = null;
     }
 
-    final static int b(int param0) {
+    final static int pollArchiveConnection(int param0) {
         try {
           int stackIn_13_0 = 0;
           int stackIn_24_0 = 0;
@@ -361,7 +361,7 @@ final class TriangleMesh {
               var2.writeInt((byte) -58, RoadStripRenderer.field_g);
               oc.field_c.write(13, var2.payload, 0, 1);
               EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
-              aj.field_b = 30000L + bb.b(-1);
+              PlayerProgressEncoder.field_b = 30000L + bb.monotonicTimeMillis(-1);
             }
             if (EmailValidationResult.field_g == 3) {
               if (oc.field_c.available(false) > 0) {
@@ -372,7 +372,7 @@ final class TriangleMesh {
                 }
                 EmailValidationResult.field_g = EmailValidationResult.field_g + 1;
               } else {
-                if (aj.field_b < bb.b(param0 ^ -2)) {
+                if (PlayerProgressEncoder.field_b < bb.monotonicTimeMillis(param0 ^ -2)) {
                   stackIn_24_0 = ValidationHelpWidget.a(-2, param0 + 8076);
                   return stackIn_24_0;
                 }

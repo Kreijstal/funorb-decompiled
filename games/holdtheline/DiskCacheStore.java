@@ -4,18 +4,18 @@
 import java.io.*;
 
 final class DiskCacheStore {
-    static h field_a;
+    static FullscreenErrorReason field_a;
     static String field_b;
-    private BufferedRandomAccessFile field_j;
-    private int field_d;
-    private BufferedRandomAccessFile field_g;
+    private BufferedRandomAccessFile indexFile;
+    private int archiveId;
+    private BufferedRandomAccessFile dataFile;
     static int field_i;
-    private int field_e;
+    private int maxEntrySize;
     static String field_f;
     static boolean field_h;
     static String field_c;
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$0 = 0;
@@ -40,31 +40,31 @@ final class DiskCacheStore {
           int var15 = 0;
           int var18 = 0;
           var18 = HoldTheLine.field_D;
-          var3 = this.field_g;
+          var3 = this.dataFile;
           synchronized (var3) {
             try {
-              if ((long)(param1 * 6 + 6) > this.field_j.c(-32261)) {
+              if ((long)(param1 * 6 + 6) > this.indexFile.length(-32261)) {
                 return null;
               }
-              this.field_j.a(25971, (long)(param1 * 6));
-              this.field_j.a(-1, 0, 6, oi.field_d);
+              this.indexFile.seek(25971, (long)(param1 * 6));
+              this.indexFile.readFully(-1, 0, 6, oi.field_d);
               var4_int = (16711680 & oi.field_d[0] << 16) + ((oi.field_d[1] & 255) << 8) + (oi.field_d[2] & 255);
               var5 = ((255 & oi.field_d[3]) << 16) + ((oi.field_d[4] & 255) << 8) + (255 & oi.field_d[5]);
               if (var4_int < 0) {
                 return null;
               }
-              if (var4_int > this.field_e) {
+              if (var4_int > this.maxEntrySize) {
                 return null;
               }
               if (var5 <= 0) {
                 return null;
               }
-              if ((long)var5 > (this.field_g.c(-32261) / 520L)) {
+              if ((long)var5 > (this.dataFile.length(-32261) / 520L)) {
                 stackIn_15_0 = null;
                 return (byte[]) (stackIn_15_0);
               }
               if (param0 <= 99) {
-                this.field_j = (BufferedRandomAccessFile) null;
+                this.indexFile = (BufferedRandomAccessFile) null;
               }
               var6 = new byte[var4_int];
               var7 = 0;
@@ -77,14 +77,14 @@ final class DiskCacheStore {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_g.a(25971, (long)(var5 * 520));
+                this.dataFile.seek(25971, (long)(var5 * 520));
                 var9 = var4_int - var7;
                 if (param1 > 65535) {
                   if (var9 > 510) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_g.a(-1, 0, var14 + var9, oi.field_d);
+                  this.dataFile.readFully(-1, 0, var14 + var9, oi.field_d);
                   var11 = (65280 & oi.field_d[4] << 8) + (oi.field_d[5] & 255);
                   var13 = 255 & oi.field_d[9];
                   var12 = (255 & oi.field_d[8]) + (65280 & oi.field_d[7] << 8) + ((oi.field_d[6] & 255) << 16);
@@ -94,7 +94,7 @@ final class DiskCacheStore {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_g.a(-1, 0, var9 + var14, oi.field_d);
+                  this.dataFile.readFully(-1, 0, var9 + var14, oi.field_d);
                   var13 = 255 & oi.field_d[7];
                   var12 = (oi.field_d[6] & 255) + (oi.field_d[4] << 16 & 16711680) + (oi.field_d[5] << 8 & 65280);
                   var11 = ((255 & oi.field_d[2]) << 8) + (255 & oi.field_d[3]);
@@ -106,13 +106,13 @@ final class DiskCacheStore {
                 if (var11 != var8) {
                   return null;
                 }
-                if (this.field_d != var13) {
+                if (this.archiveId != var13) {
                   return null;
                 }
                 if (var12 < 0) {
                   return null;
                 }
-                if (this.field_g.c(-32261) / 520L < (long)var12) {
+                if (this.dataFile.length(-32261) / 520L < (long)var12) {
                   stackIn_45_0 = null;
                   return (byte[]) (stackIn_45_0);
                 }
@@ -140,7 +140,7 @@ final class DiskCacheStore {
     }
 
     public final String toString() {
-        return "" + this.field_d;
+        return "" + this.archiveId;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -165,7 +165,7 @@ final class DiskCacheStore {
         try {
           var1_int = 0;
           var2 = 0;
-          while (qh.c(-105)) {
+          while (qh.pollKeyEvent(-105)) {
             TextFieldRenderer.field_q.handleVerticalKeys(-1);
             if (TextFieldRenderer.field_q.hasActivationInput(-1)) {
               var1_int = 1;
@@ -198,7 +198,7 @@ final class DiskCacheStore {
           }
           if (0 == var3 &&
             WhirlpoolHasher.field_h == 2) {
-            var4 = bb.b(param0 ^ -19) - TutorialAction.field_g;
+            var4 = bb.monotonicTimeMillis(param0 ^ -19) - TutorialAction.field_g;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               pe.a(5, true, (byte) -121);
@@ -214,7 +214,7 @@ final class DiskCacheStore {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2, boolean param3, byte[] param4) {
+    private final boolean writeSectors(int param0, int param1, int param2, boolean param3, byte[] param4) {
         try {
           RuntimeException stackIn_72_0 = null;
           StringBuilder stackIn_72_1 = null;
@@ -236,22 +236,22 @@ final class DiskCacheStore {
           int var16 = 0;
           var16 = HoldTheLine.field_D;
           try {
-            var6 = this.field_g;
+            var6 = this.dataFile;
             synchronized (var6) {
               try {
                 if (param3) {
-                  if ((long)(6 + 6 * param0) > this.field_j.c(-32261)) {
+                  if ((long)(6 + 6 * param0) > this.indexFile.length(-32261)) {
                     return false;
                   }
-                  this.field_j.a(25971, (long)(6 * param0));
-                  this.field_j.a(-1, 0, 6, oi.field_d);
+                  this.indexFile.seek(25971, (long)(6 * param0));
+                  this.indexFile.readFully(-1, 0, 6, oi.field_d);
                   var7_int = (255 & oi.field_d[5]) + ((oi.field_d[3] & 255) << 16) + (65280 & oi.field_d[4] << 8);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= this.field_g.c(-32261) / 520L)) {
+                    !((long)var7_int <= this.dataFile.length(-32261) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_g.c(-32261) + 519L) / 520L);
+                  var7_int = (int)((this.dataFile.length(-32261) + 519L) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -262,8 +262,8 @@ final class DiskCacheStore {
                 oi.field_d[3] = (byte)(var7_int >> 16);
                 oi.field_d[0] = (byte)(param1 >> 16);
                 oi.field_d[1] = (byte)(param1 >> 8);
-                this.field_j.a(25971, (long)(param0 * 6));
-                this.field_j.a((byte) 125, 6, 0, oi.field_d);
+                this.indexFile.seek(25971, (long)(param0 * 6));
+                this.indexFile.write((byte) 125, 6, 0, oi.field_d);
                 if (param2 <= 73) {
                   field_c = (String) null;
                 }
@@ -274,10 +274,10 @@ final class DiskCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param3) {
-                      this.field_g.a(25971, (long)(520 * var7_int));
+                      this.dataFile.seek(25971, (long)(520 * var7_int));
                       if (param0 > 65535) {
                         try {
-                          this.field_g.a(-1, 0, 10, oi.field_d);
+                          this.dataFile.readFully(-1, 0, 10, oi.field_d);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,7 +293,7 @@ final class DiskCacheStore {
                         var10 = (255 & oi.field_d[8]) + (16711680 & oi.field_d[6] << 16) + (65280 & oi.field_d[7] << 8);
                       } else {
                         try {
-                          this.field_g.a(-1, 0, 8, oi.field_d);
+                          this.dataFile.readFully(-1, 0, 8, oi.field_d);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -310,9 +310,9 @@ final class DiskCacheStore {
                       }
                       if ((var11 == param0 &&
                         var12 == var9 &&
-                        this.field_d == var13) &&
+                        this.archiveId == var13) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= (this.field_g.c(-32261) / 520L))))) {
+                        !((long)var10 <= (this.dataFile.length(-32261) / 520L))))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -320,7 +320,7 @@ final class DiskCacheStore {
                       }
                     }
                     if (0 == var10) {
-                      var10 = (int)((519L + this.field_g.c(-32261)) / 520L);
+                      var10 = (int)((519L + this.dataFile.length(-32261)) / 520L);
                       param3 = false;
                       if (var10 == 0) {
                         var10++;
@@ -339,15 +339,15 @@ final class DiskCacheStore {
                       oi.field_d[2] = (byte)(var9 >> 8);
                       oi.field_d[1] = (byte)param0;
                       oi.field_d[5] = (byte)(var10 >> 8);
-                      oi.field_d[7] = (byte)this.field_d;
+                      oi.field_d[7] = (byte)this.archiveId;
                       oi.field_d[4] = (byte)(var10 >> 16);
-                      this.field_g.a(25971, (long)(520 * var7_int));
-                      this.field_g.a((byte) 126, 8, 0, oi.field_d);
+                      this.dataFile.seek(25971, (long)(520 * var7_int));
+                      this.dataFile.write((byte) 126, 8, 0, oi.field_d);
                       var11 = param1 - var8;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_g.a((byte) 126, var11, var8, param4);
+                      this.dataFile.write((byte) 126, var11, var8, param4);
                       var8 = var8 + var11;
                     } else {
                       oi.field_d[3] = (byte)param0;
@@ -358,15 +358,15 @@ final class DiskCacheStore {
                       oi.field_d[4] = (byte)(var9 >> 8);
                       oi.field_d[5] = (byte)var9;
                       oi.field_d[6] = (byte)(var10 >> 16);
-                      oi.field_d[9] = (byte)this.field_d;
+                      oi.field_d[9] = (byte)this.archiveId;
                       oi.field_d[7] = (byte)(var10 >> 8);
-                      this.field_g.a(25971, (long)(var7_int * 520));
-                      this.field_g.a((byte) 126, 10, 0, oi.field_d);
+                      this.dataFile.seek(25971, (long)(var7_int * 520));
+                      this.dataFile.write((byte) 126, 10, 0, oi.field_d);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_g.a((byte) 125, var11, var8, param4);
+                      this.dataFile.write((byte) 125, var11, var8, param4);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -401,7 +401,7 @@ final class DiskCacheStore {
         }
     }
 
-    final boolean a(byte[] param0, int param1, int param2, boolean param3) {
+    final boolean write(byte[] param0, int param1, int param2, boolean param3) {
         boolean discarded$2 = false;
         Object var5 = null;
         RuntimeException var5_ref = null;
@@ -414,17 +414,17 @@ final class DiskCacheStore {
         String stackIn_16_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var5 = this.field_g;
+          var5 = this.dataFile;
           synchronized (var5) {
             if (param2 >= 0 &&
-              this.field_e >= param2) {
+              this.maxEntrySize >= param2) {
               if (param3) {
                 var8 = (byte[]) null;
-                discarded$2 = this.a(-91, 110, -101, false, (byte[]) null);
+                discarded$2 = this.writeSectors(-91, 110, -101, false, (byte[]) null);
               }
-              var6 = this.a(param1, param2, 113, true, param0) ? 1 : 0;
+              var6 = this.writeSectors(param1, param2, 113, true, param0) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param1, param2, 96, false, param0) ? 1 : 0;
+                var6 = this.writeSectors(param1, param2, 96, false, param0) ? 1 : 0;
               }
               stackIn_10_0 = var6;
             } else {
@@ -447,14 +447,14 @@ final class DiskCacheStore {
     }
 
     DiskCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
-        this.field_j = null;
-        this.field_g = null;
-        this.field_e = 65000;
+        this.indexFile = null;
+        this.dataFile = null;
+        this.maxEntrySize = 65000;
         try {
-          this.field_e = param3;
-          this.field_g = param1;
-          this.field_j = param2;
-          this.field_d = param0;
+          this.maxEntrySize = param3;
+          this.dataFile = param1;
+          this.indexFile = param2;
+          this.archiveId = param0;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -462,7 +462,7 @@ final class DiskCacheStore {
 
     static {
         field_b = "Connection restored.";
-        field_a = new h();
+        field_a = new FullscreenErrorReason();
         field_c = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_f = "Beat your competitors around <col=1>8</col> laps of the course to progress through the game.<br><br>Power-ups scattered around the course will give bonuses to those cars that collect them.";
         field_h = false;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Vector2i {
-    static sh field_h;
+    static InputValidationError field_h;
     static String field_b;
     int x;
     static RotatedSpriteSheetAsset field_d;
@@ -185,7 +185,7 @@ final class Vector2i {
     }
 
     static {
-        field_h = new sh();
+        field_h = new InputValidationError();
         field_f = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_j = "Invalid password.";
         field_e = new int[8192];

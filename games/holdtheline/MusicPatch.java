@@ -7,7 +7,7 @@ final class MusicPatch extends IntrusiveNode {
     static String[] field_t;
     PcmSample[] samples;
     short[] keyPitches;
-    static tk field_n;
+    static VehicleEngineSounds field_n;
     MusicPatchEnvelope[] envelopes;
     static float[] field_r;
     private int[] sampleIds;
@@ -17,7 +17,7 @@ final class MusicPatch extends IntrusiveNode {
     byte[] exclusiveGroups;
     static RotatedSpriteAsset field_u;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSubscriptionPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_10_0 = null;
@@ -214,7 +214,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeCollisionScratch(int param0) {
         try {
           ShadedRoadStripRenderer.field_s = new float[8];
           if (param0 != 9) {
@@ -1034,7 +1034,7 @@ final class MusicPatch extends IntrusiveNode {
                   }
                   var33 = stackIn_268_0;
                   while (var33 < var30) {
-                    var34 = ImageProducerRasterBuffer.a(var32, -var27 + var30, (byte) -76);
+                    var34 = ImageProducerRasterBuffer.divideWithNegativeBias(var32, -var27 + var30, (byte) -76);
                     var32 = var32 + (var31 - var28_int);
                     this.keyVolumes[var33] = (byte)(var34 * this.keyVolumes[var33] + 32 >> 6);
                     var33++;
@@ -1116,7 +1116,7 @@ final class MusicPatch extends IntrusiveNode {
                   }
                   var33 = stackIn_323_0;
                   while (var33 < var30) {
-                    var34 = ImageProducerRasterBuffer.a(var32, -var27 + var30, (byte) -86);
+                    var34 = ImageProducerRasterBuffer.divideWithNegativeBias(var32, -var27 + var30, (byte) -86);
                     var35 = var34 + (this.keyPans[var33] & 255);
                     stackIn_299_0Lifetime1Lifetime1 = 0;
                     stackIn_299_1Lifetime1Lifetime1 = var35;
@@ -1282,7 +1282,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String getAccountName(boolean param0) {
         String var1 = null;
         RuntimeException var1_ref = null;
         String stackIn_12_0 = null;
@@ -1290,7 +1290,7 @@ final class MusicPatch extends IntrusiveNode {
         try {
           var1 = "";
           if (null != lh.field_a) {
-            var1 = lh.field_a.a(false);
+            var1 = lh.field_a.getAccountName(false);
           }
           if (0 == var1.length()) {
             var1 = ResizableDialog.j(21);
@@ -1299,7 +1299,7 @@ final class MusicPatch extends IntrusiveNode {
             var1 = NameAvailabilityResult.field_k;
           }
           if (param0) {
-            MusicPatch.a(100);
+            MusicPatch.initializeCollisionScratch(100);
           }
           stackIn_12_0 = var1;
           return stackIn_12_0;

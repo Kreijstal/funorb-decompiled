@@ -1,0 +1,75 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NameRequestState {
+    static int field_b;
+    static String field_a;
+    static String field_f;
+    static String field_c;
+    static String[] field_e;
+    static String[] field_d;
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    final static void setSoundListener(MovingEntity param0, int param1) {
+        try {
+          if (FadingDialog.field_J != null) {
+            RoadLayerMaskRenderer.stopAllEntitySounds((byte) 107);
+          } else {
+            FadingDialog.field_J = new IntrusiveDeque();
+          }
+          if (param1 != -15676) {
+            NameRequestState.clearSharedReferences((byte) 33);
+          }
+          MusicPatch.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+          throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static RoadSegment tailOfRoadSegment(RoadSegment param0, float param1, byte param2) {
+        RuntimeException var3 = null;
+        RoadSegment stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 >= -69) {
+            field_f = (String) null;
+          }
+          stackIn_3_0 = TrackCurve.sliceRoadSegment(param0, param1, 1.0f, (byte) -115);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("sa.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw EntitySound.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void clearSharedReferences(byte param0) {
+        field_f = null;
+        field_c = null;
+        field_d = null;
+        field_a = null;
+        int var1 = -45 / ((param0 + 84) / 37);
+        field_e = null;
+    }
+
+    static {
+        field_a = "Mode: ";
+        field_f = "Discard";
+        field_e = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
+        field_c = "End Tutorial";
+        field_d = new String[]{"Grass and tarmac", "Sand and dust", "Ice and snow", "Are you afraid of the dark?"};
+    }
+}

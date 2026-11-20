@@ -3,12 +3,12 @@
  */
 final class DisplayNameForm extends WidgetContainer implements NameSelectionListener, ButtonActionListener {
     static String field_P;
-    private ValidatedTextField field_F;
+    private ValidatedTextField displayNameField;
     static boolean field_K;
     static Sprite field_Q;
     private TextButton field_N;
     static int field_G;
-    NameSuggestionsPanel field_H;
+    NameSuggestionsPanel nameSuggestions;
     private TextButton field_M;
     static Sprite field_O;
     static int field_L;
@@ -17,45 +17,45 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
 
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_F = new ValidatedTextField("", (WidgetListener) null, 12);
+        this.displayNameField = new ValidatedTextField("", (WidgetListener) null, 12);
         TextWidgetStyle var1 = new TextWidgetStyle(SpriteButtonRenderer.field_w, 0, 0, 0, 0, 16777215, -1, 3, 0, IntrusiveNode.field_g.ascent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(LoadProgressDialog.field_ib, var1, (WidgetListener) null);
-        this.field_M = new TextButton(h.field_d, (WidgetListener) null);
+        this.field_M = new TextButton(FullscreenErrorReason.field_d, (WidgetListener) null);
         this.field_N = new TextButton(hh.field_b, (WidgetListener) null);
-        this.field_F.tooltip = PolarSortVector.field_f;
-        this.field_F.a((byte) 42, new DisplayNameValidator(this.field_F));
+        this.displayNameField.tooltip = PolarSortVector.field_f;
+        this.displayNameField.a((byte) 42, new DisplayNameValidator(this.displayNameField));
         this.field_M.field_D = false;
         this.field_M.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
         this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
-        this.field_F.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+        this.displayNameField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
         var2.setBounds(20, (byte) 122, var3, 50, 270);
         var3 += 50;
         this.addChild(true, var2);
-        var3 = var3 + (this.a(var3, (byte) -86, ArchiveLoadStage.field_h, sh.field_a, 170, this.field_F) + 5);
+        var3 = var3 + (this.addFieldWithHelp(var3, (byte) -86, ArchiveLoadStage.field_h, InputValidationError.field_a, 170, this.displayNameField) + 5);
         this.field_M.setBounds(496 - var5 >> 1, (byte) 122, var3, 40, var5);
         this.field_N.setBounds(3 + var4, (byte) 122, 15 + var3, 40, 60);
         this.field_N.listener = (WidgetListener) (this);
         this.field_M.listener = (WidgetListener) (this);
         this.addChild(true, this.field_M);
         this.addChild(true, this.field_N);
-        this.field_H = new NameSuggestionsPanel((NameSelectionListener) (this));
-        this.field_H.setBounds(60 + this.field_F.x + this.field_F.width, (byte) 122, 20, 150, -60 - this.field_F.width + (this.width - this.field_F.x));
-        this.addChild(true, this.field_H);
+        this.nameSuggestions = new NameSuggestionsPanel((NameSelectionListener) (this));
+        this.nameSuggestions.setBounds(60 + this.displayNameField.x + this.displayNameField.width, (byte) 122, 20, 150, -60 - this.displayNameField.width + (this.width - this.displayNameField.x));
+        this.addChild(true, this.nameSuggestions);
         this.setBounds(0, (byte) 122, 0, var4 + var3 + 55, 496);
     }
 
-    public final void a(byte param0) {
-        ((DisplayNameValidator) (this.field_F.getValidator(1))).invalidateAvailability(true);
+    public final void onMoreSuggestionsRequested(byte param0) {
+        ((DisplayNameValidator) (this.displayNameField.getValidator(1))).invalidateAvailability(true);
         if (param0 <= 124) {
           ResourceArchive var3 = (ResourceArchive) null;
-          DisplayNameForm.a(91, -12, (ResourceArchive) null, -35);
+          DisplayNameForm.loadIndexedSprite(91, -12, (ResourceArchive) null, -35);
         }
     }
 
-    private final boolean a(ValidatorProvider param0, byte param1) {
+    private final boolean isFieldValid(ValidatorProvider param0, byte param1) {
         Validator var3 = null;
         RuntimeException var3_ref = null;
         ValidationState var4 = null;
@@ -89,7 +89,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         }
     }
 
-    final static void g(byte param0) {
+    final static void showLoginSuccess(byte param0) {
         int var1;
         int var2;
         int var3;
@@ -98,18 +98,18 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         DelayedServerPacket.field_k = false;
         FullscreenDisplayMode.field_c = null;
         if (ArchiveCatalog.field_o) {
-          sb.field_c.o(-41);
+          RoadControlPointSpec.field_c.o(-41);
         } else {
           var2 = q.field_c;
           if (var2 > 0) {
             if (var2 == 1) {
-              FullscreenDisplayMode.field_c = jc.field_c;
+              FullscreenDisplayMode.field_c = LeaderboardPlayer.field_c;
             } else {
-              FullscreenDisplayMode.field_c = LoginCredentials.substituteIndexedTokens(h.field_c, new String[]{Integer.toString(var2)}, true);
+              FullscreenDisplayMode.field_c = LoginCredentials.substituteIndexedTokens(FullscreenErrorReason.field_c, new String[]{Integer.toString(var2)}, true);
             }
             FullscreenDisplayMode.field_c = CacheEntry.a((byte) -54, new CharSequence[]{(CharSequence) ((Object) FullscreenDisplayMode.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedRandomAccessFile.field_q)});
           }
-          sb.field_c.h((byte) -57);
+          RoadControlPointSpec.field_c.h((byte) -57);
           TutorialPage.a((byte) -124);
         }
     }
@@ -157,11 +157,11 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         field_J = null;
         if (param0 != -1) {
           ResourceArchive var2 = (ResourceArchive) null;
-          DisplayNameForm.a(96, 127, (ResourceArchive) null, -13);
+          DisplayNameForm.loadIndexedSprite(96, 127, (ResourceArchive) null, -13);
         }
     }
 
-    private final int a(int param0, byte param1, String param2, String param3, int param4, UiWidget param5) {
+    private final int addFieldWithHelp(int param0, byte param1, String param2, String param3, int param4, UiWidget param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -176,7 +176,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
           if (param1 >= -25) {
             this.handleKeyPress((UiWidget) null, 59, (byte) 51, 'ￕ');
           }
-          stackIn_3_0 = this.a(param4, param3, 35, param0, 10566, param2, param5);
+          stackIn_3_0 = this.addFieldWithHelp(param4, param3, 35, param0, 10566, param2, param5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,16 +204,16 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         }
     }
 
-    private final void i(int param0) {
-        if (!this.h(-22485)) {
+    private final void submit(int param0) {
+        if (!this.isReadyToSubmit(-22485)) {
           return;
         }
         if (param0 == 200) {
-          ValidatedTextField.a(this.field_F.text, -115);
+          ValidatedTextField.a(this.displayNameField.text, -115);
           return;
         }
         field_L = 46;
-        ValidatedTextField.a(this.field_F.text, -115);
+        ValidatedTextField.a(this.displayNameField.text, -115);
     }
 
     public final void onButtonAction(int param0, TextButton param1, int param2, int param3, int param4) {
@@ -233,7 +233,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
           if (this.field_M != param1) {
             return;
           }
-          this.i(param2 ^ -204);
+          this.submit(param2 ^ -204);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -249,7 +249,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -258,13 +258,13 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_F;
+          var3 = this.displayNameField;
           var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(false, var4, 1471);
+          ((EditableTextField) ((Object) var3)).setText(false, var4, 1471);
           if (param1 == 25) {
             return;
           }
-          DisplayNameForm.g((byte) 70);
+          DisplayNameForm.showLoginSuccess((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -280,7 +280,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         }
     }
 
-    final static IndexedSprite a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite loadIndexedSprite(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite stackIn_5_0 = null;
@@ -295,7 +295,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
             return (IndexedSprite) (stackIn_2_0);
           }
           if (param3 == 25) {
-            stackIn_7_0 = fc.a(true);
+            stackIn_7_0 = fc.buildDecodedIndexedSprite(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite) null;
@@ -314,11 +314,11 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
         }
     }
 
-    private final boolean h(int param0) {
+    private final boolean isReadyToSubmit(int param0) {
         if (param0 != -22485) {
           return false;
         }
-        if (!this.a((ValidatorProvider) (this.field_F), (byte) 104)) {
+        if (!this.isFieldValid((ValidatorProvider) (this.displayNameField), (byte) 104)) {
           return false;
         }
         return true;
@@ -327,13 +327,13 @@ final class DisplayNameForm extends WidgetContainer implements NameSelectionList
     final void updateHover(int param0, UiWidget param1, int param2, byte param3) {
         try {
           super.updateHover(param0, param1, param2, param3);
-          this.field_M.field_D = this.h(-22485);
+          this.field_M.field_D = this.isReadyToSubmit(-22485);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "de.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final int a(int param0, String param1, int param2, int param3, int param4, String param5, UiWidget param6) {
+    private final int addFieldWithHelp(int param0, String param1, int param2, int param3, int param4, String param5, UiWidget param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         LabeledField var10 = null;

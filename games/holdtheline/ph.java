@@ -23,7 +23,7 @@ final class ph {
           var7 = HoldTheLine.field_D;
           try {
             try {
-              var3 = (String) (eo.a(21896, "getcookies", param2));
+              var3 = (String) (JavaScriptBridge.callJavaScript(21896, "getcookies", param2));
               var4 = BlobWriteRequest.split(var3, (byte) -126, ';');
               var5 = 0;
               if (param1 < 4) {
@@ -115,7 +115,7 @@ final class ph {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                Bzip2Decoder.a(var12, var5_int, param1, var4, 9);
+                Bzip2Decoder.decompress(var12, var5_int, param1, var4, 9);
               } else {
                 var7 = MenuList.field_n;
                 synchronized (var7) {
@@ -164,7 +164,7 @@ final class ph {
           StrongCacheEntry.field_s = new NamedSoundEffect("turbo_whistle", 140);
           pe.field_b = new NamedSoundEffect("afterburner", 80);
           Point2i.field_c = new NamedSoundEffect("tyre_squeal", 100);
-          rc.field_a = new NamedSoundEffect("off_the_track", 768);
+          TutorialScriptState.field_a = new NamedSoundEffect("off_the_track", 768);
           TextFieldRenderer.field_t = new NamedSoundEffect("off_the_track_alpine", 768);
           PolarSortVector.field_g = new NamedSoundEffect("alarm_test", 100);
           ArchiveLoadStage.field_i = new NamedSoundEffect("mine_landing_and_armed", 256);
@@ -176,7 +176,7 @@ final class ph {
           CheckboxWidget.field_K = new NamedSoundEffect("vehicle-barrier_collision", 100);
           discarded$2 = new NamedSoundEffect("vehicle-vehicle_collision", 120);
           NineSlicePanel.field_h = new NamedSoundEffect("shield_bounce", 140);
-          ij.field_g = new NamedSoundEffect("powerup_collect_low", 92);
+          ChatMessage.field_g = new NamedSoundEffect("powerup_collect_low", 92);
           MouseWheelInput.field_d = new NamedSoundEffect("powerup_collect_high", 88);
           TutorialPage.field_i = new NamedSoundEffect("powerup_drop", 100);
           DualNodeHashTable.field_b = jh.field_a.getMusicSample(param1 - 32594, "wacky_boom_kick");
@@ -184,7 +184,7 @@ final class ph {
           jh.field_a.getSoundEffect("menu_high_beep", (byte) 9);
           TexturedRoadFillRenderer.field_j = new NamedSoundEffect("ZD_update_lightning_strike");
           IntWriteRequest.field_m = new NamedSoundEffect("ZD_update_thunder_roll_1");
-          uj.field_a = new NamedSoundEffect("ZD_update_thunder_roll_2");
+          MeshMaterial.field_a = new NamedSoundEffect("ZD_update_thunder_roll_2");
           discarded$3 = new NamedSoundEffect("ZD_update_rain_loop");
           HuffmanDecoder.field_c = new StereoMusicSample("car_pass");
         } catch (RuntimeException runtimeException) {
@@ -219,7 +219,7 @@ final class ph {
                 return stackIn_3_0;
               }
               var3 = var9 + "settings";
-              var4 = (String) (eo.a(21896, "getcookies", param1));
+              var4 = (String) (JavaScriptBridge.callJavaScript(21896, "getcookies", param1));
               var5 = BlobWriteRequest.split(var4, (byte) -98, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

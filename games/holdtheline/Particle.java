@@ -43,11 +43,11 @@ final class Particle extends IntrusiveNode {
               OutlinedRoadStripRenderer.field_n.close(param0 ^ 27371);
             }
             if (null != IterableSecondaryNodeDeque.field_d) {
-              IterableSecondaryNodeDeque.field_d.a(true);
+              IterableSecondaryNodeDeque.field_d.shutdown(true);
             }
             if (null != StereoMusicSample.field_g) {
               try {
-                StereoMusicSample.field_g.d(param0 ^ -27371);
+                StereoMusicSample.field_g.close(param0 ^ -27371);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -57,7 +57,7 @@ final class Particle extends IntrusiveNode {
               for (var1_int = 0; vb.field_a.length > var1_int; var1_int++) {
                 if (null != vb.field_a[var1_int]) {
                   try {
-                    vb.field_a[var1_int].d(-1);
+                    vb.field_a[var1_int].close(-1);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -139,11 +139,11 @@ final class Particle extends IntrusiveNode {
           var4Lifetime1 = var9;
           while (var9 < var3) {
             var5 = ByteStorage.field_c[var9];
-            var5.a(6, 6, 6, 2, 1);
-            var5.c(0);
+            var5.scale(6, 6, 6, 2, 1);
+            var5.calculateBounds(0);
             var6 = new int[]{var5.field_F + var5.field_L >> 1, var5.field_H + var5.field_d >> 1, var5.field_p + var5.field_n >> 1};
             TextFieldValidator.field_e[var9] = var6;
-            var5.a(-var6[1], -var6[0], -26608, -var6[2]);
+            var5.translate(-var6[1], -var6[0], -26608, -var6[2]);
             var9++;
           }
           return;

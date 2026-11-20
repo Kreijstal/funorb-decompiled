@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpacityWidget extends SingleChildWidget {
-    static tk field_G;
+    static VehicleEngineSounds field_G;
     int opacity;
 
     final static void writeCookie(long param0, java.applet.Applet param1, String param2, int param3, String param4) {
@@ -35,12 +35,12 @@ final class OpacityWidget extends SingleChildWidget {
               if (0L > param0) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + cd.a(75, param0 * 1000L + bb.b(-1)) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + cd.formatCookieDate(75, param0 * 1000L + bb.monotonicTimeMillis(-1)) + "; Max-Age=" + param0;
               }
               if (param3 > -98) {
-                field_G = (tk) null;
+                field_G = (VehicleEngineSounds) null;
               }
-              eo.a(param1, -31645, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateJavaScript(param1, -31645, "document.cookie=\"" + var7Lifetime4 + "\"");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,9 +115,9 @@ final class OpacityWidget extends SingleChildWidget {
         }
         if (this.opacity != 256) {
           var6 = new Sprite(this.child.width, this.child.height);
-          ProxySocketConnector.a(var6, -1);
+          ProxySocketConnector.pushSpriteRaster(var6, -1);
           this.child.drawLayer(param0, 0, 0, param3);
-          dm.b((byte) -10);
+          dm.popRasterState((byte) -10);
           var6.drawAlpha(param2 + this.x, param1 + this.y, this.opacity);
           return;
         }

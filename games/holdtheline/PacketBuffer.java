@@ -179,7 +179,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + pj.a(var5, this.position, param1.length(), this.payload, 0, (byte) 29);
+          this.position = this.position + RoadShadowRenderer.encodeCp1252(var5, this.position, param1.length(), this.payload, 0, (byte) 29);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -264,14 +264,14 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void e(int param0, int param1) {
-        if (we.field_o == null) {
-          we.field_o = new Sprite(640, 480);
+        if (SavedRasterState.field_o == null) {
+          SavedRasterState.field_o = new Sprite(640, 480);
         }
-        vb.a(-124, we.field_o);
+        vb.a(-124, SavedRasterState.field_o);
         eg.a(false);
         MarkerSliderRenderer.restoreRasterTarget(-1);
         int var2 = -99 / ((25 - param0) / 63);
-        we.field_o.drawAlpha(0, 0, param1);
+        SavedRasterState.field_o.drawAlpha(0, 0, param1);
     }
 
     final String readCp1252String(int param0) {
@@ -569,7 +569,7 @@ class PacketBuffer extends IntrusiveNode {
               var14 = new Sprite[var2_int];
               var3 = var14;
               for (var4 = 0; var4 < var2_int; var4++) {
-                var11 = tk.field_c[5][var4];
+                var11 = VehicleEngineSounds.field_c[5][var4];
                 var11.pollLoaded(3);
                 var6_int = PolarSortVector.a((byte) 88, var4);
                 if (var6_int != 0) {
@@ -615,7 +615,7 @@ class PacketBuffer extends IntrusiveNode {
               var9 = 0;
               var4Lifetime1 = var9;
               while (var2_int > var9) {
-                var15 = tk.field_c[StrongCacheEntry.field_w][var9];
+                var15 = VehicleEngineSounds.field_c[StrongCacheEntry.field_w][var9];
                 var15.pollLoaded(3);
                 if (ArcTrackBoundary.a(var9, -117, StrongCacheEntry.field_w) != 0) {
                   var6 = var15.getPreview(9392, DelegatingCanvas.field_d, 111).copy();
@@ -702,7 +702,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + pj.a(var4, this.position, param1.length(), this.payload, 0, (byte) 29);
+          this.position = this.position + RoadShadowRenderer.encodeCp1252(var4, this.position, param1.length(), this.payload, 0, (byte) 29);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -834,7 +834,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = al.a(param0, (byte) 85);
+        this.payload = ByteArrayPool.allocate(param0, (byte) 85);
         this.position = 0;
     }
 

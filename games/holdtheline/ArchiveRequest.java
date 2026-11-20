@@ -10,7 +10,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     volatile boolean field_u;
     boolean field_t;
 
-    final static String[] a(byte param0, char param1, String param2) {
+    final static String[] splitTrimmedNonempty(byte param0, char param1, String param2) {
         int incrementValue$1 = 0;
         String[] var3 = null;
         RuntimeException var3_ref = null;
@@ -69,7 +69,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void h(int param0) {
         if (null != RaceSetupMenu.field_D && (EmailValidationResult.field_d == null ||
-          !ai.field_a.a(-54, EmailValidationResult.field_d))) {
+          !ai.field_a.containsTrack(-54, EmailValidationResult.field_d))) {
           ResourceArchive.playMusicTrack(true, RaceSetupMenu.field_D, (byte) 69, 30);
           RaceSetupMenu.field_D = null;
           EmailValidationResult.field_d = null;
@@ -77,7 +77,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (param0 != -11875) {
           field_s = -14;
         }
-        ImageProducerRasterBuffer.a(-1379);
+        ImageProducerRasterBuffer.serviceAudio(-1379);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -153,7 +153,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    final static NameAvailabilityResult a(String[] args, byte param1) {
+    final static NameAvailabilityResult createNameSuggestionsResult(String[] args, byte param1) {
         NameAvailabilityResult var2 = null;
         RuntimeException var2_ref = null;
         NameAvailabilityResult stackIn_3_0 = null;

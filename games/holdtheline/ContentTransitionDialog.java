@@ -2,105 +2,105 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ContentTransitionDialog extends ResizableDialog {
-    private int field_gb;
-    private int field_Z;
-    private ge field_db;
-    private int field_fb;
-    private UiWidget field_X;
-    private int field_cb;
+    private int transitionTicks;
+    private int headerHeight;
+    private ContentTransitionState transitionState;
+    private int fadeOutDuration;
+    private UiWidget pendingContent;
+    private int fadeInDuration;
     static QuickChatDynamicCommand field_ib;
     static Sprite field_ab;
     static int field_bb;
-    private int field_Y;
-    private OpacityWidget field_eb;
+    private int resizeDuration;
+    private OpacityWidget contentWrapper;
     static String field_hb;
 
-    final void b(boolean param0) {
-        if (null == this.field_db) {
-          super.b(param0);
+    final void finishResize(boolean param0) {
+        if (null == this.transitionState) {
+          super.finishResize(param0);
           return;
         }
-        if (this.field_db != CurvedRoadSegment.field_G) {
-          this.b(537342017, this.field_X.width + 12, 12 - (-this.field_Z - this.field_X.height));
-          this.d(this.field_X, -100);
+        if (this.transitionState != CurvedRoadSegment.field_G) {
+          this.setCenteredSize(537342017, this.pendingContent.width + 12, 12 - (-this.headerHeight - this.pendingContent.height));
+          this.installContent(this.pendingContent, -100);
         } else {
-          this.field_db = null;
-          this.field_eb.opacity = 256;
-          super.b(param0);
+          this.transitionState = null;
+          this.contentWrapper.opacity = 256;
+          super.finishResize(param0);
           return;
         }
-        this.field_db = null;
-        this.field_eb.opacity = 256;
-        super.b(param0);
+        this.transitionState = null;
+        this.contentWrapper.opacity = 256;
+        super.finishResize(param0);
     }
 
-    boolean g(byte param0) {
+    boolean updateAnimation(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var3 = HoldTheLine.field_D;
         if (param0 == 39) {
-          if (null == this.field_db) {
-            return super.g((byte) 39);
+          if (null == this.transitionState) {
+            return super.updateAnimation((byte) 39);
           }
-          if (this.field_db == dg.field_a) {
-            fieldTemp$0 = this.field_gb + 1;
-            this.field_gb = this.field_gb + 1;
-            if (this.field_fb == fieldTemp$0) {
-              this.field_db = DialogLayer.field_M;
-              this.b(117, 12 + this.field_X.width, this.field_Y, 12 + (this.field_Z + this.field_X.height));
-              this.field_gb = 0;
-              this.field_eb.opacity = 0;
-              return super.g((byte) 39);
+          if (this.transitionState == dg.field_a) {
+            fieldTemp$0 = this.transitionTicks + 1;
+            this.transitionTicks = this.transitionTicks + 1;
+            if (this.fadeOutDuration == fieldTemp$0) {
+              this.transitionState = DialogLayer.field_M;
+              this.animateResize(117, 12 + this.pendingContent.width, this.resizeDuration, 12 + (this.headerHeight + this.pendingContent.height));
+              this.transitionTicks = 0;
+              this.contentWrapper.opacity = 0;
+              return super.updateAnimation((byte) 39);
             }
-            this.field_eb.opacity = -((this.field_gb << 8) / this.field_fb) + 256;
-            return super.g((byte) 39);
+            this.contentWrapper.opacity = -((this.transitionTicks << 8) / this.fadeOutDuration) + 256;
+            return super.updateAnimation((byte) 39);
           }
-          if (CurvedRoadSegment.field_G != this.field_db) {
-            return super.g((byte) 39);
+          if (CurvedRoadSegment.field_G != this.transitionState) {
+            return super.updateAnimation((byte) 39);
           }
-          fieldTemp$1 = this.field_gb + 1;
-          this.field_gb = this.field_gb + 1;
-          if (this.field_cb != fieldTemp$1) {
-            this.field_eb.opacity = (this.field_gb << 8) / this.field_cb;
-            return super.g((byte) 39);
+          fieldTemp$1 = this.transitionTicks + 1;
+          this.transitionTicks = this.transitionTicks + 1;
+          if (this.fadeInDuration != fieldTemp$1) {
+            this.contentWrapper.opacity = (this.transitionTicks << 8) / this.fadeInDuration;
+            return super.updateAnimation((byte) 39);
           }
-          this.field_db = null;
-          this.field_eb.opacity = 256;
-          return super.g((byte) 39);
+          this.transitionState = null;
+          this.contentWrapper.opacity = 256;
+          return super.updateAnimation((byte) 39);
         }
         field_hb = (String) null;
-        if (null == this.field_db) {
-          return super.g((byte) 39);
+        if (null == this.transitionState) {
+          return super.updateAnimation((byte) 39);
         }
-        if (this.field_db == dg.field_a) {
-          fieldTemp$2 = this.field_gb + 1;
-          this.field_gb = this.field_gb + 1;
-          if (this.field_fb == fieldTemp$2) {
-            this.field_db = DialogLayer.field_M;
-            this.b(117, 12 + this.field_X.width, this.field_Y, 12 + (this.field_Z + this.field_X.height));
-            this.field_gb = 0;
-            this.field_eb.opacity = 0;
-            return super.g((byte) 39);
+        if (this.transitionState == dg.field_a) {
+          fieldTemp$2 = this.transitionTicks + 1;
+          this.transitionTicks = this.transitionTicks + 1;
+          if (this.fadeOutDuration == fieldTemp$2) {
+            this.transitionState = DialogLayer.field_M;
+            this.animateResize(117, 12 + this.pendingContent.width, this.resizeDuration, 12 + (this.headerHeight + this.pendingContent.height));
+            this.transitionTicks = 0;
+            this.contentWrapper.opacity = 0;
+            return super.updateAnimation((byte) 39);
           }
-          this.field_eb.opacity = -((this.field_gb << 8) / this.field_fb) + 256;
-          return super.g((byte) 39);
+          this.contentWrapper.opacity = -((this.transitionTicks << 8) / this.fadeOutDuration) + 256;
+          return super.updateAnimation((byte) 39);
         }
-        if (CurvedRoadSegment.field_G != this.field_db) {
-          return super.g((byte) 39);
+        if (CurvedRoadSegment.field_G != this.transitionState) {
+          return super.updateAnimation((byte) 39);
         }
-        int fieldTemp$3 = this.field_gb + 1;
-        this.field_gb = this.field_gb + 1;
-        if (this.field_cb != fieldTemp$3) {
-          this.field_eb.opacity = (this.field_gb << 8) / this.field_cb;
-          return super.g((byte) 39);
+        int fieldTemp$3 = this.transitionTicks + 1;
+        this.transitionTicks = this.transitionTicks + 1;
+        if (this.fadeInDuration != fieldTemp$3) {
+          this.contentWrapper.opacity = (this.transitionTicks << 8) / this.fadeInDuration;
+          return super.updateAnimation((byte) 39);
         }
-        this.field_db = null;
-        this.field_eb.opacity = 256;
-        return super.g((byte) 39);
+        this.transitionState = null;
+        this.contentWrapper.opacity = 256;
+        return super.updateAnimation((byte) 39);
     }
 
-    void a(UiWidget param0, byte param1) {
+    void setContent(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
@@ -109,17 +109,17 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -27 % ((param1 + 38) / 50);
-          this.field_X = param0;
-          if (this.field_db == DialogLayer.field_M) {
-            this.b(67, 12 + this.field_X.width, this.field_Y, this.field_X.height + 12 + this.field_Z);
-            this.field_gb = 0;
+          this.pendingContent = param0;
+          if (this.transitionState == DialogLayer.field_M) {
+            this.animateResize(67, 12 + this.pendingContent.width, this.resizeDuration, this.pendingContent.height + 12 + this.headerHeight);
+            this.transitionTicks = 0;
             return;
           }
-          if (this.field_db == dg.field_a) {
+          if (this.transitionState == dg.field_a) {
             return;
           }
-          this.field_gb = 0;
-          this.field_db = dg.field_a;
+          this.transitionTicks = 0;
+          this.transitionState = dg.field_a;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,22 +135,22 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    private final void d(UiWidget param0, int param1) {
+    private final void installContent(UiWidget param0, int param1) {
         try {
-          if (null != this.field_eb) {
-            this.field_eb.unlink(0);
+          if (null != this.contentWrapper) {
+            this.contentWrapper.unlink(0);
           }
           if (param0 == null) {
-            this.field_eb = new OpacityWidget();
+            this.contentWrapper = new OpacityWidget();
           } else {
-            param0.setBounds(6, (byte) 122, this.field_Z + 6, param0.height, param0.width);
-            this.field_eb = new OpacityWidget(param0);
+            param0.setBounds(6, (byte) 122, this.headerHeight + 6, param0.height, param0.width);
+            this.contentWrapper = new OpacityWidget(param0);
           }
-          this.addChild(true, this.field_eb);
+          this.addChild(true, this.contentWrapper);
           if (param1 != -100) {
-            this.field_gb = -75;
+            this.transitionTicks = -75;
           }
-          this.field_X = null;
+          this.pendingContent = null;
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dc.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -166,12 +166,12 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           if (super.handleKeyPress(param0, param1, param2, param3)) {
             return true;
           }
-          if (null != this.field_eb) {
+          if (null != this.contentWrapper) {
             if (param1 == 98) {
-              this.field_eb.requestFocus(param0, -25823);
+              this.contentWrapper.requestFocus(param0, -25823);
             }
             if (param1 == 99) {
-              this.field_eb.requestFocus(param0, -25823);
+              this.contentWrapper.requestFocus(param0, -25823);
               return false;
             }
           }
@@ -207,48 +207,48 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         return ua.field_a;
     }
 
-    final boolean a(boolean param0) {
-        this.b(false);
+    final boolean finishAnimations(boolean param0) {
+        this.finishResize(false);
         if (!param0) {
-          this.field_fb = 23;
-          return super.a(param0);
+          this.fadeOutDuration = 23;
+          return super.finishAnimations(param0);
         }
-        return super.a(param0);
+        return super.finishAnimations(param0);
     }
 
-    final void k(int param0) {
-        if (dg.field_a == this.field_db) {
+    final void onResizeComplete(int param0) {
+        if (dg.field_a == this.transitionState) {
           return;
         }
-        this.field_gb = 0;
-        this.field_db = CurvedRoadSegment.field_G;
+        this.transitionTicks = 0;
+        this.transitionState = CurvedRoadSegment.field_G;
         if (param0 < -100) {
-          this.d(this.field_X, -100);
-          this.field_X = null;
-          this.field_eb.opacity = 0;
+          this.installContent(this.pendingContent, -100);
+          this.pendingContent = null;
+          this.contentWrapper.opacity = 0;
           return;
         }
         UiWidget var3 = (UiWidget) null;
-        this.a((UiWidget) null, (byte) -61);
-        this.d(this.field_X, -100);
-        this.field_X = null;
-        this.field_eb.opacity = 0;
+        this.setContent((UiWidget) null, (byte) -61);
+        this.installContent(this.pendingContent, -100);
+        this.pendingContent = null;
+        this.contentWrapper.opacity = 0;
     }
 
     ContentTransitionDialog(DialogLayer param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.width + 12, param1.height + (param2 + 12));
         try {
-          this.field_Y = param4;
-          this.field_cb = param3;
-          this.field_fb = param3;
-          this.field_Z = param2;
-          this.d(param1, -100);
+          this.resizeDuration = param4;
+          this.fadeInDuration = param3;
+          this.fadeOutDuration = param3;
+          this.headerHeight = param2;
+          this.installContent(param1, -100);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "dc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static CurvedRoadSegment a(float param0, int param1, float param2, CurvedRoadSegment param3) {
+    final static CurvedRoadSegment sliceCurvedRoadSegment(float param0, int param1, float param2, CurvedRoadSegment param3) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         float var5 = 0.0f;

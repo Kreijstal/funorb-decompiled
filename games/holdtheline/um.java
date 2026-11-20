@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class um {
-    static ll field_d;
+    static AccountProtocolState field_d;
     static String field_b;
     static String field_c;
     static ValidationState field_a;
@@ -108,7 +108,7 @@ final class um {
 
     static {
         field_c = "Go Back";
-        field_d = new ll();
+        field_d = new AccountProtocolState();
         field_a = new ValidationState();
         field_f = "Loading sound effects";
     }

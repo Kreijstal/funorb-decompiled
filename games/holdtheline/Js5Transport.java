@@ -18,7 +18,7 @@ abstract class Js5Transport {
     volatile int field_f;
     NetworkArchiveRequest field_m;
 
-    final static void b(byte param0) {
+    final static void readLeaderboardReply(byte param0) {
         int var9_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -32,11 +32,11 @@ abstract class Js5Transport {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        jg var5 = null;
+        LeaderboardRequest var5 = null;
         long var5_long = 0L;
         int var6 = 0;
         int var7 = 0;
-        fb var7_ref_fb = null;
+        ScoreSubmission var7_ref_fb = null;
         int var8 = 0;
         String[][] var9 = null;
         String[][] var10 = null;
@@ -66,43 +66,43 @@ abstract class Js5Transport {
           var2 = var28.readUnsignedByte((byte) -22);
           if (var2 == 0) {
             var4 = var28.readUnsignedShort(106);
-            var5 = (jg) (MenuList.field_e.first((byte) 115));
+            var5 = (LeaderboardRequest) (MenuList.field_e.first((byte) 115));
             while (var5 != null) {
-              if (var5.field_i != var4) {
-                var5 = (jg) (MenuList.field_e.next((byte) -25));
+              if (var5.leaderboardId != var4) {
+                var5 = (LeaderboardRequest) (MenuList.field_e.next((byte) -25));
                 continue;
               }
               break;
             }
             if (var5 == null) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
             var6 = var28.readUnsignedByte((byte) -98);
             if (0 != var6) {
-              var7 = var5.field_l;
-              TextFieldValidator.field_h[0].field_b = QuickChatPhraseCache.field_e;
-              TextFieldValidator.field_h[0].field_g = null;
-              var8 = var5.field_n;
-              TextFieldValidator.field_h[0].field_e = false;
+              var7 = var5.rowLimit;
+              TextFieldValidator.field_h[0].displayName = QuickChatPhraseCache.field_e;
+              TextFieldValidator.field_h[0].alternateName = null;
+              var8 = var5.valuesPerRow;
+              TextFieldValidator.field_h[0].includedInUniqueView = false;
               for (var9_int = 1; var6 > var9_int; var9_int++) {
-                TextFieldValidator.field_h[var9_int].field_b = var28.readCp1252String(-1231);
-                TextFieldValidator.field_h[var9_int].field_e = false;
+                TextFieldValidator.field_h[var9_int].displayName = var28.readCp1252String(-1231);
+                TextFieldValidator.field_h[var9_int].includedInUniqueView = false;
                 if (var28.readUnsignedByte((byte) -41) != 1) {
-                  TextFieldValidator.field_h[var9_int].field_g = null;
+                  TextFieldValidator.field_h[var9_int].alternateName = null;
                 } else {
-                  TextFieldValidator.field_h[var9_int].field_g = var28.readCp1252String(-1231);
+                  TextFieldValidator.field_h[var9_int].alternateName = var28.readCp1252String(-1231);
                 }
               }
               dupTemp$0 = new String[3][var7];
-              var5.field_m = dupTemp$0;
+              var5.playerNames = dupTemp$0;
               var9 = dupTemp$0;
               var10 = new String[3][var7];
               dupTemp$1 = new long[3][var7];
-              var5.field_k = dupTemp$1;
+              var5.entryIds = dupTemp$1;
               var11 = dupTemp$1;
               dupTemp$2 = new int[3][var7 * var8];
-              var5.field_p = dupTemp$2;
+              var5.rowValues = dupTemp$2;
               var12 = dupTemp$2;
               var13 = 0;
               var14 = 0;
@@ -114,12 +114,12 @@ abstract class Js5Transport {
               if (var19 > 0) {
                 for (var20 = 0; var20 < var19; var20++) {
                   var21 = var28.readUnsignedByte((byte) -22);
-                  var22 = TextFieldValidator.field_h[var21].field_b;
+                  var22 = TextFieldValidator.field_h[var21].displayName;
                   var23 = var28.readLong(true);
                   var25 = var28.position;
                   if (var20 < var7) {
                     var9[0][var13] = var22;
-                    var10[0][var13] = TextFieldValidator.field_h[var21].field_g;
+                    var10[0][var13] = TextFieldValidator.field_h[var21].alternateName;
                     var11[0][var13] = var23;
                     for (var26 = 0; var26 < var8; var26++) {
                       incrementValue$3 = var16;
@@ -142,10 +142,10 @@ abstract class Js5Transport {
                     }
                   }
                   if (var7 > var15 &&
-                    !TextFieldValidator.field_h[var21].field_e) {
-                    TextFieldValidator.field_h[var21].field_e = true;
+                    !TextFieldValidator.field_h[var21].includedInUniqueView) {
+                    TextFieldValidator.field_h[var21].includedInUniqueView = true;
                     var9[2][var15] = var22;
-                    var10[2][var15] = TextFieldValidator.field_h[var21].field_g;
+                    var10[2][var15] = TextFieldValidator.field_h[var21].alternateName;
                     var11[2][var15] = var23;
                     var28.position = var25;
                     var15++;
@@ -158,31 +158,31 @@ abstract class Js5Transport {
                 }
               }
             }
-            var5.field_j = true;
+            var5.completed = true;
             var5.unlink(0);
             return;
           }
           if (var2 == 1) {
             var4Lifetime1 = var28.readUnsignedShort(78);
             var5_long = var28.readLong(true);
-            var7_ref_fb = (fb) (AccountTermsPanel.field_O.first((byte) 110));
+            var7_ref_fb = (ScoreSubmission) (AccountTermsPanel.field_O.first((byte) 110));
             while (var7_ref_fb != null) {
-              if (var7_ref_fb.field_u != var4Lifetime1) {
-                var7_ref_fb = (fb) (AccountTermsPanel.field_O.next((byte) -64));
+              if (var7_ref_fb.requestId != var4Lifetime1) {
+                var7_ref_fb = (ScoreSubmission) (AccountTermsPanel.field_O.next((byte) -64));
                 continue;
               }
               break;
             }
             if (var7_ref_fb == null) {
-              r.a(-28036);
+              ServerConnectionState.closeServerConnection(-28036);
               return;
             }
-            var7_ref_fb.field_m = var5_long;
+            var7_ref_fb.entryId = var5_long;
             var7_ref_fb.unlink(0);
             return;
           }
           MusicPatchPcmStream.reportClientError((Throwable) null, (byte) -120, "HS1: " + AgeValidator.b(false));
-          r.a(-28036);
+          ServerConnectionState.closeServerConnection(-28036);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -193,21 +193,21 @@ abstract class Js5Transport {
 
     abstract void attachConnection(Object param0, boolean param1, int param2);
 
-    final boolean c(int param0) {
+    final boolean isPriorityQueueFull(int param0) {
         if (param0 < 73) {
-          this.c(3);
+          this.isPriorityQueueFull(3);
         }
-        return this.b(39) >= 20 ? true : false;
+        return this.getPriorityRequestCount(39) >= 20 ? true : false;
     }
 
-    final int b(boolean param0) {
+    final int getPrefetchRequestCount(boolean param0) {
         if (param0) {
           this.field_h = 95;
         }
         return this.field_g.size(107) + this.field_e.size(-6);
     }
 
-    final int b(int param0) {
+    final int getPriorityRequestCount(int param0) {
         if (param0 < 16) {
           field_n = (ResourceArchive) null;
         }
@@ -216,7 +216,7 @@ abstract class Js5Transport {
 
     abstract void handleCorruptResponse(boolean param0);
 
-    final NetworkArchiveRequest a(int param0, boolean param1, byte param2, byte param3, int param4) {
+    final NetworkArchiveRequest request(int param0, boolean param1, byte param2, byte param3, int param4) {
         long var6 = ((long)param4 << 32) + (long)param0;
         NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.secondaryKey = var6;
@@ -226,12 +226,12 @@ abstract class Js5Transport {
           return (NetworkArchiveRequest) null;
         }
         if (param1) {
-          if (!(this.b(78) < 20)) {
+          if (!(this.getPriorityRequestCount(78) < 20)) {
             throw new RuntimeException();
           }
           this.field_d.addLast(param3 ^ 83, var8);
         } else {
-          if (this.b(false) >= 20) {
+          if (this.getPrefetchRequestCount(false) >= 20) {
             throw new RuntimeException();
           }
           this.field_g.addLast(122, var8);
@@ -259,11 +259,11 @@ abstract class Js5Transport {
 
     abstract void close(int param0);
 
-    final boolean d(int param0) {
+    final boolean isPrefetchQueueFull(int param0) {
         if (param0 != 20) {
           return false;
         }
-        return this.b(false) >= 20 ? true : false;
+        return this.getPrefetchRequestCount(false) >= 20 ? true : false;
     }
 
     abstract boolean processRequests(byte param0);

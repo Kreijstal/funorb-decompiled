@@ -8,16 +8,16 @@ final class MidiKeyUsage extends IntrusiveNode {
     byte[] field_k;
 
     final static void a(int param0) {
-        if (null != sb.field_c) {
-          sb.field_c.h((byte) -80);
+        if (null != RoadControlPointSpec.field_c) {
+          RoadControlPointSpec.field_c.h((byte) -80);
         }
         ZombiePedestrian.field_l = new DisplayNameForm();
         if (param0 == 17902) {
-          sm.field_c.a((UiWidget) (ZombiePedestrian.field_l), (byte) -104);
+          sm.field_c.setContent((UiWidget) (ZombiePedestrian.field_l), (byte) -104);
           return;
         }
         field_j = (IntrusiveDeque) null;
-        sm.field_c.a((UiWidget) (ZombiePedestrian.field_l), (byte) -104);
+        sm.field_c.setContent((UiWidget) (ZombiePedestrian.field_l), (byte) -104);
     }
 
     public static void clearSharedReferences(int param0) {

@@ -10,7 +10,7 @@ final class QuickChatPhraseCache {
 
     final QuickChatPhraseDefinition getPhrase(int param0, int param1) {
         byte[] var4 = null;
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_c.a((long)param0, -113));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_c.get((long)param0, -113));
         if (var3 != null) {
           return var3;
         }
@@ -27,11 +27,11 @@ final class QuickChatPhraseCache {
           var3.decode(120, new PacketBuffer(var4));
         }
         if (param0 < 32768) {
-          this.field_c.a((long)param0, var3, false);
+          this.field_c.put((long)param0, var3, false);
           return var3;
         }
         var3.markExtendedLinks(-111);
-        this.field_c.a((long)param0, var3, false);
+        this.field_c.put((long)param0, var3, false);
         return var3;
     }
 

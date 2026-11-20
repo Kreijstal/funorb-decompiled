@@ -8,7 +8,7 @@ final class qh {
     static String field_e;
     static String field_c;
 
-    final static void a(int param0, int param1) {
+    final static void requestMusicTrack(int param0, int param1) {
         if (ValidationHelpWidget.field_Q != null &&
           null != i.field_k[param1]) {
           EmailValidationResult.field_d = i.field_k[param1];
@@ -24,7 +24,7 @@ final class qh {
         }
     }
 
-    final static boolean a(byte param0, GrowableObjectList param1) {
+    final static boolean hasIncludedBoundary(byte param0, GrowableObjectList param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -37,7 +37,7 @@ final class qh {
         try {
           if (param0 != -63) {
             var4 = (GrowableObjectList) null;
-            qh.a((byte) -114, (GrowableObjectList) null);
+            qh.hasIncludedBoundary((byte) -114, (GrowableObjectList) null);
           }
           var2_int = 0;
           while (true) {
@@ -76,14 +76,14 @@ final class qh {
         field_b = null;
     }
 
-    final static PcmStreamMixer a(int param0) {
+    final static PcmStreamMixer getSoundMixer(int param0) {
         if (param0 < 80) {
-          qh.a(67);
+          qh.getSoundMixer(67);
         }
         return LoginChoicePanel.field_H;
     }
 
-    final static boolean c(int param0) {
+    final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;

@@ -7,7 +7,7 @@ final class PathWaypoint extends Point2i {
     int field_l;
     static boolean[] field_j;
     static String[] field_n;
-    static fb field_o;
+    static ScoreSubmission field_o;
     static String field_k;
 
     PathWaypoint(PathWaypoint param0) {
@@ -24,7 +24,7 @@ final class PathWaypoint extends Point2i {
         RuntimeException var6 = null;
         LoginCredentials stackIn_2_0 = null;
         EmailLoginCredentials stackIn_6_0 = null;
-        bn stackIn_10_0 = null;
+        AlternateUsernameLoginCredentials stackIn_10_0 = null;
         UsernameLoginCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -43,7 +43,7 @@ final class PathWaypoint extends Point2i {
             return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param2) {
-            stackIn_10_0 = new bn(param1, param3);
+            stackIn_10_0 = new AlternateUsernameLoginCredentials(param1, param3);
             return (LoginCredentials) ((Object) stackIn_10_0);
           }
           stackIn_12_0 = new UsernameLoginCredentials(param1, param3);
@@ -84,7 +84,7 @@ final class PathWaypoint extends Point2i {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            UrlPacketDownloader.a(0, var1);
+            UrlPacketDownloader.writeReflectionCheckReply(0, var1);
             IsaacPacketBuffer.field_p.backpatchByteLength(-268435456, var1.position - var2);
           }
           if (param0 >= -67) {

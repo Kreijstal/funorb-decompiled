@@ -33,7 +33,7 @@ final class RaceSetupMenu extends MenuList {
     private int hoveredRow;
     Sprite[][] rowSprites;
     private int hoveredItem;
-    static tk field_s;
+    static VehicleEngineSounds field_s;
     private int[] selectedValues;
     private int[] selectedIndices;
     private int menuId;
@@ -78,7 +78,7 @@ final class RaceSetupMenu extends MenuList {
           stackIn_10_0 = !(LoginCredentialType.field_c);
           LoginCredentialType.field_c = stackIn_10_0;
         }
-        if (!pj.b((byte) 116) &&
+        if (!RoadShadowRenderer.isGuestMode((byte) 116) &&
           this.itemCount <= 1) {
           stackIn_16_0 = 0;
         } else {
@@ -188,7 +188,7 @@ final class RaceSetupMenu extends MenuList {
               l.field_b = true;
               hk.field_d = -1 + MenuList.field_l[3];
               ao.field_b = 3;
-              h.b((byte) -78);
+              FullscreenErrorReason.b((byte) -78);
               this.truncateAfterRow((byte) -77, 0);
               return;
             }
@@ -397,7 +397,7 @@ final class RaceSetupMenu extends MenuList {
           return;
         }
         if (this.transitionState == 2) {
-          var2Lifetime1 = (int)((double)we.field_n * (-Math.exp((double)(0.20000000298023224f * (float)(this.transitionTicks - 5))) + 1.0));
+          var2Lifetime1 = (int)((double)SavedRasterState.field_n * (-Math.exp((double)(0.20000000298023224f * (float)(this.transitionTicks - 5))) + 1.0));
         }
         BlobWriteRequest.drawTitleBar(this.field_L.toUpperCase(), var2Lifetime1, 1, param0 - 1698, 8);
         for (var3_int = 0; var3_int < this.controlActions.length; var3_int++) {
@@ -564,7 +564,7 @@ final class RaceSetupMenu extends MenuList {
           if (this.transitionState == 2) {
             fieldTemp$1 = this.transitionTicks + 1;
             this.transitionTicks = this.transitionTicks + 1;
-            if (-260.0 > (double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)(fieldTemp$1 - 5))))) {
+            if (-260.0 > (double)SavedRasterState.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)(fieldTemp$1 - 5))))) {
               this.transitionState = 3;
               this.transitionTicks = 0;
             }
@@ -598,7 +598,7 @@ final class RaceSetupMenu extends MenuList {
             -1 != NodeHashTableIterator.field_g) {
             this.handleChoiceMouse(86);
           }
-          while (qh.c(-85)) {
+          while (qh.pollKeyEvent(-85)) {
             this.handleKey(true);
           }
         }
@@ -618,7 +618,7 @@ final class RaceSetupMenu extends MenuList {
           if (3 == this.transitionState) {
             return;
           }
-          bn.a(1, -107);
+          AlternateUsernameLoginCredentials.requestDisplayMode(1, -107);
           this.transitionState = 2;
           if (param0 >= -104) {
             return;
@@ -796,7 +796,7 @@ final class RaceSetupMenu extends MenuList {
         }
         int var4 = -80 + param2;
         if (param1 != -1) {
-          field_s = (tk) null;
+          field_s = (VehicleEngineSounds) null;
         }
         if (var4 < 240) {
           var4 = 240;
@@ -859,7 +859,7 @@ final class RaceSetupMenu extends MenuList {
         if (var5 < 0) {
           var5 = 0;
         }
-        var6 = (int)((double)we.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)var5))));
+        var6 = (int)((double)SavedRasterState.field_n * (1.0 - Math.exp((double)(0.20000000298023224f * (float)var5))));
         var6 = (int)((float)var6 + this.field_x[param3]);
         if (param1 == 22) {
           if (7 != DelegatingCanvas.field_d) {
@@ -868,7 +868,7 @@ final class RaceSetupMenu extends MenuList {
               if (!Vector2i.field_c) {
                 stackIn_37_1 = MusicCrossfadeStream.field_r;
               } else {
-                stackIn_37_1 = h.field_e;
+                stackIn_37_1 = FullscreenErrorReason.field_e;
               }
               var7 = ((StringBuilder) (Object) stackIn_36_0).append(stackIn_37_1).append(" ").append(bo.field_a).toString();
             } else {
@@ -880,7 +880,7 @@ final class RaceSetupMenu extends MenuList {
                 }
                 stackIn_31_0 = new StringBuilder();
                 if (Vector2i.field_c) {
-                  stackIn_32_1 = h.field_e;
+                  stackIn_32_1 = FullscreenErrorReason.field_e;
                 } else {
                   stackIn_32_1 = MusicCrossfadeStream.field_r;
                 }
@@ -890,8 +890,8 @@ final class RaceSetupMenu extends MenuList {
           } else {
             var7 = DropTargetWidget.field_H;
           }
-          var7 = uk.field_c[20] + var7;
-          stackIn_40_0 = new StringBuilder().append(uk.field_c[21]);
+          var7 = ProxyAuthenticationException.field_c[20] + var7;
+          stackIn_40_0 = new StringBuilder().append(ProxyAuthenticationException.field_c[21]);
           if (AgeValidator.field_o) {
             stackIn_41_1 = ProxySocketConnector.field_l;
           } else {
@@ -928,8 +928,8 @@ final class RaceSetupMenu extends MenuList {
             var8 = stackIn_16_0;
             var7 = var8;
             var7 = var8;
-            if (pj.b((byte) 124)) {
-              stackIn_19_0 = uk.field_c[9];
+            if (RoadShadowRenderer.isGuestMode((byte) 124)) {
+              stackIn_19_0 = ProxyAuthenticationException.field_c[9];
             } else {
               stackIn_19_0 = "";
             }
@@ -1005,12 +1005,12 @@ final class RaceSetupMenu extends MenuList {
           stackIn_27_0 = (param2 == 4) ? 1 : 0;
         }
         var11 = stackIn_27_0;
-        MatchingTextValidator.a(293, StrongCacheEntry.field_r);
+        MatchingTextValidator.playDefaultSample(293, StrongCacheEntry.field_r);
         if (param1 != 22) {
           if (param1 == 23) {
             stackIn_97_0 = (0 < this.selectedItem) ? 0 : 2;
             var12 = stackIn_97_0;
-            if (pj.b((byte) 90)) {
+            if (RoadShadowRenderer.isGuestMode((byte) 90)) {
               stackIn_102_0 = (this.selectedItem <= 0) ? 0 : 1;
             } else {
               stackIn_102_0 = 0;
@@ -1038,7 +1038,7 @@ final class RaceSetupMenu extends MenuList {
                 }
               } else {
                 if (this.field_Z == 2 &&
-                  pj.b((byte) 113)) {
+                  RoadShadowRenderer.isGuestMode((byte) 113)) {
                   i.a((byte) 60, true);
                 }
               }
@@ -1140,7 +1140,7 @@ final class RaceSetupMenu extends MenuList {
             }
             if (var7 != 0 ||
               var8 != 0) {
-              h.b((byte) 125);
+              FullscreenErrorReason.b((byte) 125);
               this.field_O[param0] = NetworkArchiveRequest.field_C[DelegatingCanvas.field_d];
               this.refreshMenuOptions(false, 6267);
               this.initializeRowLayout(0, (byte) -124);
@@ -1195,10 +1195,10 @@ final class RaceSetupMenu extends MenuList {
             return -1;
           }
           if (decompiledFrameRemainder0) {
-            this.field_Z = fj.a(this.field_S, (byte) -119, param2);
+            this.field_Z = WidgetStyleNode.hitTestColumn(this.field_S, (byte) -119, param2);
           }
         } else {
-          this.field_ab = fj.a(this.field_K, (byte) -119, param2);
+          this.field_ab = WidgetStyleNode.hitTestColumn(this.field_K, (byte) -119, param2);
           if (this.field_ab == 0) {
             ArchiveCatalog.a(0, (byte) 67, 13, 0);
           } else {
@@ -1258,7 +1258,7 @@ final class RaceSetupMenu extends MenuList {
           return;
         }
         this.pendingSelection = -1;
-        MatchingTextValidator.a(293, StrongCacheEntry.field_r);
+        MatchingTextValidator.playDefaultSample(293, StrongCacheEntry.field_r);
         var5 = this.selectedIndices[param0];
         if (param2 != 122) {
           this.rowScrollTargets = (int[]) null;
@@ -1279,10 +1279,10 @@ final class RaceSetupMenu extends MenuList {
             }
             StrongCacheEntry.field_w = var6;
             LoginForm.field_P = 0;
-            bn.a(var6 + 4, -107);
+            AlternateUsernameLoginCredentials.requestDisplayMode(var6 + 4, -107);
             stackIn_70_0 = -21383;
             stackIn_71_1 = !(param1);
-            ma.a(stackIn_70_0, stackIn_71_1);
+            AchievementStatusRequest.startSelectedRace(stackIn_70_0, stackIn_71_1);
           }
         } else {
           if (DelegatingCanvas.field_d != 1 &&
@@ -1302,7 +1302,7 @@ final class RaceSetupMenu extends MenuList {
                 var10 = stackIn_34_0;
                 this.addChoiceRow(var10, 16711680, RotatedSpriteAsset.field_g[var8], var13, param1, WidgetContainer.field_A[var8], RaceWorld.field_gb[var8], 312);
               }
-              bn.a(4 + StrongCacheEntry.field_w, param2 ^ -16);
+              AlternateUsernameLoginCredentials.requestDisplayMode(4 + StrongCacheEntry.field_w, param2 ^ -16);
               return;
             }
             if (1 != param0) {
@@ -1315,7 +1315,7 @@ final class RaceSetupMenu extends MenuList {
               IntrusiveDeque.field_b = var6;
               stackIn_27_0 = -21383;
               stackIn_28_1 = !(param1);
-              ma.a(stackIn_27_0, stackIn_28_1);
+              AchievementStatusRequest.startSelectedRace(stackIn_27_0, stackIn_28_1);
               return;
             }
             IntArrayReadRequest.field_l = var6;
@@ -1330,15 +1330,15 @@ final class RaceSetupMenu extends MenuList {
             }
             stackIn_19_0 = -21383;
             stackIn_20_1 = !(param1);
-            ma.a(stackIn_19_0, stackIn_20_1);
+            AchievementStatusRequest.startSelectedRace(stackIn_19_0, stackIn_20_1);
             return;
           }
           if (0 == param0) {
             var7 = PolarSortVector.a((byte) 65, var6);
             if (var7 == 0) {
               StrongCacheEntry.field_w = var6;
-              bn.a(4 + var6, -112);
-              h.b((byte) 101);
+              AlternateUsernameLoginCredentials.requestDisplayMode(4 + var6, -112);
+              FullscreenErrorReason.b((byte) 101);
               this.addChoiceRow(NodeHashTableIterator.field_a, Point2i.field_i[var5], this.rowItemIds[1], this.rowSprites[1], param1, this.rowDescriptions[1], this.rowLabels[1], 312);
             }
           }
@@ -1366,7 +1366,7 @@ final class RaceSetupMenu extends MenuList {
               if (!param3) {
                 stackIn_54_0 = -21383;
                 stackIn_55_1 = !(param1);
-                ma.a(stackIn_54_0, stackIn_55_1);
+                AchievementStatusRequest.startSelectedRace(stackIn_54_0, stackIn_55_1);
               }
             }
           }
@@ -1375,7 +1375,7 @@ final class RaceSetupMenu extends MenuList {
             IntrusiveDeque.field_b = var6;
             stackIn_61_0 = -21383;
             stackIn_62_1 = !(param1);
-            ma.a(stackIn_61_0, stackIn_62_1);
+            AchievementStatusRequest.startSelectedRace(stackIn_61_0, stackIn_62_1);
             return;
           }
         }
@@ -1425,7 +1425,7 @@ final class RaceSetupMenu extends MenuList {
           this.rowSprites[0] = param2;
           this.rowLabels[0] = param3;
           this.rowDescriptions[0] = param4;
-          if (pj.b((byte) 93)) {
+          if (RoadShadowRenderer.isGuestMode((byte) 93)) {
             this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], null, cd.field_c};
           } else {
             this.field_O = new String[]{NetworkArchiveRequest.field_C[DelegatingCanvas.field_d], cd.field_c};

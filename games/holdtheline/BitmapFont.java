@@ -77,8 +77,8 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = SpriteButtonRenderer.a(var10, (byte) -116);
-                                  var4 = var4 + this.field_E[var9_int].field_c;
+                                  var9_int = SpriteButtonRenderer.parseInt(var10, (byte) -116);
+                                  var4 = var4 + this.field_E[var9_int].canvasWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,8 +240,8 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = SpriteButtonRenderer.a(var18, (byte) -116);
-                                    var4 = var4 + this.field_E[var16_int].field_c;
+                                    var16_int = SpriteButtonRenderer.parseInt(var18, (byte) -116);
+                                    var4 = var4 + this.field_E[var16_int].canvasWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -580,20 +580,20 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = SpriteButtonRenderer.a(var13, (byte) -116);
+                                  var10 = SpriteButtonRenderer.parseInt(var13, (byte) -116);
                                   var11_ref_p = this.field_E[var10];
                                   if (this.field_q == null) {
-                                    stackIn_27_0 = var11_ref_p.field_e;
+                                    stackIn_27_0 = var11_ref_p.canvasHeight;
                                   } else {
                                     stackIn_27_0 = this.field_q[var10];
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_L != 256) {
-                                    var11_ref_p.a(param1, param2 + this.baseline - var12, field_L);
+                                    var11_ref_p.drawAlpha(param1, param2 + this.baseline - var12, field_L);
                                   } else {
-                                    var11_ref_p.a(param1, param2 + this.baseline - var12);
+                                    var11_ref_p.draw(param1, param2 + this.baseline - var12);
                                   }
-                                  param1 = param1 + var11_ref_p.field_c;
+                                  param1 = param1 + var11_ref_p.canvasWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -875,7 +875,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_L = SpriteButtonRenderer.a(var4, (byte) -116);
+                field_L = SpriteButtonRenderer.parseInt(var4, (byte) -116);
               }
             } else {
               field_y = field_p;

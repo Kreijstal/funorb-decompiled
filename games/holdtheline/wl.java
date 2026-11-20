@@ -58,7 +58,7 @@ final class wl {
         SocketConnector.a(param6, param5, param0, param3, SoftwareRasterizer.pixels, false, param4, param7, param1);
     }
 
-    final static Class a(String param0, int param1) throws ClassNotFoundException {
+    final static Class resolveClassDescriptor(String param0, int param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_5_0 = null;

@@ -74,7 +74,7 @@ final class RaceWorld {
     private int tutorialHighlightAlpha;
     int field_ob;
     static String field_Z;
-    sb[] field_i;
+    RoadControlPointSpec[] field_i;
     private int field_X;
 
     private final void loadCourse(byte param0, int[] param1, CourseDefinition param2) {
@@ -367,7 +367,7 @@ final class RaceWorld {
                   continue;
                 }
               } else {
-                var13_ref_int__ = TriangleMesh.a(var13_ref_int__, (byte) -121);
+                var13_ref_int__ = TriangleMesh.convexHull(var13_ref_int__, (byte) -121);
               }
               break;
             }
@@ -377,7 +377,7 @@ final class RaceWorld {
             if (0 > param5) {
               param5 = 0;
             }
-            lj.a(0, (int)(var10 * (float)param5), 0, var13_ref_int__, (byte) -56, 0);
+            lj.fillPolygonAlpha(0, (int)(var10 * (float)param5), 0, var13_ref_int__, (byte) -56, 0);
             if (var18 == 0) {
               return;
             }
@@ -429,14 +429,14 @@ final class RaceWorld {
           NodeHashTableIterator.field_g = NodeHashTableIterator.field_g + var7_intLifetime5 / 4;
           var11[14] = NodeHashTableIterator.field_g;
           var11[15] = FullscreenErrorDialog.field_X;
-          var11 = TriangleMesh.a(var11, (byte) -113);
+          var11 = TriangleMesh.convexHull(var11, (byte) -113);
           if (param5 > 256) {
             param5 = 256;
           }
           if (0 > param5) {
             param5 = 0;
           }
-          UrlPacketDownloader.a(var11, (byte) -67, (int)(var10 * (float)param5), 0);
+          UrlPacketDownloader.fillPolygonAlpha(var11, (byte) -67, (int)(var10 * (float)param5), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -642,7 +642,7 @@ final class RaceWorld {
               SecondaryNodeDequeIterator.field_c.normalize(-1);
               var4_float = SecondaryNodeDequeIterator.field_c.y * param2.velocityY + SecondaryNodeDequeIterator.field_c.x * param2.velocityX;
               if (0.0f >= var4_float) {
-                var5_float = 0.800000011920929f * param2.getDefenseMultiplier((byte) 112, sl.field_c);
+                var5_float = 0.800000011920929f * param2.getDefenseMultiplier((byte) 112, ReflectionCheckQueue.field_c);
                 var6 = var4_float * -(1.0f + var5_float);
                 param2.velocityY = param2.velocityY + var6 * SecondaryNodeDequeIterator.field_c.y;
                 param2.velocityX = param2.velocityX + var6 * SecondaryNodeDequeIterator.field_c.x;
@@ -914,7 +914,7 @@ final class RaceWorld {
                   return;
                 }
               }
-              UrlPacketDownloader.a(var3, (byte) -116, 128, 0);
+              UrlPacketDownloader.fillPolygonAlpha(var3, (byte) -116, 128, 0);
               return;
             }
             return;
@@ -966,21 +966,21 @@ final class RaceWorld {
             if (var5 == 0) {
               if ((var4_int == 5) &&
                 (!(hc.a(0, (int)(param1 << 6)) >= 3))) {
-                var6 = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
+                var6 = 84 + (GrowableStringList.sinFixed((int)(param1 << 6), 5255) * 40 >> 16);
                 stackIn_28_0 = param0 + 296;
                 if (0L == (1L & param1)) {
                   stackIn_29_1 = IntWriteRequest.field_m;
                 } else {
-                  stackIn_29_1 = uj.field_a;
+                  stackIn_29_1 = MeshMaterial.field_a;
                 }
-                var7 = MatchingTextValidator.a(stackIn_28_0, stackIn_29_1);
+                var7 = MatchingTextValidator.playDefaultSample(stackIn_28_0, stackIn_29_1);
                 if (null != var7) {
                   var7.setVolume((byte) -126, var6);
                 }
                 if (var8 != 0) {
-                  this.lightningBrightness = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
+                  this.lightningBrightness = 84 + (GrowableStringList.sinFixed((int)(param1 << 6), 5255) * 40 >> 16);
                   var6 = this.lightningBrightness;
-                  var7 = MatchingTextValidator.a(293, TexturedRoadFillRenderer.field_j);
+                  var7 = MatchingTextValidator.playDefaultSample(293, TexturedRoadFillRenderer.field_j);
                   if (null != var7) {
                     var7.setVolume((byte) -125, var6);
                     var7.field_j.setSamplePosition(var6 * 150 + 300);
@@ -988,9 +988,9 @@ final class RaceWorld {
                 }
               }
             } else {
-              this.lightningBrightness = 84 + (GrowableStringList.a((int)(param1 << 6), 5255) * 40 >> 16);
+              this.lightningBrightness = 84 + (GrowableStringList.sinFixed((int)(param1 << 6), 5255) * 40 >> 16);
               var6 = this.lightningBrightness;
-              var7 = MatchingTextValidator.a(293, TexturedRoadFillRenderer.field_j);
+              var7 = MatchingTextValidator.playDefaultSample(293, TexturedRoadFillRenderer.field_j);
               if (null != var7) {
                 var7.setVolume((byte) -125, var6);
                 var7.field_j.setSamplePosition(var6 * 150 + 300);
@@ -1057,7 +1057,7 @@ final class RaceWorld {
         float var21Lifetime1;
         var22 = HoldTheLine.field_D;
         try {
-          if (!MatchingTextValidator.a((byte) -73, param2, param1)) {
+          if (!MatchingTextValidator.overlapsEntities((byte) -73, param2, param1)) {
             return;
           }
           this.moveVehicle(param2, 0.0f, param0 ^ param0, -0.5f * EntitySound.field_k * SecondaryNodeDequeIterator.field_c.x, -0.5f * EntitySound.field_k * SecondaryNodeDequeIterator.field_c.y);
@@ -1229,14 +1229,14 @@ final class RaceWorld {
           GameMenu.field_z = GameMenu.field_z | 1 << param0;
           if (!l.field_b) {
             var5 = new AchievementUnlockRequest(param0, param1, this.field_l, this.field_N, this.field_p, this.field_H);
-            if (pj.b((byte) 92)) {
-              fb.field_n.addLast((byte) -117, var5);
+            if (RoadShadowRenderer.isGuestMode((byte) 92)) {
+              ScoreSubmission.field_n.addLast((byte) -117, var5);
               if (HoldTheLine.field_D == 0) {
                 return;
               }
             }
             PointLight.queueAchievementUnlock(4, var5, (byte) -79);
-            RotatedSpriteAsset.field_k = SpriteSheetAsset.a((byte) -101, 4);
+            RotatedSpriteAsset.field_k = SpriteSheetAsset.requestAchievementStatus((byte) -101, 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1327,11 +1327,11 @@ final class RaceWorld {
             param0 >= 0 &&
             param1 < 640 &&
             480 > param0) {
-            stackIn_13_0 = this.roadLayerMask.field_m[param1 + 640 * param0];
+            stackIn_13_0 = this.roadLayerMask.pixels[param1 + 640 * param0];
             return stackIn_13_0;
           }
-          if (b.a(false, param1, param0, this.collisionBoundaryLoops)) {
-            stackIn_21_0 = (!b.a(false, param1, param0, this.roadBoundaryLoops)) ? 8 : 12;
+          if (b.containsPointInBoundaryLoops(false, param1, param0, this.collisionBoundaryLoops)) {
+            stackIn_21_0 = (!b.containsPointInBoundaryLoops(false, param1, param0, this.roadBoundaryLoops)) ? 8 : 12;
             return stackIn_21_0;
           }
           var4_int = 94 / ((12 - param2) / 42);
@@ -2064,7 +2064,7 @@ final class RaceWorld {
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (param0.opcode == 13))) {
                                     this.tutorialPage = -1;
-                                    qn.a(7, false, false);
+                                    PlayerStatsRequest.a(7, false, false);
                                     decompiledFrameRemainder0 = (var5 != 0);
                                   }
                                 }
@@ -2248,8 +2248,8 @@ final class RaceWorld {
                     var6_int = 0;
                     while (var6_int < this.playerCount) {
                       var7 = this.vehicles[var6_int];
-                      oc.a(var3_int, var7.position.y, var7.position.x, 16777087, (byte) -95, this.tutorialHighlightAlpha);
-                      oc.a(var5_int, var7.position.y, var7.position.x, 16777087, (byte) -92, this.tutorialHighlightAlpha);
+                      oc.fillCircleAlpha(var3_int, var7.position.y, var7.position.x, 16777087, (byte) -95, this.tutorialHighlightAlpha);
+                      oc.fillCircleAlpha(var5_int, var7.position.y, var7.position.x, 16777087, (byte) -92, this.tutorialHighlightAlpha);
                       var6_int++;
                       if (var9 != 0) {
                         decompiledFrameCompleted2 = false;
@@ -2265,8 +2265,8 @@ final class RaceWorld {
                   (decompiledFrameCompleted3) &&
                   (decompiledFrameCompleted2)) {
                   var6_ref = this.vehicles[-107 - this.tutorialHighlight];
-                  oc.a(var3_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) -102, this.tutorialHighlightAlpha);
-                  oc.a(var5_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) 108, this.tutorialHighlightAlpha);
+                  oc.fillCircleAlpha(var3_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) -102, this.tutorialHighlightAlpha);
+                  oc.fillCircleAlpha(var5_int, var6_ref.position.y, var6_ref.position.x, 16777087, (byte) 108, this.tutorialHighlightAlpha);
                   decompiledFrameRemainder0 = (var9 != 0);
                 }
               }
@@ -2281,8 +2281,8 @@ final class RaceWorld {
                   }
                   if (0 != (512 & var6Lifetime1.flags) && (-106 == this.tutorialHighlight ||
                     -this.tutorialHighlight - 102 == (3 & var6Lifetime1.flags))) {
-                    oc.a(var3_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 109, this.tutorialHighlightAlpha);
-                    oc.a(var5_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 93, this.tutorialHighlightAlpha);
+                    oc.fillCircleAlpha(var3_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 109, this.tutorialHighlightAlpha);
+                    oc.fillCircleAlpha(var5_int, var6Lifetime1.position.y, var6Lifetime1.position.x, 16777087, (byte) 93, this.tutorialHighlightAlpha);
                   }
                   var6Lifetime1 = (TrackObject) (this.courseObjects.next((byte) -61));
                 }
@@ -2294,7 +2294,7 @@ final class RaceWorld {
                     stackIn_85_0 = this.roadSegments.length + this.tutorialHighlight;
                   }
                   var6_int = stackIn_85_0;
-                  ValidatedTextField.a(this.roadSegments, var6_int, false, 115, bn.field_l, var6_int + 1);
+                  ValidatedTextField.a(this.roadSegments, var6_int, false, 115, AlternateUsernameLoginCredentials.field_l, var6_int + 1);
                 }
               }
             } else {
@@ -2304,7 +2304,7 @@ final class RaceWorld {
                 stackIn_85_0 = this.roadSegments.length + this.tutorialHighlight;
               }
               var6_int = stackIn_85_0;
-              ValidatedTextField.a(this.roadSegments, var6_int, false, 115, bn.field_l, var6_int + 1);
+              ValidatedTextField.a(this.roadSegments, var6_int, false, 115, AlternateUsernameLoginCredentials.field_l, var6_int + 1);
             }
           }
           var2 = RasterBuffer.field_a[this.tutorialPage];
@@ -2417,7 +2417,7 @@ final class RaceWorld {
         int var10Lifetime1;
         var14 = HoldTheLine.field_D;
         try {
-          MusicPatch.a(9);
+          MusicPatch.initializeCollisionScratch(9);
           this.gameMode = param2;
           this.field_kb = false;
           this.twoPlayerMode = param6;
@@ -2463,7 +2463,7 @@ final class RaceWorld {
             stackIn_29_1 = 0;
           }
           boolean decompiledFrameCompleted3 = true;
-          if (LoginCredentialType.a(stackIn_29_0, stackIn_29_1) &&
+          if (LoginCredentialType.isFeatureEnabled(stackIn_29_0, stackIn_29_1) &&
             2 == this.gameMode) {
             AchievementUnlockRequest.field_n = new IntrusiveDeque();
             var9_int = 0;
@@ -2564,18 +2564,18 @@ final class RaceWorld {
           }
           if (stackIn_82_0 != 0) {
             this.vehicles[0].keyBindings = ae.field_f;
-            this.vehicles[1].keyBindings = ij.field_c;
+            this.vehicles[1].keyBindings = ChatMessage.field_c;
             if (param4 != -1) {
-              this.vehicles[0].setVehicleDefinition(20385, ge.field_c[param4]);
+              this.vehicles[0].setVehicleDefinition(20385, ContentTransitionState.field_c[param4]);
             }
             if (param1 != -1) {
-              this.vehicles[1].setVehicleDefinition(20385, ge.field_c[param1]);
+              this.vehicles[1].setVehicleDefinition(20385, ContentTransitionState.field_c[param1]);
               if ((var14 != 0) && (5 != this.gameMode &&
                 this.gameMode != 6 &&
                 this.gameMode != 4)) {
                 this.vehicles[0].keyBindings = ValidationState.field_a;
                 if (-1 != param4) {
-                  this.vehicles[0].setVehicleDefinition(20385, ge.field_c[param4]);
+                  this.vehicles[0].setVehicleDefinition(20385, ContentTransitionState.field_c[param4]);
                 }
               }
             }
@@ -2585,7 +2585,7 @@ final class RaceWorld {
               this.gameMode != 4) {
               this.vehicles[0].keyBindings = ValidationState.field_a;
               if (-1 != param4) {
-                this.vehicles[0].setVehicleDefinition(20385, ge.field_c[param4]);
+                this.vehicles[0].setVehicleDefinition(20385, ContentTransitionState.field_c[param4]);
               }
             }
           }
@@ -2677,22 +2677,22 @@ final class RaceWorld {
                 }
                 if (decompiledFrameRemainder0) {
                   boolean decompiledSharedTail0 = (2 != this.gameMode ||
-                    LoginCredentialType.a(16616, 0) ||
+                    LoginCredentialType.isFeatureEnabled(16616, 0) ||
                     param6 ||
                     !(QuickChatPhraseDefinition.field_s));
                   if (!decompiledSharedTail0) {
                     QuickChatPhraseDefinition.field_s = false;
-                    GrowableStringList.a(0);
+                    GrowableStringList.savePlayerProgress(0);
                     this.enterTutorialPage("demolition", (byte) 8);
                     decompiledSharedTail0 = (var14 != 0);
                   }
                   if ((decompiledSharedTail0) && (this.courseTheme == 3 &&
-                    ij.field_l &&
+                    ChatMessage.field_l &&
                     this.gameMode != 5 &&
                     this.gameMode != 6 &&
                     this.gameMode != 2)) {
-                    ij.field_l = false;
-                    GrowableStringList.a(0);
+                    ChatMessage.field_l = false;
+                    GrowableStringList.savePlayerProgress(0);
                     this.enterTutorialPage("night", (byte) 8);
                   }
                 }
@@ -2708,7 +2708,7 @@ final class RaceWorld {
                 break;
               }
             }
-            sa.a(stackIn_201_0, -15676);
+            NameRequestState.setSoundListener(stackIn_201_0, -15676);
             if (var14 == 0) {
               return;
             }
@@ -2735,7 +2735,7 @@ final class RaceWorld {
           if (decompiledNaturalLoopExit0) {
             stackIn_211_0 = var9;
           }
-          sa.a((MovingEntity) (stackIn_211_0), -15676);
+          NameRequestState.setSoundListener((MovingEntity) (stackIn_211_0), -15676);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3074,7 +3074,7 @@ final class RaceWorld {
                     stackIn_149_0 = 0;
                   }
                   var8 = stackIn_149_0;
-                  stackIn_153_0 = (!LoginCredentialType.a(16616, 0)) ? 2 : 3;
+                  stackIn_153_0 = (!LoginCredentialType.isFeatureEnabled(16616, 0)) ? 2 : 3;
                   var9 = stackIn_153_0;
                   if (var6.playerIndex == 0 ||
                     var6.playerIndex == 2) {
@@ -3522,7 +3522,7 @@ final class RaceWorld {
               var11 = 640 - var7;
               var12 = var6_int - (param1 - (-param0 + var8) * param2.width);
               var13 = param2.width - var7;
-              var14 = this.roadLayerMask.field_m;
+              var14 = this.roadLayerMask.pixels;
               if (param4 >= 1) {
                 stackIn_40_0 = 60;
               } else {
@@ -3600,7 +3600,7 @@ final class RaceWorld {
         RuntimeException var3 = null;
         try {
           if (param1.lightSprite == null) {
-            param1.lightSprite = ImageProducerRasterBuffer.a(param1.definition.field_d, (byte) 27, param1.field_Eb);
+            param1.lightSprite = ImageProducerRasterBuffer.createRadialLightSprite(param1.definition.field_d, (byte) 27, param1.field_Eb);
           }
           vb.a(-67, this.lightMap);
           if (param0 != 32249) {
@@ -3852,7 +3852,7 @@ final class RaceWorld {
           boolean decompiledFrameCompleted4 = true;
           boolean decompiledFrameCompleted5 = true;
           if (5 > this.gameMode) {
-            while (qh.c(-64)) {
+            while (qh.pollKeyEvent(-64)) {
               stackIn_148_0 = DelayedServerPacket.field_n;
               stackIn_148_1 = 13;
               if (var13 != 0) {
@@ -3860,7 +3860,7 @@ final class RaceWorld {
                 break;
               }
               if (stackIn_148_0 == stackIn_148_1) {
-                DropTargetWidget.a(1, (byte) 100, true);
+                DropTargetWidget.setRequestedDisplayMode(1, (byte) 100, true);
                 TrackObject.switchMenu(true, false, 1);
                 return;
               }
@@ -4217,7 +4217,7 @@ final class RaceWorld {
                         this.raceFinished = true;
                         this.field_ob = this.raceTicks;
                         this.queueBanner(MovingEntity.field_o, (byte) 53);
-                        qh.a(0, 1);
+                        qh.requestMusicTrack(0, 1);
                       }
                     }
                     if (decompiledFrameCompleted2) {
@@ -4266,7 +4266,7 @@ final class RaceWorld {
                             var5_intLifetime2 = 1;
                             if (var2_int == 0 &&
                               !this.twoPlayerMode &&
-                              LoginCredentialType.a(16616, 0)) {
+                              LoginCredentialType.isFeatureEnabled(16616, 0)) {
                               this.unlockAchievement(15, 240, (byte) 118);
                             }
                           }
@@ -4281,12 +4281,12 @@ final class RaceWorld {
                           this.raceFinished = true;
                           this.queueBanner(MovingEntity.field_o, (byte) 53);
                           if (2 <= this.vehicles[0].racePosition) {
-                            qh.a(0, 2);
+                            qh.requestMusicTrack(0, 2);
                             if (var13 != 0) {
-                              qh.a(0, 1);
+                              qh.requestMusicTrack(0, 1);
                             }
                           } else {
-                            qh.a(0, 1);
+                            qh.requestMusicTrack(0, 1);
                           }
                         }
                         var2_int = 0;
@@ -4312,7 +4312,7 @@ final class RaceWorld {
                       break;
                     }
                     if (stackIn_356_0 < stackIn_356_1) {
-                      boolean decompiledSharedTail0 = !(LoginCredentialType.a(16616, 0));
+                      boolean decompiledSharedTail0 = !(LoginCredentialType.isFeatureEnabled(16616, 0));
                       if (!decompiledSharedTail0) {
                         var6 = 25;
                         while (true) {
@@ -4337,7 +4337,7 @@ final class RaceWorld {
                       }
                       if (decompiledSharedTail0) {
                         if (this.field_P == 3) {
-                          this.queueBanner(ij.field_n, (byte) 53);
+                          this.queueBanner(ChatMessage.field_n, (byte) 53);
                         }
                         if (4 == this.field_P) {
                           this.queueBanner(UsernameLoginCredentials.field_g, (byte) 53);
@@ -4394,12 +4394,12 @@ final class RaceWorld {
                           }
                         }
                         if (this.vehicles[0].racePosition < 2) {
-                          qh.a(0, 1);
+                          qh.requestMusicTrack(0, 1);
                           if (var13 != 0) {
-                            qh.a(0, 2);
+                            qh.requestMusicTrack(0, 2);
                           }
                         } else {
-                          qh.a(0, 2);
+                          qh.requestMusicTrack(0, 2);
                         }
                         if ((7 == DelegatingCanvas.field_d) &&
                           (!(2 <= this.vehicles[0].racePosition)) &&
@@ -4451,22 +4451,22 @@ final class RaceWorld {
                           if (var13 != 0) {
                             if (this.vehicles[0].racePosition == 0 ||
                               this.vehicles[1].racePosition == 0) {
-                              qh.a(0, 1);
-                              qh.a(0, 2);
+                              qh.requestMusicTrack(0, 1);
+                              qh.requestMusicTrack(0, 2);
                             } else {
-                              qh.a(0, 2);
+                              qh.requestMusicTrack(0, 2);
                             }
                           }
                         }
                       } else {
                         if (this.vehicles[0].racePosition == 0 ||
                           this.vehicles[1].racePosition == 0) {
-                          qh.a(0, 1);
+                          qh.requestMusicTrack(0, 1);
                           if (var13 != 0) {
-                            qh.a(0, 2);
+                            qh.requestMusicTrack(0, 2);
                           }
                         } else {
-                          qh.a(0, 2);
+                          qh.requestMusicTrack(0, 2);
                         }
                       }
                     }
@@ -4516,7 +4516,7 @@ final class RaceWorld {
               !this.field_T &&
               this.gameMode != 3 &&
               this.achievementCount == 0) {
-              qn.a(7, false, false);
+              PlayerStatsRequest.a(7, false, false);
             }
             stackIn_535_0 = this.courseTheme;
             stackIn_535_1 = 3;
@@ -4571,7 +4571,7 @@ final class RaceWorld {
             }
           }
           if (decompiledFrameCompleted0) {
-            decompiledFrameRemainder0 = (!(LoginCredentialType.a(16616, 0)) ||
+            decompiledFrameRemainder0 = (!(LoginCredentialType.isFeatureEnabled(16616, 0)) ||
               2 != this.gameMode);
           }
           if (decompiledFrameRemainder0) {
@@ -4893,7 +4893,7 @@ final class RaceWorld {
         TrackObject var3Lifetime2;
         TrackObject var3Lifetime3;
         if (this.courseTheme == 3) {
-          if (!LoginCredentialType.a(16616, 0)) {
+          if (!LoginCredentialType.isFeatureEnabled(16616, 0)) {
             var1 = 307200;
             while (var1 > 0) {
               var1--;
@@ -5019,7 +5019,7 @@ final class RaceWorld {
           }
           this.drawParticles(false, var2Lifetime1);
         }
-        if (LoginCredentialType.a(16616, 0)) {
+        if (LoginCredentialType.isFeatureEnabled(16616, 0)) {
           this.drawRain((long)this.ticks, true);
         }
         if (this.courseTheme == 3 &&
@@ -5044,7 +5044,7 @@ final class RaceWorld {
             0 <= param3 &&
             param1 < 640 &&
             param3 < 480) {
-            var5_int = this.roadLayerMask.field_m[param3 * 640 + param1] & 85;
+            var5_int = this.roadLayerMask.pixels[param3 * 640 + param1] & 85;
             if (param0 >= 1) {
               var5_int = var5_int & 60;
             }
@@ -5056,7 +5056,7 @@ final class RaceWorld {
           if (param2 != -3) {
             this.enterTutorialPage((String) null, (byte) -127);
           }
-          stackIn_25_0 = b.a(false, param1, param3, this.roadBoundaryLoops);
+          stackIn_25_0 = b.containsPointInBoundaryLoops(false, param1, param3, this.roadBoundaryLoops);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5650,8 +5650,8 @@ final class RaceWorld {
             throw new IOException("Invalid file format!");
           }
           boolean decompiledFrameRemainder1 = true;
-          var6 = new byte[rh.field_a.length];
-          var4.readBytes(rh.field_a.length, 0, (byte) 98, var6);
+          var6 = new byte[CourseVersionTag.bytes.length];
+          var4.readBytes(CourseVersionTag.bytes.length, 0, (byte) 98, var6);
           if (NameAvailabilityResult.equalByteArrays(WeightedLruCache.field_b, param2 - 32, var6)) {
             var7 = 0;
             decompiledFrameRemainder1 = (var50 != 0);
@@ -5963,17 +5963,17 @@ final class RaceWorld {
           if (var7 != 0 ||
             var50 != 0) {
             var38 = new RoadSegment[var10];
-            this.field_i = new sb[var10];
+            this.field_i = new RoadControlPointSpec[var10];
             var14 = 0;
             do {
               if (var10 <= var14) {
                 this.field_m = new ue[var11];
                 break;
               }
-              this.field_i[var14] = new sb();
+              this.field_i[var14] = new RoadControlPointSpec();
               var39_int = var4.readUnsignedByte((byte) -27);
               ((Object[]) (var38))[var14] = (RoadSegment) (var20.elements[var39_int]);
-              this.field_i[var14].field_b = (float)var4.readUnsignedShort(106) / 32768.0f - 0.5f;
+              this.field_i[var14].parameter = (float)var4.readUnsignedShort(106) / 32768.0f - 0.5f;
               var14++;
             } while (var50 == 0);
             var14 = 0;
@@ -6089,7 +6089,7 @@ final class RaceWorld {
                   while (var15 < this.roadSegments.length) {
                     stackIn_162_0 = this.roadSegments[var15];
                     if (stackIn_162_0 == ((Object[]) (var38))[var14]) {
-                      this.roadSegments[var15].controlPathAt(this.field_i[var14].field_b, param2 ^ 7561012);
+                      this.roadSegments[var15].controlPathAt(this.field_i[var14].parameter, param2 ^ 7561012);
                     }
                     var15++;
                   }
@@ -6135,7 +6135,7 @@ final class RaceWorld {
               }
             }
             if (decompiledFrameRemainder3) {
-              sb.field_a = this.roadSegments;
+              RoadControlPointSpec.field_a = this.roadSegments;
               var14 = 0;
               while (true) {
                 stackIn_174_0Lifetime1 = var14;
@@ -6155,8 +6155,8 @@ final class RaceWorld {
                 }
                 if (stackIn_223_0 >= stackIn_223_1 &&
                   var44_intLifetime1 <= 8) {
-                  var46 = ge.field_c[this.courseTheme * 2];
-                  var47_float = hi.a(this.roadSegments.length, 0.0f, -1, this.roadSegments, -24659, var43_ref_qmLifetime1, var16Lifetime1Lifetime1);
+                  var46 = ContentTransitionState.field_c[this.courseTheme * 2];
+                  var47_float = InheritedWidgetStyle.findRoadParameter(this.roadSegments.length, 0.0f, -1, this.roadSegments, -24659, var43_ref_qmLifetime1, var16Lifetime1Lifetime1);
                   if (var47_float == -1.0f) {
                     break;
                   }
@@ -6183,7 +6183,7 @@ final class RaceWorld {
                   stackIn_189_0[stackIn_189_1] = new RaceVehicle(stackIn_189_4, stackIn_189_5, stackIn_189_6, stackIn_189_7, stackIn_189_8, stackIn_190_9, var46, 0);
                 } else if (var44_intLifetime1 >= 62 &&
                   69 >= var44_intLifetime1) {
-                  var46_float = hi.a(this.roadSegments.length, 0.0f, 1, this.roadSegments, param2 ^ -24691, var43_ref_qmLifetime1, var16Lifetime1Lifetime1);
+                  var46_float = InheritedWidgetStyle.findRoadParameter(this.roadSegments.length, 0.0f, 1, this.roadSegments, param2 ^ -24691, var43_ref_qmLifetime1, var16Lifetime1Lifetime1);
                   if (-1.0f == var46_float) {
                     decompiledFrameCompleted1 = false;
                     break;
@@ -6208,7 +6208,7 @@ final class RaceWorld {
                     stackIn_204_3 = null;
                     stackIn_204_9 = this.roadSegments[(int)var46_float];
                   }
-                  stackIn_203_0[stackIn_203_1] = new RaceVehicle(stackIn_203_4, stackIn_203_5, stackIn_203_6, stackIn_203_7, stackIn_203_8, stackIn_204_9, ge.field_c[-62 + var44_intLifetime1], 1);
+                  stackIn_203_0[stackIn_203_1] = new RaceVehicle(stackIn_203_4, stackIn_203_5, stackIn_203_6, stackIn_203_7, stackIn_203_8, stackIn_204_9, ContentTransitionState.field_c[-62 + var44_intLifetime1], 1);
                 } else {
                   var46_ref = new TrackObject(var43_ref_qmLifetime1, var44_intLifetime1, var16Lifetime1Lifetime1, var45Lifetime1, 0.0f, 0.0f);
                   if ((1048576 & var46_ref.flags) != 0) {
@@ -6220,7 +6220,7 @@ final class RaceWorld {
                   } else {
                     this.dynamicObjects.addLast((byte) -92, var46_ref);
                   }
-                  var46_ref.updateCourseMembership(-1, sb.field_a);
+                  var46_ref.updateCourseMembership(-1, RoadControlPointSpec.field_a);
                   if (53 != var44_intLifetime1) {
                     if (54 == var44_intLifetime1) {
                       var47 = var43_ref_qmLifetime1.x - (int)(Math.sin((double)var45Lifetime1) * 35.0);
@@ -6354,7 +6354,7 @@ final class RaceWorld {
                   if (stackIn_277_0 == 0) {
                     var43Lifetime1 = var43Lifetime1 ^ 1;
                   }
-                  this.vehicles[var14].setVehicleDefinition(param2 + 20353, ge.field_c[var43Lifetime1]);
+                  this.vehicles[var14].setVehicleDefinition(param2 + 20353, ContentTransitionState.field_c[var43Lifetime1]);
                   var14++;
                   stackIn_269_0 = ~var14;
                   stackIn_269_1 = ~this.playerCount;
@@ -6379,7 +6379,7 @@ final class RaceWorld {
                   if (stackIn_277_0 == 0) {
                     var43Lifetime1Lifetime1 = var43Lifetime1Lifetime1 ^ 1;
                   }
-                  this.vehicles[var14].setVehicleDefinition(param2 + 20353, ge.field_c[var43Lifetime1Lifetime1]);
+                  this.vehicles[var14].setVehicleDefinition(param2 + 20353, ContentTransitionState.field_c[var43Lifetime1Lifetime1]);
                   var14++;
                 }
               }
@@ -6408,7 +6408,7 @@ final class RaceWorld {
               break;
             }
             this.prepareCourseRendering(param0, -77);
-            sb.field_a = null;
+            RoadControlPointSpec.field_a = null;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6553,8 +6553,8 @@ final class RaceWorld {
                       continue;
                     }
                   } else {
-                    var5 = TriangleMesh.a(var5, (byte) -127);
-                    UrlPacketDownloader.a(var5, (byte) -106, 128, 0);
+                    var5 = TriangleMesh.convexHull(var5, (byte) -127);
+                    UrlPacketDownloader.fillPolygonAlpha(var5, (byte) -106, 128, 0);
                   }
                   break;
                 }
@@ -6620,7 +6620,7 @@ final class RaceWorld {
             }
             o.a(128, 480, 0, var4_int, 640, -4441, 0);
           }
-          var4_intLifetime1 = 1 * hc.a(0, (int)(param0 << 1)) + 2 * GrowableStringList.a((int)(param0 >> 1), 5255) >> 20;
+          var4_intLifetime1 = 1 * hc.a(0, (int)(param0 << 1)) + 2 * GrowableStringList.sinFixed((int)(param0 >> 1), 5255) >> 20;
           var5 = ((int)param0 * 640 - 1) % 1337;
           var6 = var5 / 640;
           boolean decompiledNaturalLoopExit1 = false;
@@ -7057,7 +7057,7 @@ final class RaceWorld {
             param1 >= 0 &&
             640 > param3 &&
             param1 < 480) {
-            var5_int = this.roadLayerMask.field_m[param3 + 640 * param1];
+            var5_int = this.roadLayerMask.pixels[param3 + 640 * param1];
             if (param0 >= 1) {
               var5_int = var5_int & 60;
             }
@@ -7068,7 +7068,7 @@ final class RaceWorld {
             }
             return (0 != var5_int);
           }
-          stackIn_31_0 = b.a(!param2, param3, param1, this.collisionBoundaryLoops);
+          stackIn_31_0 = b.containsPointInBoundaryLoops(!param2, param3, param1, this.collisionBoundaryLoops);
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7231,7 +7231,7 @@ final class RaceWorld {
               var11_float = var8_float * (var8_float * var3.mass) + var3.momentOfInertia;
               var12 = var5_ref_in.y * (param1.velocityY + var10_float) + var5_ref_in.x * (param1.velocityX + var9_float);
               if (0.0f > var12) {
-                var13 = 0.800000011920929f * param1.getDefenseMultiplier((byte) 114, sl.field_c);
+                var13 = 0.800000011920929f * param1.getDefenseMultiplier((byte) 114, ReflectionCheckQueue.field_c);
                 var14 = -(1.0f + var13) * var12 * var3.momentOfInertia / var11_float;
                 param1.velocityX = param1.velocityX + var14 * var5_ref_in.x;
                 param1.velocityY = param1.velocityY + var14 * var5_ref_in.y;
@@ -7472,29 +7472,29 @@ final class RaceWorld {
                     var6_int = stackIn_7_0;
                     while (var6_int < 4) {
                       var7_int = 16 * var6_int + 4 * var5_int + var4_int;
-                      this.roadLayerMask.field_n[var7_int] = 0;
+                      this.roadLayerMask.palette[var7_int] = 0;
                       stackIn_11_0 = ~var4_int;
                       stackIn_11_1 = -4;
                       if (stackIn_11_0 != stackIn_11_1) {
                         if (var4_int == 2) {
-                          this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 128);
+                          this.roadLayerMask.palette[var7_int] = kc.a(this.roadLayerMask.palette[var7_int], 128);
                         }
                       } else {
-                        this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 255);
+                        this.roadLayerMask.palette[var7_int] = kc.a(this.roadLayerMask.palette[var7_int], 255);
                       }
                       if (var5_int == 3) {
-                        this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 65280);
+                        this.roadLayerMask.palette[var7_int] = kc.a(this.roadLayerMask.palette[var7_int], 65280);
                       } else {
                         if (var5_int == 2) {
-                          this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 32768);
+                          this.roadLayerMask.palette[var7_int] = kc.a(this.roadLayerMask.palette[var7_int], 32768);
                         }
                       }
                       if (3 != var6_int) {
                         if (2 == var6_int) {
-                          this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 8388608);
+                          this.roadLayerMask.palette[var7_int] = kc.a(this.roadLayerMask.palette[var7_int], 8388608);
                         }
                       } else {
-                        this.roadLayerMask.field_n[var7_int] = kc.a(this.roadLayerMask.field_n[var7_int], 16711680);
+                        this.roadLayerMask.palette[var7_int] = kc.a(this.roadLayerMask.palette[var7_int], 16711680);
                       }
                       var6_int++;
                     }
@@ -7511,11 +7511,11 @@ final class RaceWorld {
               stackIn_47_0 = ~this.courseTheme;
             }
             if (stackIn_47_0 == -4) {
-              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 3));
+              GrowableStringList.drawCollisionRoadFill(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 3));
             }
             if (stackIn_47_0 != -4 ||
               var16 != 0) {
-              GrowableStringList.a(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 2));
+              GrowableStringList.drawCollisionRoadFill(this.roadSegments, 10000536, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 2));
               mn.a(this.roadSegments, new RoadLayerMaskRenderer(this.roadLayerMask, (byte) 3), (byte) -20);
             }
             TutorialTransition.a(32381);
@@ -7533,7 +7533,7 @@ final class RaceWorld {
               var6 = new GrowableObjectList();
               var7 = new GrowableObjectList();
               var8 = new GrowableObjectList();
-              TextLineLayout.a(var6, var8, var5, var4, this.roadSegments, var7, -110);
+              TextLineLayout.buildCourseBoundaries(var6, var8, var5, var4, this.roadSegments, var7, -110);
               var5 = NanoTickClock.removeShortBoundaryEdges(var5, (byte) -127);
               var7 = NanoTickClock.removeShortBoundaryEdges(var7, (byte) -127);
               var6 = NanoTickClock.removeShortBoundaryEdges(var6, (byte) -127);

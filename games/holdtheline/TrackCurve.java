@@ -8,7 +8,7 @@ abstract class TrackCurve extends IntrusiveNode {
 
     abstract Point2i pointAt(boolean param0, float param1);
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean hasInvalidPasswordLength(String param0, byte param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -40,7 +40,7 @@ abstract class TrackCurve extends IntrusiveNode {
 
     abstract Vector2f getEndDirection(boolean param0);
 
-    final static SocialListEntry a(int param0, String param1) {
+    final static SocialListEntry findFriend(int param0, String param1) {
         String var2 = null;
         SocialListEntry var3 = null;
         String var4 = null;
@@ -102,10 +102,10 @@ abstract class TrackCurve extends IntrusiveNode {
 
     abstract Vector2f directionAt(byte param0, float param1);
 
-    final static int e(int param0) {
+    final static int processArchiveTransport(int param0) {
         LoadProgressDialog.field_Z.processArchiveProviders(true);
         if (!OutlinedRoadStripRenderer.field_n.processRequests((byte) 83)) {
-          return TriangleMesh.b(1);
+          return TriangleMesh.pollArchiveConnection(1);
         }
         if (param0 != -17204) {
           field_j = (String) null;
@@ -118,10 +118,10 @@ abstract class TrackCurve extends IntrusiveNode {
 
     abstract float length(int param0);
 
-    final static void a(byte param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, int param4, boolean param5, int param6, MusicCrossfadeStream param7) {
+    final static void initializeAudioOutputs(byte param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, int param4, boolean param5, int param6, MusicCrossfadeStream param7) {
         try {
           if (param0 > -108) {
-            TrackCurve.e(-51);
+            TrackCurve.processArchiveTransport(-51);
           }
           AudioOutput.configure(param6, param5, 10);
           LoginChoicePanel.field_G = AudioOutput.create(param1, param2, 0, param3);
@@ -130,7 +130,7 @@ abstract class TrackCurve extends IntrusiveNode {
           ua.field_a = param4;
           DraggableWidget.field_G.setStream(LoginChoicePanel.field_H);
           ai.field_a = param7;
-          ai.field_a.a(NanoTickClock.field_e, -32284);
+          ai.field_a.setMasterVolume(NanoTickClock.field_e, -32284);
           LoginChoicePanel.field_G.setStream(ai.field_a);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "wc.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
@@ -148,7 +148,7 @@ abstract class TrackCurve extends IntrusiveNode {
         field_j = null;
     }
 
-    final static RoadSegment a(RoadSegment param0, float param1, float param2, byte param3) {
+    final static RoadSegment sliceRoadSegment(RoadSegment param0, float param1, float param2, byte param3) {
         RuntimeException var4 = null;
         StraightRoadSegment stackIn_2_0 = null;
         CurvedRoadSegment stackIn_6_0 = null;
@@ -158,13 +158,13 @@ abstract class TrackCurve extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 instanceof StraightRoadSegment) {
-            stackIn_2_0 = pb.a(param1, (byte) -111, (StraightRoadSegment) (param0), param2);
+            stackIn_2_0 = StraightRoadSlicer.sliceStraightRoadSegment(param1, (byte) -111, (StraightRoadSegment) (param0), param2);
             return (RoadSegment) ((Object) stackIn_2_0);
           }
           if (param3 != -115) {
             TrackCurve.clearSharedReferences(false);
           }
-          stackIn_6_0 = ContentTransitionDialog.a(param1, -18895, param2, (CurvedRoadSegment) (param0));
+          stackIn_6_0 = ContentTransitionDialog.sliceCurvedRoadSegment(param1, -18895, param2, (CurvedRoadSegment) (param0));
           return (RoadSegment) ((Object) stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ abstract class TrackCurve extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;

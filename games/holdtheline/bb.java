@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bb {
-    static sa field_a;
+    static NameRequestState field_a;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void updateNavigationLinks(java.applet.Applet param0, byte param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -18,15 +18,15 @@ final class bb {
             try {
               var4 = param0.getCodeBase();
               var3 = IntrusiveDeque.a(var4, param0, (byte) 56).getFile();
-              eo.a(param0, new Object[]{"home", var3 + "home.ws"}, false, "updatelinks");
-              eo.a(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, false, "updatelinks");
+              JavaScriptBridge.callJavaScript(param0, new Object[]{"home", var3 + "home.ws"}, false, "updatelinks");
+              JavaScriptBridge.callJavaScript(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, false, "updatelinks");
               if (param1 != 49) {
                 return;
               }
-              eo.a(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, false, "updatelinks");
-              eo.a(param0, new Object[]{"options", var3 + "options.ws"}, false, "updatelinks");
-              eo.a(param0, new Object[]{"terms", var3 + "terms.ws"}, false, "updatelinks");
-              eo.a(param0, new Object[]{"privacy", var3 + "privacy.ws"}, false, "updatelinks");
+              JavaScriptBridge.callJavaScript(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, false, "updatelinks");
+              JavaScriptBridge.callJavaScript(param0, new Object[]{"options", var3 + "options.ws"}, false, "updatelinks");
+              JavaScriptBridge.callJavaScript(param0, new Object[]{"terms", var3 + "terms.ws"}, false, "updatelinks");
+              JavaScriptBridge.callJavaScript(param0, new Object[]{"privacy", var3 + "privacy.ws"}, false, "updatelinks");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -282,14 +282,14 @@ final class bb {
                         if (param0 >= 0) {
                             /* Inlined CFG state: 13. */
                             {
-                                fc.a(2, (float)var17.size, param2, var17, var18);
+                                fc.appendBoundaryInterval(2, (float)var17.size, param2, var17, var18);
                                 statePc = 14;
                                 continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 12. */
                             {
-                                fc.a(2, 0.0f, param2, var17, var18);
+                                fc.appendBoundaryInterval(2, 0.0f, param2, var17, var18);
                                 statePc = 14;
                                 continue scanLoop1;
                             }
@@ -344,7 +344,7 @@ final class bb {
                         if (((GrowableObjectList) (stackIn_18_0)).size <= param0) {
                             /* Inlined CFG state: 20. */
                             {
-                                fc.a(2, (float)var9.size, param2, var9, var18);
+                                fc.appendBoundaryInterval(2, (float)var9.size, param2, var9, var18);
                                 param2 = 0.0f;
                                 stackIn_22_0 = param4;
                                 stackIn_21_0 = stackIn_22_0;
@@ -410,7 +410,7 @@ final class bb {
                         if (0 > param0) {
                             /* Inlined CFG state: 27. */
                             {
-                                fc.a(2, 0.0f, param2, var9, var18);
+                                fc.appendBoundaryInterval(2, 0.0f, param2, var9, var18);
                                 param2 = (float)var9.size;
                                 if (param4) {
                                     /* Inlined CFG state: 29. */
@@ -471,7 +471,7 @@ final class bb {
                     try {
                         var13 = (BoundaryIntersection) (((GrowableObjectList) (var10)).elements[param0]);
                         var14 = var13.parameter;
-                        fc.a(2, var14, param2, var9, var18);
+                        fc.appendBoundaryInterval(2, var14, param2, var9, var18);
                         if (var13.field_l) {
                             statePc = 50;
                         } else {
@@ -797,7 +797,7 @@ final class bb {
         }
     }
 
-    final synchronized static long b(int param0) {
+    final synchronized static long monotonicTimeMillis(int param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != -1) {
@@ -822,7 +822,7 @@ final class bb {
         return var1Lifetime1 + dg.field_d;
     }
 
-    final static Sprite[] a(int param0, byte param1) {
+    final static Sprite[] createSolidNineSlice(int param0, byte param1) {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
         var4[4] = NanoTickClock.createSolidSquareSprite(param0, -61, 64);

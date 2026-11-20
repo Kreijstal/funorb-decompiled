@@ -138,8 +138,8 @@ final class IsaacPacketBuffer extends PacketBuffer {
           return;
         }
         try {
-          sb.field_c = new AccountProgressDialog(ka.field_b, DisplayNameForm.field_I, param1, ArchiveCatalog.field_o, ResourceArchive.field_g);
-          ka.field_b.a(sb.field_c, false);
+          RoadControlPointSpec.field_c = new AccountProgressDialog(ka.field_b, DisplayNameForm.field_I, param1, ArchiveCatalog.field_o, ResourceArchive.field_g);
+          ka.field_b.showDialog(RoadControlPointSpec.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "da.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

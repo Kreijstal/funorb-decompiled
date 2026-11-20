@@ -12,18 +12,18 @@ final class ClientException extends RuntimeException {
     final static boolean a(byte param0) {
         if (param0 >= -112) {
           field_b = (String[]) null;
-          if (null == r.field_a) {
+          if (null == ServerConnectionState.field_a) {
             return false;
           }
-          if (null != r.field_a.i((byte) -127)) {
+          if (null != ServerConnectionState.field_a.getTopDialog((byte) -127)) {
             return true;
           }
           return false;
         }
-        if (null == r.field_a) {
+        if (null == ServerConnectionState.field_a) {
           return false;
         }
-        if (null != r.field_a.i((byte) -127)) {
+        if (null != ServerConnectionState.field_a.getTopDialog((byte) -127)) {
           return true;
         }
         return false;

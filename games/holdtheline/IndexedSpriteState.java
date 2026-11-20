@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class IndexedSpriteState {
-    int field_d;
+    int offsetY;
     static String field_f;
-    int field_k;
+    int offsetX;
     static QuickChatDynamicCommand field_h;
-    int field_i;
+    int width;
     static float[] field_g;
-    int field_l;
-    int field_c;
-    int field_e;
+    int height;
+    int canvasWidth;
+    int canvasHeight;
     static String field_b;
     static int field_j;
     static int[] field_a;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     public static void clearSharedReferences(boolean param0) {
         field_f = null;
@@ -38,10 +38,10 @@ abstract class IndexedSpriteState {
         int var3Lifetime1;
         var5 = HoldTheLine.field_D;
         if (null == LoadProgressDialog.field_X) {
-          if (!fb.field_i.tryLoadNamedGroup("world_images", -128)) {
-            return hi.a(111, (byte) -112, 84);
+          if (!ScoreSubmission.field_i.tryLoadNamedGroup("world_images", -128)) {
+            return InheritedWidgetStyle.getPlaceholderSprite(111, (byte) -112, 84);
           }
-          LoadProgressDialog.field_X = StandardContentTransitionDialog.a(fb.field_i, 33, "world_images", "");
+          LoadProgressDialog.field_X = StandardContentTransitionDialog.loadSpritesByName(ScoreSubmission.field_i, 33, "world_images", "");
           TutorialTransition.a(32381);
           DelegatingCanvas.field_c = new Sprite[4];
           for (var3 = 0; var3 < 4; var3++) {

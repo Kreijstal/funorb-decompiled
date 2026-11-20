@@ -234,16 +234,16 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
           var44 = new int[4];
           SoftwareRasterizer.saveClip(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
-            var6[var16_int] = param2[var16_int].field_k - param3;
-            var7[var16_int] = -param3 + param2[var16_int].field_d;
-            var8[var16_int] = (param3 << 1) + param2[var16_int].field_i;
-            var9[var16_int] = (param3 << 1) + param2[var16_int].field_l;
+            var6[var16_int] = param2[var16_int].offsetX - param3;
+            var7[var16_int] = -param3 + param2[var16_int].offsetY;
+            var8[var16_int] = (param3 << 1) + param2[var16_int].width;
+            var9[var16_int] = (param3 << 1) + param2[var16_int].height;
             array$0 = new byte[var36[var16_int] * var37[var16_int]];
             var11[var16_int] = array$0;
             var17 = array$0;
-            var18 = param2[var16_int].field_m;
-            var19 = param2[var16_int].field_i;
-            var20 = param2[var16_int].field_l;
+            var18 = param2[var16_int].pixels;
+            var19 = param2[var16_int].width;
+            var20 = param2[var16_int].height;
             var21 = var37[var16_int];
             SoftwareRasterizer.bindRaster(new int[var36[var16_int] * var37[var16_int]], var37[var16_int], var36[var16_int]);
             var22 = -var19 + var21;
@@ -330,7 +330,7 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
           }
           var4_int = param3.getGroupId(param2, 3);
           var5 = param3.getFileId(var4_int, param0, false);
-          stackIn_4_0 = jc.a(-1, var5, param3, var4_int);
+          stackIn_4_0 = LeaderboardPlayer.loadSprites(-1, var5, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,10 +379,10 @@ final class OutlinedRoadStripRenderer extends RoadStripRenderer {
           var2_int = RotatedSpriteSheetAsset.a((byte) 26, param1);
           var3 = RotatedSpriteAsset.field_g[param1.field_p];
           for (var4 = 0; var3.length > var4; var4++) {
-            if (ge.field_c[var3[var4]].spriteAsset.isLoaded((byte) 58)) {
+            if (ContentTransitionState.field_c[var3[var4]].spriteAsset.isLoaded((byte) 58)) {
               var2_int += 8;
             }
-            if (ge.field_c[var3[var4]].shadowAsset.isLoaded((byte) 58)) {
+            if (ContentTransitionState.field_c[var3[var4]].shadowAsset.isLoaded((byte) 58)) {
               var2_int += 8;
             }
           }

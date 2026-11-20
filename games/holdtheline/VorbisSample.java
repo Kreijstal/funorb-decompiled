@@ -296,7 +296,7 @@ final class VorbisSample extends IntrusiveNode {
         var14 = field_B[field_O[var2]];
         var16 = var14.field_b;
         var17_int = var14.field_a[var16];
-        stackIn_22_0 = (field_K[var17_int].b()) ? 0 : 1;
+        stackIn_22_0 = (field_K[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
         for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_d; var17_intLifetime1++) {
@@ -307,7 +307,7 @@ final class VorbisSample extends IntrusiveNode {
         if (var15 == 0) {
           var17_intLifetime2 = var14.field_b;
           var18_int = var14.field_a[var17_intLifetime2];
-          field_K[var18_int].a(field_v, var4 >> 1);
+          field_K[var18_int].applyToSpectrum(field_v, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -682,7 +682,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = Point2i.integerBitLength(var5 - 1, (byte) -76);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = TextFieldValidator.a(var11, (byte) -26, var10);
+            var9[var11] = TextFieldValidator.reverseLowBits(var11, (byte) -26, var10);
           }
           if (var1 == 0) {
             field_H = var6_ref_float__;

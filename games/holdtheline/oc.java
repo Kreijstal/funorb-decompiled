@@ -7,7 +7,7 @@ final class oc {
     static int field_a;
     static String field_b;
 
-    final static IndexedSprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -26,7 +26,7 @@ final class oc {
           }
           var4_int = param1.getGroupId(param3, 3);
           var5 = param1.getFileId(var4_int, param0, false);
-          stackIn_3_0 = il.a((byte) 21, param1, var4_int, var5);
+          stackIn_3_0 = il.loadIndexedSprites((byte) 21, param1, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class oc {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -100,7 +100,7 @@ final class oc {
           return;
         }
         try {
-          RotatedSpriteAsset.a(0, 12);
+          RotatedSpriteAsset.setAccountScreen(0, 12);
         } catch (RuntimeException runtimeException) {
           throw EntitySound.wrapException((Throwable) ((Object) runtimeException), "oc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -115,7 +115,7 @@ final class oc {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void fillCircleAlpha(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -412,7 +412,7 @@ final class oc {
         }
     }
 
-    final static QuadraticPointPath a(float param0, int param1, QuadraticPointPath param2) {
+    final static QuadraticPointPath sliceQuadraticPathTail(float param0, int param1, QuadraticPointPath param2) {
         QuadraticPointPath var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -426,19 +426,19 @@ final class oc {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new QuadraticPointPath(param2.field_e * (1.0f - param0), param2.field_b, param2.field_c);
-          gk.field_d[2] = (float)param2.field_m.x;
-          gk.field_d[1] = (float)param2.field_l.x;
-          gk.field_d[0] = (float)param2.field_k.x;
-          var4 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, param1 - 16711936, param0);
+          MouseInputRegistration.field_d[2] = (float)param2.field_m.x;
+          MouseInputRegistration.field_d[1] = (float)param2.field_l.x;
+          MouseInputRegistration.field_d[0] = (float)param2.field_k.x;
+          var4 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 0, 2, param1 - 16711936, param0);
           if (param1 != 16711935) {
             field_d = (IntrusiveDeque) null;
           }
-          var5 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 1, 1, param1 - 16711936, param0);
-          gk.field_d[0] = (float)param2.field_k.y;
-          gk.field_d[2] = (float)param2.field_m.y;
-          gk.field_d[1] = (float)param2.field_l.y;
-          var6 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 0, 2, -1, param0);
-          var7 = (int)IterableSecondaryNodeDeque.a(gk.field_d, 1, 1, param1 - 16711936, param0);
+          var5 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 1, 1, param1 - 16711936, param0);
+          MouseInputRegistration.field_d[0] = (float)param2.field_k.y;
+          MouseInputRegistration.field_d[2] = (float)param2.field_m.y;
+          MouseInputRegistration.field_d[1] = (float)param2.field_l.y;
+          var6 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 0, 2, -1, param0);
+          var7 = (int)IterableSecondaryNodeDeque.a(MouseInputRegistration.field_d, 1, 1, param1 - 16711936, param0);
           var3.field_k = new Point2i(var4, var6);
           var3.field_l = new Point2i(var5, var7);
           var3.field_m = new Point2i(param2.field_m);
@@ -458,7 +458,7 @@ final class oc {
         }
     }
 
-    final static void a(TextLineLayout param0, int param1, BitmapFont param2, int param3, String param4) {
+    final static void buildCaretPositions(TextLineLayout param0, int param1, BitmapFont param2, int param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -483,15 +483,15 @@ final class oc {
           for (var7 = 1; param4.length() > var7; var7++) {
             var8 = param4.charAt(var7);
             if (var8 == 60) {
-              var6 = param0.field_c[0] + (var5_int >> 8) + param2.measureText(param4.substring(0, var7));
+              var6 = param0.caretPositions[0] + (var5_int >> 8) + param2.measureText(param4.substring(0, var7));
             }
             if (var6 != -1) {
-              param0.field_c[var7] = var6;
+              param0.caretPositions[var7] = var6;
             } else {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param0.field_c[var7] = (var5_int >> 8) + (param0.field_c[0] + (param2.measureText(param4.substring(0, 1 + var7)) - param2.getCharacterAdvance((char) var8)));
+              param0.caretPositions[var7] = (var5_int >> 8) + (param0.caretPositions[0] + (param2.measureText(param4.substring(0, 1 + var7)) - param2.getCharacterAdvance((char) var8)));
             }
             if (var8 == 62) {
               var6 = -1;

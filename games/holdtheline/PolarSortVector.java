@@ -11,18 +11,18 @@ final class PolarSortVector implements SortableValue {
     int x;
 
     final static void a(boolean param0) {
-        ij.c(4);
+        ChatMessage.exitFullscreen(4);
         if (null != MouseInputHandler.field_b) {
           TrackObjectDefinition.detachInputListeners(-46342, MouseInputHandler.field_b);
         }
-        co.a(param0);
+        co.releaseKeyHandler(param0);
         CachedTextLayout.b(true);
         Particle.closeCacheResources(27370);
         if (cm.a(-2043140287)) {
           IsaacPacketBuffer.field_p.writeCipheredOpcode((byte) 33, 1);
-          qn.a(0, 0);
+          PlayerStatsRequest.flushServerPackets(0, 0);
         }
-        r.a(-28036);
+        ServerConnectionState.closeServerConnection(-28036);
     }
 
     final static Sprite a(byte param0) {

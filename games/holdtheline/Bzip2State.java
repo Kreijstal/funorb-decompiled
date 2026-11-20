@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2State {
-    int field_y;
-    int field_F;
+    int outputPosition;
+    int inputBytesRead;
     byte[] field_c;
     int field_h;
     int[][] field_p;
-    byte[] field_m;
+    byte[] symbolMap;
     int field_s;
-    int field_r;
-    int field_I;
+    int symbolsInUse;
+    int bitBuffer;
     static int[] field_q;
-    int field_l;
+    int bitsAvailable;
     byte[] field_G;
-    byte[] field_A;
-    int field_i;
+    byte[] output;
+    int outputRemaining;
     int field_f;
-    int field_E;
+    int inputPosition;
     int field_z;
-    byte[] field_e;
+    byte[] input;
     static int[] field_x;
     int[] field_H;
-    boolean[] field_b;
+    boolean[] inUseGroups;
     int field_B;
     int field_k;
     static String field_d;
@@ -30,12 +30,12 @@ final class Bzip2State {
     int[] field_D;
     int[] field_C;
     byte[][] field_t;
-    boolean[] field_j;
+    boolean[] inUse;
     byte field_o;
     int[] field_w;
     int[][] field_g;
     static String field_a;
-    int field_K;
+    int originalPointer;
     byte[] field_v;
     int field_u;
     static String field_J;
@@ -57,11 +57,11 @@ final class Bzip2State {
 
     Bzip2State() {
         this.field_p = new int[6][258];
-        this.field_m = new byte[256];
+        this.symbolMap = new byte[256];
         this.field_G = new byte[18002];
-        this.field_E = 0;
+        this.inputPosition = 0;
         this.field_c = new byte[18002];
-        this.field_b = new boolean[16];
+        this.inUseGroups = new boolean[16];
         this.field_H = new int[16];
         this.field_g = new int[6][258];
         this.field_w = new int[256];
@@ -70,8 +70,8 @@ final class Bzip2State {
         this.field_v = new byte[4096];
         this.field_t = new byte[6][258];
         this.field_C = new int[6];
-        this.field_j = new boolean[256];
-        this.field_y = 0;
+        this.inUse = new boolean[256];
+        this.outputPosition = 0;
     }
 
     static {

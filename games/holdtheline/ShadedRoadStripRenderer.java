@@ -158,7 +158,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -59 / ((-61 - param1) / 34);
-          stackIn_1_0 = StandardContentTransitionDialog.a(fb.field_i, 33, param0, "");
+          stackIn_1_0 = StandardContentTransitionDialog.loadSpritesByName(ScoreSubmission.field_i, 33, param0, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,12 +186,12 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
             return true;
           }
           if (null == ValidationIndicator.field_N) {
-            ValidationIndicator.field_N = PointLight.field_s.openSocket(0, bo.field_e, uj.field_f);
+            ValidationIndicator.field_N = PointLight.field_s.openSocket(0, bo.field_e, MeshMaterial.field_f);
           }
           if (ValidationIndicator.field_N.field_d == 0) {
             return false;
           }
-          dupTemp$1 = bb.b(-1);
+          dupTemp$1 = bb.monotonicTimeMillis(-1);
           MatchingTextValidator.field_l = dupTemp$1;
           cm.field_b = dupTemp$1;
           if (ValidationIndicator.field_N.field_d != 1) {
@@ -209,7 +209,7 @@ final class ShadedRoadStripRenderer extends RoadStripRenderer {
               hc.field_e = stackIn_12_0;
               RoadStripRenderer.field_l = stackIn_12_0;
               SoundPlayback.a(DisplayNameForm.field_L, (byte) -95, IsaacPacketBuffer.field_p, ArchiveCatalog.field_n, OutlinedRoadStripRenderer.field_m);
-              qn.a(-1, 0);
+              PlayerStatsRequest.flushServerPackets(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

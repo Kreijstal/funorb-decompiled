@@ -4,7 +4,7 @@
 final class ValidationState {
     static SpriteAsset field_e;
     static int[][] field_a;
-    static sa field_c;
+    static NameRequestState field_c;
     static String field_b;
     static int field_d;
 
@@ -22,7 +22,7 @@ final class ValidationState {
 
     static {
         field_a = new int[][]{new int[]{96}, new int[]{97}, new int[]{98}, new int[]{99}, new int[]{83, 82}};
-        field_c = new sa();
+        field_c = new NameRequestState();
         field_b = "Warning: if you quit, you will lose any game you are in the middle of!";
         field_d = 50;
     }

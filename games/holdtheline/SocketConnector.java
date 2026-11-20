@@ -12,7 +12,7 @@ abstract class SocketConnector {
     static int field_b;
     int field_d;
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket connectDirect(int param0) throws IOException {
         if (param0 != 675834672) {
           field_e = (String) null;
         }
@@ -83,16 +83,16 @@ abstract class SocketConnector {
                     if (var18 == 0) {
                       if (0 <= var17 &&
                         TriangleRasterState.field_i > var17) {
-                        BufferedRandomAccessFile.a(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
+                        BufferedRandomAccessFile.blendHalfIntensitySpan(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
                       }
                     } else {
                       if (TriangleRasterState.field_i <= var17 + var18) {
                         var18 = -1 + TriangleRasterState.field_i - var17;
                       }
                       if (var17 >= 0) {
-                        BufferedRandomAccessFile.a(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
+                        BufferedRandomAccessFile.blendHalfIntensitySpan(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
                       } else {
-                        BufferedRandomAccessFile.a(var17 + var18, var16Lifetime2, param8, (byte) -85, param4);
+                        BufferedRandomAccessFile.blendHalfIntensitySpan(var17 + var18, var16Lifetime2, param8, (byte) -85, param4);
                       }
                     }
                   }
@@ -117,16 +117,16 @@ abstract class SocketConnector {
                     if (var18 == 0) {
                       if (0 <= var17 &&
                         TriangleRasterState.field_i > var17) {
-                        BufferedRandomAccessFile.a(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
+                        BufferedRandomAccessFile.blendHalfIntensitySpan(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
                       }
                     } else {
                       if (TriangleRasterState.field_i <= var17 + var18) {
                         var18 = -1 + TriangleRasterState.field_i - var17;
                       }
                       if (var17 >= 0) {
-                        BufferedRandomAccessFile.a(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
+                        BufferedRandomAccessFile.blendHalfIntensitySpan(var18, var17 + var16Lifetime2, param8, (byte) -85, param4);
                       } else {
-                        BufferedRandomAccessFile.a(var17 + var18, var16Lifetime2, param8, (byte) -85, param4);
+                        BufferedRandomAccessFile.blendHalfIntensitySpan(var17 + var18, var16Lifetime2, param8, (byte) -85, param4);
                       }
                     }
                   }
@@ -202,14 +202,14 @@ abstract class SocketConnector {
                     var17Lifetime1 = -1 + (-var16Lifetime1 + TriangleRasterState.field_i);
                   }
                   if (var16Lifetime1 < 0) {
-                    BufferedRandomAccessFile.a(var17Lifetime1 + var16Lifetime1, var15Lifetime1, param8, (byte) -85, param4);
+                    BufferedRandomAccessFile.blendHalfIntensitySpan(var17Lifetime1 + var16Lifetime1, var15Lifetime1, param8, (byte) -85, param4);
                   } else {
-                    BufferedRandomAccessFile.a(var17Lifetime1, var15Lifetime1 + var16Lifetime1, param8, (byte) -85, param4);
+                    BufferedRandomAccessFile.blendHalfIntensitySpan(var17Lifetime1, var15Lifetime1 + var16Lifetime1, param8, (byte) -85, param4);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     var16Lifetime1 < TriangleRasterState.field_i) {
-                    BufferedRandomAccessFile.a(var17Lifetime1, var15Lifetime1 + var16Lifetime1, param8, (byte) -85, param4);
+                    BufferedRandomAccessFile.blendHalfIntensitySpan(var17Lifetime1, var15Lifetime1 + var16Lifetime1, param8, (byte) -85, param4);
                   }
                 }
               }
@@ -245,7 +245,7 @@ abstract class SocketConnector {
         field_g = null;
     }
 
-    final static byte[] a(byte[] param0, int param1, IsaacPacketBuffer param2, byte param3) {
+    final static byte[] readPackedByteArray(byte[] param0, int param1, IsaacPacketBuffer param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -315,10 +315,10 @@ abstract class SocketConnector {
           field_e = (String) null;
         }
         if (param0 % 10L == 0L) {
-          uj.a(-1L + param0, -79);
-          uj.a(1L, -62);
+          MeshMaterial.sleepIgnoringInterrupt(-1L + param0, -79);
+          MeshMaterial.sleepIgnoringInterrupt(1L, -62);
         } else {
-          uj.a(param0, param1 ^ -110);
+          MeshMaterial.sleepIgnoringInterrupt(param0, param1 ^ -110);
         }
     }
 
@@ -358,7 +358,7 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket b(int param0) throws IOException;
+    abstract java.net.Socket connect(int param0) throws IOException;
 
     static {
         field_e = "(Player 2)";
