@@ -14,7 +14,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           if (param1 == 3) {
             return 11;
           }
-          return SetTorpedoEnergyUsed.a(param1, 300).field_a;
+          return SetTorpedoEnergyUsed.a(param1, 300).ascent;
         }
         if (!OpenGlTexture1D.field_i) {
           return ita.a(param1, 7988).ascent;
@@ -22,7 +22,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         if (param1 == 3) {
           return 11;
         }
-        return SetTorpedoEnergyUsed.a(param1, 300).field_a;
+        return SetTorpedoEnergyUsed.a(param1, 300).ascent;
     }
 
     final static boolean a(int param0, int param1) {

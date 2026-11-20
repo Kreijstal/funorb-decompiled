@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MapClearanceAreaFactory implements GameStateFactory {
-    static int field_a;
+    static int fontDefaultShadowColor;
 
     public final SerializableGameState create(byte param0) {
         int var2 = -87 / ((param0 + 64) / 50);
@@ -155,12 +155,12 @@ final class MapClearanceAreaFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          field_a = -48;
+          fontDefaultShadowColor = -48;
         }
         return (SerializableGameState[]) ((Object) new MapClearanceArea[param1]);
     }
 
     static {
-        field_a = 0;
+        fontDefaultShadowColor = 0;
     }
 }

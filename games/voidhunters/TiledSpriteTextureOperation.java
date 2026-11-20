@@ -472,7 +472,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var34_int = var34_int + (var52_ref.paddedWidth + MissionListFactory.field_a);
               }
               if (0 != (1 << GetFighterVision.field_o & var14Lifetime1)) {
-                stackIn_87_0 = hnb.field_U;
+                stackIn_87_0 = DisplayModeDialog.field_U;
                 if (!var12.field_xb) {
                   stackIn_88_1 = 0;
                 } else {

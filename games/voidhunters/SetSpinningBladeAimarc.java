@@ -51,34 +51,34 @@ final class SetSpinningBladeAimarc extends ConsoleCommand {
         }
     }
 
-    final static rbb f(byte param0) {
+    final static UiTheme f(byte param0) {
         if (param0 == 62) {
           if (GetMissionResnetResourceTickTime.field_p == null) {
-            GetMissionResnetResourceTickTime.field_p = new rbb();
-            GetMissionResnetResourceTickTime.field_p.a(SetShipToShipRamDamage.field_o, -24763);
-            GetMissionResnetResourceTickTime.field_p.field_j = 5;
-            GetMissionResnetResourceTickTime.field_p.field_b = 2763306;
-            GetMissionResnetResourceTickTime.field_p.field_p = SetTorpedoProjectileLife.field_o;
-            GetMissionResnetResourceTickTime.field_p.field_c = 4;
-            GetMissionResnetResourceTickTime.field_p.field_h = 6;
-            GetMissionResnetResourceTickTime.field_p.field_g = 14;
-            GetMissionResnetResourceTickTime.field_p.field_u = 0;
-            GetMissionResnetResourceTickTime.field_p.field_m = 7697781;
+            GetMissionResnetResourceTickTime.field_p = new UiTheme();
+            GetMissionResnetResourceTickTime.field_p.initializeDefaultStyles(SetShipToShipRamDamage.field_o, -24763);
+            GetMissionResnetResourceTickTime.field_p.tooltipPaddingRight = 5;
+            GetMissionResnetResourceTickTime.field_p.tooltipBackgroundColor = 2763306;
+            GetMissionResnetResourceTickTime.field_p.font = SetTorpedoProjectileLife.field_o;
+            GetMissionResnetResourceTickTime.field_p.tooltipPaddingBottom = 4;
+            GetMissionResnetResourceTickTime.field_p.tooltipPaddingLeft = 6;
+            GetMissionResnetResourceTickTime.field_p.tooltipLineSpacing = 14;
+            GetMissionResnetResourceTickTime.field_p.tooltipPaddingTop = 0;
+            GetMissionResnetResourceTickTime.field_p.tooltipBorderColor = 7697781;
           }
           return GetMissionResnetResourceTickTime.field_p;
         }
         SetSpinningBladeAimarc.f((byte) -106);
         if (GetMissionResnetResourceTickTime.field_p == null) {
-          GetMissionResnetResourceTickTime.field_p = new rbb();
-          GetMissionResnetResourceTickTime.field_p.a(SetShipToShipRamDamage.field_o, -24763);
-          GetMissionResnetResourceTickTime.field_p.field_j = 5;
-          GetMissionResnetResourceTickTime.field_p.field_b = 2763306;
-          GetMissionResnetResourceTickTime.field_p.field_p = SetTorpedoProjectileLife.field_o;
-          GetMissionResnetResourceTickTime.field_p.field_c = 4;
-          GetMissionResnetResourceTickTime.field_p.field_h = 6;
-          GetMissionResnetResourceTickTime.field_p.field_g = 14;
-          GetMissionResnetResourceTickTime.field_p.field_u = 0;
-          GetMissionResnetResourceTickTime.field_p.field_m = 7697781;
+          GetMissionResnetResourceTickTime.field_p = new UiTheme();
+          GetMissionResnetResourceTickTime.field_p.initializeDefaultStyles(SetShipToShipRamDamage.field_o, -24763);
+          GetMissionResnetResourceTickTime.field_p.tooltipPaddingRight = 5;
+          GetMissionResnetResourceTickTime.field_p.tooltipBackgroundColor = 2763306;
+          GetMissionResnetResourceTickTime.field_p.font = SetTorpedoProjectileLife.field_o;
+          GetMissionResnetResourceTickTime.field_p.tooltipPaddingBottom = 4;
+          GetMissionResnetResourceTickTime.field_p.tooltipPaddingLeft = 6;
+          GetMissionResnetResourceTickTime.field_p.tooltipLineSpacing = 14;
+          GetMissionResnetResourceTickTime.field_p.tooltipPaddingTop = 0;
+          GetMissionResnetResourceTickTime.field_p.tooltipBorderColor = 7697781;
         }
         return GetMissionResnetResourceTickTime.field_p;
     }

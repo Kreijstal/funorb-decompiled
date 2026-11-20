@@ -19,7 +19,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
         try {
           var1 = new Sprite(540, 140);
           SetTorpedoEnergyUsed.a(29, var1);
-          bfb.e();
+          SoftwareFlatTriangleRasterizer.setClipFromRaster();
           SoftwareRasterizer2D.clear();
           SetSalvoaim.field_r = 0;
           Transform3D.renderLogoMeshes((byte) 74);

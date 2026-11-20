@@ -52,15 +52,15 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
         var42 = VoidHunters.field_G;
         try {
           if (param3 >= 0 &&
-            bfb.field_h > param7) {
+            SoftwareFlatTriangleRasterizer.clipHeight > param7) {
             if (param15 < ~param9 &&
               param14 < 0 &&
               param16 < 0) {
               return;
             }
-            if (param9 >= bfb.field_a &&
-              bfb.field_a <= param14 &&
-              bfb.field_a <= param16) {
+            if (param9 >= SoftwareFlatTriangleRasterizer.clipWidth &&
+              SoftwareFlatTriangleRasterizer.clipWidth <= param14 &&
+              SoftwareFlatTriangleRasterizer.clipWidth <= param16) {
               return;
             }
             var34 = -param7 + param3;
@@ -125,22 +125,22 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = bfb.field_g[param7];
+                var36Lifetime2 = SoftwareFlatTriangleRasterizer.rowOffsets[param7];
                 while (param7 < param13) {
                   var37 = var17_int >> 16;
-                  if (bfb.field_a > var37) {
+                  if (SoftwareFlatTriangleRasterizer.clipWidth > var37) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
-                        bfb.field_a > var37) {
+                        SoftwareFlatTriangleRasterizer.clipWidth > var37) {
                         SetHealthBarWidth.a(var25, 0, var21, var37 + var36Lifetime2, var38, 0, var29, param4, 0, true);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (bfb.field_a <= var38 + var37) {
-                        var38 = -var37 + bfb.field_a - 1;
+                      if (SoftwareFlatTriangleRasterizer.clipWidth <= var38 + var37) {
+                        var38 = -var37 + SoftwareFlatTriangleRasterizer.clipWidth - 1;
                       }
                       if (var37 < 0) {
                         SetHealthBarWidth.a(-(var37 * var40) + var25, var40, var21 - var37 * var39, var36Lifetime2, var37 + var38, var41, -(var41 * var37) + var29, param4, var39, true);
@@ -150,7 +150,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                     }
                   }
                   param7++;
-                  if (param7 >= bfb.field_h) {
+                  if (param7 >= SoftwareFlatTriangleRasterizer.clipHeight) {
                     return;
                   }
                   var21 = var21 + var23;
@@ -281,17 +281,17 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
               var17_int = var17_int + param7 * var19;
               param7 = 0;
             }
-            var35Lifetime1 = bfb.field_g[param7];
+            var35Lifetime1 = SoftwareFlatTriangleRasterizer.rowOffsets[param7];
             while (param7 < param3) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < bfb.field_a) {
+              if (var36Lifetime1 < SoftwareFlatTriangleRasterizer.clipWidth) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (bfb.field_a <= var36Lifetime1 + var37Lifetime1) {
-                    var37Lifetime1 = -var36Lifetime1 + bfb.field_a - 1;
+                  if (SoftwareFlatTriangleRasterizer.clipWidth <= var36Lifetime1 + var37Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + SoftwareFlatTriangleRasterizer.clipWidth - 1;
                   }
                   if (var36Lifetime1 < 0) {
                     SetHealthBarWidth.a(var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var40Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, param4, var38Lifetime1, true);
@@ -300,13 +300,13 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < bfb.field_a) {
+                    var36Lifetime1 < SoftwareFlatTriangleRasterizer.clipWidth) {
                     SetHealthBarWidth.a(var25, 0, var21, var36Lifetime1 + var35Lifetime1, var37Lifetime1, 0, var29, param4, 0, true);
                   }
                 }
               }
               param7++;
-              if (param7 >= bfb.field_h) {
+              if (param7 >= SoftwareFlatTriangleRasterizer.clipHeight) {
                 return;
               }
               var30 = var30 + var32;

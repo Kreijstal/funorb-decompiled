@@ -933,7 +933,7 @@ public final class VoidHunters extends NetworkGameClient {
         Widget.clearSharedReferences(-2147483648);
         TutorialController.clearSharedReferences(39);
         hw.clearSharedReferences(-1);
-        bfb.clearSharedReferences();
+        SoftwareFlatTriangleRasterizer.clearSharedReferences();
         aaa.clearSharedReferences((byte) 35);
         SettingsInstance.clearSharedReferences(17674);
         MissionList.clearSharedReferences(param0);
@@ -1002,7 +1002,7 @@ public final class VoidHunters extends NetworkGameClient {
         LoginForm.clearSharedReferences(3);
         waa.clearSharedReferences((byte) 115);
         dj.clearSharedReferences((byte) -114);
-        rbb.clearSharedReferences((byte) -29);
+        UiTheme.clearSharedReferences((byte) -29);
         kr.clearSharedReferences(-127);
         RemoveEventAction.clearSharedReferences(-125);
         Cp1252Strings.clearSharedReferences(!param0 ? true : false);
@@ -1053,7 +1053,7 @@ public final class VoidHunters extends NetworkGameClient {
         UiComponent.clearSharedReferences((byte) 71);
         ModalPanel.clearSharedReferences((byte) -17);
         TextLayout.clearSharedReferences(54);
-        hnb.clearSharedReferences(1);
+        DisplayModeDialog.clearSharedReferences(1);
         DisplayMode.clearSharedReferences((byte) -114);
         ResizableModalPanel.clearSharedReferences(-27545);
         UiComboBox.clearSharedReferences(-104);

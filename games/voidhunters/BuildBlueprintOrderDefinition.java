@@ -43,8 +43,8 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
         Widget var6 = null;
         Widget var3 = null;
         SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.a(param0, "display_name_changed", "basic", true);
-        BitmapTextLayout.field_n = new ScrollableActionPanel(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
-        vra.field_b = new ScrollableActionPanel(0L, rbb.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
+        BitmapTextLayout.field_n = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
+        vra.field_b = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
         PlayerJoinFactory.field_c = new Widget(0L, (Widget) null);
         OpenGlCubeTexture.field_h = new Widget(0L, DeveloperConsole.field_q);
         OpenGlCubeTexture.field_h.field_F = 1;

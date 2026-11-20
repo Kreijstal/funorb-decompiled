@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConstantMonochromeTextureOperation extends TextureOperation {
-    static int field_j;
+    static int fontJustificationStep;
     static String field_k;
     private int value;
 
@@ -78,7 +78,7 @@ final class ConstantMonochromeTextureOperation extends TextureOperation {
     }
 
     static {
-        field_j = 0;
+        fontJustificationStep = 0;
         field_k = "Loading graphics";
     }
 }

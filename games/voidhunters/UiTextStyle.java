@@ -438,7 +438,7 @@ class UiTextStyle implements UiRenderer, UiTextRenderer {
               }
             }
             var15 = stackIn_20_0;
-            GetDebrisMax.field_s.a(var13.top + (param4.textOffsetY + this.paddingTop + (param4.y + param1)), this.selectionColor >>> 24, true, var15 - var14, this.selectionColor, this.getTextXWithOffset(param3, param4, var14, (byte) -13), var13.bottom);
+            GetDebrisMax.field_s.fillRectangleAlpha(var13.top + (param4.textOffsetY + this.paddingTop + (param4.y + param1)), this.selectionColor >>> 24, true, var15 - var14, this.selectionColor, this.getTextXWithOffset(param3, param4, var14, (byte) -13), var13.bottom);
           }
           bia.popRasterState((byte) 124);
           return;
@@ -641,7 +641,7 @@ class UiTextStyle implements UiRenderer, UiTextRenderer {
             var11 = this.getTextOriginY(-3, param1, param0) + Math.max(0, var8.top);
             var12 = this.getTextOriginY(-3, param1, param0) + Math.min(this.getContentHeight((byte) 71, param0), Math.min(var8.bottom, 1 + var7 >= var14.lines.length ? var8.bottom : var13.lines[var7 + 1].top));
             SelectableIconLabelWidget.pushClip(param0.width + (param3 + param0.x), param0.height + param1 + param0.y, param0.x + param3, true, param0.y + param1);
-            GetDebrisMax.field_s.a(this.caretColor, var11, var12, var10, var10, 11480);
+            GetDebrisMax.field_s.drawLine(this.caretColor, var11, var12, var10, var10, 11480);
             bia.popRasterState((byte) 124);
           }
           int var6_int = -36 / ((6 - param2) / 58);

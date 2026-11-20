@@ -110,7 +110,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           vva.field_u = param11;
           SetPointDefenceLaserAimarc.field_p = param8;
           SpriteDimensions.field_o = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameprivacy");
-          hnb.field_U = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "ratedgame");
+          DisplayModeDialog.field_U = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "ratedgame");
           atb.field_b = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "opentome");
           GetPointDefenceLaserProjectileInterceptDamage.field_t = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "allowspectators");
           SetHealthBarHeight.field_p = new String[5];
@@ -180,7 +180,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           Debris.field_y = new Widget(0L, DeveloperConsole.field_q);
           Debris.field_y.field_F = 1;
           Debris.field_y.field_B = 0;
-          SetTorpedoAcceleration.field_o = new Widget(0L, hnb.field_X, UiComboBoxList.field_K.toUpperCase());
+          SetTorpedoAcceleration.field_o = new Widget(0L, DisplayModeDialog.field_X, UiComboBoxList.field_K.toUpperCase());
           GetTorpedoProjectiles.field_o = new Widget(0L, DualLinkNode.field_g);
           GetTorpedoProjectiles.field_o.addChild(-561, Debris.field_y);
           GetTorpedoProjectiles.field_o.addChild(-561, SetTorpedoAcceleration.field_o);
@@ -302,7 +302,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           vva.field_r.addChild(-561, ObjectiveMarker.field_b);
           vva.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
           ProjectileHit.field_d = new Widget(0L, lo.field_b, ko.field_d.toUpperCase());
-          rlb.field_a = new Widget(0L, hnb.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
+          rlb.field_a = new Widget(0L, DisplayModeDialog.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -4,7 +4,7 @@
 final class TimedSpecialOrderBehaviour implements DiffableState {
     int cooldown;
     static String field_b;
-    static int field_a;
+    static int fontColor;
 
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         TimedSpecialOrderBehaviour var3 = null;
@@ -127,7 +127,7 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
           var9.recalculateMassProperties((byte) 119);
           return var9;
         }
-        field_a = 66;
+        fontColor = 66;
         var8.thrusterbehaviour = new ThrusterBehaviour();
         var8.setTriggerMap((byte) -92, 1);
         var8.thrusterbehaviour.setTrailEnabled(true, 1024);
@@ -157,6 +157,6 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
 
     static {
         field_b = "Create a free Account";
-        field_a = 0;
+        fontColor = 0;
     }
 }

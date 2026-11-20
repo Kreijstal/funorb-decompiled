@@ -23,7 +23,7 @@ final class IntIndexTable {
             stackIn_7_0 = ita.a(param7, 7988).drawParagraph(param6, param2, param0, param9, param1, param8, param12, param4, param5, param10, param3);
             return stackIn_7_0;
           }
-          stackIn_5_0 = PlayerReadyFactory.field_b[param7].a(param1, param3, param10, 0, param0, param2, (int[]) null, false, 0, param9, param6, param5, param12, (ToolkitSprite[]) null, param8 | param4 << 24, (GlyphMask) null);
+          stackIn_5_0 = PlayerReadyFactory.field_b[param7].drawParagraph(param1, param3, param10, 0, param0, param2, (int[]) null, false, 0, param9, param6, param5, param12, (ToolkitSprite[]) null, param8 | param4 << 24, (GlyphMask) null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -37,15 +37,15 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
         var20 = VoidHunters.field_G;
         try {
           if (param0 >= 0 &&
-            param3 < bfb.field_h) {
+            param3 < SoftwareFlatTriangleRasterizer.clipHeight) {
             if (param4 < 0 &&
               param6 < 0 &&
               param5 < 0) {
               return;
             }
-            if (param4 >= bfb.field_a &&
-              param6 >= bfb.field_a &&
-              param5 >= bfb.field_a) {
+            if (param4 >= SoftwareFlatTriangleRasterizer.clipWidth &&
+              param6 >= SoftwareFlatTriangleRasterizer.clipWidth &&
+              param5 >= SoftwareFlatTriangleRasterizer.clipWidth) {
               return;
             }
             var13 = 94 / ((param1 + 45) / 51);
@@ -108,14 +108,14 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var17Lifetime2 = bfb.field_g[param3];
+                var17Lifetime2 = SoftwareFlatTriangleRasterizer.rowOffsets[param3];
                 while (param3 < param8) {
                   var18 = var9_int >> 16;
-                  if (bfb.field_a > var18) {
+                  if (SoftwareFlatTriangleRasterizer.clipWidth > var18) {
                     var19 = (var10 >> 16) - (var9_int >> 16);
                     if (0 != var19) {
-                      if (bfb.field_a <= var19 + var18) {
-                        var19 = -1 + (bfb.field_a - var18);
+                      if (SoftwareFlatTriangleRasterizer.clipWidth <= var19 + var18) {
+                        var19 = -1 + (SoftwareFlatTriangleRasterizer.clipWidth - var18);
                       }
                       if (var18 >= 0) {
                         RoundResultFactory.a(true, var18 + var17Lifetime2, param2, var19, param7);
@@ -124,13 +124,13 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
                       }
                     } else {
                       if (0 <= var18 &&
-                        var18 < bfb.field_a) {
+                        var18 < SoftwareFlatTriangleRasterizer.clipWidth) {
                         RoundResultFactory.a(true, var17Lifetime2 + var18, param2, var19, param7);
                       }
                     }
                   }
                   param3++;
-                  if (param3 >= bfb.field_h) {
+                  if (param3 >= SoftwareFlatTriangleRasterizer.clipHeight) {
                     return;
                   }
                   var10 = var10 + var12;
@@ -159,19 +159,19 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
               var9_int = var9_int + param3 * var11;
               param3 = 0;
             }
-            var16Lifetime1 = bfb.field_g[param3];
+            var16Lifetime1 = SoftwareFlatTriangleRasterizer.rowOffsets[param3];
             while (param3 < param0) {
               var17Lifetime1 = var9_int >> 16;
-              if (var17Lifetime1 < bfb.field_a) {
+              if (var17Lifetime1 < SoftwareFlatTriangleRasterizer.clipWidth) {
                 var18Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var18Lifetime1 == 0) {
                   if (0 <= var17Lifetime1 &&
-                    bfb.field_a > var17Lifetime1) {
+                    SoftwareFlatTriangleRasterizer.clipWidth > var17Lifetime1) {
                     RoundResultFactory.a(true, var17Lifetime1 + var16Lifetime1, param2, var18Lifetime1, param7);
                   }
                 } else {
-                  if (bfb.field_a <= var18Lifetime1 + var17Lifetime1) {
-                    var18Lifetime1 = -1 + bfb.field_a - var17Lifetime1;
+                  if (SoftwareFlatTriangleRasterizer.clipWidth <= var18Lifetime1 + var17Lifetime1) {
+                    var18Lifetime1 = -1 + SoftwareFlatTriangleRasterizer.clipWidth - var17Lifetime1;
                   }
                   if (0 > var17Lifetime1) {
                     RoundResultFactory.a(true, var16Lifetime1, param2, var17Lifetime1 + var18Lifetime1, param7);
@@ -181,7 +181,7 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
                 }
               }
               param3++;
-              if (bfb.field_h <= param3) {
+              if (SoftwareFlatTriangleRasterizer.clipHeight <= param3) {
                 return;
               }
               var10 = var10 + var12;

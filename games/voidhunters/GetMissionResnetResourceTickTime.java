@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMissionResnetResourceTickTime extends ConsoleCommand {
-    static rbb field_p;
+    static UiTheme field_p;
     static int field_o;
 
     final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
@@ -64,7 +64,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_p = (rbb) null;
+            field_p = (UiTheme) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(71, 96));
           return stackIn_3_0;

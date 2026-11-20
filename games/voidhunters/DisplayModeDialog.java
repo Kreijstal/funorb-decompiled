@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hnb extends ResizableModalPanel implements UiActionListener {
+final class DisplayModeDialog extends ResizableModalPanel implements UiActionListener {
     static Sprite[] field_U;
-    private boolean field_M;
+    private boolean resolutionDropdownOpen;
     static Widget field_X;
-    private UiFocusableComponent field_L;
-    private boolean field_K;
-    private UiFocusableComponent field_R;
-    private UiFocusableComponent field_Q;
-    private UiFocusableComponent field_W;
-    private UiFocusableComponent[] field_T;
-    private DisplayMode[] field_N;
-    private UiFocusableComponent field_V;
-    private UiComboBox field_P;
-    private UiFocusableComponent field_O;
-    private UiWeightedGridContainer field_S;
+    private UiFocusableComponent fullscreenButton;
+    private boolean hasDisplayModes;
+    private UiFocusableComponent resizableButton;
+    private UiFocusableComponent backButton;
+    private UiFocusableComponent applyButton;
+    private UiFocusableComponent[] modeButtons;
+    private DisplayMode[] displayModes;
+    private UiFocusableComponent selectedModeButton;
+    private UiComboBox resolutionDropdown;
+    private UiFocusableComponent classicButton;
+    private UiWeightedGridContainer modeGrid;
     private boolean field_J;
 
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
@@ -35,7 +35,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
           super.updatePointer(param0, param1, param2 ^ 0, param3);
           if (VariableConditionFactory.field_c) {
             param3.clearFocus((byte) -34);
-            var9 = this.field_T;
+            var9 = this.modeButtons;
             var5 = var9;
             for (var6 = 0; var9.length > var6; var6++) {
               var7 = var9[var6];
@@ -46,19 +46,19 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
           }
           if (!this.field_J &&
             !GetPhasedEnergyBeamPulsetime.e((byte) 124)) {
-            this.l((byte) -118);
-            this.modalStack.pushPanel(false, new hnb(this.modalStack));
+            this.closeDialog((byte) -118);
+            this.modalStack.pushPanel(false, new DisplayModeDialog(this.modalStack));
           }
           if (param2 != -981) {
             field_U = (Sprite[]) null;
           }
-          if (null != this.field_P) {
-            stackIn_16_0 = (this.field_P.isDropdownOpen(0)) ? 0 : 1;
-            if (stackIn_16_0 != (this.field_M ? 1 : 0)) {
+          if (null != this.resolutionDropdown) {
+            stackIn_16_0 = (this.resolutionDropdown.isDropdownOpen(0)) ? 0 : 1;
+            if (stackIn_16_0 != (this.resolutionDropdownOpen ? 1 : 0)) {
               return;
             }
-            this.a(true, this.field_L);
-            this.field_M = this.field_P.isDropdownOpen(0);
+            this.selectMode(true, this.fullscreenButton);
+            this.resolutionDropdownOpen = this.resolutionDropdown.isDropdownOpen(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,7 +75,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final void a(boolean param0, UiFocusableComponent param1) {
+    private final void selectMode(boolean param0, UiFocusableComponent param1) {
         UiFocusableComponent var3 = null;
         int var4 = 0;
         DisplayMode var5 = null;
@@ -87,33 +87,33 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          this.field_V = param1;
+          this.selectedModeButton = param1;
           if (!param0) {
             return;
           }
           param1.requestFocus(0, (UiComponent) (this));
-          var3 = this.m((byte) 62);
-          stackIn_4_0 = this.field_W;
+          var3 = this.getCurrentModeButton((byte) 62);
+          stackIn_4_0 = this.applyButton;
           stackIn_5_1 = (var3 != param1);
           stackIn_4_0.enabled = stackIn_5_1;
-          if (param1 == this.field_L) {
+          if (param1 == this.fullscreenButton) {
             if (var3 == param1) {
-              if (this.field_P != null) {
-                var4 = this.field_P.getSelectedIndex(0);
-                var5 = this.field_N[var4];
+              if (this.resolutionDropdown != null) {
+                var4 = this.resolutionDropdown.getSelectedIndex(0);
+                var5 = this.displayModes[var4];
                 if (MissionConditionFactory.field_b.fullscreenWidth == var5.width &&
                   MissionConditionFactory.field_b.fullscreenHeight == var5.height) {
-                  this.g(-99);
+                  this.refreshModeSelection(-99);
                   return;
                 }
-                this.field_W.enabled = true;
+                this.applyButton.enabled = true;
               }
-              this.g(-99);
+              this.refreshModeSelection(-99);
             } else {
-              this.g(-99);
+              this.refreshModeSelection(-99);
             }
           } else {
-            this.g(-99);
+            this.refreshModeSelection(-99);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final void l(byte param0) {
+    private final void closeDialog(byte param0) {
         if (!this.active) {
           return;
         }
@@ -140,7 +140,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         this.active = false;
     }
 
-    hnb(ModalStack param0) {
+    DisplayModeDialog(ModalStack param0) {
         super(param0, 430, 254);
         int incrementValue$0 = 0;
         int var7_int = 0;
@@ -185,44 +185,44 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_N = MissionBuilderFactory.listDisplayModesBlocking(SetTorpedoProjectiles.field_o, -30334);
-          if (0 < this.field_N.length) {
-            for (var2_int = 0; var2_int < this.field_N.length; var2_int++) {
-              if (null != this.field_N[var2_int]) {
-                for (var3 = 1 + var2_int; this.field_N.length > var3; var3++) {
-                  if (null != this.field_N[var3] &&
-                    this.field_N[var3].width == this.field_N[var2_int].width &&
-                    this.field_N[var2_int].height == this.field_N[var3].height) {
-                    this.field_N[var3] = null;
+          this.displayModes = MissionBuilderFactory.listDisplayModesBlocking(SetTorpedoProjectiles.field_o, -30334);
+          if (0 < this.displayModes.length) {
+            for (var2_int = 0; var2_int < this.displayModes.length; var2_int++) {
+              if (null != this.displayModes[var2_int]) {
+                for (var3 = 1 + var2_int; this.displayModes.length > var3; var3++) {
+                  if (null != this.displayModes[var3] &&
+                    this.displayModes[var3].width == this.displayModes[var2_int].width &&
+                    this.displayModes[var2_int].height == this.displayModes[var3].height) {
+                    this.displayModes[var3] = null;
                   }
                 }
                 if (MissionConditionFactory.field_b != null &&
-                  this.field_N[var2_int] != null &&
-                  !MissionConditionFactory.field_b.isValidSize(this.field_N[var2_int].height, this.field_N[var2_int].width, 0)) {
-                  this.field_N[var2_int] = null;
+                  this.displayModes[var2_int] != null &&
+                  !MissionConditionFactory.field_b.isValidSize(this.displayModes[var2_int].height, this.displayModes[var2_int].width, 0)) {
+                  this.displayModes[var2_int] = null;
                 }
               }
             }
             var2_int = 0;
-            for (var3Lifetime2 = 0; this.field_N.length > var3Lifetime2; var3Lifetime2++) {
-              if (this.field_N[var3Lifetime2] != null) {
+            for (var3Lifetime2 = 0; this.displayModes.length > var3Lifetime2; var3Lifetime2++) {
+              if (this.displayModes[var3Lifetime2] != null) {
                 var2_int++;
               }
             }
-            var3_ref_fm__ = this.field_N;
-            this.field_N = new DisplayMode[var2_int];
+            var3_ref_fm__ = this.displayModes;
+            this.displayModes = new DisplayMode[var2_int];
             var4 = 0;
             for (var5 = 0; var5 < var3_ref_fm__.length; var5++) {
               if (null != var3_ref_fm__[var5]) {
                 incrementValue$0 = var4;
                 var4++;
-                this.field_N[incrementValue$0] = var3_ref_fm__[var5];
+                this.displayModes[incrementValue$0] = var3_ref_fm__[var5];
               }
             }
-            SpecialOrderSubmessage.a(this.field_N, (byte) 62);
+            SpecialOrderSubmessage.a(this.displayModes, (byte) 62);
           }
-          stackIn_31_1 = !(this.field_N.length <= 0);
-          this.field_K = stackIn_31_1;
+          stackIn_31_1 = !(this.displayModes.length <= 0);
+          this.hasDisplayModes = stackIn_31_1;
           stackIn_34_0 = (!Particle.c((byte) 114)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
@@ -259,32 +259,32 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_S = new UiWeightedGridContainer(stackIn_50_3, stackIn_52_4, 410, 105, (UiRenderer) null, var3Lifetime1, 1);
-          this.field_S.field_w = 83;
-          this.field_S.setCellPadding(-6, 5, 5);
-          this.addChild(-18756, this.field_S);
-          this.field_O = this.a(SetMissilesDamageSourceTeam.field_q, (byte) 111, (UiListener) (this), GetFighterRepairAmount.field_q);
+          this.modeGrid = new UiWeightedGridContainer(stackIn_50_3, stackIn_52_4, 410, 105, (UiRenderer) null, var3Lifetime1, 1);
+          this.modeGrid.field_w = 83;
+          this.modeGrid.setCellPadding(-6, 5, 5);
+          this.addChild(-18756, this.modeGrid);
+          this.classicButton = this.addModeButton(SetMissilesDamageSourceTeam.field_q, (byte) 111, (UiListener) (this), GetFighterRepairAmount.field_q);
           if (var2_intLifetime1 != 0) {
-            this.field_R = this.a(SoundCache.field_b, (byte) 106, (UiListener) (this), SetUseBackground.field_p);
+            this.resizableButton = this.addModeButton(SoundCache.field_b, (byte) 106, (UiListener) (this), SetUseBackground.field_p);
           }
-          this.field_L = this.a(GetPointDefenceLaserReload.field_o, (byte) 110, (UiListener) (this), SpecialOrderSubmessage.field_f);
+          this.fullscreenButton = this.addModeButton(GetPointDefenceLaserReload.field_o, (byte) 110, (UiListener) (this), SpecialOrderSubmessage.field_f);
           if (var2_intLifetime1 == 0) {
             stackIn_57_1 = 2;
           } else {
             stackIn_57_1 = 3;
           }
-          this.field_T = new UiFocusableComponent[stackIn_57_1];
-          this.field_T[1] = this.field_L;
+          this.modeButtons = new UiFocusableComponent[stackIn_57_1];
+          this.modeButtons[1] = this.fullscreenButton;
           if (var2_intLifetime1 != 0) {
-            this.field_T[2] = this.field_R;
+            this.modeButtons[2] = this.resizableButton;
           }
-          this.field_T[0] = this.field_O;
-          if (this.field_K &&
+          this.modeButtons[0] = this.classicButton;
+          if (this.hasDisplayModes &&
             var2_intLifetime1 != 0) {
-            var5_ref_String__ = new String[this.field_N.length];
+            var5_ref_String__ = new String[this.displayModes.length];
             var6_int = var5_ref_String__.length - 1;
-            for (var7_int = 0; this.field_N.length > var7_int; var7_int++) {
-              var8 = this.field_N[var7_int];
+            for (var7_int = 0; this.displayModes.length > var7_int; var7_int++) {
+              var8 = this.displayModes[var7_int];
               if (psb.field_b != null &&
                 var8.width == MissionConditionFactory.field_b.fullscreenWidth &&
                 var8.height == MissionConditionFactory.field_b.fullscreenHeight) {
@@ -292,18 +292,18 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
               }
               var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
             }
-            this.field_P = new UiComboBox(var5_ref_String__, var6_int, 150);
-            this.field_P.setBounds(this.field_L.x + this.field_S.x, 126, 18, 1, -19 + (this.field_L.height + this.field_S.y + this.field_L.y));
-            this.children.addFirst(this.field_P, (byte) -55);
+            this.resolutionDropdown = new UiComboBox(var5_ref_String__, var6_int, 150);
+            this.resolutionDropdown.setBounds(this.fullscreenButton.x + this.modeGrid.x, 126, 18, 1, -19 + (this.fullscreenButton.height + this.modeGrid.y + this.fullscreenButton.y));
+            this.children.addFirst(this.resolutionDropdown, (byte) -55);
           }
-          this.field_Q = this.a(TextureSourceOperation.field_l, (UiListener) (this), -14);
-          var5Lifetime1 = this.field_Q.width / 2 + this.field_Q.x;
-          this.field_Q.width = 150;
-          this.field_Q.x = -this.field_Q.width + (var5Lifetime1 - 20);
-          this.field_W = this.a(SetVariableLabelActionFactory.field_a, (UiListener) (this), -14);
-          this.field_W.width = this.field_Q.width;
-          this.field_W.enabled = false;
-          this.field_W.x = var5Lifetime1 + 20;
+          this.backButton = this.addActionButton(TextureSourceOperation.field_l, (UiListener) (this), -14);
+          var5Lifetime1 = this.backButton.width / 2 + this.backButton.x;
+          this.backButton.width = 150;
+          this.backButton.x = -this.backButton.width + (var5Lifetime1 - 20);
+          this.applyButton = this.addActionButton(SetVariableLabelActionFactory.field_a, (UiListener) (this), -14);
+          this.applyButton.width = this.backButton.width;
+          this.applyButton.enabled = false;
+          this.applyButton.x = var5Lifetime1 + 20;
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
@@ -321,8 +321,8 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
             var7.renderer = (UiRenderer) ((Object) new UiTextStyle(SetShipToShipRamDamage.field_o, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.addChild(-18756, var7);
           }
-          this.field_M = false;
-          var6_ref = this.m((byte) 80);
+          this.resolutionDropdownOpen = false;
+          var6_ref = this.getCurrentModeButton((byte) 80);
           if (var6_ref != null) {
             var6_ref.active = true;
           }
@@ -341,7 +341,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final UiFocusableComponent a(String param0, byte param1, UiListener param2, SoftwareIndexedSprite2D[] param3) {
+    private final UiFocusableComponent addModeButton(String param0, byte param1, UiListener param2, SoftwareIndexedSprite2D[] param3) {
         UiFocusableComponent var5 = null;
         RuntimeException var5_ref = null;
         UiWeightedGridContainer var6 = null;
@@ -359,12 +359,12 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
           var5 = new UiFocusableComponent(param0, param2);
           var5.renderer = (UiRenderer) ((Object) new kab(param3));
           if (param1 < 105) {
-            this.field_T = (UiFocusableComponent[]) null;
+            this.modeButtons = (UiFocusableComponent[]) null;
           }
-          var6 = this.field_S;
+          var6 = this.modeGrid;
           var7 = var5;
           var6.appendCell((UiComponent) (var7), (byte) -58, var6.field_w);
-          this.field_S.refreshLayout(false);
+          this.modeGrid.refreshLayout(false);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -416,29 +416,29 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         try {
           if (param0 != 11) {
             var8 = (UiListener) null;
-            discarded$0 = this.a((String) null, (UiListener) null, 51);
+            discarded$0 = this.addActionButton((String) null, (UiListener) null, 51);
           }
-          if (param3 == this.field_Q) {
-            this.l((byte) -31);
+          if (param3 == this.backButton) {
+            this.closeDialog((byte) -31);
           } else {
-            if (param3 == this.field_W) {
-              this.h(param0 ^ -44);
+            if (param3 == this.applyButton) {
+              this.applySelectedMode(param0 ^ -44);
             } else {
-              if (param3 == this.field_O) {
-                this.a(true, param3);
+              if (param3 == this.classicButton) {
+                this.selectMode(true, param3);
               } else {
-                if (param3 == this.field_R) {
-                  this.a(true, param3);
+                if (param3 == this.resizableButton) {
+                  this.selectMode(true, param3);
                 } else {
-                  if (null != this.field_P) {
-                    stackIn_13_0 = (this.field_P.hovered) ? 1 : 0;
+                  if (null != this.resolutionDropdown) {
+                    stackIn_13_0 = (this.resolutionDropdown.hovered) ? 1 : 0;
                   } else {
                     stackIn_13_0 = 0;
                   }
                   var6_int = stackIn_13_0;
                   if (var6_int == 0 &&
-                    this.field_L == param3) {
-                    if (!this.field_K) {
+                    this.fullscreenButton == param3) {
+                    if (!this.hasDisplayModes) {
                       this.modalStack.pushPanel(false, new mr(this.modalStack, ComponentAttachmentPlan.field_a));
                       return;
                     }
@@ -446,7 +446,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
                       this.modalStack.pushPanel(false, new qh(this.modalStack));
                       return;
                     }
-                    this.a(true, param3);
+                    this.selectMode(true, param3);
                     return;
                   }
                 }
@@ -481,102 +481,102 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         try {
           var5 = null;
           if (param0 != -15834) {
-            this.field_T = (UiFocusableComponent[]) null;
+            this.modeButtons = (UiFocusableComponent[]) null;
           }
-          if (!this.field_O.hasFocus((byte) -120)) {
-            if (null != this.field_R &&
-              this.field_R.hasFocus((byte) -120)) {
-              var5 = this.field_R;
+          if (!this.classicButton.hasFocus((byte) -120)) {
+            if (null != this.resizableButton &&
+              this.resizableButton.hasFocus((byte) -120)) {
+              var5 = this.resizableButton;
             } else {
-              if (!this.field_L.hasFocus((byte) -120)) {
-                if (this.field_Q.hasFocus((byte) -120)) {
-                  var5 = this.field_Q;
+              if (!this.fullscreenButton.hasFocus((byte) -120)) {
+                if (this.backButton.hasFocus((byte) -120)) {
+                  var5 = this.backButton;
                 } else {
-                  if (this.field_W.hasFocus((byte) -120)) {
-                    var5 = this.field_W;
+                  if (this.applyButton.hasFocus((byte) -120)) {
+                    var5 = this.applyButton;
                   } else {
-                    if (!this.field_O.active) {
-                      if (null != this.field_R &&
-                        this.field_R.active) {
-                        var5 = this.field_R;
+                    if (!this.classicButton.active) {
+                      if (null != this.resizableButton &&
+                        this.resizableButton.active) {
+                        var5 = this.resizableButton;
                       } else {
-                        if (this.field_L.active) {
-                          var5 = this.field_L;
+                        if (this.fullscreenButton.active) {
+                          var5 = this.fullscreenButton;
                         }
                       }
                     } else {
-                      var5 = this.field_O;
+                      var5 = this.classicButton;
                     }
                   }
                 }
               } else {
-                var5 = this.field_L;
+                var5 = this.fullscreenButton;
               }
             }
           } else {
-            var5 = this.field_O;
+            var5 = this.classicButton;
           }
           var6 = param1;
           switch (var6) {
             case 97:
-              if (this.field_O == var5) {
-                if (null != this.field_R) {
-                  this.field_R.requestFocus(param0 ^ -15834, (UiComponent) (this));
+              if (this.classicButton == var5) {
+                if (null != this.resizableButton) {
+                  this.resizableButton.requestFocus(param0 ^ -15834, (UiComponent) (this));
                 } else {
-                  this.field_L.requestFocus(0, (UiComponent) (this));
+                  this.fullscreenButton.requestFocus(0, (UiComponent) (this));
                 }
                 return true;
               }
-              if (var5 == this.field_R) {
-                this.field_L.requestFocus(0, (UiComponent) (this));
+              if (var5 == this.resizableButton) {
+                this.fullscreenButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
-              if (var5 == this.field_Q &&
-                this.field_W.enabled) {
-                this.field_W.requestFocus(0, (UiComponent) (this));
+              if (var5 == this.backButton &&
+                this.applyButton.enabled) {
+                this.applyButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               break;
             case 99:
-              if (var5 != this.field_O &&
-                this.field_R != var5) {
-                if (this.field_L != var5) {
+              if (var5 != this.classicButton &&
+                this.resizableButton != var5) {
+                if (this.fullscreenButton != var5) {
                   break;
                 }
-                if (this.field_W.enabled) {
-                  this.field_W.requestFocus(param0 + 15834, (UiComponent) (this));
+                if (this.applyButton.enabled) {
+                  this.applyButton.requestFocus(param0 + 15834, (UiComponent) (this));
                 } else {
-                  this.field_Q.requestFocus(param0 ^ -15834, (UiComponent) (this));
+                  this.backButton.requestFocus(param0 ^ -15834, (UiComponent) (this));
                 }
                 return true;
               }
-              this.field_Q.requestFocus(0, (UiComponent) (this));
+              this.backButton.requestFocus(0, (UiComponent) (this));
               return true;
             case 98:
-              if (this.field_Q == var5) {
-                this.field_O.requestFocus(0, (UiComponent) (this));
+              if (this.backButton == var5) {
+                this.classicButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
-              if (this.field_W == var5) {
-                this.field_L.requestFocus(0, (UiComponent) (this));
+              if (this.applyButton == var5) {
+                this.fullscreenButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               break;
             case 96:
-              if (var5 == this.field_L) {
-                if (this.field_R != null) {
-                  this.field_R.requestFocus(0, (UiComponent) (this));
+              if (var5 == this.fullscreenButton) {
+                if (this.resizableButton != null) {
+                  this.resizableButton.requestFocus(0, (UiComponent) (this));
                   return true;
                 }
-                this.field_O.requestFocus(0, (UiComponent) (this));
+                this.classicButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
-              if (this.field_R == var5) {
-                this.field_O.requestFocus(0, (UiComponent) (this));
+              if (this.resizableButton == var5) {
+                this.classicButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
-              if (var5 == this.field_W) {
-                this.field_Q.requestFocus(0, (UiComponent) (this));
+              if (var5 == this.applyButton) {
+                this.backButton.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               break;
@@ -599,7 +599,7 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final UiFocusableComponent a(String param0, UiListener param1, int param2) {
+    private final UiFocusableComponent addActionButton(String param0, UiListener param1, int param2) {
         UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -638,51 +638,51 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final UiFocusableComponent m(byte param0) {
+    private final UiFocusableComponent getCurrentModeButton(byte param0) {
         if (psb.field_b != null) {
-          return this.field_L;
+          return this.fullscreenButton;
         }
         if (param0 <= 45) {
           String var3 = (String) null;
-          hnb.a((byte) -60, (String) null);
+          DisplayModeDialog.containsPassword((byte) -60, (String) null);
         }
         if (MissionConditionFactory.field_b != null && MissionConditionFactory.field_b.resizable &&
-          null != this.field_R) {
-          return this.field_R;
+          null != this.resizableButton) {
+          return this.resizableButton;
         }
-        return this.field_O;
+        return this.classicButton;
     }
 
-    private final void g(int param0) {
+    private final void refreshModeSelection(int param0) {
         UiFocusableComponent discarded$0 = null;
         UiFocusableComponent var4 = null;
         int var5 = VoidHunters.field_G;
-        UiFocusableComponent[] var2 = this.field_T;
+        UiFocusableComponent[] var2 = this.modeButtons;
         int var3 = 0;
         if (param0 != -99) {
-          discarded$0 = this.m((byte) -52);
+          discarded$0 = this.getCurrentModeButton((byte) -52);
         }
         while (var3 < var2.length) {
           var4 = var2[var3];
-          var4.active = this.field_V == var4 ? true : false;
+          var4.active = this.selectedModeButton == var4 ? true : false;
           var3++;
         }
     }
 
-    private final void h(int param0) {
+    private final void applySelectedMode(int param0) {
         int var3;
         int var2;
         var3 = VoidHunters.field_G;
-        if (this.field_V != this.field_O) {
-          if (this.field_R == this.field_V) {
+        if (this.selectedModeButton != this.classicButton) {
+          if (this.resizableButton == this.selectedModeButton) {
             spb.a((byte) -95);
             LegacyOpenGlTurbulenceEffect.makeGameWindowResizable(-10128);
           } else {
-            if (this.field_L == this.field_V) {
-              if (null != this.field_P) {
-                var2 = this.field_P.getSelectedIndex(0);
+            if (this.fullscreenButton == this.selectedModeButton) {
+              if (null != this.resolutionDropdown) {
+                var2 = this.resolutionDropdown.getSelectedIndex(0);
                 if (var2 >= 0) {
-                  MissionConditionFactory.field_b.setFullscreenSize(this.field_N[var2].height, 480, this.field_N[var2].width);
+                  MissionConditionFactory.field_b.setFullscreenSize(this.displayModes[var2].height, 480, this.displayModes[var2].width);
                 }
                 SetReadyRoomMutatorTime.a(2, true);
                 this.modalStack.pushPanel(false, new tda(this.modalStack));
@@ -699,10 +699,10 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
         if (param0 >= -18) {
           return;
         }
-        this.field_W.enabled = false;
+        this.applyButton.enabled = false;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean containsPassword(byte param0, String param1) {
         RuntimeException var2 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -713,8 +713,8 @@ final class hnb extends ResizableModalPanel implements UiActionListener {
           if (param0 > -72) {
             return true;
           }
-          if (SetLagVariant.field_p != null) {
-            stackIn_9_0 = !(param1.toLowerCase().indexOf(SetLagVariant.field_p.toLowerCase()) < 0);
+          if (SetLagVariant.passwordForChatFilter != null) {
+            stackIn_9_0 = !(param1.toLowerCase().indexOf(SetLagVariant.passwordForChatFilter.toLowerCase()) < 0);
             return stackIn_9_0;
           }
           return false;

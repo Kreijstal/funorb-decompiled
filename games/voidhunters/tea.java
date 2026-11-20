@@ -33,7 +33,7 @@ final class tea {
             field_a = (String) null;
           }
           if (OpenGlTexture1D.field_i) {
-            stackIn_6_0 = SetTorpedoEnergyUsed.a(param0, param2 ^ 14107).a(param1, param2 - 13878);
+            stackIn_6_0 = SetTorpedoEnergyUsed.a(param0, param2 ^ 14107).getStringWidth(param1, param2 - 13878);
             return stackIn_6_0;
           }
           stackIn_4_0 = ita.a(param0, param2 - 5891).getStringWidth(param1);

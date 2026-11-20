@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CarouselPlayerInfoFactory implements GameStateFactory {
-    static int field_b;
+    static int fontDefaultColor;
     static int field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -87,7 +87,7 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          field_b = -83;
+          fontDefaultColor = -83;
         }
         return (SerializableGameState[]) ((Object) new CarouselPlayerInfo[param1]);
     }
@@ -99,6 +99,6 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
 
     static {
         field_a = 18;
-        field_b = 0;
+        fontDefaultColor = 0;
     }
 }

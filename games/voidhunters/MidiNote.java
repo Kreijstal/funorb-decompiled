@@ -34,12 +34,12 @@ final class MidiNote extends IntrusiveNode {
           if (!OpenGlTexture1D.field_i) {
             return ita.a(param0, param1 ^ -8013).maxDescent;
           }
-          return SetTorpedoEnergyUsed.a(param0, 300).field_e;
+          return SetTorpedoEnergyUsed.a(param0, 300).maxDescent;
         }
         if (!OpenGlTexture1D.field_i) {
           return ita.a(param0, param1 ^ -8013).maxDescent;
         }
-        return SetTorpedoEnergyUsed.a(param0, 300).field_e;
+        return SetTorpedoEnergyUsed.a(param0, 300).maxDescent;
     }
 
     final void clearVoiceReferences(int param0) {

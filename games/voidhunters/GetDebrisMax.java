@@ -4,7 +4,7 @@
 final class GetDebrisMax extends ConsoleCommand {
     static Widget field_o;
     static float[] field_q;
-    static rbb field_s;
+    static UiTheme field_s;
     static String field_p;
     static String field_r;
 

@@ -19,7 +19,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
             return;
           }
           if (OpenGlTexture1D.field_i) {
-            PlayerReadyFactory.field_b[param5].a(param4, param1, -16777216 | param0, true, param2, param6);
+            PlayerReadyFactory.field_b[param5].drawRightAligned(param4, param1, -16777216 | param0, true, param2, param6);
             return;
           }
           ita.a(param5, 7988).drawRightAligned(param6, param2, param1, param0, param4);

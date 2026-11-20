@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetThrusterAutobalancing extends ConsoleCommand {
-    static int field_q;
+    static int fontShadowColor;
     static String field_o;
     static Widget field_p;
     static int field_r;
@@ -56,7 +56,7 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
     }
 
     static {
-        field_q = 0;
+        fontShadowColor = 0;
         field_r = 0;
         field_o = "Convoy";
     }

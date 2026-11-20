@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetGrapplingHookRopeChangeRate extends ConsoleCommand {
-    static int field_p;
+    static int fontStrikethroughColor;
     static int field_o;
 
     SetGrapplingHookRopeChangeRate(String param0, Class[] param1, String param2) {
@@ -89,7 +89,7 @@ final class SetGrapplingHookRopeChangeRate extends ConsoleCommand {
     }
 
     static {
-        field_p = -1;
+        fontStrikethroughColor = -1;
         field_o = 500;
     }
 }

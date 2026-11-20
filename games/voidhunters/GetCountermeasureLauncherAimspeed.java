@@ -24,7 +24,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
             stackIn_8_2 = param1;
             stackIn_8_3 = param2 << 24 | param4;
             stackIn_9_4 = !(param3);
-            ((ToolkitFont) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_9_4, param0, param6);
+            ((ToolkitFont) (Object) stackIn_8_0).drawRightAligned(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_9_4, param0, param6);
           } else {
             ita.a(param7, 7988).drawRightAligned(param6, param0, param1, param4, param5, param2);
           }

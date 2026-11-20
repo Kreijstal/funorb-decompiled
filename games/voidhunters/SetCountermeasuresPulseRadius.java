@@ -148,8 +148,8 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           var9 = param5[5] * var23Lifetime1 + (param5[4] * var22Lifetime1 + var21Lifetime1 * param5[3]) >> -iob.field_f + 16;
           var11 = var23Lifetime1 * param5[11] + (var21Lifetime1 * param5[9] + var22Lifetime1 * param5[10]) >> 16;
           var10 = var22Lifetime1 * param5[7] + (var21Lifetime1 * param5[6] + param5[8] * var23Lifetime1) >> 16 - iob.field_f;
-          var21Lifetime2 = bfb.field_f;
-          var22Lifetime2 = bfb.field_j;
+          var21Lifetime2 = SoftwareFlatTriangleRasterizer.centerX;
+          var22Lifetime2 = SoftwareFlatTriangleRasterizer.centerY;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             if (var23Lifetime2 < param0.field_J) {

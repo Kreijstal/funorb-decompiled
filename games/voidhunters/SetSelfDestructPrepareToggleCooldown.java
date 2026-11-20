@@ -15,7 +15,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
           if (param0 > -17) {
             return;
           }
-          bfb.e();
+          SoftwareFlatTriangleRasterizer.setClipFromRaster();
           GetRepairModeActiveTime.field_p = new int[260];
           iob.field_f = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -49,7 +49,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
           if (!OpenGlTexture1D.field_i) {
             ita.a(param4, 7988).draw(param3, param0, param2, param5, param1);
           } else {
-            PlayerReadyFactory.field_b[param4].a(true, param5 | -16777216, -16777216 | param1, param3, param2, param0);
+            PlayerReadyFactory.field_b[param4].draw(true, param5 | -16777216, -16777216 | param1, param3, param2, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

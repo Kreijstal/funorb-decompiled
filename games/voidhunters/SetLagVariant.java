@@ -3,11 +3,11 @@
  */
 final class SetLagVariant extends ConsoleCommand {
     static TextureFilterMode field_o;
-    static String field_p;
+    static String passwordForChatFilter;
 
     public static void clearSharedReferences(int param0) {
         int var1 = -101 % ((61 - param0) / 61);
-        field_p = null;
+        passwordForChatFilter = null;
         field_o = null;
     }
 

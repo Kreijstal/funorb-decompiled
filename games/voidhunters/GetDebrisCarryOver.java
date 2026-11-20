@@ -182,8 +182,8 @@ final class GetDebrisCarryOver extends ConsoleCommand {
           }
           var11 = param8 >>> 24;
           if (var11 > 1) {
-            bfb.field_b = 255 - var11;
-            bfb.a(param7, param6, param1, param4, param9, param5, param8);
+            SoftwareFlatTriangleRasterizer.destinationWeight = 255 - var11;
+            SoftwareFlatTriangleRasterizer.fillTriangle(param7, param6, param1, param4, param9, param5, param8);
             return;
           }
           return;
@@ -197,8 +197,8 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         }
         var11Lifetime1 = param8 >>> 24;
         if (var11Lifetime1 > 1) {
-          bfb.field_b = 255 - var11Lifetime1;
-          bfb.a(param7, param6, param1, param4, param9, param5, param8);
+          SoftwareFlatTriangleRasterizer.destinationWeight = 255 - var11Lifetime1;
+          SoftwareFlatTriangleRasterizer.fillTriangle(param7, param6, param1, param4, param9, param5, param8);
           return;
         }
     }

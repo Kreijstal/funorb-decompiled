@@ -271,7 +271,7 @@ class UiComponent extends IntrusiveNode {
         }
         String var5 = EmailSyntaxValidator.d((byte) 106);
         if (var5 != null) {
-          GetDebrisMax.field_s.a((byte) 27, var5, GetBombletSprayReload.field_r, SetTestActionLag.field_o);
+          GetDebrisMax.field_s.drawTooltip((byte) 27, var5, GetBombletSprayReload.field_r, SetTestActionLag.field_o);
         }
     }
 

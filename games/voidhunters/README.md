@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1341/1572 classes and 6764/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 231 opaque classes and 1451 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1344/1572 classes and 6805/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 228 opaque classes and 1410 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -70,6 +70,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `TextureProvider` supplies RGB, ARGB and floating-point RGBA generation through `ArchiveTextureProvider` and `ProceduralTexture`. `ArchiveIndexLoader` verifies the master archive index and creates cached archive providers. `ResourceArchive` resolves named groups/files and unpacks optional XTEA-encrypted containers; `ArchiveIndex` describes their ids, checksums, versions and name lookups. `CachedArchiveProvider` validates disk/network requests and schedules prefetches. `NetworkArchiveClient` separates queued and in-flight priority/background requests; `SocketNetworkArchiveClient` handles framed responses over `BufferedSocket`. `ArchiveDiskWorker`, `ArchiveDisk`, `BufferedFile` and `BoundedRandomAccessFile` expose queued IO, sector chains, buffering and file-size bounds. `ByteStorage` separates heap arrays from `DirectByteStorage`.
 
 `ToolkitPolygonRasterizer` and `SoftwarePolygonRasterizer` name active-edge construction, sorting and scanline spans with the original fixed-point math and mask behavior. `ReverbPcmStream`, `ReverbCombDelay` and `ReverbDiffusionDelay` expose the existing delay banks, wet/dry gains, feedback, damping and width; their original recurrences and buffer cursors remain. `Bzip2Decompressor` and `Bzip2State` name the archive decoder and its Huffman, move-to-front, inverse-transform and run-length state. `GrowableIntArray` retains original growth and bounds behavior. `ChatMessage` names sender/channel/text, filtering priority and cached chat widgets; packed-array writing and team-color helpers remain on their original owners.
+
+`ToolkitFontMetrics` names glyph advances, kerning, wrapping, ellipsis and paragraph dimensions; `ToolkitFont` names styled line/paragraph drawing and markup state. `UiTheme` names default styles, tooltips and software clip helpers. `DisplayModeDialog` exposes Classic, Resizable and Full screen selection, resolution choices and the original Apply flow. Its unrelated `containsPassword` helper retains the original chat warning check. `SoftwareFlatTriangleRasterizer` names clip-relative scanlines and constant-color triangle fills, including the original special destination-weight behavior. Rendering, text parsing and display transitions remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

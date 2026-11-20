@@ -142,7 +142,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             if (tc.field_c == UiFocusableComponent.field_A &&
               PlayerJoinFactory.b((byte) 113)) {
               SetTorpedoAimarc.field_p = qga.field_b.readLong(255);
-              SetLagVariant.field_p = param5;
+              SetLagVariant.passwordForChatFilter = param5;
               SetAngularVelocitySustain.field_p = qga.field_b.readUnsignedByte((byte) -94);
               FireGrapplesOrderDefinition.field_d = qga.field_b.readUnsignedByte((byte) -106);
               GetDebrisCarryOver.field_o = qga.field_b.readUnsignedShort(param3 + 1856);

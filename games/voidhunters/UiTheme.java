@@ -1,45 +1,45 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rbb {
-    int field_c;
-    int field_h;
-    int field_u;
+final class UiTheme {
+    int tooltipPaddingBottom;
+    int tooltipPaddingLeft;
+    int tooltipPaddingTop;
     UiRenderer field_a;
     UiRenderer field_l;
     int field_r;
     int field_s;
     UiRenderer field_e;
     static ScrollableActionPanel field_k;
-    private boolean field_f;
-    int field_m;
+    private boolean wrapTooltips;
+    int tooltipBorderColor;
     UiRenderer field_o;
     UiRenderer field_d;
-    int field_j;
-    private int field_t;
-    int field_b;
+    int tooltipPaddingRight;
+    private int tooltipTextColor;
+    int tooltipBackgroundColor;
     UiRenderer field_n;
     int field_i;
-    int field_g;
+    int tooltipLineSpacing;
     UiRenderer field_q;
-    BitmapFont field_p;
+    BitmapFont font;
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final void fillRectangleAlpha(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         if (!param2) {
-          this.a((byte) 18);
+          this.popRasterState((byte) 18);
         }
         SoftwareRasterizer2D.fillRectangleAlpha(param5, param0, param3, param6, param4, param1);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param5 != 11480) {
           String var8 = (String) null;
-          this.a(-20, -99, (String) null, 15);
+          this.drawSingleLineTooltip(-20, -99, (String) null, 15);
         }
         SoftwareRasterizer2D.drawLine(param4, param1, param3, param2, param0);
     }
 
-    private final void a(boolean param0, int param1, int param2, String param3) {
+    private final void drawWrappedTooltip(boolean param0, int param1, int param2, String param3) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -61,18 +61,18 @@ final class rbb {
         int var13Lifetime2;
         var15 = VoidHunters.field_G;
         try {
-          var5_int = this.field_j + this.field_h;
-          var6 = this.field_u + this.field_c;
-          var7 = this.field_g;
+          var5_int = this.tooltipPaddingRight + this.tooltipPaddingLeft;
+          var6 = this.tooltipPaddingTop + this.tooltipPaddingBottom;
+          var7 = this.tooltipLineSpacing;
           if (-1 == var7) {
-            var7 = this.field_p.maxAscent + this.field_p.maxDescent;
+            var7 = this.font.maxAscent + this.font.maxDescent;
           }
           var8 = SoftwareRasterizer2D.width >> 2;
           if (!param0) {
-            this.a(53, -30, true, -4, 116, 102, 70);
+            this.fillRectangleAlpha(53, -30, true, -4, 116, 102, 70);
           }
-          var9 = this.field_p.getStringWidth(param3);
-          var10 = this.field_p.maxDescent + this.field_p.maxAscent;
+          var9 = this.font.getStringWidth(param3);
+          var10 = this.font.maxDescent + this.font.maxAscent;
           var11 = 1;
           if (var9 > var8 ||
             -1 != param3.indexOf("<br>")) {
@@ -85,11 +85,11 @@ final class rbb {
             if (SetVariableActionFactory.field_d == null) {
               SetVariableActionFactory.field_d = new String[16];
             }
-            var11Lifetime1 = this.field_p.wrapLines(param3, new int[]{var12}, SetVariableActionFactory.field_d);
+            var11Lifetime1 = this.font.wrapLines(param3, new int[]{var12}, SetVariableActionFactory.field_d);
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             var9 = 0;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_p.getStringWidth(SetVariableActionFactory.field_d[var13Lifetime2]);
+              var14 = this.font.getStringWidth(SetVariableActionFactory.field_d[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -99,13 +99,13 @@ final class rbb {
           if (SoftwareRasterizer2D.width < var12 + var9 + var5_int) {
             var12 = -var5_int - var9 + SoftwareRasterizer2D.width;
           }
-          var13Lifetime1 = -this.field_p.capHeight + param2 + 32;
+          var13Lifetime1 = -this.font.capHeight + param2 + 32;
           if (SoftwareRasterizer2D.height < var13Lifetime1 + var10 + var6) {
             var13Lifetime1 = -var10 + param2 - var6;
           }
-          SoftwareRasterizer2D.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_m);
-          SoftwareRasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + (var6 - 2), this.field_b);
-          this.field_p.drawParagraph(param3, var12 + this.field_h, this.field_u + var13Lifetime1, var9, var10, this.field_t, -1, 0, 0, var7);
+          SoftwareRasterizer2D.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.tooltipBorderColor);
+          SoftwareRasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + (var6 - 2), this.tooltipBackgroundColor);
+          this.font.drawParagraph(param3, var12 + this.tooltipPaddingLeft, this.tooltipPaddingTop + var13Lifetime1, var9, var10, this.tooltipTextColor, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -128,14 +128,14 @@ final class rbb {
         field_k = null;
     }
 
-    final void a(byte param0) {
+    final void popRasterState(byte param0) {
         bia.popRasterState((byte) 124);
         if (param0 < 82) {
-          rbb.clearSharedReferences((byte) 6);
+          UiTheme.clearSharedReferences((byte) 6);
         }
     }
 
-    final void a(byte param0, String param1, int param2, int param3) {
+    final void drawTooltip(byte param0, String param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -145,10 +145,10 @@ final class rbb {
           if (param0 != 27) {
             this.field_s = -7;
           }
-          if (this.field_f) {
-            this.a(true, param2, param3, param1);
+          if (this.wrapTooltips) {
+            this.drawWrappedTooltip(true, param2, param3, param1);
           } else {
-            this.a(param3, 3, param1, param2);
+            this.drawSingleLineTooltip(param3, 3, param1, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,38 +165,38 @@ final class rbb {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int param3) {
+    private final void drawSingleLineTooltip(int param0, int param1, String param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_p.getStringWidth(param2);
-          var6 = this.field_p.maxDescent + this.field_p.capHeight;
+          var5_int = this.font.getStringWidth(param2);
+          var6 = this.font.maxDescent + this.font.capHeight;
           var7 = param3;
           if (!(var5_int + var7 + 6 <= SoftwareRasterizer2D.width)) {
             var7 = -6 + (-var5_int + SoftwareRasterizer2D.width);
           }
-          var8 = 32 - this.field_p.capHeight + param0;
+          var8 = 32 - this.font.capHeight + param0;
           if (SoftwareRasterizer2D.height < 6 + var6 + var8) {
             var8 = SoftwareRasterizer2D.height - var6 - 6;
           }
-          SoftwareRasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_t);
-          SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_b);
-          this.field_p.draw(param2, var7 + 3, this.field_p.capHeight + param1 + var8, this.field_t, -1);
+          SoftwareRasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.tooltipTextColor);
+          SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.tooltipBackgroundColor);
+          this.font.draw(param2, var7 + 3, this.font.capHeight + param1 + var8, this.tooltipTextColor, -1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rbb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void pushClip(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 103) {
-          this.field_b = -4;
+          this.tooltipBackgroundColor = -4;
         }
         SelectableIconLabelWidget.pushClip(param2, param0, param4, true, param3);
     }
 
-    final void a(BitmapFont param0, int param1) {
+    final void initializeDefaultStyles(BitmapFont param0, int param1) {
         UiTextStyle var17 = null;
         UiStatefulStyle var4 = null;
         Sprite[] var5 = null;
@@ -225,20 +225,20 @@ final class rbb {
           this.field_n = (UiRenderer) ((Object) var17);
           var4 = new UiStatefulStyle();
           var17.copyTo(param1 + 24639, var4);
-          this.field_t = 15658734;
-          this.field_b = 5592405;
+          this.tooltipTextColor = 15658734;
+          this.tooltipBackgroundColor = 5592405;
           var4.caretColor = 15658734;
-          this.field_p = param0;
-          this.field_h = 3;
-          this.field_m = 15658734;
-          this.field_g = -1;
+          this.font = param0;
+          this.tooltipPaddingLeft = 3;
+          this.tooltipBorderColor = 15658734;
+          this.tooltipLineSpacing = -1;
           var4.selectionColor = 11711154;
-          this.field_j = 3;
-          this.field_c = 3;
-          this.field_u = 3;
+          this.tooltipPaddingRight = 3;
+          this.tooltipPaddingBottom = 3;
+          this.tooltipPaddingTop = 3;
           var4.createStateStyle(0, -1).setTextColor(15658734, -2147483648).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(10066329, 8947848, 117, 7829367));
           if (param1 != -24763) {
-            this.a(99, (byte) 19, 39, -32, 64);
+            this.pushClip(99, (byte) 19, 39, -32, 64);
           }
           var4.createStateStyle(1, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(10066329, 11184810, 118, 13421772));
           var4.createStateStyle(3, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(7829367, 8947848, 123, 10066329)).setOffsetX(113, 1).setOffsetY(1, false);
@@ -298,8 +298,8 @@ final class rbb {
         }
     }
 
-    public rbb() {
-        this.field_f = true;
+    public UiTheme() {
+        this.wrapTooltips = true;
     }
 
     static {

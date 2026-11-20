@@ -20,9 +20,9 @@ final class UiViewport extends UiSingleChildContainer {
               return;
             }
             if (this.height != 0) {
-              GetDebrisMax.field_s.a(this.y + param3 + this.height, (byte) 123, this.width + this.x + param0, param3 + this.y, param0 + this.x);
+              GetDebrisMax.field_s.pushClip(this.y + param3 + this.height, (byte) 123, this.width + this.x + param0, param3 + this.y, param0 + this.x);
               this.child.drawLayer(param0 + this.x, param1, 63, param3 + this.y);
-              GetDebrisMax.field_s.a((byte) 92);
+              GetDebrisMax.field_s.popRasterState((byte) 92);
               return;
             }
             return;
@@ -36,9 +36,9 @@ final class UiViewport extends UiSingleChildContainer {
           return;
         }
         if (this.height != 0) {
-          GetDebrisMax.field_s.a(this.y + param3 + this.height, (byte) 123, this.width + this.x + param0, param3 + this.y, param0 + this.x);
+          GetDebrisMax.field_s.pushClip(this.y + param3 + this.height, (byte) 123, this.width + this.x + param0, param3 + this.y, param0 + this.x);
           this.child.drawLayer(param0 + this.x, param1, 63, param3 + this.y);
-          GetDebrisMax.field_s.a((byte) 92);
+          GetDebrisMax.field_s.popRasterState((byte) 92);
           return;
         }
     }

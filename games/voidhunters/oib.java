@@ -4,7 +4,7 @@
 abstract class oib {
     static String field_b;
     static Widget field_a;
-    static int field_c;
+    static int fontJustificationRemainder;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
@@ -22,6 +22,6 @@ abstract class oib {
     static {
         field_z = "oib.D(";
         field_b = "Destroy the enemy's base before they destroy yours!";
-        field_c = 0;
+        fontJustificationRemainder = 0;
     }
 }

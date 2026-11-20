@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class vq extends UiContainer implements ValidatableInput {
-    static int field_v;
+    static int fontUnderlineColor;
     static fab field_x;
     private wta field_z;
     static String field_y;
@@ -171,7 +171,7 @@ abstract class vq extends UiContainer implements ValidatableInput {
     }
 
     static {
-        field_v = -1;
+        fontUnderlineColor = -1;
         field_y = "Click or press F10 to open Quick Chat";
         field_w = "Playing";
     }

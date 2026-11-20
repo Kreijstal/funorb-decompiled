@@ -26,8 +26,8 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         int var14 = 0;
         PlatformService var15 = null;
         try {
-          var11_int = param8.a(param2, 1);
-          var12 = param8.field_d + param8.field_e;
+          var11_int = param8.getStringWidth(param2, 1);
+          var12 = param8.field_d + param8.maxDescent;
           var13 = param10;
           if (6 + var11_int + var13 > param5) {
             var13 = -6 + (-var11_int + param5);
@@ -42,7 +42,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
             GetAutozoomSpeedDivide.enterFullscreenBlocking(-53, -31, (PlatformService) null, -44, -9, 98);
           }
           param7.fillRectangle(var11_int + 4, (byte) 120, -16777216 | param9, var12 + 4, 1 + var14, 1 + var13);
-          param6.a(true, param0 | -16777216, -1, param2, var14 + 3 + param8.field_d, var13 + 3);
+          param6.draw(true, param0 | -16777216, -1, param2, var14 + 3 + param8.field_d, var13 + 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

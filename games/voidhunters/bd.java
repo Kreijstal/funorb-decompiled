@@ -187,7 +187,7 @@ final class bd {
           SetGrapplingHookMaxExtension8Force.field_p.field_F = 1;
           SetGrapplingHookMaxExtension8Force.field_p.field_fb = 1;
           SetGrapplingHookMaxExtension8Force.field_p.field_X = 1;
-          hnb.field_X = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
+          DisplayModeDialog.field_X = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
           GetShieldsDirectionalArc.field_o = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
           GetShieldsDirectionalArc.field_o.field_F = 1;
           GetShieldsDirectionalArc.field_o.field_P = 1;
@@ -206,9 +206,9 @@ final class bd {
           GetShieldsDirectionalArc.field_o.field_nb = dupTemp$0;
           GetShieldsDirectionalArc.field_o.field_A = dupTemp$0;
           GetShieldsDirectionalArc.field_o.field_ub = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "smallbutton_disabled"), (byte) -82);
-          hnb.field_X.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "mediumbutton"), (byte) 124);
-          hnb.field_X.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "mediumbutton_mouseover"), (byte) -105);
-          hnb.field_X.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "mediumbutton_mouseheld"), (byte) -106);
+          DisplayModeDialog.field_X.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "mediumbutton"), (byte) 124);
+          DisplayModeDialog.field_X.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "mediumbutton_mouseover"), (byte) -105);
+          DisplayModeDialog.field_X.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "mediumbutton_mouseheld"), (byte) -106);
           SetGrapplingHookMaxExtension8Force.field_p.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "bigbutton"), (byte) 99);
           SetGrapplingHookMaxExtension8Force.field_p.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "bigbutton_mouseover"), (byte) -63);
           SetGrapplingHookMaxExtension8Force.field_p.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "bigbutton_mouseheld"), (byte) -54);
@@ -262,7 +262,7 @@ final class bd {
           SetAngularVelocitySustain.field_q.field_ob = SetSniperCannonProjectiles.a(param3, "downbutton_mouseheld", "lobby", true);
           SetAngularVelocitySustain.field_q.field_z = SetSniperCannonProjectiles.a(param3, "downbutton_disabled", "lobby", true);
           GetUseNiceTrails.field_o = new ScrollBarWidget(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, CachedArchiveProvider.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
-          rbb.field_k = new ScrollableActionPanel(0L, (Widget) null, UiFocusableComponent.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
+          UiTheme.field_k = new ScrollableActionPanel(0L, (Widget) null, UiFocusableComponent.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

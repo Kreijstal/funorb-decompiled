@@ -120,7 +120,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             return true;
           }
           var4_ref_String = SetShipAimLines.field_p.toString();
-          if (!hnb.a((byte) -92, var4_ref_String)) {
+          if (!DisplayModeDialog.containsPassword((byte) -92, var4_ref_String)) {
             var5 = ow.field_b;
             if (var5 == 0 &&
               SetSpinningBladeSpindamageMultiplier.field_o != null) {

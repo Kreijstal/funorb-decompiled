@@ -1,45 +1,45 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bfb {
-    static int field_h;
-    private static boolean field_d;
-    static int[] field_g;
-    private static int[] field_e;
-    private static int[] field_k;
-    static int field_b;
-    static int field_a;
-    static int field_f;
-    private static int[] field_c;
-    static int field_j;
-    private static int[] field_i;
+final class SoftwareFlatTriangleRasterizer {
+    static int clipHeight;
+    private static boolean horizontalClipping;
+    static int[] rowOffsets;
+    private static int[] sineTable;
+    private static int[] cosineTable;
+    static int destinationWeight;
+    static int clipWidth;
+    static int centerX;
+    private static int[] reciprocal16;
+    static int centerY;
+    private static int[] reciprocal15;
 
-    final static int c() {
-        return field_g[0] % SoftwareRasterizer2D.width;
+    final static int getOriginX() {
+        return rowOffsets[0] % SoftwareRasterizer2D.width;
     }
 
-    private final static void a() {
-        field_f = field_a / 2;
-        field_j = field_h / 2;
+    private final static void updateCenter() {
+        centerX = clipWidth / 2;
+        centerY = clipHeight / 2;
     }
 
     public static void clearSharedReferences() {
-        field_g = null;
-        field_i = null;
-        field_c = null;
-        field_e = null;
-        field_k = null;
+        rowOffsets = null;
+        reciprocal15 = null;
+        reciprocal16 = null;
+        sineTable = null;
+        cosineTable = null;
     }
 
-    final static int d() {
-        return field_g[0] / SoftwareRasterizer2D.width;
+    final static int getOriginY() {
+        return rowOffsets[0] / SoftwareRasterizer2D.width;
     }
 
-    final static void e() {
-        bfb.a(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, SoftwareRasterizer2D.clipRight, SoftwareRasterizer2D.clipBottom);
+    final static void setClipFromRaster() {
+        SoftwareFlatTriangleRasterizer.setClip(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, SoftwareRasterizer2D.clipRight, SoftwareRasterizer2D.clipBottom);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void fillSpan(int[] param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
@@ -57,9 +57,9 @@ final class bfb {
         int var8Lifetime2;
         int var8Lifetime3;
         int var8Lifetime4;
-        if (field_d) {
-          if (param5 > field_a) {
-            param5 = field_a;
+        if (horizontalClipping) {
+          if (param5 > clipWidth) {
+            param5 = clipWidth;
           }
           if (param4 < 0) {
             param4 = 0;
@@ -70,7 +70,7 @@ final class bfb {
         }
         param1 = param1 + param4;
         param3 = param5 - param4 >> 2;
-        if (field_b == 0) {
+        if (destinationWeight == 0) {
           while (true) {
             param3--;
             if (param3 < 0) {
@@ -90,7 +90,7 @@ final class bfb {
           }
         }
         regionExit1: {
-          if (field_b == 254) {
+          if (destinationWeight == 254) {
             while (true) {
               param3--;
               if (param3 < 0) {
@@ -119,8 +119,8 @@ final class bfb {
               param0[incrementValue$16] = param0[param1];
             }
           }
-          var6 = field_b;
-          var7 = 256 - field_b;
+          var6 = destinationWeight;
+          var7 = 256 - destinationWeight;
           param2 = ((param2 & 16711935) * var7 >> 8 & 16711935) + ((param2 & 65280) * var7 >> 8 & 65280);
           while (true) {
             param3--;
@@ -157,13 +157,13 @@ final class bfb {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void updateHorizontalClipping(int param0, int param1, int param2) {
         boolean stackIn_8_0 = false;
-        stackIn_8_0 = !(param0 >= 0) || !(param0 <= field_a) || !(param1 >= 0) || !(param1 <= field_a) || !(param2 >= 0) || !(param2 <= field_a);
-        field_d = stackIn_8_0;
+        stackIn_8_0 = !(param0 >= 0) || !(param0 <= clipWidth) || !(param1 >= 0) || !(param1 <= clipWidth) || !(param2 >= 0) || !(param2 <= clipWidth);
+        horizontalClipping = stackIn_8_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int localTemp$2 = 0;
@@ -187,14 +187,14 @@ final class bfb {
         }
         if (param0 <= param1 &&
           param0 <= param2) {
-          if (param0 >= field_h) {
+          if (param0 >= clipHeight) {
             return;
           }
-          if (param1 > field_h) {
-            param1 = field_h;
+          if (param1 > clipHeight) {
+            param1 = clipHeight;
           }
-          if (param2 > field_h) {
-            param2 = field_h;
+          if (param2 > clipHeight) {
+            param2 = clipHeight;
           }
           if (param1 >= param2) {
             localTemp$0 = param3 << 16;
@@ -216,11 +216,11 @@ final class bfb {
               var8 <= var7)) {
               param1 = param1 - param2;
               param2 = param2 - param0;
-              param0 = field_g[param0];
+              param0 = rowOffsets[param0];
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
                   param0 = param0 + SoftwareRasterizer2D.width;
@@ -230,7 +230,7 @@ final class bfb {
               }
               param1--;
               while (param1 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer2D.width;
@@ -240,11 +240,11 @@ final class bfb {
             }
             param1 = param1 - param2;
             param2 = param2 - param0;
-            param0 = field_g[param0];
+            param0 = rowOffsets[param0];
             while (true) {
               param2--;
               if (param2 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer2D.width;
@@ -254,7 +254,7 @@ final class bfb {
             }
             param1--;
             while (param1 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
               param0 = param0 + SoftwareRasterizer2D.width;
@@ -281,11 +281,11 @@ final class bfb {
             var9 <= var8)) {
             param2 = param2 - param1;
             param1 = param1 - param0;
-            param0 = field_g[param0];
+            param0 = rowOffsets[param0];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
                 param0 = param0 + SoftwareRasterizer2D.width;
@@ -295,7 +295,7 @@ final class bfb {
             }
             param2--;
             while (param2 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
               param0 = param0 + SoftwareRasterizer2D.width;
@@ -305,11 +305,11 @@ final class bfb {
           }
           param2 = param2 - param1;
           param1 = param1 - param0;
-          param0 = field_g[param0];
+          param0 = rowOffsets[param0];
           while (true) {
             param1--;
             if (param1 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
               param0 = param0 + SoftwareRasterizer2D.width;
@@ -319,7 +319,7 @@ final class bfb {
           }
           param2--;
           while (param2 >= 0) {
-            bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
+            SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
             param0 = param0 + SoftwareRasterizer2D.width;
@@ -328,14 +328,14 @@ final class bfb {
           return;
         }
         if (param1 > param2) {
-          if (param2 >= field_h) {
+          if (param2 >= clipHeight) {
             return;
           }
-          if (param0 > field_h) {
-            param0 = field_h;
+          if (param0 > clipHeight) {
+            param0 = clipHeight;
           }
-          if (param1 > field_h) {
-            param1 = field_h;
+          if (param1 > clipHeight) {
+            param1 = clipHeight;
           }
           if (param0 >= param1) {
             localTemp$2 = param5 << 16;
@@ -354,11 +354,11 @@ final class bfb {
             if (var8 >= var9) {
               param0 = param0 - param1;
               param1 = param1 - param2;
-              param2 = field_g[param2];
+              param2 = rowOffsets[param2];
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
                   param2 = param2 + SoftwareRasterizer2D.width;
@@ -368,7 +368,7 @@ final class bfb {
               }
               param0--;
               while (param0 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer2D.width;
@@ -378,11 +378,11 @@ final class bfb {
             }
             param0 = param0 - param1;
             param1 = param1 - param2;
-            param2 = field_g[param2];
+            param2 = rowOffsets[param2];
             while (true) {
               param1--;
               if (param1 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer2D.width;
@@ -392,7 +392,7 @@ final class bfb {
             }
             param0--;
             while (param0 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
               param2 = param2 + SoftwareRasterizer2D.width;
@@ -416,11 +416,11 @@ final class bfb {
           if (var8 >= var9) {
             param1 = param1 - param0;
             param0 = param0 - param2;
-            param2 = field_g[param2];
+            param2 = rowOffsets[param2];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
                 param2 = param2 + SoftwareRasterizer2D.width;
@@ -430,7 +430,7 @@ final class bfb {
             }
             param1--;
             while (param1 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
               param2 = param2 + SoftwareRasterizer2D.width;
@@ -440,11 +440,11 @@ final class bfb {
           }
           param1 = param1 - param0;
           param0 = param0 - param2;
-          param2 = field_g[param2];
+          param2 = rowOffsets[param2];
           while (true) {
             param0--;
             if (param0 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
               param2 = param2 + SoftwareRasterizer2D.width;
@@ -454,7 +454,7 @@ final class bfb {
           }
           param1--;
           while (param1 >= 0) {
-            bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
+            SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
             param2 = param2 + SoftwareRasterizer2D.width;
@@ -462,14 +462,14 @@ final class bfb {
           }
           return;
         }
-        if (param1 >= field_h) {
+        if (param1 >= clipHeight) {
           return;
         }
-        if (param2 > field_h) {
-          param2 = field_h;
+        if (param2 > clipHeight) {
+          param2 = clipHeight;
         }
-        if (param0 > field_h) {
-          param0 = field_h;
+        if (param0 > clipHeight) {
+          param0 = clipHeight;
         }
         if (param2 >= param0) {
           localTemp$4 = param4 << 16;
@@ -488,11 +488,11 @@ final class bfb {
           if (var7 >= var8) {
             param2 = param2 - param0;
             param0 = param0 - param1;
-            param1 = field_g[param1];
+            param1 = rowOffsets[param1];
             while (true) {
               param0--;
               if (param0 >= 0) {
-                bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
+                SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
                 param1 = param1 + SoftwareRasterizer2D.width;
@@ -502,7 +502,7 @@ final class bfb {
             }
             param2--;
             while (param2 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer2D.width;
@@ -512,11 +512,11 @@ final class bfb {
           }
           param2 = param2 - param0;
           param0 = param0 - param1;
-          param1 = field_g[param1];
+          param1 = rowOffsets[param1];
           while (true) {
             param0--;
             if (param0 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer2D.width;
@@ -526,7 +526,7 @@ final class bfb {
           }
           param2--;
           while (param2 >= 0) {
-            bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
+            SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
             param1 = param1 + SoftwareRasterizer2D.width;
@@ -553,11 +553,11 @@ final class bfb {
           var7 <= var9)) {
           param0 = param0 - param2;
           param2 = param2 - param1;
-          param1 = field_g[param1];
+          param1 = rowOffsets[param1];
           while (true) {
             param2--;
             if (param2 >= 0) {
-              bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
+              SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
               param1 = param1 + SoftwareRasterizer2D.width;
@@ -567,7 +567,7 @@ final class bfb {
           }
           param0--;
           while (param0 >= 0) {
-            bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
+            SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
             param1 = param1 + SoftwareRasterizer2D.width;
@@ -577,11 +577,11 @@ final class bfb {
         }
         param0 = param0 - param2;
         param2 = param2 - param1;
-        param1 = field_g[param1];
+        param1 = rowOffsets[param1];
         while (true) {
           param2--;
           if (param2 >= 0) {
-            bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
+            SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
             param1 = param1 + SoftwareRasterizer2D.width;
@@ -591,7 +591,7 @@ final class bfb {
         }
         param0--;
         while (param0 >= 0) {
-          bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
+          SoftwareFlatTriangleRasterizer.fillSpan(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
           param1 = param1 + SoftwareRasterizer2D.width;
@@ -600,17 +600,17 @@ final class bfb {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        field_a = param2 - param0;
-        field_h = param3 - param1;
-        bfb.a();
-        if (field_g.length < field_h) {
-          field_g = new int[GetSalvoaim.a(field_h, (byte) -105)];
+        clipWidth = param2 - param0;
+        clipHeight = param3 - param1;
+        SoftwareFlatTriangleRasterizer.updateCenter();
+        if (rowOffsets.length < clipHeight) {
+          rowOffsets = new int[GetSalvoaim.a(clipHeight, (byte) -105)];
         }
         int var4 = param1 * SoftwareRasterizer2D.width + param0;
-        for (var5 = 0; var5 < field_h; var5++) {
-          field_g[var5] = var4;
+        for (var5 = 0; var5 < clipHeight; var5++) {
+          rowOffsets[var5] = var4;
           var4 = var4 + SoftwareRasterizer2D.width;
         }
     }
@@ -619,22 +619,22 @@ final class bfb {
         int var0 = 0;
         int var0Lifetime1;
         int var0Lifetime2;
-        field_d = false;
-        field_k = new int[2048];
-        field_e = new int[2048];
-        field_c = new int[2048];
-        field_g = new int[1024];
-        field_b = 0;
-        field_i = new int[512];
+        horizontalClipping = false;
+        cosineTable = new int[2048];
+        sineTable = new int[2048];
+        reciprocal16 = new int[2048];
+        rowOffsets = new int[1024];
+        destinationWeight = 0;
+        reciprocal15 = new int[512];
         for (var0 = 1; var0 < 512; var0++) {
-          field_i[var0] = 32768 / var0;
+          reciprocal15[var0] = 32768 / var0;
         }
         for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
-          field_c[var0Lifetime1] = 65536 / var0Lifetime1;
+          reciprocal16[var0Lifetime1] = 65536 / var0Lifetime1;
         }
         for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
-          field_e[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
-          field_k[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
+          sineTable[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          cosineTable[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

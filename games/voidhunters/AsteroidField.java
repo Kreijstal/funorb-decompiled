@@ -1931,7 +1931,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             stackIn_7_0 = ita.a(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).a(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);
+          stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).getParagraphHeight(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

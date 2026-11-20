@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ToolkitFontMetrics {
-    int field_a;
-    int field_e;
+    int ascent;
+    int maxDescent;
     int field_d;
-    private byte[][] field_g;
-    int field_c;
-    private byte[] field_b;
+    private byte[][] kerning;
+    int maxAscent;
+    private byte[] advances;
     static boolean field_f;
 
-    final int a(String param0, ToolkitSprite[] param1, int[] param2, String[] param3, int param4) {
+    final int wrapLines(String param0, ToolkitSprite[] param1, int[] param2, String[] param3, int param4) {
         int stackIn_3_0 = 0;
         int stackIn_34_0 = 0;
         int stackIn_137_0 = 0;
@@ -64,7 +64,7 @@ final class ToolkitFontMetrics {
           var11 = -1;
           var12 = -1;
           if (param4 != 4) {
-            this.a(-30, 'ﾮ', -56);
+            this.getKerning(-30, 'ﾮ', -56);
           }
           var13 = 0;
           var14 = param0.length();
@@ -81,11 +81,11 @@ final class ToolkitFontMetrics {
                 var11 = var15;
               } else {
                 if (-1 == var11) {
-                  var17 = var17 + this.a(var16, (byte) 104);
+                  var17 = var17 + this.getGlyphAdvance(var16, (byte) 104);
                   var18 = var15;
-                  if (null != this.field_g &&
+                  if (null != this.kerning &&
                     var12 != -1) {
-                    var17 = var17 + this.field_g[var12][var16];
+                    var17 = var17 + this.kerning[var12][var16];
                   }
                   var12 = var16;
                 } else {
@@ -110,51 +110,51 @@ final class ToolkitFontMetrics {
                     else {
                       regionExit1: {
                         if (var19.equals("lt")) {
-                          var17 = var17 + this.a(60, (byte) 37);
-                          if (null != this.field_g &&
+                          var17 = var17 + this.getGlyphAdvance(60, (byte) 37);
+                          if (null != this.kerning &&
                             var12 != -1) {
-                            var17 = var17 + this.field_g[var12][60];
+                            var17 = var17 + this.kerning[var12][60];
                           }
                           var12 = 60;
                         } else {
                           if (!var19.equals("gt")) {
                             if (var19.equals("nbsp")) {
-                              var17 = var17 + this.a(160, (byte) 52);
-                              if (this.field_g != null &&
+                              var17 = var17 + this.getGlyphAdvance(160, (byte) 52);
+                              if (this.kerning != null &&
                                 -1 != var12) {
-                                var17 = var17 + this.field_g[var12][160];
+                                var17 = var17 + this.kerning[var12][160];
                               }
                               var12 = 160;
                             } else {
                               if (var19.equals("shy")) {
-                                var17 = var17 + this.a(173, (byte) 100);
-                                if (this.field_g != null &&
+                                var17 = var17 + this.getGlyphAdvance(173, (byte) 100);
+                                if (this.kerning != null &&
                                   var12 != -1) {
-                                  var17 = var17 + this.field_g[var12][173];
+                                  var17 = var17 + this.kerning[var12][173];
                                 }
                                 var12 = 173;
                               } else {
                                 if (var19.equals("times")) {
-                                  var17 = var17 + this.a(215, (byte) 117);
-                                  if (this.field_g != null &&
+                                  var17 = var17 + this.getGlyphAdvance(215, (byte) 117);
+                                  if (this.kerning != null &&
                                     -1 != var12) {
-                                    var17 = var17 + this.field_g[var12][215];
+                                    var17 = var17 + this.kerning[var12][215];
                                   }
                                   var12 = 215;
                                 } else {
                                   if (var19.equals("euro")) {
-                                    var17 = var17 + this.a(8364, (byte) 32);
-                                    if (this.field_g != null &&
+                                    var17 = var17 + this.getGlyphAdvance(8364, (byte) 32);
+                                    if (this.kerning != null &&
                                       -1 != var12) {
-                                      var17 = var17 + this.field_g[var12][8364];
+                                      var17 = var17 + this.kerning[var12][8364];
                                     }
                                     var12 = 8364;
                                   } else {
                                     if (var19.equals("copy")) {
-                                      var17 = var17 + this.a(169, (byte) 92);
-                                      if (null != this.field_g &&
+                                      var17 = var17 + this.getGlyphAdvance(169, (byte) 92);
+                                      if (null != this.kerning &&
                                         var12 != -1) {
-                                        var17 = var17 + this.field_g[var12][169];
+                                        var17 = var17 + this.kerning[var12][169];
                                       }
                                       var12 = 169;
                                     } else {
@@ -179,10 +179,10 @@ final class ToolkitFontMetrics {
                                           break regionExit1;
                                         }
                                       }
-                                      var17 = var17 + this.a(174, (byte) 56);
-                                      if (this.field_g != null &&
+                                      var17 = var17 + this.getGlyphAdvance(174, (byte) 56);
+                                      if (this.kerning != null &&
                                         var12 != -1) {
-                                        var17 = var17 + this.field_g[var12][174];
+                                        var17 = var17 + this.kerning[var12][174];
                                       }
                                       var12 = 174;
                                     }
@@ -192,10 +192,10 @@ final class ToolkitFontMetrics {
                             }
                             break regionExit1;
                           }
-                          var17 = var17 + this.a(62, (byte) 76);
-                          if (this.field_g != null &&
+                          var17 = var17 + this.getGlyphAdvance(62, (byte) 76);
+                          if (this.kerning != null &&
                             var12 != -1) {
-                            var17 = var17 + this.field_g[var12][62];
+                            var17 = var17 + this.kerning[var12][62];
                           }
                           var12 = 62;
                         }
@@ -300,7 +300,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final String a(String param0, int param1, int param2, ToolkitSprite[] param3) {
+    final String truncateWithEllipsis(String param0, int param1, int param2, ToolkitSprite[] param3) {
         String stackIn_5_0 = null;
         String stackIn_57_0 = null;
         String stackIn_80_0 = null;
@@ -328,12 +328,12 @@ final class ToolkitFontMetrics {
         int var15 = 0;
         var15 = VoidHunters.field_G;
         try {
-          if (param1 >= this.a(62, param0, param3)) {
+          if (param1 >= this.getStringWidth(62, param0, param3)) {
             stackIn_5_0 = (String) (param0);
             return stackIn_5_0;
           }
           var5_int = -22 % ((36 - param2) / 44);
-          param1 = param1 - this.a(62, "...", (ToolkitSprite[]) null);
+          param1 = param1 - this.getStringWidth(62, "...", (ToolkitSprite[]) null);
           var6 = -1;
           var7 = -1;
           var8 = 0;
@@ -426,15 +426,15 @@ final class ToolkitFontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var6 == -1)) {
-                  var8 = var8 + (255 & this.field_b[255 & Cp1252CharacterEncoder.encodeCp1252Character(-122, (char) var12)]);
-                  if (this.field_g != null &&
+                  var8 = var8 + (255 & this.advances[255 & Cp1252CharacterEncoder.encodeCp1252Character(-122, (char) var12)]);
+                  if (this.kerning != null &&
                     var7 != -1) {
-                    var8 = var8 + this.field_g[var7][var12];
+                    var8 = var8 + this.kerning[var7][var12];
                   }
                   var7 = var12;
                   var13 = var8;
-                  if (null != this.field_g) {
-                    var13 = var13 + this.field_g[var12][46];
+                  if (null != this.kerning) {
+                    var13 = var13 + this.kerning[var12][46];
                   }
                   if (var13 > param1) {
                     stackIn_80_0 = var10 + "...";
@@ -472,7 +472,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final int a(String param0, int param1) {
+    final int getStringWidth(String param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -483,7 +483,7 @@ final class ToolkitFontMetrics {
           if (param1 != 1) {
             field_f = true;
           }
-          stackIn_4_0 = this.a(62, param0, (ToolkitSprite[]) null);
+          stackIn_4_0 = this.getStringWidth(62, param0, (ToolkitSprite[]) null);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -499,7 +499,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillEllipse(byte param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
@@ -583,7 +583,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final int a(int param0, String param1, boolean param2, ToolkitSprite[] param3) {
+    final int getParagraphWidth(int param0, String param1, boolean param2, ToolkitSprite[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -601,12 +601,12 @@ final class ToolkitFontMetrics {
         RuntimeException decompiledCaughtException = null;
         var9 = VoidHunters.field_G;
         try {
-          var5_int = this.a(param1, param3, new int[]{param0}, GetGrapplingHookRopeBreakLength.field_p, 4);
+          var5_int = this.wrapLines(param1, param3, new int[]{param0}, GetGrapplingHookRopeBreakLength.field_p, 4);
           var6 = 0;
           var7 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 >= var5_int))) {
-            var8 = this.a(62, GetGrapplingHookRopeBreakLength.field_p[var7], param3);
+            var8 = this.getStringWidth(62, GetGrapplingHookRopeBreakLength.field_p[var7], param3);
             stackIn_10_0 = ~var8;
             stackIn_10_1 = ~var6;
             if (var9 == 0) {
@@ -623,7 +623,7 @@ final class ToolkitFontMetrics {
             stackIn_10_1 = 1;
           }
           if (stackIn_10_0 != stackIn_10_1) {
-            this.a(-9, (byte) -117);
+            this.getGlyphAdvance(-9, (byte) -117);
           }
           stackIn_14_0 = var6;
           return stackIn_14_0;
@@ -647,7 +647,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final int a(String param0, int param1, int param2, byte param3, ToolkitSprite[] param4) {
+    final int getParagraphHeight(String param0, int param1, int param2, byte param3, ToolkitSprite[] param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -660,14 +660,14 @@ final class ToolkitFontMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            param1 = this.field_a;
+            param1 = this.ascent;
           }
-          var6_int = this.a(param0, param4, new int[]{param2}, GetGrapplingHookRopeBreakLength.field_p, 4);
+          var6_int = this.wrapLines(param0, param4, new int[]{param2}, GetGrapplingHookRopeBreakLength.field_p, 4);
           if (param3 <= 83) {
-            this.a((String) null, 127, 112, (byte) -23, (ToolkitSprite[]) null);
+            this.getParagraphHeight((String) null, 127, 112, (byte) -23, (ToolkitSprite[]) null);
           }
           var7 = (var6_int - 1) * param1;
-          stackIn_6_0 = this.field_e + (this.field_c + var7);
+          stackIn_6_0 = this.maxDescent + (this.maxAscent + var7);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -689,15 +689,15 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getGlyphAdvance(int param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 21) {
-            this.a(-79, 'ﾁ', 63);
+            this.getKerning(-79, 'ﾁ', 63);
           }
-          stackIn_4_0 = this.field_b[param0] & 255;
+          stackIn_4_0 = this.advances[param0] & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -747,8 +747,8 @@ final class ToolkitFontMetrics {
           stackIn_8_0 = (var2.readUnsignedByte((byte) -89) != 1) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           var4 = stackIn_8_0;
-          this.field_b = new byte[256];
-          var2.readBytes(0, this.field_b, (byte) -59, 256);
+          this.advances = new byte[256];
+          var2.readBytes(0, this.advances, (byte) -59, 256);
           if (var4 != 0) {
             var5 = new int[256];
             var6 = new int[256];
@@ -811,7 +811,7 @@ final class ToolkitFontMetrics {
                 var9Lifetime1++;
                 continue;
               }
-              this.field_g = new byte[256][256];
+              this.kerning = new byte[256][256];
               stackIn_47_0 = 0;
               break;
             }
@@ -833,7 +833,7 @@ final class ToolkitFontMetrics {
                     stackIn_49_1 = var10Lifetime2;
                     if (stackIn_49_0 != stackIn_49_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.field_g[var9Lifetime2][var10Lifetime2] = (byte)TeamNodeCondition.a(this.field_b, var10Lifetime2, var9Lifetime2, var7, false, var8, var5, var6);
+                      this.kerning[var9Lifetime2][var10Lifetime2] = (byte)TeamNodeCondition.a(this.advances, var10Lifetime2, var9Lifetime2, var7, false, var8, var5, var6);
                     }
                     var10Lifetime2++;
                   }
@@ -844,19 +844,19 @@ final class ToolkitFontMetrics {
               break;
             }
             if (decompiledFrameCompleted0) {
-              this.field_a = var6[32] + var5[32];
+              this.ascent = var6[32] + var5[32];
             }
           }
           if (decompiledFrameCompleted0) {
             if (var4 == 0 ||
               var12 != 0) {
-              this.field_a = var2.readUnsignedByte((byte) -104);
+              this.ascent = var2.readUnsignedByte((byte) -104);
             }
             this.field_d = var2.readUnsignedByte((byte) -91);
             stackIn_75_0 = var2.readUnsignedByte((byte) -88);
           }
-          this.field_c = var2.readUnsignedByte((byte) -87);
-          this.field_e = var2.readUnsignedByte((byte) -126);
+          this.maxAscent = var2.readUnsignedByte((byte) -87);
+          this.maxDescent = var2.readUnsignedByte((byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -872,7 +872,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    final int a(int param0, char param1, int param2) {
+    final int getKerning(int param0, char param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte stackIn_2_0 = 0;
@@ -880,11 +880,11 @@ final class ToolkitFontMetrics {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -30 % ((41 - param2) / 57);
-          if (this.field_g == null) {
+          if (this.kerning == null) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          stackIn_2_0 = this.field_g[param0][param1];
+          stackIn_2_0 = this.kerning[param0][param1];
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -893,7 +893,7 @@ final class ToolkitFontMetrics {
         }
     }
 
-    private final int a(int param0, String param1, ToolkitSprite[] param2) {
+    private final int getStringWidth(int param0, String param1, ToolkitSprite[] param2) {
         int stackIn_3_0 = 0;
         int stackIn_75_0 = 0;
         RuntimeException stackIn_79_0 = null;
@@ -925,7 +925,7 @@ final class ToolkitFontMetrics {
           var6 = 0;
           var7 = param1.length();
           if (param0 != 62) {
-            ToolkitFontMetrics.a((byte) -112, -45, -77, 71, 75, 122);
+            ToolkitFontMetrics.fillEllipse((byte) -112, -45, -77, 71, 75, 122);
           }
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1003,10 +1003,10 @@ final class ToolkitFontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var4_int == -1)) {
-                  var6 = var6 + (255 & this.field_b[Cp1252CharacterEncoder.encodeCp1252Character(-121, (char) var9) & 255]);
-                  if (this.field_g != null &&
+                  var6 = var6 + (255 & this.advances[Cp1252CharacterEncoder.encodeCp1252Character(-121, (char) var9) & 255]);
+                  if (this.kerning != null &&
                     -1 != var5) {
-                    var6 = var6 + this.field_g[var5][var9];
+                    var6 = var6 + this.kerning[var5][var9];
                   }
                   var5 = var9;
                 }

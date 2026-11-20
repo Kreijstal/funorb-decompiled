@@ -133,12 +133,12 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           if (!OpenGlTexture1D.field_i) {
             return ita.a(param1, 7988).maxAscent;
           }
-          return SetTorpedoEnergyUsed.a(param1, 300).field_c;
+          return SetTorpedoEnergyUsed.a(param1, 300).maxAscent;
         }
         if (!OpenGlTexture1D.field_i) {
           return ita.a(param1, 7988).maxAscent;
         }
-        return SetTorpedoEnergyUsed.a(param1, 300).field_c;
+        return SetTorpedoEnergyUsed.a(param1, 300).maxAscent;
     }
 
     final static int parseInt(int param0, CharSequence param1, int param2) {

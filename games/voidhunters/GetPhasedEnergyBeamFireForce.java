@@ -65,7 +65,7 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
           return;
         }
         HighscoreTableRequest.field_h.closeAllPanels((byte) -17);
-        HighscoreTableRequest.field_h.pushPanel(false, new hnb(HighscoreTableRequest.field_h));
+        HighscoreTableRequest.field_h.pushPanel(false, new DisplayModeDialog(HighscoreTableRequest.field_h));
     }
 
     GetPhasedEnergyBeamFireForce(String param0, Class[] param1, String param2) {
