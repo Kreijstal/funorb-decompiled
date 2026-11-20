@@ -417,10 +417,10 @@ final class MissionControl implements DiffableState {
           this.differsFrom((byte) -25, (SerializableGameState) null);
         }
         if (this.currentEventIndex >= 0) {
-          this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.a(GetExplosionPushMultiplier.field_o, this.currentEventIndex, param0 ^ 15620, this.events));
+          this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(GetExplosionPushMultiplier.field_o, this.currentEventIndex, param0 ^ 15620, this.events));
           this.currentEventIndex = this.currentEventIndex - 1;
         } else {
-          this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.a(GetExplosionPushMultiplier.field_o, this.selectedEvent, 15667, this.events));
+          this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(GetExplosionPushMultiplier.field_o, this.selectedEvent, 15667, this.events));
           if (null != this.events &&
             this.events.length <= this.selectedEvent) {
             this.selectedEvent = -1 + this.events.length;

@@ -73,7 +73,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
             }
             var9.connected = true;
             var9.onJoin(param2, var5, -24354, this.tick);
-            GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied join for " + var8.field_b);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselEvent: Applied join for " + var8.field_b);
           } else {
             if (null != this.systemEvent &&
               this.systemEvent.field_d != null) {
@@ -82,7 +82,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
               var11 = param2.players[var5];
               var11.connected = false;
               var11.onLeave(true, param2, this.tick, var5);
-              GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied leave for player " + var5);
+              GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselEvent: Applied leave for player " + var5);
             }
           }
           if (null != this.systemEvent) {
@@ -171,7 +171,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
           var6 = (CarouselEvent) (other);
           var4 = 0;
           if (this.tick != var6.tick) {
-            GetSniperCannonAimarc.a(-6940, "int tick has changed. before=" + var6.tick + ", now=" + this.tick);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int tick has changed. before=" + var6.tick + ", now=" + this.tick);
             var4 = 1;
           }
           if (obfuscationGuard > -19) {
@@ -192,7 +192,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
             this.systemEvent != null &&
             this.systemEvent.differsFrom((byte) 108, var6.systemEvent)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.systemEvent + ", now=" + this.systemEvent);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.systemEvent + ", now=" + this.systemEvent);
           }
           if (var4 == 0) {
             return;

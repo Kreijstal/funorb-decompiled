@@ -60,7 +60,7 @@ final class TextureCombineMappings {
         AdminMessage var3 = new AdminMessage();
         var3.value = param1;
         var3.index = 31 + param2;
-        SetBuildViewAutozoomEndOnAction.a(0, var3, RequestNewestBlackboxRecording.field_p, param0);
+        SetBuildViewAutozoomEndOnAction.writeStatePacket(0, var3, RequestNewestBlackboxRecording.field_p, param0);
     }
 
     public static void clearSharedReferences(byte param0) {

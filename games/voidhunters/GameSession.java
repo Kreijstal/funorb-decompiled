@@ -258,7 +258,7 @@ final class GameSession {
         var4 = this.state.carouselInfo.tick;
         var5 = this.state.carouselInfo.ticksBehind;
         var6 = FlipTextureOperation.field_l.getPingMillis(0);
-        SetSelfDestructPrepareToggleCooldown.a(var2, -1, var3, "Tick=" + var4 + ", ticksbehind=" + var5 + ", lag=" + var6, 3, 16711935, (byte) -121);
+        SetSelfDestructPrepareToggleCooldown.drawText(var2, -1, var3, "Tick=" + var4 + ", ticksbehind=" + var5 + ", lag=" + var6, 3, 16711935, (byte) -121);
         var7 = this.state.carouselInfo.getHistoryLength((byte) 110);
         var8 = -var7 + var4;
         var9 = var7 + var4;
@@ -278,7 +278,7 @@ final class GameSession {
             var17_int = 16711680;
           }
           if (var17_int != 0) {
-            GetMachineGunPulsetime.a(var17_int, -102, var14, 1 + var13, var15, var12 + 1);
+            GetMachineGunPulsetime.fillRectangle(var17_int, -102, var14, 1 + var13, var15, var12 + 1);
           }
           var12 = var12 + (-1 + var10);
         }
@@ -296,9 +296,9 @@ final class GameSession {
           var20 = var18 * (-1 + var10) + var2 + 1 + (-1 + var10) * var7;
           var21 = var3 + 1;
           if (!var17_ref.isConfirmed(122)) {
-            GetMachineGunPulsetime.a(16755200, -55, var14, var21, 4 + var15, var20);
+            GetMachineGunPulsetime.fillRectangle(16755200, -55, var14, var21, 4 + var15, var20);
           }
-          GetMachineGunPulsetime.a(var19, -50, var14, var21, var15, var20);
+          GetMachineGunPulsetime.fillRectangle(var19, -50, var14, var21, var15, var20);
           if (PlayerGameData.field_b >= var20 &&
             PlayerGameData.field_b <= var20 + var14 &&
             var21 <= OpenGlFaceAttachment.field_b &&
@@ -1809,8 +1809,8 @@ final class GameSession {
           var25_ref_String = VoidHunters.getTeamName(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var26Lifetime1 = GetPointDefenceLaserProjectiles.getFontAscent(false, 1);
           BlackBoxRecording.drawPanelBackground((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
-          SetSelfDestructPrepareToggleCooldown.a((var20Lifetime1 >> 1) + (var6 - GameTextMetrics.getStringWidth(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, AlphaContainer.getTeamColor(false, 0, 13894143), (byte) -124);
-          SetSelfDestructPrepareToggleCooldown.a(-(GameTextMetrics.getStringWidth(1, var25_ref_String, 13879) / 2) + var6 - (-(var20Lifetime1 >> 1) - var20Lifetime1 / 4), 1, -10 + var4Lifetime1, var25_ref_String, 1, AlphaContainer.getTeamColor(false, 1, 13894143), (byte) -95);
+          SetSelfDestructPrepareToggleCooldown.drawText((var20Lifetime1 >> 1) + (var6 - GameTextMetrics.getStringWidth(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, AlphaContainer.getTeamColor(false, 0, 13894143), (byte) -124);
+          SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(1, var25_ref_String, 13879) / 2) + var6 - (-(var20Lifetime1 >> 1) - var20Lifetime1 / 4), 1, -10 + var4Lifetime1, var25_ref_String, 1, AlphaContainer.getTeamColor(false, 1, 13894143), (byte) -95);
         } else {
           var23Lifetime1 = 4;
           BlackBoxRecording.drawPanelBackground((byte) -115, 200, var14Lifetime1 + 2 * var23Lifetime1, var6, -var23Lifetime1 + (var4Lifetime1 - 5), var20Lifetime1);
@@ -1831,7 +1831,7 @@ final class GameSession {
             for (var29Lifetime1 = 0; var59.length > var29Lifetime1; var29Lifetime1++) {
               SetTorpedoAcceleration.a(var53, (byte) 16, var59);
             }
-            GetMachineGunPulsetime.a(0, -122, -var18Lifetime1 + var20Lifetime1 - var17Lifetime3, var24Lifetime1, var27Lifetime1 * var5, -var17Lifetime3 + var23Lifetime2);
+            GetMachineGunPulsetime.fillRectangle(0, -122, -var18Lifetime1 + var20Lifetime1 - var17Lifetime3, var24Lifetime1, var27Lifetime1 * var5, -var17Lifetime3 + var23Lifetime2);
             this.drawScoreboardColumns(var59, 18398, var24Lifetime1, var17Lifetime3, var18Lifetime1, var51, var54, var55, var5, var23Lifetime2, var6, var10);
             var24Lifetime1 = var24Lifetime1 + (var5 * var27Lifetime1 + 10);
           }
@@ -2100,7 +2100,7 @@ final class GameSession {
                     var30++;
                   }
                 }
-                GetMachineGunPulsetime.a(var15Lifetime3, var9, var8, var19, -55, var20, var10, 0, 0, var7, 0);
+                GetMachineGunPulsetime.drawParagraph(var15Lifetime3, var9, var8, var19, -55, var20, var10, 0, 0, var7, 0);
               }
             }
           }
@@ -2366,7 +2366,7 @@ final class GameSession {
                   var21 += 24;
                 }
                 CachedArchiveProvider.a(200, false, var13, var14, var21, var7, 1);
-                SetSelfDestructPrepareToggleCooldown.a(-(GameTextMetrics.getStringWidth(var16, var41, 13879) / 2) + var9, -1, GetPointDefenceLaserProjectiles.getFontAscent(false, var16) + var14, var41, var16, 16777215, (byte) -124);
+                SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(var16, var41, 13879) / 2) + var9, -1, GetPointDefenceLaserProjectiles.getFontAscent(false, var16) + var14, var41, var16, 16777215, (byte) -124);
               }
             }
           } else {
@@ -2390,7 +2390,7 @@ final class GameSession {
             } else {
               PlayerVote.a(var13, var8, 255, 115, var12, var14);
               var42 = var18_ref_String.toUpperCase();
-              SetSelfDestructPrepareToggleCooldown.a(-(GameTextMetrics.getStringWidth(var16, var42, 13879) / 2) + var9, -1, var14 + UsernameAvailabilityValidator.getFontAscent(true, var16) + 9, var42, var16, var21, (byte) -95);
+              SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(var16, var42, 13879) / 2) + var9, -1, var14 + UsernameAvailabilityValidator.getFontAscent(true, var16) + 9, var42, var16, var21, (byte) -95);
             }
             var22_int = 20;
             var23 = (var12 - var15) / 3;
@@ -2482,7 +2482,7 @@ final class GameSession {
                 }
               }
               var35 = Integer.toString(var34);
-              SetSelfDestructPrepareToggleCooldown.a(-25 + var13 + var7 + (-(GameTextMetrics.getStringWidth(1, var35, 13879) / 2) + 1), -1, var27 + 32, var35, 1, 1, (byte) -118);
+              SetSelfDestructPrepareToggleCooldown.drawText(-25 + var13 + var7 + (-(GameTextMetrics.getStringWidth(1, var35, 13879) / 2) + 1), -1, var27 + 32, var35, 1, 1, (byte) -118);
             }
           }
           if (param2) {
@@ -2494,7 +2494,7 @@ final class GameSession {
               if (var20 > 1) {
                 var19 = var45 + " (" + SetReverbGain.a(GameInterfaceText.roundTemplate, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
               }
-              SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(4, var19, 13879) >> 1), 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var16) * 7 / 4 + var14 + var15 - GetPointDefenceLaserProjectiles.getFontAscent(false, 4), var19, 4, 16777215, (byte) -85);
+              SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(4, var19, 13879) >> 1), 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var16) * 7 / 4 + var14 + var15 - GetPointDefenceLaserProjectiles.getFontAscent(false, 4), var19, 4, 16777215, (byte) -85);
               var21Lifetime1 = -1;
               if (0 <= this.localPlayerIndex) {
                 var21Lifetime1 = param1.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
@@ -2531,7 +2531,7 @@ final class GameSession {
                       var30Lifetime2 = var47Lifetime2;
                       var19Lifetime2 = var30Lifetime2;
                     }
-                    SetSelfDestructPrepareToggleCooldown.a(var15 + (var13 + 3), -1, var14 + (var15 + 21), var19Lifetime2, var16, 16737792, (byte) -109);
+                    SetSelfDestructPrepareToggleCooldown.drawText(var15 + (var13 + 3), -1, var14 + (var15 + 21), var19Lifetime2, var16, 16737792, (byte) -109);
                   }
                   return var6 != 0;
                 }
@@ -2577,7 +2577,7 @@ final class GameSession {
               if (var51.length() == 1) {
                 var19Lifetime1Lifetime2 = "0" + var19Lifetime1Lifetime2;
               }
-              SetSelfDestructPrepareToggleCooldown.a(var15 + (var13 + 3), -1, var14 + (var15 + 21), var19Lifetime1Lifetime2, var16, 16737792, (byte) -109);
+              SetSelfDestructPrepareToggleCooldown.drawText(var15 + (var13 + 3), -1, var14 + (var15 + 21), var19Lifetime1Lifetime2, var16, 16737792, (byte) -109);
             }
           }
           stackIn_150_0 = var6;
@@ -2819,18 +2819,18 @@ final class GameSession {
                 }
                 if (var26Lifetime1 >= 0 &&
                   ShipTeamCondition.field_f.length > var26Lifetime1) {
-                  var48 = OpenGlRenderbuffer.a(var26Lifetime1, var27Lifetime1, true);
-                  SetSelfDestructPrepareToggleCooldown.a(var13 - (GameTextMetrics.getStringWidth(3, var48, 13879) >> 1), -1, var15 + (var11Lifetime1 + GetPointDefenceLaserProjectiles.getFontAscent(false, 2) + 2), var48, 4, 56035, (byte) -103);
+                  var48 = OpenGlRenderbuffer.getObjectiveHint(var26Lifetime1, var27Lifetime1, true);
+                  SetSelfDestructPrepareToggleCooldown.drawText(var13 - (GameTextMetrics.getStringWidth(3, var48, 13879) >> 1), -1, var15 + (var11Lifetime1 + GetPointDefenceLaserProjectiles.getFontAscent(false, 2) + 2), var48, 4, 56035, (byte) -103);
                   var29_ref_String = ShipTeamCondition.field_f[var26Lifetime1].toUpperCase();
                   var30 = -(GameTextMetrics.getStringWidth(1, var29_ref_String, 13879) >> 1) + var13;
                   var31 = var15 + var11Lifetime1 + 16;
-                  SetSelfDestructPrepareToggleCooldown.a(var30, 1, var31, var29_ref_String, 1, 16777215, (byte) -106);
+                  SetSelfDestructPrepareToggleCooldown.drawText(var30, 1, var31, var29_ref_String, 1, 16777215, (byte) -106);
                 }
                 var28 = SetSpinningBladeSpinupSpeed.field_o[var10].toUpperCase();
                 if (var9Lifetime1 >= var20) {
                   var28 = SetShipTeamActionFactory.field_d;
                 }
-                SetSelfDestructPrepareToggleCooldown.a(-(GameTextMetrics.getStringWidth(2, var28, 13879) >> 1) + var13, -1, var15 + (var16 - var11Lifetime1), var28, 2, 16777215, (byte) -101);
+                SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(2, var28, 13879) >> 1) + var13, -1, var15 + (var16 - var11Lifetime1), var28, 2, 16777215, (byte) -101);
                 var29 = var12 / var22 + 2;
                 var30Lifetime1 = 62;
                 if (var30Lifetime1 > var29) {
@@ -3021,7 +3021,7 @@ final class GameSession {
                   } else {
                     stackIn_174_5 = 13421772;
                   }
-                  SetSelfDestructPrepareToggleCooldown.a(stackIn_173_0, stackIn_173_1, stackIn_173_2, stackIn_173_3, stackIn_173_4, stackIn_174_5, (byte) -102);
+                  SetSelfDestructPrepareToggleCooldown.drawText(stackIn_173_0, stackIn_173_1, stackIn_173_2, stackIn_173_3, stackIn_173_4, stackIn_174_5, (byte) -102);
                 } else {
                   var51 = Integer.toString(var6 / 50);
                   var34_ref = var51;
@@ -3062,7 +3062,7 @@ final class GameSession {
           var3 = var2.getIconId((byte) 85);
           PlayerActionFactory.a(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
           var4 = GetGrapplingHookSpringConstant.specialOrderLabels[this.pendingSpecialOrderId].toUpperCase();
-          SetSelfDestructPrepareToggleCooldown.a(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
+          SetSelfDestructPrepareToggleCooldown.drawText(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
         }
         if (param0 != 15097) {
           this.drawDebugOverlay(true);
@@ -3287,7 +3287,7 @@ final class GameSession {
                 if (var5 != null) {
                   var9 = ((String) (var5)).toUpperCase();
                   var7 = 2;
-                  SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var7, var9, param1 + 13878) / 2, 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var7) + 42, var9, var7, var6, (byte) -84);
+                  SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var7, var9, param1 + 13878) / 2, 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var7) + 42, var9, var7, var6, (byte) -84);
                 }
                 return;
               }
@@ -3298,7 +3298,7 @@ final class GameSession {
           if (var5_ref != null) {
             var10 = var5_ref.toUpperCase();
             var7Lifetime1 = 2;
-            SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var7Lifetime1, var10, param1 + 13878) / 2, 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var7Lifetime1) + 42, var10, var7Lifetime1, var6, (byte) -84);
+            SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var7Lifetime1, var10, param1 + 13878) / 2, 1, GetPointDefenceLaserProjectiles.getFontAscent(false, var7Lifetime1) + 42, var10, var7Lifetime1, var6, (byte) -84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3429,7 +3429,7 @@ final class GameSession {
             if (param0.world.hasHomingProjectileTargeting(var22.getId(false), param1 - 16731016)) {
               var4 = SpawnChoiceFactory.field_a.toUpperCase();
               if (SetMinimapWidth.field_o % 20 > 10) {
-                SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(2, var4, 13879) >> 1), -1, -50 + MissionVariableFactory.field_a, var4, 2, 16711680, (byte) -122);
+                SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(2, var4, 13879) >> 1), -1, -50 + MissionVariableFactory.field_a, var4, 2, 16711680, (byte) -122);
               }
             }
           }
@@ -4002,7 +4002,7 @@ final class GameSession {
                   var29 = 65280;
                 }
                 var30 = var26 + " x " + SetSpinningBladeSpinupSpeed.field_o[var25];
-                SetSelfDestructPrepareToggleCooldown.a(var19 + var21 + 4, 1, var20 + var23, var30, 3, var29, (byte) -99);
+                SetSelfDestructPrepareToggleCooldown.drawText(var19 + var21 + 4, 1, var20 + var23, var30, 3, var29, (byte) -99);
                 var23 = var23 + GetPointDefenceLaserProjectiles.getFontAscent(param3, 3);
               }
             }
@@ -4093,7 +4093,7 @@ final class GameSession {
           if (GetPointDefenceLaserProjectiles.a(1 << var2, 11284)) {
             var3_int = 8;
             var4 = 4;
-            GetMachineGunPulsetime.a(16711680, -102, var3_int, 8, var4, var2 * var3_int + 300);
+            GetMachineGunPulsetime.fillRectangle(16711680, -102, var3_int, 8, var4, var2 * var3_int + 300);
             UiToggleButtonRenderer.drawRectangle(119, 300 + var2 * var3_int, var4, 8, 16777215, var3_int);
           }
         }
@@ -4125,19 +4125,19 @@ final class GameSession {
           var20 = SetHealthBarHeight.field_o.toUpperCase();
           var3Lifetime1 = var20;
           var3Lifetime1Lifetime1 = var20;
-          SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var20, 13879) / 2, 1, 180, var20, 2, 16711935, (byte) -126);
+          SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var20, 13879) / 2, 1, 180, var20, 2, 16711935, (byte) -126);
           if (null == FlipTextureOperation.field_l.dataSender) {
             var3Lifetime1Lifetime2 = GetPhasedEnergyBeamPulseFadetime.field_o.toUpperCase();
           } else {
             var3Lifetime1Lifetime2 = SetWeaponParticleSpeedDownshift.field_o.toUpperCase();
           }
-          SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var3Lifetime1Lifetime2, 13879) / 2, 1, 200, var3Lifetime1Lifetime2, 2, 16711935, (byte) -127);
+          SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var3Lifetime1Lifetime2, 13879) / 2, 1, 200, var3Lifetime1Lifetime2, 2, 16711935, (byte) -127);
         }
         if (this.state.getVisibleWorld((byte) 54).getDebug((byte) -77) &&
           DeveloperAccess.hasDeveloperAccess(2)) {
           var21 = "DEBUG MODE";
           var2_ref_String = var21;
-          SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var21, 13879) / 2, -1, 100, var2_ref_String, 2, 16777215, (byte) -105);
+          SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var21, 13879) / 2, -1, 100, var2_ref_String, 2, 16777215, (byte) -105);
           for (var3_intLifetime1 = 0; SetFogOfWarSensorRange.field_o.length > var3_intLifetime1; var3_intLifetime1++) {
             var4Lifetime2 = SetFogOfWarSensorRange.field_o[var3_intLifetime1][0];
             var5 = SetFogOfWarSensorRange.field_o[var3_intLifetime1][-1 + SetFogOfWarSensorRange.field_o[var3_intLifetime1].length];
@@ -4230,9 +4230,9 @@ final class GameSession {
         }
         if (DeveloperAccess.hasDeveloperAccess(2) &&
           SetMachineGunEnergyUsed.field_o[12]) {
-          GetMachineGunPulsetime.a(1118481, -88, PartitionZoneFactory.field_a, 0, 200, 0);
+          GetMachineGunPulsetime.fillRectangle(1118481, -88, PartitionZoneFactory.field_a, 0, 200, 0);
           var3Lifetime3 = "Help:<br>F1 for gfx2, F2 for gfx1, F3 to rebuild toolkit, F4 for java toolkit<br>Alt 0-9, and Alt&Shift 0-9 to toggle debug flags.<br>Alt 0=Carousel, 1=Forces, 2=Hardpoints, 3=IDs, 4=Bounding boxes, 5=Teams and owners<br>Alt 6=Mission, 7=Connected players, 8=Spatial partitioning, 9=Spatial partitioning with ships<br>Alt Shift 0=FPS, 1=Mission generation, 2=AI<br><br>Hold 0 and press middle mouse to toggle debug mode<br><br>Press ` to toggle the console.<br>Type print_settings() to print all ingame settings to the java console<br>Type request_newest_blackbox_recording() to print the latest recording filename to the java console<br>Type load_blackbox_recording(id) to load the recording with that id<br>Press r to restart the recording playback<br><br>Useful console commands: set_lag(lag,deviation)";
-          GetMachineGunPulsetime.a(var3Lifetime3, 16777215, MissionVariableFactory.field_a, 10, -120, 10, -1, 0, OpenGlTexture.getCurrentFontAscent((byte) 118), PartitionZoneFactory.field_a, 0);
+          GetMachineGunPulsetime.drawParagraph(var3Lifetime3, 16777215, MissionVariableFactory.field_a, 10, -120, 10, -1, 0, OpenGlTexture.getCurrentFontAscent((byte) 118), PartitionZoneFactory.field_a, 0);
         }
         return;
     }
@@ -4774,7 +4774,7 @@ final class GameSession {
               var8 = SetReverbGain.a(OpenGlDisplayLists.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
               var9 = 128 + (TextureLineShape.sinAngle(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
               var10 = var9 << 8 | 16711680 | var9;
-              SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(1, var8, 13879) / 2, 1, GetLaserAimarc.field_q / 2, var8, 1, var10, (byte) -92);
+              SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(1, var8, 13879) / 2, 1, GetLaserAimarc.field_q / 2, var8, 1, var10, (byte) -92);
             }
           }
           if (param0 != 1) {
@@ -5153,7 +5153,7 @@ final class GameSession {
             var7.draw(var4, var5, 2, 1157627903, 1);
           }
           var8 = SetWeaponProjectileSpeedMultiply.field_o;
-          SetSelfDestructPrepareToggleCooldown.a(var4 + (var7.getWidth() / 2 - GameTextMetrics.getStringWidth(var6, var8, param0 + 13920) / 2), 1, var7.getHeight() / 2 + var5 + UsernameAvailabilityValidator.getFontAscent(true, var6) / 2, var8, var6, 16777215, (byte) -86);
+          SetSelfDestructPrepareToggleCooldown.drawText(var4 + (var7.getWidth() / 2 - GameTextMetrics.getStringWidth(var6, var8, param0 + 13920) / 2), 1, var7.getHeight() / 2 + var5 + UsernameAvailabilityValidator.getFontAscent(true, var6) / 2, var8, var6, 16777215, (byte) -86);
         }
         if (param0 != -41) {
           this.field_U = -69;
@@ -5854,9 +5854,9 @@ final class GameSession {
               }
             }
             if (var26 != -1) {
-              GetMachineGunPulsetime.a(var26, -47, 2 + var20Lifetime1, var23 - (var21Lifetime1 + 1), 2 + var21Lifetime1, -1 + var22);
+              GetMachineGunPulsetime.fillRectangle(var26, -47, 2 + var20Lifetime1, var23 - (var21Lifetime1 + 1), 2 + var21Lifetime1, -1 + var22);
             }
-            GetMachineGunPulsetime.a(1, -108, var20Lifetime1, var23 - var21Lifetime1, var21Lifetime1, var22);
+            GetMachineGunPulsetime.fillRectangle(1, -108, var20Lifetime1, var23 - var21Lifetime1, var21Lifetime1, var22);
             if (var15 > 0) {
               var27 = 2;
               var28 = 6;
@@ -6590,7 +6590,7 @@ final class GameSession {
                 var22Lifetime1 = 0;
                 if (this.blueprintOverwritePending) {
                   var23 = BlueprintEditorText.overwriteConfirmationText;
-                  SetSelfDestructPrepareToggleCooldown.a(var18, 1, -GetPointDefenceLaserProjectiles.getFontAscent(false, 3) + (var19 + 4), var23, 3, 16777215, (byte) -117);
+                  SetSelfDestructPrepareToggleCooldown.drawText(var18, 1, -GetPointDefenceLaserProjectiles.getFontAscent(false, 3) + (var19 + 4), var23, 3, 16777215, (byte) -117);
                 }
                 var21Lifetime1 = 0;
               }
@@ -6684,7 +6684,7 @@ final class GameSession {
                 var32Lifetime2 = 11;
                 if (var21Lifetime1 == 0) {
                   if (var26 == 0) {
-                    GetMachineGunPulsetime.a(1907488, -55, var16 + 3, -2 + var19, 4 + var17, -2 + var18);
+                    GetMachineGunPulsetime.fillRectangle(1907488, -55, var16 + 3, -2 + var19, 4 + var17, -2 + var18);
                   }
                   if (OpenGlTexture1D.field_i) {
                     var33Lifetime1 = -65536;
@@ -6711,7 +6711,7 @@ final class GameSession {
                     }
                   }
                   if (var26 == 0) {
-                    GetMachineGunPulsetime.a(0, -59, -1 + var16, var19 - (-var17 + var32Lifetime2), var32Lifetime2, var18);
+                    GetMachineGunPulsetime.fillRectangle(0, -59, -1 + var16, var19 - (-var17 + var32Lifetime2), var32Lifetime2, var18);
                   }
                   if (var25 != 0 &&
                     var15.specialOrderId == 12) {
@@ -6736,12 +6736,12 @@ final class GameSession {
                 if (var30Lifetime1 < 255 &&
                   var26 == 0) {
                   var37_int = var16 * var30Lifetime1 >> 8;
-                  GetMachineGunPulsetime.a(2059520, -68, var37_int, var17 + (var19 + 4), 4, var18);
+                  GetMachineGunPulsetime.fillRectangle(2059520, -68, var37_int, var17 + (var19 + 4), 4, var18);
                 }
                 if (!var41.hidesReadyCount((byte) -119)) {
                   var42 = Integer.toString(var15.nonPositiveStateCount);
                   var38 = 0;
-                  SetSelfDestructPrepareToggleCooldown.a(-2 + (-GameTextMetrics.getStringWidth(var38, var42, 13879) + var16) + var18, -1, var19 + (var17 - 2), var42, var38, 16776960, (byte) -88);
+                  SetSelfDestructPrepareToggleCooldown.drawText(-2 + (-GameTextMetrics.getStringWidth(var38, var42, 13879) + var16) + var18, -1, var19 + (var17 - 2), var42, var38, 16776960, (byte) -88);
                 }
                 var37 = Integer.toString(var11 + 1);
                 if (var27 != -1) {
@@ -6755,7 +6755,7 @@ final class GameSession {
                 if (var26 == 0) {
                   UiToggleButtonRenderer.drawRectangle(125, 1 + var18, var32Lifetime2, -var32Lifetime2 + var19 + var17, 7698040, GameTextMetrics.getStringWidth(var39, var37, 13879) + 3);
                 }
-                SetSelfDestructPrepareToggleCooldown.a(3 + var18, 1, var17 + (var19 - 2), var37, var39, var38Lifetime1, (byte) -81);
+                SetSelfDestructPrepareToggleCooldown.drawText(3 + var18, 1, var17 + (var19 - 2), var37, var39, var38Lifetime1, (byte) -81);
               }
               if (var22Lifetime1 != 0) {
                 var11++;
@@ -6824,7 +6824,7 @@ final class GameSession {
             var21 = -(var19 / 2) + (param1 / 2 + param6) + (var15Lifetime1 * param1 + param5);
             var22 = var14_intLifetime1 * param2 + param8 + param11 + var20 + (param6 + 2);
             var14_intLifetime1Lifetime1 = 0;
-            SetSelfDestructPrepareToggleCooldown.a(var21, -1, var22, var18, 4, 54236, (byte) -116);
+            SetSelfDestructPrepareToggleCooldown.drawText(var21, -1, var22, var18, 4, 54236, (byte) -116);
             var17Lifetime1 = 0;
             for (var23 = 0; param10[var16].length > var23; var23++) {
               var24 = param10[var16][var23];
@@ -7117,7 +7117,7 @@ final class GameSession {
             if (null != AdjustVariableActionFactory.field_a) {
               var5 = AdjustVariableActionFactory.field_a.y;
             }
-            SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(var3_int, var4_ref_String, 13879) >> 1), 1, -OpenGlTexture.getCurrentFontAscent((byte) 118) + var5, var4_ref_String, var3_int, 16777215, (byte) -87);
+            SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - (GameTextMetrics.getStringWidth(var3_int, var4_ref_String, 13879) >> 1), 1, -OpenGlTexture.getCurrentFontAscent((byte) 118) + var5, var4_ref_String, var3_int, 16777215, (byte) -87);
           }
           var4 = this.state.getVisibleWorld((byte) 82).getObjectiveType(false);
           this.drawMissionStatusPanel((byte) -117, var4);
@@ -7161,7 +7161,7 @@ final class GameSession {
                 var10_int = var12_int;
               }
             }
-            SetSelfDestructPrepareToggleCooldown.a(var9, 1, var10_int, var7Lifetime1, var3_int, 112076, (byte) -108);
+            SetSelfDestructPrepareToggleCooldown.drawText(var9, 1, var10_int, var7Lifetime1, var3_int, 112076, (byte) -108);
             var11Lifetime2 = -1;
             if (0 <= this.localPlayerIndex) {
               var11Lifetime2 = param0.getPlayer(this.localPlayerIndex, (byte) 59).selectedTeam;
@@ -7242,7 +7242,7 @@ final class GameSession {
             var16 = GameTextMetrics.getStringWidth(var13Lifetime1Lifetime1, var10, 13879) + 2 * var15;
             var17Lifetime1 = 2 * var14Lifetime1 + var15;
             CachedArchiveProvider.a(200, false, -(var16 / 2) + SetMassDriverReload.field_p, -(var17Lifetime1 / 2) + GetLaserAimarc.field_q + (GetPointDefenceLaserProjectiles.getFontAscent(false, var3_int) + var14Lifetime1 / 2 + 8) / 2, var17Lifetime1, var16, 1);
-            SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var13Lifetime1Lifetime1, var10, 13879) / 2, -1, var14Lifetime1 / 2 + GetLaserAimarc.field_q, var10, var13Lifetime1Lifetime1, var11Lifetime1Lifetime1, (byte) -102);
+            SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var13Lifetime1Lifetime1, var10, 13879) / 2, -1, var14Lifetime1 / 2 + GetLaserAimarc.field_q, var10, var13Lifetime1Lifetime1, var11Lifetime1Lifetime1, (byte) -102);
             var25 = Integer.toString(var24.getPhaseChangeCountdown((byte) -127) / Particle.field_l);
             var18 = var25;
             var18 = var25;
@@ -7251,7 +7251,7 @@ final class GameSession {
               var18 = "0" + var25;
             }
             var26 = SetReverbGain.a(GetMaxShipSize.field_p.toUpperCase(), new String[]{"<col=fc6701>" + var18 + "</col>"}, 77);
-            SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var3_int, var26, 13879) / 2, -1, 8 + var14Lifetime1 / 2 + (GetLaserAimarc.field_q + GetPointDefenceLaserProjectiles.getFontAscent(false, var3_int)), var26, var3_int, 16777215, (byte) -88);
+            SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(var3_int, var26, 13879) / 2, -1, 8 + var14Lifetime1 / 2 + (GetLaserAimarc.field_q + GetPointDefenceLaserProjectiles.getFontAscent(false, var3_int)), var26, var3_int, 16777215, (byte) -88);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8150,7 +8150,7 @@ final class GameSession {
               var15 = var38.target;
               if (var15 instanceof Ship) {
                 var44 = (Ship) (var15);
-                var17_ref_String = GetSniperCannonAimarc.a((byte) -87, param1, var44) + ":";
+                var17_ref_String = GetSniperCannonAimarc.formatShipObjectiveLabel((byte) -87, param1, var44) + ":";
                 var18_intLifetime1 = var12 + (var11 << 1) + GameTextMetrics.getStringWidth(var9, var17_ref_String, 13879);
                 if (var8 < var18_intLifetime1) {
                   var8 = var18_intLifetime1;
@@ -8159,7 +8159,7 @@ final class GameSession {
               }
             }
           }
-          GetMachineGunPulsetime.a(1118481, -115, var8, var7, var5 + 1, -var8 + (var11 + var6));
+          GetMachineGunPulsetime.fillRectangle(1118481, -115, var8, var7, var5 + 1, -var8 + (var11 + var6));
           UiToggleButtonRenderer.drawRectangle(107, -var8 + var6 + var11, var5 + 1, var7, 8947848, var8);
           if (var4 != null &&
             var4.length > 0) {
@@ -8187,7 +8187,7 @@ final class GameSession {
                   var25 = TextureLineShape.sinAngle(128 * SetMinimapWidth.field_o, 96) >> 9;
                   var24 = TextureRectangleShape.blendColors((byte) 66, 16711680, var25, var24);
                 }
-                SetSelfDestructPrepareToggleCooldown.a(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
+                SetSelfDestructPrepareToggleCooldown.drawText(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
                 var10 = var10 + (var21 - 1);
               }
             }
@@ -8200,7 +8200,7 @@ final class GameSession {
               var16 = var43.target;
               if (var16 instanceof Ship) {
                 var45 = (Ship) (var16);
-                var18 = GetSniperCannonAimarc.a((byte) -38, param1, var45) + ":";
+                var18 = GetSniperCannonAimarc.formatShipObjectiveLabel((byte) -38, param1, var45) + ":";
                 var19 = var45.getHealthProgress(0);
                 var20Lifetime2 = AlphaContainer.getTeamColor(false, var45.getTeam((byte) 66), 13894143);
                 var21Lifetime1 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121);
@@ -8298,7 +8298,7 @@ final class GameSession {
             var11 = var3.toUpperCase();
             var3Lifetime3 = var11;
             var3Lifetime4 = var11;
-            SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var11, 13879) / 2, -1, 90, var11, 2, 16711680, (byte) -87);
+            SetSelfDestructPrepareToggleCooldown.drawText(SetMassDriverReload.field_p - GameTextMetrics.getStringWidth(2, var11, 13879) / 2, -1, 90, var11, 2, 16711680, (byte) -87);
           }
           var4Lifetime1 = this.getHeldActionHotkey(30);
           if (param0 < 65) {
@@ -8506,7 +8506,7 @@ final class GameSession {
         if (!(param2 < ThrusterBehaviour.field_a.length)) {
           return;
         }
-        String var6 = OpenGlRenderbuffer.a(param2, param3, true);
+        String var6 = OpenGlRenderbuffer.getObjectiveHint(param2, param3, true);
         if (this.field_x) {
           var6 = SetPointDefenceLaserProjectileInterceptDamage.field_o;
         }
@@ -8527,9 +8527,9 @@ final class GameSession {
               var8 = (var12 - var8) * var13 / 255 + var8;
             }
           }
-          SetSelfDestructPrepareToggleCooldown.a(var7, var10, var8, var6, 4, var9, (byte) -118);
+          SetSelfDestructPrepareToggleCooldown.drawText(var7, var10, var8, var6, 4, var9, (byte) -118);
         } else {
-          SetSelfDestructPrepareToggleCooldown.a(var7, var10, var8, var6, 4, var9, (byte) -98);
+          SetSelfDestructPrepareToggleCooldown.drawText(var7, var10, var8, var6, 4, var9, (byte) -98);
         }
     }
 

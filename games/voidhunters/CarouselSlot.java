@@ -198,10 +198,10 @@ class CarouselSlot implements DiffableState {
           CarouselSlot.reportStateArrayDifferences(var3.players, 1, this.players, false, 5547);
           if (SetCountermeasureLauncherAimspeed.a(var3.players, false, 1, this.players, 126)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "CarouselPlayerInfo[] players has changed. ");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselPlayerInfo[] players has changed. ");
           }
           if (var4 != 0) {
-            GetSniperCannonAimarc.a(-6940, "This instance of CarouselSlot has changed");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "This instance of CarouselSlot has changed");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

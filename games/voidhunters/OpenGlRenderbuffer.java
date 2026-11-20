@@ -24,7 +24,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRectangleBorderUnclipped(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var6_int = 0;
@@ -126,7 +126,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         this.framebufferTarget = param2;
     }
 
-    final static String a(int param0, int param1, boolean param2) {
+    final static String getObjectiveHint(int param0, int param1, boolean param2) {
         int var3;
         String stackIn_22_0 = null;
         String stackIn_26_0 = null;

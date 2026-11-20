@@ -51,7 +51,7 @@ final class DirectionalLightingTextureOperation extends TextureOperation {
         this.initializeLightDirection(-32307);
         if (param0 >= -35) {
           int[] var3 = (int[]) null;
-          DirectionalLightingTextureOperation.a((int[]) null, 127, -20, (byte) 126, (int[]) null);
+          DirectionalLightingTextureOperation.sortIntKeysWithIntValues((int[]) null, 127, -20, (byte) 126, (int[]) null);
         }
     }
 
@@ -129,7 +129,7 @@ final class DirectionalLightingTextureOperation extends TextureOperation {
         return var18;
     }
 
-    final static void a(int[] param0, int param1, int param2, byte param3, int[] param4) {
+    final static void sortIntKeysWithIntValues(int[] param0, int param1, int param2, byte param3, int[] param4) {
         int var10 = 0;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -174,8 +174,8 @@ final class DirectionalLightingTextureOperation extends TextureOperation {
             param4[var6] = var7;
             param0[param2] = param0[var6];
             param0[var6] = var8;
-            DirectionalLightingTextureOperation.a(param0, param1, -1 + var6, (byte) -54, param4);
-            DirectionalLightingTextureOperation.a(param0, var6 + 1, param2, (byte) -119, param4);
+            DirectionalLightingTextureOperation.sortIntKeysWithIntValues(param0, param1, -1 + var6, (byte) -54, param4);
+            DirectionalLightingTextureOperation.sortIntKeysWithIntValues(param0, var6 + 1, param2, (byte) -119, param4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,10 +206,10 @@ final class DirectionalLightingTextureOperation extends TextureOperation {
         this.elevation = 3216;
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean usesMonochromeFont(byte param0, int param1) {
         if (param0 != -26) {
           int[] var3 = (int[]) null;
-          DirectionalLightingTextureOperation.a((int[]) null, -116, 50, (byte) -85, (int[]) null);
+          DirectionalLightingTextureOperation.sortIntKeysWithIntValues((int[]) null, -116, 50, (byte) -85, (int[]) null);
         }
         return true;
     }

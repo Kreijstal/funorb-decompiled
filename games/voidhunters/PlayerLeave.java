@@ -209,7 +209,7 @@ final class PlayerLeave implements DiffableState {
           var4 = 0;
           if (this.field_d != var3.field_d) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + this.field_d);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + this.field_d);
           }
           if (var4 != 0) {
             SetDebrisGrabbingRange.a((byte) -123, "This instance of PlayerLeave has changed");

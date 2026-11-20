@@ -5,7 +5,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
     static int field_o;
     static String field_p;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean passesPasswordContentChecks(String param0, String param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -76,7 +76,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
         return 62;
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void writeDateOfBirthPacket(int param0, int param1, int param2, int param3) {
         SetTorpedoAcceleration.field_p.position = 0;
         SetTorpedoAcceleration.field_p.writeByte(0, 12);
         SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), 332614536);

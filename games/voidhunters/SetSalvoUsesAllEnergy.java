@@ -7,7 +7,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
     static int[] textureYCoordinates;
     static int field_o;
 
-    final static int a(int param0, int param1, Random param2, boolean param3, int[] param4) {
+    final static int chooseExtremeIndex(int param0, int param1, Random param2, boolean param3, int[] param4) {
         int var10 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -92,7 +92,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawSocialOverlays(boolean param0, byte param1) {
         if (NebulaFieldFactory.field_a != null) {
           SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 17);
         }

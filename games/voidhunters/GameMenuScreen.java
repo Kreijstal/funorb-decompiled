@@ -33,10 +33,10 @@ final class GameMenuScreen {
         }
         int var8 = 0;
         if (var7 >= 16) {
-          var8 = -(SetRepairModeRadius.f(255) * 4) + 1020;
+          var8 = -(SetRepairModeRadius.getMenuTransitionAlpha(255) * 4) + 1020;
         } else {
           if (var7 > 0) {
-            var8 = 4 * SetRepairModeRadius.f(param1 ^ -196);
+            var8 = 4 * SetRepairModeRadius.getMenuTransitionAlpha(param1 ^ -196);
           }
         }
         CachedArchiveProvider.a(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
@@ -263,7 +263,7 @@ final class GameMenuScreen {
           var8 = var8 + var29;
         }
         if (var6 == 22 &&
-          SetReverbFeedback.b(true)) {
+          SetReverbFeedback.areAllHintsComplete(true)) {
           var8 = SetBombletSprayProjectileOndamageParticles.field_o.toUpperCase();
         }
         var9 = 0;
@@ -295,11 +295,11 @@ final class GameMenuScreen {
         if (var4 < 16) {
           if (0 < var4) {
             var15_float = (float)(var7 * 2 - param0) * 0.800000011920929f;
-            var14 = (int)(var15_float * (float)SetRepairModeRadius.f(255));
+            var14 = (int)(var15_float * (float)SetRepairModeRadius.getMenuTransitionAlpha(255));
           }
         } else {
           var15_float = (float)(param0 + var7) * 0.800000011920929f;
-          var14 = (int)(var15_float * (float)(-SetRepairModeRadius.f(255) + 255));
+          var14 = (int)(var15_float * (float)(-SetRepairModeRadius.getMenuTransitionAlpha(255) + 255));
         }
         var13 = var13 + var14;
         var12 = var12 + var14;
@@ -363,7 +363,7 @@ final class GameMenuScreen {
           if (var9 != 0) {
             var25 = 7829367;
           }
-          SetSelfDestructPrepareToggleCooldown.a(var17, -1, -12 + var18 / 2 + var15 + UsernameAvailabilityValidator.getFontAscent(true, var5), var8, var5, var25, (byte) -88);
+          SetSelfDestructPrepareToggleCooldown.drawText(var17, -1, -12 + var18 / 2 + var15 + UsernameAvailabilityValidator.getFontAscent(true, var5), var8, var5, var25, (byte) -88);
         }
     }
 
@@ -427,10 +427,10 @@ final class GameMenuScreen {
         var3 = SetVariableAction.field_b;
         var4 = 0;
         if (var3 >= 16) {
-          var4 = (-SetRepairModeRadius.f(255) + 255) * 4;
+          var4 = (-SetRepairModeRadius.getMenuTransitionAlpha(255) + 255) * 4;
         } else {
           if (0 < var3) {
-            var4 = SetRepairModeRadius.f(255) * 4;
+            var4 = SetRepairModeRadius.getMenuTransitionAlpha(255) * 4;
           }
         }
         var5 = var4 + (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
@@ -458,7 +458,7 @@ final class GameMenuScreen {
           var21 = this.formatShortcutHint("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
           SetAutoaim.drawParagraph(-1, var13, var15, GetPointDefenceLaserProjectiles.getFontAscent(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
-        SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.helpPageIndex, -98), 1, 16738305, (byte) -96);
+        SetSelfDestructPrepareToggleCooldown.drawText(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.formatHelpPageNumber(SetFps.helpPageIndex, -98), 1, 16738305, (byte) -96);
     }
 
     private final void handleItemInput(int param0, boolean param1, int param2) {
@@ -631,7 +631,7 @@ final class GameMenuScreen {
                                                   } else {
                                                     if (var10_int == 22) {
                                                       if (this.inputState.isActivationRequested((byte) -119)) {
-                                                        stackIn_193_0 = (!SetReverbFeedback.b(true)) ? 0 : 1;
+                                                        stackIn_193_0 = (!SetReverbFeedback.areAllHintsComplete(true)) ? 0 : 1;
                                                         var10_int = stackIn_193_0;
                                                         GrayscaleTextureOperation.a(var10_int != 0, (byte) -90);
                                                       }
@@ -932,10 +932,10 @@ final class GameMenuScreen {
         var3Lifetime1 = 0;
         if (var2Lifetime2 < 16) {
           if (var2Lifetime2 > 0) {
-            var3Lifetime1 = SetRepairModeRadius.f(255) * 4;
+            var3Lifetime1 = SetRepairModeRadius.getMenuTransitionAlpha(255) * 4;
           }
         } else {
-          var3Lifetime1 = 4 * (-SetRepairModeRadius.f(param0 ^ 190) + 255);
+          var3Lifetime1 = 4 * (-SetRepairModeRadius.getMenuTransitionAlpha(param0 ^ 190) + 255);
         }
         var4Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
         if (this.menuId != 0) {
@@ -943,7 +943,7 @@ final class GameMenuScreen {
             PasswordValidator.field_m[this.menuId] != null) {
             var5 = PasswordValidator.field_m[this.menuId];
             var6Lifetime1 = 1;
-            SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (GameTextMetrics.getStringWidth(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
+            SetSelfDestructPrepareToggleCooldown.drawText(GetBombletSprayEnergyUsed.field_p.width / 2 - (GameTextMetrics.getStringWidth(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
           }
         } else {
           PlayerActionFactory.a(137, var3Lifetime1 + GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4Lifetime1);

@@ -105,7 +105,7 @@ final class World implements DiffableState, CompactGameState {
         Projectile[] var7 = null;
         var6 = VoidHunters.field_G;
         try {
-          this.ships = (Ship[]) (GetAutoAfkTimeout.a(20, 1, this.ships, MissionGenerationData.field_a, 8, param0));
+          this.ships = (Ship[]) (GetAutoAfkTimeout.readCompactStateArray(20, 1, this.ships, MissionGenerationData.field_a, 8, param0));
           this.projectiles = new IntrusiveDeque();
           var7 = (Projectile[]) (SetAutoDetail.readStateArrayByMode(10, TextureCombineOperation.field_b, param0, 1, -88, (SerializableGameState[]) null));
           var3 = var7;
@@ -114,7 +114,7 @@ final class World implements DiffableState, CompactGameState {
               this.projectiles.addLast(param1 ^ -10290, var7[var4_int]);
             }
           }
-          this.debris = (Debris[]) (GetAutoAfkTimeout.a(param1 ^ -11, 1, this.debris, UiScrollBar.field_z, 10, param0));
+          this.debris = (Debris[]) (GetAutoAfkTimeout.readCompactStateArray(param1 ^ -11, 1, this.debris, UiScrollBar.field_z, 10, param0));
           if (LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             if (this.asteroidField == null) {
               this.asteroidField = new AsteroidField();
@@ -130,7 +130,7 @@ final class World implements DiffableState, CompactGameState {
               this.spawnPoints.addLast(-10258, var4[var5]);
             }
           }
-          this.grapplingHooks = (GrapplingHook[]) (GetAutoAfkTimeout.a(-14, 1, this.grapplingHooks, TickCondition.field_c, 8, param0));
+          this.grapplingHooks = (GrapplingHook[]) (GetAutoAfkTimeout.readCompactStateArray(-14, 1, this.grapplingHooks, TickCondition.field_c, 8, param0));
           this.respawntimers = SetVariableActionFactory.readPackedIntArray((byte) 37, this.respawntimers, param0, 4);
           this.debug = LegacyOpenGlSpecularEffect.readBoolean(false, param0);
           this.objectiveType = param0.readBits(0, param1);
@@ -331,14 +331,14 @@ final class World implements DiffableState, CompactGameState {
                 if ((-1 == var13_int ||
                   var13_int == 257) && (var10_ref_uwa.deltaX != 0 ||
                   var10_ref_uwa.deltaY != 0)) {
-                  stackIn_26_0 = (!SetUseFilledPolygons.a(param2, var10_ref_uwa.y - var10_ref_uwa.deltaY, -var10_ref_uwa.deltaX + var10_ref_uwa.x, var10_ref_uwa.radius, -104, param1)) ? 0 : 1;
+                  stackIn_26_0 = (!SetUseFilledPolygons.isPointInCircle(param2, var10_ref_uwa.y - var10_ref_uwa.deltaY, -var10_ref_uwa.deltaX + var10_ref_uwa.x, var10_ref_uwa.radius, -104, param1)) ? 0 : 1;
                   var14_int = stackIn_26_0;
-                  stackIn_29_0 = (!SetUseFilledPolygons.a(param2, var10_ref_uwa.y, var10_ref_uwa.x, var10_ref_uwa.radius, -98, param1)) ? 0 : 1;
+                  stackIn_29_0 = (!SetUseFilledPolygons.isPointInCircle(param2, var10_ref_uwa.y, var10_ref_uwa.x, var10_ref_uwa.radius, -98, param1)) ? 0 : 1;
                   var15 = stackIn_29_0;
                   if ((var15 ^ var14_int) == 0) {
-                    stackIn_34_0 = (!SetUseFilledPolygons.a(param5, -var10_ref_uwa.deltaY + var10_ref_uwa.y, var10_ref_uwa.x - var10_ref_uwa.deltaX, var10_ref_uwa.radius, 56, param4)) ? 0 : 1;
+                    stackIn_34_0 = (!SetUseFilledPolygons.isPointInCircle(param5, -var10_ref_uwa.deltaY + var10_ref_uwa.y, var10_ref_uwa.x - var10_ref_uwa.deltaX, var10_ref_uwa.radius, 56, param4)) ? 0 : 1;
                     var14_int = stackIn_34_0;
-                    stackIn_37_0 = (!SetUseFilledPolygons.a(param5, var10_ref_uwa.y, var10_ref_uwa.x, var10_ref_uwa.radius, 68, param4)) ? 0 : 1;
+                    stackIn_37_0 = (!SetUseFilledPolygons.isPointInCircle(param5, var10_ref_uwa.y, var10_ref_uwa.x, var10_ref_uwa.radius, 68, param4)) ? 0 : 1;
                     var15 = stackIn_37_0;
                     if ((var14_int ^ var15) != 0) {
                       var13_int = 0;
@@ -361,7 +361,7 @@ final class World implements DiffableState, CompactGameState {
                   var8 > var13_int) {
                   var14_intLifetime2 = 0;
                   if (var10_ref_uwa.arcHalfAngle == -1) {
-                    stackIn_74_0 = (!SetUseFilledPolygons.a(param2, var10_ref_uwa.y, var10_ref_uwa.x, var10_ref_uwa.radius, -98, param1)) ? 1 : 0;
+                    stackIn_74_0 = (!SetUseFilledPolygons.isPointInCircle(param2, var10_ref_uwa.y, var10_ref_uwa.x, var10_ref_uwa.radius, -98, param1)) ? 1 : 0;
                     var14_intLifetime2 = stackIn_74_0;
                   } else {
                     var15Lifetime2 = (param0.dx * var13_int >> 8) + param1;
@@ -907,13 +907,13 @@ final class World implements DiffableState, CompactGameState {
         try {
           var5 = (World) (other);
           CarouselSlot.reportStateArrayDifferences(var5.ships, 1, this.ships, false, 5547);
-          SetUseFilledPolygons.a(1, this.projectiles, 13, false, var5.projectiles);
+          SetUseFilledPolygons.reportDequeDifferences(1, this.projectiles, 13, false, var5.projectiles);
           CarouselSlot.reportStateArrayDifferences(var5.debris, 1, this.debris, false, 5547);
           if (this.asteroidField != null &&
             var5.asteroidField != null) {
             this.asteroidField.reportDifferences(var5.asteroidField, -46);
           }
-          SetUseFilledPolygons.a(1, this.spawnPoints, 13, false, var5.spawnPoints);
+          SetUseFilledPolygons.reportDequeDifferences(1, this.spawnPoints, 13, false, var5.spawnPoints);
           CarouselSlot.reportStateArrayDifferences(var5.grapplingHooks, 1, this.grapplingHooks, false, 5547);
           if (null != this.missionControl &&
             var5.missionControl != null) {
@@ -5523,7 +5523,7 @@ final class World implements DiffableState, CompactGameState {
     }
 
     private final void removeEscapePodAtIndex(byte param0, int param1) {
-        this.escapePods = (EscapePod[]) (GetSalvoUsesAllEnergy.a(ChatMessage.field_g, param1, param0 ^ 15642, this.escapePods));
+        this.escapePods = (EscapePod[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(ChatMessage.field_g, param1, param0 ^ 15642, this.escapePods));
         if (param0 != 41) {
           this.countShips(88);
         }
@@ -6074,7 +6074,7 @@ final class World implements DiffableState, CompactGameState {
     }
 
     private final void removeResourceNodeAtIndex(byte param0, int param1) {
-        this.resNodes = (ResourceNode[]) (GetSalvoUsesAllEnergy.a(SetShipDirectionArrow.field_p, param1, 15667, this.resNodes));
+        this.resNodes = (ResourceNode[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(SetShipDirectionArrow.field_p, param1, 15667, this.resNodes));
         if (param0 != 110) {
           this.spawnPoints = (IntrusiveDeque) null;
         }
@@ -6777,7 +6777,7 @@ final class World implements DiffableState, CompactGameState {
     }
 
     private final void removeMapZoneAtIndex(int param0, byte param1) {
-        this.mapZones = (MapZone[]) (GetSalvoUsesAllEnergy.a(ArchiveRequestQueue.field_e, param0, 15667, this.mapZones));
+        this.mapZones = (MapZone[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(ArchiveRequestQueue.field_e, param0, 15667, this.mapZones));
         if (param1 != -90) {
           this.processArmageddon(false, (MissionState) null, (byte) 94, (Camera2D) null);
         }
@@ -8232,7 +8232,7 @@ final class World implements DiffableState, CompactGameState {
                       var16_ref_String = Integer.toString((var15_int - 1) / Particle.field_l);
                       var17 = param3.worldToScreenX(var12.getX(false), (byte) 119);
                       var18 = param3.worldToScreenY(true, -8192 + var12.getBoundingbox((byte) -70)[2]);
-                      SetSelfDestructPrepareToggleCooldown.a(-(GameTextMetrics.getStringWidth(1, var16_ref_String, 13879) >> 1) + var17, -1, var18, var16_ref_String, 1, 16541441, (byte) -94);
+                      SetSelfDestructPrepareToggleCooldown.drawText(-(GameTextMetrics.getStringWidth(1, var16_ref_String, 13879) >> 1) + var17, -1, var18, var16_ref_String, 1, 16541441, (byte) -94);
                     }
                   }
                   if (!GetPointDefenceLaserProjectiles.a(8, 11284)) {

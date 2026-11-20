@@ -63,7 +63,7 @@ final class SetAiFiringRangeUpshift extends ConsoleCommand {
         ToolkitSprite var21 = null;
         int var7 = -51 % ((-20 - param3) / 43);
         if (!OpenGlTexture1D.field_i) {
-          GetMachineGunPulsetime.a(3377322, -77, param1, param0, param2, param6);
+          GetMachineGunPulsetime.fillRectangle(3377322, -77, param1, param0, param2, param6);
           UiToggleButtonRenderer.drawRectangle(116, param6, param2, param0, 16777215, param1);
         } else {
           var8 = OpenGlVertexNormal.field_d[param4];

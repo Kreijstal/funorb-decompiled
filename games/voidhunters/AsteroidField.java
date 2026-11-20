@@ -2055,7 +2055,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           if (param1 != 32) {
             field_b = (String) null;
           }
-          this.asteroids = (Asteroid[]) (GetAutoAfkTimeout.a(param1 ^ 35, 1, this.asteroids, OpenGlPbuffer.field_o, 10, param0));
+          this.asteroids = (Asteroid[]) (GetAutoAfkTimeout.readCompactStateArray(param1 ^ 35, 1, this.asteroids, OpenGlPbuffer.field_o, 10, param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

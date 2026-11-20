@@ -100,10 +100,10 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                     var18 = 0;
                     var13Lifetime1 = var18;
                     while (var9 > var18) {
-                      var12[var18] = ProjectileFactory.a(var10[var18], (byte) 99);
+                      var12[var18] = ProjectileFactory.resolveReflectionClass(var10[var18], (byte) 99);
                       var18++;
                     }
-                    var19.methodRequests[var5] = param0.lookupDeclaredMethod(var12, (byte) 95, ProjectileFactory.a(var21, (byte) 99), var22);
+                    var19.methodRequests[var5] = param0.lookupDeclaredMethod(var12, (byte) 95, ProjectileFactory.resolveReflectionClass(var21, (byte) 99), var22);
                     var19.serializedArguments[var5] = var23;
                   }
                 } else {
@@ -115,7 +115,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                   }
                   var19.operationTypes[var5] = var6_int;
                   var19.fieldValues[var5] = var9;
-                  var19.fieldRequests[var5] = param0.lookupDeclaredField(var16, ProjectileFactory.a(var17, (byte) 99), -6576);
+                  var19.fieldRequests[var5] = param0.lookupDeclaredField(var16, ProjectileFactory.resolveReflectionClass(var17, (byte) 99), -6576);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

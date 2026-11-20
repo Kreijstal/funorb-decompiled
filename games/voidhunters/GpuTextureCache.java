@@ -91,7 +91,7 @@ final class GpuTextureCache {
             this.cache.put(var11, (long)param1, (byte) -117);
             return var11;
           }
-          if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
+          if (!SoftwareGlyphMask.usesRgbTexturePixels(param0 ^ 2, (int) var5.field_c)) {
             var24 = this.textureProvider.generateArgbPixels(103, var6, var6, false, param1, 0.699999988079071f);
             stackIn_20_0 = this.toolkit;
             stackIn_20_1 = var6;
@@ -146,7 +146,7 @@ final class GpuTextureCache {
           this.cache.put(var17, (long)param1, (byte) -117);
           return var17;
         }
-        if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
+        if (!SoftwareGlyphMask.usesRgbTexturePixels(param0 ^ 2, (int) var5.field_c)) {
           var27 = this.textureProvider.generateArgbPixels(103, var6, var6, false, param1, 0.699999988079071f);
           stackIn_43_0 = this.toolkit;
           stackIn_43_1 = var6;

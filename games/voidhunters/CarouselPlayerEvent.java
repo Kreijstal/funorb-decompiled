@@ -115,13 +115,13 @@ class CarouselPlayerEvent extends CarouselEvent implements DiffableState {
             return;
           }
           if (this.playerId != var3.playerId) {
-            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.playerId + ", now=" + this.playerId);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int playerid has changed. before=" + var3.playerId + ", now=" + this.playerId);
             var4 = 1;
           }
           if (var4 == 0) {
             return;
           }
-          GetSniperCannonAimarc.a(-6940, "This instance of CarouselPlayerEvent has changed");
+          GetSniperCannonAimarc.printDebugMessage(-6940, "This instance of CarouselPlayerEvent has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

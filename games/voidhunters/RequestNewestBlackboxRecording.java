@@ -15,7 +15,7 @@ final class RequestNewestBlackboxRecording extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          MatchResultsFactory.b((byte) -66);
+          MatchResultsFactory.requestNewestBlackBoxRecording((byte) -66);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 30);

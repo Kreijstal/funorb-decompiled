@@ -8,14 +8,14 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void restoreCompletedHints(int param0) {
         if (TooltipDisplay.field_b != null) {
           TooltipDisplay.field_b.copyCompletedHintsTo(0, TutorialProgressState.completedHints);
           GetBoostersCooldown.savedHintCompletion = GetBots.copyBooleanArray(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
         }
         if (param0 >= -64) {
           Object[] var2 = (Object[]) null;
-          GetSalvoUsesAllEnergy.a((GameStateFactory) null, -6, 116, (Object[]) null);
+          GetSalvoUsesAllEnergy.removeStateArrayValue((GameStateFactory) null, -6, 116, (Object[]) null);
         }
     }
 
@@ -35,7 +35,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetSalvoUsesAllEnergy.a(-54);
+            GetSalvoUsesAllEnergy.restoreCompletedHints(-54);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(29, 74));
           return stackIn_3_0;
@@ -53,7 +53,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
         }
     }
 
-    final static Object[] a(GameStateFactory param0, int param1, int param2, Object[] param3) {
+    final static Object[] removeStateArrayValue(GameStateFactory param0, int param1, int param2, Object[] param3) {
         int var6 = 0;
         SerializableGameState[] var4 = null;
         RuntimeException var4_ref = null;

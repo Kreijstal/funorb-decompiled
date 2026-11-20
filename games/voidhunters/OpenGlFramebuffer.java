@@ -122,7 +122,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                               }
                             }
                           } else {
-                            GetMpSandboxEnemySpawnLimit.a(var4, (byte) 127);
+                            GetMpSandboxEnemySpawnLimit.attachPresetComponents(var4, (byte) 127);
                           }
                         }
                       }

@@ -36,7 +36,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
         AdminMessage var3 = new AdminMessage();
         var3.index = param1;
         var3.value = param0;
-        SetBuildViewAutozoomEndOnAction.a(0, var3, RequestNewestBlackboxRecording.field_p, 70);
+        SetBuildViewAutozoomEndOnAction.writeStatePacket(0, var3, RequestNewestBlackboxRecording.field_p, 70);
         if (param2 == -10923) {
           return;
         }

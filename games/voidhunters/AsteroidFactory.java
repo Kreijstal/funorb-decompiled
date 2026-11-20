@@ -67,7 +67,7 @@ final class AsteroidFactory implements GameStateFactory {
           GetMassDriverAimspeed.canvasMenuMode = param2;
           SetAngularForceDownshift.menuInitializationStarted = true;
           if (GetMassDriverAimspeed.canvasMenuMode == 0) {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
             var4 = var3_int + 3;
             ToolkitCanvasContext.menuLabels = new String[var4];
             GetMessageMax.menuActionIds = new int[var4];
@@ -86,7 +86,7 @@ final class AsteroidFactory implements GameStateFactory {
             GetMessageMax.menuActionIds[-1 + var4] = 1;
             CountermeasureLauncherWeaponDefinition.field_c[1] = 5;
           } else if (1 == GetMassDriverAimspeed.canvasMenuMode) {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
             var4 = 2 + var3_int;
             ToolkitCanvasContext.menuLabels = new String[var4];
             GetMessageMax.menuActionIds = new int[var4];
@@ -104,9 +104,9 @@ final class AsteroidFactory implements GameStateFactory {
           } else if (GetMassDriverAimspeed.canvasMenuMode != 2) {
             if (GetMassDriverAimspeed.canvasMenuMode == 3) {
               if (!SetTorpedoProjectiles.field_o.privilegedAccess) {
-                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, UiArrayContainer.field_t, ShipBlueprint.field_a);
+                var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, UiArrayContainer.field_t, ShipBlueprint.field_a);
               } else {
-                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, StripesTextureOperation.field_n, ShipBlueprint.field_a);
+                var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, StripesTextureOperation.field_n, ShipBlueprint.field_a);
               }
               var4 = 2 + var3_int;
               GetMessageMax.menuActionIds = new int[var4];
@@ -123,7 +123,7 @@ final class AsteroidFactory implements GameStateFactory {
               GetMessageMax.menuActionIds[var4 - 1] = 0;
               CountermeasureLauncherWeaponDefinition.field_c[0] = 5;
             } else if (GetMassDriverAimspeed.canvasMenuMode == 4) {
-              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, RenderResourceNode.field_m, ShipBlueprint.field_a);
+              var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, RenderResourceNode.field_m, ShipBlueprint.field_a);
               var4 = var3_int + 2;
               ToolkitCanvasContext.menuLabels = new String[var4];
               GetMessageMax.menuActionIds = new int[var4];
@@ -142,7 +142,7 @@ final class AsteroidFactory implements GameStateFactory {
               if (5 != GetMassDriverAimspeed.canvasMenuMode) {
                 throw new IllegalArgumentException();
               }
-              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 - 2, SetFighterRepairAmount.field_o, ShipBlueprint.field_a);
+              var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 - 2, SetFighterRepairAmount.field_o, ShipBlueprint.field_a);
               var4 = 3 + var3_int;
               ToolkitCanvasContext.menuLabels = new String[var4];
               GetMessageMax.menuActionIds = new int[var4];
@@ -162,7 +162,7 @@ final class AsteroidFactory implements GameStateFactory {
               CountermeasureLauncherWeaponDefinition.field_c[1] = 5;
             }
           } else {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(LogoMesh.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(LogoMesh.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {
@@ -178,7 +178,7 @@ final class AsteroidFactory implements GameStateFactory {
             ArrayOperations.copy(OpenGlTexture3D.field_l, 0, Projectile.field_k, 0, var4);
             GetFogOfWarSensorRange.field_p = new String[-var4 + (var3_int - 1)];
             ArrayOperations.copy(OpenGlTexture3D.field_l, var4 + 1, GetFogOfWarSensorRange.field_p, 0, -1 - var4 + var3_int);
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.wrapText(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {

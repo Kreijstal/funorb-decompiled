@@ -5,7 +5,7 @@ final class MatchResultsFactory implements GameStateFactory {
     static String field_a;
     static int field_b;
 
-    final static void b(byte param0) {
+    final static void requestNewestBlackBoxRecording(byte param0) {
         if (FlipTextureOperation.field_l != null) {
           FlipTextureOperation.field_l.requestNewestBlackBoxRecording(-32339, RequestNewestBlackboxRecording.field_p);
         }
@@ -26,7 +26,7 @@ final class MatchResultsFactory implements GameStateFactory {
 
     final static void sendClientDataRead(int param0, int param1) {
         if (param1 != 22681) {
-          MatchResultsFactory.b((byte) 45);
+          MatchResultsFactory.requestNewestBlackBoxRecording((byte) 45);
         }
         IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
         var2.writeIsaacByte(24335, param0);
@@ -78,7 +78,7 @@ final class MatchResultsFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new MatchResults());
     }
 
-    final static int a(int param0, String[] param1, int param2, String param3, BitmapFont param4) {
+    final static int wrapText(int param0, String[] param1, int param2, String param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

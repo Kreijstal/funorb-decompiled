@@ -47,7 +47,7 @@ final class CarouselGameClient {
         if (param1 != -13027) {
           this.dataReceiver = (ChunkedDataReceiver) null;
         }
-        GetSniperCannonAimarc.a(-6940, "Called Carousel_clientgame.start_game(), resetting any buffered events");
+        GetSniperCannonAimarc.printDebugMessage(-6940, "Called Carousel_clientgame.start_game(), resetting any buffered events");
         this.eventFlushCounter = 0;
         this.readyTick = 2147483647;
         if (!param0) {
@@ -135,14 +135,14 @@ final class CarouselGameClient {
           if (-var9 > var6_int) {
             var10 = -var6_int + UiComponent.field_k;
             if (var10 >= param0.getHistoryLength((byte) 114)) {
-              GetSniperCannonAimarc.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
+              GetSniperCannonAimarc.printDebugMessage(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
               return;
             }
             var11 = (CarouselEvent) (param0.events.first(0));
             while (var11 != null) {
               if (!var11.isConfirmed(115) &&
                 -var10 + param0.tick >= var11.tick) {
-                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.tick + param0.tick));
+                GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.tick + param0.tick));
                 return;
               }
               var11 = (CarouselEvent) (param0.events.next((byte) 36));
@@ -158,12 +158,12 @@ final class CarouselGameClient {
                 return;
               }
               this.checksumFailureReported = true;
-              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
+              GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
               if (null == this.dataSender) {
                 this.dataSender = new ChunkedDataSender(OpenGlPostProcessor.field_v);
               }
               if (this.dataSender.isIdle(param2 - 1000)) {
-                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
+                GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Sending the state dump to the server");
                 var13 = new CarouselSlotStateDump(-var10 + param0.tick, UiViewport.serializedStateBuffer);
                 var14 = new GzipCodec();
                 var14.compress(84, 0, var13.serializedState, var13.serializedState.length);
@@ -230,7 +230,7 @@ final class CarouselGameClient {
           if (this.ready &&
             param2 >= 0 &&
             !this.readyEventSent) {
-            GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending ready packet");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Sending ready packet");
             var5 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 77));
             var5.tick = param1.tick;
             var5.setPlayerReadyEvent(param2, -125);
@@ -269,7 +269,7 @@ final class CarouselGameClient {
         try {
           var3 = new DebugMessage();
           var3.field_b = (DebugSendable) ((Object) new DebugRequest("<RequestNewestBlackBox>"));
-          SetBuildViewAutozoomEndOnAction.a(0, var3, param1, PanelWidthQuery.field_e);
+          SetBuildViewAutozoomEndOnAction.writeStatePacket(0, var3, param1, PanelWidthQuery.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "kda.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -358,7 +358,7 @@ final class CarouselGameClient {
             this.receivingGameState = true;
           }
           SetDebrisProjectileCollision.field_o = false;
-          SetBuildViewAutozoomEndOnAction.a(0, param0, param1, GetMissionTimeLimit.field_o);
+          SetBuildViewAutozoomEndOnAction.writeStatePacket(0, param0, param1, GetMissionTimeLimit.field_o);
           SetDebrisProjectileCollision.field_o = true;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "kda.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -462,11 +462,11 @@ final class CarouselGameClient {
                   this.checkServerChecksum(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_23_5);
                 }
               } else {
-                GetSniperCannonAimarc.a(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.tick + var8_int) + "), playinggame=" + param2);
+                GetSniperCannonAimarc.printDebugMessage(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.tick + var8_int) + "), playinggame=" + param2);
                 param5.catchUp(-1);
-                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param5.tick);
+                GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Tick is now " + param5.tick);
                 if (!this.ready) {
-                  GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Is ready");
+                  GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Is ready");
                 }
                 this.readyTick = param5.tick;
                 this.ready = true;
@@ -556,20 +556,20 @@ final class CarouselGameClient {
               var20.readState(var8, false);
               var8.endBitRead((byte) -33);
               if (var20.field_b instanceof BlackBoxRecording) {
-                GetSniperCannonAimarc.a(param3 - 6947, "Received black box recording");
+                GetSniperCannonAimarc.printDebugMessage(param3 - 6947, "Received black box recording");
                 var15 = (BlackBoxRecording) (var20.field_b);
                 param5.recording = var15;
                 this.startBlackBoxReplay(param5, -125);
               } else {
                 if (var20.field_b instanceof DebugRequest) {
                   var21_ref = (DebugRequest) (var20.field_b);
-                  GetSniperCannonAimarc.a(-6940, "The newest black box recording=" + var21_ref.field_i);
+                  GetSniperCannonAimarc.printDebugMessage(-6940, "The newest black box recording=" + var21_ref.field_i);
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var9 = (Exception) (Object) decompiledCaughtException;
-              GetSniperCannonAimarc.a(param3 - 6947, "Error reading in debug response");
+              GetSniperCannonAimarc.printDebugMessage(param3 - 6947, "Error reading in debug response");
               var9.printStackTrace();
             }
           }
@@ -656,7 +656,7 @@ final class CarouselGameClient {
         var10 = VoidHunters.field_G;
         try {
           if (this.ready) {
-            GetSniperCannonAimarc.a(-6940, "Carousel_clientgame:Not ready");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame:Not ready");
           }
           this.ready = false;
           this.readyTick = 2147483647;
@@ -670,7 +670,7 @@ final class CarouselGameClient {
                 var8 = var7.field_f;
                 var9 = var8;
                 if (param1) {
-                  GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding the server follow time...");
+                  GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Adding the server follow time...");
                   var9 = var9 + SetMissionResnetResourceTickTime.field_q;
                 }
                 if (var7.field_e) {
@@ -690,9 +690,9 @@ final class CarouselGameClient {
             }
             var6 = this.bufferedIncoming.next((byte) 62);
           }
-          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.tick + ", Ticks behind=" + param2.ticksBehind);
+          GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.tick + ", Ticks behind=" + param2.ticksBehind);
           param2.catchUp(param0 - 1);
-          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param2.tick);
+          GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Tick is now " + param2.tick);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -713,7 +713,7 @@ final class CarouselGameClient {
         try {
           var4 = new DebugMessage();
           var4.field_b = (DebugSendable) ((Object) new DebugRequest("<SetCarouselConstant>" + param2));
-          SetBuildViewAutozoomEndOnAction.a(param1 ^ param1, var4, param0, PanelWidthQuery.field_e);
+          SetBuildViewAutozoomEndOnAction.writeStatePacket(param1 ^ param1, var4, param0, PanelWidthQuery.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "kda.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -754,7 +754,7 @@ final class CarouselGameClient {
           }
           var4 = new DebugMessage();
           var4.field_b = (DebugSendable) ((Object) new DebugRequest(param1));
-          SetBuildViewAutozoomEndOnAction.a(0, var4, param2, PanelWidthQuery.field_e);
+          SetBuildViewAutozoomEndOnAction.writeStatePacket(0, var4, param2, PanelWidthQuery.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "kda.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -773,14 +773,14 @@ final class CarouselGameClient {
         try {
           if (!SocketNetworkArchiveClient.isLoggedIn(-121)) {
             if (this.ready) {
-              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
+              GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Not ready");
             }
             this.ready = false;
           }
           var3_int = 80 / ((-42 - param1) / 46);
           if (this.receivingGameState) {
             if (this.ready) {
-              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
+              GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Not ready");
             }
             this.ready = false;
           }
@@ -788,7 +788,7 @@ final class CarouselGameClient {
             this.dataSender.sendNextChunk(param0, SetPointDefenceLaserProjectileDamage.field_o, 126);
             if (this.dataSender.isIdle(0)) {
               this.dataSender = null;
-              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Finished sending from Carousel_clientgame.dataSender");
+              GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_clientgame: Finished sending from Carousel_clientgame.dataSender");
             }
           }
           this.eventFlushCounter = (1 + this.eventFlushCounter) % 5;

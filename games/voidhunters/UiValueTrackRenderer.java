@@ -83,7 +83,7 @@ final class UiValueTrackRenderer implements UiRenderer {
             param0 = var9;
           }
           if (var8 == null) {
-            var8 = SoftwareGlyphMask.a(param1, (byte) 55, param5, param2, param3);
+            var8 = SoftwareGlyphMask.generateRadialPolygon(param1, (byte) 55, param5, param2, param3);
           }
           var24 = new ShipComponentDefinition((int[]) (var8), 0, 0);
           var24.scaleGeometry(4, 102, false);
@@ -95,7 +95,7 @@ final class UiValueTrackRenderer implements UiRenderer {
             var13Lifetime1 = TextHotspotRegion.randomBoundedInt(var11, (int)param5, 119) - ((int)param5 >> 1) << 3;
             for (var14Lifetime1 = 0; 3 > var14Lifetime1; var14Lifetime1++) {
               var15 = new Random((long)((int[]) (var10_ref))[1]);
-              var27 = SoftwareGlyphMask.a(param1, (byte) 55, param5 * 2L / (long)(2 + var14Lifetime1), param2, var15);
+              var27 = SoftwareGlyphMask.generateRadialPolygon(param1, (byte) 55, param5 * 2L / (long)(2 + var14Lifetime1), param2, var15);
               var25 = var27;
               var16 = var25;
               for (var17 = 0; var17 < var27.length; var17++) {

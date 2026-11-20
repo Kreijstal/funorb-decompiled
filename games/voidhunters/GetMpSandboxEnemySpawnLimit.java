@@ -38,7 +38,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         int var1 = 56 / ((param0 + 47) / 55);
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean handleServerInfoOrBlueprintPacket(int param0, int param1) {
         ServerInfo var3;
         ShipBlueprint var4;
         ServerInfo var5;
@@ -66,7 +66,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           SetInnateThrusters.a(0, var6.description);
           return true;
         }
-        GetMpSandboxEnemySpawnLimit.a(114, 1);
+        GetMpSandboxEnemySpawnLimit.handleServerInfoOrBlueprintPacket(114, 1);
         if (param1 == 73) {
           GetDebrisThrowable.a(false, "Receiving server info");
           var3 = new ServerInfo();
@@ -107,7 +107,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         }
     }
 
-    final static void a(ShipComponent param0, byte param1) {
+    final static void attachPresetComponents(ShipComponent param0, byte param1) {
         ShipComponent var4 = null;
         ShipComponent var5 = null;
         try {

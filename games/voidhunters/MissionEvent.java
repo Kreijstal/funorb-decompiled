@@ -253,11 +253,11 @@ final class MissionEvent implements DiffableState {
           var3 = stackIn_6_0;
           if (this.conditions != null &&
             param0 < this.conditions.length) {
-            this.conditions = (MissionCondition[]) (GetSalvoUsesAllEnergy.a(QuickChatCategoryLoader.field_d, param0, 15667, this.conditions));
+            this.conditions = (MissionCondition[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(QuickChatCategoryLoader.field_d, param0, 15667, this.conditions));
           } else {
             if (null != this.actions &&
               -var3 + param0 < this.actions.length) {
-              this.actions = (MissionAction[]) (GetSalvoUsesAllEnergy.a(SetUseCircleOutline.field_o, param0 - var3, 15667, this.actions));
+              this.actions = (MissionAction[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(SetUseCircleOutline.field_o, param0 - var3, 15667, this.actions));
             }
           }
         }

@@ -49,7 +49,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (0 != MapClearanceArea.field_a) {
             return var2;
           }
-          TeamShipComponentConditionFactory.b((byte) 50);
+          TeamShipComponentConditionFactory.completeLoginTransition((byte) 50);
           return var2;
         }
         if (var2 != 1) {
@@ -63,7 +63,7 @@ abstract class NetworkGameClient extends GameApplet {
         } else {
           if (GetSpinningBladeAimspeed.field_q == 11 &&
             0 == MapClearanceArea.field_a) {
-            TeamShipComponentConditionFactory.b((byte) 50);
+            TeamShipComponentConditionFactory.completeLoginTransition((byte) 50);
           }
         }
         return var2;
@@ -81,7 +81,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != 0) {
           this.enableCorePacketHandlers((byte) 6, false);
         }
-        if (!TextureLineShape.a(true)) {
+        if (!TextureLineShape.isLoginUiReady(true)) {
           if (UiDraggableContainer.field_z >= 10) {
             if (!LogoAnimationStatus.hasLogoAnimationFinished(true)) {
               SetVariableActionFactory.advanceLogoAnimation((byte) 6);
@@ -163,7 +163,7 @@ abstract class NetworkGameClient extends GameApplet {
             0 == MapClearanceArea.field_a &&
             GetSpinningBladeAimspeed.field_q == 11 &&
             !SetWeaponProjectileSpeedMultiply.b(true)) {
-            TeamShipComponentConditionFactory.b((byte) 123);
+            TeamShipComponentConditionFactory.completeLoginTransition((byte) 123);
           }
           if (MapClearanceArea.field_a != -1 &&
             MapClearanceArea.field_a != 0) {
@@ -335,7 +335,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void g(int param0) {
+    private final void enableSocialPacketHandlers(int param0) {
         SetBombletSprayProjectileLife.allowedCommonPackets[11] = true;
         SetBombletSprayProjectileLife.allowedCommonPackets[12] = true;
         SetBombletSprayProjectileLife.allowedCommonPackets[13] = true;
@@ -344,7 +344,7 @@ abstract class NetworkGameClient extends GameApplet {
 
     final int processLoginUi(boolean param0, int param1) {
         if (param1 != -9288) {
-          this.g(-79);
+          this.enableSocialPacketHandlers(-79);
         }
         return this.processLoginUi((byte) 60, true, param0);
     }
@@ -374,7 +374,7 @@ abstract class NetworkGameClient extends GameApplet {
     final void configureCommonPacketHandlers(boolean param0, boolean param1, boolean param2, boolean param3, int param4, boolean param5, boolean param6) {
         this.enableCorePacketHandlers((byte) 119, true);
         if (param3) {
-          this.c(true);
+          this.enablePendingRequestReplies(true);
         }
         if (param1) {
           this.enableHighscoreReplies(30138);
@@ -386,13 +386,13 @@ abstract class NetworkGameClient extends GameApplet {
           this.enableClientDataReplies((byte) -4);
         }
         if (param2) {
-          this.f((byte) -1);
+          this.enableScoreboardReplies((byte) -1);
         }
         if (param5) {
-          this.g(-121);
+          this.enableSocialPacketHandlers(-121);
         }
         if (param4 != -4590) {
-          this.c(true);
+          this.enablePendingRequestReplies(true);
         }
     }
 
@@ -537,7 +537,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = -37 % ((param1 - 30) / 50);
     }
 
-    private final void f(byte param0) {
+    private final void enableScoreboardReplies(byte param0) {
         if (param0 != -1) {
           return;
         }
@@ -599,7 +599,7 @@ abstract class NetworkGameClient extends GameApplet {
                 SetSalvoDamageMultiplier.decodeReflectionCheck(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, AccountNameAvailabilityReplies.field_b, false);
                 break;
               case 6:
-                ResizableModalPanel.k((byte) -38);
+                ResizableModalPanel.handleScoreboardReply((byte) -38);
                 break;
               case 5:
                 GetArmageddonLength.handleClientDataReply((byte) -128);
@@ -621,7 +621,7 @@ abstract class NetworkGameClient extends GameApplet {
         FighterBayWeaponDefinition.closeGameConnection(-125);
     }
 
-    private final void c(boolean param0) {
+    private final void enablePendingRequestReplies(boolean param0) {
         SetBombletSprayProjectileLife.allowedCommonPackets[1] = param0;
     }
 
@@ -712,7 +712,7 @@ abstract class NetworkGameClient extends GameApplet {
                   GameJoinNotificationText.field_b = null;
                 } else {
                   UiComboBoxList.field_C = SetTorpedoAimarc.field_p;
-                  TeamShipComponentConditionFactory.b((byte) 49);
+                  TeamShipComponentConditionFactory.completeLoginTransition((byte) 49);
                   GuestModeState.guestMode = false;
                   GetSpinningBladeAimspeed.field_q = 10;
                 }

@@ -56,7 +56,7 @@ final class DateOfBirthEntryPanel extends UiArrayContainer implements UiActionLi
           return;
         }
         try {
-          SetArmageddonWarning.b(0, this.dateFields.getDayOfMonth(-5), this.dateFields.getMonthIndex(true), this.dateFields.getYear(3476));
+          SetArmageddonWarning.writeDateOfBirthPacket(0, this.dateFields.getDayOfMonth(-5), this.dateFields.getMonthIndex(true), this.dateFields.getYear(3476));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

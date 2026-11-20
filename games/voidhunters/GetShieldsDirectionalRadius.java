@@ -61,7 +61,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         int var4;
         int var5;
         int var6;
-        SetRepairModeRadius.a(param0 ^ 21);
+        SetRepairModeRadius.updateLobbyEntryTimers(param0 ^ 21);
         if (param0 == 21) {
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
             stackIn_75_0 = (TextureRectangleShape.hasMultiplePlayers(112, SetSpinningBladeSpindamageMultiplier.field_o.playerCount)) ? 1 : 0;

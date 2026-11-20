@@ -49,7 +49,7 @@ final class CarouselSystemEvent implements DiffableState {
           if ((stackIn_14_0 ^ stackIn_17_1) != 0 ||
             null != this.field_e &&
             this.field_e.differsFrom((byte) 115, var5.field_e)) {
-            GetSniperCannonAimarc.a(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + this.field_e);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + this.field_e);
             var4 = 1;
           }
           stackIn_25_0 = (this.field_d != null) ? 0 : 1;
@@ -61,7 +61,7 @@ final class CarouselSystemEvent implements DiffableState {
           if ((stackIn_25_0 ^ stackIn_28_1) != 0 ||
             this.field_d != null &&
             this.field_d.differsFrom((byte) -51, var5.field_d)) {
-            GetSniperCannonAimarc.a(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + this.field_d);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + this.field_d);
             var4 = 1;
           }
           stackIn_36_0 = (this.field_f != null) ? 0 : 1;
@@ -74,7 +74,7 @@ final class CarouselSystemEvent implements DiffableState {
             this.field_f != null &&
             this.field_f.differsFrom((byte) -121, var5.field_f)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + this.field_f);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + this.field_f);
           }
           stackIn_47_0 = (this.field_c) ? 0 : 1;
           if (var5.field_c) {
@@ -83,11 +83,11 @@ final class CarouselSystemEvent implements DiffableState {
             stackIn_50_1 = 1;
           }
           if (stackIn_47_0 != stackIn_50_1) {
-            GetSniperCannonAimarc.a(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + this.field_c);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "boolean event_cancellation has changed. before=" + var5.field_c + ", now=" + this.field_c);
             var4 = 1;
           }
           if (var4 != 0) {
-            GetSniperCannonAimarc.a(-6940, "This instance of CarouselSystemEvent has changed");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "This instance of CarouselSystemEvent has changed");
           }
           if (obfuscationGuard <= -19) {
             return;

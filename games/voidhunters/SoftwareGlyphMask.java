@@ -11,7 +11,7 @@ final class SoftwareGlyphMask extends GlyphMask {
         throw new Error();
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean usesRgbTexturePixels(int param0, int param1) {
         int var2 = 99 % ((param0 + 55) / 39);
         if (param1 == 1) {
           return false;
@@ -22,7 +22,7 @@ final class SoftwareGlyphMask extends GlyphMask {
         return false;
     }
 
-    final static int[] a(long param0, byte param1, long param2, int param3, Random param4) {
+    final static int[] generateRadialPolygon(long param0, byte param1, long param2, int param3, Random param4) {
         int var8 = 0;
         int[] var7 = null;
         RuntimeException var7_ref = null;

@@ -14,7 +14,7 @@ final class SetTorpedoAcceleration extends ConsoleCommand {
           return;
         }
         try {
-          DirectionalLightingTextureOperation.a(param2, 0, param0.length - 1, (byte) -79, param0);
+          DirectionalLightingTextureOperation.sortIntKeysWithIntValues(param2, 0, param0.length - 1, (byte) -79, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

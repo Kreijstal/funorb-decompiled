@@ -36,7 +36,7 @@ final class ShipFactory implements GameStateFactory {
           if (param2 != -21) {
             shieldInfoPool = (ShieldInfoPool) null;
           }
-          stackIn_3_0 = SetSalvoUsesAllEnergy.a(-71, param1.length, param0, param3, param1);
+          stackIn_3_0 = SetSalvoUsesAllEnergy.chooseExtremeIndex(-71, param1.length, param0, param3, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

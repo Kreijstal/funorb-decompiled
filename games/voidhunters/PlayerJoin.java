@@ -47,11 +47,11 @@ final class PlayerJoin implements DiffableState {
           var3 = (PlayerJoin) (other);
           var4 = 0;
           if (this.field_a != var3.field_a) {
-            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.field_a + ", now=" + this.field_a);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int playerid has changed. before=" + var3.field_a + ", now=" + this.field_a);
             var4 = 1;
           }
           if (!var3.field_b.equals(this.field_b)) {
-            GetSniperCannonAimarc.a(-6940, "String displayname has changed. ");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "String displayname has changed. ");
             var4 = 1;
           }
           if (obfuscationGuard >= -19) {

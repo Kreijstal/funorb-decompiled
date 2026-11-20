@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
-    final static void e(byte param0) {
+    final static void initializeLogoRasterizer(byte param0) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -36,7 +36,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, byte param6) {
+    final static void drawText(int param0, int param1, int param2, String param3, int param4, int param5, byte param6) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -79,7 +79,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetSelfDestructPrepareToggleCooldown.e((byte) -101);
+            SetSelfDestructPrepareToggleCooldown.initializeLogoRasterizer((byte) -101);
           }
           SetMachineGunEnergyUsed.a(223, 62, arguments[0].intValue(65));
           stackIn_3_0 = new ConsoleValue("void");

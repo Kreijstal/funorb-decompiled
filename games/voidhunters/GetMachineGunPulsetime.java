@@ -6,7 +6,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    final static int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static int drawParagraph(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         RuntimeException var11 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -15,7 +15,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -30) {
-            GetMachineGunPulsetime.a((String) null, 23, -125, 6, -23, 39, -65, -95, 6, 44, -47);
+            GetMachineGunPulsetime.drawParagraph((String) null, 23, -125, 6, -23, 39, -65, -95, 6, 44, -47);
           }
           stackIn_3_0 = SetAutoaim.drawParagraph(param6, param2, param3, param8, param7, param0, param1, param9, -20, param5, param10, SetAutoaim.field_p);
           return stackIn_3_0;
@@ -66,7 +66,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 > -44) {
           field_q = 86;
           if (!OpenGlTexture1D.field_i) {

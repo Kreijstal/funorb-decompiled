@@ -151,7 +151,7 @@ final class SpawnPointFactory implements GameStateFactory {
           return;
         }
         GpuFaceAttachment.a(param0, -24055);
-        SetSalvoUsesAllEnergy.a(param0, (byte) -93);
+        SetSalvoUsesAllEnergy.drawSocialOverlays(param0, (byte) -93);
     }
 
     public final SerializableGameState create(byte param0) {

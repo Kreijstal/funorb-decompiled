@@ -9,9 +9,9 @@ final class SetRepairModeRadius extends ConsoleCommand {
         field_o = (Sprite[][]) null;
     }
 
-    final static int f(int param0) {
+    final static int getMenuTransitionAlpha(int param0) {
         if (param0 != 255) {
-          SetRepairModeRadius.f(-9);
+          SetRepairModeRadius.getMenuTransitionAlpha(-9);
           return 255 * SetVariableAction.field_b / 32;
         }
         return 255 * SetVariableAction.field_b / 32;
@@ -21,7 +21,7 @@ final class SetRepairModeRadius extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void updateLobbyEntryTimers(int param0) {
         RuntimeException decompiledCaughtException = null;
         LobbyPlayerEntry var1 = null;
         LobbyGameEntry var1_ref = null;

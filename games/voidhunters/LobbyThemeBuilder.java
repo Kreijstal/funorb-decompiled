@@ -242,10 +242,10 @@ final class LobbyThemeBuilder {
           var18 = SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "checkbox");
           SetShieldsDirectionalArcParticleLife.field_o = new SelectableIconLabelWidget(0L, var18[1], var18[0], 1, GetMissionDebrisDefaultProbability.field_o, (String) null);
           CachedArchiveProvider.field_s = new Widget(0L, (Widget) null);
-          CachedArchiveProvider.field_s.field_gb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion", "lobby", true));
-          CachedArchiveProvider.field_s.field_mb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseover", "lobby", true));
-          CachedArchiveProvider.field_s.field_A = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseheld", "lobby", true));
-          CachedArchiveProvider.field_s.field_ub = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_disabled", "lobby", true));
+          CachedArchiveProvider.field_s.field_gb = SetBombletSprayProjectileLife.createCenterSpriteArray(false, SetSniperCannonProjectiles.a(param3, "slideregion", "lobby", true));
+          CachedArchiveProvider.field_s.field_mb = SetBombletSprayProjectileLife.createCenterSpriteArray(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseover", "lobby", true));
+          CachedArchiveProvider.field_s.field_A = SetBombletSprayProjectileLife.createCenterSpriteArray(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseheld", "lobby", true));
+          CachedArchiveProvider.field_s.field_ub = SetBombletSprayProjectileLife.createCenterSpriteArray(false, SetSniperCannonProjectiles.a(param3, "slideregion_disabled", "lobby", true));
           GetPointDefenceLaserProjectileInterceptDamage.field_r = new Widget(0L, (Widget) null);
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "dragbar"), (byte) 98);
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.loadNamedSprites(param3, true, "lobby", "dragbar_mouseover"), (byte) -59);

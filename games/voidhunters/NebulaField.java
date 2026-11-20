@@ -10,7 +10,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
     final Nebula removeNebula(byte param0, int param1) {
         Nebula var3 = this.nebulae[param1];
         int var4 = -90 / ((param0 - 0) / 38);
-        this.nebulae = (Nebula[]) (GetSalvoUsesAllEnergy.a(MachineGunWeaponDefinition.field_c, param1, 15667, this.nebulae));
+        this.nebulae = (Nebula[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(MachineGunWeaponDefinition.field_c, param1, 15667, this.nebulae));
         this.markChanged(125);
         return var3;
     }

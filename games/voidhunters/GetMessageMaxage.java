@@ -115,7 +115,7 @@ final class GetMessageMaxage extends ConsoleCommand {
           }
           var6 = stackIn_4_0;
           if (GpuRidgedNoiseVolume.field_t == 0) {
-            var7 = MatchResultsFactory.a(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
+            var7 = MatchResultsFactory.wrapText(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = 3 + var7;
             GetSniperCannonProjectiles.field_o = new int[var8];
             GetWorldWidthUpshift.field_o = new String[var8];
@@ -137,7 +137,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             if (GpuRidgedNoiseVolume.field_t != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = MatchResultsFactory.a(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
+            var7 = MatchResultsFactory.wrapText(480, RecallGrapplesOrderDefinition.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = var7 + 2;
             GetSniperCannonProjectiles.field_o = new int[var8];
             GetWorldWidthUpshift.field_o = new String[var8];
@@ -183,7 +183,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             LoginFormNavigation.menuHeight = stackIn_40_0 + stackIn_41_1;
           }
           LoopingSound.field_m = -(LoginFormNavigation.menuHeight >> 1) + SetDebrisPartitioned.field_r;
-          UiAngleDialRenderer.field_c.resetSelection(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(OpenGlFaceAttachment.field_b, 3841, PlayerGameData.field_b));
+          UiAngleDialRenderer.field_c.resetSelection(param3, -1, 0, SetBuildViewAutozoomEndOnAction.hitTestMenuItem(OpenGlFaceAttachment.field_b, 3841, PlayerGameData.field_b));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ final class TextLayoutLine {
     int top;
     int[] caretXs;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesGpuVertexDataMask(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param0 != -8636) {
           return false;
@@ -20,7 +20,7 @@ final class TextLayoutLine {
         int stackIn_7_0 = 0;
         if (param0 != 0) {
           var3 = (byte[]) null;
-          TextLayoutLine.a(104, -1.1755644083023071f, 21, 1.4921725988388062f, -0.9892958402633667f, (byte) 76, (FloatNoiseSliceGenerator) null, -0.3563171923160553f, -2, 1.3547749519348145f, 48, -53, (byte[]) null);
+          TextLayoutLine.accumulateFractalNoiseVolume(104, -1.1755644083023071f, 21, 1.4921725988388062f, -0.9892958402633667f, (byte) 76, (FloatNoiseSliceGenerator) null, -0.3563171923160553f, -2, 1.3547749519348145f, 48, -53, (byte[]) null);
         }
         if (this.caretXs != null &&
           this.caretXs.length != 0) {
@@ -31,7 +31,7 @@ final class TextLayoutLine {
         return stackIn_7_0;
     }
 
-    final static void a(int param0, float param1, int param2, float param3, float param4, byte param5, FloatNoiseSliceGenerator param6, float param7, int param8, float param9, int param10, int param11, byte[] param12) {
+    final static void accumulateFractalNoiseVolume(int param0, float param1, int param2, float param3, float param4, byte param5, FloatNoiseSliceGenerator param6, float param7, int param8, float param9, int param10, int param11, byte[] param12) {
         int var13_int = 0;
         int var14 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -44,7 +44,7 @@ final class TextLayoutLine {
         var14 = VoidHunters.field_G;
         try {
           if (param5 >= -38) {
-            TextLayoutLine.a(80, -3, -102);
+            TextLayoutLine.matchesGpuVertexDataMask(80, -3, -102);
           }
           for (var13_int = 0; param2 > var13_int; var13_int++) {
             GetMissilesTopSpeed.accumulateFractalNoiseSlice(param7, param10, param1, param0, param11, var13_int, param9, param6, param2, param3, param8, param12, (byte) 126, param4);

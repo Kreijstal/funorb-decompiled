@@ -382,14 +382,14 @@ final class CarouselCommongameInfo implements DiffableState {
           var6 = (CarouselCommongameInfo) (other);
           var4 = 0;
           if (this.currentIndex != var6.currentIndex) {
-            GetSniperCannonAimarc.a(-6940, "int carouselslot has changed. before=" + var6.currentIndex + ", now=" + this.currentIndex);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int carouselslot has changed. before=" + var6.currentIndex + ", now=" + this.currentIndex);
             var4 = 1;
           }
           CarouselSlot.reportStateArrayDifferences(var6.history, 1, this.history, false, 5547);
-          SetUseFilledPolygons.a(1, this.events, 13, false, var6.events);
+          SetUseFilledPolygons.reportDequeDifferences(1, this.events, 13, false, var6.events);
           if (SetCountermeasureLauncherAimspeed.a(var6.history, false, 1, this.history, -66)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "CarouselSlot[] carousel has changed. ");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "CarouselSlot[] carousel has changed. ");
           }
           if (obfuscationGuard >= -19) {
             var5 = (IsaacPacketBuffer) null;
@@ -397,10 +397,10 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var6.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 121)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "linklist eventqueue has changed. ");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "linklist eventqueue has changed. ");
           }
           if (var4 != 0) {
-            GetSniperCannonAimarc.a(-6940, "This instance of Carousel_commongame_Info has changed");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "This instance of Carousel_commongame_Info has changed");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -473,13 +473,13 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           var5 = this.history[this.currentIndex];
           var5.readState(param0, false);
-          GetSniperCannonAimarc.a(param1 - 6921, "Tick was " + this.tick);
+          GetSniperCannonAimarc.printDebugMessage(param1 - 6921, "Tick was " + this.tick);
           this.tick = -var4Lifetime1 + this.tick;
-          GetSniperCannonAimarc.a(-6940, "Running post read custom from tick=" + this.tick + " when ticksbehind=" + this.ticksBehind);
+          GetSniperCannonAimarc.printDebugMessage(-6940, "Running post read custom from tick=" + this.tick + " when ticksbehind=" + this.ticksBehind);
           for (var6 = 0; var6 < var4Lifetime1; var6++) {
             this.updateTimeline(0, (byte) 106);
           }
-          GetSniperCannonAimarc.a(-6940, "Ends as " + this.tick);
+          GetSniperCannonAimarc.printDebugMessage(-6940, "Ends as " + this.tick);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -559,7 +559,7 @@ final class CarouselCommongameInfo implements DiffableState {
         if (0 >= this.ticksBehind) {
           return;
         }
-        GetSniperCannonAimarc.a(-6940, "Updating all the way with " + this.ticksBehind + " ticks behind");
+        GetSniperCannonAimarc.printDebugMessage(-6940, "Updating all the way with " + this.ticksBehind + " ticks behind");
         if (param0 != -1) {
           this.showClientState = true;
         }
@@ -742,9 +742,9 @@ final class CarouselCommongameInfo implements DiffableState {
             var10.reportDifferences(this.history[this.currentIndex], -100);
             System.setOut(var7);
             this.debugDifferences = var14.toString();
-            GetSniperCannonAimarc.a(param1 ^ -7026, "\n>>>>>> Black box recording debug diffs start");
+            GetSniperCannonAimarc.printDebugMessage(param1 ^ -7026, "\n>>>>>> Black box recording debug diffs start");
             OpenGlGpuTexture2D.printDebug(var14.toString(), 0);
-            GetSniperCannonAimarc.a(-6940, "<<<<<< Black box recording debug diffs end\n");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "<<<<<< Black box recording debug diffs end\n");
           }
         }
     }
@@ -812,8 +812,8 @@ final class CarouselCommongameInfo implements DiffableState {
               this.swapSlotsForDebug(var5, var6, 42);
               this.history[var5] = ClientDataWriteRequest.readCarouselState((byte) -39);
               if (!this.shallowCopyFailed) {
-                GetSniperCannonAimarc.a(-6940, "Carousel_commongame shallow copy check: A field was changed before it was prepared");
-                GetSniperCannonAimarc.a(-6940, "******************************************");
+                GetSniperCannonAimarc.printDebugMessage(-6940, "Carousel_commongame shallow copy check: A field was changed before it was prepared");
+                GetSniperCannonAimarc.printDebugMessage(-6940, "******************************************");
                 if (SetPointDefenceLaserProjectileDamage.field_o) {
                   var9.reportDifferences(this.history[var5], -109);
                 }

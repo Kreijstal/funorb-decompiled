@@ -108,7 +108,7 @@ final class DebugRequest extends DebugSendable implements DiffableState {
           var3 = (DebugRequest) (other);
           var4 = 0;
           if (!var3.field_i.equals(this.field_i)) {
-            GetSniperCannonAimarc.a(-6940, "String requeststring has changed. ");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "String requeststring has changed. ");
             var4 = 1;
           }
           if (var4 == 0) {

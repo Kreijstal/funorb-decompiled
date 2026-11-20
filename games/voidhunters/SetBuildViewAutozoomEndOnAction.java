@@ -8,7 +8,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, SerializableGameState param1, IsaacPacketBuffer param2, int param3) {
+    final static void writeStatePacket(int param0, SerializableGameState param1, IsaacPacketBuffer param2, int param3) {
         int var4_int = 0;
         try {
           param2.writeIsaacByte(24335, param3);
@@ -54,7 +54,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int hitTestMenuItem(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

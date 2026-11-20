@@ -15,9 +15,9 @@ final class TextureLineShape extends TextureRasterShape {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isLoginUiReady(boolean param0) {
         if (!param0) {
-          TextureLineShape.a(true);
+          TextureLineShape.isLoginUiReady(true);
           if (GetSpinningBladeAimspeed.field_q < 10) {
             return false;
           }
@@ -71,7 +71,7 @@ final class TextureLineShape extends TextureRasterShape {
         this.startX = param0;
     }
 
-    final static void a(PlatformService param0, byte param1, ResourceArchive param2) {
+    final static void configureNativeLibraryPlatform(PlatformService param0, byte param1, ResourceArchive param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

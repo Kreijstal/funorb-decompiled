@@ -32,7 +32,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static boolean isPointInCircle(int param0, int param1, int param2, int param3, int param4, int param5) {
         param5 = param5 - param2;
         param0 = param0 - param1;
         if (param5 < -param3) {
@@ -67,7 +67,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0, IntrusiveDeque param1, int param2, boolean param3, IntrusiveDeque param4) {
+    final static boolean reportDequeDifferences(int param0, IntrusiveDeque param1, int param2, boolean param3, IntrusiveDeque param4) {
         DiffableState[] var5 = null;
         RuntimeException var5_ref = null;
         DiffableState[] var6 = null;

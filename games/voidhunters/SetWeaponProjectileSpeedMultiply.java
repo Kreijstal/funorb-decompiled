@@ -83,7 +83,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             return;
           }
           var16 = "Component editor";
-          SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (GameTextMetrics.getStringWidth(1, var16, param0 ^ 13905) >> 1), -1, 30, var16, 1, 16756480, (byte) -94);
+          SetSelfDestructPrepareToggleCooldown.drawText(GetBombletSprayEnergyUsed.field_p.width / 2 - (GameTextMetrics.getStringWidth(1, var16, param0 ^ 13905) >> 1), -1, 30, var16, 1, 16756480, (byte) -94);
           var2 = new Camera2D();
           var2.worldCenterY = SetTorpedoEnergyUsed.field_o;
           var2.worldCenterX = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;

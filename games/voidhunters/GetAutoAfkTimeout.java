@@ -4,14 +4,14 @@
 final class GetAutoAfkTimeout extends ConsoleCommand {
     static int field_o;
 
-    final static String a(int param0, int param1) {
+    final static String formatHelpPageNumber(int param0, int param1) {
         if (param1 > -26) {
-          GetAutoAfkTimeout.a(-66, 68);
+          GetAutoAfkTimeout.formatHelpPageNumber(-66, 68);
         }
         return "0" + (param0 + 1) + "/" + "0" + FloatPacketBuffer.helpPages.length;
     }
 
-    final static SerializableGameState[] a(int param0, int param1, SerializableGameState[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5) {
+    final static SerializableGameState[] readCompactStateArray(int param0, int param1, SerializableGameState[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5) {
         int var8 = 0;
         int var6_int = 0;
         int var7 = 0;

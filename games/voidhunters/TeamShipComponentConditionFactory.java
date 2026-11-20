@@ -9,7 +9,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new TeamShipComponentCondition());
     }
 
-    final static boolean a(int param0, DisplayMode param1, DisplayMode param2) {
+    final static boolean hasLargerDisplayDimensions(int param0, DisplayMode param1, DisplayMode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -65,7 +65,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new TeamShipComponentCondition[param1]);
     }
 
-    final static void b(byte param0) {
+    final static void completeLoginTransition(byte param0) {
         int var1;
         int var2;
         var2 = VoidHunters.field_G;

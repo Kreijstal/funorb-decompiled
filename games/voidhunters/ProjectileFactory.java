@@ -4,7 +4,7 @@
 final class ProjectileFactory implements GameStateFactory {
     static int field_a;
 
-    final static Class a(String param0, byte param1) throws ClassNotFoundException {
+    final static Class resolveReflectionClass(String param0, byte param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_6_0 = null;
@@ -78,7 +78,7 @@ final class ProjectileFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new Projectile());
     }
 
-    final static SerializableGameState a(byte[] param0, int param1, GameStateFactory param2) {
+    final static SerializableGameState decodeState(byte[] param0, int param1, GameStateFactory param2) {
         IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         SerializableGameState var4 = null;

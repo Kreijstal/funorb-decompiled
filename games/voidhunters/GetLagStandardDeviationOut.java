@@ -14,7 +14,7 @@ final class GetLagStandardDeviationOut extends ConsoleCommand {
           return;
         }
         try {
-          SetSelfDestructPrepareToggleCooldown.a(param4, param0, param3, param1, SetAutoaim.field_p, param2, (byte) -108);
+          SetSelfDestructPrepareToggleCooldown.drawText(param4, param0, param3, param1, SetAutoaim.field_p, param2, (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "cka.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

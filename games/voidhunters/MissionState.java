@@ -1143,7 +1143,7 @@ final class MissionState implements DiffableState {
                   var23[var8] = -1;
                 }
               }
-              var8Lifetime2 = SetSalvoUsesAllEnergy.a(-126, 14, var6_ref_Random, true, var23);
+              var8Lifetime2 = SetSalvoUsesAllEnergy.chooseExtremeIndex(-126, 14, var6_ref_Random, true, var23);
               this.initializeMatch(var5Lifetime1, 1, var8Lifetime2);
               this.setMissionPhase(2, -7, Particle.field_z);
               return;

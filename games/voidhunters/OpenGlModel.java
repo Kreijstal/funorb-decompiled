@@ -605,7 +605,7 @@ final class OpenGlModel extends Model3D {
           if (OpenGlIndexBuffer.a(param5, param2, false)) {
             discarded$0 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 2, 0);
           }
-          if (TextLayoutLine.a(-8636, param2, param5)) {
+          if (TextLayoutLine.matchesGpuVertexDataMask(-8636, param2, param5)) {
             discarded$1 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
           }
           if (SocketConnector.a(-6070, param5, param2)) {

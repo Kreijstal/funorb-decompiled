@@ -177,7 +177,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         GetPlayerRepairTime.decodeLogoAudio(param1, false);
         NetworkArchiveRequest.loadLogoMeshes(param1, (byte) 36);
         TextHotspotRegion.loadLogoFinalFrame(param0 ^ 107, param1);
-        SetSelfDestructPrepareToggleCooldown.e((byte) -39);
+        SetSelfDestructPrepareToggleCooldown.initializeLogoRasterizer((byte) -39);
         if (param0 != 55) {
           return;
         }

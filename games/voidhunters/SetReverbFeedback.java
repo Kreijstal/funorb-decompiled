@@ -9,7 +9,7 @@ final class SetReverbFeedback extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean areAllHintsComplete(boolean param0) {
         boolean[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -27,7 +27,7 @@ final class SetReverbFeedback extends ConsoleCommand {
               if (param0) {
                 return true;
               }
-              SetReverbFeedback.b(false);
+              SetReverbFeedback.areAllHintsComplete(false);
               return true;
             }
             var3 = var5[var2] ? 1 : 0;
@@ -45,7 +45,7 @@ final class SetReverbFeedback extends ConsoleCommand {
         }
     }
 
-    final static void e(int param0) {
+    final static void updateAudioOutputs(int param0) {
         SoundPlayback var1 = null;
         int var2 = 0;
         boolean stackIn_20_0 = false;
@@ -103,7 +103,7 @@ final class SetReverbFeedback extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetReverbFeedback.b(true);
+            SetReverbFeedback.areAllHintsComplete(true);
           }
           ComponentAttachmentPlan.field_b = arguments[0].floatValue(0);
           stackIn_3_0 = new ConsoleValue("void");

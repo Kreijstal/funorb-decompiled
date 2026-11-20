@@ -75,13 +75,13 @@ final class PlayerReady implements DiffableState {
           }
           var4 = 0;
           if (var3.field_b != this.field_b) {
-            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.field_b + ", now=" + this.field_b);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int playerid has changed. before=" + var3.field_b + ", now=" + this.field_b);
             var4 = 1;
           }
           if (var4 == 0) {
             return;
           }
-          GetSniperCannonAimarc.a(-6940, "This instance of PlayerReady has changed");
+          GetSniperCannonAimarc.printDebugMessage(-6940, "This instance of PlayerReady has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

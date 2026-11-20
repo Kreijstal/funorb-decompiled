@@ -30,11 +30,11 @@ final class ServerTick extends IntrusiveNode implements DiffableState {
           var5 = (ServerTick) (other);
           var4 = 0;
           if (var5.field_f != this.field_f) {
-            GetSniperCannonAimarc.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + this.field_f);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + this.field_f);
             var4 = 1;
           }
           if (var5.field_g != this.field_g) {
-            GetSniperCannonAimarc.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + this.field_g);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + this.field_g);
             var4 = 1;
           }
           stackIn_7_0 = this.field_e;
@@ -45,7 +45,7 @@ final class ServerTick extends IntrusiveNode implements DiffableState {
           }
           if ((stackIn_7_0 ? 1 : 0) == stackIn_8_1) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "boolean client_should_catchup has changed. ");
+            GetSniperCannonAimarc.printDebugMessage(-6940, "boolean client_should_catchup has changed. ");
           }
           if (obfuscationGuard > -19) {
             this.field_e = true;

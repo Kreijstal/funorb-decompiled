@@ -13,7 +13,7 @@ abstract class ResizableModalPanel extends ModalPanel {
 
     void onResizeComplete(int param0) {
         if (param0 != 15435) {
-          ResizableModalPanel.k((byte) -22);
+          ResizableModalPanel.handleScoreboardReply((byte) -22);
         }
     }
 
@@ -175,7 +175,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         return super.updateAndCheckClosed(248);
     }
 
-    final static void k(byte param0) {
+    final static void handleScoreboardReply(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -314,7 +314,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.resizeDuration = 0;
         this.onResizeComplete(param0 + 25766);
         if (param0 != -10331) {
-          ResizableModalPanel.k((byte) 34);
+          ResizableModalPanel.handleScoreboardReply((byte) 34);
         }
     }
 

@@ -2971,8 +2971,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             this.behaviour.readState(param0, false);
           }
-          this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.a(127, 1, this.subcomponents, ArchiveTextureProvider.field_d, 5, param0));
-          this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.a(param1 ^ 93, 1, this.hardpoints, HardpointGeometry.hardpointFactory, 5, param0));
+          this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.readCompactStateArray(127, 1, this.subcomponents, ArchiveTextureProvider.field_d, 5, param0));
+          this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.readCompactStateArray(param1 ^ 93, 1, this.hardpoints, HardpointGeometry.hardpointFactory, 5, param0));
           this.connectedangle = param0.readBits(0, 32);
           this.currentconnectedangle = ShieldInfo.readSignedBits(14, param0, (byte) 20);
           this.health = param0.readBits(0, 32);

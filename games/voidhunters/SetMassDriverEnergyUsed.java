@@ -38,7 +38,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3) {
+    final static boolean handleChatKeyEvent(int param0, int param1, int param2, byte param3) {
         int var4;
         int stackIn_11_0 = 0;
         int stackIn_46_0 = 0;
@@ -120,7 +120,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         return var4 != 0;
     }
 
-    final static void a(DualLinkNode param0, DualLinkNode param1, byte param2) {
+    final static void insertSecondaryAfter(DualLinkNode param0, DualLinkNode param1, byte param2) {
         try {
           if (null != param0.secondaryPrevious) {
             param0.unlinkSecondary((byte) -35);
@@ -129,7 +129,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           param0.secondaryPrevious = param1;
           param0.secondaryPrevious.secondaryNext = param0;
           if (param2 != -68) {
-            SetMassDriverEnergyUsed.a(12, 69, 48, (byte) 94);
+            SetMassDriverEnergyUsed.handleChatKeyEvent(12, 69, 48, (byte) 94);
           }
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {

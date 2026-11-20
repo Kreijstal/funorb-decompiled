@@ -109,7 +109,7 @@ final class SoftLruCache {
               if ((long)param1 < fieldTemp$0) {
                 var4 = new SoftCacheReference(var3_ref.getValue(122), var3_ref.weight);
                 this.entries.put(var4, 0, var3_ref.key);
-                SetMassDriverEnergyUsed.a(var4, var3_ref, (byte) -68);
+                SetMassDriverEnergyUsed.insertSecondaryAfter(var4, var3_ref, (byte) -68);
                 var3_ref.unlink(-3846);
                 var3_ref.unlinkSecondary((byte) -35);
               }
@@ -133,7 +133,7 @@ final class SoftLruCache {
             if ((long)param1 < fieldTemp$1) {
               var4Lifetime1 = new SoftCacheReference(var3_refLifetime1.getValue(122), var3_refLifetime1.weight);
               this.entries.put(var4Lifetime1, 0, var3_refLifetime1.key);
-              SetMassDriverEnergyUsed.a(var4Lifetime1, var3_refLifetime1, (byte) -68);
+              SetMassDriverEnergyUsed.insertSecondaryAfter(var4Lifetime1, var3_refLifetime1, (byte) -68);
               var3_refLifetime1.unlink(-3846);
               var3_refLifetime1.unlinkSecondary((byte) -35);
             }

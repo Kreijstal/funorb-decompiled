@@ -53,7 +53,7 @@ final class LegacyOpenGlWaterTextures {
         this.noiseVolume = null;
         try {
           this.usesVolumeTextures = param0.field_tc;
-          SetBombletSprayProjectileLife.a(param0, 16);
+          SetBombletSprayProjectileLife.initializeWaterNoiseVolumes(param0, 16);
           if (!this.usesVolumeTextures) {
             this.noiseFrames = new OpenGlTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {

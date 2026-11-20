@@ -14,7 +14,7 @@ final class GraphicsToolkitSelector {
         GetDebrisThrowable.a(false, "Reading gamedata from server");
         Object var2 = null;
         try {
-          var2_ref = (PlayerGameData) (ProjectileFactory.a(param1, 6429, AdjustVariableAction.field_c));
+          var2_ref = (PlayerGameData) (ProjectileFactory.decodeState(param1, 6429, AdjustVariableAction.field_c));
         } catch (Exception exception) {
           var4 = TextNode.formatByteArray(param1, param0 ^ 29411);
           var2_ref = new PlayerGameData();
@@ -37,7 +37,7 @@ final class GraphicsToolkitSelector {
             field_b = (String) null;
           }
           TooltipDisplay.field_b = var2_ref;
-          GetSalvoUsesAllEnergy.a(-118);
+          GetSalvoUsesAllEnergy.restoreCompletedHints(-118);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "fab.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -461,7 +461,7 @@ final class GraphicsToolkitSelector {
           QuickChatHelpWindow.field_xb = param1;
           MissionEventFactory.commonArchive = param0;
           this.textureProvider = param2;
-          TextureLineShape.a(param3, (byte) 127, param0);
+          TextureLineShape.configureNativeLibraryPlatform(param3, (byte) 127, param0);
           this.setBackendOptions(false, param4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "fab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

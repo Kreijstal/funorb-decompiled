@@ -28,7 +28,7 @@ final class MessageLog implements DiffableState {
           while (this.messages.length > var3) {
             var4 = param1 - this.messages[var3].tick;
             if (Particle.field_c <= var4) {
-              this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, var3, 15667, this.messages));
+              this.messages = (Message[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(UiTextStyle.field_e, var3, 15667, this.messages));
               if (this.messages == null) {
                 break;
               }
@@ -143,7 +143,7 @@ final class MessageLog implements DiffableState {
           param0.tick = IncrementVariableActionFactory.field_a;
           this.messages = (Message[]) (SoftwareSprite2D.appendStateArrayValue(param0, this.messages, 0, UiTextStyle.field_e));
           if (ConsoleSettingsScript.field_a < this.messages.length) {
-            this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, 0, 15667, this.messages));
+            this.messages = (Message[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(UiTextStyle.field_e, 0, 15667, this.messages));
           }
           if (!param1) {
             field_a = 89;

@@ -50,7 +50,7 @@ final class DebugMessage implements DiffableState {
             this.field_b != null &&
             this.field_b.differsFrom((byte) -45, var6.field_b)) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "DebugSendable response has changed. before=" + var6.field_b + ", now=" + this.field_b);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "DebugSendable response has changed. before=" + var6.field_b + ", now=" + this.field_b);
           }
           if (var4 == 0) {
             return;

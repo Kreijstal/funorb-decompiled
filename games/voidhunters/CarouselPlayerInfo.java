@@ -75,7 +75,7 @@ class CarouselPlayerInfo implements DiffableState {
           }
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "boolean connected has changed. before=" + var3.connected + ", now=" + this.connected);
+            GetSniperCannonAimarc.printDebugMessage(-6940, "boolean connected has changed. before=" + var3.connected + ", now=" + this.connected);
           }
           if (var4 == 0) {
             return;

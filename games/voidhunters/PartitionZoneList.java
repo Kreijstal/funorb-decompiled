@@ -261,7 +261,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         if (var5 == -1) {
           return false;
         }
-        this.zones = (PartitionZone[]) (GetSalvoUsesAllEnergy.a(PartitionZoneFactoryHolder.partitionZoneFactory, var5, 15667, this.zones));
+        this.zones = (PartitionZone[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(PartitionZoneFactoryHolder.partitionZoneFactory, var5, 15667, this.zones));
         this.markChanged(-100);
         if (this.zones != null &&
           this.zones.length != 0) {

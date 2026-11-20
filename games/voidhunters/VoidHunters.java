@@ -326,7 +326,7 @@ public final class VoidHunters extends NetworkGameClient {
                   }
                   return;
                 }
-                if (GetMpSandboxEnemySpawnLimit.a(-53, param0)) {
+                if (GetMpSandboxEnemySpawnLimit.handleServerInfoOrBlueprintPacket(-53, param0)) {
                   return;
                 }
                 if ((param0 == 11 ||
@@ -403,7 +403,7 @@ public final class VoidHunters extends NetworkGameClient {
         var6 = field_G;
         ProxySocketConnector.field_f = SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(32);
         GetCountermeasureLauncherEnergyUsed.field_o = NormalMapTextureOperation.d(-2);
-        SetReverbFeedback.e(200);
+        SetReverbFeedback.updateAudioOutputs(200);
         if (EmailAvailabilityChecks.fullscreenCanvas != null &&
           EmailAvailabilityChecks.fullscreenCanvas.focusLost) {
           VariableCondition.b((byte) 116);
@@ -2112,7 +2112,7 @@ public final class VoidHunters extends NetworkGameClient {
                   ((IsaacPacketBuffer) (Object) stackIn_118_0).writeByte(stackIn_118_1, stackIn_119_2);
                 }
                 if (var7Lifetime2 == 0 && (SetBombletSprayProjectileDamage.field_o != 80 ||
-                  SetFightersPerPlayerMaximum.chatInputActive) && SetMassDriverEnergyUsed.a(13, 15, 12, (byte) 23)) {
+                  SetFightersPerPlayerMaximum.chatInputActive) && SetMassDriverEnergyUsed.handleChatKeyEvent(13, 15, 12, (byte) 23)) {
                   continue;
                 }
               } else {
@@ -2431,7 +2431,7 @@ public final class VoidHunters extends NetworkGameClient {
             var7Lifetime2 = (GetBombletSprayEnergyUsed.field_p.width >> 1) - (GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879) >> 1);
             var8Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (GetPointDefenceLaserProjectiles.getFontAscent(false, var6Lifetime2) >> 1);
             BlackBoxRecording.drawPanelBackground((byte) -115, 200, MidiNote.a(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * MidiNote.a(var6Lifetime2, (byte) -121), 32 + GameTextMetrics.getStringWidth(var6Lifetime2, var5, 13879));
-            SetSelfDestructPrepareToggleCooldown.a(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
+            SetSelfDestructPrepareToggleCooldown.drawText(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
           }
           stackIn_81_0 = 0;
           stackIn_82_1 = (GetUseDetailLines.field_o != -1) && (GetTorpedoReload.field_q != -1);

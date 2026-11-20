@@ -5,7 +5,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
     static String field_p;
     static boolean[] allowedCommonPackets;
 
-    final static Sprite[] a(boolean param0, Sprite param1) {
+    final static Sprite[] createCenterSpriteArray(boolean param0, Sprite param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -41,7 +41,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         field_p = null;
         if (param0 >= -113) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
-          SetBombletSprayProjectileLife.a((OpenGlToolkit) null, 103);
+          SetBombletSprayProjectileLife.initializeWaterNoiseVolumes((OpenGlToolkit) null, 103);
           allowedCommonPackets = null;
           return;
         }
@@ -82,7 +82,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(OpenGlToolkit param0, int param1) {
+    final static void initializeWaterNoiseVolumes(OpenGlToolkit param0, int param1) {
         RuntimeException var2 = null;
         LegacyRidgedNoiseVolume var7 = null;
         LegacyFractalNoiseVolume var9 = null;

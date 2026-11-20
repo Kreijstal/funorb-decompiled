@@ -200,7 +200,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = SetArmageddonLength.invalidInput;
             return stackIn_5_0;
           }
-          if (!SetArmageddonWarning.a(var3, var4, -101)) {
+          if (!SetArmageddonWarning.passesPasswordContentChecks(var3, var4, -101)) {
             stackIn_9_0 = SetArmageddonLength.invalidInput;
             return stackIn_9_0;
           }

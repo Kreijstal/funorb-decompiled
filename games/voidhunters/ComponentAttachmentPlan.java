@@ -34,7 +34,7 @@ final class ComponentAttachmentPlan {
             var4Lifetime1 = 0;
             while (var4Lifetime1 < this.obstructions.length) {
               if (param1.containsDescendant(16, this.obstructions[var4Lifetime1])) {
-                this.obstructions = (ShipComponent[]) (GetSalvoUsesAllEnergy.a(ArchiveTextureProvider.field_d, var4Lifetime1, 15667, this.obstructions));
+                this.obstructions = (ShipComponent[]) (GetSalvoUsesAllEnergy.removeStateArrayValue(ArchiveTextureProvider.field_d, var4Lifetime1, 15667, this.obstructions));
                 var4Lifetime1--;
               }
               var4Lifetime1++;

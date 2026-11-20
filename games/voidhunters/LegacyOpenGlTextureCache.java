@@ -54,7 +54,7 @@ final class LegacyOpenGlTextureCache {
             this.cache.put(var15, (long)param1, (byte) -117);
             return var15;
           }
-          if (SoftwareGlyphMask.a(97, (int) var6.field_c)) {
+          if (SoftwareGlyphMask.usesRgbTexturePixels(97, (int) var6.field_c)) {
             var29 = this.provider.generateRgbPixels(var7, 0.699999988079071f, true, param1, var7, true);
             var19 = new OpenGlTexture2D(this.toolkit, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var29, 0, 0, false);
             var19.setWrap(var6.field_s, var6.field_k, 10497);
@@ -84,7 +84,7 @@ final class LegacyOpenGlTextureCache {
           this.cache.put(var21, (long)param1, (byte) -117);
           return var21;
         }
-        if (SoftwareGlyphMask.a(97, (int) var6.field_c)) {
+        if (SoftwareGlyphMask.usesRgbTexturePixels(97, (int) var6.field_c)) {
           var32 = this.provider.generateRgbPixels(var7, 0.699999988079071f, true, param1, var7, true);
           var25 = new OpenGlTexture2D(this.toolkit, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var32, 0, 0, false);
           var25.setWrap(var6.field_s, var6.field_k, 10497);

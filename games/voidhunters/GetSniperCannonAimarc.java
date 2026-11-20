@@ -32,7 +32,7 @@ final class GetSniperCannonAimarc extends ConsoleCommand {
         }
     }
 
-    final static String a(byte param0, int param1, Ship param2) {
+    final static String formatShipObjectiveLabel(byte param0, int param1, Ship param2) {
         int var3_int = 0;
         String var4 = null;
         int var5 = 0;
@@ -88,7 +88,7 @@ final class GetSniperCannonAimarc extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void printDebugMessage(int param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -98,7 +98,7 @@ final class GetSniperCannonAimarc extends ConsoleCommand {
         try {
           if (param0 != -6940) {
             var3 = (String) null;
-            GetSniperCannonAimarc.a(-26, (String) null);
+            GetSniperCannonAimarc.printDebugMessage(-26, (String) null);
           }
           if (!SetPointDefenceLaserProjectileDamage.field_o) {
             return;
