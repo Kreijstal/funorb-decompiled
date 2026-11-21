@@ -8,7 +8,7 @@ final class InterfaceTextLoader {
     static IntrusiveDeque field_d;
 
     final static void loadInterfaceText(int param0, Archive param1) {
-        class $CfrPartitionedBody {
+        class TextTableInitialization {
             RuntimeException stackIn_2605_0;
             StringBuilder stackIn_2605_1;
             String stackIn_2606_2;
@@ -20,7 +20,7 @@ final class InterfaceTextLoader {
             int param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
+            TextTableInitialization(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2605_0 = null;
@@ -32,7 +32,7 @@ final class InterfaceTextLoader {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndReportingText() throws java.lang.RuntimeException {
                 CachedArchiveSource.field_e = param1;
                 var2 = PendingListRequest.readNamedRootFile(param0 ^ -76, "loginm3");
                 if (var2 != null) {
@@ -932,7 +932,7 @@ final class InterfaceTextLoader {
                 }
                 var2 = PendingListRequest.readNamedRootFile(-92, "rule_0_0");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountSocialAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   ReflectionCheckHelpers.field_e = SocialListEntry.decodeExtendedString(var2, -108);
                 }
@@ -1876,7 +1876,7 @@ final class InterfaceTextLoader {
                   SocialListEntry.decodeExtendedString(var2, -98);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuMultiplayerAndDisplayText() throws java.lang.RuntimeException {
                 var2 = PendingListRequest.readNamedRootFile(-123, "instructions");
                 if (var2 != null) {
                   MiscTextGlobals.field_d = SocialListEntry.decodeExtendedString(var2, -80);
@@ -2843,7 +2843,7 @@ final class InterfaceTextLoader {
                 }
                 var2 = PendingListRequest.readNamedRootFile(-117, "mustlogin2,1");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndSubscriptionText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   ReflectionCheckHelpers.field_b[1] = SocialListEntry.decodeExtendedString(var2, -77);
                 }
@@ -3024,13 +3024,13 @@ final class InterfaceTextLoader {
             void run() {
                 var3 = TetraLink.field_J;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndReportingText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountSocialAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuMultiplayerAndDisplayText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3050,7 +3050,7 @@ final class InterfaceTextLoader {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        TextTableInitialization decompiledBody = new TextTableInitialization(param0, param1);
         decompiledBody.run();
     }
 

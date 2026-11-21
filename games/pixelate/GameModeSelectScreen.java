@@ -12,7 +12,7 @@ final class GameModeSelectScreen extends MenuScreen {
     static String[] field_q;
 
     final static void loadTextTable(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+        class TextTableInitialization {
             RuntimeException stackIn_2602_0;
             StringBuilder stackIn_2602_1;
             String stackIn_2603_2;
@@ -24,7 +24,7 @@ final class GameModeSelectScreen extends MenuScreen {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            TextTableInitialization(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2602_0 = null;
@@ -36,7 +36,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndReportingText() throws java.lang.RuntimeException {
                 AsyncValidationResult.field_b = param1;
                 var2 = ChatAppendHelpers.getGameTextFile("loginm3", 0);
                 if (var2 != null) {
@@ -956,7 +956,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = ChatAppendHelpers.getGameTextFile("rule_0_5", 0);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountSocialAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   UiContainer.field_G = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
@@ -1921,7 +1921,7 @@ final class GameModeSelectScreen extends MenuScreen {
                   TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuMultiplayerAndDisplayText() throws java.lang.RuntimeException {
                 var2 = ChatAppendHelpers.getGameTextFile("achievementsthissession", param0 ^ 31873);
                 if (var2 != null) {
                   TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
@@ -2915,7 +2915,7 @@ final class GameModeSelectScreen extends MenuScreen {
                   TextTableInitializer.field_a[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndSubscriptionText() throws java.lang.RuntimeException {
                 var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,4", 0);
                 if (var2 != null) {
                   TextTableInitializer.field_a[4] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
@@ -3025,13 +3025,13 @@ final class GameModeSelectScreen extends MenuScreen {
             void run() {
                 var3 = Pixelate.field_H ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndReportingText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountSocialAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuMultiplayerAndDisplayText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3052,7 +3052,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        TextTableInitialization decompiledBody = new TextTableInitialization(param0, param1);
         decompiledBody.run();
     }
 

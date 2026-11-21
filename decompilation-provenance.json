@@ -10545,17 +10545,17 @@
       "inputTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
       "sources": {
         "files": 363,
-        "sha256": "680f583a8370fb44ee718cbf2934e354c70274f4dee55b276807a22401606fe4"
+        "sha256": "613c20fbc6eafa43c3329eafed027fb2176be4c820d6603b273a6b3034032500"
       },
       "dictionary": {
         "path": "decompilation/arcanistsmulti-naming.json",
-        "sha256": "70f41bdbdcb13dcf638d848152a47e0963e16389ed8e60a036ca0e9d9837fd90"
+        "sha256": "e11b513a22505aa816f0656a3f4862cd103215220d50f7a8a425e1e53ff56a60"
       },
       "readingGuide": {
         "path": "games/arcanistsmulti/README.md",
-        "sha256": "da14df718f57f5946afe9945954fa74a9ca852d2193dd8bf2ef56e6a313eabab"
+        "sha256": "293484fc1b24af272332d96260c0ee21411f04932e986034bab071b6d2c39335"
       },
-      "rulesSha256": "eb0080d88b19d9ea8f8e5ace28ef871b22dd56f6670319d81eb31fff469593bd",
+      "rulesSha256": "a811527f51cee5329bc640a8b50550d1ac7508b2023921bd0bc718d7d95da9dd",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "d88bc5ce810baed642d8cb3fd7a6cd8953baac3d",
@@ -10972,17 +10972,17 @@
       "inputTreeSha256": "bbe81e06d5b464eab92a6b6bf59f014012750ba4b945989ca378209286aa16a7",
       "sources": {
         "files": 397,
-        "sha256": "f36b4ccc52e321a9706a6920205e5a396d43094bb15dc67f58f72a24a2a3d739"
+        "sha256": "db495b4573374a53991249565f240504d7ac45ce4d30cef93bbfa7bae356eb6f"
       },
       "dictionary": {
         "path": "decompilation/pixelate-naming.json",
-        "sha256": "da600306520a8558fbf3abd1269a95c9ff97624ad6ea51173b9c763499a7e107"
+        "sha256": "a6f46df8bb48ae03767d85c2052f2d95a441f3f58c7ced171a5a3e4de32a38d5"
       },
       "readingGuide": {
         "path": "games/pixelate/README.md",
-        "sha256": "f5a7c518caffe5875f35b798c1ed77fa2913251d082878d1c050be2ceba5566b"
+        "sha256": "c919224da9efcefa35667abed17c78df390fac8b13357b7b08fb7478bb0571b2"
       },
-      "rulesSha256": "f8b5f30f3c2a207b5f40ceb6e9b77c3df37ae2c6ceba16e4899fe90039a82de5",
+      "rulesSha256": "7d4c9a9c4f7102d9e88e8ce3864f83b28b69f113804bdf1e9031980e340dbd46",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11044,17 +11044,17 @@
       "inputTreeSha256": "65ca5eebdd8552ccbd86cc55f34b6fce02c4599831c581d38731a88a55795e47",
       "sources": {
         "files": 429,
-        "sha256": "95e717c189b93b80ac4e1654fcf23e191ae6737c1d159fe9a8612946cd72bc13"
+        "sha256": "76af8e45e2de4ad3fa7cb26dec308708a015c013222dbacc68ad69623bc62910"
       },
       "dictionary": {
         "path": "decompilation/pool-naming.json",
-        "sha256": "d379fbc02d35b092f841875c602e529c324934807d3c90529b8be5091776452d"
+        "sha256": "2fb72d522ed240c5522a9318363bfc6a8bc652ce37bcecbfad03234224fa67a7"
       },
       "readingGuide": {
         "path": "games/pool/README.md",
-        "sha256": "23578d63bc4a6c469c329b4a2e4e14c537ebf42da3c291fd5370754e21590d29"
+        "sha256": "337a690523461cbe74e96cfe35c15970c949ff0191ace30119cfdc29ddd7ce37"
       },
-      "rulesSha256": "00c05c5d4ffa8cee35ef884a83ac39934f7b2f7cc0c852bb9eecce276210287c",
+      "rulesSha256": "2e3482d159eb12cfb1d57a6f768977d3466153dd2e657c2d3bb85a9d2ff0dbdb",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11164,17 +11164,17 @@
       "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
       "sources": {
         "files": 355,
-        "sha256": "d48b1f58773bdd6756050244ed1432d26851fa7154bf683e054420473b42aecb"
+        "sha256": "1472691a4f64bc475b8cb6fa83371a1af6d6fba87eb0c58213adf1835122ef12"
       },
       "dictionary": {
         "path": "decompilation/tetralink-naming.json",
-        "sha256": "6d3b7bc83a4e603a9bf9d2eb6a592b2c228aba014aeb84bf35c29724cf440236"
+        "sha256": "2bdb177d7092c64afb1ed5a11ffb4d5b7ab90ad4ab4b6137791f1d64798b79df"
       },
       "readingGuide": {
         "path": "games/tetralink/README.md",
-        "sha256": "c0cf061b5cd7e258782afabf1854012d49bace74a4fdbdec1c3180891264cfc5"
+        "sha256": "5aa5573acd95dddce64c3a81c6d32befe5c631037be27a97be03543b3a6bfe51"
       },
-      "rulesSha256": "52aae10e8dc46104d24129e20f7ce7c9c8c74abaf11766db4e1fd5aec34b661a",
+      "rulesSha256": "7dc9916264b4fdb92a71fbeac8c9d637b1bacbf506d8b7c43432f8288d8d9eec",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11380,17 +11380,17 @@
       "inputTreeSha256": "73369b22d01d3ca4afc8a1bb025a3f1d85920183905582e40ec4c7859f2e1c78",
       "sources": {
         "files": 347,
-        "sha256": "9a4facb693747e6ff7f9a2b5d1d1515a0eafbac65e68984a8ac32f65b4b0da40"
+        "sha256": "f74d09a9634f00e032e8fa35f2129deab2c0879cc749951b92dc038e25c9d451"
       },
       "dictionary": {
         "path": "decompilation/virogrid-naming.json",
-        "sha256": "7b19be6377cd36f1d3b32b3b6533d024f3974e269dffff7178331daaa47fba5c"
+        "sha256": "bd6587904580b784f55a850172c15ed7c8a827a5a9ccda4ddb3bb66bd17b7a6f"
       },
       "readingGuide": {
         "path": "games/virogrid/README.md",
-        "sha256": "e1582aaf38cb8e3697057941b678fc411d23414de0badcd8d9838e467a8d1576"
+        "sha256": "8d62fa6c09832685700ad350a768b046ecb640b0afd29eef45ae86aa7abeb908"
       },
-      "rulesSha256": "0d39affe382c0ac6d8ec6be2e44ff434cbe90d6767b34c23b338b3c7db2061f7",
+      "rulesSha256": "f5168c44190ab0eb3519399761ce8ba2c1dc881132a37cec7f2e3a5b8140990d",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11643,7 +11643,7 @@
         },
         "publishedSources": {
           "files": 363,
-          "sha256": "680f583a8370fb44ee718cbf2934e354c70274f4dee55b276807a22401606fe4"
+          "sha256": "613c20fbc6eafa43c3329eafed027fb2176be4c820d6603b273a6b3034032500"
         }
       },
       "armiesofgielinor": {
@@ -12828,7 +12828,7 @@
         },
         "publishedSources": {
           "files": 397,
-          "sha256": "f36b4ccc52e321a9706a6920205e5a396d43094bb15dc67f58f72a24a2a3d739"
+          "sha256": "db495b4573374a53991249565f240504d7ac45ce4d30cef93bbfa7bae356eb6f"
         }
       },
       "pool": {
@@ -12878,7 +12878,7 @@
         },
         "publishedSources": {
           "files": 429,
-          "sha256": "95e717c189b93b80ac4e1654fcf23e191ae6737c1d159fe9a8612946cd72bc13"
+          "sha256": "76af8e45e2de4ad3fa7cb26dec308708a015c013222dbacc68ad69623bc62910"
         }
       },
       "shatteredplans": {
@@ -13297,7 +13297,7 @@
         },
         "publishedSources": {
           "files": 355,
-          "sha256": "d48b1f58773bdd6756050244ed1432d26851fa7154bf683e054420473b42aecb"
+          "sha256": "1472691a4f64bc475b8cb6fa83371a1af6d6fba87eb0c58213adf1835122ef12"
         }
       },
       "tombracer": {
@@ -13647,7 +13647,7 @@
         },
         "publishedSources": {
           "files": 347,
-          "sha256": "9a4facb693747e6ff7f9a2b5d1d1515a0eafbac65e68984a8ac32f65b4b0da40"
+          "sha256": "f74d09a9634f00e032e8fa35f2129deab2c0879cc749951b92dc038e25c9d451"
         }
       },
       "voidhunters": {

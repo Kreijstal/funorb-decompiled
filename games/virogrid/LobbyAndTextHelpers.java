@@ -517,7 +517,7 @@ final class LobbyAndTextHelpers {
     }
 
     final static void loadTextTable(int param0, Js5Archive param1) {
-        class $CfrPartitionedBody {
+        class TextTableInitialization {
             RuntimeException stackIn_2620_0;
             StringBuilder stackIn_2620_1;
             String stackIn_2621_2;
@@ -529,7 +529,7 @@ final class LobbyAndTextHelpers {
             int param0;
             Js5Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Js5Archive initialParam1) {
+            TextTableInitialization(int initialParam0, Js5Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2620_0 = null;
@@ -541,7 +541,7 @@ final class LobbyAndTextHelpers {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndLobbyText() throws java.lang.RuntimeException {
                 PacketBuffer.field_k = param1;
                 var2 = NamedTextResourceHelpers.readNamedArchiveFile("loginm3", (byte) -114);
                 if (var2 != null) {
@@ -1397,7 +1397,7 @@ final class LobbyAndTextHelpers {
                 }
                 var2 = NamedTextResourceHelpers.readNamedArchiveFile("gameopt_inviteplayers_or_trychanging1", (byte) -96);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountAndSocialText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   MouseTrailPoint.field_i = MidiPcmStream.decodeText(-2022, var2);
                 }
@@ -2291,7 +2291,7 @@ final class LobbyAndTextHelpers {
                 }
                 var2 = NamedTextResourceHelpers.readNamedArchiveFile("waitingfor_extradata", (byte) -91);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuAndMultiplayerText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   SectorCacheStore.field_a = MidiPcmStream.decodeText(-2022, var2);
                 }
@@ -3208,7 +3208,7 @@ final class LobbyAndTextHelpers {
                   BufferedSocket.field_i = MidiPcmStream.decodeText(param0 - 2021, var2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndDisplayText() throws java.lang.RuntimeException {
                 var2 = NamedTextResourceHelpers.readNamedArchiveFile("fs_button_tryagain", (byte) -62);
                 if (null != var2) {
                   EmailDomainValidationHelpers.field_a = MidiPcmStream.decodeText(-2022, var2);
@@ -3533,13 +3533,13 @@ final class LobbyAndTextHelpers {
             void run() {
                 var3 = Virogrid.field_F ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginAndLobbyText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountAndSocialText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuAndMultiplayerText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndDisplayText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3560,7 +3560,7 @@ final class LobbyAndTextHelpers {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        TextTableInitialization decompiledBody = new TextTableInitialization(param0, param1);
         decompiledBody.run();
     }
 

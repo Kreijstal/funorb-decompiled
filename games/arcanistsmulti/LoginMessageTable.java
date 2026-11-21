@@ -134,7 +134,7 @@ final class LoginMessageTable {
     }
 
     final static void initializeLoginMessages(byte param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+        class CommonTextInitialization {
             RuntimeException stackIn_2624_0;
             StringBuilder stackIn_2624_1;
             String stackIn_2625_2;
@@ -145,7 +145,7 @@ final class LoginMessageTable {
             byte param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
+            CommonTextInitialization(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2624_0 = null;
@@ -156,7 +156,7 @@ final class LoginMessageTable {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndLobbyText() throws java.lang.RuntimeException {
                 AlternateUsernameCredentials.field_q = param1;
                 var2 = MusicPatch.loadNamedFile("loginm3", (byte) -45);
                 if (null != var2) {
@@ -987,7 +987,7 @@ final class LoginMessageTable {
                   ArchiveProvider.field_c = ValidationHelpWidget.decodeString((byte) 105, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountAndSocialText() throws java.lang.RuntimeException {
                 var2 = MusicPatch.loadNamedFile("gameopt_playersdontqualify", (byte) -45);
                 if (var2 != null) {
                   DiskCacheRequest.field_G = ValidationHelpWidget.decodeString((byte) 107, var2);
@@ -1850,7 +1850,7 @@ final class LoginMessageTable {
                 }
                 var2 = MusicPatch.loadNamedFile("enterignore_add", (byte) -45);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuAndMultiplayerText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   SecondaryNodeDequeIterator.field_a = ValidationHelpWidget.decodeString((byte) 124, var2);
                 }
@@ -2748,7 +2748,7 @@ final class LoginMessageTable {
                 }
                 var2 = MusicPatch.loadNamedFile("reconnect_exitfs_quit", (byte) -45);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndDisplayText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   ValidationHelpWidget.decodeString((byte) 102, var2);
                 }
@@ -3148,13 +3148,13 @@ final class LoginMessageTable {
             void run() {
                 var3 = ArcanistsMulti.field_G ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginAndLobbyText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountAndSocialText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuAndMultiplayerText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndDisplayText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3173,7 +3173,7 @@ final class LoginMessageTable {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        CommonTextInitialization decompiledBody = new CommonTextInitialization(param0, param1);
         decompiledBody.run();
     }
 

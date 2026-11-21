@@ -106,7 +106,7 @@ final class TextTableInitializer {
     }
 
     final static void initializeTextTable(ResourceArchive param0, byte param1) {
-        class $CfrPartitionedBody {
+        class GameTextInitialization {
             RuntimeException stackIn_3095_0;
             StringBuilder stackIn_3095_1;
             String stackIn_3096_2;
@@ -118,7 +118,7 @@ final class TextTableInitializer {
             ResourceArchive param0;
             byte param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, byte initialParam1) {
+            GameTextInitialization(ResourceArchive initialParam0, byte initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_3095_0 = null;
@@ -130,7 +130,7 @@ final class TextTableInitializer {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadExpansionAndSpellDescriptions() throws java.lang.RuntimeException {
                 QuickChatPhraseCache.field_e = param0;
                 var2 = CachedArchiveProvider.loadNamedFile("text_game_name", param1 ^ -75);
                 if (null != var2) {
@@ -993,7 +993,7 @@ final class TextTableInitializer {
                   PasswordFieldPainter.field_w[34] = ValidationHelpWidget.decodeString((byte) 103, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadSpellNamesAndAchievementNames() throws java.lang.RuntimeException {
                 var2 = CachedArchiveProvider.loadNamedFile("spellnames,35", param1 - 134);
                 if (null != var2) {
                   PasswordFieldPainter.field_w[35] = ValidationHelpWidget.decodeString((byte) 127, var2);
@@ -1836,7 +1836,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("achievement_names,87", -80);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadAchievementsControlsAndSpellBookText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   TimedMessage.field_n[87] = ValidationHelpWidget.decodeString((byte) 106, var2);
                 }
@@ -2669,7 +2669,7 @@ final class TextTableInitializer {
                   TextHotspotWidget.field_M = ValidationHelpWidget.decodeString((byte) 86, var2);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSpellBookAwardsAndTutorialText() throws java.lang.RuntimeException {
                 var2 = CachedArchiveProvider.loadNamedFile("underidsc", -73);
                 if (null != var2) {
                   IterableNodeHashTable.field_g = ValidationHelpWidget.decodeString((byte) 86, var2);
@@ -3615,7 +3615,7 @@ final class TextTableInitializer {
                 }
                 var2 = CachedArchiveProvider.loadNamedFile("youareentangled", -82);
             }
-            void runChunk4() throws java.lang.RuntimeException {
+            void loadFamiliarAndSandboxText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   ValidationHelpWidget.decodeString((byte) 118, var2);
                 }
@@ -3700,15 +3700,15 @@ final class TextTableInitializer {
             void run() {
                 var3 = ArcanistsMulti.field_G ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadExpansionAndSpellDescriptions();
                   if (finished) return;
-                  runChunk1();
+                  loadSpellNamesAndAchievementNames();
                   if (finished) return;
-                  runChunk2();
+                  loadAchievementsControlsAndSpellBookText();
                   if (finished) return;
-                  runChunk3();
+                  loadSpellBookAwardsAndTutorialText();
                   if (finished) return;
-                  runChunk4();
+                  loadFamiliarAndSandboxText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3729,7 +3729,7 @@ final class TextTableInitializer {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextInitialization decompiledBody = new GameTextInitialization(param0, param1);
         decompiledBody.run();
     }
 

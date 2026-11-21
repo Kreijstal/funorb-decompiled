@@ -1028,6 +1028,14 @@
       "renamedSymbol": "C:InterfaceTextLoader"
     },
     {
+      "symbol": "C:gi$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "TextTableInitialization",
+      "evidence": "Local carrier for744 ordered named text resources, archive/parameters, temporary bytes and caught exceptions; original dispatcher and guard transitions retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:InterfaceTextLoader$1TextTableInitialization"
+    },
+    {
       "symbol": "C:gj",
       "originalName": "gj",
       "to": "MenuStyleHelpers",
@@ -9762,6 +9770,38 @@
       "evidence": "Body matches the reviewed ContextActionMenu.joinCharSequenceRange in Pixelate (token similarity 0.86).",
       "confidence": "reviewed",
       "renamedSymbol": "M:PopupAndStripHelpers.joinCharSequenceRange([Ljava/lang/CharSequence;III)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:gi$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginLobbyAndReportingText",
+      "evidence": "Reviewed complete ordered resource-key inventory (225 keys, \"loginm3\" through \"rule_0_0\") and non-resource/control statements. Full744-key sequence matches reviewed Virogrid table; game-specific boundaries, decode/byte-char helpers, array destinations, discarded results, guards/recursion and archive cleanup retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadLoginLobbyAndReportingText()V"
+    },
+    {
+      "symbol": "M:gi$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountSocialAndLoadingText",
+      "evidence": "Reviewed complete ordered resource-key inventory (234 keys, \"rule_0_1\" through \"unpacking_toolkit\") and non-resource/control statements. Full744-key sequence matches reviewed Virogrid table; game-specific boundaries, decode/byte-char helpers, array destinations, discarded results, guards/recursion and archive cleanup retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadAccountSocialAndLoadingText()V"
+    },
+    {
+      "symbol": "M:gi$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMenuMultiplayerAndDisplayText",
+      "evidence": "Reviewed complete ordered resource-key inventory (242 keys, \"instructions\" through \"mustlogin2,1\") and non-resource/control statements. Full744-key sequence matches reviewed Virogrid table; game-specific boundaries, decode/byte-char helpers, array destinations, discarded results, guards/recursion and archive cleanup retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadMenuMultiplayerAndDisplayText()V"
+    },
+    {
+      "symbol": "M:gi$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadMembershipAndSubscriptionText",
+      "evidence": "Reviewed complete ordered resource-key inventory (43 keys, \"mustlogin2,2\" through \"sentence_separator\") and non-resource/control statements. Full744-key sequence matches reviewed Virogrid table; game-specific boundaries, decode/byte-char helpers, array destinations, discarded results, guards/recursion and archive cleanup retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadMembershipAndSubscriptionText()V"
     },
     {
       "symbol": "M:gi.a(I)V",
@@ -23258,9 +23298,9 @@
     },
     {
       "symbol": "C:gi$1$CfrPartitionedBody",
-      "renamedSymbol": "C:InterfaceTextLoader$1$CfrPartitionedBody",
+      "renamedSymbol": "C:InterfaceTextLoader$1TextTableInitialization",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "TextTableInitialization",
       "declaration": {
         "file": "gi.java",
         "start": 219,
@@ -36469,7 +36509,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -36480,7 +36520,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -36491,7 +36531,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.param0:I",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.param0:I",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.param0:I",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -36502,7 +36542,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.param1:Lah;",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.param1:LArchive;",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.param1:LArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -36513,7 +36553,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.stackIn_2605_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.stackIn_2605_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.stackIn_2605_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2605_0",
       "renamedName": "stackIn_2605_0",
       "declaration": {
@@ -36524,7 +36564,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.stackIn_2605_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.stackIn_2605_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.stackIn_2605_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2605_1",
       "renamedName": "stackIn_2605_1",
       "declaration": {
@@ -36535,7 +36575,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.stackIn_2606_2:Ljava/lang/String;",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.stackIn_2606_2:Ljava/lang/String;",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.stackIn_2606_2:Ljava/lang/String;",
       "originalName": "stackIn_2606_2",
       "renamedName": "stackIn_2606_2",
       "declaration": {
@@ -36546,7 +36586,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.stackIn_2614_0:Z",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.stackIn_2614_0:Z",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.stackIn_2614_0:Z",
       "originalName": "stackIn_2614_0",
       "renamedName": "stackIn_2614_0",
       "declaration": {
@@ -36557,7 +36597,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -36568,7 +36608,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -36579,7 +36619,7 @@
     },
     {
       "symbol": "F:gi$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:InterfaceTextLoader$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:InterfaceTextLoader$1TextTableInitialization.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -115801,7 +115841,7 @@
     },
     {
       "symbol": "L:gi$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:InterfaceTextLoader$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:InterfaceTextLoader$1TextTableInitialization.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -229926,9 +229966,9 @@
     },
     {
       "symbol": "M:gi$1$CfrPartitionedBody.<init>(ILah;)V",
-      "renamedSymbol": "M:InterfaceTextLoader$1$CfrPartitionedBody.<init>(ILArchive;)V",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.<init>(ILArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "TextTableInitialization",
       "declaration": {
         "file": "gi.java",
         "start": 630,
@@ -229937,7 +229977,7 @@
     },
     {
       "symbol": "M:gi$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:InterfaceTextLoader$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -229948,9 +229988,9 @@
     },
     {
       "symbol": "M:gi$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:InterfaceTextLoader$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadLoginLobbyAndReportingText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginLobbyAndReportingText",
       "declaration": {
         "file": "gi.java",
         "start": 1145,
@@ -229959,9 +229999,9 @@
     },
     {
       "symbol": "M:gi$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:InterfaceTextLoader$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadAccountSocialAndLoadingText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountSocialAndLoadingText",
       "declaration": {
         "file": "gi.java",
         "start": 37781,
@@ -229970,9 +230010,9 @@
     },
     {
       "symbol": "M:gi$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:InterfaceTextLoader$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadMenuMultiplayerAndDisplayText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMenuMultiplayerAndDisplayText",
       "declaration": {
         "file": "gi.java",
         "start": 75019,
@@ -229981,9 +230021,9 @@
     },
     {
       "symbol": "M:gi$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:InterfaceTextLoader$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:InterfaceTextLoader$1TextTableInitialization.loadMembershipAndSubscriptionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadMembershipAndSubscriptionText",
       "declaration": {
         "file": "gi.java",
         "start": 112580,
@@ -275719,7 +275759,7 @@
     },
     {
       "symbol": "P:gi$1$CfrPartitionedBody.<init>(ILah;)V#0",
-      "renamedSymbol": "P:InterfaceTextLoader$1$CfrPartitionedBody.<init>(ILArchive;)V#0",
+      "renamedSymbol": "P:InterfaceTextLoader$1TextTableInitialization.<init>(ILArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -275730,7 +275770,7 @@
     },
     {
       "symbol": "P:gi$1$CfrPartitionedBody.<init>(ILah;)V#1",
-      "renamedSymbol": "P:InterfaceTextLoader$1$CfrPartitionedBody.<init>(ILArchive;)V#1",
+      "renamedSymbol": "P:InterfaceTextLoader$1TextTableInitialization.<init>(ILArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -417900,7 +417940,7 @@
       "original": "gi.java",
       "renamed": "InterfaceTextLoader.java",
       "inputSha256": "28cd42674974b6a751eb9ed4b23539b34f63426f4433a46b21539714695d71db",
-      "outputSha256": "9fadcfdbd574eac7ade4442b85262b31df263c2d7667a9ae51a1b1fcae619911",
+      "outputSha256": "552e73687070e65238d8548f67826b5ecd7451d7cf30ae10f791171e921cb202",
       "edits": [
         {
           "start": 50,
@@ -417938,6 +417978,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 219,
+          "end": 238,
+          "symbol": "C:gi$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TextTableInitialization"
+        },
+        {
           "start": 577,
           "end": 579,
           "symbol": "C:ah",
@@ -417945,11 +417992,25 @@
           "renamed": "Archive"
         },
         {
+          "start": 630,
+          "end": 649,
+          "symbol": "M:gi$1$CfrPartitionedBody.<init>(ILah;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TextTableInitialization"
+        },
+        {
           "start": 669,
           "end": 671,
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "Archive"
+        },
+        {
+          "start": 1145,
+          "end": 1154,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndReportingText"
         },
         {
           "start": 1209,
@@ -425687,6 +425748,13 @@
           "renamed": "readNamedRootFile"
         },
         {
+          "start": 37781,
+          "end": 37790,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountSocialAndLoadingText"
+        },
+        {
           "start": 37883,
           "end": 37885,
           "symbol": "C:qf",
@@ -433352,6 +433420,13 @@
           "renamed": "decodeExtendedString"
         },
         {
+          "start": 75019,
+          "end": 75028,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMultiplayerAndDisplayText"
+        },
+        {
           "start": 75090,
           "end": 75092,
           "symbol": "C:vj",
@@ -440954,6 +441029,13 @@
           "renamed": "readNamedRootFile"
         },
         {
+          "start": 112580,
+          "end": 112589,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMembershipAndSubscriptionText"
+        },
+        {
           "start": 112682,
           "end": 112684,
           "symbol": "C:qf",
@@ -442592,6 +442674,34 @@
           "renamed": "CachedArchiveSource"
         },
         {
+          "start": 120052,
+          "end": 120061,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndReportingText"
+        },
+        {
+          "start": 120123,
+          "end": 120132,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountSocialAndLoadingText"
+        },
+        {
+          "start": 120194,
+          "end": 120203,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMultiplayerAndDisplayText"
+        },
+        {
+          "start": 120265,
+          "end": 120274,
+          "symbol": "M:gi$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMembershipAndSubscriptionText"
+        },
+        {
           "start": 120897,
           "end": 120899,
           "symbol": "C:oi",
@@ -442618,6 +442728,20 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 121229,
+          "end": 121248,
+          "symbol": "C:gi$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TextTableInitialization"
+        },
+        {
+          "start": 121270,
+          "end": 121289,
+          "symbol": "C:gi$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "TextTableInitialization"
         },
         {
           "start": 121369,
@@ -586707,10 +586831,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tetralink"
     },
-    "rulesSha256": "52aae10e8dc46104d24129e20f7ce7c9c8c74abaf11766db4e1fd5aec34b661a",
+    "rulesSha256": "7dc9916264b4fdb92a71fbeac8c9d637b1bacbf506d8b7c43432f8288d8d9eec",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
-    "outputTreeSha256": "d48b1f58773bdd6756050244ed1432d26851fa7154bf683e054420473b42aecb",
+    "outputTreeSha256": "1472691a4f64bc475b8cb6fa83371a1af6d6fba87eb0c58213adf1835122ef12",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

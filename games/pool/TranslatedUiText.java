@@ -92,7 +92,7 @@ final class TranslatedUiText {
     }
 
     final static void loadLocalizedStrings(ResourceArchive archive, int obfuscationGuard) {
-        class $CfrPartitionedBody {
+        class CommonTextInitialization {
             RuntimeException stackIn_2626_0;
             StringBuilder stackIn_2626_1;
             String stackIn_2627_2;
@@ -104,7 +104,7 @@ final class TranslatedUiText {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            CommonTextInitialization(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2626_0 = null;
@@ -116,7 +116,7 @@ final class TranslatedUiText {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndLobbyText() throws java.lang.RuntimeException {
                 EmailAvailabilityValidator.field_r = param0;
                 var2 = DebouncedValidationProvider.loadNamedFile((byte) 123, "loginm3");
                 if (var2 != null) {
@@ -980,7 +980,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.loadNamedFile((byte) -98, "gameopt_novalidcombos");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountSocialAndLoadingText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   LoginResponse.field_a = Cp1252DecodingSupport.decodeBytesToString(var2, param1 ^ -21098);
                 }
@@ -1889,7 +1889,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.loadNamedFile((byte) -53, "loading_models");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuMultiplayerAndDisplayText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   Cp1252DecodingSupport.decodeBytesToString(var2, -44);
                 }
@@ -2819,7 +2819,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.loadNamedFile((byte) -32, "mb_exclusive_1");
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndDisplayText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   UsernameSuggestionsPanel.field_X = Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
@@ -3108,13 +3108,13 @@ final class TranslatedUiText {
             void run() {
                 var3 = Pool.field_O;
                 try {
-                  runChunk0();
+                  loadLoginAndLobbyText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountSocialAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuMultiplayerAndDisplayText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndDisplayText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3134,7 +3134,7 @@ final class TranslatedUiText {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(archive, obfuscationGuard);
+        CommonTextInitialization decompiledBody = new CommonTextInitialization(archive, obfuscationGuard);
         decompiledBody.run();
     }
 

@@ -11,7 +11,7 @@ final class PoolUiText {
     static UiComponent field_e;
 
     final static void applyLocalizedTexts(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+        class PoolTextInitialization {
             RuntimeException stackIn_1506_0;
             StringBuilder stackIn_1506_1;
             String stackIn_1507_2;
@@ -23,7 +23,7 @@ final class PoolUiText {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            PoolTextInitialization(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1506_0 = null;
@@ -35,7 +35,7 @@ final class PoolUiText {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementsOptionsAndInstructions() throws java.lang.RuntimeException {
                 MidiNoteMixer.field_u = param0;
                 var2 = LocalGameSetupScreen.loadMenuResource("text_game_name", (byte) 29);
                 if (null != var2) {
@@ -892,7 +892,7 @@ final class PoolUiText {
                 }
                 var2 = LocalGameSetupScreen.loadMenuResource("definition_terms_conjugations,6,2", (byte) 123);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadTutorialMatchAndControlText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   Pocket.field_e[6][2] = Cp1252DecodingSupport.decodeBytesToString(var2, 124);
                 }
@@ -1737,9 +1737,9 @@ final class PoolUiText {
             void run() {
                 var4 = Pool.field_O;
                 try {
-                  runChunk0();
+                  loadAchievementsOptionsAndInstructions();
                   if (finished) return;
-                  runChunk1();
+                  loadTutorialMatchAndControlText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -1759,7 +1759,7 @@ final class PoolUiText {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        PoolTextInitialization decompiledBody = new PoolTextInitialization(param0, param1);
         decompiledBody.run();
     }
 
