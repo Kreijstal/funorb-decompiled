@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class RawSound extends AudioSupport006 {
+final class RawSound extends AbstractAudioSample {
     int integerState0794;
     byte[] byteArrayState0028;
     int integerState0795;
     boolean booleanState0192;
     int integerState0796;
 
-    final RawSound computeRawSound1852(AudioSupport002 audioSupport002Argument1) {
-        this.byteArrayState0028 = audioSupport002Argument1.computeByteArray0884(14, this.byteArrayState0028);
-        this.integerState0794 = audioSupport002Argument1.computeInteger0886(false, this.integerState0794);
+    final RawSound computeRawSound1802(PcmResampler pcmResamplerArgument1) {
+        this.byteArrayState0028 = pcmResamplerArgument1.resample(14, this.byteArrayState0028);
+        this.integerState0794 = pcmResamplerArgument1.scaleRate(false, this.integerState0794);
         if (this.integerState0795 != this.integerState0796) {
-          this.integerState0795 = audioSupport002Argument1.computeInteger0888(this.integerState0795, 86);
-          this.integerState0796 = audioSupport002Argument1.computeInteger0888(this.integerState0796, 36);
+          this.integerState0795 = pcmResamplerArgument1.scalePosition(this.integerState0795, 86);
+          this.integerState0796 = pcmResamplerArgument1.scalePosition(this.integerState0796, 36);
           if (this.integerState0795 == this.integerState0796) {
             this.integerState0795 = this.integerState0795 - 1;
           }
           return this;
         }
-        int cachedIntegerLocal1 = audioSupport002Argument1.computeInteger0888(this.integerState0795, 114);
+        int cachedIntegerLocal1 = pcmResamplerArgument1.scalePosition(this.integerState0795, 114);
         this.integerState0796 = cachedIntegerLocal1;
         this.integerState0795 = cachedIntegerLocal1;
         return this;

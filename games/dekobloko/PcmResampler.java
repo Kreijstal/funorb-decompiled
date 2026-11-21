@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AudioSupport002 {
+final class PcmResampler {
     static int integerState0344;
     static MixedSupport006 mixedSupport006State0002;
     static MixedSupport016 mixedSupport016State0002;
@@ -9,7 +9,7 @@ final class AudioSupport002 {
     private int integerState0346;
     private int[][] integerArrayArrayState0013;
 
-    final static MixedSupport111 computeMixedSupport1110883(int integerArgument1, int integerArgument2) {
+    final static MixedSupport111 computeMixedSupport1110858(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         MixedSupport111[] mixedSupport111ArrayLocal2;
         int integerLocal3;
@@ -17,7 +17,7 @@ final class AudioSupport002 {
         MixedSupport111[] mixedSupport111ArrayLocal5;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         integerLocal3 = -128 / ((integerArgument1 + 53) / 58);
-        mixedSupport111ArrayLocal5 = NodeDeque.computeMixedSupport111Array1975(-23521);
+        mixedSupport111ArrayLocal5 = NodeDeque.computeMixedSupport111Array1925(-23521);
         mixedSupport111ArrayLocal2 = mixedSupport111ArrayLocal5;
         for (integerLocal1 = 0; integerLocal1 < mixedSupport111ArrayLocal5.length; integerLocal1++) {
           if (mixedSupport111ArrayLocal5[integerLocal1].integerState0671 == integerArgument2) {
@@ -27,7 +27,7 @@ final class AudioSupport002 {
         return null;
     }
 
-    final byte[] computeByteArray0884(int integerArgument1, byte[] byteArrayArgument2) {
+    final byte[] resample(int integerArgument1, byte[] byteArrayArgument2) {
         byte[] stackByteArrayLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -101,11 +101,11 @@ final class AudioSupport002 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final static MixedSupport016 computeMixedSupport0160882(int integerArgument1) {
+    final static MixedSupport016 computeMixedSupport0160857(int integerArgument1) {
         if (GameAssets.mixedSupport004State0004 == MixedSupport134.mixedSupport004State0005) {
           throw new IllegalStateException();
         }
@@ -116,11 +116,11 @@ final class AudioSupport002 {
         if (integerArgument1 == 13) {
           return null;
         }
-        AudioSupport002.computeMixedSupport0160882(-1);
+        PcmResampler.computeMixedSupport0160857(-1);
         return null;
     }
 
-    final int computeInteger0888(int integerArgument1, int integerArgument2) {
+    final int scalePosition(int integerArgument1, int integerArgument2) {
         if (integerArgument2 < 17) {
           this.integerState0346 = 12;
         }
@@ -130,7 +130,7 @@ final class AudioSupport002 {
         return integerArgument1;
     }
 
-    final static String computeString0885(String stringArgument1, int integerArgument2, byte byteArgument3) {
+    final static String computeString0859(String stringArgument1, int integerArgument2, byte byteArgument3) {
         String stackStringLocal1 = null;
         String stackStringLocal2 = null;
         String stackStringLocal3 = null;
@@ -150,53 +150,53 @@ final class AudioSupport002 {
         String stringLocal17 = null;
         try {
           if (1 == integerArgument2) {
-            stackStringLocal1 = CollectionSupport001.computeString0336(121, GameDomainSupport006.stringState0627, new String[]{stringArgument1});
+            stackStringLocal1 = NodeHashTableIterator.substituteIndexedPlaceholders(121, GameDomainSupport006.stringState0627, new String[]{stringArgument1});
             return stackStringLocal1;
           }
           if (2 == integerArgument2) {
-            stackStringLocal2 = CollectionSupport001.computeString0336(121, PlatformSupport004.stringState0229, new String[]{stringArgument1});
+            stackStringLocal2 = NodeHashTableIterator.substituteIndexedPlaceholders(121, PlatformSupport004.stringState0229, new String[]{stringArgument1});
             return stackStringLocal2;
           }
           if (byteArgument3 != -128) {
             stringLocal17 = (String) null;
-            AudioSupport002.computeString0885((String) null, 71, (byte) -56);
+            PcmResampler.computeString0859((String) null, 71, (byte) -56);
           }
           if (3 == integerArgument2) {
-            stackStringLocal3 = CollectionSupport001.computeString0336(83, MixedSupport010.stringState0046, new String[]{stringArgument1});
+            stackStringLocal3 = NodeHashTableIterator.substituteIndexedPlaceholders(83, MixedSupport010.stringState0046, new String[]{stringArgument1});
             return stackStringLocal3;
           }
           if (integerArgument2 == 4) {
-            stackStringLocal4 = CollectionSupport001.computeString0336(106, NetworkSupport001.stringState0026, new String[]{stringArgument1});
+            stackStringLocal4 = NodeHashTableIterator.substituteIndexedPlaceholders(106, NetworkSupport001.stringState0026, new String[]{stringArgument1});
             return stackStringLocal4;
           }
           if (integerArgument2 == 5) {
-            stackStringLocal5 = CollectionSupport001.computeString0336(96, MixedSupport084.stringState0337, new String[]{stringArgument1});
+            stackStringLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, MixedSupport084.stringState0337, new String[]{stringArgument1});
             return stackStringLocal5;
           }
           if (integerArgument2 == 6) {
-            stackStringLocal6 = CollectionSupport001.computeString0336(121, MixedSupport011.stringState0055, new String[]{stringArgument1});
+            stackStringLocal6 = NodeHashTableIterator.substituteIndexedPlaceholders(121, MixedSupport011.stringState0055, new String[]{stringArgument1});
             return stackStringLocal6;
           }
           if (integerArgument2 == 7) {
-            stackStringLocal7 = CollectionSupport001.computeString0336(123, MixedSupport033.stringState0160, new String[]{stringArgument1});
+            stackStringLocal7 = NodeHashTableIterator.substituteIndexedPlaceholders(123, MixedSupport033.stringState0160, new String[]{stringArgument1});
             return stackStringLocal7;
           }
           if (integerArgument2 == 8) {
-            stackStringLocal8 = CollectionSupport001.computeString0336(83, MixedSupport047.stringState0200, new String[]{stringArgument1});
+            stackStringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(83, MixedSupport047.stringState0200, new String[]{stringArgument1});
             return stackStringLocal8;
           }
           if (integerArgument2 == 11) {
-            stackStringLocal9 = CollectionSupport001.computeString0336(123, MixedSupport032.stringState0157, new String[]{stringArgument1});
+            stackStringLocal9 = NodeHashTableIterator.substituteIndexedPlaceholders(123, MixedSupport032.stringState0157, new String[]{stringArgument1});
             return stackStringLocal9;
           }
           if (integerArgument2 == 12) {
-            stackStringLocal10 = CollectionSupport001.computeString0336(100, UiComponentPart018.stringState0343, new String[]{stringArgument1});
+            stackStringLocal10 = NodeHashTableIterator.substituteIndexedPlaceholders(100, UiComponentPart018.stringState0343, new String[]{stringArgument1});
             return stackStringLocal10;
           }
           if (13 != integerArgument2) {
             return null;
           }
-          stackStringLocal11 = CollectionSupport001.computeString0336(127, GameAssets.stringState0502, new String[]{stringArgument1});
+          stackStringLocal11 = NodeHashTableIterator.substituteIndexedPlaceholders(127, GameAssets.stringState0502, new String[]{stringArgument1});
           return stackStringLocal11;
         } catch (java.lang.RuntimeException caughtParameterLocal18) {
           caughtExceptionLocal15 = caughtParameterLocal18;
@@ -208,11 +208,11 @@ final class AudioSupport002 {
           } else {
             stackStringLocal14 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument2).append(',').append(byteArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal12), ((StringBuilder) (Object) stackStringBuilderLocal13).append(stackStringLocal14).append(',').append(integerArgument2).append(',').append(byteArgument3).append(')').toString());
         }
     }
 
-    public static void performAction0887(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         mixedSupport006State0002 = null;
         mixedSupport016State0002 = null;
         if (integerArgument1 != 23369) {
@@ -220,7 +220,7 @@ final class AudioSupport002 {
         }
     }
 
-    final int computeInteger0886(boolean booleanArgument1, int integerArgument2) {
+    final int scaleRate(boolean booleanArgument1, int integerArgument2) {
         if (booleanArgument1) {
           return -86;
         }
@@ -230,7 +230,7 @@ final class AudioSupport002 {
         return integerArgument2;
     }
 
-    AudioSupport002(int integerArgument1, int integerArgument2) {
+    PcmResampler(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int[] integerArrayLocal3;
@@ -243,7 +243,7 @@ final class AudioSupport002 {
         if (integerArgument2 == integerArgument1) {
           return;
         }
-        integerLocal2 = InputAdapter004.computeInteger1235(43, integerArgument1, integerArgument2);
+        integerLocal2 = KeyboardInputHandler.greatestCommonDivisor(43, integerArgument1, integerArgument2);
         integerArgument2 = integerArgument2 / integerLocal2;
         integerArgument1 = integerArgument1 / integerLocal2;
         this.integerState0345 = integerArgument1;

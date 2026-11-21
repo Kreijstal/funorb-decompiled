@@ -11,7 +11,7 @@ final class MixedSupport146 {
     static String stringState0594;
     static PcmStreamMixer pcmStreamMixerState0005;
 
-    final static boolean computeBoolean1951(byte byteArgument1) {
+    final static boolean computeBoolean1901(byte byteArgument1) {
         long longLocal1;
         long longLocal2;
         int integerLocal3;
@@ -20,7 +20,7 @@ final class MixedSupport146 {
         if (byteArgument1 <= 50) {
           return false;
         }
-        longLocal1 = MixedSupport063.computeLong0827(4);
+        longLocal1 = MixedSupport063.computeLong0802(4);
         longLocal2 = -MouseInput.longState0054 + longLocal1;
         if (longLocal2 > 30000L) {
           MixedSupport004.integerState0030 = 0;
@@ -47,7 +47,7 @@ final class MixedSupport146 {
         return true;
     }
 
-    final static MixedSupport001 computeMixedSupport0011952(int integerArgument1) {
+    final static MixedSupport001 computeMixedSupport0011902(int integerArgument1) {
         if (integerArgument1 == 1424) {
           if (null == NetworkSupport012.mixedSupport001State0001) {
             NetworkSupport012.mixedSupport001State0001 = new MixedSupport001(MixedSupport011.bitmapFontState0006, 20, 0, 0, 0, 11579568, -1, 0, 0, MixedSupport011.bitmapFontState0006.integerState0518, -1, 2147483647, true);
@@ -57,7 +57,7 @@ final class MixedSupport146 {
         return (MixedSupport001) null;
     }
 
-    public static void performAction1954(boolean booleanArgument1) {
+    public static void performAction1904(boolean booleanArgument1) {
         sceneWidgetPart004State0001 = null;
         stringArrayState0054 = null;
         pcmStreamMixerState0005 = null;
@@ -68,7 +68,7 @@ final class MixedSupport146 {
         }
     }
 
-    final static int computeInteger1953(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static int computeInteger1903(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (!(SoftwareRaster.integerState0285 < integerArgument3 + integerArgument4)) {
           return integerArgument4;
         }
@@ -78,7 +78,7 @@ final class MixedSupport146 {
         if (integerArgument2 == -18265) {
           return SoftwareRaster.integerState0285 - integerArgument3;
         }
-        MixedSupport146.computeInteger1953(-78, -105, 117, -8);
+        MixedSupport146.computeInteger1903(-78, -105, 117, -8);
         return SoftwareRaster.integerState0285 - integerArgument3;
     }
 

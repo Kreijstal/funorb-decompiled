@@ -11,7 +11,7 @@ final class MixedSupport093 {
     static int integerState0546;
     static String stringState0371;
 
-    public static void performAction1304(boolean booleanArgument1) {
+    public static void performAction1256(boolean booleanArgument1) {
         if (!booleanArgument1) {
           stringState0370 = null;
           integerArrayState0172 = null;
@@ -30,7 +30,7 @@ final class MixedSupport093 {
         platformServiceState0004 = null;
     }
 
-    final static int computeInteger1303(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static int computeInteger1255(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (!(SoftwareRaster.integerState0284 < integerArgument1 + (integerArgument4 + integerArgument3))) {
           return integerArgument4 + integerArgument1;
         }
@@ -43,7 +43,7 @@ final class MixedSupport093 {
     static {
         integerState0545 = 50;
         stringState0370 = "Add friend";
-        integerArrayState0172 = UiComponentPart002.computeIntegerArray0091(-123);
+        integerArrayState0172 = UiComponentPart002.computeIntegerArray0088(-123);
         stringState0371 = "Did you know?";
     }
 }

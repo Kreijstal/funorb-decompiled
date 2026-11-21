@@ -14,7 +14,7 @@ final class MixedSupport124 {
     static int integerState0772;
     static String stringState0523;
 
-    public static void performAction1771(boolean booleanArgument1) {
+    public static void performAction1721(boolean booleanArgument1) {
         mixedSupport111State0011 = null;
         if (booleanArgument1) {
           return;
@@ -24,7 +24,7 @@ final class MixedSupport124 {
         stringState0522 = null;
     }
 
-    final static int computeInteger1769(CharSequence charSequenceArgument1, int integerArgument2) {
+    final static int computeInteger1719(CharSequence charSequenceArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -42,7 +42,7 @@ final class MixedSupport124 {
           integerLocal4 = charSequenceArgument1.length();
           integerLocal5 = 0;
           for (integerLocal1 = 0; integerLocal1 < integerLocal4; integerLocal1++) {
-            integerLocal5 = (integerLocal5 << 5) + (-integerLocal5 + MixedSupport064.computeByte0848(charSequenceArgument1.charAt(integerLocal1), (byte) 28));
+            integerLocal5 = (integerLocal5 << 5) + (-integerLocal5 + MixedSupport064.computeByte0823(charSequenceArgument1.charAt(integerLocal1), (byte) 28));
           }
           stackIntegerLocal7 = integerLocal5;
           return stackIntegerLocal7;
@@ -56,19 +56,19 @@ final class MixedSupport124 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    final static boolean computeBoolean1766(byte byteArgument1) {
+    final static boolean computeBoolean1716(byte byteArgument1) {
         boolean stackBooleanLocal1 = false;
         if (byteArgument1 > -22) {
-          MixedSupport124.performAction1771(false);
+          MixedSupport124.performAction1721(false);
         }
         boolean frameRemainderLocal2 = true;
         if (UiComponentPart004.integerState0091 >= 20 &&
-          UiComponentPart030.computeBoolean1762((byte) 124) && (!(GameDomainSupport001.integerState0052 > 0) ||
-          FunOrbClient.computeBoolean0126((byte) 31))) {
+          UiComponentPart030.computeBoolean1712((byte) 124) && (!(GameDomainSupport001.integerState0052 > 0) ||
+          FunOrbClient.computeBoolean0123((byte) 31))) {
           stackBooleanLocal1 = false;
           frameRemainderLocal2 = false;
         }
@@ -78,7 +78,7 @@ final class MixedSupport124 {
         return stackBooleanLocal1;
     }
 
-    final static boolean computeBoolean1770(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2, int integerArgument3, ResourceArchive resourceArchiveArgument4) {
+    final static boolean computeBoolean1720(ResourceArchive resourceArchiveArgument1, ResourceArchive resourceArchiveArgument2, int integerArgument3, ResourceArchive resourceArchiveArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -89,16 +89,16 @@ final class MixedSupport124 {
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (!resourceArchiveArgument1.computeBoolean0904((byte) 121)) {
+          if (!resourceArchiveArgument1.computeBoolean0875((byte) 121)) {
             return false;
           }
-          if (!resourceArchiveArgument1.computeBoolean0918("commonui", (byte) -101)) {
+          if (!resourceArchiveArgument1.computeBoolean0889("commonui", (byte) -101)) {
             return false;
           }
-          if (resourceArchiveArgument2.computeBoolean0904((byte) 121) &&
-            resourceArchiveArgument2.computeBoolean0918("commonui", (byte) -117)) {
-            if (resourceArchiveArgument4.computeBoolean0904((byte) 121) &&
-              resourceArchiveArgument4.computeBoolean0918("button.gif", (byte) -34)) {
+          if (resourceArchiveArgument2.computeBoolean0875((byte) 121) &&
+            resourceArchiveArgument2.computeBoolean0889("commonui", (byte) -117)) {
+            if (resourceArchiveArgument4.computeBoolean0875((byte) 121) &&
+              resourceArchiveArgument4.computeBoolean0889("button.gif", (byte) -34)) {
               if (integerArgument3 != -21) {
                 stringState0523 = (String) null;
               }
@@ -129,33 +129,33 @@ final class MixedSupport124 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 
-    final static RgbSprite[] computeRgbSpriteArray1772(boolean booleanArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final static RgbSprite[] computeRgbSpriteArray1722(boolean booleanArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         if (booleanArgument1) {
-          MixedSupport124.computeRgbSpriteArray1772(false, 17, -88, -29, -62);
+          MixedSupport124.computeRgbSpriteArray1722(false, 17, -88, -29, -62);
         }
-        return UiComponentPart004.computeRgbSpriteArray0197(integerArgument4, 1, integerArgument5, 1, 1, false, integerArgument3, integerArgument2, 3);
+        return UiComponentPart004.computeRgbSpriteArray0194(integerArgument4, 1, integerArgument5, 1, 1, false, integerArgument3, integerArgument2, 3);
     }
 
-    final void performAction1768(int integerArgument1, boolean booleanArgument2) {
+    final void performAction1718(int integerArgument1, boolean booleanArgument2) {
         this.booleanState0183 = true;
         this.booleanState0184 = booleanArgument2 ? true : false;
         if (integerArgument1 != -21) {
-          MixedSupport124.performAction1771(false);
+          MixedSupport124.performAction1721(false);
         }
     }
 
-    final boolean computeBoolean1774(int integerArgument1) {
+    final boolean computeBoolean1724(int integerArgument1) {
         if (integerArgument1 != -3348) {
           return false;
         }
         return this.booleanState0184;
     }
 
-    final boolean computeBoolean1767(int integerArgument1) {
+    final boolean computeBoolean1717(int integerArgument1) {
         if (integerArgument1 < 49) {
           return false;
         }
@@ -168,11 +168,11 @@ final class MixedSupport124 {
         try {
           this.stringState0521 = stringArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "ta.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ta.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String computeString1773(byte byteArgument1) {
+    final String computeString1723(byte byteArgument1) {
         if (byteArgument1 < 59) {
           this.booleanState0183 = true;
         }

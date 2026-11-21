@@ -15,34 +15,34 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
     private boolean booleanState0062;
     private boolean booleanState0063;
 
-    final void performAction0655(int integerArgument1) {
+    final void performAction0641(int integerArgument1) {
         if (!this.booleanState0011) {
           return;
         }
         this.booleanState0011 = false;
         int integerLocal1 = 6 % ((-68 - integerArgument1) / 51);
         if (this.booleanState0061) {
-          InputAdapter005.performAction1535(true);
+          InputAdapter002.performAction1486(true);
           return;
         }
         if (this.booleanState0062) {
-          UiComponentPart001.performAction0066(-73);
+          UiComponentPart001.performAction0063(-73);
           return;
         }
     }
 
-    final void performAction0656(int integerArgument1) {
-        this.uiComponentPart027State0001.performAction1585(integerArgument1, 4088, 2121792);
+    final void performAction0642(int integerArgument1) {
+        this.uiComponentPart027State0001.performAction1536(integerArgument1, 4088, 2121792);
         UiComponentPart008 uiComponentPart008Local1 = new UiComponentPart008(this, this.bitmapFontState0014, MixedSupport043.stringState0186);
-        uiComponentPart008Local1.performAction0406(MixedSupport087.stringState0355, 15, integerArgument1 ^ 4210766);
-        this.performAction0201(uiComponentPart008Local1, (byte) 51);
+        uiComponentPart008Local1.performAction0398(MixedSupport087.stringState0355, 15, integerArgument1 ^ 4210766);
+        this.performAction0198(uiComponentPart008Local1, (byte) 51);
     }
 
-    final static int computeInteger0654(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static int computeInteger0640(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument2 != integerArgument3) {
           return MixedSupport036.integerArrayState0045[integerArgument3];
         }
-        if (!MixedSupport083.computeBoolean1125(integerArgument1, (byte) -96)) {
+        if (!MixedSupport083.computeBoolean1096(integerArgument1, (byte) -96)) {
           return MixedSupport036.integerArrayState0045[integerArgument3];
         }
         return 29;
@@ -58,25 +58,25 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
           this.booleanState0062 = booleanArgument5 ? true : false;
           this.uiComponentPart027State0001 = new UiComponentPart027(13, 50, 274, 30, 15, 2113632, 4210752);
           this.uiComponentPart027State0001.booleanState0159 = true;
-          this.performAction1012(this.uiComponentPart027State0001, (byte) -55);
+          this.performAction0983(this.uiComponentPart027State0001, (byte) -55);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "gk.<init>(" + (uiComponentPart016Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ',' + booleanArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "gk.<init>(" + (uiComponentPart016Argument1 != null ? "{...}" : "null") + ',' + (bitmapFontArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ',' + booleanArgument5 + ')');
         }
     }
 
-    final static void performAction0653(SceneWidget sceneWidgetArgument1, boolean booleanArgument2) {
+    final static void performAction0639(SceneWidget sceneWidgetArgument1, boolean booleanArgument2) {
         SceneWidget sceneWidgetLocal1 = null;
         SceneWidget sceneWidgetLocal2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetLocal1 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.computeHashNode1970((byte) -76));
+          sceneWidgetLocal1 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.computeHashNode1920((byte) -76));
           SceneWidget sceneWidgetLocal4 = sceneWidgetLocal1;
           while (sceneWidgetLocal1 != null) {
             sceneWidgetLocal1.integerState0903 = 0;
             sceneWidgetLocal1.integerState0904 = 0;
             sceneWidgetLocal1.integerState0895 = 0;
             sceneWidgetLocal1.integerState0915 = 0;
-            sceneWidgetLocal2 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.computeHashNode1974(true));
+            sceneWidgetLocal2 = (SceneWidget) (sceneWidgetArgument1.nodeDequeState0034.computeHashNode1924(true));
             sceneWidgetLocal2 = sceneWidgetLocal2;
           }
           if (!booleanArgument2) {
@@ -87,11 +87,11 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
           sceneWidgetArgument1.integerState0895 = 0;
           sceneWidgetArgument1.integerState0915 = 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "gk.IA(" + (sceneWidgetArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "gk.IA(" + (sceneWidgetArgument1 != null ? "{...}" : "null") + ',' + booleanArgument2 + ')');
         }
     }
 
-    final void performAction0651(byte byteArgument1, String stringArgument2, int integerArgument3) {
+    final void performAction0637(byte byteArgument1, String stringArgument2, int integerArgument3) {
         boolean stackBooleanLocal1 = false;
         UiComponentPart008 stackUiComponentPart008Local2 = null;
         String stackStringLocal3 = null;
@@ -113,7 +113,7 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
           stackBooleanLocal1 = (256 == integerArgument3);
           this.booleanState0063 = stackBooleanLocal1;
           this.booleanState0060 = true;
-          this.uiComponentPart027State0001.performAction1585(4210752, 4088, 8405024);
+          this.uiComponentPart027State0001.performAction1536(4210752, 4088, 8405024);
           uiComponentPart008Local10 = new UiComponentPart008(this, this.bitmapFontState0014, stringArgument2);
           if (integerArgument3 != 5) {
             if (integerArgument3 != 256) {
@@ -123,30 +123,30 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
               } else {
                 stackStringLocal3 = GameAssets.stringState0504;
               }
-              ((UiComponentPart008) (Object) stackUiComponentPart008Local2).performAction0406(stackStringLocal3, -1, 14);
+              ((UiComponentPart008) (Object) stackUiComponentPart008Local2).performAction0398(stackStringLocal3, -1, 14);
             } else {
-              uiComponentPart008Local10.computeInteractiveComponent0405(116, GameAssets.stringState0504, (CallbackContract006) (this));
+              uiComponentPart008Local10.computeInteractiveComponent0397(116, GameAssets.stringState0504, (CallbackContract006) (this));
             }
           } else {
-            uiComponentPart008Local10.performAction0406(GameDomainSupport005.stringState0406, 11, 14);
-            uiComponentPart008Local10.performAction0406(SceneWidgetPart005.stringState0255, 17, byteArgument1 ^ 62);
+            uiComponentPart008Local10.performAction0398(GameDomainSupport005.stringState0406, 11, 14);
+            uiComponentPart008Local10.performAction0398(SceneWidgetPart005.stringState0255, 17, byteArgument1 ^ 62);
           }
           if (3 != integerArgument3) {
             if (integerArgument3 != 4) {
               if (6 != integerArgument3) {
                 if (integerArgument3 == 9) {
-                  uiComponentPart008Local10.computeInteractiveComponent0405(127, MixedSupport101.stringState0410, (CallbackContract006) (this));
+                  uiComponentPart008Local10.computeInteractiveComponent0397(127, MixedSupport101.stringState0410, (CallbackContract006) (this));
                 }
               } else {
-                uiComponentPart008Local10.performAction0406(UiComponentPart032.stringState0580, 9, 14);
+                uiComponentPart008Local10.performAction0398(UiComponentPart032.stringState0580, 9, 14);
               }
             } else {
-              uiComponentPart008Local10.performAction0406(UiComponentPart001.stringState0025, 8, 14);
+              uiComponentPart008Local10.performAction0398(UiComponentPart001.stringState0025, 8, 14);
             }
           } else {
-            uiComponentPart008Local10.performAction0406(UiComponent.stringState0079, 7, 14);
+            uiComponentPart008Local10.performAction0398(UiComponent.stringState0079, 7, 14);
           }
-          this.performAction0201(uiComponentPart008Local10, (byte) 84);
+          this.performAction0198(uiComponentPart008Local10, (byte) 84);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal7 = caughtParameterLocal11;
@@ -158,19 +158,19 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument3).append(')').toString());
         }
     }
 
-    final static void performAction0652(int integerArgument1, int integerArgument2, byte byteArgument3, MixedSupport015 mixedSupport015Argument4) {
+    final static void performAction0638(int integerArgument1, int integerArgument2, byte byteArgument3, MixedSupport015 mixedSupport015Argument4) {
         try {
           int integerLocal1 = -111 % ((byteArgument3 - 41) / 38);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "gk.JA(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ',' + (mixedSupport015Argument4 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "gk.JA(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ',' + (mixedSupport015Argument4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean computeBoolean0198(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean computeBoolean0195(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -180,11 +180,11 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (integerArgument2 == 13) {
-            this.performAction0655(63);
+            this.performAction0641(63);
             return true;
           }
           integerLocal1 = -15 / ((integerArgument1 + 22) / 49);
-          stackBooleanLocal3 = super.computeBoolean0198(123, integerArgument2, uiComponentArgument3, characterArgument4);
+          stackBooleanLocal3 = super.computeBoolean0195(123, integerArgument2, uiComponentArgument3, characterArgument4);
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -196,11 +196,11 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(characterArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(characterArgument4).append(')').toString());
         }
     }
 
-    public void performAction0341(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public void performAction0334(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -211,11 +211,11 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
             this.booleanState0062 = true;
           }
           if (!this.booleanState0063) {
-            NetworkSupport001.performAction0068("tochangedisplayname.ws", byteArgument1 ^ -79, UiComponentPart029.computeApplet1689(byteArgument1 ^ 25211));
+            NetworkSupport001.performAction0065("tochangedisplayname.ws", byteArgument1 ^ -79, UiComponentPart029.computeApplet1639(byteArgument1 ^ 25211));
             return;
           }
-          InputAdapter003.performAction0749(3, (byte) -124);
-          this.performAction0655(-9);
+          MouseWheelInput.performAction0729(3, (byte) -124);
+          this.performAction0641(-9);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
@@ -227,11 +227,11 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
-    public static void performAction0657(int integerArgument1) {
+    public static void performAction0643(int integerArgument1) {
         stringState0207 = null;
         byteArrayArrayState0002 = (byte[][]) null;
         int integerLocal1 = 107 % ((-66 - integerArgument1) / 34);

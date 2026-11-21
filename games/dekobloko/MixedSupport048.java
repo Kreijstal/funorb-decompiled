@@ -9,13 +9,13 @@ final class MixedSupport048 {
     static MixedSupport076 mixedSupport076State0001;
     static String stringState0204;
 
-    final static void performAction0645(boolean booleanArgument1) {
+    final static void performAction0631(boolean booleanArgument1) {
         if (MixedSupport052.integerState0269 == 10) {
-          CodecSupport002.performAction1253(-5);
+          CodecSupport002.performAction1211(-5);
           MixedSupport052.integerState0269 = 11;
         } else {
-          if (!FunOrbClient.computeBoolean0126((byte) -124)) {
-            CodecSupport002.performAction1253(-5);
+          if (!FunOrbClient.computeBoolean0123((byte) -124)) {
+            CodecSupport002.performAction1211(-5);
             MixedSupport052.integerState0269 = 11;
           }
         }
@@ -34,7 +34,7 @@ final class MixedSupport048 {
         throw new IllegalStateException();
     }
 
-    public static void performAction0644(int integerArgument1) {
+    public static void performAction0630(int integerArgument1) {
         stringState0203 = null;
         stringState0204 = null;
         if (integerArgument1 <= 42) {

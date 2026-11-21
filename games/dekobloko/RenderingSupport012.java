@@ -4,7 +4,7 @@
 final class RenderingSupport012 extends BitmapFont {
     private byte[][] byteArrayArrayState0005;
 
-    private final static byte[][] computeByteArrayArray1278(int[] integerArrayArgument1, byte[][] byteArrayArrayArgument2) {
+    private final static byte[][] computeByteArrayArray1236(int[] integerArrayArgument1, byte[][] byteArrayArrayArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         byte[][] byteArrayArrayLocal3;
@@ -31,7 +31,7 @@ final class RenderingSupport012 extends BitmapFont {
         return byteArrayArrayArgument2;
     }
 
-    final void performAction1130(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
+    final void performAction1101(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -71,15 +71,15 @@ final class RenderingSupport012 extends BitmapFont {
         if (integerArgument4 > 0 &&
           integerArgument5 > 0) {
           if (!booleanArgument7) {
-            RenderingSupport012.performAction1276(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3);
+            RenderingSupport012.performAction1234(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3);
           } else {
-            RenderingSupport010.performAction1131(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3);
+            RenderingSupport010.performAction1102(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3);
           }
           return;
         }
     }
 
-    final void performAction1129(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, boolean booleanArgument8) {
+    final void performAction1100(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, boolean booleanArgument8) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -119,15 +119,15 @@ final class RenderingSupport012 extends BitmapFont {
         if (integerArgument4 > 0 &&
           integerArgument5 > 0) {
           if (!booleanArgument8) {
-            RenderingSupport012.performAction1277(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3, integerArgument7);
+            RenderingSupport012.performAction1235(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3, integerArgument7);
           } else {
-            RenderingSupport010.performAction1132(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3, integerArgument7);
+            RenderingSupport010.performAction1103(SoftwareRaster.integerArrayState0063, this.byteArrayArrayState0005[integerArgument1], integerArgument6, integerLocal4, integerLocal1, integerArgument4, integerArgument5, integerLocal2, integerLocal3, integerArgument7);
           }
           return;
         }
     }
 
-    private final static void performAction1277(int[] integerArrayArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction1235(int[] integerArrayArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -156,7 +156,7 @@ final class RenderingSupport012 extends BitmapFont {
         }
     }
 
-    private final static void performAction1276(int[] integerArrayArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
+    private final static void performAction1234(int[] integerArrayArgument1, byte[] byteArrayArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -188,6 +188,6 @@ final class RenderingSupport012 extends BitmapFont {
     RenderingSupport012(byte[] byteArrayArgument1, int[] integerArrayArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4, int[] integerArrayArgument5, int[] integerArrayArgument6, byte[][] byteArrayArrayArgument7) {
         super(byteArrayArgument1, integerArrayArgument2, integerArrayArgument3, integerArrayArgument4, integerArrayArgument5);
         this.byteArrayArrayState0005 = new byte[256][];
-        this.byteArrayArrayState0005 = RenderingSupport012.computeByteArrayArray1278(integerArrayArgument6, byteArrayArrayArgument7);
+        this.byteArrayArrayState0005 = RenderingSupport012.computeByteArrayArray1236(integerArrayArgument6, byteArrayArrayArgument7);
     }
 }

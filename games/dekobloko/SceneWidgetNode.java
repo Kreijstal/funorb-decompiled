@@ -9,7 +9,7 @@ class SceneWidgetNode extends DualNode {
     static String stringState0319;
     static byte[] byteArrayState0012;
 
-    final static boolean computeBoolean1036(int integerArgument1, int integerArgument2) {
+    final static boolean computeBoolean1007(int integerArgument1, int integerArgument2) {
         if (integerArgument2 != -8222) {
           return false;
         }
@@ -19,7 +19,7 @@ class SceneWidgetNode extends DualNode {
     SceneWidgetNode() {
     }
 
-    public static void performAction1037(int integerArgument1) {
+    public static void performAction1008(int integerArgument1) {
         if (integerArgument1 != 710) {
           return;
         }
@@ -30,7 +30,7 @@ class SceneWidgetNode extends DualNode {
         pcmPlayerState0002 = null;
     }
 
-    final static byte[] computeByteArray1035(int integerArgument1, CharSequence charSequenceArgument2) {
+    final static byte[] computeByteArray1006(int integerArgument1, CharSequence charSequenceArgument2) {
         int integerLocal1 = 0;
         byte[] stackByteArrayLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -158,7 +158,7 @@ class SceneWidgetNode extends DualNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 

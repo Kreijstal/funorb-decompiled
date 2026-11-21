@@ -5,7 +5,7 @@ final class IndexedSprite extends Sprite {
     byte[] byteArrayState0021;
     int[] integerArrayState0183;
 
-    private final static void performAction1423(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction1374(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -31,7 +31,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    final void performAction1054(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void performAction1025(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -72,10 +72,10 @@ final class IndexedSprite extends Sprite {
           integerLocal6 <= 0) {
           return;
         }
-        IndexedSprite.performAction1423(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
+        IndexedSprite.performAction1374(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
     }
 
-    private final static void performAction1425(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
+    private final static void performAction1376(int[] integerArrayArgument1, byte[] byteArrayArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9, int integerArgument10) {
         int integerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -148,7 +148,7 @@ final class IndexedSprite extends Sprite {
         this.integerArrayState0183 = integerArrayArgument8;
     }
 
-    final void performAction1053(int integerArgument1, int integerArgument2) {
+    final void performAction1024(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -189,10 +189,10 @@ final class IndexedSprite extends Sprite {
           integerLocal6 <= 0) {
           return;
         }
-        IndexedSprite.performAction1425(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
+        IndexedSprite.performAction1376(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
     }
 
-    final void performAction1422() {
+    final void performAction1373() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -227,7 +227,7 @@ final class IndexedSprite extends Sprite {
         this.integerArrayState0183 = new int[integerArgument3];
     }
 
-    final IndexedSprite computeIndexedSprite1424() {
+    final IndexedSprite computeIndexedSprite1375() {
         int integerLocal1 = 0;
         IndexedSprite indexedSpriteLocal2 = new IndexedSprite(this.integerState0425, this.integerState0426, this.integerArrayState0183.length);
         int integerLocal3;

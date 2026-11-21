@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport008 {
-    final static void performAction0083(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction0080(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
         integerArgument3 = integerArgument2 + integerArgument3 - 7;
         while (integerArgument2 < integerArgument3) {
           integerArrayArgument1[integerArgument2++] = 0;
@@ -20,7 +20,7 @@ final class MixedSupport008 {
         }
     }
 
-    final static void performAction0085(int[] integerArrayArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0082(int[] integerArrayArgument1, int integerArgument2, int[] integerArrayArgument3, int integerArgument4, int integerArgument5) {
         if (integerArrayArgument1 != integerArrayArgument3) {
           integerArgument5 = integerArgument5 + integerArgument2;
           integerArgument5 -= 7;
@@ -102,7 +102,7 @@ final class MixedSupport008 {
         }
     }
 
-    final static void performAction0084(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static void performAction0081(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         integerArgument3 = integerArgument2 + integerArgument3 - 7;
         while (integerArgument2 < integerArgument3) {
           integerArrayArgument1[integerArgument2++] = integerArgument4;
@@ -120,7 +120,7 @@ final class MixedSupport008 {
         }
     }
 
-    final static void performAction0086(Object[] objectArrayArgument1, int integerArgument2, Object[] objectArrayArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0083(Object[] objectArrayArgument1, int integerArgument2, Object[] objectArrayArgument3, int integerArgument4, int integerArgument5) {
         if (objectArrayArgument1 != objectArrayArgument3) {
           integerArgument5 = integerArgument5 + integerArgument2;
           integerArgument5 -= 7;
@@ -202,7 +202,7 @@ final class MixedSupport008 {
         }
     }
 
-    final static void performAction0082(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction0079(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4, int integerArgument5) {
         if (byteArrayArgument1 != byteArrayArgument3) {
           integerArgument5 = integerArgument5 + integerArgument2;
           integerArgument5 -= 7;
@@ -284,7 +284,7 @@ final class MixedSupport008 {
         }
     }
 
-    final static void performAction0081(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
+    final static void performAction0078(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
         int previousIntegerLocal1 = 0;
         int previousIntegerLocal2 = 0;
         int previousIntegerLocal3 = 0;

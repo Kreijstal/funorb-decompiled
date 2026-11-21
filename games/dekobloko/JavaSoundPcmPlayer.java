@@ -9,14 +9,14 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
     private byte[] byteArrayState0010;
     private static String stringState0292;
 
-    final void performAction0538() {
+    final void performAction0524() {
         if (this.sourceDataLineState0001 != null) {
           this.sourceDataLineState0001.close();
           this.sourceDataLineState0001 = null;
         }
     }
 
-    final void performAction0534() {
+    final void performAction0520() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 256;
@@ -34,7 +34,7 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
         this.sourceDataLineState0001.write(this.byteArrayState0010, 0, integerLocal3 << 1);
     }
 
-    final int computeInteger0537() {
+    final int computeInteger0523() {
         return this.integerState0355 - (this.sourceDataLineState0001.available() >> (booleanState0038 ? 2 : 1));
     }
 
@@ -42,7 +42,7 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
         this.booleanState0090 = false;
     }
 
-    final void performAction0527(int integerArgument1) throws javax.sound.sampled.LineUnavailableException {
+    final void performAction0513(int integerArgument1) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info infoLocal1 = null;
         try {
           infoLocal1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.audioFormatState0001, integerArgument1 << (booleanState0038 ? 2 : 1));
@@ -51,8 +51,8 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
           this.sourceDataLineState0001.start();
           this.integerState0355 = integerArgument1;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (MixedSupport051.computeInteger0667(integerArgument1, 101) != 1) {
-            this.performAction0527(UiComponentPart020.computeInteger1328(-10498, integerArgument1));
+          if (MixedSupport051.computeInteger0653(integerArgument1, 101) != 1) {
+            this.performAction0513(UiComponentPart020.computeInteger1280(-10498, integerArgument1));
             return;
           }
           this.sourceDataLineState0001 = null;
@@ -60,7 +60,7 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
         }
     }
 
-    final void performAction0542() throws javax.sound.sampled.LineUnavailableException {
+    final void performAction0528() throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info infoLocal1 = null;
         this.sourceDataLineState0001.flush();
         if (this.booleanState0090) {
@@ -73,7 +73,7 @@ final class JavaSoundPcmPlayer extends PcmPlayer {
         }
     }
 
-    final void performAction0530(java.awt.Component componentArgument1) {
+    final void performAction0516(java.awt.Component componentArgument1) {
         int integerLocal1 = 0;
         javax.sound.sampled.Mixer.Info[] infoArrayLocal2;
         javax.sound.sampled.Mixer.Info[] infoArrayLocal3;

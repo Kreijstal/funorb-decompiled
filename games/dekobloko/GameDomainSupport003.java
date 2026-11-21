@@ -10,7 +10,7 @@ final class GameDomainSupport003 {
     static String stringState0236;
     private static String stringState0237;
 
-    public static void performAction0709(int integerArgument1) {
+    public static void performAction0695(int integerArgument1) {
         stringState0234 = null;
         stringState0236 = null;
         rgbSpriteState0020 = null;

@@ -11,69 +11,69 @@ final class MixedSupport078 {
     private int integerState0419;
     static String stringState0322;
 
-    private final void performAction1044(int integerArgument1, long longArgument2) {
+    private final void performAction1015(int integerArgument1, long longArgument2) {
         MixedSupport147 cachedMixedSupport147Local1 = null;
         MixedSupport147 mixedSupport147Local2 = null;
         MixedSupport147 mixedSupport147Local3 = null;
         MixedSupport147 mixedSupport147Local4;
         MixedSupport147 mixedSupport147Local5;
         if (integerArgument1 == 0) {
-          cachedMixedSupport147Local1 = (MixedSupport147) (this.nodeHashTableState0002.computeHashNode1707(longArgument2, (byte) -37));
+          cachedMixedSupport147Local1 = (MixedSupport147) (this.nodeHashTableState0002.computeHashNode1657(longArgument2, (byte) -37));
           mixedSupport147Local2 = cachedMixedSupport147Local1;
           mixedSupport147Local3 = cachedMixedSupport147Local1;
-          this.performAction1045(-124, mixedSupport147Local2);
+          this.performAction1016(-124, mixedSupport147Local2);
           return;
         }
         ResourceArchive resourceArchiveLocal6 = (ResourceArchive) null;
-        MixedSupport078.performAction1049((ResourceArchive) null, 118);
-        MixedSupport147 cachedMixedSupport147Local7 = (MixedSupport147) (this.nodeHashTableState0002.computeHashNode1707(longArgument2, (byte) -37));
+        MixedSupport078.performAction1020((ResourceArchive) null, 118);
+        MixedSupport147 cachedMixedSupport147Local7 = (MixedSupport147) (this.nodeHashTableState0002.computeHashNode1657(longArgument2, (byte) -37));
         mixedSupport147Local4 = cachedMixedSupport147Local7;
         mixedSupport147Local5 = cachedMixedSupport147Local7;
-        this.performAction1045(-124, mixedSupport147Local4);
+        this.performAction1016(-124, mixedSupport147Local4);
     }
 
-    final Object computeObject1046(long longArgument1, byte byteArgument2) {
+    final Object computeObject1017(long longArgument1, byte byteArgument2) {
         MixedSupport132 mixedSupport132Local1 = null;
-        MixedSupport147 mixedSupport147Local2 = (MixedSupport147) (this.nodeHashTableState0002.computeHashNode1707(longArgument1, (byte) -37));
+        MixedSupport147 mixedSupport147Local2 = (MixedSupport147) (this.nodeHashTableState0002.computeHashNode1657(longArgument1, (byte) -37));
         if (mixedSupport147Local2 == null) {
           return null;
         }
-        Object objectLocal3 = mixedSupport147Local2.computeObject1839(-1);
+        Object objectLocal3 = mixedSupport147Local2.computeObject1789(-1);
         if (byteArgument2 >= -9) {
-          this.computeObject1046(69L, (byte) -13);
+          this.computeObject1017(69L, (byte) -13);
         }
         if (objectLocal3 != null) {
-          if (!mixedSupport147Local2.computeBoolean1841((byte) -83)) {
-            this.iterableNodeCollectionState0002.performAction1875((byte) 4, mixedSupport147Local2);
+          if (!mixedSupport147Local2.computeBoolean1791((byte) -83)) {
+            this.iterableNodeCollectionState0002.performAction1825((byte) 4, mixedSupport147Local2);
             mixedSupport147Local2.longState0003 = 0L;
           } else {
             mixedSupport132Local1 = new MixedSupport132(objectLocal3, mixedSupport147Local2.integerState0858);
-            this.nodeHashTableState0002.performAction1708(mixedSupport147Local2.key, false, mixedSupport132Local1);
-            this.iterableNodeCollectionState0002.performAction1875((byte) 4, mixedSupport132Local1);
+            this.nodeHashTableState0002.performAction1658(mixedSupport147Local2.key, false, mixedSupport132Local1);
+            this.iterableNodeCollectionState0002.performAction1825((byte) 4, mixedSupport132Local1);
             ((MixedSupport147) ((Object) mixedSupport132Local1)).longState0003 = 0L;
-            mixedSupport147Local2.performAction0161((byte) 106);
-            mixedSupport147Local2.performAction0145((byte) 125);
+            mixedSupport147Local2.performAction0158((byte) 106);
+            mixedSupport147Local2.performAction0142((byte) 125);
           }
           return objectLocal3;
         }
-        mixedSupport147Local2.performAction0161((byte) 119);
-        mixedSupport147Local2.performAction0145((byte) 92);
+        mixedSupport147Local2.performAction0158((byte) 119);
+        mixedSupport147Local2.performAction0142((byte) 92);
         this.integerState0417 = this.integerState0417 + mixedSupport147Local2.integerState0858;
         return null;
     }
 
-    final void performAction1048(Object objectArgument1, long longArgument2, int integerArgument3) {
+    final void performAction1019(Object objectArgument1, long longArgument2, int integerArgument3) {
         try {
-          this.performAction1047(longArgument2, (byte) 77, 1, objectArgument1);
+          this.performAction1018(longArgument2, (byte) 77, 1, objectArgument1);
           if (integerArgument3 < 3) {
-            this.performAction1044(94, -31L);
+            this.performAction1015(94, -31L);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "la.D(" + (objectArgument1 != null ? "{...}" : "null") + ',' + longArgument2 + ',' + integerArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "la.D(" + (objectArgument1 != null ? "{...}" : "null") + ',' + longArgument2 + ',' + integerArgument3 + ')');
         }
     }
 
-    private final void performAction1047(long longArgument1, byte byteArgument2, int integerArgument3, Object objectArgument4) {
+    private final void performAction1018(long longArgument1, byte byteArgument2, int integerArgument3, Object objectArgument4) {
         MixedSupport147 mixedSupport147Local1 = null;
         MixedSupport132 mixedSupport132Local2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -81,21 +81,21 @@ final class MixedSupport078 {
           if (integerArgument3 > this.integerState0419) {
             throw new IllegalStateException();
           }
-          this.performAction1044(byteArgument2 - 77, longArgument1);
+          this.performAction1015(byteArgument2 - 77, longArgument1);
           this.integerState0417 = this.integerState0417 - integerArgument3;
           while (this.integerState0417 < 0) {
-            mixedSupport147Local1 = (MixedSupport147) (this.iterableNodeCollectionState0002.computeDualNode1874((byte) 67));
-            this.performAction1045(-122, mixedSupport147Local1);
+            mixedSupport147Local1 = (MixedSupport147) (this.iterableNodeCollectionState0002.computeDualNode1824((byte) 67));
+            this.performAction1016(-122, mixedSupport147Local1);
           }
           mixedSupport132Local2 = new MixedSupport132(objectArgument4, integerArgument3);
-          this.nodeHashTableState0002.performAction1708(longArgument1, false, mixedSupport132Local2);
-          this.iterableNodeCollectionState0002.performAction1875((byte) 4, mixedSupport132Local2);
+          this.nodeHashTableState0002.performAction1658(longArgument1, false, mixedSupport132Local2);
+          this.iterableNodeCollectionState0002.performAction1825((byte) 4, mixedSupport132Local2);
           if (byteArgument2 != 77) {
-            MixedSupport078.performAction1043((byte) -109);
+            MixedSupport078.performAction1014((byte) -109);
           }
           ((MixedSupport147) ((Object) mixedSupport132Local2)).longState0003 = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "la.E(" + longArgument1 + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (objectArgument4 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "la.E(" + longArgument1 + ',' + byteArgument2 + ',' + integerArgument3 + ',' + (objectArgument4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,12 +103,12 @@ final class MixedSupport078 {
         this(integerArgument1, integerArgument1);
     }
 
-    final static void performAction1049(ResourceArchive resourceArchiveArgument1, int integerArgument2) {
+    final static void performAction1020(ResourceArchive resourceArchiveArgument1, int integerArgument2) {
         SceneWidget sceneWidgetLocal1 = null;
         SceneWidget sceneWidgetLocal2 = null;
         SceneWidget sceneWidgetLocal3 = null;
         try {
-          MixedSupport001.rgbSpriteState0001 = UiComponentPart015.computeRgbSprite0791(resourceArchiveArgument1, "display_name_changed", "basic", integerArgument2 ^ 24181);
+          MixedSupport001.rgbSpriteState0001 = UiComponentPart015.computeRgbSprite0766(resourceArchiveArgument1, "display_name_changed", "basic", integerArgument2 ^ 24181);
           MixedSupport070.sceneWidgetPart010State0003 = new SceneWidgetPart010(0L, UiComponentPart015.sceneWidgetPart010State0002, MixedSupport093.stringState0370, MixedSupport042.stringState0184);
           RenderingSupport003.sceneWidgetPart010State0001 = new SceneWidgetPart010(0L, UiComponentPart015.sceneWidgetPart010State0002, UiComponentPart019.stringState0349, GameDomainSupport006.stringState0630);
           RenderingSupport015.sceneWidgetState0112 = new SceneWidget(0L, (SceneWidget) null);
@@ -117,38 +117,38 @@ final class MixedSupport078 {
           SceneWidgetPart011.sceneWidgetState0114 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
           TextLayout.sceneWidgetState0010 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport110.stringState0453);
           MixedSupport066.sceneWidgetState0059 = new SceneWidget(0L, UiComponentPart007.sceneWidgetState0019);
-          RenderingSupport015.sceneWidgetState0112.performAction1998(MixedSupport066.sceneWidgetState0060, -16834);
-          RenderingSupport015.sceneWidgetState0112.performAction1998(SceneWidgetPart011.sceneWidgetState0114, -16834);
-          RenderingSupport015.sceneWidgetState0112.performAction1998(TextLayout.sceneWidgetState0010, -16834);
-          RenderingSupport015.sceneWidgetState0112.performAction1998(MixedSupport070.sceneWidgetPart010State0003, integerArgument2 ^ -16309);
-          RenderingSupport015.sceneWidgetState0112.performAction1998(MixedSupport066.sceneWidgetState0059, -16834);
-          MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.performAction1996(integerArgument2 ^ -32262, MixedSupport132.sceneWidgetState0125);
+          RenderingSupport015.sceneWidgetState0112.performAction1948(MixedSupport066.sceneWidgetState0060, -16834);
+          RenderingSupport015.sceneWidgetState0112.performAction1948(SceneWidgetPart011.sceneWidgetState0114, -16834);
+          RenderingSupport015.sceneWidgetState0112.performAction1948(TextLayout.sceneWidgetState0010, -16834);
+          RenderingSupport015.sceneWidgetState0112.performAction1948(MixedSupport070.sceneWidgetPart010State0003, integerArgument2 ^ -16309);
+          RenderingSupport015.sceneWidgetState0112.performAction1948(MixedSupport066.sceneWidgetState0059, -16834);
+          MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.performAction1946(integerArgument2 ^ -32262, MixedSupport132.sceneWidgetState0125);
           MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.integerState0885 = 1;
           if (integerArgument2 != 32373) {
-            MixedSupport078.performAction1043((byte) 92);
+            MixedSupport078.performAction1014((byte) 92);
           }
           sceneWidgetLocal1 = MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089;
           sceneWidgetLocal2 = sceneWidgetLocal1;
           sceneWidgetLocal2.integerState0916 = 1;
-          RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089.performAction1996(integerArgument2 - 32488, MixedSupport132.sceneWidgetState0125);
+          RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089.performAction1946(integerArgument2 - 32488, MixedSupport132.sceneWidgetState0125);
           RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089.integerState0885 = 1;
           sceneWidgetLocal3 = RenderingSupport003.sceneWidgetPart010State0001.sceneWidgetPart008State0005.sceneWidgetState0089;
           sceneWidgetLocal3.integerState0916 = 1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "la.G(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "la.G(" + (resourceArchiveArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    public static void performAction1043(byte byteArgument1) {
+    public static void performAction1014(byte byteArgument1) {
         stringState0322 = null;
         integerArrayState0141 = null;
         if (byteArgument1 < 36) {
           ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-          MixedSupport078.performAction1049((ResourceArchive) null, 120);
+          MixedSupport078.performAction1020((ResourceArchive) null, 120);
         }
     }
 
-    private final void performAction1045(int integerArgument1, MixedSupport147 mixedSupport147Argument2) {
+    private final void performAction1016(int integerArgument1, MixedSupport147 mixedSupport147Argument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -161,8 +161,8 @@ final class MixedSupport078 {
           if (mixedSupport147Argument2 == null) {
             return;
           }
-          mixedSupport147Argument2.performAction0161((byte) 105);
-          mixedSupport147Argument2.performAction0145((byte) 76);
+          mixedSupport147Argument2.performAction0158((byte) 105);
+          mixedSupport147Argument2.performAction0142((byte) 76);
           this.integerState0417 = this.integerState0417 + mixedSupport147Argument2.integerState0858;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -175,7 +175,7 @@ final class MixedSupport078 {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 

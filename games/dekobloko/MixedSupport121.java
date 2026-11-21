@@ -20,7 +20,7 @@ final class MixedSupport121 {
     static ResourceArchive resourceArchiveState0021;
     static String stringState0513;
 
-    final void performAction1719(int integerArgument1, byte byteArgument2) {
+    final void performAction1669(int integerArgument1, byte byteArgument2) {
         if (this.integerState0755 == 0) {
           this.integerState0754 = integerArgument1;
           this.booleanState0177 = true;
@@ -31,21 +31,21 @@ final class MixedSupport121 {
         }
     }
 
-    final boolean computeBoolean1723(boolean booleanArgument1) {
+    final boolean computeBoolean1673(boolean booleanArgument1) {
         if (!booleanArgument1) {
-          MixedSupport121.performAction1731(-70);
+          MixedSupport121.performAction1681(-70);
         }
         return this.integerState0755 != 0 ? true : false;
     }
 
-    final boolean computeBoolean1729(int integerArgument1) {
+    final boolean computeBoolean1679(int integerArgument1) {
         if (integerArgument1 <= 111) {
           rgbSpriteState0056 = (RgbSprite) null;
         }
         return this.integerState0752 == 102 ? true : false;
     }
 
-    final void performAction1724(boolean booleanArgument1, int integerArgument2, int integerArgument3) {
+    final void performAction1674(boolean booleanArgument1, int integerArgument2, int integerArgument3) {
         this.integerState0755 = 0;
         this.booleanState0178 = booleanArgument1 ? true : false;
         if (this.booleanState0178) {
@@ -54,21 +54,21 @@ final class MixedSupport121 {
         int integerLocal1 = -68 / ((54 - integerArgument2) / 44);
     }
 
-    final boolean computeBoolean1716(byte byteArgument1) {
+    final boolean computeBoolean1666(byte byteArgument1) {
         if (byteArgument1 != -51) {
           return false;
         }
         return this.integerState0752 == 103 ? true : false;
     }
 
-    final boolean computeBoolean1728(boolean booleanArgument1) {
+    final boolean computeBoolean1678(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return true;
         }
         return this.integerState0752 == 96 ? true : false;
     }
 
-    final void performAction1717(byte byteArgument1, int integerArgument2) {
+    final void performAction1667(byte byteArgument1, int integerArgument2) {
         if (byteArgument1 != 58) {
           this.integerState0754 = 111;
         }
@@ -106,12 +106,12 @@ final class MixedSupport121 {
         }
     }
 
-    final boolean computeBoolean1727(int integerArgument1) {
+    final boolean computeBoolean1677(int integerArgument1) {
         int integerLocal1 = 90 % ((31 - integerArgument1) / 42);
         return this.integerState0752 == 97 ? true : false;
     }
 
-    final void performAction1722(int integerArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4) {
+    final void performAction1672(int integerArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4) {
         this.booleanState0178 = booleanArgument4 ? true : false;
         this.integerState0755 = integerArgument2;
         if (this.booleanState0178) {
@@ -121,7 +121,7 @@ final class MixedSupport121 {
         }
     }
 
-    final void performAction1718(int integerArgument1) {
+    final void performAction1668(int integerArgument1) {
         this.booleanState0177 = false;
         this.integerState0749 = 0;
         if (integerArgument1 > -24) {
@@ -151,7 +151,7 @@ final class MixedSupport121 {
         }
     }
 
-    final static boolean computeBoolean1725(boolean booleanArgument1, CharSequence charSequenceArgument2, boolean booleanArgument3, int integerArgument4) {
+    final static boolean computeBoolean1675(boolean booleanArgument1, CharSequence charSequenceArgument2, boolean booleanArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -227,11 +227,11 @@ final class MixedSupport121 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(booleanArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final static int computeInteger1720(int integerArgument1, int integerArgument2) {
+    final static int computeInteger1670(int integerArgument1, int integerArgument2) {
         if (integerArgument2 >= -52) {
           integerState0751 = -122;
         }
@@ -242,7 +242,7 @@ final class MixedSupport121 {
         return integerArgument1 >= 6144 ? -MixedSupport102.integerArrayState0180[-integerArgument1 + 8192] : -MixedSupport102.integerArrayState0180[-4096 + integerArgument1];
     }
 
-    final void performAction1730(int integerArgument1) {
+    final void performAction1680(int integerArgument1) {
         this.integerState0752 = 0;
         this.integerState0749 = integerArgument1;
         this.booleanState0177 = false;
@@ -251,20 +251,20 @@ final class MixedSupport121 {
         }
     }
 
-    public static void performAction1731(int integerArgument1) {
+    public static void performAction1681(int integerArgument1) {
         sceneWidgetState0111 = null;
         stringState0511 = null;
         stringState0512 = null;
         resourceArchiveState0021 = null;
         rgbSpriteState0056 = null;
         if (integerArgument1 != -28610) {
-          MixedSupport121.performAction1731(69);
+          MixedSupport121.performAction1681(69);
         }
         rawPcmStreamArrayArrayState0001 = (RawPcmStream[][]) null;
         stringState0513 = null;
     }
 
-    final void performAction1721(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void performAction1671(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (this.integerState0756 <= integerArgument1) {
           throw new IllegalArgumentException();
         }
@@ -311,7 +311,7 @@ final class MixedSupport121 {
         }
     }
 
-    final boolean computeBoolean1726(byte byteArgument1) {
+    final boolean computeBoolean1676(byte byteArgument1) {
         boolean stackBooleanLocal1 = false;
         if (byteArgument1 != 114) {
           return false;

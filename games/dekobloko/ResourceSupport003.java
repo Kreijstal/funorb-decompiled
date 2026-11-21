@@ -12,9 +12,9 @@ abstract class ResourceSupport003 {
     static int integerState0554;
     static int integerState0555;
 
-    abstract ResourceSupport001 computeResourceSupport0011070(boolean booleanArgument1);
+    abstract ResourceSupport001 computeResourceSupport0011041(boolean booleanArgument1);
 
-    public static void performAction1333(byte byteArgument1) {
+    public static void performAction1285(byte byteArgument1) {
         stringState0382 = null;
         if (byteArgument1 > 88) {
           byteArrayArrayState0006 = (byte[][]) null;
@@ -28,9 +28,9 @@ abstract class ResourceSupport003 {
         mixedSupport139State0008 = null;
     }
 
-    abstract int computeInteger1068(int integerArgument1, int integerArgument2);
+    abstract int computeInteger1039(int integerArgument1, int integerArgument2);
 
-    final static void performAction1334(int integerArgument1) {
+    final static void performAction1286(int integerArgument1) {
         GameDomainSupport001.integerState0053 = GameDomainSupport001.integerState0053 + 1;
         if (integerArgument1 != 0) {
           return;
@@ -72,9 +72,9 @@ abstract class ResourceSupport003 {
         }
     }
 
-    abstract byte[] computeByteArray1067(int integerArgument1, byte byteArgument2);
+    abstract byte[] computeByteArray1038(int integerArgument1, byte byteArgument2);
 
-    final static void performAction1335(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction1287(boolean booleanArgument1, int integerArgument2) {
         HashNode hashNodeLocal1 = null;
         int integerLocal2 = 0;
         NetworkSupport005 networkSupport005Local3 = null;
@@ -82,24 +82,24 @@ abstract class ResourceSupport003 {
         RuntimeException runtimeExceptionLocal5 = null;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1970((byte) -112));
+          networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1920((byte) -112));
           while (networkSupport005Local3 != null) {
-            MixedSupport074.performAction1031(integerArgument2, -15016, networkSupport005Local3);
-            networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1974(true));
+            MixedSupport074.performAction1002(integerArgument2, -15016, networkSupport005Local3);
+            networkSupport005Local3 = (NetworkSupport005) (RenderingSupport002.nodeDequeState0004.computeHashNode1924(true));
           }
           if (booleanArgument1) {
-            ResourceSupport003.performAction1335(true, -48);
+            ResourceSupport003.performAction1287(true, -48);
           }
-          hashNodeLocal1 = AudioSupport004.nodeDequeState0028.computeHashNode1970((byte) 109);
+          hashNodeLocal1 = PcmPlayerService.nodeDequeState0028.computeHashNode1920((byte) 109);
           while (hashNodeLocal1 != null) {
-            MixedSupport050.performAction0659(integerArgument2, 47);
-            hashNodeLocal1 = AudioSupport004.nodeDequeState0028.computeHashNode1974(true);
+            MixedSupport050.performAction0645(integerArgument2, 47);
+            hashNodeLocal1 = PcmPlayerService.nodeDequeState0028.computeHashNode1924(true);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal4 = caughtParameterLocal6;
           runtimeExceptionLocal5 = caughtExceptionLocal4;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal5), "of.C(" + booleanArgument1 + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal5), "of.C(" + booleanArgument1 + ',' + integerArgument2 + ')');
         }
     }
 

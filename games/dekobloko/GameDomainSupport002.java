@@ -21,7 +21,7 @@ final class GameDomainSupport002 {
     static SceneWidget sceneWidgetState0022;
     static int integerState0180;
 
-    public static void performAction0443(byte byteArgument1) {
+    public static void performAction0435(byte byteArgument1) {
         sceneWidgetPart008State0002 = null;
         bitmapFontState0012 = null;
         sceneWidgetState0022 = null;
@@ -37,7 +37,7 @@ final class GameDomainSupport002 {
         }
     }
 
-    final static void performAction0444(int integerArgument1) {
+    final static void performAction0436(int integerArgument1) {
         int integerLocal1 = 0;
         RuntimeException caughtExceptionLocal2 = null;
         CipherPacketBuffer cipherPacketBufferLocal3 = null;
@@ -47,23 +47,23 @@ final class GameDomainSupport002 {
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           cipherPacketBufferLocal3 = SocketFactory.cipherPacketBufferState0002;
-          while (ProxySocketFactory.computeBoolean1682((byte) -104)) {
-            cipherPacketBufferLocal3.performAction1861(8, -4);
+          while (ProxySocketFactory.computeBoolean1632((byte) -104)) {
+            cipherPacketBufferLocal3.performAction1811(8, -4);
             integerLocal1 = cipherPacketBufferLocal3.position + 1;
             cipherPacketBufferLocal3.position = cipherPacketBufferLocal3.position + 1;
             integerLocal5 = integerLocal1;
-            ResourceSupport002.performAction0095(-32141, cipherPacketBufferLocal3);
-            SocketFactory.cipherPacketBufferState0002.performAction2079(cipherPacketBufferLocal3.position - integerLocal5, true);
+            ResourceSupport002.performAction0092(-32141, cipherPacketBufferLocal3);
+            SocketFactory.cipherPacketBufferState0002.performAction2029(cipherPacketBufferLocal3.position - integerLocal5, true);
           }
           if (integerArgument1 <= -91) {
             return;
           }
-          GameDomainSupport002.performAction0444(-123);
+          GameDomainSupport002.performAction0436(-123);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal2 = caughtParameterLocal7;
           runtimeExceptionLocal4 = caughtExceptionLocal2;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal4), "ec.A(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal4), "ec.A(" + integerArgument1 + ')');
         }
     }
 
@@ -71,10 +71,10 @@ final class GameDomainSupport002 {
         try {
           this.integerState0179 = integerArgument1;
           this.stringState0142 = stringArgument2;
-          this.integerState0176 = bitmapFontArgument3.computeInteger1208(this.stringState0142) + 46;
+          this.integerState0176 = bitmapFontArgument3.computeInteger1169(this.stringState0142) + 46;
           this.integerState0175 = 30;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "ec.<init>(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (bitmapFontArgument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ec.<init>(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (bitmapFontArgument3 != null ? "{...}" : "null") + ')');
         }
     }
 

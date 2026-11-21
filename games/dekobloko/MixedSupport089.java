@@ -6,7 +6,7 @@ final class MixedSupport089 {
     static int integerState0531;
     private static String stringState0359;
 
-    public static void performAction1243(int integerArgument1) {
+    public static void performAction1201(int integerArgument1) {
         if (integerArgument1 != 3) {
           integerState0531 = -26;
           integerArrayState0166 = null;

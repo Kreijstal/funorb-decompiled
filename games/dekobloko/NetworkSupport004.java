@@ -9,7 +9,7 @@ final class NetworkSupport004 {
     static String[][] stringArrayArrayState0002;
     static volatile long longState0018;
 
-    public static void performAction0661(int integerArgument1) {
+    public static void performAction0647(int integerArgument1) {
         integerArrayState0052 = null;
         if (integerArgument1 != 0) {
           return;
@@ -18,7 +18,7 @@ final class NetworkSupport004 {
         stringState0209 = null;
     }
 
-    final static java.net.URL computeURL0662(java.net.URL uRLArgument1, int integerArgument2, java.applet.Applet appletArgument3) {
+    final static java.net.URL computeURL0648(java.net.URL uRLArgument1, int integerArgument2, java.applet.Applet appletArgument3) {
         Object objectLocal1 = null;
         Object objectLocal2 = null;
         java.net.URL stackURLLocal3 = null;
@@ -48,7 +48,7 @@ final class NetworkSupport004 {
             !MixedSupport131.stringState0543.equals(appletArgument3.getParameter("session"))) {
             objectLocal11 = MixedSupport131.stringState0543;
           }
-          stackURLLocal4 = NetworkSupport011.computeURL1442((String) (objectLocal11), (String) (objectLocal1), false, uRLArgument1, -1);
+          stackURLLocal4 = NetworkSupport011.computeURL1393((String) (objectLocal11), (String) (objectLocal1), false, uRLArgument1, -1);
           return stackURLLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal10 = caughtParameterLocal13;
@@ -66,16 +66,16 @@ final class NetworkSupport004 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) (stackObjectLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) (stackObjectLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
-    final static void performAction0663(int integerArgument1) {
+    final static void performAction0649(int integerArgument1) {
         if (integerArgument1 != -29550) {
           return;
         }
-        UiComponentPart010.performAction0457((byte) 53);
-        CipherPacketBuffer.performAction1868(-4840);
+        UiComponentPart010.performAction0449((byte) 53);
+        CipherPacketBuffer.performAction1818(-4840);
     }
 
     static {

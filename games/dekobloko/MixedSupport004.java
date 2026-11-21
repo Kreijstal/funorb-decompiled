@@ -18,13 +18,13 @@ final class MixedSupport004 {
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          if (!SceneWidgetPart002.computeBoolean0618(integerArgument4, resourceArchiveArgument3, integerArgument1, 49)) {
+          if (!SceneWidgetPart002.computeBoolean0604(integerArgument4, resourceArchiveArgument3, integerArgument1, 49)) {
             return null;
           }
           if (integerArgument2 != 50) {
             MixedSupport004.performAction0052((byte) -13);
           }
-          stackRgbSpriteLocal2 = SceneWidgetPart008.computeRgbSprite1297((byte) 26);
+          stackRgbSpriteLocal2 = SceneWidgetPart008.computeRgbSprite1249((byte) 26);
           return stackRgbSpriteLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -36,7 +36,7 @@ final class MixedSupport004 {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class MixedSupport004 {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(')').toString());
         }
     }
 

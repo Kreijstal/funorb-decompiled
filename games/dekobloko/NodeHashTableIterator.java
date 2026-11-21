@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class CollectionSupport001 implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     private int integerState0121;
     private HashNode hashNodeState0003;
     private HashNode hashNodeState0004;
@@ -40,7 +40,7 @@ final class CollectionSupport001 implements Iterator {
         return hashNodeLocal2;
     }
 
-    final static void performAction0337(byte byteArgument1) {
+    final static void performAction0333(byte byteArgument1) {
         int integerLocal1 = 0;
         RuntimeException caughtExceptionLocal2 = null;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -59,14 +59,14 @@ final class CollectionSupport001 implements Iterator {
         try {
           cipherPacketBufferLocal12 = UiComponentPart006.cipherPacketBufferState0001;
           if (byteArgument1 != 53) {
-            CollectionSupport001.performAction0339(20);
+            NodeHashTableIterator.clearStaticReferences(20);
           }
-          integerLocal4 = cipherPacketBufferLocal12.computeInteger2085((byte) -44);
-          integerLocal5 = cipherPacketBufferLocal12.computeInteger2085((byte) -117);
+          integerLocal4 = cipherPacketBufferLocal12.computeInteger2035((byte) -44);
+          integerLocal5 = cipherPacketBufferLocal12.computeInteger2035((byte) -117);
           if (integerLocal4 == 0) {
-            mixedSupport118Local7 = (MixedSupport118) (UiComponentPart010.nodeDequeState0008.computeHashNode1970((byte) -68));
+            mixedSupport118Local7 = (MixedSupport118) (UiComponentPart010.nodeDequeState0008.computeHashNode1920((byte) -68));
             if (mixedSupport118Local7 == null) {
-              NodeHashTable.performAction1703(78);
+              NodeHashTable.performAction1653(78);
               return;
             }
             integerLocal9 = NetworkSupport012.integerState0759 - cipherPacketBufferLocal12.position;
@@ -77,41 +77,41 @@ final class CollectionSupport001 implements Iterator {
               integerLocal9 = integerArrayLocal14.length << 2;
             }
             for (integerLocal1 = 0; integerLocal1 < integerLocal9; integerLocal1++) {
-              integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.computeInteger2085((byte) -108) << (MixedSupport079.computeInteger1051(3, integerLocal1) << 8));
+              integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.computeInteger2035((byte) -108) << (MixedSupport079.computeInteger1022(3, integerLocal1) << 8));
             }
             mixedSupport118Local7.booleanState0168 = true;
-            mixedSupport118Local7.performAction0161((byte) 118);
+            mixedSupport118Local7.performAction0158((byte) 118);
             return;
           }
           if (integerLocal4 == 1) {
-            integerLocal6 = cipherPacketBufferLocal12.computeInteger2088((byte) -2);
-            mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1970((byte) -124));
+            integerLocal6 = cipherPacketBufferLocal12.computeInteger2038((byte) -2);
+            mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1920((byte) -124));
             while (mixedSupport038Local8 != null) {
               if (integerLocal5 != mixedSupport038Local8.integerState0230 ||
                 integerLocal6 != mixedSupport038Local8.integerState0227) {
-                mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1974(true));
+                mixedSupport038Local8 = (MixedSupport038) (MixedSupport016.nodeDequeState0003.computeHashNode1924(true));
                 continue;
               }
               break;
             }
             if (mixedSupport038Local8 == null) {
-              NodeHashTable.performAction1703(71);
+              NodeHashTable.performAction1653(71);
               return;
             }
-            mixedSupport038Local8.performAction0161((byte) 124);
+            mixedSupport038Local8.performAction0158((byte) 124);
             return;
           }
-          NetworkArchiveRequestManager.performAction1468((Throwable) null, 16408, "LR1: " + BufferedSocket.computeString1563((byte) 74));
-          NodeHashTable.performAction1703(100);
+          NetworkArchiveRequestManager.performAction1419((Throwable) null, 16408, "LR1: " + BufferedSocket.computeString1514((byte) 74));
+          NodeHashTable.performAction1653(100);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {
           caughtExceptionLocal2 = caughtParameterLocal15;
           runtimeExceptionLocal3 = caughtExceptionLocal2;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal3), "cm.A(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal3), "cm.A(" + byteArgument1 + ')');
         }
     }
 
-    private final void performAction0340(byte byteArgument1) {
+    private final void reset(byte byteArgument1) {
         int integerLocal1 = 4 / ((-61 - byteArgument1) / 36);
         this.integerState0121 = 1;
         this.hashNodeState0004 = null;
@@ -141,7 +141,7 @@ final class CollectionSupport001 implements Iterator {
         return true;
     }
 
-    public static void performAction0339(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         integerArrayState0026 = null;
         mixedSupport059State0001 = null;
         integerArrayState0028 = null;
@@ -158,11 +158,11 @@ final class CollectionSupport001 implements Iterator {
         if (this.hashNodeState0004 == null) {
           throw new IllegalStateException();
         }
-        this.hashNodeState0004.performAction0161((byte) 112);
+        this.hashNodeState0004.performAction0158((byte) 112);
         this.hashNodeState0004 = null;
     }
 
-    final static String computeString0338(byte byteArgument1, String stringArgument2, String[] stringArrayArgument3) {
+    final static String substituteIndexedPlaceholders(byte byteArgument1, String stringArgument2, String[] stringArrayArgument3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -196,13 +196,13 @@ final class CollectionSupport001 implements Iterator {
             integerLocal15 = stringArgument2.indexOf("<%", integerLocal14);
             if (integerLocal15 >= 0) {
               for (integerLocal14 = 2 + integerLocal15; integerLocal14 < integerLocal11; integerLocal14++) {
-                if (MixedSupport042.computeBoolean0591(stringArgument2.charAt(integerLocal14), (byte) 23)) {
+                if (MixedSupport042.computeBoolean0577(stringArgument2.charAt(integerLocal14), (byte) 23)) {
                   continue;
                 }
                 break;
               }
               stringLocal17 = stringArgument2.substring(2 + integerLocal15, integerLocal14);
-              if (!DualNode.computeBoolean0139((byte) 98, (CharSequence) ((Object) stringLocal17))) {
+              if (!DualNode.computeBoolean0136((byte) 98, (CharSequence) ((Object) stringLocal17))) {
                 continue;
               }
               if (integerLocal11 <= integerLocal14) {
@@ -212,7 +212,7 @@ final class CollectionSupport001 implements Iterator {
                 continue;
               }
               integerLocal14++;
-              integerLocal19 = MixedSupport014.computeInteger0207((byte) -72, (CharSequence) ((Object) stringLocal17));
+              integerLocal19 = MixedSupport014.computeInteger0204((byte) -72, (CharSequence) ((Object) stringLocal17));
               integerLocal13 = integerLocal13 + (integerLocal15 - (integerLocal14 - stringArrayArgument3[integerLocal19].length()));
               continue;
             }
@@ -221,7 +221,7 @@ final class CollectionSupport001 implements Iterator {
           stringBuilderLocal16 = new StringBuilder(integerLocal13);
           integerLocal23 = 0;
           if (byteArgument1 <= 80) {
-            CollectionSupport001.performAction0337((byte) -121);
+            NodeHashTableIterator.performAction0333((byte) -121);
           }
           integerLocal18 = 0;
           while (true) {
@@ -232,13 +232,13 @@ final class CollectionSupport001 implements Iterator {
               return stackStringLocal4;
             }
             for (integerLocal23 = integerLocal24 + 2; integerLocal11 > integerLocal23; integerLocal23++) {
-              if (MixedSupport042.computeBoolean0591(stringArgument2.charAt(integerLocal23), (byte) 23)) {
+              if (MixedSupport042.computeBoolean0577(stringArgument2.charAt(integerLocal23), (byte) 23)) {
                 continue;
               }
               break;
             }
             stringLocal20 = stringArgument2.substring(2 + integerLocal24, integerLocal23);
-            if (!DualNode.computeBoolean0139((byte) 98, (CharSequence) ((Object) stringLocal20))) {
+            if (!DualNode.computeBoolean0136((byte) 98, (CharSequence) ((Object) stringLocal20))) {
               continue;
             }
             if (integerLocal23 >= integerLocal11) {
@@ -248,7 +248,7 @@ final class CollectionSupport001 implements Iterator {
               continue;
             }
             integerLocal23++;
-            integerLocal21 = MixedSupport014.computeInteger0207((byte) 100, (CharSequence) ((Object) stringLocal20));
+            integerLocal21 = MixedSupport014.computeInteger0204((byte) 100, (CharSequence) ((Object) stringLocal20));
             discarded$0 = stringBuilderLocal16.append(stringArgument2.substring(integerLocal18, integerLocal24));
             integerLocal18 = integerLocal23;
             discarded$1 = stringBuilderLocal16.append(stringArrayArgument3[integerLocal21]);
@@ -269,17 +269,17 @@ final class CollectionSupport001 implements Iterator {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 
-    CollectionSupport001(NodeHashTable nodeHashTableArgument1) {
+    NodeHashTableIterator(NodeHashTable nodeHashTableArgument1) {
         this.hashNodeState0004 = null;
         try {
           this.nodeHashTableState0001 = nodeHashTableArgument1;
-          this.performAction0340((byte) -117);
+          this.reset((byte) -117);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "cm.<init>(" + (nodeHashTableArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "cm.<init>(" + (nodeHashTableArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -290,36 +290,36 @@ final class CollectionSupport001 implements Iterator {
         int[] integerArrayLocal4;
         int integerLocal5;
         int integerLocal6;
-        integerArrayState0025 = UiComponentPart002.computeIntegerArray0091(-126);
-        integerArrayState0026 = UiComponentPart002.computeIntegerArray0091(80);
-        integerArrayState0027 = UiComponentPart002.computeIntegerArray0091(-125);
-        integerArrayState0028 = UiComponentPart002.computeIntegerArray0091(86);
+        integerArrayState0025 = UiComponentPart002.computeIntegerArray0088(-126);
+        integerArrayState0026 = UiComponentPart002.computeIntegerArray0088(80);
+        integerArrayState0027 = UiComponentPart002.computeIntegerArray0088(-125);
+        integerArrayState0028 = UiComponentPart002.computeIntegerArray0088(86);
         for (integerLocal1 = 0; integerLocal1 < 15; integerLocal1++) {
           integerArrayLocal2 = integerArrayState0025;
           integerLocal3 = integerLocal1;
-          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.computeInteger0388(integerArrayLocal2[integerLocal3 >> 5], 1 << MixedSupport079.computeInteger1051(integerLocal3, 31));
+          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.computeInteger0381(integerArrayLocal2[integerLocal3 >> 5], 1 << MixedSupport079.computeInteger1022(integerLocal3, 31));
         }
         for (integerLocal5 = 15; 31 > integerLocal5; integerLocal5++) {
           integerArrayLocal4 = integerArrayState0026;
           integerLocal6 = integerLocal5;
-          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.computeInteger0388(integerArrayLocal4[integerLocal6 >> 5], 1 << MixedSupport079.computeInteger1051(31, integerLocal6));
+          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.computeInteger0381(integerArrayLocal4[integerLocal6 >> 5], 1 << MixedSupport079.computeInteger1022(31, integerLocal6));
         }
         int[] integerArrayLocal7 = integerArrayState0027;
-        integerArrayLocal7[0] = UiComponentPart006.computeInteger0388(integerArrayLocal7[0], 8);
+        integerArrayLocal7[0] = UiComponentPart006.computeInteger0381(integerArrayLocal7[0], 8);
         int[] integerArrayLocal8 = integerArrayState0027;
-        integerArrayLocal8[0] = UiComponentPart006.computeInteger0388(integerArrayLocal8[0], 128);
+        integerArrayLocal8[0] = UiComponentPart006.computeInteger0381(integerArrayLocal8[0], 128);
         int[] integerArrayLocal9 = integerArrayState0027;
-        integerArrayLocal9[0] = UiComponentPart006.computeInteger0388(integerArrayLocal9[0], 4194304);
+        integerArrayLocal9[0] = UiComponentPart006.computeInteger0381(integerArrayLocal9[0], 4194304);
         int[] integerArrayLocal10 = integerArrayState0028;
-        integerArrayLocal10[0] = UiComponentPart006.computeInteger0388(integerArrayLocal10[0], 1);
+        integerArrayLocal10[0] = UiComponentPart006.computeInteger0381(integerArrayLocal10[0], 1);
         int[] integerArrayLocal11 = integerArrayState0028;
-        integerArrayLocal11[0] = UiComponentPart006.computeInteger0388(integerArrayLocal11[0], 2048);
+        integerArrayLocal11[0] = UiComponentPart006.computeInteger0381(integerArrayLocal11[0], 2048);
         stringState0098 = "Creating your account";
         stringState0099 = "Connection lost. <%0>";
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static String computeString0336(int integerArgument1, String stringArgument2, String[] stringArrayArgument3) {
+    final static String substituteIndexedPlaceholders(int integerArgument1, String stringArgument2, String[] stringArrayArgument3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -353,13 +353,13 @@ final class CollectionSupport001 implements Iterator {
             integerLocal15 = stringArgument2.indexOf("<%", integerLocal14);
             if (integerLocal15 >= 0) {
               for (integerLocal14 = 2 + integerLocal15; integerLocal14 < integerLocal11; integerLocal14++) {
-                if (MixedSupport042.computeBoolean0591(stringArgument2.charAt(integerLocal14), (byte) 23)) {
+                if (MixedSupport042.computeBoolean0577(stringArgument2.charAt(integerLocal14), (byte) 23)) {
                   continue;
                 }
                 break;
               }
               stringLocal17 = stringArgument2.substring(2 + integerLocal15, integerLocal14);
-              if (!DualNode.computeBoolean0139((byte) 98, (CharSequence) ((Object) stringLocal17))) {
+              if (!DualNode.computeBoolean0136((byte) 98, (CharSequence) ((Object) stringLocal17))) {
                 continue;
               }
               if (integerLocal11 <= integerLocal14) {
@@ -369,7 +369,7 @@ final class CollectionSupport001 implements Iterator {
                 continue;
               }
               integerLocal14++;
-              integerLocal19 = MixedSupport014.computeInteger0207((byte) -72, (CharSequence) ((Object) stringLocal17));
+              integerLocal19 = MixedSupport014.computeInteger0204((byte) -72, (CharSequence) ((Object) stringLocal17));
               integerLocal13 = integerLocal13 + (integerLocal15 - (integerLocal14 - stringArrayArgument3[integerLocal19].length()));
               continue;
             }
@@ -378,7 +378,7 @@ final class CollectionSupport001 implements Iterator {
           stringBuilderLocal16 = new StringBuilder(integerLocal13);
           integerLocal23 = 0;
           if (integerArgument1 <= 80) {
-            CollectionSupport001.performAction0337((byte) -121);
+            NodeHashTableIterator.performAction0333((byte) -121);
           }
           integerLocal18 = 0;
           while (true) {
@@ -389,13 +389,13 @@ final class CollectionSupport001 implements Iterator {
               return stackStringLocal4;
             }
             for (integerLocal23 = integerLocal24 + 2; integerLocal11 > integerLocal23; integerLocal23++) {
-              if (MixedSupport042.computeBoolean0591(stringArgument2.charAt(integerLocal23), (byte) 23)) {
+              if (MixedSupport042.computeBoolean0577(stringArgument2.charAt(integerLocal23), (byte) 23)) {
                 continue;
               }
               break;
             }
             stringLocal20 = stringArgument2.substring(2 + integerLocal24, integerLocal23);
-            if (!DualNode.computeBoolean0139((byte) 98, (CharSequence) ((Object) stringLocal20))) {
+            if (!DualNode.computeBoolean0136((byte) 98, (CharSequence) ((Object) stringLocal20))) {
               continue;
             }
             if (integerLocal23 >= integerLocal11) {
@@ -405,7 +405,7 @@ final class CollectionSupport001 implements Iterator {
               continue;
             }
             integerLocal23++;
-            integerLocal21 = MixedSupport014.computeInteger0207((byte) 100, (CharSequence) ((Object) stringLocal20));
+            integerLocal21 = MixedSupport014.computeInteger0204((byte) 100, (CharSequence) ((Object) stringLocal20));
             discarded$0 = stringBuilderLocal16.append(stringArgument2.substring(integerLocal18, integerLocal24));
             integerLocal18 = integerLocal23;
             discarded$1 = stringBuilderLocal16.append(stringArrayArgument3[integerLocal21]);
@@ -426,7 +426,7 @@ final class CollectionSupport001 implements Iterator {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(')').toString());
         }
     }
 }

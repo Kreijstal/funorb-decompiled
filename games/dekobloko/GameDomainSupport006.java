@@ -14,7 +14,7 @@ class GameDomainSupport006 extends MixedSupport043 {
     static RgbSprite rgbSpriteState0075;
     static String stringState0630;
 
-    final static void performAction2056(byte byteArgument1, SceneWidgetPart012 sceneWidgetPart012Argument2) {
+    final static void performAction2006(byte byteArgument1, SceneWidgetPart012 sceneWidgetPart012Argument2) {
         SceneWidgetPart012 sceneWidgetPart012Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -24,23 +24,23 @@ class GameDomainSupport006 extends MixedSupport043 {
         RuntimeException caughtExceptionLocal7 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetPart012Argument2.performAction0161((byte) 111);
-          sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1970((byte) -61));
+          sceneWidgetPart012Argument2.performAction0158((byte) 111);
+          sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1920((byte) -61));
           while (sceneWidgetPart012Local1 != null) {
-            if (sceneWidgetPart012Local1.computeBoolean1822(-985, sceneWidgetPart012Argument2)) {
-              sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1974(true));
+            if (sceneWidgetPart012Local1.computeBoolean1772(-985, sceneWidgetPart012Argument2)) {
+              sceneWidgetPart012Local1 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.computeHashNode1924(true));
               continue;
             }
             break;
           }
           if (byteArgument1 <= 3) {
-            GameDomainSupport006.performAction2060(31);
+            GameDomainSupport006.performAction2010(31);
           }
           if (sceneWidgetPart012Local1 != null) {
-            MixedSupport043.performAction0598(114, sceneWidgetPart012Argument2, sceneWidgetPart012Local1);
+            MixedSupport043.performAction0584(114, sceneWidgetPart012Argument2, sceneWidgetPart012Local1);
             return;
           }
-          MixedSupport057.nodeDequeState0010.performAction1963(sceneWidgetPart012Argument2, 2777);
+          MixedSupport057.nodeDequeState0010.performAction1913(sceneWidgetPart012Argument2, 2777);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -52,11 +52,11 @@ class GameDomainSupport006 extends MixedSupport043 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 
-    final static int computeInteger2059(int integerArgument1) {
+    final static int computeInteger2009(int integerArgument1) {
         if (integerArgument1 != 3) {
           stringState0624 = (String) null;
           return -ResourceSupport001.integerState0021 + MixedSupport035.integerState0219;
@@ -64,28 +64,28 @@ class GameDomainSupport006 extends MixedSupport043 {
         return -ResourceSupport001.integerState0021 + MixedSupport035.integerState0219;
     }
 
-    MixedSupport048 computeMixedSupport0480601(int integerArgument1) {
+    MixedSupport048 computeMixedSupport0480587(int integerArgument1) {
         if (integerArgument1 != 18) {
           MixedSupport038 mixedSupport038Local1 = (MixedSupport038) null;
-          GameDomainSupport006.performAction2058(124, -86, (MixedSupport038) null);
+          GameDomainSupport006.performAction2008(124, -86, (MixedSupport038) null);
           return MusicTrack.mixedSupport048State0003;
         }
         return MusicTrack.mixedSupport048State0003;
     }
 
-    final static void performAction2058(int integerArgument1, int integerArgument2, MixedSupport038 mixedSupport038Argument3) {
+    final static void performAction2008(int integerArgument1, int integerArgument2, MixedSupport038 mixedSupport038Argument3) {
         try {
           if (integerArgument1 != 3) {
             booleanState0227 = false;
           }
-          MixedSupport016.nodeDequeState0003.performAction1963(mixedSupport038Argument3, 2777);
-          MixedSupport085.performAction1159(true, mixedSupport038Argument3, integerArgument2);
+          MixedSupport016.nodeDequeState0003.performAction1913(mixedSupport038Argument3, 2777);
+          MixedSupport085.performAction1130(true, mixedSupport038Argument3, integerArgument2);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "wk.M(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport038Argument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wk.M(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport038Argument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void performAction2057(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction2007(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -93,36 +93,36 @@ class GameDomainSupport006 extends MixedSupport043 {
         integerLocal1 = -84 / ((integerArgument1 - 5) / 54);
         integerLocal2 = integerArgument2;
         if (0 == integerLocal2) {
-          MixedSupport022.performAction0358(integerArgument3, true);
+          MixedSupport022.performAction0351(integerArgument3, true);
           return;
         }
         if (integerLocal2 == 1) {
-          MixedSupport051.performAction0668(integerArgument3, false);
+          MixedSupport051.performAction0654(integerArgument3, false);
           return;
         }
         if (integerLocal2 == 2) {
-          UiComponentPart003.performAction0177(integerArgument3, 12618);
+          UiComponentPart003.performAction0174(integerArgument3, 12618);
           return;
         }
         if (3 != integerLocal2) {
           return;
         }
-        CipherPacketBuffer.performAction1862(integerArgument3, -2093);
+        CipherPacketBuffer.performAction1812(integerArgument3, -2093);
     }
 
-    final void performAction0603(PacketBuffer packetBufferArgument1, byte byteArgument2) {
-        packetBufferArgument1.performAction2068(this.longState0055, (byte) 0);
+    final void performAction0589(PacketBuffer packetBufferArgument1, byte byteArgument2) {
+        packetBufferArgument1.performAction2018(this.longState0055, (byte) 0);
         if (byteArgument2 < 34) {
           return;
         }
         try {
-          packetBufferArgument1.performAction2070(this.stringState0628, true);
+          packetBufferArgument1.performAction2020(this.stringState0628, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "wk.D(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wk.D(" + (packetBufferArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
         }
     }
 
-    public static void performAction2060(int integerArgument1) {
+    public static void performAction2010(int integerArgument1) {
         stringState0630 = null;
         stringState0627 = null;
         if (integerArgument1 == 7751) {
@@ -135,7 +135,7 @@ class GameDomainSupport006 extends MixedSupport043 {
           return;
         }
         MixedSupport038 mixedSupport038Local1 = (MixedSupport038) null;
-        GameDomainSupport006.performAction2058(12, -125, (MixedSupport038) null);
+        GameDomainSupport006.performAction2008(12, -125, (MixedSupport038) null);
         resourceArchiveState0027 = null;
         stringState0629 = null;
         stringState0626 = null;
@@ -149,7 +149,7 @@ class GameDomainSupport006 extends MixedSupport043 {
           this.longState0055 = longArgument1;
           this.stringState0628 = stringArgument2;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "wk.<init>(" + longArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "wk.<init>(" + longArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class ResourceSupport004 extends MixedSupport120 {
     PacketBuffer packetBufferState0007;
     byte byteState0003;
 
-    final int computeInteger0516(boolean booleanArgument1) {
+    final int computeInteger0502(boolean booleanArgument1) {
         if (booleanArgument1) {
           return -110;
         }
@@ -21,22 +21,22 @@ final class ResourceSupport004 extends MixedSupport120 {
         return 100 * this.packetBufferState0007.position / (-this.byteState0003 + this.packetBufferState0007.payload.length);
     }
 
-    static long computeLong1427(long longArgument1, long longArgument2) {
+    static long computeLong1378(long longArgument1, long longArgument2) {
         return longArgument1 ^ longArgument2;
     }
 
-    public static void performAction1430(byte byteArgument1) {
+    public static void performAction1381(byte byteArgument1) {
         stringArrayState0031 = null;
         stringState0427 = null;
         stringState0429 = null;
         rgbSpriteState0043 = null;
         stringState0428 = null;
         if (byteArgument1 < 78) {
-          ResourceSupport004.computeInteger1429(-100);
+          ResourceSupport004.computeInteger1380(-100);
         }
     }
 
-    final byte[] computeByteArray0518(byte byteArgument1) {
+    final byte[] computeByteArray0504(byte byteArgument1) {
         if (this.booleanState0173) {
           throw new RuntimeException();
         }
@@ -46,16 +46,16 @@ final class ResourceSupport004 extends MixedSupport120 {
         if (byteArgument1 > 65) {
           return this.packetBufferState0007.payload;
         }
-        ResourceSupport004.computeInteger1429(9);
+        ResourceSupport004.computeInteger1380(9);
         return this.packetBufferState0007.payload;
     }
 
-    final static int computeInteger1429(int integerArgument1) {
+    final static int computeInteger1380(int integerArgument1) {
         int integerLocal1 = -62 % ((integerArgument1 - 81) / 40);
         return MixedSupport003.integerState0018;
     }
 
-    final static void performAction1428(SceneWidgetPart013 sceneWidgetPart013Argument1, byte byteArgument2) {
+    final static void performAction1379(SceneWidgetPart013 sceneWidgetPart013Argument1, byte byteArgument2) {
         SceneWidgetPart013 sceneWidgetPart013Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -66,24 +66,24 @@ final class ResourceSupport004 extends MixedSupport120 {
         RuntimeException caughtExceptionLocal8 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          sceneWidgetPart013Argument1.performAction0161((byte) 108);
+          sceneWidgetPart013Argument1.performAction0158((byte) 108);
           if (byteArgument2 != -50) {
             return;
           }
-          sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1970((byte) -99));
+          sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1920((byte) -99));
           while (sceneWidgetPart013Local1 != null) {
-            if (sceneWidgetPart013Local1.computeBoolean1935(sceneWidgetPart013Argument1, false)) {
-              sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1974(true));
+            if (sceneWidgetPart013Local1.computeBoolean1885(sceneWidgetPart013Argument1, false)) {
+              sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.computeHashNode1924(true));
               continue;
             }
             break;
           }
           if (sceneWidgetPart013Local1 == null) {
-            MixedSupport051.nodeDequeState0009.performAction1963(sceneWidgetPart013Argument1, 2777);
+            MixedSupport051.nodeDequeState0009.performAction1913(sceneWidgetPart013Argument1, 2777);
             return;
           }
           stackIntegerLocal4 = 114;
-          MixedSupport043.performAction0598(stackIntegerLocal4, sceneWidgetPart013Argument1, sceneWidgetPart013Local1);
+          MixedSupport043.performAction0584(stackIntegerLocal4, sceneWidgetPart013Argument1, sceneWidgetPart013Local1);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -95,15 +95,15 @@ final class ResourceSupport004 extends MixedSupport120 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final static void performAction1426(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static void performAction1377(int integerArgument1, int integerArgument2, int integerArgument3) {
         MixedSupport138.integerState0819 = integerArgument3;
         BufferedSocket.integerState0661 = integerArgument2;
         if (integerArgument1 != 31004) {
-          ResourceSupport004.computeInteger1429(-44);
+          ResourceSupport004.computeInteger1380(-44);
         }
     }
 

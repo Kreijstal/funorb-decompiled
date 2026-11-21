@@ -11,10 +11,10 @@ final class MixedSupport015 {
     private RgbSprite[] rgbSpriteArrayState0004;
     static String stringState0074;
 
-    final static MixedSupport033 computeMixedSupport0330219(int integerArgument1, byte byteArgument2) {
+    final static MixedSupport033 computeMixedSupport0330216(int integerArgument1, byte byteArgument2) {
         MixedSupport033 mixedSupport033Local1 = new MixedSupport033();
-        AudioSupport004.nodeDequeState0028.performAction1963(mixedSupport033Local1, 2777);
-        MixedSupport050.performAction0659(integerArgument1, 65);
+        PcmPlayerService.nodeDequeState0028.performAction1913(mixedSupport033Local1, 2777);
+        MixedSupport050.performAction0645(integerArgument1, 65);
         if (byteArgument2 <= -81) {
           return mixedSupport033Local1;
         }
@@ -22,7 +22,7 @@ final class MixedSupport015 {
         return mixedSupport033Local1;
     }
 
-    public static void performAction0217(byte byteArgument1) {
+    public static void performAction0214(byte byteArgument1) {
         stringState0071 = null;
         stringState0072 = null;
         integerArrayState0020 = null;
@@ -36,10 +36,10 @@ final class MixedSupport015 {
         indexedSpriteArrayArrayState0001 = (IndexedSprite[][]) null;
     }
 
-    final static void performAction0218(int integerArgument1) {
-        MixedSupport071.sceneWidgetPart001State0001 = new SceneWidgetPart001(MusicTrack.sceneWidgetState0127, MixedSupport127.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport132.sceneWidgetState0125, InputAdapter002.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019);
+    final static void performAction0215(int integerArgument1) {
+        MixedSupport071.sceneWidgetPart001State0001 = new SceneWidgetPart001(MusicTrack.sceneWidgetState0127, MixedSupport127.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport132.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019);
         if (integerArgument1 != 8) {
-          MixedSupport015.performAction0217((byte) 88);
+          MixedSupport015.performAction0214((byte) 88);
         }
     }
 
@@ -47,13 +47,13 @@ final class MixedSupport015 {
         try {
           this.rgbSpriteArrayState0004 = rgbSpriteArrayArgument1;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "cc.<init>(" + (rgbSpriteArrayArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "cc.<init>(" + (rgbSpriteArrayArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction0220(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction0217(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = -29 / ((integerArgument2 + 69) / 54);
-        GameplayControls.performAction1978(integerArgument5, (byte) 50, this.rgbSpriteArrayState0004, integerArgument1, integerArgument4, integerArgument3);
+        GameplayControls.performAction1928(integerArgument5, (byte) 50, this.rgbSpriteArrayState0004, integerArgument1, integerArgument4, integerArgument3);
     }
 
     static {

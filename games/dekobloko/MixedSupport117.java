@@ -20,18 +20,18 @@ final class MixedSupport117 extends HashNode {
     static String stringState0489;
     int integerState0730;
 
-    public static void performAction1673(byte byteArgument1) {
+    public static void performAction1623(byte byteArgument1) {
         stringState0486 = null;
         nodeDequeState0030 = null;
         stringState0487 = null;
         rawSoundState0020 = null;
         stringState0489 = null;
         if (byteArgument1 >= -65) {
-          MixedSupport117.performAction1673((byte) -48);
+          MixedSupport117.performAction1623((byte) -48);
         }
     }
 
-    final static void performAction1672(String stringArgument1, int integerArgument2) {
+    final static void performAction1622(String stringArgument1, int integerArgument2) {
         int stackIntegerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -116,7 +116,7 @@ final class MixedSupport117 extends HashNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class MixedSupport117 extends HashNode {
           stackBooleanLocal2 = (booleanArgument1);
           this.booleanState0167 = stackBooleanLocal2;
           this.integerState0725 = integerArgument3;
-          this.stringState0488 = PlatformSupport004.computeString0701(stringArrayArgument8.length, 0, (CharSequence[]) ((Object) stringArrayArgument8), (byte) 74);
+          this.stringState0488 = PlatformSupport004.computeString0687(stringArrayArgument8.length, 0, (CharSequence[]) ((Object) stringArrayArgument8), (byte) 74);
           if (integerArrayArgument5 == null) {
             this.integerState0724 = integerArgument6;
             return;
@@ -162,7 +162,7 @@ final class MixedSupport117 extends HashNode {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 

@@ -10,7 +10,7 @@ final class MixedSupport041 extends MixedSupport001 {
     private int integerState0237;
     private RgbSprite[] rgbSpriteArrayState0012;
 
-    public static void performAction0589(int integerArgument1) {
+    public static void performAction0575(int integerArgument1) {
         if (integerArgument1 != 8) {
           integerArrayState0048 = (int[]) null;
           indexedSpriteArrayArrayState0002 = (IndexedSprite[][]) null;
@@ -39,10 +39,10 @@ final class MixedSupport041 extends MixedSupport001 {
         int integerLocal11 = 0;
         try {
           if (byteArgument4 >= -60) {
-            MixedSupport041.performAction0589(-101);
+            MixedSupport041.performAction0575(-101);
           }
           if (!uiComponentArgument5.booleanState0018) {
-            stackIntegerLocal1 = (uiComponentArgument5.computeBoolean0239(true)) ? 1 : 0;
+            stackIntegerLocal1 = (uiComponentArgument5.computeBoolean0236(true)) ? 1 : 0;
           } else {
             stackIntegerLocal1 = 1;
           }
@@ -62,8 +62,8 @@ final class MixedSupport041 extends MixedSupport001 {
           integerLocal10 = stackIntegerLocal2;
           stackIntegerLocal3 = (booleanArgument1) ? 16777215 : 7105644;
           integerLocal11 = stackIntegerLocal3;
-          MixedSupport115.performAction1660(integerArgument3 - (-uiComponentArgument5.integerState0104 - (uiComponentArgument5.integerState0108 - this.rgbSpriteArrayState0012[0].integerState0260 >> 1)), this.rgbSpriteArrayState0012, uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0107, integerLocal10, -121);
-          this.bitmapFontState0001.computeInteger1213(uiComponentArgument5.stringState0078, uiComponentArgument5.integerState0110 + integerArgument2, -2 + (uiComponentArgument5.integerState0104 + integerArgument3), uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal11, -1, 1, 1, this.bitmapFontState0001.integerState0518);
+          MixedSupport115.performAction1610(integerArgument3 - (-uiComponentArgument5.integerState0104 - (uiComponentArgument5.integerState0108 - this.rgbSpriteArrayState0012[0].integerState0260 >> 1)), this.rgbSpriteArrayState0012, uiComponentArgument5.integerState0110 + integerArgument2, uiComponentArgument5.integerState0107, integerLocal10, -121);
+          this.bitmapFontState0001.computeInteger1174(uiComponentArgument5.stringState0078, uiComponentArgument5.integerState0110 + integerArgument2, -2 + (uiComponentArgument5.integerState0104 + integerArgument3), uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, integerLocal11, -1, 1, 1, this.bitmapFontState0001.integerState0518);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal7 = caughtParameterLocal12;
@@ -75,7 +75,7 @@ final class MixedSupport041 extends MixedSupport001 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 

@@ -13,7 +13,7 @@ final class MixedSupport030 {
     static int[] integerArrayState0037;
     private int[] integerArrayState0038;
 
-    public static void performAction0451(byte byteArgument1) {
+    public static void performAction0443(byte byteArgument1) {
         integerArrayState0037 = null;
         rawSoundState0006 = null;
         musicTrackArrayState0001 = null;
@@ -23,9 +23,9 @@ final class MixedSupport030 {
         }
     }
 
-    final int computeInteger0455(boolean booleanArgument1) {
+    final int computeInteger0447(boolean booleanArgument1) {
         if (0 == this.integerState0185) {
-          this.performAction0456(-1);
+          this.performAction0448(-1);
           this.integerState0185 = 256;
         }
         if (booleanArgument1) {
@@ -36,7 +36,7 @@ final class MixedSupport030 {
         return this.integerArrayState0038[integerLocal1];
     }
 
-    private final void performAction0456(int integerArgument1) {
+    private final void performAction0448(int integerArgument1) {
         int integerLocal1 = 0;
         int cachedIntegerLocal2 = 0;
         int cachedIntegerLocal3 = 0;
@@ -66,16 +66,16 @@ final class MixedSupport030 {
             }
           }
           this.integerState0183 = this.integerState0183 + this.integerArrayState0036[128 + integerLocal1 & 255];
-          cachedIntegerLocal2 = this.integerState0184 + this.integerState0183 + this.integerArrayState0036[MixedSupport079.computeInteger1051(1020, integerLocal4) >> 2];
+          cachedIntegerLocal2 = this.integerState0184 + this.integerState0183 + this.integerArrayState0036[MixedSupport079.computeInteger1022(1020, integerLocal4) >> 2];
           integerLocal5 = cachedIntegerLocal2;
           this.integerArrayState0036[integerLocal1] = cachedIntegerLocal2;
-          cachedIntegerLocal3 = integerLocal4 + this.integerArrayState0036[MixedSupport079.computeInteger1051(255, integerLocal5 >> 8 >> 2)];
+          cachedIntegerLocal3 = integerLocal4 + this.integerArrayState0036[MixedSupport079.computeInteger1022(255, integerLocal5 >> 8 >> 2)];
           this.integerState0184 = cachedIntegerLocal3;
           this.integerArrayState0038[integerLocal1] = cachedIntegerLocal3;
         }
     }
 
-    final int computeInteger0454(int integerArgument1, int integerArgument2) {
+    final int computeInteger0446(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         if (0 >= integerArgument2) {
           throw new IllegalArgumentException();
@@ -85,15 +85,15 @@ final class MixedSupport030 {
           musicTrackArrayState0001 = (MusicTrack[]) null;
         }
         while (true) {
-          integerLocal1 = this.computeInteger0455(false);
+          integerLocal1 = this.computeInteger0447(false);
           if (integerLocal1 <= integerLocal2) {
             break;
           }
         }
-        return ReturnedShapeCache.computeInteger1349(integerArgument2, 83, integerLocal1);
+        return ReturnedShapeCache.computeInteger1301(integerArgument2, 83, integerLocal1);
     }
 
-    private final void performAction0453(int integerArgument1) {
+    private final void performAction0445(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal3 = -1640531527;
@@ -219,11 +219,11 @@ final class MixedSupport030 {
           this.integerArrayState0036[6 + integerLocal8] = integerLocal12;
           this.integerArrayState0036[7 + integerLocal8] = integerLocal9;
         }
-        this.performAction0456(-1);
+        this.performAction0448(-1);
         this.integerState0185 = 256;
     }
 
-    final static boolean computeBoolean0452(byte byteArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4) {
+    final static boolean computeBoolean0444(byte byteArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1;
         int integerLocal2;
         if (booleanArgument2) {
@@ -275,9 +275,9 @@ final class MixedSupport030 {
           for (integerLocal1 = 0; integerLocal1 < integerArrayArgument1.length; integerLocal1++) {
             this.integerArrayState0038[integerLocal1] = integerArrayArgument1[integerLocal1];
           }
-          this.performAction0453(8388607);
+          this.performAction0445(8388607);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "ee.<init>(" + (integerArrayArgument1 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ee.<init>(" + (integerArrayArgument1 != null ? "{...}" : "null") + ')');
         }
     }
 

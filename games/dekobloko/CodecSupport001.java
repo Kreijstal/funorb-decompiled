@@ -14,7 +14,7 @@ final class CodecSupport001 {
     static PlatformService platformServiceState0003;
     static String stringState0328;
 
-    final void performAction1076(byte byteArgument1, PacketBuffer packetBufferArgument2, byte[] byteArrayArgument3) {
+    final void performAction1047(byte byteArgument1, PacketBuffer packetBufferArgument2, byte[] byteArrayArgument3) {
         try {
           try {
             if (packetBufferArgument2.payload[packetBufferArgument2.position] != 31 ||
@@ -25,7 +25,7 @@ final class CodecSupport001 {
               this.inflaterState0001 = new java.util.zip.Inflater(true);
             }
             if (byteArgument1 < 105) {
-              CodecSupport001.performAction1077(-120);
+              CodecSupport001.performAction1048(-120);
             }
             try {
               this.inflaterState0001.setInput(packetBufferArgument2.payload, 10 + packetBufferArgument2.position, -10 - packetBufferArgument2.position - 8 + packetBufferArgument2.payload.length);
@@ -36,7 +36,7 @@ final class CodecSupport001 {
             }
             this.inflaterState0001.reset();
           } catch (RuntimeException runtimeException) {
-            throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "lf.B(" + byteArgument1 + ',' + (packetBufferArgument2 != null ? "{...}" : "null") + ',' + (byteArrayArgument3 != null ? "{...}" : "null") + ')');
+            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "lf.B(" + byteArgument1 + ',' + (packetBufferArgument2 != null ? "{...}" : "null") + ',' + (byteArrayArgument3 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal3) {
           throw uncheckedExceptionLocal3;
@@ -48,7 +48,7 @@ final class CodecSupport001 {
     private CodecSupport001(int integerArgument1, int integerArgument2, int integerArgument3) {
     }
 
-    public static void performAction1077(int integerArgument1) {
+    public static void performAction1048(int integerArgument1) {
         rgbSpriteArrayState0018 = null;
         platformServiceState0003 = null;
         if (integerArgument1 != -13495) {

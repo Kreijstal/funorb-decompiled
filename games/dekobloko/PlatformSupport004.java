@@ -14,7 +14,7 @@ final class PlatformSupport004 {
     private long longState0019;
     private long longState0020;
 
-    final int computeInteger0703(byte[] byteArrayArgument1, byte byteArgument2, int integerArgument3, int integerArgument4) throws IOException {
+    final int computeInteger0689(byte[] byteArrayArgument1, byte byteArgument2, int integerArgument3, int integerArgument4) throws IOException {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int stackIntegerLocal3 = 0;
@@ -42,11 +42,11 @@ final class PlatformSupport004 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(byteArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    public static void performAction0705(int integerArgument1) {
+    public static void performAction0691(int integerArgument1) {
         stringState0230 = null;
         stringState0231 = null;
         stringState0229 = null;
@@ -58,34 +58,34 @@ final class PlatformSupport004 {
         rgbSpriteArrayArrayState0007 = (RgbSprite[][]) null;
     }
 
-    final void performAction0700(int integerArgument1) throws IOException {
+    final void performAction0686(int integerArgument1) throws IOException {
         if (this.randomAccessFileState0001 != null) {
           this.randomAccessFileState0001.close();
           this.randomAccessFileState0001 = null;
         }
         if (integerArgument1 >= -4) {
           CharSequence[] charSequenceArrayLocal1 = (CharSequence[]) null;
-          PlatformSupport004.computeString0701(-21, 99, (CharSequence[]) null, (byte) 32);
+          PlatformSupport004.computeString0687(-21, 99, (CharSequence[]) null, (byte) 32);
         }
     }
 
     protected final void finalize() throws Throwable {
         if (null != this.randomAccessFileState0001) {
           System.out.println("");
-          this.performAction0700(-86);
+          this.performAction0686(-86);
         }
     }
 
-    final void performAction0702(long longArgument1, int integerArgument2) throws IOException {
+    final void performAction0688(long longArgument1, int integerArgument2) throws IOException {
         this.randomAccessFileState0001.seek(longArgument1);
         this.longState0020 = longArgument1;
         if (integerArgument2 < 3) {
           CharSequence[] charSequenceArrayLocal1 = (CharSequence[]) null;
-          PlatformSupport004.computeString0701(69, 18, (CharSequence[]) null, (byte) 126);
+          PlatformSupport004.computeString0687(69, 18, (CharSequence[]) null, (byte) 126);
         }
     }
 
-    final static String computeString0701(int integerArgument1, int integerArgument2, CharSequence[] charSequenceArrayArgument3, byte byteArgument4) {
+    final static String computeString0687(int integerArgument1, int integerArgument2, CharSequence[] charSequenceArrayArgument3, byte byteArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         StringBuilder discarded$0 = null;
@@ -135,7 +135,7 @@ final class PlatformSupport004 {
           stringBuilderLocal16 = new StringBuilder(integerLocal15);
           if (byteArgument4 != 74) {
             charSequenceArrayLocal20 = (CharSequence[]) null;
-            PlatformSupport004.computeString0701(-7, 123, (CharSequence[]) null, (byte) 21);
+            PlatformSupport004.computeString0687(-7, 123, (CharSequence[]) null, (byte) 21);
           }
           for (integerLocal2 = integerArgument2; integerLocal2 < integerLocal12; integerLocal2++) {
             charSequenceLocal18 = charSequenceArrayArgument3[integerLocal2];
@@ -157,18 +157,18 @@ final class PlatformSupport004 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(',').append(byteArgument4).append(')').toString());
         }
     }
 
-    final long computeLong0699(byte byteArgument1) throws IOException {
+    final long computeLong0685(byte byteArgument1) throws IOException {
         if (byteArgument1 != -50) {
           return -2L;
         }
         return this.randomAccessFileState0001.length();
     }
 
-    final void performAction0704(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) throws IOException {
+    final void performAction0690(byte[] byteArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) throws IOException {
         try {
           if (((long)integerArgument4 + this.longState0020) > this.longState0019) {
             this.randomAccessFileState0001.seek(this.longState0019);
@@ -179,7 +179,7 @@ final class PlatformSupport004 {
           this.randomAccessFileState0001.write(byteArrayArgument1, integerArgument3, integerArgument4);
           this.longState0020 = this.longState0020 + (long)integerArgument4;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "hf.B(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "hf.B(" + (byteArrayArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class PlatformSupport004 {
           }
           this.randomAccessFileState0001.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "hf.<init>(" + (fileArgument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + longArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "hf.<init>(" + (fileArgument1 != null ? "{...}" : "null") + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + longArgument3 + ')');
         }
     }
 

@@ -13,18 +13,18 @@ final class MixedSupport077 {
     static long longState0025;
     static int[] integerArrayState0140;
 
-    final static SceneWidget computeSceneWidget1040(int integerArgument1) {
+    final static SceneWidget computeSceneWidget1011(int integerArgument1) {
         if (integerArgument1 > -72) {
           return (SceneWidget) null;
         }
-        return SoftwareFramebuffer.computeSceneWidget2032(-122);
+        return SoftwareFramebuffer.computeSceneWidget1982(-122);
     }
 
-    final static int[] computeIntegerArray1042(int integerArgument1) {
+    final static int[] computeIntegerArray1013(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument1 != 4) {
-          MixedSupport077.computeSceneWidget1040(64);
+          MixedSupport077.computeSceneWidget1011(64);
         }
         int[] integerArrayLocal3 = new int[4];
         int[] integerArrayLocal4 = integerArrayLocal3;
@@ -34,7 +34,7 @@ final class MixedSupport077 {
         return integerArrayLocal4;
     }
 
-    public static void performAction1041(int integerArgument1) {
+    public static void performAction1012(int integerArgument1) {
         sceneWidgetState0073 = null;
         stringState0321 = null;
         rgbSpriteState0029 = null;

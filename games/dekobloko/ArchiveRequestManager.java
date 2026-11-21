@@ -10,27 +10,27 @@ final class ArchiveRequestManager extends MixedSupport120 {
     int integerState0207;
     MixedSupport073 mixedSupport073State0001;
 
-    final byte[] computeByteArray0518(byte byteArgument1) {
+    final byte[] computeByteArray0504(byte byteArgument1) {
         if (this.booleanState0173) {
           throw new RuntimeException();
         }
         if (byteArgument1 >= 65) {
           return this.byteArrayState0006;
         }
-        this.computeInteger0516(true);
+        this.computeInteger0502(true);
         return this.byteArrayState0006;
     }
 
-    public static void performAction0517(boolean booleanArgument1) {
+    public static void performAction0503(boolean booleanArgument1) {
         stringArrayState0013 = null;
         stringState0156 = null;
         if (!booleanArgument1) {
           java.awt.Component componentLocal1 = (java.awt.Component) null;
-          ArchiveRequestManager.computeFramebuffer0515(-15, (byte) 51, -90, (java.awt.Component) null);
+          ArchiveRequestManager.computeFramebuffer0501(-15, (byte) 51, -90, (java.awt.Component) null);
         }
     }
 
-    final static Framebuffer computeFramebuffer0515(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4) {
+    final static Framebuffer computeFramebuffer0501(int integerArgument1, byte byteArgument2, int integerArgument3, java.awt.Component componentArgument4) {
         try {
           Class classLocal1 = null;
           Throwable throwableLocal2 = null;
@@ -52,14 +52,14 @@ final class ArchiveRequestManager extends MixedSupport120 {
               }
               classLocal1 = Class.forName("RenderingSupport014");
               framebufferLocal4 = (Framebuffer) (classLocal1.newInstance());
-              framebufferLocal4.performAction0467(integerArgument3, (byte) 83, integerArgument1, componentArgument4);
+              framebufferLocal4.performAction0459(integerArgument3, (byte) 83, integerArgument1, componentArgument4);
               stackFramebufferLocal7 = framebufferLocal4;
               return stackFramebufferLocal7;
             } catch (java.lang.Throwable caughtParameterLocal13) {
               caughtExceptionLocal12 = caughtParameterLocal13;
               throwableLocal2 = caughtExceptionLocal12;
               softwareFramebufferLocal5 = new SoftwareFramebuffer();
-              ((Framebuffer) ((Object) softwareFramebufferLocal5)).performAction0467(integerArgument3, (byte) 83, integerArgument1, componentArgument4);
+              ((Framebuffer) ((Object) softwareFramebufferLocal5)).performAction0459(integerArgument3, (byte) 83, integerArgument1, componentArgument4);
               stackSoftwareFramebufferLocal8 = softwareFramebufferLocal5;
               return (Framebuffer) ((Object) stackSoftwareFramebufferLocal8);
             }
@@ -73,7 +73,7 @@ final class ArchiveRequestManager extends MixedSupport120 {
             } else {
               stackStringLocal11 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal9), ((StringBuilder) (Object) stackStringBuilderLocal10).append(stackStringLocal11).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal15) {
           throw uncheckedExceptionLocal15;
@@ -85,7 +85,7 @@ final class ArchiveRequestManager extends MixedSupport120 {
     ArchiveRequestManager() {
     }
 
-    final int computeInteger0516(boolean booleanArgument1) {
+    final int computeInteger0502(boolean booleanArgument1) {
         if (this.booleanState0173) {
           return 0;
         }

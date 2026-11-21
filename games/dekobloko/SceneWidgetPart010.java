@@ -9,7 +9,7 @@ final class SceneWidgetPart010 extends SceneWidget {
     SceneWidgetPart008 sceneWidgetPart008State0005;
     SceneWidget sceneWidgetState0108;
 
-    final void performAction1664(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    final void performAction1614(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         this.integerState0903 = integerArgument4;
         this.integerState0896 = integerArgument7;
         this.integerState0890 = integerArgument1;
@@ -17,10 +17,10 @@ final class SceneWidgetPart010 extends SceneWidget {
         if (integerArgument2 != 1) {
           this.sceneWidgetState0107 = (SceneWidget) null;
         }
-        this.performAction1663(integerArgument5, integerArgument8, integerArgument6, 16);
+        this.performAction1613(integerArgument5, integerArgument8, integerArgument6, 16);
     }
 
-    final static int computeInteger1666(boolean booleanArgument1, int integerArgument2, int integerArgument3, CharSequence charSequenceArgument4) {
+    final static int computeInteger1616(boolean booleanArgument1, int integerArgument2, int integerArgument3, CharSequence charSequenceArgument4) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -43,7 +43,7 @@ final class SceneWidgetPart010 extends SceneWidget {
             integerLocal9 = 0;
             integerLocal10 = 0;
             if (integerArgument2 != 4) {
-              SceneWidgetPart010.performAction1668(true);
+              SceneWidgetPart010.performAction1618(true);
             }
             integerLocal11 = charSequenceArgument4.length();
             for (integerLocal1 = 0; integerLocal11 > integerLocal1; integerLocal1++) {
@@ -99,40 +99,40 @@ final class SceneWidgetPart010 extends SceneWidget {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static void performAction1662(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
+    final static void performAction1612(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
         MixedSupport001.integerState0013 = integerArgument4;
         MixedSupport089.integerState0531 = integerArgument1;
         if (byteArgument3 != -91) {
-          SceneWidgetPart010.computeInteger1667((byte) 18, 119);
+          SceneWidgetPart010.computeInteger1617((byte) 18, 119);
         }
         RenderingSupport008.integerState0362 = integerArgument5;
         MixedSupport015.integerState0100 = integerArgument2;
     }
 
-    final static void performAction1670(byte byteArgument1) {
-        MixedSupport123.performAction1754(false);
+    final static void performAction1620(byte byteArgument1) {
+        MixedSupport123.performAction1704(false);
         if (null != GameDomainSupport004.canvasState0001) {
-          SceneWidgetPart012.performAction1824(false, GameDomainSupport004.canvasState0001);
+          SceneWidgetPart012.performAction1774(false, GameDomainSupport004.canvasState0001);
         }
-        SoftwareFramebuffer.performAction2033(90);
-        ReturnedShape.performAction1621((byte) 0);
-        MixedSupport036.performAction0554((byte) 67);
-        if (MixedSupport024.computeBoolean0402(false)) {
-          SocketFactory.cipherPacketBufferState0002.performAction1861(1, -4);
-          UiComponentPart033.performAction2052(4792, 0);
+        SoftwareFramebuffer.performAction1983(90);
+        ReturnedShape.performAction1571((byte) 0);
+        MixedSupport036.performAction0540((byte) 67);
+        if (MixedSupport024.computeBoolean0394(false)) {
+          SocketFactory.cipherPacketBufferState0002.performAction1811(1, -4);
+          UiComponentPart033.performAction2002(4792, 0);
         }
-        NodeHashTable.performAction1703(80);
+        NodeHashTable.performAction1653(80);
         if (byteArgument1 <= 69) {
           ResourceArchive resourceArchiveLocal1 = (ResourceArchive) null;
-          SceneWidgetPart010.performAction1665(-57, -79, (RgbSprite[][]) null, (byte[]) null, (RgbSprite[][]) null, -19, false, (String[][]) null, (int[]) null, (byte[]) null, (ResourceArchive) null, (int[]) null, (ResourceArchive) null, (IndexedSprite[]) null, (String[]) null, (String[][]) null, (ResourceArchive) null);
+          SceneWidgetPart010.performAction1615(-57, -79, (RgbSprite[][]) null, (byte[]) null, (RgbSprite[][]) null, -19, false, (String[][]) null, (int[]) null, (byte[]) null, (ResourceArchive) null, (int[]) null, (ResourceArchive) null, (IndexedSprite[]) null, (String[]) null, (String[][]) null, (ResourceArchive) null);
         }
     }
 
-    public static void performAction1671(byte byteArgument1) {
+    public static void performAction1621(byte byteArgument1) {
         int integerLocal1 = 8 % ((byteArgument1 + 32) / 55);
         rgbSpriteArrayState0025 = null;
     }
@@ -146,18 +146,18 @@ final class SceneWidgetPart010 extends SceneWidget {
           this.sceneWidgetState0107 = new SceneWidget(0L, sceneWidgetArgument5);
           this.sceneWidgetState0106.stringState0598 = stringArgument6;
           this.sceneWidgetState0107.stringState0598 = stringArgument7;
-          this.performAction1998(this.sceneWidgetPart008State0005, -16834);
-          this.performAction1998(this.sceneWidgetState0106, -16834);
-          this.performAction1998(this.sceneWidgetState0107, -16834);
+          this.performAction1948(this.sceneWidgetPart008State0005, -16834);
+          this.performAction1948(this.sceneWidgetState0106, -16834);
+          this.performAction1948(this.sceneWidgetState0107, -16834);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "s.<init>(" + longArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument3 != null ? "{...}" : "null") + ',' + (sceneWidgetPart006Argument4 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument5 != null ? "{...}" : "null") + ',' + (stringArgument6 != null ? "{...}" : "null") + ',' + (stringArgument7 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "s.<init>(" + longArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument3 != null ? "{...}" : "null") + ',' + (sceneWidgetPart006Argument4 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument5 != null ? "{...}" : "null") + ',' + (stringArgument6 != null ? "{...}" : "null") + ',' + (stringArgument7 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction1663(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction1613(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = (this.integerState0896 + integerArgument3) / 2;
         int integerLocal2 = this.integerState0915 - integerArgument2;
-        this.sceneWidgetPart008State0005.performAction1289(6, 0, integerArgument1, 0, -integerArgument3 + integerLocal2, this.integerState0896, integerArgument3);
+        this.sceneWidgetPart008State0005.performAction1241(6, 0, integerArgument1, 0, -integerArgument3 + integerLocal2, this.integerState0896, integerArgument3);
         this.sceneWidgetState0106.integerState0903 = integerLocal2;
         if (integerArgument4 != 16) {
           rgbSpriteArrayState0025 = (RgbSprite[]) null;
@@ -171,18 +171,18 @@ final class SceneWidgetPart010 extends SceneWidget {
         this.sceneWidgetState0107.integerState0915 = integerArgument2;
     }
 
-    final static void performAction1669(byte byteArgument1) {
+    final static void performAction1619(byte byteArgument1) {
         if (MixedSupport005.uiComponentPart016State0001 != null) {
-          MixedSupport005.uiComponentPart016State0001.performAction0949((byte) -66);
+          MixedSupport005.uiComponentPart016State0001.performAction0920((byte) -66);
         }
         if (null != NetworkSupport010.uiComponentPart026State0001) {
-          NetworkSupport010.uiComponentPart026State0001.performAction1583((byte) 114);
+          NetworkSupport010.uiComponentPart026State0001.performAction1534((byte) 114);
         }
-        GameAssets.performAction1699(0);
+        GameAssets.performAction1649(0);
         int integerLocal1 = 62 % ((-55 - byteArgument1) / 60);
     }
 
-    final static int computeInteger1667(byte byteArgument1, int integerArgument2) {
+    final static int computeInteger1617(byte byteArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         if (integerArgument2 < 0 ||
           integerArgument2 >= 65536) {
@@ -213,7 +213,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         this(longArgument1, sceneWidgetPart010Argument2, sceneWidgetPart010Argument2.sceneWidgetPart008State0005.sceneWidgetState0089, sceneWidgetPart010Argument2.sceneWidgetPart008State0005.sceneWidgetPart006State0001, sceneWidgetPart010Argument2.sceneWidgetState0106, stringArgument3, stringArgument4);
     }
 
-    final static void performAction1668(boolean booleanArgument1) {
+    final static void performAction1618(boolean booleanArgument1) {
         int[] integerArrayLocal1 = null;
         int[] integerArrayLocal2 = null;
         int[] integerArrayLocal3 = null;
@@ -230,7 +230,7 @@ final class SceneWidgetPart010 extends SceneWidget {
           NodeHashTable.nodeDequeState0031 = new NodeDeque();
           if (!booleanArgument1) {
             CharSequence charSequenceLocal9 = (CharSequence) null;
-            SceneWidgetPart010.computeInteger1666(true, -23, -56, (CharSequence) null);
+            SceneWidgetPart010.computeInteger1616(true, -23, -56, (CharSequence) null);
           }
           MixedSupport069.nodeDequeState0011 = new NodeDeque();
           integerArrayLocal1 = MixedSupport093.integerArrayState0172;
@@ -248,11 +248,11 @@ final class SceneWidgetPart010 extends SceneWidget {
           }
           UiComponentPart015.integerState0319 = 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "s.A(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "s.A(" + booleanArgument1 + ')');
         }
     }
 
-    final static void performAction1665(int integerArgument1, int integerArgument2, RgbSprite[][] rgbSpriteArrayArrayArgument3, byte[] byteArrayArgument4, RgbSprite[][] rgbSpriteArrayArrayArgument5, int integerArgument6, boolean booleanArgument7, String[][] stringArrayArrayArgument8, int[] integerArrayArgument9, byte[] byteArrayArgument10, ResourceArchive resourceArchiveArgument11, int[] integerArrayArgument12, ResourceArchive resourceArchiveArgument13, IndexedSprite[] indexedSpriteArrayArgument14, String[] stringArrayArgument15, String[][] stringArrayArrayArgument16, ResourceArchive resourceArchiveArgument17) {
+    final static void performAction1615(int integerArgument1, int integerArgument2, RgbSprite[][] rgbSpriteArrayArrayArgument3, byte[] byteArrayArgument4, RgbSprite[][] rgbSpriteArrayArrayArgument5, int integerArgument6, boolean booleanArgument7, String[][] stringArrayArrayArgument8, int[] integerArrayArgument9, byte[] byteArrayArgument10, ResourceArchive resourceArchiveArgument11, int[] integerArrayArgument12, ResourceArchive resourceArchiveArgument13, IndexedSprite[] indexedSpriteArrayArgument14, String[] stringArrayArgument15, String[][] stringArrayArrayArgument16, ResourceArchive resourceArchiveArgument17) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -285,7 +285,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         String[] stringArrayLocal30 = null;
         try {
           stringArrayLocal30 = (String[]) null;
-          InputAdapter006.performAction1697(stringArrayArrayArgument16, booleanArgument7, byteArrayArgument10, resourceArchiveArgument17, integerArrayArgument12, (byte) -57, stringArrayArrayArgument8, stringArrayArgument15, 1, byteArrayArgument4, indexedSpriteArrayArgument14, integerArrayArgument9, integerArgument2, resourceArchiveArgument13, (String[]) null, resourceArchiveArgument11, rgbSpriteArrayArrayArgument5, rgbSpriteArrayArrayArgument3, integerArgument6);
+          InputAdapter003.performAction1647(stringArrayArrayArgument16, booleanArgument7, byteArrayArgument10, resourceArchiveArgument17, integerArrayArgument12, (byte) -57, stringArrayArrayArgument8, stringArrayArgument15, 1, byteArrayArgument4, indexedSpriteArrayArgument14, integerArrayArgument9, integerArgument2, resourceArchiveArgument13, (String[]) null, resourceArchiveArgument11, rgbSpriteArrayArrayArgument5, rgbSpriteArrayArrayArgument3, integerArgument6);
           if (integerArgument1 < 66) {
             integerState0722 = 77;
           }
@@ -372,7 +372,7 @@ final class SceneWidgetPart010 extends SceneWidget {
           } else {
             stackStringLocal27 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal26).append(stackStringLocal27).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal26).append(stackStringLocal27).append(')').toString());
         }
     }
 

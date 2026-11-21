@@ -7,7 +7,7 @@ final class MixedSupport096 {
     static String stringState0378;
     private int[] integerArrayState0174;
 
-    public static void performAction1317(boolean booleanArgument1) {
+    public static void performAction1269(boolean booleanArgument1) {
         if (!booleanArgument1) {
           stringState0378 = (String) null;
         }
@@ -15,7 +15,7 @@ final class MixedSupport096 {
         nodeDequeState0021 = null;
     }
 
-    final int computeInteger1316(byte byteArgument1, int integerArgument2) {
+    final int computeInteger1268(byte byteArgument1, int integerArgument2) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -38,9 +38,9 @@ final class MixedSupport096 {
         }
     }
 
-    final static MixedSupport062[] computeMixedSupport062Array1315(byte byteArgument1) {
+    final static MixedSupport062[] computeMixedSupport062Array1267(byte byteArgument1) {
         if (byteArgument1 != 27) {
-          MixedSupport096.performAction1317(false);
+          MixedSupport096.performAction1269(false);
         }
         return new MixedSupport062[]{MixedSupport005.mixedSupport062State0001, RenderingSupport003.mixedSupport062State0002, GameApplet.mixedSupport062State0003};
     }
@@ -83,7 +83,7 @@ final class MixedSupport096 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 

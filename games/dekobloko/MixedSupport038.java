@@ -10,16 +10,16 @@ final class MixedSupport038 extends HashNode {
     int integerState0229;
     int integerState0230;
 
-    public static void performAction0575(int integerArgument1) {
+    public static void performAction0561(int integerArgument1) {
         if (integerArgument1 > -5) {
           return;
         }
         bitmapFontState0013 = null;
     }
 
-    final static void performAction0576(boolean booleanArgument1, int integerArgument2) {
+    final static void performAction0562(boolean booleanArgument1, int integerArgument2) {
         if (null != MixedSupport071.sceneWidgetPart001State0001) {
-          if (!MixedSupport071.sceneWidgetPart001State0001.computeBoolean0171(-1, booleanArgument1)) {
+          if (!MixedSupport071.sceneWidgetPart001State0001.computeBoolean0168(-1, booleanArgument1)) {
             if (integerArgument2 != 10891) {
               bitmapFontState0013 = (BitmapFont) null;
               return;

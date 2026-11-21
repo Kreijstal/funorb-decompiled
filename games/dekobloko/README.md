@@ -2,7 +2,13 @@
 
 The Java in this directory is the single published version. Deko’s naming script rebuilds it from pinned Git input; the reverse dictionary is in `decompilation/dekobloko-naming.json`.
 
-All 343 classes have stable names. 58 class names are reviewed semantic anchors; other class names describe the structural category and explicitly retain an unresolved finer purpose. Type-based member names are also provisional. Numbers are deterministic labels, not original obfuscated suffixes.
+Resolved declarations: 69/344 classes and 169/2468 methods have readable names; 250 constructors follow their owning class. Remaining: 275 classes and 2299 methods still need names. Numbered structural categories and type-based member labels count as unresolved; the complete naming goal remains in progress.
+
+`MouseWheelInput`, `MouseWheelHandler` and `KeyboardInputHandler` name component registration, wheel polling and key event ownership. `NodeHashTableIterator`, `SecondaryNodeDequeIterator` and `SecondaryNodeHashTable` distinguish primary buckets from independent secondary links and duplicate-key continuation.
+
+`AbstractAudioSample`, `PcmMixerListener`, `PcmPlayerService`, `AudioFilter` and `PcmResampler` expose sample scheduling, listener ownership, mixer input/output, filter coefficients and rational sample conversion. PCM stream contracts name filling, skipping, priority and child traversal. Original loop/ramp boundaries, ordering, signed arithmetic and guards remain intact.
+
+Supplemental names and review evidence are keyed by original declarations in `dekobloko-reviewed-names.json`. Unresolved labels remain provisional; fields and locals are outside the class/method completion claim.
 
 | Follow | Purpose |
 | --- | --- |

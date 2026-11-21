@@ -15,19 +15,19 @@ public class PlatformSupport005 {
         throw new Error();
     }
 
-    public static File computeFile1318(int integerArgument1, String stringArgument2) {
+    public static File computeFile1270(int integerArgument1, String stringArgument2) {
         if (integerArgument1 != 0) {
           stringState0379 = (String) null;
-          return PlatformSupport005.computeFile1320(stringState0379, 30869, stringArgument2, integerState0550);
+          return PlatformSupport005.computeFile1272(stringState0379, 30869, stringArgument2, integerState0550);
         }
-        return PlatformSupport005.computeFile1320(stringState0379, 30869, stringArgument2, integerState0550);
+        return PlatformSupport005.computeFile1272(stringState0379, 30869, stringArgument2, integerState0550);
     }
 
-    public static File computeFile1320(String stringArgument1, int integerArgument2, String stringArgument3, int integerArgument4) {
+    public static File computeFile1272(String stringArgument1, int integerArgument2, String stringArgument3, int integerArgument4) {
         return net.alterorb.launcher.Hook.cacheRedirect(stringArgument1, stringArgument3);
     }
 
-    public static void performAction1319(int integerArgument1, String stringArgument2, int integerArgument3) {
+    public static void performAction1271(int integerArgument1, String stringArgument2, int integerArgument3) {
         Exception exceptionLocal1 = null;
         Throwable caughtExceptionLocal2 = null;
         stringState0379 = stringArgument2;

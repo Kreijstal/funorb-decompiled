@@ -11,7 +11,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
     UiComponent uiComponentState0002;
     static RgbSprite rgbSpriteState0034;
 
-    void performAction0232(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
+    void performAction0229(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6) {
         boolean discarded$1 = false;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -20,10 +20,10 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (integerArgument2 != 64) {
-            discarded$1 = this.computeBoolean1140((UiComponent) null, (byte) -1);
+            discarded$1 = this.computeBoolean1111((UiComponent) null, (byte) -1);
           }
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0232(integerArgument1, 64, integerArgument3 + this.integerState0110, uiComponentArgument4, this.integerState0104 + integerArgument5, integerArgument6);
+            this.uiComponentState0002.performAction0229(integerArgument1, 64, integerArgument3 + this.integerState0110, uiComponentArgument4, this.integerState0104 + integerArgument5, integerArgument6);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -36,11 +36,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(')').toString());
         }
     }
 
-    void performAction0175(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void performAction0172(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
@@ -49,7 +49,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             this.callbackContract004State0006.performAction0018(true, integerArgument1, integerArgument4, (byte) -98, (UiComponent) (this));
           }
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0175(integerArgument1 + this.integerState0110, -119, integerArgument3, integerArgument4 + this.integerState0104);
+            this.uiComponentState0002.performAction0172(integerArgument1 + this.integerState0110, -119, integerArgument3, integerArgument4 + this.integerState0104);
           }
           if (integerArgument2 > -103) {
             sceneWidgetState0078 = (SceneWidget) null;
@@ -58,20 +58,20 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "ma.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "ma.C(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
         }
     }
 
-    final void performAction0241(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction0238(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         try {
-          super.performAction0241(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
-          this.performAction1142(true);
+          super.performAction0238(integerArgument1, integerArgument2, integerArgument3, integerArgument4, integerArgument5);
+          this.performAction1113(true);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "ma.DA(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ma.DA(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ')');
         }
     }
 
-    final int computeInteger0245(int integerArgument1) {
+    final int computeInteger0242(int integerArgument1) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int stackIntegerLocal3 = 0;
@@ -81,17 +81,17 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (this.uiComponentState0002 == null) {
             stackIntegerLocal3 = 0;
           } else {
-            stackIntegerLocal3 = this.uiComponentState0002.computeInteger0245(125);
+            stackIntegerLocal3 = this.uiComponentState0002.computeInteger0242(125);
           }
           return stackIntegerLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal5) {
           caughtExceptionLocal4 = caughtParameterLocal5;
           runtimeExceptionLocal2 = caughtExceptionLocal4;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "ma.DC(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "ma.DC(" + integerArgument1 + ')');
         }
     }
 
-    String computeString0242(byte byteArgument1) {
+    String computeString0239(byte byteArgument1) {
         String stringLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -99,9 +99,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          stringLocal1 = super.computeString0242(byteArgument1);
+          stringLocal1 = super.computeString0239(byteArgument1);
           if (this.uiComponentState0002 != null) {
-            stringLocal3 = this.uiComponentState0002.computeString0242((byte) 113);
+            stringLocal3 = this.uiComponentState0002.computeString0239((byte) 113);
             if (stringLocal3 != null) {
               stackStringLocal4 = stringLocal3;
               return stackStringLocal4;
@@ -112,11 +112,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
           runtimeExceptionLocal2 = caughtExceptionLocal6;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "ma.R(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "ma.R(" + byteArgument1 + ')');
         }
     }
 
-    UiComponent computeUiComponent0946(int integerArgument1) {
+    UiComponent computeUiComponent0917(int integerArgument1) {
         UiComponent uiComponentLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         UiComponent stackUiComponentLocal3 = null;
@@ -126,7 +126,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         try {
           uiComponentLocal1 = this.uiComponentState0002;
           if (uiComponentLocal1 != null &&
-            uiComponentLocal1.computeBoolean0239(true)) {
+            uiComponentLocal1.computeBoolean0236(true)) {
             stackUiComponentLocal3 = uiComponentLocal1;
             return stackUiComponentLocal3;
           }
@@ -139,23 +139,23 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
           runtimeExceptionLocal2 = caughtExceptionLocal6;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "ma.N(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "ma.N(" + integerArgument1 + ')');
         }
     }
 
-    void performAction0237(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void performAction0234(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
         RuntimeException caughtExceptionLocal4 = null;
         RuntimeException runtimeExceptionLocal5 = null;
         try {
-          super.performAction0237(uiComponentArgument1, 119, integerArgument3, integerArgument4);
+          super.performAction0234(uiComponentArgument1, 119, integerArgument3, integerArgument4);
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0237(uiComponentArgument1, 110, integerArgument3 + this.integerState0104, this.integerState0110 + integerArgument4);
+            this.uiComponentState0002.performAction0234(uiComponentArgument1, 110, integerArgument3 + this.integerState0104, this.integerState0110 + integerArgument4);
           }
           if (integerArgument2 <= 38) {
-            this.performAction1142(false);
+            this.performAction1113(false);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
@@ -168,11 +168,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    private final boolean computeBoolean1140(UiComponent uiComponentArgument1, byte byteArgument2) {
+    private final boolean computeBoolean1111(UiComponent uiComponentArgument1, byte byteArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -181,9 +181,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument2 != -112) {
-            this.computeBoolean0062(112, -42, (UiComponent) null, -60, 72, 122, (byte) 63);
+            this.computeBoolean0059(112, -42, (UiComponent) null, -60, 72, 122, (byte) 63);
           }
-          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (!this.uiComponentState0002.computeBoolean0239(true)) && (this.uiComponentState0002.computeBoolean0240(false, uiComponentArgument1));
+          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (!this.uiComponentState0002.computeBoolean0236(true)) && (this.uiComponentState0002.computeBoolean0237(false, uiComponentArgument1));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -195,11 +195,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final boolean computeBoolean0240(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    final boolean computeBoolean0237(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -210,7 +210,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (booleanArgument1) {
             return true;
           }
-          stackBooleanLocal2 = (null != this.uiComponentState0002) && (this.uiComponentState0002.computeBoolean0240(false, uiComponentArgument2));
+          stackBooleanLocal2 = (null != this.uiComponentState0002) && (this.uiComponentState0002.computeBoolean0237(false, uiComponentArgument2));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -222,11 +222,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final boolean computeBoolean0233(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
+    final boolean computeBoolean0230(int integerArgument1, int integerArgument2, int integerArgument3, UiComponent uiComponentArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponent stackUiComponentLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -243,8 +243,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (this.uiComponentState0002 != null) {
             stackUiComponentLocal2 = this.uiComponentState0002;
             stackBooleanLocal3 = !(booleanArgument7);
-            if (((UiComponent) (Object) stackUiComponentLocal2).computeBoolean0239(stackBooleanLocal3) &&
-              this.uiComponentState0002.computeBoolean0233(integerArgument1, integerArgument2, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6, false)) {
+            if (((UiComponent) (Object) stackUiComponentLocal2).computeBoolean0236(stackBooleanLocal3) &&
+              this.uiComponentState0002.computeBoolean0230(integerArgument1, integerArgument2, integerArgument3, uiComponentArgument4, integerArgument5, integerArgument6, false)) {
               stackBooleanLocal4 = true;
               frameRemainderLocal9 = false;
             }
@@ -263,11 +263,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(booleanArgument7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(booleanArgument7).append(')').toString());
         }
     }
 
-    final static SceneWidgetPart014 computeSceneWidgetPart0141139(int integerArgument1, boolean booleanArgument2, byte byteArgument3) {
+    final static SceneWidgetPart014 computeSceneWidgetPart0141110(int integerArgument1, boolean booleanArgument2, byte byteArgument3) {
         SceneWidgetPart008 stackSceneWidgetPart008Local1;
         int stackIntegerLocal2;
         int stackIntegerLocal3;
@@ -306,7 +306,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         integerLocal33 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (byteArgument3 <= 54) {
-            ComponentDecorator.performAction1144((byte) -34);
+            ComponentDecorator.performAction1115((byte) -34);
           }
           stackSceneWidgetPart008Local1 = MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005;
           stackIntegerLocal2 = ComponentContainer.integerState0377 + 2;
@@ -314,7 +314,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           stackIntegerLocal4 = -15230;
           stackBooleanLocal5 = (MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005 == NetworkSupport005.sceneWidgetPart008State0004);
           boolean frameRemainderLocal36 = true;
-          integerLocal16 = ((SceneWidgetPart008) (Object) stackSceneWidgetPart008Local1).computeBoolean1291(stackIntegerLocal2, stackIntegerLocal3, stackIntegerLocal4, stackBooleanLocal5, 2, booleanArgument2) ? 1 : 0;
+          integerLocal16 = ((SceneWidgetPart008) (Object) stackSceneWidgetPart008Local1).computeBoolean1243(stackIntegerLocal2, stackIntegerLocal3, stackIntegerLocal4, stackBooleanLocal5, 2, booleanArgument2) ? 1 : 0;
           nodeDequeLocal18 = MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108.nodeDequeState0034;
           objectLocal19 = null;
           if (ThemeTips.integerState0351 != 2) {
@@ -328,15 +328,15 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             } else {
               MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = SoftwareFramebuffer.stringState0616;
             }
-            UiComponentPart012.performAction0653(MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108, true);
+            UiComponentPart012.performAction0639(MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108, true);
             frameRemainderLocal36 = (integerLocal33 != 0);
           }
           if (frameRemainderLocal36) {
             RenderingSupport015.sceneWidgetState0112.booleanState0212 = true;
-            MixedSupport066.sceneWidgetState0060.stringState0598 = CollectionSupport001.computeString0336(98, SceneWidgetPart013.stringState0587, new String[]{MixedSupport033.stringState0159});
+            MixedSupport066.sceneWidgetState0060.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(98, SceneWidgetPart013.stringState0587, new String[]{MixedSupport033.stringState0159});
             MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = null;
             objectLocal20 = null;
-            sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.computeHashNode1970((byte) -108));
+            sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.computeHashNode1920((byte) -108));
             while (true) {
               if (null != sceneWidgetPart014Local21) {
                 integerLocal22 = 0;
@@ -346,13 +346,13 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                 if (integerLocal33 == 0) {
                   if (stackSceneWidgetPart014Local6.nodeDequeState0034 == null) {
                     sceneWidgetPart014Local21.sceneWidgetState0147 = new SceneWidget(0L, RenderingSupport004.sceneWidgetState0040);
-                    sceneWidgetPart014Local21.performAction1998(sceneWidgetPart014Local21.sceneWidgetState0147, -16834);
+                    sceneWidgetPart014Local21.performAction1948(sceneWidgetPart014Local21.sceneWidgetState0147, -16834);
                     sceneWidgetPart014Local21.sceneWidgetState0149 = new SceneWidget(0L, MixedSupport036.sceneWidgetState0027);
-                    sceneWidgetPart014Local21.performAction1998(sceneWidgetPart014Local21.sceneWidgetState0149, -16834);
+                    sceneWidgetPart014Local21.performAction1948(sceneWidgetPart014Local21.sceneWidgetState0149, -16834);
                     sceneWidgetPart014Local21.sceneWidgetState0148 = new SceneWidget(0L, RenderingSupport004.sceneWidgetState0040);
-                    sceneWidgetPart014Local21.performAction1998(sceneWidgetPart014Local21.sceneWidgetState0148, -16834);
+                    sceneWidgetPart014Local21.performAction1948(sceneWidgetPart014Local21.sceneWidgetState0148, -16834);
                     sceneWidgetPart014Local21.sceneWidgetState0149.integerState0916 = 2;
-                    sceneWidgetPart014Local21.performAction2004(-112);
+                    sceneWidgetPart014Local21.performAction1954(-112);
                     integerLocal22 = 1;
                   }
                   sceneWidgetPart014Local21.integerState0896 = MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108.integerState0896;
@@ -372,7 +372,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                     !sceneWidgetPart014Local21.stringState0605.equals("")) {
                     sceneWidgetPart014Local21.sceneWidgetState0148.integerState0889 = integerLocal25;
                     sceneWidgetPart014Local21.sceneWidgetState0148.rgbSpriteState0070 = MixedSupport001.rgbSpriteState0001;
-                    sceneWidgetPart014Local21.sceneWidgetState0148.performAction1994(3 + MixedSupport001.rgbSpriteState0001.integerState0254, 0, integerLocal23, ComponentContainer.integerState0377, 0);
+                    sceneWidgetPart014Local21.sceneWidgetState0148.performAction1944(3 + MixedSupport001.rgbSpriteState0001.integerState0254, 0, integerLocal23, ComponentContainer.integerState0377, 0);
                     integerLocal26 = 1;
                   }
                   sceneWidgetPart014Local21.sceneWidgetState0149.integerState0910 = integerLocal24;
@@ -393,10 +393,10 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                   if (0 >= integerLocal28) {
                     stackStringLocal8 = sceneWidgetPart014Local21.stringState0606;
                   } else {
-                    stackStringLocal8 = BitmapFont.computeString1216(sceneWidgetPart014Local21.sceneWidgetState0147.bitmapFontState0020, sceneWidgetPart014Local21.stringState0606, integerLocal28);
+                    stackStringLocal8 = BitmapFont.computeString1177(sceneWidgetPart014Local21.sceneWidgetState0147.bitmapFontState0020, sceneWidgetPart014Local21.stringState0606, integerLocal28);
                   }
                   stackSceneWidgetLocal7.stringState0598 = stackStringLocal8;
-                  sceneWidgetPart014Local21.sceneWidgetState0147.performAction1994(integerLocal28, 0, integerLocal23, ComponentContainer.integerState0377, integerLocal27);
+                  sceneWidgetPart014Local21.sceneWidgetState0147.performAction1944(integerLocal28, 0, integerLocal23, ComponentContainer.integerState0377, integerLocal27);
                   stackSceneWidgetLocal9 = sceneWidgetPart014Local21.sceneWidgetState0149;
                   if (null != sceneWidgetPart014Local21.stringState0604) {
                     stackStringLocal10 = sceneWidgetPart014Local21.stringState0604;
@@ -404,7 +404,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                     stackStringLocal10 = MixedSupport114.stringState0475;
                   }
                   stackSceneWidgetLocal9.stringState0598 = stackStringLocal10;
-                  sceneWidgetPart014Local21.sceneWidgetState0149.performAction1994(80, 0, integerLocal23, ComponentContainer.integerState0377, sceneWidgetPart014Local21.integerState0896 - 80);
+                  sceneWidgetPart014Local21.sceneWidgetState0149.performAction1944(80, 0, integerLocal23, ComponentContainer.integerState0377, sceneWidgetPart014Local21.integerState0896 - 80);
                   stackIntegerLocal11 = (sceneWidgetPart014Local21.sceneWidgetState0147.stringState0598.equals(sceneWidgetPart014Local21.stringState0606)) ? 0 : 1;
                   integerLocal29 = stackIntegerLocal11;
                   integerLocal23 = integerLocal23 + ComponentContainer.integerState0377;
@@ -412,25 +412,25 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                     sceneWidgetPart014Local21.integerState0895 = integerLocal23 - sceneWidgetPart014Local21.integerState0915;
                   }
                   if (integerLocal22 != 0) {
-                    MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108.performAction1999((SceneWidget) (objectLocal20), sceneWidgetPart014Local21, 2, 0);
+                    MixedSupport070.sceneWidgetPart010State0003.sceneWidgetState0108.performAction1949((SceneWidget) (objectLocal20), sceneWidgetPart014Local21, 2, 0);
                   }
                   if (sceneWidgetPart014Local21.sceneWidgetState0148 == null ||
                     !sceneWidgetPart014Local21.sceneWidgetState0148.booleanState0218) {
                     if (sceneWidgetPart014Local21.integerState0891 != 0) {
                       stringLocal30 = sceneWidgetPart014Local21.stringState0606;
-                      MixedSupport122.performAction1732(stringLocal30, (int[]) null, 101, MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005, sceneWidgetPart014Local21, (String) null, 0L, -1, -1);
+                      MixedSupport122.performAction1682(stringLocal30, (int[]) null, 101, MixedSupport070.sceneWidgetPart010State0003.sceneWidgetPart008State0005, sceneWidgetPart014Local21, (String) null, 0L, -1, -1);
                       objectLocal19 = sceneWidgetPart014Local21;
                       if (sceneWidgetPart014Local21.stringState0604 != null &&
-                        !MixedSupport154.computeBoolean2043(-103, SceneWidget.mixedSupport104State0001.stringState0418) &&
+                        !MixedSupport154.computeBoolean1993(-103, SceneWidget.mixedSupport104State0001.stringState0418) &&
                         !MixedSupport151.booleanState0221) {
                         if (!PacketBuffer.booleanState0228) {
                           mixedSupport104Local31 = SceneWidget.mixedSupport104State0001;
-                          stringLocal32 = CollectionSupport001.computeString0336(111, UiComponentPart001.stringState0024, new String[]{stringLocal30});
-                          mixedSupport104Local31.sceneWidgetPart002State0002.performAction0620(stringLocal32, 8, 80);
+                          stringLocal32 = NodeHashTableIterator.substituteIndexedPlaceholders(111, UiComponentPart001.stringState0024, new String[]{stringLocal30});
+                          mixedSupport104Local31.sceneWidgetPart002State0002.performAction0606(stringLocal32, 8, 80);
                         }
                         mixedSupport104Local34 = SceneWidget.mixedSupport104State0001;
-                        stringLocal35 = CollectionSupport001.computeString0336(99, MixedSupport150.stringState0601, new String[]{stringLocal30});
-                        mixedSupport104Local34.sceneWidgetPart002State0002.performAction0620(stringLocal35, 18, 65);
+                        stringLocal35 = NodeHashTableIterator.substituteIndexedPlaceholders(99, MixedSupport150.stringState0601, new String[]{stringLocal30});
+                        mixedSupport104Local34.sceneWidgetPart002State0002.performAction0606(stringLocal35, 18, 65);
                       }
                     } else if (sceneWidgetPart014Local21.sceneWidgetState0147.booleanState0218 &&
                       integerLocal29 != 0) {
@@ -440,7 +440,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                     MixedSupport122.stringState0515 = sceneWidgetPart014Local21.stringState0605;
                   }
                   objectLocal20 = sceneWidgetPart014Local21;
-                  sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.computeHashNode1974(true));
+                  sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.computeHashNode1924(true));
                   continue;
                 }
               } else {
@@ -463,28 +463,28 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         } catch (java.lang.RuntimeException caughtParameterLocal37) {
           caughtExceptionLocal14 = caughtParameterLocal37;
           runtimeExceptionLocal17 = caughtExceptionLocal14;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal17), "ma.K(" + integerArgument1 + ',' + booleanArgument2 + ',' + byteArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal17), "ma.K(" + integerArgument1 + ',' + booleanArgument2 + ',' + byteArgument3 + ')');
         }
     }
 
-    final boolean computeBoolean0239(boolean booleanArgument1) {
+    final boolean computeBoolean0236(boolean booleanArgument1) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException caughtExceptionLocal3 = null;
         try {
           if (!booleanArgument1) {
-            this.computeBoolean0062(-67, 8, (UiComponent) null, -37, -30, 67, (byte) -40);
+            this.computeBoolean0059(-67, 8, (UiComponent) null, -37, -30, 67, (byte) -40);
           }
-          stackBooleanLocal2 = (null != this.computeUiComponent0946(14));
+          stackBooleanLocal2 = (null != this.computeUiComponent0917(14));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal3 = caughtParameterLocal4;
           runtimeExceptionLocal1 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal1), "ma.TB(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal1), "ma.TB(" + booleanArgument1 + ')');
         }
     }
 
-    final static IndexedSprite computeIndexedSprite1141(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final static IndexedSprite computeIndexedSprite1112(ResourceArchive resourceArchiveArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         Object stackObjectLocal2 = null;
         IndexedSprite stackIndexedSpriteLocal3 = null;
@@ -494,9 +494,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (integerArgument4 != 21828) {
-            ComponentDecorator.computeSceneWidgetPart0141139(-121, true, (byte) -35);
+            ComponentDecorator.computeSceneWidgetPart0141110(-121, true, (byte) -35);
           }
-          if (SceneWidgetPart002.computeBoolean0618(integerArgument2, resourceArchiveArgument1, integerArgument3, 78)) {
+          if (SceneWidgetPart002.computeBoolean0604(integerArgument2, resourceArchiveArgument1, integerArgument3, 78)) {
             stackIndexedSpriteLocal3 = MixedSupport001.computeIndexedSprite0020(0);
             return stackIndexedSpriteLocal3;
           }
@@ -512,11 +512,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(integerArgument2).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final boolean computeBoolean0198(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
+    final boolean computeBoolean0195(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, char characterArgument4) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -526,8 +526,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal7 = null;
         try {
           if (this.uiComponentState0002 != null &&
-            this.uiComponentState0002.computeBoolean0239(true) &&
-            this.uiComponentState0002.computeBoolean0198(-125, integerArgument2, uiComponentArgument3, characterArgument4)) {
+            this.uiComponentState0002.computeBoolean0236(true) &&
+            this.uiComponentState0002.computeBoolean0195(-125, integerArgument2, uiComponentArgument3, characterArgument4)) {
             return true;
           }
           integerLocal1 = integerArgument2;
@@ -536,9 +536,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             return false;
           }
           if (MixedSupport011.booleanArrayState0002[81]) {
-            stackBooleanLocal3 = this.computeBoolean1140(uiComponentArgument3, (byte) -112);
+            stackBooleanLocal3 = this.computeBoolean1111(uiComponentArgument3, (byte) -112);
           } else {
-            stackBooleanLocal3 = this.computeBoolean1143(false, uiComponentArgument3);
+            stackBooleanLocal3 = this.computeBoolean1114(false, uiComponentArgument3);
           }
           return stackBooleanLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -551,11 +551,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(characterArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(',').append(characterArgument4).append(')').toString());
         }
     }
 
-    private final boolean computeBoolean1143(boolean booleanArgument1, UiComponent uiComponentArgument2) {
+    private final boolean computeBoolean1114(boolean booleanArgument1, UiComponent uiComponentArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponent stackUiComponentLocal2 = null;
         boolean stackBooleanLocal3 = false;
@@ -572,8 +572,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (null != this.uiComponentState0002) {
             stackUiComponentLocal2 = this.uiComponentState0002;
             stackBooleanLocal3 = !(booleanArgument1);
-            if (!((UiComponent) (Object) stackUiComponentLocal2).computeBoolean0239(stackBooleanLocal3) &&
-              this.uiComponentState0002.computeBoolean0240(false, uiComponentArgument2)) {
+            if (!((UiComponent) (Object) stackUiComponentLocal2).computeBoolean0236(stackBooleanLocal3) &&
+              this.uiComponentState0002.computeBoolean0237(false, uiComponentArgument2)) {
               stackBooleanLocal4 = true;
               frameRemainderLocal9 = false;
             }
@@ -592,11 +592,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
-    final static SceneWidgetPart012 computeSceneWidgetPart0121138(int integerArgument1, long longArgument2) {
+    final static SceneWidgetPart012 computeSceneWidgetPart0121109(int integerArgument1, long longArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         SceneWidgetPart012 stackSceneWidgetPart012Local2 = null;
         RuntimeException caughtExceptionLocal3 = null;
@@ -604,12 +604,12 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           if (integerArgument1 >= -98) {
             sceneWidgetState0078 = (SceneWidget) null;
           }
-          stackSceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport095.collectionSupport003State0004.computeDualNode1280(24710, longArgument2));
+          stackSceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport095.secondaryNodeHashTableState0004.get(24710, longArgument2));
           return stackSceneWidgetPart012Local2;
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal3 = caughtParameterLocal4;
           runtimeExceptionLocal1 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal1), "ma.O(" + integerArgument1 + ',' + longArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal1), "ma.O(" + integerArgument1 + ',' + longArgument2 + ')');
         }
     }
 
@@ -617,7 +617,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, callbackContract004Argument5, callbackContract006Argument6);
     }
 
-    final void performAction1136(byte byteArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, Hashtable hashtableArgument4) {
+    final void performAction1107(byte byteArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, Hashtable hashtableArgument4) {
         StringBuilder discarded$12 = null;
         StringBuilder discarded$13 = null;
         StringBuilder discarded$14 = null;
@@ -634,7 +634,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         try {
           discarded$12 = stringBuilderArgument3.append('\n');
           if (byteArgument1 > -37) {
-            this.computeBoolean0062(36, -51, (UiComponent) null, -111, 8, 107, (byte) -44);
+            this.computeBoolean0059(36, -51, (UiComponent) null, -111, 8, 107, (byte) -44);
           }
           integerLocal4 = 0;
           do {
@@ -650,7 +650,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             discarded$13 = stringBuilderArgument3.append(' ');
             integerLocal4++;
           } while (integerLocal5 == 0);
-          this.uiComponentState0002.computeStringBuilder0238(hashtableArgument4, integerArgument2 + 1, stringBuilderArgument3, true);
+          this.uiComponentState0002.computeStringBuilder0235(hashtableArgument4, integerArgument2 + 1, stringBuilderArgument3, true);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal13) {
           caughtExceptionLocal11 = caughtParameterLocal13;
@@ -668,42 +668,42 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    void performAction1142(boolean booleanArgument1) {
+    void performAction1113(boolean booleanArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
           if (null != this.uiComponentState0002) {
-            this.uiComponentState0002.performAction0247(112);
+            this.uiComponentState0002.performAction0244(112);
           }
           if (!booleanArgument1) {
-            this.computeBoolean0239(true);
+            this.computeBoolean0236(true);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "ma.KB(" + booleanArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "ma.KB(" + booleanArgument1 + ')');
         }
     }
 
-    final void performAction0244(byte byteArgument1) {
+    final void performAction0241(byte byteArgument1) {
         if (byteArgument1 != -95) {
           return;
         }
         try {
           if (this.uiComponentState0002 != null) {
-            this.uiComponentState0002.performAction0244((byte) -95);
+            this.uiComponentState0002.performAction0241((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "ma.WB(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "ma.WB(" + byteArgument1 + ')');
         }
     }
 
-    public static void performAction1144(byte byteArgument1) {
+    public static void performAction1115(byte byteArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
@@ -718,11 +718,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "ma.I(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "ma.I(" + byteArgument1 + ')');
         }
     }
 
-    boolean computeBoolean0062(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
+    boolean computeBoolean0059(int integerArgument1, int integerArgument2, UiComponent uiComponentArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -731,9 +731,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (byteArgument7 != -55) {
-            this.computeUiComponent0946(59);
+            this.computeUiComponent0917(59);
           }
-          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (this.uiComponentState0002.computeBoolean0062(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, this.integerState0104 + integerArgument5, this.integerState0110 + integerArgument6, (byte) -55));
+          stackBooleanLocal2 = (this.uiComponentState0002 != null) && (this.uiComponentState0002.computeBoolean0059(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, this.integerState0104 + integerArgument5, this.integerState0110 + integerArgument6, (byte) -55));
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -745,11 +745,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument4).append(',').append(integerArgument5).append(',').append(integerArgument6).append(',').append(byteArgument7).append(')').toString());
         }
     }
 
-    StringBuilder computeStringBuilder0238(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
+    StringBuilder computeStringBuilder0235(Hashtable hashtableArgument1, int integerArgument2, StringBuilder stringBuilderArgument3, boolean booleanArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -760,9 +760,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (this.computeBoolean0234(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
-            this.performAction0225((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
-            this.performAction1136((byte) -116, integerArgument2, stringBuilderArgument3, hashtableArgument1);
+          if (this.computeBoolean0231(0, integerArgument2, hashtableArgument1, stringBuilderArgument3)) {
+            this.performAction0222((byte) 72, stringBuilderArgument3, hashtableArgument1, integerArgument2);
+            this.performAction1107((byte) -116, integerArgument2, stringBuilderArgument3, hashtableArgument1);
           }
           if (booleanArgument4) {
             stackStringBuilderLocal3 = (StringBuilder) (stringBuilderArgument3);
@@ -786,11 +786,11 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(booleanArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal4), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(booleanArgument4).append(')').toString());
         }
     }
 
-    final static int computeInteger1137(int integerArgument1, byte byteArgument2) {
+    final static int computeInteger1108(int integerArgument1, byte byteArgument2) {
         int stackIntegerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -859,7 +859,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal5 = caughtParameterLocal9;
           runtimeExceptionLocal7 = caughtExceptionLocal5;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal7), "ma.L(" + integerArgument1 + ',' + byteArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal7), "ma.L(" + integerArgument1 + ',' + byteArgument2 + ')');
         }
     }
 

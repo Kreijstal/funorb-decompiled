@@ -16,7 +16,7 @@ class HashNode {
     static MixedSupport139 mixedSupport139State0002;
     static int integerState0070;
 
-    final boolean computeBoolean0156(byte byteArgument1) {
+    final boolean computeBoolean0153(byte byteArgument1) {
         if (byteArgument1 > 34) {
           return this.next != null ? true : false;
         }
@@ -27,7 +27,7 @@ class HashNode {
         return true;
     }
 
-    final static void performAction0157(int integerArgument1, int integerArgument2) {
+    final static void performAction0154(int integerArgument1, int integerArgument2) {
         Object objectLocal1 = null;
         int integerLocal2 = 0;
         RuntimeException caughtExceptionLocal3 = null;
@@ -36,21 +36,21 @@ class HashNode {
           if (integerArgument2 > -116) {
             return;
           }
-          objectLocal1 = (MixedSupport034) (MixedSupport117.nodeDequeState0030.computeHashNode1970((byte) -114));
+          objectLocal1 = (MixedSupport034) (MixedSupport117.nodeDequeState0030.computeHashNode1920((byte) -114));
           do {
             if (objectLocal1 == null) {
-              objectLocal1 = NetworkSupport002.nodeDequeState0002.computeHashNode1970((byte) 99);
+              objectLocal1 = NetworkSupport002.nodeDequeState0002.computeHashNode1920((byte) 99);
               break;
             }
-            SceneWidget.performAction1995(124, integerArgument1, (MixedSupport034) (objectLocal1));
-            objectLocal1 = (MixedSupport034) (MixedSupport117.nodeDequeState0030.computeHashNode1974(true));
+            SceneWidget.performAction1945(124, integerArgument1, (MixedSupport034) (objectLocal1));
+            objectLocal1 = (MixedSupport034) (MixedSupport117.nodeDequeState0030.computeHashNode1924(true));
           } while (integerLocal2 == 0);
           while (true) {
             if (objectLocal1 == null) {
               return;
             }
             ResourceSupport001.performAction0046(-1, integerArgument1);
-            objectLocal1 = NetworkSupport002.nodeDequeState0002.computeHashNode1974(true);
+            objectLocal1 = NetworkSupport002.nodeDequeState0002.computeHashNode1924(true);
             if (integerLocal2 != 0) {
               return;
             }
@@ -58,11 +58,11 @@ class HashNode {
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal3 = caughtParameterLocal4;
           objectLocal1 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) (objectLocal1), "bh.CB(" + integerArgument1 + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) (objectLocal1), "bh.CB(" + integerArgument1 + ',' + integerArgument2 + ')');
         }
     }
 
-    final void performAction0161(byte byteArgument1) {
+    final void performAction0158(byte byteArgument1) {
         if (this.next == null) {
           return;
         }
@@ -78,7 +78,7 @@ class HashNode {
         this.previous = null;
     }
 
-    final static void performAction0158(int integerArgument1, java.applet.Applet appletArgument2) {
+    final static void performAction0155(int integerArgument1, java.applet.Applet appletArgument2) {
         try {
           java.net.URL uRLLocal1 = null;
           Exception exceptionLocal2 = null;
@@ -92,10 +92,10 @@ class HashNode {
             try {
               if (integerArgument1 > -98) {
                 appletLocal4 = (java.applet.Applet) null;
-                HashNode.performAction0158(-55, (java.applet.Applet) null);
+                HashNode.performAction0155(-55, (java.applet.Applet) null);
               }
               uRLLocal1 = new java.net.URL(appletArgument2.getCodeBase(), "tosupport.ws");
-              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0662(uRLLocal1, -1, appletArgument2), "_top");
+              appletArgument2.getAppletContext().showDocument(NetworkSupport004.computeURL0648(uRLLocal1, -1, appletArgument2), "_top");
               return;
             } catch (java.lang.Exception caughtParameterLocal9) {
               caughtExceptionLocal8 = caughtParameterLocal9;
@@ -113,7 +113,7 @@ class HashNode {
             } else {
               stackStringLocal7 = "{...}";
             }
-            throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal11) {
           throw uncheckedExceptionLocal11;
@@ -122,7 +122,7 @@ class HashNode {
         }
     }
 
-    public static void performAction0162(int integerArgument1) {
+    public static void performAction0159(int integerArgument1) {
         rgbSpriteArrayArrayState0004 = (RgbSprite[][]) null;
         stringState0051 = null;
         stringState0050 = null;
@@ -133,14 +133,14 @@ class HashNode {
           stringState0053 = null;
           return;
         }
-        HashNode.performAction0162(-88);
+        HashNode.performAction0159(-88);
         mixedSupport139State0002 = null;
         stringArrayState0002 = null;
         stringState0052 = null;
         stringState0053 = null;
     }
 
-    final static int computeInteger0160(int integerArgument1, boolean booleanArgument2, CharSequence charSequenceArgument3) {
+    final static int computeInteger0157(int integerArgument1, boolean booleanArgument2, CharSequence charSequenceArgument3) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -151,7 +151,7 @@ class HashNode {
           if (booleanArgument2) {
             stringState0050 = (String) null;
           }
-          stackIntegerLocal2 = SceneWidgetPart010.computeInteger1666(true, 4, integerArgument1, charSequenceArgument3);
+          stackIntegerLocal2 = SceneWidgetPart010.computeInteger1616(true, 4, integerArgument1, charSequenceArgument3);
           return stackIntegerLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;
@@ -163,11 +163,11 @@ class HashNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
-    final static String computeString0159(int integerArgument1, String stringArgument2, String stringArgument3, String stringArgument4) {
+    final static String computeString0156(int integerArgument1, String stringArgument2, String stringArgument3, String stringArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         String stackStringLocal3 = null;

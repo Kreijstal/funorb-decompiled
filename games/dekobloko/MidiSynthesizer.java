@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MidiSynthesizer extends AudioSupport005 {
+final class MidiSynthesizer extends PcmMixerListener {
     private int integerState0298;
     private int[] integerArrayState0066;
     private int integerState0299;
@@ -60,7 +60,7 @@ final class MidiSynthesizer extends AudioSupport005 {
     private boolean[] booleanArrayState0005;
     private int[] integerArrayState0099;
 
-    private final void performAction0780() {
+    private final void performAction0755() {
         this.integerArrayState0087 = new int[this.musicTrackState0002.integerState0807];
         this.integerArrayState0088 = new int[this.musicTrackState0002.integerState0807];
         this.integerArrayState0073 = new int[this.musicTrackState0002.integerState0807];
@@ -95,17 +95,17 @@ final class MidiSynthesizer extends AudioSupport005 {
         this.integerArrayState0093 = new int[this.musicTrackState0002.integerState0807];
         this.booleanArrayState0005 = new boolean[this.musicTrackState0002.integerState0807];
         this.rawPcmStreamArrayState0001 = new RawPcmStream[this.musicTrackState0002.integerState0807];
-        this.performAction0778();
+        this.performAction0753();
     }
 
-    private final void performAction0779(int integerArgument1) {
+    private final void performAction0754(int integerArgument1) {
         if (this.rawPcmStreamArrayState0001[integerArgument1] != null) {
-          this.rawPcmStreamArrayState0001[integerArgument1].performAction0510(PcmPlayer.integerState0209 >> 7);
+          this.rawPcmStreamArrayState0001[integerArgument1].performAction0496(PcmPlayer.integerState0209 >> 7);
           this.rawPcmStreamArrayState0001[integerArgument1] = null;
         }
     }
 
-    final synchronized void performAction0773(MusicTrack musicTrackArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final synchronized void performAction0749(MusicTrack musicTrackArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         this.integerState0307 = integerArgument4;
         if (musicTrackArgument1 != null) {
           this.musicTrackState0003 = musicTrackArgument1;
@@ -114,16 +114,16 @@ final class MidiSynthesizer extends AudioSupport005 {
         this.integerState0306 = integerArgument3;
     }
 
-    final void performAction0774() {
+    final void onAddedToMixer() {
         int integerLocal1 = 0;
         for (integerLocal1 = 0; integerLocal1 < this.musicTrackState0002.integerState0807; integerLocal1++) {
           if (this.rawPcmStreamArrayState0001[integerLocal1] != null) {
-            this.pcmStreamMixerState0003.performAction1190(this.rawPcmStreamArrayState0001[integerLocal1]);
+            this.pcmStreamMixerState0003.addSubStream(this.rawPcmStreamArrayState0001[integerLocal1]);
           }
         }
     }
 
-    private final void performAction0778() {
+    private final void performAction0753() {
         int integerLocal1 = 0;
         int integerLocal2;
         this.integerState0308 = 0;
@@ -186,11 +186,11 @@ final class MidiSynthesizer extends AudioSupport005 {
         this.integerState0301 = 1;
     }
 
-    final synchronized void performAction0769(int integerArgument1) {
+    final synchronized void performAction0746(int integerArgument1) {
         this.integerState0313 = integerArgument1;
     }
 
-    private final void performAction0770(int integerArgument1, int integerArgument2, int integerArgument3) {
+    private final void performAction0747(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (this.rawPcmStreamArrayState0001[integerArgument1] != null) {
           if (integerArgument2 < 0) {
             integerArgument2 = 0;
@@ -206,25 +206,25 @@ final class MidiSynthesizer extends AudioSupport005 {
               integerArgument3 = 256;
             }
           }
-          this.rawPcmStreamArrayState0001[integerArgument1].performAction0470(PcmPlayer.integerState0209 >> 7, integerArgument2 * this.integerState0314 * this.integerState0313 >> 12, integerArgument3);
+          this.rawPcmStreamArrayState0001[integerArgument1].performAction0460(PcmPlayer.integerState0209 >> 7, integerArgument2 * this.integerState0314 * this.integerState0313 >> 12, integerArgument3);
         }
     }
 
-    final void performAction0768() {
+    final void onRemovedFromMixer() {
         int integerLocal1 = 0;
         for (integerLocal1 = 0; integerLocal1 < this.musicTrackState0002.integerState0807; integerLocal1++) {
           if (this.rawPcmStreamArrayState0001[integerLocal1] != null) {
-            this.pcmStreamMixerState0003.performAction1193(this.rawPcmStreamArrayState0001[integerLocal1]);
+            this.pcmStreamMixerState0003.removeSubStream(this.rawPcmStreamArrayState0001[integerLocal1]);
           }
         }
     }
 
-    public static void performAction0781() {
+    public static void performAction0756() {
         integerArrayState0085 = null;
         integerArrayState0090 = null;
     }
 
-    private final boolean computeBoolean0776() {
+    private final boolean computeBoolean0751() {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -302,10 +302,10 @@ final class MidiSynthesizer extends AudioSupport005 {
               integerLocal16 = this.integerState0306;
               if (this.musicTrackState0003 != null) {
                 for (integerLocal17 = 0; integerLocal17 < this.musicTrackState0002.integerState0807; integerLocal17++) {
-                  this.performAction0779(integerLocal17);
+                  this.performAction0754(integerLocal17);
                 }
                 this.musicTrackState0002 = this.musicTrackState0003;
-                this.performAction0780();
+                this.performAction0755();
                 this.integerState0301 = 2;
               }
               this.integerState0299 = integerLocal15;
@@ -587,7 +587,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                       integerLocal2 = this.musicTrackState0002.integerArrayState0214[integerLocal19];
                     }
                   }
-                  this.performAction0771(integerLocal15, integerLocal19, integerLocal2, integerLocal26, integerLocal20, integerLocal21);
+                  this.performAction0748(integerLocal15, integerLocal19, integerLocal2, integerLocal26, integerLocal20, integerLocal21);
                   this.integerArrayState0086[integerLocal15] = 0;
                 } else {
                   if (integerLocal18 <= 96) {
@@ -602,7 +602,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                     }
                   } else {
                     if (this.integerArrayState0079[integerLocal15] != 1) {
-                      this.performAction0779(integerLocal15);
+                      this.performAction0754(integerLocal15);
                     } else {
                       this.integerArrayState0066[integerLocal15] = 0;
                     }
@@ -663,7 +663,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                   if (integerLocal22 != 6) {
                     if (this.integerArrayState0071[integerLocal15] != 0) {
                       integerLocal25 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                      this.performAction0775(integerLocal15, integerLocal25);
+                      this.performAction0750(integerLocal15, integerLocal25);
                     }
                     this.integerArrayState0086[integerLocal15] = 0;
                     this.integerArrayState0071[integerLocal15] = 0;
@@ -771,7 +771,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                       this.integerArrayState0073[integerLocal15] = 0;
                     }
                     integerLocal25 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                    this.performAction0775(integerLocal15, integerLocal25);
+                    this.performAction0750(integerLocal15, integerLocal25);
                     break;
                   case 226:
                     if (integerLocal23 != 0) {
@@ -788,7 +788,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                       this.integerArrayState0073[integerLocal15] = 0;
                     }
                     integerLocal25 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                    this.performAction0775(integerLocal15, integerLocal25);
+                    this.performAction0750(integerLocal15, integerLocal25);
                     break;
                   case 33:
                     if (integerLocal23 / 16 != 1) {
@@ -807,7 +807,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                         this.integerArrayState0073[integerLocal15] = 0;
                       }
                       integerLocal25 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                      this.performAction0775(integerLocal15, integerLocal25);
+                      this.performAction0750(integerLocal15, integerLocal25);
                     } else {
                       integerLocal23 = integerLocal23 & 15;
                       if (integerLocal23 != 0) {
@@ -824,7 +824,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                         this.integerArrayState0073[integerLocal15] = 0;
                       }
                       integerLocal25 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                      this.performAction0775(integerLocal15, integerLocal25);
+                      this.performAction0750(integerLocal15, integerLocal25);
                     }
                     break;
                   default:
@@ -870,7 +870,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                 this.integerArrayState0086[integerLocal15] = (this.integerArrayState0086[integerLocal15] + this.integerArrayState0075[integerLocal15]) % 68;
                 integerLocal3 = integerArrayState0090[this.integerArrayState0086[integerLocal15]] * this.integerArrayState0083[integerLocal15] >> 8;
                 integerLocal16 = this.integerArrayState0073[integerLocal15] + integerLocal3;
-                this.performAction0775(integerLocal15, integerArrayState0085[integerLocal16]);
+                this.performAction0750(integerLocal15, integerArrayState0085[integerLocal16]);
               }
               if (this.integerArrayState0092[integerLocal15] > 0) {
                 this.integerArrayState0073[integerLocal15] = this.integerArrayState0073[integerLocal15] - this.integerArrayState0092[integerLocal15] * 4;
@@ -882,7 +882,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                   this.integerArrayState0073[integerLocal15] = 0;
                 }
                 integerLocal16 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                this.performAction0775(integerLocal15, integerLocal16);
+                this.performAction0750(integerLocal15, integerLocal16);
               }
               if (this.integerArrayState0080[integerLocal15] > 0) {
                 this.integerArrayState0073[integerLocal15] = this.integerArrayState0073[integerLocal15] + this.integerArrayState0080[integerLocal15] * 4;
@@ -894,7 +894,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                   this.integerArrayState0073[integerLocal15] = 0;
                 }
                 integerLocal16 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                this.performAction0775(integerLocal15, integerLocal16);
+                this.performAction0750(integerLocal15, integerLocal16);
               }
               if (this.integerArrayState0078[integerLocal15] > 0) {
                 if (this.integerArrayState0073[integerLocal15] < this.integerArrayState0069[integerLocal15]) {
@@ -917,7 +917,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                   this.integerArrayState0073[integerLocal15] = 0;
                 }
                 integerLocal16 = integerArrayState0085[this.integerArrayState0073[integerLocal15]];
-                this.performAction0775(integerLocal15, integerLocal16);
+                this.performAction0750(integerLocal15, integerLocal16);
               }
             }
           }
@@ -992,7 +992,7 @@ final class MidiSynthesizer extends AudioSupport005 {
                 }
               }
             }
-            this.performAction0770(integerLocal15, integerLocal16, integerLocal17);
+            this.performAction0747(integerLocal15, integerLocal16, integerLocal17);
           }
         }
         this.integerState0308 = this.integerState0308 + 1;
@@ -1002,7 +1002,7 @@ final class MidiSynthesizer extends AudioSupport005 {
         return integerLocal14 != 0;
     }
 
-    private final void performAction0771(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    private final void performAction0748(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         RawSound stackRawSoundLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -1013,7 +1013,7 @@ final class MidiSynthesizer extends AudioSupport005 {
         Throwable caughtExceptionLocal8 = null;
         RawPcmStream rawPcmStreamLocal9 = null;
         Object objectLocal10 = null;
-        this.performAction0779(integerArgument1);
+        this.performAction0754(integerArgument1);
         if (integerArgument4 > integerArrayState0085[7999] &&
           integerArgument4 < integerArrayState0085[0]) {
           if (integerArgument5 >= 0) {
@@ -1037,31 +1037,31 @@ final class MidiSynthesizer extends AudioSupport005 {
           } else {
             stackIntegerLocal3 = 0;
           }
-          rawPcmStreamLocal9 = RawPcmStream.computeRawPcmStream0489(stackRawSoundLocal1, stackIntegerLocal2, stackIntegerLocal3, integerArgument6);
-          rawPcmStreamLocal9.performAction0508(this.musicTrackState0002.integerArrayState0227[integerArgument2], this.musicTrackState0002.integerArrayState0223[integerArgument2]);
+          rawPcmStreamLocal9 = RawPcmStream.computeRawPcmStream0478(stackRawSoundLocal1, stackIntegerLocal2, stackIntegerLocal3, integerArgument6);
+          rawPcmStreamLocal9.performAction0494(this.musicTrackState0002.integerArrayState0227[integerArgument2], this.musicTrackState0002.integerArrayState0223[integerArgument2]);
           stackRawPcmStreamLocal4 = rawPcmStreamLocal9;
           stackIntegerLocal5 = (this.musicTrackState0002.integerArrayState0213[integerArgument2] == 0) ? 0 : -1;
-          ((RawPcmStream) (Object) stackRawPcmStreamLocal4).performAction0507(stackIntegerLocal5);
+          ((RawPcmStream) (Object) stackRawPcmStreamLocal4).performAction0493(stackIntegerLocal5);
           stackRawPcmStreamLocal6 = rawPcmStreamLocal9;
           stackBooleanLocal7 = (this.musicTrackState0002.integerArrayState0213[integerArgument2] != 2) ? false : true;
-          ((RawPcmStream) (Object) stackRawPcmStreamLocal6).performAction0477(stackBooleanLocal7);
+          ((RawPcmStream) (Object) stackRawPcmStreamLocal6).performAction0467(stackBooleanLocal7);
           if (integerArgument3 != 0) {
-            rawPcmStreamLocal9.performAction0504(integerArgument3);
-            rawPcmStreamLocal9.performAction0470(PcmPlayer.integerState0209 >> 7, integerArgument5 * this.integerState0314 * this.integerState0313 >> 12, integerArgument6);
+            rawPcmStreamLocal9.performAction0490(integerArgument3);
+            rawPcmStreamLocal9.performAction0460(PcmPlayer.integerState0209 >> 7, integerArgument5 * this.integerState0314 * this.integerState0313 >> 12, integerArgument6);
           }
           this.rawPcmStreamArrayState0001[integerArgument1] = rawPcmStreamLocal9;
           if (this.pcmStreamMixerState0003 != null) {
             objectLocal10 = this.pcmStreamMixerState0003;
             synchronized (objectLocal10) {
-              this.pcmStreamMixerState0003.performAction1190(rawPcmStreamLocal9);
+              this.pcmStreamMixerState0003.addSubStream(rawPcmStreamLocal9);
             }
           }
           return;
         }
     }
 
-    final int computeInteger0772(PcmStreamMixer pcmStreamMixerArgument1) {
-        if (this.computeBoolean0776() &&
+    final int onMixerTick(PcmStreamMixer pcmStreamMixerArgument1) {
+        if (this.computeBoolean0751() &&
           !this.booleanState0076) {
           return -1;
         }
@@ -1070,13 +1070,13 @@ final class MidiSynthesizer extends AudioSupport005 {
         return integerLocal2 / (this.integerState0304 * this.integerState0302);
     }
 
-    private final void performAction0775(int integerArgument1, int integerArgument2) {
+    private final void performAction0750(int integerArgument1, int integerArgument2) {
         if (this.rawPcmStreamArrayState0001[integerArgument1] != null) {
-          this.rawPcmStreamArrayState0001[integerArgument1].performAction0500(integerArgument2 * 256 / PcmPlayer.integerState0209);
+          this.rawPcmStreamArrayState0001[integerArgument1].performAction0486(integerArgument2 * 256 / PcmPlayer.integerState0209);
         }
     }
 
-    final synchronized void performAction0777(int integerArgument1) {
+    final synchronized void performAction0752(int integerArgument1) {
         this.integerState0302 = integerArgument1;
     }
 
@@ -1095,7 +1095,7 @@ final class MidiSynthesizer extends AudioSupport005 {
         this.integerState0311 = 0;
         this.integerState0315 = -1;
         this.musicTrackState0002 = musicTrackArgument1;
-        this.performAction0780();
+        this.performAction0755();
     }
 
     static {

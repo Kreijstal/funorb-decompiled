@@ -12,7 +12,7 @@ final class MixedSupport081 {
     static long longState0029;
     static String stringState0333;
 
-    final static String computeString1083(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
+    final static String computeString1054(int integerArgument1, int integerArgument2, PacketBuffer packetBufferArgument3) {
         int integerLocal1 = 0;
         Exception exceptionLocal2 = null;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -26,13 +26,13 @@ final class MixedSupport081 {
         Throwable caughtExceptionLocal11 = null;
         try {
           try {
-            integerLocal1 = packetBufferArgument3.computeInteger2072(false);
+            integerLocal1 = packetBufferArgument3.computeInteger2022(false);
             if (integerLocal1 > integerArgument1) {
               integerLocal1 = integerArgument1;
             }
             byteArrayLocal4 = new byte[integerLocal1];
-            packetBufferArgument3.position = packetBufferArgument3.position + NetworkSupport007.mixedSupport068State0001.computeInteger0932(packetBufferArgument3.position, (byte) 91, integerArgument2, byteArrayLocal4, packetBufferArgument3.payload, integerLocal1);
-            stringLocal5 = MixedSupport140.computeString1906(byteArrayLocal4, 0, 0, integerLocal1);
+            packetBufferArgument3.position = packetBufferArgument3.position + NetworkSupport007.mixedSupport068State0001.computeInteger0903(packetBufferArgument3.position, (byte) 91, integerArgument2, byteArrayLocal4, packetBufferArgument3.payload, integerLocal1);
+            stringLocal5 = MixedSupport140.computeString1856(byteArrayLocal4, 0, 0, integerLocal1);
             stackStringLocal6 = stringLocal5;
             return stackStringLocal6;
           } catch (java.lang.Exception caughtParameterLocal12) {
@@ -51,11 +51,11 @@ final class MixedSupport081 {
           } else {
             stackStringLocal10 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal8), ((StringBuilder) (Object) stackStringBuilderLocal9).append(stackStringLocal10).append(')').toString());
         }
     }
 
-    public static void performAction1082(int integerArgument1) {
+    public static void performAction1053(int integerArgument1) {
         codecSupport004State0001 = null;
         rgbSpriteState0032 = null;
         stringState0332 = null;

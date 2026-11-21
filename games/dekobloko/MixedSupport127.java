@@ -4,7 +4,7 @@
 final class MixedSupport127 implements CallbackContract004 {
     static String[] stringArrayState0047;
     static RenderingSupport010 renderingSupport010State0006;
-    static CollectionSupport003 collectionSupport003State0005;
+    static SecondaryNodeHashTable secondaryNodeHashTableState0005;
     static SceneWidget sceneWidgetState0117;
     static SceneWidget sceneWidgetState0118;
     static int integerState0777;
@@ -12,14 +12,14 @@ final class MixedSupport127 implements CallbackContract004 {
     static SceneWidget sceneWidgetState0119;
     static int integerState0778;
 
-    public static void performAction1814(boolean booleanArgument1) {
+    public static void performAction1764(boolean booleanArgument1) {
         stringArrayArrayState0008 = (String[][]) null;
         stringArrayState0047 = null;
         sceneWidgetState0117 = null;
         renderingSupport010State0006 = null;
         sceneWidgetState0118 = null;
         if (!booleanArgument1) {
-          collectionSupport003State0005 = null;
+          secondaryNodeHashTableState0005 = null;
           sceneWidgetState0119 = null;
           return;
         }
@@ -37,19 +37,19 @@ final class MixedSupport127 implements CallbackContract004 {
         try {
           integerLocal5 = integerArgument2 + uiComponentArgument5.integerState0110;
           integerLocal7 = uiComponentArgument5.integerState0104 + integerArgument3;
-          RenderingSupport008.performAction0965(integerLocal5, integerLocal7, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, (byte) 101);
+          RenderingSupport008.performAction0936(integerLocal5, integerLocal7, uiComponentArgument5.integerState0107, uiComponentArgument5.integerState0108, (byte) 101);
           rgbSpriteLocal8 = MixedSupport129.rgbSpriteArrayState0028[1];
           if (uiComponentArgument5 instanceof InteractiveComponent &&
             ((InteractiveComponent) (uiComponentArgument5)).booleanState0034) {
-            rgbSpriteLocal8.performAction0317((uiComponentArgument5.integerState0107 - rgbSpriteLocal8.integerState0254 >> 1) + integerLocal5 + 1, 1 + integerLocal7 + (uiComponentArgument5.integerState0108 - rgbSpriteLocal8.integerState0260 >> 1), 256);
+            rgbSpriteLocal8.performAction0314((uiComponentArgument5.integerState0107 - rgbSpriteLocal8.integerState0254 >> 1) + integerLocal5 + 1, 1 + integerLocal7 + (uiComponentArgument5.integerState0108 - rgbSpriteLocal8.integerState0260 >> 1), 256);
           }
-          if (uiComponentArgument5.computeBoolean0239(true)) {
-            RenderingSupport007.performAction0958(-4 + uiComponentArgument5.integerState0107, 2 + integerLocal5, (byte) 124, 2 + integerLocal7, uiComponentArgument5.integerState0108 - 4);
+          if (uiComponentArgument5.computeBoolean0236(true)) {
+            RenderingSupport007.performAction0929(-4 + uiComponentArgument5.integerState0107, 2 + integerLocal5, (byte) 124, 2 + integerLocal7, uiComponentArgument5.integerState0108 - 4);
           }
           if (byteArgument4 < -60) {
             return;
           }
-          MixedSupport127.performAction1814(false);
+          MixedSupport127.performAction1764(false);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal4 = caughtParameterLocal9;
@@ -61,19 +61,19 @@ final class MixedSupport127 implements CallbackContract004 {
           } else {
             stackStringLocal3 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal2).append(stackStringLocal3).append(')').toString());
         }
     }
 
-    final static void performAction1813(byte byteArgument1) {
-        UiComponentPart018.performAction1160(9, 11, MixedSupport016.sceneWidgetPart013State0001.computeInteger1937(102));
+    final static void performAction1763(byte byteArgument1) {
+        UiComponentPart018.performAction1131(9, 11, MixedSupport016.sceneWidgetPart013State0001.computeInteger1887(102));
         GameDomainSupport006.booleanState0227 = true;
         if (byteArgument1 >= -2) {
           sceneWidgetState0117 = (SceneWidget) null;
         }
     }
 
-    final static RgbSprite computeRgbSprite1815(boolean booleanArgument1, int integerArgument2) {
+    final static RgbSprite computeRgbSprite1765(boolean booleanArgument1, int integerArgument2) {
         if (!booleanArgument1) {
           return (RgbSprite) null;
         }

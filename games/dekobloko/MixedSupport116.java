@@ -9,7 +9,7 @@ final class MixedSupport116 {
     static int integerState0721;
     private static String stringState0485;
 
-    public static void performAction1661(int integerArgument1) {
+    public static void performAction1611(int integerArgument1) {
         integerArrayState0200 = null;
         rgbSpriteState0052 = null;
         rgbSpriteArrayArrayState0011 = (RgbSprite[][]) null;

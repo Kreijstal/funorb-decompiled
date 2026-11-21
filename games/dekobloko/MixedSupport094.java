@@ -9,11 +9,11 @@ final class MixedSupport094 {
     static String stringState0374;
     static RgbSprite[] rgbSpriteArrayState0019;
 
-    final static void performAction1305(int integerArgument1) {
+    final static void performAction1257(int integerArgument1) {
         if (integerArgument1 <= 125) {
           return;
         }
-        InputAdapter006.integerArrayState0206 = null;
+        InputAdapter003.integerArrayState0206 = null;
         SceneWidgetPart011.byteArrayArrayState0008 = (byte[][]) null;
         MixedSupport052.integerArrayState0054 = null;
         MixedSupport130.integerArrayState0208 = null;
@@ -21,7 +21,7 @@ final class MixedSupport094 {
         NetworkSupport006.integerArrayState0152 = null;
     }
 
-    final static void performAction1306(java.applet.Applet appletArgument1, int integerArgument2, String stringArgument3) {
+    final static void performAction1258(java.applet.Applet appletArgument1, int integerArgument2, String stringArgument3) {
         try {
           String stringLocal1 = null;
           String stringLocal2 = null;
@@ -35,12 +35,12 @@ final class MixedSupport094 {
               if (integerArgument2 == ~stringArgument3.length()) {
                 stringLocal3 = stringLocal3 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              MixedSupport088.performAction1240((byte) -51, appletArgument1, "document.cookie=\"" + stringLocal3 + "\"");
+              MixedSupport088.performAction1198((byte) -51, appletArgument1, "document.cookie=\"" + stringLocal3 + "\"");
             } catch (Throwable throwable) {
             }
-            NetworkSupport007.performAction1166((byte) 121, appletArgument1);
+            NetworkSupport007.performAction1137((byte) 121, appletArgument1);
           } catch (RuntimeException runtimeException) {
-            throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "oa.A(" + (appletArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
+            throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "oa.A(" + (appletArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal6) {
           throw uncheckedExceptionLocal6;
@@ -49,7 +49,7 @@ final class MixedSupport094 {
         }
     }
 
-    final static String computeString1307(String stringArgument1, int integerArgument2) {
+    final static String computeString1259(String stringArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;
@@ -82,11 +82,11 @@ final class MixedSupport094 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
-    public static void performAction1308(int integerArgument1) {
+    public static void performAction1260(int integerArgument1) {
         if (integerArgument1 != -1) {
           integerArrayState0173 = (int[]) null;
         }

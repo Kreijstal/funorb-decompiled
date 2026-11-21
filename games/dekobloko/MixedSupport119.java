@@ -14,7 +14,7 @@ final class MixedSupport119 {
     private int integerState0740;
     int integerState0741;
 
-    final int computeInteger1684(int integerArgument1) {
+    final int computeInteger1634(int integerArgument1) {
         int integerLocal1 = 0;
         if (this.integerState0734 >= this.integerState0733) {
           integerLocal1 = this.integerState0738;
@@ -33,7 +33,7 @@ final class MixedSupport119 {
         return this.integerState0736 - this.integerState0740 >> 15;
     }
 
-    final void performAction1683() {
+    final void performAction1633() {
         this.integerState0733 = 0;
         this.integerState0738 = 0;
         this.integerState0740 = 0;
@@ -41,21 +41,21 @@ final class MixedSupport119 {
         this.integerState0734 = 0;
     }
 
-    final void performAction1686(PacketBuffer packetBufferArgument1) {
-        this.integerState0739 = packetBufferArgument1.computeInteger2085((byte) -28);
-        this.integerState0737 = packetBufferArgument1.computeInteger2096(7553);
-        this.integerState0741 = packetBufferArgument1.computeInteger2096(7553);
-        this.performAction1685(packetBufferArgument1);
+    final void performAction1636(PacketBuffer packetBufferArgument1) {
+        this.integerState0739 = packetBufferArgument1.computeInteger2035((byte) -28);
+        this.integerState0737 = packetBufferArgument1.computeInteger2046(7553);
+        this.integerState0741 = packetBufferArgument1.computeInteger2046(7553);
+        this.performAction1635(packetBufferArgument1);
     }
 
-    final void performAction1685(PacketBuffer packetBufferArgument1) {
+    final void performAction1635(PacketBuffer packetBufferArgument1) {
         int integerLocal1 = 0;
-        this.integerState0735 = packetBufferArgument1.computeInteger2085((byte) -69);
+        this.integerState0735 = packetBufferArgument1.computeInteger2035((byte) -69);
         this.integerArrayState0203 = new int[this.integerState0735];
         this.integerArrayState0204 = new int[this.integerState0735];
         for (integerLocal1 = 0; integerLocal1 < this.integerState0735; integerLocal1++) {
-          this.integerArrayState0203[integerLocal1] = packetBufferArgument1.computeInteger2089(3);
-          this.integerArrayState0204[integerLocal1] = packetBufferArgument1.computeInteger2089(3);
+          this.integerArrayState0203[integerLocal1] = packetBufferArgument1.computeInteger2039(3);
+          this.integerArrayState0204[integerLocal1] = packetBufferArgument1.computeInteger2039(3);
         }
     }
 

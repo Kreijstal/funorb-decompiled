@@ -51,7 +51,7 @@ final class DualNodeDeque {
         RuntimeException runtimeExceptionLocal6 = null;
         try {
           if (dualNodeArgument1.dualNodeState0004 != null) {
-            dualNodeArgument1.performAction0145((byte) 101);
+            dualNodeArgument1.performAction0142((byte) 101);
           }
           dualNodeArgument1.dualNodeState0003 = this.dualNodeState0001;
           dualNodeArgument1.dualNodeState0004 = this.dualNodeState0001.dualNodeState0004;
@@ -72,7 +72,7 @@ final class DualNodeDeque {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(',').append(integerArgument2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class DualNodeDeque {
         if (this.dualNodeState0001 == dualNodeLocal1) {
           return null;
         }
-        dualNodeLocal1.performAction0145((byte) 94);
+        dualNodeLocal1.performAction0142((byte) 94);
         int integerLocal2 = 27 / ((1 - byteArgument1) / 39);
         return dualNodeLocal1;
     }
@@ -157,7 +157,7 @@ final class DualNodeDeque {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal3), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class DualNodeDeque {
         boolean stackBooleanLocal5 = false;
         Throwable caughtExceptionLocal6 = null;
         integerLocal1 = 108 % ((-69 - byteArgument1) / 50);
-        objectLocal3 = MixedSupport033.inputAdapter004State0001;
+        objectLocal3 = MixedSupport033.keyboardInputHandlerState0001;
         synchronized (objectLocal3) {
           if (RichTextLayout.integerState0160 == MixedSupport120.integerState0746) {
             return false;
@@ -233,7 +233,7 @@ final class DualNodeDeque {
         boolean stackBooleanLocal5 = false;
         Throwable caughtExceptionLocal6 = null;
         integerLocal1 = 108 % ((-69 - integerArgument1) / 50);
-        objectLocal3 = MixedSupport033.inputAdapter004State0001;
+        objectLocal3 = MixedSupport033.keyboardInputHandlerState0001;
         synchronized (objectLocal3) {
           if (RichTextLayout.integerState0160 == MixedSupport120.integerState0746) {
             return false;

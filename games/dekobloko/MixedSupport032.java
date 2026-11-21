@@ -7,60 +7,60 @@ final class MixedSupport032 {
     private ResourceArchive resourceArchiveState0006;
     private ResourceArchive resourceArchiveState0007;
 
-    public static void performAction0519(byte byteArgument1) {
+    public static void performAction0505(byte byteArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
           if (byteArgument1 != 82) {
-            MixedSupport032.performAction0519((byte) 15);
+            MixedSupport032.performAction0505((byte) 15);
           }
           stringState0157 = null;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "em.F(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "em.F(" + byteArgument1 + ')');
         }
     }
 
-    final static boolean computeBoolean0525(byte byteArgument1) {
+    final static boolean computeBoolean0511(byte byteArgument1) {
         RuntimeException runtimeExceptionLocal1 = null;
         boolean stackBooleanLocal2 = false;
         RuntimeException caughtExceptionLocal3 = null;
         try {
           if (byteArgument1 < -107) {
-            stackBooleanLocal2 = !(ThemeTips.mixedSupport124State0001.computeBoolean1767(80));
+            stackBooleanLocal2 = !(ThemeTips.mixedSupport124State0001.computeBoolean1717(80));
             return stackBooleanLocal2;
           }
           return true;
         } catch (java.lang.RuntimeException caughtParameterLocal4) {
           caughtExceptionLocal3 = caughtParameterLocal4;
           runtimeExceptionLocal1 = caughtExceptionLocal3;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal1), "em.B(" + byteArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal1), "em.B(" + byteArgument1 + ')');
         }
     }
 
-    final static void performAction0521(int integerArgument1) {
+    final static void performAction0507(int integerArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         try {
-          MixedSupport005.uiComponentPart016State0001.performAction0948(true);
+          MixedSupport005.uiComponentPart016State0001.performAction0919(true);
           if (NetworkSupport010.uiComponentPart026State0001 == null) {
             NetworkSupport010.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
           }
           if (integerArgument1 != -1199770620) {
             stringState0157 = (String) null;
           }
-          MixedSupport005.uiComponentPart016State0001.performAction0945((byte) -119, NetworkSupport010.uiComponentPart026State0001);
+          MixedSupport005.uiComponentPart016State0001.performAction0916((byte) -119, NetworkSupport010.uiComponentPart026State0001);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
           runtimeExceptionLocal2 = caughtExceptionLocal1;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "em.G(" + integerArgument1 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "em.G(" + integerArgument1 + ')');
         }
     }
 
-    final MixedSupport003 computeMixedSupport0030522(int integerArgument1, int integerArgument2) {
+    final MixedSupport003 computeMixedSupport0030508(int integerArgument1, int integerArgument2) {
         MixedSupport003 mixedSupport003Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         byte[] byteArrayLocal3 = null;
@@ -70,18 +70,18 @@ final class MixedSupport032 {
         RuntimeException caughtExceptionLocal7 = null;
         MixedSupport003 mixedSupport003Local8;
         try {
-          mixedSupport003Local1 = (MixedSupport003) (this.mixedSupport078State0001.computeObject1046((long)integerArgument2, (byte) -30));
+          mixedSupport003Local1 = (MixedSupport003) (this.mixedSupport078State0001.computeObject1017((long)integerArgument2, (byte) -30));
           if (null != mixedSupport003Local1) {
             stackMixedSupport003Local5 = mixedSupport003Local1;
             return stackMixedSupport003Local5;
           }
           integerLocal4 = 57 / ((integerArgument1 + 79) / 38);
           if (integerArgument2 < 32768) {
-            byteArrayLocal3 = this.resourceArchiveState0007.computeByteArray0912(integerArgument2, 63, 0);
+            byteArrayLocal3 = this.resourceArchiveState0007.computeByteArray0883(integerArgument2, 63, 0);
           }
           if (integerArgument2 >= 32768 ||
             DekoBlokoClient.obfuscationControl) {
-            byteArrayLocal3 = this.resourceArchiveState0006.computeByteArray0912(32767 & integerArgument2, 49, 0);
+            byteArrayLocal3 = this.resourceArchiveState0006.computeByteArray0883(32767 & integerArgument2, 49, 0);
           }
           mixedSupport003Local8 = new MixedSupport003();
           if (byteArrayLocal3 != null) {
@@ -90,17 +90,17 @@ final class MixedSupport032 {
           if (integerArgument2 >= 32768) {
             mixedSupport003Local8.performAction0042(-1);
           }
-          this.mixedSupport078State0001.performAction1048(mixedSupport003Local8, (long)integerArgument2, 69);
+          this.mixedSupport078State0001.performAction1019(mixedSupport003Local8, (long)integerArgument2, 69);
           stackMixedSupport003Local6 = mixedSupport003Local8;
           return stackMixedSupport003Local6;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal7 = caughtParameterLocal9;
           runtimeExceptionLocal2 = caughtExceptionLocal7;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "em.C(" + integerArgument1 + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "em.C(" + integerArgument1 + ',' + integerArgument2 + ')');
         }
     }
 
-    final static void performAction0524(MixedSupport145 mixedSupport145Argument1, boolean booleanArgument2, int integerArgument3, byte byteArgument4, int integerArgument5) {
+    final static void performAction0510(MixedSupport145 mixedSupport145Argument1, boolean booleanArgument2, int integerArgument3, byte byteArgument4, int integerArgument5) {
         byte cachedByteLocal1 = 0;
         boolean stackBooleanLocal2 = false;
         int stackIntegerLocal3 = 0;
@@ -137,13 +137,13 @@ final class MixedSupport032 {
         int integerLocal34;
         integerLocal27 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal12 = SceneWidgetPart010.computeInteger1667((byte) 127, (-integerArgument5 + integerArgument3) * 3);
+          integerLocal12 = SceneWidgetPart010.computeInteger1617((byte) 127, (-integerArgument5 + integerArgument3) * 3);
           integerLocal14 = integerArgument5 * 3;
           integerLocal15 = integerLocal12 - 10;
-          MixedSupport113.performAction1614(0);
+          MixedSupport113.performAction1564(0);
           if (0 < mixedSupport145Argument1.byteState0004 &&
             null != mixedSupport145Argument1.byteArrayState0033) {
-            MixedSupport018.performAction0272((byte) 127);
+            MixedSupport018.performAction0269((byte) 127);
           }
           MixedSupport124.integerState0771 = 0;
           integerLocal16 = 0;
@@ -245,11 +245,11 @@ final class MixedSupport032 {
           } else {
             stackStringLocal9 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(booleanArgument2).append(',').append(integerArgument3).append(',').append(byteArgument4).append(',').append(integerArgument5).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal7), ((StringBuilder) (Object) stackStringBuilderLocal8).append(stackStringLocal9).append(',').append(booleanArgument2).append(',').append(integerArgument3).append(',').append(byteArgument4).append(',').append(integerArgument5).append(')').toString());
         }
     }
 
-    final static int[] computeIntegerArray0523(int integerArgument1, int integerArgument2, byte byteArgument3) {
+    final static int[] computeIntegerArray0509(int integerArgument1, int integerArgument2, byte byteArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -263,12 +263,12 @@ final class MixedSupport032 {
         RuntimeException caughtExceptionLocal11 = null;
         try {
           if (byteArgument3 != 90) {
-            MixedSupport032.computeIntegerArray0523(107, 61, (byte) -72);
+            MixedSupport032.computeIntegerArray0509(107, 61, (byte) -72);
           }
-          integerLocal1 = MixedSupport121.computeInteger1720(integerArgument2, -104);
-          integerLocal3 = MixedSupport135.computeInteger1854(integerArgument2, 92);
-          integerLocal4 = MixedSupport121.computeInteger1720(integerArgument1, -122);
-          integerLocal5 = MixedSupport135.computeInteger1854(integerArgument1, -63);
+          integerLocal1 = MixedSupport121.computeInteger1670(integerArgument2, -104);
+          integerLocal3 = MixedSupport135.computeInteger1804(integerArgument2, 92);
+          integerLocal4 = MixedSupport121.computeInteger1670(integerArgument1, -122);
+          integerLocal5 = MixedSupport135.computeInteger1804(integerArgument1, -63);
           integerLocal6 = (int)((long)integerLocal4 * (long)integerLocal1 >> 16);
           integerLocal7 = (int)((long)integerLocal5 * (long)integerLocal1 >> 16);
           integerLocal8 = (int)((long)integerLocal4 * (long)integerLocal3 >> 16);
@@ -278,11 +278,11 @@ final class MixedSupport032 {
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal11 = caughtParameterLocal12;
           runtimeExceptionLocal2 = caughtExceptionLocal11;
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeExceptionLocal2), "em.E(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeExceptionLocal2), "em.E(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ')');
         }
     }
 
-    final static void performAction0520(byte byteArgument1, ResourceArchive resourceArchiveArgument2) {
+    final static void performAction0506(byte byteArgument1, ResourceArchive resourceArchiveArgument2) {
         RuntimeException runtimeException = null;
         RgbSprite rgbSpriteLocal2 = null;
         int integerLocal3 = 0;
@@ -292,21 +292,21 @@ final class MixedSupport032 {
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          rgbSpriteLocal2 = new RgbSprite(resourceArchiveArgument2.computeByteArray0916(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
+          rgbSpriteLocal2 = new RgbSprite(resourceArchiveArgument2.computeByteArray0887(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
           integerLocal3 = rgbSpriteLocal2.integerState0258;
           integerLocal4 = rgbSpriteLocal2.integerState0255;
-          IterableNodeCollection.performAction1876(-9074);
+          IterableNodeCollection.performAction1826(-9074);
           CodecSupport003.rgbSpriteState0051 = new RgbSprite(integerLocal3, 3 * integerLocal4 / 4);
-          CodecSupport003.rgbSpriteState0051.performAction0278();
-          rgbSpriteLocal2.performAction0312(0, 0);
+          CodecSupport003.rgbSpriteState0051.performAction0275();
+          rgbSpriteLocal2.performAction0309(0, 0);
           MixedSupport110.rgbSpriteState0046 = new RgbSprite(integerLocal3, -CodecSupport003.rgbSpriteState0051.integerState0255 + integerLocal4);
-          MixedSupport110.rgbSpriteState0046.performAction0278();
-          rgbSpriteLocal2.performAction0312(0, -CodecSupport003.rgbSpriteState0051.integerState0255);
+          MixedSupport110.rgbSpriteState0046.performAction0275();
+          rgbSpriteLocal2.performAction0309(0, -CodecSupport003.rgbSpriteState0051.integerState0255);
           if (byteArgument1 != -113) {
-            MixedSupport032.computeIntegerArray0523(16, 35, (byte) 0);
+            MixedSupport032.computeIntegerArray0509(16, 35, (byte) 0);
           }
           MixedSupport110.rgbSpriteState0046.integerState0256 = CodecSupport003.rgbSpriteState0051.integerState0255;
-          MixedSupport086.performAction1200((byte) -5);
+          MixedSupport086.performAction1161((byte) -5);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -318,7 +318,7 @@ final class MixedSupport032 {
           } else {
             stackStringLocal7 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal5), ((StringBuilder) (Object) stackStringBuilderLocal6).append(stackStringLocal7).append(')').toString());
         }
     }
 
@@ -335,10 +335,10 @@ final class MixedSupport032 {
           this.resourceArchiveState0006 = resourceArchiveArgument3;
           this.resourceArchiveState0007 = resourceArchiveArgument2;
           if (null != this.resourceArchiveState0007) {
-            this.resourceArchiveState0007.computeInteger0925(-5228, 0);
+            this.resourceArchiveState0007.computeInteger0896(-5228, 0);
           }
           if (this.resourceArchiveState0006 != null) {
-            this.resourceArchiveState0006.computeInteger0925(-5228, 0);
+            this.resourceArchiveState0006.computeInteger0896(-5228, 0);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
@@ -357,7 +357,7 @@ final class MixedSupport032 {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 

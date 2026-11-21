@@ -68,32 +68,32 @@ class SceneWidget extends SceneWidgetNode {
         this(longArgument1, sceneWidgetArgument2, 0, 0, 0, 0, stringArgument3);
     }
 
-    final static void performAction1995(int integerArgument1, int integerArgument2, MixedSupport034 mixedSupport034Argument3) {
+    final static void performAction1945(int integerArgument1, int integerArgument2, MixedSupport034 mixedSupport034Argument3) {
         CipherPacketBuffer cipherPacketBufferLocal1 = null;
         int integerLocal2 = 0;
         try {
           cipherPacketBufferLocal1 = SocketFactory.cipherPacketBufferState0002;
-          cipherPacketBufferLocal1.performAction1861(integerArgument2, -4);
+          cipherPacketBufferLocal1.performAction1811(integerArgument2, -4);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position + 1;
           integerLocal2 = cipherPacketBufferLocal1.position;
-          cipherPacketBufferLocal1.performAction2073(true, 1);
+          cipherPacketBufferLocal1.performAction2023(true, 1);
           if (null != mixedSupport034Argument3.byteArrayState0007) {
-            cipherPacketBufferLocal1.performAction2073(true, mixedSupport034Argument3.byteArrayState0007.length);
-            cipherPacketBufferLocal1.performAction2074(false, mixedSupport034Argument3.byteArrayState0007.length, mixedSupport034Argument3.byteArrayState0007, 0);
+            cipherPacketBufferLocal1.performAction2023(true, mixedSupport034Argument3.byteArrayState0007.length);
+            cipherPacketBufferLocal1.performAction2024(false, mixedSupport034Argument3.byteArrayState0007.length, mixedSupport034Argument3.byteArrayState0007, 0);
           } else {
-            cipherPacketBufferLocal1.performAction2073(true, 0);
+            cipherPacketBufferLocal1.performAction2023(true, 0);
           }
           int integerLocal3 = 120 % ((integerArgument1 - 60) / 53);
-          cipherPacketBufferLocal1.computeInteger2061((byte) -15, integerLocal2);
+          cipherPacketBufferLocal1.computeInteger2011((byte) -15, integerLocal2);
           cipherPacketBufferLocal1.position = cipherPacketBufferLocal1.position - 4;
-          mixedSupport034Argument3.integerState0218 = cipherPacketBufferLocal1.computeInteger2096(7553);
-          cipherPacketBufferLocal1.performAction2079(cipherPacketBufferLocal1.position - integerLocal2, true);
+          mixedSupport034Argument3.integerState0218 = cipherPacketBufferLocal1.computeInteger2046(7553);
+          cipherPacketBufferLocal1.performAction2029(cipherPacketBufferLocal1.position - integerLocal2, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "w.NA(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport034Argument3 != null ? "{...}" : "null") + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "w.NA(" + integerArgument1 + ',' + integerArgument2 + ',' + (mixedSupport034Argument3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void performAction1994(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void performAction1944(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         this.integerState0907 = integerArgument2;
         this.integerState0895 = 0;
         this.integerState0890 = integerArgument5;
@@ -104,7 +104,7 @@ class SceneWidget extends SceneWidgetNode {
         this.integerState0887 = 0;
     }
 
-    public static void performAction2005(byte byteArgument1) {
+    public static void performAction1955(byte byteArgument1) {
         rgbSpriteState0068 = null;
         renderingSupport010State0007 = null;
         int integerLocal1 = 10 % ((-8 - byteArgument1) / 47);
@@ -112,14 +112,14 @@ class SceneWidget extends SceneWidgetNode {
         rawSoundState0022 = null;
     }
 
-    final int computeInteger2000(boolean booleanArgument1) {
+    final int computeInteger1950(boolean booleanArgument1) {
         if (!booleanArgument1) {
           return -120;
         }
-        return this.computeInteger1991((byte) 84, 2147483647);
+        return this.computeInteger1941((byte) 84, 2147483647);
     }
 
-    private final void performAction2001(boolean booleanArgument1, int integerArgument2, boolean booleanArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7, int integerArgument8, boolean booleanArgument9, boolean booleanArgument10, int integerArgument11) {
+    private final void performAction1951(boolean booleanArgument1, int integerArgument2, boolean booleanArgument3, boolean booleanArgument4, int integerArgument5, int integerArgument6, boolean booleanArgument7, int integerArgument8, boolean booleanArgument9, boolean booleanArgument10, int integerArgument11) {
         boolean stackBooleanLocal1 = false;
         int integerLocal2;
         int integerLocal3;
@@ -147,7 +147,7 @@ class SceneWidget extends SceneWidgetNode {
         integerLocal3 = SoftwareRaster.integerState0280;
         integerLocal4 = SoftwareRaster.integerState0281;
         integerLocal5 = SoftwareRaster.integerState0283;
-        SoftwareRaster.performAction0742(this.integerState0892, this.integerState0886, this.integerState0892 + this.integerState0896, this.integerState0915 + this.integerState0886);
+        SoftwareRaster.performAction0722(this.integerState0892, this.integerState0886, this.integerState0892 + this.integerState0896, this.integerState0915 + this.integerState0886);
         booleanArgument4 = booleanArgument4 & this.booleanState0212;
         if (!this.booleanState0215) {
           booleanArgument3 = this.booleanState0218;
@@ -228,9 +228,9 @@ class SceneWidget extends SceneWidgetNode {
         }
         integerLocal12 = integerLocal10 + this.integerState0900;
         if (!this.booleanState0214) {
-          GameplayControls.performAction1978(this.integerState0915, (byte) 50, rgbSpriteArrayLocal6, this.integerState0896, this.integerState0886, this.integerState0892);
+          GameplayControls.performAction1928(this.integerState0915, (byte) 50, rgbSpriteArrayLocal6, this.integerState0896, this.integerState0886, this.integerState0892);
         } else {
-          GameplayControls.performAction1978(integerArgument6, (byte) 50, rgbSpriteArrayLocal6, integerArgument2, integerArgument8, integerArgument5);
+          GameplayControls.performAction1928(integerArgument6, (byte) 50, rgbSpriteArrayLocal6, integerArgument2, integerArgument8, integerArgument5);
         }
         if (rgbSpriteLocal7 != null) {
           integerLocal13 = integerLocal11 + this.integerState0892;
@@ -248,9 +248,9 @@ class SceneWidget extends SceneWidgetNode {
             integerLocal16 = integerLocal16 + (this.integerState0915 - rgbSpriteLocal7.integerState0260);
           }
           if (this.integerState0905 < 256) {
-            rgbSpriteLocal7.performAction0301(integerLocal13, integerLocal16, this.integerState0905);
+            rgbSpriteLocal7.performAction0298(integerLocal13, integerLocal16, this.integerState0905);
           } else {
-            rgbSpriteLocal7.performAction0300(integerLocal13, integerLocal16);
+            rgbSpriteLocal7.performAction0297(integerLocal13, integerLocal16);
           }
         }
         boolean frameRemainderLocal21 = true;
@@ -264,7 +264,7 @@ class SceneWidget extends SceneWidgetNode {
             this.stringState0599 != null) {
             stringLocal20 = stringLocal18 + this.stringState0599;
           }
-          if (this.bitmapFontState0020.computeInteger1208(stringLocal20) <= this.integerState0896 - 2 * this.integerState0893 &&
+          if (this.bitmapFontState0020.computeInteger1169(stringLocal20) <= this.integerState0896 - 2 * this.integerState0893 &&
             0 > stringLocal20.indexOf("<br>")) {
             if (this.integerState0885 != 1) {
               if (this.integerState0885 == 2) {
@@ -274,36 +274,36 @@ class SceneWidget extends SceneWidgetNode {
               integerLocal12 = integerLocal12 + (this.integerState0915 - this.bitmapFontState0020.integerState0518 - this.bitmapFontState0020.integerState0523) / 2;
             }
             if (this.integerState0916 == 0) {
-              this.bitmapFontState0020.performAction1229(stringLocal20, this.integerState0893 + (this.integerState0892 + integerLocal11), this.bitmapFontState0020.integerState0518 + (integerLocal12 + this.integerState0886), integerLocal8, -1, this.integerState0917);
+              this.bitmapFontState0020.performAction1190(stringLocal20, this.integerState0893 + (this.integerState0892 + integerLocal11), this.bitmapFontState0020.integerState0518 + (integerLocal12 + this.integerState0886), integerLocal8, -1, this.integerState0917);
             } else {
               if (this.integerState0916 == 1) {
-                this.bitmapFontState0020.performAction1225(stringLocal20, (-(2 * this.integerState0893) + this.integerState0896) / 2 + (this.integerState0892 - (-this.integerState0893 - integerLocal11)), this.bitmapFontState0020.integerState0518 + (this.integerState0886 + integerLocal12), integerLocal8, -1, this.integerState0917);
+                this.bitmapFontState0020.performAction1186(stringLocal20, (-(2 * this.integerState0893) + this.integerState0896) / 2 + (this.integerState0892 - (-this.integerState0893 - integerLocal11)), this.bitmapFontState0020.integerState0518 + (this.integerState0886 + integerLocal12), integerLocal8, -1, this.integerState0917);
               } else {
                 if (2 == this.integerState0916) {
-                  this.bitmapFontState0020.performAction1212(stringLocal20, -(this.integerState0893 * 2) + (this.integerState0896 + this.integerState0892 + this.integerState0893) + integerLocal11, this.integerState0886 + (integerLocal12 + this.bitmapFontState0020.integerState0518), integerLocal8, -1, this.integerState0917);
+                  this.bitmapFontState0020.performAction1173(stringLocal20, -(this.integerState0893 * 2) + (this.integerState0896 + this.integerState0892 + this.integerState0893) + integerLocal11, this.integerState0886 + (integerLocal12 + this.bitmapFontState0020.integerState0518), integerLocal8, -1, this.integerState0917);
                 } else {
-                  this.bitmapFontState0020.computeInteger1214(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, integerLocal12 + this.integerState0886, -(2 * this.integerState0893) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
+                  this.bitmapFontState0020.computeInteger1175(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, integerLocal12 + this.integerState0886, -(2 * this.integerState0893) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
                 }
               }
             }
             frameRemainderLocal21 = false;
           }
           else {
-            this.bitmapFontState0020.computeInteger1214(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, this.integerState0886 + integerLocal12, -(this.integerState0893 * 2) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
+            this.bitmapFontState0020.computeInteger1175(stringLocal20, integerLocal11 + this.integerState0893 + this.integerState0892, this.integerState0886 + integerLocal12, -(this.integerState0893 * 2) + this.integerState0896, this.integerState0915, integerLocal8, -1, this.integerState0917, this.integerState0916, this.integerState0885, this.integerState0908);
           }
         }
         if (this.nodeDequeState0034 != null) {
-          sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1970((byte) -124));
+          sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1920((byte) -124));
           while (sceneWidgetLocal15 != null) {
-            sceneWidgetLocal15.performAction2001(booleanArgument1, this.integerState0896, booleanArgument3, booleanArgument4, integerLocal9 + this.integerState0892, this.integerState0915, booleanArgument7, this.integerState0886 + integerLocal10, this.booleanState0213, booleanArgument10, -29696);
-            sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1974(true));
+            sceneWidgetLocal15.performAction1951(booleanArgument1, this.integerState0896, booleanArgument3, booleanArgument4, integerLocal9 + this.integerState0892, this.integerState0915, booleanArgument7, this.integerState0886 + integerLocal10, this.booleanState0213, booleanArgument10, -29696);
+            sceneWidgetLocal15 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1924(true));
           }
         }
-        SoftwareRaster.performAction0728(integerLocal2, integerLocal3, integerLocal4, integerLocal5);
+        SoftwareRaster.performAction0708(integerLocal2, integerLocal3, integerLocal4, integerLocal5);
         return;
     }
 
-    final static RenderingSupport010 computeRenderingSupport0102003(byte[] byteArrayArgument1, byte byteArgument2) {
+    final static RenderingSupport010 computeRenderingSupport0101953(byte[] byteArrayArgument1, byte byteArgument2) {
         RenderingSupport010 renderingSupport010Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         byte[] byteArrayLocal3 = null;
@@ -318,11 +318,11 @@ class SceneWidget extends SceneWidgetNode {
             stackObjectLocal4 = null;
             return (RenderingSupport010) (stackObjectLocal4);
           }
-          renderingSupport010Local1 = new RenderingSupport010(byteArrayArgument1, InputAdapter006.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport130.integerArrayState0208, MixedSupport052.integerArrayState0054, SceneWidgetPart011.byteArrayArrayState0008);
-          MixedSupport094.performAction1305(127);
+          renderingSupport010Local1 = new RenderingSupport010(byteArrayArgument1, InputAdapter003.integerArrayState0206, MixedSupport039.integerArrayState0047, MixedSupport130.integerArrayState0208, MixedSupport052.integerArrayState0054, SceneWidgetPart011.byteArrayArrayState0008);
+          MixedSupport094.performAction1257(127);
           if (byteArgument2 != -5) {
             byteArrayLocal3 = (byte[]) null;
-            SceneWidget.computeRenderingSupport0102003((byte[]) null, (byte) -7);
+            SceneWidget.computeRenderingSupport0101953((byte[]) null, (byte) -7);
           }
           stackRenderingSupport010Local5 = renderingSupport010Local1;
           return stackRenderingSupport010Local5;
@@ -336,11 +336,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackStringLocal8 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal6), ((StringBuilder) (Object) stackStringBuilderLocal7).append(stackStringLocal8).append(',').append(byteArgument2).append(')').toString());
         }
     }
 
-    final void performAction1992(byte byteArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4) {
+    final void performAction1942(byte byteArgument1, int integerArgument2, int integerArgument3, boolean booleanArgument4) {
         SceneWidget sceneWidgetLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -351,11 +351,11 @@ class SceneWidget extends SceneWidgetNode {
         int integerLocal8;
         if (!booleanArgument4) {
           integerLocal2 = 0;
-          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1970((byte) 118));
+          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1920((byte) 118));
           while (sceneWidgetLocal1 != null) {
             sceneWidgetLocal1.integerState0904 = -sceneWidgetLocal1.integerState0903 + integerLocal2;
             integerLocal2 = integerLocal2 + (sceneWidgetLocal1.integerState0895 + sceneWidgetLocal1.integerState0915 + integerArgument2);
-            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1974(true));
+            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1924(true));
           }
           integerLocal7 = -integerArgument2 + integerLocal2;
         }
@@ -386,39 +386,39 @@ class SceneWidget extends SceneWidgetNode {
         this(longArgument1, sceneWidgetArgument2, 0, 0, 0, 0, (String) null);
     }
 
-    final void performAction2002(boolean booleanArgument1, boolean booleanArgument2) {
+    final void performAction1952(boolean booleanArgument1, boolean booleanArgument2) {
         if (booleanArgument1) {
           this.integerState0893 = -111;
         }
         SceneWidgetPart002.booleanState0051 = !booleanArgument2 ? true : false;
         MixedSupport122.booleanState0179 = !booleanArgument2 ? true : false;
-        this.performAction1993(0, (byte) 127, true, SoftwareRaster.integerState0284, SoftwareRaster.integerState0285, 0);
+        this.performAction1943(0, (byte) 127, true, SoftwareRaster.integerState0284, SoftwareRaster.integerState0285, 0);
     }
 
-    final void performAction1998(SceneWidget sceneWidgetArgument1, int integerArgument2) {
+    final void performAction1948(SceneWidget sceneWidgetArgument1, int integerArgument2) {
         try {
           if (integerArgument2 != -16834) {
             SceneWidget sceneWidgetLocal1 = (SceneWidget) null;
-            this.performAction1998((SceneWidget) null, -88);
+            this.performAction1948((SceneWidget) null, -88);
           }
           if (null == this.nodeDequeState0034) {
             this.nodeDequeState0034 = new NodeDeque();
           }
-          this.nodeDequeState0034.performAction1963(sceneWidgetArgument1, 2777);
+          this.nodeDequeState0034.performAction1913(sceneWidgetArgument1, 2777);
         } catch (RuntimeException runtimeException) {
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) runtimeException), "w.GA(" + (sceneWidgetArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) runtimeException), "w.GA(" + (sceneWidgetArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ')');
         }
     }
 
-    final void performAction2004(int integerArgument1) {
+    final void performAction1954(int integerArgument1) {
         SceneWidget sceneWidgetLocal1 = null;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (this.nodeDequeState0034 != null) {
-          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1969(true));
+          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1919(true));
           while (sceneWidgetLocal1 != null) {
             sceneWidgetLocal1.booleanState0215 = true;
-            sceneWidgetLocal1.performAction2004(-92);
-            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1972(true));
+            sceneWidgetLocal1.performAction1954(-92);
+            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1922(true));
           }
         }
         if (integerArgument1 >= -16) {
@@ -426,7 +426,7 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    private final void performAction1993(int integerArgument1, byte byteArgument2, boolean booleanArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
+    private final void performAction1943(int integerArgument1, byte byteArgument2, boolean booleanArgument3, int integerArgument4, int integerArgument5, int integerArgument6) {
         boolean stackBooleanLocal1 = false;
         boolean stackBooleanLocal2 = false;
         int integerLocal3;
@@ -476,7 +476,7 @@ class SceneWidget extends SceneWidgetNode {
         integerLocal5 = SoftwareRaster.integerState0280;
         integerLocal6 = SoftwareRaster.integerState0281;
         integerLocal7 = SoftwareRaster.integerState0283;
-        SoftwareRaster.performAction0742(this.integerState0892, this.integerState0886, this.integerState0896 + this.integerState0892, this.integerState0915 + this.integerState0886);
+        SoftwareRaster.performAction0722(this.integerState0892, this.integerState0886, this.integerState0896 + this.integerState0892, this.integerState0915 + this.integerState0886);
         integerLocal8 = 0;
         if (!SceneWidgetPart002.booleanState0051 &&
           booleanArgument3 &&
@@ -504,10 +504,10 @@ class SceneWidget extends SceneWidgetNode {
         stackBooleanLocal2 = (this.booleanState0211) && (DualNode.integerState0062 == this.integerState0888) && (booleanArgument3);
         this.booleanState0218 = stackBooleanLocal2;
         if (null != this.nodeDequeState0034) {
-          sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1969(true));
+          sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1919(true));
           while (sceneWidgetLocal9 != null) {
-            sceneWidgetLocal9.performAction1993(this.integerState0892, (byte) 126, booleanArgument3, this.integerState0915, this.integerState0896, this.integerState0886);
-            sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1972(true));
+            sceneWidgetLocal9.performAction1943(this.integerState0892, (byte) 126, booleanArgument3, this.integerState0915, this.integerState0896, this.integerState0886);
+            sceneWidgetLocal9 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1922(true));
           }
         }
         if (this.booleanState0211) {
@@ -516,7 +516,7 @@ class SceneWidget extends SceneWidgetNode {
         if (integerLocal8 != 0) {
           SceneWidgetPart002.booleanState0051 = true;
         }
-        SoftwareRaster.performAction0728(integerLocal4, integerLocal5, integerLocal6, integerLocal7);
+        SoftwareRaster.performAction0708(integerLocal4, integerLocal5, integerLocal6, integerLocal7);
         if (this.integerState0888 != 0 &&
           this.booleanState0219) {
           this.integerState0890 = -integerArgument1 + HashNode.integerState0069 - this.integerState0897;
@@ -543,14 +543,14 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final void performAction1997(int integerArgument1, boolean booleanArgument2) {
-        this.performAction2001(booleanArgument2, SoftwareRaster.integerState0285, false, true, 0, SoftwareRaster.integerState0284, false, 0, false, false, -29696);
+    final void performAction1947(int integerArgument1, boolean booleanArgument2) {
+        this.performAction1951(booleanArgument2, SoftwareRaster.integerState0285, false, true, 0, SoftwareRaster.integerState0284, false, 0, false, false, -29696);
         if (integerArgument1 != 1141039778) {
           this.rgbSpriteState0069 = (RgbSprite) null;
         }
     }
 
-    final void performAction1996(int integerArgument1, SceneWidget sceneWidgetArgument2) {
+    final void performAction1946(int integerArgument1, SceneWidget sceneWidgetArgument2) {
         boolean stackBooleanLocal1 = false;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -674,7 +674,7 @@ class SceneWidget extends SceneWidgetNode {
             }
           }
           if (integerArgument1 >= -111) {
-            this.computeInteger2000(true);
+            this.computeInteger1950(true);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
@@ -687,11 +687,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackStringLocal4 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal3).append(stackStringLocal4).append(')').toString());
         }
     }
 
-    final void performAction1999(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3, int integerArgument4) {
+    final void performAction1949(SceneWidget sceneWidgetArgument1, SceneWidget sceneWidgetArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -727,11 +727,11 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackStringLocal5 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal1), ((StringBuilder) (Object) stackStringBuilderLocal4).append(stackStringLocal5).append(',').append(integerArgument3).append(',').append(integerArgument4).append(')').toString());
         }
     }
 
-    final int computeInteger1991(byte byteArgument1, int integerArgument2) {
+    final int computeInteger1941(byte byteArgument1, int integerArgument2) {
         SceneWidget sceneWidgetLocal1 = null;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -740,7 +740,7 @@ class SceneWidget extends SceneWidgetNode {
         int integerLocal6;
         if (this.stringState0598 != null &&
           this.bitmapFontState0020 != null) {
-          integerLocal3 = this.bitmapFontState0020.computeInteger1222(this.stringState0598, integerArgument2);
+          integerLocal3 = this.bitmapFontState0020.computeInteger1183(this.stringState0598, integerArgument2);
           if (integerLocal3 > integerLocal5) {
             integerLocal5 = integerLocal3;
           }
@@ -755,13 +755,13 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (null != this.nodeDequeState0034) {
-          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1970((byte) -125));
+          sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1920((byte) -125));
           while (sceneWidgetLocal1 != null) {
             integerLocal2 = sceneWidgetLocal1.integerState0896 + sceneWidgetLocal1.integerState0890;
             if (integerLocal5 < integerLocal2) {
               integerLocal5 = integerLocal2;
             }
-            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1974(true));
+            sceneWidgetLocal1 = (SceneWidget) (this.nodeDequeState0034.computeHashNode1924(true));
           }
         }
         return integerLocal5;
@@ -814,7 +814,7 @@ class SceneWidget extends SceneWidgetNode {
           this.integerState0915 = integerArgument6;
           this.integerState0890 = integerArgument3;
           this.integerState0903 = integerArgument4;
-          this.performAction1996(-119, sceneWidgetArgument2);
+          this.performAction1946(-119, sceneWidgetArgument2);
           if (stringArgument7 != null) {
             this.stringState0598 = stringArgument7;
           }
@@ -835,7 +835,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackStringLocal6 = "{...}";
           }
-          throw ClientException.computeDiagnosticSupport0020400((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
+          throw ClientException.computeDiagnosticSupport0020392((Throwable) ((Object) stackRuntimeExceptionLocal2), ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal6).append(')').toString());
         }
     }
 

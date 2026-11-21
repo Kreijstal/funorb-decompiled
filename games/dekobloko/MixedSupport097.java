@@ -11,25 +11,25 @@ final class MixedSupport097 {
     private static int integerState0565;
     private static int integerState0566;
 
-    private final static void performAction1370() {
+    private final static void performAction1322() {
         integerState0562 = 0;
     }
 
-    public static void performAction1371() {
+    public static void performAction1323() {
         integerArrayState0177 = null;
     }
 
-    final static void performAction1364(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
-        MixedSupport097.performAction1366(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2, integerArgument3, (int[]) null, (int[]) null);
+    final static void performAction1316(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+        MixedSupport097.performAction1318(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2, integerArgument3, (int[]) null, (int[]) null);
     }
 
-    private final static void performAction1362(int integerArgument1, int integerArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4) {
+    private final static void performAction1314(int integerArgument1, int integerArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
         int integerLocal4 = 0;
-        MixedSupport097.performAction1359();
-        while (MixedSupport097.computeBoolean1367()) {
+        MixedSupport097.performAction1311();
+        while (MixedSupport097.computeBoolean1319()) {
           integerLocal1 = integerState0565;
           integerLocal2 = integerState0563;
           integerLocal3 = integerState0561;
@@ -42,11 +42,11 @@ final class MixedSupport097 {
               integerLocal2 = integerArrayArgument3[integerLocal4] + integerArrayArgument4[integerLocal4] + SoftwareRaster.integerState0282;
             }
           }
-          SoftwareRaster.performAction0734(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1, integerArgument2);
+          SoftwareRaster.performAction0714(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1, integerArgument2);
         }
     }
 
-    private final static void performAction1359() {
+    private final static void performAction1311() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -61,7 +61,7 @@ final class MixedSupport097 {
           integerState0561 = 2147483646;
           return;
         }
-        MixedSupport097.performAction1361(0, integerState0562);
+        MixedSupport097.performAction1313(0, integerState0562);
         int integerLocal8 = integerArrayState0177[1];
         if (integerLocal8 < SoftwareRaster.integerState0280) {
           integerLocal8 = SoftwareRaster.integerState0280;
@@ -86,7 +86,7 @@ final class MixedSupport097 {
         integerState0561 = integerLocal8 - 1;
     }
 
-    private final static void performAction1368(int integerArgument1, int integerArgument2) {
+    private final static void performAction1320(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -116,7 +116,7 @@ final class MixedSupport097 {
         return;
     }
 
-    private final static boolean computeBoolean1367() {
+    private final static boolean computeBoolean1319() {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -181,14 +181,14 @@ final class MixedSupport097 {
             integerState0562 = 0;
             return false;
           }
-          MixedSupport097.performAction1368(integerLocal4, integerLocal1);
+          MixedSupport097.performAction1320(integerLocal4, integerLocal1);
           integerState0566 = integerLocal4;
           integerState0560 = integerLocal1;
           integerLocal2 = integerLocal4;
         }
     }
 
-    private final static void performAction1361(int integerArgument1, int integerArgument2) {
+    private final static void performAction1313(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -222,44 +222,44 @@ final class MixedSupport097 {
         integerArrayState0177[integerLocal2 + 1] = integerLocal4;
         integerArrayState0177[integerLocal2 + 2] = integerLocal5;
         integerArrayState0177[integerLocal2 + 3] = integerLocal6;
-        MixedSupport097.performAction1361(integerArgument1, integerLocal2);
-        MixedSupport097.performAction1361(integerLocal2 + 4, integerArgument2);
+        MixedSupport097.performAction1313(integerArgument1, integerLocal2);
+        MixedSupport097.performAction1313(integerLocal2 + 4, integerArgument2);
     }
 
-    final static void performAction1363(int[] integerArrayArgument1, int integerArgument2) {
-        MixedSupport097.performAction1365(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2);
+    final static void performAction1315(int[] integerArrayArgument1, int integerArgument2) {
+        MixedSupport097.performAction1317(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2);
     }
 
-    private final static void performAction1365(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        MixedSupport097.performAction1370();
-        MixedSupport097.performAction1369(integerArrayArgument1, integerArgument2, integerArgument3);
-        MixedSupport097.performAction1360(integerArgument4);
+    private final static void performAction1317(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        MixedSupport097.performAction1322();
+        MixedSupport097.performAction1321(integerArrayArgument1, integerArgument2, integerArgument3);
+        MixedSupport097.performAction1312(integerArgument4);
     }
 
-    private final static void performAction1360(int integerArgument1) {
+    private final static void performAction1312(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
-        MixedSupport097.performAction1359();
-        while (MixedSupport097.computeBoolean1367()) {
+        MixedSupport097.performAction1311();
+        while (MixedSupport097.computeBoolean1319()) {
           integerLocal1 = integerState0565;
           integerLocal2 = integerState0563;
           integerLocal3 = integerState0561;
-          SoftwareRaster.performAction0718(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1);
+          SoftwareRaster.performAction0698(integerLocal1, integerLocal3, integerLocal2 - integerLocal1, integerArgument1);
         }
     }
 
-    private final static void performAction1366(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int[] integerArrayArgument6, int[] integerArrayArgument7) {
+    private final static void performAction1318(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int[] integerArrayArgument6, int[] integerArrayArgument7) {
         if (integerArrayArgument6 != null &&
           SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280 != integerArrayArgument6.length) {
           throw new IllegalStateException();
         }
-        MixedSupport097.performAction1370();
-        MixedSupport097.performAction1369(integerArrayArgument1, integerArgument2, integerArgument3);
-        MixedSupport097.performAction1362(integerArgument4, integerArgument5, integerArrayArgument6, integerArrayArgument7);
+        MixedSupport097.performAction1322();
+        MixedSupport097.performAction1321(integerArrayArgument1, integerArgument2, integerArgument3);
+        MixedSupport097.performAction1314(integerArgument4, integerArgument5, integerArrayArgument6, integerArrayArgument7);
     }
 
-    private final static void performAction1369(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+    private final static void performAction1321(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
