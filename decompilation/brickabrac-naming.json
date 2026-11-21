@@ -2276,6 +2276,14 @@
       "renamedSymbol": "C:ContextActionController"
     },
     {
+      "symbol": "C:nn$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "CommonTextInitialization",
+      "evidence": "nn$1$CfrPartitionedBody.java: Reviewed local resource initialization carrier and ordered dispatcher, archive/parameter/temporary-byte and caught-exception state. Full key inventories and non-resource/control statements reviewed; original guards and side effects retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ContextActionController$1CommonTextInitialization"
+    },
+    {
       "symbol": "C:no",
       "originalName": "no",
       "to": "CircleBody",
@@ -77484,6 +77492,38 @@
       "renamedSymbol": "M:IntrusiveNode.isLinked(I)Z"
     },
     {
+      "symbol": "M:nn$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginAndLobbyText",
+      "evidence": "nn$1$CfrPartitionedBody.java: Reviewed all 210 resource keys (\"loginm3\" through \"gameopt_unselectedoptions\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadLoginAndLobbyText()V"
+    },
+    {
+      "symbol": "M:nn$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountAndSocialText",
+      "evidence": "nn$1$CfrPartitionedBody.java: Reviewed all 218 resource keys (\"gameopt_pleaseselectoption1\" through \"sse\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadAccountAndSocialText()V"
+    },
+    {
+      "symbol": "M:nn$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMenuAndMultiplayerText",
+      "evidence": "nn$1$CfrPartitionedBody.java: Reviewed all 226 resource keys (\"purejava\" through \"fs_button_cancel\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadMenuAndMultiplayerText()V"
+    },
+    {
+      "symbol": "M:nn$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadMembershipAndDisplayText",
+      "evidence": "nn$1$CfrPartitionedBody.java: Reviewed all 90 resource keys (\"fs_accept_aftercancel\" through \"sentence_separator\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadMembershipAndDisplayText()V"
+    },
+    {
       "symbol": "M:nn.a(B)V",
       "originalName": "a",
       "to": "addReportAction",
@@ -141646,9 +141686,9 @@
     },
     {
       "symbol": "C:nn$1$CfrPartitionedBody",
-      "renamedSymbol": "C:ContextActionController$1$CfrPartitionedBody",
+      "renamedSymbol": "C:ContextActionController$1CommonTextInitialization",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "CommonTextInitialization",
       "declaration": {
         "file": "nn.java",
         "start": 6149,
@@ -166737,7 +166777,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -166748,7 +166788,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -166759,7 +166799,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.param0:Lmf;",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.param0:LResourceArchive;",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.param0:LResourceArchive;",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -166770,7 +166810,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.param1:I",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.param1:I",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.param1:I",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -166781,7 +166821,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.stackIn_2599_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.stackIn_2599_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.stackIn_2599_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2599_0",
       "renamedName": "stackIn_2599_0",
       "declaration": {
@@ -166792,7 +166832,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.stackIn_2599_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.stackIn_2599_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.stackIn_2599_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2599_1",
       "renamedName": "stackIn_2599_1",
       "declaration": {
@@ -166803,7 +166843,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.stackIn_2600_2:Ljava/lang/String;",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.stackIn_2600_2:Ljava/lang/String;",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.stackIn_2600_2:Ljava/lang/String;",
       "originalName": "stackIn_2600_2",
       "renamedName": "stackIn_2600_2",
       "declaration": {
@@ -166814,7 +166854,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -166825,7 +166865,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -166836,7 +166876,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -166847,7 +166887,7 @@
     },
     {
       "symbol": "F:nn$1$CfrPartitionedBody.var4:I",
-      "renamedSymbol": "F:ContextActionController$1$CfrPartitionedBody.var4:I",
+      "renamedSymbol": "F:ContextActionController$1CommonTextInitialization.var4:I",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -294832,7 +294872,7 @@
     },
     {
       "symbol": "L:nn$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:ContextActionController$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:ContextActionController$1CommonTextInitialization.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -389916,9 +389956,9 @@
     },
     {
       "symbol": "M:nn$1$CfrPartitionedBody.<init>(Lmf;I)V",
-      "renamedSymbol": "M:ContextActionController$1$CfrPartitionedBody.<init>(LResourceArchive;I)V",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.<init>(LResourceArchive;I)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "CommonTextInitialization",
       "declaration": {
         "file": "nn.java",
         "start": 6546,
@@ -389927,7 +389967,7 @@
     },
     {
       "symbol": "M:nn$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:ContextActionController$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -389938,9 +389978,9 @@
     },
     {
       "symbol": "M:nn$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:ContextActionController$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadLoginAndLobbyText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginAndLobbyText",
       "declaration": {
         "file": "nn.java",
         "start": 7047,
@@ -389949,9 +389989,9 @@
     },
     {
       "symbol": "M:nn$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:ContextActionController$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadAccountAndSocialText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountAndSocialText",
       "declaration": {
         "file": "nn.java",
         "start": 42808,
@@ -389960,9 +390000,9 @@
     },
     {
       "symbol": "M:nn$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:ContextActionController$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadMenuAndMultiplayerText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMenuAndMultiplayerText",
       "declaration": {
         "file": "nn.java",
         "start": 79090,
@@ -389971,9 +390011,9 @@
     },
     {
       "symbol": "M:nn$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:ContextActionController$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:ContextActionController$1CommonTextInitialization.loadMembershipAndDisplayText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadMembershipAndDisplayText",
       "declaration": {
         "file": "nn.java",
         "start": 115805,
@@ -464122,7 +464162,7 @@
     },
     {
       "symbol": "P:nn$1$CfrPartitionedBody.<init>(Lmf;I)V#0",
-      "renamedSymbol": "P:ContextActionController$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#0",
+      "renamedSymbol": "P:ContextActionController$1CommonTextInitialization.<init>(LResourceArchive;I)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -464133,7 +464173,7 @@
     },
     {
       "symbol": "P:nn$1$CfrPartitionedBody.<init>(Lmf;I)V#1",
-      "renamedSymbol": "P:ContextActionController$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#1",
+      "renamedSymbol": "P:ContextActionController$1CommonTextInitialization.<init>(LResourceArchive;I)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -1021182,7 +1021222,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "cf020c1486e7e0e2522326e2b82df3b4f456142420b70196f457652a231acc59",
+      "outputSha256": "d7970aad8ccdd6a2a56b8821d1f48b430984b99c7ac830f71dabcfbbb05e0f8b",
       "edits": [
         {
           "start": 50,
@@ -1022396,6 +1022436,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 6149,
+          "end": 6168,
+          "symbol": "C:nn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
           "start": 6469,
           "end": 6471,
           "symbol": "C:mf",
@@ -1022403,11 +1022450,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 6546,
+          "end": 6565,
+          "symbol": "M:nn$1$CfrPartitionedBody.<init>(Lmf;I)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
           "start": 6566,
           "end": 6568,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 7047,
+          "end": 7056,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginAndLobbyText"
         },
         {
           "start": 7111,
@@ -1029718,6 +1029779,13 @@
           "renamed": "takeLocalizedTextFile"
         },
         {
+          "start": 42808,
+          "end": 42817,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountAndSocialText"
+        },
+        {
           "start": 42910,
           "end": 42912,
           "symbol": "C:eq",
@@ -1036886,6 +1036954,13 @@
           "renamed": "takeLocalizedTextFile"
         },
         {
+          "start": 79090,
+          "end": 79099,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuAndMultiplayerText"
+        },
+        {
           "start": 79192,
           "end": 79193,
           "symbol": "C:q",
@@ -1043963,6 +1044038,13 @@
           "renamed": "takeLocalizedTextFile"
         },
         {
+          "start": 115805,
+          "end": 115814,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMembershipAndDisplayText"
+        },
+        {
           "start": 115907,
           "end": 115909,
           "symbol": "C:di",
@@ -1047064,6 +1047146,34 @@
           "renamed": "HighscorePackSelector"
         },
         {
+          "start": 131450,
+          "end": 131459,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginAndLobbyText"
+        },
+        {
+          "start": 131521,
+          "end": 131530,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountAndSocialText"
+        },
+        {
+          "start": 131592,
+          "end": 131601,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuAndMultiplayerText"
+        },
+        {
+          "start": 131663,
+          "end": 131672,
+          "symbol": "M:nn$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMembershipAndDisplayText"
+        },
+        {
           "start": 132268,
           "end": 132270,
           "symbol": "C:qb",
@@ -1047090,6 +1047200,20 @@
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "AppletGameShell"
+        },
+        {
+          "start": 132630,
+          "end": 132649,
+          "symbol": "C:nn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
+          "start": 132671,
+          "end": 132690,
+          "symbol": "C:nn$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
         },
         {
           "start": 132760,
@@ -1366349,10 +1366473,10 @@
       "commit": "9159750b0604b9082db8b91fe73a0a0b119c7f22",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "01b458b2d89a9b6a8904af1a4a3d8d81e47cc9546dd7adba4219dd1f23687867",
+    "rulesSha256": "2f2b7bb6c1ee2f1809021c8e7322ba48b034b76543ca299089e0d18850ecf84e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
-    "outputTreeSha256": "0c13c03f31d416e131db8b32ad4d04743c48de7908fe951db5a1fb89cdf7136e",
+    "outputTreeSha256": "ddbf9eb694d910dd5bb03a15ea8ddbceb4188fbfaa563f8db4fae0f2c9c8ebc3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

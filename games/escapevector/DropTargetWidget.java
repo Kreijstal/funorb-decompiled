@@ -73,7 +73,7 @@ final class DropTargetWidget extends SingleChildContainer {
     }
 
     final static void loadFrameworkLocalization(boolean guard, ResourceArchive archive) {
-        class $CfrPartitionedBody {
+        class CommonTextInitialization {
             RuntimeException stackIn_2605_0;
             StringBuilder stackIn_2605_1;
             String stackIn_2606_2;
@@ -85,7 +85,7 @@ final class DropTargetWidget extends SingleChildContainer {
             boolean param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
+            CommonTextInitialization(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2605_0 = null;
@@ -97,7 +97,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginLobbyAndConnectionText() throws java.lang.RuntimeException {
                 LoginCredentialType.languageArchive = param1;
                 var2 = IntKeyLookup.loadLanguageAsset(113, "loginm3");
                 if (var2 != null) {
@@ -1173,7 +1173,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.loadLanguageAsset(114, "connectionlost_withreason");
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountSocialAndLoadingText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   QuickChatPhraseDefinition.field_y = RasterSnapshot.decodeCp1252(var2, 118);
                 }
@@ -2206,7 +2206,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
                 var2 = IntKeyLookup.loadLanguageAsset(53, "mode");
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuMultiplayerAndDisplayText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   RasterSnapshot.decodeCp1252(var2, 121);
                 }
@@ -3087,11 +3087,11 @@ final class DropTargetWidget extends SingleChildContainer {
             void run() {
                 var3 = EscapeVector.obfuscationControl;
                 try {
-                  runChunk0();
+                  loadLoginLobbyAndConnectionText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountSocialAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuMultiplayerAndDisplayText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3111,7 +3111,7 @@ final class DropTargetWidget extends SingleChildContainer {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(guard, archive);
+        CommonTextInitialization decompiledBody = new CommonTextInitialization(guard, archive);
         decompiledBody.run();
     }
 

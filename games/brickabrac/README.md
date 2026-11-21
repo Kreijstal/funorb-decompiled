@@ -2,7 +2,9 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 419 class identities across 420 compiled classes. Every top-level game class has a readable filename, including the original BrickABrac entry point. Unreviewed members retain their unresolved names. Numbered state masks/words identify observed storage without guessing server semantics. Reviewed names have no original-name suffixes; reversal recovers original bytes.
+Resolved declarations: 421/421 classes and 2977/2977 methods have readable names; 335 constructors follow their owning class. Remaining: 0 opaque classes and 0 opaque methods. Numbered state masks/words identify observed storage without guessing server semantics. Fields and locals are outside the class/method naming claim; reversal recovers original bytes.
+
+`ContextActionController.CommonTextInitialization` names four phases over the shared 744-key interface table: login/lobby, account/social, menu/multiplayer and membership/display. Original null guards, table slots, byte-key decoding, discarded results, recursive guard and archive cleanup remain intact.
 
 | Start here | Follow |
 | --- | --- |

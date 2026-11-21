@@ -2,9 +2,11 @@
 
 This is the only published Java tree. Reviewed rules and the reproducer live in dekobloko-work/readable. The current reverse dictionary is ../../decompilation/escapevector-naming.json.
 
-This pass names 347 reviewed classes and 11074 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
+This pass names 348 reviewed classes and 11078 symbols across all 348 sources. Unresolved roles keep their existing names; reviewed names have no opaque suffix.
 
-Coverage: 348/349 class declarations and 2778/2781 methods have readable names; 277 constructors follow their owning class. 1 classes and 3 methods remain opaque. Full naming is incomplete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+Coverage: 349/349 class declarations and 2781/2781 methods have readable names; 277 constructors follow their owning class. 0 classes and 0 methods remain opaque. Full naming is complete. The coverage command exits nonzero until every owned class and method is named; constructors and existing Java callbacks retain their required spellings.
+
+`DropTargetWidget.CommonTextInitialization` names the login/lobby/connection, account/social/loading and menu/multiplayer/display phases of the shared 744-key interface table. Original null guards, array destinations, discarded decodes, guard cleanup and archive lifetime remain unchanged. Fields and locals are outside the complete class/method naming claim.
 
 ## Entry points
 

@@ -253,7 +253,7 @@ final class AuctionListing extends IntrusiveNode {
     }
 
     final static void loadLocalizedText(boolean param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+        class CommonTextInitialization {
             RuntimeException stackIn_2604_0;
             StringBuilder stackIn_2604_1;
             String stackIn_2605_2;
@@ -264,7 +264,7 @@ final class AuctionListing extends IntrusiveNode {
             boolean param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
+            CommonTextInitialization(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2604_0 = null;
@@ -275,7 +275,7 @@ final class AuctionListing extends IntrusiveNode {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndLobbyText() throws java.lang.RuntimeException {
                 DraggableWidget.field_J = param1;
                 var2 = HighScoreQuery.loadNamedResource((byte) -110, "loginm3");
                 if (var2 != null) {
@@ -1138,7 +1138,7 @@ final class AuctionListing extends IntrusiveNode {
                   IntValueNode.field_k = BlackFadeScreen.decodeCp1252Bytes(var2, param0);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountSocialAndLoadingText() throws java.lang.RuntimeException {
                 var2 = HighScoreQuery.loadNamedResource((byte) -74, "gameopt_novalidcombos");
                 if (null != var2) {
                   SpriteButtonPainter.field_t = BlackFadeScreen.decodeCp1252Bytes(var2, true);
@@ -2047,7 +2047,7 @@ final class AuctionListing extends IntrusiveNode {
                   BufferedSocket.field_q = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuMultiplayerAndDisplayText() throws java.lang.RuntimeException {
                 var2 = HighScoreQuery.loadNamedResource((byte) -103, "loading_models");
                 if (var2 != null) {
                   CachedTextLayout.field_d = BlackFadeScreen.decodeCp1252Bytes(var2, true);
@@ -3001,7 +3001,7 @@ final class AuctionListing extends IntrusiveNode {
                   AccountNameCharacterSupport.field_a[0] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndDisplayText() throws java.lang.RuntimeException {
                 var2 = HighScoreQuery.loadNamedResource((byte) -90, "hs_mode_name,1");
                 if (var2 != null) {
                   AccountNameCharacterSupport.field_a[1] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
@@ -3267,13 +3267,13 @@ final class AuctionListing extends IntrusiveNode {
             void run() {
                 var3 = Kickabout.field_G;
                 try {
-                  runChunk0();
+                  loadLoginAndLobbyText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountSocialAndLoadingText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuMultiplayerAndDisplayText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndDisplayText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3293,7 +3293,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        CommonTextInitialization decompiledBody = new CommonTextInitialization(param0, param1);
         decompiledBody.run();
     }
 

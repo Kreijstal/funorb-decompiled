@@ -183,7 +183,7 @@ final class LocalizedTextLoader {
     }
 
     final static void loadLocalizedStrings(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+        class GameTextInitialization {
             RuntimeException stackIn_3808_0;
             StringBuilder stackIn_3808_1;
             String stackIn_3809_2;
@@ -195,7 +195,7 @@ final class LocalizedTextLoader {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            GameTextInitialization(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_3808_0 = null;
@@ -207,7 +207,7 @@ final class LocalizedTextLoader {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadAchievementsAndOptionLabels() throws java.lang.RuntimeException {
                 PlayerStats.field_m = param0;
                 var2 = DateOfBirthPanel.loadNamedResource("returntotournament", param1 ^ -90);
                 if (var2 != null) {
@@ -1050,7 +1050,7 @@ final class LocalizedTextLoader {
                   WorldSpriteSequence.field_e[2][0] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadControlsFormationsAndTrinketText() throws java.lang.RuntimeException {
                 var2 = DateOfBirthPanel.loadNamedResource("gameoptnames,2,1", -120);
                 if (null != var2) {
                   WorldSpriteSequence.field_e[2][1] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
@@ -1928,7 +1928,7 @@ final class LocalizedTextLoader {
                 }
                 var2 = DateOfBirthPanel.loadNamedResource("instructions_headings_gameplay,4", -104);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuMatchAndAuctionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   TextLayout.field_a[4] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
@@ -2841,7 +2841,7 @@ final class LocalizedTextLoader {
                   IsSixCommand.field_G[29] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSquadManagementAndInstructionText() throws java.lang.RuntimeException {
                 var2 = DateOfBirthPanel.loadNamedResource("popup_header,30", -121);
                 if (null != var2) {
                   IsSixCommand.field_G[30] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
@@ -3728,7 +3728,7 @@ final class LocalizedTextLoader {
                 }
                 var2 = DateOfBirthPanel.loadNamedResource("instructions_gamemodes3,0,2", param1 ^ -103);
             }
-            void runChunk4() throws java.lang.RuntimeException {
+            void loadTournamentAndGameModeText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   PlayingView.field_y[0][2] = BlackFadeScreen.decodeCp1252Bytes(var2, true);
                 }
@@ -4529,15 +4529,15 @@ final class LocalizedTextLoader {
             void run() {
                 var3 = Kickabout.field_G;
                 try {
-                  runChunk0();
+                  loadAchievementsAndOptionLabels();
                   if (finished) return;
-                  runChunk1();
+                  loadControlsFormationsAndTrinketText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuMatchAndAuctionText();
                   if (finished) return;
-                  runChunk3();
+                  loadSquadManagementAndInstructionText();
                   if (finished) return;
-                  runChunk4();
+                  loadTournamentAndGameModeText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -4557,7 +4557,7 @@ final class LocalizedTextLoader {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextInitialization decompiledBody = new GameTextInitialization(param0, param1);
         decompiledBody.run();
     }
 

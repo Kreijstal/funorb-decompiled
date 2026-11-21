@@ -2388,6 +2388,14 @@
       "renamedSymbol": "C:DropTargetWidget"
     },
     {
+      "symbol": "C:qa$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "CommonTextInitialization",
+      "evidence": "Reviewed local resource initialization carrier and ordered dispatcher, archive/parameter/temporary-byte and caught-exception state. Full key inventories and non-resource/control statements reviewed; original guards and side effects retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DropTargetWidget$1CommonTextInitialization"
+    },
+    {
       "symbol": "C:qb",
       "originalName": "qb",
       "to": "ButtonListener",
@@ -32338,6 +32346,30 @@
       "evidence": "Reviewed marker-list access and the unrelated length-one/subtype-zero saved-data query writer.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MarkerSlider.maximumValue(I)I"
+    },
+    {
+      "symbol": "M:qa$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginLobbyAndConnectionText",
+      "evidence": "Reviewed all 269 resource keys (\"loginm3\" through \"connectionlost_withreason\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.loadLoginLobbyAndConnectionText()V"
+    },
+    {
+      "symbol": "M:qa$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountSocialAndLoadingText",
+      "evidence": "Reviewed all 257 resource keys (\"passwordverificationrequired\" through \"mode\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.loadAccountSocialAndLoadingText()V"
+    },
+    {
+      "symbol": "M:qa$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMenuMultiplayerAndDisplayText",
+      "evidence": "Reviewed all 218 resource keys (\"quality\" through \"sentence_separator\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.loadMenuMultiplayerAndDisplayText()V"
     },
     {
       "symbol": "M:qa.a(IIIILhm;B)V",
@@ -91888,9 +91920,9 @@
     },
     {
       "symbol": "C:qa$1$CfrPartitionedBody",
-      "renamedSymbol": "C:DropTargetWidget$1$CfrPartitionedBody",
+      "renamedSymbol": "C:DropTargetWidget$1CommonTextInitialization",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "CommonTextInitialization",
       "declaration": {
         "file": "qa.java",
         "start": 2932,
@@ -115593,7 +115625,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -115604,7 +115636,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -115615,7 +115647,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.param0:Z",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.param0:Z",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.param0:Z",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -115626,7 +115658,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.param1:Lmf;",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.param1:LResourceArchive;",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.param1:LResourceArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -115637,7 +115669,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.stackIn_2605_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.stackIn_2605_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.stackIn_2605_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2605_0",
       "renamedName": "stackIn_2605_0",
       "declaration": {
@@ -115648,7 +115680,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.stackIn_2605_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.stackIn_2605_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.stackIn_2605_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2605_1",
       "renamedName": "stackIn_2605_1",
       "declaration": {
@@ -115659,7 +115691,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.stackIn_2606_2:Ljava/lang/String;",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.stackIn_2606_2:Ljava/lang/String;",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.stackIn_2606_2:Ljava/lang/String;",
       "originalName": "stackIn_2606_2",
       "renamedName": "stackIn_2606_2",
       "declaration": {
@@ -115670,7 +115702,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.stackIn_2614_0:Z",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.stackIn_2614_0:Z",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.stackIn_2614_0:Z",
       "originalName": "stackIn_2614_0",
       "renamedName": "stackIn_2614_0",
       "declaration": {
@@ -115681,7 +115713,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -115692,7 +115724,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -115703,7 +115735,7 @@
     },
     {
       "symbol": "F:qa$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:DropTargetWidget$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:DropTargetWidget$1CommonTextInitialization.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -250310,7 +250342,7 @@
     },
     {
       "symbol": "L:qa$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:DropTargetWidget$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:DropTargetWidget$1CommonTextInitialization.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -323636,9 +323668,9 @@
     },
     {
       "symbol": "M:qa$1$CfrPartitionedBody.<init>(ZLmf;)V",
-      "renamedSymbol": "M:DropTargetWidget$1$CfrPartitionedBody.<init>(ZLResourceArchive;)V",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.<init>(ZLResourceArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "CommonTextInitialization",
       "declaration": {
         "file": "qa.java",
         "start": 3347,
@@ -323647,7 +323679,7 @@
     },
     {
       "symbol": "M:qa$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:DropTargetWidget$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -323658,9 +323690,9 @@
     },
     {
       "symbol": "M:qa$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:DropTargetWidget$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.loadLoginLobbyAndConnectionText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginLobbyAndConnectionText",
       "declaration": {
         "file": "qa.java",
         "start": 3866,
@@ -323669,9 +323701,9 @@
     },
     {
       "symbol": "M:qa$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:DropTargetWidget$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.loadAccountSocialAndLoadingText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountSocialAndLoadingText",
       "declaration": {
         "file": "qa.java",
         "start": 42940,
@@ -323680,9 +323712,9 @@
     },
     {
       "symbol": "M:qa$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:DropTargetWidget$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:DropTargetWidget$1CommonTextInitialization.loadMenuMultiplayerAndDisplayText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMenuMultiplayerAndDisplayText",
       "declaration": {
         "file": "qa.java",
         "start": 81415,
@@ -391528,7 +391560,7 @@
     },
     {
       "symbol": "P:qa$1$CfrPartitionedBody.<init>(ZLmf;)V#0",
-      "renamedSymbol": "P:DropTargetWidget$1$CfrPartitionedBody.<init>(ZLResourceArchive;)V#0",
+      "renamedSymbol": "P:DropTargetWidget$1CommonTextInitialization.<init>(ZLResourceArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -391539,7 +391571,7 @@
     },
     {
       "symbol": "P:qa$1$CfrPartitionedBody.<init>(ZLmf;)V#1",
-      "renamedSymbol": "P:DropTargetWidget$1$CfrPartitionedBody.<init>(ZLResourceArchive;)V#1",
+      "renamedSymbol": "P:DropTargetWidget$1CommonTextInitialization.<init>(ZLResourceArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -796547,7 +796579,7 @@
       "original": "qa.java",
       "renamed": "DropTargetWidget.java",
       "inputSha256": "d404963c6e2d0768e0d5a809ac1379a8b9005e17bbebdb29c4f1ccb06594227b",
-      "outputSha256": "d98cc36445b8e0501141e7a6cc60b07d441dfda185b7056b83dd999496fe05c0",
+      "outputSha256": "c46a3f37b0845a599501b29b9d23c1e5e3ecb0a271852524ae87bd9d3a6f45b0",
       "edits": [
         {
           "start": 50,
@@ -797068,6 +797100,13 @@
           "renamed": "archive"
         },
         {
+          "start": 2932,
+          "end": 2951,
+          "symbol": "C:qa$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
           "start": 3294,
           "end": 3296,
           "symbol": "C:mf",
@@ -797075,11 +797114,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 3347,
+          "end": 3366,
+          "symbol": "M:qa$1$CfrPartitionedBody.<init>(ZLmf;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
           "start": 3390,
           "end": 3392,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3866,
+          "end": 3875,
+          "symbol": "M:qa$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndConnectionText"
         },
         {
           "start": 3930,
@@ -804794,6 +804847,13 @@
           "symbol": "M:jn.a(ILjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadLanguageAsset"
+        },
+        {
+          "start": 42940,
+          "end": 42949,
+          "symbol": "M:qa$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountSocialAndLoadingText"
         },
         {
           "start": 43042,
@@ -812797,6 +812857,13 @@
           "renamed": "loadLanguageAsset"
         },
         {
+          "start": 81415,
+          "end": 81424,
+          "symbol": "M:qa$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMultiplayerAndDisplayText"
+        },
+        {
           "start": 81517,
           "end": 81519,
           "symbol": "C:mi",
@@ -819720,6 +819787,27 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 114893,
+          "end": 114902,
+          "symbol": "M:qa$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginLobbyAndConnectionText"
+        },
+        {
+          "start": 114964,
+          "end": 114973,
+          "symbol": "M:qa$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountSocialAndLoadingText"
+        },
+        {
+          "start": 115035,
+          "end": 115044,
+          "symbol": "M:qa$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMultiplayerAndDisplayText"
+        },
+        {
           "start": 115667,
           "end": 115668,
           "symbol": "C:t",
@@ -819746,6 +819834,20 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 115998,
+          "end": 116017,
+          "symbol": "C:qa$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
+          "start": 116039,
+          "end": 116058,
+          "symbol": "C:qa$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
         },
         {
           "start": 116059,
@@ -969488,10 +969590,10 @@
       "commit": "5bf6bf34923dd6ca1094e2e2c652ac9f1e608d35",
       "subdirectory": "games/escapevector"
     },
-    "rulesSha256": "30ea4f6273d5b631f01da7620a3ed8b347060c19e443cd5b64e81f35fedaef7a",
+    "rulesSha256": "dc9aa08c229bfc4e5fc4f8860cc1dcd8675dab906bb53707ba5a83e4891b6e4d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "82b7291a0348217948a2570cdb137b669e6eac075c4ee17a3d81d9ca9e38e18d",
-    "outputTreeSha256": "2cb7493ca9183f6bb7a43b2accf244947f9c06e4f5186c2ddb3e0283040687ec",
+    "outputTreeSha256": "150c25a752fb2d835a1f4cd7874fc52af2bc47d0c47d1c8e7924639b94ef0261",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

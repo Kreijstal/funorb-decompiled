@@ -391,17 +391,17 @@
       "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
       "sources": {
         "files": 420,
-        "sha256": "0c13c03f31d416e131db8b32ad4d04743c48de7908fe951db5a1fb89cdf7136e"
+        "sha256": "ddbf9eb694d910dd5bb03a15ea8ddbceb4188fbfaa563f8db4fae0f2c9c8ebc3"
       },
       "dictionary": {
         "path": "decompilation/brickabrac-naming.json",
-        "sha256": "dab8347a1c61007fdfb6d2e3addf77f83f81af58abb9811964e16b85ed4da0b7"
+        "sha256": "2b20e10d1ab5a12c486a6917b2dcd61329534bcee47b3c9e5a6b2132a257b81f"
       },
       "readingGuide": {
         "path": "games/brickabrac/README.md",
-        "sha256": "01734732b55061a1e417ddc2f5ab3a933daf0fbecf0fd5f86c372490eedc7419"
+        "sha256": "a5aae0e5c04af64ed189466bf08e53cd2e9553529d377a73d9d150b7962c9f81"
       },
-      "rulesSha256": "01b458b2d89a9b6a8904af1a4a3d8d81e47cc9546dd7adba4219dd1f23687867",
+      "rulesSha256": "2f2b7bb6c1ee2f1809021c8e7322ba48b034b76543ca299089e0d18850ecf84e",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7",
         "trackedSourceTarSha256": "34c1e50357f69cafd0c4550a63beeb07a8b56c8c891bdb31e4fc49a652509613"
@@ -6035,17 +6035,17 @@
       "inputTreeSha256": "82b7291a0348217948a2570cdb137b669e6eac075c4ee17a3d81d9ca9e38e18d",
       "sources": {
         "files": 348,
-        "sha256": "2cb7493ca9183f6bb7a43b2accf244947f9c06e4f5186c2ddb3e0283040687ec"
+        "sha256": "150c25a752fb2d835a1f4cd7874fc52af2bc47d0c47d1c8e7924639b94ef0261"
       },
       "dictionary": {
         "path": "decompilation/escapevector-naming.json",
-        "sha256": "a04ee7fc6e3221f2ecde670e3ff0a17e1d84eb9970318cac2e1f940293db38a0"
+        "sha256": "08fc87f67916bf39d07a4108a055325251d53f3ae66541baef340e7535c29a12"
       },
       "readingGuide": {
         "path": "games/escapevector/README.md",
-        "sha256": "f86bc88881057ad9ee882bfff477e21cf9375395d702b574fd2abcd082336f3f"
+        "sha256": "25a6118ac0212bc650d0ece0c864584dbab00adf773465bdf68413b40ee66c57"
       },
-      "rulesSha256": "30ea4f6273d5b631f01da7620a3ed8b347060c19e443cd5b64e81f35fedaef7a",
+      "rulesSha256": "dc9aa08c229bfc4e5fc4f8860cc1dcd8675dab906bb53707ba5a83e4891b6e4d",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       },
@@ -10804,17 +10804,17 @@
       "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
       "sources": {
         "files": 543,
-        "sha256": "6dcff8835c6900ed1a214b9b6d2d06bf35fd5eb89821e4c7aa7f35422c6fbc45"
+        "sha256": "ca41bf9550fd9611250380d724192876571f74aed183dfc5573d85df753ea46a"
       },
       "dictionary": {
         "path": "decompilation/kickabout-naming.json",
-        "sha256": "c4ea882d34d716d87d6b9dc678002872dff971bc7575949e74aa05418d006a66"
+        "sha256": "ff4c43e66ac171b1ad324055e37d5430aea3add1c8cb1c96480e6663f0e52ba4"
       },
       "readingGuide": {
         "path": "games/kickabout/README.md",
-        "sha256": "ca0df83143f3cc61cc12cadeaf906d53b86236b37f9ee3abc98f22345a3136b7"
+        "sha256": "e06197b25e2b8ca565339f1cded182c4bc78bd4bcb9388500aa979a6766e0f08"
       },
-      "rulesSha256": "22a3752ed8edd160f46fcd4053ba7612455fa1be75da10f46b9ed1f24c843eed",
+      "rulesSha256": "94d9956057189fd3529a9acc7eaa54f5a7e4f6d63485db77c68edc08e5379c53",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11843,7 +11843,7 @@
         },
         "publishedSources": {
           "files": 420,
-          "sha256": "0c13c03f31d416e131db8b32ad4d04743c48de7908fe951db5a1fb89cdf7136e"
+          "sha256": "ddbf9eb694d910dd5bb03a15ea8ddbceb4188fbfaa563f8db4fae0f2c9c8ebc3"
         }
       },
       "chess": {
@@ -12328,7 +12328,7 @@
         },
         "publishedSources": {
           "files": 348,
-          "sha256": "2cb7493ca9183f6bb7a43b2accf244947f9c06e4f5186c2ddb3e0283040687ec"
+          "sha256": "150c25a752fb2d835a1f4cd7874fc52af2bc47d0c47d1c8e7924639b94ef0261"
         }
       },
       "fleacircus": {
@@ -12578,7 +12578,7 @@
         },
         "publishedSources": {
           "files": 543,
-          "sha256": "6dcff8835c6900ed1a214b9b6d2d06bf35fd5eb89821e4c7aa7f35422c6fbc45"
+          "sha256": "ca41bf9550fd9611250380d724192876571f74aed183dfc5573d85df753ea46a"
         }
       },
       "lexicominos": {

@@ -166,7 +166,7 @@ final class ContextActionController {
     }
 
     final static void loadLocalizedStrings(ResourceArchive param0, int param1) {
-        class $CfrPartitionedBody {
+        class CommonTextInitialization {
             RuntimeException stackIn_2599_0;
             StringBuilder stackIn_2599_1;
             String stackIn_2600_2;
@@ -178,7 +178,7 @@ final class ContextActionController {
             ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
+            CommonTextInitialization(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2599_0 = null;
@@ -190,7 +190,7 @@ final class ContextActionController {
                 this.var3 = 0;
                 this.var4 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndLobbyText() throws java.lang.RuntimeException {
                 HighscorePackSelector.field_c = param0;
                 var2 = AppletFlowHelpers.takeLocalizedTextFile("loginm3", (byte) 107);
                 if (var2 != null) {
@@ -1030,7 +1030,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.takeLocalizedTextFile("gameopt_unselectedoptions", (byte) 85);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountAndSocialText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   WhirlpoolHasher.field_b = MenuButton.decodeCp1252Bytes(var2, (byte) 78);
                 }
@@ -1904,7 +1904,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.takeLocalizedTextFile("sse", (byte) 2);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuAndMultiplayerText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   MenuButton.decodeCp1252Bytes(var2, (byte) 114);
                 }
@@ -2810,7 +2810,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.takeLocalizedTextFile("fs_button_cancel", (byte) 41);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndDisplayText() throws java.lang.RuntimeException {
                 if (null != var2) {
                   QuickChatSineHelpers.field_c = MenuButton.decodeCp1252Bytes(var2, (byte) 74);
                 }
@@ -3182,13 +3182,13 @@ final class ContextActionController {
             void run() {
                 var3 = BrickABrac.field_J ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginAndLobbyText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountAndSocialText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuAndMultiplayerText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndDisplayText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3209,7 +3209,7 @@ final class ContextActionController {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        CommonTextInitialization decompiledBody = new CommonTextInitialization(param0, param1);
         decompiledBody.run();
     }
 

@@ -500,6 +500,14 @@
       "renamedSymbol": "C:LocalizedTextLoader"
     },
     {
+      "symbol": "C:ad$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "GameTextInitialization",
+      "evidence": "Reviewed local resource initialization carrier and ordered dispatcher, archive/parameter/temporary-byte and caught-exception state. Full key inventories and non-resource/control statements reviewed; original guards and side effects retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LocalizedTextLoader$1GameTextInitialization"
+    },
+    {
       "symbol": "C:ae",
       "originalName": "ae",
       "to": "AccountRegistrationPanel",
@@ -3482,6 +3490,14 @@
       "evidence": "toString prints \"Auction ID: .. Type: .. Index: ..\"; holds a long id, slot index, a value and a PlayerStats (up); read from and written to packets.",
       "confidence": "reviewed",
       "renamedSymbol": "C:AuctionListing"
+    },
+    {
+      "symbol": "C:pt$1$CfrPartitionedBody",
+      "originalName": "$CfrPartitionedBody",
+      "to": "CommonTextInitialization",
+      "evidence": "Reviewed local resource initialization carrier and ordered dispatcher, archive/parameter/temporary-byte and caught-exception state. Full key inventories and non-resource/control statements reviewed; original guards and side effects retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AuctionListing$1CommonTextInitialization"
     },
     {
       "symbol": "C:pu",
@@ -7050,6 +7066,46 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TrinketUnlockNotice.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:ad$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadAchievementsAndOptionLabels",
+      "evidence": "Reviewed all 210 resource keys (\"returntotournament\" through \"gameoptnames,2,0\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadAchievementsAndOptionLabels()V"
+    },
+    {
+      "symbol": "M:ad$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadControlsFormationsAndTrinketText",
+      "evidence": "Reviewed all 219 resource keys (\"gameoptnames,2,1\" through \"instructions_headings_gameplay,4\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadControlsFormationsAndTrinketText()V"
+    },
+    {
+      "symbol": "M:ad$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMenuMatchAndAuctionText",
+      "evidence": "Reviewed all 227 resource keys (\"instructions_headings_gameplay,5\" through \"popup_header,29\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadMenuMatchAndAuctionText()V"
+    },
+    {
+      "symbol": "M:ad$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadSquadManagementAndInstructionText",
+      "evidence": "Reviewed all 222 resource keys (\"popup_header,30\" through \"instructions_gamemodes3,0,2\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadSquadManagementAndInstructionText()V"
+    },
+    {
+      "symbol": "M:ad$1$CfrPartitionedBody.runChunk4()V",
+      "originalName": "runChunk4",
+      "to": "loadTournamentAndGameModeText",
+      "evidence": "Reviewed all 198 resource keys (\"instructions_gamemodes3,0,3\" through \"mouseover_clicktospectate\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadTournamentAndGameModeText()V"
     },
     {
       "symbol": "M:ad.a(I)V",
@@ -27348,6 +27404,38 @@
       "renamedSymbol": "M:LoginCredentials.releaseStatics(I)V"
     },
     {
+      "symbol": "M:pt$1$CfrPartitionedBody.runChunk0()V",
+      "originalName": "runChunk0",
+      "to": "loadLoginAndLobbyText",
+      "evidence": "Reviewed all 215 resource keys (\"loginm3\" through \"gameopt_inviteplayers_or_trychanging2\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadLoginAndLobbyText()V"
+    },
+    {
+      "symbol": "M:pt$1$CfrPartitionedBody.runChunk1()V",
+      "originalName": "runChunk1",
+      "to": "loadAccountSocialAndLoadingText",
+      "evidence": "Reviewed all 226 resource keys (\"gameopt_novalidcombos\" through \"loading_graphics\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadAccountSocialAndLoadingText()V"
+    },
+    {
+      "symbol": "M:pt$1$CfrPartitionedBody.runChunk2()V",
+      "originalName": "runChunk2",
+      "to": "loadMenuMultiplayerAndDisplayText",
+      "evidence": "Reviewed all 238 resource keys (\"loading_models\" through \"hs_mode_name,0\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadMenuMultiplayerAndDisplayText()V"
+    },
+    {
+      "symbol": "M:pt$1$CfrPartitionedBody.runChunk3()V",
+      "originalName": "runChunk3",
+      "to": "loadMembershipAndDisplayText",
+      "evidence": "Reviewed all 65 resource keys (\"hs_mode_name,1\" through \"sentence_separator\") and non-resource/control statements. Shared 744-key table matches Virogrid exactly; Kickabout game table of 1076 keys reviewed as complete integer-index ranges plus all other keys. Preserve array destinations, null gates, discarded decodes, byte-key helpers, guard callbacks/recursion and archive cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadMembershipAndDisplayText()V"
+    },
+    {
       "symbol": "M:pt.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -38220,9 +38308,9 @@
     },
     {
       "symbol": "C:ad$1$CfrPartitionedBody",
-      "renamedSymbol": "C:LocalizedTextLoader$1$CfrPartitionedBody",
+      "renamedSymbol": "C:LocalizedTextLoader$1GameTextInitialization",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "GameTextInitialization",
       "declaration": {
         "file": "ad.java",
         "start": 6191,
@@ -42334,9 +42422,9 @@
     },
     {
       "symbol": "C:pt$1$CfrPartitionedBody",
-      "renamedSymbol": "C:AuctionListing$1$CfrPartitionedBody",
+      "renamedSymbol": "C:AuctionListing$1CommonTextInitialization",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "CommonTextInitialization",
       "declaration": {
         "file": "pt.java",
         "start": 9067,
@@ -44380,7 +44468,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -44391,7 +44479,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -44402,7 +44490,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.param0:Lsj;",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.param0:LResourceArchive;",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.param0:LResourceArchive;",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -44413,7 +44501,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.param1:I",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.param1:I",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.param1:I",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -44424,7 +44512,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.stackIn_3808_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.stackIn_3808_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.stackIn_3808_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_3808_0",
       "renamedName": "stackIn_3808_0",
       "declaration": {
@@ -44435,7 +44523,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.stackIn_3808_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.stackIn_3808_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.stackIn_3808_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_3808_1",
       "renamedName": "stackIn_3808_1",
       "declaration": {
@@ -44446,7 +44534,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.stackIn_3809_2:Ljava/lang/String;",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.stackIn_3809_2:Ljava/lang/String;",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.stackIn_3809_2:Ljava/lang/String;",
       "originalName": "stackIn_3809_2",
       "renamedName": "stackIn_3809_2",
       "declaration": {
@@ -44457,7 +44545,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.stackIn_3817_0:Z",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.stackIn_3817_0:Z",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.stackIn_3817_0:Z",
       "originalName": "stackIn_3817_0",
       "renamedName": "stackIn_3817_0",
       "declaration": {
@@ -44468,7 +44556,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -44479,7 +44567,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -44490,7 +44578,7 @@
     },
     {
       "symbol": "F:ad$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:LocalizedTextLoader$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:LocalizedTextLoader$1GameTextInitialization.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -79745,7 +79833,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.decompiledCaughtException:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.decompiledCaughtException:Ljava/lang/RuntimeException;",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -79756,7 +79844,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.finished:Z",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.finished:Z",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.finished:Z",
       "originalName": "finished",
       "renamedName": "finished",
       "declaration": {
@@ -79767,7 +79855,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.param0:Z",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.param0:Z",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.param0:Z",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -79778,7 +79866,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.param1:Lsj;",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.param1:LResourceArchive;",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.param1:LResourceArchive;",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -79789,7 +79877,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.stackIn_2604_0:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.stackIn_2604_0:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.stackIn_2604_0:Ljava/lang/RuntimeException;",
       "originalName": "stackIn_2604_0",
       "renamedName": "stackIn_2604_0",
       "declaration": {
@@ -79800,7 +79888,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.stackIn_2604_1:Ljava/lang/StringBuilder;",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.stackIn_2604_1:Ljava/lang/StringBuilder;",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.stackIn_2604_1:Ljava/lang/StringBuilder;",
       "originalName": "stackIn_2604_1",
       "renamedName": "stackIn_2604_1",
       "declaration": {
@@ -79811,7 +79899,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.stackIn_2605_2:Ljava/lang/String;",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.stackIn_2605_2:Ljava/lang/String;",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.stackIn_2605_2:Ljava/lang/String;",
       "originalName": "stackIn_2605_2",
       "renamedName": "stackIn_2605_2",
       "declaration": {
@@ -79822,7 +79910,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.var2:[B",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.var2:[B",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.var2:[B",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -79833,7 +79921,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.var2_ref:Ljava/lang/RuntimeException;",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.var2_ref:Ljava/lang/RuntimeException;",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -79844,7 +79932,7 @@
     },
     {
       "symbol": "F:pt$1$CfrPartitionedBody.var3:I",
-      "renamedSymbol": "F:AuctionListing$1$CfrPartitionedBody.var3:I",
+      "renamedSymbol": "F:AuctionListing$1CommonTextInitialization.var3:I",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -98951,7 +99039,7 @@
     },
     {
       "symbol": "L:ad$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:LocalizedTextLoader$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:LocalizedTextLoader$1GameTextInitialization.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -272674,7 +272762,7 @@
     },
     {
       "symbol": "L:pt$1$CfrPartitionedBody.run()V#0",
-      "renamedSymbol": "L:AuctionListing$1$CfrPartitionedBody.run()V#0",
+      "renamedSymbol": "L:AuctionListing$1CommonTextInitialization.run()V#0",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -363699,9 +363787,9 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.<init>(Lsj;I)V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.<init>(LResourceArchive;I)V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.<init>(LResourceArchive;I)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "GameTextInitialization",
       "declaration": {
         "file": "ad.java",
         "start": 6602,
@@ -363710,7 +363798,7 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -363721,9 +363809,9 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadAchievementsAndOptionLabels()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadAchievementsAndOptionLabels",
       "declaration": {
         "file": "ad.java",
         "start": 7117,
@@ -363732,9 +363820,9 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadControlsFormationsAndTrinketText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadControlsFormationsAndTrinketText",
       "declaration": {
         "file": "ad.java",
         "start": 42934,
@@ -363743,9 +363831,9 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadMenuMatchAndAuctionText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMenuMatchAndAuctionText",
       "declaration": {
         "file": "ad.java",
         "start": 79223,
@@ -363754,9 +363842,9 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadSquadManagementAndInstructionText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadSquadManagementAndInstructionText",
       "declaration": {
         "file": "ad.java",
         "start": 116054,
@@ -363765,9 +363853,9 @@
     },
     {
       "symbol": "M:ad$1$CfrPartitionedBody.runChunk4()V",
-      "renamedSymbol": "M:LocalizedTextLoader$1$CfrPartitionedBody.runChunk4()V",
+      "renamedSymbol": "M:LocalizedTextLoader$1GameTextInitialization.loadTournamentAndGameModeText()V",
       "originalName": "runChunk4",
-      "renamedName": "runChunk4",
+      "renamedName": "loadTournamentAndGameModeText",
       "declaration": {
         "file": "ad.java",
         "start": 152524,
@@ -395918,9 +396006,9 @@
     },
     {
       "symbol": "M:pt$1$CfrPartitionedBody.<init>(ZLsj;)V",
-      "renamedSymbol": "M:AuctionListing$1$CfrPartitionedBody.<init>(ZLResourceArchive;)V",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.<init>(ZLResourceArchive;)V",
       "originalName": "$CfrPartitionedBody",
-      "renamedName": "$CfrPartitionedBody",
+      "renamedName": "CommonTextInitialization",
       "declaration": {
         "file": "pt.java",
         "start": 9446,
@@ -395929,7 +396017,7 @@
     },
     {
       "symbol": "M:pt$1$CfrPartitionedBody.run()V",
-      "renamedSymbol": "M:AuctionListing$1$CfrPartitionedBody.run()V",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -395940,9 +396028,9 @@
     },
     {
       "symbol": "M:pt$1$CfrPartitionedBody.runChunk0()V",
-      "renamedSymbol": "M:AuctionListing$1$CfrPartitionedBody.runChunk0()V",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadLoginAndLobbyText()V",
       "originalName": "runChunk0",
-      "renamedName": "runChunk0",
+      "renamedName": "loadLoginAndLobbyText",
       "declaration": {
         "file": "pt.java",
         "start": 9920,
@@ -395951,9 +396039,9 @@
     },
     {
       "symbol": "M:pt$1$CfrPartitionedBody.runChunk1()V",
-      "renamedSymbol": "M:AuctionListing$1$CfrPartitionedBody.runChunk1()V",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadAccountSocialAndLoadingText()V",
       "originalName": "runChunk1",
-      "renamedName": "runChunk1",
+      "renamedName": "loadAccountSocialAndLoadingText",
       "declaration": {
         "file": "pt.java",
         "start": 46020,
@@ -395962,9 +396050,9 @@
     },
     {
       "symbol": "M:pt$1$CfrPartitionedBody.runChunk2()V",
-      "renamedSymbol": "M:AuctionListing$1$CfrPartitionedBody.runChunk2()V",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadMenuMultiplayerAndDisplayText()V",
       "originalName": "runChunk2",
-      "renamedName": "runChunk2",
+      "renamedName": "loadMenuMultiplayerAndDisplayText",
       "declaration": {
         "file": "pt.java",
         "start": 82791,
@@ -395973,9 +396061,9 @@
     },
     {
       "symbol": "M:pt$1$CfrPartitionedBody.runChunk3()V",
-      "renamedSymbol": "M:AuctionListing$1$CfrPartitionedBody.runChunk3()V",
+      "renamedSymbol": "M:AuctionListing$1CommonTextInitialization.loadMembershipAndDisplayText()V",
       "originalName": "runChunk3",
-      "renamedName": "runChunk3",
+      "renamedName": "loadMembershipAndDisplayText",
       "declaration": {
         "file": "pt.java",
         "start": 120180,
@@ -412165,7 +412253,7 @@
     },
     {
       "symbol": "P:ad$1$CfrPartitionedBody.<init>(Lsj;I)V#0",
-      "renamedSymbol": "P:LocalizedTextLoader$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#0",
+      "renamedSymbol": "P:LocalizedTextLoader$1GameTextInitialization.<init>(LResourceArchive;I)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -412176,7 +412264,7 @@
     },
     {
       "symbol": "P:ad$1$CfrPartitionedBody.<init>(Lsj;I)V#1",
-      "renamedSymbol": "P:LocalizedTextLoader$1$CfrPartitionedBody.<init>(LResourceArchive;I)V#1",
+      "renamedSymbol": "P:LocalizedTextLoader$1GameTextInitialization.<init>(LResourceArchive;I)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -485942,7 +486030,7 @@
     },
     {
       "symbol": "P:pt$1$CfrPartitionedBody.<init>(ZLsj;)V#0",
-      "renamedSymbol": "P:AuctionListing$1$CfrPartitionedBody.<init>(ZLResourceArchive;)V#0",
+      "renamedSymbol": "P:AuctionListing$1CommonTextInitialization.<init>(ZLResourceArchive;)V#0",
       "originalName": "initialParam0",
       "renamedName": "initialParam0",
       "declaration": {
@@ -485953,7 +486041,7 @@
     },
     {
       "symbol": "P:pt$1$CfrPartitionedBody.<init>(ZLsj;)V#1",
-      "renamedSymbol": "P:AuctionListing$1$CfrPartitionedBody.<init>(ZLResourceArchive;)V#1",
+      "renamedSymbol": "P:AuctionListing$1CommonTextInitialization.<init>(ZLResourceArchive;)V#1",
       "originalName": "initialParam1",
       "renamedName": "initialParam1",
       "declaration": {
@@ -539330,7 +539418,7 @@
       "original": "ad.java",
       "renamed": "LocalizedTextLoader.java",
       "inputSha256": "43d21d04a32aa0ea339932205adc82e68a0e0916ff659204668f3009d52ca2c6",
-      "outputSha256": "d2dae906a14e1cc6ad2047508dbc091514e4c223b6fc573bdc5f74a4588f7036",
+      "outputSha256": "65f04a330aff94b6e4aecfbc7588383fffdf25dbabf446bf4b9a18877109e692",
       "edits": [
         {
           "start": 50,
@@ -539585,6 +539673,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 6191,
+          "end": 6210,
+          "symbol": "C:ad$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextInitialization"
+        },
+        {
           "start": 6525,
           "end": 6527,
           "symbol": "C:sj",
@@ -539592,11 +539687,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 6602,
+          "end": 6621,
+          "symbol": "M:ad$1$CfrPartitionedBody.<init>(Lsj;I)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextInitialization"
+        },
+        {
           "start": 6622,
           "end": 6624,
           "symbol": "C:sj",
           "original": "sj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 7117,
+          "end": 7126,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadAchievementsAndOptionLabels"
         },
         {
           "start": 7181,
@@ -546954,6 +547063,13 @@
           "symbol": "M:kt.a([BZ)Ljava/lang/String;",
           "original": "a",
           "renamed": "decodeCp1252Bytes"
+        },
+        {
+          "start": 42934,
+          "end": 42943,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadControlsFormationsAndTrinketText"
         },
         {
           "start": 43005,
@@ -554507,6 +554623,13 @@
           "symbol": "M:ib.a(Ljava/lang/String;I)[B",
           "original": "a",
           "renamed": "loadNamedResource"
+        },
+        {
+          "start": 79223,
+          "end": 79232,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMatchAndAuctionText"
         },
         {
           "start": 79325,
@@ -562475,6 +562598,13 @@
           "renamed": "decodeCp1252Bytes"
         },
         {
+          "start": 116054,
+          "end": 116063,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadSquadManagementAndInstructionText"
+        },
+        {
           "start": 116125,
           "end": 116127,
           "symbol": "C:ib",
@@ -570210,6 +570340,13 @@
           "renamed": "loadNamedResource"
         },
         {
+          "start": 152524,
+          "end": 152533,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk4()V",
+          "original": "runChunk4",
+          "renamed": "loadTournamentAndGameModeText"
+        },
+        {
           "start": 152626,
           "end": 152628,
           "symbol": "C:va",
@@ -577126,6 +577263,41 @@
           "renamed": "PlayerStats"
         },
         {
+          "start": 185238,
+          "end": 185247,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadAchievementsAndOptionLabels"
+        },
+        {
+          "start": 185309,
+          "end": 185318,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadControlsFormationsAndTrinketText"
+        },
+        {
+          "start": 185380,
+          "end": 185389,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMatchAndAuctionText"
+        },
+        {
+          "start": 185451,
+          "end": 185460,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadSquadManagementAndInstructionText"
+        },
+        {
+          "start": 185522,
+          "end": 185531,
+          "symbol": "M:ad$1$CfrPartitionedBody.runChunk4()V",
+          "original": "runChunk4",
+          "renamed": "loadTournamentAndGameModeText"
+        },
+        {
           "start": 186127,
           "end": 186129,
           "symbol": "C:nb",
@@ -577152,6 +577324,20 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 186486,
+          "end": 186505,
+          "symbol": "C:ad$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextInitialization"
+        },
+        {
+          "start": 186527,
+          "end": 186546,
+          "symbol": "C:ad$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "GameTextInitialization"
         },
         {
           "start": 186623,
@@ -853927,7 +854113,7 @@
       "original": "pt.java",
       "renamed": "AuctionListing.java",
       "inputSha256": "aa23b0a0b3cbecc5f0fbd969e25a40891e94cd61597ee4c63bfec3a97dcb4755",
-      "outputSha256": "d373cc698400041427bc81cc4af3a115be2d93595f813a0288cd8840ec38f69a",
+      "outputSha256": "0ca7e9e95f7abe7715cd9b77eac00d8bfc1d0ace148568c8e74252928865cd08",
       "edits": [
         {
           "start": 50,
@@ -854658,6 +854844,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 9067,
+          "end": 9086,
+          "symbol": "C:pt$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
           "start": 9393,
           "end": 9395,
           "symbol": "C:sj",
@@ -854665,11 +854858,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 9446,
+          "end": 9465,
+          "symbol": "M:pt$1$CfrPartitionedBody.<init>(ZLsj;)V",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
           "start": 9489,
           "end": 9491,
           "symbol": "C:sj",
           "original": "sj",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 9920,
+          "end": 9929,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginAndLobbyText"
         },
         {
           "start": 9984,
@@ -862141,6 +862348,13 @@
           "renamed": "decodeCp1252Bytes"
         },
         {
+          "start": 46020,
+          "end": 46029,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountSocialAndLoadingText"
+        },
+        {
           "start": 46091,
           "end": 46093,
           "symbol": "C:ni",
@@ -869463,6 +869677,13 @@
           "renamed": "decodeCp1252Bytes"
         },
         {
+          "start": 82791,
+          "end": 82800,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMultiplayerAndDisplayText"
+        },
+        {
           "start": 82862,
           "end": 82864,
           "symbol": "C:ni",
@@ -876673,6 +876894,13 @@
           "renamed": "decodeCp1252Bytes"
         },
         {
+          "start": 120180,
+          "end": 120189,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMembershipAndDisplayText"
+        },
+        {
           "start": 120251,
           "end": 120253,
           "symbol": "C:ni",
@@ -878864,6 +879092,34 @@
           "renamed": "DraggableWidget"
         },
         {
+          "start": 131230,
+          "end": 131239,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk0()V",
+          "original": "runChunk0",
+          "renamed": "loadLoginAndLobbyText"
+        },
+        {
+          "start": 131301,
+          "end": 131310,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk1()V",
+          "original": "runChunk1",
+          "renamed": "loadAccountSocialAndLoadingText"
+        },
+        {
+          "start": 131372,
+          "end": 131381,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk2()V",
+          "original": "runChunk2",
+          "renamed": "loadMenuMultiplayerAndDisplayText"
+        },
+        {
+          "start": 131443,
+          "end": 131452,
+          "symbol": "M:pt$1$CfrPartitionedBody.runChunk3()V",
+          "original": "runChunk3",
+          "renamed": "loadMembershipAndDisplayText"
+        },
+        {
           "start": 132075,
           "end": 132077,
           "symbol": "C:nb",
@@ -878883,6 +879139,20 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 132381,
+          "end": 132400,
+          "symbol": "C:pt$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
+        },
+        {
+          "start": 132422,
+          "end": 132441,
+          "symbol": "C:pt$1$CfrPartitionedBody",
+          "original": "$CfrPartitionedBody",
+          "renamed": "CommonTextInitialization"
         },
         {
           "start": 132510,
@@ -1018305,10 +1018575,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "22a3752ed8edd160f46fcd4053ba7612455fa1be75da10f46b9ed1f24c843eed",
+    "rulesSha256": "94d9956057189fd3529a9acc7eaa54f5a7e4f6d63485db77c68edc08e5379c53",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "6dcff8835c6900ed1a214b9b6d2d06bf35fd5eb89821e4c7aa7f35422c6fbc45",
+    "outputTreeSha256": "ca41bf9550fd9611250380d724192876571f74aed183dfc5573d85df753ea46a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
