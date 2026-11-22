@@ -323,12 +323,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_j != null) {
-            while (this.field_j.field_b == 0) {
+            while (this.field_j.status == 0) {
               TrapSpawner.sleepMillis(0, 1L);
             }
-            if (1 == this.field_j.field_b) {
+            if (1 == this.field_j.status) {
               try {
-                ((Thread) (this.field_j.field_f)).join();
+                ((Thread) (this.field_j.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }

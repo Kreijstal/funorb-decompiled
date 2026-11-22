@@ -1261,7 +1261,7 @@ final class MenuScreen {
             rm.field_g[0] = 5;
           } else if (ol.field_c != 2) {
             if (ol.field_c == 3) {
-              if (pt.field_b.field_q) {
+              if (pt.field_b.privilegedTasksEnabled) {
                 var3_int = ff.a(qk.field_g, SocketConnector.field_c, st.field_b, -3, nh.field_c);
               } else {
                 var3_int = ff.a(qk.field_g, ht.field_h, st.field_b, -3, nh.field_c);

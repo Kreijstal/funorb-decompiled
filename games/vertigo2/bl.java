@@ -138,7 +138,7 @@ final class bl extends l {
             gi.field_n[0] = 5;
           } else if (2 != da.field_j) {
             if (da.field_j == 3) {
-              if (!gi.field_s.field_p) {
+              if (!gi.field_s.privilegedTasksEnabled) {
                 var3_int = dc.a(bc.field_c, ko.field_U, (byte) 110, rn.field_w, mf.field_c);
               } else {
                 var3_int = dc.a(bc.field_c, tk.field_p, (byte) 91, rn.field_w, mf.field_c);

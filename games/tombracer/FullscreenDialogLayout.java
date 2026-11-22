@@ -99,7 +99,7 @@ final class FullscreenDialogLayout {
             SpriteTileOperator.field_w[0] = 5;
           } else if (mq.field_a != 2) {
             if (mq.field_a == 3) {
-              if (ComponentTypeNames.field_c.field_c) {
+              if (ComponentTypeNames.field_c.privilegedTasksEnabled) {
                 var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, IdolItemComponent.field_G, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               } else {
                 var3_int = LegacyRidgedWaterNoise.splitIntoBalancedLines(ConsoleValue.field_c, SwitchState.field_o, rg.field_z, 1, ClientMemoryVertexArray.field_c);

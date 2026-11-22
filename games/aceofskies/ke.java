@@ -23,11 +23,11 @@ final class ke {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           while (true) {
-            SystemTask var3 = param1.a(param2, param0 + 15850);
-            while (var3.field_a == 0) {
+            SystemTask var3 = param1.requestFullscreenExit(param2, param0 + 15850);
+            while (var3.status == 0) {
               IntrusiveNode.a(10L, false);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               IntrusiveNode.a(100L, false);
               continue;
             }

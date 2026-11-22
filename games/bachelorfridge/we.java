@@ -24,19 +24,19 @@ final class we {
         int[] var10 = null;
         var7 = BachelorFridge.field_y;
         try {
-          if (!param1.b(34)) {
+          if (!param1.isFullscreenAvailable(34)) {
             stackIn_4_0 = new lba[]{};
             return stackIn_4_0;
           }
-          var8 = param1.c(-1);
-          while (0 == var8.field_f) {
+          var8 = param1.requestDisplayModes(-1);
+          while (0 == var8.status) {
             gda.a(false, 10L);
           }
-          if (2 == var8.field_f) {
+          if (2 == var8.status) {
             stackIn_10_0 = new lba[]{};
             return stackIn_10_0;
           }
-          var10 = (int[]) (var8.field_e);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new lba[var10.length >> 2];

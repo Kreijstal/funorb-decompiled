@@ -378,7 +378,7 @@ final class ae extends RenderEffect {
                   }
                   var18.field_l[var5] = var6_int;
                   var18.field_i[var5] = var9;
-                  var18.field_f[var5] = param3.a(var15, NodeHashTableIterator.a(var16, 1), 9);
+                  var18.field_f[var5] = param3.requestDeclaredField(var15, NodeHashTableIterator.a(var16, 1), 9);
                 } else if (var6_int == 3 ||
                   var6_int == 4) {
                   String var20 = param1.readNullTerminatedText(-17883);
@@ -407,7 +407,7 @@ final class ae extends RenderEffect {
                     var12[var17] = NodeHashTableIterator.a(var10[var17], 1);
                     var17++;
                   }
-                  var18.field_h[var5] = param3.a(NodeHashTableIterator.a(var20, 1), var12, var21, true);
+                  var18.field_h[var5] = param3.requestDeclaredMethod(NodeHashTableIterator.a(var20, 1), var12, var21, true);
                   var18.field_k[var5] = var22;
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

@@ -47,10 +47,10 @@ final class UrlDownloadRequest implements Runnable {
           if (this.field_c == null) {
             this.field_c = this.field_g.requestUrlStream(this.field_b, 74);
           }
-          if (this.field_c.field_b == 0) {
+          if (this.field_c.status == 0) {
             return false;
           }
-          if (this.field_c.field_b != 1) {
+          if (this.field_c.status != 1) {
             this.field_c = null;
             this.field_f = this.field_f + 1;
             return false;
@@ -60,10 +60,10 @@ final class UrlDownloadRequest implements Runnable {
           if (null == this.field_e) {
             this.field_e = this.field_g.requestSocket(-24818, this.field_b.getHost(), 443);
           }
-          if (this.field_e.field_b == 0) {
+          if (this.field_e.status == 0) {
             return false;
           }
-          if (this.field_e.field_b != 1) {
+          if (this.field_e.status != 1) {
             this.field_f = this.field_f + 1;
             this.field_e = null;
             return false;
@@ -76,10 +76,10 @@ final class UrlDownloadRequest implements Runnable {
           if (param0) {
             this.field_a = (DataInputStream) null;
           }
-          if (this.field_d.field_b == 0) {
+          if (this.field_d.status == 0) {
             return false;
           }
-          if (this.field_d.field_b == 1) {
+          if (this.field_d.status == 1) {
             return false;
           }
           this.finalize();
@@ -88,10 +88,10 @@ final class UrlDownloadRequest implements Runnable {
         }
         try {
           if (0 == this.field_f) {
-            this.field_a = (DataInputStream) (this.field_c.field_f);
+            this.field_a = (DataInputStream) (this.field_c.result);
           }
           if (1 == this.field_f) {
-            var4 = (java.net.Socket) (this.field_e.field_f);
+            var4 = (java.net.Socket) (this.field_e.result);
             var4.setSoTimeout(10000);
             var3 = var4.getOutputStream();
             var3.write(17);
@@ -109,20 +109,20 @@ final class UrlDownloadRequest implements Runnable {
             this.field_d = this.field_g.startThread((Runnable) (this), 425, 5);
           }
           if (!param0) {
-            if (this.field_d.field_b == 0) {
+            if (this.field_d.status == 0) {
               return false;
             }
-            if (this.field_d.field_b != 1) {
+            if (this.field_d.status != 1) {
               this.finalize();
               this.field_f = this.field_f + 1;
             }
             return false;
           }
           this.field_a = (DataInputStream) null;
-          if (this.field_d.field_b == 0) {
+          if (this.field_d.status == 0) {
             return false;
           }
-          if (this.field_d.field_b != 1) {
+          if (this.field_d.status != 1) {
             this.finalize();
             this.field_f = this.field_f + 1;
           }
@@ -134,10 +134,10 @@ final class UrlDownloadRequest implements Runnable {
         if (param0) {
           this.field_a = (DataInputStream) null;
         }
-        if (this.field_d.field_b == 0) {
+        if (this.field_d.status == 0) {
           return false;
         }
-        if (this.field_d.field_b != 1) {
+        if (this.field_d.status != 1) {
           this.finalize();
           this.field_f = this.field_f + 1;
         }
@@ -153,18 +153,18 @@ final class UrlDownloadRequest implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_c) {
-          if (this.field_c.field_f != null) {
+          if (this.field_c.result != null) {
             try {
-              ((DataInputStream) (this.field_c.field_f)).close();
+              ((DataInputStream) (this.field_c.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_c = null;
         }
         if (this.field_e != null) {
-          if (null != this.field_e.field_f) {
+          if (null != this.field_e.result) {
             try {
-              ((java.net.Socket) (this.field_e.field_f)).close();
+              ((java.net.Socket) (this.field_e.result)).close();
             } catch (Exception exception) {
             }
           }

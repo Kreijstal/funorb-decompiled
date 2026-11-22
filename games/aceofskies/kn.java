@@ -10,7 +10,7 @@ final class kn {
         String stackIn_46_2 = null;
         int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (!param0.a((byte) 84)) {
+          if (!param0.isFullscreenAvailable((byte) 84)) {
             return null;
           }
           if (param3 == 0) {
@@ -36,11 +36,11 @@ final class kn {
               return (java.awt.Frame) (stackIn_29_0);
             }
           }
-          SystemTask var11 = param0.a(param1, -83, param4, param2, param3);
-          while (var11.field_a == 0) {
+          SystemTask var11 = param0.requestFullscreenEnter(param1, -83, param4, param2, param3);
+          while (var11.status == 0) {
             IntrusiveNode.a(10L, false);
           }
-          java.awt.Frame var7 = (java.awt.Frame) (var11.field_f);
+          java.awt.Frame var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             Object stackIn_35_0 = null;
             return (java.awt.Frame) (stackIn_35_0);
@@ -49,7 +49,7 @@ final class kn {
             java.awt.Frame stackIn_38_0 = (java.awt.Frame) null;
             return stackIn_38_0;
           }
-          if (var11.field_a != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           ke.a(param5 ^ 30691, param0, var7);

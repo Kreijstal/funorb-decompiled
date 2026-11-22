@@ -50,23 +50,23 @@ abstract class RenderEffect {
         String stackIn_22_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (!param0.a((byte) 84)) {
+          if (!param0.isFullscreenAvailable((byte) 84)) {
             rm[] stackIn_3_0 = new rm[]{};
             return stackIn_3_0;
           }
-          SystemTask var8 = param0.a(param1 ^ 1175069693);
-          while (var8.field_a == 0) {
+          SystemTask var8 = param0.requestDisplayModes(param1 ^ 1175069693);
+          while (var8.status == 0) {
             IntrusiveNode.a(10L, false);
           }
           if (param1 != 1175069442) {
             rm[] stackIn_9_0 = (rm[]) null;
             return stackIn_9_0;
           }
-          if (var8.field_a == 2) {
+          if (var8.status == 2) {
             rm[] stackIn_13_0 = new rm[]{};
             return stackIn_13_0;
           }
-          int[] var10 = (int[]) (var8.field_f);
+          int[] var10 = (int[]) (var8.result);
           int[] var9 = var10;
           int[] var3 = var9;
           rm[] var4 = new rm[var10.length >> 2];

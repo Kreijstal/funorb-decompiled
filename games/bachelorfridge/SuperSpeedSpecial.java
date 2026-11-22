@@ -23,11 +23,11 @@ final class SuperSpeedSpecial extends SpecialOrder {
           }
           for (var2 = 0; var1.field_k > var2; var2++) {
             if (var4.field_i[var2] != null &&
-              var4.field_i[var2].field_f == 0) {
+              var4.field_i[var2].status == 0) {
               return false;
             }
             if (var4.field_j[var2] != null &&
-              0 == var4.field_j[var2].field_f) {
+              0 == var4.field_j[var2].status) {
               return false;
             }
           }

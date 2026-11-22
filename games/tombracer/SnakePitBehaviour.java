@@ -200,11 +200,11 @@ final class SnakePitBehaviour extends Behaviour {
           }
           for (var2 = 0; var1.field_f > var2; var2++) {
             if (null != var4.field_j[var2] &&
-              var4.field_j[var2].field_b == 0) {
+              var4.field_j[var2].status == 0) {
               return false;
             }
             if (null != var4.field_k[var2] &&
-              var4.field_k[var2].field_b == 0) {
+              var4.field_k[var2].status == 0) {
               return false;
             }
           }

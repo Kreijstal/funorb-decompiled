@@ -58,12 +58,12 @@ final class SpiltMilkEvent extends SpecialEvent {
               stackIn_14_2 = null;
               stackIn_14_5 = da.field_b;
             }
-            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var10).toString()), param0 + 23);
-            while (var4.field_f == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var10).toString()), param0 + 23);
+            while (var4.status == 0) {
               gda.a(false, 1L);
             }
-            if (param0 == var4.field_f) {
-              var5 = (DataInputStream) (var4.field_e);
+            if (param0 == var4.status) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

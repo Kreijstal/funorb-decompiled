@@ -1782,15 +1782,15 @@ final class OpenGlRenderer extends GraphicsRenderer {
           }
           try {
             if (bm.field_z == 0) {
-              wu.field_l = cs.field_d.a(2, hi.field_x, RendererManager.field_f);
+              wu.field_l = cs.field_d.requestDirectSocket(2, hi.field_x, RendererManager.field_f);
               bm.field_z = bm.field_z + 1;
             }
             if (bm.field_z == 1) {
-              if (wu.field_l.field_a == 2) {
+              if (wu.field_l.status == 2) {
                 int stackIn_15_0 = tj.a(-112, -1);
                 return stackIn_15_0;
               }
-              if (wu.field_l.field_a == 1) {
+              if (wu.field_l.status == 1) {
                 bm.field_z = bm.field_z + 1;
               }
             }
@@ -1799,7 +1799,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
               return stackIn_20_0;
             }
             if (2 == bm.field_z) {
-              du.field_m = new BufferedSocket((java.net.Socket) (wu.field_l.field_f), cs.field_d);
+              du.field_m = new BufferedSocket((java.net.Socket) (wu.field_l.result), cs.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               tr.a(var2, uk.field_g, SoundCache.field_e, IntKeyLookup.field_b, 0);
               var2.writeByte(-1336879960, 15);

@@ -53,7 +53,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_a) {
-              this.field_a = this.field_e.a(3, 1048576, (Runnable) (this));
+              this.field_a = this.field_e.requestThreadStart(3, 1048576, (Runnable) (this));
             }
             this.notifyAll();
             int var6Lifetime1 = 44 / ((param2 + 35) / 56);
@@ -248,12 +248,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_a) {
-            while (this.field_a.field_a == 0) {
+            while (this.field_a.status == 0) {
               IntrusiveNode.a(1L, false);
             }
-            if (1 == this.field_a.field_a) {
+            if (1 == this.field_a.status) {
               try {
-                ((Thread) (this.field_a.field_f)).join();
+                ((Thread) (this.field_a.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 InterruptedException var2 = (InterruptedException) (Object) decompiledCaughtException;

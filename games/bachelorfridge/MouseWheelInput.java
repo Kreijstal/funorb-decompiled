@@ -31,20 +31,20 @@ abstract class MouseWheelInput {
           }
           try {
             if (param0 == ds.field_m) {
-              BagpipeSpecial.field_p = mh.field_l.a((byte) 120, SnowAnimation.field_A, nj.field_f);
+              BagpipeSpecial.field_p = mh.field_l.requestDirectSocket((byte) 120, SnowAnimation.field_A, nj.field_f);
               ds.field_m = ds.field_m + 1;
             }
             if (ds.field_m == 1) {
-              if (BagpipeSpecial.field_p.field_f == 2) {
+              if (BagpipeSpecial.field_p.status == 2) {
                 stackIn_13_0 = BattleUpdate.a(-1, 1);
                 return stackIn_13_0;
               }
-              if (BagpipeSpecial.field_p.field_f == 1) {
+              if (BagpipeSpecial.field_p.status == 1) {
                 ds.field_m = ds.field_m + 1;
               }
             }
             if (ds.field_m == 2) {
-              RaiseEvent.field_s = new BufferedSocket((java.net.Socket) (BagpipeSpecial.field_p.field_e), mh.field_l);
+              RaiseEvent.field_s = new BufferedSocket((java.net.Socket) (BagpipeSpecial.field_p.result), mh.field_l);
               var2 = new PacketBuffer(13);
               HazmatAnimation.a(var2, uea.field_i, (byte) -103, ma.field_E, ClearTileFlagEffect.field_j);
               var2.writeByte(15, 0);

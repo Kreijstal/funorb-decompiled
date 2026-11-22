@@ -64,18 +64,18 @@ final class JaggrabDownloader implements Runnable {
 
     protected final void finalize() {
         if (this.field_j != null) {
-          if (this.field_j.field_e != null) {
+          if (this.field_j.result != null) {
             try {
-              ((DataInputStream) (this.field_j.field_e)).close();
+              ((DataInputStream) (this.field_j.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_j = null;
         }
         if (null != this.field_g) {
-          if (this.field_g.field_e != null) {
+          if (this.field_g.result != null) {
             try {
-              ((java.net.Socket) (this.field_g.field_e)).close();
+              ((java.net.Socket) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -103,12 +103,12 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_e == 0) {
           if (this.field_j == null) {
-            this.field_j = this.field_d.a(this.field_i, 97);
+            this.field_j = this.field_d.requestUrlStream(this.field_i, 97);
           }
-          if (this.field_j.field_f == 0) {
+          if (this.field_j.status == 0) {
             return false;
           }
-          if (this.field_j.field_f != 1) {
+          if (this.field_j.status != 1) {
             this.field_e = this.field_e + 1;
             this.field_j = null;
             return false;
@@ -116,12 +116,12 @@ final class JaggrabDownloader implements Runnable {
         }
         if (this.field_e == 1) {
           if (this.field_g == null) {
-            this.field_g = this.field_d.a((byte) 122, this.field_i.getHost(), 443);
+            this.field_g = this.field_d.requestDirectSocket((byte) 122, this.field_i.getHost(), 443);
           }
-          if (this.field_g.field_f == 0) {
+          if (this.field_g.status == 0) {
             return false;
           }
-          if (this.field_g.field_f != 1) {
+          if (this.field_g.status != 1) {
             this.field_e = this.field_e + 1;
             this.field_g = null;
             return false;
@@ -130,10 +130,10 @@ final class JaggrabDownloader implements Runnable {
         if (null == this.field_l) {
           try {
             if (this.field_e == 0) {
-              this.field_l = (DataInputStream) (this.field_j.field_e);
+              this.field_l = (DataInputStream) (this.field_j.result);
             }
             if (this.field_e == 1) {
-              var4 = (java.net.Socket) (this.field_g.field_e);
+              var4 = (java.net.Socket) (this.field_g.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -152,15 +152,15 @@ final class JaggrabDownloader implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (this.field_k == null) {
-              this.field_k = this.field_d.a((Runnable) (this), 2, 5);
+              this.field_k = this.field_d.requestThreadStart((Runnable) (this), 2, 5);
             }
             if (param0 <= 119) {
               return true;
             }
-            if (0 == this.field_k.field_f) {
+            if (0 == this.field_k.status) {
               return false;
             }
-            if (this.field_k.field_f == 1) {
+            if (this.field_k.status == 1) {
               return false;
             }
             this.finalize();
@@ -169,15 +169,15 @@ final class JaggrabDownloader implements Runnable {
           }
         }
         if (this.field_k == null) {
-          this.field_k = this.field_d.a((Runnable) (this), 2, 5);
+          this.field_k = this.field_d.requestThreadStart((Runnable) (this), 2, 5);
         }
         if (param0 <= 119) {
           return true;
         }
-        if (0 == this.field_k.field_f) {
+        if (0 == this.field_k.status) {
           return false;
         }
-        if (this.field_k.field_f != 1) {
+        if (this.field_k.status != 1) {
           this.finalize();
           this.field_e = this.field_e + 1;
         }

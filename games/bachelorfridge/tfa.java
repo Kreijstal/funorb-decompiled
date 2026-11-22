@@ -133,7 +133,7 @@ final class tfa extends EventEffect {
             mu.field_l[0] = 5;
           } else if (2 != BoardChangeAnimation.field_j) {
             if (BoardChangeAnimation.field_j == 3) {
-              if (!DiveBomberEvent.field_r.field_k) {
+              if (!DiveBomberEvent.field_r.privilegedTasksEnabled) {
                 var3_int = ut.a(ec.field_a, FullHealEvent.field_s, qca.field_l, jk.field_o, -10);
               } else {
                 var3_int = ut.a(ec.field_a, FullHealEvent.field_s, ej.field_o, jk.field_o, -5);

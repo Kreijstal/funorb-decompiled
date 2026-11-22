@@ -91,7 +91,7 @@ final class cda {
                       var12[var17] = wi.a(var10[var17], 81);
                       var17++;
                     }
-                    var18.field_j[var5] = param2.a(31633, wi.a(var20, -69), var12, var21);
+                    var18.field_j[var5] = param2.requestDeclaredMethod(31633, wi.a(var20, -69), var12, var21);
                     var18.field_f[var5] = var22;
                   }
                 } else {
@@ -103,7 +103,7 @@ final class cda {
                   }
                   var18.field_g[var5] = var6_int;
                   var18.field_m[var5] = var9;
-                  var18.field_i[var5] = param2.a(var15, wi.a(var16, 88), -128);
+                  var18.field_i[var5] = param2.requestDeclaredField(var15, wi.a(var16, 88), -128);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

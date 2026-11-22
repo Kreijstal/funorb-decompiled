@@ -98,18 +98,18 @@ final class sia extends TileEffect {
             var3 = 0;
             for (var4 = 0; var4 < var18.field_k; var4++) {
               if (null != var13.field_i[var4]) {
-                if (2 == var13.field_i[var4].field_f) {
+                if (2 == var13.field_i[var4].status) {
                   var13.field_l[var4] = -5;
                 }
-                if (var13.field_i[var4].field_f == 0) {
+                if (var13.field_i[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (null != var13.field_j[var4]) {
-                if (var13.field_j[var4].field_f == 2) {
+                if (var13.field_j[var4].status == 2) {
                   var13.field_l[var4] = -6;
                 }
-                if (var13.field_j[var4].field_f == 0) {
+                if (var13.field_j[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -126,27 +126,27 @@ final class sia extends TileEffect {
                 try {
                   var6_int = var18.field_g[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var18.field_i[var5].field_e);
+                    var15 = (java.lang.reflect.Field) (var18.field_i[var5].result);
                     var8 = var15.getInt((Object) null);
                     param0.writeByte(0, 0);
                     param0.writeInt(var8, -1615464796);
                   } else {
                     if (1 != var6_int) {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var18.field_i[var5].field_e);
+                        var26 = (java.lang.reflect.Field) (var18.field_i[var5].result);
                         var8 = var26.getModifiers();
                         param0.writeByte(0, 0);
                         param0.writeInt(var8, -1615464796);
                       }
                     } else {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_i[var5].field_e);
+                      var17_ref = (java.lang.reflect.Field) (var18.field_i[var5].result);
                       var19 = var17_ref;
                       var19.setInt((Object) null, var18.field_m[var5]);
                       param0.writeByte(0, 0);
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var18.field_j[var5].field_e);
+                    var28 = (java.lang.reflect.Method) (var18.field_j[var5].result);
                     var25 = var18.field_f[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
@@ -167,7 +167,7 @@ final class sia extends TileEffect {
                     }
                   } else {
                     if (4 == var6_int) {
-                      var27 = (java.lang.reflect.Method) (var18.field_j[var5].field_e);
+                      var27 = (java.lang.reflect.Method) (var18.field_j[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(0, 0);
                       param0.writeInt(var8Lifetime1, -1615464796);

@@ -1546,7 +1546,7 @@ public final class BachelorFridge extends NetworkGameClient {
             waa.a(0, 33);
             DamagePopupAnimation.d((byte) -19);
             uw.g(-128);
-            DiveBomberEvent.field_r.a((java.awt.Component) ((Object) TBomberAnimation.field_y), false, 123);
+            DiveBomberEvent.field_r.requestCursorVisibility((java.awt.Component) ((Object) TBomberAnimation.field_y), false, 123);
             var2_int = 0;
             if (param0 >= -117) {
               return false;
@@ -1686,7 +1686,7 @@ public final class BachelorFridge extends NetworkGameClient {
           var2_int = 89 % ((40 - param0) / 49);
           if (sn.c(63)) {
             if (!SnowAnimation.field_z) {
-              DiveBomberEvent.field_r.a((java.awt.Component) ((Object) TBomberAnimation.field_y), true, 124);
+              DiveBomberEvent.field_r.requestCursorVisibility((java.awt.Component) ((Object) TBomberAnimation.field_y), true, 124);
               SnowAnimation.field_z = true;
             }
             this.l(10);
@@ -1696,7 +1696,7 @@ public final class BachelorFridge extends NetworkGameClient {
           }
           if (ZombiesSpecial.field_r && (sia.field_i != TBomberAnimation.field_y ||
             SnowAnimation.field_z)) {
-            DiveBomberEvent.field_r.a((java.awt.Component) ((Object) TBomberAnimation.field_y), false, 124);
+            DiveBomberEvent.field_r.requestCursorVisibility((java.awt.Component) ((Object) TBomberAnimation.field_y), false, 124);
             sia.field_i = TBomberAnimation.field_y;
             SnowAnimation.field_z = false;
           }

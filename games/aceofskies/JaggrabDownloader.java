@@ -17,18 +17,18 @@ final class JaggrabDownloader implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_f) {
-          if (this.field_f.field_f != null) {
+          if (this.field_f.result != null) {
             try {
-              ((DataInputStream) (this.field_f.field_f)).close();
+              ((DataInputStream) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_f = null;
         }
         if (null != this.field_e) {
-          if (this.field_e.field_f != null) {
+          if (this.field_e.result != null) {
             try {
-              ((java.net.Socket) (this.field_e.field_f)).close();
+              ((java.net.Socket) (this.field_e.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -60,12 +60,12 @@ final class JaggrabDownloader implements Runnable {
         }
         if (0 == this.field_c) {
           if (null == this.field_f) {
-            this.field_f = this.field_d.a((byte) 71, this.field_j);
+            this.field_f = this.field_d.requestUrlStream((byte) 71, this.field_j);
           }
-          if (this.field_f.field_a == 0) {
+          if (this.field_f.status == 0) {
             return false;
           }
-          if (this.field_f.field_a != 1) {
+          if (this.field_f.status != 1) {
             this.field_f = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -74,12 +74,12 @@ final class JaggrabDownloader implements Runnable {
         int var2 = -109 % ((11 - param0) / 36);
         if (this.field_c == 1) {
           if (this.field_e == null) {
-            this.field_e = this.field_d.a(2, this.field_j.getHost(), 443);
+            this.field_e = this.field_d.requestDirectSocket(2, this.field_j.getHost(), 443);
           }
-          if (this.field_e.field_a == 0) {
+          if (this.field_e.status == 0) {
             return false;
           }
-          if (this.field_e.field_a != 1) {
+          if (this.field_e.status != 1) {
             this.field_c = this.field_c + 1;
             this.field_e = null;
             return false;
@@ -87,12 +87,12 @@ final class JaggrabDownloader implements Runnable {
         }
         if (null != this.field_g) {
           if (null == this.field_h) {
-            this.field_h = this.field_d.a(5, 1048576, (Runnable) (this));
+            this.field_h = this.field_d.requestThreadStart(5, 1048576, (Runnable) (this));
           }
-          if (this.field_h.field_a == 0) {
+          if (this.field_h.status == 0) {
             return false;
           }
-          if (this.field_h.field_a == 1) {
+          if (this.field_h.status == 1) {
             return false;
           }
           this.finalize();
@@ -101,10 +101,10 @@ final class JaggrabDownloader implements Runnable {
         }
         try {
           if (this.field_c == 0) {
-            this.field_g = (DataInputStream) (this.field_f.field_f);
+            this.field_g = (DataInputStream) (this.field_f.result);
           }
           if (this.field_c == 1) {
-            java.net.Socket var5 = (java.net.Socket) (this.field_e.field_f);
+            java.net.Socket var5 = (java.net.Socket) (this.field_e.result);
             var5.setSoTimeout(10000);
             OutputStream var4 = var5.getOutputStream();
             var4.write(17);
@@ -119,24 +119,24 @@ final class JaggrabDownloader implements Runnable {
           this.finalize();
           this.field_c = this.field_c + 1;
           if (null == this.field_h) {
-            this.field_h = this.field_d.a(5, 1048576, (Runnable) (this));
+            this.field_h = this.field_d.requestThreadStart(5, 1048576, (Runnable) (this));
           }
-          if (this.field_h.field_a == 0) {
+          if (this.field_h.status == 0) {
             return false;
           }
-          if (this.field_h.field_a != 1) {
+          if (this.field_h.status != 1) {
             this.finalize();
             this.field_c = this.field_c + 1;
           }
           return false;
         }
         if (null == this.field_h) {
-          this.field_h = this.field_d.a(5, 1048576, (Runnable) (this));
+          this.field_h = this.field_d.requestThreadStart(5, 1048576, (Runnable) (this));
         }
-        if (this.field_h.field_a == 0) {
+        if (this.field_h.status == 0) {
           return false;
         }
-        if (this.field_h.field_a != 1) {
+        if (this.field_h.status != 1) {
           this.finalize();
           this.field_c = this.field_c + 1;
         }

@@ -238,14 +238,14 @@ final class DiskCacheWorker implements Runnable {
         this.field_j = false;
         this.field_d = 0;
         try {
-          SystemTask var2 = param0.a(5, 1048576, (Runnable) (this));
-          while (var2.field_a == 0) {
+          SystemTask var2 = param0.requestThreadStart(5, 1048576, (Runnable) (this));
+          while (var2.status == 0) {
             IntrusiveNode.a(10L, false);
           }
-          if (var2.field_a == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_c = (Thread) (var2.field_f);
+          this.field_c = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

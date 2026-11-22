@@ -916,6 +916,54 @@
       "renamedSymbol": "F:TextureOperator.inputs:[LTextureOperator;"
     },
     {
+      "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+      "originalName": "field_a",
+      "to": "workerThread",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.workerThread:Ljava/lang/Thread;"
+    },
+    {
+      "symbol": "F:jj.field_b:Lwk;",
+      "originalName": "field_b",
+      "to": "queueTail",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueTail:LAsyncRequest;"
+    },
+    {
+      "symbol": "F:jj.field_p:Z",
+      "originalName": "field_p",
+      "to": "privilegedTasksEnabled",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.privilegedTasksEnabled:Z"
+    },
+    {
+      "symbol": "F:jj.field_q:Z",
+      "originalName": "field_q",
+      "to": "shutdownRequested",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z"
+    },
+    {
+      "symbol": "F:jj.field_s:Lwk;",
+      "originalName": "field_s",
+      "to": "queueHead",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueHead:LAsyncRequest;"
+    },
+    {
+      "symbol": "F:jj.field_u:Z",
+      "originalName": "field_u",
+      "to": "microsoftJvm",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.microsoftJvm:Z"
+    },
+    {
       "symbol": "F:li.field_a:Lli;",
       "originalName": "field_a",
       "to": "next",
@@ -996,6 +1044,14 @@
       "renamedSymbol": "F:MouseWheelHandler.rotation:I"
     },
     {
+      "symbol": "F:wk.field_a:I",
+      "originalName": "field_a",
+      "to": "requestType",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.requestType:I"
+    },
+    {
       "symbol": "F:wk.field_b:I",
       "originalName": "field_b",
       "to": "status",
@@ -1004,12 +1060,44 @@
       "renamedSymbol": "F:AsyncRequest.status:I"
     },
     {
+      "symbol": "F:wk.field_c:I",
+      "originalName": "field_c",
+      "to": "secondaryIntArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.secondaryIntArgument:I"
+    },
+    {
       "symbol": "F:wk.field_d:Ljava/lang/Object;",
       "originalName": "field_d",
       "to": "result",
       "evidence": "AsyncRequest keeps the volatile result object here.",
       "confidence": "reviewed",
       "renamedSymbol": "F:AsyncRequest.result:Ljava/lang/Object;"
+    },
+    {
+      "symbol": "F:wk.field_e:Lwk;",
+      "originalName": "field_e",
+      "to": "next",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.next:LAsyncRequest;"
+    },
+    {
+      "symbol": "F:wk.field_f:Ljava/lang/Object;",
+      "originalName": "field_f",
+      "to": "objectArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.objectArgument:Ljava/lang/Object;"
+    },
+    {
+      "symbol": "F:wk.field_g:I",
+      "originalName": "field_g",
+      "to": "intArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.intArgument:I"
     },
     {
       "symbol": "M:Vertigo2.a(ILjava/lang/String;II)V",
@@ -1972,6 +2060,14 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
+      "symbol": "M:jj.a(I)Z",
+      "originalName": "a",
+      "to": "isFullscreenAvailable",
+      "evidence": "Int>=-118 clears cache index-file array before privilege test. Then return false if disabled,otherwise check Microsoft/reflected fullscreen-controller nullness. Preserve side effect even when disabled. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.isFullscreenAvailable(I)Z"
+    },
+    {
       "symbol": "M:jj.a(IIIII)Lwk;",
       "originalName": "a",
       "to": "requestEnterFullscreen",
@@ -2018,6 +2114,14 @@
       "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 4 carries the URL.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformTaskDispatcher.requestUrlStream(ILjava/net/URL;)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:jj.a(Z)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Set stop/notifyAll under dispatcher monitor,then true Boolean returns before join and every close. False joins swallowing interruption,data/master/indexes/random.close(0) individually preserving IOException/partial effects. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.shutdown(Z)V"
     },
     {
       "symbol": "M:jj.a(ZLjava/awt/Frame;)Lwk;",
@@ -25417,9 +25521,9 @@
     },
     {
       "symbol": "F:jj.field_a:Ljava/lang/Thread;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_a:Ljava/lang/Thread;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.workerThread:Ljava/lang/Thread;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "workerThread",
       "declaration": {
         "file": "jj.java",
         "start": 661,
@@ -25428,9 +25532,9 @@
     },
     {
       "symbol": "F:jj.field_b:Lwk;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_b:LAsyncRequest;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueTail:LAsyncRequest;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "queueTail",
       "declaration": {
         "file": "jj.java",
         "start": 246,
@@ -25582,9 +25686,9 @@
     },
     {
       "symbol": "F:jj.field_p:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_p:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.privilegedTasksEnabled:Z",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "privilegedTasksEnabled",
       "declaration": {
         "file": "jj.java",
         "start": 195,
@@ -25593,9 +25697,9 @@
     },
     {
       "symbol": "F:jj.field_q:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_q:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z",
       "originalName": "field_q",
-      "renamedName": "field_q",
+      "renamedName": "shutdownRequested",
       "declaration": {
         "file": "jj.java",
         "start": 476,
@@ -25615,9 +25719,9 @@
     },
     {
       "symbol": "F:jj.field_s:Lwk;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_s:LAsyncRequest;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueHead:LAsyncRequest;",
       "originalName": "field_s",
-      "renamedName": "field_s",
+      "renamedName": "queueHead",
       "declaration": {
         "file": "jj.java",
         "start": 343,
@@ -25637,9 +25741,9 @@
     },
     {
       "symbol": "F:jj.field_u:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_u:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.microsoftJvm:Z",
       "originalName": "field_u",
-      "renamedName": "field_u",
+      "renamedName": "microsoftJvm",
       "declaration": {
         "file": "jj.java",
         "start": 303,
@@ -48517,9 +48621,9 @@
     },
     {
       "symbol": "F:wk.field_a:I",
-      "renamedSymbol": "F:AsyncRequest.field_a:I",
+      "renamedSymbol": "F:AsyncRequest.requestType:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "requestType",
       "declaration": {
         "file": "wk.java",
         "start": 137,
@@ -48539,9 +48643,9 @@
     },
     {
       "symbol": "F:wk.field_c:I",
-      "renamedSymbol": "F:AsyncRequest.field_c:I",
+      "renamedSymbol": "F:AsyncRequest.secondaryIntArgument:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "secondaryIntArgument",
       "declaration": {
         "file": "wk.java",
         "start": 84,
@@ -48561,9 +48665,9 @@
     },
     {
       "symbol": "F:wk.field_e:Lwk;",
-      "renamedSymbol": "F:AsyncRequest.field_e:LAsyncRequest;",
+      "renamedSymbol": "F:AsyncRequest.next:LAsyncRequest;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "next",
       "declaration": {
         "file": "wk.java",
         "start": 177,
@@ -48572,9 +48676,9 @@
     },
     {
       "symbol": "F:wk.field_f:Ljava/lang/Object;",
-      "renamedSymbol": "F:AsyncRequest.field_f:Ljava/lang/Object;",
+      "renamedSymbol": "F:AsyncRequest.objectArgument:Ljava/lang/Object;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "objectArgument",
       "declaration": {
         "file": "wk.java",
         "start": 67,
@@ -48583,9 +48687,9 @@
     },
     {
       "symbol": "F:wk.field_g:I",
-      "renamedSymbol": "F:AsyncRequest.field_g:I",
+      "renamedSymbol": "F:AsyncRequest.intArgument:I",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "intArgument",
       "declaration": {
         "file": "wk.java",
         "start": 161,
@@ -144052,7 +144156,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -144063,7 +144167,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144074,7 +144178,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#10",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#10",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#10",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -144085,7 +144189,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#11",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#11",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -144096,7 +144200,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#12",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#12",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -144107,7 +144211,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -144118,7 +144222,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#3",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#3",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#3",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -144129,7 +144233,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#4",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#4",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#4",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -144140,7 +144244,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#5",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#5",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -144151,7 +144255,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#6",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#6",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144162,7 +144266,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#7",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#7",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#7",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -144173,7 +144277,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#8",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#8",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#8",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -144184,7 +144288,7 @@
     },
     {
       "symbol": "L:jj.a(Z)V#9",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)V#9",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(Z)V#9",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -266548,9 +266652,9 @@
     },
     {
       "symbol": "M:jj.a(I)Z",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(I)Z",
+      "renamedSymbol": "M:PlatformTaskDispatcher.isFullscreenAvailable(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isFullscreenAvailable",
       "declaration": {
         "file": "jj.java",
         "start": 4922,
@@ -266636,9 +266740,9 @@
     },
     {
       "symbol": "M:jj.a(Z)V",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Z)V",
+      "renamedSymbol": "M:PlatformTaskDispatcher.shutdown(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "jj.java",
         "start": 17863,
@@ -327092,7 +327196,7 @@
     },
     {
       "symbol": "P:jj.a(I)Z#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I)Z#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.isFullscreenAvailable(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -327378,7 +327482,7 @@
     },
     {
       "symbol": "P:jj.a(Z)V#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Z)V#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.shutdown(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -382460,7 +382564,7 @@
       "original": "an.java",
       "renamed": "an.java",
       "inputSha256": "2324b48e44a0e501946f4bdf51532b7d6bf1e023286f6d2c6b37b32b45ece4ca",
-      "outputSha256": "13322d23236f5fbed67425baabe9806752f21e37d752c90c1161670921812194",
+      "outputSha256": "86ad713af3bada3b2c515a0e689791cebb14fdc29f6bfbdf5ee0f094ec0bd03d",
       "edits": [
         {
           "start": 321,
@@ -382650,6 +382754,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 14632,
+          "end": 14633,
+          "symbol": "M:jj.a(I)Z",
+          "original": "a",
+          "renamed": "isFullscreenAvailable"
         },
         {
           "start": 14787,
@@ -384350,7 +384461,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "b0d7a3c49ee89756b69e14606fe4566fea46390f33821a7f53ce56422f73377f",
-      "outputSha256": "7f099266a4110803942bdec03fcaa51f60cb1f5aa5ad2263acdd068ba3cd6fbd",
+      "outputSha256": "1717c2d27e8f723b1e69627c10572cc147e69b6849c5ca29f0dbe9c837e194e4",
       "edits": [
         {
           "start": 436,
@@ -384386,6 +384497,13 @@
           "symbol": "M:bl.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 4237,
+          "end": 4244,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 10228,
@@ -409159,7 +409277,7 @@
       "original": "jj.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "a96d0fc2720a39fb74cdbbf6d6ef9036818bcc47bb141420e2ba4f8c4fac0917",
-      "outputSha256": "33cd4bde5c8cbd9e7025eb7f8c8d98c4a42f74561864a9d725bd73c23e54fc42",
+      "outputSha256": "b12fa5a86c62388eed677b838fdef5c34a431e889056745944480f9cc0bb35c0",
       "edits": [
         {
           "start": 69,
@@ -409169,11 +409287,32 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 195,
+          "end": 202,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 243,
           "end": 245,
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 246,
+          "end": 253,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 303,
+          "end": 310,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 316,
@@ -409188,6 +409327,20 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 343,
+          "end": 350,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 476,
+          "end": 483,
+          "symbol": "F:jj.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
         },
         {
           "start": 525,
@@ -409209,6 +409362,13 @@
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 661,
+          "end": 668,
+          "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+          "original": "field_a",
+          "renamed": "workerThread"
         },
         {
           "start": 709,
@@ -409300,6 +409460,76 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 3020,
+          "end": 3027,
+          "symbol": "F:wk.field_a:I",
+          "original": "field_a",
+          "renamed": "requestType"
+        },
+        {
+          "start": 3051,
+          "end": 3058,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 3082,
+          "end": 3089,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 3113,
+          "end": 3120,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 3201,
+          "end": 3208,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 3237,
+          "end": 3244,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 3270,
+          "end": 3277,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 3322,
+          "end": 3329,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 3330,
+          "end": 3337,
+          "symbol": "F:wk.field_e:Lwk;",
+          "original": "field_e",
+          "renamed": "next"
+        },
+        {
+          "start": 3363,
+          "end": 3370,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
         },
         {
           "start": 3464,
@@ -409449,6 +409679,13 @@
           "renamed": "requestDeclaredMethod"
         },
         {
+          "start": 4631,
+          "end": 4632,
+          "symbol": "M:jj.a(I)Z",
+          "original": "a",
+          "renamed": "isFullscreenAvailable"
+        },
+        {
           "start": 4668,
           "end": 4669,
           "symbol": "M:jj.a(ILjava/lang/Object;III)Lwk;",
@@ -409477,11 +409714,32 @@
           "renamed": "requestSocketInternal"
         },
         {
+          "start": 4922,
+          "end": 4923,
+          "symbol": "M:jj.a(I)Z",
+          "original": "a",
+          "renamed": "isFullscreenAvailable"
+        },
+        {
           "start": 4994,
           "end": 4996,
           "symbol": "C:bj",
           "original": "bj",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 5034,
+          "end": 5041,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 5096,
+          "end": 5103,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 5240,
@@ -409519,11 +409777,88 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 6532,
+          "end": 6539,
+          "symbol": "F:jj.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 6576,
+          "end": 6583,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6617,
+          "end": 6624,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6649,
+          "end": 6656,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6664,
+          "end": 6671,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6672,
+          "end": 6679,
+          "symbol": "F:wk.field_e:Lwk;",
+          "original": "field_e",
+          "renamed": "next"
+        },
+        {
+          "start": 6716,
+          "end": 6723,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6752,
+          "end": 6759,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 7382,
+          "end": 7389,
+          "symbol": "F:wk.field_a:I",
+          "original": "field_a",
+          "renamed": "requestType"
+        },
+        {
           "start": 7594,
           "end": 7601,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 7670,
+          "end": 7677,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 7686,
+          "end": 7693,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
         },
         {
           "start": 7889,
@@ -409533,11 +409868,46 @@
           "renamed": "result"
         },
         {
+          "start": 7941,
+          "end": 7948,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 8064,
+          "end": 8071,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 8103,
+          "end": 8110,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 8285,
           "end": 8292,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 8476,
+          "end": 8483,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 8515,
+          "end": 8522,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 8697,
@@ -409554,6 +409924,13 @@
           "renamed": "result"
         },
         {
+          "start": 9088,
+          "end": 9095,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 9127,
           "end": 9129,
           "symbol": "C:jj",
@@ -409568,11 +409945,46 @@
           "renamed": "throwUnchecked"
         },
         {
+          "start": 9443,
+          "end": 9450,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9490,
+          "end": 9497,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9520,
+          "end": 9527,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9554,
+          "end": 9561,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
           "start": 9599,
           "end": 9606,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 9757,
+          "end": 9764,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 9799,
@@ -409594,6 +410006,153 @@
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 10298,
+          "end": 10305,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 10523,
+          "end": 10530,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10557,
+          "end": 10564,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10592,
+          "end": 10599,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10625,
+          "end": 10632,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10724,
+          "end": 10731,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10745,
+          "end": 10752,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10779,
+          "end": 10786,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10807,
+          "end": 10814,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10976,
+          "end": 10983,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 11073,
+          "end": 11080,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11124,
+          "end": 11131,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 11169,
+          "end": 11176,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 11612,
+          "end": 11619,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 11714,
+          "end": 11721,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11849,
+          "end": 11856,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 11894,
+          "end": 11901,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 12338,
+          "end": 12345,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 12444,
+          "end": 12451,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 12710,
+          "end": 12717,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 12737,
+          "end": 12744,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
         },
         {
           "start": 12874,
@@ -409622,6 +410181,13 @@
           "symbol": "M:jj.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
           "renamed": "throwUnchecked"
+        },
+        {
+          "start": 13227,
+          "end": 13234,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
         },
         {
           "start": 13400,
@@ -409687,6 +410253,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 14638,
+          "end": 14645,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 14678,
           "end": 14685,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
@@ -409701,6 +410274,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 14838,
+          "end": 14845,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 14878,
           "end": 14885,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
@@ -409708,11 +410288,53 @@
           "renamed": "result"
         },
         {
+          "start": 14993,
+          "end": 15000,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 15068,
+          "end": 15075,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 15477,
           "end": 15484,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 15533,
+          "end": 15540,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 15734,
+          "end": 15741,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 16029,
+          "end": 16036,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 16158,
+          "end": 16165,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
         },
         {
           "start": 16193,
@@ -409727,6 +410349,20 @@
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
           "original": "field_d",
           "renamed": "result"
+        },
+        {
+          "start": 16511,
+          "end": 16518,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 16539,
+          "end": 16546,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
         },
         {
           "start": 16798,
@@ -409748,6 +410384,27 @@
           "symbol": "F:wk.field_b:I",
           "original": "field_b",
           "renamed": "status"
+        },
+        {
+          "start": 17863,
+          "end": 17864,
+          "symbol": "M:jj.a(Z)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 18204,
+          "end": 18211,
+          "symbol": "F:jj.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 18357,
+          "end": 18364,
+          "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+          "original": "field_a",
+          "renamed": "workerThread"
         },
         {
           "start": 18698,
@@ -409792,6 +410449,69 @@
           "renamed": "DisplayModeEnumerator"
         },
         {
+          "start": 20695,
+          "end": 20702,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 20725,
+          "end": 20732,
+          "symbol": "F:jj.field_s:Lwk;",
+          "original": "field_s",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 20754,
+          "end": 20761,
+          "symbol": "F:jj.field_b:Lwk;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 20783,
+          "end": 20790,
+          "symbol": "F:jj.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 20871,
+          "end": 20878,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 21068,
+          "end": 21075,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 21508,
+          "end": 21515,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 23189,
+          "end": 23196,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 23997,
+          "end": 24004,
+          "symbol": "F:jj.field_p:Z",
+          "original": "field_p",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 24037,
           "end": 24039,
           "symbol": "C:bj",
@@ -409827,11 +410547,67 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 24514,
+          "end": 24521,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 24849,
+          "end": 24856,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 24885,
           "end": 24886,
           "symbol": "C:a",
           "original": "a",
           "renamed": "DisplayModeEnumerator"
+        },
+        {
+          "start": 25261,
+          "end": 25268,
+          "symbol": "F:jj.field_u:Z",
+          "original": "field_u",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 25635,
+          "end": 25642,
+          "symbol": "F:jj.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 25665,
+          "end": 25672,
+          "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+          "original": "field_a",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 25719,
+          "end": 25726,
+          "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+          "original": "field_a",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 25757,
+          "end": 25764,
+          "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+          "original": "field_a",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 25795,
+          "end": 25802,
+          "symbol": "F:jj.field_a:Ljava/lang/Thread;",
+          "original": "field_a",
+          "renamed": "workerThread"
         },
         {
           "start": 25954,
@@ -424458,7 +425234,7 @@
       "original": "oc.java",
       "renamed": "oc.java",
       "inputSha256": "29ba59de4a9cb87e6c3bad0aa6c2351816038240b5cfd88a151477a4f000bbf9",
-      "outputSha256": "aae31ed5da660dd008a48fd0cb0dedc50c1129304f68666f2fd16db70960497c",
+      "outputSha256": "b42eb9f3bca0e6d1f28979cd2ac951f10c3266463e50a475d9cbac9f0c871c78",
       "edits": [
         {
           "start": 61,
@@ -424522,6 +425298,13 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 1959,
+          "end": 1960,
+          "symbol": "M:jj.a(I)Z",
+          "original": "a",
+          "renamed": "isFullscreenAvailable"
         },
         {
           "start": 2793,
@@ -424874,7 +425657,7 @@
       "original": "og.java",
       "renamed": "GameApplet.java",
       "inputSha256": "97e5206ade0cd60ca51bc9a28386646b80aacd2c3ef494e6ff28f2ebd318eb4c",
-      "outputSha256": "aee0b6853f3ebb92bff2babef66b1e7a1bfaa4cc105d9ba4bffa26973dccba6e",
+      "outputSha256": "a0ec37a0b4aa3ea62f3ec350b6ce78d02b61614b585c4e370682057c70dcf916",
       "edits": [
         {
           "start": 60,
@@ -425043,6 +425826,13 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 30896,
+          "end": 30897,
+          "symbol": "M:jj.a(Z)V",
+          "original": "a",
+          "renamed": "shutdown"
         },
         {
           "start": 32310,
@@ -448392,7 +449182,7 @@
       "original": "wk.java",
       "renamed": "AsyncRequest.java",
       "inputSha256": "c79dcf61c80597495440cf1231291a7e9405e3752c3d4c7d451263006bc3aa9a",
-      "outputSha256": "c216f482909c0ef72535192398213bae1b1564983c5c9c74185280fa039e3f93",
+      "outputSha256": "7dcaeb0498f6409a1dff9a0a351e2e6a812fc613732afe16e796084254887e28",
       "edits": [
         {
           "start": 51,
@@ -448402,6 +449192,20 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 67,
+          "end": 74,
+          "symbol": "F:wk.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 84,
+          "end": 91,
+          "symbol": "F:wk.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
           "start": 120,
           "end": 127,
           "symbol": "F:wk.field_d:Ljava/lang/Object;",
@@ -448409,11 +449213,32 @@
           "renamed": "result"
         },
         {
+          "start": 137,
+          "end": 144,
+          "symbol": "F:wk.field_a:I",
+          "original": "field_a",
+          "renamed": "requestType"
+        },
+        {
+          "start": 161,
+          "end": 168,
+          "symbol": "F:wk.field_g:I",
+          "original": "field_g",
+          "renamed": "intArgument"
+        },
+        {
           "start": 174,
           "end": 176,
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 177,
+          "end": 184,
+          "symbol": "F:wk.field_e:Lwk;",
+          "original": "field_e",
+          "renamed": "next"
         },
         {
           "start": 210,
@@ -449810,10 +450635,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/vertigo2"
     },
-    "rulesSha256": "0b4118988747740cbd6c809208b7c544980115f4f8bb8b60d1e8d1076bc8aad2",
+    "rulesSha256": "ba40835045b655963583a9476e2f0eadac172d8f7ceb8845cc6f00c5edffe3e8",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
-    "outputTreeSha256": "56a4196b43b5c801b0dfb4e40bb39b68f13dbfd450d27dfed005a49ebcf553c0",
+    "outputTreeSha256": "fad4dc14d212a777e56d761797861edc92ecc643a219794696efc906a4fabafc",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

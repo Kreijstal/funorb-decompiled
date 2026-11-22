@@ -274,13 +274,13 @@ final class DiskCacheWorker implements Runnable {
         this.field_e = false;
         try {
           var2 = param0.startThread((Runnable) (this), 425, 5);
-          while (var2.field_b == 0) {
+          while (var2.status == 0) {
             TrapSpawner.sleepMillis(0, 10L);
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_a = (Thread) (var2.field_f);
+          this.field_a = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "ss.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

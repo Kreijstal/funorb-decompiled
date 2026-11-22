@@ -9940,6 +9940,54 @@
       "renamedSymbol": "F:FixedPointPerlinNoise3D.seed:I"
     },
     {
+      "symbol": "F:fia.field_c:Z",
+      "originalName": "field_c",
+      "to": "privilegedTasksEnabled",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.privilegedTasksEnabled:Z"
+    },
+    {
+      "symbol": "F:fia.field_f:Z",
+      "originalName": "field_f",
+      "to": "shutdownRequested",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z"
+    },
+    {
+      "symbol": "F:fia.field_k:Lnaa;",
+      "originalName": "field_k",
+      "to": "queueTail",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueTail:LAsyncRequest;"
+    },
+    {
+      "symbol": "F:fia.field_l:Lnaa;",
+      "originalName": "field_l",
+      "to": "queueHead",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueHead:LAsyncRequest;"
+    },
+    {
+      "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+      "originalName": "field_m",
+      "to": "workerThread",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.workerThread:Ljava/lang/Thread;"
+    },
+    {
+      "symbol": "F:fia.field_p:Z",
+      "originalName": "field_p",
+      "to": "microsoftJvm",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.microsoftJvm:Z"
+    },
+    {
       "symbol": "F:fja.field_n:[Lqa;",
       "originalName": "field_n",
       "to": "viewports",
@@ -12794,6 +12842,62 @@
       "evidence": "Row held by the single buffer when the capacity is one.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MonochromeRowCache.lastRow:I"
+    },
+    {
+      "symbol": "F:naa.field_a:I",
+      "originalName": "field_a",
+      "to": "requestType",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.requestType:I"
+    },
+    {
+      "symbol": "F:naa.field_b:I",
+      "originalName": "field_b",
+      "to": "status",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.status:I"
+    },
+    {
+      "symbol": "F:naa.field_c:Ljava/lang/Object;",
+      "originalName": "field_c",
+      "to": "objectArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.objectArgument:Ljava/lang/Object;"
+    },
+    {
+      "symbol": "F:naa.field_d:I",
+      "originalName": "field_d",
+      "to": "secondaryIntArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.secondaryIntArgument:I"
+    },
+    {
+      "symbol": "F:naa.field_e:I",
+      "originalName": "field_e",
+      "to": "intArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.intArgument:I"
+    },
+    {
+      "symbol": "F:naa.field_f:Ljava/lang/Object;",
+      "originalName": "field_f",
+      "to": "result",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.result:Ljava/lang/Object;"
+    },
+    {
+      "symbol": "F:naa.field_g:Lnaa;",
+      "originalName": "field_g",
+      "to": "next",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AsyncRequest.next:LAsyncRequest;"
     },
     {
       "symbol": "F:ng.field_h:I",
@@ -111381,9 +111485,9 @@
     },
     {
       "symbol": "F:fia.field_c:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_c:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.privilegedTasksEnabled:Z",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "privilegedTasksEnabled",
       "declaration": {
         "file": "fia.java",
         "start": 135,
@@ -111414,9 +111518,9 @@
     },
     {
       "symbol": "F:fia.field_f:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_f:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "shutdownRequested",
       "declaration": {
         "file": "fia.java",
         "start": 325,
@@ -111469,9 +111573,9 @@
     },
     {
       "symbol": "F:fia.field_k:Lnaa;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_k:LAsyncRequest;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueTail:LAsyncRequest;",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "queueTail",
       "declaration": {
         "file": "fia.java",
         "start": 708,
@@ -111480,9 +111584,9 @@
     },
     {
       "symbol": "F:fia.field_l:Lnaa;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_l:LAsyncRequest;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueHead:LAsyncRequest;",
       "originalName": "field_l",
-      "renamedName": "field_l",
+      "renamedName": "queueHead",
       "declaration": {
         "file": "fia.java",
         "start": 296,
@@ -111491,9 +111595,9 @@
     },
     {
       "symbol": "F:fia.field_m:Ljava/lang/Thread;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_m:Ljava/lang/Thread;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.workerThread:Ljava/lang/Thread;",
       "originalName": "field_m",
-      "renamedName": "field_m",
+      "renamedName": "workerThread",
       "declaration": {
         "file": "fia.java",
         "start": 211,
@@ -111524,9 +111628,9 @@
     },
     {
       "symbol": "F:fia.field_p:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_p:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.microsoftJvm:Z",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "microsoftJvm",
       "declaration": {
         "file": "fia.java",
         "start": 656,
@@ -136769,9 +136873,9 @@
     },
     {
       "symbol": "F:naa.field_a:I",
-      "renamedSymbol": "F:AsyncRequest.field_a:I",
+      "renamedSymbol": "F:AsyncRequest.requestType:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "requestType",
       "declaration": {
         "file": "naa.java",
         "start": 82,
@@ -136780,9 +136884,9 @@
     },
     {
       "symbol": "F:naa.field_b:I",
-      "renamedSymbol": "F:AsyncRequest.field_b:I",
+      "renamedSymbol": "F:AsyncRequest.status:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "status",
       "declaration": {
         "file": "naa.java",
         "start": 212,
@@ -136791,9 +136895,9 @@
     },
     {
       "symbol": "F:naa.field_c:Ljava/lang/Object;",
-      "renamedSymbol": "F:AsyncRequest.field_c:Ljava/lang/Object;",
+      "renamedSymbol": "F:AsyncRequest.objectArgument:Ljava/lang/Object;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "objectArgument",
       "declaration": {
         "file": "naa.java",
         "start": 102,
@@ -136802,9 +136906,9 @@
     },
     {
       "symbol": "F:naa.field_d:I",
-      "renamedSymbol": "F:AsyncRequest.field_d:I",
+      "renamedSymbol": "F:AsyncRequest.secondaryIntArgument:I",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "secondaryIntArgument",
       "declaration": {
         "file": "naa.java",
         "start": 65,
@@ -136813,9 +136917,9 @@
     },
     {
       "symbol": "F:naa.field_e:I",
-      "renamedSymbol": "F:AsyncRequest.field_e:I",
+      "renamedSymbol": "F:AsyncRequest.intArgument:I",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "intArgument",
       "declaration": {
         "file": "naa.java",
         "start": 126,
@@ -136824,9 +136928,9 @@
     },
     {
       "symbol": "F:naa.field_f:Ljava/lang/Object;",
-      "renamedSymbol": "F:AsyncRequest.field_f:Ljava/lang/Object;",
+      "renamedSymbol": "F:AsyncRequest.result:Ljava/lang/Object;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "result",
       "declaration": {
         "file": "naa.java",
         "start": 179,
@@ -136835,9 +136939,9 @@
     },
     {
       "symbol": "F:naa.field_g:Lnaa;",
-      "renamedSymbol": "F:AsyncRequest.field_g:LAsyncRequest;",
+      "renamedSymbol": "F:AsyncRequest.next:LAsyncRequest;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "next",
       "declaration": {
         "file": "naa.java",
         "start": 143,
@@ -960046,7 +960150,7 @@
       "original": "af.java",
       "renamed": "SecondaryNodeHashTable.java",
       "inputSha256": "1741cfdbaed9e2faa04812913953ff7eb695e88ecd2d0cb94638518ceb906712",
-      "outputSha256": "23d3e70bb4a1d4ac30fd83fa23f1c8f2b82fa7eb1158bf73dead0c1efddaf326",
+      "outputSha256": "8f2faf5ea156b81b63a97572272d2a4659fe40470c9530a2abfa20a34c86a3c4",
       "edits": [
         {
           "start": 50,
@@ -960119,6 +960223,13 @@
           "renamed": "requestDisplayModes"
         },
         {
+          "start": 1080,
+          "end": 1087,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 1108,
           "end": 1111,
           "symbol": "C:vja",
@@ -960131,6 +960242,20 @@
           "symbol": "M:vja.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 1159,
+          "end": 1166,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 1284,
+          "end": 1291,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 2267,
@@ -1002931,7 +1003056,7 @@
       "original": "caa.java",
       "renamed": "UrlDownloadRequest.java",
       "inputSha256": "551a6786db7cfd2c95f31ac92c2822c71576cb02230d1bb6594a36ef7e3ee4d8",
-      "outputSha256": "d4d4cc039159b65cb2dfe4afc137645203de90ede9636c0aa7cedbf4b728cbd7",
+      "outputSha256": "65e62d339be32628b77e5b209e1ddddcfc8e8122308d50a31eea463d24b99b30",
       "edits": [
         {
           "start": 69,
@@ -1003088,6 +1003213,20 @@
           "renamed": "requestUrlStream"
         },
         {
+          "start": 1533,
+          "end": 1540,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 1614,
+          "end": 1621,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 1867,
           "end": 1868,
           "symbol": "M:fia.a(ILjava/lang/String;I)Lnaa;",
@@ -1003095,11 +1003234,53 @@
           "renamed": "requestSocket"
         },
         {
+          "start": 1946,
+          "end": 1953,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 2027,
+          "end": 2034,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 2283,
           "end": 2284,
           "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
           "original": "a",
           "renamed": "startThread"
+        },
+        {
+          "start": 2439,
+          "end": 2446,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 2520,
+          "end": 2527,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 2786,
+          "end": 2793,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 2894,
+          "end": 2901,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 3129,
@@ -1003130,11 +1003311,53 @@
           "renamed": "startThread"
         },
         {
+          "start": 3713,
+          "end": 3720,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 3800,
+          "end": 3807,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 4022,
+          "end": 4029,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 4103,
+          "end": 4110,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 4313,
           "end": 4314,
           "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
           "original": "a",
           "renamed": "startThread"
+        },
+        {
+          "start": 4459,
+          "end": 4466,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 4534,
+          "end": 4541,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 4681,
@@ -1003191,6 +1003414,34 @@
           "symbol": "M:qh.e(B)V",
           "original": "e",
           "renamed": "startTutorial"
+        },
+        {
+          "start": 4961,
+          "end": 4968,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 5045,
+          "end": 5052,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 5246,
+          "end": 5253,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 5322,
+          "end": 5329,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 6115,
@@ -1118858,7 +1119109,7 @@
       "original": "fia.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "23eba00e582ca2bf08d8ee9cfc8e5fe4074e75cf84dd2d85ffc39204bf3c9910",
-      "outputSha256": "c00a9dd53ecaa906ebcca533376dc632479d79d57fc37f4c761de88fcb819808",
+      "outputSha256": "81551da17fbb41d576f45ff2b4cf0a05f2cde0c1987efb808cd8a163d2fb2a44",
       "edits": [
         {
           "start": 69,
@@ -1118868,11 +1119119,25 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 135,
+          "end": 142,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 180,
           "end": 182,
           "symbol": "C:ml",
           "original": "ml",
           "renamed": "RandomAccessFileHandle"
+        },
+        {
+          "start": 211,
+          "end": 218,
+          "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+          "original": "field_m",
+          "renamed": "workerThread"
         },
         {
           "start": 266,
@@ -1118887,6 +1119152,20 @@
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 296,
+          "end": 303,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 325,
+          "end": 332,
+          "symbol": "F:fia.field_f:Z",
+          "original": "field_f",
+          "renamed": "shutdownRequested"
         },
         {
           "start": 428,
@@ -1118917,11 +1119196,25 @@
           "renamed": "RandomAccessFileHandle"
         },
         {
+          "start": 656,
+          "end": 663,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 704,
           "end": 707,
           "symbol": "C:naa",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 708,
+          "end": 715,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
         },
         {
           "start": 763,
@@ -1118973,6 +1119266,69 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 2092,
+          "end": 2099,
+          "symbol": "F:fia.field_f:Z",
+          "original": "field_f",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 2128,
+          "end": 2135,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 2177,
+          "end": 2184,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 2209,
+          "end": 2216,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 2224,
+          "end": 2231,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 2232,
+          "end": 2239,
+          "symbol": "F:naa.field_g:Lnaa;",
+          "original": "field_g",
+          "renamed": "next"
+        },
+        {
+          "start": 2276,
+          "end": 2283,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 2312,
+          "end": 2319,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 2942,
+          "end": 2949,
+          "symbol": "F:naa.field_a:I",
+          "original": "field_a",
+          "renamed": "requestType"
+        },
+        {
           "start": 3037,
           "end": 3040,
           "symbol": "C:bva",
@@ -1118985,6 +1119341,27 @@
           "symbol": "M:bva.b(B)J",
           "original": "b",
           "renamed": "currentTimeMillis"
+        },
+        {
+          "start": 3163,
+          "end": 3170,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 3239,
+          "end": 3246,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 3255,
+          "end": 3262,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
         },
         {
           "start": 3353,
@@ -1119008,6 +1119385,13 @@
           "renamed": "ProxyResponseException"
         },
         {
+          "start": 3548,
+          "end": 3555,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
           "start": 3558,
           "end": 3560,
           "symbol": "C:hg",
@@ -1119020,6 +1119404,20 @@
           "symbol": "M:hg.a(Ljava/lang/String;IZ)Lbe;",
           "original": "a",
           "renamed": "createProxyConnector"
+        },
+        {
+          "start": 3578,
+          "end": 3585,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 3593,
+          "end": 3600,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
         },
         {
           "start": 3609,
@@ -1119043,6 +1119441,69 @@
           "renamed": "ProxyResponseException"
         },
         {
+          "start": 3862,
+          "end": 3869,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 4064,
+          "end": 4071,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 4196,
+          "end": 4203,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 4231,
+          "end": 4238,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 4346,
+          "end": 4353,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 4385,
+          "end": 4392,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 4567,
+          "end": 4574,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 4761,
+          "end": 4768,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 5059,
+          "end": 5066,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 5098,
           "end": 5101,
           "symbol": "C:fia",
@@ -1119057,12 +1119518,33 @@
           "renamed": "rethrowUnchecked"
         },
         {
+          "start": 5283,
+          "end": 5290,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 5325,
+          "end": 5332,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
           "start": 5350,
           "end": 5352,
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "AwtFullscreenController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 5495,
+          "end": 5502,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 5518,
@@ -1119086,6 +1119568,48 @@
           "renamed": "openPreferencesFile"
         },
         {
+          "start": 5694,
+          "end": 5701,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 5743,
+          "end": 5750,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 5890,
+          "end": 5897,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 5987,
+          "end": 5994,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 6034,
+          "end": 6041,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 6078,
+          "end": 6085,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 6130,
           "end": 6131,
           "symbol": "M:qj.a(III)V",
@@ -1119099,6 +1119623,34 @@
           "original": "kfa",
           "renamed": "CursorController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 6506,
+          "end": 6513,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 6608,
+          "end": 6615,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 6743,
+          "end": 6750,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 6789,
+          "end": 6796,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 6843,
@@ -1119116,12 +1119668,40 @@
           "renamed": "setCursorVisible"
         },
         {
+          "start": 7232,
+          "end": 7239,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 7338,
+          "end": 7345,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 7389,
           "end": 7392,
           "symbol": "C:kfa",
           "original": "kfa",
           "renamed": "CursorController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 7605,
+          "end": 7612,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 7632,
+          "end": 7639,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
         },
         {
           "start": 7769,
@@ -1119152,6 +1119732,13 @@
           "renamed": "rethrowUnchecked"
         },
         {
+          "start": 8124,
+          "end": 8131,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 8297,
           "end": 8300,
           "symbol": "C:fia",
@@ -1119178,6 +1119765,20 @@
           "symbol": "M:fia.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
           "original": "$cfr$sneakyThrow",
           "renamed": "rethrowUnchecked"
+        },
+        {
+          "start": 8963,
+          "end": 8970,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 9269,
+          "end": 9276,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 9324,
@@ -1119208,6 +1119809,27 @@
           "renamed": "openPreferencesFile"
         },
         {
+          "start": 9565,
+          "end": 9572,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 9609,
+          "end": 9616,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 9725,
+          "end": 9732,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 9777,
           "end": 9779,
           "symbol": "C:pj",
@@ -1119223,11 +1119845,60 @@
           "renamed": "exitFullscreen"
         },
         {
+          "start": 9950,
+          "end": 9957,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 10163,
+          "end": 10170,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 10264,
+          "end": 10271,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 10314,
           "end": 10315,
           "symbol": "M:sp.a(Ljava/awt/Frame;IIIIZ)V",
           "original": "a",
           "renamed": "enterFullscreen"
+        },
+        {
+          "start": 10328,
+          "end": 10335,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10349,
+          "end": 10356,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10369,
+          "end": 10376,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10391,
+          "end": 10398,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
         },
         {
           "start": 10489,
@@ -1119236,6 +1119907,34 @@
           "original": "pj",
           "renamed": "AwtFullscreenController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 10662,
+          "end": 10669,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10704,
+          "end": 10711,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10731,
+          "end": 10738,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 10764,
+          "end": 10771,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
         },
         {
           "start": 10900,
@@ -1119252,6 +1119951,20 @@
           "renamed": "currentTimeMillis"
         },
         {
+          "start": 11038,
+          "end": 11045,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 11094,
+          "end": 11101,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 11207,
           "end": 11210,
           "symbol": "C:bva",
@@ -1119266,6 +1119979,69 @@
           "renamed": "currentTimeMillis"
         },
         {
+          "start": 11360,
+          "end": 11367,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11401,
+          "end": 11408,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11431,
+          "end": 11438,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11471,
+          "end": 11478,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11510,
+          "end": 11517,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 11792,
+          "end": 11799,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 11933,
+          "end": 11940,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 11972,
+          "end": 11979,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 12153,
+          "end": 12160,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
           "start": 12330,
           "end": 12333,
           "symbol": "C:bva",
@@ -1119278,6 +1120054,34 @@
           "symbol": "M:bva.b(B)J",
           "original": "b",
           "renamed": "currentTimeMillis"
+        },
+        {
+          "start": 12446,
+          "end": 12453,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 12498,
+          "end": 12505,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 12603,
+          "end": 12610,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 13077,
+          "end": 13084,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 13488,
@@ -1119406,6 +1120210,20 @@
           "renamed": "isFullscreenAvailable"
         },
         {
+          "start": 14679,
+          "end": 14686,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 14832,
+          "end": 14839,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 14981,
           "end": 14982,
           "symbol": "M:fia.b(B)V",
@@ -1119413,11 +1120231,25 @@
           "renamed": "shutdown"
         },
         {
+          "start": 15357,
+          "end": 15364,
+          "symbol": "F:fia.field_f:Z",
+          "original": "field_f",
+          "renamed": "shutdownRequested"
+        },
+        {
           "start": 15504,
           "end": 15505,
           "symbol": "M:fia.a(Ljava/awt/Frame;I)Lnaa;",
           "original": "a",
           "renamed": "requestExitFullscreen"
+        },
+        {
+          "start": 15579,
+          "end": 15586,
+          "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+          "original": "field_m",
+          "renamed": "workerThread"
         },
         {
           "start": 15920,
@@ -1119581,6 +1120413,76 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 20089,
+          "end": 20096,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 20120,
+          "end": 20127,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 20151,
+          "end": 20158,
+          "symbol": "F:naa.field_a:I",
+          "original": "field_a",
+          "renamed": "requestType"
+        },
+        {
+          "start": 20182,
+          "end": 20189,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 20278,
+          "end": 20285,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 20306,
+          "end": 20313,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 20314,
+          "end": 20321,
+          "symbol": "F:naa.field_g:Lnaa;",
+          "original": "field_g",
+          "renamed": "next"
+        },
+        {
+          "start": 20347,
+          "end": 20354,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 20399,
+          "end": 20406,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 20432,
+          "end": 20439,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
+        },
+        {
           "start": 20533,
           "end": 20536,
           "symbol": "C:naa",
@@ -1119714,11 +1120616,74 @@
           "renamed": "MicrosoftDisplayController"
         },
         {
+          "start": 22503,
+          "end": 22510,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 22562,
+          "end": 22569,
+          "symbol": "F:fia.field_l:Lnaa;",
+          "original": "field_l",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 22620,
+          "end": 22627,
+          "symbol": "F:fia.field_f:Z",
+          "original": "field_f",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 22650,
+          "end": 22657,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 22680,
+          "end": 22687,
+          "symbol": "F:fia.field_k:Lnaa;",
+          "original": "field_k",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 22876,
+          "end": 22883,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 23316,
+          "end": 23323,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 24997,
+          "end": 25004,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 25755,
           "end": 25756,
           "symbol": "M:iba.a(IILjava/lang/String;)V",
           "original": "a",
           "renamed": "initCacheDirectory"
+        },
+        {
+          "start": 25798,
+          "end": 25805,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 25838,
@@ -1119784,12 +1120749,26 @@
           "renamed": "resolveDefaultCacheFile"
         },
         {
+          "start": 26339,
+          "end": 26346,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 26397,
           "end": 26400,
           "symbol": "C:nva",
           "original": "nva",
           "renamed": "DirectSoundBufferState",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 26676,
+          "end": 26683,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 26731,
@@ -1119807,6 +1120786,13 @@
           "renamed": "MicrosoftDisplayController"
         },
         {
+          "start": 27090,
+          "end": 27097,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 27145,
           "end": 27148,
           "symbol": "C:kfa",
@@ -1119820,6 +1120806,55 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "MicrosoftCursorController"
+        },
+        {
+          "start": 27469,
+          "end": 27476,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 27496,
+          "end": 27503,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 28067,
+          "end": 28074,
+          "symbol": "F:fia.field_f:Z",
+          "original": "field_f",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 28097,
+          "end": 28104,
+          "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+          "original": "field_m",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 28151,
+          "end": 28158,
+          "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+          "original": "field_m",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 28189,
+          "end": 28196,
+          "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+          "original": "field_m",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 28227,
+          "end": 28234,
+          "symbol": "F:fia.field_m:Ljava/lang/Thread;",
+          "original": "field_m",
+          "renamed": "workerThread"
         },
         {
           "start": 28386,
@@ -1196404,7 +1197439,7 @@
       "original": "hk.java",
       "renamed": "HardwareWaterTextures.java",
       "inputSha256": "35b0696c0f81ae178698f15596ab655ebbc2da2f8dd83ccce0968cd9f028dd2c",
-      "outputSha256": "19e99be37c6fcbaede53b6822a93e045d474f45d8cdc3c9efd41b41ecb8291f3",
+      "outputSha256": "5f55b9e65436babe57f27630a9e81763154b7bef31d2eb5bd9870119090063cb",
       "edits": [
         {
           "start": 69,
@@ -1196582,6 +1197617,34 @@
           "renamed": "first"
         },
         {
+          "start": 5243,
+          "end": 5250,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 5356,
+          "end": 5363,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 5523,
+          "end": 5530,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 5641,
+          "end": 5648,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 5824,
           "end": 5831,
           "symbol": "F:uia.field_h:I",
@@ -1196594,6 +1197657,13 @@
           "symbol": "M:uia.a(IB)V",
           "original": "a",
           "renamed": "writeInt"
+        },
+        {
+          "start": 6173,
+          "end": 6180,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 6266,
@@ -1196610,6 +1197680,13 @@
           "renamed": "writeInt"
         },
         {
+          "start": 6513,
+          "end": 6520,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
           "start": 6607,
           "end": 6608,
           "symbol": "M:uia.i(II)V",
@@ -1196624,11 +1197701,25 @@
           "renamed": "writeInt"
         },
         {
+          "start": 6802,
+          "end": 6809,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
           "start": 6954,
           "end": 6955,
           "symbol": "M:uia.i(II)V",
           "original": "i",
           "renamed": "writeByte"
+        },
+        {
+          "start": 7120,
+          "end": 7127,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 7650,
@@ -1196671,6 +1197762,13 @@
           "symbol": "M:uia.a(Ljava/lang/String;Z)V",
           "original": "a",
           "renamed": "writeString"
+        },
+        {
+          "start": 8222,
+          "end": 8229,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 8321,
@@ -1269423,7 +1270521,7 @@
       "original": "jna.java",
       "renamed": "GameApplet.java",
       "inputSha256": "f748ae7b51f46ec3c85b102173baa34fc90ecfd0321134051736f2ddbbf6231a",
-      "outputSha256": "a53cc644d59dc2a826b8656826c8e8cc60f038c646d7f62625d987e589fdaa9c",
+      "outputSha256": "65e3e6d23a7e5dfd7509e9335c7d33bbd48dfe43290618770ece9f9d0ecbb973",
       "edits": [
         {
           "start": 60,
@@ -1270992,6 +1272090,13 @@
           "symbol": "M:fia.a(Ljava/lang/Runnable;II)Lnaa;",
           "original": "a",
           "renamed": "startThread"
+        },
+        {
+          "start": 29957,
+          "end": 29964,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 29991,
@@ -1273485,7 +1274590,7 @@
       "original": "joa.java",
       "renamed": "GzipInflater.java",
       "inputSha256": "ba691bbb3b9a239b53f9c9f22f23a8e20648c1c9b7395d4f40b6e13bc896057a",
-      "outputSha256": "32968a007e859d65a9d3322cc5faad7cb648ba6a4c89ce31499b4c79bf89ecf2",
+      "outputSha256": "2597b89a6c4e28b1062a4023b53204a7b8dc40106f577b06364bf1042b17b0f9",
       "edits": [
         {
           "start": 89,
@@ -1273726,6 +1274831,13 @@
           "renamed": "Room"
         },
         {
+          "start": 5264,
+          "end": 5271,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 5335,
           "end": 5338,
           "symbol": "C:bva",
@@ -1273761,6 +1274873,13 @@
           "renamed": "Room"
         },
         {
+          "start": 5449,
+          "end": 5456,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 5477,
           "end": 5479,
           "symbol": "C:km",
@@ -1273794,6 +1274913,13 @@
           "symbol": "C:la",
           "original": "la",
           "renamed": "Room"
+        },
+        {
+          "start": 5605,
+          "end": 5612,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 5615,
@@ -1275092,7 +1276218,7 @@
       "original": "jqa.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "ccad26b577ed2d8013ad1b5b2047055fe460027fc39d097ef9f7e64db5a967b1",
-      "outputSha256": "7bc13d94adaa0b4cbc3cd858c502989dfabf58174aa5bd0a5d29a7ab489ef78f",
+      "outputSha256": "445dbe021496bb62d16de47b954a71ee051b5aeaacfdf733a14a6585b1bb2592",
       "edits": [
         {
           "start": 89,
@@ -1275368,6 +1276494,13 @@
           "renamed": "close"
         },
         {
+          "start": 11629,
+          "end": 11636,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 11659,
           "end": 11662,
           "symbol": "C:vja",
@@ -1275380,6 +1276513,20 @@
           "symbol": "M:vja.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 11721,
+          "end": 11728,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 11792,
+          "end": 11799,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 12308,
@@ -1290361,7 +1291508,7 @@
       "original": "kha.java",
       "renamed": "TextLineLayout.java",
       "inputSha256": "e0c272c2e72ec77bc47af3d32d5704e114fb03977af4f05b6ae514b925950a13",
-      "outputSha256": "46dbcd1f2ca5c6a21e5417e76f55d2600efc3da2350c5fef2b511c3001331197",
+      "outputSha256": "da52cea34c3b7e98f2646c2eb3b11e0f39caf5c85f3481903c77cd4a19cbd80c",
       "edits": [
         {
           "start": 50,
@@ -1290441,6 +1291588,13 @@
           "renamed": "requestEnterFullscreen"
         },
         {
+          "start": 3090,
+          "end": 3097,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 3118,
           "end": 3121,
           "symbol": "C:vja",
@@ -1290453,6 +1291607,20 @@
           "symbol": "M:vja.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 3186,
+          "end": 3193,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 3468,
+          "end": 3475,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 3572,
@@ -1359382,7 +1360550,7 @@
       "original": "naa.java",
       "renamed": "AsyncRequest.java",
       "inputSha256": "ff21ad6387280cf3bbac35093eff8cd4bfee615114854370d01d940f6702a0f2",
-      "outputSha256": "ede1d5cc0fd92d464e5409cfb6af35b5f71db653736762d46ca6ee43c5683b05",
+      "outputSha256": "30185a51ed1d75635565bca6e57cb8065336f6457f6f62726a3d115ee629a6b2",
       "edits": [
         {
           "start": 51,
@@ -1359392,6 +1360560,34 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 65,
+          "end": 72,
+          "symbol": "F:naa.field_d:I",
+          "original": "field_d",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 82,
+          "end": 89,
+          "symbol": "F:naa.field_a:I",
+          "original": "field_a",
+          "renamed": "requestType"
+        },
+        {
+          "start": 102,
+          "end": 109,
+          "symbol": "F:naa.field_c:Ljava/lang/Object;",
+          "original": "field_c",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 126,
+          "end": 133,
+          "symbol": "F:naa.field_e:I",
+          "original": "field_e",
+          "renamed": "intArgument"
+        },
+        {
           "start": 139,
           "end": 142,
           "symbol": "C:naa",
@@ -1359399,11 +1360595,39 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 143,
+          "end": 150,
+          "symbol": "F:naa.field_g:Lnaa;",
+          "original": "field_g",
+          "renamed": "next"
+        },
+        {
+          "start": 179,
+          "end": 186,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
+        },
+        {
+          "start": 212,
+          "end": 219,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 226,
           "end": 229,
           "symbol": "M:naa.<init>()V",
           "original": "naa",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 247,
+          "end": 254,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         }
       ]
     },
@@ -1453908,7 +1455132,7 @@
       "original": "qda.java",
       "renamed": "ArchiveNetworkClient.java",
       "inputSha256": "2d203ffb179ba0ba01ce78f91a5c51891fe5a047bfb09cdbbde2a63117d37a28",
-      "outputSha256": "b41452c4d279475f76138e8d208c5d79ed42b04fcfe9a3bacb8f6589541aa668",
+      "outputSha256": "03a392c791c41b9cfec2c93819ae7e64c7b7777f6056be466787f7b86217322b",
       "edits": [
         {
           "start": 92,
@@ -1454226,6 +1455450,13 @@
           "renamed": "S2CProfileUpdatePacket"
         },
         {
+          "start": 2874,
+          "end": 2881,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 2919,
           "end": 2920,
           "symbol": "M:du.a(IB)I",
@@ -1454238,6 +1455469,13 @@
           "symbol": "C:bga",
           "original": "bga",
           "renamed": "S2CProfileUpdatePacket"
+        },
+        {
+          "start": 3021,
+          "end": 3028,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 3053,
@@ -1454280,6 +1455518,13 @@
           "symbol": "C:bga",
           "original": "bga",
           "renamed": "S2CProfileUpdatePacket"
+        },
+        {
+          "start": 3217,
+          "end": 3224,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 3265,
@@ -1470663,7 +1471908,7 @@
       "original": "qna.java",
       "renamed": "FullscreenDialogLayout.java",
       "inputSha256": "01f37cf59d73fd6d989bf5e02077e8bf8283d387400a3a442c27f8cd21ecc41b",
-      "outputSha256": "12fec145b6f78922231090ae33648c6aecd20166faac1b0464e4ba1e1ab85082",
+      "outputSha256": "89762f50d5062b0cc4d6e637a0797985aaeaa1cd742d8f51cbfdbfae8d2f6587",
       "edits": [
         {
           "start": 50,
@@ -1470972,6 +1472217,13 @@
           "symbol": "C:dsa",
           "original": "dsa",
           "renamed": "ComponentTypeNames"
+        },
+        {
+          "start": 3331,
+          "end": 3338,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 3369,
@@ -1519349,7 +1520601,7 @@
       "original": "sea.java",
       "renamed": "SnakePitBehaviour.java",
       "inputSha256": "5c0fd47a2ad92b7ad836c7fb0e4362ecf003f011f2f69c2bc21daba0d345266f",
-      "outputSha256": "dd631608b39d49e0c89737e5ec4fb5cb4c3a8023089b9f4b5e0534205e5ac490",
+      "outputSha256": "c93a95adf37a6e7b0fbea757ba33488665102e19156407787c5aad973d1d6bf2",
       "edits": [
         {
           "start": 50,
@@ -1519959,6 +1521211,20 @@
           "symbol": "M:sea.l(I)Z",
           "original": "l",
           "renamed": "isFirstReflectionCheckReady"
+        },
+        {
+          "start": 6858,
+          "end": 6865,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 6995,
+          "end": 7002,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 7292,
@@ -1527262,7 +1528528,7 @@
       "original": "sma.java",
       "renamed": "ScoreStandings.java",
       "inputSha256": "9a28dd300203772020ca089445f79d751caf4f98dfa6c8e9d0e4a3e2537b7326",
-      "outputSha256": "42c3d87970047d3f01a069fb268e63be78cfc32092856c207ab7431b5a80ac6a",
+      "outputSha256": "779ff1f3a037835c17bafc5a37c069fa8d3337f9aebbe902914213c9a6e852aa",
       "edits": [
         {
           "start": 69,
@@ -1527417,6 +1528683,13 @@
           "symbol": "C:hna",
           "original": "hna",
           "renamed": "SoftwareModelBillboard"
+        },
+        {
+          "start": 1940,
+          "end": 1947,
+          "symbol": "F:fia.field_c:Z",
+          "original": "field_c",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 2039,
@@ -1533307,7 +1534580,7 @@
       "original": "ss.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "fd081ca6fea415114de72535ed1e44cf969af555159df08ff5098d359f61e39f",
-      "outputSha256": "011d8104fbd880611d356fd4985724e6f0dc943893759217c93dc5518ca92f81",
+      "outputSha256": "aee752014625a07516c826a6e1c71f1f48df8e8450fd59ef85787b2612e84187",
       "edits": [
         {
           "start": 50,
@@ -1533807,6 +1535080,13 @@
           "renamed": "startThread"
         },
         {
+          "start": 9919,
+          "end": 9926,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 9947,
           "end": 9950,
           "symbol": "C:vja",
@@ -1533819,6 +1535099,20 @@
           "symbol": "M:vja.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 9993,
+          "end": 10000,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 10103,
+          "end": 10110,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 10183,
@@ -1533840,7 +1535134,7 @@
       "original": "ssa.java",
       "renamed": "ClipStack.java",
       "inputSha256": "50f7f67e6b6bac648ad700db89a03f893123eb5203a1ae5a42f9d626e13214eb",
-      "outputSha256": "f82221a3a4aae0ae695de5f7ae472686a140f33e587e285767daefd9374e0ec8",
+      "outputSha256": "76dbd35caedfba672f98e0be276fbe951a5aab89af65fdc63726e243c63ceae8",
       "edits": [
         {
           "start": 69,
@@ -1534060,6 +1535354,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 2552,
+          "end": 2559,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 2582,
           "end": 2585,
           "symbol": "C:vja",
@@ -1534072,6 +1535373,20 @@
           "symbol": "M:vja.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 2636,
+          "end": 2643,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 2692,
+          "end": 2699,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 3274,
@@ -1538572,7 +1539887,7 @@
       "original": "sw.java",
       "renamed": "EditableTextField.java",
       "inputSha256": "24fe04bfcbcbec9735ea9ead5910a0d54b6030a3a36382920ee30da4dca4c192",
-      "outputSha256": "73ceb8a3e59e8e493699d0d130776bf6f5424386bcd48abc43a95a754cf75efd",
+      "outputSha256": "ee739803581ab9dec44690cd0cfe12dd00aefc50ebc627aafb028ecaf0bb5265",
       "edits": [
         {
           "start": 50,
@@ -1539035,6 +1540350,20 @@
           "symbol": "M:jea.a(IIIII)V",
           "original": "a",
           "renamed": "setBounds"
+        },
+        {
+          "start": 5292,
+          "end": 5299,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
+          "start": 5376,
+          "end": 5383,
+          "symbol": "F:naa.field_f:Ljava/lang/Object;",
+          "original": "field_f",
+          "renamed": "result"
         },
         {
           "start": 5530,
@@ -1602064,7 +1603393,7 @@
       "original": "vf.java",
       "renamed": "RenderLayer.java",
       "inputSha256": "79a6019955899bdefd272485e7c044bc14cb84958839875cf63a158e33be6d7a",
-      "outputSha256": "aa5b9df2fe271fed1082094e186ef164ba13090389562c6a7313b980437e53d2",
+      "outputSha256": "9a911e2f1e127d322f912bb5890efba4c645517fd417bd637f44cb7ded3eeb07",
       "edits": [
         {
           "start": 71,
@@ -1602144,6 +1603473,13 @@
           "renamed": "requestExitFullscreen"
         },
         {
+          "start": 1093,
+          "end": 1100,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
+        },
+        {
           "start": 1118,
           "end": 1121,
           "symbol": "C:vja",
@@ -1602156,6 +1603492,13 @@
           "symbol": "M:vja.a(IJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 1173,
+          "end": 1180,
+          "symbol": "F:naa.field_b:I",
+          "original": "field_b",
+          "renamed": "status"
         },
         {
           "start": 1198,
@@ -1616791,7 +1618134,7 @@
       "original": "vsa.java",
       "renamed": "BridgeModel.java",
       "inputSha256": "0fa587ceaca57c2d19250bdba6a02b418d39fe25739b89b6376f16ae437f01eb",
-      "outputSha256": "2a37a3a8ae524c885989e29ea27dd3165aa0de04d94d4a2dd8bcbca5a3b972da",
+      "outputSha256": "9cb6c21c280b9a4f50371f9822e914ebc4effe536a34e524b4b9d3fc15844b8c",
       "edits": [
         {
           "start": 50,
@@ -1617618,6 +1618961,13 @@
           "symbol": "C:hna",
           "original": "hna",
           "renamed": "SoftwareModelBillboard"
+        },
+        {
+          "start": 10534,
+          "end": 10541,
+          "symbol": "F:fia.field_p:Z",
+          "original": "field_p",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 10557,
@@ -1650210,10 +1651560,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "f96d8291f02901bff8ddc13da826fb6ba8fa2f3fcd7665785f41a8d019a813d0",
+    "rulesSha256": "ea8e1fd735197487f30b68f68cb46505cfe5745d505f320cf4be423967230cd0",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "354960210320fbc0cb5b7077fdfd94f6177bd3b84c59e76eadbe3ad188c015ed",
+    "outputTreeSha256": "a557172bed0c5f9cafec16475db1d2307d127077824936f91d46fb33b0a769ac",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

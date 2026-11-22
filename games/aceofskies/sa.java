@@ -252,11 +252,11 @@ final class sa {
           }
           for (int var2 = 0; var1.field_g > var2; var2++) {
             if (null != var4.field_f[var2] &&
-              var4.field_f[var2].field_a == 0) {
+              var4.field_f[var2].status == 0) {
               return false;
             }
             if (null != var4.field_h[var2] &&
-              var4.field_h[var2].field_a == 0) {
+              var4.field_h[var2].status == 0) {
               return false;
             }
           }

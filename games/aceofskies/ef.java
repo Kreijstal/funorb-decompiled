@@ -56,7 +56,7 @@ final class ef {
           } else if (rr.field_b.startsWith("mac")) {
             SectorCacheStore.field_g = SectorCacheStore.field_g + "macos/";
           }
-          if (bm.field_I.field_p) {
+          if (bm.field_I.microsoftJvm) {
             SectorCacheStore.field_g = SectorCacheStore.field_g + "msjava/";
           } else {
             if (!rr.field_a.startsWith("amd64") &&

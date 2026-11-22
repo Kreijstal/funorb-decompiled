@@ -144,18 +144,18 @@ final class HardwareWaterTextures {
             var3 = 0;
             for (var4 = 0; var4 < var18.field_f; var4++) {
               if (var13.field_j[var4] != null) {
-                if (2 == var13.field_j[var4].field_b) {
+                if (2 == var13.field_j[var4].status) {
                   var13.field_m[var4] = -5;
                 }
-                if (var13.field_j[var4].field_b == 0) {
+                if (var13.field_j[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var13.field_k[var4] != null) {
-                if (var13.field_k[var4].field_b == 2) {
+                if (var13.field_k[var4].status == 2) {
                   var13.field_m[var4] = -6;
                 }
-                if (var13.field_k[var4].field_b == 0) {
+                if (var13.field_k[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -170,27 +170,27 @@ final class HardwareWaterTextures {
                 try {
                   var6_int = var18.field_i[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var18.field_j[var5].field_f);
+                    var15 = (java.lang.reflect.Field) (var18.field_j[var5].result);
                     var8 = var15.getInt((Object) null);
                     param1.writeByte(0, 0);
                     param1.writeInt(var8, (byte) 102);
                   } else {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var18.field_j[var5].field_f);
+                        var26 = (java.lang.reflect.Field) (var18.field_j[var5].result);
                         var8 = var26.getModifiers();
                         param1.writeByte(0, 0);
                         param1.writeInt(var8, (byte) 126);
                       }
                     } else {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_j[var5].field_f);
+                      var17_ref = (java.lang.reflect.Field) (var18.field_j[var5].result);
                       var19 = var17_ref;
                       var19.setInt((Object) null, var18.field_h[var5]);
                       param1.writeByte(0, 0);
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var18.field_k[var5].field_f);
+                    var28 = (java.lang.reflect.Method) (var18.field_k[var5].result);
                     var25 = var18.field_g[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
@@ -211,7 +211,7 @@ final class HardwareWaterTextures {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var18.field_k[var5].field_f);
+                      var27 = (java.lang.reflect.Method) (var18.field_k[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param1.writeByte(0, 0);
                       param1.writeInt(var8Lifetime1, (byte) 93);

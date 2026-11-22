@@ -17,11 +17,11 @@ final class gv extends TileEffect {
         var4 = BachelorFridge.field_y;
         try {
           while (true) {
-            var3 = param1.a(param2, false);
-            while (var3.field_f == 0) {
+            var3 = param1.requestFullscreenExit(param2, false);
+            while (var3.status == 0) {
               gda.a(false, 10L);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               gda.a(false, 100L);
               continue;
             }

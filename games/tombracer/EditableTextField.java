@@ -135,8 +135,8 @@ final class EditableTextField extends UiComponent {
               this.field_xb.setBounds(var5, this.field_Gb, param0 ^ -23689, 2, this.field_Cb.field_S + var4_int);
             }
             if (null != this.field_Db &&
-              0 != this.field_Db.field_b) {
-              var7 = (java.awt.datatransfer.Transferable) (this.field_Db.field_f);
+              0 != this.field_Db.status) {
+              var7 = (java.awt.datatransfer.Transferable) (this.field_Db.result);
               try {
                 var8 = (String) (var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
                 this.deleteSelection((byte) -126);

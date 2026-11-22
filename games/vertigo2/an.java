@@ -390,7 +390,7 @@ final class an {
         int[] var11 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (!param1.a(param0 ^ -8193)) {
+          if (!param1.isFullscreenAvailable(param0 ^ -8193)) {
             stackIn_4_0 = new cl[]{};
             return stackIn_4_0;
           }

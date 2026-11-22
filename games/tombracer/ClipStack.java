@@ -70,11 +70,11 @@ final class ClipStack {
               stackIn_17_5 = "" + StatReportingObserverFactory.field_b;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).requestUrlStream(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
-            while (var4.field_b == 0) {
+            while (var4.status == 0) {
               TrapSpawner.sleepMillis(0, 1L);
             }
-            if (1 == var4.field_b) {
-              var5 = (DataInputStream) (var4.field_f);
+            if (1 == var4.status) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

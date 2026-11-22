@@ -103,16 +103,16 @@ abstract class ArchiveNetworkClient {
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
             }
             if (ColourKeyOperator.field_m == 1) {
-              if (2 == S2CProfileUpdatePacket.field_c.field_b) {
+              if (2 == S2CProfileUpdatePacket.field_c.status) {
                 stackIn_16_0 = du.recordArchiveConnectionFailure(-1, (byte) 122);
                 return stackIn_16_0;
               }
-              if (S2CProfileUpdatePacket.field_c.field_b == 1) {
+              if (S2CProfileUpdatePacket.field_c.status == 1) {
                 ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               }
             }
             if (ColourKeyOperator.field_m == 2) {
-              SneakHintPanel.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.field_f), oi.field_a);
+              SneakHintPanel.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.result), oi.field_a);
               var2 = new PacketBuffer(13);
               C2SActionPacket.writeSessionHeader((byte) 107, pu.field_b, var2, MapWaypoint.field_n, GzipInflater.field_a);
               var2.writeByte(15, 0);

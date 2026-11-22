@@ -50,7 +50,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (null != DiveBomberEvent.field_r) {
             try {
-              DiveBomberEvent.field_r.a(94);
+              DiveBomberEvent.field_r.shutdown(94);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -279,9 +279,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               dupTemp$0 = new PlatformTaskDispatcher(param2, param0, param5, true);
               DiveBomberEvent.field_r = dupTemp$0;
               BufferedCacheFile.field_d = dupTemp$0;
-              var9 = DiveBomberEvent.field_r.a((Runnable) (this), 2, 1);
+              var9 = DiveBomberEvent.field_r.requestThreadStart((Runnable) (this), 2, 1);
               while (true) {
-                if (var9.field_f == 0) {
+                if (var9.status == 0) {
                   gda.a(false, 10L);
                   if (var10 == 0) {
                     continue;

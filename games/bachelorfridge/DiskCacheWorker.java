@@ -312,14 +312,14 @@ final class DiskCacheWorker implements Runnable {
         this.field_c = false;
         this.field_b = 0;
         try {
-          var2 = param0.a((Runnable) (this), 2, 5);
-          while (var2.field_f == 0) {
+          var2 = param0.requestThreadStart((Runnable) (this), 2, 5);
+          while (var2.status == 0) {
             gda.a(false, 10L);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_a = (Thread) (var2.field_e);
+          this.field_a = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -3124,6 +3124,62 @@
       "renamedSymbol": "F:IntrusiveNode.previous:LIntrusiveNode;"
     },
     {
+      "symbol": "F:eh.field_a:I",
+      "originalName": "field_a",
+      "to": "intArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.intArgument:I"
+    },
+    {
+      "symbol": "F:eh.field_b:I",
+      "originalName": "field_b",
+      "to": "requestType",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.requestType:I"
+    },
+    {
+      "symbol": "F:eh.field_c:I",
+      "originalName": "field_c",
+      "to": "secondaryIntArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.secondaryIntArgument:I"
+    },
+    {
+      "symbol": "F:eh.field_d:Ljava/lang/Object;",
+      "originalName": "field_d",
+      "to": "objectArgument",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.objectArgument:Ljava/lang/Object;"
+    },
+    {
+      "symbol": "F:eh.field_e:Ljava/lang/Object;",
+      "originalName": "field_e",
+      "to": "result",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.result:Ljava/lang/Object;"
+    },
+    {
+      "symbol": "F:eh.field_f:I",
+      "originalName": "field_f",
+      "to": "status",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.status:I"
+    },
+    {
+      "symbol": "F:eh.field_g:Leh;",
+      "originalName": "field_g",
+      "to": "next",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTask.next:LPlatformTask;"
+    },
+    {
       "symbol": "F:eo.field_h:J",
       "originalName": "field_h",
       "to": "secondaryKey",
@@ -3210,6 +3266,54 @@
       "evidence": "hfa forwards every call to the single widget in field_A.",
       "confidence": "reviewed",
       "renamedSymbol": "F:WidgetWrapper.child:LUiWidget;"
+    },
+    {
+      "symbol": "F:ht.field_b:Leh;",
+      "originalName": "field_b",
+      "to": "queueTail",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueTail:LPlatformTask;"
+    },
+    {
+      "symbol": "F:ht.field_j:Z",
+      "originalName": "field_j",
+      "to": "microsoftJvm",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.microsoftJvm:Z"
+    },
+    {
+      "symbol": "F:ht.field_k:Z",
+      "originalName": "field_k",
+      "to": "privilegedTasksEnabled",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.privilegedTasksEnabled:Z"
+    },
+    {
+      "symbol": "F:ht.field_q:Z",
+      "originalName": "field_q",
+      "to": "shutdownRequested",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z"
+    },
+    {
+      "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+      "originalName": "field_r",
+      "to": "workerThread",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.workerThread:Ljava/lang/Thread;"
+    },
+    {
+      "symbol": "F:ht.field_t:Leh;",
+      "originalName": "field_t",
+      "to": "queueHead",
+      "evidence": "Role established from complete original constructor,queue,worker and instance-wrapper/shutdown bodies. Exact declaration and complete constructor/queue/worker/wrapper/shutdown consumers reviewed; retain public/private/volatile/defaults and every guarded/monitored read/write/alias.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueHead:LPlatformTask;"
     },
     {
       "symbol": "F:ii.field_k:I",
@@ -6474,6 +6578,110 @@
       "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformTaskDispatcher.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
+      "symbol": "M:ht.a(BLjava/lang/String;I)Leh;",
+      "originalName": "a",
+      "to": "requestDirectSocket",
+      "evidence": "Byte<117 clears user-home String before delegation socket(port,false,-127,host),whose arithmetic guard succeeds and queues kind1. Preserve aliases and side effect. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDirectSocket(BLjava/lang/String;I)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(I)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Int<=20 recursively calls this wrapper(-108),which remains invalid before any stop/monitor/join/close effects. Valid int sets stop/notifyAll under monitor,joins swallowing interruption,closes data/master/indexes/random with true guard,each IOException separate. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.shutdown(I)V"
+    },
+    {
+      "symbol": "M:ht.a(IIIII)Leh;",
+      "originalName": "a",
+      "to": "requestFullscreenEnter",
+      "evidence": "Int param2<87 returns null before submission. Otherwise kind6 primary=param3+(param1<<16),secondary=param4+(param0<<16);retain overflow and vendor unpack order. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;",
+      "originalName": "a",
+      "to": "requestDeclaredMethod",
+      "evidence": "Wrong int!=31633 clears user-home String before Object[]{Class,name,parameterTypes} allocation. Queue guard int-31633 additionally clears Microsoft cursor controller before task allocation,then kind8 is still queued. Preserve both side effects/order. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredMethod(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+      "originalName": "a",
+      "to": "enqueueTask",
+      "evidence": "Wrong int param3!=0 clears Microsoft cursor-controller reference before allocation. Allocate,write Object,secondary,primary,kind,append via head/tail or tail.next under monitor and notify. Both guard domains still enqueue. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(IZILjava/lang/String;)Leh;",
+      "originalName": "a",
+      "to": "requestSocketConnection",
+      "evidence": "Evaluate49%((intGuard param2+66)/51) before queue;Boolean selects kind22/1 retaining host/port,negation-free integer overflow/arithmetic exceptions and alternate Socket/authentication-message failure behavior. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
+      "originalName": "a",
+      "to": "requestCursorVisibility",
+      "evidence": "Int<=122 sets stop flag true without monitor/notify before kind15 enqueue with Component alias and primary Boolean1/0. Preserve stop-before-enqueue and vendor-specific cursor behavior. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestCursorVisibility(Ljava/awt/Component;ZI)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(Ljava/awt/Frame;Z)Leh;",
+      "originalName": "a",
+      "to": "requestFullscreenExit",
+      "evidence": "True Boolean invokes fullscreen(-38,-51,84,7,-4),which returns null before allocation because84<87. Then enqueue kind7 with same Frame alias;preserve nested call/order. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestFullscreenExit(Ljava/awt/Frame;Z)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+      "originalName": "a",
+      "to": "requestThreadStart",
+      "evidence": "Wrong int param1!=2 calls shutdown(-34),whose recursive guard fails before any stop/queue effects. Valid guard queues kind2 retaining Runnable/priority and daemon/start-before-priority/result publication. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestThreadStart(Ljava/lang/Runnable;II)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;",
+      "originalName": "a",
+      "to": "requestDeclaredField",
+      "evidence": "Int>=-127 returns null before Object[] allocation;otherwise kind9 Object[]{Class,name} retains aliases/bootstrap-loader permissions/reflection failures. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.a(Ljava/net/URL;I)Leh;",
+      "originalName": "a",
+      "to": "requestUrlStream",
+      "evidence": "Evaluate54%((intGuard+56)/36) before kind4 enqueue;preserve overflow/arithmetic exceptions,URL alias,network deadline/openStream/DataInputStream failures. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LPlatformTask;"
+    },
+    {
+      "symbol": "M:ht.b(I)Z",
+      "originalName": "b",
+      "to": "isFullscreenAvailable",
+      "evidence": "Return false first when privilege disabled,then int!=34;otherwise check Microsoft/reflected fullscreen-controller nullness. Preserve evaluation order. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.isFullscreenAvailable(I)Z"
+    },
+    {
+      "symbol": "M:ht.c(I)Leh;",
+      "originalName": "c",
+      "to": "requestDisplayModes",
+      "evidence": "Int!=-1 returns null before enqueue. Valid guard kind5 retains permission/vendor/controller behavior. Preserve exact original input domains,widths,overflow,allocation/write/call order,aliases,monitors,permission/exception paths and context. Identifier-only rename; no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(I)LPlatformTask;"
     },
     {
       "symbol": "M:hv.a(Z)V",
@@ -32169,9 +32377,9 @@
     },
     {
       "symbol": "F:eh.field_a:I",
-      "renamedSymbol": "F:PlatformTask.field_a:I",
+      "renamedSymbol": "F:PlatformTask.intArgument:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "intArgument",
       "declaration": {
         "file": "eh.java",
         "start": 71,
@@ -32180,9 +32388,9 @@
     },
     {
       "symbol": "F:eh.field_b:I",
-      "renamedSymbol": "F:PlatformTask.field_b:I",
+      "renamedSymbol": "F:PlatformTask.requestType:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "requestType",
       "declaration": {
         "file": "eh.java",
         "start": 140,
@@ -32191,9 +32399,9 @@
     },
     {
       "symbol": "F:eh.field_c:I",
-      "renamedSymbol": "F:PlatformTask.field_c:I",
+      "renamedSymbol": "F:PlatformTask.secondaryIntArgument:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "secondaryIntArgument",
       "declaration": {
         "file": "eh.java",
         "start": 210,
@@ -32202,9 +32410,9 @@
     },
     {
       "symbol": "F:eh.field_d:Ljava/lang/Object;",
-      "renamedSymbol": "F:PlatformTask.field_d:Ljava/lang/Object;",
+      "renamedSymbol": "F:PlatformTask.objectArgument:Ljava/lang/Object;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "objectArgument",
       "declaration": {
         "file": "eh.java",
         "start": 193,
@@ -32213,9 +32421,9 @@
     },
     {
       "symbol": "F:eh.field_e:Ljava/lang/Object;",
-      "renamedSymbol": "F:PlatformTask.field_e:Ljava/lang/Object;",
+      "renamedSymbol": "F:PlatformTask.result:Ljava/lang/Object;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "result",
       "declaration": {
         "file": "eh.java",
         "start": 123,
@@ -32224,9 +32432,9 @@
     },
     {
       "symbol": "F:eh.field_f:I",
-      "renamedSymbol": "F:PlatformTask.field_f:I",
+      "renamedSymbol": "F:PlatformTask.status:I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "status",
       "declaration": {
         "file": "eh.java",
         "start": 173,
@@ -32235,9 +32443,9 @@
     },
     {
       "symbol": "F:eh.field_g:Leh;",
-      "renamedSymbol": "F:PlatformTask.field_g:LPlatformTask;",
+      "renamedSymbol": "F:PlatformTask.next:LPlatformTask;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "next",
       "declaration": {
         "file": "eh.java",
         "start": 87,
@@ -40661,9 +40869,9 @@
     },
     {
       "symbol": "F:ht.field_b:Leh;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_b:LPlatformTask;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueTail:LPlatformTask;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "queueTail",
       "declaration": {
         "file": "ht.java",
         "start": 560,
@@ -40749,9 +40957,9 @@
     },
     {
       "symbol": "F:ht.field_j:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_j:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.microsoftJvm:Z",
       "originalName": "field_j",
-      "renamedName": "field_j",
+      "renamedName": "microsoftJvm",
       "declaration": {
         "file": "ht.java",
         "start": 589,
@@ -40760,9 +40968,9 @@
     },
     {
       "symbol": "F:ht.field_k:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_k:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.privilegedTasksEnabled:Z",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "privilegedTasksEnabled",
       "declaration": {
         "file": "ht.java",
         "start": 439,
@@ -40826,9 +41034,9 @@
     },
     {
       "symbol": "F:ht.field_q:Z",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_q:Z",
+      "renamedSymbol": "F:PlatformTaskDispatcher.shutdownRequested:Z",
       "originalName": "field_q",
-      "renamedName": "field_q",
+      "renamedName": "shutdownRequested",
       "declaration": {
         "file": "ht.java",
         "start": 752,
@@ -40837,9 +41045,9 @@
     },
     {
       "symbol": "F:ht.field_r:Ljava/lang/Thread;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_r:Ljava/lang/Thread;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.workerThread:Ljava/lang/Thread;",
       "originalName": "field_r",
-      "renamedName": "field_r",
+      "renamedName": "workerThread",
       "declaration": {
         "file": "ht.java",
         "start": 348,
@@ -40859,9 +41067,9 @@
     },
     {
       "symbol": "F:ht.field_t:Leh;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_t:LPlatformTask;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.queueHead:LPlatformTask;",
       "originalName": "field_t",
-      "renamedName": "field_t",
+      "renamedName": "queueHead",
       "declaration": {
         "file": "ht.java",
         "start": 655,
@@ -172683,7 +172891,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -172694,7 +172902,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -172705,7 +172913,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#10",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#10",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#10",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -172716,7 +172924,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#11",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#11",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#11",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -172727,7 +172935,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#12",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#12",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#12",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -172738,7 +172946,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -172749,7 +172957,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#3",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#3",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#3",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -172760,7 +172968,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#4",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#4",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#4",
       "originalName": "var2_ref2",
       "renamedName": "var2_ref2",
       "declaration": {
@@ -172771,7 +172979,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#5",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#5",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -172782,7 +172990,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#6",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#6",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -172793,7 +173001,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#7",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#7",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#7",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -172804,7 +173012,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#8",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#8",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#8",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -172815,7 +173023,7 @@
     },
     {
       "symbol": "L:ht.a(I)V#9",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(I)V#9",
+      "renamedSymbol": "L:PlatformTaskDispatcher.shutdown(I)V#9",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -172826,7 +173034,7 @@
     },
     {
       "symbol": "L:ht.a(ILjava/lang/Object;III)Leh;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -172837,7 +173045,7 @@
     },
     {
       "symbol": "L:ht.a(ILjava/lang/Object;III)Leh;#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -172848,7 +173056,7 @@
     },
     {
       "symbol": "L:ht.a(ILjava/lang/Object;III)Leh;#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -172859,7 +173067,7 @@
     },
     {
       "symbol": "L:ht.a(IZILjava/lang/String;)Leh;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(IZILjava/lang/String;)LPlatformTask;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -172991,7 +173199,7 @@
     },
     {
       "symbol": "L:ht.a(Ljava/net/URL;I)Leh;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/net/URL;I)LPlatformTask;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LPlatformTask;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -391473,9 +391681,9 @@
     },
     {
       "symbol": "M:ht.a(BLjava/lang/String;I)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(BLjava/lang/String;I)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDirectSocket(BLjava/lang/String;I)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDirectSocket",
       "declaration": {
         "file": "ht.java",
         "start": 2566,
@@ -391484,9 +391692,9 @@
     },
     {
       "symbol": "M:ht.a(I)V",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(I)V",
+      "renamedSymbol": "M:PlatformTaskDispatcher.shutdown(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "ht.java",
         "start": 17595,
@@ -391495,9 +391703,9 @@
     },
     {
       "symbol": "M:ht.a(IIIII)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IIIII)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestFullscreenEnter",
       "declaration": {
         "file": "ht.java",
         "start": 3271,
@@ -391506,9 +391714,9 @@
     },
     {
       "symbol": "M:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredMethod(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDeclaredMethod",
       "declaration": {
         "file": "ht.java",
         "start": 20348,
@@ -391517,9 +391725,9 @@
     },
     {
       "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueueTask",
       "declaration": {
         "file": "ht.java",
         "start": 4170,
@@ -391528,9 +391736,9 @@
     },
     {
       "symbol": "M:ht.a(IZILjava/lang/String;)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IZILjava/lang/String;)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocketConnection",
       "declaration": {
         "file": "ht.java",
         "start": 4907,
@@ -391539,9 +391747,9 @@
     },
     {
       "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/awt/Component;ZI)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestCursorVisibility(Ljava/awt/Component;ZI)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestCursorVisibility",
       "declaration": {
         "file": "ht.java",
         "start": 3065,
@@ -391550,9 +391758,9 @@
     },
     {
       "symbol": "M:ht.a(Ljava/awt/Frame;Z)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/awt/Frame;Z)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestFullscreenExit(Ljava/awt/Frame;Z)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestFullscreenExit",
       "declaration": {
         "file": "ht.java",
         "start": 3660,
@@ -391561,9 +391769,9 @@
     },
     {
       "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestThreadStart(Ljava/lang/Runnable;II)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestThreadStart",
       "declaration": {
         "file": "ht.java",
         "start": 3989,
@@ -391572,9 +391780,9 @@
     },
     {
       "symbol": "M:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDeclaredField",
       "declaration": {
         "file": "ht.java",
         "start": 20150,
@@ -391594,9 +391802,9 @@
     },
     {
       "symbol": "M:ht.a(Ljava/net/URL;I)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/net/URL;I)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestUrlStream",
       "declaration": {
         "file": "ht.java",
         "start": 3514,
@@ -391605,9 +391813,9 @@
     },
     {
       "symbol": "M:ht.b(I)Z",
-      "renamedSymbol": "M:PlatformTaskDispatcher.b(I)Z",
+      "renamedSymbol": "M:PlatformTaskDispatcher.isFullscreenAvailable(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "isFullscreenAvailable",
       "declaration": {
         "file": "ht.java",
         "start": 2760,
@@ -391616,9 +391824,9 @@
     },
     {
       "symbol": "M:ht.c(I)Leh;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.c(I)LPlatformTask;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(I)LPlatformTask;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "requestDisplayModes",
       "declaration": {
         "file": "ht.java",
         "start": 3837,
@@ -476415,7 +476623,7 @@
     },
     {
       "symbol": "P:ht.a(BLjava/lang/String;I)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(BLjava/lang/String;I)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDirectSocket(BLjava/lang/String;I)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476426,7 +476634,7 @@
     },
     {
       "symbol": "P:ht.a(BLjava/lang/String;I)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(BLjava/lang/String;I)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDirectSocket(BLjava/lang/String;I)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476437,7 +476645,7 @@
     },
     {
       "symbol": "P:ht.a(BLjava/lang/String;I)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(BLjava/lang/String;I)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDirectSocket(BLjava/lang/String;I)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476448,7 +476656,7 @@
     },
     {
       "symbol": "P:ht.a(I)V#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(I)V#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.shutdown(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476459,7 +476667,7 @@
     },
     {
       "symbol": "P:ht.a(IIIII)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476470,7 +476678,7 @@
     },
     {
       "symbol": "P:ht.a(IIIII)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476481,7 +476689,7 @@
     },
     {
       "symbol": "P:ht.a(IIIII)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476492,7 +476700,7 @@
     },
     {
       "symbol": "P:ht.a(IIIII)Leh;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -476503,7 +476711,7 @@
     },
     {
       "symbol": "P:ht.a(IIIII)Leh;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LPlatformTask;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenEnter(IIIII)LPlatformTask;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -476514,7 +476722,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476525,7 +476733,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476536,7 +476744,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476547,7 +476755,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredMethod(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -476558,7 +476766,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Object;III)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476569,7 +476777,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Object;III)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476580,7 +476788,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Object;III)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476591,7 +476799,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Object;III)Leh;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -476602,7 +476810,7 @@
     },
     {
       "symbol": "P:ht.a(ILjava/lang/Object;III)Leh;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LPlatformTask;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LPlatformTask;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -476613,7 +476821,7 @@
     },
     {
       "symbol": "P:ht.a(IZILjava/lang/String;)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZILjava/lang/String;)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476624,7 +476832,7 @@
     },
     {
       "symbol": "P:ht.a(IZILjava/lang/String;)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZILjava/lang/String;)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476635,7 +476843,7 @@
     },
     {
       "symbol": "P:ht.a(IZILjava/lang/String;)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZILjava/lang/String;)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476646,7 +476854,7 @@
     },
     {
       "symbol": "P:ht.a(IZILjava/lang/String;)Leh;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IZILjava/lang/String;)LPlatformTask;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketConnection(IZILjava/lang/String;)LPlatformTask;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -476657,7 +476865,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/awt/Component;ZI)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Component;ZI)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestCursorVisibility(Ljava/awt/Component;ZI)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476668,7 +476876,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/awt/Component;ZI)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Component;ZI)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestCursorVisibility(Ljava/awt/Component;ZI)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476679,7 +476887,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/awt/Component;ZI)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Component;ZI)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestCursorVisibility(Ljava/awt/Component;ZI)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476690,7 +476898,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/awt/Frame;Z)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Frame;Z)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenExit(Ljava/awt/Frame;Z)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476701,7 +476909,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/awt/Frame;Z)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Frame;Z)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestFullscreenExit(Ljava/awt/Frame;Z)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476712,7 +476920,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/Runnable;II)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestThreadStart(Ljava/lang/Runnable;II)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476723,7 +476931,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/Runnable;II)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestThreadStart(Ljava/lang/Runnable;II)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476734,7 +476942,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/Runnable;II)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestThreadStart(Ljava/lang/Runnable;II)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476745,7 +476953,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476756,7 +476964,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476767,7 +476975,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;Ljava/lang/Class;I)LPlatformTask;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -476822,7 +477030,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/net/URL;I)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/net/URL;I)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476833,7 +477041,7 @@
     },
     {
       "symbol": "P:ht.a(Ljava/net/URL;I)Leh;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/net/URL;I)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestUrlStream(Ljava/net/URL;I)LPlatformTask;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -476844,7 +477052,7 @@
     },
     {
       "symbol": "P:ht.b(I)Z#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.b(I)Z#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.isFullscreenAvailable(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476855,7 +477063,7 @@
     },
     {
       "symbol": "P:ht.c(I)Leh;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.c(I)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDisplayModes(I)LPlatformTask;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -568478,7 +568686,7 @@
       "original": "BachelorFridge.java",
       "renamed": "BachelorFridge.java",
       "inputSha256": "391cd94920e6e97d6195a3bd3359d3980815a7177a0ef225101f995702613a8b",
-      "outputSha256": "06198545f531589c6803f5b80a274501479ad0c23b8877bc18fec6ab08fbdba0",
+      "outputSha256": "1adf7d5e1ada907348393a1843128103ff557147b9388b3f87cf7feb1144d8d4",
       "edits": [
         {
           "start": 80,
@@ -575236,6 +575444,13 @@
           "renamed": "DiveBomberEvent"
         },
         {
+          "start": 49288,
+          "end": 49289,
+          "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
+          "original": "a",
+          "renamed": "requestCursorVisibility"
+        },
+        {
           "start": 49321,
           "end": 49324,
           "symbol": "C:dca",
@@ -575635,6 +575850,13 @@
           "renamed": "DiveBomberEvent"
         },
         {
+          "start": 55014,
+          "end": 55015,
+          "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
+          "original": "a",
+          "renamed": "requestCursorVisibility"
+        },
+        {
           "start": 55047,
           "end": 55050,
           "symbol": "C:dca",
@@ -575675,6 +575897,13 @@
           "symbol": "C:ju",
           "original": "ju",
           "renamed": "DiveBomberEvent"
+        },
+        {
+          "start": 55330,
+          "end": 55331,
+          "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
+          "original": "a",
+          "renamed": "requestCursorVisibility"
         },
         {
           "start": 55363,
@@ -604441,7 +604670,7 @@
       "original": "cda.java",
       "renamed": "cda.java",
       "inputSha256": "6fe43b0817f5d34be9066ce44b3645bb918f3f6272c37ca67b08362b53b2cc2d",
-      "outputSha256": "e984b96e65f6a00b69b7a98ea89aabb0979441c8fe42430356c82fa12e92418f",
+      "outputSha256": "f9f0e13f6d30440ddd0152d39a707b44bd5ac629a65d72dc68a473af13cf95ae",
       "edits": [
         {
           "start": 110,
@@ -604549,6 +604778,13 @@
           "renamed": "readBytes"
         },
         {
+          "start": 3436,
+          "end": 3437,
+          "symbol": "M:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;",
+          "original": "a",
+          "renamed": "requestDeclaredMethod"
+        },
+        {
           "start": 3605,
           "end": 3606,
           "symbol": "M:lu.g(I)Ljava/lang/String;",
@@ -604568,6 +604804,13 @@
           "symbol": "M:lu.f(I)I",
           "original": "f",
           "renamed": "readInt"
+        },
+        {
+          "start": 3923,
+          "end": 3924,
+          "symbol": "M:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
         },
         {
           "start": 5368,
@@ -606890,7 +607133,7 @@
       "original": "ck.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "99020991ce7c3637dea4382e5d3fa9fa2cdab56bcb918ad2567c332d2a56ca3b",
-      "outputSha256": "7e30ec6c1e0b6b0bc7a38c234e74f477f9036aff1e8a67fd615489648cf03be8",
+      "outputSha256": "0329179d60e3c8c1bf0cc195ada74744cf1cbe12d26ad3526bb157b856a97d82",
       "edits": [
         {
           "start": 60,
@@ -606961,6 +607204,13 @@
           "symbol": "C:ju",
           "original": "ju",
           "renamed": "DiveBomberEvent"
+        },
+        {
+          "start": 1874,
+          "end": 1875,
+          "symbol": "M:ht.a(I)V",
+          "original": "a",
+          "renamed": "shutdown"
         },
         {
           "start": 2137,
@@ -607199,6 +607449,20 @@
           "symbol": "C:ju",
           "original": "ju",
           "renamed": "DiveBomberEvent"
+        },
+        {
+          "start": 11312,
+          "end": 11313,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
+        },
+        {
+          "start": 11394,
+          "end": 11401,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 11793,
@@ -609808,7 +610072,7 @@
       "original": "cv.java",
       "renamed": "SpiltMilkEvent.java",
       "inputSha256": "9b0ad282186446f44ae4e40f98a82d80cbc28567f5bdbbc4e8420f2862eb9e26",
-      "outputSha256": "ae7c1cc97ead4db00fd3068ed50ad9d2a4cb7cdde2cf208071618f90851f45ee",
+      "outputSha256": "70b9b1dfd800ac80f48e9ec548c0970c434a6c138fff4538f646e67d3e7ce650",
       "edits": [
         {
           "start": 69,
@@ -609874,6 +610138,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 2071,
+          "end": 2072,
+          "symbol": "M:ht.a(Ljava/net/URL;I)Leh;",
+          "original": "a",
+          "renamed": "requestUrlStream"
+        },
+        {
           "start": 2187,
           "end": 2189,
           "symbol": "C:ht",
@@ -609886,6 +610157,27 @@
           "symbol": "C:ht",
           "original": "ht",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 2312,
+          "end": 2319,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 2405,
+          "end": 2412,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 2461,
+          "end": 2468,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 3524,
@@ -617273,7 +617565,7 @@
       "original": "ea.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "d690bda5546862c273132357346fc292a3f73063bcdbf390727baf9c926919f5",
-      "outputSha256": "71e15c2f35167ef63169a1d17e1c3602e99135233a790be12ab079e6ca5525c4",
+      "outputSha256": "3b3f87dfde5b6ea2f72965e5047b7b5ddc6b66fbe68cacc846d32815dec91d67",
       "edits": [
         {
           "start": 50,
@@ -617568,6 +617860,34 @@
           "symbol": "C:in",
           "original": "in",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 11608,
+          "end": 11609,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
+        },
+        {
+          "start": 11658,
+          "end": 11665,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 11736,
+          "end": 11743,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 11846,
+          "end": 11853,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 11929,
@@ -621164,7 +621484,7 @@
       "original": "eh.java",
       "renamed": "PlatformTask.java",
       "inputSha256": "5222216f75db06a55ec65aa4bb59a2868f6ffce69b4ee70b9eac829f0efa74b6",
-      "outputSha256": "89dda552f58d1d1c55f7101ce012d07d14d1eb7017890c1a9cce8690328fc9ad",
+      "outputSha256": "323a4b24555329eb41509822f40453e5b5d7d14f7f2070feeafccef7a8b914d3",
       "edits": [
         {
           "start": 51,
@@ -621174,6 +621494,13 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 71,
+          "end": 78,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
           "start": 84,
           "end": 86,
           "symbol": "C:eh",
@@ -621181,11 +621508,60 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 87,
+          "end": 94,
+          "symbol": "F:eh.field_g:Leh;",
+          "original": "field_g",
+          "renamed": "next"
+        },
+        {
+          "start": 123,
+          "end": 130,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 140,
+          "end": 147,
+          "symbol": "F:eh.field_b:I",
+          "original": "field_b",
+          "renamed": "requestType"
+        },
+        {
+          "start": 173,
+          "end": 180,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 193,
+          "end": 200,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 210,
+          "end": 217,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
           "start": 224,
           "end": 226,
           "symbol": "M:eh.<init>()V",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 244,
+          "end": 251,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         }
       ]
     },
@@ -635617,7 +635993,7 @@
       "original": "ge.java",
       "renamed": "ge.java",
       "inputSha256": "fa1eda8483692c7f5134acbc3a53b2c853b2c3acb4f3141483c283a25f3249f5",
-      "outputSha256": "41fec2a6fa89e14cf0f5747f81ccf8a62ae5d4d42a8cbceb7958d9b77fd1f3ae",
+      "outputSha256": "1edb8d0b27b01fda7dbfc711ed4a2dfba8b263eae3a940c036a9690cc6292dc0",
       "edits": [
         {
           "start": 80,
@@ -635725,6 +636101,13 @@
           "renamed": "SauceOfFlameAnimation"
         },
         {
+          "start": 3658,
+          "end": 3659,
+          "symbol": "M:ht.a(BLjava/lang/String;I)Leh;",
+          "original": "a",
+          "renamed": "requestDirectSocket"
+        },
+        {
           "start": 3685,
           "end": 3687,
           "symbol": "C:kn",
@@ -635737,6 +636120,13 @@
           "symbol": "C:aw",
           "original": "aw",
           "renamed": "SauceOfFlameAnimation"
+        },
+        {
+          "start": 3740,
+          "end": 3747,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 3953,
@@ -635753,6 +636143,13 @@
           "renamed": "SauceOfFlameAnimation"
         },
         {
+          "start": 4000,
+          "end": 4007,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
           "start": 4123,
           "end": 4125,
           "symbol": "C:pj",
@@ -635765,6 +636162,13 @@
           "symbol": "C:aw",
           "original": "aw",
           "renamed": "SauceOfFlameAnimation"
+        },
+        {
+          "start": 4156,
+          "end": 4163,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 4266,
@@ -646150,7 +646554,7 @@
       "original": "gv.java",
       "renamed": "gv.java",
       "inputSha256": "ab040e481ec34a3be75c170bf32cd8a207784ea2b6ac2db17402cfb2afa8237f",
-      "outputSha256": "6b8c500ecc26e127d08f9567ce6675aa97925302ecdd98b22d3501ad72d777ef",
+      "outputSha256": "dcc3cf6ad0318309a5a7c999639f144eb26a38213667f583fb0629343e5c2f35",
       "edits": [
         {
           "start": 61,
@@ -646172,6 +646576,27 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 619,
+          "end": 620,
+          "symbol": "M:ht.a(Ljava/awt/Frame;Z)Leh;",
+          "original": "a",
+          "renamed": "requestFullscreenExit"
+        },
+        {
+          "start": 661,
+          "end": 668,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 745,
+          "end": 752,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 1707,
@@ -655033,7 +655458,7 @@
       "original": "ht.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "1e58a20ec015e968e418cd4c4a6e905344fefccbf6904ddf0556166328f80836",
-      "outputSha256": "5f15e48fbe35fac376232e050022bb36f79263fc0a2009f55e85a7e06ff875f6",
+      "outputSha256": "eb8c8e83e93e211c6070d4f49a8b009cade84ac06e0623a86ffd6e4ade79566c",
       "edits": [
         {
           "start": 69,
@@ -655064,6 +655489,20 @@
           "renamed": "MicrosoftDisplayController"
         },
         {
+          "start": 348,
+          "end": 355,
+          "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+          "original": "field_r",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 439,
+          "end": 446,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 497,
           "end": 500,
           "symbol": "C:qaa",
@@ -655078,11 +655517,32 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 560,
+          "end": 567,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 589,
+          "end": 596,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 652,
           "end": 654,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 655,
+          "end": 662,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
         },
         {
           "start": 695,
@@ -655097,6 +655557,13 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "MicrosoftCursorController"
+        },
+        {
+          "start": 752,
+          "end": 759,
+          "symbol": "F:ht.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
         },
         {
           "start": 787,
@@ -655141,11 +655608,67 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 2566,
+          "end": 2567,
+          "symbol": "M:ht.a(BLjava/lang/String;I)Leh;",
+          "original": "a",
+          "renamed": "requestDirectSocket"
+        },
+        {
+          "start": 2703,
+          "end": 2704,
+          "symbol": "M:ht.a(IZILjava/lang/String;)Leh;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
+        },
+        {
+          "start": 2760,
+          "end": 2761,
+          "symbol": "M:ht.b(I)Z",
+          "original": "b",
+          "renamed": "isFullscreenAvailable"
+        },
+        {
+          "start": 2794,
+          "end": 2801,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 2918,
+          "end": 2925,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 3062,
           "end": 3064,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 3065,
+          "end": 3066,
+          "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
+          "original": "a",
+          "renamed": "requestCursorVisibility"
+        },
+        {
+          "start": 3168,
+          "end": 3175,
+          "symbol": "F:ht.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 3214,
+          "end": 3215,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 3268,
@@ -655155,11 +655678,25 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 3271,
+          "end": 3272,
+          "symbol": "M:ht.a(IIIII)Leh;",
+          "original": "a",
+          "renamed": "requestFullscreenEnter"
+        },
+        {
           "start": 3380,
           "end": 3382,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 3420,
+          "end": 3421,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 3511,
@@ -655169,11 +655706,46 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 3514,
+          "end": 3515,
+          "symbol": "M:ht.a(Ljava/net/URL;I)Leh;",
+          "original": "a",
+          "renamed": "requestUrlStream"
+        },
+        {
+          "start": 3617,
+          "end": 3618,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 3657,
           "end": 3659,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 3660,
+          "end": 3661,
+          "symbol": "M:ht.a(Ljava/awt/Frame;Z)Leh;",
+          "original": "a",
+          "renamed": "requestFullscreenExit"
+        },
+        {
+          "start": 3740,
+          "end": 3741,
+          "symbol": "M:ht.a(IIIII)Leh;",
+          "original": "a",
+          "renamed": "requestFullscreenEnter"
+        },
+        {
+          "start": 3794,
+          "end": 3795,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 3834,
@@ -655183,11 +655755,25 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 3837,
+          "end": 3838,
+          "symbol": "M:ht.c(I)Leh;",
+          "original": "c",
+          "renamed": "requestDisplayModes"
+        },
+        {
           "start": 3899,
           "end": 3901,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 3939,
+          "end": 3940,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 3986,
@@ -655197,11 +655783,39 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 3989,
+          "end": 3990,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
+        },
+        {
+          "start": 4076,
+          "end": 4077,
+          "symbol": "M:ht.a(I)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 4114,
+          "end": 4115,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 4167,
           "end": 4169,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 4170,
+          "end": 4171,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 4245,
@@ -655225,11 +655839,95 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 4452,
+          "end": 4459,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 4483,
+          "end": 4490,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 4514,
+          "end": 4521,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 4545,
+          "end": 4552,
+          "symbol": "F:eh.field_b:I",
+          "original": "field_b",
+          "renamed": "requestType"
+        },
+        {
+          "start": 4641,
+          "end": 4648,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 4669,
+          "end": 4676,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 4677,
+          "end": 4684,
+          "symbol": "F:eh.field_g:Leh;",
+          "original": "field_g",
+          "renamed": "next"
+        },
+        {
+          "start": 4710,
+          "end": 4717,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 4762,
+          "end": 4769,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 4795,
+          "end": 4802,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
           "start": 4904,
           "end": 4906,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 4907,
+          "end": 4908,
+          "symbol": "M:ht.a(IZILjava/lang/String;)Leh;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
+        },
+        {
+          "start": 5032,
+          "end": 5033,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 5424,
@@ -655246,6 +655944,111 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 6236,
+          "end": 6243,
+          "symbol": "F:ht.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 6272,
+          "end": 6279,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6321,
+          "end": 6328,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6353,
+          "end": 6360,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6368,
+          "end": 6375,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6376,
+          "end": 6383,
+          "symbol": "F:eh.field_g:Leh;",
+          "original": "field_g",
+          "renamed": "next"
+        },
+        {
+          "start": 6412,
+          "end": 6419,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 6456,
+          "end": 6463,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 7086,
+          "end": 7093,
+          "symbol": "F:eh.field_b:I",
+          "original": "field_b",
+          "renamed": "requestType"
+        },
+        {
+          "start": 7213,
+          "end": 7220,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 7345,
+          "end": 7352,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 7380,
+          "end": 7387,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 7563,
+          "end": 7570,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 7731,
+          "end": 7738,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 8029,
+          "end": 8036,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
           "start": 8068,
           "end": 8070,
           "symbol": "C:ht",
@@ -655260,6 +656063,83 @@
           "renamed": "throwUnchecked"
         },
         {
+          "start": 8395,
+          "end": 8402,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 8424,
+          "end": 8431,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 8459,
+          "end": 8466,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 8499,
+          "end": 8506,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 8538,
+          "end": 8545,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 8764,
+          "end": 8771,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 8865,
+          "end": 8872,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 8935,
+          "end": 8942,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 8957,
+          "end": 8964,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 8977,
+          "end": 8984,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9013,
+          "end": 9020,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
           "start": 9097,
           "end": 9100,
           "symbol": "C:hma",
@@ -655268,11 +656148,81 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 9271,
+          "end": 9278,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9313,
+          "end": 9320,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9340,
+          "end": 9347,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 9373,
+          "end": 9380,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
           "start": 9516,
           "end": 9518,
           "symbol": "C:ht",
           "original": "ht",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 9545,
+          "end": 9552,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 9598,
+          "end": 9605,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 9744,
+          "end": 9751,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 9841,
+          "end": 9848,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 9892,
+          "end": 9899,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
+        },
+        {
+          "start": 9936,
+          "end": 9943,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
         },
         {
           "start": 10095,
@@ -655283,6 +656233,34 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 10374,
+          "end": 10381,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 10476,
+          "end": 10483,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 10611,
+          "end": 10618,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 10657,
+          "end": 10664,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 10711,
           "end": 10713,
           "symbol": "C:br",
@@ -655291,12 +656269,40 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 11106,
+          "end": 11113,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 11212,
+          "end": 11219,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 11263,
           "end": 11265,
           "symbol": "C:br",
           "original": "br",
           "renamed": "CursorController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 11478,
+          "end": 11485,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 11505,
+          "end": 11512,
+          "symbol": "F:eh.field_c:I",
+          "original": "field_c",
+          "renamed": "secondaryIntArgument"
         },
         {
           "start": 11642,
@@ -655327,6 +656333,13 @@
           "renamed": "throwUnchecked"
         },
         {
+          "start": 11995,
+          "end": 12002,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
           "start": 12168,
           "end": 12170,
           "symbol": "C:ht",
@@ -655355,6 +656368,20 @@
           "renamed": "throwUnchecked"
         },
         {
+          "start": 12810,
+          "end": 12817,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 13116,
+          "end": 13123,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
           "start": 13171,
           "end": 13173,
           "symbol": "C:ht",
@@ -655376,6 +656403,27 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 13396,
+          "end": 13403,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 13449,
+          "end": 13456,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 13564,
+          "end": 13571,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 13616,
           "end": 13619,
           "symbol": "C:hma",
@@ -655384,12 +656432,201 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 13795,
+          "end": 13802,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 13927,
+          "end": 13934,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 13969,
+          "end": 13976,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
           "start": 13994,
           "end": 13997,
           "symbol": "C:hma",
           "original": "hma",
           "renamed": "AwtDisplayController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 14140,
+          "end": 14147,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 14421,
+          "end": 14428,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 14477,
+          "end": 14484,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 14652,
+          "end": 14659,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 14691,
+          "end": 14698,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 14873,
+          "end": 14880,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 15040,
+          "end": 15047,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 15079,
+          "end": 15086,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 15260,
+          "end": 15267,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 15549,
+          "end": 15556,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 15601,
+          "end": 15608,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 15904,
+          "end": 15911,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 15935,
+          "end": 15942,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 15950,
+          "end": 15957,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 16229,
+          "end": 16236,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 16523,
+          "end": 16530,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 16599,
+          "end": 16606,
+          "symbol": "F:eh.field_d:Ljava/lang/Object;",
+          "original": "field_d",
+          "renamed": "objectArgument"
+        },
+        {
+          "start": 16615,
+          "end": 16622,
+          "symbol": "F:eh.field_a:I",
+          "original": "field_a",
+          "renamed": "intArgument"
+        },
+        {
+          "start": 16705,
+          "end": 16712,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 17179,
+          "end": 17186,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 17595,
+          "end": 17596,
+          "symbol": "M:ht.a(I)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 17907,
+          "end": 17908,
+          "symbol": "M:ht.a(I)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 18000,
+          "end": 18007,
+          "symbol": "F:ht.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 18091,
+          "end": 18098,
+          "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+          "original": "field_r",
+          "renamed": "workerThread"
         },
         {
           "start": 18432,
@@ -655427,6 +656664,13 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 20150,
+          "end": 20151,
+          "symbol": "M:ht.a(Ljava/lang/String;Ljava/lang/Class;I)Leh;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
+        },
+        {
           "start": 20243,
           "end": 20245,
           "symbol": "C:eh",
@@ -655434,11 +656678,32 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 20283,
+          "end": 20284,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 20345,
           "end": 20347,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 20348,
+          "end": 20349,
+          "symbol": "M:ht.a(ILjava/lang/Class;[Ljava/lang/Class;Ljava/lang/String;)Leh;",
+          "original": "a",
+          "renamed": "requestDeclaredMethod"
+        },
+        {
+          "start": 20505,
+          "end": 20506,
+          "symbol": "M:ht.a(ILjava/lang/Object;III)Leh;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 20582,
@@ -655453,6 +656718,69 @@
           "symbol": "C:qp",
           "original": "qp",
           "renamed": "MicrosoftDisplayController"
+        },
+        {
+          "start": 20883,
+          "end": 20890,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 20942,
+          "end": 20949,
+          "symbol": "F:ht.field_b:Leh;",
+          "original": "field_b",
+          "renamed": "queueTail"
+        },
+        {
+          "start": 20971,
+          "end": 20978,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 21059,
+          "end": 21066,
+          "symbol": "F:ht.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 21089,
+          "end": 21096,
+          "symbol": "F:ht.field_t:Leh;",
+          "original": "field_t",
+          "renamed": "queueHead"
+        },
+        {
+          "start": 21231,
+          "end": 21238,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
+        },
+        {
+          "start": 21696,
+          "end": 21703,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 23377,
+          "end": 23384,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 24175,
+          "end": 24182,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 24215,
@@ -655490,6 +656818,20 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 24688,
+          "end": 24695,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
+          "start": 25024,
+          "end": 25031,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 25060,
           "end": 25062,
           "symbol": "C:qp",
@@ -655505,6 +656847,13 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 25439,
+          "end": 25446,
+          "symbol": "F:ht.field_j:Z",
+          "original": "field_j",
+          "renamed": "microsoftJvm"
+        },
+        {
           "start": 25494,
           "end": 25496,
           "symbol": "C:br",
@@ -655518,6 +656867,41 @@
           "symbol": "C:pq",
           "original": "pq",
           "renamed": "MicrosoftCursorController"
+        },
+        {
+          "start": 25813,
+          "end": 25820,
+          "symbol": "F:ht.field_q:Z",
+          "original": "field_q",
+          "renamed": "shutdownRequested"
+        },
+        {
+          "start": 25843,
+          "end": 25850,
+          "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+          "original": "field_r",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 25897,
+          "end": 25904,
+          "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+          "original": "field_r",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 25935,
+          "end": 25942,
+          "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+          "original": "field_r",
+          "renamed": "workerThread"
+        },
+        {
+          "start": 25973,
+          "end": 25980,
+          "symbol": "F:ht.field_r:Ljava/lang/Thread;",
+          "original": "field_r",
+          "renamed": "workerThread"
         },
         {
           "start": 26132,
@@ -734087,7 +735471,7 @@
       "original": "oq.java",
       "renamed": "oq.java",
       "inputSha256": "7e58d7b3732e3bf2407199c3f56c004d492f07c15ac572b2737b0e793440a61d",
-      "outputSha256": "658b0b3c3ec3b9d1be5c6b66bcdd28e8fcd7561f253d27c8e61478c9a764a709",
+      "outputSha256": "8a6f2a953f76d20b2e13359832cfab2a880b00394ee2643cf0685b8890fac78d",
       "edits": [
         {
           "start": 2682,
@@ -734144,6 +735528,13 @@
           "symbol": "C:ju",
           "original": "ju",
           "renamed": "DiveBomberEvent"
+        },
+        {
+          "start": 3228,
+          "end": 3229,
+          "symbol": "M:ht.a(Ljava/awt/Component;ZI)Leh;",
+          "original": "a",
+          "renamed": "requestCursorVisibility"
         },
         {
           "start": 3328,
@@ -736665,7 +738056,7 @@
       "original": "pb.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "7f9accc4a7b50abe65fa765000c1fa94e6603f94862b8f9b62afa13214dba9e4",
-      "outputSha256": "3dcd8721b5ab39e6aa50826a8774fb7d16075734d65da1d7eff9cd3a5e099f93",
+      "outputSha256": "71167416660cdb0809e33da8432e4a70b58347f680951e9d8d980854a42c5696",
       "edits": [
         {
           "start": 44,
@@ -736876,6 +738267,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 3822,
+          "end": 3823,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
         },
         {
           "start": 4093,
@@ -741154,7 +742552,7 @@
       "original": "pj.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "25df76d03a68e57990033bbd6cedff78eb985bbfb41c6174695087a752a6c188",
-      "outputSha256": "1e37fe43bfd71079a0564634e5001348207c216aa3d8a78b5ea094c3f45f2e90",
+      "outputSha256": "cd8446d5a0c4f28a1643f1f90006958e225178af43dfc28478c138a314a47159",
       "edits": [
         {
           "start": 69,
@@ -741204,6 +742602,27 @@
           "symbol": "C:pj",
           "original": "pj",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 1767,
+          "end": 1774,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 1858,
+          "end": 1865,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 1934,
+          "end": 1941,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 2761,
@@ -741267,6 +742686,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5600,
+          "end": 5601,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
         },
         {
           "start": 6195,
@@ -762827,7 +764253,7 @@
       "original": "sca.java",
       "renamed": "MouseWheelInput.java",
       "inputSha256": "d37a4fa0cd3d2f4a8a27f80c0cd2659c1829c73ed17088a65076799d19d930ad",
-      "outputSha256": "0f8c787d0bed32bb6c9eabd648ff47602adf5e7c0e08ad747110186ef7300f17",
+      "outputSha256": "111dcafc3730e2872337e2e8dedbfe44ecd719b69996cbfeb503dea6221b9bac",
       "edits": [
         {
           "start": 72,
@@ -762879,6 +764305,13 @@
           "renamed": "BagpipeSpecial"
         },
         {
+          "start": 870,
+          "end": 871,
+          "symbol": "M:ht.a(BLjava/lang/String;I)Leh;",
+          "original": "a",
+          "renamed": "requestDirectSocket"
+        },
+        {
           "start": 884,
           "end": 886,
           "symbol": "C:pw",
@@ -762893,6 +764326,13 @@
           "renamed": "BagpipeSpecial"
         },
         {
+          "start": 1030,
+          "end": 1037,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
           "start": 1077,
           "end": 1079,
           "symbol": "C:cj",
@@ -762905,6 +764345,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "BagpipeSpecial"
+        },
+        {
+          "start": 1172,
+          "end": 1179,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 1312,
@@ -762926,6 +764373,13 @@
           "symbol": "C:ch",
           "original": "ch",
           "renamed": "BagpipeSpecial"
+        },
+        {
+          "start": 1363,
+          "end": 1370,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 1411,
@@ -764882,7 +766336,7 @@
       "original": "sia.java",
       "renamed": "sia.java",
       "inputSha256": "421cafba426fdca6a1cc737ec8ff7949ab193b7a2ac98f91923918148c37e07d",
-      "outputSha256": "0198578b321e9e5368fd13c9f466eb6d4e3a085dc2740269f00c1b965f396625",
+      "outputSha256": "e05bcf87e01b23725c4b9cc2b4e573ac7bfc9c0321b2ddb3474e9ab96ad20260",
       "edits": [
         {
           "start": 81,
@@ -764983,6 +766437,34 @@
           "renamed": "AirstrikeAnimation"
         },
         {
+          "start": 3335,
+          "end": 3342,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 3448,
+          "end": 3455,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 3615,
+          "end": 3622,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 3733,
+          "end": 3740,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
           "start": 3916,
           "end": 3923,
           "symbol": "F:lu.field_g:I",
@@ -765004,6 +766486,13 @@
           "renamed": "writeByte"
         },
         {
+          "start": 4339,
+          "end": 4346,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
           "start": 4432,
           "end": 4433,
           "symbol": "M:lu.d(II)V",
@@ -765016,6 +766505,13 @@
           "symbol": "M:lu.e(II)V",
           "original": "e",
           "renamed": "writeInt"
+        },
+        {
+          "start": 4680,
+          "end": 4687,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 4774,
@@ -765032,11 +766528,25 @@
           "renamed": "writeInt"
         },
         {
+          "start": 4970,
+          "end": 4977,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
           "start": 5122,
           "end": 5123,
           "symbol": "M:lu.d(II)V",
           "original": "d",
           "renamed": "writeByte"
+        },
+        {
+          "start": 5288,
+          "end": 5295,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 5818,
@@ -765079,6 +766589,13 @@
           "symbol": "M:lu.a(BLjava/lang/String;)V",
           "original": "a",
           "renamed": "writeString"
+        },
+        {
+          "start": 6395,
+          "end": 6402,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 6494,
@@ -771291,7 +772808,7 @@
       "original": "tca.java",
       "renamed": "JaggrabDownloader.java",
       "inputSha256": "b6f3c3952553dc7911b1c93bb632ecffc9dd079d9e6fa3c8020922b53786e3f5",
-      "outputSha256": "72058e3f7a8a95a0ccd9bc052b110615b2ae63697abd68b8b3636f5c28cc755c",
+      "outputSha256": "b76a3897be3a06ca11ad4bacb0b93688a73d6b52ab6adf0e17ad4b3f97367ed2",
       "edits": [
         {
           "start": 69,
@@ -771434,11 +772951,137 @@
           "renamed": "payload"
         },
         {
+          "start": 2259,
+          "end": 2266,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 2343,
+          "end": 2350,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 2536,
+          "end": 2543,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 2620,
+          "end": 2627,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 3425,
+          "end": 3426,
+          "symbol": "M:ht.a(Ljava/net/URL;I)Leh;",
+          "original": "a",
+          "renamed": "requestUrlStream"
+        },
+        {
+          "start": 3485,
+          "end": 3492,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 3566,
+          "end": 3573,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 3819,
+          "end": 3820,
+          "symbol": "M:ht.a(BLjava/lang/String;I)Leh;",
+          "original": "a",
+          "renamed": "requestDirectSocket"
+        },
+        {
+          "start": 3902,
+          "end": 3909,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 3983,
+          "end": 3990,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 4275,
+          "end": 4282,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 4389,
+          "end": 4396,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
           "start": 4766,
           "end": 4773,
           "symbol": "F:lu.field_g:I",
           "original": "field_g",
           "renamed": "position"
+        },
+        {
+          "start": 5287,
+          "end": 5288,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
+        },
+        {
+          "start": 5437,
+          "end": 5444,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 5519,
+          "end": 5526,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 5773,
+          "end": 5774,
+          "symbol": "M:ht.a(Ljava/lang/Runnable;II)Leh;",
+          "original": "a",
+          "renamed": "requestThreadStart"
+        },
+        {
+          "start": 5903,
+          "end": 5910,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 5973,
+          "end": 5980,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 6108,
@@ -773502,7 +775145,7 @@
       "original": "tfa.java",
       "renamed": "tfa.java",
       "inputSha256": "bebc10e0641c2726761348ba30d63ffa0b5459da824ef2bceb79adb0a9c889c0",
-      "outputSha256": "00f14977e41431a9c6c5f4847259a6021878e0e8a7922d7e791c793d3895a453",
+      "outputSha256": "dc9f3950ad4c4c10a670ba2273f99daed60c4adea284d29d54469bdadc7a612f",
       "edits": [
         {
           "start": 62,
@@ -773608,6 +775251,13 @@
           "symbol": "C:ju",
           "original": "ju",
           "renamed": "DiveBomberEvent"
+        },
+        {
+          "start": 4736,
+          "end": 4743,
+          "symbol": "F:ht.field_k:Z",
+          "original": "field_k",
+          "renamed": "privilegedTasksEnabled"
         },
         {
           "start": 4791,
@@ -773944,7 +775594,7 @@
       "original": "tg.java",
       "renamed": "SuperSpeedSpecial.java",
       "inputSha256": "52646a6f04372638d6fc72eff8f399f2468ec1fac449c3d7fc7618644981528d",
-      "outputSha256": "87180940c30e79be478180594d7997d748ed1da9220c3382ade583f4bf78fdbc",
+      "outputSha256": "b7a5e0d402d4807a5c173bc355f4b29044b47ed81012b139c6f7d3d332142eab",
       "edits": [
         {
           "start": 50,
@@ -773966,6 +775616,20 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "AirstrikeAnimation"
+        },
+        {
+          "start": 740,
+          "end": 747,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 882,
+          "end": 889,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 1177,
@@ -776385,7 +778049,7 @@
       "original": "ts.java",
       "renamed": "DisableSpecial.java",
       "inputSha256": "9b3e1d70fd244b1e98e16761c9b354eb09583913bcbf14582d5032dedef90e92",
-      "outputSha256": "06bc0bf561dc27cd77d4ea4efa3a72f8ff12ccc74d225bb7b0556facbd8de0a0",
+      "outputSha256": "79db843495aea90d528ff9968bf3e7b17f9df541732e068e35573e5fbab0bf67",
       "edits": [
         {
           "start": 71,
@@ -776449,6 +778113,41 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 1276,
+          "end": 1277,
+          "symbol": "M:ht.b(I)Z",
+          "original": "b",
+          "renamed": "isFullscreenAvailable"
+        },
+        {
+          "start": 2174,
+          "end": 2175,
+          "symbol": "M:ht.a(IIIII)Leh;",
+          "original": "a",
+          "renamed": "requestFullscreenEnter"
+        },
+        {
+          "start": 2246,
+          "end": 2253,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 2346,
+          "end": 2353,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
+        },
+        {
+          "start": 2513,
+          "end": 2520,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
         },
         {
           "start": 3143,
@@ -798029,7 +799728,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "de09c2ddd3cd9b88f105e4d3018f9536896ee3296f33eba13312f3e3a99453d8",
-      "outputSha256": "b2d492fe1f14cd28a92d1915b43c223093061065a224d25031425fb2f01dc183",
+      "outputSha256": "5d4cbef59926aa54a49326dbcd84acf1b59ea1976e94d407edc611d9a09fcda4",
       "edits": [
         {
           "start": 146,
@@ -798044,6 +799743,41 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 762,
+          "end": 763,
+          "symbol": "M:ht.b(I)Z",
+          "original": "b",
+          "renamed": "isFullscreenAvailable"
+        },
+        {
+          "start": 878,
+          "end": 879,
+          "symbol": "M:ht.c(I)Leh;",
+          "original": "c",
+          "renamed": "requestDisplayModes"
+        },
+        {
+          "start": 912,
+          "end": 919,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 990,
+          "end": 997,
+          "symbol": "F:eh.field_f:I",
+          "original": "field_f",
+          "renamed": "status"
+        },
+        {
+          "start": 1118,
+          "end": 1125,
+          "symbol": "F:eh.field_e:Ljava/lang/Object;",
+          "original": "field_e",
+          "renamed": "result"
         },
         {
           "start": 2165,
@@ -804726,10 +806460,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "76de429a4bf34a15d4892f1b144e2d40578e87da12c1522b79855479bceb1b5c",
+    "rulesSha256": "c6d6530cf13870fa5a62978b5e9a0fea8ed30600c2905590ab0100fb16712f3a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "99ba95958fa2d018674153474b5db4d4103cb575e89394116c19e26bb344df64",
+    "outputTreeSha256": "b49188518dd626e96d0d4e01e766d9e8bd837a19221cc8877279f611495c574d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -99,10 +99,10 @@ final class TextLineLayout {
             }
           }
           var11 = param0.requestEnterFullscreen(param4, param1, param2, (byte) 66, param5);
-          while (var11.field_b == 0) {
+          while (var11.status == 0) {
             TrapSpawner.sleepMillis(0, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_f);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_33_0 = null;
             return (java.awt.Frame) (stackIn_33_0);
@@ -111,7 +111,7 @@ final class TextLineLayout {
             stackIn_36_0 = (java.awt.Frame) null;
             return stackIn_36_0;
           }
-          if (var11.field_b != 2) {
+          if (var11.status != 2) {
             stackIn_41_0 = var7;
             return stackIn_41_0;
           }

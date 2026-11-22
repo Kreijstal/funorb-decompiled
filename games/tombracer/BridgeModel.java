@@ -296,7 +296,7 @@ final class BridgeModel extends TrapModel {
             ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "windows/";
           }
           boolean decompiledFrameRemainder0 = true;
-          if (SoftwareModelBillboard.field_a.field_p) {
+          if (SoftwareModelBillboard.field_a.microsoftJvm) {
             ByteGameMessageSender.field_c = ByteGameMessageSender.field_c + "msjava/";
           } else {
             if (!VerticalScrollbar.field_zb.startsWith("amd64") &&

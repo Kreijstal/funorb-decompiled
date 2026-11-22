@@ -769,7 +769,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               nea.field_c = dupTemp$0;
               var8 = ComponentTypeNames.field_c.startThread((Runnable) (this), 425, 1);
               while (true) {
-                if (var8.field_b == 0) {
+                if (var8.status == 0) {
                   TrapSpawner.sleepMillis(0, 10L);
                   if (var9 == 0) {
                     continue;

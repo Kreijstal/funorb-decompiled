@@ -37,10 +37,10 @@ final class RenderLayer {
         try {
           while (true) {
             var3 = param1.requestExitFullscreen(param2, 18885);
-            while (0 == var3.field_b) {
+            while (0 == var3.status) {
               TrapSpawner.sleepMillis(0, 10L);
             }
-            if (1 != var3.field_b) {
+            if (1 != var3.status) {
               TrapSpawner.sleepMillis(0, 100L);
               continue;
             }

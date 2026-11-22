@@ -76,7 +76,7 @@ final class oc extends IntrusiveNode {
         AsyncRequest var11 = null;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (!param3.a(-124)) {
+          if (!param3.isFullscreenAvailable(-124)) {
             return null;
           }
           if (param1 == 0) {

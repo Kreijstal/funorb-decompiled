@@ -29,18 +29,18 @@ final class hb {
                 stackIn_35_0 = null;
                 if (!var12) {
                   if (stackIn_35_0 != var2.field_f[var4]) {
-                    if (var2.field_f[var4].field_a == 2) {
+                    if (var2.field_f[var4].status == 2) {
                       var2.field_e[var4] = -5;
                     }
-                    if (var2.field_f[var4].field_a == 0) {
+                    if (var2.field_f[var4].status == 0) {
                       var3 = true;
                     }
                   }
                   if (null != var2.field_h[var4]) {
-                    if (var2.field_h[var4].field_a == 2) {
+                    if (var2.field_h[var4].status == 2) {
                       var2.field_e[var4] = -6;
                     }
-                    if (var2.field_h[var4].field_a == 0) {
+                    if (var2.field_h[var4].status == 0) {
                       var3 = true;
                     }
                   }
@@ -73,18 +73,18 @@ final class hb {
                     int var6_int = var2.field_l[var5];
                     switch (var6_int) {
                       case 0:
-                        var7 = (java.lang.reflect.Field) (var2.field_f[var5].field_f);
+                        var7 = (java.lang.reflect.Field) (var2.field_f[var5].result);
                         var8_int = var7.getInt((Object) null);
                         param0.writeByte(-1336879960, 0);
                         param0.writeInt((byte) 90, var8_int);
                         break;
                       case 1:
-                        var7 = (java.lang.reflect.Field) (var2.field_f[var5].field_f);
+                        var7 = (java.lang.reflect.Field) (var2.field_f[var5].result);
                         var7.setInt((Object) null, var2.field_i[var5]);
                         param0.writeByte(-1336879960, 0);
                         break;
                       case 2:
-                        var7 = (java.lang.reflect.Field) (var2.field_f[var5].field_f);
+                        var7 = (java.lang.reflect.Field) (var2.field_f[var5].result);
                         var8_int = var7.getModifiers();
                         param0.writeByte(-1336879960, 0);
                         param0.writeInt((byte) 28, var8_int);
@@ -96,7 +96,7 @@ final class hb {
                     boolean decompiledFrameCompleted0 = true;
                     if (3 != var6_int &&
                       (decompiledFrameRemainder0 = (var6_int == 4))) {
-                      var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].field_f);
+                      var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].result);
                       var8_int = var7_ref.getModifiers();
                       param0.writeByte(param1 - 1336904692, 0);
                       param0.writeInt((byte) 65, var8_int);
@@ -104,7 +104,7 @@ final class hb {
                     if (decompiledFrameRemainder0 &&
                       (3 == var6_int ||
                       var12)) {
-                      var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].field_f);
+                      var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].result);
                       byte[][] var8 = var2.field_k[var5];
                       Object[] var9 = new Object[var8.length];
                       int var10_int = 0;

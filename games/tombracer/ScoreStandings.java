@@ -67,7 +67,7 @@ final class ScoreStandings {
           if (param1 != 28893) {
             ScoreStandings.releaseStatics(47);
           }
-          if (!SoftwareModelBillboard.field_a.field_c) {
+          if (!SoftwareModelBillboard.field_a.privilegedTasksEnabled) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }

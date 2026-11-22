@@ -132,17 +132,17 @@ final class GzipInflater {
             Room.field_R = RaceStandings.field_a.requestSocket(-24818, ConstrainToLatticeLocomotor.field_x, nn.field_b);
           }
           var2 = -67 % ((param1 - 67) / 35);
-          if (0 == Room.field_R.field_b) {
+          if (0 == Room.field_R.status) {
             return false;
           }
           dupTemp$1 = AdjustedWallClock.currentTimeMillis((byte) -107);
           ValidationStatusIcon.field_D = dupTemp$1;
           MiscItemBehaviour.field_s = dupTemp$1;
-          if (Room.field_R.field_b != 1) {
+          if (Room.field_R.status != 1) {
             ProceduralTexture.field_p = SecondaryNodeHashTable.field_g;
           } else {
             try {
-              OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), RaceStandings.field_a);
+              OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.result), RaceStandings.field_a);
               ql.field_k.position = 0;
               var4 = WeaveOperator.field_q;
               ProceduralTexture.field_p = RotaterMountComponent.field_G;

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public class AsyncRequest {
-    int field_d;
-    int field_a;
-    Object field_c;
-    public int field_e;
-    AsyncRequest field_g;
-    public volatile Object field_f;
-    public volatile int field_b;
+    int secondaryIntArgument;
+    int requestType;
+    Object objectArgument;
+    public int intArgument;
+    AsyncRequest next;
+    public volatile Object result;
+    public volatile int status;
 
     AsyncRequest() {
-        this.field_b = 0;
+        this.status = 0;
     }
 }

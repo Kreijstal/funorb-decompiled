@@ -116,7 +116,7 @@ final class cn extends mi {
         String stackIn_8_2 = null;
         try {
           if (param1 == 75) {
-            boolean stackIn_4_0 = param0.a((byte) 84);
+            boolean stackIn_4_0 = param0.isFullscreenAvailable((byte) 84);
             return stackIn_4_0;
           }
           return true;

@@ -325,7 +325,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (pt.field_b != null) {
             try {
-              pt.field_b.b(-115);
+              pt.field_b.shutdown(-115);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -726,9 +726,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SystemTaskService dupTemp$0 = new SystemTaskService(param6, param3, param2, true);
               pt.field_b = dupTemp$0;
               mj.field_a = dupTemp$0;
-              SystemTask var8 = pt.field_b.a(1, 1048576, (Runnable) (this));
+              SystemTask var8 = pt.field_b.requestThreadStart(1, 1048576, (Runnable) (this));
               while (true) {
-                if (var8.field_a == 0) {
+                if (var8.status == 0) {
                   IntrusiveNode.a(10L, false);
                   if (!var9) {
                     continue;

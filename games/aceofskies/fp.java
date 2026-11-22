@@ -11,20 +11,20 @@ final class fp extends IntrusiveNode {
     final static boolean a(byte param0, boolean param1) {
         try {
           if (null == MenuInputState.field_b) {
-            MenuInputState.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
+            MenuInputState.field_b = ii.field_j.requestDirectSocket(2, ca.field_g, sg.field_b);
           }
-          if (MenuInputState.field_b.field_a == 0) {
+          if (MenuInputState.field_b.status == 0) {
             return false;
           }
           int var2 = 72 / ((-10 - param0) / 56);
           long dupTemp$1 = kh.a(-114);
           co.field_e = dupTemp$1;
           ff.field_b = dupTemp$1;
-          if (MenuInputState.field_b.field_a != 1) {
+          if (MenuInputState.field_b.status != 1) {
             ca.field_f = RasterBuffer.field_f;
           } else {
             try {
-              MidiNote.field_l = new BufferedSocket((java.net.Socket) (MenuInputState.field_b.field_f), ii.field_j);
+              MidiNote.field_l = new BufferedSocket((java.net.Socket) (MenuInputState.field_b.result), ii.field_j);
               CipherPacketBuffer var4 = IntKeyLookup.incomingPacket;
               q.outgoingPacket.position = 0;
               var4.position = 0;

@@ -91,9 +91,9 @@ final class ge extends WidgetWrapper {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == SauceOfFlameAnimation.field_x) {
-            SauceOfFlameAnimation.field_x = cc.field_e.a((byte) 121, oca.field_p, CurryArenaTheme.field_h);
+            SauceOfFlameAnimation.field_x = cc.field_e.requestDirectSocket((byte) 121, oca.field_p, CurryArenaTheme.field_h);
           }
-          if (0 == SauceOfFlameAnimation.field_x.field_f) {
+          if (0 == SauceOfFlameAnimation.field_x.status) {
             return false;
           }
           dupTemp$1 = f.b((byte) 73);
@@ -102,11 +102,11 @@ final class ge extends WidgetWrapper {
           if (param0 != -29510) {
             field_K = (IndexedSprite) null;
           }
-          if (SauceOfFlameAnimation.field_x.field_f != 1) {
+          if (SauceOfFlameAnimation.field_x.status != 1) {
             eia.field_a = mk.field_o;
           } else {
             try {
-              dma.field_b = new BufferedSocket((java.net.Socket) (SauceOfFlameAnimation.field_x.field_e), cc.field_e);
+              dma.field_b = new BufferedSocket((java.net.Socket) (SauceOfFlameAnimation.field_x.result), cc.field_e);
               var4 = ig.field_m;
               var5 = var4;
               sja.field_fb.position = 0;

@@ -36,7 +36,7 @@ final class DisableSpecial extends SpecialOrder {
         PlatformTask var11 = null;
         var9 = BachelorFridge.field_y;
         try {
-          if (!param1.b(34)) {
+          if (!param1.isFullscreenAvailable(34)) {
             return null;
           }
           if (0 == param5) {
@@ -62,16 +62,16 @@ final class DisableSpecial extends SpecialOrder {
               return (java.awt.Frame) (stackIn_27_0);
             }
           }
-          var11 = param1.a(param5, param2, param4 ^ 124, param0, param3);
-          while (var11.field_f == 0) {
+          var11 = param1.requestFullscreenEnter(param5, param2, param4 ^ 124, param0, param3);
+          while (var11.status == 0) {
             gda.a(false, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_33_0 = null;
             return (java.awt.Frame) (stackIn_33_0);
           }
-          if (param4 != var11.field_f) {
+          if (param4 != var11.status) {
             return var7;
           }
           gv.a(-111, param1, var7);
