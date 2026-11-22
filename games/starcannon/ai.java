@@ -194,9 +194,9 @@ final class ai {
             !(param2 <= nf.field_b.length)) {
             nf.field_b = new int[param2 * 2];
           }
-          if (null == gj.field_f ||
-            !(param2 <= gj.field_f.length)) {
-            gj.field_f = new int[2 * param2];
+          if (null == MouseWheelSource.field_f ||
+            !(param2 <= MouseWheelSource.field_f.length)) {
+            MouseWheelSource.field_f = new int[2 * param2];
           }
           if (ab.field_G == null) {
             ab.field_G = new int[2 * param2];
@@ -285,9 +285,9 @@ final class ai {
               !(param2 <= nf.field_b.length)) {
               nf.field_b = new int[param2 * 2];
             }
-            if (null == gj.field_f ||
-              !(param2 <= gj.field_f.length)) {
-              gj.field_f = new int[2 * param2];
+            if (null == MouseWheelSource.field_f ||
+              !(param2 <= MouseWheelSource.field_f.length)) {
+              MouseWheelSource.field_f = new int[2 * param2];
             }
             if (ab.field_G == null) {
               ab.field_G = new int[2 * param2];
@@ -376,9 +376,9 @@ final class ai {
               !(param2 <= nf.field_b.length)) {
               nf.field_b = new int[param2 * 2];
             }
-            if (null == gj.field_f ||
-              !(param2 <= gj.field_f.length)) {
-              gj.field_f = new int[2 * param2];
+            if (null == MouseWheelSource.field_f ||
+              !(param2 <= MouseWheelSource.field_f.length)) {
+              MouseWheelSource.field_f = new int[2 * param2];
             }
             if (ab.field_G == null) {
               ab.field_G = new int[2 * param2];

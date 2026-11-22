@@ -68,7 +68,7 @@ public final class MonkeyPuzzle2 extends bi {
           qa.a((byte) 115);
           tk.a(119);
           qh.clearStaticReferences(8);
-          cc.clearStaticReferences(256);
+          MouseWheelInput.clearStaticReferences(256);
           ge.c();
           ad.clearStaticReferences((byte) 123);
           el.a(true);

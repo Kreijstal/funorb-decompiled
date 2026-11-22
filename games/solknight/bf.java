@@ -53,14 +53,14 @@ final class bf {
           if (te.field_N.position >= param1) {
             return true;
           }
-          if (lf.field_d == null) {
+          if (MouseWheelInput.field_d == null) {
             return false;
           }
           try {
             if (param0 < 35) {
               bf.c(-65, -12);
             }
-            var2_int = lf.field_d.b(-30119);
+            var2_int = MouseWheelInput.field_d.b(-30119);
             if (var2_int <= 0) {
               if (0 > var2_int) {
                 je.a(false);
@@ -75,7 +75,7 @@ final class bf {
             if (param1 - te.field_N.position < var2_int) {
               var2_int = param1 - te.field_N.position;
             }
-            lf.field_d.a((byte) 59, te.field_N.position, var2_int, te.field_N.payload);
+            MouseWheelInput.field_d.a((byte) 59, te.field_N.position, var2_int, te.field_N.payload);
             md.field_y = je.a(1);
             te.field_N.position = te.field_N.position + var2_int;
             if (te.field_N.position < param1) {

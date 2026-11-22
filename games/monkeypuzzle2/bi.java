@@ -370,7 +370,7 @@ abstract class bi extends GameApplet {
           cd.b(110);
         }
         if (eb.field_A != null) {
-          ab.field_d = eb.field_A.a(true);
+          ab.field_d = eb.field_A.pollRotation(true);
         }
         if (param0 != 99) {
           this.field_v = -121;
@@ -633,7 +633,7 @@ abstract class bi extends GameApplet {
         kj.a(fe.field_h, this.field_x, this.field_t, 5000, param0, this.field_p, this.field_u, this.field_w, param5, 5000, this.field_v, (byte) -111, this.field_r, rc.field_k);
         ii.a(rc.field_k, this.field_u, this.field_x, fe.field_h, this.field_r, param0, this.field_p, this.field_v, -2045);
         sj.a(92);
-        eb.field_A = cf.a(param4 + 25427);
+        eb.field_A = cf.createMouseWheelInput(param4 + 25427);
         af.a(20, ie.field_e);
         pl.field_g = param3;
         r.field_e = param1;
@@ -826,7 +826,7 @@ abstract class bi extends GameApplet {
                   pc.a((byte) -46, var5_intLifetime2, sl.field_n);
                   sl.field_n = null;
                 } else {
-                  cc.field_b = ProxySocketConnector.field_f;
+                  MouseWheelInput.field_b = ProxySocketConnector.field_f;
                   db.a(false);
                   ha.field_db = false;
                   k.field_g = 10;

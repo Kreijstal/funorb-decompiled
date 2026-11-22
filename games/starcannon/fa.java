@@ -31,7 +31,7 @@ final class fa extends UiWidget {
           t.field_u = param2;
         }
         nf.field_b[ed.field_p] = param4;
-        gj.field_f[ed.field_p] = param0;
+        MouseWheelSource.field_f[ed.field_p] = param0;
         ab.field_G[ed.field_p] = param3;
         int var6 = 27 % ((-39 - param5) / 50);
         int var7 = param3 + (param4 + param0);

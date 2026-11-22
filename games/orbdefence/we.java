@@ -95,7 +95,7 @@ final class we extends ta implements ai {
         }
         kc var5 = lm.field_f;
         if (null != this.field_D) {
-          var5.a(pe.field_c, this.field_s + param3, this.field_n + param0, this.field_m, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_H);
+          var5.a(MouseWheelInput.field_c, this.field_s + param3, this.field_n + param0, this.field_m, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_H);
         }
     }
 

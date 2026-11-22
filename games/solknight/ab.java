@@ -502,7 +502,7 @@ abstract class ab extends GameApplet {
         ff.a(this.field_z, wh.field_c, param1, (byte) 110, this.field_C, this.field_m, this.field_y, 5000, this.field_x, this.field_n, param5, 5000, vd.field_b, this.field_w);
         sk.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
         Archive.a(0);
-        ah.field_d = ld.j(0);
+        ah.field_d = ld.createMouseWheelInput(0);
         th.a((byte) -63, dc.field_q);
         if (!param4) {
           this.field_m = -97;
@@ -638,7 +638,7 @@ abstract class ab extends GameApplet {
           lj.e(false);
         }
         if (null != ah.field_d) {
-          cl.field_n = ah.field_d.a(9408);
+          cl.field_n = ah.field_d.pollRotation(9408);
         }
         if (wf.c((byte) -63)) {
           var3 = 1200 * l.a((byte) 99);

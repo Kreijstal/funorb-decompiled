@@ -32,7 +32,7 @@ abstract class u {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (oi.a(8975, param0)) {
+          if (MouseWheelInput.a(8975, param0)) {
             return false;
           }
           if (g.b((byte) 99, param0)) {

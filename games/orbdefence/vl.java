@@ -332,7 +332,7 @@ final class vl implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              pe.a((byte) -13, (Throwable) ((Object) var2_ref), (String) null);
+              MouseWheelInput.a((byte) -13, (Throwable) ((Object) var2_ref), (String) null);
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {

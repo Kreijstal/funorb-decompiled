@@ -238,7 +238,7 @@ final class hb extends PacketBuffer {
 
     final static void b(int param0, boolean param1) {
         int var2 = -57 % ((param0 - 52) / 40);
-        cc.a(192, true, param1);
+        MouseWheelInput.a(192, true, param1);
     }
 
     static {

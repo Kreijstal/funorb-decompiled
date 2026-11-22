@@ -232,7 +232,7 @@ final class uk {
             th.a(stackIn_12_0 + stackIn_12_1);
             return;
           }
-          pe.a((byte) -13, (Throwable) null, "HS1: " + sj.b(true));
+          MouseWheelInput.a((byte) -13, (Throwable) null, "HS1: " + sj.b(true));
           th.a(param0 + 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

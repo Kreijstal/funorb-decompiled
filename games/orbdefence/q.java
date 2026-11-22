@@ -96,8 +96,8 @@ final class q {
           if (pd.field_C > 0) {
             fieldTemp$13 = pd.field_C - 1;
             pd.field_C = pd.field_C - 1;
-            var3_ref_byte__Lifetime4 = pe.field_a[fieldTemp$13];
-            pe.field_a[pd.field_C] = null;
+            var3_ref_byte__Lifetime4 = MouseWheelInput.field_a[fieldTemp$13];
+            MouseWheelInput.field_a[pd.field_C] = null;
             return var3_ref_byte__Lifetime4;
           }
           if (param0 != 30000) {
@@ -183,8 +183,8 @@ final class q {
         if (pd.field_C > 0) {
           fieldTemp$7 = pd.field_C - 1;
           pd.field_C = pd.field_C - 1;
-          var3_ref_byte__Lifetime2 = pe.field_a[fieldTemp$7];
-          pe.field_a[pd.field_C] = null;
+          var3_ref_byte__Lifetime2 = MouseWheelInput.field_a[fieldTemp$7];
+          MouseWheelInput.field_a[pd.field_C] = null;
           return var3_ref_byte__Lifetime2;
         }
         if (param0 != 30000) {

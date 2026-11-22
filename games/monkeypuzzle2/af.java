@@ -32,7 +32,7 @@ final class af {
           mh.a(-104, (java.awt.Component) ((Object) param1));
           o.a((java.awt.Component) ((Object) param1), true);
           if (eb.field_A != null) {
-            eb.field_A.a((java.awt.Component) ((Object) param1), -8206);
+            eb.field_A.attach((java.awt.Component) ((Object) param1), -8206);
           }
           if (param0 == 20) {
             return;

@@ -153,7 +153,7 @@ final class rh extends ae {
             }
             if (var5 < 0) {
               lj.field_u.c(var7, var9Lifetime1, ka.field_q + var1_int, var6, -1);
-              var1_int = var1_int + kb.field_d;
+              var1_int = var1_int + MouseWheelInput.field_d;
             } else {
               na.field_c.c(var7, var9Lifetime1, sd.field_s + var1_int, var6, -1);
               var1_int = var1_int + (eh.field_d + ab.field_b + cl.field_l);

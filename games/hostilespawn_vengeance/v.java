@@ -56,7 +56,7 @@ final class v {
           if (null == h.field_b) {
             return;
           }
-          h.field_b.a(0, (java.awt.Component) ((Object) param1));
+          h.field_b.detach(0, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

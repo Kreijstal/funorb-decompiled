@@ -76,16 +76,16 @@ final class cf {
         return var1;
     }
 
-    final static cc a(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          cc stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 255) {
               cf.c((byte) 16);
             }
-            stackIn_3_0 = (cc) (Class.forName("nb").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

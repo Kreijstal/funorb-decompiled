@@ -3,7 +3,7 @@
  */
 final class mj extends IntrusiveNode {
     static java.applet.Applet field_j;
-    static pe field_i;
+    static MouseWheelInput field_i;
     int field_g;
     static String field_k;
     int field_h;
@@ -30,7 +30,7 @@ final class mj extends IntrusiveNode {
           cc.field_f.b(56);
         }
         if (param0 != -21108) {
-          field_i = (pe) null;
+          field_i = (MouseWheelInput) null;
           return;
         }
     }

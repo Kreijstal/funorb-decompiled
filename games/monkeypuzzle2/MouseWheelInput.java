@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cc {
+abstract class MouseWheelInput {
     static Sprite[][] field_a;
     static long field_b;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
     final static void b(boolean param0) {
         int var1_int = 0;
@@ -41,7 +41,7 @@ abstract class cc {
         }
     }
 
-    abstract int a(boolean param0);
+    abstract int pollRotation(boolean param0);
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param1) {
@@ -50,7 +50,7 @@ abstract class cc {
           if (param0 == 192) {
             return;
           }
-          cc.clearStaticReferences(-77);
+          MouseWheelInput.clearStaticReferences(-77);
           return;
         }
         ge.d();
@@ -58,7 +58,7 @@ abstract class cc {
         if (param0 == 192) {
           return;
         }
-        cc.clearStaticReferences(-77);
+        MouseWheelInput.clearStaticReferences(-77);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -68,7 +68,7 @@ abstract class cc {
         field_a = (Sprite[][]) null;
     }
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void attach(java.awt.Component param0, int param1);
 
     static {
         field_a = new Sprite[3][];

@@ -26,7 +26,7 @@ final class ej {
           if (null == sc.field_e) {
             return;
           }
-          sc.field_e.a((byte) -91, (java.awt.Component) ((Object) param0));
+          sc.field_e.attach((byte) -91, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

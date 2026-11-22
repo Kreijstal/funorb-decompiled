@@ -21,15 +21,15 @@ final class qa {
           DualLinkNode.field_k = s.field_f;
           if (param0 == 255) {
             stackIn_9_0 = !(qb.field_a >= 13);
-            gj.field_a = cf.a(stackIn_9_0, false);
+            MouseWheelSource.field_a = cf.a(stackIn_9_0, false);
           } else {
             if (param0 < 100) {
-              gj.field_a = fb.a(param2, param0, 0);
+              MouseWheelSource.field_a = fb.a(param2, param0, 0);
             } else {
               if (105 < param0) {
-                gj.field_a = fb.a(param2, param0, 0);
+                MouseWheelSource.field_a = fb.a(param2, param0, 0);
               } else {
-                gj.field_a = hc.a(param1, 0);
+                MouseWheelSource.field_a = hc.a(param1, 0);
               }
             }
           }

@@ -808,9 +808,9 @@ final class jl {
                                 if (!this.field_e.h(-84)) {
                                   break;
                                 }
-                                if (gj.field_c >= 0) {
+                                if (MouseWheelSource.field_c >= 0) {
                                   fi.field_e.field_k = 0;
-                                  gj.field_c = 0;
+                                  MouseWheelSource.field_c = 0;
                                   tj.field_G = 0;
                                   if (null != ah.field_a) {
                                     ah.field_a.h(6000);
@@ -958,7 +958,7 @@ final class jl {
               fc.field_e = fc.field_e - (ia.field_k << 1);
               vb.field_m = 1;
               sd.field_c = 0;
-              gj.field_c = 2;
+              MouseWheelSource.field_c = 2;
               qb.field_e = 0;
               ia.field_k = 0;
               ua.field_c = -3;

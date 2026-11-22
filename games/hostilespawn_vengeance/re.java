@@ -2987,7 +2987,7 @@ final class re {
         var3 = this.a(jf.field_f, param0 + 8, var3);
         var3 = this.a((bd) null, al.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
         var3 = this.a(il.field_c[10], g.field_K, var3, ln.field_p, (byte) 80, il.field_c[8]);
-        var3 = this.a((bd) null, kb.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
+        var3 = this.a((bd) null, MouseWheelInput.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
         var3 = this.a((bd) null, eh.field_h, var3, (String) null, (byte) 80, km.field_A[0]);
         var3 = this.a((bd) null, ga.field_c, var3, (String) null, (byte) 80, pi.field_b);
         var3 = this.a(mb.field_k, param0 ^ 58, var3);

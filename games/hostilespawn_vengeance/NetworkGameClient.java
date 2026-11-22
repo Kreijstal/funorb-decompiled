@@ -83,7 +83,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           m.a(param3, param1, gf.field_b, this.field_v, 5000, this.field_q, nl.field_c, 5000, this.field_m, this.field_x, this.field_o, -40, this.field_p, this.field_z);
           hh.a(nl.field_c, this.field_v, gf.field_b, this.field_p, this.field_o, this.field_q, this.field_m, param3, -1);
           rb.e(-2);
-          h.field_b = ti.b((byte) -55);
+          h.field_b = ti.createMouseWheelInput((byte) -55);
           ea.a(GameAppletShell.field_h, 0);
           nm.field_i = param6;
           ck.field_e = param4;
@@ -553,7 +553,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           vf.j(param1 - 9769);
         }
         if (null != h.field_b) {
-          ll.field_c = h.field_b.a((byte) 60);
+          ll.field_c = h.field_b.pollRotation((byte) 60);
         }
         if (kl.b(50)) {
           var3 = 1200 * eh.a((byte) -63);

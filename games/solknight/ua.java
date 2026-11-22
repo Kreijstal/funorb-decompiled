@@ -99,7 +99,7 @@ final class ua extends WidgetContainer implements ka {
         if (param0 > -92) {
           ua.a((byte) 57);
         }
-        hc.a(lf.field_e, false, SocketConnector.field_d, true);
+        hc.a(MouseWheelInput.field_e, false, SocketConnector.field_d, true);
         ga.field_G = true;
     }
 

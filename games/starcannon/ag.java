@@ -302,7 +302,7 @@ abstract class ag extends GameApplet {
           ce.a((byte) -100);
         }
         if (qj.field_eb != null) {
-          lh.field_I = qj.field_eb.a((byte) -107);
+          lh.field_I = qj.field_eb.pollRotation((byte) -107);
         }
         if (fc.a((byte) 57)) {
           var3 = 1200 * wc.a(-75);
@@ -524,7 +524,7 @@ abstract class ag extends GameApplet {
         le.a(this.field_u, vg.field_b, 5000, nb.field_e, param6, 22692, this.field_l, this.field_s, this.field_w, this.field_v, this.field_p, 5000, param0, this.field_q);
         hj.a(vg.field_b, this.field_p, nb.field_e, this.field_q, 78, this.field_w, param0, this.field_u, this.field_v);
         ge.b(4039);
-        qj.field_eb = wc.b(5220);
+        qj.field_eb = wc.createMouseWheelInput(5220);
         mf.a(true, kj.field_E);
         IntrusiveNode.field_c = param7;
         p.field_c = param1;

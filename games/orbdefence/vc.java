@@ -200,7 +200,7 @@ final class vc {
               return;
             }
             if (4 != var2) {
-              pe.a((byte) -13, (Throwable) null, "F1: " + sj.b(true));
+              MouseWheelInput.a((byte) -13, (Throwable) null, "F1: " + sj.b(true));
               th.a(113);
               return;
             }

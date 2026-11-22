@@ -161,7 +161,7 @@ class dk extends UiWidget {
           if (u.a(param1 ^ 9566, param0)) {
             return true;
           }
-          var10 = gj.field_d;
+          var10 = MouseWheelSource.field_d;
           var8 = var10;
           var5 = var8;
           var2 = var5;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class oi {
+abstract class MouseWheelInput {
     static he field_h;
     static he[] field_a;
     static double[] field_b;
@@ -54,7 +54,7 @@ abstract class oi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -85) {
-            oi.clearStaticReferences((byte) -77);
+            MouseWheelInput.clearStaticReferences((byte) -77);
           }
           stackIn_3_0 = pj.a((String) null, 0, param0, param1, param2 + 85, 0, false);
           return stackIn_3_0;
@@ -78,9 +78,9 @@ abstract class oi {
         }
     }
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void detach(java.awt.Component param0, byte param1);
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
     final static void b(byte param0) {
         try {
@@ -147,7 +147,7 @@ abstract class oi {
         field_a = null;
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
     final static boolean a(int param0, String param1) {
         int var2_int = 0;
@@ -170,7 +170,7 @@ abstract class oi {
           if (param0 == 8975) {
             return false;
           }
-          oi.a(-35, (byte) 4);
+          MouseWheelInput.a(-35, (byte) 4);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

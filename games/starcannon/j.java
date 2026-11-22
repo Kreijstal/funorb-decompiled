@@ -47,7 +47,7 @@ final class j {
           j.b(69);
         }
         if (!li.field_b.a(29741)) {
-          return gj.field_b + " - " + li.field_b.a((byte) 116) + "%";
+          return MouseWheelSource.field_b + " - " + li.field_b.a((byte) 116) + "%";
         }
         return ba.field_a;
     }

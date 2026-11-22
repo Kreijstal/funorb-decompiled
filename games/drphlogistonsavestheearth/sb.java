@@ -121,7 +121,7 @@ final class sb {
           hb.a(param0 ^ -72, n.field_g);
           oe.b(-19495);
           de.e(-86);
-          oi.b((byte) -120);
+          MouseWheelInput.b((byte) -120);
           if (param0 != 67) {
             field_d = (bl) null;
             if (DrPhlogistonSavesTheEarth.t(18137)) {
@@ -140,7 +140,7 @@ final class sb {
         }
         oe.b(-19495);
         de.e(-86);
-        oi.b((byte) -120);
+        MouseWheelInput.b((byte) -120);
         if (param0 == 67) {
           if (DrPhlogistonSavesTheEarth.t(18137)) {
             nj.field_p.d(1, param0 - 18459);

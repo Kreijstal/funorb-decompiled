@@ -1478,7 +1478,7 @@ final class lm {
                 }
                 var2 = t.a(param0 ^ 15188, "create_suggestions");
                 if (var2 != null) {
-                  pe.field_c = bk.a(var2, param0 - 12581);
+                  MouseWheelInput.field_c = bk.a(var2, param0 - 12581);
                 }
                 var2 = t.a(15136, "create_more_suggestions");
                 if (var2 != null) {

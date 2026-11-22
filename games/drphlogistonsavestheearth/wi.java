@@ -35,7 +35,7 @@ final class wi {
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
-          if (oi.field_c) {
+          if (MouseWheelInput.field_c) {
             stackIn_9_0 = 3;
             return stackIn_9_0;
           }
@@ -150,7 +150,7 @@ final class wi {
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7, int param8) {
         try {
-          oi.field_e = param6;
+          MouseWheelInput.field_e = param6;
           LevelSession.field_ib = param0;
           tb.field_a = param1;
           IntrusiveNode.field_c = param7;

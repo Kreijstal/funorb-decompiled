@@ -103,7 +103,7 @@ public final class OrbDefence extends NetworkGameClient {
         var2Lifetime1 = -59 / ((54 - param0) / 39);
         if (!n.b((byte) -70)) {
           while (true) {
-            var3_ref_ha = (ha) (pe.field_b.e(0));
+            var3_ref_ha = (ha) (MouseWheelInput.field_b.e(0));
             if (var3_ref_ha == null) {
               break;
             }
@@ -382,7 +382,7 @@ public final class OrbDefence extends NetworkGameClient {
         GameAppletShell.b(13695);
         uj.c(0);
         MouseInputListener.a(8);
-        pe.b(121);
+        MouseWheelInput.b(121);
         ul.b();
         ki.clearStaticReferences(false);
         kc.clearStaticReferences();

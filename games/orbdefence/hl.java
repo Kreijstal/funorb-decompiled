@@ -270,7 +270,7 @@ abstract class hl extends ej {
           if (mj.field_i == null) {
             return;
           }
-          mj.field_i.a(108, (java.awt.Component) ((Object) param0));
+          mj.field_i.detach(108, (java.awt.Component) ((Object) param0));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

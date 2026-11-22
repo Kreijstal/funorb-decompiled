@@ -1416,7 +1416,7 @@ final class ib {
                 }
                 var2 = mk.b("bigdoorisbad", (byte) -123);
                 if (var2 != null) {
-                  kb.field_a = nm.a(123, var2);
+                  MouseWheelInput.field_a = nm.a(123, var2);
                 }
                 var2 = mk.b("barrelgoboom", (byte) -128);
                 if (null != var2) {

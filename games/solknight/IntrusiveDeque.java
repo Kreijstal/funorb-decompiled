@@ -143,7 +143,7 @@ final class IntrusiveDeque {
           if (ah.field_d == null) {
             return;
           }
-          ah.field_d.a((java.awt.Component) ((Object) param1), -127);
+          ah.field_d.detach((java.awt.Component) ((Object) param1), -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

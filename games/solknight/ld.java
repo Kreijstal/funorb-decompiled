@@ -30,16 +30,16 @@ abstract class ld extends kf {
         this.field_P = param1;
     }
 
-    final static lf j(int param0) {
+    final static MouseWheelInput createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          lf stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != 0) {
             ld.c(-118, -71, 91);
           }
           try {
-            stackIn_3_0 = (lf) (Class.forName("MouseWheelHandler").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -247,7 +247,7 @@ abstract class ld extends kf {
 
     void e(boolean param0) {
         if (!param0) {
-          ld.j(31);
+          ld.createMouseWheelInput(31);
         }
         if (this.field_L <= 0) {
           return;

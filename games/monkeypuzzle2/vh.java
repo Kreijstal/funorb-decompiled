@@ -176,7 +176,7 @@ final class vh extends ButtonWidget {
           SecondaryNodeDeque.a((java.awt.Component) ((Object) param0), (byte) -124);
           ac.a(-117, (java.awt.Component) ((Object) param0));
           if (null != eb.field_A) {
-            eb.field_A.a(0, (java.awt.Component) ((Object) param0));
+            eb.field_A.detach(0, (java.awt.Component) ((Object) param0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

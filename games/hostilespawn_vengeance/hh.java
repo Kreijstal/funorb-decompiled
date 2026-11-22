@@ -270,7 +270,7 @@ final class hh {
           for (var4Lifetime2 = 0; var4Lifetime2 < hf.field_d.length; var4Lifetime2++) {
             stackIn_112_0 = ArchiveIndex.field_m;
             if (jf.field_b[var4Lifetime2] < 0) {
-              stackIn_113_1 = kb.field_d;
+              stackIn_113_1 = MouseWheelInput.field_d;
             } else {
               stackIn_113_1 = eh.field_d;
             }
@@ -286,7 +286,7 @@ final class hh {
           while (var4Lifetime3 < hf.field_d.length) {
             var6Lifetime1 = jf.field_b[var4Lifetime3];
             if (0 > var6Lifetime1) {
-              var5Lifetime3 = var5Lifetime3 + kb.field_d;
+              var5Lifetime3 = var5Lifetime3 + MouseWheelInput.field_d;
             } else {
               var7Lifetime2 = wb.a(103, true, hf.field_d[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + cl.field_l;

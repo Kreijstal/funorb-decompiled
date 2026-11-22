@@ -317,7 +317,7 @@ final class pc extends hl {
               }
               var4_ref_ef.b(57);
             } else {
-              pe.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
+              MouseWheelInput.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
               th.a(119);
             }
           }

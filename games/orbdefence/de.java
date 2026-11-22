@@ -18,7 +18,7 @@ final class de {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            de.a((byte) -108);
+            de.createMouseWheelInput((byte) -108);
           }
           if (pk.a(107, param1, param0, param3)) {
             stackIn_6_0 = ok.a(-3362, param4.b(param1, false, param3));
@@ -67,16 +67,16 @@ final class de {
         field_b = null;
     }
 
-    final static pe a(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
-          pe stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != -112) {
-            return (pe) null;
+            return (MouseWheelInput) null;
           }
           try {
-            stackIn_3_0 = (pe) (Class.forName("ma").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -19,7 +19,7 @@ final class th extends si {
           f.a(0, (java.awt.Component) ((Object) param1));
           ch.a((java.awt.Component) ((Object) param1), 122);
           if (null != ah.field_d) {
-            ah.field_d.a((java.awt.Component) ((Object) param1), true);
+            ah.field_d.attach((java.awt.Component) ((Object) param1), true);
           }
           if (param0 < -33) {
             return;

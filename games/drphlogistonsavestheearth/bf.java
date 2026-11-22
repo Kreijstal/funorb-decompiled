@@ -721,7 +721,7 @@ final class bf {
             if (this.field_V % this.a((byte) 79, this.field_Q) == 0) {
               this.k(0);
             }
-            this.field_l = -oi.field_b[this.field_Q];
+            this.field_l = -MouseWheelInput.field_b[this.field_Q];
             decompiledFrameRemainder15 = (var5 != 0);
           }
           if ((decompiledFrameRemainder15) &&
@@ -753,7 +753,7 @@ final class bf {
               this.e(63);
             }
             this.field_g = (int)this.field_o;
-            this.field_l = -oi.field_b[this.field_Q];
+            this.field_l = -MouseWheelInput.field_b[this.field_Q];
             decompiledFrameRemainder15 = (this.field_Q == 47);
             if (decompiledFrameRemainder15) {
               this.field_l = this.field_l * -1.0;
@@ -798,7 +798,7 @@ final class bf {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             this.field_g = (int)this.field_o;
-            this.field_l = -oi.field_b[this.field_Q];
+            this.field_l = -MouseWheelInput.field_b[this.field_Q];
             decompiledFrameRemainder15 = (var5 != 0);
           }
           if ((decompiledFrameRemainder15) &&
@@ -813,7 +813,7 @@ final class bf {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            this.field_l = -oi.field_b[this.field_Q];
+            this.field_l = -MouseWheelInput.field_b[this.field_Q];
             decompiledFrameRemainder15 = (var5 != 0);
           }
           if ((decompiledFrameRemainder15) &&
@@ -1176,7 +1176,7 @@ final class bf {
                   var8 = og.field_e;
                   if (var13 != 0) {
                     if (var7Lifetime1 == 1) {
-                      var8 = oi.field_a;
+                      var8 = MouseWheelInput.field_a;
                       var8 = cc.field_y;
                     } else {
                       var8 = cc.field_y;
@@ -1184,7 +1184,7 @@ final class bf {
                   }
                 } else {
                   if (var7Lifetime1 == 1) {
-                    var8 = oi.field_a;
+                    var8 = MouseWheelInput.field_a;
                     if (var13 != 0) {
                       var8 = cc.field_y;
                     }
@@ -2177,13 +2177,13 @@ final class bf {
           var2_int = 15 % ((param0 + 90) / 33);
           boolean decompiledSharedTail0 = !(this.field_C);
           if (!decompiledSharedTail0) {
-            var7 = 4.0 * oi.field_b[this.field_Q];
+            var7 = 4.0 * MouseWheelInput.field_b[this.field_Q];
             var5 = 4.0 * ff.field_N[this.field_Q];
             var3 = 3.0 * vh.field_a[this.field_Q];
             decompiledSharedTail0 = (var12 != 0);
           }
           if (decompiledSharedTail0) {
-            var7 = oi.field_b[this.field_Q];
+            var7 = MouseWheelInput.field_b[this.field_Q];
             var5 = ff.field_N[this.field_Q];
             var3 = vh.field_a[this.field_Q];
           }
@@ -2191,7 +2191,7 @@ final class bf {
           if (var11 == 1) {
             this.field_l = 0.0;
             this.field_j = 0.0;
-            this.field_o = -(0.5 * (double)this.field_e * oi.field_b[this.field_Q]) + (double)(640 + this.field_m);
+            this.field_o = -(0.5 * (double)this.field_e * MouseWheelInput.field_b[this.field_Q]) + (double)(640 + this.field_m);
             this.field_N = 100.0 + 75.0 * ji.a(65535, (double)this.field_e / 18.0);
             return;
           }
@@ -2415,7 +2415,7 @@ final class bf {
             this.field_P = (int)((double)field_S[this.field_Q] / cd.a((byte) 121));
           }
           if (cj.field_c[this.field_Q]) {
-            this.field_l = -oi.field_b[this.field_Q];
+            this.field_l = -MouseWheelInput.field_b[this.field_Q];
           }
           if (ac.field_j[this.field_Q] != -1 &&
             nl.field_r[ac.field_j[this.field_Q]] != null) {
@@ -2473,8 +2473,8 @@ final class bf {
             case 9:
             case 10:
               this.c(5);
-              this.field_l = (-this.field_o + (double)this.field_g) / 640.0 * oi.field_b[this.field_Q];
-              this.field_j = oi.field_b[this.field_Q] * (((double)this.field_M - this.field_N) / 480.0);
+              this.field_l = (-this.field_o + (double)this.field_g) / 640.0 * MouseWheelInput.field_b[this.field_Q];
+              this.field_j = MouseWheelInput.field_b[this.field_Q] * (((double)this.field_M - this.field_N) / 480.0);
               var8 = Math.random();
               this.field_l = this.field_l * (0.25 + 0.75 * var8);
               this.field_j = this.field_j * (0.75 * var8 + 0.25);

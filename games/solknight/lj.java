@@ -2394,7 +2394,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("notyetachieved", 4);
                 if (null != var2) {
-                  lf.field_b = Archive.a(true, var2);
+                  MouseWheelInput.field_b = Archive.a(true, var2);
                 }
                 var2 = vd.a("achieved", 4);
                 if (var2 != null) {

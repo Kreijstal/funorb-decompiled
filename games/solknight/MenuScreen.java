@@ -1168,7 +1168,7 @@ final class MenuScreen {
           stackIn_46_0 = ((var5 & 1 << var7) == 0) ? 0 : 1;
           var11 = stackIn_46_0;
           if (var11 == 0) {
-            BufferedSocket.field_b.a(lf.field_b, 320, var10, 16727871, -1);
+            BufferedSocket.field_b.a(MouseWheelInput.field_b, 320, var10, 16727871, -1);
           } else {
             BufferedSocket.field_b.a(hc.field_f, 320, var10, 16777215, -1);
           }

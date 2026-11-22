@@ -28,7 +28,7 @@ final class dl extends si {
     final static void a(String param0, int param1, int param2) {
         int var3_int = 0;
         try {
-          oi.field_c = false;
+          MouseWheelInput.field_c = false;
           pj.field_F = false;
           if (param2 < 57) {
             dl.a(false, -65);

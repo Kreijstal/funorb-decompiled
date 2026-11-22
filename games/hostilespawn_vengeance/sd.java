@@ -68,7 +68,7 @@ class sd extends cn {
               }
               var4 = var4 + (eh.field_d + cl.field_l + (ab.field_b << 1));
             } else {
-              var4 = var4 + kb.field_d;
+              var4 = var4 + MouseWheelInput.field_d;
             }
             var3_int++;
           }

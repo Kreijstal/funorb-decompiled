@@ -477,7 +477,7 @@ final class mf extends PcmStream {
               return;
             }
             pf.field_a = si.field_B;
-            lf.field_c = lf.field_c + 1;
+            MouseWheelInput.field_c = MouseWheelInput.field_c + 1;
             if (0 > fg.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
                 fh.field_d[var2] = false;

@@ -47,7 +47,7 @@ final class fc extends IntrusiveNode {
           int var8Lifetime1;
           var9 = SolKnight.field_L ? 1 : 0;
           try {
-            if (null == lf.field_d &&
+            if (null == MouseWheelInput.field_d &&
               !ai.a(param2, (byte) -37)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
@@ -55,13 +55,13 @@ final class fc extends IntrusiveNode {
             if (qc.field_i == ef.field_e) {
               if (param2) {
                 var11 = (String) null;
-                lf.field_a = pb.a(false, param4, kc.field_P, 0, (String) null);
+                MouseWheelInput.field_a = pb.a(false, param4, kc.field_P, 0, (String) null);
               } else {
-                lf.field_a = rj.a(param0, (byte) 102, param4, false);
+                MouseWheelInput.field_a = rj.a(param0, (byte) 102, param4, false);
               }
               id.field_c.position = 0;
               id.field_c.writeByte(param5 ^ -121, 14);
-              id.field_c.writeByte(-127, lf.field_a.a(77).field_e);
+              id.field_c.writeByte(-127, MouseWheelInput.field_a.a(77).field_e);
               qf.a(param5 + 0, -1);
               ef.field_e = gl.field_s;
             }
@@ -81,7 +81,7 @@ final class fc extends IntrusiveNode {
               bf.c(54, 8)) {
               i.field_H = te.field_N.readLong(10526);
               te.field_N.position = 0;
-              ci.a(-25776, param2, param1, lf.field_a, param3);
+              ci.a(-25776, param2, param1, MouseWheelInput.field_a, param3);
               ef.field_e = UiWidget.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -144,8 +144,8 @@ final class fc extends IntrusiveNode {
               kf.field_D = FullscreenFocusCanvas.a(var13, -2);
               c.field_H = te.field_N.readUnsignedByte(255);
               ef.field_e = jj.field_Y;
-              if (lf.field_a.a(123) != dc.field_k) {
-                if (lf.field_a.a(param5 + 70) == qb.field_L) {
+              if (MouseWheelInput.field_a.a(123) != dc.field_k) {
+                if (MouseWheelInput.field_a.a(param5 + 70) == qb.field_L) {
                   bb.field_I.a((byte) 104, ia.g(-78));
                 }
               } else {
@@ -203,7 +203,7 @@ final class fc extends IntrusiveNode {
               var10 = (String) null;
               fc.a((Throwable) null, (String) null);
             }
-            if (null == lf.field_d) {
+            if (null == MouseWheelInput.field_d) {
               if (je.field_c) {
                 if (GameApplet.b(-1) > 30000L) {
                   md.field_v = il.field_d;

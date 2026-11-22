@@ -171,7 +171,7 @@ final class cb implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            pe.a((byte) -13, (Throwable) ((Object) var1_ref), (String) null);
+            MouseWheelInput.a((byte) -13, (Throwable) ((Object) var1_ref), (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

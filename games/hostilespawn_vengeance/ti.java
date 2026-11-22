@@ -144,16 +144,16 @@ final class ti implements nn {
         }
     }
 
-    final static kb b(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
-          kb stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 > -50) {
             ti.a(109);
           }
           try {
-            stackIn_3_0 = (kb) (Class.forName("ol").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -230,7 +230,7 @@ final class LevelSession {
           }
         } else {
           v.field_O.a(0, 0);
-          var3 = oi.field_f.field_d;
+          var3 = MouseWheelInput.field_f.field_d;
           if (sd.field_e == 2) {
             this.b((byte) -51);
           }
@@ -239,7 +239,7 @@ final class LevelSession {
             this.b((byte) 51, var4);
           }
           this.a((byte) 0, var4);
-          oi.field_f.d(var4, 0);
+          MouseWheelInput.field_f.d(var4, 0);
           var3 = 2 * nj.field_o.field_d;
           nj.field_o.d((int)((double)((var3 - 640) * -var9) / var7), 0);
           nj.field_o.d((int)(-((double)(var9 * (-640 + var3)) / var7) + (double)(var3 / 2)), 0);
@@ -2436,7 +2436,7 @@ final class LevelSession {
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = null;
         if (0 == this.levelNumber) {
-          var2 = oi.field_f;
+          var2 = MouseWheelInput.field_f;
         }
         if (param0 <= 109) {
           return;

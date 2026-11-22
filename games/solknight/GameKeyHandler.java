@@ -51,7 +51,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         try {
           if (null != i.field_J) {
-            lf.field_c = 0;
+            MouseWheelInput.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < RandomAccessCacheFile.field_b.length) {
@@ -95,7 +95,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3Lifetime1;
         try {
           if (i.field_J != null) {
-            lf.field_c = 0;
+            MouseWheelInput.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               RandomAccessCacheFile.field_b.length > var2_int) {

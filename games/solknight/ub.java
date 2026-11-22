@@ -57,7 +57,7 @@ final class ub {
         while (param1 != 0L) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = lf.field_f[(int)(-(param1 * 37L) + var7)];
+          var9 = MouseWheelInput.field_f[(int)(-(param1 * 37L) + var7)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var9 = 160;

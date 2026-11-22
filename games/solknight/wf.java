@@ -69,7 +69,7 @@ abstract class wf implements oe {
         if (param0 >= -41) {
           return false;
         }
-        if (lf.field_d == null) {
+        if (MouseWheelInput.field_d == null) {
           return false;
         }
         if (jj.field_Y != ef.field_e) {

@@ -182,10 +182,10 @@ final class cb {
               var6[0][var10] = ef.field_f[var11];
               var19[0][var10 * 4] = tk.field_f[var11];
               var19[0][1 + var10 * 4] = nf.field_b[var11];
-              var19[0][2 + 4 * var10] = gj.field_f[var11];
+              var19[0][2 + 4 * var10] = MouseWheelSource.field_f[var11];
               var19[0][4 * var10 + 3] = ab.field_G[var11];
               if (mc.a(ef.field_f[var11], 0) &&
-                0 == nf.field_b[var11] + (gj.field_f[var11] + ab.field_G[var11])) {
+                0 == nf.field_b[var11] + (MouseWheelSource.field_f[var11] + ab.field_G[var11])) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -201,10 +201,10 @@ final class cb {
               var6[1][var14] = ef.field_f[var11Lifetime1];
               var19[1][4 * var14] = tk.field_f[var11Lifetime1];
               var19[1][1 + 4 * var14] = nf.field_b[var11Lifetime1];
-              var19[1][2 + 4 * var14] = gj.field_f[var11Lifetime1];
+              var19[1][2 + 4 * var14] = MouseWheelSource.field_f[var11Lifetime1];
               var19[1][4 * var14 + 3] = ab.field_G[var11Lifetime1];
               if (mc.a(ef.field_f[var11Lifetime1], 0) &&
-                nf.field_b[var11Lifetime1] + gj.field_f[var11Lifetime1] + ab.field_G[var11Lifetime1] == 0) {
+                nf.field_b[var11Lifetime1] + MouseWheelSource.field_f[var11Lifetime1] + ab.field_G[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

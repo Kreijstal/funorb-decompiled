@@ -27,18 +27,18 @@ final class vb extends IntrusiveNode {
         field_s = null;
     }
 
-    final static oi a(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
-          oi stackIn_2_0 = null;
-          oi stackIn_4_0 = null;
+          MouseWheelInput stackIn_2_0 = null;
+          MouseWheelInput stackIn_4_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 == 65) {
-              stackIn_4_0 = (oi) (Class.forName("mc").newInstance());
+              stackIn_4_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
               return stackIn_4_0;
             }
-            stackIn_2_0 = (oi) null;
+            stackIn_2_0 = (MouseWheelInput) null;
             return stackIn_2_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

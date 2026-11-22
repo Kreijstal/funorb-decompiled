@@ -952,7 +952,7 @@ final class vj {
           }
           try {
             if (hf.field_C == 0) {
-              tc.field_e = oi.field_e.a(g.field_r, LevelSession.field_ib, 35);
+              tc.field_e = MouseWheelInput.field_e.a(g.field_r, LevelSession.field_ib, 35);
               hf.field_C = hf.field_C + 1;
             }
             if (hf.field_C == 1) {
@@ -965,7 +965,7 @@ final class vj {
               }
             }
             if (hf.field_C == 2) {
-              ea.field_a = new qe((java.net.Socket) (tc.field_e.field_g), oi.field_e);
+              ea.field_a = new qe((java.net.Socket) (tc.field_e.field_g), MouseWheelInput.field_e);
               var3 = new PacketBuffer(13);
               q.a(tb.field_a, IntrusiveNode.field_c, 26800, pk.field_q, var3);
               var3.writeByte(15, (byte) -92);

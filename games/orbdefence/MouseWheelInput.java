@@ -3,16 +3,16 @@
  */
 import java.io.*;
 
-abstract class pe {
+abstract class MouseWheelInput {
     static byte[][] field_a;
     static String field_c;
     static im field_b;
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void attach(java.awt.Component param0, int param1);
 
     final static void a(byte param0, Throwable param1, String param2) {
         try {
@@ -98,7 +98,7 @@ abstract class pe {
         field_a = (byte[][]) null;
         field_b = null;
         if (param0 <= 105) {
-          pe.b(119);
+          MouseWheelInput.b(119);
           field_c = null;
           return;
         }

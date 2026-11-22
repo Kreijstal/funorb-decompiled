@@ -85,7 +85,7 @@ final class ak {
         if (param0 != 60) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           ak.a(-96, -50, (String[]) null, true, -119, (java.applet.Applet) null);
-          if (null == lf.field_d) {
+          if (null == MouseWheelInput.field_d) {
             return false;
           }
           if (ef.field_e.a(80)) {
@@ -93,7 +93,7 @@ final class ak {
           }
           return false;
         }
-        if (null == lf.field_d) {
+        if (null == MouseWheelInput.field_d) {
           return false;
         }
         if (ef.field_e.a(80)) {

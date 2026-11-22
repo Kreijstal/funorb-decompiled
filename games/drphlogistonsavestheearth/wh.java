@@ -32,7 +32,7 @@ abstract class wh extends DualLinkNode {
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           mf.field_u = null;
-          oi.field_c = false;
+          MouseWheelInput.field_c = false;
           boolean decompiledSharedTail0 = !(sg.field_a);
           if (!decompiledSharedTail0) {
             ol.field_a.c(false);
@@ -101,7 +101,7 @@ abstract class wh extends DualLinkNode {
         int var13Lifetime1;
         var19 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var5_int = oi.a((param4 - param0) * 3, (byte) 1);
+          var5_int = MouseWheelInput.a((param4 - param0) * 3, (byte) 1);
           var6 = 3 * param0;
           vg.d((byte) 103);
           var7 = var5_int - 10;

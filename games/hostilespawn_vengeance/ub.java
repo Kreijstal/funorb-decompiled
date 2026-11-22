@@ -11,13 +11,13 @@ final class ub {
         if (param4 == -127) {
           sd.field_s = param2;
           eh.field_d = param1;
-          kb.field_d = param0;
+          MouseWheelInput.field_d = param0;
           return;
         }
         field_a = (int[][]) null;
         sd.field_s = param2;
         eh.field_d = param1;
-        kb.field_d = param0;
+        MouseWheelInput.field_d = param0;
     }
 
     public static void clearStaticReferences(int param0) {

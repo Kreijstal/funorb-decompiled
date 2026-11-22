@@ -83,7 +83,7 @@ final class oa implements Runnable {
           }
         } catch (Exception exception) {
           String var5 = (String) null;
-          pe.a((byte) -13, (Throwable) ((Object) exception), (String) null);
+          MouseWheelInput.a((byte) -13, (Throwable) ((Object) exception), (String) null);
         } finally {
           this.field_b = false;
         }

@@ -171,7 +171,7 @@ public final class SolKnight extends ab {
               sj.a(4, var5, -7471);
             }
           }
-          while (lf.a(ef.field_b, 122)) {
+          while (MouseWheelInput.a(ef.field_b, 122)) {
             this.d(true);
           }
           qf.a(0, 0);
@@ -207,7 +207,7 @@ public final class SolKnight extends ab {
           ClientException.a((byte) 125);
           GameApplet.d((byte) -41);
           na.a(-13357);
-          lf.b(18609);
+          MouseWheelInput.b(18609);
           SoftwareRasterizer.c();
           Archive.b(-127);
           BitmapFont.clearStaticReferences();

@@ -34,7 +34,7 @@ final class qf {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (null != lf.field_d && (0 > param1 ||
+          if (null != MouseWheelInput.field_d && (0 > param1 ||
             ef.field_e == jj.field_Y)) {
             if (param0 == id.field_c.position &&
               je.a(1) > gf.field_Y + 10000L) {
@@ -42,7 +42,7 @@ final class qf {
             }
             if (id.field_c.position > 0) {
               try {
-                lf.field_d.a(-28748, 0, id.field_c.position, id.field_c.payload);
+                MouseWheelInput.field_d.a(-28748, 0, id.field_c.position, id.field_c.payload);
                 gf.field_Y = je.a(1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

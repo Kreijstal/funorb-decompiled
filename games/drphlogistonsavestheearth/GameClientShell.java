@@ -50,7 +50,7 @@ abstract class GameClientShell extends GameAppletShell {
           this.field_p = -105;
         }
         if (sc.field_e != null) {
-          ma.field_sb = sc.field_e.a(0);
+          ma.field_sb = sc.field_e.pollRotation(0);
         }
         if (n.a(64)) {
           var3 = 1200 * pk.d((byte) 9);
@@ -257,7 +257,7 @@ abstract class GameClientShell extends GameAppletShell {
         ua.a(this.field_t, this.field_A, (byte) 34, this.field_v, 5000, sb.field_d, ob.field_c, 5000, this.field_z, this.field_m, this.field_p, param2, this.field_w, param1);
         wi.a(this.field_v, param1, ob.field_c, this.field_m, this.field_z, this.field_p, sb.field_d, this.field_A, 111);
         rg.a(param3 ^ -11603);
-        sc.field_e = vb.a((byte) 65);
+        sc.field_e = vb.createMouseWheelInput((byte) 65);
         ej.a(n.field_g, (byte) 71);
         md.field_d = param7;
         p.field_f = param6;
@@ -658,7 +658,7 @@ abstract class GameClientShell extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = oi.a(fj.f(36), hg.d((byte) -21), (byte) -85);
+            var5_int = MouseWheelInput.a(fj.f(36), hg.d((byte) -21), (byte) -85);
             if (var5_int != -1) {
               rb.a(var5_int, td.field_m, cc.field_p, 105);
               cc.field_p = null;

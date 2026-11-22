@@ -777,7 +777,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ed.a(param2, param1 ^ 31);
           nc.a(param2, 2);
           dl.a(param1 ^ 11490, param2);
-          cc.b(true);
+          MouseWheelInput.b(true);
           cm.a(15);
           uj.field_i = -ea.field_b + 0;
           return;

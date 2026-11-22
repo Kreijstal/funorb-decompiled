@@ -295,7 +295,7 @@ abstract class in {
                     if (var5 == 0) {
                       of.field_e.c(var8_ref_String, 572, 32 + var3, 16772608, 0);
                     } else {
-                      kb.a(7, 42 + var3, var6, 0, var8_ref_String, al.field_Z, 572);
+                      MouseWheelInput.a(7, 42 + var3, var6, 0, var8_ref_String, al.field_Z, 572);
                     }
                   }
                 } else {

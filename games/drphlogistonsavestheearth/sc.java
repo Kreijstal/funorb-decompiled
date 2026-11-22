@@ -5,7 +5,7 @@ final class sc {
     static sa field_d;
     static rf field_f;
     static String[] field_b;
-    static oi field_e;
+    static MouseWheelInput field_e;
     static he[] field_a;
     static nh field_c;
 

@@ -3040,31 +3040,31 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("mustlogin2,1", 24);
                 if (var2 != null) {
-                  kb.field_c[1] = nm.a(124, var2);
+                  MouseWheelInput.field_c[1] = nm.a(124, var2);
                 }
                 var2 = vj.a("mustlogin2,2", 24);
                 if (null != var2) {
-                  kb.field_c[2] = nm.a(125, var2);
+                  MouseWheelInput.field_c[2] = nm.a(125, var2);
                 }
                 var2 = vj.a("mustlogin2,3", 24);
                 if (var2 != null) {
-                  kb.field_c[3] = nm.a(127, var2);
+                  MouseWheelInput.field_c[3] = nm.a(127, var2);
                 }
                 var2 = vj.a("mustlogin2,4", 24);
                 if (null != var2) {
-                  kb.field_c[4] = nm.a(125, var2);
+                  MouseWheelInput.field_c[4] = nm.a(125, var2);
                 }
                 var2 = vj.a("mustlogin2,5", 24);
                 if (null != var2) {
-                  kb.field_c[5] = nm.a(123, var2);
+                  MouseWheelInput.field_c[5] = nm.a(123, var2);
                 }
                 var2 = vj.a("mustlogin2,6", 24);
                 if (null != var2) {
-                  kb.field_c[6] = nm.a(127, var2);
+                  MouseWheelInput.field_c[6] = nm.a(127, var2);
                 }
                 var2 = vj.a("mustlogin2,7", 24);
                 if (null != var2) {
-                  kb.field_c[7] = nm.a(122, var2);
+                  MouseWheelInput.field_c[7] = nm.a(122, var2);
                 }
                 var2 = vj.a("mustlogin3,1", 24);
                 if (var2 != null) {

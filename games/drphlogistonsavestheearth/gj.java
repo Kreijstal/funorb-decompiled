@@ -196,7 +196,7 @@ final class gj {
         var2 = this.field_c.length;
         System.arraycopy(this.field_c, 0, field_f, 0, var2);
         var3 = field_l[this.field_i - 1];
-        var4 = oi.a(var3 - 1, (byte) 1);
+        var4 = MouseWheelInput.a(var3 - 1, (byte) 1);
         field_h[0] = tk.d(var4);
         field_h[1] = tk.d(var4);
         var5 = 2;

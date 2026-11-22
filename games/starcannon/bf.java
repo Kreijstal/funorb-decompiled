@@ -322,9 +322,9 @@ final class bf extends IntrusiveNode {
             if (this.field_r > 192) {
               this.field_u = 480;
               this.field_f = 256;
-              if (gj.field_c >= 0) {
-                gj.field_c = gj.field_c - 1;
-                if (gj.field_c < 0) {
+              if (MouseWheelSource.field_c >= 0) {
+                MouseWheelSource.field_c = MouseWheelSource.field_c - 1;
+                if (MouseWheelSource.field_c < 0) {
                   hh.field_c = 0;
                   dg.field_l = 0;
                   field_w = 0;

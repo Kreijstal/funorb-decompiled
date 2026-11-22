@@ -97,7 +97,7 @@ final class lb {
               var11.b(57);
             } else {
               if (var2 != 2) {
-                pe.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
+                MouseWheelInput.a((byte) -13, (Throwable) null, "A1: " + sj.b(true));
                 th.a(107);
               } else {
                 var15 = (dc) (mj.field_m.b((byte) 118));

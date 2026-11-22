@@ -1936,7 +1936,7 @@ abstract class eh {
                 }
                 var2 = rd.a("loading_extradata", -32);
                 if (null != var2) {
-                  gj.field_b = DualLinkNode.a(116, var2);
+                  MouseWheelSource.field_b = DualLinkNode.a(116, var2);
                 }
                 var2 = rd.a("loading_languages", param0 + 0);
                 if (null != var2) {

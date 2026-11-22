@@ -62,7 +62,7 @@ final class vb extends il {
           var8 = param4.a(param6 + 21819);
           var11_ref_String = var8;
           var11_ref_StringLifetime1 = var8;
-          if (lf.field_d == null &&
+          if (MouseWheelInput.field_d == null &&
             !ai.a(false, (byte) -37)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -184,7 +184,7 @@ final class vb extends il {
             stackIn_50_0 = ob.field_h;
             return stackIn_50_0;
           }
-          if (lf.field_d == null) {
+          if (MouseWheelInput.field_d == null) {
             if (je.field_c) {
               if (30000L < GameApplet.b(-1)) {
                 md.field_v = il.field_d;

@@ -57,16 +57,16 @@ final class wc {
         field_e = null;
     }
 
-    final static gj b(int param0) {
+    final static MouseWheelSource createMouseWheelInput(int param0) {
         try {
           Throwable var1 = null;
-          gj stackIn_3_0 = null;
+          MouseWheelSource stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 5220) {
               wc.a(14, '￉');
             }
-            stackIn_3_0 = (gj) (Class.forName("MouseWheelInput").newInstance());
+            stackIn_3_0 = (MouseWheelSource) (Class.forName("MouseWheelInput").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

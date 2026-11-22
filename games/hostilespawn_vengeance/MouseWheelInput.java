@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kb {
+abstract class MouseWheelInput {
     static String[] field_c;
     static String field_a;
     static String field_b;
@@ -20,9 +20,9 @@ abstract class kb {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
-    abstract int a(byte param0);
+    abstract int pollRotation(byte param0);
 
     public static void c(byte param0) {
         field_a = null;
@@ -134,7 +134,7 @@ abstract class kb {
         }
     }
 
-    abstract void a(java.awt.Component param0, byte param1);
+    abstract void attach(java.awt.Component param0, byte param1);
 
     static {
         field_c = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};

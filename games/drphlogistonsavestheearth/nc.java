@@ -312,7 +312,7 @@ final class nc extends hf {
     }
 
     final static void a(String param0, boolean param1, byte param2) {
-        oi.field_c = true;
+        MouseWheelInput.field_c = true;
         if (param2 <= 71) {
           return;
         }

@@ -54,7 +54,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         ec.a(this.field_n, 5000, this.field_t, this.field_s, param0, param7, this.field_q, 5000, this.field_p, this.field_w, wj.field_m, wc.field_c, this.field_y, 49);
         nc.a(wj.field_m, this.field_y, param7, this.field_n, (byte) 93, this.field_q, this.field_s, wc.field_c, this.field_p);
         k.a(0);
-        mj.field_i = de.a((byte) -112);
+        mj.field_i = de.createMouseWheelInput((byte) -112);
         l.a(GameAppletShell.field_f, 59);
         pj.field_p = param3;
         cb.field_e = param5;
@@ -202,7 +202,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              pe.a((byte) -13, (Throwable) ((Object) var5), "S1");
+              MouseWheelInput.a((byte) -13, (Throwable) ((Object) var5), "S1");
               li.a(param1 + 0, (String) null);
               ml.field_e = null;
             }
@@ -296,7 +296,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 IterableNodeHashTable.c(117);
                                 return;
                               }
-                              pe.a((byte) -13, (Throwable) null, "MGS1: " + sj.b(true));
+                              MouseWheelInput.a((byte) -13, (Throwable) null, "MGS1: " + sj.b(true));
                               th.a(104);
                               return;
                             }
@@ -326,7 +326,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           return;
         }
-        pe.a((byte) -13, (Throwable) null, "MGS2: " + sj.b(true));
+        MouseWheelInput.a((byte) -13, (Throwable) null, "MGS2: " + sj.b(true));
         th.a(102);
     }
 
@@ -380,7 +380,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var11 = (String) null;
-            pe.a((byte) -13, (Throwable) ((Object) var6_ref), (String) null);
+            MouseWheelInput.a((byte) -13, (Throwable) ((Object) var6_ref), (String) null);
             this.a(110, "crash");
           }
           return;
@@ -461,7 +461,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           cf.a((byte) 109);
         }
         if (null != mj.field_i) {
-          of.field_K = mj.field_i.a(1);
+          of.field_K = mj.field_i.pollRotation(1);
         }
         if (p.a(23236)) {
           var3 = 1200 * ok.a((byte) 84);

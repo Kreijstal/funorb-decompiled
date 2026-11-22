@@ -187,7 +187,7 @@ final class hb implements cg {
         }
         try {
           if (sc.field_e != null) {
-            sc.field_e.a((java.awt.Component) ((Object) param1), (byte) 12);
+            sc.field_e.detach((java.awt.Component) ((Object) param1), (byte) 12);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -15,7 +15,7 @@ final class cc {
           return (String) null;
         }
         if (!(pb.field_Kb >= 2)) {
-          return kb.field_b;
+          return MouseWheelInput.field_b;
         }
         if (GameCanvas.field_d != null) {
           if (GameCanvas.field_d.a(-15879)) {

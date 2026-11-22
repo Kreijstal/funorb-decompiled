@@ -96,7 +96,7 @@ final class hb {
             var5_ref_qf.b(param0 ^ 554553457);
             return;
           }
-          pe.a((byte) -13, (Throwable) null, "LR1: " + sj.b(true));
+          MouseWheelInput.a((byte) -13, (Throwable) null, "LR1: " + sj.b(true));
           th.a(106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

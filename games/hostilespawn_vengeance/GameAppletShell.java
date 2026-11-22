@@ -533,7 +533,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ub.a(param9, param17, param10, param13, (byte) -127);
           ArchiveIndex.a(param14, param19, -1);
           re.a(param15 - 3996, param6, param7, param1, param11, param3);
-          kb.a(param20, 126, param5, param16);
+          MouseWheelInput.a(param20, 126, param5, param16);
           tm.a(param8, param18, param4, true);
           if (param15 != 4000) {
             field_c = (String) null;

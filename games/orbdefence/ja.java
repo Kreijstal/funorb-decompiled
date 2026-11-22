@@ -825,7 +825,7 @@ final class ja {
             rh.a((byte) 114, 7, param2);
             dm.field_f = 0;
             lb.field_g = 0;
-            pe.field_b.a(false);
+            MouseWheelInput.field_b.a(false);
             if (var9 == 0) {
               break regionExit1;
             }

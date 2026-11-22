@@ -248,7 +248,7 @@ final class bb extends WidgetContainer implements pi, ka {
             this.field_j = this.field_j + (var7.b(this.field_K, -40 + this.field_t, var7.field_F) + 5);
           }
           var8 = hh.field_J;
-          var9 = lf.a((byte) 120, ia.g(116));
+          var9 = MouseWheelInput.a((byte) 120, ia.g(116));
           if (sk.field_p == var9) {
             var8 = UiWidget.field_y;
           } else {

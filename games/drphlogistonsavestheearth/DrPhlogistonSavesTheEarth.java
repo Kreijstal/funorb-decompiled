@@ -72,8 +72,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           hb.field_a.c();
           wj.b(7, 7, 7, 8388608);
           lb.field_C.a(123);
-          oi.field_d = new nh(20, 20);
-          oi.field_d.c();
+          MouseWheelInput.field_d = new nh(20, 20);
+          MouseWheelInput.field_d.c();
           wj.b(9, 9, 6, 61568);
           lb.field_C.a(119);
           GameAppletShell.field_i = new nh(10, 10);
@@ -430,7 +430,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           eb.field_e[0].c();
           wj.f(0, 0, 64, 64, 10836, 21672);
-          oi.field_f.a(0, 0, 256, 64);
+          MouseWheelInput.field_f.a(0, 0, 256, 64);
           eb.field_e[1].c();
           wj.f(0, 0, 64, 64, 262656, 11754240);
           sg.field_e.a(0, 0, 256, 64);
@@ -494,7 +494,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           fi.clearStaticReferences(125);
           KeyboardInput.a((byte) 119);
           MouseInput.a(45);
-          oi.clearStaticReferences((byte) 86);
+          MouseWheelInput.clearStaticReferences((byte) 86);
           wj.d();
           vj.clearStaticReferences(0);
           pc.a(13302);
@@ -1655,7 +1655,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           cm.field_R[7] = qk.a("", kf.field_d, "mb_screenshot_8", true);
           sg.field_e.h();
           uk.field_h.h();
-          oi.field_f.h();
+          MouseWheelInput.field_f.h();
           nj.field_o.h();
           cc.field_w.h();
           b.field_k.h();
@@ -1782,7 +1782,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ph.field_h = eh.a("", (byte) -40, kf.field_d, "title_screen");
           qj.field_f = eh.a("", (byte) -126, kf.field_d, "title_screen_chars");
           rk.field_a = eh.a("", (byte) -99, kf.field_d, "slider_background");
-          oi.field_h = eh.a("", (byte) -100, kf.field_d, "slider_foreground");
+          MouseWheelInput.field_h = eh.a("", (byte) -100, kf.field_d, "slider_foreground");
           gg.field_d = eh.a("", (byte) -84, kf.field_d, "title_text_highscore_screen");
           we.field_g = eh.a("", (byte) -61, kf.field_d, "title_text_instructions_screen");
           qe.field_k = eh.a("", (byte) -87, kf.field_d, "title_text_achievements_screen");
@@ -2011,7 +2011,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           this.a(81, qf.field_g);
           this.a(99, qg.field_W);
           this.a(98, eg.field_f);
-          oi.field_a = ij.a("human_abductee_male", (byte) 67, kf.field_d, "");
+          MouseWheelInput.field_a = ij.a("human_abductee_male", (byte) 67, kf.field_d, "");
           cc.field_y = ij.a("human_abductee_female", (byte) 87, kf.field_d, "");
           og.field_e = ij.a("human_abductee_baby", (byte) 95, kf.field_d, "");
           return;
@@ -2273,7 +2273,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               lb.field_C.a(96);
               sg.field_e = eh.a("", (byte) -103, kf.field_d, "background_bath");
               uk.field_h = eh.a("", (byte) -52, kf.field_d, "background_london");
-              oi.field_f = eh.a("", (byte) -121, kf.field_d, "background_brighton");
+              MouseWheelInput.field_f = eh.a("", (byte) -121, kf.field_d, "background_brighton");
               nj.field_o = eh.a("", (byte) -97, kf.field_d, "midground_earth");
               hc.field_K = cl.a("", kf.field_d, -116, "background_space");
               dupTemp$1 = hc.field_K[1];

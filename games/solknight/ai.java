@@ -51,7 +51,7 @@ final class ai {
             ef.field_e = wc.field_f;
           } else {
             try {
-              lf.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.field_e), qa.field_n);
+              MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.field_e), qa.field_n);
               id.field_c.position = 0;
               var4 = te.field_N;
               var5 = var4;

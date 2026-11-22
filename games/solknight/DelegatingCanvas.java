@@ -84,7 +84,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (param0 != 0) {
           return 31;
         }
-        return lf.field_c;
+        return MouseWheelInput.field_c;
     }
 
     public final void paint(java.awt.Graphics param0) {

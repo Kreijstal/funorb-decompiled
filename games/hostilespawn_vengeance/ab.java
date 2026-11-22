@@ -425,7 +425,7 @@ final class ab extends IOException {
             var14 = var6[var9];
             pg[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = kb.a(var5[var9], var19[var11_int], (byte) 115);
+              var14[var11_int] = MouseWheelInput.a(var5[var9], var19[var11_int], (byte) 115);
             }
           }
           var9Lifetime1 = var17.field_A;

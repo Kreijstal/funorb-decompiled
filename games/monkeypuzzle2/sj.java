@@ -217,9 +217,9 @@ final class sj {
           qh.field_a = lb.a(false, "", param3, "gecko");
           SpriteState.field_p = lb.a(false, "", param3, "waterfall_central");
           cl.field_c = lb.a(false, "", param3, "waterfall_bottom");
-          cc.field_a[0] = lb.a(false, "", param3, "fish_a");
-          cc.field_a[1] = lb.a(false, "", param3, "fish_b");
-          cc.field_a[2] = lb.a(false, "", param3, "fish_c");
+          MouseWheelInput.field_a[0] = lb.a(false, "", param3, "fish_a");
+          MouseWheelInput.field_a[1] = lb.a(false, "", param3, "fish_b");
+          MouseWheelInput.field_a[2] = lb.a(false, "", param3, "fish_c");
           pc.field_U = lb.a(false, "", param3, "eyes");
           ie.field_b = lb.a(false, "", param3, "achievements_large");
           NodeHashTableIterator.field_e = lb.a(false, "", param3, "menu_frame");

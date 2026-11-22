@@ -202,7 +202,7 @@ final class oe extends DualLinkNode {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            pe.a((byte) -13, (Throwable) ((Object) var6), "CC1");
+            MouseWheelInput.a((byte) -13, (Throwable) ((Object) var6), "CC1");
             n.field_c = null;
             vj.field_a = null;
           }

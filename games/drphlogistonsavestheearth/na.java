@@ -87,18 +87,18 @@ abstract class na {
               na.a(false, -5, true, true, true, -73);
             }
             var7 = null;
-            if (null != oi.field_e.field_d) {
-              uj.field_h = new ge(oi.field_e.field_d, 5200, 0);
-              oi.field_e.field_d = null;
-              var6 = new ik(255, uj.field_h, new ge(oi.field_e.field_b, 12000, 0), 2097152);
+            if (null != MouseWheelInput.field_e.field_d) {
+              uj.field_h = new ge(MouseWheelInput.field_e.field_d, 5200, 0);
+              MouseWheelInput.field_e.field_d = null;
+              var6 = new ik(255, uj.field_h, new ge(MouseWheelInput.field_e.field_b, 12000, 0), 2097152);
             }
             if (uj.field_h != null) {
               if (rc.field_d == null) {
-                rc.field_d = new ge[oi.field_e.field_c.length];
+                rc.field_d = new ge[MouseWheelInput.field_e.field_c.length];
               }
               if (null == rc.field_d[param1]) {
-                rc.field_d[param1] = new ge(oi.field_e.field_c[param1], 12000, 0);
-                oi.field_e.field_c[param1] = null;
+                rc.field_d[param1] = new ge(MouseWheelInput.field_e.field_c[param1], 12000, 0);
+                MouseWheelInput.field_e.field_c[param1] = null;
               }
               var7 = new ik(param1, uj.field_h, rc.field_d[param1], 2097152);
             }

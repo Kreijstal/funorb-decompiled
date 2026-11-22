@@ -254,7 +254,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              pe.a((byte) -13, (Throwable) (var1), (String) null);
+              MouseWheelInput.a((byte) -13, (Throwable) (var1), (String) null);
               this.a(-25, "crash");
             }
             this.a(0, true);
@@ -603,7 +603,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              pe.a((byte) -13, var8_ref, (String) null);
+              MouseWheelInput.a((byte) -13, var8_ref, (String) null);
               this.a(124, "crash");
             }
             return;

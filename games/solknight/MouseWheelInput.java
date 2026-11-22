@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lf {
+abstract class MouseWheelInput {
     static String field_e;
     static volatile int field_c;
     static aa field_a;
@@ -9,7 +9,7 @@ abstract class lf {
     static char[] field_f;
     static String field_b;
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
     final static boolean a(int[] param0, int param1) {
         int var5_int = 0;
@@ -119,7 +119,7 @@ abstract class lf {
     public static void b(int param0) {
         if (param0 != 18609) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          lf.a((byte) -36, (java.applet.Applet) null);
+          MouseWheelInput.a((byte) -36, (java.applet.Applet) null);
         }
         field_a = null;
         field_f = null;
@@ -128,9 +128,9 @@ abstract class lf {
         field_d = null;
     }
 
-    abstract int a(int param0);
+    abstract int pollRotation(int param0);
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void attach(java.awt.Component param0, boolean param1);
 
     final static fg a(byte param0, java.applet.Applet param1) {
         int var2_int = 0;

@@ -508,6 +508,22 @@
       "renamedSymbol": "C:KeyboardInput"
     },
     {
+      "symbol": "C:kb",
+      "originalName": "kb",
+      "to": "MouseWheelInput",
+      "evidence": "Abstract class declaration and all3abstract operations reviewed alongside complete concrete wheel implementation. Names component registration/removal/rotation contract; unrelated static methods and fields left unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MouseWheelInput"
+    },
+    {
+      "symbol": "C:ol",
+      "originalName": "ol",
+      "to": "MouseWheelHandler",
+      "evidence": "Complete concrete class reviewed: AWT listener adds/removes itself, accumulates and consumes wheel events and synchronously polls stored rotation. Preserve guard-specific state and recursion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MouseWheelHandler"
+    },
+    {
       "symbol": "C:se",
       "originalName": "se",
       "to": "GameAppletShell",
@@ -562,6 +578,14 @@
       "evidence": "Per-group and per-file id, size and digest arrays describing an archive.",
       "confidence": "reviewed",
       "renamedSymbol": "C:ArchiveIndex"
+    },
+    {
+      "symbol": "F:ol.field_e:I",
+      "originalName": "field_e",
+      "to": "rotation",
+      "evidence": "Wheel-event accumulator returned/replaced by polling. Preserve game-specific resets, early constants and guard writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MouseWheelHandler.rotation:I"
     },
     {
       "symbol": "M:aa.a(B)V",
@@ -956,6 +980,30 @@
       "renamedSymbol": "M:jf.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:kb.a(B)I",
+      "originalName": "a",
+      "to": "pollRotation",
+      "evidence": "Complete synchronized implementation and abstract declaration reviewed. Wrong guard returns57 before reading/reset; valid60 copies/clears/returns. Preserve all guard/read/write order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelInput.pollRotation(B)I"
+    },
+    {
+      "symbol": "M:kb.a(ILjava/awt/Component;)V",
+      "originalName": "a",
+      "to": "detach",
+      "evidence": "Complete deregistration method and abstract declaration reviewed. Preserve removal, guard arithmetic and accumulator writes in order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelInput.detach(ILjava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:kb.a(Ljava/awt/Component;B)V",
+      "originalName": "a",
+      "to": "attach",
+      "evidence": "Complete registration method and abstract declaration reviewed. Preserve original guard ordering, null callback/recursion and state writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelInput.attach(Ljava/awt/Component;B)V"
+    },
+    {
       "symbol": "M:kc.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1130,6 +1178,30 @@
       "evidence": "Complete cleanup statement proof reviewed: 8 null writes to 8 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 e152b5b3583eb5423e6356664006a7e36efcddc6ac9b65e28c87d0d029c833e5.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ok.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:ol.a(B)I",
+      "originalName": "a",
+      "to": "pollRotation",
+      "evidence": "Complete synchronized implementation and abstract declaration reviewed. Wrong guard returns57 before reading/reset; valid60 copies/clears/returns. Preserve all guard/read/write order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelHandler.pollRotation(B)I"
+    },
+    {
+      "symbol": "M:ol.a(ILjava/awt/Component;)V",
+      "originalName": "a",
+      "to": "detach",
+      "evidence": "Complete deregistration method and abstract declaration reviewed. Preserve removal, guard arithmetic and accumulator writes in order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelHandler.detach(ILjava/awt/Component;)V"
+    },
+    {
+      "symbol": "M:ol.a(Ljava/awt/Component;B)V",
+      "originalName": "a",
+      "to": "attach",
+      "evidence": "Complete registration method and abstract declaration reviewed. Preserve original guard ordering, null callback/recursion and state writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelHandler.attach(Ljava/awt/Component;B)V"
     },
     {
       "symbol": "M:om.a(B)V",
@@ -1338,6 +1410,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 54f6be508933d0b3c617482af38d63f1930f1bd96e219e2c3e29e3646f72864f.",
       "confidence": "reviewed",
       "renamedSymbol": "M:tf.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ti.b(B)Lkb;",
+      "originalName": "b",
+      "to": "createMouseWheelInput",
+      "evidence": "Complete reflective factory reviewed: Class.forName(...).newInstance cast to abstract input contract, Throwable->null fallback and per-game guards unchanged. Existing meaningful handler names/literals retained for SolKnight/StarCannon.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ti.createMouseWheelInput(B)LMouseWheelInput;"
     },
     {
       "symbol": "M:tm.a(Z)V",
@@ -3761,9 +3841,9 @@
     },
     {
       "symbol": "C:kb",
-      "renamedSymbol": "C:kb",
+      "renamedSymbol": "C:MouseWheelInput",
       "originalName": "kb",
-      "renamedName": "kb",
+      "renamedName": "MouseWheelInput",
       "declaration": {
         "file": "kb.java",
         "start": 53,
@@ -4531,9 +4611,9 @@
     },
     {
       "symbol": "C:ol",
-      "renamedSymbol": "C:ol",
+      "renamedSymbol": "C:MouseWheelHandler",
       "originalName": "ol",
-      "renamedName": "ol",
+      "renamedName": "MouseWheelHandler",
       "declaration": {
         "file": "ol.java",
         "start": 50,
@@ -15608,7 +15688,7 @@
     },
     {
       "symbol": "F:h.field_b:Lkb;",
-      "renamedSymbol": "F:h.field_b:Lkb;",
+      "renamedSymbol": "F:h.field_b:LMouseWheelInput;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -19282,7 +19362,7 @@
     },
     {
       "symbol": "F:kb.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:kb.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:MouseWheelInput.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -19293,7 +19373,7 @@
     },
     {
       "symbol": "F:kb.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:kb.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:MouseWheelInput.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -19304,7 +19384,7 @@
     },
     {
       "symbol": "F:kb.field_c:[Ljava/lang/String;",
-      "renamedSymbol": "F:kb.field_c:[Ljava/lang/String;",
+      "renamedSymbol": "F:MouseWheelInput.field_c:[Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -19315,7 +19395,7 @@
     },
     {
       "symbol": "F:kb.field_d:I",
-      "renamedSymbol": "F:kb.field_d:I",
+      "renamedSymbol": "F:MouseWheelInput.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -26234,9 +26314,9 @@
     },
     {
       "symbol": "F:ol.field_e:I",
-      "renamedSymbol": "F:ol.field_e:I",
+      "renamedSymbol": "F:MouseWheelHandler.rotation:I",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "rotation",
       "declaration": {
         "file": "ol.java",
         "start": 127,
@@ -109735,7 +109815,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#0",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#0",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#0",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -109746,7 +109826,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#1",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#1",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -109757,7 +109837,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#2",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#2",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -109768,7 +109848,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#3",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#3",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#3",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -109779,7 +109859,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#4",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#4",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#4",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -109790,7 +109870,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#5",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#5",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#5",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -109801,7 +109881,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#6",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#6",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#6",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -109812,7 +109892,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#7",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#7",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109823,7 +109903,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#8",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#8",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -109834,7 +109914,7 @@
     },
     {
       "symbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#9",
-      "renamedSymbol": "L:kb.a(IIIILjava/lang/String;Lvm;I)V#9",
+      "renamedSymbol": "L:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109845,7 +109925,7 @@
     },
     {
       "symbol": "L:kb.a(IIILvh;)V#0",
-      "renamedSymbol": "L:kb.a(IIILvh;)V#0",
+      "renamedSymbol": "L:MouseWheelInput.a(IIILvh;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -109856,7 +109936,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#0",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#0",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109867,7 +109947,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#1",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#1",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -109878,7 +109958,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#2",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#2",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -109889,7 +109969,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#3",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#3",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -109900,7 +109980,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#4",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#4",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -109911,7 +109991,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#5",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#5",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -109922,7 +110002,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#6",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#6",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#6",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -109933,7 +110013,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#7",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#7",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#7",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -109944,7 +110024,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#8",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#8",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109955,7 +110035,7 @@
     },
     {
       "symbol": "L:kb.a(Lpg;[IB)Lpg;#9",
-      "renamedSymbol": "L:kb.a(Lpg;[IB)Lpg;#9",
+      "renamedSymbol": "L:MouseWheelInput.a(Lpg;[IB)Lpg;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109966,7 +110046,7 @@
     },
     {
       "symbol": "L:kb.c(B)V#0",
-      "renamedSymbol": "L:kb.c(B)V#0",
+      "renamedSymbol": "L:MouseWheelInput.c(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -138346,7 +138426,7 @@
     },
     {
       "symbol": "L:ol.a(B)I#0",
-      "renamedSymbol": "L:ol.a(B)I#0",
+      "renamedSymbol": "L:MouseWheelHandler.pollRotation(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -179321,7 +179401,7 @@
     },
     {
       "symbol": "L:ti.b(B)Lkb;#0",
-      "renamedSymbol": "L:ti.b(B)Lkb;#0",
+      "renamedSymbol": "L:ti.createMouseWheelInput(B)LMouseWheelInput;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -179332,7 +179412,7 @@
     },
     {
       "symbol": "L:ti.b(B)Lkb;#1",
-      "renamedSymbol": "L:ti.b(B)Lkb;#1",
+      "renamedSymbol": "L:ti.createMouseWheelInput(B)LMouseWheelInput;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -179343,7 +179423,7 @@
     },
     {
       "symbol": "L:ti.b(B)Lkb;#2",
-      "renamedSymbol": "L:ti.b(B)Lkb;#2",
+      "renamedSymbol": "L:ti.createMouseWheelInput(B)LMouseWheelInput;#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -179354,7 +179434,7 @@
     },
     {
       "symbol": "L:ti.b(B)Lkb;#3",
-      "renamedSymbol": "L:ti.b(B)Lkb;#3",
+      "renamedSymbol": "L:ti.createMouseWheelInput(B)LMouseWheelInput;#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -179365,7 +179445,7 @@
     },
     {
       "symbol": "L:ti.b(B)Lkb;#4",
-      "renamedSymbol": "L:ti.b(B)Lkb;#4",
+      "renamedSymbol": "L:ti.createMouseWheelInput(B)LMouseWheelInput;#4",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -179376,7 +179456,7 @@
     },
     {
       "symbol": "L:ti.b(B)Lkb;#5",
-      "renamedSymbol": "L:ti.b(B)Lkb;#5",
+      "renamedSymbol": "L:ti.createMouseWheelInput(B)LMouseWheelInput;#5",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -212706,9 +212786,9 @@
     },
     {
       "symbol": "M:kb.a(B)I",
-      "renamedSymbol": "M:kb.a(B)I",
+      "renamedSymbol": "M:MouseWheelInput.pollRotation(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollRotation",
       "declaration": {
         "file": "kb.java",
         "start": 736,
@@ -212717,7 +212797,7 @@
     },
     {
       "symbol": "M:kb.a(IIIILjava/lang/String;Lvm;I)V",
-      "renamedSymbol": "M:kb.a(IIIILjava/lang/String;Lvm;I)V",
+      "renamedSymbol": "M:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -212728,7 +212808,7 @@
     },
     {
       "symbol": "M:kb.a(IIILvh;)V",
-      "renamedSymbol": "M:kb.a(IIILvh;)V",
+      "renamedSymbol": "M:MouseWheelInput.a(IIILvh;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -212739,9 +212819,9 @@
     },
     {
       "symbol": "M:kb.a(ILjava/awt/Component;)V",
-      "renamedSymbol": "M:kb.a(ILjava/awt/Component;)V",
+      "renamedSymbol": "M:MouseWheelInput.detach(ILjava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "detach",
       "declaration": {
         "file": "kb.java",
         "start": 676,
@@ -212750,9 +212830,9 @@
     },
     {
       "symbol": "M:kb.a(Ljava/awt/Component;B)V",
-      "renamedSymbol": "M:kb.a(Ljava/awt/Component;B)V",
+      "renamedSymbol": "M:MouseWheelInput.attach(Ljava/awt/Component;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "attach",
       "declaration": {
         "file": "kb.java",
         "start": 4826,
@@ -212761,7 +212841,7 @@
     },
     {
       "symbol": "M:kb.a(Lpg;[IB)Lpg;",
-      "renamedSymbol": "M:kb.a(Lpg;[IB)Lpg;",
+      "renamedSymbol": "M:MouseWheelInput.a(Lpg;[IB)Lpg;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -212772,7 +212852,7 @@
     },
     {
       "symbol": "M:kb.b(B)V",
-      "renamedSymbol": "M:kb.b(B)V",
+      "renamedSymbol": "M:MouseWheelInput.b(B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -212783,7 +212863,7 @@
     },
     {
       "symbol": "M:kb.c(B)V",
-      "renamedSymbol": "M:kb.c(B)V",
+      "renamedSymbol": "M:MouseWheelInput.c(B)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -217601,9 +217681,9 @@
     },
     {
       "symbol": "M:ol.<init>()V",
-      "renamedSymbol": "M:ol.<init>()V",
+      "renamedSymbol": "M:MouseWheelHandler.<init>()V",
       "originalName": "ol",
-      "renamedName": "ol",
+      "renamedName": "MouseWheelHandler",
       "declaration": {
         "file": "ol.java",
         "start": 1056,
@@ -217612,9 +217692,9 @@
     },
     {
       "symbol": "M:ol.a(B)I",
-      "renamedSymbol": "M:ol.a(B)I",
+      "renamedSymbol": "M:MouseWheelHandler.pollRotation(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollRotation",
       "declaration": {
         "file": "ol.java",
         "start": 164,
@@ -217623,9 +217703,9 @@
     },
     {
       "symbol": "M:ol.a(ILjava/awt/Component;)V",
-      "renamedSymbol": "M:ol.a(ILjava/awt/Component;)V",
+      "renamedSymbol": "M:MouseWheelHandler.detach(ILjava/awt/Component;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "detach",
       "declaration": {
         "file": "ol.java",
         "start": 342,
@@ -217634,9 +217714,9 @@
     },
     {
       "symbol": "M:ol.a(Ljava/awt/Component;B)V",
-      "renamedSymbol": "M:ol.a(Ljava/awt/Component;B)V",
+      "renamedSymbol": "M:MouseWheelHandler.attach(Ljava/awt/Component;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "attach",
       "declaration": {
         "file": "ol.java",
         "start": 560,
@@ -217645,7 +217725,7 @@
     },
     {
       "symbol": "M:ol.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V",
-      "renamedSymbol": "M:ol.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V",
+      "renamedSymbol": "M:MouseWheelHandler.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V",
       "originalName": "mouseWheelMoved",
       "renamedName": "mouseWheelMoved",
       "declaration": {
@@ -223904,9 +223984,9 @@
     },
     {
       "symbol": "M:ti.b(B)Lkb;",
-      "renamedSymbol": "M:ti.b(B)Lkb;",
+      "renamedSymbol": "M:ti.createMouseWheelInput(B)LMouseWheelInput;",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "createMouseWheelInput",
       "declaration": {
         "file": "ti.java",
         "start": 4892,
@@ -260776,7 +260856,7 @@
     },
     {
       "symbol": "P:kb.a(B)I#0",
-      "renamedSymbol": "P:kb.a(B)I#0",
+      "renamedSymbol": "P:MouseWheelInput.pollRotation(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260787,7 +260867,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#0",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#0",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260798,7 +260878,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#1",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#1",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260809,7 +260889,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#2",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#2",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260820,7 +260900,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#3",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#3",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -260831,7 +260911,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#4",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#4",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -260842,7 +260922,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#5",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#5",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -260853,7 +260933,7 @@
     },
     {
       "symbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#6",
-      "renamedSymbol": "P:kb.a(IIIILjava/lang/String;Lvm;I)V#6",
+      "renamedSymbol": "P:MouseWheelInput.a(IIIILjava/lang/String;Lvm;I)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -260864,7 +260944,7 @@
     },
     {
       "symbol": "P:kb.a(IIILvh;)V#0",
-      "renamedSymbol": "P:kb.a(IIILvh;)V#0",
+      "renamedSymbol": "P:MouseWheelInput.a(IIILvh;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260875,7 +260955,7 @@
     },
     {
       "symbol": "P:kb.a(IIILvh;)V#1",
-      "renamedSymbol": "P:kb.a(IIILvh;)V#1",
+      "renamedSymbol": "P:MouseWheelInput.a(IIILvh;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260886,7 +260966,7 @@
     },
     {
       "symbol": "P:kb.a(IIILvh;)V#2",
-      "renamedSymbol": "P:kb.a(IIILvh;)V#2",
+      "renamedSymbol": "P:MouseWheelInput.a(IIILvh;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260897,7 +260977,7 @@
     },
     {
       "symbol": "P:kb.a(IIILvh;)V#3",
-      "renamedSymbol": "P:kb.a(IIILvh;)V#3",
+      "renamedSymbol": "P:MouseWheelInput.a(IIILvh;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -260908,7 +260988,7 @@
     },
     {
       "symbol": "P:kb.a(ILjava/awt/Component;)V#0",
-      "renamedSymbol": "P:kb.a(ILjava/awt/Component;)V#0",
+      "renamedSymbol": "P:MouseWheelInput.detach(ILjava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260919,7 +260999,7 @@
     },
     {
       "symbol": "P:kb.a(ILjava/awt/Component;)V#1",
-      "renamedSymbol": "P:kb.a(ILjava/awt/Component;)V#1",
+      "renamedSymbol": "P:MouseWheelInput.detach(ILjava/awt/Component;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260930,7 +261010,7 @@
     },
     {
       "symbol": "P:kb.a(Ljava/awt/Component;B)V#0",
-      "renamedSymbol": "P:kb.a(Ljava/awt/Component;B)V#0",
+      "renamedSymbol": "P:MouseWheelInput.attach(Ljava/awt/Component;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260941,7 +261021,7 @@
     },
     {
       "symbol": "P:kb.a(Ljava/awt/Component;B)V#1",
-      "renamedSymbol": "P:kb.a(Ljava/awt/Component;B)V#1",
+      "renamedSymbol": "P:MouseWheelInput.attach(Ljava/awt/Component;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260952,7 +261032,7 @@
     },
     {
       "symbol": "P:kb.a(Lpg;[IB)Lpg;#0",
-      "renamedSymbol": "P:kb.a(Lpg;[IB)Lpg;#0",
+      "renamedSymbol": "P:MouseWheelInput.a(Lpg;[IB)Lpg;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260963,7 +261043,7 @@
     },
     {
       "symbol": "P:kb.a(Lpg;[IB)Lpg;#1",
-      "renamedSymbol": "P:kb.a(Lpg;[IB)Lpg;#1",
+      "renamedSymbol": "P:MouseWheelInput.a(Lpg;[IB)Lpg;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260974,7 +261054,7 @@
     },
     {
       "symbol": "P:kb.a(Lpg;[IB)Lpg;#2",
-      "renamedSymbol": "P:kb.a(Lpg;[IB)Lpg;#2",
+      "renamedSymbol": "P:MouseWheelInput.a(Lpg;[IB)Lpg;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260985,7 +261065,7 @@
     },
     {
       "symbol": "P:kb.b(B)V#0",
-      "renamedSymbol": "P:kb.b(B)V#0",
+      "renamedSymbol": "P:MouseWheelInput.b(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260996,7 +261076,7 @@
     },
     {
       "symbol": "P:kb.c(B)V#0",
-      "renamedSymbol": "P:kb.c(B)V#0",
+      "renamedSymbol": "P:MouseWheelInput.c(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272865,7 +272945,7 @@
     },
     {
       "symbol": "P:ol.a(B)I#0",
-      "renamedSymbol": "P:ol.a(B)I#0",
+      "renamedSymbol": "P:MouseWheelHandler.pollRotation(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272876,7 +272956,7 @@
     },
     {
       "symbol": "P:ol.a(ILjava/awt/Component;)V#0",
-      "renamedSymbol": "P:ol.a(ILjava/awt/Component;)V#0",
+      "renamedSymbol": "P:MouseWheelHandler.detach(ILjava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272887,7 +272967,7 @@
     },
     {
       "symbol": "P:ol.a(ILjava/awt/Component;)V#1",
-      "renamedSymbol": "P:ol.a(ILjava/awt/Component;)V#1",
+      "renamedSymbol": "P:MouseWheelHandler.detach(ILjava/awt/Component;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -272898,7 +272978,7 @@
     },
     {
       "symbol": "P:ol.a(Ljava/awt/Component;B)V#0",
-      "renamedSymbol": "P:ol.a(Ljava/awt/Component;B)V#0",
+      "renamedSymbol": "P:MouseWheelHandler.attach(Ljava/awt/Component;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272909,7 +272989,7 @@
     },
     {
       "symbol": "P:ol.a(Ljava/awt/Component;B)V#1",
-      "renamedSymbol": "P:ol.a(Ljava/awt/Component;B)V#1",
+      "renamedSymbol": "P:MouseWheelHandler.attach(Ljava/awt/Component;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -272920,7 +273000,7 @@
     },
     {
       "symbol": "P:ol.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V#0",
-      "renamedSymbol": "P:ol.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V#0",
+      "renamedSymbol": "P:MouseWheelHandler.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -287704,7 +287784,7 @@
     },
     {
       "symbol": "P:ti.b(B)Lkb;#0",
-      "renamedSymbol": "P:ti.b(B)Lkb;#0",
+      "renamedSymbol": "P:ti.createMouseWheelInput(B)LMouseWheelInput;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297234,7 +297314,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "fced052182a35cc353c05da89bc381bd4a63ebb8f58be449f992c9cb7d305c2d",
+      "outputSha256": "92a3bf952866ea0cba9f16169784fda293fa46cbd912ac5e612db765d012c2c7",
       "edits": [
         {
           "start": 78,
@@ -297675,6 +297755,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 52468,
+          "end": 52470,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         },
         {
           "start": 52514,
@@ -298603,6 +298690,13 @@
           "kind": "label"
         },
         {
+          "start": 69153,
+          "end": 69155,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
           "start": 77297,
           "end": 77299,
           "symbol": "C:gi",
@@ -298657,6 +298751,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 79671,
+          "end": 79673,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         },
         {
           "start": 80154,
@@ -299295,7 +299396,7 @@
       "original": "ab.java",
       "renamed": "ab.java",
       "inputSha256": "7d486ff3b0397f02f1d1797d2be0ce35d5eea7f20e458e585f306aa4462cb04e",
-      "outputSha256": "5366700b36bc4ff34005f9d6bf48a64005d40ebbbb3bfcb097b82cc7befc93fd",
+      "outputSha256": "e120c7b9ccc4750c8ccb9c9e4dec8dd1d76e03201801a50141cd509e5df9f26f",
       "edits": [
         {
           "start": 16319,
@@ -299338,6 +299439,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 18675,
+          "end": 18677,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         }
       ]
     },
@@ -300554,8 +300662,15 @@
       "original": "cc.java",
       "renamed": "cc.java",
       "inputSha256": "6b78e8411cfef9c733228e1287cc6414b1a4eb271275d366acf41e43f2f40bf9",
-      "outputSha256": "2378f758ffda34dc42c1ed51b76bf1c9dca58c392d6cfa4b74bbaf42cb83e8ff",
+      "outputSha256": "bf5f9b7719ca996beb69dd96918f1ad7a03f00702735e5002041da37bd6ddd18",
       "edits": [
+        {
+          "start": 436,
+          "end": 438,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
         {
           "start": 470,
           "end": 472,
@@ -300908,7 +301023,7 @@
       "original": "d.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "16a04084497e43ae05fa4aeb18e40377b8b78e63a11875840fb2ffb318b43c56",
-      "outputSha256": "9c99780513c70eafa545f1addfb7d5adc4d1979162486387a99f0af48af5af80",
+      "outputSha256": "0f38b0c19799e0d2a5f06510f606733e9cdcc0733f1b78329d877ce9530b9de8",
       "edits": [
         {
           "start": 72,
@@ -300923,6 +301038,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 3282,
+          "end": 3283,
+          "symbol": "M:ti.b(B)Lkb;",
+          "original": "b",
+          "renamed": "createMouseWheelInput"
         },
         {
           "start": 3312,
@@ -300979,6 +301101,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 18474,
+          "end": 18475,
+          "symbol": "M:kb.a(B)I",
+          "original": "a",
+          "renamed": "pollRotation"
         },
         {
           "start": 19970,
@@ -301395,7 +301524,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "68fb9d86e52749ceed581d13c0c28ab9eb215d4f29706062895ad328bef8b8ec",
-      "outputSha256": "0b802f5572216d424c29acc8a97d9c265893ce4583a964392aa803665bd231d5",
+      "outputSha256": "42941c0e05a4f829677de7096e0499e9fcc8625916e7c1d8f6cffa3f557afaa9",
       "edits": [
         {
           "start": 61,
@@ -301687,6 +301816,55 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 112484,
+          "end": 112486,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 112638,
+          "end": 112640,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 112792,
+          "end": 112794,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 112946,
+          "end": 112948,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 113100,
+          "end": 113102,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 113254,
+          "end": 113256,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 113408,
+          "end": 113410,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
           "start": 120558,
           "end": 120560,
           "symbol": "C:se",
@@ -301787,7 +301965,7 @@
       "original": "ea.java",
       "renamed": "ea.java",
       "inputSha256": "96e8adf41be08df69c240db5159dc6d6dfce84d536f09d799728148d64983dd6",
-      "outputSha256": "ce9022ef9e02d7b070af9b6925d053ac8b1c95bc7c03c7ea82601a8b78b49f70",
+      "outputSha256": "54fae6cb58491309aa6fffb6bed63e61aeb65055ca9c4e37dbdf5483c887471d",
       "edits": [
         {
           "start": 237,
@@ -301795,6 +301973,13 @@
           "symbol": "M:ea.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 928,
+          "end": 929,
+          "symbol": "M:kb.a(Ljava/awt/Component;B)V",
+          "original": "a",
+          "renamed": "attach"
         },
         {
           "start": 2382,
@@ -303470,8 +303655,15 @@
       "original": "h.java",
       "renamed": "h.java",
       "inputSha256": "9dd97619f6542b4592a018024a4ed1587e1844319475aaa87e1c2181479eb36d",
-      "outputSha256": "1cd3ce11634175d048dcea4e01d72f8ad0104a72eccbbdb9f34cc9b8f1bc2bdf",
+      "outputSha256": "2e1b6ed9eeda032bcaffc9afcb8f66d6956abb7e27cdbc6df7a4195d37f7c6dd",
       "edits": [
+        {
+          "start": 181,
+          "end": 183,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
         {
           "start": 316,
           "end": 317,
@@ -304084,7 +304276,7 @@
       "original": "hh.java",
       "renamed": "hh.java",
       "inputSha256": "e10dc020f1e498eadf31e9bbff922355bd19f914dd093a779150926c8959e1cd",
-      "outputSha256": "64508c1183a674176a709e0a08e9c6192ab4acee01c1d3aaf5b2b59d283e148e",
+      "outputSha256": "54e2b7d0ee138b64c087e08725aec067df1efc012964f9f237aaa068372fe67e",
       "edits": [
         {
           "start": 2300,
@@ -304136,6 +304328,13 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 10833,
+          "end": 10835,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
           "start": 10934,
           "end": 10936,
           "symbol": "C:wc",
@@ -304155,6 +304354,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 11418,
+          "end": 11420,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         },
         {
           "start": 12932,
@@ -304450,7 +304656,7 @@
       "original": "ib.java",
       "renamed": "ib.java",
       "inputSha256": "a4e22972bb11822da2def36f6bdd9a6f3a8695df2df7627322040fc87e025cf6",
-      "outputSha256": "4ec7535f829a94046eeb2580135629f28cc33e717c6d23161ef629abd4ed2a9e",
+      "outputSha256": "91f54b2c5b52a8df6954ec7f6d13415d4680bb92204a8d8b705553c37bdbb278",
       "edits": [
         {
           "start": 2312,
@@ -304563,6 +304769,13 @@
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 57971,
+          "end": 57973,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         },
         {
           "start": 61899,
@@ -304745,8 +304958,16 @@
       "original": "in.java",
       "renamed": "in.java",
       "inputSha256": "5c4a952588caad7754a32c07f160deb4dc8118f9c83bc82c402d8fe20e287e53",
-      "outputSha256": "5c4a952588caad7754a32c07f160deb4dc8118f9c83bc82c402d8fe20e287e53",
-      "edits": []
+      "outputSha256": "51cd405835e221d8a63caa65aea75d1ce35ee13f53fb3630ec5a0097c84b1ac0",
+      "edits": [
+        {
+          "start": 10476,
+          "end": 10478,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        }
+      ]
     },
     {
       "original": "j.java",
@@ -305305,10 +305526,39 @@
     },
     {
       "original": "kb.java",
-      "renamed": "kb.java",
+      "renamed": "MouseWheelInput.java",
       "inputSha256": "aa6883670cc9408409a5f6e094db62bdc2e008e72f652e669ed9a21f79c1f959",
-      "outputSha256": "aa6883670cc9408409a5f6e094db62bdc2e008e72f652e669ed9a21f79c1f959",
-      "edits": []
+      "outputSha256": "e657e878a6239b54a4648ee985bd96ea10e7dd265a58f2bfb54711c516e216e0",
+      "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 676,
+          "end": 677,
+          "symbol": "M:kb.a(ILjava/awt/Component;)V",
+          "original": "a",
+          "renamed": "detach"
+        },
+        {
+          "start": 736,
+          "end": 737,
+          "symbol": "M:kb.a(B)I",
+          "original": "a",
+          "renamed": "pollRotation"
+        },
+        {
+          "start": 4826,
+          "end": 4827,
+          "symbol": "M:kb.a(Ljava/awt/Component;B)V",
+          "original": "a",
+          "renamed": "attach"
+        }
+      ]
     },
     {
       "original": "kc.java",
@@ -305586,7 +305836,7 @@
       "original": "la.java",
       "renamed": "la.java",
       "inputSha256": "9c4938e7a667f8f2d8096a971fc2c715420b7aea6adf454e1ef9ce49e8df3342",
-      "outputSha256": "4da04404b923f7b50c8ab23500b598deaf40bd15b1ea36ea5e861256fd45555e",
+      "outputSha256": "e59965384a227750837a186da37644d459efbb756d3970f7fe082952dfb52e56",
       "edits": [
         {
           "start": 4485,
@@ -305594,6 +305844,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 4940,
+          "end": 4942,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         },
         {
           "start": 9667,
@@ -308457,10 +308714,109 @@
     },
     {
       "original": "ol.java",
-      "renamed": "ol.java",
+      "renamed": "MouseWheelHandler.java",
       "inputSha256": "2376378d0f1d7f42f42a47dbb5f0de10e3c07c9b470ae48b7854787c64885866",
-      "outputSha256": "2376378d0f1d7f42f42a47dbb5f0de10e3c07c9b470ae48b7854787c64885866",
-      "edits": []
+      "outputSha256": "9a85f7b94ebe92344b0543159b99296a465eee9d9242942a978689dc1bec4355",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ol",
+          "original": "ol",
+          "renamed": "MouseWheelHandler"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 127,
+          "end": 134,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "symbol": "M:ol.a(B)I",
+          "original": "a",
+          "renamed": "pollRotation"
+        },
+        {
+          "start": 264,
+          "end": 271,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 286,
+          "end": 293,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 342,
+          "end": 343,
+          "symbol": "M:ol.a(ILjava/awt/Component;)V",
+          "original": "a",
+          "renamed": "detach"
+        },
+        {
+          "start": 512,
+          "end": 519,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 560,
+          "end": 561,
+          "symbol": "M:ol.a(Ljava/awt/Component;B)V",
+          "original": "a",
+          "renamed": "attach"
+        },
+        {
+          "start": 646,
+          "end": 653,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 967,
+          "end": 974,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 982,
+          "end": 989,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        },
+        {
+          "start": 1056,
+          "end": 1058,
+          "symbol": "M:ol.<init>()V",
+          "original": "ol",
+          "renamed": "MouseWheelHandler"
+        },
+        {
+          "start": 1076,
+          "end": 1083,
+          "symbol": "F:ol.field_e:I",
+          "original": "field_e",
+          "renamed": "rotation"
+        }
+      ]
     },
     {
       "original": "om.java",
@@ -311937,7 +312293,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "56c5d35b47521bb20f32cb9ef7116c2ae21625190fde51f47f8d4788280499c8",
-      "outputSha256": "6b91273b86ebd93554fb13e61b539dbb967acdd5a8c0a5ee525015e80425bf3f",
+      "outputSha256": "181bc36a5f7f962c6eac7ddefd5910fce94ab8efa800afa043ed0c2c9f4dfafd",
       "edits": [
         {
           "start": 2171,
@@ -312524,6 +312880,13 @@
           "kind": "label"
         },
         {
+          "start": 105827,
+          "end": 105829,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
           "start": 108700,
           "end": 108702,
           "symbol": "C:wc",
@@ -312873,7 +313236,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "81841ced41534989a9744aae4481e3af5d7cc5dd7a5744b87f92c8313137d1f1",
-      "outputSha256": "c205254e1fb185d1cf96b28413c9e0ea90b6356a5313de2cc6c29de0aafb327c",
+      "outputSha256": "6572e1ae57ff88d21cf8c1824d77d87fd46c52448be5d9cbe2fb032cb7a38494",
       "edits": [
         {
           "start": 441,
@@ -312881,6 +313244,13 @@
           "symbol": "M:rh.e(I)V",
           "original": "e",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 4727,
+          "end": 4729,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         }
       ]
     },
@@ -313097,7 +313467,7 @@
       "original": "sd.java",
       "renamed": "sd.java",
       "inputSha256": "e006419ddb50e36615576b80f52563e617a8102984a33e7cbcd87294eacdf480",
-      "outputSha256": "20f233ca6b166509f980a718b1c6f890748dcd526fb80cb384ba10cbe24ff75f",
+      "outputSha256": "0dc4e58468f74c4ba23b27915c992cf886175aba82487139a012e224302ab5a1",
       "edits": [
         {
           "start": 2069,
@@ -313105,6 +313475,13 @@
           "symbol": "C:uk",
           "original": "uk",
           "renamed": "ArchiveProvider"
+        },
+        {
+          "start": 2396,
+          "end": 2398,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         }
       ]
     },
@@ -313112,7 +313489,7 @@
       "original": "se.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "195ef57a474e2badfb624fae51ccb35ee318c752d4ee0d76877b6f4d691770a4",
-      "outputSha256": "76fc3f0ef62e8086ad82e2bbe244da71c6bc1a90e2ab64f9cd89af027a2834b9",
+      "outputSha256": "7d6f38ef8e286014f87d34bf4882e0f7a726c557634f01e69e25c6d7fa7020dc",
       "edits": [
         {
           "start": 60,
@@ -313134,6 +313511,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 20913,
+          "end": 20915,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
         },
         {
           "start": 33403,
@@ -313975,7 +314359,7 @@
       "original": "ti.java",
       "renamed": "ti.java",
       "inputSha256": "7c5141f6981d63aee10fd9e5d363c000d58d9ecec417f9786b251e25512e8800",
-      "outputSha256": "d19926c56e5dfd607de0b8055b33e9ff7bbae75b51aaee5fc52d9d9f580e8e72",
+      "outputSha256": "bb45f0fe59c6b8e777380a4d736156323f4e4c2d8e0f5019c76d355a33e883be",
       "edits": [
         {
           "start": 892,
@@ -313997,6 +314381,42 @@
           "symbol": "C:uk",
           "original": "uk",
           "renamed": "ArchiveProvider"
+        },
+        {
+          "start": 4889,
+          "end": 4891,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 4892,
+          "end": 4893,
+          "symbol": "M:ti.b(B)Lkb;",
+          "original": "b",
+          "renamed": "createMouseWheelInput"
+        },
+        {
+          "start": 4966,
+          "end": 4968,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 5151,
+          "end": 5153,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 5171,
+          "end": 5173,
+          "symbol": "C:ol",
+          "original": "ol",
+          "renamed": "MouseWheelHandler",
+          "kind": "class-name-literal"
         }
       ]
     },
@@ -314191,8 +314611,22 @@
       "original": "ub.java",
       "renamed": "ub.java",
       "inputSha256": "762191bf3492b1b0aa47e24439c1c5d6c807bd6249bb200e98adc2ec4ff52996",
-      "outputSha256": "d37035540543022333f81383704e25aca9a543cce45b9ebb030b6b6a7edf3b05",
+      "outputSha256": "a278e1020a0db6b15ac067b97246aad79a6c3fbb722e5e167d7b6e8e041a476c",
       "edits": [
+        {
+          "start": 348,
+          "end": 350,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 497,
+          "end": 499,
+          "symbol": "C:kb",
+          "original": "kb",
+          "renamed": "MouseWheelInput"
+        },
         {
           "start": 548,
           "end": 549,
@@ -314716,8 +315150,16 @@
       "original": "v.java",
       "renamed": "v.java",
       "inputSha256": "66fb39bd932e70927a1e7ad9a2811e2eccd463e39ee4020ada8890532b649ca2",
-      "outputSha256": "66fb39bd932e70927a1e7ad9a2811e2eccd463e39ee4020ada8890532b649ca2",
-      "edits": []
+      "outputSha256": "063c07c3050a59ad8c5a0de0d09cca9ee1d0bd561ae2bf3f95c7116d223a3cba",
+      "edits": [
+        {
+          "start": 1772,
+          "end": 1773,
+          "symbol": "M:kb.a(ILjava/awt/Component;)V",
+          "original": "a",
+          "renamed": "detach"
+        }
+      ]
     },
     {
       "original": "va.java",
@@ -315927,10 +316369,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "a013d9e0e275e2c91fbbf3b4819fcbf373b577a27215ddcb990c2803aefcfe95",
+    "rulesSha256": "ad24e2639d9ba5278e8197ac1521e90a0a60b2d13ef56fb588ba7262f0f61f63",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "b1029b9eceb34c245e26c6d71544adff53f956e6b14d4d38d8c193e5382130ea",
+    "outputTreeSha256": "fc44befc0dbf5ecd4f4ed028edd82fbaee019e39bc398bf32716c56bf0db8059",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -315945,7 +316387,7 @@
       "overrideFamiliesChecked": 456,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
-      "classNameLiteralEdits": 0,
+      "classNameLiteralEdits": 1,
       "labelBindingsCompared": 630,
       "labelEdits": 630,
       "runtimeEquivalenceVerified": false,

@@ -129,7 +129,7 @@ final class fi {
           return (String) null;
         }
         if (gf.field_Z == ma.field_o) {
-          return lf.field_e;
+          return MouseWheelInput.field_e;
         }
         return DualLinkNode.field_j;
     }

@@ -6,7 +6,7 @@ final class ah {
     static int[] field_i;
     static int field_f;
     static wh field_j;
-    static lf field_d;
+    static MouseWheelInput field_d;
     static ci field_e;
     static String field_h;
     static int field_c;

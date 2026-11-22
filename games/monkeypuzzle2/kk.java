@@ -709,7 +709,7 @@ final class kk {
             if (null == DequeCursor.field_f) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + cc.field_b;
+              stackIn_15_6 = "" + MouseWheelInput.field_b;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;

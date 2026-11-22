@@ -30,7 +30,7 @@ final class ea {
           me.a((java.awt.Component) ((Object) param0), 118);
           dc.a((java.awt.Component) ((Object) param0), (byte) 48);
           if (null != h.field_b) {
-            h.field_b.a((java.awt.Component) ((Object) param0), (byte) 86);
+            h.field_b.attach((java.awt.Component) ((Object) param0), (byte) 86);
           }
           if (param1 == 0) {
             return;

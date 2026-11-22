@@ -7,7 +7,7 @@ final class eb extends WidgetContainer implements sh, ql {
     cm field_H;
     static IntrusiveDeque field_C;
     private qc field_G;
-    static cc field_A;
+    static MouseWheelInput field_A;
     private ButtonWidget field_D;
 
     public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
@@ -173,7 +173,7 @@ final class eb extends WidgetContainer implements sh, ql {
         try {
           var1 = (ki) (ok.field_a.a((byte) -117));
           if (param0 != -93) {
-            field_A = (cc) null;
+            field_A = (MouseWheelInput) null;
           }
           while (var1 != null) {
             stackIn_5_0 = var1.field_F;
@@ -720,7 +720,7 @@ final class eb extends WidgetContainer implements sh, ql {
         }
         sg.a(this.field_G.field_s, (byte) -120);
         if (!param0) {
-          field_A = (cc) null;
+          field_A = (MouseWheelInput) null;
         }
     }
 

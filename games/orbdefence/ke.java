@@ -446,7 +446,7 @@ final class ke {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              pe.a((byte) -13, (Throwable) null, "MGR1: " + param0);
+              MouseWheelInput.a((byte) -13, (Throwable) null, "MGR1: " + param0);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

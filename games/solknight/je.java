@@ -168,16 +168,16 @@ final class je {
 
     final static void a(boolean param0) {
         if (!param0) {
-          if (lf.field_d != null) {
-            lf.field_d.d(2);
-            lf.field_d = null;
+          if (MouseWheelInput.field_d != null) {
+            MouseWheelInput.field_d.d(2);
+            MouseWheelInput.field_d = null;
           }
           return;
         }
         je.a(false);
-        if (lf.field_d != null) {
-          lf.field_d.d(2);
-          lf.field_d = null;
+        if (MouseWheelInput.field_d != null) {
+          MouseWheelInput.field_d.d(2);
+          MouseWheelInput.field_d = null;
         }
     }
 

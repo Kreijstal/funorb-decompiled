@@ -388,7 +388,7 @@ public final class StarCannon extends ag {
                     continue scanLoop1;
                 }
                 case 53: {
-                    if (gj.field_c > -1) {
+                    if (MouseWheelSource.field_c > -1) {
                         /* Inlined CFG state: 55. */
                         {
                             var3 = af.field_y.a(vk.field_w);
@@ -398,7 +398,7 @@ public final class StarCannon extends ag {
                             ba.a(24, ma.field_a, (byte) 21, 604, 35, 455 + param0);
                             nb.a(455 + param0, (byte) 122, 35, ha.field_a, 604, 128, 24);
                             vb.field_l.e(609, param0 + 460);
-                            af.field_y.a(Integer.toString(gj.field_c), 626, 472 + param0, 16777215, -1);
+                            af.field_y.a(Integer.toString(MouseWheelSource.field_c), 626, 472 + param0, 16777215, -1);
                             var4_ref_String = be.field_b;
                             var5 = 65535;
                             var6 = 32896;
@@ -632,7 +632,7 @@ public final class StarCannon extends ag {
                     } else {
                         /* Inlined CFG state: 92. */
                         {
-                            if (gj.field_c != 0) {
+                            if (MouseWheelSource.field_c != 0) {
                                 statePc = 95;
                                 continue scanLoop1;
                             } else {
@@ -881,7 +881,7 @@ public final class StarCannon extends ag {
                     } else {
                         /* Inlined CFG state: 134. */
                         {
-                            if (gj.field_c != 0) {
+                            if (MouseWheelSource.field_c != 0) {
                                 statePc = 144;
                                 continue scanLoop1;
                             } else {
@@ -1054,7 +1054,7 @@ public final class StarCannon extends ag {
     }
 
     final void c(boolean param0) {
-        gj.field_c = gj.field_c + 1;
+        MouseWheelSource.field_c = MouseWheelSource.field_c + 1;
         dg.field_l = 0;
         mj.a(96, 12, 0, 23, 100);
         mj.a(255, 12, 1200, 45, 100);
@@ -1895,7 +1895,7 @@ public final class StarCannon extends ag {
           vk.a("", 120, "moon", jg.field_F);
           vk.a("", param1 ^ -1487, "stars", jg.field_F);
           fh.field_q = vk.a("", param1 + 1531, "nebula", jg.field_F);
-          gj.field_e = vk.a("", 125, "titlepic", jg.field_F);
+          MouseWheelSource.field_e = vk.a("", 125, "titlepic", jg.field_F);
           gb.field_r = vk.a("", 91, "title2", jg.field_F);
           ea.field_b[0] = vk.a("", 54, "sp0", jg.field_F);
           ea.field_b[1] = vk.a("", 116, "sp1", jg.field_F);
@@ -1966,7 +1966,7 @@ public final class StarCannon extends ag {
         pf.field_d = 1;
         bf.field_w = 0;
         ha.field_c = 0;
-        gj.field_c = -1;
+        MouseWheelSource.field_c = -1;
         jk.field_j = 0;
         eg.field_l = 128;
         ua.field_c = -2;
@@ -2107,7 +2107,7 @@ public final class StarCannon extends ag {
         if (ie.field_C > 0) {
           ie.field_C = ie.field_C - 1;
         }
-        if (gj.field_c == -1) {
+        if (MouseWheelSource.field_c == -1) {
           var2_int = 0;
           if (0 == ia.field_k &&
             0 != jg.field_H) {
@@ -2139,7 +2139,7 @@ public final class StarCannon extends ag {
           }
         }
         if (fi.field_e.field_k <= 0) {
-          if (gj.field_c < 0) {
+          if (MouseWheelSource.field_c < 0) {
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 4000; var2_intLifetime1++) {
               qc.field_c[var2_intLifetime1] = null;
             }
@@ -2715,7 +2715,7 @@ public final class StarCannon extends ag {
             if (this.field_D >= 250 &&
               64 > var35.field_u) {
               tj.field_G = 0;
-              gj.field_c = -1;
+              MouseWheelSource.field_c = -1;
               il.field_i = il.field_i + rj.field_h;
               var35.field_k = -1;
               this.field_D = 0;
@@ -2824,7 +2824,7 @@ public final class StarCannon extends ag {
           if (13 == lb.field_B) {
             if (rj.field_h != 4) {
               if (fi.field_e.field_k == 0 &&
-                gj.field_c == 0) {
+                MouseWheelSource.field_c == 0) {
                 if (25 > fi.field_e.field_r) {
                   fi.field_e.field_r = -fi.field_e.field_r + 192;
                 } else if (!(fi.field_e.field_r >= 167)) {
@@ -2864,7 +2864,7 @@ public final class StarCannon extends ag {
               }
             }
           }
-          if (gj.field_c != -1) {
+          if (MouseWheelSource.field_c != -1) {
             continue;
           }
           hc.field_e = "hahahah";
@@ -2930,7 +2930,7 @@ public final class StarCannon extends ag {
         if (stackIn_549_0Lifetime1 > stackIn_549_1Lifetime1) {
           vd.field_j = vd.field_j - 480;
         }
-        if (0 > gj.field_c &&
+        if (0 > MouseWheelSource.field_c &&
           !bi.field_b) {
           lc.field_gb = lc.field_gb + 1;
           if (1280 < lc.field_gb) {
@@ -3196,7 +3196,7 @@ public final class StarCannon extends ag {
         GameApplet.c(1719);
         gg.clearStaticReferences((byte) 121);
         MouseInput.clearStaticReferences(true);
-        gj.a(15686);
+        MouseWheelSource.a(15686);
         ki.a();
         ue.clearStaticReferences(0);
         qe.clearStaticReferences();
@@ -3481,11 +3481,11 @@ public final class StarCannon extends ag {
           eb.field_b[qd.field_E[4]].a(var3_int, hc.field_c, 320, 240);
           eb.field_b[qd.field_E[3]].a(var3_int, -240 + hc.field_c, 320, 240);
         }
-        if (gj.field_c == -1) {
+        if (MouseWheelSource.field_c == -1) {
           if (50 <= cd.field_c) {
             gb.field_r.d(-gb.field_r.field_x + 640 >> 1, 0);
           } else {
-            gj.field_e.d(-gj.field_e.field_x + 640 >> 1, 0);
+            MouseWheelSource.field_e.d(-MouseWheelSource.field_e.field_x + 640 >> 1, 0);
             if (25 >= cd.field_c &&
               field_z != -2) {
               gb.field_r.e(640 - gb.field_r.field_x >> 1, 0, -(cd.field_c * 10) + 250);

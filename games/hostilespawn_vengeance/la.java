@@ -146,7 +146,7 @@ final class la extends ca {
     }
 
     final static void a(int param0, int param1) {
-        kb.field_b = de.field_k[param1];
+        MouseWheelInput.field_b = de.field_k[param1];
         u.field_j = gg.field_C[param1];
         if (param0 == -29828) {
           ad.field_b = gm.field_k[param1];

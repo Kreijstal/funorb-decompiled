@@ -23,7 +23,7 @@ final class ld {
         var2 = (int)(Math.exp((double)(-lf.field_b) / 25.0) * -400.0);
         v.field_O.a(0, var2 / 2 + 200);
         this.c(200 + var2 / 2, param0 ^ -66);
-        oi.field_f.d(0, 200 + var2 / 2);
+        MouseWheelInput.field_f.d(0, 200 + var2 / 2);
         this.a(jk.field_L, 220, var2, -50);
         dj.a(re.field_e, 75, lf.field_b, false, 380);
         for (var3 = 0; var3 < 3; var3++) {
@@ -500,7 +500,7 @@ final class ld {
         var3 = ni.field_q;
         v.field_O.a(0, var2 / 2 + 200);
         this.c(200 + var2 / 2, -96);
-        oi.field_f.d(0, 200 + var2 / 2);
+        MouseWheelInput.field_f.d(0, 200 + var2 / 2);
         this.a(oj.field_d, 170, var2, -50);
         stackIn_3_0 = (ej.field_h != 0);
         stackIn_6_1 = (sd.field_a.field_H == 0) ? false : true;
@@ -861,7 +861,7 @@ final class ld {
         int var11Lifetime1;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         v.field_O.a(0, 0);
-        oi.field_f.d(0, 90);
+        MouseWheelInput.field_f.d(0, 90);
         if (lf.field_b >= 100) {
           stackIn_3_0 = 100;
         } else {
@@ -1138,7 +1138,7 @@ final class ld {
             }
             var17Lifetime2 = stackIn_63_0;
             rk.field_a.a(var16, -1 + (var4 + var6 / 4), var14Lifetime3);
-            oi.field_h.a(-(oi.field_h.field_h / 4) + (var17Lifetime2 + var16), var6 / 4 + var4 - 1, var14Lifetime3);
+            MouseWheelInput.field_h.a(-(MouseWheelInput.field_h.field_h / 4) + (var17Lifetime2 + var16), var6 / 4 + var4 - 1, var14Lifetime3);
           }
         }
         if (26 <= var8 &&
@@ -1871,7 +1871,7 @@ final class ld {
         var4 = (int)(-400.0 * Math.exp((double)(-lf.field_b) / 25.0));
         v.field_O.a(0, var4 / 2 + 200);
         this.c(200 + var4 / 2, 62);
-        oi.field_f.d(0, var4 / 2 + 200);
+        MouseWheelInput.field_f.d(0, var4 / 2 + 200);
         stackIn_5_0 = (!oh.a(0)) ? 0 : 20;
         var5 = stackIn_5_0;
         var6 = var5 + 220;

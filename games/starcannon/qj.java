@@ -3,7 +3,7 @@
  */
 abstract class qj extends kc {
     private ie field_Y;
-    static gj field_eb;
+    static MouseWheelSource field_eb;
     private int field_ab;
     private int field_W;
     private int field_db;

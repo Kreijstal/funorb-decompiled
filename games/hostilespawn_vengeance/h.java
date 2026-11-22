@@ -6,7 +6,7 @@ final class h implements nn {
     private int field_g;
     private int field_a;
     private int field_c;
-    static kb field_b;
+    static MouseWheelInput field_b;
     private int field_e;
     private int field_h;
     private vm field_d;

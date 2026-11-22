@@ -242,7 +242,7 @@ final class nf {
           qb.field_a = param3;
           jl.field_c = param2;
           wj.field_c = param4;
-          gj.field_a = null;
+          MouseWheelSource.field_a = null;
           lh.field_D = param1;
           sk.field_b = param0;
           return true;

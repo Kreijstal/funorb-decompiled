@@ -108,7 +108,7 @@ final class ad extends ei {
             stackIn_7_0 = nj.field_e;
             return stackIn_7_0;
           }
-          if (oi.a(8975, var5)) {
+          if (MouseWheelInput.a(8975, var5)) {
             stackIn_11_0 = (String) (field_p);
             return stackIn_11_0;
           }

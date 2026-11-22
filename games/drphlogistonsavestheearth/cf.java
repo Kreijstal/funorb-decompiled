@@ -13,7 +13,7 @@ final class cf {
 
     final static void a(byte param0) {
         sg.field_a = false;
-        oi.field_c = false;
+        MouseWheelInput.field_c = false;
         sf.a(-1, 11649);
         lc.field_h = pj.field_D;
         fk.field_q = pj.field_D;

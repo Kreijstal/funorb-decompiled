@@ -113,7 +113,7 @@ final class l {
           if (mj.field_i == null) {
             return;
           }
-          mj.field_i.a((java.awt.Component) ((Object) param0), 23678);
+          mj.field_i.attach((java.awt.Component) ((Object) param0), 23678);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

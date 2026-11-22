@@ -1102,7 +1102,7 @@ public final class HostileSpawn extends NetworkGameClient {
           sc.a(-87);
           KeyboardInput.b(-69);
           MouseInput.b(-31);
-          kb.c((byte) -63);
+          MouseWheelInput.c((byte) -63);
           si.b();
           ResourceArchive.b(-16199);
           gf.clearStaticReferences((byte) -105);
@@ -1603,7 +1603,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   break;
                 }
                 sg.field_j = null;
-                kb.b((byte) -43);
+                MouseWheelInput.b((byte) -43);
                 var3 = (hm) (vl.field_c.g(param0 - 68));
                 while (var3 != null) {
                   jh.a(125, 4, var3);
@@ -1896,7 +1896,7 @@ public final class HostileSpawn extends NetworkGameClient {
                                 wd.field_a.a(param0 - 8092, "kartika13")) {
                                 if (ResourceArchive.field_a.a(-15879) &&
                                   ResourceArchive.field_a.a(-8088, "kartika13")) {
-                                  kb.b((byte) -43);
+                                  MouseWheelInput.b((byte) -43);
                                   u.field_e = u.field_e - w.field_r;
                                   w.field_r = 0;
                                   hg.field_e = 0;
