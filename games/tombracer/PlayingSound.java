@@ -21,7 +21,7 @@ final class PlayingSound extends IntrusiveNode {
             param0.playingCounts[this.field_l] = param0.playingCounts[this.field_l] - 1;
           }
           this.unlink(25);
-          rs.queueSoundRelease(this, -110);
+          ConsoleCloseParenthesisKind.queueSoundRelease(this, -110);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -116,7 +116,7 @@ final class PlayingSound extends IntrusiveNode {
             param1.playingCounts[this.field_l] = param1.playingCounts[this.field_l] - 1;
           }
           this.unlink(18);
-          rs.queueSoundRelease(this, -77);
+          ConsoleCloseParenthesisKind.queueSoundRelease(this, -77);
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

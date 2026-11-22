@@ -478,7 +478,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Rb.field_H.countWrappedLines(var33, var12.field_G - mna.field_d - mna.field_d);
               var12.field_Rb.field_r = var33;
-              var12.field_Rb.field_s = var12.field_zb * 256 / qsa.field_a;
+              var12.field_Rb.field_s = var12.field_zb * 256 / LobbyRemovalTiming.durationTicks;
               var12.field_Rb.setBounds(-(mna.field_d * 2) + var12.field_G, ToolkitSelector.field_a * var34_intLifetime1, param1 - 23776, var31, mna.field_d);
               var31 = var31 + ToolkitSelector.field_a * var34_intLifetime1;
             }

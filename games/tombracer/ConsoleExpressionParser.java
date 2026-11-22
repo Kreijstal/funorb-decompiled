@@ -135,7 +135,7 @@ final class ConsoleExpressionParser {
               throw new ConsoleParseException(var4.field_h);
             }
             var5 = param0.next((byte) -126);
-            if (var5.kind != lna.field_a) {
+            if (var5.kind != ConsoleOpenParenthesisKind.kind) {
               throw new ConsoleParseException(var5.field_h);
             }
             var4.field_i = new IntrusiveDeque();
@@ -143,7 +143,7 @@ final class ConsoleExpressionParser {
               if (param0.isAtEnd((byte) 127)) {
                 throw new ConsoleParseException(var4.field_h);
               }
-              if (param0.next((byte) -127).kind == rs.field_a) {
+              if (param0.next((byte) -127).kind == ConsoleCloseParenthesisKind.kind) {
                 stackIn_20_0 = var4;
                 return stackIn_20_0;
               }
@@ -153,7 +153,7 @@ final class ConsoleExpressionParser {
                 throw new ConsoleParseException(var4.field_h);
               }
               var6 = param0.next((byte) -126);
-              if (var6.kind == rs.field_a) {
+              if (var6.kind == ConsoleCloseParenthesisKind.kind) {
                 stackIn_26_0 = var4;
                 return stackIn_26_0;
               }

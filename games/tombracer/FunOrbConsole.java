@@ -361,13 +361,13 @@ final class FunOrbConsole extends ConsoleWindow {
                 boolean decompiledFrameRemainder0 = true;
                 if (var9 >= 0) {
                   stackIn_31_0 = var4[var9].kind;
-                  stackIn_31_1 = rs.field_a;
+                  stackIn_31_1 = ConsoleCloseParenthesisKind.kind;
                   decompiledFrameRemainder0 = (var11 == 0);
                   if (decompiledFrameRemainder0) {
                     if (stackIn_31_0 == stackIn_31_1) {
                       var10_int++;
                     }
-                    if (~var4[var9].kind == ~lna.field_a) {
+                    if (~var4[var9].kind == ~ConsoleOpenParenthesisKind.kind) {
                       var10_int--;
                     }
                     if (var10_int >= 0 ||

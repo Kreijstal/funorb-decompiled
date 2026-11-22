@@ -35,7 +35,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         } else {
           var4 = (PlayingSound) (this.playing.first(-80));
           while (var4 != null) {
-            rs.queueSoundRelease(var4, 107);
+            ConsoleCloseParenthesisKind.queueSoundRelease(var4, 107);
             var4 = (PlayingSound) (this.playing.next(107));
           }
           this.playing.clear(8);
@@ -44,7 +44,7 @@ final class SoundEventPlayer extends SoundEventQueue {
         }
         var4Lifetime1 = (PlayingSound) (this.playing.first(-80));
         while (var4Lifetime1 != null) {
-          rs.queueSoundRelease(var4Lifetime1, 107);
+          ConsoleCloseParenthesisKind.queueSoundRelease(var4Lifetime1, 107);
           var4Lifetime1 = (PlayingSound) (this.playing.next(107));
         }
         this.playing.clear(8);

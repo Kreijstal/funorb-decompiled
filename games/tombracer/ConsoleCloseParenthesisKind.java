@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs {
-    static int field_a;
+final class ConsoleCloseParenthesisKind {
+    static int kind;
 
     final static void queueSoundRelease(PlayingSound param0, int param1) {
         try {
@@ -16,7 +16,7 @@ final class rs {
     final static int getTopDialogHeight(byte param0) {
         if (param0 != 124) {
           PlayingSound var2 = (PlayingSound) null;
-          rs.queueSoundRelease((PlayingSound) null, -74);
+          ConsoleCloseParenthesisKind.queueSoundRelease((PlayingSound) null, -74);
           if (SnakePitTile.hasVisibleDialog(false)) {
             return ModelFactory.field_a.topDialogHeight(true);
           }
@@ -29,6 +29,6 @@ final class rs {
     }
 
     static {
-        field_a = 1;
+        kind = 1;
     }
 }

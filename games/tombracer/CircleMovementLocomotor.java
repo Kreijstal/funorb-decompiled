@@ -249,7 +249,7 @@ final class CircleMovementLocomotor extends Locomotor {
           DemoCourseGenerator.field_g = param0.field_J;
           DemoCourseGenerator.field_g.clear(8);
           IdChatTarget.field_d = new SecondaryNodeHashTable(param1);
-          qsa.field_a = param9;
+          LobbyRemovalTiming.durationTicks = param9;
           TileRenderable.field_d = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

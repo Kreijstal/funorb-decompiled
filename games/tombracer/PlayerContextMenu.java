@@ -133,7 +133,7 @@ final class PlayerContextMenu {
         String var5Lifetime1;
         var4 = null;
         if (4 == param0) {
-          var4_ref = rf.a(true, this.field_i, param2);
+          var4_ref = rf.requestAddFriend(true, this.field_i, param2);
           if (var4_ref == null) {
             if (param1 != -121) {
               return false;
@@ -148,7 +148,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 5) {
-          var4_refLifetime1 = uca.a(this.field_i, (byte) 102, param2);
+          var4_refLifetime1 = uca.requestRemoveFriend(this.field_i, (byte) 102, param2);
         } else {
           if (param0 == 6) {
             var4_refLifetime1 = Bzip2State.a(-3, this.field_i, param2);

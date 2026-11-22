@@ -2228,6 +2228,14 @@
       "renamedSymbol": "C:BridgeTile"
     },
     {
+      "symbol": "C:fb",
+      "originalName": "fb",
+      "to": "LargeByteArrayPoolStorage",
+      "evidence": "Complete class and all exact pool references reviewed: static byte[50][] holds30000-byte array slots consumed/cleared by acquireByteArray; retain unrelated ValidationOutcome/string globals, diagnostic string and already meaningful recursive releaseStatics with repeated null clearing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LargeByteArrayPoolStorage"
+    },
+    {
       "symbol": "C:fe",
       "originalName": "fe",
       "to": "DateFieldsWidget",
@@ -3020,6 +3028,14 @@
       "renamedSymbol": "C:NativeToolkitModel"
     },
     {
+      "symbol": "C:ia",
+      "originalName": "ia",
+      "to": "LargeByteArrayPoolCounter",
+      "evidence": "Complete class and every exact Java source reference reviewed: sole static int initialized0; acquireByteArray tests/decrements it when popping30000-byte arrays from fb.field_a. Preserve unreachable duplicate branches and all failure behavior. This Java tree has no replenishing writes; naming does not add pooling behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LargeByteArrayPoolCounter"
+    },
+    {
       "symbol": "C:ib",
       "originalName": "ib",
       "to": "Spawner",
@@ -3090,6 +3106,14 @@
       "evidence": "rn.createComponent builds it for type 26, which rn's constructor labels \"Laser Shooter\" in dsa.field_a.",
       "confidence": "reviewed",
       "renamedSymbol": "C:LaserShooterComponent"
+    },
+    {
+      "symbol": "C:ii",
+      "originalName": "ii",
+      "to": "FriendListCounter",
+      "evidence": "Complete tiny class and exact Java references reviewed: sole static int is current friend-list count. Friend-packet creation increments it and assigns entry order, removal decrements it, lobby clearing resets0, add-friend validation enforces100/200limits. Preserve implicit0 initialization and all references.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FriendListCounter"
     },
     {
       "symbol": "C:iia",
@@ -4082,6 +4106,14 @@
       "evidence": "rn.createComponent builds it for types 16, 60, which rn's constructor labels \"Platform\", \"Hidden Platform\" in dsa.field_a.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PlatformComponent"
+    },
+    {
+      "symbol": "C:lna",
+      "originalName": "lna",
+      "to": "ConsoleOpenParenthesisKind",
+      "evidence": "Complete class and all exact references reviewed: mutable token-kind id initialized0. Tokenizer uses it for ASCII40, ConsoleToken prints ArgStart, parser requires it after method name, console nesting decrements on it. Preserve mutability and all values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ConsoleOpenParenthesisKind"
     },
     {
       "symbol": "C:lo",
@@ -5484,6 +5516,14 @@
       "renamedSymbol": "C:MatchPhase"
     },
     {
+      "symbol": "C:qsa",
+      "originalName": "qsa",
+      "to": "LobbyRemovalTiming",
+      "evidence": "Complete tiny class and all exact Java references reviewed: sole static duration configured by initializeLobbyCollections, canonical150. Lobby removal packets set player/game countdowns from it; tickLobbyRemovalTimers decrements them and removes entries at0. Status text alpha is remaining*256/duration in renderers, confirmed by UiComponent drawTextAlpha. Preserve value, zero/overflow/division behavior and all timing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LobbyRemovalTiming"
+    },
+    {
       "symbol": "C:qta",
       "originalName": "qta",
       "to": "BladeShooterComponent",
@@ -5738,6 +5778,14 @@
       "evidence": "Abstract shape primitive that RasterizerOperator decodes by type 0 to 3 and draws into its pixel rows.",
       "confidence": "reviewed",
       "renamedSymbol": "C:RasterShape"
+    },
+    {
+      "symbol": "C:rs",
+      "originalName": "rs",
+      "to": "ConsoleCloseParenthesisKind",
+      "evidence": "Complete class and every exact kind reference reviewed: mutable id initialized1; tokenizer creates it for ASCII41, ConsoleToken prints ArgEnd, parser ends argument lists and console tracks closing nesting. Retain unrelated already meaningful queueSoundRelease/getTopDialogHeight helpers and their guards/calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ConsoleCloseParenthesisKind"
     },
     {
       "symbol": "C:rsa",
@@ -8796,6 +8844,14 @@
       "renamedSymbol": "F:BridgeTile.bridge:LBridgeModel;"
     },
     {
+      "symbol": "F:fb.field_a:[[B",
+      "originalName": "field_a",
+      "to": "arrays",
+      "evidence": "Complete initializer and all exact pool references reviewed:50slots, pop indexed by decremented large-pool count and clear slot to null; shutdown may null whole array. Preserve identities, nulls and guards.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LargeByteArrayPoolStorage.arrays:[[B"
+    },
+    {
       "symbol": "F:fe.field_A:[Ljava/lang/String;",
       "originalName": "field_A",
       "to": "gasDeathMessages",
@@ -10420,12 +10476,28 @@
       "renamedSymbol": "F:LobbyGameWidget.textureColumnCoords:[I"
     },
     {
+      "symbol": "F:ia.field_a:I",
+      "originalName": "field_a",
+      "to": "availableCount",
+      "evidence": "Complete initializer and exact source references reviewed: initializes0, tested>0 and decremented on large-pool pops. Preserve every write and absence of Java replenishment.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LargeByteArrayPoolCounter.availableCount:I"
+    },
+    {
       "symbol": "F:id.field_g:[Ljava/lang/String;",
       "originalName": "field_g",
       "to": "laserDeathMessages",
       "evidence": "Static initialiser fills it with \"<%0>\" message variants starting \"<%0> didn't see the light\".",
       "confidence": "reviewed",
       "renamedSymbol": "F:SinglePlayerCourseGenerator.laserDeathMessages:[Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:ii.field_a:I",
+      "originalName": "field_a",
+      "to": "count",
+      "evidence": "Sole static count read/incremented/decremented/reset by reviewed friend add/remove and packet/lobby contexts; preserve arithmetic and mutation order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:FriendListCounter.count:I"
     },
     {
       "symbol": "F:ija.field_f:I",
@@ -11418,6 +11490,14 @@
       "evidence": "Grid of WallTiles covering the wall area in 32-unit cells.",
       "confidence": "reviewed",
       "renamedSymbol": "F:WallModel.tiles:[[LWallTile;"
+    },
+    {
+      "symbol": "F:lna.field_a:I",
+      "originalName": "field_a",
+      "to": "kind",
+      "evidence": "Mutable kind id initialized0; explicit tokenizer/parser/debug/nesting consumers establish open-parenthesis role. Preserve storage and every reference.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ConsoleOpenParenthesisKind.kind:I"
     },
     {
       "symbol": "F:loa.field_a:Lqea;",
@@ -12604,6 +12684,14 @@
       "renamedSymbol": "F:MatchPhase.screen:LMatchScreen;"
     },
     {
+      "symbol": "F:qsa.field_a:I",
+      "originalName": "field_a",
+      "to": "durationTicks",
+      "evidence": "Shared lobby removal countdown duration, canonical150 passed unchanged by TombRacer initialization. Used to initialize remaining counters and normalize fading status-text alpha. Preserve exact integer arithmetic, zero/failure behavior and timing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LobbyRemovalTiming.durationTicks:I"
+    },
+    {
       "symbol": "F:qw.field_h:Lhca;",
       "originalName": "field_h",
       "to": "player",
@@ -12802,6 +12890,14 @@
       "evidence": "Third constructor argument passed to the outline drawing routines.",
       "confidence": "reviewed",
       "renamedSymbol": "F:RasterShape.outlineWidth:I"
+    },
+    {
+      "symbol": "F:rs.field_a:I",
+      "originalName": "field_a",
+      "to": "kind",
+      "evidence": "Mutable console close-parenthesis kind initialized1; ASCII41/ArgEnd/parser/nesting references prove role. Preserve mutability and every use.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ConsoleCloseParenthesisKind.kind:I"
     },
     {
       "symbol": "F:rva.field_w:[Lae;",
@@ -29353,7 +29449,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fb.releaseStatics(Z)V"
+      "renamedSymbol": "M:LargeByteArrayPoolStorage.releaseStatics(Z)V"
     },
     {
       "symbol": "M:fba.a(IFIZIIII)[I",
@@ -61116,6 +61212,14 @@
       "renamedSymbol": "M:rf.releaseStatics(B)V"
     },
     {
+      "symbol": "M:rf.a(ZLjava/lang/String;I)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "requestAddFriend",
+      "evidence": "Complete body reviewed: validate account name, lobby status, self/friend/ignored conditions and100/200capacity; return original message on rejection. On accepted request write caller-supplied opcode and length-prefixed marker0/name payload, return null. Preserve boolean-dependent validators, all messages, buffer positions, dynamic opcode and wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:rf.b(B)J",
       "originalName": "b",
       "to": "millisSinceLastReceive",
@@ -62513,7 +62617,7 @@
       "to": "getTopDialogHeight",
       "evidence": "Returns the visible top dialog height or -1 when no dialog is shown.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rs.getTopDialogHeight(B)I"
+      "renamedSymbol": "M:ConsoleCloseParenthesisKind.getTopDialogHeight(B)I"
     },
     {
       "symbol": "M:rs.a(Lfla;I)V",
@@ -62521,7 +62625,7 @@
       "to": "queueSoundRelease",
       "evidence": "Appends a finished sound to the release queue.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rs.queueSoundRelease(LPlayingSound;I)V"
+      "renamedSymbol": "M:ConsoleCloseParenthesisKind.queueSoundRelease(LPlayingSound;I)V"
     },
     {
       "symbol": "M:rsa.a(II)I",
@@ -67962,6 +68066,14 @@
       "evidence": "resendQueuedListRequests writes each toa record with a length byte under the opcode.",
       "confidence": "reviewed",
       "renamedSymbol": "M:uca.writeQueuedListRequest(ILtoa;B)V"
+    },
+    {
+      "symbol": "M:uca.a(Ljava/lang/String;BI)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "requestRemoveFriend",
+      "evidence": "Complete body reviewed: validate name/lobby and locate friend; renumber later entries, unlink both lists, decrement friend count, then write caller opcode and length-prefixed marker1/name payload. Preserve original mutation-before-packet ordering, byte guard scalar write, all messages, failure positions and wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;"
     },
     {
       "symbol": "M:uda.a(CII)Z",
@@ -79199,9 +79311,9 @@
     },
     {
       "symbol": "C:fb",
-      "renamedSymbol": "C:fb",
+      "renamedSymbol": "C:LargeByteArrayPoolStorage",
       "originalName": "fb",
-      "renamedName": "fb",
+      "renamedName": "LargeByteArrayPoolStorage",
       "declaration": {
         "file": "fb.java",
         "start": 50,
@@ -80662,9 +80774,9 @@
     },
     {
       "symbol": "C:ia",
-      "renamedSymbol": "C:ia",
+      "renamedSymbol": "C:LargeByteArrayPoolCounter",
       "originalName": "ia",
-      "renamedName": "ia",
+      "renamedName": "LargeByteArrayPoolCounter",
       "declaration": {
         "file": "ia.java",
         "start": 50,
@@ -80827,9 +80939,9 @@
     },
     {
       "symbol": "C:ii",
-      "renamedSymbol": "C:ii",
+      "renamedSymbol": "C:FriendListCounter",
       "originalName": "ii",
-      "renamedName": "ii",
+      "renamedName": "FriendListCounter",
       "declaration": {
         "file": "ii.java",
         "start": 50,
@@ -82917,9 +83029,9 @@
     },
     {
       "symbol": "C:lna",
-      "renamedSymbol": "C:lna",
+      "renamedSymbol": "C:ConsoleOpenParenthesisKind",
       "originalName": "lna",
-      "renamedName": "lna",
+      "renamedName": "ConsoleOpenParenthesisKind",
       "declaration": {
         "file": "lna.java",
         "start": 50,
@@ -85557,9 +85669,9 @@
     },
     {
       "symbol": "C:qsa",
-      "renamedSymbol": "C:qsa",
+      "renamedSymbol": "C:LobbyRemovalTiming",
       "originalName": "qsa",
-      "renamedName": "qsa",
+      "renamedName": "LobbyRemovalTiming",
       "declaration": {
         "file": "qsa.java",
         "start": 50,
@@ -86052,9 +86164,9 @@
     },
     {
       "symbol": "C:rs",
-      "renamedSymbol": "C:rs",
+      "renamedSymbol": "C:ConsoleCloseParenthesisKind",
       "originalName": "rs",
-      "renamedName": "rs",
+      "renamedName": "ConsoleCloseParenthesisKind",
       "declaration": {
         "file": "rs.java",
         "start": 50,
@@ -107579,9 +107691,9 @@
     },
     {
       "symbol": "F:fb.field_a:[[B",
-      "renamedSymbol": "F:fb.field_a:[[B",
+      "renamedSymbol": "F:LargeByteArrayPoolStorage.arrays:[[B",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "arrays",
       "declaration": {
         "file": "fb.java",
         "start": 126,
@@ -107590,7 +107702,7 @@
     },
     {
       "symbol": "F:fb.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:fb.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:LargeByteArrayPoolStorage.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -107601,7 +107713,7 @@
     },
     {
       "symbol": "F:fb.field_c:Lhra;",
-      "renamedSymbol": "F:fb.field_c:LValidationOutcome;",
+      "renamedSymbol": "F:LargeByteArrayPoolStorage.field_c:LValidationOutcome;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -107612,7 +107724,7 @@
     },
     {
       "symbol": "F:fb.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:fb.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:LargeByteArrayPoolStorage.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -118458,9 +118570,9 @@
     },
     {
       "symbol": "F:ia.field_a:I",
-      "renamedSymbol": "F:ia.field_a:I",
+      "renamedSymbol": "F:LargeByteArrayPoolCounter.availableCount:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "availableCount",
       "declaration": {
         "file": "ia.java",
         "start": 70,
@@ -119096,9 +119208,9 @@
     },
     {
       "symbol": "F:ii.field_a:I",
-      "renamedSymbol": "F:ii.field_a:I",
+      "renamedSymbol": "F:FriendListCounter.count:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "count",
       "declaration": {
         "file": "ii.java",
         "start": 70,
@@ -131262,9 +131374,9 @@
     },
     {
       "symbol": "F:lna.field_a:I",
-      "renamedSymbol": "F:lna.field_a:I",
+      "renamedSymbol": "F:ConsoleOpenParenthesisKind.kind:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "kind",
       "declaration": {
         "file": "lna.java",
         "start": 71,
@@ -146552,9 +146664,9 @@
     },
     {
       "symbol": "F:qsa.field_a:I",
-      "renamedSymbol": "F:qsa.field_a:I",
+      "renamedSymbol": "F:LobbyRemovalTiming.durationTicks:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "durationTicks",
       "declaration": {
         "file": "qsa.java",
         "start": 71,
@@ -149148,9 +149260,9 @@
     },
     {
       "symbol": "F:rs.field_a:I",
-      "renamedSymbol": "F:rs.field_a:I",
+      "renamedSymbol": "F:ConsoleCloseParenthesisKind.kind:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "kind",
       "declaration": {
         "file": "rs.java",
         "start": 70,
@@ -475815,7 +475927,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -475826,7 +475938,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -475837,7 +475949,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#10",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#10",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#10",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -475848,7 +475960,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#11",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#11",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#11",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -475859,7 +475971,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#12",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#12",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -475870,7 +475982,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#13",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#13",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#13",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -475881,7 +475993,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#14",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#14",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#14",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -475892,7 +476004,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#15",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#15",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#15",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -475903,7 +476015,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#16",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#16",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#16",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -475914,7 +476026,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#17",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#17",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -475925,7 +476037,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -475936,7 +476048,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#3",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#3",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -475947,7 +476059,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#4",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#4",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#4",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -475958,7 +476070,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#5",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#5",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#5",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -475969,7 +476081,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#6",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#6",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#6",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -475980,7 +476092,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#7",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#7",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#7",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -475991,7 +476103,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#8",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#8",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#8",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -476002,7 +476114,7 @@
     },
     {
       "symbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#9",
-      "renamedSymbol": "L:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#9",
+      "renamedSymbol": "L:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#9",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -484637,7 +484749,7 @@
     },
     {
       "symbol": "L:rs.a(B)I#0",
-      "renamedSymbol": "L:rs.getTopDialogHeight(B)I#0",
+      "renamedSymbol": "L:ConsoleCloseParenthesisKind.getTopDialogHeight(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -484648,7 +484760,7 @@
     },
     {
       "symbol": "L:rs.a(Lfla;I)V#0",
-      "renamedSymbol": "L:rs.queueSoundRelease(LPlayingSound;I)V#0",
+      "renamedSymbol": "L:ConsoleCloseParenthesisKind.queueSoundRelease(LPlayingSound;I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -484659,7 +484771,7 @@
     },
     {
       "symbol": "L:rs.a(Lfla;I)V#1",
-      "renamedSymbol": "L:rs.queueSoundRelease(LPlayingSound;I)V#1",
+      "renamedSymbol": "L:ConsoleCloseParenthesisKind.queueSoundRelease(LPlayingSound;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -524413,7 +524525,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#0",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#0",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -524424,7 +524536,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#1",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#1",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -524435,7 +524547,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#10",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#10",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -524446,7 +524558,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#11",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#11",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -524457,7 +524569,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#12",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#12",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -524468,7 +524580,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#13",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#13",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -524479,7 +524591,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#14",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#14",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -524490,7 +524602,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#15",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#15",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -524501,7 +524613,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#2",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#2",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -524512,7 +524624,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#3",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#3",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#3",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -524523,7 +524635,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#4",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#4",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#4",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -524534,7 +524646,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#5",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#5",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#5",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -524545,7 +524657,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#6",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#6",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#6",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -524556,7 +524668,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#7",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#7",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -524567,7 +524679,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#8",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#8",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -524578,7 +524690,7 @@
     },
     {
       "symbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#9",
-      "renamedSymbol": "L:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#9",
+      "renamedSymbol": "L:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -608915,7 +609027,7 @@
     },
     {
       "symbol": "M:fb.a(Z)V",
-      "renamedSymbol": "M:fb.releaseStatics(Z)V",
+      "renamedSymbol": "M:LargeByteArrayPoolStorage.releaseStatics(Z)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -667402,9 +667514,9 @@
     },
     {
       "symbol": "M:rf.a(ZLjava/lang/String;I)Ljava/lang/String;",
-      "renamedSymbol": "M:rf.a(ZLjava/lang/String;I)Ljava/lang/String;",
+      "renamedSymbol": "M:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestAddFriend",
       "declaration": {
         "file": "rf.java",
         "start": 496,
@@ -669844,7 +669956,7 @@
     },
     {
       "symbol": "M:rs.a(B)I",
-      "renamedSymbol": "M:rs.getTopDialogHeight(B)I",
+      "renamedSymbol": "M:ConsoleCloseParenthesisKind.getTopDialogHeight(B)I",
       "originalName": "a",
       "renamedName": "getTopDialogHeight",
       "declaration": {
@@ -669855,7 +669967,7 @@
     },
     {
       "symbol": "M:rs.a(Lfla;I)V",
-      "renamedSymbol": "M:rs.queueSoundRelease(LPlayingSound;I)V",
+      "renamedSymbol": "M:ConsoleCloseParenthesisKind.queueSoundRelease(LPlayingSound;I)V",
       "originalName": "a",
       "renamedName": "queueSoundRelease",
       "declaration": {
@@ -679227,9 +679339,9 @@
     },
     {
       "symbol": "M:uca.a(Ljava/lang/String;BI)Ljava/lang/String;",
-      "renamedSymbol": "M:uca.a(Ljava/lang/String;BI)Ljava/lang/String;",
+      "renamedSymbol": "M:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestRemoveFriend",
       "declaration": {
         "file": "uca.java",
         "start": 222,
@@ -746151,7 +746263,7 @@
     },
     {
       "symbol": "P:fb.a(Z)V#0",
-      "renamedSymbol": "P:fb.releaseStatics(Z)V#0",
+      "renamedSymbol": "P:LargeByteArrayPoolStorage.releaseStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -884652,7 +884764,7 @@
     },
     {
       "symbol": "P:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -884663,7 +884775,7 @@
     },
     {
       "symbol": "P:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#1",
-      "renamedSymbol": "P:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#1",
+      "renamedSymbol": "P:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -884674,7 +884786,7 @@
     },
     {
       "symbol": "P:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#2",
-      "renamedSymbol": "P:rf.a(ZLjava/lang/String;I)Ljava/lang/String;#2",
+      "renamedSymbol": "P:rf.requestAddFriend(ZLjava/lang/String;I)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -890108,7 +890220,7 @@
     },
     {
       "symbol": "P:rs.a(B)I#0",
-      "renamedSymbol": "P:rs.getTopDialogHeight(B)I#0",
+      "renamedSymbol": "P:ConsoleCloseParenthesisKind.getTopDialogHeight(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -890119,7 +890231,7 @@
     },
     {
       "symbol": "P:rs.a(Lfla;I)V#0",
-      "renamedSymbol": "P:rs.queueSoundRelease(LPlayingSound;I)V#0",
+      "renamedSymbol": "P:ConsoleCloseParenthesisKind.queueSoundRelease(LPlayingSound;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -890130,7 +890242,7 @@
     },
     {
       "symbol": "P:rs.a(Lfla;I)V#1",
-      "renamedSymbol": "P:rs.queueSoundRelease(LPlayingSound;I)V#1",
+      "renamedSymbol": "P:ConsoleCloseParenthesisKind.queueSoundRelease(LPlayingSound;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -911481,7 +911593,7 @@
     },
     {
       "symbol": "P:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#0",
-      "renamedSymbol": "P:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#0",
+      "renamedSymbol": "P:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -911492,7 +911604,7 @@
     },
     {
       "symbol": "P:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#1",
-      "renamedSymbol": "P:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#1",
+      "renamedSymbol": "P:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -911503,7 +911615,7 @@
     },
     {
       "symbol": "P:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#2",
-      "renamedSymbol": "P:uca.a(Ljava/lang/String;BI)Ljava/lang/String;#2",
+      "renamedSymbol": "P:uca.requestRemoveFriend(Ljava/lang/String;BI)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -937203,7 +937315,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "36dd6ae7ea4418cdeaa3f6a95699577179c53397797af63598c01c08bf4004dd",
+      "outputSha256": "817b0687d7bd843e454c33e19a044737d244e7290e1ad40c13c3a3d1482bb2ea",
       "edits": [
         {
           "start": 96,
@@ -938163,6 +938275,13 @@
           "symbol": "M:m.A(I)I",
           "original": "A",
           "renamed": "getTopDialogWidth"
+        },
+        {
+          "start": 6282,
+          "end": 6284,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
         },
         {
           "start": 6285,
@@ -940249,6 +940368,13 @@
           "symbol": "M:dsa.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 11208,
+          "end": 11210,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
         },
         {
           "start": 11211,
@@ -973094,7 +973220,7 @@
       "original": "ava.java",
       "renamed": "ava.java",
       "inputSha256": "b2156bd584c393e42d8da053f66165e1e2bbfe181f9eef73a4246a3c0a6f0cdc",
-      "outputSha256": "d039d48288e59d8fd6761eef2e47b4c0967d98e9dd31a21258dd707ea86ebb56",
+      "outputSha256": "369c217a6198e05c7a18f4ec8d20dbbd6d793e6c213096a15a5af6a3eb03e5a8",
       "edits": [
         {
           "start": 133,
@@ -973732,6 +973858,20 @@
           "symbol": "M:il.a(Ljava/lang/String;I)I",
           "original": "a",
           "renamed": "countWrappedLines"
+        },
+        {
+          "start": 11207,
+          "end": 11210,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 11211,
+          "end": 11218,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
         },
         {
           "start": 11249,
@@ -977856,7 +977996,7 @@
       "original": "bd.java",
       "renamed": "RasterStateFrame.java",
       "inputSha256": "f602633c3151bd16d97fcafe054f1d8e137383f1ff4cbe75008457a827e6d4d2",
-      "outputSha256": "438d25bd07b659f0451a69b660556df4a5f174c70a75c933af62b782c2b4f282",
+      "outputSha256": "b4b82b4d70e2597f9d2de6527e9330a6188fe394f8bc8b4673d6dd00283b791c",
       "edits": [
         {
           "start": 50,
@@ -977943,11 +978083,39 @@
           "renamed": "NameEntryPopup"
         },
         {
+          "start": 1382,
+          "end": 1384,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 1808,
+          "end": 1810,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 2510,
+          "end": 2512,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
           "start": 2652,
           "end": 2654,
           "symbol": "C:tl",
           "original": "tl",
           "renamed": "TimeSwitchBehaviour"
+        },
+        {
+          "start": 2726,
+          "end": 2728,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
         },
         {
           "start": 3327,
@@ -982617,7 +982785,7 @@
       "original": "bh.java",
       "renamed": "PlayTrackCommand.java",
       "inputSha256": "25f301991d04cb9912bee51ba3a13e222af2d62e8faeb4b0c26a0fef77a00cff",
-      "outputSha256": "d72617fa5e1ba459f0bbd3e70f174589d1c50eb17df74b16df5a67144ae0c3d5",
+      "outputSha256": "cc7dae02de20656bb05afcf49b9f4ed48adccd48d2e4d109063dae4c57ce7ab8",
       "edits": [
         {
           "start": 50,
@@ -983927,6 +984095,20 @@
           "symbol": "M:il.a(Ljava/lang/String;I)I",
           "original": "a",
           "renamed": "countWrappedLines"
+        },
+        {
+          "start": 20040,
+          "end": 20043,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 20044,
+          "end": 20051,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
         },
         {
           "start": 20082,
@@ -1068324,7 +1068506,7 @@
       "original": "ed.java",
       "renamed": "ConsoleExpressionParser.java",
       "inputSha256": "e580a8148b28e7312816a4ffc7b95d2ff00de84e9901ea23b8e40246a11ef7c5",
-      "outputSha256": "9a88de6b549fa0eb7abfa71d362e882c9c85f8c729b88b0b3cca012fdd0a517c",
+      "outputSha256": "6ff57f13b7bbedebee1ea7b849e344ef90444901c035572c7098832448da6d80",
       "edits": [
         {
           "start": 50,
@@ -1068733,6 +1068915,20 @@
           "renamed": "kind"
         },
         {
+          "start": 5140,
+          "end": 5143,
+          "symbol": "C:lna",
+          "original": "lna",
+          "renamed": "ConsoleOpenParenthesisKind"
+        },
+        {
+          "start": 5144,
+          "end": 5151,
+          "symbol": "F:lna.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        },
+        {
           "start": 5179,
           "end": 5181,
           "symbol": "C:jj",
@@ -1068772,6 +1068968,20 @@
           "end": 5425,
           "symbol": "F:mi.field_p:I",
           "original": "field_p",
+          "renamed": "kind"
+        },
+        {
+          "start": 5429,
+          "end": 5431,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
+          "start": 5432,
+          "end": 5439,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
           "renamed": "kind"
         },
         {
@@ -1068821,6 +1069031,20 @@
           "end": 5825,
           "symbol": "F:mi.field_p:I",
           "original": "field_p",
+          "renamed": "kind"
+        },
+        {
+          "start": 5829,
+          "end": 5831,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
+          "start": 5832,
+          "end": 5839,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
           "renamed": "kind"
         },
         {
@@ -1097846,16 +1098070,30 @@
     },
     {
       "original": "fb.java",
-      "renamed": "fb.java",
+      "renamed": "LargeByteArrayPoolStorage.java",
       "inputSha256": "ef417e730e3fabb537cfbfcbeef3880ad5d821415b59fc688073e835a7ea8888",
-      "outputSha256": "23a4fee648c87d8643ce52c2fd6da9c70c3ba34eae2b9ec572b036968d17e85e",
+      "outputSha256": "2c9b383fde8652c56e8475dbbb58bca15e005ee227f305e14cd7925ca54554e4",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
         {
           "start": 66,
           "end": 69,
           "symbol": "C:hra",
           "original": "hra",
           "renamed": "ValidationOutcome"
+        },
+        {
+          "start": 126,
+          "end": 133,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
         },
         {
           "start": 194,
@@ -1097865,6 +1098103,20 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 246,
+          "end": 253,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 361,
+          "end": 363,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
           "start": 364,
           "end": 365,
           "symbol": "M:fb.a(Z)V",
@@ -1097872,11 +1098124,25 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 381,
+          "end": 388,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
           "start": 525,
           "end": 528,
           "symbol": "C:hra",
           "original": "hra",
           "renamed": "ValidationOutcome"
+        },
+        {
+          "start": 540,
+          "end": 547,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
         }
       ]
     },
@@ -1097884,7 +1098150,7 @@
       "original": "fba.java",
       "renamed": "fba.java",
       "inputSha256": "755d2a83114d1914d8f197b865566e4ea3ac719de2978f16d0664b18014af40d",
-      "outputSha256": "c17a965473b89263deafc7946ef238c19259d546100fc301c3bc6fa0519794b4",
+      "outputSha256": "a6e89941bb2a26d3dae0db9f68ade77dad820258e01e30f3a59587a617b0e194",
       "edits": [
         {
           "start": 106,
@@ -1098062,6 +1098328,104 @@
           "renamed": "IsaacCipher"
         },
         {
+          "start": 4219,
+          "end": 4221,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 4222,
+          "end": 4229,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 4263,
+          "end": 4265,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 4266,
+          "end": 4273,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 4301,
+          "end": 4303,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 4304,
+          "end": 4311,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 4329,
+          "end": 4331,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 4332,
+          "end": 4339,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 4342,
+          "end": 4344,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 4345,
+          "end": 4352,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 4435,
+          "end": 4437,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 4438,
+          "end": 4445,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 4446,
+          "end": 4448,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 4449,
+          "end": 4456,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
           "start": 4545,
           "end": 4548,
           "symbol": "C:osa",
@@ -1098137,6 +1098501,104 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "PlatformTile"
+        },
+        {
+          "start": 5613,
+          "end": 5615,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 5616,
+          "end": 5623,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 5658,
+          "end": 5660,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 5661,
+          "end": 5668,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 5697,
+          "end": 5699,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 5700,
+          "end": 5707,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 5725,
+          "end": 5727,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 5728,
+          "end": 5735,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 5738,
+          "end": 5740,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 5741,
+          "end": 5748,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 5833,
+          "end": 5835,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 5836,
+          "end": 5843,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 5844,
+          "end": 5846,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 5847,
+          "end": 5854,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
         },
         {
           "start": 5943,
@@ -1098277,6 +1098739,104 @@
           "symbol": "C:qea",
           "original": "qea",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 7619,
+          "end": 7621,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 7622,
+          "end": 7629,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 7662,
+          "end": 7664,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 7665,
+          "end": 7672,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 7699,
+          "end": 7701,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 7702,
+          "end": 7709,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 7725,
+          "end": 7727,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 7728,
+          "end": 7735,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 7738,
+          "end": 7740,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 7741,
+          "end": 7748,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 7829,
+          "end": 7831,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
+          "start": 7832,
+          "end": 7839,
+          "symbol": "F:fb.field_a:[[B",
+          "original": "field_a",
+          "renamed": "arrays"
+        },
+        {
+          "start": 7840,
+          "end": 7842,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 7843,
+          "end": 7850,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
         },
         {
           "start": 7933,
@@ -1116949,7 +1117509,7 @@
       "original": "fla.java",
       "renamed": "PlayingSound.java",
       "inputSha256": "59927a8f320a28ea26444c3336cc81750f07c7ab62583f8d4eaec38c3c5f70a6",
-      "outputSha256": "0a9c4328b15de896ff9a07762cacc6cf20def14e7f9db561f15d6fa068bb0533",
+      "outputSha256": "669d4b94dd03b56dc210166b829d2b31ceb62227dff003d7e454626a23ba2fa6",
       "edits": [
         {
           "start": 50,
@@ -1117013,6 +1117573,13 @@
           "symbol": "M:vg.p(I)V",
           "original": "p",
           "renamed": "unlink"
+        },
+        {
+          "start": 579,
+          "end": 581,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
         },
         {
           "start": 582,
@@ -1117286,6 +1117853,13 @@
           "symbol": "M:vg.p(I)V",
           "original": "p",
           "renamed": "unlink"
+        },
+        {
+          "start": 3858,
+          "end": 3860,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
         },
         {
           "start": 3861,
@@ -1139123,7 +1139697,7 @@
       "original": "fu.java",
       "renamed": "HazardModel.java",
       "inputSha256": "115bdae4cd026520b271a14cce8cb47f916162ae70cf6fc12f5d0c56d5453ed3",
-      "outputSha256": "4f06c9295bb3a8384aff230d98a33487e3393e97c5a9f5a6f27ebcdb8f96c5c0",
+      "outputSha256": "b195cf530237de023295c30964e122f3d70d0921fb5999146f26970031c84bc4",
       "edits": [
         {
           "start": 50,
@@ -1139350,11 +1139924,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 4419,
+          "end": 4420,
+          "symbol": "M:rf.a(ZLjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestAddFriend"
+        },
+        {
           "start": 4485,
           "end": 4487,
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 4528,
+          "end": 4529,
+          "symbol": "M:uca.a(Ljava/lang/String;BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestRemoveFriend"
         },
         {
           "start": 4595,
@@ -1158735,7 +1159323,7 @@
       "original": "gq.java",
       "renamed": "FunOrbConsole.java",
       "inputSha256": "15c81fd52d6efe359f4fa3ed40bb3e4ea7eb1cd815bbd3cde5f45587344bbfc8",
-      "outputSha256": "7780edffffb501bf79f36478634d4002a5b25e2e692dc4e52aa7904ec216a16f",
+      "outputSha256": "c486be87c8c0145d8754aa1be3c8bcba18d156dc541a13c6e746f1ecb73f2890",
       "edits": [
         {
           "start": 71,
@@ -1159599,10 +1160187,38 @@
           "renamed": "kind"
         },
         {
+          "start": 13544,
+          "end": 13546,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
+          "start": 13547,
+          "end": 13554,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        },
+        {
           "start": 13816,
           "end": 13823,
           "symbol": "F:mi.field_p:I",
           "original": "field_p",
+          "renamed": "kind"
+        },
+        {
+          "start": 13828,
+          "end": 13831,
+          "symbol": "C:lna",
+          "original": "lna",
+          "renamed": "ConsoleOpenParenthesisKind"
+        },
+        {
+          "start": 13832,
+          "end": 13839,
+          "symbol": "F:lna.field_a:I",
+          "original": "field_a",
           "renamed": "kind"
         },
         {
@@ -1198324,10 +1198940,32 @@
     },
     {
       "original": "ia.java",
-      "renamed": "ia.java",
+      "renamed": "LargeByteArrayPoolCounter.java",
       "inputSha256": "1c6a1740fae04ffd2135f00f37151323db51cfa3e187c44bc367f6cf99533025",
-      "outputSha256": "1c6a1740fae04ffd2135f00f37151323db51cfa3e187c44bc367f6cf99533025",
-      "edits": []
+      "outputSha256": "c8e737dd9969444ae7b720288707ee56b8191d45b99e25f98fb71f12dbabf7f0",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ia",
+          "original": "ia",
+          "renamed": "LargeByteArrayPoolCounter"
+        },
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        },
+        {
+          "start": 101,
+          "end": 108,
+          "symbol": "F:ia.field_a:I",
+          "original": "field_a",
+          "renamed": "availableCount"
+        }
+      ]
     },
     {
       "original": "iaa.java",
@@ -1202237,10 +1202875,25 @@
     },
     {
       "original": "ii.java",
-      "renamed": "ii.java",
+      "renamed": "FriendListCounter.java",
       "inputSha256": "ea46455a61620eef03a8f5308eec4818cc0818001e4d20cd7b906121e299d6e2",
-      "outputSha256": "ea46455a61620eef03a8f5308eec4818cc0818001e4d20cd7b906121e299d6e2",
-      "edits": []
+      "outputSha256": "8ea8c4d63e1507b666d53c8abf4cdecc35d6ce3e36b01a79c5687a4eccec20cf",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
+        }
+      ]
     },
     {
       "original": "iia.java",
@@ -1280551,7 +1281204,7 @@
       "original": "kqa.java",
       "renamed": "RaceStandings.java",
       "inputSha256": "987a9ee2469cf110b6a98a49245f9bc73f8b437cdc48b49a785b6521c5d92d49",
-      "outputSha256": "df971d3e2fdea34beb47c0cbd8a6e30993fe5e19d62e32e327ccb6563cb5aeaa",
+      "outputSha256": "8f94d392db3bfa13379c93dea47da7c0d7999300a7bc50f2af38aa008aa1a778",
       "edits": [
         {
           "start": 50,
@@ -1280916,6 +1281569,13 @@
           "symbol": "M:qia.g()I",
           "original": "g",
           "renamed": "getTargetPan"
+        },
+        {
+          "start": 2749,
+          "end": 2751,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
         },
         {
           "start": 2752,
@@ -1284520,7 +1285180,7 @@
       "original": "kua.java",
       "renamed": "Corpse.java",
       "inputSha256": "407d9f7f0407b7242142dd55436be3a4bdda009edc1f8fb1ae791e89faa56f8e",
-      "outputSha256": "6da8b25afadd7b847c4b33cc9749b35b04e3f6b50cfe51f4f036c3d8163657fe",
+      "outputSha256": "3525364a2d0dc40349bfd7f5a020a2fb62e06a975445bfdf5e7840a9286b0ebf",
       "edits": [
         {
           "start": 50,
@@ -1284866,11 +1285526,25 @@
           "renamed": "NameEntryPopup"
         },
         {
+          "start": 5486,
+          "end": 5488,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
           "start": 5590,
           "end": 5593,
           "symbol": "C:gsa",
           "original": "gsa",
           "renamed": "PlayerResultRow"
+        },
+        {
+          "start": 5656,
+          "end": 5658,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
         },
         {
           "start": 6198,
@@ -1306192,7 +1306866,7 @@
       "original": "lja.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "166a4f92f16110b93fbc35ead7c37279e23464885f24906fca005e7beb74953c",
-      "outputSha256": "f0085281bbaaec359a85c560bbba82f0b3836e6c2d3125e1581f552a7f751580",
+      "outputSha256": "aff6ae1337663ed210a492a957099ca30efc6512dee3319f1c6b31feb5fad190",
       "edits": [
         {
           "start": 50,
@@ -1306538,6 +1307212,13 @@
           "renamed": "handleContactAction"
         },
         {
+          "start": 3903,
+          "end": 3904,
+          "symbol": "M:rf.a(ZLjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestAddFriend"
+        },
+        {
           "start": 4123,
           "end": 4125,
           "symbol": "C:gu",
@@ -1306550,6 +1307231,13 @@
           "symbol": "M:gu.a(IZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V",
           "original": "a",
           "renamed": "addChatMessage"
+        },
+        {
+          "start": 4344,
+          "end": 4345,
+          "symbol": "M:uca.a(Ljava/lang/String;BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestRemoveFriend"
         },
         {
           "start": 4459,
@@ -1311504,10 +1312192,32 @@
     },
     {
       "original": "lna.java",
-      "renamed": "lna.java",
+      "renamed": "ConsoleOpenParenthesisKind.java",
       "inputSha256": "e80bea4a4d2d605038a79991939cdac540da523f87599e3e4fb29a5d6cb5f39e",
-      "outputSha256": "e80bea4a4d2d605038a79991939cdac540da523f87599e3e4fb29a5d6cb5f39e",
-      "edits": []
+      "outputSha256": "c3de432a795646149a0ba255c0fd1a66377c561d73962ad2547de4c94e5d6d97",
+      "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:lna",
+          "original": "lna",
+          "renamed": "ConsoleOpenParenthesisKind"
+        },
+        {
+          "start": 71,
+          "end": 78,
+          "symbol": "F:lna.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        },
+        {
+          "start": 102,
+          "end": 109,
+          "symbol": "F:lna.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        }
+      ]
     },
     {
       "original": "lo.java",
@@ -1313657,7 +1314367,7 @@
       "original": "lp.java",
       "renamed": "lp.java",
       "inputSha256": "2925a00d719451450f3583c3f8fe4ba747f00835bef047336084463d77c56e38",
-      "outputSha256": "b1cd6c4d2445bf46a60b11cb46368299bcab231e556665364eb672230cbca40d",
+      "outputSha256": "771c6e77bfcb6b37ff184d52b58dcade4ae17914ab726f9c32183e941065796c",
       "edits": [
         {
           "start": 193,
@@ -1313793,6 +1314503,20 @@
           "renamed": "ConsoleToken"
         },
         {
+          "start": 2384,
+          "end": 2387,
+          "symbol": "C:lna",
+          "original": "lna",
+          "renamed": "ConsoleOpenParenthesisKind"
+        },
+        {
+          "start": 2388,
+          "end": 2395,
+          "symbol": "F:lna.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        },
+        {
           "start": 2407,
           "end": 2414,
           "symbol": "F:in.field_b:I",
@@ -1313812,6 +1314536,20 @@
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "ConsoleToken"
+        },
+        {
+          "start": 2535,
+          "end": 2537,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
+          "start": 2538,
+          "end": 2545,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
         },
         {
           "start": 2552,
@@ -1328962,7 +1329700,7 @@
       "original": "mi.java",
       "renamed": "ConsoleToken.java",
       "inputSha256": "e9b9365616ec7912430eb4ff5d04399304d28f5578eee11e9d1c7f5262effb67",
-      "outputSha256": "f9beecd3d003ee03434b676e25c83f9adf2032b04759e9da19406cf92d2194fe",
+      "outputSha256": "d980506fa5a78878b203fb46b7379854ac01d1174e35914bc204ec0151cf0b91",
       "edits": [
         {
           "start": 50,
@@ -1329287,10 +1330025,38 @@
           "renamed": "text"
         },
         {
+          "start": 3414,
+          "end": 3417,
+          "symbol": "C:lna",
+          "original": "lna",
+          "renamed": "ConsoleOpenParenthesisKind"
+        },
+        {
+          "start": 3418,
+          "end": 3425,
+          "symbol": "F:lna.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        },
+        {
           "start": 3434,
           "end": 3441,
           "symbol": "F:mi.field_p:I",
           "original": "field_p",
+          "renamed": "kind"
+        },
+        {
+          "start": 3496,
+          "end": 3498,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
+          "start": 3499,
+          "end": 3506,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
           "renamed": "kind"
         },
         {
@@ -1392840,7 +1393606,7 @@
       "original": "pfa.java",
       "renamed": "CourseMapWalker.java",
       "inputSha256": "9267e31959f65fd2b8f88443bb1f5171d847e78786da1c5e3fe54ecee88c8a0e",
-      "outputSha256": "22d61ad89418e1280e3fa94b72c0aa32e52b02073f54541e307e7f2f6aa400bb",
+      "outputSha256": "f94169c18b3c380e43c3e40cab924d6acb8f2ff66c52a49f6efd04f82f22ba71",
       "edits": [
         {
           "start": 50,
@@ -1398273,6 +1399039,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 34707,
+          "end": 34709,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
         },
         {
           "start": 34724,
@@ -1427484,7 +1428257,7 @@
       "original": "qh.java",
       "renamed": "MatchScreen.java",
       "inputSha256": "297deb7b6be6c8d5c3ced20a65c12c6f29d1cdf537d06d984c0ca4a0ed3f8ddc",
-      "outputSha256": "9484105324e759038b909c8b79d44d48503939c74e97f7f012309e4370578125",
+      "outputSha256": "5546a13e7a698e250c39566d091325f7f13ceeac3e07b4336be2166e2871835e",
       "edits": [
         {
           "start": 71,
@@ -1431531,6 +1432304,13 @@
           "symbol": "C:hra",
           "original": "hra",
           "renamed": "ValidationOutcome"
+        },
+        {
+          "start": 31653,
+          "end": 31655,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
         },
         {
           "start": 31736,
@@ -1450033,16 +1450813,31 @@
     },
     {
       "original": "qsa.java",
-      "renamed": "qsa.java",
+      "renamed": "LobbyRemovalTiming.java",
       "inputSha256": "184e86a3f258a6fc1c08cf5d0013850b2a5b87d0ab5956ce3b5b7dab01fa73cf",
-      "outputSha256": "184e86a3f258a6fc1c08cf5d0013850b2a5b87d0ab5956ce3b5b7dab01fa73cf",
-      "edits": []
+      "outputSha256": "c809059ff9d482dda59068b05532fbb1fe6ba6d4e398ca224b8142d8022e3254",
+      "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 71,
+          "end": 78,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
+        }
+      ]
     },
     {
       "original": "qt.java",
       "renamed": "qt.java",
       "inputSha256": "f5cbb30fd05912cba1b4cfbc3d7ab519bc9ce6a328453136f0ad646bad42c118",
-      "outputSha256": "192e560e44a6774878568a126bfed2f4eea95f78ae5a4148e2e92119d4148140",
+      "outputSha256": "c7abd77988afec6a826ba471ed4a0aa5f10ac80cbac0ba7273faf54dcfeea896",
       "edits": [
         {
           "start": 66,
@@ -1450654,6 +1451449,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 5293,
+          "end": 5296,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 5297,
+          "end": 5304,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
+        },
+        {
           "start": 5381,
           "end": 5382,
           "symbol": "M:od.c(I)V",
@@ -1450843,6 +1451652,20 @@
           "renamed": "get"
         },
         {
+          "start": 6467,
+          "end": 6470,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 6471,
+          "end": 6478,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
+        },
+        {
           "start": 6574,
           "end": 6575,
           "symbol": "M:vg.p(I)V",
@@ -1450960,6 +1451783,20 @@
           "symbol": "M:af.a(IJ)Lod;",
           "original": "a",
           "renamed": "get"
+        },
+        {
+          "start": 7508,
+          "end": 7511,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 7512,
+          "end": 7519,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
         },
         {
           "start": 7665,
@@ -1451179,6 +1452016,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 9559,
+          "end": 9562,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 9563,
+          "end": 9570,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
+        },
+        {
           "start": 9674,
           "end": 9675,
           "symbol": "M:od.c(I)V",
@@ -1451394,6 +1452245,20 @@
           "symbol": "M:nl.a(ZJ)Lpha;",
           "original": "a",
           "renamed": "findLobbyPlayer"
+        },
+        {
+          "start": 11197,
+          "end": 11200,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 11201,
+          "end": 11208,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
         },
         {
           "start": 11448,
@@ -1461262,7 +1462127,7 @@
       "original": "rf.java",
       "renamed": "rf.java",
       "inputSha256": "1796d3848fdee7ce1e97eba337de377b960f8b486c6cb955346bec0f5dd865a3",
-      "outputSha256": "a4bff56449bb0d3d67179da34bea80c11c85bf18ab2e914468047b873f395ee3",
+      "outputSha256": "9709508d648ad737082066b675b571b092b33d9043175cb10ca9f416e52ad748",
       "edits": [
         {
           "start": 162,
@@ -1461291,6 +1462156,13 @@
           "symbol": "M:bva.b(B)J",
           "original": "b",
           "renamed": "currentTimeMillis"
+        },
+        {
+          "start": 496,
+          "end": 497,
+          "symbol": "M:rf.a(ZLjava/lang/String;I)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestAddFriend"
         },
         {
           "start": 1119,
@@ -1461391,6 +1462263,20 @@
           "renamed": "PlatformModel"
         },
         {
+          "start": 1822,
+          "end": 1824,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 1825,
+          "end": 1832,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
+        },
+        {
           "start": 1855,
           "end": 1858,
           "symbol": "C:wla",
@@ -1461403,6 +1462289,20 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "MidiPatchEnvelope"
+        },
+        {
+          "start": 1974,
+          "end": 1976,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 1977,
+          "end": 1984,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
         },
         {
           "start": 2022,
@@ -1462755,7 +1463655,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "408895d6a1e7c01473368cd929cc5d2390f955aa1990071cb20f65bf79c126f8",
-      "outputSha256": "fc391ece7cde69abfc745560633935101d6403bd2abad37701af51a4b1f3e412",
+      "outputSha256": "bb77a8aac010c5a22c6407ad0474b7a8f4d57106dc58aae34189aeeca3bb6e76",
       "edits": [
         {
           "start": 61,
@@ -1464774,6 +1465674,13 @@
           "renamed": "IntPoint"
         },
         {
+          "start": 7733,
+          "end": 7735,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
+        },
+        {
           "start": 7821,
           "end": 7823,
           "symbol": "C:gn",
@@ -1465528,6 +1466435,13 @@
           "symbol": "C:ir",
           "original": "ir",
           "renamed": "IntPoint"
+        },
+        {
+          "start": 10476,
+          "end": 10478,
+          "symbol": "C:fb",
+          "original": "fb",
+          "renamed": "LargeByteArrayPoolStorage"
         },
         {
           "start": 10541,
@@ -1466406,7 +1467320,7 @@
       "original": "ri.java",
       "renamed": "SweepRotateLocomotor.java",
       "inputSha256": "b461acbc6b9f32069ec2862fa52d089ae7fe35ff6647621db4d2cebbd03846f6",
-      "outputSha256": "2d9a0612811251ff4fc515329ffe720b11cdce1807f7effb6eca4a86605f5cb5",
+      "outputSha256": "e4993ec74c65d4168bd810d7a9fb416d9e2066e9c7b622e3cd6390bd318acd86",
       "edits": [
         {
           "start": 50,
@@ -1466899,6 +1467813,20 @@
           "renamed": "SecondaryNodeHashTable"
         },
         {
+          "start": 4498,
+          "end": 4500,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 4501,
+          "end": 4508,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
+        },
+        {
           "start": 4557,
           "end": 4558,
           "symbol": "M:uia.e(B)Ljava/lang/String;",
@@ -1466995,6 +1467923,48 @@
           "symbol": "M:jd.a(ILjava/lang/CharSequence;)Ljava/lang/String;",
           "original": "a",
           "renamed": "normalizeDisplayName"
+        },
+        {
+          "start": 5363,
+          "end": 5365,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 5366,
+          "end": 5373,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
+        },
+        {
+          "start": 5387,
+          "end": 5389,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 5390,
+          "end": 5397,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
+        },
+        {
+          "start": 5400,
+          "end": 5402,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 5403,
+          "end": 5410,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
         },
         {
           "start": 5478,
@@ -1479474,10 +1480444,24 @@
     },
     {
       "original": "rs.java",
-      "renamed": "rs.java",
+      "renamed": "ConsoleCloseParenthesisKind.java",
       "inputSha256": "39bce4aaad8d03f0364b11accbf75e73e1ce8aba288ad644c3714566ad204157",
-      "outputSha256": "a2114516fb3ce6f7a015cd3888d6261136fea544b5d20ef3137f9f83460ab3ee",
+      "outputSha256": "c83880385db1825276bea8d351307eecb9be99809963469c7c328c722ad113cf",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
+        },
         {
           "start": 102,
           "end": 103,
@@ -1479540,6 +1480524,13 @@
           "symbol": "C:fla",
           "original": "fla",
           "renamed": "PlayingSound"
+        },
+        {
+          "start": 553,
+          "end": 555,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
         },
         {
           "start": 556,
@@ -1479610,6 +1480601,13 @@
           "symbol": "M:jta.d(Z)I",
           "original": "d",
           "renamed": "topDialogHeight"
+        },
+        {
+          "start": 810,
+          "end": 817,
+          "symbol": "F:rs.field_a:I",
+          "original": "field_a",
+          "renamed": "kind"
         }
       ]
     },
@@ -1528741,7 +1529739,7 @@
       "original": "ub.java",
       "renamed": "ObjectList.java",
       "inputSha256": "ac8d0dfdbaafbe8ad671d3010bfece385ed5cea7c1142a5402844c365e982296",
-      "outputSha256": "f7e91916a3edbd798923cd97e44bb415142ae2f66c915eb1e82fd53be47d4f57",
+      "outputSha256": "677f251dec892de484ecd519dc836afd73e5ea9f92816d246511768dea6e3bee",
       "edits": [
         {
           "start": 50,
@@ -1528966,6 +1529964,20 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1547,
+          "end": 1549,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 1550,
+          "end": 1557,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
         },
         {
           "start": 1573,
@@ -1530326,7 +1531338,7 @@
       "original": "uca.java",
       "renamed": "uca.java",
       "inputSha256": "36f7e70746f0e8eee966cdd9cc7394d63bf8187a702eef0b0bd0645bcd8de397",
-      "outputSha256": "0f3efd63c42125ff45c33e9d09f64720ad498638afd04fdb195045bae00bd5aa",
+      "outputSha256": "9890ec4cddf8e4256fbf5ecf432bfe1112d58040e529ae83ce86c6fcf793fa9a",
       "edits": [
         {
           "start": 111,
@@ -1530348,6 +1531360,13 @@
           "symbol": "C:iu",
           "original": "iu",
           "renamed": "Sprite"
+        },
+        {
+          "start": 222,
+          "end": 223,
+          "symbol": "M:uca.a(Ljava/lang/String;BI)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "requestRemoveFriend"
         },
         {
           "start": 682,
@@ -1530474,6 +1531493,34 @@
           "symbol": "M:od.c(I)V",
           "original": "c",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 1717,
+          "end": 1719,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 1720,
+          "end": 1727,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
+        },
+        {
+          "start": 1730,
+          "end": 1732,
+          "symbol": "C:ii",
+          "original": "ii",
+          "renamed": "FriendListCounter"
+        },
+        {
+          "start": 1733,
+          "end": 1740,
+          "symbol": "F:ii.field_a:I",
+          "original": "field_a",
+          "renamed": "count"
         },
         {
           "start": 1790,
@@ -1538252,7 +1539299,7 @@
       "original": "uha.java",
       "renamed": "CircleMovementLocomotor.java",
       "inputSha256": "0c8b475de91f228fdc1bd139fd634e7d3d8582bdd9eb83619fd7db5030bfb631",
-      "outputSha256": "c8aa638d07c553efcd311c295d0e8065e938ff7c3781145e8888d803a2bc265d",
+      "outputSha256": "ff88af46bb975856feacde29b7d3cb9cef2d1fe2e1173d200faef26e428293f1",
       "edits": [
         {
           "start": 50,
@@ -1539051,6 +1540098,20 @@
           "symbol": "C:af",
           "original": "af",
           "renamed": "SecondaryNodeHashTable"
+        },
+        {
+          "start": 8985,
+          "end": 8988,
+          "symbol": "C:qsa",
+          "original": "qsa",
+          "renamed": "LobbyRemovalTiming"
+        },
+        {
+          "start": 8989,
+          "end": 8996,
+          "symbol": "F:qsa.field_a:I",
+          "original": "field_a",
+          "renamed": "durationTicks"
         },
         {
           "start": 9017,
@@ -1585737,7 +1586798,7 @@
       "original": "w.java",
       "renamed": "SoundEventPlayer.java",
       "inputSha256": "2e65810e30af567bc92c43292137bdbc35d8fcd8adbcbe155d7c40ac4fd1153d",
-      "outputSha256": "fc7f2471545400316d34f1d46af42c9716d3b4edd7861066cbf813e67aa42fbc",
+      "outputSha256": "d6751739c7eb485d7d4a8ba5a1e501974747286e89236bb7ca399814c44e2399",
       "edits": [
         {
           "start": 50,
@@ -1585908,6 +1586969,13 @@
           "renamed": "first"
         },
         {
+          "start": 1013,
+          "end": 1015,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
+        },
+        {
           "start": 1016,
           "end": 1017,
           "symbol": "M:rs.a(Lfla;I)V",
@@ -1585976,6 +1587044,13 @@
           "symbol": "M:vna.f(I)Lvg;",
           "original": "f",
           "renamed": "first"
+        },
+        {
+          "start": 1274,
+          "end": 1276,
+          "symbol": "C:rs",
+          "original": "rs",
+          "renamed": "ConsoleCloseParenthesisKind"
         },
         {
           "start": 1277,
@@ -1612457,10 +1613532,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "a6e3d7a92fcd3ea44e0d5be63b97bf8472200a941d85faef5d86fe7104494c14",
+    "rulesSha256": "a1d58efa624f735fd0a7bb4973141ca8984be374cb2a5d36bfbe780fb45a1121",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "b5850c05685734b7af1eed720a618dcbd056c0d6e81be08191de93e7bc4639a9",
+    "outputTreeSha256": "783b7af6b832897c9b02af1af083d4938114fc0eae7dc46d78d2e7e57b352ec6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

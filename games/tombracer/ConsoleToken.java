@@ -101,10 +101,10 @@ final class ConsoleToken extends IntrusiveNode {
         if (LegacyOpenGlReflectionEffect.field_e == this.kind) {
           return "String{" + this.text + "}";
         }
-        if (lna.field_a == this.kind) {
+        if (ConsoleOpenParenthesisKind.kind == this.kind) {
           return "ArgStart";
         }
-        if (rs.field_a == this.kind) {
+        if (ConsoleCloseParenthesisKind.kind == this.kind) {
           return "ArgEnd";
         }
         if (this.kind == qba.field_c) {

@@ -191,7 +191,7 @@ public final class TombRacer extends TombRacerShell implements ls {
               var5 = ComponentTargetList.getTopDialogId(false);
               var6 = PlantComponent.A(-1);
               var7 = PillarComponent.getTopDialogWidth(param2 - 7128);
-              var8 = rs.getTopDialogHeight((byte) 124);
+              var8 = ConsoleCloseParenthesisKind.getTopDialogHeight((byte) 124);
               var9 = IntrusiveDequeCursor.getClipStack((byte) 65, tga.field_a);
               var9.pushIntersectClip(var5 + var7, var6, (byte) -12, var6 + var8, var5);
               tga.field_a.blitPixels(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
@@ -387,7 +387,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         gga.releaseStatics(param0 + 3666);
         TooltipRenderer.releaseStatics(-3);
         dsa.releaseStatics((byte) -126);
-        fb.releaseStatics(true);
+        LargeByteArrayPoolStorage.releaseStatics(true);
         AccountCreationDialog.releaseStatics(false);
         ProgressDialog.releaseStatics((byte) -77);
         mpa.releaseStatics(param0 ^ -3666);

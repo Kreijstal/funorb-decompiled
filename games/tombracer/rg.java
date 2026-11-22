@@ -182,7 +182,7 @@ final class rg extends SingleChildWidget {
           HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           HazardEffect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
-          HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, fb.field_b};
+          HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
           return;
         }
         tk.field_a = new String[17][];
@@ -234,7 +234,7 @@ final class rg extends SingleChildWidget {
         HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         HazardEffect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
-        HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, fb.field_b};
+        HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
     }
 
     public rg() {

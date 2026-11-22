@@ -1002,7 +1002,7 @@ final class MatchScreen extends GameScreen implements FrameDrawable {
             }
           }
           if (param0 == -58) {
-            stackIn_13_0 = fb.field_c;
+            stackIn_13_0 = LargeByteArrayPoolStorage.field_c;
             return stackIn_13_0;
           }
           stackIn_11_0 = (ValidationOutcome) null;

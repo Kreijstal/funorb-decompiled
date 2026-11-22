@@ -795,7 +795,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextMazes", (byte) 105);
                 if (var2 != null) {
-                  fb.field_b = jaa.decodeText((byte) 31, var2);
+                  LargeByteArrayPoolStorage.field_b = jaa.decodeText((byte) 31, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleMoveableBlocks", (byte) 127);
                 if (null != var2) {

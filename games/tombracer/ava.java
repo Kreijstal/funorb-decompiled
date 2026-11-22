@@ -296,7 +296,7 @@ final class ava {
             if (var23 != null) {
               var24_intLifetime1 = var12.field_Gb.field_H.countWrappedLines(var23, -mna.field_d - mna.field_d + var12.field_G);
               var12.field_Gb.field_r = var23;
-              var12.field_Gb.field_s = var12.field_xb * 256 / qsa.field_a;
+              var12.field_Gb.field_s = var12.field_xb * 256 / LobbyRemovalTiming.durationTicks;
               var12.field_Gb.setBounds(var12.field_G - 2 * mna.field_d, ToolkitSelector.field_a * var24_intLifetime1, -23776, var19, mna.field_d);
               var19 = var19 + ToolkitSelector.field_a * var24_intLifetime1;
             }

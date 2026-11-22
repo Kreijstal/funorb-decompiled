@@ -72,11 +72,11 @@ final class lp {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast((byte) -90, new ConsoleToken(lna.field_a, -1 + var3.position));
+                var2.addLast((byte) -90, new ConsoleToken(ConsoleOpenParenthesisKind.kind, -1 + var3.position));
                 continue;
               }
               if (var4 == 41) {
-                var2.addLast((byte) -112, new ConsoleToken(rs.field_a, var3.position - 1));
+                var2.addLast((byte) -112, new ConsoleToken(ConsoleCloseParenthesisKind.kind, var3.position - 1));
                 continue;
               }
               if (44 == var4) {

@@ -118,12 +118,12 @@ final class fba {
             }
             return new byte[param0];
           }
-          if (ia.field_a > 0) {
-            fieldTemp$6 = fb.field_a;
-            fieldTemp$7 = ia.field_a - 1;
-            ia.field_a = ia.field_a - 1;
+          if (LargeByteArrayPoolCounter.availableCount > 0) {
+            fieldTemp$6 = LargeByteArrayPoolStorage.arrays;
+            fieldTemp$7 = LargeByteArrayPoolCounter.availableCount - 1;
+            LargeByteArrayPoolCounter.availableCount = LargeByteArrayPoolCounter.availableCount - 1;
             var2_ref_byte__Lifetime5 = fieldTemp$6[fieldTemp$7];
-            fb.field_a[ia.field_a] = null;
+            LargeByteArrayPoolStorage.arrays[LargeByteArrayPoolCounter.availableCount] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (null != ConstraintLocomotor.field_r) {
@@ -153,12 +153,12 @@ final class fba {
         }
         if (5000 != param0) {
           if (param0 == 30000 &&
-            ia.field_a > 0) {
-            fieldTemp$17 = fb.field_a;
-            fieldTemp$18 = ia.field_a - 1;
-            ia.field_a = ia.field_a - 1;
+            LargeByteArrayPoolCounter.availableCount > 0) {
+            fieldTemp$17 = LargeByteArrayPoolStorage.arrays;
+            fieldTemp$18 = LargeByteArrayPoolCounter.availableCount - 1;
+            LargeByteArrayPoolCounter.availableCount = LargeByteArrayPoolCounter.availableCount - 1;
             var2_ref_byte__Lifetime2 = fieldTemp$17[fieldTemp$18];
-            fb.field_a[ia.field_a] = null;
+            LargeByteArrayPoolStorage.arrays[LargeByteArrayPoolCounter.availableCount] = null;
             return var2_ref_byte__Lifetime2;
           }
           if (null == ConstraintLocomotor.field_r) {
@@ -201,12 +201,12 @@ final class fba {
           }
           return new byte[param0];
         }
-        if (ia.field_a > 0) {
-          fieldTemp$14 = fb.field_a;
-          fieldTemp$15 = ia.field_a - 1;
-          ia.field_a = ia.field_a - 1;
+        if (LargeByteArrayPoolCounter.availableCount > 0) {
+          fieldTemp$14 = LargeByteArrayPoolStorage.arrays;
+          fieldTemp$15 = LargeByteArrayPoolCounter.availableCount - 1;
+          LargeByteArrayPoolCounter.availableCount = LargeByteArrayPoolCounter.availableCount - 1;
           var2_ref_byte__Lifetime4 = fieldTemp$14[fieldTemp$15];
-          fb.field_a[ia.field_a] = null;
+          LargeByteArrayPoolStorage.arrays[LargeByteArrayPoolCounter.availableCount] = null;
           return var2_ref_byte__Lifetime4;
         }
         if (null == ConstraintLocomotor.field_r) {

@@ -9,7 +9,7 @@ final class uca {
     static int field_d;
     static Sprite[] field_f;
 
-    final static String a(String param0, byte param1, int param2) {
+    final static String requestRemoveFriend(String param0, byte param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -55,7 +55,7 @@ final class uca {
           }
           var8.unlink(19);
           var8.unlinkSecondary(-7975);
-          ii.field_a = ii.field_a - 1;
+          FriendListCounter.count = FriendListCounter.count - 1;
           var9 = ql.field_k;
           var9.writeCipheredOpcode(param2, param1 - 3090);
           var9.position = var9.position + 1;

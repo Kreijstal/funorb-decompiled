@@ -90,7 +90,7 @@ final class RaceStandings {
           var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
           while (var1 != null) {
             var2 = new PlayingSound(var1, var1.field_f.getTargetVolume(), var1.field_f.getTargetPan());
-            rs.queueSoundRelease(var2, -58);
+            ConsoleCloseParenthesisKind.queueSoundRelease(var2, -58);
             var1 = (vb) (DivisionMazeGenerator.field_e.next(119));
           }
           return;

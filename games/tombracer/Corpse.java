@@ -167,12 +167,12 @@ final class Corpse extends IntrusiveNode implements Renderable {
             if (var4 == 45) {
               if (var3 == 0 ||
                 var3 == var2_int - 1) {
-                stackIn_19_0 = fb.field_c;
+                stackIn_19_0 = LargeByteArrayPoolStorage.field_c;
                 return stackIn_19_0;
               }
             } else {
               if (PlayerResultRow.field_s.indexOf(var4) == -1) {
-                stackIn_22_0 = fb.field_c;
+                stackIn_22_0 = LargeByteArrayPoolStorage.field_c;
                 return stackIn_22_0;
               }
             }

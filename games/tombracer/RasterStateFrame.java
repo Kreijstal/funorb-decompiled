@@ -46,7 +46,7 @@ final class RasterStateFrame extends IntrusiveNode {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_11_0 = fb.field_c;
+              stackIn_11_0 = LargeByteArrayPoolStorage.field_c;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -58,7 +58,7 @@ final class RasterStateFrame extends IntrusiveNode {
               } else {
                 if (34 == var5 &&
                   var3 == 0) {
-                  stackIn_24_0 = fb.field_c;
+                  stackIn_24_0 = LargeByteArrayPoolStorage.field_c;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -78,13 +78,13 @@ final class RasterStateFrame extends IntrusiveNode {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_38_0 = fb.field_c;
+                stackIn_38_0 = LargeByteArrayPoolStorage.field_c;
                 return stackIn_38_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (TimeSwitchBehaviour.field_p.indexOf(var5Lifetime1) == -1) {
-                stackIn_42_0 = fb.field_c;
+                stackIn_42_0 = LargeByteArrayPoolStorage.field_c;
                 return stackIn_42_0;
               }
               var3Lifetime1 = 0;

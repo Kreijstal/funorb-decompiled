@@ -22,7 +22,7 @@ final class rf {
         return -MiscItemBehaviour.field_s + bva.currentTimeMillis((byte) -107);
     }
 
-    final static String a(boolean param0, String param1, int param2) {
+    final static String requestAddFriend(boolean param0, String param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_10_0 = null;
@@ -59,12 +59,12 @@ final class rf {
             stackIn_17_0 = LegacyOpenGlFlowingWaterEffect.formatText(119, PlatformModel.field_w, new String[]{param1});
             return stackIn_17_0;
           }
-          if (ii.field_a >= 100 &&
+          if (FriendListCounter.count >= 100 &&
             ReportAbuseDialog.field_ub <= 0) {
             stackIn_21_0 = MidiPatchEnvelope.field_b;
             return stackIn_21_0;
           }
-          if (ii.field_a >= 200) {
+          if (FriendListCounter.count >= 200) {
             stackIn_24_0 = MidiPatchEnvelope.field_b;
             return stackIn_24_0;
           }

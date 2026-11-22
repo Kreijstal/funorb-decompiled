@@ -159,7 +159,7 @@ final class qt {
               if (0 == var5) {
                 var31.unlink(63);
               } else {
-                var31.field_xb = qsa.field_a;
+                var31.field_xb = LobbyRemovalTiming.durationTicks;
                 var31.field_Lb = var5;
               }
               var31.unlinkSecondary(-7975);
@@ -192,7 +192,7 @@ final class qt {
               var33 = (LobbyGameWidget) (WhiteLightSensorComponent.field_K.get(-107, (long)var3Lifetime4));
               if (var33 != null) {
                 if (0 != var4_int) {
-                  var33.field_zb = qsa.field_a;
+                  var33.field_zb = LobbyRemovalTiming.durationTicks;
                   var33.field_Ib = var4_int;
                 } else {
                   var33.unlink(52);
@@ -221,7 +221,7 @@ final class qt {
                   var6 = var14;
                   var17_ref.field_Sb = false;
                   if (0 != var4_intLifetime1) {
-                    var17_ref.field_zb = qsa.field_a;
+                    var17_ref.field_zb = LobbyRemovalTiming.durationTicks;
                     var17_ref.field_Ib = var4_intLifetime1;
                   }
                   var14.field_gc = false;
@@ -265,7 +265,7 @@ final class qt {
                     if (var5Lifetime1 == 0) {
                       var28.unlink(85);
                     } else {
-                      var15.field_xb = qsa.field_a;
+                      var15.field_xb = LobbyRemovalTiming.durationTicks;
                       var15.field_Lb = var5Lifetime1;
                     }
                     var28.unlinkSecondary(-7975);
@@ -305,7 +305,7 @@ final class qt {
                   return;
                 }
                 if (var5Lifetime1Lifetime1 != 0) {
-                  var29.field_xb = qsa.field_a;
+                  var29.field_xb = LobbyRemovalTiming.durationTicks;
                   var29.field_Lb = var5Lifetime1Lifetime1;
                 }
                 if (15 == var2) {

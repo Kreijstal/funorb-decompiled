@@ -44,7 +44,7 @@ final class ObjectList {
         DualLinkNode var1Lifetime1;
         try {
           ol.field_b = null;
-          ii.field_a = 0;
+          FriendListCounter.count = 0;
           MonochromeRowCacheEntry.field_k = param0;
           PlayingSound.field_f.clear(8);
           MenuScreen.field_l.clear(8);

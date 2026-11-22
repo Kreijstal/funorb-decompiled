@@ -135,7 +135,7 @@ final class SweepRotateLocomotor extends Locomotor {
           }
           if (TrackPlayerLocomotor.field_s == null) {
             TrackPlayerLocomotor.field_s = new SecondaryNodeHashTable(128);
-            ii.field_a = 0;
+            FriendListCounter.count = 0;
           }
           var3Lifetime1 = var1.readString((byte) -76);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -153,8 +153,8 @@ final class SweepRotateLocomotor extends Locomotor {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new ContactListEntry();
             TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)OpenGlTexture3D.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
-            fieldTemp$0 = ii.field_a;
-            ii.field_a = ii.field_a + 1;
+            fieldTemp$0 = FriendListCounter.count;
+            FriendListCounter.count = FriendListCounter.count + 1;
             var6Lifetime1.field_Db = fieldTemp$0;
             PlayingSound.field_f.addLast((byte) -61, var6Lifetime1);
           }
