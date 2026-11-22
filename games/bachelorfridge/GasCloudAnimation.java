@@ -296,7 +296,7 @@ final class GasCloudAnimation extends EventAnimation {
           stackIn_4_4 = (bga.field_m == p.field_n);
           var7_int = ((sga) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param1, true) ? 1 : 0;
           var9 = p.field_n.field_vb.children;
-          var10 = f.b((byte) 73);
+          var10 = f.correctedCurrentTimeMillis((byte) 73);
           var12 = null;
           var13 = (uha) (var9.beginForward((byte) 90));
           while (var13 != null) {

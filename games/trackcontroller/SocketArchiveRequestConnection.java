@@ -493,7 +493,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               }
             }
             this.field_d = 0;
-            this.field_j = qg.a(false);
+            this.field_j = qg.correctedCurrentTimeMillis(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -542,7 +542,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           hi var2Lifetime1;
           var16 = TrackController.field_F ? 1 : 0;
           if (null != this.field_q) {
-            var2_long = qg.a(false);
+            var2_long = qg.correctedCurrentTimeMillis(false);
             var4 = (int)(-this.field_j + var2_long);
             if (200 < var4) {
               var4 = 200;

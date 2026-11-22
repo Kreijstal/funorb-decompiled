@@ -142,7 +142,7 @@ final class ta extends me {
           bj.field_a = false;
           if (hh.field_d == rl.field_c) {
             wa.field_p = 0;
-            kf.a(al.field_U, 0, 6);
+            kf.clearInts(al.field_U, 0, 6);
             sg.field_i = 0;
           }
           ad.field_a = ng.field_u;

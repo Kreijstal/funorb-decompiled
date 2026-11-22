@@ -106,7 +106,7 @@ abstract class wb implements ga {
         if (this.c(25296)) {
           return null;
         }
-        if ((350L + this.field_a) > ji.b(123)) {
+        if ((350L + this.field_a) > ji.correctedCurrentTimeMillis(123)) {
           return null;
         }
         if (param0 > 121) {
@@ -122,7 +122,7 @@ abstract class wb implements ga {
         if (this.c(25296)) {
           return fm.field_a;
         }
-        if ((350L + this.field_a) > ji.b(-84)) {
+        if ((350L + this.field_a) > ji.correctedCurrentTimeMillis(-84)) {
           return ml.field_a;
         }
         if (param0 == -7847) {
@@ -132,7 +132,7 @@ abstract class wb implements ga {
     }
 
     public final void b(int param0) {
-        this.field_a = ji.b(param0 + 21066);
+        this.field_a = ji.correctedCurrentTimeMillis(param0 + 21066);
         if (param0 != -20959) {
           field_c = (String) null;
         }

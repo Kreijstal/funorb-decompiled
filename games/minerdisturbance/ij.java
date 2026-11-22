@@ -265,7 +265,7 @@ final class ij extends ArchiveProvider {
           }
         }
         if (this.field_f &&
-          sf.a((byte) -111) >= this.field_s) {
+          sf.correctedCurrentTimeMillis((byte) -111) >= this.field_s) {
           var2 = (em) (this.field_i.a(param0 ^ -16545));
           while (var2 != null) {
             if (!var2.field_C) {
@@ -280,7 +280,7 @@ final class ij extends ArchiveProvider {
             }
             var2 = (em) (this.field_i.a(true));
           }
-          this.field_s = sf.a((byte) 101) + 1000L;
+          this.field_s = sf.correctedCurrentTimeMillis((byte) 101) + 1000L;
         }
         if (param0 != 0) {
           this.c(-80);

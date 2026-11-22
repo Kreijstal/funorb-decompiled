@@ -25,7 +25,7 @@ final class ej extends mi {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int countSetBits(boolean param0, int param1) {
         param1 = (param1 & 1431655765) + ((param1 & -1431655766) >>> 1);
         param1 = ((param1 & -858993460) >>> 2) + (858993459 & param1);
         param1 = 252645135 & param1 + (param1 >>> 4);

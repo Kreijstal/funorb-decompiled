@@ -120,7 +120,7 @@ final class eb {
           }
           var8 = param0.requestDisplayModes((byte) -107);
           while (var8.status == 0) {
-            kk.a(10L, true);
+            kk.sleepMillis(10L, true);
           }
           if (var8.status == 2) {
             stackIn_14_0 = new fl[]{};

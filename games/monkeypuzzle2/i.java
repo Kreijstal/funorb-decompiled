@@ -18,7 +18,7 @@ final class i extends IntrusiveNode {
     int[] field_o;
     static int[] field_r;
 
-    final static int a(int param0, boolean param1) {
+    final static int roundUpPowerOfTwo(int param0, boolean param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         if (param1) {

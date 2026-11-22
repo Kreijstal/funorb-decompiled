@@ -8,7 +8,7 @@ abstract class GameClock {
     final int a(byte param0, long param1) {
         long var4 = this.a((byte) 63);
         if (var4 > 0L) {
-          gda.a(false, var4);
+          gda.sleepMillis(false, var4);
           if (param0 != 109) {
             this.a(-82L, 55);
             return this.a(param1, 0);

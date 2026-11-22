@@ -55,7 +55,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             GameApplet.field_e = 0;
             oc.field_b = param0.getX();
             wl.field_R = param0.getY();
-            ih.a((byte) -98);
+            ih.correctedCurrentTimeMillis((byte) -98);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               tg.field_b = 1;
               ib.field_g = 1;

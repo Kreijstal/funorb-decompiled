@@ -31,7 +31,7 @@ final class qa {
           int var1_int = pt.field_a;
           int var2 = 0;
           if (2 == ol.field_c) {
-            long var3_long = kh.a(-71) - PacketBuffer.field_e;
+            long var3_long = kh.correctedCurrentTimeMillis(-71) - PacketBuffer.field_e;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

@@ -116,7 +116,7 @@ final class b extends id {
               if (param2 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + od.a(10, param2 * 1000L + ih.a((byte) -98)) + "; Max-Age=" + param2;
+                var7Lifetime4 = var9 + "; Expires=" + od.a(10, param2 * 1000L + ih.correctedCurrentTimeMillis((byte) -98)) + "; Max-Age=" + param2;
               }
               if (param1 != 38) {
                 b.a(58, 43);

@@ -105,7 +105,7 @@ abstract class m {
         }
         long var4 = this.a(param1 + 0);
         if (0L < var4) {
-          kk.a(var4, true);
+          kk.sleepMillis(var4, true);
         }
         return this.a(param0, -110);
     }

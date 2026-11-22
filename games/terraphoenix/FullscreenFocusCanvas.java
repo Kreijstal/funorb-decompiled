@@ -96,10 +96,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           while (true) {
             var3 = param0.requestFrame(param2, -121);
             while (var3.status == 0) {
-              gi.a((byte) -41, 10L);
+              gi.sleepMillis((byte) -41, 10L);
             }
             if (1 != var3.status) {
-              gi.a((byte) -78, 100L);
+              gi.sleepMillis((byte) -78, 100L);
               continue;
             }
             break;

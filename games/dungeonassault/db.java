@@ -651,7 +651,7 @@ final class db extends qe {
           var4 = fj.field_g[param1] * (var3 * 1 + 10) / 10;
           gm.field_d.field_s = gm.field_d.field_s - var4;
           if (gm.field_d.field_A != -1) {
-            gm.field_d.field_A = fm.field_i + (int)(-16912800L + kd.c(-2456) / 60000L);
+            gm.field_d.field_A = fm.field_i + (int)(-16912800L + kd.correctedCurrentTimeMillis(-2456) / 60000L);
           }
           ac.field_B.d((byte) -79, 73);
           ac.field_B.writeByte(6, param1);

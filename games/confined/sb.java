@@ -36,7 +36,7 @@ final class sb implements Runnable {
                 var2.serviceOutput();
               }
             }
-            jd.a(1, 10L);
+            jd.sleepMillis(1, 10L);
             mb.a((Object) null, 1001, this.field_c);
           }
         } catch (Exception exception) {

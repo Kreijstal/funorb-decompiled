@@ -39,7 +39,7 @@ final class dg {
         if (0 == al.field_H.status) {
           return false;
         }
-        dupTemp$2 = rf.c(0);
+        dupTemp$2 = rf.correctedCurrentTimeMillis(0);
         p.field_c = dupTemp$2;
         ta.field_e = dupTemp$2;
         if (al.field_H.status != 1) {

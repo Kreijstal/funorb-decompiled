@@ -341,7 +341,7 @@ final class e {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.field_j.peekEvent()) {
-              um.a(true, 1L);
+              um.sleepMillis(true, 1L);
               continue;
             }
             break;

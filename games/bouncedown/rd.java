@@ -121,7 +121,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             SecondaryNodeDeque.field_d = 0;
             hb.field_B = param0.getX();
             nc.field_b = param0.getY();
-            fa.a(-49);
+            fa.correctedCurrentTimeMillis(-49);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ta.field_a = 1;
               c.field_c = 1;

@@ -282,7 +282,7 @@ final class bl extends l {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_47_2;
             }
-            qe.field_cb = gk.a(95);
+            qe.field_cb = gk.correctedCurrentTimeMillis(95);
           }
           ve.field_d.itemCount = gi.field_n.length;
           var3_intLifetime1 = 0;

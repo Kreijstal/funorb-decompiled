@@ -64,13 +64,13 @@ final class vh {
           if (ArchiveIndex.field_a != null && (param0 < 0 ||
             tb.field_f == NodeHashTableIterator.field_e)) {
             if (qn.field_U.position == 0 &&
-              (10000L + ta.field_t) < ud.a(2)) {
+              (10000L + ta.field_t) < ud.correctedCurrentTimeMillis(2)) {
               qn.field_U.f(param0, -105);
             }
             if (qn.field_U.position > 0) {
               try {
                 ArchiveIndex.field_a.a(0, qn.field_U.position, (byte) -92, qn.field_U.data);
-                ta.field_t = ud.a(2);
+                ta.field_t = ud.correctedCurrentTimeMillis(2);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

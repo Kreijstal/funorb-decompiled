@@ -948,7 +948,7 @@ final class pc extends ci {
               var8 = tn.field_j;
             }
             if (BoundedRandomAccessFile.field_e != 0L) {
-              var9 = (int)(BoundedRandomAccessFile.field_e - ud.a(2));
+              var9 = (int)(BoundedRandomAccessFile.field_e - ud.correctedCurrentTimeMillis(2));
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;

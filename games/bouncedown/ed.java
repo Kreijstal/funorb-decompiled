@@ -127,7 +127,7 @@ abstract class ed {
           }
           var8 = param1.requestDisplayModes((byte) 5);
           while (var8.status == 0) {
-            SecondaryNodeDeque.a(10L, param0 + 19396);
+            SecondaryNodeDeque.sleepMillis(10L, param0 + 19396);
           }
           if (var8.status == 2) {
             stackIn_10_0 = new lb[]{};
@@ -211,7 +211,7 @@ abstract class ed {
           }
           var11 = param1.requestFullscreenEnter(param2, param4, param3, param5, 314572800);
           while (0 == var11.status) {
-            SecondaryNodeDeque.a(10L, 19406);
+            SecondaryNodeDeque.sleepMillis(10L, 19406);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

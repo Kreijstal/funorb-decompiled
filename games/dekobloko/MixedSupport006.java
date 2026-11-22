@@ -120,7 +120,7 @@ final class MixedSupport006 {
           }
           asyncTaskLocal14 = platformServiceArgument2.computeAsyncTask0509((byte) 123);
           while (asyncTaskLocal14.integerState0510 == 0) {
-            MixedSupport125.performAction1620(10L, -128);
+            MixedSupport125.sleepMillis(10L, -128);
           }
           if (asyncTaskLocal14.integerState0510 == 2) {
             stackMixedSupport023ArrayLocal3 = new MixedSupport023[]{};

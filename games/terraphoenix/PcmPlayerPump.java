@@ -33,7 +33,7 @@ final class PcmPlayerPump implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              gi.a((byte) -68, 10L);
+              gi.sleepMillis((byte) -68, 10L);
               var5 = (Object) null;
               GameKeyHandler.a(this.field_e, false, (Object) null);
             }

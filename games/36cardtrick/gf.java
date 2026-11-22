@@ -118,7 +118,7 @@ final class gf {
           }
           var8 = param1.requestDisplayModes((byte) 104);
           while (var8.status == 0) {
-            wk.a((byte) -117, 10L);
+            wk.sleepMillis((byte) -117, 10L);
           }
           if (var8.status == 2) {
             stackIn_13_0 = new md[]{};

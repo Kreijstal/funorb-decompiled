@@ -58,7 +58,7 @@ final class of {
           }
           if (var3 == 0 &&
             2 == ea.field_a) {
-            var4 = ri.a(-3) - ga.field_M;
+            var4 = ri.correctedCurrentTimeMillis(-3) - ga.field_M;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

@@ -16,7 +16,7 @@ abstract class ui implements wd {
         if (!param0) {
           this.b(66);
         }
-        this.field_a = ol.a(256);
+        this.field_a = ol.correctedCurrentTimeMillis(256);
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -41,7 +41,7 @@ abstract class ui implements wd {
         if (this.a(6650)) {
           return null;
         }
-        if (ol.a(256) < 350L + this.field_a) {
+        if (ol.correctedCurrentTimeMillis(256) < 350L + this.field_a) {
           return null;
         }
         return this.d(5);
@@ -153,7 +153,7 @@ abstract class ui implements wd {
         if (this.a(6650)) {
           return mh.field_b;
         }
-        if (ol.a(256) < this.field_a + 350L) {
+        if (ol.correctedCurrentTimeMillis(256) < this.field_a + 350L) {
           return bl.field_S;
         }
         int var2 = -47 / ((param0 - 33) / 61);

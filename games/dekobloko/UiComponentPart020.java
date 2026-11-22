@@ -924,7 +924,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
         }
     }
 
-    final static int computeInteger1159(int integerArgument1, int integerArgument2) {
+    final static int roundUpPowerOfTwo(int integerArgument1, int integerArgument2) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         RuntimeException caughtExceptionLocal3 = null;
@@ -1242,7 +1242,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
         try {
           super.performAction0222(integerArgument1, integerArgument2, integerArgument3, integerArgument4, -16555);
           if (integerArgument5 != -16555) {
-            UiComponentPart020.computeInteger1159(71, 20);
+            UiComponentPart020.roundUpPowerOfTwo(71, 20);
           }
           this.performAction1047(30);
           return;

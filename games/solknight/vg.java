@@ -107,7 +107,7 @@ class vg extends pj {
         }
         var8 = (eg) ((Object) this.field_w);
         if (this.field_O == this.field_K) {
-          var6 = je.a(param3 + 1);
+          var6 = je.correctedCurrentTimeMillis(param3 + 1);
           if (500L > (-this.field_V + var6) % 1000L) {
             var8.a(this.field_K, param0, 1, (UiWidget) (this), param2);
           }
@@ -118,7 +118,7 @@ class vg extends pj {
           return;
         }
         var8.a(this.field_O, (UiWidget) (this), this.field_K, 114, param0, param2);
-        var6Lifetime1 = je.a(param3 + 1);
+        var6Lifetime1 = je.correctedCurrentTimeMillis(param3 + 1);
         if (500L > (-this.field_V + var6Lifetime1) % 1000L) {
           var8.a(this.field_K, param0, 1, (UiWidget) (this), param2);
         }
@@ -271,7 +271,7 @@ class vg extends pj {
                 this.field_K = var6;
               }
             }
-            this.field_V = je.a(param1 ^ 18875);
+            this.field_V = je.correctedCurrentTimeMillis(param1 ^ 18875);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "vg.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -347,7 +347,7 @@ class vg extends pj {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_V = je.a(1);
+          this.field_V = je.correctedCurrentTimeMillis(1);
           if (60 == param0) {
             return false;
           }
@@ -571,7 +571,7 @@ class vg extends pj {
           this.field_w = ph.field_f.field_h;
           this.a(-90, true, param0);
           this.field_S = true;
-          this.field_V = je.a(1);
+          this.field_V = je.correctedCurrentTimeMillis(1);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -601,7 +601,7 @@ class vg extends pj {
             stackIn_7_1 = 0;
           }
           this.b(stackIn_7_1, -6331);
-          var8_long = je.a(1);
+          var8_long = je.correctedCurrentTimeMillis(1);
           stackIn_10_1 = !(-this.field_T + var8_long >= 250L);
           this.field_U = stackIn_10_1;
           if (this.field_U) {

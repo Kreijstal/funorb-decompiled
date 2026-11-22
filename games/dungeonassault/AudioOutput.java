@@ -34,7 +34,7 @@ class AudioOutput {
           if (this.field_u) {
             return;
           }
-          var1 = kd.c(-2456);
+          var1 = kd.correctedCurrentTimeMillis(-2456);
           try {
             if (var1 > this.field_b + 6000L) {
               this.field_b = var1 - 6000L;
@@ -42,7 +42,7 @@ class AudioOutput {
             while (var1 > this.field_b + 5000L) {
               this.skipFrames(256);
               this.field_b = this.field_b + (long)(256000 / field_t);
-              var1 = kd.c(-2456);
+              var1 = kd.correctedCurrentTimeMillis(-2456);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_e.field_a = true;
             while (field_e.field_d) {
-              CombatState.a(0, 50L);
+              CombatState.sleepMillis(0, 50L);
             }
             field_e = null;
           }
@@ -178,7 +178,7 @@ class AudioOutput {
         if (field_g) {
           var3 = var3 << 1;
         }
-        cj.a(param0, 0, var3);
+        cj.clearInts(param0, 0, var3);
         this.field_r = this.field_r - param1;
         if (this.field_h != null &&
           this.field_r <= 0) {
@@ -272,7 +272,7 @@ class AudioOutput {
         if (this.field_h != null) {
           this.field_h.b(param0, 0, param1);
         }
-        this.field_b = kd.c(-2456);
+        this.field_b = kd.correctedCurrentTimeMillis(-2456);
     }
 
     int getQueuedFrames() throws Exception {
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_d = 32;
         this.field_u = false;
-        this.field_b = kd.c(-2456);
+        this.field_b = kd.correctedCurrentTimeMillis(-2456);
         this.field_n = new PcmStream[8];
         this.field_p = new PcmStream[8];
         this.field_o = 0L;

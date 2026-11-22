@@ -498,7 +498,7 @@ final class wc extends wf {
           return;
         }
         if (this.field_n &&
-          ih.a((byte) -98) >= this.field_D) {
+          ih.correctedCurrentTimeMillis((byte) -98) >= this.field_D) {
           var2 = (ki) (this.field_f.a((byte) 104));
           while (var2 != null) {
             if (!var2.field_w) {
@@ -513,7 +513,7 @@ final class wc extends wf {
             }
             var2 = (ki) (this.field_f.b((byte) 118));
           }
-          this.field_D = 1000L + ih.a((byte) -98);
+          this.field_D = 1000L + ih.correctedCurrentTimeMillis((byte) -98);
         }
     }
 

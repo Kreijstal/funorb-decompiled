@@ -75,7 +75,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_g.field_f = true;
             while (field_g.field_d) {
-              em.a(50L, false);
+              em.sleepMillis(50L, false);
             }
             field_g = null;
           }
@@ -209,7 +209,7 @@ class AudioOutput {
         if (field_n) {
           var3 = var3 << 1;
         }
-        gl.a(param0, 0, var3);
+        gl.clearInts(param0, 0, var3);
         this.field_j = this.field_j - param1;
         if (this.field_b != null &&
           this.field_j <= 0) {
@@ -303,7 +303,7 @@ class AudioOutput {
         if (this.field_b != null) {
           this.field_b.b(param0, 0, param1);
         }
-        this.field_d = pf.a(0);
+        this.field_d = pf.correctedCurrentTimeMillis(0);
     }
 
     final synchronized void serviceOutput() {
@@ -316,7 +316,7 @@ class AudioOutput {
           if (this.field_u) {
             return;
           }
-          var1 = pf.a(0);
+          var1 = pf.correctedCurrentTimeMillis(0);
           try {
             if (var1 > this.field_d + 6000L) {
               this.field_d = var1 - 6000L;
@@ -324,7 +324,7 @@ class AudioOutput {
             while (var1 > this.field_d + 5000L) {
               this.skipFrames(256);
               this.field_d = this.field_d + (long)(256000 / field_i);
-              var1 = pf.a(0);
+              var1 = pf.correctedCurrentTimeMillis(0);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_u = false;
         this.field_t = 32;
-        this.field_d = pf.a(0);
+        this.field_d = pf.correctedCurrentTimeMillis(0);
         this.field_p = new PcmStream[8];
         this.field_m = 0;
         this.field_r = 0;

@@ -126,7 +126,7 @@ final class rk implements Runnable {
           }
           if (this.field_e != null) {
             while (this.field_e.status == 0) {
-              CombatState.a(param0 + 6624, 1L);
+              CombatState.sleepMillis(param0 + 6624, 1L);
             }
             if (1 == this.field_e.status) {
               try {

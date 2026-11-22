@@ -128,7 +128,7 @@ final class WhirlpoolDigest {
         if (0 == IterableNodeHashTable.field_d.status) {
           return false;
         }
-        dupTemp$2 = qg.a(false);
+        dupTemp$2 = qg.correctedCurrentTimeMillis(false);
         qh.field_f = dupTemp$2;
         he.field_a = dupTemp$2;
         if (IterableNodeHashTable.field_d.status != 1) {

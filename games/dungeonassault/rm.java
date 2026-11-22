@@ -98,7 +98,7 @@ class rm extends ck {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_I = kd.c(-2456);
+          this.field_I = kd.correctedCurrentTimeMillis(-2456);
           if (param3 < 55) {
             this.field_R = 21;
           }
@@ -370,7 +370,7 @@ class rm extends ck {
             stackIn_7_1 = 0;
           }
           this.a(stackIn_7_1, 6931);
-          var9 = kd.c(-2456);
+          var9 = kd.correctedCurrentTimeMillis(-2456);
           stackIn_10_1 = !(-this.field_O + var9 >= 250L);
           this.field_N = stackIn_10_1;
           if (this.field_N) {
@@ -409,7 +409,7 @@ class rm extends ck {
             if (this.field_L != this.field_M) {
               var8.a(this.field_M, param1, param3, (lm) (this), 33, this.field_L);
             }
-            var6 = kd.c(param2 - 2456);
+            var6 = kd.correctedCurrentTimeMillis(param2 - 2456);
             if ((-this.field_I + var6) % 1000L < 500L) {
               var8.a((lm) (this), this.field_L, param3, -1, param1);
             }
@@ -542,7 +542,7 @@ class rm extends ck {
                 this.field_L = var6;
               }
             }
-            this.field_I = kd.c(-2456);
+            this.field_I = kd.correctedCurrentTimeMillis(-2456);
           }
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "rm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -559,7 +559,7 @@ class rm extends ck {
           this.field_o = hl.field_a.field_c;
           this.a(param0, true, (byte) 57);
           this.field_Q = true;
-          this.field_I = kd.c(-2456);
+          this.field_I = kd.correctedCurrentTimeMillis(-2456);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

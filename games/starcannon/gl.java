@@ -35,7 +35,7 @@ final class gl {
         field_a = param3 - param1;
         gl.c();
         if (field_c.length < field_a) {
-          field_c = new int[gb.a(field_a, (byte) -84)];
+          field_c = new int[gb.roundUpPowerOfTwo(field_a, (byte) -84)];
         }
         int var4 = param1 * ki.field_j + param0;
         for (var5 = 0; var5 < field_a; var5++) {

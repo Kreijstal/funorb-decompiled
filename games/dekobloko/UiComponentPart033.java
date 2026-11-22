@@ -102,10 +102,10 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
           while (true) {
             asyncTaskLocal1 = platformServiceArgument3.requestExitFullscreen(75254128, frameArgument2);
             while (asyncTaskLocal1.integerState0510 == 0) {
-              MixedSupport125.performAction1620(10L, -128);
+              MixedSupport125.sleepMillis(10L, -128);
             }
             if (asyncTaskLocal1.integerState0510 != 1) {
-              MixedSupport125.performAction1620(100L, -128);
+              MixedSupport125.sleepMillis(100L, -128);
               continue;
             }
             break;
@@ -140,7 +140,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
           if (GameSession.bufferedSocketState0002 != null && (integerArgument2 < 0 ||
             UiComponentPart023.mixedSupport132State0009 == SoftwareFramebuffer.mixedSupport132State0012)) {
             if (SocketFactory.cipherPacketBufferState0002.position == 0 &&
-              MixedSupport062.computeLong0734(4) > 10000L + ArchiveRequestManager.longState0011) {
+              MixedSupport062.correctedCurrentTimeMillis(4) > 10000L + ArchiveRequestManager.longState0011) {
               SocketFactory.cipherPacketBufferState0002.performAction1641(integerArgument2, -4);
             }
             if (integerArgument1 != 4792) {
@@ -149,7 +149,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
             if (SocketFactory.cipherPacketBufferState0002.position > 0) {
               try {
                 GameSession.bufferedSocketState0002.performAction1374(0, SocketFactory.cipherPacketBufferState0002.position, 1, SocketFactory.cipherPacketBufferState0002.payload);
-                ArchiveRequestManager.longState0011 = MixedSupport062.computeLong0734(integerArgument1 ^ 4796);
+                ArchiveRequestManager.longState0011 = MixedSupport062.correctedCurrentTimeMillis(integerArgument1 ^ 4796);
               } catch (java.io.IOException caughtParameterLocal3) {
                 caughtExceptionLocal2 = caughtParameterLocal3;
                 iOException = (IOException) (Object) caughtExceptionLocal2;

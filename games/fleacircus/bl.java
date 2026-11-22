@@ -35,7 +35,7 @@ final class bl {
         field_i = param3 - param1;
         bl.a();
         if (field_b.length < field_i) {
-          field_b = new int[bf.a(true, field_i)];
+          field_b = new int[bf.roundUpPowerOfTwo(true, field_i)];
         }
         int var4 = param1 * gb.field_d + param0;
         for (var5 = 0; var5 < field_i; var5++) {

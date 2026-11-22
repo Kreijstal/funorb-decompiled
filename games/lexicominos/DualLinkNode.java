@@ -91,10 +91,10 @@ class DualLinkNode extends IntrusiveNode {
           while (true) {
             var3 = param0.requestFullscreenExit(param1 - 15232, param2);
             while (0 == var3.status) {
-              ge.a(0, 10L);
+              ge.sleepMillis(0, 10L);
             }
             if (1 != var3.status) {
-              ge.a(0, 100L);
+              ge.sleepMillis(0, 100L);
               continue;
             }
             break;

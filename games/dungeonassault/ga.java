@@ -158,7 +158,7 @@ final class ga extends ip {
             field_o = (cn[]) null;
           }
           while (var11.status == 0) {
-            CombatState.a(0, 10L);
+            CombatState.sleepMillis(0, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

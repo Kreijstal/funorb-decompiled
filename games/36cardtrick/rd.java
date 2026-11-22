@@ -16,7 +16,7 @@ final class rd extends cg {
         field_j = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         if (param1 == 1266438832) {
           param0 = (1431655765 & param0) + ((param0 & -1431655766) >>> 1);
           param0 = (param0 & 858993459) + (param0 >>> 2 & -1288490189);

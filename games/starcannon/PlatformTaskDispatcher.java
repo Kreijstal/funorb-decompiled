@@ -212,13 +212,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (field_k > dd.b(106)) {
+                    if (field_k > dd.correctedCurrentTimeMillis(106)) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 22:
-                    if (field_k > dd.b(56)) {
+                    if (field_k > dd.correctedCurrentTimeMillis(56)) {
                       throw new IOException();
                     }
                     try {
@@ -232,7 +232,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 4:
-                    if (dd.b(126) < field_k) {
+                    if (dd.correctedCurrentTimeMillis(126) < field_k) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -342,13 +342,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (dd.b(118) < field_k) {
+                        if (dd.correctedCurrentTimeMillis(118) < field_k) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
                         break;
                       case 3:
-                        if (field_k > dd.b(104)) {
+                        if (field_k > dd.correctedCurrentTimeMillis(104)) {
                           throw new IOException();
                         }
                         var13 = (255 & var8.intArgument >> 24) + "." + (var8.intArgument >> 16 & 255) + "." + (255 & var8.intArgument >> 8) + "." + (255 & var8.intArgument);

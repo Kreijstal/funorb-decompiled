@@ -103,7 +103,7 @@ abstract class MixedSupport140 extends DualNode {
           if (SoftwareFramebuffer.mixedSupport132State0012 != UiComponentPart023.mixedSupport132State0009) {
             return false;
           }
-          longLocal7 = MixedSupport062.computeLong0734(integerArgument2 + 4);
+          longLocal7 = MixedSupport062.correctedCurrentTimeMillis(integerArgument2 + 4);
           if (MixedSupport126.integerState0792 != 0 &&
             UiComponentPart009.integerState0150 < 0) {
             renderingSupport001Local9 = (RenderingSupport001) (MixedSupport018.nodeDequeState0006.beginBackward((byte) -98));

@@ -245,7 +245,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (field_u > f.b((byte) 73)) {
+                        if (field_u > f.correctedCurrentTimeMillis((byte) 73)) {
                           throw new IOException();
                         }
                         var15 = (255 & var8.intArgument >> 24) + "." + (var8.intArgument >> 16 & 255) + "." + (var8.intArgument >> 8 & 255) + "." + (255 & var8.intArgument);
@@ -342,7 +342,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (f.b((byte) 73) < field_u) {
+                        if (f.correctedCurrentTimeMillis((byte) 73) < field_u) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -366,13 +366,13 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (field_u > f.b((byte) 73)) {
+                    if (field_u > f.correctedCurrentTimeMillis((byte) 73)) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
                     break;
                   case 22:
-                    if (f.b((byte) 73) < field_u) {
+                    if (f.correctedCurrentTimeMillis((byte) 73) < field_u) {
                       throw new IOException();
                     }
                     try {
@@ -386,7 +386,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 1:
-                    if (f.b((byte) 73) < field_u) {
+                    if (f.correctedCurrentTimeMillis((byte) 73) < field_u) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);

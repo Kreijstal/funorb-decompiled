@@ -269,7 +269,7 @@ final class tf {
               }
               stackIn_80_0[stackIn_80_1] = stackIn_83_2;
             }
-            c.field_c = lk.a(0);
+            c.field_c = lk.correctedCurrentTimeMillis(0);
           }
           bk.field_c.field_a = AccountServiceResult.field_d.length;
           var3_intLifetime1 = 0;

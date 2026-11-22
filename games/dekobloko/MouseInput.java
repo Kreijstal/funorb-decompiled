@@ -207,7 +207,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           integerLocal25 = stackIntegerLocal15;
           packetBufferArgument2.readBytes(sceneWidgetPart013Argument3.byteArrayState0032, 0, (byte) 126, sceneWidgetPart013Argument3.byteArrayState0032.length);
           sceneWidgetPart013Argument3.integerState0838 = packetBufferArgument2.readUnsignedShort(3);
-          sceneWidgetPart013Argument3.longState0052 = MixedSupport062.computeLong0734(4) - (long)packetBufferArgument2.readInt(7553);
+          sceneWidgetPart013Argument3.longState0052 = MixedSupport062.correctedCurrentTimeMillis(4) - (long)packetBufferArgument2.readInt(7553);
           if (integerLocal24 == 0) {
             sceneWidgetPart013Argument3.integerState0841 = -1;
           } else {
@@ -313,7 +313,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             MixedSupport099.integerState0579 = 0;
             RenderingSupport003.integerState0253 = mouseEventArgument1.getX();
             MixedSupport103.integerState0597 = mouseEventArgument1.getY();
-            MixedSupport062.computeLong0734(4);
+            MixedSupport062.correctedCurrentTimeMillis(4);
             if (javax.swing.SwingUtilities.isRightMouseButton(mouseEventArgument1)) {
               SecondaryNodeHashTable.integerState0544 = 2;
               UiComponentPart022.integerState0572 = 2;

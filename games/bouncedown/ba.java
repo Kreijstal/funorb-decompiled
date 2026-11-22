@@ -159,7 +159,7 @@ class ba extends wd {
           ((gl) (this.field_n)).a(this, (byte) 98);
         }
         if (param0 != 88) {
-          ba.a((byte) -91, 122L);
+          ba.sleepIgnoringInterrupts((byte) -91, 122L);
         }
     }
 
@@ -187,7 +187,7 @@ class ba extends wd {
                 this.field_G = var6;
               }
             }
-            this.field_L = fa.a(-55);
+            this.field_L = fa.correctedCurrentTimeMillis(-55);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,7 +214,7 @@ class ba extends wd {
           this.field_j = ma.field_m.field_e;
           this.a(true, param0, true);
           this.field_H = true;
-          this.field_L = fa.a(-96);
+          this.field_L = fa.correctedCurrentTimeMillis(-96);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -251,7 +251,7 @@ class ba extends wd {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_L = fa.a(param3 + 14452);
+          this.field_L = fa.correctedCurrentTimeMillis(param3 + 14452);
           if (param1 != 60 &&
             62 != param1) {
             if (param3 != -14565) {
@@ -449,14 +449,14 @@ class ba extends wd {
         return var2;
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepIgnoringInterrupts(byte param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
           try {
             Thread.sleep(param1);
             if (param0 > -29) {
-              ba.a((byte) 115, 7L);
+              ba.sleepIgnoringInterrupts((byte) 115, 7L);
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -493,7 +493,7 @@ class ba extends wd {
             stackIn_6_1 = var8_int;
           }
           this.b(stackIn_6_1, param4 ^ 28481);
-          var8_long = fa.a(-99);
+          var8_long = fa.correctedCurrentTimeMillis(-99);
           stackIn_9_1 = !(var8_long - this.field_J >= 250L);
           this.field_C = stackIn_9_1;
           if (this.field_C) {
@@ -547,7 +547,7 @@ class ba extends wd {
             if (this.field_G != this.field_K) {
               var8.a(param3, (lk) (this), param1, this.field_G, this.field_K, (byte) 87);
             }
-            var6 = fa.a(-84);
+            var6 = fa.correctedCurrentTimeMillis(-84);
             if ((-this.field_L + var6) % 1000L < 500L) {
               var8.a((lk) (this), this.field_G, (byte) 65, param1, param3);
             }

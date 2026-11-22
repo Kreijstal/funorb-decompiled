@@ -32,7 +32,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             aq.field_s = 0;
             kk.field_g = param0.getX();
             sb.field_I = param0.getY();
-            lo.a((byte) -57);
+            lo.correctedCurrentTimeMillis((byte) -57);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               th.field_y = 2;
               uc.field_b = 2;
@@ -543,7 +543,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               }
               stackIn_74_0[stackIn_74_1] = stackIn_77_2;
             }
-            wm.field_d = lo.a((byte) -60);
+            wm.field_d = lo.correctedCurrentTimeMillis((byte) -60);
           }
           lb.field_l.field_b = sn.field_a.length;
           var3_intLifetime1 = 0;

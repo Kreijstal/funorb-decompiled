@@ -73,7 +73,7 @@ final class jh {
           if (param0 != -68) {
             field_e = (String) null;
           }
-          dupTemp$1 = dd.b(71);
+          dupTemp$1 = dd.correctedCurrentTimeMillis(71);
           ca.field_Y = dupTemp$1;
           ik.field_p = dupTemp$1;
           if (ah.field_e.status != 1) {

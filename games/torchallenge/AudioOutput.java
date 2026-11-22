@@ -50,7 +50,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_o = ol.a(256) + 2000L;
+            this.field_o = ol.correctedCurrentTimeMillis(256) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -166,7 +166,7 @@ class AudioOutput {
         if (field_g) {
           var3 = var3 << 1;
         }
-        he.a(param0, 0, var3);
+        he.clearInts(param0, 0, var3);
         this.field_e = this.field_e - param1;
         if (this.field_u != null &&
           this.field_e <= 0) {
@@ -260,7 +260,7 @@ class AudioOutput {
         if (this.field_u != null) {
           this.field_u.mixInto(param0, 0, param1);
         }
-        this.field_h = ol.a(256);
+        this.field_h = ol.correctedCurrentTimeMillis(256);
     }
 
     void writeMixBlock() throws Exception {
@@ -286,7 +286,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_n.field_e = true;
             while (field_n.field_f) {
-              c.a(-105, 50L);
+              c.sleepMillis(-105, 50L);
             }
             field_n = null;
           }
@@ -335,7 +335,7 @@ class AudioOutput {
           if (this.field_k) {
             return;
           }
-          var1 = ol.a(256);
+          var1 = ol.correctedCurrentTimeMillis(256);
           try {
             if (var1 > this.field_h + 6000L) {
               this.field_h = var1 - 6000L;
@@ -343,7 +343,7 @@ class AudioOutput {
             while (var1 > this.field_h + 5000L) {
               this.skipFrames(256);
               this.field_h = this.field_h + (long)(256000 / field_p);
-              var1 = ol.a(256);
+              var1 = ol.correctedCurrentTimeMillis(256);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_k = false;
         this.field_l = 32;
-        this.field_h = ol.a(256);
+        this.field_h = ol.correctedCurrentTimeMillis(256);
         this.field_a = true;
         this.field_e = 0;
         this.field_q = 0;

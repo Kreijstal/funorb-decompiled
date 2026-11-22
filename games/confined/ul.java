@@ -40,7 +40,7 @@ class ul extends rg {
           this.field_n = KeyboardInput.field_d.field_u;
           this.a(true, false, param0);
           this.field_X = true;
-          this.field_Y = ri.a(-3);
+          this.field_Y = ri.correctedCurrentTimeMillis(-3);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -179,7 +179,7 @@ class ul extends rg {
             if (this.field_Q != this.field_R) {
               var5.a(param3, (fj) (this), 0, this.field_R, param0, this.field_Q);
             }
-            var6 = ri.a(-3);
+            var6 = ri.correctedCurrentTimeMillis(-3);
             if (500L > (var6 - this.field_Y) % 1000L) {
               var5.a(param3, (fj) (this), param0, -71, this.field_Q);
             }
@@ -221,7 +221,7 @@ class ul extends rg {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_Y = ri.a(-3);
+          this.field_Y = ri.correctedCurrentTimeMillis(-3);
           if (param3 == 60) {
             return false;
           }
@@ -372,7 +372,7 @@ class ul extends rg {
             stackIn_6_2 = 0;
           }
           this.b(stackIn_5_1, stackIn_6_2);
-          var8_long = ri.a(-3);
+          var8_long = ri.correctedCurrentTimeMillis(-3);
           stackIn_9_1 = !(-this.field_T + var8_long >= 250L);
           this.field_Z = stackIn_9_1;
           if (this.field_Z) {
@@ -464,7 +464,7 @@ class ul extends rg {
                 this.field_Q = var6;
               }
             }
-            this.field_Y = ri.a(-3);
+            this.field_Y = ri.correctedCurrentTimeMillis(-3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

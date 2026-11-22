@@ -37,13 +37,13 @@ final class qf {
           if (null != MouseWheelInput.field_d && (0 > param1 ||
             AccountRequestState.field_e == jj.field_Y)) {
             if (param0 == id.field_c.position &&
-              je.a(1) > gf.field_Y + 10000L) {
+              je.correctedCurrentTimeMillis(1) > gf.field_Y + 10000L) {
               id.field_c.e(param1, -2147483648);
             }
             if (id.field_c.position > 0) {
               try {
                 MouseWheelInput.field_d.a(-28748, 0, id.field_c.position, id.field_c.payload);
-                gf.field_Y = je.a(1);
+                gf.field_Y = je.correctedCurrentTimeMillis(1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

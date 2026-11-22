@@ -38,7 +38,7 @@ final class nc implements ad {
               if (param1.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + e.a(sf.a((byte) -122) + 94608000000L, -127) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + e.a(sf.correctedCurrentTimeMillis((byte) -122) + 94608000000L, -127) + "; Max-Age=" + 94608000L;
               }
               lk.a(param0, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -106);
             } catch (Throwable throwable) {

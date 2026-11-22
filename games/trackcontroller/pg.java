@@ -93,7 +93,7 @@ final class pg {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        pd.a(field_x, 0, param0);
+        pd.clearInts(field_x, 0, param0);
         if (param1 < 10) {
           return field_x;
         }

@@ -8,7 +8,7 @@ final class lk {
     static int[] field_e;
     static String field_a;
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         if (param0 != 0) {
           field_b = (PlatformTaskDispatcher) null;
         }

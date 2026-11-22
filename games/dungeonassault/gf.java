@@ -569,9 +569,9 @@ final class gf {
         var29 = field_d;
         var26 = var29;
         var11 = var26;
-        cj.a(var27, 0, param8);
-        cj.a(var28, 0, param8);
-        cj.a(var29, 0, param8);
+        cj.clearInts(var27, 0, param8);
+        cj.clearInts(var28, 0, param8);
+        cj.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

@@ -191,7 +191,7 @@ class kl extends hf {
           if (param3 < 63) {
             this.field_P = 111;
           }
-          this.field_K = la.a(false);
+          this.field_K = la.correctedCurrentTimeMillis(false);
           if (param1 == 60) {
             return false;
           }
@@ -323,7 +323,7 @@ class kl extends hf {
           this.field_l = ja.field_Q.field_f;
           this.a(true, param0, -19116);
           this.field_N = true;
-          this.field_K = la.a(false);
+          this.field_K = la.correctedCurrentTimeMillis(false);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -386,7 +386,7 @@ class kl extends hf {
                 this.field_L = var6;
               }
             }
-            this.field_K = la.a(false);
+            this.field_K = la.correctedCurrentTimeMillis(false);
           }
           if (param3 <= -127) {
             return;
@@ -438,7 +438,7 @@ class kl extends hf {
               stackIn_5_1 = 0;
             }
             this.a(stackIn_5_1, (byte) -59);
-            var8_long = la.a(false);
+            var8_long = la.correctedCurrentTimeMillis(false);
             stackIn_8_1 = !(250L <= -this.field_O + var8_long);
             this.field_M = stackIn_8_1;
             if (this.field_M) {
@@ -592,13 +592,13 @@ class kl extends hf {
         va var8 = (va) ((Object) this.field_l);
         if (this.field_Q != this.field_L) {
           var8.a(this.field_L, param3, -128, (vg) (this), param0, this.field_Q);
-          var6 = la.a(false);
+          var6 = la.correctedCurrentTimeMillis(false);
           if ((-this.field_K + var6) % 1000L < 500L) {
             var8.a(param3, param0, (vg) (this), this.field_L, (byte) -90);
           }
           return;
         }
-        var6Lifetime1 = la.a(false);
+        var6Lifetime1 = la.correctedCurrentTimeMillis(false);
         if ((-this.field_K + var6Lifetime1) % 1000L < 500L) {
           var8.a(param3, param0, (vg) (this), this.field_L, (byte) -90);
           return;

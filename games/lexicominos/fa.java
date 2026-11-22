@@ -78,7 +78,7 @@ final class fa {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         if (param0 <= -32) {
@@ -88,7 +88,7 @@ final class fa {
           param1 = param1 | param1 >>> 16;
           return 1 + param1;
         }
-        fa.a(78, -6);
+        fa.roundUpPowerOfTwo(78, -6);
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;

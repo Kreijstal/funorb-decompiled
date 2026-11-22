@@ -30,7 +30,7 @@ final class qk {
         field_g = param3 - param1;
         qk.a();
         if (field_b.length < field_g) {
-          field_b = new int[ke.a(field_g, 24636)];
+          field_b = new int[ke.roundUpPowerOfTwo(field_g, 24636)];
         }
         int var4 = param1 * na.field_e + param0;
         for (var5 = 0; var5 < field_g; var5++) {

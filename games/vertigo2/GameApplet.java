@@ -57,7 +57,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = gi.field_s.startThread(1, (Runnable) (this), 0);
               while (true) {
                 if (0 == var8.status) {
-                  um.a(true, 10L);
+                  um.sleepMillis(true, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -161,8 +161,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (qe.field_T == this &&
             !NodeHashTableIterator.field_g) {
-            lf.field_B = gk.a(52);
-            um.a(true, 5000L);
+            lf.field_B = gk.correctedCurrentTimeMillis(52);
+            um.sleepMillis(true, 5000L);
             mr.field_b = null;
             this.a((byte) -53, false);
             return;
@@ -281,7 +281,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var2_long = gk.a(50);
+          var2_long = gk.correctedCurrentTimeMillis(50);
           var4 = hd.field_d[nl.field_d];
           hd.field_d[nl.field_d] = var2_long;
           nl.field_d = nl.field_d + 1 & 31;
@@ -409,7 +409,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           MenuSelectionCursor.field_g = true;
           uh.field_sc = true;
           WidgetWrapper.field_F = false;
-          nf.field_x = gk.a(89);
+          nf.field_x = gk.correctedCurrentTimeMillis(89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -441,7 +441,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (qe.field_T == this &&
             !NodeHashTableIterator.field_g) {
-            lf.field_B = 4000L + gk.a(113);
+            lf.field_B = 4000L + gk.correctedCurrentTimeMillis(113);
             return;
           }
           return;
@@ -822,7 +822,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !NodeHashTableIterator.field_g) {
             uh.field_sc = true;
             if (kj.field_E &&
-              gk.a(88) - nf.field_x > 1000L) {
+              gk.correctedCurrentTimeMillis(88) - nf.field_x > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (lc.field_a > var2.width) {
@@ -863,7 +863,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         int var6_int = 0;
         java.awt.Insets var6 = null;
         try {
-          var2_long = gk.a(param0 ^ 91);
+          var2_long = gk.correctedCurrentTimeMillis(param0 ^ 91);
           var4 = l.field_b[eb.field_e];
           l.field_b[eb.field_e] = var2_long;
           eb.field_e = param0 & eb.field_e + 1;
@@ -1022,7 +1022,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lf.field_B != 0L) {
-                    stackIn_101_0 = compareLongs(~gk.a(73), ~lf.field_B);
+                    stackIn_101_0 = compareLongs(~gk.correctedCurrentTimeMillis(73), ~lf.field_B);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_101_0 <= 0)) {

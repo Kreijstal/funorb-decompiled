@@ -89,7 +89,7 @@ final class bb implements Runnable {
                 var2.serviceOutput();
               }
             }
-            c.a(100, 10L);
+            c.sleepMillis(100, 10L);
             Object var5 = (Object) null;
             GzipDecoder.postEventQueueWakeup(117, this.field_b, (Object) null);
           }

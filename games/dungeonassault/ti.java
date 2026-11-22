@@ -322,7 +322,7 @@ final class ti extends qa {
           }
         }
         if (this.field_k &&
-          kd.c(param0 ^ 9138) >= this.field_m) {
+          kd.correctedCurrentTimeMillis(param0 ^ 9138) >= this.field_m) {
           var2 = (vf) (this.field_l.a(true));
           while (var2 != null) {
             if (!var2.field_v) {
@@ -337,7 +337,7 @@ final class ti extends qa {
             }
             var2 = (vf) (this.field_l.a(param0 + 15108));
           }
-          this.field_m = kd.c(-2456) + 1000L;
+          this.field_m = kd.correctedCurrentTimeMillis(-2456) + 1000L;
         }
         if (param0 != -10790) {
           this.field_k = false;

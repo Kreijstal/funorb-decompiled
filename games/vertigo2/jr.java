@@ -76,7 +76,7 @@ final class jr implements Runnable {
                 var2.serviceOutput();
               }
             }
-            um.a(true, 10L);
+            um.sleepMillis(true, 10L);
             Object var5 = (Object) null;
             e.a(this.field_c, (Object) null, -29785);
           }

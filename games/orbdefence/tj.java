@@ -126,10 +126,10 @@ final class tj {
           while (true) {
             var3 = param0.requestFullscreenExit((byte) -120, param1);
             while (var3.status == 0) {
-              hb.a(10L, 109);
+              hb.sleepMillis(10L, 109);
             }
             if (var3.status != 1) {
-              hb.a(100L, 101);
+              hb.sleepMillis(100L, 101);
               continue;
             }
             break;

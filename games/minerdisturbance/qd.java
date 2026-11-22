@@ -361,7 +361,7 @@ final class qd extends kn implements sh {
               }
               stackIn_38_0[stackIn_38_1] = stackIn_41_2;
             }
-            tl.field_o = sf.a((byte) -24);
+            tl.field_o = sf.correctedCurrentTimeMillis((byte) -24);
           }
           pn.field_a.field_i = wf.field_P.length;
           var3_intLifetime1 = 0;

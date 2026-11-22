@@ -188,7 +188,7 @@ final class gh extends r {
           var2 = 0;
           var3 = -21 / ((param0 - 22) / 57);
           if (2 == IntrusiveDeque.field_a) {
-            var4_long = lj.a((byte) -48) - sd.field_h;
+            var4_long = lj.correctedCurrentTimeMillis((byte) -48) - sd.field_h;
             var2 = (int)((10999L - var4_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

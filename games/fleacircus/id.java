@@ -32,7 +32,7 @@ final class id {
           if (0 == gg.field_e.status) {
             return false;
           }
-          dupTemp$1 = lj.a((byte) -47);
+          dupTemp$1 = lj.correctedCurrentTimeMillis((byte) -47);
           jd.field_n = dupTemp$1;
           ug.field_d = dupTemp$1;
           if (1 != gg.field_e.status) {

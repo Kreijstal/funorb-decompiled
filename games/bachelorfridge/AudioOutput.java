@@ -50,7 +50,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_u.field_e = true;
             while (field_u.field_d) {
-              gda.a(false, 50L);
+              gda.sleepMillis(false, 50L);
             }
             field_u = null;
           }
@@ -295,7 +295,7 @@ class AudioOutput {
         if (this.field_n != null) {
           this.field_n.a(param0, 0, param1);
         }
-        this.field_m = f.b((byte) 73);
+        this.field_m = f.correctedCurrentTimeMillis((byte) 73);
     }
 
     void initDevice(java.awt.Component param0) throws Exception {
@@ -308,7 +308,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_p = f.b((byte) 73) + 2000L;
+            this.field_p = f.correctedCurrentTimeMillis((byte) 73) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -331,7 +331,7 @@ class AudioOutput {
           if (this.field_t) {
             return;
           }
-          var1 = f.b((byte) 73);
+          var1 = f.correctedCurrentTimeMillis((byte) 73);
           try {
             if (var1 > this.field_m + 6000L) {
               this.field_m = var1 - 6000L;
@@ -339,7 +339,7 @@ class AudioOutput {
             while (var1 > this.field_m + 5000L) {
               this.skipFrames(256);
               this.field_m = this.field_m + (long)(256000 / field_j);
-              var1 = f.b((byte) 73);
+              var1 = f.correctedCurrentTimeMillis((byte) 73);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_t = false;
         this.field_b = 32;
-        this.field_m = f.b((byte) 73);
+        this.field_m = f.correctedCurrentTimeMillis((byte) 73);
         this.field_p = 0L;
         this.field_e = 0;
         this.field_s = 0;

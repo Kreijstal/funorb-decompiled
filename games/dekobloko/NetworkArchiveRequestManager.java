@@ -90,7 +90,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               }
             }
             this.integerState0130 = 0;
-            this.longState0006 = MixedSupport062.computeLong0734(4);
+            this.longState0006 = MixedSupport062.correctedCurrentTimeMillis(4);
             return;
           } catch (java.lang.RuntimeException caughtParameterLocal16) {
             caughtExceptionLocal4 = caughtParameterLocal16;
@@ -403,7 +403,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           ResourceSupport004 resourceSupport004Local24;
           integerLocal23 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           if (null != this.bufferedSocketState0001) {
-            longLocal5 = MixedSupport062.computeLong0734(byteArgument1 ^ -52);
+            longLocal5 = MixedSupport062.correctedCurrentTimeMillis(byteArgument1 ^ -52);
             integerLocal10 = (int)(-this.longState0006 + longLocal5);
             if (200 < integerLocal10) {
               integerLocal10 = 200;
@@ -717,7 +717,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             }
             asyncTaskLocal12 = ((PlatformService) (Object) stackPlatformServiceLocal1).computeAsyncTask0517(new java.net.URL(stackURLLocal4, ((StringBuilder) (Object) stackStringBuilderLocal5).append(stackStringLocal8).append("&v1=").append(PlatformService.stringState0168).append("&v2=").append(PlatformService.stringState0170).append("&e=").append(stringLocal15).toString()), (byte) 42);
             while (asyncTaskLocal12.integerState0510 == 0) {
-              MixedSupport125.performAction1620(1L, -128);
+              MixedSupport125.sleepMillis(1L, -128);
             }
             if (1 == asyncTaskLocal12.integerState0510) {
               dataInputStreamLocal13 = (DataInputStream) (asyncTaskLocal12.objectState0004);

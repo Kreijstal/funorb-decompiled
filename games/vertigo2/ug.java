@@ -158,7 +158,7 @@ abstract class ug {
         if (!param1) {
           this.b(-10);
           if (0L < var4) {
-            um.a(param1, var4);
+            um.sleepMillis(param1, var4);
             return this.a(true, param0);
           }
           return this.a(true, param0);
@@ -166,7 +166,7 @@ abstract class ug {
         if (0L >= var4) {
           return this.a(true, param0);
         }
-        um.a(param1, var4);
+        um.sleepMillis(param1, var4);
         return this.a(true, param0);
     }
 

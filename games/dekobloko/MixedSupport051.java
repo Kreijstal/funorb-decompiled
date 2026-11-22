@@ -33,7 +33,7 @@ final class MixedSupport051 {
         if (byteArgument1 != 11) {
           return;
         }
-        MouseInput.longState0054 = MixedSupport062.computeLong0734(4);
+        MouseInput.longState0054 = MixedSupport062.correctedCurrentTimeMillis(4);
         MixedSupport004.integerState0030 = 0;
     }
 
@@ -225,7 +225,7 @@ final class MixedSupport051 {
         }
     }
 
-    final static int computeInteger0604(int integerArgument1, int integerArgument2) {
+    final static int countSetBits(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 77 / ((integerArgument2 + 6) / 41);
         integerArgument1 = ((integerArgument1 & -1431655766) >>> 1) + (integerArgument1 & 1431655765);
         integerArgument1 = (integerArgument1 & 858993459) + ((-858993460 & integerArgument1) >>> 2);

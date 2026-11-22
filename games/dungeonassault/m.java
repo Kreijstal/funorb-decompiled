@@ -16,12 +16,12 @@ abstract class m implements dp {
         }
         if (!param0) {
           this.field_b = 122L;
-          if ((350L + this.field_b) <= kd.c(-2456)) {
+          if ((350L + this.field_b) <= kd.correctedCurrentTimeMillis(-2456)) {
             return this.c(63);
           }
           return null;
         }
-        if ((350L + this.field_b) <= kd.c(-2456)) {
+        if ((350L + this.field_b) <= kd.correctedCurrentTimeMillis(-2456)) {
           return this.c(63);
         }
         return null;
@@ -49,7 +49,7 @@ abstract class m implements dp {
         if (this.a(-51)) {
           return hd.field_g;
         }
-        if (!((350L + this.field_b) <= kd.c(-2456))) {
+        if (!((350L + this.field_b) <= kd.correctedCurrentTimeMillis(-2456))) {
           return ub.field_s;
         }
         if (param0 <= -91) {
@@ -78,7 +78,7 @@ abstract class m implements dp {
     }
 
     public final void b(int param0) {
-        this.field_b = kd.c(-2456);
+        this.field_b = kd.correctedCurrentTimeMillis(-2456);
         if (param0 != 2899) {
           m.clearStaticReferences(6);
         }

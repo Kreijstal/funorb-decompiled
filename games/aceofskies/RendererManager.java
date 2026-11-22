@@ -32,7 +32,7 @@ final class RendererManager {
             this.a(param0, 91);
           }
           if (null != this.field_e) {
-            this.field_e.field_c.b((int)(-this.field_e.field_a + kh.a(-104)));
+            this.field_e.field_c.b((int)(-this.field_e.field_a + kh.correctedCurrentTimeMillis(-104)));
           }
           if (this.field_e != null && (var3 == null ||
             this.field_e.field_c != var3.field_c)) {
@@ -279,7 +279,7 @@ final class RendererManager {
                         var8.field_c.a(var8.field_c.c(100663296));
                       }
                       if (var3 == null) {
-                        var8.field_a = kh.a(-75);
+                        var8.field_a = kh.correctedCurrentTimeMillis(-75);
                       } else {
                         ((mj) (var3)).a(true, var8);
                       }

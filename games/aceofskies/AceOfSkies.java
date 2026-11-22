@@ -763,7 +763,7 @@ public final class AceOfSkies extends NetworkGameClient {
           if (obfuscationGuard <= 43) {
             return;
           }
-          ci.gameRandom = new Random(kh.a(-99));
+          ci.gameRandom = new Random(kh.correctedCurrentTimeMillis(-99));
           FlightSession.rendererManager = new RendererManager(11, 12, (d) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

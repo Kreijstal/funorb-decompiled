@@ -7,7 +7,7 @@ final class ji {
     static int field_b;
     static volatile int field_c;
 
-    final synchronized static long b(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         int var3 = 127 % ((43 - param0) / 60);
         if (ck.field_e <= var1) {

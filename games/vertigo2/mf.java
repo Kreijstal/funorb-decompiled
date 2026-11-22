@@ -61,7 +61,7 @@ final class mf {
         int var5Lifetime1;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (param0 == -6390) {
-          var1 = gk.a(param0 ^ -6287);
+          var1 = gk.correctedCurrentTimeMillis(param0 ^ -6287);
           var3 = -id.field_a + var1;
           if (var3 > 30000L) {
             IntrusiveDeque.field_d = 0;
@@ -88,7 +88,7 @@ final class mf {
           return true;
         }
         field_b = -111;
-        var1Lifetime1 = gk.a(param0 ^ -6287);
+        var1Lifetime1 = gk.correctedCurrentTimeMillis(param0 ^ -6287);
         var3Lifetime1 = -id.field_a + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
           IntrusiveDeque.field_d = 0;

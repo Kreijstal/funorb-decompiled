@@ -48,7 +48,7 @@ final class oh {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param0 >= (long)param4) {
-                var7Lifetime4 = var9 + "; Expires=" + td.a(param0 * 1000L + ol.a(256), (byte) -8) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + td.a(param0 * 1000L + ol.correctedCurrentTimeMillis(256), (byte) -8) + "; Max-Age=" + param0;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

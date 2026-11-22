@@ -435,7 +435,7 @@ final class t extends ti {
           }
         }
         if (this.field_z &&
-          this.field_o <= dd.b(119)) {
+          this.field_o <= dd.correctedCurrentTimeMillis(119)) {
           var2 = (ik) (this.field_w.a(-1));
           while (var2 != null) {
             if (!var2.field_r) {
@@ -450,7 +450,7 @@ final class t extends ti {
             }
             var2 = (ik) (this.field_w.a((byte) -64));
           }
-          this.field_o = dd.b(114) + 1000L;
+          this.field_o = dd.correctedCurrentTimeMillis(114) + 1000L;
         }
     }
 

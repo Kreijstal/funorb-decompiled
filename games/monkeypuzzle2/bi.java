@@ -386,7 +386,7 @@ abstract class bi extends GameApplet {
             pc.a((byte) -46, 2, IterableNodeHashTable.field_b);
             ClientException.a(0);
             qj.field_J = true;
-            ha.field_ab = 15000L + pf.a(0);
+            ha.field_ab = 15000L + pf.correctedCurrentTimeMillis(0);
           }
         }
         if (bl.field_m == -1 ||
@@ -402,7 +402,7 @@ abstract class bi extends GameApplet {
           }
           if (bl.field_m != -1 &&
             bl.field_m != 0) {
-            ha.field_ab = pf.a(param0 - 99) + 15000L;
+            ha.field_ab = pf.correctedCurrentTimeMillis(param0 - 99) + 15000L;
           }
         }
         if (bl.field_m != -1 &&
@@ -452,7 +452,7 @@ abstract class bi extends GameApplet {
         if ((bl.field_m != -1 &&
           0 != bl.field_m ||
           ld.b(true)) &&
-          pf.a(param0 - 99) >= ha.field_ab) {
+          pf.correctedCurrentTimeMillis(param0 - 99) >= ha.field_ab) {
           qj.field_J = false;
           if (-1 != bl.field_m &&
             bl.field_m != 0) {
@@ -753,7 +753,7 @@ abstract class bi extends GameApplet {
         cf.a((byte) 3);
         pc.a((byte) -46, var2, sl.field_n);
         qj.field_J = true;
-        ha.field_ab = pf.a(0) + 15000L;
+        ha.field_ab = pf.correctedCurrentTimeMillis(0) + 15000L;
         return var2;
     }
 

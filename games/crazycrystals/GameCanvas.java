@@ -118,7 +118,7 @@ final class GameCanvas extends java.awt.Canvas {
           }
           var11 = param4.requestFullscreenEnter(param2, param1, param5, param3, (byte) 4);
           while (0 == var11.status) {
-            fh.a(true, 10L);
+            fh.sleepMillis(true, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

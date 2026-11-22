@@ -201,7 +201,7 @@ final class qe implements Runnable {
           }
           if (this.field_m != null) {
             while (this.field_m.status == 0) {
-              kk.a(1L, true);
+              kk.sleepMillis(1L, true);
             }
             if (this.field_m.status == 1) {
               try {

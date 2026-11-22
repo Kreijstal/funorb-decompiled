@@ -40,7 +40,7 @@ final class td implements Runnable {
           }
           if (null != this.field_k) {
             while (this.field_k.status == 0) {
-              vj.a(1L, (byte) -49);
+              vj.sleepMillis(1L, (byte) -49);
             }
             if (this.field_k.status == 1) {
               try {

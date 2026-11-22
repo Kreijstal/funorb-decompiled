@@ -88,7 +88,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             UiNode.field_n = 0;
             FishRainEvent.field_u = param0.getX();
             dma.field_c = param0.getY();
-            f.b((byte) 73);
+            f.correctedCurrentTimeMillis((byte) 73);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               jh.field_l = 1;
               FlirtEvent.field_q = 1;

@@ -16,7 +16,7 @@ abstract class de implements of {
         if (param0 != 18340) {
           return;
         }
-        this.field_e = gk.a(57);
+        this.field_e = gk.correctedCurrentTimeMillis(57);
     }
 
     final static byte[] a(int param0, byte param1, int param2, byte[] param3) {
@@ -80,7 +80,7 @@ abstract class de implements of {
         if (this.c(param0 + 14972)) {
           return null;
         }
-        if (gk.a(88) < this.field_e + 350L) {
+        if (gk.correctedCurrentTimeMillis(88) < this.field_e + 350L) {
           return null;
         }
         return this.f(param0 ^ 27232);
@@ -116,7 +116,7 @@ abstract class de implements of {
         if (param0 != -23996) {
           field_d = (int[]) null;
         }
-        if (gk.a(54) < (350L + this.field_e)) {
+        if (gk.correctedCurrentTimeMillis(54) < (350L + this.field_e)) {
           return tk.field_n;
         }
         return this.a((byte) 76);

@@ -68,7 +68,7 @@ final class ag extends k {
           FridgeCreature var2 = (FridgeCreature) null;
           ag.a((FridgeCreature) null, (byte) 80);
         }
-        return -pk.field_c + f.b((byte) 73);
+        return -pk.field_c + f.correctedCurrentTimeMillis((byte) 73);
     }
 
     final int[] a(int param0, int param1) {

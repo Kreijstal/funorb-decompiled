@@ -14,7 +14,7 @@ abstract class tf {
         if (0L >= var4) {
           return this.a(param0, 0);
         }
-        IntrusiveNode.a(var4, false);
+        IntrusiveNode.sleepMillis(var4, false);
         return this.a(param0, 0);
     }
 

@@ -22,7 +22,7 @@ final class cb {
           if (qg.field_a.status == 0) {
             return false;
           }
-          dupTemp$1 = pf.a(0);
+          dupTemp$1 = pf.correctedCurrentTimeMillis(0);
           qg.field_d = dupTemp$1;
           d.field_k = dupTemp$1;
           if (qg.field_a.status != 1) {

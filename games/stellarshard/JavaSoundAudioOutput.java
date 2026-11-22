@@ -42,8 +42,8 @@ final class JavaSoundAudioOutput extends AudioMixer {
           this.field_w.start();
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (dl.a(1, param0) != 1) {
-            this.openDevice(u.a(7527, param0));
+          if (dl.countSetBits(1, param0) != 1) {
+            this.openDevice(u.roundUpPowerOfTwo(7527, param0));
             return;
           }
           this.field_w = null;

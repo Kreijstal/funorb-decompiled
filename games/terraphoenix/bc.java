@@ -24,13 +24,13 @@ final class bc {
           if (null != ig.field_e && (param0 < 0 ||
             od.field_g == mh.field_a)) {
             if (di.field_l.position == 0 &&
-              ll.a(1000) > (10000L + bl.field_h)) {
+              ll.correctedCurrentTimeMillis(1000) > (10000L + bl.field_h)) {
               di.field_l.k(-17410, param0);
             }
             if (di.field_l.position > 0) {
               try {
                 ig.field_e.a(di.field_l.position, 0, (byte) -97, di.field_l.payload);
-                bl.field_h = ll.a(param1 ^ 1000);
+                bl.field_h = ll.correctedCurrentTimeMillis(param1 ^ 1000);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

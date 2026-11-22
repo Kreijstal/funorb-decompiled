@@ -226,7 +226,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_q) {
             while (this.field_q.status == 0) {
-              vh.a(1L, param0 + 104);
+              vh.sleepMillis(1L, param0 + 104);
             }
             if (1 == this.field_q.status) {
               try {

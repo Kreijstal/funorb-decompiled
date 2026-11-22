@@ -282,7 +282,7 @@ final class BufferedSocket implements Runnable {
           if (GzipDecompressor.field_d != la.field_O) {
             return false;
           }
-          var2_long = ih.a((byte) -98);
+          var2_long = ih.correctedCurrentTimeMillis((byte) -98);
           if (hk.field_n != 0 &&
             hk.field_k < 0) {
             var4_ref_fa = (fa) (uj.field_e.beginForward(-103));
@@ -423,7 +423,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_f) {
             while (this.field_f.status == 0) {
-              jj.a((byte) -125, 1L);
+              jj.sleepMillis((byte) -125, 1L);
             }
             if (this.field_f.status == 1) {
               try {

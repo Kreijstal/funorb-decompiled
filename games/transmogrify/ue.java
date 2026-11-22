@@ -240,7 +240,7 @@ abstract class ue {
                 var2_int = -WordLanguage.field_l.position + param0;
               }
               nk.field_b.a(WordLanguage.field_l.position, var2_int, WordLanguage.field_l.payload, 5768);
-              wi.field_q = lk.a(param1 ^ 0);
+              wi.field_q = lk.correctedCurrentTimeMillis(param1 ^ 0);
               WordLanguage.field_l.position = WordLanguage.field_l.position + var2_int;
               if (param0 > WordLanguage.field_l.position) {
                 return false;

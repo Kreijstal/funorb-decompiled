@@ -1296,7 +1296,7 @@ public final class Torquing extends tg {
         int var13 = 0;
         var13 = field_u;
         try {
-          var2_long = km.b(-1);
+          var2_long = km.correctedCurrentTimeMillis(-1);
           oo.field_b = oo.field_b + 1;
           ed.a(0);
           var4 = 0;
@@ -1569,7 +1569,7 @@ public final class Torquing extends tg {
             this.b(-99, 74);
           }
           if (bn.field_h != 0) {
-            if (-var2_long + km.b(param0 ^ 107) >= 2L) {
+            if (-var2_long + km.correctedCurrentTimeMillis(param0 ^ 107) >= 2L) {
               return;
             }
             cf.a(param0 + 6747);

@@ -71,7 +71,7 @@ final class d {
             }
             var5 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_w).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var11).toString()));
             while (var5.status == 0) {
-              pg.a(1L, -124);
+              pg.sleepMillis(1L, -124);
             }
             if (var5.status == 1) {
               var6 = (DataInputStream) (var5.result);

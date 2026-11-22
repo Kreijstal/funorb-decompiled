@@ -81,7 +81,7 @@ final class pn implements Runnable {
                 var2.serviceOutput();
               }
             }
-            IntrusiveNode.a(10L, false);
+            IntrusiveNode.sleepMillis(10L, false);
             PacketBuffer.postDummyActionEvent(5, (Object) null, this.field_f);
           }
         } catch (Exception exception) {

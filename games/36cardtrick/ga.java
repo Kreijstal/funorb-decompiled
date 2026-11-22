@@ -129,7 +129,7 @@ final class ga implements Runnable {
                 var2.serviceOutput();
               }
             }
-            wk.a((byte) -123, 10L);
+            wk.sleepMillis((byte) -123, 10L);
             Main.a((Object) null, this.field_a, (byte) 109);
           }
         } catch (Exception exception) {

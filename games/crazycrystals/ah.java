@@ -541,7 +541,7 @@ final class ah {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param1.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + sm.a(lo.a((byte) -101) + 94608000000L, (byte) 126) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + sm.a(lo.correctedCurrentTimeMillis((byte) -101) + 94608000000L, (byte) 126) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

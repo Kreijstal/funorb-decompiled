@@ -93,7 +93,7 @@ final class ig extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int countSetBits(int param0, byte param1) {
         if (param1 != -121) {
           return 89;
         }

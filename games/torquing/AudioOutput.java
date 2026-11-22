@@ -31,7 +31,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_d = km.b(-1) + 2000L;
+            this.field_d = km.correctedCurrentTimeMillis(-1) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -69,7 +69,7 @@ class AudioOutput {
         if (field_r) {
           var3 = var3 << 1;
         }
-        dk.a(param0, 0, var3);
+        dk.clearInts(param0, 0, var3);
         this.field_p = this.field_p - param1;
         if (this.field_t != null &&
           this.field_p <= 0) {
@@ -163,7 +163,7 @@ class AudioOutput {
         if (this.field_t != null) {
           this.field_t.b(param0, 0, param1);
         }
-        this.field_k = km.b(-1);
+        this.field_k = km.correctedCurrentTimeMillis(-1);
     }
 
     int getQueuedFrames() throws Exception {
@@ -295,7 +295,7 @@ class AudioOutput {
           if (this.field_g) {
             return;
           }
-          var1 = km.b(-1);
+          var1 = km.correctedCurrentTimeMillis(-1);
           try {
             if (var1 > this.field_k + 6000L) {
               this.field_k = var1 - 6000L;
@@ -303,7 +303,7 @@ class AudioOutput {
             while (var1 > this.field_k + 5000L) {
               this.skipFrames(256);
               this.field_k = this.field_k + (long)(256000 / field_c);
-              var1 = km.b(-1);
+              var1 = km.correctedCurrentTimeMillis(-1);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -407,7 +407,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_u.field_f = true;
             while (field_u.field_e) {
-              ub.a(1976, 50L);
+              ub.sleepMillis(1976, 50L);
             }
             field_u = null;
           }
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_n = 32;
         this.field_g = false;
-        this.field_k = km.b(-1);
+        this.field_k = km.correctedCurrentTimeMillis(-1);
         this.field_i = new PcmStream[8];
         this.field_a = 0;
         this.field_q = 0;

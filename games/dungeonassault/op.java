@@ -16,13 +16,13 @@ final class op {
           if (null != sp.field_c && (param1 < 0 ||
             pd.field_A == qa.field_c)) {
             if (param0 == ac.field_B.position &&
-              kd.c(-2456) > 10000L + wh.field_e) {
+              kd.correctedCurrentTimeMillis(-2456) > 10000L + wh.field_e) {
               ac.field_B.d((byte) -91, param1);
             }
             if (0 < ac.field_B.position) {
               try {
                 sp.field_c.b(ac.field_B.payload, false, 0, ac.field_B.position);
-                wh.field_e = kd.c(-2456);
+                wh.field_e = kd.correctedCurrentTimeMillis(-2456);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

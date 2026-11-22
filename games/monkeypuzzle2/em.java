@@ -82,26 +82,26 @@ final class em extends ButtonWidget {
         }
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void sleepMillis(long param0, boolean param1) {
         if (param0 <= 0L) {
           return;
         }
         if (param1) {
           field_C = (IntrusiveDeque) null;
           if (0L == param0 % 10L) {
-            hc.a(param0 - 1L, (byte) -50);
-            hc.a(1L, (byte) -50);
+            hc.sleepIgnoringInterrupts(param0 - 1L, (byte) -50);
+            hc.sleepIgnoringInterrupts(1L, (byte) -50);
             return;
           }
-          hc.a(param0, (byte) -50);
+          hc.sleepIgnoringInterrupts(param0, (byte) -50);
           return;
         }
         if (0L == param0 % 10L) {
-          hc.a(param0 - 1L, (byte) -50);
-          hc.a(1L, (byte) -50);
+          hc.sleepIgnoringInterrupts(param0 - 1L, (byte) -50);
+          hc.sleepIgnoringInterrupts(1L, (byte) -50);
           return;
         }
-        hc.a(param0, (byte) -50);
+        hc.sleepIgnoringInterrupts(param0, (byte) -50);
     }
 
     public static void a(int param0) {
@@ -141,7 +141,7 @@ final class em extends ButtonWidget {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (param2.field_b.peekEvent() != null) {
-              em.a(1L, false);
+              em.sleepMillis(1L, false);
               continue;
             }
             break;

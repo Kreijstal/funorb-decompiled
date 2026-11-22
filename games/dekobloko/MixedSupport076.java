@@ -496,7 +496,7 @@ final class MixedSupport076 extends ResourceSupport003 {
           }
         }
         if (this.booleanState0101 &&
-          MixedSupport062.computeLong0734(4) >= this.longState0028) {
+          MixedSupport062.correctedCurrentTimeMillis(4) >= this.longState0028) {
           mixedSupport115Local6 = (MixedSupport115) (this.mixedSupport086State0001.computeHashNode1106((byte) 126));
           while (mixedSupport115Local6 != null) {
             if (!mixedSupport115Local6.booleanState0173) {
@@ -511,7 +511,7 @@ final class MixedSupport076 extends ResourceSupport003 {
             }
             mixedSupport115Local6 = (MixedSupport115) (this.mixedSupport086State0001.computeHashNode1111((byte) 107));
           }
-          this.longState0028 = MixedSupport062.computeLong0734(4) + 1000L;
+          this.longState0028 = MixedSupport062.correctedCurrentTimeMillis(4) + 1000L;
         }
     }
 

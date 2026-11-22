@@ -300,7 +300,7 @@ abstract class ca implements wa {
     }
 
     public final void a(boolean param0) {
-        this.field_d = lk.a(0);
+        this.field_d = lk.correctedCurrentTimeMillis(0);
         if (!param0) {
           int[] var3 = (int[]) null;
           ca.a(-41, -118, 56, -109, 40, false, 51, 94, (int[]) null);
@@ -311,7 +311,7 @@ abstract class ca implements wa {
         if (this.b(-16000)) {
           return null;
         }
-        if (350L + this.field_d <= lk.a(param0 ^ param0)) {
+        if (350L + this.field_d <= lk.correctedCurrentTimeMillis(param0 ^ param0)) {
           return this.f(param0 ^ 30523);
         }
         return null;
@@ -325,7 +325,7 @@ abstract class ca implements wa {
           CharSequence var3 = (CharSequence) null;
           ca.a((CharSequence) null, false);
         }
-        if (lk.a(0) >= this.field_d + 350L) {
+        if (lk.correctedCurrentTimeMillis(0) >= this.field_d + 350L) {
           return this.e(20456);
         }
         return ek.field_a;

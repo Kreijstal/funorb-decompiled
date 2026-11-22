@@ -97,29 +97,29 @@ final class ub extends lg {
         ByteStorage.field_b.a(-var15.field_w + var5, -var15.field_u + var6, 256);
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if (param0 != 1976) {
-          ub.a(-53, -74L);
+          ub.sleepMillis(-53, -74L);
           if (0L >= param1) {
             return;
           }
           if (param1 % 10L != 0L) {
-            op.a(param1, param0 - 1897);
+            op.sleepIgnoringInterrupts(param1, param0 - 1897);
             return;
           }
-          op.a(-1L + param1, 112);
-          op.a(1L, 93);
+          op.sleepIgnoringInterrupts(-1L + param1, 112);
+          op.sleepIgnoringInterrupts(1L, 93);
           return;
         }
         if (0L >= param1) {
           return;
         }
         if (param1 % 10L != 0L) {
-          op.a(param1, param0 - 1897);
+          op.sleepIgnoringInterrupts(param1, param0 - 1897);
           return;
         }
-        op.a(-1L + param1, 112);
-        op.a(1L, 93);
+        op.sleepIgnoringInterrupts(-1L + param1, 112);
+        op.sleepIgnoringInterrupts(1L, 93);
     }
 
     public static void a(byte param0) {

@@ -388,7 +388,7 @@ class jd implements fc, sf {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param0 != param2.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + se.a(-106, 94608000000L + fa.a(81)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + se.a(-106, 94608000000L + fa.correctedCurrentTimeMillis(81)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

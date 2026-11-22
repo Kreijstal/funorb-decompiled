@@ -36,7 +36,7 @@ final class a extends kb {
               var2_int = param0 - ig.field_a.position;
             }
             DelegatingCanvas.field_b.a(ig.field_a.payload, (byte) -109, var2_int, ig.field_a.position);
-            ta.field_e = rf.c(0);
+            ta.field_e = rf.correctedCurrentTimeMillis(0);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (param0 > ig.field_a.position) {
               return false;

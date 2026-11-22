@@ -36,12 +36,12 @@ final class sl {
     final static boolean b(int param0) {
         if (param0 == 15000) {
           rm.field_P = true;
-          ab.field_a = kd.c(-2456) + 15000L;
+          ab.field_a = kd.correctedCurrentTimeMillis(-2456) + 15000L;
           return 11 == AccountNameAvailabilityValidator.field_n ? true : false;
         }
         sl.b(126);
         rm.field_P = true;
-        ab.field_a = kd.c(-2456) + 15000L;
+        ab.field_a = kd.correctedCurrentTimeMillis(-2456) + 15000L;
         return 11 == AccountNameAvailabilityValidator.field_n ? true : false;
     }
 

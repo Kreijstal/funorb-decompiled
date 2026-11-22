@@ -191,7 +191,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           var1_int = AccountNameAvailabilityValidator.field_m;
           var2 = 0;
           if (SecondaryNodeDeque.field_a == 2) {
-            var3_long = dd.b(57) - af.field_x;
+            var3_long = dd.correctedCurrentTimeMillis(57) - af.field_x;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

@@ -379,8 +379,8 @@ final class t extends di {
               if (var5 != 256) {
                 if (null != this.field_y &&
                   var6 <= this.field_y.length) {
-                  mk.a(this.field_y, 0, var6);
-                  mk.a(this.field_u, 0, var6);
+                  mk.clearInts(this.field_y, 0, var6);
+                  mk.clearInts(this.field_u, 0, var6);
                 } else {
                   this.field_u = new int[var6];
                   this.field_y = new int[var6];
@@ -411,7 +411,7 @@ final class t extends di {
             }
             if (this.field_y != null &&
               this.field_y.length >= var6) {
-              mk.a(this.field_y, 0, var6);
+              mk.clearInts(this.field_y, 0, var6);
             } else {
               this.field_y = new int[var6];
               this.field_u = new int[var6];

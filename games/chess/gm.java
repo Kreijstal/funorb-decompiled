@@ -3171,7 +3171,7 @@ abstract class gm {
           var4_long = this.a((byte) -84);
           var6 = -1 / ((param1 + 35) / 48);
           if (var4_long > 0L) {
-            bc.a(var4_long, (byte) 28);
+            bc.sleepMillis(var4_long, (byte) 28);
           }
           stackIn_4_0 = this.a(param0, 123);
           return stackIn_4_0;

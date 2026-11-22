@@ -720,7 +720,7 @@ final class CombatState {
         field_n = null;
         field_w = null;
         if (param0 < 111) {
-          CombatState.a(43, 127L);
+          CombatState.sleepMillis(43, 127L);
         }
     }
 
@@ -1386,15 +1386,15 @@ final class CombatState {
         this.a(this.field_q, (byte) -90);
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if ((long)param0 >= param1) {
           return;
         }
         if (param1 % 10L != 0L) {
-          ln.a(param1, (byte) -113);
+          ln.sleepIgnoringInterrupts(param1, (byte) -113);
         } else {
-          ln.a(param1 - 1L, (byte) -107);
-          ln.a(1L, (byte) -73);
+          ln.sleepIgnoringInterrupts(param1 - 1L, (byte) -107);
+          ln.sleepIgnoringInterrupts(1L, (byte) -73);
         }
     }
 
@@ -1915,7 +1915,7 @@ final class CombatState {
           }
         }
         if (param3 != 2) {
-          CombatState.a(-70, 33L);
+          CombatState.sleepMillis(-70, 33L);
         }
         return rm.a((byte) 96, var6, param4, FullscreenFocusCanvas.a(this.field_s, (byte) -127, param0, param1), param2);
     }

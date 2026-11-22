@@ -303,7 +303,7 @@ abstract class FunOrbClient extends GameApplet {
               NetworkSupport003.performAction0345(MixedSupport007.stringState0035, integerArgument2 ^ -11, 2);
               EmailValidationError.clearStaticReferences((byte) 84);
               ResourceSupport003.booleanState0126 = true;
-              MixedSupport075.longState0026 = MixedSupport062.computeLong0734(integerArgument2 + 15) + 15000L;
+              MixedSupport075.longState0026 = MixedSupport062.correctedCurrentTimeMillis(integerArgument2 + 15) + 15000L;
             }
           }
           if (SceneWidgetPart010.integerState0722 == -1 ||
@@ -319,7 +319,7 @@ abstract class FunOrbClient extends GameApplet {
             }
             if (-1 != SceneWidgetPart010.integerState0722 &&
               SceneWidgetPart010.integerState0722 != 0) {
-              MixedSupport075.longState0026 = MixedSupport062.computeLong0734(4) + 15000L;
+              MixedSupport075.longState0026 = MixedSupport062.correctedCurrentTimeMillis(4) + 15000L;
             }
           }
           if (SceneWidgetPart010.integerState0722 != -1 &&
@@ -369,7 +369,7 @@ abstract class FunOrbClient extends GameApplet {
           if ((SceneWidgetPart010.integerState0722 != -1 &&
             SceneWidgetPart010.integerState0722 != 0 ||
             RichTextLayout.computeBoolean0398((byte) -112)) &&
-            MixedSupport062.computeLong0734(4) >= MixedSupport075.longState0026) {
+            MixedSupport062.correctedCurrentTimeMillis(4) >= MixedSupport075.longState0026) {
             ResourceSupport003.booleanState0126 = false;
             if (SceneWidgetPart010.integerState0722 != -1 &&
               0 != SceneWidgetPart010.integerState0722) {
@@ -697,7 +697,7 @@ abstract class FunOrbClient extends GameApplet {
             MixedSupport048.performAction0583(false);
             NetworkSupport003.performAction0345(UiComponentPart028.stringState0483, integerArgument1 ^ integerArgument1, integerLocal8);
             ResourceSupport003.booleanState0126 = true;
-            MixedSupport075.longState0026 = 15000L + MixedSupport062.computeLong0734(4);
+            MixedSupport075.longState0026 = 15000L + MixedSupport062.correctedCurrentTimeMillis(4);
             stackIntegerLocal6 = integerLocal8;
             return stackIntegerLocal6;
           }

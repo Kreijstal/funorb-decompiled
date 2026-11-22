@@ -67,7 +67,7 @@ final class wp {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_11_0).requestUrlStream(stackIn_11_1, new java.net.URL(stackIn_11_4, ((StringBuilder) (Object) stackIn_11_5).append(stackIn_12_6).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_m).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              fh.a(true, 1L);
+              fh.sleepMillis(true, 1L);
             }
             if (param2 != 21862) {
               return;
@@ -116,7 +116,7 @@ final class wp {
           var1_int = pf.field_n;
           var2 = 0;
           if (2 == am.field_g) {
-            var3_long = -wm.field_d + lo.a((byte) 122);
+            var3_long = -wm.field_d + lo.correctedCurrentTimeMillis((byte) 122);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;

@@ -16,7 +16,7 @@ final class vl {
         if (param0 >= -86) {
           vl.b(84);
         }
-        return rf.c(0) - ta.field_e;
+        return rf.correctedCurrentTimeMillis(0) - ta.field_e;
     }
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {

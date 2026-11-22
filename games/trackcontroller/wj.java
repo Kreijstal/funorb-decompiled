@@ -34,14 +34,14 @@ abstract class wj {
         if (param0 >= 105) {
           var4 = this.a(-27042);
           if (var4 > 0L) {
-            wl.a(var4, false);
+            wl.sleepMillis(var4, false);
           }
           return this.a(119, param1);
         }
         field_a = (Sprite[]) null;
         var4Lifetime1 = this.a(-27042);
         if (var4Lifetime1 > 0L) {
-          wl.a(var4Lifetime1, false);
+          wl.sleepMillis(var4Lifetime1, false);
         }
         return this.a(119, param1);
     }

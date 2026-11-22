@@ -34,7 +34,7 @@ class AudioOutput {
           if (this.field_u) {
             return;
           }
-          var1 = lj.a((byte) -51);
+          var1 = lj.correctedCurrentTimeMillis((byte) -51);
           try {
             if (var1 > this.field_t + 6000L) {
               this.field_t = var1 - 6000L;
@@ -42,7 +42,7 @@ class AudioOutput {
             while (var1 > this.field_t + 5000L) {
               this.skipFrames(256);
               this.field_t = this.field_t + (long)(256000 / field_a);
-              var1 = lj.a((byte) -98);
+              var1 = lj.correctedCurrentTimeMillis((byte) -98);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -245,7 +245,7 @@ class AudioOutput {
         if (field_h) {
           var3 = var3 << 1;
         }
-        dm.a(param0, 0, var3);
+        dm.clearInts(param0, 0, var3);
         this.field_m = this.field_m - param1;
         if (this.field_o != null &&
           this.field_m <= 0) {
@@ -339,7 +339,7 @@ class AudioOutput {
         if (this.field_o != null) {
           this.field_o.b(param0, 0, param1);
         }
-        this.field_t = lj.a((byte) -103);
+        this.field_t = lj.correctedCurrentTimeMillis((byte) -103);
     }
 
     final synchronized void dispose() {
@@ -358,7 +358,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_n.field_g = true;
             while (field_n.field_h) {
-              vh.a(50L, 73);
+              vh.sleepMillis(50L, 73);
             }
             field_n = null;
           }
@@ -411,7 +411,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_r = lj.a((byte) -23) + 2000L;
+            this.field_r = lj.correctedCurrentTimeMillis((byte) -23) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_c = 32;
         this.field_u = false;
-        this.field_t = lj.a((byte) -104);
+        this.field_t = lj.correctedCurrentTimeMillis((byte) -104);
         this.field_j = 0;
         this.field_m = 0;
         this.field_g = 0;

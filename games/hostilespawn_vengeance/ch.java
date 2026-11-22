@@ -24,7 +24,7 @@ class ch {
         if (param0 != -24) {
           return;
         }
-        long var2 = hn.a((byte) 80);
+        long var2 = hn.correctedCurrentTimeMillis((byte) 80);
         double var4 = this.field_i * (double)(-this.field_c + var2);
         this.field_c = var2;
         if (0.0 == var4) {

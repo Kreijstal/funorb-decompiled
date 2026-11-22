@@ -131,7 +131,7 @@ final class jn {
             return;
           }
           if (go.field_x == 2) {
-            var3_long = km.b(-1) - dc.field_c;
+            var3_long = km.correctedCurrentTimeMillis(-1) - dc.field_c;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

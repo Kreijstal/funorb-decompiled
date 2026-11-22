@@ -52,7 +52,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = fa.a(87);
+          var2_long = fa.correctedCurrentTimeMillis(87);
           var4 = qj.field_a[sh.field_hb];
           qj.field_a[sh.field_hb] = var2_long;
           if (0L != var4 &&
@@ -188,7 +188,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             !FullscreenFocusCanvas.field_d) {
             ae.field_b = true;
             if (hh.field_k &&
-              -jc.field_k + fa.a(125) > 1000L) {
+              -jc.field_k + fa.correctedCurrentTimeMillis(125) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < ib.field_k) {
@@ -301,7 +301,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           k.field_H = true;
           ae.field_b = true;
           ef.field_f = false;
-          jc.field_k = fa.a(-73);
+          jc.field_k = fa.correctedCurrentTimeMillis(-73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -553,7 +553,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               var8 = ck.field_e.requestThreadStart(1, (byte) -102, (Runnable) (this));
               while (true) {
                 if (0 == var8.status) {
-                  SecondaryNodeDeque.a(10L, 19406);
+                  SecondaryNodeDeque.sleepMillis(10L, 19406);
                   if (var9 == 0) {
                     continue;
                   }
@@ -709,7 +709,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (ua.field_d != 0L) {
-                    stackIn_103_0 = compareLongs(ua.field_d, fa.a(-42));
+                    stackIn_103_0 = compareLongs(ua.field_d, fa.correctedCurrentTimeMillis(-42));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_103_0 <= 0)) {
@@ -819,7 +819,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           return;
         }
         try {
-          ua.field_d = 4000L + fa.a(-81);
+          ua.field_d = 4000L + fa.correctedCurrentTimeMillis(-81);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "fj.stop()");
         }
@@ -833,7 +833,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = fa.a(param0 + 102);
+          var2_long = fa.correctedCurrentTimeMillis(param0 + 102);
           var4 = l.field_d[cl.field_q];
           l.field_d[cl.field_q] = var2_long;
           cl.field_q = param0 + cl.field_q & 31;
@@ -941,8 +941,8 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           if (this == og.field_c &&
             !FullscreenFocusCanvas.field_d) {
-            ua.field_d = fa.a(112);
-            SecondaryNodeDeque.a(5000L, 19406);
+            ua.field_d = fa.correctedCurrentTimeMillis(112);
+            SecondaryNodeDeque.sleepMillis(5000L, 19406);
             jj.field_a = null;
             this.a(false, (byte) -57);
             return;

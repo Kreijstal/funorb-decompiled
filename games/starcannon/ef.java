@@ -323,7 +323,7 @@ final class ef implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, 118, (Runnable) (this));
           while (var2.status == 0) {
-            uc.a(-119, 10L);
+            uc.sleepMillis(-119, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

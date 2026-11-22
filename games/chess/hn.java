@@ -211,7 +211,7 @@ final class hn implements Runnable {
           }
           if (null != this.field_f) {
             while (this.field_f.status == 0) {
-              bc.a(1L, (byte) 60);
+              bc.sleepMillis(1L, (byte) 60);
             }
             if (this.field_f.status == 1) {
               try {

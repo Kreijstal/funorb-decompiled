@@ -109,7 +109,7 @@ final class p {
           if (param0 != 16) {
             p.a(72);
           }
-          var2_long = ol.a(256);
+          var2_long = ol.correctedCurrentTimeMillis(256);
           if (IntrusiveDeque.field_b != 0 &&
             jf.field_tb < 0) {
             var4_ref_lc = (lc) (ba.field_a.first((byte) -5));

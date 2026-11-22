@@ -267,7 +267,7 @@ class na extends rg {
           var1_int = uh.field_c;
           var2 = 0;
           if (2 == ea.field_a) {
-            var3_long = ri.a(-3) - ga.field_M;
+            var3_long = ri.correctedCurrentTimeMillis(-3) - ga.field_M;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

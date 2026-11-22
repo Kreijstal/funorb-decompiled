@@ -42,7 +42,7 @@ final class jd {
         return var5;
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
@@ -50,10 +50,10 @@ final class jd {
           field_c = true;
         }
         if (param1 % 10L == 0L) {
-          wd.a(-1L + param1, -1);
-          wd.a(1L, 119);
+          wd.sleepIgnoringInterrupts(-1L + param1, -1);
+          wd.sleepIgnoringInterrupts(1L, 119);
         } else {
-          wd.a(param1, 125);
+          wd.sleepIgnoringInterrupts(param1, 125);
         }
     }
 

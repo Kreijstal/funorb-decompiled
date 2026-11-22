@@ -25,11 +25,11 @@ final class kg {
 
     final static long b(byte param0) {
         if (param0 == -71) {
-          return dd.b(param0 + 150) - ik.field_p;
+          return dd.correctedCurrentTimeMillis(param0 + 150) - ik.field_p;
         }
         String var2 = (String) null;
         kg.a((String) null, (String) null, (byte) 108);
-        return dd.b(param0 + 150) - ik.field_p;
+        return dd.correctedCurrentTimeMillis(param0 + 150) - ik.field_p;
     }
 
     public static void a(byte param0) {

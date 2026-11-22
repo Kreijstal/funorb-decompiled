@@ -201,7 +201,7 @@ final class jd extends PacketBuffer {
               }
               var7 = param0 + "=" + param4 + "; version=1; path=/; domain=" + var6;
               if (param1 >= 0L) {
-                var7 = var7 + "; Expires=" + hc.a(1000L * param1 + je.a(1), -31289) + "; Max-Age=" + param1;
+                var7 = var7 + "; Expires=" + hc.a(1000L * param1 + je.correctedCurrentTimeMillis(1), -31289) + "; Max-Age=" + param1;
               }
               if (param1 < 0L ||
                 SolKnight.field_L) {

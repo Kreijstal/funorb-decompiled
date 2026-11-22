@@ -102,14 +102,14 @@ abstract class v implements eh {
 
     public final void a(int param0) {
         int var2 = 68 / ((-9 - param0) / 50);
-        this.field_b = qg.a(false);
+        this.field_b = qg.correctedCurrentTimeMillis(false);
     }
 
     public final ud a(byte param0) {
         if (this.b(24685)) {
           return c.field_a;
         }
-        if (!(qg.a(false) >= this.field_b + 350L)) {
+        if (!(qg.correctedCurrentTimeMillis(false) >= this.field_b + 350L)) {
           return lh.field_x;
         }
         int var2 = 35 / ((param0 - 55) / 49);
@@ -129,7 +129,7 @@ abstract class v implements eh {
         if (this.b(24685)) {
           return null;
         }
-        if (qg.a(false) < 350L + this.field_b) {
+        if (qg.correctedCurrentTimeMillis(false) < 350L + this.field_b) {
           return null;
         }
         if (param0 == 15914) {

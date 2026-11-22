@@ -14,9 +14,9 @@ final class ProxySocketConnector extends SocketConnector {
     final static long e(int param0) {
         if (param0 < 74) {
           field_m = (Sprite) null;
-          return ol.a(256) - ac.field_e;
+          return ol.correctedCurrentTimeMillis(256) - ac.field_e;
         }
-        return ol.a(256) - ac.field_e;
+        return ol.correctedCurrentTimeMillis(256) - ac.field_e;
     }
 
     private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {

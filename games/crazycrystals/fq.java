@@ -773,7 +773,7 @@ final class fq extends ea implements Cloneable {
                 var3_int = -kd.field_n.position + param0;
               }
               oi.field_c.a(kd.field_n.payload, var3_int, 2034, kd.field_n.position);
-              wg.field_y = lo.a((byte) -60);
+              wg.field_y = lo.correctedCurrentTimeMillis((byte) -60);
               kd.field_n.position = kd.field_n.position + var3_int;
               if (param0 > kd.field_n.position) {
                 return false;

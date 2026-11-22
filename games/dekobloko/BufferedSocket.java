@@ -58,7 +58,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.asyncTaskState0009) {
-              this.asyncTaskState0009 = this.platformServiceState0006.computeAsyncTask0510((byte) -45, 3, (Runnable) (this));
+              this.asyncTaskState0009 = this.platformServiceState0006.startThread((byte) -45, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -140,7 +140,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.asyncTaskState0009) {
             while (this.asyncTaskState0009.integerState0510 == 0) {
-              MixedSupport125.performAction1620(1L, integerArgument1 ^ -128);
+              MixedSupport125.sleepMillis(1L, integerArgument1 ^ -128);
             }
             if (1 == this.asyncTaskState0009.integerState0510) {
               try {

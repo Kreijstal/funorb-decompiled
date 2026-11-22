@@ -51,8 +51,8 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_v.start();
           this.field_z = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (re.a(252645135, param0) != 1) {
-            this.openDevice(qm.a((byte) -106, param0));
+          if (re.countSetBits(252645135, param0) != 1) {
+            this.openDevice(qm.roundUpPowerOfTwo((byte) -106, param0));
             return;
           }
           this.field_v = null;

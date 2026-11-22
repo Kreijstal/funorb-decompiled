@@ -93,7 +93,7 @@ final class og {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        ne.a(field_h, 0, param0);
+        ne.clearInts(field_h, 0, param0);
         if (param1 < 10) {
           return field_h;
         }

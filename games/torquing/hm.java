@@ -322,7 +322,7 @@ final class hm extends am {
               var2.writeInt((byte) 60, gf.field_g);
               up.field_a.a(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
-              ro.field_v = 30000L + km.b(-1);
+              ro.field_v = 30000L + km.correctedCurrentTimeMillis(-1);
             }
             if (pd.field_c == 3) {
               if (0 < up.field_a.a(-126)) {
@@ -333,7 +333,7 @@ final class hm extends am {
                 }
                 pd.field_c = pd.field_c + 1;
               } else {
-                if (km.b(-1) > ro.field_v) {
+                if (km.correctedCurrentTimeMillis(-1) > ro.field_v) {
                   stackIn_25_0 = pg.a(-2, (byte) -64);
                   return stackIn_25_0;
                 }

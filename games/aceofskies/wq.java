@@ -33,7 +33,7 @@ final class wq {
               el stackIn_10_0 = new el(param0, 34037, param4, param1, param2, param3, param7, param5);
               return stackIn_10_0;
             }
-            el stackIn_8_0 = new el(param0, param4, param1, param2, fk.a(param1, 87), fk.a(param2, 61), param7, param5);
+            el stackIn_8_0 = new el(param0, param4, param1, param2, fk.roundUpPowerOfTwo(param1, 87), fk.roundUpPowerOfTwo(param2, 61), param7, param5);
             return stackIn_8_0;
           }
           el stackIn_12_0 = new el(param0, 3553, param4, param1, param2, param3, param7, param5);

@@ -120,7 +120,7 @@ abstract class tg extends GameApplet {
             dc.a(2, gh.field_b, 2);
             FullscreenFocusCanvas.a(false);
             gk.field_a = true;
-            DualLinkNode.field_k = km.b(-1) + 15000L;
+            DualLinkNode.field_k = km.correctedCurrentTimeMillis(-1) + 15000L;
           }
         }
         if (aj.field_J == -1 ||
@@ -136,7 +136,7 @@ abstract class tg extends GameApplet {
           }
           if (aj.field_J != -1 &&
             aj.field_J != 0) {
-            DualLinkNode.field_k = km.b(-1) + 15000L;
+            DualLinkNode.field_k = km.correctedCurrentTimeMillis(-1) + 15000L;
           }
         }
         if (aj.field_J != -1 &&
@@ -186,7 +186,7 @@ abstract class tg extends GameApplet {
         if ((-1 != aj.field_J &&
           aj.field_J != 0 ||
           mk.a((byte) 38)) &&
-          DualLinkNode.field_k <= km.b(-1)) {
+          DualLinkNode.field_k <= km.correctedCurrentTimeMillis(-1)) {
           gk.field_a = false;
           if (aj.field_J != -1 &&
             aj.field_J != 0) {
@@ -536,7 +536,7 @@ abstract class tg extends GameApplet {
         lg.h(-128);
         dc.a(var2, pl.field_u, 2);
         gk.field_a = true;
-        DualLinkNode.field_k = 15000L + km.b(-1);
+        DualLinkNode.field_k = 15000L + km.correctedCurrentTimeMillis(-1);
         return var2;
     }
 

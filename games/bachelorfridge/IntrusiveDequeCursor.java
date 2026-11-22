@@ -53,7 +53,7 @@ final class IntrusiveDequeCursor {
         if (param0 != 7) {
           return true;
         }
-        var1 = f.b((byte) 73);
+        var1 = f.correctedCurrentTimeMillis((byte) 73);
         var3 = -DessertArenaTheme.field_g + var1;
         if (30000L < var3) {
           DessertArenaTheme.field_g = var1;

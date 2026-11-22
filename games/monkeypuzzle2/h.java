@@ -92,7 +92,7 @@ final class h {
         field_f = null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int countSetBits(int param0, byte param1) {
         param0 = ((-1431655765 & param0) >>> 1) + (1431655765 & param0);
         param0 = (param0 & 858993459) + ((param0 & -858993459) >>> 2);
         param0 = 252645135 & param0 + (param0 >>> 4);
@@ -143,7 +143,7 @@ final class h {
           if (param6 > 0 &&
             param4 > 0) {
             if (param3) {
-              h.a(31, (byte) 107);
+              h.countSetBits(31, (byte) 107);
             }
             var21 = param7.d();
             var30 = ge.field_i;

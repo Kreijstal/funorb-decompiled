@@ -106,11 +106,11 @@ final class cl extends ee {
               var2.writeInt(-103, pi.field_L);
               gk.field_u.a(13, false, var2.payload, 0);
               we.field_k = we.field_k + 1;
-              fl.field_a = ri.a(-3) + 30000L;
+              fl.field_a = ri.correctedCurrentTimeMillis(-3) + 30000L;
             }
             if (we.field_k == 3) {
               if (gk.field_u.c((byte) -109) <= 0) {
-                if (fl.field_a < ri.a(-3)) {
+                if (fl.field_a < ri.correctedCurrentTimeMillis(-3)) {
                   stackIn_31_0 = sf.a(-2, (byte) -80);
                   return stackIn_31_0;
                 }

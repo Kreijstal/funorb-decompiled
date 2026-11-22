@@ -8,7 +8,7 @@ final class pf {
     static ta field_c;
     static String field_b;
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         if (param0 != 0) {
           return -11L;
         }

@@ -37,7 +37,7 @@ class AudioOutput {
           if (this.field_s) {
             return;
           }
-          var1 = hn.a((byte) 80);
+          var1 = hn.correctedCurrentTimeMillis((byte) 80);
           try {
             if (var1 > this.field_l + 6000L) {
               this.field_l = var1 - 6000L;
@@ -45,7 +45,7 @@ class AudioOutput {
             while (var1 > this.field_l + 5000L) {
               this.skipFrames(256);
               this.field_l = this.field_l + (long)(256000 / field_g);
-              var1 = hn.a((byte) 80);
+              var1 = hn.correctedCurrentTimeMillis((byte) 80);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,7 +217,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_j.field_d = true;
             while (field_j.field_e) {
-              vj.a(50L, (byte) -49);
+              vj.sleepMillis(50L, (byte) -49);
             }
             field_j = null;
           }
@@ -257,7 +257,7 @@ class AudioOutput {
         if (field_b) {
           var3 = var3 << 1;
         }
-        kf.a(param0, 0, var3);
+        kf.clearInts(param0, 0, var3);
         this.field_d = this.field_d - param1;
         if (this.field_m != null &&
           this.field_d <= 0) {
@@ -351,7 +351,7 @@ class AudioOutput {
         if (this.field_m != null) {
           this.field_m.b(param0, 0, param1);
         }
-        this.field_l = hn.a((byte) 80);
+        this.field_l = hn.correctedCurrentTimeMillis((byte) 80);
     }
 
     public static void clearStaticReferences() {
@@ -411,7 +411,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_p = hn.a((byte) 80) + 2000L;
+            this.field_p = hn.correctedCurrentTimeMillis((byte) 80) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_h = 32;
         this.field_s = false;
-        this.field_l = hn.a((byte) 80);
+        this.field_l = hn.correctedCurrentTimeMillis((byte) 80);
         this.field_d = 0;
         this.field_f = 0;
         this.field_k = new PcmStream[8];

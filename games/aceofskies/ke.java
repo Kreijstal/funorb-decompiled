@@ -25,10 +25,10 @@ final class ke {
           while (true) {
             SystemTask var3 = param1.requestFullscreenExit(param2, param0 + 15850);
             while (var3.status == 0) {
-              IntrusiveNode.a(10L, false);
+              IntrusiveNode.sleepMillis(10L, false);
             }
             if (var3.status != 1) {
-              IntrusiveNode.a(100L, false);
+              IntrusiveNode.sleepMillis(100L, false);
               continue;
             }
             break;

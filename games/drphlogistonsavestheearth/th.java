@@ -206,7 +206,7 @@ final class th {
           if (tl.field_O != ik.field_d) {
             return false;
           }
-          var2_long = la.a(param0);
+          var2_long = la.correctedCurrentTimeMillis(param0);
           if (lc.field_v != 0 &&
             dj.field_N < 0) {
             var4_ref_wk = (wk) (AccountServiceResult.field_f.beginForward(-11151));

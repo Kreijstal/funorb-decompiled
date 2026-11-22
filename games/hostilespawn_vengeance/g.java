@@ -142,7 +142,7 @@ final class g extends ph {
           }
           var11 = param3.requestFullscreenEnter(false, param5, param1, param0, param4);
           while (var11.status == 0) {
-            vj.a(10L, (byte) -49);
+            vj.sleepMillis(10L, (byte) -49);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

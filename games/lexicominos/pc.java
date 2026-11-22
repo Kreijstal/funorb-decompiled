@@ -143,11 +143,11 @@ final class pc extends tj {
               var2.writeInt(wg.field_e, -32287);
               re.field_X.a(var2.payload, 13, 111, 0);
               gj.field_t = gj.field_t + 1;
-              ta.field_f = rf.c(0) + 30000L;
+              ta.field_f = rf.correctedCurrentTimeMillis(0) + 30000L;
             }
             if (3 == gj.field_t) {
               if (0 >= re.field_X.d(-6448)) {
-                if (rf.c(0) > ta.field_f) {
+                if (rf.correctedCurrentTimeMillis(0) > ta.field_f) {
                   stackIn_26_0 = DualLinkNode.a(-51, -2);
                   return stackIn_26_0;
                 }

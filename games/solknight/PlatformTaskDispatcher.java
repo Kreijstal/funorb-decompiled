@@ -286,7 +286,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (field_p > je.a(1)) {
+                    if (field_p > je.correctedCurrentTimeMillis(1)) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
@@ -392,13 +392,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (je.a(1) < field_p) {
+                        if (je.correctedCurrentTimeMillis(1) < field_p) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
                         break;
                       case 3:
-                        if (field_p > je.a(1)) {
+                        if (field_p > je.correctedCurrentTimeMillis(1)) {
                           throw new IOException();
                         }
                         var13 = (var8.intArgument >> 24 & 255) + "." + ((16723280 & var8.intArgument) >> 16) + "." + ((var8.intArgument & 65382) >> 8) + "." + (var8.intArgument & 255);
@@ -428,7 +428,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (je.a(1) < field_p) {
+                    if (je.correctedCurrentTimeMillis(1) < field_p) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -441,7 +441,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (je.a(1) < field_p) {
+                    if (je.correctedCurrentTimeMillis(1) < field_p) {
                       throw new IOException();
                     }
                     try {

@@ -141,7 +141,7 @@ final class rl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             qf.field_a = 0;
             ub.field_b = param0.getX();
             pd.field_Eb = param0.getY();
-            ud.a(2);
+            ud.correctedCurrentTimeMillis(2);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               IterableNodeHashTable.field_g = 2;
               nd.field_l = 2;

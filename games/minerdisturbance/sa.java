@@ -11,7 +11,7 @@ final class sa extends IntrusiveNode {
     static boolean field_u;
     static int field_s;
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         if (param1 == 2) {
           param0 = (-715827883 & param0 >>> 1) + (param0 & 1431655765);
           param0 = (858993459 & param0) + ((-858993460 & param0) >>> 2);

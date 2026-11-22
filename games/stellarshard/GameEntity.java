@@ -700,7 +700,7 @@ final class GameEntity {
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var8).toString()));
             var5 = -92 / ((param0 + 65) / 38);
             while (var4.status == 0) {
-              jj.a((byte) -120, 1L);
+              jj.sleepMillis((byte) -120, 1L);
             }
             if (1 == var4.status) {
               var6 = (DataInputStream) (var4.result);
@@ -2157,7 +2157,7 @@ final class GameEntity {
                 var2_int = -ae.field_N.position + param1;
               }
               ob.field_b.a(ae.field_N.position, (byte) -64, ae.field_N.payload, var2_int);
-              PacketBuffer.field_o = ih.a((byte) -98);
+              PacketBuffer.field_o = ih.correctedCurrentTimeMillis((byte) -98);
               ae.field_N.position = ae.field_N.position + var2_int;
               if (ae.field_N.position < param1) {
                 return false;

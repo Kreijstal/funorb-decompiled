@@ -38,7 +38,7 @@ final class kn {
           }
           SystemTask var11 = param0.requestFullscreenEnter(param1, -83, param4, param2, param3);
           while (var11.status == 0) {
-            IntrusiveNode.a(10L, false);
+            IntrusiveNode.sleepMillis(10L, false);
           }
           java.awt.Frame var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

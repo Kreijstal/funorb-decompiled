@@ -79,7 +79,7 @@ final class op extends wk implements ec {
             var8[var9] = mo.field_y.nextInt();
           }
           if (param0 != 20) {
-            op.a(-68L, 80);
+            op.sleepIgnoringInterrupts(-68L, 80);
           }
           if (Level.field_c == null ||
             !(var7_int <= Level.field_c.payload.length)) {
@@ -164,7 +164,7 @@ final class op extends wk implements ec {
         return null;
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepIgnoringInterrupts(long param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

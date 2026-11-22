@@ -362,7 +362,7 @@ final class RenderingSupport012 {
         }
     }
 
-    final static void performAction1344(long longArgument1, int integerArgument2) {
+    final static void sleepIgnoringInterrupts(long longArgument1, int integerArgument2) {
         try {
           Throwable caughtExceptionLocal1 = null;
           InterruptedException interruptedExceptionLocal2 = null;

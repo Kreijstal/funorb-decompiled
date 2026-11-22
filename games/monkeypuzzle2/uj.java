@@ -394,7 +394,7 @@ final class uj implements Runnable {
         try {
           var2 = param0.requestThreadStart((Runnable) (this), 5, 0);
           while (0 == var2.status) {
-            em.a(10L, false);
+            em.sleepMillis(10L, false);
           }
           if (2 == var2.status) {
             throw new RuntimeException();

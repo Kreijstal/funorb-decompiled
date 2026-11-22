@@ -15,7 +15,7 @@ abstract class wf implements oe {
     }
 
     public final void a(byte param0) {
-        this.field_c = je.a(1);
+        this.field_c = je.correctedCurrentTimeMillis(1);
         if (param0 != -127) {
           field_a = (String) null;
         }
@@ -29,12 +29,12 @@ abstract class wf implements oe {
         }
         if (param0 >= -66) {
           this.field_c = -47L;
-          if (350L + this.field_c <= je.a(1)) {
+          if (350L + this.field_c <= je.correctedCurrentTimeMillis(1)) {
             return this.e(8192);
           }
           return null;
         }
-        if (350L + this.field_c <= je.a(1)) {
+        if (350L + this.field_c <= je.correctedCurrentTimeMillis(1)) {
           return this.e(8192);
         }
         return null;
@@ -56,7 +56,7 @@ abstract class wf implements oe {
         if (this.a(param0 + 9480)) {
           return rd.field_b;
         }
-        if (je.a(1) < this.field_c + 350L) {
+        if (je.correctedCurrentTimeMillis(1) < this.field_c + 350L) {
           return hg.field_E;
         }
         if (param0 == -9362) {

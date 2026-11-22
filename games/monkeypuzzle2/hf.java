@@ -14,7 +14,7 @@ abstract class hf implements kf {
         if (this.a(true)) {
           return uc.field_e;
         }
-        if (pf.a(0) < 350L + this.field_e) {
+        if (pf.correctedCurrentTimeMillis(0) < 350L + this.field_e) {
           return ke.field_d;
         }
         if (!param0) {
@@ -56,14 +56,14 @@ abstract class hf implements kf {
         if (this.a(true)) {
           return null;
         }
-        if (pf.a(0) >= (350L + this.field_e)) {
+        if (pf.correctedCurrentTimeMillis(0) >= (350L + this.field_e)) {
           return this.c((byte) -58);
         }
         return null;
     }
 
     public final void a(byte param0) {
-        this.field_e = pf.a(0);
+        this.field_e = pf.correctedCurrentTimeMillis(0);
         if (param0 > -87) {
           hf.clearStaticReferences(-14);
         }

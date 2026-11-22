@@ -8,7 +8,7 @@ final class ef extends lk {
     static String field_o;
     private boolean field_k;
 
-    final static void a(int param0, long param1) {
+    final static void sleepIgnoringInterrupts(int param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

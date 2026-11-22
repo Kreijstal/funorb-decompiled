@@ -61,7 +61,7 @@ class AudioOutput {
         if (field_h) {
           var3 = var3 << 1;
         }
-        qq.a(param0, 0, var3);
+        qq.clearInts(param0, 0, var3);
         this.field_c = this.field_c - param1;
         if (this.field_r != null &&
           this.field_c <= 0) {
@@ -155,7 +155,7 @@ class AudioOutput {
         if (this.field_r != null) {
           this.field_r.b(param0, 0, param1);
         }
-        this.field_k = gk.a(113);
+        this.field_k = gk.correctedCurrentTimeMillis(113);
     }
 
     void writeMixBlock() throws Exception {
@@ -175,7 +175,7 @@ class AudioOutput {
           if (this.field_g) {
             return;
           }
-          var1 = gk.a(77);
+          var1 = gk.correctedCurrentTimeMillis(77);
           try {
             if (var1 > this.field_k + 6000L) {
               this.field_k = var1 - 6000L;
@@ -183,7 +183,7 @@ class AudioOutput {
             while (var1 > this.field_k + 5000L) {
               this.skipFrames(256);
               this.field_k = this.field_k + (long)(256000 / field_u);
-              var1 = gk.a(99);
+              var1 = gk.correctedCurrentTimeMillis(99);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -369,7 +369,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_n = gk.a(102) + 2000L;
+            this.field_n = gk.correctedCurrentTimeMillis(102) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -410,7 +410,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_j.field_a = true;
             while (field_j.field_b) {
-              um.a(true, 50L);
+              um.sleepMillis(true, 50L);
             }
             field_j = null;
           }
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_g = false;
         this.field_o = 32;
-        this.field_k = gk.a(47);
+        this.field_k = gk.correctedCurrentTimeMillis(47);
         this.field_b = 0;
         this.field_a = new PcmStream[8];
         this.field_q = new PcmStream[8];

@@ -51,7 +51,7 @@ abstract class qm {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int roundUpPowerOfTwo(byte param0, int param1) {
         param1--;
         if (param0 == -106) {
           param1 = param1 | param1 >>> 1;

@@ -111,7 +111,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             if (param2.length() == 0) {
               var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             } else {
-              var5Lifetime6 = var7 + "; Expires=" + bf.a(la.a(false) + 94608000000L, (byte) -29) + "; Max-Age=" + 94608000L;
+              var5Lifetime6 = var7 + "; Expires=" + bf.a(la.correctedCurrentTimeMillis(false) + 94608000000L, (byte) -29) + "; Max-Age=" + 94608000L;
             }
             pb.a(true, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
             if (param1 <= 6) {
@@ -280,7 +280,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             th.field_e = 0;
             ee.field_d = param0.getX();
             fj.field_j = param0.getY();
-            la.a(false);
+            la.correctedCurrentTimeMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               f.field_h = 2;
               tf.field_mb = 2;

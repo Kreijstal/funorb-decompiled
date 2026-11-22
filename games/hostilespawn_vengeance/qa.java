@@ -54,7 +54,7 @@ final class qa {
           }
         }
         if (param0 != 26627) {
-          qa.a(-20, 98);
+          qa.roundUpPowerOfTwo(-20, 98);
         }
         uj.d(param0 ^ -26740);
         return var1;
@@ -325,7 +325,7 @@ final class qa {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

@@ -95,7 +95,7 @@ final class af extends sa {
           }
           var11 = param4.requestFullscreenEnter((byte) -101, param3, param2, param0, param1);
           while (0 == var11.status) {
-            jd.a(1, 10L);
+            jd.sleepMillis(1, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

@@ -189,10 +189,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               cachedPlatformServiceLocal1 = new PlatformService(integerArgument2, stringArgument1, integerArgument3, booleanArgument4);
               GzipDecompressor.platformServiceState0003 = cachedPlatformServiceLocal1;
               MixedSupport088.platformServiceState0004 = cachedPlatformServiceLocal1;
-              asyncTaskLocal2 = GzipDecompressor.platformServiceState0003.computeAsyncTask0510((byte) -126, 1, (Runnable) (this));
+              asyncTaskLocal2 = GzipDecompressor.platformServiceState0003.startThread((byte) -126, 1, (Runnable) (this));
               while (true) {
                 if (0 == asyncTaskLocal2.integerState0510) {
-                  MixedSupport125.performAction1620(10L, -128);
+                  MixedSupport125.sleepMillis(10L, -128);
                   if (integerLocal3 == 0) {
                     continue;
                   }
@@ -261,8 +261,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (MixedSupport119.gameAppletState0001 == this &&
             !MixedSupport031.booleanState0032) {
-            MixedSupport073.longState0025 = MixedSupport062.computeLong0734(4);
-            MixedSupport125.performAction1620(5000L, -128);
+            MixedSupport073.longState0025 = MixedSupport062.correctedCurrentTimeMillis(4);
+            MixedSupport125.sleepMillis(5000L, -128);
             MixedSupport088.platformServiceState0004 = null;
             this.performAction0678(false, -124);
             return;
@@ -284,7 +284,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeExceptionLocal6 = null;
         int integerLocal7 = 0;
         try {
-          longLocal2 = MixedSupport062.computeLong0734(4);
+          longLocal2 = MixedSupport062.correctedCurrentTimeMillis(4);
           longLocal3 = MixedSupport115.longArrayState0009[GameDomainSupport002.integerState0180];
           MixedSupport115.longArrayState0009[GameDomainSupport002.integerState0180] = longLocal2;
           if (longLocal3 != 0L &&
@@ -381,7 +381,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           GameSession.booleanState0141 = true;
           MixedSupport016.booleanState0016 = true;
           LoginCredentials.booleanState0086 = false;
-          NetworkSupport004.longState0018 = MixedSupport062.computeLong0734(4);
+          NetworkSupport004.longState0018 = MixedSupport062.correctedCurrentTimeMillis(4);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal5 = caughtParameterLocal8;
@@ -548,7 +548,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable caughtExceptionLocal5 = null;
         Object objectLocal6 = null;
         try {
-          longLocal2 = MixedSupport062.computeLong0734(4);
+          longLocal2 = MixedSupport062.correctedCurrentTimeMillis(4);
           longLocal3 = SceneWidgetPart006.longArrayState0003[MixedSupport076.integerState0435];
           SceneWidgetPart006.longArrayState0003[MixedSupport076.integerState0435] = longLocal2;
           MixedSupport076.integerState0435 = 31 & 1 + MixedSupport076.integerState0435;
@@ -692,7 +692,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean frameRemainderLocal20 = true;
                   if (MixedSupport073.longState0025 != 0L) {
-                    stackIntegerLocal4 = compareLongs(~MixedSupport062.computeLong0734(4), ~MixedSupport073.longState0025);
+                    stackIntegerLocal4 = compareLongs(~MixedSupport062.correctedCurrentTimeMillis(4), ~MixedSupport073.longState0025);
                     frameRemainderLocal20 = (integerLocal14 == 0);
                     if ((frameRemainderLocal20) &&
                       (stackIntegerLocal4 <= 0)) {
@@ -797,7 +797,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !MixedSupport031.booleanState0032) {
             MixedSupport016.booleanState0016 = true;
             if (NetworkSupport008.booleanState0129 &&
-              -NetworkSupport004.longState0018 + MixedSupport062.computeLong0734(4) > 1000L) {
+              -NetworkSupport004.longState0018 + MixedSupport062.correctedCurrentTimeMillis(4) > 1000L) {
               rectangleLocal5 = graphicsArgument1.getClipBounds();
               if (null != rectangleLocal5) {
                 if (UiComponentPart020.integerState0551 > rectangleLocal5.width) {
@@ -834,7 +834,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          MixedSupport073.longState0025 = MixedSupport062.computeLong0734(4) + 4000L;
+          MixedSupport073.longState0025 = MixedSupport062.correctedCurrentTimeMillis(4) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "hn.stop()");
         }

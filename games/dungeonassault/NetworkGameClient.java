@@ -129,7 +129,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param0 = (1431655765 & param0 >>> 1) + (param0 & 1431655765);
         if (param1 != 8) {
           NetworkGameClient.e(-51);
@@ -646,7 +646,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             nf.a(2, true, sj.field_V);
             DelegatingCanvas.a((byte) -105);
             hh.field_c = true;
-            ab.field_a = 15000L + kd.c(-2456);
+            ab.field_a = 15000L + kd.correctedCurrentTimeMillis(-2456);
           }
         }
         if (gm.field_c == -1 ||
@@ -662,7 +662,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (gm.field_c != -1 &&
             gm.field_c != 0) {
-            ab.field_a = 15000L + kd.c(param1 ^ 2526);
+            ab.field_a = 15000L + kd.correctedCurrentTimeMillis(param1 ^ 2526);
           }
         }
         if (-1 != gm.field_c &&
@@ -712,7 +712,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((gm.field_c != -1 &&
           0 != gm.field_c ||
           dm.c(param1 - 43)) &&
-          kd.c(param1 - 2382) >= ab.field_a) {
+          kd.correctedCurrentTimeMillis(param1 - 2382) >= ab.field_a) {
           hh.field_c = false;
           if (gm.field_c != -1 &&
             0 != gm.field_c) {
@@ -857,7 +857,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           l.a(-1);
           nf.a(var2, true, tp.field_v);
           hh.field_c = true;
-          ab.field_a = 15000L + kd.c(-2456);
+          ab.field_a = 15000L + kd.correctedCurrentTimeMillis(-2456);
           return var2;
         }
         if (AccountNameAvailabilityValidator.field_n == 11 &&

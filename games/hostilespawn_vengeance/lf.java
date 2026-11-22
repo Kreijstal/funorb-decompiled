@@ -40,7 +40,7 @@ class lf {
                 var3 >= -96 &&
                 var2 <= 736 &&
                 576 >= var3) {
-                kf.a(eh.field_a.field_D, 0, eh.field_a.field_D.length);
+                kf.clearInts(eh.field_a.field_D, 0, eh.field_a.field_D.length);
                 eh.field_a.a();
                 var9.a(true, 128, (int)var6.field_c, 48, 48);
                 for (var7 = 0; eh.field_a.field_D.length > var7; var7++) {

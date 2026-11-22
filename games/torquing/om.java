@@ -90,7 +90,7 @@ final class om {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param1.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + ka.a(94608000000L + km.b(-1), -2) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + ka.a(94608000000L + km.correctedCurrentTimeMillis(-1), -2) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

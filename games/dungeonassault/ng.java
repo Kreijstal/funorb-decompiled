@@ -3420,7 +3420,7 @@ final class ng extends ck {
             var3 = param0.requestFullscreenExit(param2, (byte) -61);
             while (true) {
               if (0 == var3.status) {
-                CombatState.a(0, 10L);
+                CombatState.sleepMillis(0, 10L);
                 if (var4 != 0) {
                   return;
                 }
@@ -3429,7 +3429,7 @@ final class ng extends ck {
               break;
             }
             if (var3.status != 1) {
-              CombatState.a(0, 100L);
+              CombatState.sleepMillis(0, 100L);
               if (var4 == 0) {
                 continue scanLoop1;
               }

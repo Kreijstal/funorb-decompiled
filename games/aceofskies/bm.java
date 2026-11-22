@@ -22,7 +22,7 @@ class bm extends mi {
         String stackIn_79_2 = null;
         try {
           int var5_int = 127 / ((param0 + 53) / 33);
-          this.field_F = kh.a(-97);
+          this.field_F = kh.correctedCurrentTimeMillis(-97);
           if (60 != param2 &&
             param2 != 62) {
             if (param2 >= 32 &&
@@ -274,7 +274,7 @@ class bm extends mi {
         }
         et var8 = (et) ((Object) this.field_e);
         if (this.field_D == this.field_B) {
-          long var6 = kh.a(-62);
+          long var6 = kh.correctedCurrentTimeMillis(-62);
           if ((-this.field_F + var6) % 1000L >= 500L) {
             if (param0 > 64) {
               return;
@@ -290,7 +290,7 @@ class bm extends mi {
           return;
         }
         var8.a(this.field_D, this.field_B, param2, param3, (ea) (this), (byte) -123);
-        long var6Lifetime1 = kh.a(-62);
+        long var6Lifetime1 = kh.correctedCurrentTimeMillis(-62);
         if ((-this.field_F + var6Lifetime1) % 1000L >= 500L) {
           if (param0 > 64) {
             return;
@@ -326,7 +326,7 @@ class bm extends mi {
           this.field_e = ArchiveRequest.field_n.field_n;
           this.a(-20975, param0, true);
           this.field_y = true;
-          this.field_F = kh.a(-88);
+          this.field_F = kh.correctedCurrentTimeMillis(-88);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -425,7 +425,7 @@ class bm extends mi {
                 this.field_B = var6;
               }
             }
-            this.field_F = kh.a(-60);
+            this.field_F = kh.correctedCurrentTimeMillis(-60);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "bm.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -562,7 +562,7 @@ class bm extends mi {
           int stackIn_6_1 = 82;
           stackIn_7_2 = (var8_int == -1) ? (0) : (var8_int);
           this.a((byte) stackIn_6_1, stackIn_7_2);
-          long var8_long = kh.a(param0 - 125);
+          long var8_long = kh.correctedCurrentTimeMillis(param0 - 125);
           boolean stackIn_10_1 = !(var8_long - this.field_E >= 250L);
           this.field_G = stackIn_10_1;
           if (this.field_G) {

@@ -139,7 +139,7 @@ final class hb {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         if (param0 <= 0L) {
           return;
         }
@@ -147,10 +147,10 @@ final class hb {
           return;
         }
         if (0L == param0 % 10L) {
-          km.a(param0 - 1L, -25680);
-          km.a(1L, -25680);
+          km.sleepIgnoringInterrupts(param0 - 1L, -25680);
+          km.sleepIgnoringInterrupts(1L, -25680);
         } else {
-          km.a(param0, -25680);
+          km.sleepIgnoringInterrupts(param0, -25680);
         }
     }
 

@@ -12,7 +12,7 @@ abstract class li implements sp {
           if (this.a(26921)) {
             return null;
           }
-          if (kh.a(-104) >= this.field_a + 350L) {
+          if (kh.correctedCurrentTimeMillis(-104) >= this.field_a + 350L) {
             return this.b(8192);
           }
           return null;
@@ -20,7 +20,7 @@ abstract class li implements sp {
         if (this.a(26921)) {
           return null;
         }
-        if (kh.a(-104) >= this.field_a + 350L) {
+        if (kh.correctedCurrentTimeMillis(-104) >= this.field_a + 350L) {
           return this.b(8192);
         }
         return null;
@@ -31,10 +31,10 @@ abstract class li implements sp {
     public final void a(byte param0) {
         if (param0 <= 62) {
           this.b(-122);
-          this.field_a = kh.a(-74);
+          this.field_a = kh.correctedCurrentTimeMillis(-74);
           return;
         }
-        this.field_a = kh.a(-74);
+        this.field_a = kh.correctedCurrentTimeMillis(-74);
     }
 
     abstract String b(int param0);
@@ -45,12 +45,12 @@ abstract class li implements sp {
         }
         if (!param0) {
           this.a((byte) 120);
-          if (!(kh.a(-113) >= (this.field_a + 350L))) {
+          if (!(kh.correctedCurrentTimeMillis(-113) >= (this.field_a + 350L))) {
             return HardwareOpenGlRenderer.field_Pc;
           }
           return this.c(0);
         }
-        if (!(kh.a(-113) >= (this.field_a + 350L))) {
+        if (!(kh.correctedCurrentTimeMillis(-113) >= (this.field_a + 350L))) {
           return HardwareOpenGlRenderer.field_Pc;
         }
         return this.c(0);

@@ -70,7 +70,7 @@ final class GzipDecoder {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (param1.field_p.peekEvent() != null) {
-              c.a(40, 1L);
+              c.sleepMillis(40, 1L);
               continue;
             }
             break;

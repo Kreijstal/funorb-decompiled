@@ -70,7 +70,7 @@ final class GameDomainSupport004 {
           }
           asyncTaskLocal14 = platformServiceArgument2.requestEnterFullscreen((byte) 107, integerArgument1, integerArgument4, integerArgument3, integerArgument6);
           while (0 == asyncTaskLocal14.integerState0510) {
-            MixedSupport125.performAction1620(10L, -128);
+            MixedSupport125.sleepMillis(10L, -128);
           }
           frameLocal11 = (java.awt.Frame) (asyncTaskLocal14.objectState0004);
           if (frameLocal11 == null) {
@@ -188,7 +188,7 @@ final class GameDomainSupport004 {
         try {
           integerLocal2 = 0;
           for (integerLocal1 = 0; integerArrayArgument1.length > integerLocal1; integerLocal1++) {
-            integerLocal2 = integerLocal2 + MixedSupport051.computeInteger0604(integerArrayArgument1[integerLocal1], -127);
+            integerLocal2 = integerLocal2 + MixedSupport051.countSetBits(integerArrayArgument1[integerLocal1], -127);
           }
           if (integerArgument2 < 94) {
             integerArrayLocal5 = (int[]) null;

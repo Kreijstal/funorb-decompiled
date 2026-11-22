@@ -155,7 +155,7 @@ final class sh {
               var2.writeInt(ln.field_oc, (byte) -81);
               jj.field_a.a(0, 13, (byte) -92, var2.data);
               vm.field_k = vm.field_k + 1;
-              ve.field_Pb = 30000L + ud.a(2);
+              ve.field_Pb = 30000L + ud.correctedCurrentTimeMillis(2);
             }
             if (vm.field_k == 3) {
               if (jj.field_a.c(0) > 0) {
@@ -166,7 +166,7 @@ final class sh {
                 }
                 vm.field_k = vm.field_k + 1;
               } else {
-                if (ud.a(2) > ve.field_Pb) {
+                if (ud.correctedCurrentTimeMillis(2) > ve.field_Pb) {
                   stackIn_23_0 = ic.a(-92, -2);
                   return stackIn_23_0;
                 }

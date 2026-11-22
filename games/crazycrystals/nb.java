@@ -30,7 +30,7 @@ final class nb {
         field_b = param3 - param1;
         nb.a();
         if (field_a.length < field_b) {
-          field_a = new int[pb.a(field_b, (byte) -99)];
+          field_a = new int[pb.roundUpPowerOfTwo(field_b, (byte) -99)];
         }
         int var4 = param1 * kh.field_l + param0;
         for (var5 = 0; var5 < field_b; var5++) {

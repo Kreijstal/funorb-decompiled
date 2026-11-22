@@ -46,7 +46,7 @@ final class df {
         if (param0 != -38) {
           return -45;
         }
-        return (int)(-16912800L + kd.c(-2456) / 60000L);
+        return (int)(-16912800L + kd.correctedCurrentTimeMillis(-2456) / 60000L);
     }
 
     final static qh a(boolean param0, CipherPacketBuffer param1) {

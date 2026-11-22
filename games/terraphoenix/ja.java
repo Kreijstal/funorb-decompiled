@@ -303,7 +303,7 @@ final class ja extends IntrusiveNode {
               }
               stackIn_73_0[stackIn_73_1] = stackIn_76_2;
             }
-            hj.field_I = ll.a(1000);
+            hj.field_I = ll.correctedCurrentTimeMillis(1000);
           }
           ai.field_i.field_g = pj.field_l.length;
           var4Lifetime1 = 0;

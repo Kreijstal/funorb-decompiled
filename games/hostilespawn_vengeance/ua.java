@@ -23,7 +23,7 @@ final class ua implements Runnable {
                 var2.serviceOutput();
               }
             }
-            vj.a(10L, (byte) -49);
+            vj.sleepMillis(10L, (byte) -49);
             Object var5 = (Object) null;
             eb.a(this.field_b, 1001, (Object) null);
           }

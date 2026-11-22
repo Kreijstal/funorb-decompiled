@@ -37,7 +37,7 @@ final class j {
           }
           var2 = 0;
           if (kg.field_m == 2) {
-            var3_long = ji.b(-90) - am.field_a;
+            var3_long = ji.correctedCurrentTimeMillis(-90) - am.field_a;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;

@@ -40,7 +40,7 @@ final class vf {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param2.field_t.peekEvent()) {
-              hb.a(1L, 97);
+              hb.sleepMillis(1L, 97);
               continue;
             }
             break;

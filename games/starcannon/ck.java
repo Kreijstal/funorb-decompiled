@@ -26,7 +26,7 @@ final class ck implements Runnable {
                 var2.serviceOutput();
               }
             }
-            uc.a(-94, 10L);
+            uc.sleepMillis(-94, 10L);
             ea.a((Object) null, 105, this.field_d);
           }
         } catch (Exception exception) {
@@ -82,11 +82,11 @@ final class ck implements Runnable {
               var2.writeInt((byte) -113, ac.field_e);
               AccountCreationResultPanel.field_sb.a(0, var2.payload, (byte) 87, 13);
               KeyboardInput.field_a = KeyboardInput.field_a + 1;
-              wf.field_f = dd.b(69) + 30000L;
+              wf.field_f = dd.correctedCurrentTimeMillis(69) + 30000L;
             }
             if (KeyboardInput.field_a == 3) {
               if (0 >= AccountCreationResultPanel.field_sb.c(122)) {
-                if (wf.field_f < dd.b(63)) {
+                if (wf.field_f < dd.correctedCurrentTimeMillis(63)) {
                   stackIn_33_0 = ej.a(2, -2);
                   return stackIn_33_0;
                 }

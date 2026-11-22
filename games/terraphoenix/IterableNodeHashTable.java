@@ -66,9 +66,9 @@ final class IterableNodeHashTable implements Iterable {
     final static long b(int param0) {
         if (param0 != 1) {
           field_d = (String) null;
-          return ll.a(1000) - dm.field_c;
+          return ll.correctedCurrentTimeMillis(1000) - dm.field_c;
         }
-        return ll.a(1000) - dm.field_c;
+        return ll.correctedCurrentTimeMillis(1000) - dm.field_c;
     }
 
     public static void a(int param0) {

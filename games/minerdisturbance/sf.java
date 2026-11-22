@@ -6,14 +6,14 @@ final class sf {
 
     public static void a(int param0) {
         if (param0 != 8192) {
-          sf.a((byte) 91);
+          sf.correctedCurrentTimeMillis((byte) 91);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long correctedCurrentTimeMillis(byte param0) {
         int var3 = -9 / ((47 - param0) / 49);
         long var1 = System.currentTimeMillis();
         if (em.field_A <= var1) {

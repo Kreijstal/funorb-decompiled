@@ -65,7 +65,7 @@ abstract class pb {
 
     abstract void a(int param0, int param1, ta param2);
 
-    final static int a(int param0, byte param1) {
+    final static int roundUpPowerOfTwo(int param0, byte param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

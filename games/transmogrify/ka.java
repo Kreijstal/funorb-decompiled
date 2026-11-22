@@ -26,7 +26,7 @@ final class ka {
         field_a = param3 - param1;
         ka.b();
         if (field_d.length < field_a) {
-          field_d = new int[u.a(-816856703, field_a)];
+          field_d = new int[u.roundUpPowerOfTwo(-816856703, field_a)];
         }
         int var4 = param1 * sb.field_c + param0;
         for (var5 = 0; var5 < field_a; var5++) {

@@ -33,7 +33,7 @@ abstract class lw {
         if (this.field_i) {
           return this.field_d == this.field_e ? true : false;
         }
-        return rfa.a(false, this.field_e) == this.field_d ? true : false;
+        return rfa.countSetBits(false, this.field_e) == this.field_d ? true : false;
     }
 
     abstract void a(int param0, byte param1);

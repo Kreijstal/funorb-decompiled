@@ -3339,7 +3339,7 @@ abstract class c extends fj {
             }
             AccountServiceResult.a(var2_int, -9, e.field_a);
             ve.field_a = true;
-            mf.field_j = 15000L + id.a(72);
+            mf.field_j = 15000L + id.correctedCurrentTimeMillis(72);
             stackIn_36_0 = var2_int;
             return stackIn_36_0;
           }
@@ -3417,7 +3417,7 @@ abstract class c extends fj {
               AccountServiceResult.a(2, -9, jc.field_S);
               wc.j(-9636);
               ve.field_a = true;
-              mf.field_j = 15000L + id.a(74);
+              mf.field_j = 15000L + id.correctedCurrentTimeMillis(74);
             }
           }
           if (-1 == w.field_n ||
@@ -3433,7 +3433,7 @@ abstract class c extends fj {
             }
             if (-1 != w.field_n &&
               0 != w.field_n) {
-              mf.field_j = id.a(54) + 15000L;
+              mf.field_j = id.correctedCurrentTimeMillis(54) + 15000L;
             }
           }
           boolean decompiledFrameRemainder1 = true;
@@ -3509,7 +3509,7 @@ abstract class c extends fj {
           if ((w.field_n != -1 &&
             w.field_n != 0 ||
             ie.b((byte) 34)) &&
-            mf.field_j <= id.a(59)) {
+            mf.field_j <= id.correctedCurrentTimeMillis(59)) {
             ve.field_a = false;
             if (w.field_n != -1 &&
               w.field_n != 0) {

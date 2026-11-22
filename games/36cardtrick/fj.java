@@ -288,7 +288,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (t.field_h != 0L) {
-                    stackIn_102_0 = compareLongs(id.a(127), t.field_h);
+                    stackIn_102_0 = compareLongs(id.correctedCurrentTimeMillis(127), t.field_h);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 >= 0)) {
@@ -340,8 +340,8 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          t.field_h = id.a(56);
-          wk.a((byte) -123, 5000L);
+          t.field_h = id.correctedCurrentTimeMillis(56);
+          wk.sleepMillis((byte) -123, 5000L);
           Main.field_W = null;
           this.a(false, false);
         } catch (RuntimeException runtimeException) {
@@ -494,7 +494,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           r.field_q = true;
           ii.field_a = true;
           vd.field_w = false;
-          ej.field_jb = id.a(33);
+          ej.field_jb = id.correctedCurrentTimeMillis(33);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -517,7 +517,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         java.awt.Insets var6 = null;
         try {
-          var2_long = id.a(24);
+          var2_long = id.correctedCurrentTimeMillis(24);
           var4 = ak.field_P[ud.field_b];
           ak.field_P[ud.field_b] = var2_long;
           if (param0 != 5) {
@@ -606,7 +606,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          t.field_h = 4000L + id.a(30);
+          t.field_h = 4000L + id.correctedCurrentTimeMillis(30);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "fj.stop()");
         }
@@ -619,7 +619,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = id.a(60);
+          var2_long = id.correctedCurrentTimeMillis(60);
           var4 = AccountNameAvailabilityValidator.field_n[kh.field_e];
           AccountNameAvailabilityValidator.field_n[kh.field_e] = var2_long;
           if (0L != var4 &&
@@ -651,7 +651,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
             !tk.field_q) {
             ii.field_a = true;
             if (hi.field_a &&
-              -ej.field_jb + id.a(124) > 1000L) {
+              -ej.field_jb + id.correctedCurrentTimeMillis(124) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (vk.field_b > var2.width) {
@@ -1053,7 +1053,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
               var8 = jk.field_a.requestThreadStart(0, 1, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  wk.a((byte) -94, 10L);
+                  wk.sleepMillis((byte) -94, 10L);
                   if (var9 == 0) {
                     continue;
                   }

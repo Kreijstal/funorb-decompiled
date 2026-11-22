@@ -70,7 +70,7 @@ final class hj implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              wl.a(10L, false);
+              wl.sleepMillis(10L, false);
               f.a((Object) null, (byte) -127, this.field_d);
             }
             decompiledRegionSelector0 = 0;

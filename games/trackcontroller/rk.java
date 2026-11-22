@@ -244,7 +244,7 @@ final class rk extends wd {
           }
           if (var3 == 0 &&
             di.field_h == 2) {
-            var4 = qg.a(false) - fe.field_N;
+            var4 = qg.correctedCurrentTimeMillis(false) - fe.field_N;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

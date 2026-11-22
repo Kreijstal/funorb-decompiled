@@ -16,7 +16,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             DirectByteStorage.field_c = 0;
             DualLinkNode.field_n = param0.getX();
             vl.field_G = param0.getY();
-            sf.a((byte) -42);
+            sf.correctedCurrentTimeMillis((byte) -42);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ic.field_n = 1;
               qd.field_J = 1;

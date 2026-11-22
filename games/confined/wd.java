@@ -122,7 +122,7 @@ final class wd {
         this.field_b.field_q = this.field_b;
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepIgnoringInterrupts(long param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           int var3_int = 0;
@@ -225,7 +225,7 @@ final class wd {
         field_d = (byte[][]) null;
         field_f = null;
         if (param0 != -17765) {
-          wd.a(34L, 30);
+          wd.sleepIgnoringInterrupts(34L, 30);
         }
     }
 

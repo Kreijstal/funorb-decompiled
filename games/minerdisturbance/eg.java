@@ -684,7 +684,7 @@ class eg implements ad, cf {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param3 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + e.a(sf.a((byte) 99) + 1000L * param3, -128) + "; Max-Age=" + param3;
+                var7Lifetime4 = var10 + "; Expires=" + e.a(sf.correctedCurrentTimeMillis((byte) 99) + 1000L * param3, -128) + "; Max-Age=" + param3;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }

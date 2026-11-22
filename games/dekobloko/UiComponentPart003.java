@@ -299,7 +299,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
               }
               stackStringArrayLocal6[stackIntegerLocal7] = stackStringLocal8;
             }
-            MixedSupport024.longState0007 = MixedSupport062.computeLong0734(4);
+            MixedSupport024.longState0007 = MixedSupport062.correctedCurrentTimeMillis(4);
           }
           if (integerArgument1 > -8) {
             platformServiceState0001 = (PlatformService) null;

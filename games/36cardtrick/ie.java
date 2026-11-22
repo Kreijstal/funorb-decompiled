@@ -38,7 +38,7 @@ abstract class ie extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepIgnoringInterrupts(byte param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

@@ -207,7 +207,7 @@ final class ni extends IntrusiveNode {
                 ni.a((PcmSampleStream) null, false);
               }
               if (param3 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1), -2) + "; Max-Age=" + param3;
+                var7Lifetime4 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.correctedCurrentTimeMillis(-1), -2) + "; Max-Age=" + param3;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }

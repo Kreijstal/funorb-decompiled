@@ -66,7 +66,7 @@ final class gk {
         field_b = null;
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 > 43) {

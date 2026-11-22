@@ -14,14 +14,14 @@ abstract class uc implements he {
         if (this.a(true)) {
           return null;
         }
-        if ((this.field_c + 350L) <= dd.b(101)) {
+        if ((this.field_c + 350L) <= dd.correctedCurrentTimeMillis(101)) {
           return this.b(-128);
         }
         return null;
     }
 
     public final void a(byte param0) {
-        this.field_c = dd.b(118);
+        this.field_c = dd.correctedCurrentTimeMillis(118);
         int var2 = -69 % ((param0 + 29) / 45);
     }
 
@@ -30,7 +30,7 @@ abstract class uc implements he {
           return DualLinkNode.field_g;
         }
         int var2 = -87 / ((param0 + 85) / 36);
-        if (!((this.field_c + 350L) <= dd.b(61))) {
+        if (!((this.field_c + 350L) <= dd.correctedCurrentTimeMillis(61))) {
           return cg.field_g;
         }
         return this.c(4096);
@@ -45,16 +45,16 @@ abstract class uc implements he {
 
     abstract String b(int param0);
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
         if (param0 < -90) {
           if (0L == param1 % 10L) {
-            r.a(18780, param1 - 1L);
-            r.a(18780, 1L);
+            r.sleepIgnoringInterrupts(18780, param1 - 1L);
+            r.sleepIgnoringInterrupts(18780, 1L);
           } else {
-            r.a(18780, param1);
+            r.sleepIgnoringInterrupts(18780, param1);
           }
           return;
         }

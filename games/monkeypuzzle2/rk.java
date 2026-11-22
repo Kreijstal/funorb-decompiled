@@ -27,10 +27,10 @@ final class rk {
           while (true) {
             var3 = param0.requestFullscreenExit(param1, -120);
             while (var3.status == 0) {
-              em.a(10L, param2);
+              em.sleepMillis(10L, param2);
             }
             if (var3.status != 1) {
-              em.a(100L, false);
+              em.sleepMillis(100L, false);
               continue;
             }
             break;

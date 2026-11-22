@@ -34,7 +34,7 @@ final class he extends pu {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.field_x.peekEvent()) {
-              gda.a(false, 1L);
+              gda.sleepMillis(false, 1L);
               continue;
             }
             break;

@@ -10,7 +10,7 @@ final class bc {
         int var1 = -65 % ((85 - param0) / 33);
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepIgnoringInterrupts(long param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

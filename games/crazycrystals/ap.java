@@ -119,7 +119,7 @@ final class ap extends ob {
               }
             }
             this.field_c = 0;
-            this.field_e = lo.a((byte) -33);
+            this.field_e = lo.correctedCurrentTimeMillis((byte) -33);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -426,7 +426,7 @@ final class ap extends ob {
           var16 = CrazyCrystals.field_B;
           try {
             if (this.field_q != null) {
-              var2_long = lo.a((byte) 95);
+              var2_long = lo.correctedCurrentTimeMillis((byte) 95);
               var4 = (int)(-this.field_e + var2_long);
               if (var4 > 200) {
                 var4 = 200;

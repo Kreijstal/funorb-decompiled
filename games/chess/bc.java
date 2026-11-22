@@ -7,24 +7,24 @@ final class bc {
     static String field_c;
     static boolean field_d;
 
-    final static void a(long param0, byte param1) {
+    final static void sleepMillis(long param0, byte param1) {
         if (param0 <= 0L) {
           return;
         }
         int var3 = 19 % ((-39 - param1) / 53);
         if (param0 % 10L != 0L) {
-          fe.a(param0, -74);
+          fe.sleepIgnoringInterrupts(param0, -74);
           return;
         }
-        fe.a(-1L + param0, -95);
-        fe.a(1L, -120);
+        fe.sleepIgnoringInterrupts(-1L + param0, -95);
+        fe.sleepIgnoringInterrupts(1L, -120);
     }
 
     public static void a(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 10) {
-          bc.a(-47L, (byte) -116);
+          bc.sleepMillis(-47L, (byte) -116);
         }
     }
 

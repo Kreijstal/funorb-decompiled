@@ -1026,7 +1026,7 @@ final class di extends PcmStream {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream((byte) stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_s).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var7).toString()));
             while (var4.status == 0) {
-              gf.a(1L, param1 - 10310);
+              gf.sleepMillis(1L, param1 - 10310);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);

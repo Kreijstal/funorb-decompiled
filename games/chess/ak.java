@@ -63,7 +63,7 @@ final class ak extends IntrusiveNode {
           var3_int = -60 % ((param1 - 44) / 55);
           for (var4_int = 0; var4_int < 50; var4_int++) {
             if (param0.field_x.peekEvent() != null) {
-              bc.a(1L, (byte) -123);
+              bc.sleepMillis(1L, (byte) -123);
               continue;
             }
             break;
@@ -296,7 +296,7 @@ final class ak extends IntrusiveNode {
         return false;
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         if (param1 == 1045) {

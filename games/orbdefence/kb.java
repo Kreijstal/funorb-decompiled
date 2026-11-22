@@ -367,7 +367,7 @@ final class kb extends IntrusiveNode {
               }
               var5 = var3 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
               if (param2.length() != 0) {
-                var5 = var5 + "; Expires=" + dh.a(-15591, ji.b(-78) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5 = var5 + "; Expires=" + dh.a(-15591, ji.correctedCurrentTimeMillis(-78) + 94608000000L) + "; Max-Age=" + 94608000L;
                 if (OrbDefence.field_D) {
                   var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 }
@@ -1150,7 +1150,7 @@ final class kb extends IntrusiveNode {
             if (this.field_F < 4 &&
               ui.field_a[this.field_C][this.field_F + 1] <= this.field_f.field_e[0].b(true) &&
               this.field_F < jk.field_j[this.field_C]) {
-              var7Lifetime2Lifetime1 = 64 + (int)(Math.sin((double)ji.b(param2 ^ 91) * 0.01 + (double)this.field_g + (double)this.field_h) * 48.0);
+              var7Lifetime2Lifetime1 = 64 + (int)(Math.sin((double)ji.correctedCurrentTimeMillis(param2 ^ 91) * 0.01 + (double)this.field_g + (double)this.field_h) * 48.0);
               var6Lifetime2Lifetime6 = 16777215;
               ul.a(var4_int << 4, var5 << 4, var7Lifetime2Lifetime1, 255, ki.field_f);
             }

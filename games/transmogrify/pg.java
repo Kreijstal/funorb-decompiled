@@ -42,20 +42,20 @@ final class pg {
         FullscreenFocusCanvas.c(-1);
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         if (param0 <= 0L) {
           return;
         }
         if (param0 % 10L == 0L) {
-          bc.a(-1L + param0, -23850);
-          bc.a(1L, -23850);
+          bc.sleepIgnoringInterrupts(-1L + param0, -23850);
+          bc.sleepIgnoringInterrupts(1L, -23850);
           if (param1 > -76) {
             field_a = false;
             return;
           }
           return;
         }
-        bc.a(param0, -23850);
+        bc.sleepIgnoringInterrupts(param0, -23850);
         if (param1 > -76) {
           field_a = false;
           return;

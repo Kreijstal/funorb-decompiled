@@ -18,7 +18,7 @@ final class cb extends IntrusiveNode {
         field_g = null;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int roundUpPowerOfTwo(byte param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;

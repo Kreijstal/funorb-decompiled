@@ -84,7 +84,7 @@ final class ic extends IntrusiveNode {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream(stackIn_12_1, new java.net.URL(stackIn_12_4, ((StringBuilder) (Object) stackIn_12_5).append(stackIn_13_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_h).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              vj.a(1L, (byte) -49);
+              vj.sleepMillis(1L, (byte) -49);
             }
             if (param0 >= -114) {
               return;

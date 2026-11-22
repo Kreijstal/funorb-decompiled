@@ -243,7 +243,7 @@ final class j implements Runnable {
                 var2.serviceOutput();
               }
             }
-            gf.a(10L, -10309);
+            gf.sleepMillis(10L, -10309);
             Object var5 = (Object) null;
             jk.a(-23765, this.field_c, (Object) null);
           }

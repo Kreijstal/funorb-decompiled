@@ -16,7 +16,7 @@ abstract class ck implements uh {
         if (param0 != 66) {
           return (String) null;
         }
-        if (350L + this.field_d > fa.a(-96)) {
+        if (350L + this.field_d > fa.correctedCurrentTimeMillis(-96)) {
           return null;
         }
         return this.a(8335);
@@ -29,7 +29,7 @@ abstract class ck implements uh {
         if (param0 < 121) {
           field_c = 111;
         }
-        if (!(fa.a(81) >= (this.field_d + 350L))) {
+        if (!(fa.correctedCurrentTimeMillis(81) >= (this.field_d + 350L))) {
           return ui.field_o;
         }
         return this.b(-1);
@@ -51,7 +51,7 @@ abstract class ck implements uh {
         if (param0 <= 32) {
           this.c((byte) 37);
         }
-        this.field_d = fa.a(-85);
+        this.field_d = fa.correctedCurrentTimeMillis(-85);
     }
 
     final static ng a(String param0, String param1, long param2, int param3, boolean param4) {

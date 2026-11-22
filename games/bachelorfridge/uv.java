@@ -148,7 +148,7 @@ final class uv extends k {
           if (Crc32Table.field_a != eia.field_a) {
             return false;
           }
-          var2_long = f.b((byte) 73);
+          var2_long = f.correctedCurrentTimeMillis((byte) 73);
           if (param0 < 113) {
             return false;
           }

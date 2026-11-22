@@ -35,7 +35,7 @@ final class ge {
         field_f = param3 - param1;
         ge.a();
         if (field_e.length < field_f) {
-          field_e = new int[qa.a(field_f, -1)];
+          field_e = new int[qa.roundUpPowerOfTwo(field_f, -1)];
         }
         int var4 = param1 * si.field_e + param0;
         for (var5 = 0; var5 < field_f; var5++) {

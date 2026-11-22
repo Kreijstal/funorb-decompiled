@@ -3176,7 +3176,7 @@ final class ContextualRuntimeException extends RuntimeException {
           }
           var6_ref = param2.requestFullscreenEnter(param0, param4, -7573, param3, param5);
           while (var6_ref.status == 0) {
-            pg.a(10L, -99);
+            pg.sleepMillis(10L, -99);
             if (var9 == 0) {
               continue;
             }

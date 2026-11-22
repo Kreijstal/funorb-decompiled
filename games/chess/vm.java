@@ -64,7 +64,7 @@ abstract class vm extends jb implements ha {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param3 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + sk.a(5, 1000L * param3 + ud.a(2)) + "; Max-Age=" + param3;
+                var7Lifetime4 = var9 + "; Expires=" + sk.a(5, 1000L * param3 + ud.correctedCurrentTimeMillis(2)) + "; Max-Age=" + param3;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

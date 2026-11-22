@@ -10,7 +10,7 @@ final class qa {
         if (param0 > -103) {
           return -13L;
         }
-        return sf.a((byte) -23) - sk.field_c;
+        return sf.correctedCurrentTimeMillis((byte) -23) - sk.field_c;
     }
 
     final static sl a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {

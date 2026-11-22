@@ -71,7 +71,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             SecondaryNodeDequeIterator.field_a = 0;
             hn.field_o = param0.getX();
             NodeHashTableIterator.field_e = param0.getY();
-            gk.a(85);
+            gk.correctedCurrentTimeMillis(85);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kc.field_a = 1;
               cl.field_f = 1;

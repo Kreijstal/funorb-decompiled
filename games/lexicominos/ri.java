@@ -13,7 +13,7 @@ abstract class ri implements ma {
         if (this.a(-104)) {
           return rc.field_a;
         }
-        if (!(rf.c(0) >= this.field_a + 350L)) {
+        if (!(rf.correctedCurrentTimeMillis(0) >= this.field_a + 350L)) {
           return jj.field_e;
         }
         if (param0 > 114) {
@@ -24,7 +24,7 @@ abstract class ri implements ma {
     }
 
     public final void a(boolean param0) {
-        this.field_a = rf.c(0);
+        this.field_a = rf.correctedCurrentTimeMillis(0);
         if (!param0) {
           byte[] var3 = (byte[]) null;
           ri.storeBytes(123, (byte[]) null, true);
@@ -90,7 +90,7 @@ abstract class ri implements ma {
         if (this.a(110)) {
           return null;
         }
-        if (rf.c(0) >= this.field_a + 350L) {
+        if (rf.correctedCurrentTimeMillis(0) >= this.field_a + 350L) {
           return this.b(66);
         }
         return null;

@@ -1761,7 +1761,7 @@ final class nh {
         field_l = param3 - param1;
         nh.b();
         if (field_p.length < field_l) {
-          field_p = new int[ak.a(field_l, 1045)];
+          field_p = new int[ak.roundUpPowerOfTwo(field_l, 1045)];
         }
         int var4 = param1 * wb.field_h + param0;
         for (var5 = 0; var5 < field_l; var5++) {

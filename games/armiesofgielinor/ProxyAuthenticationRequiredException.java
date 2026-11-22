@@ -82,7 +82,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           }
           enterTask = platformService.enterFullscreenAsync(true, height, width, refreshRate, bitDepth);
           while (enterTask.status == 0) {
-            SpriteButtonPainter.a(10L, 0);
+            SpriteButtonPainter.sleepMillis(10L, 0);
           }
           frame = (java.awt.Frame) (enterTask.result);
           if (frame == null) {

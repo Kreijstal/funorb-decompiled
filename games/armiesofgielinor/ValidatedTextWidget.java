@@ -58,7 +58,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           }
           modeTask = platformService.getDisplayModesAsync(-20681);
           while (0 == modeTask.status) {
-            SpriteButtonPainter.a(10L, 0);
+            SpriteButtonPainter.sleepMillis(10L, 0);
           }
           if (2 == modeTask.status) {
             failedModes = new FullscreenDisplayMode[]{};

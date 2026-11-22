@@ -13,11 +13,11 @@ final class lj {
     static bi field_f;
     static int[] field_c;
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long correctedCurrentTimeMillis(byte param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 >= -17) {
-          lj.a((byte) 69);
+          lj.correctedCurrentTimeMillis((byte) 69);
           var1 = System.currentTimeMillis();
           if (var1 < tg.field_k) {
             ml.field_P = ml.field_P + (tg.field_k - var1);

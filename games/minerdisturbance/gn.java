@@ -69,7 +69,7 @@ final class gn {
             field_b = (String) null;
           }
           while (var8.status == 0) {
-            gf.a(10L, param0 - 9718);
+            gf.sleepMillis(10L, param0 - 9718);
           }
           if (var8.status == 2) {
             stackIn_12_0 = new vk[]{};

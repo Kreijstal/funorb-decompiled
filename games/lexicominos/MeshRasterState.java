@@ -18,7 +18,7 @@ final class MeshRasterState {
         field_d = param3 - param1;
         MeshRasterState.c();
         if (field_e.length < field_d) {
-          field_e = new int[fa.a(-102, field_d)];
+          field_e = new int[fa.roundUpPowerOfTwo(-102, field_d)];
         }
         int var4 = param1 * SoftwareRasterizer.field_f + param0;
         for (var5 = 0; var5 < field_d; var5++) {

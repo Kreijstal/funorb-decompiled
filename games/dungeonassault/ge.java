@@ -273,7 +273,7 @@ final class ge extends PcmStream {
           if (this.field_t == null) {
             continue;
           }
-          cj.a(this.field_z, 0, var4);
+          cj.clearInts(this.field_z, 0, var4);
         }
     }
 

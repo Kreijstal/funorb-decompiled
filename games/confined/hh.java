@@ -191,7 +191,7 @@ final class hh {
           }
           var8 = param0.requestDisplayModes(5);
           while (var8.status == 0) {
-            jd.a(1, 10L);
+            jd.sleepMillis(1, 10L);
           }
           if (var8.status == 2) {
             stackIn_13_0 = new tl[]{};

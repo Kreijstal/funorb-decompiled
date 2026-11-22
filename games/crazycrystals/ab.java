@@ -49,7 +49,7 @@ abstract class ab extends og {
               if (0L > param1) {
                 var8Lifetime4 = var10 + "; Discard;";
               } else {
-                var8Lifetime4 = var10 + "; Expires=" + sm.a(lo.a((byte) -25) + param1 * 1000L, (byte) 121) + "; Max-Age=" + param1;
+                var8Lifetime4 = var10 + "; Expires=" + sm.a(lo.correctedCurrentTimeMillis((byte) -25) + param1 * 1000L, (byte) 121) + "; Max-Age=" + param1;
               }
               hi.a("document.cookie=\"" + var8Lifetime4 + "\"", param0, (byte) -79);
               return;

@@ -15,7 +15,7 @@ final class jd extends jh {
           if (null != vk.field_E && (param1 < 0 ||
             w.field_cb == ef.field_a)) {
             if (wa.field_d.position == 0 &&
-              km.b(-1) > 10000L + ak.field_k) {
+              km.correctedCurrentTimeMillis(-1) > 10000L + ak.field_k) {
               wa.field_d.f(-44, param1);
             }
             if (param0 > -48) {
@@ -24,7 +24,7 @@ final class jd extends jh {
             if (wa.field_d.position > 0) {
               try {
                 vk.field_E.a(0, wa.field_d.payload, (byte) 47, wa.field_d.position);
-                ak.field_k = km.b(-1);
+                ak.field_k = km.correctedCurrentTimeMillis(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

@@ -116,7 +116,7 @@ final class kg extends h {
               }
             }
             this.field_h = 0;
-            this.field_f = ll.a(1000);
+            this.field_f = ll.correctedCurrentTimeMillis(1000);
             if (param0 != -1456343840) {
               field_q = false;
             }
@@ -228,7 +228,7 @@ final class kg extends h {
           nh var2Lifetime1;
           var16 = Terraphoenix.field_V;
           if (null != this.field_p) {
-            var2_long = ll.a(1000);
+            var2_long = ll.correctedCurrentTimeMillis(1000);
             var4 = (int)(var2_long - this.field_f);
             if (200 < var4) {
               var4 = 200;

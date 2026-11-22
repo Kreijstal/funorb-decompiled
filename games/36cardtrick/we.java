@@ -128,7 +128,7 @@ final class we {
         if (param0 != 79) {
           return 102L;
         }
-        return id.a(85) - uk.field_a;
+        return id.correctedCurrentTimeMillis(85) - uk.field_a;
     }
 
     final static void b(int param0) {

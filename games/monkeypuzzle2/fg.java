@@ -8,7 +8,7 @@ abstract class fg {
     final int a(long param0, int param1) {
         long var4 = this.a(-43);
         if (var4 > 0L) {
-          em.a(var4, false);
+          em.sleepMillis(var4, false);
           if (param1 != -128) {
             this.a(31L, -83);
             return this.a(param0, (byte) 37);

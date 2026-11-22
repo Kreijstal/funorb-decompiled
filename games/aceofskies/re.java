@@ -22,7 +22,7 @@ final class re {
         field_f = param3 - param1;
         re.b();
         if (field_i.length < field_f) {
-          field_i = new int[fk.a(field_f, 40)];
+          field_i = new int[fk.roundUpPowerOfTwo(field_f, 40)];
         }
         int var4 = param1 * SoftwareRasterizer.stride + param0;
         for (int var5 = 0; var5 < field_f; var5++) {

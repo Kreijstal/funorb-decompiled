@@ -163,7 +163,7 @@ final class dl {
           }
           if (var3 == 0 &&
             ti.field_M == 2) {
-            var4 = -tl.field_o + sf.a((byte) -57);
+            var4 = -tl.field_o + sf.correctedCurrentTimeMillis((byte) -57);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

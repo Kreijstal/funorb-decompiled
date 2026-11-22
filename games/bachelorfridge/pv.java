@@ -21,14 +21,14 @@ class pv extends IntrusiveNode {
         return false;
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepIgnoringInterrupts(int param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
           try {
             Thread.sleep(param1);
             if (param0 != 20182) {
-              pv.a(24, -57L);
+              pv.sleepIgnoringInterrupts(24, -57L);
             }
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

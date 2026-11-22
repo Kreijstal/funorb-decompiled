@@ -604,7 +604,7 @@ final class gj extends TextureOperator {
               }
             }
             if (Archive.field_h != 0L) {
-              var9 = (int)(Archive.field_h - gk.a(param3 + 108));
+              var9 = (int)(Archive.field_h - gk.correctedCurrentTimeMillis(param3 + 108));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;

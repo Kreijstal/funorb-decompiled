@@ -20,7 +20,7 @@ class nh extends sk {
         if (param0 == ~am.field_c.status) {
           return false;
         }
-        dupTemp$2 = ih.a((byte) -98);
+        dupTemp$2 = ih.correctedCurrentTimeMillis((byte) -98);
         t.field_d = dupTemp$2;
         PacketBuffer.field_o = dupTemp$2;
         if (am.field_c.status != 1) {

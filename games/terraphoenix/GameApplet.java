@@ -57,7 +57,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !qi.field_f) {
             il.field_e = true;
             if (bh.field_f &&
-              ll.a(1000) - SpriteState.field_x > 1000L) {
+              ll.correctedCurrentTimeMillis(1000) - SpriteState.field_x > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < hd.field_i) {
@@ -311,7 +311,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (ae.field_M != 0L) {
-                    stackIn_103_0 = compareLongs(ae.field_M, ll.a(1000));
+                    stackIn_103_0 = compareLongs(ae.field_M, ll.correctedCurrentTimeMillis(1000));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_103_0 <= 0)) {
@@ -506,7 +506,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         java.awt.Insets var6 = null;
         try {
-          var2_long = ll.a(param0 + 1000);
+          var2_long = ll.correctedCurrentTimeMillis(param0 + 1000);
           var4 = bb.field_f[FullscreenFocusCanvas.field_b];
           bb.field_f[FullscreenFocusCanvas.field_b] = var2_long;
           if (var4 != 0L &&
@@ -552,7 +552,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = ll.a(1000);
+          var2_long = ll.correctedCurrentTimeMillis(1000);
           var4 = MouseWheelInput.field_d[o.field_b];
           MouseWheelInput.field_d[o.field_b] = var2_long;
           if (var4 != 0L &&
@@ -583,8 +583,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          ae.field_M = ll.a(1000);
-          gi.a((byte) -113, 5000L);
+          ae.field_M = ll.correctedCurrentTimeMillis(1000);
+          gi.sleepMillis((byte) -113, 5000L);
           d.field_K = null;
           this.a(true, false);
         } catch (RuntimeException runtimeException) {
@@ -675,7 +675,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           wb.field_d = true;
           il.field_e = true;
           ai.field_h = false;
-          SpriteState.field_x = ll.a(1000);
+          SpriteState.field_x = ll.correctedCurrentTimeMillis(1000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -690,7 +690,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          ae.field_M = ll.a(1000) + 4000L;
+          ae.field_M = ll.correctedCurrentTimeMillis(1000) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "eh.stop()");
         }
@@ -789,7 +789,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = DirectByteStorage.field_l.requestThread((Runnable) (this), (byte) -21, 1);
               while (true) {
                 if (var8.status == 0) {
-                  gi.a((byte) -56, 10L);
+                  gi.sleepMillis((byte) -56, 10L);
                   if (var9 == 0) {
                     continue;
                   }

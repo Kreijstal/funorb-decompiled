@@ -27,7 +27,7 @@ final class eb {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param0.field_d.peekEvent()) {
-              vj.a(1L, (byte) -49);
+              vj.sleepMillis(1L, (byte) -49);
               continue;
             }
             break;

@@ -251,7 +251,7 @@ final class cg extends gi {
           }
         }
         if (this.field_k &&
-          this.field_w <= lj.a((byte) -56)) {
+          this.field_w <= lj.correctedCurrentTimeMillis((byte) -56)) {
           var2 = (dl) (this.field_n.a(true));
           while (var2 != null) {
             if (!var2.field_q) {
@@ -266,7 +266,7 @@ final class cg extends gi {
             }
             var2 = (dl) (this.field_n.b((byte) 97));
           }
-          this.field_w = 1000L + lj.a((byte) -28);
+          this.field_w = 1000L + lj.correctedCurrentTimeMillis((byte) -28);
         }
     }
 

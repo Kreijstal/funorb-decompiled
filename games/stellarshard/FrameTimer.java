@@ -28,7 +28,7 @@ abstract class FrameTimer {
         if (var4 <= 0L) {
           return this.a(true, param0);
         }
-        jj.a((byte) -114, var4);
+        jj.sleepMillis((byte) -114, var4);
         return this.a(true, param0);
     }
 

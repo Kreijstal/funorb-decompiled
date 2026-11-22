@@ -36,7 +36,7 @@ final class bb {
 
     final static boolean a(byte param0) {
         oh.field_a = true;
-        ab.field_a = 15000L + la.a(false);
+        ab.field_a = 15000L + la.correctedCurrentTimeMillis(false);
         if (param0 == -103) {
           return af.field_b == 11 ? true : false;
         }

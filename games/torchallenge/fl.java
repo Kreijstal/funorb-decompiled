@@ -142,7 +142,7 @@ final class fl extends vb {
               }
             }
             this.field_g = 0;
-            this.field_j = ol.a(256);
+            this.field_j = ol.correctedCurrentTimeMillis(256);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -289,7 +289,7 @@ final class fl extends vb {
           db var2Lifetime1;
           var16 = TorChallenge.field_F ? 1 : 0;
           if (this.field_u != null) {
-            var2_long = ol.a(256);
+            var2_long = ol.correctedCurrentTimeMillis(256);
             var4 = (int)(var2_long - this.field_j);
             this.field_j = var2_long;
             if (var4 > 200) {

@@ -239,7 +239,7 @@ final class de extends wd {
           return;
         }
         if (this.field_r &&
-          this.field_o <= la.a(false)) {
+          this.field_o <= la.correctedCurrentTimeMillis(false)) {
           var2 = (lb) (this.field_v.b(-1));
           while (var2 != null) {
             if (!var2.field_u) {
@@ -254,7 +254,7 @@ final class de extends wd {
             }
             var2 = (lb) (this.field_v.a((byte) -114));
           }
-          this.field_o = la.a(false) + 1000L;
+          this.field_o = la.correctedCurrentTimeMillis(false) + 1000L;
         }
     }
 

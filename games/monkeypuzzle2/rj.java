@@ -40,7 +40,7 @@ class rj extends ButtonWidget {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_K = pf.a(0);
+          this.field_K = pf.correctedCurrentTimeMillis(0);
           var5_int = 84 / ((param3 - 37) / 50);
           if (param1 != 60 &&
             param1 != 62) {
@@ -183,7 +183,7 @@ class rj extends ButtonWidget {
           this.field_h = GzipDecompressor.field_b.field_o;
           this.a(true, -5905, param0);
           this.field_G = true;
-          this.field_K = pf.a(0);
+          this.field_K = pf.correctedCurrentTimeMillis(0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -253,7 +253,7 @@ class rj extends ButtonWidget {
         ui var9 = (ui) ((Object) this.field_h);
         if (this.field_D != this.field_E) {
           var9.a(119, (UiWidget) (this), this.field_D, param3, this.field_E, param2);
-          var6 = pf.a(param0 - 30);
+          var6 = pf.correctedCurrentTimeMillis(param0 - 30);
           if ((-this.field_K + var6) % 1000L < 500L) {
             var9.a((UiWidget) (this), param3, param2, this.field_E, 0);
             if (param0 == 30) {
@@ -270,7 +270,7 @@ class rj extends ButtonWidget {
           this.a(false, 120, (String) null);
           return;
         }
-        var6Lifetime1 = pf.a(param0 - 30);
+        var6Lifetime1 = pf.correctedCurrentTimeMillis(param0 - 30);
         if ((-this.field_K + var6Lifetime1) % 1000L < 500L) {
           var9.a((UiWidget) (this), param3, param2, this.field_E, 0);
           if (param0 == 30) {
@@ -309,7 +309,7 @@ class rj extends ButtonWidget {
                 this.field_E = var6;
               }
             }
-            this.field_K = pf.a(0);
+            this.field_K = pf.correctedCurrentTimeMillis(0);
           }
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "rj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -584,7 +584,7 @@ class rj extends ButtonWidget {
               stackIn_7_1 = var8_int;
             }
             this.a(stackIn_7_1, -120);
-            var8_long = pf.a(0);
+            var8_long = pf.correctedCurrentTimeMillis(0);
             stackIn_10_1 = !(250L <= var8_long - this.field_F);
             this.field_C = stackIn_10_1;
             if (this.field_C) {

@@ -20,10 +20,10 @@ final class rl extends r {
           while (true) {
             var3 = param1.requestFullscreenExit((byte) -39, param2);
             while (var3.status == 0) {
-              wk.a((byte) -114, 10L);
+              wk.sleepMillis((byte) -114, 10L);
             }
             if (var3.status != 1) {
-              wk.a((byte) -90, 100L);
+              wk.sleepMillis((byte) -90, 100L);
               continue;
             }
             break;

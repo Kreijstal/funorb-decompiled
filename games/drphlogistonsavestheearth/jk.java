@@ -352,7 +352,7 @@ final class jk extends si {
               }
               stackIn_73_0[stackIn_73_1] = stackIn_76_2;
             }
-            aa.field_d = la.a(false);
+            aa.field_d = la.correctedCurrentTimeMillis(false);
           }
           wg.field_k.field_e = mi.field_g.length;
           var3_intLifetime1 = 0;
@@ -463,7 +463,7 @@ final class jk extends si {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param2 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + bf.a(param2 * 1000L + la.a(false), (byte) -29) + "; Max-Age=" + param2;
+                var7Lifetime4 = var9 + "; Expires=" + bf.a(param2 * 1000L + la.correctedCurrentTimeMillis(false), (byte) -29) + "; Max-Age=" + param2;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

@@ -1340,7 +1340,7 @@ final class da extends ArchiveProvider {
             this.a((byte) 1);
           }
           if (this.field_D &&
-            ud.a(2) >= this.field_o) {
+            ud.correctedCurrentTimeMillis(2) >= this.field_o) {
             var2 = (ab) (this.field_j.a(true));
             while (var2 != null) {
               if (var5 != 0) {
@@ -1359,7 +1359,7 @@ final class da extends ArchiveProvider {
               }
               var2 = (ab) (this.field_j.b((byte) 124));
             }
-            this.field_o = ud.a(2) + 1000L;
+            this.field_o = ud.correctedCurrentTimeMillis(2) + 1000L;
             return;
           }
           return;

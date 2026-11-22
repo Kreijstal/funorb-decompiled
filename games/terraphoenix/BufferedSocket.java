@@ -105,7 +105,7 @@ final class BufferedSocket implements Runnable {
           var2 = -36 % ((-82 - obfuscationGuard) / 40);
           if (this.field_i != null) {
             while (0 == this.field_i.status) {
-              gi.a((byte) -26, 1L);
+              gi.sleepMillis((byte) -26, 1L);
             }
             if (this.field_i.status == 1) {
               try {

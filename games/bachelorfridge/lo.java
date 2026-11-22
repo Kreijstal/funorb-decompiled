@@ -59,7 +59,7 @@ final class lo {
             rba.field_b = stackIn_21_0;
             raa.e((byte) 31);
           }
-          if (f.b((byte) 73) > (3500L + cr.field_a)) {
+          if (f.correctedCurrentTimeMillis((byte) 73) > (3500L + cr.field_a)) {
             fieldTemp$0 = rba.field_b + 1;
             rba.field_b = rba.field_b + 1;
             if (fieldTemp$0 == BoundedRandomAccessFile.field_e.length) {

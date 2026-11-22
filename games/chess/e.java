@@ -43,7 +43,7 @@ final class e extends ma implements mj {
     }
 
     final static void h(byte param0) {
-        cf.field_Jb = ud.a(2);
+        cf.field_Jb = ud.correctedCurrentTimeMillis(2);
         s.field_K = 0;
         if (param0 != -120) {
           field_T = (String) null;

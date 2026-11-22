@@ -44,7 +44,7 @@ final class qf implements Runnable {
                 var2.serviceOutput();
               }
             }
-            jj.a((byte) -117, 10L);
+            jj.sleepMillis((byte) -117, 10L);
             Object var5 = (Object) null;
             ni.a(this.field_h, (Object) null, -117);
           }

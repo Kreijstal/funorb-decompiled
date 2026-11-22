@@ -238,7 +238,7 @@ final class ff implements Runnable {
                 var2.serviceOutput();
               }
             }
-            em.a(10L, false);
+            em.sleepMillis(10L, false);
             em.a((Object) null, (byte) -101, this.field_b);
           }
         } catch (Exception exception) {

@@ -170,7 +170,7 @@ abstract class gb extends GameAppletShell {
           dh.c(12);
           IntrusiveDeque.a(var2, n.field_c, (byte) 85);
           bg.field_ab = true;
-          ma.field_E = 15000L + ud.a(param0 + 2);
+          ma.field_E = 15000L + ud.correctedCurrentTimeMillis(param0 + 2);
           return var2;
         }
         if (11 != rm.field_Q) {
@@ -431,7 +431,7 @@ abstract class gb extends GameAppletShell {
             IntrusiveDeque.a(2, fe.field_e, (byte) 97);
             ia.a((byte) -121);
             bg.field_ab = true;
-            ma.field_E = 15000L + ud.a(2);
+            ma.field_E = 15000L + ud.correctedCurrentTimeMillis(2);
           }
         }
         var3Lifetime1 = 117 % ((param1 - 65) / 32);
@@ -448,7 +448,7 @@ abstract class gb extends GameAppletShell {
           }
           if (-1 != cf.field_Lb &&
             0 != cf.field_Lb) {
-            ma.field_E = 15000L + ud.a(2);
+            ma.field_E = 15000L + ud.correctedCurrentTimeMillis(2);
           }
         }
         if (cf.field_Lb != -1 &&
@@ -498,7 +498,7 @@ abstract class gb extends GameAppletShell {
         if ((cf.field_Lb != -1 &&
           cf.field_Lb != 0 ||
           nc.j(121)) &&
-          ud.a(2) >= ma.field_E) {
+          ud.correctedCurrentTimeMillis(2) >= ma.field_E) {
           bg.field_ab = false;
           if (cf.field_Lb != -1 &&
             0 != cf.field_Lb) {

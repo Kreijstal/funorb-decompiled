@@ -1494,7 +1494,7 @@ final class BucketBoard {
                 UiComponentPart013.integerState0275 = UiComponentPart013.integerState0275 + integerLocal47;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal47;
                 this.integerState0475 = this.integerState0475 + integerLocal18;
-                this.nodeDequeState0018.addFirst(new MixedSupport112(true, this.boardWidth * 128, this.boardWidth * -32, integerLocal18, NetworkSupport008.integerArrayState0176, -1 + MixedSupport051.computeInteger0604(integerLocal16, 63), 26, new String[]{" = <b>", Integer.toString(integerLocal18)}), 2777);
+                this.nodeDequeState0018.addFirst(new MixedSupport112(true, this.boardWidth * 128, this.boardWidth * -32, integerLocal18, NetworkSupport008.integerArrayState0176, -1 + MixedSupport051.countSetBits(integerLocal16, 63), 26, new String[]{" = <b>", Integer.toString(integerLocal18)}), 2777);
               }
             }
           }

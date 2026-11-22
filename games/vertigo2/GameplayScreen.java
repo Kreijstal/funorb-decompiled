@@ -393,7 +393,7 @@ final class GameplayScreen {
             }
             if (decompiledFrameCompleted0) {
               boolean decompiledFrameRemainder1 = true;
-              var5_long = gk.a(100);
+              var5_long = gk.correctedCurrentTimeMillis(100);
               var7_long = var5_long - this.field_j;
               var9 = (long)(-400 + 20 * var4);
               if (var9 < var7_long) {
@@ -1056,21 +1056,21 @@ final class GameplayScreen {
             if (param0.b(false, this.field_B)) {
               this.field_k = this.field_a.a((byte) -17, param0.b(this.field_B, -96));
               this.field_M = 10 + this.field_k + (param0.a((byte) 76, this.field_B) - 1);
-              this.field_j = gk.a(param1 ^ 52);
+              this.field_j = gk.correctedCurrentTimeMillis(param1 ^ 52);
               if (var5 != 0) {
                 this.field_M = this.field_M + (param0.a((byte) 76, this.field_B) - 1);
-                this.field_j = gk.a(param1 + 83);
+                this.field_j = gk.correctedCurrentTimeMillis(param1 + 83);
                 this.field_M = this.field_M + 10;
               }
             } else {
               this.field_M = this.field_M + (param0.a((byte) 76, this.field_B) - 1);
               if (var5 != 0) {
-                this.field_j = gk.a(param1 + 83);
+                this.field_j = gk.correctedCurrentTimeMillis(param1 + 83);
                 this.field_M = this.field_M + 10;
               }
             }
           } else {
-            this.field_j = gk.a(param1 + 83);
+            this.field_j = gk.correctedCurrentTimeMillis(param1 + 83);
             this.field_M = this.field_M + 10;
           }
           this.field_t = 0;

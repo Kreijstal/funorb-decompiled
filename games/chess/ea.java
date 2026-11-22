@@ -367,7 +367,7 @@ final class ea extends se {
 
     final static long i(byte param0) {
         int var1 = 40 % ((-84 - param0) / 36);
-        return -ml.field_d + ud.a(2);
+        return -ml.field_d + ud.correctedCurrentTimeMillis(2);
     }
 
     static {

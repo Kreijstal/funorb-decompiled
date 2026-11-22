@@ -339,7 +339,7 @@ final class gb {
               }
               stackIn_48_0[stackIn_48_1] = stackIn_51_2;
             }
-            am.field_a = ji.b(111);
+            am.field_a = ji.correctedCurrentTimeMillis(111);
           }
           ab.field_j.field_i = gg.field_O.length;
           var3_intLifetime1 = 0;

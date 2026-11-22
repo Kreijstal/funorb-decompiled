@@ -141,7 +141,7 @@ final class pc {
                         var1_int = ln.field_a.field_d;
                         var2 = ln.field_a.field_a;
                         var3 = ln.field_a.field_n;
-                        kf.a(cm.field_c, 0, var3);
+                        kf.clearInts(cm.field_c, 0, var3);
                         var4 = ln.field_a.field_c;
                         var5 = ln.field_a.field_e;
                         var6 = ln.field_a.field_q;
@@ -2897,7 +2897,7 @@ final class pc {
               }
               if (param3 >= 0L ||
                 HostileSpawn.field_I) {
-                var7 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 1000L * param3 + hn.a((byte) 80)) + "; Max-Age=" + param3;
+                var7 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 1000L * param3 + hn.correctedCurrentTimeMillis((byte) 80)) + "; Max-Age=" + param3;
               }
               a.a(param4, 17467, "document.cookie=\"" + var7 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

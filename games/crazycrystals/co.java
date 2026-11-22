@@ -106,7 +106,7 @@ final class co extends qm {
               var2.writeInt(ah.field_e, -16384);
               so.field_c.a(0, 114, var2.payload, 13);
               jh.field_e = jh.field_e + 1;
-              se.field_f = lo.a((byte) 114) + 30000L;
+              se.field_f = lo.correctedCurrentTimeMillis((byte) 114) + 30000L;
             }
             if (jh.field_e == 3) {
               if (so.field_c.c(0) > 0) {
@@ -117,7 +117,7 @@ final class co extends qm {
                 }
                 jh.field_e = jh.field_e + 1;
               } else {
-                if (lo.a((byte) -49) > se.field_f) {
+                if (lo.correctedCurrentTimeMillis((byte) -49) > se.field_f) {
                   stackIn_26_0 = se.a(-2, (byte) -103);
                   return stackIn_26_0;
                 }

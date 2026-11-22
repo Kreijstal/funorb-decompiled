@@ -649,7 +649,7 @@ final class ro extends kl {
                 regionExit1: {
                   this.field_o.a(ga.field_n, ce.field_v, -10872);
                   var3 = this.field_p.a(1, this.field_C);
-                  var4 = NetworkGameClient.a(var3, 8);
+                  var4 = NetworkGameClient.countSetBits(var3, 8);
                   if (var3 != 0) {
                     if (var4 <= 1) {
                       var9 = null;
@@ -737,7 +737,7 @@ final class ro extends kl {
             }
             this.field_o.a(ga.field_n, ce.field_v, -10872);
             var3Lifetime1 = this.field_p.a(1, this.field_C);
-            var4 = NetworkGameClient.a(var3Lifetime1, 8);
+            var4 = NetworkGameClient.countSetBits(var3Lifetime1, 8);
             if (var3Lifetime1 == 0) {
               var12 = l.field_f;
               var16 = var12;

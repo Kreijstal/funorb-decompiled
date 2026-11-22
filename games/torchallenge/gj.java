@@ -319,7 +319,7 @@ final class gj {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_47_2;
             }
-            IterableNodeHashTable.field_e = ol.a(256);
+            IterableNodeHashTable.field_e = ol.correctedCurrentTimeMillis(256);
           }
           ui.field_c.field_b = pe.field_db.length;
           var3_intLifetime1 = 0;

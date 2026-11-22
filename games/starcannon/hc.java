@@ -155,7 +155,7 @@ final class hc {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_o).append("&e=").append(var9).toString()));
             while (var4.status == 0) {
-              uc.a(-94, 1L);
+              uc.sleepMillis(-94, 1L);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);

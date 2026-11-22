@@ -33,7 +33,7 @@ final class hi {
     final boolean a(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 >= -41) {
-          hi.a(false, -36);
+          hi.countSetBits(false, -36);
         }
         stackIn_8_0 = (ck.field_I == this) || (this == pj.field_w) || (ll.field_Q == this);
         return stackIn_8_0;
@@ -91,7 +91,7 @@ final class hi {
               if (param1 < (long)param0) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + e.a(lk.a(0) + param1 * 1000L, (byte) -78) + "; Max-Age=" + param1;
+                var7Lifetime4 = var9 + "; Expires=" + e.a(lk.correctedCurrentTimeMillis(0) + param1 * 1000L, (byte) -78) + "; Max-Age=" + param1;
               }
               kj.a(12, "document.cookie=\"" + var7Lifetime4 + "\"", param4);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class hi {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int countSetBits(boolean param0, int param1) {
         if (param0) {
           return 34;
         }

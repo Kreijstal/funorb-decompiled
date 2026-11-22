@@ -149,7 +149,7 @@ final class fp extends tja {
           }
         }
         if (this.field_p &&
-          this.field_m <= f.b((byte) 73)) {
+          this.field_m <= f.correctedCurrentTimeMillis((byte) 73)) {
           var2 = (cga) (this.field_q.first(-13023));
           while (var2 != null) {
             if (!var2.field_n) {
@@ -164,7 +164,7 @@ final class fp extends tja {
             }
             var2 = (cga) (this.field_q.next(-21446));
           }
-          this.field_m = f.b((byte) 73) + 1000L;
+          this.field_m = f.correctedCurrentTimeMillis((byte) 73) + 1000L;
         }
         if (param0 != 14075) {
           this.field_m = -36L;

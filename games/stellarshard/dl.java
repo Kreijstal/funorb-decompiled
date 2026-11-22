@@ -16,7 +16,7 @@ final class dl extends dg {
     static String field_B;
     static int field_G;
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param1 = ((-1431655765 & param1) >>> 1) + (param1 & 1431655765);
         param1 = (858993459 & param1) + (param1 >>> 2 & -214748365);
         param1 = 252645135 & (param1 >>> 4) + param1;
@@ -186,7 +186,7 @@ final class dl extends dg {
           }
           var8 = param0.requestDisplayModes(103);
           while (var8.status == 0) {
-            jj.a((byte) -113, 10L);
+            jj.sleepMillis((byte) -113, 10L);
           }
           if (var8.status == 2) {
             stackIn_11_0 = new a[]{};

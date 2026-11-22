@@ -80,7 +80,7 @@ abstract class ha {
           return 126;
         }
         if (var4 > 0L) {
-          ub.a(1976, var4);
+          ub.sleepMillis(1976, var4);
         }
         return this.a(param1, true);
     }

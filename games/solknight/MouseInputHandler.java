@@ -46,7 +46,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             cf.field_e = 0;
             SocketConnector.field_a = param0.getX();
             ArchiveSource.field_d = param0.getY();
-            je.a(1);
+            je.correctedCurrentTimeMillis(1);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               SolKnight.field_G = 1;
               u.field_d = 1;
@@ -122,7 +122,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (0 == param1.length()) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + hc.a(je.a(1) + 94608000000L, param2 - 44825) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + hc.a(je.correctedCurrentTimeMillis(1) + 94608000000L, param2 - 44825) + "; Max-Age=" + 94608000L;
               }
               fd.a(32, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

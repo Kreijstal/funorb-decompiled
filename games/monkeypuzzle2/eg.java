@@ -40,7 +40,7 @@ final class eg {
           var8 = param0.requestDisplayModes((byte) -66);
           while (true) {
             if (var8.status == 0) {
-              em.a(10L, false);
+              em.sleepMillis(10L, false);
               if (var7 == 0) {
                 continue;
               }

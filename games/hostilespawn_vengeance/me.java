@@ -94,7 +94,7 @@ abstract class me extends wb {
           if (oa.field_l.status == 0) {
             return false;
           }
-          dupTemp$1 = hn.a((byte) 80);
+          dupTemp$1 = hn.correctedCurrentTimeMillis((byte) 80);
           gf.field_h = dupTemp$1;
           bb.field_c = dupTemp$1;
           if (oa.field_l.status != 1) {

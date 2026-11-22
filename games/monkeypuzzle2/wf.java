@@ -15,9 +15,9 @@ final class wf extends IntrusiveNode {
     final static long a(int param0) {
         if (param0 < 44) {
           wf.a(-105);
-          return pf.a(0) - d.field_k;
+          return pf.correctedCurrentTimeMillis(0) - d.field_k;
         }
-        return pf.a(0) - d.field_k;
+        return pf.correctedCurrentTimeMillis(0) - d.field_k;
     }
 
     public static void a(byte param0) {

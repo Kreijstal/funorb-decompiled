@@ -92,7 +92,7 @@ class rl extends kf {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_J = rf.c(0);
+          this.field_J = rf.correctedCurrentTimeMillis(0);
           var5_int = 32 / ((param3 + 13) / 55);
           if (param0 == 60) {
             return false;
@@ -239,7 +239,7 @@ class rl extends kf {
             stackIn_6_1 = 0;
           }
           this.a(stackIn_6_1, -124);
-          var8_long = rf.c(0);
+          var8_long = rf.correctedCurrentTimeMillis(0);
           stackIn_9_1 = !(250L <= -this.field_M + var8_long);
           this.field_K = stackIn_9_1;
           if (this.field_K) {
@@ -383,7 +383,7 @@ class rl extends kf {
             if (this.field_F != this.field_I) {
               var8.a(param1, param2, (w) (this), (byte) 31, this.field_I, this.field_F);
             }
-            var6 = rf.c(0);
+            var6 = rf.correctedCurrentTimeMillis(0);
             if ((var6 - this.field_J) % 1000L < 500L) {
               var8.a(this.field_F, param2, param1, (w) (this), true);
             }
@@ -450,7 +450,7 @@ class rl extends kf {
                 this.field_F = var6;
               }
             }
-            this.field_J = rf.c(param0 ^ -119);
+            this.field_J = rf.correctedCurrentTimeMillis(param0 ^ -119);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "rl.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -535,7 +535,7 @@ class rl extends kf {
           this.field_G = param2;
           this.a(param0, -1, true);
           this.field_N = true;
-          this.field_J = rf.c(0);
+          this.field_J = rf.correctedCurrentTimeMillis(0);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

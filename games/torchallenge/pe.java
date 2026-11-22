@@ -124,7 +124,7 @@ final class pe extends v {
               var2_int = param1 - id.field_b.position;
             }
             qf.field_a.a(-1, id.field_b.position, var2_int, id.field_b.payload);
-            ac.field_e = ol.a(256);
+            ac.field_e = ol.correctedCurrentTimeMillis(256);
             id.field_b.position = id.field_b.position + var2_int;
             if (!(param1 <= id.field_b.position)) {
               return false;

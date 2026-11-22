@@ -140,7 +140,7 @@ final class sj {
           var1_int = qe.field_E;
           var2 = 0;
           if (v.field_R == 2) {
-            var3_long = -jl.field_c + id.a(87);
+            var3_long = -jl.field_c + id.correctedCurrentTimeMillis(87);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

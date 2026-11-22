@@ -414,7 +414,7 @@ class vf implements fe, pj {
         return this.field_a.field_D + this.field_a.field_C;
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param0 = ((-1431655766 & param0) >>> 1) + (1431655765 & param0);
         param0 = (858993459 & param0) + ((-858993459 & param0) >>> 2);
         if (param1 != -29047) {
@@ -665,7 +665,7 @@ class vf implements fe, pj {
     public static void b(int param0) {
         field_e = null;
         if (param0 != -1) {
-          vf.a(-103, 57);
+          vf.countSetBits(-103, 57);
         }
         field_q = null;
         field_o = null;

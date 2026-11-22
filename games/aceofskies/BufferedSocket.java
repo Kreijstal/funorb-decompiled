@@ -249,7 +249,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_a) {
             while (this.field_a.status == 0) {
-              IntrusiveNode.a(1L, false);
+              IntrusiveNode.sleepMillis(1L, false);
             }
             if (1 == this.field_a.status) {
               try {

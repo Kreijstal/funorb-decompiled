@@ -22,7 +22,7 @@ final class hk {
         field_a = param3 - param1;
         hk.b();
         if (field_d.length < field_a) {
-          field_d = new int[ac.a(field_a, true)];
+          field_d = new int[ac.roundUpPowerOfTwo(field_a, true)];
         }
         int var4 = param1 * SoftwareRasterizer.field_a + param0;
         for (var5 = 0; var5 < field_a; var5++) {

@@ -30,7 +30,7 @@ final class ri {
           }
           var9 = param0.requestDisplayModes((byte) -116);
           while (var9.status == 0) {
-            fh.a(true, 10L);
+            fh.sleepMillis(true, 10L);
           }
           if (var9.status == 2) {
             stackIn_10_0 = new al[]{};

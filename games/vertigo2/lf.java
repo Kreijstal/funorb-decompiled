@@ -37,7 +37,7 @@ final class lf extends TextureOperator {
           if (lo.field_k != null && (0 > param1 ||
             bm.field_I == rg.field_d)) {
             if (0 == uh.field_Wb.position &&
-              (10000L + bm.field_H) < gk.a(55)) {
+              (10000L + bm.field_H) < gk.correctedCurrentTimeMillis(55)) {
               uh.field_Wb.writeCipheredByte(param1, 121);
             }
             if (param0 <= 37) {
@@ -46,7 +46,7 @@ final class lf extends TextureOperator {
             if (uh.field_Wb.position > 0) {
               try {
                 lo.field_k.a(0, uh.field_Wb.position, -93, uh.field_Wb.payload);
-                bm.field_H = gk.a(48);
+                bm.field_H = gk.correctedCurrentTimeMillis(48);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

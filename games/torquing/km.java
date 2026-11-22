@@ -48,7 +48,7 @@ final class km {
         }
     }
 
-    final synchronized static long b(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (var1 < j.field_p) {
           ResourceArchive.field_g = ResourceArchive.field_g + (-var1 + j.field_p);

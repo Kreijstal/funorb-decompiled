@@ -83,7 +83,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
           participants = campaign.participants;
           participantThenMissionIndex = 0;
           if (obfuscationGuard != 23948) {
-            SpriteButtonPainter.a(49L, 110);
+            SpriteButtonPainter.sleepMillis(49L, 110);
           }
           while (participantThenMissionIndex < participants.length) {
             participant = participants[participantThenMissionIndex];
@@ -126,7 +126,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
         this(2188450, 2591221, 9543);
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         if (param0 <= (long)param1) {
           return;
         }
@@ -140,7 +140,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
 
     final static ResourceArchive a(int param0, boolean param1) {
         if (!param1) {
-          SpriteButtonPainter.a(-81L, -76);
+          SpriteButtonPainter.sleepMillis(-81L, -76);
         }
         return CheckBoxWidgetPainter.a(param0, true, 1, false, false, 1);
     }

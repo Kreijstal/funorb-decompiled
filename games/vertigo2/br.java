@@ -28,10 +28,10 @@ final class br extends kp implements ik {
           while (true) {
             var3 = param1.requestExitFullscreen(false, param0);
             while (var3.status == 0) {
-              um.a(true, 10L);
+              um.sleepMillis(true, 10L);
             }
             if (var3.status != 1) {
-              um.a(true, 100L);
+              um.sleepMillis(true, 100L);
               continue;
             }
             break;

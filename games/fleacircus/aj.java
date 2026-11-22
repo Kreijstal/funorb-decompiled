@@ -135,7 +135,7 @@ final class aj extends DualLinkNode {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param2.field_a.peekEvent()) {
-              vh.a(1L, 49);
+              vh.sleepMillis(1L, 49);
               continue;
             }
             break;

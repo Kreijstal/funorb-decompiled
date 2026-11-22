@@ -50,7 +50,7 @@ final class MixedSupport117 {
         if (integerArgument1 != -1) {
           MixedSupport117.performAction1526((String) null, (int[]) null, 24, (SceneWidgetPart008) null, (SceneWidget) null, (String) null, -106L, 12, -60);
         }
-        return -MixedSupport095.longState0040 + MixedSupport062.computeLong0734(4);
+        return -MixedSupport095.longState0040 + MixedSupport062.correctedCurrentTimeMillis(4);
     }
 
     static {

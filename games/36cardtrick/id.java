@@ -18,7 +18,7 @@ final class id {
           field_d = null;
           return;
         }
-        id.a(8);
+        id.correctedCurrentTimeMillis(8);
         field_e = null;
         field_a = null;
         field_f = null;
@@ -29,19 +29,19 @@ final class id {
         if (mf.field_i <= 10) {
           wf.a(0, -12);
           if (param0 <= 96) {
-            id.a(78);
+            id.correctedCurrentTimeMillis(78);
             return;
           }
           return;
         }
         wf.a(-10 + mf.field_i, -22);
         if (param0 <= 96) {
-          id.a(78);
+          id.correctedCurrentTimeMillis(78);
           return;
         }
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 >= 21) {

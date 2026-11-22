@@ -270,7 +270,7 @@ final class ec extends ta implements ai {
     final static boolean k(int param0) {
         if (param0 == 783) {
           pc.field_Y = true;
-          lm.field_c = ji.b(114) + 15000L;
+          lm.field_c = ji.correctedCurrentTimeMillis(114) + 15000L;
           return hi.field_k == 11 ? true : false;
         }
         return false;

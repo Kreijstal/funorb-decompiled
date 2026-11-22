@@ -252,7 +252,7 @@ class id extends ik {
               }
               stackIn_45_0[stackIn_45_1] = stackIn_46_2;
             }
-            ug.field_x = rf.c(0);
+            ug.field_x = rf.correctedCurrentTimeMillis(0);
           }
           bc.field_H.field_h = ik.field_g.length;
           var3_intLifetime1 = 0;

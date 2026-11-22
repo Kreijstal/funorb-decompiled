@@ -89,7 +89,7 @@ final class g extends w {
               }
             }
             this.field_k = 0;
-            this.field_m = lj.a((byte) -67);
+            this.field_m = lj.correctedCurrentTimeMillis((byte) -67);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -255,7 +255,7 @@ final class g extends w {
           fk var2Lifetime1;
           var16 = fleas.field_A ? 1 : 0;
           if (null != this.field_v) {
-            var2_long = lj.a((byte) -24);
+            var2_long = lj.correctedCurrentTimeMillis((byte) -24);
             var4 = (int)(-this.field_m + var2_long);
             if (var4 > 200) {
               var4 = 200;

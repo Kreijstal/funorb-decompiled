@@ -34,7 +34,7 @@ final class wo extends IntrusiveNode {
               var2_int = param0 - IntKeyLookup.incomingPacket.position;
             }
             MidiNote.field_l.a(IntKeyLookup.incomingPacket.position, var2_int, IntKeyLookup.incomingPacket.payload, true);
-            ff.field_b = kh.a(-127);
+            ff.field_b = kh.correctedCurrentTimeMillis(-127);
             IntKeyLookup.incomingPacket.position = IntKeyLookup.incomingPacket.position + var2_int;
             if (!(IntKeyLookup.incomingPacket.position >= param0)) {
               return false;

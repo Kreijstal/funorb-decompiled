@@ -267,7 +267,7 @@ public final class Vertigo2 extends GameShell {
             }
             if (lc.field_f == 14) {
               g.b(7);
-              so.a(un.b((byte) 114), 3, 150, 1024, re.c(-1087), rm.field_A, th.a(true), qp.a(2000, 70), 113, qp.a(8, 72));
+              so.a(un.b((byte) 114), 3, 150, 1024, re.c(-1087), rm.field_A, th.a(true), qp.roundUpPowerOfTwo(2000, 70), 113, qp.roundUpPowerOfTwo(8, 72));
               wn.a(-122, SecondaryNodeDequeIterator.a(true), pp.a(12));
               rg.field_b = false;
               oj.field_P = true;

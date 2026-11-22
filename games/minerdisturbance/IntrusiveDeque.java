@@ -26,7 +26,7 @@ final class IntrusiveDeque {
               var2_int = -kj.field_a.position + param1;
             }
             ci.field_i.a(false, kj.field_a.payload, kj.field_a.position, var2_int);
-            sk.field_c = sf.a((byte) -15);
+            sk.field_c = sf.correctedCurrentTimeMillis((byte) -15);
             kj.field_a.position = kj.field_a.position + var2_int;
             if (kj.field_a.position < param1) {
               return false;

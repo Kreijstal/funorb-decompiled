@@ -440,7 +440,7 @@ final class tb extends uj {
           }
         }
         if (this.field_B &&
-          ll.a(1000) >= this.field_g) {
+          ll.correctedCurrentTimeMillis(1000) >= this.field_g) {
           var2 = (rf) (this.field_q.a((byte) 117));
           while (var2 != null) {
             if (!var2.field_A) {
@@ -455,7 +455,7 @@ final class tb extends uj {
             }
             var2 = (rf) (this.field_q.a(true));
           }
-          this.field_g = ll.a(1000) + 1000L;
+          this.field_g = ll.correctedCurrentTimeMillis(1000) + 1000L;
         }
     }
 

@@ -114,7 +114,7 @@ final class hl {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + td.a(ol.a(256) + 94608000000L, (byte) -8) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + td.a(ol.correctedCurrentTimeMillis(256) + 94608000000L, (byte) -8) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

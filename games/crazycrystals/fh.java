@@ -46,26 +46,26 @@ final class fh extends ln {
         super(param0, param1, param2, param3);
     }
 
-    final static void a(boolean param0, long param1) {
+    final static void sleepMillis(boolean param0, long param1) {
         if (0L >= param1) {
           return;
         }
         if (!param0) {
           field_j = (String) null;
           if (0L == param1 % 10L) {
-            g.a((byte) -98, -1L + param1);
-            g.a((byte) 6, 1L);
+            g.sleepIgnoringInterrupts((byte) -98, -1L + param1);
+            g.sleepIgnoringInterrupts((byte) 6, 1L);
           } else {
-            g.a((byte) 112, param1);
+            g.sleepIgnoringInterrupts((byte) 112, param1);
             return;
           }
           return;
         }
         if (0L == param1 % 10L) {
-          g.a((byte) -98, -1L + param1);
-          g.a((byte) 6, 1L);
+          g.sleepIgnoringInterrupts((byte) -98, -1L + param1);
+          g.sleepIgnoringInterrupts((byte) 6, 1L);
         } else {
-          g.a((byte) 112, param1);
+          g.sleepIgnoringInterrupts((byte) 112, param1);
           return;
         }
     }

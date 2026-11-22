@@ -104,10 +104,10 @@ final class qp {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         if (param1 < 47) {
-          qp.a(-86, 78);
+          qp.roundUpPowerOfTwo(-86, 78);
         }
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -121,7 +121,7 @@ final class qp {
         field_g = null;
         field_c = null;
         if (param0 != -19721) {
-          qp.a(52, -56);
+          qp.roundUpPowerOfTwo(52, -56);
         }
         field_h = null;
     }

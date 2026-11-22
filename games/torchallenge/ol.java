@@ -137,7 +137,7 @@ final class ol {
         }
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (var1 < vk.field_f) {
           mh.field_f = mh.field_f + (-var1 + vk.field_f);

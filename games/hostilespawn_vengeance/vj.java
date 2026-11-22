@@ -140,7 +140,7 @@ final class vj extends ql {
     final String a(boolean param0) {
         int var2;
         if (param0) {
-          vj.a(85L, (byte) 61);
+          vj.sleepMillis(85L, (byte) 61);
         }
         var2 = ha.field_t;
         if (var2 == 15) {
@@ -231,7 +231,7 @@ final class vj extends ql {
         }
     }
 
-    final static void a(long param0, byte param1) {
+    final static void sleepMillis(long param0, byte param1) {
         if (param1 != -49) {
           return;
         }
@@ -239,10 +239,10 @@ final class vj extends ql {
           return;
         }
         if (0L != param0 % 10L) {
-          pk.a(207, param0);
+          pk.sleepIgnoringInterrupts(207, param0);
         } else {
-          pk.a(207, param0 - 1L);
-          pk.a(207, 1L);
+          pk.sleepIgnoringInterrupts(207, param0 - 1L);
+          pk.sleepIgnoringInterrupts(207, 1L);
         }
     }
 

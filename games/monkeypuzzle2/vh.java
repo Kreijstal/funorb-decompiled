@@ -93,7 +93,7 @@ final class vh extends ButtonWidget {
           if (wh.field_b != dk.field_h) {
             return false;
           }
-          var2_long = pf.a(0);
+          var2_long = pf.correctedCurrentTimeMillis(0);
           if (ff.field_g != 0 &&
             sb.field_f < 0) {
             var4_ref_nh = (nh) (cb.field_a.beginBackward((byte) -117));

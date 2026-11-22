@@ -364,7 +364,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             uc.field_eb = 0;
             GameAppletShell.field_j = param0.getX();
             GzipDecompressor.field_b = param0.getY();
-            rf.c(0);
+            rf.correctedCurrentTimeMillis(0);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               lj.field_a = 1;
               bb.field_I = 1;

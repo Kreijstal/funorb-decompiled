@@ -13,7 +13,7 @@ final class ri {
         field_a = null;
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (var1 < ci.field_c) {
           im.field_d = im.field_d + (ci.field_c - var1);
@@ -33,7 +33,7 @@ final class ri {
           param2.field_a = param0.field_a;
           param2.field_h = param0;
           if (param1 != 0) {
-            ri.a(-89);
+            ri.correctedCurrentTimeMillis(-89);
           }
           param2.field_a.field_h = param2;
           param2.field_h.field_a = param2;

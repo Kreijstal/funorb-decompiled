@@ -358,7 +358,7 @@ class CreatureProfile extends IntrusiveNode {
             this.field_h.addLast(new ho(fw.field_h[param0.readUnsignedByte(16711935)], param0.readUnsignedByte(16711935)), true);
           }
           var4Lifetime1 = param0.readUnsignedMedium(3);
-          this.field_j = new int[rfa.a(param1, var4Lifetime1) + 1];
+          this.field_j = new int[rfa.countSetBits(param1, var4Lifetime1) + 1];
           this.field_j[1] = this.field_o.field_g.field_b[1];
           this.field_j[0] = this.field_o.field_g.field_b[0];
           var5 = 2;

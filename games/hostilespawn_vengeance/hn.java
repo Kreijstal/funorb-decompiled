@@ -8,7 +8,7 @@ final class hn {
     static int field_a;
     static int field_b;
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long correctedCurrentTimeMillis(byte param0) {
         long var1 = System.currentTimeMillis();
         if (ResourceArchive.field_e > var1) {
           td.field_c = td.field_c + (-var1 + ResourceArchive.field_e);
@@ -30,7 +30,7 @@ final class hn {
         field_d = null;
         field_e = null;
         if (param0) {
-          hn.a((byte) 43);
+          hn.correctedCurrentTimeMillis((byte) 43);
         }
     }
 

@@ -342,7 +342,7 @@ final class le extends di {
           if (bd.field_k.status == 0) {
             return false;
           }
-          dupTemp$1 = ll.a(1000);
+          dupTemp$1 = ll.correctedCurrentTimeMillis(1000);
           bl.field_h = dupTemp$1;
           dm.field_c = dupTemp$1;
           if (1 != bd.field_k.status) {

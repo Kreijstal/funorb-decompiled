@@ -200,7 +200,7 @@ class ig extends ph {
             if (this.field_J != this.field_K) {
               var8.a(param1, (byte) 41, this.field_K, (ag) (this), param0, this.field_J);
             }
-            var6 = hn.a((byte) 80);
+            var6 = hn.correctedCurrentTimeMillis((byte) 80);
             if ((-this.field_M + var6) % 1000L < 500L) {
               var8.a(param0, (ag) (this), this.field_J, 0, param1);
             }
@@ -235,7 +235,7 @@ class ig extends ph {
             stackIn_6_1 = var8_int;
           }
           this.a(stackIn_6_1, param4 ^ 12);
-          var8_long = hn.a((byte) 80);
+          var8_long = hn.correctedCurrentTimeMillis((byte) 80);
           stackIn_9_1 = !(250L <= -this.field_Q + var8_long);
           this.field_I = stackIn_9_1;
           if (this.field_I) {
@@ -453,7 +453,7 @@ class ig extends ph {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_M = hn.a((byte) 80);
+          this.field_M = hn.correctedCurrentTimeMillis((byte) 80);
           if (param3 != 60 &&
             62 != param3) {
             if (param3 >= 32 &&
@@ -740,7 +740,7 @@ class ig extends ph {
                 this.field_J = var6;
               }
             }
-            this.field_M = hn.a((byte) 80);
+            this.field_M = hn.correctedCurrentTimeMillis((byte) 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -767,7 +767,7 @@ class ig extends ph {
           this.field_P = param2;
           this.a((byte) 57, true, param0);
           this.field_G = true;
-          this.field_M = hn.a((byte) 80);
+          this.field_M = hn.correctedCurrentTimeMillis((byte) 80);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

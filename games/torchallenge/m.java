@@ -74,7 +74,7 @@ final class m {
           var1_int = jl.field_e;
           var2 = 0;
           if (RandomAccessCacheFile.field_c == 2) {
-            var3_long = ol.a(256) - IterableNodeHashTable.field_e;
+            var3_long = ol.correctedCurrentTimeMillis(256) - IterableNodeHashTable.field_e;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;

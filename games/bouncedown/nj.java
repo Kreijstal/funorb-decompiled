@@ -322,7 +322,7 @@ final class nj extends al {
               }
               stackIn_72_0[stackIn_72_1] = stackIn_75_2;
             }
-            gd.field_a = fa.a(109);
+            gd.field_a = fa.correctedCurrentTimeMillis(109);
           }
           cf.field_f.field_f = CipherPacketBuffer.field_n.length;
           if (param1 != -25698) {

@@ -110,7 +110,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (IntKeyLookup.activeGameShell == this &&
             !PcmPlayerService.clientShutdownStarted) {
             ActionRequest.shutdownDeadlineMillis = MonotonicClockSupport.monotonicMillis(-46);
-            SpriteButtonPainter.a(5000L, 0);
+            SpriteButtonPainter.sleepMillis(5000L, 0);
             PacketBuffer.field_s = null;
             this.shutdownShell(false, -1251);
             return;
@@ -226,7 +226,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var8 = IntPair.field_m.startThreadAsync(1, 0, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  SpriteButtonPainter.a(10L, obfuscationGuard ^ 10);
+                  SpriteButtonPainter.sleepMillis(10L, obfuscationGuard ^ 10);
                   if (var9 == 0) {
                     continue;
                   }

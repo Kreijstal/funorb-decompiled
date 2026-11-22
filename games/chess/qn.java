@@ -64,7 +64,7 @@ class qn extends fb {
             stackIn_7_1 = 0;
           }
           this.a(stackIn_7_1, (byte) 80);
-          var8_long = ud.a(2);
+          var8_long = ud.correctedCurrentTimeMillis(2);
           stackIn_10_1 = !(var8_long - this.field_O >= 250L);
           this.field_S = stackIn_10_1;
           if (this.field_S) {
@@ -207,7 +207,7 @@ class qn extends fb {
             if (this.field_Q != this.field_X) {
               var8.a((mf) (this), param3, this.field_Q, param0, 122, this.field_X);
             }
-            var6 = ud.a(2);
+            var6 = ud.correctedCurrentTimeMillis(2);
             if (500L > (-this.field_V + var6) % 1000L) {
               var8.a(param3, this.field_Q, param0, (byte) -125, (mf) (this));
             }
@@ -285,7 +285,7 @@ class qn extends fb {
           this.field_T = param2;
           this.a(0, true, param0);
           this.field_W = true;
-          this.field_V = ud.a(2);
+          this.field_V = ud.correctedCurrentTimeMillis(2);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -382,7 +382,7 @@ class qn extends fb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_V = ud.a(2);
+          this.field_V = ud.correctedCurrentTimeMillis(2);
           if (param0 == 60) {
             return false;
           }
@@ -614,7 +614,7 @@ class qn extends fb {
                 this.field_Q = var6;
               }
             }
-            this.field_V = ud.a(2);
+            this.field_V = ud.correctedCurrentTimeMillis(2);
           }
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "qn.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

@@ -99,7 +99,7 @@ final class hi {
           var1_int = rf.field_c;
           var2 = param0;
           if (sh.field_a == 2) {
-            var3_long = -ug.field_x + rf.c(param0 + 0);
+            var3_long = -ug.field_x + rf.correctedCurrentTimeMillis(param0 + 0);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

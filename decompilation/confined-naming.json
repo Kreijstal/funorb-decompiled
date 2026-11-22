@@ -1532,6 +1532,14 @@
       "renamedSymbol": "M:jd.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:jd.a(IJ)V",
+      "originalName": "a",
+      "to": "sleepMillis",
+      "evidence": "Retain the guarded millisecond delay helper,including the original delay-1 then1 split for multiples of ten where specified. Preserve parameter-derived threshold/modulo behavior,inner helper arguments,all guard effects,early returns and exception wrappers. Complete original-body SHA256 a7f1a1cf0494f13b8e5ce0c48bc06dff66a5a4d602dc06f945ab2a349dfd50ed. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jd.sleepMillis(IJ)V"
+    },
+    {
       "symbol": "M:je.c(I)V",
       "originalName": "c",
       "to": "clearStaticReferences",
@@ -1892,6 +1900,14 @@
       "renamedSymbol": "M:km.bitLength(II)I"
     },
     {
+      "symbol": "M:lb.a(II)I",
+      "originalName": "a",
+      "to": "roundUpPowerOfTwo",
+      "evidence": "Round an integer through decrement,OR with unsigned shifts1,2,4,8,16,and increment. Retain exact signed32-bit overflow,all argument positions,guard thresholds,partial evaluation,early returns,field writes and diagnostic wrappers. Complete original-body SHA256 5bacce1af152fcb512919dea969c1028b5e048fbdf7ca06a7d9189fc18267fba. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:lb.roundUpPowerOfTwo(II)I"
+    },
+    {
       "symbol": "M:lc.b(B)Lin;",
       "originalName": "b",
       "to": "pollAccountCreationResult",
@@ -1922,6 +1938,14 @@
       "evidence": "Complete overlap-aware byte range implementation reviewed: equal-index no-op, forward8-byte blocks/tail and backward overlap8-byte blocks/tail. Preserve arithmetic, bounds/partial-write behavior and pointer order; do not replace with System.arraycopy.",
       "confidence": "reviewed",
       "renamedSymbol": "M:lj.copyByteRange([BI[BII)V"
+    },
+    {
+      "symbol": "M:lj.a([III)V",
+      "originalName": "a",
+      "to": "clearInts",
+      "evidence": "Zero an int-array segment using the original eight sequential stores per unrolled iteration and scalar tail. Retain start/count arithmetic overflow,null/index exceptions and partial writes;do not substitute a library fill. Complete original-body SHA256 b3d53399488c4b1eb25cb619da620df3b5fedda0a1a29e454ee47e028fd4bdb6. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:lj.clearInts([III)V"
     },
     {
       "symbol": "M:lm.a(I)Ljl;",
@@ -2356,6 +2380,14 @@
       "renamedSymbol": "M:rg.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ri.a(I)J",
+      "originalName": "a",
+      "to": "correctedCurrentTimeMillis",
+      "evidence": "Read System.currentTimeMillis,apply the original retained correction when the sampled clock goes backwards,update the retained sample and return the corrected time where the original guard permits. Preserve synchronization and every game-specific guard,sentinel,recursive call,arithmetic trap and update order. Complete original-body SHA256 fc82ae6b6b885e85c895ce8cff57ca57e4bbb74fb5f0bd65a02cf4e88b40bbb4. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ri.correctedCurrentTimeMillis(I)J"
+    },
+    {
       "symbol": "M:rk.a(Z)V",
       "originalName": "a",
       "to": "unlink",
@@ -2708,6 +2740,14 @@
       "renamedSymbol": "M:AccountRequestState.encodeCp1252Range([BBLjava/lang/CharSequence;III)I"
     },
     {
+      "symbol": "M:vf.a(II)I",
+      "originalName": "a",
+      "to": "countSetBits",
+      "evidence": "Count set bits through the original masked parallel sums and shifts1,2,4,8,16,then low-byte accumulation. Extra arguments may be real stage masks,guard predicates or arithmetic traps;retain every actual slot and all bad-domain side effects/sentinels. Complete original-body SHA256 4369a12b2881409a5a225f254824fb4c0cb04cfbfc6ba92323c9eaecf2bb1663. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:vf.countSetBits(II)I"
+    },
+    {
       "symbol": "M:vl.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2722,6 +2762,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 2a58de4a69d1bbf016e55908730bd9f8d4938fc172c6159eccd2b39c5951ed80.",
       "confidence": "reviewed",
       "renamedSymbol": "M:vm.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:wd.a(JI)V",
+      "originalName": "a",
+      "to": "sleepIgnoringInterrupts",
+      "evidence": "Call Thread.sleep with the original full long delay slot and catch InterruptedException as originally recovered. Retain pre/post sleep guards and side effects,early returns,recursive calls,arithmetic failures,outer unchecked rethrows and checked-Throwable wrapping. Complete original-body SHA256 d23ae7a9798b6badb862fd903122384effb860555d6aa76858f5397fe71ed229. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wd.sleepIgnoringInterrupts(JI)V"
     },
     {
       "symbol": "M:wi.b(B)V",
@@ -164553,7 +164601,7 @@
     },
     {
       "symbol": "L:ri.a(I)J#0",
-      "renamedSymbol": "L:ri.a(I)J#0",
+      "renamedSymbol": "L:ri.correctedCurrentTimeMillis(I)J#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -193472,7 +193520,7 @@
     },
     {
       "symbol": "L:wd.a(JI)V#0",
-      "renamedSymbol": "L:wd.a(JI)V#0",
+      "renamedSymbol": "L:wd.sleepIgnoringInterrupts(JI)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -193483,7 +193531,7 @@
     },
     {
       "symbol": "L:wd.a(JI)V#1",
-      "renamedSymbol": "L:wd.a(JI)V#1",
+      "renamedSymbol": "L:wd.sleepIgnoringInterrupts(JI)V#1",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -193494,7 +193542,7 @@
     },
     {
       "symbol": "L:wd.a(JI)V#2",
-      "renamedSymbol": "L:wd.a(JI)V#2",
+      "renamedSymbol": "L:wd.sleepIgnoringInterrupts(JI)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -193505,7 +193553,7 @@
     },
     {
       "symbol": "L:wd.a(JI)V#3",
-      "renamedSymbol": "L:wd.a(JI)V#3",
+      "renamedSymbol": "L:wd.sleepIgnoringInterrupts(JI)V#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -193516,7 +193564,7 @@
     },
     {
       "symbol": "L:wd.a(JI)V#4",
-      "renamedSymbol": "L:wd.a(JI)V#4",
+      "renamedSymbol": "L:wd.sleepIgnoringInterrupts(JI)V#4",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -193527,7 +193575,7 @@
     },
     {
       "symbol": "L:wd.a(JI)V#5",
-      "renamedSymbol": "L:wd.a(JI)V#5",
+      "renamedSymbol": "L:wd.sleepIgnoringInterrupts(JI)V#5",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -208058,9 +208106,9 @@
     },
     {
       "symbol": "M:jd.a(IJ)V",
-      "renamedSymbol": "M:jd.a(IJ)V",
+      "renamedSymbol": "M:jd.sleepMillis(IJ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sleepMillis",
       "declaration": {
         "file": "jd.java",
         "start": 1130,
@@ -210852,9 +210900,9 @@
     },
     {
       "symbol": "M:lb.a(II)I",
-      "renamedSymbol": "M:lb.a(II)I",
+      "renamedSymbol": "M:lb.roundUpPowerOfTwo(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "roundUpPowerOfTwo",
       "declaration": {
         "file": "lb.java",
         "start": 5669,
@@ -211457,9 +211505,9 @@
     },
     {
       "symbol": "M:lj.a([III)V",
-      "renamedSymbol": "M:lj.a([III)V",
+      "renamedSymbol": "M:lj.clearInts([III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearInts",
       "declaration": {
         "file": "lj.java",
         "start": 77,
@@ -218739,9 +218787,9 @@
     },
     {
       "symbol": "M:ri.a(I)J",
-      "renamedSymbol": "M:ri.a(I)J",
+      "renamedSymbol": "M:ri.correctedCurrentTimeMillis(I)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "correctedCurrentTimeMillis",
       "declaration": {
         "file": "ri.java",
         "start": 333,
@@ -223700,9 +223748,9 @@
     },
     {
       "symbol": "M:vf.a(II)I",
-      "renamedSymbol": "M:vf.a(II)I",
+      "renamedSymbol": "M:vf.countSetBits(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "countSetBits",
       "declaration": {
         "file": "vf.java",
         "start": 16569,
@@ -224998,9 +225046,9 @@
     },
     {
       "symbol": "M:wd.a(JI)V",
-      "renamedSymbol": "M:wd.a(JI)V",
+      "renamedSymbol": "M:wd.sleepIgnoringInterrupts(JI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sleepIgnoringInterrupts",
       "declaration": {
         "file": "wd.java",
         "start": 3135,
@@ -254181,7 +254229,7 @@
     },
     {
       "symbol": "P:jd.a(IJ)V#0",
-      "renamedSymbol": "P:jd.a(IJ)V#0",
+      "renamedSymbol": "P:jd.sleepMillis(IJ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -254192,7 +254240,7 @@
     },
     {
       "symbol": "P:jd.a(IJ)V#1",
-      "renamedSymbol": "P:jd.a(IJ)V#1",
+      "renamedSymbol": "P:jd.sleepMillis(IJ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260616,7 +260664,7 @@
     },
     {
       "symbol": "P:lb.a(II)I#0",
-      "renamedSymbol": "P:lb.a(II)I#0",
+      "renamedSymbol": "P:lb.roundUpPowerOfTwo(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260627,7 +260675,7 @@
     },
     {
       "symbol": "P:lb.a(II)I#1",
-      "renamedSymbol": "P:lb.a(II)I#1",
+      "renamedSymbol": "P:lb.roundUpPowerOfTwo(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262134,7 +262182,7 @@
     },
     {
       "symbol": "P:lj.a([III)V#0",
-      "renamedSymbol": "P:lj.a([III)V#0",
+      "renamedSymbol": "P:lj.clearInts([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262145,7 +262193,7 @@
     },
     {
       "symbol": "P:lj.a([III)V#1",
-      "renamedSymbol": "P:lj.a([III)V#1",
+      "renamedSymbol": "P:lj.clearInts([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262156,7 +262204,7 @@
     },
     {
       "symbol": "P:lj.a([III)V#2",
-      "renamedSymbol": "P:lj.a([III)V#2",
+      "renamedSymbol": "P:lj.clearInts([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281648,7 +281696,7 @@
     },
     {
       "symbol": "P:ri.a(I)J#0",
-      "renamedSymbol": "P:ri.a(I)J#0",
+      "renamedSymbol": "P:ri.correctedCurrentTimeMillis(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294023,7 +294071,7 @@
     },
     {
       "symbol": "P:vf.a(II)I#0",
-      "renamedSymbol": "P:vf.a(II)I#0",
+      "renamedSymbol": "P:vf.countSetBits(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294034,7 +294082,7 @@
     },
     {
       "symbol": "P:vf.a(II)I#1",
-      "renamedSymbol": "P:vf.a(II)I#1",
+      "renamedSymbol": "P:vf.countSetBits(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -296806,7 +296854,7 @@
     },
     {
       "symbol": "P:wd.a(JI)V#0",
-      "renamedSymbol": "P:wd.a(JI)V#0",
+      "renamedSymbol": "P:wd.sleepIgnoringInterrupts(JI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -296817,7 +296865,7 @@
     },
     {
       "symbol": "P:wd.a(JI)V#1",
-      "renamedSymbol": "P:wd.a(JI)V#1",
+      "renamedSymbol": "P:wd.sleepIgnoringInterrupts(JI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -299764,7 +299812,7 @@
       "original": "af.java",
       "renamed": "af.java",
       "inputSha256": "3867f877a7bc56ca27610494dd0e1b7491f8b8a85c1cf94f6fe55e32f4c77be6",
-      "outputSha256": "acfd92f9689a28571fcc2a61afeb1e8f21db45a66e291cf38852e95b69226b87",
+      "outputSha256": "f105253b36d67e62c9dfb2092270b0da2f33313592e9e69fccaa297e6bd30f39",
       "edits": [
         {
           "start": 77,
@@ -299821,6 +299869,13 @@
           "symbol": "F:bc.field_g:I",
           "original": "field_g",
           "renamed": "status"
+        },
+        {
+          "start": 3434,
+          "end": 3435,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 3498,
@@ -301250,7 +301305,7 @@
       "original": "bh.java",
       "renamed": "MouseInput.java",
       "inputSha256": "ea0252f3a4bb7c2820ffc54ed97653b2b5216f71231e9935f5c209dc3860a944",
-      "outputSha256": "438cb2dc7269f6b1dc7f753867075dcd4d3cd595f8d2bc9f32ba26af3fe7d0f8",
+      "outputSha256": "97f2f66394aa3a92b17c68734e1127bb91a9670227d3f1480b5254bc732a83c1",
       "edits": [
         {
           "start": 50,
@@ -301272,6 +301327,13 @@
           "symbol": "C:qf",
           "original": "qf",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 4199,
+          "end": 4200,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 7180,
@@ -301982,7 +302044,7 @@
       "original": "cl.java",
       "renamed": "cl.java",
       "inputSha256": "3bd5778a475feb2e083e0cdadae6bf16629fb8aec519823ad1d51a018719d060",
-      "outputSha256": "0b632302198851e27bef8e2e0401d87fb6c7de2da6be82f9ebff4fb2c67845a6",
+      "outputSha256": "de15f1cfdefb2432cbcd546575df9427c9d8034b0c080f7e30a4e7c9e4ded528",
       "edits": [
         {
           "start": 1261,
@@ -302053,6 +302115,20 @@
           "symbol": "F:kg.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 3708,
+          "end": 3709,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 3861,
+          "end": 3862,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 7714,
@@ -302706,7 +302782,7 @@
       "original": "df.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "558d7c64b768a3e87b67c9fa2ad084de226a19bbab97630c2175f45688c1ee89",
-      "outputSha256": "af8d86dc0464cfd74fc9da7b0ac791e4324327b47c64480d54edf58539654b7c",
+      "outputSha256": "47f86644ece6fb8ad39bb967ed2bb8083ddccb6fbb6c99cfda4675e831685423",
       "edits": [
         {
           "start": 69,
@@ -303031,6 +303107,13 @@
           "renamed": "requestType"
         },
         {
+          "start": 6112,
+          "end": 6113,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 6215,
           "end": 6222,
           "symbol": "F:bc.field_f:Ljava/lang/Object;",
@@ -303071,6 +303154,13 @@
           "symbol": "F:bc.field_f:Ljava/lang/Object;",
           "original": "field_f",
           "renamed": "result"
+        },
+        {
+          "start": 6700,
+          "end": 6701,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 6803,
@@ -303143,6 +303233,13 @@
           "renamed": "throwUnchecked"
         },
         {
+          "start": 8131,
+          "end": 8132,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 8255,
           "end": 8262,
           "symbol": "F:bc.field_e:I",
@@ -303176,6 +303273,13 @@
           "symbol": "F:bc.field_f:Ljava/lang/Object;",
           "original": "field_f",
           "renamed": "result"
+        },
+        {
+          "start": 8564,
+          "end": 8565,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 8689,
@@ -303533,6 +303637,13 @@
           "symbol": "F:bc.field_f:Ljava/lang/Object;",
           "original": "field_f",
           "renamed": "result"
+        },
+        {
+          "start": 14919,
+          "end": 14920,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 15100,
@@ -304639,7 +304750,7 @@
       "original": "dk.java",
       "renamed": "AudioOutput.java",
       "inputSha256": "576ba0c585b5c8e23b377cbe37670fde7154b964c115616788846e19c98d85af",
-      "outputSha256": "f750fadafe3ecb340cd44ebb50fdeee3bcc2359c65157e4e2d19bc442a1764d2",
+      "outputSha256": "2ffa4c04a72ca64d33a42d55efdca884e48e51dde3d8cbadead28fc5b6f16241",
       "edits": [
         {
           "start": 44,
@@ -304682,6 +304793,13 @@
           "symbol": "M:dk.d()V",
           "original": "d",
           "renamed": "dispose"
+        },
+        {
+          "start": 1449,
+          "end": 1450,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 1537,
@@ -304873,11 +304991,25 @@
           "renamed": "serviceOutput"
         },
         {
+          "start": 4984,
+          "end": 4985,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 5180,
           "end": 5181,
           "symbol": "M:dk.a(I)V",
           "original": "a",
           "renamed": "skipFrames"
+        },
+        {
+          "start": 5282,
+          "end": 5283,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 5776,
@@ -304964,6 +305096,13 @@
           "renamed": "mixBlock"
         },
         {
+          "start": 8961,
+          "end": 8962,
+          "symbol": "M:lj.a([III)V",
+          "original": "a",
+          "renamed": "clearInts"
+        },
+        {
           "start": 9160,
           "end": 9162,
           "symbol": "C:dk",
@@ -305008,6 +305147,13 @@
           "renamed": "enqueueByPriority"
         },
         {
+          "start": 12349,
+          "end": 12350,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 12372,
           "end": 12373,
           "symbol": "M:dk.a(Ljava/awt/Component;)V",
@@ -305034,6 +305180,13 @@
           "symbol": "M:dk.<init>()V",
           "original": "dk",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 12609,
+          "end": 12610,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         }
       ]
     },
@@ -306731,8 +306884,30 @@
       "original": "fn.java",
       "renamed": "fn.java",
       "inputSha256": "12fb74686887094082eb91077633d1712de851becc4842d91f3f4b8794809287",
-      "outputSha256": "12fb74686887094082eb91077633d1712de851becc4842d91f3f4b8794809287",
-      "edits": []
+      "outputSha256": "c98cefd0fd8ce96a332af78c408fb971acb969d32eeb4ed3365ea28cc73847da",
+      "edits": [
+        {
+          "start": 2363,
+          "end": 2364,
+          "symbol": "M:lj.a([III)V",
+          "original": "a",
+          "renamed": "clearInts"
+        },
+        {
+          "start": 2395,
+          "end": 2396,
+          "symbol": "M:lj.a([III)V",
+          "original": "a",
+          "renamed": "clearInts"
+        },
+        {
+          "start": 2427,
+          "end": 2428,
+          "symbol": "M:lj.a([III)V",
+          "original": "a",
+          "renamed": "clearInts"
+        }
+      ]
     },
     {
       "original": "g.java",
@@ -307761,7 +307936,7 @@
       "original": "hg.java",
       "renamed": "JavaSoundAudioOutput.java",
       "inputSha256": "5808373b722ac6c7a839eb85e10ded907c1130f780dcafe4877f8d57753bbe5d",
-      "outputSha256": "d3128f94e6d73a89f42e92d5adf94f2c846e1d227206fec2b0d77a0b4a803f06",
+      "outputSha256": "cab17d858713f879d879899af7c4203403e3049f745ae75c723dd7c251d34837",
       "edits": [
         {
           "start": 50,
@@ -307820,11 +307995,25 @@
           "renamed": "openDevice"
         },
         {
+          "start": 3457,
+          "end": 3458,
+          "symbol": "M:vf.a(II)I",
+          "original": "a",
+          "renamed": "countSetBits"
+        },
+        {
           "start": 3500,
           "end": 3501,
           "symbol": "M:hg.b(I)V",
           "original": "b",
           "renamed": "openDevice"
+        },
+        {
+          "start": 3505,
+          "end": 3506,
+          "symbol": "M:lb.a(II)I",
+          "original": "a",
+          "renamed": "roundUpPowerOfTwo"
         }
       ]
     },
@@ -307832,7 +308021,7 @@
       "original": "hh.java",
       "renamed": "hh.java",
       "inputSha256": "eee3fa95a09f5c4164bacbe6a63e5ff4efbd672756668bc385f3dba711e93a0a",
-      "outputSha256": "4965fd51ff1c559daf88571635ef56eb054ec8fa6e69abf42eae9c11ed738636",
+      "outputSha256": "63b4a61a9b6735d70350eee1f1f9da5fdc9a68e7f6a67c08642d37cc79e67aa6",
       "edits": [
         {
           "start": 66,
@@ -307910,6 +308099,13 @@
           "symbol": "F:bc.field_g:I",
           "original": "field_g",
           "renamed": "status"
+        },
+        {
+          "start": 6454,
+          "end": 6455,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 6496,
@@ -309250,7 +309446,7 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "3ac18ceb1f0ca5cf725a32e7a8c2c7d585955ef369edc7ae4ec7a50ddbb258d6",
-      "outputSha256": "91411fbe1dc3aeac9570270c78ff465c0e9d7e5632a991ae5d608a9b2a3fc34b",
+      "outputSha256": "c4e6c6d1fde9fbbead534e5247c156fc0d1c512c905101921091968142f95910",
       "edits": [
         {
           "start": 63,
@@ -309265,6 +309461,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "ClientException"
+        },
+        {
+          "start": 1594,
+          "end": 1595,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 1655,
@@ -309316,6 +309519,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 4222,
+          "end": 4223,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 4529,
           "end": 4531,
           "symbol": "C:rk",
@@ -309330,6 +309540,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 4707,
+          "end": 4708,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 5418,
           "end": 5420,
           "symbol": "C:rk",
@@ -309342,6 +309559,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "ClientException"
+        },
+        {
+          "start": 6263,
+          "end": 6264,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 6725,
@@ -310795,7 +311019,7 @@
       "original": "jb.java",
       "renamed": "jb.java",
       "inputSha256": "d99e6e2d5f76b3e5cb56c8b8fde89d24396014d1cbb45bb0dbe8ea71af26d911",
-      "outputSha256": "12853c0645101e0343aa4ee65905d4862e732d1300ff11d3f533d428ac5aef48",
+      "outputSha256": "a5a3f2920c6886e4851b0a2642e5de84c74671b97d47e90cd51677f31ee5939a",
       "edits": [
         {
           "start": 1021,
@@ -310845,6 +311069,20 @@
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 22452,
+          "end": 22453,
+          "symbol": "M:vf.a(II)I",
+          "original": "a",
+          "renamed": "countSetBits"
+        },
+        {
+          "start": 22905,
+          "end": 22906,
+          "symbol": "M:vf.a(II)I",
+          "original": "a",
+          "renamed": "countSetBits"
         },
         {
           "start": 28546,
@@ -311000,7 +311238,7 @@
       "original": "jd.java",
       "renamed": "jd.java",
       "inputSha256": "8e58984096e05e0a9d19cceaf75086e3547ec474879128894030fb9605ccef9c",
-      "outputSha256": "54b0962aa6a343ab8c8d9abbb2457f8d74a6102fabe8fcbc52340fee983e0c10",
+      "outputSha256": "06dde143ce620a15819f2557f6a186207beb45259930ebc4b4c268878e31eadf",
       "edits": [
         {
           "start": 167,
@@ -311015,6 +311253,34 @@
           "symbol": "M:jd.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1130,
+          "end": 1131,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
+          "start": 1325,
+          "end": 1326,
+          "symbol": "M:wd.a(JI)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
+        },
+        {
+          "start": 1359,
+          "end": 1360,
+          "symbol": "M:wd.a(JI)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
+        },
+        {
+          "start": 1401,
+          "end": 1402,
+          "symbol": "M:wd.a(JI)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
         },
         {
           "start": 2097,
@@ -311199,7 +311465,7 @@
       "original": "jg.java",
       "renamed": "jg.java",
       "inputSha256": "7e358426388f97b09ba19f772fcf3a59a624c798214f695f2609c294df54eee7",
-      "outputSha256": "7b45e691648d623631ff960c84dcc7a90a0d43bce50dc38da25915450838c91a",
+      "outputSha256": "c85adb7ba0fae78c84aa7cd062536af6e27596638f104924949fe1e7960f6873",
       "edits": [
         {
           "start": 987,
@@ -311249,6 +311515,13 @@
           "symbol": "M:kg.a(II[BI)V",
           "original": "a",
           "renamed": "writeBytes"
+        },
+        {
+          "start": 5088,
+          "end": 5089,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 5379,
@@ -311369,7 +311642,7 @@
       "original": "jj.java",
       "renamed": "jj.java",
       "inputSha256": "799ed2a801f7d9d91ee2d635b46ba004efee95b2dc88dcf2931698b5d0fb2b7e",
-      "outputSha256": "563370e12d9ae03b7f2597bd8843910e090efeafa2595d79e26dc220446557ef",
+      "outputSha256": "c75e46634e7b3a8e83b1b1d52d65f82751e7e4ae0c9a34c9ddb3f1721649127e",
       "edits": [
         {
           "start": 391,
@@ -311440,6 +311713,13 @@
           "symbol": "F:kg.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 4493,
+          "end": 4494,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 4522,
@@ -311632,7 +311912,7 @@
       "original": "ka.java",
       "renamed": "ka.java",
       "inputSha256": "f3ddb753d36f0a173442d7871f913e4d4662cca5b798c69dc92e4d3c8bc75cf1",
-      "outputSha256": "2952e971b5f607e8fd05a72c2d8b6a1b2167ce407d1971846386f0b3137b479c",
+      "outputSha256": "5dce720249ba8148fd3b74eeeb13f426469779edc5babaea5a2224ecde6618a0",
       "edits": [
         {
           "start": 2833,
@@ -311675,6 +311955,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "ClientException"
+        },
+        {
+          "start": 14877,
+          "end": 14878,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 14908,
@@ -311726,7 +312013,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "6719c6176bafa28ae3864232c864af6716591e123944af45d464e545c2682223",
-      "outputSha256": "1dfb371352c959d3d10cc327b45ddc1ad7466c624c80540e85c7ae8c178b8636",
+      "outputSha256": "f41b184dc9f84bc6f48fc0688421439a0171b5395ba8826c3af47fb5e05bf806",
       "edits": [
         {
           "start": 507,
@@ -311820,6 +312107,13 @@
           "renamed": "payload"
         },
         {
+          "start": 4840,
+          "end": 4841,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 6309,
           "end": 6311,
           "symbol": "C:kg",
@@ -311895,6 +312189,13 @@
           "symbol": "M:kg.f(II)V",
           "original": "f",
           "renamed": "writeByte"
+        },
+        {
+          "start": 9436,
+          "end": 9437,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 10491,
@@ -314900,8 +315201,16 @@
       "original": "kn.java",
       "renamed": "kn.java",
       "inputSha256": "e7e32253f7347eccbe78aa77f7a113d0bf2c629edaa187ef4964a9495824c1ca",
-      "outputSha256": "e7e32253f7347eccbe78aa77f7a113d0bf2c629edaa187ef4964a9495824c1ca",
-      "edits": []
+      "outputSha256": "206abb3efb62f002b264e9746c49a9d58cee3d15aa27e8337d40080c6aab9919",
+      "edits": [
+        {
+          "start": 15160,
+          "end": 15161,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        }
+      ]
     },
     {
       "original": "l.java",
@@ -314914,14 +315223,22 @@
       "original": "la.java",
       "renamed": "la.java",
       "inputSha256": "a89319e6750091f1660a05309b772966da1a6eb5104ebfe23e75febd4f98f897",
-      "outputSha256": "a89319e6750091f1660a05309b772966da1a6eb5104ebfe23e75febd4f98f897",
-      "edits": []
+      "outputSha256": "84b0463bd02a053914d0bfbe85bce924230c01648832caa30431f53cc93bec72",
+      "edits": [
+        {
+          "start": 4761,
+          "end": 4762,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        }
+      ]
     },
     {
       "original": "lb.java",
       "renamed": "lb.java",
       "inputSha256": "fd217c4d3124740c96b2a37c0de2076a0f03a20bfa600987ac23261fc894e9af",
-      "outputSha256": "4126830da043b639ef7c8931cab25cb562f42d39f7b7390f25dfe4852e7b5920",
+      "outputSha256": "f91c1be30df3d94b66faeeb856b071ebe68ba623cf9524353e4487b1fb685837",
       "edits": [
         {
           "start": 61,
@@ -314950,6 +315267,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1947,
+          "end": 1948,
+          "symbol": "M:lb.a(II)I",
+          "original": "a",
+          "renamed": "roundUpPowerOfTwo"
         },
         {
           "start": 2064,
@@ -314992,6 +315316,20 @@
           "symbol": "M:kg.d(Z)Ljava/lang/String;",
           "original": "d",
           "renamed": "readString"
+        },
+        {
+          "start": 5669,
+          "end": 5670,
+          "symbol": "M:lb.a(II)I",
+          "original": "a",
+          "renamed": "roundUpPowerOfTwo"
+        },
+        {
+          "start": 5923,
+          "end": 5924,
+          "symbol": "M:lb.a(II)I",
+          "original": "a",
+          "renamed": "roundUpPowerOfTwo"
         }
       ]
     },
@@ -315422,7 +315760,7 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "4f160c0237037e8c56f1f78bcce2216df3d87cdf2a996f7d6643e87e00773b9f",
-      "outputSha256": "13c7ecaa9e2fdf80d9c3683910dd511475c6eb01b78ab76225b5e37daaa1f4a9",
+      "outputSha256": "0bea43ef776bf487ab50d440648b62e2aa7710c8b9e6bcfa6e2c074def8ebd2f",
       "edits": [
         {
           "start": 304,
@@ -315572,6 +315910,13 @@
           "renamed": "decode"
         },
         {
+          "start": 4226,
+          "end": 4227,
+          "symbol": "M:lj.a([III)V",
+          "original": "a",
+          "renamed": "clearInts"
+        },
+        {
           "start": 8591,
           "end": 8592,
           "symbol": "M:uf.a(IF)I",
@@ -315675,8 +316020,15 @@
       "original": "lj.java",
       "renamed": "lj.java",
       "inputSha256": "a40d0d016a85b129d3e61328121b9e433828a03e9847533665e1dc0d64067c57",
-      "outputSha256": "e2fd19f48a759cf2eec20efe303ed600af9c99b4d8f877d57d32d2df50028964",
+      "outputSha256": "08eb45f488e23d7d28dbbb865422c5542edee9c47f051468ffb4d4423f9f5ba7",
       "edits": [
+        {
+          "start": 77,
+          "end": 78,
+          "symbol": "M:lj.a([III)V",
+          "original": "a",
+          "renamed": "clearInts"
+        },
         {
           "start": 583,
           "end": 584,
@@ -316108,7 +316460,7 @@
       "original": "mb.java",
       "renamed": "mb.java",
       "inputSha256": "30fc3549cf59704e38bf065c8852bf269d7f9ec0e7222f2b3099e90c41f28259",
-      "outputSha256": "64d1a53ca448ed87e3848c222bc19501f6e2c8d7c1a2dd31dedf3e423ea1289d",
+      "outputSha256": "628e0c3f24120122488ad89b5440bb06bb2f517b719ac78171e48d46284f650c",
       "edits": [
         {
           "start": 251,
@@ -316137,6 +316489,13 @@
           "symbol": "F:bc.field_g:I",
           "original": "field_g",
           "renamed": "status"
+        },
+        {
+          "start": 587,
+          "end": 588,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 695,
@@ -316237,6 +316596,13 @@
           "renamed": "status"
         },
         {
+          "start": 4157,
+          "end": 4158,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
           "start": 4202,
           "end": 4209,
           "symbol": "F:bc.field_g:I",
@@ -316256,6 +316622,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 6747,
+          "end": 6748,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         }
       ]
     },
@@ -318045,7 +318418,7 @@
       "original": "na.java",
       "renamed": "na.java",
       "inputSha256": "b447aff53864bb3627929112386eb3aa73045d270a3cd5efd44d3f6f6efa207d",
-      "outputSha256": "188b1544713a0cceb82347ad40d4bc0e122f1eef88a22f7fe4ab572b2ef9086d",
+      "outputSha256": "4d2f1ccf208b43232bb3c2340cbeee0066d8796e94b06232fbc888a5c98bcd7c",
       "edits": [
         {
           "start": 72,
@@ -318109,6 +318482,13 @@
           "symbol": "C:rk",
           "original": "rk",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 8499,
+          "end": 8500,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 8967,
@@ -319874,7 +320254,7 @@
       "original": "of.java",
       "renamed": "of.java",
       "inputSha256": "c93af3cd0fb9bf5c56a640fdb021292d966e43c34fd8a5491305563cb7d5b589",
-      "outputSha256": "ff0eb962dd088058c6781336752888dd9430760902e4491b3da20d20aab2ee95",
+      "outputSha256": "db8aee60e20d37d44a50bff1a061844016e5a2ceac1f26738d35406ea52e8caf",
       "edits": [
         {
           "start": 160,
@@ -319882,6 +320262,13 @@
           "symbol": "M:of.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1607,
+          "end": 1608,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 6356,
@@ -320568,7 +320955,7 @@
       "original": "pc.java",
       "renamed": "pc.java",
       "inputSha256": "251346db9d64fe4a65d8352dfef47058b18fe36434d488a5585c274f2254bf34",
-      "outputSha256": "b7fda90c151bb6320da85cec86d0a29c474ddb7bec9f18527722c8cbed19a873",
+      "outputSha256": "0265c317e7fc4e4270dee41e6827301de0300290e61be66a1f5c0bf474f312a7",
       "edits": [
         {
           "start": 111,
@@ -320627,6 +321014,13 @@
           "renamed": "status"
         },
         {
+          "start": 15484,
+          "end": 15485,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
           "start": 15526,
           "end": 15533,
           "symbol": "F:bc.field_g:I",
@@ -320653,7 +321047,7 @@
       "original": "pe.java",
       "renamed": "pe.java",
       "inputSha256": "f537f14972ef03e3866611aad5adca2561234302eb83dd6c5a2862a8ee545f09",
-      "outputSha256": "531034682befcd7dfcf6e049d6bf3e9ca2b51ca8c6a11dcc3e931050c4b173de",
+      "outputSha256": "348a45cc00e1f8773906e079307bb2848a73ad055cf45b40cfe714b3e1f896f7",
       "edits": [
         {
           "start": 61,
@@ -320661,6 +321055,13 @@
           "symbol": "C:rk",
           "original": "rk",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 6050,
+          "end": 6051,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 6163,
@@ -321823,7 +322224,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "9e71cb4dd215bc05dbad02775f1b5acd4850fb54e3ab83783a3376156d7d5e5e",
-      "outputSha256": "8fac5e2422a944c6dff40edc479c78c5ee3645b4808ae5554733ed2d5db56760",
+      "outputSha256": "8f0648f43238f53168db148afb54ed31d7ef0765491668b0ac75c8d37ab95dab",
       "edits": [
         {
           "start": 3695,
@@ -321861,6 +322262,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 11080,
+          "end": 11081,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 12543,
           "end": 12544,
           "symbol": "C:v",
@@ -321895,7 +322303,7 @@
       "original": "qc.java",
       "renamed": "qc.java",
       "inputSha256": "bfbfc3905ceac572500edf9d2d672b5da20d2496c0d7245c449770955ce62ebf",
-      "outputSha256": "cf12480a36b7dd462b2d5d5d002058626b62367700eec7809f8d45592adeb13e",
+      "outputSha256": "72877a0755b78ca25fb6511413941d2d7eaab4268aac023ec4927b447f348ba7",
       "edits": [
         {
           "start": 2018,
@@ -321910,6 +322318,13 @@
           "symbol": "M:qc.e(I)V",
           "original": "e",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5783,
+          "end": 5784,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         }
       ]
     },
@@ -322502,7 +322917,7 @@
       "original": "ra.java",
       "renamed": "ra.java",
       "inputSha256": "263e8513dce650a04cdd555f644f64d3ea580cb47a7a8930c3055ae68bc41028",
-      "outputSha256": "a8b2407a6dc861efe1e4c4a9d6a249e0ff1c15869a1f741787f584d1461faa89",
+      "outputSha256": "160095c834c32f013bdb184ae44202fe0321c20f598f441c5dd5bba12579f907",
       "edits": [
         {
           "start": 109,
@@ -322531,6 +322946,27 @@
           "symbol": "C:mn",
           "original": "mn",
           "renamed": "PrimaryNodeDeque"
+        },
+        {
+          "start": 504,
+          "end": 505,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 844,
+          "end": 845,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 3335,
+          "end": 3336,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 3457,
@@ -322795,8 +323231,15 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "e19c4f30104db08dd7ca2b70f44eb075b60694c06dddc33efbb2223ad950f6d5",
-      "outputSha256": "73bc490603231e371a0e37a8a8cebb8094eb4f4afa4cfe1908d93e64ecb23f34",
+      "outputSha256": "67b23dfdd86f0d98666ab98310b22ed12397e40476c9270713143619ceb37a62",
       "edits": [
+        {
+          "start": 333,
+          "end": 334,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
         {
           "start": 664,
           "end": 666,
@@ -322817,6 +323260,13 @@
           "symbol": "M:rk.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 916,
+          "end": 917,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         }
       ]
     },
@@ -323102,7 +323552,7 @@
       "original": "sb.java",
       "renamed": "sb.java",
       "inputSha256": "e707cf8238ca66a3a9258b83b446afee5bfb3e980a2fe5a363a45e63a6221fef",
-      "outputSha256": "2589139dba50a6dcbb2621cbe4e8642440ec8171f8d5932ae4badeb2337b0218",
+      "outputSha256": "921be1f068b1ab1a12711a99629df377779f65049fc9163bf48c17b419e7154f",
       "edits": [
         {
           "start": 301,
@@ -323131,6 +323581,13 @@
           "symbol": "M:dk.c()V",
           "original": "c",
           "renamed": "serviceOutput"
+        },
+        {
+          "start": 988,
+          "end": 989,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 4178,
@@ -323451,7 +323908,7 @@
       "original": "si.java",
       "renamed": "si.java",
       "inputSha256": "9e597f753df7ecbdb43d1076cfae95492fe6826140681ffb090f878ea3ae5889",
-      "outputSha256": "66a594f6f07e2353c21dacb0622b0b6998571a03094c2271607b7f68cf06331e",
+      "outputSha256": "61ce35c90d21a1ff6e92ca05f810e9d0144596b7a9dc36ca4db9b2547ef5c6c8",
       "edits": [
         {
           "start": 1295,
@@ -323496,11 +323953,25 @@
           "renamed": "status"
         },
         {
+          "start": 3295,
+          "end": 3296,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
           "start": 3341,
           "end": 3348,
           "symbol": "F:bc.field_g:I",
           "original": "field_g",
           "renamed": "status"
+        },
+        {
+          "start": 3374,
+          "end": 3375,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         }
       ]
     },
@@ -323903,7 +324374,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "91e1fbac01ed7a0041a1e76d86b1926ec791e580df104dde2b6a49368621f9d9",
-      "outputSha256": "787393c1e6abfce7129c72ffb552bf6c79e7ce9ae7db4bef7f75a7ddd60da990",
+      "outputSha256": "d61b951c3d88a11560a6dbfc37e19a9f8276e80858af3d4a3c982989aaffbe84",
       "edits": [
         {
           "start": 2913,
@@ -323913,11 +324384,25 @@
           "renamed": "position"
         },
         {
+          "start": 2967,
+          "end": 2968,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 3092,
           "end": 3099,
           "symbol": "F:kg.field_n:I",
           "original": "field_n",
           "renamed": "position"
+        },
+        {
+          "start": 3146,
+          "end": 3147,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 3303,
@@ -323939,6 +324424,13 @@
           "symbol": "F:kg.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 3456,
+          "end": 3457,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 3761,
@@ -324136,7 +324628,7 @@
       "original": "te.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "abd6b34d504556f97f560239abac6a08fb5735d1549f01ff65049d5d76a4cb51",
-      "outputSha256": "a960889321de231e525ccc351f80dbbb6583da7d243bb52a323589ce14b17707",
+      "outputSha256": "3d3fcfccfc2dd8d2089f7a29c30914fecc770f9577d54acaec6e791b9f67649f",
       "edits": [
         {
           "start": 60,
@@ -324153,6 +324645,13 @@
           "renamed": "AccountRequestState"
         },
         {
+          "start": 1185,
+          "end": 1186,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 2499,
           "end": 2501,
           "symbol": "C:fc",
@@ -324165,6 +324664,13 @@
           "symbol": "C:ve",
           "original": "ve",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 5700,
+          "end": 5701,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 5745,
@@ -324223,11 +324729,32 @@
           "renamed": "AccountRequestState"
         },
         {
+          "start": 8712,
+          "end": 8713,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 12026,
           "end": 12028,
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 13398,
+          "end": 13399,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 13420,
+          "end": 13421,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 16049,
@@ -324293,11 +324820,25 @@
           "renamed": "compareLongs"
         },
         {
+          "start": 20405,
+          "end": 20406,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 25711,
           "end": 25713,
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 26511,
+          "end": 26512,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 26990,
@@ -324354,6 +324895,20 @@
           "symbol": "F:bc.field_g:I",
           "original": "field_g",
           "renamed": "status"
+        },
+        {
+          "start": 28449,
+          "end": 28450,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
+          "start": 30615,
+          "end": 30616,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 30947,
@@ -324497,7 +325052,7 @@
       "original": "ti.java",
       "renamed": "ti.java",
       "inputSha256": "019992c3f3d410a127106c78cb9e003f8ad3f5376ff8e78b3f869485c8daffc8",
-      "outputSha256": "09b630a5d6d71a83e8017e231b8ae18af250d1b39a77ec1589f768cdd738c8c7",
+      "outputSha256": "ba51cddfad1280d32c9b09b422c2de3f3d86bd55a693c71a567694579b23592b",
       "edits": [
         {
           "start": 25882,
@@ -324529,6 +325084,13 @@
           "symbol": "M:ti.c()V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 64049,
+          "end": 64050,
+          "symbol": "M:lb.a(II)I",
+          "original": "a",
+          "renamed": "roundUpPowerOfTwo"
         }
       ]
     },
@@ -324536,7 +325098,7 @@
       "original": "tj.java",
       "renamed": "tj.java",
       "inputSha256": "2f6a092ba8f1efb7b92f61d9ba2f5399a6926612b00e764896573e28dc7bbc48",
-      "outputSha256": "3c9b2a77db02ccb1852605930c97974e01b9f11fecdfdc91c0d25597d595c25e",
+      "outputSha256": "50db8c63f833d0e62b285b2576148da8429ce7fd623ee57223e1883aa6113714",
       "edits": [
         {
           "start": 563,
@@ -324760,11 +325322,25 @@
           "renamed": "addLast"
         },
         {
+          "start": 16452,
+          "end": 16453,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
           "start": 16820,
           "end": 16821,
           "symbol": "M:rk.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 16949,
+          "end": 16950,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 20763,
@@ -325807,7 +326383,7 @@
       "original": "ul.java",
       "renamed": "ul.java",
       "inputSha256": "b0e320dc60958a1425df68718b7a06a2adec7d1f545f0c84026da87992b5853f",
-      "outputSha256": "451354f3805145919cabf71a77e65411d75d91148d8ac888e58388f8221ee4a6",
+      "outputSha256": "1e81e7e76432053fad6382beb297d6f9ce1f01eccd8eb05b483cf1cb414eac5d",
       "edits": [
         {
           "start": 1152,
@@ -325815,6 +326391,34 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 1270,
+          "end": 1271,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 5558,
+          "end": 5559,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 6752,
+          "end": 6753,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 12226,
+          "end": 12227,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 13585,
@@ -325836,6 +326440,13 @@
           "symbol": "C:qf",
           "original": "qf",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 15497,
+          "end": 15498,
+          "symbol": "M:ri.a(I)J",
+          "original": "a",
+          "renamed": "correctedCurrentTimeMillis"
         },
         {
           "start": 18769,
@@ -326561,7 +327172,7 @@
       "original": "vd.java",
       "renamed": "vd.java",
       "inputSha256": "3e052302c2f624171171f45940a9709ebc3b5c16338ed28b7c2ec0cb6a6e4e1c",
-      "outputSha256": "e935cf35d3c8a4800f416f3b186d383d92b842e1a5195490fffe907ec0621a11",
+      "outputSha256": "c2c9b2fc841a56356a1b51ae38423893c1a2dedbf2c4a4e054d6410e1c85c5c4",
       "edits": [
         {
           "start": 232,
@@ -326604,6 +327215,13 @@
           "symbol": "F:bc.field_g:I",
           "original": "field_g",
           "renamed": "status"
+        },
+        {
+          "start": 8329,
+          "end": 8330,
+          "symbol": "M:jd.a(IJ)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 8382,
@@ -326682,8 +327300,15 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "055eebbc0cb21b00cc16ae399f4d0e7058871bdf25c860910d1d9c68e1f6cf22",
-      "outputSha256": "c49bf50932400eb502e69975f0e4dce6cdfef9d936315f0c6825e828960e3685",
+      "outputSha256": "8a0e3470c2ff55c257b1577184c119a3c23f907cdd9cc50d3340fff3041d7592",
       "edits": [
+        {
+          "start": 16569,
+          "end": 16570,
+          "symbol": "M:vf.a(II)I",
+          "original": "a",
+          "renamed": "countSetBits"
+        },
         {
           "start": 18979,
           "end": 18981,
@@ -326697,6 +327322,13 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 26669,
+          "end": 26670,
+          "symbol": "M:vf.a(II)I",
+          "original": "a",
+          "renamed": "countSetBits"
         }
       ]
     },
@@ -328035,7 +328667,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "90c88e4a32c4a5e6acb4c548188684866ea5bd4949890ad1efd7bfd70c18eb57",
-      "outputSha256": "844c82faaf12fca4fb17d8c098fc2564bf8f90dc18393dfb5d75977cacd6c792",
+      "outputSha256": "b9e1216fc30d5c53ae3097425c3741e8e4fe9d84b4112da11eebed49d133df91",
       "edits": [
         {
           "start": 96,
@@ -328171,6 +328803,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 3135,
+          "end": 3136,
+          "symbol": "M:wd.a(JI)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
+        },
+        {
           "start": 3913,
           "end": 3915,
           "symbol": "C:jl",
@@ -328211,6 +328850,13 @@
           "symbol": "M:jl.b(Z)V",
           "original": "b",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 6738,
+          "end": 6739,
+          "symbol": "M:wd.a(JI)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
         }
       ]
     },
@@ -328719,10 +329365,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/confined"
     },
-    "rulesSha256": "00bc2c9d5c0132f4d33ec35431746ca82f3e73f41970c7031d0ed207ba00e562",
+    "rulesSha256": "33dee82e1dc0381a1accd39f51a55894e846c98a3d9e619b84cb9773f3396d56",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c",
-    "outputTreeSha256": "98799b935cca93dfaed40ad9b572b4003aeda363aab9d45a292ae2f825f66701",
+    "outputTreeSha256": "d2e30c26fbc0d295beb4d6e832fb750dd860c63a327c80be28e9ad1c4213fefd",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

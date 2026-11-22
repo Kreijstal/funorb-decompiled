@@ -703,7 +703,7 @@ final class pa extends ql {
             }
           }
           if (param0 != 87) {
-            pa.b((byte) 98, 124);
+            pa.countSetBits((byte) 98, 124);
           }
           stackIn_18_0 = (short[]) (param1);
           return stackIn_18_0;
@@ -763,7 +763,7 @@ final class pa extends ql {
         }
     }
 
-    final static int b(byte param0, int param1) {
+    final static int countSetBits(byte param0, int param1) {
         param1 = ((-1431655766 & param1) >>> 1) + (1431655765 & param1);
         param1 = (param1 >>> 2 & -214748365) + (param1 & 858993459);
         param1 = 252645135 & param1 + (param1 >>> 4);

@@ -27,7 +27,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var7 = null;
         try {
           var2_int = -41 / ((-5 - param0) / 36);
-          var3 = lk.a(0);
+          var3 = lk.correctedCurrentTimeMillis(0);
           var5 = ik.field_ib[td.field_a];
           ik.field_ib[td.field_a] = var3;
           if (var5 != 0L &&
@@ -223,7 +223,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           bi.field_M = true;
           kb.field_l = true;
           mg.field_c = param0;
-          tg.field_b = lk.a(0);
+          tg.field_b = lk.correctedCurrentTimeMillis(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -246,7 +246,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (wi.field_f == this &&
             !gh.field_i) {
-            lb.field_b = lk.a(0) + 4000L;
+            lb.field_b = lk.correctedCurrentTimeMillis(0) + 4000L;
             return;
           }
           return;
@@ -269,7 +269,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !gh.field_i) {
             kb.field_l = true;
             if (pg.field_a &&
-              lk.a(0) - tg.field_b > 1000L) {
+              lk.correctedCurrentTimeMillis(0) - tg.field_b > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (ch.field_b > var2.width) {
@@ -434,7 +434,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         try {
-          var2_long = lk.a(0);
+          var2_long = lk.correctedCurrentTimeMillis(0);
           var4 = kd.field_b[kh.field_b];
           kd.field_b[kh.field_b] = var2_long;
           kh.field_b = 31 & kh.field_b + 1;
@@ -636,7 +636,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lb.field_b != 0L) {
-                    stackIn_105_0 = compareLongs(~lb.field_b, ~lk.a(0));
+                    stackIn_105_0 = compareLongs(~lb.field_b, ~lk.correctedCurrentTimeMillis(0));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_105_0 >= 0)) {
@@ -689,8 +689,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          lb.field_b = lk.a(0);
-          pg.a(5000L, -120);
+          lb.field_b = lk.correctedCurrentTimeMillis(0);
+          pg.sleepMillis(5000L, -120);
           f.field_b = null;
           this.a(false, false);
         } catch (RuntimeException runtimeException) {
@@ -852,7 +852,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               while (true) {
                 if (var8.status == 0) {
-                  pg.a(10L, -82);
+                  pg.sleepMillis(10L, -82);
                   if (var9 == 0) {
                     continue;
                   }

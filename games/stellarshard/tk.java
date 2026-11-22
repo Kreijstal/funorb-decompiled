@@ -50,7 +50,7 @@ final class tk {
         if (param0 < 124) {
           return 12L;
         }
-        return ih.a((byte) -98) - PacketBuffer.field_o;
+        return ih.correctedCurrentTimeMillis((byte) -98) - PacketBuffer.field_o;
     }
 
     public static void a(byte param0) {

@@ -192,7 +192,7 @@ final class sa extends pu {
                   var17.a(var18, param0 + 7, var19);
                 }
               }
-              var8_ref_ema.field_Cb = f.b((byte) 73) - (long)((PacketBuffer) ((Object) var1)).readInt(-59);
+              var8_ref_ema.field_Cb = f.correctedCurrentTimeMillis((byte) 73) - (long)((PacketBuffer) ((Object) var1)).readInt(-59);
               var8_ref_ema.field_Jb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 68);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(-1);
               stackIn_19_0 = var8_ref_ema;
@@ -336,7 +336,7 @@ final class sa extends pu {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 51);
                     if (var3Lifetime5 != 0) {
-                      wda.field_a = (long)var3Lifetime5 + f.b((byte) 73);
+                      wda.field_a = (long)var3Lifetime5 + f.correctedCurrentTimeMillis((byte) 73);
                       return;
                     }
                     wda.field_a = 0L;

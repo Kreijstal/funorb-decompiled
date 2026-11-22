@@ -102,7 +102,7 @@ final class ll implements Runnable {
           }
           if (this.field_b != null) {
             while (this.field_b.status == 0) {
-              gf.a(1L, -10309);
+              gf.sleepMillis(1L, -10309);
             }
             if (this.field_b.status == 1) {
               try {

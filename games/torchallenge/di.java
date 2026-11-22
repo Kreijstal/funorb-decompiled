@@ -428,7 +428,7 @@ final class di extends kl {
           }
         }
         if (this.field_x &&
-          this.field_p <= ol.a(256)) {
+          this.field_p <= ol.correctedCurrentTimeMillis(256)) {
           var2 = (sh) (this.field_j.a((byte) -73));
           while (var2 != null) {
             if (!var2.field_v) {
@@ -443,7 +443,7 @@ final class di extends kl {
             }
             var2 = (sh) (this.field_j.a(-27377));
           }
-          this.field_p = ol.a(256) + 1000L;
+          this.field_p = ol.correctedCurrentTimeMillis(256) + 1000L;
         }
     }
 

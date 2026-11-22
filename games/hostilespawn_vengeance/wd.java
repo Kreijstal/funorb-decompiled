@@ -31,7 +31,7 @@ final class wd {
           if (MouseInput.field_d != rc.field_a) {
             return false;
           }
-          var2_long = hn.a((byte) 80);
+          var2_long = hn.correctedCurrentTimeMillis((byte) 80);
           if (bl.field_b != 0 &&
             tc.field_a < 0) {
             var4_ref_ei = (ei) (ck.field_u.beginForward(-69));

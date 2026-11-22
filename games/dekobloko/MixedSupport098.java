@@ -109,7 +109,7 @@ final class MixedSupport098 {
                 integerLocal1 = -UiComponentPart006.cipherPacketBufferState0001.position + integerArgument2;
               }
               GameSession.bufferedSocketState0002.performAction1373(integerLocal1, UiComponentPart006.cipherPacketBufferState0001.position, (byte) 17, UiComponentPart006.cipherPacketBufferState0001.payload);
-              MixedSupport095.longState0040 = MixedSupport062.computeLong0734(4);
+              MixedSupport095.longState0040 = MixedSupport062.correctedCurrentTimeMillis(4);
               UiComponentPart006.cipherPacketBufferState0001.position = UiComponentPart006.cipherPacketBufferState0001.position + integerLocal1;
               if (integerArgument2 > UiComponentPart006.cipherPacketBufferState0001.position) {
                 return false;

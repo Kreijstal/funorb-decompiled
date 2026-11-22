@@ -150,7 +150,7 @@ class hf extends hl {
           this.field_K = param2;
           this.a(param0, -18845, true);
           this.field_J = true;
-          this.field_M = id.a(39);
+          this.field_M = id.correctedCurrentTimeMillis(39);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -185,7 +185,7 @@ class hf extends hl {
             stackIn_8_1 = var8_int;
           }
           this.a(stackIn_8_1, 72);
-          var8_long = id.a(117);
+          var8_long = id.correctedCurrentTimeMillis(117);
           stackIn_11_1 = !(250L <= var8_long - this.field_O);
           this.field_G = stackIn_11_1;
           if (this.field_G) {
@@ -265,7 +265,7 @@ class hf extends hl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_M = id.a(93);
+          this.field_M = id.correctedCurrentTimeMillis(93);
           if (param0 == 60) {
             return false;
           }
@@ -437,7 +437,7 @@ class hf extends hl {
                 this.field_N = var6;
               }
             }
-            this.field_M = id.a(57);
+            this.field_M = id.correctedCurrentTimeMillis(57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -538,7 +538,7 @@ class hf extends hl {
             if (this.field_F != this.field_N) {
               var8.a((lk) (this), (byte) 67, param1, param0, this.field_N, this.field_F);
             }
-            var6 = id.a(62);
+            var6 = id.correctedCurrentTimeMillis(62);
             if ((-this.field_M + var6) % 1000L < 500L) {
               var8.a(param0, this.field_N, param1, (byte) 55, (lk) (this));
             }

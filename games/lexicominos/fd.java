@@ -152,7 +152,7 @@ final class fd implements Runnable {
                 var2.serviceOutput();
               }
             }
-            ge.a(0, 10L);
+            ge.sleepMillis(0, 10L);
             AccountRequestState.a((Object) null, this.field_b, 50);
           }
         } catch (Exception exception) {

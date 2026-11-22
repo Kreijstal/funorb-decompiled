@@ -11,7 +11,7 @@ final class mm {
         try {
           mb.a(!param1, (java.awt.Component) ((Object) param0));
           if (!param1) {
-            mm.a(-16, (byte) -13);
+            mm.countSetBits(-16, (byte) -13);
           }
           aq.a((byte) 60, (java.awt.Component) ((Object) param0));
           if (ok.field_g != null) {
@@ -59,7 +59,7 @@ final class mm {
         return var1;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int countSetBits(int param0, byte param1) {
         param0 = (param0 >>> 1 & 1431655765) + (1431655765 & param0);
         param0 = (param0 >>> 2 & 1932735283) + (858993459 & param0);
         param0 = (param0 >>> 4) + param0 & 252645135;

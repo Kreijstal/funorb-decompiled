@@ -59,7 +59,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             pg.field_g = 0;
             fb.field_j = param0.getX();
             oi.field_f = param0.getY();
-            dd.b(68);
+            dd.correctedCurrentTimeMillis(68);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               na.field_c = 2;
               DualLinkNode.field_i = 2;

@@ -74,7 +74,7 @@ final class a extends ch {
           int var2_intLifetime1;
           var16 = Main.field_T;
           if (null != this.field_m) {
-            var2_long = id.a(25);
+            var2_long = id.correctedCurrentTimeMillis(25);
             var4 = (int)(-this.field_d + var2_long);
             this.field_d = var2_long;
             if (var4 > 200) {
@@ -361,7 +361,7 @@ final class a extends ch {
               }
             }
             this.field_k = 0;
-            this.field_d = id.a(114);
+            this.field_d = id.correctedCurrentTimeMillis(114);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

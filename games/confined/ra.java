@@ -20,7 +20,7 @@ abstract class ra implements dm {
         if (this.a(true)) {
           return gi.field_bb;
         }
-        if (!((this.field_a + 350L) <= ri.a(-3))) {
+        if (!((this.field_a + 350L) <= ri.correctedCurrentTimeMillis(-3))) {
           return ab.field_b;
         }
         if (param0 != -3621) {
@@ -36,7 +36,7 @@ abstract class ra implements dm {
         if (this.a(true)) {
           return null;
         }
-        if (ri.a(-3) < (350L + this.field_a)) {
+        if (ri.correctedCurrentTimeMillis(-3) < (350L + this.field_a)) {
           return null;
         }
         return this.b((byte) 126);
@@ -112,7 +112,7 @@ abstract class ra implements dm {
         if (param0 > -46) {
           this.field_a = -58L;
         }
-        this.field_a = ri.a(-3);
+        this.field_a = ri.correctedCurrentTimeMillis(-3);
     }
 
     abstract fi c(boolean param0);

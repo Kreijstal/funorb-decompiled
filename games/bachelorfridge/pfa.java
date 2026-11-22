@@ -43,7 +43,7 @@ final class pfa {
           var1_int = HailSpecial.field_s;
           var2 = 0;
           if (2 == BoardChangeAnimation.field_j) {
-            var3_long = f.b((byte) 73) - ph.field_P;
+            var3_long = f.correctedCurrentTimeMillis((byte) 73) - ph.field_P;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;

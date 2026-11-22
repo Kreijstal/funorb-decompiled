@@ -259,7 +259,7 @@ final class hc {
               }
               stackIn_80_0[stackIn_80_1] = stackIn_81_2;
             }
-            fg.field_f = je.a(1);
+            fg.field_f = je.correctedCurrentTimeMillis(1);
           }
           bc.field_K.field_g = fl.field_b.length;
           var3_intLifetime1 = 0;

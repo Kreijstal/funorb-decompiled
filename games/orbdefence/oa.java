@@ -78,7 +78,7 @@ final class oa implements Runnable {
                 var2.serviceOutput();
               }
             }
-            hb.a(10L, 116);
+            hb.sleepMillis(10L, 116);
             vf.a((Object) null, 50, this.field_g);
           }
         } catch (Exception exception) {

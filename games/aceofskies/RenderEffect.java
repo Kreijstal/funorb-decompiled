@@ -56,7 +56,7 @@ abstract class RenderEffect {
           }
           SystemTask var8 = param0.requestDisplayModes(param1 ^ 1175069693);
           while (var8.status == 0) {
-            IntrusiveNode.a(10L, false);
+            IntrusiveNode.sleepMillis(10L, false);
           }
           if (param1 != 1175069442) {
             rm[] stackIn_9_0 = (rm[]) null;

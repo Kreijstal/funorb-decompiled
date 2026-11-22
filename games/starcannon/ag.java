@@ -73,7 +73,7 @@ abstract class ag extends GameApplet {
                 var2_int = -se.field_p.position + param1;
               }
               m.field_b.a(se.field_p.position, 32498, var2_int, se.field_p.payload);
-              ik.field_p = dd.b(115);
+              ik.field_p = dd.correctedCurrentTimeMillis(115);
               se.field_p.position = se.field_p.position + var2_int;
               if (param1 > se.field_p.position) {
                 return false;
@@ -315,7 +315,7 @@ abstract class ag extends GameApplet {
             pd.a(sc.field_e, 2, (byte) -77);
             jc.b(0);
             fi.field_h = true;
-            wa.field_a = 15000L + dd.b(56);
+            wa.field_a = 15000L + dd.correctedCurrentTimeMillis(56);
           }
         }
         if (qb.field_j == -1 ||
@@ -331,7 +331,7 @@ abstract class ag extends GameApplet {
           }
           if (-1 != qb.field_j &&
             qb.field_j != 0) {
-            wa.field_a = 15000L + dd.b(105);
+            wa.field_a = 15000L + dd.correctedCurrentTimeMillis(105);
           }
         }
         if (qb.field_j != param1 &&
@@ -381,7 +381,7 @@ abstract class ag extends GameApplet {
         if ((qb.field_j != -1 &&
           qb.field_j != 0 ||
           se.b((byte) -91)) &&
-          dd.b(param1 ^ -59) >= wa.field_a) {
+          dd.correctedCurrentTimeMillis(param1 ^ -59) >= wa.field_a) {
           fi.field_h = false;
           if (qb.field_j != -1 &&
             qb.field_j != 0) {
@@ -791,7 +791,7 @@ abstract class ag extends GameApplet {
           var3 = 77 / ((param0 - 63) / 62);
           pd.a(UiWidget.field_r, var2, (byte) -77);
           fi.field_h = true;
-          wa.field_a = dd.b(103) + 15000L;
+          wa.field_a = dd.correctedCurrentTimeMillis(103) + 15000L;
           return var2;
         }
         if (bl.field_a == 11 &&

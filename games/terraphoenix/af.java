@@ -129,7 +129,7 @@ abstract class af implements rc {
         if (this.a((byte) 117)) {
           return null;
         }
-        if ((this.field_c + 350L) > ll.a(1000)) {
+        if ((this.field_c + 350L) > ll.correctedCurrentTimeMillis(1000)) {
           return null;
         }
         int var2 = 86 / ((param0 - 40) / 61);
@@ -140,7 +140,7 @@ abstract class af implements rc {
         if (this.a((byte) 117)) {
           return ab.field_d;
         }
-        if (ll.a(1000) < (350L + this.field_c)) {
+        if (ll.correctedCurrentTimeMillis(1000) < (350L + this.field_c)) {
           return kj.field_d;
         }
         if (param0 != -16323) {
@@ -259,7 +259,7 @@ abstract class af implements rc {
         if (param0 < 11) {
           this.b((byte) -21);
         }
-        this.field_c = ll.a(1000);
+        this.field_c = ll.correctedCurrentTimeMillis(1000);
     }
 
     abstract String c(int param0);

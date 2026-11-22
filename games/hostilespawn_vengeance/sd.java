@@ -116,10 +116,10 @@ class sd extends cn {
           while (true) {
             var3 = param0.requestFullscreenExit(7, param2);
             while (var3.status == 0) {
-              vj.a(10L, (byte) -49);
+              vj.sleepMillis(10L, (byte) -49);
             }
             if (var3.status != 1) {
-              vj.a(100L, (byte) -49);
+              vj.sleepMillis(100L, (byte) -49);
               continue;
             }
             break;

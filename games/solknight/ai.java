@@ -44,7 +44,7 @@ final class ai {
           if (0 == bk.field_a.status) {
             return false;
           }
-          dupTemp$1 = je.a(1);
+          dupTemp$1 = je.correctedCurrentTimeMillis(1);
           gf.field_Y = dupTemp$1;
           md.field_y = dupTemp$1;
           if (bk.field_a.status != 1) {

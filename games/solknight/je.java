@@ -68,7 +68,7 @@ final class je {
         return md.a(param2, param3, param0, param4, 1, -1, 1, 3, 1);
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (qf.field_b > var1) {
           of.field_e = of.field_e + (qf.field_b - var1);

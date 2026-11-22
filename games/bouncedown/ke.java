@@ -62,7 +62,7 @@ final class ke extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         if (param1 == 24636) {
           param0 = param0 | param0 >>> 1;

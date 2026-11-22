@@ -382,7 +382,7 @@ final class ke {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param4 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + dh.a(-15591, ji.b(105) + 1000L * param4) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + dh.a(-15591, ji.correctedCurrentTimeMillis(105) + 1000L * param4) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

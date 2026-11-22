@@ -184,7 +184,7 @@ final class ln {
         }
     }
 
-    final static void a(long param0, byte param1) {
+    final static void sleepIgnoringInterrupts(long param0, byte param1) {
         try {
           try {
             Thread.sleep(param0);

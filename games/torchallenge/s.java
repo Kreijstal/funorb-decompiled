@@ -78,7 +78,7 @@ final class s extends IntrusiveNode {
           if (param0) {
             field_k = (int[]) null;
           }
-          dupTemp$1 = ol.a(256);
+          dupTemp$1 = ol.correctedCurrentTimeMillis(256);
           AccountNameAvailabilityValidator.field_q = dupTemp$1;
           ac.field_e = dupTemp$1;
           if (gf.field_o.status != 1) {

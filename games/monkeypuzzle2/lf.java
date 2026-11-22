@@ -68,11 +68,11 @@ final class lf {
               var2.writeInt(param0 - 803539347, mk.field_f);
               ProxyAuthenticationRequiredException.field_a.a(var2.payload, 0, (byte) 93, 13);
               ii.field_T = ii.field_T + 1;
-              wi.field_f = 30000L + pf.a(0);
+              wi.field_f = 30000L + pf.correctedCurrentTimeMillis(0);
             }
             if (ii.field_T == param0) {
               if (ProxyAuthenticationRequiredException.field_a.c(72) <= 0) {
-                if (wi.field_f < pf.a(param0 ^ 3)) {
+                if (wi.field_f < pf.correctedCurrentTimeMillis(param0 ^ 3)) {
                   stackIn_31_0 = dh.a(true, -2);
                   return stackIn_31_0;
                 }

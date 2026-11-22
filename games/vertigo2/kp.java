@@ -40,7 +40,7 @@ class kp extends d {
         }
         var5 = (qa) ((Object) this.listener);
         if (this.field_K == this.field_L) {
-          var6 = gk.a(126);
+          var6 = gk.correctedCurrentTimeMillis(126);
           if (500L > (var6 - this.field_M) % 1000L) {
             var5.a(-94, this.field_K, param2, (UiWidget) (this), param3);
           }
@@ -51,7 +51,7 @@ class kp extends d {
           return;
         }
         var5.a((UiWidget) (this), this.field_K, param0, this.field_L, param3, param2);
-        var6Lifetime1 = gk.a(126);
+        var6Lifetime1 = gk.correctedCurrentTimeMillis(126);
         if (500L > (var6Lifetime1 - this.field_M) % 1000L) {
           var5.a(-94, this.field_K, param2, (UiWidget) (this), param3);
         }
@@ -335,7 +335,7 @@ class kp extends d {
               stackIn_7_1 = var8_int;
             }
             this.a(stackIn_7_1, (byte) -126);
-            var8_long = gk.a(44);
+            var8_long = gk.correctedCurrentTimeMillis(44);
             stackIn_10_1 = !(-this.field_H + var8_long >= 250L);
             this.field_I = stackIn_10_1;
             if (this.field_I) {
@@ -394,7 +394,7 @@ class kp extends d {
               this.field_K = var6;
             }
           }
-          this.field_M = gk.a(57);
+          this.field_M = gk.correctedCurrentTimeMillis(57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class kp extends d {
           if (param1 != 13) {
             this.field_O = -111;
           }
-          this.field_M = gk.a(77);
+          this.field_M = gk.correctedCurrentTimeMillis(77);
           if (param0 == 60) {
             return false;
           }
@@ -572,7 +572,7 @@ class kp extends d {
           this.field_N = param2;
           this.a(param0, -103, true);
           this.field_J = true;
-          this.field_M = gk.a(117);
+          this.field_M = gk.correctedCurrentTimeMillis(117);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "kp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

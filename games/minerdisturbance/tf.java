@@ -22,10 +22,10 @@ final class tf {
           while (true) {
             var3 = param1.requestFullscreenExit(param2, true);
             while (var3.status == 0) {
-              gf.a(10L, -10309);
+              gf.sleepMillis(10L, -10309);
             }
             if (var3.status != 1) {
-              gf.a(100L, -10309);
+              gf.sleepMillis(100L, -10309);
               continue;
             }
             break;

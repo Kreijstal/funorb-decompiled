@@ -74,7 +74,7 @@ final class dc {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        he.a(field_r, 0, param0);
+        he.clearInts(field_r, 0, param0);
         if (param1 < 10) {
           return field_r;
         }

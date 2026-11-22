@@ -148,9 +148,9 @@ final class nb {
           var33 = mc.field_j;
           var29 = var33;
           var12 = var29;
-          ug.a(var31, 0, param9);
-          ug.a(var32, 0, param9);
-          ug.a(var33, 0, param9);
+          ug.clearInts(var31, 0, param9);
+          ug.clearInts(var32, 0, param9);
+          ug.clearInts(var33, 0, param9);
           var13 = param5 / (1 + param7 * 2);
           var14 = param0 - param7;
           if (var14 < 0) {

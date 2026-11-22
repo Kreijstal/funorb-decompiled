@@ -30,7 +30,7 @@ final class sb implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              i.a((byte) 18, 10L);
+              i.sleepMillis((byte) 18, 10L);
               var5 = (Object) null;
               pb.a(this.field_b, (Object) null, (byte) 106);
             }

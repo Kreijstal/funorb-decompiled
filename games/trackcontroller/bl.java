@@ -228,11 +228,11 @@ final class bl {
               var2.writeInt(false, gi.field_r);
               ob.field_u.a(-128, var2.payload, 13, 0);
               rf.field_c = rf.field_c + 1;
-              ma.field_b = qg.a(false) + 30000L;
+              ma.field_b = qg.correctedCurrentTimeMillis(false) + 30000L;
             }
             if (rf.field_c == 3) {
               if (0 >= ob.field_u.b(0)) {
-                if (ma.field_b < qg.a(false)) {
+                if (ma.field_b < qg.correctedCurrentTimeMillis(false)) {
                   stackIn_35_0 = ej.a(116, -2);
                   return stackIn_35_0;
                 }

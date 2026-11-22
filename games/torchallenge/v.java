@@ -491,7 +491,7 @@ abstract class v extends b {
           }
           var12 = param4.requestFullscreenEnter(param5, param0, param2, param1, -2);
           while (var12.status == 0) {
-            c.a(127, 10L);
+            c.sleepMillis(127, 10L);
           }
           var8 = (java.awt.Frame) (var12.result);
           if (var8 == null) {

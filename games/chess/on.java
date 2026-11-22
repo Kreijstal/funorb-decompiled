@@ -282,7 +282,7 @@ final class on implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, true, (Runnable) (this));
           while (var2.status == 0) {
-            bc.a(10L, (byte) -109);
+            bc.sleepMillis(10L, (byte) -109);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

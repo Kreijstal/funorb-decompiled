@@ -44,7 +44,7 @@ abstract class gi {
               var2_int = param0 - AccountRequestState.field_a.position;
             }
             sg.field_h.a(var2_int, AccountRequestState.field_a.payload, AccountRequestState.field_a.position, false);
-            ug.field_d = lj.a((byte) -128);
+            ug.field_d = lj.correctedCurrentTimeMillis((byte) -128);
             AccountRequestState.field_a.position = AccountRequestState.field_a.position + var2_int;
             if (AccountRequestState.field_a.position < param0) {
               return false;

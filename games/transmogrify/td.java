@@ -18,7 +18,7 @@ abstract class td {
         if (var5 <= 0L) {
           return this.a(param1, -122);
         }
-        pg.a(var5, -114);
+        pg.sleepMillis(var5, -114);
         return this.a(param1, -122);
     }
 

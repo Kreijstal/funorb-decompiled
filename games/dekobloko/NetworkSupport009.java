@@ -384,7 +384,7 @@ final class NetworkSupport009 {
               packetBufferLocal9.writeInt(MixedSupport142.integerState0880, false);
               UiComponentPart028.bufferedSocketState0003.performAction1374(0, 13, integerArgument1 + 1, packetBufferLocal9.payload);
               MixedSupport053.integerState0273 = MixedSupport053.integerState0273 + 1;
-              NetworkSupport007.longState0030 = 30000L + MixedSupport062.computeLong0734(integerArgument1 ^ 4);
+              NetworkSupport007.longState0030 = 30000L + MixedSupport062.correctedCurrentTimeMillis(integerArgument1 ^ 4);
             }
             if (MixedSupport053.integerState0273 == 3) {
               if (UiComponentPart028.bufferedSocketState0003.computeInteger1377(0) > 0) {
@@ -395,7 +395,7 @@ final class NetworkSupport009 {
                 }
                 MixedSupport053.integerState0273 = MixedSupport053.integerState0273 + 1;
               } else {
-                if (NetworkSupport007.longState0030 < MixedSupport062.computeLong0734(integerArgument1 ^ 4)) {
+                if (NetworkSupport007.longState0030 < MixedSupport062.correctedCurrentTimeMillis(integerArgument1 ^ 4)) {
                   stackIntegerLocal2 = InputAdapter001.computeInteger0068(0, -2);
                   return stackIntegerLocal2;
                 }

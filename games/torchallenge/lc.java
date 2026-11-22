@@ -26,7 +26,7 @@ final class lc extends IntrusiveNode {
 
     final static boolean a(int param0) {
         ll.field_i = true;
-        ji.field_y = 15000L + ol.a(256);
+        ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
         if (param0 != 1) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
           lc.a(20, (PacketBuffer) null, -87, (byte[]) null, -9, (java.math.BigInteger) null, (java.math.BigInteger) null);

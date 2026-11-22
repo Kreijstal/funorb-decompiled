@@ -42,7 +42,7 @@ final class tj extends uh {
           pj var2Lifetime1;
           var16 = Transmogrify.field_A ? 1 : 0;
           if (null != this.field_x) {
-            var2_long = lk.a(0);
+            var2_long = lk.correctedCurrentTimeMillis(0);
             var4 = (int)(-this.field_l + var2_long);
             this.field_l = var2_long;
             if (200 < var4) {
@@ -303,7 +303,7 @@ final class tj extends uh {
               }
             }
             this.field_b = 0;
-            this.field_l = lk.a(param2 - 20);
+            this.field_l = lk.correctedCurrentTimeMillis(param2 - 20);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

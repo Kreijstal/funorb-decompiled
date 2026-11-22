@@ -66,7 +66,7 @@ class c extends bb {
             if (this.field_M != this.field_K) {
               var8.a((UiComponent) (this), this.field_M, param0, this.field_K, -30298, param1);
             }
-            var6 = lj.a((byte) -27);
+            var6 = lj.correctedCurrentTimeMillis((byte) -27);
             if ((var6 - this.field_Q) % 1000L < 500L) {
               var8.a(param0, 0, (UiComponent) (this), this.field_M, param1);
             }
@@ -142,7 +142,7 @@ class c extends bb {
               stackIn_5_1 = var8_int;
             }
             this.a(stackIn_5_1, -57);
-            var8_long = lj.a((byte) -93);
+            var8_long = lj.correctedCurrentTimeMillis((byte) -93);
             stackIn_8_1 = !(var8_long - this.field_L >= 250L);
             this.field_R = stackIn_8_1;
             if (this.field_R) {
@@ -205,7 +205,7 @@ class c extends bb {
           this.field_O = param2;
           this.a(true, (byte) -78, param0);
           this.field_T = true;
-          this.field_Q = lj.a((byte) -19);
+          this.field_Q = lj.correctedCurrentTimeMillis((byte) -19);
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -408,7 +408,7 @@ class c extends bb {
                 this.field_M = var6;
               }
             }
-            this.field_Q = lj.a((byte) -81);
+            this.field_Q = lj.correctedCurrentTimeMillis((byte) -81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -435,7 +435,7 @@ class c extends bb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_Q = lj.a((byte) -37);
+          this.field_Q = lj.correctedCurrentTimeMillis((byte) -37);
           if (param0 != -2) {
             return true;
           }

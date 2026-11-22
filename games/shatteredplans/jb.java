@@ -39,11 +39,11 @@ final class jb {
           return;
         }
         if (param1 % 10L == 0L) {
-          IntNode.a(true, -1L + param1);
-          IntNode.a(true, 1L);
+          IntNode.sleepIgnoringInterrupts(true, -1L + param1);
+          IntNode.sleepIgnoringInterrupts(true, 1L);
           return;
         }
-        IntNode.a(true, param1);
+        IntNode.sleepIgnoringInterrupts(true, param1);
     }
 
     static {

@@ -2242,7 +2242,7 @@ final class re {
                 var2_int = -sc.field_g.field_i + param1;
               }
               ag.field_t.a(-1, sc.field_g.field_n, sc.field_g.field_i, var2_int);
-              bb.field_c = hn.a((byte) 80);
+              bb.field_c = hn.correctedCurrentTimeMillis((byte) 80);
               sc.field_g.field_i = sc.field_g.field_i + var2_int;
               if (sc.field_g.field_i < param1) {
                 return false;

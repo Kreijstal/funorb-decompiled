@@ -83,7 +83,7 @@ final class ci extends IntrusiveNode {
           var1_int = jm.field_c;
           var2 = 0;
           if (AccountNameAvailabilityValidator.field_t == 2) {
-            var3_long = -GameAppletShell.field_d + kd.c(-2456);
+            var3_long = -GameAppletShell.field_d + kd.correctedCurrentTimeMillis(-2456);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

@@ -40,7 +40,7 @@ abstract class bj implements bg {
         if (this.a((byte) 73)) {
           return bm.field_g;
         }
-        if (hn.a((byte) 80) >= (350L + this.field_c)) {
+        if (hn.correctedCurrentTimeMillis((byte) 80) >= (350L + this.field_c)) {
           return this.d(11269);
         }
         return wl.field_c;
@@ -52,7 +52,7 @@ abstract class bj implements bg {
           if (this.a((byte) -70)) {
             return null;
           }
-          if ((350L + this.field_c) <= hn.a((byte) 80)) {
+          if ((350L + this.field_c) <= hn.correctedCurrentTimeMillis((byte) 80)) {
             return this.b((byte) 18);
           }
           return null;
@@ -60,14 +60,14 @@ abstract class bj implements bg {
         if (this.a((byte) -70)) {
           return null;
         }
-        if ((350L + this.field_c) <= hn.a((byte) 80)) {
+        if ((350L + this.field_c) <= hn.correctedCurrentTimeMillis((byte) 80)) {
           return this.b((byte) 18);
         }
         return null;
     }
 
     public final void a(boolean param0) {
-        this.field_c = hn.a((byte) 80);
+        this.field_c = hn.correctedCurrentTimeMillis((byte) 80);
         if (!param0) {
           bj.c((byte) -120);
         }

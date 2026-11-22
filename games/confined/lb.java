@@ -57,7 +57,7 @@ final class lb extends DualLinkNode {
         var9 = Confined.field_J ? 1 : 0;
         try {
           if (param0 != 0) {
-            lb.a(-24, 127);
+            lb.roundUpPowerOfTwo(-24, 127);
           }
           if (1 != param2) {
             if (param2 == 2) {
@@ -153,14 +153,14 @@ final class lb extends DualLinkNode {
         return var2.toString();
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;
         if (param0 != 675001474) {
-          lb.a(-62, -60);
+          lb.roundUpPowerOfTwo(-62, -60);
         }
         param1 = param1 | param1 >>> 16;
         return param1 + 1;

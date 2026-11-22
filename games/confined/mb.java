@@ -21,7 +21,7 @@ final class mb extends ka {
           if (mg.field_a.status == 0) {
             return false;
           }
-          long dupTemp$0 = ri.a(param1 - 20);
+          long dupTemp$0 = ri.correctedCurrentTimeMillis(param1 - 20);
           pc.field_a = dupTemp$0;
           m.field_b = dupTemp$0;
           if (mg.field_a.status != 1) {
@@ -115,7 +115,7 @@ final class mb extends ka {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_b).append("&v2=").append(PlatformTaskDispatcher.field_s).append("&e=").append(var11).toString()));
             while (var4.status == 0) {
-              jd.a(1, 1L);
+              jd.sleepMillis(1, 1L);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);
@@ -181,7 +181,7 @@ final class mb extends ka {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param2.field_k.peekEvent()) {
-              jd.a(1, 1L);
+              jd.sleepMillis(1, 1L);
               continue;
             }
             break;

@@ -85,7 +85,7 @@ final class uk {
           field_a = (String[]) null;
         }
         lj.field_e = true;
-        AccountCreationResultPanel.field_sb = 15000L + lj.a((byte) -68);
+        AccountCreationResultPanel.field_sb = 15000L + lj.correctedCurrentTimeMillis((byte) -68);
         return bh.field_t == 11 ? true : false;
     }
 
@@ -120,7 +120,7 @@ final class uk {
                 field_a = (String[]) null;
               }
               if (param1 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + wd.a((byte) -61, param1 * 1000L + lj.a((byte) -95)) + "; Max-Age=" + param1;
+                var7Lifetime4 = var9 + "; Expires=" + wd.a((byte) -61, param1 * 1000L + lj.correctedCurrentTimeMillis((byte) -95)) + "; Max-Age=" + param1;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

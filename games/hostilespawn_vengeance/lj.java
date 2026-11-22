@@ -53,7 +53,7 @@ abstract class lj extends DualLinkNode {
               var4 = -61 % ((param0 - 31) / 58);
               if (var3 == 0 &&
                 be.field_e == 2) {
-                var5 = hn.a((byte) 80) - fj.field_Rb;
+                var5 = hn.correctedCurrentTimeMillis((byte) 80) - fj.field_Rb;
                 var7 = (int)((-var5 + 10999L) / 1000L);
                 if (var7 <= 0) {
                   var3 = 2;
@@ -72,7 +72,7 @@ abstract class lj extends DualLinkNode {
           var4Lifetime1 = -61 % ((param0 - 31) / 58);
           if (var3 == 0 &&
             be.field_e == 2) {
-            var5Lifetime1 = hn.a((byte) 80) - fj.field_Rb;
+            var5Lifetime1 = hn.correctedCurrentTimeMillis((byte) 80) - fj.field_Rb;
             var7Lifetime1 = (int)((-var5Lifetime1 + 10999L) / 1000L);
             if (var7Lifetime1 <= 0) {
               var3 = 2;

@@ -140,7 +140,7 @@ final class ca extends rf {
           this.field_q = (cg) null;
         }
         if (this.field_k &&
-          pf.a(0) >= this.field_e) {
+          pf.correctedCurrentTimeMillis(0) >= this.field_e) {
           var2 = (fb) (this.field_q.a(0));
           while (var2 != null) {
             if (!var2.field_j) {
@@ -155,7 +155,7 @@ final class ca extends rf {
             }
             var2 = (fb) (this.field_q.a((byte) -55));
           }
-          this.field_e = pf.a(param0 - 16311) + 1000L;
+          this.field_e = pf.correctedCurrentTimeMillis(param0 - 16311) + 1000L;
         }
     }
 

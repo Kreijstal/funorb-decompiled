@@ -167,7 +167,7 @@ final class km {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepIgnoringInterrupts(long param0, int param1) {
         try {
           try {
             Thread.sleep(param0);

@@ -344,7 +344,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           rc.c((byte) 124);
           li.a(-2, var2, HardwareRenderSprite.field_m);
           BitmapFontMetrics.field_f = true;
-          wg.field_b = kh.a(-76) + 15000L;
+          wg.field_b = kh.correctedCurrentTimeMillis(-76) + 15000L;
           return var2;
         }
         if (SoundCache.field_d == 11 &&
@@ -430,7 +430,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             li.a(11, 2, oi.field_b);
             np.b(34066);
             BitmapFontMetrics.field_f = true;
-            wg.field_b = 15000L + kh.a(-105);
+            wg.field_b = 15000L + kh.correctedCurrentTimeMillis(-105);
           }
         }
         if (RenderEffect.field_a == -1 ||
@@ -446,7 +446,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (RenderEffect.field_a != -1 &&
             RenderEffect.field_a != 0) {
-            wg.field_b = 15000L + kh.a(-100);
+            wg.field_b = 15000L + kh.correctedCurrentTimeMillis(-100);
           }
         }
         if (RenderEffect.field_a != -1 &&
@@ -482,7 +482,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((RenderEffect.field_a != -1 &&
           0 != RenderEffect.field_a ||
           dg.j(27711)) &&
-          wg.field_b <= kh.a(-119)) {
+          wg.field_b <= kh.correctedCurrentTimeMillis(-119)) {
           BitmapFontMetrics.field_f = false;
           if (RenderEffect.field_a != -1 &&
             0 != RenderEffect.field_a) {

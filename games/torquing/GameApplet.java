@@ -320,7 +320,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          eq.field_d = km.b(-1) + 4000L;
+          eq.field_d = km.correctedCurrentTimeMillis(-1) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hk.stop()");
         }
@@ -360,7 +360,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = km.b(-1);
+          var2_long = km.correctedCurrentTimeMillis(-1);
           var4 = jl.field_V[bo.field_k];
           jl.field_V[bo.field_k] = var2_long;
           if (0L != var4 &&
@@ -461,7 +461,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ae.field_ib = true;
           cf.field_c = true;
           b.field_v = param0;
-          aa.field_Q = km.b(-1);
+          aa.field_Q = km.correctedCurrentTimeMillis(-1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -643,7 +643,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (eq.field_d != 0L) {
-                    stackIn_103_0 = compareLongs(eq.field_d, km.b(-1));
+                    stackIn_103_0 = compareLongs(eq.field_d, km.correctedCurrentTimeMillis(-1));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_103_0 <= 0)) {
@@ -692,8 +692,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == vk.field_B &&
             !fq.field_E) {
-            eq.field_d = km.b(-1);
-            ub.a(1976, 5000L);
+            eq.field_d = km.correctedCurrentTimeMillis(-1);
+            ub.sleepMillis(1976, 5000L);
             FullscreenFocusCanvas.field_f = null;
             this.a(false, -11);
             return;
@@ -714,7 +714,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = km.b(param0 ^ 18221);
+          var2_long = km.correctedCurrentTimeMillis(param0 ^ 18221);
           var4 = ui.field_l[ub.field_C];
           ui.field_l[ub.field_C] = var2_long;
           ub.field_C = 1 + ub.field_C & 31;
@@ -893,7 +893,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !fq.field_E) {
             cf.field_c = true;
             if (fn.field_b &&
-              km.b(-1) - aa.field_Q > 1000L) {
+              km.correctedCurrentTimeMillis(-1) - aa.field_Q > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (th.field_G > var2.width) {
@@ -998,7 +998,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var9 = nk.field_u.requestThreadStart((byte) -91, 1, (Runnable) (this));
               while (true) {
                 if (var9.status == 0) {
-                  ub.a(1976, 10L);
+                  ub.sleepMillis(1976, 10L);
                   if (var10 == 0) {
                     continue;
                   }

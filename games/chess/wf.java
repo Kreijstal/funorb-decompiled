@@ -331,10 +331,10 @@ final class wf extends ma implements ha, mj {
           while (true) {
             var3 = param1.requestFullscreenExit(param0, false);
             while (0 == var3.status) {
-              bc.a(10L, (byte) 17);
+              bc.sleepMillis(10L, (byte) 17);
             }
             if (var3.status != 1) {
-              bc.a(100L, (byte) -104);
+              bc.sleepMillis(100L, (byte) -104);
               continue;
             }
             break;
@@ -444,7 +444,7 @@ final class wf extends ma implements ha, mj {
           }
           if (0 == var3 &&
             gm.field_f == 2) {
-            var4 = -jg.field_M + ud.a(2);
+            var4 = -jg.field_M + ud.correctedCurrentTimeMillis(2);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               qh.a(false, true, 5);

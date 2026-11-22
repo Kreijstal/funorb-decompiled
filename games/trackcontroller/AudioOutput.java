@@ -34,7 +34,7 @@ class AudioOutput {
           if (this.field_d) {
             return;
           }
-          var1 = qg.a(false);
+          var1 = qg.correctedCurrentTimeMillis(false);
           try {
             if (var1 > this.field_u + 6000L) {
               this.field_u = var1 - 6000L;
@@ -42,7 +42,7 @@ class AudioOutput {
             while (var1 > this.field_u + 5000L) {
               this.skipFrames(256);
               this.field_u = this.field_u + (long)(256000 / field_h);
-              var1 = qg.a(false);
+              var1 = qg.correctedCurrentTimeMillis(false);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,7 +194,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_q.field_b = true;
             while (field_q.field_e) {
-              wl.a(50L, false);
+              wl.sleepMillis(50L, false);
             }
             field_q = null;
           }
@@ -211,7 +211,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_c = qg.a(false) + 2000L;
+            this.field_c = qg.correctedCurrentTimeMillis(false) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -323,7 +323,7 @@ class AudioOutput {
         if (field_k) {
           var3 = var3 << 1;
         }
-        pd.a(param0, 0, var3);
+        pd.clearInts(param0, 0, var3);
         this.field_m = this.field_m - param1;
         if (this.field_i != null &&
           this.field_m <= 0) {
@@ -417,13 +417,13 @@ class AudioOutput {
         if (this.field_i != null) {
           this.field_i.mix(param0, 0, param1);
         }
-        this.field_u = qg.a(false);
+        this.field_u = qg.correctedCurrentTimeMillis(false);
     }
 
     AudioOutput() {
         this.field_d = false;
         this.field_n = 32;
-        this.field_u = qg.a(false);
+        this.field_u = qg.correctedCurrentTimeMillis(false);
         this.field_p = 0;
         this.field_c = 0L;
         this.field_m = 0;

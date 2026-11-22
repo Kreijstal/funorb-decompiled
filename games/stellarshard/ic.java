@@ -14,7 +14,7 @@ abstract class ic implements w {
         if (param0 != -28036) {
           return (cg) null;
         }
-        if (350L + this.field_c <= ih.a((byte) -98)) {
+        if (350L + this.field_c <= ih.correctedCurrentTimeMillis((byte) -98)) {
           return this.c((byte) -119);
         }
         return eh.field_c;
@@ -36,7 +36,7 @@ abstract class ic implements w {
     abstract cg c(byte param0);
 
     public final void a(int param0) {
-        this.field_c = ih.a((byte) -98);
+        this.field_c = ih.correctedCurrentTimeMillis((byte) -98);
         if (param0 >= -81) {
           this.c(-83);
         }
@@ -85,7 +85,7 @@ abstract class ic implements w {
           if (this.a((byte) 79)) {
             return null;
           }
-          if (ih.a((byte) -98) >= (this.field_c + 350L)) {
+          if (ih.correctedCurrentTimeMillis((byte) -98) >= (this.field_c + 350L)) {
             return this.b((byte) 36);
           }
           return null;
@@ -93,7 +93,7 @@ abstract class ic implements w {
         if (this.a((byte) 79)) {
           return null;
         }
-        if (ih.a((byte) -98) >= (this.field_c + 350L)) {
+        if (ih.correctedCurrentTimeMillis((byte) -98) >= (this.field_c + 350L)) {
           return this.b((byte) 36);
         }
         return null;

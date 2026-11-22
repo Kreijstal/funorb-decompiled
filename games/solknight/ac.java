@@ -78,7 +78,7 @@ final class ac {
             }
           }
           if (param0 >= -110) {
-            ac.a(61, false);
+            ac.roundUpPowerOfTwo(61, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,7 +88,7 @@ final class ac {
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int roundUpPowerOfTwo(int param0, boolean param1) {
         if (!param1) {
           return -57;
         }

@@ -117,7 +117,7 @@ final class vc {
               var3.writeInt(0, n.field_d);
               k.field_b.a(var3.payload, 0, 120, 13);
               kc.field_b = kc.field_b + 1;
-              fj.field_j = ih.a((byte) -98) + 30000L;
+              fj.field_j = ih.correctedCurrentTimeMillis((byte) -98) + 30000L;
             }
             var1_int = 23 / ((param0 + 55) / 60);
             if (kc.field_b == 3) {
@@ -129,7 +129,7 @@ final class vc {
                 }
                 kc.field_b = kc.field_b + 1;
               } else {
-                if (fj.field_j < ih.a((byte) -98)) {
+                if (fj.field_j < ih.correctedCurrentTimeMillis((byte) -98)) {
                   stackIn_25_0 = tc.a(-2, (byte) 126);
                   return stackIn_25_0;
                 }

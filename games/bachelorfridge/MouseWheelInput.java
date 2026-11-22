@@ -51,7 +51,7 @@ abstract class MouseWheelInput {
               var2.writeInt(bd.field_m, -1615464796);
               RaiseEvent.field_s.a(0, var2.payload, false, 13);
               ds.field_m = ds.field_m + 1;
-              RefreshingSpecial.field_q = f.b((byte) 73) + 30000L;
+              RefreshingSpecial.field_q = f.correctedCurrentTimeMillis((byte) 73) + 30000L;
             }
             if (ds.field_m == 3) {
               if (0 < RaiseEvent.field_s.b(125)) {
@@ -62,7 +62,7 @@ abstract class MouseWheelInput {
                 }
                 ds.field_m = ds.field_m + 1;
               } else {
-                if (RefreshingSpecial.field_q < f.b((byte) 73)) {
+                if (RefreshingSpecial.field_q < f.correctedCurrentTimeMillis((byte) 73)) {
                   stackIn_23_0 = BattleUpdate.a(-2, 1);
                   return stackIn_23_0;
                 }

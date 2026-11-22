@@ -385,7 +385,7 @@ class lk extends IntrusiveNode {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2.length() != param1) {
-                var5Lifetime6 = var7 + "; Expires=" + h.a(-117, 94608000000L + id.a(105)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + h.a(-117, 94608000000L + id.correctedCurrentTimeMillis(105)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

@@ -3229,7 +3229,7 @@ final class LoginMenuScreen extends pj implements ke {
                   var2_int = -dh.field_N.position + param0;
                 }
                 uj.field_j.a((byte) -14, dh.field_N.payload, dh.field_N.position, var2_int);
-                el.field_rb = la.a(false);
+                el.field_rb = la.correctedCurrentTimeMillis(false);
                 dh.field_N.position = dh.field_N.position + var2_int;
                 if (param0 > dh.field_N.position) {
                   return false;

@@ -35,7 +35,7 @@ class AudioOutput {
         if (field_r) {
           var3 = var3 << 1;
         }
-        au.a(param0, 0, var3);
+        au.clearInts(param0, 0, var3);
         this.field_o = this.field_o - param1;
         if (this.field_n != null &&
           this.field_o <= 0) {
@@ -129,7 +129,7 @@ class AudioOutput {
         if (this.field_n != null) {
           this.field_n.b(param0, 0, param1);
         }
-        this.field_p = kh.a(-99);
+        this.field_p = kh.correctedCurrentTimeMillis(-99);
     }
 
     void initializeDevice(java.awt.Component param0) throws Exception {
@@ -142,7 +142,7 @@ class AudioOutput {
           if (this.field_m) {
             return;
           }
-          long var1 = kh.a(-128);
+          long var1 = kh.correctedCurrentTimeMillis(-128);
           try {
             if (var1 > this.field_p + 6000L) {
               this.field_p = var1 - 6000L;
@@ -150,7 +150,7 @@ class AudioOutput {
             while (var1 > this.field_p + 5000L) {
               this.skipFrames(256);
               this.field_p = this.field_p + (long)(256000 / field_f);
-              var1 = kh.a(-69);
+              var1 = kh.correctedCurrentTimeMillis(-69);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -282,7 +282,7 @@ class AudioOutput {
           if (var1) {
             field_s.field_a = true;
             while (field_s.field_e) {
-              IntrusiveNode.a(50L, false);
+              IntrusiveNode.sleepMillis(50L, false);
             }
             field_s = null;
           }
@@ -306,7 +306,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_q = kh.a(-86) + 2000L;
+            this.field_q = kh.correctedCurrentTimeMillis(-86) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -388,7 +388,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_j = 32;
         this.field_m = false;
-        this.field_p = kh.a(-86);
+        this.field_p = kh.correctedCurrentTimeMillis(-86);
         this.field_t = 0;
         this.field_c = true;
         this.field_u = new PcmStream[8];

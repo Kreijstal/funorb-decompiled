@@ -14,9 +14,9 @@ final class ContextualRuntimeException extends RuntimeException {
     final static long b(int param0) {
         if (param0 <= 86) {
           field_a = (String) null;
-          return lj.a((byte) -35) - ug.field_d;
+          return lj.correctedCurrentTimeMillis((byte) -35) - ug.field_d;
         }
-        return lj.a((byte) -35) - ug.field_d;
+        return lj.correctedCurrentTimeMillis((byte) -35) - ug.field_d;
     }
 
     public static void c(int param0) {
@@ -50,7 +50,7 @@ final class ContextualRuntimeException extends RuntimeException {
         ContextualRuntimeException.a((byte) 30);
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param0 = ((param0 & -1431655766) >>> 1) + (param0 & 1431655765);
         int var2 = -97 % ((-51 - param1) / 42);
         param0 = (858993459 & param0) + ((-858993457 & param0) >>> 2);

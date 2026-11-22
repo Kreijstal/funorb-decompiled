@@ -33,7 +33,7 @@ final class f {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (param2.field_i.peekEvent() != null) {
-              wl.a(1L, false);
+              wl.sleepMillis(1L, false);
               continue;
             }
             break;

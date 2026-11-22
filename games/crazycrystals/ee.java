@@ -140,7 +140,7 @@ final class ee extends lk {
           }
         }
         if (this.field_t &&
-          this.field_c <= lo.a((byte) 110)) {
+          this.field_c <= lo.correctedCurrentTimeMillis((byte) 110)) {
           var2_ref_wl = (wl) (this.field_g.a((byte) -92));
           while (var2_ref_wl != null) {
             if (!var2_ref_wl.field_n) {
@@ -155,7 +155,7 @@ final class ee extends lk {
             }
             var2_ref_wl = (wl) (this.field_g.a(105));
           }
-          this.field_c = 1000L + lo.a((byte) -30);
+          this.field_c = 1000L + lo.correctedCurrentTimeMillis((byte) -30);
         }
         var2Lifetime1 = -100 / ((param0 + 13) / 37);
     }
@@ -575,7 +575,7 @@ final class ee extends lk {
           if (param1 != 64) {
             return false;
           }
-          var2_long = lo.a((byte) -98);
+          var2_long = lo.correctedCurrentTimeMillis((byte) -98);
           if (0 != IntrusiveDeque.field_d &&
             sm.field_i < 0) {
             var4_ref_mo = (mo) (bn.field_i.beginForward(32073));

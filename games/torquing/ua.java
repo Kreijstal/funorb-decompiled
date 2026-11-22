@@ -60,7 +60,7 @@ abstract class ua {
           }
           if (0 == var3 &&
             go.field_x == 2) {
-            var4 = km.b(-1) - dc.field_c;
+            var4 = km.correctedCurrentTimeMillis(-1) - dc.field_c;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               ka.a(5, true, (byte) -115);

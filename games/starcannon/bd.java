@@ -98,7 +98,7 @@ abstract class bd {
           }
           if (var3 == 0 &&
             2 == SecondaryNodeDeque.field_a) {
-            var4 = -af.field_x + dd.b(125);
+            var4 = -af.field_x + dd.correctedCurrentTimeMillis(125);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               AccountServiceResult.a((byte) 63, 5, true);

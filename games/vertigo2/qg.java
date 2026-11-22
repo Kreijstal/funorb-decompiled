@@ -207,7 +207,7 @@ final class qg extends WidgetWrapper {
         if (param0) {
           return 5L;
         }
-        return gk.a(57) - gn.field_b;
+        return gk.correctedCurrentTimeMillis(57) - gn.field_b;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, String param4, long param5) {

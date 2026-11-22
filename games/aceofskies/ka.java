@@ -49,7 +49,7 @@ abstract class ka {
           if (param0 <= 75) {
             field_a = (Sprite[]) null;
           }
-          var2_long = kh.a(-125);
+          var2_long = kh.correctedCurrentTimeMillis(-125);
           if (tj.field_m != 0 &&
             0 > ec.field_g) {
             m var4_ref_m = (m) (oo.field_T.first(268435455));

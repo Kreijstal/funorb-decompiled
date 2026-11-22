@@ -33,7 +33,7 @@ abstract class MouseWheelInput {
           if (param1 != 122) {
             return false;
           }
-          var2_long = je.a(1);
+          var2_long = je.correctedCurrentTimeMillis(1);
           if (0 != rh.field_i &&
             qg.field_a < 0) {
             var4_ref_sa = (sa) (SecondaryNodeDequeIterator.field_h.beginBackward((byte) 51));

@@ -222,11 +222,11 @@ class id implements uk, pj {
     final static boolean b(int param0) {
         pf.field_c = true;
         if (param0 == -4) {
-          vc.field_a = 15000L + ih.a((byte) -98);
+          vc.field_a = 15000L + ih.correctedCurrentTimeMillis((byte) -98);
           return eg.field_d == 11 ? true : false;
         }
         field_l = (String) null;
-        vc.field_a = 15000L + ih.a((byte) -98);
+        vc.field_a = 15000L + ih.correctedCurrentTimeMillis((byte) -98);
         return eg.field_d == 11 ? true : false;
     }
 

@@ -69,7 +69,7 @@ abstract class GameShell extends GameApplet {
             oq.a((byte) 102, ml.field_A, 2);
             kj.g(1);
             br.field_R = true;
-            ProxySocketConnector.field_j = gk.a(124) + 15000L;
+            ProxySocketConnector.field_j = gk.correctedCurrentTimeMillis(124) + 15000L;
           }
         }
         if (param1 != -6) {
@@ -88,7 +88,7 @@ abstract class GameShell extends GameApplet {
           }
           if (-1 != GameplayScreen.field_f &&
             GameplayScreen.field_f != 0) {
-            ProxySocketConnector.field_j = 15000L + gk.a(90);
+            ProxySocketConnector.field_j = 15000L + gk.correctedCurrentTimeMillis(90);
           }
         }
         if (GameplayScreen.field_f != -1 &&
@@ -138,7 +138,7 @@ abstract class GameShell extends GameApplet {
         if ((-1 != GameplayScreen.field_f &&
           GameplayScreen.field_f != 0 ||
           va.b((byte) -81)) &&
-          gk.a(98) >= ProxySocketConnector.field_j) {
+          gk.correctedCurrentTimeMillis(98) >= ProxySocketConnector.field_j) {
           br.field_R = false;
           if (GameplayScreen.field_f != -1 &&
             GameplayScreen.field_f != 0) {
@@ -841,7 +841,7 @@ abstract class GameShell extends GameApplet {
         wp.a(10);
         oq.a((byte) 102, nk.field_Kb, var2);
         br.field_R = true;
-        ProxySocketConnector.field_j = gk.a(74) + 15000L;
+        ProxySocketConnector.field_j = gk.correctedCurrentTimeMillis(74) + 15000L;
         return var2;
     }
 

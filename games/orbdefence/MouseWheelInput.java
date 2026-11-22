@@ -73,7 +73,7 @@ abstract class MouseWheelInput {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_17_0).requestUrlStream(new java.net.URL(stackIn_17_3, ((StringBuilder) (Object) stackIn_17_4).append(stackIn_18_5).append("&v1=").append(PlatformTaskDispatcher.field_s).append("&v2=").append(PlatformTaskDispatcher.field_j).append("&e=").append(var10).toString()), (byte) -49);
             while (var4.status == 0) {
-              hb.a(1L, 110);
+              hb.sleepMillis(1L, 110);
             }
             if (var4.status != 1) {
               return;

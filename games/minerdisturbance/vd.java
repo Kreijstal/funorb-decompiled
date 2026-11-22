@@ -398,8 +398,8 @@ final class vd extends PcmStream {
               if (var5 != 256) {
                 if (null != this.field_G &&
                   this.field_G.length >= var6) {
-                  ai.a(this.field_G, 0, var6);
-                  ai.a(this.field_H, 0, var6);
+                  ai.clearInts(this.field_G, 0, var6);
+                  ai.clearInts(this.field_H, 0, var6);
                 } else {
                   this.field_G = new int[var6];
                   this.field_H = new int[var6];
@@ -428,7 +428,7 @@ final class vd extends PcmStream {
             this.field_D != 0) {
             if (this.field_G != null &&
               var6 <= this.field_G.length) {
-              ai.a(this.field_G, 0, var6);
+              ai.clearInts(this.field_G, 0, var6);
             } else {
               this.field_G = new int[var6];
               this.field_H = new int[var6];

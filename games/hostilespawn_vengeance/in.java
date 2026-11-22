@@ -187,7 +187,7 @@ abstract class in {
         }
         long var4 = this.a((byte) -78);
         if (var4 > 0L) {
-          vj.a(var4, (byte) -49);
+          vj.sleepMillis(var4, (byte) -49);
         }
         return this.a((byte) -125, param0);
     }

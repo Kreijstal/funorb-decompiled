@@ -58,7 +58,7 @@ final class MixedSupport123 {
           }
           if (integerLocal6 == 0 &&
             2 == MixedSupport009.integerState0054) {
-            longLocal7 = MixedSupport062.computeLong0734(4) - MixedSupport024.longState0007;
+            longLocal7 = MixedSupport062.correctedCurrentTimeMillis(4) - MixedSupport024.longState0007;
             integerLocal8 = (int)((10999L - longLocal7) / 1000L);
             if (0 >= integerLocal8) {
               integerLocal6 = 2;

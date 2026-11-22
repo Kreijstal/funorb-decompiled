@@ -12,7 +12,7 @@ abstract class li implements n {
         if (this.a((byte) -41)) {
           return null;
         }
-        if (lo.a((byte) -72) < (350L + this.field_b)) {
+        if (lo.correctedCurrentTimeMillis((byte) -72) < (350L + this.field_b)) {
           return null;
         }
         if (param0 == -16774) {
@@ -29,14 +29,14 @@ abstract class li implements n {
         if (this.a((byte) -41)) {
           return pe.field_p;
         }
-        if ((this.field_b + 350L) <= lo.a((byte) 84)) {
+        if ((this.field_b + 350L) <= lo.correctedCurrentTimeMillis((byte) 84)) {
           return this.b(51);
         }
         return ta.field_h;
     }
 
     public final void b(byte param0) {
-        this.field_b = lo.a((byte) 76);
+        this.field_b = lo.correctedCurrentTimeMillis((byte) 76);
         if (param0 != 78) {
           field_e = (String) null;
         }

@@ -172,7 +172,7 @@ final class kh extends gm {
                   var18.a(1, var19, var20);
                 }
               }
-              var8_ref_r.field_Nb = ud.a(2) - (long)((PacketBuffer) ((Object) var1)).readInt((byte) -112);
+              var8_ref_r.field_Nb = ud.correctedCurrentTimeMillis(2) - (long)((PacketBuffer) ((Object) var1)).readInt((byte) -112);
               var8_ref_r.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 112);
               stackIn_18_0 = var8_ref_r;
@@ -322,7 +322,7 @@ final class kh extends gm {
                       BoundedRandomAccessFile.field_e = 0L;
                       return;
                     }
-                    BoundedRandomAccessFile.field_e = (long)var3Lifetime5 + ud.a(2);
+                    BoundedRandomAccessFile.field_e = (long)var3Lifetime5 + ud.correctedCurrentTimeMillis(2);
                     return;
                   }
                   if (var2 == 22) {

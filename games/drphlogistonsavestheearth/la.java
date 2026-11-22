@@ -154,7 +154,7 @@ final class la {
         }
     }
 
-    final synchronized static long a(boolean param0) {
+    final synchronized static long correctedCurrentTimeMillis(boolean param0) {
         long var1_long = 0L;
         RuntimeException var1 = null;
         long stackIn_8_0 = 0L;

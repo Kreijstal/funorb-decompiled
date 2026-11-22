@@ -90,7 +90,7 @@ final class AccountRequestState {
                   var2_int = param1 - cd.field_t.position;
                 }
                 p.field_d.a(cd.field_t.position, var2_int, -24, cd.field_t.payload);
-                of.field_L = ji.b(-19);
+                of.field_L = ji.correctedCurrentTimeMillis(-19);
                 cd.field_t.position = cd.field_t.position + var2_int;
                 if (cd.field_t.position < param1) {
                   return false;

@@ -145,7 +145,7 @@ final class jb {
         field_c = param3 - param1;
         jb.a();
         if (field_e.length < field_c) {
-          field_e = new int[cb.a((byte) -85, field_c)];
+          field_e = new int[cb.roundUpPowerOfTwo((byte) -85, field_c)];
         }
         int var4 = param1 * vj.field_l + param0;
         for (var5 = 0; var5 < field_c; var5++) {

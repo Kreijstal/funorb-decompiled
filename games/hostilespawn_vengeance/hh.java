@@ -233,7 +233,7 @@ final class hh {
               }
               stackIn_81_0[stackIn_81_1] = stackIn_82_2;
             }
-            fj.field_Rb = hn.a((byte) 80);
+            fj.field_Rb = hn.correctedCurrentTimeMillis((byte) 80);
           }
           mc.field_F.field_b = FullscreenFocusCanvas.field_k.length;
           var3_intLifetime1 = 0;

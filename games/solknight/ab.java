@@ -651,7 +651,7 @@ abstract class ab extends GameApplet {
             dd.a((byte) 27, el.field_k, 2);
             pk.d(true);
             ee.field_i = true;
-            kj.field_I = 15000L + je.a(1);
+            kj.field_I = 15000L + je.correctedCurrentTimeMillis(1);
           }
         }
         if (bf.field_e == -1 ||
@@ -667,7 +667,7 @@ abstract class ab extends GameApplet {
           }
           if (bf.field_e != -1 &&
             bf.field_e != 0) {
-            kj.field_I = 15000L + je.a(1);
+            kj.field_I = 15000L + je.correctedCurrentTimeMillis(1);
           }
         }
         if (bf.field_e != -1 &&
@@ -717,7 +717,7 @@ abstract class ab extends GameApplet {
         if ((bf.field_e != -1 &&
           0 != bf.field_e ||
           qc.a(34)) &&
-          kj.field_I <= je.a(1)) {
+          kj.field_I <= je.correctedCurrentTimeMillis(1)) {
           ee.field_i = false;
           if (bf.field_e != -1 &&
             bf.field_e != 0) {
@@ -947,7 +947,7 @@ abstract class ab extends GameApplet {
           sf.b(false);
           dd.a((byte) 8, md.field_v, var2);
           ee.field_i = true;
-          kj.field_I = je.a(param0 ^ -2) + 15000L;
+          kj.field_I = je.correctedCurrentTimeMillis(param0 ^ -2) + 15000L;
           return var2;
         }
         if (11 == fj.field_i &&

@@ -257,7 +257,7 @@ final class kl implements Runnable {
         try {
           var2 = param0.requestThreadStart((Runnable) (this), false, 5);
           while (0 == var2.status) {
-            ge.a(0, 10L);
+            ge.sleepMillis(0, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

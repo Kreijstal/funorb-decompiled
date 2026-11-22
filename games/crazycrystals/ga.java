@@ -133,7 +133,7 @@ class ga extends pc {
         if (this.field_N != this.field_D) {
           var9.a((byte) 71, (qm) (this), param2, this.field_D, this.field_N, param0);
         }
-        var6 = lo.a((byte) -83);
+        var6 = lo.correctedCurrentTimeMillis((byte) -83);
         if ((-this.field_K + var6) % 1000L >= 500L) {
           if (param1 <= -12) {
             return;
@@ -258,7 +258,7 @@ class ga extends pc {
             stackIn_6_1 = var8_int;
           }
           this.a(stackIn_6_1, true);
-          var8_long = lo.a((byte) 77);
+          var8_long = lo.correctedCurrentTimeMillis((byte) 77);
           stackIn_9_1 = !(250L <= -this.field_C + var8_long);
           this.field_M = stackIn_9_1;
           if (this.field_M) {
@@ -296,7 +296,7 @@ class ga extends pc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_K = lo.a((byte) -116);
+          this.field_K = lo.correctedCurrentTimeMillis((byte) -116);
           if (60 != param3 &&
             param3 != 62) {
             if (param3 >= 32 &&
@@ -493,7 +493,7 @@ class ga extends pc {
                 this.field_N = var6;
               }
             }
-            this.field_K = lo.a((byte) 98);
+            this.field_K = lo.correctedCurrentTimeMillis((byte) 98);
           }
           int var5_int = 26 / ((param1 + 50) / 59);
         } catch (RuntimeException runtimeException) {
@@ -714,7 +714,7 @@ class ga extends pc {
           this.field_I = param2;
           this.a(true, -115, param0);
           this.field_G = true;
-          this.field_K = lo.a((byte) -91);
+          this.field_K = lo.correctedCurrentTimeMillis((byte) -91);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

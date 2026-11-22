@@ -180,7 +180,7 @@ abstract class tb {
           field_a = (mj) null;
           var4 = this.b(255);
           if (0L < var4) {
-            ge.a(0, var4);
+            ge.sleepMillis(0, var4);
             return this.a(param1, (byte) 121);
           }
           return this.a(param1, (byte) 121);
@@ -189,7 +189,7 @@ abstract class tb {
         if (0L >= var4Lifetime1) {
           return this.a(param1, (byte) 121);
         }
-        ge.a(0, var4Lifetime1);
+        ge.sleepMillis(0, var4Lifetime1);
         return this.a(param1, (byte) 121);
     }
 

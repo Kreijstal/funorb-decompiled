@@ -516,7 +516,7 @@ abstract class um extends UiWidget implements dq {
         }
     }
 
-    final static void a(boolean param0, long param1) {
+    final static void sleepMillis(boolean param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
@@ -524,10 +524,10 @@ abstract class um extends UiWidget implements dq {
           field_C = (String) null;
         }
         if (param1 % 10L != 0L) {
-          an.a(param1, false);
+          an.sleepIgnoringInterrupts(param1, false);
         } else {
-          an.a(-1L + param1, false);
-          an.a(1L, false);
+          an.sleepIgnoringInterrupts(-1L + param1, false);
+          an.sleepIgnoringInterrupts(1L, false);
         }
     }
 

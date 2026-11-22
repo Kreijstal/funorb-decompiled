@@ -134,7 +134,7 @@ final class mk {
           stackIn_4_1 = (ci.field_zb == ud.field_d);
           var7_int = ((nb) (Object) stackIn_3_0).a(stackIn_4_1, param2, 2, param5 * (fe.field_g + 2) * 4, 2 * (fe.field_g + 2), 0) ? 1 : 0;
           var8 = ci.field_zb.field_Kb.field_I;
-          var9 = ud.a(2);
+          var9 = ud.correctedCurrentTimeMillis(2);
           if (param3 >= -63) {
             field_d = (int[]) null;
           }

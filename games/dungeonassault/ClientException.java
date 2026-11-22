@@ -163,7 +163,7 @@ final class ClientException extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 118) {
-            stackIn_4_0 = -qm.field_o + kd.c(-2456);
+            stackIn_4_0 = -qm.field_o + kd.correctedCurrentTimeMillis(-2456);
             return stackIn_4_0;
           }
           stackIn_2_0 = 109L;

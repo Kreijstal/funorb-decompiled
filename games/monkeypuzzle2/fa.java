@@ -101,7 +101,7 @@ final class fa extends wl {
           ob var2Lifetime1;
           var16 = MonkeyPuzzle2.field_F ? 1 : 0;
           if (this.field_o != null) {
-            var2_long = pf.a(0);
+            var2_long = pf.correctedCurrentTimeMillis(0);
             var4 = (int)(-this.field_e + var2_long);
             if (var4 > 200) {
               var4 = 200;
@@ -359,7 +359,7 @@ final class fa extends wl {
               field_r = 64;
             }
             this.field_h = 0;
-            this.field_e = pf.a(0);
+            this.field_e = pf.correctedCurrentTimeMillis(0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

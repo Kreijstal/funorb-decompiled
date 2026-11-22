@@ -22,7 +22,7 @@ final class ll {
           if (pb.field_a != r.field_c) {
             return false;
           }
-          var2_long = dd.b(param1 + 198);
+          var2_long = dd.correctedCurrentTimeMillis(param1 + 198);
           if (jl.field_h != 0 &&
             0 > t.field_C) {
             var4_ref_q = (q) (le.field_e.beginForward(-3905));

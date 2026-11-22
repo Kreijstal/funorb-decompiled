@@ -223,7 +223,7 @@ final class qb {
                 var2_int = -jc.field_g.position + param0;
               }
               NodeHashTableIterator.field_a.a(jc.field_g.payload, true, var2_int, jc.field_g.position);
-              qe.field_k = fa.a(-96);
+              qe.field_k = fa.correctedCurrentTimeMillis(-96);
               jc.field_g.position = jc.field_g.position + var2_int;
               if (jc.field_g.position < param0) {
                 return false;

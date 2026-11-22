@@ -26,7 +26,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     final static boolean b(int param0) {
         ve.field_e = true;
         if (param0 < -81) {
-          mf.field_j = id.a(62) + 15000L;
+          mf.field_j = id.correctedCurrentTimeMillis(62) + 15000L;
           return cd.field_e == 11 ? true : false;
         }
         return true;
@@ -137,7 +137,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             qd.field_a = 0;
             nl.field_d = param0.getX();
             gk.field_b = param0.getY();
-            id.a(39);
+            id.correctedCurrentTimeMillis(39);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kk.field_b = 2;
               GzipInflater.field_a = 2;

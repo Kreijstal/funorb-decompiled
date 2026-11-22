@@ -75,7 +75,7 @@ final class Model {
         int var2 = -65 / ((18 - param0) / 46);
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepIgnoringInterrupts(int param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
@@ -180,7 +180,7 @@ final class Model {
           this.field_i = var2;
           return;
         }
-        Model.a(-106, 23L);
+        Model.sleepIgnoringInterrupts(-106, 23L);
         this.field_F = true;
         var2Lifetime1 = 32767;
         var3Lifetime1 = 32767;

@@ -6,7 +6,7 @@ final class f {
     static Sprite field_c;
     static BufferedCacheFile field_a;
 
-    final synchronized static long b(byte param0) {
+    final synchronized static long correctedCurrentTimeMillis(byte param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 == 73) {
@@ -17,7 +17,7 @@ final class f {
           fw.field_l = var1;
           return var1 + oia.field_f;
         }
-        f.b((byte) 126);
+        f.correctedCurrentTimeMillis((byte) 126);
         var1Lifetime1 = System.currentTimeMillis();
         if (!(var1Lifetime1 >= fw.field_l)) {
           oia.field_f = oia.field_f + (fw.field_l - var1Lifetime1);
@@ -36,7 +36,7 @@ final class f {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-          f.b((byte) -90);
+          f.correctedCurrentTimeMillis((byte) -90);
           field_c = null;
           return;
         }

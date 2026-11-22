@@ -318,7 +318,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         if (this.field_i &&
-          je.a(1) >= this.field_g) {
+          je.correctedCurrentTimeMillis(1) >= this.field_g) {
           var2 = (sk) (this.field_w.b(0));
           while (var2 != null) {
             if (!var2.field_m) {
@@ -333,7 +333,7 @@ final class CachedArchiveSource extends ArchiveSource {
             }
             var2 = (sk) (this.field_w.c((byte) 122));
           }
-          this.field_g = 1000L + je.a(param0 - 18054);
+          this.field_g = 1000L + je.correctedCurrentTimeMillis(param0 - 18054);
         }
     }
 

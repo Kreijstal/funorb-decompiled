@@ -240,7 +240,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           SystemTask var2 = param0.requestThreadStart(5, 1048576, (Runnable) (this));
           while (var2.status == 0) {
-            IntrusiveNode.a(10L, false);
+            IntrusiveNode.sleepMillis(10L, false);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

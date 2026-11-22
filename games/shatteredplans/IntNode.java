@@ -26,7 +26,7 @@ final class IntNode extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, long param1) {
+    final static void sleepIgnoringInterrupts(boolean param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

@@ -234,7 +234,7 @@ final class ka extends IntrusiveNode {
               }
               stackIn_46_0[stackIn_46_1] = stackIn_47_2;
             }
-            dc.field_c = km.b(-1);
+            dc.field_c = km.correctedCurrentTimeMillis(-1);
           }
           kb.field_g.field_i = di.field_e.length;
           var3_intLifetime1 = 0;
@@ -499,10 +499,10 @@ final class ka extends IntrusiveNode {
           while (true) {
             var3 = param2.requestFullscreenExit(false, param1);
             while (0 == var3.status) {
-              ub.a(1976, 10L);
+              ub.sleepMillis(1976, 10L);
             }
             if (var3.status != 1) {
-              ub.a(1976, 100L);
+              ub.sleepMillis(1976, 100L);
               continue;
             }
             break;

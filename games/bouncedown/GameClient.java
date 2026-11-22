@@ -180,7 +180,7 @@ abstract class GameClient extends AppletShell {
             cl.a(u.field_a, true, 2);
             Slime.b(-20);
             dl.field_b = true;
-            nj.field_n = fa.a(126) + 15000L;
+            nj.field_n = fa.correctedCurrentTimeMillis(126) + 15000L;
           }
         }
         if (-1 == cf.field_e ||
@@ -196,7 +196,7 @@ abstract class GameClient extends AppletShell {
           }
           if (cf.field_e != -1 &&
             0 != cf.field_e) {
-            nj.field_n = 15000L + fa.a(-120);
+            nj.field_n = 15000L + fa.correctedCurrentTimeMillis(-120);
           }
         }
         if (cf.field_e != -1 &&
@@ -246,7 +246,7 @@ abstract class GameClient extends AppletShell {
         if ((cf.field_e != -1 &&
           0 != cf.field_e ||
           tb.e(-11)) &&
-          nj.field_n <= fa.a(116)) {
+          nj.field_n <= fa.correctedCurrentTimeMillis(116)) {
           dl.field_b = false;
           if (cf.field_e != -1 &&
             0 != cf.field_e) {
@@ -399,7 +399,7 @@ abstract class GameClient extends AppletShell {
         va.a(2);
         cl.a(ib.field_o, true, var2);
         dl.field_b = true;
-        nj.field_n = 15000L + fa.a(-61);
+        nj.field_n = 15000L + fa.correctedCurrentTimeMillis(-61);
         if (param0 != 1) {
           this.field_o = true;
         }

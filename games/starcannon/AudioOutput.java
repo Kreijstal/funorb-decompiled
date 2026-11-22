@@ -87,7 +87,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_q.field_a = true;
             while (field_q.field_c) {
-              uc.a(-91, 50L);
+              uc.sleepMillis(-91, 50L);
             }
             field_q = null;
           }
@@ -126,7 +126,7 @@ class AudioOutput {
         if (field_l) {
           var3 = var3 << 1;
         }
-        ug.a(param0, 0, var3);
+        ug.clearInts(param0, 0, var3);
         this.field_e = this.field_e - param1;
         if (this.field_i != null &&
           this.field_e <= 0) {
@@ -220,7 +220,7 @@ class AudioOutput {
         if (this.field_i != null) {
           this.field_i.a(param0, 0, param1);
         }
-        this.field_h = dd.b(101);
+        this.field_h = dd.correctedCurrentTimeMillis(101);
     }
 
     public static void clearStaticReferences() {
@@ -237,7 +237,7 @@ class AudioOutput {
           if (this.field_s) {
             return;
           }
-          var1 = dd.b(127);
+          var1 = dd.correctedCurrentTimeMillis(127);
           try {
             if (var1 > this.field_h + 6000L) {
               this.field_h = var1 - 6000L;
@@ -245,7 +245,7 @@ class AudioOutput {
             while (var1 > this.field_h + 5000L) {
               this.skipFrames(256);
               this.field_h = this.field_h + (long)(256000 / field_n);
-              var1 = dd.b(122);
+              var1 = dd.correctedCurrentTimeMillis(122);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_b = 32;
         this.field_s = false;
-        this.field_h = dd.b(97);
+        this.field_h = dd.correctedCurrentTimeMillis(97);
         this.field_c = 0;
         this.field_k = 0L;
         this.field_j = 0;

@@ -184,7 +184,7 @@ final class ug extends hf {
           }
         }
         if (this.field_e &&
-          this.field_h <= rf.c(0)) {
+          this.field_h <= rf.correctedCurrentTimeMillis(0)) {
           var2 = (si) (this.field_k.c((byte) -120));
           while (var2 != null) {
             if (!var2.field_v) {
@@ -199,7 +199,7 @@ final class ug extends hf {
             }
             var2 = (si) (this.field_k.a((byte) -91));
           }
-          this.field_h = 1000L + rf.c(0);
+          this.field_h = 1000L + rf.correctedCurrentTimeMillis(0);
         }
         if (param0) {
           this.a(15, 40);

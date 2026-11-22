@@ -20,7 +20,7 @@ final class MixedSupport139 {
         if (byteArgument1 <= 50) {
           return false;
         }
-        longLocal1 = MixedSupport062.computeLong0734(4);
+        longLocal1 = MixedSupport062.correctedCurrentTimeMillis(4);
         longLocal2 = -MouseInput.longState0054 + longLocal1;
         if (longLocal2 > 30000L) {
           MixedSupport004.integerState0030 = 0;

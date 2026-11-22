@@ -63,7 +63,7 @@ abstract class GameClientShell extends GameAppletShell {
             dl.a(ni.field_u, 2, 120);
             fj.e(115);
             dd.field_j = true;
-            ab.field_a = la.a(false) + 15000L;
+            ab.field_a = la.correctedCurrentTimeMillis(false) + 15000L;
           }
         }
         if (mh.field_d == -1 ||
@@ -79,7 +79,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
           if (mh.field_d != -1 &&
             mh.field_d != 0) {
-            ab.field_a = 15000L + la.a(false);
+            ab.field_a = 15000L + la.correctedCurrentTimeMillis(false);
           }
         }
         if (mh.field_d != -1 &&
@@ -129,7 +129,7 @@ abstract class GameClientShell extends GameAppletShell {
         if ((-1 != mh.field_d &&
           0 != mh.field_d ||
           sb.b(-11)) &&
-          la.a(false) >= ab.field_a) {
+          la.correctedCurrentTimeMillis(false) >= ab.field_a) {
           dd.field_j = false;
           if (mh.field_d != -1 &&
             mh.field_d != 0) {
@@ -309,7 +309,7 @@ abstract class GameClientShell extends GameAppletShell {
           am.e(11);
           dl.a(cc.field_p, var2, 105);
           dd.field_j = true;
-          ab.field_a = 15000L + la.a(param0);
+          ab.field_a = 15000L + la.correctedCurrentTimeMillis(param0);
           return var2;
         }
         if (af.field_b != 11) {

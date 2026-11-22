@@ -172,7 +172,7 @@ final class wg extends IntrusiveNode {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param4 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + ha.a((byte) 126, 1000L * param4 + pf.a(0)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var10 + "; Expires=" + ha.a((byte) 126, 1000L * param4 + pf.correctedCurrentTimeMillis(0)) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }

@@ -221,7 +221,7 @@ final class FlyEvent extends SpecialEvent {
           var6 = stackIn_31_0;
           param1.readBytes(param0.field_Eb, param0.field_Eb.length, 128, 0);
           param0.field_bc = param1.readUnsignedShort((byte) 64);
-          param0.field_Ob = f.b((byte) 73) - (long)param1.readInt(-124);
+          param0.field_Ob = f.correctedCurrentTimeMillis((byte) 73) - (long)param1.readInt(-124);
           if (var5 == 0) {
             param0.field_Nb = -1;
           } else {

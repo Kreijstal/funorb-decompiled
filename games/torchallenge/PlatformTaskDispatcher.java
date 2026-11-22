@@ -288,13 +288,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (field_f > ol.a(256)) {
+                        if (field_f > ol.correctedCurrentTimeMillis(256)) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.argument)).getAddress();
                         break;
                       case 3:
-                        if (field_f > ol.a(256)) {
+                        if (field_f > ol.correctedCurrentTimeMillis(256)) {
                           throw new IOException();
                         }
                         var9 = (255 & var8.firstInt >> 24) + "." + ((var8.firstInt & 16725364) >> 16) + "." + ((var8.firstInt & 65373) >> 8) + "." + (var8.firstInt & 255);
@@ -303,13 +303,13 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 4:
-                    if (ol.a(256) < field_f) {
+                    if (ol.correctedCurrentTimeMillis(256) < field_f) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.argument)).openStream());
                     break;
                   case 22:
-                    if (field_f > ol.a(256)) {
+                    if (field_f > ol.correctedCurrentTimeMillis(256)) {
                       throw new IOException();
                     }
                     try {
@@ -323,7 +323,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 1:
-                    if (field_f > ol.a(256)) {
+                    if (field_f > ol.correctedCurrentTimeMillis(256)) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.argument)), var8.firstInt);

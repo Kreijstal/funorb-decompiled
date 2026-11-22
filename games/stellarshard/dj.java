@@ -80,7 +80,7 @@ final class dj {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (param2.length() != 0) {
-                var5Lifetime6 = var8 + "; Expires=" + od.a(10, 94608000000L + ih.a((byte) -98)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + od.a(10, 94608000000L + ih.correctedCurrentTimeMillis((byte) -98)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

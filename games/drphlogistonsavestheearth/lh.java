@@ -127,7 +127,7 @@ final class lh extends PacketBuffer {
         super(param0);
     }
 
-    final static void b(long param0, byte param1) {
+    final static void sleepIgnoringInterrupts(long param0, byte param1) {
         try {
           Throwable decompiledCaughtException = null;
           int var3 = 0;
@@ -162,7 +162,7 @@ final class lh extends PacketBuffer {
     final void d(int param0, int param1) {
         int fieldTemp$0 = 0;
         if (param1 != -18392) {
-          lh.b(2L, (byte) -21);
+          lh.sleepIgnoringInterrupts(2L, (byte) -21);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)(this.field_o.b((byte) 127) + param0);

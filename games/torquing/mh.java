@@ -2528,7 +2528,7 @@ final class mh {
             var12 = Integer.toString(ie.field_b.field_s);
             qh.field_c.a(var12, 517, 34 + um.field_m.field_x, 2, -1);
             var4 = 135;
-            var5 = re.a(252645135, SocketConnector.field_f);
+            var5 = re.countSetBits(252645135, SocketConnector.field_f);
             if (-48 + var5 * 48 < 338) {
               stackIn_26_0 = 48;
             } else {

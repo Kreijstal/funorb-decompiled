@@ -39,7 +39,7 @@ final class a extends ge {
           cd var2Lifetime1;
           var16 = OrbDefence.field_D ? 1 : 0;
           if (null != this.field_q) {
-            var2_long = ji.b(param0 - 278);
+            var2_long = ji.correctedCurrentTimeMillis(param0 - 278);
             var4 = (int)(var2_long - this.field_j);
             this.field_j = var2_long;
             if (var4 > 200) {
@@ -392,7 +392,7 @@ final class a extends ge {
           }
           var9 = param0.requestDisplayModes((byte) 31);
           while (0 == var9.status) {
-            hb.a(10L, 103);
+            hb.sleepMillis(10L, 103);
           }
           if (var9.status == 2) {
             stackIn_9_0 = new db[]{};
@@ -503,7 +503,7 @@ final class a extends ge {
               }
             }
             this.field_e = 0;
-            this.field_j = ji.b(107);
+            this.field_j = ji.correctedCurrentTimeMillis(107);
             if (param1 != 20) {
               field_s = (int[]) null;
             }

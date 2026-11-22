@@ -47,10 +47,10 @@ final class hi extends IntrusiveNode {
           while (true) {
             var3 = param0.requestFullscreenExit(param1, (byte) -34);
             while (var3.status == 0) {
-              vh.a(10L, 120);
+              vh.sleepMillis(10L, 120);
             }
             if (var3.status != 1) {
-              vh.a(100L, 101);
+              vh.sleepMillis(100L, 101);
               continue;
             }
             break;

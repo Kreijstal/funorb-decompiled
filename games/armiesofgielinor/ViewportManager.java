@@ -80,10 +80,10 @@ final class ViewportManager {
           while (true) {
             exitTask = platformService.exitFullscreenAsync((byte) -68, frame);
             while (exitTask.status == 0) {
-              SpriteButtonPainter.a(10L, 0);
+              SpriteButtonPainter.sleepMillis(10L, 0);
             }
             if (exitTask.status != 1) {
-              SpriteButtonPainter.a(100L, 0);
+              SpriteButtonPainter.sleepMillis(100L, 0);
               continue;
             }
             break;

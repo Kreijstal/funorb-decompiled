@@ -99,7 +99,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_b) {
             while (0 == this.field_b.status) {
-              pg.a(1L, -94);
+              pg.sleepMillis(1L, -94);
             }
             if (this.field_b.status == 1) {
               try {
@@ -468,7 +468,7 @@ final class BufferedSocket implements Runnable {
           if (ll.field_Q != lj.field_z) {
             return false;
           }
-          var2_long = lk.a(0);
+          var2_long = lk.correctedCurrentTimeMillis(0);
           if (aa.field_a != 0 &&
             md.field_k < 0) {
             var4_ref_b = (b) (le.field_C.beginForward((byte) -95));

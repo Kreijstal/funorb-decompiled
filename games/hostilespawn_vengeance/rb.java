@@ -356,7 +356,7 @@ final class rb extends ArchiveProvider {
                 }
                 decompiledFrameRemainder1 = (this.field_f);
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder0 = !(this.field_k > hn.a((byte) 80)))) {
+                  (decompiledFrameRemainder0 = !(this.field_k > hn.correctedCurrentTimeMillis((byte) 80)))) {
                   var2 = (ae) (this.field_i.a(-93));
                   while (var2 != null) {
                     if (!var2.field_v) {
@@ -391,7 +391,7 @@ final class rb extends ArchiveProvider {
           }
           decompiledFrameRemainder1 = (this.field_f);
           if ((decompiledFrameRemainder1) &&
-            (decompiledFrameRemainder0 = !(this.field_k > hn.a((byte) 80)))) {
+            (decompiledFrameRemainder0 = !(this.field_k > hn.correctedCurrentTimeMillis((byte) 80)))) {
             var2Lifetime1 = (ae) (this.field_i.a(-93));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_v) {
@@ -410,7 +410,7 @@ final class rb extends ArchiveProvider {
         }
         if ((decompiledFrameRemainder1) &&
           (decompiledFrameRemainder0)) {
-          this.field_k = 1000L + hn.a((byte) 80);
+          this.field_k = 1000L + hn.correctedCurrentTimeMillis((byte) 80);
         }
 
     }

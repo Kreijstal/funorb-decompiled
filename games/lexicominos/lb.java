@@ -53,7 +53,7 @@ final class lb {
           }
           if (var3 == 0 &&
             sh.field_a == 2) {
-            var4 = -ug.field_x + rf.c(0);
+            var4 = -ug.field_x + rf.correctedCurrentTimeMillis(0);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               id.a(5, true, (byte) 115);

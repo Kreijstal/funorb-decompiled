@@ -483,7 +483,7 @@ final class tj extends tk {
         }
         var2Lifetime1 = -50 / ((-13 - param0) / 63);
         if (this.field_w &&
-          this.field_t <= ri.a(-3)) {
+          this.field_t <= ri.correctedCurrentTimeMillis(-3)) {
           var3_ref = (rl) (this.field_i.a(true));
           while (var3_ref != null) {
             if (!var3_ref.field_v) {
@@ -498,7 +498,7 @@ final class tj extends tk {
             }
             var3_ref = (rl) (this.field_i.a(70));
           }
-          this.field_t = ri.a(-3) + 1000L;
+          this.field_t = ri.correctedCurrentTimeMillis(-3) + 1000L;
         }
     }
 

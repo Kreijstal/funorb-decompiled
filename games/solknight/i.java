@@ -136,15 +136,15 @@ final class i extends si {
         this.field_L = new IntrusiveDeque();
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepMillis(byte param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
         if (param1 % 10L == 0L) {
-          lc.a(2767, param1 - 1L);
-          lc.a(2767, 1L);
+          lc.sleepIgnoringInterrupts(2767, param1 - 1L);
+          lc.sleepIgnoringInterrupts(2767, 1L);
         } else {
-          lc.a(2767, param1);
+          lc.sleepIgnoringInterrupts(2767, param1);
         }
         if (param0 < 11) {
           field_I = (String[]) null;

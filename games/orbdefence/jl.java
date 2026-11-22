@@ -103,9 +103,9 @@ abstract class jl {
           var33 = ef.field_j;
           var29 = var33;
           var12 = var29;
-          mk.a(var31, 0, param1);
-          mk.a(var32, 0, param1);
-          mk.a(var33, 0, param1);
+          mk.clearInts(var31, 0, param1);
+          mk.clearInts(var32, 0, param1);
+          mk.clearInts(var33, 0, param1);
           var13 = 16384 / (1 + 2 * param2);
           var14 = param0 - param2;
           if (var14 < 0) {

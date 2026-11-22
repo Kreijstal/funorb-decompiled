@@ -36,7 +36,7 @@ final class ea {
               if (0 == param2.length()) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + wd.a((byte) -116, lj.a((byte) -75) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + wd.a((byte) -116, lj.correctedCurrentTimeMillis((byte) -75) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               eb.a("document.cookie=\"" + var5Lifetime6 + "\"", -28924, param1);
             } catch (Throwable throwable) {

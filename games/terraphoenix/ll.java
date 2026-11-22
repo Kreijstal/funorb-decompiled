@@ -86,7 +86,7 @@ final class ll {
               var8Lifetime2 = var10;
               var8Lifetime3 = var10;
               if (param1 >= 0L) {
-                var8Lifetime4 = var10 + "; Expires=" + wc.a(1000L * param1 + ll.a(1000), -1) + "; Max-Age=" + param1;
+                var8Lifetime4 = var10 + "; Expires=" + wc.a(1000L * param1 + ll.correctedCurrentTimeMillis(1000), -1) + "; Max-Age=" + param1;
               } else {
                 var8Lifetime4 = var10 + "; Discard;";
               }
@@ -128,12 +128,12 @@ final class ll {
         }
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (var1 < sh.field_n) {
           ba.field_i = ba.field_i + (sh.field_n - var1);
           if (param0 != 1000) {
-            ll.a(101);
+            ll.correctedCurrentTimeMillis(101);
             sh.field_n = var1;
             return var1 + ba.field_i;
           }
@@ -144,7 +144,7 @@ final class ll {
           sh.field_n = var1;
           return var1 + ba.field_i;
         }
-        ll.a(101);
+        ll.correctedCurrentTimeMillis(101);
         sh.field_n = var1;
         return var1 + ba.field_i;
     }

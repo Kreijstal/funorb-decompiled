@@ -1980,7 +1980,7 @@ final class cc {
         field_c = param3 - param1;
         cc.c();
         if (field_i.length < field_c) {
-          field_i = new int[u.a(7527, field_c)];
+          field_i = new int[u.roundUpPowerOfTwo(7527, field_c)];
         }
         int var4 = param1 * ti.field_i + param0;
         for (var5 = 0; var5 < field_c; var5++) {

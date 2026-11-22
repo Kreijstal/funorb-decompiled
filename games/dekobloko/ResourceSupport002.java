@@ -15,7 +15,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
         if (byteArgument1 != -51) {
           this.longState0001 = -32L;
         }
-        this.longState0001 = MixedSupport062.computeLong0734(byteArgument1 + 55);
+        this.longState0001 = MixedSupport062.correctedCurrentTimeMillis(byteArgument1 + 55);
     }
 
     final static boolean computeBoolean0087(ResourceArchive resourceArchiveArgument1, int integerArgument2) {
@@ -63,7 +63,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
         if (byteArgument1 < 52) {
           return (String) null;
         }
-        if (MixedSupport062.computeLong0734(4) < (350L + this.longState0001)) {
+        if (MixedSupport062.correctedCurrentTimeMillis(4) < (350L + this.longState0001)) {
           return null;
         }
         return this.computeString0091((byte) 49);
@@ -286,7 +286,7 @@ abstract class ResourceSupport002 implements CallbackContract011 {
         if (integerArgument1 != 20350) {
           ResourceSupport002.performAction0085(-21, -85, -33);
         }
-        if (!(MixedSupport062.computeLong0734(4) >= this.longState0001 + 350L)) {
+        if (!(MixedSupport062.correctedCurrentTimeMillis(4) >= this.longState0001 + 350L)) {
           return MixedSupport076.validationStatusState0004;
         }
         return this.computeValidationStatus0089(integerArgument1 - 25870);

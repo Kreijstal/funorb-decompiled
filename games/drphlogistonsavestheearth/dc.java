@@ -36,12 +36,12 @@ abstract class dc implements qi {
         }
         if (param0 != -12317) {
           field_e = -119;
-          if (!(this.field_d + 350L <= la.a(false))) {
+          if (!(this.field_d + 350L <= la.correctedCurrentTimeMillis(false))) {
             return ai.field_A;
           }
           return this.c((byte) -98);
         }
-        if (!(this.field_d + 350L <= la.a(false))) {
+        if (!(this.field_d + 350L <= la.correctedCurrentTimeMillis(false))) {
           return ai.field_A;
         }
         return this.c((byte) -98);
@@ -53,12 +53,12 @@ abstract class dc implements qi {
         }
         if (param0 != -16034) {
           this.a(8);
-          if (this.field_d + 350L <= la.a(false)) {
+          if (this.field_d + 350L <= la.correctedCurrentTimeMillis(false)) {
             return this.b((byte) -66);
           }
           return null;
         }
-        if (this.field_d + 350L <= la.a(false)) {
+        if (this.field_d + 350L <= la.correctedCurrentTimeMillis(false)) {
           return this.b((byte) -66);
         }
         return null;
@@ -146,7 +146,7 @@ abstract class dc implements qi {
     }
 
     public final void a(byte param0) {
-        this.field_d = la.a(false);
+        this.field_d = la.correctedCurrentTimeMillis(false);
         if (param0 != 87) {
           mi var3 = (mi) null;
           dc.a(true, 28, (String) null, (rf) null, (mi) null);

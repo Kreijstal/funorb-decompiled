@@ -37,7 +37,7 @@ class PcmPlayer {
           if (this.booleanState0039) {
             return;
           }
-          longLocal2 = MixedSupport062.computeLong0734(4);
+          longLocal2 = MixedSupport062.correctedCurrentTimeMillis(4);
           try {
             if (longLocal2 > this.longState0012 + 6000L) {
               this.longState0012 = longLocal2 - 6000L;
@@ -45,7 +45,7 @@ class PcmPlayer {
             while (longLocal2 > this.longState0012 + 5000L) {
               this.skipFrames(256);
               this.longState0012 = this.longState0012 + (long)(256000 / integerState0209);
-              longLocal2 = MixedSupport062.computeLong0734(4);
+              longLocal2 = MixedSupport062.correctedCurrentTimeMillis(4);
             }
           } catch (java.lang.Exception caughtParameterLocal6) {
             caughtExceptionLocal1 = caughtParameterLocal6;
@@ -168,7 +168,7 @@ class PcmPlayer {
                 pcmPlayerServiceState0001 == null) {
                 pcmPlayerServiceState0001 = new PcmPlayerService();
                 pcmPlayerServiceState0001.platformServiceState0007 = platformServiceArgument1;
-                platformServiceArgument1.computeAsyncTask0510((byte) 122, integerState0213, (Runnable) ((Object) pcmPlayerServiceState0001));
+                platformServiceArgument1.startThread((byte) 122, integerState0213, (Runnable) ((Object) pcmPlayerServiceState0001));
               }
               if (pcmPlayerServiceState0001 != null) {
                 if (pcmPlayerServiceState0001.pcmPlayerArrayState0001[integerArgument3] != null) {
@@ -210,7 +210,7 @@ class PcmPlayer {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.longState0014 = MixedSupport062.computeLong0734(4) + 2000L;
+            this.longState0014 = MixedSupport062.correctedCurrentTimeMillis(4) + 2000L;
           }
         } catch (RuntimeException | Error uncheckedExceptionLocal2) {
           throw uncheckedExceptionLocal2;
@@ -270,7 +270,7 @@ class PcmPlayer {
         if (booleanState0038) {
           integerLocal1 = integerLocal1 << 1;
         }
-        MixedSupport008.performAction0074(integerArrayArgument1, 0, integerLocal1);
+        MixedSupport008.clearInts(integerArrayArgument1, 0, integerLocal1);
         this.integerState0210 = this.integerState0210 - integerArgument2;
         if (this.pcmStreamState0001 != null &&
           this.integerState0210 <= 0) {
@@ -364,7 +364,7 @@ class PcmPlayer {
         if (this.pcmStreamState0001 != null) {
           this.pcmStreamState0001.fill(integerArrayArgument1, 0, integerArgument2);
         }
-        this.longState0012 = MixedSupport062.computeLong0734(4);
+        this.longState0012 = MixedSupport062.correctedCurrentTimeMillis(4);
     }
 
     private final void skipFrames(int integerArgument1) {
@@ -410,7 +410,7 @@ class PcmPlayer {
           if (integerLocal2 != 0) {
             pcmPlayerServiceState0001.booleanState0161 = true;
             while (pcmPlayerServiceState0001.booleanState0160) {
-              MixedSupport125.performAction1620(50L, -128);
+              MixedSupport125.sleepMillis(50L, -128);
             }
             pcmPlayerServiceState0001 = null;
           }
@@ -423,7 +423,7 @@ class PcmPlayer {
     PcmPlayer() {
         this.integerState0208 = 32;
         this.booleanState0039 = false;
-        this.longState0012 = MixedSupport062.computeLong0734(4);
+        this.longState0012 = MixedSupport062.correctedCurrentTimeMillis(4);
         this.booleanState0040 = true;
         this.pcmStreamArrayState0002 = new PcmStream[8];
         this.integerState0211 = 0;

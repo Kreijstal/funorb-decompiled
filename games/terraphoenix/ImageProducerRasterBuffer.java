@@ -151,7 +151,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           var8 = param0.requestDisplayModes(-84);
           while (var8.status == 0) {
-            gi.a((byte) -64, 10L);
+            gi.sleepMillis((byte) -64, 10L);
           }
           if (var8.status == 2) {
             stackIn_9_0 = new ef[]{};

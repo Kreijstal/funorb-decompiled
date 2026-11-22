@@ -116,7 +116,7 @@ abstract class MouseWheelInput {
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + q.a(rf.c(0) + 94608000000L, (byte) 28) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + q.a(rf.correctedCurrentTimeMillis(0) + 94608000000L, (byte) 28) + "; Max-Age=" + 94608000L;
               }
               oa.a("document.cookie=\"" + var5Lifetime6 + "\"", param2, param1 ^ 23345);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

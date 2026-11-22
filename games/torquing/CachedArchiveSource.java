@@ -485,7 +485,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         if (this.field_m &&
-          km.b(-1) >= this.field_o) {
+          km.correctedCurrentTimeMillis(-1) >= this.field_o) {
           var2 = (nk) (this.field_t.c((byte) -119));
           while (var2 != null) {
             if (!var2.field_r) {
@@ -500,7 +500,7 @@ final class CachedArchiveSource extends ArchiveSource {
             }
             var2 = (nk) (this.field_t.b((byte) 105));
           }
-          this.field_o = km.b(-1) + 1000L;
+          this.field_o = km.correctedCurrentTimeMillis(-1) + 1000L;
         }
     }
 

@@ -44,7 +44,7 @@ final class rj {
           if (od.field_g != mh.field_a) {
             return false;
           }
-          var2_long = ll.a(param0 ^ -1491051318);
+          var2_long = ll.correctedCurrentTimeMillis(param0 ^ -1491051318);
           if (GameApplet.field_d != 0 &&
             fg.field_d < 0) {
             var4_ref_ra = (ra) (am.field_F.beginBackward(9272));

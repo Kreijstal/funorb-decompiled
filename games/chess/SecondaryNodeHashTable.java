@@ -176,7 +176,7 @@ final class SecondaryNodeHashTable {
         if (param0) {
           SecondaryNodeHashTable.c(false);
         }
-        var1 = ud.a(2);
+        var1 = ud.correctedCurrentTimeMillis(2);
         var3 = -cf.field_Jb + var1;
         if (var3 > 30000L) {
           cf.field_Jb = var1;

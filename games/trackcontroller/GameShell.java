@@ -509,7 +509,7 @@ abstract class GameShell extends GameApplet {
           SecondaryNodeDequeIterator.a(-28717);
           AccountNameAvailabilityValidator.a(-100, var2, fi.field_t);
           li.field_i = true;
-          rk.field_eb = qg.a(false) + 15000L;
+          rk.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
           return var2;
         }
         if (rl.field_N != 11) {
@@ -578,7 +578,7 @@ abstract class GameShell extends GameApplet {
             AccountNameAvailabilityValidator.a(-93, 2, oc.field_k);
             dk.a(9888);
             li.field_i = true;
-            rk.field_eb = 15000L + qg.a(false);
+            rk.field_eb = 15000L + qg.correctedCurrentTimeMillis(false);
           }
         }
         if (-1 == gj.field_c ||
@@ -594,7 +594,7 @@ abstract class GameShell extends GameApplet {
           }
           if (gj.field_c != -1 &&
             gj.field_c != 0) {
-            rk.field_eb = 15000L + qg.a(false);
+            rk.field_eb = 15000L + qg.correctedCurrentTimeMillis(false);
           }
         }
         if (gj.field_c != -1 &&
@@ -644,7 +644,7 @@ abstract class GameShell extends GameApplet {
         if ((gj.field_c != -1 &&
           0 != gj.field_c ||
           IntrusiveNode.c(124)) &&
-          rk.field_eb <= qg.a(false)) {
+          rk.field_eb <= qg.correctedCurrentTimeMillis(false)) {
           li.field_i = false;
           if (-1 != gj.field_c &&
             gj.field_c != 0) {

@@ -82,7 +82,7 @@ final class qg extends kl implements ud {
           }
           if (var3 == 0 &&
             2 == NodeHashTableIterator.field_g) {
-            var4 = -aa.field_d + la.a(false);
+            var4 = -aa.field_d + la.correctedCurrentTimeMillis(false);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               var3 = 2;

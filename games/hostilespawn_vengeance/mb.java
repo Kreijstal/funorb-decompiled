@@ -335,13 +335,13 @@ final class mb extends ce {
           if (null != ag.field_t && (0 > param0 ||
             MouseInput.field_d == rc.field_a)) {
             if (s.field_b.field_i == 0 &&
-              10000L + gf.field_h < hn.a((byte) 80)) {
+              10000L + gf.field_h < hn.correctedCurrentTimeMillis((byte) 80)) {
               s.field_b.i(param1 + 41689, param0);
             }
             if (s.field_b.field_i > 0) {
               try {
                 ag.field_t.a(s.field_b.field_i, s.field_b.field_n, (byte) 112, 0);
-                gf.field_h = hn.a((byte) 80);
+                gf.field_h = hn.correctedCurrentTimeMillis((byte) 80);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

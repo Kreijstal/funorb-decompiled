@@ -460,8 +460,8 @@ final class kd extends PcmStream {
               if (var5 != 256) {
                 if (null != this.field_m &&
                   var6 <= this.field_m.length) {
-                  kf.a(this.field_m, 0, var6);
-                  kf.a(this.field_o, 0, var6);
+                  kf.clearInts(this.field_m, 0, var6);
+                  kf.clearInts(this.field_o, 0, var6);
                 } else {
                   this.field_o = new int[var6];
                   this.field_m = new int[var6];
@@ -492,7 +492,7 @@ final class kd extends PcmStream {
             }
             if (null != this.field_m &&
               this.field_m.length >= var6) {
-              kf.a(this.field_m, 0, var6);
+              kf.clearInts(this.field_m, 0, var6);
             } else {
               this.field_o = new int[var6];
               this.field_m = new int[var6];

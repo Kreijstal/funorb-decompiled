@@ -425,7 +425,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         tn.e((byte) -127);
         rg.a(re.field_j, var2, -257);
         an.field_r = true;
-        ee.field_e = lo.a((byte) 88) + 15000L;
+        ee.field_e = lo.correctedCurrentTimeMillis((byte) 88) + 15000L;
         return var2;
     }
 
@@ -496,7 +496,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             rg.a(hd.field_a, 2, -257);
             me.clearStaticReferences(20);
             an.field_r = true;
-            ee.field_e = 15000L + lo.a((byte) 107);
+            ee.field_e = 15000L + lo.correctedCurrentTimeMillis((byte) 107);
           }
         }
         if (-1 == ei.field_E ||
@@ -512,7 +512,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (ei.field_E != -1 &&
             ei.field_E != 0) {
-            ee.field_e = lo.a((byte) -65) + 15000L;
+            ee.field_e = lo.correctedCurrentTimeMillis((byte) -65) + 15000L;
           }
         }
         if (-1 != ei.field_E &&
@@ -562,7 +562,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((ei.field_E != -1 &&
           ei.field_E != 0 ||
           BoundedRandomAccessFile.c(-11)) &&
-          ee.field_e <= lo.a((byte) -86)) {
+          ee.field_e <= lo.correctedCurrentTimeMillis((byte) -86)) {
           an.field_r = false;
           if (ei.field_E != -1 &&
             ei.field_E != 0) {

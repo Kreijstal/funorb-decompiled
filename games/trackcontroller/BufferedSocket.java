@@ -20,7 +20,7 @@ final class BufferedSocket implements Runnable {
     private int field_i;
     static boolean field_d;
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -285,7 +285,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_f) {
             while (this.field_f.status == 0) {
-              wl.a(1L, false);
+              wl.sleepMillis(1L, false);
             }
             if (this.field_f.status == 1) {
               try {

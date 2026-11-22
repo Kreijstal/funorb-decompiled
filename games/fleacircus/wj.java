@@ -14,7 +14,7 @@ abstract class wj {
           field_b = (sf[]) null;
           var4 = this.b(-31887);
           if (var4 > 0L) {
-            vh.a(var4, param0 + 87);
+            vh.sleepMillis(var4, param0 + 87);
             return this.a(-23124, param1);
           }
           return this.a(-23124, param1);
@@ -23,7 +23,7 @@ abstract class wj {
         if (var4Lifetime1 <= 0L) {
           return this.a(-23124, param1);
         }
-        vh.a(var4Lifetime1, param0 + 87);
+        vh.sleepMillis(var4Lifetime1, param0 + 87);
         return this.a(-23124, param1);
     }
 

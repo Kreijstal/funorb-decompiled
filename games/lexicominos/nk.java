@@ -171,7 +171,7 @@ abstract class nk extends GameAppletShell {
             sc.a(2, (byte) -128, kk.field_i);
             l.i(57);
             kj.field_o = true;
-            mc.field_i = rf.c(0) + 15000L;
+            mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           }
         }
         if (nc.field_r == -1 ||
@@ -187,7 +187,7 @@ abstract class nk extends GameAppletShell {
           }
           if (-1 != nc.field_r &&
             0 != nc.field_r) {
-            mc.field_i = rf.c(0) + 15000L;
+            mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           }
         }
         if (nc.field_r != -1 &&
@@ -237,7 +237,7 @@ abstract class nk extends GameAppletShell {
         if ((nc.field_r != -1 &&
           nc.field_r != 0 ||
           d.a((byte) -24)) &&
-          mc.field_i <= rf.c(0)) {
+          mc.field_i <= rf.correctedCurrentTimeMillis(0)) {
           kj.field_o = false;
           if (nc.field_r != -1 &&
             nc.field_r != 0) {
@@ -483,7 +483,7 @@ abstract class nk extends GameAppletShell {
           ia.a((byte) 83);
           sc.a(var2, (byte) 99, wj.field_p);
           kj.field_o = true;
-          mc.field_i = rf.c(0) + 15000L;
+          mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
           return var2;
         }
         if (ta.field_g != 11) {

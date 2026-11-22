@@ -433,7 +433,7 @@ final class mh extends EventEffect {
               }
             }
             if (wda.field_a != 0L) {
-              var9 = (int)(-f.b((byte) 73) + wda.field_a);
+              var9 = (int)(-f.correctedCurrentTimeMillis((byte) 73) + wda.field_a);
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;

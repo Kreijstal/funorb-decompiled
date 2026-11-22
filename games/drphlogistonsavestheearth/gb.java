@@ -144,7 +144,7 @@ abstract class gb {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_n).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              kk.a(1L, true);
+              kk.sleepMillis(1L, true);
             }
             if (var4.status != 1) {
               return;

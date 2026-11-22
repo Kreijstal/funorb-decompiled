@@ -93,7 +93,7 @@ final class ci implements td {
         }
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int countSetBits(int param0, boolean param1) {
         param0 = (param0 & 1431655765) + ((param0 & -1431655766) >>> 1);
         param0 = (858993459 & param0) + ((-858993459 & param0) >>> 2);
         param0 = (param0 >>> 4) + param0 & 252645135;

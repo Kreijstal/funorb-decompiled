@@ -13,7 +13,7 @@ final class wa extends IntrusiveNode {
     static String field_k;
     int field_m;
 
-    final static void a(byte param0, long param1) {
+    final static void sleepIgnoringInterrupts(byte param0, long param1) {
         try {
           try {
             Thread.sleep(param1);

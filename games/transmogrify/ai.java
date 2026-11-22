@@ -52,11 +52,11 @@ final class ai {
               var2.writeInt(-109, dk.field_h);
               re.field_y.a((byte) 9, var2.payload, 13, 0);
               cl.field_A = cl.field_A + 1;
-              ob.field_G = 30000L + lk.a(param0 ^ 2);
+              ob.field_G = 30000L + lk.correctedCurrentTimeMillis(param0 ^ 2);
             }
             if (cl.field_A == 3) {
               if (re.field_y.a((byte) -125) <= 0) {
-                if (ob.field_G < lk.a(0)) {
+                if (ob.field_G < lk.correctedCurrentTimeMillis(0)) {
                   stackIn_32_0 = og.a(2, -2);
                   return stackIn_32_0;
                 }

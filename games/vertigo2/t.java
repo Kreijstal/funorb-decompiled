@@ -779,7 +779,7 @@ final class t implements Runnable {
         try {
           var2 = param0.startThread(5, (Runnable) (this), 0);
           while (0 == var2.status) {
-            um.a(true, 10L);
+            um.sleepMillis(true, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

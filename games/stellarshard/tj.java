@@ -85,7 +85,7 @@ final class tj {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        ri.a(field_q, 0, param0);
+        ri.clearInts(field_q, 0, param0);
         if (param1 < 10) {
           return field_q;
         }

@@ -347,7 +347,7 @@ final class gd extends PcmStream {
           if (this.field_s == null) {
             continue;
           }
-          kf.a(this.field_u, 0, var4);
+          kf.clearInts(this.field_u, 0, var4);
         }
     }
 

@@ -489,7 +489,7 @@ final class ActiveLevel extends LevelGrid {
           j.field_b[1].e(466, var6);
           cl.a(nd.field_L, 457, 124, var6 + 71, 176, 4);
           var7Lifetime1 = this.field_s;
-          var8Lifetime1 = sc.a(var7Lifetime1, -1);
+          var8Lifetime1 = sc.countSetBits(var7Lifetime1, -1);
           var9 = (-var3 + var2) / 300;
           var10 = var9 - 1;
           if (0 > var9) {

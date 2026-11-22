@@ -1469,7 +1469,7 @@ final class ja {
                   if (var25 >= 100) {
                     var26 = 0;
                     while ((var25 - 99) > var26) {
-                      hg.field_ab.a(-11 + var16 + ((var19Lifetime2Lifetime1 - 320) / 4 + (8 * (100 - (var25 - 2 * var26)) + (int)(Math.sin((double)var2 + 0.005 * (double)ji.b(-78)) * 8.0))), var15 - 14);
+                      hg.field_ab.a(-11 + var16 + ((var19Lifetime2Lifetime1 - 320) / 4 + (8 * (100 - (var25 - 2 * var26)) + (int)(Math.sin((double)var2 + 0.005 * (double)ji.correctedCurrentTimeMillis(-78)) * 8.0))), var15 - 14);
                       var26++;
                     }
                     jd.field_c.c(this.b(var25, -70), (-320 + var19Lifetime2Lifetime1) / 4 + var16, var15 - 1, 0, 0);
@@ -1482,7 +1482,7 @@ final class ja {
                       0 < var25) {
                       var26Lifetime1 = 11 + (-1 + var25) / 11 * 11;
                       var27 = jc.field_f[n.field_a][-1 + var26Lifetime1];
-                      ab.field_g[12 * var27].a(-11 + (var19Lifetime2Lifetime1 - 320) / 4 - (-var16 - (int)(8.0 * Math.sin(0.005 * (double)ji.b(122) + (double)var2))), var15 - 16);
+                      ab.field_g[12 * var27].a(-11 + (var19Lifetime2Lifetime1 - 320) / 4 - (-var16 - (int)(8.0 * Math.sin(0.005 * (double)ji.correctedCurrentTimeMillis(122) + (double)var2))), var15 - 16);
                       jd.field_c.c(this.b(var25, -114), var16 + (var19Lifetime2Lifetime1 - 320) / 4, var15 - 1, 0, 0);
                       jd.field_c.c(this.b(var25, -124), -1 + var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, 0, 0);
                       jd.field_c.c(this.b(var25, -81), var16 + (-320 + var19Lifetime2Lifetime1) / 4, var15, var22Lifetime1, -1);
@@ -1967,7 +1967,7 @@ final class ja {
           stackIn_40_0 = -2;
         }
         if (stackIn_40_0 != ~this.field_a) {
-          var15 = ji.b(121);
+          var15 = ji.correctedCurrentTimeMillis(121);
           ul.e(6, 6, 634, 474);
           var17Lifetime2 = 10;
           while (var17Lifetime2 < 540) {
@@ -2297,7 +2297,7 @@ final class ja {
                   }
                   if ((decompiledFrameRemainder1) &&
                     (decompiledFrameCompleted0)) {
-                    var12_long = ji.b(-65);
+                    var12_long = ji.correctedCurrentTimeMillis(-65);
                     var14Lifetime1Lifetime1 = 95;
                     var15Lifetime1 = 190;
                     var16_double = -Math.abs(Math.sin(0.005 * (double)var12_long + (double)var2));
@@ -2326,7 +2326,7 @@ final class ja {
               }
             }
           } else {
-            var12_double = (double)ji.b(-128) * 0.0025;
+            var12_double = (double)ji.correctedCurrentTimeMillis(-128) * 0.0025;
             hg.field_ab.e((int)(88.0 * Math.cos(var12_double)) + 370, 114 + (int)(Math.sin(1.9 * var12_double) * 4.0), 10);
             var12_double = var12_double + 0.15;
             hg.field_ab.e(370 + (int)(Math.cos(var12_double) * 98.0), (int)(Math.sin(1.9 * var12_double) * 4.0) + 114, 30);

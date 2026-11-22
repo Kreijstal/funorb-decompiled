@@ -168,7 +168,7 @@ final class qf extends wb {
           int var3_intLifetime1;
           var16 = Lexicominos.field_L ? 1 : 0;
           if (this.field_r != null) {
-            var2_long = rf.c(0);
+            var2_long = rf.correctedCurrentTimeMillis(0);
             var4 = (int)(-this.field_n + var2_long);
             this.field_n = var2_long;
             if (var4 > 200) {
@@ -520,7 +520,7 @@ final class qf extends wb {
               }
             }
             this.field_e = 0;
-            this.field_n = rf.c(0);
+            this.field_n = rf.correctedCurrentTimeMillis(0);
             if (param1 > -87) {
               this.a(1, false);
             }

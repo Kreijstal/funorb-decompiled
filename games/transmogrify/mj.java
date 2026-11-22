@@ -123,7 +123,7 @@ final class mj {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        ji.a(field_q, 0, param0);
+        ji.clearInts(field_q, 0, param0);
         if (param1 < 10) {
           return field_q;
         }

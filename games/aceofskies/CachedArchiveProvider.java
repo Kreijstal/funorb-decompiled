@@ -259,7 +259,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
                 decompiledFrameRemainder0 = (this.field_i);
                 if (decompiledFrameRemainder0 &&
-                  (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
+                  (decompiledFrameRemainder0 = !(this.field_x > kh.correctedCurrentTimeMillis(-106)))) {
                   ArchiveRequest var2 = (ArchiveRequest) (this.field_v.firstForIteration(false));
                   while (var2 != null) {
                     if (!var2.field_p) {
@@ -292,7 +292,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           decompiledFrameRemainder0 = (this.field_i);
           if (decompiledFrameRemainder0 &&
-            (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
+            (decompiledFrameRemainder0 = !(this.field_x > kh.correctedCurrentTimeMillis(-106)))) {
             ArchiveRequest var2Lifetime1 = (ArchiveRequest) (this.field_v.firstForIteration(false));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_p) {
@@ -310,7 +310,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
         }
         if (decompiledFrameRemainder0) {
-          this.field_x = 1000L + kh.a(-95);
+          this.field_x = 1000L + kh.correctedCurrentTimeMillis(-95);
         }
 
     }

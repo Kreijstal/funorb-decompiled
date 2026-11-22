@@ -18,7 +18,7 @@ final class eh {
         field_a = null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int countSetBits(int param0, byte param1) {
         param0 = (param0 & 1431655765) + (-715827883 & param0 >>> 1);
         param0 = ((-858993460 & param0) >>> 2) + (858993459 & param0);
         param0 = (param0 >>> 4) + param0 & 252645135;

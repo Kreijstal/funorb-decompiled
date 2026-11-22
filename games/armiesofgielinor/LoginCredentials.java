@@ -154,7 +154,7 @@ abstract class LoginCredentials {
             }
             var5 = ((PlatformTaskService) (Object) stackIn_12_0).openUrlStreamAsync(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(PlatformTaskService.javaVendor).append("&v2=").append(PlatformTaskService.javaVersion).append("&e=").append(var11).toString()), false);
             while (var5.status == 0) {
-              SpriteButtonPainter.a(1L, 0);
+              SpriteButtonPainter.sleepMillis(1L, 0);
             }
             if (var5.status != 1) {
               return;

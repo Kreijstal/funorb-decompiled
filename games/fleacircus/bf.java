@@ -48,7 +48,7 @@ final class bf {
         field_a = null;
         field_f = null;
         if (param0) {
-          bf.a(false, 51);
+          bf.roundUpPowerOfTwo(false, 51);
         }
     }
 
@@ -122,7 +122,7 @@ final class bf {
         return var2;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int roundUpPowerOfTwo(boolean param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;

@@ -572,7 +572,7 @@ final class ke {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_m).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              um.a(true, 1L);
+              um.sleepMillis(true, 1L);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);

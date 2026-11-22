@@ -236,9 +236,9 @@ final class rf {
         field_b = null;
     }
 
-    final synchronized static long c(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         if (param0 != 0) {
-          rf.c(3);
+          rf.correctedCurrentTimeMillis(3);
         }
         long var1 = System.currentTimeMillis();
         if (!(var1 >= fh.field_g)) {

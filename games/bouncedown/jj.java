@@ -25,13 +25,13 @@ final class jj {
           if (NodeHashTableIterator.field_a != null && (param0 < 0 ||
             pj.field_a == b.field_b)) {
             if (0 == hh.field_p.position &&
-              fa.a(101) > (10000L + wa.field_e)) {
+              fa.correctedCurrentTimeMillis(101) > (10000L + wa.field_e)) {
               hh.field_p.a(true, param0);
             }
             if (0 < hh.field_p.position) {
               try {
                 NodeHashTableIterator.field_a.a(hh.field_p.position, hh.field_p.payload, 0, 0);
-                wa.field_e = fa.a(-76);
+                wa.field_e = fa.correctedCurrentTimeMillis(-76);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

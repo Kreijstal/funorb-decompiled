@@ -23,7 +23,7 @@ final class wi {
         field_a = param3 - param1;
         wi.a();
         if (field_i.length < field_a) {
-          field_i = new int[ua.a(field_a, 0)];
+          field_i = new int[ua.roundUpPowerOfTwo(field_a, 0)];
         }
         int var4 = param1 * ul.field_f + param0;
         for (var5 = 0; var5 < field_a; var5++) {

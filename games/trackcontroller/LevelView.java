@@ -32,7 +32,7 @@ final class LevelView extends LevelGrid {
             this.field_x.addFirst(this.field_p, (byte) -78);
           }
           var2 = he.field_e.nextInt() & 16777215;
-          this.field_A = this.tickCount + 8 + sc.a(var2, -1);
+          this.field_A = this.tickCount + 8 + sc.countSetBits(var2, -1);
         }
         u var4 = (u) (this.field_x.first(2));
         while (var4 != null) {
@@ -362,7 +362,7 @@ final class LevelView extends LevelGrid {
         int var7Lifetime1;
         int var8Lifetime1;
         var11 = TrackController.field_F ? 1 : 0;
-        var5 = sc.a(param0, -1);
+        var5 = sc.countSetBits(param0, -1);
         if (var5 < 2) {
           return param0;
         }

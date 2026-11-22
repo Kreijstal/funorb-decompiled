@@ -319,7 +319,7 @@ abstract class tb {
           }
           if (0 == var3 &&
             am.field_g == 2) {
-            var4 = lo.a((byte) -67) - wm.field_d;
+            var4 = lo.correctedCurrentTimeMillis((byte) -67) - wm.field_d;
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;

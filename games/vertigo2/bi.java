@@ -91,9 +91,9 @@ final class bi {
         var29 = field_h;
         var26 = var29;
         var11 = var26;
-        qq.a(var27, 0, param8);
-        qq.a(var28, 0, param8);
-        qq.a(var29, 0, param8);
+        qq.clearInts(var27, 0, param8);
+        qq.clearInts(var28, 0, param8);
+        qq.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

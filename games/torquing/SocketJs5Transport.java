@@ -99,7 +99,7 @@ final class SocketJs5Transport extends Js5Transport {
           var16 = Torquing.field_u;
           try {
             if (null != this.field_q) {
-              var2_long = km.b(-1);
+              var2_long = km.correctedCurrentTimeMillis(-1);
               var4 = (int)(-this.field_o + var2_long);
               if (200 < var4) {
                 var4 = 200;
@@ -491,7 +491,7 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             this.field_l = 0;
-            this.field_o = km.b(-1);
+            this.field_o = km.correctedCurrentTimeMillis(-1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

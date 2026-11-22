@@ -262,7 +262,7 @@ final class ob extends DualLinkNode {
           return false;
         }
         ka.field_a = true;
-        rk.field_eb = qg.a(false) + 15000L;
+        rk.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
         return rl.field_N == 11 ? true : false;
     }
 

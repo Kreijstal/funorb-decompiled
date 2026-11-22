@@ -35,7 +35,7 @@ final class MixedSupport104 {
         integerState0654 = integerArgument4 - integerArgument2;
         MixedSupport104.performAction1358();
         if (integerArrayState0197.length < integerState0654) {
-          integerArrayState0197 = new int[UiComponentPart020.computeInteger1159(-10498, integerState0654)];
+          integerArrayState0197 = new int[UiComponentPart020.roundUpPowerOfTwo(-10498, integerState0654)];
         }
         int integerLocal2 = integerArgument2 * SoftwareRaster.integerState0285 + integerArgument1;
         for (integerLocal1 = 0; integerLocal1 < integerState0654; integerLocal1++) {

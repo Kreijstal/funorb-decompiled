@@ -75,7 +75,7 @@ final class nl {
           }
           if (var3 == 0 &&
             v.field_R == 2) {
-            var4 = -jl.field_c + id.a(54);
+            var4 = -jl.field_c + id.correctedCurrentTimeMillis(54);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;

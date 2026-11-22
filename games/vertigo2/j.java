@@ -49,7 +49,7 @@ final class j extends IntrusiveNode {
           if (param0 != 0) {
             return true;
           }
-          var2_long = gk.a(109);
+          var2_long = gk.correctedCurrentTimeMillis(109);
           if (ir.field_d != 0 &&
             m.field_A < 0) {
             var4_ref_hl = (hl) (s.field_t.beginBackward((byte) 100));

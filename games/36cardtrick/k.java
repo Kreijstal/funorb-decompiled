@@ -28,12 +28,12 @@ abstract class k implements ba {
         }
         if (!param0) {
           this.field_d = 73L;
-          if (!(id.a(43) >= this.field_d + 350L)) {
+          if (!(id.correctedCurrentTimeMillis(43) >= this.field_d + 350L)) {
             return tb.field_b;
           }
           return this.e(14);
         }
-        if (!(id.a(43) >= this.field_d + 350L)) {
+        if (!(id.correctedCurrentTimeMillis(43) >= this.field_d + 350L)) {
           return tb.field_b;
         }
         return this.e(14);
@@ -97,7 +97,7 @@ abstract class k implements ba {
             }
             var5 = ((PlatformTaskDispatcher) (Object) stackIn_11_0).requestUrlStream(new java.net.URL(stackIn_11_3, ((StringBuilder) (Object) stackIn_11_4).append(stackIn_12_5).append("&v1=").append(PlatformTaskDispatcher.field_v).append("&v2=").append(PlatformTaskDispatcher.field_w).append("&e=").append(var11).toString()), true);
             while (var5.status == 0) {
-              wk.a((byte) -97, 1L);
+              wk.sleepMillis((byte) -97, 1L);
             }
             if (1 == var5.status) {
               var6 = (DataInputStream) (var5.result);
@@ -118,10 +118,10 @@ abstract class k implements ba {
     public final void a(int param0) {
         if (param0 >= -96) {
           k.c(58);
-          this.field_d = id.a(111);
+          this.field_d = id.correctedCurrentTimeMillis(111);
           return;
         }
-        this.field_d = id.a(111);
+        this.field_d = id.correctedCurrentTimeMillis(111);
     }
 
     abstract sg e(int param0);
@@ -132,12 +132,12 @@ abstract class k implements ba {
         }
         if (param0 != 26766) {
           this.field_d = 5L;
-          if (id.a(46) >= (350L + this.field_d)) {
+          if (id.correctedCurrentTimeMillis(46) >= (350L + this.field_d)) {
             return this.d(-5777);
           }
           return null;
         }
-        if (id.a(46) >= (350L + this.field_d)) {
+        if (id.correctedCurrentTimeMillis(46) >= (350L + this.field_d)) {
           return this.d(-5777);
         }
         return null;

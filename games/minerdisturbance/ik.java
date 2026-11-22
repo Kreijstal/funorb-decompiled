@@ -485,7 +485,7 @@ final class ik extends kn implements be, sh, f {
           var1_int = lj.field_p;
           var2 = 0;
           if (ti.field_M == 2) {
-            var3_long = sf.a((byte) 121) - tl.field_o;
+            var3_long = sf.correctedCurrentTimeMillis((byte) 121) - tl.field_o;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;

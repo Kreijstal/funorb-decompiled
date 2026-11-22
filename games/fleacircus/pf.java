@@ -62,7 +62,7 @@ final class pf {
           }
           var11 = param3.requestFullscreenEnter(param4, (byte) -50, param2, param5, param1);
           while (var11.status == 0) {
-            vh.a(10L, -88);
+            vh.sleepMillis(10L, -88);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
@@ -335,7 +335,7 @@ final class pf {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_47_2;
             }
-            sd.field_h = lj.a((byte) -52);
+            sd.field_h = lj.correctedCurrentTimeMillis((byte) -52);
           }
           if (param1 != 1) {
             field_a = (dd) null;

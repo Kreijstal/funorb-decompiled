@@ -35,7 +35,7 @@ final class ob {
         field_h = param3 - param1;
         ob.c();
         if (field_d.length < field_h) {
-          field_d = new int[vd.b(field_h, 17603)];
+          field_d = new int[vd.roundUpPowerOfTwo(field_h, 17603)];
         }
         int var4 = param1 * SoftwareRasterizer.field_k + param0;
         for (var5 = 0; var5 < field_h; var5++) {

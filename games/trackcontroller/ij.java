@@ -431,7 +431,7 @@ final class ij implements t {
               }
               stackIn_38_0[stackIn_38_1] = stackIn_39_2;
             }
-            fe.field_N = qg.a(false);
+            fe.field_N = qg.correctedCurrentTimeMillis(false);
           }
           GzipDecompressor.field_f.field_i = ac.field_c.length;
           var3_intLifetime1 = 0;

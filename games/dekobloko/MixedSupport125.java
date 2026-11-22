@@ -96,29 +96,29 @@ final class MixedSupport125 extends MixedSupport140 {
         }
     }
 
-    final static void performAction1620(long longArgument1, int integerArgument2) {
+    final static void sleepMillis(long longArgument1, int integerArgument2) {
         if (integerArgument2 > -127) {
           sceneWidgetState0125 = (SceneWidget) null;
           if (longArgument1 <= 0L) {
             return;
           }
           if (0L == longArgument1 % 10L) {
-            RenderingSupport012.performAction1344(-1L + longArgument1, -124);
-            RenderingSupport012.performAction1344(1L, -109);
+            RenderingSupport012.sleepIgnoringInterrupts(-1L + longArgument1, -124);
+            RenderingSupport012.sleepIgnoringInterrupts(1L, -109);
             return;
           }
-          RenderingSupport012.performAction1344(longArgument1, -111);
+          RenderingSupport012.sleepIgnoringInterrupts(longArgument1, -111);
           return;
         }
         if (longArgument1 <= 0L) {
           return;
         }
         if (0L == longArgument1 % 10L) {
-          RenderingSupport012.performAction1344(-1L + longArgument1, -124);
-          RenderingSupport012.performAction1344(1L, -109);
+          RenderingSupport012.sleepIgnoringInterrupts(-1L + longArgument1, -124);
+          RenderingSupport012.sleepIgnoringInterrupts(1L, -109);
           return;
         }
-        RenderingSupport012.performAction1344(longArgument1, -111);
+        RenderingSupport012.sleepIgnoringInterrupts(longArgument1, -111);
     }
 
     final static void performAction1625(byte byteArgument1) {

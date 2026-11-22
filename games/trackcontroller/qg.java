@@ -29,7 +29,7 @@ final class qg {
         field_a = null;
     }
 
-    final synchronized static long a(boolean param0) {
+    final synchronized static long correctedCurrentTimeMillis(boolean param0) {
         long var1 = System.currentTimeMillis();
         if (we.field_c > var1) {
           pa.field_b = pa.field_b + (we.field_c - var1);

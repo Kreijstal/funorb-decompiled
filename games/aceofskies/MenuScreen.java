@@ -1405,7 +1405,7 @@ final class MenuScreen {
               }
               stackIn_80_0[stackIn_80_1] = stackIn_83_2;
             }
-            PacketBuffer.field_e = kh.a(-115);
+            PacketBuffer.field_e = kh.correctedCurrentTimeMillis(-115);
           }
           pr.field_b.itemCount = rm.field_g.length;
           if (param0 != -119) {

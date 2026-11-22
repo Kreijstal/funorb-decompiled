@@ -208,7 +208,7 @@ final class lc extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepIgnoringInterrupts(int param0, long param1) {
         try {
           try {
             Thread.sleep(param1);

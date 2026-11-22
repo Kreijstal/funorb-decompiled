@@ -221,7 +221,7 @@ final class ResourceArchive {
               if (0 == param2.length()) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 94608000000L + hn.a((byte) 80)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 94608000000L + hn.correctedCurrentTimeMillis((byte) 80)) + "; Max-Age=" + 94608000L;
               }
               a.a(param1, 17467, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {

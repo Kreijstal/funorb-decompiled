@@ -145,7 +145,7 @@ final class uj implements Runnable {
             return false;
           }
           var2_int = 28 / ((param1 - 65) / 36);
-          var3 = ji.b(125);
+          var3 = ji.correctedCurrentTimeMillis(125);
           if (0 != hf.field_i &&
             vb.field_i < 0) {
             var5_ref_hc = (hc) (t.field_q.beginForward((byte) 121));

@@ -121,7 +121,7 @@ final class ti extends ba implements wc {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).requestUrlStream(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var10).toString()), false);
             while (0 == var4.status) {
-              SecondaryNodeDeque.a(1L, 19406);
+              SecondaryNodeDeque.sleepMillis(1L, 19406);
             }
             if (1 != var4.status) {
               return;
@@ -171,7 +171,7 @@ final class ti extends ba implements wc {
           }
           var2 = 0;
           if (ne.field_u == 2) {
-            var3_long = fa.a(-23) - gd.field_a;
+            var3_long = fa.correctedCurrentTimeMillis(-23) - gd.field_a;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;

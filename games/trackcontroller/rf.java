@@ -95,7 +95,7 @@ final class rf {
           }
           var9 = param0.requestDisplayModes(75);
           while (var9.status == 0) {
-            wl.a(10L, false);
+            wl.sleepMillis(10L, false);
           }
           if (var9.status == 2) {
             stackIn_10_0 = new ji[]{};

@@ -863,7 +863,7 @@ final class sg {
           }
           var8 = stackIn_19_0;
           var9 = 0;
-          var10 = -1 + jf.a((byte) 108, MouseWheelInput.field_a);
+          var10 = -1 + jf.countSetBits((byte) 108, MouseWheelInput.field_a);
           this.field_e = -1;
           if (param1 != 640) {
             field_a = 35;

@@ -55,7 +55,7 @@ final class ek extends IntrusiveNode {
           if (de.field_q.status == 0) {
             return false;
           }
-          dupTemp$0 = la.a(false);
+          dupTemp$0 = la.correctedCurrentTimeMillis(false);
           ck.field_e = dupTemp$0;
           el.field_rb = dupTemp$0;
           if (de.field_q.status != 1) {

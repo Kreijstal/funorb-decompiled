@@ -162,7 +162,7 @@ final class tj extends vm {
           if (param0 != 103) {
             return true;
           }
-          var2_long = ud.a(2);
+          var2_long = ud.correctedCurrentTimeMillis(2);
           if (0 != fh.field_d &&
             0 > da.field_p) {
             var4_ref_tf = (tf) (kn.field_I.beginBackward(-18110));

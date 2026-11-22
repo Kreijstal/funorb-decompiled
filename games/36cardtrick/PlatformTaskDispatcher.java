@@ -287,13 +287,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (id.a(22) < field_k) {
+                    if (id.correctedCurrentTimeMillis(22) < field_k) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 4:
-                    if (id.a(58) < field_k) {
+                    if (id.correctedCurrentTimeMillis(58) < field_k) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -321,7 +321,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (id.a(23) < field_k) {
+                        if (id.correctedCurrentTimeMillis(23) < field_k) {
                           throw new IOException();
                         }
                         var16 = (255 & var8.intArgument >> 24) + "." + ((var8.intArgument & 16776207) >> 16) + "." + (255 & var8.intArgument >> 8) + "." + (255 & var8.intArgument);
@@ -418,7 +418,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (id.a(123) < field_k) {
+                        if (id.correctedCurrentTimeMillis(123) < field_k) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -442,7 +442,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (field_k > id.a(98)) {
+                    if (field_k > id.correctedCurrentTimeMillis(98)) {
                       throw new IOException();
                     }
                     try {

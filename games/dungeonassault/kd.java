@@ -37,7 +37,7 @@ final class kd {
         if (param4 == 29108) {
           return;
         }
-        kd.c(114);
+        kd.correctedCurrentTimeMillis(114);
     }
 
     final static void a(int param0) {
@@ -155,7 +155,7 @@ final class kd {
         }
     }
 
-    final synchronized static long c(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (var1 < lo.field_f) {
           fb.field_c = fb.field_c + (-var1 + lo.field_f);

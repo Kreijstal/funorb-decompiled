@@ -176,7 +176,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var9.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (field_h > ri.a(-3)) {
+                    if (field_h > ri.correctedCurrentTimeMillis(-3)) {
                       throw new IOException();
                     }
                     var9.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.objectArgument)), var9.intArgument);
@@ -189,7 +189,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var9.result = var18;
                     break;
                   case 4:
-                    if (field_h > ri.a(-3)) {
+                    if (field_h > ri.correctedCurrentTimeMillis(-3)) {
                       throw new IOException();
                     }
                     var9.result = new DataInputStream(((java.net.URL) (var9.objectArgument)).openStream());
@@ -218,14 +218,14 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (field_h > ri.a(-3)) {
+                        if (field_h > ri.correctedCurrentTimeMillis(-3)) {
                           throw new IOException();
                         }
                         var14 = (var9.intArgument >> 24 & 255) + "." + (255 & var9.intArgument >> 16) + "." + ((65510 & var9.intArgument) >> 8) + "." + (255 & var9.intArgument);
                         var9.result = java.net.InetAddress.getByName(var14).getHostName();
                         break;
                       case 21:
-                        if (ri.a(-3) < field_h) {
+                        if (ri.correctedCurrentTimeMillis(-3) < field_h) {
                           throw new IOException();
                         }
                         var9.result = java.net.InetAddress.getByName((String) (var9.objectArgument)).getAddress();
@@ -331,7 +331,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var9.result = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 22:
-                    if (field_h > ri.a(-3)) {
+                    if (field_h > ri.correctedCurrentTimeMillis(-3)) {
                       throw new IOException();
                     }
                     try {

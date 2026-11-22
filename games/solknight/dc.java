@@ -99,7 +99,7 @@ final class dc extends a {
           }
           var8 = param1.requestDisplayModes(7721);
           while (0 == var8.status) {
-            i.a((byte) 82, 10L);
+            i.sleepMillis((byte) 82, 10L);
           }
           if (var8.status == 2) {
             stackIn_11_0 = new uj[]{};

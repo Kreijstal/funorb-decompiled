@@ -86,7 +86,7 @@ abstract class gm extends ab {
         if (param0 != -1) {
           gm.clearStaticReferences((byte) -17);
         }
-        return -ff.field_b + kh.a(param0 - 91);
+        return -ff.field_b + kh.correctedCurrentTimeMillis(param0 - 91);
     }
 
     boolean h(int param0) {

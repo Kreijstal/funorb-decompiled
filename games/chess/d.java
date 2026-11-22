@@ -14,7 +14,7 @@ final class d extends ci {
 
     final static boolean a(boolean param0) {
         sk.field_p = param0 ? true : false;
-        ma.field_E = ud.a(2) + 15000L;
+        ma.field_E = ud.correctedCurrentTimeMillis(2) + 15000L;
         return rm.field_Q == 11 ? true : false;
     }
 

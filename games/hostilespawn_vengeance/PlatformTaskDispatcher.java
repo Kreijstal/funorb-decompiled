@@ -245,13 +245,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (field_x > hn.a((byte) 80)) {
+                    if (field_x > hn.correctedCurrentTimeMillis((byte) 80)) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 22:
-                    if (hn.a((byte) 80) < field_x) {
+                    if (hn.correctedCurrentTimeMillis((byte) 80) < field_x) {
                       throw new IOException();
                     }
                     try {
@@ -272,7 +272,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = var18;
                     break;
                   case 4:
-                    if (hn.a((byte) 80) < field_x) {
+                    if (hn.correctedCurrentTimeMillis((byte) 80) < field_x) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -301,14 +301,14 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (hn.a((byte) 80) < field_x) {
+                        if (hn.correctedCurrentTimeMillis((byte) 80) < field_x) {
                           throw new IOException();
                         }
                         var14 = (255 & var8.intArgument >> 24) + "." + ((var8.intArgument & 16770738) >> 16) + "." + ((var8.intArgument & 65486) >> 8) + "." + (255 & var8.intArgument);
                         var8.result = java.net.InetAddress.getByName(var14).getHostName();
                         break;
                       case 21:
-                        if (hn.a((byte) 80) < field_x) {
+                        if (hn.correctedCurrentTimeMillis((byte) 80) < field_x) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();

@@ -139,7 +139,7 @@ final class j implements Runnable {
           }
           if (null != this.field_l) {
             while (this.field_l.status == 0) {
-              fh.a(true, 1L);
+              fh.sleepMillis(true, 1L);
             }
             if (this.field_l.status == 1) {
               try {
@@ -340,7 +340,7 @@ final class j implements Runnable {
     final static boolean c(byte param0) {
         ka.field_j = true;
         if (param0 == -23) {
-          ee.field_e = lo.a((byte) 81) + 15000L;
+          ee.field_e = lo.correctedCurrentTimeMillis((byte) 81) + 15000L;
           return hp.field_s == 11 ? true : false;
         }
         return false;

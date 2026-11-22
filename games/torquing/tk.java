@@ -364,7 +364,7 @@ class tk extends lg {
           this.field_I = param2;
           this.a(true, param0, true);
           this.field_J = true;
-          this.field_H = km.b(-1);
+          this.field_H = km.correctedCurrentTimeMillis(-1);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -421,7 +421,7 @@ class tk extends lg {
                 this.field_G = var6;
               }
             }
-            this.field_H = km.b(-1);
+            this.field_H = km.correctedCurrentTimeMillis(-1);
           }
           int var5_int = -127 / ((-28 - param0) / 43);
         } catch (RuntimeException runtimeException) {
@@ -442,7 +442,7 @@ class tk extends lg {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_H = km.b(-1);
+          this.field_H = km.correctedCurrentTimeMillis(-1);
           if (param2 == 60) {
             return false;
           }
@@ -599,7 +599,7 @@ class tk extends lg {
             if (this.field_G != this.field_C) {
               var9.a(param3, this.field_G, this.field_C, -1419356520, param2, (UiWidget) (this));
             }
-            var6 = km.b(-1);
+            var6 = km.correctedCurrentTimeMillis(-1);
             if ((-this.field_H + var6) % 1000L < 500L) {
               var9.a(param3, (UiWidget) (this), this.field_G, false, param2);
             }
@@ -639,7 +639,7 @@ class tk extends lg {
               stackIn_6_2 = 0;
             }
             this.a((byte) stackIn_5_1, stackIn_6_2);
-            var8_long = km.b(-1);
+            var8_long = km.correctedCurrentTimeMillis(-1);
             stackIn_9_1 = !(-this.field_E + var8_long >= 250L);
             this.field_F = stackIn_9_1;
             if (this.field_F) {

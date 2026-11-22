@@ -10,7 +10,7 @@ final class mc {
         if (!param0) {
           mc.clearStaticReferences(true);
         }
-        return -wi.field_q + lk.a(0);
+        return -wi.field_q + lk.correctedCurrentTimeMillis(0);
     }
 
     public static void clearStaticReferences(boolean param0) {

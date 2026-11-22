@@ -374,7 +374,7 @@ final class kn {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param2 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + ha.a(ri.a(-3) + 1000L * param2, 13) + "; Max-Age=" + param2;
+                var7Lifetime4 = var10 + "; Expires=" + ha.a(ri.correctedCurrentTimeMillis(-3) + 1000L * param2, 13) + "; Max-Age=" + param2;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }

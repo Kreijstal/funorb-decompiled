@@ -1819,7 +1819,7 @@ public final class BachelorFridge extends NetworkGameClient {
                     }
                     if (ri.field_a == 14) {
                       StatusEffectInfo.a(true);
-                      dfa.a(150, ul.a(-58, 4), ul.a(-51, 2000), 0, jha.field_j, InsanoSauceAnimation.field_y.length, mia.d((byte) -104), StickySpecial.c(true), 1024, NetworkGameClient.n(96));
+                      dfa.a(150, ul.roundUpPowerOfTwo(-58, 4), ul.roundUpPowerOfTwo(-51, 2000), 0, jha.field_j, InsanoSauceAnimation.field_y.length, mia.d((byte) -104), StickySpecial.c(true), 1024, NetworkGameClient.n(96));
                       MusicPatch.a(vv.a(31185), -83, jha.c(-31068));
                       UiWidget.field_g = true;
                       hm.field_b = true;

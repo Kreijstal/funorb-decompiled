@@ -58,7 +58,7 @@ final class ce {
         if (hb.field_q.status == 0) {
           return false;
         }
-        dupTemp$2 = gk.a(99);
+        dupTemp$2 = gk.correctedCurrentTimeMillis(99);
         bm.field_H = dupTemp$2;
         gn.field_b = dupTemp$2;
         var2 = 67 % ((param0 - 60) / 39);

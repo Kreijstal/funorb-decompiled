@@ -31,7 +31,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_k = lk.a(0) + 2000L;
+            this.field_k = lk.correctedCurrentTimeMillis(0) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -150,7 +150,7 @@ class AudioOutput {
           if (this.field_m) {
             return;
           }
-          var1 = lk.a(0);
+          var1 = lk.correctedCurrentTimeMillis(0);
           try {
             if (var1 > this.field_n + 6000L) {
               this.field_n = var1 - 6000L;
@@ -158,7 +158,7 @@ class AudioOutput {
             while (var1 > this.field_n + 5000L) {
               this.skipFrames(256);
               this.field_n = this.field_n + (long)(256000 / field_p);
-              var1 = lk.a(0);
+              var1 = lk.correctedCurrentTimeMillis(0);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,7 +297,7 @@ class AudioOutput {
         if (field_g) {
           var3 = var3 << 1;
         }
-        ji.a(param0, 0, var3);
+        ji.clearInts(param0, 0, var3);
         this.field_e = this.field_e - param1;
         if (this.field_j != null &&
           this.field_e <= 0) {
@@ -391,7 +391,7 @@ class AudioOutput {
         if (this.field_j != null) {
           this.field_j.b(param0, 0, param1);
         }
-        this.field_n = lk.a(0);
+        this.field_n = lk.correctedCurrentTimeMillis(0);
     }
 
     final synchronized void dispose() {
@@ -410,7 +410,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_b.field_a = true;
             while (field_b.field_d) {
-              pg.a(50L, -122);
+              pg.sleepMillis(50L, -122);
             }
             field_b = null;
           }
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_d = 32;
         this.field_m = false;
-        this.field_n = lk.a(0);
+        this.field_n = lk.correctedCurrentTimeMillis(0);
         this.field_t = new PcmStream[8];
         this.field_u = 0;
         this.field_h = new PcmStream[8];

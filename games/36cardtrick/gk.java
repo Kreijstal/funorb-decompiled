@@ -27,14 +27,14 @@ abstract class gk {
         if (param1 <= -124) {
           var4 = this.a(0);
           if (var4 > 0L) {
-            wk.a((byte) -104, var4);
+            wk.sleepMillis((byte) -104, var4);
           }
           return this.a(param0, false);
         }
         gk.c(25);
         var4Lifetime1 = this.a(0);
         if (var4Lifetime1 > 0L) {
-          wk.a((byte) -104, var4Lifetime1);
+          wk.sleepMillis((byte) -104, var4Lifetime1);
         }
         return this.a(param0, false);
     }

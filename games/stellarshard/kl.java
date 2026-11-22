@@ -52,7 +52,7 @@ final class kl extends IntrusiveNode {
             field_r = (PacketBuffer) null;
           }
           if (rb.field_s == 2) {
-            var3_long = -jj.field_p + ih.a((byte) -98);
+            var3_long = -jj.field_p + ih.correctedCurrentTimeMillis((byte) -98);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;

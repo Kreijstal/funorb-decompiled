@@ -68,7 +68,7 @@ abstract class hh {
 
     abstract void a(boolean param0, boolean param1);
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param1 = (param1 & 1431655765) + ((param1 & -1431655765) >>> 1);
         if (param0 == 0) {
           param1 = (param1 >>> 2 & -214748365) + (param1 & 858993459);

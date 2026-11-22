@@ -49,7 +49,7 @@ final class wd extends ik {
         if (param0 != -1322) {
           field_j = 104;
         }
-        return -wg.field_y + lo.a((byte) 82);
+        return -wg.field_y + lo.correctedCurrentTimeMillis((byte) 82);
     }
 
     private final void a(int param0, int param1, int param2, int param3) {

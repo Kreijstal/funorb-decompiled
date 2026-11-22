@@ -76,7 +76,7 @@ class ui extends hc {
           this.field_A = AccountRequestState.field_c.field_a;
           this.a(true, false, param0);
           this.field_Q = true;
-          this.field_K = sf.a((byte) 109);
+          this.field_K = sf.correctedCurrentTimeMillis((byte) 109);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -166,7 +166,7 @@ class ui extends hc {
             stackIn_6_2 = 0;
           }
           this.a(stackIn_5_1, stackIn_6_2);
-          var8_long = sf.a((byte) 106);
+          var8_long = sf.correctedCurrentTimeMillis((byte) 106);
           stackIn_9_1 = !(250L <= -this.field_P + var8_long);
           this.field_R = stackIn_9_1;
           if (this.field_R) {
@@ -224,7 +224,7 @@ class ui extends hc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_K = sf.a((byte) 111);
+          this.field_K = sf.correctedCurrentTimeMillis((byte) 111);
           if (param0 == 60) {
             return false;
           }
@@ -468,7 +468,7 @@ class ui extends hc {
                 this.field_J = var6;
               }
             }
-            this.field_K = sf.a((byte) -123);
+            this.field_K = sf.correctedCurrentTimeMillis((byte) -123);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "ui.V(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -486,7 +486,7 @@ class ui extends hc {
             if (this.field_J != this.field_O) {
               var8.a(this.field_J, (fe) (this), param2, param1, this.field_O, false);
             }
-            var6 = sf.a((byte) 107);
+            var6 = sf.correctedCurrentTimeMillis((byte) 107);
             if ((var6 - this.field_K) % 1000L < 500L) {
               var8.a(param0 + 13030, param1, this.field_J, param2, (fe) (this));
             }

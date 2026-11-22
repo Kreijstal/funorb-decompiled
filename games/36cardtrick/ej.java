@@ -125,7 +125,7 @@ final class ej extends ta {
           }
           var11 = param2.requestFullscreenEnter(param4, param5, param0, (byte) -30, param3);
           while (var11.status == 0) {
-            wk.a((byte) -121, 10L);
+            wk.sleepMillis((byte) -121, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

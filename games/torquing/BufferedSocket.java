@@ -46,7 +46,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_k) {
             while (this.field_k.status == 0) {
-              ub.a(1976, 1L);
+              ub.sleepMillis(1976, 1L);
             }
             if (this.field_k.status == 1) {
               try {
@@ -262,7 +262,7 @@ final class BufferedSocket implements Runnable {
                 var2_int = param0 - kj.field_d.position;
               }
               vk.field_E.a(var2_int, kj.field_d.position, kj.field_d.payload, (byte) -74);
-              rb.field_C = km.b(~param1);
+              rb.field_C = km.correctedCurrentTimeMillis(~param1);
               kj.field_d.position = kj.field_d.position + var2_int;
               if (param0 > kj.field_d.position) {
                 return false;
@@ -368,7 +368,7 @@ final class BufferedSocket implements Runnable {
           }
           var8 = param0.requestDisplayModes(100);
           while (var8.status == 0) {
-            ub.a(1976, 10L);
+            ub.sleepMillis(1976, 10L);
           }
           if (2 == var8.status) {
             stackIn_12_0 = new sf[]{};

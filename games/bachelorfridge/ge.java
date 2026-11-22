@@ -96,7 +96,7 @@ final class ge extends WidgetWrapper {
           if (0 == SauceOfFlameAnimation.field_x.status) {
             return false;
           }
-          dupTemp$1 = f.b((byte) 73);
+          dupTemp$1 = f.correctedCurrentTimeMillis((byte) 73);
           vla.field_v = dupTemp$1;
           pk.field_c = dupTemp$1;
           if (param0 != -29510) {

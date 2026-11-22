@@ -87,7 +87,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             BufferedSocket.field_l = 0;
             dh.field_w = param0.getX();
             ga.field_b = param0.getY();
-            lk.a(0);
+            lk.correctedCurrentTimeMillis(0);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               WordDictionary.field_b = 2;
               cg.field_k = 2;

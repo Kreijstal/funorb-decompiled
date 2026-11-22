@@ -31,7 +31,7 @@ final class ef implements Runnable {
                 var2.serviceOutput();
               }
             }
-            pg.a(10L, -108);
+            pg.sleepMillis(10L, -108);
             Object var5 = (Object) null;
             db.a(this.field_b, (Object) null, -125);
           }

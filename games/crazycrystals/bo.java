@@ -50,10 +50,10 @@ abstract class bo extends pn {
           while (true) {
             var3 = param0.requestFullscreenExit(param1, (byte) -116);
             while (0 == var3.status) {
-              fh.a(true, 10L);
+              fh.sleepMillis(true, 10L);
             }
             if (var3.status != 1) {
-              fh.a(true, 100L);
+              fh.sleepMillis(true, 100L);
               continue;
             }
             break;

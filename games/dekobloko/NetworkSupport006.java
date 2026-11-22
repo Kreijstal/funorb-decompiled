@@ -26,7 +26,7 @@ final class NetworkSupport006 {
           if (MixedSupport066.asyncTaskState0004.integerState0510 == 0) {
             return false;
           }
-          cachedLongLocal1 = MixedSupport062.computeLong0734(4);
+          cachedLongLocal1 = MixedSupport062.correctedCurrentTimeMillis(4);
           ArchiveRequestManager.longState0011 = cachedLongLocal1;
           MixedSupport095.longState0040 = cachedLongLocal1;
           if (MixedSupport066.asyncTaskState0004.integerState0510 != 1) {

@@ -69,7 +69,7 @@ final class di extends ci {
           var1_int = ak.field_j;
           var2 = 0;
           if (gm.field_f == 2) {
-            var3_long = -jg.field_M + ud.a(2);
+            var3_long = -jg.field_M + ud.correctedCurrentTimeMillis(2);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

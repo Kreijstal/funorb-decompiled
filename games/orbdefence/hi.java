@@ -244,7 +244,7 @@ abstract class hi extends wb implements jb {
           }
           if (var3 == 0 &&
             kg.field_m == 2) {
-            var4 = ji.b(107) - am.field_a;
+            var4 = ji.correctedCurrentTimeMillis(107) - am.field_a;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               var3 = 2;

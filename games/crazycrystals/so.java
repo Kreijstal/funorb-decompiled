@@ -46,7 +46,7 @@ final class so {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param1.field_d.peekEvent()) {
-              fh.a(true, 1L);
+              fh.sleepMillis(true, 1L);
               continue;
             }
             break;

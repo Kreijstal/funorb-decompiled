@@ -1167,9 +1167,9 @@ final class ki {
         var29 = field_k;
         var26 = var29;
         var11 = var26;
-        ug.a(var27, 0, param8);
-        ug.a(var28, 0, param8);
-        ug.a(var29, 0, param8);
+        ug.clearInts(var27, 0, param8);
+        ug.clearInts(var28, 0, param8);
+        ug.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

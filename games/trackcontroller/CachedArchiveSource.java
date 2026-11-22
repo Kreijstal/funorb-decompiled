@@ -500,7 +500,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 }
                 decompiledFrameRemainder1 = (this.field_h);
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder0 = !(qg.a(false) < this.field_l))) {
+                  (decompiledFrameRemainder0 = !(qg.correctedCurrentTimeMillis(false) < this.field_l))) {
                   var2 = (AsyncRequest) (this.field_v.first(-49));
                   while (var2 != null) {
                     if (!var2.field_w) {
@@ -535,7 +535,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
           decompiledFrameRemainder1 = (this.field_h);
           if ((decompiledFrameRemainder1) &&
-            (decompiledFrameRemainder0 = !(qg.a(false) < this.field_l))) {
+            (decompiledFrameRemainder0 = !(qg.correctedCurrentTimeMillis(false) < this.field_l))) {
             var2Lifetime1 = (AsyncRequest) (this.field_v.first(-49));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_w) {
@@ -554,7 +554,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         if ((decompiledFrameRemainder1) &&
           (decompiledFrameRemainder0)) {
-          this.field_l = qg.a(false) + 1000L;
+          this.field_l = qg.correctedCurrentTimeMillis(false) + 1000L;
         }
 
     }

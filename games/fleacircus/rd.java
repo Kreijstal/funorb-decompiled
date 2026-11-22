@@ -70,7 +70,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             m.field_a = 0;
             fb.field_b = param0.getX();
             th.field_s = param0.getY();
-            lj.a((byte) -88);
+            lj.correctedCurrentTimeMillis((byte) -88);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               vk.field_O = 1;
               lk.field_J = 1;

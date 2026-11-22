@@ -61,7 +61,7 @@ final class sc extends kd {
             sc.clearStaticReferences(-111);
           }
           while (var11.status == 0) {
-            wl.a(10L, false);
+            wl.sleepMillis(10L, false);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
@@ -107,7 +107,7 @@ final class sc extends kd {
         field_d = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param0 = (param0 & 1431655765) + ((param0 & -1431655765) >>> 1);
         param0 = (858993459 & param0) + (param0 >>> 2 & 858993459);
         param0 = (param0 >>> 4) + param0 & 252645135;

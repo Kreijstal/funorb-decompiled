@@ -58,7 +58,7 @@ final class ed {
         if (param0 != -1) {
           return -60L;
         }
-        return -of.field_L + ji.b(-96);
+        return -of.field_L + ji.correctedCurrentTimeMillis(-96);
     }
 
     final int a(int param0, int param1) {

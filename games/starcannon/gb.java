@@ -85,7 +85,7 @@ final class gb extends hd {
         this.field_q = param2;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int roundUpPowerOfTwo(int param0, byte param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

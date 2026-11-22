@@ -46,7 +46,7 @@ final class oc extends pu {
               if (param2 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + km.a(f.b((byte) 73) + param2 * 1000L, -1) + "; Max-Age=" + param2;
+                var7Lifetime4 = var9 + "; Expires=" + km.a(f.correctedCurrentTimeMillis((byte) 73) + param2 * 1000L, -1) + "; Max-Age=" + param2;
               }
               ac.a("document.cookie=\"" + var7Lifetime4 + "\"", param0, 118);
               return;

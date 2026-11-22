@@ -128,7 +128,7 @@ final class ob extends wm {
             if (param0 != 45) {
               return;
             }
-            this.field_d = ud.a(2);
+            this.field_d = ud.correctedCurrentTimeMillis(2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -288,7 +288,7 @@ final class ob extends wm {
           cc var2Lifetime1;
           var16 = Chess.field_G;
           if (this.field_s != null) {
-            var2_long = ud.a(2);
+            var2_long = ud.correctedCurrentTimeMillis(2);
             var4 = (int)(var2_long - this.field_d);
             this.field_d = var2_long;
             if (var4 > 200) {

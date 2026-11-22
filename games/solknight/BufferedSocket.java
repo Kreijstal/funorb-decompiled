@@ -495,7 +495,7 @@ final class BufferedSocket implements Runnable {
           }
           if (0 == var3 &&
             te.field_M == 2) {
-            var4 = je.a(1) - fg.field_f;
+            var4 = je.correctedCurrentTimeMillis(1) - fg.field_f;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               hc.a(true, true, 5);
@@ -531,7 +531,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_d) {
             while (0 == this.field_d.status) {
-              i.a((byte) 56, 1L);
+              i.sleepMillis((byte) 56, 1L);
             }
             if (this.field_d.status == 1) {
               try {

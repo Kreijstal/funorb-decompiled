@@ -14,7 +14,7 @@ abstract class eq implements sk {
           if (this.b(true)) {
             return null;
           }
-          if (350L + this.field_e <= km.b(-1)) {
+          if (350L + this.field_e <= km.correctedCurrentTimeMillis(-1)) {
             return this.b(0);
           }
           return null;
@@ -22,7 +22,7 @@ abstract class eq implements sk {
         if (this.b(true)) {
           return null;
         }
-        if (350L + this.field_e <= km.b(-1)) {
+        if (350L + this.field_e <= km.correctedCurrentTimeMillis(-1)) {
           return this.b(0);
         }
         return null;
@@ -36,10 +36,10 @@ abstract class eq implements sk {
     public final void a(boolean param0) {
         if (!param0) {
           eq.b((byte) 82);
-          this.field_e = km.b(-1);
+          this.field_e = km.correctedCurrentTimeMillis(-1);
           return;
         }
-        this.field_e = km.b(-1);
+        this.field_e = km.correctedCurrentTimeMillis(-1);
     }
 
     abstract String b(int param0);
@@ -50,7 +50,7 @@ abstract class eq implements sk {
         if (this.b(true)) {
           return IsaacPacketBuffer.field_r;
         }
-        if (this.field_e + 350L > km.b(-1)) {
+        if (this.field_e + 350L > km.correctedCurrentTimeMillis(-1)) {
           return IntrusiveNode.field_a;
         }
         if (param0 < -74) {

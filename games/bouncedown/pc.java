@@ -311,7 +311,7 @@ final class pc implements Runnable {
           }
           if (null != this.field_f) {
             while (0 == this.field_f.status) {
-              SecondaryNodeDeque.a(1L, 19406);
+              SecondaryNodeDeque.sleepMillis(1L, 19406);
             }
             if (1 == this.field_f.status) {
               try {

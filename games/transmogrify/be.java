@@ -574,7 +574,7 @@ final class be extends ih {
           this.field_g = (cd) null;
         }
         if (this.field_j &&
-          this.field_l <= lk.a(0)) {
+          this.field_l <= lk.correctedCurrentTimeMillis(0)) {
           var2 = (rh) (this.field_m.b(1000));
           while (var2 != null) {
             if (!var2.field_m) {
@@ -589,7 +589,7 @@ final class be extends ih {
             }
             var2 = (rh) (this.field_m.a(58));
           }
-          this.field_l = lk.a(0) + 1000L;
+          this.field_l = lk.correctedCurrentTimeMillis(0) + 1000L;
         }
     }
 

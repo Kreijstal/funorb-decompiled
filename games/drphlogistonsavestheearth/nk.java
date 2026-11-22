@@ -93,7 +93,7 @@ final class nk {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        kg.a(field_g, 0, param0);
+        kg.clearInts(field_g, 0, param0);
         if (param1 < 10) {
           return field_g;
         }

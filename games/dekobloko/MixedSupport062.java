@@ -46,7 +46,7 @@ final class MixedSupport062 {
         }
     }
 
-    final synchronized static long computeLong0734(int integerArgument1) {
+    final synchronized static long correctedCurrentTimeMillis(int integerArgument1) {
         long longLocal1 = 0L;
         if (integerArgument1 == 4) {
           longLocal1 = System.currentTimeMillis();

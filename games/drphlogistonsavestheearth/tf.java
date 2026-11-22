@@ -82,7 +82,7 @@ final class tf extends ca {
           var1_int = LoginMenuScreen.field_N;
           var2 = 0;
           if (NodeHashTableIterator.field_g == 2) {
-            var3_long = -aa.field_d + la.a(false);
+            var3_long = -aa.field_d + la.correctedCurrentTimeMillis(false);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

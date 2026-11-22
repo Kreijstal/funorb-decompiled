@@ -5,7 +5,7 @@ final class dd {
     static ge field_b;
     static PacketBuffer field_a;
 
-    final synchronized static long b(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (!(db.field_C <= var1)) {
           IterableNodeHashTable.field_d = IterableNodeHashTable.field_d + (-var1 + db.field_C);
@@ -14,7 +14,7 @@ final class dd {
           db.field_C = var1;
           return var1 + IterableNodeHashTable.field_d;
         }
-        dd.b(1);
+        dd.correctedCurrentTimeMillis(1);
         db.field_C = var1;
         return var1 + IterableNodeHashTable.field_d;
     }

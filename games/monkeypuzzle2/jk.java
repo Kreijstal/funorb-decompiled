@@ -629,7 +629,7 @@ abstract class jk extends UiWidget implements ga {
               }
               stackIn_82_0[stackIn_82_1] = stackIn_85_2;
             }
-            fb.field_n = pf.a(0);
+            fb.field_n = pf.correctedCurrentTimeMillis(0);
           }
           sj.field_f.field_i = bi.field_B.length;
           var3_intLifetime1 = 0;

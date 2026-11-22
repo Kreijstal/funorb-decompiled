@@ -52,7 +52,7 @@ final class oe {
           }
           var11 = param0.requestFullscreenEnter(param5 ^ -2019341457, param4, param2, param1, param3);
           while (var11.status == 0) {
-            jj.a((byte) -114, 10L);
+            jj.sleepMillis((byte) -114, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

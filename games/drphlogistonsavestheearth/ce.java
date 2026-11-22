@@ -25,10 +25,10 @@ final class ce {
           while (true) {
             var3 = param0.requestFullscreenExit(param1, (byte) -124);
             while (var3.status == 0) {
-              kk.a(10L, true);
+              kk.sleepMillis(10L, true);
             }
             if (1 != var3.status) {
-              kk.a(100L, true);
+              kk.sleepMillis(100L, true);
               continue;
             }
             break;

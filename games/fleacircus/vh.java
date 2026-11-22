@@ -17,7 +17,7 @@ final class vh extends IntrusiveNode {
           field_i = null;
           return;
         }
-        vh.a(-16L, -34);
+        vh.sleepMillis(-16L, -34);
         field_j = (int[][]) null;
         field_k = null;
         field_i = null;
@@ -32,17 +32,17 @@ final class vh extends IntrusiveNode {
         BufferedSocket.field_k.field_b = 0;
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         int var3 = 9 % ((param1 + 45) / 39);
         if (param0 <= 0L) {
           return;
         }
         if (param0 % 10L != 0L) {
-          df.a(-119, param0);
+          df.sleepIgnoringInterrupts(-119, param0);
           return;
         }
-        df.a(-122, -1L + param0);
-        df.a(71, 1L);
+        df.sleepIgnoringInterrupts(-122, -1L + param0);
+        df.sleepIgnoringInterrupts(71, 1L);
     }
 
     static {

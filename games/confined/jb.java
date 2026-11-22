@@ -715,7 +715,7 @@ final class jb {
         var6 = -76 + this.field_c;
         if (this.field_m) {
           var7 = 1023 & this.field_l;
-          var5 = 304 - (-19 + vf.a(var7, -29047) * 19);
+          var5 = 304 - (-19 + vf.countSetBits(var7, -29047) * 19);
           if (0 == var7) {
             var6 -= 19;
           }
@@ -732,7 +732,7 @@ final class jb {
             var6 += 38;
             if (this.field_m) {
               var8 = this.field_l & 1047552;
-              var5 = 304 - (vf.a(var8, -29047) * 19 - 19);
+              var5 = 304 - (vf.countSetBits(var8, -29047) * 19 - 19);
             }
             var5 += 0;
           }

@@ -5,7 +5,7 @@ final class kh {
     static boolean field_a;
     private static String field_z;
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (!(sn.field_c <= var1)) {
           te.field_i = te.field_i + (sn.field_c - var1);

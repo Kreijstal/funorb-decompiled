@@ -18,7 +18,7 @@ final class g {
         field_a = null;
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepIgnoringInterrupts(byte param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           int var3 = 0;

@@ -17,7 +17,7 @@ final class fp extends IntrusiveNode {
             return false;
           }
           int var2 = 72 / ((-10 - param0) / 56);
-          long dupTemp$1 = kh.a(-114);
+          long dupTemp$1 = kh.correctedCurrentTimeMillis(-114);
           co.field_e = dupTemp$1;
           ff.field_b = dupTemp$1;
           if (MenuInputState.field_b.status != 1) {

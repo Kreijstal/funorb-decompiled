@@ -81,11 +81,11 @@ final class bk implements Runnable {
               var2.writeInt((byte) 63, ng.field_I);
               pe.field_l.b(var2.payload, false, 0, 13);
               ba.field_f = ba.field_f + 1;
-              ce.field_s = kd.c(param0 - 2456) + 30000L;
+              ce.field_s = kd.correctedCurrentTimeMillis(param0 - 2456) + 30000L;
             }
             if (ba.field_f == 3) {
               if (0 >= pe.field_l.a(0)) {
-                if (kd.c(-2456) > ce.field_s) {
+                if (kd.correctedCurrentTimeMillis(-2456) > ce.field_s) {
                   stackIn_29_0 = dl.a(param0 - 5, -2);
                   return stackIn_29_0;
                 }
@@ -205,7 +205,7 @@ final class bk implements Runnable {
                 var2.serviceOutput();
               }
             }
-            CombatState.a(0, 10L);
+            CombatState.sleepMillis(0, 10L);
             Object var5 = (Object) null;
             NodeHashTableIterator.a(this.field_h, (Object) null, (byte) -32);
           }

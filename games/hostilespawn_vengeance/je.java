@@ -46,7 +46,7 @@ final class je {
           }
           var8 = param0.requestDisplayModes(param1 ^ -83);
           while (var8.status == 0) {
-            vj.a(10L, (byte) -49);
+            vj.sleepMillis(10L, (byte) -49);
           }
           if (param1 == var8.status) {
             stackIn_11_0 = new ak[]{};

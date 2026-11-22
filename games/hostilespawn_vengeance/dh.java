@@ -320,7 +320,7 @@ final class dh implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, (Runnable) (this), 62);
           while (var2.status == 0) {
-            vj.a(10L, (byte) -49);
+            vj.sleepMillis(10L, (byte) -49);
           }
           if (2 == var2.status) {
             throw new RuntimeException();

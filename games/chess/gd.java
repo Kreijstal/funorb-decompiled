@@ -197,7 +197,7 @@ final class gd {
           if (param0 != 68) {
             gd.a((byte) -72, false);
           }
-          long dupTemp$0 = ud.a(param0 ^ 70);
+          long dupTemp$0 = ud.correctedCurrentTimeMillis(param0 ^ 70);
           ta.field_t = dupTemp$0;
           ml.field_d = dupTemp$0;
           if (tl.field_Gb.status != 1) {

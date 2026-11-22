@@ -152,7 +152,7 @@ final class mf {
           }
           if (0 == var3 &&
             AccountNameAvailabilityValidator.field_t == 2) {
-            var4 = -GameAppletShell.field_d + kd.c(param0 ^ -9766);
+            var4 = -GameAppletShell.field_d + kd.correctedCurrentTimeMillis(param0 ^ -9766);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

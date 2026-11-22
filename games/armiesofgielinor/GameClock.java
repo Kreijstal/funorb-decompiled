@@ -72,7 +72,7 @@ abstract class GameClock {
         if (obfuscationGuard < -124) {
           delayMillis = this.getDelayMillis((byte) -103);
           if (delayMillis > 0L) {
-            SpriteButtonPainter.a(delayMillis, 0);
+            SpriteButtonPainter.sleepMillis(delayMillis, 0);
           }
           return this.advanceTicks(tickDurationNanos, 0);
         }

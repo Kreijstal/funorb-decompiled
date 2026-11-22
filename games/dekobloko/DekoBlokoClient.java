@@ -344,7 +344,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                   if (HashNode.integerState0070 == 14) {
                     SocketFactory.performAction1792((byte) 66);
                     MixedSupport016.performAction0205(true);
-                    SecondaryNodeHashTable.performAction1119(UiComponentPart015.computeSceneWidget0706(8192), MixedSupport108.computeSceneWidget1421(-95), 0, 5, UiComponentPart020.computeInteger1159(-10498, 2000), UiComponentPart025.computeSceneWidget1365((byte) 117), MixedSupport141.byteArrayState0040, 150, UiComponentPart020.computeInteger1159(-10498, 8), 1024);
+                    SecondaryNodeHashTable.performAction1119(UiComponentPart015.computeSceneWidget0706(8192), MixedSupport108.computeSceneWidget1421(-95), 0, 5, UiComponentPart020.roundUpPowerOfTwo(-10498, 2000), UiComponentPart025.computeSceneWidget1365((byte) 117), MixedSupport141.byteArrayState0040, 150, UiComponentPart020.roundUpPowerOfTwo(-10498, 8), 1024);
                     SecondaryNodeDequeIterator.performAction0362(21014, SceneWidgetPart011.computeSceneWidget1575((byte) 98), MixedSupport073.computeSceneWidget0919(-126));
                     UiComponentPart012.booleanState0059 = true;
                     IterableNodeCollection.booleanState0193 = true;
@@ -2028,7 +2028,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           if (byteArgument7 > -48) {
             DekoBlokoClient.performAction0309((byte) 82);
           }
-          longLocal44 = MixedSupport062.computeLong0734(4);
+          longLocal44 = MixedSupport062.correctedCurrentTimeMillis(4);
           objectLocal45 = null;
           sceneWidgetPart013Local46 = (SceneWidgetPart013) (nodeDequeLocal43.beginBackward((byte) -101));
           while (null != sceneWidgetPart013Local46) {

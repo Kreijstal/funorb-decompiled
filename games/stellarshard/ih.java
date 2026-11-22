@@ -15,7 +15,7 @@ final class ih {
         return cc.field_g[param0 & 2047];
     }
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long correctedCurrentTimeMillis(byte param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 == -98) {

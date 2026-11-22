@@ -162,7 +162,7 @@ final class pe extends IntrusiveNode {
           if (wd.field_f != lk.field_d) {
             return false;
           }
-          var2_long = ri.a(-3);
+          var2_long = ri.correctedCurrentTimeMillis(-3);
           if (tk.field_b != 0 &&
             tg.field_S < 0) {
             var4_ref_hc = (hc) (qh.field_w.beginForward(-121));

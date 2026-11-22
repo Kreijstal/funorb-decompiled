@@ -7,7 +7,7 @@ final class ud {
     static int field_a;
     static km field_c;
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         PlatformTaskDispatcher var3 = null;
         long var1 = System.currentTimeMillis();
         PlatformTaskDispatcher var3Lifetime1;
@@ -64,7 +64,7 @@ final class ud {
           }
           var9 = param1.requestDisplayModes(param0 - 624985114);
           while (var9.status == 0) {
-            bc.a(10L, (byte) 95);
+            bc.sleepMillis(10L, (byte) 95);
           }
           if (var9.status == 2) {
             stackIn_10_0 = new tm[]{};

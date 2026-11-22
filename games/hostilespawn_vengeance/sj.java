@@ -80,11 +80,11 @@ final class sj {
               var2.b(ik.field_a, 25251);
               be.field_g.a(13, var2.field_n, (byte) -70, 0);
               ce.field_e = ce.field_e + 1;
-              cb.field_e = hn.a((byte) 80) + 30000L;
+              cb.field_e = hn.correctedCurrentTimeMillis((byte) 80) + 30000L;
             }
             if (3 == ce.field_e) {
               if (be.field_g.b((byte) 53) <= 0) {
-                if (hn.a((byte) 80) > cb.field_e) {
+                if (hn.correctedCurrentTimeMillis((byte) 80) > cb.field_e) {
                   stackIn_32_0 = th.a((byte) 127, -2);
                   return stackIn_32_0;
                 }

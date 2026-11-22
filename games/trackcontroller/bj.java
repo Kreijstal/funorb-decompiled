@@ -12,7 +12,7 @@ final class bj {
         if (param0 != -21676) {
           bj.b(-19);
         }
-        return -he.field_a + qg.a(false);
+        return -he.field_a + qg.correctedCurrentTimeMillis(false);
     }
 
     final static void a(int param0, int param1) {

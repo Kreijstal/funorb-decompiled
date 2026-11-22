@@ -56,7 +56,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_f.field_d = true;
             while (field_f.field_j) {
-              jd.a(1, 50L);
+              jd.sleepMillis(1, 50L);
             }
             field_f = null;
           }
@@ -166,7 +166,7 @@ class AudioOutput {
           if (this.field_n) {
             return;
           }
-          var1 = ri.a(-3);
+          var1 = ri.correctedCurrentTimeMillis(-3);
           try {
             if (var1 > this.field_h + 6000L) {
               this.field_h = var1 - 6000L;
@@ -174,7 +174,7 @@ class AudioOutput {
             while (var1 > this.field_h + 5000L) {
               this.skipFrames(256);
               this.field_h = this.field_h + (long)(256000 / field_k);
-              var1 = ri.a(-3);
+              var1 = ri.correctedCurrentTimeMillis(-3);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -295,7 +295,7 @@ class AudioOutput {
         if (field_j) {
           var3 = var3 << 1;
         }
-        lj.a(param0, 0, var3);
+        lj.clearInts(param0, 0, var3);
         this.field_q = this.field_q - param1;
         if (this.field_m != null &&
           this.field_q <= 0) {
@@ -389,7 +389,7 @@ class AudioOutput {
         if (this.field_m != null) {
           this.field_m.a(param0, 0, param1);
         }
-        this.field_h = ri.a(-3);
+        this.field_h = ri.correctedCurrentTimeMillis(-3);
     }
 
     void initializeDevice(java.awt.Component param0) throws Exception {
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_n = false;
         this.field_r = 32;
-        this.field_h = ri.a(-3);
+        this.field_h = ri.correctedCurrentTimeMillis(-3);
         this.field_p = 0;
         this.field_b = 0;
         this.field_c = new gf[8];

@@ -127,7 +127,7 @@ final class kc extends ii implements vg {
           }
           var9 = param0.requestDisplayModes(false);
           while (var9.status == 0) {
-            CombatState.a(0, 10L);
+            CombatState.sleepMillis(0, 10L);
           }
           if (var9.status == 2) {
             stackIn_9_0 = new ki[]{};

@@ -78,7 +78,7 @@ final class te extends kf {
               if (0L > param1) {
                 var7Lifetime4 = var10 + "; Discard;";
               } else {
-                var7Lifetime4 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0), (byte) 28) + "; Max-Age=" + param1;
+                var7Lifetime4 = var10 + "; Expires=" + q.a(1000L * param1 + rf.correctedCurrentTimeMillis(0), (byte) 28) + "; Max-Age=" + param1;
               }
               oa.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, param4 - 31196);
               return;

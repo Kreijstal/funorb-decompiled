@@ -26,7 +26,7 @@ class lb extends ButtonWidget {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_I = qg.a(false);
+          this.field_I = qg.correctedCurrentTimeMillis(false);
           var5_int = -37 % ((param0 - 17) / 51);
           if (param1 != 60 &&
             62 != param1) {
@@ -215,7 +215,7 @@ class lb extends ButtonWidget {
             stackIn_7_2 = var8_int;
           }
           this.a(stackIn_6_1, stackIn_7_2);
-          var8_long = qg.a(false);
+          var8_long = qg.correctedCurrentTimeMillis(false);
           stackIn_10_1 = !(-this.field_R + var8_long >= 250L);
           this.field_K = stackIn_10_1;
           if (this.field_K) {
@@ -257,7 +257,7 @@ class lb extends ButtonWidget {
             if (this.field_Q != this.field_N) {
               var8.b(param1, param2, this.field_Q, -84, this.field_N, (UiWidget) (this));
             }
-            var6 = qg.a(false);
+            var6 = qg.correctedCurrentTimeMillis(false);
             if (500L > (var6 - this.field_I) % 1000L) {
               var8.a(this.field_Q, (UiWidget) (this), param3 ^ -29312, param2, param1);
             }
@@ -572,7 +572,7 @@ class lb extends ButtonWidget {
                 this.field_Q = var6;
               }
             }
-            this.field_I = qg.a(false);
+            this.field_I = qg.correctedCurrentTimeMillis(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -608,7 +608,7 @@ class lb extends ButtonWidget {
           this.field_J = param2;
           this.a(true, param0, -74);
           this.field_P = true;
-          this.field_I = qg.a(false);
+          this.field_I = qg.correctedCurrentTimeMillis(false);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

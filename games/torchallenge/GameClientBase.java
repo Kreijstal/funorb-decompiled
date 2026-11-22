@@ -100,7 +100,7 @@ abstract class GameClientBase extends GameApplet {
             te.a(-1, 2, wh.field_a);
             GameApplet.a(-13);
             dj.field_Z = true;
-            ji.field_y = 15000L + ol.a(256);
+            ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
           }
         }
         if (ah.field_b == -1 ||
@@ -116,7 +116,7 @@ abstract class GameClientBase extends GameApplet {
           }
           if (-1 != ah.field_b &&
             ah.field_b != 0) {
-            ji.field_y = 15000L + ol.a(256);
+            ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
           }
         }
         if (-1 != ah.field_b &&
@@ -166,7 +166,7 @@ abstract class GameClientBase extends GameApplet {
         if ((ah.field_b != -1 &&
           ah.field_b != 0 ||
           nb.a(-26375)) &&
-          ji.field_y <= ol.a(256)) {
+          ji.field_y <= ol.correctedCurrentTimeMillis(256)) {
           dj.field_Z = false;
           if (ah.field_b != -1 &&
             ah.field_b != 0) {
@@ -473,7 +473,7 @@ abstract class GameClientBase extends GameApplet {
         te.a(-1, var2, SecondaryNodeDequeIterator.field_c);
         if (param0 == -7407) {
           dj.field_Z = true;
-          ji.field_y = 15000L + ol.a(256);
+          ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
           return var2;
         }
         return 79;

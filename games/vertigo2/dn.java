@@ -74,7 +74,7 @@ final class dn {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        qq.a(field_i, 0, param0);
+        qq.clearInts(field_i, 0, param0);
         if (param1 < 10) {
           return field_i;
         }

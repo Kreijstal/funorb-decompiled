@@ -138,7 +138,7 @@ class AudioOutput {
           if (this.field_a) {
             return;
           }
-          var1 = ud.a(2);
+          var1 = ud.correctedCurrentTimeMillis(2);
           try {
             if (var1 > this.field_t + 6000L) {
               this.field_t = var1 - 6000L;
@@ -146,7 +146,7 @@ class AudioOutput {
             while (var1 > this.field_t + 5000L) {
               this.skipFrames(256);
               this.field_t = this.field_t + (long)(256000 / field_l);
-              var1 = ud.a(2);
+              var1 = ud.correctedCurrentTimeMillis(2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ class AudioOutput {
         if (field_q) {
           var3 = var3 << 1;
         }
-        ne.a(param0, 0, var3);
+        ne.clearInts(param0, 0, var3);
         this.field_p = this.field_p - param1;
         if (this.field_c != null &&
           this.field_p <= 0) {
@@ -347,7 +347,7 @@ class AudioOutput {
         if (this.field_c != null) {
           this.field_c.a(param0, 0, param1);
         }
-        this.field_t = ud.a(2);
+        this.field_t = ud.correctedCurrentTimeMillis(2);
     }
 
     final synchronized void flushAndMarkDrainCheck() {
@@ -357,7 +357,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_r = ud.a(2) + 2000L;
+            this.field_r = ud.correctedCurrentTimeMillis(2) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -398,7 +398,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_e.field_f = true;
             while (field_e.field_e) {
-              bc.a(50L, (byte) 87);
+              bc.sleepMillis(50L, (byte) 87);
             }
             field_e = null;
           }
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_i = 32;
         this.field_a = false;
-        this.field_t = ud.a(2);
+        this.field_t = ud.correctedCurrentTimeMillis(2);
         this.field_h = 0L;
         this.field_n = new PcmStream[8];
         this.field_d = 0;

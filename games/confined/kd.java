@@ -135,7 +135,7 @@ final class kd extends jf {
               }
             }
             this.field_l = 0;
-            this.field_h = ri.a(param2 ^ 66);
+            this.field_h = ri.correctedCurrentTimeMillis(param2 ^ 66);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -265,7 +265,7 @@ final class kd extends jf {
           tn var2Lifetime1;
           var16 = Confined.field_J ? 1 : 0;
           if (this.field_p != null) {
-            var2_long = ri.a(-3);
+            var2_long = ri.correctedCurrentTimeMillis(-3);
             var4 = (int)(-this.field_h + var2_long);
             this.field_h = var2_long;
             if (var4 > 200) {

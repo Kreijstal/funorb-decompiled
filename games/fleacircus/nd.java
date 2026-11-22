@@ -47,7 +47,7 @@ final class nd extends jj {
           }
           var9 = param1.requestDisplayModes((byte) 122);
           while (0 == var9.status) {
-            vh.a(10L, 38);
+            vh.sleepMillis(10L, 38);
           }
           if (2 == var9.status) {
             stackIn_12_0 = new hf[]{};

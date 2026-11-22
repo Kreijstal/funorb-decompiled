@@ -18,13 +18,13 @@ final class bh {
           if (p.field_d != null && (0 > param0 ||
             da.field_r == dh.field_bb)) {
             if (uk.field_b.position == 0 &&
-              (10000L + p.field_a) < ji.b(param1 ^ -123)) {
+              (10000L + p.field_a) < ji.correctedCurrentTimeMillis(param1 ^ -123)) {
               uk.field_b.i(param0, 120);
             }
             if (param1 > ~uk.field_b.position) {
               try {
                 p.field_d.a((byte) 30, uk.field_b.payload, 0, uk.field_b.position);
-                p.field_a = ji.b(-61);
+                p.field_a = ji.correctedCurrentTimeMillis(-61);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

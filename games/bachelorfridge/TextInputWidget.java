@@ -211,7 +211,7 @@ class TextInputWidget extends InteractiveWidget {
             stackIn_6_2 = 0;
           }
           this.a(stackIn_5_1, stackIn_6_2);
-          var8_long = f.b((byte) 73);
+          var8_long = f.correctedCurrentTimeMillis((byte) 73);
           stackIn_9_1 = !(var8_long - this.field_A >= 250L);
           this.field_L = stackIn_9_1;
           if (this.field_L) {
@@ -269,7 +269,7 @@ class TextInputWidget extends InteractiveWidget {
           this.field_I = param2;
           this.a((byte) -26, param0, true);
           this.field_D = true;
-          this.field_F = f.b((byte) 73);
+          this.field_F = f.correctedCurrentTimeMillis((byte) 73);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "lka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -411,7 +411,7 @@ class TextInputWidget extends InteractiveWidget {
               this.field_H = var6;
             }
           }
-          this.field_F = f.b((byte) 73);
+          this.field_F = f.correctedCurrentTimeMillis((byte) 73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -498,7 +498,7 @@ class TextInputWidget extends InteractiveWidget {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         try {
-          this.field_F = f.b((byte) 73);
+          this.field_F = f.correctedCurrentTimeMillis((byte) 73);
           if (param2 != 60 &&
             62 != param2) {
             if (32 <= param2 &&
@@ -665,7 +665,7 @@ class TextInputWidget extends InteractiveWidget {
         WidgetMetrics var8 = (WidgetMetrics) ((Object) this.renderer);
         if (this.field_K != this.field_H) {
           var8.a(this.field_K, -17394, param3, this.field_H, param1, (UiWidget) (this));
-          var6 = f.b((byte) 73);
+          var6 = f.correctedCurrentTimeMillis((byte) 73);
           if ((-this.field_F + var6) % 1000L >= 500L) {
             var5Lifetime3 = -91 / ((-20 - param0) / 54);
             return;
@@ -674,7 +674,7 @@ class TextInputWidget extends InteractiveWidget {
           var5Lifetime3Lifetime1 = -91 / ((-20 - param0) / 54);
           return;
         }
-        var6Lifetime1 = f.b((byte) 73);
+        var6Lifetime1 = f.correctedCurrentTimeMillis((byte) 73);
         if ((-this.field_F + var6Lifetime1) % 1000L >= 500L) {
           var5Lifetime4 = -91 / ((-20 - param0) / 54);
           return;

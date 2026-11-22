@@ -34,7 +34,7 @@ final class md {
           if (0 == fe.field_c.status) {
             return false;
           }
-          dupTemp$1 = id.a(94);
+          dupTemp$1 = id.correctedCurrentTimeMillis(94);
           ua.field_E = dupTemp$1;
           uk.field_a = dupTemp$1;
           if (fe.field_c.status != 1) {

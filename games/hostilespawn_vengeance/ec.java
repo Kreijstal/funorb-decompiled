@@ -21,7 +21,7 @@ final class ec {
         try {
           var2_int = 0;
           for (var3 = 0; var3 < param0.length; var3++) {
-            var2_int = var2_int + pa.b((byte) -19, param0[var3]);
+            var2_int = var2_int + pa.countSetBits((byte) -19, param0[var3]);
           }
           if (param1 != 19) {
             field_d = (byte[]) null;

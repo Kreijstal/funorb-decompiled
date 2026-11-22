@@ -261,7 +261,7 @@ final class rk implements Runnable {
         try {
           var2 = param0.requestThreadStart((Runnable) (this), 5, 0);
           while (0 == var2.status) {
-            jj.a((byte) -124, 10L);
+            jj.sleepMillis((byte) -124, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

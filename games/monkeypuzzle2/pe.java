@@ -61,7 +61,7 @@ final class pe {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (0 != param0.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + ha.a((byte) -127, pf.a(0) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + ha.a((byte) -127, pf.correctedCurrentTimeMillis(0) + 94608000000L) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

@@ -28,7 +28,7 @@ final class jf extends mg {
           this.field_A.field_m = var2 != 0 ? true : false;
           return var3;
         }
-        jf.a((byte) 47, -104);
+        jf.countSetBits((byte) 47, -104);
         this.field_A.field_m = this.field_m;
         var3Lifetime1 = this.field_A.b(122);
         this.field_A.field_m = var2 != 0 ? true : false;
@@ -109,7 +109,7 @@ final class jf extends mg {
         field_C = null;
         field_L = null;
         if (param0 >= -124) {
-          jf.a((byte) -30, 19);
+          jf.countSetBits((byte) -30, 19);
         }
     }
 
@@ -124,7 +124,7 @@ final class jf extends mg {
         this.field_D.a(this.field_Q, var5 - (-var7 - this.field_E), var6 + this.field_E, -this.field_E + this.field_F, this.field_v - 2 * this.field_E, this.field_H, -1, this.field_J ? 0 : 2, 1, this.field_D.field_E);
     }
 
-    final static int a(byte param0, int param1) {
+    final static int countSetBits(byte param0, int param1) {
         param1 = (1431655765 & param1) + (param1 >>> 1 & 1431655765);
         param1 = ((-858993457 & param1) >>> 2) + (858993459 & param1);
         param1 = 252645135 & (param1 >>> 4) + param1;
@@ -133,7 +133,7 @@ final class jf extends mg {
           param1 = param1 + (param1 >>> 16);
           return param1 & 255;
         }
-        jf.a((byte) 29, -19);
+        jf.countSetBits((byte) 29, -19);
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
         return param1 & 255;

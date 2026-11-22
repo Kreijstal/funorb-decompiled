@@ -324,7 +324,7 @@ final class rb implements Runnable {
         try {
           var2 = param0.requestThread((Runnable) (this), true, 5);
           while (var2.status == 0) {
-            c.a(-105, 10L);
+            c.sleepMillis(-105, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

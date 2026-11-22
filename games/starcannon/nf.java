@@ -39,13 +39,13 @@ final class nf {
           if (null != m.field_b && (0 > param0 ||
             pb.field_a == r.field_c)) {
             if (d.field_b.position == 0 &&
-              ca.field_Y + 10000L < dd.b(57)) {
+              ca.field_Y + 10000L < dd.correctedCurrentTimeMillis(57)) {
               d.field_b.d((byte) 88, param0);
             }
             if (d.field_b.position > 0) {
               try {
                 m.field_b.a(0, d.field_b.payload, (byte) 87, d.field_b.position);
-                ca.field_Y = dd.b(84);
+                ca.field_Y = dd.correctedCurrentTimeMillis(84);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

@@ -72,9 +72,9 @@ final class SoftwareRasterizer {
         int[] var29 = field_g;
         int[] var26 = var29;
         int[] var11 = var26;
-        au.a(var27, 0, param8);
-        au.a(var28, 0, param8);
-        au.a(var29, 0, param8);
+        au.clearInts(var27, 0, param8);
+        au.clearInts(var28, 0, param8);
+        au.clearInts(var29, 0, param8);
         int var12 = 16384 / (2 * param3 + 1);
         int var13 = param4 - param3;
         if (var13 < 0) {

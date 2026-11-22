@@ -20,7 +20,7 @@ abstract class rj {
         if (var4 <= (long)param0) {
           return this.a(param1, true);
         }
-        i.a((byte) 20, var4);
+        i.sleepMillis((byte) 20, var4);
         return this.a(param1, true);
     }
 

@@ -19,7 +19,7 @@ abstract class ek {
         if (param1 <= -57) {
           var4 = this.a(0);
           if (0L < var4) {
-            gf.a(var4, -10309);
+            gf.sleepMillis(var4, -10309);
           }
           return this.a(-1374, param0);
         }

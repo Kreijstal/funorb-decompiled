@@ -74,7 +74,7 @@ abstract class ke {
           return -69;
         }
         if (0L < var4) {
-          fh.a(true, var4);
+          fh.sleepMillis(true, var4);
         }
         return this.a(param0, param1 ^ 18);
     }

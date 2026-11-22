@@ -295,7 +295,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (qg.a(false) < field_o) {
+                    if (qg.correctedCurrentTimeMillis(false) < field_o) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
@@ -326,14 +326,14 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (qg.a(false) < field_o) {
+                        if (qg.correctedCurrentTimeMillis(false) < field_o) {
                           throw new IOException();
                         }
                         var15 = (var8.intArgument >> 24 & 255) + "." + (255 & var8.intArgument >> 16) + "." + ((65479 & var8.intArgument) >> 8) + "." + (255 & var8.intArgument);
                         var8.result = java.net.InetAddress.getByName(var15).getHostName();
                         break;
                       case 21:
-                        if (field_o > qg.a(false)) {
+                        if (field_o > qg.correctedCurrentTimeMillis(false)) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -444,13 +444,13 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (qg.a(false) < field_o) {
+                    if (qg.correctedCurrentTimeMillis(false) < field_o) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
                     break;
                   case 22:
-                    if (field_o > qg.a(false)) {
+                    if (field_o > qg.correctedCurrentTimeMillis(false)) {
                       throw new IOException();
                     }
                     try {

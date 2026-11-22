@@ -85852,6 +85852,14 @@
       "renamedSymbol": "M:SpriteButtonPainter.loadCampaign(ILResourceArchive;I)LCampaignDefinition;"
     },
     {
+      "symbol": "M:nu.a(JI)V",
+      "originalName": "a",
+      "to": "sleepMillis",
+      "evidence": "nu.java: Retain the guarded millisecond delay helper,including the original delay-1 then1 split for multiples of ten where specified. Preserve parameter-derived threshold/modulo behavior,inner helper arguments,all guard effects,early returns and exception wrappers. Complete original-body SHA256 26befedfccb4c30567bba13dcc0b867f881ac7c5065dfdfe2b8ef40456252034. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SpriteButtonPainter.sleepMillis(JI)V"
+    },
+    {
       "symbol": "M:nu.a(Lkb;IIZI)V",
       "originalName": "a",
       "to": "paintWidget",
@@ -558366,9 +558374,9 @@
     },
     {
       "symbol": "M:nu.a(JI)V",
-      "renamedSymbol": "M:SpriteButtonPainter.a(JI)V",
+      "renamedSymbol": "M:SpriteButtonPainter.sleepMillis(JI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sleepMillis",
       "declaration": {
         "file": "nu.java",
         "start": 4318,
@@ -660413,7 +660421,7 @@
     },
     {
       "symbol": "P:nu.a(JI)V#0",
-      "renamedSymbol": "P:SpriteButtonPainter.a(JI)V#0",
+      "renamedSymbol": "P:SpriteButtonPainter.sleepMillis(JI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -660424,7 +660432,7 @@
     },
     {
       "symbol": "P:nu.a(JI)V#1",
-      "renamedSymbol": "P:SpriteButtonPainter.a(JI)V#1",
+      "renamedSymbol": "P:SpriteButtonPainter.sleepMillis(JI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -763986,7 +763994,7 @@
       "original": "af.java",
       "renamed": "LoginCredentials.java",
       "inputSha256": "48ab32f3aa1a3b2983728fd7f1e0a4c7700d2929e57f644840e9d1a7d008b3fe",
-      "outputSha256": "6c1d5cf7f81355677cc154a1023f7fd806a0c6cf5cb80bccdefeb08cdad8b128",
+      "outputSha256": "8e62397b74ff2890950b6c3eaa6b0dac5792f4c41a4f87269b0edf61736cf304",
       "edits": [
         {
           "start": 72,
@@ -764603,6 +764611,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 5467,
+          "end": 5468,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 5512,
@@ -1012321,7 +1012336,7 @@
       "original": "fj.java",
       "renamed": "ViewportManager.java",
       "inputSha256": "5062c2164a99e74c1da0d4052523ffff13694824620d48280ad1fa645eade1b0",
-      "outputSha256": "172c47e7079193b8bbf7772abc9ad1607468f447150dbadebc4376c2c1d53d0e",
+      "outputSha256": "b3c0fc43b0d45df3dcb94329c68d02d1dbcdc5814c6f5ed8955db80d3e6dbf14",
       "edits": [
         {
           "start": 50,
@@ -1012877,6 +1012892,13 @@
           "renamed": "SpriteButtonPainter"
         },
         {
+          "start": 2395,
+          "end": 2396,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
           "start": 2436,
           "end": 2440,
           "symbol": "L:fj.a(Ljava/awt/Frame;Lhd;I)V#0",
@@ -1012896,6 +1012918,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 2474,
+          "end": 2475,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 2565,
@@ -1109828,7 +1109857,7 @@
       "original": "hi.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "1f9bc01ae6c0f7add122682ffaf250aac8a8682482f7f56cda295dfe9ba8384e",
-      "outputSha256": "b62555a6dfc6cf0d354853f1c99009087a956c51eb8aa9b7ea4b4eb4be44e098",
+      "outputSha256": "0d1b9c9a2432a39f4e3091f108832ff99dd64a3b2779b0d7f79abb91bf201fd0",
       "edits": [
         {
           "start": 69,
@@ -1110865,6 +1110894,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 10027,
+          "end": 10028,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 10072,
@@ -1251730,7 +1251766,7 @@
       "original": "iv.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "5850148490d49e948990a4a87bbc705a46823765ad7153b9a6ab07abf33c8a91",
-      "outputSha256": "d340d9b8c1cca6c476616fcbb4054b4146454935574f6376f78b4039245f7430",
+      "outputSha256": "64e00c8e36eec4ce5dba254ec6701c306bd9750c4adad319d56f6837815faac4",
       "edits": [
         {
           "start": 60,
@@ -1252151,6 +1252187,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 3947,
+          "end": 3948,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 3972,
@@ -1252627,6 +1252670,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 8252,
+          "end": 8253,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 8259,
@@ -1373430,7 +1373480,7 @@
       "original": "ma.java",
       "renamed": "ValidatedTextWidget.java",
       "inputSha256": "943c2c31292b9671921a1f8d611149e8e584e1776df0912e3654fd99d2ff6c9b",
-      "outputSha256": "e81a8c8ada8d10f1e0c8ac730fbbdb9226a74ed56a2a976f190b57158b4a6f98",
+      "outputSha256": "a4c42492f851137f8c581173f02e5b7ff2d90966b0c144e190e2cb00b2e81bfe",
       "edits": [
         {
           "start": 50,
@@ -1373900,6 +1373950,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 1641,
+          "end": 1642,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 1683,
@@ -1403551,7 +1403608,7 @@
       "original": "ne.java",
       "renamed": "MapTile.java",
       "inputSha256": "f7af9d1ed5625f8eecc29fdc708fd52fe59a69ab1653755308a942cacbda78a6",
-      "outputSha256": "fac8ffe9e17cd6f1762bf7e071c8a617253a4934479053a710c69228a9a998b2",
+      "outputSha256": "4235cc71b617686c16572179b12ab1dfb9b696d3e7b2a9f2c26807a4cedc320c",
       "edits": [
         {
           "start": 50,
@@ -1403741,6 +1403798,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 1233,
+          "end": 1234,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 1383,
@@ -1466322,7 +1466386,7 @@
       "original": "nu.java",
       "renamed": "SpriteButtonPainter.java",
       "inputSha256": "8080063efef7e0d86843841fbbb7f6b0df74b63a21ea7f90d3d8c41c7998f5d1",
-      "outputSha256": "51ffb6db989210c1f149835bf53c31d025b0e2e253d724b0b27700cf195fe9d6",
+      "outputSha256": "a454551d3162271417bdea819578f10ddd4da7e37cffda41c1d0081b35168565",
       "edits": [
         {
           "start": 50,
@@ -1467179,6 +1467243,13 @@
           "renamed": "SpriteButtonPainter"
         },
         {
+          "start": 2697,
+          "end": 2698,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
           "start": 2739,
           "end": 2744,
           "symbol": "L:nu.a(ILkl;I)Lcf;#18",
@@ -1467473,6 +1467544,13 @@
           "renamed": "SpriteButtonPainter"
         },
         {
+          "start": 4318,
+          "end": 4319,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
+        },
+        {
           "start": 4457,
           "end": 4459,
           "symbol": "C:ae",
@@ -1467527,6 +1467605,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 4666,
+          "end": 4667,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 4705,
@@ -1543926,7 +1544011,7 @@
       "original": "qc.java",
       "renamed": "GameClock.java",
       "inputSha256": "b43addd07681ab9a3e8c4e0254210d08576a57809e58bec752d2d3b7eeaf1449",
-      "outputSha256": "67d0dbd226735612b09e8c19110bcb4e33ede20163e5dd79c666078514beb56c",
+      "outputSha256": "77aeb5b8836cb73f7d7d1d6482e3121adab7c695ebb8f5a7ae7e6f520778d93c",
       "edits": [
         {
           "start": 53,
@@ -1544284,6 +1544369,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 1794,
+          "end": 1795,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 1796,
@@ -1592558,7 +1592650,7 @@
       "original": "rc.java",
       "renamed": "PcmPlayer.java",
       "inputSha256": "cb3efad156cf4babfa332635d0b466ee9c379eb11fc03916506f60d0e412d45c",
-      "outputSha256": "0bf540de350692c1192ec2fb4d0ae0045c394fdddfb65eeec700d2447adabda8",
+      "outputSha256": "174632633934550a24e610c153e2d40ab36c258e785df37b11509aa52aed2952",
       "edits": [
         {
           "start": 44,
@@ -1593371,6 +1593463,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 2239,
+          "end": 2240,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 2276,
@@ -1601504,7 +1601603,7 @@
       "original": "rh.java",
       "renamed": "PcmPlayerService.java",
       "inputSha256": "4df9b2d76be8582a5bf9c6112ebc05fcba5cae3fd42155aaacbb2379a3a81255",
-      "outputSha256": "0a111fa8673cfae05880a04fba16f50f416df5d4a4f5d4d4506de038438508c6",
+      "outputSha256": "f668d7da3e8956b298cbef41c1e36e942322049719900568acedf0e1fa49013e",
       "edits": [
         {
           "start": 50,
@@ -1601778,6 +1601877,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 1058,
+          "end": 1059,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 1083,
@@ -1717526,7 +1717632,7 @@
       "original": "ug.java",
       "renamed": "ProxyAuthenticationRequiredException.java",
       "inputSha256": "e92e9ebf7c186f9bcd328c5722694bc94422ade366c50377e4f319a7bf908890",
-      "outputSha256": "54f45daeb6a24bf1d254e5df76b345fcf10be7c44d866eb67170017bb7705cb1",
+      "outputSha256": "16a09039c24ebbfe7d772ba95a971e3d952240f75240ca7ac1b01bbe36c784e6",
       "edits": [
         {
           "start": 69,
@@ -1718297,6 +1718403,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 3107,
+          "end": 3108,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 3140,
@@ -1789093,7 +1789206,7 @@
       "original": "vo.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "3e7850d08e08de98a78a1c90a66118b396248e88a15be44543c2aa8e13593b00",
-      "outputSha256": "1d6a17b761b08696fb71fb2de71d622436f62f523fc78b61461f352f4d5bc334",
+      "outputSha256": "96354716d9e7c3cb0889c48d08a9e8ff6982414031b4cf32cd895e25e83c832e",
       "edits": [
         {
           "start": 50,
@@ -1791005,6 +1791118,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "SpriteButtonPainter"
+        },
+        {
+          "start": 15429,
+          "end": 15430,
+          "symbol": "M:nu.a(JI)V",
+          "original": "a",
+          "renamed": "sleepMillis"
         },
         {
           "start": 15471,
@@ -1843644,10 +1843764,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "76afbf0aa9c47ec6ca80f7568ce4a1d9840e86b795ae1bd6e02df127c82572c7",
+    "rulesSha256": "360200698ec0ce13cfb5c0b5db748707818d3842b0f1f99bace1d5dce8f01a6c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "38357175219849227b51c0d3e2a33951c827f4b3e6d87ee62ecbeabedd837e71",
+    "outputTreeSha256": "240b38dacd6d4e6ee1f159c61e5699da209839579443e2d626f462869f362299",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

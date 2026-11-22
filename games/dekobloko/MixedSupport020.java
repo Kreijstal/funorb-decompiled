@@ -536,7 +536,7 @@ final class MixedSupport020 extends HashNode {
           integerLocal10 = MixedSupport036.integerState0221;
           integerLocal12 = 0;
           if (MixedSupport009.integerState0054 == 2) {
-            longLocal13 = MixedSupport062.computeLong0734(4) - MixedSupport024.longState0007;
+            longLocal13 = MixedSupport062.correctedCurrentTimeMillis(4) - MixedSupport024.longState0007;
             integerLocal12 = (int)((10999L - longLocal13) / 1000L);
             if (integerLocal12 < 0) {
               integerLocal12 = 0;

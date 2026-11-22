@@ -126,7 +126,7 @@ final class la extends am {
         if (param0 <= 110) {
           la.j(13);
         }
-        return -m.field_b + ri.a(-3);
+        return -m.field_b + ri.correctedCurrentTimeMillis(-3);
     }
 
     static {

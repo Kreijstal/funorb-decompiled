@@ -59,7 +59,7 @@ final class kk extends PcmStream {
           var4_int = stackIn_4_0;
           if (this.field_p != null &&
             var4_int <= this.field_p.length) {
-            dk.a(this.field_p, 0, var4_int);
+            dk.clearInts(this.field_p, 0, var4_int);
           } else {
             this.field_p = new int[var4_int];
           }

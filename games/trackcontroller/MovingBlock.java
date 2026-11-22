@@ -46,13 +46,13 @@ final class MovingBlock extends IntrusiveNode {
               return;
             }
             if (LevelView.field_C.position == 0 &&
-              qg.a(false) > qh.field_f + 10000L) {
+              qg.correctedCurrentTimeMillis(false) > qh.field_f + 10000L) {
               LevelView.field_C.c(param1, param0 + 8);
             }
             if (0 < LevelView.field_C.position) {
               try {
                 r.field_i.a(param0 - 124, LevelView.field_C.payload, LevelView.field_C.position, 0);
-                qh.field_f = qg.a(false);
+                qh.field_f = qg.correctedCurrentTimeMillis(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

@@ -266,7 +266,7 @@ final class oi extends da {
               var2_int = -ra.field_c.position + param1;
             }
             sp.field_c.a(ra.field_c.payload, false, var2_int, ra.field_c.position);
-            qm.field_o = kd.c(param0 ^ 15127);
+            qm.field_o = kd.correctedCurrentTimeMillis(param0 ^ 15127);
             ra.field_c.position = ra.field_c.position + var2_int;
             if (!(param1 <= ra.field_c.position)) {
               return false;

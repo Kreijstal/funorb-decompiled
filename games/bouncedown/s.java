@@ -100,7 +100,7 @@ final class s extends vc {
           if (pj.field_a != b.field_b) {
             return false;
           }
-          var2_long = fa.a(-94);
+          var2_long = fa.correctedCurrentTimeMillis(-94);
           if (0 != vi.field_c &&
             bh.field_c < 0) {
             var4_ref_j = (j) (ih.field_w.beginForward((byte) -99));

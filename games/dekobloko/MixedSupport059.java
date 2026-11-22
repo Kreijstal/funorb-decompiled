@@ -92,14 +92,14 @@ abstract class MixedSupport059 {
         if (integerArgument2 == 4) {
           longLocal1 = this.computeLong0382(integerArgument2 ^ -22966);
           if (0L < longLocal1) {
-            MixedSupport125.performAction1620(longLocal1, integerArgument2 ^ -124);
+            MixedSupport125.sleepMillis(longLocal1, integerArgument2 ^ -124);
           }
           return this.computeInteger0381((byte) 109, longArgument1);
         }
         rawSoundState0011 = (RawSound) null;
         longLocal2 = this.computeLong0382(integerArgument2 ^ -22966);
         if (0L < longLocal2) {
-          MixedSupport125.performAction1620(longLocal2, integerArgument2 ^ -124);
+          MixedSupport125.sleepMillis(longLocal2, integerArgument2 ^ -124);
         }
         return this.computeInteger0381((byte) 109, longArgument1);
     }

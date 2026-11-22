@@ -137,7 +137,7 @@ class ae extends ig {
               stackIn_5_2 = var8_int;
             }
             this.a(stackIn_4_1, stackIn_5_2);
-            var8_long = ih.a((byte) -98);
+            var8_long = ih.correctedCurrentTimeMillis((byte) -98);
             stackIn_8_1 = !(250L <= -this.field_K + var8_long);
             this.field_L = stackIn_8_1;
             if (this.field_L) {
@@ -282,7 +282,7 @@ class ae extends ig {
                 this.field_H = var6;
               }
             }
-            this.field_J = ih.a((byte) -98);
+            this.field_J = ih.correctedCurrentTimeMillis((byte) -98);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ae.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -364,7 +364,7 @@ class ae extends ig {
           this.field_u = n.field_i.field_d;
           this.a((byte) 20, param0, true);
           this.field_G = true;
-          this.field_J = ih.a((byte) -98);
+          this.field_J = ih.correctedCurrentTimeMillis((byte) -98);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ae.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -407,7 +407,7 @@ class ae extends ig {
             if (this.field_H != this.field_I) {
               var8.a((UiWidget) (this), this.field_H, param2, 0, param3, this.field_I);
             }
-            var6 = ih.a((byte) -98);
+            var6 = ih.correctedCurrentTimeMillis((byte) -98);
             if (500L > (var6 - this.field_J) % 1000L) {
               var8.a(this.field_H, false, param2, (UiWidget) (this), param3);
             }
@@ -473,7 +473,7 @@ class ae extends ig {
           if (param0 != 29657) {
             discarded$0 = this.n(-114);
           }
-          this.field_J = ih.a((byte) -98);
+          this.field_J = ih.correctedCurrentTimeMillis((byte) -98);
           if (param2 != 60 &&
             param2 != 62) {
             if (param2 >= 32 &&

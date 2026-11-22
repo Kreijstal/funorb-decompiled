@@ -11,7 +11,7 @@ abstract class pk implements qu {
         if (param0 != 574) {
           return;
         }
-        this.field_d = f.b((byte) 73);
+        this.field_d = f.correctedCurrentTimeMillis((byte) 73);
     }
 
     abstract String d(byte param0);
@@ -32,7 +32,7 @@ abstract class pk implements qu {
           if (this.b((byte) 5)) {
             return null;
           }
-          if (f.b((byte) 73) >= (this.field_d + 350L)) {
+          if (f.correctedCurrentTimeMillis((byte) 73) >= (this.field_d + 350L)) {
             return this.d((byte) 115);
           }
           return null;
@@ -40,7 +40,7 @@ abstract class pk implements qu {
         if (this.b((byte) 5)) {
           return null;
         }
-        if (f.b((byte) 73) >= (this.field_d + 350L)) {
+        if (f.correctedCurrentTimeMillis((byte) 73) >= (this.field_d + 350L)) {
           return this.d((byte) 115);
         }
         return null;
@@ -84,7 +84,7 @@ abstract class pk implements qu {
         if (param0 != -19704) {
           return (jg) null;
         }
-        if (f.b((byte) 73) >= (350L + this.field_d)) {
+        if (f.correctedCurrentTimeMillis((byte) 73) >= (350L + this.field_d)) {
           return this.c((byte) 35);
         }
         return cq.field_g;

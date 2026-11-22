@@ -183,7 +183,7 @@ final class ge extends td implements jg, ButtonListener {
           if (jc.field_a != ka.field_b) {
             return false;
           }
-          var2_long = qg.a(param1);
+          var2_long = qg.correctedCurrentTimeMillis(param1);
           if (s.field_b != 0 &&
             vd.field_K < 0) {
             var4_ref_wa = (wa) (cg.field_f.first(2));

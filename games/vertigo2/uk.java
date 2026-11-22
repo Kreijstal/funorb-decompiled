@@ -237,7 +237,7 @@ final class uk extends ab {
           this.a((byte) 81);
         }
         if (this.field_f &&
-          gk.a(85) >= this.field_o) {
+          gk.correctedCurrentTimeMillis(85) >= this.field_o) {
           var2 = (rk) (this.field_q.b(0));
           while (var2 != null) {
             if (!var2.field_z) {
@@ -252,7 +252,7 @@ final class uk extends ab {
             }
             var2 = (rk) (this.field_q.c(-86));
           }
-          this.field_o = 1000L + gk.a(127);
+          this.field_o = 1000L + gk.correctedCurrentTimeMillis(127);
         }
     }
 

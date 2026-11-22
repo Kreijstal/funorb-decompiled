@@ -76,7 +76,7 @@ class dj extends ng {
           this.field_bb = param2;
           this.a(param0, true, (byte) -21);
           this.field_ab = true;
-          this.field_X = ol.a(256);
+          this.field_X = ol.correctedCurrentTimeMillis(256);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -128,7 +128,7 @@ class dj extends ng {
                 this.field_R = var6;
               }
             }
-            this.field_X = ol.a(256);
+            this.field_X = ol.correctedCurrentTimeMillis(256);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -330,7 +330,7 @@ class dj extends ng {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_X = ol.a(256);
+          this.field_X = ol.correctedCurrentTimeMillis(256);
           if (param2 < 9) {
             discarded$0 = this.h(110);
           }
@@ -529,7 +529,7 @@ class dj extends ng {
             if (this.field_R != this.field_U) {
               var8.a((byte) 3, param0, this.field_U, this.field_R, param1, (UiComponent) (this));
             }
-            var6 = ol.a(256);
+            var6 = ol.correctedCurrentTimeMillis(256);
             if (500L > (-this.field_X + var6) % 1000L) {
               var8.a(param1, param0, (UiComponent) (this), this.field_R, (byte) 77);
             }
@@ -571,7 +571,7 @@ class dj extends ng {
               stackIn_5_1 = 0;
             }
             this.a(stackIn_5_1, param2 ^ 80);
-            var8_long = ol.a(param2 + 337);
+            var8_long = ol.correctedCurrentTimeMillis(param2 + 337);
             stackIn_8_1 = !(var8_long - this.field_T >= 250L);
             this.field_Y = stackIn_8_1;
             if (this.field_Y) {

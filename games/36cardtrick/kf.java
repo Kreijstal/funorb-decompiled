@@ -53,11 +53,11 @@ final class kf extends IntrusiveNode {
               var2.writeInt(-246, oj.field_d);
               tf.field_r.a(0, (byte) -89, 13, var2.payload);
               IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
-              lc.field_b = id.a(70) + 30000L;
+              lc.field_b = id.correctedCurrentTimeMillis(70) + 30000L;
             }
             if (IterableNodeHashTable.field_c == 3) {
               if (tf.field_r.b(-108) <= 0) {
-                if (id.a(120) > lc.field_b) {
+                if (id.correctedCurrentTimeMillis(120) > lc.field_b) {
                   stackIn_29_0 = ma.a(2, -2);
                   return stackIn_29_0;
                 }

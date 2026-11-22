@@ -38,7 +38,7 @@ class AudioOutput {
           if (this.field_c) {
             return;
           }
-          var1 = rf.c(0);
+          var1 = rf.correctedCurrentTimeMillis(0);
           try {
             if (var1 > this.field_i + 6000L) {
               this.field_i = var1 - 6000L;
@@ -46,7 +46,7 @@ class AudioOutput {
             while (var1 > this.field_i + 5000L) {
               this.skipFrames(256);
               this.field_i = this.field_i + (long)(256000 / field_r);
-              var1 = rf.c(0);
+              var1 = rf.correctedCurrentTimeMillis(0);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ class AudioOutput {
         if (field_j) {
           var3 = var3 << 1;
         }
-        o.a(param0, 0, var3);
+        o.clearInts(param0, 0, var3);
         this.field_h = this.field_h - param1;
         if (this.field_q != null &&
           this.field_h <= 0) {
@@ -344,7 +344,7 @@ class AudioOutput {
         if (this.field_q != null) {
           this.field_q.b(param0, 0, param1);
         }
-        this.field_i = rf.c(0);
+        this.field_i = rf.correctedCurrentTimeMillis(0);
     }
 
     private final void enqueueByPriority(PcmStream param0, int param1) {
@@ -391,7 +391,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_t.field_d = true;
             while (field_t.field_c) {
-              ge.a(0, 50L);
+              ge.sleepMillis(0, 50L);
             }
             field_t = null;
           }
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_u = 32;
         this.field_c = false;
-        this.field_i = rf.c(0);
+        this.field_i = rf.correctedCurrentTimeMillis(0);
         this.field_p = 0;
         this.field_d = 0;
         this.field_o = 0L;

@@ -327,7 +327,7 @@ final class re {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param1 = ((param1 & -1431655766) >>> 1) + (1431655765 & param1);
         param1 = (-1288490189 & param1 >>> 2) + (858993459 & param1);
         param1 = (param1 >>> 4) + param1 & param0;

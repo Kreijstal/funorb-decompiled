@@ -65,7 +65,7 @@ abstract class i extends GameAppletShell {
           vh.b(-4749);
           fh.a(var2, (byte) -1, gl.field_k);
           eg.field_l = true;
-          ClientException.field_e = ri.a(-3) + 15000L;
+          ClientException.field_e = ri.correctedCurrentTimeMillis(-3) + 15000L;
           return var2;
         }
         if (IntrusiveNode.field_e == 11 &&
@@ -157,7 +157,7 @@ abstract class i extends GameAppletShell {
             fh.a(2, (byte) -1, ii.field_g);
             sd.clearStaticReferences((byte) -4);
             eg.field_l = true;
-            ClientException.field_e = ri.a(-3) + 15000L;
+            ClientException.field_e = ri.correctedCurrentTimeMillis(-3) + 15000L;
           }
         }
         if (-1 == ch.field_c ||
@@ -173,7 +173,7 @@ abstract class i extends GameAppletShell {
           }
           if (ch.field_c != -1 &&
             ch.field_c != 0) {
-            ClientException.field_e = ri.a(-3) + 15000L;
+            ClientException.field_e = ri.correctedCurrentTimeMillis(-3) + 15000L;
           }
         }
         if (-1 != ch.field_c &&
@@ -223,7 +223,7 @@ abstract class i extends GameAppletShell {
         if ((ch.field_c != -1 &&
           0 != ch.field_c ||
           rj.b(28404)) &&
-          ClientException.field_e <= ri.a(param0 - 113)) {
+          ClientException.field_e <= ri.correctedCurrentTimeMillis(param0 - 113)) {
           eg.field_l = false;
           if (ch.field_c != -1 &&
             0 != ch.field_c) {

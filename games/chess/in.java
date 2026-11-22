@@ -66,7 +66,7 @@ final class in {
           }
           stackIn_32_0 = var11;
           while (stackIn_32_0.status == 0) {
-            bc.a(10L, (byte) -106);
+            bc.sleepMillis(10L, (byte) -106);
             stackIn_32_0 = var11;
           }
           var7 = (java.awt.Frame) (var11.result);

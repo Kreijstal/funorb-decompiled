@@ -27,7 +27,7 @@ final class dj {
         field_f = param3 - param1;
         dj.b();
         if (field_a.length < field_f) {
-          field_a = new int[ab.a(field_f, 15952)];
+          field_a = new int[ab.roundUpPowerOfTwo(field_f, 15952)];
         }
         int var4 = param1 * SoftwareRasterizer.field_g + param0;
         for (var5 = 0; var5 < field_f; var5++) {

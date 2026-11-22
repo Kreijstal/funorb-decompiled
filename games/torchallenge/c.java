@@ -209,15 +209,15 @@ final class c {
         }
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
         if (param1 % 10L != 0L) {
-          RandomAccessCacheFile.a(123, param1);
+          RandomAccessCacheFile.sleepIgnoringInterrupts(123, param1);
         } else {
-          RandomAccessCacheFile.a(117, -1L + param1);
-          RandomAccessCacheFile.a(125, 1L);
+          RandomAccessCacheFile.sleepIgnoringInterrupts(117, -1L + param1);
+          RandomAccessCacheFile.sleepIgnoringInterrupts(125, 1L);
         }
         int var3 = 70 % ((param0 + 35) / 61);
     }

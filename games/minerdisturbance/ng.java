@@ -20,7 +20,7 @@ final class ng {
         field_i = null;
         field_e = null;
         if (param0 != -1) {
-          ng.a(-11L, -116);
+          ng.sleepIgnoringInterrupts(-11L, -116);
           field_k = null;
           return;
         }
@@ -78,7 +78,7 @@ final class ng {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepIgnoringInterrupts(long param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

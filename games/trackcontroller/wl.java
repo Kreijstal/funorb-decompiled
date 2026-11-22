@@ -7,29 +7,29 @@ final class wl extends IntrusiveNode {
     static int field_j;
     static wj field_i;
 
-    final static void a(long param0, boolean param1) {
+    final static void sleepMillis(long param0, boolean param1) {
         if (param1) {
           wl.d(78);
           if (0L >= param0) {
             return;
           }
           if (param0 % 10L != 0L) {
-            Model.a(3, param0);
+            Model.sleepIgnoringInterrupts(3, param0);
             return;
           }
-          Model.a(3, -1L + param0);
-          Model.a(3, 1L);
+          Model.sleepIgnoringInterrupts(3, -1L + param0);
+          Model.sleepIgnoringInterrupts(3, 1L);
           return;
         }
         if (0L >= param0) {
           return;
         }
         if (param0 % 10L != 0L) {
-          Model.a(3, param0);
+          Model.sleepIgnoringInterrupts(3, param0);
           return;
         }
-        Model.a(3, -1L + param0);
-        Model.a(3, 1L);
+        Model.sleepIgnoringInterrupts(3, -1L + param0);
+        Model.sleepIgnoringInterrupts(3, 1L);
     }
 
     wl(byte[] param0) {

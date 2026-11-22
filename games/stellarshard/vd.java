@@ -52,7 +52,7 @@ final class vd {
           }
           if (var3 == 0 &&
             rb.field_s == 2) {
-            var4 = ih.a((byte) -98) - jj.field_p;
+            var4 = ih.correctedCurrentTimeMillis((byte) -98) - jj.field_p;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {
               qc.a(5, true, 0);

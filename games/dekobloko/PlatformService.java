@@ -33,7 +33,7 @@ final class PlatformService implements Runnable {
         if (byteArgument1 <= 39) {
           this.platformSupport001State0001 = (PlatformSupport001) null;
         }
-        return this.computeAsyncTask0513(integerArgument5 + (integerArgument3 << 16), 1, (Object) null, 6, (integerArgument4 << 16) + integerArgument2);
+        return this.enqueueTask(integerArgument5 + (integerArgument3 << 16), 1, (Object) null, 6, (integerArgument4 << 16) + integerArgument2);
     }
 
     final AsyncTask computeAsyncTask0514(int integerArgument1, String stringArgument2, int integerArgument3) {
@@ -114,14 +114,14 @@ final class PlatformService implements Runnable {
         if (booleanArgument1) {
           return (AsyncTask) null;
         }
-        return this.computeAsyncTask0513(0, 1, new Object[]{classArgument3, stringArgument2}, 9, 0);
+        return this.enqueueTask(0, 1, new Object[]{classArgument3, stringArgument2}, 9, 0);
     }
 
     private final AsyncTask computeAsyncTask0516(int integerArgument1, boolean booleanArgument2, int integerArgument3, String stringArgument4) {
         if (integerArgument3 != -10742) {
           this.asyncTaskState0002 = (AsyncTask) null;
         }
-        return this.computeAsyncTask0513(0, 1, stringArgument4, booleanArgument2 ? 22 : 1, integerArgument1);
+        return this.enqueueTask(0, 1, stringArgument4, booleanArgument2 ? 22 : 1, integerArgument1);
     }
 
     final boolean isFullscreenSupported(int integerArgument1) {
@@ -141,7 +141,7 @@ final class PlatformService implements Runnable {
         if (integerArgument1 != -10962) {
           methodState0001 = (java.lang.reflect.Method) null;
         }
-        return this.computeAsyncTask0513(0, integerArgument1 ^ -10961, new Object[]{classArgument3, stringArgument2, classArrayArgument4}, 8, 0);
+        return this.enqueueTask(0, integerArgument1 ^ -10961, new Object[]{classArgument3, stringArgument2, classArrayArgument4}, 8, 0);
     }
 
     private final static BoundedRandomAccessFile computeBoundedRandomAccessFile0511(byte byteArgument1, String stringArgument2, String stringArgument3, int integerArgument4) {
@@ -193,7 +193,7 @@ final class PlatformService implements Runnable {
         if (integerArgument1 != 75254128) {
           return (AsyncTask) null;
         }
-        return this.computeAsyncTask0513(0, 1, frameArgument2, 7, 0);
+        return this.enqueueTask(0, 1, frameArgument2, 7, 0);
     }
 
     public final void run() {
@@ -258,7 +258,7 @@ final class PlatformService implements Runnable {
                 integerLocal5 = asyncTaskLocal16.integerState0511;
                 switch (integerLocal5) {
                   case 1:
-                    if (MixedSupport062.computeLong0734(4) < longState0016) {
+                    if (MixedSupport062.correctedCurrentTimeMillis(4) < longState0016) {
                       throw new IOException();
                     }
                     asyncTaskLocal16.objectState0004 = new java.net.Socket(java.net.InetAddress.getByName((String) (asyncTaskLocal16.objectState0003)), asyncTaskLocal16.integerState0509);
@@ -271,7 +271,7 @@ final class PlatformService implements Runnable {
                     asyncTaskLocal16.objectState0004 = threadLocal28;
                     break;
                   case 4:
-                    if (longState0016 > MixedSupport062.computeLong0734(4)) {
+                    if (longState0016 > MixedSupport062.correctedCurrentTimeMillis(4)) {
                       throw new IOException();
                     }
                     asyncTaskLocal16.objectState0004 = new DataInputStream(((java.net.URL) (asyncTaskLocal16.objectState0003)).openStream());
@@ -283,7 +283,7 @@ final class PlatformService implements Runnable {
                     }
                     switch (integerLocal5) {
                       case 21:
-                        if (longState0016 > MixedSupport062.computeLong0734(4)) {
+                        if (longState0016 > MixedSupport062.correctedCurrentTimeMillis(4)) {
                           throw new IOException();
                         }
                         asyncTaskLocal16.objectState0004 = java.net.InetAddress.getByName((String) (asyncTaskLocal16.objectState0003)).getAddress();
@@ -379,7 +379,7 @@ final class PlatformService implements Runnable {
                         }
                         break;
                       case 3:
-                        if (longState0016 > MixedSupport062.computeLong0734(4)) {
+                        if (longState0016 > MixedSupport062.correctedCurrentTimeMillis(4)) {
                           throw new IOException();
                         }
                         stringLocal21 = (asyncTaskLocal16.integerState0509 >> 24 & 255) + "." + (255 & asyncTaskLocal16.integerState0509 >> 16) + "." + ((asyncTaskLocal16.integerState0509 & 65502) >> 8) + "." + (255 & asyncTaskLocal16.integerState0509);
@@ -413,7 +413,7 @@ final class PlatformService implements Runnable {
                     asyncTaskLocal16.objectState0004 = ((Class) (objectArrayLocal17[0])).getDeclaredMethod((String) (objectArrayLocal17[1]), (Class[]) (objectArrayLocal17[2]));
                     break;
                   case 22:
-                    if (MixedSupport062.computeLong0734(4) < longState0016) {
+                    if (MixedSupport062.correctedCurrentTimeMillis(4) < longState0016) {
                       throw new IOException();
                     }
                     try {
@@ -452,17 +452,17 @@ final class PlatformService implements Runnable {
 
     final AsyncTask computeAsyncTask0517(java.net.URL uRLArgument1, byte byteArgument2) {
         int integerLocal1 = -74 % ((-9 - byteArgument2) / 45);
-        return this.computeAsyncTask0513(0, 1, uRLArgument1, 4, 0);
+        return this.enqueueTask(0, 1, uRLArgument1, 4, 0);
     }
 
     final AsyncTask computeAsyncTask0509(byte byteArgument1) {
         if (byteArgument1 <= 121) {
           return (AsyncTask) null;
         }
-        return this.computeAsyncTask0513(0, 1, (Object) null, 5, 0);
+        return this.enqueueTask(0, 1, (Object) null, 5, 0);
     }
 
-    private final AsyncTask computeAsyncTask0513(int integerArgument1, int integerArgument2, Object objectArgument3, int integerArgument4, int integerArgument5) {
+    private final AsyncTask enqueueTask(int integerArgument1, int integerArgument2, Object objectArgument3, int integerArgument4, int integerArgument5) {
         AsyncTask asyncTaskLocal1 = null;
         Throwable caughtExceptionLocal2 = null;
         Object objectLocal3 = null;
@@ -488,9 +488,9 @@ final class PlatformService implements Runnable {
         return asyncTaskLocal1;
     }
 
-    final AsyncTask computeAsyncTask0510(byte byteArgument1, int integerArgument2, Runnable runnableArgument3) {
+    final AsyncTask startThread(byte byteArgument1, int integerArgument2, Runnable runnableArgument3) {
         int integerLocal1 = -20 / ((byteArgument1 - 80) / 41);
-        return this.computeAsyncTask0513(0, 1, runnableArgument3, 2, integerArgument2);
+        return this.enqueueTask(0, 1, runnableArgument3, 2, integerArgument2);
     }
 
     PlatformService(int integerArgument1, String stringArgument2, int integerArgument3, boolean booleanArgument4) throws Exception {

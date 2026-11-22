@@ -18,7 +18,7 @@ abstract class gg implements jb {
           if (this.b(true)) {
             return uk.field_b;
           }
-          if (!((350L + this.field_c) <= lj.a((byte) -31))) {
+          if (!((350L + this.field_c) <= lj.correctedCurrentTimeMillis((byte) -31))) {
             return ea.field_b;
           }
           return this.a((byte) -8);
@@ -26,7 +26,7 @@ abstract class gg implements jb {
         if (this.b(true)) {
           return uk.field_b;
         }
-        if (!((350L + this.field_c) <= lj.a((byte) -31))) {
+        if (!((350L + this.field_c) <= lj.correctedCurrentTimeMillis((byte) -31))) {
           return ea.field_b;
         }
         return this.a((byte) -8);
@@ -51,14 +51,14 @@ abstract class gg implements jb {
           return null;
         }
         int var2 = 93 % ((param0 - 54) / 33);
-        if (this.field_c + 350L <= lj.a((byte) -23)) {
+        if (this.field_c + 350L <= lj.correctedCurrentTimeMillis((byte) -23)) {
           return this.b((byte) 95);
         }
         return null;
     }
 
     public final void a(int param0) {
-        this.field_c = lj.a((byte) -116);
+        this.field_c = lj.correctedCurrentTimeMillis((byte) -116);
         if (param0 != -1283) {
           field_f = 78;
         }

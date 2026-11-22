@@ -104,10 +104,10 @@ final class si {
           while (true) {
             var3 = param1.requestFullscreenExit(param0, -89);
             while (0 == var3.status) {
-              jd.a(1, 10L);
+              jd.sleepMillis(1, 10L);
             }
             if (var3.status != 1) {
-              jd.a(1, 100L);
+              jd.sleepMillis(1, 100L);
               continue;
             }
             break;

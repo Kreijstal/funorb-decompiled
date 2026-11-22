@@ -65,7 +65,7 @@ final class m {
           }
           var11 = param5.requestFullscreenEnter(param1, param0, param2, param3 + 28253, param4);
           while (var11.status == 0) {
-            hb.a(10L, param3 + 122);
+            hb.sleepMillis(10L, param3 + 122);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

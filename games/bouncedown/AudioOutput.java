@@ -31,7 +31,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_h = fa.a(121) + 2000L;
+            this.field_h = fa.correctedCurrentTimeMillis(121) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -70,7 +70,7 @@ class AudioOutput {
         if (field_s) {
           var3 = var3 << 1;
         }
-        cb.a(param0, 0, var3);
+        cb.clearInts(param0, 0, var3);
         this.field_b = this.field_b - param1;
         if (this.field_t != null &&
           this.field_b <= 0) {
@@ -164,7 +164,7 @@ class AudioOutput {
         if (this.field_t != null) {
           this.field_t.a(param0, 0, param1);
         }
-        this.field_p = fa.a(-49);
+        this.field_p = fa.correctedCurrentTimeMillis(-49);
     }
 
     int getQueuedFrames() throws Exception {
@@ -193,7 +193,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_k.field_c = true;
             while (field_k.field_b) {
-              SecondaryNodeDeque.a(50L, 19406);
+              SecondaryNodeDeque.sleepMillis(50L, 19406);
             }
             field_k = null;
           }
@@ -235,7 +235,7 @@ class AudioOutput {
           if (this.field_i) {
             return;
           }
-          var1 = fa.a(-114);
+          var1 = fa.correctedCurrentTimeMillis(-114);
           try {
             if (var1 > this.field_p + 6000L) {
               this.field_p = var1 - 6000L;
@@ -243,7 +243,7 @@ class AudioOutput {
             while (var1 > this.field_p + 5000L) {
               this.skipFrames(256);
               this.field_p = this.field_p + (long)(256000 / field_r);
-              var1 = fa.a(-87);
+              var1 = fa.correctedCurrentTimeMillis(-87);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_i = false;
         this.field_e = 32;
-        this.field_p = fa.a(-78);
+        this.field_p = fa.correctedCurrentTimeMillis(-78);
         this.field_q = true;
         this.field_b = 0;
         this.field_c = new wf[8];

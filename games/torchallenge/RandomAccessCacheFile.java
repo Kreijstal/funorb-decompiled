@@ -15,7 +15,7 @@ final class RandomAccessCacheFile {
 
     final static void b(byte param0) {
         if (param0 != 116) {
-          RandomAccessCacheFile.a(80, -112L);
+          RandomAccessCacheFile.sleepIgnoringInterrupts(80, -112L);
         }
         String var2 = (String) null;
         wk.a((String) null, -54, "");
@@ -70,7 +70,7 @@ final class RandomAccessCacheFile {
         this.field_d = param0;
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepIgnoringInterrupts(int param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
@@ -230,7 +230,7 @@ final class RandomAccessCacheFile {
             throw new IllegalStateException("" + var2_int);
           }
           if (param1 != -25) {
-            RandomAccessCacheFile.a(-79, 91L);
+            RandomAccessCacheFile.sleepIgnoringInterrupts(-79, 91L);
           }
           var3 = fl.a(param0, (byte) 117) ? 1 : 0;
           var4 = fl.a(param0, (byte) 116) ? 1 : 0;

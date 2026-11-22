@@ -43,7 +43,7 @@ final class ClientException extends RuntimeException {
           var1_int = MovingBlock.field_q;
           var2 = 0;
           if (di.field_h == 2) {
-            var3_long = -fe.field_N + qg.a(false);
+            var3_long = -fe.field_N + qg.correctedCurrentTimeMillis(false);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

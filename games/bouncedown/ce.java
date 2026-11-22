@@ -515,7 +515,7 @@ final class ce extends td {
           }
         }
         if (this.field_v &&
-          this.field_e <= fa.a(75)) {
+          this.field_e <= fa.correctedCurrentTimeMillis(75)) {
           var3 = (gj) (this.field_o.b(0));
           while (var3 != null) {
             if (!var3.field_n) {
@@ -530,7 +530,7 @@ final class ce extends td {
             }
             var3 = (gj) (this.field_o.a(-1));
           }
-          this.field_e = fa.a(-27) + 1000L;
+          this.field_e = fa.correctedCurrentTimeMillis(-27) + 1000L;
         }
     }
 

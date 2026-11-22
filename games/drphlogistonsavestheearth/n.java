@@ -495,7 +495,7 @@ final class n implements Runnable {
           var2 = param0.requestThreadStart((Runnable) (this), 5, (byte) 127);
           while (true) {
             if (var2.status == 0) {
-              kk.a(10L, true);
+              kk.sleepMillis(10L, true);
               if (var3 != 0) {
                 return;
               }

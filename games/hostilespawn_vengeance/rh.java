@@ -79,7 +79,7 @@ final class rh extends ae {
           var1_int = s.field_g;
           var2 = 0;
           if (2 == be.field_e) {
-            var3_long = -fj.field_Rb + hn.a((byte) 80);
+            var3_long = -fj.field_Rb + hn.correctedCurrentTimeMillis((byte) 80);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;

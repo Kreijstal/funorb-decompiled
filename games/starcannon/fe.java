@@ -136,7 +136,7 @@ class fe extends dk {
           }
           var12 = (lg) ((Object) this.field_o);
           if (this.field_B == this.field_D) {
-            var6 = dd.b(74);
+            var6 = dd.correctedCurrentTimeMillis(74);
             if (500L <= (-this.field_F + var6) % 1000L) {
               return;
             }
@@ -144,7 +144,7 @@ class fe extends dk {
             return;
           }
           var12.a(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
-          var6Lifetime3 = dd.b(74);
+          var6Lifetime3 = dd.correctedCurrentTimeMillis(74);
           if (500L > (-this.field_F + var6Lifetime3) % 1000L) {
             var12.a(-3, (UiWidget) (this), param1, param3, this.field_B);
           }
@@ -165,7 +165,7 @@ class fe extends dk {
         var11 = (lg) ((Object) this.field_o);
         var9 = var11;
         if (this.field_B == this.field_D) {
-          var6Lifetime1 = dd.b(74);
+          var6Lifetime1 = dd.correctedCurrentTimeMillis(74);
           if (500L <= (-this.field_F + var6Lifetime1) % 1000L) {
             return;
           }
@@ -173,7 +173,7 @@ class fe extends dk {
           return;
         }
         var11.a(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
-        var6Lifetime2 = dd.b(74);
+        var6Lifetime2 = dd.correctedCurrentTimeMillis(74);
         if (500L > (-this.field_F + var6Lifetime2) % 1000L) {
           var11.a(-3, (UiWidget) (this), param1, param3, this.field_B);
         }
@@ -190,7 +190,7 @@ class fe extends dk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_F = dd.b(param2 ^ -2);
+          this.field_F = dd.correctedCurrentTimeMillis(param2 ^ -2);
           if (param2 != -90) {
             this.f(true);
           }
@@ -419,7 +419,7 @@ class fe extends dk {
           this.field_o = eh.field_j.field_c;
           this.a((byte) -91, true, param0);
           this.field_I = true;
-          this.field_F = dd.b(84);
+          this.field_F = dd.correctedCurrentTimeMillis(84);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -541,7 +541,7 @@ class fe extends dk {
                 this.field_B = var6;
               }
             }
-            this.field_F = dd.b(122);
+            this.field_F = dd.correctedCurrentTimeMillis(122);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fe.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -572,7 +572,7 @@ class fe extends dk {
             stackIn_7_1 = var8_int;
           }
           this.a(stackIn_7_1, 101);
-          var8_long = dd.b(param4 + 137);
+          var8_long = dd.correctedCurrentTimeMillis(param4 + 137);
           stackIn_10_1 = !(var8_long - this.field_E >= 250L);
           this.field_G = stackIn_10_1;
           if (this.field_G) {

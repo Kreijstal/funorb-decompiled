@@ -86,7 +86,7 @@ final class tp extends bb {
           em var2Lifetime1;
           var16 = DungeonAssault.field_K;
           if (null != this.field_D) {
-            var2_long = kd.c(-2456);
+            var2_long = kd.correctedCurrentTimeMillis(-2456);
             var4 = (int)(-this.field_n + var2_long);
             this.field_n = var2_long;
             if (var4 > 200) {
@@ -398,7 +398,7 @@ final class tp extends bb {
               }
             }
             this.field_a = 0;
-            this.field_n = kd.c(-2456);
+            this.field_n = kd.correctedCurrentTimeMillis(-2456);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

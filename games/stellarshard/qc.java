@@ -380,7 +380,7 @@ final class qc {
               }
               stackIn_66_0[stackIn_66_1] = stackIn_67_2;
             }
-            jj.field_p = ih.a((byte) -98);
+            jj.field_p = ih.correctedCurrentTimeMillis((byte) -98);
           }
           ua.field_i.field_i = pk.field_j.length;
           var3_intLifetime1 = 0;

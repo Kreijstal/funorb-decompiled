@@ -81,7 +81,7 @@ final class AccountRequestState {
           }
           while (var3_int < 50) {
             if (null != param1.field_i.peekEvent()) {
-              ge.a(0, 1L);
+              ge.sleepMillis(0, 1L);
               var3_int++;
               continue;
             }

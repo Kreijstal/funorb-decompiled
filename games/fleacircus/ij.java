@@ -102,11 +102,11 @@ final class ij extends gj implements da {
               var2.writeInt(tj.field_c, (byte) -28);
               jj.field_M.a((byte) -92, 13, 0, var2.payload);
               lc.field_r = lc.field_r + 1;
-              AccountServiceResult.field_e = 30000L + lj.a((byte) -80);
+              AccountServiceResult.field_e = 30000L + lj.correctedCurrentTimeMillis((byte) -80);
             }
             if (3 == lc.field_r) {
               if (0 >= jj.field_M.e(-110)) {
-                if (lj.a((byte) -25) > AccountServiceResult.field_e) {
+                if (lj.correctedCurrentTimeMillis((byte) -25) > AccountServiceResult.field_e) {
                   stackIn_29_0 = NetworkGameClient.a(-2, 5);
                   return stackIn_29_0;
                 }

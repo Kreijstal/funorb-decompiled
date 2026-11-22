@@ -41,20 +41,20 @@ class IntrusiveNode {
         int var1 = -7 % ((param0 - 12) / 47);
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void sleepMillis(long param0, boolean param1) {
         if (0L >= param0) {
           return;
         }
         if (param0 % 10L != 0L) {
-          ci.a(param0, (byte) 105);
+          ci.sleepIgnoringInterrupts(param0, (byte) 105);
           if (param1) {
             field_d = (hd) null;
             return;
           }
           return;
         }
-        ci.a(param0 - 1L, (byte) 127);
-        ci.a(1L, (byte) 104);
+        ci.sleepIgnoringInterrupts(param0 - 1L, (byte) 127);
+        ci.sleepIgnoringInterrupts(1L, (byte) 104);
         if (param1) {
           field_d = (hd) null;
           return;

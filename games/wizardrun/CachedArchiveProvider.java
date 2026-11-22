@@ -456,7 +456,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static int unsignedByte(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         if (param0 != 11682) {
           CachedArchiveProvider.resendHighscoreRequests(-2, 121);
         }

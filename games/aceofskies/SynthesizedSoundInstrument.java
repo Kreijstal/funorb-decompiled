@@ -109,7 +109,7 @@ final class SynthesizedSoundInstrument {
 
     final int[] a(int param0, int param1) {
         int var12Lifetime1Lifetime1;
-        au.a(field_f, 0, param0);
+        au.clearInts(field_f, 0, param0);
         if (param1 < 10) {
           return field_f;
         }

@@ -62,7 +62,7 @@ final class vi implements Runnable {
           }
           if (0 == var4 &&
             ne.field_u == 2) {
-            var5 = fa.a(84) - gd.field_a;
+            var5 = fa.correctedCurrentTimeMillis(84) - gd.field_a;
             var7 = (int)((-var5 + 10999L) / 1000L);
             if (0 >= var7) {
               nj.a(true, -25698, 5);
@@ -508,7 +508,7 @@ final class vi implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, (byte) -123, (Runnable) (this));
           while (0 == var2.status) {
-            SecondaryNodeDeque.a(10L, 19406);
+            SecondaryNodeDeque.sleepMillis(10L, 19406);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

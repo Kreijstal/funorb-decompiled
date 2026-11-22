@@ -110,7 +110,7 @@ final class lo {
         }
     }
 
-    final synchronized static long a(byte param0) {
+    final synchronized static long correctedCurrentTimeMillis(byte param0) {
         int var3 = 103 % ((35 - param0) / 39);
         long var1 = System.currentTimeMillis();
         if (!(AccountRequestState.field_b <= var1)) {

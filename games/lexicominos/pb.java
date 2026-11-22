@@ -9,7 +9,7 @@ final class pb extends IntrusiveNode {
 
     final static boolean c(boolean param0) {
         ByteStorage.field_c = param0 ? true : false;
-        mc.field_i = 15000L + rf.c(0);
+        mc.field_i = 15000L + rf.correctedCurrentTimeMillis(0);
         return ta.field_g == 11 ? true : false;
     }
 

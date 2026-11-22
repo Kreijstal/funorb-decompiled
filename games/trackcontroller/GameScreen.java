@@ -840,7 +840,7 @@ final class GameScreen {
         }
         var5 = stackIn_3_0;
         if (param0) {
-          var6 = sc.a(var5, param1 - 17461);
+          var6 = sc.countSetBits(var5, param1 - 17461);
           if (var6 <= 8) {
             var3 = var3 + (-var6 + 8) * 52 / 2;
           }

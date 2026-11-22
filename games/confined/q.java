@@ -303,7 +303,7 @@ final class q extends jg {
               }
               stackIn_74_0[stackIn_74_1] = stackIn_75_2;
             }
-            ga.field_M = ri.a(-3);
+            ga.field_M = ri.correctedCurrentTimeMillis(-3);
           }
           ij.field_q.field_k = uc.field_ab.length;
           var3_intLifetime1 = 0;

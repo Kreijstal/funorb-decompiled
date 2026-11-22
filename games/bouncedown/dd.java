@@ -31,7 +31,7 @@ final class dd implements Runnable {
                     var2.serviceOutput();
                   }
                 }
-                SecondaryNodeDeque.a(10L, 19406);
+                SecondaryNodeDeque.sleepMillis(10L, 19406);
                 pg.a((byte) -86, (Object) null, this.field_d);
               }
               decompiledRegionSelector0 = 0;

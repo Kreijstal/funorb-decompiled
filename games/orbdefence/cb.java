@@ -39,7 +39,7 @@ final class cb implements Runnable {
           }
           if (null != this.field_f) {
             while (this.field_f.status == 0) {
-              hb.a(1L, param0 + 120);
+              hb.sleepMillis(1L, param0 + 120);
             }
             if (this.field_f.status == 1) {
               try {

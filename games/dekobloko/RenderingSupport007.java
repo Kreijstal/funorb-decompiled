@@ -1227,7 +1227,7 @@ final class RenderingSupport007 {
                 sceneWidgetPart012Local19 = new SceneWidgetPart012(stringLocal41, stringLocal42, longLocal10);
                 MixedSupport090.secondaryNodeHashTableState0004.put(sceneWidgetPart012Local19, -1, longLocal10);
               }
-              sceneWidgetPart012Local19.longState0047 = MixedSupport062.computeLong0734(4) - (long)((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readInt(7553);
+              sceneWidgetPart012Local19.longState0047 = MixedSupport062.correctedCurrentTimeMillis(4) - (long)((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readInt(7553);
               sceneWidgetPart012Local19.integerState0781 = ((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readUnsignedShort(3);
               integerLocal22 = ((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readVarInt(-28);
               stackSceneWidgetPart012Local4 = sceneWidgetPart012Local19;
@@ -1374,7 +1374,7 @@ final class RenderingSupport007 {
                   if (21 == integerLocal9) {
                     integerLocal56 = ((PacketBuffer) ((Object) cipherPacketBufferLocal7)).readUnsignedShort(3);
                     if (integerLocal56 != 0) {
-                      SceneWidgetNode.longState0023 = MixedSupport062.computeLong0734(4) + (long)integerLocal56;
+                      SceneWidgetNode.longState0023 = MixedSupport062.correctedCurrentTimeMillis(4) + (long)integerLocal56;
                       return;
                     }
                     SceneWidgetNode.longState0023 = 0L;

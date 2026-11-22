@@ -50,7 +50,7 @@ class AudioMixer {
         if (field_d) {
           var3 = var3 << 1;
         }
-        ri.a(param0, 0, var3);
+        ri.clearInts(param0, 0, var3);
         this.field_k = this.field_k - param1;
         if (this.field_r != null &&
           this.field_k <= 0) {
@@ -144,7 +144,7 @@ class AudioMixer {
         if (this.field_r != null) {
           this.field_r.mix(param0, 0, param1);
         }
-        this.field_n = ih.a((byte) -98);
+        this.field_n = ih.correctedCurrentTimeMillis((byte) -98);
     }
 
     private final static void resetStreamScheduling(PcmStream param0) {
@@ -244,7 +244,7 @@ class AudioMixer {
           if (this.field_j) {
             return;
           }
-          var1 = ih.a((byte) -98);
+          var1 = ih.correctedCurrentTimeMillis((byte) -98);
           try {
             if (var1 > this.field_n + 6000L) {
               this.field_n = var1 - 6000L;
@@ -252,7 +252,7 @@ class AudioMixer {
             while (var1 > this.field_n + 5000L) {
               this.skipFrames(256);
               this.field_n = this.field_n + (long)(256000 / field_m);
-              var1 = ih.a((byte) -98);
+              var1 = ih.correctedCurrentTimeMillis((byte) -98);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,7 +345,7 @@ class AudioMixer {
           if (var1 != 0) {
             field_p.field_b = true;
             while (field_p.field_c) {
-              jj.a((byte) -120, 50L);
+              jj.sleepMillis((byte) -120, 50L);
             }
             field_p = null;
           }
@@ -404,7 +404,7 @@ class AudioMixer {
     AudioMixer() {
         this.field_j = false;
         this.field_c = 32;
-        this.field_n = ih.a((byte) -98);
+        this.field_n = ih.correctedCurrentTimeMillis((byte) -98);
         this.field_u = 0L;
         this.field_h = 0;
         this.field_o = 0L;

@@ -24,7 +24,7 @@ final class gda extends WidgetContainer implements uja, WidgetActionListener {
         if (param0 < -94) {
           return true;
         }
-        gda.a(true, 125L);
+        gda.sleepMillis(true, 125L);
         return true;
     }
 
@@ -125,7 +125,7 @@ final class gda extends WidgetContainer implements uja, WidgetActionListener {
         }
     }
 
-    final static void a(boolean param0, long param1) {
+    final static void sleepMillis(boolean param0, long param1) {
         if (param0) {
           java.awt.Component var4 = (java.awt.Component) null;
           gda.a(67, (java.awt.Component) null);
@@ -133,22 +133,22 @@ final class gda extends WidgetContainer implements uja, WidgetActionListener {
             return;
           }
           if (0L != param1 % 10L) {
-            pv.a(20182, param1);
+            pv.sleepIgnoringInterrupts(20182, param1);
             return;
           }
-          pv.a(20182, param1 - 1L);
-          pv.a(20182, 1L);
+          pv.sleepIgnoringInterrupts(20182, param1 - 1L);
+          pv.sleepIgnoringInterrupts(20182, 1L);
           return;
         }
         if (param1 <= 0L) {
           return;
         }
         if (0L != param1 % 10L) {
-          pv.a(20182, param1);
+          pv.sleepIgnoringInterrupts(20182, param1);
           return;
         }
-        pv.a(20182, param1 - 1L);
-        pv.a(20182, 1L);
+        pv.sleepIgnoringInterrupts(20182, param1 - 1L);
+        pv.sleepIgnoringInterrupts(20182, 1L);
     }
 
     final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {

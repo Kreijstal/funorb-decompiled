@@ -90,7 +90,7 @@ final class PcmPlayerService implements Runnable {
                 pcmPlayerLocal2.serviceOutput();
               }
             }
-            MixedSupport125.performAction1620(10L, -128);
+            MixedSupport125.sleepMillis(10L, -128);
             DiagnosticSupport001.performAction0331(-68, (Object) null, this.platformServiceState0007);
           }
         } catch (Exception exception) {

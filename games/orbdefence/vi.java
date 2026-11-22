@@ -482,7 +482,7 @@ class vi extends s {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_Q = ji.b(109);
+          this.field_Q = ji.correctedCurrentTimeMillis(109);
           if (60 == param0) {
             return false;
           }
@@ -626,7 +626,7 @@ class vi extends s {
                 this.field_N = var6;
               }
             }
-            this.field_Q = ji.b(-98);
+            this.field_Q = ji.correctedCurrentTimeMillis(-98);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -653,7 +653,7 @@ class vi extends s {
               stackIn_6_1 = 0;
             }
             this.b(stackIn_6_1, 1242);
-            var8_long = ji.b(119);
+            var8_long = ji.correctedCurrentTimeMillis(119);
             stackIn_9_1 = !(-this.field_R + var8_long >= 250L);
             this.field_J = stackIn_9_1;
             if (this.field_J) {
@@ -697,7 +697,7 @@ class vi extends s {
           this.field_j = mb.field_a.field_q;
           this.a(0, true, param0);
           this.field_G = true;
-          this.field_Q = ji.b(-53);
+          this.field_Q = ji.correctedCurrentTimeMillis(-53);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -905,7 +905,7 @@ class vi extends s {
         if (this.field_N != this.field_L) {
           var8.a(this.field_L, this.field_N, (pj) (this), param3, param2 ^ -1048511, param0);
         }
-        var6 = ji.b(126);
+        var6 = ji.correctedCurrentTimeMillis(126);
         if ((-this.field_Q + var6) % 1000L < 500L) {
           var8.a(param0, (pj) (this), param3, (byte) 94, this.field_N);
         }

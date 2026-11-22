@@ -104,7 +104,7 @@ final class SystemTaskService implements Runnable {
                 int var2_int = var8.requestType;
                 switch (var2_int) {
                   case 22:
-                    if (field_u > kh.a(-107)) {
+                    if (field_u > kh.correctedCurrentTimeMillis(-107)) {
                       throw new IOException();
                     }
                     try {
@@ -148,7 +148,7 @@ final class SystemTaskService implements Runnable {
                     }
                     switch (var2_int) {
                       case 21:
-                        if (kh.a(-92) < field_u) {
+                        if (kh.correctedCurrentTimeMillis(-92) < field_u) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -244,7 +244,7 @@ final class SystemTaskService implements Runnable {
                         }
                         break;
                       case 3:
-                        if (kh.a(-87) < field_u) {
+                        if (kh.correctedCurrentTimeMillis(-87) < field_u) {
                           throw new IOException();
                         }
                         var10 = (var8.intArgument >> 24 & 255) + "." + ((16746416 & var8.intArgument) >> 16) + "." + (255 & var8.intArgument >> 8) + "." + (var8.intArgument & 255);
@@ -261,13 +261,13 @@ final class SystemTaskService implements Runnable {
                     var8.result = ((Class) (var9[0])).getDeclaredField((String) (var9[1]));
                     break;
                   case 4:
-                    if (kh.a(-59) < field_u) {
+                    if (kh.correctedCurrentTimeMillis(-59) < field_u) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
                     break;
                   case 1:
-                    if (kh.a(-101) < field_u) {
+                    if (kh.correctedCurrentTimeMillis(-101) < field_u) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);

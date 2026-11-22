@@ -307,7 +307,7 @@ final class nm implements Runnable {
         try {
           var2 = param0.requestThreadStart((Runnable) (this), (byte) 58, 5);
           while (0 == var2.status) {
-            gf.a(10L, -10309);
+            gf.sleepMillis(10L, -10309);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

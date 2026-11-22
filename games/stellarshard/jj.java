@@ -55,7 +55,7 @@ final class jj {
         try {
           var4_int = -1;
           if (param3 > -48) {
-            jj.a((byte) 14, -35L);
+            jj.sleepMillis((byte) 14, -35L);
           }
           for (var5 = param0; var5 < param2; var5++) {
             var4_int = nb.field_F[255 & (var4_int ^ param1[var5])] ^ var4_int >>> 8;
@@ -117,7 +117,7 @@ final class jj {
         }
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepMillis(byte param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
@@ -125,10 +125,10 @@ final class jj {
           field_p = 50L;
         }
         if (param1 % 10L != 0L) {
-          ef.a(11, param1);
+          ef.sleepIgnoringInterrupts(11, param1);
         } else {
-          ef.a(11, -1L + param1);
-          ef.a(11, 1L);
+          ef.sleepIgnoringInterrupts(11, -1L + param1);
+          ef.sleepIgnoringInterrupts(11, 1L);
         }
     }
 

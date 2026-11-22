@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport008 {
-    final static void performAction0074(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+    final static void clearInts(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
         integerArgument3 = integerArgument2 + integerArgument3 - 7;
         while (integerArgument2 < integerArgument3) {
           integerArrayArgument1[integerArgument2++] = 0;

@@ -38,7 +38,7 @@ final class wk {
         }
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepMillis(byte param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
@@ -46,10 +46,10 @@ final class wk {
           return;
         }
         if (param1 % 10L != 0L) {
-          ie.a((byte) 10, param1);
+          ie.sleepIgnoringInterrupts((byte) 10, param1);
         } else {
-          ie.a((byte) 10, param1 - 1L);
-          ie.a((byte) 10, 1L);
+          ie.sleepIgnoringInterrupts((byte) 10, param1 - 1L);
+          ie.sleepIgnoringInterrupts((byte) 10, 1L);
           return;
         }
     }
@@ -215,13 +215,13 @@ final class wk {
           this.field_a.close();
           this.field_a = null;
           if (param0 <= 9) {
-            wk.a((byte) -90, 9L);
+            wk.sleepMillis((byte) -90, 9L);
             return;
           }
           return;
         }
         if (param0 <= 9) {
-          wk.a((byte) -90, 9L);
+          wk.sleepMillis((byte) -90, 9L);
           return;
         }
     }

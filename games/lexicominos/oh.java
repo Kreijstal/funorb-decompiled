@@ -52,7 +52,7 @@ final class oh {
           var11 = param5.requestFullscreenEnter(28460, param1, param0, param4, param2);
           var7Lifetime1 = -55 / ((param3 + 61) / 63);
           while (var11.status == 0) {
-            ge.a(0, 10L);
+            ge.sleepMillis(0, 10L);
           }
           var8 = (java.awt.Frame) (var11.result);
           if (var8 == null) {

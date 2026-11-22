@@ -43,7 +43,7 @@ abstract class jb implements vb {
         if (this.b(14496)) {
           return null;
         }
-        if (350L + this.field_a > ud.a(2)) {
+        if (350L + this.field_a > ud.correctedCurrentTimeMillis(2)) {
           return null;
         }
         if (!param0) {
@@ -56,7 +56,7 @@ abstract class jb implements vb {
     abstract String d(int param0);
 
     public final void b(boolean param0) {
-        this.field_a = ud.a(2);
+        this.field_a = ud.correctedCurrentTimeMillis(2);
         if (!param0) {
           field_c = (String) null;
         }
@@ -120,7 +120,7 @@ abstract class jb implements vb {
         if (this.b(14496)) {
           return qf.field_d;
         }
-        if (!(ud.a(2) >= (350L + this.field_a))) {
+        if (!(ud.correctedCurrentTimeMillis(2) >= (350L + this.field_a))) {
           return in.field_g;
         }
         if (param0 == 21314) {

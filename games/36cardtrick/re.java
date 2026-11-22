@@ -1262,10 +1262,10 @@ final class re {
                   stackIn_92_0 = nb.field_e;
                 }
                 var4Lifetime1Lifetime1 = stackIn_92_0;
-                stackIn_95_0 = (rd.a(var4Lifetime1Lifetime1, 1266438832) <= 11) ? 0 : 1;
+                stackIn_95_0 = (rd.countSetBits(var4Lifetime1Lifetime1, 1266438832) <= 11) ? 0 : 1;
                 var5Lifetime1 = stackIn_95_0;
                 var6Lifetime1 = 40;
-                var7Lifetime1 = rd.a(var4Lifetime1Lifetime1, param1 + 1266438832);
+                var7Lifetime1 = rd.countSetBits(var4Lifetime1Lifetime1, param1 + 1266438832);
                 if (1 < var7Lifetime1) {
                   var8Lifetime1 = -1;
                   var9Lifetime1 = 0;

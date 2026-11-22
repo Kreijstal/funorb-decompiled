@@ -121,7 +121,7 @@ class PcmPlayerService {
         if (field_u) {
           var3 = var3 << 1;
         }
-        fk.a(param0, 0, var3);
+        fk.clearInts(param0, 0, var3);
         this.field_c = this.field_c - param1;
         if (this.field_f != null &&
           this.field_c <= 0) {
@@ -215,7 +215,7 @@ class PcmPlayerService {
         if (this.field_f != null) {
           this.field_f.a(param0, 0, param1);
         }
-        this.field_e = je.a(1);
+        this.field_e = je.correctedCurrentTimeMillis(1);
     }
 
     final synchronized void dispose() {
@@ -234,7 +234,7 @@ class PcmPlayerService {
           if (var1 != 0) {
             field_p.field_e = true;
             while (field_p.field_f) {
-              i.a((byte) 109, 50L);
+              i.sleepMillis((byte) 109, 50L);
             }
             field_p = null;
           }
@@ -300,7 +300,7 @@ class PcmPlayerService {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_k = je.a(1) + 2000L;
+            this.field_k = je.correctedCurrentTimeMillis(1) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -335,7 +335,7 @@ class PcmPlayerService {
           if (this.field_j) {
             return;
           }
-          var1 = je.a(1);
+          var1 = je.correctedCurrentTimeMillis(1);
           try {
             if (var1 > this.field_e + 6000L) {
               this.field_e = var1 - 6000L;
@@ -343,7 +343,7 @@ class PcmPlayerService {
             while (var1 > this.field_e + 5000L) {
               this.skipFrames(256);
               this.field_e = this.field_e + (long)(256000 / field_s);
-              var1 = je.a(1);
+              var1 = je.correctedCurrentTimeMillis(1);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_j = false;
         this.field_q = 32;
-        this.field_e = je.a(1);
+        this.field_e = je.correctedCurrentTimeMillis(1);
         this.field_n = true;
         this.field_m = 0L;
         this.field_o = 0;

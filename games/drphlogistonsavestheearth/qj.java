@@ -66,13 +66,13 @@ final class qj {
               field_b = (sa) null;
             }
             if (nj.field_p.position == 0 &&
-              la.a(false) > 10000L + ck.field_e) {
+              la.correctedCurrentTimeMillis(false) > 10000L + ck.field_e) {
               nj.field_p.d(param0, param1 ^ -32408);
             }
             if (nj.field_p.position > 0) {
               try {
                 uj.field_j.a(nj.field_p.position, -30537, nj.field_p.payload, 0);
-                ck.field_e = la.a(false);
+                ck.field_e = la.correctedCurrentTimeMillis(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

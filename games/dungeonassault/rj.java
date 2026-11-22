@@ -270,7 +270,7 @@ abstract class rj extends IntrusiveNode {
           if (0 == kf.field_m.status) {
             return false;
           }
-          long dupTemp$0 = kd.c(-2456);
+          long dupTemp$0 = kd.correctedCurrentTimeMillis(-2456);
           wh.field_e = dupTemp$0;
           qm.field_o = dupTemp$0;
           if (kf.field_m.status != 1) {

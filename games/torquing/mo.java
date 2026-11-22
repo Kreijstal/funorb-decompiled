@@ -95,7 +95,7 @@ final class mo extends am {
           if (param0 != 269) {
             mo.a(-117, true);
           }
-          long dupTemp$0 = km.b(-1);
+          long dupTemp$0 = km.correctedCurrentTimeMillis(-1);
           ak.field_k = dupTemp$0;
           rb.field_C = dupTemp$0;
           if (1 != rh.field_b.status) {

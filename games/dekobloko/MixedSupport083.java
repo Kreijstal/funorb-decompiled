@@ -416,7 +416,7 @@ final class MixedSupport083 {
               sceneWidgetLocal29 = MixedSupport121.sceneWidgetState0117;
             }
             if (SceneWidgetNode.longState0023 != 0L) {
-              integerLocal30 = (int)(SceneWidgetNode.longState0023 - MixedSupport062.computeLong0734(4));
+              integerLocal30 = (int)(SceneWidgetNode.longState0023 - MixedSupport062.correctedCurrentTimeMillis(4));
               integerLocal30 = (999 + integerLocal30) / 1000;
               if (integerLocal30 < 1) {
                 integerLocal30 = 1;

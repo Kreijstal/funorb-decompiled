@@ -132,8 +132,8 @@ final class tc extends PcmStream {
               if (var5 != 256) {
                 if (this.field_s != null &&
                   this.field_s.length >= var6) {
-                  cj.a(this.field_s, 0, var6);
-                  cj.a(this.field_y, 0, var6);
+                  cj.clearInts(this.field_s, 0, var6);
+                  cj.clearInts(this.field_y, 0, var6);
                 } else {
                   this.field_s = new int[var6];
                   this.field_y = new int[var6];
@@ -162,7 +162,7 @@ final class tc extends PcmStream {
             }
             if (this.field_s != null &&
               this.field_s.length >= var6) {
-              cj.a(this.field_s, 0, var6);
+              cj.clearInts(this.field_s, 0, var6);
             } else {
               this.field_y = new int[var6];
               this.field_s = new int[var6];

@@ -85,7 +85,7 @@ final class AudioSupport001 {
         int integerLocal41;
         int integerLocal42;
         int integerLocal43;
-        MixedSupport008.performAction0074(integerArrayState0124, 0, integerArgument1);
+        MixedSupport008.clearInts(integerArrayState0124, 0, integerArgument1);
         if (integerArgument2 < 10) {
           return integerArrayState0124;
         }

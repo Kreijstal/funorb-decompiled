@@ -44,7 +44,7 @@ final class im {
           if (qd.field_Q != pb.field_c) {
             return false;
           }
-          var2_long = sf.a((byte) 116);
+          var2_long = sf.correctedCurrentTimeMillis((byte) 116);
           if (SecondaryNodeDeque.field_f != param1 &&
             qh.field_a < 0) {
             var4_ref_jn = (jn) (mc.field_m.beginForward(74));

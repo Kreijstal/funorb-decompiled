@@ -83,7 +83,7 @@ final class td {
           if (param1) {
             return true;
           }
-          var2_long = rf.c(0);
+          var2_long = rf.correctedCurrentTimeMillis(0);
           if (0 != sc.field_f &&
             0 > kk.field_r) {
             stackIn_12_0 = eb.field_f;

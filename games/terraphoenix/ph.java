@@ -264,7 +264,7 @@ final class ph extends di {
           }
           var11 = param0.requestFullscreenEnter(param5, param2, true, param1, param3);
           while (var11.status == 0) {
-            gi.a((byte) -63, 10L);
+            gi.sleepMillis((byte) -63, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

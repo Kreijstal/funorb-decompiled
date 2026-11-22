@@ -49,7 +49,7 @@ final class jj {
           }
           var12 = param0.requestFullscreenEnter(true, param2, param1, param5, param4);
           while (var12.status == 0) {
-            ub.a(1976, 10L);
+            ub.sleepMillis(1976, 10L);
           }
           if (param3 != 0) {
             var10 = (PlatformTaskDispatcher) null;

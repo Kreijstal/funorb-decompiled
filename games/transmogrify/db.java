@@ -30,7 +30,7 @@ final class db {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.field_m.peekEvent()) {
-              pg.a(1L, -101);
+              pg.sleepMillis(1L, -101);
               continue;
             }
             break;

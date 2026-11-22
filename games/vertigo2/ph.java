@@ -79,7 +79,7 @@ final class ph extends IntrusiveNode {
           stackIn_31_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param0.field_tc = param2.readUnsignedShort((byte) -11);
-          param0.field_Pb = gk.a(94) - (long)param2.readInt(param1);
+          param0.field_Pb = gk.correctedCurrentTimeMillis(94) - (long)param2.readInt(param1);
           if (var5 != 0) {
             param0.field_Yb = param2.readInt(true);
           } else {

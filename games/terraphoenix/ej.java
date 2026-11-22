@@ -354,7 +354,7 @@ class ej extends eb {
               this.field_K = var6;
             }
           }
-          this.field_P = ll.a(1000);
+          this.field_P = ll.correctedCurrentTimeMillis(1000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -399,7 +399,7 @@ class ej extends eb {
         if (this.field_K != this.field_T) {
           var8.b(0, param3, param0, (UiWidget) (this), this.field_K, this.field_T);
         }
-        var6 = ll.a(1000);
+        var6 = ll.correctedCurrentTimeMillis(1000);
         if ((var6 - this.field_P) % 1000L < 500L) {
           var8.a(this.field_K, param3, (UiWidget) (this), param0, -32135);
         }
@@ -442,7 +442,7 @@ class ej extends eb {
           this.field_U = param2;
           this.a(true, (byte) -120, param0);
           this.field_W = true;
-          this.field_P = ll.a(1000);
+          this.field_P = ll.correctedCurrentTimeMillis(1000);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -498,7 +498,7 @@ class ej extends eb {
               stackIn_6_2 = 0;
             }
             this.a((byte) stackIn_5_1, stackIn_6_2);
-            var8_long = ll.a(1000);
+            var8_long = ll.correctedCurrentTimeMillis(1000);
             stackIn_9_1 = !(250L <= -this.field_Q + var8_long);
             this.field_O = stackIn_9_1;
             if (this.field_O) {
@@ -566,7 +566,7 @@ class ej extends eb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_P = ll.a(1000);
+          this.field_P = ll.correctedCurrentTimeMillis(1000);
           if (60 == param0) {
             return false;
           }

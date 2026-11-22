@@ -102,26 +102,26 @@ final class SecondaryNodeDeque implements Iterable {
         throw new Error();
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         if (0L >= param0) {
           return;
         }
         if (param1 != 19406) {
           SecondaryNodeDeque.clearStaticReferences((byte) -4);
           if (param0 % 10L == 0L) {
-            ba.a((byte) -123, -1L + param0);
-            ba.a((byte) -126, 1L);
+            ba.sleepIgnoringInterrupts((byte) -123, -1L + param0);
+            ba.sleepIgnoringInterrupts((byte) -126, 1L);
             return;
           }
-          ba.a((byte) -102, param0);
+          ba.sleepIgnoringInterrupts((byte) -102, param0);
           return;
         }
         if (param0 % 10L == 0L) {
-          ba.a((byte) -123, -1L + param0);
-          ba.a((byte) -126, 1L);
+          ba.sleepIgnoringInterrupts((byte) -123, -1L + param0);
+          ba.sleepIgnoringInterrupts((byte) -126, 1L);
           return;
         }
-        ba.a((byte) -102, param0);
+        ba.sleepIgnoringInterrupts((byte) -102, param0);
     }
 
     static {

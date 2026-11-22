@@ -17,7 +17,7 @@ final class hj extends jc {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int countSetBits(boolean param0, int param1) {
         param1 = (-715827883 & param1 >>> 1) + (1431655765 & param1);
         param1 = (858993459 & param1) + (1932735283 & param1 >>> 2);
         param1 = 252645135 & (param1 >>> 4) + param1;

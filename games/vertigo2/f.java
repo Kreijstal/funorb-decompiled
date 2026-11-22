@@ -186,7 +186,7 @@ final class f extends TextureOperator {
               var2.writeInt(rf.field_q, 0);
               fn.field_y.a(0, 13, 127, var2.payload);
               al.field_t = al.field_t + 1;
-              pq.field_e = 30000L + gk.a(param0 + 60);
+              pq.field_e = 30000L + gk.correctedCurrentTimeMillis(param0 + 60);
             }
             if (al.field_t == 3) {
               if (fn.field_y.a(15166) > 0) {
@@ -197,7 +197,7 @@ final class f extends TextureOperator {
                 }
                 al.field_t = al.field_t + 1;
               } else {
-                if (pq.field_e < gk.a(param0 + 75)) {
+                if (pq.field_e < gk.correctedCurrentTimeMillis(param0 + 75)) {
                   stackIn_26_0 = pl.a((byte) 11, -2);
                   return stackIn_26_0;
                 }

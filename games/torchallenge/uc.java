@@ -93,7 +93,7 @@ final class uc extends ng {
           }
           var8 = param1.requestDisplayModes(5);
           while (var8.status == 0) {
-            c.a(46, 10L);
+            c.sleepMillis(46, 10L);
           }
           if (param0 >= -75) {
             uc.a(-124);

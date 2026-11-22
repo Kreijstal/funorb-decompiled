@@ -62,13 +62,13 @@ final class AccountServiceResult {
               AccountServiceResult.a(36, 96);
             }
             if (q.outgoingPacket.position == 0 &&
-              10000L + co.field_e < kh.a(-64)) {
+              10000L + co.field_e < kh.correctedCurrentTimeMillis(-64)) {
               q.outgoingPacket.writeCipheredOpcode(44, param1);
             }
             if (0 < q.outgoingPacket.position) {
               try {
                 MidiNote.field_l.a(q.outgoingPacket.position, 0, 76, q.outgoingPacket.payload);
-                co.field_e = kh.a(-84);
+                co.field_e = kh.correctedCurrentTimeMillis(-84);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 Throwable decompiledCaughtException = decompiledCaughtParameter0;
                 IOException iOException = (IOException) (Object) decompiledCaughtException;

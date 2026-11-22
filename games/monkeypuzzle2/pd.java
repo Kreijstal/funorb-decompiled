@@ -231,7 +231,7 @@ final class pd {
           }
           var11 = param2.requestFullscreenEnter(param3, param5, false, param1, param4);
           while (var11.status == 0) {
-            em.a(10L, false);
+            em.sleepMillis(10L, false);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

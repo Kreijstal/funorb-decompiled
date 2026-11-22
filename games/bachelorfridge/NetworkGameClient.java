@@ -133,7 +133,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ih.e(param0 ^ 1);
             ns.a(vt.field_m, -11, var2);
             qe.field_l = true;
-            sja.field_hb = f.b((byte) 73) + 15000L;
+            sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
           }
         }
         return var2;
@@ -187,7 +187,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             ns.a(bja.field_m, -11, 2);
             MusicPatch.c((byte) -69);
             qe.field_l = true;
-            sja.field_hb = f.b((byte) 73) + 15000L;
+            sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
           }
         }
         if (AttackUpAllAnimation.field_x == -1 ||
@@ -203,7 +203,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (AttackUpAllAnimation.field_x != -1 &&
             AttackUpAllAnimation.field_x != 0) {
-            sja.field_hb = f.b((byte) 73) + 15000L;
+            sja.field_hb = f.correctedCurrentTimeMillis((byte) 73) + 15000L;
           }
         }
         if (-1 != AttackUpAllAnimation.field_x &&
@@ -253,7 +253,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((AttackUpAllAnimation.field_x != -1 &&
           AttackUpAllAnimation.field_x != 0 ||
           FlirtAnimation.d(11154)) &&
-          f.b((byte) 73) >= sja.field_hb) {
+          f.correctedCurrentTimeMillis((byte) 73) >= sja.field_hb) {
           qe.field_l = false;
           if (-1 != AttackUpAllAnimation.field_x &&
             0 != AttackUpAllAnimation.field_x) {

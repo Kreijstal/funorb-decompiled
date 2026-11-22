@@ -115,7 +115,7 @@ final class DiagnosticSupport001 extends IOException {
           }
           for (integerLocal1 = 0; integerLocal1 < 50; integerLocal1++) {
             if (null != platformServiceArgument3.eventQueueState0001.peekEvent()) {
-              MixedSupport125.performAction1620(1L, -128);
+              MixedSupport125.sleepMillis(1L, -128);
               continue;
             }
             break;

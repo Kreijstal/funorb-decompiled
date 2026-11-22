@@ -119,7 +119,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.field_g.peekEvent()) {
-              gi.a((byte) -78, 1L);
+              gi.sleepMillis((byte) -78, 1L);
               continue;
             }
             break;

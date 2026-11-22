@@ -21,11 +21,11 @@ final class p extends IntrusiveNode implements e {
 
     private final void a(Exception param0) {
         if (!field_e) {
-          field_f = kh.a(-115);
+          field_f = kh.correctedCurrentTimeMillis(-115);
           field_e = true;
           return;
         }
-        if (kh.a(-65) - field_f >= 30000L) {
+        if (kh.correctedCurrentTimeMillis(-65) - field_f >= 30000L) {
           throw new RuntimeException(param0.getMessage());
         }
         this.field_i.repaint();

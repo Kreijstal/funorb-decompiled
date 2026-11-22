@@ -5,7 +5,7 @@ final class rfa {
     static Sprite field_a;
     static UiComponent field_b;
 
-    final static int a(boolean param0, int param1) {
+    final static int countSetBits(boolean param0, int param1) {
         param1 = (param1 >>> 1 & 1431655765) + (1431655765 & param1);
         if (!param0) {
           param1 = (858993459 & param1) + (param1 >>> 2 & -214748365);

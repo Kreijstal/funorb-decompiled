@@ -192,7 +192,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             oj.field_g = 0;
             kg.field_a = param0.getX();
             SteeringMode.field_e = param0.getY();
-            kh.a(-125);
+            kh.correctedCurrentTimeMillis(-125);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               me.field_b = 2;
               AccountNameAvailabilityValidator.field_g = 2;

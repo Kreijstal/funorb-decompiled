@@ -773,15 +773,15 @@ final class gi {
         }
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleepMillis(byte param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
         if (0L != param1 % 10L) {
-          RasterBuffer.a(param1, 0);
+          RasterBuffer.sleepIgnoringInterrupts(param1, 0);
         } else {
-          RasterBuffer.a(-1L + param1, 0);
-          RasterBuffer.a(1L, 0);
+          RasterBuffer.sleepIgnoringInterrupts(-1L + param1, 0);
+          RasterBuffer.sleepIgnoringInterrupts(1L, 0);
         }
         if (param0 >= -25) {
           field_r = (qf) null;

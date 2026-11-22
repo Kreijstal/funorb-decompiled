@@ -103,8 +103,8 @@ final class oj extends PcmStream {
               if (var5 != 256) {
                 if (null != this.field_q &&
                   this.field_q.length >= var6) {
-                  ji.a(this.field_q, 0, var6);
-                  ji.a(this.field_r, 0, var6);
+                  ji.clearInts(this.field_q, 0, var6);
+                  ji.clearInts(this.field_r, 0, var6);
                 } else {
                   this.field_q = new int[var6];
                   this.field_r = new int[var6];
@@ -133,7 +133,7 @@ final class oj extends PcmStream {
             this.field_x != 0) {
             if (this.field_q != null &&
               var6 <= this.field_q.length) {
-              ji.a(this.field_q, 0, var6);
+              ji.clearInts(this.field_q, 0, var6);
             } else {
               this.field_r = new int[var6];
               this.field_q = new int[var6];

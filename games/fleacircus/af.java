@@ -512,7 +512,7 @@ final class af implements Runnable {
         try {
           var2 = param0.requestThreadStart(4532, (Runnable) (this), 5);
           while (var2.status == 0) {
-            vh.a(10L, -101);
+            vh.sleepMillis(10L, -101);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

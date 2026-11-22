@@ -2426,7 +2426,7 @@ final class be {
         field_f = param3 - param1;
         be.c();
         if (field_n.length < field_f) {
-          field_n = new int[qm.a((byte) -106, field_f)];
+          field_n = new int[qm.roundUpPowerOfTwo((byte) -106, field_f)];
         }
         int var4 = param1 * SoftwareRasterizer.field_j + param0;
         for (var5 = 0; var5 < field_f; var5++) {

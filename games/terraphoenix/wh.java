@@ -280,7 +280,7 @@ final class wh implements Runnable {
         try {
           var2 = param0.requestThread((Runnable) (this), (byte) -21, 5);
           while (0 == var2.status) {
-            gi.a((byte) -37, 10L);
+            gi.sleepMillis((byte) -37, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

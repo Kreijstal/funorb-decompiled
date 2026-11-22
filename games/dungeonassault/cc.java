@@ -315,7 +315,7 @@ final class cc implements Runnable {
         try {
           var2 = param0.requestThreadStart(-21432, 5, (Runnable) (this));
           while (var2.status == 0) {
-            CombatState.a(0, 10L);
+            CombatState.sleepMillis(0, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

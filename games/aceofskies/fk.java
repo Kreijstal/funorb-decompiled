@@ -15,12 +15,12 @@ final class fk {
           field_a = (byte[][]) null;
           return;
         }
-        fk.a(-27, -84);
+        fk.roundUpPowerOfTwo(-27, -84);
         field_b = null;
         field_a = (byte[][]) null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

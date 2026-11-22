@@ -1199,7 +1199,7 @@ public final class Main extends c {
                 break scanLoop1;
               }
               if (stackIn_15_0 != stackIn_8_1) {
-                wk.a((byte) -107, 1L);
+                wk.sleepMillis((byte) -107, 1L);
                 var3_int++;
                 continue;
               }
@@ -2655,7 +2655,7 @@ public final class Main extends c {
             return false;
           }
           var2_int = -64 % ((-32 - param0) / 49);
-          var3 = id.a(96);
+          var3 = id.correctedCurrentTimeMillis(96);
           if (qf.field_G != 0 &&
             vd.field_u < 0) {
             var5_ref_kf = (kf) (jl.field_e.beginForward((byte) 74));

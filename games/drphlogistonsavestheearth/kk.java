@@ -142,18 +142,18 @@ final class kk {
         }
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void sleepMillis(long param0, boolean param1) {
         if (0L >= param0) {
           return;
         }
         if (param0 % 10L == 0L) {
-          lh.b(param0 - 1L, (byte) 120);
-          lh.b(1L, (byte) -3);
+          lh.sleepIgnoringInterrupts(param0 - 1L, (byte) 120);
+          lh.sleepIgnoringInterrupts(1L, (byte) -3);
         } else {
-          lh.b(param0, (byte) -124);
+          lh.sleepIgnoringInterrupts(param0, (byte) -124);
         }
         if (!param1) {
-          kk.a(-113L, false);
+          kk.sleepMillis(-113L, false);
         }
     }
 

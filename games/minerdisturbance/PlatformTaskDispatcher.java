@@ -163,13 +163,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var9.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (sf.a((byte) 116) < field_l) {
+                    if (sf.correctedCurrentTimeMillis((byte) 116) < field_l) {
                       throw new IOException();
                     }
                     var9.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.objectArgument)), var9.intArgument);
                     break;
                   case 22:
-                    if (field_l > sf.a((byte) 99)) {
+                    if (field_l > sf.correctedCurrentTimeMillis((byte) 99)) {
                       throw new IOException();
                     }
                     try {
@@ -212,7 +212,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 21:
-                        if (field_l > sf.a((byte) -38)) {
+                        if (field_l > sf.correctedCurrentTimeMillis((byte) -38)) {
                           throw new IOException();
                         }
                         var9.result = java.net.InetAddress.getByName((String) (var9.objectArgument)).getAddress();
@@ -308,7 +308,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var9.result = var3_ref3;
                         break;
                       case 3:
-                        if (field_l > sf.a((byte) 113)) {
+                        if (field_l > sf.correctedCurrentTimeMillis((byte) 113)) {
                           throw new IOException();
                         }
                         var12 = (255 & var9.intArgument >> 24) + "." + ((var9.intArgument & 16776460) >> 16) + "." + ((var9.intArgument & 65306) >> 8) + "." + (255 & var9.intArgument);
@@ -326,7 +326,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var9.result = var10.getContents((Object) null);
                     break;
                   case 4:
-                    if (sf.a((byte) 126) < field_l) {
+                    if (sf.correctedCurrentTimeMillis((byte) 126) < field_l) {
                       throw new IOException();
                     }
                     var9.result = new DataInputStream(((java.net.URL) (var9.objectArgument)).openStream());

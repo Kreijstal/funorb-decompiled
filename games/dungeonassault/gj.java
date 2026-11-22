@@ -139,7 +139,7 @@ abstract class gj {
         if (var4 <= 0L) {
           return this.b(param0, 2048);
         }
-        CombatState.a(0, var4);
+        CombatState.sleepMillis(0, var4);
         return this.b(param0, 2048);
     }
 

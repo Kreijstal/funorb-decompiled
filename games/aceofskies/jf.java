@@ -8,13 +8,13 @@ final class jf implements ir {
     final static boolean a(int param0) {
         if (param0 == 15000) {
           v.field_a = true;
-          wg.field_b = kh.a(param0 - 15076) + 15000L;
+          wg.field_b = kh.correctedCurrentTimeMillis(param0 - 15076) + 15000L;
           return SoundCache.field_d == 11 ? true : false;
         }
         ResourceArchive var2 = (ResourceArchive) null;
         jf.a(83, (ResourceArchive) null, (ResourceArchive) null);
         v.field_a = true;
-        wg.field_b = kh.a(param0 - 15076) + 15000L;
+        wg.field_b = kh.correctedCurrentTimeMillis(param0 - 15076) + 15000L;
         return SoundCache.field_d == 11 ? true : false;
     }
 

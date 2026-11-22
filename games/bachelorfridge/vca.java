@@ -31,11 +31,11 @@ final class vca extends IntrusiveNode {
     final static void c(boolean param0) {
         if (!param0) {
           vca.c(true);
-          DessertArenaTheme.field_g = f.b((byte) 73);
+          DessertArenaTheme.field_g = f.correctedCurrentTimeMillis((byte) 73);
           qla.field_f = 0;
           return;
         }
-        DessertArenaTheme.field_g = f.b((byte) 73);
+        DessertArenaTheme.field_g = f.correctedCurrentTimeMillis((byte) 73);
         qla.field_f = 0;
     }
 

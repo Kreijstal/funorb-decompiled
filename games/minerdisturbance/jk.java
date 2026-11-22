@@ -171,7 +171,7 @@ abstract class jk extends wf {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param1.field_p.peekEvent()) {
-              gf.a(1L, -10309);
+              gf.sleepMillis(1L, -10309);
               continue;
             }
             break;

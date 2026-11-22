@@ -366,12 +366,12 @@ final class Level {
           return false;
         }
         if (0 < this.field_a.size(false)) {
-          var2 = km.b(-1);
+          var2 = km.correctedCurrentTimeMillis(-1);
           var4 = (lm) ((Object) this.field_a.beginBackward(0));
           while (var4 != null) {
             this.field_g.a(var4);
             ((IntrusiveNode) ((Object) var4)).unlink(0);
-            if (50L >= -var2 + km.b(-1)) {
+            if (50L >= -var2 + km.correctedCurrentTimeMillis(-1)) {
               var4 = (lm) ((Object) this.field_a.nextBackward(-24059));
               continue;
             }
@@ -379,7 +379,7 @@ final class Level {
           }
           return false;
         }
-        var2Lifetime1 = km.b(-1);
+        var2Lifetime1 = km.correctedCurrentTimeMillis(-1);
         if (this.field_k == null) {
           this.field_k = this.field_g.a(0);
         }
@@ -404,7 +404,7 @@ final class Level {
             if (5 > var4_int) {
               continue;
             }
-            if (50L >= km.b(param0 - 2) - var2Lifetime1) {
+            if (50L >= km.correctedCurrentTimeMillis(param0 - 2) - var2Lifetime1) {
               continue;
             }
             return false;
@@ -903,7 +903,7 @@ final class Level {
           }
           this.field_w = this.field_w + 20;
           for (var11Lifetime1 = 0; var7 > var11Lifetime1; var11Lifetime1++) {
-            dk.a(var34, 0, var7);
+            dk.clearInts(var34, 0, var7);
             var35 = var37[var11Lifetime1];
             var32 = var35;
             var28 = var32;

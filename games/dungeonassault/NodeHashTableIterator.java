@@ -143,7 +143,7 @@ final class NodeHashTableIterator implements Iterator {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param0.field_e.peekEvent()) {
-              CombatState.a(0, 1L);
+              CombatState.sleepMillis(0, 1L);
               continue;
             }
             break;

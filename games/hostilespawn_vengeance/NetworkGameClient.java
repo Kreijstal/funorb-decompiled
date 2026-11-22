@@ -135,7 +135,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         cf.b(true);
         la.a(var2, km.field_x, (byte) 65);
         i.field_d = true;
-        dh.field_c = 15000L + hn.a((byte) 80);
+        dh.field_c = 15000L + hn.correctedCurrentTimeMillis((byte) 80);
         return var2;
     }
 
@@ -566,7 +566,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             la.a(2, vf.field_G, (byte) 110);
             qg.b((byte) 111);
             i.field_d = true;
-            dh.field_c = hn.a((byte) 80) + 15000L;
+            dh.field_c = hn.correctedCurrentTimeMillis((byte) 80) + 15000L;
           }
         }
         if (rj.field_H == -1 ||
@@ -582,7 +582,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (-1 != rj.field_H &&
             rj.field_H != 0) {
-            dh.field_c = 15000L + hn.a((byte) 80);
+            dh.field_c = 15000L + hn.correctedCurrentTimeMillis((byte) 80);
           }
         }
         if (rj.field_H != -1 &&
@@ -635,7 +635,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((rj.field_H != -1 &&
           rj.field_H != 0 ||
           ig.c(false)) &&
-          hn.a((byte) 80) >= dh.field_c) {
+          hn.correctedCurrentTimeMillis((byte) 80) >= dh.field_c) {
           i.field_d = false;
           if (rj.field_H != -1 &&
             rj.field_H != 0) {

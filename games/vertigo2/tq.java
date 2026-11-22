@@ -177,7 +177,7 @@ final class tq {
                 var8_ref_bs = new bs(var20, var21, var3_long);
                 GameShell.field_l.put(var8_ref_bs, var3_long, 61);
               }
-              var8_ref_bs.field_Jb = gk.a(53) - (long)((PacketBuffer) ((Object) var1)).readInt(true);
+              var8_ref_bs.field_Jb = gk.correctedCurrentTimeMillis(53) - (long)((PacketBuffer) ((Object) var1)).readInt(true);
               var8_ref_bs.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -11);
               var10 = ((PacketBuffer) ((Object) var1)).a(false);
               var8_ref_bs.field_Mb = var10 >> 1;
@@ -328,7 +328,7 @@ final class tq {
                       Archive.field_h = 0L;
                       return;
                     }
-                    Archive.field_h = (long)var3Lifetime5 + gk.a(102);
+                    Archive.field_h = (long)var3Lifetime5 + gk.correctedCurrentTimeMillis(102);
                     return;
                   }
                   if (var2 == 22) {

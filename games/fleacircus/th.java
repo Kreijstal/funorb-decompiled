@@ -240,8 +240,8 @@ final class th extends sh {
               if (var5 != 256) {
                 if (this.field_q != null &&
                   var6 <= this.field_q.length) {
-                  dm.a(this.field_q, 0, var6);
-                  dm.a(this.field_p, 0, var6);
+                  dm.clearInts(this.field_q, 0, var6);
+                  dm.clearInts(this.field_p, 0, var6);
                 } else {
                   this.field_p = new int[var6];
                   this.field_q = new int[var6];
@@ -272,7 +272,7 @@ final class th extends sh {
             }
             if (null != this.field_q &&
               this.field_q.length >= var6) {
-              dm.a(this.field_q, 0, var6);
+              dm.clearInts(this.field_q, 0, var6);
             } else {
               this.field_q = new int[var6];
               this.field_p = new int[var6];

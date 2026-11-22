@@ -255,7 +255,7 @@ final class ec implements Runnable {
                 var2.serviceOutput();
               }
             }
-            vh.a(10L, -108);
+            vh.sleepMillis(10L, -108);
             aj.a((byte) -60, (Object) null, this.field_f);
           }
         } catch (Exception exception) {

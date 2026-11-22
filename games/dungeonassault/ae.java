@@ -373,7 +373,7 @@ final class ae {
               }
               stackIn_47_0[stackIn_47_1] = stackIn_50_2;
             }
-            GameAppletShell.field_d = kd.c(-2456);
+            GameAppletShell.field_d = kd.correctedCurrentTimeMillis(-2456);
           }
           d.field_g.field_i = n.field_g.length;
           var3_intLifetime1 = 0;

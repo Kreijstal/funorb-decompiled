@@ -128,7 +128,7 @@ final class cl extends gb {
               }
             }
             this.field_j = 0;
-            this.field_k = la.a(false);
+            this.field_k = la.correctedCurrentTimeMillis(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -197,7 +197,7 @@ final class cl extends gb {
           cm var2Lifetime1;
           var16 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (null != this.field_r) {
-            var2_long = la.a(param0);
+            var2_long = la.correctedCurrentTimeMillis(param0);
             var4 = (int)(-this.field_k + var2_long);
             this.field_k = var2_long;
             if (200 < var4) {

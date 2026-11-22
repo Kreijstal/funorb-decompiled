@@ -55,7 +55,7 @@ final class fn extends IntrusiveNode {
               var2.writeInt((byte) 120, gd.field_y);
               mb.field_c.a((byte) 104, var2.payload, 13, 0);
               tl.field_m = tl.field_m + 1;
-              sk.field_a = 30000L + sf.a((byte) -54);
+              sk.field_a = 30000L + sf.correctedCurrentTimeMillis((byte) -54);
             }
             if (tl.field_m == 3) {
               if (mb.field_c.c(0) > 0) {
@@ -66,7 +66,7 @@ final class fn extends IntrusiveNode {
                 }
                 tl.field_m = tl.field_m + 1;
               } else {
-                if (sf.a((byte) -5) > sk.field_a) {
+                if (sf.correctedCurrentTimeMillis((byte) -5) > sk.field_a) {
                   stackIn_26_0 = tg.a(-2, -115);
                   return stackIn_26_0;
                 }

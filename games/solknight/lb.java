@@ -41,7 +41,7 @@ final class lb extends ld {
           field_W = (String) null;
         }
         rh.field_f = true;
-        kj.field_I = je.a(1) + 15000L;
+        kj.field_I = je.correctedCurrentTimeMillis(1) + 15000L;
         return fj.field_i == 11 ? true : false;
     }
 

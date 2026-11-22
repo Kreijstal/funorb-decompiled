@@ -153,7 +153,7 @@ final class kh {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        mk.a(field_e, 0, param0);
+        mk.clearInts(field_e, 0, param0);
         if (param1 < 10) {
           return field_e;
         }

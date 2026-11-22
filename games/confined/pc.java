@@ -424,7 +424,7 @@ final class pc implements Runnable {
         try {
           var2 = param0.requestThreadStart((byte) 66, (Runnable) (this), 5);
           while (var2.status == 0) {
-            jd.a(1, 10L);
+            jd.sleepMillis(1, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

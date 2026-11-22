@@ -86,7 +86,7 @@ final class me {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param0 = ((param0 & -1431655765) >>> 1) + (param0 & 1431655765);
         param0 = (858993459 & param0) + (1932735283 & param0 >>> 2);
         int var2 = 14 % ((-35 - param1) / 32);

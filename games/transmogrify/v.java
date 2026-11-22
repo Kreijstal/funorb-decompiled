@@ -42,7 +42,7 @@ final class v {
                 v.a(28);
               }
               if (param1.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + e.a(lk.a(0) + 94608000000L, (byte) -122) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + e.a(lk.correctedCurrentTimeMillis(0) + 94608000000L, (byte) -122) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

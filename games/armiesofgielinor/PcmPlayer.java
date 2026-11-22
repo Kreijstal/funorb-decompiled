@@ -92,7 +92,7 @@ class PcmPlayer {
           if (serviceEmpty != 0) {
             service.stopRequested = true;
             while (service.running) {
-              SpriteButtonPainter.a(50L, 0);
+              SpriteButtonPainter.sleepMillis(50L, 0);
             }
             service = null;
           }

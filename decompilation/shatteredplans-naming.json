@@ -8140,6 +8140,14 @@
       "renamedSymbol": "M:IntNode.clearStatics(I)V"
     },
     {
+      "symbol": "M:he.a(ZJ)V",
+      "originalName": "a",
+      "to": "sleepIgnoringInterrupts",
+      "evidence": "Call Thread.sleep with the original full long delay slot and catch InterruptedException as originally recovered. Retain pre/post sleep guards and side effects,early returns,recursive calls,arithmetic failures,outer unchecked rethrows and checked-Throwable wrapping. Complete original-body SHA256 83328180a1189190584bc777ed639fc9c646fcd5efcae732b9ccd456cf2082ba. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntNode.sleepIgnoringInterrupts(ZJ)V"
+    },
+    {
       "symbol": "M:hg.a(B)V",
       "originalName": "a",
       "to": "updateDiplomacy",
@@ -144926,7 +144934,7 @@
     },
     {
       "symbol": "L:he.a(ZJ)V#0",
-      "renamedSymbol": "L:IntNode.a(ZJ)V#0",
+      "renamedSymbol": "L:IntNode.sleepIgnoringInterrupts(ZJ)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -144937,7 +144945,7 @@
     },
     {
       "symbol": "L:he.a(ZJ)V#1",
-      "renamedSymbol": "L:IntNode.a(ZJ)V#1",
+      "renamedSymbol": "L:IntNode.sleepIgnoringInterrupts(ZJ)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -144948,7 +144956,7 @@
     },
     {
       "symbol": "L:he.a(ZJ)V#2",
-      "renamedSymbol": "L:IntNode.a(ZJ)V#2",
+      "renamedSymbol": "L:IntNode.sleepIgnoringInterrupts(ZJ)V#2",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -144959,7 +144967,7 @@
     },
     {
       "symbol": "L:he.a(ZJ)V#3",
-      "renamedSymbol": "L:IntNode.a(ZJ)V#3",
+      "renamedSymbol": "L:IntNode.sleepIgnoringInterrupts(ZJ)V#3",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -144970,7 +144978,7 @@
     },
     {
       "symbol": "L:he.a(ZJ)V#4",
-      "renamedSymbol": "L:IntNode.a(ZJ)V#4",
+      "renamedSymbol": "L:IntNode.sleepIgnoringInterrupts(ZJ)V#4",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -325623,9 +325631,9 @@
     },
     {
       "symbol": "M:he.a(ZJ)V",
-      "renamedSymbol": "M:IntNode.a(ZJ)V",
+      "renamedSymbol": "M:IntNode.sleepIgnoringInterrupts(ZJ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sleepIgnoringInterrupts",
       "declaration": {
         "file": "he.java",
         "start": 805,
@@ -385672,7 +385680,7 @@
     },
     {
       "symbol": "P:he.a(ZJ)V#0",
-      "renamedSymbol": "P:IntNode.a(ZJ)V#0",
+      "renamedSymbol": "P:IntNode.sleepIgnoringInterrupts(ZJ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385683,7 +385691,7 @@
     },
     {
       "symbol": "P:he.a(ZJ)V#1",
-      "renamedSymbol": "P:IntNode.a(ZJ)V#1",
+      "renamedSymbol": "P:IntNode.sleepIgnoringInterrupts(ZJ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -534380,7 +534388,7 @@
       "original": "he.java",
       "renamed": "IntNode.java",
       "inputSha256": "ff36a710518558f5d4d8896bf9beed2d63012829ad6543c14df016bf39e08eca",
-      "outputSha256": "3d6c2f15023872d15acda25fc936a3cd1d2fdd8366e862a1d8736f901d0d4387",
+      "outputSha256": "e4b26b71895adf04924694af3c86f7faf681173a83a85e053a48b92cd3d5d375",
       "edits": [
         {
           "start": 50,
@@ -534437,6 +534445,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 805,
+          "end": 806,
+          "symbol": "M:he.a(ZJ)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
         },
         {
           "start": 1622,
@@ -552190,7 +552205,7 @@
       "original": "jb.java",
       "renamed": "jb.java",
       "inputSha256": "b2084eb630c59543b68332968d131a59083f885ba62dcef561c98ecd597ed7f4",
-      "outputSha256": "4f684b9d45a024fe3cb74b4061ea870256bab50a88a97ea042699eec925908bd",
+      "outputSha256": "993766ecb1d7888edf78983061ff2808e1ad99c045d531bf5d9c87c553ffa638",
       "edits": [
         {
           "start": 283,
@@ -552221,6 +552236,13 @@
           "renamed": "IntNode"
         },
         {
+          "start": 893,
+          "end": 894,
+          "symbol": "M:he.a(ZJ)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
+        },
+        {
           "start": 926,
           "end": 928,
           "symbol": "C:he",
@@ -552228,11 +552250,25 @@
           "renamed": "IntNode"
         },
         {
+          "start": 929,
+          "end": 930,
+          "symbol": "M:he.a(ZJ)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
+        },
+        {
           "start": 978,
           "end": 980,
           "symbol": "C:he",
           "original": "he",
           "renamed": "IntNode"
+        },
+        {
+          "start": 981,
+          "end": 982,
+          "symbol": "M:he.a(ZJ)V",
+          "original": "a",
+          "renamed": "sleepIgnoringInterrupts"
         }
       ]
     },
@@ -712586,10 +712622,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "ac5f8f3064d220eb4734117454dc05e38cfbb1f0d6d1b2cec3ee2d8a443081aa",
+    "rulesSha256": "bbb861086a816e157d562291dfd54e819a68772c500e7ba2a36d07ea16b69548",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "c104da60de783245413b7e40719e305ac7a267890779ee003f8fed9e5903de5b",
+    "outputTreeSha256": "0bcc4c630a45bafb700a957d6334cdaf271d59e68da8c97e4864c8cd433cab5d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

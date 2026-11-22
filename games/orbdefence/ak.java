@@ -561,7 +561,7 @@ final class ak extends jl {
                   if (!this.field_u) {
                     return;
                   }
-                  if (ji.b(-40) < this.field_v) {
+                  if (ji.correctedCurrentTimeMillis(-40) < this.field_v) {
                     return;
                   }
                   var2_ref = (wj) (this.field_p.a((byte) 121));
@@ -594,7 +594,7 @@ final class ak extends jl {
             if (!this.field_u) {
               return;
             }
-            if (ji.b(-40) < this.field_v) {
+            if (ji.correctedCurrentTimeMillis(-40) < this.field_v) {
               return;
             }
             var2_refLifetime1 = (wj) (this.field_p.a((byte) 121));
@@ -612,7 +612,7 @@ final class ak extends jl {
               var2_refLifetime1 = (wj) (this.field_p.c((byte) -112));
             }
           }
-          this.field_v = 1000L + ji.b(-80);
+          this.field_v = 1000L + ji.correctedCurrentTimeMillis(-80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

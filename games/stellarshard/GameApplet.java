@@ -57,7 +57,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var9 = ic.field_d.requestThreadStart((Runnable) (this), 1, 0);
               while (true) {
                 if (var9.status == 0) {
-                  jj.a((byte) -127, 10L);
+                  jj.sleepMillis((byte) -127, 10L);
                   if (var10 == 0) {
                     continue;
                   }
@@ -352,7 +352,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = ih.a((byte) -98);
+          var2_long = ih.correctedCurrentTimeMillis((byte) -98);
           var4 = ce.field_c[qi.field_b];
           ce.field_c[qi.field_b] = var2_long;
           if (var4 != 0L &&
@@ -498,7 +498,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (gk.field_h != 0L) {
-                    stackIn_96_0 = compareLongs(ih.a((byte) -98), gk.field_h);
+                    stackIn_96_0 = compareLongs(ih.correctedCurrentTimeMillis((byte) -98), gk.field_h);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_96_0 >= 0)) {
@@ -616,7 +616,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           tl.field_d = false;
-          kk.field_m = ih.a((byte) -98);
+          kk.field_m = ih.correctedCurrentTimeMillis((byte) -98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -734,7 +734,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !qc.field_b) {
             of.field_F = true;
             if (wl.field_ab &&
-              ih.a((byte) -98) - kk.field_m > 1000L) {
+              ih.correctedCurrentTimeMillis((byte) -98) - kk.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < kg.field_H) {
@@ -826,7 +826,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 56) {
             return;
           }
-          var2_long = ih.a((byte) -98);
+          var2_long = ih.correctedCurrentTimeMillis((byte) -98);
           var4 = vg.field_t[bl.field_b];
           vg.field_t[bl.field_b] = var2_long;
           bl.field_b = bl.field_b + 1 & 31;
@@ -866,8 +866,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ProxySocketConnector.field_j &&
             !qc.field_b) {
-            gk.field_h = ih.a((byte) -98);
-            jj.a((byte) -127, 5000L);
+            gk.field_h = ih.correctedCurrentTimeMillis((byte) -98);
+            jj.sleepMillis((byte) -127, 5000L);
             fb.field_d = null;
             this.a(-1, false);
             return;
@@ -886,7 +886,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          gk.field_h = 4000L + ih.a((byte) -98);
+          gk.field_h = 4000L + ih.correctedCurrentTimeMillis((byte) -98);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ac.stop()");
         }

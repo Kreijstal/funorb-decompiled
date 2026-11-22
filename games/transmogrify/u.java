@@ -7,7 +7,7 @@ final class u {
     static int field_b;
     static AudioOutput field_a;
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;

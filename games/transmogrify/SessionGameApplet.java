@@ -119,7 +119,7 @@ abstract class SessionGameApplet extends GameApplet {
           je.a(-11);
           gb.a(var2, -89, Transmogrify.field_B);
           wi.field_p = true;
-          qf.field_b = lk.a(0) + 15000L;
+          qf.field_b = lk.correctedCurrentTimeMillis(0) + 15000L;
           if (param0 == 54) {
             return var2;
           }
@@ -444,7 +444,7 @@ abstract class SessionGameApplet extends GameApplet {
             gb.a(2, 88, IndexedSpriteState.field_a);
             IndexedSpriteState.b(true);
             wi.field_p = true;
-            qf.field_b = 15000L + lk.a(param0 - 10017);
+            qf.field_b = 15000L + lk.correctedCurrentTimeMillis(param0 - 10017);
           }
         }
         if (tb.field_a == -1 ||
@@ -460,7 +460,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
           if (tb.field_a != -1 &&
             tb.field_a != 0) {
-            qf.field_b = 15000L + lk.a(0);
+            qf.field_b = 15000L + lk.correctedCurrentTimeMillis(0);
           }
         }
         if (tb.field_a != -1 &&
@@ -510,7 +510,7 @@ abstract class SessionGameApplet extends GameApplet {
         if ((tb.field_a != -1 &&
           0 != tb.field_a ||
           vc.e(false)) &&
-          lk.a(0) >= qf.field_b) {
+          lk.correctedCurrentTimeMillis(0) >= qf.field_b) {
           wi.field_p = false;
           if (-1 != tb.field_a &&
             0 != tb.field_a) {

@@ -98,7 +98,7 @@ final class vi implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              bc.a(10L, (byte) -121);
+              bc.sleepMillis(10L, (byte) -121);
               var5 = (Object) null;
               ak.a(this.field_b, (byte) -37, (Object) null);
             }

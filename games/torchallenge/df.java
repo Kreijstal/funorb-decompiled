@@ -129,7 +129,7 @@ class df extends ng {
               var2.writeInt(mg.field_e, false);
               bl.field_V.a(13, 0, (byte) 120, var2.payload);
               nh.field_jb = nh.field_jb + 1;
-              il.field_m = 30000L + ol.a(256);
+              il.field_m = 30000L + ol.correctedCurrentTimeMillis(256);
             }
             if (param0 != 35) {
               stackIn_22_0 = 21;
@@ -144,7 +144,7 @@ class df extends ng {
                 }
                 nh.field_jb = nh.field_jb + 1;
               } else {
-                if (il.field_m < ol.a(256)) {
+                if (il.field_m < ol.correctedCurrentTimeMillis(256)) {
                   stackIn_28_0 = je.a(-2, true);
                   return stackIn_28_0;
                 }

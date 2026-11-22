@@ -69,7 +69,7 @@ final class ee extends IntrusiveNode {
           var1_int = th.field_J;
           var2 = 0;
           if (te.field_M == 2) {
-            var3_long = -fg.field_f + je.a(1);
+            var3_long = -fg.field_f + je.correctedCurrentTimeMillis(1);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;

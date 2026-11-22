@@ -401,7 +401,7 @@ final class lr extends d {
           }
           if (var3 == 0 &&
             2 == da.field_j) {
-            var4 = -qe.field_cb + gk.a(52);
+            var4 = -qe.field_cb + gk.correctedCurrentTimeMillis(52);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

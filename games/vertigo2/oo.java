@@ -1732,7 +1732,7 @@ final class oo {
         field_b = param3 - param1;
         oo.b();
         if (field_a.length < field_b) {
-          field_a = new int[qp.a(field_b, 65)];
+          field_a = new int[qp.roundUpPowerOfTwo(field_b, 65)];
         }
         int var4 = param1 * bi.field_e + param0;
         for (var5 = 0; var5 < field_b; var5++) {

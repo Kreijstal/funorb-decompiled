@@ -112,11 +112,11 @@ final class hf {
               var2.writeInt(uj.field_s, (byte) 40);
               AccountRequestState.field_a.a(13, var2.payload, 0, 0);
               ih.field_X = ih.field_X + 1;
-              GameClient.field_B = 30000L + fa.a(76);
+              GameClient.field_B = 30000L + fa.correctedCurrentTimeMillis(76);
             }
             if (ih.field_X == 3) {
               if (AccountRequestState.field_a.d(0) <= 0) {
-                if (GameClient.field_B < fa.a(125)) {
+                if (GameClient.field_B < fa.correctedCurrentTimeMillis(125)) {
                   stackIn_31_0 = qg.a(-23888, -2);
                   return stackIn_31_0;
                 }

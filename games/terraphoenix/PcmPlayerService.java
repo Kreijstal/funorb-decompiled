@@ -166,7 +166,7 @@ class PcmPlayerService {
         if (field_r) {
           var3 = var3 << 1;
         }
-        ka.a(param0, 0, var3);
+        ka.clearInts(param0, 0, var3);
         this.field_a = this.field_a - param1;
         if (this.field_i != null &&
           this.field_a <= 0) {
@@ -260,7 +260,7 @@ class PcmPlayerService {
         if (this.field_i != null) {
           this.field_i.a(param0, 0, param1);
         }
-        this.field_h = ll.a(1000);
+        this.field_h = ll.correctedCurrentTimeMillis(1000);
     }
 
     void writeMixBlock() throws Exception {
@@ -283,7 +283,7 @@ class PcmPlayerService {
           if (this.field_p) {
             return;
           }
-          var1 = ll.a(1000);
+          var1 = ll.correctedCurrentTimeMillis(1000);
           try {
             if (var1 > this.field_h + 6000L) {
               this.field_h = var1 - 6000L;
@@ -291,7 +291,7 @@ class PcmPlayerService {
             while (var1 > this.field_h + 5000L) {
               this.skipFrames(256);
               this.field_h = this.field_h + (long)(256000 / field_u);
-              var1 = ll.a(1000);
+              var1 = ll.correctedCurrentTimeMillis(1000);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -391,7 +391,7 @@ class PcmPlayerService {
           if (var1 != 0) {
             field_g.field_b = true;
             while (field_g.field_i) {
-              gi.a((byte) -66, 50L);
+              gi.sleepMillis((byte) -66, 50L);
             }
             field_g = null;
           }
@@ -404,7 +404,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_p = false;
         this.field_l = 32;
-        this.field_h = ll.a(1000);
+        this.field_h = ll.correctedCurrentTimeMillis(1000);
         this.field_n = 0;
         this.field_e = new PcmStream[8];
         this.field_k = 0;

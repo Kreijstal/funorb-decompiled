@@ -57,14 +57,14 @@ class rg extends lj {
         m var8 = (m) ((Object) this.field_q);
         if (this.field_H != this.field_F) {
           var8.a((UiWidget) (this), param1, param0, this.field_F, (byte) -49, this.field_H);
-          var6 = lk.a(0);
+          var6 = lk.correctedCurrentTimeMillis(0);
           if ((-this.field_C + var6) % 1000L < 500L) {
             var8.a(param0, this.field_H, param1, (UiWidget) (this), true);
           }
           var5Lifetime3 = 55 % ((77 - param3) / 34);
           return;
         }
-        var6Lifetime1 = lk.a(0);
+        var6Lifetime1 = lk.correctedCurrentTimeMillis(0);
         if ((-this.field_C + var6Lifetime1) % 1000L < 500L) {
           var8.a(param0, this.field_H, param1, (UiWidget) (this), true);
           var5Lifetime4 = 55 % ((77 - param3) / 34);
@@ -270,7 +270,7 @@ class rg extends lj {
           this.field_q = IterableNodeHashTable.field_e.field_f;
           this.a(param0, true, 1);
           this.field_J = true;
-          this.field_C = lk.a(0);
+          this.field_C = lk.correctedCurrentTimeMillis(0);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "rg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -367,7 +367,7 @@ class rg extends lj {
             stackIn_6_1 = var8_int;
           }
           this.a(stackIn_6_1, false);
-          var8_long = lk.a(param4 + 30386);
+          var8_long = lk.correctedCurrentTimeMillis(param4 + 30386);
           stackIn_9_1 = !(-this.field_K + var8_long >= 250L);
           this.field_A = stackIn_9_1;
           if (this.field_A) {
@@ -414,7 +414,7 @@ class rg extends lj {
                 this.field_H = var6;
               }
             }
-            this.field_C = lk.a(0);
+            this.field_C = lk.correctedCurrentTimeMillis(0);
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "rg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -432,7 +432,7 @@ class rg extends lj {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_C = lk.a(0);
+          this.field_C = lk.correctedCurrentTimeMillis(0);
           if (60 == param3) {
             return false;
           }

@@ -5,7 +5,7 @@ final class gd {
     static long field_a;
     static String[] field_b;
 
-    final static int a(boolean param0, int param1) {
+    final static int countSetBits(boolean param0, int param1) {
         param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> 1);
         param1 = (858993459 & param1) + (param1 >>> 2 & -214748365);
         param1 = param1 + (param1 >>> 4) & 252645135;

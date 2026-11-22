@@ -226,11 +226,11 @@ final class pg {
               var2.writeInt(IntrusiveDeque.field_a, false);
               qf.field_a.a(-28748, 0, 13, var2.payload);
               SocketConnector.field_f = SocketConnector.field_f + 1;
-              cj.field_c = 30000L + je.a(1);
+              cj.field_c = 30000L + je.correctedCurrentTimeMillis(1);
             }
             if (SocketConnector.field_f == 3) {
               if (qf.field_a.b(-30119) <= 0) {
-                if (cj.field_c < je.a(param0 ^ 82)) {
+                if (cj.field_c < je.correctedCurrentTimeMillis(param0 ^ 82)) {
                   stackIn_29_0 = ua.a(-2, (byte) -86);
                   return stackIn_29_0;
                 }

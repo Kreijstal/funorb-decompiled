@@ -20,7 +20,7 @@ abstract class vc {
         }
         long var4 = this.a(120);
         if (var4 > 0L) {
-          gi.a((byte) -93, var4);
+          gi.sleepMillis((byte) -93, var4);
         }
         return this.a(0, param0);
     }
@@ -63,7 +63,7 @@ abstract class vc {
                 var2_int = param1 - LevelEditor.field_j.position;
               }
               ig.field_e.a(LevelEditor.field_j.payload, var2_int, LevelEditor.field_j.position, (byte) 114);
-              dm.field_c = ll.a(1000);
+              dm.field_c = ll.correctedCurrentTimeMillis(1000);
               LevelEditor.field_j.position = LevelEditor.field_j.position + var2_int;
               if (param1 > LevelEditor.field_j.position) {
                 return false;

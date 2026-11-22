@@ -50,7 +50,7 @@ final class gl {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param1 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + uh.a((byte) -66, param1 * 1000L + gk.a(param0 ^ -95)) + "; Max-Age=" + param1;
+                var7Lifetime4 = var9 + "; Expires=" + uh.a((byte) -66, param1 * 1000L + gk.correctedCurrentTimeMillis(param0 ^ -95)) + "; Max-Age=" + param1;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

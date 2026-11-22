@@ -232,13 +232,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.requestType;
                 switch (var2_int) {
                   case 1:
-                    if (field_l > gk.a(126)) {
+                    if (field_l > gk.correctedCurrentTimeMillis(126)) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 4:
-                    if (field_l > gk.a(52)) {
+                    if (field_l > gk.correctedCurrentTimeMillis(52)) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -270,7 +270,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (field_l > gk.a(115)) {
+                        if (field_l > gk.correctedCurrentTimeMillis(115)) {
                           throw new IOException();
                         }
                         var15 = (var8.intArgument >> 24 & 255) + "." + ((16726532 & var8.intArgument) >> 16) + "." + (var8.intArgument >> 8 & 255) + "." + (var8.intArgument & 255);
@@ -367,7 +367,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (field_l > gk.a(101)) {
+                        if (field_l > gk.correctedCurrentTimeMillis(101)) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -387,7 +387,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (field_l > gk.a(61)) {
+                    if (field_l > gk.correctedCurrentTimeMillis(61)) {
                       throw new IOException();
                     }
                     try {

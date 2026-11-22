@@ -305,7 +305,7 @@ final class cd implements Runnable {
         try {
           var2 = param0.requestThreadStart((Runnable) (this), 5, 65535);
           while (var2.status == 0) {
-            pg.a(10L, -95);
+            pg.sleepMillis(10L, -95);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

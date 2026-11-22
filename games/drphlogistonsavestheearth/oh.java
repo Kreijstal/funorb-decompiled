@@ -52,7 +52,7 @@ final class oh {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (param0.field_x.peekEvent() != null) {
-              kk.a(1L, true);
+              kk.sleepMillis(1L, true);
               continue;
             }
             break;

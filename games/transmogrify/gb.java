@@ -106,7 +106,7 @@ final class gb {
           }
           var9 = param0.requestDisplayModes(-1);
           while (var9.status == 0) {
-            pg.a(10L, -126);
+            pg.sleepMillis(10L, -126);
           }
           if (var9.status == 2) {
             stackIn_10_0 = new nb[]{};

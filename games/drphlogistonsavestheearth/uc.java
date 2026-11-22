@@ -35,7 +35,7 @@ final class uc {
         field_h = param3 - param1;
         uc.a();
         if (field_g.length < field_h) {
-          field_g = new int[lg.a(2, field_h)];
+          field_g = new int[lg.roundUpPowerOfTwo(2, field_h)];
         }
         int var4 = param1 * wj.field_k + param0;
         for (var5 = 0; var5 < field_h; var5++) {

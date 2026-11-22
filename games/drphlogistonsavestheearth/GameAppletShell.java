@@ -50,7 +50,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         int var6_int = 0;
         java.awt.Insets var6 = null;
         try {
-          var2_long = la.a(false);
+          var2_long = la.correctedCurrentTimeMillis(false);
           var4 = ph.field_g[lf.field_a];
           ph.field_g[lf.field_a] = var2_long;
           lf.field_a = 31 & lf.field_a + 1;
@@ -212,7 +212,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (sf.field_j != 0L) {
-                    stackIn_100_0 = compareLongs(~la.a(false), ~sf.field_j);
+                    stackIn_100_0 = compareLongs(~la.correctedCurrentTimeMillis(false), ~sf.field_j);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -384,7 +384,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !ai.field_B) {
             eh.field_a = true;
             if (ug.field_x &&
-              -dc.field_c + la.a(false) > 1000L) {
+              -dc.field_c + la.correctedCurrentTimeMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (kj.field_a > var2.width) {
@@ -419,7 +419,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (hh.field_e == this &&
             !ai.field_B) {
-            sf.field_j = 4000L + la.a(false);
+            sf.field_j = 4000L + la.correctedCurrentTimeMillis(false);
             return;
           }
           return;
@@ -717,7 +717,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 <= 108) {
             return;
           }
-          dc.field_c = la.a(false);
+          dc.field_c = la.correctedCurrentTimeMillis(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -831,7 +831,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = la.a(false);
+          var2_long = la.correctedCurrentTimeMillis(false);
           var4 = wi.field_b[ge.field_f];
           wi.field_b[ge.field_f] = var2_long;
           if (0L != var4 &&
@@ -862,8 +862,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          sf.field_j = la.a(false);
-          kk.a(5000L, true);
+          sf.field_j = la.correctedCurrentTimeMillis(false);
+          kk.sleepMillis(5000L, true);
           n.field_h = null;
           this.a(0, false);
         } catch (RuntimeException runtimeException) {
@@ -916,7 +916,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var8 = sb.field_d.requestThreadStart((Runnable) (this), 1, (byte) -128);
               while (true) {
                 if (var8.status == 0) {
-                  kk.a(10L, true);
+                  kk.sleepMillis(10L, true);
                   if (var9 == 0) {
                     continue;
                   }

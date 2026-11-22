@@ -48,7 +48,7 @@ final class v {
             }
             SystemTask var4 = ((SystemTaskService) (Object) stackIn_16_0).requestUrlStream((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(SystemTaskService.field_o).append("&v2=").append(SystemTaskService.field_l).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              IntrusiveNode.a(1L, false);
+              IntrusiveNode.sleepMillis(1L, false);
             }
             if (var4.status == 1) {
               DataInputStream var5 = (DataInputStream) (var4.result);

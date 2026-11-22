@@ -191,7 +191,7 @@ final class nn {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var7).toString()));
             while (var4.status == 0) {
-              ub.a(1976, 1L);
+              ub.sleepMillis(1976, 1L);
             }
             if (param2 != -9958) {
               field_b = (byte) -127;

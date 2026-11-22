@@ -28,13 +28,13 @@ final class ak extends IntrusiveNode {
           if (null != oi.field_c && (param0 < 0 ||
             ek.field_h == gj.field_k)) {
             if (tp.field_f.position == 0 &&
-              (10000L + mp.field_p) < lo.a((byte) -118)) {
+              (10000L + mp.field_p) < lo.correctedCurrentTimeMillis((byte) -118)) {
               tp.field_f.d(8, param0);
             }
             if (tp.field_f.position > 0) {
               try {
                 oi.field_c.a(0, param1 ^ -116, tp.field_f.payload, tp.field_f.position);
-                mp.field_p = lo.a((byte) 90);
+                mp.field_p = lo.correctedCurrentTimeMillis((byte) 90);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

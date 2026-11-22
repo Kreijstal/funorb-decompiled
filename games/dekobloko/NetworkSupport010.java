@@ -21,11 +21,11 @@ final class NetworkSupport010 extends HashNode {
     final static boolean computeBoolean1256(int integerArgument1) {
         GzipDecompressor.booleanState0102 = true;
         if (integerArgument1 >= 55) {
-          MixedSupport075.longState0026 = 15000L + MixedSupport062.computeLong0734(4);
+          MixedSupport075.longState0026 = 15000L + MixedSupport062.correctedCurrentTimeMillis(4);
           return MixedSupport052.integerState0269 == 11 ? true : false;
         }
         NetworkSupport010.performAction1254(false, true);
-        MixedSupport075.longState0026 = 15000L + MixedSupport062.computeLong0734(4);
+        MixedSupport075.longState0026 = 15000L + MixedSupport062.correctedCurrentTimeMillis(4);
         return MixedSupport052.integerState0269 == 11 ? true : false;
     }
 

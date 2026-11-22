@@ -26,7 +26,7 @@ final class fb implements Runnable {
                 var2.serviceOutput();
               }
             }
-            kk.a(10L, true);
+            kk.sleepMillis(10L, true);
             Object var5 = (Object) null;
             oh.a(this.field_d, 1, (Object) null);
           }

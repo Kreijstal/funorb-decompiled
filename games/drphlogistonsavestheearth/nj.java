@@ -328,7 +328,7 @@ final class nj {
             field_o = (he) null;
           }
           while (var11.status == 0) {
-            kk.a(10L, true);
+            kk.sleepMillis(10L, true);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

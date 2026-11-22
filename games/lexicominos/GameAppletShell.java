@@ -99,7 +99,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var8 = jh.field_a.requestThreadStart((Runnable) (this), false, 1);
               while (true) {
                 if (var8.status == 0) {
-                  ge.a(0, 10L);
+                  ge.sleepMillis(0, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -146,7 +146,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (c.field_j == this &&
             !MouseWheelInput.field_d) {
-            rf.field_a = 4000L + rf.c(0);
+            rf.field_a = 4000L + rf.correctedCurrentTimeMillis(0);
             return;
           }
           return;
@@ -215,7 +215,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = rf.c(param0 - 1);
+          var2_long = rf.correctedCurrentTimeMillis(param0 - 1);
           var4 = f.field_i[qg.field_c];
           f.field_i[qg.field_c] = var2_long;
           qg.field_c = 31 & qg.field_c + param0;
@@ -311,7 +311,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !MouseWheelInput.field_d) {
             dl.field_b = true;
             if (eh.field_a &&
-              -mk.field_j + rf.c(0) > 1000L) {
+              -mk.field_j + rf.correctedCurrentTimeMillis(0) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (fi.field_j > var2.width) {
@@ -430,7 +430,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           vi.field_j = true;
           dl.field_b = true;
           rl.field_O = false;
-          mk.field_j = rf.c(0);
+          mk.field_j = rf.correctedCurrentTimeMillis(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -445,8 +445,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == c.field_j &&
             !MouseWheelInput.field_d) {
-            rf.field_a = rf.c(0);
-            ge.a(0, 5000L);
+            rf.field_a = rf.correctedCurrentTimeMillis(0);
+            ge.sleepMillis(0, 5000L);
             TriangleMesh.field_n = null;
             this.a(false, -23646);
             return;
@@ -682,7 +682,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (rf.field_a != 0L) {
-                    stackIn_102_0 = compareLongs(~rf.c(0), ~rf.field_a);
+                    stackIn_102_0 = compareLongs(~rf.correctedCurrentTimeMillis(0), ~rf.field_a);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -770,7 +770,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != 24344) {
             field_o = (db[]) null;
           }
-          var2_long = rf.c(param0 - 24344);
+          var2_long = rf.correctedCurrentTimeMillis(param0 - 24344);
           var4 = kj.field_q[gb.field_a];
           kj.field_q[gb.field_a] = var2_long;
           gb.field_a = 31 & gb.field_a + 1;

@@ -428,7 +428,7 @@ class ka extends pm {
     final static boolean h(byte param0) {
         ag.field_h = true;
         int var1 = -51 / ((param0 - 22) / 43);
-        ClientException.field_e = ri.a(-3) + 15000L;
+        ClientException.field_e = ri.correctedCurrentTimeMillis(-3) + 15000L;
         return IntrusiveNode.field_e == 11 ? true : false;
     }
 

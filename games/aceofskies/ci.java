@@ -167,7 +167,7 @@ final class ci extends hh {
         this.field_k = (in) null;
     }
 
-    final static void a(long param0, byte param1) {
+    final static void sleepIgnoringInterrupts(long param0, byte param1) {
         try {
           if (param1 < 73) {
             field_g = 121;

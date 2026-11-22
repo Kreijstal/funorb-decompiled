@@ -412,7 +412,7 @@ public final class Chess extends gb {
           }
           if (wg.field_B == 14) {
             de.a(-31645);
-            hg.a(rl.field_a.length, 1024, AccountServiceResult.a(false), ak.a(8, 1045), IntrusiveNode.b((byte) 19), ak.a(2000, 1045), true, 150, SecondaryNodeDeque.a(11520), ai.field_h);
+            hg.a(rl.field_a.length, 1024, AccountServiceResult.a(false), ak.roundUpPowerOfTwo(8, 1045), IntrusiveNode.b((byte) 19), ak.roundUpPowerOfTwo(2000, 1045), true, 150, SecondaryNodeDeque.a(11520), ai.field_h);
             il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
             wn.field_f = true;
             qk.field_h = -2;

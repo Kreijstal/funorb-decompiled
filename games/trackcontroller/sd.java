@@ -343,7 +343,7 @@ final class sd implements Runnable {
         try {
           var2 = param0.requestThreadStart(5, (Runnable) (this), 94);
           while (var2.status == 0) {
-            wl.a(10L, false);
+            wl.sleepMillis(10L, false);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

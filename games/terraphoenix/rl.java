@@ -9,11 +9,11 @@ final class rl {
     final static boolean b(int param0) {
         rf.field_r = true;
         if (param0 == 0) {
-          ah.field_z = 15000L + ll.a(param0 + 1000);
+          ah.field_z = 15000L + ll.correctedCurrentTimeMillis(param0 + 1000);
           return q.field_Jb == 11 ? true : false;
         }
         rl.clearStaticReferences(-78);
-        ah.field_z = 15000L + ll.a(param0 + 1000);
+        ah.field_z = 15000L + ll.correctedCurrentTimeMillis(param0 + 1000);
         return q.field_Jb == 11 ? true : false;
     }
 

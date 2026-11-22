@@ -506,7 +506,7 @@ class PacketBuffer extends IntrusiveNode {
           int var4 = -115 / ((param0 + 59) / 49);
           for (int var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param2.field_j.peekEvent()) {
-              IntrusiveNode.a(1L, false);
+              IntrusiveNode.sleepMillis(1L, false);
               continue;
             }
             break;

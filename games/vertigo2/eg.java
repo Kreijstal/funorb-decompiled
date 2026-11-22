@@ -42,7 +42,7 @@ final class eg extends tk {
             field_q = (String) null;
           }
           if (this.field_u != null) {
-            var2_long = gk.a(param0 + 3686);
+            var2_long = gk.correctedCurrentTimeMillis(param0 + 3686);
             var4 = (int)(-this.field_k + var2_long);
             if (var4 > 200) {
               var4 = 200;
@@ -301,7 +301,7 @@ final class eg extends tk {
               }
             }
             this.field_o = 0;
-            this.field_k = gk.a(111);
+            this.field_k = gk.correctedCurrentTimeMillis(111);
             var4_int = 76 / ((0 - param2) / 43);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {

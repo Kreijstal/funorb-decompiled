@@ -1959,7 +1959,7 @@ final class gf {
         }
     }
 
-    final static void a(long param0, int param1) {
+    final static void sleepMillis(long param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -1967,10 +1967,10 @@ final class gf {
             return;
           }
           if (param0 % 10L == 0L) {
-            ng.a(-1L + param0, 1855635080);
-            ng.a(1L, param1 + 1855645389);
+            ng.sleepIgnoringInterrupts(-1L + param0, 1855635080);
+            ng.sleepIgnoringInterrupts(1L, param1 + 1855645389);
           } else {
-            ng.a(param0, 1855635080);
+            ng.sleepIgnoringInterrupts(param0, 1855635080);
           }
           if (param1 != -10309) {
             field_a = (String[]) null;

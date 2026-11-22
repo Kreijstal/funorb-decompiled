@@ -82,7 +82,7 @@ final class fg {
               field_a = (String) null;
             }
             while (var4.status == 0) {
-              bc.a(1L, (byte) -92);
+              bc.sleepMillis(1L, (byte) -92);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);

@@ -97,7 +97,7 @@ final class ne {
           var1_int = fb.field_k;
           var2 = 0;
           if (ud.field_b == 2) {
-            var3_long = -fb.field_n + pf.a(0);
+            var3_long = -fb.field_n + pf.correctedCurrentTimeMillis(0);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

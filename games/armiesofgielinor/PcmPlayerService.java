@@ -36,7 +36,7 @@ final class PcmPlayerService implements Runnable {
                   player.pump();
                 }
               }
-              SpriteButtonPainter.a(10L, 0);
+              SpriteButtonPainter.sleepMillis(10L, 0);
               eventSource = (Object) null;
               MapTile.a(this.platformTasks, (Object) null, true);
             }

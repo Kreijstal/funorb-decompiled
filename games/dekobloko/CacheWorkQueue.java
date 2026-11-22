@@ -264,9 +264,9 @@ final class CacheWorkQueue implements Runnable {
         this.integerState0333 = 0;
         this.booleanState0080 = false;
         try {
-          asyncTaskLocal1 = platformServiceArgument1.computeAsyncTask0510((byte) -104, 5, (Runnable) (this));
+          asyncTaskLocal1 = platformServiceArgument1.startThread((byte) -104, 5, (Runnable) (this));
           while (0 == asyncTaskLocal1.integerState0510) {
-            MixedSupport125.performAction1620(10L, -128);
+            MixedSupport125.sleepMillis(10L, -128);
           }
           if (asyncTaskLocal1.integerState0510 == 2) {
             throw new RuntimeException();

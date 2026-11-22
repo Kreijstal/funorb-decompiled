@@ -38,7 +38,7 @@ final class di {
             var8 = (int[]) null;
             di.a((int[]) null, -88);
           }
-          var2_long = kd.c(-2456);
+          var2_long = kd.correctedCurrentTimeMillis(-2456);
           if (pm.field_p != 0 &&
             0 > pp.field_J) {
             var4_ref_ao = (ao) (MouseWheelInput.field_e.beginBackward(-24172));

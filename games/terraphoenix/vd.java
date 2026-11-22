@@ -20,7 +20,7 @@ final class vd extends PcmStream {
         return (PcmStream) ((Object) var1.field_k);
     }
 
-    final static int b(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

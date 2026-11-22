@@ -246,7 +246,7 @@ final class BufferedCacheFile {
             ic.field_t = ic.field_t + (bi.field_i >>> 11 << kb.field_b);
             fa.field_f = fa.field_f | 1 << kb.field_b;
             lc.field_h = lc.field_h | 1 << kb.field_b;
-            var1_int = IterableNodeHashTable.a(fa.field_f & 255, 126);
+            var1_int = IterableNodeHashTable.countSetBits(fa.field_f & 255, 126);
             vk.a(246, (byte) 89, 9);
             if (var1_int == 4) {
               vk.a(245, (byte) 89, 10);
@@ -260,7 +260,7 @@ final class BufferedCacheFile {
             ic.field_t = ic.field_t + (bi.field_i >>> 11 << kb.field_b + 8);
             fa.field_f = fa.field_f | 1 << kb.field_b + 8;
             lc.field_h = lc.field_h | 1 << kb.field_b + 8;
-            var1_intLifetime1 = IterableNodeHashTable.a(fa.field_f & 65280, 127);
+            var1_intLifetime1 = IterableNodeHashTable.countSetBits(fa.field_f & 65280, 127);
             vk.a(243, (byte) 89, 12);
             if (var1_intLifetime1 == 4) {
               vk.a(242, (byte) 89, 13);

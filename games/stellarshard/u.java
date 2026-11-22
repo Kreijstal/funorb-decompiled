@@ -19,7 +19,7 @@ final class u extends IntrusiveNode {
         field_l = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpPowerOfTwo(int param0, int param1) {
         if (param0 == 7527) {
           param1--;
           param1 = param1 | param1 >>> 1;
@@ -29,7 +29,7 @@ final class u extends IntrusiveNode {
           param1 = param1 | param1 >>> 16;
           return param1 + 1;
         }
-        u.a(-49, 96);
+        u.roundUpPowerOfTwo(-49, 96);
         param1--;
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;

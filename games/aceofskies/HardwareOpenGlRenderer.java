@@ -156,7 +156,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
               OpenGlRectangleTexture stackIn_12_0 = new OpenGlRectangleTexture(this, param2, param1, param5, param0, param6, param4);
               return (HardwareTexture2D) ((Object) stackIn_12_0);
             }
-            OpenGlTexture2D var10 = new OpenGlTexture2D(this, param2, BufferElementType.field_i, fk.a(param1, 57), fk.a(param5, 118));
+            OpenGlTexture2D var10 = new OpenGlTexture2D(this, param2, BufferElementType.field_i, fk.roundUpPowerOfTwo(param1, 57), fk.roundUpPowerOfTwo(param5, 118));
             var10.a(param0, (byte) -124, 0, 0, param6, param4, param5, param2, param1);
             OpenGlTexture2D stackIn_10_0 = var10;
             return (HardwareTexture2D) ((Object) stackIn_10_0);
@@ -380,7 +380,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           if (!this.field_zc && (!mg.a(param3, (byte) -58) ||
             !mg.a(param2, (byte) -64))) {
             if (!this.field_tc) {
-              OpenGlTexture2D stackIn_13_0 = new OpenGlTexture2D(this, param4, param0, fk.a(param3, 67), fk.a(param2, 78));
+              OpenGlTexture2D stackIn_13_0 = new OpenGlTexture2D(this, param4, param0, fk.roundUpPowerOfTwo(param3, 67), fk.roundUpPowerOfTwo(param2, 78));
               return (HardwareTexture2D) ((Object) stackIn_13_0);
             }
             OpenGlRectangleTexture stackIn_11_0 = new OpenGlRectangleTexture(this, param4, param0, param3, param2);
@@ -916,9 +916,9 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_f);
         }
         if (this.i((byte) -91) > 100663296 &&
-          kh.a(-72) > (60000L + this.field_xc)) {
+          kh.correctedCurrentTimeMillis(-72) > (60000L + this.field_xc)) {
           System.gc();
-          this.field_xc = kh.a(-59);
+          this.field_xc = kh.correctedCurrentTimeMillis(-59);
         }
         super.b(param0);
     }
@@ -1059,7 +1059,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
               OpenGlRectangleTexture stackIn_10_0 = new OpenGlRectangleTexture(this, param2, param0, param3, param7, param6, param5);
               return (HardwareTexture2D) ((Object) stackIn_10_0);
             }
-            OpenGlTexture2D var10 = new OpenGlTexture2D(this, param2, BufferElementType.field_h, fk.a(param0, 40), fk.a(param3, 103));
+            OpenGlTexture2D var10 = new OpenGlTexture2D(this, param2, BufferElementType.field_h, fk.roundUpPowerOfTwo(param0, 40), fk.roundUpPowerOfTwo(param3, 103));
             var10.a(0, param0, param6, param3, (byte) -29, param7, param2, 0, param5);
             OpenGlTexture2D stackIn_8_0 = var10;
             return (HardwareTexture2D) ((Object) stackIn_8_0);
@@ -1227,7 +1227,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
               OpenGlRectangleTexture stackIn_11_0 = new OpenGlRectangleTexture(this, param6, param3, param5, param0, param4);
               return (HardwareTexture2D) ((Object) stackIn_11_0);
             }
-            OpenGlTexture2D var9 = new OpenGlTexture2D(this, IterableNodeHashTable.field_g, BufferElementType.field_h, fk.a(param6, 25), fk.a(param3, 30));
+            OpenGlTexture2D var9 = new OpenGlTexture2D(this, IterableNodeHashTable.field_g, BufferElementType.field_h, fk.roundUpPowerOfTwo(param6, 25), fk.roundUpPowerOfTwo(param3, 30));
             var9.a((byte) -106, param0, 0, param4, param6, param3, 0, param5);
             OpenGlTexture2D stackIn_9_0 = var9;
             return (HardwareTexture2D) ((Object) stackIn_9_0);

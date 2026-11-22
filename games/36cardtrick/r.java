@@ -229,7 +229,7 @@ class r extends ek {
               var2_int = param0 - rd.field_j.position;
             }
             cb.field_j.a((byte) 66, rd.field_j.payload, var2_int, rd.field_j.position);
-            uk.field_a = id.a(71);
+            uk.field_a = id.correctedCurrentTimeMillis(71);
             rd.field_j.position = rd.field_j.position + var2_int;
             if (param0 > rd.field_j.position) {
               return false;

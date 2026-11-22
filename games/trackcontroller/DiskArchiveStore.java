@@ -99,7 +99,7 @@ final class DiskArchiveStore {
                 var2_int = -ne.field_a.position + param0;
               }
               r.field_i.a(ne.field_a.payload, 0, var2_int, ne.field_a.position);
-              he.field_a = qg.a(false);
+              he.field_a = qg.correctedCurrentTimeMillis(false);
               ne.field_a.position = ne.field_a.position + var2_int;
               if (ne.field_a.position < param0) {
                 return false;

@@ -312,7 +312,7 @@ final class vh extends eh {
               }
             }
             this.field_l = 0;
-            this.field_e = dd.b(121);
+            this.field_e = dd.correctedCurrentTimeMillis(121);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -582,7 +582,7 @@ final class vh extends eh {
           var16 = StarCannon.field_A;
           try {
             if (null != this.field_r) {
-              var2_long = dd.b(82);
+              var2_long = dd.correctedCurrentTimeMillis(82);
               var4 = (int)(-this.field_e + var2_long);
               if (var4 > 200) {
                 var4 = 200;

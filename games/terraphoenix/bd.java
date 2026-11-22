@@ -189,7 +189,7 @@ final class bd {
             }
             var5 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var11).toString()), -71);
             while (var5.status == 0) {
-              gi.a((byte) -122, 1L);
+              gi.sleepMillis((byte) -122, 1L);
             }
             if (var5.status == 1) {
               var6 = (DataInputStream) (var5.result);

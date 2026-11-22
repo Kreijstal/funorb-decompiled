@@ -22,7 +22,7 @@ final class kc implements Runnable {
                 var2.serviceOutput();
               }
             }
-            gda.a(false, 10L);
+            gda.sleepMillis(false, 10L);
             Object var5 = (Object) null;
             he.a(this.field_c, false, (Object) null);
           }

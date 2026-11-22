@@ -25,10 +25,10 @@ abstract class lg {
           while (true) {
             var3 = param0.requestFullscreenExit(-3816, param2);
             while (var3.status == 0) {
-              c.a(-112, 10L);
+              c.sleepMillis(-112, 10L);
             }
             if (1 != var3.status) {
-              c.a(-108, 100L);
+              c.sleepMillis(-108, 100L);
               continue;
             }
             break;

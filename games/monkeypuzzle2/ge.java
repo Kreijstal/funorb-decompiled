@@ -498,9 +498,9 @@ final class ge {
         var29 = field_e;
         var26 = var29;
         var11 = var26;
-        gl.a(var27, 0, param8);
-        gl.a(var28, 0, param8);
-        gl.a(var29, 0, param8);
+        gl.clearInts(var27, 0, param8);
+        gl.clearInts(var28, 0, param8);
+        gl.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

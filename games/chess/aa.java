@@ -439,10 +439,10 @@ final class aa {
               if (param1 == ~param2.length()) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                 if (Chess.field_G != 0) {
-                  var5Lifetime6 = var5Lifetime6 + "; Expires=" + sk.a(5, 94608000000L + ud.a(2)) + "; Max-Age=" + 94608000L;
+                  var5Lifetime6 = var5Lifetime6 + "; Expires=" + sk.a(5, 94608000000L + ud.correctedCurrentTimeMillis(2)) + "; Max-Age=" + 94608000L;
                 }
               } else {
-                var5Lifetime6 = var5Lifetime6 + "; Expires=" + sk.a(5, 94608000000L + ud.a(2)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var5Lifetime6 + "; Expires=" + sk.a(5, 94608000000L + ud.correctedCurrentTimeMillis(2)) + "; Max-Age=" + 94608000L;
               }
               u.a((byte) -81, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

@@ -1323,7 +1323,7 @@ final class vl extends PcmStream {
           var6 = stackIn_31_0;
           param0.readBytes(param1.field_sc.length, (byte) 125, param1.field_sc, 0);
           param1.field_Ub = param0.readUnsignedShort(674914976);
-          param1.field_Jb = ud.a(2) - (long)param0.readInt((byte) -104);
+          param1.field_Jb = ud.correctedCurrentTimeMillis(2) - (long)param0.readInt((byte) -104);
           if (var5 == 0) {
             param1.field_pc = -1;
           } else {

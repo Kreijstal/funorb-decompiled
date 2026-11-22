@@ -6,7 +6,7 @@ final class fa {
     static int field_c;
     static boolean field_a;
 
-    final synchronized static long a(int param0) {
+    final synchronized static long correctedCurrentTimeMillis(int param0) {
         int var3 = 0;
         long var1 = System.currentTimeMillis();
         int var3Lifetime1;
@@ -25,7 +25,7 @@ final class fa {
         Boolean var1 = null;
         Boolean var1Lifetime1;
         if (param0 != 1) {
-          fa.a(-89);
+          fa.correctedCurrentTimeMillis(-89);
           var1 = lk.field_p;
           lk.field_p = null;
           return var1;

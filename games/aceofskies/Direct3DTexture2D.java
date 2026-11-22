@@ -37,8 +37,8 @@ final class Direct3DTexture2D extends Direct3DTexture implements HardwareTexture
           int stackIn_4_4Lifetime1 = 0;
         }
         if (!this.field_c.field_Dc) {
-          this.field_f = fk.a(param2, 63);
-          this.field_h = fk.a(param3, 69);
+          this.field_f = fk.roundUpPowerOfTwo(param2, 63);
+          this.field_h = fk.roundUpPowerOfTwo(param3, 69);
         } else {
           this.field_h = param3;
           this.field_f = param2;
@@ -124,8 +124,8 @@ final class Direct3DTexture2D extends Direct3DTexture implements HardwareTexture
     Direct3DTexture2D(HardwareDirect3DRenderer param0, hd param1, BufferElementType param2, int param3, int param4) {
         super(param0, param1, param2, false, param3 * param4);
         if (!this.field_c.field_Dc) {
-          this.field_f = fk.a(param3, 118);
-          this.field_h = fk.a(param4, 61);
+          this.field_f = fk.roundUpPowerOfTwo(param3, 118);
+          this.field_h = fk.roundUpPowerOfTwo(param4, 61);
         } else {
           this.field_f = param3;
           this.field_h = param4;
@@ -154,8 +154,8 @@ final class Direct3DTexture2D extends Direct3DTexture implements HardwareTexture
           this.field_f = param1;
           this.field_h = param2;
         } else {
-          this.field_f = fk.a(param1, 91);
-          this.field_h = fk.a(param2, 22);
+          this.field_f = fk.roundUpPowerOfTwo(param1, 91);
+          this.field_h = fk.roundUpPowerOfTwo(param2, 22);
         }
         if (!param3) {
           this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, 21, 1);

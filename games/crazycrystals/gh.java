@@ -323,7 +323,7 @@ final class gh extends ea implements Cloneable {
           if (ge.field_c == 0) {
             return;
           }
-          var1_int = mm.a(ge.field_c, (byte) -120);
+          var1_int = mm.countSetBits(ge.field_c, (byte) -120);
           if (param0 != -10935) {
             return;
           }

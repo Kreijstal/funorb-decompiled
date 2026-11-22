@@ -562,7 +562,7 @@ final class ge implements Runnable {
           }
           if (this.field_c != null) {
             while (this.field_c.status == 0) {
-              ge.a(0, 1L);
+              ge.sleepMillis(0, 1L);
             }
             if (1 == this.field_c.status) {
               try {
@@ -592,15 +592,15 @@ final class ge implements Runnable {
         }
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
         if ((long)param0 == param1 % 10L) {
-          wa.a((byte) 5, -1L + param1);
-          wa.a((byte) 5, 1L);
+          wa.sleepIgnoringInterrupts((byte) 5, -1L + param1);
+          wa.sleepIgnoringInterrupts((byte) 5, 1L);
         } else {
-          wa.a((byte) 5, param1);
+          wa.sleepIgnoringInterrupts((byte) 5, param1);
         }
     }
 

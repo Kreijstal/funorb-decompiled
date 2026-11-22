@@ -104,7 +104,7 @@ final class m extends IntrusiveNode {
         if (!param0) {
           field_q = 69;
         }
-        return -bb.field_c + hn.a((byte) 80);
+        return -bb.field_c + hn.correctedCurrentTimeMillis((byte) 80);
     }
 
     private m() throws Throwable {

@@ -29,10 +29,10 @@ final class sg {
           while (true) {
             var3 = param2.requestFullscreenExit(param0, -59);
             while (var3.status == 0) {
-              wl.a(10L, false);
+              wl.sleepMillis(10L, false);
             }
             if (var3.status != 1) {
-              wl.a(100L, false);
+              wl.sleepMillis(100L, false);
               continue;
             }
             break;

@@ -30,7 +30,7 @@ final class we {
           }
           var8 = param1.requestDisplayModes(-1);
           while (0 == var8.status) {
-            gda.a(false, 10L);
+            gda.sleepMillis(false, 10L);
           }
           if (2 == var8.status) {
             stackIn_10_0 = new lba[]{};

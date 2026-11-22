@@ -972,7 +972,7 @@ final class vj {
               var3.writeInt(mi.field_j, (byte) 107);
               ea.field_a.a(13, -30537, var3.payload, 0);
               hf.field_C = hf.field_C + 1;
-              BoundedRandomAccessFile.field_a = la.a(false) + 30000L;
+              BoundedRandomAccessFile.field_a = la.correctedCurrentTimeMillis(false) + 30000L;
             }
             if (3 == hf.field_C) {
               if (0 < ea.field_a.a((byte) 41)) {
@@ -983,7 +983,7 @@ final class vj {
                 }
                 hf.field_C = hf.field_C + 1;
               } else {
-                if (BoundedRandomAccessFile.field_a < la.a(false)) {
+                if (BoundedRandomAccessFile.field_a < la.correctedCurrentTimeMillis(false)) {
                   stackIn_24_0 = uj.a((byte) 85, -2);
                   return stackIn_24_0;
                 }

@@ -183,7 +183,7 @@ class UiComponentPart028 extends InteractiveComponent {
             stackIntegerLocal2 = integerLocal8;
           }
           this.performAction1443(stackIntegerLocal1, stackIntegerLocal2);
-          longLocal9 = MixedSupport062.computeLong0734(4);
+          longLocal9 = MixedSupport062.correctedCurrentTimeMillis(4);
           stackBooleanLocal3 = !(250L <= -this.longState0044 + longLocal9);
           this.booleanState0165 = stackBooleanLocal3;
           if (this.booleanState0165) {
@@ -238,7 +238,7 @@ class UiComponentPart028 extends InteractiveComponent {
           this.callbackContract004State0006 = RenderingSupport001.networkSupport002State0001.callbackContract004State0002;
           this.performAction1441(stringArgument1, (byte) 114, true);
           this.booleanState0164 = true;
-          this.longState0043 = MixedSupport062.computeLong0734(4);
+          this.longState0043 = MixedSupport062.correctedCurrentTimeMillis(4);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rk.<init>(" + (stringArgument1 != null ? "{...}" : "null") + ',' + (callbackContract006Argument2 != null ? "{...}" : "null") + ',' + integerArgument3 + ')');
         }
@@ -331,7 +331,7 @@ class UiComponentPart028 extends InteractiveComponent {
             if (this.integerState0717 != this.integerState0718) {
               callbackContract012Local1.performAction0003(this.integerState0717, this.integerState0718, integerArgument4, integerArgument1, -123, (UiComponent) (this));
             }
-            longLocal2 = MixedSupport062.computeLong0734(4);
+            longLocal2 = MixedSupport062.correctedCurrentTimeMillis(4);
             if ((longLocal2 - this.longState0043) % 1000L < 500L) {
               callbackContract012Local1.performAction0014((UiComponent) (this), this.integerState0718, 1, integerArgument1, integerArgument4);
             }
@@ -360,7 +360,7 @@ class UiComponentPart028 extends InteractiveComponent {
                 this.integerState0718 = integerLocal2;
               }
             }
-            this.longState0043 = MixedSupport062.computeLong0734(4);
+            this.longState0043 = MixedSupport062.correctedCurrentTimeMillis(4);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "rk.A(" + (uiComponentArgument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ')');
@@ -432,7 +432,7 @@ class UiComponentPart028 extends InteractiveComponent {
         int integerLocal10 = 0;
         RuntimeException runtimeExceptionLocal11 = null;
         try {
-          this.longState0043 = MixedSupport062.computeLong0734(4);
+          this.longState0043 = MixedSupport062.correctedCurrentTimeMillis(4);
           if (60 != characterArgument4 &&
             characterArgument4 != 62) {
             if (32 <= characterArgument4 &&

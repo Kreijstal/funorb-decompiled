@@ -317,7 +317,7 @@ final class wj extends fb {
           ph var2Lifetime1;
           var16 = stellarshard.field_B;
           if (null != this.field_s) {
-            var2_long = ih.a((byte) -98);
+            var2_long = ih.correctedCurrentTimeMillis((byte) -98);
             var4 = (int)(var2_long - this.field_l);
             if (200 < var4) {
               var4 = 200;
@@ -626,7 +626,7 @@ final class wj extends fb {
               }
             }
             this.field_m = 0;
-            this.field_l = ih.a((byte) -98);
+            this.field_l = ih.correctedCurrentTimeMillis((byte) -98);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

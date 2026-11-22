@@ -173,7 +173,7 @@ final class oj extends RenderEffect {
           }
           if (var3 == 0 &&
             ol.field_c == 2) {
-            long var4 = kh.a(param0 ^ -64) - PacketBuffer.field_e;
+            long var4 = kh.correctedCurrentTimeMillis(param0 ^ -64) - PacketBuffer.field_e;
             int var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               MenuScreen.a((byte) -119, 5, true);

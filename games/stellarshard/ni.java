@@ -141,7 +141,7 @@ final class ni {
           var4 = -47 % ((param2 + 70) / 41);
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (param0.field_s.peekEvent() != null) {
-              jj.a((byte) -115, 1L);
+              jj.sleepMillis((byte) -115, 1L);
               continue;
             }
             break;

@@ -31,7 +31,7 @@ class fg extends jc {
           if (ia.field_f.status == 0) {
             return false;
           }
-          dupTemp$0 = ji.b(-85);
+          dupTemp$0 = ji.correctedCurrentTimeMillis(-85);
           p.field_a = dupTemp$0;
           of.field_L = dupTemp$0;
           if (ia.field_f.status != 1) {

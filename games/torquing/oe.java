@@ -23,7 +23,7 @@ final class oe {
           }
           for (var3_int = param1; var3_int < 50; var3_int++) {
             if (null != param0.field_p.peekEvent()) {
-              ub.a(param1 + 1976, 1L);
+              ub.sleepMillis(param1 + 1976, 1L);
               continue;
             }
             break;

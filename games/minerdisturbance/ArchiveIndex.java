@@ -546,7 +546,7 @@ final class ArchiveIndex {
         if (param0 > -125) {
           return true;
         }
-        j.field_f = 15000L + sf.a((byte) -19);
+        j.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -19);
         return fh.field_b == 11 ? true : false;
     }
 

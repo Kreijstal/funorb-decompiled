@@ -236,7 +236,7 @@ final class AccountRequestState {
               }
               stackIn_46_0[stackIn_46_1] = stackIn_49_2;
             }
-            jl.field_c = id.a(79);
+            jl.field_c = id.correctedCurrentTimeMillis(79);
           }
           cg.field_e.field_i = dd.field_j.length;
           var3_intLifetime1 = 0;

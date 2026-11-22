@@ -11,7 +11,7 @@ abstract class ok implements jm {
         if (param0 != -11) {
           return;
         }
-        this.field_c = sf.a((byte) -87);
+        this.field_c = sf.correctedCurrentTimeMillis((byte) -87);
     }
 
     public final ag b(int param0) {
@@ -20,7 +20,7 @@ abstract class ok implements jm {
           if (this.a(false)) {
             return ke.field_W;
           }
-          if (!(sf.a((byte) 105) >= 350L + this.field_c)) {
+          if (!(sf.correctedCurrentTimeMillis((byte) 105) >= 350L + this.field_c)) {
             return nn.field_f;
           }
           return this.b(false);
@@ -28,7 +28,7 @@ abstract class ok implements jm {
         if (this.a(false)) {
           return ke.field_W;
         }
-        if (!(sf.a((byte) 105) >= 350L + this.field_c)) {
+        if (!(sf.correctedCurrentTimeMillis((byte) 105) >= 350L + this.field_c)) {
           return nn.field_f;
         }
         return this.b(false);
@@ -38,7 +38,7 @@ abstract class ok implements jm {
         if (this.a(false)) {
           return null;
         }
-        if (sf.a((byte) 107) < (this.field_c + 350L)) {
+        if (sf.correctedCurrentTimeMillis((byte) 107) < (this.field_c + 350L)) {
           return null;
         }
         if (param0 == 7320) {

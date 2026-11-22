@@ -105,7 +105,7 @@ abstract class fi {
         int var4 = 55 / ((param1 + 30) / 48);
         long var5 = this.a((byte) -51);
         if (0L < var5) {
-          uc.a(-104, var5);
+          uc.sleepMillis(-104, var5);
         }
         return this.a((byte) 109, param0);
     }

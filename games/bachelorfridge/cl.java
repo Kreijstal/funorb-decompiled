@@ -36,7 +36,7 @@ final class cl extends vm {
           qfa var2Lifetime1;
           var16 = BachelorFridge.field_y;
           if (null != this.field_q) {
-            var2_long = f.b((byte) 73);
+            var2_long = f.correctedCurrentTimeMillis((byte) 73);
             var4 = (int)(-this.field_b + var2_long);
             this.field_b = var2_long;
             if (var4 > 200) {
@@ -306,7 +306,7 @@ final class cl extends vm {
               }
             }
             this.field_j = 0;
-            this.field_b = f.b((byte) 73);
+            this.field_b = f.correctedCurrentTimeMillis((byte) 73);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

@@ -185,7 +185,7 @@ final class uh extends IntrusiveNode {
                 return;
               }
               if (0L <= param0) {
-                var7Lifetime4 = var9 + "; Expires=" + h.a(-60, id.a(106) + param0 * 1000L) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + h.a(-60, id.correctedCurrentTimeMillis(106) + param0 * 1000L) + "; Max-Age=" + param0;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

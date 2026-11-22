@@ -243,7 +243,7 @@ final class vd implements Runnable {
           }
           if (this.field_h != null) {
             while (this.field_h.status == 0) {
-              jd.a(1, 1L);
+              jd.sleepMillis(1, 1L);
             }
             if (this.field_h.status == 1) {
               try {

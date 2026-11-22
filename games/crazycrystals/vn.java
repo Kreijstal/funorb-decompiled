@@ -93,7 +93,7 @@ final class vn extends ue {
         var8 = 304 - 20 * (-1 + var7 / 2);
         if (this.field_n) {
           var6 = pc.field_y;
-          var8 = 324 - 20 * mm.a(var6, (byte) -37);
+          var8 = 324 - 20 * mm.countSetBits(var6, (byte) -37);
         }
         var9 = this.field_q;
         for (var10 = 0; 17 > var10; var10++) {
@@ -424,7 +424,7 @@ final class vn extends ue {
                 var4 = 304 - var3 / 2 * 20 + 20;
                 if (this.field_n) {
                   var2 = pc.field_y;
-                  var4 = 324 - 20 * mm.a(var2, (byte) -43);
+                  var4 = 324 - 20 * mm.countSetBits(var2, (byte) -43);
                 }
                 var5 = this.field_q;
                 for (var6 = 0; var6 < 17; var6++) {

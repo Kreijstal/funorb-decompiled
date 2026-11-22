@@ -80,7 +80,7 @@ final class tb extends v {
               return;
             }
             this.field_g = 0;
-            this.field_k = fa.a(98);
+            this.field_k = fa.correctedCurrentTimeMillis(98);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -212,7 +212,7 @@ final class tb extends v {
           lf var2Lifetime1;
           var16 = Bounce.field_N;
           if (null != this.field_q) {
-            var2_long = fa.a(param0 ^ -54);
+            var2_long = fa.correctedCurrentTimeMillis(param0 ^ -54);
             var4 = (int)(-this.field_k + var2_long);
             this.field_k = var2_long;
             if (var4 > 200) {

@@ -99,7 +99,7 @@ final class ph {
 
     final static long a(byte param0) {
         int var1 = -5 / ((param0 - 10) / 57);
-        return -qe.field_k + fa.a(-79);
+        return -qe.field_k + fa.correctedCurrentTimeMillis(-79);
     }
 
     static {

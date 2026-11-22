@@ -153,7 +153,7 @@ final class uo {
           stackIn_4_4 = (wq.field_M == uk.field_v);
           var7_int = ((od) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, -56, (Archive.field_f + 2) * 2) ? 1 : 0;
           var8 = uk.field_v.field_Nb.field_M;
-          var9 = gk.a(param6 + 109);
+          var9 = gk.correctedCurrentTimeMillis(param6 + 109);
           var11 = null;
           if (param6 != 0) {
             return;

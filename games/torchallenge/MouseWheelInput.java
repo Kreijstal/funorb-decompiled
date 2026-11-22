@@ -49,7 +49,7 @@ abstract class MouseWheelInput {
           }
           if (var3 == 0 &&
             RandomAccessCacheFile.field_c == 2) {
-            var4 = -IterableNodeHashTable.field_e + ol.a(256);
+            var4 = -IterableNodeHashTable.field_e + ol.correctedCurrentTimeMillis(256);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               gj.a(-1, 5, true);

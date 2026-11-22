@@ -474,7 +474,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             se.a(oe.field_m, (byte) -79, 2);
             ke.a(-92);
             fa.field_a = true;
-            lm.field_c = 15000L + ji.b(-103);
+            lm.field_c = 15000L + ji.correctedCurrentTimeMillis(-103);
           }
         }
         if (-1 == DualLinkNode.field_j ||
@@ -490,7 +490,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (-1 != DualLinkNode.field_j &&
             DualLinkNode.field_j != 0) {
-            lm.field_c = ji.b(123) + 15000L;
+            lm.field_c = ji.correctedCurrentTimeMillis(123) + 15000L;
           }
         }
         if (-1 != DualLinkNode.field_j &&
@@ -540,7 +540,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if ((-1 != DualLinkNode.field_j &&
           DualLinkNode.field_j != 0 ||
           sg.c(true)) &&
-          ji.b(-125) >= lm.field_c) {
+          ji.correctedCurrentTimeMillis(-125) >= lm.field_c) {
           fa.field_a = false;
           if (DualLinkNode.field_j != -1 &&
             0 != DualLinkNode.field_j) {
@@ -787,7 +787,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param0 != -10125) {
               this.n(-13);
             }
-            lm.field_c = ji.b(param0 ^ 10203) + 15000L;
+            lm.field_c = ji.correctedCurrentTimeMillis(param0 ^ 10203) + 15000L;
           }
         }
         return var2;

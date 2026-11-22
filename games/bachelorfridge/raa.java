@@ -86,21 +86,21 @@ final class raa extends WidgetWrapper {
           var1 = BoundedRandomAccessFile.field_e[rba.field_b];
           if (var1 != -1) {
             PizzaPartyAnimation.field_v = BoardChange.field_k[var1] + "...";
-            cr.field_a = f.b((byte) 73);
+            cr.field_a = f.correctedCurrentTimeMillis((byte) 73);
             return;
           }
           PizzaPartyAnimation.field_v = BoardChange.field_k[0] + "... " + PizzaArenaTheme.field_g;
-          cr.field_a = f.b((byte) 73);
+          cr.field_a = f.correctedCurrentTimeMillis((byte) 73);
           return;
         }
         var1Lifetime1 = BoundedRandomAccessFile.field_e[rba.field_b];
         if (var1Lifetime1 != -1) {
           PizzaPartyAnimation.field_v = BoardChange.field_k[var1Lifetime1] + "...";
-          cr.field_a = f.b((byte) 73);
+          cr.field_a = f.correctedCurrentTimeMillis((byte) 73);
           return;
         }
         PizzaPartyAnimation.field_v = BoardChange.field_k[0] + "... " + PizzaArenaTheme.field_g;
-        cr.field_a = f.b((byte) 73);
+        cr.field_a = f.correctedCurrentTimeMillis((byte) 73);
     }
 
     final StringBuilder a(Hashtable param0, int param1, byte param2, StringBuilder param3) {

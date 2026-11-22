@@ -213,7 +213,7 @@ final class lk extends UiComponent {
           }
           if (var3 == 0 &&
             2 == IntrusiveDeque.field_a) {
-            var4 = -sd.field_h + lj.a((byte) -38);
+            var4 = -sd.field_h + lj.correctedCurrentTimeMillis((byte) -38);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               pf.a(5, 1, true);

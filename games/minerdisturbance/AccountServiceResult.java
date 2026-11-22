@@ -131,7 +131,7 @@ final class AccountServiceResult {
           if (dk.field_b.status == 0) {
             return false;
           }
-          dupTemp$1 = sf.a((byte) -121);
+          dupTemp$1 = sf.correctedCurrentTimeMillis((byte) -121);
           ck.field_d = dupTemp$1;
           sk.field_c = dupTemp$1;
           if (dk.field_b.status != 1) {

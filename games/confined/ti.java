@@ -1800,7 +1800,7 @@ final class ti {
         field_g = param3 - param1;
         ti.a();
         if (field_l.length < field_g) {
-          field_l = new int[lb.a(675001474, field_g)];
+          field_l = new int[lb.roundUpPowerOfTwo(675001474, field_g)];
         }
         int var4 = param1 * fn.field_g + param0;
         for (var5 = 0; var5 < field_g; var5++) {

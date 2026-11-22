@@ -50,7 +50,7 @@ final class ah {
         return !ji.field_k.b(0) ? true : false;
     }
 
-    final static int a(int param0, int param1) {
+    final static int countSetBits(int param0, int param1) {
         param0 = (param0 & 1431655765) + (param1 & param0 >>> 1);
         param0 = (param0 & 858993459) + (-1288490189 & param0 >>> 2);
         param0 = (param0 >>> 4) + param0 & 252645135;

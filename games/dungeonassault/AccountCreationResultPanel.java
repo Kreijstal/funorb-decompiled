@@ -110,7 +110,7 @@ final class AccountCreationResultPanel extends nk implements vg {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param1.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + go.a(94608000000L + kd.c(-2456), 42) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + go.a(94608000000L + kd.correctedCurrentTimeMillis(-2456), 42) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

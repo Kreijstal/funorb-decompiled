@@ -93,7 +93,7 @@ final class NetworkSupport008 implements Runnable {
             this.computePacketBuffer1174(true);
           }
           if (null == this.asyncTaskState0007) {
-            this.asyncTaskState0007 = this.platformServiceState0005.computeAsyncTask0510((byte) 121, 5, (Runnable) (this));
+            this.asyncTaskState0007 = this.platformServiceState0005.startThread((byte) 121, 5, (Runnable) (this));
           }
           if (0 == this.asyncTaskState0007.integerState0510) {
             return false;

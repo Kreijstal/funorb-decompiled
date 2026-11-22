@@ -511,7 +511,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           if (incrementValue$0 > 5) {
             throw new RuntimeException("");
           }
-          IntrusiveNode.a(1000L, false);
+          IntrusiveNode.sleepMillis(1000L, false);
         }
     }
 
@@ -1312,9 +1312,9 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
         this.field_X.a(64);
         if (this.w(8705) > 100663296 &&
-          60000L + this.field_l < kh.a(-57)) {
+          60000L + this.field_l < kh.correctedCurrentTimeMillis(-57)) {
           System.gc();
-          this.field_l = kh.a(-109);
+          this.field_l = kh.correctedCurrentTimeMillis(-109);
         }
         this.field_hb = param0;
     }
@@ -1806,7 +1806,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
               var2.writeInt((byte) 20, si.field_c);
               du.field_m.a(13, 0, 41, var2.payload);
               bm.field_z = bm.field_z + 1;
-              AircraftDefinition.field_j = 30000L + kh.a(-70);
+              AircraftDefinition.field_j = 30000L + kh.correctedCurrentTimeMillis(-70);
             }
             if (bm.field_z == 3) {
               if (!(du.field_m.b(-120) <= 0)) {
@@ -1816,7 +1816,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
                   return stackIn_29_0;
                 }
                 bm.field_z = bm.field_z + 1;
-              } else if (kh.a(-116) > AircraftDefinition.field_j) {
+              } else if (kh.correctedCurrentTimeMillis(-116) > AircraftDefinition.field_j) {
                 int stackIn_34_0 = tj.a(-126, -2);
                 return stackIn_34_0;
               }

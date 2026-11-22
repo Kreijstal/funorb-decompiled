@@ -27,7 +27,7 @@ abstract class sg {
         if (var4 <= (long)param0) {
           return this.a(param0 ^ -127, param1);
         }
-        SecondaryNodeDeque.a(var4, 19406);
+        SecondaryNodeDeque.sleepMillis(var4, 19406);
         return this.a(param0 ^ -127, param1);
     }
 

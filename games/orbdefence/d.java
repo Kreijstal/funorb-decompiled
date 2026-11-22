@@ -69,7 +69,7 @@ final class d extends IntrusiveNode {
               var2.writeInt(m.field_b, -1);
               dd.field_A.a((byte) 30, var2.payload, 0, 13);
               mc.field_j = mc.field_j + 1;
-              n.field_b = 30000L + ji.b(-75);
+              n.field_b = 30000L + ji.correctedCurrentTimeMillis(-75);
             }
             if (mc.field_j == 3) {
               if (dd.field_A.b((byte) 101) > 0) {
@@ -80,7 +80,7 @@ final class d extends IntrusiveNode {
                 }
                 mc.field_j = mc.field_j + 1;
               } else {
-                if (ji.b(103) > n.field_b) {
+                if (ji.correctedCurrentTimeMillis(103) > n.field_b) {
                   stackIn_26_0 = kk.a(-30179, -2);
                   return stackIn_26_0;
                 }

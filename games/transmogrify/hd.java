@@ -148,7 +148,7 @@ final class hd {
           var1_int = qa.field_u;
           var2 = 0;
           if (2 == q.field_a) {
-            var3_long = -c.field_c + lk.a(param0 - 8);
+            var3_long = -c.field_c + lk.correctedCurrentTimeMillis(param0 - 8);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

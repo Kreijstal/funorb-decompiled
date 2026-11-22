@@ -8166,10 +8166,10 @@
     {
       "symbol": "M:fh.a(II)I",
       "originalName": "a",
-      "to": "unsignedByte",
-      "evidence": "Masks the supplied integer to its low unsigned byte.",
+      "to": "countSetBits",
+      "evidence": "Correct the misleading unsignedByte name:the complete body implements a parallel population count,not an unsigned-byte conversion. With guard11682,value255 follows the sums to8;masking255 to a byte would return255. Retain the guard-triggered fh.b call for all other arguments. Count set bits through the original masked parallel sums and shifts1,2,4,8,16,then low-byte accumulation. Extra arguments may be real stage masks,guard predicates or arithmetic traps;retain every actual slot and all bad-domain side effects/sentinels. Complete original-body SHA256 cfe1b8f7e0900e4472bef394dc9c5c5d9a4512be3bcd93019477ac922ab5d56f. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:CachedArchiveProvider.unsignedByte(II)I"
+      "renamedSymbol": "M:CachedArchiveProvider.countSetBits(II)I"
     },
     {
       "symbol": "M:fh.a(III)Lml;",
@@ -169057,9 +169057,9 @@
     },
     {
       "symbol": "M:fh.a(II)I",
-      "renamedSymbol": "M:CachedArchiveProvider.unsignedByte(II)I",
+      "renamedSymbol": "M:CachedArchiveProvider.countSetBits(II)I",
       "originalName": "a",
-      "renamedName": "unsignedByte",
+      "renamedName": "countSetBits",
       "declaration": {
         "file": "fh.java",
         "start": 15049,
@@ -199340,7 +199340,7 @@
     },
     {
       "symbol": "P:fh.a(II)I#0",
-      "renamedSymbol": "P:CachedArchiveProvider.unsignedByte(II)I#0",
+      "renamedSymbol": "P:CachedArchiveProvider.countSetBits(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -199351,7 +199351,7 @@
     },
     {
       "symbol": "P:fh.a(II)I#1",
-      "renamedSymbol": "P:CachedArchiveProvider.unsignedByte(II)I#1",
+      "renamedSymbol": "P:CachedArchiveProvider.countSetBits(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -257998,7 +257998,7 @@
       "original": "ch.java",
       "renamed": "JavaSoundAudioOutput.java",
       "inputSha256": "118577f4fb00b2a1690a22b26d2d645bad60aa2c62a3559c4e739356d896889e",
-      "outputSha256": "254811ee43a8cd0b9d631905808aafae8473087a73d8d9e7dbfeacaa8a1bcdac",
+      "outputSha256": "d4b2b90d4b4abf6344017d274efb02f2545f703a17bf9c2c471e5445bdca67d0",
       "edits": [
         {
           "start": 50,
@@ -258061,7 +258061,7 @@
           "end": 3351,
           "symbol": "M:fh.a(II)I",
           "original": "a",
-          "renamed": "unsignedByte"
+          "renamed": "countSetBits"
         },
         {
           "start": 3392,
@@ -325637,7 +325637,7 @@
       "original": "fh.java",
       "renamed": "CachedArchiveProvider.java",
       "inputSha256": "521f377b184468c9661cb7b10e2a34e08c8a53cf1a09cad589a05b2fc8b3206f",
-      "outputSha256": "d9371d4775e92f3b089026c06b7c79cb2ce482d48c38a3826a02c11f943f0055",
+      "outputSha256": "8debd0caa0aa8e295f2272e2dbccb8eb554fa6eb7810419e87b30f852974f9ae",
       "edits": [
         {
           "start": 50,
@@ -327494,7 +327494,7 @@
           "end": 15050,
           "symbol": "M:fh.a(II)I",
           "original": "a",
-          "renamed": "unsignedByte"
+          "renamed": "countSetBits"
         },
         {
           "start": 15118,
@@ -503242,10 +503242,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/wizardrun"
     },
-    "rulesSha256": "432b94e5089a9c7da549dd4c7ff215a77ecbe030a599aa2b12d3d0a064166aa3",
+    "rulesSha256": "39902de3488fc22af40199fbb8baf4d642bc575a35052afa5c8a2741bc19b835",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3",
-    "outputTreeSha256": "2c6994cebb9f1ffcb37594983ce6fcc524888020d38115e1721c9534cfdac524",
+    "outputTreeSha256": "6ffd3f5aac9208227b976b0f9e1a10f285201585756660e32283e92c5813aaf6",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

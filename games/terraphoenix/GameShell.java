@@ -144,7 +144,7 @@ abstract class GameShell extends GameApplet {
         }
         k.a(var2, bh.field_d, false);
         q.field_Gb = true;
-        ah.field_z = 15000L + ll.a(1000);
+        ah.field_z = 15000L + ll.correctedCurrentTimeMillis(1000);
         return var2;
     }
 
@@ -350,7 +350,7 @@ abstract class GameShell extends GameApplet {
             k.a(2, ae.field_F, false);
             ByteStorage.a((byte) -107);
             q.field_Gb = true;
-            ah.field_z = ll.a(1000) + 15000L;
+            ah.field_z = ll.correctedCurrentTimeMillis(1000) + 15000L;
           }
         }
         if (IntrusiveDeque.field_f == -1 ||
@@ -366,7 +366,7 @@ abstract class GameShell extends GameApplet {
           }
           if (-1 != IntrusiveDeque.field_f &&
             IntrusiveDeque.field_f != 0) {
-            ah.field_z = 15000L + ll.a(1000);
+            ah.field_z = 15000L + ll.correctedCurrentTimeMillis(1000);
           }
         }
         if (-1 != IntrusiveDeque.field_f &&
@@ -416,7 +416,7 @@ abstract class GameShell extends GameApplet {
         if ((IntrusiveDeque.field_f != -1 &&
           IntrusiveDeque.field_f != 0 ||
           qf.a((byte) 91)) &&
-          ah.field_z <= ll.a(1000)) {
+          ah.field_z <= ll.correctedCurrentTimeMillis(1000)) {
           q.field_Gb = false;
           if (-1 != IntrusiveDeque.field_f &&
             IntrusiveDeque.field_f != 0) {

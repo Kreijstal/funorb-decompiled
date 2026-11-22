@@ -146,7 +146,7 @@ final class pb implements j {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.field_d.peekEvent()) {
-              i.a((byte) 100, 1L);
+              i.sleepMillis((byte) 100, 1L);
               continue;
             }
             break;

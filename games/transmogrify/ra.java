@@ -20,10 +20,10 @@ final class ra {
           while (true) {
             var3 = param0.requestFullscreenExit(param1, 100);
             while (var3.status == 0) {
-              pg.a(10L, param2 - 225);
+              pg.sleepMillis(10L, param2 - 225);
             }
             if (1 != var3.status) {
-              pg.a(100L, -116);
+              pg.sleepMillis(100L, -116);
               continue;
             }
             break;

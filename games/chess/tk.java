@@ -93,7 +93,7 @@ final class tk {
               var2_int = param1 - field_h.position;
             }
             ArchiveIndex.field_a.a(field_h.data, var2_int, (byte) -87, field_h.position);
-            ml.field_d = ud.a(2);
+            ml.field_d = ud.correctedCurrentTimeMillis(2);
             field_h.position = field_h.position + var2_int;
             if (param1 > field_h.position) {
               return false;

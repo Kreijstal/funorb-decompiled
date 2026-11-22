@@ -355,7 +355,7 @@ final class vl implements Runnable {
         try {
           var2 = param0.requestThreadStart(314572800, 5, (Runnable) (this));
           while (var2.status == 0) {
-            hb.a(10L, 127);
+            hb.sleepMillis(10L, 127);
           }
           if (2 == var2.status) {
             throw new RuntimeException();

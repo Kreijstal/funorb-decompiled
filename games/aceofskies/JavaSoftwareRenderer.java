@@ -311,7 +311,7 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
           this.d(0);
           AccountServiceResult.a(true, 0, true);
           this.field_h = true;
-          this.field_B = (int)kh.a(-61);
+          this.field_B = (int)kh.correctedCurrentTimeMillis(-61);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
           this.a(-9);

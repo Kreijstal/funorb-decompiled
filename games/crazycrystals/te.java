@@ -20,7 +20,7 @@ abstract class te {
             if (param0 != -19) {
               field_a = (PlatformTaskDispatcher) null;
             }
-            long dupTemp$1 = lo.a((byte) -29);
+            long dupTemp$1 = lo.correctedCurrentTimeMillis((byte) -29);
             mp.field_p = dupTemp$1;
             wg.field_y = dupTemp$1;
             if (vj.field_b.status == 1) {

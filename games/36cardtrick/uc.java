@@ -485,7 +485,7 @@ final class uc extends pe {
             }
           }
           if (this.field_g &&
-            id.a(36) >= this.field_i) {
+            id.correctedCurrentTimeMillis(36) >= this.field_i) {
             var2_ref = (la) (this.field_n.b(-119));
             while (var2_ref != null) {
               if (!var2_ref.field_n) {
@@ -500,7 +500,7 @@ final class uc extends pe {
               }
               var2_ref = (la) (this.field_n.a(true));
             }
-            this.field_i = 1000L + id.a(109);
+            this.field_i = 1000L + id.correctedCurrentTimeMillis(109);
           }
           if (param0 != -3028) {
             this.field_v = (ch) null;

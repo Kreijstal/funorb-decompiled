@@ -29,10 +29,10 @@ final class eg implements de {
           while (true) {
             var3 = param2.requestFullscreenExit(param0, param1 + 12297);
             while (var3.status == 0) {
-              uc.a(-121, 10L);
+              uc.sleepMillis(-121, 10L);
             }
             if (var3.status != 1) {
-              uc.a(param1 - 51, 100L);
+              uc.sleepMillis(param1 - 51, 100L);
               continue;
             }
             break;

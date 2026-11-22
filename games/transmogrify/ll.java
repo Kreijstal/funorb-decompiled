@@ -101,7 +101,7 @@ final class ll extends bi implements df {
           }
           if (0 == var3 &&
             q.field_a == 2) {
-            var4 = -c.field_c + lk.a(0);
+            var4 = -c.field_c + lk.correctedCurrentTimeMillis(0);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               tf.a((byte) 79, true, 5);

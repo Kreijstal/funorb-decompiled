@@ -174,7 +174,7 @@ final class AccountNameAvailabilityValidator extends qf {
 
     final static boolean b(boolean param0) {
         hd.field_p = param0 ? true : false;
-        wa.field_a = 15000L + dd.b(109);
+        wa.field_a = 15000L + dd.correctedCurrentTimeMillis(109);
         return bl.field_a == 11 ? true : false;
     }
 

@@ -26,7 +26,7 @@ final class kg {
           if (ef.field_a != w.field_cb) {
             return false;
           }
-          var2_long = km.b(-1);
+          var2_long = km.correctedCurrentTimeMillis(-1);
           if (param1 != 21) {
             return false;
           }

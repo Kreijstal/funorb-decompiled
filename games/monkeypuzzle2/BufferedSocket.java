@@ -46,7 +46,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_d != null) {
             while (this.field_d.status == 0) {
-              em.a(1L, false);
+              em.sleepMillis(1L, false);
             }
             if (1 == this.field_d.status) {
               try {

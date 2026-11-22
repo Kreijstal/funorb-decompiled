@@ -41,7 +41,7 @@ class AudioOutput {
           if (this.field_n) {
             return;
           }
-          var1 = lo.a((byte) -46);
+          var1 = lo.correctedCurrentTimeMillis((byte) -46);
           try {
             if (var1 > this.field_k + 6000L) {
               this.field_k = var1 - 6000L;
@@ -49,7 +49,7 @@ class AudioOutput {
             while (var1 > this.field_k + 5000L) {
               this.skipFrames(256);
               this.field_k = this.field_k + (long)(256000 / field_m);
-              var1 = lo.a((byte) 119);
+              var1 = lo.correctedCurrentTimeMillis((byte) 119);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_q.field_d = true;
             while (field_q.field_b) {
-              fh.a(true, 50L);
+              fh.sleepMillis(true, 50L);
             }
             field_q = null;
           }
@@ -171,7 +171,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_g = lo.a((byte) -29) + 2000L;
+            this.field_g = lo.correctedCurrentTimeMillis((byte) -29) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -259,7 +259,7 @@ class AudioOutput {
         if (field_o) {
           var3 = var3 << 1;
         }
-        eg.a(param0, 0, var3);
+        eg.clearInts(param0, 0, var3);
         this.field_p = this.field_p - param1;
         if (this.field_h != null &&
           this.field_p <= 0) {
@@ -353,7 +353,7 @@ class AudioOutput {
         if (this.field_h != null) {
           this.field_h.a(param0, 0, param1);
         }
-        this.field_k = lo.a((byte) -90);
+        this.field_k = lo.correctedCurrentTimeMillis((byte) -90);
     }
 
     final static AudioOutput createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_n = false;
         this.field_s = 32;
-        this.field_k = lo.a((byte) 79);
+        this.field_k = lo.correctedCurrentTimeMillis((byte) 79);
         this.field_j = 0;
         this.field_a = new od[8];
         this.field_t = 0L;

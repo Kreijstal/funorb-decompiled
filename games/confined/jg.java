@@ -145,7 +145,7 @@ abstract class jg {
         }
         long var4 = this.a(10);
         if (var4 > 0L) {
-          jd.a(1, var4);
+          jd.sleepMillis(1, var4);
         }
         return this.a(-25, param1);
     }

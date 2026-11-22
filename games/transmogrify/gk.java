@@ -26,7 +26,7 @@ final class gk {
           if (fk.field_F.status == 0) {
             return false;
           }
-          dupTemp$1 = lk.a(0);
+          dupTemp$1 = lk.correctedCurrentTimeMillis(0);
           td.field_b = dupTemp$1;
           wi.field_q = dupTemp$1;
           if (fk.field_F.status != 1) {

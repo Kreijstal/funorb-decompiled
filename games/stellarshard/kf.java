@@ -23,10 +23,10 @@ final class kf implements uk {
           while (true) {
             var3 = param2.requestFullscreenExit(param0, (byte) -107);
             while (var3.status == 0) {
-              jj.a((byte) -123, 10L);
+              jj.sleepMillis((byte) -123, 10L);
             }
             if (var3.status != 1) {
-              jj.a((byte) -128, 100L);
+              jj.sleepMillis((byte) -128, 100L);
               continue;
             }
             break;

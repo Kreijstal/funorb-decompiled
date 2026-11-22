@@ -79,7 +79,7 @@ final class ea extends va {
               }
             }
             this.field_j = 0;
-            this.field_b = je.a(1);
+            this.field_b = je.correctedCurrentTimeMillis(1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -190,7 +190,7 @@ final class ea extends va {
           ic var2Lifetime1;
           var16 = SolKnight.field_L ? 1 : 0;
           if (null != this.field_r) {
-            var2_long = je.a(1);
+            var2_long = je.correctedCurrentTimeMillis(1);
             var4 = (int)(-this.field_b + var2_long);
             this.field_b = var2_long;
             if (var4 > 200) {

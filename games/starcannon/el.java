@@ -61,7 +61,7 @@ final class el extends dk {
           }
           var8 = param1.requestDisplayModes(-125);
           while (var8.status == 0) {
-            uc.a(-108, 10L);
+            uc.sleepMillis(-108, 10L);
           }
           if (var8.status == 2) {
             stackIn_9_0 = new jk[]{};

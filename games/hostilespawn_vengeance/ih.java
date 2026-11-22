@@ -42,7 +42,7 @@ final class ih extends ej {
           lm var2Lifetime1;
           var16 = HostileSpawn.field_I ? 1 : 0;
           if (null != this.field_t) {
-            var2_long = hn.a((byte) 80);
+            var2_long = hn.correctedCurrentTimeMillis((byte) 80);
             var4 = (int)(-this.field_c + var2_long);
             if (var4 > 200) {
               var4 = 200;
@@ -362,7 +362,7 @@ final class ih extends ej {
               }
             }
             this.field_f = 0;
-            this.field_c = hn.a((byte) 80);
+            this.field_c = hn.correctedCurrentTimeMillis((byte) 80);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

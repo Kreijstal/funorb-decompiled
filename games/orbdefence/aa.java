@@ -85,7 +85,7 @@ abstract class aa {
     final int b(int param0, long param1) {
         long var4 = this.a(17990);
         if (var4 > 0L) {
-          hb.a(var4, param0 + 108);
+          hb.sleepMillis(var4, param0 + 108);
         }
         if (param0 != 0) {
           field_b = (String) null;

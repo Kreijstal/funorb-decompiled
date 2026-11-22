@@ -15,7 +15,7 @@ final class dl {
     final static boolean a(byte param0) {
         wb.field_b = true;
         if (param0 == -75) {
-          nj.field_n = fa.a(110) + 15000L;
+          nj.field_n = fa.correctedCurrentTimeMillis(110) + 15000L;
           return mh.field_U == 11 ? true : false;
         }
         return false;

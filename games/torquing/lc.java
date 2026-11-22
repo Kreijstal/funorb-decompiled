@@ -77,7 +77,7 @@ final class lc extends ro {
         if (param0 != -76) {
           return -86L;
         }
-        return km.b(-1) - rb.field_C;
+        return km.correctedCurrentTimeMillis(-1) - rb.field_C;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

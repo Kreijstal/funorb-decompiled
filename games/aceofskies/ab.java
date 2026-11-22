@@ -519,7 +519,7 @@ class ab extends ea implements vm {
               el stackIn_13_0 = new el(param0, 34037, param6, param7, param2, param3, param5, param4);
               return stackIn_13_0;
             }
-            el stackIn_11_0 = new el(param0, param6, param7, fk.a(param6, 61), fk.a(param7, 115), param3);
+            el stackIn_11_0 = new el(param0, param6, param7, fk.roundUpPowerOfTwo(param6, 61), fk.roundUpPowerOfTwo(param7, 115), param3);
             return stackIn_11_0;
           }
           el stackIn_8_0 = new el(param0, 3553, param6, param7, param2, param3, param5, param4);

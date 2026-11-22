@@ -37,7 +37,7 @@ class AudioOutput {
           if (this.field_p) {
             return;
           }
-          var1 = id.a(45);
+          var1 = id.correctedCurrentTimeMillis(45);
           try {
             if (var1 > this.field_l + 6000L) {
               this.field_l = var1 - 6000L;
@@ -45,7 +45,7 @@ class AudioOutput {
             while (var1 > this.field_l + 5000L) {
               this.skipFrames(256);
               this.field_l = this.field_l + (long)(256000 / field_m);
-              var1 = id.a(97);
+              var1 = id.correctedCurrentTimeMillis(97);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_o.field_d = true;
             while (field_o.field_c) {
-              wk.a((byte) -118, 50L);
+              wk.sleepMillis((byte) -118, 50L);
             }
             field_o = null;
           }
@@ -215,7 +215,7 @@ class AudioOutput {
         if (field_q) {
           var3 = var3 << 1;
         }
-        og.a(param0, 0, var3);
+        og.clearInts(param0, 0, var3);
         this.field_u = this.field_u - param1;
         if (this.field_h != null &&
           this.field_u <= 0) {
@@ -309,7 +309,7 @@ class AudioOutput {
         if (this.field_h != null) {
           this.field_h.a(param0, 0, param1);
         }
-        this.field_l = id.a(113);
+        this.field_l = id.correctedCurrentTimeMillis(113);
     }
 
     final static AudioOutput createOutput(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_p = false;
         this.field_i = 32;
-        this.field_l = id.a(35);
+        this.field_l = id.correctedCurrentTimeMillis(35);
         this.field_g = 0;
         this.field_u = 0;
         this.field_k = new je[8];

@@ -69,7 +69,7 @@ class c extends v {
                 var2_int = -id.field_f.position + param0;
               }
               lo.field_k.a(id.field_f.payload, false, var2_int, id.field_f.position);
-              gn.field_b = gk.a(89);
+              gn.field_b = gk.correctedCurrentTimeMillis(89);
               id.field_f.position = id.field_f.position + var2_int;
               if (param0 > id.field_f.position) {
                 return false;

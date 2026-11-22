@@ -17,7 +17,7 @@ abstract class jl {
           this.a(69L, 62);
         }
         if (var4 > 0L) {
-          c.a(-127, var4);
+          c.sleepMillis(-127, var4);
         }
         return this.a(param1, param0 ^ -24);
     }

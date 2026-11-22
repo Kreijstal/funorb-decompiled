@@ -28,7 +28,7 @@ final class tb {
           if (ResourceArchive.field_k != fh.field_b) {
             return false;
           }
-          var2_long = lj.a((byte) -83);
+          var2_long = lj.correctedCurrentTimeMillis((byte) -83);
           if (ja.field_P != 0 &&
             0 > il.field_h) {
             var4_ref_ha = (ha) (bj.field_n.beginForward((byte) 47));

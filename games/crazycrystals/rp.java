@@ -40,7 +40,7 @@ final class rp implements Runnable {
                 var2.serviceOutput();
               }
             }
-            fh.a(true, 10L);
+            fh.sleepMillis(true, 10L);
             so.a((Object) null, this.field_e, true);
           }
         } catch (Exception exception) {

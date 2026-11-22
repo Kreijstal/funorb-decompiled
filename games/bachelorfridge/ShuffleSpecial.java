@@ -71,7 +71,7 @@ final class ShuffleSpecial extends SpecialOrder {
             var19[var13] = var13;
             var13++;
           }
-          var8 = new IsaacRandom(new int[]{(int)f.b((byte) 73)});
+          var8 = new IsaacRandom(new int[]{(int)f.correctedCurrentTimeMillis((byte) 73)});
           var6Lifetime1 = 0;
           for (var9 = 0; var19.length > var9; var9++) {
             var10 = var8.nextBounded(-21000, var19.length);

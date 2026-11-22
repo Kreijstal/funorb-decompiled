@@ -160,7 +160,7 @@ final class pk {
           }
           var11 = param4.requestFullscreenEnter(param1, param5, param2, param3, (byte) -122);
           while (0 == var11.status) {
-            gf.a(10L, -10309);
+            gf.sleepMillis(10L, -10309);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

@@ -91,7 +91,7 @@ final class uf extends ch {
           int var3_intLifetime1;
           var16 = MinerDisturbance.field_ab;
           if (this.field_s != null) {
-            var2_long = sf.a((byte) 103);
+            var2_long = sf.correctedCurrentTimeMillis((byte) 103);
             var4 = (int)(var2_long - this.field_e);
             if (var4 > 200) {
               var4 = 200;
@@ -461,7 +461,7 @@ final class uf extends ch {
               }
             }
             this.field_d = 0;
-            this.field_e = sf.a((byte) -45);
+            this.field_e = sf.correctedCurrentTimeMillis((byte) -45);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

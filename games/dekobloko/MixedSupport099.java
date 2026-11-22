@@ -333,7 +333,7 @@ final class MixedSupport099 {
                 return;
               }
               if (longArgument3 >= 0L) {
-                stringLocal17 = stringLocal13 + "; Expires=" + CipherPacketBuffer.computeString1636((byte) 60, longArgument3 * 1000L + MixedSupport062.computeLong0734(4)) + "; Max-Age=" + longArgument3;
+                stringLocal17 = stringLocal13 + "; Expires=" + CipherPacketBuffer.computeString1636((byte) 60, longArgument3 * 1000L + MixedSupport062.correctedCurrentTimeMillis(4)) + "; Max-Age=" + longArgument3;
               } else {
                 stringLocal17 = stringLocal13 + "; Discard;";
               }

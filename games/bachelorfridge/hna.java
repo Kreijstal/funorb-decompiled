@@ -125,13 +125,13 @@ final class hna extends aba {
           if (dma.field_b != null && (param0 < 0 ||
             eia.field_a == Crc32Table.field_a)) {
             if (0 == sja.field_fb.position &&
-              f.b((byte) 73) > (vla.field_v + 10000L)) {
+              f.correctedCurrentTimeMillis((byte) 73) > (vla.field_v + 10000L)) {
               sja.field_fb.writeCipheredByte(param0, (byte) 99);
             }
             if (sja.field_fb.position > 0) {
               try {
                 dma.field_b.a(0, sja.field_fb.payload, false, sja.field_fb.position);
-                vla.field_v = f.b((byte) 73);
+                vla.field_v = f.correctedCurrentTimeMillis((byte) 73);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

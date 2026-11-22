@@ -1800,7 +1800,7 @@ final class TriangleRasterizer {
         field_n = param3 - param1;
         TriangleRasterizer.e();
         if (field_a.length < field_n) {
-          field_a = new int[ul.a(-96, field_n)];
+          field_a = new int[ul.roundUpPowerOfTwo(-96, field_n)];
         }
         int var4 = param1 * SoftwareRasterizer.field_i + param0;
         for (var5 = 0; var5 < field_n; var5++) {

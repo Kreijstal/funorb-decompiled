@@ -483,7 +483,7 @@ final class hj {
                   var2_int = param0 - MonkeyPuzzle2.field_D.position;
                 }
                 ol.field_g.a(var2_int, param1, MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position);
-                d.field_k = pf.a(0);
+                d.field_k = pf.correctedCurrentTimeMillis(0);
                 MonkeyPuzzle2.field_D.position = MonkeyPuzzle2.field_D.position + var2_int;
                 if (param0 > MonkeyPuzzle2.field_D.position) {
                   return false;

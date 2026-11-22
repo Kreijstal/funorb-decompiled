@@ -199,12 +199,12 @@ final class rb {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (ll.field_Q == lj.field_z);
               if ((decompiledFrameRemainder0) && (ff.field_D.position == 0 &&
-                (10000L + td.field_b) < lk.a(0))) {
+                (10000L + td.field_b) < lk.correctedCurrentTimeMillis(0))) {
                 ff.field_D.a(false, param0);
               }
             } else {
               if (ff.field_D.position == 0 &&
-                (10000L + td.field_b) < lk.a(0)) {
+                (10000L + td.field_b) < lk.correctedCurrentTimeMillis(0)) {
                 ff.field_D.a(false, param0);
               }
             }
@@ -215,7 +215,7 @@ final class rb {
               if (ff.field_D.position > 0) {
                 try {
                   nk.field_b.a((byte) 9, ff.field_D.payload, ff.field_D.position, 0);
-                  td.field_b = lk.a(0);
+                  td.field_b = lk.correctedCurrentTimeMillis(0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

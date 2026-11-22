@@ -248,7 +248,7 @@ final class qh {
               }
               stackIn_81_0[stackIn_81_1] = stackIn_84_2;
             }
-            jg.field_M = ud.a(2);
+            jg.field_M = ud.correctedCurrentTimeMillis(2);
           }
           ol.field_R.field_f = fi.field_c.length;
           if (param0) {

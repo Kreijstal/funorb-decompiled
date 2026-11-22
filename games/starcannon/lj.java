@@ -49,7 +49,7 @@ final class lj {
               if (0 == param0.length()) {
                 var6Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var6Lifetime6 = var8 + "; Expires=" + ge.a((byte) -36, dd.b(88) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var6Lifetime6 = var8 + "; Expires=" + ge.a((byte) -36, dd.correctedCurrentTimeMillis(88) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               mb.a("document.cookie=\"" + var6Lifetime6 + "\"", param2, 790);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

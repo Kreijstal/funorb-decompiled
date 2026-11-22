@@ -106,7 +106,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             this.field_p = 0;
-            this.field_m = kh.a(-59);
+            this.field_m = kh.correctedCurrentTimeMillis(-59);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -195,7 +195,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           NetworkArchiveRequest var14_ref = null;
           int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
           if (this.field_s != null) {
-            long var2_long = kh.a(-97);
+            long var2_long = kh.correctedCurrentTimeMillis(-97);
             var4 = (int)(-this.field_m + var2_long);
             if (var4 > 200) {
               var4 = 200;

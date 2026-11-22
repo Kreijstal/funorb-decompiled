@@ -296,7 +296,7 @@ final class ll {
         return;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int roundUpPowerOfTwo(boolean param0, int param1) {
         param1--;
         if (param0) {
           param1 = param1 | param1 >>> 1;

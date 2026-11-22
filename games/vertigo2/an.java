@@ -400,7 +400,7 @@ final class an {
           }
           var9 = param1.requestDisplayModes(-108);
           while (var9.status == 0) {
-            um.a(true, 10L);
+            um.sleepMillis(true, 10L);
           }
           if (2 == var9.status) {
             stackIn_13_0 = new cl[]{};
@@ -476,7 +476,7 @@ final class an {
         }
     }
 
-    final static void a(long param0, boolean param1) {
+    final static void sleepIgnoringInterrupts(long param0, boolean param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

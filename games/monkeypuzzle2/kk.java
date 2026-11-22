@@ -718,7 +718,7 @@ final class kk {
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_m).append("&e=").append(var10).toString()));
             scanLoop1: while (true) {
               if (0 == var4.status) {
-                em.a(1L, false);
+                em.sleepMillis(1L, false);
                 if (var6 == 0) {
                   continue;
                 }

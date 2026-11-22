@@ -172,8 +172,8 @@ final class jt extends PcmStream {
             } else if (var5 != 256) {
               if (null != this.field_i &&
                 this.field_i.length >= var6) {
-                au.a(this.field_i, 0, var6);
-                au.a(this.field_o, 0, var6);
+                au.clearInts(this.field_i, 0, var6);
+                au.clearInts(this.field_o, 0, var6);
               } else {
                 this.field_i = new int[var6];
                 this.field_o = new int[var6];
@@ -201,7 +201,7 @@ final class jt extends PcmStream {
             }
             if (this.field_i != null &&
               var6 <= this.field_i.length) {
-              au.a(this.field_i, 0, var6);
+              au.clearInts(this.field_i, 0, var6);
             } else {
               this.field_o = new int[var6];
               this.field_i = new int[var6];
@@ -254,7 +254,7 @@ final class jt extends PcmStream {
               if (param2 < (long)param4) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + bt.a(false, 1000L * param2 + kh.a(-83)) + "; Max-Age=" + param2;
+                var7Lifetime4 = var9 + "; Expires=" + bt.a(false, 1000L * param2 + kh.correctedCurrentTimeMillis(-83)) + "; Max-Age=" + param2;
               }
               JavaScriptBridge.a(param3, -7012, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

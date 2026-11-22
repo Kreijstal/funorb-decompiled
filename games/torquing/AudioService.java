@@ -32,7 +32,7 @@ final class AudioService implements Runnable {
                   var2.serviceOutput();
                 }
               }
-              ub.a(1976, 10L);
+              ub.sleepMillis(1976, 10L);
               var5 = (Object) null;
               oe.a(this.field_b, 0, (Object) null);
             }

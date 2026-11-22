@@ -25,7 +25,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          lb.field_g = 4000L + kh.a(-61);
+          lb.field_g = 4000L + kh.correctedCurrentTimeMillis(-61);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "vb.stop()");
         }
@@ -90,7 +90,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.windowDeiconified((java.awt.event.WindowEvent) null);
           }
           or.field_c = false;
-          mg.field_b = kh.a(param0 + 14763);
+          mg.field_b = kh.correctedCurrentTimeMillis(param0 + 14763);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,7 +125,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !RenderEffect.field_c) {
             AceOfSkies.field_J = true;
             if (rl.field_p &&
-              -mg.field_b + kh.a(-67) > 1000L) {
+              -mg.field_b + kh.correctedCurrentTimeMillis(-67) > 1000L) {
               java.awt.Rectangle var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (nj.field_e > var2.width) {
@@ -258,7 +258,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     private final void a(byte param0) {
         try {
           int var2_int = 116 % ((36 - param0) / 48);
-          long var3 = kh.a(-86);
+          long var3 = kh.correctedCurrentTimeMillis(-86);
           long var5 = pn.field_b[ce.field_A];
           pn.field_b[ce.field_A] = var3;
           ce.field_A = 31 & ce.field_A + 1;
@@ -353,7 +353,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     private final void c(byte param0) {
         try {
           int var2_int = 20 % ((param0 - 13) / 40);
-          long var3 = kh.a(-69);
+          long var3 = kh.correctedCurrentTimeMillis(-69);
           long var5 = SoundCache.field_c[ur.field_a];
           SoundCache.field_c[ur.field_a] = var3;
           if (var5 != 0L &&
@@ -446,8 +446,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          lb.field_g = kh.a(-96);
-          IntrusiveNode.a(5000L, false);
+          lb.field_g = kh.correctedCurrentTimeMillis(-96);
+          IntrusiveNode.sleepMillis(5000L, false);
           mj.field_a = null;
           this.a(false, (byte) 29);
         } catch (RuntimeException runtimeException) {
@@ -606,7 +606,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lb.field_g != 0L) {
-                    stackIn_100_0 = compareLongs(kh.a(-125), lb.field_g);
+                    stackIn_100_0 = compareLongs(kh.correctedCurrentTimeMillis(-125), lb.field_g);
                     decompiledFrameRemainder0 = ((!(var5)));
                     if (decompiledFrameRemainder0 &&
                       stackIn_100_0 >= 0) {
@@ -729,7 +729,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SystemTask var8 = pt.field_b.requestThreadStart(1, 1048576, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  IntrusiveNode.a(10L, false);
+                  IntrusiveNode.sleepMillis(10L, false);
                   if (!var9) {
                     continue;
                   }
