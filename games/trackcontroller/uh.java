@@ -49,7 +49,7 @@ final class uh {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int integerPower(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -71,7 +71,7 @@ final class uh {
             return stackIn_8_0;
           }
           if (param1 < 15) {
-            uh.a(4, (byte) 36, 66);
+            uh.integerPower(4, (byte) 36, 66);
           }
           stackIn_12_0 = var3_int;
           return stackIn_12_0;

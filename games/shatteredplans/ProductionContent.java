@@ -14,7 +14,7 @@ final class ProductionContent implements MenuContent {
     ToggleButton[] field_d;
     MenuList[] field_f;
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int integerPower(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

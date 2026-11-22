@@ -36,17 +36,17 @@ final class SoundFilter {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.l(32270);
+        var3 = param0.readUnsignedByte(32270);
         this.field_a[0] = var3 >> 4;
         this.field_a[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_f[0] = param0.e(8);
-          this.field_f[1] = param0.e(8);
-          var4 = param0.l(32270);
+          this.field_f[0] = param0.readUnsignedShort(8);
+          this.field_f[1] = param0.readUnsignedShort(8);
+          var4 = param0.readUnsignedByte(32270);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_a[var5]; var6++) {
-              this.field_h[var5][0][var6] = param0.e(8);
-              this.field_g[var5][0][var6] = param0.e(8);
+              this.field_h[var5][0][var6] = param0.readUnsignedShort(8);
+              this.field_g[var5][0][var6] = param0.readUnsignedShort(8);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -57,15 +57,15 @@ final class SoundFilter {
                 this.field_h[var5Lifetime1][1][var7] = this.field_h[var5Lifetime1][0][var7];
                 this.field_g[var5Lifetime1][1][var7] = this.field_g[var5Lifetime1][0][var7];
               } else {
-                this.field_h[var5Lifetime1][1][var7] = param0.e(8);
-                this.field_g[var5Lifetime1][1][var7] = param0.e(8);
+                this.field_h[var5Lifetime1][1][var7] = param0.readUnsignedShort(8);
+                this.field_g[var5Lifetime1][1][var7] = param0.readUnsignedShort(8);
               }
               var7++;
             }
           }
           if (var4 != 0 ||
             this.field_f[1] != this.field_f[0]) {
-            param1.b(param0);
+            param1.decodeSegments(param0);
           }
         } else {
           var11 = this.field_f;

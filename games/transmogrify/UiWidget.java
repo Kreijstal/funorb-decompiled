@@ -229,7 +229,7 @@ class UiWidget extends IntrusiveNode {
 
     int g(int param0) {
         if (param0 >= -41) {
-          UiWidget.a((byte) 106, -11);
+          UiWidget.bitLength((byte) 106, -11);
           return 0;
         }
         return 0;
@@ -406,7 +406,7 @@ class UiWidget extends IntrusiveNode {
         return stackIn_8_0;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         int var2;
         var2 = 0;
         if (0 > param1 ||

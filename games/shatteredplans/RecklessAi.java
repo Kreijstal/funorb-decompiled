@@ -14,7 +14,7 @@ final class RecklessAi extends StandardAi {
         }
     }
 
-    final static int c(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0) {
@@ -52,7 +52,7 @@ final class RecklessAi extends StandardAi {
     final static void a(int param0, Archive param1, Archive param2) {
         try {
           if (param0 > -25) {
-            RecklessAi.c(122, 49);
+            RecklessAi.bitLength(122, 49);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

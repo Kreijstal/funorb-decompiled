@@ -219,7 +219,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
         super(integerArgument1, integerArgument2, integerArgument3, integerArgument4, callbackContract004Argument5);
     }
 
-    final static int computeInteger1699(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
+    final static int integerPower(int integerArgument1, int integerArgument2, boolean booleanArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;

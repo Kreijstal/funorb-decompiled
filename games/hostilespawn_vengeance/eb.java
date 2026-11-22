@@ -88,14 +88,14 @@ final class eb {
             if (!re.c((byte) 33, 1)) {
               return false;
             }
-            jd.field_q = sc.field_g.l(32270);
+            jd.field_q = sc.field_g.readUnsignedByte(32270);
             sc.field_g.field_i = 0;
           }
           if (-2 == jd.field_q) {
             if (!re.c((byte) 33, 2)) {
               return false;
             }
-            jd.field_q = sc.field_g.e(8);
+            jd.field_q = sc.field_g.readUnsignedShort(8);
             sc.field_g.field_i = 0;
           }
           return re.c((byte) 33, jd.field_q);
@@ -104,14 +104,14 @@ final class eb {
           if (!re.c((byte) 33, 1)) {
             return false;
           }
-          jd.field_q = sc.field_g.l(32270);
+          jd.field_q = sc.field_g.readUnsignedByte(32270);
           sc.field_g.field_i = 0;
         }
         if (-2 == jd.field_q) {
           if (!re.c((byte) 33, 2)) {
             return false;
           }
-          jd.field_q = sc.field_g.e(8);
+          jd.field_q = sc.field_g.readUnsignedShort(8);
           sc.field_g.field_i = 0;
         }
         return re.c((byte) 33, jd.field_q);

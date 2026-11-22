@@ -2725,7 +2725,7 @@ final class pc {
           if (param4 <= 79) {
             return;
           }
-          var5_int = vf.b(123, (param0 - param1) * 3);
+          var5_int = vf.bitLength(123, (param0 - param1) * 3);
           var6 = 3 * param1;
           lk.l(74);
           var7 = var5_int - 10;

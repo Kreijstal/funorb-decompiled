@@ -102,19 +102,19 @@ final class md {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_e = VorbisDecoder.d(16);
-        this.field_g = VorbisDecoder.d(24);
-        this.field_a = VorbisDecoder.d(24);
-        this.field_b = VorbisDecoder.d(24) + 1;
-        this.field_d = VorbisDecoder.d(6) + 1;
-        this.field_f = VorbisDecoder.d(8);
+        this.field_e = VorbisDecoder.readBits(16);
+        this.field_g = VorbisDecoder.readBits(24);
+        this.field_a = VorbisDecoder.readBits(24);
+        this.field_b = VorbisDecoder.readBits(24) + 1;
+        this.field_d = VorbisDecoder.readBits(6) + 1;
+        this.field_f = VorbisDecoder.readBits(8);
         int[] var1 = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
           var3 = 0;
-          var4 = VorbisDecoder.d(3);
-          var5 = VorbisDecoder.c() != 0 ? 1 : 0;
+          var4 = VorbisDecoder.readBits(3);
+          var5 = VorbisDecoder.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = VorbisDecoder.d(5);
+            var3 = VorbisDecoder.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class md {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_d * 8) {
-          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisDecoder.d(8) : -1;
+          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisDecoder.readBits(8) : -1;
           var6++;
         }
     }

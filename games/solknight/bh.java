@@ -102,19 +102,19 @@ final class bh {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_a = sl.d(16);
-        this.field_e = sl.d(24);
-        this.field_b = sl.d(24);
-        this.field_d = sl.d(24) + 1;
-        this.field_f = sl.d(6) + 1;
-        this.field_c = sl.d(8);
+        this.field_a = sl.readBits(16);
+        this.field_e = sl.readBits(24);
+        this.field_b = sl.readBits(24);
+        this.field_d = sl.readBits(24) + 1;
+        this.field_f = sl.readBits(6) + 1;
+        this.field_c = sl.readBits(8);
         int[] var1 = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
           var3 = 0;
-          var4 = sl.d(3);
-          var5 = sl.a() != 0 ? 1 : 0;
+          var4 = sl.readBits(3);
+          var5 = sl.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = sl.d(5);
+            var3 = sl.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class bh {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_f * 8) {
-          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? sl.d(8) : -1;
+          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? sl.readBits(8) : -1;
           var6++;
         }
     }

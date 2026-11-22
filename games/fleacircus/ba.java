@@ -102,19 +102,19 @@ final class ba {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_e = hk.e(16);
-        this.field_f = hk.e(24);
-        this.field_b = hk.e(24);
-        this.field_g = hk.e(24) + 1;
-        this.field_d = hk.e(6) + 1;
-        this.field_c = hk.e(8);
+        this.field_e = hk.readBits(16);
+        this.field_f = hk.readBits(24);
+        this.field_b = hk.readBits(24);
+        this.field_g = hk.readBits(24) + 1;
+        this.field_d = hk.readBits(6) + 1;
+        this.field_c = hk.readBits(8);
         int[] var1 = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
           var3 = 0;
-          var4 = hk.e(3);
-          var5 = hk.c() != 0 ? 1 : 0;
+          var4 = hk.readBits(3);
+          var5 = hk.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = hk.e(5);
+            var3 = hk.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class ba {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_d * 8) {
-          this.field_a[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? hk.e(8) : -1;
+          this.field_a[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? hk.readBits(8) : -1;
           var6++;
         }
     }

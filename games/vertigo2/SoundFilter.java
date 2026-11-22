@@ -118,7 +118,7 @@ final class SoundFilter {
           }
           if (var4 != 0 ||
             this.field_a[1] != this.field_a[0]) {
-            param1.a(param0);
+            param1.decodeSegments(param0);
           }
         } else {
           var11 = this.field_a;

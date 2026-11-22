@@ -133,7 +133,7 @@ final class ArchiveIndex {
         var16 = HostileSpawn.field_I ? 1 : 0;
         try {
           var17 = new PacketBuffer(ml.a(param1, (byte) -76));
-          var4 = var17.l(32270);
+          var4 = var17.readUnsignedByte(32270);
           if (5 <= var4 &&
             var4 <= 7) {
             if (6 <= var4) {
@@ -141,7 +141,7 @@ final class ArchiveIndex {
             } else {
               this.field_n = 0;
             }
-            var5 = var17.l(32270);
+            var5 = var17.readUnsignedByte(32270);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
@@ -149,7 +149,7 @@ final class ArchiveIndex {
             if (var4 >= 7) {
               this.field_j = var17.a(true);
             } else {
-              this.field_j = var17.e(8);
+              this.field_j = var17.readUnsignedShort(8);
             }
             var8 = 0;
             var9 = -1;
@@ -159,7 +159,7 @@ final class ArchiveIndex {
             this.field_t = new int[this.field_j];
             if (var4 < 7) {
               for (var10 = 0; this.field_j > var10; var10++) {
-                dupTemp$0 = var8 + var17.e(8);
+                dupTemp$0 = var8 + var17.readUnsignedShort(8);
                 var8 = dupTemp$0;
                 this.field_t[var10] = dupTemp$0;
                 if (var9 < this.field_t[var10]) {
@@ -240,7 +240,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime4 = 0; this.field_j > var10Lifetime4; var10Lifetime4++) {
-                this.field_o[this.field_t[var10Lifetime4]] = var17.e(bm.a(param0, 8));
+                this.field_o[this.field_t[var10Lifetime4]] = var17.readUnsignedShort(bm.a(param0, 8));
               }
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_j; var10Lifetime4++) {
                 var11 = this.field_t[var10Lifetime4];
@@ -250,7 +250,7 @@ final class ArchiveIndex {
                 array$5 = new int[var12];
                 this.field_b[var11] = array$5;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.e(8);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(8);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_b[var11];
                   dupTemp$7[var14] = dupTemp$6;

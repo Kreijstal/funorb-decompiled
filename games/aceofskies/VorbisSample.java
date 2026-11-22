@@ -123,8 +123,8 @@ final class VorbisSample extends IntrusiveNode {
         int var13;
         int var17_intLifetime3;
         VorbisSample.a(this.field_x[param0], 0);
-        VorbisSample.b();
-        int var2 = VorbisSample.d(ek.a((byte) 120, field_u.length - 1));
+        VorbisSample.readBit();
+        int var2 = VorbisSample.readBits(ek.bitLength((byte) 120, field_u.length - 1));
         boolean var3 = (field_K[var2]);
         if (!var3) {
           stackIn_3_0 = field_C;
@@ -135,9 +135,9 @@ final class VorbisSample extends IntrusiveNode {
         boolean var5 = false;
         boolean var6 = false;
         if (var3) {
-          boolean stackIn_7_0 = !(VorbisSample.b() == 0);
+          boolean stackIn_7_0 = !(VorbisSample.readBit() == 0);
           var5 = stackIn_7_0;
-          boolean stackIn_10_0 = !(VorbisSample.b() == 0);
+          boolean stackIn_10_0 = !(VorbisSample.readBit() == 0);
           var6 = stackIn_10_0;
         }
         int var7 = var4 >> 1;
@@ -243,7 +243,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          int var25Lifetime2 = ek.a((byte) 102, var4 - 1);
+          int var25Lifetime2 = ek.bitLength((byte) 102, var4 - 1);
           for (int var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             int var27_int = var4 >> var26 + 2;
             int var28_int = 8 << var26;
@@ -436,8 +436,8 @@ final class VorbisSample extends IntrusiveNode {
     final static void a(byte[] param0) {
         int stackIn_5_0 = 0;
         VorbisSample.a(param0, 0);
-        field_C = 1 << VorbisSample.d(4);
-        field_z = 1 << VorbisSample.d(4);
+        field_C = 1 << VorbisSample.readBits(4);
+        field_z = 1 << VorbisSample.readBits(4);
         field_n = new float[field_z];
         for (int var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -465,7 +465,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           int[] var9 = new int[var5];
-          int var10 = ek.a((byte) 121, var5 - 1);
+          int var10 = ek.bitLength((byte) 121, var5 - 1);
           for (int var11 = 0; var11 < var5; var11++) {
             var9[var11] = wd.b(12871, var10, var11);
           }
@@ -481,41 +481,41 @@ final class VorbisSample extends IntrusiveNode {
             field_G = var9;
           }
         }
-        int var1Lifetime1 = VorbisSample.d(8) + 1;
+        int var1Lifetime1 = VorbisSample.readBits(8) + 1;
         field_q = new VorbisCodebook[var1Lifetime1];
         for (int var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_q[var2Lifetime1] = new VorbisCodebook();
         }
-        int var2Lifetime2 = VorbisSample.d(6) + 1;
+        int var2Lifetime2 = VorbisSample.readBits(6) + 1;
         for (int var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          VorbisSample.d(16);
+          VorbisSample.readBits(16);
         }
-        int var2Lifetime3 = VorbisSample.d(6) + 1;
+        int var2Lifetime3 = VorbisSample.readBits(6) + 1;
         field_D = new VorbisFloor[var2Lifetime3];
         for (int var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_D[var3Lifetime2] = new VorbisFloor();
         }
-        int var3Lifetime3 = VorbisSample.d(6) + 1;
+        int var3Lifetime3 = VorbisSample.readBits(6) + 1;
         field_A = new VorbisResidue[var3Lifetime3];
         for (int var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_A[var4Lifetime1] = new VorbisResidue();
         }
-        int var4Lifetime2 = VorbisSample.d(6) + 1;
+        int var4Lifetime2 = VorbisSample.readBits(6) + 1;
         field_p = new VorbisMapping[var4Lifetime2];
         for (int var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_p[var5Lifetime1] = new VorbisMapping();
         }
-        int var5Lifetime2 = VorbisSample.d(6) + 1;
+        int var5Lifetime2 = VorbisSample.readBits(6) + 1;
         field_K = new boolean[var5Lifetime2];
         field_u = new int[var5Lifetime2];
         for (int var6 = 0; var6 < var5Lifetime2; var6++) {
           boolean[] stackIn_41_0 = (boolean[]) (field_K);
           int stackIn_41_1 = var6;
-          boolean stackIn_42_2 = (VorbisSample.b() != 0);
+          boolean stackIn_42_2 = (VorbisSample.readBit() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          VorbisSample.d(16);
-          VorbisSample.d(16);
-          field_u[var6] = VorbisSample.d(8);
+          VorbisSample.readBits(16);
+          VorbisSample.readBits(16);
+          field_u[var6] = VorbisSample.readBits(8);
         }
         field_E = true;
     }
@@ -539,7 +539,7 @@ final class VorbisSample extends IntrusiveNode {
         field_G = null;
     }
 
-    final static float e(int param0) {
+    final static float unpackVorbisFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
@@ -549,7 +549,7 @@ final class VorbisSample extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static int b() {
+    final static int readBit() {
         int var0 = field_e[field_F] >> field_y & 1;
         field_y = field_y + 1;
         field_F = field_F + (field_y >> 3);
@@ -557,7 +557,7 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    final static int d(int param0) {
+    final static int readBits(int param0) {
         int var1 = 0;
         int var2 = 0;
         while (param0 >= 8 - field_y) {

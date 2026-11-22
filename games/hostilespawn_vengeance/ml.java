@@ -176,7 +176,7 @@ final class ml {
         byte[] var14 = null;
         try {
           var10 = new PacketBuffer(param0);
-          var3 = var10.l(param1 ^ -32326);
+          var3 = var10.readUnsignedByte(param1 ^ -32326);
           var4 = var10.d(8195);
           if (param1 != -76) {
             var9 = (CharSequence) null;

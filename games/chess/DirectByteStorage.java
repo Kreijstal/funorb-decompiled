@@ -164,7 +164,7 @@ final class DirectByteStorage extends ByteStorage {
         int var13Lifetime1;
         var19 = Chess.field_G;
         try {
-          var5_int = ql.a(-116, 3 * (-param3 + param1));
+          var5_int = ql.bitLength(-116, 3 * (-param3 + param1));
           var6 = 3 * param3;
           ki.a(0);
           var7 = var5_int - 10;

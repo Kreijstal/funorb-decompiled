@@ -18,7 +18,7 @@ final class td {
         this.field_c = param0.readUnsignedByte((byte) -101);
         this.field_e = param0.readInt((byte) -127);
         this.field_a = param0.readInt((byte) -76);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
     final void a() {
@@ -29,7 +29,7 @@ final class td {
         this.field_g = 0;
     }
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_b = param0.readUnsignedByte((byte) -101);
         this.field_h = new int[this.field_b];

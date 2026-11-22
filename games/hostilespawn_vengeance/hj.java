@@ -86,25 +86,25 @@ final class hj extends DualLinkNode {
             this.field_v = cj.a(param2.o(32), -14, '<');
           } else {
             if (param0 == 2) {
-              var4_int = param2.l(param1 ^ 13041);
+              var4_int = param2.readUnsignedByte(param1 ^ 13041);
               this.field_w = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_w[var5] = param2.e(bm.a(param1, 19703));
+                this.field_w[var5] = param2.readUnsignedShort(bm.a(param1, 19703));
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.l(32270);
+                var4_int = param2.readUnsignedByte(32270);
                 this.field_q = new int[var4_int];
                 this.field_u = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = param2.e(8);
+                  var6 = param2.readUnsignedShort(8);
                   var7 = mb.c(param1 - 41805, var6);
                   if (var7 != null) {
                     this.field_q[var5] = var6;
                     array$0 = new int[var7.field_b];
                     this.field_u[var5] = array$0;
                     for (var8 = 0; var7.field_b > var8; var8++) {
-                      this.field_u[var5][var8] = param2.e(8);
+                      this.field_u[var5][var8] = param2.readUnsignedShort(8);
                     }
                   }
                 }
@@ -246,7 +246,7 @@ final class hj extends DualLinkNode {
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           while (true) {
-            var3_int = param0.l(param1 ^ 32334);
+            var3_int = param0.readUnsignedByte(param1 ^ 32334);
             if (var3_int != 0) {
               this.a(var3_int, 19711, param0);
               continue;

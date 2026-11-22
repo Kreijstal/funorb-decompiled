@@ -26,10 +26,10 @@ final class pr {
         this.field_e = param0.readUnsignedByte(-11);
         this.field_h = param0.readInt(true);
         this.field_g = param0.readInt(true);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_i = param0.readUnsignedByte(-11);
         this.field_k = new int[this.field_i];

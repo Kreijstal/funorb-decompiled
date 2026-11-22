@@ -117,17 +117,17 @@ final class qg extends lf {
 
     private final void a(int param0, PacketBuffer param1) {
         try {
-          this.field_c = param1.l(param0 + 32014);
-          this.field_b = param1.l(32270);
-          this.field_a = param1.l(32270);
+          this.field_c = param1.readUnsignedByte(param0 + 32014);
+          this.field_b = param1.readUnsignedByte(32270);
+          this.field_a = param1.readUnsignedByte(32270);
           if (param0 != 256) {
             oj var4 = (oj) null;
             this.a(-53, -22, (oj) null);
           }
-          this.field_k = param1.e(param0 - 248);
-          this.field_h = param1.e(8);
-          this.a(param1.l(32270), (byte) 21);
-          this.a(param1.l(32270), 42);
+          this.field_k = param1.readUnsignedShort(param0 - 248);
+          this.field_h = param1.readUnsignedShort(8);
+          this.a(param1.readUnsignedByte(32270), (byte) 21);
+          this.a(param1.readUnsignedByte(32270), 42);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "qg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

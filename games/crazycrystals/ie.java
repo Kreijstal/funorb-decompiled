@@ -102,19 +102,19 @@ final class ie {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_f = bl.a(16);
-        this.field_e = bl.a(24);
-        this.field_c = bl.a(24);
-        this.field_g = bl.a(24) + 1;
-        this.field_b = bl.a(6) + 1;
-        this.field_a = bl.a(8);
+        this.field_f = bl.readBits(16);
+        this.field_e = bl.readBits(24);
+        this.field_c = bl.readBits(24);
+        this.field_g = bl.readBits(24) + 1;
+        this.field_b = bl.readBits(6) + 1;
+        this.field_a = bl.readBits(8);
         int[] var1 = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
           var3 = 0;
-          var4 = bl.a(3);
-          var5 = bl.b() != 0 ? 1 : 0;
+          var4 = bl.readBits(3);
+          var5 = bl.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = bl.a(5);
+            var3 = bl.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class ie {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_b * 8) {
-          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? bl.a(8) : -1;
+          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? bl.readBits(8) : -1;
           var6++;
         }
     }

@@ -36,8 +36,8 @@ final class gh {
         int var3Lifetime1;
         this.field_h.field_n = param0;
         this.field_h.field_i = 10;
-        int var2 = this.field_h.e(8);
-        this.field_f = this.field_h.e(8);
+        int var2 = this.field_h.readUnsignedShort(8);
+        this.field_f = this.field_h.readUnsignedShort(8);
         this.field_b = 500000;
         this.field_g = new int[var2];
         int var3 = 0;
@@ -173,7 +173,7 @@ final class gh {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_h.l(32270);
+          var3 = this.field_h.readUnsignedByte(32270);
           var4 = this.field_h.m(127);
           if (var3 == 47) {
             this.field_h.field_i = this.field_h.field_i + var4;
@@ -194,10 +194,10 @@ final class gh {
         var3Lifetime1 = field_i[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_h.l(32270) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_h.readUnsignedByte(32270) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_h.l(32270) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_h.readUnsignedByte(32270) << 16;
         }
         return var4Lifetime1;
     }

@@ -6,7 +6,7 @@ final class uh {
     static int field_b;
     static String field_c;
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         int var2;
         var2 = 0;
         if (0 > param1) {

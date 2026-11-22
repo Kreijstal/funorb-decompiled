@@ -102,19 +102,19 @@ final class sk {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_f = tk.d(16);
-        this.field_c = tk.d(24);
-        this.field_d = tk.d(24);
-        this.field_b = tk.d(24) + 1;
-        this.field_g = tk.d(6) + 1;
-        this.field_a = tk.d(8);
+        this.field_f = tk.readBits(16);
+        this.field_c = tk.readBits(24);
+        this.field_d = tk.readBits(24);
+        this.field_b = tk.readBits(24) + 1;
+        this.field_g = tk.readBits(6) + 1;
+        this.field_a = tk.readBits(8);
         int[] var1 = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
           var3 = 0;
-          var4 = tk.d(3);
-          var5 = tk.a() != 0 ? 1 : 0;
+          var4 = tk.readBits(3);
+          var5 = tk.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = tk.d(5);
+            var3 = tk.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class sk {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_g * 8) {
-          this.field_e[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? tk.d(8) : -1;
+          this.field_e[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? tk.readBits(8) : -1;
           var6++;
         }
     }

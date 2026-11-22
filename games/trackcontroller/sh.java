@@ -102,19 +102,19 @@ final class sh {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_c = VorbisDecoder.f(16);
-        this.field_e = VorbisDecoder.f(24);
-        this.field_g = VorbisDecoder.f(24);
-        this.field_b = VorbisDecoder.f(24) + 1;
-        this.field_a = VorbisDecoder.f(6) + 1;
-        this.field_d = VorbisDecoder.f(8);
+        this.field_c = VorbisDecoder.readBits(16);
+        this.field_e = VorbisDecoder.readBits(24);
+        this.field_g = VorbisDecoder.readBits(24);
+        this.field_b = VorbisDecoder.readBits(24) + 1;
+        this.field_a = VorbisDecoder.readBits(6) + 1;
+        this.field_d = VorbisDecoder.readBits(8);
         int[] var1 = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
           var3 = 0;
-          var4 = VorbisDecoder.f(3);
-          var5 = VorbisDecoder.b() != 0 ? 1 : 0;
+          var4 = VorbisDecoder.readBits(3);
+          var5 = VorbisDecoder.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = VorbisDecoder.f(5);
+            var3 = VorbisDecoder.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class sh {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_a * 8) {
-          this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisDecoder.f(8) : -1;
+          this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisDecoder.readBits(8) : -1;
           var6++;
         }
     }

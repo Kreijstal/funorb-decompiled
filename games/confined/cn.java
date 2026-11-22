@@ -102,19 +102,19 @@ final class cn {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_d = ph.b(16);
-        this.field_a = ph.b(24);
-        this.field_c = ph.b(24);
-        this.field_e = ph.b(24) + 1;
-        this.field_b = ph.b(6) + 1;
-        this.field_f = ph.b(8);
+        this.field_d = ph.readBits(16);
+        this.field_a = ph.readBits(24);
+        this.field_c = ph.readBits(24);
+        this.field_e = ph.readBits(24) + 1;
+        this.field_b = ph.readBits(6) + 1;
+        this.field_f = ph.readBits(8);
         int[] var1 = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
           var3 = 0;
-          var4 = ph.b(3);
-          var5 = ph.a() != 0 ? 1 : 0;
+          var4 = ph.readBits(3);
+          var5 = ph.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = ph.b(5);
+            var3 = ph.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class cn {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_b * 8) {
-          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ph.b(8) : -1;
+          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ph.readBits(8) : -1;
           var6++;
         }
     }

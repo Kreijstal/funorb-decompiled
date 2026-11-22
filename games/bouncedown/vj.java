@@ -102,19 +102,19 @@ final class vj {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_b = te.d(16);
-        this.field_e = te.d(24);
-        this.field_d = te.d(24);
-        this.field_a = te.d(24) + 1;
-        this.field_g = te.d(6) + 1;
-        this.field_f = te.d(8);
+        this.field_b = te.readBits(16);
+        this.field_e = te.readBits(24);
+        this.field_d = te.readBits(24);
+        this.field_a = te.readBits(24) + 1;
+        this.field_g = te.readBits(6) + 1;
+        this.field_f = te.readBits(8);
         int[] var1 = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
           var3 = 0;
-          var4 = te.d(3);
-          var5 = te.b() != 0 ? 1 : 0;
+          var4 = te.readBits(3);
+          var5 = te.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = te.d(5);
+            var3 = te.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class vj {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_g * 8) {
-          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? te.d(8) : -1;
+          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? te.readBits(8) : -1;
           var6++;
         }
     }

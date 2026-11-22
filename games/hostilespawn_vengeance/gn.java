@@ -112,7 +112,7 @@ final class gn {
           if (param0 != 0) {
             field_t = 102;
           }
-          var2_int = param1.l(32270);
+          var2_int = param1.readUnsignedByte(32270);
           stackIn_5_0 = (1 == var2_int) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

@@ -31,7 +31,7 @@ final class je {
           var4_int = param2.length();
           var5 = param1.length();
           if (param0 < 54) {
-            je.a(-16, 65);
+            je.bitLength(-16, 65);
           }
           var6 = var4_int;
           var7 = -1 + var5;
@@ -79,7 +79,7 @@ final class je {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         if (param0 > -63) {
           return -121;

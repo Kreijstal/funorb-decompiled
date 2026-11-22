@@ -41,7 +41,7 @@ abstract class rf {
         int var13Lifetime1;
         var19 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var5_int = nf.a(3 * (-param2 + param0), true);
+          var5_int = nf.bitLength(3 * (-param2 + param0), true);
           var6 = 3 * param2;
           var7 = var5_int + param1;
           IterableNodeHashTable.a((byte) 114);

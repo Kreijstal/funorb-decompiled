@@ -102,19 +102,19 @@ final class po {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_e = jp.a(16);
-        this.field_f = jp.a(24);
-        this.field_b = jp.a(24);
-        this.field_g = jp.a(24) + 1;
-        this.field_c = jp.a(6) + 1;
-        this.field_a = jp.a(8);
+        this.field_e = jp.readBits(16);
+        this.field_f = jp.readBits(24);
+        this.field_b = jp.readBits(24);
+        this.field_g = jp.readBits(24) + 1;
+        this.field_c = jp.readBits(6) + 1;
+        this.field_a = jp.readBits(8);
         int[] var1 = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
           var3 = 0;
-          var4 = jp.a(3);
-          var5 = jp.b() != 0 ? 1 : 0;
+          var4 = jp.readBits(3);
+          var5 = jp.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = jp.a(5);
+            var3 = jp.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class po {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_c * 8) {
-          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? jp.a(8) : -1;
+          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? jp.readBits(8) : -1;
           var6++;
         }
     }

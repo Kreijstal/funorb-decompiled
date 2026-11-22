@@ -299,37 +299,37 @@ final class id implements Serializable {
         var9 = HostileSpawn.field_I ? 1 : 0;
         try {
           var10 = new PacketBuffer(param1);
-          var4 = var10.l(32270);
+          var4 = var10.readUnsignedByte(32270);
           if (param0 <= 81) {
             this.a(-10, 78);
           }
-          var5 = var10.e(8);
-          var6 = var10.e(8);
+          var5 = var10.readUnsignedShort(8);
+          var6 = var10.readUnsignedShort(8);
           this.a(62, var6, var5);
           if (var4 < 3) {
-            var10.l(32270);
+            var10.readUnsignedByte(32270);
           }
-          this.field_m = var10.l(32270);
+          this.field_m = var10.readUnsignedByte(32270);
           for (var7 = 0; var7 < this.field_n; var7++) {
-            this.field_y[var7] = var10.e(8);
-            this.field_c[var7] = var10.l(32270);
+            this.field_y[var7] = var10.readUnsignedShort(8);
+            this.field_c[var7] = var10.readUnsignedByte(32270);
             if (var4 < 9) {
-              this.field_k[var7] = var10.l(32270);
+              this.field_k[var7] = var10.readUnsignedByte(32270);
             } else {
-              this.field_k[var7] = var10.e(8);
+              this.field_k[var7] = var10.readUnsignedShort(8);
             }
             if (var4 >= 4) {
-              this.field_j[var7] = var10.l(32270);
-              this.field_z[var7] = var10.l(32270);
+              this.field_j[var7] = var10.readUnsignedByte(32270);
+              this.field_z[var7] = var10.readUnsignedByte(32270);
             }
-            this.field_f[var7] = var10.l(32270);
+            this.field_f[var7] = var10.readUnsignedByte(32270);
             stackIn_16_0 = this.field_r;
             stackIn_16_1 = var7;
-            stackIn_17_2 = (var10.l(32270) == 1);
+            stackIn_17_2 = (var10.readUnsignedByte(32270) == 1);
             stackIn_16_0[stackIn_16_1] = stackIn_17_2;
             stackIn_19_0 = this.field_B;
             stackIn_19_1 = var7;
-            stackIn_20_2 = (var10.l(32270) == 1);
+            stackIn_20_2 = (var10.readUnsignedByte(32270) == 1);
             stackIn_19_0[stackIn_19_1] = stackIn_20_2;
             if (var4 < 1) {
               this.field_o[var7] = 0;
@@ -337,24 +337,24 @@ final class id implements Serializable {
               this.field_o[var7] = var10.b(true);
             }
             if (var4 >= 5) {
-              this.field_g[var7] = var10.l(32270);
+              this.field_g[var7] = var10.readUnsignedByte(32270);
             }
             if (var4 >= 6) {
-              this.field_h[var7] = var10.l(32270);
+              this.field_h[var7] = var10.readUnsignedByte(32270);
             }
             this.field_u[var7] = 0;
             this.field_i[var7] = 0;
             this.field_e[var7] = false;
           }
           if (var4 >= 7) {
-            var7Lifetime1 = var10.l(32270) * 2;
+            var7Lifetime1 = var10.readUnsignedByte(32270) * 2;
             this.field_v = new int[var7Lifetime1];
             for (var8 = 0; var8 < var7Lifetime1; var8++) {
-              this.field_v[var8] = var10.e(8);
+              this.field_v[var8] = var10.readUnsignedShort(8);
             }
           }
           if (var4 >= 8) {
-            var7Lifetime2 = var10.l(32270);
+            var7Lifetime2 = var10.readUnsignedByte(32270);
             this.field_x = new qg[var7Lifetime2];
             for (var8Lifetime1 = 0; var8Lifetime1 < var7Lifetime2; var8Lifetime1++) {
               this.field_x[var8Lifetime1] = new qg(var10);

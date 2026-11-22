@@ -11,7 +11,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; fd.a(1, var2, param1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; fd.integerPower(1, var2, param1) > param0; var2--) {
         }
         return var2;
     }
@@ -28,17 +28,17 @@ final class VorbisCodebook {
         int var10;
         int var11;
         int var8Lifetime1;
-        VorbisSample.d(24);
-        this.field_b = VorbisSample.d(16);
-        this.field_c = VorbisSample.d(24);
+        VorbisSample.readBits(24);
+        this.field_b = VorbisSample.readBits(16);
+        this.field_c = VorbisSample.readBits(24);
         this.field_a = new int[this.field_c];
-        boolean stackIn_3_0 = !(VorbisSample.b() == 0);
+        boolean stackIn_3_0 = !(VorbisSample.readBit() == 0);
         boolean var1 = stackIn_3_0;
         if (var1) {
           var2 = 0;
-          var3_int = VorbisSample.d(5) + 1;
+          var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_c) {
-            int var4_int = VorbisSample.d(ek.a((byte) 121, this.field_c - var2));
+            int var4_int = VorbisSample.readBits(ek.bitLength((byte) 121, this.field_c - var2));
             for (int var5 = 0; var5 < var4_int; var5++) {
               int incrementValue$0 = var2;
               var2++;
@@ -47,27 +47,27 @@ final class VorbisCodebook {
             var3_int++;
           }
         } else {
-          int stackIn_13_0 = (VorbisSample.b() == 0) ? 0 : 1;
+          int stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           int var14 = 0;
           var3_int = var14;
           while (var14 < this.field_c) {
             if (var2 != 0 &&
-              VorbisSample.b() == 0) {
+              VorbisSample.readBit() == 0) {
               this.field_a[var14] = 0;
             } else {
-              this.field_a[var14] = VorbisSample.d(5) + 1;
+              this.field_a[var14] = VorbisSample.readBits(5) + 1;
             }
             var14++;
           }
         }
         this.buildHuffmanTree();
-        int var2Lifetime1 = VorbisSample.d(4);
+        int var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          float var3 = VorbisSample.e(VorbisSample.d(32));
-          float var4 = VorbisSample.e(VorbisSample.d(32));
-          int var5Lifetime1 = VorbisSample.d(4) + 1;
-          boolean stackIn_25_0 = !(VorbisSample.b() == 0);
+          float var3 = VorbisSample.unpackVorbisFloat(VorbisSample.readBits(32));
+          float var4 = VorbisSample.unpackVorbisFloat(VorbisSample.readBits(32));
+          int var5Lifetime1 = VorbisSample.readBits(4) + 1;
+          boolean stackIn_25_0 = !(VorbisSample.readBit() == 0);
           boolean var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_c * this.field_b;
@@ -76,7 +76,7 @@ final class VorbisCodebook {
           }
           this.field_d = new int[var7];
           for (int var8 = 0; var8 < var7; var8++) {
-            this.field_d[var8] = VorbisSample.d(var5Lifetime1);
+            this.field_d[var8] = VorbisSample.readBits(var5Lifetime1);
           }
           this.field_e = new float[this.field_c][this.field_b];
           if (var2Lifetime1 != 1) {
@@ -191,7 +191,7 @@ final class VorbisCodebook {
     final int decodeScalar() {
         int var1 = 0;
         while (this.field_f[var1] >= 0) {
-          var1 = VorbisSample.b() != 0 ? this.field_f[var1] : var1 + 1;
+          var1 = VorbisSample.readBit() != 0 ? this.field_f[var1] : var1 + 1;
         }
         return ~this.field_f[var1];
     }

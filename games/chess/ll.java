@@ -18,10 +18,10 @@ final class ll {
         this.field_k = param0.readUnsignedByte(-100);
         this.field_a = param0.readInt((byte) -128);
         this.field_f = param0.readInt((byte) -112);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_g = param0.readUnsignedByte(-101);
         this.field_i = new int[this.field_g];

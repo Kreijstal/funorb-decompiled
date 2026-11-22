@@ -44,7 +44,7 @@ final class hj {
         int var13Lifetime1;
         var19 = Bounce.field_N;
         try {
-          var5_int = wb.a((byte) 100, (-param4 + param3) * 3);
+          var5_int = wb.bitLength((byte) 100, (-param4 + param3) * 3);
           var6 = 3 * param4;
           var7 = var5_int - 10;
           jg.k(0);
@@ -219,7 +219,7 @@ final class hj {
         int var13Lifetime1;
         var19 = Bounce.field_N;
         try {
-          var5_int = wb.a((byte) 100, (-param4 + param3) * 3);
+          var5_int = wb.bitLength((byte) 100, (-param4 + param3) * 3);
           var6 = 3 * param4;
           var7 = var5_int - 10;
           jg.k(0);

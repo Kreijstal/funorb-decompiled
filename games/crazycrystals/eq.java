@@ -17,14 +17,14 @@ final class eq extends rl {
     public static void f(int param0) {
         field_k = null;
         if (param0 != 1) {
-          eq.c(-34, (byte) 28);
+          eq.bitLength(-34, (byte) 28);
           field_l = null;
           return;
         }
         field_l = null;
     }
 
-    final static int c(int param0, byte param1) {
+    final static int bitLength(int param0, byte param1) {
         int var2;
         var2 = 0;
         if (param0 < 0) {

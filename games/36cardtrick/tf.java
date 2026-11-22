@@ -100,7 +100,7 @@ final class tf extends pd {
         int var13Lifetime1;
         var19 = Main.field_T;
         try {
-          var5_int = ia.a(3 * (-param4 + param1), 2);
+          var5_int = ia.bitLength(3 * (-param4 + param1), 2);
           var6 = param4 * 3;
           if (param3 != 23) {
             return;

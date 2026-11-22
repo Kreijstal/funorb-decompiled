@@ -41,7 +41,7 @@ final class dg {
         return this.field_b - this.field_e >> 15;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_a = param0.readUnsignedByte((byte) 114);
         this.field_c = new int[this.field_a];
@@ -56,7 +56,7 @@ final class dg {
         this.field_f = param0.readUnsignedByte((byte) 114);
         this.field_j = param0.readInt(4);
         this.field_d = param0.readInt(127);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
     dg() {

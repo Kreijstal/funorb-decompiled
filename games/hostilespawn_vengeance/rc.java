@@ -244,7 +244,7 @@ final class rc {
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
           var9 = sc.field_g;
-          var2 = var9.l(32270);
+          var2 = var9.readUnsignedByte(32270);
           if (var2 != 0) {
             if (var2 == 1) {
               var3 = var9.d(param0 ^ 8193);
@@ -271,7 +271,7 @@ final class rc {
               le.c((byte) 51);
               return;
             }
-            var4_int = var9.l(32270);
+            var4_int = var9.readUnsignedByte(32270);
             if (var4_int == 0) {
               var5 = null;
             } else {

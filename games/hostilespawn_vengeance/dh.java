@@ -67,12 +67,12 @@ final class dh implements Runnable {
     final static void a(byte param0) {
         if (param0 == -6) {
           ei.field_t = false;
-          sc.field_g.l(32270);
+          sc.field_g.readUnsignedByte(32270);
           return;
         }
         field_c = -21L;
         ei.field_t = false;
-        sc.field_g.l(32270);
+        sc.field_g.readUnsignedByte(32270);
     }
 
     public static void clearStaticReferences(int param0) {

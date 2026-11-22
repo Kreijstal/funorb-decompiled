@@ -4,7 +4,7 @@
 final class sp extends pu {
     static int field_l;
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int integerPower(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

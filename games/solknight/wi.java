@@ -105,14 +105,14 @@ final class wi extends IntrusiveNode {
     public static void a(int param0) {
         field_h = null;
         if (param0 != -26923) {
-          wi.b(-104, -27);
+          wi.bitLength(-104, -27);
         }
         field_i = null;
         field_j = null;
         field_k = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0 ||

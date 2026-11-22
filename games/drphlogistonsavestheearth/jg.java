@@ -9,21 +9,21 @@ final class jg {
 
     jg() {
         int var1 = 0;
-        tk.d(16);
-        this.field_b = tk.a() != 0 ? tk.d(4) + 1 : 1;
-        if (tk.a() != 0) {
-          tk.d(8);
+        tk.readBits(16);
+        this.field_b = tk.readBit() != 0 ? tk.readBits(4) + 1 : 1;
+        if (tk.readBit() != 0) {
+          tk.readBits(8);
         }
-        tk.d(2);
+        tk.readBits(2);
         if (this.field_b > 1) {
-          this.field_a = tk.d(4);
+          this.field_a = tk.readBits(4);
         }
         this.field_d = new int[this.field_b];
         this.field_c = new int[this.field_b];
         for (var1 = 0; var1 < this.field_b; var1++) {
-          tk.d(8);
-          this.field_d[var1] = tk.d(8);
-          this.field_c[var1] = tk.d(8);
+          tk.readBits(8);
+          this.field_d[var1] = tk.readBits(8);
+          this.field_c[var1] = tk.readBits(8);
         }
     }
 }

@@ -70,7 +70,7 @@ final class VorbisFloor1 {
         var2 = this.field_f.length;
         System.arraycopy(this.field_f, 0, field_d, 0, var2);
         var3 = field_a[this.field_b - 1];
-        var4 = RecklessAi.c(60, var3 - 1);
+        var4 = RecklessAi.bitLength(60, var3 - 1);
         field_i[0] = VorbisSample.readBits(var4);
         field_i[1] = VorbisSample.readBits(var4);
         var5 = 2;

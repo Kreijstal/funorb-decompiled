@@ -1620,6 +1620,14 @@
       "renamedSymbol": "M:MeshRasterState.clearStaticReferences()V"
     },
     {
+      "symbol": "M:kb.a(II)I",
+      "originalName": "a",
+      "to": "bitLength",
+      "evidence": "Determine the integer bit width using unsigned shifts by16,8,4,2,1 and accumulated width. Preserve game-specific threshold/guard parameter positions,unused arithmetic,global side effects,early returns and exception wrappers for every input. Pre-rename body SHA256 0edb8312c841cd28aee98d47f8b16c086a4133d5b71b827818abe61f3016ba26. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kb.bitLength(II)I"
+    },
+    {
       "symbol": "M:kc.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -1842,6 +1850,14 @@
       "evidence": "Evaluate-7/((byte-3)/33) before sentinel.next read;nonempty unlink(byte-120). Complete deque constructor and all instance operations reviewed with exact node-link/cursor context. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliasing,call/allocation/exception order,modifiers and meaningful existing names. Identifier-only change;no whole-runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntrusiveDeque.removeFirst(B)LIntrusiveNode;"
+    },
+    {
+      "symbol": "M:ng.a(BII)I",
+      "originalName": "a",
+      "to": "integerPower",
+      "evidence": "Exponentiation-by-squaring helper with signed32-bit multiplication and right shifts. Preserve each actual base/exponent/seed-or-terminal/guard parameter arrangement,global control reads,side effects,early returns and exception wrapper;do not substitute Math.pow. Pre-rename body SHA256 65f0a48b9f434b84945810cb555a9a8ab5aeb2bfa15c5ad8825148396c2ef7e7. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDeque.integerPower(BII)I"
     },
     {
       "symbol": "M:ng.a(I)Lkd;",
@@ -2172,12 +2188,36 @@
       "renamedSymbol": "M:rk.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:sd.a()I",
+      "originalName": "a",
+      "to": "readBit",
+      "evidence": "Extract one LSB-first bit from the current sample byte;advance bit offset and byte cursor in their original order,then mask bit offset to7. Pre-rename body SHA256 62c2a556b96581ef81d11f66b097d9d4430a786c34218c0ecc97ec9d5f9cea0a. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.readBit()I"
+    },
+    {
+      "symbol": "M:sd.a(I)I",
+      "originalName": "a",
+      "to": "readBits",
+      "evidence": "Read the requested bit count LSB-first across byte boundaries,retaining the exact signed shifts,mask calculations,32-bit accumulation,cursor updates and invalid-count behavior. Pre-rename body SHA256 0d239e344ae0d167452c29e82476678a42ead583d77ab1e6dd2903328e142b15. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.readBits(I)I"
+    },
+    {
       "symbol": "M:sd.b()V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 16 null writes to 16 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish each target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 eece805d5524d57fdb61f724f20d0bbc6d4f56a9a12650934ec5b136341fa4fd.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VorbisSample.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:sd.b(I)F",
+      "originalName": "b",
+      "to": "unpackVorbisFloat",
+      "evidence": "Unpack the Vorbis21-bit mantissa,sign bit and exponent bits;apply sign and multiply the mantissa by2^(exponent-788) using the original double/float casts. Pre-rename body SHA256 1bd3608ca1ee7f868b1a098108e890001c62a2c8f42188740bfea3ec9bc4ff5d. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.unpackVorbisFloat(I)F"
     },
     {
       "symbol": "M:sg.a(IIIIILab;)Lra;",
@@ -86125,7 +86165,7 @@
     },
     {
       "symbol": "L:kb.a(II)I#0",
-      "renamedSymbol": "L:kb.a(II)I#0",
+      "renamedSymbol": "L:kb.bitLength(II)I#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -86136,7 +86176,7 @@
     },
     {
       "symbol": "L:kb.a(II)I#1",
-      "renamedSymbol": "L:kb.a(II)I#1",
+      "renamedSymbol": "L:kb.bitLength(II)I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -86147,7 +86187,7 @@
     },
     {
       "symbol": "L:kb.a(II)I#2",
-      "renamedSymbol": "L:kb.a(II)I#2",
+      "renamedSymbol": "L:kb.bitLength(II)I#2",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -86158,7 +86198,7 @@
     },
     {
       "symbol": "L:kb.a(II)I#3",
-      "renamedSymbol": "L:kb.a(II)I#3",
+      "renamedSymbol": "L:kb.bitLength(II)I#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -86169,7 +86209,7 @@
     },
     {
       "symbol": "L:kb.a(II)I#4",
-      "renamedSymbol": "L:kb.a(II)I#4",
+      "renamedSymbol": "L:kb.bitLength(II)I#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -103670,7 +103710,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#0",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#0",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -103681,7 +103721,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#1",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#1",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -103692,7 +103732,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#2",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#2",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -103703,7 +103743,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#3",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#3",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -103714,7 +103754,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#4",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#4",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -103725,7 +103765,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#5",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#5",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -103736,7 +103776,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#6",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#6",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -103747,7 +103787,7 @@
     },
     {
       "symbol": "L:ng.a(BII)I#7",
-      "renamedSymbol": "L:IntrusiveDeque.a(BII)I#7",
+      "renamedSymbol": "L:IntrusiveDeque.integerPower(BII)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -124207,7 +124247,7 @@
     },
     {
       "symbol": "L:sd.a()I#0",
-      "renamedSymbol": "L:VorbisSample.a()I#0",
+      "renamedSymbol": "L:VorbisSample.readBit()I#0",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -124218,7 +124258,7 @@
     },
     {
       "symbol": "L:sd.a(I)I#0",
-      "renamedSymbol": "L:VorbisSample.a(I)I#0",
+      "renamedSymbol": "L:VorbisSample.readBits(I)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -124229,7 +124269,7 @@
     },
     {
       "symbol": "L:sd.a(I)I#1",
-      "renamedSymbol": "L:VorbisSample.a(I)I#1",
+      "renamedSymbol": "L:VorbisSample.readBits(I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -124240,7 +124280,7 @@
     },
     {
       "symbol": "L:sd.a(I)I#2",
-      "renamedSymbol": "L:VorbisSample.a(I)I#2",
+      "renamedSymbol": "L:VorbisSample.readBits(I)I#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -124251,7 +124291,7 @@
     },
     {
       "symbol": "L:sd.a(I)I#3",
-      "renamedSymbol": "L:VorbisSample.a(I)I#3",
+      "renamedSymbol": "L:VorbisSample.readBits(I)I#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -124262,7 +124302,7 @@
     },
     {
       "symbol": "L:sd.a(I)I#4",
-      "renamedSymbol": "L:VorbisSample.a(I)I#4",
+      "renamedSymbol": "L:VorbisSample.readBits(I)I#4",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -124559,7 +124599,7 @@
     },
     {
       "symbol": "L:sd.b(I)F#0",
-      "renamedSymbol": "L:VorbisSample.b(I)F#0",
+      "renamedSymbol": "L:VorbisSample.unpackVorbisFloat(I)F#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -124570,7 +124610,7 @@
     },
     {
       "symbol": "L:sd.b(I)F#1",
-      "renamedSymbol": "L:VorbisSample.b(I)F#1",
+      "renamedSymbol": "L:VorbisSample.unpackVorbisFloat(I)F#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -124581,7 +124621,7 @@
     },
     {
       "symbol": "L:sd.b(I)F#2",
-      "renamedSymbol": "L:VorbisSample.b(I)F#2",
+      "renamedSymbol": "L:VorbisSample.unpackVorbisFloat(I)F#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160408,9 +160448,9 @@
     },
     {
       "symbol": "M:kb.a(II)I",
-      "renamedSymbol": "M:kb.a(II)I",
+      "renamedSymbol": "M:kb.bitLength(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitLength",
       "declaration": {
         "file": "kb.java",
         "start": 120977,
@@ -164093,9 +164133,9 @@
     },
     {
       "symbol": "M:ng.a(BII)I",
-      "renamedSymbol": "M:IntrusiveDeque.a(BII)I",
+      "renamedSymbol": "M:IntrusiveDeque.integerPower(BII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "integerPower",
       "declaration": {
         "file": "ng.java",
         "start": 2739,
@@ -168427,9 +168467,9 @@
     },
     {
       "symbol": "M:sd.a()I",
-      "renamedSymbol": "M:VorbisSample.a()I",
+      "renamedSymbol": "M:VorbisSample.readBit()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readBit",
       "declaration": {
         "file": "sd.java",
         "start": 28584,
@@ -168438,9 +168478,9 @@
     },
     {
       "symbol": "M:sd.a(I)I",
-      "renamedSymbol": "M:VorbisSample.a(I)I",
+      "renamedSymbol": "M:VorbisSample.readBits(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readBits",
       "declaration": {
         "file": "sd.java",
         "start": 19669,
@@ -168526,9 +168566,9 @@
     },
     {
       "symbol": "M:sd.b(I)F",
-      "renamedSymbol": "M:VorbisSample.b(I)F",
+      "renamedSymbol": "M:VorbisSample.unpackVorbisFloat(I)F",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "unpackVorbisFloat",
       "declaration": {
         "file": "sd.java",
         "start": 1167,
@@ -198160,7 +198200,7 @@
     },
     {
       "symbol": "P:kb.a(II)I#0",
-      "renamedSymbol": "P:kb.a(II)I#0",
+      "renamedSymbol": "P:kb.bitLength(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -198171,7 +198211,7 @@
     },
     {
       "symbol": "P:kb.a(II)I#1",
-      "renamedSymbol": "P:kb.a(II)I#1",
+      "renamedSymbol": "P:kb.bitLength(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207994,7 +208034,7 @@
     },
     {
       "symbol": "P:ng.a(BII)I#0",
-      "renamedSymbol": "P:IntrusiveDeque.a(BII)I#0",
+      "renamedSymbol": "P:IntrusiveDeque.integerPower(BII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -208005,7 +208045,7 @@
     },
     {
       "symbol": "P:ng.a(BII)I#1",
-      "renamedSymbol": "P:IntrusiveDeque.a(BII)I#1",
+      "renamedSymbol": "P:IntrusiveDeque.integerPower(BII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -208016,7 +208056,7 @@
     },
     {
       "symbol": "P:ng.a(BII)I#2",
-      "renamedSymbol": "P:IntrusiveDeque.a(BII)I#2",
+      "renamedSymbol": "P:IntrusiveDeque.integerPower(BII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -217806,7 +217846,7 @@
     },
     {
       "symbol": "P:sd.a(I)I#0",
-      "renamedSymbol": "P:VorbisSample.a(I)I#0",
+      "renamedSymbol": "P:VorbisSample.readBits(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -217938,7 +217978,7 @@
     },
     {
       "symbol": "P:sd.b(I)F#0",
-      "renamedSymbol": "P:VorbisSample.b(I)F#0",
+      "renamedSymbol": "P:VorbisSample.unpackVorbisFloat(I)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -243991,7 +244031,7 @@
       "original": "h.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "6ccaac43ffa781dbf676b459f5af57c1bfa46e0a7681c0f47f6f96c0026725a8",
-      "outputSha256": "9183aa4c75e43edb15fd78d7e22fad8407dd11a7c98d8afe73def2e12942d28d",
+      "outputSha256": "a0b2bc377bae1048812374a622f73e27d9e7210f0f8aaaf53d89738fcc61d253",
       "edits": [
         {
           "start": 50,
@@ -244029,6 +244069,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 438,
+          "end": 439,
+          "symbol": "M:ng.a(BII)I",
+          "original": "a",
+          "renamed": "integerPower"
+        },
+        {
           "start": 547,
           "end": 548,
           "symbol": "M:h.c()V",
@@ -244050,11 +244097,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 4392,
+          "end": 4393,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 4422,
           "end": 4424,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 4425,
+          "end": 4426,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 4455,
@@ -244064,11 +244125,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 4458,
+          "end": 4459,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 4534,
           "end": 4536,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 4537,
+          "end": 4538,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 4650,
@@ -244078,11 +244153,32 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 4653,
+          "end": 4654,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 4726,
           "end": 4728,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 4729,
+          "end": 4730,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 4734,
+          "end": 4735,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 5028,
@@ -244092,6 +244188,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5031,
+          "end": 5032,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 5214,
           "end": 5216,
           "symbol": "C:sd",
@@ -244099,11 +244202,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5217,
+          "end": 5218,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 5325,
           "end": 5327,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 5328,
+          "end": 5329,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 5408,
@@ -244120,11 +244237,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5440,
+          "end": 5441,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 5496,
           "end": 5498,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 5499,
+          "end": 5500,
+          "symbol": "M:sd.b(I)F",
+          "original": "b",
+          "renamed": "unpackVorbisFloat"
         },
         {
           "start": 5501,
@@ -244134,11 +244265,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5504,
+          "end": 5505,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 5529,
           "end": 5531,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 5532,
+          "end": 5533,
+          "symbol": "M:sd.b(I)F",
+          "original": "b",
+          "renamed": "unpackVorbisFloat"
         },
         {
           "start": 5534,
@@ -244148,6 +244293,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5537,
+          "end": 5538,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 5571,
           "end": 5573,
           "symbol": "C:sd",
@@ -244155,11 +244307,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5574,
+          "end": 5575,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 5610,
           "end": 5612,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 5613,
+          "end": 5614,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 5785,
@@ -244183,6 +244349,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 5954,
+          "end": 5955,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 7190,
           "end": 7191,
           "symbol": "M:h.a()I",
@@ -244195,6 +244368,13 @@
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 7280,
+          "end": 7281,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         }
       ]
     },
@@ -244650,7 +244830,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "4c002871048c933fc4baef77785ba3d2aba5d97030cea50a8636174f23a35c9f",
-      "outputSha256": "f97d675dd88562e3919d2560bfad07541c8b0ae4ad0f0ec2ff34505487130f05",
+      "outputSha256": "935b8ddeae330700efe8c57c4b4886d4f1e7155283302e7813af80049f94dead",
       "edits": [
         {
           "start": 67,
@@ -244749,6 +244929,13 @@
           "symbol": "C:pk",
           "original": "pk",
           "renamed": "TriangleMesh"
+        },
+        {
+          "start": 2859,
+          "end": 2860,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 7429,
@@ -246043,7 +246230,7 @@
       "original": "i.java",
       "renamed": "VorbisResidue.java",
       "inputSha256": "7bce112b41c043ae83252cffc61930de81e57cb399f86a56441cc639fc492550",
-      "outputSha256": "fa64643b32913cbd54bf8c1449a9d488316f429cc05a46a0361035ae26fddd11",
+      "outputSha256": "18812ee715f90e508e8e27cab7a75db7e2dec0e3ee01760edf3d643911ed5b6e",
       "edits": [
         {
           "start": 50,
@@ -246116,11 +246303,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 3123,
+          "end": 3124,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 3153,
           "end": 3155,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 3156,
+          "end": 3157,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 3186,
@@ -246130,11 +246331,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 3189,
+          "end": 3190,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 3219,
           "end": 3221,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 3222,
+          "end": 3223,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 3256,
@@ -246144,11 +246359,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 3259,
+          "end": 3260,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 3292,
           "end": 3294,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 3295,
+          "end": 3296,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 3436,
@@ -246158,11 +246387,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 3439,
+          "end": 3440,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 3462,
           "end": 3464,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 3465,
+          "end": 3466,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 3529,
@@ -246172,11 +246415,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 3532,
+          "end": 3533,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 3819,
           "end": 3821,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 3822,
+          "end": 3823,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         }
       ]
     },
@@ -249976,7 +250233,7 @@
       "original": "kb.java",
       "renamed": "kb.java",
       "inputSha256": "677ee68a4f71dc0fe7f23a3dafb0091a79a682e1b67f9f462e2325acf93fd693",
-      "outputSha256": "9a6f6290009a2bbe0f753dff6951ccaa33841aec7739c0533a11de92e0529c05",
+      "outputSha256": "bb292c94eef5c4b0cf1d8669f5e3060abb10d9c04b41e37e7cfa0dffea7ddf03",
       "edits": [
         {
           "start": 41789,
@@ -250033,6 +250290,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 120977,
+          "end": 120978,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         }
       ]
     },
@@ -251956,7 +252220,7 @@
       "original": "mf.java",
       "renamed": "VorbisFloor.java",
       "inputSha256": "77c5ac44a02c7b4dcfdf4aa31d428fe9b82a88f861286f47e2d71c9470a4a2bf",
-      "outputSha256": "e9fb150b3439a5ff00a2879604c1d39ef1f65f54527415d1287961a6b3e14e2f",
+      "outputSha256": "18ef5142a332df33923967afcd8551d7848a15bdad33fdba6a87d5fff7dbb359",
       "edits": [
         {
           "start": 50,
@@ -252050,6 +252314,20 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 4639,
+          "end": 4640,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 4902,
+          "end": 4903,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
           "start": 4940,
           "end": 4942,
           "symbol": "C:sd",
@@ -252057,11 +252335,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 4943,
+          "end": 4944,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 4973,
           "end": 4975,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 4976,
+          "end": 4977,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 5277,
@@ -252148,11 +252440,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 8999,
+          "end": 9000,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 9096,
           "end": 9098,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 9099,
+          "end": 9100,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 9224,
@@ -252162,11 +252468,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 9227,
+          "end": 9228,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 9618,
           "end": 9620,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 9621,
+          "end": 9622,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 9653,
@@ -252176,11 +252496,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 9656,
+          "end": 9657,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 9828,
           "end": 9830,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 9831,
+          "end": 9832,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 10133,
@@ -252190,11 +252524,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 10136,
+          "end": 10137,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 10191,
           "end": 10193,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 10194,
+          "end": 10195,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 10228,
@@ -252204,11 +252552,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 10231,
+          "end": 10232,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 10864,
           "end": 10866,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 10867,
+          "end": 10868,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         }
       ]
     },
@@ -253205,7 +253567,7 @@
       "original": "ng.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "b8375b43397fc547d41f8b7708457c4ba048e16aa58f02b834f9b1a78025f5e7",
-      "outputSha256": "5069ed7605b1491806337d1ebc06ca8ab7477877731caa9ad7f561a5a4284ec9",
+      "outputSha256": "d6f8cd3a8626532fe119c49258ec17b918d2c8f06fe105a6fcd8dd9a0b696793",
       "edits": [
         {
           "start": 50,
@@ -253479,6 +253841,13 @@
           "symbol": "F:ng.field_b:Lkd;",
           "original": "field_b",
           "renamed": "sentinel"
+        },
+        {
+          "start": 2739,
+          "end": 2740,
+          "symbol": "M:ng.a(BII)I",
+          "original": "a",
+          "renamed": "integerPower"
         },
         {
           "start": 2993,
@@ -258734,7 +259103,7 @@
       "original": "qh.java",
       "renamed": "qh.java",
       "inputSha256": "4d365fe4e9543e2495629bccc141d5b1f952a6c9507e466e2450676c3366e7fb",
-      "outputSha256": "ba3db271a2fd6ce65145692862cb297aae8a4a6ca5fb1b52ae8e98bfdbc4eaae",
+      "outputSha256": "289c9d93717d4468118183c635c4dda9da9bd5dac92cdcdcd22ea3253ec87dcb",
       "edits": [
         {
           "start": 169,
@@ -258744,11 +259113,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 172,
+          "end": 173,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 202,
           "end": 204,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 205,
+          "end": 206,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 216,
@@ -258758,11 +259141,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 219,
+          "end": 220,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 245,
           "end": 247,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 270,
@@ -258772,11 +259169,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 273,
+          "end": 274,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 297,
           "end": 299,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 363,
@@ -258786,11 +259197,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 366,
+          "end": 367,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 538,
           "end": 540,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 541,
+          "end": 542,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 578,
@@ -258800,11 +259225,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 581,
+          "end": 582,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 618,
           "end": 620,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 621,
+          "end": 622,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         }
       ]
     },
@@ -260002,7 +260441,7 @@
       "original": "sd.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "9d3919f9f2d4907eda81ef486ab86b00ef2d52f78175e331600f191b098aa800",
-      "outputSha256": "7244538339fe0946dc309ab3a7e3d84b1604b0097857ca010f035277ddb46c42",
+      "outputSha256": "9762da46154b8ad77aa72c3f8c909ec24436ac2859105e2fde16afba348738b7",
       "edits": [
         {
           "start": 69,
@@ -260038,6 +260477,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "VorbisFloor"
+        },
+        {
+          "start": 1167,
+          "end": 1168,
+          "symbol": "M:sd.b(I)F",
+          "original": "b",
+          "renamed": "unpackVorbisFloat"
         },
         {
           "start": 1468,
@@ -260159,11 +260605,32 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 6573,
+          "end": 6574,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 6593,
           "end": 6595,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 6596,
+          "end": 6597,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6601,
+          "end": 6602,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 6899,
@@ -260173,11 +260640,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 6902,
+          "end": 6903,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 6977,
           "end": 6979,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 6980,
+          "end": 6981,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 7789,
@@ -260194,6 +260675,20 @@
           "renamed": "applyFloorCurve"
         },
         {
+          "start": 11549,
+          "end": 11550,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
+          "start": 19669,
+          "end": 19670,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 21146,
           "end": 21148,
           "symbol": "C:sd",
@@ -260208,6 +260703,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 21189,
+          "end": 21190,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 21218,
           "end": 21220,
           "symbol": "C:sd",
@@ -260215,11 +260717,32 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 21221,
+          "end": 21222,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 22653,
+          "end": 22654,
+          "symbol": "M:kb.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
           "start": 23125,
           "end": 23127,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 23128,
+          "end": 23129,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 23160,
@@ -260243,6 +260766,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 23341,
+          "end": 23342,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 23443,
           "end": 23445,
           "symbol": "C:sd",
@@ -260250,11 +260780,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 23446,
+          "end": 23447,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 23487,
           "end": 23489,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 23490,
+          "end": 23491,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 23522,
@@ -260278,6 +260822,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 23705,
+          "end": 23706,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 23737,
           "end": 23738,
           "symbol": "C:i",
@@ -260299,11 +260850,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 23918,
+          "end": 23919,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 24130,
           "end": 24132,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 24133,
+          "end": 24134,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 24391,
@@ -260313,11 +260878,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 24394,
+          "end": 24395,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 24468,
           "end": 24470,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 24471,
+          "end": 24472,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 24488,
@@ -260327,11 +260906,25 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 24491,
+          "end": 24492,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 24524,
           "end": 24526,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 24527,
+          "end": 24528,
+          "symbol": "M:sd.a(I)I",
+          "original": "a",
+          "renamed": "readBits"
         },
         {
           "start": 24591,
@@ -260402,6 +260995,13 @@
           "symbol": "M:sd.<init>([B)V",
           "original": "sd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 28584,
+          "end": 28585,
+          "symbol": "M:sd.a()I",
+          "original": "a",
+          "renamed": "readBit"
         }
       ]
     },
@@ -269348,10 +269948,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/lexicominos"
     },
-    "rulesSha256": "11797f9ab213224713f4a59ee8e42e0cb98c8c6345764ff5b94e7dcd81a816f3",
+    "rulesSha256": "2dff11267db27a24b8ec426fbb392d64d6bba70c624e454b6889b457729fa25f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
-    "outputTreeSha256": "e4118bbcc2c96ccd5a524ae85b9860e725bdaa0429b24f7ba56b1056a9f589aa",
+    "outputTreeSha256": "122bb58230db7728c6238845758fefeecff9942d64d7211a4c6ebd3079ba6dca",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

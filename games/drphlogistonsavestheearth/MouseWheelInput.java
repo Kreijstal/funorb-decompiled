@@ -13,7 +13,7 @@ abstract class MouseWheelInput {
     static PlatformTaskDispatcher field_e;
     static he field_f;
 
-    final static int a(int param0, byte param1) {
+    final static int bitLength(int param0, byte param1) {
         int var2;
         if (param1 != 1) {
           return 85;
@@ -170,7 +170,7 @@ abstract class MouseWheelInput {
           if (param0 == 8975) {
             return false;
           }
-          MouseWheelInput.a(-35, (byte) 4);
+          MouseWheelInput.bitLength(-35, (byte) 4);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

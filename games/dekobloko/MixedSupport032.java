@@ -137,7 +137,7 @@ final class MixedSupport032 {
         int integerLocal34;
         integerLocal27 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal12 = SceneWidgetPart010.computeInteger1465((byte) 127, (-integerArgument5 + integerArgument3) * 3);
+          integerLocal12 = SceneWidgetPart010.bitLength((byte) 127, (-integerArgument5 + integerArgument3) * 3);
           integerLocal14 = integerArgument5 * 3;
           integerLocal15 = integerLocal12 - 10;
           MixedSupport108.performAction1422(0);

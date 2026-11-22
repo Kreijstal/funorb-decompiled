@@ -403,7 +403,7 @@ final class sg {
         }
         var10 = new PacketBuffer(this.field_n.c((byte) 127));
         var10.field_i = 5;
-        var3 = var10.l(32270);
+        var3 = var10.readUnsignedByte(32270);
         var10.field_i = var10.field_i + var3 * 72;
         var13 = new byte[var10.field_n.length - var10.field_i];
         var11 = var13;

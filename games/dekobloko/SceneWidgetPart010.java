@@ -107,7 +107,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         MixedSupport001.integerState0013 = integerArgument4;
         MixedSupport085.integerState0531 = integerArgument1;
         if (byteArgument3 != -91) {
-          SceneWidgetPart010.computeInteger1465((byte) 18, 119);
+          SceneWidgetPart010.bitLength((byte) 18, 119);
         }
         RenderingSupport007.integerState0362 = integerArgument5;
         MixedSupport015.integerState0100 = integerArgument2;
@@ -182,7 +182,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         int integerLocal1 = 62 % ((-55 - byteArgument1) / 60);
     }
 
-    final static int computeInteger1465(byte byteArgument1, int integerArgument2) {
+    final static int bitLength(byte byteArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         if (integerArgument2 < 0 ||
           integerArgument2 >= 65536) {

@@ -737,7 +737,7 @@ final class BufferedCacheFile {
         int var13Lifetime1;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = RecklessAi.c(param0 ^ -85, (param4 - param3) * 3);
+          var5_int = RecklessAi.bitLength(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
           ValidationMessageWidget.g((byte) 111);
           var7 = -10 + var5_int;
@@ -889,7 +889,7 @@ final class BufferedCacheFile {
         int var13Lifetime1;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = RecklessAi.c(param0 ^ -85, (param4 - param3) * 3);
+          var5_int = RecklessAi.bitLength(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
           ValidationMessageWidget.g((byte) 111);
           var7 = -10 + var5_int;

@@ -236,7 +236,7 @@ final class vf extends ph {
         field_J = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2 = 0;
         int var3 = -87 / ((param0 - 36) / 63);
         if (param1 < 0 ||

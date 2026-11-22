@@ -113,7 +113,7 @@ final class ve extends ug {
         int var14Lifetime1;
         var20 = TrackController.field_F ? 1 : 0;
         try {
-          var5_int = LevelData.b(false, 3 * (param2 - param1));
+          var5_int = LevelData.bitLength(false, 3 * (param2 - param1));
           var7 = -112 % ((0 - param0) / 41);
           var6 = param1 * 3;
           var8 = -10 + var5_int;

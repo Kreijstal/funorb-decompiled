@@ -102,19 +102,19 @@ final class p {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_f = ml.f(16);
-        this.field_a = ml.f(24);
-        this.field_e = ml.f(24);
-        this.field_d = ml.f(24) + 1;
-        this.field_b = ml.f(6) + 1;
-        this.field_g = ml.f(8);
+        this.field_f = ml.readBits(16);
+        this.field_a = ml.readBits(24);
+        this.field_e = ml.readBits(24);
+        this.field_d = ml.readBits(24) + 1;
+        this.field_b = ml.readBits(6) + 1;
+        this.field_g = ml.readBits(8);
         int[] var1 = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
           var3 = 0;
-          var4 = ml.f(3);
-          var5 = ml.a() != 0 ? 1 : 0;
+          var4 = ml.readBits(3);
+          var5 = ml.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = ml.f(5);
+            var3 = ml.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class p {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_b * 8) {
-          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ml.f(8) : -1;
+          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ml.readBits(8) : -1;
           var6++;
         }
     }

@@ -63,7 +63,7 @@ final class i {
           var14 = HostileSpawn.field_I ? 1 : 0;
           try {
             var18 = new ng();
-            var18.field_t = param1.l(32270);
+            var18.field_t = param1.readUnsignedByte(32270);
             if (param0 != 29821) {
               return;
             }
@@ -76,7 +76,7 @@ final class i {
             var18.field_r = new PlatformTask[var18.field_t];
             for (var5 = 0; var5 < var18.field_t; var5++) {
               try {
-                var6_int = param1.l(param0 ^ 2675);
+                var6_int = param1.readUnsignedByte(param0 ^ 2675);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -84,7 +84,7 @@ final class i {
                     4 == var6_int) {
                     var20 = param1.o(32);
                     var21 = param1.o(32);
-                    var9 = param1.l(param0 ^ 2675);
+                    var9 = param1.readUnsignedByte(param0 ^ 2675);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
                       var10[var11_int] = param1.o(32);

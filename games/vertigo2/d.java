@@ -92,7 +92,7 @@ class d extends UiWidget {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -469,7 +469,7 @@ class d extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 13) {
-            d.b(24, 69);
+            d.bitLength(24, 69);
           }
           if (this.f(param1 ^ 101) && (84 == param2 ||
             83 == param2)) {

@@ -102,19 +102,19 @@ final class w {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_f = nj.c(16);
-        this.field_e = nj.c(24);
-        this.field_a = nj.c(24);
-        this.field_b = nj.c(24) + 1;
-        this.field_g = nj.c(6) + 1;
-        this.field_c = nj.c(8);
+        this.field_f = nj.readBits(16);
+        this.field_e = nj.readBits(24);
+        this.field_a = nj.readBits(24);
+        this.field_b = nj.readBits(24) + 1;
+        this.field_g = nj.readBits(6) + 1;
+        this.field_c = nj.readBits(8);
         int[] var1 = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
           var3 = 0;
-          var4 = nj.c(3);
-          var5 = nj.b() != 0 ? 1 : 0;
+          var4 = nj.readBits(3);
+          var5 = nj.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = nj.c(5);
+            var3 = nj.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class w {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_g * 8) {
-          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? nj.c(8) : -1;
+          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? nj.readBits(8) : -1;
           var6++;
         }
     }

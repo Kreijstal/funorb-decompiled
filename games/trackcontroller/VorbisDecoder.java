@@ -106,8 +106,8 @@ final class VorbisDecoder extends IntrusiveNode {
         int var5Lifetime1;
         int var5Lifetime2;
         VorbisDecoder.a(param0, 0);
-        field_K = 1 << VorbisDecoder.f(4);
-        field_s = 1 << VorbisDecoder.f(4);
+        field_K = 1 << VorbisDecoder.readBits(4);
+        field_s = 1 << VorbisDecoder.readBits(4);
         field_j = new float[field_s];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -135,7 +135,7 @@ final class VorbisDecoder extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = LevelData.b(false, var5 - 1);
+          var10 = LevelData.bitLength(false, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = fj.b(var10, 1, var11);
           }
@@ -151,41 +151,41 @@ final class VorbisDecoder extends IntrusiveNode {
             field_I = var9;
           }
         }
-        var1Lifetime1 = VorbisDecoder.f(8) + 1;
+        var1Lifetime1 = VorbisDecoder.readBits(8) + 1;
         field_w = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_w[var2Lifetime1] = new VorbisCodebook();
         }
-        var2Lifetime2 = VorbisDecoder.f(6) + 1;
+        var2Lifetime2 = VorbisDecoder.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          VorbisDecoder.f(16);
+          VorbisDecoder.readBits(16);
         }
-        var2Lifetime3 = VorbisDecoder.f(6) + 1;
+        var2Lifetime3 = VorbisDecoder.readBits(6) + 1;
         field_q = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_q[var3Lifetime2] = new VorbisFloor();
         }
-        var3Lifetime3 = VorbisDecoder.f(6) + 1;
+        var3Lifetime3 = VorbisDecoder.readBits(6) + 1;
         field_t = new sh[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_t[var4Lifetime1] = new sh();
         }
-        var4Lifetime2 = VorbisDecoder.f(6) + 1;
+        var4Lifetime2 = VorbisDecoder.readBits(6) + 1;
         field_r = new pe[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_r[var5Lifetime1] = new pe();
         }
-        var5Lifetime2 = VorbisDecoder.f(6) + 1;
+        var5Lifetime2 = VorbisDecoder.readBits(6) + 1;
         field_L = new boolean[var5Lifetime2];
         field_k = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_L);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (VorbisDecoder.b() != 0);
+          stackIn_42_2 = (VorbisDecoder.readBit() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          VorbisDecoder.f(16);
-          VorbisDecoder.f(16);
-          field_k[var6] = VorbisDecoder.f(8);
+          VorbisDecoder.readBits(16);
+          VorbisDecoder.readBits(16);
+          field_k[var6] = VorbisDecoder.readBits(8);
         }
         field_A = true;
     }
@@ -347,8 +347,8 @@ final class VorbisDecoder extends IntrusiveNode {
         int var18_intLifetime1;
         int var18_intLifetime2;
         VorbisDecoder.a(this.field_o[param0], 0);
-        VorbisDecoder.b();
-        var2 = VorbisDecoder.f(LevelData.b(false, field_k.length - 1));
+        VorbisDecoder.readBit();
+        var2 = VorbisDecoder.readBits(LevelData.bitLength(false, field_k.length - 1));
         var3 = field_L[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_K;
@@ -359,9 +359,9 @@ final class VorbisDecoder extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (VorbisDecoder.b() == 0) ? 0 : 1;
+          stackIn_7_0 = (VorbisDecoder.readBit() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (VorbisDecoder.b() == 0) ? 0 : 1;
+          stackIn_10_0 = (VorbisDecoder.readBit() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -467,7 +467,7 @@ final class VorbisDecoder extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = LevelData.b(false, var4 - 1);
+          var25Lifetime2 = LevelData.bitLength(false, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -586,7 +586,7 @@ final class VorbisDecoder extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final static int b() {
+    final static int readBit() {
         int var0 = field_y[field_N] >> field_M & 1;
         field_M = field_M + 1;
         field_N = field_N + (field_M >> 3);
@@ -594,7 +594,7 @@ final class VorbisDecoder extends IntrusiveNode {
         return var0;
     }
 
-    final static int f(int param0) {
+    final static int readBits(int param0) {
         int var4 = 0;
         int var3 = 0;
         int var1 = 0;
@@ -648,7 +648,7 @@ final class VorbisDecoder extends IntrusiveNode {
         }
     }
 
-    final static float e(int param0) {
+    final static float unpackVorbisFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;

@@ -157,7 +157,7 @@ abstract class vm {
           if (!param0) {
             return;
           }
-          var5_int = mda.a((-param1 + param2) * 3, 16);
+          var5_int = mda.bitLength((-param1 + param2) * 3, 16);
           var6 = param1 * 3;
           var7 = var5_int - 10;
           WidgetTheme.c((byte) 89);

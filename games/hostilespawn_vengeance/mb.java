@@ -207,8 +207,8 @@ final class mb extends ce {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           var10 = sc.field_g;
-          var2 = var10.l(32270);
-          var3 = var10.l(32270);
+          var2 = var10.readUnsignedByte(32270);
+          var3 = var10.readUnsignedByte(32270);
           if (param0 != 65) {
             mb.c(-95);
           }
@@ -226,7 +226,7 @@ final class mb extends ce {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.l(32270) << (ua.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(32270) << (ua.a(var7, 3) << 8));
             }
             var4.field_j = true;
             var4.unlink(param0 - 170);

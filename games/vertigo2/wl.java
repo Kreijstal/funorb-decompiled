@@ -118,7 +118,7 @@ final class wl {
           if (param3 < 49) {
             return;
           }
-          var5_int = d.b(-110, 3 * (-param2 + param4));
+          var5_int = d.bitLength(-110, 3 * (-param2 + param4));
           var6 = param2 * 3;
           var7 = -10 + var5_int;
           vq.a(256);

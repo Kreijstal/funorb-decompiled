@@ -276,7 +276,7 @@ final class ok {
         this.field_n.a(param0);
         this.field_c = new ma();
         this.field_c.a(param0);
-        int var2 = param0.l(32270);
+        int var2 = param0.readUnsignedByte(32270);
         if (var2 != 0) {
           param0.field_i = param0.field_i - 1;
           this.field_i = new ma();
@@ -284,7 +284,7 @@ final class ok {
           this.field_l = new ma();
           this.field_l.a(param0);
         }
-        var2 = param0.l(32270);
+        var2 = param0.readUnsignedByte(32270);
         if (var2 != 0) {
           param0.field_i = param0.field_i - 1;
           this.field_p = new ma();
@@ -292,7 +292,7 @@ final class ok {
           this.field_x = new ma();
           this.field_x.a(param0);
         }
-        var2 = param0.l(32270);
+        var2 = param0.readUnsignedByte(32270);
         if (var2 != 0) {
           param0.field_i = param0.field_i - 1;
           this.field_t = new ma();
@@ -311,8 +311,8 @@ final class ok {
         }
         this.field_o = param0.f(255);
         this.field_e = param0.f(255);
-        this.field_g = param0.e(8);
-        this.field_y = param0.e(8);
+        this.field_g = param0.readUnsignedShort(8);
+        this.field_y = param0.readUnsignedShort(8);
         this.field_q = new SoundFilter();
         this.field_u = new ma();
         this.field_q.decode(param0, this.field_u);

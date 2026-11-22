@@ -102,19 +102,19 @@ final class VorbisResidue {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_e = VorbisSample.a(16);
-        this.field_g = VorbisSample.a(24);
-        this.field_b = VorbisSample.a(24);
-        this.field_c = VorbisSample.a(24) + 1;
-        this.field_f = VorbisSample.a(6) + 1;
-        this.field_a = VorbisSample.a(8);
+        this.field_e = VorbisSample.readBits(16);
+        this.field_g = VorbisSample.readBits(24);
+        this.field_b = VorbisSample.readBits(24);
+        this.field_c = VorbisSample.readBits(24) + 1;
+        this.field_f = VorbisSample.readBits(6) + 1;
+        this.field_a = VorbisSample.readBits(8);
         int[] var1 = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
           var3 = 0;
-          var4 = VorbisSample.a(3);
-          var5 = VorbisSample.a() != 0 ? 1 : 0;
+          var4 = VorbisSample.readBits(3);
+          var5 = VorbisSample.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = VorbisSample.a(5);
+            var3 = VorbisSample.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class VorbisResidue {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_f * 8) {
-          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.a(8) : -1;
+          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.readBits(8) : -1;
           var6++;
         }
     }

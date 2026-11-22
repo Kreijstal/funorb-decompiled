@@ -18,7 +18,7 @@ final class bm {
         this.field_h = param0.readUnsignedByte(-122);
         this.field_e = param0.readInt(50);
         this.field_i = param0.readInt(37);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
     final int a(int param0) {
@@ -48,7 +48,7 @@ final class bm {
         this.field_c = 0;
     }
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_g = param0.readUnsignedByte(-122);
         this.field_j = new int[this.field_g];

@@ -11,7 +11,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
-        for (integerLocal1 = (int)Math.pow((double)integerArgument1, 1.0 / (double)integerArgument2) + 1; UiComponentPart032.computeInteger1699(integerLocal1, integerArgument2, false) > integerArgument1; integerLocal1--) {
+        for (integerLocal1 = (int)Math.pow((double)integerArgument1, 1.0 / (double)integerArgument2) + 1; UiComponentPart032.integerPower(integerLocal1, integerArgument2, false) > integerArgument1; integerLocal1--) {
         }
         return integerLocal1;
     }
@@ -145,17 +145,17 @@ final class VorbisCodebook {
         int integerLocal22;
         int integerLocal23;
         int integerLocal24;
-        VorbisSample.computeInteger1696(24);
-        this.integerState0338 = VorbisSample.computeInteger1696(16);
-        this.integerState0337 = VorbisSample.computeInteger1696(24);
+        VorbisSample.readBits(24);
+        this.integerState0338 = VorbisSample.readBits(16);
+        this.integerState0337 = VorbisSample.readBits(24);
         this.integerArrayState0114 = new int[this.integerState0337];
-        stackIntegerLocal2 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
+        stackIntegerLocal2 = (VorbisSample.readBit() == 0) ? 0 : 1;
         integerLocal5 = stackIntegerLocal2;
         if (integerLocal5 != 0) {
           integerLocal6 = 0;
-          integerLocal7 = VorbisSample.computeInteger1696(5) + 1;
+          integerLocal7 = VorbisSample.readBits(5) + 1;
           while (integerLocal6 < this.integerState0337) {
-            integerLocal9 = VorbisSample.computeInteger1696(SceneWidgetPart010.computeInteger1465((byte) 120, this.integerState0337 - integerLocal6));
+            integerLocal9 = VorbisSample.readBits(SceneWidgetPart010.bitLength((byte) 120, this.integerState0337 - integerLocal6));
             for (integerLocal11 = 0; integerLocal11 < integerLocal9; integerLocal11++) {
               previousIntegerLocal1 = integerLocal6;
               integerLocal6++;
@@ -164,27 +164,27 @@ final class VorbisCodebook {
             integerLocal7++;
           }
         } else {
-          stackIntegerLocal3 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
+          stackIntegerLocal3 = (VorbisSample.readBit() == 0) ? 0 : 1;
           integerLocal6 = stackIntegerLocal3;
           integerLocal21 = 0;
           integerLocal7 = integerLocal21;
           while (integerLocal21 < this.integerState0337) {
             if (integerLocal6 != 0 &&
-              VorbisSample.computeInteger1694() == 0) {
+              VorbisSample.readBit() == 0) {
               this.integerArrayState0114[integerLocal21] = 0;
             } else {
-              this.integerArrayState0114[integerLocal21] = VorbisSample.computeInteger1696(5) + 1;
+              this.integerArrayState0114[integerLocal21] = VorbisSample.readBits(5) + 1;
             }
             integerLocal21++;
           }
         }
         this.buildHuffmanTree();
-        integerLocal22 = VorbisSample.computeInteger1696(4);
+        integerLocal22 = VorbisSample.readBits(4);
         if (integerLocal22 > 0) {
-          floatLocal8 = VorbisSample.computeFloat1687(VorbisSample.computeInteger1696(32));
-          floatLocal10 = VorbisSample.computeFloat1687(VorbisSample.computeInteger1696(32));
-          integerLocal23 = VorbisSample.computeInteger1696(4) + 1;
-          stackIntegerLocal4 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
+          floatLocal8 = VorbisSample.unpackVorbisFloat(VorbisSample.readBits(32));
+          floatLocal10 = VorbisSample.unpackVorbisFloat(VorbisSample.readBits(32));
+          integerLocal23 = VorbisSample.readBits(4) + 1;
+          stackIntegerLocal4 = (VorbisSample.readBit() == 0) ? 0 : 1;
           integerLocal12 = stackIntegerLocal4;
           if (integerLocal22 != 1) {
             integerLocal13 = this.integerState0337 * this.integerState0338;
@@ -193,7 +193,7 @@ final class VorbisCodebook {
           }
           this.integerArrayState0113 = new int[integerLocal13];
           for (integerLocal14 = 0; integerLocal14 < integerLocal13; integerLocal14++) {
-            this.integerArrayState0113[integerLocal14] = VorbisSample.computeInteger1696(integerLocal23);
+            this.integerArrayState0113[integerLocal14] = VorbisSample.readBits(integerLocal23);
           }
           this.floatArrayArrayState0002 = new float[this.integerState0337][this.integerState0338];
           if (integerLocal22 != 1) {
@@ -230,7 +230,7 @@ final class VorbisCodebook {
     final int decodeScalar() {
         int integerLocal1 = 0;
         while (this.integerArrayState0112[integerLocal1] >= 0) {
-          integerLocal1 = VorbisSample.computeInteger1694() != 0 ? this.integerArrayState0112[integerLocal1] : integerLocal1 + 1;
+          integerLocal1 = VorbisSample.readBit() != 0 ? this.integerArrayState0112[integerLocal1] : integerLocal1 + 1;
         }
         return ~this.integerArrayState0112[integerLocal1];
     }

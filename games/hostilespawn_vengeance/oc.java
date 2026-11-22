@@ -98,13 +98,13 @@ final class oc {
           if (param0 <= 25) {
             field_h = (byte[][][]) null;
           }
-          var2 = var1.l(32270);
+          var2 = var1.readUnsignedByte(32270);
           if (var2 == 0) {
             if (null == AccountNameAvailabilityValidator.field_t) {
               AccountNameAvailabilityValidator.field_t = new cb(128);
               vd.field_A = 0;
             }
-            stackIn_14_0 = (var1.l(32270) != 1) ? 0 : 1;
+            stackIn_14_0 = (var1.readUnsignedByte(32270) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
             var4_ref_String = var1.o(32);
             if (var3_int != 0) {
@@ -154,7 +154,7 @@ final class oc {
             bj.field_b = 1;
             var3 = var1.o(32);
             eg.field_w = ((String) (var3)).intern();
-            var4 = var1.l(32270);
+            var4 = var1.readUnsignedByte(32270);
             jf.a(-1631279870, var4);
             return;
           }

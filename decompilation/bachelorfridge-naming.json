@@ -7812,6 +7812,14 @@
       "renamedSymbol": "M:SoundEnvelope.advance(I)I"
     },
     {
+      "symbol": "M:kd.a(Llu;)V",
+      "originalName": "a",
+      "to": "decodeSegments",
+      "evidence": "Read the envelope segment count,allocate the two retained segment arrays,and read paired unsigned16-bit values per segment. Preserve every actual packet-reader argument,allocation/write order and partial state. Pre-rename body SHA256 63bc1d092433482a3e2ff3916af090a3094b54270186b7af995c63e57bf57fdf. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoundEnvelope.decodeSegments(LPacketBuffer;)V"
+    },
+    {
       "symbol": "M:kda.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -9050,6 +9058,14 @@
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mda.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:mda.a(II)I",
+      "originalName": "a",
+      "to": "bitLength",
+      "evidence": "Determine the integer bit width using unsigned shifts by16,8,4,2,1 and accumulated width. Preserve game-specific threshold/guard parameter positions,unused arithmetic,global side effects,early returns and exception wrappers for every input. Pre-rename body SHA256 258ffecc969d02e696393468401c05180314b374b01ca1ced3026065e663bd9f. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mda.bitLength(II)I"
     },
     {
       "symbol": "M:me.a(ILgj;)Lat;",
@@ -11722,6 +11738,14 @@
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:sn.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:sp.a(IIB)I",
+      "originalName": "a",
+      "to": "integerPower",
+      "evidence": "Exponentiation-by-squaring helper with signed32-bit multiplication and right shifts. Preserve each actual base/exponent/seed-or-terminal/guard parameter arrangement,global control reads,side effects,early returns and exception wrapper;do not substitute Math.pow. Pre-rename body SHA256 5d57be3566fc8cf730f9b590cb7b68b6e0e7bcceecb6a75e42b5aa2c46bc529f. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sp.integerPower(IIB)I"
     },
     {
       "symbol": "M:sq.c()V",
@@ -206832,7 +206856,7 @@
     },
     {
       "symbol": "L:kd.a(Llu;)V#0",
-      "renamedSymbol": "L:SoundEnvelope.a(LPacketBuffer;)V#0",
+      "renamedSymbol": "L:SoundEnvelope.decodeSegments(LPacketBuffer;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -239150,7 +239174,7 @@
     },
     {
       "symbol": "L:mda.a(II)I#0",
-      "renamedSymbol": "L:mda.a(II)I#0",
+      "renamedSymbol": "L:mda.bitLength(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -322926,7 +322950,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#0",
-      "renamedSymbol": "L:sp.a(IIB)I#0",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -322937,7 +322961,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#1",
-      "renamedSymbol": "L:sp.a(IIB)I#1",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -322948,7 +322972,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#2",
-      "renamedSymbol": "L:sp.a(IIB)I#2",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -322959,7 +322983,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#3",
-      "renamedSymbol": "L:sp.a(IIB)I#3",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -322970,7 +322994,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#4",
-      "renamedSymbol": "L:sp.a(IIB)I#4",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#4",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -322981,7 +323005,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#5",
-      "renamedSymbol": "L:sp.a(IIB)I#5",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#5",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -322992,7 +323016,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#6",
-      "renamedSymbol": "L:sp.a(IIB)I#6",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -323003,7 +323027,7 @@
     },
     {
       "symbol": "L:sp.a(IIB)I#7",
-      "renamedSymbol": "L:sp.a(IIB)I#7",
+      "renamedSymbol": "L:sp.integerPower(IIB)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -399398,9 +399422,9 @@
     },
     {
       "symbol": "M:kd.a(Llu;)V",
-      "renamedSymbol": "M:SoundEnvelope.a(LPacketBuffer;)V",
+      "renamedSymbol": "M:SoundEnvelope.decodeSegments(LPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeSegments",
       "declaration": {
         "file": "kd.java",
         "start": 1274,
@@ -405195,9 +405219,9 @@
     },
     {
       "symbol": "M:mda.a(II)I",
-      "renamedSymbol": "M:mda.a(II)I",
+      "renamedSymbol": "M:mda.bitLength(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitLength",
       "declaration": {
         "file": "mda.java",
         "start": 149,
@@ -421552,9 +421576,9 @@
     },
     {
       "symbol": "M:sp.a(IIB)I",
-      "renamedSymbol": "M:sp.a(IIB)I",
+      "renamedSymbol": "M:sp.integerPower(IIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "integerPower",
       "declaration": {
         "file": "sp.java",
         "start": 112,
@@ -493833,7 +493857,7 @@
     },
     {
       "symbol": "P:kd.a(Llu;)V#0",
-      "renamedSymbol": "P:SoundEnvelope.a(LPacketBuffer;)V#0",
+      "renamedSymbol": "P:SoundEnvelope.decodeSegments(LPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -508023,7 +508047,7 @@
     },
     {
       "symbol": "P:mda.a(II)I#0",
-      "renamedSymbol": "P:mda.a(II)I#0",
+      "renamedSymbol": "P:mda.bitLength(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -508034,7 +508058,7 @@
     },
     {
       "symbol": "P:mda.a(II)I#1",
-      "renamedSymbol": "P:mda.a(II)I#1",
+      "renamedSymbol": "P:mda.bitLength(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -546138,7 +546162,7 @@
     },
     {
       "symbol": "P:sp.a(IIB)I#0",
-      "renamedSymbol": "P:sp.a(IIB)I#0",
+      "renamedSymbol": "P:sp.integerPower(IIB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -546149,7 +546173,7 @@
     },
     {
       "symbol": "P:sp.a(IIB)I#1",
-      "renamedSymbol": "P:sp.a(IIB)I#1",
+      "renamedSymbol": "P:sp.integerPower(IIB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -546160,7 +546184,7 @@
     },
     {
       "symbol": "P:sp.a(IIB)I#2",
-      "renamedSymbol": "P:sp.a(IIB)I#2",
+      "renamedSymbol": "P:sp.integerPower(IIB)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -598963,7 +598987,7 @@
       "original": "bc.java",
       "renamed": "SoundFilter.java",
       "inputSha256": "4ad3026358e82f049eb1d0bc1db54b47618d4077f69338aae3ec39fccf8cf06a",
-      "outputSha256": "e14b3a60c151f6bb4cbcdbcb09b804bd326f8163ecf4d87ad6b2eeca17d96922",
+      "outputSha256": "cac53285cbb968dafb3eec51eec1cb634096fd4e655853daeb88452c5382e646",
       "edits": [
         {
           "start": 50,
@@ -599055,6 +599079,13 @@
           "symbol": "M:lu.e(B)I",
           "original": "e",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1993,
+          "end": 1994,
+          "symbol": "M:kd.a(Llu;)V",
+          "original": "a",
+          "renamed": "decodeSegments"
         },
         {
           "start": 2151,
@@ -603431,7 +603462,7 @@
       "original": "bo.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "cde9bef7f7f3907b69bfa658933ffa57e763c2cd04219a9160b773a1e630a949",
-      "outputSha256": "d7cadbdf3b55978d608eb22865d11dc0f48f46a471bc7750768d137c94ee69e4",
+      "outputSha256": "c7942bbe9b6b6d75edfcc2ec1771b32e0b5b0626314744b97e739238d10cfe2e",
       "edits": [
         {
           "start": 50,
@@ -603446,6 +603477,13 @@
           "symbol": "M:bo.a(II)I",
           "original": "a",
           "renamed": "lookup1Values"
+        },
+        {
+          "start": 369,
+          "end": 370,
+          "symbol": "M:sp.a(IIB)I",
+          "original": "a",
+          "renamed": "integerPower"
         },
         {
           "start": 477,
@@ -603579,6 +603617,13 @@
           "symbol": "M:dv.a(I)I",
           "original": "a",
           "renamed": "readBits"
+        },
+        {
+          "start": 4935,
+          "end": 4936,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 5229,
@@ -618098,7 +618143,7 @@
       "original": "dv.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "7936abda27e154bc87bbb73c4606883ad2c02b2131894619f2ed3e6a86c0bd7a",
-      "outputSha256": "b2261f9f98d9264f9399b8083a61ef77133944729c5cd06b783eff71e0e79f44",
+      "outputSha256": "8a716a162ea6f5f81509cc7ce3eb08c416de94f248b329d7b57e75c1dd51f424",
       "edits": [
         {
           "start": 69,
@@ -618232,6 +618277,13 @@
           "symbol": "M:dv.a(I)I",
           "original": "a",
           "renamed": "readBits"
+        },
+        {
+          "start": 6658,
+          "end": 6659,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 7130,
@@ -618521,6 +618573,13 @@
           "renamed": "readBits"
         },
         {
+          "start": 12533,
+          "end": 12534,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
           "start": 12831,
           "end": 12833,
           "symbol": "C:dv",
@@ -618568,6 +618627,13 @@
           "symbol": "M:mga.a([FI)V",
           "original": "a",
           "renamed": "applyFloorCurve"
+        },
+        {
+          "start": 17482,
+          "end": 17483,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 25602,
@@ -686351,7 +686417,7 @@
       "original": "kd.java",
       "renamed": "SoundEnvelope.java",
       "inputSha256": "60b859ff3ee6d0526854a8d35cb4596aefcc88a18cf2bd9597c440a2fc568888",
-      "outputSha256": "b8d6d67b4b57561982bf952528a282d45733f5878994abbbbb1542ec1a937b2d",
+      "outputSha256": "a031e061d791d8c1fe223d60203376e1508719ab129e387be93c91a4e8ef5928",
       "edits": [
         {
           "start": 50,
@@ -686389,11 +686455,25 @@
           "renamed": "readInt"
         },
         {
+          "start": 472,
+          "end": 473,
+          "symbol": "M:kd.a(Llu;)V",
+          "original": "a",
+          "renamed": "decodeSegments"
+        },
+        {
           "start": 504,
           "end": 505,
           "symbol": "M:kd.a(I)I",
           "original": "a",
           "renamed": "advance"
+        },
+        {
+          "start": 1274,
+          "end": 1275,
+          "symbol": "M:kd.a(Llu;)V",
+          "original": "a",
+          "renamed": "decodeSegments"
         },
         {
           "start": 1276,
@@ -710218,7 +710298,7 @@
       "original": "mda.java",
       "renamed": "mda.java",
       "inputSha256": "3ca30d0bbb1d8b4655d037fefc02d38503f64fe72aa461e368576a5f2324b467",
-      "outputSha256": "be99e0306f4337290a9653bccd9c6e4658f0311ffec053e7bd8c6e3efa4f36b7",
+      "outputSha256": "bb1251061f0beff54cd05c1b4fe2d142e685d8af8e78560fc5b724f8c5e7925e",
       "edits": [
         {
           "start": 67,
@@ -710233,6 +710313,13 @@
           "symbol": "C:sna",
           "original": "sna",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 149,
+          "end": 150,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 855,
@@ -711365,7 +711452,7 @@
       "original": "mga.java",
       "renamed": "VorbisFloor.java",
       "inputSha256": "a0ca4c2d8b9fcec8fc8b94aa538e2adab7f11153caf552cc39e3e853988e907d",
-      "outputSha256": "96c03cae54eb1bbcc71b39ea52f6a5c1279f489bfa24a14361befa4a7d6b8dcf",
+      "outputSha256": "07b41084f14873f1080f3a36e91c4ee211f11a7b7a1695ff9eb37db6ae9aaf4a",
       "edits": [
         {
           "start": 50,
@@ -711506,6 +711593,13 @@
           "symbol": "M:dv.a()I",
           "original": "a",
           "renamed": "readBit"
+        },
+        {
+          "start": 7539,
+          "end": 7540,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 7577,
@@ -776157,8 +776251,15 @@
       "original": "sp.java",
       "renamed": "sp.java",
       "inputSha256": "78aeab597fd4aa70b84e56883b54e58db262e64596ead29d0c9427e6d429b973",
-      "outputSha256": "9aface2a758f790783bb3c75df8d9c26967d66d1333427c7654821be23a54504",
+      "outputSha256": "aef4b62f5f4e0f58cb2504a7a633a9a6bbecd139bc68416aad437c08412e98ca",
       "edits": [
+        {
+          "start": 112,
+          "end": 113,
+          "symbol": "M:sp.a(IIB)I",
+          "original": "a",
+          "renamed": "integerPower"
+        },
         {
           "start": 1098,
           "end": 1099,
@@ -801733,7 +801834,7 @@
       "original": "vm.java",
       "renamed": "vm.java",
       "inputSha256": "de9e747a1c61f38013b815113352ccd4beed5d2c9745e7074d253081e4e80478",
-      "outputSha256": "536fe956d580572669df292cca98996e60329301a07bd94e3624df3838ddad06",
+      "outputSha256": "29b12fbf534afc96eb0d3126ba8e42d9f97c28810c7db6c88e2cf5d51bcb8c0b",
       "edits": [
         {
           "start": 62,
@@ -801811,6 +801912,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 5124,
+          "end": 5125,
+          "symbol": "M:mda.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 5226,
@@ -813533,10 +813641,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "efc5af9d73b1a55eabf394c5456c4ccceaff575158cf7763420b8595bd984e82",
+    "rulesSha256": "1a20f77b049b7403a5a1c0ec85a5a5c2b94e8e742710377c9bc04ca3229a7a4d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "4dd506760fab3cf72dbd2dbe1ac6272e26f917621507256577c3ced6be8b188f",
+    "outputTreeSha256": "6a75ed8fcda7fd7a2a3bd4c307a9b76f65115791bbf5e6c8fb32e827a9fee680",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

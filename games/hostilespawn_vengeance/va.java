@@ -72,14 +72,14 @@ final class va {
         int var3;
         this.field_a = new ok[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.l(32270);
+          var3 = param0.readUnsignedByte(32270);
           if (var3 != 0) {
             param0.field_i = param0.field_i - 1;
             this.field_a[var2] = new ok();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.e(8);
-        this.field_c = param0.e(8);
+        this.field_b = param0.readUnsignedShort(8);
+        this.field_c = param0.readUnsignedShort(8);
     }
 }

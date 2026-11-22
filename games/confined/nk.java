@@ -14,7 +14,7 @@ final class nk {
     int field_d;
     private int field_k;
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_a = param0.readUnsignedByte(32);
         this.field_b = new int[this.field_a];
@@ -29,7 +29,7 @@ final class nk {
         this.field_d = param0.readUnsignedByte(32);
         this.field_i = param0.readInt((byte) 57);
         this.field_j = param0.readInt((byte) 74);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
     final void a() {

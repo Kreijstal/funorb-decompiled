@@ -192,7 +192,7 @@ final class VorbisFloor {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (sl.a() == 0) ? 0 : 1;
+        stackIn_3_0 = (sl.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -200,9 +200,9 @@ final class VorbisFloor {
         var2 = this.field_i.length;
         System.arraycopy(this.field_i, 0, field_a, 0, var2);
         var3 = field_h[this.field_b - 1];
-        var4 = wi.b(113, var3 - 1);
-        field_k[0] = sl.d(var4);
-        field_k[1] = sl.d(var4);
+        var4 = wi.bitLength(113, var3 - 1);
+        field_k[0] = sl.readBits(var4);
+        field_k[1] = sl.readBits(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_e.length; var6++) {
           var7 = this.field_e[var6];
@@ -307,15 +307,15 @@ final class VorbisFloor {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = sl.d(16);
+        var1 = sl.readBits(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = sl.d(5);
+        var2 = sl.readBits(5);
         var3 = 0;
         this.field_e = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = sl.d(4);
+          var5 = sl.readBits(4);
           this.field_e[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -326,12 +326,12 @@ final class VorbisFloor {
         this.field_c = new int[var3];
         this.field_d = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_j[var4Lifetime1] = sl.d(3) + 1;
-          dupTemp$1 = sl.d(2);
+          this.field_j[var4Lifetime1] = sl.readBits(3) + 1;
+          dupTemp$1 = sl.readBits(2);
           this.field_g[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_c[var4Lifetime1] = sl.d(8);
+            this.field_c[var4Lifetime1] = sl.readBits(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -339,11 +339,11 @@ final class VorbisFloor {
           var6_ref_int__ = var9;
           this.field_d[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = sl.d(8) - 1;
+            var6_ref_int__[var7] = sl.readBits(8) - 1;
           }
         }
-        this.field_b = sl.d(2) + 1;
-        var4Lifetime2 = sl.d(4);
+        this.field_b = sl.readBits(2) + 1;
+        var4Lifetime2 = sl.readBits(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_j[this.field_e[var6]];
@@ -357,7 +357,7 @@ final class VorbisFloor {
           for (var8 = 0; var8 < this.field_j[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_i[incrementValue$0] = sl.d(var4Lifetime2);
+            this.field_i[incrementValue$0] = sl.readBits(var4Lifetime2);
           }
         }
         if (field_a != null &&

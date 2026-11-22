@@ -102,19 +102,19 @@ final class MixedSupport012 {
         int integerLocal3 = 0;
         int integerLocal4 = 0;
         int integerLocal5;
-        this.integerState0079 = VorbisSample.computeInteger1696(16);
-        this.integerState0080 = VorbisSample.computeInteger1696(24);
-        this.integerState0077 = VorbisSample.computeInteger1696(24);
-        this.integerState0076 = VorbisSample.computeInteger1696(24) + 1;
-        this.integerState0075 = VorbisSample.computeInteger1696(6) + 1;
-        this.integerState0078 = VorbisSample.computeInteger1696(8);
+        this.integerState0079 = VorbisSample.readBits(16);
+        this.integerState0080 = VorbisSample.readBits(24);
+        this.integerState0077 = VorbisSample.readBits(24);
+        this.integerState0076 = VorbisSample.readBits(24) + 1;
+        this.integerState0075 = VorbisSample.readBits(6) + 1;
+        this.integerState0078 = VorbisSample.readBits(8);
         int[] integerArrayLocal6 = new int[this.integerState0075];
         for (integerLocal4 = 0; integerLocal4 < this.integerState0075; integerLocal4++) {
           integerLocal1 = 0;
-          integerLocal2 = VorbisSample.computeInteger1696(3);
-          integerLocal3 = VorbisSample.computeInteger1694() != 0 ? 1 : 0;
+          integerLocal2 = VorbisSample.readBits(3);
+          integerLocal3 = VorbisSample.readBit() != 0 ? 1 : 0;
           if (integerLocal3 != 0) {
-            integerLocal1 = VorbisSample.computeInteger1696(5);
+            integerLocal1 = VorbisSample.readBits(5);
           }
           integerArrayLocal6[integerLocal4] = integerLocal1 << 3 | integerLocal2;
         }
@@ -122,7 +122,7 @@ final class MixedSupport012 {
         int integerLocal7 = 0;
         integerLocal5 = integerLocal7;
         while (integerLocal7 < this.integerState0075 * 8) {
-          this.integerArrayState0019[integerLocal7] = (integerArrayLocal6[integerLocal7 >> 3] & 1 << (integerLocal7 & 7)) != 0 ? VorbisSample.computeInteger1696(8) : -1;
+          this.integerArrayState0019[integerLocal7] = (integerArrayLocal6[integerLocal7 >> 3] & 1 << (integerLocal7 & 7)) != 0 ? VorbisSample.readBits(8) : -1;
           integerLocal7++;
         }
     }

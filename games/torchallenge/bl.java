@@ -136,7 +136,7 @@ final class bl extends ng {
         throw new Error();
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int integerPower(int param0, byte param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -184,7 +184,7 @@ final class bl extends ng {
         field_S = null;
         field_Q = null;
         if (param0) {
-          bl.a(-63, (byte) 27, -118);
+          bl.integerPower(-63, (byte) 27, -118);
         }
     }
 

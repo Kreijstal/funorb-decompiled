@@ -14,7 +14,7 @@ final class SoundEnvelope {
     int field_c;
     int field_a;
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         this.field_k = param0.readUnsignedByte(-121);
         this.field_d = new int[this.field_k];
         this.field_f = new int[this.field_k];
@@ -28,7 +28,7 @@ final class SoundEnvelope {
         this.field_c = param0.readUnsignedByte(-122);
         this.field_a = param0.readInt((byte) 116);
         this.field_b = param0.readInt((byte) 120);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
     final int a(int param0) {

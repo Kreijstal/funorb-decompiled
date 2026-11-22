@@ -139,7 +139,7 @@ final class rc implements fe {
           if (param0 >= -112) {
             field_a = (String) null;
           }
-          var5_int = km.b(4, 3 * (param3 - param1));
+          var5_int = km.bitLength(4, 3 * (param3 - param1));
           var6 = 3 * param1;
           var7 = var5_int - 10;
           ab.b((byte) 110);
@@ -323,7 +323,7 @@ final class rc implements fe {
           if (param0 >= -112) {
             field_a = (String) null;
           }
-          var5_int = km.b(4, 3 * (param3 - param1));
+          var5_int = km.bitLength(4, 3 * (param3 - param1));
           var6 = 3 * param1;
           var7 = var5_int - 10;
           ab.b((byte) 110);

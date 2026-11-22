@@ -167,7 +167,7 @@ final class ek extends ab implements dn {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         int var2 = 0;
         if (param1 < 0) {
           var2 += 16;

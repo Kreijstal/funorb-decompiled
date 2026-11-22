@@ -18,7 +18,7 @@ final class lh {
         this.field_d = param0.readUnsignedByte((byte) 112);
         this.field_h = param0.readInt((byte) -105);
         this.field_b = param0.readInt((byte) -110);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
     final int a(int param0) {
@@ -48,7 +48,7 @@ final class lh {
         this.field_f = 0;
     }
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_c = param0.readUnsignedByte((byte) 93);
         this.field_e = new int[this.field_c];

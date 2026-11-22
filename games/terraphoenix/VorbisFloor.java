@@ -115,7 +115,7 @@ final class VorbisFloor {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (VorbisDecoder.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisDecoder.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -123,9 +123,9 @@ final class VorbisFloor {
         var2 = this.field_l.length;
         System.arraycopy(this.field_l, 0, field_i, 0, var2);
         var3 = field_h[this.field_a - 1];
-        var4 = je.a(-124, var3 - 1);
-        field_e[0] = VorbisDecoder.d(var4);
-        field_e[1] = VorbisDecoder.d(var4);
+        var4 = je.bitLength(-124, var3 - 1);
+        field_e[0] = VorbisDecoder.readBits(var4);
+        field_e[1] = VorbisDecoder.readBits(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_d.length; var6++) {
           var7 = this.field_d[var6];
@@ -307,15 +307,15 @@ final class VorbisFloor {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = VorbisDecoder.d(16);
+        var1 = VorbisDecoder.readBits(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = VorbisDecoder.d(5);
+        var2 = VorbisDecoder.readBits(5);
         var3 = 0;
         this.field_d = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = VorbisDecoder.d(4);
+          var5 = VorbisDecoder.readBits(4);
           this.field_d[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -326,12 +326,12 @@ final class VorbisFloor {
         this.field_c = new int[var3];
         this.field_k = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_b[var4Lifetime1] = VorbisDecoder.d(3) + 1;
-          dupTemp$1 = VorbisDecoder.d(2);
+          this.field_b[var4Lifetime1] = VorbisDecoder.readBits(3) + 1;
+          dupTemp$1 = VorbisDecoder.readBits(2);
           this.field_g[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_c[var4Lifetime1] = VorbisDecoder.d(8);
+            this.field_c[var4Lifetime1] = VorbisDecoder.readBits(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -339,11 +339,11 @@ final class VorbisFloor {
           var6_ref_int__ = var9;
           this.field_k[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = VorbisDecoder.d(8) - 1;
+            var6_ref_int__[var7] = VorbisDecoder.readBits(8) - 1;
           }
         }
-        this.field_a = VorbisDecoder.d(2) + 1;
-        var4Lifetime2 = VorbisDecoder.d(4);
+        this.field_a = VorbisDecoder.readBits(2) + 1;
+        var4Lifetime2 = VorbisDecoder.readBits(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_b[this.field_d[var6]];
@@ -357,7 +357,7 @@ final class VorbisFloor {
           for (var8 = 0; var8 < this.field_b[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_l[incrementValue$0] = VorbisDecoder.d(var4Lifetime2);
+            this.field_l[incrementValue$0] = VorbisDecoder.readBits(var4Lifetime2);
           }
         }
         if (field_i != null &&

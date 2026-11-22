@@ -25,11 +25,11 @@ final class wk {
         hj var9 = null;
         var7 = HostileSpawn.field_I ? 1 : 0;
         var8 = sc.field_g;
-        var3 = var8.l(32270);
+        var3 = var8.readUnsignedByte(32270);
         stackIn_3_0 = (0 != (var3 & 128));
         pk.field_k = stackIn_3_0;
         lb.field_b = 127 & var3;
-        ja.field_c = var8.l(32270);
+        ja.field_c = var8.readUnsignedByte(32270);
         pm.field_c = var8.c(10818);
         if (!param0) {
           return (ln) null;
@@ -38,10 +38,10 @@ final class wk {
           qa.field_e = 0;
           KeyboardInput.field_c = 0;
         } else {
-          KeyboardInput.field_c = var8.e(8);
+          KeyboardInput.field_c = var8.readUnsignedShort(8);
           qa.field_e = var8.h(64);
         }
-        stackIn_11_0 = (var8.l(32270) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(32270) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
         qa.field_f = var8.o(32);
         if (var4 == 0) {
@@ -50,11 +50,11 @@ final class wk {
           qg.field_o = var8.o(32);
         }
         if (lb.field_b == 1) {
-          var8.e(8);
+          var8.readUnsignedShort(8);
           var8.o(32);
         } else {
           if (lb.field_b == 4) {
-            var8.e(8);
+            var8.readUnsignedShort(8);
             var8.o(32);
           }
         }
@@ -63,7 +63,7 @@ final class wk {
           bn.field_b = null;
           return new ln(param1);
         }
-        var5 = var8.e(8);
+        var5 = var8.readUnsignedShort(8);
         try {
           var9 = le.field_ub.a(var5, 1);
           DirectByteStorage.field_f = var9.d((byte) -53);

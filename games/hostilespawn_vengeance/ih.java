@@ -148,9 +148,9 @@ final class ih extends ej {
                   if (this.field_i.field_i >= var4) {
                     if (null == this.field_p) {
                       this.field_i.field_i = 0;
-                      var6 = this.field_i.l(32270);
+                      var6 = this.field_i.readUnsignedByte(32270);
                       var7 = this.field_i.d(8195);
-                      var8 = this.field_i.l(32270);
+                      var8 = this.field_i.readUnsignedByte(32270);
                       var9 = this.field_i.d(8195);
                       var10 = var8 & 127;
                       stackIn_50_0 = ((128 & var8) == 0) ? 0 : 1;

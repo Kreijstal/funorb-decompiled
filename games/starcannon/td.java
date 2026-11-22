@@ -441,7 +441,7 @@ final class td {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int bitLength(int param0, byte param1) {
         int var2 = 0;
         if (param0 < 0 ||
           65536 <= param0) {
@@ -480,7 +480,7 @@ final class td {
     final void a(int param0) throws IOException {
         this.a((byte) -56);
         if (param0 < 36) {
-          td.a(-31, (byte) 62);
+          td.bitLength(-31, (byte) 62);
         }
         this.field_b.a(1);
     }

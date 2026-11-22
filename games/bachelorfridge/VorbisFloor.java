@@ -255,7 +255,7 @@ final class VorbisFloor {
         var2 = this.field_g.length;
         System.arraycopy(this.field_g, 0, field_c, 0, var2);
         var3 = field_e[this.field_k - 1];
-        var4 = mda.a(var3 - 1, 16);
+        var4 = mda.bitLength(var3 - 1, 16);
         field_l[0] = VorbisSample.readBits(var4);
         field_l[1] = VorbisSample.readBits(var4);
         var5 = 2;

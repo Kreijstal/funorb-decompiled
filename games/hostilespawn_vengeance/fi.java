@@ -102,19 +102,19 @@ final class fi {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_d = qf.e(16);
-        this.field_c = qf.e(24);
-        this.field_e = qf.e(24);
-        this.field_g = qf.e(24) + 1;
-        this.field_b = qf.e(6) + 1;
-        this.field_a = qf.e(8);
+        this.field_d = qf.readBits(16);
+        this.field_c = qf.readBits(24);
+        this.field_e = qf.readBits(24);
+        this.field_g = qf.readBits(24) + 1;
+        this.field_b = qf.readBits(6) + 1;
+        this.field_a = qf.readBits(8);
         int[] var1 = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
           var3 = 0;
-          var4 = qf.e(3);
-          var5 = qf.b() != 0 ? 1 : 0;
+          var4 = qf.readBits(3);
+          var5 = qf.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = qf.e(5);
+            var3 = qf.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class fi {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_b * 8) {
-          this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? qf.e(8) : -1;
+          this.field_f[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? qf.readBits(8) : -1;
           var6++;
         }
     }

@@ -15,20 +15,20 @@ final class ma {
     int field_f;
 
     final void a(PacketBuffer param0) {
-        this.field_b = param0.l(32270);
+        this.field_b = param0.readUnsignedByte(32270);
         this.field_i = param0.d(8195);
         this.field_f = param0.d(8195);
-        this.b(param0);
+        this.decodeSegments(param0);
     }
 
-    final void b(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.l(32270);
+        this.field_k = param0.readUnsignedByte(32270);
         this.field_d = new int[this.field_k];
         this.field_a = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-          this.field_d[var2] = param0.e(8);
-          this.field_a[var2] = param0.e(8);
+          this.field_d[var2] = param0.readUnsignedShort(8);
+          this.field_a[var2] = param0.readUnsignedShort(8);
         }
     }
 

@@ -142,7 +142,7 @@ final class ri {
         int var13Lifetime1;
         var19 = MinerDisturbance.field_ab;
         try {
-          var5_int = d.a((param2 - param1) * 3, -31479);
+          var5_int = d.bitLength((param2 - param1) * 3, -31479);
           var6 = param1 * 3;
           ab.a(-20707);
           var7 = var5_int - 10;

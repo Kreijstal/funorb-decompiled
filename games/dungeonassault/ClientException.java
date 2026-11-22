@@ -44,7 +44,7 @@ final class ClientException extends RuntimeException {
         int var13Lifetime1;
         var19 = DungeonAssault.field_K;
         try {
-          var5_int = ue.a((-param0 + param1) * 3, -715);
+          var5_int = ue.bitLength((-param0 + param1) * 3, -715);
           var6 = 3 * param0;
           var7 = var5_int - 10;
           ea.c(0);

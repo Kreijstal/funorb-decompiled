@@ -66,7 +66,7 @@ final class jd extends PacketBuffer {
         int var13Lifetime1;
         var19 = SolKnight.field_L ? 1 : 0;
         try {
-          var5_int = wi.b(84, 3 * (param0 - param4));
+          var5_int = wi.bitLength(84, 3 * (param0 - param4));
           var6 = param4 * 3;
           var7 = -10 + var5_int;
           we.a(100);

@@ -189,7 +189,7 @@ abstract class dk extends UiComponent implements wg {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int bitLength(int param0, byte param1) {
         int var2 = 0;
         if (param1 != -57) {
           field_D = (int[]) null;

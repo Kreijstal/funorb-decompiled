@@ -1100,12 +1100,36 @@
       "renamedSymbol": "M:GameApplet.compareLongs(JJ)I"
     },
     {
+      "symbol": "M:ad.a()I",
+      "originalName": "a",
+      "to": "readBit",
+      "evidence": "Extract one LSB-first bit from the current sample byte;advance bit offset and byte cursor in their original order,then mask bit offset to7. Pre-rename body SHA256 aa74b3e0401398692c9026e8a4c205ee1878d7d165d77851ffc2696944426a7d. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ad.readBit()I"
+    },
+    {
       "symbol": "M:ad.c()V",
       "originalName": "c",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 16 null writes to 16 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 cf9815b97a317fc7f8cfd615b681a323a4b85a1adc4c0d5f3b433012d434e97f.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ad.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:ad.d(I)I",
+      "originalName": "d",
+      "to": "readBits",
+      "evidence": "Read the requested bit count LSB-first across byte boundaries,retaining the exact signed shifts,mask calculations,32-bit accumulation,cursor updates and invalid-count behavior. Pre-rename body SHA256 b4de000352c806ff1af4aa66deba99c912eab51925d36b5c4170b49e4df1a1d0. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ad.readBits(I)I"
+    },
+    {
+      "symbol": "M:ad.e(I)F",
+      "originalName": "e",
+      "to": "unpackVorbisFloat",
+      "evidence": "Unpack the Vorbis21-bit mantissa,sign bit and exponent bits;apply sign and multiply the mantissa by2^(exponent-788) using the original double/float casts. Pre-rename body SHA256 1bd3608ca1ee7f868b1a098108e890001c62a2c8f42188740bfea3ec9bc4ff5d. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ad.unpackVorbisFloat(I)F"
     },
     {
       "symbol": "M:ah.a(B)V",
@@ -1522,6 +1546,14 @@
       "evidence": "Complete source declaration/body, five-field DTO instance contract, boolean constructor and all account-result panel instance methods reviewed, with exact account-created success label. Success allocates true before int!=0 static cleanup and secondary flag assignment. Error allocates/writes false/status/message before false guard static int -59 write. Suggestion false guard recursively calls itself(false,null) before allocation; retain StackOverflowError and original RuntimeException wrapping. Poller idle throw precedes wrong-int null guard and ready consumption. UI wrong int!=-8895 returns before handled write/result processing; preserve every guard/domain/operator, callbacks, secondary transition, allocation/write/call order and aliases. Identifier edits only; retain caller array/object identity, defaults, original guard domains, all operators/branches and failure behavior.",
       "confidence": "reviewed",
       "renamedSymbol": "M:fb.createAccountErrorResult(IZLjava/lang/String;)LAccountServiceResult;"
+    },
+    {
+      "symbol": "M:fd.a(BII)I",
+      "originalName": "a",
+      "to": "integerPower",
+      "evidence": "Exponentiation-by-squaring helper with signed32-bit multiplication and right shifts. Preserve each actual base/exponent/seed-or-terminal/guard parameter arrangement,global control reads,side effects,early returns and exception wrapper;do not substitute Math.pow. Pre-rename body SHA256 e1ef2a822817abe9dad2d49c55dcd8c8af6788fcebae6480d9b5da1629754070. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fd.integerPower(BII)I"
     },
     {
       "symbol": "M:fe.a(BLjava/awt/Component;)V",
@@ -2500,6 +2532,14 @@
       "renamedSymbol": "M:qf.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:qg.a(Lka;)V",
+      "originalName": "a",
+      "to": "decodeSegments",
+      "evidence": "Read the envelope segment count,allocate the two retained segment arrays,and read paired unsigned16-bit values per segment. Preserve every actual packet-reader argument,allocation/write order and partial state. Pre-rename body SHA256 2980c972620e86b6325c46819296e48b3e0a93107a12492b0c8641ec4c60a0ef. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:qg.decodeSegments(LPacketBuffer;)V"
+    },
+    {
       "symbol": "M:qh.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2722,6 +2762,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 2ac179dfa5d2170a1e7ecea285d0228e33db6ee4cfe9e422e2caddd9e6ee39f5.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ue.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:ug.a(II)I",
+      "originalName": "a",
+      "to": "bitLength",
+      "evidence": "Determine the integer bit width using unsigned shifts by16,8,4,2,1 and accumulated width. Preserve game-specific threshold/guard parameter positions,unused arithmetic,global side effects,early returns and exception wrappers for every input. Pre-rename body SHA256 8d56994b3f6a927f6f5c0dfc9bb354dc5b1db47c24c2c6cc3111a27a99145566. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntrusiveDequeCursor.bitLength(II)I"
     },
     {
       "symbol": "M:ug.c(I)V",
@@ -32759,7 +32807,7 @@
     },
     {
       "symbol": "L:ad.a()I#0",
-      "renamedSymbol": "L:ad.a()I#0",
+      "renamedSymbol": "L:ad.readBit()I#0",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -34695,7 +34743,7 @@
     },
     {
       "symbol": "L:ad.d(I)I#0",
-      "renamedSymbol": "L:ad.d(I)I#0",
+      "renamedSymbol": "L:ad.readBits(I)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -34706,7 +34754,7 @@
     },
     {
       "symbol": "L:ad.d(I)I#1",
-      "renamedSymbol": "L:ad.d(I)I#1",
+      "renamedSymbol": "L:ad.readBits(I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -34717,7 +34765,7 @@
     },
     {
       "symbol": "L:ad.d(I)I#2",
-      "renamedSymbol": "L:ad.d(I)I#2",
+      "renamedSymbol": "L:ad.readBits(I)I#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -34728,7 +34776,7 @@
     },
     {
       "symbol": "L:ad.d(I)I#3",
-      "renamedSymbol": "L:ad.d(I)I#3",
+      "renamedSymbol": "L:ad.readBits(I)I#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -34739,7 +34787,7 @@
     },
     {
       "symbol": "L:ad.d(I)I#4",
-      "renamedSymbol": "L:ad.d(I)I#4",
+      "renamedSymbol": "L:ad.readBits(I)I#4",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -34750,7 +34798,7 @@
     },
     {
       "symbol": "L:ad.e(I)F#0",
-      "renamedSymbol": "L:ad.e(I)F#0",
+      "renamedSymbol": "L:ad.unpackVorbisFloat(I)F#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -34761,7 +34809,7 @@
     },
     {
       "symbol": "L:ad.e(I)F#1",
-      "renamedSymbol": "L:ad.e(I)F#1",
+      "renamedSymbol": "L:ad.unpackVorbisFloat(I)F#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -34772,7 +34820,7 @@
     },
     {
       "symbol": "L:ad.e(I)F#2",
-      "renamedSymbol": "L:ad.e(I)F#2",
+      "renamedSymbol": "L:ad.unpackVorbisFloat(I)F#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -58070,7 +58118,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#0",
-      "renamedSymbol": "L:fd.a(BII)I#0",
+      "renamedSymbol": "L:fd.integerPower(BII)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -58081,7 +58129,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#1",
-      "renamedSymbol": "L:fd.a(BII)I#1",
+      "renamedSymbol": "L:fd.integerPower(BII)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -58092,7 +58140,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#2",
-      "renamedSymbol": "L:fd.a(BII)I#2",
+      "renamedSymbol": "L:fd.integerPower(BII)I#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -58103,7 +58151,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#3",
-      "renamedSymbol": "L:fd.a(BII)I#3",
+      "renamedSymbol": "L:fd.integerPower(BII)I#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -58114,7 +58162,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#4",
-      "renamedSymbol": "L:fd.a(BII)I#4",
+      "renamedSymbol": "L:fd.integerPower(BII)I#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -58125,7 +58173,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#5",
-      "renamedSymbol": "L:fd.a(BII)I#5",
+      "renamedSymbol": "L:fd.integerPower(BII)I#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -58136,7 +58184,7 @@
     },
     {
       "symbol": "L:fd.a(BII)I#6",
-      "renamedSymbol": "L:fd.a(BII)I#6",
+      "renamedSymbol": "L:fd.integerPower(BII)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -120759,7 +120807,7 @@
     },
     {
       "symbol": "L:qg.a(Lka;)V#0",
-      "renamedSymbol": "L:qg.a(LPacketBuffer;)V#0",
+      "renamedSymbol": "L:qg.decodeSegments(LPacketBuffer;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -144607,7 +144655,7 @@
     },
     {
       "symbol": "L:ug.a(II)I#0",
-      "renamedSymbol": "L:IntrusiveDequeCursor.a(II)I#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.bitLength(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -155662,9 +155710,9 @@
     },
     {
       "symbol": "M:ad.a()I",
-      "renamedSymbol": "M:ad.a()I",
+      "renamedSymbol": "M:ad.readBit()I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readBit",
       "declaration": {
         "file": "ad.java",
         "start": 23523,
@@ -155783,9 +155831,9 @@
     },
     {
       "symbol": "M:ad.d(I)I",
-      "renamedSymbol": "M:ad.d(I)I",
+      "renamedSymbol": "M:ad.readBits(I)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "readBits",
       "declaration": {
         "file": "ad.java",
         "start": 24156,
@@ -155794,9 +155842,9 @@
     },
     {
       "symbol": "M:ad.e(I)F",
-      "renamedSymbol": "M:ad.e(I)F",
+      "renamedSymbol": "M:ad.unpackVorbisFloat(I)F",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "unpackVorbisFloat",
       "declaration": {
         "file": "ad.java",
         "start": 6363,
@@ -160678,9 +160726,9 @@
     },
     {
       "symbol": "M:fd.a(BII)I",
-      "renamedSymbol": "M:fd.a(BII)I",
+      "renamedSymbol": "M:fd.integerPower(BII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "integerPower",
       "declaration": {
         "file": "fd.java",
         "start": 229,
@@ -171876,9 +171924,9 @@
     },
     {
       "symbol": "M:qg.a(Lka;)V",
-      "renamedSymbol": "M:qg.a(LPacketBuffer;)V",
+      "renamedSymbol": "M:qg.decodeSegments(LPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decodeSegments",
       "declaration": {
         "file": "qg.java",
         "start": 1253,
@@ -175781,9 +175829,9 @@
     },
     {
       "symbol": "M:ug.a(II)I",
-      "renamedSymbol": "M:IntrusiveDequeCursor.a(II)I",
+      "renamedSymbol": "M:IntrusiveDequeCursor.bitLength(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "bitLength",
       "declaration": {
         "file": "ug.java",
         "start": 4561,
@@ -178729,7 +178777,7 @@
     },
     {
       "symbol": "P:ad.d(I)I#0",
-      "renamedSymbol": "P:ad.d(I)I#0",
+      "renamedSymbol": "P:ad.readBits(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -178740,7 +178788,7 @@
     },
     {
       "symbol": "P:ad.e(I)F#0",
-      "renamedSymbol": "P:ad.e(I)F#0",
+      "renamedSymbol": "P:ad.unpackVorbisFloat(I)F#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190818,7 +190866,7 @@
     },
     {
       "symbol": "P:fd.a(BII)I#0",
-      "renamedSymbol": "P:fd.a(BII)I#0",
+      "renamedSymbol": "P:fd.integerPower(BII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -190829,7 +190877,7 @@
     },
     {
       "symbol": "P:fd.a(BII)I#1",
-      "renamedSymbol": "P:fd.a(BII)I#1",
+      "renamedSymbol": "P:fd.integerPower(BII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -190840,7 +190888,7 @@
     },
     {
       "symbol": "P:fd.a(BII)I#2",
-      "renamedSymbol": "P:fd.a(BII)I#2",
+      "renamedSymbol": "P:fd.integerPower(BII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -219726,7 +219774,7 @@
     },
     {
       "symbol": "P:qg.a(Lka;)V#0",
-      "renamedSymbol": "P:qg.a(LPacketBuffer;)V#0",
+      "renamedSymbol": "P:qg.decodeSegments(LPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -229725,7 +229773,7 @@
     },
     {
       "symbol": "P:ug.a(II)I#0",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(II)I#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.bitLength(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -229736,7 +229784,7 @@
     },
     {
       "symbol": "P:ug.a(II)I#1",
-      "renamedSymbol": "P:IntrusiveDequeCursor.a(II)I#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.bitLength(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -234753,7 +234801,7 @@
       "original": "ad.java",
       "renamed": "ad.java",
       "inputSha256": "e8ede170e2d410243b128fd2180c17fe08118ddbdfed085c4386bb67d3259754",
-      "outputSha256": "9ca6ba6063fe0556bca107c6553608ba47268f6cc5258b801822309999b5dc5d",
+      "outputSha256": "48bf407c711fdd27fbca442eb26892b2ffa3f114d6a999d13da26ba703677b71",
       "edits": [
         {
           "start": 80,
@@ -234777,6 +234825,20 @@
           "renamed": "VorbisFloor"
         },
         {
+          "start": 2946,
+          "end": 2947,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 2978,
+          "end": 2979,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
           "start": 4407,
           "end": 4409,
           "symbol": "C:ug",
@@ -234784,11 +234846,25 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 4410,
+          "end": 4411,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
           "start": 4503,
           "end": 4505,
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 4890,
+          "end": 4891,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
         },
         {
           "start": 4922,
@@ -234805,6 +234881,27 @@
           "renamed": "VorbisCodebook"
         },
         {
+          "start": 5105,
+          "end": 5106,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5210,
+          "end": 5211,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5254,
+          "end": 5255,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
           "start": 5286,
           "end": 5288,
           "symbol": "C:mi",
@@ -234819,11 +234916,102 @@
           "renamed": "VorbisFloor"
         },
         {
+          "start": 5469,
+          "end": 5470,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5684,
+          "end": 5685,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5899,
+          "end": 5900,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6160,
+          "end": 6161,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 6237,
+          "end": 6238,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6257,
+          "end": 6258,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6293,
+          "end": 6294,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6363,
+          "end": 6364,
+          "symbol": "M:ad.e(I)F",
+          "original": "e",
+          "renamed": "unpackVorbisFloat"
+        },
+        {
+          "start": 9603,
+          "end": 9604,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 9626,
+          "end": 9627,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
           "start": 9628,
           "end": 9630,
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 9631,
+          "end": 9632,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
+          "start": 9931,
+          "end": 9932,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 10009,
+          "end": 10010,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 10818,
@@ -234847,11 +235035,32 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 14578,
+          "end": 14579,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
+          "start": 23523,
+          "end": 23524,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 23738,
           "end": 23739,
           "symbol": "M:ad.c()V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 24156,
+          "end": 24157,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
         },
         {
           "start": 25096,
@@ -238997,7 +239206,7 @@
       "original": "dh.java",
       "renamed": "SoundFilter.java",
       "inputSha256": "436c5f18741e5272e6e3ac121827f8b78d5b2be72d7a693e6244b9ab94c85379",
-      "outputSha256": "ba26c9f52099d619ac74728b9a8f77f1ce4ea2b97d96e4472c5e9968ef609145",
+      "outputSha256": "f9a5ee6994833a09715d4b8344861f2aa5f407d3ba71d785650ee2cf5a94e1ec",
       "edits": [
         {
           "start": 50,
@@ -239096,6 +239305,13 @@
           "symbol": "M:ka.c(B)I",
           "original": "c",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2414,
+          "end": 2415,
+          "symbol": "M:qg.a(Lka;)V",
+          "original": "a",
+          "renamed": "decodeSegments"
         },
         {
           "start": 2572,
@@ -241899,8 +242115,16 @@
       "original": "fd.java",
       "renamed": "fd.java",
       "inputSha256": "ecab36501190fb79f0812ba749e1e4c9476acf28a14d4a3a816b9b9a868d45cd",
-      "outputSha256": "ecab36501190fb79f0812ba749e1e4c9476acf28a14d4a3a816b9b9a868d45cd",
-      "edits": []
+      "outputSha256": "a7c4f9070c944a1450424e07b098ef32dc7c22469526422075f49dd56de65f72",
+      "edits": [
+        {
+          "start": 229,
+          "end": 230,
+          "symbol": "M:fd.a(BII)I",
+          "original": "a",
+          "renamed": "integerPower"
+        }
+      ]
     },
     {
       "original": "fe.java",
@@ -242652,7 +242876,7 @@
       "original": "fi.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "e0b69c9b7163e199116100261da4a0bea702f7a5f068027382f1ba3fba2b7610",
-      "outputSha256": "edcb662855cc91fd3d98ff6412abd718ec14638ff619a68bec20c651196138ba",
+      "outputSha256": "800c07a4b1064e2b86b6b6df2392de23903b47b4fdd5bfee3a9c98e4c0455b19",
       "edits": [
         {
           "start": 50,
@@ -242669,6 +242893,13 @@
           "renamed": "decodeScalar"
         },
         {
+          "start": 314,
+          "end": 315,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 432,
           "end": 433,
           "symbol": "M:fi.c()V",
@@ -242683,6 +242914,48 @@
           "renamed": "VorbisCodebook"
         },
         {
+          "start": 4278,
+          "end": 4279,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 4311,
+          "end": 4312,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 4344,
+          "end": 4345,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 4423,
+          "end": 4424,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 4539,
+          "end": 4540,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 4615,
+          "end": 4616,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
           "start": 4617,
           "end": 4619,
           "symbol": "C:ug",
@@ -242690,11 +242963,88 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 4620,
+          "end": 4621,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
+          "start": 4916,
+          "end": 4917,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 5102,
+          "end": 5103,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 5213,
+          "end": 5214,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
           "start": 5293,
           "end": 5294,
           "symbol": "M:fi.c()V",
           "original": "c",
           "renamed": "buildHuffmanTree"
+        },
+        {
+          "start": 5325,
+          "end": 5326,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5384,
+          "end": 5385,
+          "symbol": "M:ad.e(I)F",
+          "original": "e",
+          "renamed": "unpackVorbisFloat"
+        },
+        {
+          "start": 5389,
+          "end": 5390,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5417,
+          "end": 5418,
+          "symbol": "M:ad.e(I)F",
+          "original": "e",
+          "renamed": "unpackVorbisFloat"
+        },
+        {
+          "start": 5422,
+          "end": 5423,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5459,
+          "end": 5460,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 5498,
+          "end": 5499,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
         },
         {
           "start": 5670,
@@ -242711,11 +243061,25 @@
           "renamed": "lookup1Values"
         },
         {
+          "start": 5840,
+          "end": 5841,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
           "start": 7091,
           "end": 7092,
           "symbol": "M:fi.a(II)I",
           "original": "a",
           "renamed": "lookup1Values"
+        },
+        {
+          "start": 7221,
+          "end": 7222,
+          "symbol": "M:fd.a(BII)I",
+          "original": "a",
+          "renamed": "integerPower"
         },
         {
           "start": 7325,
@@ -254386,7 +254750,7 @@
       "original": "kh.java",
       "renamed": "kh.java",
       "inputSha256": "299970d22921ad8ac2803dc8c26d6f338773647003aee76c0104350618095a99",
-      "outputSha256": "1a9c811c87103e3e4490227c272f8e93eabd52da2c7f797c1810d48990283c16",
+      "outputSha256": "bfda8aea268353e6a1fd4c1e96201e8db3b2388a8521f49352248b012452ee31",
       "edits": [
         {
           "start": 563,
@@ -254415,6 +254779,76 @@
           "symbol": "M:fi.a()[F",
           "original": "a",
           "renamed": "decodeVector"
+        },
+        {
+          "start": 3126,
+          "end": 3127,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3159,
+          "end": 3160,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3192,
+          "end": 3193,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3225,
+          "end": 3226,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3262,
+          "end": 3263,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3298,
+          "end": 3299,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3442,
+          "end": 3443,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3468,
+          "end": 3469,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 3535,
+          "end": 3536,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 3825,
+          "end": 3826,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
         }
       ]
     },
@@ -256505,7 +256939,7 @@
       "original": "mi.java",
       "renamed": "VorbisFloor.java",
       "inputSha256": "6087e1010e180d667d36392a6944da82190506b149474ab55f447a440525a1a1",
-      "outputSha256": "f255a84b881fff1c3ba206d575401fd7aa18bb1ae046f3fbd626e43f021fa445",
+      "outputSha256": "b0e858ed2b08c9ae0a698511455b5bef49ebda43d7754b2f4366de361016cff3",
       "edits": [
         {
           "start": 50,
@@ -256522,11 +256956,39 @@
           "renamed": "decodeFloor"
         },
         {
+          "start": 875,
+          "end": 876,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
           "start": 1135,
           "end": 1137,
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1138,
+          "end": 1139,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
+        },
+        {
+          "start": 1178,
+          "end": 1179,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 1211,
+          "end": 1212,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
         },
         {
           "start": 1543,
@@ -256653,6 +257115,76 @@
           "symbol": "M:mi.<init>()V",
           "original": "mi",
           "renamed": "VorbisFloor"
+        },
+        {
+          "start": 8533,
+          "end": 8534,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 8633,
+          "end": 8634,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 8761,
+          "end": 8762,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9155,
+          "end": 9156,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9190,
+          "end": 9191,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9365,
+          "end": 9366,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9670,
+          "end": 9671,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9728,
+          "end": 9729,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9765,
+          "end": 9766,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 10401,
+          "end": 10402,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
         },
         {
           "start": 10727,
@@ -258958,8 +259490,79 @@
       "original": "oh.java",
       "renamed": "oh.java",
       "inputSha256": "4e2895334f1d377050eb9bd04ed43b89c51bcea4961476c3e2b88465b8c85c35",
-      "outputSha256": "4e2895334f1d377050eb9bd04ed43b89c51bcea4961476c3e2b88465b8c85c35",
-      "edits": []
+      "outputSha256": "1ec493a9649cd4ae484e1a952e14d48784eb813d13798dec203519ce6fd989ad",
+      "edits": [
+        {
+          "start": 172,
+          "end": 173,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 205,
+          "end": 206,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 219,
+          "end": 220,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "symbol": "M:ad.a()I",
+          "original": "a",
+          "renamed": "readBit"
+        },
+        {
+          "start": 273,
+          "end": 274,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 366,
+          "end": 367,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 541,
+          "end": 542,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 581,
+          "end": 582,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        },
+        {
+          "start": 621,
+          "end": 622,
+          "symbol": "M:ad.d(I)I",
+          "original": "d",
+          "renamed": "readBits"
+        }
+      ]
     },
     {
       "original": "oi.java",
@@ -267423,8 +268026,15 @@
       "original": "qg.java",
       "renamed": "qg.java",
       "inputSha256": "272f3bf9c690dc7217604ce289c5e3a256e3bc08eb82d190355fefbaa0a1873d",
-      "outputSha256": "d7b9c621a09e496cb6da5992feb3d3d58c5a280cd2eb7627d25ff2fad79ae57e",
+      "outputSha256": "15bc10502e747c4ad6fcb444cb9aa2e27c5558adf73e30309d788b767b9544b2",
       "edits": [
+        {
+          "start": 1253,
+          "end": 1254,
+          "symbol": "M:qg.a(Lka;)V",
+          "original": "a",
+          "renamed": "decodeSegments"
+        },
         {
           "start": 1255,
           "end": 1257,
@@ -267480,6 +268090,13 @@
           "symbol": "M:ka.b(Z)I",
           "original": "b",
           "renamed": "readInt"
+        },
+        {
+          "start": 1754,
+          "end": 1755,
+          "symbol": "M:qg.a(Lka;)V",
+          "original": "a",
+          "renamed": "decodeSegments"
         }
       ]
     },
@@ -268652,7 +269269,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "dbc9002a56aaee7d7b89bca67b5c927e0bdccc53f0c678dd7494641179b74e30",
-      "outputSha256": "ddd086e2ff4bcfc8e0e907b99ec738ea8785c78322972f6619b8086627fbad50",
+      "outputSha256": "c84a30991a813d0ecb8d0fd6ab74560e77e39e2f68dd7270cd14494725c189c9",
       "edits": [
         {
           "start": 93,
@@ -268667,6 +269284,13 @@
           "symbol": "C:ug",
           "original": "ug",
           "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1785,
+          "end": 1786,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 3328,
@@ -279034,7 +279658,7 @@
       "original": "ug.java",
       "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "b2440e5d4b99a696ddb8789ede403f16b13d7e5ce556efca8f15b8b2dbc4c567",
-      "outputSha256": "e4521eab701e11eb1504d2589b9dd58211701e34e77a8297db448aa5787d576b",
+      "outputSha256": "e9ed7a297da66aa6a10e719cf076e1b1039a56f104759fea8d6e7bb8c35d6ba4",
       "edits": [
         {
           "start": 50,
@@ -279329,6 +279953,13 @@
           "symbol": "F:gg.field_c:Lgg;",
           "original": "field_c",
           "renamed": "previous"
+        },
+        {
+          "start": 4561,
+          "end": 4562,
+          "symbol": "M:ug.a(II)I",
+          "original": "a",
+          "renamed": "bitLength"
         },
         {
           "start": 5268,
@@ -283828,10 +284459,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "3476014921f5261319ad5b1682e22cb232dc6951ffcdd129bc06f2e4395a26af",
+    "rulesSha256": "138b6ca086690a6d31a37eb904e3e5ea83912802fd9d43ead375f6d0e1e4ff8b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "8f80fb1562e74f406392ae7cb9a12c878beae1c665c0c61b1c74f2a2fc3edcac",
+    "outputTreeSha256": "e33369f31e2f800de2c6e722b18828890148da520118327c33d9c89ceab975ec",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

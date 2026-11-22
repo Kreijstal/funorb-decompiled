@@ -20,7 +20,7 @@ final class ue extends IntrusiveNode {
         sn.a(97, 4);
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         var2 = 0;
         if (param0 < 0 ||

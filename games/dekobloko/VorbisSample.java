@@ -39,7 +39,7 @@ final class VorbisSample extends HashNode {
     private static int[] integerArrayState0237;
     private boolean booleanState0197;
 
-    final static float computeFloat1687(int integerArgument1) {
+    final static float unpackVorbisFloat(int integerArgument1) {
         int integerLocal1 = integerArgument1 & 2097151;
         int integerLocal2 = integerArgument1 & -2147483648;
         int integerLocal3 = (integerArgument1 & 2145386496) >> 21;
@@ -81,8 +81,8 @@ final class VorbisSample extends HashNode {
         int integerLocal29;
         int integerLocal30;
         VorbisSample.performAction1692(byteArrayArgument1, 0);
-        integerState0823 = 1 << VorbisSample.computeInteger1696(4);
-        integerState0834 = 1 << VorbisSample.computeInteger1696(4);
+        integerState0823 = 1 << VorbisSample.readBits(4);
+        integerState0834 = 1 << VorbisSample.readBits(4);
         floatArrayState0010 = new float[integerState0834];
         for (integerLocal10 = 0; integerLocal10 < 2; integerLocal10++) {
           if (integerLocal10 == 0) {
@@ -110,7 +110,7 @@ final class VorbisSample extends HashNode {
             floatArrayLocal17[2 * integerLocal3 + 1] = -(float)Math.sin((double)(4 * integerLocal3 + 2) * 3.141592653589793 / (double)integerLocal11);
           }
           integerArrayLocal18 = new int[integerLocal14];
-          integerLocal19 = SceneWidgetPart010.computeInteger1465((byte) -57, integerLocal14 - 1);
+          integerLocal19 = SceneWidgetPart010.bitLength((byte) -57, integerLocal14 - 1);
           for (integerLocal4 = 0; integerLocal4 < integerLocal14; integerLocal4++) {
             integerArrayLocal18[integerLocal4] = MixedSupport108.computeInteger1413((byte) 16, integerLocal19, integerLocal4);
           }
@@ -126,46 +126,46 @@ final class VorbisSample extends HashNode {
             integerArrayState0236 = integerArrayLocal18;
           }
         }
-        integerLocal20 = VorbisSample.computeInteger1696(8) + 1;
+        integerLocal20 = VorbisSample.readBits(8) + 1;
         mixedSupport064ArrayState0001 = new VorbisCodebook[integerLocal20];
         for (integerLocal21 = 0; integerLocal21 < integerLocal20; integerLocal21++) {
           mixedSupport064ArrayState0001[integerLocal21] = new VorbisCodebook();
         }
-        integerLocal22 = VorbisSample.computeInteger1696(6) + 1;
+        integerLocal22 = VorbisSample.readBits(6) + 1;
         for (integerLocal24 = 0; integerLocal24 < integerLocal22; integerLocal24++) {
-          VorbisSample.computeInteger1696(16);
+          VorbisSample.readBits(16);
         }
-        integerLocal23 = VorbisSample.computeInteger1696(6) + 1;
+        integerLocal23 = VorbisSample.readBits(6) + 1;
         mixedSupport060ArrayState0001 = new VorbisFloor[integerLocal23];
         for (integerLocal25 = 0; integerLocal25 < integerLocal23; integerLocal25++) {
           mixedSupport060ArrayState0001[integerLocal25] = new VorbisFloor();
         }
-        integerLocal26 = VorbisSample.computeInteger1696(6) + 1;
+        integerLocal26 = VorbisSample.readBits(6) + 1;
         mixedSupport012ArrayState0001 = new MixedSupport012[integerLocal26];
         for (integerLocal27 = 0; integerLocal27 < integerLocal26; integerLocal27++) {
           mixedSupport012ArrayState0001[integerLocal27] = new MixedSupport012();
         }
-        integerLocal28 = VorbisSample.computeInteger1696(6) + 1;
+        integerLocal28 = VorbisSample.readBits(6) + 1;
         mixedSupport102ArrayState0001 = new MixedSupport102[integerLocal28];
         for (integerLocal29 = 0; integerLocal29 < integerLocal28; integerLocal29++) {
           mixedSupport102ArrayState0001[integerLocal29] = new MixedSupport102();
         }
-        integerLocal30 = VorbisSample.computeInteger1696(6) + 1;
+        integerLocal30 = VorbisSample.readBits(6) + 1;
         booleanArrayState0011 = new boolean[integerLocal30];
         integerArrayState0235 = new int[integerLocal30];
         for (integerLocal5 = 0; integerLocal5 < integerLocal30; integerLocal5++) {
           stackBooleanArrayLocal7 = (boolean[]) (booleanArrayState0011);
           stackIntegerLocal8 = integerLocal5;
-          stackBooleanLocal9 = (VorbisSample.computeInteger1694() != 0);
+          stackBooleanLocal9 = (VorbisSample.readBit() != 0);
           stackBooleanArrayLocal7[stackIntegerLocal8] = stackBooleanLocal9;
-          VorbisSample.computeInteger1696(16);
-          VorbisSample.computeInteger1696(16);
-          integerArrayState0235[integerLocal5] = VorbisSample.computeInteger1696(8);
+          VorbisSample.readBits(16);
+          VorbisSample.readBits(16);
+          integerArrayState0235[integerLocal5] = VorbisSample.readBits(8);
         }
         booleanState0196 = true;
     }
 
-    final static int computeInteger1694() {
+    final static int readBit() {
         int integerLocal1 = byteArrayState0031[integerState0826] >> integerState0825 & 1;
         integerState0825 = integerState0825 + 1;
         integerState0826 = integerState0826 + (integerState0825 >> 3);
@@ -405,8 +405,8 @@ final class VorbisSample extends HashNode {
         int integerLocal110;
         int integerLocal111;
         VorbisSample.performAction1692(this.byteArrayArrayState0010[integerArgument1], 0);
-        VorbisSample.computeInteger1694();
-        integerLocal11 = VorbisSample.computeInteger1696(SceneWidgetPart010.computeInteger1465((byte) -26, integerArrayState0235.length - 1));
+        VorbisSample.readBit();
+        integerLocal11 = VorbisSample.readBits(SceneWidgetPart010.bitLength((byte) -26, integerArrayState0235.length - 1));
         integerLocal12 = booleanArrayState0011[integerLocal11] ? 1 : 0;
         if (integerLocal12 == 0) {
           stackIntegerLocal2 = integerState0823;
@@ -417,9 +417,9 @@ final class VorbisSample extends HashNode {
         integerLocal14 = 0;
         integerLocal15 = 0;
         if (integerLocal12 != 0) {
-          stackIntegerLocal3 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
+          stackIntegerLocal3 = (VorbisSample.readBit() == 0) ? 0 : 1;
           integerLocal14 = stackIntegerLocal3;
-          stackIntegerLocal4 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
+          stackIntegerLocal4 = (VorbisSample.readBit() == 0) ? 0 : 1;
           integerLocal15 = stackIntegerLocal4;
         }
         integerLocal16 = integerLocal13 >> 1;
@@ -525,7 +525,7 @@ final class VorbisSample extends HashNode {
             floatArrayLocal31[4 * integerLocal77 + 3] = (floatLocal90 - floatLocal96) * floatLocal47 - (floatLocal91 - floatLocal99) * floatLocal49;
             floatArrayLocal31[4 * integerLocal77 + 1] = (floatLocal91 - floatLocal99) * floatLocal47 + (floatLocal90 - floatLocal96) * floatLocal49;
           }
-          integerLocal78 = SceneWidgetPart010.computeInteger1465((byte) -63, integerLocal13 - 1);
+          integerLocal78 = SceneWidgetPart010.bitLength((byte) -63, integerLocal13 - 1);
           for (integerLocal39 = 0; integerLocal39 < integerLocal78 - 3; integerLocal39++) {
             integerLocal42 = integerLocal13 >> integerLocal39 + 2;
             integerLocal44 = 8 << integerLocal39;
@@ -644,7 +644,7 @@ final class VorbisSample extends HashNode {
         return (float[]) (objectLocal27);
     }
 
-    final static int computeInteger1696(int integerArgument1) {
+    final static int readBits(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;

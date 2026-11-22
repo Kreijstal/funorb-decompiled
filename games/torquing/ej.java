@@ -224,7 +224,7 @@ final class ej implements lm {
         var5[0] = param0[2] - (int)(1.0 + this.field_e);
         var5[1] = param1[2] - (int)(-1.0 + this.field_v);
         var5[2] = param2[2] - (int)(1.0 + this.field_f);
-        int var7 = ke.a(ap.a(var12, 0, var12, 0), (byte) -97);
+        int var7 = ke.bitLength(ap.a(var12, 0, var12, 0), (byte) -97);
         if (var7 % 2 == 0) {
           var8 = 1 << var7 / 2;
         } else {

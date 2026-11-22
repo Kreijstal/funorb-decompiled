@@ -35,7 +35,7 @@ final class hd extends hi {
         try {
           var8 = new CipherPacketBuffer(param0.a("", "logo.fo3d", 0));
           var10 = var8;
-          var3 = var10.l(32270);
+          var3 = var10.readUnsignedByte(32270);
           var10.c(false);
           ce.field_f = gj.a(param1, var10);
           wj.field_J = new pf[var3];

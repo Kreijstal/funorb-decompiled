@@ -9,7 +9,7 @@ final class km {
         return param0 ^ param1;
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0) {

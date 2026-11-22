@@ -112,7 +112,7 @@ final class VorbisCodebook {
     final int decodeScalar() {
         int var1 = 0;
         while (this.field_a[var1] >= 0) {
-          var1 = te.b() != 0 ? this.field_a[var1] : var1 + 1;
+          var1 = te.readBit() != 0 ? this.field_a[var1] : var1 + 1;
         }
         return ~this.field_a[var1];
     }
@@ -123,7 +123,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; ll.c(-15083, param1, var2) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; ll.integerPower(-15083, param1, var2) > param0; var2--) {
         }
         return var2;
     }
@@ -153,17 +153,17 @@ final class VorbisCodebook {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        te.d(24);
-        this.field_b = te.d(16);
-        this.field_d = te.d(24);
+        te.readBits(24);
+        this.field_b = te.readBits(16);
+        this.field_d = te.readBits(24);
         this.field_f = new int[this.field_d];
-        stackIn_3_0 = (te.b() == 0) ? 0 : 1;
+        stackIn_3_0 = (te.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = te.d(5) + 1;
+          var3_int = te.readBits(5) + 1;
           while (var2 < this.field_d) {
-            var4_int = te.d(wb.a((byte) 100, this.field_d - var2));
+            var4_int = te.readBits(wb.bitLength((byte) 100, this.field_d - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,27 +172,27 @@ final class VorbisCodebook {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (te.b() == 0) ? 0 : 1;
+          stackIn_13_0 = (te.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_d) {
             if (var2 != 0 &&
-              te.b() == 0) {
+              te.readBit() == 0) {
               this.field_f[var14] = 0;
             } else {
-              this.field_f[var14] = te.d(5) + 1;
+              this.field_f[var14] = te.readBits(5) + 1;
             }
             var14++;
           }
         }
         this.buildHuffmanTree();
-        var2Lifetime1 = te.d(4);
+        var2Lifetime1 = te.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = te.e(te.d(32));
-          var4 = te.e(te.d(32));
-          var5Lifetime1 = te.d(4) + 1;
-          stackIn_25_0 = (te.b() == 0) ? 0 : 1;
+          var3 = te.unpackVorbisFloat(te.readBits(32));
+          var4 = te.unpackVorbisFloat(te.readBits(32));
+          var5Lifetime1 = te.readBits(4) + 1;
+          stackIn_25_0 = (te.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_d * this.field_b;
@@ -201,7 +201,7 @@ final class VorbisCodebook {
           }
           this.field_c = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_c[var8] = te.d(var5Lifetime1);
+            this.field_c[var8] = te.readBits(var5Lifetime1);
           }
           this.field_e = new float[this.field_d][this.field_b];
           if (var2Lifetime1 != 1) {

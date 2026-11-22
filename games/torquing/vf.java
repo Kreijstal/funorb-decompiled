@@ -157,7 +157,7 @@ final class vf {
         int var13Lifetime1;
         var19 = Torquing.field_u;
         try {
-          var5_int = ke.a(3 * (param2 - param1), (byte) -121);
+          var5_int = ke.bitLength(3 * (param2 - param1), (byte) -121);
           var6 = param1 * 3;
           var7 = -10 + var5_int;
           wi.a(0);

@@ -6524,6 +6524,14 @@
       "renamedSymbol": "M:ProductionContent.clearStatics(I)V"
     },
     {
+      "symbol": "M:em.a(IBI)I",
+      "originalName": "a",
+      "to": "integerPower",
+      "evidence": "Exponentiation-by-squaring helper with signed32-bit multiplication and right shifts. Preserve each actual base/exponent/seed-or-terminal/guard parameter arrangement,global control reads,side effects,early returns and exception wrapper;do not substitute Math.pow. Pre-rename body SHA256 ee1dd0ac86676c754c3ed27f9d0409e1b2fea1a07c4828b6ca1cbc8d9140901a. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ProductionContent.integerPower(IBI)I"
+    },
+    {
       "symbol": "M:en.a(I)V",
       "originalName": "a",
       "to": "clearStatics",
@@ -14138,6 +14146,14 @@
       "evidence": "Returns the phrase ids that broadcastChat picks from; TaskAi uses a random choice of two ids. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:RecklessAi.broadcastPhrases(I)[I"
+    },
+    {
+      "symbol": "M:rj.c(II)I",
+      "originalName": "c",
+      "to": "bitLength",
+      "evidence": "Determine the integer bit width using unsigned shifts by16,8,4,2,1 and accumulated width. Preserve game-specific threshold/guard parameter positions,unused arithmetic,global side effects,early returns and exception wrappers for every input. Pre-rename body SHA256 29b4bff6f5a7b9d2fba5381ea7b5d53dec649252ba514c4610929993fb46e15e. Complete method bodies and their variants reviewed with exact original descriptors,own-field accesses and bound audio caller contexts. Identifier-only naming;preserve argument widths,guards,signed overflow,FP evaluation,shared aliases,all partial writes,call/allocation/exception order,modifiers and override/native bindings. Existing meaningful names remain unchanged;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:RecklessAi.bitLength(II)I"
     },
     {
       "symbol": "M:rj.d(Lln;I)I",
@@ -114648,7 +114664,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#0",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#0",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -114659,7 +114675,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#1",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#1",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -114670,7 +114686,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#2",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#2",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -114681,7 +114697,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#3",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#3",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -114692,7 +114708,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#4",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#4",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -114703,7 +114719,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#5",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#5",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -114714,7 +114730,7 @@
     },
     {
       "symbol": "L:em.a(IBI)I#6",
-      "renamedSymbol": "L:ProductionContent.a(IBI)I#6",
+      "renamedSymbol": "L:ProductionContent.integerPower(IBI)I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -257549,7 +257565,7 @@
     },
     {
       "symbol": "L:rj.c(II)I#0",
-      "renamedSymbol": "L:RecklessAi.c(II)I#0",
+      "renamedSymbol": "L:RecklessAi.bitLength(II)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -321008,9 +321024,9 @@
     },
     {
       "symbol": "M:em.a(IBI)I",
-      "renamedSymbol": "M:ProductionContent.a(IBI)I",
+      "renamedSymbol": "M:ProductionContent.integerPower(IBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "integerPower",
       "declaration": {
         "file": "em.java",
         "start": 340,
@@ -343360,9 +343376,9 @@
     },
     {
       "symbol": "M:rj.c(II)I",
-      "renamedSymbol": "M:RecklessAi.c(II)I",
+      "renamedSymbol": "M:RecklessAi.bitLength(II)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "bitLength",
       "declaration": {
         "file": "rj.java",
         "start": 336,
@@ -373764,7 +373780,7 @@
     },
     {
       "symbol": "P:em.a(IBI)I#0",
-      "renamedSymbol": "P:ProductionContent.a(IBI)I#0",
+      "renamedSymbol": "P:ProductionContent.integerPower(IBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -373775,7 +373791,7 @@
     },
     {
       "symbol": "P:em.a(IBI)I#1",
-      "renamedSymbol": "P:ProductionContent.a(IBI)I#1",
+      "renamedSymbol": "P:ProductionContent.integerPower(IBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -373786,7 +373802,7 @@
     },
     {
       "symbol": "P:em.a(IBI)I#2",
-      "renamedSymbol": "P:ProductionContent.a(IBI)I#2",
+      "renamedSymbol": "P:ProductionContent.integerPower(IBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -428357,7 +428373,7 @@
     },
     {
       "symbol": "P:rj.c(II)I#0",
-      "renamedSymbol": "P:RecklessAi.c(II)I#0",
+      "renamedSymbol": "P:RecklessAi.bitLength(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428368,7 +428384,7 @@
     },
     {
       "symbol": "P:rj.c(II)I#1",
-      "renamedSymbol": "P:RecklessAi.c(II)I#1",
+      "renamedSymbol": "P:RecklessAi.bitLength(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -508276,7 +508292,7 @@
       "original": "ej.java",
       "renamed": "BufferedCacheFile.java",
       "inputSha256": "20584980b792da4e864cb06e35db22126633b9468307e79f17848c947cf9d551",
-      "outputSha256": "097ae0439114eeab7e5faddf8021d7d925243163b09f75b3caeb0e12a70c149e",
+      "outputSha256": "f226b06c6d0744f0fdcc3071cb77bed3e325fe4e78ebd1fdac885cc1acf70cb3",
       "edits": [
         {
           "start": 69,
@@ -509056,6 +509072,13 @@
           "renamed": "RecklessAi"
         },
         {
+          "start": 28280,
+          "end": 28281,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
+        },
+        {
           "start": 28359,
           "end": 28361,
           "symbol": "C:ah",
@@ -509117,6 +509140,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "RecklessAi"
+        },
+        {
+          "start": 34057,
+          "end": 34058,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 34136,
@@ -510372,7 +510402,7 @@
       "original": "em.java",
       "renamed": "ProductionContent.java",
       "inputSha256": "8bc3641759e8cac62c171585ad3c84e677fb1346cb114d7253eb77498e54d068",
-      "outputSha256": "36b9d145b73034cb452981e80ace814dafd0ff0abcc4fc8ed1368621a465802c",
+      "outputSha256": "36c28ce337d136cd78bde3275bc1714cdc8f6486b546550fa91796347dbe64ad",
       "edits": [
         {
           "start": 50,
@@ -510415,6 +510445,13 @@
           "symbol": "C:lp",
           "original": "lp",
           "renamed": "MenuList"
+        },
+        {
+          "start": 340,
+          "end": 341,
+          "symbol": "M:em.a(IBI)I",
+          "original": "a",
+          "renamed": "integerPower"
         },
         {
           "start": 1342,
@@ -516466,7 +516503,7 @@
       "original": "fd.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "88e0ac6479a7b3b469c8ba4ffd941a1e9bf1539018e65a692b376fa661f04648",
-      "outputSha256": "e6624d7179d50048006f7edc3226a4c1a8400aa3d5a5cd70440b50e25462b52e",
+      "outputSha256": "f3f1d2af555830a7367786dffbc043b41ef4f285355ea8d5d2b2312dc97a198b",
       "edits": [
         {
           "start": 69,
@@ -516609,6 +516646,13 @@
           "renamed": "RecklessAi"
         },
         {
+          "start": 6055,
+          "end": 6056,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
+        },
+        {
           "start": 6353,
           "end": 6355,
           "symbol": "C:fd",
@@ -516649,6 +516693,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "RecklessAi"
+        },
+        {
+          "start": 11003,
+          "end": 11004,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 19123,
@@ -516712,6 +516763,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "RecklessAi"
+        },
+        {
+          "start": 22054,
+          "end": 22055,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 22532,
@@ -574331,7 +574389,7 @@
       "original": "kn.java",
       "renamed": "VorbisFloor1.java",
       "inputSha256": "c03a3053819a760c2438a8ba4ad51faec2de01c57fb93be647d83664659457e3",
-      "outputSha256": "865deccebb6f383d65d742ed984451b19fc67ffe2897462c9a81237ab856b900",
+      "outputSha256": "e0881d83a88e2f629294f45d9c61a46bec57ab3dffa6f16ac9254def8b4bcfcc",
       "edits": [
         {
           "start": 50,
@@ -574367,6 +574425,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "RecklessAi"
+        },
+        {
+          "start": 1759,
+          "end": 1760,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 1797,
@@ -639383,7 +639448,7 @@
       "original": "rj.java",
       "renamed": "RecklessAi.java",
       "inputSha256": "2d7d1aac61036bf907070dcc552d6af432e4651b50d166a11f0e9a1207cd1c10",
-      "outputSha256": "e934691f53441104b4abca1ba9db4044f8b820fde18163b9dc1a008eb4eb664e",
+      "outputSha256": "efa0d890067bf18dbea52a02a7cefc06a723aff27a022ca94497952335944de7",
       "edits": [
         {
           "start": 50,
@@ -639412,6 +639477,13 @@
           "symbol": "M:rj.i(I)V",
           "original": "i",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 336,
+          "end": 337,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 1055,
@@ -639447,6 +639519,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "RecklessAi"
+        },
+        {
+          "start": 1221,
+          "end": 1222,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 1315,
@@ -684907,7 +684986,7 @@
       "original": "vb.java",
       "renamed": "VorbisCodebook.java",
       "inputSha256": "33b12900add73803f1e2e77ed1f9248932c8d923c4619e3cc1ce1b9b363b839c",
-      "outputSha256": "3ae5ad66809353b4665839ef5e32ce022c46a4ab60f8f621851a08369aceb0fd",
+      "outputSha256": "f732d67b803d5b79f28d1dfa6959ac2416b60ac3a2a4ec454c6adf383e69659b",
       "edits": [
         {
           "start": 50,
@@ -684964,6 +685043,13 @@
           "symbol": "C:em",
           "original": "em",
           "renamed": "ProductionContent"
+        },
+        {
+          "start": 638,
+          "end": 639,
+          "symbol": "M:em.a(IBI)I",
+          "original": "a",
+          "renamed": "integerPower"
         },
         {
           "start": 747,
@@ -685069,6 +685155,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "RecklessAi"
+        },
+        {
+          "start": 4935,
+          "end": 4936,
+          "symbol": "M:rj.c(II)I",
+          "original": "c",
+          "renamed": "bitLength"
         },
         {
           "start": 5229,
@@ -712297,10 +712390,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "fb4d7dd28f89c33b74f5fd9c7453d0c3fd2487365a19d772d04b4b8943e04f60",
+    "rulesSha256": "faf079bff36dd49365b01bef7c4602bf1bd27ce31c679585a519364508e8db38",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "333c684f36e71af0886f937d8f6f2a117cd322a81521a9a8e6fe3b11d6899d52",
+    "outputTreeSha256": "c76c667f93f4a6a946d2b1a988a7e0129ce684581d77c6e3cf0ffb3206c02a92",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

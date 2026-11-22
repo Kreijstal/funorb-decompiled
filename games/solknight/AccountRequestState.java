@@ -10,7 +10,7 @@ final class AccountRequestState {
     static String field_f;
     static boolean[] field_c;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;

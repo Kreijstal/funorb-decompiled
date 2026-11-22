@@ -166,7 +166,7 @@ final class ee {
             }
             if (rc.field_a == MouseInput.field_h &&
               re.c((byte) 33, 1)) {
-              var6_int = sc.field_g.l(32270);
+              var6_int = sc.field_g.readUnsignedByte(32270);
               if (var6_int != 0) {
                 jd.field_q = -1;
                 wa.field_k = var6_int;
@@ -186,7 +186,7 @@ final class ee {
             boolean decompiledFrameRemainder0 = true;
             if (ej.field_q == rc.field_a &&
               re.c((byte) 33, 1)) {
-              var6_intLifetime1 = sc.field_g.l(32270);
+              var6_intLifetime1 = sc.field_g.readUnsignedByte(32270);
               wa.field_k = var6_intLifetime1;
               sc.field_g.field_i = 0;
               fl.field_b = null;
@@ -212,11 +212,11 @@ final class ee {
             if (rc.field_a == wj.field_N &&
               eb.a(13372)) {
               ib.field_d = sc.field_g.c(10818);
-              li.field_q = sc.field_g.l(32270);
-              sc.field_g.l(32270);
-              wb.field_S = sc.field_g.e(8);
+              li.field_q = sc.field_g.readUnsignedByte(32270);
+              sc.field_g.readUnsignedByte(32270);
+              wb.field_S = sc.field_g.readUnsignedShort(8);
               var12 = sc.field_g.a((byte) 28);
-              var7 = sc.field_g.l(32270);
+              var7 = sc.field_g.readUnsignedByte(32270);
               if ((1 & var7) != 0) {
                 rd.a(-6);
               }
@@ -229,10 +229,10 @@ final class ee {
                 }
               }
               if (sd.field_u) {
-                sc.field_g.l(32270);
-                sc.field_g.l(32270);
+                sc.field_g.readUnsignedByte(32270);
+                sc.field_g.readUnsignedByte(32270);
                 sc.field_g.d(8195);
-                l.field_a = sc.field_g.e(8);
+                l.field_a = sc.field_g.readUnsignedShort(8);
                 qj.field_h = new byte[l.field_a];
                 for (var8 = 0; l.field_a > var8; var8++) {
                   qj.field_h[var8] = sc.field_g.j(0);
@@ -241,7 +241,7 @@ final class ee {
               qg.field_r = sc.field_g.o(32);
               var13 = (CharSequence) ((Object) qg.field_r);
               GameAppletShell.field_c = mf.a(false, var13);
-              ca.field_a = sc.field_g.l(32270);
+              ca.field_a = sc.field_g.readUnsignedByte(32270);
               rc.field_a = MouseInput.field_d;
               if (t.field_i.a(false) == ArchiveProvider.field_a) {
                 ub.field_b.a((byte) -126, bn.c(-1));

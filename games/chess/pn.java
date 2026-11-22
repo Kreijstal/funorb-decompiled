@@ -102,19 +102,19 @@ final class pn {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_b = hi.d(16);
-        this.field_g = hi.d(24);
-        this.field_e = hi.d(24);
-        this.field_f = hi.d(24) + 1;
-        this.field_d = hi.d(6) + 1;
-        this.field_a = hi.d(8);
+        this.field_b = hi.readBits(16);
+        this.field_g = hi.readBits(24);
+        this.field_e = hi.readBits(24);
+        this.field_f = hi.readBits(24) + 1;
+        this.field_d = hi.readBits(6) + 1;
+        this.field_a = hi.readBits(8);
         int[] var1 = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
           var3 = 0;
-          var4 = hi.d(3);
-          var5 = hi.b() != 0 ? 1 : 0;
+          var4 = hi.readBits(3);
+          var5 = hi.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = hi.d(5);
+            var3 = hi.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class pn {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_d * 8) {
-          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? hi.d(8) : -1;
+          this.field_c[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? hi.readBits(8) : -1;
           var6++;
         }
     }

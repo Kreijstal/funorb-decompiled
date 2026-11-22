@@ -187,8 +187,8 @@ final class jp extends IntrusiveNode {
         int var18_intLifetime1;
         int var18_intLifetime2;
         jp.a(this.field_L[param0], 0);
-        jp.b();
-        var2 = jp.a(ue.a(field_I.length - 1, -715));
+        jp.readBit();
+        var2 = jp.readBits(ue.bitLength(field_I.length - 1, -715));
         var3 = field_N[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_i;
@@ -199,9 +199,9 @@ final class jp extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (jp.b() == 0) ? 0 : 1;
+          stackIn_7_0 = (jp.readBit() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (jp.b() == 0) ? 0 : 1;
+          stackIn_10_0 = (jp.readBit() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -307,7 +307,7 @@ final class jp extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = ue.a(var4 - 1, -715);
+          var25Lifetime2 = ue.bitLength(var4 - 1, -715);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -451,7 +451,7 @@ final class jp extends IntrusiveNode {
         }
     }
 
-    final static int b() {
+    final static int readBit() {
         int var0 = field_s[field_P] >> field_F & 1;
         field_F = field_F + 1;
         field_P = field_P + (field_F >> 3);
@@ -515,7 +515,7 @@ final class jp extends IntrusiveNode {
         field_l = null;
     }
 
-    final static float d(int param0) {
+    final static float unpackVorbisFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
@@ -525,7 +525,7 @@ final class jp extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static int a(int param0) {
+    final static int readBits(int param0) {
         int var4 = 0;
         int var3 = 0;
         int var1 = 0;
@@ -580,8 +580,8 @@ final class jp extends IntrusiveNode {
         int var5Lifetime1;
         int var5Lifetime2;
         jp.a(param0, 0);
-        field_i = 1 << jp.a(4);
-        field_K = 1 << jp.a(4);
+        field_i = 1 << jp.readBits(4);
+        field_K = 1 << jp.readBits(4);
         field_p = new float[field_K];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -609,7 +609,7 @@ final class jp extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = ue.a(var5 - 1, -715);
+          var10 = ue.bitLength(var5 - 1, -715);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = lp.a(var10, false, var11);
           }
@@ -625,41 +625,41 @@ final class jp extends IntrusiveNode {
             field_l = var9;
           }
         }
-        var1Lifetime1 = jp.a(8) + 1;
+        var1Lifetime1 = jp.readBits(8) + 1;
         field_x = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_x[var2Lifetime1] = new VorbisCodebook();
         }
-        var2Lifetime2 = jp.a(6) + 1;
+        var2Lifetime2 = jp.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          jp.a(16);
+          jp.readBits(16);
         }
-        var2Lifetime3 = jp.a(6) + 1;
+        var2Lifetime3 = jp.readBits(6) + 1;
         field_q = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_q[var3Lifetime2] = new VorbisFloor();
         }
-        var3Lifetime3 = jp.a(6) + 1;
+        var3Lifetime3 = jp.readBits(6) + 1;
         field_n = new po[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_n[var4Lifetime1] = new po();
         }
-        var4Lifetime2 = jp.a(6) + 1;
+        var4Lifetime2 = jp.readBits(6) + 1;
         field_A = new wc[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_A[var5Lifetime1] = new wc();
         }
-        var5Lifetime2 = jp.a(6) + 1;
+        var5Lifetime2 = jp.readBits(6) + 1;
         field_N = new boolean[var5Lifetime2];
         field_I = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_N);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (jp.b() != 0);
+          stackIn_42_2 = (jp.readBit() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          jp.a(16);
-          jp.a(16);
-          field_I[var6] = jp.a(8);
+          jp.readBits(16);
+          jp.readBits(16);
+          field_I[var6] = jp.readBits(8);
         }
         field_y = true;
     }

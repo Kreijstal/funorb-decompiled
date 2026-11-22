@@ -105,7 +105,7 @@ final class ph extends IntrusiveNode {
         return new bi(this.field_r, var1, this.field_m, this.field_I, this.field_R);
     }
 
-    final static int a() {
+    final static int readBit() {
         int var0 = field_Q[field_H] >> field_z & 1;
         field_z = field_z + 1;
         field_H = field_H + (field_z >> 3);
@@ -189,8 +189,8 @@ final class ph extends IntrusiveNode {
         int var5Lifetime1;
         int var5Lifetime2;
         ph.a(param0, 0);
-        field_B = 1 << ph.b(4);
-        field_O = 1 << ph.b(4);
+        field_B = 1 << ph.readBits(4);
+        field_O = 1 << ph.readBits(4);
         field_v = new float[field_O];
         for (var1 = 0; var1 < 2; var1++) {
           if (var1 == 0) {
@@ -218,7 +218,7 @@ final class ph extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = km.b(4, var5 - 1);
+          var10 = km.bitLength(4, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = wf.a(1, var10, var11);
           }
@@ -234,41 +234,41 @@ final class ph extends IntrusiveNode {
             field_C = var9;
           }
         }
-        var1Lifetime1 = ph.b(8) + 1;
+        var1Lifetime1 = ph.readBits(8) + 1;
         field_s = new VorbisCodebook[var1Lifetime1];
         for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
           field_s[var2Lifetime1] = new VorbisCodebook();
         }
-        var2Lifetime2 = ph.b(6) + 1;
+        var2Lifetime2 = ph.readBits(6) + 1;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
-          ph.b(16);
+          ph.readBits(16);
         }
-        var2Lifetime3 = ph.b(6) + 1;
+        var2Lifetime3 = ph.readBits(6) + 1;
         field_L = new VorbisFloor[var2Lifetime3];
         for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
           field_L[var3Lifetime2] = new VorbisFloor();
         }
-        var3Lifetime3 = ph.b(6) + 1;
+        var3Lifetime3 = ph.readBits(6) + 1;
         field_E = new cn[var3Lifetime3];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
           field_E[var4Lifetime1] = new cn();
         }
-        var4Lifetime2 = ph.b(6) + 1;
+        var4Lifetime2 = ph.readBits(6) + 1;
         field_x = new ia[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
           field_x[var5Lifetime1] = new ia();
         }
-        var5Lifetime2 = ph.b(6) + 1;
+        var5Lifetime2 = ph.readBits(6) + 1;
         field_G = new boolean[var5Lifetime2];
         field_u = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_41_0 = (boolean[]) (field_G);
           stackIn_41_1 = var6;
-          stackIn_42_2 = (ph.a() != 0);
+          stackIn_42_2 = (ph.readBit() != 0);
           stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-          ph.b(16);
-          ph.b(16);
-          field_u[var6] = ph.b(8);
+          ph.readBits(16);
+          ph.readBits(16);
+          field_u[var6] = ph.readBits(8);
         }
         field_y = true;
     }
@@ -298,7 +298,7 @@ final class ph extends IntrusiveNode {
         }
     }
 
-    final static float d(int param0) {
+    final static float unpackVorbisFloat(int param0) {
         int var1 = param0 & 2097151;
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
@@ -308,7 +308,7 @@ final class ph extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static int b(int param0) {
+    final static int readBits(int param0) {
         int var4 = 0;
         int var3 = 0;
         int var1 = 0;
@@ -454,8 +454,8 @@ final class ph extends IntrusiveNode {
         int var18_intLifetime1;
         int var18_intLifetime2;
         ph.a(this.field_N[param0], 0);
-        ph.a();
-        var2 = ph.b(km.b(4, field_u.length - 1));
+        ph.readBit();
+        var2 = ph.readBits(km.bitLength(4, field_u.length - 1));
         var3 = field_G[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_B;
@@ -466,9 +466,9 @@ final class ph extends IntrusiveNode {
         var5 = 0;
         var6 = 0;
         if (var3 != 0) {
-          stackIn_7_0 = (ph.a() == 0) ? 0 : 1;
+          stackIn_7_0 = (ph.readBit() == 0) ? 0 : 1;
           var5 = stackIn_7_0;
-          stackIn_10_0 = (ph.a() == 0) ? 0 : 1;
+          stackIn_10_0 = (ph.readBit() == 0) ? 0 : 1;
           var6 = stackIn_10_0;
         }
         var7 = var4 >> 1;
@@ -574,7 +574,7 @@ final class ph extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = km.b(4, var4 - 1);
+          var25Lifetime2 = km.bitLength(4, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;

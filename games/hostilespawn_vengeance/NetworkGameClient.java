@@ -167,7 +167,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void j(int param0) {
-        int var2 = sc.field_g.l(32270);
+        int var2 = sc.field_g.readUnsignedByte(32270);
         int var3 = param0 != (1 & var2) ? 1 : 0;
         int var4 = -1 + jd.field_q;
         byte[] var5 = new byte[var4];

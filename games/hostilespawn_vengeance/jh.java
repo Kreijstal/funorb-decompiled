@@ -133,7 +133,7 @@ final class jh extends wb implements qk {
           var17 = new PacketBuffer(param1);
           var18 = var17;
           var18.field_i = param1.length - 2;
-          sc.field_c = var18.e(8);
+          sc.field_c = var18.readUnsignedShort(8);
           vh.field_a = new byte[sc.field_c][];
           ja.field_e = new byte[sc.field_c][];
           th.field_Jb = new int[sc.field_c];
@@ -146,20 +146,20 @@ final class jh extends wb implements qk {
           nh.field_O = new int[sc.field_c];
           qj.field_k = new boolean[sc.field_c];
           var18.field_i = -(sc.field_c * 8) + (-7 + param1.length);
-          ra.field_a = var18.e(param0 + 26877);
-          GameCanvas.field_e = var18.e(8);
-          var3 = 1 + (255 & var18.l(32270));
+          ra.field_a = var18.readUnsignedShort(param0 + 26877);
+          GameCanvas.field_e = var18.readUnsignedShort(8);
+          var3 = 1 + (255 & var18.readUnsignedByte(32270));
           for (var4 = 0; sc.field_c > var4; var4++) {
-            th.field_Jb[var4] = var17.e(bm.a(param0, -26877));
+            th.field_Jb[var4] = var17.readUnsignedShort(bm.a(param0, -26877));
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < sc.field_c; var4Lifetime1++) {
-            nh.field_O[var4Lifetime1] = var18.e(8);
+            nh.field_O[var4Lifetime1] = var18.readUnsignedShort(8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < sc.field_c; var4Lifetime2++) {
-            sf.field_X[var4Lifetime2] = var18.e(bm.a(param0, -26877));
+            sf.field_X[var4Lifetime2] = var18.readUnsignedShort(bm.a(param0, -26877));
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < sc.field_c; var4Lifetime3++) {
-            hd.field_r[var4Lifetime3] = var18.e(8);
+            hd.field_r[var4Lifetime3] = var18.readUnsignedShort(8);
           }
           var18.field_i = 3 - var3 * 3 + param1.length - (7 + 8 * sc.field_c);
           bf.field_d = new int[var3];
@@ -183,7 +183,7 @@ final class jh extends wb implements qk {
             var9 = var20;
             vh.field_a[var4Lifetime5] = var22;
             var10 = 0;
-            var11 = var18.l(32270);
+            var11 = var18.readUnsignedByte(32270);
             if ((1 & var11) == 0) {
               for (var12 = 0; var7 > var12; var12++) {
                 var8[var12] = var18.j(0);

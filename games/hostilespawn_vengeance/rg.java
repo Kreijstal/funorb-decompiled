@@ -64,7 +64,7 @@ final class rg {
             rg.a((byte) -86);
           }
           var14 = sc.field_g;
-          var2 = var14.l(32270);
+          var2 = var14.readUnsignedByte(32270);
           var3 = (qj) (rj.field_G.beginForward(-83));
           while (var3 != null) {
             if (var3.field_i != var2) {
@@ -77,7 +77,7 @@ final class rg {
             le.c((byte) 41);
             return;
           }
-          var4 = var14.l(32270);
+          var4 = var14.readUnsignedByte(32270);
           if (0 != var4) {
             var5 = var3.field_j;
             al.field_M[0] = qg.field_r;

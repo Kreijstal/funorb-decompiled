@@ -140,7 +140,7 @@ abstract class SocketConnector {
         return new java.net.Socket(this.field_b, this.field_a);
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int integerPower(int param0, int param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;

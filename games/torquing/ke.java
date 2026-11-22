@@ -44,7 +44,7 @@ final class ke {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int bitLength(int param0, byte param1) {
         int var2;
         var2 = 0;
         if (param1 >= -86) {

@@ -9,7 +9,7 @@ final class fd extends si {
     String field_rb;
     String field_pb;
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int integerPower(byte param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_12_0 = 0;

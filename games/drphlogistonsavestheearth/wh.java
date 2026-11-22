@@ -101,7 +101,7 @@ abstract class wh extends DualLinkNode {
         int var13Lifetime1;
         var19 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var5_int = MouseWheelInput.a((param4 - param0) * 3, (byte) 1);
+          var5_int = MouseWheelInput.bitLength((param4 - param0) * 3, (byte) 1);
           var6 = 3 * param0;
           vg.d((byte) 103);
           var7 = var5_int - 10;

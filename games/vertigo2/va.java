@@ -120,7 +120,7 @@ class va implements WidgetListener, qa {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -767,7 +767,7 @@ class va implements WidgetListener, qa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -90) {
-            va.a(-117, 22, 99);
+            va.integerPower(-117, 22, 99);
           }
           stackIn_3_0 = param1.text;
           return stackIn_3_0;

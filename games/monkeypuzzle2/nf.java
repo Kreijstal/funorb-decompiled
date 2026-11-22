@@ -256,7 +256,7 @@ abstract class nf extends rh {
         AccountServiceResult.a((byte) 105, ke.field_h[28 + var1]);
     }
 
-    final static int a(int param0, boolean param1) {
+    final static int bitLength(int param0, boolean param1) {
         int var2 = 0;
         if (param0 < 0 ||
           65536 <= param0) {
@@ -505,7 +505,7 @@ abstract class nf extends rh {
         int var4 = 0;
         int var5 = 0;
         if (param0 != -23913) {
-          nf.a(-124, true);
+          nf.bitLength(-124, true);
         }
         if (this.field_K <= 0) {
         } else {

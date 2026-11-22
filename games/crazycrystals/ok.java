@@ -67,7 +67,7 @@ final class ok implements wo {
         var20 = CrazyCrystals.field_B;
         try {
           var5_int = 8 / ((-86 - param2) / 33);
-          var6 = eq.c((-param1 + param4) * 3, (byte) 100);
+          var6 = eq.bitLength((-param1 + param4) * 3, (byte) 100);
           var7 = param1 * 3;
           var8 = var6 - 10;
           go.a(-21587);

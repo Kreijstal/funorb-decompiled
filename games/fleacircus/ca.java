@@ -459,7 +459,7 @@ final class ca extends gj implements dc, da, pe {
         int var13Lifetime1;
         var19 = fleas.field_A ? 1 : 0;
         try {
-          var5_int = dk.a(3 * (param1 - param0), (byte) -57);
+          var5_int = dk.bitLength(3 * (param1 - param0), (byte) -57);
           var6 = 3 * param0;
           if (param3) {
             return;

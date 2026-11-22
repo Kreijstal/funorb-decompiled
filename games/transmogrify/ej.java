@@ -503,7 +503,7 @@ final class ej extends PcmStream {
         int var13Lifetime1;
         var19 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5_int = UiWidget.a((byte) 108, (param0 - param4) * 3);
+          var5_int = UiWidget.bitLength((byte) 108, (param0 - param4) * 3);
           var6 = param4 * 3;
           vf.b(true);
           var7 = -10 + var5_int;
@@ -750,7 +750,7 @@ final class ej extends PcmStream {
         int var13Lifetime1;
         var19 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5_int = UiWidget.a((byte) 108, (param0 - param4) * 3);
+          var5_int = UiWidget.bitLength((byte) 108, (param0 - param4) * 3);
           var6 = param4 * 3;
           vf.b(true);
           var7 = -10 + var5_int;

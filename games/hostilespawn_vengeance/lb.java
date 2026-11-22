@@ -28,14 +28,14 @@ final class lb {
           if (param0 != -20785) {
             lb.clearStaticReferences(107);
           }
-          var2 = var14.l(32270);
+          var2 = var14.readUnsignedByte(32270);
           if (0 == var2) {
             var11 = nf.a(false);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).l(32270);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(32270);
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).d(8195);
             }
@@ -202,7 +202,7 @@ final class lb {
           }
           if (re.field_r == rc.field_a &&
             re.c((byte) 33, 1)) {
-            var9Lifetime1 = sc.field_g.l(32270);
+            var9Lifetime1 = sc.field_g.readUnsignedByte(32270);
             sc.field_g.field_i = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
@@ -231,7 +231,7 @@ final class lb {
           if (rc.field_a == gj.field_b) {
             var9Lifetime2 = 2;
             if (re.c((byte) 33, var9Lifetime2)) {
-              var10Lifetime1 = sc.field_g.e(8);
+              var10Lifetime1 = sc.field_g.readUnsignedShort(8);
               sc.field_g.field_i = 0;
               if (re.c((byte) 33, var10Lifetime1)) {
                 var11 = ea.field_a.length;

@@ -432,7 +432,7 @@ abstract class ld {
         int var13Lifetime1;
         var19 = Terraphoenix.field_V;
         try {
-          var5_int = je.a(-101, 3 * (-param3 + param0));
+          var5_int = je.bitLength(-101, 3 * (-param3 + param0));
           var6 = 3 * param3;
           var7 = var5_int - 10;
           am.g((byte) -3);

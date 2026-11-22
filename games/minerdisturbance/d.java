@@ -52,7 +52,7 @@ final class d {
         return false;
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         if (param1 != -31479) {
           return -39;

@@ -154,7 +154,7 @@ final class NodeHashTableIterator implements Iterator {
         int var14Lifetime1;
         var20 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5_int = sa.a((byte) 119, 3 * (param3 - param2));
+          var5_int = sa.bitLength((byte) 119, 3 * (param3 - param2));
           var6 = param2 * 3;
           var7 = -10 + var5_int;
           qc.b(0);

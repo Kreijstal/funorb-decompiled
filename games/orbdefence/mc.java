@@ -189,7 +189,7 @@ final class mc extends IntrusiveNode {
           if (param1 != -2147483648) {
             field_i = 85;
           }
-          var5_int = uh.a((byte) -70, 3 * (param4 - param0));
+          var5_int = uh.bitLength((byte) -70, 3 * (param4 - param0));
           var6 = param0 * 3;
           var7 = var5_int - 10;
           hi.a(false);

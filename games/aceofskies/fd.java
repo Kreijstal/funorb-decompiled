@@ -63,7 +63,7 @@ final class fd {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var3_int = 1;

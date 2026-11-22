@@ -3136,7 +3136,7 @@ abstract class kb {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_21_0 = 0;

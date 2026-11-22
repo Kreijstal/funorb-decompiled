@@ -52,9 +52,9 @@ class PacketBuffer extends IntrusiveNode {
     final int f(int param0) {
         int var2 = this.field_n[this.field_i] & param0;
         if (var2 < 128) {
-          return this.l(param0 ^ 32497);
+          return this.readUnsignedByte(param0 ^ 32497);
         }
-        return -32768 + this.e(8);
+        return -32768 + this.readUnsignedShort(8);
     }
 
     final void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2) {
@@ -336,9 +336,9 @@ class PacketBuffer extends IntrusiveNode {
           return -99;
         }
         if (var2 < 128) {
-          return this.l(32270) - 64;
+          return this.readUnsignedByte(32270) - 64;
         }
-        return this.e(8) - 49152;
+        return this.readUnsignedShort(8) - 49152;
     }
 
     final void b(int param0, long param1) {
@@ -420,7 +420,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.o(32);
     }
 
-    final int e(int param0) {
+    final int readUnsignedShort(int param0) {
         if (param0 != 8) {
           field_h = 0.07409831679599663;
         }
@@ -531,9 +531,9 @@ class PacketBuffer extends IntrusiveNode {
             field_l = -119L;
           }
           var28 = sc.field_g;
-          var2 = var28.l(32270);
+          var2 = var28.readUnsignedByte(32270);
           if (var2 == 0) {
-            var3 = var28.e(8);
+            var3 = var28.readUnsignedShort(8);
             var4 = (ic) (ch.field_p.beginForward(-102));
             while (var4 != null) {
               if (var3 != var4.field_j) {
@@ -546,7 +546,7 @@ class PacketBuffer extends IntrusiveNode {
               le.c((byte) 83);
               return;
             }
-            var5 = var28.l(32270);
+            var5 = var28.readUnsignedByte(32270);
             if (var5 != 0) {
               var6 = var4.field_q;
               i.field_h[0].field_f = null;
@@ -556,7 +556,7 @@ class PacketBuffer extends IntrusiveNode {
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 i.field_h[var8_int].field_d = var28.o(param0 - 32);
                 i.field_h[var8_int].field_b = false;
-                if (var28.l(32270) == 1) {
+                if (var28.readUnsignedByte(32270) == 1) {
                   i.field_h[var8_int].field_f = var28.o(param0 - 32);
                 } else {
                   i.field_h[var8_int].field_f = null;
@@ -578,10 +578,10 @@ class PacketBuffer extends IntrusiveNode {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.l(32270);
+              var18 = var28.readUnsignedByte(32270);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.l(32270);
+                  var20 = var28.readUnsignedByte(32270);
                   var21 = i.field_h[var20].field_d;
                   var22 = var28.c(10818);
                   var24 = var28.field_i;
@@ -631,7 +631,7 @@ class PacketBuffer extends IntrusiveNode {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.e(8);
+            var3Lifetime1 = var28.readUnsignedShort(8);
             var4_long = var28.c(10818);
             var6_ref_jd = (jd) (ib.field_a.beginForward(param0 ^ -67));
             while (var6_ref_jd != null) {
@@ -679,7 +679,7 @@ class PacketBuffer extends IntrusiveNode {
           this.e(73, 77);
         }
         if (this.field_n[this.field_i] >= 0) {
-          return this.e(8);
+          return this.readUnsignedShort(8);
         }
         return this.d(8195) & 2147483647;
     }
@@ -739,7 +739,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_n[fieldTemp$4] = (byte)(int)param1;
     }
 
-    final int l(int param0) {
+    final int readUnsignedByte(int param0) {
         if (param0 != 32270) {
           this.a((byte) 73, -127);
         }

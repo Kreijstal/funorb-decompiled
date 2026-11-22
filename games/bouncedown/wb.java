@@ -8,7 +8,7 @@ final class wb {
     static String field_d;
     static int field_a;
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0) {

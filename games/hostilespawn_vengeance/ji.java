@@ -223,8 +223,8 @@ final class ji extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.field_i = param0.field_n.length - 3;
-        var2 = param0.l(32270);
-        var3 = param0.e(8);
+        var2 = param0.readUnsignedByte(32270);
+        var3 = param0.readUnsignedShort(8);
         var4 = 14 + var2 * 10;
         param0.field_i = 0;
         var5 = 0;
@@ -239,7 +239,7 @@ final class ji extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.l(32270);
+            var15 = param0.readUnsignedByte(32270);
             if (var15 != var14) {
               var4++;
             }
@@ -306,7 +306,7 @@ final class ji extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.l(32270) & 127;
+          var28 = var28 + param0.readUnsignedByte(32270) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {

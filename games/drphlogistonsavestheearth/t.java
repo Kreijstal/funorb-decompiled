@@ -111,7 +111,7 @@ final class t {
         field_a = null;
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int integerPower(int param0, byte param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_10_0 = 0;

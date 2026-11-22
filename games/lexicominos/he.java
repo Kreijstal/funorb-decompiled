@@ -85,7 +85,7 @@ final class he {
         int var13Lifetime1;
         var19 = Lexicominos.field_L ? 1 : 0;
         try {
-          var5_int = kb.a((-param3 + param0) * 3, 16);
+          var5_int = kb.bitLength((-param3 + param0) * 3, 16);
           var6 = param3 * 3;
           var7 = var5_int - 10;
           oj.a((byte) 102);

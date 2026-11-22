@@ -102,19 +102,19 @@ final class fk {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_b = ho.c(16);
-        this.field_g = ho.c(24);
-        this.field_f = ho.c(24);
-        this.field_d = ho.c(24) + 1;
-        this.field_c = ho.c(6) + 1;
-        this.field_e = ho.c(8);
+        this.field_b = ho.readBits(16);
+        this.field_g = ho.readBits(24);
+        this.field_f = ho.readBits(24);
+        this.field_d = ho.readBits(24) + 1;
+        this.field_c = ho.readBits(6) + 1;
+        this.field_e = ho.readBits(8);
         int[] var1 = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
           var3 = 0;
-          var4 = ho.c(3);
-          var5 = ho.a() != 0 ? 1 : 0;
+          var4 = ho.readBits(3);
+          var5 = ho.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = ho.c(5);
+            var3 = ho.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class fk {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_c * 8) {
-          this.field_a[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ho.c(8) : -1;
+          this.field_a[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ho.readBits(8) : -1;
           var6++;
         }
     }

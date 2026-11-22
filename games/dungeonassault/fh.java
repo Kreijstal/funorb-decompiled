@@ -33,7 +33,7 @@ final class fh {
         return this.field_h - this.field_f >> 15;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_b = param0.readUnsignedByte(true);
         this.field_k = new int[this.field_b];
@@ -58,7 +58,7 @@ final class fh {
         this.field_d = param0.readUnsignedByte(true);
         this.field_c = param0.readInt(-97);
         this.field_j = param0.readInt(-128);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
     final void a() {

@@ -41,7 +41,7 @@ final class qg {
         this.field_k = 0;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_e = param0.readUnsignedByte(4);
         this.field_j = new int[this.field_e];
@@ -56,7 +56,7 @@ final class qg {
         this.field_h = param0.readUnsignedByte(4);
         this.field_d = param0.readInt(false);
         this.field_i = param0.readInt(false);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
     qg() {

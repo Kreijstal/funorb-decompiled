@@ -206,7 +206,7 @@ abstract class bj extends k {
         }
     }
 
-    final static int c(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

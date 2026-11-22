@@ -9,21 +9,21 @@ final class oa {
 
     oa() {
         int var1 = 0;
-        ho.c(16);
-        this.field_d = ho.a() != 0 ? ho.c(4) + 1 : 1;
-        if (ho.a() != 0) {
-          ho.c(8);
+        ho.readBits(16);
+        this.field_d = ho.readBit() != 0 ? ho.readBits(4) + 1 : 1;
+        if (ho.readBit() != 0) {
+          ho.readBits(8);
         }
-        ho.c(2);
+        ho.readBits(2);
         if (this.field_d > 1) {
-          this.field_b = ho.c(4);
+          this.field_b = ho.readBits(4);
         }
         this.field_c = new int[this.field_d];
         this.field_a = new int[this.field_d];
         for (var1 = 0; var1 < this.field_d; var1++) {
-          ho.c(8);
-          this.field_c[var1] = ho.c(8);
-          this.field_a[var1] = ho.c(8);
+          ho.readBits(8);
+          this.field_c[var1] = ho.readBits(8);
+          this.field_a[var1] = ho.readBits(8);
         }
     }
 }

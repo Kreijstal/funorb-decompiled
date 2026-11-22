@@ -102,19 +102,19 @@ final class rn {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_a = b.f(16);
-        this.field_c = b.f(24);
-        this.field_g = b.f(24);
-        this.field_f = b.f(24) + 1;
-        this.field_b = b.f(6) + 1;
-        this.field_e = b.f(8);
+        this.field_a = b.readBits(16);
+        this.field_c = b.readBits(24);
+        this.field_g = b.readBits(24);
+        this.field_f = b.readBits(24) + 1;
+        this.field_b = b.readBits(6) + 1;
+        this.field_e = b.readBits(8);
         int[] var1 = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
           var3 = 0;
-          var4 = b.f(3);
-          var5 = b.c() != 0 ? 1 : 0;
+          var4 = b.readBits(3);
+          var5 = b.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = b.f(5);
+            var3 = b.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class rn {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_b * 8) {
-          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? b.f(8) : -1;
+          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? b.readBits(8) : -1;
           var6++;
         }
     }

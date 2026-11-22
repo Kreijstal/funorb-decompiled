@@ -205,23 +205,23 @@ final class qj extends IntrusiveNode {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          hf.field_a = param0.e(8) << 5;
-          var2_int = param0.l(32270);
+          hf.field_a = param0.readUnsignedShort(8) << 5;
+          var2_int = param0.readUnsignedByte(32270);
           sm.field_g = (7 & var2_int) << 18;
           hf.field_a = hf.field_a + (var2_int >> 3);
-          sm.field_g = sm.field_g + (param0.e(8) << 2);
-          var2_intLifetime1 = param0.l(32270);
+          sm.field_g = sm.field_g + (param0.readUnsignedShort(8) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(32270);
           sm.field_g = sm.field_g + (var2_intLifetime1 >> 6);
           jn.field_J = var2_intLifetime1 << 15 & 2064384;
-          jn.field_J = jn.field_J + (param0.l(32270) << 7);
+          jn.field_J = jn.field_J + (param0.readUnsignedByte(32270) << 7);
           if (param1 != -12) {
             PacketBuffer var3 = (PacketBuffer) null;
             qj.a((PacketBuffer) null, (byte) -75);
           }
-          var2_intLifetime2 = param0.l(32270);
+          var2_intLifetime2 = param0.readUnsignedByte(32270);
           jn.field_J = jn.field_J + (var2_intLifetime2 >> 1);
           s.field_e = (var2_intLifetime2 & 1) << 16;
-          s.field_e = s.field_e + param0.e(8);
+          s.field_e = s.field_e + param0.readUnsignedShort(8);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

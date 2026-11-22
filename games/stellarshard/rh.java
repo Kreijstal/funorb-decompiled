@@ -61,7 +61,7 @@ final class rh {
           if (param2 != -115) {
             rh.a(true, (n) null, (byte) 64, 68, 93);
           }
-          var5_int = IntrusiveDequeCursor.a((param4 - param3) * 3, 4);
+          var5_int = IntrusiveDequeCursor.bitLength((param4 - param3) * 3, 4);
           var6 = 3 * param3;
           var7 = -10 + var5_int;
           al.b(false);

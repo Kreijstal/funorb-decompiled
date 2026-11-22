@@ -182,7 +182,7 @@ final class LevelData extends LevelGrid {
         int var3 = 0;
         int var4 = TrackController.field_F ? 1 : 0;
         if (param0 != -8299) {
-          LevelData.b(true, 12);
+          LevelData.bitLength(true, 12);
         }
         for (var2 = 0; 16 > var2; var2++) {
           for (var3 = 0; var3 < 16; var3++) {
@@ -194,7 +194,7 @@ final class LevelData extends LevelGrid {
         throw new IllegalStateException();
     }
 
-    final static int b(boolean param0, int param1) {
+    final static int bitLength(boolean param0, int param1) {
         if (param0) {
           LevelData.clearStaticReferences((byte) 81);
         }

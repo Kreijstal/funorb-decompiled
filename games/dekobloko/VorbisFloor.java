@@ -87,7 +87,7 @@ final class VorbisFloor {
         int integerLocal16;
         int integerLocal17;
         int integerLocal18;
-        stackIntegerLocal4 = (VorbisSample.computeInteger1694() == 0) ? 0 : 1;
+        stackIntegerLocal4 = (VorbisSample.readBit() == 0) ? 0 : 1;
         integerLocal8 = stackIntegerLocal4;
         if (integerLocal8 == 0) {
           return false;
@@ -95,9 +95,9 @@ final class VorbisFloor {
         integerLocal9 = this.integerArrayState0107.length;
         System.arraycopy(this.integerArrayState0107, 0, integerArrayState0105, 0, integerLocal9);
         integerLocal10 = integerArrayState0109[this.integerState0331 - 1];
-        integerLocal11 = SceneWidgetPart010.computeInteger1465((byte) 6, integerLocal10 - 1);
-        integerArrayState0102[0] = VorbisSample.computeInteger1696(integerLocal11);
-        integerArrayState0102[1] = VorbisSample.computeInteger1696(integerLocal11);
+        integerLocal11 = SceneWidgetPart010.bitLength((byte) 6, integerLocal10 - 1);
+        integerArrayState0102[0] = VorbisSample.readBits(integerLocal11);
+        integerArrayState0102[1] = VorbisSample.readBits(integerLocal11);
         integerLocal12 = 2;
         for (integerLocal1 = 0; integerLocal1 < this.integerArrayState0104.length; integerLocal1++) {
           integerLocal13 = this.integerArrayState0104[integerLocal1];
@@ -307,15 +307,15 @@ final class VorbisFloor {
         int integerLocal18;
         int integerLocal19;
         int integerLocal20;
-        integerLocal4 = VorbisSample.computeInteger1696(16);
+        integerLocal4 = VorbisSample.readBits(16);
         if (integerLocal4 != 1) {
           throw new RuntimeException();
         }
-        integerLocal5 = VorbisSample.computeInteger1696(5);
+        integerLocal5 = VorbisSample.readBits(5);
         integerLocal6 = 0;
         this.integerArrayState0104 = new int[integerLocal5];
         for (integerLocal7 = 0; integerLocal7 < integerLocal5; integerLocal7++) {
-          integerLocal8 = VorbisSample.computeInteger1696(4);
+          integerLocal8 = VorbisSample.readBits(4);
           this.integerArrayState0104[integerLocal7] = integerLocal8;
           if (integerLocal8 >= integerLocal6) {
             integerLocal6 = integerLocal8 + 1;
@@ -326,12 +326,12 @@ final class VorbisFloor {
         this.integerArrayState0106 = new int[integerLocal6];
         this.integerArrayArrayState0011 = new int[integerLocal6][];
         for (integerLocal14 = 0; integerLocal14 < integerLocal6; integerLocal14++) {
-          this.integerArrayState0108[integerLocal14] = VorbisSample.computeInteger1696(3) + 1;
-          cachedIntegerLocal1 = VorbisSample.computeInteger1696(2);
+          this.integerArrayState0108[integerLocal14] = VorbisSample.readBits(3) + 1;
+          cachedIntegerLocal1 = VorbisSample.readBits(2);
           this.integerArrayState0103[integerLocal14] = cachedIntegerLocal1;
           integerLocal18 = cachedIntegerLocal1;
           if (integerLocal18 != 0) {
-            this.integerArrayState0106[integerLocal14] = VorbisSample.computeInteger1696(8);
+            this.integerArrayState0106[integerLocal14] = VorbisSample.readBits(8);
           }
           integerLocal18 = 1 << integerLocal18;
           integerArrayLocal13 = new int[integerLocal18];
@@ -339,11 +339,11 @@ final class VorbisFloor {
           integerArrayLocal10 = integerArrayLocal12;
           this.integerArrayArrayState0011[integerLocal14] = integerArrayLocal13;
           for (integerLocal11 = 0; integerLocal11 < integerLocal18; integerLocal11++) {
-            integerArrayLocal10[integerLocal11] = VorbisSample.computeInteger1696(8) - 1;
+            integerArrayLocal10[integerLocal11] = VorbisSample.readBits(8) - 1;
           }
         }
-        this.integerState0331 = VorbisSample.computeInteger1696(2) + 1;
-        integerLocal15 = VorbisSample.computeInteger1696(4);
+        this.integerState0331 = VorbisSample.readBits(2) + 1;
+        integerLocal15 = VorbisSample.readBits(4);
         integerLocal19 = 2;
         for (integerLocal9 = 0; integerLocal9 < integerLocal5; integerLocal9++) {
           integerLocal19 = integerLocal19 + this.integerArrayState0108[this.integerArrayState0104[integerLocal9]];
@@ -357,7 +357,7 @@ final class VorbisFloor {
           for (integerLocal2 = 0; integerLocal2 < this.integerArrayState0108[integerLocal17]; integerLocal2++) {
             previousIntegerLocal3 = integerLocal20;
             integerLocal20++;
-            this.integerArrayState0107[previousIntegerLocal3] = VorbisSample.computeInteger1696(integerLocal15);
+            this.integerArrayState0107[previousIntegerLocal3] = VorbisSample.readBits(integerLocal15);
           }
         }
         if (integerArrayState0105 != null &&
