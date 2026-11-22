@@ -28,9 +28,9 @@ class cj extends he {
             cj.clearStaticReferences((byte) 57);
           }
           jc.field_P = tj.field_F;
-          ei.field_d = tj.field_F;
+          DirectByteArrayStore.field_d = tj.field_F;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

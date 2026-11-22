@@ -32,7 +32,7 @@ final class eh extends IntrusiveNode {
           this.field_n = param1;
           this.field_j = param5;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "eh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "eh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

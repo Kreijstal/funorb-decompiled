@@ -38,7 +38,7 @@ final class bg extends af implements qh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -52,7 +52,7 @@ final class bg extends af implements qh {
           rg.a((byte) 120);
           this.s(116);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "bg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "bg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class bg extends af implements qh {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class bg extends af implements qh {
         try {
           this.field_vb = param1;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,10 +161,10 @@ final class bg extends af implements qh {
         }
         try {
           if (Main.field_V != null) {
-            Main.field_V.a((java.awt.Component) ((Object) param0), true);
+            Main.field_V.detach((java.awt.Component) ((Object) param0), true);
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "bg.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "bg.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class bg extends af implements qh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static String field_g;
     static int field_e;
     static String field_c;
@@ -19,7 +19,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             oa.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ag.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ag.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,8 +37,8 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           field_f = -41;
           if (fe.field_a != param0) {
             fe.field_a = param0;
-            if (null != vc.field_a) {
-              vc.field_a.a(param0 * 64 / 80);
+            if (null != ProxyAuthenticationRequiredException.field_a) {
+              ProxyAuthenticationRequiredException.field_a.a(param0 * 64 / 80);
             }
             return;
           }
@@ -46,8 +46,8 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
         if (fe.field_a != param0) {
           fe.field_a = param0;
-          if (null != vc.field_a) {
-            vc.field_a.a(param0 * 64 / 80);
+          if (null != ProxyAuthenticationRequiredException.field_a) {
+            ProxyAuthenticationRequiredException.field_a.a(param0 * 64 / 80);
           }
           return;
         }
@@ -63,7 +63,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (wc.field_B != null) {
             qd.field_a = 0;
-            ge.field_a = 0;
+            GzipInflater.field_a = 0;
             oa.field_d = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) == 0) {
@@ -88,12 +88,12 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        if (!ei.field_e) {
+        if (!DirectByteArrayStore.field_e) {
           throw new IllegalStateException();
         }
         if (null != Crc32Table.field_a) {
@@ -121,7 +121,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             oa.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ag.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ag.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,10 +140,10 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             id.a(39);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kk.field_b = 2;
-              ge.field_a = 2;
+              GzipInflater.field_a = 2;
             } else {
               kk.field_b = 1;
-              ge.field_a = 1;
+              GzipInflater.field_a = 1;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
@@ -169,7 +169,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         field_b = null;
         field_g = null;
         if (param0 != 98) {
-          ag.a(-47, 60);
+          MouseInputHandler.a(-47, 60);
         }
     }
 
@@ -191,7 +191,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ag.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ag.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             oa.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ag.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ag.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null == wc.field_B) {
             return;
           }
-          ge.field_a = 0;
+          GzipInflater.field_a = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,7 +230,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

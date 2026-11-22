@@ -124,7 +124,7 @@ final class de {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "de.C(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "de.C(" + param0 + ')');
         }
     }
 

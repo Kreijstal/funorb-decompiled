@@ -13,7 +13,7 @@ final class al {
         r.field_p = false;
         if (param0 < -18) {
           rk.field_ab = null;
-          if (ei.field_e) {
+          if (DirectByteArrayStore.field_e) {
             Crc32Table.field_a.d(false);
             return;
           }
@@ -32,7 +32,7 @@ final class al {
         }
         field_b = (byte[][]) null;
         rk.field_ab = null;
-        if (ei.field_e) {
+        if (DirectByteArrayStore.field_e) {
           Crc32Table.field_a.d(false);
         } else {
           var1 = IntrusiveNode.field_b;

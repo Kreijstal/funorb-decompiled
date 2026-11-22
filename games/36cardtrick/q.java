@@ -26,7 +26,7 @@ final class q extends tl {
         String[] var6 = null;
         var5 = Main.field_T;
         try {
-          ei.field_d = gg.field_b;
+          DirectByteArrayStore.field_d = gg.field_b;
           if (param2 != -106) {
             field_g = (java.awt.Frame) null;
           }
@@ -63,7 +63,7 @@ final class q extends tl {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -123,11 +123,11 @@ final class q extends tl {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new vc(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new vc("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_9_0 = var13;
@@ -156,7 +156,7 @@ final class q extends tl {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class q extends tl {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        vc var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Main.field_T;
@@ -243,15 +243,15 @@ final class q extends tl {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (vc) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a(var11, -72);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (vc decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (vc) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -359,7 +359,7 @@ final class q extends tl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class q extends tl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 

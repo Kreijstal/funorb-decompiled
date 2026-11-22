@@ -34,7 +34,7 @@ final class wk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class wk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -182,14 +182,14 @@ final class wk {
           if (param0) {
             return;
           }
-          while (ge.b((byte) -114)) {
+          while (GzipInflater.b((byte) -114)) {
             s.field_d.a(fd.field_n, 34, tb.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "wk.H(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "wk.H(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class wk {
           this.field_a.write(param1, param0, param3);
           this.field_b = this.field_b + (long)param3;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "wk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "wk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class wk {
           }
           this.field_a.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

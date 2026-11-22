@@ -56,7 +56,7 @@ final class fh extends g implements wi, qh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class fh extends g implements wi, qh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class fh extends g implements wi, qh {
           var4 = param0;
           ((hf) ((Object) var3)).a(var4, -18845, false);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "fh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "fh.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class fh extends g implements wi, qh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class fh extends g implements wi, qh {
           super.a(param0, param1, param2, param3);
           this.field_F.field_B = this.d((byte) 68);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ final class fh extends g implements wi, qh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ma.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -324,7 +324,7 @@ final class fh extends g implements wi, qh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class fh extends g implements wi, qh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

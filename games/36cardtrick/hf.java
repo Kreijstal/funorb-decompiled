@@ -102,7 +102,7 @@ class hf extends hl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param10).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ class hf extends hl {
           this.field_F = this.field_N;
           this.k(param1 ^ 63);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "hf.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "hf.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ class hf extends hl {
           this.field_J = true;
           this.field_M = id.a(39);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ class hf extends hl {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -251,7 +251,7 @@ class hf extends hl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -322,7 +322,7 @@ class hf extends hl {
               if (param2 != 96) {
                 if (param2 == 97) {
                   if (this.field_N < this.field_r.length()) {
-                    if (ge.field_c[82]) {
+                    if (GzipInflater.field_c[82]) {
                       stackIn_47_1 = this.j(-117);
                     } else {
                       stackIn_47_1 = 1 + this.field_N;
@@ -343,17 +343,17 @@ class hf extends hl {
                     this.i(17091);
                     return true;
                   }
-                  if (ge.field_c[82] &&
+                  if (GzipInflater.field_c[82] &&
                     param2 == 65) {
                     this.l(11514);
                     return true;
                   }
-                  if (ge.field_c[82] &&
+                  if (GzipInflater.field_c[82] &&
                     param2 == 66) {
                     this.a(true);
                     return true;
                   }
-                  if (ge.field_c[82] &&
+                  if (GzipInflater.field_c[82] &&
                     param2 == 67) {
                     this.b(false);
                     return true;
@@ -361,7 +361,7 @@ class hf extends hl {
                 }
               } else {
                 if (this.field_N > 0) {
-                  if (ge.field_c[82]) {
+                  if (GzipInflater.field_c[82]) {
                     stackIn_18_1 = this.m(-1);
                   } else {
                     stackIn_18_1 = -1 + this.field_N;
@@ -386,13 +386,13 @@ class hf extends hl {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
     private final void a(int param0, int param1) {
         this.field_N = param0;
-        if (!ge.field_c[81]) {
+        if (!GzipInflater.field_c[81]) {
           this.field_F = this.field_N;
         }
         if (param1 <= 68) {
@@ -450,7 +450,7 @@ class hf extends hl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -479,7 +479,7 @@ class hf extends hl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

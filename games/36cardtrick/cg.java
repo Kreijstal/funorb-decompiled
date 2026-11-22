@@ -46,7 +46,7 @@ abstract class cg extends k implements pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "cg.P(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "cg.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ abstract class cg extends k implements pi {
             field_f = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "cg.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "cg.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ abstract class cg extends k implements pi {
             this.a((byte) -37);
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "cg.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "cg.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ abstract class cg extends k implements pi {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

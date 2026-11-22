@@ -201,7 +201,7 @@ abstract class mj {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ abstract class mj {
         if (!param3) {
           return -86;
         }
-        return vf.b((byte) 103);
+        return ByteArrayStore.b((byte) 103);
     }
 
     final int a(int param0, int param1) {

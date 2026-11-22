@@ -64,7 +64,7 @@ class he extends IntrusiveNode {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -84,7 +84,7 @@ class he extends IntrusiveNode {
             field_g = -1.2815539836883545f;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "he.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "he.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

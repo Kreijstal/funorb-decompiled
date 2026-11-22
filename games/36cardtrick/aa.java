@@ -42,7 +42,7 @@ final class aa extends kj {
           var8.appendCrc32(var4, (byte) 5);
           var8.backpatchByteLength(var8.position - var4, 8049);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

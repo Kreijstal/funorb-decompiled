@@ -51,12 +51,12 @@ final class il implements Iterator {
         var7.field_k = param0;
         if (param2 == 25404) {
           tl.field_a.a(var5, 27362);
-          ei.a(-91, var5, param1);
+          DirectByteArrayStore.a(-91, var5, param1);
           return var5;
         }
         field_f = (char[]) null;
         tl.field_a.a(var5, 27362);
-        ei.a(-91, var5, param1);
+        DirectByteArrayStore.a(-91, var5, param1);
         return var5;
     }
 
@@ -136,7 +136,7 @@ final class il implements Iterator {
           this.field_g = param0;
           this.a((byte) 64);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class ja {
         if (!wh.field_a.a(640)) {
           return wh.field_a.d(640);
         }
-        if (hh.field_g == ei.field_d) {
+        if (hh.field_g == DirectByteArrayStore.field_d) {
           return wh.field_a.d(640);
         }
         if (param0 == -7705) {

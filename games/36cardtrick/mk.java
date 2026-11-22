@@ -12,20 +12,20 @@ final class mk extends cg {
           this.field_j = param2;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static te c(byte param0) {
+    final static MouseWheelInput c(byte param0) {
         try {
           Throwable var1 = null;
-          te stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (param0 != 100) {
             mk.h(-40);
           }
           try {
-            stackIn_3_0 = (te) (Class.forName("bh").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class mk extends cg {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (te.a(param1, var5)) {
+          if (MouseWheelInput.a(param1, var5)) {
             stackIn_6_0 = s.field_b;
             return stackIn_6_0;
           }
@@ -118,7 +118,7 @@ final class mk extends cg {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class mk extends cg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class mk extends cg {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

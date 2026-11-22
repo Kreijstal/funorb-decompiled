@@ -53,7 +53,7 @@ final class ha {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class ha {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
-            if (vf.field_a == ra.field_b) {
+            if (ByteArrayStore.field_a == ra.field_b) {
               if (param3) {
                 var10 = (String) null;
                 sh.field_k = nk.a(-108, false, cd.field_a, (String) null, param1);
@@ -254,8 +254,8 @@ final class ha {
                 stackIn_95_0 = 3;
                 return stackIn_95_0;
               }
-              var6_intLifetime2 = ag.field_e;
-              ag.field_e = hj.field_l;
+              var6_intLifetime2 = MouseInputHandler.field_e;
+              MouseInputHandler.field_e = hj.field_l;
               lk.field_w = true;
               hj.field_l = var6_intLifetime2;
             }
@@ -277,7 +277,7 @@ final class ha {
             } else {
               stackIn_104_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

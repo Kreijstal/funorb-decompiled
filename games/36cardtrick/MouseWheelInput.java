@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class te {
+abstract class MouseWheelInput {
     static String field_b;
     static int field_a;
 
@@ -22,11 +22,11 @@ abstract class te {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 87) {
-          te.a(64, 51, -77);
+          MouseWheelInput.a(64, 51, -77);
         }
     }
 
-    abstract void a(java.awt.Component param0, boolean param1);
+    abstract void detach(java.awt.Component param0, boolean param1);
 
     final static boolean a(boolean param0, String param1) {
         RuntimeException var2 = null;
@@ -38,7 +38,7 @@ abstract class te {
         try {
           if (param0) {
             var3 = (String) null;
-            te.a(false, (String) null);
+            MouseWheelInput.a(false, (String) null);
           }
           if (param1 != null &&
             param1.length() >= lg.field_k &&
@@ -56,15 +56,15 @@ abstract class te {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
-    abstract int b(int param0);
+    abstract int pollRotation(int param0);
 
-    final static boolean a(int param0, int param1, CharSequence param2, boolean param3) {
+    final static boolean isValidRadixInteger(int param0, int param1, CharSequence param2, boolean param3) {
         int var8 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -140,7 +140,7 @@ abstract class te {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
         }
     }
 

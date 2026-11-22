@@ -40,7 +40,7 @@ final class ub extends mj {
           var8.field_a[param0.length()] = param4 + param2.a(param0);
           s.$cfr$intArgs$a$05bb3be3c57b(param2, 61, 0, var8, param0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ub.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class ub extends mj {
           var9.field_a[param0.length()] = param4;
           s.$cfr$intArgs$a$05bb3be3c57b(param3, 61, 0, var9, param0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ub.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class ub extends mj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class ub extends mj {
           var7.field_a[param2.length()] = param4 + (var8 >> 1);
           s.$cfr$intArgs$a$05bb3be3c57b(param0, 61, 0, var7, param2);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ub.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ub.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class ub extends mj {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param7).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param7).append(')').toString());
         }
     }
 

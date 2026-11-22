@@ -17,7 +17,7 @@ final class nl {
           ti.a(he.field_g, (byte) 54, ck.field_G, sg.field_b);
           ll.a(0, (byte) 115, param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class nl {
         try {
           var1_int = 0;
           var2 = 0;
-          while (ge.b((byte) -114)) {
+          while (GzipInflater.b((byte) -114)) {
             cg.field_e.b((byte) 76);
             if (cg.field_e.f(-85)) {
               var1_int = 1;
@@ -54,7 +54,7 @@ final class nl {
             }
             var2 = 1;
           }
-          cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, ag.field_a));
+          cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, MouseInputHandler.field_a));
           if (cg.field_e.f(-85)) {
             var1_int = 1;
           }
@@ -87,7 +87,7 @@ final class nl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "nl.C(" + param0 + ')');
         }
     }
 

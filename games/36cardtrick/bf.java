@@ -18,11 +18,11 @@ final class bf {
         ej.a(true, (byte) 55, param0);
         if (param1 != -8) {
           byte[] var3 = (byte[]) null;
-          bf.a(116, (byte[]) null);
+          bf.copyBytes(116, (byte[]) null);
         }
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -47,7 +47,7 @@ final class bf {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

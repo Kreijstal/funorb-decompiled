@@ -54,7 +54,7 @@ final class nk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class nk {
           if (Crc32Table.field_a != null &&
             Crc32Table.field_a.field_E) {
             if (param0 == 8) {
-              if (ei.field_e) {
+              if (DirectByteArrayStore.field_e) {
                 param2 = rl.field_t;
               } else {
                 param2 = jh.field_d;
@@ -106,7 +106,7 @@ final class nk {
             }
             if (param0 != 256 &&
               param0 != 10 &&
-              !ei.field_e) {
+              !DirectByteArrayStore.field_e) {
               i.field_a.l(-31940);
             }
           }
@@ -125,7 +125,7 @@ final class nk {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class nk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

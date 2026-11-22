@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5",
       "sources": {
         "files": 295,
-        "sha256": "8f289e8e75da33fe7e310613c0f22a79f73e439af1e0b6fe63667c1b58cb614b"
+        "sha256": "3daa1c5cc02231be38e5e1a682d89068a552b9234c4daadebda7288c600d6f6c"
       },
       "dictionary": {
         "path": "decompilation/36cardtrick-naming.json",
-        "sha256": "45edc367ada89e617c9e34f8e9635716f7b2087117d96d42fdf12fbf0c901ab5"
+        "sha256": "6ae1afe2e24c0957e9e527e218b29b63ab90afddc82c91a349028e6dd1e3e6e5"
       },
       "readingGuide": {
         "path": "games/36cardtrick/README.md",
-        "sha256": "24536e8853f7dd62697c1a68cbf3cc5d96362013eb452ee95dc3e22802794ee6"
+        "sha256": "1d872d3820a0da6ca24663f92791bd38cbe90f56520c94d4d52ccf682bea72e6"
       },
-      "rulesSha256": "4707a33ff4a54427ca28538b69ed9ed734db219e4c07c3b37e272d66a8452d8d",
+      "rulesSha256": "e9d93c269623e869799eb8211948af19a2a5841cdb0206ceb9f985308b07cfb4",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11524,7 +11524,7 @@
         },
         "publishedSources": {
           "files": 295,
-          "sha256": "8f289e8e75da33fe7e310613c0f22a79f73e439af1e0b6fe63667c1b58cb614b"
+          "sha256": "3daa1c5cc02231be38e5e1a682d89068a552b9234c4daadebda7288c600d6f6c"
         }
       },
       "aceofskies": {

@@ -21,7 +21,7 @@ final class tf extends pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "tf.A(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "tf.A(" + param0 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class tf extends pd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class tf extends pd {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class tf extends pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "tf.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "tf.B(" + param0 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ final class tf extends pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "tf.C(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "tf.C(" + param0 + ')');
         }
     }
 
@@ -270,7 +270,7 @@ final class tf extends pd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

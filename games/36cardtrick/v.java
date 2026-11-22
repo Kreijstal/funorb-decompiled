@@ -15,7 +15,7 @@ final class v extends hf implements of {
             this.k(25);
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class v extends hf implements of {
             this.a(-14, 64, (lk) null, 35);
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "v.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "v.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

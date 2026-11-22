@@ -49,7 +49,7 @@ class af extends ta implements qh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ class af extends ta implements qh {
           }
           int var6_int = -72 % ((-62 - param1) / 32);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "af.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "af.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ class af extends ta implements qh {
               var6 = hj.a(false, true, me.field_a[var3_int]);
               var4 = var4 + e.field_i;
               var7 = -(var6 >> 1) + dl.field_g;
-              if (vc.a(tl.field_b + (a.field_o << 1), param2, param0, var4, var7 - tc.field_b, 0, var6 + (tc.field_b << 1))) {
+              if (ProxyAuthenticationRequiredException.containsPoint(tl.field_b + (a.field_o << 1), param2, param0, var4, var7 - tc.field_b, 0, var6 + (tc.field_b << 1))) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
@@ -106,7 +106,7 @@ class af extends ta implements qh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3), "af.VB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3), "af.VB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ class af extends ta implements qh {
         }
         this.field_E = false;
         if (this.field_lb) {
-          ag.a(-9145);
+          MouseInputHandler.a(-9145);
         } else {
           if (this.field_nb) {
             ff.b(-96);
@@ -155,7 +155,7 @@ class af extends ta implements qh {
           this.field_kb.field_I = true;
           this.b(this.field_kb, (byte) 118);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ class af extends ta implements qh {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ class af extends ta implements qh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ class af extends ta implements qh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

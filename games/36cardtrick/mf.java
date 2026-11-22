@@ -21,7 +21,7 @@ final class mf extends IntrusiveNode {
         int var10;
         String var11;
         int var13;
-        ac var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -50,15 +50,15 @@ final class mf extends IntrusiveNode {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = Main.field_T;
-        if (!(param0 instanceof ac)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
         } else {
-          var14 = (ac) ((Object) param0);
-          param0 = var14.field_b;
-          var2 = var14.field_a + " | ";
+          var14 = (ClientException) ((Object) param0);
+          param0 = var14.cause;
+          var2 = var14.context + " | ";
         }
         var15 = new StringWriter();
         var4 = new PrintWriter((Writer) ((Object) var15));

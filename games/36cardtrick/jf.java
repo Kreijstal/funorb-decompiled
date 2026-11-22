@@ -19,7 +19,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           param0.setColorModel(this.field_m);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "jf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "jf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           this.c(14);
           param0.drawImage(this.field_a, param1, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "jf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "jf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           param0.prepareImage(this.field_a, (java.awt.image.ImageObserver) (this));
           this.a(200);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "jf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "jf.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

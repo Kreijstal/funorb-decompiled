@@ -123,7 +123,7 @@ final class qj extends je {
     private final void a(IntrusiveNode param0, sf param1) {
         while (true) {
           if (param0 == this.field_m.field_a) {
-            ce.a(param0, 0, param1);
+            DelegatingCanvas.insertBefore(param0, 0, param1);
             this.field_l = ((sf) (this.field_m.field_a.next)).field_g;
             return;
           }
@@ -133,7 +133,7 @@ final class qj extends je {
           }
           break;
         }
-        ce.a(param0, 0, param1);
+        DelegatingCanvas.insertBefore(param0, 0, param1);
         this.field_l = ((sf) (this.field_m.field_a.next)).field_g;
         return;
     }

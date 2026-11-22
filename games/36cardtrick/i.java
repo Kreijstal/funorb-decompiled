@@ -15,25 +15,25 @@ final class i {
         try {
           var1 = sj.field_d;
           synchronized (var1) {
-            ab.field_t = ce.field_b;
+            ab.field_t = DelegatingCanvas.field_b;
             mh.field_b = mh.field_b + 1;
             if (bg.field_rb < 0) {
               for (var2 = 0; 112 > var2; var2++) {
-                ge.field_c[var2] = false;
+                GzipInflater.field_c[var2] = false;
               }
-              bg.field_rb = be.field_b;
+              bg.field_rb = KeyboardInputHandler.field_b;
             } else {
-              while (bg.field_rb != be.field_b) {
-                var2 = oc.field_h[be.field_b];
-                be.field_b = 127 & be.field_b + 1;
+              while (bg.field_rb != KeyboardInputHandler.field_b) {
+                var2 = oc.field_h[KeyboardInputHandler.field_b];
+                KeyboardInputHandler.field_b = 127 & KeyboardInputHandler.field_b + 1;
                 if (0 <= var2) {
-                  ge.field_c[var2] = true;
+                  GzipInflater.field_c[var2] = true;
                   continue;
                 }
-                ge.field_c[~var2] = false;
+                GzipInflater.field_c[~var2] = false;
               }
             }
-            ce.field_b = sa.field_b;
+            DelegatingCanvas.field_b = sa.field_b;
           }
           if (param0 < -123) {
             return;
@@ -43,7 +43,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1_ref), "i.A(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1_ref), "i.A(" + param0 + ')');
         }
     }
 

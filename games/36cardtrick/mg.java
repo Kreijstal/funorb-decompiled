@@ -192,7 +192,7 @@ final class mg {
           }
           gf.field_e.a(200);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "mg.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "mg.B(" + param0 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class mg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "mg.F(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "mg.F(" + param0 + ')');
         }
     }
 

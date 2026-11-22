@@ -44,7 +44,7 @@ final class sa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1_ref), "sa.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1_ref), "sa.B(" + param0 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class sa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3), "sa.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3), "sa.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -77,7 +77,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "f.C(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "f.C(" + param0 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class f {
           if (param1 <= 86) {
             return true;
           }
-          if (te.a(false, param0)) {
+          if (MouseWheelInput.a(false, param0)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -131,7 +131,7 @@ final class f {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

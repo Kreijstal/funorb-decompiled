@@ -64,7 +64,7 @@ final class rf implements Runnable {
         var1 = wc.field_B;
         synchronized (var1) {
           qd.field_a = qd.field_a + 1;
-          k.field_c = ge.field_a;
+          k.field_c = GzipInflater.field_a;
           eg.field_b = r.field_s;
           ij.field_e = vd.field_s;
           d.field_s = oa.field_d;
@@ -73,7 +73,7 @@ final class rf implements Runnable {
           }
           oa.field_d = false;
           dl.field_h = kk.field_b;
-          ag.field_a = nl.field_d;
+          MouseInputHandler.field_a = nl.field_d;
           jc.field_N = gk.field_b;
           kk.field_b = 0;
         }
@@ -191,7 +191,7 @@ final class rf implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "rf.C(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "rf.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -240,22 +240,22 @@ final class rf implements Runnable {
         RuntimeException var2 = null;
         var3 = Main.field_T;
         try {
-          ai.a(bd.field_F, param1, ei.field_f, 0, true, fk.field_h, 8192);
+          ai.a(bd.field_F, param1, DirectByteArrayStore.field_f, 0, true, fk.field_h, 8192);
           if (param0 != -23243) {
             rf.c(-100);
           }
-          for (var2_int = 0; ei.field_f > var2_int; var2_int++) {
+          for (var2_int = 0; DirectByteArrayStore.field_f > var2_int; var2_int++) {
             re.field_c[param1 + var2_int] = var2_int;
           }
-          ai.a(ah.field_d, param1 + param1, ei.field_f + param1, param1, false, mf.field_g, 8192);
-          if (param1 < ei.field_f) {
-            ei.field_f = param1;
+          ai.a(ah.field_d, param1 + param1, DirectByteArrayStore.field_f + param1, param1, false, mf.field_g, 8192);
+          if (param1 < DirectByteArrayStore.field_f) {
+            DirectByteArrayStore.field_f = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "rf.E(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "rf.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class rf implements Runnable {
           this.field_f = param0;
           this.field_c = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

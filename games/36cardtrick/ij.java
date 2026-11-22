@@ -16,7 +16,7 @@ final class ij {
         if (jc.field_P == hh.field_g) {
           return ji.field_b;
         }
-        if (hh.field_g == ei.field_d) {
+        if (hh.field_g == DirectByteArrayStore.field_d) {
           return dj.field_e;
         }
         if (!wh.field_a.a(640)) {
@@ -73,7 +73,7 @@ final class ij {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -134,7 +134,7 @@ final class ij {
           param0.field_o = var3;
           param0.field_q = param0.field_q & -4;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ij.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ij.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vf {
+abstract class ByteArrayStore {
     static cc field_a;
     static int field_b;
 
-    abstract void a(byte[] param0, byte param1);
+    abstract void setBytes(byte[] param0, byte param1);
 
-    abstract byte[] a(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
@@ -16,7 +16,7 @@ abstract class vf {
         }
     }
 
-    final static String a(int param0, int param1, char param2) {
+    final static String repeatChar(int param0, int param1, char param2) {
         int var5 = Main.field_T;
         char[] var6 = new char[param1];
         char[] var3 = var6;
@@ -45,9 +45,9 @@ abstract class vf {
         RuntimeException decompiledCaughtException = null;
         var2 = Main.field_T;
         try {
-          sd.field_c.a((byte) -116, lg.field_E, te.field_a, true);
+          sd.field_c.a((byte) -116, lg.field_E, MouseWheelInput.field_a, true);
           sd.field_c.l(-2054);
-          while (ge.b((byte) -114)) {
+          while (GzipInflater.b((byte) -114)) {
             sd.field_c.a(fd.field_n, 34, tb.field_d);
           }
           if (ml.field_a != -1) {
@@ -64,7 +64,7 @@ abstract class vf {
             stackIn_14_0 = 3;
             return stackIn_14_0;
           }
-          if (ei.field_d == hh.field_g) {
+          if (DirectByteArrayStore.field_d == hh.field_g) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
@@ -81,7 +81,7 @@ abstract class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "vf.F(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "vf.F(" + param0 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ abstract class vf {
         try {
           var14 = rd.field_j;
           if (param0 != -28037) {
-            vf.a(-72);
+            ByteArrayStore.a(-72);
           }
           var2 = var14.readUnsignedByte(param0 ^ 28154);
           var3 = (mf) (wg.field_b.a((byte) 74));
@@ -144,7 +144,7 @@ abstract class vf {
             rf.a(-23243, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
-            var8 = ei.field_f;
+            var8 = DirectByteArrayStore.field_f;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
@@ -188,7 +188,7 @@ abstract class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "vf.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "vf.B(" + param0 + ')');
         }
     }
 

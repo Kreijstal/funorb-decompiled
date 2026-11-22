@@ -81,7 +81,7 @@ final class hj extends cg {
         int var2 = Main.field_T;
         int var1_intLifetime1;
         try {
-          ag.field_b.b(-127);
+          MouseInputHandler.field_b.b(-127);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             ak.field_P[var1_int] = 0L;
           }
@@ -95,7 +95,7 @@ final class hj extends cg {
           }
           de.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "hj.J(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "hj.J(" + param0 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class hj extends cg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class hj extends cg {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class hj extends cg {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class hj extends cg {
           String var3 = (String) null;
           hj.a(true, false, (String) null);
         }
-        vf.b((byte) 99);
+        ByteArrayStore.b((byte) 99);
     }
 
     static {

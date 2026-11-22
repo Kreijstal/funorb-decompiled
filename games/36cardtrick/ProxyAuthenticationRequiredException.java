@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vc extends IOException {
+final class ProxyAuthenticationRequiredException extends IOException {
     static uf field_a;
     static PacketBuffer field_b;
 
@@ -58,11 +58,11 @@ final class vc extends IOException {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPoint(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param5 != 0) {
           return true;
         }
@@ -81,13 +81,13 @@ final class vc extends IOException {
         return false;
     }
 
-    vc(String param0) {
+    ProxyAuthenticationRequiredException(String param0) {
         super(param0);
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-          vc.b(123);
+          ProxyAuthenticationRequiredException.b(123);
           field_a = null;
           field_b = null;
           return;

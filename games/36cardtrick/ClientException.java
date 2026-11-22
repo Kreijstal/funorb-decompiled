@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac extends RuntimeException {
-    String field_a;
-    Throwable field_b;
+final class ClientException extends RuntimeException {
+    String context;
+    Throwable cause;
     static String field_c;
 
-    final static void a(int param0) {
+    final static void detectMaxHeapMegabytes(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1 = null;
@@ -20,7 +20,7 @@ final class ac extends RuntimeException {
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
             if (param0 != 7400) {
               var4 = (byte[]) null;
-              ac.a(-53, (byte[]) null);
+              ClientException.decompressContainer(-53, (byte[]) null);
             }
             if (var1 == null) {
               return;
@@ -48,7 +48,7 @@ final class ac extends RuntimeException {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] decompressContainer(int param0, byte[] param1) {
         byte[] stackIn_21_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -70,7 +70,7 @@ final class ac extends RuntimeException {
         try {
           var9 = new PacketBuffer(param1);
           if (param0 > -54) {
-            ac.clearStaticReferences((byte) -15);
+            ClientException.clearStaticReferences((byte) -15);
           }
           var3 = var9.readUnsignedByte(-124);
           var4 = var9.readInt((byte) 126);
@@ -93,7 +93,7 @@ final class ac extends RuntimeException {
               if (var3 != 1) {
                 var7 = cc.field_f;
                 synchronized (var7) {
-                  cc.field_f.a(var9, 2, var12);
+                  cc.field_f.inflate(var9, 2, var12);
                 }
               } else {
                 dc.a(var12, var5_int, param1, var4, 9);
@@ -114,7 +114,7 @@ final class ac extends RuntimeException {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -125,9 +125,9 @@ final class ac extends RuntimeException {
         }
     }
 
-    ac(Throwable param0, String param1) {
-        this.field_b = param0;
-        this.field_a = param1;
+    ClientException(Throwable param0, String param1) {
+        this.cause = param0;
+        this.context = param1;
     }
 
     static {

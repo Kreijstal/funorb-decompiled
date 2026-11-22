@@ -42,7 +42,7 @@ final class h extends hl {
             }
             tj.a(true, param0);
           } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "h.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ma.wrapException((Throwable) ((Object) runtimeException), "h.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -87,7 +87,7 @@ final class h extends hl {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "h.HA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "h.HA(" + param0 + ')');
         }
     }
 
@@ -112,18 +112,18 @@ final class h extends hl {
     final static kc[] b(int param0, int param1, int param2, int param3, int param4) {
         kc[] var6 = new kc[9];
         kc[] var5 = var6;
-        kc dupTemp$0 = te.a(param0, -127, param1);
+        kc dupTemp$0 = MouseWheelInput.a(param0, -127, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        kc dupTemp$1 = te.a(param0, -126, param4);
+        kc dupTemp$1 = MouseWheelInput.a(param0, -126, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 != 0) {
-          var6[4] = te.a(64, -126, param3);
+          var6[4] = MouseWheelInput.a(64, -126, param3);
         }
         if (param2 != 15762) {
           return (kc[]) null;
@@ -192,7 +192,7 @@ final class h extends hl {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

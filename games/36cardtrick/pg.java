@@ -30,14 +30,14 @@ final class pg {
           }
           var5 = (uh) (tl.field_a.a((byte) 74));
           while (var5 != null) {
-            ei.a(-64, var5, param1);
+            DirectByteArrayStore.a(-64, var5, param1);
             var5 = (uh) (tl.field_a.b((byte) -113));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "pg.C(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "pg.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class pg {
             field_a = (Random) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class pg {
           this.field_g.a(param2 - 112, var6);
           ((pd) ((Object) var6)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "pg.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "pg.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class pg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class pg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = te.a(10, 117, param1, true);
+            stackIn_4_0 = MouseWheelInput.isValidRadixInteger(10, 117, param1, true);
             return stackIn_4_0;
           }
           return true;
@@ -144,7 +144,7 @@ final class pg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -136,7 +136,7 @@ class mh {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -153,17 +153,17 @@ class mh {
           if (param0 != -63) {
             mh.a(125, true);
           }
-          if (ei.field_d == hh.field_g) {
+          if (DirectByteArrayStore.field_d == hh.field_g) {
             stackIn_4_0 = null;
             return (nk) (stackIn_4_0);
           }
-          if (ei.field_d == gg.field_b &&
+          if (DirectByteArrayStore.field_d == gg.field_b &&
             param1.equals(dj.field_e)) {
-            ei.field_d = tj.field_F;
+            DirectByteArrayStore.field_d = tj.field_F;
             stackIn_8_0 = tf.field_s;
             return stackIn_8_0;
           }
-          ei.field_d = hh.field_g;
+          DirectByteArrayStore.field_d = hh.field_g;
           tf.field_s = null;
           dj.field_e = param1;
           stackIn_10_0 = null;
@@ -178,7 +178,7 @@ class mh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

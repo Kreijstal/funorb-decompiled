@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static int field_b;
-    private java.awt.Component field_a;
+    private java.awt.Component delegate;
 
     public final void paint(java.awt.Graphics param0) {
         try {
-          this.field_a.paint(param0);
+          this.delegate.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ce.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ce.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class ce extends java.awt.Canvas {
         try {
           if (param0 >= -125) {
             var6 = (Object) null;
-            ce.a(true, 19, (Object) null);
+            DelegatingCanvas.extractBytes(true, 19, (Object) null);
           }
           var4_int = param3.a(18659, param2);
           var5 = param3.a(var4_int, param1, (byte) 7);
@@ -58,7 +58,7 @@ final class ce extends java.awt.Canvas {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class ce extends java.awt.Canvas {
         w var2Lifetime1;
         if (param0 != 0) {
           qk var3 = (qk) null;
-          ce.a(-22, (String) null, (String) null, (qk) null);
+          DelegatingCanvas.a(-22, (String) null, (String) null, (qk) null);
           if (var1 != null) {
             var2 = rd.field_j;
             var2.readInt((byte) 127);
@@ -95,13 +95,13 @@ final class ce extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-          this.field_a.update(param0);
+          this.delegate.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ce.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ce.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+    final static void insertBefore(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (param1 != 0) {
             field_b = 70;
@@ -114,14 +114,14 @@ final class ce extends java.awt.Canvas {
           param2.previous.next = param2;
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ce.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ce.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static byte[] a(boolean param0, int param1, Object param2) {
+    final static byte[] extractBytes(boolean param0, int param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        vf var4 = null;
+        ByteArrayStore var4 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_13_0 = null;
@@ -137,16 +137,16 @@ final class ce extends java.awt.Canvas {
             return null;
           }
           if (!(param2 instanceof byte[])) {
-            if (!(param2 instanceof vf)) {
+            if (!(param2 instanceof ByteArrayStore)) {
               throw new IllegalArgumentException();
             }
-            var4 = (vf) (param2);
-            stackIn_13_0 = var4.a((byte) 25);
+            var4 = (ByteArrayStore) (param2);
+            stackIn_13_0 = var4.getBytes((byte) 25);
             return stackIn_13_0;
           }
           var3 = (byte[]) (param2);
           if (param0) {
-            stackIn_10_0 = bf.a(param1 ^ 0, var3);
+            stackIn_10_0 = bf.copyBytes(param1 ^ 0, var3);
             return stackIn_10_0;
           }
           stackIn_8_0 = var3;
@@ -161,15 +161,15 @@ final class ce extends java.awt.Canvas {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    ce(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
-          this.field_a = param0;
+          this.delegate = param0;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

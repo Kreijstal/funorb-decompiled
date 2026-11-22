@@ -11,7 +11,7 @@ final class oe extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "oe.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "oe.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class oe extends java.awt.Canvas implements java.awt.event.FocusListener {
             this.field_b = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

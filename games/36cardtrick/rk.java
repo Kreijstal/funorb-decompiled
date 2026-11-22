@@ -48,7 +48,7 @@ final class rk extends jc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -68,24 +68,24 @@ final class rk extends jc {
 
     final static void a(boolean param0, uf param1, boolean param2) {
         if (param1 == null ||
-          vc.field_a == param1) {
+          ProxyAuthenticationRequiredException.field_a == param1) {
           return;
         }
         param1.a(fe.field_a * 64 / 80);
         if (param0) {
           param1.c();
         }
-        if (null != vc.field_a) {
-          sh.field_e.a(vc.field_a);
+        if (null != ProxyAuthenticationRequiredException.field_a) {
+          sh.field_e.a(ProxyAuthenticationRequiredException.field_a);
         }
         if (param2) {
           return;
         }
         try {
-          vc.field_a = param1;
-          sh.field_e.b(vc.field_a);
+          ProxyAuthenticationRequiredException.field_a = param1;
+          sh.field_e.b(ProxyAuthenticationRequiredException.field_a);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "rk.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.HA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class rk extends jc {
           }
           this.field_Y.field_J = (int)(65536.0f * (param2 / 100.0f));
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "rk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class rk extends jc {
           this.field_cb = false;
           this.b(this.field_Y, (byte) 118);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -229,7 +229,7 @@ final class wd {
         }
         fk.field_h = 2147483647;
         mf.field_g = 2147483647;
-        ei.field_f = 0;
+        DirectByteArrayStore.field_f = 0;
         ah.field_d = -2147483648;
         bd.field_F = -2147483648;
     }

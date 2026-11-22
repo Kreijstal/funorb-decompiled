@@ -213,7 +213,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ma.a((Throwable) (var4), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) (var4), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "uc.D(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "uc.D(" + param0 + ')');
         }
     }
 
@@ -364,7 +364,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "uc.G(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "uc.G(" + param0 + ')');
         }
     }
 
@@ -509,7 +509,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref2), "uc.F(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref2), "uc.F(" + param0 + ')');
         }
     }
 
@@ -551,14 +551,14 @@ final class uc extends pe {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = bl.field_a.nextInt();
           }
-          if (vc.field_b == null ||
-            !(vc.field_b.payload.length >= var7_int)) {
-            vc.field_b = new PacketBuffer(var7_int);
+          if (ProxyAuthenticationRequiredException.field_b == null ||
+            !(ProxyAuthenticationRequiredException.field_b.payload.length >= var7_int)) {
+            ProxyAuthenticationRequiredException.field_b = new PacketBuffer(var7_int);
           }
-          vc.field_b.position = 0;
-          vc.field_b.writeBytes(param2, param4, param6, (byte) -121);
-          vc.field_b.padZerosTo(1442653008, var7_int);
-          vc.field_b.encryptXtea(var13, 8);
+          ProxyAuthenticationRequiredException.field_b.position = 0;
+          ProxyAuthenticationRequiredException.field_b.writeBytes(param2, param4, param6, (byte) -121);
+          ProxyAuthenticationRequiredException.field_b.padZerosTo(1442653008, var7_int);
+          ProxyAuthenticationRequiredException.field_b.encryptXtea(var13, 8);
           if (null == oj.field_a ||
             !(oj.field_a.payload.length >= 100)) {
             oj.field_a = new PacketBuffer(100);
@@ -577,7 +577,7 @@ final class uc extends pe {
           oj.field_a.writeShort(param2, 26040);
           oj.field_a.applyRsa(param1, param5, -15792);
           param0.writeBytes(oj.field_a.position, 0, oj.field_a.payload, (byte) -84);
-          param0.writeBytes(vc.field_b.position, 0, vc.field_b.payload, (byte) -113);
+          param0.writeBytes(ProxyAuthenticationRequiredException.field_b.position, 0, ProxyAuthenticationRequiredException.field_b.payload, (byte) -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -616,7 +616,7 @@ final class uc extends pe {
             stackIn_41_0 = stackIn_37_0;
             stackIn_41_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -628,7 +628,7 @@ final class uc extends pe {
             uc.a((PacketBuffer) null, (java.math.BigInteger) null, 16, (byte) 108, 83, (java.math.BigInteger) null, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "uc.I(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "uc.I(" + param0 + ')');
         }
     }
 
@@ -651,7 +651,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3_ref), "uc.B(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3_ref), "uc.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -673,7 +673,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "uc.J(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "uc.J(" + param0 + ')');
         }
     }
 
@@ -697,7 +697,7 @@ final class uc extends pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3_ref), "uc.C(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3_ref), "uc.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -795,7 +795,7 @@ final class uc extends pe {
             stackIn_30_0 = stackIn_26_0;
             stackIn_30_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -242,7 +242,7 @@ final class le implements Runnable {
           int var3 = 0;
           Exception var3_ref_Exception = null;
           wk var3_ref_wk = null;
-          vc var3_ref_vc = null;
+          ProxyAuthenticationRequiredException var3_ref_vc = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -446,11 +446,11 @@ final class le implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (vc) null;
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
                       var8.field_e = nc.a((String) (var8.field_g), (byte) 40, var8.field_d).a(-26042);
-                    } catch (vc decompiledCaughtParameter2) {
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref_vc = (vc) (Object) decompiledCaughtException;
+                      var3_ref_vc = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.field_e = var3_ref_vc.getMessage();
                       throw var3_ref_vc;
                     }

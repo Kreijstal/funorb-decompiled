@@ -101,7 +101,7 @@ final class ji {
           jc.field_O.field_U = qa.a(-107, var19.field_z);
           jc.field_O.field_O = var19.field_c;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ji.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ji.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

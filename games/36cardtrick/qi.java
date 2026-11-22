@@ -53,7 +53,7 @@ final class qi extends qg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -109,168 +109,168 @@ final class qi extends qg {
           sd.field_a = param1;
           var2 = wf.a("achievements_names,0", -19073);
           if (null != var2) {
-            ge.field_b[0] = ge.a(var2, (byte) 109);
+            GzipInflater.field_b[0] = GzipInflater.a(var2, (byte) 109);
           }
           var2Lifetime1 = wf.a("achievements_names,1", -19073);
           if (var2Lifetime1 != null) {
-            ge.field_b[1] = ge.a(var2Lifetime1, (byte) 94);
+            GzipInflater.field_b[1] = GzipInflater.a(var2Lifetime1, (byte) 94);
           }
           var2Lifetime2 = wf.a("achievements_names,2", -19073);
           if (null != var2Lifetime2) {
-            ge.field_b[2] = ge.a(var2Lifetime2, (byte) 121);
+            GzipInflater.field_b[2] = GzipInflater.a(var2Lifetime2, (byte) 121);
           }
           var2Lifetime3 = wf.a("achievements_names,3", -19073);
           if (null != var2Lifetime3) {
-            ge.field_b[3] = ge.a(var2Lifetime3, (byte) 86);
+            GzipInflater.field_b[3] = GzipInflater.a(var2Lifetime3, (byte) 86);
           }
           var2Lifetime4 = wf.a("achievements_names,4", -19073);
           if (var2Lifetime4 != null) {
-            ge.field_b[4] = ge.a(var2Lifetime4, (byte) 97);
+            GzipInflater.field_b[4] = GzipInflater.a(var2Lifetime4, (byte) 97);
           }
           var2Lifetime5 = wf.a("achievements_names,5", -19073);
           if (null != var2Lifetime5) {
-            ge.field_b[5] = ge.a(var2Lifetime5, (byte) 82);
+            GzipInflater.field_b[5] = GzipInflater.a(var2Lifetime5, (byte) 82);
           }
           var2Lifetime6 = wf.a("achievements_names,6", -19073);
           if (null != var2Lifetime6) {
-            ge.field_b[6] = ge.a(var2Lifetime6, (byte) 93);
+            GzipInflater.field_b[6] = GzipInflater.a(var2Lifetime6, (byte) 93);
           }
           var2Lifetime7 = wf.a("achievements_names,7", -19073);
           if (null != var2Lifetime7) {
-            ge.field_b[7] = ge.a(var2Lifetime7, (byte) 89);
+            GzipInflater.field_b[7] = GzipInflater.a(var2Lifetime7, (byte) 89);
           }
           var2Lifetime8 = wf.a("achievements_names,8", -19073);
           if (var2Lifetime8 != null) {
-            ge.field_b[8] = ge.a(var2Lifetime8, (byte) 120);
+            GzipInflater.field_b[8] = GzipInflater.a(var2Lifetime8, (byte) 120);
           }
           var2Lifetime9 = wf.a("achievements_names,9", -19073);
           if (var2Lifetime9 != null) {
-            ge.field_b[9] = ge.a(var2Lifetime9, (byte) 83);
+            GzipInflater.field_b[9] = GzipInflater.a(var2Lifetime9, (byte) 83);
           }
           var2Lifetime10 = wf.a("achievements_names,10", -19073);
           if (var2Lifetime10 != null) {
-            ge.field_b[10] = ge.a(var2Lifetime10, (byte) 85);
+            GzipInflater.field_b[10] = GzipInflater.a(var2Lifetime10, (byte) 85);
           }
           var2Lifetime11 = wf.a("achievements_names,11", -19073);
           if (var2Lifetime11 != null) {
-            ge.field_b[11] = ge.a(var2Lifetime11, (byte) 86);
+            GzipInflater.field_b[11] = GzipInflater.a(var2Lifetime11, (byte) 86);
           }
           var2Lifetime12 = wf.a("achievements_names,12", -19073);
           if (var2Lifetime12 != null) {
-            ge.field_b[12] = ge.a(var2Lifetime12, (byte) 119);
+            GzipInflater.field_b[12] = GzipInflater.a(var2Lifetime12, (byte) 119);
           }
           var2Lifetime13 = wf.a("achievements_names,13", -19073);
           if (var2Lifetime13 != null) {
-            ge.field_b[13] = ge.a(var2Lifetime13, (byte) 82);
+            GzipInflater.field_b[13] = GzipInflater.a(var2Lifetime13, (byte) 82);
           }
           var2Lifetime14 = wf.a("achievements_names,14", -19073);
           if (null != var2Lifetime14) {
-            ge.field_b[14] = ge.a(var2Lifetime14, (byte) 107);
+            GzipInflater.field_b[14] = GzipInflater.a(var2Lifetime14, (byte) 107);
           }
           var2Lifetime15 = wf.a("achievements_crit,0", -19073);
           if (var2Lifetime15 != null) {
-            lk.field_u[0] = ge.a(var2Lifetime15, (byte) 82);
+            lk.field_u[0] = GzipInflater.a(var2Lifetime15, (byte) 82);
           }
           var2Lifetime16 = wf.a("achievements_crit,1", -19073);
           if (var2Lifetime16 != null) {
-            lk.field_u[1] = ge.a(var2Lifetime16, (byte) 111);
+            lk.field_u[1] = GzipInflater.a(var2Lifetime16, (byte) 111);
           }
           var2Lifetime17 = wf.a("achievements_crit,2", -19073);
           if (var2Lifetime17 != null) {
-            lk.field_u[2] = ge.a(var2Lifetime17, (byte) 97);
+            lk.field_u[2] = GzipInflater.a(var2Lifetime17, (byte) 97);
           }
           var2Lifetime18 = wf.a("achievements_crit,3", -19073);
           if (null != var2Lifetime18) {
-            lk.field_u[3] = ge.a(var2Lifetime18, (byte) 90);
+            lk.field_u[3] = GzipInflater.a(var2Lifetime18, (byte) 90);
           }
           var2Lifetime19 = wf.a("achievements_crit,4", -19073);
           if (null != var2Lifetime19) {
-            lk.field_u[4] = ge.a(var2Lifetime19, (byte) 115);
+            lk.field_u[4] = GzipInflater.a(var2Lifetime19, (byte) 115);
           }
           var2Lifetime20 = wf.a("achievements_crit,5", -19073);
           if (null != var2Lifetime20) {
-            lk.field_u[5] = ge.a(var2Lifetime20, (byte) 111);
+            lk.field_u[5] = GzipInflater.a(var2Lifetime20, (byte) 111);
           }
           var2Lifetime21 = wf.a("achievements_crit,6", -19073);
           if (null != var2Lifetime21) {
-            lk.field_u[6] = ge.a(var2Lifetime21, (byte) 124);
+            lk.field_u[6] = GzipInflater.a(var2Lifetime21, (byte) 124);
           }
           var2Lifetime22 = wf.a("achievements_crit,7", -19073);
           if (var2Lifetime22 != null) {
-            lk.field_u[7] = ge.a(var2Lifetime22, (byte) 85);
+            lk.field_u[7] = GzipInflater.a(var2Lifetime22, (byte) 85);
           }
           var3 = 56 % ((1 - param0) / 55);
           var2Lifetime23 = wf.a("achievements_crit,8", -19073);
           if (null != var2Lifetime23) {
-            lk.field_u[8] = ge.a(var2Lifetime23, (byte) 84);
+            lk.field_u[8] = GzipInflater.a(var2Lifetime23, (byte) 84);
           }
           var2Lifetime24 = wf.a("achievements_crit,9", -19073);
           if (null != var2Lifetime24) {
-            lk.field_u[9] = ge.a(var2Lifetime24, (byte) 105);
+            lk.field_u[9] = GzipInflater.a(var2Lifetime24, (byte) 105);
           }
           var2Lifetime25 = wf.a("achievements_crit,10", -19073);
           if (var2Lifetime25 != null) {
-            lk.field_u[10] = ge.a(var2Lifetime25, (byte) 101);
+            lk.field_u[10] = GzipInflater.a(var2Lifetime25, (byte) 101);
           }
           var2Lifetime26 = wf.a("achievements_crit,11", -19073);
           if (var2Lifetime26 != null) {
-            lk.field_u[11] = ge.a(var2Lifetime26, (byte) 93);
+            lk.field_u[11] = GzipInflater.a(var2Lifetime26, (byte) 93);
           }
           var2Lifetime27 = wf.a("achievements_crit,12", -19073);
           if (null != var2Lifetime27) {
-            lk.field_u[12] = ge.a(var2Lifetime27, (byte) 91);
+            lk.field_u[12] = GzipInflater.a(var2Lifetime27, (byte) 91);
           }
           var2Lifetime28 = wf.a("achievements_crit,13", -19073);
           if (var2Lifetime28 != null) {
-            lk.field_u[13] = ge.a(var2Lifetime28, (byte) 79);
+            lk.field_u[13] = GzipInflater.a(var2Lifetime28, (byte) 79);
           }
           var2Lifetime29 = wf.a("achievements_crit,14", -19073);
           if (var2Lifetime29 != null) {
-            lk.field_u[14] = ge.a(var2Lifetime29, (byte) 126);
+            lk.field_u[14] = GzipInflater.a(var2Lifetime29, (byte) 126);
           }
           var2Lifetime30 = wf.a("coins", -19073);
           if (var2Lifetime30 != null) {
-            ge.a(var2Lifetime30, (byte) 82);
+            GzipInflater.a(var2Lifetime30, (byte) 82);
           }
           var2Lifetime31 = wf.a("easy", -19073);
           if (var2Lifetime31 != null) {
-            rf.field_e = ge.a(var2Lifetime31, (byte) 127);
+            rf.field_e = GzipInflater.a(var2Lifetime31, (byte) 127);
           }
           var2Lifetime32 = wf.a("hard", -19073);
           if (var2Lifetime32 != null) {
-            sg.field_e = ge.a(var2Lifetime32, (byte) 117);
+            sg.field_e = GzipInflater.a(var2Lifetime32, (byte) 117);
           }
           var2Lifetime33 = wf.a("level", -19073);
           if (null != var2Lifetime33) {
-            vk.field_j = ge.a(var2Lifetime33, (byte) 93);
+            vk.field_j = GzipInflater.a(var2Lifetime33, (byte) 93);
           }
           var2Lifetime34 = wf.a("misses", -19073);
           if (null != var2Lifetime34) {
-            tj.field_D = ge.a(var2Lifetime34, (byte) 122);
+            tj.field_D = GzipInflater.a(var2Lifetime34, (byte) 122);
           }
           var2Lifetime35 = wf.a("score", -19073);
           if (var2Lifetime35 != null) {
-            ti.field_b = ge.a(var2Lifetime35, (byte) 109);
+            ti.field_b = GzipInflater.a(var2Lifetime35, (byte) 109);
           }
           var2Lifetime36 = wf.a("time", -19073);
           if (null != var2Lifetime36) {
-            uc.field_o = ge.a(var2Lifetime36, (byte) 103);
+            uc.field_o = GzipInflater.a(var2Lifetime36, (byte) 103);
           }
           var2Lifetime37 = wf.a("instructions_text", -19073);
           if (var2Lifetime37 != null) {
-            rc.field_n = ge.a(var2Lifetime37, (byte) 98);
+            rc.field_n = GzipInflater.a(var2Lifetime37, (byte) 98);
           }
           var2Lifetime38 = wf.a("login_create", -19073);
           if (null != var2Lifetime38) {
-            dd.field_e = ge.a(var2Lifetime38, (byte) 117);
+            dd.field_e = GzipInflater.a(var2Lifetime38, (byte) 117);
           }
           var2Lifetime39 = wf.a("empty_string", -19073);
           if (var2Lifetime39 != null) {
-            Main.field_y = ge.a(var2Lifetime39, (byte) 87);
+            Main.field_y = GzipInflater.a(var2Lifetime39, (byte) 87);
           }
           var2Lifetime40 = wf.a("fps_label", -19073);
           if (null != var2Lifetime40) {
-            cd.field_f = ge.a(var2Lifetime40, (byte) 78);
+            cd.field_f = GzipInflater.a(var2Lifetime40, (byte) 78);
           }
           sd.field_a = null;
           return;
@@ -284,7 +284,7 @@ final class qi extends qg {
           } else {
             stackIn_146_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_145_0), ((StringBuilder) (Object) stackIn_145_1).append(stackIn_146_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_145_0), ((StringBuilder) (Object) stackIn_145_1).append(stackIn_146_2).append(')').toString());
         }
     }
 
@@ -311,7 +311,7 @@ final class qi extends qg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class qi extends qg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var5), "qi.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) var5), "qi.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -343,7 +343,7 @@ final class qi extends qg {
         try {
           field_F = null;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "qi.I(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "qi.I(" + param0 + ')');
         }
     }
 
@@ -385,7 +385,7 @@ final class qi extends qg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -466,7 +466,7 @@ final class qi extends qg {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -477,7 +477,7 @@ final class qi extends qg {
           this.field_B = this.field_o;
           this.field_H = this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "qi.H(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "qi.H(" + param0 + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class qi extends qg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

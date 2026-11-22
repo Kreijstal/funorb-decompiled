@@ -125,17 +125,17 @@ final class ma {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static ac a(Throwable param0, String param1) {
-        ac var2 = null;
-        if (!(param0 instanceof ac)) {
-          var2 = new ac(param0, param1);
+    final static ClientException wrapException(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (ac) ((Object) param0);
-          var2.field_a = var2.field_a + ' ' + param1;
+          var2 = (ClientException) ((Object) param0);
+          var2.context = var2.context + ' ' + param1;
         }
         return var2;
     }

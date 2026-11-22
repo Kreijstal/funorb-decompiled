@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ge {
+final class GzipInflater {
     static volatile int field_a;
     static String[] field_b;
     static boolean[] field_c;
-    private java.util.zip.Inflater field_d;
+    private java.util.zip.Inflater inflater;
 
-    final void a(PacketBuffer param0, int param1, byte[] param2) {
+    final void inflate(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
             if (param0.payload[param0.position] != 31 ||
@@ -19,19 +19,19 @@ final class ge {
             if (param1 != 2) {
               field_c = (boolean[]) null;
             }
-            if (null == this.field_d) {
-              this.field_d = new java.util.zip.Inflater(true);
+            if (null == this.inflater) {
+              this.inflater = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_d.setInput(param0.payload, param0.position + 10, -18 - param0.position + param0.payload.length);
-              this.field_d.inflate(param2);
+              this.inflater.setInput(param0.payload, param0.position + 10, -18 - param0.position + param0.payload.length);
+              this.inflater.inflate(param2);
             } catch (Exception exception) {
-              this.field_d.reset();
+              this.inflater.reset();
               throw new RuntimeException("");
             }
-            this.field_d.reset();
+            this.inflater.reset();
           } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ge.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ma.wrapException((Throwable) ((Object) runtimeException), "ge.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -59,7 +59,7 @@ final class ge {
             var6_int = param1[0].field_l;
             var7 = param1[2].field_l;
             if (param5 != -10) {
-              ge.b((byte) 56);
+              GzipInflater.b((byte) 56);
             }
             var8 = param1[1].field_l;
             param1[0].a(param3, param4, param2);
@@ -85,7 +85,7 @@ final class ge {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ge {
         Throwable decompiledCaughtException = null;
         var1_ref = sj.field_d;
         synchronized (var1_ref) {
-          if (ce.field_b == ab.field_t) {
+          if (DelegatingCanvas.field_b == ab.field_t) {
             return false;
           }
           tb.field_d = db.field_c[ab.field_t];
@@ -141,15 +141,15 @@ final class ge {
         field_c = null;
         if (param0 != -117) {
           kc[] var2 = (kc[]) null;
-          ge.a(120, (kc[]) null, -103, -3, 58, (byte) 16);
+          GzipInflater.a(120, (kc[]) null, -103, -3, 58, (byte) 16);
         }
     }
 
-    public ge() {
+    public GzipInflater() {
         this(-1, 1000000, 1000000);
     }
 
-    private ge(int param0, int param1, int param2) {
+    private GzipInflater(int param0, int param1, int param2) {
     }
 
     final static String a(byte[] param0, byte param1) {
@@ -177,7 +177,7 @@ final class ge {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

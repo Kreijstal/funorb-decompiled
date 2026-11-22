@@ -5,7 +5,7 @@ import java.util.*;
 
 final class sj {
     static int field_c;
-    static be field_d;
+    static KeyboardInputHandler field_d;
     static bk field_a;
     static Calendar field_b;
 
@@ -48,15 +48,15 @@ final class sj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static Object a(boolean param0, int param1, byte[] param2) {
-        ei var3 = null;
+    final static Object storeBytes(boolean param0, int param1, byte[] param2) {
+        DirectByteArrayStore var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        ei stackIn_6_0 = null;
+        DirectByteArrayStore stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -69,13 +69,13 @@ final class sj {
             return stackIn_2_0;
           }
           if (param1 < param2.length) {
-            var3 = new ei();
-            ((vf) ((Object) var3)).a(param2, (byte) 120);
+            var3 = new DirectByteArrayStore();
+            ((ByteArrayStore) ((Object) var3)).setBytes(param2, (byte) 120);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }
           if (param0) {
-            stackIn_11_0 = bf.a(0, param2);
+            stackIn_11_0 = bf.copyBytes(0, param2);
             return stackIn_11_0;
           }
           stackIn_9_0 = (byte[]) (param2);
@@ -90,7 +90,7 @@ final class sj {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "sj.E(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "sj.E(" + param0 + ')');
         }
     }
 
@@ -272,7 +272,7 @@ final class sj {
                 return stackIn_17_0;
               }
             } else {
-              if (ag.field_c.indexOf(var4) == -1) {
+              if (MouseInputHandler.field_c.indexOf(var4) == -1) {
                 stackIn_21_0 = ij.field_i;
                 return stackIn_21_0;
               }
@@ -282,7 +282,7 @@ final class sj {
             return null;
           }
           var6 = (byte[]) null;
-          sj.a(true, 21, (byte[]) null);
+          sj.storeBytes(true, 21, (byte[]) null);
           stackIn_26_0 = null;
           return (nc) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -295,7 +295,7 @@ final class sj {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -345,12 +345,12 @@ final class sj {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
-        field_d = new be();
+        field_d = new KeyboardInputHandler();
         field_a = new bk();
         field_b = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
     }

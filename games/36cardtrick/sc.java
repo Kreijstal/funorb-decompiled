@@ -310,7 +310,7 @@ final class sc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3), "sc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3), "sc.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class sc {
           rk.a(true, param1, false);
           int var2_int = 57 % ((param0 + 15) / 39);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "sc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "sc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

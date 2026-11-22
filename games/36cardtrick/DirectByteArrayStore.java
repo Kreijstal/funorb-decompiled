@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends vf {
-    private java.nio.ByteBuffer field_c;
+final class DirectByteArrayStore extends ByteArrayStore {
+    private java.nio.ByteBuffer buffer;
     static boolean field_e;
     static int field_f;
     static sc field_d;
 
-    final void a(byte[] param0, byte param1) {
-        this.field_c = java.nio.ByteBuffer.allocateDirect(param0.length);
+    final void setBytes(byte[] param0, byte param1) {
+        this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
         if (param1 < 113) {
           return;
         }
         try {
-          this.field_c.position(0);
-          this.field_c.put(param0);
+          this.buffer.position(0);
+          this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ei.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ei.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final byte[] a(byte param0) {
-        byte[] var4 = new byte[this.field_c.capacity()];
+    final byte[] getBytes(byte param0) {
+        byte[] var4 = new byte[this.buffer.capacity()];
         byte[] var2 = var4;
         if (param0 == 25) {
-          this.field_c.position(0);
-          this.field_c.get(var4);
+          this.buffer.position(0);
+          this.buffer.get(var4);
           return var4;
         }
         byte[] var3 = (byte[]) null;
-        this.a((byte[]) null, (byte) -86);
-        this.field_c.position(0);
-        this.field_c.get(var4);
+        this.setBytes((byte[]) null, (byte) -86);
+        this.buffer.position(0);
+        this.buffer.get(var4);
         return var4;
     }
 
@@ -53,7 +53,7 @@ final class ei extends vf {
         return kf.a(76);
     }
 
-    ei() {
+    DirectByteArrayStore() {
     }
 
     final static void a(int param0, uh param1, int param2) {
@@ -70,7 +70,7 @@ final class ei extends vf {
           var3.writeByte(-9469, param1.field_k);
           var3.writeByte(-9469, param1.field_h);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ei.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ei.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

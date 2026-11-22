@@ -46,7 +46,7 @@ final class th {
     final static boolean a(int param0, int param1, int param2) {
         tk.field_c = tk.field_c + 1;
         rj.field_p = rj.field_p - af.field_ob;
-        vf.field_b = vf.field_b + af.field_ob;
+        ByteArrayStore.field_b = ByteArrayStore.field_b + af.field_ob;
         int var3 = param1 << param2;
         if ((var3 & db.field_m) != 0) {
           return false;

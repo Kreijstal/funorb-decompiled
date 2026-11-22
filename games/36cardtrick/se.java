@@ -62,7 +62,7 @@ final class se extends hl {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class se extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1_ref), "se.D(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1_ref), "se.D(" + param0 + ')');
         }
     }
 

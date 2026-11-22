@@ -3,7 +3,7 @@
  */
 final class cc {
     static int field_e;
-    static ge field_f;
+    static GzipInflater field_f;
     static String field_b;
     static int field_d;
     static int field_c;
@@ -55,7 +55,7 @@ final class cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "cc.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "cc.B(" + param0 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class cc {
 
     final static boolean a(int param0) {
         int var1 = 100 % ((param0 + 57) / 42);
-        return ei.field_e;
+        return DirectByteArrayStore.field_e;
     }
 
     public static void a(byte param0) {
@@ -82,7 +82,7 @@ final class cc {
     }
 
     static {
-        field_f = new ge();
+        field_f = new GzipInflater();
         field_b = "Type your age in years";
         field_a = 0;
     }

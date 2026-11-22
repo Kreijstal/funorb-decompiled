@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_a;
     static int field_b;
 
@@ -68,7 +68,7 @@ final class be implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class be implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class be implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class be implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "be.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "be.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

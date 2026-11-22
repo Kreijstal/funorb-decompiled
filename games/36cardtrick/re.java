@@ -25,13 +25,13 @@ final class re {
           this.a(false, (byte) 122, true, 0);
         }
         while (true) {
-          if (!ge.b((byte) -114)) {
-            this.field_f.a(this.a((byte) -22, ij.field_e, eg.field_b), (byte) 115, this.a((byte) -22, jc.field_N, ag.field_a));
+          if (!GzipInflater.b((byte) -114)) {
+            this.field_f.a(this.a((byte) -22, ij.field_e, eg.field_b), (byte) 115, this.a((byte) -22, jc.field_N, MouseInputHandler.field_a));
             if (this.field_f.field_k != -1) {
               this.a(true, (byte) 122, this.field_f.c(-1), this.field_f.field_k);
             }
             if (dl.field_h != 0) {
-              this.field_a = ag.field_a;
+              this.field_a = MouseInputHandler.field_a;
               this.field_e = jc.field_N;
             }
             return;
@@ -136,7 +136,7 @@ final class re {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class re {
         int[][] var19Lifetime1;
         var16 = Main.field_T;
         if (dl.d(0)) {
-          var2 = j.field_F + "<br><br>" + ag.field_g;
+          var2 = j.field_F + "<br><br>" + MouseInputHandler.field_g;
         } else {
           if (null == this.field_d.field_cb) {
             this.field_d.field_cb = il.a(8, 3, 25404, fb.field_c[this.field_d.field_C], 1);
@@ -417,7 +417,7 @@ final class re {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -763,7 +763,7 @@ final class re {
                                       if (fe.field_a == var7) {
                                         break regionExit2;
                                       }
-                                      ag.a(var7, 0);
+                                      MouseInputHandler.a(var7, 0);
                                     }
                                   }
                                 } else {
@@ -1188,7 +1188,7 @@ final class re {
                 if (var4Lifetime1 != -1) {
                   var6 = qa.field_b.field_s + qa.field_b.field_x;
                   var7Lifetime2 = 226 + param2;
-                  qa.field_b.b(ge.field_b[var4Lifetime1], 388, var7Lifetime2, 0, -1);
+                  qa.field_b.b(GzipInflater.field_b[var4Lifetime1], 388, var7Lifetime2, 0, -1);
                   stackIn_57_0 = ((1 << var4Lifetime1 & db.field_m) == 0) ? 0 : 1;
                   var8 = stackIn_57_0;
                   if (var8 == 0) {
@@ -1218,7 +1218,7 @@ final class re {
                 } else {
                   qa.field_b.a(id.field_d, 407, param2 + 226, 0, -1);
                   if (dl.d(0)) {
-                    qa.field_b.a(ag.field_g, 248, param2 + (2 * (qa.field_b.field_x + qa.field_b.field_s) + 226), 319, 1024, 0, -1, 1, 0, qa.field_b.field_x + qa.field_b.field_s);
+                    qa.field_b.a(MouseInputHandler.field_g, 248, param2 + (2 * (qa.field_b.field_x + qa.field_b.field_s) + 226), 319, 1024, 0, -1, 1, 0, qa.field_b.field_x + qa.field_b.field_s);
                     break regionExit1;
                   }
                 }
@@ -1390,7 +1390,7 @@ final class re {
                   var13Lifetime2 = qa.field_b.field_s + qa.field_b.field_x;
                   var14Lifetime2 = 239;
                   var15 = 363;
-                  qa.field_b.b(ge.field_b[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
+                  qa.field_b.b(GzipInflater.field_b[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
                   qk.field_a[var10Lifetime1Lifetime1].d(223, -qa.field_b.field_s + var14Lifetime2);
                   var14Lifetime2 = var14Lifetime2 + var13Lifetime2;
                   qa.field_b.b(pk.field_b, var15, var14Lifetime2, 16711680, -1);
@@ -1456,7 +1456,7 @@ final class re {
           this.field_i = param1;
           this.field_f = new lh(fh.field_G[param1].length);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1527,7 +1527,7 @@ final class re {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

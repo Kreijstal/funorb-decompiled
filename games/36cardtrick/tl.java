@@ -25,7 +25,7 @@ abstract class tl {
         try {
           ej.a((byte) -121, param0, param1, false);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "tl.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "tl.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ abstract class tl {
         stackIn_5_0 = (0 != (var3 & 128));
         gg.field_a = stackIn_5_0;
         hg.field_b = 127 & var3;
-        be.field_a = var8.readUnsignedByte(102);
+        KeyboardInputHandler.field_a = var8.readUnsignedByte(102);
         ff.field_a = var8.readLong(true);
         if (hg.field_b == 2) {
           fg.field_l = var8.readUnsignedShort((byte) 72);

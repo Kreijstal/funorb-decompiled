@@ -63,7 +63,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "c.A(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "c.A(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ abstract class c extends fj {
           nl.field_e[2] = true;
           int var2_int = -80 / ((param0 - 41) / 62);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "c.I(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "c.I(" + param0 + ')');
         }
     }
 
@@ -103,2484 +103,2484 @@ abstract class c extends fj {
                 gk.field_d = param1;
                 var2 = hc.a("loginm3", (byte) -127);
                 if (null != var2) {
-                  jf.field_k = ge.a(var2, (byte) 81);
+                  jf.field_k = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("loginm2", (byte) -127);
                 if (var2 != null) {
-                  e.field_f = ge.a(var2, (byte) 116);
+                  e.field_f = GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("loginm1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("idlemessage20min", (byte) -127);
                 if (null != var2) {
-                  jc.field_S = ge.a(var2, (byte) 113);
+                  jc.field_S = GzipInflater.a(var2, (byte) 113);
                 }
                 var2 = hc.a("error_js5crc", (byte) -127);
                 if (null != var2) {
-                  kk.field_a = ge.a(var2, (byte) 120);
+                  kk.field_a = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("error_js5io", (byte) -127);
                 if (var2 != null) {
-                  ma.field_b = ge.a(var2, (byte) 126);
+                  ma.field_b = GzipInflater.a(var2, (byte) 126);
                 }
                 var2 = hc.a("error_js5connect_full", (byte) -127);
                 if (var2 != null) {
-                  rh.field_g = ge.a(var2, (byte) 104);
+                  rh.field_g = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("error_js5connect", (byte) -127);
                 if (null != var2) {
-                  ac.field_c = ge.a(var2, (byte) 108);
+                  ClientException.field_c = GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("login_gameupdated", (byte) -127);
                 if (var2 != null) {
-                  ve.field_b = ge.a(var2, (byte) 97);
+                  ve.field_b = GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("create_unable", (byte) -127);
                 if (var2 != null) {
-                  qk.field_i = ge.a(var2, (byte) 116);
+                  qk.field_i = GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("create_ineligible", (byte) -127);
                 if (var2 != null) {
-                  pa.field_N = ge.a(var2, (byte) 121);
+                  pa.field_N = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("usernameprompt", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("passwordprompt", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("andagainprompt", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("ticketing_read", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("ticketing_ignore", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("ticketing_oneunread", (byte) -127);
                 if (var2 != null) {
-                  dh.field_g = ge.a(var2, (byte) 122);
+                  dh.field_g = GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("ticketing_xunread", (byte) -127);
                 if (null != var2) {
-                  nc.field_a = ge.a(var2, (byte) 85);
+                  nc.field_a = GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("ticketing_gotowebsite", (byte) -127);
                 if (null != var2) {
-                  fk.field_l = ge.a(var2, (byte) 79);
+                  fk.field_l = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("ticketing_waitingformessages", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("mu_chat_on", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("mu_chat_friends", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("mu_chat_off", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("mu_chat_lobby", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("mu_chat_public", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("mu_chat_ignore", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("mu_chat_tips", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("mu_chat_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("mu_chat_private", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("mu_x_entered_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("mu_x_joined_your_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("mu_x_entered_other_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("mu_x_left_lobby", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("mu_x_lost_con", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("mu_x_cannot_join_full", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("mu_x_cannot_join_inprogress", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("mu_x_declined_invite", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("mu_x_withdrew_request", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("mu_x_removed", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("mu_x_dropped_out", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("mu_entered_other_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("mu_game_is_full", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("mu_game_has_started", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("mu_you_declined_invite", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("mu_invite_withdrawn", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("mu_request_declined", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("mu_request_withdrawn", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("mu_all_players_have_left", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("mu_lobby_name", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("mu_lobby_rating", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("mu_lobby_friend_add", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("mu_lobby_friend_rm", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("mu_lobby_name_add", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("mu_lobby_name_rm", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("mu_lobby_location", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("mu_gamelist_all_games", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("mu_gamelist_status", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 113);
+                  GzipInflater.a(var2, (byte) 113);
                 }
                 var2 = hc.a("mu_gamelist_owner", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("mu_gamelist_players", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("mu_gamelist_avg_rating", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("mu_gamelist_options", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("mu_gamelist_elapsed_time", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("mu_play_rated", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 113);
+                  GzipInflater.a(var2, (byte) 113);
                 }
                 var2 = hc.a("mu_create_unrated", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("mu_options", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("mu_options_whocanjoin", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("mu_options_players", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("mu_options_dontmind", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("mu_options_allow_spectate", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("mu_options_ratedgametype", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("yes", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("no", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("mu_invite_players", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("close", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("add_x_to_friends", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("add_x_to_ignore", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("rm_x_from_friends", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("rm_x_from_ignore", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("send_pm_to_x", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("send_qc_to_x", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("send_pm", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("invite_accept_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("invite_decline_xs_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 121);
+                  GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("join_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("join_request_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("join_withdraw_request_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mu_gameopt_kick_x_from_this_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("mu_gameopt_withdraw_invite_to_x", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("mu_gameopt_accept_x_into_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("mu_gameopt_reject_x_from_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("mu_gameopt_invite_x_to_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("report_x_for_abuse", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("unable_to_send_message_password_a", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("unable_to_send_message_password_b", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("mu_chat_lobby_show_all", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("mu_chat_lobby_friends_only", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("mu_chat_lobby_friends", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("mu_chat_lobby_hide", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("mu_chat_game_show_all", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("mu_chat_game_friends_only", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("mu_chat_game_friends", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("mu_chat_game_hide", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("mu_chat_pm_show_all", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("mu_chat_pm_friends_only", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("mu_chat_pm_friends", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mu_chat_invisible_and_silent_mode", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("you_have_been_removed_from_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("your_rating_is_x", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("you_are_on_x_server", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("rated_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("unrated_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("rated_game_tips", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("searching_for_opponent_singular", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("searching_for_opponents_plural", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("find_opponent_singular", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("find_opponents_plural", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("rated_game_tips_setup_singular", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("rated_game_tips_setup_plural", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("waiting_to_start_hint", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("your_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("game_full", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("join_requests_one", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("join_requests_many", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 126);
+                  GzipInflater.a(var2, (byte) 126);
                 }
                 var2 = hc.a("xs_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("waiting_for_x_to_start_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("game_options_changed", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("players_x_of_y", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("message_lobby", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("quickchat_lobby", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("message_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("message_team", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("quickchat_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("kick", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("inviting_x", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("x_wants_to_join", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("accept", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("reject", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("invite", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("status_concluded", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("status_spectate", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 121);
+                  GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("status_playing", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("status_join", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("status_private", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("status_full", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("players_in_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("you_are_invited_to_xs_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("asking_to_join_xs_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("who_can_join", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("you_can_join", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("you_can_ask_to_join", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("you_cannot_join_in_progress", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("you_can_spectate", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("you_can_not_spectate", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("spectate_xs_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("hide_players_in_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("show_players_in_xs_game", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("connecting_to_friend_server_twoline", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("loading", (byte) -127);
                 if (null != var2) {
-                  gk.field_c = ge.a(var2, (byte) 120);
+                  gk.field_c = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("offline", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("multiconst_invite_only", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("multiconst_clan", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("multiconst_friends", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("multiconst_similar_rating", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("multiconst_open", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("no_options_available", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("reportabuse", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("presstabtochat", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("pressf10toquickchat", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("dob_chatdisabled", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("dob_enterforchat", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("tab_hidechattemporarily", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("esc_cancelprivatemessage", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("esc_cancelthisline", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("privatequickchat_from_x", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 121);
+                  GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("privatequickchat_to_x", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("privatechat_blankarea_explanation", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("publicchat_unavailable_ratedgame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("privatechat_friend_offline", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("privatechat_friend_notlisted", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("chatviewscrolledup", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("thisisrunescapeclan", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("thisisrunescapeclan_notowner", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("runescapeclan", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("rated_membersonly", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("gameopt_membersonly", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("gameopt_1moreratedgame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("gameopt_moreratedgames", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("gameopt_needrating", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("gameopt_unratedonly", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("gameopt_notunlocked", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("gameopt_cannotbecombined1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("gameopt_cannotbecombined2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("gameopt_playernotmember", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("gameopt_younotmember", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("gameopt_playerneedsrating", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("gameopt_youneedrating", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("gameopt_playerneedsratedgames", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("gameopt_youneedratedgames", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("gameopt_playerneeds1ratedgame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("gameopt_youneed1ratedgame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("gameopt_playerhasntunlocked", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("gameopt_youhaventunlocked", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("gameopt_trychanging1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("gameopt_trychanging2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("gameopt_needchanging1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("gameopt_needchanging2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("gameopt_mightchange", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("gameopt_playersdontqualify", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("gameopt_playersdontqualify_selectgametab", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("gameopt_unselectedoptions", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("gameopt_pleaseselectoption1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("gameopt_pleaseselectoption2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("gameopt_badnumplayers", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("gameopt_inviteplayers_or_trychanging1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("gameopt_inviteplayers_or_trychanging2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("gameopt_novalidcombos", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("gameopt_pleasetrychanging", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("ra_title", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 120);
+                  GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("ra_mutethisplayer", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("ra_suggestmute", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("ra_intro", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("ra_intro_no_name", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("ra_explanation", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("rule_pillar_0", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("rule_0_0", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("rule_0_1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("rule_0_2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("rule_0_3", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("rule_0_4", (byte) -127);
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("rule_0_5", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("rule_pillar_1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("rule_1_0", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("rule_1_1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("rule_1_2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("rule_1_3", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("rule_1_4", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("rule_pillar_2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("rule_2_0", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("rule_2_1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("rule_2_2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("createafreeaccount", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("cancel", (byte) -127);
                 if (null != var2) {
-                  cj.field_m = ge.a(var2, (byte) 99);
+                  cj.field_m = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("pleaselogintoplay", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("pleaselogin", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("pleaselogin_member", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("invaliduserorpass", (byte) -127);
                 if (null != var2) {
-                  jh.field_d = ge.a(var2, (byte) 88);
+                  jh.field_d = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("pleasetryagain", (byte) -127);
                 if (var2 != null) {
-                  ph.field_a = ge.a(var2, (byte) 92);
+                  ph.field_a = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("pleasereenterpass", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("playfreeversion", (byte) -127);
                 if (null != var2) {
-                  s.field_a = ge.a(var2, (byte) 86);
+                  s.field_a = GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("reloadgame", (byte) -127);
                 if (var2 != null) {
-                  na.field_p = ge.a(var2, (byte) 90);
+                  na.field_p = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("toserverlist", (byte) -127);
                 if (null != var2) {
-                  sk.field_a = ge.a(var2, (byte) 114);
+                  sk.field_a = GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("tocustomersupport", (byte) -127);
                 if (null != var2) {
-                  jh.field_a = ge.a(var2, (byte) 102);
+                  jh.field_a = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("changedisplayname", (byte) -127);
                 if (null != var2) {
-                  wf.field_a = ge.a(var2, (byte) 88);
+                  wf.field_a = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("returntohomepage", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("justplay", (byte) -127);
                 if (null != var2) {
-                  oa.field_b = ge.a(var2, (byte) 125);
+                  oa.field_b = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("justplay_excl", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("login", (byte) -127);
                 if (var2 != null) {
-                  q.field_f = ge.a(var2, (byte) 100);
+                  q.field_f = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("goback", (byte) -127);
                 if (var2 != null) {
-                  dl.field_j = ge.a(var2, (byte) 97);
+                  dl.field_j = GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("otheroptions", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 120);
+                  GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("proceed", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("connectingtoserver", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("pleasewait", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("logging_in", (byte) -127);
                 if (var2 != null) {
-                  kj.field_q = ge.a(var2, (byte) 104);
+                  kj.field_q = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("reconnect", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("backtoerror", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("pleasecheckinternet", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("attemptingtoreconnect", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("connectionlost_reconnecting", (byte) -127);
                 if (null != var2) {
-                  ni.field_e = ge.a(var2, (byte) 92);
+                  ni.field_e = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("connectionlost_withreason", (byte) -127);
                 if (var2 != null) {
-                  lk.field_p = ge.a(var2, (byte) 107);
+                  lk.field_p = GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("passwordverificationrequired", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("invalidpass", (byte) -127);
                 if (null != var2) {
-                  rl.field_t = ge.a(var2, (byte) 125);
+                  rl.field_t = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("retry", (byte) -127);
                 if (var2 != null) {
-                  tc.field_c = ge.a(var2, (byte) 95);
+                  tc.field_c = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("back", (byte) -127);
                 if (var2 != null) {
-                  uc.field_r = ge.a(var2, (byte) 125);
+                  uc.field_r = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("exitfullscreenmode", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("quittowebsite", (byte) -127);
                 if (var2 != null) {
-                  pg.field_f = ge.a(var2, (byte) 107);
+                  pg.field_f = GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("connectionrestored", (byte) -127);
                 if (var2 != null) {
-                  dg.field_E = ge.a(var2, (byte) 98);
+                  dg.field_E = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("warning_ifyouquit", (byte) -127);
                 if (null != var2) {
-                  vg.field_c = ge.a(var2, (byte) 90);
+                  vg.field_c = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("warning_ifyouquitorleavepage", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("resubscribe_withoutlosing_fs", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("resubscribe_withoutlosing", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("customersupport_withoutlosing_fs", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("customersupport_withoutlosing", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("js5help_withoutlosing_fs", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("js5help_withoutlosing", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 121);
+                  GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("checkinternet_withoutlosing_fs", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("checkinternet_withoutlosing", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("create_intro", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("create_sameaccounttip_unnamed", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("dateofbirthprompt", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("fetchingcountrylist", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("countryprompt", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("countrylisterror", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("theonlypersonalquestions", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("create_submittingdata", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("check", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("create_pleasechooseausername", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("create_usernameblurb", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("checkingavailability", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("checking", (byte) -127);
                 if (null != var2) {
-                  n.field_C = ge.a(var2, (byte) 114);
+                  n.field_C = GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("create_namealreadytaken", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("create_sameaccounttip_named", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("create_nosuggestions", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("create_alternativelygoback", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("create_available", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("create_willnowshowtermsandconditions", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("fetchingterms", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("termserror", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("create_iagree", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("create_idisagree", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("create_pleasescrolldowntoaccept", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 120);
+                  GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("create_linkaddress", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("openinpopupwindow", (byte) -127);
                 if (var2 != null) {
-                  ni.field_b = ge.a(var2, (byte) 83);
+                  ni.field_b = GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("create", (byte) -127);
                 if (null != var2) {
-                  qk.field_h = ge.a(var2, (byte) 96);
+                  qk.field_h = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("create_pleasechooseapassword", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("create_passwordblurb", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("create_nevergivepassword", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("creatingyouraccount", (byte) -127);
                 if (var2 != null) {
-                  jc.field_R = ge.a(var2, (byte) 100);
+                  jc.field_R = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("create_youmustaccept", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("create_passwordsdifferent", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("create_success", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("day", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("month", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("year", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("monthnames,0", (byte) -127);
                 if (var2 != null) {
-                  se.field_O[0] = ge.a(var2, (byte) 96);
+                  se.field_O[0] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("monthnames,1", (byte) -127);
                 if (var2 != null) {
-                  se.field_O[1] = ge.a(var2, (byte) 81);
+                  se.field_O[1] = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("monthnames,2", (byte) -127);
                 if (var2 != null) {
-                  se.field_O[2] = ge.a(var2, (byte) 89);
+                  se.field_O[2] = GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("monthnames,3", (byte) -127);
                 if (null != var2) {
-                  se.field_O[3] = ge.a(var2, (byte) 86);
+                  se.field_O[3] = GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("monthnames,4", (byte) -127);
                 if (null != var2) {
-                  se.field_O[4] = ge.a(var2, (byte) 120);
+                  se.field_O[4] = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("monthnames,5", (byte) -127);
                 if (var2 != null) {
-                  se.field_O[5] = ge.a(var2, (byte) 90);
+                  se.field_O[5] = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("monthnames,6", (byte) -127);
                 if (var2 != null) {
-                  se.field_O[6] = ge.a(var2, (byte) 86);
+                  se.field_O[6] = GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("monthnames,7", (byte) -127);
                 if (var2 != null) {
-                  se.field_O[7] = ge.a(var2, (byte) 110);
+                  se.field_O[7] = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("monthnames,8", (byte) -127);
                 if (null != var2) {
-                  se.field_O[8] = ge.a(var2, (byte) 92);
+                  se.field_O[8] = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("monthnames,9", (byte) -127);
                 if (null != var2) {
-                  se.field_O[9] = ge.a(var2, (byte) 122);
+                  se.field_O[9] = GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("monthnames,10", (byte) -127);
                 if (null != var2) {
-                  se.field_O[10] = ge.a(var2, (byte) 91);
+                  se.field_O[10] = GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("monthnames,11", (byte) -127);
                 if (null != var2) {
-                  se.field_O[11] = ge.a(var2, (byte) 109);
+                  se.field_O[11] = GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("create_welcome", (byte) -127);
                 if (null != var2) {
-                  gk.field_e = ge.a(var2, (byte) 105);
+                  gk.field_e = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("create_u13_welcome", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("create_createanaccount", (byte) -127);
                 if (var2 != null) {
-                  mg.field_K = ge.a(var2, (byte) 99);
+                  mg.field_K = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("create_username", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("create_displayname", (byte) -127);
                 if (null != var2) {
-                  mj.field_a = ge.a(var2, (byte) 121);
+                  mj.field_a = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("create_password", (byte) -127);
                 if (null != var2) {
-                  fl.field_b = ge.a(var2, (byte) 80);
+                  fl.field_b = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("create_password_confirm", (byte) -127);
                 if (null != var2) {
-                  hk.field_c = ge.a(var2, (byte) 82);
+                  hk.field_c = GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("create_email", (byte) -127);
                 if (var2 != null) {
-                  cf.field_a = ge.a(var2, (byte) 127);
+                  cf.field_a = GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("create_email_confirm", (byte) -127);
                 if (null != var2) {
-                  mb.field_b = ge.a(var2, (byte) 88);
+                  mb.field_b = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("create_age", (byte) -127);
                 if (var2 != null) {
-                  th.field_b = ge.a(var2, (byte) 105);
+                  th.field_b = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("create_u13_email", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("create_u13_email_confirm", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("create_dob", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("create_country", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("create_alternatives_header", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("create_alternatives_select", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("create_suggestions", (byte) -127);
                 if (null != var2) {
-                  cb.field_h = ge.a(var2, (byte) 95);
+                  cb.field_h = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("create_more_suggestions", (byte) -127);
                 if (null != var2) {
-                  sh.field_f = ge.a(var2, (byte) 119);
+                  sh.field_f = GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("create_select_alternative", (byte) -127);
                 if (null != var2) {
-                  lb.field_e = ge.a(var2, (byte) 114);
+                  lb.field_e = GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("create_optin_news", (byte) -127);
                 if (var2 != null) {
-                  Main.field_M = ge.a(var2, (byte) 86);
+                  Main.field_M = GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("create_agreeterms", (byte) -127);
                 if (null != var2) {
-                  lk.field_t = ge.a(var2, (byte) 81);
+                  lk.field_t = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("create_u13terms", (byte) -127);
                 if (null != var2) {
-                  dd.field_h = ge.a(var2, (byte) 118);
+                  dd.field_h = GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("login_username_email", (byte) -127);
                 if (var2 != null) {
-                  ck.field_F = ge.a(var2, (byte) 103);
+                  ck.field_F = GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("login_username", (byte) -127);
                 if (null != var2) {
-                  ab.field_q = ge.a(var2, (byte) 100);
+                  ab.field_q = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("login_email", (byte) -127);
                 if (null != var2) {
-                  ja.field_d = ge.a(var2, (byte) 110);
+                  ja.field_d = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("login_username_tooltip", (byte) -127);
                 if (null != var2) {
-                  sl.field_c = ge.a(var2, (byte) 83);
+                  sl.field_c = GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("login_password_tooltip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("login_login_tooltip", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("login_create_tooltip", (byte) -127);
                 if (var2 != null) {
-                  bl.field_b = ge.a(var2, (byte) 81);
+                  bl.field_b = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("login_justplay_tooltip", (byte) -127);
                 if (null != var2) {
-                  w.field_m = ge.a(var2, (byte) 115);
+                  w.field_m = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("login_back_tooltip", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("login_no_displayname", (byte) -127);
                 if (var2 != null) {
-                  ui.field_F = ge.a(var2, (byte) 94);
+                  ui.field_F = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("create_username_tooltip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("create_username_hint", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("create_displayname_tooltip", (byte) -127);
                 if (var2 != null) {
-                  re.field_h = ge.a(var2, (byte) 104);
+                  re.field_h = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("create_displayname_hint", (byte) -127);
                 if (var2 != null) {
-                  pk.field_c = ge.a(var2, (byte) 123);
+                  pk.field_c = GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("create_password_tooltip", (byte) -127);
                 if (null != var2) {
-                  db.field_f = ge.a(var2, (byte) 127);
+                  db.field_f = GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("create_password_hint", (byte) -127);
                 if (var2 != null) {
-                  mc.field_a = ge.a(var2, (byte) 97);
+                  mc.field_a = GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("create_password_confirm_tooltip", (byte) -127);
                 if (null != var2) {
-                  ja.field_c = ge.a(var2, (byte) 80);
+                  ja.field_c = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("create_email_tooltip", (byte) -127);
                 if (null != var2) {
-                  pf.field_g = ge.a(var2, (byte) 83);
+                  pf.field_g = GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("create_email_confirm_tooltip", (byte) -127);
                 if (var2 != null) {
-                  te.field_b = ge.a(var2, (byte) 123);
+                  MouseWheelInput.field_b = GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("create_age_tooltip", (byte) -127);
                 if (var2 != null) {
-                  cc.field_b = ge.a(var2, (byte) 119);
+                  cc.field_b = GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("create_optin_news_tooltip", (byte) -127);
                 if (var2 != null) {
-                  nc.field_c = ge.a(var2, (byte) 105);
+                  nc.field_c = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("create_u13_email_tooltip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("create_u13_email_confirm_tooltip", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("create_dob_tooltip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("create_country_tooltip", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("create_optin_tooltip", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("create_continue", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("create_username_unavailable", (byte) -127);
                 if (null != var2) {
-                  ui.field_K = ge.a(var2, (byte) 87);
+                  ui.field_K = GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("create_username_available", (byte) -127);
                 if (null != var2) {
-                  vd.field_k = ge.a(var2, (byte) 118);
+                  vd.field_k = GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("create_alert_namelength", (byte) -127);
                 if (var2 != null) {
-                  ke.field_b = ge.a(var2, (byte) 87);
+                  ke.field_b = GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("create_alert_namechars", (byte) -127);
                 if (null != var2) {
-                  nf.field_a = ge.a(var2, (byte) 86);
+                  nf.field_a = GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("create_alert_nameleadingspace", (byte) -127);
                 if (var2 != null) {
-                  kl.field_P = ge.a(var2, (byte) 81);
+                  kl.field_P = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("create_alert_doublespace", (byte) -127);
                 if (null != var2) {
-                  g.field_B = ge.a(var2, (byte) 121);
+                  g.field_B = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("create_alert_passchars", (byte) -127);
                 if (null != var2) {
-                  hl.field_C = ge.a(var2, (byte) 79);
+                  hl.field_C = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("create_alert_passrepeated", (byte) -127);
                 if (null != var2) {
-                  ta.field_fb = ge.a(var2, (byte) 95);
+                  ta.field_fb = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("create_alert_passlength", (byte) -127);
                 if (var2 != null) {
-                  s.field_b = ge.a(var2, (byte) 110);
+                  s.field_b = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("create_alert_passcontainsname", (byte) -127);
                 if (null != var2) {
-                  qi.field_F = ge.a(var2, (byte) 92);
+                  qi.field_F = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("create_alert_passcontainsemail", (byte) -127);
                 if (null != var2) {
-                  bj.field_u = ge.a(var2, (byte) 125);
+                  bj.field_u = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("create_alert_passcontainsname_partial", (byte) -127);
                 if (var2 != null) {
-                  i.field_b = ge.a(var2, (byte) 101);
+                  i.field_b = GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("create_alert_checkname", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("create_alert_invalidemail", (byte) -127);
                 if (var2 != null) {
-                  ha.field_c = ge.a(var2, (byte) 88);
+                  ha.field_c = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("create_alert_email_unavailable", (byte) -127);
                 if (var2 != null) {
-                  bk.field_b = ge.a(var2, (byte) 118);
+                  bk.field_b = GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("create_alert_invaliddate", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("create_alert_invalidage", (byte) -127);
                 if (var2 != null) {
-                  d.field_j = ge.a(var2, (byte) 90);
+                  d.field_j = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("create_alert_yearrange", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("create_alert_mismatch", (byte) -127);
                 if (null != var2) {
-                  r.field_r = ge.a(var2, (byte) 96);
+                  r.field_r = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("create_passwordvalid", (byte) -127);
                 if (null != var2) {
-                  ll.field_g = ge.a(var2, (byte) 101);
+                  ll.field_g = GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("create_emailvalid", (byte) -127);
                 if (var2 != null) {
-                  gi.field_g = ge.a(var2, (byte) 101);
+                  gi.field_g = GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("create_account_success", (byte) -127);
                 if (null != var2) {
-                  bk.field_e = ge.a(var2, (byte) 125);
+                  bk.field_e = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("invalid_name", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("cannot_add_yourself", (byte) -127);
                 var3 = 22 / ((-14 - param0) / 59);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("unable_to_add_friend", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("unable_to_add_ignore", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("unable_to_delete_friend", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("unable_to_delete_ignore", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("friendlistfull", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("friendlistdupe", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("friendnotfound", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("ignorelistfull", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("ignorelistdupe", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 79);
+                  GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("ignorenotfound", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("removeignorefirst", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("removefriendfirst", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("enterfriend_add", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("enterfriend_del", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("enterignore_add", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("enterignore_del", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("text_removed_from_game", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("text_lobby_pleaselogin_free", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("opengl", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("sse", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("purejava", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("waitingfor_graphics", (byte) -127);
                 if (var2 != null) {
-                  kf.field_j = ge.a(var2, (byte) 124);
+                  kf.field_j = GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("waitingfor_models", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("waitingfor_fonts", (byte) -127);
                 if (var2 != null) {
-                  ak.field_L = ge.a(var2, (byte) 99);
+                  ak.field_L = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("waitingfor_soundeffects", (byte) -127);
                 if (null != var2) {
-                  eg.field_e = ge.a(var2, (byte) 125);
+                  eg.field_e = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("waitingfor_music", (byte) -127);
                 if (null != var2) {
-                  ah.field_a = ge.a(var2, (byte) 98);
+                  ah.field_a = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("waitingfor_instruments", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("waitingfor_levels", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("waitingfor_extradata", (byte) -127);
                 if (var2 != null) {
-                  tb.field_e = ge.a(var2, (byte) 92);
+                  tb.field_e = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("waitingfor_languages", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("waitingfor_textures", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("waitingfor_animations", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("loading_graphics", (byte) -127);
                 if (var2 != null) {
-                  bk.field_f = ge.a(var2, (byte) 121);
+                  bk.field_f = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("loading_models", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 126);
+                  GzipInflater.a(var2, (byte) 126);
                 }
                 var2 = hc.a("loading_fonts", (byte) -127);
                 if (var2 != null) {
-                  nc.field_b = ge.a(var2, (byte) 117);
+                  nc.field_b = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("loading_soundeffects", (byte) -127);
                 if (var2 != null) {
-                  wd.field_a = ge.a(var2, (byte) 103);
+                  wd.field_a = GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("loading_music", (byte) -127);
                 if (null != var2) {
-                  dh.field_o = ge.a(var2, (byte) 99);
+                  dh.field_o = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("loading_instruments", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("loading_levels", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("loading_extradata", (byte) -127);
                 if (var2 != null) {
-                  rj.field_w = ge.a(var2, (byte) 93);
+                  rj.field_w = GzipInflater.a(var2, (byte) 93);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
                 var2 = hc.a("loading_languages", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("loading_textures", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("loading_animations", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("unpacking_graphics", (byte) -127);
                 if (var2 != null) {
-                  lb.field_f = ge.a(var2, (byte) 104);
+                  lb.field_f = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("unpacking_models", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("unpacking_soundeffects", (byte) -127);
                 if (var2 != null) {
-                  sc.field_c = ge.a(var2, (byte) 104);
+                  sc.field_c = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("unpacking_music", (byte) -127);
                 if (null != var2) {
-                  j.field_A = ge.a(var2, (byte) 83);
+                  j.field_A = GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("unpacking_levels", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 120);
+                  GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("unpacking_languages", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("unpacking_animations", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("unpacking_toolkit", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("instructions", (byte) -127);
                 if (null != var2) {
-                  hc.field_e = ge.a(var2, (byte) 113);
+                  hc.field_e = GzipInflater.a(var2, (byte) 113);
                 }
                 var2 = hc.a("tutorial", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("playtutorial", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("sound_colon", (byte) -127);
                 if (null != var2) {
-                  td.field_a = ge.a(var2, (byte) 124);
+                  td.field_a = GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("music_colon", (byte) -127);
                 if (null != var2) {
-                  lf.field_d = ge.a(var2, (byte) 90);
+                  lf.field_d = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("fullscreen", (byte) -127);
                 if (var2 != null) {
-                  pg.field_b = ge.a(var2, (byte) 93);
+                  pg.field_b = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("screensize", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("highscores", (byte) -127);
                 if (var2 != null) {
-                  n.field_D = ge.a(var2, (byte) 94);
+                  n.field_D = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("rankings", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("achievements", (byte) -127);
                 if (null != var2) {
-                  hc.field_a = ge.a(var2, (byte) 92);
+                  hc.field_a = GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("achievementsthisgame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("achievementsthissession", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("watchintroduction", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("quit", (byte) -127);
                 if (null != var2) {
-                  ii.field_f = ge.a(var2, (byte) 105);
+                  ii.field_f = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("login_createaccount", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("tohighscores", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("returntomainmenu", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("returntopausemenu", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("returntooptionsmenu_notpaused", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("mainmenu", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("pausemenu", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("optionsmenu_notpaused", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("menu", (byte) -127);
                 if (null != var2) {
-                  db.field_b = ge.a(var2, (byte) 121);
+                  db.field_b = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("selectlevel", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("nextlevel", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("startgame", (byte) -127);
                 if (var2 != null) {
-                  tj.field_J = ge.a(var2, (byte) 115);
+                  tj.field_J = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("newgame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 121);
+                  GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("resumegame", (byte) -127);
                 if (null != var2) {
-                  id.field_f = ge.a(var2, (byte) 103);
+                  id.field_f = GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("resumetutorial", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("skip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("skiptutorial", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("skipending", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("restartlevel", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("endtest", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("endgame", (byte) -127);
                 if (null != var2) {
-                  tf.field_m = ge.a(var2, (byte) 89);
+                  tf.field_m = GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("endtutorial", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("ok", (byte) -127);
                 if (var2 != null) {
-                  bl.field_g = ge.a(var2, (byte) 101);
+                  bl.field_g = GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("on", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("off", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("previous", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 101);
+                  GzipInflater.a(var2, (byte) 101);
                 }
                 var2 = hc.a("prev", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("next", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("graphics_colon", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("hotseatmultiplayer", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("entermultiplayerlobby", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("singleplayergame", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("returntogame", (byte) -127);
                 if (var2 != null) {
-                  sh.field_h = ge.a(var2, (byte) 82);
+                  sh.field_h = GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("endgameresign", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("offerdraw", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("canceldraw", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("acceptdraw", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 90);
+                  GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("resign", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("returntolobby", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("cont", (byte) -127);
                 if (null != var2) {
-                  bj.field_b = ge.a(var2, (byte) 106);
+                  bj.field_b = GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("continue_spectating", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 120);
+                  GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("messages", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("graphics_fastest", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("graphics_medium", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("graphics_best", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 120);
+                  GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("graphics_directx", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("graphics_opengl", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("graphics_java", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("graphics_quality_high", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("graphics_quality_low", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("graphics_mode", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("graphics_quality", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("mode", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("quality", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("keys", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("objective", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("currentobjective", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("pressescforpausemenu", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("pressescforpausemenuortoskiptutorial", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("pressescforoptionsmenu_doesntpause", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("pressescforoptionsmenu_doesntpause_short", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("powerups", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("latestlevel_suffix", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 102);
+                  GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("unreachedlevel_name", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("unreachedlevel_cannotplayreason", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("unreachedlevel_cannotplayreason_shorter", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("unreachedworld_cannotplayreason", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("memberslevel_name", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("memberslevel_cannotplayreason", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 94);
+                  GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("membersworld_cannotplayreason", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("unreachedlevel_createtip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("unreachedlevel_createtip_line1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("unreachedlevel_createtip_line2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("unreachedlevel_logintip", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("memberslevel_logintip", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("displayname_none", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("levelxofy1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("levelxofy2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("levelxofy", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("ingame_level", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("mouseoveranicon", (byte) -127);
                 if (var2 != null) {
-                  id.field_d = ge.a(var2, (byte) 78);
+                  id.field_d = GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("notyetachieved", (byte) -127);
                 if (var2 != null) {
-                  vd.field_n = ge.a(var2, (byte) 83);
+                  vd.field_n = GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("achieved", (byte) -127);
                 if (null != var2) {
-                  pk.field_b = ge.a(var2, (byte) 95);
+                  pk.field_b = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("orbpoints", (byte) -127);
                 if (null != var2) {
-                  eg.field_a = ge.a(var2, (byte) 112);
+                  eg.field_a = GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("orbcoins", (byte) -127);
                 if (var2 != null) {
-                  nl.field_a = ge.a(var2, (byte) 91);
+                  nl.field_a = GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("orbpoints_colon", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("orbcoins_colon", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("achieved_colon_description", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("secretachievement", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("no_highscores", (byte) -127);
                 if (null != var2) {
-                  j.field_F = ge.a(var2, (byte) 100);
+                  j.field_F = GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("hs_name", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("hs_level", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("hs_fromlevel", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("hs_tolevel", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("hs_score", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 110);
+                  GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("hs_end", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("ingame_score", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("score_colon", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 81);
+                  GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("mp_leavegame", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("mp_offerrematch", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("mp_offerrematch_unrated", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("mp_acceptrematch", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("mp_acceptrematch_unrated", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("mp_cancelrematch", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 98);
+                  GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("mp_cancelrematch_unrated", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("mp_rematchnewgame", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("mp_rematchnewgame_unrated", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("mp_x_wantstodraw", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("mp_x_offersrematch", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("mp_x_offersrematch_unrated", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 87);
+                  GzipInflater.a(var2, (byte) 87);
                 }
                 var2 = hc.a("mp_youofferrematch", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("mp_youofferrematch_unrated", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("mp_youofferdraw", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("mp_youresigned", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("mp_youresigned_rematch", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("mp_x_hasresignedandleft", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("mp_x_hasresigned_rematch", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("mp_x_hasresigned", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("mp_x_hasleft", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("mp_x_haswon", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mp_youhavewon", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("mp_gamedrawn", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("mp_timeremaining", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 108);
+                  GzipInflater.a(var2, (byte) 108);
                 }
                 var2 = hc.a("mp_x_turn", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("mp_yourturn", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 88);
+                  GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("gameover", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("mp_hidechat", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("mp_showchat_nounread", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("mp_showchat_unread1", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("mp_showchat_unread2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("click_to_quickchat", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("autorespond", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("quickchat_help", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 92);
+                  GzipInflater.a(var2, (byte) 92);
                 }
                 var2 = hc.a("quickchat_help_title", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 107);
+                  GzipInflater.a(var2, (byte) 107);
                 }
                 var2 = hc.a("quickchat_shortcut_help,0", (byte) -127);
                 if (var2 != null) {
-                  jc.field_L[0] = ge.a(var2, (byte) 90);
+                  jc.field_L[0] = GzipInflater.a(var2, (byte) 90);
                 }
                 var2 = hc.a("quickchat_shortcut_help,1", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[1] = ge.a(var2, (byte) 93);
+                  jc.field_L[1] = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("quickchat_shortcut_help,2", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[2] = ge.a(var2, (byte) 94);
+                  jc.field_L[2] = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("quickchat_shortcut_help,3", (byte) -127);
                 if (var2 != null) {
-                  jc.field_L[3] = ge.a(var2, (byte) 115);
+                  jc.field_L[3] = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("quickchat_shortcut_help,4", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[4] = ge.a(var2, (byte) 85);
+                  jc.field_L[4] = GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("quickchat_shortcut_help,5", (byte) -127);
                 if (null != var2) {
-                  jc.field_L[5] = ge.a(var2, (byte) 80);
+                  jc.field_L[5] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("quickchat_shortcut_keys,0", (byte) -127);
                 if (null != var2) {
-                  nk.field_f[0] = ge.a(var2, (byte) 104);
+                  nk.field_f[0] = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("quickchat_shortcut_keys,1", (byte) -127);
                 if (var2 != null) {
-                  nk.field_f[1] = ge.a(var2, (byte) 118);
+                  nk.field_f[1] = GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("quickchat_shortcut_keys,2", (byte) -127);
                 if (var2 != null) {
-                  nk.field_f[2] = ge.a(var2, (byte) 116);
+                  nk.field_f[2] = GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("quickchat_shortcut_keys,3", (byte) -127);
                 if (var2 != null) {
-                  nk.field_f[3] = ge.a(var2, (byte) 79);
+                  nk.field_f[3] = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("quickchat_shortcut_keys,4", (byte) -127);
                 if (var2 != null) {
-                  nk.field_f[4] = ge.a(var2, (byte) 102);
+                  nk.field_f[4] = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("quickchat_shortcut_keys,5", (byte) -127);
                 if (var2 != null) {
-                  nk.field_f[5] = ge.a(var2, (byte) 111);
+                  nk.field_f[5] = GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("keychar_the_character_under_questionmark", (byte) -127);
                 if (var2 != null) {
@@ -2588,501 +2588,501 @@ abstract class c extends fj {
                 }
                 var2 = hc.a("rating_noratings", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 80);
+                  GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("rating_rating", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("rating_played", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 84);
+                  GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("rating_won", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("rating_lost", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("rating_drawn", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("benefits_fullscreen", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 127);
+                  GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("benefits_noadverts", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("benefits_price", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 115);
+                  GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("members_expansion_benefits,0", (byte) -127);
                 if (var2 != null) {
-                  n.field_B[0] = ge.a(var2, (byte) 93);
+                  n.field_B[0] = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("members_expansion_benefits,1", (byte) -127);
                 if (var2 != null) {
-                  n.field_B[1] = ge.a(var2, (byte) 109);
+                  n.field_B[1] = GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("members_expansion_benefits,2", (byte) -127);
                 if (var2 != null) {
-                  n.field_B[2] = ge.a(var2, (byte) 121);
+                  n.field_B[2] = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = hc.a("members_expansion_price_top", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("members_expansion_price_bottom", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("reconnect_lost_seq,0", (byte) -127);
                 if (null != var2) {
-                  me.field_d[0] = ge.a(var2, (byte) 116);
+                  me.field_d[0] = GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("reconnect_lost_seq,1", (byte) -127);
                 if (null != var2) {
-                  me.field_d[1] = ge.a(var2, (byte) 118);
+                  me.field_d[1] = GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("reconnect_lost_seq,2", (byte) -127);
                 if (null != var2) {
-                  me.field_d[2] = ge.a(var2, (byte) 78);
+                  me.field_d[2] = GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("reconnect_lost_seq,3", (byte) -127);
                 if (null != var2) {
-                  me.field_d[3] = ge.a(var2, (byte) 96);
+                  me.field_d[3] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("reconnect_lost", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("reconnect_restored", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 114);
+                  GzipInflater.a(var2, (byte) 114);
                 }
                 var2 = hc.a("reconnect_please_check", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 116);
+                  GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("reconnect_wait", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("reconnect_retry", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 83);
+                  GzipInflater.a(var2, (byte) 83);
                 }
                 var2 = hc.a("reconnect_resume", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("reconnect_or", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 82);
+                  GzipInflater.a(var2, (byte) 82);
                 }
                 var2 = hc.a("reconnect_exitfs", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 118);
+                  GzipInflater.a(var2, (byte) 118);
                 }
                 var2 = hc.a("reconnect_exitfs_quit", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("reconnect_quit", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 119);
+                  GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("reconnect_check_fs", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 112);
+                  GzipInflater.a(var2, (byte) 112);
                 }
                 var2 = hc.a("reconnect_check_nonfs", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 104);
+                  GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("fs_accept_beforeaccept", (byte) -127);
                 if (var2 != null) {
-                  oa.field_c = ge.a(var2, (byte) 98);
+                  oa.field_c = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("fs_button_accept", (byte) -127);
                 if (var2 != null) {
-                  qd.field_b = ge.a(var2, (byte) 111);
+                  qd.field_b = GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("fs_accept_afteraccept", (byte) -127);
                 if (null != var2) {
-                  ai.field_l = ge.a(var2, (byte) 84);
+                  ai.field_l = GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("fs_button_cancel", (byte) -127);
                 if (var2 != null) {
-                  gf.field_a = ge.a(var2, (byte) 85);
+                  gf.field_a = GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("fs_accept_aftercancel", (byte) -127);
                 if (var2 != null) {
-                  ll.field_b = ge.a(var2, (byte) 89);
+                  ll.field_b = GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("fs_accept_countdown_sing", (byte) -127);
                 if (null != var2) {
-                  rf.field_g = ge.a(var2, (byte) 116);
+                  rf.field_g = GzipInflater.a(var2, (byte) 116);
                 }
                 var2 = hc.a("fs_accept_countdown_pl", (byte) -127);
                 if (null != var2) {
-                  bf.field_b = ge.a(var2, (byte) 88);
+                  bf.field_b = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("fs_nonmember", (byte) -127);
                 if (var2 != null) {
-                  tk.field_l = ge.a(var2, (byte) 117);
+                  tk.field_l = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("fs_button_close", (byte) -127);
                 if (var2 != null) {
-                  gh.field_i = ge.a(var2, (byte) 93);
+                  gh.field_i = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("fs_button_members", (byte) -127);
                 if (null != var2) {
-                  ck.field_I = ge.a(var2, (byte) 120);
+                  ck.field_I = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("fs_unavailable", (byte) -127);
                 if (null != var2) {
-                  oj.field_b = ge.a(var2, (byte) 104);
+                  oj.field_b = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("fs_unavailable_try_signed_applet", (byte) -127);
                 if (var2 != null) {
-                  ll.field_a = ge.a(var2, (byte) 104);
+                  ll.field_a = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("fs_focus", (byte) -127);
                 if (null != var2) {
-                  fe.field_d = ge.a(var2, (byte) 88);
+                  fe.field_d = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("fs_focus_or_resolution", (byte) -127);
                 if (var2 != null) {
-                  fj.field_f = ge.a(var2, (byte) 89);
+                  fj.field_f = GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("fs_timeout", (byte) -127);
                 if (var2 != null) {
-                  ij.field_b = ge.a(var2, (byte) 81);
+                  ij.field_b = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("fs_button_tryagain", (byte) -127);
                 if (null != var2) {
-                  fh.field_D = ge.a(var2, (byte) 124);
+                  fh.field_D = GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("graphics_ui_fs_countdown", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("mb_caption_title", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 91);
+                  GzipInflater.a(var2, (byte) 91);
                 }
                 var2 = hc.a("mb_including_gamename", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 125);
+                  GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("mb_full_access_1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 103);
+                  GzipInflater.a(var2, (byte) 103);
                 }
                 var2 = hc.a("mb_full_access_2", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 95);
+                  GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("mb_achievement_count_1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 106);
+                  GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("mb_achievement_count_2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 117);
+                  GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("mb_exclusive_1", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 93);
+                  GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("mb_exclusive_2", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 105);
+                  GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("me_extra_benefits", (byte) -127);
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  ge.a(var2, (byte) 122);
+                  GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("hs_friend_tip", (byte) -127);
                 if (var2 != null) {
-                  ij.field_d = ge.a(var2, (byte) 126);
+                  ij.field_d = GzipInflater.a(var2, (byte) 126);
                 }
                 var2 = hc.a("hs_friend_tip_multi", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 97);
+                  GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("hs_mode_name,0", (byte) -127);
                 if (var2 != null) {
-                  jk.field_d[0] = ge.a(var2, (byte) 84);
+                  jk.field_d[0] = GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("hs_mode_name,1", (byte) -127);
                 if (null != var2) {
-                  jk.field_d[1] = ge.a(var2, (byte) 97);
+                  jk.field_d[1] = GzipInflater.a(var2, (byte) 97);
                 }
                 var2 = hc.a("hs_mode_name,2", (byte) -127);
                 if (var2 != null) {
-                  jk.field_d[2] = ge.a(var2, (byte) 81);
+                  jk.field_d[2] = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("rating_mode_name,0", (byte) -127);
                 if (null != var2) {
-                  fg.field_m[0] = ge.a(var2, (byte) 122);
+                  fg.field_m[0] = GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = hc.a("rating_mode_name,1", (byte) -127);
                 if (var2 != null) {
-                  fg.field_m[1] = ge.a(var2, (byte) 102);
+                  fg.field_m[1] = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("rating_mode_long_name,0", (byte) -127);
                 if (var2 != null) {
-                  mj.field_c[0] = ge.a(var2, (byte) 119);
+                  mj.field_c[0] = GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("rating_mode_long_name,1", (byte) -127);
                 if (null != var2) {
-                  mj.field_c[1] = ge.a(var2, (byte) 80);
+                  mj.field_c[1] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("graphics_config_fixed_size", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 78);
+                  GzipInflater.a(var2, (byte) 78);
                 }
                 var2 = hc.a("graphics_config_resizable", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("graphics_config_fullscreen", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 89);
+                  GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("graphics_config_done", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 124);
+                  GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("graphics_config_apply", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 123);
+                  GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("graphics_config_title", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 99);
+                  GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("graphics_config_instruction", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 86);
+                  GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("graphics_config_need_memory", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 111);
+                  GzipInflater.a(var2, (byte) 111);
                 }
                 var2 = hc.a("pleasewait_dotdotdot", (byte) -127);
                 if (var2 != null) {
-                  tj.field_H = ge.a(var2, (byte) 88);
+                  tj.field_H = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("serviceunavailable", (byte) -127);
                 if (var2 != null) {
-                  t.field_f = ge.a(var2, (byte) 109);
+                  t.field_f = GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("createtouse", (byte) -127);
                 if (null != var2) {
-                  ag.field_g = ge.a(var2, (byte) 117);
+                  MouseInputHandler.field_g = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("achievementsoffline", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 100);
+                  GzipInflater.a(var2, (byte) 100);
                 }
                 var2 = hc.a("warning", (byte) -127);
                 if (null != var2) {
-                  ge.a(var2, (byte) 96);
+                  GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("DEFAULT_PLAYER_NAME", (byte) -127);
                 if (var2 != null) {
-                  vd.field_l = ge.a(var2, (byte) 105);
+                  vd.field_l = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("mustlogin1", (byte) -127);
                 if (var2 != null) {
-                  d.field_e = ge.a(var2, (byte) 124);
+                  d.field_e = GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("mustlogin2,1", (byte) -127);
                 if (var2 != null) {
-                  ek.field_a[1] = ge.a(var2, (byte) 126);
+                  ek.field_a[1] = GzipInflater.a(var2, (byte) 126);
                 }
                 var2 = hc.a("mustlogin2,2", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[2] = ge.a(var2, (byte) 102);
+                  ek.field_a[2] = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("mustlogin2,3", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[3] = ge.a(var2, (byte) 80);
+                  ek.field_a[3] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("mustlogin2,4", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[4] = ge.a(var2, (byte) 115);
+                  ek.field_a[4] = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = hc.a("mustlogin2,5", (byte) -127);
                 if (var2 != null) {
-                  ek.field_a[5] = ge.a(var2, (byte) 96);
+                  ek.field_a[5] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mustlogin2,6", (byte) -127);
                 if (var2 != null) {
-                  ek.field_a[6] = ge.a(var2, (byte) 123);
+                  ek.field_a[6] = GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("mustlogin2,7", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[7] = ge.a(var2, (byte) 84);
+                  ek.field_a[7] = GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = hc.a("mustlogin3,1", (byte) -127);
                 if (null != var2) {
-                  bf.field_d[1] = ge.a(var2, (byte) 98);
+                  bf.field_d[1] = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("mustlogin3,2", (byte) -127);
                 if (null != var2) {
-                  bf.field_d[2] = ge.a(var2, (byte) 102);
+                  bf.field_d[2] = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = hc.a("mustlogin3,3", (byte) -127);
                 if (var2 != null) {
-                  bf.field_d[3] = ge.a(var2, (byte) 113);
+                  bf.field_d[3] = GzipInflater.a(var2, (byte) 113);
                 }
                 var2 = hc.a("mustlogin3,4", (byte) -127);
                 if (null != var2) {
-                  bf.field_d[4] = ge.a(var2, (byte) 106);
+                  bf.field_d[4] = GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("mustlogin3,5", (byte) -127);
                 if (null != var2) {
-                  bf.field_d[5] = ge.a(var2, (byte) 119);
+                  bf.field_d[5] = GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = hc.a("mustlogin3,6", (byte) -127);
                 if (null != var2) {
-                  bf.field_d[6] = ge.a(var2, (byte) 96);
+                  bf.field_d[6] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mustlogin3,7", (byte) -127);
                 if (var2 != null) {
-                  bf.field_d[7] = ge.a(var2, (byte) 80);
+                  bf.field_d[7] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("discard", (byte) -127);
                 if (null != var2) {
-                  gg.field_c = ge.a(var2, (byte) 86);
+                  gg.field_c = GzipInflater.a(var2, (byte) 86);
                 }
                 var2 = hc.a("mustlogin4,1", (byte) -127);
                 if (var2 != null) {
-                  sb.field_b[1] = ge.a(var2, (byte) 88);
+                  sb.field_b[1] = GzipInflater.a(var2, (byte) 88);
                 }
                 var2 = hc.a("mustlogin4,2", (byte) -127);
                 if (var2 != null) {
-                  sb.field_b[2] = ge.a(var2, (byte) 80);
+                  sb.field_b[2] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("mustlogin4,3", (byte) -127);
                 if (var2 != null) {
-                  sb.field_b[3] = ge.a(var2, (byte) 81);
+                  sb.field_b[3] = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("mustlogin4,4", (byte) -127);
                 if (var2 != null) {
-                  sb.field_b[4] = ge.a(var2, (byte) 94);
+                  sb.field_b[4] = GzipInflater.a(var2, (byte) 94);
                 }
                 var2 = hc.a("mustlogin4,5", (byte) -127);
                 if (null != var2) {
-                  sb.field_b[5] = ge.a(var2, (byte) 96);
+                  sb.field_b[5] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mustlogin4,6", (byte) -127);
                 if (var2 != null) {
-                  sb.field_b[6] = ge.a(var2, (byte) 124);
+                  sb.field_b[6] = GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = hc.a("mustlogin4,7", (byte) -127);
                 if (var2 != null) {
-                  sb.field_b[7] = ge.a(var2, (byte) 117);
+                  sb.field_b[7] = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("mustlogin_notloggedin", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 85);
+                  GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("mustlogin_alternate,1", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[1] = ge.a(var2, (byte) 109);
+                  ak.field_N[1] = GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = hc.a("mustlogin_alternate,2", (byte) -127);
                 if (null != var2) {
-                  ak.field_N[2] = ge.a(var2, (byte) 105);
+                  ak.field_N[2] = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = hc.a("mustlogin_alternate,3", (byte) -127);
                 if (null != var2) {
-                  ak.field_N[3] = ge.a(var2, (byte) 80);
+                  ak.field_N[3] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("mustlogin_alternate,4", (byte) -127);
                 if (null != var2) {
-                  ak.field_N[4] = ge.a(var2, (byte) 96);
+                  ak.field_N[4] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = hc.a("mustlogin_alternate,5", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[5] = ge.a(var2, (byte) 79);
+                  ak.field_N[5] = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = hc.a("mustlogin_alternate,6", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[6] = ge.a(var2, (byte) 117);
+                  ak.field_N[6] = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = hc.a("mustlogin_alternate,7", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[7] = ge.a(var2, (byte) 98);
+                  ak.field_N[7] = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = hc.a("subscription_cost_monthly,0", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[0] = ge.a(var2, (byte) 110);
+                  ta.field_ib[0] = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("subscription_cost_monthly,1", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[1] = ge.a(var2, (byte) 95);
+                  ta.field_ib[1] = GzipInflater.a(var2, (byte) 95);
                 }
                 var2 = hc.a("subscription_cost_monthly,2", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[2] = ge.a(var2, (byte) 93);
+                  ta.field_ib[2] = GzipInflater.a(var2, (byte) 93);
                 }
                 var2 = hc.a("subscription_cost_monthly,3", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[3] = ge.a(var2, (byte) 80);
+                  ta.field_ib[3] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = hc.a("subscription_cost_monthly,4", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[4] = ge.a(var2, (byte) 85);
+                  ta.field_ib[4] = GzipInflater.a(var2, (byte) 85);
                 }
                 var2 = hc.a("subscription_cost_monthly,5", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[5] = ge.a(var2, (byte) 125);
+                  ta.field_ib[5] = GzipInflater.a(var2, (byte) 125);
                 }
                 var2 = hc.a("subscription_cost_monthly,6", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[6] = ge.a(var2, (byte) 120);
+                  ta.field_ib[6] = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = hc.a("subscription_cost_monthly,7", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[7] = ge.a(var2, (byte) 104);
+                  ta.field_ib[7] = GzipInflater.a(var2, (byte) 104);
                 }
                 var2 = hc.a("subscription_cost_monthly,8", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[8] = ge.a(var2, (byte) 99);
+                  ta.field_ib[8] = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = hc.a("subscription_cost_monthly,9", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[9] = ge.a(var2, (byte) 123);
+                  ta.field_ib[9] = GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = hc.a("subscription_cost_monthly,10", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[10] = ge.a(var2, (byte) 106);
+                  ta.field_ib[10] = GzipInflater.a(var2, (byte) 106);
                 }
                 var2 = hc.a("subscription_cost_monthly,11", (byte) -127);
                 if (var2 != null) {
-                  ta.field_ib[11] = ge.a(var2, (byte) 127);
+                  ta.field_ib[11] = GzipInflater.a(var2, (byte) 127);
                 }
                 var2 = hc.a("subscription_cost_monthly,12", (byte) -127);
                 if (null != var2) {
-                  ta.field_ib[12] = ge.a(var2, (byte) 110);
+                  ta.field_ib[12] = GzipInflater.a(var2, (byte) 110);
                 }
                 var2 = hc.a("sentence_separator", (byte) -127);
                 if (var2 != null) {
-                  ge.a(var2, (byte) 109);
+                  GzipInflater.a(var2, (byte) 109);
                 }
                 gk.field_d = null;
                 finished = true; return;
@@ -3107,7 +3107,7 @@ abstract class c extends fj {
                   } else {
                     stackIn_2609_2 = "{...}";
                   }
-                  throw ma.a((Throwable) ((Object) stackIn_2608_0), ((StringBuilder) (Object) stackIn_2608_1).append(stackIn_2609_2).append(')').toString());
+                  throw ma.wrapException((Throwable) ((Object) stackIn_2608_0), ((StringBuilder) (Object) stackIn_2608_1).append(stackIn_2609_2).append(')').toString());
                 }
             }
         }
@@ -3139,7 +3139,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var6), "c.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.wrapException((Throwable) ((Object) var6), "c.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3150,7 +3150,7 @@ abstract class c extends fj {
             this.field_r = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "c.H(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "c.H(" + param0 + ')');
         }
     }
 
@@ -3234,7 +3234,7 @@ abstract class c extends fj {
                           return;
                         }
                       }
-                      vf.a(-28037);
+                      ByteArrayStore.a(-28037);
                       if (var4 == 0) {
                         return;
                       }
@@ -3254,7 +3254,7 @@ abstract class c extends fj {
                   return;
                 }
               }
-              ce.a(0);
+              DelegatingCanvas.a(0);
               return;
             }
             return;
@@ -3265,7 +3265,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "c.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "c.B(" + param0 + ')');
         }
     }
 
@@ -3281,7 +3281,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "c.E(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "c.E(" + param0 + ')');
         }
     }
 
@@ -3296,7 +3296,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "c.K(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "c.K(" + param0 + ')');
         }
     }
 
@@ -3352,7 +3352,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "c.G(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "c.G(" + param0 + ')');
         }
     }
 
@@ -3368,7 +3368,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3), "c.M(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3), "c.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3404,7 +3404,7 @@ abstract class c extends fj {
             wk.a(false);
           }
           if (Main.field_V != null) {
-            eg.field_f = Main.field_V.b(-119);
+            eg.field_f = Main.field_V.pollRotation(-119);
           }
           if (g.j(7)) {
             var3_int = 1200 * va.a(22018);
@@ -3424,7 +3424,7 @@ abstract class c extends fj {
             w.field_n == 0) {
             stackIn_38_0 = (w.field_n != -1) ? 0 : 1;
             var3_intLifetime1 = stackIn_38_0;
-            w.field_n = ei.c(0);
+            w.field_n = DirectByteArrayStore.c(0);
             if (var3_intLifetime1 != 0 &&
               w.field_n == 0 &&
               cd.field_e == 11 &&
@@ -3480,7 +3480,7 @@ abstract class c extends fj {
                 if (4 != w.field_n) {
                   if (w.field_n != 2) {
                     if (w.field_n != 5) {
-                      nk.a(256, -9, ac.field_c);
+                      nk.a(256, -9, ClientException.field_c);
                       if (var5 != 0) {
                         nk.a(5, -9, ve.field_b);
                         nk.a(256, -9, rh.field_g);
@@ -3632,7 +3632,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3_ref), "c.F(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3_ref), "c.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3663,7 +3663,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "c.O(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "c.O(" + param0 + ')');
         }
     }
 
@@ -3685,7 +3685,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3), "c.P(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3), "c.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3702,7 +3702,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "c.N(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "c.N(" + param0 + ')');
         }
     }
 
@@ -3766,7 +3766,7 @@ abstract class c extends fj {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -3788,12 +3788,12 @@ abstract class c extends fj {
             this.c(false);
           }
           rd.field_j.b(0, var5, 28040, var4);
-          bk.a(mk.g(-117), -25573, ge.a(var5, (byte) 89), var3 != 0);
+          bk.a(mk.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) runtimeException), "c.D(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "c.D(" + param0 + ')');
         }
     }
 
@@ -3816,7 +3816,7 @@ abstract class c extends fj {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3834,7 +3834,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "c.T(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "c.T(" + param0 + ')');
         }
     }
 
@@ -3852,7 +3852,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "c.R(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "c.R(" + param0 + ')');
         }
     }
 
@@ -3869,7 +3869,7 @@ abstract class c extends fj {
           }
           this.setBackground(java.awt.Color.black);
           hf.field_I = this.field_m;
-          be.a(-115, hf.field_I);
+          KeyboardInputHandler.a(-115, hf.field_I);
           vd.a(this.field_l, hf.field_I, param6, this.field_x, this.field_q, 124, this.field_t, 5000, this.field_s, param2, this.field_o, 5000, jk.field_a, this.field_n);
           eb.a(jk.field_a, this.field_l, param2, this.field_t, this.field_q, (byte) -62, hf.field_I, this.field_s, this.field_o);
           wh.a(192);
@@ -3886,7 +3886,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) runtimeException), "c.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "c.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -3905,7 +3905,7 @@ abstract class c extends fj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "c.L(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "c.L(" + param0 + ')');
         }
     }
 
@@ -3930,7 +3930,7 @@ abstract class c extends fj {
               throw new IllegalStateException();
             }
             if (var4_int == 1) {
-              var5_int = ti.a(ge.a(-23339), a.e(48), param2 ^ 10);
+              var5_int = ti.a(GzipInflater.a(-23339), a.e(48), param2 ^ 10);
               if (-1 != var5_int) {
                 q.a(ll.field_f, var5_int, -106, e.field_a);
                 ll.field_f = null;
@@ -4055,7 +4055,7 @@ abstract class c extends fj {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4 = (RuntimeException) (Object) decompiledCaughtException;
-            throw ma.a((Throwable) ((Object) var4), "c.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+            throw ma.wrapException((Throwable) ((Object) var4), "c.S(" + param0 + ',' + param1 + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

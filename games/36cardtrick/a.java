@@ -264,31 +264,31 @@ final class a extends ch {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ah.field_c[ei.field_f] = param4;
+        ah.field_c[DirectByteArrayStore.field_f] = param4;
         if (param3 != -23576) {
           field_o = 23;
         }
-        re.field_c[ei.field_f] = ei.field_f;
-        p.field_n[ei.field_f] = param1;
+        re.field_c[DirectByteArrayStore.field_f] = DirectByteArrayStore.field_f;
+        p.field_n[DirectByteArrayStore.field_f] = param1;
         if (bd.field_F < param1) {
           ah.field_d = param1;
         }
         if (param1 < fk.field_h) {
           mf.field_g = param1;
         }
-        q.field_h[ei.field_f] = param2;
-        mj.field_b[ei.field_f] = param0;
-        ij.field_c[ei.field_f] = param5;
+        q.field_h[DirectByteArrayStore.field_f] = param2;
+        mj.field_b[DirectByteArrayStore.field_f] = param0;
+        ij.field_c[DirectByteArrayStore.field_f] = param5;
         int var6 = param5 + (param2 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param2 / var6;
-        db.field_l[ei.field_f] = var7;
+        db.field_l[DirectByteArrayStore.field_f] = var7;
         if (!(mf.field_g <= var7)) {
           mf.field_g = var7;
         }
         if (!(var7 <= ah.field_d)) {
           ah.field_d = var7;
         }
-        ei.field_f = ei.field_f + 1;
+        DirectByteArrayStore.field_f = DirectByteArrayStore.field_f + 1;
     }
 
     final void a(Object param0, boolean param1, boolean param2) {
@@ -373,7 +373,7 @@ final class a extends ch {
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -420,7 +420,7 @@ final class a extends ch {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -509,7 +509,7 @@ final class a extends ch {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -573,7 +573,7 @@ final class a extends ch {
           }
           qa.field_b.b(param1, param3, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "a.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "a.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

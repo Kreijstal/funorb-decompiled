@@ -72,7 +72,7 @@ final class d {
         int var13Lifetime1Lifetime1;
         var16 = Main.field_T;
         try {
-          var17 = new PacketBuffer(ac.a(-115, param0));
+          var17 = new PacketBuffer(ClientException.decompressContainer(-115, param0));
           var4 = var17.readUnsignedByte(-125);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -237,7 +237,7 @@ final class d {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -256,9 +256,9 @@ final class d {
           param0.removeMouseListener(wc.field_B);
           param0.removeMouseMotionListener(wc.field_B);
           param0.removeFocusListener(wc.field_B);
-          ge.field_a = param1;
+          GzipInflater.field_a = param1;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "d.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "d.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class d {
           }
           this.a(param0, -4451);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "d.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "d.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

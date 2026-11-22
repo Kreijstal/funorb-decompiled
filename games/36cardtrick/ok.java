@@ -24,7 +24,7 @@ final class ok {
             field_a = (char[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

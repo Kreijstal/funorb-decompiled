@@ -105,7 +105,7 @@ final class j extends qg {
           var3.field_E = true;
           var3.a(115, (lk) (this));
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "j.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "j.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -143,13 +143,13 @@ final class j extends qg {
 
     final static void j(int param0) {
         r.field_p = false;
-        ei.field_e = false;
+        DirectByteArrayStore.field_e = false;
         gh.a(-1, 31888);
         jc.field_P = tj.field_F;
         if (param0 != -23687) {
           field_A = (String) null;
         }
-        ei.field_d = tj.field_F;
+        DirectByteArrayStore.field_d = tj.field_F;
     }
 
     static {

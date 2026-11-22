@@ -77,7 +77,7 @@ final class vd extends he {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -111,8 +111,8 @@ final class vd extends he {
             rd.field_j = new w(param11);
             na.field_r = new w(param7);
             hj.field_l = param8;
-            ag.field_e = param10;
-            ag.field_d = param4;
+            MouseInputHandler.field_e = param10;
+            MouseInputHandler.field_d = param4;
             nf.field_c = param0;
             td.field_b = param12;
             mk.field_k = param6;
@@ -150,7 +150,7 @@ final class vd extends he {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param13).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -193,7 +193,7 @@ final class vd extends he {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

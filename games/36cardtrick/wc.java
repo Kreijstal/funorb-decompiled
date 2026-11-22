@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wc extends qg {
-    static ag field_B;
+    static MouseInputHandler field_B;
     static bj field_A;
 
     final static void j(int param0) {
@@ -15,7 +15,7 @@ final class wc extends qg {
         ca.field_a = param2;
         ug.field_h = param0;
         if (param1 != -16923) {
-          field_B = (ag) null;
+          field_B = (MouseInputHandler) null;
         }
     }
 
@@ -24,7 +24,7 @@ final class wc extends qg {
         try {
           this.field_y = param6;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "wc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "wc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,12 +57,12 @@ final class wc extends qg {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "wc.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "wc.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     static {
-        field_B = new ag();
+        field_B = new MouseInputHandler();
         field_A = null;
     }
 }

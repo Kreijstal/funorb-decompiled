@@ -23,7 +23,7 @@ public final class Main extends c {
     private int field_O;
     static String field_M;
     private int field_bb;
-    static te field_V;
+    static MouseWheelInput field_V;
     private int field_Q;
     private int field_U;
     private byte[] field_H;
@@ -120,7 +120,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.NA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.NA(" + param0 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.LB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.LB(" + param0 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ public final class Main extends c {
           sc.a((byte) 81, lc.field_a[1]);
           ai.field_m = 0;
           nb.field_e = 0;
-          rj.field_p = af.field_ob - vf.field_b;
+          rj.field_p = af.field_ob - ByteArrayStore.field_b;
           ue.field_d = param0;
           dg.field_J = 0;
           if (ec.field_f >= 2) {
@@ -164,7 +164,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.BB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.BB(" + param0 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ public final class Main extends c {
             this.field_A = 77;
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.TA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.TA(" + param0 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.LA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.LA(" + param0 + ')');
         }
     }
 
@@ -229,7 +229,7 @@ public final class Main extends c {
           param0 = param0 % 60;
           this.field_Z = String.valueOf(var3_int) + ':' + String.valueOf(param0 / 10) + String.valueOf(param0 % param1);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.RA(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -241,7 +241,7 @@ public final class Main extends c {
         var3 = field_T;
         try {
           hb.field_d = hb.field_d + 1;
-          vf.field_b = vf.field_b + (af.field_ob << 1);
+          ByteArrayStore.field_b = ByteArrayStore.field_b + (af.field_ob << 1);
           rj.field_p = rj.field_p - (af.field_ob << 1);
           if (param0 != -97283608) {
             return;
@@ -302,7 +302,7 @@ public final class Main extends c {
                       ra.field_d = sk.a(4, (byte) 125);
                       if (0 < ai.field_m &&
                         !jf.field_n) {
-                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], vf.field_b, rj.field_p, tk.field_c, (byte) 80, 3);
+                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 80, 3);
                       }
                       dj.field_a = (byte)(rk.field_X >> 8);
                       if (var3 != 0) {
@@ -433,7 +433,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.PA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.PA(" + param0 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.UA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.UA(" + param0 + ')');
         }
     }
 
@@ -470,7 +470,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.FB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.FB(" + param0 + ')');
         }
     }
 
@@ -550,7 +550,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.EA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.EA(" + param0 + ')');
         }
     }
 
@@ -569,7 +569,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.EB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.EB(" + param0 + ')');
         }
     }
 
@@ -640,7 +640,7 @@ public final class Main extends c {
               }
               if (decompiledFrameRemainder0) {
                 if (!eh.d(19314)) {
-                  if (!ag.b(-109)) {
+                  if (!MouseInputHandler.b(-109)) {
                     dh.field_m = dh.field_m + 20L;
                     if (ff.field_b == -1) {
                       if (dj.field_a != -1) {
@@ -672,7 +672,7 @@ public final class Main extends c {
                       tk.field_c = tk.field_c + 8;
                       jl.field_h = jl.field_h + var2_int;
                       ol.field_W = ol.field_W - var2_int;
-                      vf.field_b = vf.field_b + (af.field_ob << 3);
+                      ByteArrayStore.field_b = ByteArrayStore.field_b + (af.field_ob << 3);
                       rj.field_p = rj.field_p - (af.field_ob << 3);
                       decompiledFrameRemainder0 = (var3 != 0);
                     }
@@ -774,7 +774,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "Main.BA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "Main.BA(" + param0 + ')');
         }
     }
 
@@ -790,7 +790,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var5), "Main.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) var5), "Main.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -911,7 +911,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "Main.KB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "Main.KB(" + param0 + ')');
         }
     }
 
@@ -933,7 +933,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.JB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.JB(" + param0 + ')');
         }
     }
 
@@ -985,7 +985,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var9), "Main.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ma.wrapException((Throwable) ((Object) var9), "Main.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1002,7 +1002,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.DA(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.DA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1015,7 +1015,7 @@ public final class Main extends c {
           ca.field_b = 4086842;
           af.field_jb = 4473924;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.CB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.CB(" + param0 + ')');
         }
     }
 
@@ -1094,7 +1094,7 @@ public final class Main extends c {
           if (ai.field_m > 0 &&
             !jf.field_n &&
             !dl.d(0)) {
-            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], vf.field_b, rj.field_p, tk.field_c, (byte) 70, 3);
+            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 70, 3);
           }
           sc.a((byte) 53, lc.field_a[0]);
           this.a(11246, 6, 3, false);
@@ -1102,7 +1102,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3), "Main.W(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3), "Main.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1116,7 +1116,7 @@ public final class Main extends c {
         try {
           field_y = null;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.OA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.OA(" + param0 + ')');
         }
     }
 
@@ -1134,7 +1134,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.HA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.HA(" + param0 + ')');
         }
     }
 
@@ -1153,14 +1153,14 @@ public final class Main extends c {
           var4 = this.field_H[var2_int];
           this.field_H[var2_int] = this.field_H[var3];
           this.field_H[var3] = (byte) var4;
-          vf.field_b = vf.field_b + af.field_ob;
+          ByteArrayStore.field_b = ByteArrayStore.field_b + af.field_ob;
           tk.field_c = tk.field_c + 1;
           rj.field_p = rj.field_p - af.field_ob;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.DB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.DB(" + param0 + ')');
         }
     }
 
@@ -1238,7 +1238,7 @@ public final class Main extends c {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1286,7 +1286,7 @@ public final class Main extends c {
           bd.field_H.b(0, 0);
           qa.field_b.c(Integer.toString(dg.field_J), 85, 80, 16777215, -1);
           stackIn_4_0 = qa.field_b;
-          stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + vf.field_b >> 8);
+          stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
           stackIn_4_2 = 130;
           stackIn_4_3 = 238;
           if (jf.field_n) {
@@ -1331,7 +1331,7 @@ public final class Main extends c {
               var5 = -32 + var6 / 2;
             }
             qk.field_a[var4.field_h].a(8, var5);
-            qa.field_b.b(ge.field_b[var4.field_h], 45, var5 + qa.field_b.field_s, 0, -1);
+            qa.field_b.b(GzipInflater.field_b[var4.field_h], 45, var5 + qa.field_b.field_s, 0, -1);
           }
           boolean decompiledSharedTail0 = (this.field_U != 4);
           if (!decompiledSharedTail0) {
@@ -1453,7 +1453,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3_ref), "Main.IB(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3_ref), "Main.IB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1474,7 +1474,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.JA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.JA(" + param0 + ')');
         }
     }
 
@@ -1683,8 +1683,8 @@ public final class Main extends c {
             return stackIn_71_0;
           }
           if (hf.field_H != null) {
-            vb.field_k = ce.a(-126, "unachieved", "basic", hf.field_H);
-            qi.field_D = ce.a(-128, "orbcoin", "basic", hf.field_H);
+            vb.field_k = DelegatingCanvas.a(-126, "unachieved", "basic", hf.field_H);
+            qi.field_D = DelegatingCanvas.a(-128, "orbcoin", "basic", hf.field_H);
             hf.field_H = null;
             stackIn_74_0 = 1;
             return stackIn_74_0;
@@ -1757,9 +1757,9 @@ public final class Main extends c {
           var6_ref.a(0, var7);
           vj.b(0, 261, 415, 154, 5081598, 11974562);
           lh.a("ld", mh.field_c, "", -96).a(0, 0);
-          td.field_c[2] = ce.a(-127, "lc", "", mh.field_c);
-          td.field_c[1] = ce.a(-127, "go", "", mh.field_c);
-          db.field_o = ce.a(-126, "gunsight", "", mh.field_c);
+          td.field_c[2] = DelegatingCanvas.a(-127, "lc", "", mh.field_c);
+          td.field_c[1] = DelegatingCanvas.a(-127, "go", "", mh.field_c);
+          db.field_o = DelegatingCanvas.a(-126, "gunsight", "", mh.field_c);
           qk.field_a = gl.a("achievements", mh.field_c, "", -13244);
           var8 = qk.field_a;
           var9_int = 0;
@@ -1790,7 +1790,7 @@ public final class Main extends c {
             ij.a(var10_ref_kc, (byte) 123);
             var9_int++;
           } while (var46 == 0);
-          var8_array = ce.a(-126, "woodpal", "", mh.field_c).field_r;
+          var8_array = DelegatingCanvas.a(-126, "woodpal", "", mh.field_c).field_r;
           var9 = new hg(new int[]{1523066134, 1523066134, 416118573, -1554371402, -117777497, 383414059, -751582233, -486225926});
           mg.field_j[4] = new kc(640, 480);
           mg.field_j[4].c();
@@ -1843,16 +1843,16 @@ public final class Main extends c {
           var13.field_c = 0;
           di.a(var13, 4997716, 0, 5000797, 13449, var14Lifetime1);
           vj.b(0, 316, 640, 164, 5066333, 9336387);
-          var15 = ce.a(-127, "cloud1mask", "", mh.field_c);
-          var16 = ce.a(-127, "cloud2mask", "", mh.field_c);
-          var17 = ce.a(-128, "cloud3mask", "", mh.field_c);
-          var18 = ce.a(-127, "cloud4mask", "", mh.field_c);
-          var19 = ce.a(-126, "cloud5mask", "", mh.field_c);
-          var20 = ce.a(-127, "cloud6mask", "", mh.field_c);
-          var21 = ce.a(-127, "cloud7mask", "", mh.field_c);
-          var22 = ce.a(-128, "menucactus", "", mh.field_c);
-          var23 = ce.a(-127, "logocactus", "", mh.field_c);
-          cg.field_i = ce.a(-128, "screw", "", mh.field_c);
+          var15 = DelegatingCanvas.a(-127, "cloud1mask", "", mh.field_c);
+          var16 = DelegatingCanvas.a(-127, "cloud2mask", "", mh.field_c);
+          var17 = DelegatingCanvas.a(-128, "cloud3mask", "", mh.field_c);
+          var18 = DelegatingCanvas.a(-127, "cloud4mask", "", mh.field_c);
+          var19 = DelegatingCanvas.a(-126, "cloud5mask", "", mh.field_c);
+          var20 = DelegatingCanvas.a(-127, "cloud6mask", "", mh.field_c);
+          var21 = DelegatingCanvas.a(-127, "cloud7mask", "", mh.field_c);
+          var22 = DelegatingCanvas.a(-128, "menucactus", "", mh.field_c);
+          var23 = DelegatingCanvas.a(-127, "logocactus", "", mh.field_c);
+          cg.field_i = DelegatingCanvas.a(-128, "screw", "", mh.field_c);
           d.field_u[0] = var12.b();
           d.field_u[0].c();
           re.a(16777215, 0, 0, (byte) 111, var16);
@@ -1861,9 +1861,9 @@ public final class Main extends c {
           re.a(16777215, 0, 0, (byte) 102, var19);
           var22.d(0, 0);
           var23.d(0, 0);
-          ce.a(-128, "maintitle", "", mh.field_c).d(0, 0);
-          ce.a(-126, "mmextra1", "", mh.field_c).d(0, 0);
-          ce.a(-128, "mmextra2", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-128, "maintitle", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-126, "mmextra1", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-128, "mmextra2", "", mh.field_c).d(0, 0);
           d.field_u[1] = var12.b();
           d.field_u[1].c();
           re.a(16777215, 0, 0, (byte) 71, var16);
@@ -1871,10 +1871,10 @@ public final class Main extends c {
           re.a(16777215, 0, 0, (byte) 118, var20);
           var22.d(0, 0);
           var23.d(0, 0);
-          ce.a(-128, "pausetitle", "", mh.field_c).d(0, 0);
-          ce.a(-126, "pmextra1", "", mh.field_c).d(0, 0);
-          ce.a(-128, "pmextra2", "", mh.field_c).d(0, 0);
-          d.field_u[2] = ce.a(-126, "titlescreen", "", mh.field_c);
+          DelegatingCanvas.a(-128, "pausetitle", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-126, "pmextra1", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-128, "pmextra2", "", mh.field_c).d(0, 0);
+          d.field_u[2] = DelegatingCanvas.a(-126, "titlescreen", "", mh.field_c);
           d.field_u[3] = var12.b();
           d.field_u[3].c();
           vj.g(153, 105, 491, 397);
@@ -1887,10 +1887,10 @@ public final class Main extends c {
           cg.field_i.d(176, 363);
           cg.field_i.d(461, 363);
           var23.d(4, -38);
-          ce.a(-127, "insttitle", "", mh.field_c).d(0, 0);
-          ce.a(-126, "instextra1", "", mh.field_c).d(0, 0);
-          ce.a(-128, "instextra2", "", mh.field_c).d(0, 0);
-          ce.a(-126, "instextra3", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-127, "insttitle", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-126, "instextra1", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-128, "instextra2", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-126, "instextra3", "", mh.field_c).d(0, 0);
           Crc32Table.field_d = new kc[9];
           var24 = new kc(640, 480);
           var24.c();
@@ -1930,8 +1930,8 @@ public final class Main extends c {
           re.a(16777215, 0, 0, (byte) 52, var18);
           re.a(16777215, 0, 0, (byte) 78, var19);
           re.a(16777215, 0, 0, (byte) 74, var20);
-          ce.a(-128, "achtitle", "", mh.field_c).d(0, 0);
-          var27 = ce.a(-127, "achextra2", "", mh.field_c);
+          DelegatingCanvas.a(-128, "achtitle", "", mh.field_c).d(0, 0);
+          var27 = DelegatingCanvas.a(-127, "achextra2", "", mh.field_c);
           var27.d(0, 0);
           var23.d(0, -38);
           vj.g(225, 93, 589, 407);
@@ -1952,8 +1952,8 @@ public final class Main extends c {
           re.a(16777215, 0, 0, (byte) 65, var18);
           re.a(16777215, 0, 0, (byte) 103, var20);
           re.a(16777215, 0, 0, (byte) 100, var21);
-          ce.a(-128, "ropeout", "", mh.field_c).d(0, 0);
-          ce.a(-128, "ropein", "", mh.field_c).e(0, 0, 116);
+          DelegatingCanvas.a(-128, "ropeout", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-128, "ropein", "", mh.field_c).e(0, 0, 116);
           vj.c(198, 33, 415, 415, 1);
           ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           a.a(16777215, vk.field_j, -1, 39, 6697779, 113);
@@ -2051,7 +2051,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var3_ref2), "Main.GA(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var3_ref2), "Main.GA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2072,11 +2072,11 @@ public final class Main extends c {
           ve.a(param0 + 8192);
           sh.clearStaticReferences(4352);
           c.g((byte) 108);
-          ac.clearStaticReferences((byte) -118);
+          ClientException.clearStaticReferences((byte) -118);
           fj.a((byte) -67);
           rf.clearStaticReferences(param0 ^ -19749);
-          ag.a((byte) 98);
-          te.a(87);
+          MouseInputHandler.a((byte) 98);
+          MouseWheelInput.a(87);
           vj.c();
           ee.clearStaticReferences();
           wh.clearStaticReferences(120);
@@ -2115,7 +2115,7 @@ public final class Main extends c {
           vg.clearStaticReferences((byte) -72);
           sb.a(false);
           d.a(true);
-          ge.a((byte) -117);
+          GzipInflater.a((byte) -117);
           pe.clearStaticReferences((byte) -72);
           wf.a(param0 ^ 3);
           al.clearStaticReferences((byte) -70);
@@ -2151,7 +2151,7 @@ public final class Main extends c {
           i.clearStaticReferences(62);
           sk.clearStaticReferences(-12865);
           ke.clearStaticReferences((byte) -124);
-          vf.clearStaticReferences(-118);
+          ByteArrayStore.clearStaticReferences(-118);
           ri.clearStaticReferences(-2);
           dc.clearStaticReferences();
           lg.clearStaticReferences(param0 + 18002);
@@ -2202,7 +2202,7 @@ public final class Main extends c {
           f.a(-663255224);
           ca.clearStaticReferences((byte) 127);
           tl.clearStaticReferences(80);
-          vc.a(param0 + 0);
+          ProxyAuthenticationRequiredException.a(param0 + 0);
           ec.d(param0 ^ 10);
           jf.d(param0 ^ -14143);
           hi.clearStaticReferences(0);
@@ -2228,7 +2228,7 @@ public final class Main extends c {
           dj.clearStaticReferences(52);
           lc.b(param0 + 91);
           bf.a((byte) -121);
-          ei.d(0);
+          DirectByteArrayStore.d(0);
           ub.d(-126);
           fl.clearStaticReferences(param0 ^ 31237);
           qi.d((byte) 77);
@@ -2289,7 +2289,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.FA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.FA(" + param0 + ')');
         }
         if (var3 != 0) {
           stackIn_11_0 = (!fj.field_g);
@@ -2363,7 +2363,7 @@ public final class Main extends c {
             }
           }
           if (!eh.d(19314)) {
-            if (ag.b(-128)) {
+            if (MouseInputHandler.b(-128)) {
               if (null == gj.field_a) {
                 stackIn_48_0 = r.field_q;
               } else {
@@ -2401,7 +2401,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "Main.WA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "Main.WA(" + param0 + ')');
         }
     }
 
@@ -2428,7 +2428,7 @@ public final class Main extends c {
                 stackIn_9_0 = -1;
                 return stackIn_9_0;
               }
-              var4 = -5 + ag.field_a - 196;
+              var4 = -5 + MouseInputHandler.field_a - 196;
               if (var4 > 0 &&
                 var4 % 69 < 64) {
                 var5 = var4 / 69;
@@ -2453,7 +2453,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.VA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.VA(" + param0 + ')');
         }
     }
 
@@ -2598,7 +2598,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.KA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.KA(" + param0 + ')');
         }
     }
 
@@ -2630,7 +2630,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1_ref), "Main.AA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1_ref), "Main.AA(" + param0 + ')');
         }
     }
 
@@ -2745,7 +2745,7 @@ public final class Main extends c {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
         }
     }
 
@@ -2753,7 +2753,7 @@ public final class Main extends c {
         try {
           this.a(480, "36cardtrick", 10);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "Main.init()");
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.init()");
         }
     }
 
@@ -2782,7 +2782,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var5), "Main.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) var5), "Main.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2798,7 +2798,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2), "Main.AB(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2), "Main.AB(" + param0 + ')');
         }
     }
 
@@ -2834,14 +2834,14 @@ public final class Main extends c {
                   this.field_K = this.field_K - 1;
                   af.field_ob = af.field_ob - 512;
                   ai.field_m = ai.field_m + 2;
-                  vf.field_b = vf.field_b - (tk.field_c << 9);
+                  ByteArrayStore.field_b = ByteArrayStore.field_b - (tk.field_c << 9);
                   rj.field_p = rj.field_p + (tk.field_c << 9);
                 } else {
                   PacketBuffer.a(ve.field_c, param0 ^ 13426);
                   this.a(11246, 7, 3, false);
                 }
               } else {
-                vf.field_b = vf.field_b - (tk.field_c * dg.field_J << 7);
+                ByteArrayStore.field_b = ByteArrayStore.field_b - (tk.field_c * dg.field_J << 7);
                 this.field_J = this.field_J - 1;
                 ai.field_m = ai.field_m + dg.field_J;
                 rj.field_p = rj.field_p + ((tk.field_c + 1) * dg.field_J << 7);
@@ -2911,7 +2911,7 @@ public final class Main extends c {
                   }
                 }
               } else {
-                while (ge.b((byte) -114)) {
+                while (GzipInflater.b((byte) -114)) {
                   if (tb.field_d != 13) {
                     continue;
                   }
@@ -2920,12 +2920,12 @@ public final class Main extends c {
                 }
               }
               if (!(2 > ec.field_f)) {
-                this.field_L = ge.field_c[66];
+                this.field_L = GzipInflater.field_c[66];
                 jf.field_n = jf.field_n | this.field_L;
-                if (ge.field_c[25]) {
+                if (GzipInflater.field_c[25]) {
                   this.field_db = 1000;
                 }
-                if (!(!ge.field_c[51])) {
+                if (!(!GzipInflater.field_c[51])) {
                   this.field_Q = 1;
                   jf.field_n = true;
                   var3Lifetime2 = 0;
@@ -2971,13 +2971,13 @@ public final class Main extends c {
               rj.field_p = rj.field_p + (var4 << 7);
               var4 = var4 * tk.field_c << 7;
               bc.field_a = bc.field_a + 1;
-              vf.field_b = vf.field_b - var4;
+              ByteArrayStore.field_b = ByteArrayStore.field_b - var4;
               ol.field_W = ol.field_W + tk.field_a;
               rj.field_p = rj.field_p + var4;
               fieldTemp$1 = this.field_Q - 1;
               this.field_Q = this.field_Q - 1;
               if (fieldTemp$1 == 0) {
-                vf.field_b = vf.field_b - (tk.field_c * 50 << 7);
+                ByteArrayStore.field_b = ByteArrayStore.field_b - (tk.field_c * 50 << 7);
                 af.field_ob = af.field_ob - 6400;
                 ai.field_m = ai.field_m + 50;
                 rj.field_p = rj.field_p + 6400;
@@ -3017,7 +3017,7 @@ public final class Main extends c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "Main.CA(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "Main.CA(" + param0 + ')');
         }
     }
 

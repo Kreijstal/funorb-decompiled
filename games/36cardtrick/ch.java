@@ -25,7 +25,7 @@ abstract class ch {
           int var3 = -108 / ((param0 + 29) / 58);
           var2.c();
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

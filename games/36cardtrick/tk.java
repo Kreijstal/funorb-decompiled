@@ -167,7 +167,7 @@ final class tk {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class tk {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class tk {
         try {
           this.a((byte) -118, param1, param0, param1.length);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -344,10 +344,10 @@ final class tk {
           oc.a((java.awt.Component) ((Object) param0), (byte) 6);
           qa.a((java.awt.Component) ((Object) param0), (byte) 119);
           if (Main.field_V != null) {
-            Main.field_V.a(0, (java.awt.Component) ((Object) param0));
+            Main.field_V.attach(0, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "tk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "tk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class tk {
           this.field_h = new byte[param2];
           this.field_e = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

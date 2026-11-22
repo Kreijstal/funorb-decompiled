@@ -17,7 +17,7 @@ abstract class k implements ba {
           return;
         }
         cg.field_f = true;
-        ei.field_e = true;
+        DirectByteArrayStore.field_e = true;
         sd.field_c.k(117);
         ca.a(ni.field_e, false, 16777215);
     }

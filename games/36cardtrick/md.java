@@ -26,7 +26,7 @@ final class md {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == fe.field_c) {
-            fe.field_c = td.field_b.a(mk.field_k, (byte) -108, ag.field_e);
+            fe.field_c = td.field_b.a(mk.field_k, (byte) -108, MouseInputHandler.field_e);
           }
           if (param0 <= 47) {
             return true;
@@ -50,8 +50,8 @@ final class md {
               ni.field_d = stackIn_13_0;
               hc.field_f = stackIn_13_0;
               sb.field_a = stackIn_13_0;
-              ra.field_b = vf.field_a;
-              nf.a(na.field_r, false, ag.field_d, kh.field_g, kj.field_t);
+              ra.field_b = ByteArrayStore.field_a;
+              nf.a(na.field_r, false, MouseInputHandler.field_d, kh.field_g, kj.field_t);
               fe.a((byte) -36, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

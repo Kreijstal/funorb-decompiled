@@ -59,7 +59,7 @@ final class vk {
 
     vk(boolean param0) {
         this.field_d = ff.field_a;
-        this.field_l = be.field_a;
+        this.field_l = KeyboardInputHandler.field_a;
         this.field_f = gg.field_a;
         if (!param0) {
           this.field_a = null;

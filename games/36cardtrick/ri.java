@@ -39,7 +39,7 @@ final class ri {
           var1.c(0, 0);
           gg.a(14756);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ')');
         }
     }
 

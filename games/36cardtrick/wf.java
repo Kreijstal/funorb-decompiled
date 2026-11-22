@@ -27,7 +27,7 @@ final class wf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ final class wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var2_ref), "wf.A(" + param0 + ',' + param1 + ')');
+          throw ma.wrapException((Throwable) ((Object) var2_ref), "wf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class wf {
           }
           uh.a(var4, 100, var2, var3, param1);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

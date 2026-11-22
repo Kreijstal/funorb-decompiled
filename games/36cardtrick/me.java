@@ -215,7 +215,7 @@ final class me {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class me {
           field_a = null;
           field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "me.A(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "me.A(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class me {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

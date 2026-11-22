@@ -49,7 +49,7 @@ final class pa extends dg {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw ma.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+            throw ma.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -63,7 +63,7 @@ final class pa extends dg {
           this.field_R = this.field_R + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "pa.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "pa.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class pa extends dg {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (vf.field_a == ra.field_b) {
+          if (ByteArrayStore.field_a == ra.field_b) {
             ni.field_f = null;
             na.field_r.position = 0;
             if (param0 != null) {
@@ -240,8 +240,8 @@ final class pa extends dg {
               stackIn_60_0 = 249;
               return stackIn_60_0;
             }
-            var9Lifetime3 = ag.field_e;
-            ag.field_e = hj.field_l;
+            var9Lifetime3 = MouseInputHandler.field_e;
+            MouseInputHandler.field_e = hj.field_l;
             hj.field_l = var9Lifetime3;
             lk.field_w = true;
           }
@@ -272,7 +272,7 @@ final class pa extends dg {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class pa extends dg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ final class pa extends dg {
           this.field_P = param1;
           this.a(param5, param3, param4, param2, true);
         } catch (RuntimeException runtimeException) {
-          throw ma.a((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ma.wrapException((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ final class pa extends dg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ma.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ final class pa extends dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) ((Object) var1), "pa.C(" + param0 + ')');
+          throw ma.wrapException((Throwable) ((Object) var1), "pa.C(" + param0 + ')');
         }
     }
 
