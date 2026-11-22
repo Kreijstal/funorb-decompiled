@@ -216,7 +216,7 @@ final class PlayPhase extends MatchPhase {
               var6Lifetime1Lifetime2 = var5.getId((byte) -82);
               if (this.matchState.gameMode != 3) {
                 if (this.matchState.getCourseId(0) != -1) {
-                  var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
+                  var7 = LegacyVertexBufferSetup.findCourseRoom(var6Lifetime1Lifetime2, 0, this.matchState.getCourseId(0));
                 } else {
                   if (var5.isConnectorRoom(0)) {
                     var7 = mna.findRoomDefinitionFrom(0, var6Lifetime1Lifetime2);
@@ -225,7 +225,7 @@ final class PlayPhase extends MatchPhase {
                   }
                 }
               } else {
-                var7 = doa.findCourseRoom(var6Lifetime1Lifetime2, 0, ChatChannelType.getSelectedCourseIndex((byte) 64));
+                var7 = LegacyVertexBufferSetup.findCourseRoom(var6Lifetime1Lifetime2, 0, ChatChannelType.getSelectedCourseIndex((byte) 64));
               }
               var8Lifetime1 = 64;
               var9 = -64 + SwitchLinkList.getCanvasHeight(0);

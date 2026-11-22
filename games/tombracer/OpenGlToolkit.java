@@ -19,7 +19,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     static int field_H;
     private java.awt.Canvas field_ad;
     private int field_Y;
-    private doa field_Ec;
+    private LegacyVertexBufferSetup field_Ec;
     int field_gb;
     private LegacyTextureCache field_hd;
     private LegacyOpenGlEffectManager field_Hb;
@@ -1719,7 +1719,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         var20 = null;
         this.field_p = new Hashtable();
         this.field_dc = 128;
-        this.field_Ec = new doa();
+        this.field_Ec = new LegacyVertexBufferSetup();
         this.field_fc = new OpenGlTransform3D();
         this.field_mc = new OpenGlTransform3D();
         this.field_Ob = false;

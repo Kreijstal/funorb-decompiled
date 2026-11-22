@@ -347,7 +347,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         ObjectList.releaseStatics(true);
         pra.releaseStatics(param0 + 3548);
         tea.releaseStatics((byte) -124);
-        ida.releaseStatics((byte) 122);
+        CookieDateFormatter.releaseStatics((byte) 122);
         ContextMenuRow.releaseStatics(119);
         TabbedPanel.releaseStatics(0);
         NameEntryPopup.releaseStatics(2);
@@ -957,7 +957,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         PitSnakeModel.releaseStatics(-1);
         PlatformTile.releaseStatics((byte) -114);
         BridgeTile.releaseStatics(false);
-        cva.releaseStatics(1);
+        BooleanIntPair.releaseStatics(1);
         PasswordValidator.releaseStatics(false);
         EmailSyntaxValidator.releaseStatics(-1852);
         mn.releaseStatics(-58);

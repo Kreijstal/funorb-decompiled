@@ -88,9 +88,9 @@ final class IntIntHashTable {
         }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
-          return 6144 <= param1 ? ida.field_b[param1 - 6144] : -ida.field_b[-param1 + 6144];
+          return 6144 <= param1 ? CookieDateFormatter.field_b[param1 - 6144] : -CookieDateFormatter.field_b[-param1 + 6144];
         }
-        return param1 >= 2048 ? -ida.field_b[-2048 + param1] : ida.field_b[2048 - param1];
+        return param1 >= 2048 ? -CookieDateFormatter.field_b[-2048 + param1] : CookieDateFormatter.field_b[2048 - param1];
     }
 
     final static goa createCredentials(int param0) {

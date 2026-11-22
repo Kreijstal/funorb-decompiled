@@ -242,11 +242,11 @@ final class TileOperator extends TextureOperator {
           param3++;
           var11.drawLoadingProgress(incrementValue$6, (byte) 47, param1);
           var15 = "rope_bridge";
-          cva.field_c = new AnimationSequence[4];
-          cva.field_c[0] = PillarComponent.loadAnimationSequence("start", -127, param5, var15);
-          cva.field_c[1] = PillarComponent.loadAnimationSequence("end", -127, param5, var15);
-          cva.field_c[2] = PillarComponent.loadAnimationSequence("loop_start", -127, param5, var15);
-          cva.field_c[3] = PillarComponent.loadAnimationSequence("loop_section", -126, param5, var15);
+          BooleanIntPair.field_c = new AnimationSequence[4];
+          BooleanIntPair.field_c[0] = PillarComponent.loadAnimationSequence("start", -127, param5, var15);
+          BooleanIntPair.field_c[1] = PillarComponent.loadAnimationSequence("end", -127, param5, var15);
+          BooleanIntPair.field_c[2] = PillarComponent.loadAnimationSequence("loop_start", -127, param5, var15);
+          BooleanIntPair.field_c[3] = PillarComponent.loadAnimationSequence("loop_section", -126, param5, var15);
           LoadProfileCommand.field_p = new AnimationSequence[13];
           if (param2) {
             field_p = false;

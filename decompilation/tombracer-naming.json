@@ -1716,6 +1716,14 @@
       "renamedSymbol": "C:SwitchModel"
     },
     {
+      "symbol": "C:cva",
+      "originalName": "cva",
+      "to": "BooleanIntPair",
+      "evidence": "Complete class shape/constructor and all Java type references searched. Instance state is exactly boolean+int, constructor stores both; no Java instance consumers establish a narrower domain. Use truthful structural pair name. Preserve unrelated static texture-transform token, animation/string globals, resize helper and cleanup behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BooleanIntPair"
+    },
+    {
       "symbol": "C:cw",
       "originalName": "cw",
       "to": "LegacyPostProcessChain",
@@ -1922,6 +1930,14 @@
       "evidence": "Texture coordinate generation constants HardwareOpenGlToolkit.applyTexCoordGeneration maps to GL_EYE_LINEAR, GL_NORMAL_MAP and GL_REFLECTION_MAP.",
       "confidence": "reviewed",
       "renamedSymbol": "C:TextureCoordinateGeneration"
+    },
+    {
+      "symbol": "C:doa",
+      "originalName": "doa",
+      "to": "LegacyVertexBufferSetup",
+      "evidence": "Complete class and OpenGlToolkit construction/resource setup consumers reviewed. Owns LegacyVertexArray allocated at196584bytes/stride24 and constructs three attribute pointers; preserve discarded pointer/buffer allocations, recursion/guards and unrelated account failure factory/fixed multiply/room lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LegacyVertexBufferSetup"
     },
     {
       "symbol": "C:dp",
@@ -3226,6 +3242,14 @@
       "evidence": "CourseGenerator TextLayout.startSinglePlayerMatch creates for the chosen course and a random seed.",
       "confidence": "reviewed",
       "renamedSymbol": "C:SinglePlayerCourseGenerator"
+    },
+    {
+      "symbol": "C:ida",
+      "originalName": "ida",
+      "to": "CookieDateFormatter",
+      "evidence": "Complete formatting/cleanup methods and class shape plus both Expires= cookie callers reviewed. Formats Calendar-derived date/GMT string; preserve day/month tables, guard-dependent Lost string clear, arithmetic and all output. Unrelated2049entry numeric initializer is unselected immutable data; exact literal hash pinned rather than changing or assigning unproved semantics.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:CookieDateFormatter"
     },
     {
       "symbol": "C:ie",
@@ -9321,7 +9345,7 @@
       "to": "pendingTargetIds",
       "evidence": "Target ids read from the room, resolved and cleared by resolveTargets.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:ComponentTargetList.pendingTargetIds:[Lcva;"
+      "renamedSymbol": "F:ComponentTargetList.pendingTargetIds:[LBooleanIntPair;"
     },
     {
       "symbol": "F:f.field_f:[Lcsa;",
@@ -23772,12 +23796,20 @@
       "renamedSymbol": "M:SwitchModel.closeLobbyOverlays(B)V"
     },
     {
+      "symbol": "M:cva.a(I)V",
+      "originalName": "a",
+      "to": "enableViewportResizing",
+      "evidence": "Complete helper, ViewportManager resize context, DisplaySettingsDialog resizable-option caller and notifyPageResizing JavaScript callback reviewed. Sets viewport resize flag then arithmetic guard and resizing(1) callback; absent manager throws NGR. Preserve flag-before-guard partial effects, callback/error swallowing and all globals.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BooleanIntPair.enableViewportResizing(I)V"
+    },
+    {
       "symbol": "M:cva.b(I)V",
       "originalName": "b",
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:cva.releaseStatics(I)V"
+      "renamedSymbol": "M:BooleanIntPair.releaseStatics(I)V"
     },
     {
       "symbol": "M:cw.a(B)V",
@@ -25721,7 +25753,7 @@
       "to": "multiplyFixedCoarse",
       "evidence": "Multiplies two 16.16 values after dropping 8 fractional bits of one and shifting the product back; the locomotor ticks scale velocities with it.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:doa.multiplyFixedCoarse(III)I"
+      "renamedSymbol": "M:LegacyVertexBufferSetup.multiplyFixedCoarse(III)I"
     },
     {
       "symbol": "M:doa.a(ILcka;)V",
@@ -25729,7 +25761,7 @@
       "to": "createVertexBuffer",
       "evidence": "Creates an OpenGL vertex buffer with float2, float3 and ubyte4 attribute pointers at stride 24.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:doa.createVertexBuffer(ILOpenGlToolkit;)V"
+      "renamedSymbol": "M:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V"
     },
     {
       "symbol": "M:doa.a(Ljava/lang/String;IB)Ljua;",
@@ -25737,7 +25769,7 @@
       "to": "createAccountFailureReply",
       "evidence": "Complete factory and account dialog error response consumer reviewed. Allocates false result then stores message/error code before guarded unrelated helper call. Preserve exceptions, diagnostic strings and partial state.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;"
+      "renamedSymbol": "M:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;"
     },
     {
       "symbol": "M:doa.b(III)Lg;",
@@ -25745,7 +25777,7 @@
       "to": "findCourseRoom",
       "evidence": "Finds the room definition with the given id in the course from the given index.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:doa.findCourseRoom(III)LRoomDefinition;"
+      "renamedSymbol": "M:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;"
     },
     {
       "symbol": "M:dp.a(BII)V",
@@ -39137,7 +39169,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ida.releaseStatics(B)V"
+      "renamedSymbol": "M:CookieDateFormatter.releaseStatics(B)V"
     },
     {
       "symbol": "M:ida.a(JI)Ljava/lang/String;",
@@ -39145,7 +39177,7 @@
       "to": "formatCookieDate",
       "evidence": "Formats a timestamp as a cookie expiry date from the Calendar day, month and year fields.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ida.formatCookieDate(JI)Ljava/lang/String;"
+      "renamedSymbol": "M:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;"
     },
     {
       "symbol": "M:ie.a(BII)[B",
@@ -64180,6 +64212,14 @@
       "renamedSymbol": "M:AccountCreationDialog.onButtonActivated(IILFocusableWidget;IB)V"
     },
     {
+      "symbol": "M:rua.a(IZLjua;)V",
+      "originalName": "a",
+      "to": "showAccountServiceResult",
+      "evidence": "Complete response-display body and constructor/updateFade callers reviewed. Handles success/error/suggestions, code248 status-cookie path and result-specific buttons/TermsLinksPanel, preserving early guards, allocation/transition order and exception context. Declaration updated to AccountServiceResult by prior naming batch, body role unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V"
+    },
+    {
       "symbol": "M:rua.a(Ljava/lang/String;I)Ljava/lang/String;",
       "originalName": "a",
       "to": "playTrackByName",
@@ -79775,9 +79815,9 @@
     },
     {
       "symbol": "C:cva",
-      "renamedSymbol": "C:cva",
+      "renamedSymbol": "C:BooleanIntPair",
       "originalName": "cva",
-      "renamedName": "cva",
+      "renamedName": "BooleanIntPair",
       "declaration": {
         "file": "cva.java",
         "start": 50,
@@ -80116,9 +80156,9 @@
     },
     {
       "symbol": "C:doa",
-      "renamedSymbol": "C:doa",
+      "renamedSymbol": "C:LegacyVertexBufferSetup",
       "originalName": "doa",
-      "renamedName": "doa",
+      "renamedName": "LegacyVertexBufferSetup",
       "declaration": {
         "file": "doa.java",
         "start": 50,
@@ -82371,9 +82411,9 @@
     },
     {
       "symbol": "C:ida",
-      "renamedSymbol": "C:ida",
+      "renamedSymbol": "C:CookieDateFormatter",
       "originalName": "ida",
-      "renamedName": "ida",
+      "renamedName": "CookieDateFormatter",
       "declaration": {
         "file": "ida.java",
         "start": 71,
@@ -98475,7 +98515,7 @@
     },
     {
       "symbol": "F:cka.field_Ec:Ldoa;",
-      "renamedSymbol": "F:OpenGlToolkit.field_Ec:Ldoa;",
+      "renamedSymbol": "F:OpenGlToolkit.field_Ec:LLegacyVertexBufferSetup;",
       "originalName": "field_Ec",
       "renamedName": "field_Ec",
       "declaration": {
@@ -102105,7 +102145,7 @@
     },
     {
       "symbol": "F:cva.field_a:Z",
-      "renamedSymbol": "F:cva.field_a:Z",
+      "renamedSymbol": "F:BooleanIntPair.field_a:Z",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -102116,7 +102156,7 @@
     },
     {
       "symbol": "F:cva.field_b:Lura;",
-      "renamedSymbol": "F:cva.field_b:LTextureTransformMode;",
+      "renamedSymbol": "F:BooleanIntPair.field_b:LTextureTransformMode;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -102127,7 +102167,7 @@
     },
     {
       "symbol": "F:cva.field_c:[Ldk;",
-      "renamedSymbol": "F:cva.field_c:[LAnimationSequence;",
+      "renamedSymbol": "F:BooleanIntPair.field_c:[LAnimationSequence;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -102138,7 +102178,7 @@
     },
     {
       "symbol": "F:cva.field_d:I",
-      "renamedSymbol": "F:cva.field_d:I",
+      "renamedSymbol": "F:BooleanIntPair.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -102149,7 +102189,7 @@
     },
     {
       "symbol": "F:cva.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:cva.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:BooleanIntPair.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -104261,7 +104301,7 @@
     },
     {
       "symbol": "F:doa.field_a:Lva;",
-      "renamedSymbol": "F:doa.field_a:LLegacyVertexArray;",
+      "renamedSymbol": "F:LegacyVertexBufferSetup.field_a:LLegacyVertexArray;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -109079,7 +109119,7 @@
     },
     {
       "symbol": "F:f.field_d:[Lcva;",
-      "renamedSymbol": "F:ComponentTargetList.pendingTargetIds:[Lcva;",
+      "renamedSymbol": "F:ComponentTargetList.pendingTargetIds:[LBooleanIntPair;",
       "originalName": "field_d",
       "renamedName": "pendingTargetIds",
       "declaration": {
@@ -120310,7 +120350,7 @@
     },
     {
       "symbol": "F:ida.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ida.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:CookieDateFormatter.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -120321,7 +120361,7 @@
     },
     {
       "symbol": "F:ida.field_b:[I",
-      "renamedSymbol": "F:ida.field_b:[I",
+      "renamedSymbol": "F:CookieDateFormatter.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -222170,7 +222210,7 @@
     },
     {
       "symbol": "L:cva.a(I)V#0",
-      "renamedSymbol": "L:cva.a(I)V#0",
+      "renamedSymbol": "L:BooleanIntPair.enableViewportResizing(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -232642,7 +232682,7 @@
     },
     {
       "symbol": "L:doa.<init>()V#0",
-      "renamedSymbol": "L:doa.<init>()V#0",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.<init>()V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -232653,7 +232693,7 @@
     },
     {
       "symbol": "L:doa.a(ILcka;)V#0",
-      "renamedSymbol": "L:doa.createVertexBuffer(ILOpenGlToolkit;)V#0",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -232664,7 +232704,7 @@
     },
     {
       "symbol": "L:doa.a(ILcka;)V#1",
-      "renamedSymbol": "L:doa.createVertexBuffer(ILOpenGlToolkit;)V#1",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#1",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -232675,7 +232715,7 @@
     },
     {
       "symbol": "L:doa.a(ILcka;)V#2",
-      "renamedSymbol": "L:doa.createVertexBuffer(ILOpenGlToolkit;)V#2",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#2",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -232686,7 +232726,7 @@
     },
     {
       "symbol": "L:doa.a(ILcka;)V#3",
-      "renamedSymbol": "L:doa.createVertexBuffer(ILOpenGlToolkit;)V#3",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -232697,7 +232737,7 @@
     },
     {
       "symbol": "L:doa.a(ILcka;)V#4",
-      "renamedSymbol": "L:doa.createVertexBuffer(ILOpenGlToolkit;)V#4",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -232708,7 +232748,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#0",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#0",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -232719,7 +232759,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#1",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#1",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -232730,7 +232770,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#2",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#2",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -232741,7 +232781,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#3",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#3",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -232752,7 +232792,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#4",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#4",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -232763,7 +232803,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#5",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#5",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -232774,7 +232814,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#6",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#6",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -232785,7 +232825,7 @@
     },
     {
       "symbol": "L:doa.a(Ljava/lang/String;IB)Ljua;#7",
-      "renamedSymbol": "L:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#7",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -232796,7 +232836,7 @@
     },
     {
       "symbol": "L:doa.b(III)Lg;#0",
-      "renamedSymbol": "L:doa.findCourseRoom(III)LRoomDefinition;#0",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -232807,7 +232847,7 @@
     },
     {
       "symbol": "L:doa.b(III)Lg;#1",
-      "renamedSymbol": "L:doa.findCourseRoom(III)LRoomDefinition;#1",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -232818,7 +232858,7 @@
     },
     {
       "symbol": "L:doa.b(III)Lg;#2",
-      "renamedSymbol": "L:doa.findCourseRoom(III)LRoomDefinition;#2",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -232829,7 +232869,7 @@
     },
     {
       "symbol": "L:doa.b(III)Lg;#3",
-      "renamedSymbol": "L:doa.findCourseRoom(III)LRoomDefinition;#3",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -232840,7 +232880,7 @@
     },
     {
       "symbol": "L:doa.b(III)Lg;#4",
-      "renamedSymbol": "L:doa.findCourseRoom(III)LRoomDefinition;#4",
+      "renamedSymbol": "L:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -315703,7 +315743,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#0",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -315714,7 +315754,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#1",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -315725,7 +315765,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#2",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#2",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -315736,7 +315776,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#3",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#3",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -315747,7 +315787,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#4",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -315758,7 +315798,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#5",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -315769,7 +315809,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#6",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -315780,7 +315820,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#7",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -315791,7 +315831,7 @@
     },
     {
       "symbol": "L:ida.a(JI)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ida.formatCookieDate(JI)Ljava/lang/String;#8",
+      "renamedSymbol": "L:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -487820,7 +487860,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#0",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#0",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#0",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -487831,7 +487871,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#1",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#1",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#1",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -487842,7 +487882,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#2",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#2",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#2",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -487853,7 +487893,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#3",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#3",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -487864,7 +487904,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#4",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#4",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -487875,7 +487915,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#5",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#5",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#5",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -487886,7 +487926,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#6",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#6",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -487897,7 +487937,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#7",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#7",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -487908,7 +487948,7 @@
     },
     {
       "symbol": "L:rua.a(IZLjua;)V#8",
-      "renamedSymbol": "L:AccountCreationDialog.a(IZLAccountServiceResult;)V#8",
+      "renamedSymbol": "L:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -600405,9 +600445,9 @@
     },
     {
       "symbol": "M:cva.<init>(ZI)V",
-      "renamedSymbol": "M:cva.<init>(ZI)V",
+      "renamedSymbol": "M:BooleanIntPair.<init>(ZI)V",
       "originalName": "cva",
-      "renamedName": "cva",
+      "renamedName": "BooleanIntPair",
       "declaration": {
         "file": "cva.java",
         "start": 620,
@@ -600416,9 +600456,9 @@
     },
     {
       "symbol": "M:cva.a(I)V",
-      "renamedSymbol": "M:cva.a(I)V",
+      "renamedSymbol": "M:BooleanIntPair.enableViewportResizing(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enableViewportResizing",
       "declaration": {
         "file": "cva.java",
         "start": 193,
@@ -600427,7 +600467,7 @@
     },
     {
       "symbol": "M:cva.b(I)V",
-      "renamedSymbol": "M:cva.releaseStatics(I)V",
+      "renamedSymbol": "M:BooleanIntPair.releaseStatics(I)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -603584,9 +603624,9 @@
     },
     {
       "symbol": "M:doa.<init>()V",
-      "renamedSymbol": "M:doa.<init>()V",
+      "renamedSymbol": "M:LegacyVertexBufferSetup.<init>()V",
       "originalName": "doa",
-      "renamedName": "doa",
+      "renamedName": "LegacyVertexBufferSetup",
       "declaration": {
         "file": "doa.java",
         "start": 1953,
@@ -603595,7 +603635,7 @@
     },
     {
       "symbol": "M:doa.a(III)I",
-      "renamedSymbol": "M:doa.multiplyFixedCoarse(III)I",
+      "renamedSymbol": "M:LegacyVertexBufferSetup.multiplyFixedCoarse(III)I",
       "originalName": "a",
       "renamedName": "multiplyFixedCoarse",
       "declaration": {
@@ -603606,7 +603646,7 @@
     },
     {
       "symbol": "M:doa.a(ILcka;)V",
-      "renamedSymbol": "M:doa.createVertexBuffer(ILOpenGlToolkit;)V",
+      "renamedSymbol": "M:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V",
       "originalName": "a",
       "renamedName": "createVertexBuffer",
       "declaration": {
@@ -603617,7 +603657,7 @@
     },
     {
       "symbol": "M:doa.a(Ljava/lang/String;IB)Ljua;",
-      "renamedSymbol": "M:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;",
+      "renamedSymbol": "M:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;",
       "originalName": "a",
       "renamedName": "createAccountFailureReply",
       "declaration": {
@@ -603628,7 +603668,7 @@
     },
     {
       "symbol": "M:doa.b(III)Lg;",
-      "renamedSymbol": "M:doa.findCourseRoom(III)LRoomDefinition;",
+      "renamedSymbol": "M:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;",
       "originalName": "b",
       "renamedName": "findCourseRoom",
       "declaration": {
@@ -625507,7 +625547,7 @@
     },
     {
       "symbol": "M:ida.a(B)V",
-      "renamedSymbol": "M:ida.releaseStatics(B)V",
+      "renamedSymbol": "M:CookieDateFormatter.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -625518,7 +625558,7 @@
     },
     {
       "symbol": "M:ida.a(JI)Ljava/lang/String;",
-      "renamedSymbol": "M:ida.formatCookieDate(JI)Ljava/lang/String;",
+      "renamedSymbol": "M:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "formatCookieDate",
       "declaration": {
@@ -671817,9 +671857,9 @@
     },
     {
       "symbol": "M:rua.a(IZLjua;)V",
-      "renamedSymbol": "M:AccountCreationDialog.a(IZLAccountServiceResult;)V",
+      "renamedSymbol": "M:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showAccountServiceResult",
       "declaration": {
         "file": "rua.java",
         "start": 3129,
@@ -726212,7 +726252,7 @@
     },
     {
       "symbol": "P:cva.<init>(ZI)V#0",
-      "renamedSymbol": "P:cva.<init>(ZI)V#0",
+      "renamedSymbol": "P:BooleanIntPair.<init>(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -726223,7 +726263,7 @@
     },
     {
       "symbol": "P:cva.<init>(ZI)V#1",
-      "renamedSymbol": "P:cva.<init>(ZI)V#1",
+      "renamedSymbol": "P:BooleanIntPair.<init>(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -726234,7 +726274,7 @@
     },
     {
       "symbol": "P:cva.a(I)V#0",
-      "renamedSymbol": "P:cva.a(I)V#0",
+      "renamedSymbol": "P:BooleanIntPair.enableViewportResizing(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -726245,7 +726285,7 @@
     },
     {
       "symbol": "P:cva.b(I)V#0",
-      "renamedSymbol": "P:cva.releaseStatics(I)V#0",
+      "renamedSymbol": "P:BooleanIntPair.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -733406,7 +733446,7 @@
     },
     {
       "symbol": "P:doa.a(III)I#0",
-      "renamedSymbol": "P:doa.multiplyFixedCoarse(III)I#0",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.multiplyFixedCoarse(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -733417,7 +733457,7 @@
     },
     {
       "symbol": "P:doa.a(III)I#1",
-      "renamedSymbol": "P:doa.multiplyFixedCoarse(III)I#1",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.multiplyFixedCoarse(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -733428,7 +733468,7 @@
     },
     {
       "symbol": "P:doa.a(III)I#2",
-      "renamedSymbol": "P:doa.multiplyFixedCoarse(III)I#2",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.multiplyFixedCoarse(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -733439,7 +733479,7 @@
     },
     {
       "symbol": "P:doa.a(ILcka;)V#0",
-      "renamedSymbol": "P:doa.createVertexBuffer(ILOpenGlToolkit;)V#0",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -733450,7 +733490,7 @@
     },
     {
       "symbol": "P:doa.a(ILcka;)V#1",
-      "renamedSymbol": "P:doa.createVertexBuffer(ILOpenGlToolkit;)V#1",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.createVertexBuffer(ILOpenGlToolkit;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -733461,7 +733501,7 @@
     },
     {
       "symbol": "P:doa.a(Ljava/lang/String;IB)Ljua;#0",
-      "renamedSymbol": "P:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#0",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -733472,7 +733512,7 @@
     },
     {
       "symbol": "P:doa.a(Ljava/lang/String;IB)Ljua;#1",
-      "renamedSymbol": "P:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#1",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -733483,7 +733523,7 @@
     },
     {
       "symbol": "P:doa.a(Ljava/lang/String;IB)Ljua;#2",
-      "renamedSymbol": "P:doa.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#2",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.createAccountFailureReply(Ljava/lang/String;IB)LAccountServiceResult;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -733494,7 +733534,7 @@
     },
     {
       "symbol": "P:doa.b(III)Lg;#0",
-      "renamedSymbol": "P:doa.findCourseRoom(III)LRoomDefinition;#0",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -733505,7 +733545,7 @@
     },
     {
       "symbol": "P:doa.b(III)Lg;#1",
-      "renamedSymbol": "P:doa.findCourseRoom(III)LRoomDefinition;#1",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -733516,7 +733556,7 @@
     },
     {
       "symbol": "P:doa.b(III)Lg;#2",
-      "renamedSymbol": "P:doa.findCourseRoom(III)LRoomDefinition;#2",
+      "renamedSymbol": "P:LegacyVertexBufferSetup.findCourseRoom(III)LRoomDefinition;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -780651,7 +780691,7 @@
     },
     {
       "symbol": "P:ida.a(B)V#0",
-      "renamedSymbol": "P:ida.releaseStatics(B)V#0",
+      "renamedSymbol": "P:CookieDateFormatter.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -780662,7 +780702,7 @@
     },
     {
       "symbol": "P:ida.a(JI)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ida.formatCookieDate(JI)Ljava/lang/String;#0",
+      "renamedSymbol": "P:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -780673,7 +780713,7 @@
     },
     {
       "symbol": "P:ida.a(JI)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ida.formatCookieDate(JI)Ljava/lang/String;#1",
+      "renamedSymbol": "P:CookieDateFormatter.formatCookieDate(JI)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -892884,7 +892924,7 @@
     },
     {
       "symbol": "P:rua.a(IZLjua;)V#0",
-      "renamedSymbol": "P:AccountCreationDialog.a(IZLAccountServiceResult;)V#0",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -892895,7 +892935,7 @@
     },
     {
       "symbol": "P:rua.a(IZLjua;)V#1",
-      "renamedSymbol": "P:AccountCreationDialog.a(IZLAccountServiceResult;)V#1",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -892906,7 +892946,7 @@
     },
     {
       "symbol": "P:rua.a(IZLjua;)V#2",
-      "renamedSymbol": "P:AccountCreationDialog.a(IZLAccountServiceResult;)V#2",
+      "renamedSymbol": "P:AccountCreationDialog.showAccountServiceResult(IZLAccountServiceResult;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -938835,7 +938875,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "a7e2fc69c72e50b0344a97f8568a8d95e148a4012db11fb36c0737dbf5f7c7c5",
+      "outputSha256": "134978c569010b73d94eb2e43fb1dc3dcb1333c0430aaa02b0617e8a97822650",
       "edits": [
         {
           "start": 96,
@@ -941643,6 +941683,13 @@
           "symbol": "M:tea.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 10284,
+          "end": 10287,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 10288,
@@ -949469,6 +949516,13 @@
           "symbol": "M:faa.a(Z)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 24362,
+          "end": 24365,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 24366,
@@ -972075,7 +972129,7 @@
       "original": "at.java",
       "renamed": "DisplaySettingsDialog.java",
       "inputSha256": "3905cc2d96cd0db25e1c0ac564cc2467cfcf7eb7537d51b2bf8f83eb36cb61bc",
-      "outputSha256": "9b5f0c578dbf411c761e9a0a008144a3703cf38d27a0879202c75a7841048220",
+      "outputSha256": "68c759719723c32543e335b52441c424f7c01ba43f504434b8bbba623a3134ae",
       "edits": [
         {
           "start": 50,
@@ -973602,6 +973656,20 @@
           "symbol": "M:og.b(I)V",
           "original": "b",
           "renamed": "exitFullscreen"
+        },
+        {
+          "start": 23316,
+          "end": 23319,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
+          "start": 23320,
+          "end": 23321,
+          "symbol": "M:cva.a(I)V",
+          "original": "a",
+          "renamed": "enableViewportResizing"
         },
         {
           "start": 23602,
@@ -984296,7 +984364,7 @@
       "original": "bg.java",
       "renamed": "ApproachPlayerLocomotor.java",
       "inputSha256": "12dc9db57db70709f76de316c5f29e8c50b0a9cc4e6ae8caedc5fb30c0c79ad4",
-      "outputSha256": "449d61c965f390a1cf00608835a912c559b2b6d302d7ae7cee908db125d062cd",
+      "outputSha256": "ff2dd5a6e1af486e9384f507c740ffc1669800650cbf56104f6cb4cb88f6963f",
       "edits": [
         {
           "start": 50,
@@ -984600,11 +984668,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 3010,
+          "end": 3013,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 3014,
           "end": 3015,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 3067,
+          "end": 3070,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 3071,
@@ -984824,11 +984906,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 5877,
+          "end": 5880,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 5881,
           "end": 5882,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 5943,
+          "end": 5946,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 5947,
@@ -987001,7 +987097,7 @@
       "original": "bha.java",
       "renamed": "FleeLocomotor.java",
       "inputSha256": "7273ebb8357707ef7ac4467036a21451587e2c302b7bdce324cc53208fe5d445",
-      "outputSha256": "8a58f88db8f5f4f4eb2bd0bb90c6db651b7a8a9d3371149b9ac6ba17358e6546",
+      "outputSha256": "50678dc3f59615a2bf9cb5f957080d2d12e148a6396deb5dd7c662249027b5d3",
       "edits": [
         {
           "start": 50,
@@ -987207,11 +987303,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 2529,
+          "end": 2532,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 2533,
           "end": 2534,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 2581,
+          "end": 2584,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 2585,
@@ -987319,11 +987429,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 3208,
+          "end": 3211,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 3212,
           "end": 3213,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 3274,
+          "end": 3277,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 3278,
@@ -987459,11 +987583,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 4695,
+          "end": 4698,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 4699,
           "end": 4700,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 4767,
+          "end": 4770,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 4771,
@@ -987620,11 +987758,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 5990,
+          "end": 5993,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 5994,
           "end": 5995,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 6058,
+          "end": 6061,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 6062,
@@ -987732,11 +987884,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 6689,
+          "end": 6692,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 6693,
           "end": 6694,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 6753,
+          "end": 6756,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 6757,
@@ -1014984,7 +1015150,7 @@
       "original": "cka.java",
       "renamed": "OpenGlToolkit.java",
       "inputSha256": "6ac9fb8d7ca9f3fd523ba26d424b59e3f403240ec044c34e1b63cd73f48ef1c8",
-      "outputSha256": "dbe7b3201bc8fcf61f618ae971cc2d8c968715ad1645fc47829f845145f484a0",
+      "outputSha256": "fff60f155fd4c31b2ba3e723b9d4c68cfd150a63047b5520f4a777ad663b4820",
       "edits": [
         {
           "start": 71,
@@ -1015006,6 +1015172,13 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 492,
+          "end": 495,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 536,
@@ -1018580,6 +1018753,13 @@
           "symbol": "C:d",
           "original": "d",
           "renamed": "TextureProvider"
+        },
+        {
+          "start": 57093,
+          "end": 57096,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 57128,
@@ -1028875,7 +1029055,7 @@
       "original": "cr.java",
       "renamed": "ConsoleTokenStream.java",
       "inputSha256": "e8b12eb8592bf6bd54653669dac0460d9bac858d41ae7dd81179e032469a0186",
-      "outputSha256": "cc18a6be969490261499e75f91832b066cf5f31f45f924077044cc1c44b8c251",
+      "outputSha256": "a3542f6969cedc14f6d7d2eb624c9ee0232b3205c2e867710e9347493a4320e4",
       "edits": [
         {
           "start": 50,
@@ -1028897,6 +1029077,62 @@
           "symbol": "M:cr.a(ZI)I",
           "original": "a",
           "renamed": "sin8192"
+        },
+        {
+          "start": 482,
+          "end": 485,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 562,
+          "end": 565,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 708,
+          "end": 711,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 775,
+          "end": 778,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 1010,
+          "end": 1013,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 1085,
+          "end": 1088,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 1219,
+          "end": 1222,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 1281,
+          "end": 1284,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 1377,
@@ -1033395,7 +1033631,7 @@
       "original": "cta.java",
       "renamed": "Direct3DToolkit.java",
       "inputSha256": "57313d53fb9dfb77bde340b4d345656cb1eeea04ba2bc0bfceaadff3e55e8489",
-      "outputSha256": "0d9b0f3c7c4368e1d8ecf5b854e80173bd911b801783975f13ab74c1e18fd862",
+      "outputSha256": "4770106a277a615ef04759390caa6a67cff98c5848d1d953cdb85ebff11a885d",
       "edits": [
         {
           "start": 57,
@@ -1035106,6 +1035342,13 @@
           "symbol": "C:pfa",
           "original": "pfa",
           "renamed": "CourseMapWalker"
+        },
+        {
+          "start": 26653,
+          "end": 26656,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 26720,
@@ -1040280,10 +1040523,17 @@
     },
     {
       "original": "cva.java",
-      "renamed": "cva.java",
+      "renamed": "BooleanIntPair.java",
       "inputSha256": "edb71b8ecdbe6e86f9ef5287db0aa2e97b82181c50b0d37bbe3a591718230e15",
-      "outputSha256": "5294ebf43e5f213280a013adbbd00a310ad5ea5cd2eab353a57f11af31ff9ee0",
+      "outputSha256": "5fb1b062f539bbfc36019e5c7b93b9aaebf8173429cf0ba039df0cc75121faf9",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
         {
           "start": 105,
           "end": 108,
@@ -1040297,6 +1040547,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "AnimationSequence"
+        },
+        {
+          "start": 193,
+          "end": 194,
+          "symbol": "M:cva.a(I)V",
+          "original": "a",
+          "renamed": "enableViewportResizing"
         },
         {
           "start": 221,
@@ -1040334,11 +1040591,25 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 588,
+          "end": 591,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
           "start": 592,
           "end": 593,
           "symbol": "M:cva.b(I)V",
           "original": "b",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 620,
+          "end": 623,
+          "symbol": "M:cva.<init>(ZI)V",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 773,
@@ -1063875,10 +1064146,17 @@
     },
     {
       "original": "doa.java",
-      "renamed": "doa.java",
+      "renamed": "LegacyVertexBufferSetup.java",
       "inputSha256": "45c9f6253a624c9dd2f7b7cea01a6248fb3228c501b5bf2a784de51dc5144f94",
-      "outputSha256": "7852c7a6fa08a33c9b71bf6b99388cb5357c18de5bc3e4fc0d676de90b788d5c",
+      "outputSha256": "eacf8495b93263097167cc9c47281e64ad3fdb2623b052925d8eedb550538cf5",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
         {
           "start": 68,
           "end": 70,
@@ -1063920,6 +1064198,13 @@
           "symbol": "C:jua",
           "original": "jua",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 582,
+          "end": 585,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 586,
@@ -1063997,6 +1064282,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "RoomDefinition"
+        },
+        {
+          "start": 1953,
+          "end": 1956,
+          "symbol": "M:doa.<init>()V",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 1969,
@@ -1068409,7 +1068701,7 @@
       "original": "dta.java",
       "renamed": "dta.java",
       "inputSha256": "80e4b18b2bbaccb57c2dadc4701d3d7b4d6cdc1a9ce73b703409644231e7f31d",
-      "outputSha256": "64ca47e1e45f2be66c35ee0c925588daa6df1bdd5cea3b86f8cfc4ad8388ab0a",
+      "outputSha256": "a0e9a3c7aab60707aa4ff735f36e1414be150be50525610285fccee2a3438080",
       "edits": [
         {
           "start": 95,
@@ -1069005,6 +1069297,13 @@
           "symbol": "M:koa.b(I)I",
           "original": "b",
           "renamed": "getCanvasHeight"
+        },
+        {
+          "start": 6335,
+          "end": 6338,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 6339,
@@ -1078934,7 +1079233,7 @@
       "original": "em.java",
       "renamed": "HardwareSpecularEffect.java",
       "inputSha256": "fbca34fa129ba569e68a4a7480ce1829ec7874e2d911b43e4f887678a2d6535c",
-      "outputSha256": "f97e454b74cc148cd737ece40a51c244648bfc0ae250b989c1ab76f827d19f5d",
+      "outputSha256": "921c0f7d322c67b843c62e83907fb594af5948fefca49c1aed5ac083a36b4cef",
       "edits": [
         {
           "start": 50,
@@ -1079551,6 +1079850,13 @@
           "symbol": "M:eo.a(Lura;Z)V",
           "original": "a",
           "renamed": "setTextureTransformMode"
+        },
+        {
+          "start": 6089,
+          "end": 6092,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 6158,
@@ -1100840,7 +1101146,7 @@
       "original": "f.java",
       "renamed": "ComponentTargetList.java",
       "inputSha256": "4ab0ac011e015e8932ebb10f4f2bb6c1592be49b9cc06cb1b799f60b158f1ea3",
-      "outputSha256": "5537fe88bb9b2f6119a86ac862d04df3e66da596a8a80bebe54ac0eee305ef23",
+      "outputSha256": "eba135115280a87afc420658bd0f562429a5861d7a171845a9b3e6cbfa22b02c",
       "edits": [
         {
           "start": 71,
@@ -1100848,6 +1101154,13 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 164,
+          "end": 167,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 170,
@@ -1100890,6 +1101203,13 @@
           "symbol": "C:csa",
           "original": "csa",
           "renamed": "RoomComponent"
+        },
+        {
+          "start": 363,
+          "end": 366,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 669,
@@ -1101623,6 +1101943,41 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 17674,
+          "end": 17677,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
+          "start": 17726,
+          "end": 17729,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
+          "start": 17751,
+          "end": 17754,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
+          "start": 17776,
+          "end": 17779,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
+          "start": 17808,
+          "end": 17811,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
           "start": 18124,
           "end": 18131,
           "symbol": "F:f.field_a:I",
@@ -1101672,6 +1102027,13 @@
           "renamed": "pendingTargetIds"
         },
         {
+          "start": 18279,
+          "end": 18282,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
           "start": 18446,
           "end": 18453,
           "symbol": "F:f.field_d:[Lcva;",
@@ -1101684,6 +1102046,13 @@
           "symbol": "M:kh.b(BI)I",
           "original": "b",
           "renamed": "readBits"
+        },
+        {
+          "start": 18881,
+          "end": 18884,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 18905,
@@ -1118040,7 +1118409,7 @@
       "original": "fja.java",
       "renamed": "PlayPhase.java",
       "inputSha256": "9c67ded2a35321bc2b4518bb96afe3e264ac1fca749a5926de2705f72bf4fa1c",
-      "outputSha256": "284d458ca5e68e0bccb136782d6e5ab132d5e33b0becfafad8a00f22c96ed910",
+      "outputSha256": "bdcaf56ba602de3345a75bbdc068bd88575854658322acefd940ede25dcb0a09",
       "edits": [
         {
           "start": 50,
@@ -1119212,6 +1119581,13 @@
           "renamed": "getCourseId"
         },
         {
+          "start": 8189,
+          "end": 8192,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 8193,
           "end": 8194,
           "symbol": "M:doa.b(III)Lg;",
@@ -1119259,6 +1119635,13 @@
           "symbol": "M:kq.a(II)Lg;",
           "original": "a",
           "renamed": "findRoomDefinition"
+        },
+        {
+          "start": 8537,
+          "end": 8540,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 8541,
@@ -1124368,7 +1124751,7 @@
       "original": "fn.java",
       "renamed": "HardwareAnimatedWaterEffect.java",
       "inputSha256": "eb8dcd62dc07dbef32de42753e340e7b59678ecfcb4ce3b4207c189a710cf208",
-      "outputSha256": "2924dee8e3bfc5bc23d7e4c330f5a2b5b11e5c2acd2d689a3cc76ecdc799d557",
+      "outputSha256": "6f9d1bb7a1fe0815c19171fec3fd9812904ed5730acbf9c39757abb0241e1c0b",
       "edits": [
         {
           "start": 50,
@@ -1125006,6 +1125389,13 @@
           "symbol": "M:eo.a(Lura;Z)V",
           "original": "a",
           "renamed": "setTextureTransformMode"
+        },
+        {
+          "start": 3127,
+          "end": 3130,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 3165,
@@ -1207379,16 +1207769,30 @@
     },
     {
       "original": "ida.java",
-      "renamed": "ida.java",
+      "renamed": "CookieDateFormatter.java",
       "inputSha256": "cb733f217051064b051d611ce6450396f3c36e45603ded916df8c49d971f4f8d",
-      "outputSha256": "ddd00d8d6c5e656d5c511ca89b12894d6cdb8b5d4215e011783f13b9a0de775d",
+      "outputSha256": "9b0ee5859b63056bd4f66781252b921cd0670ba795c04a5b8f5ef31c2332dd81",
       "edits": [
+        {
+          "start": 71,
+          "end": 74,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
         {
           "start": 154,
           "end": 155,
           "symbol": "M:ida.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 234,
+          "end": 237,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 238,
@@ -1208560,7 +1208964,7 @@
       "original": "ifa.java",
       "renamed": "WaveformOperator.java",
       "inputSha256": "0a76a993a0ffb7ac31ceaefae8c83b32f212df8213c38766d9825c7c0c82deff",
-      "outputSha256": "96c463d2bf6fe487c286dba73ce121122a9ac825fea68bd25289aad639facfc2",
+      "outputSha256": "0270e9bad7e88714217548ee3c657ec7328ed9d30a4e74601a3da0931e4e93a7",
       "edits": [
         {
           "start": 50,
@@ -1208806,6 +1209210,13 @@
           "symbol": "C:oo",
           "original": "oo",
           "renamed": "SnakePitModel"
+        },
+        {
+          "start": 8168,
+          "end": 8171,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 8172,
@@ -1234878,7 +1235289,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "70739317db0969be4ac8390c8b6d2204edcca493e4b4927a87e25b062978648f",
+      "outputSha256": "552b45b60a0c632448dcd655891d61b88bce2722412b5edecd80f1dd5a9d815b",
       "edits": [
         {
           "start": 50,
@@ -1237658,6 +1238069,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 18989,
+          "end": 18992,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 19007,
@@ -1250573,6 +1250991,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 106249,
+          "end": 106252,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 106267,
@@ -1316475,7 +1316900,7 @@
       "original": "lha.java",
       "renamed": "LegacyOpenGlTexture3D.java",
       "inputSha256": "261e9fc49d518c3593455715a035a58b1e3fdd0ff6d943695a23d05c07ec90c6",
-      "outputSha256": "23c1f156e367e739bce6d343728f870d8a09ecdf854ae0e776a5968c46661cb5",
+      "outputSha256": "367e61cda0a6bfccd5e987f3c5e70a0b126d3f51dd0a9d6d0e42e5f66e6e61b3",
       "edits": [
         {
           "start": 50,
@@ -1316742,6 +1317167,13 @@
           "symbol": "M:lha.a(B)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 3951,
+          "end": 3954,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 3955,
@@ -1317298,7 +1317730,7 @@
       "original": "lja.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "166a4f92f16110b93fbc35ead7c37279e23464885f24906fca005e7beb74953c",
-      "outputSha256": "fad10883dd6a814f400fdb53320078ef3babae7c69bce1c1045c045c4ced5429",
+      "outputSha256": "d48ded7d47b1751508146b6f3e8e995a3b2b92990cf1720726106ccbe0ab467a",
       "edits": [
         {
           "start": 50,
@@ -1318272,6 +1318704,13 @@
           "symbol": "M:ola.a(BILjava/lang/String;)V",
           "original": "a",
           "renamed": "addItem"
+        },
+        {
+          "start": 11184,
+          "end": 11187,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 11237,
@@ -1345291,7 +1345730,7 @@
       "original": "mp.java",
       "renamed": "mp.java",
       "inputSha256": "3defd611e9b82b6b98e62aafa97eefe6b0c826bb63e94896a9b3e5c9c0780918",
-      "outputSha256": "35548c0bc8a928ef4fae5a08f138f815ebfce64c27e11d7664caf74db808a491",
+      "outputSha256": "5befc2fc5a12465d9403ea24ecebde6a038b8d4064d74a7abfcc446cac0fad18",
       "edits": [
         {
           "start": 108,
@@ -1345313,6 +1345752,13 @@
           "symbol": "C:ts",
           "original": "ts",
           "renamed": "RoomEffectTraps"
+        },
+        {
+          "start": 1325,
+          "end": 1328,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 1329,
@@ -1352296,7 +1352742,7 @@
       "original": "nfa.java",
       "renamed": "TileOperator.java",
       "inputSha256": "41bca3389ddaff693b031b1c07e12339ba6f91f847a62ba32663f71954210483",
-      "outputSha256": "72d46faf630f524c701687a12c277661ccc5fbad09b8d9884b571d84fa239688",
+      "outputSha256": "afea25f6c96d80dfbcb6a8d30ec967b9571e6b6f75576b2907fcb6fb6b4114d7",
       "edits": [
         {
           "start": 50,
@@ -1356170,11 +1356616,25 @@
           "renamed": "drawLoadingProgress"
         },
         {
+          "start": 15234,
+          "end": 15237,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
           "start": 15252,
           "end": 15254,
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "AnimationSequence"
+        },
+        {
+          "start": 15269,
+          "end": 15272,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 15286,
@@ -1356191,6 +1356651,13 @@
           "renamed": "loadAnimationSequence"
         },
         {
+          "start": 15331,
+          "end": 15334,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
           "start": 15348,
           "end": 15349,
           "symbol": "C:m",
@@ -1356205,6 +1356672,13 @@
           "renamed": "loadAnimationSequence"
         },
         {
+          "start": 15391,
+          "end": 15394,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
+        },
+        {
           "start": 15408,
           "end": 15409,
           "symbol": "C:m",
@@ -1356217,6 +1356691,13 @@
           "symbol": "M:m.a(Ljava/lang/String;ILcn;Ljava/lang/String;)Ldk;",
           "original": "a",
           "renamed": "loadAnimationSequence"
+        },
+        {
+          "start": 15458,
+          "end": 15461,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 15475,
@@ -1427634,7 +1428115,7 @@
       "original": "pla.java",
       "renamed": "IntIntHashTable.java",
       "inputSha256": "0a64b89cc2c5df72caadfcc66661c29de4c51545bb9b7fcbbfbe04dc7959513d",
-      "outputSha256": "6c8d575846fde7add423d383762ffa1a38dbdd55db3c0ead5debfb7b7a728550",
+      "outputSha256": "23c0e2ac6cc0f87e02513ea26e84515f7765cb6eb5b155583e2c61b1e7507fed",
       "edits": [
         {
           "start": 50,
@@ -1427740,6 +1428221,34 @@
           "symbol": "M:pla.b(II)I",
           "original": "b",
           "renamed": "cos8192"
+        },
+        {
+          "start": 3244,
+          "end": 3247,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 3274,
+          "end": 3277,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 3346,
+          "end": 3349,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
+        },
+        {
+          "start": 3376,
+          "end": 3379,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 3432,
@@ -1458108,7 +1458617,7 @@
       "original": "qp.java",
       "renamed": "RatingsScreen.java",
       "inputSha256": "29598bfa4aebfc2fa087976838ab80dcd0f483a576c04af6ae5de443ea4c81ad",
-      "outputSha256": "6d82c729583a8f2cf0c8f5106521ff24b56104e886b5d3fa4378a473a6d1ad42",
+      "outputSha256": "c616bb72f6e56f872d287a0cab3ffe6d3c824d0d193b16a79aef3d8fecd77bbc",
       "edits": [
         {
           "start": 50,
@@ -1458662,6 +1459171,13 @@
           "symbol": "M:da.a(IZLjava/lang/String;III)V",
           "original": "a",
           "renamed": "drawLeft"
+        },
+        {
+          "start": 8602,
+          "end": 8605,
+          "symbol": "C:ida",
+          "original": "ida",
+          "renamed": "CookieDateFormatter"
         },
         {
           "start": 8629,
@@ -1491327,7 +1491843,7 @@
       "original": "ro.java",
       "renamed": "PathMoveLocomotor.java",
       "inputSha256": "227bad546a34a33a6db5ecc9a0cefb19b4276423484bd2d0c0568f8a0fe8d125",
-      "outputSha256": "4782be6abbecce94c1133554c6709da36b766701754cfe84048c9e7623ea5111",
+      "outputSha256": "1642a025e4a99bd8fd00a535d4db36bf21dd112746bbc4525c397fa0daa20128",
       "edits": [
         {
           "start": 50,
@@ -1491813,6 +1492329,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 5387,
+          "end": 5390,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 5391,
           "end": 5392,
           "symbol": "M:doa.a(III)I",
@@ -1491825,6 +1492348,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 5438,
+          "end": 5441,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 5442,
@@ -1491883,6 +1492413,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 5726,
+          "end": 5729,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 5730,
           "end": 5731,
           "symbol": "M:doa.a(III)I",
@@ -1491895,6 +1492432,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 5795,
+          "end": 5798,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 5799,
@@ -1492016,6 +1492560,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 6331,
+          "end": 6334,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 6335,
           "end": 6336,
           "symbol": "M:doa.a(III)I",
@@ -1492028,6 +1492579,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 6400,
+          "end": 6403,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 6404,
@@ -1492107,6 +1492665,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 6818,
+          "end": 6821,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 6822,
           "end": 6823,
           "symbol": "M:doa.a(III)I",
@@ -1492119,6 +1492684,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 6887,
+          "end": 6890,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 6891,
@@ -1492212,6 +1492784,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 7310,
+          "end": 7313,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 7314,
           "end": 7315,
           "symbol": "M:doa.a(III)I",
@@ -1492224,6 +1492803,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 7377,
+          "end": 7380,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 7381,
@@ -1492422,6 +1493008,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 8591,
+          "end": 8594,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 8595,
           "end": 8596,
           "symbol": "M:doa.a(III)I",
@@ -1492434,6 +1493027,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 8658,
+          "end": 8661,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 8662,
@@ -1492492,6 +1493092,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 8977,
+          "end": 8980,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 8981,
           "end": 8982,
           "symbol": "M:doa.a(III)I",
@@ -1492504,6 +1493111,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 9044,
+          "end": 9047,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 9048,
@@ -1492625,6 +1493239,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 9585,
+          "end": 9588,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 9589,
           "end": 9590,
           "symbol": "M:doa.a(III)I",
@@ -1492637,6 +1493258,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 9652,
+          "end": 9655,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 9656,
@@ -1492716,6 +1493344,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 10070,
+          "end": 10073,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 10074,
           "end": 10075,
           "symbol": "M:doa.a(III)I",
@@ -1492728,6 +1493363,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 10137,
+          "end": 10140,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 10141,
@@ -1492821,6 +1493463,13 @@
           "renamed": "cos2048"
         },
         {
+          "start": 10558,
+          "end": 10561,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 10562,
           "end": 10563,
           "symbol": "M:doa.a(III)I",
@@ -1492833,6 +1493482,13 @@
           "symbol": "F:ro.field_r:I",
           "original": "field_r",
           "renamed": "speed"
+        },
+        {
+          "start": 10623,
+          "end": 10626,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 10627,
@@ -1497507,7 +1498163,7 @@
       "original": "rua.java",
       "renamed": "AccountCreationDialog.java",
       "inputSha256": "05b7565e70155092524ecbfc75a2399511ecba2cea6a3289a7e2d7db1cf35e72",
-      "outputSha256": "63882810f71cf0b9d97a43f29c51dbb43fad9592ee6f2187e049d9cd6008d389",
+      "outputSha256": "646ab698eb28dd20339382c05e572dbb71d5c84ff6d241fae6f754958661c909",
       "edits": [
         {
           "start": 50,
@@ -1497571,6 +1498227,13 @@
           "symbol": "C:jua",
           "original": "jua",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 410,
+          "end": 411,
+          "symbol": "M:rua.a(IZLjua;)V",
+          "original": "a",
+          "renamed": "showAccountServiceResult"
         },
         {
           "start": 425,
@@ -1497664,6 +1498327,20 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1289,
+          "end": 1290,
+          "symbol": "M:rua.a(IZLjua;)V",
+          "original": "a",
+          "renamed": "showAccountServiceResult"
+        },
+        {
+          "start": 1302,
+          "end": 1305,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 1306,
           "end": 1307,
           "symbol": "M:doa.a(Ljava/lang/String;IB)Ljua;",
@@ -1497718,6 +1498395,13 @@
           "symbol": "M:rua.g(Z)V",
           "original": "g",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 3129,
+          "end": 3130,
+          "symbol": "M:rua.a(IZLjua;)V",
+          "original": "a",
+          "renamed": "showAccountServiceResult"
         },
         {
           "start": 3159,
@@ -1498082,6 +1498766,13 @@
           "symbol": "M:dqa.a(I)Ljua;",
           "original": "a",
           "renamed": "takeRegistrationResponse"
+        },
+        {
+          "start": 8298,
+          "end": 8299,
+          "symbol": "M:rua.a(IZLjua;)V",
+          "original": "a",
+          "renamed": "showAccountServiceResult"
         },
         {
           "start": 8394,
@@ -1510690,7 +1511381,7 @@
       "original": "sl.java",
       "renamed": "HardwareReflectionEffect.java",
       "inputSha256": "3aa7264342c97eab9a17a890af8d7495d9626cb21750f04a3a150be35f07a40a",
-      "outputSha256": "49f077ed220cbf027d9ce80d0680728dfa535acee06aed414ce68d1d6b726b2a",
+      "outputSha256": "c89ab687c5a4534b57f6e918608ef1a388414446a55125d47e924a16bd9433a8",
       "edits": [
         {
           "start": 50,
@@ -1511223,6 +1511914,13 @@
           "symbol": "M:eo.a(Lura;Z)V",
           "original": "a",
           "renamed": "setTextureTransformMode"
+        },
+        {
+          "start": 2380,
+          "end": 2383,
+          "symbol": "C:cva",
+          "original": "cva",
+          "renamed": "BooleanIntPair"
         },
         {
           "start": 2414,
@@ -1570201,7 +1570899,7 @@
       "original": "ura.java",
       "renamed": "TextureTransformMode.java",
       "inputSha256": "8db953c4ff3b9179ac66b62180226758a434d039f1dad7f7c77775ad6cbdd254",
-      "outputSha256": "30b337de546012f70d6a5897cd98c128b25a1f50d9627b44819a96bb39e37a92",
+      "outputSha256": "6fa989d8295ab09d02ed0588b9c39d2049c7af15b4b9b5c89bd95b5e1f4b7c67",
       "edits": [
         {
           "start": 50,
@@ -1570253,6 +1570951,13 @@
           "renamed": "PlantModel"
         },
         {
+          "start": 953,
+          "end": 956,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 957,
           "end": 958,
           "symbol": "M:doa.a(Ljava/lang/String;IB)Ljua;",
@@ -1570286,6 +1570991,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "PlantModel"
+        },
+        {
+          "start": 1154,
+          "end": 1157,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 1158,
@@ -1612202,7 +1612914,7 @@
       "original": "wi.java",
       "renamed": "SimpleMoveLocomotor.java",
       "inputSha256": "b1c272d270e4b28d182d6f9b7302965d0c8c696d355ecd28bfdeee7529025721",
-      "outputSha256": "4df715fc2c7001e28f0893f6c04aa4d8fdc4c64123a87cb1f9775fc33f986532",
+      "outputSha256": "7678fd455e7deb92a408b114e936da53a6a6249020fc8588f963b83cef6292ca",
       "edits": [
         {
           "start": 50,
@@ -1612303,11 +1613015,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 1487,
+          "end": 1490,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 1491,
           "end": 1492,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 1534,
+          "end": 1537,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 1538,
@@ -1612884,11 +1613610,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 5339,
+          "end": 5342,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 5343,
           "end": 5344,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 5404,
+          "end": 5407,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 5408,
@@ -1613465,11 +1614205,25 @@
           "renamed": "cos2048"
         },
         {
+          "start": 9437,
+          "end": 9440,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
+        },
+        {
           "start": 9441,
           "end": 9442,
           "symbol": "M:doa.a(III)I",
           "original": "a",
           "renamed": "multiplyFixedCoarse"
+        },
+        {
+          "start": 9500,
+          "end": 9503,
+          "symbol": "C:doa",
+          "original": "doa",
+          "renamed": "LegacyVertexBufferSetup"
         },
         {
           "start": 9504,
@@ -1632409,10 +1633163,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "42bb02bdd8b80ad2e7aa82cf309cedefb7f134a87aa59bc68d98713ec5c33f6a",
+    "rulesSha256": "0236222a63ba62f5b5d6dbcf66e6d92e3f71f5f86fbeba20516e21ac2dac6c97",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "ca2d63a0d1aceb70a296277f56702aa4bcf34e66eada9adeeab2d72cfc8e9be2",
+    "outputTreeSha256": "75b9fbb588a200a0b0b78e4dbb9839da63a1b06914fd495f741fd19948e5a368",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

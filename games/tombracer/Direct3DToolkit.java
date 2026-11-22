@@ -807,7 +807,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (CourseMapWalker.field_i == param1) {
           return 2;
         }
-        if (param1 == cva.field_b) {
+        if (param1 == BooleanIntPair.field_b) {
           return 3;
         }
         if (param1 == EmailSyntaxValidator.field_j) {

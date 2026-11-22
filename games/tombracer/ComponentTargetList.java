@@ -7,14 +7,14 @@ final class ComponentTargetList {
     static int[] field_c;
     static BitSet field_e;
     static int field_b;
-    private cva[] pendingTargetIds;
+    private BooleanIntPair[] pendingTargetIds;
     private RoomComponent[] targets;
     private int maxTargets;
 
     final void resolveTargets(RoomComponent param0, boolean param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
-        cva var4 = null;
+        BooleanIntPair var4 = null;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -566,12 +566,12 @@ final class ComponentTargetList {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        cva[] stackIn_7_0;
+        BooleanIntPair[] stackIn_7_0;
         int stackIn_7_1;
-        cva stackIn_7_2;
-        cva stackIn_7_3;
-        cva stackIn_8_2 = null;
-        cva stackIn_8_3 = null;
+        BooleanIntPair stackIn_7_2;
+        BooleanIntPair stackIn_7_3;
+        BooleanIntPair stackIn_8_2 = null;
+        BooleanIntPair stackIn_8_3 = null;
         boolean stackIn_8_4 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -582,7 +582,7 @@ final class ComponentTargetList {
           this.maxTargets = param0;
           var5_int = param3.readBits((byte) 44, RandomBrickOperator.bitLength(param0, 22972));
           this.targets = new RoomComponent[var5_int];
-          this.pendingTargetIds = new cva[var5_int];
+          this.pendingTargetIds = new BooleanIntPair[var5_int];
           var6 = 0;
           while (var6 < var5_int) {
             if (var7 != 0) {
@@ -601,7 +601,7 @@ final class ComponentTargetList {
               stackIn_8_3 = null;
               stackIn_8_4 = true;
             }
-            stackIn_7_0[stackIn_7_1] = new cva(stackIn_8_4, param3.readBits((byte) 44, 8));
+            stackIn_7_0[stackIn_7_1] = new BooleanIntPair(stackIn_8_4, param3.readBits((byte) 44, 8));
             var6++;
           }
           return;

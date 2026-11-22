@@ -16,16 +16,16 @@ final class ConsoleTokenStream {
           param1 = param1 & 8191;
           if (param1 >= 4096) {
             if (param1 >= 6144) {
-              stackIn_19_0 = -ida.field_b[-param1 + 8192];
+              stackIn_19_0 = -CookieDateFormatter.field_b[-param1 + 8192];
             } else {
-              stackIn_19_0 = -ida.field_b[-4096 + param1];
+              stackIn_19_0 = -CookieDateFormatter.field_b[-4096 + param1];
             }
             return stackIn_19_0;
           }
           if (param1 < 2048) {
-            stackIn_15_0 = ida.field_b[param1];
+            stackIn_15_0 = CookieDateFormatter.field_b[param1];
           } else {
-            stackIn_15_0 = ida.field_b[4096 - param1];
+            stackIn_15_0 = CookieDateFormatter.field_b[4096 - param1];
           }
           return stackIn_15_0;
         }
@@ -33,16 +33,16 @@ final class ConsoleTokenStream {
         param1 = param1 & 8191;
         if (param1 >= 4096) {
           if (param1 >= 6144) {
-            stackIn_9_0 = -ida.field_b[-param1 + 8192];
+            stackIn_9_0 = -CookieDateFormatter.field_b[-param1 + 8192];
           } else {
-            stackIn_9_0 = -ida.field_b[-4096 + param1];
+            stackIn_9_0 = -CookieDateFormatter.field_b[-4096 + param1];
           }
           return stackIn_9_0;
         }
         if (param1 < 2048) {
-          stackIn_5_0 = ida.field_b[param1];
+          stackIn_5_0 = CookieDateFormatter.field_b[param1];
         } else {
-          stackIn_5_0 = ida.field_b[4096 - param1];
+          stackIn_5_0 = CookieDateFormatter.field_b[4096 - param1];
         }
         return stackIn_5_0;
     }

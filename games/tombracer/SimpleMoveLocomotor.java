@@ -54,8 +54,8 @@ final class SimpleMoveLocomotor extends Locomotor {
           var3 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6 = -112 % ((param0 + 69) / 42);
           var4 = ModelAnimator.cos2048(0, var2 >> 2);
-          var5 = doa.multiplyFixedCoarse(2, this.field_t, var3);
-          var7 = doa.multiplyFixedCoarse(2, this.field_t, var4);
+          var5 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_t, var3);
+          var7 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_t, var4);
           if (var7 == 0) {
             var5 = lw.signum(var5, (byte) -52) * this.field_t;
             var8 = this.trap.getLocalX(25745);
@@ -153,8 +153,8 @@ final class SimpleMoveLocomotor extends Locomotor {
           var3Lifetime1 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
           var6Lifetime1 = -112 % ((param0 + 69) / 42);
           var4Lifetime1 = ModelAnimator.cos2048(0, var2 >> 2);
-          var5Lifetime1 = doa.multiplyFixedCoarse(2, this.field_t, var3Lifetime1);
-          var7Lifetime1 = doa.multiplyFixedCoarse(2, this.field_t, var4Lifetime1);
+          var5Lifetime1 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_t, var3Lifetime1);
+          var7Lifetime1 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_t, var4Lifetime1);
           if (var7Lifetime1 == 0) {
             var5Lifetime1 = lw.signum(var5Lifetime1, (byte) -52) * this.field_t;
             var8Lifetime1 = this.trap.getLocalX(25745);
@@ -252,8 +252,8 @@ final class SimpleMoveLocomotor extends Locomotor {
         var3Lifetime2 = MouseInputHandler.sin2048((byte) 100, var2 >> 2);
         var6Lifetime2 = -112 % ((param0 + 69) / 42);
         var4Lifetime2 = ModelAnimator.cos2048(0, var2 >> 2);
-        var5Lifetime2 = doa.multiplyFixedCoarse(2, this.field_t, var3Lifetime2);
-        var7Lifetime2 = doa.multiplyFixedCoarse(2, this.field_t, var4Lifetime2);
+        var5Lifetime2 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_t, var3Lifetime2);
+        var7Lifetime2 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_t, var4Lifetime2);
         if (var7Lifetime2 != 0) {
           if (var5Lifetime2 != 0) {
             var8Lifetime2 = this.trap.getLocalX(25745);

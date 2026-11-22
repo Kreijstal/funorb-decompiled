@@ -91,7 +91,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
             var3.copyStateFrom(var2, 1);
             var3.scale(11403, 1.0f, 0.125f, 0.125f);
             var3.translate(0.0f, -120, 0.0f, this.field_e);
-            this.owner.setTextureTransformMode(cva.field_b, false);
+            this.owner.setTextureTransformMode(BooleanIntPair.field_b, false);
             this.owner.setActiveTextureUnit(0, false);
           }
           return;

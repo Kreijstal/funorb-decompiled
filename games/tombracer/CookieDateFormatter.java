@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class ida {
+final class CookieDateFormatter {
     static int[] field_b;
     static String field_a;
 
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 122) {
-          ida.releaseStatics((byte) -7);
+          CookieDateFormatter.releaseStatics((byte) -7);
           field_b = null;
           return;
         }

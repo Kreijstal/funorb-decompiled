@@ -248,7 +248,7 @@ final class RatingsScreen extends DropInMenuScreen {
         eda.field_f.drawLeft(var4, false, ControllerLocomotor.field_o.toUpperCase(), NanoTickClock.field_h[2], -14671840, -1);
         eda.field_f.drawLeft(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), NanoTickClock.field_h[3], -14671840, -1);
         eda.field_f.drawLeft(var4, false, PlayerProfile.field_u.toUpperCase(), NanoTickClock.field_h[4], -14671840, -1);
-        eda.field_f.drawLeft(var4, false, ida.field_a.toUpperCase(), NanoTickClock.field_h[5], -14671840, -1);
+        eda.field_f.drawLeft(var4, false, CookieDateFormatter.field_a.toUpperCase(), NanoTickClock.field_h[5], -14671840, -1);
         var5 = null;
         var6 = this.field_w;
         if (0 == var6) {

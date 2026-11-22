@@ -96,7 +96,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
                 LegacyOpenGlTexture3D.releaseStatics((byte) -114);
               }
               if (0L <= param3) {
-                var7Lifetime4 = var9 + "; Expires=" + ida.formatCookieDate(param3 * 1000L + AdjustedWallClock.currentTimeMillis((byte) -107), -1) + "; Max-Age=" + param3;
+                var7Lifetime4 = var9 + "; Expires=" + CookieDateFormatter.formatCookieDate(param3 * 1000L + AdjustedWallClock.currentTimeMillis((byte) -107), -1) + "; Max-Age=" + param3;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

@@ -86,8 +86,8 @@ final class FleeLocomotor extends Locomotor {
               }
               var9 = MouseInputHandler.sin2048((byte) 95, var8 >> 2);
               var10 = ModelAnimator.cos2048(0, var8 >> 2);
-              var11 = doa.multiplyFixedCoarse(2, this.field_A, var9);
-              var12 = doa.multiplyFixedCoarse(2, this.field_A, var10);
+              var11 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var9);
+              var12 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var10);
               this.trap.move((byte) -110, var11, var12);
               if (this.field_w) {
                 this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8);
@@ -103,8 +103,8 @@ final class FleeLocomotor extends Locomotor {
           }
           var9Lifetime4 = MouseInputHandler.sin2048((byte) 95, var8Lifetime4 >> 2);
           var10Lifetime4 = ModelAnimator.cos2048(0, var8Lifetime4 >> 2);
-          var11Lifetime4 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime4);
-          var12Lifetime4 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime4);
+          var11Lifetime4 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var9Lifetime4);
+          var12Lifetime4 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var10Lifetime4);
           this.trap.move((byte) -110, var11Lifetime4, var12Lifetime4);
           if (!this.field_w) {
             return;
@@ -139,8 +139,8 @@ final class FleeLocomotor extends Locomotor {
                 }
                 var9Lifetime1 = MouseInputHandler.sin2048((byte) 95, var8Lifetime1 >> 2);
                 var10Lifetime1 = ModelAnimator.cos2048(0, var8Lifetime1 >> 2);
-                var11Lifetime1 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime1);
-                var12Lifetime1 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime1);
+                var11Lifetime1 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var9Lifetime1);
+                var12Lifetime1 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var10Lifetime1);
                 this.trap.move((byte) -110, var11Lifetime1, var12Lifetime1);
                 if (this.field_w) {
                   this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime1);
@@ -172,8 +172,8 @@ final class FleeLocomotor extends Locomotor {
             }
             var9Lifetime2 = MouseInputHandler.sin2048((byte) 95, var8Lifetime2 >> 2);
             var10Lifetime2 = ModelAnimator.cos2048(0, var8Lifetime2 >> 2);
-            var11Lifetime2 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime2);
-            var12Lifetime2 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime2);
+            var11Lifetime2 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var9Lifetime2);
+            var12Lifetime2 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var10Lifetime2);
             this.trap.move((byte) -110, var11Lifetime2, var12Lifetime2);
             if (this.field_w) {
               this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime2);
@@ -189,8 +189,8 @@ final class FleeLocomotor extends Locomotor {
         }
         var9Lifetime3 = MouseInputHandler.sin2048((byte) 95, var8Lifetime3 >> 2);
         var10Lifetime3 = ModelAnimator.cos2048(0, var8Lifetime3 >> 2);
-        var11Lifetime3 = doa.multiplyFixedCoarse(2, this.field_A, var9Lifetime3);
-        var12Lifetime3 = doa.multiplyFixedCoarse(2, this.field_A, var10Lifetime3);
+        var11Lifetime3 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var9Lifetime3);
+        var12Lifetime3 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.field_A, var10Lifetime3);
         this.trap.move((byte) -110, var11Lifetime3, var12Lifetime3);
         if (!this.field_w) {
           return;

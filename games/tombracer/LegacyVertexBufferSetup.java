@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class doa {
+final class LegacyVertexBufferSetup {
     private LegacyVertexArray field_a;
 
     final static AccountServiceResult createAccountFailureReply(String param0, int param1, byte param2) {
@@ -17,7 +17,7 @@ final class doa {
           var3.field_b = param0;
           var3.field_f = param1;
           if (param2 != 114) {
-            doa.multiplyFixedCoarse(-6, 122, 25);
+            LegacyVertexBufferSetup.multiplyFixedCoarse(-6, 122, 25);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -60,7 +60,7 @@ final class doa {
         return null;
     }
 
-    doa() {
+    LegacyVertexBufferSetup() {
         FloatPacketBuffer discarded$0 = new FloatPacketBuffer(786336);
         CauldronComponent.bitLength((byte) 93, 1600);
     }

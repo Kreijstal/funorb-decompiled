@@ -345,7 +345,7 @@ final class PlayerContextMenu {
           }
           if (param0.field_d == 2) {
             if (UrlDownloadRequest.field_i == 0) {
-              this.field_f.addItem((byte) -93, 12, cva.field_e);
+              this.field_f.addItem((byte) -93, 12, BooleanIntPair.field_e);
             }
             this.field_f.addItem((byte) -85, 13, LegacyOpenGlUnlitEffect.field_c);
           }

@@ -229,7 +229,7 @@ final class WaveformOperator extends TextureOperator {
               DrawOfferMenu.setUsernameSuggestions((byte) -109, var4);
               SnakePitModel.field_t = IntIntHashTable.createAccountSuggestionsReply(90, args);
             } else {
-              SnakePitModel.field_t = doa.createAccountFailureReply(param2, param1, (byte) 114);
+              SnakePitModel.field_t = LegacyVertexBufferSetup.createAccountFailureReply(param2, param1, (byte) 114);
             }
           } else {
             stackIn_4_0 = 97;

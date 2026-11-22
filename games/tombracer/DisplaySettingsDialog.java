@@ -637,7 +637,7 @@ final class DisplaySettingsDialog extends ResizingDialog implements ButtonListen
         } else {
           if (this.field_S == this.field_N) {
             HardwareOpenGlVertexBuffer.exitFullscreen(0);
-            cva.a(-117);
+            BooleanIntPair.enableViewportResizing(-117);
           } else {
             if (this.field_S != this.field_V) {
               this.field_L.field_y = false;

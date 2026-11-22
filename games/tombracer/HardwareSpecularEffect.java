@@ -172,7 +172,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.owner.applyTexCoordGeneration(IdolItemComponent.field_H, (byte) 0);
           var4 = this.owner.getActiveTextureTransform(0);
           var4.setRotationX(-94, 1024);
-          this.owner.setTextureTransformMode(cva.field_b, false);
+          this.owner.setTextureTransformMode(BooleanIntPair.field_b, false);
           if (!this.field_d) {
             this.owner.setTextureCombineOperations(GpuPrimitiveType.field_c, (byte) -110, PlatformComponent.field_F);
             this.owner.setColorCombineSource(PlayerContextMenu.field_j, 0, -34);

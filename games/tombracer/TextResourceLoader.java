@@ -445,7 +445,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -62, "mu_chat_pm_friends_only");
                 if (null != var2) {
-                  cva.field_e = jaa.decodeText((byte) 67, var2);
+                  BooleanIntPair.field_e = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -38, "mu_chat_pm_friends");
                 if (null != var2) {
@@ -2533,7 +2533,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 111, "rating_lost");
                 if (var2 != null) {
-                  ida.field_a = jaa.decodeText((byte) 55, var2);
+                  CookieDateFormatter.field_a = jaa.decodeText((byte) 55, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -28, "rating_drawn");
                 if (var2 != null) {

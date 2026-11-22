@@ -166,16 +166,16 @@ final class PathMoveLocomotor extends Locomotor {
           if (!this.turnsToFaceWaypoint) {
             var11 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13 = doa.multiplyFixedCoarse(2, this.speed, var11);
-            var14 = doa.multiplyFixedCoarse(2, this.speed, var12);
+            var13 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11);
+            var14 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12);
             this.trap.move((byte) -77, var13, var14);
             return;
           }
           if (!this.field_s) {
             var11Lifetime5 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12Lifetime5 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13Lifetime6 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime5);
-            var14Lifetime6 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime5);
+            var13Lifetime6 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime5);
+            var14Lifetime6 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime5);
             this.trap.move((byte) -77, var13Lifetime6, var14Lifetime6);
             return;
           }
@@ -186,8 +186,8 @@ final class PathMoveLocomotor extends Locomotor {
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12Lifetime6 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13Lifetime7 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime6);
-            var14Lifetime7 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime6);
+            var13Lifetime7 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime6);
+            var14Lifetime7 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime6);
             this.trap.move((byte) -77, var13Lifetime7, var14Lifetime7);
             return;
           }
@@ -196,8 +196,8 @@ final class PathMoveLocomotor extends Locomotor {
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
             var12Lifetime6 = ModelAnimator.cos2048(0, var10 >> 2);
-            var13Lifetime8 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime6);
-            var14Lifetime8 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime6);
+            var13Lifetime8 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime6);
+            var14Lifetime8 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime6);
             this.trap.move((byte) -77, var13Lifetime8, var14Lifetime8);
             return;
           }
@@ -207,8 +207,8 @@ final class PathMoveLocomotor extends Locomotor {
           }
           var11Lifetime7 = MouseInputHandler.sin2048((byte) 126, var10 >> 2);
           var12Lifetime7 = ModelAnimator.cos2048(0, var10 >> 2);
-          var13Lifetime9 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime7);
-          var14Lifetime9 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime7);
+          var13Lifetime9 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime7);
+          var14Lifetime9 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime7);
           this.trap.move((byte) -77, var13Lifetime9, var14Lifetime9);
           return;
         }
@@ -234,16 +234,16 @@ final class PathMoveLocomotor extends Locomotor {
         if (!this.turnsToFaceWaypoint) {
           var11Lifetime1 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime1 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime1 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime1);
-          var14Lifetime1 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime1);
+          var13Lifetime1 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime1);
+          var14Lifetime1 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime1);
           this.trap.move((byte) -77, var13Lifetime1, var14Lifetime1);
           return;
         }
         if (!this.field_s) {
           var11Lifetime2 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime2 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime2 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime2);
-          var14Lifetime2 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime2);
+          var13Lifetime2 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime2);
+          var14Lifetime2 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime2);
           this.trap.move((byte) -77, var13Lifetime2, var14Lifetime2);
           return;
         }
@@ -254,8 +254,8 @@ final class PathMoveLocomotor extends Locomotor {
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime3 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime3);
-          var14Lifetime3 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime3);
+          var13Lifetime3 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime3);
+          var14Lifetime3 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime3);
           this.trap.move((byte) -77, var13Lifetime3, var14Lifetime3);
           return;
         }
@@ -264,8 +264,8 @@ final class PathMoveLocomotor extends Locomotor {
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-          var13Lifetime4 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime3);
-          var14Lifetime4 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime3);
+          var13Lifetime4 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime3);
+          var14Lifetime4 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime3);
           this.trap.move((byte) -77, var13Lifetime4, var14Lifetime4);
           return;
         }
@@ -275,8 +275,8 @@ final class PathMoveLocomotor extends Locomotor {
         }
         var11Lifetime4 = MouseInputHandler.sin2048((byte) 126, var10Lifetime1 >> 2);
         var12Lifetime4 = ModelAnimator.cos2048(0, var10Lifetime1 >> 2);
-        var13Lifetime5 = doa.multiplyFixedCoarse(2, this.speed, var11Lifetime4);
-        var14Lifetime5 = doa.multiplyFixedCoarse(2, this.speed, var12Lifetime4);
+        var13Lifetime5 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var11Lifetime4);
+        var14Lifetime5 = LegacyVertexBufferSetup.multiplyFixedCoarse(2, this.speed, var12Lifetime4);
         this.trap.move((byte) -77, var13Lifetime5, var14Lifetime5);
     }
 

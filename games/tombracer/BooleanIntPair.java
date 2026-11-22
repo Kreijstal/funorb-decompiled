@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cva {
+final class BooleanIntPair {
     int field_d;
     boolean field_a;
     static TextureTransformMode field_b;
     static String field_e;
     static AnimationSequence[] field_c;
 
-    final static void a(int param0) {
+    final static void enableViewportResizing(int param0) {
         if (OpenGlSceneLight.field_o != null) {
           OpenGlSceneLight.field_o.field_h = true;
           int var1 = 105 % ((param0 + 32) / 62);
@@ -23,11 +23,11 @@ final class cva {
         field_e = null;
         field_c = null;
         if (param0 != 1) {
-          cva.releaseStatics(-7);
+          BooleanIntPair.releaseStatics(-7);
         }
     }
 
-    cva(boolean param0, int param1) {
+    BooleanIntPair(boolean param0, int param1) {
         this.field_a = param0 ? true : false;
         this.field_d = param1;
     }

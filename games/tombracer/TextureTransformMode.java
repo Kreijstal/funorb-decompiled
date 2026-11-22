@@ -25,12 +25,12 @@ final class TextureTransformMode {
             PlantModel.field_n = NanoTickClock.createAccountSuccessReply(stackIn_10_0, stackIn_11_1);
           } else {
             if (param0 < 100) {
-              PlantModel.field_n = doa.createAccountFailureReply(param3, param0, (byte) 114);
+              PlantModel.field_n = LegacyVertexBufferSetup.createAccountFailureReply(param3, param0, (byte) 114);
             } else {
               if (param0 <= 105) {
                 PlantModel.field_n = IntIntHashTable.createAccountSuggestionsReply(param2 + 228, param1);
               } else {
-                PlantModel.field_n = doa.createAccountFailureReply(param3, param0, (byte) 114);
+                PlantModel.field_n = LegacyVertexBufferSetup.createAccountFailureReply(param3, param0, (byte) 114);
               }
             }
           }

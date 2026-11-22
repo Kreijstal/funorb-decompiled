@@ -174,7 +174,7 @@ final class dta {
               var25 = 16;
               if (!param4.field_D &&
                 !param4.c(false)) {
-                var26 = doa.findCourseRoom(var12.getRoom((byte) 125).getId((byte) -82), 0, param4.getCourseId(-1)).field_h;
+                var26 = LegacyVertexBufferSetup.findCourseRoom(var12.getRoom((byte) 125).getId((byte) -82), 0, param4.getCourseId(-1)).field_h;
                 if (0 == var26) {
                   var26 = 750;
                 }

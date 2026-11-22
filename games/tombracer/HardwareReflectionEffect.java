@@ -82,7 +82,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         this.owner.setAlphaCombineSource(0, false, OpenGlDisplayLists.field_c);
         AffineTransform3D var4_ref_asa = this.owner.getActiveTextureTransform(0);
         var4_ref_asa.copyStateFrom(1217, this.owner.getTransposedViewTransform(true));
-        this.owner.setTextureTransformMode(cva.field_b, false);
+        this.owner.setTextureTransformMode(BooleanIntPair.field_b, false);
         this.owner.setActiveTextureUnit(0, false);
         this.field_f = true;
         var4Lifetime2 = 19 % ((param0 - 41) / 62);
