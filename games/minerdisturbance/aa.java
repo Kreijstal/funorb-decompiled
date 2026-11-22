@@ -98,7 +98,7 @@ final class aa {
         this.a(1 + this.field_g, param1, param0 - 6632);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -117) {
           return;
         }

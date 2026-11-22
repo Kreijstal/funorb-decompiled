@@ -31,7 +31,7 @@ final class cb {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = (int[][]) null;
         field_b = (boolean[][][]) null;
         field_e = null;

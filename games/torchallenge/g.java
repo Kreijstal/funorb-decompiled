@@ -75,7 +75,7 @@ final class g implements j {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = (Sprite[][][]) null;
         if (param0 != 28215) {
           field_i = (Sprite[][][]) null;

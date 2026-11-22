@@ -8,7 +8,7 @@ final class cc extends IntrusiveNode {
     int field_k;
     static String field_j;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -17) {
           field_l = null;
           field_i = null;

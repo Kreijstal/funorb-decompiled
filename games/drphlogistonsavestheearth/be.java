@@ -810,7 +810,7 @@ final class be {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_c = null;
         field_a = null;

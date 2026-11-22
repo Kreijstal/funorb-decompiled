@@ -583,7 +583,7 @@ final class ij extends ArchiveProvider {
         return (em) (var4);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_o = null;
         field_t = null;
         if (!param0) {

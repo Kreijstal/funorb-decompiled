@@ -66,7 +66,7 @@ final class a {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         mouseHandler = null;
         field_e = null;

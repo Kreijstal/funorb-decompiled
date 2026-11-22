@@ -90,7 +90,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
         return this.field_p == param0;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         field_n = null;
         field_l = null;

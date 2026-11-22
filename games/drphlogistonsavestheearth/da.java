@@ -128,7 +128,7 @@ final class da {
         return this.field_f[param0] * 2;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_c = (float[][]) null;
         field_b = (int[][]) null;
     }

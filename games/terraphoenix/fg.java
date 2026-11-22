@@ -9,7 +9,7 @@ final class fg {
     static String field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_f = null;
         if (param0 >= -51) {

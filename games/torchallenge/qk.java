@@ -140,7 +140,7 @@ final class qk extends kg {
         ll.a(param1, true, param0);
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

@@ -218,7 +218,7 @@ abstract class u {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 50) {
           return;
         }

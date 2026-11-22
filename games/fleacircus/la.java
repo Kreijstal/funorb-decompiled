@@ -205,7 +205,7 @@ class la {
         return this.field_l;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_n = null;
     }
 

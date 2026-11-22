@@ -11,7 +11,7 @@ final class ql extends IntrusiveNode {
     static int[] field_l;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 4707) {
           field_l = (int[]) null;
           field_k = null;

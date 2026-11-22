@@ -840,7 +840,7 @@ final class gi {
         return this;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = null;
         field_q = null;
         field_j = null;

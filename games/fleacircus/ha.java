@@ -23,7 +23,7 @@ final class ha extends IntrusiveNode {
         ae.field_a.e(false);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_p = null;
         field_m = null;
         field_i = null;
@@ -89,7 +89,7 @@ final class ha extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -21916) {
-            ha.b(false);
+            ha.clearStaticReferences(false);
           }
           var2 = new mk(false);
           var2.field_j = args;

@@ -28,7 +28,7 @@ final class el extends wi {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_B = null;
         if (param0 != 30537) {
           return;
@@ -88,7 +88,7 @@ final class el extends wi {
           }
           vg.field_u = param4;
           if (param2 <= 24) {
-            el.d(18);
+            el.clearStaticReferences(18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -24,7 +24,7 @@ final class mj extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -96) {
           return;
         }

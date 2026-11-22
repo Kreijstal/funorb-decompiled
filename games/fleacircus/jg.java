@@ -46,7 +46,7 @@ abstract class jg {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = rl.a(1, var3);
+            stackIn_6_0 = BoundedRandomAccessFile.copyByteArray(1, var3);
             return stackIn_6_0;
           }
           if (param0) {

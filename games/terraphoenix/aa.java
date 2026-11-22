@@ -14,7 +14,7 @@ final class aa extends IntrusiveNode {
     static boolean[] field_k;
     int field_l;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_r = null;
         if (!param0) {

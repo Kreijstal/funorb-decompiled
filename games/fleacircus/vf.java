@@ -71,7 +71,7 @@ final class vf extends r {
         if (param0 != -5) {
           vf.c((byte) -24);
         }
-        stackIn_6_0 = (null != mg.field_a) && (null != mg.field_a.l(-63));
+        stackIn_6_0 = (null != GzipDecompressor.field_a) && (null != GzipDecompressor.field_a.l(-63));
         return stackIn_6_0;
     }
 

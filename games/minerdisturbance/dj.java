@@ -36,7 +36,7 @@ final class dj {
         }
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_a = null;
         field_h = null;
         field_e = null;

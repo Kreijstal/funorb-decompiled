@@ -63,7 +63,7 @@ final class sl {
         return param0 ^ param1;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 == -58) {

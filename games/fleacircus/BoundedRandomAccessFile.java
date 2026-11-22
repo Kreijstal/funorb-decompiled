@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class rl {
+final class BoundedRandomAccessFile {
     private long field_f;
     static sf field_g;
     static mk field_b;
@@ -12,12 +12,12 @@ final class rl {
     private long field_a;
     private RandomAccessFile field_c;
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         this.field_c.seek(param0);
         this.field_f = param0;
         if (param1 > -112) {
           ResourceArchive var5 = (ResourceArchive) null;
-          rl.a((ResourceArchive) null, -27);
+          BoundedRandomAccessFile.a((ResourceArchive) null, -27);
         }
     }
 
@@ -31,7 +31,7 @@ final class rl {
     protected final void finalize() throws Throwable {
         if (this.field_c != null) {
           System.out.println("");
-          this.b(-1);
+          this.close(-1);
         }
     }
 
@@ -100,7 +100,7 @@ final class rl {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -143,7 +143,7 @@ final class rl {
         try {
           if (param1 != 0) {
             var3 = (int[]) null;
-            rl.a(21, -126, (int[]) null, -68, -71, 30, -52, -14, (byte) 65);
+            BoundedRandomAccessFile.a(21, -126, (int[]) null, -68, -71, 30, -52, -14, (byte) 65);
           }
           stackIn_3_0 = param0.a(-77);
           return stackIn_3_0;
@@ -161,18 +161,18 @@ final class rl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_e = null;
         if (param0 != -930374320) {
           int[] var2 = (int[]) null;
-          rl.a(111, -12, (int[]) null, 28, 28, 35, 6, -36, (byte) -75);
+          BoundedRandomAccessFile.a(111, -12, (int[]) null, 28, 28, 35, 6, -36, (byte) -75);
         }
         field_b = null;
         field_d = null;
     }
 
-    final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(byte param0, int param1, int param2, byte[] param3) throws IOException {
         if (param0 < 87) {
           return;
         }
@@ -189,7 +189,7 @@ final class rl {
         }
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != -1) {
           return;
         }
@@ -199,7 +199,7 @@ final class rl {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyByteArray(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -216,7 +216,7 @@ final class rl {
             return stackIn_2_0;
           }
           var3 = new byte[var2_int];
-          dm.a(param1, 0, var3, 0, var2_int);
+          dm.copyBytes(param1, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,7 +233,7 @@ final class rl {
         }
     }
 
-    final static java.applet.Applet a(byte param0) {
+    final static java.applet.Applet getApplet(byte param0) {
         if (null != sd.field_j) {
           return sd.field_j;
         }
@@ -243,10 +243,10 @@ final class rl {
         return (java.applet.Applet) ((Object) pf.field_c);
     }
 
-    final long c(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 2049105808) {
           ResourceArchive var3 = (ResourceArchive) null;
-          rl.a((ResourceArchive) null, -61);
+          BoundedRandomAccessFile.a((ResourceArchive) null, -61);
         }
         return this.field_c.length();
     }
@@ -289,7 +289,7 @@ final class rl {
               return;
             }
             if (param8 != -115) {
-              rl.a(125);
+              BoundedRandomAccessFile.clearStaticReferences(125);
             }
             var14 = param7 - param1;
             if (param4 != param1) {
@@ -447,7 +447,7 @@ final class rl {
         }
     }
 
-    rl(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

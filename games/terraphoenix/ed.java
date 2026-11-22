@@ -7,7 +7,7 @@ final class ed {
     static char[] field_a;
     static float field_d;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 63) {
           field_b = (String) null;
         }

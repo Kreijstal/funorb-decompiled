@@ -81,7 +81,7 @@ final class ld {
           var6 = (int)(2.55 * (double)var9[var3]);
           if (0 < var6) {
             v.field_W[var3].a(-50 + var9[var3] / 2, var9[var3] / 2 - 50, var6);
-            cb.field_b.a(mg.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
     }
@@ -144,7 +144,7 @@ final class ld {
           var6 = (int)((double)var10[var3] * 2.55);
           if (var6 > 0) {
             mk.field_g[var3].a(-50 + var10[var3] / 2, var10[var3] / 2 - 50, var6);
-            cb.field_b.a(mg.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
         if (l.field_n[sd.field_a.levelNumber][7] < ul.field_d &&
@@ -246,7 +246,7 @@ final class ld {
             var6 = 0;
           }
           param1[0].a(var5, var6, var3_int);
-          cb.field_b.a(mg.field_a[sd.field_a.levelNumber][0], 225, kj.field_f[sd.field_a.levelNumber][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
+          cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][0], 225, kj.field_f[sd.field_a.levelNumber][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1002,7 +1002,7 @@ final class ld {
           var6 = (int)((double)var9[var3] * 2.55);
           if (var6 > 0) {
             pc.field_b[var3].a(-50 + var9[var3] / 2, -50 + var9[var3] / 2, var6);
-            cb.field_b.a(mg.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
           var3--;
         }
@@ -2190,7 +2190,7 @@ final class ld {
         return true;
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_d = null;
         if (param0 != 39) {

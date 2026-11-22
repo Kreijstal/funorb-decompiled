@@ -106,7 +106,7 @@ final class ah {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_a = (int[][]) null;
         field_f = null;

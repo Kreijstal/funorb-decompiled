@@ -35,7 +35,7 @@ final class gb {
             return (qj) (stackIn_2_0);
           }
           if (param0 != -28993) {
-            gb.a(16);
+            gb.clearStaticReferences(16);
           }
           var2 = new qj(param1, GameApplet.field_e, ImageProducerRasterBuffer.field_t, pg.field_r, lg.field_e, td.field_m, h.field_a);
           p.a(0);
@@ -112,7 +112,7 @@ final class gb {
         return ea.field_f;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 40) {
           field_f = (h) null;
         }

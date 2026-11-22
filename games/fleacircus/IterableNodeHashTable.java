@@ -15,7 +15,7 @@ final class IterableNodeHashTable implements Iterable {
     static int field_j;
     static String field_h;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 >= -62) {
           return;
@@ -30,7 +30,7 @@ final class IterableNodeHashTable implements Iterable {
         IntrusiveNode var5 = null;
         try {
           if (param2 != 43) {
-            IterableNodeHashTable.a((byte) -31);
+            IterableNodeHashTable.clearStaticReferences((byte) -31);
           }
           if (null != param1.field_a) {
             param1.c(param2 ^ -44);

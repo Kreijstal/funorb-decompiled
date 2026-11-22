@@ -21,7 +21,7 @@ abstract class oe {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 103) {
           return;
         }

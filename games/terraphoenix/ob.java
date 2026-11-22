@@ -21,7 +21,7 @@ final class ob {
         field_c = field_h / 2;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_d = null;
         field_g = null;
         field_f = null;

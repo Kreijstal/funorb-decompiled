@@ -91,7 +91,7 @@ final class ei {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -117) {
-            ei.a(68);
+            ei.clearStaticReferences(68);
           }
           stackIn_3_0 = ci.a(10, param1, -18, true);
           return stackIn_3_0;
@@ -109,7 +109,7 @@ final class ei {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         if (param0 >= -35) {
           return;

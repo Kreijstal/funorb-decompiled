@@ -19,7 +19,7 @@ abstract class jj extends db {
     static vc field_S;
     static BufferedSocket field_M;
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_R = null;
           field_Y = null;
@@ -37,7 +37,7 @@ abstract class jj extends db {
         try {
           qj.field_I = param1;
           if (!param2) {
-            jj.c(true);
+            jj.clearStaticReferences(true);
           }
           wa.field_l = param0;
         } catch (RuntimeException runtimeException) {

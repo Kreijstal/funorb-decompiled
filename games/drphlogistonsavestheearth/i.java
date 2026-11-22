@@ -6,7 +6,7 @@ final class i {
     static int field_a;
     static int[] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 < -54) {

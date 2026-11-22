@@ -71,7 +71,7 @@ final class r {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = (boolean[][][]) null;
         if (param0 <= 22) {
           field_i = (boolean[][][]) null;

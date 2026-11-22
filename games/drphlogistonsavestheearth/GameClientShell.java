@@ -329,7 +329,7 @@ abstract class GameClientShell extends GameAppletShell {
         g.field_p[1] = true;
     }
 
-    public static void j(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = null;
         if (param0 != 26395) {
           return;

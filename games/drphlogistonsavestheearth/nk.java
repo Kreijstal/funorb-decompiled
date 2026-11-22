@@ -307,7 +307,7 @@ final class nk {
         this.field_n.a(param0, this.field_q);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_g = null;
         field_b = null;
         field_k = null;

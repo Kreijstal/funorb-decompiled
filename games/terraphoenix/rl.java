@@ -12,12 +12,12 @@ final class rl {
           ah.field_z = 15000L + ll.a(param0 + 1000);
           return q.field_Jb == 11 ? true : false;
         }
-        rl.a(-78);
+        rl.clearStaticReferences(-78);
         ah.field_z = 15000L + ll.a(param0 + 1000);
         return q.field_Jb == 11 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != -19959) {

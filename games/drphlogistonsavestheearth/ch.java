@@ -12,7 +12,7 @@ final class ch extends l {
     static String field_w;
     static int field_A;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_z = null;
         field_u = null;
         field_w = null;

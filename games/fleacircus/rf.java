@@ -25,7 +25,7 @@ final class rf {
     fl field_j;
     int[] field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_e = null;
         if (param0 < 115) {
@@ -155,7 +155,7 @@ final class rf {
               this.field_n[this.field_r[var10Lifetime4]] = var17.c((byte) -1);
             }
             if (param1 != 19083) {
-              rf.a((byte) -112);
+              rf.clearStaticReferences((byte) -112);
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_s; var10Lifetime5++) {

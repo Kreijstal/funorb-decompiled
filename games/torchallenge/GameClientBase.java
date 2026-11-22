@@ -571,7 +571,7 @@ abstract class GameClientBase extends GameApplet {
             this.i(123);
           }
           if (var4 == 7) {
-            GzipDecoder.a(gi.b(12476), 101);
+            GzipDecoder.openServerList(gi.b(12476), 101);
           }
           if (var4 == 8) {
             pl.a((byte) 126, gi.b(12476));

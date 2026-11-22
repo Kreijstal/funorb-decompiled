@@ -10,7 +10,7 @@ final class pe extends fd {
     int field_tb;
     String field_ob;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -30) {
           return;
         }

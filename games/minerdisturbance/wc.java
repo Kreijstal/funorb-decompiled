@@ -64,7 +64,7 @@ final class wc implements uj {
               }
             } else {
               SoftwareRasterizer.d();
-              pd.a(10853, 320, 240);
+              GzipDecompressor.a(10853, 320, 240);
               cl.a(param1, 0, 0, 310);
             }
           } else {

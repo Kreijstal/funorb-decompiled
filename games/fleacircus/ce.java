@@ -4,17 +4,17 @@
 import java.io.*;
 
 final class ce implements Runnable {
-    rl field_t;
-    rl field_k;
+    BoundedRandomAccessFile field_t;
+    BoundedRandomAccessFile field_k;
     private ra field_s;
-    rl[] field_l;
+    BoundedRandomAccessFile[] field_l;
     private static String field_g;
     private static String field_v;
     private od field_h;
     private ac field_x;
     private static String field_w;
     static String field_d;
-    rl field_q;
+    BoundedRandomAccessFile field_q;
     boolean field_e;
     private boolean field_u;
     private static volatile long field_i;
@@ -68,7 +68,7 @@ final class ce implements Runnable {
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
           em var3_ref = null;
-          rl var3_ref2 = null;
+          BoundedRandomAccessFile var3_ref2 = null;
           int var3_int = 0;
           Exception var3_ref3 = null;
           int var4_int = 0;
@@ -328,7 +328,7 @@ final class ce implements Runnable {
           }
           if (this.field_q != null) {
             try {
-              this.field_q.b(-1);
+              this.field_q.close(-1);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -339,7 +339,7 @@ final class ce implements Runnable {
           }
           if (this.field_t != null) {
             try {
-              this.field_t.b(-1);
+              this.field_t.close(-1);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -349,7 +349,7 @@ final class ce implements Runnable {
             for (var2_int = 0; this.field_l.length > var2_int; var2_int++) {
               if (null != this.field_l[var2_int]) {
                 try {
-                  this.field_l[var2_int].b(-1);
+                  this.field_l[var2_int].close(-1);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -359,7 +359,7 @@ final class ce implements Runnable {
           }
           if (null != this.field_k) {
             try {
-              this.field_k.b(-1);
+              this.field_k.close(-1);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -407,16 +407,16 @@ final class ce implements Runnable {
         return this.a(param0, -125, !param1 ? 1 : 22, param2, 0);
     }
 
-    private final static rl a(String param0, int param1, int param2, String param3) {
+    private final static BoundedRandomAccessFile a(String param0, int param1, int param2, String param3) {
         try {
-          rl stackIn_14_0 = null;
+          BoundedRandomAccessFile stackIn_14_0 = null;
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           int var6 = 0;
           String var7 = null;
-          rl var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
           if (param1 != 33) {
@@ -443,7 +443,7 @@ final class ce implements Runnable {
             }
             while (true) {
               try {
-                var8 = new rl(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_14_0 = var8;
                 return stackIn_14_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -508,7 +508,7 @@ final class ce implements Runnable {
 
     final od a(java.net.URL param0, int param1) {
         if (param1 != -34) {
-          this.field_t = (rl) null;
+          this.field_t = (BoundedRandomAccessFile) null;
         }
         return this.a(0, -81, 4, param0, 0);
     }
@@ -606,12 +606,12 @@ final class ce implements Runnable {
         }
         kj.a(field_w, field_p, true);
         if (this.field_e) {
-          this.field_k = new rl(kj.a((String) null, -2, field_p, "random.dat"), "rw", 25L);
-          this.field_q = new rl(kj.a(20926, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_t = new rl(kj.a(20926, "main_file_cache.idx255"), "rw", 1048576L);
-          this.field_l = new rl[param2];
+          this.field_k = new BoundedRandomAccessFile(kj.a((String) null, -2, field_p, "random.dat"), "rw", 25L);
+          this.field_q = new BoundedRandomAccessFile(kj.a(20926, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_t = new BoundedRandomAccessFile(kj.a(20926, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_l = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_l[var5_int] = new rl(kj.a(20926, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_l[var5_int] = new BoundedRandomAccessFile(kj.a(20926, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_j) {
             try {

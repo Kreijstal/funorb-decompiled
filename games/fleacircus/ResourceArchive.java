@@ -174,7 +174,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (param3 == var21) {
-                    dm.a(var43, var17, var44, var14Lifetime1, var19);
+                    dm.copyBytes(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -212,7 +212,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.c((byte) -35);
-                  dm.a(var43, var16, var39[var19], var38[var19], var18);
+                  dm.copyBytes(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -339,7 +339,7 @@ final class ResourceArchive {
             param1--;
             if (0 > param1) {
               if (param4 > -65) {
-                ResourceArchive.c((byte) -61);
+                ResourceArchive.clearStaticReferences((byte) -61);
               }
               return;
             }
@@ -524,7 +524,7 @@ final class ResourceArchive {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         if (param0 != -110) {
           return;

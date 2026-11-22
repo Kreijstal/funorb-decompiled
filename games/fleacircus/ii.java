@@ -134,10 +134,10 @@ final class ii {
     final static void b(int param0) {
         if (param0 <= 111) {
           ii.a(11, '\002');
-          bj.a(14, rl.a((byte) -54));
+          bj.a(14, BoundedRandomAccessFile.getApplet((byte) -54));
           return;
         }
-        bj.a(14, rl.a((byte) -54));
+        bj.a(14, BoundedRandomAccessFile.getApplet((byte) -54));
     }
 
     final static boolean a(int param0, CharSequence param1) {

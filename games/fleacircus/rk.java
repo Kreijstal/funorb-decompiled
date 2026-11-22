@@ -20,7 +20,7 @@ final class rk extends wi {
         return ng.field_c;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         field_u = null;
         if (param0 <= 107) {

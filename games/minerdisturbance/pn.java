@@ -35,9 +35,9 @@ final class pn implements uj {
               !(param0 <= cc.field_L.length)) {
               cc.field_L = new int[param0 * 2];
             }
-            if (an.field_a == null ||
-              !(param0 + param2 <= an.field_a.length)) {
-              an.field_a = new int[2 * (param0 + param2)];
+            if (BoundedRandomAccessFile.field_a == null ||
+              !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+              BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
             }
             if (null == rg.field_ub ||
               !(param0 <= rg.field_ub.length)) {
@@ -50,9 +50,9 @@ final class pn implements uj {
                 !(param0 <= cc.field_L.length)) {
                 cc.field_L = new int[param0 * 2];
               }
-              if (an.field_a == null ||
-                !(param0 + param2 <= an.field_a.length)) {
-                an.field_a = new int[2 * (param0 + param2)];
+              if (BoundedRandomAccessFile.field_a == null ||
+                !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
               }
               if (null == rg.field_ub ||
                 !(param0 <= rg.field_ub.length)) {
@@ -61,9 +61,9 @@ final class pn implements uj {
             } else {
               if (cc.field_L == null) {
                 cc.field_L = new int[param0 * 2];
-                if (an.field_a == null ||
-                  !(param0 + param2 <= an.field_a.length)) {
-                  an.field_a = new int[2 * (param0 + param2)];
+                if (BoundedRandomAccessFile.field_a == null ||
+                  !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                  BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                 }
                 if (null == rg.field_ub ||
                   !(param0 <= rg.field_ub.length)) {
@@ -72,18 +72,18 @@ final class pn implements uj {
               } else {
                 if (param0 > cc.field_L.length) {
                   cc.field_L = new int[param0 * 2];
-                  if (an.field_a == null ||
-                    !(param0 + param2 <= an.field_a.length)) {
-                    an.field_a = new int[2 * (param0 + param2)];
+                  if (BoundedRandomAccessFile.field_a == null ||
+                    !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                    BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
                   if (null == rg.field_ub ||
                     !(param0 <= rg.field_ub.length)) {
                     rg.field_ub = new boolean[2 * param0];
                   }
                 } else {
-                  if (an.field_a == null ||
-                    !(param0 + param2 <= an.field_a.length)) {
-                    an.field_a = new int[2 * (param0 + param2)];
+                  if (BoundedRandomAccessFile.field_a == null ||
+                    !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                    BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
                   if (null == rg.field_ub) {
                     rg.field_ub = new boolean[2 * param0];
@@ -113,9 +113,9 @@ final class pn implements uj {
                 !(param0 <= cc.field_L.length)) {
                 cc.field_L = new int[param0 * 2];
               }
-              if (an.field_a == null ||
-                !(param0 + param2 <= an.field_a.length)) {
-                an.field_a = new int[2 * (param0 + param2)];
+              if (BoundedRandomAccessFile.field_a == null ||
+                !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
               }
               if (null == rg.field_ub ||
                 !(param0 <= rg.field_ub.length)) {
@@ -128,9 +128,9 @@ final class pn implements uj {
                   !(param0 <= cc.field_L.length)) {
                   cc.field_L = new int[param0 * 2];
                 }
-                if (an.field_a == null ||
-                  !(param0 + param2 <= an.field_a.length)) {
-                  an.field_a = new int[2 * (param0 + param2)];
+                if (BoundedRandomAccessFile.field_a == null ||
+                  !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                  BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                 }
                 if (null == rg.field_ub ||
                   !(param0 <= rg.field_ub.length)) {
@@ -139,9 +139,9 @@ final class pn implements uj {
               } else {
                 if (cc.field_L == null) {
                   cc.field_L = new int[param0 * 2];
-                  if (an.field_a == null ||
-                    !(param0 + param2 <= an.field_a.length)) {
-                    an.field_a = new int[2 * (param0 + param2)];
+                  if (BoundedRandomAccessFile.field_a == null ||
+                    !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                    BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
                   if (null == rg.field_ub ||
                     !(param0 <= rg.field_ub.length)) {
@@ -150,18 +150,18 @@ final class pn implements uj {
                 } else {
                   if (param0 > cc.field_L.length) {
                     cc.field_L = new int[param0 * 2];
-                    if (an.field_a == null ||
-                      !(param0 + param2 <= an.field_a.length)) {
-                      an.field_a = new int[2 * (param0 + param2)];
+                    if (BoundedRandomAccessFile.field_a == null ||
+                      !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                      BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
                     if (null == rg.field_ub ||
                       !(param0 <= rg.field_ub.length)) {
                       rg.field_ub = new boolean[2 * param0];
                     }
                   } else {
-                    if (an.field_a == null ||
-                      !(param0 + param2 <= an.field_a.length)) {
-                      an.field_a = new int[2 * (param0 + param2)];
+                    if (BoundedRandomAccessFile.field_a == null ||
+                      !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                      BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
                     if (null == rg.field_ub) {
                       rg.field_ub = new boolean[2 * param0];
@@ -189,9 +189,9 @@ final class pn implements uj {
                 !(param0 <= cc.field_L.length)) {
                 cc.field_L = new int[param0 * 2];
               }
-              if (an.field_a == null ||
-                !(param0 + param2 <= an.field_a.length)) {
-                an.field_a = new int[2 * (param0 + param2)];
+              if (BoundedRandomAccessFile.field_a == null ||
+                !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
               }
               if (null == rg.field_ub) {
                 rg.field_ub = new boolean[2 * param0];
@@ -207,9 +207,9 @@ final class pn implements uj {
                   !(param0 <= cc.field_L.length)) {
                   cc.field_L = new int[param0 * 2];
                 }
-                if (an.field_a == null ||
-                  !(param0 + param2 <= an.field_a.length)) {
-                  an.field_a = new int[2 * (param0 + param2)];
+                if (BoundedRandomAccessFile.field_a == null ||
+                  !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                  BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                 }
                 if (null == rg.field_ub ||
                   !(param0 <= rg.field_ub.length)) {
@@ -218,21 +218,21 @@ final class pn implements uj {
               } else {
                 if (cc.field_L == null) {
                   cc.field_L = new int[param0 * 2];
-                  if (an.field_a == null ||
-                    !(param0 + param2 <= an.field_a.length)) {
-                    an.field_a = new int[2 * (param0 + param2)];
+                  if (BoundedRandomAccessFile.field_a == null ||
+                    !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                    BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                   }
                 } else {
                   if (param0 <= cc.field_L.length) {
-                    if (an.field_a == null ||
-                      !(param0 + param2 <= an.field_a.length)) {
-                      an.field_a = new int[2 * (param0 + param2)];
+                    if (BoundedRandomAccessFile.field_a == null ||
+                      !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                      BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
                   } else {
                     cc.field_L = new int[param0 * 2];
-                    if (an.field_a == null ||
-                      !(param0 + param2 <= an.field_a.length)) {
-                      an.field_a = new int[2 * (param0 + param2)];
+                    if (BoundedRandomAccessFile.field_a == null ||
+                      !(param0 + param2 <= BoundedRandomAccessFile.field_a.length)) {
+                      BoundedRandomAccessFile.field_a = new int[2 * (param0 + param2)];
                     }
                   }
                 }

@@ -348,7 +348,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               o.field_m = param0;
               va.field_u = 0;
               pf.field_c = this;
-              tb.field_d = rl.a((byte) -61);
+              tb.field_d = BoundedRandomAccessFile.getApplet((byte) -61);
               dupTemp$0 = new ce(param5, param4, param1, true);
               fg.field_q = dupTemp$0;
               fg.field_i = dupTemp$0;
@@ -444,7 +444,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_i = true;
             System.out.println("error_game_" + param1);
             try {
-              eb.a("loggedout", rl.a((byte) -80), -250);
+              eb.a("loggedout", BoundedRandomAccessFile.getApplet((byte) -80), -250);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

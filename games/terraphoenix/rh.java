@@ -8,7 +8,7 @@ final class rh {
     int field_a;
     int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 33) {
           field_b = (Sprite[]) null;

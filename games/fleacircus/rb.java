@@ -184,27 +184,27 @@ final class rb extends gj implements da {
               nb.field_h = ae.field_a.e(false);
               ResourceArchive.field_k = fh.field_b;
               if (cf.field_c.a(true) == wa.field_g) {
-                ml.field_F.a(true, rl.a((byte) -111));
+                ml.field_F.a(true, BoundedRandomAccessFile.getApplet((byte) -111));
               } else {
                 if (cf.field_c.a(true) == mk.field_i) {
-                  wd.field_b.a(true, rl.a((byte) -116));
+                  wd.field_b.a(true, BoundedRandomAccessFile.getApplet((byte) -116));
                 }
               }
               aa.field_q = false;
               if (var11 != null) {
-                ea.a(376, rl.a((byte) -120), var11);
+                ea.a(376, BoundedRandomAccessFile.getApplet((byte) -120), var11);
               }
               if (0 >= wc.field_q &&
                 !ed.field_a) {
                 try {
-                  eb.a("unzap", rl.a((byte) -65), -250);
+                  eb.a("unzap", BoundedRandomAccessFile.getApplet((byte) -65), -250);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  eb.a("zap", new Object[]{ResourceArchive.a((byte) -70, aj.field_w)}, -11745, rl.a((byte) -126));
+                  eb.a("zap", new Object[]{ResourceArchive.a((byte) -70, aj.field_w)}, -11745, BoundedRandomAccessFile.getApplet((byte) -126));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

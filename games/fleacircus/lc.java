@@ -59,7 +59,7 @@ class lc extends DualLinkNode {
             }
             param0.a(var10, 24, 0, 0);
             if (param1 != -113) {
-              lc.c((byte) -96);
+              lc.clearStaticReferences((byte) -96);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -94,7 +94,7 @@ class lc extends DualLinkNode {
         return jk.field_j;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_s = null;
         field_q = null;
         if (param0 != 99) {

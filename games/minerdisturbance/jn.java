@@ -85,7 +85,7 @@ final class jn extends IntrusiveNode {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = an.field_a[var9];
+              var11 = BoundedRandomAccessFile.field_a[var9];
               var6[0][var10] = fl.field_b[var11];
               var18[0][var10 * 4] = IntrusiveNode.field_h[var11];
               var18[0][4 * var10 + 1] = jk.field_db[var11];
@@ -103,7 +103,7 @@ final class jn extends IntrusiveNode {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = an.field_a[var9Lifetime1 + var5];
+              var11Lifetime1 = BoundedRandomAccessFile.field_a[var9Lifetime1 + var5];
               var6[1][var13] = fl.field_b[var11Lifetime1];
               var18[1][4 * var13] = IntrusiveNode.field_h[var11Lifetime1];
               var18[1][4 * var13 + 1] = jk.field_db[var11Lifetime1];

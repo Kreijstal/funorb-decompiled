@@ -43,7 +43,7 @@ final class tc extends IntrusiveNode {
     tc() {
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = (int[][]) null;
         if (param0 < 97) {
           field_m = (int[][]) null;

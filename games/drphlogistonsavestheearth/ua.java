@@ -38,7 +38,7 @@ final class ua extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != 50) {
           field_c = (nh) null;

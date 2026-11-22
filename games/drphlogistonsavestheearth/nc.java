@@ -325,7 +325,7 @@ final class nc extends hf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = (boolean[][]) null;
         field_N = null;
         field_K = null;

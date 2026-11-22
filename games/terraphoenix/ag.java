@@ -5,7 +5,7 @@ final class ag {
     static java.awt.Image field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 10) {
           return;
         }
@@ -22,7 +22,7 @@ final class ag {
           ta.a(jh.field_o, false, 10);
           return;
         }
-        ag.a((byte) -118);
+        ag.clearStaticReferences((byte) -118);
         PacketBuffer.g((byte) -124);
         qi.field_b = true;
         dj.field_d = true;
@@ -56,7 +56,7 @@ final class ag {
           ph.a(param6, param1, param7, (byte) -113, param5, param3, SoftwareRasterizer.field_i, param0, param2);
           return;
         }
-        ag.a((byte) -90);
+        ag.clearStaticReferences((byte) -90);
         if (param1 > param3) {
           if (param1 < param6) {
             ph.a(param3, param1, param2, (byte) -123, param5, param6, SoftwareRasterizer.field_i, param0, param7);

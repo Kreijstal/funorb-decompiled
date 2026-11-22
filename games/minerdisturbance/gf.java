@@ -1484,7 +1484,7 @@ final class gf {
                 }
               }
               var4Lifetime3Lifetime1 = 1;
-              if (an.field_d) {
+              if (BoundedRandomAccessFile.field_d) {
                 var4Lifetime3Lifetime1 = 2;
               }
               for (var5Lifetime2 = -var4Lifetime3Lifetime1 + this.field_n; var5Lifetime2 <= this.field_n + var4Lifetime3Lifetime1; var5Lifetime2++) {

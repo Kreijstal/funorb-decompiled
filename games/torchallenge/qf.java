@@ -27,7 +27,7 @@ final class qf {
             }
           }
           if (param0 != -8503) {
-            qf.a((byte) 86);
+            qf.clearStaticReferences((byte) 86);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,7 +44,7 @@ final class qf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_c = null;
         if (param0 != 75) {

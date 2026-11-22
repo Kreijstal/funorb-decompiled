@@ -68,8 +68,8 @@ final class lf {
             if (null != jg.field_kb) {
               jg.field_kb.a(-103);
             }
-            if (null != t.field_c) {
-              t.field_c.a(-109);
+            if (null != GzipDecompressor.field_c) {
+              GzipDecompressor.field_c.a(-109);
             }
             if (!param0) {
               lf.a(true);

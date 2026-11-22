@@ -114,7 +114,7 @@ final class SpriteLoader {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_a = null;
         field_b = null;
@@ -141,7 +141,7 @@ final class SpriteLoader {
           if (!param1) {
             return;
           }
-          SpriteLoader.a(-102);
+          SpriteLoader.clearStaticReferences(-102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -393,17 +393,17 @@ final class ah {
             field_c = true;
           }
           if (vf.c((byte) -5)) {
-            mg.field_a.a(hm.field_d, param0 + 41, true, bk.field_b);
-            mg.field_a.d(true);
+            GzipDecompressor.field_a.a(hm.field_d, param0 + 41, true, bk.field_b);
+            GzipDecompressor.field_a.d(true);
             while (SecondaryNodeDeque.b(-113)) {
-              mg.field_a.a(id.field_b, (byte) -105, ji.field_a);
+              GzipDecompressor.field_a.a(id.field_b, (byte) -105, ji.field_a);
             }
             return;
           }
           if (null != ResourceArchive.field_p &&
             ResourceArchive.field_p.field_c) {
             IntrusiveNode.a(false);
-            mg.field_a.b(new ic(mg.field_a, fb.field_g), (byte) -35);
+            GzipDecompressor.field_a.b(new ic(GzipDecompressor.field_a, fb.field_g), (byte) -35);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

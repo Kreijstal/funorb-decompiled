@@ -12,7 +12,7 @@ final class pc {
     private int field_d;
     int[] field_f;
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

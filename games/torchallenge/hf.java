@@ -157,7 +157,7 @@ final class hf implements j {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

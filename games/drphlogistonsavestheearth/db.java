@@ -18,7 +18,7 @@ final class db {
         this.field_c = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 <= 55) {
           return;

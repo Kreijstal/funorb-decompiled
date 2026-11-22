@@ -320,7 +320,7 @@ final class pl {
         return;
     }
 
-    final static int b(byte param0) {
+    final static int getTickRate(byte param0) {
         if (param0 != -116) {
           field_a = (String) null;
           return (int)(1000000000L / rj.field_c);

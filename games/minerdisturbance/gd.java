@@ -201,7 +201,7 @@ final class gd extends PcmStream {
         return stackIn_6_0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_z = null;
         field_A = null;
         field_t = null;

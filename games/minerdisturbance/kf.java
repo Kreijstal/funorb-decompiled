@@ -16,7 +16,7 @@ final class kf {
         int[] var12 = null;
         nb.field_i = new ml[12];
         ui.field_L = -640;
-        pd.field_b = param0;
+        GzipDecompressor.field_b = param0;
         mc.field_w = 4;
         q.field_c = 4;
         oj.field_J = 4;
@@ -59,14 +59,14 @@ final class kf {
         try {
           hj.field_f.a(param0);
           if (param1 >= -36) {
-            kf.a(96);
+            kf.clearStaticReferences(96);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "kf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         if (param0 == 42959) {

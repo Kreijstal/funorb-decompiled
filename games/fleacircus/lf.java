@@ -15,7 +15,7 @@ final class lf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 31849) {
-            lf.a((byte) 59);
+            lf.clearStaticReferences((byte) 59);
           }
           stackIn_3_0 = param0.a(param1 ^ 31758);
           return stackIn_3_0;
@@ -33,7 +33,7 @@ final class lf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != 65) {

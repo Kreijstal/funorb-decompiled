@@ -39,7 +39,7 @@ final class fa {
         return ArchiveIndex.field_o;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 26686) {
           return;

@@ -36,14 +36,14 @@ final class pi {
 
     final static void c(byte param0) {
         if (param0 != 15) {
-          pi.a((byte) -9);
+          pi.clearStaticReferences((byte) -9);
         }
         b.field_e = ae.field_a.h(0);
         CharSequence var2 = (CharSequence) ((Object) b.field_e);
         ma.field_a = uk.a(param0 - 127, var2);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_f = null;
         field_g = null;

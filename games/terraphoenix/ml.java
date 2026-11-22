@@ -8,7 +8,7 @@ final class ml extends hb {
 
     final static String e(int param0) {
         if (param0 != 19290) {
-          ml.a((byte) 51);
+          ml.clearStaticReferences((byte) 51);
           if (uj.field_c) {
             return null;
           }
@@ -44,7 +44,7 @@ final class ml extends hb {
         super(param0, param1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 50) {
           field_r = (String) null;
           field_t = null;

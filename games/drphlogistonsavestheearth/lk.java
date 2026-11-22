@@ -40,7 +40,7 @@ class lk extends u {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_l = null;
         field_n = null;
         field_i = null;

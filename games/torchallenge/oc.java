@@ -36,7 +36,7 @@ final class oc {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_h = null;
         field_a = null;

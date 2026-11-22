@@ -170,7 +170,7 @@ final class rb {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         if (param0 != 0) {

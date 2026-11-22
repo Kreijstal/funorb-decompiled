@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pd {
+final class GzipDecompressor {
     static Sprite field_a;
     private java.util.zip.Inflater field_c;
     static MinerDisturbance field_b;
@@ -59,7 +59,7 @@ final class pd {
           }
         }
         if (param0 != 10853) {
-          pd.a(89, 110, 71, 81, 114, -10, -60, 118, 22, (byte) -120, -27, 90, 69, -93, 21, -7);
+          GzipDecompressor.a(89, 110, 71, 81, 114, -10, -60, 118, 22, (byte) -120, -27, 90, 69, -93, 21, -7);
         }
         var6Lifetime1 = -140 + mn.field_x;
         if (var6Lifetime1 > 0) {
@@ -72,7 +72,7 @@ final class pd {
         return;
     }
 
-    final void a(PacketBuffer param0, boolean param1, byte[] param2) {
+    final void decompress(PacketBuffer param0, boolean param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -100,7 +100,7 @@ final class pd {
               }
               if (!param1) {
                 var5 = (CharSequence) null;
-                pd.a((CharSequence) null, -19, false, (byte) -63);
+                GzipDecompressor.isValidInteger((CharSequence) null, -19, false, (byte) -63);
               }
               this.field_c.reset();
               return;
@@ -131,15 +131,15 @@ final class pd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 117) {
-          pd.a(34, -67, -113, -64, 55, -59, 121, -65, 67, (byte) -89, -110, -95, 58, 93, -30, -64);
+          GzipDecompressor.a(34, -67, -113, -64, 55, -59, 121, -65, 67, (byte) -89, -110, -95, 58, 93, -30, -64);
         }
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(CharSequence param0, int param1, boolean param2, byte param3) {
+    final static boolean isValidInteger(CharSequence param0, int param1, boolean param2, byte param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -162,7 +162,7 @@ final class pd {
             var4_int = 0;
             if (param3 < 48) {
               var12 = (CharSequence) null;
-              pd.a((CharSequence) null, -116, true, (byte) 7);
+              GzipDecompressor.isValidInteger((CharSequence) null, -116, true, (byte) 7);
             }
             var5 = 0;
             var6 = 0;
@@ -249,18 +249,18 @@ final class pd {
           }
         }
         if (param9 != -60) {
-          pd.a(-121, 90, -65, -124, -127, -119, 17, 110, 25, (byte) 107, -103, 4, 28, 90, 43, -66);
+          GzipDecompressor.a(-121, 90, -65, -124, -127, -119, 17, 110, 25, (byte) 107, -103, 4, 28, 90, 43, -66);
         }
     }
 
-    private pd(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    public pd() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    final static int a(CharSequence param0, boolean param1, boolean param2, int param3) {
+    final static int parseInteger(CharSequence param0, boolean param1, boolean param2, int param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;

@@ -9,7 +9,7 @@ final class oh {
     static k field_d;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -4) {
           field_d = (k) null;

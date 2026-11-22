@@ -56,7 +56,7 @@ final class gj {
         return this;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -909082559) {
           return;
         }
@@ -419,7 +419,7 @@ final class gj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          GzipDecoder.a(this.field_k, param1.field_l, param1.field_p, (byte) 95, param1.field_i + param0, param1.field_m + param2);
+          GzipDecoder.drawNineSlice(this.field_k, param1.field_l, param1.field_p, (byte) 95, param1.field_i + param0, param1.field_m + param2);
           if (null != this.field_e) {
             var6_int = param2 + param1.field_m + this.field_f;
             var7 = param1.field_i + (param0 + this.field_h);

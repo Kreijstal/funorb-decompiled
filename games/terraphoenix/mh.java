@@ -5,7 +5,7 @@ final class mh {
     static ak field_b;
     static o field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 1) {
           field_a = (o) null;

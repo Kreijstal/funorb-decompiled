@@ -1407,7 +1407,7 @@ final class BattleUnit {
         }
     }
 
-    public static void k(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_lb = null;
         field_kb = null;
         field_j = null;
@@ -3061,7 +3061,7 @@ final class BattleUnit {
         String var8 = null;
         var5 = Terraphoenix.field_V;
         if (param0 != -15465) {
-          BattleUnit.k(-82);
+          BattleUnit.clearStaticReferences(-82);
         }
         boolean decompiledFrameCompleted0 = true;
         var6 = "(" + wc.field_r + " " + wf.field_n + " " + uc.field_r + ") " + qk.field_b;

@@ -200,7 +200,7 @@ final class cb extends jc {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_J = null;
         if (!param0) {
           field_J = (o) null;

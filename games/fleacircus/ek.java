@@ -7,7 +7,7 @@ final class ek {
     static int[] field_d;
     static int[] field_b;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 == -42) {

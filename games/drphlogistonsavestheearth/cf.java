@@ -179,7 +179,7 @@ final class cf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_c = null;
         field_g = null;

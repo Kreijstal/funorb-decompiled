@@ -161,7 +161,7 @@ final class pg {
         return true;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_h = null;
         field_k = null;

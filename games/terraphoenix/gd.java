@@ -27,7 +27,7 @@ final class gd {
         return this.field_f;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 25284) {
           return;
         }

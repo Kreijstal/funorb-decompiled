@@ -92,7 +92,7 @@ final class le implements uj {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != 8952) {
           field_b = (String) null;
         }

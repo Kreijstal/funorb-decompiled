@@ -9,7 +9,7 @@ final class pd {
     static int field_b;
     static n field_d;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (param0) {
           field_d = (n) null;

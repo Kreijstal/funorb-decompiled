@@ -32,7 +32,7 @@ final class wa {
         this.field_c[0] = (byte) 0;
         var2Lifetime1 = 0;
         if (param0 > -91) {
-          wa.a(89);
+          wa.clearStaticReferences(89);
         }
         while (var2Lifetime1 < 8) {
           this.field_j[var2Lifetime1] = 0L;
@@ -147,7 +147,7 @@ final class wa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_p = null;
         field_d = null;
@@ -192,7 +192,7 @@ final class wa {
             this.field_a = this.field_a + 1;
             this.field_c[fieldTemp$1] = (byte) 0;
           }
-          dm.a(this.field_n, 0, this.field_c, 32, 32);
+          dm.copyBytes(this.field_n, 0, this.field_c, 32, 32);
           this.a((byte) -117);
           var4_int = 0;
           var5 = param1;
@@ -293,7 +293,7 @@ final class wa {
           }
         }
         if (param0 >= -86) {
-          wa.a(31);
+          wa.clearStaticReferences(31);
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
           this.field_j[var2Lifetime3] = ik.a(this.field_j[var2Lifetime3], ik.a(this.field_h[var2Lifetime3], this.field_i[var2Lifetime3]));

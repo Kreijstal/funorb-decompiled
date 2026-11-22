@@ -253,7 +253,7 @@ final class bh extends wf implements sh {
             } else {
               var3 = ri.field_f;
               this.field_q = this.field_q + 10;
-              if (an.c(0)) {
+              if (BoundedRandomAccessFile.c(0)) {
                 this.field_q = this.field_q + 20;
                 var3 = on.field_s;
               }

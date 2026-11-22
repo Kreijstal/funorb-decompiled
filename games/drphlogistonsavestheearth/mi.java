@@ -50,7 +50,7 @@ final class mi {
         nh var3Lifetime1;
         int var4Lifetime1;
         if (param1 >= -62) {
-          mi.b((byte) 48);
+          mi.clearStaticReferences((byte) 48);
         } else {
           var6 = new nh(param0, param0);
           var3 = var6;
@@ -80,7 +80,7 @@ final class mi {
         return 0;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         field_h = null;
         field_f = null;

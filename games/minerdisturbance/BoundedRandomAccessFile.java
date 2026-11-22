@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class an {
+final class BoundedRandomAccessFile {
     static int[] field_a;
     static int field_f;
     static boolean field_d;
@@ -13,7 +13,7 @@ final class an {
     private long field_c;
     private long field_b;
 
-    final int b(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final int read(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -44,7 +44,7 @@ final class an {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 1) {
           field_d = false;
@@ -54,7 +54,7 @@ final class an {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setTickRate(int param0, int param1) {
         rj.field_c = 1000000000L / (long)param1;
         int var2 = 31 % ((param0 - 76) / 38);
     }
@@ -112,7 +112,7 @@ final class an {
         }
     }
 
-    final long a(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         if (param0 <= 48) {
           return -46L;
         }
@@ -122,7 +122,7 @@ final class an {
     protected final void finalize() throws Throwable {
         if (this.field_e != null) {
           System.out.println("");
-          this.b(-121);
+          this.close(-121);
         }
     }
 
@@ -146,7 +146,7 @@ final class an {
         return false;
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         this.field_e.seek(param1);
         if (param0 != 0) {
           return;
@@ -154,7 +154,7 @@ final class an {
         this.field_b = param1;
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         if ((this.field_b + (long)param1) > this.field_c) {
           this.field_e.seek(this.field_c);
           this.field_e.write(1);
@@ -171,7 +171,7 @@ final class an {
         }
     }
 
-    an(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -195,7 +195,7 @@ final class an {
         }
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (this.field_e != null) {
           this.field_e.close();
           this.field_e = null;
@@ -204,7 +204,7 @@ final class an {
           return;
         }
         String var3 = (String) null;
-        an.a((byte) 1, (String) null);
+        BoundedRandomAccessFile.a((byte) 1, (String) null);
     }
 
     static {

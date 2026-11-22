@@ -472,7 +472,7 @@ final class fe {
         return var2;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

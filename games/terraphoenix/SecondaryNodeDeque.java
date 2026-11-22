@@ -19,7 +19,7 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 > -51) {
           field_c = (int[]) null;
@@ -72,7 +72,7 @@ final class SecondaryNodeDeque implements Iterable {
             d.field_M = u.field_g;
           }
           if (param0 != 1) {
-            SecondaryNodeDeque.a(122);
+            SecondaryNodeDeque.clearStaticReferences(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

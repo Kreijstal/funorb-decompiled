@@ -13,7 +13,7 @@ final class hf {
     static int field_b;
     static sf field_g;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 >= -105) {
           return;

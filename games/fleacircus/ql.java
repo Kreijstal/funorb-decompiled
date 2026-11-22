@@ -15,7 +15,7 @@ final class ql extends IntrusiveNode {
     static int field_o;
     static fa field_k;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_j = null;
         if (param0 != -92) {

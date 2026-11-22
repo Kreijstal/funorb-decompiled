@@ -528,7 +528,7 @@ final class ql {
         if (!param0) {
           return this.field_h == 102 ? true : false;
         }
-        ql.a((byte) 15);
+        ql.clearStaticReferences((byte) 15);
         return this.field_h == 102 ? true : false;
     }
 
@@ -542,7 +542,7 @@ final class ql {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -112) {
           return;
         }

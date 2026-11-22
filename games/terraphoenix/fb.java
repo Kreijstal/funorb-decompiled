@@ -96,7 +96,7 @@ final class fb extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         field_n = (long[][]) null;
         if (param0 != 6) {

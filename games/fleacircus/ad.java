@@ -15,7 +15,7 @@ final class ad {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            ad.a((byte) -106);
+            ad.clearStaticReferences((byte) -106);
           }
           stackIn_3_0 = wh.field_e.a(0, param0, "");
           return stackIn_3_0;
@@ -37,7 +37,7 @@ final class ad {
         this(param0, false);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 42) {
           return;
         }

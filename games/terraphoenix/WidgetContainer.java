@@ -384,7 +384,7 @@ class WidgetContainer extends UiWidget implements sf {
         this.c(false);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_B = null;
         field_z = null;
         field_E = null;

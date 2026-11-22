@@ -261,7 +261,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (decompiledFrameRemainder0) {
             boolean decompiledSharedTail0 = !(a.a(param0 ^ -27336));
             if (!decompiledSharedTail0) {
-              if (pf.a((byte) 97)) {
+              if (BoundedRandomAccessFile.a((byte) 97)) {
                 var2_int = (int)(32.0 * ji.a(65535, (double)ni.field_x / 25.0) + 224.0);
                 var3 = 3 * var2_int / 4;
                 pj.field_E = var2_int + ((var3 << 16) + (var3 << 8));
@@ -289,7 +289,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                 } else {
                   this.v(-8755);
                 }
-                if (!pf.a((byte) 97)) {
+                if (!BoundedRandomAccessFile.a((byte) 97)) {
                   th.field_a[hl.field_f].a(true, (byte) 98);
                 }
                 decompiledFrameRemainder0 = (var5 != 0);
@@ -480,85 +480,85 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException var2 = null;
         try {
           DrPhlogistonSavesTheEarth.u(-16387);
-          vd.a(true);
-          dk.a(24);
+          vd.clearStaticReferences(true);
+          dk.clearStaticReferences(24);
           tb.a((byte) 35);
           ul.a((byte) 8);
           rk.a((byte) 52);
-          gd.a(-27770);
-          ld.e((byte) 39);
+          gd.clearStaticReferences(-27770);
+          ld.clearStaticReferences((byte) 39);
           ij.a(15596);
-          GameClientShell.j(26395);
+          GameClientShell.clearStaticReferences(26395);
           ClientException.a(false);
           GameAppletShell.c(-1);
-          fi.a(125);
+          fi.clearStaticReferences(125);
           KeyboardInput.a((byte) 119);
           MouseInput.a(45);
-          oi.a((byte) 86);
+          oi.clearStaticReferences((byte) 86);
           wj.d();
-          vj.c(0);
+          vj.clearStaticReferences(0);
           pc.a(13302);
-          bc.a(66);
+          bc.clearStaticReferences(66);
           od.d(4);
           la.a((byte) 0);
           lf.a(-127);
-          le.a(param0);
+          le.clearStaticReferences(param0);
           oe.a(5);
           kf.a(23050);
-          th.a((byte) 111);
-          al.a(false);
-          oh.a(false);
+          th.clearStaticReferences((byte) 111);
+          al.clearStaticReferences(false);
+          oh.clearStaticReferences(false);
           bj.a(true);
-          we.a((byte) 120);
+          we.clearStaticReferences((byte) 120);
           qh.a(1);
-          ab.a(false);
-          m.a(!param0);
+          ab.clearStaticReferences(false);
+          m.clearStaticReferences(!param0);
           na.a((byte) -33);
           sb.a((byte) 33);
           q.a(25270);
-          wg.b(2);
-          ng.a(0);
-          cf.a(-127);
-          mk.a(0);
+          wg.clearStaticReferences(2);
+          ng.clearStaticReferences(0);
+          cf.clearStaticReferences(-127);
+          mk.clearStaticReferences(0);
           LevelSession.h(24342);
-          nb.a((byte) 76);
-          i.a((byte) -118);
-          gb.b(6);
+          nb.clearStaticReferences((byte) 76);
+          i.clearStaticReferences((byte) -118);
+          gb.clearStaticReferences(6);
           n.b(-31553);
           df.c(110);
-          ge.a(false);
+          ge.clearStaticReferences(false);
           qe.c(0);
           oj.a(false);
           fj.d(57);
-          gf.a(param0);
-          ib.a(9);
+          gf.clearStaticReferences(param0);
+          ib.clearStaticReferences(9);
           bf.c((byte) -114);
-          td.a(869637800);
-          ck.a(7268);
-          IntrusiveNode.b(10589);
+          td.clearStaticReferences(869637800);
+          ck.clearStaticReferences(7268);
+          IntrusiveNode.clearStaticReferences(10589);
           ug.h(-921185753);
-          tg.a(0);
-          cc.a((byte) -8);
-          rl.f();
+          tg.clearStaticReferences(0);
+          cc.clearStaticReferences((byte) -8);
+          rl.clearStaticReferences();
           am.f(-112);
-          ml.a(!param0);
-          id.e();
+          ml.clearStaticReferences(!param0);
+          id.clearStaticReferences();
           eb.a(5);
-          ql.a((byte) -114);
+          ql.clearStaticReferences((byte) -114);
           of.g(1024);
           gk.a(false);
           d.a((byte) 39);
-          rf.a();
-          ui.a(-19662);
-          rg.a((byte) -20);
-          di.a((byte) 27);
-          ea.a(0);
+          rf.clearStaticReferences();
+          ui.clearStaticReferences(-19662);
+          rg.clearStaticReferences((byte) -20);
+          di.clearStaticReferences((byte) 27);
+          ea.clearStaticReferences(0);
           kh.a((byte) -63);
-          mg.a((byte) 5);
-          wd.a(99);
-          eg.a(-1);
+          GzipDecompressor.clearStaticReferences((byte) 5);
+          wd.clearStaticReferences(99);
+          eg.clearStaticReferences(-1);
           qj.a((byte) -126);
-          k.g((byte) 52);
+          k.clearStaticReferences((byte) 52);
           qd.o(9791);
           tf.c(false);
           el.n(20);
@@ -567,67 +567,67 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ff.i(-1);
           wa.j(-11179);
           ah.k(-988);
-          a.b(2);
+          a.clearStaticReferences(2);
           sf.a(param0);
-          ub.a((byte) -119);
+          ub.clearStaticReferences((byte) -119);
           s.a(7);
-          fb.a(256);
-          cb.a((byte) 122);
+          fb.clearStaticReferences(256);
+          cb.clearStaticReferences((byte) 122);
           mf.g(-62);
           DualLinkNode.d(-24338);
           lh.p(0);
           jj.a(111);
-          nk.a();
-          sg.a((byte) -57);
-          tk.b();
-          gj.b();
-          ha.a((byte) 69);
+          nk.clearStaticReferences();
+          sg.clearStaticReferences((byte) -57);
+          tk.clearStaticReferences();
+          gj.clearStaticReferences();
+          ha.clearStaticReferences((byte) 69);
           pe.b(0);
-          be.a();
+          be.clearStaticReferences();
           hi.b(109);
-          aa.a(1);
+          aa.clearStaticReferences(1);
           ee.a(1);
           ii.a(110);
-          db.a((byte) 89);
-          u.a((byte) 50);
+          db.clearStaticReferences((byte) 89);
+          u.clearStaticReferences((byte) 50);
           t.a((byte) -114);
-          ta.b(1441320386);
+          ta.clearStaticReferences(1441320386);
           cl.d(0);
           hl.e(108);
           cm.a((byte) -113);
           ik.a(0);
           bi.a((byte) 119);
           de.d(117);
-          pf.b(-79);
-          c.a((byte) -58);
+          BoundedRandomAccessFile.clearStaticReferences(-79);
+          c.clearStaticReferences((byte) -58);
           lb.h(30);
           fl.a(118);
-          qc.a(24937);
+          qc.clearStaticReferences(24937);
           ae.n(1);
-          kk.a((byte) 44);
-          l.a(0);
-          uc.c();
-          sh.a((byte) 119);
-          ej.a(12018);
+          kk.clearStaticReferences((byte) 44);
+          l.clearStaticReferences(0);
+          uc.clearStaticReferences();
+          sh.clearStaticReferences((byte) 119);
+          ej.clearStaticReferences(12018);
           ja.a(93);
           fc.a(-60);
-          af.a(4);
-          pd.a(false);
-          mh.a((byte) -9);
+          af.clearStaticReferences(4);
+          pd.clearStaticReferences(false);
+          mh.clearStaticReferences((byte) -9);
           r.a((byte) 11);
-          ce.a(-105);
-          hc.c((byte) -98);
+          ce.clearStaticReferences(-105);
+          hc.clearStaticReferences((byte) -98);
           hm.c(-99);
-          ua.a((byte) 50);
+          ua.clearStaticReferences((byte) 50);
           rc.a(2);
           qf.a((byte) 64);
-          bh.a(67);
-          gh.a();
+          bh.clearStaticReferences(67);
+          gh.clearStaticReferences();
           lc.b((byte) 111);
           sc.a(-63);
-          ki.a(true);
+          ki.clearStaticReferences(true);
           hb.a((byte) 101);
-          ch.b((byte) 94);
+          ch.clearStaticReferences((byte) 94);
           lg.a((byte) -119);
           fm.a(-109);
           vg.f((byte) -102);
@@ -637,21 +637,21 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           bd.a((byte) -120);
           pj.f(-86);
           rh.b(-2);
-          ob.a((byte) 52);
-          cj.a(-95);
+          ob.clearStaticReferences((byte) 52);
+          cj.clearStaticReferences(-95);
           ai.h(-30463);
-          p.a(-29912);
+          p.clearStaticReferences(-29912);
           ac.a((byte) -91);
           ol.a((byte) -116);
           eh.a((byte) -84);
-          wi.a(2);
-          ji.a(true);
-          ph.a(1);
-          hj.a(-20385);
-          qk.b(65280);
+          wi.clearStaticReferences(2);
+          ji.clearStaticReferences(true);
+          ph.clearStaticReferences(1);
+          hj.clearStaticReferences(-20385);
+          qk.clearStaticReferences(65280);
           bk.b(66);
-          fa.e(-57);
-          ga.a((byte) -4);
+          fa.clearStaticReferences(-57);
+          ga.clearStaticReferences((byte) -4);
           wb.b(34);
           gg.b(-339514552);
           nj.b(0);
@@ -660,33 +660,33 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           dh.j(3);
           qg.n(-1);
           kl.j((byte) 78);
-          jf.h((byte) 127);
+          jf.clearStaticReferences((byte) 127);
           hd.b(false);
           LoginMenuScreen.a((byte) 108);
           qa.a((byte) 122);
           gm.h(-112);
           ci.i(-76);
-          nc.a((byte) 126);
-          ei.d(1);
-          md.a(75);
+          nc.clearStaticReferences((byte) 126);
+          ei.clearStaticReferences(1);
+          md.clearStaticReferences(75);
           ih.l(288);
           nd.b(true);
-          tl.a((byte) -39);
-          da.a();
+          tl.clearStaticReferences((byte) -39);
+          da.clearStaticReferences();
           hh.a(false);
           o.a((byte) 99);
           jc.c((byte) 56);
-          rb.a(0);
+          rb.clearStaticReferences(0);
           pi.j(2147483647);
           jk.j(7624);
-          sa.a(250);
-          tc.a(-9292);
+          sa.clearStaticReferences(250);
+          tc.clearStaticReferences(-9292);
           dg.a(true);
           wh.c((byte) -86);
           rd.g(-125);
           ka.c(26713);
           pa.a(-1);
-          re.b(967);
+          re.clearStaticReferences(967);
           oa.a(71);
           vb.d(4);
           bg.a((byte) 102);
@@ -696,35 +696,35 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           uk.a(false);
           mj.c(2147483647);
           dm.d((byte) -126);
-          ue.a(117);
+          ue.clearStaticReferences(117);
           dl.j(0);
           hg.h(-15);
           b.d(-382);
-          uf.a((byte) -60);
+          uf.clearStaticReferences((byte) -60);
           f.d(-1);
           je.a((byte) 19);
           nl.a((byte) -106);
-          vc.a(0);
-          bb.b(param0);
+          vc.clearStaticReferences(0);
+          bb.clearStaticReferences(param0);
           wk.d(80);
-          qb.a(false);
-          og.a(120);
+          qb.clearStaticReferences(false);
+          og.clearStaticReferences(120);
           sd.a(2);
-          lk.a(-27996);
+          lk.clearStaticReferences(-27996);
           ll.d((byte) 104);
-          dd.a(false);
+          dd.clearStaticReferences(false);
           ia.b(27174);
           ek.e(-126);
           uj.d(1);
           jl.d(65535);
           kj.a(14970);
-          mi.b((byte) 91);
+          mi.clearStaticReferences((byte) 91);
           ad.e(0);
           ni.d((byte) 125);
           g.b(true);
           nf.d((byte) -95);
           cd.b((byte) -47);
-          fk.a((byte) 111);
+          fk.clearStaticReferences((byte) 111);
           vh.a(84);
           dc.c(88);
           vi.a(2823);
@@ -976,7 +976,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               ti.a(true, 0);
             }
           }
-          if (pf.a((byte) 97)) {
+          if (BoundedRandomAccessFile.a((byte) 97)) {
             wj.a(0, 0, wj.field_k, wj.field_c);
             ug.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, 37);
           }
@@ -987,9 +987,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           if (!bb.a((byte) -103) ||
-            pf.a((byte) 97)) {
+            BoundedRandomAccessFile.a((byte) 97)) {
             if ((fl.b(73)) &&
-              (!pf.a((byte) 97))) {
+              (!BoundedRandomAccessFile.a((byte) 97))) {
               wj.a(0, 0, wj.field_k, wj.field_c);
               qe.a(ca.field_W[0].field_y, ca.field_W[0].field_w, ca.field_W, (byte) -76);
               if (var4 != 0) {
@@ -1063,7 +1063,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             if (ue.field_b != 32) {
               return;
             }
-            if (!pf.a((byte) 97)) {
+            if (!BoundedRandomAccessFile.a((byte) 97)) {
               cj.b(8227);
               if (var3 != 0) {
                 og.a((byte) 78);
@@ -1934,7 +1934,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               return;
             }
           }
-          pf.field_c = ij.a("alienattackcopter", (byte) 113, kf.field_d, "");
+          BoundedRandomAccessFile.field_c = ij.a("alienattackcopter", (byte) 113, kf.field_d, "");
           wd.field_a = ij.a("aliendoomcopter", (byte) 118, kf.field_d, "");
           sd.field_c = ij.a("alienflyingbattlestation", (byte) 111, kf.field_d, "");
           ff.field_R = ij.a("alienalienbattleship", (byte) 84, kf.field_d, "");

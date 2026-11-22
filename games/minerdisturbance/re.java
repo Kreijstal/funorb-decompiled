@@ -341,7 +341,7 @@ final class re implements uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -10887) {
           field_a = (ji[]) null;

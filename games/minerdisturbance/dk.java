@@ -66,11 +66,11 @@ final class dk {
           var1.b(param0 ^ 22322);
           return;
         }
-        dk.b(-78);
+        dk.clearStaticReferences(-78);
         var1.b(param0 ^ 22322);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 > 69) {
           field_d = (byte[][][]) null;
           field_c = null;

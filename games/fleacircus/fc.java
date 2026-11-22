@@ -438,7 +438,7 @@ final class fc {
             }
             stackIn_146_0.field_F = stackIn_150_1;
             si.field_y.e(-1);
-            if (0 < mg.field_d) {
+            if (0 < GzipDecompressor.field_d) {
               var23Lifetime1 = (int)(64.0 + ma.a((double)ni.field_j / 25.0, 123) * 64.0);
               var24_intLifetime1 = (int)(64.0 + 64.0 * nb.a((double)ni.field_j / 25.0, -122));
               gb.b(4 + si.field_y.field_l, 1 + si.field_y.field_a, si.field_y.field_n - 7, si.field_y.field_d - 2, 65793 * var23Lifetime1, var24_intLifetime1 * 65793);
@@ -450,11 +450,11 @@ final class fc {
             }
           }
           bk.b(7);
-          if (0 <= mg.field_d) {
-            if (mg.field_d < 256) {
+          if (0 <= GzipDecompressor.field_d) {
+            if (GzipDecompressor.field_d < 256) {
               stackIn_161_0 = 256;
             } else {
-              stackIn_161_0 = 512 + mg.field_d * -1;
+              stackIn_161_0 = 512 + GzipDecompressor.field_d * -1;
             }
             var22Lifetime3 = stackIn_161_0;
             if (var22Lifetime3 < 0) {
@@ -464,10 +464,10 @@ final class fc {
             stackIn_165_1 = uj.field_d;
             stackIn_165_2 = 220;
             stackIn_165_3 = -110;
-            if (mg.field_d > 160) {
+            if (GzipDecompressor.field_d > 160) {
               stackIn_166_4 = 160;
             } else {
-              stackIn_166_4 = mg.field_d;
+              stackIn_166_4 = GzipDecompressor.field_d;
             }
             ((fa) (Object) stackIn_165_0).a(stackIn_165_1, stackIn_165_2, stackIn_165_3 + stackIn_166_4, 200, 150, 0, -1, var22Lifetime3, 1, 1, tl.field_p.field_H);
           }

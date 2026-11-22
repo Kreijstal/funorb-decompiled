@@ -50,7 +50,7 @@ final class fi extends di {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_p = null;
         if (!param0) {
           return;

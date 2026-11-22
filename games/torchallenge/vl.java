@@ -74,7 +74,7 @@ final class vl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = (boolean[][][]) null;
         if (param0 != 0) {
           field_c = (String) null;

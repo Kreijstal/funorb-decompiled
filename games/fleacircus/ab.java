@@ -16,7 +16,7 @@ final class ab {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            ab.a(125);
+            ab.clearStaticReferences(125);
           }
           stackIn_3_0 = pg.a(param1.length, 0, param1, param0 + 0);
           return stackIn_3_0;
@@ -34,7 +34,7 @@ final class ab {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 0) {

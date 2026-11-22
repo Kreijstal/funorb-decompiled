@@ -62,10 +62,10 @@ class hl extends lc {
           return 0;
         }
         if (cg.field_y == 0) {
-          if (!rl.field_d.b((byte) -115)) {
+          if (!BoundedRandomAccessFile.field_d.b((byte) -115)) {
             return 20;
           }
-          if (!rl.field_d.a("commonui", -114)) {
+          if (!BoundedRandomAccessFile.field_d.a("commonui", -114)) {
             return 40;
           }
           if (!oa.field_l.b((byte) -111)) {
@@ -92,10 +92,10 @@ class hl extends lc {
               return 29;
             }
           }
-          if (!rl.field_d.b((byte) -120)) {
+          if (!BoundedRandomAccessFile.field_d.b((byte) -120)) {
             return 43;
           }
-          if (!rl.field_d.a("commonui", -99)) {
+          if (!BoundedRandomAccessFile.field_d.a("commonui", -99)) {
             return 57;
           }
           if (!oa.field_l.b((byte) -105)) {
@@ -117,7 +117,7 @@ class hl extends lc {
         return 100;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

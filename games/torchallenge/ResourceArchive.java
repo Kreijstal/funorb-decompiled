@@ -404,7 +404,7 @@ final class ResourceArchive {
           var4 = (CharSequence) ((Object) param1);
           var3_int = this.field_l.field_p.a((byte) -120, wh.a((byte) 68, var4));
           if (param0 < 99) {
-            ResourceArchive.a(30);
+            ResourceArchive.clearStaticReferences(30);
           }
           stackIn_6_0 = this.a(var3_int, (byte) 12);
           return stackIn_6_0;
@@ -859,7 +859,7 @@ final class ResourceArchive {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_o = null;
         field_f = null;

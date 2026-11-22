@@ -25,7 +25,7 @@ final class ak {
     final void b(byte param0) throws IOException {
         this.a(0);
         if (param0 > -5) {
-          ak.a(false);
+          ak.clearStaticReferences(false);
         }
         this.field_d.a(118);
     }
@@ -40,7 +40,7 @@ final class ak {
         return this.field_i;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         field_f = null;
         field_j = null;
@@ -161,7 +161,7 @@ final class ak {
           this.field_n = 0;
         }
         if (param0 != 0) {
-          ak.a(true);
+          ak.clearStaticReferences(true);
         }
     }
 

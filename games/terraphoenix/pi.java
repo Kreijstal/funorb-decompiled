@@ -30,7 +30,7 @@ final class pi {
     private static int[] field_l;
     private static int[] field_g;
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_f = null;
         field_v = null;
         field_n = null;

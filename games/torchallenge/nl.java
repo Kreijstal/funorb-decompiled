@@ -19,7 +19,7 @@ final class nl {
         return (byte)nl.a(8, param0);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_a = null;
     }
 

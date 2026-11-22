@@ -314,7 +314,7 @@ class bd extends oh implements da {
         RuntimeException var6 = null;
         try {
           if (!this.field_nb) {
-            qg.a("tochangedisplayname.ws", rl.a((byte) -72), 0);
+            qg.a("tochangedisplayname.ws", BoundedRandomAccessFile.getApplet((byte) -72), 0);
           } else {
             cg.a((byte) -105, 3);
             this.n(-22645);

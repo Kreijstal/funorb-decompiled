@@ -11,7 +11,7 @@ final class me implements j {
     private BitmapFont field_c;
     private int field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -13978) {
           return;
         }

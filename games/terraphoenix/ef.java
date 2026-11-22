@@ -26,7 +26,7 @@ final class ef {
         try {
           var2_int = param1.charAt(0);
           if (param0 > -54) {
-            ef.a(56);
+            ef.clearStaticReferences(56);
           }
           for (var3 = 1; var3 < param1.length(); var3++) {
             if (var2_int != param1.charAt(var3)) {
@@ -48,7 +48,7 @@ final class ef {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 31955) {
           return;
         }

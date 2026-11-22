@@ -40,7 +40,7 @@ abstract class oh extends jj {
           if (param3 != 28) {
             oh.c(2, -119, 119);
           }
-          mg.a(-125);
+          GzipDecompressor.a(-125);
           ui.field_kb = ql.field_l;
           cb.field_v = ql.field_l;
         } catch (RuntimeException runtimeException) {

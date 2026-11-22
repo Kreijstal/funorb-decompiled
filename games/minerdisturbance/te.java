@@ -13,7 +13,7 @@ final class te implements uj {
         return "Add Walrus";
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_e = (Sprite[][]) null;
         if (param0 != 31960) {

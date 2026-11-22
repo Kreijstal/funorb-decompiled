@@ -13,11 +13,11 @@ final class u {
     final static void a(String param0, int param1) {
         System.out.println("Error: " + qf.a(param0, 0, "%0a", "\n"));
         if (param1 <= 106) {
-          u.a(11);
+          u.clearStaticReferences(11);
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_e = null;
         field_d = null;

@@ -28,7 +28,7 @@ final class cj {
         af.field_b = 0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 <= -89) {
           field_c = null;

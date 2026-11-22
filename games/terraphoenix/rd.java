@@ -85,7 +85,7 @@ final class rd extends ld {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 < 121) {
           return;

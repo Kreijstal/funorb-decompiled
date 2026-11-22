@@ -58,7 +58,7 @@ class IntrusiveNode {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_e = (int[][]) null;
         field_g = null;

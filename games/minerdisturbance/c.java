@@ -325,7 +325,7 @@ final class c {
         return;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 > -1) {
           field_b = (String) null;

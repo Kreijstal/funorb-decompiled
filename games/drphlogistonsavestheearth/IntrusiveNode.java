@@ -33,7 +33,7 @@ class IntrusiveNode {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = (byte[][][]) null;
         field_d = null;
         if (param0 != 10589) {
@@ -52,7 +52,7 @@ class IntrusiveNode {
           this.next = null;
           return;
         }
-        IntrusiveNode.b(21);
+        IntrusiveNode.clearStaticReferences(21);
         this.previous = null;
         this.next = null;
     }

@@ -53,7 +53,7 @@ final class fi {
         field_d = 0;
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_b = null;
     }
 

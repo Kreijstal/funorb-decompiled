@@ -83,7 +83,7 @@ final class wa {
         this.field_c.field_t = this.field_c;
     }
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 < 10) {
           field_b = (java.util.zip.CRC32) null;

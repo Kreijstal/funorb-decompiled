@@ -37,7 +37,7 @@ final class lj {
         return var1Lifetime1 + ml.field_P;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         if (param0 != 0) {
           return;

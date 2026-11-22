@@ -6,7 +6,7 @@ final class ub implements uj {
     static String field_c;
     static String[] field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 < 16) {
           return;
         }
@@ -40,7 +40,7 @@ final class ub implements uj {
             return false;
           }
           if (param0 != 14921) {
-            ub.b(20);
+            ub.clearStaticReferences(20);
           }
           for (var2 = 0; var1.field_y > var2; var2++) {
             if (var4.field_r[var2] != null &&

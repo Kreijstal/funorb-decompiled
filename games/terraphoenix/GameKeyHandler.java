@@ -179,7 +179,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_b = (String) null;
         }

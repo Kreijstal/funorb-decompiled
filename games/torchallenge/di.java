@@ -305,7 +305,7 @@ final class di extends kl {
           return null;
         }
         if (param1 != -72) {
-          di.a(true);
+          di.clearStaticReferences(true);
         }
         byte[] var4 = var3.e(param1 + 74);
         var3.unlink(true);
@@ -447,7 +447,7 @@ final class di extends kl {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_g = null;
         if (param0) {
           return;

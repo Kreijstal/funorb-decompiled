@@ -99,7 +99,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = (long[][]) null;
         field_j = null;
         field_g = null;

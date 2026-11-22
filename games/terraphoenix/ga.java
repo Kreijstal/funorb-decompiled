@@ -75,7 +75,7 @@ final class ga {
               var2.writeInt(rf.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);
               hm.field_N = hm.field_N + 1;
-              t.field_b = 30000L + ll.a(1000);
+              GzipDecompressor.field_b = 30000L + ll.a(1000);
             }
             if (hm.field_N == 3) {
               if (gi.field_l.available(0) > 0) {
@@ -86,7 +86,7 @@ final class ga {
                 }
                 hm.field_N = hm.field_N + 1;
               } else {
-                if (t.field_b < ll.a(1000)) {
+                if (GzipDecompressor.field_b < ll.a(1000)) {
                   stackIn_26_0 = o.a(-2, (byte) -127);
                   return stackIn_26_0;
                 }
@@ -294,7 +294,7 @@ final class ga {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_k = null;
         field_l = null;
         field_p = null;

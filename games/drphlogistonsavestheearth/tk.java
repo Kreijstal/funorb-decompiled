@@ -499,7 +499,7 @@ final class tk extends IntrusiveNode {
         field_w = 0;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_k = null;
         field_B = null;
         field_E = null;

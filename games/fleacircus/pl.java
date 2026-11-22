@@ -466,7 +466,7 @@ final class pl {
         field_e = null;
         field_i = null;
         if (param0 != 0) {
-          pl.d(-80);
+          pl.clearStaticReferences(-80);
         }
     }
 
@@ -650,7 +650,7 @@ final class pl {
         return this.field_j == 103 ? true : false;
     }
 
-    final static void d(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 < 60) {
           field_i = (String) null;
         }

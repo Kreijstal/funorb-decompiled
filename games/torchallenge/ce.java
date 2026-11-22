@@ -135,7 +135,7 @@ final class ce {
         this.field_c = new int[2];
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_d = (float[][]) null;
         field_b = (int[][]) null;
     }

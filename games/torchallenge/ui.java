@@ -19,7 +19,7 @@ abstract class ui implements wd {
         this.field_a = ol.a(256);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -120) {
           field_e = (String) null;
         }
@@ -64,7 +64,7 @@ abstract class ui implements wd {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param1 > -91) {
-            ui.c((byte) -111);
+            ui.clearStaticReferences((byte) -111);
           }
           var4_int = param0.e(param3, -126);
           if (0 == var4_int) {

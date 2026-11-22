@@ -208,7 +208,7 @@ final class sk implements Runnable {
         if (param0 <= 19) {
           return (java.awt.Container) null;
         }
-        return (java.awt.Container) ((Object) rl.a((byte) -117));
+        return (java.awt.Container) ((Object) BoundedRandomAccessFile.getApplet((byte) -117));
     }
 
     sk(ce param0, java.net.URL param1, int param2) {

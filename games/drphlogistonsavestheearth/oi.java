@@ -54,7 +54,7 @@ abstract class oi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -85) {
-            oi.a((byte) -77);
+            oi.clearStaticReferences((byte) -77);
           }
           stackIn_3_0 = pj.a((String) null, 0, param0, param1, param2 + 85, 0, false);
           return stackIn_3_0;
@@ -134,7 +134,7 @@ abstract class oi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != 86) {
           return;

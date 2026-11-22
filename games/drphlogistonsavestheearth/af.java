@@ -44,7 +44,7 @@ final class af {
 
     final static void b(int param0) {
         if (param0 != 6) {
-          af.a(-44);
+          af.clearStaticReferences(-44);
           if (null == df.field_l) {
             return;
           }
@@ -69,7 +69,7 @@ final class af {
         n.field_g.requestFocus();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_c = null;
         if (param0 == 4) {

@@ -188,7 +188,7 @@ final class nd extends IntrusiveNode {
                   var26Lifetime1Lifetime1 = param0.field_b[var23Lifetime2];
                   hl.field_c[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + (var24Lifetime1Lifetime1 * var12 + var26Lifetime1Lifetime1 * var18) >> 16) + var9;
                   pj.field_a[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13) >> 16) + var10;
-                  t.field_a[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
+                  GzipDecompressor.field_a[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
                     decompiledFrameCompleted0 = false;

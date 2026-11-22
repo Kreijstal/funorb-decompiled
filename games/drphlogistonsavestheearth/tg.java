@@ -29,7 +29,7 @@ final class tg {
           this.field_e = null;
           return null;
         }
-        tg.a(84);
+        tg.clearStaticReferences(84);
         this.field_e = null;
         return null;
     }
@@ -87,7 +87,7 @@ final class tg {
         return var4;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_g = null;
         field_i = null;

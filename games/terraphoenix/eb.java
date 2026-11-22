@@ -81,7 +81,7 @@ class eb extends UiWidget {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -53) {
           return;
         }

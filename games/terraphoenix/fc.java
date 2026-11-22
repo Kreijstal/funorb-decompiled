@@ -15,7 +15,7 @@ final class fc {
     static String field_j;
     private int[] field_l;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         if (param0 != -114) {
           return;
@@ -84,7 +84,7 @@ final class fc {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
         if (param0 != -68) {
-          fc.a((byte) 71);
+          fc.clearStaticReferences((byte) 71);
         }
         return this.field_l[param1];
     }

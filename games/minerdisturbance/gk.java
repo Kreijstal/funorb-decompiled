@@ -31,7 +31,7 @@ class gk extends eg {
         return var2Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -49) {
           field_s = (bg) null;
           field_s = null;

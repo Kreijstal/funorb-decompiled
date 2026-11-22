@@ -458,7 +458,7 @@ final class dl extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_H = (BitmapFont) null;
         }

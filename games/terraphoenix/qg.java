@@ -46,7 +46,7 @@ final class qg {
               if (var3 != 1) {
                 var7 = wj.field_c;
                 synchronized (var7) {
-                  wj.field_c.a(var9, 10, var12);
+                  wj.field_c.decompress(var9, 10, var12);
                 }
               } else {
                 ih.a(var12, var5_int, param1, var4, 9);

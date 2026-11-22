@@ -66,7 +66,7 @@ final class lh extends DualLinkNode {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_r = (int[][][][][]) null;
         field_y = null;
         field_q = null;
@@ -99,7 +99,7 @@ final class lh extends DualLinkNode {
         StringBuilder discarded$2 = null;
         int var4 = TorChallenge.field_F ? 1 : 0;
         if (!param0) {
-          lh.g(-86);
+          lh.clearStaticReferences(-86);
         }
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;

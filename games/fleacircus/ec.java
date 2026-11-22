@@ -13,7 +13,7 @@ final class ec implements Runnable {
     static String field_e;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_b = null;
         field_a = null;

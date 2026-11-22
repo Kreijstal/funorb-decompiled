@@ -77,7 +77,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
           return;

@@ -234,7 +234,7 @@ class l implements cg, va {
 
     final static boolean b(int param0) {
         if (param0 != -1) {
-          l.a(-83);
+          l.clearStaticReferences(-83);
           if (null == pi.field_V) {
             return false;
           }
@@ -577,7 +577,7 @@ class l implements cg, va {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         field_f = (he[][]) null;
         field_h = null;

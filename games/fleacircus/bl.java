@@ -16,7 +16,7 @@ final class bl {
         bl.a(gb.field_l, gb.field_b, gb.field_h, gb.field_i);
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_b = null;
         field_h = null;
         field_e = null;

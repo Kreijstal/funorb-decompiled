@@ -47,7 +47,7 @@ final class vj {
         j.field_f = j.field_f ^ this.field_b;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_a = (String) null;
           field_a = null;

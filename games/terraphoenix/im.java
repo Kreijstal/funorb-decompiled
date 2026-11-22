@@ -29,7 +29,7 @@ final class im {
           }
           return stackIn_15_0;
         }
-        im.a(true);
+        im.clearStaticReferences(true);
         if (param0 >= 4096) {
           if (param0 < 6144) {
             stackIn_9_0 = -va.field_d[-param0 + 6144];
@@ -50,7 +50,7 @@ final class im {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_b = null;
         if (param0) {

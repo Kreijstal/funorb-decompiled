@@ -34,7 +34,7 @@ abstract class gb {
         return this.field_i.b(1423132065) + this.field_m.b(1423132065);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != 6) {
           field_e = (he) null;

@@ -52,11 +52,11 @@ abstract class SocketConnector {
         if (obfuscationGuard) {
           return new java.net.Socket(this.host, this.port);
         }
-        SocketConnector.a(28);
+        SocketConnector.clearStaticReferences(28);
         return new java.net.Socket(this.host, this.port);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 11147) {
           field_c = (String) null;

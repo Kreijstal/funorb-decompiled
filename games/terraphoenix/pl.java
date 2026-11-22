@@ -465,7 +465,7 @@ final class pl extends WidgetContainer implements jf, n, rg {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_G = null;
         field_V = null;
         if (param0 <= 101) {

@@ -23,7 +23,7 @@ final class hi extends IntrusiveNode {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
           if (param0 != -38) {
-            hi.c((byte) -59);
+            hi.clearStaticReferences((byte) -59);
           }
           cb.a(-105, "", param1);
           df.a(param1, 10245);
@@ -81,7 +81,7 @@ final class hi extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         if (param0 >= -63) {
           field_p = (sf) null;

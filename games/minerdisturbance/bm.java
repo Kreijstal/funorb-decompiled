@@ -229,7 +229,7 @@ final class bm extends nf {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_o = (ag) null;
         }

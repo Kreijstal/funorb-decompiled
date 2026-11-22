@@ -44,7 +44,7 @@ final class bd extends jl {
         return (this.field_p - this.field_i) / 1000000L;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_k = null;
         field_j = null;
         field_n = null;

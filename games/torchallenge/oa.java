@@ -78,7 +78,7 @@ final class oa {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= 78) {
           field_k = null;
           field_a = null;

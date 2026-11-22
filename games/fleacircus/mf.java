@@ -31,7 +31,7 @@ final class mf {
         this.a(-12, -98, -85, -78, -93);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 != -9) {
           return;

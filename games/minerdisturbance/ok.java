@@ -115,7 +115,7 @@ abstract class ok implements jm {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 == 1627) {

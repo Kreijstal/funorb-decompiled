@@ -6,7 +6,7 @@ final class ak {
     static Sprite[] field_a;
     static Sprite field_c;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_b = null;
         field_c = null;

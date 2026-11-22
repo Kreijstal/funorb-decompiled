@@ -170,7 +170,7 @@ final class ce {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= -90) {
           field_c = null;
           field_b = null;
@@ -232,7 +232,7 @@ final class ce {
               if (1 != var3) {
                 var7 = ei.field_i;
                 synchronized (var7) {
-                  ei.field_i.a(var13, var9, -1);
+                  ei.field_i.decompress(var13, var9, -1);
                 }
               } else {
                 gh.a(var13, var5, param1, var4, 9);

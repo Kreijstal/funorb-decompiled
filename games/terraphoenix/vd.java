@@ -33,7 +33,7 @@ final class vd extends PcmStream {
         return 26;
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_o = null;
         field_p = null;
         field_l = null;

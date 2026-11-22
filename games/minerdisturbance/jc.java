@@ -502,7 +502,7 @@ abstract class jc extends fe implements rk {
             var10 = param5;
             var11 = -63 / ((-74 - param3) / 45);
             for (var12 = param0; var12 < param2; var12++) {
-              var13 = an.field_a[var12];
+              var13 = BoundedRandomAccessFile.field_a[var12];
               if (!param4) {
                 stackIn_24_0 = cc.field_L[var13];
               } else {
@@ -514,10 +514,10 @@ abstract class jc extends fe implements rk {
                   var10 = var14;
                 }
               } else {
-                an.field_a[var12] = an.field_a[var8];
+                BoundedRandomAccessFile.field_a[var12] = BoundedRandomAccessFile.field_a[var8];
                 incrementValue$0 = var8;
                 var8++;
-                an.field_a[incrementValue$0] = var13;
+                BoundedRandomAccessFile.field_a[incrementValue$0] = var13;
                 if (var14 < var9) {
                   var9 = var14;
                 }
@@ -529,11 +529,11 @@ abstract class jc extends fe implements rk {
           }
           for (var7_intLifetime1 = -1 + param2; var7_intLifetime1 > param0; var7_intLifetime1--) {
             for (var8Lifetime1 = param0; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = an.field_a[var8Lifetime1];
-              var10Lifetime1 = an.field_a[1 + var8Lifetime1];
+              var9Lifetime1 = BoundedRandomAccessFile.field_a[var8Lifetime1];
+              var10Lifetime1 = BoundedRandomAccessFile.field_a[1 + var8Lifetime1];
               if (ri.a(20021, param4, var9Lifetime1, var10Lifetime1)) {
-                an.field_a[var8Lifetime1] = var10Lifetime1;
-                an.field_a[1 + var8Lifetime1] = var9Lifetime1;
+                BoundedRandomAccessFile.field_a[var8Lifetime1] = var10Lifetime1;
+                BoundedRandomAccessFile.field_a[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }

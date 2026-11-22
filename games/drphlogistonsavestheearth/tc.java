@@ -14,7 +14,7 @@ final class tc implements Iterable {
     static il field_e;
     static String[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -9292) {
           field_b = (String[]) null;
         }
@@ -122,7 +122,7 @@ final class tc implements Iterable {
             wi.field_b[var1_intLifetime1] = 0L;
           }
           if (param0 != 86) {
-            tc.a(-82);
+            tc.clearStaticReferences(-82);
           }
           jj.field_b = 0;
         } catch (RuntimeException runtimeException) {

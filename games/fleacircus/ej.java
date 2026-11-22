@@ -88,7 +88,7 @@ final class ej {
           qh.field_y = -250;
           jk.field_l = 0;
           lj.field_c = new int[100];
-          mg.field_d = -1;
+          GzipDecompressor.field_d = -1;
           nc.field_a = new int[100];
           uf.field_h = 0;
           mh.field_u = 1;
@@ -110,7 +110,7 @@ final class ej {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 1) {

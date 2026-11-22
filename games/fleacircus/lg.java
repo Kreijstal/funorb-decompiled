@@ -7,7 +7,7 @@ final class lg {
     static bi[] field_c;
     static ul field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -29,7 +29,7 @@ final class lg {
         if (param4 > -86) {
           lg.a(80, -23, -25, 98, -100, -103);
         }
-        rl.field_e[qh.field_D] = param1;
+        BoundedRandomAccessFile.field_e[qh.field_D] = param1;
         mh.field_y[qh.field_D] = qh.field_D;
         jl.field_b[qh.field_D] = param2;
         if (ea.field_a > param2) {
@@ -105,7 +105,7 @@ final class lg {
           hh.field_b.a(param1, (byte) 63);
         }
         if (param0 >= -82) {
-          lg.a(-113);
+          lg.clearStaticReferences(-113);
         }
     }
 

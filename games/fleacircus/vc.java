@@ -255,7 +255,7 @@ final class vc {
         return this.field_e.field_h == this.field_e ? true : false;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 == -29943) {
           return;

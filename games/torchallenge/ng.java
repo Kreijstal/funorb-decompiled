@@ -246,7 +246,7 @@ class ng extends UiComponent {
 
     final void d(int param0) {
         if (param0 != 6064) {
-          ng.c(true);
+          ng.clearStaticReferences(true);
           if (!this.field_B) {
             return;
           }
@@ -273,7 +273,7 @@ class ng extends UiComponent {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_J = null;
         field_N = null;
         field_G = null;

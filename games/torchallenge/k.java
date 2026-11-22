@@ -18,7 +18,7 @@ final class k {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_d = null;
           field_a = null;

@@ -27,7 +27,7 @@ final class mm implements uj {
         return stackIn_7_0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           return;
         }
@@ -56,7 +56,7 @@ final class mm implements uj {
               return;
             }
             if (param3 != 1) {
-              mm.a(-97);
+              mm.clearStaticReferences(-97);
             }
             de.field_b = param1;
             if (null != de.field_b) {

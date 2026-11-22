@@ -20,7 +20,7 @@ final class ai extends DualLinkNode {
         if (!(param2 >= cc.field_B)) {
           ha.field_c = param2;
         }
-        if (param2 > pf.field_f) {
+        if (param2 > BoundedRandomAccessFile.field_f) {
           mh.field_b = param2;
         }
         fi.field_h[gg.field_b] = param0;

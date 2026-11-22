@@ -138,14 +138,14 @@ abstract class cb extends ok implements wg {
             if (var3_int != 0) {
               var1.a(false);
             }
-            var5_ref = an.a((byte) -97, var4_ref_String);
+            var5_ref = BoundedRandomAccessFile.a((byte) -97, var4_ref_String);
             var6_ref = var1.a(false);
             var7_ref = cl.a(-95, (CharSequence) ((Object) var4_ref_String));
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (var5_ref == null) {
-              var5_ref = an.a((byte) 126, var6_ref);
+              var5_ref = BoundedRandomAccessFile.a((byte) 126, var6_ref);
               if (null != var5_ref) {
                 tc.field_o.a((long)var7_ref.hashCode(), true, var5_ref);
               }

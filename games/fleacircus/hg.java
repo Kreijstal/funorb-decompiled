@@ -69,7 +69,7 @@ final class hg extends IntrusiveNode {
         se.field_b = se.field_b + ag.field_f;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_p = null;
         field_k = null;

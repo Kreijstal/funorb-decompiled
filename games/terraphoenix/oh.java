@@ -192,7 +192,7 @@ final class oh {
         return od.field_c[this.field_g].field_o;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 6) {
           return;
         }

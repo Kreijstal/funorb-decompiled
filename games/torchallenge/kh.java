@@ -39,7 +39,7 @@ class kh {
     void d() {
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_n = null;
     }
 

@@ -36,7 +36,7 @@ final class nj extends ke {
         return var4;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 != 0) {
           field_k = (String) null;

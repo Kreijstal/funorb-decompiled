@@ -231,13 +231,13 @@ final class t {
         tl.field_p.a(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
         ca.field_L.a(50, 100, 0, -4575, 380);
         fb.field_a.a(50, 100, 0, -4575, 380);
-        mg.field_b.a(50, 100, 0, -4575, 380);
+        GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
         cm.field_i.a(50, 100, 540, -4575, 380);
         th.field_z.a(50, 100, 540, -4575, 380);
         mf.field_e.a(50, 100, 540, -4575, 380);
         ca.field_L.a(1);
         fb.field_a.a(1);
-        mg.field_b.a(1);
+        GzipDecompressor.field_b.a(1);
         cm.field_i.a(1);
         th.field_z.a(1);
         mf.field_e.a(1);
@@ -287,13 +287,13 @@ final class t {
           var10.a(nc.field_b, 320, 240, 0, -1);
           ca.field_L.a(50, 100, 0, param0 - 7333, 380);
           fb.field_a.a(50, 100, 0, param0 ^ -6937, 380);
-          mg.field_b.a(50, 100, 0, -4575, 380);
+          GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
           cm.field_i.a(50, 100, 540, param0 - 7333, 380);
           th.field_z.a(50, 100, 540, -4575, 380);
           mf.field_e.a(50, 100, 540, -4575, 380);
           ca.field_L.a(1);
           fb.field_a.a(1);
-          mg.field_b.a(1);
+          GzipDecompressor.field_b.a(1);
           cm.field_i.a(1);
           th.field_z.a(1);
           mf.field_e.a(1);
@@ -929,7 +929,7 @@ final class t {
                                         if (this.field_i != 7) {
                                           break;
                                         }
-                                        il.a((byte) 77, rl.a((byte) -66));
+                                        il.a((byte) 77, BoundedRandomAccessFile.getApplet((byte) -66));
                                       }
                                     } else {
                                       stackIn_150_0 = (fleas.field_L == 0) ? 2 : 5;
@@ -946,7 +946,7 @@ final class t {
                                   if (ResourceArchive.field_p != null) {
                                     IntrusiveNode.a(false);
                                   }
-                                  hf.a(rl.a((byte) -51), -80);
+                                  hf.a(BoundedRandomAccessFile.getApplet((byte) -51), -80);
                                   break regionExit1;
                                 case 19:
                                   if (this.field_b.b(106)) {
@@ -1162,7 +1162,7 @@ final class t {
             if (null != ResourceArchive.field_p) {
               IntrusiveNode.a(false);
             }
-            il.a((byte) 77, rl.a((byte) -99));
+            il.a((byte) 77, BoundedRandomAccessFile.getApplet((byte) -99));
           }
           if (var2 == 1) {
             oa.a(0, false, 40);
@@ -1239,7 +1239,7 @@ final class t {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 9973) {
           return;
         }

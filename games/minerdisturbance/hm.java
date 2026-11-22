@@ -77,7 +77,7 @@ final class hm extends jc {
         this.field_K = new IntrusiveDeque();
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_M = null;
         field_N = null;
         if (param0 < 111) {
@@ -166,7 +166,7 @@ final class hm extends jc {
         var2 = new hh(this.field_K);
         var3 = (cc) (var2.d(-19864));
         if (param0 != 83) {
-          hm.c((byte) 111);
+          hm.clearStaticReferences((byte) 111);
         }
         while (var3 != null) {
           if (var3.field_K) {
@@ -212,7 +212,7 @@ final class hm extends jc {
             return stackIn_9_0;
           }
           if (!param1) {
-            hm.c((byte) 7);
+            hm.clearStaticReferences((byte) 7);
           }
           var4 = var3;
           var5 = 0;

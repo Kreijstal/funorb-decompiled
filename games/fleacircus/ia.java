@@ -83,7 +83,7 @@ final class ia extends IntrusiveNode {
           field_q = null;
           return;
         }
-        ia.b(true);
+        ia.clearStaticReferences(true);
         field_r = null;
         field_q = null;
     }
@@ -131,7 +131,7 @@ final class ia extends IntrusiveNode {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_s = (String[]) null;
         }

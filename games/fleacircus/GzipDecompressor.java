@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class mg {
+final class GzipDecompressor {
     static f field_a;
     private java.util.zip.Inflater field_c;
     static int field_e;
     static mf field_b;
     static int field_d;
 
-    public mg() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
     final static int a(boolean param0, int param1, int param2, int param3) {
         if (param2 != 10) {
-          mg.a(109);
+          GzipDecompressor.a(109);
           return fb.b(-122);
         }
         return fb.b(-122);
@@ -27,14 +27,14 @@ final class mg {
         nb.field_a = new f();
         wa.a(true, true, 30);
         if (param0 >= -53) {
-          mg.a(true, 123, -100, 21);
+          GzipDecompressor.a(true, 123, -100, 21);
         }
     }
 
-    private mg(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void a(byte param0, byte[] param1, ni param2) {
+    final void decompress(byte param0, byte[] param1, ni param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -90,7 +90,7 @@ final class mg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -3) {
           field_b = (mf) null;
           field_a = null;

@@ -26,19 +26,19 @@ final class hj extends jc {
           param1 = param1 + (param1 >>> 16);
           return param1 & 255;
         }
-        hj.g(-63);
+        hj.clearStaticReferences(-63);
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
         return param1 & 255;
     }
 
-    final static void g(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != -7958) {
           field_A = (String) null;
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_H = null;
         if (param0 < -102) {

@@ -156,7 +156,7 @@ final class pa {
         RuntimeException decompiledCaughtException = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (!pf.a(1, param1, param0)) {
+          if (!BoundedRandomAccessFile.a(1, param1, param0)) {
             return false;
           }
           for (var3_int = param2; param0.length() > var3_int; var3_int++) {

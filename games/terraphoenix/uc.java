@@ -9,7 +9,7 @@ final class uc extends PacketBuffer {
     private IsaacCipher field_m;
     static String field_q;
 
-    public static void m(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 >= -104) {
           field_n = (rh) null;

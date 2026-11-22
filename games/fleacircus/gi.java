@@ -231,7 +231,7 @@ abstract class gi {
 
     abstract rf a(int param0);
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_c = null;
         field_d = null;

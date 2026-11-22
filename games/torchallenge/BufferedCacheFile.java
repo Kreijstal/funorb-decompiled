@@ -62,7 +62,7 @@ final class BufferedCacheFile {
             }
             if (this.field_d.length >= param3) {
               if (param0 != -4573) {
-                BufferedCacheFile.b(false);
+                BufferedCacheFile.clearStaticReferences(false);
               }
               if (param3 <= 0) {
                 return;
@@ -133,7 +133,7 @@ final class BufferedCacheFile {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_a = null;
         field_g = null;
         field_p = null;

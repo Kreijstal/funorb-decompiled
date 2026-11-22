@@ -170,7 +170,7 @@ final class b extends IntrusiveNode {
         return var0;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_p = null;
         field_O = null;
         field_n = null;

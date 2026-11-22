@@ -17,7 +17,7 @@ final class dc {
     static rj field_n;
     static String[] field_e;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -117) {
           return;
         }

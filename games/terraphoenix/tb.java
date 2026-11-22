@@ -315,7 +315,7 @@ final class tb extends uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         if (param0 != -18440) {
           return;
@@ -502,7 +502,7 @@ final class tb extends uj {
           var4 = null;
         }
         if (param2 != -97) {
-          tb.a(97);
+          tb.clearStaticReferences(97);
         }
         if (var4 == null) {
           if (0 == param0) {

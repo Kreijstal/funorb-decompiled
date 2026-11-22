@@ -58,7 +58,7 @@ abstract class GameShell extends GameApplet {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 >= -110) {
           field_y = (nd) null;
         }
@@ -464,7 +464,7 @@ abstract class GameShell extends GameApplet {
           nh.a(ph.field_q, ch.field_g, false, bi.field_d) &&
           GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
-          hj.g(-7958);
+          hj.clearStaticReferences(-7958);
           TutorialController.field_e = hh.field_k;
           wd.field_b = false;
           am.a(ch.field_g, DelegatingCanvas.field_c, ph.field_q, bi.field_d, (byte) -22);

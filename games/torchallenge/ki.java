@@ -20,7 +20,7 @@ final class ki {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 64) {
           return;
         }
@@ -37,7 +37,7 @@ final class ki {
         }
         gj.a(-1, 4, false);
         if (param0 != 116) {
-          ki.a(76);
+          ki.clearStaticReferences(76);
         }
     }
 

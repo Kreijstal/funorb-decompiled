@@ -12,7 +12,7 @@ final class bi {
     static int field_h;
     static int[][][] field_e;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = (int[][][][]) null;
         if (param0 == 0) {
           field_b = null;
@@ -32,7 +32,7 @@ final class bi {
 
     final static void a(int param0) {
         if (param0 <= 123) {
-          bi.b(99);
+          bi.clearStaticReferences(99);
           nj.b(-124);
           return;
         }

@@ -113,7 +113,7 @@ final class fm implements cg {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               gd.field_d[var6_int] = var14.b((byte) -101);
             }
-            mg.a(var4, 83, var5);
+            GzipDecompressor.a(var4, 83, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               qg.a(var14, (byte) 104);
               if (var6_intLifetime1 != 0) {

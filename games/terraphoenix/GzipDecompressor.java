@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class t {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_d;
     static wh field_c;
     static java.awt.Font field_e;
     static int[] field_a;
     static long field_b;
 
-    public t() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -23,10 +23,10 @@ final class t {
         }
     }
 
-    private t(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final void a(PacketBuffer param0, int param1, byte[] param2) {
+    final void decompress(PacketBuffer param0, int param1, byte[] param2) {
         try {
           try {
             if (param0.payload[param0.position] != 31 ||

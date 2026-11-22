@@ -32,7 +32,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != 0) {
           return;

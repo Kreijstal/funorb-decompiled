@@ -8,7 +8,7 @@ final class fl {
     static int field_b;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 == 827399017) {
           field_d = null;
@@ -39,7 +39,7 @@ final class fl {
         var16 = Terraphoenix.field_V;
         try {
           if (param3 != 6) {
-            fl.a(75);
+            fl.clearStaticReferences(75);
           }
           while (true) {
             param0--;

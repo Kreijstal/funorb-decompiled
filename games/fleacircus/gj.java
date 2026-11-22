@@ -326,7 +326,7 @@ class gj extends UiComponent implements wg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_A = null;
         field_B = null;
         if (param0 >= -93) {

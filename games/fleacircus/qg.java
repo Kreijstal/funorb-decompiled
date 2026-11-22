@@ -9,7 +9,7 @@ final class qg {
     static ke field_f;
     static oc field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_f = null;
         field_a = null;
         field_d = null;

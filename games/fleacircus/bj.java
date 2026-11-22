@@ -24,7 +24,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_n = (vc) null;
           field_i = null;

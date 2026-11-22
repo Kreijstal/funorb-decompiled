@@ -12,7 +12,7 @@ final class cg {
     static Sprite[][][] field_b;
     static int[][] field_f;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         levelNames = null;
         field_d = null;
         if (param0 == -13) {

@@ -6,7 +6,7 @@ final class nl {
     static String[] field_b;
     static dd[][] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 == -33) {
           field_a = null;
           field_b = null;

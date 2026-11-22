@@ -567,7 +567,7 @@ final class vj {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = (he[][]) null;
         if (param0 != 0) {
           return;
@@ -695,7 +695,7 @@ final class vj {
     }
 
     final static void b(byte param0) {
-        if (!pf.a((byte) 97)) {
+        if (!BoundedRandomAccessFile.a((byte) 97)) {
           return;
         }
         int var1 = 91 % ((param0 + 32) / 61);
@@ -784,7 +784,7 @@ final class vj {
         try {
           var2_int = param0.length();
           if (param1 > -110) {
-            vj.c(4);
+            vj.clearStaticReferences(4);
           }
           var3 = new char[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
@@ -972,7 +972,7 @@ final class vj {
               var3.a(mi.field_j, (byte) 107);
               ea.field_a.a(13, -30537, var3.field_h, 0);
               hf.field_C = hf.field_C + 1;
-              pf.field_a = la.a(false) + 30000L;
+              BoundedRandomAccessFile.field_a = la.a(false) + 30000L;
             }
             if (3 == hf.field_C) {
               if (0 < ea.field_a.a((byte) 41)) {
@@ -983,7 +983,7 @@ final class vj {
                 }
                 hf.field_C = hf.field_C + 1;
               } else {
-                if (pf.field_a < la.a(false)) {
+                if (BoundedRandomAccessFile.field_a < la.a(false)) {
                   stackIn_24_0 = uj.a((byte) 85, -2);
                   return stackIn_24_0;
                 }

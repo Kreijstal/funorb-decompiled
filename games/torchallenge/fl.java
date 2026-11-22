@@ -9,7 +9,7 @@ final class fl extends vb {
     static int field_v;
     static Sprite[] field_s;
 
-    public static void e(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_s = null;
         if (param0 != -25984) {
           field_s = (Sprite[]) null;

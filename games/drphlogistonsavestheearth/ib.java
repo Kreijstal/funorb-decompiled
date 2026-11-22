@@ -273,7 +273,7 @@ final class ib {
         this.field_n.a((int)this.field_d, (int)this.field_k, var2Lifetime2);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_u = null;
         field_j = null;
         field_f = null;

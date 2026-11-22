@@ -22,7 +22,7 @@ final class cm {
         bj.field_f.a(rd.field_s, -24);
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 > -47) {
@@ -33,7 +33,7 @@ final class cm {
 
     final static boolean b(byte param0) {
         if (param0 >= -8) {
-          cm.c((byte) 60);
+          cm.clearStaticReferences((byte) 60);
         }
         if (qh.field_d == -1) {
           if (!vc.a(-127, 1)) {

@@ -258,7 +258,7 @@ final class ve {
         return 0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_u = null;
         field_n = null;
         field_o = null;

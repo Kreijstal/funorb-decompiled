@@ -20,7 +20,7 @@ final class ub {
           var4 = param2.a(param0, 0);
           var3 = var4;
           if (param1 > -84) {
-            ub.a(82);
+            ub.clearStaticReferences(82);
           }
           if (var4 != null) {
             stackIn_6_0 = new wc(var4);
@@ -99,7 +99,7 @@ final class ub {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;

@@ -46,14 +46,14 @@ abstract class wi {
           jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
           return;
         }
-        wi.a(true);
+        wi.clearStaticReferences(true);
         var1Lifetime1 = new ci(22050, la.field_a);
         jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1Lifetime1);
     }
 
     final static e a(int param0) {
         if (param0 != 17641) {
-          wi.a(false);
+          wi.clearStaticReferences(false);
           if (tg.field_e == null) {
             tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
             return tg.field_e;
@@ -67,7 +67,7 @@ abstract class wi {
         return tg.field_e;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_j = null;
         field_f = null;
         field_e = null;

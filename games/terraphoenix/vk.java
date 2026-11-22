@@ -82,7 +82,7 @@ final class vk {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 10417) {
           field_b = null;
           field_a = null;

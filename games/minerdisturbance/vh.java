@@ -17,7 +17,7 @@ final class vh implements uj {
         return "Fill Cell Oil";
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -58,7 +58,7 @@ final class vh implements uj {
 
     final static void a(int param0, ln[] param1) {
         try {
-          wk.field_a = new kd(pd.field_b, lc.field_o, param1, new String[]{tj.field_b, fb.field_d, hd.field_c, eg.field_g, sa.field_r, vc.field_u, wd.field_b});
+          wk.field_a = new kd(GzipDecompressor.field_b, lc.field_o, param1, new String[]{tj.field_b, fb.field_d, hd.field_c, eg.field_g, sa.field_r, vc.field_u, wd.field_b});
           if (param0 != 3) {
             field_i = (String[]) null;
           }

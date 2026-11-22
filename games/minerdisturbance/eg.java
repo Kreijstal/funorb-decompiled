@@ -388,7 +388,7 @@ class eg implements ad, cf {
         return param0 ^ param1;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_g = null;
         field_m = null;

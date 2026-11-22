@@ -21,11 +21,11 @@ final class sd {
         field_b = null;
         field_j = null;
         if (param0 != 9330) {
-          sd.a((byte) -123);
+          sd.clearStaticReferences((byte) -123);
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearStaticReferences(byte param0) {
         if (param0 != -63) {
           field_i = (ni) null;
         }

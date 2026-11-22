@@ -29,7 +29,7 @@ final class tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 88) {
-            tc.a((byte) 1);
+            tc.clearStaticReferences((byte) 1);
           }
           var5_int = param2.a(param4, (byte) -100);
           var6 = param2.a(param1, (byte) -15, var5_int);
@@ -67,7 +67,7 @@ final class tc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         field_g = null;
         if (param0 != -75) {

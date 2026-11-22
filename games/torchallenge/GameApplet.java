@@ -234,7 +234,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(k.field_g > var3)) {
                       this.runFrame(-30261);
-                      GzipDecoder.a(119, sh.field_u, bg.field_P);
+                      GzipDecoder.postEventQueueWakeup(119, sh.field_u, bg.field_P);
                       break;
                     }
                     this.runTick(126);

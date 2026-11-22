@@ -11,7 +11,7 @@ final class ClientException extends RuntimeException {
     static int[] field_g;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;

@@ -30,7 +30,7 @@ final class tf {
     private byte[] field_q;
     static BitmapFont field_x;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_u = null;
         field_j = null;
         field_w = null;

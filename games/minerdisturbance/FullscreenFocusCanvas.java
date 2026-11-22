@@ -8,7 +8,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static String field_a;
     volatile boolean field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 != 79) {

@@ -31,7 +31,7 @@ final class ra extends IntrusiveNode {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = null;
         field_i = null;
         field_h = null;

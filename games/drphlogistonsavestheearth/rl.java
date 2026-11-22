@@ -132,7 +132,7 @@ final class rl {
         }
     }
 
-    public static void f() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

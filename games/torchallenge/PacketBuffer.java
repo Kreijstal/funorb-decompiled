@@ -105,7 +105,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_o = (Sprite[][][]) null;
         field_p = null;
         if (param0 != 128) {

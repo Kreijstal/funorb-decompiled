@@ -307,7 +307,7 @@ abstract class fa extends DualLinkNode {
         field_r = 0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_A = null;
         field_w = null;
     }

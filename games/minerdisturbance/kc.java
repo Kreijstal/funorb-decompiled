@@ -10,7 +10,7 @@ final class kc {
     static ln[] field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 == 16574) {
           field_f = null;

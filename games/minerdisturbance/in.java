@@ -48,7 +48,7 @@ final class in {
               if (var3 != 1) {
                 var7 = IntrusiveNode.field_g;
                 synchronized (var7) {
-                  IntrusiveNode.field_g.a(var9, true, var12);
+                  IntrusiveNode.field_g.decompress(var9, true, var12);
                 }
               } else {
                 va.a(var12, var5_int, param0, var4, 9);
@@ -99,7 +99,7 @@ final class in {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 14912) {

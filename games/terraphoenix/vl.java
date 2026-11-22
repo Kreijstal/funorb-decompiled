@@ -56,7 +56,7 @@ final class vl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -1) {
           return;

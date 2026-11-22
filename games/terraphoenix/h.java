@@ -42,7 +42,7 @@ abstract class h {
         var8.field_G = param4;
         var8.secondaryKey = var6;
         if (param3 < 55) {
-          h.a(false);
+          h.clearStaticReferences(false);
           var8.field_x = param1 ? true : false;
           if (param1) {
             if (this.c(118) >= 20) {
@@ -74,7 +74,7 @@ abstract class h {
 
     abstract boolean c(boolean param0);
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_c = null;
         field_j = null;

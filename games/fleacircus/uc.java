@@ -24,7 +24,7 @@ abstract class uc {
         try {
           mi.a((byte) 12, 256, param1, param2);
           if (param0 != 5) {
-            uc.c((byte) 91);
+            uc.clearStaticReferences((byte) 91);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "uc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -53,7 +53,7 @@ abstract class uc {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, byte param3);
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_e = null;
         if (param0 >= -69) {
           return;

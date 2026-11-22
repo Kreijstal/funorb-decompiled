@@ -16,7 +16,7 @@ abstract class em extends DualLinkNode {
 
     abstract byte[] c(byte param0);
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < -30) {
           field_B = null;
           field_u = null;

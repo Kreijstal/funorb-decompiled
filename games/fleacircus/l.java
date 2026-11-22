@@ -161,7 +161,7 @@ final class l {
         int var1 = -5 % ((param0 - 44) / 58);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != -29049) {
           return;

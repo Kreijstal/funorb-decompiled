@@ -136,7 +136,7 @@ final class ci extends ma {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 25) {
           field_o = (String) null;
         }

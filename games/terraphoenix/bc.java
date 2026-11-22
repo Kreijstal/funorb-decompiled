@@ -9,7 +9,7 @@ final class bc {
     static int field_a;
     private int[] field_d;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -41,7 +41,7 @@ final class bc {
             if (param1 == 0) {
               return;
             }
-            bc.a(true);
+            bc.clearStaticReferences(true);
             return;
           }
           di.field_l.position = 0;

@@ -34,7 +34,7 @@ final class gj {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 == 29748) {
           field_c = null;

@@ -27,7 +27,7 @@ class fj {
     void g() {
     }
 
-    public static void d() {
+    public static void clearStaticReferences() {
         field_b = null;
     }
 

@@ -47,7 +47,7 @@ final class ud {
         }
         var11Lifetime1 = 0;
         if (param2 != 4715) {
-          ud.a((byte) 104);
+          ud.clearStaticReferences((byte) 104);
         }
         while (param3 > var11Lifetime1) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
@@ -79,7 +79,7 @@ final class ud {
         return var10Lifetime1;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 85) {
           return;
         }
@@ -228,7 +228,7 @@ final class ud {
           gj.field_A.field_y = 1;
           gj.field_A.field_z = -1;
           ca.field_L = new mf(3, 1560);
-          mg.field_b = new mf(6, 165);
+          GzipDecompressor.field_b = new mf(6, 165);
           fb.field_a = new mf(3, 4715);
           cm.field_i = new mf(3, 1560);
           mf.field_e = new mf(6, 165);

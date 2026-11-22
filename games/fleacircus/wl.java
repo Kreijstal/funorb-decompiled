@@ -180,7 +180,7 @@ final class wl {
         }
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_i = null;
         field_f = null;
         field_j = null;

@@ -53,7 +53,7 @@ final class cg extends WidgetContainer implements n {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_H = null;
         if (param0 != 4) {
           return;

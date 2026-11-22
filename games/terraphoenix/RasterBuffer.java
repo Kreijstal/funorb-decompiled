@@ -96,7 +96,7 @@ abstract class RasterBuffer {
           } catch (InterruptedException interruptedException) {
           }
           if (param1 != 0) {
-            RasterBuffer.b((byte) -85);
+            RasterBuffer.clearStaticReferences((byte) -85);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -311,7 +311,7 @@ abstract class RasterBuffer {
 
     abstract void a(int param0, int param1, byte param2, java.awt.Component param3);
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_a = null;
         field_e = null;
         if (param0 > -51) {

@@ -361,83 +361,83 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           var2Lifetime43 = re.a("INTRO_SEQUENCE_TEXT,0,0", 123);
           if (var2Lifetime43 != null) {
-            mg.field_a[0][0] = mj.a((byte) 15, var2Lifetime43);
+            GzipDecompressor.field_a[0][0] = mj.a((byte) 15, var2Lifetime43);
           }
           var2Lifetime44 = re.a("INTRO_SEQUENCE_TEXT,0,1", 122);
           if (var2Lifetime44 != null) {
-            mg.field_a[0][1] = mj.a((byte) -119, var2Lifetime44);
+            GzipDecompressor.field_a[0][1] = mj.a((byte) -119, var2Lifetime44);
           }
           var2Lifetime45 = re.a("INTRO_SEQUENCE_TEXT,0,2", 124);
           if (null != var2Lifetime45) {
-            mg.field_a[0][2] = mj.a((byte) -109, var2Lifetime45);
+            GzipDecompressor.field_a[0][2] = mj.a((byte) -109, var2Lifetime45);
           }
           var2Lifetime46 = re.a("INTRO_SEQUENCE_TEXT,0,3", 123);
           if (null != var2Lifetime46) {
-            mg.field_a[0][3] = mj.a((byte) -4, var2Lifetime46);
+            GzipDecompressor.field_a[0][3] = mj.a((byte) -4, var2Lifetime46);
           }
           var2Lifetime47 = re.a("INTRO_SEQUENCE_TEXT,0,4", param1 - 129);
           if (var2Lifetime47 != null) {
-            mg.field_a[0][4] = mj.a((byte) 74, var2Lifetime47);
+            GzipDecompressor.field_a[0][4] = mj.a((byte) 74, var2Lifetime47);
           }
           var2Lifetime48 = re.a("INTRO_SEQUENCE_TEXT,0,5", param1 ^ 130);
           if (null != var2Lifetime48) {
-            mg.field_a[0][5] = mj.a((byte) 2, var2Lifetime48);
+            GzipDecompressor.field_a[0][5] = mj.a((byte) 2, var2Lifetime48);
           }
           var2Lifetime49 = re.a("INTRO_SEQUENCE_TEXT,0,6", 126);
           if (var2Lifetime49 != null) {
-            mg.field_a[0][6] = mj.a((byte) -105, var2Lifetime49);
+            GzipDecompressor.field_a[0][6] = mj.a((byte) -105, var2Lifetime49);
           }
           var2Lifetime50 = re.a("INTRO_SEQUENCE_TEXT,0,7", 126);
           if (null != var2Lifetime50) {
-            mg.field_a[0][7] = mj.a((byte) -122, var2Lifetime50);
+            GzipDecompressor.field_a[0][7] = mj.a((byte) -122, var2Lifetime50);
           }
           var2Lifetime51 = re.a("INTRO_SEQUENCE_TEXT,1,0", 127);
           if (null != var2Lifetime51) {
-            mg.field_a[1][0] = mj.a((byte) -100, var2Lifetime51);
+            GzipDecompressor.field_a[1][0] = mj.a((byte) -100, var2Lifetime51);
           }
           var2Lifetime52 = re.a("INTRO_SEQUENCE_TEXT,2,0", 122);
           if (var2Lifetime52 != null) {
-            mg.field_a[2][0] = mj.a((byte) -105, var2Lifetime52);
+            GzipDecompressor.field_a[2][0] = mj.a((byte) -105, var2Lifetime52);
           }
           var2Lifetime53 = re.a("INTRO_SEQUENCE_TEXT,3,0", 123);
           if (var2Lifetime53 != null) {
-            mg.field_a[3][0] = mj.a((byte) -105, var2Lifetime53);
+            GzipDecompressor.field_a[3][0] = mj.a((byte) -105, var2Lifetime53);
           }
           var2Lifetime54 = re.a("INTRO_SEQUENCE_TEXT,3,1", 123);
           if (null != var2Lifetime54) {
-            mg.field_a[3][1] = mj.a((byte) 26, var2Lifetime54);
+            GzipDecompressor.field_a[3][1] = mj.a((byte) 26, var2Lifetime54);
           }
           var2Lifetime55 = re.a("INTRO_SEQUENCE_TEXT,3,2", 122);
           if (var2Lifetime55 != null) {
-            mg.field_a[3][2] = mj.a((byte) 76, var2Lifetime55);
+            GzipDecompressor.field_a[3][2] = mj.a((byte) 76, var2Lifetime55);
           }
           var2Lifetime56 = re.a("INTRO_SEQUENCE_TEXT,4,0", 124);
           if (var2Lifetime56 != null) {
-            mg.field_a[4][0] = mj.a((byte) -119, var2Lifetime56);
+            GzipDecompressor.field_a[4][0] = mj.a((byte) -119, var2Lifetime56);
           }
           var2Lifetime57 = re.a("INTRO_SEQUENCE_TEXT,5,0", 125);
           if (var2Lifetime57 != null) {
-            mg.field_a[5][0] = mj.a((byte) -126, var2Lifetime57);
+            GzipDecompressor.field_a[5][0] = mj.a((byte) -126, var2Lifetime57);
           }
           var2Lifetime58 = re.a("INTRO_SEQUENCE_TEXT,6,0", 125);
           if (null != var2Lifetime58) {
-            mg.field_a[6][0] = mj.a((byte) 94, var2Lifetime58);
+            GzipDecompressor.field_a[6][0] = mj.a((byte) 94, var2Lifetime58);
           }
           var2Lifetime59 = re.a("INTRO_SEQUENCE_TEXT,6,1", param1 - 132);
           if (null != var2Lifetime59) {
-            mg.field_a[6][1] = mj.a((byte) 121, var2Lifetime59);
+            GzipDecompressor.field_a[6][1] = mj.a((byte) 121, var2Lifetime59);
           }
           var2Lifetime60 = re.a("INTRO_SEQUENCE_TEXT,6,2", 127);
           if (var2Lifetime60 != null) {
-            mg.field_a[6][2] = mj.a((byte) 20, var2Lifetime60);
+            GzipDecompressor.field_a[6][2] = mj.a((byte) 20, var2Lifetime60);
           }
           var2Lifetime61 = re.a("INTRO_SEQUENCE_TEXT,7,0", 126);
           if (null != var2Lifetime61) {
-            mg.field_a[7][0] = mj.a((byte) -95, var2Lifetime61);
+            GzipDecompressor.field_a[7][0] = mj.a((byte) -95, var2Lifetime61);
           }
           var2Lifetime62 = re.a("INTRO_SEQUENCE_TEXT,8,0", param1 - 132);
           if (null != var2Lifetime62) {
-            mg.field_a[8][0] = mj.a((byte) -20, var2Lifetime62);
+            GzipDecompressor.field_a[8][0] = mj.a((byte) -20, var2Lifetime62);
           }
           var2Lifetime63 = re.a("LEVEL_COMPLETE_TEXT", param1 - 131);
           if (null != var2Lifetime63) {

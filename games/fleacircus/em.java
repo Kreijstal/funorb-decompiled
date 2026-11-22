@@ -41,8 +41,8 @@ final class em extends IOException {
         }
         if (ha.field_l <= param2 &&
           param2 < ha.field_l + df.field_b.field_w &&
-          mg.field_e <= param0 &&
-          param0 < df.field_b.field_t + mg.field_e) {
+          GzipDecompressor.field_e <= param0 &&
+          param0 < df.field_b.field_t + GzipDecompressor.field_e) {
           return 0;
         }
         if (param2 >= mh.field_w &&

@@ -91,7 +91,7 @@ final class bb implements Runnable {
             }
             c.a(100, 10L);
             Object var5 = (Object) null;
-            GzipDecoder.a(117, this.field_b, (Object) null);
+            GzipDecoder.postEventQueueWakeup(117, this.field_b, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;

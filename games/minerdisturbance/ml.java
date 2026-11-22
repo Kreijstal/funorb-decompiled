@@ -295,13 +295,13 @@ final class ml {
                                                       }
                                                       sn.field_b[1] = null;
                                                       sn.field_b[0] = null;
-                                                      pd.field_b.field_Q = new mc(pd.field_b, this.field_o.field_d);
+                                                      GzipDecompressor.field_b.field_Q = new mc(GzipDecompressor.field_b, this.field_o.field_d);
                                                       var4 = -1;
                                                       el.field_c = true;
                                                     } else {
                                                       sn.field_b[1] = null;
                                                       sn.field_b[0] = null;
-                                                      pd.field_b.field_Q = new mc(pd.field_b, this.field_o.field_d);
+                                                      GzipDecompressor.field_b.field_Q = new mc(GzipDecompressor.field_b, this.field_o.field_d);
                                                       var4 = -1;
                                                       el.field_c = true;
                                                     }
@@ -423,7 +423,7 @@ final class ml {
           } else {
             if (this.field_o.a((byte) -3)) {
               rj.a((byte) -38, 6);
-              pd.field_b.s(param0 ^ 428);
+              GzipDecompressor.field_b.s(param0 ^ 428);
               var4 = -1;
               el.field_c = true;
             }

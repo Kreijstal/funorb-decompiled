@@ -11,7 +11,7 @@ final class i extends ma {
     static long field_q;
     static int field_r;
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_p = null;
         if (param0 != -14298) {
           field_p = (String[]) null;

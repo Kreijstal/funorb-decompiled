@@ -198,7 +198,7 @@ final class il extends ma {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_q = null;
         field_s = null;
         field_o = null;

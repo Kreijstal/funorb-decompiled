@@ -198,7 +198,7 @@ final class fk {
         return true;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

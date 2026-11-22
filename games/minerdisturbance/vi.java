@@ -23,7 +23,7 @@ final class vi {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 != 0) {
-          vi.a(69);
+          vi.clearStaticReferences(69);
         }
         SoftwareRasterizer.b(param5, param6, param4, param2, param3, param0);
     }
@@ -156,7 +156,7 @@ final class vi {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -1) {
           field_c = (String[][]) null;
         }

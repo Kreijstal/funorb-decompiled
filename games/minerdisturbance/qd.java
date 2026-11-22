@@ -465,7 +465,7 @@ final class qd extends kn implements sh {
             var4 = (sl) (tc.field_v.b((byte) 56));
           }
           if (param1 >= -81) {
-            qd.a(false);
+            qd.clearStaticReferences(false);
           }
           var2 = on.field_v.b(99);
           while (var2 != null) {
@@ -480,7 +480,7 @@ final class qd extends kn implements sh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           return;
         }

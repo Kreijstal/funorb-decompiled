@@ -34,13 +34,13 @@ final class IntrusiveDeque {
         ag.field_a = null;
         if (param0 >= -94) {
           field_e = (String) null;
-          t.field_e = null;
+          GzipDecompressor.field_e = null;
           return;
         }
-        t.field_e = null;
+        GzipDecompressor.field_e = null;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         if (param0 != -22208) {
           return;

@@ -5,7 +5,7 @@ final class fi {
     static boolean[] field_a;
     static Sprite[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 35) {
           return;
         }
@@ -15,7 +15,7 @@ final class fi {
 
     final static void a(byte param0, ResourceArchive param1, hg param2, int param3) {
         try {
-          kc.field_d = param3 * pl.b((byte) -116) / 1000;
+          kc.field_d = param3 * pl.getTickRate((byte) -116) / 1000;
           gn.a(param1, (byte) -101);
           hj.a(param1, 347664612);
           if (param0 <= 94) {

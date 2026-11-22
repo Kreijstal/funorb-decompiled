@@ -71,7 +71,7 @@ final class hl implements uj {
         return "Make Boulders";
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_c = (String) null;
           field_a = null;

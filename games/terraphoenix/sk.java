@@ -42,7 +42,7 @@ final class sk implements WidgetActionListener {
           var9 = var12.field_K + (param0 + param1.y);
           SoftwareRasterizer.c(var8, var9, var8 + var7, var9, this.field_j);
           if (param3 != -24381) {
-            sk.a(false);
+            sk.clearStaticReferences(false);
           }
           for (var10 = -1 + var12.g(1); var10 >= 0; var10--) {
             SoftwareRasterizer.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
@@ -66,7 +66,7 @@ final class sk implements WidgetActionListener {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_a = null;
         field_d = null;

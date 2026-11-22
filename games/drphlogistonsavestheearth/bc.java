@@ -10,7 +10,7 @@ final class bc {
     static int field_f;
     static String[] field_b;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

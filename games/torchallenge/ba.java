@@ -64,7 +64,7 @@ final class ba {
           }
         }
         var11 = ui.field_i;
-        GzipDecoder.a(var11, var9, var8, (byte) 102, var7, var6);
+        GzipDecoder.drawNineSlice(var11, var9, var8, (byte) 102, var7, var6);
         var12 = ph.field_o[var5];
         var7Lifetime1 = ic.field_B[param0][7];
         var6Lifetime1 = ic.field_B[param0][6];
@@ -90,7 +90,7 @@ final class ba {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         field_e = (boolean[][][]) null;
         field_d = null;

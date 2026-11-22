@@ -41,7 +41,7 @@ final class ai extends r {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -10) {
           field_n = (dd[]) null;
           field_n = null;
@@ -58,7 +58,7 @@ final class ai extends r {
           bb.field_C = param0;
           q.field_d = param1;
           if (param3) {
-            ai.c((byte) 109);
+            ai.clearStaticReferences((byte) 109);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "ai.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -113,7 +113,7 @@ final class ai extends r {
           tg.field_i.a();
           gg.field_g = gg.field_g - 1;
           if (param0 != -20846) {
-            ai.c((byte) -57);
+            ai.clearStaticReferences((byte) -57);
           }
           if (gg.field_g == 0) {
             gg.field_g = 200;

@@ -19,7 +19,7 @@ final class dd extends u {
         return ll.field_p;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_g = null;
         if (param0) {
           return;
@@ -34,7 +34,7 @@ final class dd extends u {
         try {
           param0.a(-23805, this.field_m);
           if (param1 < 19) {
-            dd.a(true);
+            dd.clearStaticReferences(true);
           }
           param0.b(1, this.field_i);
         } catch (RuntimeException runtimeException) {
@@ -48,7 +48,7 @@ final class dd extends u {
         long var4 = 0L;
         try {
           if (param0 < 44) {
-            dd.a(false);
+            dd.clearStaticReferences(false);
           }
           MouseInput.field_c = true;
           var2 = "tuhstatbut";

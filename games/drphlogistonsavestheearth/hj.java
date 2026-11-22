@@ -14,7 +14,7 @@ abstract class hj {
     static gk field_i;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_i = null;
         field_a = null;
         field_g = null;

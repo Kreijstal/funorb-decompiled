@@ -3,7 +3,7 @@
  */
 final class se {
     static dd[] field_a;
-    static mg field_c;
+    static GzipDecompressor field_c;
     static String field_e;
     static String field_f;
     static boolean[] field_d;
@@ -19,7 +19,7 @@ final class se {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 3) {
-            field_c = (mg) null;
+            field_c = (GzipDecompressor) null;
           }
           if (!param2) {
             stackIn_6_0 = pb.field_e.b(param1);
@@ -220,7 +220,7 @@ final class se {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -234,7 +234,7 @@ final class se {
     static {
         field_f = "Create your own free Jagex account";
         field_e = "Login: ";
-        field_c = new mg();
+        field_c = new GzipDecompressor();
         field_b = 16822275;
     }
 }

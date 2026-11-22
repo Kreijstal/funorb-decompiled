@@ -101,7 +101,7 @@ final class fi implements Runnable {
         return this.field_j;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_h = null;
         if (param0 <= 100) {

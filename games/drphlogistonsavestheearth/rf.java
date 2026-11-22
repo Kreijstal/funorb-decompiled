@@ -35,7 +35,7 @@ abstract class rf extends DualLinkNode {
         this.b(param0, param1 - this.b(param0), param2);
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_Q = null;
         field_C = null;
     }

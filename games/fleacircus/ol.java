@@ -13,10 +13,10 @@ final class ol {
         if (param0 >= -98) {
           return (ad) null;
         }
-        return new ad(ti.a((byte) -120), rl.a(true));
+        return new ad(ti.a((byte) -120), BoundedRandomAccessFile.a(true));
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_a = (String[]) null;
         }

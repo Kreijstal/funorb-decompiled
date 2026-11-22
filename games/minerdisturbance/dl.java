@@ -200,7 +200,7 @@ final class dl {
         return gd.field_B;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_a = null;
         if (param0 != -118) {

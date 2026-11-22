@@ -71,7 +71,7 @@ final class bm extends gj implements da {
         this.field_J = param1;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_N = (String) null;
         }
@@ -141,7 +141,7 @@ final class bm extends gj implements da {
 
     final static int f(byte param0) {
         if (param0 <= 8) {
-          bm.c(true);
+          bm.clearStaticReferences(true);
         }
         return (int)(1000000000L / NodeHashTableIterator.field_f);
     }
@@ -162,7 +162,7 @@ final class bm extends gj implements da {
         var9 = fleas.field_A ? 1 : 0;
         try {
           if (param0 != 31) {
-            bm.c(false);
+            bm.clearStaticReferences(false);
           }
           for (var1_int = 0; var1_int < qi.field_f; var1_int++) {
             var3 = rk.field_u[var1_int];

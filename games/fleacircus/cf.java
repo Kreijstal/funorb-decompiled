@@ -7,7 +7,7 @@ final class cf {
     static kc field_c;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         if (param0 == 21230) {

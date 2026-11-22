@@ -14,7 +14,7 @@ final class md {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = pd.a(param0, true, true, 10);
+            stackIn_4_0 = GzipDecompressor.parseInteger(param0, true, true, 10);
             return stackIn_4_0;
           }
           stackIn_2_0 = -9;
@@ -33,7 +33,7 @@ final class md {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 <= 27) {
           field_a = (String) null;

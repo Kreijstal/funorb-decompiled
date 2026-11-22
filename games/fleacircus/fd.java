@@ -91,7 +91,7 @@ final class fd {
         this.field_h = null;
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_f = null;
     }
 

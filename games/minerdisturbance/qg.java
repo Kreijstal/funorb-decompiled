@@ -19,7 +19,7 @@ final class qg implements ad {
     private int field_l;
     static int field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
           return;
@@ -73,7 +73,7 @@ final class qg implements ad {
           SoftwareRasterizer.c(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_S * 3.141592653589793 * 2.0 / (double)var14.field_N;
           if (param0 != 12088) {
-            qg.a(-31);
+            qg.clearStaticReferences(-31);
           }
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_J);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_J);
@@ -100,7 +100,7 @@ final class qg implements ad {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            qg.a(-13);
+            qg.clearStaticReferences(-13);
           }
           if (param0 == 0L &&
             param3 != null) {

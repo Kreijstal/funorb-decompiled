@@ -293,7 +293,7 @@ final class vh {
         return this.field_f;
     }
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != -44) {
           return;

@@ -10,7 +10,7 @@ final class im {
         try {
           uk.field_xb = param2;
           if (param1 <= 68) {
-            im.a(-65);
+            im.clearStaticReferences(-65);
           }
           wk.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -18,7 +18,7 @@ final class im {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 6776) {
           return;

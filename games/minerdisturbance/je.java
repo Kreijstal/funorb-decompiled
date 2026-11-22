@@ -1755,7 +1755,7 @@ final class je {
               }
             }
           }
-          var8Lifetime1 = var6 - pd.field_a.field_x - 1;
+          var8Lifetime1 = var6 - GzipDecompressor.field_a.field_x - 1;
           var9Lifetime1 = var7 - 1;
           var10Lifetime1 = kn.field_E;
           if (!qe.field_b[19]) {
@@ -1765,26 +1765,26 @@ final class je {
                 if (var10Lifetime1 < 250 &&
                   var10Lifetime1 / 10 % 2 == 0) {
                   var11Lifetime1 = 16711680;
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 100 &&
                   var10Lifetime1 / 10 % 2 == 1) {
                   var11Lifetime1 = 16776960;
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 50 &&
                   var10Lifetime1 / 25 % 2 == 0) {
                   var11Lifetime1 = 16777215;
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 }
                 var11Lifetime1 = 10341850;
-                var12 = var10Lifetime1 * pd.field_a.field_A / 450;
+                var12 = var10Lifetime1 * GzipDecompressor.field_a.field_A / 450;
                 if (var12 > 0) {
-                  SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (GzipDecompressor.field_a.field_A - var12), var8Lifetime1 + GzipDecompressor.field_a.field_x + 2, var9Lifetime1 + GzipDecompressor.field_a.field_A + 2);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                   SoftwareRasterizer.a();
                 }
-                pd.field_a.f(var8Lifetime1, var9Lifetime1, 100);
+                GzipDecompressor.field_a.f(var8Lifetime1, var9Lifetime1, 100);
               }
             } else {
               if (var10Lifetime1 < 950) {
@@ -1792,26 +1792,26 @@ final class je {
                 if (var10Lifetime1 < 250 &&
                   var10Lifetime1 / 10 % 2 == 0) {
                   var11Lifetime1 = 16711680;
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 100 &&
                   var10Lifetime1 / 10 % 2 == 1) {
                   var11Lifetime1 = 16776960;
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 }
                 if (var10Lifetime1 < 50 &&
                   var10Lifetime1 / 25 % 2 == 0) {
                   var11Lifetime1 = 16777215;
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 }
                 var11Lifetime1 = 10341850;
-                var12 = var10Lifetime1 * pd.field_a.field_A / 950;
+                var12 = var10Lifetime1 * GzipDecompressor.field_a.field_A / 950;
                 if (var12 > 0) {
-                  SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
-                  SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                  SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (GzipDecompressor.field_a.field_A - var12), var8Lifetime1 + GzipDecompressor.field_a.field_x + 2, var9Lifetime1 + GzipDecompressor.field_a.field_A + 2);
+                  SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                   SoftwareRasterizer.a();
                 }
-                pd.field_a.f(var8Lifetime1, var9Lifetime1, 100);
+                GzipDecompressor.field_a.f(var8Lifetime1, var9Lifetime1, 100);
               }
             }
           } else {
@@ -1820,27 +1820,27 @@ final class je {
               if (var10Lifetime1 < 250 &&
                 var10Lifetime1 / 10 % 2 == 0) {
                 var11Lifetime1 = 16711680;
-                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
               }
               if (var10Lifetime1 < 100 &&
                 var10Lifetime1 / 10 % 2 == 1) {
                 var11Lifetime1 = 16776960;
-                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
               }
               if (var10Lifetime1 < 50 &&
                 var10Lifetime1 / 25 % 2 == 0) {
                 var11Lifetime1 = 16777215;
-                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
               }
               var11Lifetime1 = 10341850;
-              var12 = var10Lifetime1 * pd.field_a.field_A / 1950;
+              var12 = var10Lifetime1 * GzipDecompressor.field_a.field_A / 1950;
               if (var12 > 0) {
-                SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (pd.field_a.field_A - var12), var8Lifetime1 + pd.field_a.field_x + 2, var9Lifetime1 + pd.field_a.field_A + 2);
-                SoftwareRasterizer.c(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), pd.field_a.field_A >> 1, var11Lifetime1);
+                SoftwareRasterizer.a(var8Lifetime1, var9Lifetime1 + (GzipDecompressor.field_a.field_A - var12), var8Lifetime1 + GzipDecompressor.field_a.field_x + 2, var9Lifetime1 + GzipDecompressor.field_a.field_A + 2);
+                SoftwareRasterizer.c(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 SoftwareRasterizer.a();
               }
-              pd.field_a.f(var8Lifetime1, var9Lifetime1, 100);
-              SoftwareRasterizer.d(var8Lifetime1 + (pd.field_a.field_x >> 1), var9Lifetime1 + (pd.field_a.field_A >> 1), (pd.field_a.field_A >> 1) + 2, 16774927);
+              GzipDecompressor.field_a.f(var8Lifetime1, var9Lifetime1, 100);
+              SoftwareRasterizer.d(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), (GzipDecompressor.field_a.field_A >> 1) + 2, 16774927);
             }
           }
           if (!qe.field_b[16]) {
@@ -2724,7 +2724,7 @@ final class je {
         return field_O.i(98, (param0 << 2) + param2, (param1 << 2) + param3);
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_N = null;
         field_h = (int[][]) null;
         field_d = (Sprite[][]) null;

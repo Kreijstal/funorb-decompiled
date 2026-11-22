@@ -12,7 +12,7 @@ final class aj implements uj {
         return "Scroll Camera to Player";
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_d = null;
         field_b = null;
@@ -24,7 +24,7 @@ final class aj implements uj {
 
     public final void a(boolean param0) {
         if (param0) {
-          aj.b(-107);
+          aj.clearStaticReferences(-107);
           ClientException.field_d = 0;
           kd.field_i = true;
           return;

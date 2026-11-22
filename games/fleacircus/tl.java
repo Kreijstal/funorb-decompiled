@@ -6,7 +6,7 @@ final class tl extends r {
     static int field_o;
     static fa field_p;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 50) {
           return;
         }

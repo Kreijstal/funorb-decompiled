@@ -34,7 +34,7 @@ final class kh {
             stackIn_11_0 = (byte[]) (param1);
             return stackIn_11_0;
           }
-          stackIn_9_0 = rl.a(1, param1);
+          stackIn_9_0 = BoundedRandomAccessFile.copyByteArray(1, param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ final class kh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -34) {
           return;
         }
@@ -93,9 +93,9 @@ final class kh {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (rl.field_e == null ||
-          !(rl.field_e.length >= param1)) {
-          rl.field_e = new int[param1 * 2];
+        if (BoundedRandomAccessFile.field_e == null ||
+          !(BoundedRandomAccessFile.field_e.length >= param1)) {
+          BoundedRandomAccessFile.field_e = new int[param1 * 2];
         }
         if (null == jl.field_b ||
           !(param1 <= jl.field_b.length)) {

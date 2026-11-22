@@ -23,7 +23,7 @@ final class re implements Iterator {
         this.field_a = this.field_b.field_h[0].next;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 967) {
           return;
         }

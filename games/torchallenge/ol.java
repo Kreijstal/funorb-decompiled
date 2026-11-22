@@ -19,7 +19,7 @@ final class ol {
         return (int)(1000000000L / cj.field_i);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_i = null;
         field_b = null;
         field_e = (int[][]) null;
@@ -81,7 +81,7 @@ final class ol {
               return false;
             }
             if (!param1) {
-              ol.a((byte) -9);
+              ol.clearStaticReferences((byte) -9);
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             for (var3 = 0; var3 < param0.length(); var3++) {

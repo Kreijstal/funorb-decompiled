@@ -58,7 +58,7 @@ final class td {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_a = (String) null;
           field_a = null;

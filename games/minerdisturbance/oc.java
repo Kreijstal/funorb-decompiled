@@ -55,8 +55,8 @@ final class oc extends hn {
                   fl.field_d = true;
                   mc.field_w = -1;
                   tb.field_e = true;
-                  if (null != pd.field_b) {
-                    pd.field_b.field_K = false;
+                  if (null != GzipDecompressor.field_b) {
+                    GzipDecompressor.field_b.field_K = false;
                     kh.a((byte) 92);
                   }
                   return;

@@ -301,8 +301,8 @@ final class sa {
         try {
           try {
             var9 = ae.field_G.getGraphics();
-            if (null == t.field_e) {
-              t.field_e = new java.awt.Font("Helvetica", 1, 13);
+            if (null == GzipDecompressor.field_e) {
+              GzipDecompressor.field_e = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
@@ -322,7 +322,7 @@ final class sa {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(3 * param2 + 2, 2, 300 - 3 * param2, 30);
-              var10.setFont(t.field_e);
+              var10.setFont(GzipDecompressor.field_e);
               if (param0 != -26) {
                 return;
               }
@@ -340,14 +340,14 @@ final class sa {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, 1 + var8, 301, 31);
               var9.fillRect(2 + var7 + 3 * param2, 2 + var8, -(param2 * 3) + 300, 30);
-              var9.setFont(t.field_e);
+              var9.setFont(GzipDecompressor.field_e);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param1, var7 + (-(6 * param1.length()) + 304) / 2, 22 + var8);
             }
             if (BattleState.field_o == null) {
               return;
             }
-            var9.setFont(t.field_e);
+            var9.setFont(GzipDecompressor.field_e);
             var9.setColor(java.awt.Color.white);
             var9.drawString(BattleState.field_o, ja.field_j / 2 - 6 * BattleState.field_o.length() / 2, -26 + wc.field_p / 2);
             return;
@@ -377,7 +377,7 @@ final class sa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_b = null;
           field_c = null;

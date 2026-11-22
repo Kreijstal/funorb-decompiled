@@ -63,7 +63,7 @@ final class ak {
         return var1;
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
           return;
@@ -187,7 +187,7 @@ final class ak {
               ud.field_b.a(-11, 18);
               ud.field_b.field_i = ud.field_b.field_i + 2;
               var10 = ud.field_b.field_i;
-              var11_ref_StringLifetime4 = w.a(0, rl.a((byte) -62));
+              var11_ref_StringLifetime4 = w.a(0, BoundedRandomAccessFile.getApplet((byte) -62));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -208,7 +208,7 @@ final class ak {
               tc.field_e = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
-                bj.a(14, rl.a((byte) -80));
+                bj.a(14, BoundedRandomAccessFile.getApplet((byte) -80));
                 fh.field_a = rf.field_q;
                 k.c(-28354);
                 aa.field_q = false;
@@ -250,7 +250,7 @@ final class ak {
             } else {
               var9_ref_String = ae.field_a.a((byte) -115);
               if (var9_ref_String != null) {
-                ea.a(376, rl.a((byte) -93), var9_ref_String);
+                ea.a(376, BoundedRandomAccessFile.getApplet((byte) -93), var9_ref_String);
               }
             }
             k.c(param1 ^ -21613);

@@ -101,7 +101,7 @@ final class dn extends IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < -44) {
           field_s = null;
           field_t = null;

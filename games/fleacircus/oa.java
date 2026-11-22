@@ -10,7 +10,7 @@ final class oa extends IntrusiveNode {
     static int[] field_m;
     static boolean field_n;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         if (param0 >= -67) {
           return;

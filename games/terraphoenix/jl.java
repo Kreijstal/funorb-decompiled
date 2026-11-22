@@ -19,7 +19,7 @@ final class jl extends jc {
         }
     }
 
-    public static void g(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 > -127) {
           field_I = (d) null;
         }
@@ -327,7 +327,7 @@ final class jl extends jc {
           return;
         }
         if (param1 >= -106) {
-          jl.g((byte) -79);
+          jl.clearStaticReferences((byte) -79);
         }
         Sprite var6 = new Sprite(this.field_F.width, this.field_F.height);
         il.a(1, var6);

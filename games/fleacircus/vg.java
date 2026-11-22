@@ -58,11 +58,11 @@ final class vg extends wi {
         ah.field_g[61] = 27;
         ah.field_g[91] = 42;
         if (param0 != 32) {
-          vg.c((byte) -26);
+          vg.clearStaticReferences((byte) -26);
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_I = null;
         field_v = null;
         field_r = null;

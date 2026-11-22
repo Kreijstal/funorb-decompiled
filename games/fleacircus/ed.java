@@ -111,7 +111,7 @@ final class ed {
             gb.a(var27, var2, var3);
             gb.b(ab.field_c);
             ub.field_b = null;
-            mg.field_e = (vj.field_c.field_t - df.field_b.field_t) / 2 + 390;
+            GzipDecompressor.field_e = (vj.field_c.field_t - df.field_b.field_t) / 2 + 390;
             mh.field_w = (vj.field_c.field_w - df.field_b.field_w) / 2 + 434;
             ha.field_l = (-df.field_b.field_w + vj.field_c.field_w) / 2 + 231;
             rj.field_o = 390 + (vj.field_c.field_t - df.field_b.field_t) / 2;
@@ -263,7 +263,7 @@ final class ed {
               var1.a(-1, -1, var2Lifetime4);
             }
             stackIn_52_0 = -40;
-            stackIn_52_1 = mg.field_e;
+            stackIn_52_1 = GzipDecompressor.field_e;
             stackIn_52_2 = ha.field_l;
             stackIn_53_3 = (ul.field_G.field_k == 0);
             k.a(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);

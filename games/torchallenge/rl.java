@@ -172,7 +172,7 @@ final class rl {
         this.field_e = false;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -82) {
           field_h = (Sprite[]) null;
           field_h = null;

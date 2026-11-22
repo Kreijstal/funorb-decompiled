@@ -11,7 +11,7 @@ final class mk {
     static he[] field_e;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -31,7 +31,7 @@ final class mk {
         RuntimeException var2 = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          ae.a(1, pf.field_f, cc.field_B, gg.field_b, true, 0, param1);
+          ae.a(1, BoundedRandomAccessFile.field_f, cc.field_B, gg.field_b, true, 0, param1);
           var3 = 77 / ((param0 - 21) / 63);
           for (var2_int = 0; gg.field_b > var2_int; var2_int++) {
             bj.field_a[var2_int + param1] = var2_int;

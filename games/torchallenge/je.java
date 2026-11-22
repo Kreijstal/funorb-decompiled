@@ -14,7 +14,7 @@ final class je {
     static Sprite field_b;
     static Sprite field_g;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 < -90) {
           field_g = null;

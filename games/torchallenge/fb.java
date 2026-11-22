@@ -12,7 +12,7 @@ final class fb extends IntrusiveNode {
     byte[] field_q;
     short[] field_j;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1012) {
           field_i = (String) null;
         }
@@ -40,7 +40,7 @@ final class fb extends IntrusiveNode {
         try {
           var5_int = 1;
           if (param2 < 8) {
-            fb.a(-110);
+            fb.clearStaticReferences(-110);
           }
           var6 = 0;
           var7 = null;

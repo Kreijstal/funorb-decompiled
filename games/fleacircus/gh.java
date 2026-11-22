@@ -37,7 +37,7 @@ final class gh extends r {
           ug.field_c = param1;
           ag.field_e = param0;
           ef.field_j = param2;
-          rl.field_b = null;
+          BoundedRandomAccessFile.field_b = null;
           oa.field_o = param6;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

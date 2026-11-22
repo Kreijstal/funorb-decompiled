@@ -87,7 +87,7 @@ final class tk implements uj {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;

@@ -17,7 +17,7 @@ final class la {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_c = (float[][]) null;
         field_e = (int[][]) null;
     }

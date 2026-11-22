@@ -39,7 +39,7 @@ final class fl {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = (char[][]) null;
         field_b = null;

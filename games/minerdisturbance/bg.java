@@ -7,7 +7,7 @@ final class bg {
     int field_a;
     int field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 15917) {
           return;

@@ -49,7 +49,7 @@ final class kk extends t {
         tf.field_l[44] = 71;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_e = null;
         field_h = (int[][]) null;
@@ -172,7 +172,7 @@ final class kk extends t {
           kk.a(param0, -122);
           return var2;
         }
-        kk.f(83);
+        kk.clearStaticReferences(83);
         kk.a(param0, -122);
         return var2;
     }

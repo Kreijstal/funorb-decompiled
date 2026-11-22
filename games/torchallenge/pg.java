@@ -159,7 +159,7 @@ final class pg extends PcmStream {
               } else {
                 var7 = ClientException.field_b;
                 synchronized (var7) {
-                  ClientException.field_b.a(var12, (byte) -117, var9);
+                  ClientException.field_b.decompress(var12, (byte) -117, var9);
                 }
               }
               stackIn_21_0 = var6;

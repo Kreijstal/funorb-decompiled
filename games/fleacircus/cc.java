@@ -258,7 +258,7 @@ final class cc {
         return 0;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_q = null;
         field_e = null;
         field_w = null;

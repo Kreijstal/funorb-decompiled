@@ -3,13 +3,13 @@
  */
 final class wj {
     static String field_e;
-    static t field_c;
+    static GzipDecompressor field_c;
     static int field_a;
     static String field_d;
     static String field_b;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_b = null;
         field_d = null;
@@ -284,7 +284,7 @@ final class wj {
 
     final static int a(int param0) {
         if (param0 >= -17) {
-          field_c = (t) null;
+          field_c = (GzipDecompressor) null;
         }
         return ng.field_t;
     }
@@ -294,6 +294,6 @@ final class wj {
         field_b = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_d = "Sergeant ";
         field_f = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
-        field_c = new t();
+        field_c = new GzipDecompressor();
     }
 }

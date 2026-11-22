@@ -18,7 +18,7 @@ final class be {
             return null;
           }
           if (param2 != -1) {
-            be.a(true);
+            be.clearStaticReferences(true);
           }
           stackIn_6_0 = pg.b(0);
           return stackIn_6_0;
@@ -36,7 +36,7 @@ final class be {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (param0) {
           field_c = (dd) null;

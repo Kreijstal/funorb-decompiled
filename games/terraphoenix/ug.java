@@ -7,7 +7,7 @@ final class ug {
     static int field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = (byte[][]) null;
         if (param0 != -11978) {

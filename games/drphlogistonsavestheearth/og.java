@@ -11,7 +11,7 @@ final class og {
     boolean field_d;
     static vd field_f;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_e = null;
         if (param0 < 20) {

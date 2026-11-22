@@ -12,7 +12,7 @@ final class sg {
     final static void a(int param0, java.applet.Applet param1) {
         try {
           if (param0 != -6988) {
-            sg.a((byte) -81);
+            sg.clearStaticReferences((byte) -81);
           }
           hg.a(param1, -1, "");
           bf.a(63, param1);
@@ -21,7 +21,7 @@ final class sg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -57) {
           return;
         }
@@ -34,7 +34,7 @@ final class sg {
 
     final static void a(boolean param0) {
         if (!param0) {
-          sg.a((byte) 45);
+          sg.clearStaticReferences((byte) 45);
           sf.a(17, 11649);
           return;
         }

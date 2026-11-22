@@ -22,7 +22,7 @@ final class tj {
         return (String) null;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

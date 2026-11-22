@@ -29,7 +29,7 @@ final class sh extends IntrusiveNode {
     int field_p;
     int field_A;
 
-    public static void c(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_x = null;
         field_E = null;
         if (param0 > -26) {
@@ -42,7 +42,7 @@ final class sh extends IntrusiveNode {
         ll.field_a = param1;
         BufferedSocket.field_k = param2;
         if (param0 > -110) {
-          sh.c(-18);
+          sh.clearStaticReferences(-18);
         }
     }
 
@@ -170,7 +170,7 @@ final class sh extends IntrusiveNode {
         this.field_k = null;
         this.field_B = null;
         if (param0 >= -107) {
-          sh.c(-17);
+          sh.clearStaticReferences(-17);
         }
     }
 

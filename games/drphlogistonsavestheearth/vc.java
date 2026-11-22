@@ -11,7 +11,7 @@ final class vc {
     static he[] field_b;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_d = null;
         field_a = null;
         if (param0 == 0) {

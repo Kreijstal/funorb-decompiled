@@ -17,7 +17,7 @@ final class uc {
         field_c = field_h / 2;
     }
 
-    public static void c() {
+    public static void clearStaticReferences() {
         field_g = null;
         field_e = null;
         field_a = null;

@@ -80,7 +80,7 @@ final class jd extends vc {
           do {
             if (var4 == null) {
               if (param0) {
-                jd.d(116);
+                jd.clearStaticReferences(116);
               }
               break;
             }
@@ -216,7 +216,7 @@ final class jd extends vc {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           field_i = (String) null;
           field_i = null;

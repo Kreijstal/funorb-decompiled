@@ -15,12 +15,12 @@ final class df {
           oj.field_J = param0;
           return;
         }
-        df.a((byte) -76);
+        df.clearStaticReferences((byte) -76);
         q.field_c = param0;
         oj.field_J = param0;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 < 115) {

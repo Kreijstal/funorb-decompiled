@@ -1373,7 +1373,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "escaped");
                 if (var2 != null) {
-                  an.field_g = bh.a(var2, 95);
+                  BoundedRandomAccessFile.field_g = bh.a(var2, 95);
                 }
                 var2 = lh.b(-1, "finalScore");
                 if (null != var2) {

@@ -67,7 +67,7 @@ final class hc {
         return new wh[]{ml.field_F, wd.field_b, bf.field_a};
     }
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= 69) {
           field_d = null;
           field_b = null;
@@ -116,7 +116,7 @@ final class hc {
           this.field_i = this.field_i.field_h;
           return var5;
         }
-        hc.c((byte) 98);
+        hc.clearStaticReferences((byte) 98);
         this.field_i = var4.field_h;
         while (true) {
           if (this.field_i == var4) {

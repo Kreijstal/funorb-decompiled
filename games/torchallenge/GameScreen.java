@@ -714,7 +714,7 @@ final class GameScreen {
           }
           SoftwareRasterizer.a(pf.field_g);
           SoftwareRasterizer.a(0, var19, 640, 480);
-          GzipDecoder.a(var22, var22[0].fullHeight + var21, var20 + 3, (byte) -74, var23 + (-var22[0].fullHeight + var19), var18);
+          GzipDecoder.drawNineSlice(var22, var22[0].fullHeight + var21, var20 + 3, (byte) -74, var23 + (-var22[0].fullHeight + var19), var18);
           SoftwareRasterizer.b(pf.field_g);
           if (!vc.field_e) {
             ba.a(this.screenId, kk.field_d, param1, -128, cj.field_g);
@@ -781,7 +781,7 @@ final class GameScreen {
           var22Lifetime1 = dh.field_cb[0];
           var6Lifetime1 = ue.field_j[1];
           var7Lifetime1 = ue.field_j[2];
-          GzipDecoder.a(var22Lifetime1, var8Lifetime1, var7Lifetime1, (byte) 68, var6Lifetime1, var5_int);
+          GzipDecoder.drawNineSlice(var22Lifetime1, var8Lifetime1, var7Lifetime1, (byte) 68, var6Lifetime1, var5_int);
           var5_intLifetime1 = ue.field_j[0];
           var8Lifetime2 = ue.field_j[3];
           var6Lifetime2 = ue.field_j[1];
@@ -1492,7 +1492,7 @@ final class GameScreen {
             } else {
               var7 = dh.field_cb[1];
             }
-            GzipDecoder.a(var7, var5, var4, (byte) 106, var3, var2_int);
+            GzipDecoder.drawNineSlice(var7, var5, var4, (byte) 106, var3, var2_int);
             var6 = we.field_m[var9 + 1];
             SoftwareRasterizer.a(pf.field_g);
             var2_int = var2_int + var8;
@@ -1848,7 +1848,7 @@ final class GameScreen {
           var14 = var7 * 2 + var10 * (var8 + 2 * var11) + var12 + var11;
           var15 = -var13 + 640 >> 1;
           var16 = 124 - (var7 - 4);
-          GzipDecoder.a(ui.field_i, var14, var13, (byte) 93, var16, var15);
+          GzipDecoder.drawNineSlice(ui.field_i, var14, var13, (byte) 93, var16, var15);
           var15 = var15 + (var11 + var5);
           var16 = var16 + (var11 + var7);
           if (param0) {
@@ -1937,7 +1937,7 @@ final class GameScreen {
           }
           var16 = var21 - var7;
           var15 = -var13 + 640 >> 1;
-          GzipDecoder.a(ui.field_i, var14Lifetime1, var13, (byte) -66, var16, var15);
+          GzipDecoder.drawNineSlice(ui.field_i, var14Lifetime1, var13, (byte) -66, var16, var15);
           if (0 <= this.field_b) {
             var19 = this.field_b;
           }
@@ -3320,7 +3320,7 @@ final class GameScreen {
             SoftwareRasterizer.b();
             var9 = 0;
           }
-          GzipDecoder.a(ui.field_i, var11, var10, (byte) -74, var9, var8);
+          GzipDecoder.drawNineSlice(ui.field_i, var11, var10, (byte) -74, var9, var8);
           var8 = bb.field_j[param3] + var8;
           var9 = var9 + 20;
           var5.g(var8, var9);
@@ -4790,7 +4790,7 @@ final class GameScreen {
               var7 = 255 * (-(aa.field_f >> 1) + cd.field_b) / (aa.field_f >> 2);
               var5 = ue.field_j[3];
               var2_int = ue.field_j[0];
-              GzipDecoder.a(var12, var5, var4, (byte) -67, var3, var2_int);
+              GzipDecoder.drawNineSlice(var12, var5, var4, (byte) -67, var3, var2_int);
               var13 = ue.field_j[0];
               var14 = ue.field_j[1];
               var15 = ue.field_j[2];
@@ -4862,7 +4862,7 @@ final class GameScreen {
             var33 = var8 + (cd.field_b - (aa.field_f >> 2)) * (var25 - var21) / (aa.field_f >> 2) + var21;
             var12 = dh.field_cb[0];
             var36 = -(2 * var8) + (var24 + (var28 - var24) * (-(aa.field_f >> 2) + cd.field_b) / (aa.field_f >> 2));
-            GzipDecoder.a(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
+            GzipDecoder.drawNineSlice(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
             SoftwareRasterizer.a(pf.field_g);
             SoftwareRasterizer.f(var33, var34, var35 + var33, var36 + var34);
             var11.d(var29, var30, var31, var32);
@@ -4901,7 +4901,7 @@ final class GameScreen {
               }
               oj.field_d.d();
               SoftwareRasterizer.b();
-              GzipDecoder.a(var12, var5, var4, (byte) -55, var3, var2_int);
+              GzipDecoder.drawNineSlice(var12, var5, var4, (byte) -55, var3, var2_int);
               var3 = var8 + var3;
               SoftwareRasterizer.a(pf.field_g);
               var2_int = var8 + var2_int;
@@ -4989,7 +4989,7 @@ final class GameScreen {
               if (oj.field_d == null) {
                 oj.field_d = new Sprite(640, 480);
               }
-              GzipDecoder.a(var12, var5, var4, (byte) 69, var3, var2_int);
+              GzipDecoder.drawNineSlice(var12, var5, var4, (byte) 69, var3, var2_int);
               var14 = ef.field_j[0];
               var3 = lg.field_d[8][3];
               var5 = lg.field_d[8][8];
@@ -5134,7 +5134,7 @@ final class GameScreen {
               return;
             }
           }
-          GzipDecoder.a(ph.field_m, var16 * 4 + var12, 4 * var15 + var9, (byte) -66, -(var16 * 2) + var14, var13 - var15 * 2);
+          GzipDecoder.drawNineSlice(ph.field_m, var16 * 4 + var12, 4 * var15 + var9, (byte) -66, -(var16 * 2) + var14, var13 - var15 * 2);
           tf.field_x.a(var8, var13, var14, var9, var12, 0, -1, 0, 0, 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5269,7 +5269,7 @@ final class GameScreen {
         try {
           var5 = SecondaryNodeDeque.field_b;
           var6 = (param3.a("10. ") >> 1) + ui.field_i[0].fullWidth;
-          GzipDecoder.a(ui.field_i, ui.field_i[6].fullHeight + param0 * param1 + ui.field_i[0].fullHeight, var6 * 2 + 315, (byte) -81, 123 - ui.field_i[0].fullHeight, -var6 + 162);
+          GzipDecoder.drawNineSlice(ui.field_i, ui.field_i[6].fullHeight + param0 * param1 + ui.field_i[0].fullHeight, var6 * 2 + 315, (byte) -81, 123 - ui.field_i[0].fullHeight, -var6 + 162);
           if (param2 == 6) {
             stackIn_4_0 = var5;
             return stackIn_4_0;
@@ -5306,7 +5306,7 @@ final class GameScreen {
               return;
             }
           }
-          GzipDecoder.a(param6, param0, param3, (byte) 84, param4, param1);
+          GzipDecoder.drawNineSlice(param6, param0, param3, (byte) 84, param4, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5387,7 +5387,7 @@ final class GameScreen {
           }
           if (lg.field_d[param1][17] == 3) {
             SectorCacheStore.field_f.bindAsTarget(112);
-            GzipDecoder.a(aa.field_k, nk.field_f[3], nk.field_f[2], (byte) 121, nk.field_f[1], nk.field_f[0]);
+            GzipDecoder.drawNineSlice(aa.field_k, nk.field_f[3], nk.field_f[2], (byte) 121, nk.field_f[1], nk.field_f[0]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5468,8 +5468,8 @@ final class GameScreen {
             ui.c(-123);
           }
           boolean decompiledFrameCompleted1 = true;
-          GzipDecoder.a(dg.field_J, 298, 640, (byte) -98, 112, 0);
-          GzipDecoder.a(ui.field_i, 262, 557, (byte) -80, 129, 47);
+          GzipDecoder.drawNineSlice(dg.field_J, 298, 640, (byte) -98, 112, 0);
+          GzipDecoder.drawNineSlice(ui.field_i, 262, 557, (byte) -80, 129, 47);
           var5 = 26;
           var10 = RasterBuffer.helpTopicTitles[ma.field_j];
           var2_int = ui.field_i[0].fullWidth + 63;
@@ -6147,7 +6147,7 @@ final class GameScreen {
           var4 = 13;
           if (GameClientBase.p(-91)) {
             var5 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].fullWidth;
-            GzipDecoder.a(ui.field_i, var3 * var4 + (ui.field_i[0].fullHeight + ui.field_i[6].fullHeight), var5 * 2 + 315, (byte) 61, -ui.field_i[0].fullHeight + 123, -var5 + 162);
+            GzipDecoder.drawNineSlice(ui.field_i, var3 * var4 + (ui.field_i[0].fullHeight + ui.field_i[6].fullHeight), var5 * 2 + 315, (byte) 61, -ui.field_i[0].fullHeight + 123, -var5 + 162);
             var2 = MouseInputHandler.field_c;
             decompiledFrameRemainder1 = (var17 != 0);
           }
@@ -6159,7 +6159,7 @@ final class GameScreen {
             if (!var5_ref_ae.field_n) {
               var2 = lh.field_y;
               var6 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].fullWidth;
-              GzipDecoder.a(ui.field_i, ui.field_i[6].fullHeight + ui.field_i[0].fullHeight + var4 * var3, 2 * var6 + 315, (byte) -110, 123 - ui.field_i[0].fullHeight, -var6 + 162);
+              GzipDecoder.drawNineSlice(ui.field_i, ui.field_i[6].fullHeight + ui.field_i[0].fullHeight + var4 * var3, 2 * var6 + 315, (byte) -110, 123 - ui.field_i[0].fullHeight, -var6 + 162);
               decompiledFrameRemainder1 = (var17 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -6199,7 +6199,7 @@ final class GameScreen {
                     var9 = bg.a(var8, kf.field_a, 21179, var5_ref_ae);
                     var10 = SecondaryNodeDequeIterator.field_e.a("10. ") >> 1;
                     var11 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].fullWidth;
-                    GzipDecoder.a(ui.field_i, ui.field_i[6].fullHeight + ui.field_i[0].fullHeight + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - ui.field_i[0].fullHeight, -var11 + 162);
+                    GzipDecoder.drawNineSlice(ui.field_i, ui.field_i[6].fullHeight + ui.field_i[0].fullHeight + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - ui.field_i[0].fullHeight, -var11 + 162);
                     var12 = SecondaryNodeDequeIterator.field_e.field_x + 123;
                     var13 = 0;
                     while (var13 < 10) {

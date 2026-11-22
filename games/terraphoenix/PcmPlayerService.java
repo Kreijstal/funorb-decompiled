@@ -371,7 +371,7 @@ class PcmPlayerService {
     void b(int param0) throws Exception {
     }
 
-    public static void e() {
+    public static void clearStaticReferences() {
         field_g = null;
     }
 

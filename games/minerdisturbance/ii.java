@@ -15,7 +15,7 @@ final class ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            ii.a((byte) -103);
+            ii.clearStaticReferences((byte) -103);
           }
           stackIn_3_0 = mg.a(1963987425, rc.a(param0, 100, 96));
           return stackIn_3_0;
@@ -41,7 +41,7 @@ final class ii {
         return ch.field_g;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 101) {
           field_c = (String) null;
         }

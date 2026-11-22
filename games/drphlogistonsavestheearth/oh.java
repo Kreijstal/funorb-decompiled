@@ -25,7 +25,7 @@ final class oh {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 26500) {
-          oh.a(true);
+          oh.clearStaticReferences(true);
         }
         ClientException.field_c = param2;
         oc.field_B = param1;
@@ -86,7 +86,7 @@ final class oh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         if (param0) {
           return;

@@ -252,7 +252,7 @@ class UiComponent extends IntrusiveNode {
         return param3;
     }
 
-    public static void f(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_n = null;
         field_y = null;
         if (param0 <= 76) {

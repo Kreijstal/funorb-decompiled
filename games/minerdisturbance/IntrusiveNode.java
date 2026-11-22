@@ -4,7 +4,7 @@
 class IntrusiveNode {
     static int[] field_h;
     IntrusiveNode field_c;
-    static pd field_g;
+    static GzipDecompressor field_g;
     long field_d;
     static int field_a;
     IntrusiveNode field_f;
@@ -27,7 +27,7 @@ class IntrusiveNode {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_m = null;
         field_i = null;
         field_b = null;
@@ -89,7 +89,7 @@ class IntrusiveNode {
         int var0 = 0;
         int var0Lifetime1;
         field_a = 0;
-        field_g = new pd();
+        field_g = new GzipDecompressor();
         field_i = new int[34];
         field_m = new int[34];
         field_k = new boolean[34];

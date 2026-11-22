@@ -20,7 +20,7 @@ final class fm {
             return (ud) (stackIn_2_0);
           }
           if (param1 <= 25) {
-            fm.b(-84);
+            fm.clearStaticReferences(-84);
           }
           var2 = new ud(param0, ha.field_s, hj.field_K, sb.field_m, rf.field_p, qc.field_b);
           SocketConnector.a((byte) 101);
@@ -48,7 +48,7 @@ final class fm {
         return new kf[]{RasterBuffer.field_g, GameShell.field_u, gm.field_j};
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != -19266) {

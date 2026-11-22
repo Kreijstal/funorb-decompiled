@@ -9,7 +9,7 @@ final class me {
     private long field_g;
     private long field_b;
     static int field_j;
-    private an field_f;
+    private BoundedRandomAccessFile field_f;
     private long field_n;
     private byte[] field_a;
     private long field_d;
@@ -132,10 +132,10 @@ final class me {
               return;
             }
             if (this.field_g != this.field_d) {
-              this.field_f.a(0, this.field_g);
+              this.field_f.seek(0, this.field_g);
               this.field_d = this.field_g;
             }
-            this.field_f.a(param2, param1, param0, 107);
+            this.field_f.write(param2, param1, param0, 107);
             this.field_d = this.field_d + (long)param1;
             if (this.field_n < this.field_d) {
               this.field_n = this.field_d;
@@ -270,10 +270,10 @@ final class me {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_o.length < param2) {
-              this.field_f.a(0, this.field_g);
+              this.field_f.seek(0, this.field_g);
               this.field_d = this.field_g;
               while (param2 > 0) {
-                var9_intLifetime1 = this.field_f.b(32, param2, param0, param1);
+                var9_intLifetime1 = this.field_f.read(32, param2, param0, param1);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -378,10 +378,10 @@ final class me {
         var7 = MinerDisturbance.field_ab;
         if (this.field_e != -1L) {
           if (~this.field_d != ~this.field_e) {
-            this.field_f.a(0, this.field_e);
+            this.field_f.seek(0, this.field_e);
             this.field_d = this.field_e;
           }
-          this.field_f.a(0, this.field_c, this.field_a, param0 - 25931);
+          this.field_f.write(0, this.field_c, this.field_a, param0 - 25931);
           this.field_d = this.field_d + (long)this.field_c;
           if (this.field_n < this.field_d) {
             this.field_n = this.field_d;
@@ -427,7 +427,7 @@ final class me {
         var5 = MinerDisturbance.field_ab;
         this.field_m = 0;
         if (~this.field_d != ~this.field_g) {
-          this.field_f.a(0, this.field_g);
+          this.field_f.seek(0, this.field_g);
           this.field_d = this.field_g;
         }
         this.field_i = this.field_g;
@@ -437,7 +437,7 @@ final class me {
           if (200000000 < var3) {
             var3 = 200000000;
           }
-          var4 = this.field_f.b(6, var3, this.field_o, this.field_m);
+          var4 = this.field_f.read(6, var3, this.field_o, this.field_m);
           if (var4 != -1) {
             this.field_m = this.field_m + var4;
             this.field_d = this.field_d + (long)var4;
@@ -449,7 +449,7 @@ final class me {
 
     final void b(int param0) throws IOException {
         this.a(param0 ^ -7618);
-        this.field_f.b(-110);
+        this.field_f.close(-110);
         if (param0 != -30821) {
           me.a(-62, false);
         }
@@ -467,14 +467,14 @@ final class me {
         }
     }
 
-    me(an param0, int param1, int param2) throws IOException {
+    me(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_c = 0;
         this.field_e = -1L;
         this.field_i = -1L;
         try {
           this.field_f = param0;
-          dupTemp$0 = param0.a((byte) 122);
+          dupTemp$0 = param0.length((byte) 122);
           this.field_n = dupTemp$0;
           this.field_b = dupTemp$0;
           this.field_o = new byte[param1];

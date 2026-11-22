@@ -145,7 +145,7 @@ final class pj {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 <= 109) {
           return;
         }
@@ -207,7 +207,7 @@ final class pj {
 
     final static void a(byte param0, boolean param1, int param2, int param3, int param4) {
         if (param0 < 36) {
-          pj.d(-99);
+          pj.clearStaticReferences(-99);
         }
         int var5 = 256 - param2;
         int var6 = SoftwareRasterizer.field_i[param4];

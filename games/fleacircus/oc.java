@@ -233,15 +233,15 @@ final class oc {
           cb.field_v = ui.field_ob;
           if (param2 == 255) {
             stackIn_12_0 = !(13 <= ug.field_c);
-            rl.field_b = ld.a(stackIn_12_0, (byte) 42);
+            BoundedRandomAccessFile.field_b = ld.a(stackIn_12_0, (byte) 42);
             return;
           }
           if (param2 >= 100 &&
             param2 <= 105) {
-            rl.field_b = ha.a(param1, -21916);
+            BoundedRandomAccessFile.field_b = ha.a(param1, -21916);
             return;
           }
-          rl.field_b = af.a((byte) 36, param2, param3);
+          BoundedRandomAccessFile.field_b = af.a((byte) 36, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

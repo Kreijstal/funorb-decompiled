@@ -71,7 +71,7 @@ final class al {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           field_b = null;
           field_e = null;

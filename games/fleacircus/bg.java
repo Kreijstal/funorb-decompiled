@@ -59,7 +59,7 @@ final class bg {
         RuntimeException var2 = null;
         try {
           if (11 == bh.field_t) {
-            pl.d(64);
+            pl.clearStaticReferences(64);
           }
           se.a(qj.field_I, (byte) 121, rj.field_m, wa.field_l);
           be.a(0, param1, (byte) -68, 0);
@@ -145,7 +145,7 @@ final class bg {
         }
         if (ui.field_ob == cb.field_v) {
           cb.field_v = ql.field_l;
-          return rl.field_b;
+          return BoundedRandomAccessFile.field_b;
         }
         if (param0 == 56) {
           return null;

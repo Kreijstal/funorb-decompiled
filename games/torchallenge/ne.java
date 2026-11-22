@@ -9,7 +9,7 @@ final class ne {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_b = null;
         if (param0 >= -78) {
           field_b = (int[]) null;
@@ -34,7 +34,7 @@ final class ne {
           var17 = -param4 + var15 >> 1;
           de.field_a.d();
           SoftwareRasterizer.b();
-          GzipDecoder.a(param8, param4, param0, (byte) -96, var17, var16);
+          GzipDecoder.drawNineSlice(param8, param4, param0, (byte) -96, var17, var16);
           SoftwareRasterizer.a(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
           if (gf.field_n == null) {
             gf.field_n = new Sprite(var14_int, var15);

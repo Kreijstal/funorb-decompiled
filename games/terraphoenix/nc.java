@@ -90,7 +90,7 @@ final class nc {
           if (param1 >= 36) {
             return;
           }
-          nc.a(78);
+          nc.clearStaticReferences(78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class nc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           return;
         }

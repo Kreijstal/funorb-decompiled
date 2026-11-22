@@ -29,11 +29,11 @@ final class wg {
         this.field_i = param1;
         this.field_s = param0;
         if (param2 != 2) {
-          wg.b(99);
+          wg.clearStaticReferences(99);
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 2) {
           field_c = null;
           field_r = null;

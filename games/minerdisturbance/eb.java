@@ -18,7 +18,7 @@ final class eb {
         return eg.a(-104, param1, false, param2, param0, param3);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_f = null;
         field_d = null;
         field_a = null;
@@ -56,7 +56,7 @@ final class eb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 122) {
-            eb.b((byte) 53);
+            eb.clearStaticReferences((byte) 53);
           }
           stackIn_3_0 = param0.b(-1);
           return stackIn_3_0;

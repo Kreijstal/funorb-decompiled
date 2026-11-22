@@ -19,13 +19,13 @@ final class ff {
             nb.field_i[mc.field_w].b(tl.field_q, -22674, 0);
             nj.a(!param0);
           } else {
-            if (pd.field_b.field_K &&
+            if (GzipDecompressor.field_b.field_K &&
               q.field_c <= 11) {
               nj.a(true);
             }
           }
         } else {
-          if (pd.field_b.field_K &&
+          if (GzipDecompressor.field_b.field_K &&
             q.field_c <= 11) {
             nj.a(true);
           }
@@ -199,7 +199,7 @@ final class ff {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_f = null;

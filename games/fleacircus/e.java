@@ -688,7 +688,7 @@ class e implements ComponentLayout, eg {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 != -92) {
           field_g = (String) null;

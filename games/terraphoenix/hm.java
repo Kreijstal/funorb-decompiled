@@ -257,7 +257,7 @@ final class hm extends UiWidget {
         this.e((byte) -43);
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_G = null;
         if (!param0) {
           return;

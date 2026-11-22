@@ -195,7 +195,7 @@ final class nl {
         return this.field_a.length;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_i = null;
     }
 

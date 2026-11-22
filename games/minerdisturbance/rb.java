@@ -495,7 +495,7 @@ final class rb {
         return this.field_p[var4];
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != -2004317953) {
           return;
         }
@@ -1482,7 +1482,7 @@ final class rb {
               }
             }
             if (param4 != 17761) {
-              rb.a(-117);
+              rb.clearStaticReferences(-117);
             }
             var10Lifetime1 = jb.field_o[cm.field_o];
             var11Lifetime1 = sk.field_b[cm.field_o];

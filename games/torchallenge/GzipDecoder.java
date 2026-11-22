@@ -12,7 +12,7 @@ final class GzipDecoder {
     static int[][] field_f;
     static Sprite field_b;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openServerList(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           int var3 = 0;
@@ -52,7 +52,7 @@ final class GzipDecoder {
         }
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
+    final static void postEventQueueWakeup(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -107,7 +107,7 @@ final class GzipDecoder {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         field_g = null;
         field_a = null;
@@ -121,7 +121,7 @@ final class GzipDecoder {
     private GzipDecoder(int param0, int param1, int param2) {
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void drawNineSlice(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -286,7 +286,7 @@ final class GzipDecoder {
         }
     }
 
-    final void a(byte[] param0, byte param1, PacketBuffer param2) {
+    final void decompress(byte[] param0, byte param1, PacketBuffer param2) {
         try {
           try {
             if (31 != param2.payload[param2.position] ||

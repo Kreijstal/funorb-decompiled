@@ -42,7 +42,7 @@ abstract class ob extends GameAppletShell {
         }
     }
 
-    public static void o(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_w = null;
         field_q = null;
         field_v = null;
@@ -141,7 +141,7 @@ abstract class ob extends GameAppletShell {
           ki.field_n = pf.field_e.a((byte) -124);
         }
         if (gd.b((byte) -110)) {
-          var3 = pl.b((byte) -116) * 1200;
+          var3 = pl.getTickRate((byte) -116) * 1200;
           if (this.field_z ||
             !(mk.b(24) <= var3) &&
             !(var3 >= u.b(-4440))) {

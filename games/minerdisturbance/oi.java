@@ -70,7 +70,7 @@ final class oi extends fe {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_J = null;
         field_K = null;
         if (param0 < 15) {
@@ -140,9 +140,9 @@ final class oi extends fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -19804) {
-            oi.a((byte) -17);
+            oi.clearStaticReferences((byte) -17);
           }
-          stackIn_3_0 = pd.a(param1, 10, true, (byte) 78);
+          stackIn_3_0 = GzipDecompressor.isValidInteger(param1, 10, true, (byte) 78);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

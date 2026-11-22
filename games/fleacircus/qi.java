@@ -101,7 +101,7 @@ final class qi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = null;
         if (param0 >= -105) {
           return;
@@ -161,7 +161,7 @@ final class qi {
               } else {
                 var7 = se.field_c;
                 synchronized (var7) {
-                  se.field_c.a((byte) -126, var13, var10);
+                  se.field_c.decompress((byte) -126, var13, var10);
                 }
               }
               stackIn_21_0 = var6;

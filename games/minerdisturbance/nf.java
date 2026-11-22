@@ -35,7 +35,7 @@ abstract class nf {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_g = null;
         field_d = null;
         if (param0) {
@@ -177,7 +177,7 @@ abstract class nf {
     final int b(int param0) {
         int stackIn_7_0 = 0;
         if (param0 <= 63) {
-          nf.a(false);
+          nf.clearStaticReferences(false);
         }
         if (this.field_f != null &&
           this.field_f.length > 0) {

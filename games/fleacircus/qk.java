@@ -81,7 +81,7 @@ final class qk {
         return var3Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_f = null;
         field_h = null;
         field_b = null;

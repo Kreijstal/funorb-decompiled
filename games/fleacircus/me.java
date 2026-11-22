@@ -166,7 +166,7 @@ final class me implements ComponentLayout {
         this.field_d = 1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_i = null;
         field_e = null;

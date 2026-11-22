@@ -106,7 +106,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_v = false;
             k.c(-28354);
             id.a(false);
-            rl.a(wi.field_m, 2, 109);
+            BoundedRandomAccessFile.a(wi.field_m, 2, 109);
             ji.a((byte) -69);
             rj.field_j = true;
             ua.field_sb = lj.a((byte) -95) + 15000L;
@@ -137,18 +137,18 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (oa.field_j != 4) {
                   if (oa.field_j != 2) {
                     if (oa.field_j == 5) {
-                      rl.a(r.field_j, 5, 91);
+                      BoundedRandomAccessFile.a(r.field_j, 5, 91);
                     } else {
-                      rl.a(ri.field_r, 256, 102);
+                      BoundedRandomAccessFile.a(ri.field_r, 256, 102);
                     }
                   } else {
-                    rl.a(w.field_j, 256, 109);
+                    BoundedRandomAccessFile.a(w.field_j, 256, 109);
                   }
                 } else {
-                  rl.a(oc.field_b, 256, 104);
+                  BoundedRandomAccessFile.a(oc.field_b, 256, 104);
                 }
               } else {
-                rl.a(IterableNodeHashTable.field_c, 256, 102);
+                BoundedRandomAccessFile.a(IterableNodeHashTable.field_c, 256, 102);
               }
               rj.field_j = true;
             }
@@ -195,12 +195,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (cg.field_y != 0) {
             il.field_a = q.a(8192, df.field_a);
           }
-          rl.field_d = uh.a(1, 26, false, true, ki.field_d);
+          BoundedRandomAccessFile.field_d = uh.a(1, 26, false, true, ki.field_d);
           oa.field_l = uh.a(1, 26, false, true, bm.field_M);
           kc.field_d = uh.a(1, 26, false, true, IntrusiveNode.field_f);
           pf.field_b = oa.field_l;
           ib.field_k = 2;
-          a.field_a = rl.field_d;
+          a.field_a = BoundedRandomAccessFile.field_d;
         }
         if (ib.field_k == 2) {
           if (il.field_a != null &&
@@ -220,13 +220,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (ib.field_k == 3 &&
-          pl.a(rl.field_d, oa.field_l, kc.field_d, true) &&
-          rl.a(kc.field_d, 0)) {
+          pl.a(BoundedRandomAccessFile.field_d, oa.field_l, kc.field_d, true) &&
+          BoundedRandomAccessFile.a(kc.field_d, 0)) {
           l.a((byte) -56);
-          sd.a((byte) -63);
+          sd.clearStaticReferences((byte) -63);
           qj.field_I = jg.field_a;
           tb.field_c = false;
-          oh.a(kc.field_d, oa.field_l, va.field_m, (byte) 28, rl.field_d);
+          oh.a(kc.field_d, oa.field_l, va.field_m, (byte) 28, BoundedRandomAccessFile.field_d);
           if (of.field_i ||
             null != hc.field_d) {
             stackIn_100_0 = !(of.field_i);
@@ -241,7 +241,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             u.field_a = rk.e(24089);
           }
           kb.a(-1, BufferedSocket.field_g, kc.field_d, u.field_a);
-          rl.field_d = null;
+          BoundedRandomAccessFile.field_d = null;
           oa.field_l = null;
           kc.field_d = null;
           bh.a(false, (java.applet.Applet) (this));
@@ -318,7 +318,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.a(-6469, "reconnect");
           }
           id.a(false);
-          rl.a(fh.field_a, var2, param0 ^ 5115);
+          BoundedRandomAccessFile.a(fh.field_a, var2, param0 ^ 5115);
           rj.field_j = true;
           ua.field_sb = lj.a((byte) -53) + 15000L;
           return var2;
@@ -461,7 +461,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           field_w = (String) null;
         }
         String var2 = ta.f(-15040);
-        cb.a(50, var2, rl.a((byte) -99));
+        cb.a(50, var2, BoundedRandomAccessFile.getApplet((byte) -99));
     }
 
     private final void e(byte param0) {
@@ -473,7 +473,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + pd.field_l;
         byte[] var5 = new byte[var4];
         ae.field_a.a(111, var4, 0, var5);
-        me.a(rl.a((byte) -116), param0 ^ 110, ab.a(0, var5), var3 != 0);
+        me.a(BoundedRandomAccessFile.getApplet((byte) -116), param0 ^ 110, ab.a(0, var5), var3 != 0);
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
@@ -592,7 +592,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         ki.field_d = param4;
         IntrusiveNode.field_f = param7;
         this.j(90);
-        ia.b(true);
+        ia.clearStaticReferences(true);
     }
 
     private final void c(byte param0) {
@@ -668,7 +668,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = fleas.field_A ? 1 : 0;
-          var4 = mg.a(param0, cg.field_y, 10, al.field_f);
+          var4 = GzipDecompressor.a(param0, cg.field_y, 10, al.field_f);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -704,7 +704,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5_intLifetime2 = rb.a(this.field_s, lc.f(0), false, vi.b((byte) -55), this.field_k, -99);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
-                  rl.a(fh.field_a, var5_intLifetime2, 110);
+                  BoundedRandomAccessFile.a(fh.field_a, var5_intLifetime2, 110);
                   fh.field_a = null;
                 } else {
                   of.field_c = aj.field_w;
@@ -720,11 +720,11 @@ abstract class NetworkGameClient extends GameAppletShell {
               bh.field_t = 10;
               ci.field_f = true;
             } else {
-              hi.a((byte) -38, rl.a((byte) -113));
+              hi.a((byte) -38, BoundedRandomAccessFile.getApplet((byte) -113));
             }
           }
           if (var4 == 5) {
-            hf.a(rl.a((byte) -99), -60);
+            hf.a(BoundedRandomAccessFile.getApplet((byte) -99), -60);
           }
           if (param1 != 0) {
             NetworkGameClient.i(-102);
@@ -734,22 +734,22 @@ abstract class NetworkGameClient extends GameAppletShell {
             bh.field_t = 10;
           }
           if (var4 == 7) {
-            ha.a(rl.a((byte) -105), 7152);
+            ha.a(BoundedRandomAccessFile.getApplet((byte) -105), 7152);
           }
           if (8 == var4) {
-            hi.a((byte) -38, rl.a((byte) -94));
+            hi.a((byte) -38, BoundedRandomAccessFile.getApplet((byte) -94));
           }
           if (var4 == 9) {
-            al.a(-75, rl.a((byte) -106));
+            al.a(-75, BoundedRandomAccessFile.getApplet((byte) -106));
           }
           if (var4 == 10) {
             ud.field_b.e(8, 17);
           }
           if (11 == var4) {
-            df.a(rl.a((byte) -88), 10245);
+            df.a(BoundedRandomAccessFile.getApplet((byte) -88), 10245);
           }
           if (12 == var4) {
-            qg.a(qh.i(-114), rl.a((byte) -56), 0);
+            qg.a(qh.i(-114), BoundedRandomAccessFile.getApplet((byte) -56), 0);
           }
           if (var4 == 13) {
             try {
@@ -824,23 +824,23 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (param5 >= param1) {
           if (param5 < param2) {
-            rl.a(param7, param1, gb.field_a, param0, param5, param4, param6, param2, (byte) -115);
+            BoundedRandomAccessFile.a(param7, param1, gb.field_a, param0, param5, param4, param6, param2, (byte) -115);
           } else {
             if (param2 > param1) {
-              rl.a(param7, param1, gb.field_a, param6, param2, param4, param0, param5, (byte) -115);
+              BoundedRandomAccessFile.a(param7, param1, gb.field_a, param6, param2, param4, param0, param5, (byte) -115);
             } else {
-              rl.a(param0, param2, gb.field_a, param6, param1, param4, param7, param5, (byte) -115);
+              BoundedRandomAccessFile.a(param0, param2, gb.field_a, param6, param1, param4, param7, param5, (byte) -115);
             }
           }
         } else {
           if (param2 <= param1) {
             if (param2 <= param5) {
-              rl.a(param0, param2, gb.field_a, param7, param5, param4, param6, param1, (byte) -115);
+              BoundedRandomAccessFile.a(param0, param2, gb.field_a, param7, param5, param4, param6, param1, (byte) -115);
             } else {
-              rl.a(param6, param5, gb.field_a, param7, param2, param4, param0, param1, (byte) -115);
+              BoundedRandomAccessFile.a(param6, param5, gb.field_a, param7, param2, param4, param0, param1, (byte) -115);
             }
           } else {
-            rl.a(param6, param5, gb.field_a, param0, param1, param4, param7, param2, (byte) -115);
+            BoundedRandomAccessFile.a(param6, param5, gb.field_a, param0, param1, param4, param7, param2, (byte) -115);
           }
         }
     }

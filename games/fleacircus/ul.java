@@ -336,7 +336,7 @@ final class ul extends gj implements nk, da {
             this.field_z = this.field_z + (var7.b(this.field_O, this.field_u - 40, var7.field_H) + 5);
           }
           var8 = se.field_e;
-          var9 = hd.a(true, rl.a((byte) -107));
+          var9 = hd.a(true, BoundedRandomAccessFile.getApplet((byte) -107));
           if (ml.field_F != var9) {
             if (wd.field_b == var9) {
               var8 = l.field_a;

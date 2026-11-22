@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class mg {
+final class GzipDecompressor {
     private java.util.zip.Inflater field_b;
     static String[][] field_a;
 
-    private mg(int param0, int param1, int param2) {
+    private GzipDecompressor(int param0, int param1, int param2) {
     }
 
-    final static int a(boolean param0) {
+    final static int getAssetLoadingProgress(boolean param0) {
         if (hj.field_f < 2) {
           return 0;
         }
@@ -80,7 +80,7 @@ final class mg {
           rc.field_i = new int[param0 * 2];
         }
         if (param1 < 48) {
-          mg.a(true);
+          GzipDecompressor.getAssetLoadingProgress(true);
         }
         if (null != fi.field_h &&
           param0 <= fi.field_h.length) {
@@ -157,7 +157,7 @@ final class mg {
               }
             }
           }
-          pf.field_f = -2147483648;
+          BoundedRandomAccessFile.field_f = -2147483648;
           ha.field_c = 2147483647;
           mh.field_b = -2147483648;
           gg.field_b = 0;
@@ -217,7 +217,7 @@ final class mg {
             }
             if (null != cb.field_c &&
               cb.field_c.length >= param0) {
-              pf.field_f = -2147483648;
+              BoundedRandomAccessFile.field_f = -2147483648;
               ha.field_c = 2147483647;
               mh.field_b = -2147483648;
               gg.field_b = 0;
@@ -227,18 +227,18 @@ final class mg {
             cb.field_c = new boolean[param0 * 2];
           }
         }
-        pf.field_f = -2147483648;
+        BoundedRandomAccessFile.field_f = -2147483648;
         ha.field_c = 2147483647;
         mh.field_b = -2147483648;
         gg.field_b = 0;
         cc.field_B = 2147483647;
     }
 
-    public mg() {
+    public GzipDecompressor() {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(byte[] param0, od param1, int param2) {
+    final void decompress(byte[] param0, od param1, int param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -295,7 +295,7 @@ final class mg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != 5) {
           return;
         }

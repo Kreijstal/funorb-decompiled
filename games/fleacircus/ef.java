@@ -23,7 +23,7 @@ class ef extends kc {
         var2.a(-11, param0);
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_j = null;
         field_m = null;
         if (param0 >= -91) {

@@ -6,7 +6,7 @@ final class ri extends na {
     static Sprite field_j;
     static String field_k;
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_j = null;
         if (param0 != 12) {
@@ -79,7 +79,7 @@ final class ri extends na {
 
     final am a(boolean param0) {
         if (!param0) {
-          ri.g(-27);
+          ri.clearStaticReferences(-27);
           return dh.field_V;
         }
         return dh.field_V;

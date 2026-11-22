@@ -11,7 +11,7 @@ abstract class jh {
     int field_e;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_d = (String[][]) null;
         if (param0 != 39) {
           field_c = (String[][]) null;

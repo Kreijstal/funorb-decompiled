@@ -476,7 +476,7 @@ final class ph extends di {
         }
     }
 
-    public static void g(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_t = null;
         field_u = null;
         field_n = null;

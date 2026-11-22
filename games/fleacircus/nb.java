@@ -21,7 +21,7 @@ final class nb {
         var3 = fleas.field_A ? 1 : 0;
         try {
           if (param0) {
-            nb.a((byte) -101);
+            nb.clearStaticReferences((byte) -101);
           }
           if (!qh.c((byte) 65)) {
             if (!vc.field_b) {
@@ -64,7 +64,7 @@ final class nb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 <= 33) {
           return;

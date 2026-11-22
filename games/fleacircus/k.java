@@ -11,7 +11,7 @@ final class k {
     static int[] field_l;
     static bi[] field_c;
     private long field_n;
-    private rl field_m;
+    private BoundedRandomAccessFile field_m;
     private byte[] field_b;
     private int field_i;
     private long field_j;
@@ -53,7 +53,7 @@ final class k {
             if (this.field_j != -1L &&
               this.field_d >= this.field_j &&
               (long)this.field_h + this.field_j >= (long)param2 + this.field_d) {
-              dm.a(this.field_b, (int)(-this.field_j + this.field_d), param0, param1, param2);
+              dm.copyBytes(this.field_b, (int)(-this.field_j + this.field_d), param0, param1, param2);
               this.field_d = this.field_d + (long)param2;
               return;
             }
@@ -66,7 +66,7 @@ final class k {
               if (param2 < var9_int) {
                 var9_int = param2;
               }
-              dm.a(this.field_f, (int)(-this.field_g + this.field_d), param0, param1, var9_int);
+              dm.copyBytes(this.field_f, (int)(-this.field_g + this.field_d), param0, param1, var9_int);
               param2 = param2 - var9_int;
               param1 = param1 + var9_int;
               this.field_d = this.field_d + (long)var9_int;
@@ -74,10 +74,10 @@ final class k {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param2 > this.field_f.length) {
-              this.field_m.a(this.field_d, (byte) -127);
+              this.field_m.seek(this.field_d, (byte) -127);
               this.field_k = this.field_d;
               while (0 < param2) {
-                var9_intLifetime1 = this.field_m.a(param0, param1, 0, param2);
+                var9_intLifetime1 = this.field_m.read(param0, param1, 0, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -97,7 +97,7 @@ final class k {
               if (this.field_i < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_i;
               }
-              dm.a(this.field_f, 0, param0, param1, var9_intLifetime1Lifetime1);
+              dm.copyBytes(this.field_f, 0, param0, param1, var9_intLifetime1Lifetime1);
               param1 = param1 + var9_intLifetime1Lifetime1;
               param2 = param2 - var9_intLifetime1Lifetime1;
               this.field_d = this.field_d + (long)var9_intLifetime1Lifetime1;
@@ -143,7 +143,7 @@ final class k {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                dm.a(this.field_b, (int)(var9 - this.field_j), param0, var7 + (int)(var9 - var5_long), var13);
+                dm.copyBytes(this.field_b, (int)(var9 - this.field_j), param0, var7 + (int)(var9 - var5_long), var13);
                 if (var11 > this.field_d) {
                   param2 = (int)((long)param2 - (var11 - this.field_d));
                   this.field_d = var11;
@@ -224,7 +224,7 @@ final class k {
             if (this.field_j != -1L &&
               this.field_d + (long)param2 > this.field_j + (long)this.field_b.length) {
               var6_int = (int)(-this.field_d - (-this.field_j - (long)this.field_b.length));
-              dm.a(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), var6_int);
+              dm.copyBytes(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), var6_int);
               param0 = param0 + var6_int;
               this.field_d = this.field_d + (long)var6_int;
               param2 = param2 - var6_int;
@@ -238,7 +238,7 @@ final class k {
               if (this.field_j == -1L) {
                 this.field_j = this.field_d;
               }
-              dm.a(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), param2);
+              dm.copyBytes(param1, param0, this.field_b, (int)(-this.field_j + this.field_d), param2);
               this.field_d = this.field_d + (long)param2;
               if ((long)this.field_h < (this.field_d - this.field_j)) {
                 this.field_h = (int)(this.field_d - this.field_j);
@@ -246,10 +246,10 @@ final class k {
               return;
             }
             if (this.field_d != this.field_k) {
-              this.field_m.a(this.field_d, (byte) -114);
+              this.field_m.seek(this.field_d, (byte) -114);
               this.field_k = this.field_d;
             }
-            this.field_m.a((byte) 110, param2, param0, param1);
+            this.field_m.write((byte) 110, param2, param0, param1);
             this.field_k = this.field_k + (long)param2;
             if (this.field_n < this.field_k) {
               this.field_n = this.field_k;
@@ -277,7 +277,7 @@ final class k {
             if (var6 > -1L &&
               var6 < var8) {
               var10 = (int)(-var6 + var8);
-              dm.a(param1, (int)((long)param0 - (-var6 + this.field_d)), this.field_f, (int)(-this.field_g + var6), var10);
+              dm.copyBytes(param1, (int)((long)param0 - (-var6 + this.field_d)), this.field_f, (int)(-this.field_g + var6), var10);
             }
             this.field_d = this.field_d + (long)param2;
             return;
@@ -330,10 +330,10 @@ final class k {
         var2 = 50 / ((param0 + 24) / 54);
         if (-1L != this.field_j) {
           if (~this.field_k != ~this.field_j) {
-            this.field_m.a(this.field_j, (byte) -114);
+            this.field_m.seek(this.field_j, (byte) -114);
             this.field_k = this.field_j;
           }
-          this.field_m.a((byte) 109, this.field_h, 0, this.field_b);
+          this.field_m.write((byte) 109, this.field_h, 0, this.field_b);
           this.field_k = this.field_k + (long)this.field_h;
           if (this.field_k > this.field_n) {
             this.field_n = this.field_k;
@@ -361,7 +361,7 @@ final class k {
           if (var3 > -1L &&
             var3 < var5) {
             var7 = (int)(-var3 + var5);
-            dm.a(this.field_b, (int)(var3 - this.field_j), this.field_f, (int)(-this.field_g + var3), var7);
+            dm.copyBytes(this.field_b, (int)(var3 - this.field_j), this.field_f, (int)(-this.field_g + var3), var7);
           }
           this.field_h = 0;
           this.field_j = -1L;
@@ -377,7 +377,7 @@ final class k {
         }
         this.field_i = 0;
         if (~this.field_d != ~this.field_k) {
-          this.field_m.a(this.field_d, (byte) -121);
+          this.field_m.seek(this.field_d, (byte) -121);
           this.field_k = this.field_d;
         }
         this.field_g = this.field_d;
@@ -386,7 +386,7 @@ final class k {
           if (200000000 < var2) {
             var2 = 200000000;
           }
-          var3 = this.field_m.a(this.field_f, this.field_i, 0, var2);
+          var3 = this.field_m.read(this.field_f, this.field_i, 0, var2);
           if (var3 == -1) {
             break;
           }
@@ -448,7 +448,7 @@ final class k {
         if (param0 != -70) {
           k.a(-30, -73, -71, false);
         }
-        this.field_m.b(-1);
+        this.field_m.close(-1);
     }
 
     final long c(byte param0) {
@@ -458,14 +458,14 @@ final class k {
         return this.field_o;
     }
 
-    k(rl param0, int param1, int param2) throws IOException {
+    k(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_g = -1L;
         this.field_h = 0;
         this.field_j = -1L;
         try {
           this.field_m = param0;
-          dupTemp$0 = param0.c(2049105808);
+          dupTemp$0 = param0.length(2049105808);
           this.field_n = dupTemp$0;
           this.field_o = dupTemp$0;
           this.field_b = new byte[param2];

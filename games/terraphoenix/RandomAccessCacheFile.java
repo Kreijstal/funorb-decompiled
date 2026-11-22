@@ -96,7 +96,7 @@ final class RandomAccessCacheFile {
         return this.field_d.length();
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
           field_c = (String) null;
         }

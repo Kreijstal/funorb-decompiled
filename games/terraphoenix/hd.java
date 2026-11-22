@@ -13,7 +13,7 @@ final class hd extends IntrusiveNode {
     static IntrusiveDeque field_p;
     static Sprite field_o;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_p = null;
         field_j = null;
         field_l = null;

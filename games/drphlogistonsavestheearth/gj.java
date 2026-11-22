@@ -141,7 +141,7 @@ final class gj {
         return var6 < 0 ? param1 - var10 : param1 + var10;
     }
 
-    public static void b() {
+    public static void clearStaticReferences() {
         field_l = null;
         field_j = null;
         field_f = null;

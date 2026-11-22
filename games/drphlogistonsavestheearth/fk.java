@@ -16,7 +16,7 @@ final class fk extends IntrusiveNode {
     int field_i;
     static String field_r;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_m = null;
         if (param0 == 111) {
           field_p = null;

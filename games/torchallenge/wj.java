@@ -8,7 +8,7 @@ final class wj {
     static int field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 23801) {
           field_d = null;
           field_b = null;

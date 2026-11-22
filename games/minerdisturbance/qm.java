@@ -20,7 +20,7 @@ final class qm {
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         ti.field_I[fb.field_c] = param2;
-        an.field_a[fb.field_c] = fb.field_c;
+        BoundedRandomAccessFile.field_a[fb.field_c] = fb.field_c;
         IntrusiveNode.field_h[fb.field_c] = param0;
         if (!(he.field_e <= param0)) {
           bc.field_d = param0;
@@ -201,7 +201,7 @@ final class qm {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = (String[][]) null;
         if (param0 != -31434) {
           return;

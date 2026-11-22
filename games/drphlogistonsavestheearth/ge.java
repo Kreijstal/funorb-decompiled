@@ -7,7 +7,7 @@ final class ge {
     private long field_o;
     private int field_j;
     static String field_i;
-    private pf field_b;
+    private BoundedRandomAccessFile field_b;
     static he[] field_p;
     private long field_a;
     static String field_c;
@@ -27,7 +27,7 @@ final class ge {
           return;
         }
         this.b(0);
-        this.field_b.c(104);
+        this.field_b.close(104);
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
@@ -80,10 +80,10 @@ final class ge {
               return;
             }
             if (~this.field_e != ~this.field_a) {
-              this.field_b.a(1536, this.field_a);
+              this.field_b.seek(1536, this.field_a);
               this.field_e = this.field_a;
             }
-            this.field_b.a((byte) -104, param0, param1, param3);
+            this.field_b.write((byte) -104, param0, param1, param3);
             this.field_e = this.field_e + (long)param0;
             if (this.field_n < this.field_e) {
               this.field_n = this.field_e;
@@ -135,7 +135,7 @@ final class ge {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }
@@ -375,7 +375,7 @@ final class ge {
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.field_q = 0;
         if (~this.field_a != ~this.field_e) {
-          this.field_b.a(1536, this.field_a);
+          this.field_b.seek(1536, this.field_a);
           this.field_e = this.field_a;
         }
         this.field_o = this.field_a;
@@ -387,7 +387,7 @@ final class ge {
           if (200000000 < var2) {
             var2 = 200000000;
           }
-          var3 = this.field_b.a(this.field_m, var2, param0 + 101, this.field_q);
+          var3 = this.field_b.read(this.field_m, var2, param0 + 101, this.field_q);
           if (var3 == -1) {
             break;
           }
@@ -421,10 +421,10 @@ final class ge {
         boolean decompiledFrameRemainder0 = true;
         if (-1L != this.field_k) {
           if (~this.field_k != ~this.field_e) {
-            this.field_b.a(param0 + 1536, this.field_k);
+            this.field_b.seek(param0 + 1536, this.field_k);
             this.field_e = this.field_k;
           }
-          this.field_b.a((byte) -87, this.field_j, 0, this.field_l);
+          this.field_b.write((byte) -87, this.field_j, 0, this.field_l);
           this.field_e = this.field_e + (long)this.field_j;
           if (this.field_e > this.field_n) {
             this.field_n = this.field_e;
@@ -535,10 +535,10 @@ final class ge {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param2 > this.field_m.length) {
-              this.field_b.a(1536, this.field_a);
+              this.field_b.seek(1536, this.field_a);
               this.field_e = this.field_a;
               while (param2 > 0) {
-                var9_intLifetime1 = this.field_b.a(param1, param2, -1, param0);
+                var9_intLifetime1 = this.field_b.read(param1, param2, -1, param0);
                 if (-1 == var9_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -632,14 +632,14 @@ final class ge {
         }
     }
 
-    ge(pf param0, int param1, int param2) throws IOException {
+    ge(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_j = 0;
         this.field_k = -1L;
         this.field_o = -1L;
         try {
           this.field_b = param0;
-          dupTemp$0 = param0.a(-105);
+          dupTemp$0 = param0.length(-105);
           this.field_n = dupTemp$0;
           this.field_h = dupTemp$0;
           this.field_a = 0L;

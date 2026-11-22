@@ -17,7 +17,7 @@ final class IsaacRandom {
     static int[] field_m;
     static ac field_j;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 <= 0) {
           field_h = (IntrusiveDeque) null;
         }

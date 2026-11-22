@@ -373,7 +373,7 @@ final class hk extends IntrusiveNode {
         return var1;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_n = null;
         field_G = null;
         field_t = null;

@@ -19,7 +19,7 @@ final class td {
     private int[] field_p;
     static String[] field_m;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         if (param0 != 869637800) {
           field_g = (int[]) null;
@@ -83,7 +83,7 @@ final class td {
         boolean stackIn_14_0 = false;
         this.field_k = this.field_k + 1;
         if (param0 > -98) {
-          td.a(-106);
+          td.clearStaticReferences(-106);
         }
         stackIn_7_1 = (this.field_b == null) || (this.field_b.m());
         boolean decompiledFrameRemainder0 = true;

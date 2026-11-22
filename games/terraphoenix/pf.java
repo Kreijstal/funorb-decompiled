@@ -8,7 +8,7 @@ final class pf {
     static long field_c;
     static String[] field_e;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;
@@ -21,7 +21,7 @@ final class pf {
     final static void a(BattleState param0, byte param1, int param2, int param3) {
         try {
           if (param1 != 71) {
-            pf.a(-67);
+            pf.clearStaticReferences(-67);
           }
           kg.field_r[76].c(param2 - 32, param3 - 64, 64);
         } catch (RuntimeException runtimeException) {

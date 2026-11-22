@@ -12,7 +12,7 @@ final class pf {
     private String field_b;
     static int field_i;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = (String[][]) null;
         field_e = null;
         field_f = null;

@@ -46,7 +46,7 @@ final class o extends wj {
         }
         long var6 = 0L;
         if (param0 != -63) {
-          o.b((byte) -81);
+          o.clearStaticReferences((byte) -81);
         }
         for (var8 = 1; var8 <= this.field_f; var8++) {
           var6 = var6 + this.field_j[(this.field_h + (-var8 + 10)) % 10];
@@ -54,7 +54,7 @@ final class o extends wj {
         return var6 / (long)this.field_f;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_g = null;
         if (param0 < 55) {
           field_g = (String) null;

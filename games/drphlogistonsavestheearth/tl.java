@@ -88,7 +88,7 @@ final class tl extends hf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_O = null;
         if (param0 >= -14) {
           field_J = (String) null;
@@ -146,7 +146,7 @@ final class tl extends hf {
           var5.field_a = uj.a(param0, (byte) 70, 16, var5.field_a);
           var5.field_K = uj.a(param0, (byte) 71, 16, var5.field_K);
           if (param1 < 91) {
-            tl.a((byte) -124);
+            tl.clearStaticReferences((byte) -124);
           }
           if (var3 != 0) {
             var5.field_H = (short)param0.e(16, (byte) -112);

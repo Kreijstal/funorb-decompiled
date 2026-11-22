@@ -12,7 +12,7 @@ final class sb extends IntrusiveNode {
     static int field_i;
     byte[] field_o;
 
-    public static void c(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_n = null;
         field_m = null;
         field_p = null;
@@ -34,7 +34,7 @@ final class sb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            sb.c((byte) -62);
+            sb.clearStaticReferences((byte) -62);
           }
           if (param1 == null) {
             return null;

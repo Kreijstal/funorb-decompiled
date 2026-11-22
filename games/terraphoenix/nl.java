@@ -284,7 +284,7 @@ final class nl {
         SoftwareRasterizer.d(520, 76, 100, 28, 16777215, 128);
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (!param0) {
           field_c = (String) null;
           field_c = null;

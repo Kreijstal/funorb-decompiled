@@ -57,7 +57,7 @@ final class PcmPlayerPump implements Runnable {
         this.field_i = false;
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -118) {
           return;
         }

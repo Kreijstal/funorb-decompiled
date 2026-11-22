@@ -8,7 +8,7 @@ final class vj {
     static String field_e;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 60) {
           field_d = (Sprite[]) null;
         }

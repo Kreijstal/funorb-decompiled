@@ -59,7 +59,7 @@ final class jg extends cb {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_l = null;
         field_j = null;
         if (param0 != 23) {
@@ -73,7 +73,7 @@ final class jg extends cb {
           pl.field_a = param1;
           ch.field_g = param0;
           if (param2 >= -100) {
-            jg.b((byte) -17);
+            jg.clearStaticReferences((byte) -17);
           }
           t.a(param3, rf.field_a, 0);
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ final class jg extends cb {
         try {
           eg.a(0, (byte) 90, param2.field_u, param2.field_o, param3, param4, param0);
           if (param1 >= -94) {
-            jg.b((byte) -48);
+            jg.clearStaticReferences((byte) -48);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "jg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

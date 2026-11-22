@@ -844,7 +844,7 @@ abstract class we extends DualLinkNode {
         return this.field_I + var5 + this.field_E;
     }
 
-    public static void a() {
+    public static void clearStaticReferences() {
         field_v = null;
         field_P = null;
     }

@@ -13,7 +13,7 @@ abstract class hm {
     static String field_f;
     static int field_d;
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_g = null;
         field_f = null;
         if (param0 == 2067) {

@@ -4,7 +4,7 @@
 abstract class ei extends dc implements kd {
     private kl field_l;
     static he[] field_k;
-    static mg field_i;
+    static GzipDecompressor field_i;
     static String field_h;
     static int field_o;
     static sa field_n;
@@ -75,7 +75,7 @@ abstract class ei extends dc implements kd {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = null;
         field_m = null;
         field_h = null;
@@ -85,7 +85,7 @@ abstract class ei extends dc implements kd {
           field_i = null;
           return;
         }
-        field_i = (mg) null;
+        field_i = (GzipDecompressor) null;
         field_n = null;
         field_j = null;
         field_i = null;
@@ -136,7 +136,7 @@ abstract class ei extends dc implements kd {
     abstract String a(byte param0, String param1);
 
     static {
-        field_i = new mg();
+        field_i = new GzipDecompressor();
         field_h = "Close";
         field_n = new sa(1, 2, 2, 0);
         field_j = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";

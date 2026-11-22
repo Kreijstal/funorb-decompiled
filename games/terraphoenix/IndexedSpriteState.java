@@ -15,7 +15,7 @@ abstract class IndexedSpriteState {
     static String field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_b = null;
         field_a = null;
         field_e = null;

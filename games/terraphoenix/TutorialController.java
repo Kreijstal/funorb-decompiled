@@ -39,7 +39,7 @@ final class TutorialController {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != -3109) {
-              TutorialController.b((byte) -71);
+              TutorialController.clearStaticReferences((byte) -71);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
@@ -468,7 +468,7 @@ final class TutorialController {
         return stackIn_262_0;
     }
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 >= -16) {
           return;
         }

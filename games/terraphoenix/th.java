@@ -71,7 +71,7 @@ final class th {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         field_g = null;
         field_e = null;

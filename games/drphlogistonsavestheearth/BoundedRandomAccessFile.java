@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pf {
+final class BoundedRandomAccessFile {
     private long field_b;
     static he[] field_c;
     static long field_a;
@@ -11,7 +11,7 @@ final class pf {
     private long field_d;
     private RandomAccessFile field_e;
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_e) {
           this.field_e.close();
           this.field_e = null;
@@ -22,13 +22,13 @@ final class pf {
     protected final void finalize() throws Throwable {
         if (this.field_e != null) {
           System.out.println("");
-          this.c(90);
+          this.close(90);
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param0 != 1536) {
-          pf.b(127);
+          BoundedRandomAccessFile.clearStaticReferences(127);
         }
         this.field_e.seek(param1);
         this.field_d = param1;
@@ -101,7 +101,7 @@ final class pf {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
@@ -130,14 +130,14 @@ final class pf {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 > -73) {
-          pf.a((byte) 42);
+          BoundedRandomAccessFile.a((byte) 42);
         }
     }
 
-    final void a(byte param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(byte param0, int param1, int param2, byte[] param3) throws IOException {
         if ((this.field_d + (long)param1) > this.field_b) {
           this.field_e.seek(this.field_b);
           this.field_e.write(1);
@@ -154,7 +154,7 @@ final class pf {
         }
     }
 
-    pf(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -185,7 +185,7 @@ final class pf {
         return sh.field_e;
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 >= -38) {
           return -62L;
         }

@@ -56,7 +56,7 @@ final class hb {
           param2.setLength(param0);
           var5 = var4_int;
           if (param1 != 30) {
-            hb.a(false);
+            hb.clearStaticReferences(false);
           }
           while (param0 > var5) {
             param2.setCharAt(var5, param3);
@@ -298,7 +298,7 @@ final class hb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         field_b = null;
         field_h = null;
         field_c = null;

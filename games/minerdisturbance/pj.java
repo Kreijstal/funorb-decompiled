@@ -10,7 +10,7 @@ final class pj implements uj {
     static Sprite[] field_e;
     static th field_c;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         field_c = null;
         if (param0 != 2) {

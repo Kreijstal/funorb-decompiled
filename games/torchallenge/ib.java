@@ -344,7 +344,7 @@ final class ib extends kj implements tb, sg {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           return;
         }

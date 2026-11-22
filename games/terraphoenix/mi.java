@@ -7,7 +7,7 @@ final class mi extends nb {
     static String field_i;
     private String field_k;
 
-    final static void d(int param0) {
+    final static void clearStaticReferences(int param0) {
         if (param0 != -22284) {
           field_h = (Archive) null;
         }

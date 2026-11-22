@@ -221,7 +221,7 @@ final class ha {
             var4 = (String) null;
             ha.a(91, (String) null);
           }
-          stackIn_3_0 = pd.a(param0, true, true, param1);
+          stackIn_3_0 = GzipDecompressor.parseInteger(param0, true, true, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

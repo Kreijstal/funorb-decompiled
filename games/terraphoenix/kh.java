@@ -421,7 +421,7 @@ abstract class kh extends WidgetContainer {
         return stackIn_41_0;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_H = null;
         field_L = null;
         if (param0 == -195) {

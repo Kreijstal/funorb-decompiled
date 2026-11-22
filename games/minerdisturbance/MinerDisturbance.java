@@ -1170,7 +1170,7 @@ public final class MinerDisturbance extends ob {
               qe.field_b[0] = true;
               qe.field_b[5] = true;
               dg.field_b = false;
-              an.field_d = false;
+              BoundedRandomAccessFile.field_d = false;
               nk.field_p = false;
               break;
             }
@@ -2050,40 +2050,40 @@ public final class MinerDisturbance extends ob {
               }
               boolean decompiledFrameRemainder4 = true;
               tb.field_c = 0;
-              an.field_f = an.field_f - 1;
-              if (an.field_f <= 0) {
+              BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f - 1;
+              if (BoundedRandomAccessFile.field_f <= 0) {
                 if (ph.field_b == 0) {
                   ph.field_b = (int)(3.0 * Math.random() + 1.0);
-                  an.field_f = 5;
+                  BoundedRandomAccessFile.field_f = 5;
                   tf.field_b = 0;
                   decompiledFrameRemainder4 = (var21 != 0);
                 }
                 if (decompiledFrameRemainder4) {
-                  an.field_f = 5;
+                  BoundedRandomAccessFile.field_f = 5;
                   tf.field_b = tf.field_b + 1;
                   if (tf.field_b <= 4) {
                     if ((!(3 >= tf.field_b)) &&
                       (ph.field_b == 1)) {
                       ph.field_b = 0;
-                      an.field_f = 500;
+                      BoundedRandomAccessFile.field_f = 500;
                     }
                   } else {
                     ph.field_b = 0;
-                    an.field_f = 500;
+                    BoundedRandomAccessFile.field_f = 500;
                   }
                 }
               }
               if (ph.field_b == 0 &&
-                an.field_f < 400 &&
+                BoundedRandomAccessFile.field_f < 400 &&
                 mh.field_e[ca.field_k][hf.field_t + 1].field_q > 0) {
                 tf.field_b = 0;
                 ph.field_b = 4;
-                an.field_f = 5;
+                BoundedRandomAccessFile.field_f = 5;
               }
               if (mh.field_e[ca.field_k][hf.field_t + 1].field_q > 150 &&
                 ph.field_b != 5) {
                 tf.field_b = 0;
-                an.field_f = 5;
+                BoundedRandomAccessFile.field_f = 5;
                 ph.field_b = 5;
               }
               if (1 == ph.field_b) {
@@ -2171,11 +2171,11 @@ public final class MinerDisturbance extends ob {
                 tb.field_c = 104;
                 IsaacRandom.field_i = IsaacRandom.field_i / 2;
                 if (ph.field_b != 6) {
-                  an.field_f = 5;
+                  BoundedRandomAccessFile.field_f = 5;
                   ph.field_b = 6;
                 }
-                if (an.field_f < 2) {
-                  an.field_f = 2;
+                if (BoundedRandomAccessFile.field_f < 2) {
+                  BoundedRandomAccessFile.field_f = 2;
                   tb.field_c = tb.field_c + 1;
                 }
               }
@@ -2358,15 +2358,15 @@ public final class MinerDisturbance extends ob {
                 rj.field_f = 2;
                 ne.a(30, 59);
               }
-              an.field_f = an.field_f - 1;
+              BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f - 1;
               if ((rg.field_wb == 0 ||
                 var6Lifetime2 != 0 &&
                 var7Lifetime2 != 0) && var2_int != 0) {
                 rj.field_f = 0;
               }
-              if (!(an.field_f >= 0) ||
-                !(an.field_f <= 2)) {
-                an.field_f = 2;
+              if (!(BoundedRandomAccessFile.field_f >= 0) ||
+                !(BoundedRandomAccessFile.field_f <= 2)) {
+                BoundedRandomAccessFile.field_f = 2;
                 tf.field_b = tf.field_b + 1;
                 if (tf.field_b == 1 ||
                   tf.field_b == 4) {
@@ -2622,13 +2622,13 @@ public final class MinerDisturbance extends ob {
                 !je.a(ca.field_k, hf.field_t, 3, 1)) {
                 rj.field_f = 3;
               }
-              an.field_f = an.field_f - 1;
-              if (!(an.field_f >= 0) ||
-                !(an.field_f <= 8)) {
+              BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f - 1;
+              if (!(BoundedRandomAccessFile.field_f >= 0) ||
+                !(BoundedRandomAccessFile.field_f <= 8)) {
                 tf.field_b = tf.field_b + 1;
-                an.field_f = 8;
+                BoundedRandomAccessFile.field_f = 8;
                 if (Math.abs(rg.field_wb) > 5) {
-                  an.field_f = an.field_f / 4;
+                  BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f / 4;
                 }
               }
               tf.field_b = tf.field_b % 5;
@@ -3432,9 +3432,9 @@ public final class MinerDisturbance extends ob {
                 !ni.a(16, 11764)) {
                 var6Lifetime3 = 32 * ca.field_k + sk.field_d / 10;
                 var7Lifetime3 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
-                var8Lifetime2 = -pd.field_a.field_x + (var6Lifetime3 - 1);
+                var8Lifetime2 = -GzipDecompressor.field_a.field_x + (var6Lifetime3 - 1);
                 var9Lifetime2 = -1 + var7Lifetime3;
-                ag.a(true, 16, -(ef.field_b[3].field_A >> 1) + (pd.field_a.field_A >> 1) + var9Lifetime2, -ef.field_b[3].field_y + var8Lifetime2);
+                ag.a(true, 16, -(ef.field_b[3].field_A >> 1) + (GzipDecompressor.field_a.field_A >> 1) + var9Lifetime2, -ef.field_b[3].field_y + var8Lifetime2);
               }
               kn.field_E = 300;
               decompiledFrameRemainder0 = (var21 != 0);
@@ -3449,17 +3449,17 @@ public final class MinerDisturbance extends ob {
                   (!ni.a(9, 11764))) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
-                  var8Lifetime2Lifetime1 = -1 - pd.field_a.field_x + var6Lifetime3Lifetime1;
+                  var8Lifetime2Lifetime1 = -1 - GzipDecompressor.field_a.field_x + var6Lifetime3Lifetime1;
                   var9Lifetime2Lifetime1 = -1 + var7Lifetime3Lifetime1;
-                  ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (pd.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
+                  ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (GzipDecompressor.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
                 }
               } else {
                 if (!ni.a(9, 11764)) {
                   var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
-                  var8Lifetime2Lifetime1 = -1 - pd.field_a.field_x + var6Lifetime3Lifetime1;
+                  var8Lifetime2Lifetime1 = -1 - GzipDecompressor.field_a.field_x + var6Lifetime3Lifetime1;
                   var9Lifetime2Lifetime1 = -1 + var7Lifetime3Lifetime1;
-                  ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (pd.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
+                  ag.a(true, 9, -(ef.field_b[3].field_A >> 1) + (GzipDecompressor.field_a.field_A >> 1) + var9Lifetime2Lifetime1, var8Lifetime2Lifetime1 - ef.field_b[3].field_y);
                 }
               }
             }
@@ -4204,7 +4204,7 @@ public final class MinerDisturbance extends ob {
                 CipherPacketBuffer.field_x = jn.a("title_myscores", -29553, "", fl.field_f);
                 ha.field_a = jn.a("title_instructions", -29553, "", fl.field_f);
                 jc.field_G = jn.a("title_choose", -29553, "", fl.field_f);
-                pd.field_a = jn.a("bubble", -29553, "", fl.field_f);
+                GzipDecompressor.field_a = jn.a("bubble", -29553, "", fl.field_f);
                 jn.a("highscorearrow", -29553, "", fl.field_f);
                 qn.field_J = bb.a("worm_gums", fl.field_f, -123, "");
                 ij.field_t = bb.a("worm_skin", fl.field_f, -102, "");
@@ -4692,27 +4692,27 @@ public final class MinerDisturbance extends ob {
 
     final void b(int param0) {
         try {
-          gi.a(0);
-          df.a((byte) 125);
-          im.a(param0 ^ 6777);
+          gi.clearStaticReferences(0);
+          df.clearStaticReferences((byte) 125);
+          im.clearStaticReferences(param0 ^ 6777);
           GameAppletShell.f(-1);
           kh.a(true);
           SoftwareRasterizer.c();
           kk.a((byte) 75);
           ResourceArchive.c((byte) -125);
-          we.a();
+          we.clearStaticReferences();
           di.a((byte) 98);
-          eb.b((byte) 127);
+          eb.clearStaticReferences((byte) 127);
           ab.b(-14839);
-          ii.a((byte) 105);
+          ii.clearStaticReferences((byte) 105);
           qa.a((byte) -61);
-          nd.a(111);
+          nd.clearStaticReferences(111);
           kd.c(94);
           en.a(10);
-          ob.o(124);
-          tj.a(false);
+          ob.clearStaticReferences(124);
+          tj.clearStaticReferences(false);
           ge.a(111);
-          el.a(2);
+          el.clearStaticReferences(2);
           gn.a(param0 + 28807);
           of.a(-60);
           lg.a((byte) 76);
@@ -4722,42 +4722,42 @@ public final class MinerDisturbance extends ob {
           PacketBuffer.l(109);
           ClientException.a((byte) 84);
           lf.a(false);
-          oe.b((byte) 124);
-          de.a((byte) 34);
-          fi.a((byte) 125);
+          oe.clearStaticReferences((byte) 124);
+          de.clearStaticReferences((byte) 34);
+          fi.clearStaticReferences((byte) 125);
           sf.a(param0 + 8191);
           rd.a((byte) 69);
-          fa.a(26686);
-          dg.b((byte) 83);
-          kf.a(42959);
-          md.a(98);
-          id.b(8192);
-          pa.a(param0 ^ 2);
-          fb.a(true);
+          fa.clearStaticReferences(26686);
+          dg.clearStaticReferences((byte) 83);
+          kf.clearStaticReferences(42959);
+          md.clearStaticReferences(98);
+          id.clearStaticReferences(8192);
+          pa.clearStaticReferences(param0 ^ 2);
+          fb.clearStaticReferences(true);
           ek.a((byte) 19);
           ci.b(0);
           dm.a(20583);
-          FullscreenFocusCanvas.a((byte) 79);
+          FullscreenFocusCanvas.clearStaticReferences((byte) 79);
           pl.e(-26537);
           mc.a((byte) -43);
           gf.a(param0 ^ -114);
-          je.c();
+          je.clearStaticReferences();
           ie.b(5);
-          IntrusiveNode.d(2);
+          IntrusiveNode.clearStaticReferences(2);
           IntrusiveDeque.d((byte) -113);
-          dh.a(-123);
-          in.a(param0 ^ 14913);
+          dh.clearStaticReferences(-123);
+          in.clearStaticReferences(param0 ^ 14913);
           kb.a((byte) 60);
-          rb.a(-2004317953);
-          ak.a(false);
+          rb.clearStaticReferences(-2004317953);
+          ak.clearStaticReferences(false);
           q.a(20);
           cg.a(param0 ^ 1);
-          nl.b();
-          gd.a((byte) -114);
+          nl.clearStaticReferences();
+          gd.clearStaticReferences((byte) -114);
           ri.b((byte) -25);
-          fj.d();
+          fj.clearStaticReferences();
           vd.e(98);
-          qk.a(-1003);
+          qk.clearStaticReferences(-1003);
           ch.c(-104);
           nm.a(false);
           bk.b((byte) -113);
@@ -4768,144 +4768,144 @@ public final class MinerDisturbance extends ob {
           h.b(true);
           nn.a(true);
           ig.b(119);
-          hm.c((byte) 112);
+          hm.clearStaticReferences((byte) 112);
           uk.j((byte) -42);
           jl.h((byte) 126);
           rg.r(param0 ^ 28777);
           ik.p(120);
-          qd.a(true);
+          qd.clearStaticReferences(true);
           cl.o(20);
           lm.f((byte) -106);
-          pf.a(-1);
-          vi.a(-1);
-          dl.a((byte) -118);
+          pf.clearStaticReferences(-1);
+          vi.clearStaticReferences(-1);
+          dl.clearStaticReferences((byte) -118);
           ArchiveIndex.b(16704);
-          pd.a((byte) 117);
+          GzipDecompressor.clearStaticReferences((byte) 117);
           ArchiveProvider.a(-7672);
           kl.a(true);
-          dk.b(param0 + 96);
+          dk.clearStaticReferences(param0 + 96);
           sc.a(5565);
           ec.a(-65);
           hn.a(param0 - 1);
-          CipherPacketBuffer.d(false);
-          c.b((byte) -73);
+          CipherPacketBuffer.clearStaticReferences(false);
+          c.clearStaticReferences((byte) -73);
           wm.a(param0 - 8);
           ql.b(0);
           pk.a(-94);
           DualLinkNode.a(-483);
-          hd.a((byte) 123);
-          u.c(33);
+          hd.clearStaticReferences((byte) 123);
+          u.clearStaticReferences(33);
           ml.a((byte) 119);
           kj.b(false);
           he.a((byte) -124);
           cm.a(param0 + 17);
           fh.a(param0 ^ -12662);
-          ff.a(-12);
+          ff.clearStaticReferences(-12);
           tf.a(24044);
-          SpriteState.a(true);
+          SpriteState.clearStaticReferences(true);
           uf.f(param0 ^ 201);
-          wa.e(112);
+          wa.clearStaticReferences(112);
           ee.h(256);
           uh.a((byte) -116);
           vl.i(param0 + 125);
-          ij.a(true);
-          an.a(param0);
-          si.b((byte) -128);
-          kc.a(param0 ^ 16575);
-          em.b((byte) -86);
-          IsaacRandom.c((byte) 81);
-          GameCanvas.a((byte) -22);
+          ij.clearStaticReferences(true);
+          BoundedRandomAccessFile.clearStaticReferences(param0);
+          si.clearStaticReferences((byte) -128);
+          kc.clearStaticReferences(param0 ^ 16575);
+          em.clearStaticReferences((byte) -86);
+          IsaacRandom.clearStaticReferences((byte) 81);
+          GameCanvas.clearStaticReferences((byte) -22);
           nj.a(-109);
           ni.a((byte) -112);
-          va.a();
+          va.clearStaticReferences();
           cn.a(param0 - 129);
           qf.a(param0 - 28582);
           vc.e(param0 + 105);
           ng.a(-1);
-          j.a(90);
+          j.clearStaticReferences(90);
           rf.a((byte) -56);
-          eg.c(-7709);
+          eg.clearStaticReferences(-7709);
           ck.a((byte) -100);
           mk.a((byte) -91);
           on.d(-112);
-          qg.a(0);
+          qg.clearStaticReferences(0);
           fl.a(-1);
           hh.b(-125);
           fe.l(-95);
           jc.a(0);
           cc.e((byte) 15);
-          nf.a(false);
+          nf.clearStaticReferences(false);
           am.n(43);
           ke.s(-125);
           ui.q(param0 ^ -2);
-          kn.d((byte) -15);
+          kn.clearStaticReferences((byte) -15);
           jk.h((byte) -36);
           wf.g((byte) 87);
-          oi.a((byte) 91);
+          oi.clearStaticReferences((byte) 91);
           ei.o(-2638);
           tn.a(param0 - 3);
           qn.a((byte) 84);
           w.m(256);
-          ti.c((byte) -53);
+          ti.clearStaticReferences((byte) -53);
           cb.d(false);
-          ol.a(1);
+          ol.clearStaticReferences(1);
           ba.a((byte) 54);
           gm.a(-20);
-          dj.c();
-          td.a(false);
+          dj.clearStaticReferences();
+          td.clearStaticReferences(false);
           bh.i((byte) 102);
-          b.b();
+          b.clearStaticReferences();
           ud.a(-105);
           pb.c(-98);
           ef.a((byte) 102);
           ce.b(14480);
-          mb.a(30520);
+          mb.clearStaticReferences(30520);
           ah.a(true);
-          qe.a((byte) 104);
+          qe.clearStaticReferences((byte) 104);
           fd.g(param0 - 258);
-          om.b(param0 - 1);
+          om.clearStaticReferences(param0 - 1);
           gl.a(-2869);
           km.a(true);
-          pg.a();
-          wk.a(true);
+          pg.clearStaticReferences();
+          wk.clearStaticReferences(true);
           ra.a(-124);
           hb.a(-105);
           hk.d(127);
-          bb.a(-4);
+          bb.clearStaticReferences(-4);
           ul.a((byte) 14);
           sn.b((byte) -18);
-          a.a(0);
-          jh.a((byte) 39);
+          a.clearStaticReferences(0);
+          jh.clearStaticReferences((byte) 39);
           pm.a(92);
           ca.b(param0 ^ 11);
           vj.d(16711680);
-          o.a(param0 - 23642);
+          o.clearStaticReferences(param0 - 23642);
           vk.a(119);
           tm.a((byte) -107);
-          ve.a();
-          qm.b(-31434);
+          ve.clearStaticReferences();
+          qm.clearStaticReferences(-31434);
           s.m(param0 - 117);
           ne.a(2);
           nh.a((byte) -76);
-          la.a();
+          la.clearStaticReferences();
           lj.a((byte) -69);
           t.b(param0 - 1);
-          bm.d(0);
-          aa.a((byte) -123);
+          bm.clearStaticReferences(0);
+          aa.clearStaticReferences((byte) -123);
           ma.n(27934);
           se.n(-13673);
           ph.a(0);
-          bg.a(15917);
-          sd.a(-1);
-          qc.b(2207);
+          bg.clearStaticReferences(15917);
+          sd.clearStaticReferences(-1);
+          qc.clearStaticReferences(2207);
           bl.b((byte) 79);
           oh.i(-116);
           ic.b(29);
           gb.a(-102);
           bc.a(35);
           sl.a(param0 ^ -3036);
-          jf.a((byte) -63);
-          ae.a((byte) -67);
+          jf.clearStaticReferences((byte) -63);
+          ae.clearStaticReferences((byte) -67);
           jn.e(111);
           af.a(param0 - 12708);
           hf.a(-16935);
@@ -4915,39 +4915,39 @@ public final class MinerDisturbance extends ob {
           wb.a(param0 ^ 1);
           fg.a(-114);
           sa.a(42);
-          re.a(-10887);
+          re.clearStaticReferences(-10887);
           mh.a(-115);
-          tb.a(127);
-          tk.a(8225);
+          tb.clearStaticReferences(127);
+          tk.clearStaticReferences(8225);
           ug.b((byte) 45);
           i.b((byte) -57);
           le.a(-9392);
           rj.a(3);
           pn.a(param0 ^ 16777214);
           sk.b(true);
-          hl.b(false);
+          hl.clearStaticReferences(false);
           wc.b(0);
           ka.a(param0 + 2);
           ib.a(1);
-          vh.b(3);
-          pj.a(param0 ^ 3);
-          te.b(31960);
-          v.b((byte) -44);
+          vh.clearStaticReferences(3);
+          pj.clearStaticReferences(param0 ^ 3);
+          te.clearStaticReferences(31960);
+          v.clearStaticReferences((byte) -44);
           bn.a(160);
-          mm.a(param0 ^ 0);
-          aj.b(param0 + 113);
-          ub.b(76);
+          mm.clearStaticReferences(param0 ^ 0);
+          aj.clearStaticReferences(param0 + 113);
+          ub.clearStaticReferences(76);
           li.b((byte) -90);
           wi.a((byte) -9);
           nc.a(param0 - 117);
-          gk.a((byte) -61);
+          gk.clearStaticReferences((byte) -61);
           mn.d(42);
           qh.a((byte) 110);
           oj.n(65536);
-          pe.b((byte) -30);
-          mj.a((byte) -118);
+          pe.clearStaticReferences((byte) -30);
+          mj.clearStaticReferences((byte) -118);
           hj.a(false);
-          dn.b((byte) -100);
+          dn.clearStaticReferences((byte) -100);
           nk.a(0);
           fm.e((byte) -123);
           sj.a((byte) 22);
@@ -4958,19 +4958,19 @@ public final class MinerDisturbance extends ob {
           th.a(-15649);
           tc.a((byte) -91);
           nb.a(19);
-          mg.a(125);
+          mg.clearStaticReferences(125);
           e.f(param0 - 2);
           od.f(4);
           wj.f(-27836);
-          jg.b((byte) 23);
+          jg.clearStaticReferences((byte) 23);
           gh.a(68);
           lb.a(param0 ^ 1);
           ag.a(false);
-          ok.d(param0 + 1626);
+          ok.clearStaticReferences(param0 + 1626);
           r.b((byte) 125);
           jb.a(110);
           il.a(-128);
-          gj.a(param0 ^ 29749);
+          gj.clearStaticReferences(param0 ^ 29749);
           this.field_s = null;
           this.field_L = null;
           this.field_Q = null;
@@ -5527,7 +5527,7 @@ public final class MinerDisturbance extends ob {
             if (a.field_c >= 1000000) {
               var8 = 400;
             }
-            ce.field_d.b(an.field_g, var6, var8, 0, -1);
+            ce.field_d.b(BoundedRandomAccessFile.field_g, var6, var8, 0, -1);
           }
           var8 = 16776960;
           if (pl.field_h == 0) {
@@ -6217,7 +6217,7 @@ public final class MinerDisturbance extends ob {
                             var4 = new PacketBuffer(id.field_c.a("supervolcano.csv", 0, ""));
                             ml.a(var4, (byte) 0, var3);
                             this.h((byte) 65);
-                            an.a(-122, 50);
+                            BoundedRandomAccessFile.setTickRate(-122, 50);
                             ke.field_V = false;
                             ResourceArchive.a(-6358, ph.field_a);
                             oi.a(mm.field_a, ce.field_d, 97, 300);
@@ -6570,7 +6570,7 @@ public final class MinerDisturbance extends ob {
                   var3 = gd.a(stackIn_142_0, -61, (ob) (this));
                   boolean decompiledSharedTail0 = (var3 != 2364824);
                   if (!decompiledSharedTail0) {
-                    le.b(8952);
+                    le.clearStaticReferences(8952);
                     decompiledSharedTail0 = (var4 != 0);
                   }
                   if ((decompiledSharedTail0) && (1 == var3 ||
@@ -6829,8 +6829,8 @@ public final class MinerDisturbance extends ob {
               ud.field_c > 0) {
               od.field_i = od.field_i.substring(1) + ud.field_c;
               if (od.field_i.equalsIgnoreCase("megaslg")) {
-                stackIn_205_0 = !(an.field_d);
-                an.field_d = stackIn_205_0;
+                stackIn_205_0 = !(BoundedRandomAccessFile.field_d);
+                BoundedRandomAccessFile.field_d = stackIn_205_0;
                 qm.field_f = true;
               }
               if (od.field_i.equalsIgnoreCase("watrbmb")) {

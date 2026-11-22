@@ -148,7 +148,7 @@ final class be {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_e = null;
         if (param0 != 3366) {
           return;

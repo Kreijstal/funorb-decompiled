@@ -10,7 +10,7 @@ final class ob {
     static int field_c;
     static int field_g;
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 < 49) {
           field_f = (nh[]) null;
         }

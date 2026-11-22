@@ -96,7 +96,7 @@ final class RandomAccessCacheFile {
           this.field_b = null;
         }
         if (param0 != 47) {
-          RandomAccessCacheFile.a(-44);
+          RandomAccessCacheFile.clearStaticReferences(-44);
         }
     }
 
@@ -107,7 +107,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
         }

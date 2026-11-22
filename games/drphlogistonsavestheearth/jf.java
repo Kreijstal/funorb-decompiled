@@ -88,7 +88,7 @@ abstract class jf extends ca {
         }
     }
 
-    public static void h(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         field_kb = null;
         if (param0 < 90) {
           return;

@@ -54,7 +54,7 @@ final class sa {
         vb.field_n = vb.field_n + 1;
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 == 250) {
           field_b = null;

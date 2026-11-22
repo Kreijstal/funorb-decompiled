@@ -335,7 +335,7 @@ final class ll {
         c.a(param1, false);
     }
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_j = (boolean[][][]) null;
         field_e = (int[][][]) null;
         field_h = null;

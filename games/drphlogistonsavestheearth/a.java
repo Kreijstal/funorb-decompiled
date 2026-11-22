@@ -77,7 +77,7 @@ final class a {
         int var3 = -90 % ((param2 - 7) / 57);
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 != 2) {
           return;
         }

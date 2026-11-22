@@ -20,7 +20,7 @@ final class ji extends IntrusiveNode {
     static wl field_m;
     static long field_y;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         if (param0 == 65535) {
           field_p = null;
           field_q = null;

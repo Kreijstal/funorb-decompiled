@@ -173,7 +173,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (var2.width < nf.field_h) {
                   return;
                 }
-                if (an.field_h > var2.height) {
+                if (BoundedRandomAccessFile.field_h > var2.height) {
                   return;
                 }
               }
@@ -817,7 +817,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               tb.field_h = param2;
               ml.field_a = param5;
-              an.field_h = param5;
+              BoundedRandomAccessFile.field_h = param5;
               nk.field_x = param0;
               nf.field_h = param0;
               tg.field_f = 0;

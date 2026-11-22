@@ -122,7 +122,7 @@ final class kf {
     final void a(java.applet.Applet param0, byte param1) {
         try {
           if (param1 != 117) {
-            kf.a((byte) -79);
+            kf.clearStaticReferences((byte) -79);
           }
           ll.a(this.field_d, 31536000L, (byte) -126, param0, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
@@ -161,7 +161,7 @@ final class kf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStaticReferences(byte param0) {
         if (param0 != -77) {
           return;
         }
