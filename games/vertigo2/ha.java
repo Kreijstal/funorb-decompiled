@@ -100,7 +100,7 @@ final class ha {
           var24.field_O = 1;
           bf.field_c = new UiPanel(0L, ee.field_b);
           bf.field_c.field_O = 1;
-          vb.field_j = new UiPanel(0L, vc.field_b, sl.field_x.toUpperCase());
+          DirectByteStorage.field_j = new UiPanel(0L, vc.field_b, sl.field_x.toUpperCase());
           qn.field_s = new UiPanel(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
           ja.field_b = new UiPanel(0L, dj.field_b);
           po.field_a = new UiPanel(0L, db.field_t, pe.field_u);

@@ -221,7 +221,7 @@ final class tb extends uj {
               mh.field_a = SecondaryNodeDeque.field_f;
             } else {
               if (var9Lifetime1 == 248) {
-                ke.a(dg.a(false), (byte) 95);
+                ByteStorage.a(dg.a(false), (byte) 95);
                 bh.field_d = kj.field_e;
                 WidgetContainer.g(-17464);
                 vj.field_Q = false;

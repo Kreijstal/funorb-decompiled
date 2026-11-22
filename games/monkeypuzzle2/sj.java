@@ -135,7 +135,7 @@ final class sj {
           for (var6_intLifetime1 = 0; var6_intLifetime1 < eg.field_d.length; var6_intLifetime1++) {
             eg.field_d[var6_intLifetime1].b();
           }
-          ka.field_b = ma.a(param1, "unachieved", 16711680, "basic");
+          ByteStorage.field_b = ma.a(param1, "unachieved", 16711680, "basic");
           aj.field_e = ma.a(param1, "orbcoin", 16711680, "basic");
           ma.a(param1, "locked", 16711680, "basic");
           lb.field_E = lb.a(false, "", param3, "totems");
@@ -261,7 +261,7 @@ final class sj {
             var11_ref_le = var17[var10_intLifetime3];
             wh.a((byte) -114, var11_ref_le);
           }
-          wh.a((byte) -68, ka.field_b);
+          wh.a((byte) -68, ByteStorage.field_b);
           for (var9_intLifetime3 = 0; var9_intLifetime3 < 300; var9_intLifetime3++) {
             sc.field_h[var9_intLifetime3] = pf.a((byte) 125, 16);
           }

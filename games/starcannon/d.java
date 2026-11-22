@@ -515,8 +515,8 @@ final class d {
     final static Object a(boolean param0, byte param1, byte[] param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ij var4 = null;
-        ij stackIn_6_0 = null;
+        DirectByteStorage var4 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -529,8 +529,8 @@ final class d {
           }
           var3_int = 73 % ((58 - param1) / 44);
           if (param2.length > 136) {
-            var4 = new ij();
-            ((kk) ((Object) var4)).a(-5361, param2);
+            var4 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var4)).setBytes(-5361, param2);
             stackIn_6_0 = var4;
             return stackIn_6_0;
           }

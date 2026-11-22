@@ -318,10 +318,10 @@ final class fm {
     }
 
     final static Object a(byte[] param0, int param1, boolean param2) {
-        fc var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        fc stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -334,8 +334,8 @@ final class fm {
             return stackIn_2_0;
           }
           if (param0.length > 136) {
-            var3 = new fc();
-            ((ll) ((Object) var3)).a(110, param0);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(110, param0);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

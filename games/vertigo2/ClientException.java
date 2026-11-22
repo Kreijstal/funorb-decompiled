@@ -38,10 +38,10 @@ final class ClientException extends RuntimeException {
         stackIn_22_2 = (param3) && (!param2) && (ce.field_c);
         ((UiPanel) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
         qo.field_D.field_b.k(0);
-        if (0 != vb.field_j.field_tb) {
+        if (0 != DirectByteStorage.field_j.field_tb) {
           cn.field_v = true;
         }
-        if (0 != b.field_h.field_tb && (vb.field_g ||
+        if (0 != b.field_h.field_tb && (DirectByteStorage.field_g ||
           !(q.field_y <= 0) ||
           !(fn.field_z < 2) &&
           UiPanel.field_eb[12])) {
@@ -165,7 +165,7 @@ final class ClientException extends RuntimeException {
                   var6 = var11_int;
                 }
                 if (var11_int != 0 &&
-                  !vb.field_g) {
+                  !DirectByteStorage.field_g) {
                   var5_int = 1;
                 }
               }
@@ -176,7 +176,7 @@ final class ClientException extends RuntimeException {
                   var7 = var11_intLifetime1;
                 }
                 if (0 != var11_intLifetime1 &&
-                  !vb.field_g) {
+                  !DirectByteStorage.field_g) {
                   var5_int = 1;
                 }
               }
@@ -465,7 +465,7 @@ final class ClientException extends RuntimeException {
                     te.field_D[var28_int] != null) {
                     var31_int = te.field_D[var28_int][var29];
                     if (var31_int != 0 &&
-                      !vb.field_g &&
+                      !DirectByteStorage.field_g &&
                       !var13.field_Zb) {
                       var30 = 1;
                     }
@@ -477,7 +477,7 @@ final class ClientException extends RuntimeException {
                     null != qh.field_e[var28_int]) {
                     var31_intLifetime1 = qh.field_e[var28_int][var29];
                     if (var31_intLifetime1 != 0 &&
-                      !vb.field_g &&
+                      !DirectByteStorage.field_g &&
                       !var13.field_Zb) {
                       var30 = 1;
                     }

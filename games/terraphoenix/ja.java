@@ -159,7 +159,7 @@ final class ja extends IntrusiveNode {
             pj.field_l[0] = 5;
           } else if (2 != pe.field_e) {
             if (3 == pe.field_e) {
-              if (nj.field_l.field_v) {
+              if (DirectByteStorage.field_l.field_v) {
                 var4 = af.a(SecondaryNodeDeque.field_d, da.field_h, -3, kh.field_F, ch.field_c);
               } else {
                 var4 = af.a(ra.field_h, da.field_h, -3, kh.field_F, ch.field_c);

@@ -56,15 +56,15 @@ abstract class ne {
 
     final static void a(int param0, int param1) {
         if (param1 >= 6) {
-          kk.field_a = param0 * 100 / 150;
-          kk.field_c = param0 * 400 / 150;
-          kk.field_e = (param0 << 16) / 150;
+          ByteStorage.field_a = param0 * 100 / 150;
+          ByteStorage.field_c = param0 * 400 / 150;
+          ByteStorage.field_e = (param0 << 16) / 150;
           return;
         }
         field_l = (td) null;
-        kk.field_a = param0 * 100 / 150;
-        kk.field_c = param0 * 400 / 150;
-        kk.field_e = (param0 << 16) / 150;
+        ByteStorage.field_a = param0 * 100 / 150;
+        ByteStorage.field_c = param0 * 400 / 150;
+        ByteStorage.field_e = (param0 << 16) / 150;
     }
 
     abstract void a(int param0, int param1, int param2);

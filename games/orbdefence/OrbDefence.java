@@ -499,7 +499,7 @@ public final class OrbDefence extends NetworkGameClient {
         k.a((byte) -112);
         DelegatingCanvas.a((byte) 3);
         bh.clearStaticReferences(-21000);
-        ll.a(14);
+        ByteStorage.a(14);
         ac.clearStaticReferences();
         da.clearStaticReferences(16);
         ud.clearStaticReferences(true);
@@ -1081,7 +1081,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (va.field_d >= 2 &&
           IterableNodeHashTable.field_a[41]) {
           lb.field_g = 16777215;
-          fc.field_d = true;
+          DirectByteStorage.field_d = true;
         }
         if (!df.field_f) {
           jg.field_n[25] = db.field_c;

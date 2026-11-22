@@ -65,7 +65,7 @@ final class u extends IntrusiveNode {
           var3 = 0;
           while (true) {
             if (var3 >= var2_int) {
-              stackIn_12_0 = fh.field_e;
+              stackIn_12_0 = ByteStorage.field_e;
               return stackIn_12_0;
             }
             var4 = param0.charAt(var3);

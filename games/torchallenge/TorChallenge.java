@@ -1555,7 +1555,7 @@ public final class TorChallenge extends GameClientBase {
                 eb.field_l = kk.b(6, param0 - 6262);
                 if (null != ji.field_m) {
                   SocketConnector.field_a = true;
-                  oi.a(true, true, false);
+                  DirectByteStorage.a(true, true, false);
                 }
                 if (ji.field_m != null) {
                   ji.field_m.c((byte) -66);
@@ -1595,7 +1595,7 @@ public final class TorChallenge extends GameClientBase {
             if (16 <= hk.field_e &&
               bc.field_o == 3 &&
               bb.activeScreenId == 1 &&
-              oi.field_g) {
+              DirectByteStorage.field_g) {
               if (dj.field_Q >= 0 &&
                 ~n.field_jb != ~dj.field_Q) {
                 n.field_jb = dj.field_Q;
@@ -1605,7 +1605,7 @@ public final class TorChallenge extends GameClientBase {
               } else {
                 n.field_jb = 0;
               }
-              oi.field_g = false;
+              DirectByteStorage.field_g = false;
               if (!(kj.field_A >= 0) ||
                 i.field_r == kj.field_A) {
                 i.field_r = 0;
@@ -1948,7 +1948,7 @@ public final class TorChallenge extends GameClientBase {
           aj.clearStaticReferences(0);
           fh.a((byte) -88);
           wi.clearStaticReferences(1);
-          of.a(8727);
+          ByteStorage.a(8727);
           wc.clearStaticReferences((byte) -48);
           nl.clearStaticReferences();
           ei.clearStaticReferences(-113);
@@ -2032,7 +2032,7 @@ public final class TorChallenge extends GameClientBase {
           bl.e(false);
           ce.clearStaticReferences();
           be.clearStaticReferences(3366);
-          oi.d(10166);
+          DirectByteStorage.d(10166);
           fa.b(-3);
           m.a(128);
           uk.d((byte) 50);

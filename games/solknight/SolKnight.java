@@ -109,7 +109,7 @@ public final class SolKnight extends ab {
               if (!RandomAccessCacheFile.b((byte) -104)) {
                 if (IntrusiveNode.b((byte) 89)) {
                   stackIn_55_0 = (dj.field_k != null);
-                  var2_int = rk.a(stackIn_55_0, (byte) 20, (ab) (this));
+                  var2_int = ByteStorage.a(stackIn_55_0, (byte) 20, (ab) (this));
                   if (var2_int != 2364824) {
                     if (1 == var2_int ||
                       2 == var2_int) {
@@ -317,7 +317,7 @@ public final class SolKnight extends ab {
           og.a(65);
           qg.clearStaticReferences(false);
           int var2_int = -89 / ((-28 - param0) / 59);
-          rk.clearStaticReferences((byte) 94);
+          ByteStorage.clearStaticReferences((byte) 94);
           gi.clearStaticReferences();
           hj.clearStaticReferences((byte) -37);
           di.a(7);
@@ -369,7 +369,7 @@ public final class SolKnight extends ab {
           tj.clearStaticReferences();
           fb.a(true);
           vk.c(-14275);
-          f.clearStaticReferences(0);
+          DirectByteStorage.clearStaticReferences(0);
           of.a(1);
           bc.clearStaticReferences(false);
           th.j(114);

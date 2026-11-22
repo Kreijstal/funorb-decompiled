@@ -91,7 +91,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = 127 & dk.field_i + 1;
               if (bg.field_l != var3) {
                 te.field_c[dk.field_i] = -1;
-                hf.field_h[dk.field_i] = (char)var2_int;
+                DirectByteStorage.field_h[dk.field_i] = (char)var2_int;
                 dk.field_i = var3;
               }
             }
@@ -139,7 +139,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = 1 + dk.field_i & 127;
               if (bg.field_l != var3) {
                 te.field_c[dk.field_i] = var2_int;
-                hf.field_h[dk.field_i] = (char)0;
+                DirectByteStorage.field_h[dk.field_i] = (char)0;
                 dk.field_i = var3;
               }
             }

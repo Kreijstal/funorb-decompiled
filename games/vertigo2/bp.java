@@ -31,13 +31,13 @@ final class bp extends TextureOperator {
             if (!nl.a((byte) 107)) {
               bi.c();
               lm.a((byte) 115, 240, 320);
-              dh.a(0, (byte) -97, param2, 0);
+              ByteStorage.a(0, (byte) -97, param2, 0);
             } else {
               if (hn.field_w != 0) {
                 an.a(-1243, param2);
               } else {
                 td.a(param1, false, (byte) -77);
-                dh.a(0, (byte) -11, param2, 0);
+                ByteStorage.a(0, (byte) -11, param2, 0);
               }
             }
           }

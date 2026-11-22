@@ -47,7 +47,7 @@ final class ne extends WidgetContainer implements nc, ij {
           qo.field_D = new lb(SpriteState.field_A, MouseWheelInput.field_k);
           ca.field_h = new UiPanel(0L, (UiPanel) null);
           ca.field_h.b(qo.field_D.field_b, 123);
-          ca.field_h.b(vb.field_j, 123);
+          ca.field_h.b(DirectByteStorage.field_j, 123);
           jr.a(98);
           return;
         }

@@ -266,7 +266,7 @@ abstract class bi extends GameApplet {
               if (k.field_g == 0) {
                 discarded$3 = this.a(false, true, false);
               } else {
-                b.a(-21342, ab.field_d);
+                b.a(-21342, DirectByteStorage.field_d);
               }
             }
           }
@@ -370,7 +370,7 @@ abstract class bi extends GameApplet {
           cd.b(110);
         }
         if (eb.field_A != null) {
-          ab.field_d = eb.field_A.pollRotation(true);
+          DirectByteStorage.field_d = eb.field_A.pollRotation(true);
         }
         if (param0 != 99) {
           this.field_v = -121;
@@ -786,7 +786,7 @@ abstract class bi extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = MonkeyPuzzle2.field_F ? 1 : 0;
-          var4 = sg.a(fe.field_h, param2, -128, ab.field_d);
+          var4 = sg.a(fe.field_h, param2, -128, DirectByteStorage.field_d);
           if (!param1) {
             bi.d((byte) -64);
           }

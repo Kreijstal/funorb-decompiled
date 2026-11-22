@@ -8,11 +8,11 @@ final class w {
     static String field_d;
 
     final static Object a(byte[] param0, byte param1, boolean param2) {
-        f var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        f stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -29,8 +29,8 @@ final class w {
             return stackIn_5_0;
           }
           if (param0.length > 136) {
-            var3 = new f();
-            ((rk) ((Object) var3)).a(0, param0);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(0, param0);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }

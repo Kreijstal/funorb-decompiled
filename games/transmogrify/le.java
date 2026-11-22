@@ -227,7 +227,7 @@ class le extends lj {
 
     final static String h(int param0) {
         if (rh.field_v == of.field_d) {
-          return hf.field_g;
+          return DirectByteStorage.field_g;
         }
         if (!dl.field_l.b(-26753)) {
           return dl.field_l.a((byte) 85);

@@ -10,7 +10,7 @@ final class jf {
     static String field_d;
     static String[] field_c;
 
-    final static byte[] a(boolean param0, boolean param1, Object param2) {
+    final static byte[] extractBytes(boolean param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -32,7 +32,7 @@ final class jf {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = tj.a(-117, var3);
+            stackIn_7_0 = tj.copyBytes(-117, var3);
             return stackIn_7_0;
           }
           if (param1) {

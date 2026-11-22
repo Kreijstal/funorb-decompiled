@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf extends dj {
+final class DirectByteStorage extends ByteStorage {
     static String field_g;
     static int field_j;
     static char[] field_k;
     static char[] field_h;
-    private java.nio.ByteBuffer field_e;
+    private java.nio.ByteBuffer buffer;
     static int[][] field_f;
     static int field_i;
     static Sprite[] field_d;
@@ -28,27 +28,27 @@ final class hf extends dj {
         field_f = (int[][]) null;
     }
 
-    final byte[] a(boolean param0) {
+    final byte[] getBytes(boolean param0) {
         byte[] var3 = null;
         if (!param0) {
-          var3 = new byte[this.field_e.capacity()];
+          var3 = new byte[this.buffer.capacity()];
           byte[] var2 = var3;
-          this.field_e.position(0);
-          this.field_e.get(var3);
+          this.buffer.position(0);
+          this.buffer.get(var3);
           return var3;
         }
         return (byte[]) null;
     }
 
-    hf() {
+    DirectByteStorage() {
     }
 
-    final void a(byte[] param0, byte param1) {
+    final void setBytes(byte[] param0, byte param1) {
         try {
           int var3_int = -63 % ((-59 - param1) / 55);
-          this.field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_e.position(0);
-          this.field_e.put(param0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
+          this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

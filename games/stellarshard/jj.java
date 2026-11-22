@@ -103,7 +103,7 @@ final class jj {
               var4 = this.field_u.a((byte) -65, this.field_G[var3], this.field_i[var3]);
             }
             if (var4 != null) {
-              this.field_c[var3] = sa.a(this.field_c[var3], 15);
+              this.field_c[var3] = DirectByteStorage.a(this.field_c[var3], 15);
               this.field_j[var3] = var4;
             } else {
               var2 = 0;
@@ -206,7 +206,7 @@ final class jj {
           for (var5 = 0; var5 < this.field_d; var5++) {
             dupTemp$0 = var4 + param0.readUnsignedByte(4);
             var4 = dupTemp$0;
-            this.field_f[var5] = sa.a(dupTemp$0, 255);
+            this.field_f[var5] = DirectByteStorage.a(dupTemp$0, 255);
           }
           this.field_l = new int[256];
           this.field_y = new byte[256][];
@@ -257,7 +257,7 @@ final class jj {
               for (var8 = 0; var8 < 96; var8++) {
                 dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte(4);
                 var4Lifetime1 = dupTemp$1;
-                this.field_C[var6Lifetime1][var8] = var5Lifetime4 + sa.a(255, dupTemp$1);
+                this.field_C[var6Lifetime1][var8] = var5Lifetime4 + DirectByteStorage.a(255, dupTemp$1);
               }
               this.field_A[var6Lifetime1] = param0.readUnsignedByte(4);
               var8Lifetime1 = param0.readUnsignedByte(4);
@@ -286,7 +286,7 @@ final class jj {
               for (var11Lifetime1 = 0; var8Lifetime1 > var11Lifetime1; var11Lifetime1++) {
                 dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte(4);
                 var4Lifetime1Lifetime2 = dupTemp$6;
-                this.field_I[var6Lifetime1][var11Lifetime1] = sa.a(255, dupTemp$6);
+                this.field_I[var6Lifetime1][var11Lifetime1] = DirectByteStorage.a(255, dupTemp$6);
               }
               array$7 = new int[var9];
               this.field_x[var6Lifetime1] = array$7;
@@ -305,7 +305,7 @@ final class jj {
               for (var11Lifetime3 = 0; var11Lifetime3 < var9; var11Lifetime3++) {
                 dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte(4);
                 var4Lifetime1Lifetime4 = dupTemp$11;
-                this.field_g[var6Lifetime1][var11Lifetime3] = sa.a(dupTemp$11, 255);
+                this.field_g[var6Lifetime1][var11Lifetime3] = DirectByteStorage.a(dupTemp$11, 255);
               }
               this.field_b[var6Lifetime1] = param0.readUnsignedShort((byte) 85);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {

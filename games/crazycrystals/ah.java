@@ -471,7 +471,7 @@ final class ah {
             this.field_j = this.field_j + 1;
             this.field_c[fieldTemp$1] = (byte) 0;
           }
-          eg.a(this.field_l, 0, this.field_c, 32, 32);
+          eg.copyByteRange(this.field_l, 0, this.field_c, 32, 32);
           this.a(18236);
           var4_int = 0;
           var5 = param2;

@@ -112,7 +112,7 @@ public final class Transmogrify extends SessionGameApplet {
             }
             else {
               if (!ll.c(true)) {
-                if (!dj.b(-1)) {
+                if (!ByteStorage.b(-1)) {
                   if (tl.field_d < 169) {
                     tl.field_d = tl.field_d + GameApplet.field_f;
                     if (169 <= tl.field_d) {
@@ -155,7 +155,7 @@ public final class Transmogrify extends SessionGameApplet {
                       GzipDecompressor.b(5);
                     }
                   } else {
-                    dj.a(true, true);
+                    ByteStorage.a(true, true);
                   }
                   if (!ll.c(true)) {
                     ej.field_l[be.field_q].a(true, 256);
@@ -295,7 +295,7 @@ public final class Transmogrify extends SessionGameApplet {
             if (1 != lb.field_i) {
               if (2 == lb.field_i) {
                 if (IntrusiveDeque.b((byte) 104)) {
-                  be.field_q = hf.field_i;
+                  be.field_q = DirectByteStorage.field_i;
                 } else {
                   kb.field_n = l.a((byte) 12, 4);
                   ug.b(true);
@@ -304,7 +304,7 @@ public final class Transmogrify extends SessionGameApplet {
                 }
                 if (be.field_q == -2) {
                   be.field_q = 0;
-                  dj.a(true, true);
+                  ByteStorage.a(true, true);
                 }
                 lb.field_i = 3;
                 qf.field_d = be.field_q;
@@ -618,7 +618,7 @@ public final class Transmogrify extends SessionGameApplet {
               sb.c(0, 0, sb.field_c, sb.field_g, 0, var3Lifetime1);
             }
           }
-          if (dj.b(-1) &&
+          if (ByteStorage.b(-1) &&
             !ll.c(true)) {
             if (null != ub.field_c) {
               stackIn_88_0 = true;
@@ -699,19 +699,19 @@ public final class Transmogrify extends SessionGameApplet {
                         if (kk.field_a.a((byte) -118) &&
                           kk.field_a.c(32031)) {
                           if (!li.field_k.a((byte) 126, "arialish12")) {
-                            vf.a((byte) -128, 52.0f, ee.a(dj.field_a, (byte) 102, i.field_c, li.field_k, "arialish12"));
+                            vf.a((byte) -128, 52.0f, ee.a(ByteStorage.field_a, (byte) 102, i.field_c, li.field_k, "arialish12"));
                             return false;
                           }
                           if (!SessionGameApplet.field_y.a((byte) 118, "arialish12")) {
-                            vf.a((byte) -125, 52.0f, ee.a(dj.field_a, (byte) 106, i.field_c, li.field_k, "arialish12"));
+                            vf.a((byte) -125, 52.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, li.field_k, "arialish12"));
                             return false;
                           }
                           if (!li.field_k.a((byte) -13, "arialish20")) {
-                            vf.a((byte) 83, 53.0f, ee.a(dj.field_a, (byte) 106, i.field_c, li.field_k, "arialish20"));
+                            vf.a((byte) 83, 53.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, li.field_k, "arialish20"));
                             return false;
                           }
                           if (!SessionGameApplet.field_y.a((byte) 117, "arialish20")) {
-                            vf.a((byte) -123, 53.0f, ee.a(dj.field_a, (byte) 123, i.field_c, li.field_k, "arialish20"));
+                            vf.a((byte) -123, 53.0f, ee.a(ByteStorage.field_a, (byte) 123, i.field_c, li.field_k, "arialish20"));
                             return false;
                           }
                           if (l.field_a.a((byte) -124) &&
@@ -739,7 +739,7 @@ public final class Transmogrify extends SessionGameApplet {
                           vf.a((byte) -4, 54.0f, MouseWheelInput.a(l.field_a, (byte) -38));
                           return false;
                         }
-                        vf.a((byte) 11, 51.0f, ee.a(dj.field_a, (byte) 75, i.field_c, kk.field_a, ""));
+                        vf.a((byte) 11, 51.0f, ee.a(ByteStorage.field_a, (byte) 75, i.field_c, kk.field_a, ""));
                         return false;
                       }
                       vf.a((byte) -128, 50.0f, ee.a(vg.field_a, (byte) 73, aa.field_f, oi.field_g, ""));
@@ -928,7 +928,7 @@ public final class Transmogrify extends SessionGameApplet {
             rk.field_r[5] = rk.field_r[1];
             wl.field_K = pc.a("", "tile", oi.field_g, param0 + 149);
             MouseWheelInput.field_a = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkles");
-            hf.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkle_array");
+            DirectByteStorage.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkle_array");
             jh.field_h = new Sprite(640, 480);
             jh.field_h.e();
             uj.field_e.f(0, 0);
@@ -1245,7 +1245,7 @@ public final class Transmogrify extends SessionGameApplet {
           SocketConnector.clearStaticReferences(0);
           rl.clearStaticReferences(7);
           db.a(8192);
-          dj.clearStaticReferences(48);
+          ByteStorage.clearStaticReferences(48);
           gf.clearStaticReferences();
           re.clearStaticReferences((byte) -37);
           ch.a(807);
@@ -1314,7 +1314,7 @@ public final class Transmogrify extends SessionGameApplet {
           AchievementUnlockEvent.a((byte) -110);
           mf.clearStaticReferences(true);
           ProxySocketConnector.d(-114);
-          hf.clearStaticReferences((byte) 118);
+          DirectByteStorage.clearStaticReferences((byte) 118);
           jh.clearStaticReferences(-1);
           te.clearStaticReferences((byte) 41);
           vl.i(2147483647);

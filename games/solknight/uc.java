@@ -92,7 +92,7 @@ final class uc {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_3_0 = rk.field_b;
+            stackIn_3_0 = ByteStorage.field_b;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -126,10 +126,10 @@ final class uc {
               stackIn_18_0 = qf.field_f;
               return stackIn_18_0;
             }
-            stackIn_13_0 = rk.field_b;
+            stackIn_13_0 = ByteStorage.field_b;
             return stackIn_13_0;
           }
-          stackIn_8_0 = rk.field_b;
+          stackIn_8_0 = ByteStorage.field_b;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

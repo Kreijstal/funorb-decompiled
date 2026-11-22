@@ -28,7 +28,7 @@ final class gs {
         field_l = null;
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] copyBytes(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

@@ -159,7 +159,7 @@ final class ia extends IntrusiveNode {
         int var5Lifetime1Lifetime1;
         var11 = Transmogrify.field_A ? 1 : 0;
         try {
-          hf.field_j = hf.field_j + 1;
+          DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
           gh.field_l = gh.field_l + 1;
           SecondaryNodeDeque.field_g = eh.totalScore;
           nc.field_t = nc.field_t + jk.field_B;
@@ -527,7 +527,7 @@ final class ia extends IntrusiveNode {
               if (tg.field_d == 1 &&
                 !WordDictionary.field_e) {
                 qf.field_e = qf.field_e ^ 5 << bc.field_b;
-                hf.field_j = hf.field_j + ol.field_b;
+                DirectByteStorage.field_j = DirectByteStorage.field_j + ol.field_b;
                 vh.field_n = vh.field_n + ol.field_b;
                 nc.field_t = nc.field_t + nk.field_c;
                 bc.field_b = bc.field_b ^ 5 << bc.field_b;
@@ -583,7 +583,7 @@ final class ia extends IntrusiveNode {
                   sg.field_d != null) {
                   sg.field_d.letter = (char)SessionGameApplet.field_l;
                   if (!dk.field_b) {
-                    hf.field_j = hf.field_j + 1;
+                    DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
                     nc.field_t = nc.field_t + 1;
                     dk.field_b = true;
                   }

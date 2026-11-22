@@ -188,7 +188,7 @@ public final class MonkeyPuzzle2 extends bi {
           ii.clearStaticReferences((byte) 120);
           vd.a(112);
           ie.clearStaticReferences((byte) -107);
-          ka.a(-123);
+          ByteStorage.a(-123);
           tg.clearStaticReferences();
           l.a(0);
           i.clearStaticReferences(true);
@@ -450,7 +450,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           boolean decompiledFrameRemainder1 = true;
           if (!WeightedObjectCache.field_h) {
-            b.a(-21342, ab.field_d);
+            b.a(-21342, DirectByteStorage.field_d);
             WeightedObjectCache.field_h = this.b((byte) 36, true);
           } else {
             if (this.m(param0 ^ 15245)) {
@@ -459,7 +459,7 @@ public final class MonkeyPuzzle2 extends bi {
                 stackIn_33_0 = (null != ba.field_f);
                 var2_int = ff.a(stackIn_33_0, -32323, (bi) (this));
                 if (var2_int == 2364824) {
-                  ab.e(-18753);
+                  DirectByteStorage.e(-18753);
                 } else {
                   if ((var2_int == 1 ||
                     var2_int == 2)) {

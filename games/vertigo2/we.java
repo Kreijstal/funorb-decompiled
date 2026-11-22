@@ -84,7 +84,7 @@ final class we extends UiWidget {
         }
         wj.b(76);
         ea.b((byte) 111);
-        vb.d(65);
+        DirectByteStorage.d(65);
         if (cd.b(-27440)) {
           uh.field_Wb.writeCipheredByte(1, param0 ^ -1733144137);
           lf.d(61, 0);

@@ -550,17 +550,17 @@ final class BufferedCacheFile {
               var10 = (int)Math.sqrt((double)(var8 * var8 + var9 * var9));
               m.a(var2Lifetime2 + 25, var5, var4, (byte) -6, var9 * var3 / var10, var3 * var8 / var10);
             }
-            if (f.field_d > 0) {
-              f.field_d = f.field_d - 1;
+            if (DirectByteStorage.field_d > 0) {
+              DirectByteStorage.field_d = DirectByteStorage.field_d - 1;
             }
             vk.b((byte) -126);
             if (pg.field_e &&
-              f.field_d > 0) {
+              DirectByteStorage.field_d > 0) {
               pg.field_e = false;
             }
             if (pg.field_e &&
               0 < uf.field_p) {
-              f.field_d = 250;
+              DirectByteStorage.field_d = 250;
               uf.field_p = uf.field_p - 1;
               pg.field_e = false;
             }
@@ -603,7 +603,7 @@ final class BufferedCacheFile {
                 PacketBuffer.a(true, 1, -128);
                 continue;
               }
-              f.field_d = 0;
+              DirectByteStorage.field_d = 0;
               of.field_g = 500;
             }
           }

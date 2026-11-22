@@ -509,7 +509,7 @@ final class ResourceArchive {
             0 != param2[1] ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var35 = of.a((byte) 125, true, this.field_c[param3]);
+            var35 = ByteStorage.a((byte) 125, true, this.field_c[param3]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -517,7 +517,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = of.a((byte) -109, false, this.field_c[param3]);
+            var9 = ByteStorage.a((byte) -109, false, this.field_c[param3]);
           }
           try {
             var36 = pg.a(param1 - 1048551, var9);
@@ -782,7 +782,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_p[param1][param3] != null) {
-            var7 = of.a((byte) -115, false, this.field_p[param1][param3]);
+            var7 = ByteStorage.a((byte) -115, false, this.field_p[param1][param3]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

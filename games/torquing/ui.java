@@ -31,7 +31,7 @@ final class ui extends IntrusiveNode {
     final static byte[] a(boolean param0, Object param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        dp var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
@@ -57,11 +57,11 @@ final class ui extends IntrusiveNode {
             stackIn_11_0 = (byte[]) null;
             return stackIn_11_0;
           }
-          if (!(param1 instanceof dp)) {
+          if (!(param1 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (dp) (param1);
-          stackIn_14_0 = var4.a(-21056);
+          var4 = (ByteStorage) (param1);
+          stackIn_14_0 = var4.getBytes(-21056);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -149,7 +149,7 @@ final class fd {
             this.field_i = this.field_i + 1;
             this.field_f[fieldTemp$1] = (byte) 0;
           }
-          lj.a(this.field_c, 0, this.field_f, 32, 32);
+          lj.copyByteRange(this.field_c, 0, this.field_f, 32, 32);
           this.a(param2 + 6701);
           var4_int = 0;
           var5 = param1;

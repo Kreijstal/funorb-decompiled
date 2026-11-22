@@ -51,13 +51,13 @@ final class fa extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = stellarshard.field_B;
         try {
-          var4 = (u) (i.field_c.b(-79));
+          var4 = (u) (ByteStorage.field_c.b(-79));
           if (param1 > -49) {
             return;
           }
           while (var4 != null) {
             ii.a(var4, param0, (byte) 107);
-            var4 = (u) (i.field_c.b((byte) 95));
+            var4 = (u) (ByteStorage.field_c.b((byte) 95));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

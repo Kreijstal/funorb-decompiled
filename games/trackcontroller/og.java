@@ -46,7 +46,7 @@ final class og extends jj implements ButtonListener {
     }
 
     final void u(int param0) {
-        this.a(true, wg.a((byte) -123, 248, pi.field_h), 7);
+        this.a(true, wg.a((byte) -123, 248, DirectByteStorage.field_h), 7);
         int var2 = 58 % ((param0 + 61) / 57);
     }
 
@@ -71,7 +71,7 @@ final class og extends jj implements ButtonListener {
                 if (!param0) {
                   db.b(true);
                 }
-                var4 = pi.field_h;
+                var4 = DirectByteStorage.field_h;
                 this.field_lb = true;
               }
             } else {

@@ -668,7 +668,7 @@ class UiComponent extends IntrusiveNode {
           ok.a(param9, param7, (byte) -126);
           tc.a(param19, param17, (byte) 27, param20, param0, param8);
           ef.a(param4, param2, (byte) 69, param10);
-          oi.a(param3, param13, true, param1);
+          DirectByteStorage.a(param3, param13, true, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

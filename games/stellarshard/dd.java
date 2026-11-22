@@ -88,7 +88,7 @@ final class dd {
           if (!tl.a(param2, (byte) -5, param0, param4)) {
             return null;
           }
-          stackIn_6_0 = sa.a(2376, param3.a(param4, 16, param0));
+          stackIn_6_0 = DirectByteStorage.a(2376, param3.a(param4, 16, param0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

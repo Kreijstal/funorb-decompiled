@@ -778,7 +778,7 @@ final class wj extends fb {
             var5 = o.field_h.b(var14, vh.field_i);
             var6Lifetime1 = o.field_h.b(var14, vh.field_i, o.field_h.field_N + o.field_h.field_r);
             var7Lifetime1 = (vh.field_i - var5) / 2 + kk.field_o;
-            var8 = (i.field_a - var6Lifetime1) / 2 + RasterBuffer.field_d;
+            var8 = (ByteStorage.field_a - var6Lifetime1) / 2 + RasterBuffer.field_d;
             var7Lifetime1 -= 3;
             var5 += 6;
             var6Lifetime1 += 6;
@@ -822,7 +822,7 @@ final class wj extends fb {
             IntrusiveDequeCursor.field_f.b();
             var9 = new Sprite(IntrusiveDequeCursor.field_f.field_w, IntrusiveDequeCursor.field_f.field_x);
             var9.e();
-            o.field_h.a(var14, kk.field_o, RasterBuffer.field_d, vh.field_i, i.field_a, 16777215, -1, 1, 1, o.field_h.field_N + o.field_h.field_r);
+            o.field_h.a(var14, kk.field_o, RasterBuffer.field_d, vh.field_i, ByteStorage.field_a, 16777215, -1, 1, 1, o.field_h.field_N + o.field_h.field_r);
             IntrusiveDeque.a(var9, 1, 0, var9.field_x, 3, 0, var9.field_w, true);
             IntrusiveDequeCursor.field_f.e();
             var9.e(0, 0);

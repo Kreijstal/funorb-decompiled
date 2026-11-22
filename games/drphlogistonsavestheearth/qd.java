@@ -31,7 +31,7 @@ final class qd extends ma implements ke {
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] copyBytes(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -44,11 +44,11 @@ final class qd extends ma implements ke {
         try {
           if (param0 != 111) {
             var4 = (byte[]) null;
-            qd.a((byte) 94, (byte[]) null);
+            qd.copyBytes((byte) 94, (byte[]) null);
           }
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          kg.a(param1, 0, var3, 0, var2_int);
+          kg.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

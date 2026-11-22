@@ -638,7 +638,7 @@ final class kk {
         }
         if ((decompiledNaturalLoopExit0) &&
           (~this.field_e == ~this.field_g)) {
-          this.field_c.a(this.a(-6, p.field_a, ei.field_a), this.a(-6, ab.field_e, qg.field_c), true);
+          this.field_c.a(this.a(-6, p.field_a, ei.field_a), this.a(-6, DirectByteStorage.field_e, qg.field_c), true);
           if (this.field_c.field_a != -1) {
             this.a(this.field_c.field_a, true, 59);
           }

@@ -2296,7 +2296,7 @@ final class nk {
               }
             } else {
               jk.field_j[-1 + jk.field_j.length] = 0;
-              fc.field_d = true;
+              DirectByteStorage.field_d = true;
               this.field_s.a((byte) -6, 1000);
             }
             break;
@@ -2304,7 +2304,7 @@ final class nk {
           MouseInputListener.a(mh.field_a[1], (byte) -11);
         }
         if (!this.field_s.b(-59)) {
-          fc.field_d = true;
+          DirectByteStorage.field_d = true;
         }
         var3Lifetime2 = 0;
         if (param0 != 28803) {
@@ -2319,7 +2319,7 @@ final class nk {
           if (var19 == 0) {
             if (stackIn_276_0 &&
               va.field_d >= 2) {
-              fc.field_d = true;
+              DirectByteStorage.field_d = true;
               var4_ref_pd.field_o = 0;
             }
             if (var4_ref_pd.field_o > 0) {
@@ -3019,7 +3019,7 @@ final class nk {
     final void c(int param0) {
         if (mm.field_A == null &&
           wf.field_c.field_e[0].field_d > 0 &&
-          !fc.field_d) {
+          !DirectByteStorage.field_d) {
           if (0 == this.field_b) {
             mm.field_A = new vg(0, 65535, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }

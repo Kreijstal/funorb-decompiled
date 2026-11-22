@@ -101,7 +101,7 @@ final class MenuScreen {
                           if (kb.field_b == 7) {
                             pk.a((byte) -96, 3, true);
                           }
-                          f.field_d = 0;
+                          DirectByteStorage.field_d = 0;
                           ImageProducerRasterBuffer.field_m = 0;
                           FullscreenFocusCanvas.field_b = 10;
                           mf.field_A = 0;
@@ -123,7 +123,7 @@ final class MenuScreen {
                       }
                       if (var5 == 18) {
                         if (!(!this.field_f.f(0))) {
-                          f.field_d = 0;
+                          DirectByteStorage.field_d = 0;
                           ClientException.field_b = 0;
                           kh.field_d = 255;
                           pg.field_e = true;

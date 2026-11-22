@@ -50,7 +50,7 @@ final class cf extends IntrusiveNode {
 
     final static void a(int param0, int param1) {
         vj.field_a = id.field_a[param1];
-        dj.field_c = je.field_b[param1];
+        ByteStorage.field_c = je.field_b[param1];
         od.field_h = ei.field_a[param1];
         if (param0 != 1856642) {
           cf.a(96, -117);
@@ -76,7 +76,7 @@ final class cf extends IntrusiveNode {
     final static byte[] a(Object param0, boolean param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        dj var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_5_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
@@ -94,11 +94,11 @@ final class cf extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof dj)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (dj) (param0);
-            stackIn_14_0 = var4.a(false);
+            var4 = (ByteStorage) (param0);
+            stackIn_14_0 = var4.getBytes(false);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param0);

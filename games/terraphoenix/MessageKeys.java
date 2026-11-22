@@ -2908,7 +2908,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mb_exclusive_2", false);
                 if (null != var2) {
-                  nj.field_k = ll.a(param0 ^ 3, var2);
+                  DirectByteStorage.field_k = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("me_extra_benefits", false);
                 if (var2 != null) {

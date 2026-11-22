@@ -106,7 +106,7 @@ final class ResourceArchive {
             param0[1] != 0 ||
             param0[2] != 0 ||
             param0[3] != 0)) {
-            var35 = MouseWheelInput.a(false, this.field_g[param1], true);
+            var35 = MouseWheelInput.extractBytes(false, this.field_g[param1], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -114,7 +114,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = MouseWheelInput.a(false, this.field_g[param1], false);
+            var9 = MouseWheelInput.extractBytes(false, this.field_g[param1], false);
           }
           try {
             var36 = qi.a(var9, -22518);
@@ -224,7 +224,7 @@ final class ResourceArchive {
                   var18 = var17;
                 }
                 if (this.field_h == 0) {
-                  var7[var18] = kh.a(false, var39[var17], -137);
+                  var7[var18] = kh.storeBytes(false, var39[var17], -137);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -237,7 +237,7 @@ final class ResourceArchive {
               var11 = var34[0];
             }
             if (this.field_h == 0) {
-              var7[var11] = kh.a(false, var36, -137);
+              var7[var11] = kh.storeBytes(false, var36, -137);
               return true;
             }
             var7[var11] = var43;
@@ -751,7 +751,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_l[param3][param0] != null) {
-            var7 = MouseWheelInput.a(false, this.field_l[param3][param0], false);
+            var7 = MouseWheelInput.extractBytes(false, this.field_l[param3][param0], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -896,7 +896,7 @@ final class ResourceArchive {
           this.b((String) null, ((int[]) (((Object[]) (this.field_g[3]))[7]))[1]);
         }
         if (!this.field_d) {
-          this.field_g[param1] = kh.a(false, this.field_i.b(param1, false), -137);
+          this.field_g[param1] = kh.storeBytes(false, this.field_i.b(param1, false), -137);
         } else {
           this.field_g[param1] = this.field_i.b(param1, false);
         }

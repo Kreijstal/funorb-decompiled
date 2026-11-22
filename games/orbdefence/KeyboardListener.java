@@ -118,7 +118,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
               var3 = 127 & 1 + uf.field_a;
               if (var3 != md.field_g) {
                 g.field_g[uf.field_a] = var2_int;
-                ll.field_b[uf.field_a] = (char)0;
+                ByteStorage.field_b[uf.field_a] = (char)0;
                 uf.field_a = var3;
               }
             }
@@ -171,7 +171,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
               var3 = 127 & 1 + uf.field_a;
               if (var3 != md.field_g) {
                 g.field_g[uf.field_a] = -1;
-                ll.field_b[uf.field_a] = (char)var2_int;
+                ByteStorage.field_b[uf.field_a] = (char)var2_int;
                 uf.field_a = var3;
               }
             }

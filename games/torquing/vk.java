@@ -96,7 +96,7 @@ final class vk extends am {
           this.a((byte) 37, 0);
           return var12;
         }
-        var4 = -2048 + dp.field_a[param1];
+        var4 = -2048 + ByteStorage.field_a[param1];
         for (var5 = 0; ci.field_c > var5; var5++) {
           var6 = IntrusiveNode.field_b[var5] - 2048;
           var7 = var6 + this.field_u;

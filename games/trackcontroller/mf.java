@@ -160,7 +160,7 @@ final class mf {
 
     final static Archive a(int param0, byte param1) {
         int var2 = 19 / ((param1 - 24) / 42);
-        return fh.a(true, param0, false, false, 1, 9);
+        return ByteStorage.a(true, param0, false, false, 1, 9);
     }
 
     static {

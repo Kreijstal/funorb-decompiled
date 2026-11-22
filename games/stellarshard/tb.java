@@ -111,7 +111,7 @@ abstract class tb extends ui {
         }
         ul.field_B.e(-90 + (param2 + this.field_p), 10 + param1);
         tf.a(-10 + this.field_p, 2, qh.field_a, 5 + param2, param1 + 35);
-        tf.a(this.field_p, 2, sa.field_g, param2, -22 + (param1 + this.field_t));
+        tf.a(this.field_p, 2, DirectByteStorage.field_g, param2, -22 + (param1 + this.field_t));
         var4Lifetime2 = -79 + this.field_t;
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;

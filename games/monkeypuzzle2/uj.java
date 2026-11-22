@@ -342,7 +342,7 @@ final class uj implements Runnable {
         byte[] var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
-        ka var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
@@ -366,11 +366,11 @@ final class uj implements Runnable {
             return stackIn_7_0;
           }
           var3_int = 89 / ((param0 - 0) / 38);
-          if (!(param1 instanceof ka)) {
+          if (!(param1 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (ka) (param1);
-          stackIn_12_0 = var4.d(-13913);
+          var4 = (ByteStorage) (param1);
+          stackIn_12_0 = var4.getBytes(-13913);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

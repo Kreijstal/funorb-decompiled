@@ -1932,7 +1932,7 @@ public final class StarCannon extends ag {
         af.field_y = od.a("", jg.field_F, "b12", param1 + 1443, cb.field_c);
         a.field_b = od.a("", jg.field_F, "font", -1, cb.field_c);
         var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", jg.field_F);
-        kk.a(vk.a("", 59, "mbfg", jg.field_F), -60, wc.field_g);
+        ByteStorage.a(vk.a("", 59, "mbfg", jg.field_F), -60, wc.field_g);
         ta.a(vk.a("", param1 ^ -1510, "mb_logo", jg.field_F), param1 + 1319);
         ed.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, vk.a("", 60, "mbpb", jg.field_F));
         te.a(126, var20);
@@ -2557,9 +2557,9 @@ public final class StarCannon extends ag {
         }
         if (gf.field_b > 0 &&
           rj.field_h < 3) {
-          kk.field_d = kk.field_d - 1;
-          if (kk.field_d <= 0) {
-            kk.field_d = 50;
+          ByteStorage.field_d = ByteStorage.field_d - 1;
+          if (ByteStorage.field_d <= 0) {
+            ByteStorage.field_d = 50;
             gf.field_b = gf.field_b - 1;
             var3_ref_bfLifetime1 = new bf(fi.field_e.field_f, -32, fi.field_e.field_f, 10);
             if (gf.field_b == 0) {
@@ -3308,7 +3308,7 @@ public final class StarCannon extends ag {
         hi.clearStaticReferences((byte) 56);
         te.a(-1);
         dl.a(true);
-        kk.a((byte) 63);
+        ByteStorage.a((byte) 63);
         nk.clearStaticReferences();
         fk.clearStaticReferences(-4918);
         va.b((byte) 80);
@@ -3359,7 +3359,7 @@ public final class StarCannon extends ag {
         h.clearStaticReferences();
         li.clearStaticReferences(-23);
         se.c((byte) -2);
-        ij.clearStaticReferences(20756);
+        DirectByteStorage.clearStaticReferences(20756);
         ve.a(32729);
         tj.g(-123);
         af.g(9392);

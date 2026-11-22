@@ -235,7 +235,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "create_ineligible");
                 if (var2 != null) {
-                  pi.field_h = ta.a(32200, var2);
+                  DirectByteStorage.field_h = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "usernameprompt");
                 if (var2 != null) {
@@ -1203,7 +1203,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "changedisplayname");
                 if (var2 != null) {
-                  fh.field_d = ta.a(32200, var2);
+                  ByteStorage.field_d = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "returntohomepage");
                 if (var2 != null) {

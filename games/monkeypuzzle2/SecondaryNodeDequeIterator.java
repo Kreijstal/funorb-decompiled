@@ -55,13 +55,13 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           return null;
         }
-        if (cj.field_e > ka.field_a) {
+        if (cj.field_e > ByteStorage.field_a) {
           if (param0 > -125) {
             return (String) null;
           }
           return null;
         }
-        if (BufferedSocket.field_a + cj.field_e > ka.field_a) {
+        if (BufferedSocket.field_a + cj.field_e > ByteStorage.field_a) {
           return pf.field_b;
         }
         if (param0 > -125) {

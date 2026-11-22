@@ -175,7 +175,7 @@ final class dn extends ii implements jo, vg {
         kh.field_n = 0;
     }
 
-    final static byte[] a(Object param0, boolean param1, byte param2) {
+    final static byte[] extractBytes(Object param0, boolean param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
@@ -191,7 +191,7 @@ final class dn extends ii implements jo, vg {
         try {
           if (param2 != 48) {
             var4 = (Object) null;
-            dn.a((Object) null, true, (byte) 79);
+            dn.extractBytes((Object) null, true, (byte) 79);
           }
           if (param0 == null) {
             stackIn_4_0 = null;
@@ -210,7 +210,7 @@ final class dn extends ii implements jo, vg {
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          stackIn_8_0 = gg.a((byte) -92, var3);
+          stackIn_8_0 = gg.copyBytes((byte) -92, var3);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

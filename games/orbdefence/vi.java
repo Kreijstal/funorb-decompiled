@@ -279,7 +279,7 @@ class vi extends s {
             return null;
           }
           if (param0 == -13449) {
-            stackIn_7_0 = fc.a(param1.b(param4, false, param3), -62);
+            stackIn_7_0 = DirectByteStorage.a(param1.b(param4, false, param3), -62);
             return stackIn_7_0;
           }
           stackIn_5_0 = (sc) null;

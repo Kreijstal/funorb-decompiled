@@ -390,15 +390,15 @@ class rc extends DualLinkNode {
           ac.field_d = ac.field_d ^ 32;
           if (!t.a(0, var4, 121) &&
             0 < fg.field_N &&
-            0 < of.field_f &&
+            0 < ByteStorage.field_f &&
             !gh.field_x &&
-            qk.field_lb >= of.field_f + fg.field_N) {
+            qk.field_lb >= ByteStorage.field_f + fg.field_N) {
             hf.a(255, param0 + 110, 0);
           }
           if (!t.a(1, var4, 117) &&
-            of.field_f > 0 &&
+            ByteStorage.field_f > 0 &&
             !gh.field_x &&
-            wj.field_a >= of.field_f &&
+            wj.field_a >= ByteStorage.field_f &&
             ea.field_e > 0) {
             hf.a(254, 89, 1);
           }

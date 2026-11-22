@@ -59,9 +59,9 @@ abstract class ei extends kh {
         var5 = Terraphoenix.field_V;
         try {
           uj.field_d = uj.field_d + 65536;
-          while (65536 <= li.a(uj.field_d, -117, ke.field_e)) {
+          while (65536 <= li.a(uj.field_d, -117, ByteStorage.field_e)) {
             ClientException.field_e = ClientException.field_e + 1;
-            uj.field_d = uj.field_d - ke.field_e;
+            uj.field_d = uj.field_d - ByteStorage.field_e;
           }
           if (param0 > -100) {
             field_R = false;
@@ -76,21 +76,21 @@ abstract class ei extends kh {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (ke.field_f > vi.field_p) {
+            if (ByteStorage.field_f > vi.field_p) {
               vi.field_p = vi.field_p + 1;
-              if (ke.field_c < vi.field_p && (null == rk.field_f ||
+              if (ByteStorage.field_c < vi.field_p && (null == rk.field_f ||
                 null == rk.field_f[vi.field_q])) {
                 vi.field_p = vi.field_p - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (vi.field_p >= ke.field_f &&
+                if (vi.field_p >= ByteStorage.field_f &&
                   rk.field_f[(1 + vi.field_q) % var2_int] == null) {
                   vi.field_p = vi.field_p - 1;
                 }
               }
             }
-            if (ke.field_f <= vi.field_p) {
+            if (ByteStorage.field_f <= vi.field_p) {
               hd.field_h = vi.field_q;
               if (ve.field_c) {
                 vi.field_q = vi.field_q + 1;
@@ -103,9 +103,9 @@ abstract class ei extends kh {
                   vi.field_q = vi.field_q + var2_int;
                 }
               }
-              vi.field_p = vi.field_p - ke.field_f;
+              vi.field_p = vi.field_p - ByteStorage.field_f;
             }
-            if (ke.field_c < vi.field_p) {
+            if (ByteStorage.field_c < vi.field_p) {
               ve.field_c = true;
             }
           }
@@ -119,26 +119,26 @@ abstract class ei extends kh {
                 mm.field_c < 269) {
                 var4 = 1;
                 ve.field_c = false;
-                vi.field_p = ke.field_f;
+                vi.field_p = ByteStorage.field_f;
               }
               if (586 < mm.field_c &&
                 ig.field_a.field_r + 586 > mm.field_c) {
                 ve.field_c = true;
-                vi.field_p = ke.field_f;
+                vi.field_p = ByteStorage.field_f;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              ke.field_c < vi.field_p &&
+              ByteStorage.field_c < vi.field_p &&
               MouseWheelInput.field_b > var3 &&
               ig.field_a.field_t + var3 > MouseWheelInput.field_b) {
               if (ef.field_j > 269 - ig.field_a.field_r &&
                 269 > ef.field_j) {
-                vi.field_p = ke.field_c;
+                vi.field_p = ByteStorage.field_c;
               }
               if (586 < ef.field_j &&
                 ef.field_j < ig.field_a.field_r + 586) {
-                vi.field_p = ke.field_c;
+                vi.field_p = ByteStorage.field_c;
               }
             }
           }
@@ -429,7 +429,7 @@ abstract class ei extends kh {
     final static byte[] a(Object param0, boolean param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        ke var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
@@ -447,11 +447,11 @@ abstract class ei extends kh {
             return null;
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof ke)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (ke) (param0);
-            stackIn_14_0 = var4.c(false);
+            var4 = (ByteStorage) (param0);
+            stackIn_14_0 = var4.getBytes(false);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param0);
@@ -497,9 +497,9 @@ abstract class ei extends kh {
         var5 = Terraphoenix.field_V;
         try {
           uj.field_d = uj.field_d + 65536;
-          while (65536 <= li.a(uj.field_d, -117, ke.field_e)) {
+          while (65536 <= li.a(uj.field_d, -117, ByteStorage.field_e)) {
             ClientException.field_e = ClientException.field_e + 1;
-            uj.field_d = uj.field_d - ke.field_e;
+            uj.field_d = uj.field_d - ByteStorage.field_e;
           }
           if (param0 > -100) {
             field_R = false;
@@ -514,21 +514,21 @@ abstract class ei extends kh {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (ke.field_f > vi.field_p) {
+            if (ByteStorage.field_f > vi.field_p) {
               vi.field_p = vi.field_p + 1;
-              if (ke.field_c < vi.field_p && (null == rk.field_f ||
+              if (ByteStorage.field_c < vi.field_p && (null == rk.field_f ||
                 null == rk.field_f[vi.field_q])) {
                 vi.field_p = vi.field_p - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (vi.field_p >= ke.field_f &&
+                if (vi.field_p >= ByteStorage.field_f &&
                   rk.field_f[(1 + vi.field_q) % var2_int] == null) {
                   vi.field_p = vi.field_p - 1;
                 }
               }
             }
-            if (ke.field_f <= vi.field_p) {
+            if (ByteStorage.field_f <= vi.field_p) {
               hd.field_h = vi.field_q;
               if (ve.field_c) {
                 vi.field_q = vi.field_q + 1;
@@ -541,9 +541,9 @@ abstract class ei extends kh {
                   vi.field_q = vi.field_q + var2_int;
                 }
               }
-              vi.field_p = vi.field_p - ke.field_f;
+              vi.field_p = vi.field_p - ByteStorage.field_f;
             }
-            if (ke.field_c < vi.field_p) {
+            if (ByteStorage.field_c < vi.field_p) {
               ve.field_c = true;
             }
           }
@@ -557,26 +557,26 @@ abstract class ei extends kh {
                 mm.field_c < 269) {
                 var4 = 1;
                 ve.field_c = false;
-                vi.field_p = ke.field_f;
+                vi.field_p = ByteStorage.field_f;
               }
               if (586 < mm.field_c &&
                 ig.field_a.field_r + 586 > mm.field_c) {
                 ve.field_c = true;
-                vi.field_p = ke.field_f;
+                vi.field_p = ByteStorage.field_f;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              ke.field_c < vi.field_p &&
+              ByteStorage.field_c < vi.field_p &&
               MouseWheelInput.field_b > var3 &&
               ig.field_a.field_t + var3 > MouseWheelInput.field_b) {
               if (ef.field_j > 269 - ig.field_a.field_r &&
                 269 > ef.field_j) {
-                vi.field_p = ke.field_c;
+                vi.field_p = ByteStorage.field_c;
               }
               if (586 < ef.field_j &&
                 ef.field_j < ig.field_a.field_r + 586) {
-                vi.field_p = ke.field_c;
+                vi.field_p = ByteStorage.field_c;
               }
             }
           }

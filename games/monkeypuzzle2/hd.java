@@ -98,7 +98,7 @@ final class hd extends a {
             stackIn_13_0 = this.field_t;
           }
           var7 = stackIn_13_0;
-          ab.a(param1.field_l, var7, this.field_r, (-this.field_r[0].field_n + param1.field_p >> 1) + param1.field_e + param2, param3 + param1.field_r, (byte) 42);
+          DirectByteStorage.a(param1.field_l, var7, this.field_r, (-this.field_r[0].field_n + param1.field_p >> 1) + param1.field_e + param2, param3 + param1.field_r, (byte) 42);
           stackIn_16_0 = (!param0) ? 7105644 : 16777215;
           var8 = stackIn_16_0;
           if (param4 <= 19) {

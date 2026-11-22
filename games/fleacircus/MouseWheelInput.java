@@ -23,7 +23,7 @@ abstract class MouseWheelInput {
 
     abstract void attach(int param0, java.awt.Component param1);
 
-    final static byte[] a(boolean param0, Object param1, boolean param2) {
+    final static byte[] extractBytes(boolean param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;

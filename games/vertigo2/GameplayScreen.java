@@ -1502,7 +1502,7 @@ final class GameplayScreen {
             mc.field_e = 0;
             lj.field_k = 0;
             sl.field_l = 0;
-            dh.a(this.field_D.field_e, this.field_D.field_l[0].field_H, true);
+            ByteStorage.a(this.field_D.field_e, this.field_D.field_l[0].field_H, true);
             gj.a((byte) -66, false, am.field_n, 20);
           }
           if (this.field_A) {

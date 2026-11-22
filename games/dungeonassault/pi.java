@@ -446,7 +446,7 @@ final class pi {
           var26 = new byte[oi.field_J.position];
           var21 = var26;
           var11 = var21;
-          cj.a(oi.field_J.payload, 0, var26, 0, oi.field_J.position);
+          cj.copyByteRange(oi.field_J.payload, 0, var26, 0, oi.field_J.position);
           stackIn_40_0 = var11;
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

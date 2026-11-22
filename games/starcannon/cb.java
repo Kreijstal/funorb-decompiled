@@ -171,7 +171,7 @@ final class cb {
                 fa.a(mc.field_f, var6_intLifetime1, og.field_f, PacketBuffer.field_i, ta.field_e, 12);
               }
             }
-            kk.a(var5, 42);
+            ByteStorage.a(var5, 42);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
             var8 = ed.field_p;

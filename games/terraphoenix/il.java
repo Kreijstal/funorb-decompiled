@@ -203,7 +203,7 @@ final class il {
             var3 = (Archive) null;
             il.a((String) null, (String) null, (Archive) null, -14);
           }
-          stackIn_3_0 = nj.field_i.a("", param1, -21653);
+          stackIn_3_0 = DirectByteStorage.field_i.a("", param1, -21653);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

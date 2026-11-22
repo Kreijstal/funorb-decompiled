@@ -46,7 +46,7 @@ final class og {
           if (ob.field_H != 2) {
             return 0;
           }
-          if (!ll.a(this.field_h, -153798488)) {
+          if (!ByteStorage.a(this.field_h, -153798488)) {
             return 0;
           }
           return 1;
@@ -58,7 +58,7 @@ final class og {
         if (ob.field_H != 2) {
           return 0;
         }
-        if (!ll.a(this.field_h, -153798488)) {
+        if (!ByteStorage.a(this.field_h, -153798488)) {
           return 0;
         }
         return 1;

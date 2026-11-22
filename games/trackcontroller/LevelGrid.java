@@ -218,7 +218,7 @@ abstract class LevelGrid {
         if (param1 > -89) {
           return (th) null;
         }
-        fh.field_b.addLast((byte) -122, var2);
+        ByteStorage.field_b.addLast((byte) -122, var2);
         nk.a(param0, -108);
         return var2;
     }

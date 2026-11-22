@@ -66,10 +66,10 @@ final class mb extends IntrusiveNode {
           var1 = eb.field_d.j(param0 ^ 5607);
         }
         if (var1.length() == 0) {
-          var1 = vb.c(-15381);
+          var1 = DirectByteStorage.c(-15381);
         }
         if (var1.length() == 0) {
-          var1 = dh.field_a;
+          var1 = ByteStorage.field_a;
         }
         if (param0 != 0) {
           field_s = -111;

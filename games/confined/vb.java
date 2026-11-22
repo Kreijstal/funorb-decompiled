@@ -9,7 +9,7 @@ final class vb {
     static long field_d;
     static double[] field_a;
 
-    final static byte[] a(boolean param0, int param1, Object param2) {
+    final static byte[] extractBytes(boolean param0, int param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -32,7 +32,7 @@ final class vb {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = ug.a(var3, 194);
+            stackIn_7_0 = ug.copyBytes(var3, 194);
             return stackIn_7_0;
           }
           if (param2 instanceof ByteStorage) {

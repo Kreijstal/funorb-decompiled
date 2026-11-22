@@ -10,12 +10,12 @@ abstract class tf {
         int var1 = ok.a((byte) 125);
         int var2 = kb.b((byte) 98);
         if (param0 == 0) {
-          eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (sa.field_h << 1), rg.field_F - sa.field_h, -PacketBuffer.field_q + od.field_r);
+          eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), rg.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
           kl.a(true);
           return;
         }
         tf.b(-92);
-        eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (sa.field_h << 1), rg.field_F - sa.field_h, -PacketBuffer.field_q + od.field_r);
+        eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), rg.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
         kl.a(true);
     }
 
@@ -29,7 +29,7 @@ abstract class tf {
     final static byte[] a(int param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        i var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_14_0 = null;
@@ -45,11 +45,11 @@ abstract class tf {
             tf.b(-31);
           }
           if (!(param2 instanceof byte[])) {
-            if (!(param2 instanceof i)) {
+            if (!(param2 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (i) (param2);
-            stackIn_14_0 = var4.a(-27);
+            var4 = (ByteStorage) (param2);
+            stackIn_14_0 = var4.getBytes(-27);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param2);

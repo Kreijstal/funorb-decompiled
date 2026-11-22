@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa extends i {
+final class DirectByteStorage extends ByteStorage {
     static int field_h;
     static Sprite[] field_g;
     static int field_i;
-    private java.nio.ByteBuffer field_f;
+    private java.nio.ByteBuffer buffer;
 
-    final byte[] a(int param0) {
-        byte[] var4 = new byte[this.field_f.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var4 = new byte[this.buffer.capacity()];
         byte[] var2 = var4;
-        this.field_f.position(0);
+        this.buffer.position(0);
         int var3 = 12 / ((param0 - 74) / 44);
-        this.field_f.get(var4);
+        this.buffer.get(var4);
         return var4;
     }
 
@@ -21,24 +21,24 @@ final class sa extends i {
           return el.field_E == dj.field_a ? true : false;
         }
         byte[] var2 = (byte[]) null;
-        sa.a(53, (byte[]) null);
+        DirectByteStorage.a(53, (byte[]) null);
         return el.field_E == dj.field_a ? true : false;
     }
 
     public static void c(int param0) {
         if (param0 != -17002) {
-          sa.a((byte) -29);
+          DirectByteStorage.a((byte) -29);
           field_g = null;
           return;
         }
         field_g = null;
     }
 
-    final void a(byte[] param0, byte param1) {
+    final void setBytes(byte[] param0, byte param1) {
         try {
-          this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_f.position(0);
-          this.field_f.put(param0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
+          this.buffer.put(param0);
           int var3_int = -42 % ((param1 - 19) / 40);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -84,7 +84,7 @@ final class sa extends i {
         return param0 & param1;
     }
 
-    sa() {
+    DirectByteStorage() {
     }
 
     static {

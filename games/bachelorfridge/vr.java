@@ -199,7 +199,7 @@ final class vr {
                 param0[3] != 0);
             }
             if (decompiledFrameRemainder0) {
-              var35 = tb.a(true, (byte) 105, this.field_c[param3]);
+              var35 = tb.extractBytes(true, (byte) 105, this.field_c[param3]);
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
@@ -208,7 +208,7 @@ final class vr {
             }
           }
           if (decompiledFrameRemainder1) {
-            var9 = tb.a(false, (byte) 81, this.field_c[param3]);
+            var9 = tb.extractBytes(false, (byte) 81, this.field_c[param3]);
           }
           try {
             var36 = SpecialOrder.a(-124, var9);
@@ -318,7 +318,7 @@ final class vr {
                   var18 = var34[var17];
                 }
                 if (this.field_e == 0) {
-                  var7[var18] = ug.a(false, var39[var17], -19524);
+                  var7[var18] = ug.storeBytes(false, var39[var17], -19524);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -334,7 +334,7 @@ final class vr {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = ug.a(false, var43, -19524);
+            var7[var11] = ug.storeBytes(false, var43, -19524);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -615,7 +615,7 @@ final class vr {
             throw new RuntimeException("");
           }
           if (null != this.field_d[param0][param3]) {
-            var7 = tb.a(false, (byte) 96, this.field_d[param0][param3]);
+            var7 = tb.extractBytes(false, (byte) 96, this.field_d[param0][param3]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -726,7 +726,7 @@ final class vr {
         if (this.field_g) {
           this.field_c[param0] = this.field_a.a((byte) 112, param0);
         } else {
-          this.field_c[param0] = ug.a(false, this.field_a.a((byte) 101, param0), -19524);
+          this.field_c[param0] = ug.storeBytes(false, this.field_a.a((byte) 101, param0), -19524);
         }
     }
 

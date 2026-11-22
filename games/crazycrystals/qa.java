@@ -47,7 +47,7 @@ final class qa {
             if (this.field_n != -1L &&
               this.field_g >= this.field_n &&
               (long)this.field_e + this.field_n >= this.field_g + (long)param3) {
-              eg.a(this.field_a, (int)(-this.field_n + this.field_g), param1, param2, param3);
+              eg.copyByteRange(this.field_a, (int)(-this.field_n + this.field_g), param1, param2, param3);
               this.field_g = this.field_g + (long)param3;
               return;
             }
@@ -60,7 +60,7 @@ final class qa {
               if (param3 < var9_int) {
                 var9_int = param3;
               }
-              eg.a(this.field_b, (int)(-this.field_k + this.field_g), param1, param2, var9_int);
+              eg.copyByteRange(this.field_b, (int)(-this.field_k + this.field_g), param1, param2, var9_int);
               param2 = param2 + var9_int;
               this.field_g = this.field_g + (long)var9_int;
               param3 = param3 - var9_int;
@@ -91,7 +91,7 @@ final class qa {
               if (this.field_f < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_f;
               }
-              eg.a(this.field_b, 0, param1, param2, var9_intLifetime1Lifetime1);
+              eg.copyByteRange(this.field_b, 0, param1, param2, var9_intLifetime1Lifetime1);
               this.field_g = this.field_g + (long)var9_intLifetime1Lifetime1;
               param3 = param3 - var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -134,7 +134,7 @@ final class qa {
               if (var9 > -1L &&
                 var11 > var9) {
                 var13 = (int)(var11 - var9);
-                eg.a(this.field_a, (int)(-this.field_n + var9), param1, var7 + (int)(var9 - var5_long), var13);
+                eg.copyByteRange(this.field_a, (int)(-this.field_n + var9), param1, var7 + (int)(var9 - var5_long), var13);
                 if (this.field_g < var11) {
                   param3 = (int)((long)param3 - (var11 - this.field_g));
                   this.field_g = var11;
@@ -210,7 +210,7 @@ final class qa {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            eg.a(this.field_a, (int)(var2 - this.field_n), this.field_b, (int)(var2 - this.field_k), var6);
+            eg.copyByteRange(this.field_a, (int)(var2 - this.field_n), this.field_b, (int)(var2 - this.field_k), var6);
           }
           this.field_n = -1L;
           this.field_e = 0;
@@ -334,7 +334,7 @@ final class qa {
             if (this.field_n != -1L &&
               (this.field_g + (long)param3) > (this.field_n + (long)this.field_a.length)) {
               var5_int = (int)(-this.field_g + this.field_n + (long)this.field_a.length);
-              eg.a(param1, param2, this.field_a, (int)(this.field_g - this.field_n), var5_int);
+              eg.copyByteRange(param1, param2, this.field_a, (int)(this.field_g - this.field_n), var5_int);
               this.field_g = this.field_g + (long)var5_int;
               param3 = param3 - var5_int;
               param2 = param2 + var5_int;
@@ -349,7 +349,7 @@ final class qa {
               if (this.field_n == -1L) {
                 this.field_n = this.field_g;
               }
-              eg.a(param1, param2, this.field_a, (int)(-this.field_n + this.field_g), param3);
+              eg.copyByteRange(param1, param2, this.field_a, (int)(-this.field_n + this.field_g), param3);
               this.field_g = this.field_g + (long)param3;
               if ((long)this.field_e < (-this.field_n + this.field_g)) {
                 this.field_e = (int)(-this.field_n + this.field_g);
@@ -388,7 +388,7 @@ final class qa {
             if (var6 > -1L &&
               var8 > var6) {
               var10 = (int)(var8 - var6);
-              eg.a(param1, (int)(-this.field_g + ((long)param2 + var6)), this.field_b, (int)(-this.field_k + var6), var10);
+              eg.copyByteRange(param1, (int)(-this.field_g + ((long)param2 + var6)), this.field_b, (int)(-this.field_k + var6), var10);
             }
             this.field_g = this.field_g + (long)param3;
             return;

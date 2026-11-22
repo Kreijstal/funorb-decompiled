@@ -58,9 +58,9 @@ abstract class WidgetWrapper extends UiWidget implements dq {
     }
 
     final static Object a(boolean param0, boolean param1, byte[] param2) {
-        vb var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        vb stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         Object stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
@@ -73,8 +73,8 @@ abstract class WidgetWrapper extends UiWidget implements dq {
             return null;
           }
           if (136 < param2.length) {
-            var3 = new vb();
-            ((dh) ((Object) var3)).a(param2, true);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param2, true);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

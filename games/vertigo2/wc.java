@@ -1869,7 +1869,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_account_success", false);
                 if (null != var2) {
-                  dh.field_c = in.a(0, var2);
+                  ByteStorage.field_c = in.a(0, var2);
                 }
                 var2 = tk.a("invalid_name", false);
                 if (null != var2) {
@@ -2077,7 +2077,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("unpacking_animations", false);
                 if (null != var2) {
-                  dh.field_f = in.a(param0 ^ 0, var2);
+                  ByteStorage.field_f = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("unpacking_toolkit", false);
                 if (var2 != null) {
@@ -2267,7 +2267,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("singleplayergame", false);
                 if (var2 != null) {
-                  dh.field_b = in.a(param0 ^ 0, var2);
+                  ByteStorage.field_b = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("returntogame", false);
                 if (null != var2) {
@@ -3046,7 +3046,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("DEFAULT_PLAYER_NAME", false);
                 if (null != var2) {
-                  dh.field_a = in.a(0, var2);
+                  ByteStorage.field_a = in.a(0, var2);
                 }
                 var2 = tk.a("mustlogin1", false);
                 if (null != var2) {

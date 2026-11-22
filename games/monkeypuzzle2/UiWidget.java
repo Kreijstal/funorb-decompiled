@@ -639,12 +639,12 @@ class UiWidget extends IntrusiveNode {
           this.field_s = (String) null;
           var5 = this.b((byte) 74) ? 1 : 0;
           if (param3) {
-            if (0 != ab.field_d &&
+            if (0 != DirectByteStorage.field_d &&
               var5 != 0) {
-              this.a(p.field_a, this, ei.field_a, param1, param0, ab.field_d, -118);
+              this.a(p.field_a, this, ei.field_a, param1, param0, DirectByteStorage.field_d, -118);
             }
             if (kc.field_d != 0) {
-              if (!this.a(param1, qg.field_c, kc.field_d, -1625, this, ab.field_e, param0)) {
+              if (!this.a(param1, qg.field_c, kc.field_d, -1625, this, DirectByteStorage.field_e, param0)) {
                 if (var5 != 0) {
                   this.e(13104);
                   if (var7 != 0) {
@@ -693,13 +693,13 @@ class UiWidget extends IntrusiveNode {
             ef.a(107, this.a((byte) 54));
             return param3;
           }
-          if (0 != ab.field_d &&
+          if (0 != DirectByteStorage.field_d &&
             var5 != 0) {
-            this.a(p.field_a, this, ei.field_a, param1, param0, ab.field_d, -118);
+            this.a(p.field_a, this, ei.field_a, param1, param0, DirectByteStorage.field_d, -118);
           }
           boolean decompiledFrameRemainder0 = true;
           if (kc.field_d != 0) {
-            if ((!this.a(param1, qg.field_c, kc.field_d, -1625, this, ab.field_e, param0)) &&
+            if ((!this.a(param1, qg.field_c, kc.field_d, -1625, this, DirectByteStorage.field_e, param0)) &&
               (decompiledFrameRemainder0 = (var5 != 0))) {
               this.e(13104);
             }
@@ -747,12 +747,12 @@ class UiWidget extends IntrusiveNode {
             ef.a(107, this.a((byte) 54));
             return param3;
           }
-          if (0 != ab.field_d &&
+          if (0 != DirectByteStorage.field_d &&
             var5Lifetime1 != 0) {
-            this.a(p.field_a, this, ei.field_a, param1, param0, ab.field_d, -118);
+            this.a(p.field_a, this, ei.field_a, param1, param0, DirectByteStorage.field_d, -118);
           }
           if (kc.field_d != 0) {
-            if (!this.a(param1, qg.field_c, kc.field_d, -1625, this, ab.field_e, param0)) {
+            if (!this.a(param1, qg.field_c, kc.field_d, -1625, this, DirectByteStorage.field_e, param0)) {
               this.e(13104);
             }
             param3 = false;
@@ -779,7 +779,7 @@ class UiWidget extends IntrusiveNode {
           ef.a(107, this.a((byte) 54));
           return param3;
         }
-        if (0 != ab.field_d) {
+        if (0 != DirectByteStorage.field_d) {
           if (var5Lifetime1 == 0) {
             if (kc.field_d == 0) {
               if (SecondaryNodeDeque.field_a != 0) {
@@ -805,7 +805,7 @@ class UiWidget extends IntrusiveNode {
               ef.a(107, this.a((byte) 54));
               return param3;
             }
-            if (this.a(param1, qg.field_c, kc.field_d, -1625, this, ab.field_e, param0)) {
+            if (this.a(param1, qg.field_c, kc.field_d, -1625, this, DirectByteStorage.field_e, param0)) {
               param3 = false;
             } else {
             }
@@ -832,7 +832,7 @@ class UiWidget extends IntrusiveNode {
             ef.a(107, this.a((byte) 54));
             return param3;
           }
-          this.a(p.field_a, this, ei.field_a, param1, param0, ab.field_d, -118);
+          this.a(p.field_a, this, ei.field_a, param1, param0, DirectByteStorage.field_d, -118);
         }
         regionExit1: {
           if (kc.field_d == 0) {
@@ -851,7 +851,7 @@ class UiWidget extends IntrusiveNode {
             break regionExit1;
           }
           regionExit2: {
-            if (this.a(param1, qg.field_c, kc.field_d, -1625, this, ab.field_e, param0)) {
+            if (this.a(param1, qg.field_c, kc.field_d, -1625, this, DirectByteStorage.field_e, param0)) {
               param3 = false;
             } else {
               if (var5Lifetime1 != 0) {

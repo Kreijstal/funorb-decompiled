@@ -68,7 +68,7 @@ final class kc {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 113);
             }
-            var14 = (th) (fh.field_b.first(2));
+            var14 = (th) (ByteStorage.field_b.first(2));
             if (var14 == null) {
               GameKeyHandler.a((byte) 116);
               return;
@@ -93,7 +93,7 @@ final class kc {
             GameKeyHandler.a((byte) 120);
             return;
           }
-          var15 = (th) (fh.field_b.first(2));
+          var15 = (th) (ByteStorage.field_b.first(2));
           if (var15 == null) {
             GameKeyHandler.a((byte) 125);
             return;

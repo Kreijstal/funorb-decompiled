@@ -26,12 +26,12 @@ abstract class hi extends wb implements jb {
           }
           var6 = cd.field_w;
           synchronized (var6) {
-            if (ll.field_a == param0) {
+            if (ByteStorage.field_a == param0) {
               return;
             }
-            ll.field_a = param0;
-            if (ll.field_a != null) {
-              ml.field_c.a(param2, ll.field_a, param5, param4, param3, -107);
+            ByteStorage.field_a = param0;
+            if (ByteStorage.field_a != null) {
+              ml.field_c.a(param2, ByteStorage.field_a, param5, param4, param3, -107);
             }
           }
           return;

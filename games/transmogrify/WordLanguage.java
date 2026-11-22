@@ -282,9 +282,9 @@ final class WordLanguage {
           this.field_h = (String) (var11);
           this.field_j = (String) (var5);
           var28 = (CharSequence) ((Object) ("flag_" + (String) (var5)));
-          this.field_a = pc.a("", dj.a(var28, (byte) -123), param0, -124);
+          this.field_a = pc.a("", ByteStorage.a(var28, (byte) -123), param0, -124);
           if (var6 != null) {
-            stackIn_54_1 = am.a(dj.a((CharSequence) (var6), (byte) -121), param0, (byte) 72, param1, "");
+            stackIn_54_1 = am.a(ByteStorage.a((CharSequence) (var6), (byte) -121), param0, (byte) 72, param1, "");
           } else {
             stackIn_54_1 = IntrusiveNode.field_d;
           }

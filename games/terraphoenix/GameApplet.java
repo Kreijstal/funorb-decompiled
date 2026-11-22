@@ -326,7 +326,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < bb.field_d)) {
                       this.b(0);
-                      GameKeyHandler.a(nj.field_l, false, ae.field_G);
+                      GameKeyHandler.a(DirectByteStorage.field_l, false, ae.field_G);
                       break;
                     }
                     this.e(8028);
@@ -471,9 +471,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != nj.field_l) {
+          if (null != DirectByteStorage.field_l) {
             try {
-              nj.field_l.c(-7538);
+              DirectByteStorage.field_l.c(-7538);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -784,9 +784,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ve.field_b = param3;
               IndexedSpriteState.field_b = dg.a(false);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param0, true);
-              nj.field_l = dupTemp$0;
+              DirectByteStorage.field_l = dupTemp$0;
               d.field_K = dupTemp$0;
-              var8 = nj.field_l.requestThread((Runnable) (this), (byte) -21, 1);
+              var8 = DirectByteStorage.field_l.requestThread((Runnable) (this), (byte) -21, 1);
               while (true) {
                 if (var8.status == 0) {
                   gi.a((byte) -56, 10L);

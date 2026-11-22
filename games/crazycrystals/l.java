@@ -17,7 +17,7 @@ abstract class l {
         }
     }
 
-    final static byte[] a(byte param0, boolean param1, Object param2) {
+    final static byte[] extractBytes(byte param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -47,7 +47,7 @@ abstract class l {
           }
           var3 = (byte[]) (param2);
           if (param1) {
-            stackIn_11_0 = sm.a(30, var3);
+            stackIn_11_0 = sm.copyBytes(30, var3);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;

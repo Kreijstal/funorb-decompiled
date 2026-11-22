@@ -147,7 +147,7 @@ final class oe extends fj implements ij {
               }
             }
           } else {
-            var4 = dh.field_c;
+            var4 = ByteStorage.field_c;
           }
           var5 = new rh((fj) (this), sg.field_a, var4);
           if (!param0.field_a) {

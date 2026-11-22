@@ -138,7 +138,7 @@ final class mi {
             param1[1] != 0 ||
             0 != param1[2] ||
             param1[3] != 0)) {
-            var36 = vb.a(true, 6, this.field_d[param0]);
+            var36 = vb.extractBytes(true, 6, this.field_d[param0]);
             var26 = var36;
             var10 = var26;
             var27 = new PacketBuffer(var36);
@@ -146,7 +146,7 @@ final class mi {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var10 = vb.a(false, 6, this.field_d[param0]);
+            var10 = vb.extractBytes(false, 6, this.field_d[param0]);
           }
           try {
             var37 = tm.a(119, var10);
@@ -206,7 +206,7 @@ final class mi {
                     var22 = var35[var21];
                   }
                   if (param3 == var22) {
-                    lj.a(var44, var18, var45, var15Lifetime1, var20);
+                    lj.copyByteRange(var44, var18, var45, var15Lifetime1, var20);
                     var15Lifetime1 = var15Lifetime1 + var20;
                   }
                   var18 = var18 + var20;
@@ -244,7 +244,7 @@ final class mi {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
                   var19 = var19 + var30.readInt((byte) 59);
-                  lj.a(var44, var17, var40[var20], var39[var20], var19);
+                  lj.copyByteRange(var44, var17, var40[var20], var39[var20], var19);
                   var15_ref_int__[var20] = var15_ref_int__[var20] + var19;
                   var17 = var17 + var19;
                 }
@@ -258,7 +258,7 @@ final class mi {
                 if (this.field_k != 0) {
                   var8[var19] = var40[var18];
                 } else {
-                  var8[var19] = ug.a(127, false, var40[var18]);
+                  var8[var19] = ug.storeBytes(127, false, var40[var18]);
                 }
               }
             }
@@ -272,7 +272,7 @@ final class mi {
               var8[var12] = var37;
               return true;
             }
-            var8[var12] = ug.a(125, false, var44);
+            var8[var12] = ug.storeBytes(125, false, var44);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -451,7 +451,7 @@ final class mi {
 
     private final synchronized void c(int param0, int param1) {
         if (!this.field_e) {
-          this.field_d[param0] = ug.a(126, false, this.field_i.a(param0, 0));
+          this.field_d[param0] = ug.storeBytes(126, false, this.field_i.a(param0, 0));
         } else {
           this.field_d[param0] = this.field_i.a(param0, 0);
         }
@@ -566,7 +566,7 @@ final class mi {
             throw new RuntimeException("");
           }
           if (this.field_h[param2][param1] != null) {
-            var7 = vb.a(false, 6, this.field_h[param2][param1]);
+            var7 = vb.extractBytes(false, 6, this.field_h[param2][param1]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

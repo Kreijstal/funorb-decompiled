@@ -261,7 +261,7 @@ final class MovingBlock extends IntrusiveNode {
           }
           var9Lifetime3 = 77 / ((param5 - 31) / 47);
           if (jc.field_a == sf.field_D &&
-            fh.a(520)) {
+            ByteStorage.a(520)) {
             if (255 == uk.field_c) {
               var10_ref_String = ne.field_a.readOptionalString(19016);
               if (var10_ref_String != null) {
@@ -322,7 +322,7 @@ final class MovingBlock extends IntrusiveNode {
     final static byte[] a(boolean param0, int param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        fh var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         byte[] stackIn_10_0 = null;
@@ -342,11 +342,11 @@ final class MovingBlock extends IntrusiveNode {
             return (byte[]) (stackIn_5_0);
           }
           if (!(param2 instanceof byte[])) {
-            if (!(param2 instanceof fh)) {
+            if (!(param2 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (fh) (param2);
-            stackIn_15_0 = var4.b((byte) -2);
+            var4 = (ByteStorage) (param2);
+            stackIn_15_0 = var4.getBytes((byte) -2);
             return stackIn_15_0;
           }
           var3 = (byte[]) (param2);

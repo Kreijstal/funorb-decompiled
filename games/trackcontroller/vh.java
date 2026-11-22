@@ -332,10 +332,10 @@ abstract class vh extends DualLinkNode {
 
     final static Archive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 == 98) {
-          return fh.a(param4, param0, param2, false, param3, -122);
+          return ByteStorage.a(param4, param0, param2, false, param3, -122);
         }
         field_q = true;
-        return fh.a(param4, param0, param2, false, param3, -122);
+        return ByteStorage.a(param4, param0, param2, false, param3, -122);
     }
 
     final static void a(String param0, int param1, String param2) {

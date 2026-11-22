@@ -11,7 +11,7 @@ final class vb {
         if (param2 < 81) {
           return;
         }
-        hf.field_i = param0;
+        DirectByteStorage.field_i = param0;
     }
 
     static {

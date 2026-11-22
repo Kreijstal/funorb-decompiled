@@ -14,10 +14,10 @@ final class kk {
           return -1;
         }
         if (param1 < qk.field_i) {
-          if (param1 < nj.field_j) {
+          if (param1 < DirectByteStorage.field_j) {
             return -1;
           }
-          if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
+          if (param1 >= IntrusiveNode.field_f.field_r + DirectByteStorage.field_j) {
             return -1;
           }
           if (param2 < GameShell.field_C) {
@@ -29,10 +29,10 @@ final class kk {
           return -1;
         }
         if (qk.field_i + IntrusiveNode.field_f.field_r <= param1) {
-          if (param1 < nj.field_j) {
+          if (param1 < DirectByteStorage.field_j) {
             return -1;
           }
-          if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
+          if (param1 >= IntrusiveNode.field_f.field_r + DirectByteStorage.field_j) {
             return -1;
           }
           if (param2 < GameShell.field_C) {
@@ -47,10 +47,10 @@ final class kk {
           IntrusiveNode.field_f.field_t + sl.field_d > param2) {
           return 0;
         }
-        if (param1 < nj.field_j) {
+        if (param1 < DirectByteStorage.field_j) {
           return -1;
         }
-        if (param1 >= IntrusiveNode.field_f.field_r + nj.field_j) {
+        if (param1 >= IntrusiveNode.field_f.field_r + DirectByteStorage.field_j) {
           return -1;
         }
         if (param2 < GameShell.field_C) {
@@ -63,9 +63,9 @@ final class kk {
     }
 
     final static void a(int param0, int param1) {
-        ke.field_e = (param0 << 16) / 150;
-        ke.field_c = param1 * param0 / 150;
-        ke.field_f = param0 * 400 / 150;
+        ByteStorage.field_e = (param0 << 16) / 150;
+        ByteStorage.field_c = param1 * param0 / 150;
+        ByteStorage.field_f = param0 * 400 / 150;
     }
 
     public static void a(byte param0) {

@@ -852,8 +852,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           try {
             try {
               if (ib.field_l != null) {
-                rk.field_c = rk.field_c + 1;
-                if (rk.field_c >= 3) {
+                ByteStorage.field_c = ByteStorage.field_c + 1;
+                if (ByteStorage.field_c >= 3) {
                   this.a("alreadyloaded", -1);
                   return;
                 }

@@ -65,12 +65,12 @@ final class wl {
             }
             if (!gh.field_x) {
               if (o.field_l <= 0) {
-                of.a(0, 0, (byte) 90, true, 0);
+                ByteStorage.a(0, 0, (byte) 90, true, 0);
               } else {
-                of.a(0, 0, (byte) 104, true, 2);
+                ByteStorage.a(0, 0, (byte) 104, true, 2);
               }
             } else {
-              of.a(0, 0, (byte) 55, true, 1);
+              ByteStorage.a(0, 0, (byte) 55, true, 1);
             }
             if (fa.field_g >= 2) {
               var8 = "FPS:" + oh.field_e;
@@ -220,7 +220,7 @@ final class wl {
             if (!GameClientBase.p(-114)) {
               this.c((byte) -39);
             }
-            oi.a(true, true, true);
+            DirectByteStorage.a(true, true, true);
             rc.c((byte) -82);
             qh.d(true);
             sd.a(126);
@@ -361,7 +361,7 @@ final class wl {
           BufferedSocket.field_p.field_n = true;
         }
         if (nj.field_c[82] ||
-          nj.field_c[of.field_d]) {
+          nj.field_c[ByteStorage.field_d]) {
           BufferedSocket.field_p.field_ib = true;
         }
         if (this.field_f &&
@@ -383,7 +383,7 @@ final class wl {
             hk.field_b = false;
             eb.field_n = false;
           }
-          oi.a(false, true, true);
+          DirectByteStorage.a(false, true, true);
           rc.c((byte) -82);
           qh.d(true);
           sd.a(126);
@@ -455,7 +455,7 @@ final class wl {
         if (gh.field_x &&
           bi.field_f) {
           bi.field_f = false;
-          oi.a(false, true, true);
+          DirectByteStorage.a(false, true, true);
           rc.c((byte) -82);
           if (var2 != 0 &&
             !GameClientBase.p(-95)) {

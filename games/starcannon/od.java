@@ -120,7 +120,7 @@ class od extends hh {
           pa.field_L = param1;
           if (StarCannon.field_z != -1) {
             if (StarCannon.field_z == 7) {
-              ij.a(0, param2);
+              DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
               fg.field_a[pa.field_L].b(param2, 0);
@@ -133,7 +133,7 @@ class od extends hh {
           } else {
             cd.field_c = 25;
             if (StarCannon.field_z == 7) {
-              ij.a(0, param2);
+              DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
               fg.field_a[pa.field_L].b(param2, 0);
@@ -150,7 +150,7 @@ class od extends hh {
           pa.field_L = param1;
           if (StarCannon.field_z != -1) {
             if (StarCannon.field_z == 7) {
-              ij.a(0, param2);
+              DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
               fg.field_a[pa.field_L].b(param2, 0);
@@ -163,7 +163,7 @@ class od extends hh {
           } else {
             cd.field_c = 25;
             if (StarCannon.field_z == 7) {
-              ij.a(0, param2);
+              DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
               fg.field_a[pa.field_L].b(param2, 0);
@@ -178,7 +178,7 @@ class od extends hh {
         if (7 != lf.field_cb) {
           return;
         }
-        ij.a(0, true);
+        DirectByteStorage.a(0, true);
     }
 
     final static void c(byte param0) {

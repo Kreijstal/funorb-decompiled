@@ -84,7 +84,7 @@ final class eg extends am {
         var9 = var10;
         var3 = var9;
         if (this.field_l.field_b) {
-          var4 = dp.field_a[param1];
+          var4 = ByteStorage.field_a[param1];
           for (var5 = 0; var5 < ci.field_c; var5++) {
             var6 = IntrusiveNode.field_b[var5];
             if (this.field_s < var6 &&

@@ -14,11 +14,11 @@ abstract class sh extends DualLinkNode {
     final static void a(int param0, boolean param1) {
         int var2 = 82 % ((param0 - 9) / 57);
         ub.field_h = 0;
-        oi.field_j = 0;
+        DirectByteStorage.field_j = 0;
         kk.field_i = 0;
         ll.field_d = eh.field_k;
-        of.field_c = new rl(2);
-        of.field_c.a((byte) -123, param1, -1, pf.a(ph.field_d, -19503, LocalizedStrings.field_u));
+        ByteStorage.field_c = new rl(2);
+        ByteStorage.field_c.a((byte) -123, param1, -1, pf.a(ph.field_d, -19503, LocalizedStrings.field_u));
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int[][] param4, int[][] param5, int param6) {

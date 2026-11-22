@@ -6020,6 +6020,14 @@
       "renamedSymbol": "M:OneAnimation.isFinished(B)Z"
     },
     {
+      "symbol": "M:gs.a(B[B)[B",
+      "originalName": "a",
+      "to": "copyBytes",
+      "evidence": "Complete same-length allocation/copy wrapper and underlying byte-copy implementation reviewed. Guard<118 clears statics after copy; wrapper/extractor pass119/120. Wrapper clears guard global before null check; extraction may clear Font before null/type checks. Preserve original allocation/guard/exception ordering and byte identity.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:gs.copyBytes(B[B)[B"
+    },
+    {
       "symbol": "M:gs.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -11228,6 +11236,14 @@
       "renamedSymbol": "M:tb.releaseStatics(I)V"
     },
     {
+      "symbol": "M:tb.a(ZBLjava/lang/Object;)[B",
+      "originalName": "a",
+      "to": "extractBytes",
+      "evidence": "Complete body, direct storage instance contract and clone helper reviewed. Null handling,136-byte threshold, direct allocation versus byte-array alias/optional copy, invalid-object exception and every guard remain unchanged. Guard<118 clears statics after copy; wrapper/extractor pass119/120. Wrapper clears guard global before null check; extraction may clear Font before null/type checks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tb.extractBytes(ZBLjava/lang/Object;)[B"
+    },
+    {
       "symbol": "M:tba.a(ILgj;)Lat;",
       "originalName": "a",
       "to": "createAnimation",
@@ -11594,6 +11610,14 @@
       "evidence": "Static method whose body only assigns null to static fields of its own class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:uf.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "storeBytes",
+      "evidence": "Complete body, direct storage instance contract and clone helper reviewed. Null handling,136-byte threshold, direct allocation versus byte-array alias/optional copy, invalid-object exception and every guard remain unchanged. Guard<118 clears statics after copy; wrapper/extractor pass119/120. Wrapper clears guard global before null check; extraction may clear Font before null/type checks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ug.storeBytes(Z[BI)Ljava/lang/Object;"
     },
     {
       "symbol": "M:ug.c(B)V",
@@ -158714,7 +158738,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#0",
-      "renamedSymbol": "L:gs.a(B[B)[B#0",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -158725,7 +158749,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#1",
-      "renamedSymbol": "L:gs.a(B[B)[B#1",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -158736,7 +158760,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#2",
-      "renamedSymbol": "L:gs.a(B[B)[B#2",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -158747,7 +158771,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#3",
-      "renamedSymbol": "L:gs.a(B[B)[B#3",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -158758,7 +158782,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#4",
-      "renamedSymbol": "L:gs.a(B[B)[B#4",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -158769,7 +158793,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#5",
-      "renamedSymbol": "L:gs.a(B[B)[B#5",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -158780,7 +158804,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#6",
-      "renamedSymbol": "L:gs.a(B[B)[B#6",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -158791,7 +158815,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#7",
-      "renamedSymbol": "L:gs.a(B[B)[B#7",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -158802,7 +158826,7 @@
     },
     {
       "symbol": "L:gs.a(B[B)[B#8",
-      "renamedSymbol": "L:gs.a(B[B)[B#8",
+      "renamedSymbol": "L:gs.copyBytes(B[B)[B#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -327597,7 +327621,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#0",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#0",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -327608,7 +327632,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#1",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#1",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -327619,7 +327643,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#10",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#10",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -327630,7 +327654,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#11",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#11",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -327641,7 +327665,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#2",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#2",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -327652,7 +327676,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#3",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#3",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -327663,7 +327687,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#4",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#4",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -327674,7 +327698,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#5",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#5",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#5",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -327685,7 +327709,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#6",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#6",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#6",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -327696,7 +327720,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#7",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#7",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#7",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -327707,7 +327731,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#8",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#8",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#8",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -327718,7 +327742,7 @@
     },
     {
       "symbol": "L:tb.a(ZBLjava/lang/Object;)[B#9",
-      "renamedSymbol": "L:tb.a(ZBLjava/lang/Object;)[B#9",
+      "renamedSymbol": "L:tb.extractBytes(ZBLjava/lang/Object;)[B#9",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -338388,7 +338412,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#0",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#0",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -338399,7 +338423,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#1",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#1",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -338410,7 +338434,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#10",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#10",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -338421,7 +338445,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#2",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#2",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -338432,7 +338456,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#3",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#3",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -338443,7 +338467,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#4",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#4",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -338454,7 +338478,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#5",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#5",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#5",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -338465,7 +338489,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#6",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#6",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#6",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -338476,7 +338500,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#7",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#7",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#7",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -338487,7 +338511,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#8",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#8",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#8",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -338498,7 +338522,7 @@
     },
     {
       "symbol": "L:ug.a(Z[BI)Ljava/lang/Object;#9",
-      "renamedSymbol": "L:ug.a(Z[BI)Ljava/lang/Object;#9",
+      "renamedSymbol": "L:ug.storeBytes(Z[BI)Ljava/lang/Object;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -388570,9 +388594,9 @@
     },
     {
       "symbol": "M:gs.a(B[B)[B",
-      "renamedSymbol": "M:gs.a(B[B)[B",
+      "renamedSymbol": "M:gs.copyBytes(B[B)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyBytes",
       "declaration": {
         "file": "gs.java",
         "start": 567,
@@ -421570,9 +421594,9 @@
     },
     {
       "symbol": "M:tb.a(ZBLjava/lang/Object;)[B",
-      "renamedSymbol": "M:tb.a(ZBLjava/lang/Object;)[B",
+      "renamedSymbol": "M:tb.extractBytes(ZBLjava/lang/Object;)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "extractBytes",
       "declaration": {
         "file": "tb.java",
         "start": 429,
@@ -424342,9 +424366,9 @@
     },
     {
       "symbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
-      "renamedSymbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
+      "renamedSymbol": "M:ug.storeBytes(Z[BI)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "storeBytes",
       "declaration": {
         "file": "ug.java",
         "start": 297,
@@ -470069,7 +470093,7 @@
     },
     {
       "symbol": "P:gs.a(B[B)[B#0",
-      "renamedSymbol": "P:gs.a(B[B)[B#0",
+      "renamedSymbol": "P:gs.copyBytes(B[B)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -470080,7 +470104,7 @@
     },
     {
       "symbol": "P:gs.a(B[B)[B#1",
-      "renamedSymbol": "P:gs.a(B[B)[B#1",
+      "renamedSymbol": "P:gs.copyBytes(B[B)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -547014,7 +547038,7 @@
     },
     {
       "symbol": "P:tb.a(ZBLjava/lang/Object;)[B#0",
-      "renamedSymbol": "P:tb.a(ZBLjava/lang/Object;)[B#0",
+      "renamedSymbol": "P:tb.extractBytes(ZBLjava/lang/Object;)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -547025,7 +547049,7 @@
     },
     {
       "symbol": "P:tb.a(ZBLjava/lang/Object;)[B#1",
-      "renamedSymbol": "P:tb.a(ZBLjava/lang/Object;)[B#1",
+      "renamedSymbol": "P:tb.extractBytes(ZBLjava/lang/Object;)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -547036,7 +547060,7 @@
     },
     {
       "symbol": "P:tb.a(ZBLjava/lang/Object;)[B#2",
-      "renamedSymbol": "P:tb.a(ZBLjava/lang/Object;)[B#2",
+      "renamedSymbol": "P:tb.extractBytes(ZBLjava/lang/Object;)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -553009,7 +553033,7 @@
     },
     {
       "symbol": "P:ug.a(Z[BI)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:ug.a(Z[BI)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:ug.storeBytes(Z[BI)Ljava/lang/Object;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -553020,7 +553044,7 @@
     },
     {
       "symbol": "P:ug.a(Z[BI)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:ug.a(Z[BI)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:ug.storeBytes(Z[BI)Ljava/lang/Object;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -553031,7 +553055,7 @@
     },
     {
       "symbol": "P:ug.a(Z[BI)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:ug.a(Z[BI)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:ug.storeBytes(Z[BI)Ljava/lang/Object;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -645104,7 +645128,7 @@
       "original": "gs.java",
       "renamed": "gs.java",
       "inputSha256": "f92233dc78054adcc56e684d8f460b3fec46fbf4b5dd7e402547f6f463954112",
-      "outputSha256": "d8cc0ec2c22c1dd48347777427b285e7790faa60671a7546c32ef1a645d3d82d",
+      "outputSha256": "dd9c585465d1c23e55dce5097d4c106614cce629b472f0de4f6959d1568db864",
       "edits": [
         {
           "start": 59,
@@ -645126,6 +645150,13 @@
           "symbol": "M:gs.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 567,
+          "end": 568,
+          "symbol": "M:gs.a(B[B)[B",
+          "original": "a",
+          "renamed": "copyBytes"
         },
         {
           "start": 1004,
@@ -768455,7 +768486,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "a5a510c4089f3c5efa89b5cf54af498354d7b1b3192cc30722a607b2dcdaa6b9",
-      "outputSha256": "bbebb019daece4054d57a062950e870252cba38ff9c1426f53b0be36fc23d992",
+      "outputSha256": "3db5f548a2f374dbd4562600046ecb8060a6470a9fef009003f7abda5c664e3a",
       "edits": [
         {
           "start": 66,
@@ -768470,6 +768501,13 @@
           "symbol": "M:tb.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 429,
+          "end": 430,
+          "symbol": "M:tb.a(ZBLjava/lang/Object;)[B",
+          "original": "a",
+          "renamed": "extractBytes"
         },
         {
           "start": 555,
@@ -768498,6 +768536,13 @@
           "symbol": "M:nu.a(Z)[B",
           "original": "a",
           "renamed": "getBytes"
+        },
+        {
+          "start": 1480,
+          "end": 1481,
+          "symbol": "M:gs.a(B[B)[B",
+          "original": "a",
+          "renamed": "copyBytes"
         },
         {
           "start": 2098,
@@ -778664,7 +778709,7 @@
       "original": "ug.java",
       "renamed": "ug.java",
       "inputSha256": "ff49e6d3edf6c6792caca10db75aa297ee7530377282ac6c1968c31aa348124e",
-      "outputSha256": "0c4c52b263dd92d0f632ba53af8d22903103b3449b4f65d6c12587aaeb9babdc",
+      "outputSha256": "3d71a05981e94fd2fc7b1a02c324dd9056e484944d0c7911c7af92557511c533",
       "edits": [
         {
           "start": 260,
@@ -778672,6 +778717,13 @@
           "symbol": "C:kv",
           "original": "kv",
           "renamed": "Sprite"
+        },
+        {
+          "start": 297,
+          "end": 298,
+          "symbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
         },
         {
           "start": 352,
@@ -778707,6 +778759,13 @@
           "symbol": "M:nu.a(B[B)V",
           "original": "a",
           "renamed": "setBytes"
+        },
+        {
+          "start": 1194,
+          "end": 1195,
+          "symbol": "M:gs.a(B[B)[B",
+          "original": "a",
+          "renamed": "copyBytes"
         },
         {
           "start": 1802,
@@ -792598,7 +792657,7 @@
       "original": "vr.java",
       "renamed": "vr.java",
       "inputSha256": "20ad4819cac7621495df6934395aef6aa7cf7e687ab79b622a71530277e36b16",
-      "outputSha256": "c6a8d4a51a1e023f10bae05cf5166c3b35573a5be2dbc1cf94caecaa2e421659",
+      "outputSha256": "b8931e5b63ec22f6b220258cd1fcd9f3843b2506892c7489d99a89a989acef19",
       "edits": [
         {
           "start": 129,
@@ -792657,6 +792716,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 6726,
+          "end": 6727,
+          "symbol": "M:tb.a(ZBLjava/lang/Object;)[B",
+          "original": "a",
+          "renamed": "extractBytes"
+        },
+        {
           "start": 6852,
           "end": 6854,
           "symbol": "C:lu",
@@ -792676,6 +792742,13 @@
           "symbol": "F:lu.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 7066,
+          "end": 7067,
+          "symbol": "M:tb.a(ZBLjava/lang/Object;)[B",
+          "original": "a",
+          "renamed": "extractBytes"
         },
         {
           "start": 7157,
@@ -792804,6 +792877,20 @@
           "renamed": "copy"
         },
         {
+          "start": 11594,
+          "end": 11595,
+          "symbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
+        },
+        {
+          "start": 12030,
+          "end": 12031,
+          "symbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
+        },
+        {
           "start": 12525,
           "end": 12526,
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
@@ -792874,6 +792961,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 21982,
+          "end": 21983,
+          "symbol": "M:tb.a(ZBLjava/lang/Object;)[B",
+          "original": "a",
+          "renamed": "extractBytes"
+        },
+        {
           "start": 23073,
           "end": 23074,
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
@@ -792886,6 +792980,13 @@
           "symbol": "M:pe.a(Ljava/lang/Throwable;Ljava/lang/String;)Lgi;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 25601,
+          "end": 25602,
+          "symbol": "M:ug.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
         },
         {
           "start": 27451,
@@ -802180,10 +802281,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bachelorfridge"
     },
-    "rulesSha256": "d9165ee7cd82247d3347b3d4a32882fa5cf7ecdb45c15ec1cbba7662d8ee7bab",
+    "rulesSha256": "88e4d86f7d051cd4106f7f87fe1428018ad9370a72c87bd410751e8f6453f9c8",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
-    "outputTreeSha256": "1f22bc11b64f28370e2057786705384d3ee87fed6cd21ebcb2fbe8875d816083",
+    "outputTreeSha256": "4f7001e8c1b3c72b730fde01c4e8b0ba93cf2a5c56ccf583fea20e123dba6f6f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

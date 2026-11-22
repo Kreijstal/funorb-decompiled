@@ -22,10 +22,10 @@ final class ch {
     }
 
     final static Object a(int param0, boolean param1, byte[] param2) {
-        sa var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        sa stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -38,8 +38,8 @@ final class ch {
             return stackIn_2_0;
           }
           if (param2.length > param0) {
-            var3 = new sa();
-            ((i) ((Object) var3)).a(param2, (byte) -122);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param2, (byte) -122);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

@@ -654,7 +654,7 @@ final class BattleState {
                 var5 = this.map.a(94, vf.field_a, cm.field_d, IntrusiveNode.field_c);
                 if (null != this.field_q &&
                   IntrusiveNode.field_c != -1) {
-                  var3 = ke.field_g;
+                  var3 = ByteStorage.field_g;
                   var4_ref = va.field_b;
                   if (IntrusiveNode.field_c == ProxySocketConnector.field_i &&
                     ~vf.field_a == ~ld.field_e) {

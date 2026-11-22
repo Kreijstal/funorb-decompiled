@@ -121,7 +121,7 @@ final class rl {
                 vc.a((byte) -121, param2, false);
                 pd.a(param0, 0, 0, (byte) -24);
               } else {
-                i.a(param0, param1 - 101);
+                ByteStorage.a(param0, param1 - 101);
               }
             } else {
               ti.d();

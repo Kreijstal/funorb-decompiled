@@ -75,7 +75,7 @@ final class gk {
         if (this.field_b) {
           this.field_o[param1] = this.field_n.a(param1, true);
         } else {
-          this.field_o[param1] = nh.a(false, -11560, this.field_n.a(param1, true));
+          this.field_o[param1] = nh.storeBytes(false, -11560, this.field_n.a(param1, true));
         }
         if (param0 != -19250) {
           gk.a(((int[]) (this.field_o[1]))[10], (String) (this.field_o[2]));
@@ -705,7 +705,7 @@ final class gk {
             throw new RuntimeException("");
           }
           if (this.field_c[param1][param2] != null) {
-            var7 = qf.a(0, false, this.field_c[param1][param2]);
+            var7 = qf.extractBytes(0, false, this.field_c[param1][param2]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -851,7 +851,7 @@ final class gk {
             param2[1] != 0 ||
             param2[2] != 0 ||
             param2[3] != 0)) {
-            var35 = qf.a(0, true, this.field_o[param0]);
+            var35 = qf.extractBytes(0, true, this.field_o[param0]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -859,7 +859,7 @@ final class gk {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = qf.a(0, false, this.field_o[param0]);
+            var9 = qf.extractBytes(0, false, this.field_o[param0]);
           }
           try {
             var36 = ta.a(21125, var9);
@@ -919,7 +919,7 @@ final class gk {
                     var21 = var34[var20];
                   }
                   if (var21 == param3) {
-                    cb.a(var43, var17, var44, var14Lifetime1, var19);
+                    cb.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -957,7 +957,7 @@ final class gk {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.readInt(-3);
-                  cb.a(var43, var16, var39[var19], var38[var19], var18);
+                  cb.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -969,7 +969,7 @@ final class gk {
                   var18 = var17;
                 }
                 if (0 == this.field_k) {
-                  var7[var18] = nh.a(false, -11560, var39[var17]);
+                  var7[var18] = nh.storeBytes(false, -11560, var39[var17]);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -985,7 +985,7 @@ final class gk {
               var7[var11] = var36;
               return true;
             }
-            var7[var11] = nh.a(false, -11560, var43);
+            var7[var11] = nh.storeBytes(false, -11560, var43);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

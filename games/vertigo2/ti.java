@@ -239,7 +239,7 @@ final class ti {
                   var21 = param6.field_a[var18];
                   pk.field_w[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
                   dp.field_A[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
-                  dh.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
+                  ByteStorage.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
                   var18++;
                   break scanLoop1;
                 }
@@ -332,7 +332,7 @@ final class ti {
               var21 = param6.field_a[var18];
               pk.field_w[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
               dp.field_A[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
-              dh.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
+              ByteStorage.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
               var18++;
             } while (var30 == 0);
             break;

@@ -113,7 +113,7 @@ final class gg {
             return;
           }
           var4 = (byte[]) null;
-          gg.a((byte) -64, (byte[]) null);
+          gg.copyBytes((byte) -64, (byte[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class gg {
         }
     }
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] copyBytes(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -149,7 +149,7 @@ final class gg {
           var2_int = param1.length;
           var4 = 57 / ((-44 - param0) / 40);
           var3 = new byte[var2_int];
-          cj.a(param1, 0, var3, 0, var2_int);
+          cj.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

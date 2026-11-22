@@ -558,15 +558,15 @@ final class GameScreen {
           if (this.screenId == 10) {
             if (0 <= this.field_k.field_j &&
               ~db.field_z != ~this.field_k.field_j) {
-              of.field_e = 50;
+              ByteStorage.field_e = 50;
               db.field_z = this.field_k.field_j;
             }
             if (~db.field_z != ~qb.field_h) {
-              if (of.field_e > 0) {
-                of.field_e = of.field_e - 1;
+              if (ByteStorage.field_e > 0) {
+                ByteStorage.field_e = ByteStorage.field_e - 1;
               }
-              if (of.field_e <= 0) {
-                of.field_e = 0;
+              if (ByteStorage.field_e <= 0) {
+                ByteStorage.field_e = 0;
                 fa.field_j = 25;
                 qb.field_h = db.field_z;
               }
@@ -588,14 +588,14 @@ final class GameScreen {
               qb.field_h >= 0 &&
               qb.field_h < 6) {
               rl.field_c = qb.field_h;
-              of.field_e = 50;
+              ByteStorage.field_e = 50;
               fa.field_j = -25;
               GameApplet.field_p = true;
             }
           }
           if (1 == this.screenId &&
             var3 == 0 &&
-            oi.field_g) {
+            DirectByteStorage.field_g) {
             if (!(dj.field_Q >= 0) ||
               ~dj.field_Q == ~n.field_jb) {
               n.field_jb = 0;
@@ -605,7 +605,7 @@ final class GameScreen {
             } else {
               n.field_jb = dj.field_Q;
             }
-            oi.field_g = false;
+            DirectByteStorage.field_g = false;
             if (kj.field_A >= 0 &&
               kj.field_A != i.field_r) {
               i.field_r = kj.field_A;
@@ -3706,7 +3706,7 @@ final class GameScreen {
                                               ma.field_j = 0;
                                               be.a(3, (byte) -103, param0);
                                               LocalizedStrings.field_v = this.screenId;
-                                              oi.field_g = true;
+                                              DirectByteStorage.field_g = true;
                                               kj.field_A = i.field_r;
                                               dj.field_Q = n.field_jb;
                                               if (var12 == 0) {
@@ -3920,7 +3920,7 @@ final class GameScreen {
                                                   null != ji.field_m) {
                                                   ji.field_m.c((byte) 107);
                                                 }
-                                                oi.a(true, true, true);
+                                                DirectByteStorage.a(true, true, true);
                                                 rc.c((byte) -82);
                                                 if (UiComponent.field_o > 0) {
                                                   cd.field_o = false;
@@ -5661,7 +5661,7 @@ final class GameScreen {
                       var13Lifetime1Lifetime1 = -(2 * ui.field_i[0].fullWidth) + 557;
                       SoftwareRasterizer.a(pf.field_g);
                       SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 240 + var11Lifetime2Lifetime1, 64 + var12Lifetime1Lifetime1);
-                      of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 107, false, 0);
+                      ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 107, false, 0);
                       var11Lifetime2Lifetime1 += 16;
                       SoftwareRasterizer.b(pf.field_g);
                       var12Lifetime1Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + (af.field_f[3] + (var3 + 8 + var8));
@@ -5670,7 +5670,7 @@ final class GameScreen {
                       var12Lifetime1Lifetime1 = var3;
                       SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 240, var12Lifetime1Lifetime1 + 64);
                       var11Lifetime2Lifetime1 = var11Lifetime2Lifetime1 - 400;
-                      of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 93, false, 0);
+                      ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 93, false, 0);
                       SoftwareRasterizer.b(pf.field_g);
                       var12Lifetime1Lifetime1 = 16 + (var3 + af.field_f[3] + var8 - SecondaryNodeDequeIterator.field_e.field_K);
                       var11Lifetime2Lifetime1 = -50 - nh.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
@@ -5680,7 +5680,7 @@ final class GameScreen {
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
                       SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
                       var12Lifetime1Lifetime1 = 16 + ob.field_b[3] + (-480 + var12Lifetime1Lifetime1);
-                      of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 80, false, 0);
+                      ByteStorage.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 80, false, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + 16;
                       SoftwareRasterizer.b(pf.field_g);
                       var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + (-(var8 * 3) + (-16 - ui.field_i[0].fullHeight)) + (391 - ob.field_b[3]);

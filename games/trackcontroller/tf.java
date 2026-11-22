@@ -39,7 +39,7 @@ final class tf {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(var2_int - 1) != 34) {
-              stackIn_12_0 = fh.field_e;
+              stackIn_12_0 = ByteStorage.field_e;
               return stackIn_12_0;
             }
             var3 = 0;
@@ -51,7 +51,7 @@ final class tf {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_26_0 = fh.field_e;
+                  stackIn_26_0 = ByteStorage.field_e;
                   return stackIn_26_0;
                 }
                 var3 = 0;
@@ -71,13 +71,13 @@ final class tf {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_40_0 = fh.field_e;
+                stackIn_40_0 = ByteStorage.field_e;
                 return stackIn_40_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (qk.field_O.indexOf(var5Lifetime1) == -1) {
-                stackIn_44_0 = fh.field_e;
+                stackIn_44_0 = ByteStorage.field_e;
                 return stackIn_44_0;
               }
               var3Lifetime1 = 0;

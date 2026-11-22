@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class fh {
+abstract class ByteStorage {
     static nj field_c;
     static oi field_e;
     static byte[] field_a;
@@ -55,7 +55,7 @@ abstract class fh {
         }
     }
 
-    abstract byte[] b(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     final static int a(int param0, int param1) {
         param1 = fj.b(param0 ^ -48, param1);
@@ -71,7 +71,7 @@ abstract class fh {
         return param1 - 1 + 7;
     }
 
-    abstract void a(byte[] param0, int param1);
+    abstract void setBytes(byte[] param0, int param1);
 
     public static void a(byte param0) {
         field_e = null;
@@ -80,7 +80,7 @@ abstract class fh {
         field_b = null;
         field_d = null;
         if (param0 < 122) {
-          fh.a((byte) 65);
+          ByteStorage.a((byte) 65);
         }
     }
 

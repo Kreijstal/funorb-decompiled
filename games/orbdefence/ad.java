@@ -81,7 +81,7 @@ final class ad {
               var19[0][1 + 4 * var10] = vl.field_g[var11];
               var19[0][var10 * 4 + 2] = th.field_f[var11];
               var19[0][var10 * 4 + 3] = ld.field_b[var11];
-              if (fc.a((byte) -125, qd.field_c[var11]) &&
+              if (DirectByteStorage.a((byte) -125, qd.field_c[var11]) &&
                 ld.field_b[var11] + (th.field_f[var11] + vl.field_g[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -99,7 +99,7 @@ final class ad {
               var19[1][1 + 4 * var14] = vl.field_g[var11Lifetime1];
               var19[1][var14 * 4 + 2] = th.field_f[var11Lifetime1];
               var19[1][var14 * 4 + 3] = ld.field_b[var11Lifetime1];
-              if (fc.a((byte) 124, qd.field_c[var11Lifetime1]) &&
+              if (DirectByteStorage.a((byte) 124, qd.field_c[var11Lifetime1]) &&
                 ld.field_b[var11Lifetime1] + (vl.field_g[var11Lifetime1] + th.field_f[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;

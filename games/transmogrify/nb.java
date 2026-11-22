@@ -97,7 +97,7 @@ final class nb {
             var5.field_f = lb.a(var5.field_f, 256, 16, param1);
           }
           if (NodeHashTableIterator.a(-1, param1)) {
-            var5.field_y = dj.a(-39, param1, var5.field_y, 16);
+            var5.field_y = ByteStorage.a(-39, param1, var5.field_y, 16);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_y.length; var7++) {
               if (var6 < (var5.field_y[var7] & 255)) {

@@ -18,7 +18,7 @@ final class tb {
         field_c = null;
     }
 
-    final static byte[] a(boolean param0, byte param1, Object param2) {
+    final static byte[] extractBytes(boolean param0, byte param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -48,7 +48,7 @@ final class tb {
           }
           var3 = (byte[]) (param2);
           if (param0) {
-            stackIn_11_0 = gs.a((byte) 120, var3);
+            stackIn_11_0 = gs.copyBytes((byte) 120, var3);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;

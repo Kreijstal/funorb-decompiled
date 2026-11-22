@@ -32,7 +32,7 @@ final class BufferedSocket implements Runnable {
         int var13 = stellarshard.field_B;
         int var8Lifetime1;
         qh.field_a = ml.a("commonui", (byte) -123, param2, "frame_top");
-        sa.field_g = ml.a("commonui", (byte) 122, param2, "frame_bottom");
+        DirectByteStorage.field_g = ml.a("commonui", (byte) 122, param2, "frame_bottom");
         ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
         ImageProducerRasterBuffer.field_i = ml.a("commonui", (byte) 85, param2, "button");
         DualLinkNode.field_p = pf.a("commonui", (byte) -98, "validation", param2);

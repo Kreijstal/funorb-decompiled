@@ -234,7 +234,7 @@ class dk extends UiWidget {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
-        kk var5 = null;
+        ByteStorage var5 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
@@ -248,11 +248,11 @@ class dk extends UiWidget {
             return null;
           }
           if (!(param1 instanceof byte[])) {
-            if (!(param1 instanceof kk)) {
+            if (!(param1 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var5 = (kk) (param1);
-            stackIn_11_0 = var5.a(4208);
+            var5 = (ByteStorage) (param1);
+            stackIn_11_0 = var5.getBytes(4208);
             return stackIn_11_0;
           }
           var4 = (byte[]) (param1);

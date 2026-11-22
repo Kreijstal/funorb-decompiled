@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kk {
+abstract class ByteStorage {
     static int field_e;
     static int field_c;
     static int field_a;
     static int field_d;
     static int[] field_b;
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static void a(int param0, int param1) {
         int var2_int = 0;
@@ -34,7 +34,7 @@ abstract class kk {
         }
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
     final static boolean b(byte param0) {
         int var1 = -38 / ((param0 + 9) / 44);

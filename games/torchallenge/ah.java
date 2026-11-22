@@ -60,10 +60,10 @@ final class ah {
     }
 
     final static Object a(boolean param0, boolean param1, byte[] param2) {
-        oi var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        oi stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
@@ -77,8 +77,8 @@ final class ah {
             return stackIn_2_0;
           }
           if (param2.length > 136) {
-            var3 = new oi();
-            ((of) ((Object) var3)).a(50, param2);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(50, param2);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }

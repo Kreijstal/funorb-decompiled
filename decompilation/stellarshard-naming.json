@@ -420,6 +420,14 @@
       "renamedSymbol": "C:DelegatingCanvas"
     },
     {
+      "symbol": "C:i",
+      "originalName": "i",
+      "to": "ByteStorage",
+      "evidence": "Complete instance field shape and both abstract byte-array declarations reviewed with concrete direct implementation. Base has no instance state or additional instance operations. Preserve unrelated static helpers and globals.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ByteStorage"
+    },
+    {
       "symbol": "C:ie",
       "originalName": "ie",
       "to": "SpriteState",
@@ -530,6 +538,14 @@
       "evidence": "Iterator constructed from a DualLinkDeque.",
       "confidence": "reviewed",
       "renamedSymbol": "C:DualLinkDequeIterator"
+    },
+    {
+      "symbol": "C:sa",
+      "originalName": "sa",
+      "to": "DirectByteStorage",
+      "evidence": "Complete instance field shape, empty constructor and both concrete byte-array bodies reviewed. Sole instance ByteBuffer is directly allocated and copied to/from caller bytes. Unrelated statics unselected.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectByteStorage"
     },
     {
       "symbol": "C:sd",
@@ -754,6 +770,14 @@
       "evidence": "LevelScreen shows it after the Start level text and increments it up to a ceiling; GameEntity caps counts by it.",
       "confidence": "reviewed",
       "renamedSymbol": "F:qi.level:I"
+    },
+    {
+      "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+      "originalName": "field_f",
+      "to": "buffer",
+      "evidence": "Sole instance direct ByteBuffer used by byte-array set/get operations; preserve nullable and guard states.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DirectByteStorage.buffer:Ljava/nio/ByteBuffer;"
     },
     {
       "symbol": "F:sd.field_a:D",
@@ -1218,6 +1242,22 @@
       "evidence": "Abstract fill of an int sample range; PcmSampleStream implements it as the resampling loop. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hl.mix([III)V"
+    },
+    {
+      "symbol": "M:i.a(I)[B",
+      "originalName": "a",
+      "to": "getBytes",
+      "evidence": "Complete concrete body and matching abstract declaration reviewed. Getter arithmetic after allocation/position before get; setter arithmetic after bytes written. Preserve partial state. Names describe dataflow without changing guards, exceptions, buffer position or copy order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ByteStorage.getBytes(I)[B"
+    },
+    {
+      "symbol": "M:i.a([BB)V",
+      "originalName": "a",
+      "to": "setBytes",
+      "evidence": "Complete concrete body and matching abstract declaration reviewed. Getter arithmetic after allocation/position before get; setter arithmetic after bytes written. Preserve partial state. Names describe dataflow without changing guards, exceptions, buffer position or copy order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ByteStorage.setBytes([BB)V"
     },
     {
       "symbol": "M:ib.a(I)V",
@@ -1882,6 +1922,22 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 92ad5126d9b1b74cef92b25f8093d224d83ae79f14281867a8f2897eb9811109.",
       "confidence": "reviewed",
       "renamedSymbol": "M:rk.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:sa.a(I)[B",
+      "originalName": "a",
+      "to": "getBytes",
+      "evidence": "Complete concrete body and matching abstract declaration reviewed. Getter arithmetic after allocation/position before get; setter arithmetic after bytes written. Preserve partial state. Names describe dataflow without changing guards, exceptions, buffer position or copy order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectByteStorage.getBytes(I)[B"
+    },
+    {
+      "symbol": "M:sa.a([BB)V",
+      "originalName": "a",
+      "to": "setBytes",
+      "evidence": "Complete concrete body and matching abstract declaration reviewed. Getter arithmetic after allocation/position before get; setter arithmetic after bytes written. Preserve partial state. Names describe dataflow without changing guards, exceptions, buffer position or copy order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectByteStorage.setBytes([BB)V"
     },
     {
       "symbol": "M:sb.a(B)V",
@@ -3640,9 +3696,9 @@
     },
     {
       "symbol": "C:i",
-      "renamedSymbol": "C:i",
+      "renamedSymbol": "C:ByteStorage",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "ByteStorage",
       "declaration": {
         "file": "i.java",
         "start": 53,
@@ -5070,9 +5126,9 @@
     },
     {
       "symbol": "C:sa",
-      "renamedSymbol": "C:sa",
+      "renamedSymbol": "C:DirectByteStorage",
       "originalName": "sa",
-      "renamedName": "sa",
+      "renamedName": "DirectByteStorage",
       "declaration": {
         "file": "sa.java",
         "start": 50,
@@ -14068,7 +14124,7 @@
     },
     {
       "symbol": "F:i.field_a:I",
-      "renamedSymbol": "F:i.field_a:I",
+      "renamedSymbol": "F:ByteStorage.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -14079,7 +14135,7 @@
     },
     {
       "symbol": "F:i.field_b:I",
-      "renamedSymbol": "F:i.field_b:I",
+      "renamedSymbol": "F:ByteStorage.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -14090,7 +14146,7 @@
     },
     {
       "symbol": "F:i.field_c:Loj;",
-      "renamedSymbol": "F:i.field_c:LIntrusiveDeque;",
+      "renamedSymbol": "F:ByteStorage.field_c:LIntrusiveDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -14101,7 +14157,7 @@
     },
     {
       "symbol": "F:i.field_d:Lth;",
-      "renamedSymbol": "F:i.field_d:Lth;",
+      "renamedSymbol": "F:ByteStorage.field_d:Lth;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -14112,7 +14168,7 @@
     },
     {
       "symbol": "F:i.field_e:[I",
-      "renamedSymbol": "F:i.field_e:[I",
+      "renamedSymbol": "F:ByteStorage.field_e:[I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -24452,9 +24508,9 @@
     },
     {
       "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
-      "renamedSymbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+      "renamedSymbol": "F:DirectByteStorage.buffer:Ljava/nio/ByteBuffer;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "buffer",
       "declaration": {
         "file": "sa.java",
         "start": 170,
@@ -24463,7 +24519,7 @@
     },
     {
       "symbol": "F:sa.field_g:[Lpb;",
-      "renamedSymbol": "F:sa.field_g:[LSprite;",
+      "renamedSymbol": "F:DirectByteStorage.field_g:[LSprite;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -24474,7 +24530,7 @@
     },
     {
       "symbol": "F:sa.field_h:I",
-      "renamedSymbol": "F:sa.field_h:I",
+      "renamedSymbol": "F:DirectByteStorage.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -24485,7 +24541,7 @@
     },
     {
       "symbol": "F:sa.field_i:I",
-      "renamedSymbol": "F:sa.field_i:I",
+      "renamedSymbol": "F:DirectByteStorage.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -68925,7 +68981,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#0",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#0",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -68936,7 +68992,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#1",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#1",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -68947,7 +69003,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#10",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#10",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#10",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -68958,7 +69014,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#11",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#11",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#11",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -68969,7 +69025,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#12",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#12",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -68980,7 +69036,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#13",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#13",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -68991,7 +69047,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#2",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#2",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -69002,7 +69058,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#3",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#3",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -69013,7 +69069,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#4",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#4",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -69024,7 +69080,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#5",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#5",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -69035,7 +69091,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#6",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#6",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#6",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -69046,7 +69102,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#7",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#7",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#7",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -69057,7 +69113,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#8",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#8",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#8",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -69068,7 +69124,7 @@
     },
     {
       "symbol": "L:i.a(ILjava/lang/String;)Lwb;#9",
-      "renamedSymbol": "L:i.a(ILjava/lang/String;)Lwb;#9",
+      "renamedSymbol": "L:ByteStorage.a(ILjava/lang/String;)Lwb;#9",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -69079,7 +69135,7 @@
     },
     {
       "symbol": "L:i.a(Ljava/awt/Canvas;I)V#0",
-      "renamedSymbol": "L:i.a(Ljava/awt/Canvas;I)V#0",
+      "renamedSymbol": "L:ByteStorage.a(Ljava/awt/Canvas;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -69090,7 +69146,7 @@
     },
     {
       "symbol": "L:i.b(I)V#0",
-      "renamedSymbol": "L:i.b(I)V#0",
+      "renamedSymbol": "L:ByteStorage.b(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -126939,7 +126995,7 @@
     },
     {
       "symbol": "L:sa.a(B)Z#0",
-      "renamedSymbol": "L:sa.a(B)Z#0",
+      "renamedSymbol": "L:DirectByteStorage.a(B)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -126950,7 +127006,7 @@
     },
     {
       "symbol": "L:sa.a(I)[B#0",
-      "renamedSymbol": "L:sa.a(I)[B#0",
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -126961,7 +127017,7 @@
     },
     {
       "symbol": "L:sa.a(I)[B#1",
-      "renamedSymbol": "L:sa.a(I)[B#1",
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -126972,7 +127028,7 @@
     },
     {
       "symbol": "L:sa.a(I)[B#2",
-      "renamedSymbol": "L:sa.a(I)[B#2",
+      "renamedSymbol": "L:DirectByteStorage.getBytes(I)[B#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -126983,7 +127039,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#0",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#0",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -126994,7 +127050,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#1",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#1",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#1",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -127005,7 +127061,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#2",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#2",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -127016,7 +127072,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#3",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#3",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -127027,7 +127083,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#4",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#4",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -127038,7 +127094,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#5",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#5",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -127049,7 +127105,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#6",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#6",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -127060,7 +127116,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#7",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#7",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -127071,7 +127127,7 @@
     },
     {
       "symbol": "L:sa.a(I[B)Lbm;#8",
-      "renamedSymbol": "L:sa.a(I[B)Lbm;#8",
+      "renamedSymbol": "L:DirectByteStorage.a(I[B)Lbm;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -127082,7 +127138,7 @@
     },
     {
       "symbol": "L:sa.a([BB)V#0",
-      "renamedSymbol": "L:sa.a([BB)V#0",
+      "renamedSymbol": "L:DirectByteStorage.setBytes([BB)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -127093,7 +127149,7 @@
     },
     {
       "symbol": "L:sa.a([BB)V#1",
-      "renamedSymbol": "L:sa.a([BB)V#1",
+      "renamedSymbol": "L:DirectByteStorage.setBytes([BB)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -162700,9 +162756,9 @@
     },
     {
       "symbol": "M:i.a(I)[B",
-      "renamedSymbol": "M:i.a(I)[B",
+      "renamedSymbol": "M:ByteStorage.getBytes(I)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getBytes",
       "declaration": {
         "file": "i.java",
         "start": 2525,
@@ -162711,7 +162767,7 @@
     },
     {
       "symbol": "M:i.a(ILjava/lang/String;)Lwb;",
-      "renamedSymbol": "M:i.a(ILjava/lang/String;)Lwb;",
+      "renamedSymbol": "M:ByteStorage.a(ILjava/lang/String;)Lwb;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -162722,7 +162778,7 @@
     },
     {
       "symbol": "M:i.a(Ljava/awt/Canvas;I)V",
-      "renamedSymbol": "M:i.a(Ljava/awt/Canvas;I)V",
+      "renamedSymbol": "M:ByteStorage.a(Ljava/awt/Canvas;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -162733,9 +162789,9 @@
     },
     {
       "symbol": "M:i.a([BB)V",
-      "renamedSymbol": "M:i.a([BB)V",
+      "renamedSymbol": "M:ByteStorage.setBytes([BB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBytes",
       "declaration": {
         "file": "i.java",
         "start": 716,
@@ -162744,7 +162800,7 @@
     },
     {
       "symbol": "M:i.b(I)V",
-      "renamedSymbol": "M:i.b(I)V",
+      "renamedSymbol": "M:ByteStorage.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -172655,9 +172711,9 @@
     },
     {
       "symbol": "M:sa.<init>()V",
-      "renamedSymbol": "M:sa.<init>()V",
+      "renamedSymbol": "M:DirectByteStorage.<init>()V",
       "originalName": "sa",
-      "renamedName": "sa",
+      "renamedName": "DirectByteStorage",
       "declaration": {
         "file": "sa.java",
         "start": 2812,
@@ -172666,7 +172722,7 @@
     },
     {
       "symbol": "M:sa.a(B)Z",
-      "renamedSymbol": "M:sa.a(B)Z",
+      "renamedSymbol": "M:DirectByteStorage.a(B)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -172677,9 +172733,9 @@
     },
     {
       "symbol": "M:sa.a(I)[B",
-      "renamedSymbol": "M:sa.a(I)[B",
+      "renamedSymbol": "M:DirectByteStorage.getBytes(I)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getBytes",
       "declaration": {
         "file": "sa.java",
         "start": 197,
@@ -172688,7 +172744,7 @@
     },
     {
       "symbol": "M:sa.a(II)I",
-      "renamedSymbol": "M:sa.a(II)I",
+      "renamedSymbol": "M:DirectByteStorage.a(II)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -172699,7 +172755,7 @@
     },
     {
       "symbol": "M:sa.a(I[B)Lbm;",
-      "renamedSymbol": "M:sa.a(I[B)Lbm;",
+      "renamedSymbol": "M:DirectByteStorage.a(I[B)Lbm;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -172710,9 +172766,9 @@
     },
     {
       "symbol": "M:sa.a([BB)V",
-      "renamedSymbol": "M:sa.a([BB)V",
+      "renamedSymbol": "M:DirectByteStorage.setBytes([BB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBytes",
       "declaration": {
         "file": "sa.java",
         "start": 908,
@@ -172721,7 +172777,7 @@
     },
     {
       "symbol": "M:sa.c(I)V",
-      "renamedSymbol": "M:sa.c(I)V",
+      "renamedSymbol": "M:DirectByteStorage.c(I)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -197295,7 +197351,7 @@
     },
     {
       "symbol": "P:i.a(I)[B#0",
-      "renamedSymbol": "P:i.a(I)[B#0",
+      "renamedSymbol": "P:ByteStorage.getBytes(I)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197306,7 +197362,7 @@
     },
     {
       "symbol": "P:i.a(ILjava/lang/String;)Lwb;#0",
-      "renamedSymbol": "P:i.a(ILjava/lang/String;)Lwb;#0",
+      "renamedSymbol": "P:ByteStorage.a(ILjava/lang/String;)Lwb;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197317,7 +197373,7 @@
     },
     {
       "symbol": "P:i.a(ILjava/lang/String;)Lwb;#1",
-      "renamedSymbol": "P:i.a(ILjava/lang/String;)Lwb;#1",
+      "renamedSymbol": "P:ByteStorage.a(ILjava/lang/String;)Lwb;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -197328,7 +197384,7 @@
     },
     {
       "symbol": "P:i.a(Ljava/awt/Canvas;I)V#0",
-      "renamedSymbol": "P:i.a(Ljava/awt/Canvas;I)V#0",
+      "renamedSymbol": "P:ByteStorage.a(Ljava/awt/Canvas;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197339,7 +197395,7 @@
     },
     {
       "symbol": "P:i.a(Ljava/awt/Canvas;I)V#1",
-      "renamedSymbol": "P:i.a(Ljava/awt/Canvas;I)V#1",
+      "renamedSymbol": "P:ByteStorage.a(Ljava/awt/Canvas;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -197350,7 +197406,7 @@
     },
     {
       "symbol": "P:i.a([BB)V#0",
-      "renamedSymbol": "P:i.a([BB)V#0",
+      "renamedSymbol": "P:ByteStorage.setBytes([BB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197361,7 +197417,7 @@
     },
     {
       "symbol": "P:i.a([BB)V#1",
-      "renamedSymbol": "P:i.a([BB)V#1",
+      "renamedSymbol": "P:ByteStorage.setBytes([BB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -197372,7 +197428,7 @@
     },
     {
       "symbol": "P:i.b(I)V#0",
-      "renamedSymbol": "P:i.b(I)V#0",
+      "renamedSymbol": "P:ByteStorage.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222562,7 +222618,7 @@
     },
     {
       "symbol": "P:sa.a(B)Z#0",
-      "renamedSymbol": "P:sa.a(B)Z#0",
+      "renamedSymbol": "P:DirectByteStorage.a(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222573,7 +222629,7 @@
     },
     {
       "symbol": "P:sa.a(I)[B#0",
-      "renamedSymbol": "P:sa.a(I)[B#0",
+      "renamedSymbol": "P:DirectByteStorage.getBytes(I)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222584,7 +222640,7 @@
     },
     {
       "symbol": "P:sa.a(II)I#0",
-      "renamedSymbol": "P:sa.a(II)I#0",
+      "renamedSymbol": "P:DirectByteStorage.a(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222595,7 +222651,7 @@
     },
     {
       "symbol": "P:sa.a(II)I#1",
-      "renamedSymbol": "P:sa.a(II)I#1",
+      "renamedSymbol": "P:DirectByteStorage.a(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222606,7 +222662,7 @@
     },
     {
       "symbol": "P:sa.a(I[B)Lbm;#0",
-      "renamedSymbol": "P:sa.a(I[B)Lbm;#0",
+      "renamedSymbol": "P:DirectByteStorage.a(I[B)Lbm;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222617,7 +222673,7 @@
     },
     {
       "symbol": "P:sa.a(I[B)Lbm;#1",
-      "renamedSymbol": "P:sa.a(I[B)Lbm;#1",
+      "renamedSymbol": "P:DirectByteStorage.a(I[B)Lbm;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222628,7 +222684,7 @@
     },
     {
       "symbol": "P:sa.a([BB)V#0",
-      "renamedSymbol": "P:sa.a([BB)V#0",
+      "renamedSymbol": "P:DirectByteStorage.setBytes([BB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -222639,7 +222695,7 @@
     },
     {
       "symbol": "P:sa.a([BB)V#1",
-      "renamedSymbol": "P:sa.a([BB)V#1",
+      "renamedSymbol": "P:DirectByteStorage.setBytes([BB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -222650,7 +222706,7 @@
     },
     {
       "symbol": "P:sa.c(I)V#0",
-      "renamedSymbol": "P:sa.c(I)V#0",
+      "renamedSymbol": "P:DirectByteStorage.c(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234563,7 +234619,7 @@
       "original": "aj.java",
       "renamed": "aj.java",
       "inputSha256": "395934e856ff9032b6849d960fb06f6f211802858ef3f60d0a1fd4491329ec88",
-      "outputSha256": "9128d6c04e0816a02a01b005fee73a8d6fbb6560f5da8e461f78d85151733e0d",
+      "outputSha256": "964d45a07e8681964054d214aaba568b7d38b13e5820b42e54dbd786b6f68876",
       "edits": [
         {
           "start": 152,
@@ -234578,6 +234634,13 @@
           "symbol": "M:aj.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1281,
+          "end": 1283,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         }
       ]
     },
@@ -236921,7 +236984,7 @@
       "original": "ch.java",
       "renamed": "ch.java",
       "inputSha256": "d3663ff3e8f2086a48a84411126b54f90242f887f0bc83c4cd949550a7631176",
-      "outputSha256": "4d33d74a30bb25bd4c0a2ce306968c599fb0c0bb622851ef9451b133b22939a1",
+      "outputSha256": "f3a8d3a9044418577222c7e700cf612d01e18734401104371e68a9eb52724637",
       "edits": [
         {
           "start": 187,
@@ -236929,6 +236992,41 @@
           "symbol": "M:ch.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 553,
+          "end": 555,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 654,
+          "end": 656,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 1117,
+          "end": 1119,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 1137,
+          "end": 1138,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1157,
+          "end": 1158,
+          "symbol": "M:i.a([BB)V",
+          "original": "a",
+          "renamed": "setBytes"
         }
       ]
     },
@@ -237430,7 +237528,7 @@
       "original": "dd.java",
       "renamed": "dd.java",
       "inputSha256": "e5700d54dd2cc4193d7196746f9cbfd9439446c8adabc96914436a92889f8298",
-      "outputSha256": "a022b672b21a9bb4555a0e4c394aa510868667c647963af9a611bc2bd8206735",
+      "outputSha256": "fa5ffa69f78c7c8a45ec78c4022c69a5fd8595cae2d031c9ccc41709acb4a62b",
       "edits": [
         {
           "start": 66,
@@ -237445,6 +237543,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3445,
+          "end": 3447,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 7850,
@@ -238007,7 +238112,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "2d1865c6efd3daf0de6ea87ec8cac02c09faf989dd737483e245ffc9646bdc50",
-      "outputSha256": "74f32b14d558249b6a81a84d2ec76ddcbdc7e645e4e28493d473825ec4259523",
+      "outputSha256": "1001f97b1d0480c7c3f0b874d76f893c597302e2f7d6e8d7af5b4e24cad9e820",
       "edits": [
         {
           "start": 123,
@@ -238045,6 +238150,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 2257,
+          "end": 2259,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 2335,
           "end": 2337,
           "symbol": "C:pb",
@@ -238057,6 +238169,20 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "RasterBuffer"
+        },
+        {
+          "start": 2680,
+          "end": 2682,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2711,
+          "end": 2713,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 2788,
@@ -239076,7 +239202,7 @@
       "original": "fa.java",
       "renamed": "fa.java",
       "inputSha256": "5f85dd9d978a7252ce8c1eca2c0f68a97784fe7de2948df30132bdba950761e2",
-      "outputSha256": "742598ea87b17092bdf2f61f0b2872925ca9e45468d919c18e1b47f528887c15",
+      "outputSha256": "ad9ca0ec8edd9e9f5bb434986002b9325f19c1c1b96e422c2b8e95780a04f645",
       "edits": [
         {
           "start": 61,
@@ -239105,6 +239231,20 @@
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 1205,
+          "end": 1206,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1387,
+          "end": 1388,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         }
       ]
     },
@@ -239732,7 +239872,7 @@
       "original": "fh.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "0004f3a270b2ea05491703dc56a4d9a5f8085a4a58983c004c3fdf2108838b40",
-      "outputSha256": "96cdccfc5ffd9bd7b533069f2727d7a9fbc3d81f48e6407249390ca2ca4365df",
+      "outputSha256": "251bc94e680bae5a283455530f8e3a4a996daed87cf7b750dbed2f214207e5f3",
       "edits": [
         {
           "start": 69,
@@ -239782,6 +239922,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 927,
+          "end": 929,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 1079,
@@ -243132,7 +243279,7 @@
       "original": "gk.java",
       "renamed": "gk.java",
       "inputSha256": "e38f1e3f7eb4f1229b86d310a850a2673c202762bda9b4fb7a7d7f57c87265ea",
-      "outputSha256": "8637ffc3fe5ef92987c8bbd553ad246df04e15406c51761581f4baeb06e0c776",
+      "outputSha256": "2b7ee338d8101477d326c0e431dc3f1536a579cec87ea1dd20a73a6bf4e4601b",
       "edits": [
         {
           "start": 269,
@@ -243387,11 +243534,25 @@
           "renamed": "GzipDecompressor"
         },
         {
+          "start": 4887,
+          "end": 4888,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
           "start": 4924,
           "end": 4926,
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 4938,
+          "end": 4939,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 4963,
@@ -244956,10 +245117,17 @@
     },
     {
       "original": "i.java",
-      "renamed": "i.java",
+      "renamed": "ByteStorage.java",
       "inputSha256": "fadf3f6d70ef432aed3fc3f171cdf4d09de6ba3e5014a66111ce6ef491473908",
-      "outputSha256": "7ac9736da6d96243c3cffd06aad42cc14b61d9023ef4a5a1fb61120ef512e20e",
+      "outputSha256": "303ebec4278f91f37729463ec9f3cb8e5be4c61ca7922f29acb8ee6929c26837",
       "edits": [
+        {
+          "start": 53,
+          "end": 54,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
         {
           "start": 91,
           "end": 93,
@@ -244968,11 +245136,32 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 716,
+          "end": 717,
+          "symbol": "M:i.a([BB)V",
+          "original": "a",
+          "renamed": "setBytes"
+        },
+        {
           "start": 1725,
           "end": 1727,
           "symbol": "C:sd",
           "original": "sd",
           "renamed": "ScorePopup"
+        },
+        {
+          "start": 2525,
+          "end": 2526,
+          "symbol": "M:i.a(I)[B",
+          "original": "a",
+          "renamed": "getBytes"
+        },
+        {
+          "start": 2729,
+          "end": 2730,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 2865,
@@ -247137,7 +247326,7 @@
       "original": "ja.java",
       "renamed": "ja.java",
       "inputSha256": "d7302d7f10ac60662b3e8fd400a1dc8fe175865c68d19cd14cf2b7730a0b7f32",
-      "outputSha256": "7ebd0172649f2350c995838d30c56395bd520600dc626e71d654b26189acd401",
+      "outputSha256": "e565a2ad67f290e8d8a49fcefc7205aecef48bee6cbc50bfd6c03e6fdc7a9d10",
       "edits": [
         {
           "start": 61,
@@ -247152,6 +247341,34 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2050,
+          "end": 2052,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2081,
+          "end": 2083,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2157,
+          "end": 2159,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2188,
+          "end": 2190,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 2420,
@@ -247243,8 +247460,15 @@
       "original": "jb.java",
       "renamed": "jb.java",
       "inputSha256": "fc70c945de7eacb695383a04416cc7f4164f94433b9ed530163ba67d39a7ae6e",
-      "outputSha256": "dfe7ce50f58150a272582c3d637752861f7239857b9d0d422d861f7581138d6f",
+      "outputSha256": "0e9a98467aee4daff8b658edd39b2c07e57376096a74c935b2855a000301aeae",
       "edits": [
+        {
+          "start": 689,
+          "end": 691,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
         {
           "start": 720,
           "end": 722,
@@ -247543,7 +247767,7 @@
       "original": "jj.java",
       "renamed": "jj.java",
       "inputSha256": "b81d07171cfafb529815218f16c82f12bd8874e04556f9998e9910bf984f248c",
-      "outputSha256": "ec219110f80bcdb76ce4898877fa112671046b723f17d464222d885737621871",
+      "outputSha256": "78d074025fa252516c6468109e35a0d7101338ae1a1b1843f6e97bfe44a69e32",
       "edits": [
         {
           "start": 781,
@@ -247572,6 +247796,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 3147,
+          "end": 3149,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 3873,
@@ -247679,6 +247910,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 6466,
+          "end": 6468,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 6895,
           "end": 6896,
           "symbol": "M:ka.f(I)I",
@@ -247726,6 +247964,13 @@
           "symbol": "M:ka.f(I)I",
           "original": "f",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 8832,
+          "end": 8834,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 8921,
@@ -247812,6 +248057,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 10397,
+          "end": 10399,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 10737,
           "end": 10738,
           "symbol": "M:ka.e(I)I",
@@ -247824,6 +248076,13 @@
           "symbol": "M:ka.f(I)I",
           "original": "f",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 11400,
+          "end": 11402,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 11490,
@@ -252410,7 +252669,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "593a62609854e448b10db7b9eee7b88b2c68a31aed37126f4a7e259e8e555a0c",
-      "outputSha256": "2013274a866485909f71c32a03f21da80e03e169e22c42f3583a754fec4611da",
+      "outputSha256": "56dfe8ffd74f72008236e8d2cfb00e512a8658ee042960be05d42b3d2278ebbf",
       "edits": [
         {
           "start": 61,
@@ -252446,6 +252705,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 850,
+          "end": 852,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 919,
@@ -253021,7 +253287,7 @@
       "original": "n.java",
       "renamed": "n.java",
       "inputSha256": "874dfa6ed5e57dd89958b343a8937c98369948fc35dfde36b080171cc86f88d9",
-      "outputSha256": "9a03db8a76bea6fd123d34ccd1c8b2e3966d9a59d7f6065ee81dc7bc9de98f6a",
+      "outputSha256": "1073c70cb0bf6257ae682fbf37019ec73d432439e49db4edc446fe6eb00dbb02",
       "edits": [
         {
           "start": 7144,
@@ -253435,6 +253701,13 @@
           "symbol": "M:oj.b(ILgg;)V",
           "original": "b",
           "renamed": "addLast"
+        },
+        {
+          "start": 19805,
+          "end": 19807,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         }
       ]
     },
@@ -253442,7 +253715,7 @@
       "original": "na.java",
       "renamed": "na.java",
       "inputSha256": "86717a6f9437c123be487e4ead6f1694a33f7e624ef72ea206447a2583b996dd",
-      "outputSha256": "f4bf764105231e297d8a3de5c3b14ef2467e2a464cbd2d330c666ce5d97c8a68",
+      "outputSha256": "fcb24389fdc1ab323b744bd3092cc5eb5cce9c10d9f22858ecc27252ce5e5759",
       "edits": [
         {
           "start": 110,
@@ -253466,11 +253739,32 @@
           "renamed": "Sprite"
         },
         {
+          "start": 460,
+          "end": 462,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 584,
           "end": 586,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1920,
+          "end": 1922,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2070,
+          "end": 2072,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 8131,
@@ -253768,7 +254062,7 @@
       "original": "nf.java",
       "renamed": "nf.java",
       "inputSha256": "17728bb2fee3fb3e513fc15178eff5a9ceae5e18cbe51ddff62f2940ee8e3a63",
-      "outputSha256": "84bf6b50886033b480532b9d33fab3d9e9d3c53ce49c0f95781e1abf5ac238c6",
+      "outputSha256": "1b177bc06752727e1780ce90d3de5301c5a2fb9718ed3d4ac40a1408eb7082ef",
       "edits": [
         {
           "start": 61,
@@ -253881,6 +254175,27 @@
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 2747,
+          "end": 2749,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2769,
+          "end": 2771,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2782,
+          "end": 2784,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         }
       ]
     },
@@ -257122,7 +257437,7 @@
       "original": "pe.java",
       "renamed": "pe.java",
       "inputSha256": "7509130c4d3cff7ae7faaf1729f6ca64b8494b74ede2bc6eae3fb49efa8d42c9",
-      "outputSha256": "fc2916cb939efc6c23336352d0519a53a228c8d00aeb2586b71cb94a7891a64b",
+      "outputSha256": "2c581047dc85e57533c06ac54638ef448359473e6b65857691d453f9777857e0",
       "edits": [
         {
           "start": 93,
@@ -257130,6 +257445,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 334,
+          "end": 335,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 392,
@@ -258693,7 +259015,7 @@
       "original": "qb.java",
       "renamed": "qb.java",
       "inputSha256": "580f6ebdce2fc261a9df710ad8b68592c1943813fc7655de82c15f376b75fa5a",
-      "outputSha256": "61f8f7f7fba27fdba0a41d3f5785582a1a8606538bb2ea70235352f1e0dbd833",
+      "outputSha256": "5ecff066353adf24bf18c4978db6a558bfedc9ce46b0fbdc4560133a19d24534",
       "edits": [
         {
           "start": 185,
@@ -258729,6 +259051,13 @@
           "symbol": "C:rc",
           "original": "rc",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 945,
+          "end": 946,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 2248,
@@ -259081,7 +259410,7 @@
       "original": "qe.java",
       "renamed": "GameEntity.java",
       "inputSha256": "d124434e188951a58d4f5ce864aeb9e9fa59ff386352b6ef11ad964d97420042",
-      "outputSha256": "bf5f10b47ecdbdb503385ea2ac7f1d51f3d16e9ba152afa42f0b2fd8e2b35575",
+      "outputSha256": "15e32f914574ccd6c87a4dc6d09c9aed68a89b326f0cc8873d84d2a4e26367b9",
       "edits": [
         {
           "start": 69,
@@ -260496,6 +260825,13 @@
           "symbol": "M:qe.b(I)Lpb;",
           "original": "b",
           "renamed": "currentSprite"
+        },
+        {
+          "start": 45380,
+          "end": 45382,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 45606,
@@ -263422,7 +263758,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "3e5076e23275ad062f4a11c48984dd5cbd68c92fa1fd6de82fa6b81014509dfa",
-      "outputSha256": "e4fccc13939b5d0cf546a892c007abec8653aa3f945cbad8fd8ad24aaf3aeeee",
+      "outputSha256": "4c1309e52975cb547dce99aaccdefa1484197cd3d93c7ae73a924519a79fd568",
       "edits": [
         {
           "start": 64,
@@ -263444,6 +263780,118 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "RasterBuffer"
+        },
+        {
+          "start": 1786,
+          "end": 1787,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1813,
+          "end": 1814,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1841,
+          "end": 1842,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1868,
+          "end": 1869,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1896,
+          "end": 1897,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1923,
+          "end": 1924,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1951,
+          "end": 1952,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1979,
+          "end": 1980,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2006,
+          "end": 2007,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2034,
+          "end": 2035,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2061,
+          "end": 2062,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2088,
+          "end": 2089,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2115,
+          "end": 2116,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2264,
+          "end": 2265,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2292,
+          "end": 2293,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 2319,
+          "end": 2320,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 2729,
@@ -264300,7 +264748,7 @@
       "original": "rl.java",
       "renamed": "rl.java",
       "inputSha256": "d352f09033407df487986569df38941533a1c3d0ed25d856dd71ef9df8e0bece",
-      "outputSha256": "16996d9227103e6986173edfb86613bf9457cc74ccf7ad6ce6665f495331e42d",
+      "outputSha256": "2f9cece79c995e00259e355a090c35b9e0690f6af6e8ec1e1825eef649155de3",
       "edits": [
         {
           "start": 169,
@@ -264448,6 +264896,13 @@
           "symbol": "F:ka.field_r:[B",
           "original": "field_r",
           "renamed": "payload"
+        },
+        {
+          "start": 4569,
+          "end": 4570,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         }
       ]
     },
@@ -264545,16 +265000,107 @@
     },
     {
       "original": "sa.java",
-      "renamed": "sa.java",
+      "renamed": "DirectByteStorage.java",
       "inputSha256": "06dafd95a99525bf9be48662f6307b4fa74a0bccfe55d8dbcffc550a85c7174b",
-      "outputSha256": "b2ffd3be380943c23961ea1ccd1e282bdbaabcfbe78a56005861fdd270ed19b7",
+      "outputSha256": "9baf93b61e0515ffc0471569b3f8b65dd7245677de49941e9c1d44575793d616",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 61,
+          "end": 62,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
         {
           "start": 100,
           "end": 102,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 170,
+          "end": 177,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
+        },
+        {
+          "start": 197,
+          "end": 198,
+          "symbol": "M:sa.a(I)[B",
+          "original": "a",
+          "renamed": "getBytes"
+        },
+        {
+          "start": 249,
+          "end": 256,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
+        },
+        {
+          "start": 311,
+          "end": 318,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
+        },
+        {
+          "start": 391,
+          "end": 398,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
+        },
+        {
+          "start": 621,
+          "end": 623,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 790,
+          "end": 792,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 908,
+          "end": 909,
+          "symbol": "M:sa.a([BB)V",
+          "original": "a",
+          "renamed": "setBytes"
+        },
+        {
+          "start": 969,
+          "end": 976,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
+        },
+        {
+          "start": 1045,
+          "end": 1052,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
+        },
+        {
+          "start": 1081,
+          "end": 1088,
+          "symbol": "F:sa.field_f:Ljava/nio/ByteBuffer;",
+          "original": "field_f",
+          "renamed": "buffer"
         },
         {
           "start": 1895,
@@ -264569,6 +265115,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2812,
+          "end": 2814,
+          "symbol": "M:sa.<init>()V",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         }
       ]
     },
@@ -265474,7 +266027,7 @@
       "original": "sg.java",
       "renamed": "sg.java",
       "inputSha256": "59fe0852636b126243f699412ad003ba1e065c29e976f5a739e6735e05d7e2c7",
-      "outputSha256": "593f72360e1075ba8a35d176772edbee1cd91e15aa7f762c1796c07b63893417",
+      "outputSha256": "4d85a88ddd852b5981b02fd23b037c87db7c37a7016c1ce4ab511010499e818c",
       "edits": [
         {
           "start": 85,
@@ -265496,6 +266049,13 @@
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 3269,
+          "end": 3270,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 5394,
@@ -265899,7 +266459,7 @@
       "original": "stellarshard.java",
       "renamed": "stellarshard.java",
       "inputSha256": "a8f31243b6bc3e79958dc16124f28b5ff43bd2bc95d8d805e17f8b5f4da9baa2",
-      "outputSha256": "5d6ed6b07754216fd47d4be38488681a4202f7c69d844c756337cf5a7e130570",
+      "outputSha256": "217019d98d257bd02569598fa538285209ca3c2d6dfefafad62d3f97dc1efd83",
       "edits": [
         {
           "start": 159,
@@ -266261,6 +266821,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 16993,
+          "end": 16994,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 17339,
@@ -270602,6 +271169,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 126671,
+          "end": 126672,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
           "start": 126692,
           "end": 126693,
           "symbol": "M:j.a()V",
@@ -270824,6 +271398,13 @@
           "symbol": "M:pd.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 127878,
+          "end": 127880,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 128000,
@@ -271997,6 +272578,13 @@
           "renamed": "DualLinkDequeIterator"
         },
         {
+          "start": 169516,
+          "end": 169517,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
           "start": 169607,
           "end": 169609,
           "symbol": "C:be",
@@ -272004,11 +272592,25 @@
           "renamed": "MouseHandler"
         },
         {
+          "start": 169633,
+          "end": 169634,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
           "start": 169724,
           "end": 169726,
           "symbol": "C:gg",
           "original": "gg",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 169750,
+          "end": 169751,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 170415,
@@ -272377,8 +272979,15 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "e2e86fba4c31a1a88a4dc1d53b5d2f52df3dee5ed5f59a18f9986360bb259f66",
-      "outputSha256": "f59083531d716e42baaf10b709c19e89d4ac16ab3cb2e97a1609c4d1ae243229",
+      "outputSha256": "281d4e598cc0edac2465270d15bd8a13587555234c19c08e8ba6772645079d33",
       "edits": [
+        {
+          "start": 3709,
+          "end": 3711,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
         {
           "start": 4693,
           "end": 4695,
@@ -272485,7 +273094,7 @@
       "original": "te.java",
       "renamed": "te.java",
       "inputSha256": "35be73493fa1a678abed7d43b1b1f6294c051719f93db2ebebff06cf8c92404c",
-      "outputSha256": "191b0b19e67d23f245ce8a50778bd46c2f5ad86636725623d5de23f33ac564de",
+      "outputSha256": "4da30d5bc0b5d5478958adda3cbeb8adda76d474f7ba38bbb9e72d20f0f1252a",
       "edits": [
         {
           "start": 435,
@@ -272500,6 +273109,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2341,
+          "end": 2342,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 2432,
@@ -272521,7 +273137,7 @@
       "original": "tf.java",
       "renamed": "tf.java",
       "inputSha256": "88a3398024a7ea9208c5760fd319bc64d1154cee3ecb09415b1cd34566bbb915",
-      "outputSha256": "c7d46c8b8697288309e362c2d32f539d02540dbdb5fb3f8861323edc289f47a0",
+      "outputSha256": "65c102018da28f89611aaf886b86e46ee15e923e02e04e91ee7b604852670f5a",
       "edits": [
         {
           "start": 96,
@@ -272538,6 +273154,20 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 333,
+          "end": 335,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 364,
+          "end": 366,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 377,
           "end": 379,
           "symbol": "C:ka",
@@ -272552,11 +273182,53 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 533,
+          "end": 535,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 564,
+          "end": 566,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 577,
           "end": 579,
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 943,
+          "end": 944,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1477,
+          "end": 1478,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1569,
+          "end": 1570,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
+          "start": 1614,
+          "end": 1615,
+          "symbol": "M:i.a(I)[B",
+          "original": "a",
+          "renamed": "getBytes"
         },
         {
           "start": 2556,
@@ -272968,7 +273640,7 @@
       "original": "ua.java",
       "renamed": "ua.java",
       "inputSha256": "6a27dab9ee952b481441285bc7e27d27b892e9ef41a31ea19dd3bf07c1427123",
-      "outputSha256": "6141de19cfe94c710399f50ea9493e148411e4f60ae158eb4b86e465415ff381",
+      "outputSha256": "99afdbfc4917901671637d8878020afee804ad4a98252bb57f361767b416d554",
       "edits": [
         {
           "start": 299,
@@ -272983,6 +273655,27 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 3780,
+          "end": 3782,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 3803,
+          "end": 3805,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 3832,
+          "end": 3834,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         }
       ]
     },
@@ -274100,7 +274793,7 @@
       "original": "v.java",
       "renamed": "v.java",
       "inputSha256": "0bb51159d0987ef716055428ed1100f3f415f3f1ffc1ec231f739186a931f92c",
-      "outputSha256": "c2b69c94e5d16b9adab03e4919d87e867b3aa4ae230a2e9fdc231ab9a1d9726a",
+      "outputSha256": "d878d61c035c9c56f172171b152a2c571cbfd7aedb1dc999f5947e7606567efe",
       "edits": [
         {
           "start": 329,
@@ -274255,6 +274948,13 @@
           "symbol": "M:ka.f(I)I",
           "original": "f",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 6926,
+          "end": 6928,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 7013,
@@ -274525,7 +275225,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "660d960cb90edf42493883ac3146485678b967234c3567cd45606c65b909462f",
-      "outputSha256": "c32baa0de8bb40b60a4d891b1bf25ff40787564e90f3beaa5623c3154b592f30",
+      "outputSha256": "7ed8e080d1d8d57925566e78ae04c58da9f1485035490394658ee69887f22ea1",
       "edits": [
         {
           "start": 61,
@@ -274591,6 +275291,13 @@
           "renamed": "BitmapFont"
         },
         {
+          "start": 3206,
+          "end": 3208,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 3319,
           "end": 3321,
           "symbol": "C:ka",
@@ -274624,7 +275331,7 @@
       "original": "vg.java",
       "renamed": "vg.java",
       "inputSha256": "05afbc5b195614db975814b859d71ee2cc1279c9eebfb6abf37c25318a9dd832",
-      "outputSha256": "5b3dc4f25fcdf6af983665a24e57a19dd8d9b7e72f13cb2c0a1824c34067eb4d",
+      "outputSha256": "5b1195c0782f3d7bda6b905a5fb2c2dabe6b59d22fa3ac9747f63ceaef98941b",
       "edits": [
         {
           "start": 496,
@@ -274639,6 +275346,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 925,
+          "end": 927,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 992,
@@ -274932,8 +275646,30 @@
       "original": "vk.java",
       "renamed": "vk.java",
       "inputSha256": "0f21c5ff2d554d6937ab45cc51a6a6706c2dd6382d4c039723c9c4b10bdeb198",
-      "outputSha256": "0f21c5ff2d554d6937ab45cc51a6a6706c2dd6382d4c039723c9c4b10bdeb198",
-      "edits": []
+      "outputSha256": "b8ae33381c7c3f5f462572629353ba065a0c2cb20fc3aadf083b5e52acefcb08",
+      "edits": [
+        {
+          "start": 1222,
+          "end": 1224,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 1253,
+          "end": 1255,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 1284,
+          "end": 1286,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        }
+      ]
     },
     {
       "original": "vl.java",
@@ -275788,7 +276524,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "a282ff86685e833ee6bdd6b6abf4bf88240920395f44803bd22b20eee8e5a1be",
-      "outputSha256": "978e1e91638189a069e3730bcac6032064a4029a002bdaa984116d423760f569",
+      "outputSha256": "b878e101e966f0fc8f79cd5a8caedd31f5ad75c52b386206fe83742387908a59",
       "edits": [
         {
           "start": 483,
@@ -275805,6 +276541,48 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 2461,
+          "end": 2463,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2490,
+          "end": 2492,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 3307,
+          "end": 3309,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 3331,
+          "end": 3333,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 5567,
+          "end": 5569,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 6548,
+          "end": 6550,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
+        },
+        {
           "start": 7499,
           "end": 7500,
           "symbol": "C:s",
@@ -275817,6 +276595,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 8984,
+          "end": 8986,
+          "symbol": "C:sa",
+          "original": "sa",
+          "renamed": "DirectByteStorage"
         },
         {
           "start": 11484,
@@ -275932,7 +276717,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "c14e87995273a30d48e81b0329ccc78e9cecb76910e5de18faab995e7e0578f4",
-      "outputSha256": "c4f48954dc3223a413389c03f36dde4d49d619d73c5f67e403d2d98f55c8ec5d",
+      "outputSha256": "8782ddcf81de2a5917a2f7d4b949d08df0bc9a4148583f0b89c030cc1d3d4d66",
       "edits": [
         {
           "start": 97,
@@ -276845,6 +277630,13 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 31207,
+          "end": 31208,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
+        },
+        {
           "start": 31240,
           "end": 31242,
           "symbol": "C:vi",
@@ -277053,6 +277845,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "RasterBuffer"
+        },
+        {
+          "start": 33520,
+          "end": 33521,
+          "symbol": "C:i",
+          "original": "i",
+          "renamed": "ByteStorage"
         },
         {
           "start": 33603,
@@ -277368,10 +278167,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/stellarshard"
     },
-    "rulesSha256": "097263d7cbfc9fc40755af70d5e5bf3e421156be4951d0af920bf195b1a20abf",
+    "rulesSha256": "8961f142e94229dcd0528366ea40fd93506fe5556f8e2e0be0130eecb80b6c9c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-    "outputTreeSha256": "8ab7f794802b3a6b7146b97fb1923e1aae89f02cf9e5a8a5c379198c5cbd601c",
+    "outputTreeSha256": "95c7c162c133f7f0159ab7a5e6462ecd269db2882636b5d083a951b5ad2546fb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

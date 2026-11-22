@@ -388,7 +388,7 @@ final class db {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var35 = l.a((byte) 110, true, this.field_h[param0]);
+            var35 = l.extractBytes((byte) 110, true, this.field_h[param0]);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -396,7 +396,7 @@ final class db {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = l.a((byte) 110, false, this.field_h[param0]);
+            var9 = l.extractBytes((byte) 110, false, this.field_h[param0]);
           }
           try {
             var36 = b.a(var9, -1);
@@ -456,7 +456,7 @@ final class db {
                     var21 = var34[var20];
                   }
                   if (var21 == param2) {
-                    eg.a(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
+                    eg.copyByteRange(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
                     var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -495,7 +495,7 @@ final class db {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var29.readInt((byte) 127);
-                eg.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
+                eg.copyByteRange(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
               }
@@ -509,7 +509,7 @@ final class db {
               if (0 != this.field_d) {
                 var7[var18Lifetime2] = var39[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = fj.a(false, true, var39[var17Lifetime3]);
+                var7[var18Lifetime2] = fj.storeBytes(false, true, var39[var17Lifetime3]);
               }
             }
           } else {
@@ -519,7 +519,7 @@ final class db {
               var11 = 0;
             }
             if (this.field_d == 0) {
-              var7[var11] = fj.a(false, true, var43);
+              var7[var11] = fj.storeBytes(false, true, var43);
             } else {
               var7[var11] = var36;
             }
@@ -543,7 +543,7 @@ final class db {
         if (this.field_c) {
           this.field_h[param0] = this.field_g.a(param0, false);
         } else {
-          this.field_h[param0] = fj.a(false, true, this.field_g.a(param0, false));
+          this.field_h[param0] = fj.storeBytes(false, true, this.field_g.a(param0, false));
         }
         if (param1 != 24634) {
           field_a = (wj[]) (this.field_h[2]);
@@ -860,7 +860,7 @@ final class db {
             return stackIn_14_0;
           }
           if (this.field_e[param0][param3] != null) {
-            var7 = l.a((byte) 110, false, this.field_e[param0][param3]);
+            var7 = l.extractBytes((byte) 110, false, this.field_e[param0][param3]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

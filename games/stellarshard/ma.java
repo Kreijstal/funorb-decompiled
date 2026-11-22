@@ -30,7 +30,7 @@ final class ma extends IntrusiveNode {
           var4 = ih.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = gj.field_w[sa.a((int) var4[var6], 255)];
+            var5[var6] = gj.field_w[DirectByteStorage.a((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var5);
         }

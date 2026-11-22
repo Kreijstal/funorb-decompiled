@@ -109,7 +109,7 @@ final class LevelDecoder {
         int var5Lifetime2Lifetime2;
         var18 = TorChallenge.field_F ? 1 : 0;
         try {
-          of.field_f = 0;
+          ByteStorage.field_f = 0;
           BufferedSocket.field_p = null;
           if (param2 != 24233) {
             LevelDecoder.a(-120);
@@ -191,7 +191,7 @@ final class LevelDecoder {
               if (vg.a(var10, param2 - 24234) && (6 != var10 ||
                 var13 != 0 &&
                 var13 != 2)) {
-                of.field_f = of.field_f + 1;
+                ByteStorage.field_f = ByteStorage.field_f + 1;
               }
               ea.field_g[var5Lifetime2Lifetime1].field_y = var5Lifetime2Lifetime1;
               kf.a(ea.field_g[var5Lifetime2Lifetime1], var5Lifetime2Lifetime1, 8);

@@ -67,7 +67,7 @@ final class b extends am {
           return (int[]) null;
         }
         if (this.field_l.field_b) {
-          var4 = dp.field_a[param1];
+          var4 = ByteStorage.field_a[param1];
           for (var5 = 0; var5 < ci.field_c; var5++) {
             var7[var5] = this.d(-5951, var4, IntrusiveNode.field_b[var5]) % 4096;
           }

@@ -135,9 +135,9 @@ final class gk {
               pg.field_fb.backpatchByteLength(pg.field_fb.position - var9, (byte) -94);
             }
             ue.a((byte) -108, -1);
-            GzipDecompressor.field_d = i.field_d;
+            GzipDecompressor.field_d = ByteStorage.field_d;
           }
-          if (GzipDecompressor.field_d == i.field_d &&
+          if (GzipDecompressor.field_d == ByteStorage.field_d &&
             GameEntity.b(64, 1)) {
             var9Lifetime1 = ae.field_N.readUnsignedByte(4);
             ae.field_N.position = 0;

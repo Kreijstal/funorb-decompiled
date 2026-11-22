@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dp {
+abstract class ByteStorage {
     static int[] field_a;
     static Sprite field_b;
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static af a(String param0, String param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
@@ -56,7 +56,7 @@ abstract class dp {
         field_b = null;
     }
 
-    abstract void a(byte param0, byte[] param1);
+    abstract void setBytes(byte param0, byte[] param1);
 
     static {
     }

@@ -422,28 +422,28 @@ final class BattleUnit {
               var3 = 8;
             }
             if (this.field_U == 0) {
-              var6 = ke.field_a[12 - (-var3 - this.field_e)].a().b();
+              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e)].a().b();
             }
             if (this.field_U == 1) {
-              var6 = ke.field_a[0 + var3 + this.field_e].b();
+              var6 = ByteStorage.field_a[0 + var3 + this.field_e].b();
             }
             if (this.field_U == 2) {
-              var6 = ke.field_a[12 - (-var3 - this.field_e)].b();
+              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e)].b();
             }
             if (this.field_U == 3) {
-              var6 = ke.field_a[this.field_e + (var3 + 24)].b();
+              var6 = ByteStorage.field_a[this.field_e + (var3 + 24)].b();
             }
             if (4 == this.field_U) {
-              var6 = ke.field_a[this.field_e + 36 + var3].b();
+              var6 = ByteStorage.field_a[this.field_e + 36 + var3].b();
             }
             if (this.field_U == 5) {
-              var6 = ke.field_a[var3 + 48 + this.field_e].b();
+              var6 = ByteStorage.field_a[var3 + 48 + this.field_e].b();
             }
             if (6 == this.field_U) {
-              var6 = ke.field_a[var3 + (36 + this.field_e)].a().b();
+              var6 = ByteStorage.field_a[var3 + (36 + this.field_e)].a().b();
             }
             if (this.field_U == 7) {
-              var6 = ke.field_a[24 + (var3 + this.field_e)].a().b();
+              var6 = ByteStorage.field_a[24 + (var3 + this.field_e)].a().b();
             }
             var7 = 0;
           }
@@ -457,28 +457,28 @@ final class BattleUnit {
               var3 = 8;
             }
             if (0 == this.field_U) {
-              var6 = ke.field_a[12 - (-var3 - this.field_e - 60)].a().b();
+              var6 = ByteStorage.field_a[12 - (-var3 - this.field_e - 60)].a().b();
             }
             if (this.field_U == 1) {
-              var6 = ke.field_a[60 + var3 + (0 + this.field_e)].b();
+              var6 = ByteStorage.field_a[60 + var3 + (0 + this.field_e)].b();
             }
             if (this.field_U == 2) {
-              var6 = ke.field_a[this.field_e + var3 + 72].b();
+              var6 = ByteStorage.field_a[this.field_e + var3 + 72].b();
             }
             if (this.field_U == 3) {
-              var6 = ke.field_a[60 + (var3 + 24 + this.field_e)].b();
+              var6 = ByteStorage.field_a[60 + (var3 + 24 + this.field_e)].b();
             }
             if (this.field_U == 4) {
-              var6 = ke.field_a[60 + var3 + 36 + this.field_e].b();
+              var6 = ByteStorage.field_a[60 + var3 + 36 + this.field_e].b();
             }
             if (5 == this.field_U) {
-              var6 = ke.field_a[60 + (this.field_e + 48 + var3)].b();
+              var6 = ByteStorage.field_a[60 + (this.field_e + 48 + var3)].b();
             }
             if (this.field_U == 6) {
-              var6 = ke.field_a[var3 + (36 + (this.field_e + 60))].a().b();
+              var6 = ByteStorage.field_a[var3 + (36 + (this.field_e + 60))].a().b();
             }
             if (7 == this.field_U) {
-              var6 = ke.field_a[this.field_e + (24 + (var3 + 60))].a().b();
+              var6 = ByteStorage.field_a[this.field_e + (24 + (var3 + 60))].a().b();
             }
             var7 = 0;
           }

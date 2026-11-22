@@ -558,7 +558,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_70_0 = dj.a(var2.charAt(var3), true);
+                      stackIn_70_0 = ByteStorage.a(var2.charAt(var3), true);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

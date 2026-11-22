@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rk {
+abstract class ByteStorage {
     static String field_a;
     static int field_c;
     static String field_b;
@@ -15,7 +15,7 @@ abstract class rk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 20) {
-            rk.clearStaticReferences((byte) -79);
+            ByteStorage.clearStaticReferences((byte) -79);
           }
           stackIn_3_0 = param2.b(false, param0);
           return stackIn_3_0;
@@ -33,7 +33,7 @@ abstract class rk {
         }
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;
@@ -43,7 +43,7 @@ abstract class rk {
         }
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     static {
         field_a = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";

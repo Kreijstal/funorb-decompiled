@@ -1668,7 +1668,7 @@ final class hj {
           ge.h(0, 0, 640, 480);
           ge.c(70, var5Lifetime3, 10, -var5Lifetime3 + 480, var3Lifetime4, 120);
           ge.c(560, var6Lifetime1, 10, -var6Lifetime1 + 480, var3Lifetime4, 120);
-          ka.b(0);
+          ByteStorage.b(0);
           var7 = qh.field_a[this.field_ab];
           var7.b(var7.field_m << 3, var7.field_n << 3, (int)this.field_B << 4, (int)this.field_Z << 4, this.field_g, 4096);
           lb.field_E[0].c(0, 0);

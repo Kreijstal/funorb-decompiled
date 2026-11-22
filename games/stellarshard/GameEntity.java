@@ -1155,7 +1155,7 @@ final class GameEntity {
                     var20Lifetime1 = (256 - var15) * var20Lifetime1 + var15 * 255 >> 9;
                     var18 = (-var15 + 256) * var18 >> 9;
                     var19 = var19 * (256 - var15) + var15 * 255 >> 9;
-                    var13[var7] = var20Lifetime1 + ((var19 << 8) + (var18 << 16)) + sa.a(var16 >> 1, 8355711);
+                    var13[var7] = var20Lifetime1 + ((var19 << 8) + (var18 << 16)) + DirectByteStorage.a(var16 >> 1, 8355711);
                   }
                   var7++;
                 }

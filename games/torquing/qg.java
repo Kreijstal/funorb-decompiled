@@ -207,7 +207,7 @@ final class qg extends am {
         }
         var3 = this.field_l.a(param1, 25657);
         if (this.field_l.field_b) {
-          var4 = 2048 + dp.field_a[param1] * this.field_w;
+          var4 = 2048 + ByteStorage.field_a[param1] * this.field_w;
           var5 = var4 >> 12;
           var6 = 1 + var5;
           for (var14 = 0; var14 < ci.field_c; var14++) {

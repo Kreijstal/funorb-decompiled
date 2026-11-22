@@ -155,8 +155,8 @@ abstract class GameShell extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ph.field_o = this.field_z;
         a.a(ph.field_o, param1 - 4993);
-        ji.a(this.field_A, this.field_s, this.field_v, param5, param1 - 4915, this.field_w, this.field_t, nj.field_l, 5000, param1, this.field_x, param6, ph.field_o, this.field_B);
-        pe.a(this.field_B, this.field_w, param6, this.field_A, this.field_v, ph.field_o, 128, nj.field_l, this.field_x);
+        ji.a(this.field_A, this.field_s, this.field_v, param5, param1 - 4915, this.field_w, this.field_t, DirectByteStorage.field_l, 5000, param1, this.field_x, param6, ph.field_o, this.field_B);
+        pe.a(this.field_B, this.field_w, param6, this.field_A, this.field_v, ph.field_o, 128, DirectByteStorage.field_l, this.field_x);
         wd.a(false);
         lk.field_d = TutorialController.c(-3109);
         am.a((byte) 29, ae.field_G);
@@ -269,7 +269,7 @@ abstract class GameShell extends GameApplet {
           if (var4 == 13) {
             try {
               if (fm.field_b == null) {
-                fm.field_b = new bh(nj.field_l, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                fm.field_b = new bh(DirectByteStorage.field_l, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (fm.field_b.a((byte) 116)) {
                 var7 = fm.field_b.a(-76);
@@ -348,7 +348,7 @@ abstract class GameShell extends GameApplet {
             WidgetContainer.g(-17464);
             UiWidget.c((byte) 127);
             k.a(2, ae.field_F, false);
-            ke.a((byte) -107);
+            ByteStorage.a((byte) -107);
             q.field_Gb = true;
             ah.field_z = ll.a(1000) + 15000L;
           }
@@ -441,7 +441,7 @@ abstract class GameShell extends GameApplet {
           ch.field_g = vj.a(false, true, f.field_g, (byte) 62, 1);
           uh.field_H = 2;
           di.field_i = ph.field_q;
-          ke.field_d = bi.field_d;
+          ByteStorage.field_d = bi.field_d;
         }
         if (uh.field_H == 2) {
           if (null != bl.field_a &&
@@ -622,7 +622,7 @@ abstract class GameShell extends GameApplet {
                             Terraphoenix.q(320);
                           }
                         } else {
-                          QuickChatMenu.a((byte) 43, nj.field_l, LevelEditor.field_j, qh.field_d);
+                          QuickChatMenu.a((byte) 43, DirectByteStorage.field_l, LevelEditor.field_j, qh.field_d);
                         }
                       }
                     } else {

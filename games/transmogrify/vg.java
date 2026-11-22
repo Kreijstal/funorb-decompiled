@@ -459,7 +459,7 @@ final class vg {
                       GzipDecompressor.b(5);
                     } else {
                       var9 = param0 ? 1 : 0;
-                      dj.a(param2, var9 != 0);
+                      ByteStorage.a(param2, var9 != 0);
                     }
                     break regionExit1;
                   }

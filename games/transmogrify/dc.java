@@ -52,7 +52,7 @@ final class dc {
             }
             discarded$0 = IterableNodeHashTable.usedWords[n.submittedWordCount].append((CharSequence) ((Object) of.wordBuffer));
             IterableNodeHashTable.wordScores[n.submittedWordCount] = var2_int;
-            hf.field_j = hf.field_j + (var2_int << 6);
+            DirectByteStorage.field_j = DirectByteStorage.field_j + (var2_int << 6);
             eh.totalScore = eh.totalScore + var2_int;
             var16 = FullscreenFocusCanvas.field_d[10].field_l;
             var13 = var16;
@@ -77,7 +77,7 @@ final class dc {
                 eh.totalScore = eh.totalScore + var7;
                 var5 = var5 + var7;
                 GameKeyHandler.field_c = GameKeyHandler.field_c + var7;
-                hf.field_j = hf.field_j + (var7 << 6);
+                DirectByteStorage.field_j = DirectByteStorage.field_j + (var7 << 6);
               }
             }
             regionExit1: {
@@ -109,7 +109,7 @@ final class dc {
                 wk.field_d = wk.field_d + var7;
                 vh.field_n = vh.field_n - (wk.field_d << 5);
                 eh.totalScore = eh.totalScore + wk.field_d;
-                hf.field_j = hf.field_j + (wk.field_d << 5);
+                DirectByteStorage.field_j = DirectByteStorage.field_j + (wk.field_d << 5);
                 ug.b(true);
                 if (100 <= wk.field_d) {
                   if (fi.unlockAchievement(0, 243, 12)) {

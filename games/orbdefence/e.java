@@ -8,7 +8,7 @@ final class e {
     final static byte[] a(Object param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        ll var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
@@ -26,11 +26,11 @@ final class e {
             field_a = (java.awt.Font) null;
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof ll)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (ll) (param0);
-            stackIn_14_0 = var4.a((byte) 99);
+            var4 = (ByteStorage) (param0);
+            stackIn_14_0 = var4.getBytes((byte) 99);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param0);

@@ -97,8 +97,8 @@ final class nf extends IntrusiveNode {
           this.field_q = param1;
           this.field_t = param4;
           this.field_s = param0;
-          fieldTemp$0 = sa.field_i;
-          sa.field_i = sa.field_i + 1;
+          fieldTemp$0 = DirectByteStorage.field_i;
+          DirectByteStorage.field_i = DirectByteStorage.field_i + 1;
           this.field_u = 65535 & fieldTemp$0;
           this.field_p = param3;
         } catch (RuntimeException runtimeException) {

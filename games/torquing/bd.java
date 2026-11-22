@@ -66,7 +66,7 @@ final class bd extends am {
             regionExit1: {
               regionExit2: {
                 var5 = IntrusiveNode.field_b[var4];
-                var6 = dp.field_a[param1];
+                var6 = ByteStorage.field_a[param1];
                 var7 = this.field_u * var5 >> 12;
                 var8 = this.field_x * var6 >> 12;
                 var9 = this.field_u * (var5 % (4096 / this.field_u));
@@ -111,7 +111,7 @@ final class bd extends am {
           regionExit3: {
             regionExit4: {
               var5Lifetime1 = IntrusiveNode.field_b[var4Lifetime1];
-              var6Lifetime1 = dp.field_a[param1];
+              var6Lifetime1 = ByteStorage.field_a[param1];
               var7Lifetime1 = this.field_u * var5Lifetime1 >> 12;
               var8Lifetime1 = this.field_x * var6Lifetime1 >> 12;
               var9Lifetime1 = this.field_u * (var5Lifetime1 % (4096 / this.field_u));

@@ -74,12 +74,12 @@ final class LevelData extends LevelGrid {
               var22[var8][var9_int] = (byte)(var10 >> 3);
               incrementValue$7 = var5;
               var5++;
-              var23[var8][var9_int] = fh.a(0, (int) param1.charAt(incrementValue$7));
+              var23[var8][var9_int] = ByteStorage.a(0, (int) param1.charAt(incrementValue$7));
               if (var4 > (1 + var9_int)) {
                 var22[var8][var9_int + 1] = (byte)RandomAccessCacheFile.a(7, var10);
                 incrementValue$8 = var5;
                 var5++;
-                var23[var8][var9_int + 1] = fh.a(0, (int) param1.charAt(incrementValue$8));
+                var23[var8][var9_int + 1] = ByteStorage.a(0, (int) param1.charAt(incrementValue$8));
               }
             }
           }
@@ -88,7 +88,7 @@ final class LevelData extends LevelGrid {
             for (var10Lifetime1 = 0; 6 > var10Lifetime1; var10Lifetime1++) {
               incrementValue$5 = var5;
               var5++;
-              var24[var9_intLifetime1][var10Lifetime1] = fh.a(0, (int) param1.charAt(incrementValue$5));
+              var24[var9_intLifetime1][var10Lifetime1] = ByteStorage.a(0, (int) param1.charAt(incrementValue$5));
             }
           }
           this.setGrids(var23, (byte) 50, var24, var22);

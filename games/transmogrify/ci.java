@@ -251,7 +251,7 @@ final class ci {
               return true;
             }
           }
-          var2Lifetime1 = hf.field_k;
+          var2Lifetime1 = DirectByteStorage.field_k;
           var3Lifetime1 = param1;
           while (true) {
             if (var3Lifetime1 >= var2Lifetime1.length) {

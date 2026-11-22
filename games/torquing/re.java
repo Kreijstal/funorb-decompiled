@@ -82,15 +82,15 @@ final class re {
           }
           if (param0 != um.field_o) {
             if (ci.field_c != param0) {
-              dp.field_a = new int[param0];
+              ByteStorage.field_a = new int[param0];
               var6 = 0;
               var3_intLifetime1 = var6;
               while (var6 < param0) {
-                dp.field_a[var6] = (var6 << 12) / param0;
+                ByteStorage.field_a[var6] = (var6 << 12) / param0;
                 var6++;
               }
             } else {
-              dp.field_a = IntrusiveNode.field_b;
+              ByteStorage.field_a = IntrusiveNode.field_b;
             }
             um.field_o = param0;
             vp.field_I = param0 - 1;
@@ -342,7 +342,7 @@ final class re {
         } else {
           SoftwareRasterizer.b();
         }
-        jm.a(param1, -127);
+        DirectByteStorage.a(param1, -127);
         if (!param0) {
           field_d = (double[]) null;
         }

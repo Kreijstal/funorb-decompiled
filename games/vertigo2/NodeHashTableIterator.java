@@ -181,7 +181,7 @@ final class NodeHashTableIterator implements Iterator {
           var3 = 0;
         }
         if (ui.field_g == 2 &&
-          !dh.a((byte) 127)) {
+          !ByteStorage.a((byte) 127)) {
           var3 = 0;
         }
         if (de.field_f == 84) {
@@ -204,10 +204,10 @@ final class NodeHashTableIterator implements Iterator {
               } else {
                 var13 = (String) null;
                 var12 = (String) null;
-                dh.a((byte) -123, pd.field_b, 2, (String) null, 0, (String) null);
+                ByteStorage.a((byte) -123, pd.field_b, 2, (String) null, 0, (String) null);
                 var15 = (String) null;
                 var14 = (String) null;
-                dh.a((byte) -7, ch.field_f, 2, (String) null, 0, (String) null);
+                ByteStorage.a((byte) -7, ch.field_f, 2, (String) null, 0, (String) null);
                 SpriteState.h(0);
               }
             }

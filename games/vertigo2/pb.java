@@ -105,7 +105,7 @@ final class pb {
           var64 = new int[param3.field_K];
           var61 = pk.field_w;
           var62 = dp.field_A;
-          var63 = dh.field_d;
+          var63 = ByteStorage.field_d;
           for (var13 = 0; param3.field_K > var13; var13++) {
             var14 = var61[var13] * param4 + var62[var13] * param1 + param6 * var63[var13] >> 8;
             if (0 > var14) {

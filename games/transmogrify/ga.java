@@ -22,7 +22,7 @@ final class ga {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!IndexedSpriteState.a((char) var3, -37) &&
-              !dj.a((char) var3, true)) {
+              !ByteStorage.a((char) var3, true)) {
               return true;
             }
           }

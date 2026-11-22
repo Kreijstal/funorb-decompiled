@@ -41,22 +41,22 @@ final class ed extends ButtonWidget {
           rk.field_X = cj.field_e;
           if (param1 == 255) {
             stackIn_5_0 = !(SocketArchiveRequestConnection.field_o >= 13);
-            fh.field_c = oc.a(stackIn_5_0, -21017);
+            ByteStorage.field_c = oc.a(stackIn_5_0, -21017);
             var7 = (String[]) null;
             gk.a((String[]) null, (byte) -93);
             return;
           }
           if (100 > param1) {
-            fh.field_c = wg.a((byte) -118, param1, param2);
+            ByteStorage.field_c = wg.a((byte) -118, param1, param2);
             return;
           }
           if (param1 > 105) {
-            fh.field_c = wg.a((byte) -118, param1, param2);
+            ByteStorage.field_c = wg.a((byte) -118, param1, param2);
             return;
           }
           var5 = args;
           gk.a(var5, (byte) -98);
-          fh.field_c = qg.a(args, 74);
+          ByteStorage.field_c = qg.a(args, 74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

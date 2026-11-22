@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends ka {
+final class DirectByteStorage extends ByteStorage {
     static int field_d;
-    private java.nio.ByteBuffer field_c;
+    private java.nio.ByteBuffer buffer;
     static int field_e;
 
     final static void e(int param0) {
@@ -12,18 +12,18 @@ final class ab extends ka {
         }
     }
 
-    final byte[] d(int param0) {
-        byte[] var3 = new byte[this.field_c.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_c.position(0);
-        this.field_c.get(var3);
+        this.buffer.position(0);
+        this.buffer.get(var3);
         if (param0 == -13913) {
           return var3;
         }
         return (byte[]) null;
     }
 
-    ab() {
+    DirectByteStorage() {
     }
 
     final static te a(byte param0, int param1) {
@@ -95,12 +95,12 @@ final class ab extends ka {
         }
     }
 
-    final void a(int param0, byte[] param1) {
+    final void setBytes(int param0, byte[] param1) {
         try {
-          this.field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_c.position(0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer.position(0);
           int var3_int = 117 / ((11 - param0) / 42);
-          this.field_c.put(param1);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ab.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

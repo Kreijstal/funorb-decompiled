@@ -10,7 +10,7 @@ final class kh {
     static int field_g;
     static int field_b;
 
-    final static Object a(boolean param0, byte[] param1, int param2) {
+    final static Object storeBytes(boolean param0, byte[] param1, int param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_6_0 = null;

@@ -211,7 +211,7 @@ final class qn extends am {
         }
         if (this.field_l.field_b) {
           var7 = 0;
-          for (var9 = dp.field_a[param1] + this.field_B; 0 > var9; var9 += 4096) {
+          for (var9 = ByteStorage.field_a[param1] + this.field_B; 0 > var9; var9 += 4096) {
           }
           while (var9 > 4096) {
             var9 -= 4096;

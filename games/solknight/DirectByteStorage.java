@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f extends rk {
-    private java.nio.ByteBuffer field_f;
+final class DirectByteStorage extends ByteStorage {
+    private java.nio.ByteBuffer buffer;
     static int field_d;
     static java.security.SecureRandom field_e;
 
@@ -12,7 +12,7 @@ final class f extends rk {
           param1.addKeyListener(i.field_J);
           if (param0 != 0) {
             java.awt.Component var3 = (java.awt.Component) null;
-            f.a(24, (java.awt.Component) null);
+            DirectByteStorage.a(24, (java.awt.Component) null);
           }
           param1.addFocusListener(i.field_J);
         } catch (RuntimeException runtimeException) {
@@ -20,14 +20,14 @@ final class f extends rk {
         }
     }
 
-    f() {
+    DirectByteStorage() {
     }
 
-    final void a(int param0, byte[] param1) {
+    final void setBytes(int param0, byte[] param1) {
         try {
-          this.field_f = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_f.position(param0);
-          this.field_f.put(param1);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer.position(param0);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "f.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -40,23 +40,23 @@ final class f extends rk {
         field_e = null;
     }
 
-    final byte[] a(int param0) {
+    final byte[] getBytes(int param0) {
         byte[] var3 = null;
         byte[] var2 = null;
         byte[] var3Lifetime1;
         byte[] var2Lifetime1;
         if (param0 >= 26) {
-          var3 = new byte[this.field_f.capacity()];
+          var3 = new byte[this.buffer.capacity()];
           var2 = var3;
-          this.field_f.position(0);
-          this.field_f.get(var3);
+          this.buffer.position(0);
+          this.buffer.get(var3);
           return var3;
         }
-        this.a(-87);
-        var3Lifetime1 = new byte[this.field_f.capacity()];
+        this.getBytes(-87);
+        var3Lifetime1 = new byte[this.buffer.capacity()];
         var2Lifetime1 = var3Lifetime1;
-        this.field_f.position(0);
-        this.field_f.get(var3Lifetime1);
+        this.buffer.position(0);
+        this.buffer.get(var3Lifetime1);
         return var3Lifetime1;
     }
 

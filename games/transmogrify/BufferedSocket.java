@@ -161,9 +161,9 @@ final class BufferedSocket implements Runnable {
                 scanLoop1: while (true) {
                   if (var10 != null) {
                     if (param1 != var10) {
-                      dj.field_b.setLength(0);
-                      discarded$0 = dj.field_b.append(param1.substring(var6, var7));
-                      if (-1 != ((String) (var10)).indexOf(dj.field_b.toString())) {
+                      ByteStorage.field_b.setLength(0);
+                      discarded$0 = ByteStorage.field_b.append(param1.substring(var6, var7));
+                      if (-1 != ((String) (var10)).indexOf(ByteStorage.field_b.toString())) {
                         var3_int = var7 - var6;
                         break scanLoop1;
                       }

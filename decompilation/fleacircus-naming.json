@@ -708,6 +708,14 @@
       "renamedSymbol": "M:MouseWheelInput.attach(ILjava/awt/Component;)V"
     },
     {
+      "symbol": "M:jg.a(ZLjava/lang/Object;Z)[B",
+      "originalName": "a",
+      "to": "extractBytes",
+      "evidence": "Complete body, direct storage instance contract and clone helper reviewed. Null handling,136-byte threshold, direct allocation versus byte-array alias/optional copy, invalid-object exception and every guard remain unchanged. Wrapper uses exact ~length < callerThreshold and forwards callerThreshold+13 to setter; reviewed ResourceArchive callers pass-137, yielding >136. Preserve all caller values, not a hard-coded threshold. Extraction boolean helper only affects non-byte[] values; existing copyByteArray/copyBytes names remain unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B"
+    },
+    {
       "symbol": "M:jg.b(I)I",
       "originalName": "b",
       "to": "pollRotation",
@@ -738,6 +746,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 db03c97c15f84592a2930fd2078559744e2dbe6967fadba3d42f86d62e678001.",
       "confidence": "reviewed",
       "renamedSymbol": "M:kh.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "storeBytes",
+      "evidence": "Complete body, direct storage instance contract and clone helper reviewed. Null handling,136-byte threshold, direct allocation versus byte-array alias/optional copy, invalid-object exception and every guard remain unchanged. Wrapper uses exact ~length < callerThreshold and forwards callerThreshold+13 to setter; reviewed ResourceArchive callers pass-137, yielding >136. Preserve all caller values, not a hard-coded threshold. Extraction boolean helper only affects non-byte[] values; existing copyByteArray/copyBytes names remain unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kh.storeBytes(Z[BI)Ljava/lang/Object;"
     },
     {
       "symbol": "M:kk.a(I)V",
@@ -95382,7 +95398,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#0",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#0",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -95393,7 +95409,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#1",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#1",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -95404,7 +95420,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#10",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#10",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -95415,7 +95431,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#11",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#11",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -95426,7 +95442,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#2",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#2",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -95437,7 +95453,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#3",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#3",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#3",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -95448,7 +95464,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#4",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#4",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -95459,7 +95475,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#5",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#5",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#5",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -95470,7 +95486,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#6",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#6",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#6",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -95481,7 +95497,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#7",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#7",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#7",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -95492,7 +95508,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#8",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#8",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#8",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -95503,7 +95519,7 @@
     },
     {
       "symbol": "L:jg.a(ZLjava/lang/Object;Z)[B#9",
-      "renamedSymbol": "L:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#9",
+      "renamedSymbol": "L:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#9",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -99826,7 +99842,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#0",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#0",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -99837,7 +99853,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#1",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#1",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -99848,7 +99864,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#2",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#2",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -99859,7 +99875,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#3",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#3",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -99870,7 +99886,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#4",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#4",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -99881,7 +99897,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#5",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#5",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -99892,7 +99908,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#6",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#6",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -99903,7 +99919,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#7",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#7",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -99914,7 +99930,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#8",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#8",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -99925,7 +99941,7 @@
     },
     {
       "symbol": "L:kh.a(Z[BI)Ljava/lang/Object;#9",
-      "renamedSymbol": "L:kh.a(Z[BI)Ljava/lang/Object;#9",
+      "renamedSymbol": "L:kh.storeBytes(Z[BI)Ljava/lang/Object;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -164561,9 +164577,9 @@
     },
     {
       "symbol": "M:jg.a(ZLjava/lang/Object;Z)[B",
-      "renamedSymbol": "M:MouseWheelInput.a(ZLjava/lang/Object;Z)[B",
+      "renamedSymbol": "M:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "extractBytes",
       "declaration": {
         "file": "jg.java",
         "start": 555,
@@ -165496,9 +165512,9 @@
     },
     {
       "symbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
-      "renamedSymbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
+      "renamedSymbol": "M:kh.storeBytes(Z[BI)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "storeBytes",
       "declaration": {
         "file": "kh.java",
         "start": 233,
@@ -208473,7 +208489,7 @@
     },
     {
       "symbol": "P:jg.a(ZLjava/lang/Object;Z)[B#0",
-      "renamedSymbol": "P:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#0",
+      "renamedSymbol": "P:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -208484,7 +208500,7 @@
     },
     {
       "symbol": "P:jg.a(ZLjava/lang/Object;Z)[B#1",
-      "renamedSymbol": "P:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#1",
+      "renamedSymbol": "P:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -208495,7 +208511,7 @@
     },
     {
       "symbol": "P:jg.a(ZLjava/lang/Object;Z)[B#2",
-      "renamedSymbol": "P:MouseWheelInput.a(ZLjava/lang/Object;Z)[B#2",
+      "renamedSymbol": "P:MouseWheelInput.extractBytes(ZLjava/lang/Object;Z)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -210530,7 +210546,7 @@
     },
     {
       "symbol": "P:kh.a(Z[BI)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:kh.a(Z[BI)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:kh.storeBytes(Z[BI)Ljava/lang/Object;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -210541,7 +210557,7 @@
     },
     {
       "symbol": "P:kh.a(Z[BI)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:kh.a(Z[BI)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:kh.storeBytes(Z[BI)Ljava/lang/Object;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -210552,7 +210568,7 @@
     },
     {
       "symbol": "P:kh.a(Z[BI)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:kh.a(Z[BI)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:kh.storeBytes(Z[BI)Ljava/lang/Object;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -246214,7 +246230,7 @@
       "original": "jg.java",
       "renamed": "MouseWheelInput.java",
       "inputSha256": "280849d2dfe6253cd0fff37c1fdd3cfeb9afca86c5859d0cce26d761cb22a933",
-      "outputSha256": "67531f4357bac9d344387491432ddd1fc400b9bdfdbae3e17dc7daa5cb3cf471",
+      "outputSha256": "def618ba38d54ec1197ed34a59de4fbd56731a232de888b263a6eacbaefcaa9b",
       "edits": [
         {
           "start": 53,
@@ -246250,6 +246266,13 @@
           "symbol": "M:jg.a(ILjava/awt/Component;)V",
           "original": "a",
           "renamed": "attach"
+        },
+        {
+          "start": 555,
+          "end": 556,
+          "symbol": "M:jg.a(ZLjava/lang/Object;Z)[B",
+          "original": "a",
+          "renamed": "extractBytes"
         },
         {
           "start": 684,
@@ -246784,8 +246807,15 @@
       "original": "kh.java",
       "renamed": "kh.java",
       "inputSha256": "62fab9b88cd3d4a129183af17df7816715b41053be83814e010a48ef5d4e97ec",
-      "outputSha256": "aa76265b22597500997dfdb440769fccd6c0e155694f8e91069d683485a3ac7c",
+      "outputSha256": "8ade494b6d75c325b50dc0720f6ab1c023aa3a44f9e631da944c7db98c1d3558",
       "edits": [
+        {
+          "start": 233,
+          "end": 234,
+          "symbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
+        },
         {
           "start": 288,
           "end": 290,
@@ -253842,7 +253872,7 @@
       "original": "rh.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "5cafeb76ea9d3db289e0f8c63a51c8493d4326cb3b7dd37df537e1d6d8c270aa",
-      "outputSha256": "8d4c9e34fc9594aeee99e50a5a5aa29b89c873c52c2aa5ca874cceee47f3d53e",
+      "outputSha256": "8d9ab9b83390144dbf4f92fbf46ee89b4f63d1efb3b197a4af1f04d71ceb23e4",
       "edits": [
         {
           "start": 50,
@@ -253880,6 +253910,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 3241,
+          "end": 3242,
+          "symbol": "M:jg.a(ZLjava/lang/Object;Z)[B",
+          "original": "a",
+          "renamed": "extractBytes"
+        },
+        {
           "start": 3356,
           "end": 3358,
           "symbol": "C:ni",
@@ -253906,6 +253943,13 @@
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 3523,
+          "end": 3524,
+          "symbol": "M:jg.a(ZLjava/lang/Object;Z)[B",
+          "original": "a",
+          "renamed": "extractBytes"
         },
         {
           "start": 4799,
@@ -253992,6 +254036,20 @@
           "renamed": "copyBytes"
         },
         {
+          "start": 8072,
+          "end": 8073,
+          "symbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
+        },
+        {
+          "start": 8432,
+          "end": 8433,
+          "symbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
+        },
+        {
           "start": 12040,
           "end": 12042,
           "symbol": "C:rh",
@@ -254032,6 +254090,20 @@
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 26704,
+          "end": 26705,
+          "symbol": "M:jg.a(ZLjava/lang/Object;Z)[B",
+          "original": "a",
+          "renamed": "extractBytes"
+        },
+        {
+          "start": 31829,
+          "end": 31830,
+          "symbol": "M:kh.a(Z[BI)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "storeBytes"
         },
         {
           "start": 33094,
@@ -260723,10 +260795,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/fleacircus"
     },
-    "rulesSha256": "e9d3057417b279411fb07a25b35cb113e9fe19d2e02155812f29376130c69851",
+    "rulesSha256": "2512a24057e65ba26d6b77b40ae501e1347b0c178703a86b4cf7955141972146",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
-    "outputTreeSha256": "84d474f3ad52d4b4a71d501eb193c290a98152b227ffdfdae78e497c30852679",
+    "outputTreeSha256": "a80ea440e6b28e6481babe466616eeeda789e98f218ff42baf0e81b15082b371",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

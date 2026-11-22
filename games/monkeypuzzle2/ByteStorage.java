@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ka {
+abstract class ByteStorage {
     static int field_a;
     static Sprite field_b;
 
@@ -23,9 +23,9 @@ abstract class ka {
         return cl.field_e;
     }
 
-    abstract byte[] d(int param0);
+    abstract byte[] getBytes(int param0);
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
     public static void a(int param0) {
         field_b = null;

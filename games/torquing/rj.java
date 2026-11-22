@@ -304,7 +304,7 @@ final class rj extends am {
         int var19 = 0;
         var19 = Torquing.field_u;
         try {
-          var5 = dp.field_a[param2] * this.field_u;
+          var5 = ByteStorage.field_a[param2] * this.field_u;
           if (this.field_C == 1) {
             var9 = this.field_x[0];
             var8 = this.field_t[0] << 12;

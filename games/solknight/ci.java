@@ -238,14 +238,14 @@ class ci extends gf implements ka {
         var10 = SolKnight.field_L ? 1 : 0;
         try {
           var7_int = ah.a(param1, (byte) -122);
-          if (null == f.field_e) {
-            f.field_e = new java.security.SecureRandom();
+          if (null == DirectByteStorage.field_e) {
+            DirectByteStorage.field_e = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; 4 > var9; var9++) {
-            var8[var9] = f.field_e.nextInt();
+            var8[var9] = DirectByteStorage.field_e.nextInt();
           }
           if (lc.field_k == null ||
             !(var7_int <= lc.field_k.payload.length)) {

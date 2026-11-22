@@ -44,7 +44,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
         var5 = StarCannon.field_A;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            kk.field_b[var2_int] = 0;
+            ByteStorage.field_b[var2_int] = 0;
           }
           if (param0 < 34) {
             var6 = (fb) null;
@@ -53,18 +53,18 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
           for (var2_intLifetime1 = 0; var2_intLifetime1 < wi.field_b; var2_intLifetime1++) {
             if (param1.field_q == lf.field_bb[var2_intLifetime1].field_q) {
               dupTemp$3 = lf.field_bb[var2_intLifetime1].b(-128);
-              kk.field_b[dupTemp$3] = kk.field_b[dupTemp$3] + 1;
+              ByteStorage.field_b[dupTemp$3] = ByteStorage.field_b[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.b(-126);
-          kk.field_b[dupTemp$0] = kk.field_b[dupTemp$0] + 1;
+          ByteStorage.field_b[dupTemp$0] = ByteStorage.field_b[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < wi.field_b; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_q == lf.field_bb[var3].field_q) {
               var4 = lf.field_bb[var3].b(-126);
-              if (vh.field_q < kk.field_b[var4]) {
-                kk.field_b[var4] = kk.field_b[var4] - 1;
+              if (vh.field_q < ByteStorage.field_b[var4]) {
+                ByteStorage.field_b[var4] = ByteStorage.field_b[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

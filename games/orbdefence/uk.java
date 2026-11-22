@@ -178,7 +178,7 @@ final class uk {
                     }
                   }
                   if (var21 != null &&
-                    fc.a((byte) -127, var21)) {
+                    DirectByteStorage.a((byte) -127, var21)) {
                     var8[1][var13] = gb.field_h;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

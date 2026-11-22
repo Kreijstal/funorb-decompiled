@@ -23,7 +23,7 @@ final class nh extends jq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
-            param0.length() >= vb.field_h) {
+            param0.length() >= DirectByteStorage.field_h) {
             if (param0.length() > fg.field_Y) {
               return true;
             }

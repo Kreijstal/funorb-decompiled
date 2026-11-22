@@ -82,7 +82,7 @@ final class vf extends WidgetContainer implements oi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
         try {
-          cg.a(param5, eh.field_a, param1, param14, param2, param11, sa.field_h, new qc(param4), param15, (byte) 45, param10, param9, param0, new qc(param8), kl.field_k, lg.field_b, PacketBuffer.field_q, 480, ul.field_G, param6, param7);
+          cg.a(param5, eh.field_a, param1, param14, param2, param11, DirectByteStorage.field_h, new qc(param4), param15, (byte) 45, param10, param9, param0, new qc(param8), kl.field_k, lg.field_b, PacketBuffer.field_q, 480, ul.field_G, param6, param7);
           qc.a(param3, param13, 0);
           if (param12 != 260) {
             field_F = -126;

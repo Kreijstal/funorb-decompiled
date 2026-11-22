@@ -212,7 +212,7 @@ final class ge extends td implements jg, ButtonListener {
               ne.field_a.position = 0;
               hd.field_o = param0[vd.field_K];
             }
-            if (!fh.a(520)) {
+            if (!ByteStorage.a(520)) {
               return false;
             }
             if (s.field_b == 0) {

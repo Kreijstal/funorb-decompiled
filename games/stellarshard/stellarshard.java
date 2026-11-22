@@ -453,7 +453,7 @@ public final class stellarshard extends rb implements cf {
             this.a(true, (byte) -111);
           }
           do {
-            if (!BufferedSocket.a((byte) 73, i.field_e)) {
+            if (!BufferedSocket.a((byte) 73, ByteStorage.field_e)) {
               ue.a((byte) 85, 0);
               break;
             }
@@ -2972,7 +2972,7 @@ public final class stellarshard extends rb implements cf {
           DelegatingCanvas.a((byte) -92);
           e.clearStaticReferences(186);
           vj.a((byte) 104);
-          i.b(64);
+          ByteStorage.b(64);
           j.clearStaticReferences();
           mg.a(true);
           lb.clearStaticReferences((byte) 122);
@@ -3022,7 +3022,7 @@ public final class stellarshard extends rb implements cf {
           dh.clearStaticReferences();
           sg.clearStaticReferences(-29297);
           pd.clearStaticReferences((byte) 117);
-          sa.c(-17002);
+          DirectByteStorage.c(-17002);
           ol.a(true);
           dl.i(80);
           of.d((byte) -120);
@@ -4067,15 +4067,15 @@ public final class stellarshard extends rb implements cf {
             return;
           }
           if (!hf.field_f) {
-            i.a((java.awt.Canvas) (var2), -113);
+            ByteStorage.a((java.awt.Canvas) (var2), -113);
             return;
           }
           if (null != MouseHandler.field_g) {
-            i.a((java.awt.Canvas) (var2), -101);
+            ByteStorage.a((java.awt.Canvas) (var2), -101);
             return;
           }
           if (null != IntrusiveNode.field_f) {
-            i.a((java.awt.Canvas) (var2), -99);
+            ByteStorage.a((java.awt.Canvas) (var2), -99);
             return;
           }
           boolean decompiledFrameCompleted6 = true;

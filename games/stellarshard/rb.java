@@ -64,26 +64,26 @@ abstract class rb extends GameApplet {
     }
 
     private final void i(int param0) {
-        i.field_e[3] = -1;
-        i.field_e[10] = -1;
-        i.field_e[7] = -1;
-        i.field_e[11] = -1;
-        i.field_e[4] = -1;
-        i.field_e[12] = -1;
-        i.field_e[17] = -1;
-        i.field_e[2] = -2;
-        i.field_e[16] = -1;
-        i.field_e[8] = -2;
-        i.field_e[9] = -1;
-        i.field_e[5] = -1;
-        i.field_e[6] = -2;
+        ByteStorage.field_e[3] = -1;
+        ByteStorage.field_e[10] = -1;
+        ByteStorage.field_e[7] = -1;
+        ByteStorage.field_e[11] = -1;
+        ByteStorage.field_e[4] = -1;
+        ByteStorage.field_e[12] = -1;
+        ByteStorage.field_e[17] = -1;
+        ByteStorage.field_e[2] = -2;
+        ByteStorage.field_e[16] = -1;
+        ByteStorage.field_e[8] = -2;
+        ByteStorage.field_e[9] = -1;
+        ByteStorage.field_e[5] = -1;
+        ByteStorage.field_e[6] = -2;
         if (param0 != 18) {
           String var3 = (String) null;
           this.a(-41, false, (String) null);
         }
-        i.field_e[13] = -1;
-        i.field_e[1] = 16;
-        i.field_e[18] = 1;
+        ByteStorage.field_e[13] = -1;
+        ByteStorage.field_e[1] = 16;
+        ByteStorage.field_e[18] = 1;
     }
 
     private final int a(boolean param0, boolean param1, boolean param2) {

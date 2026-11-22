@@ -31,7 +31,7 @@ final class tj extends vm {
         e.g((byte) -128);
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -48,7 +48,7 @@ final class tj extends vm {
             var4 = (ResourceArchive) null;
             tj.a(93, 27, (ResourceArchive) null, (byte) 6);
           }
-          ne.a(param1, 0, var3, 0, var2_int);
+          ne.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

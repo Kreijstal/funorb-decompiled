@@ -29,7 +29,7 @@ abstract class hf implements kf {
           var1 = j.field_e.a(32);
         }
         if (0 == var1.length()) {
-          var1 = ka.c(10367);
+          var1 = ByteStorage.c(10367);
         }
         if (param0 == var1.length()) {
           var1 = ProxyAuthenticationRequiredException.field_c;

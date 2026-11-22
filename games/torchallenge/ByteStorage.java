@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class of {
+abstract class ByteStorage {
     static rl field_c;
     static Sprite field_b;
     static boolean[][][] field_a;
@@ -9,13 +9,13 @@ abstract class of {
     static int field_f;
     static int field_e;
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
     final static byte[] a(byte param0, boolean param1, Object param2) {
         byte[] var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
-        of var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
@@ -38,12 +38,12 @@ abstract class of {
             stackIn_7_0 = var3;
             return stackIn_7_0;
           }
-          if (!(param2 instanceof of)) {
+          if (!(param2 instanceof ByteStorage)) {
             var3_int = -55 / ((65 - param0) / 60);
             throw new IllegalArgumentException();
           }
-          var4 = (of) (param2);
-          stackIn_13_0 = var4.c(2);
+          var4 = (ByteStorage) (param2);
+          stackIn_13_0 = var4.getBytes(2);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ abstract class of {
         field_b = null;
         field_a = (boolean[][][]) null;
         if (param0 != 8727) {
-          of.a(85, -111, (byte) -85, true, -34);
+          ByteStorage.a(85, -111, (byte) -85, true, -34);
         }
     }
 
@@ -446,7 +446,7 @@ abstract class of {
               var22Lifetime2Lifetime1 = ab.field_d;
             }
             var10Lifetime5 = af.field_f[0];
-            var9 = oi.field_h + var21Lifetime2Lifetime1;
+            var9 = DirectByteStorage.field_h + var21Lifetime2Lifetime1;
             var11Lifetime5 = af.field_f[1];
             var13Lifetime3 = af.field_f[3];
             var12Lifetime5 = af.field_f[2];
@@ -472,7 +472,7 @@ abstract class of {
         }
     }
 
-    abstract byte[] c(int param0);
+    abstract byte[] getBytes(int param0);
 
     static {
         field_b = new Sprite(160, 160);

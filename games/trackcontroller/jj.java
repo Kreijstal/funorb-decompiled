@@ -61,7 +61,7 @@ class jj extends db implements ButtonListener {
                   this.b(var6, -101);
                   return;
                 }
-                var6.a(param2 - 4, (tg) (this), fh.field_d);
+                var6.a(param2 - 4, (tg) (this), ByteStorage.field_d);
               }
             } else {
               var6.a(-17040, wg.field_h, 8);

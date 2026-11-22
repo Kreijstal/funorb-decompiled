@@ -33,7 +33,7 @@ final class qb extends lk {
             stackIn_2_0 = (cg) null;
             return stackIn_2_0;
           }
-          stackIn_6_0 = (null != i.a(108, param1)) ? 0 : 1;
+          stackIn_6_0 = (null != ByteStorage.a(108, param1)) ? 0 : 1;
           var3_int = stackIn_6_0;
           if (var3_int != 0) {
             stackIn_10_0 = lg.field_c;

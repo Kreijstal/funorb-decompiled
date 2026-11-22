@@ -1596,7 +1596,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_agreeterms", param0 - 26704);
                 if (null != var2) {
-                  rk.field_a = Archive.a(true, var2);
+                  ByteStorage.field_a = Archive.a(true, var2);
                 }
                 var2 = vd.a("create_u13terms", 4);
                 if (var2 != null) {
@@ -1720,7 +1720,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_alert_namelength", 4);
                 if (null != var2) {
-                  rk.field_b = Archive.a(true, var2);
+                  ByteStorage.field_b = Archive.a(true, var2);
                 }
                 var2 = vd.a("create_alert_namechars", 4);
                 if (null != var2) {

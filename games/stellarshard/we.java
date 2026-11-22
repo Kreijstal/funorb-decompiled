@@ -66,7 +66,7 @@ final class we {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_j[var3Lifetime1] = ue.a(this.field_j[var3Lifetime1], pd.field_l[var4][sa.a(255, (int)(this.field_f[sa.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_j[var3Lifetime1] = ue.a(this.field_j[var3Lifetime1], pd.field_l[var4][DirectByteStorage.a(255, (int)(this.field_f[DirectByteStorage.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -81,7 +81,7 @@ final class we {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_j[var3Lifetime1Lifetime2] = ue.a(this.field_j[var3Lifetime1Lifetime2], pd.field_l[var7][sa.a((int)(this.field_d[sa.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime1Lifetime2] = ue.a(this.field_j[var3Lifetime1Lifetime2], pd.field_l[var7][DirectByteStorage.a((int)(this.field_d[DirectByteStorage.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -140,7 +140,7 @@ final class we {
                 this.field_b = 0;
                 this.field_k = 0;
               }
-              this.field_h[this.field_b] = (byte)sa.a(var8 << -var7 + 8, 255);
+              this.field_h[this.field_b] = (byte)DirectByteStorage.a(var8 << -var7 + 8, 255);
               this.field_k = this.field_k + var7;
               var5_int++;
               param0 = param0 - 8L;
@@ -165,7 +165,7 @@ final class we {
               this.field_b = 0;
               this.field_k = 0;
             }
-            this.field_h[this.field_b] = (byte)sa.a(var8Lifetime1 << -var7 + 8, 255);
+            this.field_h[this.field_b] = (byte)DirectByteStorage.a(var8Lifetime1 << -var7 + 8, 255);
             this.field_k = this.field_k + (int)param0;
           }
           return;
@@ -229,7 +229,7 @@ final class we {
         int var8 = 0;
         var8 = stellarshard.field_B;
         try {
-          this.field_h[this.field_b] = (byte)vf.b((int) this.field_h[this.field_b], 128 >>> sa.a(7, this.field_k));
+          this.field_h[this.field_b] = (byte)vf.b((int) this.field_h[this.field_b], 128 >>> DirectByteStorage.a(7, this.field_k));
           this.field_b = this.field_b + 1;
           if (this.field_b > 32) {
             while (64 > this.field_b) {

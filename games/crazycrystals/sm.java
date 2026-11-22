@@ -23,7 +23,7 @@ final class sm extends l {
         int var3 = an.field_t.get(7);
         if (param1 <= 120) {
           byte[] var10 = (byte[]) null;
-          sm.a(-128, (byte[]) null);
+          sm.copyBytes(-128, (byte[]) null);
         }
         int var4 = an.field_t.get(5);
         int var5 = an.field_t.get(2);
@@ -115,7 +115,7 @@ final class sm extends l {
         return (int)(1000000000L / s.field_k);
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -129,7 +129,7 @@ final class sm extends l {
           var2_int = -35 / ((-86 - param0) / 36);
           var3 = param1.length;
           var4 = new byte[var3];
-          eg.a(param1, 0, var4, 0, var3);
+          eg.copyByteRange(param1, 0, var4, 0, var3);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

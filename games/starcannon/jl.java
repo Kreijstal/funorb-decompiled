@@ -908,7 +908,7 @@ final class jl {
                 } else {
                   if (this.field_e.h(-84)) {
                     od.a(-98, 7, param1);
-                    ij.a(0, true);
+                    DirectByteStorage.a(0, true);
                     jg.field_H = 0;
                     eb.field_c = 0;
                     SecondaryNodeDeque.field_e.b(23505);
@@ -923,7 +923,7 @@ final class jl {
                 stackIn_72_0 = (u.field_d > 0) ? 0 : 7;
                 lf.field_cb = stackIn_72_0;
                 if (lf.field_cb == 7) {
-                  ij.a(0, true);
+                  DirectByteStorage.a(0, true);
                 }
                 mj.a(255, 12, 0, 12, 50);
               }
@@ -936,7 +936,7 @@ final class jl {
               stackIn_42_0 = (u.field_d <= 0) ? 7 : 0;
               lf.field_cb = stackIn_42_0;
               if (lf.field_cb == 7) {
-                ij.a(0, true);
+                DirectByteStorage.a(0, true);
               }
               cg.field_e = 0;
               na.field_a = 0;
@@ -1483,7 +1483,7 @@ final class jl {
             if (lf.field_cb != 7) {
               continue;
             }
-            ij.a(param0 + 0, true);
+            DirectByteStorage.a(param0 + 0, true);
             continue;
           }
           if (this.field_f == 6) {

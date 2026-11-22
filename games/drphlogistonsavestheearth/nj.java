@@ -200,7 +200,7 @@ final class nj {
             this.field_g = this.field_g + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          kg.a(this.field_m, 0, this.field_k, 32, 32);
+          kg.copyByteRange(this.field_m, 0, this.field_k, 32, 32);
           this.a(8);
           var4_int = 0;
           var5 = param0;

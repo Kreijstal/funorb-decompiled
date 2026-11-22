@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends of {
+final class DirectByteStorage extends ByteStorage {
     static boolean field_g;
     static int field_j;
-    private java.nio.ByteBuffer field_i;
+    private java.nio.ByteBuffer buffer;
     static String field_h;
 
-    final byte[] c(int param0) {
-        byte[] var3 = new byte[this.field_i.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
         if (param0 != 2) {
-          this.c(-92);
+          this.getBytes(-92);
         }
-        this.field_i.position(0);
-        this.field_i.get(var3);
+        this.buffer.position(0);
+        this.buffer.get(var3);
         return var3;
     }
 
@@ -59,7 +59,7 @@ final class oi extends of {
           var5 = 8 * var4;
           var6 = 0;
           if (!param1) {
-            oi.a((byte) -108, 92);
+            DirectByteStorage.a((byte) -108, 92);
           }
           var7 = 0;
           for (var10 = 0; 4 > var10; var10++) {
@@ -226,7 +226,7 @@ final class oi extends of {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
-          oi.a(true, true, true);
+          DirectByteStorage.a(true, true, true);
         }
         qa.field_f = param1;
         ai.field_d = param0;
@@ -258,7 +258,7 @@ final class oi extends of {
           var4 = -1;
           var4Lifetime1 = 0;
           if (param0 >= -31) {
-            oi.a((byte) 8, -19);
+            DirectByteStorage.a((byte) 8, -19);
           }
           while (var4Lifetime1 <= 2) {
             var7 = var3[var4Lifetime1][0][3];
@@ -280,13 +280,13 @@ final class oi extends of {
         }
     }
 
-    final void a(int param0, byte[] param1) {
+    final void setBytes(int param0, byte[] param1) {
         try {
-          this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_i.position(0);
-          this.field_i.put(param1);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer.position(0);
+          this.buffer.put(param1);
           if (param0 != 50) {
-            oi.d(-112);
+            DirectByteStorage.d(-112);
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "oi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -300,7 +300,7 @@ final class oi extends of {
         }
     }
 
-    oi() {
+    DirectByteStorage() {
     }
 
     static {

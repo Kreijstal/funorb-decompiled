@@ -49,7 +49,7 @@ final class ol {
             this.field_h = this.field_h + 1;
             this.field_m[fieldTemp$1] = (byte) 0;
           }
-          cj.a(this.field_l, 0, this.field_m, 32, 32);
+          cj.copyByteRange(this.field_l, 0, this.field_m, 32, 32);
           this.a(8);
           var4_int = 0;
           var5 = param2;

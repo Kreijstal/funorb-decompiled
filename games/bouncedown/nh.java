@@ -116,7 +116,7 @@ final class nh extends wk implements rc {
         }
     }
 
-    final static Object a(boolean param0, int param1, byte[] param2) {
+    final static Object storeBytes(boolean param0, int param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
@@ -142,7 +142,7 @@ final class nh extends wk implements rc {
             return stackIn_7_0;
           }
           if (param0) {
-            stackIn_12_0 = rd.a((byte) -91, param2);
+            stackIn_12_0 = rd.copyBytes((byte) -91, param2);
             return stackIn_12_0;
           }
           stackIn_10_0 = (byte[]) (param2);

@@ -153,7 +153,7 @@ final class wp extends am {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_l.field_b) {
-          var4 = dp.field_a[param1];
+          var4 = ByteStorage.field_a[param1];
           if (this.field_z == 0) {
             var5 = 0;
             var6 = 0;

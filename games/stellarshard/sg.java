@@ -97,7 +97,7 @@ final class sg {
             df.field_j = param2;
             od.field_z = param8;
             kg.field_E = param5;
-            i.field_b = param11;
+            ByteStorage.field_b = param11;
             if (param6 <= 72) {
               sg.a((byte) 88);
             }

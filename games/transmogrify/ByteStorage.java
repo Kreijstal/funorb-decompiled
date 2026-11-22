@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dj {
+abstract class ByteStorage {
     static String field_a;
     static StringBuilder field_b;
     static String field_c;
 
-    abstract byte[] a(boolean param0);
+    abstract byte[] getBytes(boolean param0);
 
     public static void clearStaticReferences(int param0) {
         field_c = null;
@@ -122,7 +122,7 @@ abstract class dj {
         if (param0) {
           return;
         }
-        dj.b(1);
+        ByteStorage.b(1);
     }
 
     final static byte[] a(int param0, hj param1, byte[] param2, int param3) {
@@ -202,7 +202,7 @@ abstract class dj {
         return true;
     }
 
-    abstract void a(byte[] param0, byte param1);
+    abstract void setBytes(byte[] param0, byte param1);
 
     final static int a(boolean param0, int param1, int param2) {
         int var3_int = 0;

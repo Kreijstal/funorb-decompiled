@@ -82,10 +82,10 @@ final class qk extends ButtonWidget {
     }
 
     final static Object a(byte[] param0, boolean param1, byte param2) {
-        pi var3 = null;
+        DirectByteStorage var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
-        pi stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -97,8 +97,8 @@ final class qk extends ButtonWidget {
             return null;
           }
           if (param0.length > 136) {
-            var3 = new pi();
-            ((fh) ((Object) var3)).a(param0, 13673);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param0, 13673);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

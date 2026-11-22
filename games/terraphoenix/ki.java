@@ -101,7 +101,7 @@ final class ki extends vj {
             Archive.field_i.c(MessageKeys.a(new String[]{fi.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
             ja.field_m.c(MessageKeys.a(new String[]{fi.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
             Archive.field_i.c(sl.field_c, var6, 180, 16777215, -1);
-            ja.field_m.c(nj.field_k, var6, 200, 16777215, -1);
+            ja.field_m.c(DirectByteStorage.field_k, var6, 200, 16777215, -1);
             wa.a(var12, 0, var12.field_t, param0 - 28307, 1, 0, 3, var12.field_r);
             hb.field_m.a();
             var12.b(18 - hb.field_m.field_p, 241 - hb.field_m.field_v);
@@ -119,7 +119,7 @@ final class ki extends vj {
             sl.field_d = (-IntrusiveNode.field_f.field_t + lm.field_e.field_t) / 2 + 390;
             sj.field_f = null;
             GameShell.field_C = (-IntrusiveNode.field_f.field_t + lm.field_e.field_t) / 2 + 390;
-            nj.field_j = (lm.field_e.field_r - IntrusiveNode.field_f.field_r) / 2 + 434;
+            DirectByteStorage.field_j = (lm.field_e.field_r - IntrusiveNode.field_f.field_r) / 2 + 434;
             qk.field_i = 231 + (-IntrusiveNode.field_f.field_r + lm.field_e.field_r) / 2;
           }
           if (Archive.field_d == null) {
@@ -282,7 +282,7 @@ final class ki extends vj {
             stackIn_65_0 = GameShell.field_C;
             stackIn_65_1 = -80;
             stackIn_66_2 = (si.field_ob.field_h == 1);
-            jd.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, nj.field_j);
+            jd.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, DirectByteStorage.field_j);
           }
           if (null != ig.field_a) {
             var1_int = 357 - ig.field_a.field_u / 2;

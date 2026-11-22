@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ke {
+abstract class ByteStorage {
     static int field_f;
     static int field_e;
     static int field_c;
@@ -37,9 +37,9 @@ abstract class ke {
         }
     }
 
-    abstract byte[] c(boolean param0);
+    abstract byte[] getBytes(boolean param0);
 
-    abstract void a(byte[] param0, boolean param1);
+    abstract void setBytes(byte[] param0, boolean param1);
 
     final static void a(java.applet.Applet param0, byte param1) {
         String var2 = null;

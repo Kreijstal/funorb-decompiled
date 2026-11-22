@@ -407,7 +407,7 @@ final class b {
             discarded$7 = this.b(-26, 104, (byte) -5);
             return true;
           }
-          dh.a((byte) -52, var5, 2, (String) null, 0, this.field_k);
+          ByteStorage.a((byte) -52, var5, 2, (String) null, 0, this.field_k);
           if (param2 == 0) {
             return true;
           }
@@ -423,7 +423,7 @@ final class b {
             discarded$4 = this.b(-26, 104, (byte) -5);
             return true;
           }
-          dh.a((byte) -52, var9, 2, (String) null, 0, this.field_k);
+          ByteStorage.a((byte) -52, var9, 2, (String) null, 0, this.field_k);
           if (param2 == 0) {
             return true;
           }
@@ -439,7 +439,7 @@ final class b {
             discarded$2 = this.b(-26, 104, (byte) -5);
             return true;
           }
-          dh.a((byte) -52, var13, 2, (String) null, 0, this.field_k);
+          ByteStorage.a((byte) -52, var13, 2, (String) null, 0, this.field_k);
           if (param2 == 0) {
             return true;
           }
@@ -457,7 +457,7 @@ final class b {
           discarded$0 = this.b(-26, 104, (byte) -5);
           return true;
         }
-        dh.a((byte) -52, var14, 2, (String) null, 0, this.field_k);
+        ByteStorage.a((byte) -52, var14, 2, (String) null, 0, this.field_k);
         if (param2 == 0) {
           return true;
         }

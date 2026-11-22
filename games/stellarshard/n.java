@@ -603,7 +603,7 @@ final class n {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          stackIn_9_0 = new am(tc.c(-5), sa.a((byte) 105));
+          stackIn_9_0 = new am(tc.c(-5), DirectByteStorage.a((byte) 105));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

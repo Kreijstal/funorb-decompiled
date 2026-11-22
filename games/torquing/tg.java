@@ -455,7 +455,7 @@ abstract class tg extends GameApplet {
             ag.a((byte) -45, 3);
           }
           if (hh.field_d[3]) {
-            jm.a(4, 0);
+            DirectByteStorage.a(4, 0);
           }
           if (hh.field_d[4]) {
             km.a((byte) -128, 5);

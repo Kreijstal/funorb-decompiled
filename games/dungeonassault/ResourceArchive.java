@@ -51,7 +51,7 @@ final class ResourceArchive {
 
     private final synchronized void d(int param0, int param1) {
         if (!this.field_d) {
-          this.field_j[param0] = kj.a(false, false, this.field_f.a(param0, -7249));
+          this.field_j[param0] = kj.storeBytes(false, false, this.field_f.a(param0, -7249));
         } else {
           this.field_j[param0] = this.field_f.a(param0, -7249);
         }
@@ -219,7 +219,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_c[param1][param3]) {
-            var8 = dn.a(this.field_c[param1][param3], false, (byte) 48);
+            var8 = dn.extractBytes(this.field_c[param1][param3], false, (byte) 48);
             var6 = var8;
             if (var8 == null) {
               throw new RuntimeException("");
@@ -623,7 +623,7 @@ final class ResourceArchive {
             param0[1] != 0 ||
             0 != param0[2] ||
             param0[3] != 0)) {
-            var35 = dn.a(this.field_j[param2], true, (byte) 48);
+            var35 = dn.extractBytes(this.field_j[param2], true, (byte) 48);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -631,7 +631,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = dn.a(this.field_j[param2], false, (byte) 48);
+            var9 = dn.extractBytes(this.field_j[param2], false, (byte) 48);
           }
           try {
             var36 = lc.a(var9, 50166);
@@ -691,7 +691,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (param1 == var21) {
-                    cj.a(var43, var17, var44, var14Lifetime1, var19);
+                    cj.copyByteRange(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -729,7 +729,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var29.readInt(-117);
-                  cj.a(var43, var16, var39[var19], var38[var19], var18);
+                  cj.copyByteRange(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                 }
@@ -743,7 +743,7 @@ final class ResourceArchive {
                 if (this.field_g != 0) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = kj.a(false, false, var39[var17]);
+                  var7[var18] = kj.storeBytes(false, false, var39[var17]);
                 }
               }
             }
@@ -754,7 +754,7 @@ final class ResourceArchive {
               var11 = 0;
             }
             if (0 == this.field_g) {
-              var7[var11] = kj.a(false, false, var36);
+              var7[var11] = kj.storeBytes(false, false, var36);
               return true;
             }
             var7[var11] = var43;

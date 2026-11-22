@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends dp {
-    private java.nio.ByteBuffer field_c;
+final class DirectByteStorage extends ByteStorage {
+    private java.nio.ByteBuffer buffer;
     static Level field_d;
     static int[] field_e;
 
-    final byte[] a(int param0) {
-        byte[] var3 = new byte[this.field_c.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_c.position(0);
+        this.buffer.position(0);
         if (param0 == -21056) {
-          this.field_c.get(var3);
+          this.buffer.get(var3);
           return var3;
         }
         field_e = (int[]) null;
-        this.field_c.get(var3);
+        this.buffer.get(var3);
         return var3;
     }
 
@@ -51,14 +51,14 @@ final class jm extends dp {
         }
     }
 
-    final void a(byte param0, byte[] param1) {
+    final void setBytes(byte param0, byte[] param1) {
         try {
-          this.field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           if (param0 > -11) {
-            jm.c(28);
+            DirectByteStorage.c(28);
           }
-          this.field_c.position(0);
-          this.field_c.put(param1);
+          this.buffer.position(0);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -69,11 +69,11 @@ final class jm extends dp {
           System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
           return;
         }
-        jm.c(61);
+        DirectByteStorage.c(61);
         System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
     }
 
-    jm() {
+    DirectByteStorage() {
     }
 
     final static void a(boolean param0, int param1) {
@@ -81,7 +81,7 @@ final class jm extends dp {
         if (param1 <= -85) {
           return;
         }
-        jm.a(63, 58);
+        DirectByteStorage.a(63, 58);
     }
 
     static {

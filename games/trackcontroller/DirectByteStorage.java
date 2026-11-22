@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends fh {
+final class DirectByteStorage extends ByteStorage {
     static String field_h;
-    private java.nio.ByteBuffer field_g;
+    private java.nio.ByteBuffer buffer;
     static String field_f;
 
     final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, int param6, int param7, Sprite[] param8, int param9, int param10, int param11, Sprite[] param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, BitmapFont param19, int param20) {
@@ -64,44 +64,44 @@ final class pi extends fh {
         }
     }
 
-    final void a(byte[] param0, int param1) {
+    final void setBytes(byte[] param0, int param1) {
         try {
-          this.field_g = java.nio.ByteBuffer.allocateDirect(param0.length);
-          this.field_g.position(0);
-          this.field_g.put(param0);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer.position(0);
+          this.buffer.put(param0);
           if (param1 != 13673) {
             byte[] var4 = (byte[]) null;
-            this.a((byte[]) null, -51);
+            this.setBytes((byte[]) null, -51);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "pi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final byte[] b(byte param0) {
+    final byte[] getBytes(byte param0) {
         byte[] var4 = null;
         byte[] var2 = null;
         byte[] var4Lifetime1;
         byte[] var2Lifetime1;
         if (param0 == -2) {
-          var4 = new byte[this.field_g.capacity()];
+          var4 = new byte[this.buffer.capacity()];
           var2 = var4;
-          this.field_g.position(0);
-          this.field_g.get(var4);
+          this.buffer.position(0);
+          this.buffer.get(var4);
           return var4;
         }
         byte[] var3 = (byte[]) null;
-        this.a((byte[]) null, -91);
-        var4Lifetime1 = new byte[this.field_g.capacity()];
+        this.setBytes((byte[]) null, -91);
+        var4Lifetime1 = new byte[this.buffer.capacity()];
         var2Lifetime1 = var4Lifetime1;
-        this.field_g.position(0);
-        this.field_g.get(var4Lifetime1);
+        this.buffer.position(0);
+        this.buffer.get(var4Lifetime1);
         return var4Lifetime1;
     }
 
     public static void b(int param0) {
         if (param0 != 0) {
-          pi.b(81);
+          DirectByteStorage.b(81);
           field_h = null;
           field_f = null;
           return;
@@ -110,7 +110,7 @@ final class pi extends fh {
         field_f = null;
     }
 
-    pi() {
+    DirectByteStorage() {
     }
 
     static {

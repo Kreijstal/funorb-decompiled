@@ -85,10 +85,10 @@ final class dm {
     final static void a(byte param0) {
         if (param0 >= -32) {
           dm.a((byte) 65);
-          ke.a(dg.a(false), (byte) -110);
+          ByteStorage.a(dg.a(false), (byte) -110);
           return;
         }
-        ke.a(dg.a(false), (byte) -110);
+        ByteStorage.a(dg.a(false), (byte) -110);
     }
 
     static {

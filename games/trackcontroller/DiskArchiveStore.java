@@ -160,12 +160,12 @@ final class DiskArchiveStore {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_g.a((long)(6 * param1), true);
-              this.field_g.a(fh.field_a, 6, 0, 0);
+              this.field_g.a(ByteStorage.field_a, 6, 0, 0);
               if (param0 >= -89) {
                 field_f = (le) null;
               }
-              var4_int = (65280 & fh.field_a[1] << 8) + ((fh.field_a[0] & 255) << 16) + (255 & fh.field_a[2]);
-              var5 = (fh.field_a[3] << 16 & 16711680) - (-(65280 & fh.field_a[4] << 8) - (fh.field_a[5] & 255));
+              var4_int = (65280 & ByteStorage.field_a[1] << 8) + ((ByteStorage.field_a[0] & 255) << 16) + (255 & ByteStorage.field_a[2]);
+              var5 = (ByteStorage.field_a[3] << 16 & 16711680) - (-(65280 & ByteStorage.field_a[4] << 8) - (ByteStorage.field_a[5] & 255));
               if (0 > var4_int) {
                 return null;
               }
@@ -198,21 +198,21 @@ final class DiskArchiveStore {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_h.a(fh.field_a, var14 + var9, 0, 0);
-                  var10 = (255 & fh.field_a[3]) + (((fh.field_a[2] & 255) << 8) + (((255 & fh.field_a[0]) << 24) + (fh.field_a[1] << 16 & 16711680)));
-                  var11 = (fh.field_a[5] & 255) + ((fh.field_a[4] & 255) << 8);
-                  var13 = fh.field_a[9] & 255;
-                  var12 = ((255 & fh.field_a[7]) << 8) + (fh.field_a[6] << 16 & 16711680) + (fh.field_a[8] & 255);
+                  this.field_h.a(ByteStorage.field_a, var14 + var9, 0, 0);
+                  var10 = (255 & ByteStorage.field_a[3]) + (((ByteStorage.field_a[2] & 255) << 8) + (((255 & ByteStorage.field_a[0]) << 24) + (ByteStorage.field_a[1] << 16 & 16711680)));
+                  var11 = (ByteStorage.field_a[5] & 255) + ((ByteStorage.field_a[4] & 255) << 8);
+                  var13 = ByteStorage.field_a[9] & 255;
+                  var12 = ((255 & ByteStorage.field_a[7]) << 8) + (ByteStorage.field_a[6] << 16 & 16711680) + (ByteStorage.field_a[8] & 255);
                 } else {
                   if (var9 > 512) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_h.a(fh.field_a, var14 + var9, 0, 0);
-                  var12 = (fh.field_a[6] & 255) + ((fh.field_a[4] & 255) << 16) + (65280 & fh.field_a[5] << 8);
-                  var11 = (fh.field_a[3] & 255) + ((255 & fh.field_a[2]) << 8);
-                  var13 = 255 & fh.field_a[7];
-                  var10 = ((fh.field_a[0] & 255) << 8) + (fh.field_a[1] & 255);
+                  this.field_h.a(ByteStorage.field_a, var14 + var9, 0, 0);
+                  var12 = (ByteStorage.field_a[6] & 255) + ((ByteStorage.field_a[4] & 255) << 16) + (65280 & ByteStorage.field_a[5] << 8);
+                  var11 = (ByteStorage.field_a[3] & 255) + ((255 & ByteStorage.field_a[2]) << 8);
+                  var13 = 255 & ByteStorage.field_a[7];
+                  var10 = ((ByteStorage.field_a[0] & 255) << 8) + (ByteStorage.field_a[1] & 255);
                 }
                 if (var10 != param1) {
                   return null;
@@ -236,7 +236,7 @@ final class DiskArchiveStore {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$0 = var7;
                   var7++;
-                  var6[incrementValue$0] = fh.field_a[var16];
+                  var6[incrementValue$0] = ByteStorage.field_a[var16];
                 }
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -303,8 +303,8 @@ final class DiskArchiveStore {
                     return false;
                   }
                   this.field_g.a((long)(6 * param1), true);
-                  this.field_g.a(fh.field_a, 6, 0, 0);
-                  var7_int = ((fh.field_a[4] & 255) << 8) + ((16711680 & fh.field_a[3] << 16) + (255 & fh.field_a[5]));
+                  this.field_g.a(ByteStorage.field_a, 6, 0, 0);
+                  var7_int = ((ByteStorage.field_a[4] & 255) << 8) + ((16711680 & ByteStorage.field_a[3] << 16) + (255 & ByteStorage.field_a[5]));
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.field_h.a((byte) -77) / 520L)) {
                     return false;
@@ -315,14 +315,14 @@ final class DiskArchiveStore {
                     var7_int = 1;
                   }
                 }
-                fh.field_a[3] = (byte)(var7_int >> 16);
-                fh.field_a[1] = (byte)(param2 >> 8);
-                fh.field_a[0] = (byte)(param2 >> 16);
-                fh.field_a[4] = (byte)(var7_int >> 8);
-                fh.field_a[2] = (byte)param2;
-                fh.field_a[5] = (byte)var7_int;
+                ByteStorage.field_a[3] = (byte)(var7_int >> 16);
+                ByteStorage.field_a[1] = (byte)(param2 >> 8);
+                ByteStorage.field_a[0] = (byte)(param2 >> 16);
+                ByteStorage.field_a[4] = (byte)(var7_int >> 8);
+                ByteStorage.field_a[2] = (byte)param2;
+                ByteStorage.field_a[5] = (byte)var7_int;
                 this.field_g.a((long)(param1 * 6), true);
-                this.field_g.a(6, -1, fh.field_a, 0);
+                this.field_g.a(6, -1, ByteStorage.field_a, 0);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -333,7 +333,7 @@ final class DiskArchiveStore {
                       this.field_h.a((long)(520 * var7_int), true);
                       if (65535 < param1) {
                         try {
-                          this.field_h.a(fh.field_a, 10, 0, 0);
+                          this.field_h.a(ByteStorage.field_a, 10, 0, 0);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -343,13 +343,13 @@ final class DiskArchiveStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = ((fh.field_a[1] & 255) << 16) + (-16777216 & fh.field_a[0] << 24) + ((255 & fh.field_a[2]) << 8) + (255 & fh.field_a[3]);
-                        var12 = (fh.field_a[4] << 8 & 65280) + (fh.field_a[5] & 255);
-                        var10 = ((255 & fh.field_a[6]) << 16) + (((fh.field_a[7] & 255) << 8) + (fh.field_a[8] & 255));
-                        var13 = 255 & fh.field_a[9];
+                        var11 = ((ByteStorage.field_a[1] & 255) << 16) + (-16777216 & ByteStorage.field_a[0] << 24) + ((255 & ByteStorage.field_a[2]) << 8) + (255 & ByteStorage.field_a[3]);
+                        var12 = (ByteStorage.field_a[4] << 8 & 65280) + (ByteStorage.field_a[5] & 255);
+                        var10 = ((255 & ByteStorage.field_a[6]) << 16) + (((ByteStorage.field_a[7] & 255) << 8) + (ByteStorage.field_a[8] & 255));
+                        var13 = 255 & ByteStorage.field_a[9];
                       } else {
                         try {
-                          this.field_h.a(fh.field_a, 8, 0, 0);
+                          this.field_h.a(ByteStorage.field_a, 8, 0, 0);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -359,10 +359,10 @@ final class DiskArchiveStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (255 & fh.field_a[3]) + ((255 & fh.field_a[2]) << 8);
-                        var13 = 255 & fh.field_a[7];
-                        var11 = (fh.field_a[0] << 8 & 65280) + (255 & fh.field_a[1]);
-                        var10 = (255 & fh.field_a[6]) + (16711680 & fh.field_a[4] << 16) + (fh.field_a[5] << 8 & 65280);
+                        var12 = (255 & ByteStorage.field_a[3]) + ((255 & ByteStorage.field_a[2]) << 8);
+                        var13 = 255 & ByteStorage.field_a[7];
+                        var11 = (ByteStorage.field_a[0] << 8 & 65280) + (255 & ByteStorage.field_a[1]);
+                        var10 = (255 & ByteStorage.field_a[6]) + (16711680 & ByteStorage.field_a[4] << 16) + (ByteStorage.field_a[5] << 8 & 65280);
                       }
                       if ((param1 == var11 &&
                         var9 == var12 &&
@@ -389,21 +389,21 @@ final class DiskArchiveStore {
                       var10 = 0;
                     }
                     if (param1 > 65535) {
-                      fh.field_a[2] = (byte)(param1 >> 8);
-                      fh.field_a[7] = (byte)(var10 >> 8);
-                      fh.field_a[4] = (byte)(var9 >> 8);
-                      fh.field_a[8] = (byte)var10;
-                      fh.field_a[5] = (byte)var9;
-                      fh.field_a[9] = (byte)this.field_c;
-                      fh.field_a[0] = (byte)(param1 >> 24);
-                      fh.field_a[6] = (byte)(var10 >> 16);
-                      fh.field_a[1] = (byte)(param1 >> 16);
-                      fh.field_a[3] = (byte)param1;
+                      ByteStorage.field_a[2] = (byte)(param1 >> 8);
+                      ByteStorage.field_a[7] = (byte)(var10 >> 8);
+                      ByteStorage.field_a[4] = (byte)(var9 >> 8);
+                      ByteStorage.field_a[8] = (byte)var10;
+                      ByteStorage.field_a[5] = (byte)var9;
+                      ByteStorage.field_a[9] = (byte)this.field_c;
+                      ByteStorage.field_a[0] = (byte)(param1 >> 24);
+                      ByteStorage.field_a[6] = (byte)(var10 >> 16);
+                      ByteStorage.field_a[1] = (byte)(param1 >> 16);
+                      ByteStorage.field_a[3] = (byte)param1;
                       stackIn_60_0 = this.field_h;
                       stackIn_60_1 = (long)(520 * var7_int);
                       stackIn_61_2 = !(param4);
                       ((BufferedCacheFile) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
-                      this.field_h.a(10, -1, fh.field_a, 0);
+                      this.field_h.a(10, -1, ByteStorage.field_a, 0);
                       var11 = -var8 + param2;
                       if (510 < var11) {
                         var11 = 510;
@@ -411,16 +411,16 @@ final class DiskArchiveStore {
                       this.field_h.a(var11, -1, param0, var8);
                       var8 = var8 + var11;
                     } else {
-                      fh.field_a[1] = (byte)param1;
-                      fh.field_a[6] = (byte)var10;
-                      fh.field_a[3] = (byte)var9;
-                      fh.field_a[2] = (byte)(var9 >> 8);
-                      fh.field_a[5] = (byte)(var10 >> 8);
-                      fh.field_a[4] = (byte)(var10 >> 16);
-                      fh.field_a[7] = (byte)this.field_c;
-                      fh.field_a[0] = (byte)(param1 >> 8);
+                      ByteStorage.field_a[1] = (byte)param1;
+                      ByteStorage.field_a[6] = (byte)var10;
+                      ByteStorage.field_a[3] = (byte)var9;
+                      ByteStorage.field_a[2] = (byte)(var9 >> 8);
+                      ByteStorage.field_a[5] = (byte)(var10 >> 8);
+                      ByteStorage.field_a[4] = (byte)(var10 >> 16);
+                      ByteStorage.field_a[7] = (byte)this.field_c;
+                      ByteStorage.field_a[0] = (byte)(param1 >> 8);
                       this.field_h.a((long)(var7_int * 520), true);
-                      this.field_h.a(8, -1, fh.field_a, 0);
+                      this.field_h.a(8, -1, ByteStorage.field_a, 0);
                       var11 = -var8 + param2;
                       if (var11 > 512) {
                         var11 = 512;

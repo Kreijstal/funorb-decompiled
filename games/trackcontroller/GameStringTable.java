@@ -196,7 +196,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime23 = DualLinkNode.a("congratulations", -523);
           if (var2Lifetime23 != null) {
-            pi.field_f = ta.a(32200, var2Lifetime23);
+            DirectByteStorage.field_f = ta.a(32200, var2Lifetime23);
           }
           var2Lifetime24 = DualLinkNode.a("instructionLabels,0", param0 - 526);
           if (var2Lifetime24 != null) {

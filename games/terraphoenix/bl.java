@@ -37,7 +37,7 @@ final class bl {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                nj.field_i = param1;
+                DirectByteStorage.field_i = param1;
                 var2 = il.a((byte) 85, "achievement_names,0");
                 if (var2 != null) {
                   RandomAccessCacheFile.field_g[0] = ll.a(0, var2);
@@ -364,7 +364,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 107, "clicktosetdest");
                 if (null != var2) {
-                  ke.field_g = ll.a(0, var2);
+                  ByteStorage.field_g = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "clicktomovedest");
                 if (null != var2) {
@@ -2880,7 +2880,7 @@ final class bl {
                 if (null != var2) {
                   SecondaryNodeDequeIterator.field_e = 255 & var2[0];
                 }
-                nj.field_i = null;
+                DirectByteStorage.field_i = null;
             }
             void run() {
                 var3 = Terraphoenix.field_V;

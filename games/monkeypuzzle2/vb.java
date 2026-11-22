@@ -112,13 +112,13 @@ class vb extends DualLinkNode {
         if (param0 < 65) {
           vb.f(-26);
           pf.field_b = null;
-          ka.field_a = 0;
+          ByteStorage.field_a = 0;
           nj.field_a = -1;
           ac.field_b = false;
           return;
         }
         pf.field_b = null;
-        ka.field_a = 0;
+        ByteStorage.field_a = 0;
         nj.field_a = -1;
         ac.field_b = false;
     }

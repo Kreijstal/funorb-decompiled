@@ -10,7 +10,7 @@ final class pc {
     final static byte[] a(byte param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        dh var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_15_0 = null;
@@ -34,11 +34,11 @@ final class pc {
           if (param0 != 6) {
             field_c = (Sprite) null;
           }
-          if (!(param2 instanceof dh)) {
+          if (!(param2 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (dh) (param2);
-          stackIn_15_0 = var4.b(117);
+          var4 = (ByteStorage) (param2);
+          stackIn_15_0 = var4.getBytes(117);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

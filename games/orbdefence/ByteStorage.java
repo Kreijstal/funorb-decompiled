@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ll {
+abstract class ByteStorage {
     static char[] field_b;
     static fj field_a;
 
@@ -11,7 +11,7 @@ abstract class ll {
         field_a = null;
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void setBytes(int param0, byte[] param1);
 
     final static void a(ed param0, int param1, String param2, kc param3, int param4) {
         RuntimeException stackIn_20_0 = null;
@@ -36,7 +36,7 @@ abstract class ll {
           var7 = 1;
           if (param4 != 404465128) {
             var10 = (kc) null;
-            ll.a((ed) null, 108, (String) null, (kc) null, 30);
+            ByteStorage.a((ed) null, 108, (String) null, (kc) null, 30);
           }
           while (param2.length() > var7) {
             var8 = param2.charAt(var7);
@@ -83,7 +83,7 @@ abstract class ll {
         }
     }
 
-    abstract byte[] a(byte param0);
+    abstract byte[] getBytes(byte param0);
 
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;

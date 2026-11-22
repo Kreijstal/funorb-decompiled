@@ -22,7 +22,7 @@ final class ef {
             oi.field_f = p.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
-          ka.field_a = ka.field_a + 1;
+          ByteStorage.field_a = ByteStorage.field_a + 1;
           if (param1 != null) {
             decompiledFrameRemainder0 = !(param1.equals(pf.field_b));
           } else {
@@ -30,8 +30,8 @@ final class ef {
           }
           if (decompiledFrameRemainder0) {
             if (!ac.field_b) {
-              if (cj.field_e <= ka.field_a) {
-                stackIn_17_0 = (ka.field_a < cj.field_e + BufferedSocket.field_a) ? 1 : 0;
+              if (cj.field_e <= ByteStorage.field_a) {
+                stackIn_17_0 = (ByteStorage.field_a < cj.field_e + BufferedSocket.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -40,15 +40,15 @@ final class ef {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              ka.field_a = 0;
+              ByteStorage.field_a = 0;
             } else {
               if (ac.field_b) {
-                ka.field_a = cj.field_e;
+                ByteStorage.field_a = cj.field_e;
               } else {
                 if (var2_int == 0) {
-                  ka.field_a = 0;
+                  ByteStorage.field_a = 0;
                 } else {
-                  ka.field_a = cj.field_e;
+                  ByteStorage.field_a = cj.field_e;
                 }
               }
             }
@@ -63,9 +63,9 @@ final class ef {
             nj.field_a = oi.field_f;
           }
           if (!ac.field_b &&
-            cj.field_e > ka.field_a &&
+            cj.field_e > ByteStorage.field_a &&
             oe.field_d) {
-            ka.field_a = 0;
+            ByteStorage.field_a = 0;
             nj.field_a = oi.field_f;
             oa.field_G = PacketBuffer.field_e;
           }
@@ -75,8 +75,8 @@ final class ef {
           }
           PacketBuffer.field_e = -1;
           if (ac.field_b &&
-            SpriteState.field_l == ka.field_a) {
-            ka.field_a = 0;
+            SpriteState.field_l == ByteStorage.field_a) {
+            ByteStorage.field_a = 0;
             ac.field_b = false;
           }
           oi.field_f = -1;

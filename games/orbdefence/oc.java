@@ -63,7 +63,7 @@ final class oc extends vi implements ib {
             for (var6 = 0; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~param3.field_p[param0][var6] == ~param2.field_h &&
-                fc.a((byte) -16, param3.field_i[param0][var6])) {
+                DirectByteStorage.a((byte) -16, param3.field_i[param0][var6])) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (param3.field_l[param0][var6 * var4_int + var7] != param2.field_o[var7]) {
                     decompiledFrameCompleted0 = false;

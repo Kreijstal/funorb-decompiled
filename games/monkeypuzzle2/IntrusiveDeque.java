@@ -518,7 +518,7 @@ final class IntrusiveDeque {
           jk.field_B = jk.field_B + 1;
           if (kc.field_d != 0) {
             var2_int = -116 + qg.field_c;
-            var3 = ab.field_e - 90;
+            var3 = DirectByteStorage.field_e - 90;
             var4 = ee.field_F;
             var5 = 0;
             if (!param0) {

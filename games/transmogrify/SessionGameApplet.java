@@ -595,7 +595,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (bi.field_L == 11) {
           if (null != nk.field_d && (!nk.field_d.a((byte) -122) ||
             !nk.field_d.c(32031))) {
-            vf.a((byte) -122, 0.0f, u.a(dj.field_c, od.field_h, nk.field_d, true));
+            vf.a((byte) -122, 0.0f, u.a(ByteStorage.field_c, od.field_h, nk.field_d, true));
             decompiledFrameRemainder0 = false;
           }
           else {

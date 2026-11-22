@@ -79,7 +79,7 @@ final class pi extends DualLinkNode {
                 this.field_k = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param0.readUnsignedShort(param1 + 17582);
-                  var7 = ab.a((byte) -65, var6);
+                  var7 = DirectByteStorage.a((byte) -65, var6);
                   if (var7 != null) {
                     this.field_k[var5] = var6;
                     array$0 = new int[var7.field_b];

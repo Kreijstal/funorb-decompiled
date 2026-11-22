@@ -59,7 +59,7 @@ final class pf {
             if (this.field_a != -1L &&
               ((long)this.field_l.length + this.field_a) < ((long)param0 + this.field_c)) {
               var5_int = (int)(this.field_a - (this.field_c - (long)this.field_l.length));
-              lj.a(param3, param2, this.field_l, (int)(this.field_c - this.field_a), var5_int);
+              lj.copyByteRange(param3, param2, this.field_l, (int)(this.field_c - this.field_a), var5_int);
               param0 = param0 - var5_int;
               param2 = param2 + var5_int;
               this.field_c = this.field_c + (long)var5_int;
@@ -73,7 +73,7 @@ final class pf {
               if (-1L == this.field_a) {
                 this.field_a = this.field_c;
               }
-              lj.a(param3, param2, this.field_l, (int)(this.field_c - this.field_a), param0);
+              lj.copyByteRange(param3, param2, this.field_l, (int)(this.field_c - this.field_a), param0);
               this.field_c = this.field_c + (long)param0;
               if ((-this.field_a + this.field_c) > (long)this.field_f) {
                 this.field_f = (int)(-this.field_a + this.field_c);
@@ -112,7 +112,7 @@ final class pf {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              lj.a(param3, (int)((long)param2 + var5_long - this.field_c), this.field_e, (int)(var5_long - this.field_d), var9);
+              lj.copyByteRange(param3, (int)((long)param2 + var5_long - this.field_c), this.field_e, (int)(var5_long - this.field_d), var9);
             }
             this.field_c = this.field_c + (long)param0;
             return;
@@ -216,7 +216,7 @@ final class pf {
             if (this.field_a != -1L &&
               this.field_c >= this.field_a &&
               ((long)param3 + this.field_c) <= (this.field_a + (long)this.field_f)) {
-              lj.a(this.field_l, (int)(this.field_c - this.field_a), param1, param0, param3);
+              lj.copyByteRange(this.field_l, (int)(this.field_c - this.field_a), param1, param0, param3);
               this.field_c = this.field_c + (long)param3;
               return;
             }
@@ -229,7 +229,7 @@ final class pf {
               if (param3 < var9_int) {
                 var9_int = param3;
               }
-              lj.a(this.field_e, (int)(-this.field_d + this.field_c), param1, param0, var9_int);
+              lj.copyByteRange(this.field_e, (int)(-this.field_d + this.field_c), param1, param0, var9_int);
               param0 = param0 + var9_int;
               this.field_c = this.field_c + (long)var9_int;
               param3 = param3 - var9_int;
@@ -260,7 +260,7 @@ final class pf {
               if (var9_intLifetime1Lifetime1 > this.field_j) {
                 var9_intLifetime1Lifetime1 = this.field_j;
               }
-              lj.a(this.field_e, 0, param1, param0, var9_intLifetime1Lifetime1);
+              lj.copyByteRange(this.field_e, 0, param1, param0, var9_intLifetime1Lifetime1);
               this.field_c = this.field_c + (long)var9_intLifetime1Lifetime1;
               param0 = param0 + var9_intLifetime1Lifetime1;
               param3 = param3 - var9_intLifetime1Lifetime1;
@@ -303,7 +303,7 @@ final class pf {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(-var9 + var11);
-                lj.a(this.field_l, (int)(-this.field_a + var9), param1, var7 + (int)(var9 - var5_long), var13);
+                lj.copyByteRange(this.field_l, (int)(-this.field_a + var9), param1, var7 + (int)(var9 - var5_long), var13);
                 if (var11 > this.field_c) {
                   param3 = (int)((long)param3 - (var11 - this.field_c));
                   this.field_c = var11;
@@ -411,7 +411,7 @@ final class pf {
           if (-1L < var2 &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            lj.a(this.field_l, (int)(var2 - this.field_a), this.field_e, (int)(var2 - this.field_d), var6);
+            lj.copyByteRange(this.field_l, (int)(var2 - this.field_a), this.field_e, (int)(var2 - this.field_d), var6);
           }
           this.field_f = 0;
           this.field_a = -1L;

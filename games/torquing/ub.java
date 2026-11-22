@@ -37,26 +37,26 @@ final class ub extends lg {
           var16 = wj.field_h[0];
           var9 = var16.field_w << 1;
           var10 = var16.field_u << 1;
-          if (dp.field_b == null) {
-            dp.field_b = new Sprite(var9, var10);
-            GzipDecompressor.a((byte) 99, dp.field_b);
+          if (ByteStorage.field_b == null) {
+            ByteStorage.field_b = new Sprite(var9, var10);
+            GzipDecompressor.a((byte) 99, ByteStorage.field_b);
           } else {
-            if (dp.field_b.field_s < var9) {
-              dp.field_b = new Sprite(var9, var10);
-              GzipDecompressor.a((byte) 99, dp.field_b);
+            if (ByteStorage.field_b.field_s < var9) {
+              ByteStorage.field_b = new Sprite(var9, var10);
+              GzipDecompressor.a((byte) 99, ByteStorage.field_b);
             } else {
-              if (var10 > dp.field_b.field_t) {
-                dp.field_b = new Sprite(var9, var10);
-                GzipDecompressor.a((byte) 99, dp.field_b);
+              if (var10 > ByteStorage.field_b.field_t) {
+                ByteStorage.field_b = new Sprite(var9, var10);
+                GzipDecompressor.a((byte) 99, ByteStorage.field_b);
               } else {
-                GzipDecompressor.a((byte) -105, dp.field_b);
+                GzipDecompressor.a((byte) -105, ByteStorage.field_b);
                 SoftwareRasterizer.b();
               }
             }
           }
           var16.c(112, 144, var16.field_w << 4, var16.field_u << 4, -this.field_H << 10, 4096);
           r.a(123);
-          dp.field_b.a(-var16.field_w + var5, -var16.field_u + var6, 256);
+          ByteStorage.field_b.a(-var16.field_w + var5, -var16.field_u + var6, 256);
           return;
         }
         if (IsaacCipher.field_h != var8) {
@@ -75,26 +75,26 @@ final class ub extends lg {
         var15 = wj.field_h[0];
         var9Lifetime1 = var15.field_w << 1;
         var10Lifetime1 = var15.field_u << 1;
-        if (dp.field_b == null) {
-          dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
-          GzipDecompressor.a((byte) 99, dp.field_b);
+        if (ByteStorage.field_b == null) {
+          ByteStorage.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
+          GzipDecompressor.a((byte) 99, ByteStorage.field_b);
         } else {
-          if (dp.field_b.field_s < var9Lifetime1) {
-            dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
-            GzipDecompressor.a((byte) 99, dp.field_b);
+          if (ByteStorage.field_b.field_s < var9Lifetime1) {
+            ByteStorage.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
+            GzipDecompressor.a((byte) 99, ByteStorage.field_b);
           } else {
-            if (var10Lifetime1 > dp.field_b.field_t) {
-              dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
-              GzipDecompressor.a((byte) 99, dp.field_b);
+            if (var10Lifetime1 > ByteStorage.field_b.field_t) {
+              ByteStorage.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
+              GzipDecompressor.a((byte) 99, ByteStorage.field_b);
             } else {
-              GzipDecompressor.a((byte) -105, dp.field_b);
+              GzipDecompressor.a((byte) -105, ByteStorage.field_b);
               SoftwareRasterizer.b();
             }
           }
         }
         var15.c(112, 144, var15.field_w << 4, var15.field_u << 4, -this.field_H << 10, 4096);
         r.a(123);
-        dp.field_b.a(-var15.field_w + var5, -var15.field_u + var6, 256);
+        ByteStorage.field_b.a(-var15.field_w + var5, -var15.field_u + var6, 256);
     }
 
     final static void a(int param0, long param1) {

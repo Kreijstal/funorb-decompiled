@@ -72,8 +72,8 @@ final class ja extends IntrusiveNode {
           var14 = 65280 & param7;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = param6 * var15 >> 4;
-            var12[var15] = vf.b(sa.a(16711680, var16 * var14), sa.a(-16711936, var16 * var13)) >>> 8;
-            var12[31 - var15] = vf.b(sa.a(var14 * var16, 16711680), sa.a(var16 * var13, -16711936)) >>> 8;
+            var12[var15] = vf.b(DirectByteStorage.a(16711680, var16 * var14), DirectByteStorage.a(-16711936, var16 * var13)) >>> 8;
+            var12[31 - var15] = vf.b(DirectByteStorage.a(var14 * var16, 16711680), DirectByteStorage.a(var16 * var13, -16711936)) >>> 8;
           }
           var15Lifetime1 = -var8_int + var10;
           var16Lifetime1 = var11 - var9;

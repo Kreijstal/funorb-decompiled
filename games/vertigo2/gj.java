@@ -427,7 +427,7 @@ final class gj extends TextureOperator {
                         var13_int = var18_int;
                       }
                       if (var18_int != 0 &&
-                        !vb.field_g) {
+                        !DirectByteStorage.field_g) {
                         var11_int = 1;
                       }
                     }
@@ -439,7 +439,7 @@ final class gj extends TextureOperator {
                       null != qh.field_e[var16]) {
                       var18_intLifetime1 = qh.field_e[var16][var17_int];
                       if (var18_intLifetime1 != 0 &&
-                        !vb.field_g) {
+                        !DirectByteStorage.field_g) {
                         var11_int = 1;
                       }
                       if (var14_int < var18_intLifetime1) {

@@ -184,7 +184,7 @@ final class hb extends am {
         if (this.field_l.field_b) {
           for (var4 = 0; ci.field_c > var4; var4++) {
             var5 = (IntrusiveNode.field_b[var4] << 12) / this.field_z + this.field_v;
-            var6 = (dp.field_a[param1] << 12) / this.field_z + this.field_t;
+            var6 = (ByteStorage.field_a[param1] << 12) / this.field_z + this.field_t;
             var7 = var5;
             var8 = var6;
             var9 = var5;

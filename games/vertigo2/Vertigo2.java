@@ -764,7 +764,7 @@ public final class Vertigo2 extends GameShell {
           mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, ho.field_e, wo.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
           jl.field_g = (Sprite) ((Object) oj.field_L);
           ll.a((byte) -111, 200);
-          vb.field_g = true;
+          DirectByteStorage.field_g = true;
           gr.field_W = eg.field_s;
           dl.field_b = vg.field_c;
           be.a(-103, uk.field_r, 320, 20, 16766751, 10, 5, 16777215, (Sprite[]) null, 8, fa.field_s, 8, va.field_s.field_f, 280, 16777215);
@@ -968,7 +968,7 @@ public final class Vertigo2 extends GameShell {
           ce.clearStaticReferences(true);
           TextureOperator.clearStaticReferences(true);
           pq.clearStaticReferences(-1);
-          dh.clearStaticReferences(-1);
+          ByteStorage.clearStaticReferences(-1);
           rj.clearStaticReferences();
           vq.a((byte) 111);
           al.a(-1216);
@@ -1088,7 +1088,7 @@ public final class Vertigo2 extends GameShell {
           se.b(true);
           wb.clearStaticReferences((byte) -33);
           md.g(-101);
-          vb.b((byte) -54);
+          DirectByteStorage.b((byte) -54);
           sl.clearStaticReferences((byte) 53);
           re.a(-124);
           ac.clearStaticReferences((byte) 101);
@@ -1317,7 +1317,7 @@ public final class Vertigo2 extends GameShell {
               bi.b(0, 0, bi.field_e, bi.field_j, 0, var5Lifetime2);
             }
           }
-          dh.a(0, (byte) -88, var8, 0);
+          ByteStorage.a(0, (byte) -88, var8, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1486,7 +1486,7 @@ public final class Vertigo2 extends GameShell {
               this.loadBackgroundImages((byte) -121);
             }
             if (null != tl.field_c) {
-              ProxySocketConnector.a(false, 95.0f, dh.field_f);
+              ProxySocketConnector.a(false, 95.0f, ByteStorage.field_f);
               this.d(param0 - 16777232);
               w.a(ml.field_u, np.field_Kb, tl.field_c, (byte) 59);
               tl.field_c = null;

@@ -94,10 +94,10 @@ final class mh {
           } else {
             var6.b(245, 199);
           }
-          if (vi.field_p < ke.field_c) {
+          if (vi.field_p < ByteStorage.field_c) {
             var7 = rk.field_f[hd.field_h];
             if (var7 != null) {
-              var2_int = vi.field_p * (60 + var7.field_q) / ke.field_c;
+              var2_int = vi.field_p * (60 + var7.field_q) / ByteStorage.field_c;
               var3 = var2_int - 30;
               if (!ve.field_c) {
                 cl.a(var3 * -256 / 30, 245, (byte) -51, var7, 199, (var7.field_q - var3) * 256 / 30);

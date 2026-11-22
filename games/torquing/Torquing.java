@@ -245,7 +245,7 @@ public final class Torquing extends tg {
           DelegatingCanvas.a(-137);
           cn.a(-1581);
           vb.a(param0 ^ 41);
-          dp.b(param0 - 110);
+          ByteStorage.b(param0 - 110);
           fc.clearStaticReferences();
           j.a((byte) 44);
           pm.clearStaticReferences(0);
@@ -336,7 +336,7 @@ public final class Torquing extends tg {
           vk.b(95);
           rd.c(127);
           cm.clearStaticReferences(31003);
-          jm.c(-101);
+          DirectByteStorage.c(-101);
           hq.a(-1);
           jd.h(-97);
           k.a(param0 + 98);
@@ -941,15 +941,15 @@ public final class Torquing extends tg {
             nn.field_a[0] = new af[]{(af) (var10_ref), (af) ((Object) var8_ref_ia), (af) ((Object) var11), var13, (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], -115)};
             var45 = DelegatingCanvas.a("pause_title", param1 ^ -30996, rg.field_v, "");
             nn.field_a[1] = new af[]{(af) (var10_ref), (af) ((Object) var8_ref_ia), (af) ((Object) var11), var13, (af) ((Object) new dg(var45, 5, 5, 76)), bi.a(var45, i.c((int) param1, 55))};
-            nn.field_a[3] = new af[]{(af) ((Object) new ia(102, 14, 436, 452)), dp.a("continue", "", rg.field_v, (byte) 4)};
-            nn.field_a[4] = new af[]{(af) (var10_ref), dp.a("help_bg_delta", "", rg.field_v, (byte) 4), (af) ((Object) new ia(27, 98, 574, 365))};
+            nn.field_a[3] = new af[]{(af) ((Object) new ia(102, 14, 436, 452)), ByteStorage.a("continue", "", rg.field_v, (byte) 4)};
+            nn.field_a[4] = new af[]{(af) (var10_ref), ByteStorage.a("help_bg_delta", "", rg.field_v, (byte) 4), (af) ((Object) new ia(27, 98, 574, 365))};
             var15_ref_sm = DelegatingCanvas.a("highscore_top", 31094, rg.field_v, "");
-            nn.field_a[2] = new af[]{(af) (var10_ref), (af) ((Object) new ia(102, 108, 436, 362)), dp.a("highscore_bottom", "", rg.field_v, (byte) 4), (af) ((Object) new dg(var15_ref_sm, 4, 4, 76)), bi.a(var15_ref_sm, 103)};
+            nn.field_a[2] = new af[]{(af) (var10_ref), (af) ((Object) new ia(102, 108, 436, 362)), ByteStorage.a("highscore_bottom", "", rg.field_v, (byte) 4), (af) ((Object) new dg(var15_ref_sm, 4, 4, 76)), bi.a(var15_ref_sm, 103)};
             nn.field_a[5] = new af[]{(af) ((Object) new ia(72, 82, 496, 366))};
-            nn.field_a[9] = new af[]{(af) ((Object) new ia(27, 51, 574, 430)), dp.a("levelsel", "", rg.field_v, (byte) 4)};
+            nn.field_a[9] = new af[]{(af) ((Object) new ia(27, 51, 574, 430)), ByteStorage.a("levelsel", "", rg.field_v, (byte) 4)};
             var16_ref_ia = new ia(23, 62, 593, 402);
-            nn.field_a[6] = new af[]{(af) ((Object) var16_ref_ia), dp.a("achievetitle", "", rg.field_v, (byte) 4)};
-            nn.field_a[8] = new af[]{(af) ((Object) var16_ref_ia), dp.a("gameachtitle", "", rg.field_v, (byte) 4)};
+            nn.field_a[6] = new af[]{(af) ((Object) var16_ref_ia), ByteStorage.a("achievetitle", "", rg.field_v, (byte) 4)};
+            nn.field_a[8] = new af[]{(af) ((Object) var16_ref_ia), ByteStorage.a("gameachtitle", "", rg.field_v, (byte) 4)};
             nn.field_a[7] = new af[]{(af) ((Object) new ia(35, 144, 573, 223)), (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], 115)};
             nn.field_a[10] = new af[]{(af) ((Object) qc.field_cb), (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], param1 + 41), (af) ((Object) new dg(mh.field_d[1], 0, 0, 76)), bi.a(GameKeyHandler.field_a[1], 108)};
             nn.field_a[11] = new af[]{(af) ((Object) new ia(11, 11, 618, 122)), (af) ((Object) new ia(11, 139, 209, 330)), (af) ((Object) new ia(226, 139, 403, 242))};
@@ -1100,7 +1100,7 @@ public final class Torquing extends tg {
                     ((Level) (var10_ref)).field_m = var55;
                     var10_ref = var55;
                   } else {
-                    jm.field_d = var55;
+                    DirectByteStorage.field_d = var55;
                     var10_ref = var55;
                   }
                 } else {
@@ -1167,7 +1167,7 @@ public final class Torquing extends tg {
             dk.a(mh.field_k, 0, var12, 0, mh.field_k.length);
             mh.field_k = var12;
             var13_ref = new StringBuilder(8192);
-            var14 = jm.field_d;
+            var14 = DirectByteStorage.field_d;
             while (var14.field_m != null) {
               var14 = var14.field_m;
               var10Lifetime1++;
@@ -1209,7 +1209,7 @@ public final class Torquing extends tg {
           }
           if (!lp.field_f) {
             var3_intLifetime2 = 0;
-            var4_ref = jm.field_d;
+            var4_ref = DirectByteStorage.field_d;
             while (var4_ref != null) {
               if (var4_ref.e(0) &&
                 var4_ref.b(param1 ^ -15) &&
@@ -1223,7 +1223,7 @@ public final class Torquing extends tg {
             }
             ol.field_f = new Level[var3_intLifetime2];
             var3_intLifetime2 = 0;
-            var4_refLifetime1 = jm.field_d;
+            var4_refLifetime1 = DirectByteStorage.field_d;
             while (var4_refLifetime1 != null) {
               incrementValue$5 = var3_intLifetime2;
               var3_intLifetime2++;

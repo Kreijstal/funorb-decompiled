@@ -10,7 +10,7 @@ final class ch extends am {
         boolean decompiledFrameRemainder0 = true;
         var7 = Torquing.field_u;
         var4 = IntrusiveNode.field_b[param1];
-        var5 = dp.field_a[param2];
+        var5 = ByteStorage.field_a[param2];
         var6 = (float)Math.atan2((double)(-2048 + var4), (double)(var5 - param0));
         if ((double)var6 >= -3.141592653589793 &&
           (double)var6 <= -2.356194490192345) {

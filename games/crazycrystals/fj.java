@@ -7,7 +7,7 @@ final class fj {
     static String field_a;
     static boolean field_d;
 
-    final static Object a(boolean param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(boolean param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -33,7 +33,7 @@ final class fj {
             return stackIn_9_0;
           }
           if (param0) {
-            stackIn_14_0 = sm.a(-128, param2);
+            stackIn_14_0 = sm.copyBytes(-128, param2);
             return stackIn_14_0;
           }
           stackIn_12_0 = (byte[]) (param2);

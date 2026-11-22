@@ -423,7 +423,7 @@ final class ej extends PcmStream {
             q.field_h = null;
             c.field_d = param3;
             ab.field_j = param6;
-            hf.field_g = param1;
+            DirectByteStorage.field_g = param1;
             kk.field_g = param5;
             ta.field_h = param2;
             if (Transmogrify.field_A) {

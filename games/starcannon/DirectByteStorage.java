@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends kk {
+final class DirectByteStorage extends ByteStorage {
     static ka field_f;
-    private java.nio.ByteBuffer field_g;
+    private java.nio.ByteBuffer buffer;
 
     final static void a(int param0, boolean param1) {
-        IntrusiveDeque.field_a = kk.field_a;
+        IntrusiveDeque.field_a = ByteStorage.field_a;
         ag.field_o = 0;
         ck.field_f = 0;
         fk.field_a = param0;
@@ -14,14 +14,14 @@ final class ij extends kk {
         ea.field_a.a(false, param1, -1, td.a(pe.field_d, la.field_c, true));
     }
 
-    final void a(int param0, byte[] param1) {
+    final void setBytes(int param0, byte[] param1) {
         try {
-          this.field_g = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
           if (param0 != -5361) {
             field_f = (ka) null;
           }
-          this.field_g.position(0);
-          this.field_g.put(param1);
+          this.buffer.position(0);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ij.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -67,19 +67,19 @@ final class ij extends kk {
         field_f = null;
     }
 
-    final byte[] a(int param0) {
+    final byte[] getBytes(int param0) {
         byte[] var3 = null;
         if (param0 == 4208) {
-          var3 = new byte[this.field_g.capacity()];
+          var3 = new byte[this.buffer.capacity()];
           byte[] var2 = var3;
-          this.field_g.position(0);
-          this.field_g.get(var3);
+          this.buffer.position(0);
+          this.buffer.get(var3);
           return var3;
         }
         return (byte[]) null;
     }
 
-    ij() {
+    DirectByteStorage() {
     }
 
     final static void a(int param0, java.applet.Applet param1) {

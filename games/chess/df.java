@@ -163,7 +163,7 @@ final class df {
             this.field_b = this.field_b + 1;
             this.field_j[fieldTemp$1] = (byte) 0;
           }
-          ne.a(this.field_f, 0, this.field_j, 32, 32);
+          ne.copyByteRange(this.field_f, 0, this.field_j, 32, 32);
           this.c(0);
           var4_int = 0;
           var5 = param1;

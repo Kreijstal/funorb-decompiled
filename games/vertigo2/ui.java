@@ -238,7 +238,7 @@ final class ui {
             var2 = w.field_E;
           }
           if (2 == field_g &&
-            !dh.a((byte) 127)) {
+            !ByteStorage.a((byte) 127)) {
             if (!c.a(sm.field_Kb, (byte) -125)) {
               var2 = Vertigo2.a(new String[]{ea.field_b}, RandomAccessCacheFile.field_b, param0 ^ 410);
               if (var10 != 0) {
@@ -248,7 +248,7 @@ final class ui {
               var2 = Vertigo2.a(new String[]{ea.field_b}, qo.field_E, 91);
             }
             if (BufferedSocket.field_a) {
-              dh.a((byte) -114, (String) (var2), 2, (String) null, 0, (String) null);
+              ByteStorage.a((byte) -114, (String) (var2), 2, (String) null, 0, (String) null);
               on.a(9110);
             }
           }

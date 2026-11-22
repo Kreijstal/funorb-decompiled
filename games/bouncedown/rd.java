@@ -4,7 +4,7 @@
 final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static boolean field_a;
 
-    final static byte[] a(byte param0, byte[] param1) {
+    final static byte[] copyBytes(byte param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -21,7 +21,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          cb.a(param1, 0, var3, 0, var2_int);
+          cb.copyByteRange(param1, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

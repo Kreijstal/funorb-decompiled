@@ -324,7 +324,7 @@ abstract class GameShell extends GameApplet {
             if (param0) {
               br.field_R = false;
             } else {
-              var5Lifetime2 = dh.a(24429, this.field_r, in.a((byte) 86), hr.h(-91), this.field_v, false);
+              var5Lifetime2 = ByteStorage.a(24429, this.field_r, in.a((byte) 86), hr.h(-91), this.field_v, false);
               if (var5Lifetime2 != -1) {
                 if (0 != var5Lifetime2) {
                   oq.a((byte) 102, nk.field_Kb, var5Lifetime2);
@@ -820,7 +820,7 @@ abstract class GameShell extends GameApplet {
         if (br.field_R) {
           return -1;
         }
-        int var2 = dh.a(24429, this.field_r, in.a((byte) 86), hr.h(-95), this.field_v, true);
+        int var2 = ByteStorage.a(24429, this.field_r, in.a((byte) 86), hr.h(-95), this.field_v, true);
         if (var2 == -1) {
           return -1;
         }

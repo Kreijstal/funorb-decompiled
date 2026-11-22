@@ -114,8 +114,8 @@ final class ah {
           ah.b(true);
           return;
         }
-        if (f.field_d != 0 &&
-          f.field_d % 10 >= 5) {
+        if (DirectByteStorage.field_d != 0 &&
+          DirectByteStorage.field_d % 10 >= 5) {
           ak.field_e[kb.field_b].d(var2 - ak.field_e[kb.field_b].field_q / 2, var3 - ak.field_e[kb.field_b].field_r / 2, 16777215);
         } else {
           ak.field_e[kb.field_b].a(128, var3, 90, 0, var2);

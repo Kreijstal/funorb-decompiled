@@ -85,12 +85,12 @@ final class kf {
             if (var4 == 45) {
               if (var3 == 0 ||
                 -1 + var2_int == var3) {
-                stackIn_20_0 = fh.field_e;
+                stackIn_20_0 = ByteStorage.field_e;
                 return stackIn_20_0;
               }
             } else {
               if (-1 == ac.field_a.indexOf(var4)) {
-                stackIn_24_0 = fh.field_e;
+                stackIn_24_0 = ByteStorage.field_e;
                 return stackIn_24_0;
               }
             }

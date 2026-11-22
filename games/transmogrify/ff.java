@@ -384,7 +384,7 @@ final class ff extends aj implements fb, df {
     final static void a(byte param0) {
         int var1 = -124 / ((param0 + 63) / 57);
         String var2 = (String) null;
-        SocketConnector.a(hf.field_g, -126, (String) null);
+        SocketConnector.a(DirectByteStorage.field_g, -126, (String) null);
     }
 
     static {

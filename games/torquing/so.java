@@ -22,7 +22,7 @@ final class so extends am {
         int[] var4 = this.field_l.a(param1, 25657);
         int[] var3 = var4;
         if (this.field_l.field_b) {
-          dk.a(var4, 0, ci.field_c, dp.field_a[param1]);
+          dk.a(var4, 0, ci.field_c, ByteStorage.field_a[param1]);
         }
         return var4;
     }

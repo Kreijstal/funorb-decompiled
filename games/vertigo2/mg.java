@@ -423,7 +423,7 @@ final class mg extends WidgetWrapper {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
-                    !vb.field_g &&
+                    !DirectByteStorage.field_g &&
                     q.field_y <= 0) {
                     var10 = 1;
                   }
@@ -432,7 +432,7 @@ final class mg extends WidgetWrapper {
                   null != qh.field_e[var7]) {
                   var16Lifetime2 = qh.field_e[var7][var9];
                   if (0 != var16Lifetime2 &&
-                    !vb.field_g &&
+                    !DirectByteStorage.field_g &&
                     q.field_y <= 0) {
                     var10 = 1;
                   }

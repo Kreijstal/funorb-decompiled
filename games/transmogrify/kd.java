@@ -221,7 +221,7 @@ final class kd implements WidgetRenderer {
           if (3 != re.field_A &&
             re.field_A != 4) {
             if (re.field_A == 0) {
-              var8 = hf.field_f;
+              var8 = DirectByteStorage.field_f;
             } else {
               if (re.field_A < 6) {
                 var8 = hd.field_c;
@@ -271,7 +271,7 @@ final class kd implements WidgetRenderer {
               var13 = (n.submittedWordCount - 1) * 12 + vl.field_G[var9Lifetime1];
               if (var10Lifetime1 >= 0 &&
                 var10Lifetime1 < 5) {
-                hf.field_d[cc.field_f[var9Lifetime1] * 5 + var10Lifetime1].c(var12, var13 + param1);
+                DirectByteStorage.field_d[cc.field_f[var9Lifetime1] * 5 + var10Lifetime1].c(var12, var13 + param1);
               }
             }
           }
@@ -329,7 +329,7 @@ final class kd implements WidgetRenderer {
           }
           var9Lifetime3 = sb.field_h[(2147483647 & nc.field_t) % sb.field_h.length];
           vh.field_n = vh.field_n - var9Lifetime3;
-          hf.field_j = hf.field_j - var9Lifetime3;
+          DirectByteStorage.field_j = DirectByteStorage.field_j - var9Lifetime3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

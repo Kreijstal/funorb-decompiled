@@ -241,9 +241,9 @@ final class GzipDecompressor {
         var5 = StarCannon.field_A;
         try {
           ck.field_f = ck.field_f + 65536;
-          while (fk.a(ck.field_f, kk.field_e, (byte) -117) >= 65536) {
+          while (fk.a(ck.field_f, ByteStorage.field_e, (byte) -117) >= 65536) {
             fk.field_a = fk.field_a + 1;
-            ck.field_f = ck.field_f - kk.field_e;
+            ck.field_f = ck.field_f - ByteStorage.field_e;
           }
           var2_int = -1;
           if (og.field_d == null) {
@@ -255,23 +255,23 @@ final class GzipDecompressor {
           }
           if (param1 != ~var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (IntrusiveDeque.field_a < kk.field_c) {
+            if (IntrusiveDeque.field_a < ByteStorage.field_c) {
               IntrusiveDeque.field_a = IntrusiveDeque.field_a + 1;
-              if (kk.field_a < IntrusiveDeque.field_a && (null == og.field_d ||
+              if (ByteStorage.field_a < IntrusiveDeque.field_a && (null == og.field_d ||
                 null == og.field_d[ag.field_o])) {
                 IntrusiveDeque.field_a = IntrusiveDeque.field_a - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (kk.field_c <= IntrusiveDeque.field_a &&
+                if (ByteStorage.field_c <= IntrusiveDeque.field_a &&
                   null == og.field_d[(ag.field_o + 1) % var2_int]) {
                   IntrusiveDeque.field_a = IntrusiveDeque.field_a - 1;
                 }
               }
             }
-            if (IntrusiveDeque.field_a >= kk.field_c) {
+            if (IntrusiveDeque.field_a >= ByteStorage.field_c) {
               od.field_i = ag.field_o;
-              IntrusiveDeque.field_a = IntrusiveDeque.field_a - kk.field_c;
+              IntrusiveDeque.field_a = IntrusiveDeque.field_a - ByteStorage.field_c;
               if (cc.field_j) {
                 ag.field_o = ag.field_o + 1;
                 if (var2_int <= ag.field_o) {
@@ -284,7 +284,7 @@ final class GzipDecompressor {
                 }
               }
             }
-            if (IntrusiveDeque.field_a > kk.field_a) {
+            if (IntrusiveDeque.field_a > ByteStorage.field_a) {
               cc.field_j = true;
             }
           }
@@ -298,26 +298,26 @@ final class GzipDecompressor {
                 rg.field_B < 269) {
                 cc.field_j = false;
                 var4 = 1;
-                IntrusiveDeque.field_a = kk.field_c;
+                IntrusiveDeque.field_a = ByteStorage.field_c;
               }
               if (rg.field_B > 586 &&
                 rg.field_B < 586 + ge.field_b.field_u) {
                 cc.field_j = true;
-                IntrusiveDeque.field_a = kk.field_c;
+                IntrusiveDeque.field_a = ByteStorage.field_c;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              kk.field_a < IntrusiveDeque.field_a &&
+              ByteStorage.field_a < IntrusiveDeque.field_a &&
               var3 < la.field_c &&
               la.field_c < var3 + ge.field_b.field_v) {
               if (269 - ge.field_b.field_u < pe.field_d &&
                 269 > pe.field_d) {
-                IntrusiveDeque.field_a = kk.field_a;
+                IntrusiveDeque.field_a = ByteStorage.field_a;
               }
               if (pe.field_d > 586 &&
                 586 + ge.field_b.field_u > pe.field_d) {
-                IntrusiveDeque.field_a = kk.field_a;
+                IntrusiveDeque.field_a = ByteStorage.field_a;
               }
             }
           }

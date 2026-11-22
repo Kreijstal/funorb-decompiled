@@ -28,7 +28,7 @@ final class ji {
         return oj.field_a[(int)(param1 * 32768.0 / 3.141592653589793) & 65535];
     }
 
-    final static byte[] a(int param0, Object param1, boolean param2) {
+    final static byte[] extractBytes(int param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -51,7 +51,7 @@ final class ji {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = qd.a((byte) 111, var3);
+            stackIn_6_0 = qd.copyBytes((byte) 111, var3);
             return stackIn_6_0;
           }
           if (param1 instanceof ByteStorage) {

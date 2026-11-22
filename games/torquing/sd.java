@@ -38,7 +38,7 @@ final class sd extends am {
         if (!this.field_l.field_b) {
           return var12;
         }
-        var4 = dp.field_a[param1];
+        var4 = ByteStorage.field_a[param1];
         var5 = -2048 + var4 >> 1;
         for (var6 = 0; ci.field_c > var6; var6++) {
           var8 = IntrusiveNode.field_b[var6];

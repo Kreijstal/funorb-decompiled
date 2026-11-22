@@ -566,13 +566,13 @@ abstract class ag extends GameApplet {
               UiWidget.field_r = null;
               ph.field_nb = null;
             }
-            var9 = kk.c((byte) 95);
+            var9 = ByteStorage.c((byte) 95);
             if (var9 != null) {
               BufferedSocket.a(var9.booleanValue(), (byte) 122);
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = fi.a(kk.b((byte) 123), this.field_x, ff.g(111), hc.a((byte) 96), dg.b((byte) -18), we.a(29084), (byte) -3);
+            var5_intLifetime1 = fi.a(ByteStorage.b((byte) 123), this.field_x, ff.g(111), hc.a((byte) 96), dg.b((byte) -18), we.a(29084), (byte) -3);
             if (var5_intLifetime1 != -1) {
               qa.a(var5_intLifetime1, ph.field_nb, UiWidget.field_r, (byte) 70);
               ph.field_nb = null;
@@ -604,7 +604,7 @@ abstract class ag extends GameApplet {
           }
           if (var4 == 4) {
             if (ah.field_i) {
-              ij.a(18065, ll.b(105));
+              DirectByteStorage.a(18065, ll.b(105));
             } else {
               ai.field_c = true;
               bl.field_a = 10;
@@ -621,7 +621,7 @@ abstract class ag extends GameApplet {
             vk.b(ll.b(param0 ^ 80), 32);
           }
           if (var4 == 8) {
-            ij.a(18065, ll.b(104));
+            DirectByteStorage.a(18065, ll.b(104));
           }
           if (9 == var4) {
             pa.b(ll.b(99), param0 ^ -31162);

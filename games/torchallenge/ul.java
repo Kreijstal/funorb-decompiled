@@ -251,7 +251,7 @@ final class ul extends IntrusiveNode {
     }
 
     final static void c(int param0) {
-        kl.field_e = of.b(param0 ^ 1259);
+        kl.field_e = ByteStorage.b(param0 ^ 1259);
         t.field_b = new si();
         if (param0 != -1247) {
           return;

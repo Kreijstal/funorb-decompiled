@@ -128,7 +128,7 @@ class DualLinkNode extends IntrusiveNode {
             }
             return;
           }
-          var6 = gi.field_f[oi.field_j];
+          var6 = gi.field_f[DirectByteStorage.field_j];
           var7 = var6;
           var7Lifetime1 = var6;
           var1 = var6;

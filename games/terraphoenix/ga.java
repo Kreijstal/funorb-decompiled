@@ -235,7 +235,7 @@ final class ga {
           return;
         }
         hk.a(a.field_b, (byte) -91);
-        a.field_b.a(nj.field_l, 4);
+        a.field_b.a(DirectByteStorage.field_l, 4);
         a.field_b = null;
         if (ab.field_b != null) {
           ab.field_b.a(101);

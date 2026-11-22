@@ -18,7 +18,7 @@ final class hj {
           va.field_s = param8;
           ac.field_e = param5;
           ld.field_fb = param0;
-          ij.field_f = param2;
+          DirectByteStorage.field_f = param2;
           SecondaryNodeDequeIterator.field_b = param3;
           jh.field_b = (eh) ((Object) new vh());
           bc.field_j = new ef(param2);

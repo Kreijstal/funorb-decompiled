@@ -110,7 +110,7 @@ abstract class vm extends jb implements ha {
 
     abstract mk a(byte param0, String param1);
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
+    final static Object storeBytes(int param0, byte[] param1, boolean param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -138,7 +138,7 @@ abstract class vm extends jb implements ha {
             return stackIn_8_0;
           }
           if (param2) {
-            stackIn_13_0 = tj.a(-93, param1);
+            stackIn_13_0 = tj.copyBytes(-93, param1);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param1);
@@ -165,7 +165,7 @@ abstract class vm extends jb implements ha {
         }
         if (param0 != 1) {
           byte[] var2 = (byte[]) null;
-          vm.a(70, (byte[]) null, true);
+          vm.storeBytes(70, (byte[]) null, true);
         }
     }
 

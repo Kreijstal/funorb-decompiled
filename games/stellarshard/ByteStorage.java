@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class i {
+abstract class ByteStorage {
     static th field_d;
     static IntrusiveDeque field_c;
     static int field_a;
@@ -23,7 +23,7 @@ abstract class i {
         }
     }
 
-    abstract void a(byte[] param0, byte param1);
+    abstract void setBytes(byte[] param0, byte param1);
 
     final static wb a(int param0, String param1) {
         int var2_int = 0;
@@ -73,7 +73,7 @@ abstract class i {
         }
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     public static void b(int param0) {
         field_d = null;
@@ -81,7 +81,7 @@ abstract class i {
         field_c = null;
         if (param0 != 64) {
           String var2 = (String) null;
-          i.a(76, (String) null);
+          ByteStorage.a(76, (String) null);
         }
     }
 

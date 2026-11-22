@@ -133,7 +133,7 @@ final class ri {
               }
               else {
                 if (var13 != ee.field_F) {
-                  ka.field_b.b(var11, var12);
+                  ByteStorage.field_b.b(var11, var12);
                 }
               }
             }
@@ -146,7 +146,7 @@ final class ri {
                 ge.h(0, 6, var6, var7 - 6);
                 var14_float = ProxySocketConnector.a(true, (float)jk.field_B * 0.10000000149011612f);
                 if ((var4 & 1 << var13) == 0) {
-                  stackIn_34_0 = ka.field_b;
+                  stackIn_34_0 = ByteStorage.field_b;
                 } else {
                   stackIn_34_0 = ie.field_b[var13];
                 }
@@ -206,7 +206,7 @@ final class ri {
             }
             ke.field_f[2].e();
             if (var15 == 0) {
-              ka.field_b.c(25, 25);
+              ByteStorage.field_b.c(25, 25);
             } else {
               ie.field_b[var5].c(25, 25);
             }

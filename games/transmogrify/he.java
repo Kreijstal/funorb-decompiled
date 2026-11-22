@@ -38,7 +38,7 @@ final class he extends IntrusiveNode {
             stackIn_12_0 = !(ab.field_j >= 13);
             de.field_a = de.a(stackIn_12_0, (byte) -116);
             var6 = (String[]) null;
-            dj.a(false, (String[]) null);
+            ByteStorage.a(false, (String[]) null);
           } else {
             if (param3 < 100) {
               de.field_a = mk.a(242763393, param2, param3);
@@ -47,7 +47,7 @@ final class he extends IntrusiveNode {
                 de.field_a = mk.a(242763393, param2, param3);
               } else {
                 var4 = args;
-                dj.a(false, var4);
+                ByteStorage.a(false, var4);
                 de.field_a = ve.a(args, (byte) -128);
               }
             }

@@ -134,7 +134,7 @@ final class jr implements Runnable {
         int var1 = 2 + Archive.field_f;
         im.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (db.field_S ? var1 : 0), !db.field_S ? 0 : var1, 0);
         po.b((byte) -52);
-        vb.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db - 40, 0);
+        DirectByteStorage.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db - 40, 0);
         qn.field_s.a(121, ud.field_A.field_Fb, 30, 0, 0);
         ja.field_b.a(115, ud.field_A.field_Fb, -30 + (-2 + ud.field_A.field_db - 40), 30, 0);
         po.field_a.a(72, 68, 30, 5, 5);

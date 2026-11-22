@@ -309,7 +309,7 @@ final class LevelEntity {
           var3 = -1;
           var4 = -1;
           if (var2_int == 0) {
-            var3 = oi.a((byte) -75, BufferedSocket.field_p.y);
+            var3 = DirectByteStorage.a((byte) -75, BufferedSocket.field_p.y);
           }
           if (var3 >= 0) {
             var4 = ub.a(var3, 48, BufferedSocket.field_p.field_e, BufferedSocket.field_p.field_I);
@@ -318,7 +318,7 @@ final class LevelEntity {
           var5 = stackIn_35_0;
           var6 = -1;
           if (var5 == 0) {
-            var6 = oi.a((byte) -58, this.y);
+            var6 = DirectByteStorage.a((byte) -58, this.y);
           }
           if (var6 >= 0) {
             ub.a(var6, 87, this.field_e, this.field_I);
@@ -3625,12 +3625,12 @@ final class LevelEntity {
                   SoftwareRasterizer.b();
                   c.field_c[var14][var9_int][var15].d(0, 0);
                   if (var17 != 0) {
-                    of.field_b.d();
+                    ByteStorage.field_b.d();
                     SoftwareRasterizer.b();
                     PacketBuffer.field_o[var14][var9_int][var15].d(0, 0);
                     if (param7 == 2) {
                       oa.field_e.d();
-                      od.a(0, 0, 0, var16, 0, of.field_b);
+                      od.a(0, 0, 0, var16, 0, ByteStorage.field_b);
                     }
                   }
                   SectorCacheStore.field_f.bindAsTarget(param5 ^ 20762);
@@ -3678,7 +3678,7 @@ final class LevelEntity {
                             SoftwareRasterizer.b();
                             oa.field_e.d(var11, param1, var20, var19);
                             if (var17 != 0) {
-                              od.a(param6 + param4, param1, 0, var16, 0, of.field_b);
+                              od.a(param6 + param4, param1, 0, var16, 0, ByteStorage.field_b);
                             }
                             if (var9_int != 2) {
                               return;
@@ -3711,7 +3711,7 @@ final class LevelEntity {
                               si.field_L[1] = var12Lifetime1;
                             }
                             if (var17 != 0) {
-                              od.a(param4 + param6, param1, 0, var16, 0, of.field_b);
+                              od.a(param4 + param6, param1, 0, var16, 0, ByteStorage.field_b);
                             }
                             if (var9_int != 2) {
                               return;
@@ -7438,7 +7438,7 @@ final class LevelEntity {
             this.n((byte) -42);
           }
           var8Lifetime1 = mc.field_g[fh.field_e][var3_int][this.field_kb] - 1;
-          var9 = of.field_a[fh.field_e][var3_int][this.field_kb] ? 1 : 0;
+          var9 = ByteStorage.field_a[fh.field_e][var3_int][this.field_kb] ? 1 : 0;
           me.field_g = hk.field_a[fh.field_e][var3_int][this.field_kb][0];
           stackIn_34_0 = (var8Lifetime1 > this.field_D) ? 0 : 1;
           var10 = stackIn_34_0;

@@ -57,7 +57,7 @@ final class bd extends dm {
           var9 = var8;
           var9.field_g[0] = -param1.a(param3) + param0;
           var9.field_g[param3.length()] = param0;
-          ll.a(var9, 0, param3, param1, 404465128);
+          ByteStorage.a(var9, 0, param3, param1, 404465128);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "bd.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -84,7 +84,7 @@ final class bd extends dm {
           int var7 = -66 / ((8 - param2) / 61);
           var8.field_g[0] = param0;
           var9.field_g[param1.length()] = param4.a(param1) + param0;
-          ll.a(var9, 0, param1, param4, 404465128);
+          ByteStorage.a(var9, 0, param1, param4, 404465128);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "bd.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -112,7 +112,7 @@ final class bd extends dm {
           var7 = param4.a(param3);
           var8.field_g[0] = param0 - (var7 >> 1);
           var8.field_g[param3.length()] = (var7 >> 1) + param0;
-          ll.a(var8, 0, param3, param4, 404465128);
+          ByteStorage.a(var8, 0, param3, param4, 404465128);
         } catch (RuntimeException runtimeException) {
           throw dd.a((Throwable) ((Object) runtimeException), "bd.O(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -223,7 +223,7 @@ final class bd extends dm {
               } else {
                 stackIn_41_1 = this.a(var13, param4, param3.a(var13), (byte) 74);
               }
-              ll.a(stackIn_40_0, stackIn_41_1, var13, param3, 404465128);
+              ByteStorage.a(stackIn_40_0, stackIn_41_1, var13, param3, 404465128);
             }
             this.field_c[var12Lifetime1] = var14;
             var11 = var11 + param6;

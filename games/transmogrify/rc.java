@@ -45,11 +45,11 @@ final class rc {
           mg.field_d = param0;
           stackIn_7_0 = (param0) ? 0 : -1;
           jl.field_j = stackIn_7_0;
-          if (hf.field_f == null) {
+          if (DirectByteStorage.field_f == null) {
             il.field_c = new int[][]{new int[]{34, 190, wk.carryoverRack.tiles.length * wl.field_K.field_n + 34, wl.field_K.field_m + 190}};
             wc.field_a = new int[][]{new int[]{161, 247, 161 + si.newRack.tiles.length * wl.field_K.field_n, wl.field_K.field_m + 247}};
-            hf.field_f = new int[][]{new int[]{34, 114, wl.field_K.field_n * od.submissionRack.tiles.length + 34, wl.field_K.field_m + 114}, il.field_c[0], wc.field_a[0]};
-            hd.field_c = new int[][]{hf.field_f[0], il.field_c[0]};
+            DirectByteStorage.field_f = new int[][]{new int[]{34, 114, wl.field_K.field_n * od.submissionRack.tiles.length + 34, wl.field_K.field_m + 114}, il.field_c[0], wc.field_a[0]};
+            hd.field_c = new int[][]{DirectByteStorage.field_f[0], il.field_c[0]};
           }
           wk.carryoverRack.clear(true);
           si.newRack.clear(true);
@@ -66,7 +66,7 @@ final class rc {
           stackIn_15_0 = (!param0) ? 1 : 6;
           re.field_A = stackIn_15_0;
           if (dk.field_b) {
-            hf.field_j = hf.field_j - 1;
+            DirectByteStorage.field_j = DirectByteStorage.field_j - 1;
             nc.field_t = nc.field_t - 1;
             dk.field_b = false;
           }
@@ -78,10 +78,10 @@ final class rc {
           vh.field_n = vh.field_n + (eh.totalScore << 6);
           eh.totalScore = 0;
           if (null != MouseInputHandler.field_c) {
-            hf.field_j = hf.field_j - MouseInputHandler.field_c.field_o;
+            DirectByteStorage.field_j = DirectByteStorage.field_j - MouseInputHandler.field_c.field_o;
           }
           MouseInputHandler.field_c = we.field_l[am.field_n];
-          hf.field_j = hf.field_j + MouseInputHandler.field_c.field_o;
+          DirectByteStorage.field_j = DirectByteStorage.field_j + MouseInputHandler.field_c.field_o;
           if (mg.field_d &&
             null != MouseInputHandler.field_c.field_b) {
             for (var2_int = 0; var2_int < MouseInputHandler.field_c.field_b.length(); var2_int++) {

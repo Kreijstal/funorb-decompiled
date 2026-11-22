@@ -38,7 +38,7 @@ final class ll {
 
     final static void a(byte param0, boolean param1) {
         vi.field_q = 0;
-        vi.field_p = ke.field_c;
+        vi.field_p = ByteStorage.field_c;
         ClientException.field_e = 0;
         uj.field_d = 0;
         si.field_ob = new QuickChatMenu(2);

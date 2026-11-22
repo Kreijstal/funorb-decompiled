@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eg {
-    final static void a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static void copyByteRange(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;

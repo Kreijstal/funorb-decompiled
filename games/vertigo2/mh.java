@@ -54,7 +54,7 @@ final class mh {
               return;
             }
             var6 = (String) null;
-            dh.a((byte) -59, (String) (var5), 2, (String) null, 0, var4);
+            ByteStorage.a((byte) -59, (String) (var5), 2, (String) null, 0, var4);
           }
           rc.field_d = null;
           hk.field_n = -1;

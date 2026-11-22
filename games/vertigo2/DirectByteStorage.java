@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class vb extends dh {
-    private java.nio.ByteBuffer field_i;
+final class DirectByteStorage extends ByteStorage {
+    private java.nio.ByteBuffer buffer;
     static UiPanel field_j;
     static boolean field_g;
     static int field_h;
@@ -83,29 +83,29 @@ final class vb extends dh {
         }
     }
 
-    final byte[] b(int param0) {
-        byte[] var4 = new byte[this.field_i.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var4 = new byte[this.buffer.capacity()];
         byte[] var2 = var4;
-        this.field_i.position(0);
-        this.field_i.get(var4);
+        this.buffer.position(0);
+        this.buffer.get(var4);
         int var3 = 8 / ((param0 - 13) / 58);
         return var4;
     }
 
-    final void a(byte[] param0, boolean param1) {
+    final void setBytes(byte[] param0, boolean param1) {
         try {
-          this.field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param0.length);
           if (!param1) {
             field_j = (UiPanel) null;
           }
-          this.field_i.position(0);
-          this.field_i.put(param0);
+          this.buffer.position(0);
+          this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "vb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    vb() {
+    DirectByteStorage() {
     }
 
     static {

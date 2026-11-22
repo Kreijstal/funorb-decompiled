@@ -87,10 +87,10 @@ class ab extends dk {
           } else {
             var7.e(245, 199);
           }
-          if (IntrusiveDeque.field_a < kk.field_a) {
+          if (IntrusiveDeque.field_a < ByteStorage.field_a) {
             var8Lifetime2 = og.field_d[od.field_i];
             if (var8Lifetime2 != null) {
-              var3_int = (var8Lifetime2.field_x + 60) * IntrusiveDeque.field_a / kk.field_a;
+              var3_int = (var8Lifetime2.field_x + 60) * IntrusiveDeque.field_a / ByteStorage.field_a;
               var4 = var3_int - 30;
               if (cc.field_j) {
                 n.a(var4 * -256 / 30, 199, 245, 256 * (var8Lifetime2.field_x - var4) / 30, var8Lifetime2, (byte) -2);

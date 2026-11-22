@@ -316,7 +316,7 @@ final class lj {
               this.a((byte) 114, var6Lifetime1);
             }
             if (this.field_j == 3) {
-              dh.a(this.field_e, this.field_l[0].field_H, true);
+              ByteStorage.a(this.field_e, this.field_l[0].field_H, true);
               gj.a((byte) 91, false, am.field_n, 20);
             } else {
               this.a(param1 + 30093, false);

@@ -3791,7 +3791,7 @@ final class SocketJs5Transport extends Js5Transport {
           if (param1 != -98) {
             field_u = 78;
           }
-          jm.a(true, param1 + 1);
+          DirectByteStorage.a(true, param1 + 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

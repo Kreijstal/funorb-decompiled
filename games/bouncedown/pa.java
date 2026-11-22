@@ -50,7 +50,7 @@ final class pa {
             this.field_j = this.field_j + 1;
             this.field_l[fieldTemp$1] = (byte) 0;
           }
-          cb.a(this.field_m, 0, this.field_l, 32, 32);
+          cb.copyByteRange(this.field_m, 0, this.field_l, 32, 32);
           this.c(-26394);
           if (param1 != 27892) {
             return;

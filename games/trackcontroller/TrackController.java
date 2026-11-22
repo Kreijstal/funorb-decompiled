@@ -392,7 +392,7 @@ public final class TrackController extends GameShell {
         nh.clearStaticReferences(-104);
         kd.clearStaticReferences((byte) 86);
         oe.clearStaticReferences(-1);
-        fh.a((byte) 125);
+        ByteStorage.a((byte) 125);
         b.clearStaticReferences();
         nf.clearStaticReferences(261211);
         SocketArchiveRequestConnection.clearStaticReferences(80);
@@ -470,7 +470,7 @@ public final class TrackController extends GameShell {
         qk.clearStaticReferences((byte) 40);
         vf.clearStaticReferences();
         f.a((byte) 113);
-        pi.b(param0 - 105);
+        DirectByteStorage.b(param0 - 105);
         cj.e(4);
         qh.a(-51);
         fj.e((byte) 118);

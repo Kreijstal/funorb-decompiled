@@ -28,7 +28,7 @@ final class wj {
           var2 = (bk.c(-25704)) ? 0 : 1;
         } else {
           if (null == ab.field_b) {
-            a.field_b = MouseWheelInput.a(480, 640, 0, 0, (byte) 112, nj.field_l);
+            a.field_b = MouseWheelInput.a(480, 640, 0, 0, (byte) 112, DirectByteStorage.field_l);
           } else {
             a.field_b = ab.field_b.b(0);
             ig.a(2, 12);

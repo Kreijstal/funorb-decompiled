@@ -18,7 +18,7 @@ final class na {
     final static void a(int param0, int param1, int param2, Sprite[] param3) {
         try {
           eh.field_a = new qc(param3);
-          sa.field_h = param2;
+          DirectByteStorage.field_h = param2;
           if (param1 != 256) {
             na.a(67, 84, 117, false, true, true);
           }
@@ -60,10 +60,10 @@ final class na {
             }
           }
           this.field_f = this.field_f + this.field_g[128 + var2 & 255];
-          dupTemp$1 = this.field_f + this.field_g[sa.a(var3 >> 2, 255)] + this.field_i;
+          dupTemp$1 = this.field_f + this.field_g[DirectByteStorage.a(var3 >> 2, 255)] + this.field_i;
           var4 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_g[sa.a(1020, var4 >> 8) >> 2];
+          dupTemp$2 = var3 + this.field_g[DirectByteStorage.a(1020, var4 >> 8) >> 2];
           this.field_i = dupTemp$2;
           this.field_h[var2] = dupTemp$2;
           var2++;

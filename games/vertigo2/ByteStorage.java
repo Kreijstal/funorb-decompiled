@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dh {
+abstract class ByteStorage {
     static int[] field_d;
     static String field_b;
     static String field_f;
@@ -16,7 +16,7 @@ abstract class dh {
         return rm.a((byte) -125, ie.field_Nb, sm.field_Kb);
     }
 
-    abstract byte[] b(int param0);
+    abstract byte[] getBytes(int param0);
 
     final static void a(int param0, int param1, boolean param2) {
         if (!param2) {
@@ -27,7 +27,7 @@ abstract class dh {
         ln.field_d.b(param0, -24066);
     }
 
-    abstract void a(byte[] param0, boolean param1);
+    abstract void setBytes(byte[] param0, boolean param1);
 
     public static void clearStaticReferences(int param0) {
         field_e = null;
@@ -267,7 +267,7 @@ abstract class dh {
             }
             if (param0 != 24429) {
               var10 = (java.awt.Canvas) null;
-              dh.a(-113, (byte) 112, (java.awt.Canvas) null, 37);
+              ByteStorage.a(-113, (byte) 112, (java.awt.Canvas) null, 37);
             }
             if (rg.field_d == hj.field_f &&
               dl.b((byte) 103)) {

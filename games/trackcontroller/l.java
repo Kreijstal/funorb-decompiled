@@ -194,10 +194,10 @@ final class l extends di {
             md.a(param1, var4, 99);
             var4 = (cf) (kd.field_b.next(10));
           }
-          var2 = fh.field_b.first(2);
+          var2 = ByteStorage.field_b.first(2);
           while (var2 != null) {
             nk.a(param1, -120);
-            var2 = fh.field_b.next(param0 ^ -30432);
+            var2 = ByteStorage.field_b.next(param0 ^ -30432);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

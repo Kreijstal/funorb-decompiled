@@ -118,7 +118,7 @@ final class cd {
             qh.a(param1, true);
             ii.field_d = false;
           }
-          of.a(0, 0, (byte) 40, param4, param1);
+          ByteStorage.a(0, 0, (byte) 40, param4, param1);
         }
         if (0 <= param0 &&
           param0 < 256) {

@@ -1384,7 +1384,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -112, "COOPCOMPLETE");
                 if (var2 != null) {
-                  dh.field_e = in.a(0, var2);
+                  ByteStorage.field_e = in.a(0, var2);
                 }
                 var2 = en.a((byte) -19, "ANONPLAYER");
                 if (var2 != null) {

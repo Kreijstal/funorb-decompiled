@@ -606,7 +606,7 @@ final class ml extends IntrusiveNode {
           var9 = new int[var5];
           var10 = UiWidget.a((byte) 73, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = dj.a(true, var10, var11);
+            var9[var11] = ByteStorage.a(true, var10, var11);
           }
           if (var1 == 0) {
             field_r = var6_ref_float__;

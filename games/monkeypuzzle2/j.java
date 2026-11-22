@@ -55,7 +55,7 @@ final class j {
             stackIn_10_0 = 127;
             return stackIn_10_0;
           }
-          sj.field_f.a(q.a(p.field_a, (byte) -36, ei.field_a), q.a(ab.field_e, (byte) -36, qg.field_c), true);
+          sj.field_f.a(q.a(p.field_a, (byte) -36, ei.field_a), q.a(DirectByteStorage.field_e, (byte) -36, qg.field_c), true);
           if (sj.field_f.c((byte) -99)) {
             var1_int = 1;
           }

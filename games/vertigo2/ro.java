@@ -149,7 +149,7 @@ abstract class ro {
         sl.field_q[19] = ld.field_a;
         sl.field_q[24] = mk.field_K;
         sl.field_q[26] = nn.field_p + ue.field_F[1];
-        sl.field_q[34] = dh.field_b;
+        sl.field_q[34] = ByteStorage.field_b;
         sl.field_q[35] = in.field_a;
         sl.field_q[25] = ue.field_F[0] + bb.field_y;
         sl.field_q[29] = vo.field_v;
@@ -176,7 +176,7 @@ abstract class ro {
         mb.field_q[4] = po.field_d.toLowerCase();
         mb.field_q[3] = po.field_d.toLowerCase();
         mb.field_q[13] = t.field_i.toLowerCase();
-        mb.field_q[15] = dh.field_e.toLowerCase();
+        mb.field_q[15] = ByteStorage.field_e.toLowerCase();
         mb.field_q[14] = lr.field_I.toLowerCase();
         mb.field_q[19] = ek.field_C.toLowerCase();
         mb.field_q[21] = nb.field_E.toLowerCase();

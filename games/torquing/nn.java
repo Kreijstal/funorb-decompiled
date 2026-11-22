@@ -166,7 +166,7 @@ final class nn {
               }
               var3 = var3 + param0;
             }
-            jm.a(3, var3);
+            DirectByteStorage.a(3, var3);
             var3 = sp.a(var3, ":", "%3a", (byte) -77);
             var3 = sp.a(var3, "@", "%40", (byte) -71);
             var3 = sp.a(var3, "&", "%26", (byte) -85);

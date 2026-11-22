@@ -25,7 +25,7 @@ final class jb {
     final static void a(int param0, int param1, qc param2, int param3) {
         try {
           int var4_int = -23 % ((param3 + 27) / 50);
-          sa.field_h = param1;
+          DirectByteStorage.field_h = param1;
           PacketBuffer.field_q = param0;
           eh.field_a = param2;
         } catch (RuntimeException runtimeException) {

@@ -228,7 +228,7 @@ final class jf {
             if (this.field_a != -1L &&
               (long)this.field_m.length + this.field_a < (long)param2 + this.field_b) {
               var5_int = (int)((long)this.field_m.length + this.field_a - this.field_b);
-              cb.a(param1, param3, this.field_m, (int)(-this.field_a + this.field_b), var5_int);
+              cb.copyByteRange(param1, param3, this.field_m, (int)(-this.field_a + this.field_b), var5_int);
               this.field_b = this.field_b + (long)var5_int;
               param3 = param3 + var5_int;
               param2 = param2 - var5_int;
@@ -268,7 +268,7 @@ final class jf {
               if (var5_long > -1L &&
                 var7 > var5_long) {
                 var9 = (int)(-var5_long + var7);
-                cb.a(param1, (int)(var5_long + ((long)param3 - this.field_b)), this.field_j, (int)(var5_long - this.field_k), var9);
+                cb.copyByteRange(param1, (int)(var5_long + ((long)param3 - this.field_b)), this.field_j, (int)(var5_long - this.field_k), var9);
               }
               this.field_b = this.field_b + (long)param2;
               return;
@@ -277,7 +277,7 @@ final class jf {
               if (-1L == this.field_a) {
                 this.field_a = this.field_b;
               }
-              cb.a(param1, param3, this.field_m, (int)(-this.field_a + this.field_b), param2);
+              cb.copyByteRange(param1, param3, this.field_m, (int)(-this.field_a + this.field_b), param2);
               this.field_b = this.field_b + (long)param2;
               if (this.field_b - this.field_a > (long)this.field_f) {
                 this.field_f = (int)(-this.field_a + this.field_b);
@@ -386,7 +386,7 @@ final class jf {
             if (this.field_a != -1L &&
               this.field_b >= this.field_a &&
               this.field_a + (long)this.field_f >= this.field_b + (long)param2) {
-              cb.a(this.field_m, (int)(this.field_b - this.field_a), param1, param0, param2);
+              cb.copyByteRange(this.field_m, (int)(this.field_b - this.field_a), param1, param0, param2);
               this.field_b = this.field_b + (long)param2;
               return;
             }
@@ -399,7 +399,7 @@ final class jf {
               if (var9_int > param2) {
                 var9_int = param2;
               }
-              cb.a(this.field_j, (int)(this.field_b - this.field_k), param1, param0, var9_int);
+              cb.copyByteRange(this.field_j, (int)(this.field_b - this.field_k), param1, param0, var9_int);
               param2 = param2 - var9_int;
               this.field_b = this.field_b + (long)var9_int;
               param0 = param0 + var9_int;
@@ -430,7 +430,7 @@ final class jf {
               if (this.field_e < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_e;
               }
-              cb.a(this.field_j, 0, param1, param0, var9_intLifetime1Lifetime1);
+              cb.copyByteRange(this.field_j, 0, param1, param0, var9_intLifetime1Lifetime1);
               this.field_b = this.field_b + (long)var9_intLifetime1Lifetime1;
               param2 = param2 - var9_intLifetime1Lifetime1;
               param0 = param0 + var9_intLifetime1Lifetime1;
@@ -473,7 +473,7 @@ final class jf {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                cb.a(this.field_m, (int)(-this.field_a + var9), param1, (int)(-var5_long + var9) + var7, var13);
+                cb.copyByteRange(this.field_m, (int)(-this.field_a + var9), param1, (int)(-var5_long + var9) + var7, var13);
                 if (this.field_b < var11) {
                   param2 = (int)((long)param2 - (-this.field_b + var11));
                   this.field_b = var11;
@@ -569,7 +569,7 @@ final class jf {
                 if (var2 > -1L &&
                   var4 > var2) {
                   var6 = (int)(-var2 + var4);
-                  cb.a(this.field_m, (int)(-this.field_a + var2), this.field_j, (int)(-this.field_k + var2), var6);
+                  cb.copyByteRange(this.field_m, (int)(-this.field_a + var2), this.field_j, (int)(-this.field_k + var2), var6);
                 }
                 this.field_f = 0;
                 this.field_a = -1L;
@@ -584,7 +584,7 @@ final class jf {
             if (var2 > -1L &&
               var4 > var2) {
               var6Lifetime1 = (int)(-var2 + var4);
-              cb.a(this.field_m, (int)(-this.field_a + var2), this.field_j, (int)(-this.field_k + var2), var6Lifetime1);
+              cb.copyByteRange(this.field_m, (int)(-this.field_a + var2), this.field_j, (int)(-this.field_k + var2), var6Lifetime1);
             }
             this.field_f = 0;
             this.field_a = -1L;

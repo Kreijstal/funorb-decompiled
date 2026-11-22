@@ -160,7 +160,7 @@ final class mh {
         }
         if (null != hg.field_a) {
           if (!hg.field_a.a((byte) -118)) {
-            return dj.field_c;
+            return ByteStorage.field_c;
           }
           return od.field_h;
         }
@@ -174,7 +174,7 @@ final class mh {
           return (String) null;
         }
         if (!wi.field_e.a((byte) -121)) {
-          return dj.field_a;
+          return ByteStorage.field_a;
         }
         if (!wi.field_e.a((byte) 120, "commonui")) {
           return i.field_c + " - " + wi.field_e.a(0, "commonui") + "%";

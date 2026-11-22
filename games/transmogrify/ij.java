@@ -99,7 +99,7 @@ final class ij implements WidgetRenderer {
             var6_int = param0.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (dj.a(param0.charAt(var5), true)) {
+                if (ByteStorage.a(param0.charAt(var5), true)) {
                   continue;
                 }
                 break;
@@ -136,7 +136,7 @@ final class ij implements WidgetRenderer {
               return stackIn_30_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (dj.a(param0.charAt(var5Lifetime1), true)) {
+              if (ByteStorage.a(param0.charAt(var5Lifetime1), true)) {
                 continue;
               }
               break;

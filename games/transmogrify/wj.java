@@ -13,12 +13,12 @@ class wj extends kk {
 
     final static void b(int param0) {
         if (param0 == 480) {
-          fd.a(param0 ^ 410, true, ta.field_h, hf.field_g);
+          fd.a(param0 ^ 410, true, ta.field_h, DirectByteStorage.field_g);
           hd.field_b = true;
           return;
         }
         wj.b(122);
-        fd.a(param0 ^ 410, true, ta.field_h, hf.field_g);
+        fd.a(param0 ^ 410, true, ta.field_h, DirectByteStorage.field_g);
         hd.field_b = true;
     }
 

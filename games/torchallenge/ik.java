@@ -98,28 +98,28 @@ final class ik {
             if (eh.field_m > ll.field_d) {
               ll.field_d = ll.field_d + 1;
               if (ll.field_d > eh.field_k && (null == gi.field_f ||
-                gi.field_f[oi.field_j] == null)) {
+                gi.field_f[DirectByteStorage.field_j] == null)) {
                 ll.field_d = ll.field_d - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (ll.field_d >= eh.field_m &&
-                  null == gi.field_f[(oi.field_j + 1) % var2_int]) {
+                  null == gi.field_f[(DirectByteStorage.field_j + 1) % var2_int]) {
                   ll.field_d = ll.field_d - 1;
                 }
               }
             }
             if (ll.field_d >= eh.field_m) {
-              p.field_b = oi.field_j;
+              p.field_b = DirectByteStorage.field_j;
               if (bh.field_r) {
-                oi.field_j = oi.field_j + 1;
-                if (var2_int <= oi.field_j) {
-                  oi.field_j = oi.field_j - var2_int;
+                DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
+                if (var2_int <= DirectByteStorage.field_j) {
+                  DirectByteStorage.field_j = DirectByteStorage.field_j - var2_int;
                 }
               } else {
-                oi.field_j = oi.field_j - 1;
-                if (oi.field_j < 0) {
-                  oi.field_j = oi.field_j + var2_int;
+                DirectByteStorage.field_j = DirectByteStorage.field_j - 1;
+                if (DirectByteStorage.field_j < 0) {
+                  DirectByteStorage.field_j = DirectByteStorage.field_j + var2_int;
                 }
               }
               ll.field_d = ll.field_d - eh.field_m;
@@ -162,25 +162,25 @@ final class ik {
             }
           }
           if (param1) {
-            of.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
-            if (of.field_c.c((byte) 49)) {
-              if (of.field_c.field_j == 0) {
+            ByteStorage.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
+            if (ByteStorage.field_c.c((byte) 49)) {
+              if (ByteStorage.field_c.field_j == 0) {
                 stackIn_58_0 = 3;
                 return stackIn_58_0;
               }
-              if (1 == of.field_c.field_j) {
+              if (1 == ByteStorage.field_c.field_j) {
                 stackIn_61_0 = 2;
                 return stackIn_61_0;
               }
             }
             while (kj.e((byte) -44)) {
-              of.field_c.a(0, 0);
-              if (of.field_c.c((byte) 79)) {
-                if (of.field_c.field_j == 0) {
+              ByteStorage.field_c.a(0, 0);
+              if (ByteStorage.field_c.c((byte) 79)) {
+                if (ByteStorage.field_c.field_j == 0) {
                   stackIn_69_0 = 3;
                   return stackIn_69_0;
                 }
-                if (1 == of.field_c.field_j) {
+                if (1 == ByteStorage.field_c.field_j) {
                   stackIn_73_0 = 1;
                   return stackIn_73_0;
                 }
@@ -245,28 +245,28 @@ final class ik {
             if (eh.field_m > ll.field_d) {
               ll.field_d = ll.field_d + 1;
               if (ll.field_d > eh.field_k && (null == gi.field_f ||
-                gi.field_f[oi.field_j] == null)) {
+                gi.field_f[DirectByteStorage.field_j] == null)) {
                 ll.field_d = ll.field_d - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (ll.field_d >= eh.field_m &&
-                  null == gi.field_f[(oi.field_j + 1) % var2_int]) {
+                  null == gi.field_f[(DirectByteStorage.field_j + 1) % var2_int]) {
                   ll.field_d = ll.field_d - 1;
                 }
               }
             }
             if (ll.field_d >= eh.field_m) {
-              p.field_b = oi.field_j;
+              p.field_b = DirectByteStorage.field_j;
               if (bh.field_r) {
-                oi.field_j = oi.field_j + 1;
-                if (var2_int <= oi.field_j) {
-                  oi.field_j = oi.field_j - var2_int;
+                DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
+                if (var2_int <= DirectByteStorage.field_j) {
+                  DirectByteStorage.field_j = DirectByteStorage.field_j - var2_int;
                 }
               } else {
-                oi.field_j = oi.field_j - 1;
-                if (oi.field_j < 0) {
-                  oi.field_j = oi.field_j + var2_int;
+                DirectByteStorage.field_j = DirectByteStorage.field_j - 1;
+                if (DirectByteStorage.field_j < 0) {
+                  DirectByteStorage.field_j = DirectByteStorage.field_j + var2_int;
                 }
               }
               ll.field_d = ll.field_d - eh.field_m;
@@ -309,25 +309,25 @@ final class ik {
             }
           }
           if (param1) {
-            of.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
-            if (of.field_c.c((byte) 49)) {
-              if (of.field_c.field_j == 0) {
+            ByteStorage.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
+            if (ByteStorage.field_c.c((byte) 49)) {
+              if (ByteStorage.field_c.field_j == 0) {
                 stackIn_58_0 = 3;
                 return stackIn_58_0;
               }
-              if (1 == of.field_c.field_j) {
+              if (1 == ByteStorage.field_c.field_j) {
                 stackIn_61_0 = 2;
                 return stackIn_61_0;
               }
             }
             while (kj.e((byte) -44)) {
-              of.field_c.a(0, 0);
-              if (of.field_c.c((byte) 79)) {
-                if (of.field_c.field_j == 0) {
+              ByteStorage.field_c.a(0, 0);
+              if (ByteStorage.field_c.c((byte) 79)) {
+                if (ByteStorage.field_c.field_j == 0) {
                   stackIn_69_0 = 3;
                   return stackIn_69_0;
                 }
-                if (1 == of.field_c.field_j) {
+                if (1 == ByteStorage.field_c.field_j) {
                   stackIn_73_0 = 1;
                   return stackIn_73_0;
                 }

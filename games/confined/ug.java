@@ -41,7 +41,7 @@ abstract class ug extends oe {
         return super.l(-6);
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] copyBytes(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -56,7 +56,7 @@ abstract class ug extends oe {
           }
           var2_int = param0.length;
           var3 = new byte[var2_int];
-          lj.a(param0, 0, var3, 0, var2_int);
+          lj.copyByteRange(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ abstract class ug extends oe {
         var8 = param2;
         if (param1 > -58) {
           var17 = (byte[]) null;
-          ug.a((byte[]) null, 12);
+          ug.copyBytes((byte[]) null, 12);
         }
         while (var7 < var4) {
           if (var8 >= fn.field_b &&
@@ -245,7 +245,7 @@ abstract class ug extends oe {
         }
     }
 
-    final static Object a(int param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(int param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         DirectByteStorage stackIn_6_0 = null;
@@ -274,7 +274,7 @@ abstract class ug extends oe {
             stackIn_14_0 = (byte[]) (param2);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ug.a(param2, 194);
+          stackIn_12_0 = ug.copyBytes(param2, 194);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

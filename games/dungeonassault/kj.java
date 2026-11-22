@@ -11,7 +11,7 @@ final class kj extends IntrusiveNode {
     static String field_i;
     static wh field_o;
 
-    final static Object a(boolean param0, boolean param1, byte[] param2) {
+    final static Object storeBytes(boolean param0, boolean param1, byte[] param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -28,7 +28,7 @@ final class kj extends IntrusiveNode {
           }
           if (param0) {
             var4 = (byte[]) null;
-            kj.a(false, true, (byte[]) null);
+            kj.storeBytes(false, true, (byte[]) null);
           }
           if (136 < param2.length) {
             var3 = new DirectByteStorage();
@@ -37,7 +37,7 @@ final class kj extends IntrusiveNode {
             return stackIn_8_0;
           }
           if (param1) {
-            stackIn_13_0 = gg.a((byte) 49, param2);
+            stackIn_13_0 = gg.copyBytes((byte) 49, param2);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param2);

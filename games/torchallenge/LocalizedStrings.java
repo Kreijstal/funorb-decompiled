@@ -393,7 +393,7 @@ final class LocalizedStrings extends ma {
           }
           var2Lifetime35 = MouseInputHandler.a(95, "score_colon_space");
           if (var2Lifetime35 != null) {
-            oi.field_h = re.a(18990, var2Lifetime35);
+            DirectByteStorage.field_h = re.a(18990, var2Lifetime35);
           }
           var2Lifetime36 = MouseInputHandler.a(95, "time_colon_space");
           if (var2Lifetime36 != null) {
@@ -996,7 +996,7 @@ final class LocalizedStrings extends ma {
           }
           var2Lifetime185 = MouseInputHandler.a(95, "keycode_attack");
           if (null != var2Lifetime185) {
-            of.field_d = 255 & var2Lifetime185[0];
+            ByteStorage.field_d = 255 & var2Lifetime185[0];
           }
           var2Lifetime186 = MouseInputHandler.a(95, "keycode_jump");
           dj.field_cb = null;

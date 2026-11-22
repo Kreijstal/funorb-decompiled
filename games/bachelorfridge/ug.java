@@ -11,7 +11,7 @@ final class ug extends pv {
     static String field_k;
     static Sprite field_o;
 
-    final static Object a(boolean param0, byte[] param1, int param2) {
+    final static Object storeBytes(boolean param0, byte[] param1, int param2) {
         DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_4_0 = null;
@@ -37,7 +37,7 @@ final class ug extends pv {
             return stackIn_8_0;
           }
           if (param0) {
-            stackIn_13_0 = gs.a((byte) 119, param1);
+            stackIn_13_0 = gs.copyBytes((byte) 119, param1);
             return stackIn_13_0;
           }
           stackIn_11_0 = (byte[]) (param1);

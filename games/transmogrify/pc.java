@@ -105,7 +105,7 @@ final class pc {
           }
           ch.field_d = te.field_c[bg.field_l];
           var2 = -67 % ((param0 + 82) / 39);
-          sg.field_n = hf.field_h[bg.field_l];
+          sg.field_n = DirectByteStorage.field_h[bg.field_l];
           bg.field_l = 127 & 1 + bg.field_l;
           stackIn_6_0 = true;
         }

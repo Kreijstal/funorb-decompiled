@@ -474,16 +474,16 @@ final class ActiveLevel extends LevelGrid {
         }
         if (var2 > var4) {
           if (null == jj.field_fb) {
-            jj.field_fb = new int[pi.field_f.length()];
+            jj.field_fb = new int[DirectByteStorage.field_f.length()];
           }
           var7 = var2;
           for (var8 = 0; var8 < jj.field_fb.length; var8++) {
             jj.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
             var7--;
           }
-          var8Lifetime2 = bk.font.stringWidth(pi.field_f);
+          var8Lifetime2 = bk.font.stringWidth(DirectByteStorage.field_f);
           bk.font.b(8, -1);
-          bk.font.a(pi.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
+          bk.font.a(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
         }
         if (0 != this.field_s) {
           j.field_b[1].e(466, var6);

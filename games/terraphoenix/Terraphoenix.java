@@ -1219,7 +1219,7 @@ public final class Terraphoenix extends GameShell {
           h.field_j = va.a(5, -125);
           IntrusiveDeque.field_c = va.a(6, -119);
           aj.field_b = va.a(7, -128);
-          jd.a(109, ke.field_d, di.field_i);
+          jd.a(109, ByteStorage.field_d, di.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1631,11 +1631,11 @@ public final class Terraphoenix extends GameShell {
                       ab.field_a.b((byte) -128)) {
                       if (fc.field_a.a(0) &&
                         fc.field_a.b((byte) -128)) {
-                        if (ke.field_d.a(0) &&
-                          ke.field_d.a(-3, "basic")) {
-                          if (me.field_o <= 0 && (!ke.field_d.a(param1 + 107) ||
-                            !ke.field_d.a(-3, "benefits"))) {
-                            DualLinkNode.a(vf.a("benefits", bl.field_d, ke.field_d, be.field_w, 4650), (byte) 88, 40.0f);
+                        if (ByteStorage.field_d.a(0) &&
+                          ByteStorage.field_d.a(-3, "basic")) {
+                          if (me.field_o <= 0 && (!ByteStorage.field_d.a(param1 + 107) ||
+                            !ByteStorage.field_d.a(-3, "benefits"))) {
+                            DualLinkNode.a(vf.a("benefits", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) 88, 40.0f);
                             return;
                           }
                           if (aj.field_b.a(param1 + 107) &&
@@ -1653,7 +1653,7 @@ public final class Terraphoenix extends GameShell {
                           DualLinkNode.a(vf.a("", ki.field_S, aj.field_b, vb.field_a, param1 + 4757), (byte) -84, 45.0f);
                           return;
                         }
-                        DualLinkNode.a(vf.a("basic", bl.field_d, ke.field_d, be.field_w, 4650), (byte) -88, 35.0f);
+                        DualLinkNode.a(vf.a("basic", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) -88, 35.0f);
                         return;
                       }
                       DualLinkNode.a(vf.a("", TutorialText.field_b, fc.field_a, ej.field_R, 4650), (byte) -124, 30.0f);
@@ -2126,7 +2126,7 @@ public final class Terraphoenix extends GameShell {
         try {
           this.a(8, 5000, 9, 0, 10, false, 26, 11);
           vj.g(0);
-          ke.b(false);
+          ByteStorage.b(false);
           wi.h(-4168);
           var2_int = 49 % ((-60 - param0) / 46);
           vl.field_a = new int[256];
@@ -2164,7 +2164,7 @@ public final class Terraphoenix extends GameShell {
             var3++;
           }
           PcmPlayerService.a(22050, true, 10);
-          d.field_I = PcmPlayerService.a(nj.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
+          d.field_I = PcmPlayerService.a(DirectByteStorage.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
           WidgetContainer.field_E = new vg();
           d.field_I.b(WidgetContainer.field_E);
           uk.field_b = new wl();
@@ -4099,7 +4099,7 @@ public final class Terraphoenix extends GameShell {
                         9 == var12) {
                         fh.field_c.c(var6Lifetime1, var7);
                       } else {
-                        ke.field_b.c(var6Lifetime1, var7);
+                        ByteStorage.field_b.c(var6Lifetime1, var7);
                       }
                     } else {
                       hf.field_w[var12].c(var6Lifetime1, var7);
@@ -4148,7 +4148,7 @@ public final class Terraphoenix extends GameShell {
                           9 == var12) {
                           fh.field_c.b(120, var5Lifetime1);
                         } else {
-                          ke.field_b.b(120, var5Lifetime1);
+                          ByteStorage.field_b.b(120, var5Lifetime1);
                         }
                       } else {
                         hf.field_w[var12].b(120, var5Lifetime1);
@@ -4385,7 +4385,7 @@ public final class Terraphoenix extends GameShell {
           wb.a(-122);
           tg.clearStaticReferences(23);
           bc.clearStaticReferences(false);
-          ke.clearStaticReferences(false);
+          ByteStorage.clearStaticReferences(false);
           ih.clearStaticReferences();
           kb.a((byte) -105);
           MessageKeys.a(77);
@@ -4447,7 +4447,7 @@ public final class Terraphoenix extends GameShell {
           ig.clearStaticReferences(123);
           ek.clearStaticReferences();
           ProxySocketConnector.b(-5);
-          nj.clearStaticReferences(0);
+          DirectByteStorage.clearStaticReferences(0);
           rd.clearStaticReferences(125);
           fc.clearStaticReferences((byte) -114);
           cb.clearStaticReferences(true);
@@ -5560,7 +5560,7 @@ public final class Terraphoenix extends GameShell {
           }
           vj.g(0);
           var2_int = 17 / ((param0 + 75) / 37);
-          ke.b(false);
+          ByteStorage.b(false);
           wi.h(-4168);
           this.field_cb = 0;
           oe.field_c = oe.field_c - ge.field_e;
@@ -8640,7 +8640,7 @@ public final class Terraphoenix extends GameShell {
           vc.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
           var2 = ig.a(ab.field_a, 0, "screenshots", "member_benefits");
           if (me.field_o <= 0) {
-            jd.a(112, ke.field_d, di.field_i);
+            jd.a(112, ByteStorage.field_d, di.field_i);
             wa.a(il.a("mbfg", "member_benefits", ab.field_a, -1), (byte) 27, RandomAccessCacheFile.field_c);
             pc.a(TutorialText.field_e, 40);
             va.a(0, 0, 16777215, il.a("mbpb", "member_benefits", ab.field_a, -1), vc.field_f, 135, 0, 0, false, 135, 1500);
@@ -8728,10 +8728,10 @@ public final class Terraphoenix extends GameShell {
           vc.field_e = il.a("interfacebbar", "menu_graphics", ab.field_a, param0 ^ 2019);
           ki.field_T = il.a("interfacevbar", "menu_graphics", ab.field_a, -1);
           ua.field_b = il.a("ingametop", "", ab.field_a, -1);
-          fh.field_c = il.a("unachieved", "basic", ke.field_d, param0 + 2019);
-          ke.field_b = il.a("locked", "basic", ke.field_d, param0 + 2019);
-          IsaacCipher.field_k = il.a("orbcoin", "basic", ke.field_d, param0 ^ 2019);
-          ke.field_d = null;
+          fh.field_c = il.a("unachieved", "basic", ByteStorage.field_d, param0 + 2019);
+          ByteStorage.field_b = il.a("locked", "basic", ByteStorage.field_d, param0 + 2019);
+          IsaacCipher.field_k = il.a("orbcoin", "basic", ByteStorage.field_d, param0 ^ 2019);
+          ByteStorage.field_d = null;
           this.field_ab = ig.a(ab.field_a, 0, "icon_missions", "");
           this.field_U = qb.a("icon_briefing", (byte) -36, "", ab.field_a);
           this.field_T = qb.a("icon_loss", (byte) -36, "", ab.field_a);
@@ -8779,7 +8779,7 @@ public final class Terraphoenix extends GameShell {
           di.field_f = lf.a(true, "", "aimshield", ab.field_a);
           hi.field_W = lf.a(true, "", "alienwalk_aliens", ab.field_a);
           ba.field_e = lf.a(true, "", "alienwalk_brutes", ab.field_a);
-          ke.field_a = lf.a(true, "", "manwalk", ab.field_a);
+          ByteStorage.field_a = lf.a(true, "", "manwalk", ab.field_a);
           nb.field_f = lf.a(true, "", "menwalk", ab.field_a);
           if (mb.b(0, 108)) {
             rk.field_e = lf.a(true, "", "zombiewalk", ab.field_a);

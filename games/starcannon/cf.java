@@ -71,7 +71,7 @@ final class cf extends qf {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_n)) {
-            var3 = ij.a(param0, (byte) -51);
+            var3 = DirectByteStorage.a(param0, (byte) -51);
             if (!var3.b(false)) {
               stackIn_9_0 = cd.field_a;
               return stackIn_9_0;

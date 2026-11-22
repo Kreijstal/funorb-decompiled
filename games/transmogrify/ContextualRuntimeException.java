@@ -1814,7 +1814,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("waitingfor_fonts", (byte) 122);
                 if (null != var2) {
-                  dj.field_a = eg.a(param0 + 84, var2);
+                  ByteStorage.field_a = eg.a(param0 + 84, var2);
                 }
                 var2 = kb.a("waitingfor_soundeffects", (byte) 113);
                 if (null != var2) {

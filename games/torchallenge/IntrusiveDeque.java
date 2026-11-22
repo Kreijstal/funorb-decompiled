@@ -296,14 +296,14 @@ final class IntrusiveDeque {
             null != ub.field_e) {
             NodeHashTableIterator.field_b.g(231, 390);
             var1 = GzipDecoder.field_b;
-            if (0 == of.field_c.field_j) {
+            if (0 == ByteStorage.field_c.field_j) {
               var1 = dg.field_R;
             }
             var1.g(0, 0);
             stackIn_52_0 = 40;
             stackIn_52_1 = 124;
             stackIn_52_2 = ub.field_h;
-            if (of.field_c.field_j != 0) {
+            if (ByteStorage.field_c.field_j != 0) {
               stackIn_53_3 = 3;
             } else {
               stackIn_53_3 = 4;
@@ -319,17 +319,17 @@ final class IntrusiveDeque {
               var1.b(1, -1, var2Lifetime4);
               var1.b(-1, -1, var2Lifetime4);
             }
-            stackIn_59_0 = (of.field_c.field_j == 0);
+            stackIn_59_0 = (ByteStorage.field_c.field_j == 0);
             tj.a(stackIn_59_0, 5106, bi.field_i, wc.field_b);
           }
           if (null != NodeHashTableIterator.field_b &&
             ub.field_e != null) {
             NodeHashTableIterator.field_b.g(434, 390);
             SocketConnector.field_h.g(0, 0);
-            if (of.field_c.field_j == 1) {
+            if (ByteStorage.field_c.field_j == 1) {
               ii.a(NodeHashTableIterator.field_b.storedWidth - 4, 7 * NodeHashTableIterator.field_b.storedHeight / 12, 64, 4, 436, 392);
             }
-            stackIn_68_0 = (1 == of.field_c.field_j);
+            stackIn_68_0 = (1 == ByteStorage.field_c.field_j);
             tj.a(stackIn_68_0, 5106, ii.field_a, pf.field_e);
           }
           if (le.field_e != null) {
@@ -358,10 +358,10 @@ final class IntrusiveDeque {
               }
             }
             DualLinkNode.c(-128);
-            SecondaryNodeDeque.field_i[oi.field_j].g(269, 340);
+            SecondaryNodeDeque.field_i[DirectByteStorage.field_j].g(269, 340);
           } else {
             DualLinkNode.c(-128);
-            SecondaryNodeDeque.field_i[oi.field_j].g(269, 340);
+            SecondaryNodeDeque.field_i[DirectByteStorage.field_j].g(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

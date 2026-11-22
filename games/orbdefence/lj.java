@@ -993,7 +993,7 @@ final class lj extends di {
           }
           if (ml.field_c != null &&
             !ml.field_c.f(-114)) {
-            ll.field_a = null;
+            ByteStorage.field_a = null;
           }
           if (param0) {
             field_N = (hj) null;

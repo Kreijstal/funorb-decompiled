@@ -146,7 +146,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               }
             }
             if (jc.field_a == qe.field_C &&
-              fh.a(520)) {
+              ByteStorage.a(520)) {
               ClientException.field_e = ne.field_a.readLong((byte) 28);
               LevelGrid.field_j = ne.field_a.readUnsignedByte(16383);
               ne.field_a.readUnsignedByte(16383);
@@ -218,7 +218,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               return stackIn_79_0;
             }
             if (jc.field_a == ij.field_j &&
-              fh.a(520)) {
+              ByteStorage.a(520)) {
               GameKeyHandler.a((byte) 124);
               if (uk.field_c == 7 &&
                 !kg.field_f) {

@@ -20,9 +20,9 @@ final class pl extends WidgetContainer implements jf, n, rg {
     private ib field_S;
 
     final static Object a(byte[] param0, boolean param1, boolean param2) {
-        nj var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        nj stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -37,8 +37,8 @@ final class pl extends WidgetContainer implements jf, n, rg {
             field_P = -101;
           }
           if (param0.length > 136) {
-            var3 = new nj();
-            ((ke) ((Object) var3)).a(param0, false);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param0, false);
             stackIn_8_0 = var3;
             return stackIn_8_0;
           }

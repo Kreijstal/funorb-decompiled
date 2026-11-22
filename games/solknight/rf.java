@@ -217,7 +217,7 @@ final class rf extends WidgetContainer implements re, ka, ge {
         bg dupTemp$1 = new bg(10000536);
         this.field_K.field_w = (j) ((Object) dupTemp$1);
         this.field_O.field_w = (j) ((Object) dupTemp$1);
-        String var2 = bb.a(rk.field_a, new String[]{this.j(99), this.g(false)}, -63);
+        String var2 = bb.a(ByteStorage.field_a, new String[]{this.j(99), this.g(false)}, -63);
         int var3 = 20;
         var3 = var3 + this.a(el.field_j, var3, (byte) 119, this.field_I, 170);
         var3 = var3 + (5 + this.a((byte) 91, var3, 20, 170, "", rj.field_a, this.field_M));

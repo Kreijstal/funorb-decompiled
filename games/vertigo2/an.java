@@ -456,7 +456,7 @@ final class an {
             pc.clearStaticReferences((byte) -111);
           }
           mg.a(param0 + 1244, nq.field_E, d.field_C, IntrusiveNode.field_h);
-          dh.a(0, (byte) -99, param1, 0);
+          ByteStorage.a(0, (byte) -99, param1, 0);
           if (param0 != -1243) {
             var3 = (String) null;
             an.a(75, (String) null);
