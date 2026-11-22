@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd {
+final class OpenGlModelBillboardState {
     static int field_e;
     int field_c;
     int field_f;
@@ -11,14 +11,14 @@ final class fd {
     int field_a;
     static ChatTarget field_d;
 
-    final fd copy(byte param0) {
+    final OpenGlModelBillboardState copy(byte param0) {
         if (param0 == 78) {
-          return new fd(this.field_c, this.field_b, this.field_f, this.field_h, this.field_a, this.field_g);
+          return new OpenGlModelBillboardState(this.field_c, this.field_b, this.field_f, this.field_h, this.field_a, this.field_g);
         }
-        return (fd) null;
+        return (OpenGlModelBillboardState) null;
     }
 
-    final void copyFrom(int param0, fd param1) {
+    final void copyFrom(int param0, OpenGlModelBillboardState param1) {
         try {
           this.field_c = param1.field_c;
           this.field_f = param1.field_f;
@@ -41,13 +41,13 @@ final class fd {
         }
     }
 
-    fd(int param0) {
+    OpenGlModelBillboardState(int param0) {
         this.field_f = 128;
         this.field_b = 128;
         this.field_c = param0;
     }
 
-    private fd(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private OpenGlModelBillboardState(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_f = 128;
         this.field_b = 128;
         this.field_b = param1;

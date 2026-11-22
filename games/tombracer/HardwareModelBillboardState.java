@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gca {
+final class HardwareModelBillboardState {
     static ToolkitSprite field_a;
     int field_c;
     static String field_l;
@@ -26,19 +26,19 @@ final class gca {
           skeletonDeathMessages = null;
           return;
         }
-        gca.releaseStatics(23);
+        HardwareModelBillboardState.releaseStatics(23);
         skeletonDeathMessages = null;
     }
 
-    final gca copy(int param0) {
+    final HardwareModelBillboardState copy(int param0) {
         if (param0 == 6) {
-          return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
+          return new HardwareModelBillboardState(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
         }
         skeletonDeathMessages = (String[]) null;
-        return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
+        return new HardwareModelBillboardState(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
     }
 
-    final void copyFrom(byte param0, gca param1) {
+    final void copyFrom(byte param0, HardwareModelBillboardState param1) {
         try {
           this.field_b = param1.field_b;
           if (param0 >= -58) {
@@ -54,7 +54,7 @@ final class gca {
         }
     }
 
-    gca(int param0) {
+    HardwareModelBillboardState(int param0) {
         this.field_m = 128;
         this.field_k = 128;
         this.field_h = param0;
@@ -68,7 +68,7 @@ final class gca {
         }
     }
 
-    private gca(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private HardwareModelBillboardState(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_m = 128;
         this.field_k = 128;
         this.field_b = param4;

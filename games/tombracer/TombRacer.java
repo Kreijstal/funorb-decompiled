@@ -243,7 +243,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         MembersUpsellMenu.releaseStatics(-120);
         PlayerProfile.releaseStatics(param0 ^ -3638);
         UnlockEntry.releaseStatics((byte) 9);
-        fw.releaseStatics(0);
+        BillboardDefinitionCache.releaseStatics(0);
         DemoCourseGenerator.releaseStatics((byte) -122);
         CourseGenerator.releaseStatics(113);
         rm.releaseStatics(param0 + 12213);
@@ -807,9 +807,9 @@ public final class TombRacer extends TombRacerShell implements ls {
         cna.releaseStatics(param0 ^ 3646);
         ScrollingTexturePixels.releaseStatics();
         SoftwareDepthBuffer.releaseStatics((byte) 48);
-        lp.releaseStatics((byte) 34);
-        hna.releaseStatics(121);
-        nsa.releaseStatics(false);
+        BillboardDefinition.releaseStatics((byte) 34);
+        SoftwareModelBillboard.releaseStatics(121);
+        SoftwareModelBillboardState.releaseStatics(false);
         ImageProducerCanvasImageBuffer.releaseStatics(param0 ^ -3634);
         r.releaseStatics(11);
         NativeSceneLight.releaseStatics((byte) -87);
@@ -820,8 +820,8 @@ public final class TombRacer extends TombRacerShell implements ls {
         LegacyOpenGlEffect.releaseStatics(-18318);
         LegacyOpenGlWaterTextures.releaseStatics((byte) -75);
         LegacyOpenGlUnderwaterEffect.releaseStatics(120);
-        pm.releaseStatics((byte) 79);
-        fd.releaseStatics((byte) -124);
+        OpenGlModelBillboard.releaseStatics((byte) 79);
+        OpenGlModelBillboardState.releaseStatics((byte) -124);
         NativeGraphicsHeap.releaseStatics(-197);
         LegacyOpenGlSpriteTexture.releaseStatics(param0 + 3771);
         PbufferEntry.releaseStatics(param0 ^ -3666);
@@ -842,8 +842,8 @@ public final class TombRacer extends TombRacerShell implements ls {
         oca.releaseStatics(false);
         TextureFilter.releaseStatics(32768);
         HardwareGraphicsHeap.releaseStatics(-114);
-        ll.releaseStatics((byte) 83);
-        gca.releaseStatics(4);
+        HardwareModelBillboard.releaseStatics((byte) 83);
+        HardwareModelBillboardState.releaseStatics(4);
         hka.releaseStatics(false);
         tda.releaseStatics((byte) 103);
         HardwareSprite.releaseStatics(param0 + 3657);

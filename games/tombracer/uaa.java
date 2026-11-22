@@ -38,7 +38,7 @@ final class uaa {
               if (~param1.field_i != ~SimpleConditionBehaviour.field_r) {
                 var2_intLifetime1 = BrickOperator.field_t[param1.field_d];
               } else {
-                var2_intLifetime1 = pm.field_a[param1.field_d];
+                var2_intLifetime1 = OpenGlModelBillboard.field_a[param1.field_d];
               }
             }
           } else {
@@ -47,7 +47,7 @@ final class uaa {
             } else {
               if (0 == param1.field_c &&
                 param1.field_o == 0) {
-                var2_intLifetime1 = pm.field_a[param1.field_d];
+                var2_intLifetime1 = OpenGlModelBillboard.field_a[param1.field_d];
               } else {
                 var2_intLifetime1 = BrickOperator.field_t[param1.field_d];
               }

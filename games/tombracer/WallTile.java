@@ -56,9 +56,9 @@ final class WallTile implements Renderable {
           if (param0 < 103) {
             return;
           }
-          var6 = gca.field_g[21];
-          var7 = gca.field_g[23];
-          var8 = gca.field_g[22];
+          var6 = HardwareModelBillboardState.field_g[21];
+          var7 = HardwareModelBillboardState.field_g[23];
+          var8 = HardwareModelBillboardState.field_g[22];
           var9 = 0;
           if (this.field_g.isOnTrap((byte) 111)) {
             var9 = var9 + 4 * this.field_b % 32;

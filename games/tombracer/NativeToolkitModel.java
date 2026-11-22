@@ -106,9 +106,9 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
-        jt var18 = null;
-        jt var21 = null;
-        lp var17 = null;
+        ModelBillboardAttachment var18 = null;
+        ModelBillboardAttachment var21 = null;
+        BillboardDefinition var17 = null;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int incrementValue$6 = 0;
@@ -116,7 +116,7 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$10 = 0;
-        jt var19 = null;
+        ModelBillboardAttachment var19 = null;
         int incrementValue$11 = 0;
         int var12 = 0;
         int var15 = 0;
@@ -157,10 +157,10 @@ final class NativeToolkitModel extends ToolkitModel implements NativeResource {
         for (var15 = 0; var15 < var12Lifetime2; var15++) {
           var18 = param2.field_m[var15];
           var21 = var18;
-          var17 = fw.a(var21.field_d, false);
+          var17 = BillboardDefinitionCache.getDefinition(var21.definitionId, false);
           incrementValue$4 = var14;
           var14++;
-          var13[incrementValue$4] = var18.field_a;
+          var13[incrementValue$4] = var18.faceIndex;
           incrementValue$5 = var14;
           var14++;
           var13[incrementValue$5] = var17.field_d;

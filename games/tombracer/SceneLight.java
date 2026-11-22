@@ -118,7 +118,7 @@ abstract class SceneLight extends IntrusiveNode {
           eca.field_c = LoadLevelCommand.createToolkitSprites(param0, HazardEffect.field_e, -64);
           OpenGlIndexArray.field_l = QuickChatParamType.createToolkitSprite(AnimationFrameSet.field_l, param0, (byte) 127);
           QuickChatParamType.createToolkitSprite(MirrorComponent.field_F, param0, (byte) -2);
-          gca.field_a = QuickChatParamType.createToolkitSprite(CharacterPreview.field_f, param0, (byte) 126);
+          HardwareModelBillboardState.field_a = QuickChatParamType.createToolkitSprite(CharacterPreview.field_f, param0, (byte) 126);
           WidgetStyleLayer.field_b = LoadLevelCommand.createToolkitSprites(param0, StandingsPhase.field_o, param1 - 17309);
           IntrusiveDeque.field_c = QuickChatParamType.createToolkitSprite(MenuInputState.field_j, param0, (byte) -95);
           tka.field_p = QuickChatParamType.createToolkitSprite(LobbyGameWidget.field_Db, param0, (byte) 27);

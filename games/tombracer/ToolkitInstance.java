@@ -40,7 +40,7 @@ final class ToolkitInstance {
           if (param3 + param4 > DiskCacheWorker.field_c) {
             TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
           } else {
-            if (gca.field_d > param1 - param4) {
+            if (HardwareModelBillboardState.field_d > param1 - param4) {
               TileOperator.fillClippedCircle(0, param4, param2, param3, param1);
             } else {
               if (param1 + param4 > LineShape.field_h) {

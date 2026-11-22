@@ -145,7 +145,7 @@ final class LaserShooterComponent extends ShooterComponent {
             stackIn_3_0 = ResultsPhase.field_n;
             return stackIn_3_0;
           }
-          var2 = lp.tokenize((byte) 48, param1);
+          var2 = BillboardDefinition.tokenize((byte) 48, param1);
           var3 = new ConsoleToken[var2.size((byte) -16)];
           var4 = 0;
           var5 = (ConsoleToken) (var2.first(-80));

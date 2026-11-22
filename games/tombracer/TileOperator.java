@@ -304,14 +304,14 @@ final class TileOperator extends TextureOperator {
               var7 = var7 - (var6 << 1);
               var11 = param4 - var6;
               var12 = var6 + param4;
-              if (var12 >= gca.field_d &&
+              if (var12 >= HardwareModelBillboardState.field_d &&
                 var11 <= LineShape.field_h) {
                 var13 = CharacterPreview.clamp(DiskCacheWorker.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
                 var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var5_int);
                 if (var12 <= LineShape.field_h) {
                   C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var12], var14);
                 }
-                if (var11 >= gca.field_d) {
+                if (var11 >= HardwareModelBillboardState.field_d) {
                   C2SRoomResultPacket.fillRange((byte) -55, param2, var13, vaa.field_a[var11], var14);
                 }
               }
@@ -319,7 +319,7 @@ final class TileOperator extends TextureOperator {
             var5_int++;
             var11Lifetime1 = param4 - var5_int;
             var12Lifetime1 = param4 + var5_int;
-            if (gca.field_d > var12Lifetime1) {
+            if (HardwareModelBillboardState.field_d > var12Lifetime1) {
               continue;
             }
             if (var11Lifetime1 > LineShape.field_h) {
@@ -330,7 +330,7 @@ final class TileOperator extends TextureOperator {
             if (LineShape.field_h >= var12Lifetime1) {
               C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var12Lifetime1], var14Lifetime1);
             }
-            if (gca.field_d > var11Lifetime1) {
+            if (HardwareModelBillboardState.field_d > var11Lifetime1) {
               continue;
             }
             C2SRoomResultPacket.fillRange((byte) -55, param2, var13Lifetime1, vaa.field_a[var11Lifetime1], var14Lifetime1);

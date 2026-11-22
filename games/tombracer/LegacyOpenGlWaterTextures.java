@@ -52,7 +52,7 @@ final class LegacyOpenGlWaterTextures {
           if (!this.field_g) {
             this.field_f = new LegacyOpenGlTexture2D[16];
             for (var2_int = 0; 16 > var2_int; var2_int++) {
-              var23 = S2CNextRoundPacket.copyBytesFrom(hna.field_e, 32768, 32768 * var2_int, false);
+              var23 = S2CNextRoundPacket.copyBytesFrom(SoftwareModelBillboard.field_e, 32768, 32768 * var2_int, false);
               this.field_f[var2_int] = new LegacyOpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.field_i = new LegacyOpenGlTexture2D[16];
@@ -62,7 +62,7 @@ final class LegacyOpenGlWaterTextures {
             }
             return;
           }
-          var20 = IntPoint.unwrapByteStorage(hna.field_e, 13588, false);
+          var20 = IntPoint.unwrapByteStorage(SoftwareModelBillboard.field_e, 13588, false);
           this.field_h = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var20, 6410);
           var21 = IntPoint.unwrapByteStorage(TreasureValuesOverlay.field_l, 13588, false);
           this.field_a = new LegacyOpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);

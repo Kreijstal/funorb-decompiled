@@ -15,7 +15,7 @@ abstract class OpenGlBufferObject {
         if (param0 != 35040) {
           return (UiComponent) null;
         }
-        return nsa.field_i.field_tb;
+        return SoftwareModelBillboardState.field_i.field_tb;
     }
 
     final void uploadData(int param0, byte[] param1, int param2) {

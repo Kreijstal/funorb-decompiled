@@ -56,13 +56,13 @@ final class TutorialHints {
               if (!this.field_m &&
                 3 == var8.getStatCategory((byte) 3)) {
                 this.field_m = true;
-                this.queueHint(gca.field_l, (MessagePanel) null, 25, -61);
+                this.queueHint(HardwareModelBillboardState.field_l, (MessagePanel) null, 25, -61);
               }
             } else {
               if (!this.field_m &&
                 3 == var8.getStatCategory((byte) 3)) {
                 this.field_m = true;
-                this.queueHint(gca.field_l, (MessagePanel) null, 25, -61);
+                this.queueHint(HardwareModelBillboardState.field_l, (MessagePanel) null, 25, -61);
               }
             }
           }

@@ -249,7 +249,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
           if (param3) {
             return;
           }
-          if (param2 >= gca.field_d &&
+          if (param2 >= HardwareModelBillboardState.field_d &&
             param2 <= LineShape.field_h) {
             var39 = vaa.field_a[param2];
             var16 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 - param1);
@@ -281,7 +281,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
               var10 = var10 - (var9 << 1);
               var15 = param2 - var9;
               var16Lifetime1 = param2 + var9;
-              if (var16Lifetime1 >= gca.field_d &&
+              if (var16Lifetime1 >= HardwareModelBillboardState.field_d &&
                 LineShape.field_h >= var15) {
                 if (var8 <= var9) {
                   var17Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param6 + var7_int);
@@ -289,7 +289,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
                   if (var16Lifetime1 <= LineShape.field_h) {
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var16Lifetime1], var18Lifetime1);
                   }
-                  if (gca.field_d <= var15) {
+                  if (HardwareModelBillboardState.field_d <= var15) {
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1, vaa.field_a[var15], var18Lifetime1);
                   }
                 } else {
@@ -304,7 +304,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
                     C2SRoomResultPacket.fillRange((byte) -55, param5, var20, var40, var21);
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var18Lifetime1, var40, var20);
                   }
-                  if (var15 >= gca.field_d) {
+                  if (var15 >= HardwareModelBillboardState.field_d) {
                     var41 = vaa.field_a[var15];
                     C2SRoomResultPacket.fillRange((byte) -55, param4, var21, var41, var19Lifetime1);
                     C2SRoomResultPacket.fillRange((byte) -55, param5, var20, var41, var21);
@@ -315,7 +315,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
             }
             var15Lifetime1 = param2 - var7_int;
             var16Lifetime1Lifetime1 = param2 + var7_int;
-            if (var16Lifetime1Lifetime1 < gca.field_d) {
+            if (var16Lifetime1Lifetime1 < HardwareModelBillboardState.field_d) {
               continue;
             }
             if (LineShape.field_h < var15Lifetime1) {
@@ -335,7 +335,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
               if (LineShape.field_h >= var16Lifetime1Lifetime1) {
                 C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var16Lifetime1Lifetime1], var18Lifetime1Lifetime1);
               }
-              if (gca.field_d > var15Lifetime1) {
+              if (HardwareModelBillboardState.field_d > var15Lifetime1) {
                 continue;
               }
               C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, vaa.field_a[var15Lifetime1], var18Lifetime1Lifetime1);
@@ -355,7 +355,7 @@ final class BeamShooterBehaviour extends Behaviour implements TimedShooter {
               C2SRoomResultPacket.fillRange((byte) -55, param5, var20Lifetime1, var42, var21Lifetime1);
               C2SRoomResultPacket.fillRange((byte) -55, param4, var17Lifetime1Lifetime1, var42, var20Lifetime1);
             }
-            if (var15Lifetime1 < gca.field_d) {
+            if (var15Lifetime1 < HardwareModelBillboardState.field_d) {
               continue;
             }
             var43 = vaa.field_a[var15Lifetime1];

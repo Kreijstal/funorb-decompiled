@@ -185,19 +185,19 @@ final class mp {
         int var20 = 0;
         var20 = TombRacer.field_G ? 1 : 0;
         try {
-          pm.field_a[3] = 16736511;
-          pm.field_a[2] = 9474303;
+          OpenGlModelBillboard.field_a[3] = 16736511;
+          OpenGlModelBillboard.field_a[2] = 9474303;
           PlatformBehaviour.field_s = param11;
-          pm.field_a[4] = 16711935;
+          OpenGlModelBillboard.field_a[4] = 16711935;
           PlayerInputQueue.field_c = param2;
-          pm.field_a[0] = 16764000;
-          pm.field_a[1] = 6356832;
+          OpenGlModelBillboard.field_a[0] = 16764000;
+          OpenGlModelBillboard.field_a[1] = 6356832;
           VortexBehaviour.field_t = param7;
           BrickOperator.field_t[3] = 16736511;
           BrickOperator.field_t[2] = 16736352;
           RoomLighting.field_d = 8421504;
           BrickOperator.field_t[param6] = 16764000;
-          pm.field_a[4] = 16711935;
+          OpenGlModelBillboard.field_a[4] = 16711935;
           BrickOperator.field_t[1] = 6356832;
           var12 = new Sprite(4, 4);
           var13 = var12.pixels;

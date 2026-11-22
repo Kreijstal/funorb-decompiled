@@ -224,7 +224,7 @@ final class TeleportLocomotor extends Locomotor {
             LoginMethod.a(param6, param3, param4, param2, param0, 14375);
           }
         } else {
-          if (param4 < gca.field_d) {
+          if (param4 < HardwareModelBillboardState.field_d) {
             if (1 != param1) {
               pua.a(-78, param3, param4, param2, param1, param6, param0);
             } else {

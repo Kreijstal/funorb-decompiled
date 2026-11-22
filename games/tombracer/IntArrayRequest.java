@@ -59,23 +59,23 @@ final class IntArrayRequest extends IntrusiveNode {
             var12 = param4;
           }
         }
-        if (gca.field_d <= var11) {
+        if (HardwareModelBillboardState.field_d <= var11) {
           if (LineShape.field_h < var11) {
             var11 = LineShape.field_h;
             var9 = (LineShape.field_h - var14 << 12) / var13;
           }
         } else {
-          var9 = (-var14 + gca.field_d << 12) / var13;
-          var11 = gca.field_d;
+          var9 = (-var14 + HardwareModelBillboardState.field_d << 12) / var13;
+          var11 = HardwareModelBillboardState.field_d;
         }
-        if (gca.field_d <= var12) {
+        if (HardwareModelBillboardState.field_d <= var12) {
           if (var12 > LineShape.field_h) {
             var10 = (LineShape.field_h - var14 << 12) / var13;
             var12 = LineShape.field_h;
           }
         } else {
-          var12 = gca.field_d;
-          var10 = (gca.field_d - var14 << 12) / var13;
+          var12 = HardwareModelBillboardState.field_d;
+          var10 = (HardwareModelBillboardState.field_d - var14 << 12) / var13;
         }
         ara.drawClippedLine(0, param3, var9, var10, var11, var12);
         return;

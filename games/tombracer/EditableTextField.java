@@ -802,7 +802,7 @@ final class EditableTextField extends UiComponent {
     final static void releaseToolkitResources(byte param0) {
         try {
           LabelledRow.field_ub = null;
-          gca.field_g = null;
+          HardwareModelBillboardState.field_g = null;
           mma.field_b = null;
           PowerUpItemBehaviour.field_t = null;
           RevolverItemComponent.field_J = null;

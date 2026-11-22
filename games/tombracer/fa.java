@@ -145,7 +145,7 @@ final class fa {
                 }
               }
             }
-            OpenGlVertexLayout.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, pm.field_a[var6], 125);
+            OpenGlVertexLayout.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, OpenGlModelBillboard.field_a[var6], 125);
             if (!DynamicGeometryBuffer.field_c) {
               ComponentMount.field_b.field_o = false;
             }

@@ -201,7 +201,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           var36 = var27 * (-1 + param7);
           var37 = var30;
           var38 = var29 * (var12 - 1);
-          if (gca.field_d <= param2 &&
+          if (HardwareModelBillboardState.field_d <= param2 &&
             LineShape.field_h >= param2) {
             var57 = vaa.field_a[param2];
             var40 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -param5 + param3);
@@ -263,7 +263,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             var36 = var36 - var27;
             var40Lifetime1 = -var9 + param2;
             var41Lifetime1 = param2 + var9;
-            if (gca.field_d > var41Lifetime1) {
+            if (HardwareModelBillboardState.field_d > var41Lifetime1) {
               continue;
             }
             if (LineShape.field_h < var40Lifetime1) {
@@ -272,7 +272,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             var42Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, var8_int + param3);
             var43Lifetime1 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var8_int);
             if (var39 == 0) {
-              if (var40Lifetime1 >= gca.field_d) {
+              if (var40Lifetime1 >= HardwareModelBillboardState.field_d) {
                 C2SRoomResultPacket.fillRange((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
               }
               if (var41Lifetime1 > LineShape.field_h) {
@@ -283,7 +283,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             }
             var44 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 + var10);
             var45 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param3 - var10);
-            if (var40Lifetime1 >= gca.field_d) {
+            if (var40Lifetime1 >= HardwareModelBillboardState.field_d) {
               var58 = vaa.field_a[var40Lifetime1];
               C2SRoomResultPacket.fillRange((byte) -55, param0, var45, var58, var43Lifetime1);
               C2SRoomResultPacket.fillRange((byte) -55, param1, var44, var58, var45);

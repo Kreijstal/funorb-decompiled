@@ -38,7 +38,7 @@ final class ScoreSubmission extends IntrusiveNode {
           return GameApplet.field_j[param0];
         }
         if (5 == var5) {
-          return gca.field_g[param0];
+          return HardwareModelBillboardState.field_g[param0];
         }
         if (var5 == 6) {
           return DoorwayComponent.field_F[param0];

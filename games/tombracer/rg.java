@@ -145,7 +145,7 @@ final class rg extends SingleChildWidget {
           FadingDialog.field_w[2] = "angelio";
           FadingDialog.field_w[5] = "bruce";
           tk.field_a[16] = DateFieldsWidget.gasDeathMessages;
-          tk.field_a[8] = gca.skeletonDeathMessages;
+          tk.field_a[8] = HardwareModelBillboardState.skeletonDeathMessages;
           tk.field_a[14] = CourseLayoutFactory.boulderDeathMessages;
           tk.field_a[10] = HardwareModelVertexStream.bladeDeathMessages;
           tk.field_a[3] = MonsterRemains.crushDeathMessages;
@@ -197,7 +197,7 @@ final class rg extends SingleChildWidget {
         FadingDialog.field_w[2] = "angelio";
         FadingDialog.field_w[5] = "bruce";
         tk.field_a[16] = DateFieldsWidget.gasDeathMessages;
-        tk.field_a[8] = gca.skeletonDeathMessages;
+        tk.field_a[8] = HardwareModelBillboardState.skeletonDeathMessages;
         tk.field_a[14] = CourseLayoutFactory.boulderDeathMessages;
         tk.field_a[10] = HardwareModelVertexStream.bladeDeathMessages;
         tk.field_a[3] = MonsterRemains.crushDeathMessages;

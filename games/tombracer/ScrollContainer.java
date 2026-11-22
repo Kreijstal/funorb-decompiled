@@ -770,7 +770,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
           if (DiskCacheWorker.field_c < param1) {
             GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
           } else {
-            if (param3 < gca.field_d) {
+            if (param3 < HardwareModelBillboardState.field_d) {
               GameKeyHandler.a(param1, param5, param3, param2, 10, param0);
             } else {
               if (LineShape.field_h < param0) {

@@ -18,7 +18,7 @@ final class Model extends ToolkitModel {
     private int[] field_mb;
     private int[] field_E;
     private rga[] field_kb;
-    private hna[] field_e;
+    private SoftwareModelBillboard[] field_e;
     private SoftwareTransform3D field_B;
     private boolean field_ab;
     private ava[] field_i;
@@ -69,7 +69,7 @@ final class Model extends ToolkitModel {
     private boolean field_r;
     private boolean field_S;
     private short field_f;
-    private nsa[] field_db;
+    private SoftwareModelBillboardState[] field_db;
     private byte[] field_h;
     static int field_q;
     private int[] field_Fb;
@@ -563,9 +563,9 @@ final class Model extends ToolkitModel {
         int var9;
         int var10;
         int var11_int;
-        hna var11;
+        SoftwareModelBillboard var11;
         int var12_int;
-        nsa var12;
+        SoftwareModelBillboardState var12;
         int var13;
         int var14;
         int var15;
@@ -635,7 +635,7 @@ final class Model extends ToolkitModel {
                 if (!var11.field_d) {
                   this.j(param0);
                 }
-                this.field_d.b(var12.field_e, var12.field_h, var12.field_n, var12.field_l, var12.field_c, var12.field_j, var11.field_h & 65535, var12.field_k, (int) var11.field_c, (int) var11.field_g);
+                this.field_d.drawBillboard(var12.field_e, var12.field_h, var12.field_n, var12.field_l, var12.field_c, var12.field_j, var11.field_h & 65535, var12.field_k, (int) var11.field_c, (int) var11.field_g);
               }
             } else {
               var10Lifetime1 = this.field_jb[param0];
@@ -699,7 +699,7 @@ final class Model extends ToolkitModel {
 
     private final void drawFaces(boolean param0, boolean param1, int param2, int param3) {
         int var5;
-        hna var6_ref_hna;
+        SoftwareModelBillboard var6_ref_hna;
         int var6;
         int var7;
         int var5Lifetime1;
@@ -842,19 +842,19 @@ final class Model extends ToolkitModel {
         int var10;
         int var11;
         int var12;
-        nsa var13;
+        SoftwareModelBillboardState var13;
         int var13_int;
         int var14;
         int var15;
         int var16;
         int var17;
-        nsa var23;
-        hna var24;
-        nsa var26;
-        hna var27;
-        nsa var29;
-        nsa var31;
-        nsa var33;
+        SoftwareModelBillboardState var23;
+        SoftwareModelBillboard var24;
+        SoftwareModelBillboardState var26;
+        SoftwareModelBillboard var27;
+        SoftwareModelBillboardState var29;
+        SoftwareModelBillboardState var31;
+        SoftwareModelBillboardState var33;
         int[] var52;
         int[] var53;
         int[] var54;
@@ -901,7 +901,7 @@ final class Model extends ToolkitModel {
         int var9Lifetime1Lifetime1;
         int var9Lifetime4Lifetime1;
         int var9Lifetime5Lifetime1;
-        nsa var13Lifetime1;
+        SoftwareModelBillboardState var13Lifetime1;
         var8 = param1.length;
         if (param0 == 0) {
           param2 = param2 << 4;
@@ -1363,9 +1363,9 @@ final class Model extends ToolkitModel {
 
     final void tintColours(int param0, int param1, int param2, int param3) {
         int var5;
-        hna var6;
+        SoftwareModelBillboard var6;
         int var6_int;
-        nsa var7;
+        SoftwareModelBillboardState var7;
         int var7_int;
         int var8;
         int var9;
@@ -1419,7 +1419,7 @@ final class Model extends ToolkitModel {
         gna[] array$9 = null;
         short[] array$10 = null;
         byte[] array$11 = null;
-        nsa[] array$12 = null;
+        SoftwareModelBillboardState[] array$12 = null;
         int var11 = 0;
         float[][] dupTemp$13 = null;
         float[][] dupTemp$14 = null;
@@ -1736,7 +1736,7 @@ final class Model extends ToolkitModel {
             }
           } else {
             var10Lifetime7 = this.field_m;
-            array$12 = new nsa[var10Lifetime7];
+            array$12 = new SoftwareModelBillboardState[var10Lifetime7];
             param1.field_db = array$12;
             param0.field_db = array$12;
             for (var11 = 0; var11 < this.field_m; var11++) {
@@ -1819,7 +1819,7 @@ final class Model extends ToolkitModel {
         int var11;
         int var12;
         int var13;
-        nsa var14;
+        SoftwareModelBillboardState var14;
         int var14_int;
         int var15;
         int var16;
@@ -1859,13 +1859,13 @@ final class Model extends ToolkitModel {
         int[] var50;
         int[] var52;
         int[] var55;
-        nsa var58;
-        hna var59;
-        nsa var61;
-        hna var62;
-        nsa var64;
-        nsa var66;
-        nsa var68;
+        SoftwareModelBillboardState var58;
+        SoftwareModelBillboard var59;
+        SoftwareModelBillboardState var61;
+        SoftwareModelBillboard var62;
+        SoftwareModelBillboardState var64;
+        SoftwareModelBillboardState var66;
+        SoftwareModelBillboardState var68;
         int[] var71;
         int[] var73;
         int[] var76;
@@ -1974,7 +1974,7 @@ final class Model extends ToolkitModel {
         int var30Lifetime1Lifetime1;
         int var32Lifetime1Lifetime1;
         int var33Lifetime1Lifetime1;
-        nsa var14Lifetime1;
+        SoftwareModelBillboardState var14Lifetime1;
         int var16Lifetime4;
         int var16Lifetime5;
         int var17Lifetime5;
@@ -3025,13 +3025,13 @@ final class Model extends ToolkitModel {
           int var47_int = 0;
           float var47 = 0.0f;
           int var48 = 0;
-          nsa var49 = null;
-          hna var51 = null;
-          hna var52 = null;
-          nsa var53 = null;
-          hna var54 = null;
-          hna var55 = null;
-          nsa var56 = null;
+          SoftwareModelBillboardState var49 = null;
+          SoftwareModelBillboard var51 = null;
+          SoftwareModelBillboard var52 = null;
+          SoftwareModelBillboardState var53 = null;
+          SoftwareModelBillboard var54 = null;
+          SoftwareModelBillboard var55 = null;
+          SoftwareModelBillboardState var56 = null;
           float var34Lifetime1;
           float var35Lifetime1;
           float var36Lifetime1;
@@ -3492,7 +3492,7 @@ final class Model extends ToolkitModel {
 
     private final void drawFacesArgb(boolean param0, boolean param1, int param2, int param3) {
         int var5;
-        hna var6_ref_hna;
+        SoftwareModelBillboard var6_ref_hna;
         int var6;
         int var7;
         int var5Lifetime1;
@@ -3778,9 +3778,9 @@ final class Model extends ToolkitModel {
         int var9;
         int var10;
         int var11_int;
-        hna var11;
+        SoftwareModelBillboard var11;
         int var12_int;
-        nsa var12;
+        SoftwareModelBillboardState var12;
         int var13;
         int var14;
         int var15;
@@ -3905,7 +3905,7 @@ final class Model extends ToolkitModel {
         int var19_int;
         float[] var20;
         int var21;
-        lp var21_ref_lp;
+        BillboardDefinition var21_ref_lp;
         int var22;
         TextureMetadata var22_ref_dw;
         int var23;
@@ -3950,11 +3950,11 @@ final class Model extends ToolkitModel {
         float var52;
         float var53;
         int var54;
-        jt var56;
+        ModelBillboardAttachment var56;
         TextureMetadata var57;
         long[] var58;
-        jt var59;
-        lp var60;
+        ModelBillboardAttachment var59;
+        BillboardDefinition var60;
         SoftwareRenderContext var61;
         TextureMetadata var62;
         float[] var65;
@@ -4033,8 +4033,8 @@ final class Model extends ToolkitModel {
             var18_int = 0;
             for (var19_int = 0; var19_int < param1.field_m.length; var19_int++) {
               var56 = param1.field_m[var19_int];
-              if (var12 == var56.field_a) {
-                var21_ref_lp = fw.a(var56.field_d, false);
+              if (var12 == var56.faceIndex) {
+                var21_ref_lp = BillboardDefinitionCache.getDefinition(var56.definitionId, false);
                 if (var21_ref_lp.field_i) {
                   var18_int = 1;
                 }
@@ -4095,24 +4095,24 @@ final class Model extends ToolkitModel {
         ResizingDialog.sortIndicesByKeys(var74, var68, 89);
         if (param1.field_m != null) {
           this.field_m = param1.field_m.length;
-          this.field_e = new hna[this.field_m];
-          this.field_db = new nsa[this.field_m];
+          this.field_e = new SoftwareModelBillboard[this.field_m];
+          this.field_db = new SoftwareModelBillboardState[this.field_m];
           var54 = 0;
           var11_intLifetime1 = var54;
           while (var54 < param1.field_m.length) {
             var59 = param1.field_m[var54];
-            var60 = fw.a(var59.field_d, false);
-            var14Lifetime1 = PitSnakeModel.field_h[param1.field_A[var59.field_a] & 65535] & 16777215;
+            var60 = BillboardDefinitionCache.getDefinition(var59.definitionId, false);
+            var14Lifetime1 = PitSnakeModel.field_h[param1.field_A[var59.faceIndex] & 65535] & 16777215;
             stackIn_57_0 = var14Lifetime1;
             stackIn_57_1 = 255;
             if (param1.field_n == null) {
               stackIn_58_2 = 0;
             } else {
-              stackIn_58_2 = param1.field_n[var59.field_a] & 255;
+              stackIn_58_2 = param1.field_n[var59.faceIndex] & 255;
             }
             var14Lifetime1Lifetime1 = stackIn_57_0 | stackIn_57_1 - stackIn_58_2 << 24;
-            this.field_e[var54] = new hna(var59.field_a, (int) param1.field_a[var59.field_a], (int) param1.field_t[var59.field_a], (int) param1.field_J[var59.field_a], var60.field_d, var60.field_b, var60.field_f, var60.field_c, var60.field_e, var60.field_i, var59.field_c);
-            this.field_db[var54] = new nsa(var14Lifetime1Lifetime1);
+            this.field_e[var54] = new SoftwareModelBillboard(var59.faceIndex, (int) param1.field_a[var59.faceIndex], (int) param1.field_t[var59.faceIndex], (int) param1.field_J[var59.faceIndex], var60.field_d, var60.field_b, var60.field_f, var60.field_c, var60.field_e, var60.field_i, var59.field_c);
+            this.field_db[var54] = new SoftwareModelBillboardState(var14Lifetime1Lifetime1);
             var54++;
           }
         }

@@ -281,7 +281,7 @@ final class BridgeModel extends TrapModel {
         int var4 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          hna.field_a = param1;
+          SoftwareModelBillboard.field_a = param1;
           aqa.field_c = "";
           SecondaryNodeHashTable.field_b = param0;
           if (!VerticalScrollbar.field_vb.startsWith("win")) {
@@ -296,7 +296,7 @@ final class BridgeModel extends TrapModel {
             aqa.field_c = aqa.field_c + "windows/";
           }
           boolean decompiledFrameRemainder0 = true;
-          if (hna.field_a.field_p) {
+          if (SoftwareModelBillboard.field_a.field_p) {
             aqa.field_c = aqa.field_c + "msjava/";
           } else {
             if (!VerticalScrollbar.field_zb.startsWith("amd64") &&

@@ -265,8 +265,8 @@ final class TextureCombineSource {
             var6 = DefaultTileRenderable.field_g[var3];
             if (2 == mq.field_a &&
               var2 == 1) {
-              if (cia.field_a.length < pm.field_d.length) {
-                stackIn_19_0 = pm.field_d.length;
+              if (cia.field_a.length < OpenGlModelBillboard.field_d.length) {
+                stackIn_19_0 = OpenGlModelBillboard.field_d.length;
               } else {
                 stackIn_19_0 = cia.field_a.length;
               }

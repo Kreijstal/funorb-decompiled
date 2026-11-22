@@ -332,7 +332,7 @@ class MatchScoringObserver extends SimulationObserver {
             !this.field_f.isSinglePlayer(-1878) &&
             this.field_f.field_x != null &&
             !this.a(param1, (byte) 74, var8)) {
-            var9 = ll.findMainRoomKey(param1.getId((byte) -82), 0);
+            var9 = HardwareModelBillboard.findMainRoomKey(param1.getId((byte) -82), 0);
             if (var9 >= 0) {
               this.field_f.field_x[var8].set(var9);
             }

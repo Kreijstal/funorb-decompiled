@@ -192,7 +192,7 @@ abstract class MazeGenerator {
         if (param1) {
           return;
         }
-        gca.field_d = param2;
+        HardwareModelBillboardState.field_d = param2;
         pka.field_b = param3;
     }
 

@@ -29,12 +29,12 @@ final class pra {
         int var16Lifetime2;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var12 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param6);
-          var13 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param5);
+          var12 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param6);
+          var13 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param5);
           var14 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0);
           var15 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param4);
-          var8_int = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param6 + param2);
-          var9 = CharacterPreview.clamp(LineShape.field_h, -16226, gca.field_d, param5 - param2);
+          var8_int = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param6 + param2);
+          var9 = CharacterPreview.clamp(LineShape.field_h, -16226, HardwareModelBillboardState.field_d, param5 - param2);
           for (var16 = var12; var8_int > var16; var16++) {
             C2SRoomResultPacket.fillRange((byte) -55, param1, var15, vaa.field_a[var16], var14);
           }

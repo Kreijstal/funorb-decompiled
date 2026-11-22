@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll {
+final class HardwareModelBillboard {
     int field_b;
     short field_l;
     static QuickChatParamType field_d;
@@ -20,7 +20,7 @@ final class ll {
         field_h = null;
         field_g = null;
         if (param0 <= 78) {
-          ll.findMainRoomKey(-66, -115);
+          HardwareModelBillboard.findMainRoomKey(-66, -115);
           field_d = null;
           return;
         }
@@ -57,7 +57,7 @@ final class ll {
         }
     }
 
-    ll(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
+    HardwareModelBillboard(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {
         this.field_a = (short)param5;
         this.field_k = param3;
         this.field_f = (byte)param8;

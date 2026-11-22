@@ -575,7 +575,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_gun", (byte) 117);
                 if (var2 != null) {
-                  gca.field_l = jaa.decodeText((byte) 80, var2);
+                  HardwareModelBillboardState.field_l = jaa.decodeText((byte) 80, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("tutorial_restart", (byte) 106);
                 if (null != var2) {
@@ -1333,7 +1333,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("points", (byte) 123);
                 if (null != var2) {
-                  nsa.field_f = jaa.decodeText((byte) 93, var2);
+                  SoftwareModelBillboardState.field_f = jaa.decodeText((byte) 93, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("room_points", (byte) 101);
                 if (var2 != null) {
@@ -1675,39 +1675,39 @@ final class CourseMapWalker {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  gca.skeletonDeathMessages[0] = jaa.decodeText((byte) 69, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[0] = jaa.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,1", (byte) 101);
                 if (null != var2) {
-                  gca.skeletonDeathMessages[1] = jaa.decodeText((byte) 113, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[1] = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,2", (byte) 106);
                 if (null != var2) {
-                  gca.skeletonDeathMessages[2] = jaa.decodeText((byte) 79, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[2] = jaa.decodeText((byte) 79, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,3", (byte) 109);
                 if (var2 != null) {
-                  gca.skeletonDeathMessages[3] = jaa.decodeText((byte) 60, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[3] = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,4", (byte) 107);
                 if (var2 != null) {
-                  gca.skeletonDeathMessages[4] = jaa.decodeText((byte) 69, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[4] = jaa.decodeText((byte) 69, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,5", (byte) 121);
                 if (null != var2) {
-                  gca.skeletonDeathMessages[5] = jaa.decodeText((byte) 120, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[5] = jaa.decodeText((byte) 120, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,6", (byte) 118);
                 if (null != var2) {
-                  gca.skeletonDeathMessages[6] = jaa.decodeText((byte) 37, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[6] = jaa.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,7", (byte) 102);
                 if (var2 != null) {
-                  gca.skeletonDeathMessages[7] = jaa.decodeText((byte) 87, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[7] = jaa.decodeText((byte) 87, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_skeleton,8", (byte) 113);
                 if (var2 != null) {
-                  gca.skeletonDeathMessages[8] = jaa.decodeText((byte) 71, var2);
+                  HardwareModelBillboardState.skeletonDeathMessages[8] = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("death_dart,0", (byte) 100);
                 if (null != var2) {

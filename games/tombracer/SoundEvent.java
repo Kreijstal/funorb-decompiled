@@ -49,25 +49,25 @@ final class SoundEvent extends IntrusiveNode {
                       if (DiskCacheWorker.field_c < param0) {
                         PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                       } else {
-                        if (gca.field_d > param5) {
+                        if (HardwareModelBillboardState.field_d > param5) {
                           PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                         } else {
                           if (param5 > LineShape.field_h) {
                             PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                           } else {
-                            if (param9 < gca.field_d) {
+                            if (param9 < HardwareModelBillboardState.field_d) {
                               PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                             } else {
                               if (param9 > LineShape.field_h) {
                                 PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                               } else {
-                                if (gca.field_d > param3) {
+                                if (HardwareModelBillboardState.field_d > param3) {
                                   PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                 } else {
                                   if (param3 > LineShape.field_h) {
                                     PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                   } else {
-                                    if (param6 < gca.field_d) {
+                                    if (param6 < HardwareModelBillboardState.field_d) {
                                       PlatformMazeComponent.drawBezierCurve(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
                                     } else {
                                       if (param6 > LineShape.field_h) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nsa {
+final class SoftwareModelBillboardState {
     int field_a;
     int field_h;
     int field_l;
@@ -21,19 +21,19 @@ final class nsa {
         field_f = null;
         field_i = null;
         if (param0) {
-          nsa.releaseStatics(false);
+          SoftwareModelBillboardState.releaseStatics(false);
         }
     }
 
-    final nsa copy(int param0) {
+    final SoftwareModelBillboardState copy(int param0) {
         if (param0 == -2707) {
-          return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
+          return new SoftwareModelBillboardState(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
         }
         this.field_j = 95;
-        return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
+        return new SoftwareModelBillboardState(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
     }
 
-    final void copyFrom(nsa param0, byte param1) {
+    final void copyFrom(SoftwareModelBillboardState param0, byte param1) {
         try {
           this.field_g = param0.field_g;
           this.field_k = param0.field_k;
@@ -47,13 +47,13 @@ final class nsa {
         }
     }
 
-    nsa(int param0) {
+    SoftwareModelBillboardState(int param0) {
         this.field_m = 128;
         this.field_g = 128;
         this.field_k = param0;
     }
 
-    private nsa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private SoftwareModelBillboardState(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_m = 128;
         this.field_g = 128;
         this.field_a = param4;

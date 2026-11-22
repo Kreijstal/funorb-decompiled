@@ -81,7 +81,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
           var19 = ((var7 << 1) - 3) * var11;
           var20 = (1 + var6_int) * var16;
           var21 = var15 * (var7 - 1);
-          if (gca.field_d <= param5 &&
+          if (HardwareModelBillboardState.field_d <= param5 &&
             LineShape.field_h >= param5) {
             var22 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + param2);
             var23 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 - param2);
@@ -114,7 +114,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
             var21 = var21 - var15;
             var22Lifetime1 = param5 - var7;
             var23Lifetime1 = var7 + param5;
-            if (var23Lifetime1 < gca.field_d) {
+            if (var23Lifetime1 < HardwareModelBillboardState.field_d) {
               continue;
             }
             if (LineShape.field_h < var22Lifetime1) {
@@ -122,7 +122,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
             }
             var24 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, param0 + var6_int);
             var25 = CharacterPreview.clamp(DiskCacheWorker.field_c, -16226, pka.field_b, -var6_int + param0);
-            if (var22Lifetime1 >= gca.field_d) {
+            if (var22Lifetime1 >= HardwareModelBillboardState.field_d) {
               C2SRoomResultPacket.fillRange((byte) -55, param3, var24, vaa.field_a[var22Lifetime1], var25);
             }
             if (var23Lifetime1 > LineShape.field_h) {

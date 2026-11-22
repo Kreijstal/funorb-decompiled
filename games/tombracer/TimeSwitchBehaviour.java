@@ -105,7 +105,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
-          if (gca.field_d > param2) {
+          if (HardwareModelBillboardState.field_d > param2) {
             pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
             return;
           }
@@ -124,7 +124,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }
-        if (gca.field_d > param2) {
+        if (HardwareModelBillboardState.field_d > param2) {
           pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
           return;
         }

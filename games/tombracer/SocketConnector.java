@@ -61,7 +61,7 @@ abstract class SocketConnector {
           if (param0 + param4 > DiskCacheWorker.field_c) {
             GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
           } else {
-            if (param5 - param3 < gca.field_d) {
+            if (param5 - param3 < HardwareModelBillboardState.field_d) {
               GraphicsHeap.a(param0, param3, param4, param1, (byte) 115, param5);
             } else {
               if (param3 + param5 > LineShape.field_h) {

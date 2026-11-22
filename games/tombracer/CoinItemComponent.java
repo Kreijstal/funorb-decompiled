@@ -21,13 +21,13 @@ final class CoinItemComponent extends ItemComponent {
           qpa.createMenuScreen(275, PathMoverComponent.field_F, 5, 40, 440, 124, 200);
           qpa.createMenuScreen(275, SecondaryLinkQueue.field_a, 6, 40, 440, 125, 200);
           qpa.createMenuScreen(480, MatchingTextValidator.field_j, 2, 40, 440, 124, 200);
-          qpa.createMenuScreen(185, ll.field_g, 4, 40, 440, 126, 200);
+          qpa.createMenuScreen(185, HardwareModelBillboard.field_g, 4, 40, 440, 126, 200);
           qpa.createMenuScreen(185, hh.field_c, 12, 40, 440, 124, 200);
           int var3 = -120 % ((param1 + 61) / 53);
           qpa.createMenuScreen(205, LegacyOpenGlReflectionEffect.field_f, 7, 35, 440, 125, 200);
           qpa.createMenuScreen(480, DateInputWidget.field_x, 8, 40, 440, 126, 200);
           qpa.createMenuScreen(335, mna.field_a, 9, 40, 440, 126, 200);
-          qpa.createMenuScreen(400, gca.field_f, 10, 40, 440, 124, 200);
+          qpa.createMenuScreen(400, HardwareModelBillboardState.field_f, 10, 40, 440, 124, 200);
           qpa.createMenuScreen(400, hd.field_b, 11, 40, 440, 125, 200);
           param0.stringWidth(FloatPacketBuffer.field_l);
           param0.stringWidth(DamageableBehaviour.field_x);

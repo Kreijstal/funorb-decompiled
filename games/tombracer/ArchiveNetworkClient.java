@@ -119,11 +119,11 @@ abstract class ArchiveNetworkClient {
               var2.writeInt(CourseLayout.field_a, (byte) 117);
               SneakHintPanel.field_a.write(var2.payload, 0, 13, 106);
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
-              pm.field_n = 30000L + bva.currentTimeMillis((byte) -107);
+              OpenGlModelBillboard.field_n = 30000L + bva.currentTimeMillis((byte) -107);
             }
             if (ColourKeyOperator.field_m == 3) {
               if (SneakHintPanel.field_a.available(0) <= 0) {
-                if (bva.currentTimeMillis((byte) -107) > pm.field_n) {
+                if (bva.currentTimeMillis((byte) -107) > OpenGlModelBillboard.field_n) {
                   stackIn_31_0 = du.recordArchiveConnectionFailure(-2, (byte) 17);
                   return stackIn_31_0;
                 }

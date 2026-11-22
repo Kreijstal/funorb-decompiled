@@ -513,7 +513,7 @@ abstract class AppletGameShell extends GameApplet {
         ToggleMusicChannelCommand.field_o = null;
         cia.field_a = null;
         C2SActionPacket.field_k = null;
-        pm.field_d = null;
+        OpenGlModelBillboard.field_d = null;
     }
 
     final void r(int param0) {

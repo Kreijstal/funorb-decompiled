@@ -186,14 +186,14 @@ final class qna {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            pm.field_d = new String[var4];
-            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, pm.field_d, 0, var4);
+            OpenGlModelBillboard.field_d = new String[var4];
+            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, OpenGlModelBillboard.field_d, 0, var4);
             C2SActionPacket.field_k = new String[-1 + var3_int - var4];
             ArrayUtils.copy(ClientMemoryVertexArray.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
-            if (pm.field_d.length <= cia.field_a.length) {
+            if (OpenGlModelBillboard.field_d.length <= cia.field_a.length) {
               stackIn_58_0 = cia.field_a.length;
             } else {
-              stackIn_58_0 = pm.field_d.length;
+              stackIn_58_0 = OpenGlModelBillboard.field_d.length;
             }
             var5 = stackIn_58_0;
             if (C2SActionPacket.field_k.length > ToggleMusicChannelCommand.field_o.length) {
@@ -222,8 +222,8 @@ final class qna {
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_68_0 = DefaultTileRenderable.field_g;
               stackIn_68_1 = var8Lifetime2 + 6;
-              if (-var5 + (var8Lifetime2 + pm.field_d.length) >= 0) {
-                stackIn_69_2 = pm.field_d[pm.field_d.length + var8Lifetime2 - var5];
+              if (-var5 + (var8Lifetime2 + OpenGlModelBillboard.field_d.length) >= 0) {
+                stackIn_69_2 = OpenGlModelBillboard.field_d[OpenGlModelBillboard.field_d.length + var8Lifetime2 - var5];
               } else {
                 stackIn_69_2 = "";
               }

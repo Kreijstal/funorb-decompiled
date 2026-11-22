@@ -124,7 +124,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         String var15 = null;
         PlayerContextMenu var16 = null;
         try {
-          DateInputWidget.openPlayerContextMenu(nsa.field_i, param1.getGameId(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
+          DateInputWidget.openPlayerContextMenu(SoftwareModelBillboardState.field_i, param1.getGameId(0), (String) null, 0L, -11635, (int[]) null, param1, -1, (String) null);
           if (param1.field_ec && (param1.field_yb == 2 ||
             !(ld.field_e < 2))) {
             var10 = hka.field_b;

@@ -335,7 +335,7 @@ final class GridLineWalker {
           if (DiskCacheWorker.field_c < param0 + param3) {
             BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
           } else {
-            if (gca.field_d > -param0 + param1) {
+            if (HardwareModelBillboardState.field_d > -param0 + param1) {
               BeamShooterBehaviour.a(param4, param0, param1, false, param2, param5, param3);
             } else {
               if (param1 + param0 <= LineShape.field_h) {

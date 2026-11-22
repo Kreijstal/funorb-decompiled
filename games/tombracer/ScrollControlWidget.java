@@ -236,7 +236,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           dh.field_e.addChild(-123, CharacterChoiceFactory.field_g);
           ComponentMount.field_b = new UiComponent(0L, rma.field_b);
           dh.field_e.addChild(-128, ComponentMount.field_b);
-          ClientMemoryVertexArray.field_d = new UiComponent(0L, VortexBehaviour.field_t, fw.field_a);
+          ClientMemoryVertexArray.field_d = new UiComponent(0L, VortexBehaviour.field_t, BillboardDefinitionCache.field_a);
           qpa.field_b = new UiComponent(0L, VortexBehaviour.field_t);
           SimpleMoveLocomotor.field_s.addChild(param1 ^ -122, ClientMemoryVertexArray.field_e);
           SimpleMoveLocomotor.field_s.addChild(-123, Projectile.field_r);

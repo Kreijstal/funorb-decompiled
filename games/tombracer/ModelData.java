@@ -11,7 +11,7 @@ final class ModelData {
     int[] field_I;
     int[] field_v;
     int field_E;
-    jt[] field_m;
+    ModelBillboardAttachment[] field_m;
     ava[] field_B;
     int[] field_c;
     short[] field_K;
@@ -731,13 +731,13 @@ final class ModelData {
             if (var58Lifetime4 <= 0) {
               return;
             }
-            this.field_m = new jt[var58Lifetime4];
+            this.field_m = new ModelBillboardAttachment[var58Lifetime4];
             for (var59Lifetime3 = 0; var59Lifetime3 < var58Lifetime4; var59Lifetime3++) {
               var60Lifetime2 = var66.readUnsignedShort(124);
               var61Lifetime1 = var66.readUnsignedShort(param1 ^ 123);
               var62Lifetime1 = var66.readUnsignedByte(param1 + 255);
               var63 = var66.readByte((byte) 60);
-              this.field_m[var59Lifetime3] = new jt(var60Lifetime2, var61Lifetime1, var62Lifetime1, var63);
+              this.field_m[var59Lifetime3] = new ModelBillboardAttachment(var60Lifetime2, var61Lifetime1, var62Lifetime1, var63);
             }
           }
           return;
@@ -1231,7 +1231,7 @@ final class ModelData {
         ModelData var15 = null;
         int var15_int = 0;
         int var16 = 0;
-        jt var16_ref_jt = null;
+        ModelBillboardAttachment var16_ref_jt = null;
         int var17 = 0;
         int var18 = 0;
         int var12Lifetime1;
@@ -1368,7 +1368,7 @@ final class ModelData {
           }
           this.field_l = new int[this.field_E];
           if (var5 > 0) {
-            this.field_m = new jt[var5];
+            this.field_m = new ModelBillboardAttachment[var5];
           }
           this.field_t = new short[this.field_o];
           if (var6 != 0) {
@@ -1395,7 +1395,7 @@ final class ModelData {
                   var16_ref_jt = var14_ref_oc.field_m[var15_int];
                   incrementValue$2 = var5Lifetime1;
                   var5Lifetime1++;
-                  this.field_m[incrementValue$2] = var16_ref_jt.withVertexOffset(9677, var16_ref_jt.field_a + this.field_o);
+                  this.field_m[incrementValue$2] = var16_ref_jt.withFaceIndex(9677, var16_ref_jt.faceIndex + this.field_o);
                 }
               }
               for (var15_intLifetime1 = 0; var14_ref_oc.field_o > var15_intLifetime1; var15_intLifetime1++) {

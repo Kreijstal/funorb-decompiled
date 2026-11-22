@@ -198,7 +198,7 @@ final class FunOrbConsole extends ConsoleWindow {
           try {
             try {
               if (false) throw (ConsoleParseException) null;
-              var3 = lp.tokenize((byte) 48, param0);
+              var3 = BillboardDefinition.tokenize((byte) 48, param0);
               var5 = 80 / ((-44 - param1) / 36);
               var4 = new ConsoleTokenStream(var3);
               var6 = ConsoleExpressionParser.parseExpression(var4, -31733);

@@ -211,14 +211,14 @@ final class ChatOverlay {
             }
             if (RotaterMountComponent.field_G == ProceduralTexture.field_p) {
               if (!param5) {
-                fd.field_d = FullscreenCanvas.parseChatTarget(param1, 64, false, param4);
+                OpenGlModelBillboardState.field_d = FullscreenCanvas.parseChatTarget(param1, 64, false, param4);
               } else {
                 var10 = (String) null;
-                fd.field_d = WidgetContainer.createChatTarget(param1, 0, (String) null, false, QuickChatPhraseSource.field_g);
+                OpenGlModelBillboardState.field_d = WidgetContainer.createChatTarget(param1, 0, (String) null, false, QuickChatPhraseSource.field_g);
               }
               ql.field_k.position = 0;
               ql.field_k.writeByte(14, 0);
-              ql.field_k.writeByte(fd.field_d.getChannelType((byte) 113).field_d, 0);
+              ql.field_k.writeByte(OpenGlModelBillboardState.field_d.getChannelType((byte) 113).field_d, 0);
               bl.flushPacketBuffer(-1, -1);
               ProceduralTexture.field_p = bva.field_b;
             }
@@ -238,7 +238,7 @@ final class ChatOverlay {
               LegacyRidgedWaterNoise.ensureGamePacketBytes(8, -1)) {
               PathMoverComponent.field_L = WeaveOperator.field_q.readLong(290646880);
               WeaveOperator.field_q.position = 0;
-              RoomCompletedScreen.writeLoginPacket((byte) 121, param5, param3, fd.field_d, param0);
+              RoomCompletedScreen.writeLoginPacket((byte) 121, param5, param3, OpenGlModelBillboardState.field_d, param0);
               ProceduralTexture.field_p = TestModel.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -307,10 +307,10 @@ final class ChatOverlay {
               tia.field_b = OpenGlTexture3D.normalizeDisplayName(1, var11);
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               ProceduralTexture.field_p = LegacyOpenGlTexture1D.field_n;
-              if (fd.field_d.getChannelType((byte) 113) == BlockModel.field_s) {
+              if (OpenGlModelBillboardState.field_d.getChannelType((byte) 113) == BlockModel.field_s) {
                 ShaderEffect.field_a.saveAsLastLoginMethod(ToolkitSelector.getApplet(120), param2 ^ 55);
               } else {
-                if (fd.field_d.getChannelType((byte) 113) == ViewportManager.field_f) {
+                if (OpenGlModelBillboardState.field_d.getChannelType((byte) 113) == ViewportManager.field_f) {
                   ObjectList.field_d.saveAsLastLoginMethod(ToolkitSelector.getApplet(109), 5);
                 }
               }

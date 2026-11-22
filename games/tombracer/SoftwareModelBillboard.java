@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hna {
+final class SoftwareModelBillboard {
     static PlatformTaskDispatcher field_a;
     short field_h;
     short field_i;
@@ -15,7 +15,7 @@ final class hna {
 
     public static void releaseStatics(int param0) {
         if (param0 <= 115) {
-          hna.releaseStatics(-38);
+          SoftwareModelBillboard.releaseStatics(-38);
           field_a = null;
           field_e = null;
           return;
@@ -24,7 +24,7 @@ final class hna {
         field_e = null;
     }
 
-    hna(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, int param10) {
+    SoftwareModelBillboard(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, int param10) {
         this.field_d = param9 ? true : false;
         this.field_b = (short)param5;
         this.field_c = (byte)param7;

@@ -193,7 +193,7 @@ abstract class RasterShape {
           OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }
-        if (-param3 + param2 < gca.field_d) {
+        if (-param3 + param2 < HardwareModelBillboardState.field_d) {
           OpenGlBuffer.a(param6, param1, param2, param0, true, param5, param7, param3);
           return;
         }

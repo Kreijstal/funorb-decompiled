@@ -67,7 +67,7 @@ final class ScoreStandings {
           if (param1 != 28893) {
             ScoreStandings.releaseStatics(47);
           }
-          if (!hna.field_a.field_c) {
+          if (!SoftwareModelBillboard.field_a.field_c) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -126,7 +126,7 @@ final class ScoreStandings {
             }
             try {
               if (var6 == 0) {
-                hna.field_a.writeFileBytes(var15, var11, true);
+                SoftwareModelBillboard.field_a.writeFileBytes(var15, var11, true);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

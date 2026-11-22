@@ -304,10 +304,10 @@ final class ItemModel extends TrapModel {
         mq var11 = null;
         byte[] var21 = null;
         try {
-          if (hna.field_e == null) {
+          if (SoftwareModelBillboard.field_e == null) {
             var7 = new LegacyRidgedWaterNoise();
             var19 = var7.generate(16, 128, 0, 128);
-            hna.field_e = ByteStorageFactory.wrapByteStorage(270, var19, false);
+            SoftwareModelBillboard.field_e = ByteStorageFactory.wrapByteStorage(270, var19, false);
           }
           if (null == TreasureValuesOverlay.field_l) {
             var9 = new LegacyTurbulentWaterNoise();

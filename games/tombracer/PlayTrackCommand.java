@@ -122,15 +122,15 @@ final class PlayTrackCommand extends ConsoleMethod {
           if (param1 != 0) {
             PlayTrackCommand.a(75, true);
           }
-          stackIn_5_0 = nsa.field_i;
+          stackIn_5_0 = SoftwareModelBillboardState.field_i;
           stackIn_5_1 = 2;
           stackIn_5_2 = param6;
           stackIn_5_3 = 107;
           stackIn_5_4 = param3 * (2 + ToolkitSelector.field_a) * 4;
           stackIn_5_5 = 2 * (2 + ToolkitSelector.field_a);
-          stackIn_6_6 = (nsa.field_i == ChatTarget.field_b);
+          stackIn_6_6 = (SoftwareModelBillboardState.field_i == ChatTarget.field_b);
           var7_int = ((ScrollPanel) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
-          var8 = nsa.field_i.field_tb.field_J;
+          var8 = SoftwareModelBillboardState.field_i.field_tb.field_J;
           var9 = bva.currentTimeMillis((byte) -107);
           var11 = null;
           var12 = (LobbyGameWidget) (var8.first(-80));
@@ -301,7 +301,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             var30 = var12.field_Rb;
             var12.field_Rb.field_t = 0;
             var30.field_G = 0;
-            var12.field_G = nsa.field_i.field_tb.field_G;
+            var12.field_G = SoftwareModelBillboardState.field_i.field_tb.field_G;
             var31 = 0;
             var32 = var12.field_tb;
             if (!var12.g(0)) {
@@ -486,7 +486,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               var12.field_O = var31 - var12.field_t;
             }
             if (var13 != 0) {
-              nsa.field_i.field_tb.placeBelow(2, (UiComponent) (var11), var12, (byte) -122);
+              SoftwareModelBillboardState.field_i.field_tb.placeBelow(2, (UiComponent) (var11), var12, (byte) -122);
             }
             for (var34_intLifetime2 = 0; ColourRowCache.field_b > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_o) {

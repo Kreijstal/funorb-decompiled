@@ -45,7 +45,7 @@ final class ConsoleToken extends IntrusiveNode {
             if (var4 < 0) {
               var5 = OpenGlToolkit.field_H;
             } else {
-              if (lp.field_h.selectedIndex == var4) {
+              if (BillboardDefinition.field_h.selectedIndex == var4) {
                 var5 = RewardChoiceSlot.field_a;
               } else {
                 var5 = RotaterMountComponent.field_I;
@@ -57,7 +57,7 @@ final class ConsoleToken extends IntrusiveNode {
             var7 = apa.$cfr$intArgs$a$62abead39cee(stackIn_12_0, stackIn_13_1, var6);
             var8 = -(var7 >> 1) + Transform3D.field_a;
             if (var4 >= 0) {
-              if (lp.field_h.selectedIndex == var4) {
+              if (BillboardDefinition.field_h.selectedIndex == var4) {
                 stackIn_17_0 = pua.field_c;
               } else {
                 stackIn_17_0 = QuickChatPhraseDefinition.field_o;

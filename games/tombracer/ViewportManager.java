@@ -84,7 +84,7 @@ final class ViewportManager {
               }
             }
             if (this.field_d > 0) {
-              lp.field_g = (this.field_d - mma.field_a) / 2;
+              BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
             }
             return;
           }
@@ -99,7 +99,7 @@ final class ViewportManager {
             if (this.field_d <= 0) {
               return;
             }
-            lp.field_g = (this.field_d - mma.field_a) / 2;
+            BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
             return;
           }
           var2 = var4;
@@ -117,7 +117,7 @@ final class ViewportManager {
           if (mma.field_a != var2) {
             this.field_l.onViewportResized(var2, -117, var3);
             if (this.field_d > 0) {
-              lp.field_g = (this.field_d - mma.field_a) / 2;
+              BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
             }
             return;
           }
@@ -128,7 +128,7 @@ final class ViewportManager {
         if (this.field_d <= 0) {
           return;
         }
-        lp.field_g = (this.field_d - mma.field_a) / 2;
+        BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
     }
 
     public static void releaseStatics(int param0) {
@@ -165,10 +165,10 @@ final class ViewportManager {
             return;
           }
           if (this.field_d > mma.field_a) {
-            lp.field_g = (this.field_d - mma.field_a) / 2;
+            BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
           } else {
             if (this.field_d > 0) {
-              lp.field_g = 0;
+              BillboardDefinition.field_g = 0;
             }
           }
           if (this.field_b != mma.field_a) {
@@ -200,10 +200,10 @@ final class ViewportManager {
             return;
           }
           if (this.field_d > mma.field_a) {
-            lp.field_g = (this.field_d - mma.field_a) / 2;
+            BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
           } else {
             if (this.field_d > 0) {
-              lp.field_g = 0;
+              BillboardDefinition.field_g = 0;
             }
           }
           if (this.field_b != mma.field_a) {
@@ -231,7 +231,7 @@ final class ViewportManager {
           return;
         }
         if (this.field_d > mma.field_a) {
-          lp.field_g = (this.field_d - mma.field_a) / 2;
+          BillboardDefinition.field_g = (this.field_d - mma.field_a) / 2;
         } else {
           if (this.field_d <= 0) {
             if (this.field_b != mma.field_a) {
@@ -243,7 +243,7 @@ final class ViewportManager {
             }
             return;
           }
-          lp.field_g = 0;
+          BillboardDefinition.field_g = 0;
         }
         if (this.field_b == mma.field_a &&
           this.field_g == FloatPacketBuffer.field_i) {

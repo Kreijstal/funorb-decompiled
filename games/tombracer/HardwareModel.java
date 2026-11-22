@@ -7,7 +7,7 @@ final class HardwareModel extends ToolkitModel {
     private HardwareGraphicsToolkit field_S;
     private int field_I;
     private short field_T;
-    private gca[] field_nb;
+    private HardwareModelBillboardState[] field_nb;
     private int[][] field_D;
     private short[] field_m;
     private int field_i;
@@ -60,7 +60,7 @@ final class HardwareModel extends ToolkitModel {
     private int field_Y;
     private byte[] field_w;
     private int[] field_l;
-    private ll[] field_u;
+    private HardwareModelBillboard[] field_u;
     private int[] field_Z;
     private boolean field_N;
     private short[] field_z;
@@ -117,7 +117,7 @@ final class HardwareModel extends ToolkitModel {
         Object var13_ref = null;
         int var13 = 0;
         int var14_int = 0;
-        lp var14 = null;
+        BillboardDefinition var14 = null;
         ima var14_ref = null;
         int var15_int = 0;
         gta[] var15 = null;
@@ -126,9 +126,9 @@ final class HardwareModel extends ToolkitModel {
         int[] var17 = null;
         int var18 = 0;
         int var19 = 0;
-        jt var20_ref_jt = null;
+        ModelBillboardAttachment var20_ref_jt = null;
         int var20 = 0;
-        lp var21_ref_lp = null;
+        BillboardDefinition var21_ref_lp = null;
         int var21 = 0;
         TextureMetadata var22_ref_dw = null;
         int var22 = 0;
@@ -254,9 +254,9 @@ final class HardwareModel extends ToolkitModel {
                 while (param1.field_m.length > var19) {
                   var20_ref_jt = param1.field_m[var19];
                   stackIn_65_0 = var12;
-                  stackIn_65_1 = var20_ref_jt.field_a;
+                  stackIn_65_1 = var20_ref_jt.faceIndex;
                   if (stackIn_65_0 == stackIn_65_1) {
-                    var21_ref_lp = fw.a(var20_ref_jt.field_d, false);
+                    var21_ref_lp = BillboardDefinitionCache.getDefinition(var20_ref_jt.definitionId, false);
                     if (var21_ref_lp.field_i) {
                       var18 = 1;
                     }
@@ -336,12 +336,12 @@ final class HardwareModel extends ToolkitModel {
           this.field_X = param1.field_B;
           if (null != param1.field_m) {
             this.field_L = param1.field_m.length;
-            this.field_u = new ll[this.field_L];
-            this.field_nb = new gca[this.field_L];
+            this.field_u = new HardwareModelBillboard[this.field_L];
+            this.field_nb = new HardwareModelBillboardState[this.field_L];
             var12 = 0;
             while (this.field_L > var12) {
               var13_ref = param1.field_m[var12];
-              var14 = fw.a(((jt) (var13_ref)).field_d, false);
+              var14 = BillboardDefinitionCache.getDefinition(((ModelBillboardAttachment) (var13_ref)).definitionId, false);
               var15_int = -1;
               stackIn_125_0 = 0;
               if (var63 != 0) {
@@ -350,7 +350,7 @@ final class HardwareModel extends ToolkitModel {
               }
               var16 = stackIn_125_0;
               while (this.field_I > var16) {
-                stackIn_116_0 = ~((jt) (var13_ref)).field_a;
+                stackIn_116_0 = ~((ModelBillboardAttachment) (var13_ref)).faceIndex;
                 stackIn_116_1 = ~var8[var16];
                 if (stackIn_116_0 == stackIn_116_1) {
                   var15_int = var16;
@@ -365,16 +365,16 @@ final class HardwareModel extends ToolkitModel {
               if (stackIn_116_0 == stackIn_116_1) {
                 throw new RuntimeException();
               }
-              var16 = 16777215 & PbufferEntry.field_m[65535 & param1.field_A[((jt) (var13_ref)).field_a]];
+              var16 = 16777215 & PbufferEntry.field_m[65535 & param1.field_A[((ModelBillboardAttachment) (var13_ref)).faceIndex]];
               stackIn_122_0 = var16;
               if (param1.field_n != null) {
-                stackIn_123_1 = param1.field_n[((jt) (var13_ref)).field_a];
+                stackIn_123_1 = param1.field_n[((ModelBillboardAttachment) (var13_ref)).faceIndex];
               } else {
                 stackIn_123_1 = 0;
               }
               var16 = stackIn_122_0 | -stackIn_123_1 + 255 << 24;
-              this.field_u[var12] = new ll(var15_int, (int) param1.field_a[((jt) (var13_ref)).field_a], (int) param1.field_t[((jt) (var13_ref)).field_a], (int) param1.field_J[((jt) (var13_ref)).field_a], var14.field_d, var14.field_b, var14.field_f, var14.field_c, var14.field_e, var14.field_i, var14.field_a, ((jt) (var13_ref)).field_c);
-              this.field_nb[var12] = new gca(var16);
+              this.field_u[var12] = new HardwareModelBillboard(var15_int, (int) param1.field_a[((ModelBillboardAttachment) (var13_ref)).faceIndex], (int) param1.field_t[((ModelBillboardAttachment) (var13_ref)).faceIndex], (int) param1.field_J[((ModelBillboardAttachment) (var13_ref)).faceIndex], var14.field_d, var14.field_b, var14.field_f, var14.field_c, var14.field_e, var14.field_i, var14.field_a, ((ModelBillboardAttachment) (var13_ref)).field_c);
+              this.field_nb[var12] = new HardwareModelBillboardState(var16);
               var12++;
             }
           }
@@ -1035,14 +1035,14 @@ final class HardwareModel extends ToolkitModel {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6_int = 0;
-        ll var6 = null;
+        HardwareModelBillboard var6 = null;
         int var7_int = 0;
-        gca var7 = null;
+        HardwareModelBillboardState var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ll var6Lifetime1;
-        gca var7Lifetime1;
+        HardwareModelBillboard var6Lifetime1;
+        HardwareModelBillboardState var7Lifetime1;
         int stackIn_20_0Lifetime1;
         int stackIn_20_1Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
@@ -2122,8 +2122,8 @@ final class HardwareModel extends ToolkitModel {
         int var2_int = 0;
         AffineTransform3D var3 = null;
         int var4 = 0;
-        ll var5 = null;
-        gca var6 = null;
+        HardwareModelBillboard var5 = null;
+        HardwareModelBillboardState var6 = null;
         float var7 = 0.0f;
         float var8 = 0.0f;
         float var9 = 0.0f;
@@ -2290,7 +2290,7 @@ final class HardwareModel extends ToolkitModel {
         short[] array$12 = null;
         short[] array$13 = null;
         short[] array$14 = null;
-        gca[] array$15 = null;
+        HardwareModelBillboardState[] array$15 = null;
         short discarded$16 = 0;
         int stackIn_75_0 = 0;
         HardwareModel stackIn_310_0 = null;
@@ -2865,7 +2865,7 @@ final class HardwareModel extends ToolkitModel {
             }
             if (decompiledFrameCompleted1) {
               var11Lifetime6 = this.field_L;
-              array$15 = new gca[var11Lifetime6];
+              array$15 = new HardwareModelBillboardState[var11Lifetime6];
               param2.field_nb = array$15;
               param0.field_nb = array$15;
               var12Lifetime1 = 0;
@@ -2966,12 +2966,12 @@ final class HardwareModel extends ToolkitModel {
         int var10 = 0;
         int[] var11 = null;
         int var11_int = 0;
-        ll var11_ref = null;
+        HardwareModelBillboard var11_ref = null;
         int var12 = 0;
-        gca var12_ref_gca = null;
+        HardwareModelBillboardState var12_ref_gca = null;
         int[] var12_ref_int__ = null;
         int var13_int = 0;
-        gca var13 = null;
+        HardwareModelBillboardState var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -2980,12 +2980,12 @@ final class HardwareModel extends ToolkitModel {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        ll var11_refLifetime1;
-        gca var12_ref_gcaLifetime1;
-        ll var11_refLifetime2;
-        gca var12_ref_gcaLifetime2;
-        ll var11_refLifetime1Lifetime1;
-        gca var12_ref_gcaLifetime1Lifetime1;
+        HardwareModelBillboard var11_refLifetime1;
+        HardwareModelBillboardState var12_ref_gcaLifetime1;
+        HardwareModelBillboard var11_refLifetime2;
+        HardwareModelBillboardState var12_ref_gcaLifetime2;
+        HardwareModelBillboard var11_refLifetime1Lifetime1;
+        HardwareModelBillboardState var12_ref_gcaLifetime1Lifetime1;
         int stackIn_85_0Lifetime1;
         int stackIn_86_0Lifetime1;
         int stackIn_86_1Lifetime1;
@@ -3658,12 +3658,12 @@ final class HardwareModel extends ToolkitModel {
         int var11 = 0;
         int[] var12 = null;
         int var12_int = 0;
-        ll var12_ref = null;
+        HardwareModelBillboard var12_ref = null;
         int var13 = 0;
-        gca var13_ref_gca = null;
+        HardwareModelBillboardState var13_ref_gca = null;
         int[] var13_ref_int__ = null;
         int var14_int = 0;
-        gca var14 = null;
+        HardwareModelBillboardState var14 = null;
         int var15 = 0;
         int var16 = 0;
         int[] var16_ref_int__ = null;
@@ -3704,14 +3704,14 @@ final class HardwareModel extends ToolkitModel {
         int var47 = 0;
         Object stackIn_298_0Lifetime1;
         Object stackIn_353_0Lifetime1;
-        ll var12_refLifetime1;
-        gca var13_ref_gcaLifetime1;
+        HardwareModelBillboard var12_refLifetime1;
+        HardwareModelBillboardState var13_ref_gcaLifetime1;
         int[] var13_ref_int__Lifetime1;
         int[] var13_ref_int__Lifetime2;
-        ll var12_refLifetime2;
-        gca var13_ref_gcaLifetime2;
-        ll var12_refLifetime1Lifetime1;
-        gca var13_ref_gcaLifetime1Lifetime1;
+        HardwareModelBillboard var12_refLifetime2;
+        HardwareModelBillboardState var13_ref_gcaLifetime2;
+        HardwareModelBillboard var12_refLifetime1Lifetime1;
+        HardwareModelBillboardState var13_ref_gcaLifetime1Lifetime1;
         int stackIn_102_0Lifetime1;
         int stackIn_102_1Lifetime1;
         int stackIn_109_0Lifetime1;

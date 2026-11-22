@@ -368,7 +368,7 @@ final class ResultsPhase extends MatchPhase {
           RoomEffectTraps.drawLeftTextWithShadow(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
           var26 = this.matchState.roundWins[var8Lifetime2];
           if (var8Lifetime2 == this.matchState.getRoundWinner(2) &&
-            var7Lifetime2 < -100 + fd.field_e) {
+            var7Lifetime2 < -100 + OpenGlModelBillboardState.field_e) {
             var26--;
           }
           MembersUpsellMenu.drawCentredTextWithShadow(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
@@ -383,7 +383,7 @@ final class ResultsPhase extends MatchPhase {
             stackIn_62_1 = 0;
           }
           var9Lifetime2 = stackIn_61_0 + stackIn_62_1;
-          if (-100 + fd.field_e <= var7Lifetime2 &&
+          if (-100 + OpenGlModelBillboardState.field_e <= var7Lifetime2 &&
             var8Lifetime3 == this.matchState.getRoundWinner(2)) {
             if (this.matchState.roundsToWin == this.matchState.roundWins[var8Lifetime3]) {
               MembersUpsellMenu.drawCentredTextWithShadow(FallbackShaderEffect.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
@@ -403,7 +403,7 @@ final class ResultsPhase extends MatchPhase {
           }
           tga.field_a.setClip(0, var9Lifetime2 - 100, (int)(2.0 + this.field_r[var8Lifetime3].field_q), var9Lifetime2 + 50);
           var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
-          gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
+          HardwareModelBillboardState.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.resetClip();
           this.matchState.players[var8Lifetime3].getAnimator((byte) -42).drawPortrait(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
           MembersUpsellMenu.drawCentredTextWithShadow(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, TooltipRenderer.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
@@ -782,7 +782,7 @@ final class ResultsPhase extends MatchPhase {
             this.field_r[this.matchState.getRoundWinner(2)].field_i = var18;
           }
           var17Lifetime2 += 100;
-          fd.field_e = var17Lifetime2;
+          OpenGlModelBillboardState.field_e = var17Lifetime2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -835,7 +835,7 @@ final class ResultsPhase extends MatchPhase {
         }
         this.matchState.field_E = this.matchState.field_E + 1;
         var3Lifetime1 = this.matchState.field_E;
-        if (fd.field_e <= var3Lifetime1 &&
+        if (OpenGlModelBillboardState.field_e <= var3Lifetime1 &&
           !this.field_s) {
           if (this.protocol != null) {
             this.protocol.sendResultsFinished(6418);

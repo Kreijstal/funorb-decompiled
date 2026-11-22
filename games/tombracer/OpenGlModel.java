@@ -4,7 +4,7 @@
 final class OpenGlModel extends ToolkitModel {
     private float[] field_y;
     private byte field_Z;
-    private fd[] field_f;
+    private OpenGlModelBillboardState[] field_f;
     private short field_U;
     private short field_M;
     private VertexArrayPointer field_g;
@@ -49,7 +49,7 @@ final class OpenGlModel extends ToolkitModel {
     private short[] field_q;
     private boolean field_gb;
     private OpenGlToolkit field_R;
-    private pm[] field_r;
+    private OpenGlModelBillboard[] field_r;
     private int field_lb;
     private afa field_w;
     private int field_ib;
@@ -402,7 +402,7 @@ final class OpenGlModel extends ToolkitModel {
         short[] array$12 = null;
         short[] array$13 = null;
         short[] array$14 = null;
-        fd[] array$15 = null;
+        OpenGlModelBillboardState[] array$15 = null;
         int stackIn_79_0 = 0;
         OpenGlModel stackIn_326_0 = null;
         RuntimeException stackIn_330_0 = null;
@@ -982,7 +982,7 @@ final class OpenGlModel extends ToolkitModel {
             }
             if (decompiledFrameCompleted1) {
               var11Lifetime6 = this.field_G;
-              array$15 = new fd[var11Lifetime6];
+              array$15 = new OpenGlModelBillboardState[var11Lifetime6];
               param4.field_f = array$15;
               param5.field_f = array$15;
               var12Lifetime1 = 0;
@@ -1135,14 +1135,14 @@ final class OpenGlModel extends ToolkitModel {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6_int = 0;
-        pm var6 = null;
+        OpenGlModelBillboard var6 = null;
         int var7_int = 0;
-        fd var7 = null;
+        OpenGlModelBillboardState var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pm var6Lifetime1;
-        fd var7Lifetime1;
+        OpenGlModelBillboard var6Lifetime1;
+        OpenGlModelBillboardState var7Lifetime1;
         int stackIn_23_0Lifetime1;
         int stackIn_23_1Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
@@ -1459,14 +1459,14 @@ final class OpenGlModel extends ToolkitModel {
         RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
-        pm var11_ref_pm = null;
+        OpenGlModelBillboard var11_ref_pm = null;
         int var12_int = 0;
         int[] var12 = null;
-        fd var12_ref = null;
+        OpenGlModelBillboardState var12_ref = null;
         int var13 = 0;
         int[] var13_ref_int__ = null;
         int var14_int = 0;
-        fd var14 = null;
+        OpenGlModelBillboardState var14 = null;
         int var15 = 0;
         int var16 = 0;
         int[] var16_ref_int__ = null;
@@ -2337,8 +2337,8 @@ final class OpenGlModel extends ToolkitModel {
         OpenGlTransform3D var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        pm var4 = null;
-        fd var5 = null;
+        OpenGlModelBillboard var4 = null;
+        OpenGlModelBillboardState var5 = null;
         float var6 = 0.0f;
         float var7 = 0.0f;
         float var8 = 0.0f;
@@ -3374,14 +3374,14 @@ final class OpenGlModel extends ToolkitModel {
         RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
-        pm var10_ref_pm = null;
+        OpenGlModelBillboard var10_ref_pm = null;
         int[] var11 = null;
-        fd var11_ref = null;
+        OpenGlModelBillboardState var11_ref = null;
         int var11_int = 0;
         int var12 = 0;
         int[] var12_ref_int__ = null;
         int var13_int = 0;
-        fd var13 = null;
+        OpenGlModelBillboardState var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -4315,7 +4315,7 @@ final class OpenGlModel extends ToolkitModel {
         Object var13_ref = null;
         int var13 = 0;
         int var14_int = 0;
-        lp var14 = null;
+        BillboardDefinition var14 = null;
         ima var14_ref = null;
         int var15_int = 0;
         uo[] var15 = null;
@@ -4324,9 +4324,9 @@ final class OpenGlModel extends ToolkitModel {
         int var18 = 0;
         int var19_int = 0;
         int[] var19 = null;
-        jt var20_ref_jt = null;
+        ModelBillboardAttachment var20_ref_jt = null;
         int var20 = 0;
-        lp var21_ref_lp = null;
+        BillboardDefinition var21_ref_lp = null;
         int var21 = 0;
         TextureMetadata var22_ref_dw = null;
         int var22_int = 0;
@@ -4480,9 +4480,9 @@ final class OpenGlModel extends ToolkitModel {
                   while (var19_int < param1.field_m.length) {
                     var20_ref_jt = param1.field_m[var19_int];
                     stackIn_51_0 = ~var12;
-                    stackIn_51_1 = ~var20_ref_jt.field_a;
+                    stackIn_51_1 = ~var20_ref_jt.faceIndex;
                     if (stackIn_51_0 == stackIn_51_1) {
-                      var21_ref_lp = fw.a(var20_ref_jt.field_d, false);
+                      var21_ref_lp = BillboardDefinitionCache.getDefinition(var20_ref_jt.definitionId, false);
                       if (var21_ref_lp.field_i) {
                         var18 = 1;
                       }
@@ -4561,12 +4561,12 @@ final class OpenGlModel extends ToolkitModel {
             this.field_D = param1.field_B;
             if (param1.field_m != null) {
               this.field_G = param1.field_m.length;
-              this.field_f = new fd[this.field_G];
-              this.field_r = new pm[this.field_G];
+              this.field_f = new OpenGlModelBillboardState[this.field_G];
+              this.field_r = new OpenGlModelBillboard[this.field_G];
               var12 = 0;
               while (var12 < this.field_G) {
                 var13_ref = param1.field_m[var12];
-                var14 = fw.a(((jt) (var13_ref)).field_d, false);
+                var14 = BillboardDefinitionCache.getDefinition(((ModelBillboardAttachment) (var13_ref)).definitionId, false);
                 var15_int = -1;
                 stackIn_148_0 = 0;
                 if (var63 != 0) {
@@ -4575,7 +4575,7 @@ final class OpenGlModel extends ToolkitModel {
                 }
                 var16 = stackIn_148_0;
                 while (this.field_W > var16) {
-                  stackIn_139_0 = ~((jt) (var13_ref)).field_a;
+                  stackIn_139_0 = ~((ModelBillboardAttachment) (var13_ref)).faceIndex;
                   stackIn_139_1 = ~var8[var16];
                   if (stackIn_139_0 == stackIn_139_1) {
                     var15_int = var16;
@@ -4590,17 +4590,17 @@ final class OpenGlModel extends ToolkitModel {
                 if (stackIn_139_0 == stackIn_139_1) {
                   throw new RuntimeException();
                 }
-                var16 = PbufferEntry.field_m[param1.field_A[((jt) (var13_ref)).field_a] & 65535] & 16777215;
+                var16 = PbufferEntry.field_m[param1.field_A[((ModelBillboardAttachment) (var13_ref)).faceIndex] & 65535] & 16777215;
                 stackIn_145_0 = var16;
                 stackIn_145_1 = 255;
                 if (param1.field_n != null) {
-                  stackIn_146_2 = param1.field_n[((jt) (var13_ref)).field_a];
+                  stackIn_146_2 = param1.field_n[((ModelBillboardAttachment) (var13_ref)).faceIndex];
                 } else {
                   stackIn_146_2 = 0;
                 }
                 var16 = stackIn_145_0 | stackIn_145_1 - stackIn_146_2 << 24;
-                this.field_r[var12] = new pm(var15_int, (int) param1.field_a[((jt) (var13_ref)).field_a], (int) param1.field_t[((jt) (var13_ref)).field_a], (int) param1.field_J[((jt) (var13_ref)).field_a], var14.field_d, var14.field_b, var14.field_f, var14.field_c, var14.field_e, var14.field_i, var14.field_a, ((jt) (var13_ref)).field_c);
-                this.field_f[var12] = new fd(var16);
+                this.field_r[var12] = new OpenGlModelBillboard(var15_int, (int) param1.field_a[((ModelBillboardAttachment) (var13_ref)).faceIndex], (int) param1.field_t[((ModelBillboardAttachment) (var13_ref)).faceIndex], (int) param1.field_J[((ModelBillboardAttachment) (var13_ref)).faceIndex], var14.field_d, var14.field_b, var14.field_f, var14.field_c, var14.field_e, var14.field_i, var14.field_a, ((ModelBillboardAttachment) (var13_ref)).field_c);
+                this.field_f[var12] = new OpenGlModelBillboardState(var16);
                 var12++;
               }
             }

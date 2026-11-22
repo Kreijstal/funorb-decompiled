@@ -167,22 +167,22 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             RenderableNode.field_f = (32000 + (var6_int >> 1)) / var6_int;
           }
           sla.field_d = 31 & 1 + sla.field_d;
-          fieldTemp$1 = nsa.field_d;
-          nsa.field_d = nsa.field_d + 1;
+          fieldTemp$1 = SoftwareModelBillboardState.field_d;
+          SoftwareModelBillboardState.field_d = SoftwareModelBillboardState.field_d + 1;
           if (fieldTemp$1 > 50) {
             bsa.field_k = true;
-            nsa.field_d = nsa.field_d - 50;
+            SoftwareModelBillboardState.field_d = SoftwareModelBillboardState.field_d - 50;
             CurveShape.field_l.setSize(mma.field_a, FloatPacketBuffer.field_i);
             CurveShape.field_l.setVisible(true);
             boolean decompiledSharedTail0 = (null != DropdownList.field_x &&
               null == nb.field_d);
             if (!decompiledSharedTail0) {
-              CurveShape.field_l.setLocation(lp.field_g, FallbackShaderEffect.field_f);
+              CurveShape.field_l.setLocation(BillboardDefinition.field_g, FallbackShaderEffect.field_f);
               decompiledSharedTail0 = (TombRacer.field_G);
             }
             if (decompiledSharedTail0) {
               var6 = DropdownList.field_x.getInsets();
-              CurveShape.field_l.setLocation(lp.field_g + var6.left, var6.top + FallbackShaderEffect.field_f);
+              CurveShape.field_l.setLocation(BillboardDefinition.field_g + var6.left, var6.top + FallbackShaderEffect.field_f);
             }
           }
           this.draw(0);
@@ -759,7 +759,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               mma.field_a = param2;
               ConsoleEvaluationException.field_a = param2;
               RotaterMountComponent.field_L = param4;
-              lp.field_g = 0;
+              BillboardDefinition.field_g = 0;
               if (param0) {
                 this.paint((java.awt.Graphics) null);
               }
@@ -873,12 +873,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           boolean decompiledSharedTail0 = (DropdownList.field_x == var2);
           if (!decompiledSharedTail0) {
-            CurveShape.field_l.setLocation(lp.field_g, FallbackShaderEffect.field_f);
+            CurveShape.field_l.setLocation(BillboardDefinition.field_g, FallbackShaderEffect.field_f);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = DropdownList.field_x.getInsets();
-            CurveShape.field_l.setLocation(var3.left + lp.field_g, var3.top + FallbackShaderEffect.field_f);
+            CurveShape.field_l.setLocation(var3.left + BillboardDefinition.field_g, var3.top + FallbackShaderEffect.field_f);
           }
           CurveShape.field_l.addFocusListener((java.awt.event.FocusListener) (this));
           CurveShape.field_l.requestFocus();

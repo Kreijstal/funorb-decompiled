@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lp {
+final class BillboardDefinition {
     int field_b;
     boolean field_a;
     int field_d;
@@ -147,7 +147,7 @@ final class lp {
           if (param2 < -121) {
             return;
           }
-          lp.releaseStatics((byte) -38);
+          BillboardDefinition.releaseStatics((byte) -38);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,7 +172,7 @@ final class lp {
         field_h = null;
     }
 
-    lp() {
+    BillboardDefinition() {
         this.field_e = 2;
         this.field_a = false;
         this.field_i = false;

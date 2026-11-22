@@ -58,7 +58,7 @@ final class LoginMethod {
             LoginMethod.a(-36, -84, -86, 3, 107, 83);
           }
           if (LineShape.field_h >= param2) {
-            if (gca.field_d > param3) {
+            if (HardwareModelBillboardState.field_d > param3) {
               return;
             }
             if (param1 < pka.field_b) {
@@ -83,8 +83,8 @@ final class LoginMethod {
                 var7 = 0;
               }
             }
-            if (param2 < gca.field_d) {
-              param2 = gca.field_d;
+            if (param2 < HardwareModelBillboardState.field_d) {
+              param2 = HardwareModelBillboardState.field_d;
             } else {
               incrementValue$0 = param2;
               param2++;

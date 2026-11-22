@@ -1065,7 +1065,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         return (RenderTarget) ((Object) new SoftwareRenderTarget(this, (ToolkitSprite) (param0), (SoftwareDepthBuffer) (param1)));
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void drawBillboard(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         ToolkitSprite var11;
         int[] var12;
         int var13;

@@ -713,7 +713,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -103, "tab_hidechattemporarily");
                 if (null != var2) {
-                  fw.field_a = jaa.decodeText((byte) 51, var2);
+                  BillboardDefinitionCache.field_a = jaa.decodeText((byte) 51, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -119, "esc_cancelprivatemessage");
                 if (null != var2) {
@@ -1443,7 +1443,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -102, "create_more_suggestions");
                 if (null != var2) {
-                  ll.field_h = jaa.decodeText((byte) 53, var2);
+                  HardwareModelBillboard.field_h = jaa.decodeText((byte) 53, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -114, "create_select_alternative");
                 if (var2 != null) {
