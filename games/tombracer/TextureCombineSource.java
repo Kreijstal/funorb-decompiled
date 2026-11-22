@@ -213,7 +213,7 @@ final class TextureCombineSource {
         }
     }
 
-    final static void a(byte param0) {
+    final static void drawFullscreenDialogContents(byte param0) {
         int var3 = 0;
         int stackIn_19_0 = 0;
         String stackIn_24_0 = null;
@@ -222,7 +222,7 @@ final class TextureCombineSource {
         int stackIn_39_0 = 0;
         String stackIn_39_1 = null;
         boolean stackIn_40_2 = false;
-        apa stackIn_45_0 = null;
+        NineSliceFrame stackIn_45_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -233,7 +233,7 @@ final class TextureCombineSource {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        apa var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -241,7 +241,7 @@ final class TextureCombineSource {
         try {
           var1_int = AccountServiceResult.field_d;
           if (param0 != -83) {
-            TextureCombineSource.a((byte) -23);
+            TextureCombineSource.drawFullscreenDialogContents((byte) -23);
           }
           var2 = 0;
           if (mq.field_a == 2) {
@@ -302,7 +302,7 @@ final class TextureCombineSource {
             stackIn_39_0 = -116;
             stackIn_39_1 = var6;
             stackIn_40_2 = !(var4 < 0);
-            var7Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var7Lifetime1 = PathMoveLocomotor.measureStringWidthWithIntGuard(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = ega.field_c - (var7Lifetime1 >> 1);
             if (0 <= var4) {
               if (var4 == FacePointLocomotor.field_r.selectedIndex) {

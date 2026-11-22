@@ -282,7 +282,7 @@ final class mp {
             !DropdownButtonPainter.field_g) {
             return;
           }
-          apa.field_c = new DateOfBirthPanel(0, 0, 0, 0);
+          NineSliceFrame.field_c = new DateOfBirthPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

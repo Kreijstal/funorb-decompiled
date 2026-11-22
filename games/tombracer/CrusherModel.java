@@ -54,9 +54,9 @@ final class CrusherModel extends TrapModel {
           !(param0 <= ItemBehaviour.field_p.length)) {
           ItemBehaviour.field_p = new int[param0 * 2];
         }
-        if (null == jk.field_h ||
-          !(param0 <= jk.field_h.length)) {
-          jk.field_h = new int[param0 * 2];
+        if (null == MidiNoteUsageNode.field_h ||
+          !(param0 <= MidiNoteUsageNode.field_h.length)) {
+          MidiNoteUsageNode.field_h = new int[param0 * 2];
         }
         if (DamageableBehaviour.field_o == null) {
           DamageableBehaviour.field_o = new int[param0 * 2];

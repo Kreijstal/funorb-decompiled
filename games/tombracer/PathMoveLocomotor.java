@@ -387,7 +387,7 @@ final class PathMoveLocomotor extends Locomotor {
         field_q = null;
         if (param0 > -101) {
           String var2 = (String) null;
-          PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-4, (String) null, false);
+          PathMoveLocomotor.measureStringWidthWithIntGuard(-4, (String) null, false);
         }
     }
 
@@ -420,7 +420,7 @@ final class PathMoveLocomotor extends Locomotor {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$590e95718a07(int param0, String param1, boolean param2) {
+    final static int measureStringWidthWithIntGuard(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;

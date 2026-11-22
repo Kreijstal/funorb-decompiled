@@ -765,7 +765,7 @@ final class TextResourceLoader extends BillboardSpriteData {
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) -67, "rated_membersonly");
                 if (var2 != null) {
-                  jk.field_i = BitPackedColour.decodeText((byte) 75, var2);
+                  MidiNoteUsageNode.field_i = BitPackedColour.decodeText((byte) 75, var2);
                 }
                 var2 = TextureCoordinateGeneration.loadFile((byte) 116, "gameopt_membersonly");
                 if (null != var2) {

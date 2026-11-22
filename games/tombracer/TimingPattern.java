@@ -15,7 +15,7 @@ final class TimingPattern {
     private boolean toggled;
     static int[] field_e;
 
-    final static int a(int param0) {
+    final static int getFullscreenDialogHeight(int param0) {
         if (param0 >= -41) {
           field_h = (int[]) null;
         }
@@ -75,7 +75,7 @@ final class TimingPattern {
         int var3 = TombRacer.field_G ? 1 : 0;
         this.toggled = false;
         if (param0 != 0) {
-          TimingPattern.a(-118);
+          TimingPattern.getFullscreenDialogHeight(-118);
         }
         if (this.field_d) {
           this.field_d = false;
@@ -112,7 +112,7 @@ final class TimingPattern {
           return 0;
         }
         if (param0 != -94) {
-          TimingPattern.a(44);
+          TimingPattern.getFullscreenDialogHeight(44);
         }
         return GameApplet.sum(param0 + 104, this.durations);
     }

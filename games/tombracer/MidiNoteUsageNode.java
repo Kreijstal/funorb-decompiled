@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jk extends IntrusiveNode {
+final class MidiNoteUsageNode extends IntrusiveNode {
     static String field_i;
     static int[] field_h;
     byte[] field_f;
@@ -12,7 +12,7 @@ final class jk extends IntrusiveNode {
     final static IntrusiveDeque createConsoleMethods(byte param0) {
         IntrusiveDeque var1 = new IntrusiveDeque();
         if (param0 != 122) {
-          jk.createConsoleMethods((byte) 64);
+          MidiNoteUsageNode.createConsoleMethods((byte) 64);
         }
         var1.addLast((byte) -117, new LoadLevelCommand("load", new Class[]{String.class}, "Run a test level from the freelevels directory."));
         var1.addLast((byte) -47, new HelloCommand("hello", new Class[]{}, "Be friendly."));
@@ -36,7 +36,7 @@ final class jk extends IntrusiveNode {
         field_g = null;
     }
 
-    final static int a(byte param0, BitSet param1, boolean param2) {
+    final static int getUnmarkedRoomWindowMaxKey(byte param0, BitSet param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         RoomDefinition[] var5 = null;
@@ -97,13 +97,13 @@ final class jk extends IntrusiveNode {
     final static void setFakeLag(int param0, int param1) {
         if (param1 != 0) {
           BitSet var3 = (BitSet) null;
-          jk.$cfr$intArgs$a$922851b022bc(69, (BitSet) null, true);
+          MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(69, (BitSet) null, true);
         }
         int var2 = param0;
         ChatTarget.a(var2, IntNode.field_h, -1, var2, RotaterMountComponent.field_J);
     }
 
-    jk(byte[] param0) {
+    MidiNoteUsageNode(byte[] param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -116,7 +116,7 @@ final class jk extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$922851b022bc(int param0, BitSet param1, boolean param2) {
+    final static int getUnmarkedRoomWindowMaxKeyWithIntGuard(int param0, BitSet param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         RoomDefinition[] var5 = null;

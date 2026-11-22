@@ -140,7 +140,7 @@ final class ala extends GameScreen {
               du.field_g = false;
             }
             if (RatingsScreen.field_s) {
-              ClampOperator.showCentredMessage(jk.field_i, 15165);
+              ClampOperator.showCentredMessage(MidiNoteUsageNode.field_i, 15165);
               RatingsScreen.field_s = false;
             }
             return;
@@ -180,7 +180,7 @@ final class ala extends GameScreen {
           du.field_g = false;
         }
         if (RatingsScreen.field_s) {
-          ClampOperator.showCentredMessage(jk.field_i, 15165);
+          ClampOperator.showCentredMessage(MidiNoteUsageNode.field_i, 15165);
           RatingsScreen.field_s = false;
         }
     }

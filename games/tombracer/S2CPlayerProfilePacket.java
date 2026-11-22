@@ -3,7 +3,7 @@
  */
 final class S2CPlayerProfilePacket implements GamePacket {
     private PlayerProfile profile;
-    static apa field_b;
+    static NineSliceFrame field_b;
 
     public final void encode(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
@@ -56,7 +56,7 @@ final class S2CPlayerProfilePacket implements GamePacket {
           this.profile = new PlayerProfile();
           this.profile.decode(param0, (byte) 122);
           if (param1 != -19) {
-            field_b = (apa) null;
+            field_b = (NineSliceFrame) null;
           }
         } catch (RuntimeException runtimeException) {
           throw MonochromeRowCacheEntry.wrapException((Throwable) ((Object) runtimeException), "aoa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

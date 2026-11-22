@@ -239,7 +239,7 @@ final class LevelSelectOverlay implements ShellListener {
             stackIn_18_0 = 22;
             stackIn_18_1 = ComponentTargetList.field_e;
             stackIn_19_2 = !(MultiplayerLoginMenu.b(false));
-            var4Lifetime1 = jk.$cfr$intArgs$a$922851b022bc(stackIn_18_0, stackIn_18_1, stackIn_19_2);
+            var4Lifetime1 = MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(stackIn_18_0, stackIn_18_1, stackIn_19_2);
             if (param0 != 1) {
               this.field_b = (int[]) null;
             }

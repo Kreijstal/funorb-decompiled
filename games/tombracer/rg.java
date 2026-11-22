@@ -174,13 +174,13 @@ final class rg extends SingleChildWidget {
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, DialogButtonPainter.field_u, PitModel.field_r};
           HazardEffect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
-          HazardEffect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, MidiPatchEnvelope.field_e};
+          HazardEffect.field_h[6] = new String[]{NineSliceFrame.field_b, SoftwareTransform3D.field_k, MidiPatchEnvelope.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
           IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, OpenGlTexture3D.field_m, LegacyOpenGlCubeTexture.field_n};
           HazardEffect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, nea.field_b, gga.field_L};
           HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
-          HazardEffect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
+          HazardEffect.field_h[9] = new String[]{FullscreenDialogLayout.field_a, MenuScreen.field_h, PrefabComponent.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
           HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
           return;
@@ -226,13 +226,13 @@ final class rg extends SingleChildWidget {
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, DialogButtonPainter.field_u, PitModel.field_r};
         HazardEffect.field_h[5] = new String[]{TreasureValuesOverlay.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
-        HazardEffect.field_h[6] = new String[]{apa.field_b, SoftwareTransform3D.field_k, MidiPatchEnvelope.field_e};
+        HazardEffect.field_h[6] = new String[]{NineSliceFrame.field_b, SoftwareTransform3D.field_k, MidiPatchEnvelope.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
         IntrusiveDeque.field_d[8] = new String[]{LegacyOpenGlBloomEffect.field_u, OpenGlTexture3D.field_m, LegacyOpenGlCubeTexture.field_n};
         HazardEffect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{DialogButtonPainter.field_n, nea.field_b, gga.field_L};
         HazardEffect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
-        HazardEffect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
+        HazardEffect.field_h[9] = new String[]{FullscreenDialogLayout.field_a, MenuScreen.field_h, PrefabComponent.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, GridWidgetContainer.field_H};
         HazardEffect.field_h[10] = new String[]{ViewportManager.field_a, IntPoint.field_c, LargeByteArrayPoolStorage.field_b};
     }

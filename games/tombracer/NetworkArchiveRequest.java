@@ -7,7 +7,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     static boolean[] field_n;
     int field_s;
     static String field_o;
-    static apa field_t;
+    static NineSliceFrame field_t;
     byte field_q;
 
     final byte[] getBytes(byte param0) {

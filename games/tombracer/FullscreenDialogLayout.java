@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qna {
+final class FullscreenDialogLayout {
     static UiComponent field_b;
     static String field_a;
     static String field_c;
@@ -11,7 +11,7 @@ final class qna {
         field_a = null;
         field_c = null;
         if (param0 != -2) {
-          qna.releaseStatics(-51);
+          FullscreenDialogLayout.releaseStatics(-51);
         }
     }
 
@@ -249,7 +249,7 @@ final class qna {
             stackIn_88_0 = -116;
             stackIn_88_1 = DefaultTileRenderable.field_g[var4Lifetime1];
             stackIn_89_2 = !(CoinItemComponent.field_H[var4Lifetime1] < 0);
-            var5Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            var5Lifetime1 = PathMoveLocomotor.measureStringWidthWithIntGuard(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -259,7 +259,7 @@ final class qna {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, var11, false);
+              var7Lifetime1 = PathMoveLocomotor.measureStringWidthWithIntGuard(-116, var11, false);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -267,7 +267,7 @@ final class qna {
             var4_ref_String__Lifetime1 = ToggleMusicChannelCommand.field_o;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, var12, false);
+              var7Lifetime1Lifetime1 = PathMoveLocomotor.measureStringWidthWithIntGuard(-116, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -289,13 +289,13 @@ final class qna {
           TripBeamComponent.field_K = new int[DefaultTileRenderable.field_g.length][];
           var4Lifetime3 = 0;
           if (param0 != 1) {
-            qna.buildFullscreenDialog(-17, true, 122);
+            FullscreenDialogLayout.buildFullscreenDialog(-17, true, 122);
           }
           var5Lifetime3 = AccountServiceResult.field_d;
           while (var4Lifetime3 < DefaultTileRenderable.field_g.length) {
             var6Lifetime1 = CoinItemComponent.field_H[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, DefaultTileRenderable.field_g[var4Lifetime3], true);
+              var7Lifetime2 = PathMoveLocomotor.measureStringWidthWithIntGuard(-116, DefaultTileRenderable.field_g[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + ValidationStatusIcon.field_C;
               var8Lifetime1 = ega.field_c - (var7Lifetime2 >> 1);
               TripBeamComponent.field_K[var4Lifetime3] = new int[4];

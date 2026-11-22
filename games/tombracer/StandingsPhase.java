@@ -244,7 +244,7 @@ final class StandingsPhase extends MatchPhase {
                 var13_ref_String = uaa.field_d;
               }
               if (C2SActionPacket.field_j == 2) {
-                var13_ref_String = qna.field_c;
+                var13_ref_String = FullscreenDialogLayout.field_c;
                 var12_ref = VariantMask.field_d;
               }
               if (C2SActionPacket.field_j == 1) {

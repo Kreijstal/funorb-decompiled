@@ -1104,7 +1104,7 @@ class MidiPcmStream extends PcmStream {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        jk var8 = null;
+        MidiNoteUsageNode var8 = null;
         int var9 = 0;
         MidiPatch var10 = null;
         int var11 = 0;
@@ -1116,7 +1116,7 @@ class MidiPcmStream extends PcmStream {
           if (0 < param0) {
             var7 = new int[]{param0};
           }
-          var8 = (jk) (param1.field_f.firstWithKey(param4));
+          var8 = (MidiNoteUsageNode) (param1.field_f.firstWithKey(param4));
           scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.key;
@@ -1137,7 +1137,7 @@ class MidiPcmStream extends PcmStream {
                   (!var10.loadSamples(param4 - 5853, var8.field_f, param3, (int[]) (var7)))) {
                   var6_int = 0;
                 }
-                var8 = (jk) (param1.field_f.nextWithKey(param4 ^ 20806));
+                var8 = (MidiNoteUsageNode) (param1.field_f.nextWithKey(param4 ^ 20806));
                 continue;
               }
             } else {

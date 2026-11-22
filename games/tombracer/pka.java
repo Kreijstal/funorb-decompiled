@@ -108,7 +108,7 @@ final class pka {
           return var1 != 0;
         }
         var1 = 1;
-        TurbulenceNoise3D.d(-1226152383);
+        TurbulenceNoise3D.drawFullscreenDialog(-1226152383);
         if (PlayPhase.beginReconnectGracePeriod(89)) {
           if (GpuDataType.a((byte) -87)) {
             if (!MessagePage.a(125)) {

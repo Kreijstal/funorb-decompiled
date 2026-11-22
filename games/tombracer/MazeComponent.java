@@ -321,7 +321,7 @@ abstract class MazeComponent extends PrefabComponent {
           if (var4 > 40) {
             var4 = 40;
           }
-          qna.field_b.setBounds(-5 + (C2SSubmitSettingsPacket.field_g.field_G - 5), var4, -23776, 5, 5);
+          FullscreenDialogLayout.field_b.setBounds(-5 + (C2SSubmitSettingsPacket.field_g.field_G - 5), var4, -23776, 5, 5);
           var5 = 7 + var4;
           for (var6 = 0; ColourRowCache.field_b + 4 > var6; var6++) {
             if ((var6 != 1 ||

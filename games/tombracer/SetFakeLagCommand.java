@@ -12,7 +12,7 @@ final class SetFakeLagCommand extends ConsoleMethod {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jk.setFakeLag(param0[param1].asInt(-178), 0);
+          MidiNoteUsageNode.setFakeLag(param0[param1].asInt(-178), 0);
           stackIn_1_0 = new ConsoleValue("void");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

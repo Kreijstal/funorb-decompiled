@@ -191,7 +191,7 @@ final class ck {
           bc.field_b = new UiComponent(0L, ClipStack.field_g, OpenGlSprite.field_k.toUpperCase());
           StatusEffect.field_g = new UiComponent(0L, CharacterSelectPhase.field_s);
           C2SSubmitSettingsPacket.field_g = new UiComponent(0L, CommonChooseReward.field_c);
-          qna.field_b = new UiComponent(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
+          FullscreenDialogLayout.field_b = new UiComponent(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
           SimpleConditionBehaviour.field_p = new UiComponent[param0 + 4];
           SoftwareRenderTarget.field_b = new ContextMenuRow[4 + param0][];
           SimpleConditionBehaviour.field_p[0] = new UiComponent(0L, GpuDataType.field_j, RoomViewRenderer.field_a);
@@ -327,7 +327,7 @@ final class ck {
           MouseWheelFactory.field_b = new UiComponent(0L, (UiComponent) null);
           MouseWheelFactory.field_b.addChild(param11 ^ -25373, StatusEffect.field_g);
           MouseWheelFactory.field_b.addChild(-128, C2SSubmitSettingsPacket.field_g);
-          C2SSubmitSettingsPacket.field_g.addChild(-122, qna.field_b);
+          C2SSubmitSettingsPacket.field_g.addChild(-122, FullscreenDialogLayout.field_b);
           var18Lifetime1 = 0;
           while (var18Lifetime1 < 4 + param0) {
             if (var21 != 0) {

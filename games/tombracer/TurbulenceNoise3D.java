@@ -59,16 +59,16 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
         this.accumulatedQ12 = 0;
     }
 
-    final static void d(int param0) {
-        int var1 = qd.a((byte) 82);
-        int var2 = TimingPattern.a(-62);
+    final static void drawFullscreenDialog(int param0) {
+        int var1 = qd.getFullscreenDialogWidth((byte) 82);
+        int var2 = TimingPattern.getFullscreenDialogHeight(-62);
         NetworkArchiveRequest.field_t.drawFrame((byte) 57, var1 + (PathMoveLocomotor.field_p << 1), -lsa.field_b + AccountServiceResult.field_d, FurnitureModel.field_o - PathMoveLocomotor.field_p, (lsa.field_b << 1) + var2);
         if (param0 == -1226152383) {
-          TextureCombineSource.a((byte) -83);
+          TextureCombineSource.drawFullscreenDialogContents((byte) -83);
           return;
         }
-        TurbulenceNoise3D.d(-112);
-        TextureCombineSource.a((byte) -83);
+        TurbulenceNoise3D.drawFullscreenDialog(-112);
+        TextureCombineSource.drawFullscreenDialogContents((byte) -83);
     }
 
     public static void releaseStatics(int param0) {

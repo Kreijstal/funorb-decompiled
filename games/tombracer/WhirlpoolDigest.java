@@ -253,7 +253,7 @@ final class WhirlpoolDigest {
             while (var8 > var9) {
               var11 = BlockModel.field_n[var9];
               var6[0][var10] = bra.field_M[var11];
-              var7[0][4 * var10] = jk.field_h[var11];
+              var7[0][4 * var10] = MidiNoteUsageNode.field_h[var11];
               var7[0][1 + 4 * var10] = DamageableBehaviour.field_o[var11];
               var7[0][2 + 4 * var10] = MidiPatchEnvelope.field_h[var11];
               var7[0][var10 * 4 + 3] = PortalBehaviour.field_o[var11];
@@ -271,7 +271,7 @@ final class WhirlpoolDigest {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = BlockModel.field_n[var5 + var9Lifetime1];
               var6[1][var13] = bra.field_M[var11Lifetime1];
-              var7[1][4 * var13] = jk.field_h[var11Lifetime1];
+              var7[1][4 * var13] = MidiNoteUsageNode.field_h[var11Lifetime1];
               var7[1][1 + var13 * 4] = DamageableBehaviour.field_o[var11Lifetime1];
               var7[1][4 * var13 + 2] = MidiPatchEnvelope.field_h[var11Lifetime1];
               var7[1][3 + 4 * var13] = PortalBehaviour.field_o[var11Lifetime1];

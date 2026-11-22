@@ -4,7 +4,7 @@
 final class qd {
     static IntrusiveDeque field_a;
 
-    final static int a(byte param0) {
+    final static int getFullscreenDialogWidth(byte param0) {
         if (param0 < 9) {
           return 95;
         }

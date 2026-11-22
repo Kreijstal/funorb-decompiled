@@ -425,7 +425,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0"
+      "renamedSymbol": "B:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#0"
     },
     {
       "symbol": "B:jk.a(BLjava/util/BitSet;Z)I#0",
@@ -433,7 +433,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:jk.a(BLjava/util/BitSet;Z)I#0"
+      "renamedSymbol": "B:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#0"
     },
     {
       "symbol": "B:js.b(I)V#0",
@@ -1058,6 +1058,14 @@
       "evidence": "GamePacket writing a 4-bit character id; CharacterSelectPhase sends it through MatchProtocol.sendCharacterChoice.",
       "confidence": "reviewed",
       "renamedSymbol": "C:C2SChooseCharacterPacket"
+    },
+    {
+      "symbol": "C:apa",
+      "originalName": "apa",
+      "to": "NineSliceFrame",
+      "evidence": "Complete instance state, private throwing constructor, drawFrame and paired string-width bodies reviewed. Sole instance Sprite[] is forwarded to existing drawNineSlice; used for outer/dialog/button frames. Preserve unreachable constructor behavior, wrong-guard helper call, and unrelated static globals.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NineSliceFrame"
     },
     {
       "symbol": "C:aq",
@@ -3724,6 +3732,14 @@
       "renamedSymbol": "C:OpenGlSprite"
     },
     {
+      "symbol": "C:jk",
+      "originalName": "jk",
+      "to": "MidiNoteUsageNode",
+      "evidence": "Complete class/sole instance byte[] field/constructor reviewed, with MusicTrack.buildPatchUsage and MidiPcmStream patch-loading consumers. Intrusive node keyed by patch stores128 per-note usage flags: note-on events mark note index, loadSamples consumes mask. Preserve direct array alias, constructor exception wrapping and all unrelated console/UI/static helpers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MidiNoteUsageNode"
+    },
+    {
       "symbol": "C:jka",
       "originalName": "jka",
       "to": "DragListener",
@@ -5922,6 +5938,14 @@
       "evidence": "TextureProvider that decodes ProceduralTextures from an archive, caches them and renders their pixels.",
       "confidence": "reviewed",
       "renamedSymbol": "C:ProceduralTextureProvider"
+    },
+    {
+      "symbol": "C:qna",
+      "originalName": "qna",
+      "to": "FullscreenDialogLayout",
+      "evidence": "Complete utility class reviewed: dominant buildFullscreenDialog implementation creates mode-dependent dialog text/selection rows, measures text, computes centered left/right/top/content height, button rectangles, timed confirmation variants and initial selection. Three unrelated static text/component globals and cleanup remain unchanged. Full dialog layout and draw/getter consumers reviewed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FullscreenDialogLayout"
     },
     {
       "symbol": "C:qo",
@@ -16716,12 +16740,20 @@
       "renamedSymbol": "M:C2SChooseCharacterPacket.decode(LBitPacketBuffer;B)V"
     },
     {
+      "symbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
+      "originalName": "$cfr$intArgs$a$62abead39cee",
+      "to": "measureStringWidthWithIntGuard",
+      "evidence": "Complete int-argument helper and meaningful narrow measureStringWidth reviewed: selects one of two fonts, wrong int guard clears String. Preserve int domain, source argument order, helper exception wrapper and existing narrow method name.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I"
+    },
+    {
       "symbol": "M:apa.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:apa.releaseStatics(B)V"
+      "renamedSymbol": "M:NineSliceFrame.releaseStatics(B)V"
     },
     {
       "symbol": "M:apa.a(BIIII)V",
@@ -16729,7 +16761,7 @@
       "to": "drawFrame",
       "evidence": "Draws the widget's nine-slice frame sprites at the given bounds.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:apa.drawFrame(BIIII)V"
+      "renamedSymbol": "M:NineSliceFrame.drawFrame(BIIII)V"
     },
     {
       "symbol": "M:apa.a(BZLjava/lang/String;)I",
@@ -16737,7 +16769,7 @@
       "to": "measureStringWidth",
       "evidence": "Returns stringWidth of the text in one of two fonts chosen by the boolean.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:apa.measureStringWidth(BZLjava/lang/String;)I"
+      "renamedSymbol": "M:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I"
     },
     {
       "symbol": "M:aq.a(I)I",
@@ -19604,6 +19636,14 @@
       "renamedSymbol": "M:HardwareFont.drawGlyph(CIIIZ)V"
     },
     {
+      "symbol": "M:caa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete generic helper declaration/body and checked-exception throw consumers reviewed. Private static<T extends Throwable> RuntimeException helper throws the original (T)Throwable. Preserve generic throws T, SuppressWarnings, original Throwable identity, null/exception behavior and explicit type arguments at call sites; do not wrap or convert exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UrlDownloadRequest.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
       "symbol": "M:caa.a(B)V",
       "originalName": "a",
       "to": "startTutorial",
@@ -20370,6 +20410,14 @@
       "evidence": "TombRacer.clearAllStatics clears the class's static references through it.",
       "confidence": "reviewed",
       "renamedSymbol": "M:cga.releaseStatics(Z)V"
+    },
+    {
+      "symbol": "M:ch.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete generic helper declaration/body and checked-exception throw consumers reviewed. Private static<T extends Throwable> RuntimeException helper throws the original (T)Throwable. Preserve generic throws T, SuppressWarnings, original Throwable identity, null/exception behavior and explicit type arguments at call sites; do not wrap or convert exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AudioOutputThread.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:ch.a(B)V",
@@ -32148,6 +32196,14 @@
       "renamedSymbol": "M:S2CRoundDeadlinePacket.releaseStatics(Z)V"
     },
     {
+      "symbol": "M:fp.a(B)V",
+      "originalName": "a",
+      "to": "drawFullscreenDialogContents",
+      "evidence": "Complete content painter and qna builder reviewed: walks text/action rows, selection colors, button frames, font rendering, centered widths and timed countdown/replacement rows. Preserve clock arithmetic, fallback branches, wrapping, guard recursion, row order and dimensions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextureCombineSource.drawFullscreenDialogContents(B)V"
+    },
+    {
       "symbol": "M:fp.a(I)V",
       "originalName": "a",
       "to": "startMenuBackgroundDemo",
@@ -42924,12 +42980,28 @@
       "renamedSymbol": "M:OpenGlSprite.paddedWidth()I"
     },
     {
+      "symbol": "M:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I",
+      "originalName": "$cfr$intArgs$a$922851b022bc",
+      "to": "getUnmarkedRoomWindowMaxKeyWithIntGuard",
+      "evidence": "Complete narrow and int helper bodies reviewed with room-list producer and overlay consumer. Same first-ten unmarked-room maximum-key algorithm, int guard22 else-122. Preserve int versus byte domains, iteration order, membership filter, null/BitSet access and wrapping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I"
+    },
+    {
       "symbol": "M:jk.a(B)Lvna;",
       "originalName": "a",
       "to": "createConsoleMethods",
       "evidence": "Builds the deque of console commands: load, hello, banner, showLevelSet, setFakeLag and the music commands.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:jk.createConsoleMethods(B)LIntrusiveDeque;"
+      "renamedSymbol": "M:MidiNoteUsageNode.createConsoleMethods(B)LIntrusiveDeque;"
+    },
+    {
+      "symbol": "M:jk.a(BLjava/util/BitSet;Z)I",
+      "originalName": "a",
+      "to": "getUnmarkedRoomWindowMaxKey",
+      "evidence": "Complete narrow and generated int bodies, CourseDefinition main-room producer and LevelSelectOverlay consumer reviewed. Scans main rooms, includes members rooms only when flag true, ignores marked room keys, returns maximum key among first ten eligible unmarked rooms or-1; wrong byte guard22 returns-122. Preserve iteration order, global break flag, null behavior and wrapping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I"
     },
     {
       "symbol": "M:jk.a(II)V",
@@ -42937,7 +43009,7 @@
       "to": "setFakeLag",
       "evidence": "Applies the fake network lag value; SetFakeLagCommand calls it.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:jk.setFakeLag(II)V"
+      "renamedSymbol": "M:MidiNoteUsageNode.setFakeLag(II)V"
     },
     {
       "symbol": "M:jk.b(B)V",
@@ -42945,7 +43017,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:jk.releaseStatics(B)V"
+      "renamedSymbol": "M:MidiNoteUsageNode.releaseStatics(B)V"
     },
     {
       "symbol": "M:jka.a(ILvp;BI)V",
@@ -51556,6 +51628,14 @@
       "renamedSymbol": "M:TimingPattern.hasAnyMask34(BII)Z"
     },
     {
+      "symbol": "M:mg.a(I)I",
+      "originalName": "a",
+      "to": "getFullscreenDialogHeight",
+      "evidence": "Complete body and layout/frame consumer reviewed: returns HardwareModelVertexStream.field_f, calculated as summed dialog row/button heights; preserve guard>=-41 clearing unrelated static int[].",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TimingPattern.getFullscreenDialogHeight(I)I"
+    },
+    {
       "symbol": "M:mg.a(ILkh;)V",
       "originalName": "a",
       "to": "encode",
@@ -57108,6 +57188,14 @@
       "renamedSymbol": "M:TurbulenceNoise3D.finishVoxel(I)V"
     },
     {
+      "symbol": "M:or.d(I)V",
+      "originalName": "d",
+      "to": "drawFullscreenDialog",
+      "evidence": "Complete body reviewed: computes dialog width/height, draws padded outer frame at layout bounds, then calls content painter. Preserve exact wrong-guard recursive call and ordering of the second content draw after recursion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TurbulenceNoise3D.drawFullscreenDialog(I)V"
+    },
+    {
       "symbol": "M:or.e(I)V",
       "originalName": "e",
       "to": "releaseStatics",
@@ -60004,6 +60092,14 @@
       "renamedSymbol": "M:OpenGlShaderProgram.hasNonZeroEntry(B[I)Z"
     },
     {
+      "symbol": "M:qd.a(B)I",
+      "originalName": "a",
+      "to": "getFullscreenDialogWidth",
+      "evidence": "Complete body and qna.buildFullscreenDialog/TurbulenceNoise3D frame draw consumer reviewed: right bound tia.field_a minus left FurnitureModel.field_o supplies dialog frame width. Preserve byte guard<9 returning95.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:qd.getFullscreenDialogWidth(B)I"
+    },
+    {
       "symbol": "M:qd.a(I)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -61641,7 +61737,7 @@
       "to": "releaseStatics",
       "evidence": "TombRacer.clearAllStatics calls it; its body only sets static fields of this class to null.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qna.releaseStatics(I)V"
+      "renamedSymbol": "M:FullscreenDialogLayout.releaseStatics(I)V"
     },
     {
       "symbol": "M:qna.a(IZI)V",
@@ -61649,7 +61745,7 @@
       "to": "buildFullscreenDialog",
       "evidence": "Builds the fullscreen/display-mode dialog widgets, matching the fullscreen dialog builder of brickabrac.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qna.buildFullscreenDialog(IZI)V"
+      "renamedSymbol": "M:FullscreenDialogLayout.buildFullscreenDialog(IZI)V"
     },
     {
       "symbol": "M:qo.a(BII)V",
@@ -63930,6 +64026,14 @@
       "evidence": "Returns a copy of the first n shorts.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ListChannelsCommand.copyShorts([SZI)[S"
+    },
+    {
+      "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+      "originalName": "$cfr$intArgs$a$590e95718a07",
+      "to": "measureStringWidthWithIntGuard",
+      "evidence": "Complete generated int-argument helper and existing meaningful narrow measureStringWidth(byte,String,boolean) reviewed: int guard-116 else51, selects dialog normal/button font stringWidth. Retain original narrow method name and int/byte argument domains; no narrowing or merging overloads.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I"
     },
     {
       "symbol": "M:ro.a(BI)V",
@@ -66946,6 +67050,14 @@
       "evidence": "Queues a write of group data to a cache file. Body matches reference CacheIoWorker (writeAsync).",
       "confidence": "reviewed",
       "renamedSymbol": "M:DiskCacheWorker.writeAsync(ZILSectorCacheStore;[B)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:ssa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "originalName": "$cfr$sneakyThrow",
+      "to": "throwUnchecked",
+      "evidence": "Complete generic helper declaration/body and checked-exception throw consumers reviewed. Private static<T extends Throwable> RuntimeException helper throws the original (T)Throwable. Preserve generic throws T, SuppressWarnings, original Throwable identity, null/exception behavior and explicit type arguments at call sites; do not wrap or convert exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ClipStack.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
     },
     {
       "symbol": "M:ssa.a(I)V",
@@ -78099,7 +78211,7 @@
     },
     {
       "symbol": "B:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0",
-      "renamedSymbol": "B:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0",
+      "renamedSymbol": "B:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#0",
       "originalName": "L1",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -78110,7 +78222,7 @@
     },
     {
       "symbol": "B:jk.a(BLjava/util/BitSet;Z)I#0",
-      "renamedSymbol": "B:jk.a(BLjava/util/BitSet;Z)I#0",
+      "renamedSymbol": "B:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#0",
       "originalName": "L1",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -79023,9 +79135,9 @@
     },
     {
       "symbol": "C:apa",
-      "renamedSymbol": "C:apa",
+      "renamedSymbol": "C:NineSliceFrame",
       "originalName": "apa",
-      "renamedName": "apa",
+      "renamedName": "NineSliceFrame",
       "declaration": {
         "file": "apa.java",
         "start": 50,
@@ -83852,9 +83964,9 @@
     },
     {
       "symbol": "C:jk",
-      "renamedSymbol": "C:jk",
+      "renamedSymbol": "C:MidiNoteUsageNode",
       "originalName": "jk",
-      "renamedName": "jk",
+      "renamedName": "MidiNoteUsageNode",
       "declaration": {
         "file": "jk.java",
         "start": 71,
@@ -87471,9 +87583,9 @@
     },
     {
       "symbol": "C:qna",
-      "renamedSymbol": "C:qna",
+      "renamedSymbol": "C:FullscreenDialogLayout",
       "originalName": "qna",
-      "renamedName": "qna",
+      "renamedName": "FullscreenDialogLayout",
       "declaration": {
         "file": "qna.java",
         "start": 50,
@@ -93136,7 +93248,7 @@
     },
     {
       "symbol": "F:aoa.field_b:Lapa;",
-      "renamedSymbol": "F:S2CPlayerProfilePacket.field_b:Lapa;",
+      "renamedSymbol": "F:S2CPlayerProfilePacket.field_b:LNineSliceFrame;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -93191,7 +93303,7 @@
     },
     {
       "symbol": "F:apa.field_a:J",
-      "renamedSymbol": "F:apa.field_a:J",
+      "renamedSymbol": "F:NineSliceFrame.field_a:J",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -93202,7 +93314,7 @@
     },
     {
       "symbol": "F:apa.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:apa.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:NineSliceFrame.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -93213,7 +93325,7 @@
     },
     {
       "symbol": "F:apa.field_c:Lada;",
-      "renamedSymbol": "F:apa.field_c:LDateOfBirthPanel;",
+      "renamedSymbol": "F:NineSliceFrame.field_c:LDateOfBirthPanel;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -93224,7 +93336,7 @@
     },
     {
       "symbol": "F:apa.field_d:[Liu;",
-      "renamedSymbol": "F:apa.field_d:[LSprite;",
+      "renamedSymbol": "F:NineSliceFrame.field_d:[LSprite;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -122946,7 +123058,7 @@
     },
     {
       "symbol": "F:jaa.field_b:Lapa;",
-      "renamedSymbol": "F:BitPackedColour.field_b:Lapa;",
+      "renamedSymbol": "F:BitPackedColour.field_b:LNineSliceFrame;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -125916,7 +126028,7 @@
     },
     {
       "symbol": "F:jk.field_f:[B",
-      "renamedSymbol": "F:jk.field_f:[B",
+      "renamedSymbol": "F:MidiNoteUsageNode.field_f:[B",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -125927,7 +126039,7 @@
     },
     {
       "symbol": "F:jk.field_g:Ljea;",
-      "renamedSymbol": "F:jk.field_g:LUiComponent;",
+      "renamedSymbol": "F:MidiNoteUsageNode.field_g:LUiComponent;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -125938,7 +126050,7 @@
     },
     {
       "symbol": "F:jk.field_h:[I",
-      "renamedSymbol": "F:jk.field_h:[I",
+      "renamedSymbol": "F:MidiNoteUsageNode.field_h:[I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -125949,7 +126061,7 @@
     },
     {
       "symbol": "F:jk.field_i:Ljava/lang/String;",
-      "renamedSymbol": "F:jk.field_i:Ljava/lang/String;",
+      "renamedSymbol": "F:MidiNoteUsageNode.field_i:Ljava/lang/String;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -135904,7 +136016,7 @@
     },
     {
       "symbol": "F:mpa.field_V:Lapa;",
-      "renamedSymbol": "F:mpa.field_V:Lapa;",
+      "renamedSymbol": "F:mpa.field_V:LNineSliceFrame;",
       "originalName": "field_V",
       "renamedName": "field_V",
       "declaration": {
@@ -146134,7 +146246,7 @@
     },
     {
       "symbol": "F:pua.field_c:Lapa;",
-      "renamedSymbol": "F:pua.field_c:Lapa;",
+      "renamedSymbol": "F:pua.field_c:LNineSliceFrame;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -148015,7 +148127,7 @@
     },
     {
       "symbol": "F:qna.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:qna.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenDialogLayout.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -148026,7 +148138,7 @@
     },
     {
       "symbol": "F:qna.field_b:Ljea;",
-      "renamedSymbol": "F:qna.field_b:LUiComponent;",
+      "renamedSymbol": "F:FullscreenDialogLayout.field_b:LUiComponent;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -148037,7 +148149,7 @@
     },
     {
       "symbol": "F:qna.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:qna.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:FullscreenDialogLayout.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -148389,7 +148501,7 @@
     },
     {
       "symbol": "F:qqa.field_t:Lapa;",
-      "renamedSymbol": "F:NetworkArchiveRequest.field_t:Lapa;",
+      "renamedSymbol": "F:NetworkArchiveRequest.field_t:LNineSliceFrame;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -165439,7 +165551,7 @@
     },
     {
       "symbol": "F:wua.field_o:Lapa;",
-      "renamedSymbol": "F:QuickChatPhraseDefinition.field_o:Lapa;",
+      "renamedSymbol": "F:QuickChatPhraseDefinition.field_o:LNineSliceFrame;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -177759,7 +177871,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#0",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#0",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -177770,7 +177882,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#1",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#1",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -177781,7 +177893,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#2",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#2",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -177792,7 +177904,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#3",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#3",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -177803,7 +177915,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#4",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#4",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -177814,7 +177926,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#5",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#5",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -177825,7 +177937,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#6",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#6",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -177836,7 +177948,7 @@
     },
     {
       "symbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#7",
-      "renamedSymbol": "L:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#7",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -177847,7 +177959,7 @@
     },
     {
       "symbol": "L:apa.a(B)V#0",
-      "renamedSymbol": "L:apa.releaseStatics(B)V#0",
+      "renamedSymbol": "L:NineSliceFrame.releaseStatics(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -177858,7 +177970,7 @@
     },
     {
       "symbol": "L:apa.a(BIIII)V#0",
-      "renamedSymbol": "L:apa.drawFrame(BIIII)V#0",
+      "renamedSymbol": "L:NineSliceFrame.drawFrame(BIIII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -177869,7 +177981,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#0",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#0",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -177880,7 +177992,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#1",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#1",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -177891,7 +178003,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#2",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#2",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -177902,7 +178014,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#3",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#3",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -177913,7 +178025,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#4",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#4",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -177924,7 +178036,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#5",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#5",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -177935,7 +178047,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#6",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#6",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -177946,7 +178058,7 @@
     },
     {
       "symbol": "L:apa.a(BZLjava/lang/String;)I#7",
-      "renamedSymbol": "L:apa.measureStringWidth(BZLjava/lang/String;)I#7",
+      "renamedSymbol": "L:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -266100,7 +266212,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#0",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#0",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -266111,7 +266223,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#1",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#1",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#1",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -266122,7 +266234,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#10",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#10",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#10",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -266133,7 +266245,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#11",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#11",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#11",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -266144,7 +266256,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#12",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#12",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#12",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -266155,7 +266267,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#13",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#13",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#13",
       "originalName": "var3_long",
       "renamedName": "var3_long",
       "declaration": {
@@ -266166,7 +266278,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#14",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#14",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#14",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -266177,7 +266289,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#15",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#15",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#15",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -266188,7 +266300,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#16",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#16",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#16",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -266199,7 +266311,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#17",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#17",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#17",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -266210,7 +266322,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#18",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#18",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#18",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -266221,7 +266333,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#19",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#19",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#19",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -266232,7 +266344,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#2",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#2",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#2",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -266243,7 +266355,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#20",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#20",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#20",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -266254,7 +266366,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#21",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#21",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#21",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -266265,7 +266377,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#22",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#22",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#22",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -266276,7 +266388,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#23",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#23",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#23",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -266287,7 +266399,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#3",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#3",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#3",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -266298,7 +266410,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#4",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#4",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#4",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -266309,7 +266421,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#5",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#5",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#5",
       "originalName": "stackIn_39_0",
       "renamedName": "stackIn_39_0",
       "declaration": {
@@ -266320,7 +266432,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#6",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#6",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#6",
       "originalName": "stackIn_39_1",
       "renamedName": "stackIn_39_1",
       "declaration": {
@@ -266331,7 +266443,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#7",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#7",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#7",
       "originalName": "stackIn_40_2",
       "renamedName": "stackIn_40_2",
       "declaration": {
@@ -266342,7 +266454,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#8",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#8",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#8",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -266353,7 +266465,7 @@
     },
     {
       "symbol": "L:fp.a(B)V#9",
-      "renamedSymbol": "L:TextureCombineSource.a(B)V#9",
+      "renamedSymbol": "L:TextureCombineSource.drawFullscreenDialogContents(B)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -337941,7 +338053,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -337952,7 +338064,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#1",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#1",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -337963,7 +338075,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#10",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#10",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#10",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -337974,7 +338086,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#11",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#11",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -337985,7 +338097,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#12",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#12",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#12",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -337996,7 +338108,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#13",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#13",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -338007,7 +338119,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#2",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#2",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -338018,7 +338130,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#3",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#3",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -338029,7 +338141,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#4",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#4",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -338040,7 +338152,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#5",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#5",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -338051,7 +338163,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#6",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#6",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#6",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -338062,7 +338174,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#7",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#7",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#7",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -338073,7 +338185,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#8",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#8",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#8",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -338084,7 +338196,7 @@
     },
     {
       "symbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#9",
-      "renamedSymbol": "L:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#9",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#9",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -338095,7 +338207,7 @@
     },
     {
       "symbol": "L:jk.<init>([B)V#0",
-      "renamedSymbol": "L:jk.<init>([B)V#0",
+      "renamedSymbol": "L:MidiNoteUsageNode.<init>([B)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -338106,7 +338218,7 @@
     },
     {
       "symbol": "L:jk.a(B)Lvna;#0",
-      "renamedSymbol": "L:jk.createConsoleMethods(B)LIntrusiveDeque;#0",
+      "renamedSymbol": "L:MidiNoteUsageNode.createConsoleMethods(B)LIntrusiveDeque;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -338117,7 +338229,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#0",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#0",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -338128,7 +338240,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#1",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#1",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -338139,7 +338251,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#10",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#10",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#10",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -338150,7 +338262,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#11",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#11",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -338161,7 +338273,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#12",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#12",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#12",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -338172,7 +338284,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#13",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#13",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -338183,7 +338295,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#2",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#2",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -338194,7 +338306,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#3",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#3",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -338205,7 +338317,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#4",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#4",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -338216,7 +338328,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#5",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#5",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -338227,7 +338339,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#6",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#6",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#6",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -338238,7 +338350,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#7",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#7",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#7",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -338249,7 +338361,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#8",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#8",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#8",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -338260,7 +338372,7 @@
     },
     {
       "symbol": "L:jk.a(BLjava/util/BitSet;Z)I#9",
-      "renamedSymbol": "L:jk.a(BLjava/util/BitSet;Z)I#9",
+      "renamedSymbol": "L:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#9",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -338271,7 +338383,7 @@
     },
     {
       "symbol": "L:jk.a(II)V#0",
-      "renamedSymbol": "L:jk.setFakeLag(II)V#0",
+      "renamedSymbol": "L:MidiNoteUsageNode.setFakeLag(II)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -338282,7 +338394,7 @@
     },
     {
       "symbol": "L:jk.a(II)V#1",
-      "renamedSymbol": "L:jk.setFakeLag(II)V#1",
+      "renamedSymbol": "L:MidiNoteUsageNode.setFakeLag(II)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -435038,7 +435150,7 @@
     },
     {
       "symbol": "L:or.d(I)V#0",
-      "renamedSymbol": "L:TurbulenceNoise3D.d(I)V#0",
+      "renamedSymbol": "L:TurbulenceNoise3D.drawFullscreenDialog(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -435049,7 +435161,7 @@
     },
     {
       "symbol": "L:or.d(I)V#1",
-      "renamedSymbol": "L:TurbulenceNoise3D.d(I)V#1",
+      "renamedSymbol": "L:TurbulenceNoise3D.drawFullscreenDialog(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -460811,7 +460923,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#0",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#0",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#0",
       "originalName": "stackIn_58_0",
       "renamedName": "stackIn_58_0",
       "declaration": {
@@ -460822,7 +460934,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#1",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#1",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#1",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -460833,7 +460945,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#10",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#10",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#10",
       "originalName": "stackIn_89_2",
       "renamedName": "stackIn_89_2",
       "declaration": {
@@ -460844,7 +460956,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#11",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#11",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#11",
       "originalName": "stackIn_110_0",
       "renamedName": "stackIn_110_0",
       "declaration": {
@@ -460855,7 +460967,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#12",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#12",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#12",
       "originalName": "stackIn_111_1",
       "renamedName": "stackIn_111_1",
       "declaration": {
@@ -460866,7 +460978,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#13",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#13",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#13",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -460877,7 +460989,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#14",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#14",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#14",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -460888,7 +461000,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#15",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#15",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#15",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -460899,7 +461011,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#16",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#16",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#16",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -460910,7 +461022,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#17",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#17",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#17",
       "originalName": "var4_ref_String__",
       "renamedName": "var4_ref_String__",
       "declaration": {
@@ -460921,7 +461033,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#18",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#18",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#18",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -460932,7 +461044,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#19",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#19",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#19",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -460943,7 +461055,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#2",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#2",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#2",
       "originalName": "stackIn_68_0",
       "renamedName": "stackIn_68_0",
       "declaration": {
@@ -460954,7 +461066,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#20",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#20",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#20",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -460965,7 +461077,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#21",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#21",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#21",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -460976,7 +461088,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#22",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#22",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#22",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -460987,7 +461099,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#23",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#23",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#23",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -460998,7 +461110,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#24",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#24",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#24",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -461009,7 +461121,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#25",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#25",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#25",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -461020,7 +461132,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#26",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#26",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#26",
       "originalName": "var4_ref_String__Lifetime1",
       "renamedName": "var4_ref_String__Lifetime1",
       "declaration": {
@@ -461031,7 +461143,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#27",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#27",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#27",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -461042,7 +461154,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#28",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#28",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#28",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -461053,7 +461165,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#29",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#29",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#29",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -461064,7 +461176,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#3",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#3",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#3",
       "originalName": "stackIn_68_1",
       "renamedName": "stackIn_68_1",
       "declaration": {
@@ -461075,7 +461187,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#30",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#30",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#30",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -461086,7 +461198,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#31",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#31",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#31",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -461097,7 +461209,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#32",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#32",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#32",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -461108,7 +461220,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#33",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#33",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#33",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -461119,7 +461231,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#34",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#34",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#34",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -461130,7 +461242,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#35",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#35",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#35",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -461141,7 +461253,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#36",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#36",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#36",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -461152,7 +461264,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#37",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#37",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#37",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -461163,7 +461275,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#38",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#38",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#38",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -461174,7 +461286,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#39",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#39",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#39",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -461185,7 +461297,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#4",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#4",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#4",
       "originalName": "stackIn_69_2",
       "renamedName": "stackIn_69_2",
       "declaration": {
@@ -461196,7 +461308,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#40",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#40",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#40",
       "originalName": "var5Lifetime2Lifetime1",
       "renamedName": "var5Lifetime2Lifetime1",
       "declaration": {
@@ -461207,7 +461319,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#41",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#41",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#41",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -461218,7 +461330,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#42",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#42",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#42",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -461229,7 +461341,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#5",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#5",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#5",
       "originalName": "stackIn_74_0",
       "renamedName": "stackIn_74_0",
       "declaration": {
@@ -461240,7 +461352,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#6",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#6",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#6",
       "originalName": "stackIn_74_1",
       "renamedName": "stackIn_74_1",
       "declaration": {
@@ -461251,7 +461363,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#7",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#7",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#7",
       "originalName": "stackIn_75_2",
       "renamedName": "stackIn_75_2",
       "declaration": {
@@ -461262,7 +461374,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#8",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#8",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#8",
       "originalName": "stackIn_88_0",
       "renamedName": "stackIn_88_0",
       "declaration": {
@@ -461273,7 +461385,7 @@
     },
     {
       "symbol": "L:qna.a(IZI)V#9",
-      "renamedSymbol": "L:qna.buildFullscreenDialog(IZI)V#9",
+      "renamedSymbol": "L:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#9",
       "originalName": "stackIn_88_1",
       "renamedName": "stackIn_88_1",
       "declaration": {
@@ -484681,7 +484793,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#0",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#0",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -484692,7 +484804,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#1",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#1",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -484703,7 +484815,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#2",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#2",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#2",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -484714,7 +484826,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#3",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#3",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -484725,7 +484837,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#4",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#4",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -484736,7 +484848,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#5",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#5",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#5",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -484747,7 +484859,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#6",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#6",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#6",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -484758,7 +484870,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#7",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#7",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -484769,7 +484881,7 @@
     },
     {
       "symbol": "L:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#8",
-      "renamedSymbol": "L:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#8",
+      "renamedSymbol": "L:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -589071,9 +589183,9 @@
     },
     {
       "symbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
-      "renamedSymbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
+      "renamedSymbol": "M:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I",
       "originalName": "$cfr$intArgs$a$62abead39cee",
-      "renamedName": "$cfr$intArgs$a$62abead39cee",
+      "renamedName": "measureStringWidthWithIntGuard",
       "declaration": {
         "file": "apa.java",
         "start": 2265,
@@ -589082,9 +589194,9 @@
     },
     {
       "symbol": "M:apa.<init>()V",
-      "renamedSymbol": "M:apa.<init>()V",
+      "renamedSymbol": "M:NineSliceFrame.<init>()V",
       "originalName": "apa",
-      "renamedName": "apa",
+      "renamedName": "NineSliceFrame",
       "declaration": {
         "file": "apa.java",
         "start": 695,
@@ -589093,7 +589205,7 @@
     },
     {
       "symbol": "M:apa.a(B)V",
-      "renamedSymbol": "M:apa.releaseStatics(B)V",
+      "renamedSymbol": "M:NineSliceFrame.releaseStatics(B)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -589104,7 +589216,7 @@
     },
     {
       "symbol": "M:apa.a(BIIII)V",
-      "renamedSymbol": "M:apa.drawFrame(BIIII)V",
+      "renamedSymbol": "M:NineSliceFrame.drawFrame(BIIII)V",
       "originalName": "a",
       "renamedName": "drawFrame",
       "declaration": {
@@ -589115,7 +589227,7 @@
     },
     {
       "symbol": "M:apa.a(BZLjava/lang/String;)I",
-      "renamedSymbol": "M:apa.measureStringWidth(BZLjava/lang/String;)I",
+      "renamedSymbol": "M:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I",
       "originalName": "a",
       "renamedName": "measureStringWidth",
       "declaration": {
@@ -593999,9 +594111,9 @@
     },
     {
       "symbol": "M:caa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:UrlDownloadRequest.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:UrlDownloadRequest.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "caa.java",
         "start": 9157,
@@ -595352,9 +595464,9 @@
     },
     {
       "symbol": "M:ch.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:AudioOutputThread.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:AudioOutputThread.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "ch.java",
         "start": 2196,
@@ -613744,9 +613856,9 @@
     },
     {
       "symbol": "M:fp.a(B)V",
-      "renamedSymbol": "M:TextureCombineSource.a(B)V",
+      "renamedSymbol": "M:TextureCombineSource.drawFullscreenDialogContents(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawFullscreenDialogContents",
       "declaration": {
         "file": "fp.java",
         "start": 9673,
@@ -635700,9 +635812,9 @@
     },
     {
       "symbol": "M:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I",
-      "renamedSymbol": "M:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I",
+      "renamedSymbol": "M:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I",
       "originalName": "$cfr$intArgs$a$922851b022bc",
-      "renamedName": "$cfr$intArgs$a$922851b022bc",
+      "renamedName": "getUnmarkedRoomWindowMaxKeyWithIntGuard",
       "declaration": {
         "file": "jk.java",
         "start": 4223,
@@ -635711,9 +635823,9 @@
     },
     {
       "symbol": "M:jk.<init>([B)V",
-      "renamedSymbol": "M:jk.<init>([B)V",
+      "renamedSymbol": "M:MidiNoteUsageNode.<init>([B)V",
       "originalName": "jk",
-      "renamedName": "jk",
+      "renamedName": "MidiNoteUsageNode",
       "declaration": {
         "file": "jk.java",
         "start": 3712,
@@ -635722,7 +635834,7 @@
     },
     {
       "symbol": "M:jk.a(B)Lvna;",
-      "renamedSymbol": "M:jk.createConsoleMethods(B)LIntrusiveDeque;",
+      "renamedSymbol": "M:MidiNoteUsageNode.createConsoleMethods(B)LIntrusiveDeque;",
       "originalName": "a",
       "renamedName": "createConsoleMethods",
       "declaration": {
@@ -635733,9 +635845,9 @@
     },
     {
       "symbol": "M:jk.a(BLjava/util/BitSet;Z)I",
-      "renamedSymbol": "M:jk.a(BLjava/util/BitSet;Z)I",
+      "renamedSymbol": "M:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getUnmarkedRoomWindowMaxKey",
       "declaration": {
         "file": "jk.java",
         "start": 1501,
@@ -635744,7 +635856,7 @@
     },
     {
       "symbol": "M:jk.a(II)V",
-      "renamedSymbol": "M:jk.setFakeLag(II)V",
+      "renamedSymbol": "M:MidiNoteUsageNode.setFakeLag(II)V",
       "originalName": "a",
       "renamedName": "setFakeLag",
       "declaration": {
@@ -635755,7 +635867,7 @@
     },
     {
       "symbol": "M:jk.b(B)V",
-      "renamedSymbol": "M:jk.releaseStatics(B)V",
+      "renamedSymbol": "M:MidiNoteUsageNode.releaseStatics(B)V",
       "originalName": "b",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -649956,9 +650068,9 @@
     },
     {
       "symbol": "M:mg.a(I)I",
-      "renamedSymbol": "M:TimingPattern.a(I)I",
+      "renamedSymbol": "M:TimingPattern.getFullscreenDialogHeight(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getFullscreenDialogHeight",
       "declaration": {
         "file": "mg.java",
         "start": 395,
@@ -659383,9 +659495,9 @@
     },
     {
       "symbol": "M:or.d(I)V",
-      "renamedSymbol": "M:TurbulenceNoise3D.d(I)V",
+      "renamedSymbol": "M:TurbulenceNoise3D.drawFullscreenDialog(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "drawFullscreenDialog",
       "declaration": {
         "file": "or.java",
         "start": 1899,
@@ -664553,9 +664665,9 @@
     },
     {
       "symbol": "M:qd.a(B)I",
-      "renamedSymbol": "M:qd.a(B)I",
+      "renamedSymbol": "M:qd.getFullscreenDialogWidth(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getFullscreenDialogWidth",
       "declaration": {
         "file": "qd.java",
         "start": 101,
@@ -667160,7 +667272,7 @@
     },
     {
       "symbol": "M:qna.a(I)V",
-      "renamedSymbol": "M:qna.releaseStatics(I)V",
+      "renamedSymbol": "M:FullscreenDialogLayout.releaseStatics(I)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -667171,7 +667283,7 @@
     },
     {
       "symbol": "M:qna.a(IZI)V",
-      "renamedSymbol": "M:qna.buildFullscreenDialog(IZI)V",
+      "renamedSymbol": "M:FullscreenDialogLayout.buildFullscreenDialog(IZI)V",
       "originalName": "a",
       "renamedName": "buildFullscreenDialog",
       "declaration": {
@@ -671175,9 +671287,9 @@
     },
     {
       "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
-      "renamedSymbol": "M:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+      "renamedSymbol": "M:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I",
       "originalName": "$cfr$intArgs$a$590e95718a07",
-      "renamedName": "$cfr$intArgs$a$590e95718a07",
+      "renamedName": "measureStringWidthWithIntGuard",
       "declaration": {
         "file": "ro.java",
         "start": 15108,
@@ -676246,9 +676358,9 @@
     },
     {
       "symbol": "M:ssa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
-      "renamedSymbol": "M:ClipStack.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+      "renamedSymbol": "M:ClipStack.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
       "originalName": "$cfr$sneakyThrow",
-      "renamedName": "$cfr$sneakyThrow",
+      "renamedName": "throwUnchecked",
       "declaration": {
         "file": "ssa.java",
         "start": 11408,
@@ -701095,7 +701207,7 @@
     },
     {
       "symbol": "P:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#0",
-      "renamedSymbol": "P:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#0",
+      "renamedSymbol": "P:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701106,7 +701218,7 @@
     },
     {
       "symbol": "P:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#1",
-      "renamedSymbol": "P:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#1",
+      "renamedSymbol": "P:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701117,7 +701229,7 @@
     },
     {
       "symbol": "P:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#2",
-      "renamedSymbol": "P:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I#2",
+      "renamedSymbol": "P:NineSliceFrame.measureStringWidthWithIntGuard(IZLjava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -701128,7 +701240,7 @@
     },
     {
       "symbol": "P:apa.a(B)V#0",
-      "renamedSymbol": "P:apa.releaseStatics(B)V#0",
+      "renamedSymbol": "P:NineSliceFrame.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701139,7 +701251,7 @@
     },
     {
       "symbol": "P:apa.a(BIIII)V#0",
-      "renamedSymbol": "P:apa.drawFrame(BIIII)V#0",
+      "renamedSymbol": "P:NineSliceFrame.drawFrame(BIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701150,7 +701262,7 @@
     },
     {
       "symbol": "P:apa.a(BIIII)V#1",
-      "renamedSymbol": "P:apa.drawFrame(BIIII)V#1",
+      "renamedSymbol": "P:NineSliceFrame.drawFrame(BIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701161,7 +701273,7 @@
     },
     {
       "symbol": "P:apa.a(BIIII)V#2",
-      "renamedSymbol": "P:apa.drawFrame(BIIII)V#2",
+      "renamedSymbol": "P:NineSliceFrame.drawFrame(BIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -701172,7 +701284,7 @@
     },
     {
       "symbol": "P:apa.a(BIIII)V#3",
-      "renamedSymbol": "P:apa.drawFrame(BIIII)V#3",
+      "renamedSymbol": "P:NineSliceFrame.drawFrame(BIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -701183,7 +701295,7 @@
     },
     {
       "symbol": "P:apa.a(BIIII)V#4",
-      "renamedSymbol": "P:apa.drawFrame(BIIII)V#4",
+      "renamedSymbol": "P:NineSliceFrame.drawFrame(BIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -701194,7 +701306,7 @@
     },
     {
       "symbol": "P:apa.a(BZLjava/lang/String;)I#0",
-      "renamedSymbol": "P:apa.measureStringWidth(BZLjava/lang/String;)I#0",
+      "renamedSymbol": "P:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -701205,7 +701317,7 @@
     },
     {
       "symbol": "P:apa.a(BZLjava/lang/String;)I#1",
-      "renamedSymbol": "P:apa.measureStringWidth(BZLjava/lang/String;)I#1",
+      "renamedSymbol": "P:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -701216,7 +701328,7 @@
     },
     {
       "symbol": "P:apa.a(BZLjava/lang/String;)I#2",
-      "renamedSymbol": "P:apa.measureStringWidth(BZLjava/lang/String;)I#2",
+      "renamedSymbol": "P:NineSliceFrame.measureStringWidth(BZLjava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -712568,7 +712680,7 @@
     },
     {
       "symbol": "P:caa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:UrlDownloadRequest.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:UrlDownloadRequest.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -715054,7 +715166,7 @@
     },
     {
       "symbol": "P:ch.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:AudioOutputThread.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:AudioOutputThread.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -754302,7 +754414,7 @@
     },
     {
       "symbol": "P:fp.a(B)V#0",
-      "renamedSymbol": "P:TextureCombineSource.a(B)V#0",
+      "renamedSymbol": "P:TextureCombineSource.drawFullscreenDialogContents(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808961,7 +809073,7 @@
     },
     {
       "symbol": "P:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0",
-      "renamedSymbol": "P:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#0",
+      "renamedSymbol": "P:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808972,7 +809084,7 @@
     },
     {
       "symbol": "P:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#1",
-      "renamedSymbol": "P:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#1",
+      "renamedSymbol": "P:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -808983,7 +809095,7 @@
     },
     {
       "symbol": "P:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#2",
-      "renamedSymbol": "P:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I#2",
+      "renamedSymbol": "P:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKeyWithIntGuard(ILjava/util/BitSet;Z)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -808994,7 +809106,7 @@
     },
     {
       "symbol": "P:jk.<init>([B)V#0",
-      "renamedSymbol": "P:jk.<init>([B)V#0",
+      "renamedSymbol": "P:MidiNoteUsageNode.<init>([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -809005,7 +809117,7 @@
     },
     {
       "symbol": "P:jk.a(B)Lvna;#0",
-      "renamedSymbol": "P:jk.createConsoleMethods(B)LIntrusiveDeque;#0",
+      "renamedSymbol": "P:MidiNoteUsageNode.createConsoleMethods(B)LIntrusiveDeque;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -809016,7 +809128,7 @@
     },
     {
       "symbol": "P:jk.a(BLjava/util/BitSet;Z)I#0",
-      "renamedSymbol": "P:jk.a(BLjava/util/BitSet;Z)I#0",
+      "renamedSymbol": "P:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -809027,7 +809139,7 @@
     },
     {
       "symbol": "P:jk.a(BLjava/util/BitSet;Z)I#1",
-      "renamedSymbol": "P:jk.a(BLjava/util/BitSet;Z)I#1",
+      "renamedSymbol": "P:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -809038,7 +809150,7 @@
     },
     {
       "symbol": "P:jk.a(BLjava/util/BitSet;Z)I#2",
-      "renamedSymbol": "P:jk.a(BLjava/util/BitSet;Z)I#2",
+      "renamedSymbol": "P:MidiNoteUsageNode.getUnmarkedRoomWindowMaxKey(BLjava/util/BitSet;Z)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -809049,7 +809161,7 @@
     },
     {
       "symbol": "P:jk.a(II)V#0",
-      "renamedSymbol": "P:jk.setFakeLag(II)V#0",
+      "renamedSymbol": "P:MidiNoteUsageNode.setFakeLag(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -809060,7 +809172,7 @@
     },
     {
       "symbol": "P:jk.a(II)V#1",
-      "renamedSymbol": "P:jk.setFakeLag(II)V#1",
+      "renamedSymbol": "P:MidiNoteUsageNode.setFakeLag(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -809071,7 +809183,7 @@
     },
     {
       "symbol": "P:jk.b(B)V#0",
-      "renamedSymbol": "P:jk.releaseStatics(B)V#0",
+      "renamedSymbol": "P:MidiNoteUsageNode.releaseStatics(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -840630,7 +840742,7 @@
     },
     {
       "symbol": "P:mg.a(I)I#0",
-      "renamedSymbol": "P:TimingPattern.a(I)I#0",
+      "renamedSymbol": "P:TimingPattern.getFullscreenDialogHeight(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -862410,7 +862522,7 @@
     },
     {
       "symbol": "P:or.d(I)V#0",
-      "renamedSymbol": "P:TurbulenceNoise3D.d(I)V#0",
+      "renamedSymbol": "P:TurbulenceNoise3D.drawFullscreenDialog(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -874114,7 +874226,7 @@
     },
     {
       "symbol": "P:qd.a(B)I#0",
-      "renamedSymbol": "P:qd.a(B)I#0",
+      "renamedSymbol": "P:qd.getFullscreenDialogWidth(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -881363,7 +881475,7 @@
     },
     {
       "symbol": "P:qna.a(I)V#0",
-      "renamedSymbol": "P:qna.releaseStatics(I)V#0",
+      "renamedSymbol": "P:FullscreenDialogLayout.releaseStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -881374,7 +881486,7 @@
     },
     {
       "symbol": "P:qna.a(IZI)V#0",
-      "renamedSymbol": "P:qna.buildFullscreenDialog(IZI)V#0",
+      "renamedSymbol": "P:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -881385,7 +881497,7 @@
     },
     {
       "symbol": "P:qna.a(IZI)V#1",
-      "renamedSymbol": "P:qna.buildFullscreenDialog(IZI)V#1",
+      "renamedSymbol": "P:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -881396,7 +881508,7 @@
     },
     {
       "symbol": "P:qna.a(IZI)V#2",
-      "renamedSymbol": "P:qna.buildFullscreenDialog(IZI)V#2",
+      "renamedSymbol": "P:FullscreenDialogLayout.buildFullscreenDialog(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -890680,7 +890792,7 @@
     },
     {
       "symbol": "P:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#0",
-      "renamedSymbol": "P:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#0",
+      "renamedSymbol": "P:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -890691,7 +890803,7 @@
     },
     {
       "symbol": "P:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#1",
-      "renamedSymbol": "P:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#1",
+      "renamedSymbol": "P:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -890702,7 +890814,7 @@
     },
     {
       "symbol": "P:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#2",
-      "renamedSymbol": "P:PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I#2",
+      "renamedSymbol": "P:PathMoveLocomotor.measureStringWidthWithIntGuard(ILjava/lang/String;Z)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -902329,7 +902441,7 @@
     },
     {
       "symbol": "P:ssa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
-      "renamedSymbol": "P:ClipStack.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
+      "renamedSymbol": "P:ClipStack.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;#0",
       "originalName": "throwable",
       "renamedName": "throwable",
       "declaration": {
@@ -939227,7 +939339,7 @@
       "original": "TombRacer.java",
       "renamed": "TombRacer.java",
       "inputSha256": "7ea25c7c242b079dab92fb5f98648396480d7fc930afc21a031708b6cdb3361f",
-      "outputSha256": "9911eb407bb5802e73b233da9144b5ad05d8d4200cbb62513492c4153158f102",
+      "outputSha256": "09556eb49fc20b9b8c12d2ccb93a983edfae356c09b0bd2c62aa00ed7d3be4d3",
       "edits": [
         {
           "start": 96,
@@ -943829,6 +943941,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 13512,
+          "end": 13515,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 13516,
           "end": 13517,
           "symbol": "M:apa.a(B)V",
@@ -944459,6 +944578,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 14676,
+          "end": 14679,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 14680,
           "end": 14681,
           "symbol": "M:qna.a(I)V",
@@ -944653,6 +944779,13 @@
           "symbol": "M:vh.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 15021,
+          "end": 15023,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 15024,
@@ -966740,7 +966873,7 @@
       "original": "ala.java",
       "renamed": "ala.java",
       "inputSha256": "75b194c5a4089ea322badf1ccc8a4bdcbf1331acba7ce50bdc862113df2454df",
-      "outputSha256": "adc513c433687bd2871bcc1794bbdad40677dff17e9dddc6409141ef38a82f9e",
+      "outputSha256": "001849f7ed092d9dbb515dd260c0a7792b5e07ab70c51c7035ed43ccce5df5ed",
       "edits": [
         {
           "start": 62,
@@ -967030,6 +967163,13 @@
           "renamed": "showCentredMessage"
         },
         {
+          "start": 4467,
+          "end": 4469,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 4501,
           "end": 4503,
           "symbol": "C:qp",
@@ -967147,6 +967287,13 @@
           "symbol": "M:wja.a(Ljava/lang/String;I)V",
           "original": "a",
           "renamed": "showCentredMessage"
+        },
+        {
+          "start": 5903,
+          "end": 5905,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 5933,
@@ -970113,7 +970260,7 @@
       "original": "aoa.java",
       "renamed": "S2CPlayerProfilePacket.java",
       "inputSha256": "4b51f599041c05f453f78b78c94eba941ed3944e589d248aa39dbd6b2900bc71",
-      "outputSha256": "1634e2ca0eb32042e800be370827262fe85a32a9253b14e71e4b21da3de4b82d",
+      "outputSha256": "eef4a4112eea88679034a6379ba2019a0d53a9f2ec7fd1a9f438abdf74212c6b",
       "edits": [
         {
           "start": 50,
@@ -970142,6 +970289,13 @@
           "symbol": "F:aoa.field_a:Lufa;",
           "original": "field_a",
           "renamed": "profile"
+        },
+        {
+          "start": 106,
+          "end": 109,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 142,
@@ -970340,6 +970494,13 @@
           "renamed": "decode"
         },
         {
+          "start": 1486,
+          "end": 1489,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 1579,
           "end": 1582,
           "symbol": "C:tba",
@@ -970505,10 +970666,17 @@
     },
     {
       "original": "apa.java",
-      "renamed": "apa.java",
+      "renamed": "NineSliceFrame.java",
       "inputSha256": "767294b3d3d00450475ac8c157797ea78e3dc5d74030474adcbffec3907b766a",
-      "outputSha256": "1f83cf564c7809ac4278c66d895f6a97fe4d0ce2ccb51d1d743d6135dad3945d",
+      "outputSha256": "6fd90dbd0b991f2c6e05fa2d7e53917fc67f656c7b47f0624e47b939e18b98d5",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
         {
           "start": 120,
           "end": 122,
@@ -970552,6 +970720,20 @@
           "renamed": "drawNineSlice"
         },
         {
+          "start": 550,
+          "end": 553,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 554,
+          "end": 581,
+          "symbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
+          "original": "$cfr$intArgs$a$62abead39cee",
+          "renamed": "measureStringWidthWithIntGuard"
+        },
+        {
           "start": 617,
           "end": 620,
           "symbol": "C:rsa",
@@ -970564,6 +970746,13 @@
           "symbol": "M:rsa.a(I[Liu;IIII)V",
           "original": "a",
           "renamed": "drawNineSlice"
+        },
+        {
+          "start": 695,
+          "end": 698,
+          "symbol": "M:apa.<init>()V",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 775,
@@ -970613,6 +970802,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2265,
+          "end": 2292,
+          "symbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
+          "original": "$cfr$intArgs$a$62abead39cee",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 2760,
@@ -1002291,7 +1002487,7 @@
       "original": "caa.java",
       "renamed": "UrlDownloadRequest.java",
       "inputSha256": "551a6786db7cfd2c95f31ac92c2822c71576cb02230d1bb6594a36ef7e3ee4d8",
-      "outputSha256": "1f87128456d73a0fbe77cd6b5aad4e763193c87f72a7fed96dbd2fa7a6aaea49",
+      "outputSha256": "6bfdabed73df8b83a97794c58807709052522443f4c00238cf0036555d67387c",
       "edits": [
         {
           "start": 69,
@@ -1002658,6 +1002854,13 @@
           "renamed": "UrlDownloadRequest"
         },
         {
+          "start": 7378,
+          "end": 7394,
+          "symbol": "M:caa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 7432,
           "end": 7439,
           "symbol": "F:uia.field_g:[B",
@@ -1002719,6 +1002922,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 9157,
+          "end": 9173,
+          "symbol": "M:caa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -1010438,7 +1010648,7 @@
       "original": "ch.java",
       "renamed": "AudioOutputThread.java",
       "inputSha256": "15e8b2c63da2088772eace363a6374f33f441ce4855b5aedb177e75c21368ae5",
-      "outputSha256": "03db61fc6fb3f215e34ffe5043a7ff15bcd099f245dc9d35682b6f6157097266",
+      "outputSha256": "d1d7e6bd3a284345b3c046455f4c4a5945caba3defe361ded4c54363467b33ae",
       "edits": [
         {
           "start": 50,
@@ -1010518,6 +1010728,13 @@
           "renamed": "AudioOutputThread"
         },
         {
+          "start": 1743,
+          "end": 1759,
+          "symbol": "M:ch.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 1837,
           "end": 1838,
           "symbol": "M:ch.a(B)V",
@@ -1010537,6 +1010754,13 @@
           "symbol": "C:kta",
           "original": "kta",
           "renamed": "AudioOutput"
+        },
+        {
+          "start": 2196,
+          "end": 2212,
+          "symbol": "M:ch.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -1012795,7 +1013019,7 @@
       "original": "ck.java",
       "renamed": "ck.java",
       "inputSha256": "c0a80db8e18cf77ac2c9b8766d4811d55dd22f50e39e07a3a406d065318537bf",
-      "outputSha256": "1cbb05661ed1c28486bd9af5956efa78293fab8b8432e4607d52cdde9171e718",
+      "outputSha256": "4b1d1125d2d98fe2642fa39f3e5d20dea83f92689906368d5b1f192e471b4d0e",
       "edits": [
         {
           "start": 122,
@@ -1014436,6 +1014660,13 @@
           "renamed": "CommonChooseReward"
         },
         {
+          "start": 8347,
+          "end": 8350,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 8365,
           "end": 8368,
           "symbol": "C:jea",
@@ -1015446,6 +1015677,13 @@
           "symbol": "M:jea.b(ILjea;)V",
           "original": "b",
           "renamed": "addChild"
+        },
+        {
+          "start": 14380,
+          "end": 14383,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 14594,
@@ -1022640,7 +1022878,7 @@
       "original": "cl.java",
       "renamed": "BoxBlurOperator.java",
       "inputSha256": "0eec805392714e5925f55e55e68819cc6fe69ddaac830b35853fe5139536da9e",
-      "outputSha256": "41a4eeefca1310abfce3ba4dbb21b42378e696cd47dd74296b32253b466e48cd",
+      "outputSha256": "4b308bbc21120b9f46097bcf4ad006c7f88c3f6046834cc3c4309f8c84b941c9",
       "edits": [
         {
           "start": 50,
@@ -1022993,6 +1023231,34 @@
           "renamed": "compareRankingEntries"
         },
         {
+          "start": 7810,
+          "end": 7812,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 7831,
+          "end": 7833,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 7904,
+          "end": 7906,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 7925,
+          "end": 7927,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 7999,
           "end": 8001,
           "symbol": "C:ic",
@@ -1023047,6 +1023313,34 @@
           "symbol": "C:ic",
           "original": "ic",
           "renamed": "StatReportingObserverFactory"
+        },
+        {
+          "start": 8394,
+          "end": 8396,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 8415,
+          "end": 8417,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 8488,
+          "end": 8490,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 8509,
+          "end": 8511,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 8594,
@@ -1023110,7 +1023404,7 @@
       "original": "cla.java",
       "renamed": "PbufferEntry.java",
       "inputSha256": "bc08787d0e64350fcc84c203cf11f7b5968911eb7684208dc31833755d5540f6",
-      "outputSha256": "305a8b79e09a0188ffe1c4a8905f85ad2e9215ca2c2e32b7ec133e8ba69c1a0a",
+      "outputSha256": "fa99c44a67784d8d1e0b1fc01f3fdc2c08fb42be3bb5b4cd6d77b0ba8a41151a",
       "edits": [
         {
           "start": 50,
@@ -1023377,6 +1023671,13 @@
           "symbol": "C:gq",
           "original": "gq",
           "renamed": "FunOrbConsole"
+        },
+        {
+          "start": 2274,
+          "end": 2276,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 2277,
@@ -1046778,7 +1047079,7 @@
       "original": "dc.java",
       "renamed": "CrusherModel.java",
       "inputSha256": "3a833ecbcc6816b8c4e2b51c6762f17aa9517706224cd3943395b73d43141503",
-      "outputSha256": "998f075665facebd76eaabf1f8ccaff6f2d32e78152059eff5a746d9a7c3a44b",
+      "outputSha256": "49b32a7bd2ddcc96549889abf8c8956a9f5aeb4492956fe789775ed08ae2b334",
       "edits": [
         {
           "start": 50,
@@ -1047003,6 +1047304,27 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "ItemBehaviour"
+        },
+        {
+          "start": 1821,
+          "end": 1823,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 1857,
+          "end": 1859,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 1889,
+          "end": 1891,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 1945,
@@ -1052735,7 +1053057,7 @@
       "original": "dfa.java",
       "renamed": "GameScreen.java",
       "inputSha256": "bdc1fc3038265dc53cfba9c0ed945b7333df1cbae0dde347c40544a413380993",
-      "outputSha256": "1acb696d48d1e378e598fc8d494337aed1b8d9169ddccbd4f574deb6f2904502",
+      "outputSha256": "359597c4d62436ba4e6727e54466d2c7d7a2b78a198b2e3d21fe230dd62389cd",
       "edits": [
         {
           "start": 53,
@@ -1052948,6 +1053270,13 @@
           "renamed": "isPlayerReachable"
         },
         {
+          "start": 1566,
+          "end": 1569,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 1590,
           "end": 1592,
           "symbol": "C:cr",
@@ -1053037,6 +1053366,13 @@
           "symbol": "M:ota.a(JBLjava/lang/String;)Z",
           "original": "a",
           "renamed": "isPlayerReachable"
+        },
+        {
+          "start": 2212,
+          "end": 2215,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 2236,
@@ -1053193,6 +1053529,13 @@
           "renamed": "isPlayerReachable"
         },
         {
+          "start": 3259,
+          "end": 3262,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 3283,
           "end": 3285,
           "symbol": "C:cr",
@@ -1053282,6 +1053625,13 @@
           "symbol": "M:ota.a(JBLjava/lang/String;)Z",
           "original": "a",
           "renamed": "isPlayerReachable"
+        },
+        {
+          "start": 3842,
+          "end": 3845,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 3866,
@@ -1072316,7 +1072666,7 @@
       "original": "ea.java",
       "renamed": "C2SActionPacket.java",
       "inputSha256": "b8a704c96ac2920dcc04023059908930445b1168ab42bf316a913c13afd73817",
-      "outputSha256": "52e7325b39ecfa6d77d3ec8c13441e2418cff874d462a8d5d1f423378a9d099b",
+      "outputSha256": "eb450862655049ffbde4c469a86d027ed74fe4c0a1bf0f1408d49f8105f119b7",
       "edits": [
         {
           "start": 50,
@@ -1072744,6 +1073094,13 @@
           "symbol": "C:ada",
           "original": "ada",
           "renamed": "DateOfBirthPanel"
+        },
+        {
+          "start": 4239,
+          "end": 4242,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 4295,
@@ -1114969,7 +1115326,7 @@
       "original": "fga.java",
       "renamed": "LevelSelectOverlay.java",
       "inputSha256": "3079c12e5092bdc0d7518d417646df1e570231ecadfed68e7ad2d0661359999c",
-      "outputSha256": "adebc6d58396fed6cb001b62fdf04d14fa60ba66aa33c2ec15ca17c25b296eef",
+      "outputSha256": "21ce2df44c7e81d77c7fd10a299b72bcb9689a2ffac87d0259d9bc6e3b96e2fe",
       "edits": [
         {
           "start": 96,
@@ -1115355,6 +1115712,20 @@
           "symbol": "C:rd",
           "original": "rd",
           "renamed": "MultiplayerLoginMenu"
+        },
+        {
+          "start": 8608,
+          "end": 8610,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 8611,
+          "end": 8638,
+          "symbol": "M:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I",
+          "original": "$cfr$intArgs$a$922851b022bc",
+          "renamed": "getUnmarkedRoomWindowMaxKeyWithIntGuard"
         },
         {
           "start": 8907,
@@ -1122591,7 +1122962,7 @@
       "original": "fk.java",
       "renamed": "ColourRowCache.java",
       "inputSha256": "a1e72a3524eb30896d142f9782c50baf5a10bce420c896267ee3a076a1bd9e64",
-      "outputSha256": "f4f216293c7bb3ed8bb09f43ee2339fb85fd2cfcbc117fcef293da0afe09cbeb",
+      "outputSha256": "c78f72aab83ee64bbcc95e0da5e184486abfa5c3c573508b8d7e7874a68a472e",
       "edits": [
         {
           "start": 50,
@@ -1122739,6 +1123110,20 @@
           "symbol": "C:f",
           "original": "f",
           "renamed": "ComponentTargetList"
+        },
+        {
+          "start": 2917,
+          "end": 2920,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 2921,
+          "end": 2948,
+          "symbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
+          "original": "$cfr$intArgs$a$62abead39cee",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 2960,
@@ -1128152,7 +1128537,7 @@
       "original": "fp.java",
       "renamed": "TextureCombineSource.java",
       "inputSha256": "dada9344e21332b4c14702f7b167392780563ab290e2fddbe9c93b7e79d561c7",
-      "outputSha256": "e090a3c61d46154d6cc9aa5e4f33fcd59db84ede860a31aa8aa4b46fc94ac823",
+      "outputSha256": "7813a86175d592f52447de4f7c3ed20dc748c805022832da1bfe8a01fddc3e87",
       "edits": [
         {
           "start": 71,
@@ -1130157,6 +1130542,27 @@
           "renamed": "wrapException"
         },
         {
+          "start": 9673,
+          "end": 9674,
+          "symbol": "M:fp.a(B)V",
+          "original": "a",
+          "renamed": "drawFullscreenDialogContents"
+        },
+        {
+          "start": 9956,
+          "end": 9959,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 10279,
+          "end": 10282,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 10451,
           "end": 10454,
           "symbol": "C:jua",
@@ -1130169,6 +1130575,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "TextureCombineSource"
+        },
+        {
+          "start": 10510,
+          "end": 10511,
+          "symbol": "M:fp.a(B)V",
+          "original": "a",
+          "renamed": "drawFullscreenDialogContents"
         },
         {
           "start": 10614,
@@ -1130295,6 +1130708,13 @@
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "PathMoveLocomotor"
+        },
+        {
+          "start": 12635,
+          "end": 12662,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 12825,
@@ -1200530,7 +1200950,7 @@
       "original": "hn.java",
       "renamed": "MazeComponent.java",
       "inputSha256": "099e84619ccb34adff9cc3a24362dd8948e0bf91b81cae4ececbfae19b1f7580",
-      "outputSha256": "40467760a1548cc8481e7502f102506351d76332f13624d052af1a6a9c8a2fac",
+      "outputSha256": "352f4907fbefd1ebb7495bbdd84a73916896122cecbfef3d6defc87de68d535f",
       "edits": [
         {
           "start": 53,
@@ -1201714,6 +1202134,13 @@
           "symbol": "C:dba",
           "original": "dba",
           "renamed": "C2SSubmitSettingsPacket"
+        },
+        {
+          "start": 10969,
+          "end": 10972,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 10981,
@@ -1218698,7 +1219125,7 @@
       "original": "in.java",
       "renamed": "StringCursor.java",
       "inputSha256": "9ca3414338be2cdfaebbd175c96f75790529bd70a28ccc641df2826eddf1593d",
-      "outputSha256": "45f4f9d82497e57fb3f8a87260c58dbe31d7f511e83bcd5ded5d015dd626abf2",
+      "outputSha256": "63aad484a3a6a9b7273738a05f8e8bff6d788a2e432b065c1a5e52b52e90cdc7",
       "edits": [
         {
           "start": 50,
@@ -1218806,6 +1219233,13 @@
           "renamed": "S2CRoundDeadlinePacket"
         },
         {
+          "start": 874,
+          "end": 877,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 878,
           "end": 879,
           "symbol": "M:qna.a(IZI)V",
@@ -1218904,6 +1219338,13 @@
           "renamed": "S2CRoundDeadlinePacket"
         },
         {
+          "start": 1432,
+          "end": 1435,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 1436,
           "end": 1437,
           "symbol": "M:qna.a(IZI)V",
@@ -1218923,6 +1219364,13 @@
           "symbol": "C:foa",
           "original": "foa",
           "renamed": "S2CRoundDeadlinePacket"
+        },
+        {
+          "start": 1636,
+          "end": 1639,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 1640,
@@ -1218979,6 +1219427,13 @@
           "symbol": "C:foa",
           "original": "foa",
           "renamed": "S2CRoundDeadlinePacket"
+        },
+        {
+          "start": 1991,
+          "end": 1994,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 1995,
@@ -1219070,6 +1219525,13 @@
           "symbol": "C:foa",
           "original": "foa",
           "renamed": "S2CRoundDeadlinePacket"
+        },
+        {
+          "start": 2573,
+          "end": 2576,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 2577,
@@ -1230171,7 +1230633,7 @@
       "original": "jaa.java",
       "renamed": "BitPackedColour.java",
       "inputSha256": "6643866c3f56b3f1c0c95f9d52c9bacbea804b368fa83aa8a9af8f96155893b9",
-      "outputSha256": "a547bbfcea7218b7f83637331b02805a0362e6edd22e5928e88ee65dc9832d0a",
+      "outputSha256": "68f1cf20da75045040cf131001447543ef0ecdab3bed18f36f1b23f2fc030eb4",
       "edits": [
         {
           "start": 50,
@@ -1230207,6 +1230669,13 @@
           "symbol": "F:jaa.field_h:I",
           "original": "field_h",
           "renamed": "alpha"
+        },
+        {
+          "start": 182,
+          "end": 185,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 215,
@@ -1230501,6 +1230970,13 @@
           "symbol": "F:jaa.field_c:I",
           "original": "field_c",
           "renamed": "channelBits"
+        },
+        {
+          "start": 1947,
+          "end": 1950,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 1994,
@@ -1236747,7 +1237223,7 @@
       "original": "jga.java",
       "renamed": "TextResourceLoader.java",
       "inputSha256": "ce96100e7ded5b81eca667e60a02c9db5c0a851ec0a17603c4ae1230a2556185",
-      "outputSha256": "cc2ac3a67c3b9191fd81223de4d706083b22164af074197cd8b181bee9060373",
+      "outputSha256": "eb000ab57d1d727ecc860671cad32d1c2fbb947655fb9b5c73cb442bd4a9f932",
       "edits": [
         {
           "start": 50,
@@ -1242943,6 +1243419,13 @@
           "symbol": "M:dn.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "loadFile"
+        },
+        {
+          "start": 32818,
+          "end": 32820,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 32831,
@@ -1263135,10 +1263618,17 @@
     },
     {
       "original": "jk.java",
-      "renamed": "jk.java",
+      "renamed": "MidiNoteUsageNode.java",
       "inputSha256": "27b8800a04d5ba4610088f2091f4155348d06c9c3da5ed167320c513ac8df542",
-      "outputSha256": "5e4590798c39fa3e01e88718cf46ce5ffb7bd02b22c1c126fa824ac7872af17e",
+      "outputSha256": "3e040630c8c743010bb7e5b639c199814eab0c48c7e8d3f6c16c0cefd2ec3542",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
         {
           "start": 82,
           "end": 84,
@@ -1263180,6 +1263670,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 292,
+          "end": 294,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 295,
@@ -1263336,6 +1263833,13 @@
           "renamed": "releaseStatics"
         },
         {
+          "start": 1501,
+          "end": 1502,
+          "symbol": "M:jk.a(BLjava/util/BitSet;Z)I",
+          "original": "a",
+          "renamed": "getUnmarkedRoomWindowMaxKey"
+        },
+        {
           "start": 1605,
           "end": 1606,
           "symbol": "C:g",
@@ -1263394,6 +1263898,20 @@
           "renamed": "setFakeLag"
         },
         {
+          "start": 3552,
+          "end": 3554,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 3555,
+          "end": 3582,
+          "symbol": "M:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I",
+          "original": "$cfr$intArgs$a$922851b022bc",
+          "renamed": "getUnmarkedRoomWindowMaxKeyWithIntGuard"
+        },
+        {
           "start": 3654,
           "end": 3656,
           "symbol": "C:lu",
@@ -1263415,6 +1263933,13 @@
           "renamed": "RotaterMountComponent"
         },
         {
+          "start": 3712,
+          "end": 3714,
+          "symbol": "M:jk.<init>([B)V",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 3849,
           "end": 3852,
           "symbol": "C:tba",
@@ -1263427,6 +1263952,13 @@
           "symbol": "M:tba.a(Ljava/lang/Throwable;Ljava/lang/String;)Llr;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4223,
+          "end": 4250,
+          "symbol": "M:jk.$cfr$intArgs$a$922851b022bc(ILjava/util/BitSet;Z)I",
+          "original": "$cfr$intArgs$a$922851b022bc",
+          "renamed": "getUnmarkedRoomWindowMaxKeyWithIntGuard"
         },
         {
           "start": 4352,
@@ -1305836,7 +1306368,7 @@
       "original": "l.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "e56f649f2603989f3ec8b95daa188951258795ab268f822dd99ab4e664b32f84",
-      "outputSha256": "464a81a71aa9538bf1fe77662d9621247431e092a7175f7aaeeec18cdb5f211b",
+      "outputSha256": "163d2ac6c18e89e6950b4510e2947f33c87e5f4f9e59bb10f9e2ec60cdf6fbc0",
       "edits": [
         {
           "start": 44,
@@ -1307619,6 +1308151,13 @@
           "renamed": "SoundCache"
         },
         {
+          "start": 40688,
+          "end": 40690,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 40734,
           "end": 40736,
           "symbol": "C:tn",
@@ -1307631,6 +1308170,13 @@
           "symbol": "M:qua.b()V",
           "original": "b",
           "renamed": "buildPatchUsage"
+        },
+        {
+          "start": 40996,
+          "end": 40998,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 41016,
@@ -1307695,6 +1308241,13 @@
           "symbol": "M:tn.a(I[BLnda;[I)Z",
           "original": "a",
           "renamed": "loadSamples"
+        },
+        {
+          "start": 41856,
+          "end": 41858,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 41876,
@@ -1340004,7 +1340557,7 @@
       "original": "mda.java",
       "renamed": "Puddle.java",
       "inputSha256": "ddbdb55384f4b4b01acc1c9bbbcdcf74b804b09b9c9e22168a4a31ad1d2b9761",
-      "outputSha256": "16e4d7a43778d7871cf1c46b2cb2a683c73dcd96d8c86c887129761aaadb4783",
+      "outputSha256": "cb6af17a9add7b52be816b741e2b5cc5425f5115b9618784e6a857686aa37c25",
       "edits": [
         {
           "start": 50,
@@ -1341034,6 +1341587,13 @@
           "symbol": "C:fua",
           "original": "fua",
           "renamed": "DropdownButtonPainter"
+        },
+        {
+          "start": 12267,
+          "end": 12270,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 12279,
@@ -1344944,7 +1345504,7 @@
       "original": "mg.java",
       "renamed": "TimingPattern.java",
       "inputSha256": "8eb5c521007f06904b480f15208e2135f8d84adc47d9af35ce6f2189b1272350",
-      "outputSha256": "97786e22978031bee83192c4e1ee3af4028199fe0c70f17c07f33e521655c183",
+      "outputSha256": "e0309a5c30ac904c04ceec6cb1b4f2d1b3cc7e03f495d9aabbe72e22f6dcf281",
       "edits": [
         {
           "start": 50,
@@ -1345001,6 +1345561,13 @@
           "symbol": "F:mg.field_a:Z",
           "original": "field_a",
           "renamed": "toggled"
+        },
+        {
+          "start": 395,
+          "end": 396,
+          "symbol": "M:mg.a(I)I",
+          "original": "a",
+          "renamed": "getFullscreenDialogHeight"
         },
         {
           "start": 499,
@@ -1345185,6 +1345752,13 @@
           "renamed": "TimingPattern"
         },
         {
+          "start": 1956,
+          "end": 1957,
+          "symbol": "M:mg.a(I)I",
+          "original": "a",
+          "renamed": "getFullscreenDialogHeight"
+        },
+        {
           "start": 2050,
           "end": 2057,
           "symbol": "F:mg.field_a:Z",
@@ -1345365,6 +1345939,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "TimingPattern"
+        },
+        {
+          "start": 2924,
+          "end": 2925,
+          "symbol": "M:mg.a(I)I",
+          "original": "a",
+          "renamed": "getFullscreenDialogHeight"
         },
         {
           "start": 2956,
@@ -1347622,7 +1348203,7 @@
       "original": "mi.java",
       "renamed": "ConsoleToken.java",
       "inputSha256": "e9b9365616ec7912430eb4ff5d04399304d28f5578eee11e9d1c7f5262effb67",
-      "outputSha256": "8a093af249bcb8d7bc36d853da22910b6542f2a18ecd6c402463617506949fdd",
+      "outputSha256": "60bce26708d83aa305e44c55e2b7e241dd7b1b2c348822671e0e1e44c20a636b",
       "edits": [
         {
           "start": 50,
@@ -1347665,6 +1348246,20 @@
           "symbol": "M:mi.a(I)V",
           "original": "a",
           "renamed": "drawSelectionMenuItems"
+        },
+        {
+          "start": 454,
+          "end": 457,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 748,
+          "end": 751,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 866,
@@ -1347749,6 +1348344,20 @@
           "symbol": "C:cna",
           "original": "cna",
           "renamed": "PendingRequestFactory"
+        },
+        {
+          "start": 1623,
+          "end": 1626,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 1627,
+          "end": 1654,
+          "symbol": "M:apa.$cfr$intArgs$a$62abead39cee(IZLjava/lang/String;)I",
+          "original": "$cfr$intArgs$a$62abead39cee",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 1724,
@@ -1352627,7 +1353236,7 @@
       "original": "mp.java",
       "renamed": "mp.java",
       "inputSha256": "3defd611e9b82b6b98e62aafa97eefe6b0c826bb63e94896a9b3e5c9c0780918",
-      "outputSha256": "5befc2fc5a12465d9403ea24ecebde6a038b8d4064d74a7abfcc446cac0fad18",
+      "outputSha256": "c54453da549a0b02344358c1cade45f75445ae9f75e7a6edf5350be33be3147d",
       "edits": [
         {
           "start": 108,
@@ -1353736,6 +1354345,13 @@
           "renamed": "DropdownButtonPainter"
         },
         {
+          "start": 11023,
+          "end": 11026,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 11041,
           "end": 11044,
           "symbol": "C:ada",
@@ -1353790,7 +1354406,7 @@
       "original": "mpa.java",
       "renamed": "mpa.java",
       "inputSha256": "3223a4035c58668d33049889be904793d980588875313cbf9cb5885529d48f39",
-      "outputSha256": "4dcdcf85d7a6bd6e6f049ccffee8ad487aa1f3494491b7f93125336510f43a16",
+      "outputSha256": "d9d441e5f1613d260723fff7158c51928f5a2e87d1844865490096e7f810943f",
       "edits": [
         {
           "start": 62,
@@ -1353798,6 +1354414,13 @@
           "symbol": "C:lc",
           "original": "lc",
           "renamed": "ContentTransitionDialog"
+        },
+        {
+          "start": 104,
+          "end": 107,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 154,
@@ -1392341,7 +1392964,7 @@
       "original": "oi.java",
       "renamed": "oi.java",
       "inputSha256": "60198ace9b56b5ed29d2f86466a486883471c6a3d97a7cae1fd4b35c587d8e73",
-      "outputSha256": "c27d29d6145b376d448c47ca6c0e187fa312ae424a3b698b4f50281b672f8fe9",
+      "outputSha256": "889dfbe0941cc477fe95f848289ef73b0ec83a309ce7f1808a791c3fa82b8862",
       "edits": [
         {
           "start": 66,
@@ -1392370,6 +1392993,13 @@
           "symbol": "C:gm",
           "original": "gm",
           "renamed": "VerticalGradientOperator"
+        },
+        {
+          "start": 381,
+          "end": 384,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 413,
@@ -1398681,7 +1399311,7 @@
       "original": "oo.java",
       "renamed": "SnakePitModel.java",
       "inputSha256": "f96edbd0ce967238fd638fc6c06e58d433d871c88aa7cab38ff947dfbc2930ef",
-      "outputSha256": "c16b62364a0b2975cce7759522fb9db06d5d08fb108b9f43fc93bd726f10865a",
+      "outputSha256": "e2be38a2cb6c49e863c1493a834ba6cef09c8cfb128ef19af12dd575083f7bfb",
       "edits": [
         {
           "start": 50,
@@ -1399389,6 +1400019,20 @@
           "symbol": "M:iv.a(IIBIIII)V",
           "original": "a",
           "renamed": "setPaneBounds"
+        },
+        {
+          "start": 13054,
+          "end": 13057,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 13089,
+          "end": 13092,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 13101,
@@ -1401015,7 +1401659,7 @@
       "original": "opa.java",
       "renamed": "ResultsPhase.java",
       "inputSha256": "79ae19f309d608f0c1ba02c7fa18fc30a1b80c07ba8f2929f37a08a1ab6d1a9d",
-      "outputSha256": "1a9893776b29b9669d9ee1d5fc29db8d1738b0d844320c1eb7ede3a1f8c70f16",
+      "outputSha256": "1313dac0df809268d5ddb2eee0959fbe037caad87ac0414095ad86d5b93db748",
       "edits": [
         {
           "start": 50,
@@ -1401198,6 +1401842,13 @@
           "symbol": "C:ic",
           "original": "ic",
           "renamed": "StatReportingObserverFactory"
+        },
+        {
+          "start": 2798,
+          "end": 2800,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 2923,
@@ -1403888,7 +1404539,7 @@
       "original": "or.java",
       "renamed": "TurbulenceNoise3D.java",
       "inputSha256": "9e5fe18f85e96a10b2e21e507ad1b764dc599468a145963356cdb17f54717f25",
-      "outputSha256": "f6396d1519412db97b10c0069308b712a05dcacf8d4a5f029621df96b15e8753",
+      "outputSha256": "570360957c67816c003a5f34304f245a0f7834e31a01338109fc93e0024ba8a7",
       "edits": [
         {
           "start": 44,
@@ -1404227,11 +1404878,32 @@
           "renamed": "accumulatedQ12"
         },
         {
+          "start": 1899,
+          "end": 1900,
+          "symbol": "M:or.d(I)V",
+          "original": "d",
+          "renamed": "drawFullscreenDialog"
+        },
+        {
+          "start": 1937,
+          "end": 1938,
+          "symbol": "M:qd.a(B)I",
+          "original": "a",
+          "renamed": "getFullscreenDialogWidth"
+        },
+        {
           "start": 1970,
           "end": 1972,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "TimingPattern"
+        },
+        {
+          "start": 1973,
+          "end": 1974,
+          "symbol": "M:mg.a(I)I",
+          "original": "a",
+          "renamed": "getFullscreenDialogHeight"
         },
         {
           "start": 1989,
@@ -1404283,6 +1404955,13 @@
           "renamed": "TextureCombineSource"
         },
         {
+          "start": 2171,
+          "end": 2172,
+          "symbol": "M:fp.a(B)V",
+          "original": "a",
+          "renamed": "drawFullscreenDialogContents"
+        },
+        {
           "start": 2222,
           "end": 2224,
           "symbol": "C:or",
@@ -1404290,11 +1404969,25 @@
           "renamed": "TurbulenceNoise3D"
         },
         {
+          "start": 2225,
+          "end": 2226,
+          "symbol": "M:or.d(I)V",
+          "original": "d",
+          "renamed": "drawFullscreenDialog"
+        },
+        {
           "start": 2242,
           "end": 2244,
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "TextureCombineSource"
+        },
+        {
+          "start": 2245,
+          "end": 2246,
+          "symbol": "M:fp.a(B)V",
+          "original": "a",
+          "renamed": "drawFullscreenDialogContents"
         },
         {
           "start": 2290,
@@ -1414540,7 +1415233,7 @@
       "original": "pfa.java",
       "renamed": "CourseMapWalker.java",
       "inputSha256": "9267e31959f65fd2b8f88443bb1f5171d847e78786da1c5e3fe54ecee88c8a0e",
-      "outputSha256": "964429fd448d9065660a584b428f97310dd78cdfed6e76808448e937b34bba98",
+      "outputSha256": "68c4dc13b7e6a21ddd2479a0bfc4f4cad3ff45b5bd3d288b9004df3fa1fc5139",
       "edits": [
         {
           "start": 50,
@@ -1420535,6 +1421228,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 30651,
+          "end": 30654,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 30665,
           "end": 30668,
           "symbol": "C:jaa",
@@ -1420596,6 +1421296,13 @@
           "symbol": "M:mt.a(Ljava/lang/String;B)[B",
           "original": "a",
           "renamed": "readTextEntry"
+        },
+        {
+          "start": 31016,
+          "end": 31019,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 31030,
@@ -1433128,6 +1433835,13 @@
           "renamed": "readTextEntry"
         },
         {
+          "start": 89120,
+          "end": 89123,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 89134,
           "end": 89137,
           "symbol": "C:jaa",
@@ -1438195,7 +1438909,7 @@
       "original": "pka.java",
       "renamed": "pka.java",
       "inputSha256": "92e3684438dacf11e4e242dde1e94b1bde8df90e68d99834916c4018f2e5e587",
-      "outputSha256": "b989ab763b7ea615143dd5c9c25a4f024b00d6c5fa032d6d59f3c370486b5014",
+      "outputSha256": "425eeaef11b4bd79780612f21db3511d1176c3106b125ed3efca0a2e9404009a",
       "edits": [
         {
           "start": 131,
@@ -1438777,6 +1439491,13 @@
           "symbol": "C:or",
           "original": "or",
           "renamed": "TurbulenceNoise3D"
+        },
+        {
+          "start": 3386,
+          "end": 3387,
+          "symbol": "M:or.d(I)V",
+          "original": "d",
+          "renamed": "drawFullscreenDialog"
         },
         {
           "start": 3414,
@@ -1446771,8 +1447492,15 @@
       "original": "pua.java",
       "renamed": "pua.java",
       "inputSha256": "f5e6ad3f209bc7c2da8143e2dc4aef248e3c43a67a0f7fb31d5ac5484c26bbe3",
-      "outputSha256": "070a5e2e636f6f690fc21208a904bd317291a1966f8b7c4deaa39b11050bde5d",
+      "outputSha256": "eae879a9d0a1a0502b212a1556f596c42529b427968ade6708815a810cc945de",
       "edits": [
+        {
+          "start": 78,
+          "end": 81,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
         {
           "start": 152,
           "end": 153,
@@ -1447467,7 +1448195,7 @@
       "original": "pw.java",
       "renamed": "PressureSwitchComponent.java",
       "inputSha256": "19652860f2c6894a14691315846b5bf7e1645dd840c842439a196af9e712e84b",
-      "outputSha256": "3ab5ac9668fa42eb85c4d3f6fb1266bcb403af8f14a615d76e4e8bb75b86d6ac",
+      "outputSha256": "788d32b068a9259c78e4c6614887b3746ee7366bab3aebd791281bd706e3d6af",
       "edits": [
         {
           "start": 50,
@@ -1447596,11 +1448324,32 @@
           "renamed": "layoutFullScreen"
         },
         {
+          "start": 953,
+          "end": 956,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 985,
           "end": 988,
           "symbol": "C:fua",
           "original": "fua",
           "renamed": "DropdownButtonPainter"
+        },
+        {
+          "start": 1014,
+          "end": 1017,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 1069,
+          "end": 1072,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 1081,
@@ -1451038,7 +1451787,7 @@
       "original": "qd.java",
       "renamed": "qd.java",
       "inputSha256": "5a990afa88a9f5bf704eb13f1f698a025bcfc71b2085799c92154dd0b1be503d",
-      "outputSha256": "6ee3e1191d5d56c964c153fc24784020f6e749237f54be4272279fb54d44c517",
+      "outputSha256": "77672a472c40b84d8ac5b4138f926d3b75f511c429d9715de3e0fbb384c4b99b",
       "edits": [
         {
           "start": 66,
@@ -1451046,6 +1451795,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 101,
+          "end": 102,
+          "symbol": "M:qd.a(B)I",
+          "original": "a",
+          "renamed": "getFullscreenDialogWidth"
         },
         {
           "start": 191,
@@ -1463093,7 +1463849,7 @@
       "original": "qka.java",
       "renamed": "StandingsPhase.java",
       "inputSha256": "e0e1f72bc8c3e27c1d426ef2fbfc3b379d2697ff04afc4818285c35e2f55a781",
-      "outputSha256": "8ee73c468f2fef43d0289650c23cf7d17b073bc4e47fa9e25997a1a5d6fa5311",
+      "outputSha256": "c5d5d3b6f72bae1405cdd0db40037b1a4804d04cc9fec578f27d74ed938f49d8",
       "edits": [
         {
           "start": 50,
@@ -1464445,6 +1465201,13 @@
           "symbol": "C:ea",
           "original": "ea",
           "renamed": "C2SActionPacket"
+        },
+        {
+          "start": 9500,
+          "end": 9503,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 9541,
@@ -1467819,10 +1468582,17 @@
     },
     {
       "original": "qna.java",
-      "renamed": "qna.java",
+      "renamed": "FullscreenDialogLayout.java",
       "inputSha256": "01f37cf59d73fd6d989bf5e02077e8bf8283d387400a3a442c27f8cd21ecc41b",
-      "outputSha256": "60b9d8f4c9b044f1b353ce39a7df1f7405a7f1aeb78b932c3cb43743ccc359b0",
+      "outputSha256": "12fec145b6f78922231090ae33648c6aecd20166faac1b0464e4ba1e1ab85082",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
         {
           "start": 67,
           "end": 70,
@@ -1467836,6 +1468606,13 @@
           "symbol": "M:qna.a(I)V",
           "original": "a",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 284,
+          "end": 287,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 288,
@@ -1469049,11 +1469826,25 @@
           "renamed": "PathMoveLocomotor"
         },
         {
+          "start": 9651,
+          "end": 9678,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
+        },
+        {
           "start": 10114,
           "end": 10116,
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "PathMoveLocomotor"
+        },
+        {
+          "start": 10117,
+          "end": 10144,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 10343,
@@ -1469068,6 +1469859,13 @@
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "PathMoveLocomotor"
+        },
+        {
+          "start": 10604,
+          "end": 10631,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 10829,
@@ -1469182,6 +1469980,13 @@
           "renamed": "DefaultTileRenderable"
         },
         {
+          "start": 11593,
+          "end": 11596,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
+        },
+        {
           "start": 11597,
           "end": 11598,
           "symbol": "M:qna.a(IZI)V",
@@ -1469215,6 +1470020,13 @@
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "PathMoveLocomotor"
+        },
+        {
+          "start": 11849,
+          "end": 11876,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 11883,
@@ -1470858,7 +1471670,7 @@
       "original": "qqa.java",
       "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "0d7bca66d2097286ee1675936dc761947c5f320dd5f366292c5c38b5d02d5fd4",
-      "outputSha256": "8eb76581d61e5b8a0faaf16428f8c7e383a9e10631ab70f475e5693070ff3b03",
+      "outputSha256": "9b34274aaecd2bd0b6b5750b3e2734f504cc4cff0730f63b57ce9ff279849fcb",
       "edits": [
         {
           "start": 50,
@@ -1470880,6 +1471692,13 @@
           "symbol": "C:uia",
           "original": "uia",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 197,
+          "end": 200,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 246,
@@ -1471102,7 +1471921,7 @@
       "original": "qr.java",
       "renamed": "SingleChildWidget.java",
       "inputSha256": "eef4dd698df27a5966dc477c33764aea7e5f463e144355bf0d45648a7fdaaf46",
-      "outputSha256": "3538481d4291d6fcfdefafa18bfac06dfee719c96a385ccc24650cce593d8f50",
+      "outputSha256": "6c834f5eb404a9195ad466918dcebb568dc3835201a54a50b909e9389acbf426",
       "edits": [
         {
           "start": 74,
@@ -1472974,6 +1473793,13 @@
           "renamed": "HardwareModelVertexStream"
         },
         {
+          "start": 12902,
+          "end": 12904,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 12919,
           "end": 12922,
           "symbol": "C:jea",
@@ -1472986,6 +1473812,41 @@
           "symbol": "C:dja",
           "original": "dja",
           "renamed": "PressureSwitchBehaviour"
+        },
+        {
+          "start": 12951,
+          "end": 12953,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 12985,
+          "end": 12987,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 13019,
+          "end": 13021,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 13054,
+          "end": 13056,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 13089,
+          "end": 13091,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 13123,
@@ -1473002,11 +1473863,25 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 13149,
+          "end": 13151,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 13189,
           "end": 13192,
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 13197,
+          "end": 13199,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 13220,
@@ -1473044,6 +1473919,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 13294,
+          "end": 13296,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 13317,
           "end": 13319,
           "symbol": "C:dn",
@@ -1473058,6 +1473940,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 13342,
+          "end": 13344,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 13365,
           "end": 13368,
           "symbol": "C:qja",
@@ -1473070,6 +1473959,20 @@
           "symbol": "C:jea",
           "original": "jea",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 13391,
+          "end": 13393,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 13414,
+          "end": 13416,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 13435,
@@ -1473098,6 +1474001,13 @@
           "symbol": "M:uka.a(Lcn;Ljava/lang/String;ILjava/lang/String;)[Liu;",
           "original": "a",
           "renamed": "loadSpritesByName"
+        },
+        {
+          "start": 13499,
+          "end": 13501,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 13520,
@@ -1473154,6 +1474064,27 @@
           "symbol": "M:uka.a(Lcn;Ljava/lang/String;ILjava/lang/String;)[Liu;",
           "original": "a",
           "renamed": "loadSpritesByName"
+        },
+        {
+          "start": 13677,
+          "end": 13679,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 13719,
+          "end": 13721,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 13762,
+          "end": 13764,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 13783,
@@ -1474771,6 +1475702,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "DateFieldsWidget"
+        },
+        {
+          "start": 18481,
+          "end": 18483,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 19703,
@@ -1476405,7 +1477343,7 @@
       "original": "qt.java",
       "renamed": "qt.java",
       "inputSha256": "f5cbb30fd05912cba1b4cfbc3d7ab519bc9ce6a328453136f0ad646bad42c118",
-      "outputSha256": "0ece7acf878d8474c9d3ebdcc00ae329447581e3e3b6b2a985f6bfb56e630095",
+      "outputSha256": "5dde5de2bdeb7c579e70ce8f5351951ce56a72727e7c2db2ca4cb232846df539",
       "edits": [
         {
           "start": 66,
@@ -1476490,6 +1477428,13 @@
           "symbol": "C:ola",
           "original": "ola",
           "renamed": "ContextMenu"
+        },
+        {
+          "start": 510,
+          "end": 512,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 521,
@@ -1479005,7 +1479950,7 @@
       "original": "qua.java",
       "renamed": "MusicTrack.java",
       "inputSha256": "111845265860dae141de0edbf2210e061100a2ce796b3867789336a31740e0f6",
-      "outputSha256": "61ee05d01244e3d3e78c369761a516f7774491b3ac43b40d26c2a0151ed61568",
+      "outputSha256": "dc1f77bac90bea917a0003dd68518ac8ad98ee08fb82f8a6da269d8af7c5b4c2",
       "edits": [
         {
           "start": 50,
@@ -1479041,6 +1479986,20 @@
           "symbol": "C:maa",
           "original": "maa",
           "renamed": "MidiTrackReader"
+        },
+        {
+          "start": 357,
+          "end": 359,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
+          "start": 375,
+          "end": 377,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 748,
@@ -1479127,11 +1480086,25 @@
           "renamed": "isDone"
         },
         {
+          "start": 2579,
+          "end": 2581,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 2597,
           "end": 2598,
           "symbol": "M:ji.a(BJ)Lvg;",
           "original": "a",
           "renamed": "get"
+        },
+        {
+          "start": 2694,
+          "end": 2696,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 2777,
@@ -1489370,7 +1490343,7 @@
       "original": "rg.java",
       "renamed": "rg.java",
       "inputSha256": "408895d6a1e7c01473368cd929cc5d2390f955aa1990071cb20f65bf79c126f8",
-      "outputSha256": "cb0e856ab2864a6d6bcaad78a5b23b52ed27e5ed453399d4a61a059850574cf1",
+      "outputSha256": "1d870438337ac34b96233df33636ec2780b595208e15ba596611b3b1b6586efc",
       "edits": [
         {
           "start": 61,
@@ -1491382,6 +1492355,13 @@
           "renamed": "HazardEffect"
         },
         {
+          "start": 7109,
+          "end": 7112,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 7122,
           "end": 7125,
           "symbol": "C:pna",
@@ -1491506,6 +1492486,13 @@
           "symbol": "C:up",
           "original": "up",
           "renamed": "HazardEffect"
+        },
+        {
+          "start": 7550,
+          "end": 7553,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 7563,
@@ -1492306,6 +1493293,13 @@
           "renamed": "HazardEffect"
         },
         {
+          "start": 9868,
+          "end": 9871,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
+        },
+        {
           "start": 9881,
           "end": 9884,
           "symbol": "C:pna",
@@ -1492430,6 +1493424,13 @@
           "symbol": "C:up",
           "original": "up",
           "renamed": "HazardEffect"
+        },
+        {
+          "start": 10297,
+          "end": 10300,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 10310,
@@ -1502835,7 +1503836,7 @@
       "original": "ro.java",
       "renamed": "PathMoveLocomotor.java",
       "inputSha256": "227bad546a34a33a6db5ecc9a0cefb19b4276423484bd2d0c0568f8a0fe8d125",
-      "outputSha256": "1642a025e4a99bd8fd00a535d4db36bf21dd112746bbc4525c397fa0daa20128",
+      "outputSha256": "038579db5729fdb02163077da55794047e63ef0ccec4d97443d8516a25111d51",
       "edits": [
         {
           "start": 50,
@@ -1504875,6 +1505876,13 @@
           "renamed": "PathMoveLocomotor"
         },
         {
+          "start": 14315,
+          "end": 14342,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
+        },
+        {
           "start": 14402,
           "end": 14403,
           "symbol": "M:ro.c(B)V",
@@ -1504971,6 +1505979,13 @@
           "symbol": "F:ro.field_w:I",
           "original": "field_w",
           "renamed": "waypointIndex"
+        },
+        {
+          "start": 15108,
+          "end": 15135,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 15671,
@@ -1530529,7 +1531544,7 @@
       "original": "ssa.java",
       "renamed": "ClipStack.java",
       "inputSha256": "50f7f67e6b6bac648ad700db89a03f893123eb5203a1ae5a42f9d626e13214eb",
-      "outputSha256": "099d037043458ce8987db9e1207653ad6623d48bb8f2dd20aadded1719858b82",
+      "outputSha256": "f82221a3a4aae0ae695de5f7ae472686a140f33e587e285767daefd9374e0ec8",
       "edits": [
         {
           "start": 69,
@@ -1530917,6 +1531932,13 @@
           "renamed": "ClipStack"
         },
         {
+          "start": 6263,
+          "end": 6279,
+          "symbol": "M:ssa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 6366,
           "end": 6369,
           "symbol": "C:fqa",
@@ -1531071,6 +1532093,13 @@
           "renamed": "ClipStack"
         },
         {
+          "start": 8733,
+          "end": 8749,
+          "symbol": "M:ssa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
+        },
+        {
           "start": 8867,
           "end": 8874,
           "symbol": "F:uia.field_h:I",
@@ -1531167,6 +1532196,13 @@
           "symbol": "M:ssa.d(I)V",
           "original": "d",
           "renamed": "releaseStatics"
+        },
+        {
+          "start": 11408,
+          "end": 11424,
+          "symbol": "M:ssa.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+          "original": "$cfr$sneakyThrow",
+          "renamed": "throwUnchecked"
         }
       ]
     },
@@ -1595599,7 +1596635,7 @@
       "original": "vd.java",
       "renamed": "RandomMazeBehaviour.java",
       "inputSha256": "c9284857857d90d374e8bc84fce8cf10df722ea63384fb85ff348e55d8f3d087",
-      "outputSha256": "8b4b013805982a2e28c426b2f4c7bdd12052ff754dec220fe3166e424620d1d9",
+      "outputSha256": "246715fa7b54a0a406bb8b410d64da29fda838820e8d5dc262de2162babc1c52",
       "edits": [
         {
           "start": 50,
@@ -1597819,6 +1598855,13 @@
           "symbol": "C:una",
           "original": "una",
           "renamed": "GpuDataType"
+        },
+        {
+          "start": 25426,
+          "end": 25429,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 25430,
@@ -1600171,7 +1601214,7 @@
       "original": "vh.java",
       "renamed": "WhirlpoolDigest.java",
       "inputSha256": "7f248fcb262106d0d4b1643a1ce6b9a20ef5f4116b414501a6d4cf60282eff78",
-      "outputSha256": "ef1c5fcd58f1ea6831915fcbd93bf329036f3bc620e53939b34bad45d48defeb",
+      "outputSha256": "04e954d636bc5d1fe01c05374c49bb38cedc2f16d224e6fcdb436c2823f7437b",
       "edits": [
         {
           "start": 50,
@@ -1600888,6 +1601931,13 @@
           "renamed": "BlockModel"
         },
         {
+          "start": 9810,
+          "end": 9812,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
+        },
+        {
           "start": 9868,
           "end": 9870,
           "symbol": "C:cu",
@@ -1600949,6 +1601999,13 @@
           "symbol": "C:boa",
           "original": "boa",
           "renamed": "BlockModel"
+        },
+        {
+          "start": 10567,
+          "end": 10569,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 10634,
@@ -1603481,7 +1604538,7 @@
       "original": "vk.java",
       "renamed": "CourseLayoutFactory.java",
       "inputSha256": "2679974d12c809986908c541f9d312968cc916dec7244e0abcdad2c8a8e4e6b2",
-      "outputSha256": "06ad61c727044b95392c63f1a0bdb4c30ffa6da8753950d3fd83b2c6bc02dad1",
+      "outputSha256": "01e6366e91af8cd07ff0c84611a2472e6a067d50a2ff3a94db2658c7fcac021a",
       "edits": [
         {
           "start": 50,
@@ -1603748,6 +1604805,13 @@
           "symbol": "C:ln",
           "original": "ln",
           "renamed": "PlatformComponent"
+        },
+        {
+          "start": 1989,
+          "end": 1992,
+          "symbol": "C:qna",
+          "original": "qna",
+          "renamed": "FullscreenDialogLayout"
         },
         {
           "start": 1993,
@@ -1612644,7 +1613708,7 @@
       "original": "vr.java",
       "renamed": "SetFakeLagCommand.java",
       "inputSha256": "4de520fef192796eed1e0223e31539f1975530e50ee4f2a859f060520694f23a",
-      "outputSha256": "176b9690a7c47e208622b30f2d3fd28c3173fd08b67cdf2a3dfc85dd410c93b0",
+      "outputSha256": "ea30829f79cca10f639b3829f6ce865da2f1d809e4a2653db60756b1c55679e0",
       "edits": [
         {
           "start": 50,
@@ -1612687,6 +1613751,13 @@
           "symbol": "C:bfa",
           "original": "bfa",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 415,
+          "end": 417,
+          "symbol": "C:jk",
+          "original": "jk",
+          "renamed": "MidiNoteUsageNode"
         },
         {
           "start": 418,
@@ -1623440,7 +1624511,7 @@
       "original": "wg.java",
       "renamed": "StatReportingScoringObserver.java",
       "inputSha256": "44132de9d1213b07d9e4a4a2bca223b22837a182e1915c7d58e5d0dcda5f18ec",
-      "outputSha256": "f3bf6218652e0e8fb658a4d1e61c9009de11565cfadc0e97898a27a40afe3f07",
+      "outputSha256": "32c5f42c34692d5ab95be66618d6354652b5942e30e6aa8a0f4c338cbbdda354",
       "edits": [
         {
           "start": 50,
@@ -1623777,6 +1624848,13 @@
           "symbol": "C:ro",
           "original": "ro",
           "renamed": "PathMoveLocomotor"
+        },
+        {
+          "start": 4272,
+          "end": 4299,
+          "symbol": "M:ro.$cfr$intArgs$a$590e95718a07(ILjava/lang/String;Z)I",
+          "original": "$cfr$intArgs$a$590e95718a07",
+          "renamed": "measureStringWidthWithIntGuard"
         },
         {
           "start": 4306,
@@ -1639095,7 +1640173,7 @@
       "original": "wua.java",
       "renamed": "QuickChatPhraseDefinition.java",
       "inputSha256": "29831271e6eb7b3a6202fd690723104c2cf2d28a7af33d3b45a9e228caedf1f4",
-      "outputSha256": "6cdf82314aa5ae78394c820c4fe3b3a011ca7fa9cdab0359e5128e1b5b4432fc",
+      "outputSha256": "485f352695b379657633ba28e3e0d36bfe00d0b66e685ea0dfbcc619b46be85d",
       "edits": [
         {
           "start": 50,
@@ -1639110,6 +1640188,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 129,
+          "end": 132,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 365,
@@ -1639222,6 +1640307,13 @@
           "symbol": "C:su",
           "original": "su",
           "renamed": "QuickChatParamType"
+        },
+        {
+          "start": 2628,
+          "end": 2631,
+          "symbol": "C:apa",
+          "original": "apa",
+          "renamed": "NineSliceFrame"
         },
         {
           "start": 2743,
@@ -1646444,10 +1647536,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "9457b20c2766d72589113dc92fb3d7600ba16e3031dab9e807bbe58a5888b763",
+    "rulesSha256": "d33006ed5cde7e1db313d2e61250b0c86b0d3a479d8522d488994b5bccbde3e1",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "907cbc1941d57ff73c0e6c5e3539def3afbde5c12556ee4003e85d0d2a36ee1a",
+    "outputTreeSha256": "9cd0eec8ab968b1c9448494b6c2f227928050130e16ffa43bec577e9efd9dc85",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

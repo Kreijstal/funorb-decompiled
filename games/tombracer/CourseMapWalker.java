@@ -707,7 +707,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextSkeletons", (byte) 101);
                 if (var2 != null) {
-                  qna.field_a = BitPackedColour.decodeText((byte) 27, var2);
+                  FullscreenDialogLayout.field_a = BitPackedColour.decodeText((byte) 27, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitleLocksAndKeys", (byte) 101);
                 if (null != var2) {
@@ -715,7 +715,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTextLocksAndKeys", (byte) 120);
                 if (var2 != null) {
-                  apa.field_b = BitPackedColour.decodeText((byte) 62, var2);
+                  NineSliceFrame.field_b = BitPackedColour.decodeText((byte) 62, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("instructionTitlePortals", (byte) 125);
                 if (var2 != null) {
@@ -2067,7 +2067,7 @@ final class CourseMapWalker {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("silver_medal", (byte) 117);
                 if (null != var2) {
-                  qna.field_c = BitPackedColour.decodeText((byte) 72, var2);
+                  FullscreenDialogLayout.field_c = BitPackedColour.decodeText((byte) 72, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("bronze_medal", (byte) 118);
                 if (var2 != null) {

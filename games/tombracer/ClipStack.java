@@ -182,7 +182,7 @@ final class ClipStack {
           var6 = var5 + var3_int;
           var7 = param0.readUnsignedShort(126);
           if (2 < var7) {
-            throw ClipStack.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
+            throw ClipStack.<RuntimeException>throwUnchecked(new Exception("Local: header error: version=" + var7));
           }
           var28 = SwitchComponent.e(true);
           var25 = var28;
@@ -256,7 +256,7 @@ final class ClipStack {
             }
           }
           if (param0.position > var6) {
-            throw ClipStack.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
+            throw ClipStack.<RuntimeException>throwUnchecked(new Exception("Local: data overrun: start=" + var5 + " length=" + var3_int + " end=" + var6 + " overranto=" + param0.position));
           }
           if (param2) {
             System.out.println("Loading funorbprofile local: achievements=" + StatReportingScoringObserver.arrayToString(0, var28));
@@ -332,7 +332,7 @@ final class ClipStack {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -488,7 +488,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         nc.releaseStatics(122);
         QuickChatPhraseSource.releaseStatics((byte) -125);
         wt.releaseStatics(112);
-        apa.releaseStatics((byte) 7);
+        NineSliceFrame.releaseStatics((byte) 7);
         wp.releaseStatics((byte) 97);
         bl.releaseStatics(123);
         LargeFontMetrics.releaseStatics((byte) -39);
@@ -539,7 +539,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         RoundWinnerPhase.releaseStatics(0);
         TreasureValuesOverlay.releaseStatics(-28);
         era.releaseStatics((byte) 114);
-        qna.releaseStatics(-2);
+        FullscreenDialogLayout.releaseStatics(-2);
         DateValidationSource.releaseStatics((byte) -128);
         DateFieldsWidget.releaseStatics(25);
         SocketArchiveNetworkClient.releaseStatics(false);
@@ -554,7 +554,7 @@ public final class TombRacer extends TombRacerShell implements ls {
         DefaultTileRenderable.releaseStatics(-1);
         PooledObject.releaseStatics(72);
         WhirlpoolDigest.releaseStatics(param0 + 3560);
-        jk.releaseStatics((byte) 76);
+        MidiNoteUsageNode.releaseStatics((byte) 76);
         SoundTone.releaseStatics();
         aa.releaseStatics(true);
         PerlinNoise2D.releaseStatics((byte) -123);

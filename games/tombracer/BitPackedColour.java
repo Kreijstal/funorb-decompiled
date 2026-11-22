@@ -6,7 +6,7 @@ final class BitPackedColour implements noa {
     private int channelBits;
     private int blue;
     private int alpha;
-    static apa field_b;
+    static NineSliceFrame field_b;
     private boolean includesAlpha;
     private int green;
     static String field_a;
@@ -57,7 +57,7 @@ final class BitPackedColour implements noa {
             this.alpha = param2.readBits((byte) 44, this.channelBits) * var4_int;
           }
           if (param0 != 8) {
-            field_b = (apa) null;
+            field_b = (NineSliceFrame) null;
           }
           if (0 >= this.alpha) {
             return;

@@ -48,7 +48,7 @@ final class AudioOutputThread implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           this.field_b = false;
-          throw AudioOutputThread.<RuntimeException>$cfr$sneakyThrow(var3);
+          throw AudioOutputThread.<RuntimeException>throwUnchecked(var3);
         }
         this.field_b = false;
     }
@@ -69,7 +69,7 @@ final class AudioOutputThread implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -15,7 +15,7 @@ final class qt {
     final static void appendRankingRecord(int param0, int param1, int param2, int param3, int param4, byte param5) {
         ItemBehaviour.field_p[ContextMenu.field_Eb] = param3;
         BlockModel.field_n[ContextMenu.field_Eb] = ContextMenu.field_Eb;
-        jk.field_h[ContextMenu.field_Eb] = param4;
+        MidiNoteUsageNode.field_h[ContextMenu.field_Eb] = param4;
         if (C2SChooseCharacterPacket.field_d < param4) {
           LegacyOpenGlReflectionEffect.field_g = param4;
         }

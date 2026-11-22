@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class apa {
+final class NineSliceFrame {
     static long field_a;
     static String field_b;
     private Sprite[] field_d;
@@ -19,11 +19,11 @@ final class apa {
           return;
         }
         String var7 = (String) null;
-        apa.$cfr$intArgs$a$62abead39cee(-51, true, (String) null);
+        NineSliceFrame.measureStringWidthWithIntGuard(-51, true, (String) null);
         ConstrainToLatticeLocomotor.drawNineSlice(param4, this.field_d, param2, -119, param1, param3);
     }
 
-    private apa() throws Throwable {
+    private NineSliceFrame() throws Throwable {
         throw new Error();
     }
 
@@ -64,7 +64,7 @@ final class apa {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$62abead39cee(int param0, boolean param1, String param2) {
+    final static int measureStringWidthWithIntGuard(int param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;

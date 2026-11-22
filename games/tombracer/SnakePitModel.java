@@ -386,8 +386,8 @@ final class SnakePitModel extends TrapModel {
           var7 = var7 - (2 + param5);
           ComponentMount.field_b.setBounds(ComponentMount.field_b.field_G, param5, -23776, 0, param2 + CharacterChoiceFactory.field_g.field_G);
           VertexStreamLayout.field_d.setPaneBounds(param3 + (2 + param2) + 485, 2, (byte) 127, 5, param3, -5 + var7, 5);
-          if (apa.field_c != null) {
-            apa.field_c.setBounds((byte) -31, VertexStreamLayout.field_d.field_G, VertexStreamLayout.field_d.field_t, VertexStreamLayout.field_d.field_qb, VertexStreamLayout.field_d.field_T);
+          if (NineSliceFrame.field_c != null) {
+            NineSliceFrame.field_c.setBounds((byte) -31, VertexStreamLayout.field_d.field_G, VertexStreamLayout.field_d.field_t, VertexStreamLayout.field_d.field_qb, VertexStreamLayout.field_d.field_T);
           }
           var8 = era.field_e.field_G - (param2 + var6_int);
           var9 = var8 / 2;

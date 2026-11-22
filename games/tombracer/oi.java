@@ -12,7 +12,7 @@ final class oi {
             oi.queueQuickChatMessage(-68L, 54, 86, (String) null, 2);
           }
           VerticalGradientOperator.field_n = param4;
-          apa.field_a = param0;
+          NineSliceFrame.field_a = param0;
           ConsoleTokenStream.field_b = param3;
           CharacterSelectPhase.field_q = param1;
           LegacyOpenGlTurbulentTextureEffect.field_f = true;

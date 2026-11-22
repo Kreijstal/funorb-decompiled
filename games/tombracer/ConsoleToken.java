@@ -18,7 +18,7 @@ final class ConsoleToken extends IntrusiveNode {
         int var3 = 0;
         int stackIn_12_0 = 0;
         boolean stackIn_13_1 = false;
-        apa stackIn_17_0 = null;
+        NineSliceFrame stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -28,7 +28,7 @@ final class ConsoleToken extends IntrusiveNode {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        apa var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
@@ -54,7 +54,7 @@ final class ConsoleToken extends IntrusiveNode {
             var6 = PendingRequestFactory.field_b[var3];
             stackIn_12_0 = -50;
             stackIn_13_1 = !(var4 < 0);
-            var7 = apa.$cfr$intArgs$a$62abead39cee(stackIn_12_0, stackIn_13_1, var6);
+            var7 = NineSliceFrame.measureStringWidthWithIntGuard(stackIn_12_0, stackIn_13_1, var6);
             var8 = -(var7 >> 1) + Transform3D.field_a;
             if (var4 >= 0) {
               if (BillboardDefinition.field_h.selectedIndex == var4) {

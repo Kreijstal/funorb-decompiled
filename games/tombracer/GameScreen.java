@@ -47,7 +47,7 @@ abstract class GameScreen {
                 }
                 return false;
               }
-              if (ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+              if (ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
                 if (2 != VerticalGradientOperator.field_n &&
                   var3 != 0) {
                   return false;
@@ -66,7 +66,7 @@ abstract class GameScreen {
             }
             if (LegacyOpenGlTurbulentTextureEffect.field_f) {
               if (VerticalGradientOperator.field_n == 2 &&
-                !ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+                !ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
                 return false;
               }
               if (2 != VerticalGradientOperator.field_n &&
@@ -101,7 +101,7 @@ abstract class GameScreen {
               return false;
             }
             if (VerticalGradientOperator.field_n == 2 &&
-              !ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+              !ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
               return false;
             }
             if (2 != VerticalGradientOperator.field_n &&
@@ -121,7 +121,7 @@ abstract class GameScreen {
             return false;
           }
           if (VerticalGradientOperator.field_n == 2 &&
-            !ota.isPlayerReachable(apa.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
+            !ota.isPlayerReachable(NineSliceFrame.field_a, (byte) 13, ConsoleTokenStream.field_b)) {
             return false;
           }
           if (2 != VerticalGradientOperator.field_n &&

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pua extends hq {
-    static apa field_c;
+    static NineSliceFrame field_c;
     private static String[] field_d;
 
     public static void releaseStatics(byte param0) {

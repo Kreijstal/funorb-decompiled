@@ -725,7 +725,7 @@ final class RandomMazeBehaviour extends Behaviour {
         if (!GpuDataType.a((byte) 105)) {
           return;
         }
-        qna.buildFullscreenDialog(param0, false, 4);
+        FullscreenDialogLayout.buildFullscreenDialog(param0, false, 4);
     }
 
     final void tick(int param0) {

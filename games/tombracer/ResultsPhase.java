@@ -87,7 +87,7 @@ final class ResultsPhase extends MatchPhase {
               if (!param6) {
                 stackIn_22_0 = StatReportingObserverFactory.field_c[var12];
               } else {
-                stackIn_22_0 = jk.field_h[var12];
+                stackIn_22_0 = MidiNoteUsageNode.field_h[var12];
               }
               var13 = stackIn_22_0;
               if (var7_int < var13) {

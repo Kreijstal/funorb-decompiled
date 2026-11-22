@@ -93,7 +93,7 @@ final class ColourRowCache {
           while (PendingRequestFactory.field_b.length > var3_int) {
             var5 = ComponentTargetList.field_c[var3_int];
             if (var5 >= 0) {
-              var6 = apa.$cfr$intArgs$a$62abead39cee(-50, true, PendingRequestFactory.field_b[var3_int]);
+              var6 = NineSliceFrame.measureStringWidthWithIntGuard(-50, true, PendingRequestFactory.field_b[var3_int]);
               var7 = Transform3D.field_a - (var6 >> 1);
               var4 = var4 + ByteGameMessageSender.field_a;
               if (CrusherBehaviour.rectContainsPoint(param2, var6 + (S2CCharacterChoicePacket.field_a << 1), var7 - S2CCharacterChoicePacket.field_a, param0, FurnitureModel.field_n + (RenderLayer.field_d << 1), false, var4)) {

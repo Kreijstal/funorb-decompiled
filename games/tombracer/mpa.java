@@ -3,7 +3,7 @@
  */
 final class mpa extends ContentTransitionDialog {
     static int[] field_W;
-    static apa field_V;
+    static NineSliceFrame field_V;
     static boolean field_X;
 
     mpa(DialogStack param0, UiWidget param1) {

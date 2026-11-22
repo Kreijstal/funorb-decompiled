@@ -4,7 +4,7 @@
 final class QuickChatPhraseDefinition extends DualLinkNode {
     static int field_n;
     private int[] field_k;
-    static apa field_o;
+    static NineSliceFrame field_o;
     private String[] field_l;
     private int[][] field_q;
     int[] field_m;
@@ -81,7 +81,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 < 3) {
-            field_o = (apa) null;
+            field_o = (NineSliceFrame) null;
           }
           if (param1 != 1) {
             if (param1 == 2) {

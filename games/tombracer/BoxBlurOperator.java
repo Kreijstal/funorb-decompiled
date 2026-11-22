@@ -228,10 +228,10 @@ final class BoxBlurOperator extends TextureOperator {
         int var4;
         int var5;
         if (param0) {
-          if (jk.field_h[param3] < jk.field_h[param2]) {
+          if (MidiNoteUsageNode.field_h[param3] < MidiNoteUsageNode.field_h[param2]) {
             return true;
           }
-          if (jk.field_h[param2] < jk.field_h[param3]) {
+          if (MidiNoteUsageNode.field_h[param2] < MidiNoteUsageNode.field_h[param3]) {
             return false;
           }
           if (StatReportingObserverFactory.field_c[param3] < StatReportingObserverFactory.field_c[param2]) {
@@ -247,10 +247,10 @@ final class BoxBlurOperator extends TextureOperator {
           if (StatReportingObserverFactory.field_c[param2] < StatReportingObserverFactory.field_c[param3]) {
             return false;
           }
-          if (jk.field_h[param2] > jk.field_h[param3]) {
+          if (MidiNoteUsageNode.field_h[param2] > MidiNoteUsageNode.field_h[param3]) {
             return true;
           }
-          if (jk.field_h[param2] < jk.field_h[param3]) {
+          if (MidiNoteUsageNode.field_h[param2] < MidiNoteUsageNode.field_h[param3]) {
             return false;
           }
         }
