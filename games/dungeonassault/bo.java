@@ -70,7 +70,7 @@ final class bo extends ok {
           PacketBuffer.a(PacketBuffer.field_k, false);
           PacketBuffer.field_k = null;
           nf.d(0);
-          id.field_i = mk.a(3, (byte) 34);
+          SecondaryNodeDequeIterator.field_i = mk.a(3, (byte) 34);
           mi.field_e = mk.a(4, (byte) 34);
           hj.field_Z = bg.a(true, 9, false, false, true);
           np.field_A = mk.a(10, (byte) 34);
@@ -95,13 +95,13 @@ final class bo extends ok {
           be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
           be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
           be.field_s.a(wo.field_h, 237, rl.field_k, DualLinkNode.field_r);
-          be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
-          be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
-          be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
+          be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, tl.field_k);
+          be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, bl.field_t);
+          be.field_s.a(fg.field_m, 237, kj.field_m, SecondaryNodeDequeIterator.field_i);
           be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
           return;
         }
-        id.field_i = mk.a(3, (byte) 34);
+        SecondaryNodeDequeIterator.field_i = mk.a(3, (byte) 34);
         mi.field_e = mk.a(4, (byte) 34);
         hj.field_Z = bg.a(true, 9, false, false, true);
         np.field_A = mk.a(10, (byte) 34);
@@ -126,9 +126,9 @@ final class bo extends ok {
         be.field_s.a(rf.field_L, 237, mp.field_c, np.field_A);
         be.field_s.a(wo.field_h, 237, rl.field_k, ia.field_W);
         be.field_s.a(wo.field_h, 237, rl.field_k, DualLinkNode.field_r);
-        be.field_s.a(id.field_f, 237, dg.field_P, tl.field_k);
-        be.field_s.a(id.field_f, 237, dg.field_P, bl.field_t);
-        be.field_s.a(fg.field_m, 237, kj.field_m, id.field_i);
+        be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, tl.field_k);
+        be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, bl.field_t);
+        be.field_s.a(fg.field_m, 237, kj.field_m, SecondaryNodeDequeIterator.field_i);
         be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
     }
 

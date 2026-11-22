@@ -59,7 +59,7 @@ final class ed extends np {
           var5 = 0;
           while (true) {
             if (var5 >= var4.length) {
-              stackIn_22_0 = id.a(-49, var3[-1 + var3.length]);
+              stackIn_22_0 = SecondaryNodeDequeIterator.a(-49, var3[-1 + var3.length]);
               return stackIn_22_0;
             }
             var6 = var4[var5];

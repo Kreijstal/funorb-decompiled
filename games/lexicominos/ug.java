@@ -44,17 +44,17 @@ final class ug extends hf {
         if (param0 > -68) {
           this.a(true);
         }
-        kd var2 = this.field_l.a(true);
+        IntrusiveNode var2 = this.field_l.a(true);
         while (var2 != null) {
-          var3 = (int)var2.field_d;
+          var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.b((byte) -122);
+            var2.unlink((byte) -122);
           } else {
             if (var3 >= this.field_z.field_d) {
-              var2.b((byte) -122);
+              var2.unlink((byte) -122);
             } else {
               if (this.field_z.field_m[var3] == 0) {
-                var2.b((byte) -122);
+                var2.unlink((byte) -122);
               } else {
                 if (this.field_w[var3] == 0) {
                   discarded$0 = this.a((byte) -128, 1, var3);
@@ -63,7 +63,7 @@ final class ug extends hf {
                   discarded$1 = this.a((byte) -91, 2, var3);
                 }
                 if (1 == this.field_w[var3]) {
-                  var2.b((byte) -118);
+                  var2.unlink((byte) -118);
                 }
               }
             }
@@ -79,14 +79,14 @@ final class ug extends hf {
         si discarded$2 = null;
         int var2_int;
         si var2;
-        kd var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        kd var6;
-        kd var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        kd var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Lexicominos.field_L ? 1 : 0;
         if (null != this.field_v) {
@@ -97,14 +97,14 @@ final class ug extends hf {
             var2_int = 1;
             var3 = this.field_v.a(true);
             while (var3 != null) {
-              var4 = (int)var3.field_d;
+              var4 = (int)var3.key;
               if (this.field_w[var4] == 0) {
                 discarded$1 = this.a((byte) -93, 1, var4);
               }
               if (this.field_w[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b((byte) -116);
+                var3.unlink((byte) -116);
               }
               var3 = this.field_v.f(2);
             }
@@ -118,8 +118,8 @@ final class ug extends hf {
                   discarded$0 = this.a((byte) -88, 1, this.field_o);
                 }
                 if (this.field_w[this.field_o] == 0) {
-                  var7 = new kd();
-                  var7.field_d = (long)this.field_o;
+                  var7 = new IntrusiveNode();
+                  var7.key = (long)this.field_o;
                   var2_int = 0;
                   this.field_v.b(123, var7);
                 }
@@ -140,12 +140,12 @@ final class ug extends hf {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_v.a(true);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_d;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_w[var4Lifetime1] != 1) {
                   discarded$3 = this.a((byte) -56, 2, var4Lifetime1);
                 }
                 if (this.field_w[var4Lifetime1] == 1) {
-                  var3Lifetime1.b((byte) -128);
+                  var3Lifetime1.unlink((byte) -128);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -161,8 +161,8 @@ final class ug extends hf {
                     discarded$2 = this.a((byte) -25, 2, this.field_o);
                   }
                   if (this.field_w[this.field_o] != 1) {
-                    var6 = new kd();
-                    var6.field_d = (long)this.field_o;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_o;
                     this.field_v.b(105, var6);
                     var2_intLifetime1 = 0;
                   }
@@ -192,7 +192,7 @@ final class ug extends hf {
                 if (!var2.field_p) {
                   throw new RuntimeException();
                 }
-                var2.b((byte) -122);
+                var2.unlink((byte) -122);
               } else {
                 var2.field_r = true;
               }
@@ -385,7 +385,7 @@ final class ug extends hf {
           this.field_e = true;
         }
         byte[] var4 = var3.d((byte) -106);
-        var3.b((byte) -116);
+        var3.unlink((byte) -116);
         return var4;
     }
 
@@ -415,7 +415,7 @@ final class ug extends hf {
           0 == param1 &&
           !var12.field_p &&
           var12.field_v) {
-          var12.b((byte) -116);
+          var12.unlink((byte) -116);
           var4 = null;
         }
         if (var4 == null) {
@@ -451,7 +451,7 @@ final class ug extends hf {
               var4 = this.field_C.a(param2, this.field_B, 3);
             }
           }
-          this.field_k.a((kd) (var4), (byte) -114, (long)param2);
+          this.field_k.a((IntrusiveNode) (var4), (byte) -114, (long)param2);
         }
         if (param0 >= 0) {
           ug.a((byte) -68);
@@ -492,7 +492,7 @@ final class ug extends hf {
                 this.field_w[param2] = (byte) 1;
               }
               if (!((si) (var4)).field_p) {
-                ((si) (var4)).b((byte) -128);
+                ((si) (var4)).unlink((byte) -128);
               }
               stackIn_60_0 = var4;
               return (si) (stackIn_60_0);
@@ -502,7 +502,7 @@ final class ug extends hf {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_w[param2] = (byte)-1;
-            ((si) (var4)).b((byte) -117);
+            ((si) (var4)).unlink((byte) -117);
             if (!((si) (var4)).field_p) {
               return null;
             }
@@ -510,7 +510,7 @@ final class ug extends hf {
               return null;
             }
             var4 = this.field_i.a(5, this.field_j, param2, (byte) 2, true);
-            this.field_k.a((kd) (var4), (byte) -92, (long)param2);
+            this.field_k.a((IntrusiveNode) (var4), (byte) -92, (long)param2);
             return null;
           }
         }
@@ -545,13 +545,13 @@ final class ug extends hf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_i.c(-28488);
-          ((si) (var4)).b((byte) -121);
+          ((si) (var4)).unlink((byte) -121);
           if (!((si) (var4)).field_p) {
             return null;
           }
           if (!this.field_i.e(20)) {
             var4 = this.field_i.a(5, this.field_j, param2, (byte) 2, true);
-            this.field_k.a((kd) (var4), (byte) -75, (long)param2);
+            this.field_k.a((IntrusiveNode) (var4), (byte) -75, (long)param2);
           }
           return null;
         }
@@ -564,7 +564,7 @@ final class ug extends hf {
           }
         }
         if (!((si) (var4)).field_p) {
-          ((si) (var4)).b((byte) -128);
+          ((si) (var4)).unlink((byte) -128);
         }
         return (si) (var4);
     }

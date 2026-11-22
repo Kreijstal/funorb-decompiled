@@ -784,7 +784,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           wf.c(0);
           la.a(16777215);
           NodeHashTableIterator.clearStaticReferences(param0 - 179);
-          wk.a(false);
+          SecondaryNodeDequeIterator.a(false);
           ak.a(77);
           hp.a(20974);
           tp.a(7566);

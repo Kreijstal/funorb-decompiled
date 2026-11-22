@@ -207,7 +207,7 @@ final class d extends ci {
           if (0 != param1.field_e ||
             param1.field_q != 0) {
             for (var2_int = 0; var2_int < qf.field_c; var2_int++) {
-              var3 = ik.field_i[var2_int];
+              var3 = NodeHashTableIterator.field_i[var2_int];
               if (var3.field_k == 2 &&
                 param1.field_e == var3.field_e &&
                 var3.field_q == param1.field_q) {

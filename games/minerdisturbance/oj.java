@@ -73,9 +73,9 @@ final class oj extends jc {
           var8Lifetime1 = nm.a(var6Lifetime1, (byte) -128) >> 8;
           var9Lifetime1 = j.a(var6Lifetime1, -50) >> 8;
           if (nk.field_w != -1 &&
-            -1 != gb.field_e) {
+            -1 != NodeHashTableIterator.field_e) {
             var9Lifetime1 = -128;
-            var8Lifetime1 = -gb.field_e + 240;
+            var8Lifetime1 = -NodeHashTableIterator.field_e + 240;
             var7Lifetime1 = -320 + nk.field_w;
           }
           var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1 + var9Lifetime1 * var9Lifetime1));

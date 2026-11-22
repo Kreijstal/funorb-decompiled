@@ -144,7 +144,7 @@ abstract class mh extends wk {
           l.a(param0, (byte) 127, param4);
           uk.a(param3, param18, param9, param19, param17, (byte) 82);
           var21_int = 16 % ((0 - param11) / 41);
-          di.a(param16, 0, param14, param20);
+          SecondaryNodeDequeIterator.a(param16, 0, param14, param20);
           ti.a(param2, param8, param5, (byte) 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

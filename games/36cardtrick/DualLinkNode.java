@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class he extends IntrusiveNode {
-    he field_i;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode secondaryPrevious;
     static float field_g;
     long field_j;
-    he field_h;
+    DualLinkNode secondaryNext;
 
     final static String a(int param0, java.applet.Applet param1, String param2) {
         try {
@@ -73,7 +73,7 @@ class he extends IntrusiveNode {
         }
     }
 
-    protected he() {
+    protected DualLinkNode() {
     }
 
     final static void a(int param0, String param1) {
@@ -97,17 +97,17 @@ class he extends IntrusiveNode {
         return var1;
     }
 
-    final void d(int param0) {
-        if (null == this.field_i) {
+    final void unlinkSecondary(int param0) {
+        if (null == this.secondaryPrevious) {
           return;
         }
-        this.field_i.field_h = this.field_h;
-        this.field_h.field_i = this.field_i;
-        this.field_h = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
         if (param0 != 12) {
-          this.field_i = (he) null;
+          this.secondaryPrevious = (DualLinkNode) null;
         }
-        this.field_i = null;
+        this.secondaryPrevious = null;
     }
 
     static {

@@ -136,9 +136,9 @@ final class gh {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_h[0][var0] = id.a(var12, id.a(id.a(var8 << 16, id.a(id.a(id.a(var6 << 40, id.a(var2 << 48, var2 << 56)), var2 << 32), var10 << 24)), var4 << 8));
+            field_h[0][var0] = SecondaryNodeDequeIterator.a(var12, SecondaryNodeDequeIterator.a(SecondaryNodeDequeIterator.a(var8 << 16, SecondaryNodeDequeIterator.a(SecondaryNodeDequeIterator.a(SecondaryNodeDequeIterator.a(var6 << 40, SecondaryNodeDequeIterator.a(var2 << 48, var2 << 56)), var2 << 32), var10 << 24)), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_h[var14][var0] = id.a(field_h[-1 + var14][var0] >>> 8, field_h[-1 + var14][var0] << 56);
+                field_h[var14][var0] = SecondaryNodeDequeIterator.a(field_h[-1 + var14][var0] >>> 8, field_h[-1 + var14][var0] << 56);
             }
             var0++;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd extends kd {
+final class bd extends IntrusiveNode {
     static int[] field_j;
     static int[] field_k;
     static int[] field_l;
@@ -50,7 +50,7 @@ final class bd extends kd {
     }
 
     final static void a(int param0, int param1) {
-        kd var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         tg var4 = null;
         RuntimeException decompiledCaughtException = null;

@@ -111,7 +111,7 @@ final class vf {
           if (null != mc.field_d) {
             hh.field_p.writePrefixedString(mc.field_d, (byte) -67);
           }
-          f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
+          f.a(NodeHashTableIterator.field_b, false, hh.field_p, lb.field_g, ja.field_a);
           hh.field_p.backpatchShortLength(-100, -var5_int + hh.field_p.position);
           jj.a(-1, true);
           return;

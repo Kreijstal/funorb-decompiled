@@ -2,33 +2,33 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class he {
-    private ca[] field_e;
+    private DualLinkNode[] field_e;
     private int field_d;
     static String field_i;
     static String[] field_f;
     private long field_j;
-    private ca field_g;
+    private DualLinkNode field_g;
     static aj field_c;
     static String field_b;
     static dg field_h;
     static String field_a;
 
-    final void a(ca param0, long param1, byte param2) {
-        ca var5 = null;
+    final void a(DualLinkNode param0, long param1, byte param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (null != param0.field_m) {
-            param0.b(12);
+          if (null != param0.secondaryPrevious) {
+            param0.unlinkSecondary(12);
           }
           var5 = this.field_e[(int)(param1 & (long)(this.field_d - 1))];
-          param0.field_l = var5;
-          param0.field_m = var5.field_m;
-          param0.field_m.field_l = param0;
-          param0.field_l.field_m = param0;
+          param0.secondaryNext = var5;
+          param0.secondaryPrevious = var5.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
           if (param2 != 64) {
             he.a(-19);
           }
@@ -197,43 +197,43 @@ final class he {
         }
     }
 
-    final ca b(int param0) {
-        ca var2 = null;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = null;
         RuntimeException var2_ref = null;
-        ca var3 = null;
+        DualLinkNode var3 = null;
         int var4 = 0;
         Object stackIn_3_0 = null;
-        ca stackIn_6_0 = null;
-        ca stackIn_13_0 = null;
+        DualLinkNode stackIn_6_0 = null;
+        DualLinkNode stackIn_13_0 = null;
         Object stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           if (this.field_g == null) {
             stackIn_3_0 = null;
-            return (ca) (stackIn_3_0);
+            return (DualLinkNode) (stackIn_3_0);
           }
           var2 = this.field_e[(int)((long)(this.field_d - 1) & this.field_j)];
           if (param0 >= -73) {
-            stackIn_6_0 = (ca) null;
+            stackIn_6_0 = (DualLinkNode) null;
             return stackIn_6_0;
           }
           while (var2 != this.field_g) {
             if (var4 == 0) {
               if (~this.field_g.field_j == ~this.field_j) {
                 var3 = this.field_g;
-                this.field_g = this.field_g.field_l;
+                this.field_g = this.field_g.secondaryNext;
                 stackIn_13_0 = var3;
                 return stackIn_13_0;
               }
-              this.field_g = this.field_g.field_l;
+              this.field_g = this.field_g.secondaryNext;
               continue;
             }
             break;
           }
           this.field_g = null;
           stackIn_17_0 = null;
-          return (ca) (stackIn_17_0);
+          return (DualLinkNode) (stackIn_17_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -263,23 +263,23 @@ final class he {
     }
 
     he(int param0) {
-        ca dupTemp$0 = null;
+        DualLinkNode dupTemp$0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ca var3 = null;
+        DualLinkNode var3 = null;
         int var4 = 0;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           this.field_d = param0;
-          this.field_e = new ca[param0];
+          this.field_e = new DualLinkNode[param0];
           var2_int = 0;
           while (var2_int < param0) {
-            dupTemp$0 = new ca();
+            dupTemp$0 = new DualLinkNode();
             this.field_e[var2_int] = dupTemp$0;
             var3 = dupTemp$0;
-            var3.field_m = var3;
-            var3.field_l = var3;
+            var3.secondaryPrevious = var3;
+            var3.secondaryNext = var3;
             var2_int++;
             if (var4 != 0) {
               return;
@@ -293,12 +293,12 @@ final class he {
         }
     }
 
-    final ca a(long param0, boolean param1) {
-        ca var4 = null;
+    final DualLinkNode a(long param0, boolean param1) {
+        DualLinkNode var4 = null;
         RuntimeException var4_ref = null;
-        ca var5 = null;
+        DualLinkNode var5 = null;
         int var6 = 0;
-        ca stackIn_11_0 = null;
+        DualLinkNode stackIn_11_0 = null;
         Object stackIn_15_0 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Lexicominos.field_L ? 1 : 0;
@@ -308,23 +308,23 @@ final class he {
             he.a(-81);
           }
           var4 = this.field_e[(int)((long)(-1 + this.field_d) & param0)];
-          this.field_g = var4.field_l;
+          this.field_g = var4.secondaryNext;
           while (this.field_g != var4) {
             if (var6 == 0) {
               if (~this.field_g.field_j == ~param0) {
                 var5 = this.field_g;
-                this.field_g = this.field_g.field_l;
+                this.field_g = this.field_g.secondaryNext;
                 stackIn_11_0 = var5;
                 return stackIn_11_0;
               }
-              this.field_g = this.field_g.field_l;
+              this.field_g = this.field_g.secondaryNext;
               continue;
             }
             break;
           }
           this.field_g = null;
           stackIn_15_0 = null;
-          return (ca) (stackIn_15_0);
+          return (DualLinkNode) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

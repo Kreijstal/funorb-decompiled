@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class il implements Iterator {
-    private int field_b;
-    private ed field_g;
-    private IntrusiveNode field_d;
+final class NodeHashTableIterator implements Iterator {
+    private int nextBucketIndex;
+    private ed table;
+    private IntrusiveNode lastReturned;
     static sg field_e;
-    private IntrusiveNode field_c;
+    private IntrusiveNode nextNode;
     static mg[] field_a;
     static char[] field_f;
 
@@ -18,21 +18,21 @@ final class il implements Iterator {
         if (param0 == -1) {
           return var2;
         }
-        il.b((byte) 34);
+        NodeHashTableIterator.b((byte) 34);
         return var2;
     }
 
-    private final void a(byte param0) {
+    private final void reset(byte param0) {
         if (param0 == 64) {
-          this.field_b = 1;
-          this.field_c = this.field_g.field_b[0].next;
-          this.field_d = null;
+          this.nextBucketIndex = 1;
+          this.nextNode = this.table.field_b[0].next;
+          this.lastReturned = null;
           return;
         }
-        il.createAccountSuccessResult(-8, false);
-        this.field_b = 1;
-        this.field_c = this.field_g.field_b[0].next;
-        this.field_d = null;
+        NodeHashTableIterator.createAccountSuccessResult(-8, false);
+        this.nextBucketIndex = 1;
+        this.nextNode = this.table.field_b[0].next;
+        this.lastReturned = null;
     }
 
     final static uh a(int param0, int param1, int param2, int param3, int param4) {
@@ -65,23 +65,23 @@ final class il implements Iterator {
         int fieldTemp$1 = 0;
         int var2;
         var2 = Main.field_T;
-        if (this.field_g.field_b[this.field_b - 1] != this.field_c) {
+        if (this.table.field_b[this.nextBucketIndex - 1] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.field_b >= this.field_g.field_a) {
+          if (this.nextBucketIndex >= this.table.field_a) {
             return false;
           }
-          fieldTemp$0 = this.field_g.field_b;
-          fieldTemp$1 = this.field_b;
-          this.field_b = this.field_b + 1;
-          if (fieldTemp$0[fieldTemp$1].next == this.field_g.field_b[this.field_b - 1]) {
-            this.field_c = this.field_g.field_b[-1 + this.field_b];
+          fieldTemp$0 = this.table.field_b;
+          fieldTemp$1 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (fieldTemp$0[fieldTemp$1].next == this.table.field_b[this.nextBucketIndex - 1]) {
+            this.nextNode = this.table.field_b[-1 + this.nextBucketIndex];
             continue;
           }
           break;
         }
-        this.field_c = this.field_g.field_b[-1 + this.field_b].next;
+        this.nextNode = this.table.field_b[-1 + this.nextBucketIndex].next;
         return true;
     }
 
@@ -92,23 +92,23 @@ final class il implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = Main.field_T;
-        if (this.field_g.field_b[-1 + this.field_b] != this.field_c) {
-          var4 = this.field_c;
-          this.field_d = var4;
-          this.field_c = var4.next;
+        if (this.table.field_b[-1 + this.nextBucketIndex] != this.nextNode) {
+          var4 = this.nextNode;
+          this.lastReturned = var4;
+          this.nextNode = var4.next;
           return var4;
         }
         do {
-          if (this.field_g.field_a <= this.field_b) {
+          if (this.table.field_a <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_g.field_b;
-          fieldTemp$1 = this.field_b;
-          this.field_b = this.field_b + 1;
+          fieldTemp$0 = this.table.field_b;
+          fieldTemp$1 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
           var3 = fieldTemp$0[fieldTemp$1].next;
-        } while (this.field_g.field_b[this.field_b - 1] == var3);
-        this.field_d = var3;
-        this.field_c = var3.next;
+        } while (this.table.field_b[this.nextBucketIndex - 1] == var3);
+        this.lastReturned = var3;
+        this.nextNode = var3.next;
         return var3;
     }
 
@@ -119,22 +119,22 @@ final class il implements Iterator {
         if (param0 == 38) {
           return;
         }
-        il.a(103, 62, -72, -123, -10);
+        NodeHashTableIterator.a(103, 62, -72, -123, -10);
     }
 
     public final void remove() {
-        if (this.field_d == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_d.unlink(121);
-        this.field_d = null;
+        this.lastReturned.unlink(121);
+        this.lastReturned = null;
     }
 
-    il(ed param0) {
-        this.field_d = null;
+    NodeHashTableIterator(ed param0) {
+        this.lastReturned = null;
         try {
-          this.field_g = param0;
-          this.a((byte) 64);
+          this.table = param0;
+          this.reset((byte) 64);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "il.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

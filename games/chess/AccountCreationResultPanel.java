@@ -132,7 +132,7 @@ final class AccountCreationResultPanel extends vn implements mj {
           if (this.field_Hb) {
             return super.g((byte) -90);
           }
-          var2 = ik.pollAccountCreationResult(6792);
+          var2 = NodeHashTableIterator.pollAccountCreationResult(6792);
           if (var2 != null) {
             this.showAccountCreationResult(false, var2, -1);
             return super.g((byte) -90);
@@ -145,7 +145,7 @@ final class AccountCreationResultPanel extends vn implements mj {
         if (this.field_Hb) {
           return super.g((byte) -90);
         }
-        var2Lifetime1 = ik.pollAccountCreationResult(6792);
+        var2Lifetime1 = NodeHashTableIterator.pollAccountCreationResult(6792);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult(false, var2Lifetime1, -1);
           return super.g((byte) -90);

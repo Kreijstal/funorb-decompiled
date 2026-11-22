@@ -210,21 +210,21 @@ final class kk {
           var3 = var10.readUnsignedByte(param0 ^ -16903);
           var10.f(true);
           ga.field_b = hk.a(param0 + 17076, var10);
-          il.field_a = new mg[var3];
+          NodeHashTableIterator.field_a = new mg[var3];
           sk.field_b = new int[var3][];
           var4 = 0;
           if (param0 != -16998) {
             return;
           }
           while (var3 > var4) {
-            il.field_a[var4] = nb.a((byte) 119, var8);
+            NodeHashTableIterator.field_a[var4] = nb.a((byte) 119, var8);
             var4++;
           }
           var10.g(8);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
-            var5 = il.field_a[var9];
+            var5 = NodeHashTableIterator.field_a[var9];
             var5.a(6, 6, param0 + 10328, 1, 6);
             var5.a((byte) 124);
             var6 = new int[]{var5.field_f + var5.field_e >> 1, var5.field_u + var5.field_s >> 1, var5.field_i + var5.field_z >> 1};

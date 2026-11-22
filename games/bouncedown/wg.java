@@ -39,7 +39,7 @@ final class wg extends tc {
     final static boolean b(boolean param0) {
         if (!param0) {
           wg.b(false);
-          if (dh.field_a == null) {
+          if (NodeHashTableIterator.field_a == null) {
             return false;
           }
           if (pj.field_a.b(-80)) {
@@ -47,7 +47,7 @@ final class wg extends tc {
           }
           return false;
         }
-        if (dh.field_a == null) {
+        if (NodeHashTableIterator.field_a == null) {
           return false;
         }
         if (pj.field_a.b(-80)) {

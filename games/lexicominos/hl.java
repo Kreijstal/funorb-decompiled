@@ -72,7 +72,7 @@ final class hl extends PcmStream {
           if (param0.field_h < 0) {
             return true;
           }
-          param0.b((byte) -128);
+          param0.unlink((byte) -128);
           if (param0.field_u > 0 &&
             this.field_L[param0.field_z][param0.field_u] == param0) {
             this.field_L[param0.field_z][param0.field_u] = null;
@@ -157,7 +157,7 @@ final class hl extends PcmStream {
               if (var3.field_h < 0) {
                 this.field_R[var3.field_z][var3.field_q] = null;
               }
-              var3.b((byte) -116);
+              var3.unlink((byte) -116);
             }
             var3 = (cb) (this.field_y.field_n.f(2));
             continue;
@@ -197,7 +197,7 @@ final class hl extends PcmStream {
           var8 = (cj) (param1.field_i.c((byte) -111));
           scanLoop1: while (true) {
             if (var8 != null) {
-              var9 = (int)var8.field_d;
+              var9 = (int)var8.key;
               var10 = (wj) (this.field_A.a((long)var9, (byte) 120));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
@@ -800,7 +800,7 @@ final class hl extends PcmStream {
               if (decompiledFrameRemainder0) {
                 if (var6_ref_nc != null) {
                   var6_ref_nc.field_h = var4_long;
-                  var6_ref_nc.b((byte) -118);
+                  var6_ref_nc.unlink((byte) -118);
                   if (var26 == 0) {
                     return;
                   }
@@ -933,7 +933,7 @@ final class hl extends PcmStream {
                 (decompiledFrameCompleted0)) {
                 var4.field_k = true;
               }
-              var4.b((byte) -117);
+              var4.unlink((byte) -117);
               return;
             }
             stackIn_27_0 = -32;
@@ -1041,7 +1041,7 @@ final class hl extends PcmStream {
           if (param2.field_h >= 0 && (param2.field_C == null ||
             param2.field_C.f())) {
             param2.c(0);
-            param2.b((byte) -123);
+            param2.unlink((byte) -123);
             if (param2.field_u > 0 &&
               this.field_L[param2.field_z][param2.field_u] == param2) {
               this.field_L[param2.field_z][param2.field_u] = null;
@@ -1167,7 +1167,7 @@ final class hl extends PcmStream {
           }
           param2.c(0);
           if (param2.field_h >= 0) {
-            param2.b((byte) -118);
+            param2.unlink((byte) -118);
             if (param2.field_u > 0 &&
               this.field_L[param2.field_z][param2.field_u] == param2) {
               this.field_L[param2.field_z][param2.field_u] = null;

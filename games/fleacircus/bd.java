@@ -302,7 +302,7 @@ class bd extends oh implements da {
         }
         this.field_lb.a((byte) 92, 4210752, 2121792);
         bm var2 = new bm(this, this.field_qb, kb.field_m);
-        var2.a(rc.field_f, -23493, 15);
+        var2.a(SecondaryNodeDequeIterator.field_f, -23493, 15);
         this.d(var2, 26034);
     }
 

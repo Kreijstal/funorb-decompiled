@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends kd {
+final class pd extends IntrusiveNode {
     int field_p;
     PlatformTask[] field_k;
     int[] field_m;

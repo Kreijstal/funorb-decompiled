@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends kd {
+final class vb extends IntrusiveNode {
     int field_h;
     int field_o;
     int field_q;

@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class bc implements Iterator {
-    private DualLinkNode field_c;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode nextNode;
     static int field_a;
     static int field_d;
-    private qc field_f;
-    private DualLinkNode field_e;
+    private qc deque;
+    private DualLinkNode lastReturned;
     static Sprite field_b;
 
     public final void remove() {
-        if (null == this.field_e) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_e.unlinkSecondary((byte) -93);
-        this.field_e = null;
+        this.lastReturned.unlinkSecondary((byte) -93);
+        this.lastReturned = null;
     }
 
     final static void a(int param0, int param1) {
@@ -26,21 +26,21 @@ final class bc implements Iterator {
           tg.field_d = (param0 << 16) / 150;
           return;
         }
-        bc.a(96);
+        SecondaryNodeDequeIterator.a(96);
         tg.field_g = 100 * param0 / 150;
         tg.field_d = (param0 << 16) / 150;
     }
 
     public final boolean hasNext() {
-        return this.field_f.field_e != this.field_c;
+        return this.deque.field_e != this.nextNode;
     }
 
-    bc(qc param0) {
-        this.field_e = null;
+    SecondaryNodeDequeIterator(qc param0) {
+        this.lastReturned = null;
         try {
-          this.field_f = param0;
-          this.field_c = this.field_f.field_e.field_t;
-          this.field_e = null;
+          this.deque = param0;
+          this.nextNode = this.deque.field_e.field_t;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -52,14 +52,14 @@ final class bc implements Iterator {
     }
 
     public final Object next() {
-        Object var1 = this.field_c;
-        if (this.field_f.field_e == var1) {
+        Object var1 = this.nextNode;
+        if (this.deque.field_e == var1) {
           var1 = null;
-          this.field_c = null;
+          this.nextNode = null;
         } else {
-          this.field_c = ((DualLinkNode) (var1)).field_t;
+          this.nextNode = ((DualLinkNode) (var1)).field_t;
         }
-        this.field_e = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 

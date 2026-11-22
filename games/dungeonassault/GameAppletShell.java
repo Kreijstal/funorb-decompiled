@@ -259,7 +259,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < nk.field_Kb)) {
                       this.c((byte) -68);
-                      ho.a(i.field_A, c.field_h, (byte) -32);
+                      NodeHashTableIterator.a(i.field_A, c.field_h, (byte) -32);
                       break;
                     }
                     this.c(-1);
@@ -652,11 +652,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.awt.Insets var6 = null;
         try {
           var2_long = kd.c(-2456);
-          var4 = id.field_b[np.field_K];
+          var4 = SecondaryNodeDequeIterator.field_b[np.field_K];
           if (param0 != -68) {
             this.field_i = false;
           }
-          id.field_b[np.field_K] = var2_long;
+          SecondaryNodeDequeIterator.field_b[np.field_K] = var2_long;
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);

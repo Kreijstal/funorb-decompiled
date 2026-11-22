@@ -28,7 +28,7 @@ final class lh extends ik {
             stackIn_3_0 = (w) (param3);
           }
           var10 = (kf) (stackIn_3_0);
-          ca.a(param3.field_t + (param1 + param3.field_j), param3.field_o + param0, param3.field_t + param1, param3.field_v + (param3.field_o + param0), false);
+          DualLinkNode.a(param3.field_t + (param1 + param3.field_j), param3.field_o + param0, param3.field_t + param1, param3.field_v + (param3.field_o + param0), false);
           if (var10 != null) {
             param2 = param2 & var10.field_D;
           }
@@ -207,7 +207,7 @@ final class lh extends ik {
         boolean decompiledFrameRemainder0 = true;
         if (PacketBuffer.field_i >= 20 &&
           ha.a(126) && (!(be.field_l > 0) ||
-          ca.d(true))) {
+          DualLinkNode.d(true))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }

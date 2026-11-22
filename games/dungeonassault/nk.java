@@ -61,7 +61,7 @@ class nk extends hf implements vg {
           }
           if (param2 != 3) {
             if (4 == param2) {
-              var6.a(8, 6824, ho.field_f);
+              var6.a(8, 6824, NodeHashTableIterator.field_f);
             } else {
               if (param2 != 6) {
                 if (9 != param2) {

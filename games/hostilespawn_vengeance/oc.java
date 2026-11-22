@@ -158,8 +158,8 @@ final class oc {
             jf.a(-1631279870, var4);
             return;
           }
-          if (null == kj.field_g) {
-            kj.field_g = new cb(128);
+          if (null == SecondaryNodeDequeIterator.field_g) {
+            SecondaryNodeDequeIterator.field_g = new cb(128);
             rc.field_d = 0;
           }
           var3Lifetime1 = var1.o(32);
@@ -172,12 +172,12 @@ final class oc {
           if (var6_ref == null) {
             var6_ref = pb.b(var5_ref, (byte) -120);
             if (var6_ref != null) {
-              kj.field_g.a((long)mf.a(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 320);
+              SecondaryNodeDequeIterator.field_g.a((long)mf.a(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 320);
             }
           }
           if (null == var6_ref) {
             var6_ref = new vb();
-            kj.field_g.a((long)mf.a(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 320);
+            SecondaryNodeDequeIterator.field_g.a((long)mf.a(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6_ref, 320);
             fieldTemp$1 = rc.field_d;
             rc.field_d = rc.field_d + 1;
             var6_ref.field_Gb = fieldTemp$1;

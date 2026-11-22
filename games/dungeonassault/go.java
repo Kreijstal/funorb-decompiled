@@ -655,7 +655,7 @@ final class go extends qe {
             if (null != this.field_Y.field_u) {
               this.a(pi.field_g, -8963);
             } else {
-              this.a(ho.field_b, -8963);
+              this.a(NodeHashTableIterator.field_b, -8963);
             }
             this.m(103);
           }
@@ -2952,7 +2952,7 @@ final class go extends qe {
             if (this.field_Y.field_u != null) {
               this.a(pi.field_g, -8963);
             } else {
-              this.a(ho.field_b, param0 ^ -20056);
+              this.a(NodeHashTableIterator.field_b, param0 ^ -20056);
             }
           }
         } else {

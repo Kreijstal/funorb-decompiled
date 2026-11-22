@@ -214,8 +214,8 @@ final class gh extends r {
                 stackIn_18_0 = j.field_o.length;
               }
               var8 = stackIn_18_0;
-              if (oe.field_c.length < rc.field_g.length) {
-                stackIn_21_0 = rc.field_g.length;
+              if (oe.field_c.length < SecondaryNodeDequeIterator.field_g.length) {
+                stackIn_21_0 = SecondaryNodeDequeIterator.field_g.length;
               } else {
                 stackIn_21_0 = oe.field_c.length;
               }

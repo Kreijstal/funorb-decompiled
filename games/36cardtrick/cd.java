@@ -3,24 +3,24 @@
  */
 final class cd {
     static int field_h;
-    private he field_d;
+    private DualLinkNode field_d;
     static String field_f;
     static long field_a;
     static bk field_b;
-    private he field_c;
+    private DualLinkNode field_c;
     static int field_e;
     static String field_g;
 
-    final he b(byte param0) {
-        he var2 = this.field_c;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_c;
         if (param0 != -122) {
-          return (he) null;
+          return (DualLinkNode) null;
         }
         if (this.field_d == var2) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2.field_h;
+        this.field_c = var2.secondaryNext;
         return var2;
     }
 
@@ -76,17 +76,17 @@ final class cd {
     final int b(int param0) {
         int var4 = Main.field_T;
         int var2 = 0;
-        he var3 = this.field_d.field_h;
+        DualLinkNode var3 = this.field_d.secondaryNext;
         if (param0 != 1) {
           field_h = 96;
           while (this.field_d != var3) {
-            var3 = var3.field_h;
+            var3 = var3.secondaryNext;
             var2++;
           }
           return var2;
         }
         while (this.field_d != var3) {
-          var3 = var3.field_h;
+          var3 = var3.secondaryNext;
           var2++;
         }
         return var2;
@@ -122,50 +122,50 @@ final class cd {
         field_f = (String) null;
     }
 
-    final he a(int param0) {
-        he var2 = this.field_d.field_h;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_d.secondaryNext;
         if (this.field_d != var2) {
-          var2.d(12);
+          var2.unlinkSecondary(12);
           int var3 = -95 % ((param0 - 87) / 34);
           return var2;
         }
         return null;
     }
 
-    final he c(byte param0) {
+    final DualLinkNode c(byte param0) {
         if (param0 > -96) {
-          return (he) null;
+          return (DualLinkNode) null;
         }
-        he var2 = this.field_d.field_h;
+        DualLinkNode var2 = this.field_d.secondaryNext;
         if (var2 != this.field_d) {
-          this.field_c = var2.field_h;
+          this.field_c = var2.secondaryNext;
           return var2;
         }
         this.field_c = null;
         return null;
     }
 
-    final void a(byte param0, he param1) {
-        if (null != param1.field_i) {
-          param1.d(12);
+    final void a(byte param0, DualLinkNode param1) {
+        if (null != param1.secondaryPrevious) {
+          param1.unlinkSecondary(12);
         }
-        param1.field_i = this.field_d.field_i;
+        param1.secondaryPrevious = this.field_d.secondaryPrevious;
         if (param0 >= -62) {
           return;
         }
         try {
-          param1.field_h = this.field_d;
-          param1.field_i.field_h = param1;
-          param1.field_h.field_i = param1;
+          param1.secondaryNext = this.field_d;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "cd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public cd() {
-        this.field_d = new he();
-        this.field_d.field_i = this.field_d;
-        this.field_d.field_h = this.field_d;
+        this.field_d = new DualLinkNode();
+        this.field_d.secondaryPrevious = this.field_d;
+        this.field_d.secondaryNext = this.field_d;
     }
 
     public static void a(byte param0) {

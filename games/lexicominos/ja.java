@@ -308,7 +308,7 @@ final class ja {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.b((byte) -125);
+          var9.unlink((byte) -125);
           this.field_c.a(var8Lifetime1, (byte) -57, var6);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;

@@ -307,7 +307,7 @@ final class q {
           }
           var2Lifetime51 = vh.a((byte) 50, "WHITE_IN_CHECK");
           if (var2Lifetime51 != null) {
-            l.field_k = ad.a(-29410, var2Lifetime51);
+            DualLinkNode.field_k = ad.a(-29410, var2Lifetime51);
           }
           var2Lifetime52 = vh.a((byte) 88, "BLACK_IN_CHECK");
           if (var2Lifetime52 != null) {
@@ -450,7 +450,7 @@ final class q {
           }
           var2Lifetime86 = vh.a((byte) 121, "_3D_MODE");
           if (var2Lifetime86 != null) {
-            ik.field_f = ad.a(param0 - 29415, var2Lifetime86);
+            NodeHashTableIterator.field_f = ad.a(param0 - 29415, var2Lifetime86);
           }
           jj.field_e = null;
           return;

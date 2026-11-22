@@ -24,7 +24,7 @@ abstract class k implements ba {
 
     public final sg a(boolean param0) {
         if (this.a((byte) -31)) {
-          return il.field_e;
+          return NodeHashTableIterator.field_e;
         }
         if (!param0) {
           this.field_d = 73L;

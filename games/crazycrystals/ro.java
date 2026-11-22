@@ -101,7 +101,7 @@ final class ro extends pn implements Cloneable {
 
     final static void g(int param0) {
         int var1 = -38 % ((18 - param0) / 61);
-        wk.a(dg.field_a, true, fh.field_i, false);
+        SecondaryNodeDequeIterator.a(dg.field_a, true, fh.field_i, false);
         ud.field_U = true;
     }
 

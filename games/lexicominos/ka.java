@@ -60,7 +60,7 @@ final class ka {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
-          if (MouseWheelInput.field_c == ca.field_i) {
+          if (MouseWheelInput.field_c == DualLinkNode.field_i) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
@@ -68,7 +68,7 @@ final class ka {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (ca.field_i != bk.field_c) {
+          if (DualLinkNode.field_i != bk.field_c) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }

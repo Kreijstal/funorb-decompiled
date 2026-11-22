@@ -676,7 +676,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 125, "loading");
                 if (null != var2) {
-                  dh.field_d = c.a(0, var2);
+                  NodeHashTableIterator.field_d = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 106, "offline");
                 if (var2 != null) {
@@ -1150,7 +1150,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 96, "connectionrestored");
                 if (null != var2) {
-                  dh.field_e = c.a(param0 + 99, var2);
+                  NodeHashTableIterator.field_e = c.a(param0 + 99, var2);
                 }
                 var2 = hg.a((byte) 103, "warning_ifyouquit");
                 if (var2 != null) {
@@ -1862,7 +1862,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 94, "unpacking_soundeffects");
                 if (var2 != null) {
-                  di.field_a = c.a(0, var2);
+                  SecondaryNodeDequeIterator.field_a = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 112, "unpacking_music");
                 if (var2 != null) {

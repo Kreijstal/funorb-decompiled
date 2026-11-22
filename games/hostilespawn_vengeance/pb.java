@@ -223,7 +223,7 @@ final class pb extends le {
         RuntimeException var2_ref = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (kj.field_g == null) {
+          if (SecondaryNodeDequeIterator.field_g == null) {
             return null;
           }
           if (param0 == null) {
@@ -240,7 +240,7 @@ final class pb extends le {
           if (var2 == null) {
             return null;
           }
-          var3 = (vb) (kj.field_g.a((long)var2.hashCode(), -30828));
+          var3 = (vb) (SecondaryNodeDequeIterator.field_g.a((long)var2.hashCode(), -30828));
           while (true) {
             if (var3 == null) {
               return null;
@@ -248,7 +248,7 @@ final class pb extends le {
             var7 = (CharSequence) ((Object) var3.field_Ib);
             var4 = mf.a(false, var7);
             if (!var4.equals(var2)) {
-              var3 = (vb) (kj.field_g.a(-118));
+              var3 = (vb) (SecondaryNodeDequeIterator.field_g.a(-118));
               continue;
             }
             break;

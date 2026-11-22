@@ -126,7 +126,7 @@ abstract class re extends ql {
             this.a((w) null, (byte) -90);
           }
           if (null != this.field_U) {
-            this.field_U.b((byte) -118);
+            this.field_U.unlink((byte) -118);
           }
           if (param0 == null) {
             this.field_U = new ia();

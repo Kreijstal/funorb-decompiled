@@ -16,15 +16,15 @@ final class ab {
         int var1_intLifetime1;
         var2 = DungeonAssault.field_K;
         try {
-          if (id.field_l != null &&
+          if (SecondaryNodeDequeIterator.field_l != null &&
             fc.field_d == uo.field_f.length - 1) {
-            if (id.field_l != bl.field_l) {
-              h.field_f = mf.a(16744448, id.field_l.field_x, 8, id.field_l.field_q, (byte) -124);
-              bl.field_l = id.field_l;
+            if (SecondaryNodeDequeIterator.field_l != bl.field_l) {
+              h.field_f = mf.a(16744448, SecondaryNodeDequeIterator.field_l.field_x, 8, SecondaryNodeDequeIterator.field_l.field_q, (byte) -124);
+              bl.field_l = SecondaryNodeDequeIterator.field_l;
             }
             var1_int = 32 - mo.field_a % 50 << 3;
             if (0 < var1_int) {
-              h.field_f.b(id.field_l.field_t, id.field_l.field_i, var1_int);
+              h.field_f.b(SecondaryNodeDequeIterator.field_l.field_t, SecondaryNodeDequeIterator.field_l.field_i, var1_int);
             }
           }
           if (param0 != 0) {

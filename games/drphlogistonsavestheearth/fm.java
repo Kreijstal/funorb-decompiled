@@ -108,7 +108,7 @@ final class fm implements cg {
           }
           var4 = var14.readUnsignedByte(31760);
           if (var4 != 0) {
-            gd.field_d[0] = oa.field_d;
+            gd.field_d[0] = SecondaryNodeDequeIterator.field_d;
             var5 = var3.field_n;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               gd.field_d[var6_int] = var14.readString((byte) -101);

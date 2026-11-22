@@ -93,7 +93,7 @@ class nb extends w implements dh {
           while (var4 != null) {
             if (var4.a(18337)) {
               var5 = new ta(this.field_A);
-              var5.a((kd) (var4), (byte) -127);
+              var5.a((IntrusiveNode) (var4), (byte) -127);
               var6 = (w) (var5.c(-123));
               while (var6 != null) {
                 if (var6.a((byte) 44, param1)) {
@@ -289,7 +289,7 @@ class nb extends w implements dh {
           var5 = new ta(this.field_A);
           var6 = (w) (var5.a(250));
           while (var6 != null) {
-            if (var6.a(false)) {
+            if (var6.isLinked(false)) {
               var6.a((byte) -119, param1, param2 + this.field_o, param3 + this.field_t);
               var6 = (w) (var5.c(-115));
               continue;
@@ -336,7 +336,7 @@ class nb extends w implements dh {
           var9 = (w) (var10.a(250));
           var7 = -110 % ((-13 - param3) / 55);
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (var9.a(18337) &&
                 var9.a(param0, param1, param2, (byte) -123)) {
                 return true;
@@ -434,7 +434,7 @@ class nb extends w implements dh {
           var8 = new ta(this.field_A);
           var9 = (w) (var8.a(250));
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (var9.a(param0 + 0, param1, param2, param3, this.field_o + param4, param5 + this.field_t, param6)) {
                 return true;
               }
@@ -561,7 +561,7 @@ class nb extends w implements dh {
           }
           var9 = (w) (var8.a(param5 + 30021));
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (var9.a(18337) &&
                 var9.a(param0, param1, param2, param3, param4, -29771, param6)) {
                 return true;
@@ -603,7 +603,7 @@ class nb extends w implements dh {
           var7 = new ta(this.field_A);
           var8 = (w) (var7.a(250));
           while (var8 != null) {
-            if (var8.a(false)) {
+            if (var8.isLinked(false)) {
               var8.a(param0, param1, this.field_o + param2, 0, this.field_t + param4, param5);
               var8 = (w) (var7.c(-85));
               continue;

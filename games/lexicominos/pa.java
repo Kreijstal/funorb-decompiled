@@ -147,18 +147,18 @@ final class pa {
             fieldTemp$0 = ad.field_c;
             ad.field_c = ad.field_c + 1;
             var6.field_hb = fieldTemp$0;
-            ec.field_e.b(105, var6);
+            SecondaryNodeDequeIterator.field_e.b(105, var6);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6.field_jb = (String) (var3Lifetime1);
           var6.field_R = var4_ref_StringLifetime1;
-          var6.b((byte) -117);
-          var7 = (hc) (ec.field_e.a(true));
+          var6.unlink((byte) -117);
+          var7 = (hc) (SecondaryNodeDequeIterator.field_e.a(true));
           while (var7 != null) {
             if (bl.a((byte) 111, var7, var6)) {
-              var7 = (hc) (ec.field_e.f(2));
+              var7 = (hc) (SecondaryNodeDequeIterator.field_e.f(2));
               if (var8 == 0) {
                 continue;
               }
@@ -171,7 +171,7 @@ final class pa {
               return;
             }
           }
-          ec.field_e.b(114, var6);
+          SecondaryNodeDequeIterator.field_e.b(114, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

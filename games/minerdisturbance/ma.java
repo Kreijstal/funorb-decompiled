@@ -173,7 +173,7 @@ final class ma extends jc {
             ((hc) (this.field_I)).field_E) &&
             this.field_w == 1) {
             var5_int = -param1 + nk.field_w - this.field_N;
-            var6 = -param0 + (-this.field_K + gb.field_e);
+            var6 = -param0 + (-this.field_K + NodeHashTableIterator.field_e);
             if (var5_int != this.field_u ||
               this.field_t != var6) {
               this.field_t = var6;

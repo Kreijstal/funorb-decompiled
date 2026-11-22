@@ -429,7 +429,7 @@ final class qd extends kn implements sh {
           if (ti.field_M == 2) {
             pn.field_a.a(0, -1, -1, param1);
           } else {
-            pn.field_a.a(0, 0, sj.a(nk.field_w, (byte) 126, gb.field_e), param1);
+            pn.field_a.a(0, 0, sj.a(nk.field_w, (byte) 126, NodeHashTableIterator.field_e), param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -206,7 +206,7 @@ final class ej {
               }
             }
             param1.appendCrc32(var4, (byte) 82);
-            var17.b((byte) -116);
+            var17.unlink((byte) -116);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

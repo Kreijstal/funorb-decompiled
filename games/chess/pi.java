@@ -62,13 +62,13 @@ final class pi {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               nj.a((byte) 20, var15);
               if (var6_intLifetime1 != 0) {
-                lf.a(jb.field_b, (byte) 117, l.field_o, var6_intLifetime1, gm.field_c, sl.field_e);
+                lf.a(jb.field_b, (byte) 117, DualLinkNode.field_o, var6_intLifetime1, gm.field_c, sl.field_e);
               } else {
-                var3.field_r = l.field_o;
+                var3.field_r = DualLinkNode.field_o;
                 var3.field_k = sl.field_e;
                 var3.field_p = gm.field_c;
                 var3.field_m = jb.field_b;
-                lf.a(jb.field_b, (byte) 117, l.field_o, var6_intLifetime1, gm.field_c, sl.field_e);
+                lf.a(jb.field_b, (byte) 117, DualLinkNode.field_o, var6_intLifetime1, gm.field_c, sl.field_e);
               }
             }
             pd.b(var5, -109);

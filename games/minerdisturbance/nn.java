@@ -78,7 +78,7 @@ final class nn {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.a(param0, param3, gb.field_e, param4, param1, 113, nk.field_w);
+        int var6 = this.a(param0, param3, NodeHashTableIterator.field_e, param4, param1, 113, nk.field_w);
         int var7 = this.a(param0, param3, GameAppletShell.field_e, param4, param1, 50, wi.field_w);
         this.a(var6, var7, -1);
         if (param2 == 140) {

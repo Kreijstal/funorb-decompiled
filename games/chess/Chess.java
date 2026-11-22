@@ -156,10 +156,10 @@ public final class Chess extends gb {
         ea.field_cb.a(344, 0, -344);
         ea.field_cb.a(-344, 0, 344);
         ea.field_cb.a(344, 0, 344);
-        ea.field_cb.a(param0, 1, 2, (byte) 1, (byte) -1, ik.field_g[qm.field_g], (short) -1);
-        ea.field_cb.a(3, 2, 1, (byte) 1, (byte) -1, ik.field_g[qm.field_g], (short) -1);
-        ea.field_cb.field_j[0] = ik.field_g[qm.field_g];
-        ea.field_cb.field_j[1] = ik.field_g[qm.field_g];
+        ea.field_cb.a(param0, 1, 2, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
+        ea.field_cb.a(3, 2, 1, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
+        ea.field_cb.field_j[0] = NodeHashTableIterator.field_g[qm.field_g];
+        ea.field_cb.field_j[1] = NodeHashTableIterator.field_g[qm.field_g];
         ei.field_q = (dd) (ea.field_cb.a(100, 131072, 0, -10, 0));
         ArchiveIndex.field_i = new bn(4, 2, 1);
         ArchiveIndex.field_i.a(-66, 0, -66);
@@ -686,13 +686,13 @@ public final class Chess extends gb {
           return;
         }
         if (qk.field_h == jc.field_f) {
-          l.a(wn.field_e, jc.field_f, (byte) -86, true);
+          DualLinkNode.a(wn.field_e, jc.field_f, (byte) -86, true);
         } else {
           qd.field_w.a(-0.1, (double)r.field_Eb / 300.0, true);
           if (nc.field_T < 16) {
-            l.a(wn.field_e, jc.field_f, (byte) -86, false);
+            DualLinkNode.a(wn.field_e, jc.field_f, (byte) -86, false);
           } else {
-            l.a(ma.field_D, qk.field_h, (byte) -86, false);
+            DualLinkNode.a(ma.field_D, qk.field_h, (byte) -86, false);
           }
         }
         if (!wn.field_e ||
@@ -1656,7 +1656,7 @@ public final class Chess extends gb {
         sc.a(-26862);
         hd.a((byte) -2);
         fk.d((byte) 1);
-        l.c((byte) -26);
+        DualLinkNode.c((byte) -26);
         wa.clearStaticReferences();
         b.clearStaticReferences(-17436);
         gf.clearStaticReferences(540);
@@ -1786,8 +1786,8 @@ public final class Chess extends gb {
         mn.a(32768);
         gn.clearStaticReferences();
         bd.clearStaticReferences(-40);
-        ik.clearStaticReferences((byte) -120);
-        hc.clearStaticReferences(false);
+        NodeHashTableIterator.clearStaticReferences((byte) -120);
+        SecondaryNodeDequeIterator.clearStaticReferences(false);
         fd.c((byte) 101);
         ak.clearStaticReferences(21296);
         ao.clearStaticReferences(1);

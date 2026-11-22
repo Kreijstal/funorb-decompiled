@@ -81,7 +81,7 @@ final class tf extends ca {
         try {
           var1_int = LoginMenuScreen.field_N;
           var2 = 0;
-          if (re.field_g == 2) {
+          if (NodeHashTableIterator.field_g == 2) {
             var3_long = -aa.field_d + la.a(false);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -103,7 +103,7 @@ final class tf extends ca {
               }
             }
             var6 = sg.field_f[var3];
-            if (re.field_g == 2 &&
+            if (NodeHashTableIterator.field_g == 2 &&
               var2 == 1) {
               if (lk.field_i.length < ng.field_d.length) {
                 stackIn_20_0 = ng.field_d.length;

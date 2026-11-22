@@ -9,7 +9,7 @@ final class bg implements Iterable {
     static int[][] field_f;
     static fh field_d;
     static tb field_a;
-    ca field_e;
+    DualLinkNode field_e;
 
     final static void a(boolean param0) {
         field_b = new pj();
@@ -28,20 +28,20 @@ final class bg implements Iterable {
         field_a = (tb) null;
     }
 
-    final void a(ca param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param0.field_m) {
-            param0.b(12);
+          if (null != param0.secondaryPrevious) {
+            param0.unlinkSecondary(12);
           }
-          param0.field_l = this.field_e;
-          param0.field_m = this.field_e.field_m;
-          param0.field_m.field_l = param0;
-          param0.field_l.field_m = param0;
+          param0.secondaryNext = this.field_e;
+          param0.secondaryPrevious = this.field_e.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
           if (param1 == 25) {
             return;
           }
@@ -115,18 +115,18 @@ final class bg implements Iterable {
         throw new Error();
     }
 
-    final ca b(byte param0) {
+    final DualLinkNode b(byte param0) {
         int var2 = 10 % ((42 - param0) / 37);
-        ca var3 = this.field_e.field_l;
+        DualLinkNode var3 = this.field_e.secondaryNext;
         if (this.field_e != var3) {
-          var3.b(12);
+          var3.unlinkSecondary(12);
           return var3;
         }
         return null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ec(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void clearStaticReferences(byte param0) {

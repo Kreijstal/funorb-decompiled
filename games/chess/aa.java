@@ -1966,10 +1966,10 @@ final class aa {
             var11 += 7;
             var21.a(pd.field_Ob + ma.field_J[var13Lifetime1], var10Lifetime1, var11 + 4 * var21.field_q, 1, -1);
             var11 = var11 + (-(ao.field_e.field_h / 4) + 128);
-            var21.a(hc.field_d, var10Lifetime1, var21.field_C + var11, 1, -1);
+            var21.a(SecondaryNodeDequeIterator.field_d, var10Lifetime1, var21.field_C + var11, 1, -1);
             var17 = 0;
             while (var17 < se.field_ab[var13Lifetime1]) {
-              ao.field_e.c(var17 * 5 + var21.b(hc.field_d) + (10 + var10Lifetime1), var11);
+              ao.field_e.c(var17 * 5 + var21.b(SecondaryNodeDequeIterator.field_d) + (10 + var10Lifetime1), var11);
               var17++;
               if (var18 != 0) {
                 decompiledFrameCompleted0 = false;

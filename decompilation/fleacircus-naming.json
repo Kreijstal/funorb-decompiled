@@ -300,6 +300,14 @@
       "renamedSymbol": "C:DirectByteStorage"
     },
     {
+      "symbol": "C:rc",
+      "originalName": "rc",
+      "to": "SecondaryNodeDequeIterator",
+      "evidence": "Complete constructor/hasNext/next/remove and all three instance fields independently reviewed. Traverse one secondary-link sentinel chain from the owning deque,advance the pending node before exposing result,and track the last node for removal. Preserve sentinel-end null return,cursor/last-node writes,subsequent exhausted-state behavior,IllegalStateException gating and exact unlink guards/exceptions. Complete constructor and instance operations reviewed with all selected state-field roles. Preserve original modifiers,guards,exceptions,partial effects and protocol names. No native owner/type-use declarations or exact quoted class literals. Identifier-only change.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SecondaryNodeDequeIterator"
+    },
+    {
       "symbol": "C:rh",
       "originalName": "rh",
       "to": "ResourceArchive",
@@ -538,6 +546,30 @@
       "evidence": "Sole instance ByteBuffer allocated directly and read/written by byte-array operations. Preserve all nullable/guard states.",
       "confidence": "reviewed",
       "renamedSymbol": "F:DirectByteStorage.buffer:Ljava/nio/ByteBuffer;"
+    },
+    {
+      "symbol": "F:rc.field_b:Lpa;",
+      "originalName": "field_b",
+      "to": "nextNode",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.nextNode:LDualLinkNode;"
+    },
+    {
+      "symbol": "F:rc.field_c:Lwf;",
+      "originalName": "field_c",
+      "to": "deque",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:LSecondaryNodeDeque;"
+    },
+    {
+      "symbol": "F:rc.field_d:Lpa;",
+      "originalName": "field_d",
+      "to": "lastReturned",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.lastReturned:LDualLinkNode;"
     },
     {
       "symbol": "F:vb.field_b:Ljava/awt/Frame;",
@@ -4885,9 +4917,9 @@
     },
     {
       "symbol": "C:rc",
-      "renamedSymbol": "C:rc",
+      "renamedSymbol": "C:SecondaryNodeDequeIterator",
       "originalName": "rc",
-      "renamedName": "rc",
+      "renamedName": "SecondaryNodeDequeIterator",
       "declaration": {
         "file": "rc.java",
         "start": 71,
@@ -24344,7 +24376,7 @@
     },
     {
       "symbol": "F:rc.field_a:I",
-      "renamedSymbol": "F:rc.field_a:I",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -24355,9 +24387,9 @@
     },
     {
       "symbol": "F:rc.field_b:Lpa;",
-      "renamedSymbol": "F:rc.field_b:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.nextNode:LDualLinkNode;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "nextNode",
       "declaration": {
         "file": "rc.java",
         "start": 294,
@@ -24366,9 +24398,9 @@
     },
     {
       "symbol": "F:rc.field_c:Lwf;",
-      "renamedSymbol": "F:rc.field_c:LSecondaryNodeDeque;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:LSecondaryNodeDeque;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "deque",
       "declaration": {
         "file": "rc.java",
         "start": 318,
@@ -24377,9 +24409,9 @@
     },
     {
       "symbol": "F:rc.field_d:Lpa;",
-      "renamedSymbol": "F:rc.field_d:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.lastReturned:LDualLinkNode;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "lastReturned",
       "declaration": {
         "file": "rc.java",
         "start": 270,
@@ -24388,7 +24420,7 @@
     },
     {
       "symbol": "F:rc.field_e:I",
-      "renamedSymbol": "F:rc.field_e:I",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -24399,7 +24431,7 @@
     },
     {
       "symbol": "F:rc.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:rc.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -24410,7 +24442,7 @@
     },
     {
       "symbol": "F:rc.field_g:[Ljava/lang/String;",
-      "renamedSymbol": "F:rc.field_g:[Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_g:[Ljava/lang/String;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -24421,7 +24453,7 @@
     },
     {
       "symbol": "F:rc.field_h:Ljava/lang/String;",
-      "renamedSymbol": "F:rc.field_h:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_h:Ljava/lang/String;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -24432,7 +24464,7 @@
     },
     {
       "symbol": "F:rc.field_i:Z",
-      "renamedSymbol": "F:rc.field_i:Z",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_i:Z",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -122552,7 +122584,7 @@
     },
     {
       "symbol": "L:rc.<init>(Lwf;)V#0",
-      "renamedSymbol": "L:rc.<init>(LSecondaryNodeDeque;)V#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.<init>(LSecondaryNodeDeque;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -122563,7 +122595,7 @@
     },
     {
       "symbol": "L:rc.a(B)V#0",
-      "renamedSymbol": "L:rc.a(B)V#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -122574,7 +122606,7 @@
     },
     {
       "symbol": "L:rc.a(CI)B#0",
-      "renamedSymbol": "L:rc.a(CI)B#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(CI)B#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -122585,7 +122617,7 @@
     },
     {
       "symbol": "L:rc.a(CI)B#1",
-      "renamedSymbol": "L:rc.a(CI)B#1",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(CI)B#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -122596,7 +122628,7 @@
     },
     {
       "symbol": "L:rc.a(CI)B#2",
-      "renamedSymbol": "L:rc.a(CI)B#2",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(CI)B#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -122607,7 +122639,7 @@
     },
     {
       "symbol": "L:rc.a(CI)B#3",
-      "renamedSymbol": "L:rc.a(CI)B#3",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(CI)B#3",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -122618,7 +122650,7 @@
     },
     {
       "symbol": "L:rc.a(CI)B#4",
-      "renamedSymbol": "L:rc.a(CI)B#4",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(CI)B#4",
       "originalName": "var2Lifetime3",
       "renamedName": "var2Lifetime3",
       "declaration": {
@@ -122629,7 +122661,7 @@
     },
     {
       "symbol": "L:rc.a(CI)B#5",
-      "renamedSymbol": "L:rc.a(CI)B#5",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.a(CI)B#5",
       "originalName": "var2Lifetime4",
       "renamedName": "var2Lifetime4",
       "declaration": {
@@ -122640,7 +122672,7 @@
     },
     {
       "symbol": "L:rc.next()Ljava/lang/Object;#0",
-      "renamedSymbol": "L:rc.next()Ljava/lang/Object;#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.next()Ljava/lang/Object;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -171612,9 +171644,9 @@
     },
     {
       "symbol": "M:rc.<init>(Lwf;)V",
-      "renamedSymbol": "M:rc.<init>(LSecondaryNodeDeque;)V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.<init>(LSecondaryNodeDeque;)V",
       "originalName": "rc",
-      "renamedName": "rc",
+      "renamedName": "SecondaryNodeDequeIterator",
       "declaration": {
         "file": "rc.java",
         "start": 16993,
@@ -171623,7 +171655,7 @@
     },
     {
       "symbol": "M:rc.a(B)V",
-      "renamedSymbol": "M:rc.a(B)V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -171634,7 +171666,7 @@
     },
     {
       "symbol": "M:rc.a(CI)B",
-      "renamedSymbol": "M:rc.a(CI)B",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.a(CI)B",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -171645,7 +171677,7 @@
     },
     {
       "symbol": "M:rc.hasNext()Z",
-      "renamedSymbol": "M:rc.hasNext()Z",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.hasNext()Z",
       "originalName": "hasNext",
       "renamedName": "hasNext",
       "declaration": {
@@ -171656,7 +171688,7 @@
     },
     {
       "symbol": "M:rc.next()Ljava/lang/Object;",
-      "renamedSymbol": "M:rc.next()Ljava/lang/Object;",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.next()Ljava/lang/Object;",
       "originalName": "next",
       "renamedName": "next",
       "declaration": {
@@ -171667,7 +171699,7 @@
     },
     {
       "symbol": "M:rc.remove()V",
-      "renamedSymbol": "M:rc.remove()V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.remove()V",
       "originalName": "remove",
       "renamedName": "remove",
       "declaration": {
@@ -223763,7 +223795,7 @@
     },
     {
       "symbol": "P:rc.<init>(Lwf;)V#0",
-      "renamedSymbol": "P:rc.<init>(LSecondaryNodeDeque;)V#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.<init>(LSecondaryNodeDeque;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223774,7 +223806,7 @@
     },
     {
       "symbol": "P:rc.a(B)V#0",
-      "renamedSymbol": "P:rc.a(B)V#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223785,7 +223817,7 @@
     },
     {
       "symbol": "P:rc.a(CI)B#0",
-      "renamedSymbol": "P:rc.a(CI)B#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.a(CI)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -223796,7 +223828,7 @@
     },
     {
       "symbol": "P:rc.a(CI)B#1",
-      "renamedSymbol": "P:rc.a(CI)B#1",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.a(CI)B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -237608,7 +237640,7 @@
       "original": "bd.java",
       "renamed": "bd.java",
       "inputSha256": "d5d72b3bca57c171c2943e6211e2597839d861771e7b417d43bd4a6aac62bd10",
-      "outputSha256": "a51698df23100cda43825757470290e6f8e634cd6d1b9bb27709a81b1e815f2d",
+      "outputSha256": "8e165c1e4230dc7c3c9d7c298a9678f463500ae30c7f552000936e3db43a44d2",
       "edits": [
         {
           "start": 1906,
@@ -237763,6 +237795,13 @@
           "symbol": "M:lh.c(I)V",
           "original": "c",
           "renamed": "unlink"
+        },
+        {
+          "start": 10527,
+          "end": 10529,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 10975,
@@ -238706,7 +238745,7 @@
       "original": "cd.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "6fdc2133f6194bc16f7badb12bcc8e17e9192bd0a72b635bd34dfd1a095cf2ec",
-      "outputSha256": "bbfb3b22bfcaf7147e2a619385104b163790f93fb418707638a4d5791dd0d36d",
+      "outputSha256": "5c2abdcf171eefb02ca52e6ac07811e372bcdea34a94d13d10af08b85513a405",
       "edits": [
         {
           "start": 60,
@@ -238756,6 +238795,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 12681,
+          "end": 12683,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 13077,
@@ -241787,7 +241833,7 @@
       "original": "ed.java",
       "renamed": "ed.java",
       "inputSha256": "762fb7809df0c8c7f60a8ac8dbc22a37975442e43b438600531fecb3bcddf306",
-      "outputSha256": "f185ca14a74c6ad29d47bef1077e5e3c5b125bba6c30099c50cd35008e813c3a",
+      "outputSha256": "a594e9d50266cf57138dad2e152091dd2e33646a3cf34a4cc6cc9c87d1d32d4c",
       "edits": [
         {
           "start": 1862,
@@ -241853,6 +241899,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 2927,
+          "end": 2929,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 3025,
           "end": 3027,
           "symbol": "C:jg",
@@ -241879,6 +241932,13 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "NetworkGameClient"
+        },
+        {
+          "start": 4098,
+          "end": 4100,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 4560,
@@ -243013,7 +243073,7 @@
       "original": "el.java",
       "renamed": "el.java",
       "inputSha256": "3d8b1c73a71ab272cce73298a33d51862d188ff6352b6b865dd7d4c18b0e4e24",
-      "outputSha256": "d3cc0e39eb1adb70998e28dc85c7d57c0cca9098d0fcc90918860d00ad609823",
+      "outputSha256": "8fee0f75bbd940d9f87b41be0b003f02f40ad9e83b09d4d83b16d31a460e5086",
       "edits": [
         {
           "start": 513,
@@ -243042,6 +243102,13 @@
           "symbol": "C:rh",
           "original": "rh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2410,
+          "end": 2412,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 2701,
@@ -243240,7 +243307,7 @@
       "original": "fa.java",
       "renamed": "fa.java",
       "inputSha256": "8c18eadb9803218afd6f90bb1d913c21c8c92015b9a994a550184dccee529e26",
-      "outputSha256": "f7e032fa71b5568f95cfb56433b0bd2cc7dbf584f06e7f4c9a47cadb7ef425e4",
+      "outputSha256": "dffe970ebfdf5dea6865285d54a9553068af412d91d291b1bb70c66f4d37e874",
       "edits": [
         {
           "start": 64,
@@ -243248,6 +243315,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 5861,
+          "end": 5863,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 9944,
@@ -243283,6 +243357,34 @@
           "symbol": "M:fa.a()V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 11886,
+          "end": 11888,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 18541,
+          "end": 18543,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 24824,
+          "end": 24826,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 31087,
+          "end": 31089,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         }
       ]
     },
@@ -244220,7 +244322,7 @@
       "original": "fleas.java",
       "renamed": "fleas.java",
       "inputSha256": "861e567883195e0b453cf8d7792be9e802a0aaf8cb07f8e2525e0530e3256516",
-      "outputSha256": "eb6dbbb8209db4e05d902e0093e16b7bb48ac42374b27218c55e647459e38d80",
+      "outputSha256": "e9c0871a49261c9a3f8c2e8684cd1266f308c397482a49de5f28e2a47b6262a4",
       "edits": [
         {
           "start": 92,
@@ -245215,6 +245317,13 @@
           "symbol": "M:na.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 42447,
+          "end": 42449,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 42632,
@@ -246703,7 +246812,7 @@
       "original": "gh.java",
       "renamed": "gh.java",
       "inputSha256": "cbcc8e3138fd95585bdda89395420d2c6a55f99816fc20bd9e808996dedc00f1",
-      "outputSha256": "d5368d9fbbbba29b1e32a9964919df7e4a0a7bfbed30e0eb7f3dc69005789306",
+      "outputSha256": "67bf8d7636f69684e9ee8b0ea69786f98d6ab5d16ed601e6a7f2a1f48a2303bf",
       "edits": [
         {
           "start": 357,
@@ -246732,6 +246841,20 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 7548,
+          "end": 7550,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 7600,
+          "end": 7602,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 9126,
@@ -249314,7 +249437,7 @@
       "original": "il.java",
       "renamed": "il.java",
       "inputSha256": "c0d71198f5320cd80d8fb6278dbf1b6d7c18abe1285976482023ff12fcc5fcdc",
-      "outputSha256": "dc70017efc74d8bf524a1707c053f75379239182d654caa2d30a79f9124a9f8e",
+      "outputSha256": "197e6ed6e5c1a0de10abc90fb5fd753d76c8b6532978b595a5b3f52072d5d60f",
       "edits": [
         {
           "start": 91,
@@ -249364,6 +249487,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 1471,
+          "end": 1473,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         }
       ]
     },
@@ -249781,7 +249911,7 @@
       "original": "je.java",
       "renamed": "je.java",
       "inputSha256": "d33d224495ff6ac0b71e4b8c8f49770e21dd47c45d94fc86fd242e39b81507c8",
-      "outputSha256": "8663b6ab1a640f9d10c9c6c0b5bfed16ff23ca3d30af9ecf2f9a7fa959933f3d",
+      "outputSha256": "f9c8862c8411298cfac5af045d57897f20f02f48a7cb8d1eaa95300cfc252eb8",
       "edits": [
         {
           "start": 625,
@@ -249908,6 +250038,20 @@
           "symbol": "C:rh",
           "original": "rh",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 75701,
+          "end": 75703,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 97130,
+          "end": 97132,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 97605,
@@ -251803,7 +251947,7 @@
       "original": "md.java",
       "renamed": "md.java",
       "inputSha256": "d88f6dcba75367c5e6f9d1d416c8d283ebc1da651023d6df0b760b3e7bc149e7",
-      "outputSha256": "6f139f2091782f2ad980bb4aae05e36f47b8929fc1eefc2f061b7ee7ce4ca6db",
+      "outputSha256": "0b5a8107bd4668f52bc18713be44f80dc9a356654ab87fc3da3548f6e792a725",
       "edits": [
         {
           "start": 365,
@@ -251811,6 +251955,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 2749,
+          "end": 2751,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         }
       ]
     },
@@ -256226,7 +256377,7 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "cc8d24dfd19ced417309e0669f02a122e198d4b6949ca2cffaba26b52ef62bc4",
-      "outputSha256": "2ac197397c542f0ae5487d915b5f79914bdfd71180a733d7b02ea5474dfe4e58",
+      "outputSha256": "aefc02081d5d2d77bcb5ced96ecaffa4805333f7575a08fbd58f656dd4f80c58",
       "edits": [
         {
           "start": 66,
@@ -256325,6 +256476,55 @@
           "symbol": "C:cd",
           "original": "cd",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 10160,
+          "end": 10162,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 10246,
+          "end": 10248,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 10520,
+          "end": 10522,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 10660,
+          "end": 10662,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 11221,
+          "end": 11223,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 12131,
+          "end": 12133,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 12289,
+          "end": 12291,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 15171,
@@ -258324,16 +258524,30 @@
     },
     {
       "original": "rc.java",
-      "renamed": "rc.java",
+      "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "b6bd0ab66c8cff3dc13c095a581901301eb6c215717cd5cca3a45879b3c9e23e",
-      "outputSha256": "aff81dc1a2624db2afbf79a6960612ef713aaf7bfb34b7ffccfcf74d4bbd800d",
+      "outputSha256": "4b4035c94b73cd7f08e6bd851170a88bc94acee1e5aa6baef59a580ae3716ecb",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
         {
           "start": 267,
           "end": 269,
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 270,
+          "end": 277,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
         },
         {
           "start": 291,
@@ -258343,11 +258557,60 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 294,
+          "end": 301,
+          "symbol": "F:rc.field_b:Lpa;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
           "start": 315,
           "end": 317,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 318,
+          "end": 325,
+          "symbol": "F:rc.field_c:Lwf;",
+          "original": "field_c",
+          "renamed": "deque"
+        },
+        {
+          "start": 385,
+          "end": 392,
+          "symbol": "F:rc.field_b:Lpa;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 401,
+          "end": 408,
+          "symbol": "F:rc.field_c:Lwf;",
+          "original": "field_c",
+          "renamed": "deque"
+        },
+        {
+          "start": 16554,
+          "end": 16561,
+          "symbol": "F:rc.field_b:Lpa;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 16588,
+          "end": 16595,
+          "symbol": "F:rc.field_c:Lwf;",
+          "original": "field_c",
+          "renamed": "deque"
+        },
+        {
+          "start": 16622,
+          "end": 16629,
+          "symbol": "F:rc.field_b:Lpa;",
+          "original": "field_b",
+          "renamed": "nextNode"
         },
         {
           "start": 16634,
@@ -258357,11 +258620,39 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 16710,
+          "end": 16717,
+          "symbol": "F:rc.field_b:Lpa;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 16749,
+          "end": 16756,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 16760,
           "end": 16762,
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 16858,
+          "end": 16865,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 16937,
+          "end": 16944,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
         },
         {
           "start": 16945,
@@ -258371,11 +258662,60 @@
           "renamed": "unlinkSecondary"
         },
         {
+          "start": 16966,
+          "end": 16973,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 16993,
+          "end": 16995,
+          "symbol": "M:rc.<init>(Lwf;)V",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 16996,
           "end": 16998,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 17022,
+          "end": 17029,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 17067,
+          "end": 17074,
+          "symbol": "F:rc.field_c:Lwf;",
+          "original": "field_c",
+          "renamed": "deque"
+        },
+        {
+          "start": 17100,
+          "end": 17107,
+          "symbol": "F:rc.field_d:Lpa;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 17131,
+          "end": 17138,
+          "symbol": "F:rc.field_b:Lpa;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 17146,
+          "end": 17153,
+          "symbol": "F:rc.field_c:Lwf;",
+          "original": "field_c",
+          "renamed": "deque"
         }
       ]
     },
@@ -259890,7 +260230,7 @@
       "original": "si.java",
       "renamed": "si.java",
       "inputSha256": "3c3142d6158711314ca4f437eef6db40b27da3b6ddbc52739dbc3547ec913157",
-      "outputSha256": "ebb7eabe90fb8417475161ed5aaa381b316f82b4b140b76ac53469c2bace77c5",
+      "outputSha256": "071094e8f369890883dee9bc09bc6ec12394d9c9a67195b748d9cb5501fcecca",
       "edits": [
         {
           "start": 4212,
@@ -260005,6 +260345,13 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 5329,
+          "end": 5331,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 5714,
           "end": 5716,
           "symbol": "C:td",
@@ -260038,6 +260385,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 5823,
+          "end": 5825,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 5890,
@@ -260082,11 +260436,25 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 6282,
+          "end": 6284,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 6385,
           "end": 6387,
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 6429,
+          "end": 6431,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 6490,
@@ -261443,7 +261811,7 @@
       "original": "tb.java",
       "renamed": "tb.java",
       "inputSha256": "d04bd32817e6ad78869df696a04438908f580f03ea38588d8461413dd67bf923",
-      "outputSha256": "179082bd9e2147219944f7651a84ec3ebd84ef15d2fa8de909e5d2cb1c444267",
+      "outputSha256": "c5ae857a77e8820f56c6ee9ba52697b8d8e24b13d9653d5cbb746a3d228ddca3",
       "edits": [
         {
           "start": 780,
@@ -261542,6 +261910,13 @@
           "symbol": "M:tb.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 4490,
+          "end": 4492,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         }
       ]
     },
@@ -262267,7 +262642,7 @@
       "original": "ud.java",
       "renamed": "ud.java",
       "inputSha256": "6427944f60ed864759538e5557df81da7d49f921cbee4670514113a71daaaa0c",
-      "outputSha256": "9a48f6b54107938a98b7c370f68445d54993c3e2b381639aae85d68c1246c66b",
+      "outputSha256": "4900ce21690b2f2d5d57f2fd3b14d050fc9ff08c4af2149d66697ff9530022f2",
       "edits": [
         {
           "start": 1892,
@@ -262296,6 +262671,13 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 5455,
+          "end": 5457,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 5801,
@@ -265392,7 +265774,7 @@
       "original": "wf.java",
       "renamed": "SecondaryNodeDeque.java",
       "inputSha256": "8a8d98488d2d0181c2b933b064055399fa3cacb0df14aa3f6ed4cfca847f49ea",
-      "outputSha256": "7ae4d7283f5b1cbc79df3c27735544e7bf573f79997df7191cc19e2d8c36d7bc",
+      "outputSha256": "e828bc7bffc6fdd64875c471b1f4e2f0ac4c7210c99c846ffd2c59b0a8a6cbcb",
       "edits": [
         {
           "start": 71,
@@ -265554,6 +265936,13 @@
           "symbol": "M:wf.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 4469,
+          "end": 4471,
+          "symbol": "C:rc",
+          "original": "rc",
+          "renamed": "SecondaryNodeDequeIterator"
         }
       ]
     },
@@ -266739,10 +267128,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/fleacircus"
     },
-    "rulesSha256": "61e8a2f63ed6d7a842d4d4f2ed7876450dd6eae2aca2bbd15cd7e6f3a6b180dd",
+    "rulesSha256": "d4c455537723a1c2bfac49cafbb939a6fd5077eb6b192e0ceffd3f7a06171fdf",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
-    "outputTreeSha256": "382fcd4e225fffd39eadf44d9c46b3b470685e050dd02d4841f2890ce509a08c",
+    "outputTreeSha256": "29cb398255b93531d234030d7683f2bb0acd45bd40b87bcdbfa0a438cc8d406a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

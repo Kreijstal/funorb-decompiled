@@ -18,10 +18,10 @@ final class wh {
     }
 
     final static void a(int param0, byte param1) {
-        kd.field_a = (param0 & 52) >> 4;
+        IntrusiveNode.field_a = (param0 & 52) >> 4;
         jf.field_K = param0 >> 2 & 3;
-        if (kd.field_a > 2) {
-          kd.field_a = 2;
+        if (IntrusiveNode.field_a > 2) {
+          IntrusiveNode.field_a = 2;
           fi.field_b = 3 & param0;
           if (!(jf.field_K <= 2)) {
             jf.field_K = 2;

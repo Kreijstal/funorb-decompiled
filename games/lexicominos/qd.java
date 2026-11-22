@@ -18,7 +18,7 @@ final class qd {
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
-        return new gb(dg.a(false), ca.a((byte) 81));
+        return new gb(dg.a(false), DualLinkNode.a((byte) 81));
     }
 
     final static vb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

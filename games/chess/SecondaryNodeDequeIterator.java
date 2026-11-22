@@ -3,28 +3,28 @@
  */
 import java.util.*;
 
-final class hc implements Iterator {
-    private l field_f;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode lastReturned;
     static String field_e;
     static String field_d;
     static String field_b;
-    private l field_c;
-    private cn field_a;
+    private DualLinkNode nextNode;
+    private cn deque;
 
     public final Object next() {
-        Object var1 = this.field_c;
-        if (var1 == this.field_a.field_c) {
+        Object var1 = this.nextNode;
+        if (var1 == this.deque.field_c) {
           var1 = null;
-          this.field_c = null;
+          this.nextNode = null;
         } else {
-          this.field_c = ((l) (var1)).field_p;
+          this.nextNode = ((DualLinkNode) (var1)).secondaryNext;
         }
-        this.field_f = (l) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
     public final boolean hasNext() {
-        return this.field_c != this.field_a.field_c;
+        return this.nextNode != this.deque.field_c;
     }
 
     public static void clearStaticReferences(boolean param0) {
@@ -37,11 +37,11 @@ final class hc implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_f == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_f.d(-1);
-        this.field_f = null;
+        this.lastReturned.unlinkSecondary(-1);
+        this.lastReturned = null;
     }
 
     final static void a(int param0, byte param1) {
@@ -52,12 +52,12 @@ final class hc implements Iterator {
         var2.writeByte(1, (byte) 122);
     }
 
-    hc(cn param0) {
-        this.field_f = null;
+    SecondaryNodeDequeIterator(cn param0) {
+        this.lastReturned = null;
         try {
-          this.field_a = param0;
-          this.field_f = null;
-          this.field_c = this.field_a.field_c.field_p;
+          this.deque = param0;
+          this.lastReturned = null;
+          this.nextNode = this.deque.field_c.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

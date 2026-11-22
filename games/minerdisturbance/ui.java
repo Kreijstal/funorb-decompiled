@@ -158,7 +158,7 @@ class ui extends hc {
           if (!(this.field_A instanceof cf)) {
             return false;
           }
-          var8_int = ((cf) ((Object) this.field_A)).a((fe) (this), param6, false, gb.field_e, nk.field_w, param1);
+          var8_int = ((cf) ((Object) this.field_A)).a((fe) (this), param6, false, NodeHashTableIterator.field_e, nk.field_w, param1);
           stackIn_5_1 = 82;
           if (-1 != var8_int) {
             stackIn_6_2 = var8_int;
@@ -459,7 +459,7 @@ class ui extends hc {
           if (this.field_w == 1) {
             if (this.field_A instanceof cf) {
               var7 = (cf) ((Object) this.field_A);
-              var6 = var7.a((fe) (this), param1, false, gb.field_e, nk.field_w, param0);
+              var6 = var7.a((fe) (this), param1, false, NodeHashTableIterator.field_e, nk.field_w, param0);
               if (var6 != -1) {
                 if (this.field_R && var6 < this.field_I &&
                   this.field_O < var6) {

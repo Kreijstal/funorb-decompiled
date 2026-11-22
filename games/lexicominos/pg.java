@@ -115,7 +115,7 @@ final class pg {
               ck.$cfr$intArgs$b$e683eeaaf5b5(-112);
               return;
             }
-            var3_ref_pb.b((byte) -127);
+            var3_ref_pb.unlink((byte) -127);
             return;
           }
           if (1 != var2) {
@@ -136,7 +136,7 @@ final class pg {
             ck.$cfr$intArgs$b$e683eeaaf5b5(-73);
             return;
           }
-          var4.b((byte) -128);
+          var4.unlink((byte) -128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

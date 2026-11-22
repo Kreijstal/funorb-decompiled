@@ -23,7 +23,7 @@ final class qm {
         BoundedRandomAccessFile.field_a[fb.field_c] = fb.field_c;
         IntrusiveNode.field_h[fb.field_c] = param0;
         if (!(he.field_e <= param0)) {
-          bc.field_d = param0;
+          SecondaryNodeDequeIterator.field_d = param0;
         }
         if (param0 > AccountRequestState.field_g) {
           v.field_c = param0;
@@ -37,8 +37,8 @@ final class qm {
         if (v.field_c < var7) {
           v.field_c = var7;
         }
-        if (!(bc.field_d <= var7)) {
-          bc.field_d = var7;
+        if (!(SecondaryNodeDequeIterator.field_d <= var7)) {
+          SecondaryNodeDequeIterator.field_d = var7;
         }
         fb.field_c = fb.field_c + 1;
         if (!param3) {

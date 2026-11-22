@@ -66,7 +66,7 @@ final class uj {
               }
               var3 = var9 + "settings";
               var4 = (String) (ac.a(param1, "getcookies", -31185));
-              var5 = di.a(-116, ';', var4);
+              var5 = SecondaryNodeDequeIterator.a(-116, ';', var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

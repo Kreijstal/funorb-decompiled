@@ -258,7 +258,7 @@ public final class Confined extends i {
           og.d(param0 ^ -211);
           qk.clearStaticReferences(param0 - 81);
           IntrusiveNodeHashTableIterator.a((byte) -91);
-          tm.a(-125);
+          SecondaryNodeDequeIterator.a(-125);
           qn.clearStaticReferences(-1362);
           bj.clearStaticReferences((byte) 113);
           ha.a(11);

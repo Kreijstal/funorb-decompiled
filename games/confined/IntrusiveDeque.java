@@ -15,7 +15,7 @@ final class IntrusiveDeque implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new tm(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final void a(DualLinkNode param0, int param1) {

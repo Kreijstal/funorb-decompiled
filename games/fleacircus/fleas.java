@@ -1147,7 +1147,7 @@ public final class fleas extends NetworkGameClient {
           jk.c(28);
           a.a((byte) 126);
           NodeHashTableIterator.clearStaticReferences(105);
-          rc.a((byte) 58);
+          SecondaryNodeDequeIterator.a((byte) 58);
           ll.a(61);
           bh.a(param0 ^ 125);
           il.a(-70);

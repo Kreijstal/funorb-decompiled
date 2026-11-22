@@ -37,7 +37,7 @@ final class b {
           int var8Lifetime1;
           var9 = Bounce.field_N;
           try {
-            if (null == dh.field_a &&
+            if (null == NodeHashTableIterator.field_a &&
               !ok.a(param5, 118)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
@@ -192,7 +192,7 @@ final class b {
             if (param0 != -37) {
               field_c = (String) null;
             }
-            if (null == dh.field_a) {
+            if (null == NodeHashTableIterator.field_a) {
               if (fa.field_a) {
                 if (ph.a((byte) -110) > 30000L) {
                   ib.field_o = jh.field_t;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class si extends ca {
+abstract class si extends DualLinkNode {
     boolean field_p;
     static IndexedSprite[] field_u;
     static int field_s;

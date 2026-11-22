@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class PacketBuffer extends kd {
+class PacketBuffer extends IntrusiveNode {
     int position;
     static int field_i;
     byte[] payload;

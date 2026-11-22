@@ -221,7 +221,7 @@ final class ke extends ui implements sg {
         if (null == this.field_n) {
           return null;
         }
-        qh.a(gb.field_e, nk.field_w + (-this.field_T + this.field_v), 1);
+        qh.a(NodeHashTableIterator.field_e, nk.field_w + (-this.field_T + this.field_v), 1);
         if (param0 == -27867) {
           return this.field_n;
         }

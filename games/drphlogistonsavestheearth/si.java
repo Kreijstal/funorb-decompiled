@@ -306,7 +306,7 @@ abstract class si extends vg implements ba {
         cj.field_h = new he[8];
         cj.field_h[4] = PacketBuffer.field_k;
         cj.field_h[2] = ri.field_b;
-        cj.field_h[1] = re.field_d;
+        cj.field_h[1] = NodeHashTableIterator.field_d;
         cj.field_h[0] = fa.field_o;
         if (param0 == 10) {
           cj.field_h[5] = qc.field_a;

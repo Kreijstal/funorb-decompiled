@@ -1973,7 +1973,7 @@ final class ml {
             this.field_o.a(this.field_q, this.field_m, 140, this.field_l, this.field_h + this.field_m);
           } else {
             var2Lifetime1 = this.c(-21377, GameAppletShell.field_e, wi.field_w);
-            var3 = this.c(-21377, gb.field_e, nk.field_w);
+            var3 = this.c(-21377, NodeHashTableIterator.field_e, nk.field_w);
             this.field_o.a(var3, var2Lifetime1, -1);
           }
         } else {
@@ -1981,7 +1981,7 @@ final class ml {
           var3 = -1;
           if (this.field_n != 11) {
             var2Lifetime1 = this.a(640, wi.field_w, GameAppletShell.field_e);
-            var3 = this.a(param0 - 8139, nk.field_w, gb.field_e);
+            var3 = this.a(param0 - 8139, nk.field_w, NodeHashTableIterator.field_e);
             this.field_o.a(var3, var2Lifetime1, param0 ^ -8780);
           } else {
             var4 = wk.field_a.a(true, 1);

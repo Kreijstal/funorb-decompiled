@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends kd {
+final class vi extends IntrusiveNode {
     int field_i;
     static boolean field_j;
     static tf field_l;

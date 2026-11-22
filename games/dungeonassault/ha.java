@@ -16,7 +16,7 @@ final class ha extends um {
         vf.field_w = 620;
         qc.field_w = 240;
         kn.field_g = true;
-        id.field_l = null;
+        SecondaryNodeDequeIterator.field_l = null;
         gk.field_L = null;
         wi.field_kb = 0;
         jn.field_l = null;

@@ -26,7 +26,7 @@ final class ie extends IntrusiveNode {
             var1 = new i();
           }
           var1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
-          id.field_e.a(var1, false);
+          SecondaryNodeDequeIterator.field_e.a(var1, false);
           return;
         }
         field_l = (cn) null;
@@ -35,7 +35,7 @@ final class ie extends IntrusiveNode {
           var1Lifetime1 = new i();
         }
         var1Lifetime1.a(gf.field_c, gf.field_e, gf.field_j, gf.field_f, gf.field_h, gf.field_i, false, gf.field_b);
-        id.field_e.a(var1Lifetime1, false);
+        SecondaryNodeDequeIterator.field_e.a(var1Lifetime1, false);
     }
 
     public static void d(int param0) {

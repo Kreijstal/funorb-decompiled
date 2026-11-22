@@ -3,36 +3,36 @@
  */
 import java.util.*;
 
-final class oa implements Iterator {
-    private DualLinkNode field_a;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode lastReturned;
     static String field_c;
     static String field_d;
-    private dg field_f;
+    private dg deque;
     static int field_b;
-    private DualLinkNode field_e;
+    private DualLinkNode nextNode;
 
     public final void remove() {
-        if (null == this.field_a) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_a.unlinkSecondary(64);
-        this.field_a = null;
+        this.lastReturned.unlinkSecondary(64);
+        this.lastReturned = null;
     }
 
     public final Object next() {
-        Object var1 = this.field_e;
-        if (this.field_f.field_b != var1) {
-          this.field_e = ((DualLinkNode) (var1)).secondaryNext;
+        Object var1 = this.nextNode;
+        if (this.deque.field_b != var1) {
+          this.nextNode = ((DualLinkNode) (var1)).secondaryNext;
         } else {
-          this.field_e = null;
+          this.nextNode = null;
           var1 = null;
         }
-        this.field_a = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
     public final boolean hasNext() {
-        return this.field_e != this.field_f.field_b;
+        return this.nextNode != this.deque.field_b;
     }
 
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
@@ -101,17 +101,17 @@ final class oa implements Iterator {
           field_c = null;
           return;
         }
-        oa.a((byte) -83, -53, 50, true);
+        SecondaryNodeDequeIterator.a((byte) -83, -53, 50, true);
         field_d = null;
         field_c = null;
     }
 
-    oa(dg param0) {
-        this.field_a = null;
+    SecondaryNodeDequeIterator(dg param0) {
+        this.lastReturned = null;
         try {
-          this.field_f = param0;
-          this.field_e = this.field_f.field_b.secondaryNext;
-          this.field_a = null;
+          this.deque = param0;
+          this.nextNode = this.deque.field_b.secondaryNext;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

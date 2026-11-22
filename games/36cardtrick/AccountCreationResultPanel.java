@@ -49,7 +49,7 @@ final class AccountCreationResultPanel extends af implements qh {
         }
         try {
           int var6_int = -69 / ((param1 + 62) / 32);
-          rg.a((byte) 120);
+          SecondaryNodeDequeIterator.a((byte) 120);
           this.s(116);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "bg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

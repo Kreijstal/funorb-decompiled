@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class rc implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static int field_e;
     static boolean field_i;
     static int field_a;
     static String[] field_g;
     static String field_h;
     static String field_f;
-    private DualLinkNode field_d;
-    private DualLinkNode field_b;
-    private SecondaryNodeDeque field_c;
+    private DualLinkNode lastReturned;
+    private DualLinkNode nextNode;
+    private SecondaryNodeDeque deque;
 
     public final boolean hasNext() {
-        return this.field_b != this.field_c.field_a;
+        return this.nextNode != this.deque.field_a;
     }
 
     final static byte a(char param0, int param1) {
@@ -375,31 +375,31 @@ final class rc implements Iterator {
     }
 
     public final Object next() {
-        Object var1 = this.field_b;
-        if (var1 != this.field_c.field_a) {
-          this.field_b = ((DualLinkNode) (var1)).field_p;
+        Object var1 = this.nextNode;
+        if (var1 != this.deque.field_a) {
+          this.nextNode = ((DualLinkNode) (var1)).field_p;
         } else {
           var1 = null;
-          this.field_b = null;
+          this.nextNode = null;
         }
-        this.field_d = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
     public final void remove() {
-        if (null == this.field_d) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_d.unlinkSecondary(-90);
-        this.field_d = null;
+        this.lastReturned.unlinkSecondary(-90);
+        this.lastReturned = null;
     }
 
-    rc(SecondaryNodeDeque param0) {
-        this.field_d = null;
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
+        this.lastReturned = null;
         try {
-          this.field_c = param0;
-          this.field_d = null;
-          this.field_b = this.field_c.field_a.field_p;
+          this.deque = param0;
+          this.lastReturned = null;
+          this.nextNode = this.deque.field_a.field_p;
         } catch (RuntimeException runtimeException) {
           throw pf.a((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

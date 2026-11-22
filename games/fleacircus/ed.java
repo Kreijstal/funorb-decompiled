@@ -83,7 +83,7 @@ final class ed {
             gb.a(ab.field_c);
             var11 = new dd(4 + MouseWheelInput.field_f.field_w, 4 + MouseWheelInput.field_f.field_t);
             var11.f();
-            MouseWheelInput.field_f.d(2, 2, rc.field_e);
+            MouseWheelInput.field_f.d(2, 2, SecondaryNodeDequeIterator.field_e);
             rg.a(0, var11, var11.field_w, var11.field_t, 1, -122, 2, 0);
             MouseWheelInput.field_f = var11;
             mi.field_o = MouseWheelInput.field_f.b();
@@ -101,7 +101,7 @@ final class ed {
             var12.d(-wh.field_b.field_q + 18, 241 - wh.field_b.field_v);
             for (var7 = 0; var7 < vg.field_u.length; var7++) {
               of.field_h[var7].f();
-              qj.field_H.a(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, rc.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
+              qj.field_H.a(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, SecondaryNodeDequeIterator.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
               rg.a(0, of.field_h[var7], of.field_h[var7].field_w, of.field_h[var7].field_t, 1, -121, 3, 0);
             }
             vg.field_u = null;

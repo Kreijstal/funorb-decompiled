@@ -79,7 +79,7 @@ final class qc implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new bc(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void clearStaticReferences(int param0) {

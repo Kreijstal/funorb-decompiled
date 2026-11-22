@@ -65,7 +65,7 @@ final class si {
           for (var2_int = 0; fb.field_c > var2_int; var2_int++) {
             BoundedRandomAccessFile.field_a[param0 + var2_int] = var2_int;
           }
-          jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 + param0);
+          jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, SecondaryNodeDequeIterator.field_d, param0 + param0);
           if (fb.field_c <= param0) {
             return;
           }

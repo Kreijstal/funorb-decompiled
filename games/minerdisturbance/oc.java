@@ -180,8 +180,8 @@ final class oc extends hn {
             var4 = 500 - ak.field_c.field_A;
             if (nk.field_w >= var3 &&
               640 > nk.field_w &&
-              var4 <= gb.field_e &&
-              gb.field_e < 480) {
+              var4 <= NodeHashTableIterator.field_e &&
+              NodeHashTableIterator.field_e < 480) {
               fa.field_e = true;
               if (jk.field_ab != 0 &&
                 0 == qd.field_R) {

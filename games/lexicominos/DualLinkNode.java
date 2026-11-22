@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ca extends kd {
-    ca field_l;
-    ca field_m;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode secondaryNext;
+    DualLinkNode secondaryPrevious;
     static boolean field_k;
     long field_j;
     static ng field_n;
@@ -101,7 +101,7 @@ class ca extends kd {
           }
           if (param1 != 15232) {
             var5 = (bd) null;
-            ca.a(23, (int[]) null, (bd) null);
+            DualLinkNode.a(23, (int[]) null, (bd) null);
           }
           param2.setVisible(false);
           param2.dispose();
@@ -144,22 +144,22 @@ class ca extends kd {
         SoftwareRasterizer.f(param2, param1, param0, param3);
     }
 
-    final void b(int param0) {
-        if (this.field_m == null) {
+    final void unlinkSecondary(int param0) {
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_m.field_l = this.field_l;
-        this.field_l.field_m = this.field_m;
-        this.field_l = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
         if (param0 == 12) {
-          this.field_m = null;
+          this.secondaryPrevious = null;
           return;
         }
         field_o = (String) null;
-        this.field_m = null;
+        this.secondaryPrevious = null;
     }
 
-    protected ca() {
+    protected DualLinkNode() {
     }
 
     final static int a(int param0, int param1) {

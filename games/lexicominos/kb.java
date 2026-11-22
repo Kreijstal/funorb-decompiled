@@ -1103,7 +1103,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "logging_in");
                 if (var2 != null) {
-                  ca.field_o = ni.a((byte) -55, var2);
+                  DualLinkNode.field_o = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "reconnect");
                 if (var2 != null) {
@@ -2689,7 +2689,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_button_close");
                 if (null != var2) {
-                  vk.field_d = ni.a((byte) -55, var2);
+                  NodeHashTableIterator.field_d = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_button_members");
                 if (null != var2) {

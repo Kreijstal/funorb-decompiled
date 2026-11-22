@@ -192,7 +192,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void exitFullscreen(boolean param0, PlatformTaskDispatcher param1) {
         try {
-          ca.exitFullscreenFrame(param1, 15232, this.fullscreenFrame);
+          DualLinkNode.exitFullscreenFrame(param1, 15232, this.fullscreenFrame);
           if (param0) {
             this.fullscreenFrame = (java.awt.Frame) null;
           }

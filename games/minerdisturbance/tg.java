@@ -60,7 +60,7 @@ final class tg {
           if (h.field_b == -1 &&
             vd.field_y == -1) {
             h.field_b = nk.field_w;
-            vd.field_y = gb.field_e;
+            vd.field_y = NodeHashTableIterator.field_e;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
@@ -378,6 +378,6 @@ final class tg {
 
     static {
         field_f = 0;
-        bc.a(50, -20451);
+        SecondaryNodeDequeIterator.a(50, -20451);
     }
 }

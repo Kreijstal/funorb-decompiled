@@ -3,21 +3,21 @@
  */
 import java.util.*;
 
-final class wk implements Iterator {
-    private DualLinkNode field_e;
-    private be field_d;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode nextNode;
+    private be deque;
     static int field_b;
     static String[] field_c;
-    private DualLinkNode field_a;
+    private DualLinkNode lastReturned;
 
     public final boolean hasNext() {
-        return this.field_e != this.field_d.field_f;
+        return this.nextNode != this.deque.field_f;
     }
 
     public static void a(boolean param0) {
         if (param0) {
           String var2 = (String) null;
-          wk.a((String) null, true, (String) null, false);
+          SecondaryNodeDequeIterator.a((String) null, true, (String) null, false);
           field_c = null;
           return;
         }
@@ -25,11 +25,11 @@ final class wk implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_a == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_a.unlinkSecondary(1);
-        this.field_a = null;
+        this.lastReturned.unlinkSecondary(1);
+        this.lastReturned = null;
     }
 
     final static void a(String param0, boolean param1, String param2, boolean param3) {
@@ -39,7 +39,7 @@ final class wk implements Iterator {
           ke.a(AccountNameAvailabilityValidator.field_i, param1, -13);
           if (param3) {
             String var5 = (String) null;
-            wk.a((String) null, true, (String) null, true);
+            SecondaryNodeDequeIterator.a((String) null, true, (String) null, true);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -47,23 +47,23 @@ final class wk implements Iterator {
     }
 
     public final Object next() {
-        Object var1 = this.field_e;
-        if (var1 != this.field_d.field_f) {
-          this.field_e = ((DualLinkNode) (var1)).field_j;
+        Object var1 = this.nextNode;
+        if (var1 != this.deque.field_f) {
+          this.nextNode = ((DualLinkNode) (var1)).field_j;
         } else {
           var1 = null;
-          this.field_e = null;
+          this.nextNode = null;
         }
-        this.field_a = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
-    wk(be param0) {
-        this.field_a = null;
+    SecondaryNodeDequeIterator(be param0) {
+        this.lastReturned = null;
         try {
-          this.field_d = param0;
-          this.field_e = this.field_d.field_f.field_j;
-          this.field_a = null;
+          this.deque = param0;
+          this.nextNode = this.deque.field_f.field_j;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

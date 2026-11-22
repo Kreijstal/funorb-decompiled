@@ -259,7 +259,7 @@ final class AccountCreationResultPanel extends uc implements jk {
     }
 
     final static void h(boolean param0) {
-        if (!ca.field_k) {
+        if (!DualLinkNode.field_k) {
           throw new IllegalStateException();
         }
         if (jj.field_a != null) {
@@ -311,7 +311,7 @@ final class AccountCreationResultPanel extends uc implements jk {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(true) << (vg.a(var7, 3) << 8));
             }
-            var4.b((byte) -122);
+            var4.unlink((byte) -122);
             return;
           }
           if (1 == var2) {
@@ -326,7 +326,7 @@ final class AccountCreationResultPanel extends uc implements jk {
               break;
             }
             if (var5_ref_wa != null) {
-              var5_ref_wa.b((byte) -127);
+              var5_ref_wa.unlink((byte) -127);
               return;
             }
             ck.$cfr$intArgs$b$e683eeaaf5b5(-95);

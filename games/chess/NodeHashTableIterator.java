@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class ik implements Iterator {
-    private IntrusiveNode field_c;
-    private IntrusiveNode field_d;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode nextNode;
+    private IntrusiveNode lastReturned;
     static String field_f;
     static short[] field_g;
     static String[] field_a;
-    private int field_h;
+    private int nextBucketIndex;
     static String field_b;
     static tk field_e;
-    private bl field_j;
+    private bl table;
     static ld[] field_i;
 
-    private final void a(int param0) {
-        this.field_h = 1;
+    private final void reset(int param0) {
+        this.nextBucketIndex = 1;
         int var2 = -7 / ((12 - param0) / 54);
-        this.field_c = this.field_j.field_e[0].previous;
-        this.field_d = null;
+        this.nextNode = this.table.field_e[0].previous;
+        this.lastReturned = null;
     }
 
     public final Object next() {
@@ -28,22 +28,22 @@ final class ik implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = Chess.field_G;
-        if (this.field_j.field_e[this.field_h - 1] != this.field_c) {
-          var4 = this.field_c;
-          this.field_c = var4.previous;
-          this.field_d = var4;
+        if (this.table.field_e[this.nextBucketIndex - 1] != this.nextNode) {
+          var4 = this.nextNode;
+          this.nextNode = var4.previous;
+          this.lastReturned = var4;
           return var4;
         }
         do {
-          if (this.field_j.field_f <= this.field_h) {
+          if (this.table.field_f <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          var3 = this.field_j.field_e[fieldTemp$0].previous;
-        } while (var3 == this.field_j.field_e[-1 + this.field_h]);
-        this.field_d = var3;
-        this.field_c = var3.previous;
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var3 = this.table.field_e[fieldTemp$0].previous;
+        } while (var3 == this.table.field_e[-1 + this.nextBucketIndex]);
+        this.lastReturned = var3;
+        this.nextNode = var3.previous;
         return var3;
     }
 
@@ -68,22 +68,22 @@ final class ik implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Chess.field_G;
-        if (this.field_j.field_e[-1 + this.field_h] != this.field_c) {
+        if (this.table.field_e[-1 + this.nextBucketIndex] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.field_j.field_f <= this.field_h) {
+          if (this.table.field_f <= this.nextBucketIndex) {
             return false;
           }
-          fieldTemp$0 = this.field_h;
-          this.field_h = this.field_h + 1;
-          if (this.field_j.field_e[fieldTemp$0].previous == this.field_j.field_e[-1 + this.field_h]) {
-            this.field_c = this.field_j.field_e[-1 + this.field_h];
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (this.table.field_e[fieldTemp$0].previous == this.table.field_e[-1 + this.nextBucketIndex]) {
+            this.nextNode = this.table.field_e[-1 + this.nextBucketIndex];
             continue;
           }
           break;
         }
-        this.field_c = this.field_j.field_e[-1 + this.field_h].previous;
+        this.nextNode = this.table.field_e[-1 + this.nextBucketIndex].previous;
         return true;
     }
 
@@ -102,22 +102,22 @@ final class ik implements Iterator {
         return null;
     }
 
-    ik(bl param0) {
-        this.field_d = null;
+    NodeHashTableIterator(bl param0) {
+        this.lastReturned = null;
         try {
-          this.field_j = param0;
-          this.a(90);
+          this.table = param0;
+          this.reset(90);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void remove() {
-        if (null == this.field_d) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_d.unlink(-2193);
-        this.field_d = null;
+        this.lastReturned.unlink(-2193);
+        this.lastReturned = null;
     }
 
     static {

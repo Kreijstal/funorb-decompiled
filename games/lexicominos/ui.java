@@ -360,7 +360,7 @@ class ui extends cf {
         this.field_u = -2147483648;
         this.field_s = false;
         try {
-          this.field_d = param0;
+          this.key = param0;
           this.a((byte) -74, param1);
           if (param6 != null) {
             this.field_O = param6;

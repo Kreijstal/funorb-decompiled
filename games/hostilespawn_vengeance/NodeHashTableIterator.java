@@ -3,44 +3,44 @@
  */
 import java.util.*;
 
-final class oe implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static bd field_g;
     static bd field_d;
-    private IntrusiveNode field_b;
+    private IntrusiveNode nextNode;
     static bn[] field_a;
-    private IntrusiveNodeHashTable field_c;
-    private int field_e;
-    private IntrusiveNode field_f;
+    private IntrusiveNodeHashTable table;
+    private int nextBucketIndex;
+    private IntrusiveNode lastReturned;
 
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
         var2 = HostileSpawn.field_I ? 1 : 0;
-        if (this.field_c.field_f[-1 + this.field_e] != this.field_b) {
+        if (this.table.field_f[-1 + this.nextBucketIndex] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.field_c.field_b <= this.field_e) {
+          if (this.table.field_b <= this.nextBucketIndex) {
             return false;
           }
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          if (this.field_c.field_f[fieldTemp$0].field_g == this.field_c.field_f[this.field_e - 1]) {
-            this.field_b = this.field_c.field_f[this.field_e - 1];
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (this.table.field_f[fieldTemp$0].field_g == this.table.field_f[this.nextBucketIndex - 1]) {
+            this.nextNode = this.table.field_f[this.nextBucketIndex - 1];
             continue;
           }
           break;
         }
-        this.field_b = this.field_c.field_f[-1 + this.field_e].field_g;
+        this.nextNode = this.table.field_f[-1 + this.nextBucketIndex].field_g;
         return true;
     }
 
     public final void remove() {
-        if (this.field_f == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_f.unlink(-124);
-        this.field_f = null;
+        this.lastReturned.unlink(-124);
+        this.lastReturned = null;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -54,11 +54,11 @@ final class oe implements Iterator {
         field_g = null;
     }
 
-    private final void a(byte param0) {
-        this.field_f = null;
+    private final void reset(byte param0) {
+        this.lastReturned = null;
         if (param0 == 105) {
-          this.field_e = 1;
-          this.field_b = this.field_c.field_f[0].field_g;
+          this.nextBucketIndex = 1;
+          this.nextNode = this.table.field_f[0].field_g;
           return;
         }
     }
@@ -68,22 +68,22 @@ final class oe implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = HostileSpawn.field_I ? 1 : 0;
-        if (this.field_c.field_f[this.field_e - 1] != this.field_b) {
-          var1 = this.field_b;
-          this.field_f = var1;
-          this.field_b = var1.field_g;
+        if (this.table.field_f[this.nextBucketIndex - 1] != this.nextNode) {
+          var1 = this.nextNode;
+          this.lastReturned = var1;
+          this.nextNode = var1.field_g;
           return var1;
         }
         do {
-          if (this.field_e >= this.field_c.field_b) {
+          if (this.nextBucketIndex >= this.table.field_b) {
             return null;
           }
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          var1 = this.field_c.field_f[fieldTemp$0].field_g;
-        } while (this.field_c.field_f[-1 + this.field_e] == var1);
-        this.field_f = var1;
-        this.field_b = var1.field_g;
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var1 = this.table.field_f[fieldTemp$0].field_g;
+        } while (this.table.field_f[-1 + this.nextBucketIndex] == var1);
+        this.lastReturned = var1;
+        this.nextNode = var1.field_g;
         return var1;
     }
 
@@ -117,11 +117,11 @@ final class oe implements Iterator {
         field_d = (bd) null;
     }
 
-    oe(IntrusiveNodeHashTable param0) {
-        this.field_f = null;
+    NodeHashTableIterator(IntrusiveNodeHashTable param0) {
+        this.lastReturned = null;
         try {
-          this.field_c = param0;
-          this.a((byte) 105);
+          this.table = param0;
+          this.reset((byte) 105);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

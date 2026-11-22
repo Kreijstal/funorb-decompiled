@@ -79,7 +79,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new oe(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     public static void clearStaticReferences(int param0) {

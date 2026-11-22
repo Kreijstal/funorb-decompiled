@@ -59,7 +59,7 @@ final class pj implements fc {
         try {
           var6_int = param4 + param1.field_r;
           var7 = param0 + param1.field_i;
-          dh.a(var7, 1232050056, param1.field_k, var6_int, param1.field_m);
+          NodeHashTableIterator.a(var7, 1232050056, param1.field_k, var6_int, param1.field_m);
           var8 = la.field_E[1];
           if (param1 instanceof wd &&
             ((wd) (param1)).field_z) {

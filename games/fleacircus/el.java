@@ -80,7 +80,7 @@ final class el extends wi {
             }
           }
           fi.field_j = param5;
-          rc.field_e = param3;
+          SecondaryNodeDequeIterator.field_e = param3;
           pb.field_i = param1;
           of.field_h = new dd[param4.length];
           for (var7 = 0; param4.length > var7; var7++) {

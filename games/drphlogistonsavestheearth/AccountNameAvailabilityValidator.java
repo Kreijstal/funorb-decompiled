@@ -14,11 +14,11 @@ final class AccountNameAvailabilityValidator extends ei {
 
     final static void e(int param0) {
         int var1 = -27 / ((param0 + 25) / 53);
-        if (oa.field_b >= 70) {
+        if (SecondaryNodeDequeIterator.field_b >= 70) {
           wk.a(80, 80);
           return;
         }
-        wk.a(80, 10 + oa.field_b);
+        wk.a(80, 10 + SecondaryNodeDequeIterator.field_b);
     }
 
     final vh a(int param0, String param1) {

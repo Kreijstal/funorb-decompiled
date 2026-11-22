@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class id implements Iterator {
-    private DualLinkNode field_a;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode lastReturned;
     static String field_k;
     static long[] field_b;
-    private dh field_d;
+    private dh deque;
     static rj field_l;
     static String field_c;
     static String field_g;
@@ -16,26 +16,26 @@ final class id implements Iterator {
     static String field_f;
     static cn[] field_m;
     static ResourceArchive field_i;
-    private DualLinkNode field_h;
+    private DualLinkNode nextNode;
 
     public final Object next() {
-        Object var1 = this.field_h;
-        if (this.field_d.field_d == var1) {
+        Object var1 = this.nextNode;
+        if (this.deque.field_d == var1) {
           var1 = null;
-          this.field_h = null;
+          this.nextNode = null;
         } else {
-          this.field_h = ((DualLinkNode) (var1)).field_n;
+          this.nextNode = ((DualLinkNode) (var1)).field_n;
         }
-        this.field_a = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
     public final void remove() {
-        if (null == this.field_a) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_a.unlinkSecondary((byte) -2);
-        this.field_a = null;
+        this.lastReturned.unlinkSecondary((byte) -2);
+        this.lastReturned = null;
     }
 
     static long a(long param0, long param1) {
@@ -110,7 +110,7 @@ final class id implements Iterator {
           var9Lifetime1 = jg.a(8191, var6Lifetime1) >> 8;
           if (param0 != 439027688) {
             var20 = (String) null;
-            id.a(-29, (String) null);
+            SecondaryNodeDequeIterator.a(-29, (String) null);
           }
           if (-1 != hj.field_S &&
             eh.field_h != -1) {
@@ -170,7 +170,7 @@ final class id implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_h != this.field_d.field_d;
+        return this.nextNode != this.deque.field_d;
     }
 
     final static ab a(int param0, String param1) {
@@ -188,7 +188,7 @@ final class id implements Iterator {
         try {
           var2_int = param1.length();
           if (param0 != -49) {
-            id.a(51);
+            SecondaryNodeDequeIterator.a(51);
           }
           for (var3 = 0; var2_int > var3; var3++) {
             var4 = param1.charAt(var3);
@@ -232,7 +232,7 @@ final class id implements Iterator {
         var14 = DungeonAssault.field_K;
         try {
           if (param2 <= 86) {
-            id.clearStaticReferences((byte) -84);
+            SecondaryNodeDequeIterator.clearStaticReferences((byte) -84);
           }
           for (var12 = -param3; var12 < 0; var12++) {
             for (var13 = -param7; 0 > var13; var13++) {
@@ -272,12 +272,12 @@ final class id implements Iterator {
         }
     }
 
-    id(dh param0) {
-        this.field_a = null;
+    SecondaryNodeDequeIterator(dh param0) {
+        this.lastReturned = null;
         try {
-          this.field_d = param0;
-          this.field_h = this.field_d.field_d.field_n;
-          this.field_a = null;
+          this.deque = param0;
+          this.nextNode = this.deque.field_d.field_n;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

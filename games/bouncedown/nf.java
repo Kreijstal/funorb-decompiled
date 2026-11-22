@@ -24,7 +24,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (db.field_R >= 0 &&
               var2_int >= 0) {
-              di.field_b[db.field_R] = ~var2_int;
+              SecondaryNodeDequeIterator.field_b[db.field_R] = ~var2_int;
               db.field_R = 127 & 1 + db.field_R;
               if (db.field_R == rj.field_g) {
                 db.field_R = -1;
@@ -98,7 +98,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (db.field_R >= 0 &&
             var2_int >= 0) {
-            di.field_b[db.field_R] = var2_int;
+            SecondaryNodeDequeIterator.field_b[db.field_R] = var2_int;
             db.field_R = 127 & db.field_R + 1;
             if (rj.field_g == db.field_R) {
               db.field_R = -1;

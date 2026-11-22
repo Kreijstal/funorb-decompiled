@@ -78,7 +78,7 @@ final class vb implements fc {
           var8 = param6.c((byte) -106);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
-          if (dh.field_a == null &&
+          if (NodeHashTableIterator.field_a == null &&
             !ok.a(false, 122)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
@@ -107,7 +107,7 @@ final class vb implements fc {
               hh.field_p.writeByte(16, (byte) 94);
               hh.field_p.position = hh.field_p.position + 1;
               var9 = hh.field_p.position;
-              f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
+              f.a(NodeHashTableIterator.field_b, false, hh.field_p, lb.field_g, ja.field_a);
               hh.field_p.backpatchByteLength(-var9 + hh.field_p.position, true);
             } else {
               var9 = 0;
@@ -132,7 +132,7 @@ final class vb implements fc {
                 var11_ref_StringLifetime4 = "";
               }
               hh.field_p.writeString(-256, var11_ref_StringLifetime4);
-              f.a(dh.field_b, false, hh.field_p, lb.field_g, ja.field_a);
+              f.a(NodeHashTableIterator.field_b, false, hh.field_p, lb.field_g, ja.field_a);
               hh.field_p.backpatchShortLength(-124, hh.field_p.position - var10);
             }
             jj.a(-1, true);
@@ -199,7 +199,7 @@ final class vb implements fc {
             stackIn_52_0 = wa.field_d;
             return stackIn_52_0;
           }
-          if (dh.field_a == null) {
+          if (NodeHashTableIterator.field_a == null) {
             if (fa.field_a) {
               if (ph.a((byte) 76) > 30000L) {
                 ib.field_o = jh.field_t;

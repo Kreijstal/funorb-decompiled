@@ -115,9 +115,9 @@ final class kc {
     }
 
     final static void a(byte param0) {
-        if (dh.field_a != null) {
-          dh.field_a.a((byte) -70);
-          dh.field_a = null;
+        if (NodeHashTableIterator.field_a != null) {
+          NodeHashTableIterator.field_a.a((byte) -70);
+          NodeHashTableIterator.field_a = null;
         }
         if (param0 == 18) {
           return;

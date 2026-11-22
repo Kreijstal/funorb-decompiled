@@ -168,7 +168,7 @@ final class fc {
         var3 = (bd) (this.field_y.a(true));
         var4 = 77 % ((param0 - 52) / 55);
         while (var3 != null) {
-          ca.a(12, var11, var3);
+          DualLinkNode.a(12, var11, var3);
           var5 = var11[2] * var11[3];
           var6 = ib.field_g[var5] * this.field_l;
           this.field_a = this.field_a - (var6 << 5);
@@ -518,7 +518,7 @@ final class fc {
                 var9_array = new int[4];
                 var15 = (bd) (this.field_y.a(true));
                 while (var15 != null) {
-                  ca.a(12, var14, var15);
+                  DualLinkNode.a(12, var14, var15);
                   stackIn_173_0 = var14[2] + var14[1] - 1;
                   stackIn_173_1 = var6Lifetime2;
                   if (stackIn_173_0 > stackIn_173_1) {
@@ -938,7 +938,7 @@ final class fc {
         var3 = 0;
         var4 = (bd) (this.field_y.a(true));
         while (var4 != null) {
-          ca.a(12, var18, var4);
+          DualLinkNode.a(12, var18, var4);
           var5_ref_StringBuilder = new StringBuilder(var18[3] * var18[2]);
           var6 = var18[0];
           var7 = var18[1];
@@ -991,7 +991,7 @@ final class fc {
         }
         var4Lifetime1 = (bd) (this.field_y.a(true));
         while (var4Lifetime1 != null) {
-          ca.a(param0 - 19064, var18, var4Lifetime1);
+          DualLinkNode.a(param0 - 19064, var18, var4Lifetime1);
           var5 = 1 + var18[0];
           for (var6Lifetime1 = var18[0] - (var18[3] - 1); var6Lifetime1 < var5; var6Lifetime1++) {
             var7Lifetime1 = var18[1] + var18[2];
@@ -1137,7 +1137,7 @@ final class fc {
           var19 = new int[4];
           var11 = (bd) (this.field_y.a(true));
           while (var11 != null) {
-            ca.a(12, var19, var11);
+            DualLinkNode.a(12, var19, var11);
             this.a(var19, 371);
             var11 = (bd) (this.field_y.f(2));
           }
@@ -1491,7 +1491,7 @@ final class fc {
         while (var3 != null) {
           if (var3.field_i >= 371 &&
             var3.field_n >= (266 - (-this.field_M - 120))) {
-            var3.b((byte) -121);
+            var3.unlink((byte) -121);
           } else {
             var3.a(17517, this.field_m, -311);
           }

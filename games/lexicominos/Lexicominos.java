@@ -99,8 +99,8 @@ public final class Lexicominos extends nk {
                     hc.field_gb.a((byte) 120)) {
                     if (ga.field_a.c(-114) &&
                       ga.field_a.a((byte) -118)) {
-                      if (ec.field_b.c(113) &&
-                        ec.field_b.a((byte) 70)) {
+                      if (SecondaryNodeDequeIterator.field_b.c(113) &&
+                        SecondaryNodeDequeIterator.field_b.a((byte) 70)) {
                         if (dl.field_d.c(87) &&
                           dl.field_d.a((byte) -118)) {
                           if (ci.field_e.c(param0 ^ -5) &&
@@ -144,7 +144,7 @@ public final class Lexicominos extends nk {
                         al.a(16, rh.a(dl.field_d, (byte) 98, "", pe.field_e, qf.field_s), 9.0f);
                         return false;
                       }
-                      al.a(16, rh.a(ec.field_b, (byte) 42, "", ni.field_d, fj.field_y), 6.0f);
+                      al.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, fj.field_y), 6.0f);
                       return false;
                     }
                     al.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, fj.field_y), 5.0f);
@@ -162,19 +162,19 @@ public final class Lexicominos extends nk {
             al.a(16, rh.a(th.field_p, (byte) 55, "basic", pe.field_e, qf.field_s), 0.0f);
             return false;
           }
-          if (ec.field_b != null) {
+          if (SecondaryNodeDequeIterator.field_b != null) {
             al.a(16, pl.field_b, 91.0f);
             this.d(param0 + 18466);
             hc.field_gb = null;
             gl.field_a = null;
-            aa.field_i[0] = ih.a(ec.field_b, "", "game");
-            aa.field_i[1] = ih.a(ec.field_b, "", "game2");
-            aa.field_i[2] = ih.a(ec.field_b, "", "game3");
-            aa.field_i[3] = ih.a(ec.field_b, "", "game4");
-            aa.field_i[4] = ih.a(ec.field_b, "", "game5");
-            aa.field_i[5] = ih.a(ec.field_b, "", "panic");
-            aa.field_i[6] = ih.a(ec.field_b, "", "titlescreen");
-            aa.field_i[7] = ih.a(ec.field_b, "", "gameover");
+            aa.field_i[0] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game");
+            aa.field_i[1] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game2");
+            aa.field_i[2] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game3");
+            aa.field_i[3] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game4");
+            aa.field_i[4] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game5");
+            aa.field_i[5] = ih.a(SecondaryNodeDequeIterator.field_b, "", "panic");
+            aa.field_i[6] = ih.a(SecondaryNodeDequeIterator.field_b, "", "titlescreen");
+            aa.field_i[7] = ih.a(SecondaryNodeDequeIterator.field_b, "", "gameover");
             var3_int = 0;
             boolean decompiledNaturalLoopExit4 = false;
             while (!(decompiledNaturalLoopExit4 = (!(aa.field_i.length > var3_int)))) {
@@ -191,7 +191,7 @@ public final class Lexicominos extends nk {
               uh.field_n.field_A.c(-94);
               ga.field_a = null;
               vb.field_r = null;
-              ec.field_b = null;
+              SecondaryNodeDequeIterator.field_b = null;
               dl.b(5);
             }
             return false;
@@ -962,8 +962,8 @@ public final class Lexicominos extends nk {
           be.b((byte) -116);
           ge.clearStaticReferences((byte) -59);
           ed.c(-43);
-          ca.a(param0 - 163);
-          kd.b(true);
+          DualLinkNode.a(param0 - 163);
+          IntrusiveNode.b(true);
           vg.b(0);
           fd.a((byte) -61);
           hl.c(true);
@@ -1098,8 +1098,8 @@ public final class Lexicominos extends nk {
           gj.d(-8601);
           ch.d(-123);
           sb.b(16478);
-          vk.a(param0 ^ -30299);
-          ec.clearStaticReferences(true);
+          NodeHashTableIterator.a(param0 ^ -30299);
+          SecondaryNodeDequeIterator.clearStaticReferences(true);
           sj.a((byte) 5);
           nc.a((byte) 88);
           d.clearStaticReferences(false);
@@ -1192,7 +1192,7 @@ public final class Lexicominos extends nk {
           this.a(false, param0, true, (byte) 18, false);
           ea.field_b = 0;
           g.field_n = 10640990;
-          ec.field_c = 3941155;
+          SecondaryNodeDequeIterator.field_c = 3941155;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
         }
@@ -1276,7 +1276,7 @@ public final class Lexicominos extends nk {
           gl.field_a = oj.a(false, 3);
           hh.field_L = oj.a(false, 5);
           ga.field_a = oj.a(false, 6);
-          ec.field_b = oj.a(false, 7);
+          SecondaryNodeDequeIterator.field_b = oj.a(false, 7);
           if (param0 <= 77) {
             discarded$1 = this.p(71);
           }
@@ -1303,7 +1303,7 @@ public final class Lexicominos extends nk {
           if (ff.field_b != null) {
             af.a(-65);
           }
-          ca.c(false);
+          DualLinkNode.c(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

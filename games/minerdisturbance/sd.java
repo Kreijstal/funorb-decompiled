@@ -66,7 +66,7 @@ final class sd implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new gb(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     private sd() throws Throwable {

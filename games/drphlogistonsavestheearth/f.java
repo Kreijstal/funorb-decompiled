@@ -143,8 +143,8 @@ final class f extends IntrusiveNode {
                   cf.field_b[var9] = dh.field_N.readByte(-82);
                 }
               }
-              oa.field_d = dh.field_N.readString((byte) -64);
-              var12 = (CharSequence) ((Object) oa.field_d);
+              SecondaryNodeDequeIterator.field_d = dh.field_N.readString((byte) -64);
+              var12 = (CharSequence) ((Object) SecondaryNodeDequeIterator.field_d);
               tf.field_pb = rh.a(117, var12);
               rh.field_a = dh.field_N.readUnsignedByte(31760);
               tl.field_O = ik.field_d;

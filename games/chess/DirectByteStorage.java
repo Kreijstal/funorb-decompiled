@@ -45,7 +45,7 @@ final class DirectByteStorage extends ByteStorage {
           oj.field_c = new ci(0L, qn.field_P);
           oj.field_c.field_fb = param1;
           le.field_e = new ci(0L, bo.field_e, ei.field_s);
-          kf.field_t = new ci(0L, l.field_j, hm.field_b);
+          kf.field_t = new ci(0L, DualLinkNode.field_j, hm.field_b);
           dk.field_h = new ci(0L, sj.field_k);
           hb.field_a.a((byte) 123, oj.field_c);
           hb.field_a.a((byte) 124, le.field_e);

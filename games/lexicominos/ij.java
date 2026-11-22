@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends kd {
+final class ij extends IntrusiveNode {
     static int field_p;
     static db[] field_n;
     ng field_s;
@@ -152,7 +152,7 @@ final class ij extends kd {
           this.field_k.a(param1.field_k, param0 - 23345);
           this.field_m = param1;
           this.field_k = null;
-          this.b((byte) -128);
+          this.unlink((byte) -128);
           stackIn_14_0 = (ij) (param1);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

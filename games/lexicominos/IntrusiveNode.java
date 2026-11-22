@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kd {
+class IntrusiveNode {
     static java.security.SecureRandom field_e;
     static int[] field_b;
-    kd field_f;
-    long field_d;
+    IntrusiveNode next;
+    long key;
     static int field_a;
     static int[] field_g;
-    kd field_c;
+    IntrusiveNode previous;
 
-    final boolean a(boolean param0) {
-        if (null == this.field_c) {
+    final boolean isLinked(boolean param0) {
+        if (null == this.previous) {
           return false;
         }
         if (param0) {
@@ -20,15 +20,15 @@ class kd {
         return true;
     }
 
-    final void b(byte param0) {
-        if (this.field_c == null) {
+    final void unlink(byte param0) {
+        if (this.previous == null) {
           return;
         }
-        this.field_c.field_f = this.field_f;
-        this.field_f.field_c = this.field_c;
-        this.field_c = null;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
+        this.previous = null;
         if (param0 < -115) {
-          this.field_f = null;
+          this.next = null;
           return;
         }
     }
@@ -40,7 +40,7 @@ class kd {
           field_e = null;
           return;
         }
-        kd.b(false);
+        IntrusiveNode.b(false);
         field_g = null;
         field_b = null;
         field_e = null;

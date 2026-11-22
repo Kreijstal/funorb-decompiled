@@ -91,7 +91,7 @@ final class em {
             field_m = (String[]) null;
           }
           while (qf.field_c > var1_int) {
-            ik.field_i[var1_int] = null;
+            NodeHashTableIterator.field_i[var1_int] = null;
             var1_int++;
           }
           qf.field_c = 0;

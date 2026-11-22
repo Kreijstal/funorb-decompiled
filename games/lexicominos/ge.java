@@ -168,10 +168,10 @@ final class ge implements Runnable {
               var14++;
               var9Lifetime1++;
             }
-            var3.b((byte) -127);
+            var3.unlink((byte) -127);
             return;
           }
-          var3.b((byte) -127);
+          var3.unlink((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

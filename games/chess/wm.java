@@ -112,7 +112,7 @@ abstract class wm {
           gf.field_a[0] = pd.field_Jb;
           bh.field_G = new ci(0L, (ci) null);
           hd.field_c = new ci(0L, bo.field_e, ei.field_s);
-          uk.field_c = new ci(0L, l.field_j, jc.field_e);
+          uk.field_c = new ci(0L, DualLinkNode.field_j, jc.field_e);
           ib.field_c = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
           bh.field_G.a((byte) 123, hd.field_c);
           if (bo.field_c) {
@@ -134,7 +134,7 @@ abstract class wm {
           ca.field_g = new ci(0L, e.field_M, qj.field_h);
           kh.field_l = new ci(0L, e.field_M, uj.field_l);
           lg.field_c = new ci(0L, e.field_M, vh.field_d);
-          vk.field_i = new ci(0L, l.field_j, ba.field_R);
+          vk.field_i = new ci(0L, DualLinkNode.field_j, ba.field_R);
           ci.field_zb = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
           si.field_l = new ci(0L, nj.field_x, ae.field_c.toUpperCase());
           si.field_l.field_tb = bo.field_c;
@@ -184,7 +184,7 @@ abstract class wm {
           ec.field_j = new ci(0L, qn.field_P);
           ec.field_j.field_fb = 1;
           ln.field_vc = new ci(0L, bo.field_e, ei.field_s);
-          nb.field_Ib = new ci(0L, l.field_j, jc.field_e);
+          nb.field_Ib = new ci(0L, DualLinkNode.field_j, jc.field_e);
           se.field_S = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
           de.field_d.a((byte) 127, ec.field_j);
           de.field_d.a((byte) 124, ln.field_vc);
@@ -545,7 +545,7 @@ abstract class wm {
         if (param0 <= 84) {
           return (cc) null;
         }
-        var8.field_l = var6;
+        var8.secondaryKey = var6;
         var8.field_u = param3 ? true : false;
         var8.field_x = param2;
         if (!param3) {

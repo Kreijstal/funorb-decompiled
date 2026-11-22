@@ -326,7 +326,7 @@ final class sj {
           } else {
             stackIn_6_0 = -1;
             stackIn_7_1 = !(13 <= ok.field_c);
-            mh.field_a = il.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
+            mh.field_a = NodeHashTableIterator.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

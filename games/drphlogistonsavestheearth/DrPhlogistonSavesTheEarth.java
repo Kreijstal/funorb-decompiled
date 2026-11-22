@@ -405,7 +405,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           c.field_a[3] = eh.a("", (byte) -92, kf.field_d, "powerupx5");
           c.field_a[4] = eh.a("", (byte) -55, kf.field_d, "powerupx6");
           ri.field_b = eh.a("", (byte) -71, kf.field_d, "powerupshield");
-          re.field_d = eh.a("", (byte) -110, kf.field_d, "powerupweapon");
+          NodeHashTableIterator.field_d = eh.a("", (byte) -110, kf.field_d, "powerupweapon");
           si.f(10);
           di.field_b = ij.a("awardarray_big", (byte) 63, kf.field_d, "");
           var2_int = 0;
@@ -686,8 +686,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           rd.g(-125);
           ka.c(26713);
           pa.a(-1);
-          re.clearStaticReferences(967);
-          oa.a(71);
+          NodeHashTableIterator.clearStaticReferences(967);
+          SecondaryNodeDequeIterator.a(71);
           vb.d(4);
           bg.a((byte) 102);
           sj.a(true);
@@ -1700,7 +1700,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           this.a(8, 4, false, 7320, 0, 11, 10, 9);
           var2 = new ug();
           var2.d(9, 128, param0 ^ 85);
-          var2.a(oa.field_b, (byte) -13);
+          var2.a(SecondaryNodeDequeIterator.field_b, (byte) -13);
           dc.a(sb.field_d, 22050, true, var2, (byte) -92, (java.awt.Component) ((Object) n.field_g));
           a.field_i = 16711680;
           pj.field_E = 11184895;
@@ -2331,11 +2331,11 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
           sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
           rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);
-          re.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
-          re.field_i[0].c();
-          re.field_h = new he[1];
-          re.field_h[0] = re.field_i[0].e();
-          re.field_h[0].g();
+          NodeHashTableIterator.field_i = ij.a("scenery_tile_earth_11_rubble", (byte) 84, kf.field_d, "");
+          NodeHashTableIterator.field_i[0].c();
+          NodeHashTableIterator.field_h = new he[1];
+          NodeHashTableIterator.field_h[0] = NodeHashTableIterator.field_i[0].e();
+          NodeHashTableIterator.field_h[0].g();
           dm.field_y = this.a(eh.a("", (byte) -69, kf.field_d, "scenery_tile_earth_1_fire_mask"), (byte) 105);
           wh.field_u = this.a(eh.a("", (byte) -31, kf.field_d, "scenery_tile_earth_2_fire_mask"), (byte) -120);
           ng.field_b = this.a(eh.a("", (byte) -68, kf.field_d, "scenery_tile_earth_3_fire_mask"), (byte) 17);

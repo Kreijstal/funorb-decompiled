@@ -62,7 +62,7 @@ final class vh {
           Throwable decompiledCaughtException = null;
           var2 = 94 / ((16 - param1) / 37);
           if (ArchiveIndex.field_a != null && (param0 < 0 ||
-            tb.field_f == ik.field_e)) {
+            tb.field_f == NodeHashTableIterator.field_e)) {
             if (qn.field_U.position == 0 &&
               (10000L + ta.field_t) < ud.a(2)) {
               qn.field_U.f(param0, -105);

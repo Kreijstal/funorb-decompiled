@@ -82,7 +82,7 @@ final class AccountCreationResultPanel extends ma implements ke {
         try {
           this.field_Eb = true;
           if (param1.success) {
-            var4 = oa.field_c;
+            var4 = SecondaryNodeDequeIterator.field_c;
           } else {
             if (null == param1.suggestions) {
               var4 = param1.message;

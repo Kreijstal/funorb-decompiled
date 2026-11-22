@@ -207,18 +207,18 @@ final class am extends PcmStream {
     }
 
     final static String h(int param0) {
-        if (null == oa.field_d) {
+        if (null == SecondaryNodeDequeIterator.field_d) {
           return "";
         }
         if (param0 != 0) {
           return (String) null;
         }
-        return oa.field_d;
+        return SecondaryNodeDequeIterator.field_d;
     }
 
     final static void g(int param0) {
-        oa.field_d = dh.field_N.readString((byte) -53);
-        CharSequence var2 = (CharSequence) ((Object) oa.field_d);
+        SecondaryNodeDequeIterator.field_d = dh.field_N.readString((byte) -53);
+        CharSequence var2 = (CharSequence) ((Object) SecondaryNodeDequeIterator.field_d);
         tf.field_pb = rh.a(119, var2);
         if (param0 != 11) {
           am.g(-127);
@@ -452,7 +452,7 @@ final class am extends PcmStream {
         }
         if (af.field_b == 10 ||
           !hc.a(true)) {
-          re.a(true);
+          NodeHashTableIterator.a(true);
           af.field_b = 11;
         }
         kl.field_S = true;

@@ -4,29 +4,29 @@
 import java.util.*;
 
 final class ji implements Iterable {
-    private kd field_c;
+    private IntrusiveNode field_c;
     static int[] field_e;
-    kd[] field_f;
+    IntrusiveNode[] field_f;
     int field_d;
     static String field_b;
     static int[] field_a;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new vk(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(kd param0, int param1, long param2) {
-        kd var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param0.field_c) {
-            param0.b((byte) -119);
+          if (null != param0.previous) {
+            param0.unlink((byte) -119);
           }
           var5 = this.field_f[(int)((long)(this.field_d - param1) & param2)];
-          param0.field_f = var5;
-          param0.field_c = var5.field_c;
-          param0.field_c.field_f = param0;
-          param0.field_d = param2;
-          param0.field_f.field_c = param0;
+          param0.next = var5;
+          param0.previous = var5.previous;
+          param0.previous.next = param0;
+          param0.key = param2;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ji.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -61,47 +61,47 @@ final class ji implements Iterable {
         return stackIn_7_0;
     }
 
-    final kd a(byte param0, long param1) {
-        kd var4;
-        kd var5;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        kd var4Lifetime1;
-        kd var5Lifetime1;
+        IntrusiveNode var4Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = Lexicominos.field_L ? 1 : 0;
         if (param0 == 42) {
           var4 = this.field_f[(int)(param1 & (long)(-1 + this.field_d))];
-          this.field_c = var4.field_f;
+          this.field_c = var4.next;
           while (true) {
             if (var4 == this.field_c) {
               this.field_c = null;
               return null;
             }
-            if (~param1 != ~this.field_c.field_d) {
-              this.field_c = this.field_c.field_f;
+            if (~param1 != ~this.field_c.key) {
+              this.field_c = this.field_c.next;
               continue;
             }
             break;
           }
           var5 = this.field_c;
-          this.field_c = this.field_c.field_f;
+          this.field_c = this.field_c.next;
           return var5;
         }
         this.iterator();
         var4Lifetime1 = this.field_f[(int)(param1 & (long)(-1 + this.field_d))];
-        this.field_c = var4Lifetime1.field_f;
+        this.field_c = var4Lifetime1.next;
         while (true) {
           if (var4Lifetime1 == this.field_c) {
             this.field_c = null;
             return null;
           }
-          if (~param1 != ~this.field_c.field_d) {
-            this.field_c = this.field_c.field_f;
+          if (~param1 != ~this.field_c.key) {
+            this.field_c = this.field_c.next;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_c;
-        this.field_c = this.field_c.field_f;
+        this.field_c = this.field_c.next;
         return var5Lifetime1;
     }
 

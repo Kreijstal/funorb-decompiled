@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ab extends l {
+abstract class ab extends DualLinkNode {
     boolean field_u;
     static String field_t;
     static int[] field_r;
@@ -93,7 +93,7 @@ abstract class ab extends l {
             return stackIn_3_0;
           }
           if (ld.field_g != 2) {
-            stackIn_6_0 = ik.field_b;
+            stackIn_6_0 = NodeHashTableIterator.field_b;
             return stackIn_6_0;
           }
           var8 = mn.a(-1, param2);
@@ -114,7 +114,7 @@ abstract class ab extends l {
             break;
           }
           var8.unlink(-2193);
-          var8.d(-1);
+          var8.unlinkSecondary(-1);
           wg.field_w = wg.field_w - 1;
           var9 = qn.field_U;
           var9.f(param0, -104);
@@ -140,11 +140,11 @@ abstract class ab extends l {
     }
 
     final static void d(byte param0) {
-        l var1 = null;
+        DualLinkNode var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
-        l var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         var2 = Chess.field_G;
         try {
           ByteStorage.field_a = null;
@@ -154,12 +154,12 @@ abstract class ab extends l {
           cl.field_e.e(-31023);
           var1 = bf.field_M.a(false);
           while (var1 != null) {
-            var1.d(-1);
+            var1.unlinkSecondary(-1);
             var1 = bf.field_M.a(0);
           }
           var1Lifetime1 = r.field_Ib.a(false);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.d(-1);
+            var1Lifetime1.unlinkSecondary(-1);
             var1Lifetime1 = r.field_Ib.a(0);
           }
           ld.field_g = 0;

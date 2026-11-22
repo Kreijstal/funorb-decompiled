@@ -273,8 +273,8 @@ public final class Bounce extends GameClient {
           t.clearStaticReferences(-32504);
           ra.b((byte) 120);
           ja.a(false);
-          dh.clearStaticReferences(8832);
-          di.clearStaticReferences(true);
+          NodeHashTableIterator.clearStaticReferences(8832);
+          SecondaryNodeDequeIterator.clearStaticReferences(true);
           sa.a(true);
           he.b((byte) -53);
           w.b(62771140);
@@ -1233,7 +1233,7 @@ public final class Bounce extends GameClient {
               return;
             }
             ed.a((byte) -127);
-            hg.a(di.field_a, param1 - 3248, 85.0f);
+            hg.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
             this.e(4);
             var3 = new u(22050, e.field_r);
             il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().a(var3);
@@ -1244,7 +1244,7 @@ public final class Bounce extends GameClient {
             il.field_a[7] = ei.a(pa.field_c, "", "slime_land").b().a(var3);
             il.field_a[8] = ei.a(pa.field_c, "", "slime_reduces").b().a(var3);
             il.field_a[9] = ei.a(pa.field_c, "", "squish").b().a(var3);
-            hg.a(di.field_a, -21, 90.0f);
+            hg.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
             this.e(4);
             il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().a(var3);
             il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().a(var3);

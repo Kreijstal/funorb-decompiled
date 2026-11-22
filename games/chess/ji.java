@@ -164,7 +164,7 @@ final class ji extends kn {
                 eh.field_K = nk.a(false, param2, param3, true);
               } else {
                 var11 = (String) null;
-                eh.field_K = l.a(false, param2, (byte) 118, (String) null, sj.field_i);
+                eh.field_K = DualLinkNode.a(false, param2, (byte) 118, (String) null, sj.field_i);
               }
               qn.field_U.position = 0;
               qn.field_U.writeByte(14, (byte) 61);
@@ -256,7 +256,7 @@ final class ji extends kn {
               var12 = (CharSequence) ((Object) ci.field_J);
               cc.field_A = ad.a(var12, -2);
               gm.field_d = tk.field_h.readUnsignedByte(-114);
-              tb.field_f = ik.field_e;
+              tb.field_f = NodeHashTableIterator.field_e;
               if (eh.field_K.b((byte) 31) == ec.field_i) {
                 ph.field_g.a(25799, bh.i(81));
               } else {

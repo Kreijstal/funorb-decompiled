@@ -161,7 +161,7 @@ final class kd {
         this.field_n = tg.field_g;
         this.field_s = 0;
         this.field_f = 0;
-        this.field_c.a(0, -1, this.a(nk.field_w, 11852, gb.field_e), param0);
+        this.field_c.a(0, -1, this.a(nk.field_w, 11852, NodeHashTableIterator.field_e), param0);
         if (!param1) {
           kd.a(-19, (byte) -79);
         }
@@ -300,8 +300,8 @@ final class kd {
         if (null != ah.field_d) {
           ah.field_d.f(9, 257);
           ah.field_d.h(558, 257);
-          if (257 < gb.field_e &&
-            gb.field_e < 290) {
+          if (257 < NodeHashTableIterator.field_e &&
+            NodeHashTableIterator.field_e < 290) {
             var2Lifetime2 = 40 + (40 * ml.a(this.field_t << 4, (byte) -114) >> 16);
             if (0 < var2Lifetime2) {
               if (nk.field_w > 9 &&
@@ -586,7 +586,7 @@ final class kd {
         if (!param0) {
           return 0;
         }
-        this.field_c.a(this.a(nk.field_w, 11852, gb.field_e), this.a(wi.field_w, 11852, GameAppletShell.field_e), param1 ^ -2);
+        this.field_c.a(this.a(nk.field_w, 11852, NodeHashTableIterator.field_e), this.a(wi.field_w, 11852, GameAppletShell.field_e), param1 ^ -2);
         var4Lifetime1 = 0;
         if (this.field_c.b(true)) {
           if (this.field_c.field_e == 0) {

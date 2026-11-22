@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class na {
-    private kd[] field_f;
-    private kd field_b;
+    private IntrusiveNode[] field_f;
+    private IntrusiveNode field_b;
     static db[] field_a;
     private int field_c;
     private int field_d;
-    private kd field_e;
+    private IntrusiveNode field_e;
 
     final static void a(int param0, boolean param1) {
         PcmSampleStream var2;
@@ -19,7 +19,7 @@ final class na {
         }
         stackIn_4_0 = var2;
         stackIn_5_1 = (param1) ? false : true;
-        if (((PcmSampleStream) (Object) stackIn_4_0).a(stackIn_5_1)) {
+        if (((PcmSampleStream) (Object) stackIn_4_0).isLinked(stackIn_5_1)) {
           return;
         }
         var2.e(-1);
@@ -32,57 +32,57 @@ final class na {
         wj.field_j.a(var2);
     }
 
-    final kd a(long param0, byte param1) {
-        kd var4;
-        kd var5;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        kd var4Lifetime1;
-        kd var5Lifetime1;
+        IntrusiveNode var4Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = Lexicominos.field_L ? 1 : 0;
         if (param1 > 82) {
           var4 = this.field_f[(int)((long)(this.field_d - 1) & param0)];
-          this.field_e = var4.field_f;
+          this.field_e = var4.next;
           while (true) {
             if (this.field_e == var4) {
               this.field_e = null;
               return null;
             }
-            if (this.field_e.field_d != param0) {
-              this.field_e = this.field_e.field_f;
+            if (this.field_e.key != param0) {
+              this.field_e = this.field_e.next;
               continue;
             }
             break;
           }
           var5 = this.field_e;
-          this.field_e = this.field_e.field_f;
+          this.field_e = this.field_e.next;
           return var5;
         }
         field_a = (db[]) null;
         var4Lifetime1 = this.field_f[(int)((long)(this.field_d - 1) & param0)];
-        this.field_e = var4Lifetime1.field_f;
+        this.field_e = var4Lifetime1.next;
         while (true) {
           if (this.field_e == var4Lifetime1) {
             this.field_e = null;
             return null;
           }
-          if (this.field_e.field_d != param0) {
-            this.field_e = this.field_e.field_f;
+          if (this.field_e.key != param0) {
+            this.field_e = this.field_e.next;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_e;
-        this.field_e = this.field_e.field_f;
+        this.field_e = this.field_e.next;
         return var5Lifetime1;
     }
 
-    final kd a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        kd var4;
-        kd var8;
-        kd var11;
+        IntrusiveNode var4;
+        IntrusiveNode var8;
+        IntrusiveNode var11;
         var3 = Lexicominos.field_L ? 1 : 0;
         if (this.field_c <= 0) {
           do {
@@ -95,14 +95,14 @@ final class na {
             }
             fieldTemp$1 = this.field_c;
             this.field_c = this.field_c + 1;
-            var4 = this.field_f[fieldTemp$1].field_f;
+            var4 = this.field_f[fieldTemp$1].next;
           } while (this.field_f[this.field_c - 1] == var4);
-          this.field_b = var4.field_f;
+          this.field_b = var4.next;
           return var4;
         }
         if (this.field_f[this.field_c - 1] != this.field_b) {
           var11 = this.field_b;
-          this.field_b = var11.field_f;
+          this.field_b = var11.next;
           return var11;
         }
         do {
@@ -115,9 +115,9 @@ final class na {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var8 = this.field_f[fieldTemp$0].field_f;
+          var8 = this.field_f[fieldTemp$0].next;
         } while (this.field_f[this.field_c - 1] == var8);
-        this.field_b = var8.field_f;
+        this.field_b = var8.next;
         return var8;
     }
 
@@ -167,30 +167,30 @@ final class na {
         }
     }
 
-    final kd c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         this.field_c = 0;
         if (param0 >= -85) {
-          this.field_e = (kd) null;
+          this.field_e = (IntrusiveNode) null;
           return this.a((byte) -91);
         }
         return this.a((byte) -91);
     }
 
-    final void a(kd param0, byte param1, long param2) {
-        kd var5 = null;
+    final void a(IntrusiveNode param0, byte param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param0.field_c) {
-            param0.b((byte) -122);
+          if (null != param0.previous) {
+            param0.unlink((byte) -122);
           }
           var5 = this.field_f[(int)((long)(-1 + this.field_d) & param2)];
           if (param1 >= -46) {
             field_a = (db[]) null;
           }
-          param0.field_c = var5.field_c;
-          param0.field_f = var5;
-          param0.field_c.field_f = param0;
-          param0.field_f.field_c = param0;
-          param0.field_d = param2;
+          param0.previous = var5.previous;
+          param0.next = var5;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "na.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -238,17 +238,17 @@ final class na {
 
     na(int param0) {
         int var2 = 0;
-        kd dupTemp$1 = null;
-        kd var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_c = 0;
         this.field_d = param0;
-        this.field_f = new kd[param0];
+        this.field_f = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new kd();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
-          var3.field_f = var3;
-          var3.field_c = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

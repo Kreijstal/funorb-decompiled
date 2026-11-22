@@ -1778,7 +1778,7 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("create_username_available", 24);
                 if (null != var2) {
-                  kj.field_a = nm.a(127, var2);
+                  SecondaryNodeDequeIterator.field_a = nm.a(127, var2);
                 }
                 var2 = vj.a("create_alert_namelength", 24);
                 if (null != var2) {

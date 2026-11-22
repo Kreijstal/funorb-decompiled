@@ -2165,7 +2165,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tip_whirling_blades", false);
                 if (null != var2) {
-                  ho.field_e = dj.a(var2, false);
+                  NodeHashTableIterator.field_e = dj.a(var2, false);
                 }
                 var2 = gm.a("tip_rot_worms", false);
                 if (null != var2) {
@@ -3239,7 +3239,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_inst_monster", false);
                 if (null != var2) {
-                  id.field_k = dj.a(var2, false);
+                  SecondaryNodeDequeIterator.field_k = dj.a(var2, false);
                 }
                 var2 = gm.a("text_inst_guardian", false);
                 if (null != var2) {
@@ -3327,7 +3327,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_cost_x", false);
                 if (null != var2) {
-                  ho.field_c = dj.a(var2, false);
+                  NodeHashTableIterator.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("text_plan", false);
                 if (var2 != null) {
@@ -3589,7 +3589,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_hint_select_raider", param1);
                 if (var2 != null) {
-                  ho.field_b = dj.a(var2, false);
+                  NodeHashTableIterator.field_b = dj.a(var2, false);
                 }
                 var2 = gm.a("text_party_defeated", false);
                 if (null != var2) {

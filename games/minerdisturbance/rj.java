@@ -22,11 +22,11 @@ final class rj implements uj {
         if (param0) {
           rj.a(50);
           tb.field_a = 2;
-          bc.field_a = 1;
+          SecondaryNodeDequeIterator.field_a = 1;
           return;
         }
         tb.field_a = 2;
-        bc.field_a = 1;
+        SecondaryNodeDequeIterator.field_a = 1;
     }
 
     public final String a(byte param0) {

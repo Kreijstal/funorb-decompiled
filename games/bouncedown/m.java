@@ -67,7 +67,7 @@ final class m implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new dh(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     private m() throws Throwable {

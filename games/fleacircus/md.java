@@ -70,7 +70,7 @@ final class md extends bb {
         int var1 = 28 / ((79 - param0) / 39);
         uk.field_a = null;
         oe.field_c = null;
-        rc.field_g = null;
+        SecondaryNodeDequeIterator.field_g = null;
     }
 
     public static void a(byte param0) {

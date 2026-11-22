@@ -73,7 +73,7 @@ final class qg extends kl implements ud {
             }
           } else {
             if (var2 != 0 &&
-              re.field_g != 2) {
+              NodeHashTableIterator.field_g != 2) {
               ch.c(3);
             }
           }
@@ -81,7 +81,7 @@ final class qg extends kl implements ud {
             field_U = (he[]) null;
           }
           if (var3 == 0 &&
-            2 == re.field_g) {
+            2 == NodeHashTableIterator.field_g) {
             var4 = -aa.field_d + la.a(false);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (0 >= var6) {

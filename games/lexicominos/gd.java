@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends kd {
+final class gd extends IntrusiveNode {
     static td field_i;
     static int field_o;
     static String field_j;
@@ -18,7 +18,7 @@ final class gd extends kd {
           fieldTemp$0 = this.field_h - 1;
           this.field_h = this.field_h - 1;
           if (tb.field_a.field_E > fieldTemp$0) {
-            this.b((byte) -123);
+            this.unlink((byte) -123);
             return;
           }
           return;
@@ -28,7 +28,7 @@ final class gd extends kd {
         if (tb.field_a.field_E <= fieldTemp$1) {
           return;
         }
-        this.b((byte) -123);
+        this.unlink((byte) -123);
     }
 
     final void a(byte param0) {

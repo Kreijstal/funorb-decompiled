@@ -89,7 +89,7 @@ class id extends ik {
             MouseWheelInput.field_g[-2 + var4] = l.field_E;
             ni.field_a[-2 + var4] = 0;
             ik.field_g[0] = 4;
-            MouseWheelInput.field_g[var4 - 1] = vk.field_d;
+            MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 1;
             ik.field_g[1] = 5;
           } else if (sh.field_a == 1) {
@@ -105,7 +105,7 @@ class id extends ik {
               MouseWheelInput.field_g[var5] = ug.field_r[var5];
             }
             MouseWheelInput.field_g[-2 + var4] = "";
-            MouseWheelInput.field_g[-1 + var4] = vk.field_d;
+            MouseWheelInput.field_g[-1 + var4] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 0;
             ik.field_g[0] = 5;
           } else if (sh.field_a != 2) {
@@ -126,7 +126,7 @@ class id extends ik {
                 MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
               MouseWheelInput.field_g[-2 + var4] = "";
-              MouseWheelInput.field_g[-1 + var4] = vk.field_d;
+              MouseWheelInput.field_g[-1 + var4] = NodeHashTableIterator.field_d;
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
             } else if (sh.field_a == 4) {
@@ -142,7 +142,7 @@ class id extends ik {
                 MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
               MouseWheelInput.field_g[-2 + var4] = "";
-              MouseWheelInput.field_g[var4 - 1] = vk.field_d;
+              MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
             } else {
@@ -164,7 +164,7 @@ class id extends ik {
               MouseWheelInput.field_g[var4 - 2] = hl.field_p;
               ni.field_a[-2 + var4] = 0;
               ik.field_g[0] = 3;
-              MouseWheelInput.field_g[var4 - 1] = vk.field_d;
+              MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
               ni.field_a[-1 + var4] = 1;
               ik.field_g[1] = 5;
             }

@@ -1841,7 +1841,7 @@ final class sg {
           if (param0) {
             sg.b(78);
           }
-          stackIn_3_0 = ca.field_k;
+          stackIn_3_0 = DualLinkNode.field_k;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

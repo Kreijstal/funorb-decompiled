@@ -323,7 +323,7 @@ final class ob extends wm {
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(1, (byte) -52);
-              this.field_l.writeLong40(var2.field_l, 1392038664);
+              this.field_l.writeLong40(var2.secondaryKey, 1392038664);
               this.field_s.a(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               this.field_e.a(0, var2);
               var2 = (cc) (this.field_o.b((byte) -73));
@@ -332,7 +332,7 @@ final class ob extends wm {
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(0, (byte) -110);
-              this.field_l.writeLong40(var2Lifetime1.field_l, 1392038664);
+              this.field_l.writeLong40(var2Lifetime1.secondaryKey, 1392038664);
               this.field_s.a(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               this.field_p.a(0, var2Lifetime1);
               var2Lifetime1 = (cc) (this.field_f.b((byte) -93));
@@ -370,7 +370,7 @@ final class ob extends wm {
                   this.field_h.field_y.position = this.field_h.field_y.position + var6;
                   this.field_h.field_w = this.field_h.field_w + var6;
                   if (this.field_h.field_y.position == var5) {
-                    this.field_h.d(-1);
+                    this.field_h.unlinkSecondary(-1);
                     this.field_h.field_s = false;
                     this.field_h = null;
                   } else {
@@ -407,7 +407,7 @@ final class ob extends wm {
                       if (var11 == 0) {
                         var14_ref = (cc) (this.field_e.b(-22585));
                         while (var14_ref != null) {
-                          if (~var14_ref.field_l == ~var12) {
+                          if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -419,7 +419,7 @@ final class ob extends wm {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (cc) (this.field_p.b(-22585));
                         while (var14_ref != null) {
-                          if (~var14_ref.field_l == ~var12) {
+                          if (~var14_ref.secondaryKey == ~var12) {
                             break;
                           }
                           var14_ref = (cc) (this.field_p.b((byte) -73));

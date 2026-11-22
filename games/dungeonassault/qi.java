@@ -16,7 +16,7 @@ final class qi implements Iterable {
     int field_g;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ho(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final void a(long param0, byte param1, IntrusiveNode param2) {

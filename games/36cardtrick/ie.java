@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ie extends he {
+abstract class ie extends DualLinkNode {
     int field_k;
     int field_p;
     int field_q;

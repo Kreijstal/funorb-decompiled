@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j extends l {
+final class j extends DualLinkNode {
     int[] field_q;
     boolean field_w;
     char[] field_s;

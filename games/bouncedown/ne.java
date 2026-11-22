@@ -285,7 +285,7 @@ final class ne extends DualLinkNode {
               }
             }
           } else {
-            this.field_p = di.a(-121, '<', param1.readString(true));
+            this.field_p = SecondaryNodeDequeIterator.a(-121, '<', param1.readString(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

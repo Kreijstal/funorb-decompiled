@@ -365,7 +365,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[51] = eh.field_b;
           ia.field_l[121] = fa.field_e;
           ia.field_l[206] = vk.field_p;
-          ia.field_l[44] = oe.field_g;
+          ia.field_l[44] = NodeHashTableIterator.field_g;
           ia.field_l[150] = ResourceArchive.field_l;
           ia.field_l[190] = om.field_e;
           ia.field_l[96] = q.field_c;
@@ -413,7 +413,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[117] = ck.field_C;
           ia.field_l[80] = qa.field_g[7];
           ia.field_l[85] = bl.field_c;
-          ia.field_l[90] = oe.field_d;
+          ia.field_l[90] = NodeHashTableIterator.field_d;
           ia.field_l[194] = uj.field_r;
           ia.field_l[36] = ih.field_v;
           ia.field_l[143] = kc.field_d;
@@ -452,7 +452,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[86] = u.field_h;
           ia.field_l[52] = lc.field_a;
           ia.field_l[119] = wd.field_b;
-          ia.field_l[83] = kj.field_f;
+          ia.field_l[83] = SecondaryNodeDequeIterator.field_f;
           ia.field_l[172] = ei.field_p;
           ia.field_l[124] = ng.field_i;
           ia.field_l[95] = hm.field_l;
@@ -1313,8 +1313,8 @@ public final class HostileSpawn extends NetworkGameClient {
           hb.clearStaticReferences(false);
           el.b(true);
           di.a(89);
-          oe.clearStaticReferences(65);
-          kj.clearStaticReferences((byte) -13);
+          NodeHashTableIterator.clearStaticReferences(65);
+          SecondaryNodeDequeIterator.clearStaticReferences((byte) -13);
           qb.a(false);
           mn.b((byte) 111);
           cl.clearStaticReferences(-128);
@@ -2419,7 +2419,7 @@ public final class HostileSpawn extends NetworkGameClient {
           og.field_d = fg.a("", "Scenery_10", vd.field_C, false);
           r.field_e = fg.a("", "Scenery_11", vd.field_C, false);
           r.field_b = fg.a("", "Scenery_12", vd.field_C, false);
-          oe.field_g = MouseInput.a("", -74, "Scenery_13", vd.field_C);
+          NodeHashTableIterator.field_g = MouseInput.a("", -74, "Scenery_13", vd.field_C);
           rd.field_a = fg.a("", "Scenery_14", vd.field_C, false);
           ng.field_v = fg.a("", "Scenery_15", vd.field_C, false);
           re.field_q = fg.a("", "Scenery_16", vd.field_C, false);
@@ -2457,14 +2457,14 @@ public final class HostileSpawn extends NetworkGameClient {
           oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
           FullscreenFocusCanvas.field_f = fg.a("", "health_big_tga", vd.field_C, false);
           ia.field_e = fg.a("", "health_sm_tga", vd.field_C, false);
-          kj.field_f = fg.a("", "Scenery_37", vd.field_C, false);
+          SecondaryNodeDequeIterator.field_f = fg.a("", "Scenery_37", vd.field_C, false);
           gf.field_a = fg.a("", "Scenery_38", vd.field_C, false);
           bl.field_c = fg.a("", "Scenery_39", vd.field_C, false);
           u.field_h = fg.a("", "Scenery_40", vd.field_C, false);
           vj.field_p = fg.a("", "Scenery_41", vd.field_C, false);
           ea.field_e = fg.a("", "Scenery_42", vd.field_C, false);
           tc.field_b = fg.a("", "Scenery_43", vd.field_C, false);
-          oe.field_d = fg.a("", "Scenery_44", vd.field_C, false);
+          NodeHashTableIterator.field_d = fg.a("", "Scenery_44", vd.field_C, false);
           km.field_z = fg.a("", "Scenery_45", vd.field_C, false);
           ab.field_a = fg.a("", "Scenery_46", vd.field_C, false);
           GameCanvas.field_k = fg.a("", "Scenery_47", vd.field_C, false);

@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-final class re implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static String field_j;
     static he field_d;
-    private IntrusiveNode field_a;
-    private IntrusiveNode field_f;
+    private IntrusiveNode nextNode;
+    private IntrusiveNode lastReturned;
     static he[] field_h;
     static int field_g;
     static he[] field_i;
     static int field_e;
-    private tc field_b;
+    private tc table;
     static String field_c;
-    private int field_k;
+    private int nextBucketIndex;
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         int var2 = -6 / ((-2 - param0) / 38);
-        this.field_f = null;
-        this.field_k = 1;
-        this.field_a = this.field_b.field_h[0].next;
+        this.lastReturned = null;
+        this.nextBucketIndex = 1;
+        this.nextNode = this.table.field_h[0].next;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -38,17 +38,17 @@ final class re implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (this.field_b.field_h[this.field_k - 1] != this.field_a) {
+        if (this.table.field_h[this.nextBucketIndex - 1] != this.nextNode) {
           return true;
         }
-        while (this.field_b.field_c > this.field_k) {
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          if (this.field_b.field_h[fieldTemp$0].next != this.field_b.field_h[-1 + this.field_k]) {
-            this.field_a = this.field_b.field_h[-1 + this.field_k].next;
+        while (this.table.field_c > this.nextBucketIndex) {
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (this.table.field_h[fieldTemp$0].next != this.table.field_h[-1 + this.nextBucketIndex]) {
+            this.nextNode = this.table.field_h[-1 + this.nextBucketIndex].next;
             return true;
           }
-          this.field_a = this.field_b.field_h[-1 + this.field_k];
+          this.nextNode = this.table.field_h[-1 + this.nextBucketIndex];
         }
         return false;
     }
@@ -59,22 +59,22 @@ final class re implements Iterator {
         IntrusiveNode var3;
         IntrusiveNode var4;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (this.field_b.field_h[-1 + this.field_k] != this.field_a) {
-          var4 = this.field_a;
-          this.field_f = var4;
-          this.field_a = var4.next;
+        if (this.table.field_h[-1 + this.nextBucketIndex] != this.nextNode) {
+          var4 = this.nextNode;
+          this.lastReturned = var4;
+          this.nextNode = var4.next;
           return var4;
         }
         do {
-          if (this.field_b.field_c <= this.field_k) {
+          if (this.table.field_c <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_k;
-          this.field_k = this.field_k + 1;
-          var3 = this.field_b.field_h[fieldTemp$0].next;
-        } while (this.field_b.field_h[this.field_k - 1] == var3);
-        this.field_f = var3;
-        this.field_a = var3.next;
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var3 = this.table.field_h[fieldTemp$0].next;
+        } while (this.table.field_h[this.nextBucketIndex - 1] == var3);
+        this.lastReturned = var3;
+        this.nextNode = var3.next;
         return var3;
     }
 
@@ -87,11 +87,11 @@ final class re implements Iterator {
     }
 
     public final void remove() {
-        if (null == this.field_f) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_f.unlink(-16175);
-        this.field_f = null;
+        this.lastReturned.unlink(-16175);
+        this.lastReturned = null;
     }
 
     final static byte[] a(String param0, int param1) {
@@ -103,7 +103,7 @@ final class re implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 121) {
-            re.a(true);
+            NodeHashTableIterator.a(true);
           }
           stackIn_3_0 = o.field_l.a("", param0, 24874);
           return stackIn_3_0;
@@ -121,11 +121,11 @@ final class re implements Iterator {
         }
     }
 
-    re(tc param0) {
-        this.field_f = null;
+    NodeHashTableIterator(tc param0) {
+        this.lastReturned = null;
         try {
-          this.field_b = param0;
-          this.a(-116);
+          this.table = param0;
+          this.reset(-116);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

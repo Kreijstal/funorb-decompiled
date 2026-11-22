@@ -26,7 +26,7 @@ final class ba {
         kd.field_c = param2;
         uo.field_f = le.field_b[kd.field_c];
         fc.field_d = 0;
-        id.field_l = param0;
+        SecondaryNodeDequeIterator.field_l = param0;
         if (param1 < 40) {
           return;
         }

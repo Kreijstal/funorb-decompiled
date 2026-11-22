@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends kd {
+final class wj extends IntrusiveNode {
     PcmSample[] field_l;
     private int[] field_i;
     static PcmStreamMixer field_j;
@@ -117,7 +117,7 @@ final class wj extends kd {
 
     final static void c(int param0) {
         gb.field_d = false;
-        ca.field_k = false;
+        DualLinkNode.field_k = false;
         ni.a(param0 ^ -6357, -1);
         MouseWheelInput.field_c = c.field_m;
         bk.field_c = c.field_m;

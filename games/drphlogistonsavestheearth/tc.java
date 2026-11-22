@@ -135,7 +135,7 @@ final class tc implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new re(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final void a(long param0, IntrusiveNode param1, int param2) {

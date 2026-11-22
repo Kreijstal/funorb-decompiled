@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ee extends he {
+abstract class ee extends DualLinkNode {
     int field_q;
     private static StringBuilder field_H;
     int field_s;

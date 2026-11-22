@@ -450,8 +450,8 @@ final class bl {
         boolean stackIn_29_1 = false;
         int var1;
         int var2;
-        if (hh.field_s == id.field_l) {
-          id.field_l = null;
+        if (hh.field_s == SecondaryNodeDequeIterator.field_l) {
+          SecondaryNodeDequeIterator.field_l = null;
         }
         if (0 <= ce.field_p) {
           fieldTemp$0 = ce.field_p + 1;

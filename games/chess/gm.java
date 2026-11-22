@@ -1041,7 +1041,7 @@ abstract class gm {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  hc.field_e = ad.a(-29410, var2);
+                  SecondaryNodeDequeIterator.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_0_4", -113);
                 if (var2 != null) {
@@ -1773,7 +1773,7 @@ abstract class gm {
                 }
                 var2 = cd.a("unable_to_delete_friend", -95);
                 if (null != var2) {
-                  ik.field_b = ad.a(-29410, var2);
+                  NodeHashTableIterator.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("unable_to_delete_ignore", -105);
                 if (null != var2) {
@@ -2374,7 +2374,7 @@ abstract class gm {
                 }
                 var2 = cd.a("orbcoins_colon", -77);
                 if (var2 != null) {
-                  hc.field_d = ad.a(-29410, var2);
+                  SecondaryNodeDequeIterator.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("achieved_colon_description", -97);
                 if (null != var2) {

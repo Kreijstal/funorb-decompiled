@@ -149,7 +149,7 @@ final class mi {
             var10 = vb.extractBytes(false, 6, this.field_d[param0]);
           }
           try {
-            var37 = tm.a(119, var10);
+            var37 = SecondaryNodeDequeIterator.a(119, var10);
             var28 = var37;
             var24 = var28;
             var44 = var24;

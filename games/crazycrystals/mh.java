@@ -29,7 +29,7 @@ final class mh extends ik {
           if (param0 != 1) {
             mh.c(-13);
           }
-          wk.a(param1, false, param2, false);
+          SecondaryNodeDequeIterator.a(param1, false, param2, false);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "mh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

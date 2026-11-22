@@ -20,7 +20,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == te.field_E &&
-            !kj.field_c) {
+            !SecondaryNodeDequeIterator.field_c) {
             nf.field_n = hn.a((byte) 80);
             vj.a(5000L, (byte) -49);
             lj.field_t = null;
@@ -136,7 +136,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == te.field_E &&
-            !kj.field_c) {
+            !SecondaryNodeDequeIterator.field_c) {
             nf.field_n = hn.a((byte) 80) + 4000L;
             return;
           }
@@ -399,10 +399,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (kj.field_c) {
+            if (SecondaryNodeDequeIterator.field_c) {
               return;
             }
-            kj.field_c = true;
+            SecondaryNodeDequeIterator.field_c = true;
           }
           if (p.field_a != null) {
             p.field_a.destroy();
@@ -504,7 +504,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void start() {
         if (this != te.field_E ||
-          kj.field_c) {
+          SecondaryNodeDequeIterator.field_c) {
           return;
         }
         try {
@@ -919,7 +919,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (te.field_E == this &&
-            !kj.field_c) {
+            !SecondaryNodeDequeIterator.field_c) {
             pc.field_a = true;
             if (ei.field_i &&
               hn.a((byte) 80) - uc.field_c > 1000L) {

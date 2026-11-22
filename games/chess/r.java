@@ -135,7 +135,7 @@ final class r extends ci {
         if (param0 != 1) {
           return true;
         }
-        return !this.e(-4) ? true : false;
+        return !this.isSecondaryLinked(-4) ? true : false;
     }
 
     public static void m(int param0) {

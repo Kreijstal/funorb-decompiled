@@ -72,7 +72,7 @@ class tc extends jd {
         try {
           int var6_int = 105 % ((-60 - param2) / 56);
           if (param3) {
-            dh.a(param1.field_i + param0, 1232050056, param1.field_k, param4 + param1.field_r, param1.field_m);
+            NodeHashTableIterator.a(param1.field_i + param0, 1232050056, param1.field_k, param4 + param1.field_r, param1.field_m);
           }
           super.a(param0, param1, (byte) -125, param3, param4);
         } catch (RuntimeException runtimeException) {

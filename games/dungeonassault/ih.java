@@ -101,7 +101,7 @@ final class ih extends qe {
         if (!param0) {
           field_r = (int[]) null;
         }
-        ho.b((byte) -36);
+        NodeHashTableIterator.b((byte) -36);
     }
 
     final void a(boolean param0) {
@@ -374,7 +374,7 @@ final class ih extends qe {
                                   um.field_i[var2].field_b == null) {
                                   um.field_i[var2].field_b = new wd(um.field_i[var2].field_n.field_e);
                                 }
-                                ho.b((byte) -36);
+                                NodeHashTableIterator.b((byte) -36);
                               }
                               this.field_F = null;
                               this.a((byte) -112, -1);
@@ -404,7 +404,7 @@ final class ih extends qe {
                                 var19 = ((u) (op.field_d.field_l)).field_Q;
                                 um.field_i[var2] = new Raider(var2, var19.field_w);
                                 um.field_i[var2].field_b = new wd(var19.field_e);
-                                ho.b((byte) -36);
+                                NodeHashTableIterator.b((byte) -36);
                                 op.field_d.a((byte) 80);
                               }
                             }
@@ -427,7 +427,7 @@ final class ih extends qe {
                 if (var2_ref_hb != null) {
                   um.field_i[this.field_C] = new Raider(this.field_C, var17.field_c);
                   um.field_i[this.field_C].field_b = new wd(var17.field_n.field_e);
-                  ho.b((byte) -36);
+                  NodeHashTableIterator.b((byte) -36);
                   this.a((byte) -112, -1);
                 }
               }
@@ -758,7 +758,7 @@ final class ih extends qe {
             um.field_i[var2].field_b = new wd(var3);
           }
         }
-        ho.b((byte) -36);
+        NodeHashTableIterator.b((byte) -36);
     }
 
     private final void b(int param0) {

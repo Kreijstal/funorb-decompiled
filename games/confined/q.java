@@ -212,7 +212,7 @@ final class q extends jg {
                 dl.field_c[var5] = cf.field_cb[var5];
               }
               dl.field_c[var4 - 3] = "";
-              dl.field_c[-2 + var4] = tm.field_a;
+              dl.field_c[-2 + var4] = SecondaryNodeDequeIterator.field_a;
               la.field_T[-2 + var4] = 0;
               uc.field_ab[0] = 3;
               dl.field_c[-1 + var4] = s.field_J;

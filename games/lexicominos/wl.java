@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends kd {
+final class wl extends IntrusiveNode {
     static double field_n;
     static int field_m;
     wl field_p;

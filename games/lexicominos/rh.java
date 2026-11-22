@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class rh extends ca {
+abstract class rh extends DualLinkNode {
     int field_q;
     static dg field_r;
     static sc field_p;

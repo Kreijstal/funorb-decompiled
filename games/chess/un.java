@@ -428,7 +428,7 @@ final class un {
           if (this.field_t.e(0, 65)) {
             wb.a(548, var17Lifetime2, 89, 50, 9, 1, 128);
             wb.a(548, var17Lifetime2, 89, 50, 9, 1);
-            v.field_j.a(l.field_k, 548, var17Lifetime2, 89, 50, 16777215, 0, var15, 1, 1, v.field_j.field_C);
+            v.field_j.a(DualLinkNode.field_k, 548, var17Lifetime2, 89, 50, 16777215, 0, var15, 1, 1, v.field_j.field_C);
           }
           if (this.field_t.e(4096, param0 + 217)) {
             wb.a(548, var17Lifetime2, 89, 50, 9, 16777215, 128);
@@ -523,7 +523,7 @@ final class un {
 
     final static String g(int param0) {
         int var1 = 91 / ((param0 - 62) / 36);
-        return hc.field_b;
+        return SecondaryNodeDequeIterator.field_b;
     }
 
     private final void a(int param0) {
@@ -792,7 +792,7 @@ final class un {
           } else {
             if (this.field_g) {
               this.field_t.g(1);
-              wc.field_s.field_q = ik.field_f;
+              wc.field_s.field_q = NodeHashTableIterator.field_f;
             } else {
               wc.field_s.field_q = vh.field_f;
             }

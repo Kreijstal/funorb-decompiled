@@ -31,7 +31,7 @@ class vn extends bj implements mj {
         mi.field_t[15] = va.field_e;
         if (param0 == 6) {
           mi.field_t[21] = le.field_b;
-          mi.field_t[7] = hc.field_e;
+          mi.field_t[7] = SecondaryNodeDequeIterator.field_e;
           mi.field_t[18] = kn.field_J;
           mi.field_t[16] = fb.field_G;
           mi.field_t[13] = oa.field_c;
@@ -39,7 +39,7 @@ class vn extends bj implements mj {
         }
         field_Eb = (String) null;
         mi.field_t[21] = le.field_b;
-        mi.field_t[7] = hc.field_e;
+        mi.field_t[7] = SecondaryNodeDequeIterator.field_e;
         mi.field_t[18] = kn.field_J;
         mi.field_t[16] = fb.field_G;
         mi.field_t[13] = oa.field_c;

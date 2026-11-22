@@ -142,7 +142,7 @@ final class dl {
             }
             var2 = 1;
           }
-          pn.field_a.a(sj.a(nk.field_w, (byte) 126, gb.field_e), sj.a(wi.field_w, (byte) 124, GameAppletShell.field_e), -1);
+          pn.field_a.a(sj.a(nk.field_w, (byte) 126, NodeHashTableIterator.field_e), sj.a(wi.field_w, (byte) 124, GameAppletShell.field_e), -1);
           if (pn.field_a.b(true)) {
             var1_int = 1;
           }

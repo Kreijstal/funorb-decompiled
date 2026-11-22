@@ -574,12 +574,12 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   var25Lifetime1Lifetime1 = param5.field_l[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param5.field_u[var23Lifetime2];
                   vg.field_c[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15) >> 16);
-                  kd.field_b[var23Lifetime2] = (var13 * var24Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16) + var10;
+                  IntrusiveNode.field_b[var23Lifetime2] = (var13 * var24Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16) + var10;
                   pf.field_k[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param5.field_C[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param5.field_r[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param5.field_t[var23Lifetime2];
-                  kd.field_g[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 + var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18 >> 16);
+                  IntrusiveNode.field_g[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 + var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18 >> 16);
                   kc.field_l[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13) >> 16) + var10;
                   MouseWheelInput.field_f[var23Lifetime2] = var11 + (var25Lifetime1Lifetime1 * var17 + (var14 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var20) >> 16);
                   var23Lifetime2++;

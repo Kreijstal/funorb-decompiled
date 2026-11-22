@@ -131,7 +131,7 @@ final class ud {
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = tb.field_d.getCodeBase();
-            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(rc.field_a).append("&u=");
+            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(SecondaryNodeDequeIterator.field_a).append("&u=");
             if (s.field_b == null) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;

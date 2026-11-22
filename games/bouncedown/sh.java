@@ -182,7 +182,7 @@ class sh extends mh implements rc {
 
     final void n(int param0) {
         this.field_db.a(4210752, (byte) 127, 2121792);
-        uc var2 = new uc(this, this.field_bb, dh.field_e);
+        uc var2 = new uc(this, this.field_bb, NodeHashTableIterator.field_e);
         var2.a(l.field_f, 15, (byte) 120);
         if (param0 != 1) {
           return;

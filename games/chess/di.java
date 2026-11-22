@@ -89,18 +89,18 @@ final class di extends ci {
             var6 = ka.field_g[var3];
             if (gm.field_f == 2 &&
               1 == var2) {
-              if (hj.field_l.length > ik.field_a.length) {
+              if (hj.field_l.length > NodeHashTableIterator.field_a.length) {
                 stackIn_17_0 = hj.field_l.length;
               } else {
-                stackIn_17_0 = ik.field_a.length;
+                stackIn_17_0 = NodeHashTableIterator.field_a.length;
               }
               var7 = stackIn_17_0;
               if (6 <= var3 &&
                 var3 < var7 + 6) {
-                if (-var7 + (var3 - 6) + ik.field_a.length < 0) {
+                if (-var7 + (var3 - 6) + NodeHashTableIterator.field_a.length < 0) {
                   stackIn_23_0 = "";
                 } else {
-                  stackIn_23_0 = ik.field_a[ik.field_a.length + (-6 + var3) - var7];
+                  stackIn_23_0 = NodeHashTableIterator.field_a[NodeHashTableIterator.field_a.length + (-6 + var3) - var7];
                 }
                 var6 = stackIn_23_0;
               }

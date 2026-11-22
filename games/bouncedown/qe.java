@@ -108,7 +108,7 @@ final class qe extends ng {
             stackIn_6_0 = lk.field_t;
             return stackIn_6_0;
           }
-          var3 = di.a(-108, '.', param1);
+          var3 = SecondaryNodeDequeIterator.a(-108, '.', param1);
           if (var3.length < 2) {
             stackIn_9_0 = uc.field_E;
             return stackIn_9_0;

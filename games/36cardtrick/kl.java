@@ -133,14 +133,14 @@ final class kl extends g implements cl, qh, wi {
         try {
           if (param1 != 0) {
             if (param1 == 1) {
-              he.a(0, "privacy.ws");
+              DualLinkNode.a(0, "privacy.ws");
             } else {
               if (param1 == 2) {
-                he.a(0, "conduct.ws");
+                DualLinkNode.a(0, "conduct.ws");
               }
             }
           } else {
-            he.a(0, "terms.ws");
+            DualLinkNode.a(0, "terms.ws");
           }
           if (param2 == 26) {
             return;
@@ -377,7 +377,7 @@ final class kl extends g implements cl, qh, wi {
           if (tb.field_b == var4) {
             return false;
           }
-          if (il.field_e == var4) {
+          if (NodeHashTableIterator.field_e == var4) {
             return false;
           }
           if (!param0) {

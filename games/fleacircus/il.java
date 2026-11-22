@@ -47,7 +47,7 @@ final class il {
             if (var7 != null) {
               var2_int = BufferedSocket.field_i * (60 + var7.field_x) / ByteStorage.field_c;
               var3 = var2_int - 30;
-              if (!rc.field_i) {
+              if (!SecondaryNodeDequeIterator.field_i) {
                 d.a(var3 * -256 / 30, 199, var7, 245, 2147483647, 256 * (-var3 + var7.field_x) / 30);
               } else {
                 d.a((-var3 + var7.field_x) * 256 / 30, 199, var7, 245, 2147483647, -256 * var3 / 30);

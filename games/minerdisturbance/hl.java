@@ -9,11 +9,11 @@ final class hl implements uj {
     public final void a(boolean param0) {
         if (param0) {
           field_a = (wh) null;
-          bc.field_a = 4;
+          SecondaryNodeDequeIterator.field_a = 4;
           tb.field_a = 2;
           return;
         }
-        bc.field_a = 4;
+        SecondaryNodeDequeIterator.field_a = 4;
         tb.field_a = 2;
     }
 

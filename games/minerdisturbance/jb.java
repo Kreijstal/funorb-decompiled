@@ -114,8 +114,8 @@ final class jb extends IntrusiveNode {
             if (decompiledFrameRemainder0) {
               if (nk.field_w >= var12 &&
                 var12 + 32 >= nk.field_w &&
-                var13 <= gb.field_e &&
-                gb.field_e <= 32 + var13) {
+                var13 <= NodeHashTableIterator.field_e &&
+                NodeHashTableIterator.field_e <= 32 + var13) {
                 if (qh.field_c < 0) {
                   te.field_d[0].f(var12 - 16, -8 + var13);
                   if (qh.field_c < 10) {
@@ -401,8 +401,8 @@ final class jb extends IntrusiveNode {
             if (decompiledFrameRemainder0) {
               if (nk.field_w >= var12 &&
                 var12 + 32 >= nk.field_w &&
-                var13 <= gb.field_e &&
-                gb.field_e <= 32 + var13) {
+                var13 <= NodeHashTableIterator.field_e &&
+                NodeHashTableIterator.field_e <= 32 + var13) {
                 if (qh.field_c < 0) {
                   te.field_d[0].f(var12 - 16, -8 + var13);
                   if (qh.field_c < 10) {

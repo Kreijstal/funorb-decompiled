@@ -175,8 +175,8 @@ final class qh {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            ik.field_a = new String[var4];
-            ne.a(n.field_d, 0, ik.field_a, 0, var4);
+            NodeHashTableIterator.field_a = new String[var4];
+            ne.a(n.field_d, 0, NodeHashTableIterator.field_a, 0, var4);
             tj.field_p = new String[-var4 + (var3_int - 1)];
             ne.a(n.field_d, 1 + var4, tj.field_p, 0, var3_int - var4 - 1);
             var4 = -1;
@@ -195,10 +195,10 @@ final class qh {
             ne.a(n.field_d, 0, hj.field_l, 0, var4);
             em.field_m = new String[-1 - var4 + var3_int];
             ne.a(n.field_d, 1 + var4, em.field_m, 0, -1 + (-var4 + var3_int));
-            if (hj.field_l.length > ik.field_a.length) {
+            if (hj.field_l.length > NodeHashTableIterator.field_a.length) {
               stackIn_66_0 = hj.field_l.length;
             } else {
-              stackIn_66_0 = ik.field_a.length;
+              stackIn_66_0 = NodeHashTableIterator.field_a.length;
             }
             var5 = stackIn_66_0;
             if (em.field_m.length > tj.field_p.length) {
@@ -263,7 +263,7 @@ final class qh {
             }
           }
           if (2 == gm.field_f) {
-            var10 = ik.field_a;
+            var10 = NodeHashTableIterator.field_a;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg extends kd {
+final class tg extends IntrusiveNode {
     static java.applet.Applet field_i;
     static int field_j;
     int field_k;
@@ -33,14 +33,14 @@ final class tg extends kd {
             field_i = (java.applet.Applet) null;
           }
           var7_int = kf.a((byte) -21, param1);
-          if (null == kd.field_e) {
-            kd.field_e = new java.security.SecureRandom();
+          if (null == IntrusiveNode.field_e) {
+            IntrusiveNode.field_e = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = kd.field_e.nextInt();
+            var8[var9] = IntrusiveNode.field_e.nextInt();
           }
           if (null == gd.field_m ||
             !(var7_int <= gd.field_m.payload.length)) {

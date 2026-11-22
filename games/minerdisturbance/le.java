@@ -54,7 +54,7 @@ final class le implements uj {
     }
 
     public final void a(boolean param0) {
-        bc.field_a = 0;
+        SecondaryNodeDequeIterator.field_a = 0;
         tb.field_a = 2;
         if (param0) {
           field_b = (String) null;

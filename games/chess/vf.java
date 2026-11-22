@@ -36,7 +36,7 @@ final class vf implements jm {
           if (null != d.field_Mb) {
             var3 = (r) (d.field_Mb.a(false));
             while (var3 != null) {
-              var3.d(-1);
+              var3.unlinkSecondary(-1);
               var3 = (r) (d.field_Mb.a(0));
             }
             d.field_Mb = null;

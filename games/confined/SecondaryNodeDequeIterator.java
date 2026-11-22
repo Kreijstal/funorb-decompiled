@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class tm implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static String field_a;
-    private DualLinkNode field_c;
-    private DualLinkNode field_b;
-    private IntrusiveDeque field_d;
+    private DualLinkNode nextNode;
+    private DualLinkNode lastReturned;
+    private IntrusiveDeque deque;
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
@@ -80,14 +80,14 @@ final class tm implements Iterator {
     }
 
     public final Object next() {
-        Object var1 = this.field_c;
-        if (var1 != this.field_d.field_b) {
-          this.field_c = ((DualLinkNode) (var1)).field_o;
+        Object var1 = this.nextNode;
+        if (var1 != this.deque.field_b) {
+          this.nextNode = ((DualLinkNode) (var1)).field_o;
         } else {
-          this.field_c = null;
+          this.nextNode = null;
           var1 = null;
         }
-        this.field_b = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -146,11 +146,11 @@ final class tm implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_b == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_b.unlinkSecondary(true);
-        this.field_b = null;
+        this.lastReturned.unlinkSecondary(true);
+        this.lastReturned = null;
     }
 
     final static void a(int param0, int param1) {
@@ -172,7 +172,7 @@ final class tm implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_d.field_b != this.field_c;
+        return this.deque.field_b != this.nextNode;
     }
 
     public static void a(int param0) {
@@ -181,12 +181,12 @@ final class tm implements Iterator {
         field_e = null;
     }
 
-    tm(IntrusiveDeque param0) {
-        this.field_b = null;
+    SecondaryNodeDequeIterator(IntrusiveDeque param0) {
+        this.lastReturned = null;
         try {
-          this.field_d = param0;
-          this.field_b = null;
-          this.field_c = this.field_d.field_b.field_o;
+          this.deque = param0;
+          this.lastReturned = null;
+          this.nextNode = this.deque.field_b.field_o;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

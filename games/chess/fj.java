@@ -120,7 +120,7 @@ final class fj {
         }
         var6 = 0;
         for (var7 = qf.field_c - 1; var7 >= 0; var7--) {
-          var8_ref_ld = ik.field_i[var7];
+          var8_ref_ld = NodeHashTableIterator.field_i[var7];
           var9 = 0;
           if (!qf.field_b &&
             fh.field_b > var5) {
@@ -153,7 +153,7 @@ final class fj {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; var8 < qf.field_c; var8++) {
-          var9_ref_ld = ik.field_i[var8];
+          var9_ref_ld = NodeHashTableIterator.field_i[var8];
           if (var9_ref_ld.field_f != null) {
             ac.field_j.field_Kb.a((byte) 124, var9_ref_ld.field_f);
             var9_ref_ld.field_f.a(param0, var9_ref_ld.field_f.e((byte) 89), param3 + 2147483640, param2, var7Lifetime1);

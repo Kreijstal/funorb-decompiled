@@ -134,7 +134,7 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new rc(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     static {

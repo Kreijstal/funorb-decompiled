@@ -33,7 +33,7 @@ final class q extends tl {
           if (255 == param1) {
             stackIn_11_0 = -1;
             stackIn_12_1 = !(ok.field_c >= 13);
-            tf.field_s = il.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
+            tf.field_s = NodeHashTableIterator.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
             var6 = (String[]) null;
             wh.a((String[]) null, 61);
           } else {

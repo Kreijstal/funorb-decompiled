@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c extends kd {
+final class c extends IntrusiveNode {
     static AccountRequestState field_m;
     int field_k;
     static GameAppletShell field_j;

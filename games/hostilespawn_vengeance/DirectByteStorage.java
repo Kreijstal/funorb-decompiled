@@ -102,11 +102,11 @@ final class DirectByteStorage extends ByteStorage {
             if (param0 <= 15) {
               DirectByteStorage.b(-30);
             }
-            if (null != oe.field_a) {
-              for (var1_int = 0; oe.field_a.length > var1_int; var1_int++) {
-                if (oe.field_a[var1_int] != null) {
+            if (null != NodeHashTableIterator.field_a) {
+              for (var1_int = 0; NodeHashTableIterator.field_a.length > var1_int; var1_int++) {
+                if (NodeHashTableIterator.field_a[var1_int] != null) {
                   try {
-                    oe.field_a[var1_int].f(0);
+                    NodeHashTableIterator.field_a[var1_int].f(0);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

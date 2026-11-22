@@ -412,7 +412,7 @@ abstract class ve {
     }
 
     final static String b(int param0) {
-        if (bk.field_c == ca.field_i) {
+        if (bk.field_c == DualLinkNode.field_i) {
           return Lexicominos.field_H;
         }
         if (!qa.field_c.b(param0 ^ 25590)) {
@@ -421,7 +421,7 @@ abstract class ve {
         if (param0 != 25594) {
           return (String) null;
         }
-        if (ca.field_i == MouseWheelInput.field_c) {
+        if (DualLinkNode.field_i == MouseWheelInput.field_c) {
           return qa.field_c.a(false);
         }
         return dd.field_d;

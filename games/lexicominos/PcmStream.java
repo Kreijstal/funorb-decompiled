@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class PcmStream extends kd {
+abstract class PcmStream extends IntrusiveNode {
     volatile boolean field_j;
     kh field_k;
     PcmStream field_i;

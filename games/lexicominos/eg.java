@@ -30,7 +30,7 @@ final class eg extends mg {
         al var3 = (al) (var2.a(250));
         while (var3 != null) {
           if (var3.f((byte) -77)) {
-            var3.b((byte) -121);
+            var3.unlink((byte) -121);
           }
           var3 = (al) (var2.c(-124));
         }
@@ -46,7 +46,7 @@ final class eg extends mg {
         }
         while (var3 != null) {
           if (var3.a((byte) 26)) {
-            var3.b((byte) -122);
+            var3.unlink((byte) -122);
           }
           var3 = (al) (var2.c(-69));
         }

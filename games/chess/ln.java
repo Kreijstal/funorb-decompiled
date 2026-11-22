@@ -58,7 +58,7 @@ final class ln extends ci {
         if (param0 >= -74) {
           return 25;
         }
-        return (int)this.a(0);
+        return (int)this.getSecondaryKey(0);
     }
 
     public static void k(int param0) {
@@ -194,10 +194,10 @@ final class ln extends ci {
 
     final boolean m(int param0) {
         if (param0 == -23901) {
-          return !this.e(-4) ? true : false;
+          return !this.isSecondaryLinked(-4) ? true : false;
         }
         this.field_gc = (ci) null;
-        return !this.e(-4) ? true : false;
+        return !this.isSecondaryLinked(-4) ? true : false;
     }
 
     static {

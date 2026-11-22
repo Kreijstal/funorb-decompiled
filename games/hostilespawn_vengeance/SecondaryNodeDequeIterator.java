@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class kj implements Iterator {
-    private DualLinkDeque field_h;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkDeque deque;
     static boolean field_b;
-    private DualLinkNode field_d;
-    private DualLinkNode field_i;
+    private DualLinkNode lastReturned;
+    private DualLinkNode nextNode;
     static String field_a;
     static cb field_g;
     static boolean field_c;
@@ -15,14 +15,14 @@ final class kj implements Iterator {
     static bd field_f;
 
     public final Object next() {
-        Object var1 = this.field_i;
-        if (this.field_h.field_a == var1) {
-          this.field_i = null;
+        Object var1 = this.nextNode;
+        if (this.deque.field_a == var1) {
+          this.nextNode = null;
           var1 = null;
         } else {
-          this.field_i = ((DualLinkNode) (var1)).field_j;
+          this.nextNode = ((DualLinkNode) (var1)).field_j;
         }
-        this.field_d = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -37,7 +37,7 @@ final class kj implements Iterator {
           }
           return new s(qc.d(750938499), ia.b(32674));
         }
-        kj.clearStaticReferences((byte) 44);
+        SecondaryNodeDequeIterator.clearStaticReferences((byte) 44);
         var1Lifetime1 = qc.d(750938499);
         if (var1Lifetime1 != null &&
           var1Lifetime1.indexOf('@') >= 0) {
@@ -55,11 +55,11 @@ final class kj implements Iterator {
     }
 
     public final void remove() {
-        if (null == this.field_d) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_d.unlinkSecondary(-1);
-        this.field_d = null;
+        this.lastReturned.unlinkSecondary(-1);
+        this.lastReturned = null;
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -73,15 +73,15 @@ final class kj implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_i != this.field_h.field_a;
+        return this.nextNode != this.deque.field_a;
     }
 
-    kj(DualLinkDeque param0) {
-        this.field_d = null;
+    SecondaryNodeDequeIterator(DualLinkDeque param0) {
+        this.lastReturned = null;
         try {
-          this.field_h = param0;
-          this.field_i = this.field_h.field_a.field_j;
-          this.field_d = null;
+          this.deque = param0;
+          this.nextNode = this.deque.field_a.field_j;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -41,7 +41,7 @@ final class hn extends kl {
           }
           gf.a();
           MouseWheelInput.field_d = 0;
-          id.a(param0 ^ -439027613);
+          SecondaryNodeDequeIterator.a(param0 ^ -439027613);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);

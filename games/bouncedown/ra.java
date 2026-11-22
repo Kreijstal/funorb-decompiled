@@ -234,7 +234,7 @@ final class ra extends oa {
               db.field_R = rj.field_g;
             } else {
               while (rj.field_g != db.field_R) {
-                var2 = di.field_b[rj.field_g];
+                var2 = SecondaryNodeDequeIterator.field_b[rj.field_g];
                 rj.field_g = 127 & 1 + rj.field_g;
                 if (var2 >= 0) {
                   ng.field_a[var2] = true;

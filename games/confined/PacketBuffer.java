@@ -154,7 +154,7 @@ class PacketBuffer extends IntrusiveNode {
               var3 = var1.readString(true);
               ql.field_t = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte(param0 ^ -20);
-              tm.a(-127, var4);
+              SecondaryNodeDequeIterator.a(-127, var4);
               return;
             }
             mb.a("F1: " + ui.a(10), true, (Throwable) null);

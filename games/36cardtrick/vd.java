@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vd extends he {
+final class vd extends DualLinkNode {
     static cc field_q;
     static volatile int field_s;
     private int[][] field_v;

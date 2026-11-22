@@ -8,10 +8,10 @@ final class dg {
         if (param0) {
           dg.a(false);
         }
-        if (bk.field_c == ca.field_i) {
+        if (bk.field_c == DualLinkNode.field_i) {
           return ce.field_d;
         }
-        if (MouseWheelInput.field_c == ca.field_i) {
+        if (MouseWheelInput.field_c == DualLinkNode.field_i) {
           return ef.field_b;
         }
         if (!qa.field_c.b(12)) {

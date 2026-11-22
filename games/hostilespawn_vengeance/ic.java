@@ -73,10 +73,10 @@ final class ic extends IntrusiveNode {
             stackIn_12_3 = null;
             stackIn_12_4 = HostileSpawn.field_B.getCodeBase();
             stackIn_12_5 = new StringBuilder().append("clienterror.ws?c=").append(ql.field_a).append("&u=");
-            if (kj.field_e != null) {
+            if (SecondaryNodeDequeIterator.field_e != null) {
               stackIn_13_2 = null;
               stackIn_13_3 = null;
-              stackIn_13_6 = kj.field_e;
+              stackIn_13_6 = SecondaryNodeDequeIterator.field_e;
             } else {
               stackIn_13_2 = null;
               stackIn_13_3 = null;

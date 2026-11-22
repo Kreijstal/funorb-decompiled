@@ -13,7 +13,7 @@ final class ia extends mg {
           sb.a(-128);
           ta.field_g = 11;
         } else {
-          if (!ca.d(true)) {
+          if (!DualLinkNode.d(true)) {
             sb.a(-128);
             ta.field_g = 11;
           }

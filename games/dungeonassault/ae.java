@@ -268,7 +268,7 @@ final class ae {
               if (AccountNameAvailabilityValidator.field_t != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = KeyboardInput.a(n.field_c, (byte) -68, qj.field_e, wa.field_l, id.field_g);
+              var3_int = KeyboardInput.a(n.field_c, (byte) -68, qj.field_e, wa.field_l, SecondaryNodeDequeIterator.field_g);
               var4 = 3 + var3_int;
               to.field_c = new int[var4];
               go.field_A = new String[var4];

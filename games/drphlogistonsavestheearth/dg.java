@@ -27,7 +27,7 @@ final class dg implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new oa(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void a(boolean param0) {

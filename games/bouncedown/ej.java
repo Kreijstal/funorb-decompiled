@@ -79,7 +79,7 @@ final class ej {
     final static boolean b(int param0) {
         if (param0 >= 0) {
           field_b = (String) null;
-          if (dh.field_a == null) {
+          if (NodeHashTableIterator.field_a == null) {
             return false;
           }
           if (pj.field_a == b.field_b) {
@@ -87,7 +87,7 @@ final class ej {
           }
           return false;
         }
-        if (dh.field_a == null) {
+        if (NodeHashTableIterator.field_a == null) {
           return false;
         }
         if (pj.field_a == b.field_b) {

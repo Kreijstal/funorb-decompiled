@@ -540,6 +540,14 @@
       "renamedSymbol": "C:MouseWheelInput"
     },
     {
+      "symbol": "C:kj",
+      "originalName": "kj",
+      "to": "SecondaryNodeDequeIterator",
+      "evidence": "Complete constructor/hasNext/next/remove and all three instance fields independently reviewed. Traverse one secondary-link sentinel chain from the owning deque,advance the pending node before exposing result,and track the last node for removal. Preserve sentinel-end null return,cursor/last-node writes,subsequent exhausted-state behavior,IllegalStateException gating and exact unlink guards/exceptions. Complete constructor and instance operations reviewed with all selected state-field roles. Preserve original modifiers,guards,exceptions,partial effects and protocol names. No native owner/type-use declarations or exact quoted class literals. Identifier-only change.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SecondaryNodeDequeIterator"
+    },
+    {
       "symbol": "C:kk",
       "originalName": "kk",
       "to": "PlatformTask",
@@ -570,6 +578,14 @@
       "evidence": "Abstract class field shape and both abstract byte-array declarations reviewed with concrete direct implementation. No instance fields or other instance methods; role follows set/get byte contract, not unrelated static helpers.",
       "confidence": "reviewed",
       "renamedSymbol": "C:ByteStorage"
+    },
+    {
+      "symbol": "C:oe",
+      "originalName": "oe",
+      "to": "NodeHashTableIterator",
+      "evidence": "Complete constructor/reset/hasNext/next/remove and all four instance fields independently reviewed. Traverse circular primary-link bucket sentinels with a mutable next-bucket index and chain cursor. hasNext may advance state;next returns null at exhaustion and retains the original last-returned state on that path. remove requires a last node,invokes exact original unlink guard,then clears last-returned. Preserve global reads,exception wrappers,null/array failures and every partial reset. Complete constructor and instance operations reviewed with all selected state-field roles. Preserve original modifiers,guards,exceptions,partial effects and protocol names. No native owner/type-use declarations or exact quoted class literals. Identifier-only change.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NodeHashTableIterator"
     },
     {
       "symbol": "C:ol",
@@ -732,6 +748,30 @@
       "renamedSymbol": "F:AccountServiceResult.message:Ljava/lang/String;"
     },
     {
+      "symbol": "F:kj.field_d:Ldk;",
+      "originalName": "field_d",
+      "to": "lastReturned",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.lastReturned:LDualLinkNode;"
+    },
+    {
+      "symbol": "F:kj.field_h:Lui;",
+      "originalName": "field_h",
+      "to": "deque",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:LDualLinkDeque;"
+    },
+    {
+      "symbol": "F:kj.field_i:Ldk;",
+      "originalName": "field_i",
+      "to": "nextNode",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.nextNode:LDualLinkNode;"
+    },
+    {
       "symbol": "F:kk.field_a:Ljava/lang/Object;",
       "originalName": "field_a",
       "to": "objectArgument",
@@ -810,6 +850,38 @@
       "evidence": "Exact private declaration, all four instance bodies and completed/error-free result cache assignments reviewed against available/unavailable diagnostics. checkedName stores the checked input or positive availability result; preserve null/false defaults, all conditional resets, guard arithmetic and aliases.",
       "confidence": "reviewed",
       "renamedSymbol": "F:AccountNameAvailabilityValidator.checkedName:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:oe.field_b:Lam;",
+      "originalName": "field_b",
+      "to": "nextNode",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.nextNode:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:oe.field_c:Led;",
+      "originalName": "field_c",
+      "to": "table",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.table:LIntrusiveNodeHashTable;"
+    },
+    {
+      "symbol": "F:oe.field_e:I",
+      "originalName": "field_e",
+      "to": "nextBucketIndex",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.nextBucketIndex:I"
+    },
+    {
+      "symbol": "F:oe.field_f:Lam;",
+      "originalName": "field_f",
+      "to": "lastReturned",
+      "evidence": "Role traced through the complete constructor,reset if present,hasNext,next and remove instance bodies. Preserve declaration modifiers,defaults,duplicate/partial writes,aliasing,exhaustion and all guarded failure states. Exact declaration and complete constructor/instance consumers reviewed;preserve defaults,visibility,mutability,aliasing and every guard-dependent/partial write sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:NodeHashTableIterator.lastReturned:LIntrusiveNode;"
     },
     {
       "symbol": "F:ol.field_e:I",
@@ -1497,7 +1569,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 8aef0460405314b563f3bf47527beb966a2ad996fb0acead138f09e6ddd9c554.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:kj.clearStaticReferences(B)V"
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.clearStaticReferences(B)V"
     },
     {
       "symbol": "M:la.a(B)V",
@@ -1676,12 +1748,20 @@
       "renamedSymbol": "M:ob.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:oe.a(B)V",
+      "originalName": "a",
+      "to": "reset",
+      "evidence": "Always clear last-returned first. Only byte105 writes next-bucket index1 and next node from bucket0.field_g;all other bytes retain old index/cursor. Preserve partial reset and array/null failures. Complete owning iterator constructor and JDK protocol methods reviewed;preserve protocol method names and all field read/write,exception and call ordering. Complete owning constructor/protocol or node operations reviewed. Preserve original argument widths/domains,overflow,guards,partial reads/writes,aliases,call/allocation/exception order and modifier/override relationships. Naming only;no whole-runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(B)V"
+    },
+    {
       "symbol": "M:oe.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 597dc40dcd25dd8ddf3c30727882760cb8e362945012195dcca987fcebe9b0b6.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:oe.clearStaticReferences(I)V"
+      "renamedSymbol": "M:NodeHashTableIterator.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:ok.a()V",
@@ -4529,9 +4609,9 @@
     },
     {
       "symbol": "C:kj",
-      "renamedSymbol": "C:kj",
+      "renamedSymbol": "C:SecondaryNodeDequeIterator",
       "originalName": "kj",
-      "renamedName": "kj",
+      "renamedName": "SecondaryNodeDequeIterator",
       "declaration": {
         "file": "kj.java",
         "start": 71,
@@ -5134,9 +5214,9 @@
     },
     {
       "symbol": "C:oe",
-      "renamedSymbol": "C:oe",
+      "renamedSymbol": "C:NodeHashTableIterator",
       "originalName": "oe",
-      "renamedName": "oe",
+      "renamedName": "NodeHashTableIterator",
       "declaration": {
         "file": "oe.java",
         "start": 71,
@@ -20677,7 +20757,7 @@
     },
     {
       "symbol": "F:kj.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:kj.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -20688,7 +20768,7 @@
     },
     {
       "symbol": "F:kj.field_b:Z",
-      "renamedSymbol": "F:kj.field_b:Z",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -20699,7 +20779,7 @@
     },
     {
       "symbol": "F:kj.field_c:Z",
-      "renamedSymbol": "F:kj.field_c:Z",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_c:Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -20710,9 +20790,9 @@
     },
     {
       "symbol": "F:kj.field_d:Ldk;",
-      "renamedSymbol": "F:kj.field_d:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.lastReturned:LDualLinkNode;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "lastReturned",
       "declaration": {
         "file": "kj.java",
         "start": 163,
@@ -20721,7 +20801,7 @@
     },
     {
       "symbol": "F:kj.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:kj.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -20732,7 +20812,7 @@
     },
     {
       "symbol": "F:kj.field_f:Lbd;",
-      "renamedSymbol": "F:kj.field_f:Lbd;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_f:Lbd;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -20743,7 +20823,7 @@
     },
     {
       "symbol": "F:kj.field_g:Lcb;",
-      "renamedSymbol": "F:kj.field_g:Lcb;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.field_g:Lcb;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -20754,9 +20834,9 @@
     },
     {
       "symbol": "F:kj.field_h:Lui;",
-      "renamedSymbol": "F:kj.field_h:LDualLinkDeque;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.deque:LDualLinkDeque;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "deque",
       "declaration": {
         "file": "kj.java",
         "start": 111,
@@ -20765,9 +20845,9 @@
     },
     {
       "symbol": "F:kj.field_i:Ldk;",
-      "renamedSymbol": "F:kj.field_i:LDualLinkNode;",
+      "renamedSymbol": "F:SecondaryNodeDequeIterator.nextNode:LDualLinkNode;",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "nextNode",
       "declaration": {
         "file": "kj.java",
         "start": 187,
@@ -26056,7 +26136,7 @@
     },
     {
       "symbol": "F:oe.field_a:[Lbn;",
-      "renamedSymbol": "F:oe.field_a:[Lbn;",
+      "renamedSymbol": "F:NodeHashTableIterator.field_a:[Lbn;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -26067,9 +26147,9 @@
     },
     {
       "symbol": "F:oe.field_b:Lam;",
-      "renamedSymbol": "F:oe.field_b:LIntrusiveNode;",
+      "renamedSymbol": "F:NodeHashTableIterator.nextNode:LIntrusiveNode;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "nextNode",
       "declaration": {
         "file": "oe.java",
         "start": 157,
@@ -26078,9 +26158,9 @@
     },
     {
       "symbol": "F:oe.field_c:Led;",
-      "renamedSymbol": "F:oe.field_c:LIntrusiveNodeHashTable;",
+      "renamedSymbol": "F:NodeHashTableIterator.table:LIntrusiveNodeHashTable;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "table",
       "declaration": {
         "file": "oe.java",
         "start": 206,
@@ -26089,7 +26169,7 @@
     },
     {
       "symbol": "F:oe.field_d:Lbd;",
-      "renamedSymbol": "F:oe.field_d:Lbd;",
+      "renamedSymbol": "F:NodeHashTableIterator.field_d:Lbd;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -26100,9 +26180,9 @@
     },
     {
       "symbol": "F:oe.field_e:I",
-      "renamedSymbol": "F:oe.field_e:I",
+      "renamedSymbol": "F:NodeHashTableIterator.nextBucketIndex:I",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "nextBucketIndex",
       "declaration": {
         "file": "oe.java",
         "start": 231,
@@ -26111,9 +26191,9 @@
     },
     {
       "symbol": "F:oe.field_f:Lam;",
-      "renamedSymbol": "F:oe.field_f:LIntrusiveNode;",
+      "renamedSymbol": "F:NodeHashTableIterator.lastReturned:LIntrusiveNode;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "lastReturned",
       "declaration": {
         "file": "oe.java",
         "start": 255,
@@ -26122,7 +26202,7 @@
     },
     {
       "symbol": "F:oe.field_g:Lbd;",
-      "renamedSymbol": "F:oe.field_g:Lbd;",
+      "renamedSymbol": "F:NodeHashTableIterator.field_g:Lbd;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -114001,7 +114081,7 @@
     },
     {
       "symbol": "L:kj.<init>(Lui;)V#0",
-      "renamedSymbol": "L:kj.<init>(LDualLinkDeque;)V#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.<init>(LDualLinkDeque;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -114012,7 +114092,7 @@
     },
     {
       "symbol": "L:kj.b(I)Ls;#0",
-      "renamedSymbol": "L:kj.b(I)Ls;#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.b(I)Ls;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -114023,7 +114103,7 @@
     },
     {
       "symbol": "L:kj.b(I)Ls;#1",
-      "renamedSymbol": "L:kj.b(I)Ls;#1",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.b(I)Ls;#1",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -114034,7 +114114,7 @@
     },
     {
       "symbol": "L:kj.next()Ljava/lang/Object;#0",
-      "renamedSymbol": "L:kj.next()Ljava/lang/Object;#0",
+      "renamedSymbol": "L:SecondaryNodeDequeIterator.next()Ljava/lang/Object;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -136793,7 +136873,7 @@
     },
     {
       "symbol": "L:oe.<init>(Led;)V#0",
-      "renamedSymbol": "L:oe.<init>(LIntrusiveNodeHashTable;)V#0",
+      "renamedSymbol": "L:NodeHashTableIterator.<init>(LIntrusiveNodeHashTable;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -136804,7 +136884,7 @@
     },
     {
       "symbol": "L:oe.a(IBIIIIII)V#0",
-      "renamedSymbol": "L:oe.a(IBIIIIII)V#0",
+      "renamedSymbol": "L:NodeHashTableIterator.a(IBIIIIII)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -136815,7 +136895,7 @@
     },
     {
       "symbol": "L:oe.hasNext()Z#0",
-      "renamedSymbol": "L:oe.hasNext()Z#0",
+      "renamedSymbol": "L:NodeHashTableIterator.hasNext()Z#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -136826,7 +136906,7 @@
     },
     {
       "symbol": "L:oe.hasNext()Z#1",
-      "renamedSymbol": "L:oe.hasNext()Z#1",
+      "renamedSymbol": "L:NodeHashTableIterator.hasNext()Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136837,7 +136917,7 @@
     },
     {
       "symbol": "L:oe.next()Ljava/lang/Object;#0",
-      "renamedSymbol": "L:oe.next()Ljava/lang/Object;#0",
+      "renamedSymbol": "L:NodeHashTableIterator.next()Ljava/lang/Object;#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -136848,7 +136928,7 @@
     },
     {
       "symbol": "L:oe.next()Ljava/lang/Object;#1",
-      "renamedSymbol": "L:oe.next()Ljava/lang/Object;#1",
+      "renamedSymbol": "L:NodeHashTableIterator.next()Ljava/lang/Object;#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -136859,7 +136939,7 @@
     },
     {
       "symbol": "L:oe.next()Ljava/lang/Object;#2",
-      "renamedSymbol": "L:oe.next()Ljava/lang/Object;#2",
+      "renamedSymbol": "L:NodeHashTableIterator.next()Ljava/lang/Object;#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -213980,9 +214060,9 @@
     },
     {
       "symbol": "M:kj.<init>(Lui;)V",
-      "renamedSymbol": "M:kj.<init>(LDualLinkDeque;)V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.<init>(LDualLinkDeque;)V",
       "originalName": "kj",
-      "renamedName": "kj",
+      "renamedName": "SecondaryNodeDequeIterator",
       "declaration": {
         "file": "kj.java",
         "start": 1863,
@@ -213991,7 +214071,7 @@
     },
     {
       "symbol": "M:kj.a(B)V",
-      "renamedSymbol": "M:kj.clearStaticReferences(B)V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -214002,7 +214082,7 @@
     },
     {
       "symbol": "M:kj.a(I)I",
-      "renamedSymbol": "M:kj.a(I)I",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.a(I)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -214013,7 +214093,7 @@
     },
     {
       "symbol": "M:kj.b(I)Ls;",
-      "renamedSymbol": "M:kj.b(I)Ls;",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.b(I)Ls;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -214024,7 +214104,7 @@
     },
     {
       "symbol": "M:kj.hasNext()Z",
-      "renamedSymbol": "M:kj.hasNext()Z",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.hasNext()Z",
       "originalName": "hasNext",
       "renamedName": "hasNext",
       "declaration": {
@@ -214035,7 +214115,7 @@
     },
     {
       "symbol": "M:kj.next()Ljava/lang/Object;",
-      "renamedSymbol": "M:kj.next()Ljava/lang/Object;",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.next()Ljava/lang/Object;",
       "originalName": "next",
       "renamedName": "next",
       "declaration": {
@@ -214046,7 +214126,7 @@
     },
     {
       "symbol": "M:kj.remove()V",
-      "renamedSymbol": "M:kj.remove()V",
+      "renamedSymbol": "M:SecondaryNodeDequeIterator.remove()V",
       "originalName": "remove",
       "renamedName": "remove",
       "declaration": {
@@ -217753,9 +217833,9 @@
     },
     {
       "symbol": "M:oe.<init>(Led;)V",
-      "renamedSymbol": "M:oe.<init>(LIntrusiveNodeHashTable;)V",
+      "renamedSymbol": "M:NodeHashTableIterator.<init>(LIntrusiveNodeHashTable;)V",
       "originalName": "oe",
-      "renamedName": "oe",
+      "renamedName": "NodeHashTableIterator",
       "declaration": {
         "file": "oe.java",
         "start": 3588,
@@ -217764,9 +217844,9 @@
     },
     {
       "symbol": "M:oe.a(B)V",
-      "renamedSymbol": "M:oe.a(B)V",
+      "renamedSymbol": "M:NodeHashTableIterator.reset(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reset",
       "declaration": {
         "file": "oe.java",
         "start": 1467,
@@ -217775,7 +217855,7 @@
     },
     {
       "symbol": "M:oe.a(I)V",
-      "renamedSymbol": "M:oe.clearStaticReferences(I)V",
+      "renamedSymbol": "M:NodeHashTableIterator.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -217786,7 +217866,7 @@
     },
     {
       "symbol": "M:oe.a(IBIIIIII)V",
-      "renamedSymbol": "M:oe.a(IBIIIIII)V",
+      "renamedSymbol": "M:NodeHashTableIterator.a(IBIIIIII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -217797,7 +217877,7 @@
     },
     {
       "symbol": "M:oe.hasNext()Z",
-      "renamedSymbol": "M:oe.hasNext()Z",
+      "renamedSymbol": "M:NodeHashTableIterator.hasNext()Z",
       "originalName": "hasNext",
       "renamedName": "hasNext",
       "declaration": {
@@ -217808,7 +217888,7 @@
     },
     {
       "symbol": "M:oe.next()Ljava/lang/Object;",
-      "renamedSymbol": "M:oe.next()Ljava/lang/Object;",
+      "renamedSymbol": "M:NodeHashTableIterator.next()Ljava/lang/Object;",
       "originalName": "next",
       "renamedName": "next",
       "declaration": {
@@ -217819,7 +217899,7 @@
     },
     {
       "symbol": "M:oe.remove()V",
-      "renamedSymbol": "M:oe.remove()V",
+      "renamedSymbol": "M:NodeHashTableIterator.remove()V",
       "originalName": "remove",
       "renamedName": "remove",
       "declaration": {
@@ -263029,7 +263109,7 @@
     },
     {
       "symbol": "P:kj.<init>(Lui;)V#0",
-      "renamedSymbol": "P:kj.<init>(LDualLinkDeque;)V#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.<init>(LDualLinkDeque;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263040,7 +263120,7 @@
     },
     {
       "symbol": "P:kj.a(B)V#0",
-      "renamedSymbol": "P:kj.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263051,7 +263131,7 @@
     },
     {
       "symbol": "P:kj.a(I)I#0",
-      "renamedSymbol": "P:kj.a(I)I#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.a(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -263062,7 +263142,7 @@
     },
     {
       "symbol": "P:kj.b(I)Ls;#0",
-      "renamedSymbol": "P:kj.b(I)Ls;#0",
+      "renamedSymbol": "P:SecondaryNodeDequeIterator.b(I)Ls;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272467,7 +272547,7 @@
     },
     {
       "symbol": "P:oe.<init>(Led;)V#0",
-      "renamedSymbol": "P:oe.<init>(LIntrusiveNodeHashTable;)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.<init>(LIntrusiveNodeHashTable;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272478,7 +272558,7 @@
     },
     {
       "symbol": "P:oe.a(B)V#0",
-      "renamedSymbol": "P:oe.a(B)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.reset(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272489,7 +272569,7 @@
     },
     {
       "symbol": "P:oe.a(I)V#0",
-      "renamedSymbol": "P:oe.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272500,7 +272580,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#0",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -272511,7 +272591,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#1",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#1",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -272522,7 +272602,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#2",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#2",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -272533,7 +272613,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#3",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#3",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -272544,7 +272624,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#4",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#4",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -272555,7 +272635,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#5",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#5",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -272566,7 +272646,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#6",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#6",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -272577,7 +272657,7 @@
     },
     {
       "symbol": "P:oe.a(IBIIIIII)V#7",
-      "renamedSymbol": "P:oe.a(IBIIIIII)V#7",
+      "renamedSymbol": "P:NodeHashTableIterator.a(IBIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -297914,7 +297994,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "14338acc1b9a2b196cc2ec10f112e8e1c1fa5ce56ccc58e9f1c6d2c6189ad223",
+      "outputSha256": "141e8b36d648d5c621c4c47b1aa6c83f13d995c20474ddf68e31d63bf668704e",
       "edits": [
         {
           "start": 78,
@@ -298337,6 +298417,13 @@
           "renamed": "GameCanvas"
         },
         {
+          "start": 17105,
+          "end": 17107,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
           "start": 17145,
           "end": 17147,
           "symbol": "C:gb",
@@ -298393,11 +298480,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 18951,
+          "end": 18953,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
           "start": 20332,
           "end": 20334,
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 20488,
+          "end": 20490,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 20922,
@@ -299393,11 +299494,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 57567,
+          "end": 57569,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
           "start": 57570,
           "end": 57571,
           "symbol": "M:oe.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 57587,
+          "end": 57589,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 57590,
@@ -300172,6 +300287,13 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 100182,
+          "end": 100184,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
           "start": 100195,
           "end": 100197,
           "symbol": "C:ci",
@@ -300240,6 +300362,20 @@
           "symbol": "C:ue",
           "original": "ue",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 102842,
+          "end": 102844,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 103303,
+          "end": 103305,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
         },
         {
           "start": 103501,
@@ -301796,7 +301932,7 @@
       "original": "bf.java",
       "renamed": "bf.java",
       "inputSha256": "83820787d01cd21c6e3aab8a5c4135f9433be16302a500568c935f1f626de963",
-      "outputSha256": "0c40a0f047146fe55f230ba5504c16da27f06f1643bbf002d43a09c33c67f648",
+      "outputSha256": "229b40c638db789429fdff32d4660af2e763d09e2c29dc7f1542f5916d93e25d",
       "edits": [
         {
           "start": 1548,
@@ -301918,11 +302054,39 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 7690,
+          "end": 7692,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 7728,
+          "end": 7730,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
           "start": 7748,
           "end": 7750,
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 7818,
+          "end": 7820,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 7856,
+          "end": 7858,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
         },
         {
           "start": 7884,
@@ -301937,6 +302101,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 8038,
+          "end": 8040,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
         },
         {
           "start": 8265,
@@ -303341,7 +303512,7 @@
       "original": "d.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "16a04084497e43ae05fa4aeb18e40377b8b78e63a11875840fb2ffb318b43c56",
-      "outputSha256": "196b58b54315f0dc73674ad8ec36aa8410620cc24e50bfe7577aad3d25451bae",
+      "outputSha256": "3c68a1f8354b6f37edd6500af40fe8b3a9ad3b66bde647aabac898f823689ba8",
       "edits": [
         {
           "start": 72,
@@ -303386,6 +303557,13 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 7417,
+          "end": 7419,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 8455,
           "end": 8457,
           "symbol": "C:wg",
@@ -303405,6 +303583,20 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 9942,
+          "end": 9944,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 10386,
+          "end": 10388,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 11241,
@@ -303573,6 +303765,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 22899,
+          "end": 22901,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 22925,
@@ -304036,8 +304235,15 @@
       "original": "di.java",
       "renamed": "di.java",
       "inputSha256": "be01e532ed2d4ff505524c1f4f8287c13dc175cddb88119bfaefa6730e862afb",
-      "outputSha256": "c3ab481f25553640244a68d33db6050ee7a8e4eb99f90abbeee994acc8ea0341",
+      "outputSha256": "cf0f6f7b12f50e976d41f035b0de9b32070c3404b0918f8ac72db6863db75fef",
       "edits": [
+        {
+          "start": 5734,
+          "end": 5736,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
         {
           "start": 7474,
           "end": 7476,
@@ -304172,7 +304378,7 @@
       "original": "dl.java",
       "renamed": "dl.java",
       "inputSha256": "68fb9d86e52749ceed581d13c0c28ab9eb215d4f29706062895ad328bef8b8ec",
-      "outputSha256": "bb6dfe9e0217b8ca7f96a9af7412c413c2e6468b0f67afa8123a3fd28c406b8e",
+      "outputSha256": "65f692ad87c7540a2acb9a837955c1dce5ea83b214a618b0135338f24a946f05",
       "edits": [
         {
           "start": 61,
@@ -304434,6 +304640,13 @@
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 65843,
+          "end": 65845,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 66334,
@@ -305120,7 +305333,7 @@
       "original": "ed.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "38d5b2c3afef1b9ed61f49d0aa784fa7b0238cdedbd8008d0edcf6a46767b699",
-      "outputSha256": "551a5cc4f4b6c1425d1babdfe354f2858336c4a832182a98496f684c2ad1d49a",
+      "outputSha256": "7264b8b13ddfbbba018868346157e65cb4c5aec4c3abbc14002b18d61347ba33",
       "edits": [
         {
           "start": 71,
@@ -305156,6 +305369,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 2948,
+          "end": 2950,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
         },
         {
           "start": 2989,
@@ -310810,7 +311030,7 @@
       "original": "ic.java",
       "renamed": "ic.java",
       "inputSha256": "2a9131b54e2c5f9d83538ee1d9721cbf2020d3ef97b6a187f11e8e29e1875088",
-      "outputSha256": "9fa0d2b5e016dd481095fcb0c66ddf229f261e940a40bf288fe324669f03be09",
+      "outputSha256": "da07abd1c49087a0363011680d534a6c1cb3610bae3daef8f34c4b7e790b91b1",
       "edits": [
         {
           "start": 80,
@@ -310839,6 +311059,20 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 2495,
+          "end": 2497,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 2616,
+          "end": 2618,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 2753,
@@ -312812,16 +313046,30 @@
     },
     {
       "original": "kj.java",
-      "renamed": "kj.java",
+      "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "d104c9927b836ca521616604dfdf7dee81ee16779cbe0b4beca9448ad183792c",
-      "outputSha256": "bca6475c570382edab40a9f2d35e4a57992d84586c0182b48ce189920b3c1c79",
+      "outputSha256": "65dd24d4ddea3a85d01aaec3f2762c5deff9ea02cddbe49f4598d84e8e2c7db2",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
         {
           "start": 108,
           "end": 110,
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 111,
+          "end": 118,
+          "symbol": "F:kj.field_h:Lui;",
+          "original": "field_h",
+          "renamed": "deque"
         },
         {
           "start": 160,
@@ -312831,11 +313079,53 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 163,
+          "end": 170,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 184,
           "end": 186,
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 187,
+          "end": 194,
+          "symbol": "F:kj.field_i:Ldk;",
+          "original": "field_i",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 385,
+          "end": 392,
+          "symbol": "F:kj.field_i:Ldk;",
+          "original": "field_i",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 411,
+          "end": 418,
+          "symbol": "F:kj.field_h:Lui;",
+          "original": "field_h",
+          "renamed": "deque"
+        },
+        {
+          "start": 453,
+          "end": 460,
+          "symbol": "F:kj.field_i:Ldk;",
+          "original": "field_i",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 524,
+          "end": 531,
+          "symbol": "F:kj.field_i:Ldk;",
+          "original": "field_i",
+          "renamed": "nextNode"
         },
         {
           "start": 536,
@@ -312845,11 +313135,25 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 580,
+          "end": 587,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 591,
           "end": 593,
           "symbol": "C:dk",
           "original": "dk",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 962,
+          "end": 964,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 965,
@@ -312859,11 +313163,32 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 1432,
+          "end": 1439,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 1511,
+          "end": 1518,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 1519,
           "end": 1520,
           "symbol": "M:dk.c(I)V",
           "original": "c",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 1539,
+          "end": 1546,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
         },
         {
           "start": 1585,
@@ -312873,11 +313198,67 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 1819,
+          "end": 1826,
+          "symbol": "F:kj.field_i:Ldk;",
+          "original": "field_i",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 1835,
+          "end": 1842,
+          "symbol": "F:kj.field_h:Lui;",
+          "original": "field_h",
+          "renamed": "deque"
+        },
+        {
+          "start": 1863,
+          "end": 1865,
+          "symbol": "M:kj.<init>(Lui;)V",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 1866,
           "end": 1868,
           "symbol": "C:ui",
           "original": "ui",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 1892,
+          "end": 1899,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 1937,
+          "end": 1944,
+          "symbol": "F:kj.field_h:Lui;",
+          "original": "field_h",
+          "renamed": "deque"
+        },
+        {
+          "start": 1970,
+          "end": 1977,
+          "symbol": "F:kj.field_i:Ldk;",
+          "original": "field_i",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 1985,
+          "end": 1992,
+          "symbol": "F:kj.field_h:Lui;",
+          "original": "field_h",
+          "renamed": "deque"
+        },
+        {
+          "start": 2025,
+          "end": 2032,
+          "symbol": "F:kj.field_d:Ldk;",
+          "original": "field_d",
+          "renamed": "lastReturned"
         },
         {
           "start": 2111,
@@ -314321,7 +314702,7 @@
       "original": "md.java",
       "renamed": "DirectByteStorage.java",
       "inputSha256": "05ad2d750e70599690c46da750f3687df6dc18ba7257843eeb8df99ed2464da8",
-      "outputSha256": "5d157ed3eb1af37a50a695f13669f967996b2388d81dc983a2bac29d5218a027",
+      "outputSha256": "7e216a28d47a3403b6454ab2f538371ecb7aaf3b8a4bd95f2a2f2dce4533a947",
       "edits": [
         {
           "start": 69,
@@ -314413,6 +314794,34 @@
           "symbol": "C:md",
           "original": "md",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 3697,
+          "end": 3699,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3744,
+          "end": 3746,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3808,
+          "end": 3810,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3884,
+          "end": 3886,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
         },
         {
           "start": 4491,
@@ -315944,7 +316353,7 @@
       "original": "n.java",
       "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "7c86603f8da8ed9c44bc20628866d692476ad7db45cffb51107d7445628e4144",
-      "outputSha256": "eff24076c834dfa1194325781fed0b1188a0a1761a2bbd9c3e032fd1241fdbcf",
+      "outputSha256": "b3f48258d3357e87c2ed1dd0de1d01461cf7bf2731dc8344ee4dee46e4196a75",
       "edits": [
         {
           "start": 50,
@@ -316106,6 +316515,13 @@
           "symbol": "F:n.field_r:Z",
           "original": "field_r",
           "renamed": "nameAvailable"
+        },
+        {
+          "start": 3631,
+          "end": 3633,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 4217,
@@ -317330,7 +317746,7 @@
       "original": "oc.java",
       "renamed": "oc.java",
       "inputSha256": "0c6d2eab39b47badb1359ac21b9a6c1d1a69befeaa9630a5dc7a9d21403d8858",
-      "outputSha256": "1f4c002393184c3f413427569ad23295910a1f7bbd1c62109de5419d3cd88732",
+      "outputSha256": "f309ad76647aeb10a4cd5761093b976ac7e191e8b5e944cd2ad5f321fa23fe13",
       "edits": [
         {
           "start": 1107,
@@ -317387,6 +317803,34 @@
           "symbol": "C:n",
           "original": "n",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 5311,
+          "end": 5313,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 5337,
+          "end": 5339,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 5826,
+          "end": 5828,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 6042,
+          "end": 6044,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 6577,
@@ -317623,16 +318067,30 @@
     },
     {
       "original": "oe.java",
-      "renamed": "oe.java",
+      "renamed": "NodeHashTableIterator.java",
       "inputSha256": "f56137fdcb05eadc599f6b5a314fa9f4a7bb049b0b7085e8e71352d7ca1e2f3d",
-      "outputSha256": "a7d744fa44d8dff407df1b35ed15562acccb5ca5f0368c2861fd33f56a2c4dde",
+      "outputSha256": "8c39d773267760f5755788a11a1047d6342f7d0193c97d16dd91933f9d975ccb",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:oe",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
         {
           "start": 154,
           "end": 156,
           "symbol": "C:am",
           "original": "am",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 157,
+          "end": 164,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
         },
         {
           "start": 203,
@@ -317642,11 +318100,165 @@
           "renamed": "IntrusiveNodeHashTable"
         },
         {
+          "start": 206,
+          "end": 213,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 231,
+          "end": 238,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
           "start": 252,
           "end": 254,
           "symbol": "C:am",
           "original": "am",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 255,
+          "end": 262,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 411,
+          "end": 418,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 437,
+          "end": 444,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 454,
+          "end": 461,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 540,
+          "end": 547,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 564,
+          "end": 571,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 642,
+          "end": 649,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 666,
+          "end": 673,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 681,
+          "end": 688,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 713,
+          "end": 720,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 758,
+          "end": 765,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 779,
+          "end": 786,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 812,
+          "end": 819,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 827,
+          "end": 834,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 848,
+          "end": 855,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 936,
+          "end": 943,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 951,
+          "end": 958,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 977,
+          "end": 984,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 1073,
+          "end": 1080,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 1160,
+          "end": 1167,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
         },
         {
           "start": 1168,
@@ -317656,11 +318268,53 @@
           "renamed": "unlink"
         },
         {
+          "start": 1190,
+          "end": 1197,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
           "start": 1236,
           "end": 1237,
           "symbol": "M:oe.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1467,
+          "end": 1468,
+          "symbol": "M:oe.a(B)V",
+          "original": "a",
+          "renamed": "reset"
+        },
+        {
+          "start": 1497,
+          "end": 1504,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 1557,
+          "end": 1564,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 1585,
+          "end": 1592,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 1600,
+          "end": 1607,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
         },
         {
           "start": 1733,
@@ -317670,11 +318324,151 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1822,
+          "end": 1829,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 1843,
+          "end": 1850,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 1864,
+          "end": 1871,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 1897,
+          "end": 1904,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 1921,
+          "end": 1928,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 1952,
+          "end": 1959,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 2041,
+          "end": 2048,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2057,
+          "end": 2064,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 2142,
+          "end": 2149,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2166,
+          "end": 2173,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2181,
+          "end": 2188,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2216,
+          "end": 2223,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 2276,
+          "end": 2283,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 2302,
+          "end": 2309,
+          "symbol": "F:oe.field_e:I",
+          "original": "field_e",
+          "renamed": "nextBucketIndex"
+        },
+        {
+          "start": 2334,
+          "end": 2341,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 2363,
+          "end": 2370,
+          "symbol": "F:oe.field_b:Lam;",
+          "original": "field_b",
+          "renamed": "nextNode"
+        },
+        {
+          "start": 3588,
+          "end": 3590,
+          "symbol": "M:oe.<init>(Led;)V",
+          "original": "oe",
+          "renamed": "NodeHashTableIterator"
+        },
+        {
           "start": 3591,
           "end": 3593,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 3617,
+          "end": 3624,
+          "symbol": "F:oe.field_f:Lam;",
+          "original": "field_f",
+          "renamed": "lastReturned"
+        },
+        {
+          "start": 3662,
+          "end": 3669,
+          "symbol": "F:oe.field_c:Led;",
+          "original": "field_c",
+          "renamed": "table"
+        },
+        {
+          "start": 3695,
+          "end": 3696,
+          "symbol": "M:oe.a(B)V",
+          "original": "a",
+          "renamed": "reset"
         },
         {
           "start": 3780,
@@ -318252,7 +319046,7 @@
       "original": "pb.java",
       "renamed": "pb.java",
       "inputSha256": "55b44f9e76828bbbd91347d8afe258db1486741e04649667b670b8432e844c19",
-      "outputSha256": "0b7f04f55de5a86ebf38c6322b3bb846080d636d2600e48a9c107c084ef4f519",
+      "outputSha256": "fa01805700c5ea8c1dab62afc9f1e1979805cbd023c46e9fddc04835c1ab8263",
       "edits": [
         {
           "start": 3231,
@@ -318260,6 +319054,27 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 6380,
+          "end": 6382,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 6831,
+          "end": 6833,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 7138,
+          "end": 7140,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 7725,
@@ -325181,7 +325996,7 @@
       "original": "se.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "195ef57a474e2badfb624fae51ccb35ee318c752d4ee0d76877b6f4d691770a4",
-      "outputSha256": "94dfb12e0b87402b5b7b02f5593b2097e207672f32f8cec8ba0507e3ebfc352f",
+      "outputSha256": "8a4291bd70123cef0a2cdbca949998c26031379ea12cee5b6f2858aa0b681c44",
       "edits": [
         {
           "start": 60,
@@ -325189,6 +326004,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 742,
+          "end": 744,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 1158,
@@ -325245,6 +326067,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 5155,
+          "end": 5157,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 5481,
@@ -325352,6 +326181,20 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 15400,
+          "end": 15402,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 15462,
+          "end": 15464,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
           "start": 16480,
           "end": 16481,
           "symbol": "M:fd.a(B)V",
@@ -325385,6 +326228,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 19617,
+          "end": 19619,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 19770,
@@ -325546,6 +326396,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 36423,
+          "end": 36425,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 37366,
@@ -327719,7 +328576,7 @@
       "original": "ui.java",
       "renamed": "DualLinkDeque.java",
       "inputSha256": "fdded426a90d797a96b6d865dd8df03140b0d0459ea522748f5c8cc90fe9428e",
-      "outputSha256": "ba924d040c85ff3b7f7bd5dc6551fba5cb5a1a7eb1f159ee4e55c2541f0c222f",
+      "outputSha256": "4a4e1bbe1d63b4da277cc9934598c52b799e285fd47ca77c2519f0769789de57",
       "edits": [
         {
           "start": 71,
@@ -327811,6 +328668,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 13678,
+          "end": 13680,
+          "symbol": "C:kj",
+          "original": "kj",
+          "renamed": "SecondaryNodeDequeIterator"
         },
         {
           "start": 13706,
@@ -330450,10 +331314,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "4ef372dab55cb4812db6c3ca37b104e4728c679b64f4d74264426fb4a8e5393d",
+    "rulesSha256": "8e2f1156941e2a1c9a3f46768f9a6e077c67c1a188a7fd0cc8470072880e24ed",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "9a24e8c19e720f9990d7983439e1fe223f8d58f8d7956f668d17737433722b2f",
+    "outputTreeSha256": "4002da2128103e22e86756b5fd4a1ef76ba0bb0c519f4e1c34e52f312b393620",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

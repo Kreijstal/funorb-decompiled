@@ -4,44 +4,44 @@
 import java.util.*;
 
 final class va implements Iterable {
-    he field_a;
+    DualLinkNode field_a;
 
-    final he a(boolean param0) {
-        he var2 = this.field_a.field_h;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (param0) {
           this.iterator();
           if (var2 != this.field_a) {
-            var2.d(12);
+            var2.unlinkSecondary(12);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_a) {
-          var2.d(12);
+          var2.unlinkSecondary(12);
           return var2;
         }
         return null;
     }
 
-    final void a(int param0, he param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
-          if (null != param1.field_i) {
-            param1.d(12);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary(12);
           }
-          param1.field_h = this.field_a;
-          param1.field_i = this.field_a.field_i;
-          param1.field_i.field_h = param1;
+          param1.secondaryNext = this.field_a;
+          param1.secondaryPrevious = this.field_a.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
           if (param0 > -66) {
-            this.field_a = (he) null;
+            this.field_a = (DualLinkNode) null;
           }
-          param1.field_h.field_i = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "va.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new rg(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final static int a(int param0) {

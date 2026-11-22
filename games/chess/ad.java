@@ -4,44 +4,44 @@
 final class ad {
     static km[] field_c;
     static String field_d;
-    private l field_g;
+    private DualLinkNode field_g;
     static boolean field_b;
-    private l field_e;
+    private DualLinkNode field_e;
     static int field_a;
     static dd[] field_f;
 
     final int c(int param0) {
         int var4 = Chess.field_G;
         int var2 = 0;
-        l var3 = this.field_g.field_p;
+        DualLinkNode var3 = this.field_g.secondaryNext;
         if (param0 != -19099) {
           field_f = (dd[]) null;
           while (var3 != this.field_g) {
             var2++;
-            var3 = var3.field_p;
+            var3 = var3.secondaryNext;
           }
           return var2;
         }
         while (var3 != this.field_g) {
           var2++;
-          var3 = var3.field_p;
+          var3 = var3.secondaryNext;
         }
         return var2;
     }
 
-    final l a(byte param0) {
-        l var2 = this.field_g.field_p;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_g.secondaryNext;
         if (param0 != -75) {
           byte[] var3 = (byte[]) null;
           ad.a(74, (byte[]) null);
           if (this.field_g != var2) {
-            var2.d(-1);
+            var2.unlinkSecondary(-1);
             return var2;
           }
           return null;
         }
         if (this.field_g != var2) {
-          var2.d(-1);
+          var2.unlinkSecondary(-1);
           return var2;
         }
         return null;
@@ -130,20 +130,20 @@ final class ad {
         }
     }
 
-    final void a(int param0, l param1) {
+    final void a(int param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_m != null) {
-            param1.d(-1);
+          if (param1.secondaryPrevious != null) {
+            param1.unlinkSecondary(-1);
           }
-          param1.field_m = this.field_g.field_m;
-          param1.field_p = this.field_g;
-          param1.field_m.field_p = param1;
-          param1.field_p.field_m = param1;
+          param1.secondaryPrevious = this.field_g.secondaryPrevious;
+          param1.secondaryNext = this.field_g;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
           if (param0 == 0) {
             return;
           }
@@ -164,18 +164,18 @@ final class ad {
     }
 
     public ad() {
-        this.field_g = new l();
-        this.field_g.field_p = this.field_g;
-        this.field_g.field_m = this.field_g;
+        this.field_g = new DualLinkNode();
+        this.field_g.secondaryNext = this.field_g;
+        this.field_g.secondaryPrevious = this.field_g;
     }
 
-    final l b(int param0) {
-        l var2 = this.field_g.field_p;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_g.secondaryNext;
         if (var2 == this.field_g) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_p;
+        this.field_e = var2.secondaryNext;
         if (param0 == -22585) {
           return var2;
         }
@@ -262,19 +262,19 @@ final class ad {
         }
     }
 
-    final l b(byte param0) {
-        l var2 = this.field_e;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_e;
         if (var2 == this.field_g) {
           this.field_e = null;
           return null;
         }
         if (param0 <= -64) {
-          this.field_e = var2.field_p;
+          this.field_e = var2.secondaryNext;
           return var2;
         }
-        l var3 = (l) null;
-        this.a(-31, (l) null);
-        this.field_e = var2.field_p;
+        DualLinkNode var3 = (DualLinkNode) null;
+        this.a(-31, (DualLinkNode) null);
+        this.field_e = var2.secondaryNext;
         return var2;
     }
 

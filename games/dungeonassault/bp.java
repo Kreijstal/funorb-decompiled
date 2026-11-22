@@ -138,7 +138,7 @@ final class bp {
           }
           if (var7 > 0 &&
             var6 > 0) {
-            id.a(var4_int, 0, (byte) 104, var6, var9, param1.field_B, var5, var7, gf.field_b, var8);
+            SecondaryNodeDequeIterator.a(var4_int, 0, (byte) 104, var6, var9, param1.field_B, var5, var7, gf.field_b, var8);
             return;
           }
           return;

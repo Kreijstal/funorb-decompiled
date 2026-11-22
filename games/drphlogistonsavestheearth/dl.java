@@ -133,7 +133,7 @@ final class dl extends si {
         try {
           var10 = nc.field_O.a(var6, (byte) -74);
           am.field_m = var10.i(121);
-          if (tf.field_kb.equals(oa.field_d)) {
+          if (tf.field_kb.equals(SecondaryNodeDequeIterator.field_d)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var10.field_D;

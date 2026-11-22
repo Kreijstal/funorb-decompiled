@@ -46,7 +46,7 @@ abstract class wb {
         var2 = Lexicominos.field_L ? 1 : 0;
         jj.field_d = null;
         gb.field_d = false;
-        if (ca.field_k) {
+        if (DualLinkNode.field_k) {
           jj.field_a.i(15);
           if (param0 == 50) {
             return;

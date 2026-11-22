@@ -220,7 +220,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (var9 != null) {
               this.field_A = Integer.parseInt(var9);
             }
-            kj.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            SecondaryNodeDequeIterator.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(param3, param2, 32, (byte) 121, param0, param1, this.field_p);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -287,7 +287,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = pj.a(la.b(false), kj.b(-109), 29280);
+            var5_int = pj.a(la.b(false), SecondaryNodeDequeIterator.b(-109), 29280);
             if (-1 != var5_int) {
               hj.a(ea.field_a, km.field_x, 0, var5_int);
               ea.field_a = null;
@@ -299,7 +299,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = fj.a(jm.a((byte) 93), this.field_A, vf.l(-1), q.c(-1), kj.a(param1 - 125), (byte) -8, qc.d(param1 ^ -750938500));
+            var5_intLifetime1 = fj.a(jm.a((byte) 93), this.field_A, vf.l(-1), q.c(-1), SecondaryNodeDequeIterator.a(param1 - 125), (byte) -8, qc.d(param1 ^ -750938500));
             if (var5_intLifetime1 != -1) {
               gm.a(26991, km.field_x, ea.field_a, var5_intLifetime1);
               km.field_x = null;
@@ -693,7 +693,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_105_1 = !(rd.field_d);
             ac.a(stackIn_102_0, stackIn_105_1, -1, ti.field_d);
           }
-          if (kj.field_b) {
+          if (SecondaryNodeDequeIterator.field_b) {
             MouseInput.a(-1);
           }
           if (hf.field_c == null) {

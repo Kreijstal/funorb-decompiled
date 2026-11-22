@@ -3,31 +3,31 @@
  */
 import java.util.*;
 
-final class dh implements Iterator {
-    private m field_c;
-    private int field_f;
+final class NodeHashTableIterator implements Iterator {
+    private m table;
+    private int nextBucketIndex;
     static java.math.BigInteger field_b;
-    private IntrusiveNode field_h;
-    private IntrusiveNode field_g;
+    private IntrusiveNode nextNode;
+    private IntrusiveNode lastReturned;
     static String field_d;
     static pc field_a;
     static String field_e;
 
     public final void remove() {
-        if (this.field_g == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_g.unlink(2);
-        this.field_g = null;
+        this.lastReturned.unlink(2);
+        this.lastReturned = null;
     }
 
-    private final void a(int param0) {
-        this.field_h = this.field_c.field_b[0].field_c;
-        this.field_f = 1;
+    private final void reset(int param0) {
+        this.nextNode = this.table.field_b[0].field_c;
+        this.nextBucketIndex = 1;
         if (param0 != -1) {
           return;
         }
-        this.field_g = null;
+        this.lastReturned = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -73,22 +73,22 @@ final class dh implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = Bounce.field_N;
-        if (this.field_h != this.field_c.field_b[-1 + this.field_f]) {
-          var1 = this.field_h;
-          this.field_g = var1;
-          this.field_h = var1.field_c;
+        if (this.nextNode != this.table.field_b[-1 + this.nextBucketIndex]) {
+          var1 = this.nextNode;
+          this.lastReturned = var1;
+          this.nextNode = var1.field_c;
           return var1;
         }
         do {
-          if (this.field_c.field_d <= this.field_f) {
+          if (this.table.field_d <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_f;
-          this.field_f = this.field_f + 1;
-          var1 = this.field_c.field_b[fieldTemp$0].field_c;
-        } while (this.field_c.field_b[this.field_f - 1] == var1);
-        this.field_g = var1;
-        this.field_h = var1.field_c;
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var1 = this.table.field_b[fieldTemp$0].field_c;
+        } while (this.table.field_b[this.nextBucketIndex - 1] == var1);
+        this.lastReturned = var1;
+        this.nextNode = var1.field_c;
         return var1;
     }
 
@@ -96,22 +96,22 @@ final class dh implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Bounce.field_N;
-        if (this.field_c.field_b[-1 + this.field_f] != this.field_h) {
+        if (this.table.field_b[-1 + this.nextBucketIndex] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.field_c.field_d <= this.field_f) {
+          if (this.table.field_d <= this.nextBucketIndex) {
             return false;
           }
-          fieldTemp$0 = this.field_f;
-          this.field_f = this.field_f + 1;
-          if (this.field_c.field_b[fieldTemp$0].field_c == this.field_c.field_b[this.field_f - 1]) {
-            this.field_h = this.field_c.field_b[-1 + this.field_f];
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (this.table.field_b[fieldTemp$0].field_c == this.table.field_b[this.nextBucketIndex - 1]) {
+            this.nextNode = this.table.field_b[-1 + this.nextBucketIndex];
             continue;
           }
           break;
         }
-        this.field_h = this.field_c.field_b[-1 + this.field_f].field_c;
+        this.nextNode = this.table.field_b[-1 + this.nextBucketIndex].field_c;
         return true;
     }
 
@@ -142,11 +142,11 @@ final class dh implements Iterator {
         field_a = null;
     }
 
-    dh(m param0) {
-        this.field_g = null;
+    NodeHashTableIterator(m param0) {
+        this.lastReturned = null;
         try {
-          this.field_c = param0;
-          this.a(-1);
+          this.table = param0;
+          this.reset(-1);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

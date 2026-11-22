@@ -67,11 +67,11 @@ final class tf {
             nf.d(0);
             return false;
           }
-          if (id.field_i == null) {
+          if (SecondaryNodeDequeIterator.field_i == null) {
             return true;
           }
-          df.a((byte) 11, new ja(id.field_i.a("", "huffman", (byte) -110)));
-          id.field_i = null;
+          df.a((byte) 11, new ja(SecondaryNodeDequeIterator.field_i.a("", "huffman", (byte) -110)));
+          SecondaryNodeDequeIterator.field_i = null;
           nf.d(0);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

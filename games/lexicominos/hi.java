@@ -111,7 +111,7 @@ final class hi {
               if (bc.field_H.field_d == var4) {
                 var5 = g.field_n;
               } else {
-                var5 = ec.field_c;
+                var5 = SecondaryNodeDequeIterator.field_c;
               }
             } else {
               var5 = ea.field_b;

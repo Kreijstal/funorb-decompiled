@@ -141,7 +141,7 @@ final class nk extends PacketBuffer {
             var6 = param2;
           }
           if (param3) {
-            stackIn_7_0 = l.a(param0, param1, (byte) 36, (String) (var6), var4_long);
+            stackIn_7_0 = DualLinkNode.a(param0, param1, (byte) 36, (String) (var6), var4_long);
             return stackIn_7_0;
           }
           stackIn_5_0 = (dm) null;

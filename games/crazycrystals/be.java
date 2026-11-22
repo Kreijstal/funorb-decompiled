@@ -63,7 +63,7 @@ final class be implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wk(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final void a(byte param0, DualLinkNode param1) {

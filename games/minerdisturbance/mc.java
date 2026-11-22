@@ -980,7 +980,7 @@ final class mc {
               ResourceArchive.field_e.a((byte) -45);
               this.field_h.c(var18, var17, var12, var2Lifetime1);
             } else {
-              gb.field_a.c(var18, var17, var12, var2Lifetime1);
+              NodeHashTableIterator.field_a.c(var18, var17, var12, var2Lifetime1);
             }
             var8_intLifetime1++;
           }
@@ -1183,7 +1183,7 @@ final class mc {
     private final void a(boolean param0, byte param1) {
         if (!param0) {
           this.field_s = nk.field_w;
-          this.field_n = gb.field_e;
+          this.field_n = NodeHashTableIterator.field_e;
           this.field_a = 0;
         } else {
           this.field_s = -1;

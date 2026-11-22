@@ -150,11 +150,11 @@ final class nj extends hl {
           jb.field_b = param1.readUnsignedShort(param0 ^ 674914996) << 5;
           var2_int = param1.readUnsignedByte(-93);
           jb.field_b = jb.field_b + (var2_int >> 3);
-          l.field_o = (7 & var2_int) << 18;
-          l.field_o = l.field_o + (param1.readUnsignedShort(674914976) << 2);
+          DualLinkNode.field_o = (7 & var2_int) << 18;
+          DualLinkNode.field_o = DualLinkNode.field_o + (param1.readUnsignedShort(674914976) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(-96);
           gm.field_c = 2064384 & var2_intLifetime1 << 15;
-          l.field_o = l.field_o + (var2_intLifetime1 >> 6);
+          DualLinkNode.field_o = DualLinkNode.field_o + (var2_intLifetime1 >> 6);
           gm.field_c = gm.field_c + (param1.readUnsignedByte(-106) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(-120);
           sl.field_e = var2_intLifetime2 << 16 & 65536;

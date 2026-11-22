@@ -62,7 +62,7 @@ final class eh extends IntrusiveNode {
           while (param1 != 0L) {
             var7 = param1;
             param1 = param1 / 37L;
-            var9 = il.field_f[(int)(-(37L * param1) + var7)];
+            var9 = NodeHashTableIterator.field_f[(int)(-(37L * param1) + var7)];
             if (var9 == 95) {
               var10 = var6.length() - 1;
               var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));

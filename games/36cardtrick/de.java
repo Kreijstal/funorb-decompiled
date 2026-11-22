@@ -58,12 +58,12 @@ final class de {
         var19 = Main.field_T;
         try {
           rh.field_h = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = il.field_a.length;
+          var1_int = NodeHashTableIterator.field_a.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_mg = il.field_a[var3];
+            var4_ref_mg = NodeHashTableIterator.field_a[var3];
             var4_ref_mg.a((byte) 116);
             kj.a((byte) 104, var3);
             var5 = var4_ref_mg.field_f + var4_ref_mg.field_e >> 1;
@@ -104,15 +104,15 @@ final class de {
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
-          for (var15 = 0; il.field_a.length > var15; var15++) {
+          for (var15 = 0; NodeHashTableIterator.field_a.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < il.field_a.length; var17_int++) {
+            for (var17_int = 1; var17_int < NodeHashTableIterator.field_a.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = il.field_a[var16];
+            var17 = NodeHashTableIterator.field_a[var16];
             kj.a((byte) 104, var16);
             for (var18 = 0; var18 < 3; var18++) {
               nl.field_c[var18] = nl.field_c[var18] + sk.field_b[var15][var18];

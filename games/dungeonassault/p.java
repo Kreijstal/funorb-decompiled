@@ -319,7 +319,7 @@ final class p extends qe {
                 gm.field_d.field_k.a(param3 + 42, (byte) 80)) {
                 var7 = var7 | 8;
               }
-              id.field_m[var7].h(param1, param0 + 12);
+              SecondaryNodeDequeIterator.field_m[var7].h(param1, param0 + 12);
             }
           }
         } else {
@@ -340,7 +340,7 @@ final class p extends qe {
             gm.field_d.field_k.a(param3 + 42, (byte) 80)) {
             var7 = var7 | 8;
           }
-          id.field_m[var7].h(param1, param0 + 12);
+          SecondaryNodeDequeIterator.field_m[var7].h(param1, param0 + 12);
         }
     }
 
@@ -1281,7 +1281,7 @@ final class p extends qe {
     private final void b(int param0) {
         rl.field_d = p.a(ri.field_d, 400);
         dm.field_a = p.a(i.field_r, 400);
-        id.field_m = p.a(mc.field_w, param0 - 2398);
+        SecondaryNodeDequeIterator.field_m = p.a(mc.field_w, param0 - 2398);
         int var2 = 390;
         int var3 = 300;
         bd.field_g = new cn(var2, var3);
@@ -1368,7 +1368,7 @@ final class p extends qe {
         ol.field_a = null;
         wm.field_c = null;
         bd.field_g = null;
-        id.field_m = null;
+        SecondaryNodeDequeIterator.field_m = null;
         hh.field_r = null;
         bn.field_f = null;
         super.c();

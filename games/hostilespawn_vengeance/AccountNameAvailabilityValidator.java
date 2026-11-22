@@ -113,7 +113,7 @@ final class AccountNameAvailabilityValidator extends hi {
             this.nameAvailable = var5.success;
           }
           if (this.nameAvailable) {
-            stackIn_16_0 = kj.field_a;
+            stackIn_16_0 = SecondaryNodeDequeIterator.field_a;
             return stackIn_16_0;
           }
           stackIn_14_0 = om.field_f;

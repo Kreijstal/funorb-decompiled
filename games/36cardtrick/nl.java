@@ -14,7 +14,7 @@ final class nl {
             ie.f(-11);
           }
           int var2_int = -107 % ((param1 + 26) / 62);
-          ti.a(he.field_g, (byte) 54, ck.field_G, sg.field_b);
+          ti.a(DualLinkNode.field_g, (byte) 54, ck.field_G, sg.field_b);
           ll.a(0, (byte) 115, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "nl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

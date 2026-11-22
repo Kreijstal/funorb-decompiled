@@ -24,21 +24,21 @@ final class PcmStreamMixer extends PcmStream {
         return (PcmStream) (this.field_m.f(2));
     }
 
-    private final void a(kd param0, hg param1) {
+    private final void a(IntrusiveNode param0, hg param1) {
         while (true) {
           if (param0 == this.field_l.field_b) {
             vf.a(param0, 0, param1);
-            this.field_n = ((hg) (this.field_l.field_b.field_f)).field_h;
+            this.field_n = ((hg) (this.field_l.field_b.next)).field_h;
             return;
           }
           if (((hg) (param0)).field_h <= param1.field_h) {
-            param0 = param0.field_f;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         vf.a(param0, 0, param1);
-        this.field_n = ((hg) (this.field_l.field_b.field_f)).field_h;
+        this.field_n = ((hg) (this.field_l.field_b.next)).field_h;
         return;
     }
 
@@ -85,7 +85,7 @@ final class PcmStreamMixer extends PcmStream {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.field_f, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_h = 0;
               this.a(var3);
@@ -139,7 +139,7 @@ final class PcmStreamMixer extends PcmStream {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.field_f, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_h = 0;
               this.a(var5);
@@ -150,9 +150,9 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void a(hg param0) {
-        param0.b((byte) -119);
+        param0.unlink((byte) -119);
         param0.a();
-        kd var2 = this.field_l.field_b.field_f;
+        IntrusiveNode var2 = this.field_l.field_b.next;
         if (var2 == this.field_l.field_b) {
           this.field_n = -1;
         } else {

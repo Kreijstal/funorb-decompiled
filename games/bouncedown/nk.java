@@ -742,7 +742,7 @@ final class nk {
                   if (0 <= this.field_i) {
                     this.a(this.field_g, var5Lifetime1, var6Lifetime1, var4Lifetime1, 21641);
                   } else {
-                    var17 = di.a(-108, ',', var6Lifetime1);
+                    var17 = SecondaryNodeDequeIterator.a(-108, ',', var6Lifetime1);
                     var25 = var17;
                     if (var17.length <= 2) {
                       discarded$0 = this.a(140, var5Lifetime1, 480, 1, var6Lifetime1, this.field_g - 75, 0, 360, 20066, 20);

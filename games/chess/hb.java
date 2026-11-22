@@ -178,7 +178,7 @@ final class hb {
                 var24 = param5.field_p[var23];
                 var25 = param5.field_D[var23];
                 var26 = param5.field_s[var23];
-                l.field_n[var23] = var9 + (var26 * var18 + (var12 * var24 + var15 * var25) >> 16);
+                DualLinkNode.field_n[var23] = var9 + (var26 * var18 + (var12 * var24 + var15 * var25) >> 16);
                 wk.field_d[var23] = var10 + (var26 * var19 + var13 * var24 + var25 * var16 >> 16);
                 ld.field_p[var23] = (var14 * var24 + (var17 * var25 + var20 * var26) >> 16) + var11;
                 var23++;
@@ -260,7 +260,7 @@ final class hb {
           if (param1 != -118) {
             return;
           }
-          hc.field_b = param0;
+          SecondaryNodeDequeIterator.field_b = param0;
           uk.a(false, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

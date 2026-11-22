@@ -31,7 +31,7 @@ final class ed implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new il(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final IntrusiveNode a(byte param0, long param1) {

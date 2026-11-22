@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me extends ca {
+final class me extends DualLinkNode {
     private int[][] field_q;
     static int field_v;
     private int[] field_s;
@@ -122,7 +122,7 @@ final class me extends ca {
             var15.field_i = var16[0];
             var15.field_h = true;
             var15.field_k = var3;
-            var15.b((byte) -128);
+            var15.unlink((byte) -128);
           } else {
             if (var2 != 1) {
               if (var2 == 2) {
@@ -134,7 +134,7 @@ final class me extends ca {
                 var13.field_k = wj.b(26770);
                 var13.field_i = var13.field_k[0];
                 var13.field_h = true;
-                var13.b((byte) -116);
+                var13.unlink((byte) -116);
               } else {
                 uj.a("A1: " + qj.h(-94), (Throwable) null, 1);
                 ck.$cfr$intArgs$b$e683eeaaf5b5(-32);
@@ -145,7 +145,7 @@ final class me extends ca {
                 ck.$cfr$intArgs$b$e683eeaaf5b5(-125);
                 return;
               }
-              var12.b((byte) -125);
+              var12.unlink((byte) -125);
             }
           }
           if (param0) {

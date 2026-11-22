@@ -320,7 +320,7 @@ final class cl extends rl implements nd {
         if (param0 >= -122) {
           return 47;
         }
-        return (int)(1000000000L / ca.field_h);
+        return (int)(1000000000L / DualLinkNode.field_h);
     }
 
     public final ma a(byte param0) {

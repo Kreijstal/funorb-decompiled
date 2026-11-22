@@ -102,16 +102,16 @@ final class bf {
               var9.field_j = 0L;
             } else {
               var6 = new gj(var10, var9.field_q);
-              this.field_b.a(var6, 1, var9.field_d);
+              this.field_b.a(var6, 1, var9.key);
               this.field_c.a(var6, (byte) 25);
               ((rh) ((Object) var6)).field_j = 0L;
-              var9.b((byte) -122);
-              var9.b(12);
+              var9.unlink((byte) -122);
+              var9.unlinkSecondary(12);
             }
             return var10;
           }
-          var9.b((byte) -124);
-          var9.b(param1 ^ 12);
+          var9.unlink((byte) -124);
+          var9.unlinkSecondary(param1 ^ 12);
           this.field_d = this.field_d + var9.field_q;
           return null;
         }
@@ -126,16 +126,16 @@ final class bf {
             var11.field_j = 0L;
           } else {
             var6Lifetime1 = new gj(var12, var11.field_q);
-            this.field_b.a(var6Lifetime1, 1, var11.field_d);
+            this.field_b.a(var6Lifetime1, 1, var11.key);
             this.field_c.a(var6Lifetime1, (byte) 25);
             ((rh) ((Object) var6Lifetime1)).field_j = 0L;
-            var11.b((byte) -122);
-            var11.b(12);
+            var11.unlink((byte) -122);
+            var11.unlinkSecondary(12);
           }
           return var12;
         }
-        var11.b((byte) -124);
-        var11.b(param1 ^ 12);
+        var11.unlink((byte) -124);
+        var11.unlinkSecondary(param1 ^ 12);
         this.field_d = this.field_d + var11.field_q;
         return null;
     }
@@ -200,8 +200,8 @@ final class bf {
           if (param0 == null) {
             return;
           }
-          param0.b((byte) -122);
-          param0.b(param1 + 3);
+          param0.unlink((byte) -122);
+          param0.unlinkSecondary(param1 + 3);
           this.field_d = this.field_d + param0.field_q;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

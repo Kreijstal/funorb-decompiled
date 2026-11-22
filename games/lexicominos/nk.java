@@ -35,7 +35,7 @@ abstract class nk extends GameAppletShell {
         ij.field_l = param3;
         gf.field_e = param5;
         this.g(7);
-        vk.clearStaticReferences(0);
+        NodeHashTableIterator.clearStaticReferences(0);
     }
 
     private final void h(int param0) {
@@ -163,7 +163,7 @@ abstract class nk extends GameAppletShell {
         if (bd.c(false)) {
           var3 = cl.p(param1 - 127) * 1200;
           if (this.field_w ||
-            !(ec.a(-28617) <= var3) &&
+            !(SecondaryNodeDequeIterator.a(-28617) <= var3) &&
             !(var3 >= rf.a(30448))) {
             this.field_w = false;
             ck.$cfr$intArgs$b$e683eeaaf5b5(-125);
@@ -303,7 +303,7 @@ abstract class nk extends GameAppletShell {
             de.field_b = fb.b(12898);
             jh.field_c = kf.g(0);
           }
-          vk.a(ej.field_d, param1 ^ 0, de.field_b, jh.field_c);
+          NodeHashTableIterator.a(ej.field_d, param1 ^ 0, de.field_b, jh.field_c);
           GzipDecompressor.field_a = null;
           we.field_h = null;
           ej.field_d = null;
@@ -717,7 +717,7 @@ abstract class nk extends GameAppletShell {
                                 return;
                               }
                               if (var2 == 18) {
-                                vk.a((byte) -117);
+                                NodeHashTableIterator.a((byte) -117);
                                 return;
                               }
                               uj.a("MGS1: " + qj.h(param0 ^ 6689), (Throwable) null, 1);

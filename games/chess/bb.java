@@ -152,9 +152,9 @@ final class bb {
           e.field_M = new ci(0L, var10);
           e.field_M.field_z = 2;
           e.field_M.field_Ab = il.a(0, 2039583, 30, false, false, 3815994);
-          l.field_j = new ci(0L, var10);
-          l.field_j.field_z = 2;
-          l.field_j.field_Ab = il.a(0, 2039583, 30, false, true, 3815994);
+          DualLinkNode.field_j = new ci(0L, var10);
+          DualLinkNode.field_j.field_z = 2;
+          DualLinkNode.field_j.field_Ab = il.a(0, 2039583, 30, false, true, 3815994);
           qn.field_P = new ci(0L, (ci) null);
           qn.field_P.field_cb = 1;
           qn.field_P.field_xb = (lh) ((Object) v.field_k);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj extends kd {
+final class cj extends IntrusiveNode {
     static volatile int field_i;
     byte[] field_h;
 

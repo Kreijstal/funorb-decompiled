@@ -91,7 +91,7 @@ final class ma {
         RuntimeException decompiledCaughtException = null;
         var6 = Main.field_T;
         try {
-          var2 = he.a(param1 - 21124, param0, "jagex-last-login-method");
+          var2 = DualLinkNode.a(param1 - 21124, param0, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_4_0 = bf.field_c;
             return stackIn_4_0;

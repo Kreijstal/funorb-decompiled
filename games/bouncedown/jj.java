@@ -22,7 +22,7 @@ final class jj {
           if (!param1) {
             field_a = (PlatformTaskDispatcher) null;
           }
-          if (dh.field_a != null && (param0 < 0 ||
+          if (NodeHashTableIterator.field_a != null && (param0 < 0 ||
             pj.field_a == b.field_b)) {
             if (0 == hh.field_p.position &&
               fa.a(101) > (10000L + wa.field_e)) {
@@ -30,7 +30,7 @@ final class jj {
             }
             if (0 < hh.field_p.position) {
               try {
-                dh.field_a.a(hh.field_p.position, hh.field_p.payload, 0, 0);
+                NodeHashTableIterator.field_a.a(hh.field_p.position, hh.field_p.payload, 0, 0);
                 wa.field_e = fa.a(-76);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

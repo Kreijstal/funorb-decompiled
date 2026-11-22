@@ -153,7 +153,7 @@ final class el {
     }
 
     final static String b(int param0) {
-        if (bk.field_c == ca.field_i) {
+        if (bk.field_c == DualLinkNode.field_i) {
           return wa.field_k;
         }
         if (param0 != 1) {

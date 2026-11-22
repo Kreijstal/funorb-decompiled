@@ -316,7 +316,7 @@ final class qf extends wb {
                   this.field_o.field_w = this.field_o.field_w + var6;
                   this.field_o.field_x.position = this.field_o.field_x.position + var6;
                   if (this.field_o.field_x.position == var5) {
-                    this.field_o.b(12);
+                    this.field_o.unlinkSecondary(12);
                     this.field_o.field_v = false;
                     this.field_o = null;
                   } else {

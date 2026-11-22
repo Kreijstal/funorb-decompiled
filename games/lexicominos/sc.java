@@ -22,7 +22,7 @@ final class sc {
             if (param0 != 8) {
             } else {
               param0 = 2;
-              if (ca.field_k) {
+              if (DualLinkNode.field_k) {
                 param2 = fk.field_j;
               } else {
                 param2 = l.field_C;
@@ -46,7 +46,7 @@ final class sc {
               if (param0 == 10) {
                 return;
               }
-              if (ca.field_k) {
+              if (DualLinkNode.field_k) {
                 return;
               }
               eb.field_b.d((byte) -100);
@@ -62,7 +62,7 @@ final class sc {
         if (param0 >= -32) {
           return;
         }
-        ec.field_c = param2;
+        SecondaryNodeDequeIterator.field_c = param2;
         ea.field_b = param3;
     }
 

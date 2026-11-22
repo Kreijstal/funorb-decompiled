@@ -100,7 +100,7 @@ final class db extends qe {
                         var5 = jk.a(new String[]{var9, var4}, ac.field_f, 30496);
                       }
                       var7 = -cp.field_R + var6;
-                      if (var7 < id.field_j.length) {
+                      if (var7 < SecondaryNodeDequeIterator.field_j.length) {
                         var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                         var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
                         var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
@@ -116,7 +116,7 @@ final class db extends qe {
                   }
                   if (var10 != 0) {
                     var7 = -cp.field_R + var6;
-                    if (var7 < id.field_j.length) {
+                    if (var7 < SecondaryNodeDequeIterator.field_j.length) {
                       var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                       var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
                       var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
@@ -125,7 +125,7 @@ final class db extends qe {
                 }
               } else {
                 var7 = -cp.field_R + var6;
-                if (var7 < id.field_j.length) {
+                if (var7 < SecondaryNodeDequeIterator.field_j.length) {
                   var8 = ib.a((byte) 115, 16760960, ab.field_d[var7]);
                   var9 = ib.a((byte) 115, 16760960, ka.field_b[var7]);
                   var5 = jk.a(new String[]{var9, var8, var4}, GzipDecompressor.field_b, 30496);
@@ -562,7 +562,7 @@ final class db extends qe {
         }
         var5_intLifetime3 = stackIn_49_0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!(id.field_j.length > var5_intLifetime3)))) {
+        while (!(decompiledNaturalLoopExit0 = (!(SecondaryNodeDequeIterator.field_j.length > var5_intLifetime3)))) {
           var6_intLifetime4 = cp.field_R + var5_intLifetime3;
           var15 = (int[]) null;
           stackIn_54_0 = (!o.a(gj.field_c, (int[]) null, var6_intLifetime4, gm.field_d, true)) ? 0 : 1;
@@ -1043,7 +1043,7 @@ final class db extends qe {
             var7 = (10 + 1 * var5) * fj.field_g[var4_int] / 10;
             stackIn_15_0 = (var7 <= gm.field_d.field_s) ? 0 : 16711680;
             var8 = stackIn_15_0;
-            field_v.c(jk.a(new String[]{Integer.toString(var7 / 10)}, ho.field_c, 30496), var2, 105 + var3, var8, -1);
+            field_v.c(jk.a(new String[]{Integer.toString(var7 / 10)}, NodeHashTableIterator.field_c, 30496), var2, 105 + var3, var8, -1);
             la.field_b.a(ByteStorage.field_a[var4_int], -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
             if (var9 != 0) {
               la.field_b.a(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);

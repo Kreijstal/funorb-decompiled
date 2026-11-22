@@ -280,18 +280,18 @@ final class pf {
             }
             uk.field_a = new String[var4];
             dm.a(sc.field_d, 0, uk.field_a, 0, var4);
-            rc.field_g = new String[-1 - var4 + var3_int];
-            dm.a(sc.field_d, 1 + var4, rc.field_g, 0, -1 - var4 + var3_int);
+            SecondaryNodeDequeIterator.field_g = new String[-1 - var4 + var3_int];
+            dm.a(sc.field_d, 1 + var4, SecondaryNodeDequeIterator.field_g, 0, -1 - var4 + var3_int);
             if (j.field_o.length >= uk.field_a.length) {
               stackIn_29_0 = j.field_o.length;
             } else {
               stackIn_29_0 = uk.field_a.length;
             }
             var5 = stackIn_29_0;
-            if (rc.field_g.length <= oe.field_c.length) {
+            if (SecondaryNodeDequeIterator.field_g.length <= oe.field_c.length) {
               stackIn_32_0 = oe.field_c.length;
             } else {
-              stackIn_32_0 = rc.field_g.length;
+              stackIn_32_0 = SecondaryNodeDequeIterator.field_g.length;
             }
             var6 = stackIn_32_0;
             var7 = 7 + var5 + var6;
@@ -307,7 +307,7 @@ final class pf {
             fb.field_d[5] = "";
             m.field_c[3] = 1;
             fb.field_d[2] = cf.field_a;
-            fb.field_d[3] = rc.field_h;
+            fb.field_d[3] = SecondaryNodeDequeIterator.field_h;
             em.field_e[0] = 5;
             em.field_e[1] = 2;
             fb.field_d[4] = ib.field_d;
@@ -327,11 +327,11 @@ final class pf {
               stackIn_44_0 = fb.field_d;
               stackIn_44_1 = var5 + (7 + var8Lifetime3);
               stackIn_44_2 = ~var8Lifetime3;
-              stackIn_44_3 = ~rc.field_g.length;
+              stackIn_44_3 = ~SecondaryNodeDequeIterator.field_g.length;
               if (stackIn_44_2 <= stackIn_44_3) {
                 stackIn_47_2 = "";
               } else {
-                stackIn_47_2 = rc.field_g[var8Lifetime3];
+                stackIn_47_2 = SecondaryNodeDequeIterator.field_g[var8Lifetime3];
               }
               stackIn_44_0[stackIn_44_1] = stackIn_47_2;
             }

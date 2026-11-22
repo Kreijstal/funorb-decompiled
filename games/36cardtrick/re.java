@@ -166,7 +166,7 @@ final class re {
           var2 = j.field_F + "<br><br>" + MouseInputHandler.field_g;
         } else {
           if (null == this.field_d.field_cb) {
-            this.field_d.field_cb = il.a(8, 3, 25404, fb.field_c[this.field_d.field_C], 1);
+            this.field_d.field_cb = NodeHashTableIterator.a(8, 3, 25404, fb.field_c[this.field_d.field_C], 1);
           }
           var3 = this.field_d.field_cb;
           if (!var3.field_o) {

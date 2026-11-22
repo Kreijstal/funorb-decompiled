@@ -141,7 +141,7 @@ final class of {
             return stackIn_10_0;
           }
           var7.unlink(-2193);
-          var7.d(param3);
+          var7.unlinkSecondary(param3);
           wc.field_v = wc.field_v - 1;
           var5 = qn.field_U;
           var5.f(param1, -123);

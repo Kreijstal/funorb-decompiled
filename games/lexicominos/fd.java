@@ -40,7 +40,7 @@ final class fd implements Runnable {
           Lexicominos.field_H = param3;
           cg.field_l = param2;
           wa.field_k = param5;
-          bk.field_c = ca.field_i;
+          bk.field_c = DualLinkNode.field_i;
           li.field_T = null;
           we.field_d = param6;
           return true;

@@ -215,7 +215,7 @@ final class vg {
           qa.field_f.field_a.f((byte) 109);
           if (null != ib.field_d) {
             if (sc.field_d.field_L != 0) {
-              hc.a(param1, (byte) -128);
+              SecondaryNodeDequeIterator.a(param1, (byte) -128);
             }
             if (aa.field_g.field_L != 0) {
               if (!ud.field_b) {

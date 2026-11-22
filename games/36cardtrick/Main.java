@@ -363,7 +363,7 @@ public final class Main extends c {
                   if (hb.field_d == 1) {
                     if (5 == rk.field_X &&
                       !dl.d(param0 + 97283608)) {
-                      this.field_cb = il.a(8, 3, 25404, fb.field_c[this.field_C], 1);
+                      this.field_cb = NodeHashTableIterator.a(8, 3, 25404, fb.field_c[this.field_C], 1);
                     }
                     if (ff.field_b == 3) {
                       cd.field_h = -1;
@@ -381,7 +381,7 @@ public final class Main extends c {
                 if (hb.field_d == 1) {
                   if (rk.field_X == 5 &&
                     !dl.d(0)) {
-                    this.field_cb = il.a(8, 3, 25404, fb.field_c[this.field_C], 1);
+                    this.field_cb = NodeHashTableIterator.a(8, 3, 25404, fb.field_c[this.field_C], 1);
                   }
                   cd.field_h = dj.field_a;
                 }
@@ -614,10 +614,10 @@ public final class Main extends c {
             if (fg.field_k) {
               if ((null != ra.field_d) &&
                 (decompiledFrameRemainder0 = !(!ra.field_d.field_j))) {
-                rg.field_e = ra.field_d.field_h;
-                nb.field_e = nb.field_e & ~rg.field_e;
-                ue.field_d = ue.field_d & ~rg.field_e;
-                db.field_m = db.field_m | rg.field_e;
+                SecondaryNodeDequeIterator.field_e = ra.field_d.field_h;
+                nb.field_e = nb.field_e & ~SecondaryNodeDequeIterator.field_e;
+                ue.field_d = ue.field_d & ~SecondaryNodeDequeIterator.field_e;
+                db.field_m = db.field_m | SecondaryNodeDequeIterator.field_e;
                 var2 = (dh) (ij.field_h.a((byte) 74));
                 while (true) {
                   if (var2 != null) {
@@ -2238,7 +2238,7 @@ public final class Main extends c {
           tf.g(-1);
           q.c(0);
           Crc32Table.clearStaticReferences(120);
-          il.b((byte) 38);
+          NodeHashTableIterator.b((byte) 38);
           cb.clearStaticReferences(-1962269296);
           nb.a(-98);
           r.b(19017);

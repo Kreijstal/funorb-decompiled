@@ -386,7 +386,7 @@ public final class MinerDisturbance extends ob {
             if (pl.field_k == null) {
               pl.field_k = jn.a("sub", -29553, "supervolcano", fl.field_f);
               il.field_s = jn.a("theking", -29553, "supervolcano", fl.field_f);
-              bc.field_b = jn.a("obylisk", -29553, "supervolcano", fl.field_f);
+              SecondaryNodeDequeIterator.field_b = jn.a("obylisk", -29553, "supervolcano", fl.field_f);
               aa.field_i = jn.a("mammoth", -29553, "supervolcano", fl.field_f);
               gh.field_a = jn.a("skeleton", -29553, "supervolcano", fl.field_f);
               rd.field_b = td.a("miner2oily", fl.field_f, "supervolcano", (byte) 109);
@@ -511,7 +511,7 @@ public final class MinerDisturbance extends ob {
           }
           if (null != this.field_Q &&
             fl.field_d) {
-            this.field_Q.a(jk.field_ab, param0 - 12, gb.field_e, nk.field_w);
+            this.field_Q.a(jk.field_ab, param0 - 12, NodeHashTableIterator.field_e, nk.field_w);
             if (null != this.field_Q &&
               !this.field_Q.field_o) {
               return;
@@ -1103,12 +1103,12 @@ public final class MinerDisturbance extends ob {
           if (u.b(-4440) < mk.b(99)) {
             this.field_O = false;
             if (field_ab != 0) {
-              this.field_bb = gb.field_e;
+              this.field_bb = NodeHashTableIterator.field_e;
               this.field_C = nk.field_w;
               this.field_O = true;
             }
           } else {
-            this.field_bb = gb.field_e;
+            this.field_bb = NodeHashTableIterator.field_e;
             this.field_C = nk.field_w;
             this.field_O = true;
           }
@@ -4017,7 +4017,7 @@ public final class MinerDisturbance extends ob {
           jn.a("locked_option", -29553, "", fl.field_f);
           jn.a("locked_option_end", -29553, "", fl.field_f);
           pk.field_d = jn.a("gold", -29553, "shop", fl.field_f);
-          gb.field_a = jn.a("sold", -29553, "shop", fl.field_f);
+          NodeHashTableIterator.field_a = jn.a("sold", -29553, "shop", fl.field_f);
           kd.field_r = jn.a("green_frame", -29553, "shop", fl.field_f);
           ib.field_a = jn.a("controls", -29553, "", fl.field_f);
           vc.field_p = new Sprite[9];
@@ -4901,8 +4901,8 @@ public final class MinerDisturbance extends ob {
           bl.b((byte) 79);
           oh.i(-116);
           ic.b(29);
-          gb.a(-102);
-          bc.a(35);
+          NodeHashTableIterator.a(-102);
+          SecondaryNodeDequeIterator.a(35);
           sl.a(param0 ^ -3036);
           jf.clearStaticReferences((byte) -63);
           ae.clearStaticReferences((byte) -67);
@@ -6427,7 +6427,7 @@ public final class MinerDisturbance extends ob {
         int var4 = 0;
         var4 = field_ab;
         try {
-          gb.b(-6129);
+          NodeHashTableIterator.b(-6129);
           var2_int = 111 % ((param0 - 7) / 42);
           stackIn_5_1 = (kf.field_d != null);
           this.a(stackIn_5_1, 18808);
@@ -6668,7 +6668,7 @@ public final class MinerDisturbance extends ob {
                 if ((stackIn_54_0 != stackIn_54_1 ||
                   !qe.field_b[1]) && (2 != var6 ||
                   !qe.field_b[19]) && qe.field_b[var6]) {
-                  if (hc.a(110, var4, 34, var3, nk.field_w, 33, gb.field_e)) {
+                  if (hc.a(110, var4, 34, var3, nk.field_w, 33, NodeHashTableIterator.field_e)) {
                     var2_int = var6;
                   }
                   var5++;
@@ -6688,13 +6688,13 @@ public final class MinerDisturbance extends ob {
                 break scanLoop1;
               }
               if (jk.field_ab == 0) {
-                if (hc.a(19, 65, 10, 572, nk.field_w, 48, gb.field_e)) {
+                if (hc.a(19, 65, 10, 572, nk.field_w, 48, NodeHashTableIterator.field_e)) {
                   var2_int = -2;
                   if (var10 == 0) {
                     break scanLoop1;
                   }
                 }
-                if (!hc.a(119, 75, this.field_G - this.field_W, 576, nk.field_w, 44, gb.field_e)) {
+                if (!hc.a(119, 75, this.field_G - this.field_W, 576, nk.field_w, 44, NodeHashTableIterator.field_e)) {
                   break scanLoop1;
                 }
                 var2_int = -3;
@@ -6717,17 +6717,17 @@ public final class MinerDisturbance extends ob {
           if (!ke.field_V &&
             il.e(-31391)) {
             if (this.field_C != nk.field_w ||
-              ~this.field_bb != ~gb.field_e) {
+              ~this.field_bb != ~NodeHashTableIterator.field_e) {
               this.field_O = false;
             }
             boolean decompiledFrameRemainder1 = true;
             this.field_C = nk.field_w;
-            this.field_bb = gb.field_e;
+            this.field_bb = NodeHashTableIterator.field_e;
             if ((this.field_O ||
               !(nk.field_w > 398) ||
               !(nk.field_w < 623) ||
-              !(gb.field_e > 429) ||
-              !(gb.field_e < 449)) && !this.field_O) {
+              !(NodeHashTableIterator.field_e > 429) ||
+              !(NodeHashTableIterator.field_e < 449)) && !this.field_O) {
               stackIn_94_0 = false;
               decompiledFrameRemainder1 = false;
             }

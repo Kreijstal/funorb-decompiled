@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class VorbisSample extends kd {
+final class VorbisSample extends IntrusiveNode {
     private static float[] field_o;
     private static float[] field_s;
     private static int field_L;

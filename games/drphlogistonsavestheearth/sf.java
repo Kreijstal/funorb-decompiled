@@ -304,7 +304,7 @@ final class sf {
               var6_int = var4_ref_vb.field_h;
               ac.field_d[0].field_e = null;
               var7 = var4_ref_vb.field_m;
-              ac.field_d[0].field_a = oa.field_d;
+              ac.field_d[0].field_a = SecondaryNodeDequeIterator.field_d;
               ac.field_d[0].field_d = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
                 ac.field_d[var8_int].field_a = var27.readString((byte) -57);
@@ -351,7 +351,7 @@ final class sf {
                   }
                   if (var21 != null &&
                     ta.a(6, var21)) {
-                    var8[1][var13] = oa.field_d;
+                    var8[1][var13] = SecondaryNodeDequeIterator.field_d;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;

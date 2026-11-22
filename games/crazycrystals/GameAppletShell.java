@@ -549,7 +549,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (MouseWheelInput.field_c > var2.width) {
                   return;
                 }
-                if (var2.height < wk.field_b) {
+                if (var2.height < SecondaryNodeDequeIterator.field_b) {
                   return;
                 }
               }
@@ -668,7 +668,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               rh.field_f = param5;
-              wk.field_b = param5;
+              SecondaryNodeDequeIterator.field_b = param5;
               ap.field_r = param6;
               MouseWheelInput.field_c = param6;
               pj.field_w = le.b((byte) -20);

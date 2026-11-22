@@ -18,7 +18,7 @@ final class tk {
         qf.field_c = 0;
         GzipInflater.field_f = new int[3];
         int var2 = -114 / ((param1 + 25) / 36);
-        ik.field_i = new ld[param0 * 15];
+        NodeHashTableIterator.field_i = new ld[param0 * 15];
         fh.field_b = param0;
     }
 
@@ -32,7 +32,7 @@ final class tk {
         if (this == gi.field_d) {
           return true;
         }
-        if (ik.field_e != this) {
+        if (NodeHashTableIterator.field_e != this) {
           return false;
         }
         return true;

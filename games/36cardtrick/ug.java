@@ -18,7 +18,7 @@ final class ug implements ci {
             String var4 = (String) null;
             ug.a(-0.46710100769996643f, 7, (String) null);
           }
-          he.field_g = param0;
+          DualLinkNode.field_g = param0;
           ck.field_G = param2;
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ug.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

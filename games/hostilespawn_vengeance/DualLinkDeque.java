@@ -355,7 +355,7 @@ final class DualLinkDeque implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new kj(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final DualLinkNode a(boolean param0) {

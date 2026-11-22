@@ -156,7 +156,7 @@ final class tj extends vm {
         int var7 = 0;
         var7 = Chess.field_G;
         try {
-          if (ik.field_e != tb.field_f) {
+          if (NodeHashTableIterator.field_e != tb.field_f) {
             return false;
           }
           if (param0 != 103) {

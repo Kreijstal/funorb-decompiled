@@ -138,7 +138,7 @@ class tn extends hc {
           }
           if (this.field_x) {
             var5_int = -this.field_u + (-param1 + nk.field_w);
-            var6 = -this.field_t - param0 + gb.field_e;
+            var6 = -this.field_t - param0 + NodeHashTableIterator.field_e;
             this.field_N = this.b(var6, -2, var5_int);
           }
           return;

@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class di implements Iterator {
-    private DualLinkNode field_c;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode lastReturned;
     static int[] field_b;
     static String field_a;
-    private DualLinkNode field_d;
-    private wh field_e;
+    private DualLinkNode nextNode;
+    private wh deque;
 
     public static void clearStaticReferences(boolean param0) {
         field_b = null;
@@ -34,27 +34,27 @@ final class di implements Iterator {
     }
 
     public final Object next() {
-        Object var1 = this.field_d;
-        if (this.field_e.field_a == var1) {
+        Object var1 = this.nextNode;
+        if (this.deque.field_a == var1) {
           var1 = null;
-          this.field_d = null;
+          this.nextNode = null;
         } else {
-          this.field_d = ((DualLinkNode) (var1)).field_l;
+          this.nextNode = ((DualLinkNode) (var1)).field_l;
         }
-        this.field_c = (DualLinkNode) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
     public final boolean hasNext() {
-        return this.field_d != this.field_e.field_a;
+        return this.nextNode != this.deque.field_a;
     }
 
-    di(wh param0) {
-        this.field_c = null;
+    SecondaryNodeDequeIterator(wh param0) {
+        this.lastReturned = null;
         try {
-          this.field_e = param0;
-          this.field_d = this.field_e.field_a.field_l;
-          this.field_c = null;
+          this.deque = param0;
+          this.nextNode = this.deque.field_a.field_l;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -112,11 +112,11 @@ final class di implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_c == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_c.unlinkSecondary(10);
-        this.field_c = null;
+        this.lastReturned.unlinkSecondary(10);
+        this.lastReturned = null;
     }
 
     static {

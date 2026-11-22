@@ -30,7 +30,7 @@ final class nf extends DualLinkNode {
         try {
           o.field_o.b(-92);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            id.field_b[var1_int] = 0L;
+            SecondaryNodeDequeIterator.field_b[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             jf.field_g[var1_intLifetime1] = 0L;

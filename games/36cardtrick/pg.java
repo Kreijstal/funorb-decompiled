@@ -99,7 +99,7 @@ final class pg {
         try {
           if (param1 != null) {
             param1.unlink(109);
-            param1.d(param0 ^ 103);
+            param1.unlinkSecondary(param0 ^ 103);
             this.field_e = this.field_e + param1.field_k;
           }
           if (param0 == 107) {
@@ -156,7 +156,7 @@ final class pg {
         Object var5 = var7.e(param1);
         if (var5 == null) {
           var7.unlink(100);
-          var7.d(12);
+          var7.unlinkSecondary(12);
           this.field_e = this.field_e + var7.field_k;
           return null;
         }
@@ -170,7 +170,7 @@ final class pg {
         this.field_g.a(-82, var6);
         ((pd) ((Object) var6)).field_j = 0L;
         var7.unlink(105);
-        var7.d(12);
+        var7.unlinkSecondary(12);
         return var5;
     }
 

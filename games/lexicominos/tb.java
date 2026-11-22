@@ -121,7 +121,7 @@ abstract class tb {
             var5.field_q = hi.a(param0, (byte) -77, 16, var5.field_q);
           }
           if (hl.a(true, param0)) {
-            var5.field_J = vk.a(0, param0, 16, var5.field_J);
+            var5.field_J = NodeHashTableIterator.a(0, param0, 16, var5.field_J);
             var6 = 0;
             var7 = 0;
             while (true) {

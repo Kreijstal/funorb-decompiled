@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class BitmapFont extends ca {
+abstract class BitmapFont extends DualLinkNode {
     int field_G;
     private byte[] field_u;
     private int[] field_x;

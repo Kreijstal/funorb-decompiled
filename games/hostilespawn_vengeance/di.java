@@ -165,7 +165,7 @@ final class di {
               var32 = var30 & 65280;
               var33 = (var32 * var28 & 16711842) >>> 8 | (var31 * var28 & -16711843) >>> 8;
               var33 = var33 + 65793 * var29;
-              oe.a(var22, (byte) -121, var23, var26, 8355711 & var33 >> 1, var25, var27, var24);
+              NodeHashTableIterator.a(var22, (byte) -121, var23, var26, 8355711 & var33 >> 1, var25, var27, var24);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

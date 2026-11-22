@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class cf extends ca {
+class cf extends DualLinkNode {
     final static boolean a(char param0, byte param1) {
         if (param1 != 78) {
           cf.c(5);
@@ -36,7 +36,7 @@ class cf extends ca {
 
     final static void a(fc param0, byte param1) {
         try {
-          vk.a(param0.field_w, 0, param0.field_F);
+          NodeHashTableIterator.a(param0.field_w, 0, param0.field_F);
           if (param1 != 50) {
             fc var3 = (fc) null;
             cf.a((fc) null, (byte) -22);

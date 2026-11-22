@@ -12,9 +12,9 @@ final class tl {
     int field_c;
 
     final static void a(boolean param0, ng param1) {
-        kd var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        kd var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         ng var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -25,14 +25,14 @@ final class tl {
         try {
           var2 = param1.field_b;
           do {
-            var3 = var2.field_f;
-            var2.field_c = var3;
+            var3 = var2.next;
+            var2.previous = var3;
             var2 = var3;
           } while (var2 != param1.field_b);
           var2 = param1.field_b;
           do {
-            var3 = var2.field_c;
-            var3.field_f = var2;
+            var3 = var2.previous;
+            var3.next = var2;
             var2 = var3;
           } while (param1.field_b != var2);
           if (!param0) {

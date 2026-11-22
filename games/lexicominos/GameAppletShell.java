@@ -690,7 +690,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    jj.field_c = bg.field_a.a((byte) 91, ca.field_h);
+                    jj.field_c = bg.field_a.a((byte) 91, DualLinkNode.field_h);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;

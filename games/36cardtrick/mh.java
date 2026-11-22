@@ -37,7 +37,7 @@ class mh {
           var2 = (!dl.d(0)) ? 1 : 0;
         }
         if (null == wc.field_A &&
-          rg.field_a) {
+          SecondaryNodeDequeIterator.field_a) {
           AccountRequestState.a(var2, (byte) 116, param1);
         }
     }

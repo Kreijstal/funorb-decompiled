@@ -38,7 +38,7 @@ final class dh implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new id(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final static void a(int param0, int param1, int param2, int param3) {

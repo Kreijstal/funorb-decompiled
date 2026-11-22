@@ -438,7 +438,7 @@ final class je {
           return pl.field_k;
         }
         if (field_T == 2) {
-          return bc.field_b;
+          return SecondaryNodeDequeIterator.field_b;
         }
         if (field_T == 3) {
           return aa.field_i;

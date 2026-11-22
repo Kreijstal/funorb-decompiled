@@ -2817,7 +2817,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_button_tryagain", (byte) 24);
                 if (null != var2) {
-                  tm.field_a = va.a(0, var2);
+                  SecondaryNodeDequeIterator.field_a = va.a(0, var2);
                 }
                 var2 = ha.a("graphics_ui_fs_countdown", (byte) 88);
                 if (null != var2) {

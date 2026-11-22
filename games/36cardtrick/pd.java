@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pd extends he {
+abstract class pd extends DualLinkNode {
     int field_k;
     static int field_l;
     private static String field_z;

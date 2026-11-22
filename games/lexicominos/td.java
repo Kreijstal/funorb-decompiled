@@ -91,7 +91,7 @@ final class td {
             var4_ref_c = (c) (((ng) (Object) stackIn_12_0).a(stackIn_13_1));
             if (var4_ref_c != null &&
               var2_long > var4_ref_c.field_l) {
-              var4_ref_c.b((byte) -119);
+              var4_ref_c.unlink((byte) -119);
               a.field_c = var4_ref_c.field_h.length;
               ig.field_a.position = 0;
               for (var5_int = 0; a.field_c > var5_int; var5_int++) {

@@ -154,7 +154,7 @@ final class a extends ch {
                   this.field_j.field_t = this.field_j.field_t + var6;
                   this.field_j.field_s.position = this.field_j.field_s.position + var6;
                   if (this.field_j.field_s.position == var5) {
-                    this.field_j.d(12);
+                    this.field_j.unlinkSecondary(12);
                     this.field_j.field_n = false;
                     this.field_j = null;
                   } else {

@@ -3,36 +3,36 @@
  */
 import java.util.*;
 
-final class gb implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static int field_e;
     static Sprite field_a;
-    private sd field_f;
-    private IntrusiveNode field_c;
-    private int field_b;
-    private IntrusiveNode field_d;
+    private sd table;
+    private IntrusiveNode lastReturned;
+    private int nextBucketIndex;
+    private IntrusiveNode nextNode;
 
     public final boolean hasNext() {
         IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
         var2 = MinerDisturbance.field_ab;
-        if (this.field_f.field_b[this.field_b - 1] != this.field_d) {
+        if (this.table.field_b[this.nextBucketIndex - 1] != this.nextNode) {
           return true;
         }
         while (true) {
-          if (this.field_b >= this.field_f.field_f) {
+          if (this.nextBucketIndex >= this.table.field_f) {
             return false;
           }
-          fieldTemp$0 = this.field_f.field_b;
-          fieldTemp$1 = this.field_b;
-          this.field_b = this.field_b + 1;
-          if (fieldTemp$0[fieldTemp$1].field_f == this.field_f.field_b[-1 + this.field_b]) {
-            this.field_d = this.field_f.field_b[-1 + this.field_b];
+          fieldTemp$0 = this.table.field_b;
+          fieldTemp$1 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (fieldTemp$0[fieldTemp$1].field_f == this.table.field_b[-1 + this.nextBucketIndex]) {
+            this.nextNode = this.table.field_b[-1 + this.nextBucketIndex];
             continue;
           }
           break;
         }
-        this.field_d = this.field_f.field_b[this.field_b - 1].field_f;
+        this.nextNode = this.table.field_b[this.nextBucketIndex - 1].field_f;
         return true;
     }
 
@@ -88,7 +88,7 @@ final class gb implements Iterator {
         if (param0 <= -77) {
           return;
         }
-        gb.b(92);
+        NodeHashTableIterator.b(92);
     }
 
     public final Object next() {
@@ -97,36 +97,36 @@ final class gb implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = MinerDisturbance.field_ab;
-        if (this.field_d != this.field_f.field_b[this.field_b - 1]) {
-          var1 = this.field_d;
-          this.field_c = var1;
-          this.field_d = var1.field_f;
+        if (this.nextNode != this.table.field_b[this.nextBucketIndex - 1]) {
+          var1 = this.nextNode;
+          this.lastReturned = var1;
+          this.nextNode = var1.field_f;
           return var1;
         }
         do {
-          if (this.field_f.field_f <= this.field_b) {
+          if (this.table.field_f <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_f.field_b;
-          fieldTemp$1 = this.field_b;
-          this.field_b = this.field_b + 1;
+          fieldTemp$0 = this.table.field_b;
+          fieldTemp$1 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
           var1 = fieldTemp$0[fieldTemp$1].field_f;
-        } while (this.field_f.field_b[this.field_b - 1] == var1);
-        this.field_d = var1.field_f;
-        this.field_c = var1;
+        } while (this.table.field_b[this.nextBucketIndex - 1] == var1);
+        this.nextNode = var1.field_f;
+        this.lastReturned = var1;
         return var1;
     }
 
-    private final void c(int param0) {
-        this.field_c = null;
+    private final void reset(int param0) {
+        this.lastReturned = null;
         if (param0 > 113) {
-          this.field_d = this.field_f.field_b[0].field_f;
-          this.field_b = 1;
+          this.nextNode = this.table.field_b[0].field_f;
+          this.nextBucketIndex = 1;
           return;
         }
-        this.field_c = (IntrusiveNode) null;
-        this.field_d = this.field_f.field_b[0].field_f;
-        this.field_b = 1;
+        this.lastReturned = (IntrusiveNode) null;
+        this.nextNode = this.table.field_b[0].field_f;
+        this.nextBucketIndex = 1;
     }
 
     final static void a(int param0, String param1) {
@@ -141,22 +141,22 @@ final class gb implements Iterator {
         }
     }
 
-    gb(sd param0) {
-        this.field_c = null;
+    NodeHashTableIterator(sd param0) {
+        this.lastReturned = null;
         try {
-          this.field_f = param0;
-          this.c(123);
+          this.table = param0;
+          this.reset(123);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void remove() {
-        if (null == this.field_c) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_c.unlink(34);
-        this.field_c = null;
+        this.lastReturned.unlink(34);
+        this.lastReturned = null;
     }
 
     static {

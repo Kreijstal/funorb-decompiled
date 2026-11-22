@@ -21,7 +21,7 @@ final class vl extends hl {
 
     final static String c(int param0) {
         if (DelegatingCanvas.field_f == ol.field_i) {
-          return ho.field_i;
+          return NodeHashTableIterator.field_i;
         }
         if (DelegatingCanvas.field_f == wd.field_d) {
           return bf.field_o;

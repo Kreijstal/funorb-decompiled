@@ -1099,7 +1099,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("playfreeversion", 50);
                 if (var2 != null) {
-                  ho.field_f = dj.a(var2, false);
+                  NodeHashTableIterator.field_f = dj.a(var2, false);
                 }
                 var2 = rp.a("reloadgame", 104);
                 if (var2 != null) {
@@ -1665,7 +1665,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_alert_doublespace", 102);
                 if (var2 != null) {
-                  id.field_c = dj.a(var2, false);
+                  SecondaryNodeDequeIterator.field_c = dj.a(var2, false);
                 }
                 var2 = rp.a("create_alert_passchars", 120);
                 if (var2 != null) {
@@ -1841,7 +1841,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("waitingfor_music", 45);
                 if (var2 != null) {
-                  id.field_f = dj.a(var2, false);
+                  SecondaryNodeDequeIterator.field_f = dj.a(var2, false);
                 }
                 var2 = rp.a("waitingfor_instruments", param0 + 27159);
                 if (var2 != null) {
@@ -2767,7 +2767,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("fs_timeout", 91);
                 if (null != var2) {
-                  id.field_g = dj.a(var2, false);
+                  SecondaryNodeDequeIterator.field_g = dj.a(var2, false);
                 }
                 var2 = rp.a("fs_button_tryagain", 114);
                 if (null != var2) {

@@ -238,7 +238,7 @@ final class he extends ip {
           DualLinkNode.field_m[21] = vf.field_y.toUpperCase();
           DualLinkNode.field_m[22] = ag.field_b.toUpperCase();
           DualLinkNode.field_m[23] = uj.field_e.toUpperCase();
-          DualLinkNode.field_m[24] = id.field_k.toUpperCase();
+          DualLinkNode.field_m[24] = SecondaryNodeDequeIterator.field_k.toUpperCase();
           DualLinkNode.field_m[26] = KeyboardInput.field_d.toUpperCase();
           DualLinkNode.field_m[25] = an.field_y.toUpperCase();
           DualLinkNode.field_m[27] = hk.field_a.toUpperCase();
@@ -620,7 +620,7 @@ final class he extends ip {
           }
           var3_ref_StringLifetime47 = fg.field_o;
           var4Lifetime47 = nb.field_c;
-          var5Lifetime13 = ho.field_e;
+          var5Lifetime13 = NodeHashTableIterator.field_e;
           if (null != gh.field_i[13]) {
             gh.field_i[13].field_o = var5Lifetime13;
             gh.field_i[13].field_z = var3_ref_StringLifetime47;
@@ -843,7 +843,7 @@ final class he extends ip {
             cc.field_e[var3Lifetime3 + ok.field_z] = nj.field_c[var3Lifetime3];
             cc.field_e[ok.field_z + (rj.field_l + var3Lifetime3)] = lh.field_n[var3Lifetime3];
           }
-          for (var3Lifetime4 = 0; var3Lifetime4 < id.field_j.length; var3Lifetime4++) {
+          for (var3Lifetime4 = 0; var3Lifetime4 < SecondaryNodeDequeIterator.field_j.length; var3Lifetime4++) {
             cc.field_e[cp.field_R + var3Lifetime4] = wm.field_i[var3Lifetime4];
             cc.field_e[var3Lifetime4 + (rj.field_l + cp.field_R)] = wm.field_d[var3Lifetime4];
           }

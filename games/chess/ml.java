@@ -153,8 +153,8 @@ final class ml {
             GzipInflater.field_f[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; qf.field_c > var2_intLifetime1; var2_intLifetime1++) {
-            if (param1.field_k == ik.field_i[var2_intLifetime1].field_k) {
-              dupTemp$3 = ik.field_i[var2_intLifetime1].b(2);
+            if (param1.field_k == NodeHashTableIterator.field_i[var2_intLifetime1].field_k) {
+              dupTemp$3 = NodeHashTableIterator.field_i[var2_intLifetime1].b(2);
               GzipInflater.field_f[dupTemp$3] = GzipInflater.field_f[dupTemp$3] + 1;
             }
           }
@@ -166,8 +166,8 @@ final class ml {
           }
           for (var3 = 0; var3 < qf.field_c; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param1.field_k == ik.field_i[var3].field_k) {
-              var4 = ik.field_i[var3].b(2);
+            if (param1.field_k == NodeHashTableIterator.field_i[var3].field_k) {
+              var4 = NodeHashTableIterator.field_i[var3].b(2);
               if (GzipInflater.field_f[var4] > fh.field_b) {
                 GzipInflater.field_f[var4] = GzipInflater.field_f[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -176,13 +176,13 @@ final class ml {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              ik.field_i[incrementValue$2] = ik.field_i[var3];
+              NodeHashTableIterator.field_i[incrementValue$2] = NodeHashTableIterator.field_i[var3];
             }
           }
           qf.field_c = var2_intLifetime2;
           fieldTemp$1 = qf.field_c;
           qf.field_c = qf.field_c + 1;
-          ik.field_i[fieldTemp$1] = param1;
+          NodeHashTableIterator.field_i[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

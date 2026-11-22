@@ -196,7 +196,7 @@ final class u extends gd {
               }
             }
           }
-          ho.b((byte) -36);
+          NodeHashTableIterator.b((byte) -36);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

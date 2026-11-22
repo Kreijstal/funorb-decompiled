@@ -129,7 +129,7 @@ class fe extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.b(gb.field_e, param1, param0, nk.field_w, -102) ? 1 : 0;
+          var5_int = this.b(NodeHashTableIterator.field_e, param1, param0, nk.field_w, -102) ? 1 : 0;
           if (param2 < 49) {
             this.field_A = (ad) null;
           }
@@ -315,7 +315,7 @@ class fe extends IntrusiveNode {
             this.g(4966);
             if (var7 != 0) {
               if (0 != ki.field_n) {
-                this.a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, this, param2);
+                this.a(param1, ki.field_n, NodeHashTableIterator.field_e, nk.field_w, (byte) -123, this, param2);
               }
               if (jk.field_ab != 0) {
                 if (this.a(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
@@ -325,7 +325,7 @@ class fe extends IntrusiveNode {
               }
               if (CipherPacketBuffer.field_B == 0 &&
                 nb.field_f != 0) {
-                this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
+                this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
                 var8 = j.field_d;
                 if (var8 != null) {
                   if (var8.field_y instanceof cd) {
@@ -361,7 +361,7 @@ class fe extends IntrusiveNode {
                 tg.a(-95, this.h(-27867));
                 return param0;
               }
-              this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
+              this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
               var9 = j.field_d;
               if (var9 != null) {
                 if (var9.field_y instanceof cd) {
@@ -376,7 +376,7 @@ class fe extends IntrusiveNode {
               tg.a(-95, this.h(-27867));
               return param0;
             }
-            this.a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, this, param2);
+            this.a(param1, ki.field_n, NodeHashTableIterator.field_e, nk.field_w, (byte) -123, this, param2);
           }
           regionExit1: {
             if (jk.field_ab != 0) {
@@ -390,7 +390,7 @@ class fe extends IntrusiveNode {
                 this.g(4966);
                 if (CipherPacketBuffer.field_B == 0 &&
                   nb.field_f != 0) {
-                  this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
+                  this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
                   var10 = j.field_d;
                   if (var10 == null) {
                     nb.field_f = CipherPacketBuffer.field_B;
@@ -429,7 +429,7 @@ class fe extends IntrusiveNode {
           }
           if (CipherPacketBuffer.field_B == 0 &&
             nb.field_f != 0) {
-            this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
+            this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
             var11 = j.field_d;
             if (var11 != null) {
               if (var11.field_y instanceof cd) {

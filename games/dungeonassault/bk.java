@@ -207,7 +207,7 @@ final class bk implements Runnable {
             }
             CombatState.a(0, 10L);
             Object var5 = (Object) null;
-            ho.a(this.field_h, (Object) null, (byte) -32);
+            NodeHashTableIterator.a(this.field_h, (Object) null, (byte) -32);
           }
         } catch (Exception exception) {
           String var6 = (String) null;

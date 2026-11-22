@@ -1337,7 +1337,7 @@ final class c extends sc {
           }
           var2Lifetime178 = wm.a("howToFireHomingMissiles", (byte) 28);
           if (var2Lifetime178 != null) {
-            tm.field_e = va.a(0, var2Lifetime178);
+            SecondaryNodeDequeIterator.field_e = va.a(0, var2Lifetime178);
           }
           var2Lifetime179 = wm.a("oneHomingMissile", (byte) 52);
           if (null != var2Lifetime179) {

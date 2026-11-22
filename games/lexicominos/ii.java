@@ -40,7 +40,7 @@ final class ii extends ql implements jk {
           var4.field_o = 50;
           var4.field_i = (rd) ((Object) new ik(cl.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 104, var4);
-          this.field_R = this.a((vd) (this), true, vk.field_d);
+          this.field_R = this.a((vd) (this), true, NodeHashTableIterator.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

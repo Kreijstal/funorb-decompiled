@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class l extends IntrusiveNode {
-    l field_p;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode secondaryNext;
     static int field_o;
     static int[] field_n;
-    l field_m;
+    DualLinkNode secondaryPrevious;
     static String field_k;
     static ci field_j;
-    long field_l;
+    long secondaryKey;
 
-    final long a(int param0) {
+    final long getSecondaryKey(int param0) {
         if (param0 != 0) {
           return -20L;
         }
-        return this.field_l;
+        return this.secondaryKey;
     }
 
     final static dm a(boolean param0, String param1, byte param2, String param3, long param4) {
@@ -39,7 +39,7 @@ class l extends IntrusiveNode {
             return (dm) ((Object) stackIn_5_0);
           }
           if (param2 <= 32) {
-            l.a(true, -31, (byte) -69, false);
+            DualLinkNode.a(true, -31, (byte) -69, false);
           }
           stackIn_11_0 = new ph(param4, param1);
           return (dm) ((Object) stackIn_11_0);
@@ -63,15 +63,15 @@ class l extends IntrusiveNode {
         }
     }
 
-    final void d(int param0) {
-        if (null == this.field_m) {
+    final void unlinkSecondary(int param0) {
+        if (null == this.secondaryPrevious) {
           return;
         }
-        this.field_m.field_p = this.field_p;
-        this.field_p.field_m = this.field_m;
-        this.field_m = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious = null;
         if (param0 == -1) {
-          this.field_p = null;
+          this.secondaryNext = null;
           return;
         }
     }
@@ -171,7 +171,7 @@ class l extends IntrusiveNode {
                     if (param2 == -86) {
                       return;
                     }
-                    l.a(true, -111, (byte) 19, true);
+                    DualLinkNode.a(true, -111, (byte) 19, true);
                     return;
                   }
                   if (hj.field_i) {
@@ -184,7 +184,7 @@ class l extends IntrusiveNode {
                   stackIn_44_1 = (param3) && (ak.a(true)) && (var4 == 0);
                   jb.a(stackIn_43_0, stackIn_44_1);
                   if (param2 != -86) {
-                    l.a(true, -111, (byte) 19, true);
+                    DualLinkNode.a(true, -111, (byte) 19, true);
                   }
                   return;
                 }
@@ -207,33 +207,33 @@ class l extends IntrusiveNode {
         if (param2 == -86) {
           return;
         }
-        l.a(true, -111, (byte) 19, true);
+        DualLinkNode.a(true, -111, (byte) 19, true);
     }
 
-    final void a(long param0, byte param1) {
-        if (null != this.field_m) {
+    final void setSecondaryKey(long param0, byte param1) {
+        if (null != this.secondaryPrevious) {
           throw new RuntimeException();
         }
-        this.field_l = param0;
+        this.secondaryKey = param0;
         if (param1 == 71) {
           return;
         }
-        this.field_l = -17L;
+        this.secondaryKey = -17L;
     }
 
     public static void c(byte param0) {
         field_n = null;
         field_j = null;
         if (param0 > -24) {
-          l.c((byte) 50);
+          DualLinkNode.c((byte) 50);
           field_k = null;
           return;
         }
         field_k = null;
     }
 
-    final boolean e(int param0) {
-        if (this.field_m == null) {
+    final boolean isSecondaryLinked(int param0) {
+        if (this.secondaryPrevious == null) {
           return false;
         }
         if (param0 != -4) {
@@ -242,7 +242,7 @@ class l extends IntrusiveNode {
         return true;
     }
 
-    protected l() {
+    protected DualLinkNode() {
     }
 
     static {

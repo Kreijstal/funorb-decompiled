@@ -50,13 +50,13 @@ final class qh extends hk {
           while (var4_int < 23 * (1 + param2) >> 2) {
             array$0 = new dl[bp.field_c[var4_int]];
             vj.field_a[var4_int] = array$0;
-            if (wk.field_c[var4_int] == null) {
+            if (SecondaryNodeDequeIterator.field_c[var4_int] == null) {
               for (var5 = 0; var5 < bp.field_c[var4_int]; var5++) {
                 vj.field_a[var4_int][var5] = vj.field_a[var4_int - 1][var5].c();
               }
             } else {
-              if (wk.field_c[var4_int] != "") {
-                sd.field_R = bf.a(-1, "sprites_player_" + wk.field_c[var4_int], "", param3);
+              if (SecondaryNodeDequeIterator.field_c[var4_int] != "") {
+                sd.field_R = bf.a(-1, "sprites_player_" + SecondaryNodeDequeIterator.field_c[var4_int], "", param3);
               }
               for (var5 = 0; var5 < fg.field_j[var4_int]; var5++) {
                 vj.field_a[var4_int][var5] = sd.field_R[KeyboardInputHandler.field_a[var4_int] + var5];

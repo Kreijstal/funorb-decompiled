@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends kd {
+final class vf extends IntrusiveNode {
     private int field_j;
     private int field_t;
     int field_n;
@@ -54,8 +54,8 @@ final class vf extends kd {
           field_s = null;
           return;
         }
-        kd var2 = (kd) null;
-        vf.a((kd) null, -20, (kd) null);
+        IntrusiveNode var2 = (IntrusiveNode) null;
+        vf.a((IntrusiveNode) null, -20, (IntrusiveNode) null);
         field_m = null;
         field_s = null;
     }
@@ -138,9 +138,9 @@ final class vf extends kd {
         }
     }
 
-    final static void a(kd param0, int param1, kd param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
-        kd var4 = null;
+        IntrusiveNode var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -148,18 +148,18 @@ final class vf extends kd {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param2.field_c) {
-            param2.b((byte) -120);
+          if (null != param2.previous) {
+            param2.unlink((byte) -120);
           }
-          param2.field_f = param0;
-          param2.field_c = param0.field_c;
-          param2.field_c.field_f = param2;
-          param2.field_f.field_c = param2;
+          param2.next = param0;
+          param2.previous = param0.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
           if (param1 == 0) {
             return;
           }
-          var4 = (kd) null;
-          vf.a((kd) null, 14, (kd) null);
+          var4 = (IntrusiveNode) null;
+          vf.a((IntrusiveNode) null, 14, (IntrusiveNode) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

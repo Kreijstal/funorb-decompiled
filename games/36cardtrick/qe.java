@@ -167,7 +167,7 @@ final class qe extends g implements cl, qh {
           if (param3 != this.field_F) {
             return;
           }
-          rg.a((byte) 126);
+          SecondaryNodeDequeIterator.a((byte) 126);
           this.field_K.s(50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,17 +206,17 @@ final class qe extends g implements cl, qh {
             this.a(-56, -104, (byte) -34, (dg) null);
           }
           if (param1 == 0) {
-            he.a(param2 - 26, "terms.ws");
+            DualLinkNode.a(param2 - 26, "terms.ws");
             return;
           }
           if (param1 == 1) {
-            he.a(param2 ^ 26, "privacy.ws");
+            DualLinkNode.a(param2 ^ 26, "privacy.ws");
             return;
           }
           if (param1 != 2) {
             return;
           }
-          he.a(0, "conduct.ws");
+          DualLinkNode.a(0, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

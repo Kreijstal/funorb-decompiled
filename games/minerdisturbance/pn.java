@@ -247,7 +247,7 @@ final class pn implements uj {
             }
           }
         }
-        bc.field_d = 2147483647;
+        SecondaryNodeDequeIterator.field_d = 2147483647;
         fb.field_c = 0;
         AccountRequestState.field_g = -2147483648;
         he.field_e = 2147483647;
@@ -354,11 +354,11 @@ final class pn implements uj {
         if (param0) {
           field_c = (ln) null;
           tb.field_a = 2;
-          bc.field_a = 3;
+          SecondaryNodeDequeIterator.field_a = 3;
           return;
         }
         tb.field_a = 2;
-        bc.field_a = 3;
+        SecondaryNodeDequeIterator.field_a = 3;
     }
 
     static {

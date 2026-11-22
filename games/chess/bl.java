@@ -50,7 +50,7 @@ final class bl implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ik(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static wn a(int param0, int param1, String param2) {

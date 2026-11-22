@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wa extends kd {
+final class wa extends IntrusiveNode {
     int field_h;
     int field_o;
     int field_n;

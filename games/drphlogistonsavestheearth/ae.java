@@ -172,7 +172,7 @@ final class ae extends ca implements ke {
             for (var8Lifetime1 = param5; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = bj.field_a[var8Lifetime1];
               var10Lifetime1 = bj.field_a[1 + var8Lifetime1];
-              if (oa.a((byte) 123, var10Lifetime1, var9Lifetime1, param4)) {
+              if (SecondaryNodeDequeIterator.a((byte) 123, var10Lifetime1, var9Lifetime1, param4)) {
                 bj.field_a[var8Lifetime1] = var10Lifetime1;
                 bj.field_a[1 + var8Lifetime1] = var9Lifetime1;
               }

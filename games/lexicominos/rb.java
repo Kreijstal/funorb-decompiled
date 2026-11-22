@@ -12,7 +12,7 @@ final class rb {
         try {
           sa.a((byte) 68, param1);
           int var2_int = -34 / ((-25 - param0) / 58);
-          m.a(ca.field_o, -127, false);
+          m.a(DualLinkNode.field_o, -127, false);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "rb.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -159,7 +159,7 @@ final class rb {
     }
 
     final static void a(boolean param0) {
-        cg var1 = (cg) (ca.field_n.a(true));
+        cg var1 = (cg) (DualLinkNode.field_n.a(true));
         if (var1 == null) {
           ck.$cfr$intArgs$b$e683eeaaf5b5(-120);
           return;
@@ -173,7 +173,7 @@ final class rb {
         var2.readInt((byte) 19);
         var2.readInt((byte) 19);
         var2.readInt((byte) 19);
-        var1.b((byte) -121);
+        var1.unlink((byte) -121);
     }
 
     public final String toString() {
@@ -197,7 +197,7 @@ final class rb {
         }
         try {
           ug.field_A.h(0);
-          eb.field_b = new ti(dd.field_d, (String) null, ca.field_k, param2, param1);
+          eb.field_b = new ti(dd.field_d, (String) null, DualLinkNode.field_k, param2, param1);
           di.field_x = new qj(ug.field_A, eb.field_b);
           ug.field_A.a(-14579, di.field_x);
         } catch (RuntimeException runtimeException) {

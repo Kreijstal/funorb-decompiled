@@ -199,7 +199,7 @@ final class kh extends gm {
                   var29.field_Mb = var5;
                   var29.field_Sb = ig.field_g;
                 }
-                var29.d(-1);
+                var29.unlinkSecondary(-1);
               }
               return;
             }
@@ -207,7 +207,7 @@ final class kh extends gm {
               var15 = (r) (bb.field_d.g(-18110));
               while (var15 != null) {
                 var15.unlink(-2193);
-                var15.d(-1);
+                var15.unlinkSecondary(-1);
                 var15 = (r) (bb.field_d.a((byte) -122));
               }
               cb.field_f = 0;
@@ -238,14 +238,14 @@ final class kh extends gm {
                 var12.field_Hb = ig.field_g;
                 var12.field_jc = var4;
               }
-              var21.d(-1);
+              var21.unlinkSecondary(-1);
               return;
             }
             if (var2 == 10) {
               var30 = (ln) (nk.field_t.g(param0 ^ -18093));
               while (var30 != null) {
                 var30.unlink(-2193);
-                var30.d(-1);
+                var30.unlinkSecondary(-1);
                 var30 = (ln) (nk.field_t.a((byte) -115));
               }
               return;
@@ -308,7 +308,7 @@ final class kh extends gm {
                     } else {
                       var23.unlink(param0 ^ -2178);
                     }
-                    var23.d(-1);
+                    var23.unlinkSecondary(-1);
                     pd.field_Rb.field_Xb = pd.field_Rb.field_Xb - 1;
                     return;
                   }
@@ -390,7 +390,7 @@ final class kh extends gm {
           var3_ref_r = (r) (pd.field_Sb.g(-18110));
           while (var3_ref_r != null) {
             var3_ref_r.unlink(-2193);
-            var3_ref_r.d(param0 ^ -18);
+            var3_ref_r.unlinkSecondary(param0 ^ -18);
             var3_ref_r = (r) (pd.field_Sb.a((byte) -107));
           }
           var3_ref_rLifetime1 = (r) (d.field_Mb.a(false));
@@ -415,7 +415,7 @@ final class kh extends gm {
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(674914976);
             pd.field_Rb = new ln(qa.field_e);
-            pd.field_Rb.a((long)var3Lifetime1, (byte) 71);
+            pd.field_Rb.setSecondaryKey((long)var3Lifetime1, (byte) 71);
             vl.a(var1, pd.field_Rb, false, 120);
             BoundedRandomAccessFile.field_e = 0L;
           }

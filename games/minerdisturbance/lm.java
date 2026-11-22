@@ -245,7 +245,7 @@ final class lm extends kn implements f, sh {
     private final void g(byte param0) {
         if (this.e((byte) -68)) {
           int var2 = 51 / ((-18 - param0) / 62);
-          gb.a(-126, this.field_N.field_s);
+          NodeHashTableIterator.a(-126, this.field_N.field_s);
           return;
         }
     }
@@ -421,7 +421,7 @@ final class lm extends kn implements f, sh {
             k.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = gb.field_e;
+            qd.field_P = NodeHashTableIterator.field_e;
           }
           if (fh.field_d) {
             if (hk.field_e != se.field_M) {
@@ -445,7 +445,7 @@ final class lm extends kn implements f, sh {
             }
           }
           im.field_c = nk.field_w;
-          qd.field_P = gb.field_e;
+          qd.field_P = NodeHashTableIterator.field_e;
           if (param0 != -1) {
             fh.field_d = false;
           } else {
@@ -459,7 +459,7 @@ final class lm extends kn implements f, sh {
             k.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = gb.field_e;
+            qd.field_P = NodeHashTableIterator.field_e;
           }
           if (fh.field_d &&
             hk.field_e == se.field_M) {
@@ -481,7 +481,7 @@ final class lm extends kn implements f, sh {
             }
           }
           im.field_c = nk.field_w;
-          qd.field_P = gb.field_e;
+          qd.field_P = NodeHashTableIterator.field_e;
           if (param0 != -1) {
             fh.field_d = false;
           } else {
@@ -495,7 +495,7 @@ final class lm extends kn implements f, sh {
             k.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = gb.field_e;
+            qd.field_P = NodeHashTableIterator.field_e;
           }
           if (fh.field_d &&
             hk.field_e == se.field_M) {
@@ -513,7 +513,7 @@ final class lm extends kn implements f, sh {
             var2Lifetime2 == 0) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
-            qd.field_P = gb.field_e;
+            qd.field_P = NodeHashTableIterator.field_e;
             if (param0 != -1) {
               fh.field_d = false;
             } else {
@@ -524,7 +524,7 @@ final class lm extends kn implements f, sh {
               k.field_i) {
               hk.field_e = 0;
               im.field_c = nk.field_w;
-              qd.field_P = gb.field_e;
+              qd.field_P = NodeHashTableIterator.field_e;
             }
             if (fh.field_d &&
               hk.field_e == se.field_M) {
@@ -536,7 +536,7 @@ final class lm extends kn implements f, sh {
           hk.field_e = CipherPacketBuffer.field_w;
         }
         im.field_c = nk.field_w;
-        qd.field_P = gb.field_e;
+        qd.field_P = NodeHashTableIterator.field_e;
         if (param0 != -1) {
           fh.field_d = false;
         } else {
@@ -550,7 +550,7 @@ final class lm extends kn implements f, sh {
           k.field_i) {
           hk.field_e = 0;
           im.field_c = nk.field_w;
-          qd.field_P = gb.field_e;
+          qd.field_P = NodeHashTableIterator.field_e;
         }
         if (!fh.field_d) {
           return;

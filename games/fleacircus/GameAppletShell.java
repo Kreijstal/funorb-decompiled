@@ -337,7 +337,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                 return;
               }
-              rc.field_a = param3;
+              SecondaryNodeDequeIterator.field_a = param3;
               if (param6 != 3) {
                 this.a(-29, 46, -49, 56, (String) null, -7, 122);
               }

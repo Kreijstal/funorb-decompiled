@@ -128,7 +128,7 @@ final class pc extends tj {
             }
             if (gj.field_t == 1) {
               if (lj.field_b.status == 2) {
-                stackIn_13_0 = ca.a(-51, -1);
+                stackIn_13_0 = DualLinkNode.a(-51, -1);
                 return stackIn_13_0;
               }
               if (lj.field_b.status == 1) {
@@ -148,13 +148,13 @@ final class pc extends tj {
             if (3 == gj.field_t) {
               if (0 >= re.field_X.d(-6448)) {
                 if (rf.c(0) > ta.field_f) {
-                  stackIn_26_0 = ca.a(-51, -2);
+                  stackIn_26_0 = DualLinkNode.a(-51, -2);
                   return stackIn_26_0;
                 }
               } else {
                 var1_int = re.field_X.e(291208897);
                 if (var1_int != 0) {
-                  stackIn_22_0 = ca.a(-51, var1_int);
+                  stackIn_22_0 = DualLinkNode.a(-51, var1_int);
                   return stackIn_22_0;
                 }
                 gj.field_t = gj.field_t + 1;
@@ -173,7 +173,7 @@ final class pc extends tj {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return ca.a(-51, -3);
+            return DualLinkNode.a(-51, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

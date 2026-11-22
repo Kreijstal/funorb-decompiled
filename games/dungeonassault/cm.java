@@ -93,7 +93,7 @@ final class cm extends ii implements pf, vg {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_28_0 = id.field_c;
+                    stackIn_28_0 = SecondaryNodeDequeIterator.field_c;
                     return stackIn_28_0;
                   }
                 }

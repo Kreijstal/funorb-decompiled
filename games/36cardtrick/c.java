@@ -3936,7 +3936,7 @@ abstract class c extends fj {
                 ll.field_f = null;
                 e.field_a = null;
               }
-              var6 = he.a(59);
+              var6 = DualLinkNode.a(59);
               if (var6 != null) {
                 fk.a(param2 + 24978, var6.booleanValue());
               }

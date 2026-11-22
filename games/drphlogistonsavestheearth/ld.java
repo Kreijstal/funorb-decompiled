@@ -25,7 +25,7 @@ final class ld {
         this.c(200 + var2 / 2, param0 ^ -66);
         MouseWheelInput.field_f.d(0, 200 + var2 / 2);
         this.a(jk.field_L, 220, var2, -50);
-        dj.a(re.field_e, 75, lf.field_b, false, 380);
+        dj.a(NodeHashTableIterator.field_e, 75, lf.field_b, false, 380);
         for (var3 = 0; var3 < 3; var3++) {
           for (var4 = 0; var4 < 3; var4++) {
             var5 = 40 + var4 * 70;
@@ -388,7 +388,7 @@ final class ld {
           discarded$0 = this.a((byte) 16, 0);
         }
         lg.field_f = kj.field_b[this.field_c];
-        re.field_e = ih.field_O[this.field_c];
+        NodeHashTableIterator.field_e = ih.field_O[this.field_c];
         var3 = this.field_c;
         switch (var3) {
           case 0:
@@ -396,7 +396,7 @@ final class ld {
             this.c(0, param0 + 8367);
             ph.field_h.a(0, 0);
             uk.field_h.d(-43, 35);
-            dj.a(re.field_e, 311, lf.field_b, false, 155);
+            dj.a(NodeHashTableIterator.field_e, 311, lf.field_b, false, 155);
             qj.field_f.a(0, 0);
             break;
           case 5:
@@ -422,7 +422,7 @@ final class ld {
               }
               if (var3 == 8) {
                 this.k(-128);
-                dj.a(re.field_e, 70, lf.field_b, false, 370);
+                dj.a(NodeHashTableIterator.field_e, 70, lf.field_b, false, 370);
                 break;
               }
               if (var3 == 10) {
@@ -446,7 +446,7 @@ final class ld {
             break;
           case 2:
             this.d((byte) -74);
-            dj.a(re.field_e + 20, 80, lf.field_b, false, 375);
+            dj.a(NodeHashTableIterator.field_e + 20, 80, lf.field_b, false, 375);
             break;
           case 1:
             rh.field_b.d(0, 0);
@@ -456,7 +456,7 @@ final class ld {
               !(hb.field_g > 0)) {
               var2 -= 30;
             }
-            dj.a(re.field_e, var2, lf.field_b, false, 190);
+            dj.a(NodeHashTableIterator.field_e, var2, lf.field_b, false, 190);
             break;
         }
         for (var2 = 0; this.field_e.field_e > var2; var2++) {
@@ -524,7 +524,7 @@ final class ld {
         }
         var6 = "<br><br>" + gd.field_e + " " + ih.field_P + " " + var4Lifetime1;
         var3.a(var5 + " " + var6, 50, 130 + var2, 540, 480, 0, -1, 1, 0, var3.field_E);
-        var7 = re.field_e;
+        var7 = NodeHashTableIterator.field_e;
         dj.a(var7, 75, lf.field_b, param0, 385);
         return;
     }
@@ -917,7 +917,7 @@ final class ld {
         var9 += 34;
         of.field_x.a(var9, var10);
         var9 += 34;
-        re.field_d.a(var9, var10);
+        NodeHashTableIterator.field_d.a(var9, var10);
         var9 += 102;
         PacketBuffer.field_k.a(var9, var10);
         var9 += 34;
@@ -1066,9 +1066,9 @@ final class ld {
           stackIn_11_0 = 0;
         }
         var13 = stackIn_11_0;
-        if (!(re.field_e >= var12) ||
+        if (!(NodeHashTableIterator.field_e >= var12) ||
           var13 != 0) {
-          var14 = (int)((0.0 + (double)(-re.field_e + var12)) * 256.0 / (0.0 + (double)(lg.field_f - re.field_e)));
+          var14 = (int)((0.0 + (double)(-NodeHashTableIterator.field_e + var12)) * 256.0 / (0.0 + (double)(lg.field_f - NodeHashTableIterator.field_e)));
           if (var13 != 0) {
             var14 = 256;
           }
@@ -1132,7 +1132,7 @@ final class ld {
             }
             var16 = n.field_c + ul.field_b[this.field_c] + cb.field_b.b(" ");
             if (var8 != 10) {
-              stackIn_63_0 = oa.field_b;
+              stackIn_63_0 = SecondaryNodeDequeIterator.field_b;
             } else {
               stackIn_63_0 = dg.field_e;
             }
@@ -1882,7 +1882,7 @@ final class ld {
         }
         var7 = stackIn_8_0;
         this.a(var7, var6, var4, -50);
-        var8 = re.field_e;
+        var8 = NodeHashTableIterator.field_e;
         if (5 == this.field_c) {
           var8 += 140;
         }
@@ -1992,7 +1992,7 @@ final class ld {
           var23 = var19Lifetime1 * 5;
           var25.a(jk.field_K[var14Lifetime1], var20, var21, var22, var23, 0, -1, 0, 1, var19Lifetime1);
         } else {
-          var25.a(re.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
+          var25.a(NodeHashTableIterator.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
           if (oh.a(0)) {
             ni.field_q.a(ClientException.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, ni.field_q.field_x);
           }
@@ -2111,7 +2111,7 @@ final class ld {
               }
               if (((null != sd.field_a)) &&
                 ((var13 == 0))) {
-                var4.c(oa.field_d, 325, var17, 16711680, -1);
+                var4.c(SecondaryNodeDequeIterator.field_d, 325, var17, 16711680, -1);
                 var4.a(Integer.toString(sd.field_a.field_H), 535, var17, 16711680, -1);
               }
               decompiledFrameRemainder0 = false;

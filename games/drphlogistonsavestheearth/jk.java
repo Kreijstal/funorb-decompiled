@@ -169,9 +169,9 @@ final class jk extends si {
         int var7Lifetime1Lifetime1;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          re.field_g = param2;
+          NodeHashTableIterator.field_g = param2;
           sh.field_e = true;
-          if (re.field_g == 0) {
+          if (NodeHashTableIterator.field_g == 0) {
             var3_int = ab.a(ol.field_h, kc.field_j, pj.field_A, uj.field_i, param0 + 14025);
             var4 = 3 + var3_int;
             lg.field_a = new int[var4];
@@ -190,7 +190,7 @@ final class jk extends si {
             sg.field_f[-1 + var4] = ei.field_h;
             lg.field_a[-1 + var4] = 1;
             mi.field_g[1] = 5;
-          } else if (re.field_g == 1) {
+          } else if (NodeHashTableIterator.field_g == 1) {
             var3_int = ab.a(ol.field_h, kc.field_j, pj.field_A, uj.field_i, param0 ^ 14027);
             var4 = var3_int + 2;
             lg.field_a = new int[var4];
@@ -206,8 +206,8 @@ final class jk extends si {
             sg.field_f[var4 - 1] = ei.field_h;
             lg.field_a[-1 + var4] = 0;
             mi.field_g[0] = 5;
-          } else if (2 != re.field_g) {
-            if (re.field_g == 3) {
+          } else if (2 != NodeHashTableIterator.field_g) {
+            if (NodeHashTableIterator.field_g == 3) {
               if (sb.field_d.privilegedTasksEnabled) {
                 var3_int = ab.a(ol.field_h, rc.field_h, pj.field_A, uj.field_i, 14074);
               } else {
@@ -227,7 +227,7 @@ final class jk extends si {
               sg.field_f[var4 - 1] = ei.field_h;
               lg.field_a[-1 + var4] = 0;
               mi.field_g[0] = 5;
-            } else if (4 == re.field_g) {
+            } else if (4 == NodeHashTableIterator.field_g) {
               var3_int = ab.a(ol.field_h, o.field_f, pj.field_A, uj.field_i, 14074);
               var4 = var3_int + 2;
               sg.field_f = new String[var4];
@@ -244,7 +244,7 @@ final class jk extends si {
               lg.field_a[var4 - 1] = 0;
               mi.field_g[0] = 5;
             } else {
-              if (re.field_g != 5) {
+              if (NodeHashTableIterator.field_g != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = ab.a(ol.field_h, de.field_z, pj.field_A, uj.field_i, 14074);
@@ -364,7 +364,7 @@ final class jk extends si {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (re.field_g == 2) {
+          if (NodeHashTableIterator.field_g == 2) {
             var10 = lk.field_i;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -419,7 +419,7 @@ final class jk extends si {
             }
             var4Lifetime3++;
           }
-          if (re.field_g == 2) {
+          if (NodeHashTableIterator.field_g == 2) {
             wg.field_k.a(-1, -1, param1, 49);
           } else {
             wg.field_k.a(0, qg.a(ob.field_g, (byte) -112, ck.field_c), param1, 63);

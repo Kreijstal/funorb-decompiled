@@ -123,7 +123,7 @@ class ik implements rd, ub {
             }
             var10 = var18.a(28276, var8);
             var11 = var18.a(28276, var9);
-            ca.a(param2.field_j + param2.field_t + param1, param0 + param2.field_o, param1 + param2.field_t, param0 + param2.field_o + param2.field_v, false);
+            DualLinkNode.a(param2.field_j + param2.field_t + param1, param0 + param2.field_o, param1 + param2.field_t, param0 + param2.field_o + param2.field_v, false);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_c[var12];
               if (var12 == var10) {
@@ -264,7 +264,7 @@ class ik implements rd, ub {
             stackIn_7_3 = var13.field_c[var7 + 1].field_d;
           }
           var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
-          ca.a(param1 + param3.field_t + param3.field_j, param2 + param3.field_o, param3.field_t + param1, param2 - (-param3.field_o - param3.field_v), false);
+          DualLinkNode.a(param1 + param3.field_t + param3.field_j, param2 + param3.field_o, param3.field_t + param1, param2 - (-param3.field_o - param3.field_v), false);
           nb.field_z.a((byte) 10, var12, this.field_c, var10, var10, var11);
           pd.a(-22949);
           return;
@@ -430,7 +430,7 @@ class ik implements rd, ub {
         int var12Lifetime1;
         var13 = Lexicominos.field_L ? 1 : 0;
         try {
-          ca.a(param0.field_t + (param6 + param0.field_j), param0.field_o + param4, param6 + param0.field_t, param0.field_v + (param4 + param0.field_o), false);
+          DualLinkNode.a(param0.field_t + (param6 + param0.field_j), param0.field_o + param4, param6 + param0.field_t, param0.field_v + (param4 + param0.field_o), false);
           var9_int = this.a(param0, 227);
           if (param7 > -67) {
             return;

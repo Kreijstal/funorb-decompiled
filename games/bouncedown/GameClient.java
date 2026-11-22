@@ -295,7 +295,7 @@ abstract class GameClient extends AppletShell {
           qe.c(443111233);
           pb.clearStaticReferences(16);
           pa.field_e = false;
-          ea.field_c = dh.field_d;
+          ea.field_c = NodeHashTableIterator.field_d;
           td.a(1, ea.field_e, pa.field_i, kg.field_b, ba.field_B);
           if (qd.field_a ||
             mj.field_k != null) {

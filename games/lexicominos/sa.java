@@ -41,16 +41,16 @@ final class sa {
                 var5.field_k = var5.field_k.field_m;
               }
               if (var5.field_k == var4) {
-                var5.b((byte) -121);
+                var5.unlink((byte) -121);
               } else {
                 if (var5.field_k.field_r != var4) {
                   var5.field_k.field_r = var4;
                   var5.field_k.field_t = var5;
                 } else {
                   if (var5.field_k.field_t.field_i < var5.field_i) {
-                    var5.b((byte) -126);
+                    var5.unlink((byte) -126);
                   } else {
-                    var5.field_k.field_t.b((byte) -124);
+                    var5.field_k.field_t.unlink((byte) -124);
                     var5.field_k.field_t = var5;
                   }
                 }

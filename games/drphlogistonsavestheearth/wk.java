@@ -11,7 +11,7 @@ final class wk extends IntrusiveNode {
     byte[] field_j;
 
     final static void a(int param0, int param1) {
-        oa.field_b = param1;
+        SecondaryNodeDequeIterator.field_b = param1;
         s.field_a.a(param1 * 128 / param0, (byte) -13);
     }
 

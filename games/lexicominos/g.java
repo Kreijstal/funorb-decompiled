@@ -139,7 +139,7 @@ final class g extends tj {
             field_m = (wg) null;
           }
           var2_refLifetime1 = th.field_o[9];
-          if (!var2_refLifetime1.a(false)) {
+          if (!var2_refLifetime1.isLinked(false)) {
             var2_refLifetime1.c(0);
             wj.field_j.a(var2_refLifetime1);
           }

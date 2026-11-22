@@ -3,32 +3,32 @@
  */
 import java.util.*;
 
-final class ec implements Iterator {
-    private bg field_d;
-    private ca field_f;
-    private ca field_a;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private bg deque;
+    private DualLinkNode lastReturned;
+    private DualLinkNode nextNode;
     static int field_c;
     static sh field_b;
     static ng field_e;
 
     public final Object next() {
-        Object var1 = this.field_a;
-        if (var1 != this.field_d.field_e) {
-          this.field_a = ((ca) (var1)).field_l;
+        Object var1 = this.nextNode;
+        if (var1 != this.deque.field_e) {
+          this.nextNode = ((DualLinkNode) (var1)).secondaryNext;
         } else {
-          this.field_a = null;
+          this.nextNode = null;
           var1 = null;
         }
-        this.field_f = (ca) (var1);
+        this.lastReturned = (DualLinkNode) (var1);
         return var1;
     }
 
-    ec(bg param0) {
-        this.field_f = null;
+    SecondaryNodeDequeIterator(bg param0) {
+        this.lastReturned = null;
         try {
-          this.field_d = param0;
-          this.field_f = null;
-          this.field_a = this.field_d.field_e.field_l;
+          this.deque = param0;
+          this.lastReturned = null;
+          this.nextNode = this.deque.field_e.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -43,11 +43,11 @@ final class ec implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_f == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_f.b(12);
-        this.field_f = null;
+        this.lastReturned.unlinkSecondary(12);
+        this.lastReturned = null;
     }
 
     final static int a(int param0) {
@@ -58,7 +58,7 @@ final class ec implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_a != this.field_d.field_e;
+        return this.nextNode != this.deque.field_e;
     }
 
     static {

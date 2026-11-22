@@ -176,7 +176,7 @@ final class md extends w {
         int var6 = param1 + this.field_o;
         this.a(this.field_F[0], var6, 16711935, var5);
         if (this.field_K < 65536) {
-          ca.a(var5 + this.field_j, var6, var5 + (this.field_K * this.field_j >> 16), var6 + this.field_v, false);
+          DualLinkNode.a(var5 + this.field_j, var6, var5 + (this.field_K * this.field_j >> 16), var6 + this.field_v, false);
           this.a(this.field_F[1], var6, param0 + 16712050, var5);
           pd.a(param0 ^ 22998);
         }
@@ -214,7 +214,7 @@ final class md extends w {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           var5_int = param3 + this.field_j;
-          ca.a(-this.field_H.field_p + var5_int, param1, this.field_H.field_p + param3, this.field_v + param1, false);
+          DualLinkNode.a(-this.field_H.field_p + var5_int, param1, this.field_H.field_p + param3, this.field_v + param1, false);
           for (var6 = -this.field_y + param3; var5_int > var6; var6 = var6 + param0.field_p) {
             param0.d(var6, param1);
           }

@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class vk implements Iterator {
-    private kd field_c;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode nextNode;
     static String field_d;
-    private ji field_a;
-    private kd field_b;
-    private int field_e;
+    private ji table;
+    private IntrusiveNode lastReturned;
+    private int nextBucketIndex;
 
-    private final void b(byte param0) {
-        this.field_b = null;
-        this.field_e = 1;
-        this.field_c = this.field_a.field_f[0].field_f;
+    private final void reset(byte param0) {
+        this.lastReturned = null;
+        this.nextBucketIndex = 1;
+        this.nextNode = this.table.field_f[0].next;
         if (param0 < 61) {
-          vk.a((char[][]) null, -45, (int[][]) null);
+          NodeHashTableIterator.a((char[][]) null, -45, (int[][]) null);
         }
     }
 
@@ -62,22 +62,22 @@ final class vk implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Lexicominos.field_L ? 1 : 0;
-        if (this.field_c != this.field_a.field_f[this.field_e - 1]) {
+        if (this.nextNode != this.table.field_f[this.nextBucketIndex - 1]) {
           return true;
         }
         while (true) {
-          if (this.field_e >= this.field_a.field_d) {
+          if (this.nextBucketIndex >= this.table.field_d) {
             return false;
           }
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          if (this.field_a.field_f[fieldTemp$0].field_f == this.field_a.field_f[-1 + this.field_e]) {
-            this.field_c = this.field_a.field_f[this.field_e - 1];
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          if (this.table.field_f[fieldTemp$0].next == this.table.field_f[-1 + this.nextBucketIndex]) {
+            this.nextNode = this.table.field_f[this.nextBucketIndex - 1];
             continue;
           }
           break;
         }
-        this.field_c = this.field_a.field_f[-1 + this.field_e].field_f;
+        this.nextNode = this.table.field_f[-1 + this.nextBucketIndex].next;
         return true;
     }
 
@@ -97,25 +97,25 @@ final class vk implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        kd var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Lexicominos.field_L ? 1 : 0;
-        if (this.field_c != this.field_a.field_f[this.field_e - 1]) {
-          var1 = this.field_c;
-          this.field_c = var1.field_f;
-          this.field_b = var1;
+        if (this.nextNode != this.table.field_f[this.nextBucketIndex - 1]) {
+          var1 = this.nextNode;
+          this.nextNode = var1.next;
+          this.lastReturned = var1;
           return var1;
         }
         do {
-          if (this.field_a.field_d <= this.field_e) {
+          if (this.table.field_d <= this.nextBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_e;
-          this.field_e = this.field_e + 1;
-          var1 = this.field_a.field_f[fieldTemp$0].field_f;
-        } while (this.field_a.field_f[this.field_e - 1] == var1);
-        this.field_b = var1;
-        this.field_c = var1.field_f;
+          fieldTemp$0 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var1 = this.table.field_f[fieldTemp$0].next;
+        } while (this.table.field_f[this.nextBucketIndex - 1] == var1);
+        this.lastReturned = var1;
+        this.nextNode = var1.next;
         return var1;
     }
 
@@ -183,18 +183,18 @@ final class vk implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_b == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_b.b((byte) -126);
-        this.field_b = null;
+        this.lastReturned.unlink((byte) -126);
+        this.lastReturned = null;
     }
 
-    vk(ji param0) {
-        this.field_b = null;
+    NodeHashTableIterator(ji param0) {
+        this.lastReturned = null;
         try {
-          this.field_a = param0;
-          this.b((byte) 108);
+          this.table = param0;
+          this.reset((byte) 108);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -203,7 +203,7 @@ final class vk implements Iterator {
     public static void a(int param0) {
         field_d = null;
         if (param0 != -30230) {
-          vk.a((byte) -80);
+          NodeHashTableIterator.a((byte) -80);
         }
     }
 

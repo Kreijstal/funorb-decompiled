@@ -38,7 +38,7 @@ final class bf {
           return;
         }
         if (0 <= nk.field_w) {
-          if (gb.field_e < 0) {
+          if (NodeHashTableIterator.field_e < 0) {
             if (param0 >= -57) {
               field_d = -48;
               return;
@@ -46,7 +46,7 @@ final class bf {
             return;
           }
           var2 = nk.field_w + li.field_c;
-          var3 = gb.field_e + ClientException.field_d;
+          var3 = NodeHashTableIterator.field_e + ClientException.field_d;
           var4 = var2 / 32 * 32 - li.field_c;
           var5 = -ClientException.field_d + 32 * (var3 / 32);
           SoftwareRasterizer.e(var4, var5, 8, 16711680);
@@ -104,7 +104,7 @@ final class bf {
               return;
             }
             var2 = nk.field_w + li.field_c;
-            var3 = ClientException.field_d + gb.field_e;
+            var3 = ClientException.field_d + NodeHashTableIterator.field_e;
             var4 = var2 / 32;
             var5 = var3 / 32;
             qm.field_f = true;
@@ -113,26 +113,26 @@ final class bf {
               mh.field_e[var4][var5].field_U = gd.field_x;
             }
             if (2 == tb.field_a) {
-              if (0 == bc.field_a) {
+              if (0 == SecondaryNodeDequeIterator.field_a) {
                 mh.field_e[var4][var5].field_a = false;
                 mh.field_e[var4][var5].field_E = false;
                 mh.field_e[var4][var5].field_v = false;
                 mh.field_e[var4][var5].field_b = false;
               }
-              if (bc.field_a == 4) {
+              if (SecondaryNodeDequeIterator.field_a == 4) {
                 mh.field_e[var4][var5].field_b = true;
               }
-              if (2 == bc.field_a) {
+              if (2 == SecondaryNodeDequeIterator.field_a) {
                 mh.field_e[var4][var5].field_a = true;
                 mh.field_e[var4][var5].field_v = true;
                 mh.field_e[var4][var5].field_E = false;
               }
-              if (bc.field_a == 3) {
+              if (SecondaryNodeDequeIterator.field_a == 3) {
                 mh.field_e[var4][var5].field_a = true;
                 mh.field_e[var4][var5].field_v = false;
                 mh.field_e[var4][var5].field_E = true;
               }
-              if (bc.field_a == 1) {
+              if (SecondaryNodeDequeIterator.field_a == 1) {
                 mh.field_e[var4][var5].field_a = true;
                 mh.field_e[var4][var5].field_v = false;
                 mh.field_e[var4][var5].field_E = false;
@@ -196,7 +196,7 @@ final class bf {
           return;
         }
         var2Lifetime1 = nk.field_w + li.field_c;
-        var3Lifetime1 = ClientException.field_d + gb.field_e;
+        var3Lifetime1 = ClientException.field_d + NodeHashTableIterator.field_e;
         var4Lifetime1 = var2Lifetime1 / 32;
         var5Lifetime1 = var3Lifetime1 / 32;
         qm.field_f = true;
@@ -205,26 +205,26 @@ final class bf {
           mh.field_e[var4Lifetime1][var5Lifetime1].field_U = gd.field_x;
         }
         if (2 == tb.field_a) {
-          if (0 == bc.field_a) {
+          if (0 == SecondaryNodeDequeIterator.field_a) {
             mh.field_e[var4Lifetime1][var5Lifetime1].field_a = false;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_E = false;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_v = false;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_b = false;
           }
-          if (bc.field_a == 4) {
+          if (SecondaryNodeDequeIterator.field_a == 4) {
             mh.field_e[var4Lifetime1][var5Lifetime1].field_b = true;
           }
-          if (2 == bc.field_a) {
+          if (2 == SecondaryNodeDequeIterator.field_a) {
             mh.field_e[var4Lifetime1][var5Lifetime1].field_a = true;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_v = true;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_E = false;
           }
-          if (bc.field_a == 3) {
+          if (SecondaryNodeDequeIterator.field_a == 3) {
             mh.field_e[var4Lifetime1][var5Lifetime1].field_a = true;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_v = false;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_E = true;
           }
-          if (bc.field_a == 1) {
+          if (SecondaryNodeDequeIterator.field_a == 1) {
             mh.field_e[var4Lifetime1][var5Lifetime1].field_a = true;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_v = false;
             mh.field_e[var4Lifetime1][var5Lifetime1].field_E = false;

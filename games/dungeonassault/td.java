@@ -58,7 +58,7 @@ final class td {
           wk.field_g = param5;
           he.field_m = param6;
           ol.field_i = DelegatingCanvas.field_f;
-          ho.field_i = param3;
+          NodeHashTableIterator.field_i = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

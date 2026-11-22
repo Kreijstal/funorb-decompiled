@@ -504,7 +504,7 @@ final class ti extends qa {
         if (!param0) {
           return;
         }
-        i var1 = (i) (id.field_e.c(0));
+        i var1 = (i) (SecondaryNodeDequeIterator.field_e.c(0));
         if (var1 == null) {
           throw new IllegalStateException();
         }

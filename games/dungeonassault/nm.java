@@ -114,7 +114,7 @@ final class nm extends sj implements vg {
             } else {
               if (param1 == mc.field_x) {
                 this.field_s = this.field_s + 30;
-                var3 = id.field_g;
+                var3 = SecondaryNodeDequeIterator.field_g;
               }
             }
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb extends kd {
+final class pb extends IntrusiveNode {
     static ng field_k;
     static int[] field_h;
     static String field_j;

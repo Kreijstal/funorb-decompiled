@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends kd {
+final class ih extends IntrusiveNode {
     byte[] field_h;
     na field_i;
 

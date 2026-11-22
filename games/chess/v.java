@@ -36,7 +36,7 @@ final class v {
           var6_ref = new el(param1, param0);
           this.field_f.a(var6_ref, param3, 31313);
           this.field_l.a(var6_ref, false);
-          ((cm) ((Object) var6_ref)).field_l = 0L;
+          ((cm) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "v.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -52,7 +52,7 @@ final class v {
         try {
           if (param1 != null) {
             param1.unlink(-2193);
-            param1.d(param0 - 2);
+            param1.unlinkSecondary(param0 - 2);
             this.field_c = this.field_c + param1.field_q;
           }
           if (param0 == 1) {
@@ -88,21 +88,21 @@ final class v {
         Object var5 = var7.f(param0 + 67);
         if (var5 == null) {
           var7.unlink(param0 - 2116);
-          var7.d(-1);
+          var7.unlinkSecondary(-1);
           this.field_c = this.field_c + var7.field_q;
           return null;
         }
         if (param0 == -77) {
           if (!var7.g(-113)) {
             this.field_l.a(var7, false);
-            var7.field_l = 0L;
+            var7.secondaryKey = 0L;
           } else {
             var6 = new el(var5, var7.field_q);
             this.field_f.a(var6, var7.key, 31313);
             this.field_l.a(var6, false);
-            ((cm) ((Object) var6)).field_l = 0L;
+            ((cm) ((Object) var6)).secondaryKey = 0L;
             var7.unlink(-2193);
-            var7.d(-1);
+            var7.unlinkSecondary(-1);
           }
           return var5;
         }

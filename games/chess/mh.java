@@ -15,7 +15,7 @@ final class mh {
         if (param0 == 13) {
           tj.field_p = null;
           em.field_m = null;
-          ik.field_a = null;
+          NodeHashTableIterator.field_a = null;
           hj.field_l = null;
           kb.field_S = false;
           return;
@@ -23,7 +23,7 @@ final class mh {
         mh.b(22);
         tj.field_p = null;
         em.field_m = null;
-        ik.field_a = null;
+        NodeHashTableIterator.field_a = null;
         hj.field_l = null;
         kb.field_S = false;
     }

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class w extends kd {
+class w extends IntrusiveNode {
     vd field_r;
     boolean field_m;
     rd field_i;

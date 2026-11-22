@@ -43,7 +43,7 @@ final class wh implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new di(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final DualLinkNode a(int param0) {

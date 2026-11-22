@@ -1113,7 +1113,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("connectionlost_reconnecting", param0 ^ 7);
                 if (var2 != null) {
-                  re.field_c = mj.a((byte) -97, var2);
+                  NodeHashTableIterator.field_c = mj.a((byte) -97, var2);
                 }
                 var2 = wg.a("connectionlost_withreason", 0);
                 if (null != var2) {
@@ -1665,7 +1665,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_account_success", 0);
                 if (var2 != null) {
-                  oa.field_c = mj.a((byte) -124, var2);
+                  SecondaryNodeDequeIterator.field_c = mj.a((byte) -124, var2);
                 }
                 var2 = wg.a("invalid_name", 0);
                 if (null != var2) {
@@ -2259,7 +2259,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("mouseoveranicon", 0);
                 if (var2 != null) {
-                  re.field_j = mj.a((byte) -12, var2);
+                  NodeHashTableIterator.field_j = mj.a((byte) -12, var2);
                 }
                 var2 = wg.a("notyetachieved", 0);
                 if (var2 != null) {
@@ -3119,13 +3119,13 @@ final class LoginMenuScreen extends pj implements ke {
           if (param0 >= -88) {
             return;
           }
-          if (oa.field_b <= 10) {
+          if (SecondaryNodeDequeIterator.field_b <= 10) {
             wk.a(80, 0);
             if (!DrPhlogistonSavesTheEarth.field_D) {
               return;
             }
           }
-          wk.a(80, oa.field_b - 10);
+          wk.a(80, SecondaryNodeDequeIterator.field_b - 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

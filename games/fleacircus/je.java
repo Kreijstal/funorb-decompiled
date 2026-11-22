@@ -2103,7 +2103,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("returntogame", 0);
                 if (var2 != null) {
-                  rc.field_f = ab.a(0, var2);
+                  SecondaryNodeDequeIterator.field_f = ab.a(0, var2);
                 }
                 var2 = ad.a("endgameresign", 0);
                 if (null != var2) {
@@ -2697,7 +2697,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("fs_button_cancel", 0);
                 if (var2 != null) {
-                  rc.field_h = ab.a(0, var2);
+                  SecondaryNodeDequeIterator.field_h = ab.a(0, var2);
                 }
                 var2 = ad.a("fs_accept_aftercancel", 0);
                 if (var2 != null) {

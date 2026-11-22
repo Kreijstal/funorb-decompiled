@@ -48,7 +48,7 @@ final class k extends cb {
           CipherPacketBuffer.field_B = qd.field_J;
           DirectByteStorage.field_c = DirectByteStorage.field_c + 1;
           nk.field_w = sa.field_o;
-          gb.field_e = nm.field_a;
+          NodeHashTableIterator.field_e = nm.field_a;
           field_i = kk.field_d;
           kk.field_d = false;
           jk.field_ab = ic.field_n;

@@ -17,11 +17,11 @@ final class sk implements uj {
         if (param0) {
           field_a = -64L;
           tb.field_a = 2;
-          bc.field_a = 2;
+          SecondaryNodeDequeIterator.field_a = 2;
           return;
         }
         tb.field_a = 2;
-        bc.field_a = 2;
+        SecondaryNodeDequeIterator.field_a = 2;
     }
 
     public static void b(boolean param0) {

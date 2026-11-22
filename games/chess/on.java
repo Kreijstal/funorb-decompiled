@@ -22,7 +22,7 @@ final class on implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new tc();
-          var4.field_l = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_B = 3;
           var5 = -122 % ((1 - param2) / 39);
           var4.field_x = param0;
@@ -111,7 +111,7 @@ final class on implements Runnable {
           synchronized (var5) {
             var6 = (tc) (this.field_g.b(-22585));
             while (var6 != null) {
-              if (var6.field_l == (long)param1 &&
+              if (var6.secondaryKey == (long)param1 &&
                 param2 == var6.field_x &&
                 var6.field_B == 2) {
                 var4.field_s = false;
@@ -179,7 +179,7 @@ final class on implements Runnable {
             try {
               boolean decompiledFrameRemainder0 = true;
               if (2 == var7.field_B) {
-                var7.field_x.a((int)var7.field_l, var7.field_v, (byte) 59, var7.field_v.length);
+                var7.field_x.a((int)var7.secondaryKey, var7.field_v, (byte) 59, var7.field_v.length);
                 var7.field_s = false;
               } else {
                 if (var7.field_B != 3) {
@@ -187,7 +187,7 @@ final class on implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_v = var7.field_x.a((int)var7.field_l, 111);
+                  var7.field_v = var7.field_x.a((int)var7.secondaryKey, 111);
                   var7.field_s = false;
                 }
               }
@@ -247,7 +247,7 @@ final class on implements Runnable {
         try {
           var5 = new tc();
           var5.field_u = false;
-          var5.field_l = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_B = param2;
           var5.field_x = param3;
           var5.field_v = param0;

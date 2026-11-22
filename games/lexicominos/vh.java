@@ -6,7 +6,7 @@ final class vh {
     static ng field_a;
 
     final static void a(boolean param0, int param1) {
-        kd var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         vb var4 = null;
         ng stackIn_3_0 = null;

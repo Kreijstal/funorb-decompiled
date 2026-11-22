@@ -197,14 +197,14 @@ final class bf {
               var6 = new um(255, mk.field_K, new bn(AccountServiceResult.field_k.field_f, 12000, 0), 2097152);
             }
             if (null != mk.field_K) {
-              if (oe.field_a == null) {
-                oe.field_a = new bn[AccountServiceResult.field_k.field_v.length];
+              if (NodeHashTableIterator.field_a == null) {
+                NodeHashTableIterator.field_a = new bn[AccountServiceResult.field_k.field_v.length];
               }
-              if (null == oe.field_a[param2]) {
-                oe.field_a[param2] = new bn(AccountServiceResult.field_k.field_v[param2], 12000, 0);
+              if (null == NodeHashTableIterator.field_a[param2]) {
+                NodeHashTableIterator.field_a[param2] = new bn(AccountServiceResult.field_k.field_v[param2], 12000, 0);
                 AccountServiceResult.field_k.field_v[param2] = null;
               }
-              var7 = new um(param2, mk.field_K, oe.field_a[param2], 2097152);
+              var7 = new um(param2, mk.field_K, NodeHashTableIterator.field_a[param2], 2097152);
             }
             var9 = sj.field_a.a(param0, param2, (um) (var6), (um) (var7), 0);
             if (param4) {

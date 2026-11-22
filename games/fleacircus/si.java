@@ -192,7 +192,7 @@ final class si {
             }
             if (BufferedSocket.field_i >= ByteStorage.field_g) {
               t.field_a = ql.field_o;
-              if (rc.field_i) {
+              if (SecondaryNodeDequeIterator.field_i) {
                 ql.field_o = ql.field_o + 1;
                 if (var2_int <= ql.field_o) {
                   ql.field_o = ql.field_o - var2_int;
@@ -206,7 +206,7 @@ final class si {
               BufferedSocket.field_i = BufferedSocket.field_i - ByteStorage.field_g;
             }
             if (BufferedSocket.field_i > ByteStorage.field_c) {
-              rc.field_i = true;
+              SecondaryNodeDequeIterator.field_i = true;
             }
           }
           if (null != MouseWheelInput.field_f) {
@@ -219,11 +219,11 @@ final class si {
                 pb.field_d < 269) {
                 BufferedSocket.field_i = ByteStorage.field_g;
                 var4 = 1;
-                rc.field_i = false;
+                SecondaryNodeDequeIterator.field_i = false;
               }
               if (pb.field_d > 586 &&
                 pb.field_d < MouseWheelInput.field_f.field_w + 586) {
-                rc.field_i = true;
+                SecondaryNodeDequeIterator.field_i = true;
                 var4 = 1;
                 BufferedSocket.field_i = ByteStorage.field_g;
               }
