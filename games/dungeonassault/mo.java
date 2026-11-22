@@ -29,11 +29,11 @@ final class mo {
           }
           for (var2 = 0; var1.field_q > var2; var2++) {
             if (var4.field_s[var2] != null &&
-              var4.field_s[var2].field_c == 0) {
+              var4.field_s[var2].status == 0) {
               return false;
             }
             if (null != var4.field_o[var2] &&
-              var4.field_o[var2].field_c == 0) {
+              var4.field_o[var2].status == 0) {
               return false;
             }
           }

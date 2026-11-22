@@ -88,7 +88,7 @@ final class gf {
         return true;
     }
 
-    final static md[] a(int param0, le param1) {
+    final static md[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         md[] stackIn_3_0 = null;
         md[] stackIn_6_0 = null;
@@ -103,12 +103,12 @@ final class gf {
         md[] var4 = null;
         md var6 = null;
         int var7 = 0;
-        vi var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Main.field_T;
         try {
-          if (!param1.b((byte) -117)) {
+          if (!param1.isFullscreenAvailable((byte) -117)) {
             stackIn_3_0 = new md[]{};
             return stackIn_3_0;
           }
@@ -116,15 +116,15 @@ final class gf {
             stackIn_6_0 = (md[]) null;
             return stackIn_6_0;
           }
-          var8 = param1.a((byte) 104);
-          while (var8.field_a == 0) {
+          var8 = param1.requestDisplayModes((byte) 104);
+          while (var8.status == 0) {
             wk.a((byte) -117, 10L);
           }
-          if (var8.field_a == 2) {
+          if (var8.status == 2) {
             stackIn_13_0 = new md[]{};
             return stackIn_13_0;
           }
-          var10 = (int[]) (var8.field_e);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new md[var10.length >> 2];

@@ -312,7 +312,7 @@ class gd {
         this.field_l = id.a(113);
     }
 
-    final static gd a(le param0, java.awt.Component param1, int param2, int param3) {
+    final static gd a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           kd var4 = null;
           Throwable var4_ref = null;
@@ -352,7 +352,7 @@ class gd {
                 field_o == null) {
                 field_o = new ga();
                 field_o.field_a = param0;
-                param0.a(0, field_n, (Runnable) ((Object) field_o));
+                param0.requestThreadStart(0, field_n, (Runnable) ((Object) field_o));
               }
               if (field_o != null) {
                 if (field_o.field_e[param2] != null) {

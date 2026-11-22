@@ -549,11 +549,11 @@ class ci extends ei {
           }
           for (var2 = 0; var2 < var1.field_l; var2++) {
             if (null != var4.field_w[var2] &&
-              0 == var4.field_w[var2].field_f) {
+              0 == var4.field_w[var2].status) {
               return false;
             }
             if (null != var4.field_u[var2] &&
-              0 == var4.field_u[var2].field_f) {
+              0 == var4.field_u[var2].status) {
               return false;
             }
           }

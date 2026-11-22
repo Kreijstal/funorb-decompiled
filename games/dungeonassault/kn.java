@@ -6,7 +6,7 @@ final class kn {
     static boolean field_c;
     static int field_b;
     static boolean field_e;
-    static qg field_f;
+    static PlatformTaskDispatcher field_f;
     static String field_a;
     static String field_d;
 

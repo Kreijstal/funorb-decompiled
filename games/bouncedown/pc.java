@@ -8,8 +8,8 @@ final class pc implements Runnable {
     static String field_i;
     static int[] field_j;
     static String field_p;
-    private mk field_f;
-    private si field_e;
+    private PlatformTask field_f;
+    private PlatformTaskDispatcher field_e;
     private java.net.Socket field_n;
     private int field_g;
     private boolean field_b;
@@ -147,7 +147,7 @@ final class pc implements Runnable {
               }
             }
             if (null == this.field_f) {
-              this.field_f = this.field_e.a(3, (byte) -113, (Runnable) (this));
+              this.field_f = this.field_e.requestThreadStart(3, (byte) -113, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -310,12 +310,12 @@ final class pc implements Runnable {
             return;
           }
           if (null != this.field_f) {
-            while (0 == this.field_f.field_f) {
+            while (0 == this.field_f.status) {
               wh.a(1L, 19406);
             }
-            if (1 == this.field_f.field_f) {
+            if (1 == this.field_f.status) {
               try {
-                ((Thread) (this.field_f.field_e)).join();
+                ((Thread) (this.field_f.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -428,11 +428,11 @@ final class pc implements Runnable {
         this.a((byte) -70);
     }
 
-    pc(java.net.Socket param0, si param1) throws IOException {
+    pc(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
-    private pc(java.net.Socket param0, si param1, int param2) throws IOException {
+    private pc(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_h = 0;
         this.field_l = false;
         this.field_a = 0;

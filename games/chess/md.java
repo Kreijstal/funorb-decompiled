@@ -34,7 +34,7 @@ class md {
         field_s = param2;
     }
 
-    final static md a(jk param0, java.awt.Component param1, int param2, int param3) {
+    final static md a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           nf var4 = null;
           Throwable var4_ref = null;
@@ -74,7 +74,7 @@ class md {
                 field_e == null) {
                 field_e = new vi();
                 field_e.field_b = param0;
-                param0.a(field_s, true, (Runnable) ((Object) field_e));
+                param0.requestThreadStart(field_s, true, (Runnable) ((Object) field_e));
               }
               if (field_e != null) {
                 if (field_e.field_c[param2] != null) {

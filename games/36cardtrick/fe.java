@@ -6,7 +6,7 @@ import java.io.*;
 final class fe {
     int field_b;
     static int field_a;
-    static vi field_c;
+    static PlatformTask field_c;
     static String field_d;
 
     final static long a(CharSequence param0, int param1) {

@@ -6,7 +6,7 @@ final class jk {
     static qk field_c;
     private boolean field_f;
     private String field_e;
-    static le field_a;
+    static PlatformTaskDispatcher field_a;
     static String[] field_d;
 
     final String a(int param0) {

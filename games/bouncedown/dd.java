@@ -4,7 +4,7 @@
 final class dd implements Runnable {
     volatile boolean field_b;
     volatile boolean field_c;
-    si field_d;
+    PlatformTaskDispatcher field_d;
     volatile e[] field_a;
     private static String field_z;
 

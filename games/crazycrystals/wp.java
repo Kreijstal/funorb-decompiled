@@ -11,7 +11,7 @@ final class wp {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          un stackIn_11_0;
+          PlatformTaskDispatcher stackIn_11_0;
           int stackIn_11_1;
           java.net.URL stackIn_11_2;
           java.net.URL stackIn_11_3;
@@ -23,7 +23,7 @@ final class wp {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          gb var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -65,15 +65,15 @@ final class wp {
               stackIn_12_3 = null;
               stackIn_12_6 = "" + wi.field_h;
             }
-            var4 = ((un) (Object) stackIn_11_0).a(stackIn_11_1, new java.net.URL(stackIn_11_4, ((StringBuilder) (Object) stackIn_11_5).append(stackIn_12_6).append("&v1=").append(un.field_e).append("&v2=").append(un.field_m).append("&e=").append(var10).toString()));
-            while (var4.field_a == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_11_0).requestUrlStream(stackIn_11_1, new java.net.URL(stackIn_11_4, ((StringBuilder) (Object) stackIn_11_5).append(stackIn_12_6).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_m).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               fh.a(true, 1L);
             }
             if (param2 != 21862) {
               return;
             }
-            if (var4.field_a == 1) {
-              var5 = (DataInputStream) (var4.field_b);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

@@ -128,8 +128,8 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void exitFullscreenFrame(si param0, java.awt.Frame param1, byte param2) {
-        mk var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, byte param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -144,11 +144,11 @@ final class ib extends ef implements java.awt.image.ImageProducer, java.awt.imag
             return;
           }
           while (true) {
-            var3 = param0.a(param1, (byte) 4);
-            while (var3.field_f == 0) {
+            var3 = param0.requestFullscreenExit(param1, (byte) 4);
+            while (var3.status == 0) {
               wh.a(10L, 19406);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               wh.a(100L, 19406);
               continue;
             }

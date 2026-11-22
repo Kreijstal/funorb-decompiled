@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga implements Runnable {
-    le field_a;
+    PlatformTaskDispatcher field_a;
     volatile gd[] field_e;
     volatile boolean field_d;
     volatile boolean field_c;

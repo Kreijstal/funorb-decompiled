@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class te {
-    static un field_a;
+    static PlatformTaskDispatcher field_a;
 
     final static boolean a(byte param0, boolean param1) {
         try {
@@ -12,20 +12,20 @@ abstract class te {
           Throwable decompiledCaughtException = null;
           try {
             if (vj.field_b == null) {
-              vj.field_b = gf.field_b.a(fe.field_j, false, df.field_a);
+              vj.field_b = gf.field_b.requestDirectSocket(fe.field_j, false, df.field_a);
             }
-            if (vj.field_b.field_a == 0) {
+            if (vj.field_b.status == 0) {
               return false;
             }
             if (param0 != -19) {
-              field_a = (un) null;
+              field_a = (PlatformTaskDispatcher) null;
             }
             long dupTemp$1 = lo.a((byte) -29);
             mp.field_p = dupTemp$1;
             wg.field_y = dupTemp$1;
-            if (vj.field_b.field_a == 1) {
+            if (vj.field_b.status == 1) {
               try {
-                oi.field_c = new j((java.net.Socket) (vj.field_b.field_b), gf.field_b);
+                oi.field_c = new j((java.net.Socket) (vj.field_b.result), gf.field_b);
                 tp.field_f.position = 0;
                 CipherPacketBuffer var2 = kd.field_n;
                 var2.position = 0;
@@ -78,7 +78,7 @@ abstract class te {
     void a(int param0) {
         try {
           if (param0 != -1) {
-            field_a = (un) null;
+            field_a = (PlatformTaskDispatcher) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ')');

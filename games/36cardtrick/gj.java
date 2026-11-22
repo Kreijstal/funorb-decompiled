@@ -320,20 +320,20 @@ final class gj implements Runnable {
         field_a = null;
     }
 
-    gj(le param0) {
-        vi var2 = null;
+    gj(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_e = new cd();
         this.field_b = 0;
         this.field_c = false;
         try {
-          var2 = param0.a(0, 5, (Runnable) (this));
-          while (0 == var2.field_a) {
+          var2 = param0.requestThreadStart(0, 5, (Runnable) (this));
+          while (0 == var2.status) {
             wk.a((byte) -112, 10L);
           }
-          if (var2.field_a == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_d = (Thread) (var2.field_e);
+          this.field_d = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

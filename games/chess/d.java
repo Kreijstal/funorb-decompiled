@@ -18,7 +18,7 @@ final class d extends ci {
         return rm.field_Q == 11 ? true : false;
     }
 
-    final static void a(vl param0, int param1, vl param2, jk param3, java.awt.Component param4, boolean param5, byte param6) {
+    final static void a(vl param0, int param1, vl param2, PlatformTaskDispatcher param3, java.awt.Component param4, boolean param5, byte param6) {
         try {
           md.a(param1, param5, 10);
           mh.field_d = md.a(param3, param4, 0, 22050);
@@ -159,7 +159,7 @@ final class d extends ci {
         }
         if (param0 != 109) {
           var4 = (java.awt.Component) null;
-          d.a((vl) null, -126, (vl) null, (jk) null, (java.awt.Component) null, false, (byte) 69);
+          d.a((vl) null, -126, (vl) null, (PlatformTaskDispatcher) null, (java.awt.Component) null, false, (byte) 69);
         }
     }
 

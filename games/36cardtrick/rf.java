@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class rf implements Runnable {
-    private vi field_k;
+    private PlatformTask field_k;
     private int field_i;
     private PacketBuffer field_c;
-    private vi field_j;
-    private le field_f;
+    private PlatformTask field_j;
+    private PlatformTaskDispatcher field_f;
     static String field_e;
     static ph field_d;
     static String field_g;
-    private vi field_b;
+    private PlatformTask field_b;
     private java.net.URL field_a;
     private DataInputStream field_h;
 
@@ -90,12 +90,12 @@ final class rf implements Runnable {
         }
         if (this.field_i == 0) {
           if (null == this.field_k) {
-            this.field_k = this.field_f.a(this.field_a, param0);
+            this.field_k = this.field_f.requestUrlStream(this.field_a, param0);
           }
-          if (0 == this.field_k.field_a) {
+          if (0 == this.field_k.status) {
             return false;
           }
-          if (this.field_k.field_a != 1) {
+          if (this.field_k.status != 1) {
             this.field_i = this.field_i + 1;
             this.field_k = null;
             return false;
@@ -103,12 +103,12 @@ final class rf implements Runnable {
         }
         if (1 == this.field_i) {
           if (this.field_j == null) {
-            this.field_j = this.field_f.a(this.field_a.getHost(), (byte) -78, 443);
+            this.field_j = this.field_f.requestDirectSocket(this.field_a.getHost(), (byte) -78, 443);
           }
-          if (0 == this.field_j.field_a) {
+          if (0 == this.field_j.status) {
             return false;
           }
-          if (this.field_j.field_a != 1) {
+          if (this.field_j.status != 1) {
             this.field_i = this.field_i + 1;
             this.field_j = null;
             return false;
@@ -117,10 +117,10 @@ final class rf implements Runnable {
         if (this.field_h == null) {
           try {
             if (0 == this.field_i) {
-              this.field_h = (DataInputStream) (this.field_k.field_e);
+              this.field_h = (DataInputStream) (this.field_k.result);
             }
             if (1 == this.field_i) {
-              var4 = (java.net.Socket) (this.field_j.field_e);
+              var4 = (java.net.Socket) (this.field_j.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -137,15 +137,15 @@ final class rf implements Runnable {
           }
         }
         if (this.field_b == null) {
-          this.field_b = this.field_f.a(0, 5, (Runnable) (this));
+          this.field_b = this.field_f.requestThreadStart(0, 5, (Runnable) (this));
         }
         if (!param0) {
           return false;
         }
-        if (0 == this.field_b.field_a) {
+        if (0 == this.field_b.status) {
           return false;
         }
-        if (this.field_b.field_a == 1) {
+        if (this.field_b.status == 1) {
           return false;
         }
         this.finalize();
@@ -197,18 +197,18 @@ final class rf implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_k) {
-          if (null != this.field_k.field_e) {
+          if (null != this.field_k.result) {
             try {
-              ((DataInputStream) (this.field_k.field_e)).close();
+              ((DataInputStream) (this.field_k.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_k = null;
         }
         if (this.field_j != null) {
-          if (null != this.field_j.field_e) {
+          if (null != this.field_j.result) {
             try {
-              ((java.net.Socket) (this.field_j.field_e)).close();
+              ((java.net.Socket) (this.field_j.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -269,7 +269,7 @@ final class rf implements Runnable {
         return this.field_c;
     }
 
-    rf(le param0, java.net.URL param1, int param2) {
+    rf(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_a = param1;
           this.field_f = param0;

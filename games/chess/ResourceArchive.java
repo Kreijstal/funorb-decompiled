@@ -12,7 +12,7 @@ final class ResourceArchive {
     private Object[][] field_e;
     static String field_h;
     static wf field_b;
-    static jk field_g;
+    static PlatformTaskDispatcher field_g;
     static int field_a;
     static lm[] field_l;
 
@@ -676,7 +676,7 @@ final class ResourceArchive {
           mi.field_q.field_y = 80;
           hg.field_b.field_y = 80;
           if (param0 != 640) {
-            field_g = (jk) null;
+            field_g = (PlatformTaskDispatcher) null;
           }
           for (var1_int = 0; var1_int < 5; var1_int++) {
             stackIn_9_0 = ok.field_Ib;

@@ -79,7 +79,7 @@ final class oa {
         return true;
     }
 
-    final static void a(java.awt.Component param0, int param1, byte param2, le param3, boolean param4) {
+    final static void a(java.awt.Component param0, int param1, byte param2, PlatformTaskDispatcher param3, boolean param4) {
         gd.a(param1, param4, 10);
         wd.field_e = gd.a(param3, param0, 0, 22050);
         cb.field_g = gd.a(param3, param0, 1, 1024);

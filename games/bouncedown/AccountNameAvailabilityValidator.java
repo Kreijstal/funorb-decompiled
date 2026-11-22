@@ -116,7 +116,7 @@ final class AccountNameAvailabilityValidator extends al {
               var5 = (String) null;
               AccountNameAvailabilityValidator.a((byte) 33, (String) null);
             }
-            if (si.field_a.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_a.startsWith("win") &&
               lc.a(-29935, param2)) {
               return;
             }

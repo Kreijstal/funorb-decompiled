@@ -9,7 +9,7 @@ final class bk implements Runnable {
     static String[] field_f;
     static String field_c;
     static ph field_e;
-    qg field_h;
+    PlatformTaskDispatcher field_h;
     volatile boolean field_d;
     volatile boolean field_a;
 
@@ -61,20 +61,20 @@ final class bk implements Runnable {
           }
           try {
             if (ba.field_f == 0) {
-              qi.field_e = kn.field_f.a(param0 ^ -119, lk.field_T, of.field_d);
+              qi.field_e = kn.field_f.requestDirectSocket(param0 ^ -119, lk.field_T, of.field_d);
               ba.field_f = ba.field_f + 1;
             }
             if (ba.field_f == 1) {
-              if (qi.field_e.field_c == 2) {
+              if (qi.field_e.status == 2) {
                 stackIn_14_0 = dl.a(-5, -1);
                 return stackIn_14_0;
               }
-              if (qi.field_e.field_c == 1) {
+              if (qi.field_e.status == 1) {
                 ba.field_f = ba.field_f + 1;
               }
             }
             if (ba.field_f == 2) {
-              pe.field_l = new rk((java.net.Socket) (qi.field_e.field_f), kn.field_f);
+              pe.field_l = new rk((java.net.Socket) (qi.field_e.result), kn.field_f);
               var2 = new PacketBuffer(13);
               rg.a(ri.field_b, var2, CombatState.field_a, param0 + 127, j.field_J);
               var2.writeByte(6, 15);

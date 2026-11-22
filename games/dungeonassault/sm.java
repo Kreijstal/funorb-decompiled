@@ -14,7 +14,7 @@ final class sm {
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          qg stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -26,7 +26,7 @@ final class sm {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          pn var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -68,12 +68,12 @@ final class sm {
               stackIn_15_3 = null;
               stackIn_15_6 = "" + IntrusiveNode.field_g;
             }
-            var4 = ((qg) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(qg.field_c).append("&v2=").append(qg.field_p).append("&e=").append(var10).toString()));
-            while (var4.field_c == 0) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_c).append("&v2=").append(PlatformTaskDispatcher.field_p).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               CombatState.a(0, 1L);
             }
-            if (param1 == var4.field_c) {
-              var5 = (DataInputStream) (var4.field_f);
+            if (param1 == var4.status) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

@@ -210,7 +210,7 @@ final class eb {
         field_c = null;
     }
 
-    final static void a(le param0, int param1, int param2, String param3, int param4, byte param5, int param6, int param7, int param8) {
+    final static void a(PlatformTaskDispatcher param0, int param1, int param2, String param3, int param4, byte param5, int param6, int param7, int param8) {
         try {
           cc.field_c = param4;
           al.field_c = param3;

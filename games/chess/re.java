@@ -9,7 +9,7 @@ final class re extends IntrusiveNode {
     re field_q;
     static boolean field_r;
     int field_l;
-    static jk field_n;
+    static PlatformTaskDispatcher field_n;
     static long field_p;
     int field_t;
     static int field_j;

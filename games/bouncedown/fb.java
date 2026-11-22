@@ -29,11 +29,11 @@ final class fb extends ih {
           }
           for (var2 = 0; var2 < var1.field_j; var2++) {
             if (null != var4.field_n[var2] &&
-              var4.field_n[var2].field_f == 0) {
+              var4.field_n[var2].status == 0) {
               return false;
             }
             if (null != var4.field_s[var2] &&
-              var4.field_s[var2].field_f == 0) {
+              var4.field_s[var2].status == 0) {
               return false;
             }
           }

@@ -4,12 +4,12 @@
 import java.io.*;
 
 final class rk implements Runnable {
-    private qg field_b;
+    private PlatformTaskDispatcher field_b;
     private int field_j;
     private boolean field_n;
     private int field_i;
     private InputStream field_g;
-    private pn field_e;
+    private PlatformTask field_e;
     static String[] field_k;
     private OutputStream field_o;
     private boolean field_m;
@@ -102,7 +102,7 @@ final class rk implements Runnable {
         throw new IOException();
     }
 
-    rk(java.net.Socket param0, qg param1) throws IOException {
+    rk(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -125,12 +125,12 @@ final class rk implements Runnable {
             this.notifyAll();
           }
           if (this.field_e != null) {
-            while (this.field_e.field_c == 0) {
+            while (this.field_e.status == 0) {
               CombatState.a(param0 + 6624, 1L);
             }
-            if (1 == this.field_e.field_c) {
+            if (1 == this.field_e.status) {
               try {
-                ((Thread) (this.field_e.field_f)).join();
+                ((Thread) (this.field_e.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (InterruptedException) (Object) decompiledCaughtException;
@@ -324,7 +324,7 @@ final class rk implements Runnable {
               }
             }
             if (null == this.field_e) {
-              this.field_e = this.field_b.a(-21432, 3, (Runnable) (this));
+              this.field_e = this.field_b.requestThreadStart(-21432, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -343,7 +343,7 @@ final class rk implements Runnable {
         }
     }
 
-    private rk(java.net.Socket param0, qg param1, int param2) throws IOException {
+    private rk(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_i = 0;
         this.field_n = false;
         this.field_m = false;

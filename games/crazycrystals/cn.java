@@ -26,11 +26,11 @@ final class cn {
           var2 = -85 % ((param0 - 23) / 39);
           for (var3 = 0; var1.field_i > var3; var3++) {
             if (var5.field_k[var3] != null &&
-              var5.field_k[var3].field_a == 0) {
+              var5.field_k[var3].status == 0) {
               return false;
             }
             if (null != var5.field_m[var3] &&
-              var5.field_m[var3].field_a == 0) {
+              var5.field_m[var3].status == 0) {
               return false;
             }
           }

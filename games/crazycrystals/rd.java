@@ -4,7 +4,7 @@
 abstract class rd extends oh {
     static boolean field_h;
     static ko field_i;
-    static un field_g;
+    static PlatformTaskDispatcher field_g;
     static int field_f;
 
     final int a(int param0, int param1) {

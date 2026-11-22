@@ -178,7 +178,7 @@ final class nj extends al {
             CipherPacketBuffer.field_n[0] = 5;
           } else if (2 != ne.field_u) {
             if (ne.field_u == 3) {
-              if (ck.field_e.field_l) {
+              if (ck.field_e.privilegedTasksEnabled) {
                 var3_int = r.a(ba.field_E, ClientException.field_g, vg.field_f, param1 + 25699, gk.field_a);
               } else {
                 var3_int = r.a(ba.field_E, ClientException.field_g, ra.field_f, param1 + 25699, gk.field_a);

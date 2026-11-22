@@ -8,7 +8,7 @@ final class qi implements Iterable {
     static cn[] field_f;
     static String field_h;
     static int field_b;
-    static pn field_e;
+    static PlatformTask field_e;
     static cn field_i;
     private IntrusiveNode field_j;
     static String field_c;

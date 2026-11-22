@@ -3,7 +3,7 @@
  */
 final class bi {
     static boolean field_c;
-    static le field_b;
+    static PlatformTaskDispatcher field_b;
     static int field_a;
     static int field_d;
 

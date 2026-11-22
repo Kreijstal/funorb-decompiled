@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class hn implements Runnable {
-    private nl field_f;
+    private PlatformTask field_f;
     private int field_q;
     private boolean field_l;
     static ci field_d;
@@ -18,7 +18,7 @@ final class hn implements Runnable {
     static int field_s;
     static int[] field_e;
     private byte[] field_g;
-    private jk field_a;
+    private PlatformTaskDispatcher field_a;
     private java.net.Socket field_i;
     static int field_m;
     static s field_u;
@@ -210,12 +210,12 @@ final class hn implements Runnable {
             }
           }
           if (null != this.field_f) {
-            while (this.field_f.field_f == 0) {
+            while (this.field_f.status == 0) {
               bc.a(1L, (byte) 60);
             }
-            if (this.field_f.field_f == 1) {
+            if (this.field_f.status == 1) {
               try {
-                ((Thread) (this.field_f.field_b)).join();
+                ((Thread) (this.field_f.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -340,7 +340,7 @@ final class hn implements Runnable {
         }
     }
 
-    hn(java.net.Socket param0, jk param1) throws IOException {
+    hn(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -378,7 +378,7 @@ final class hn implements Runnable {
               }
             }
             if (this.field_f == null) {
-              this.field_f = this.field_a.a(3, true, (Runnable) (this));
+              this.field_f = this.field_a.requestThreadStart(3, true, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -471,7 +471,7 @@ final class hn implements Runnable {
         }
     }
 
-    private hn(java.net.Socket param0, jk param1, int param2) throws IOException {
+    private hn(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_h = 0;
         this.field_q = 0;
         this.field_l = false;

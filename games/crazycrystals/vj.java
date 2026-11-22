@@ -3,7 +3,7 @@
  */
 final class vj {
     static dl[][] field_a;
-    static gb field_b;
+    static PlatformTask field_b;
     static String field_c;
     private static String field_z;
 

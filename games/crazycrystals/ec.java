@@ -23,7 +23,7 @@ final class ec extends ln {
           String stackIn_14_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (un.field_u.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_u.startsWith("win") &&
               re.a(false, param1)) {
               return;
             }

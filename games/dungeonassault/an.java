@@ -117,7 +117,7 @@ final class an extends hh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, qg param8) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, PlatformTaskDispatcher param8) {
         try {
           of.field_d = param4;
           ri.field_b = param0;

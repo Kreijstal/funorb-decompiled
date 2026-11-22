@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class jd implements Runnable {
-    private vi field_d;
+    private PlatformTask field_d;
     private java.net.Socket field_k;
     private OutputStream field_e;
     private int field_i;
@@ -12,7 +12,7 @@ final class jd implements Runnable {
     private InputStream field_l;
     private boolean field_f;
     private byte[] field_j;
-    private le field_h;
+    private PlatformTaskDispatcher field_h;
     static int field_g;
     private boolean field_m;
     private int field_a;
@@ -37,12 +37,12 @@ final class jd implements Runnable {
             this.notifyAll();
           }
           if (this.field_d != null) {
-            while (this.field_d.field_a == 0) {
+            while (this.field_d.status == 0) {
               wk.a((byte) -104, 1L);
             }
-            if (this.field_d.field_a == 1) {
+            if (this.field_d.status == 1) {
               try {
-                ((Thread) (this.field_d.field_e)).join();
+                ((Thread) (this.field_d.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -89,7 +89,7 @@ final class jd implements Runnable {
               }
             }
             if (this.field_d == null) {
-              this.field_d = this.field_h.a(0, 3, (Runnable) (this));
+              this.field_d = this.field_h.requestThreadStart(0, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -269,11 +269,11 @@ final class jd implements Runnable {
         return this.field_l.read();
     }
 
-    jd(java.net.Socket param0, le param1) throws IOException {
+    jd(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
-    private jd(java.net.Socket param0, le param1, int param2) throws IOException {
+    private jd(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_f = false;
         this.field_m = false;
         this.field_b = 0;

@@ -13,10 +13,10 @@ final class hh extends IntrusiveNode {
     int[] field_l;
     static byte[] field_q;
     static CipherPacketBuffer field_p;
-    mk[] field_n;
+    PlatformTask[] field_n;
     int[] field_o;
     byte[][][] field_m;
-    mk[] field_s;
+    PlatformTask[] field_s;
 
     final static void a(int param0, String param1) {
         try {

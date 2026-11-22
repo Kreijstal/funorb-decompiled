@@ -42,7 +42,7 @@ abstract class pb {
 
     abstract int a(byte param0, boolean param1);
 
-    final static void a(int param0, un param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
         try {
           fk.field_v = param5;
           em.field_g = param6;

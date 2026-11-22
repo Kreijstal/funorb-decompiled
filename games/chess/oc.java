@@ -7,7 +7,7 @@ final class oc extends vm {
     static un field_p;
     static String field_r;
     static int[] field_n;
-    static jk field_l;
+    static PlatformTaskDispatcher field_l;
     static String field_m;
 
     public static void h(int param0) {

@@ -64,7 +64,7 @@ final class Raider {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, qg param2, int param3) {
+    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -103,10 +103,10 @@ final class Raider {
             var18 = new oe();
             var18.field_q = param1.readUnsignedByte(true);
             var18.field_j = param1.readInt(-43);
-            var18.field_o = new pn[var18.field_q];
+            var18.field_o = new PlatformTask[var18.field_q];
             var18.field_l = new int[var18.field_q];
             var18.field_k = new byte[var18.field_q][][];
-            var18.field_s = new pn[var18.field_q];
+            var18.field_s = new PlatformTask[var18.field_q];
             if (param0 != -5) {
               Raider.a((byte) -84, 16);
             }
@@ -146,7 +146,7 @@ final class Raider {
                       var12[var17] = al.a(var10[var17], (byte) -121);
                       var17++;
                     }
-                    var18.field_o[var5] = param2.a(var12, al.a(var20, (byte) -121), -1, var21);
+                    var18.field_o[var5] = param2.requestDeclaredMethod(var12, al.a(var20, (byte) -121), -1, var21);
                     var18.field_k[var5] = var22;
                   }
                 } else {
@@ -158,7 +158,7 @@ final class Raider {
                   }
                   var18.field_n[var5] = var6_int;
                   var18.field_l[var5] = var9;
-                  var18.field_s[var5] = param2.a(65535, al.a(var15, (byte) -125), var16);
+                  var18.field_s[var5] = param2.requestDeclaredField(65535, al.a(var15, (byte) -125), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

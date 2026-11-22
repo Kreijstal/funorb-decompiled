@@ -37,7 +37,7 @@ final class kh {
         throw new Error();
     }
 
-    final static boolean a(si param0, int param1) {
+    final static boolean a(PlatformTaskDispatcher param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -46,7 +46,7 @@ final class kh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 30256) {
-            stackIn_4_0 = param0.a((byte) 53);
+            stackIn_4_0 = param0.isFullscreenAvailable((byte) 53);
             return stackIn_4_0;
           }
           return false;

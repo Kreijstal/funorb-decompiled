@@ -97,7 +97,7 @@ final class pg {
         }
     }
 
-    final static void a(byte param0, Object param1, si param2) {
+    final static void a(byte param0, Object param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

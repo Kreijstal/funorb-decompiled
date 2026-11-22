@@ -141,7 +141,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           }
           if (jk.field_a != null) {
             try {
-              jk.field_a.a(0);
+              jk.field_a.shutdown(0);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -187,11 +187,11 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != le.field_v) {
-                var1 = le.field_v.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_v) {
+                var1 = PlatformTaskDispatcher.field_v.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = le.field_w;
+                  var2 = PlatformTaskDispatcher.field_w;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -233,8 +233,8 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (le.field_w != null))) {
-                stackIn_66_0 = le.field_w.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_w != null))) {
+                stackIn_66_0 = PlatformTaskDispatcher.field_w.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -243,8 +243,8 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < le.field_w.length()) {
-                    var3 = le.field_w.charAt(var1_int);
+                  if (var1_int < PlatformTaskDispatcher.field_w.length()) {
+                    var3 = PlatformTaskDispatcher.field_w.charAt(var1_int);
                     stackIn_81_0 = var3;
                     stackIn_81_1 = 48;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -271,7 +271,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                 if (null != uh.field_i) {
                   var1 = uh.field_i;
                 }
-                var2_ref = le.field_g;
+                var2_ref = PlatformTaskDispatcher.field_g;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -1014,12 +1014,12 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
 
     final void a(byte param0, String param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-          le dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
-          vi var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -1044,15 +1044,15 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
               sk.field_d = 0;
               rh.field_k = 0;
               tk.field_o = mk.g(-118);
-              dupTemp$0 = new le(param6, param1, param2, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param6, param1, param2, true);
               jk.field_a = dupTemp$0;
               Main.field_W = dupTemp$0;
               if (param0 <= 38) {
                 this.a(-62);
               }
-              var8 = jk.field_a.a(0, 1, (Runnable) (this));
+              var8 = jk.field_a.requestThreadStart(0, 1, (Runnable) (this));
               while (true) {
-                if (var8.field_a == 0) {
+                if (var8.status == 0) {
                   wk.a((byte) -94, 10L);
                   if (var9 == 0) {
                     continue;

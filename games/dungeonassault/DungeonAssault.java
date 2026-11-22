@@ -109,7 +109,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     tl.field_d = false;
                     a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, false, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
                     if (cm.field_R != null) {
-                      i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 51, false);
+                      i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 51, false);
                     }
                   }
                   if (fc.a(dc.field_z, (byte) -120)) {
@@ -269,13 +269,13 @@ public final class DungeonAssault extends NetworkGameClient {
             }
             if (ao.a((byte) 79)) {
               if (!di.field_e) {
-                i.field_A.a((java.awt.Component) ((Object) c.field_h), (byte) 61, true);
+                i.field_A.requestCursorVisibility((java.awt.Component) ((Object) c.field_h), (byte) 61, true);
                 di.field_e = true;
               }
             } else {
               if (c.field_h != gi.field_R ||
                 di.field_e) {
-                i.field_A.a((java.awt.Component) ((Object) c.field_h), (byte) 116, false);
+                i.field_A.requestCursorVisibility((java.awt.Component) ((Object) c.field_h), (byte) 116, false);
                 di.field_e = false;
                 gi.field_R = c.field_h;
               }
@@ -346,7 +346,7 @@ public final class DungeonAssault extends NetworkGameClient {
                       tl.field_d = false;
                       a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, true, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
                       if (cm.field_R != null) {
-                        i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 86, false);
+                        i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 86, false);
                       }
                     } else {
                       if (4 == var2_int) {
@@ -1016,7 +1016,7 @@ public final class DungeonAssault extends NetworkGameClient {
           }
           ag.a(50, 55);
           nf.d(param0 + 0);
-          i.field_A.a((java.awt.Component) ((Object) c.field_h), (byte) 25, false);
+          i.field_A.requestCursorVisibility((java.awt.Component) ((Object) c.field_h), (byte) 25, false);
           gi.field_R = c.field_h;
           DualLinkNode.a(-26);
           stackIn_46_0Lifetime1 = ResourceArchive.field_k;

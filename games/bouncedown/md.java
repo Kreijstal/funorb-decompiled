@@ -9,7 +9,7 @@ final class md extends gj {
     static int field_w;
     static bc field_t;
     static String field_v;
-    static mk field_q;
+    static PlatformTask field_q;
 
     final static boolean a(int param0, char param1) {
         boolean stackIn_25_0 = false;

@@ -254,7 +254,7 @@ abstract class MouseWheelInput {
         var4 = Chess.field_G;
         try {
           try {
-            if (!jk.field_c.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_c.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

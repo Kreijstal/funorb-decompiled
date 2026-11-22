@@ -424,7 +424,7 @@ final class re extends ue {
         var4 = CrazyCrystals.field_B;
         try {
           try {
-            if (!un.field_u.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_u.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

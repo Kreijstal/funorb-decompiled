@@ -287,20 +287,20 @@ final class ni implements Runnable {
         }
     }
 
-    ni(un param0) {
-        gb var2 = null;
+    ni(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_e = new SecondaryIntrusiveDeque();
         this.field_d = false;
         this.field_c = 0;
         try {
-          var2 = param0.a((Runnable) (this), 2, 5);
-          while (var2.field_a == 0) {
+          var2 = param0.requestThreadStart((Runnable) (this), 2, 5);
+          while (var2.status == 0) {
             fh.a(true, 10L);
           }
-          if (var2.field_a == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_a = (Thread) (var2.field_b);
+          this.field_a = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

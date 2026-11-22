@@ -97,7 +97,7 @@ final class vd extends he {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, long param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, int param11, le param12, boolean param13) {
+    final static void a(int param0, int param1, boolean param2, long param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, int param11, PlatformTaskDispatcher param12, boolean param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -167,7 +167,7 @@ final class vd extends he {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        le var5 = null;
+        PlatformTaskDispatcher var5 = null;
         var4 = Main.field_T;
         try {
           while (true) {
@@ -179,8 +179,8 @@ final class vd extends he {
             break;
           }
           if (param0 < 29) {
-            var5 = (le) null;
-            vd.a(73, -78, true, -52L, -55, -9, (String) null, -34, -78, -25, -16, 3, (le) null, false);
+            var5 = (PlatformTaskDispatcher) null;
+            vd.a(73, -78, true, -52L, -55, -9, (String) null, -34, -78, -25, -16, 3, (PlatformTaskDispatcher) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

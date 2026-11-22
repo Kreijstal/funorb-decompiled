@@ -26,7 +26,7 @@ final class ah {
         int var4;
         int var5;
         int var6;
-        un var7;
+        PlatformTaskDispatcher var7;
         int var8;
         int var2Lifetime1;
         int var2Lifetime2;
@@ -82,15 +82,15 @@ final class ah {
           }
         }
         if (param0 != 18236) {
-          var7 = (un) null;
-          ah.a((PacketBuffer) null, -120, 88, (un) null);
+          var7 = (PlatformTaskDispatcher) null;
+          ah.a((PacketBuffer) null, -120, 88, (PlatformTaskDispatcher) null);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
           this.field_h[var2Lifetime3] = SecondaryIntrusiveDeque.a(this.field_h[var2Lifetime3], SecondaryIntrusiveDeque.a(this.field_k[var2Lifetime3], this.field_n[var2Lifetime3]));
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, un param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -134,11 +134,11 @@ final class ah {
             var19.field_l = param0.readInt((byte) -61);
             var19.field_g = new int[var19.field_i];
             var5 = 115 % ((-71 - param2) / 52);
-            var19.field_m = new gb[var19.field_i];
+            var19.field_m = new PlatformTask[var19.field_i];
             var19.field_n = new int[var19.field_i];
             var19.field_f = new int[var19.field_i];
             var19.field_h = new byte[var19.field_i][][];
-            var19.field_k = new gb[var19.field_i];
+            var19.field_k = new PlatformTask[var19.field_i];
             for (var6 = 0; var6 < var19.field_i; var6++) {
               try {
                 var7_int = param0.readUnsignedByte(255);
@@ -173,7 +173,7 @@ final class ah {
                       var13[var18] = nh.a((byte) 121, var11[var18]);
                       var18++;
                     }
-                    var19.field_m[var6] = param3.a((byte) -93, nh.a((byte) -126, var21), var13, var22);
+                    var19.field_m[var6] = param3.requestDeclaredMethod((byte) -93, nh.a((byte) -126, var21), var13, var22);
                     var19.field_h[var6] = var23;
                   }
                 } else {
@@ -187,7 +187,7 @@ final class ah {
                   }
                   var19.field_f[var6] = var7_int;
                   var19.field_g[var6] = var10;
-                  var19.field_k[var6] = param3.a(22, var16, nh.a((byte) -105, var17));
+                  var19.field_k[var6] = param3.requestDeclaredField(22, var16, nh.a((byte) -105, var17));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class rp implements Runnable {
     volatile id[] field_c;
-    un field_e;
+    PlatformTaskDispatcher field_e;
     volatile boolean field_b;
     static String field_a;
     volatile boolean field_d;

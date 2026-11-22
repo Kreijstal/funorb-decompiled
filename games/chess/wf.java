@@ -316,8 +316,8 @@ final class wf extends ma implements ha, mj {
         }
     }
 
-    final static void exitFullscreenFrame(java.awt.Frame param0, jk param1, int param2) {
-        nl var3 = null;
+    final static void exitFullscreenFrame(java.awt.Frame param0, PlatformTaskDispatcher param1, int param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -329,11 +329,11 @@ final class wf extends ma implements ha, mj {
         var4 = Chess.field_G;
         try {
           while (true) {
-            var3 = param1.a(param0, false);
-            while (0 == var3.field_f) {
+            var3 = param1.requestFullscreenExit(param0, false);
+            while (0 == var3.status) {
               bc.a(10L, (byte) 17);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               bc.a(100L, (byte) -104);
               continue;
             }
@@ -405,13 +405,13 @@ final class wf extends ma implements ha, mj {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        jk var8 = null;
+        PlatformTaskDispatcher var8 = null;
         var7 = Chess.field_G;
         try {
           var1_int = 0;
           if (!param0) {
-            var8 = (jk) null;
-            wf.exitFullscreenFrame((java.awt.Frame) null, (jk) null, -94);
+            var8 = (PlatformTaskDispatcher) null;
+            wf.exitFullscreenFrame((java.awt.Frame) null, (PlatformTaskDispatcher) null, -94);
           }
           var2 = 0;
           while (kf.d(18954)) {

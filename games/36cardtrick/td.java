@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class td {
-    static le field_b;
+    static PlatformTaskDispatcher field_b;
     static String field_a;
     static kc[] field_c;
 
-    final static void a(PacketBuffer param0, byte param1, int param2, le param3) {
+    final static void a(PacketBuffer param0, byte param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -52,10 +52,10 @@ final class td {
             var18.field_j = param0.readInt((byte) 126);
             var18.field_l = new byte[var18.field_o][][];
             var18.field_k = new int[var18.field_o];
-            var18.field_p = new vi[var18.field_o];
+            var18.field_p = new PlatformTask[var18.field_o];
             var18.field_i = new int[var18.field_o];
             var18.field_m = new int[var18.field_o];
-            var18.field_r = new vi[var18.field_o];
+            var18.field_r = new PlatformTask[var18.field_o];
             for (var5 = 0; var18.field_o > var5; var5++) {
               try {
                 var6_int = param0.readUnsignedByte(-95);
@@ -90,7 +90,7 @@ final class td {
                       var12[var17] = t.a(var10[var17], -56);
                       var17++;
                     }
-                    var18.field_r[var5] = param3.a((byte) 99, t.a(var20, -122), var21, var12);
+                    var18.field_r[var5] = param3.requestDeclaredMethod((byte) 99, t.a(var20, -122), var21, var12);
                     var18.field_l[var5] = var22;
                   }
                 } else {
@@ -104,7 +104,7 @@ final class td {
                   }
                   var18.field_k[var5] = var6_int;
                   var18.field_m[var5] = var9;
-                  var18.field_p[var5] = param3.a(t.a(var15, -107), var16, 115);
+                  var18.field_p[var5] = param3.requestDeclaredField(t.a(var15, -107), var16, 115);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

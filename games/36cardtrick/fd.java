@@ -4,9 +4,9 @@
 final class fd extends IntrusiveNode {
     int field_j;
     static int field_h;
-    vi[] field_r;
+    PlatformTask[] field_r;
     byte[][][] field_l;
-    vi[] field_p;
+    PlatformTask[] field_p;
     int[] field_i;
     int field_o;
     static char field_n;

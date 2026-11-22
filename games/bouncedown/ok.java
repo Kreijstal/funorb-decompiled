@@ -178,17 +178,17 @@ final class ok {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == ec.field_P) {
-            ec.field_P = pj.field_c.a(gk.field_h, td.field_b, 0);
+            ec.field_P = pj.field_c.requestDirectSocket(gk.field_h, td.field_b, 0);
           }
-          if (ec.field_P.field_f == 0) {
+          if (ec.field_P.status == 0) {
             return false;
           }
           dupTemp$1 = fa.a(73);
           wa.field_e = dupTemp$1;
           qe.field_k = dupTemp$1;
-          if (ec.field_P.field_f == 1) {
+          if (ec.field_P.status == 1) {
             try {
-              dh.field_a = new pc((java.net.Socket) (ec.field_P.field_e), pj.field_c);
+              dh.field_a = new pc((java.net.Socket) (ec.field_P.result), pj.field_c);
               var4 = jc.field_g;
               var5 = var4;
               hh.field_p.position = 0;

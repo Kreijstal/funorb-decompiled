@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fl extends IntrusiveNode {
-    nl[] field_u;
+    PlatformTask[] field_u;
     static int field_n;
     static String field_k;
     int field_t;
     int[] field_v;
-    nl[] field_w;
+    PlatformTask[] field_w;
     static boolean field_j;
     static int field_p;
     int[] field_o;

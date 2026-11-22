@@ -80,7 +80,7 @@ final class ej extends ta {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static java.awt.Frame a(int param0, int param1, le param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_29_0 = null;
         Object stackIn_39_0 = null;
@@ -95,10 +95,10 @@ final class ej extends ta {
         java.awt.Frame var7 = null;
         int var9 = 0;
         md[] var10 = null;
-        vi var11 = null;
+        PlatformTask var11 = null;
         var9 = Main.field_T;
         try {
-          if (!param2.b((byte) -124)) {
+          if (!param2.isFullscreenAvailable((byte) -124)) {
             return null;
           }
           if (0 == param4) {
@@ -123,15 +123,15 @@ final class ej extends ta {
               return (java.awt.Frame) (stackIn_29_0);
             }
           }
-          var11 = param2.a(param4, param5, param0, (byte) -30, param3);
-          while (var11.field_a == 0) {
+          var11 = param2.requestFullscreenEnter(param4, param5, param0, (byte) -30, param3);
+          while (var11.status == 0) {
             wk.a((byte) -121, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
-          if (var11.field_a == 2) {
+          if (var11.status == 2) {
             rl.exitFullscreenFrame(false, param2, var7);
             stackIn_39_0 = null;
             return (java.awt.Frame) (stackIn_39_0);

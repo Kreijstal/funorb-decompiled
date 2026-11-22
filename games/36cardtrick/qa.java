@@ -53,7 +53,7 @@ final class qa {
         }
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, le param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

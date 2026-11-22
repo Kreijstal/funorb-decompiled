@@ -189,9 +189,9 @@ final class gd {
           nk var4 = null;
           nk var5 = null;
           if (null == tl.field_Gb) {
-            tl.field_Gb = re.field_n.a(am.field_d, false, qh.field_a);
+            tl.field_Gb = re.field_n.requestDirectSocket(am.field_d, false, qh.field_a);
           }
-          if (0 == tl.field_Gb.field_f) {
+          if (0 == tl.field_Gb.status) {
             return false;
           }
           if (param0 != 68) {
@@ -200,11 +200,11 @@ final class gd {
           long dupTemp$0 = ud.a(param0 ^ 70);
           ta.field_t = dupTemp$0;
           ml.field_d = dupTemp$0;
-          if (tl.field_Gb.field_f != 1) {
+          if (tl.field_Gb.status != 1) {
             tb.field_f = gh.field_c;
           } else {
             try {
-              ArchiveIndex.field_a = new hn((java.net.Socket) (tl.field_Gb.field_b), re.field_n);
+              ArchiveIndex.field_a = new hn((java.net.Socket) (tl.field_Gb.result), re.field_n);
               qn.field_U.position = 0;
               var4 = tk.field_h;
               var5 = var4;

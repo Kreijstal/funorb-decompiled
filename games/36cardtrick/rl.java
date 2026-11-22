@@ -5,8 +5,8 @@ final class rl extends r {
     static int field_u;
     static String field_t;
 
-    final static void exitFullscreenFrame(boolean param0, le param1, java.awt.Frame param2) {
-        vi var3 = null;
+    final static void exitFullscreenFrame(boolean param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -18,11 +18,11 @@ final class rl extends r {
         var4 = Main.field_T;
         try {
           while (true) {
-            var3 = param1.a((byte) -39, param2);
-            while (var3.field_a == 0) {
+            var3 = param1.requestFullscreenExit((byte) -39, param2);
+            while (var3.status == 0) {
               wk.a((byte) -114, 10L);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               wk.a((byte) -90, 100L);
               continue;
             }

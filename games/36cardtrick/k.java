@@ -41,7 +41,7 @@ abstract class k implements ba {
 
     final static void a(Throwable param0, byte param1, String param2) {
         try {
-          le stackIn_11_0;
+          PlatformTaskDispatcher stackIn_11_0;
           java.net.URL stackIn_11_1;
           java.net.URL stackIn_11_2;
           java.net.URL stackIn_11_3;
@@ -53,7 +53,7 @@ abstract class k implements ba {
           String var3 = null;
           Exception var3_ref = null;
           int var4 = 0;
-          vi var5 = null;
+          PlatformTask var5 = null;
           DataInputStream var6 = null;
           int var7 = 0;
           String var8 = null;
@@ -95,12 +95,12 @@ abstract class k implements ba {
               stackIn_12_2 = null;
               stackIn_12_5 = fk.field_o;
             }
-            var5 = ((le) (Object) stackIn_11_0).a(new java.net.URL(stackIn_11_3, ((StringBuilder) (Object) stackIn_11_4).append(stackIn_12_5).append("&v1=").append(le.field_v).append("&v2=").append(le.field_w).append("&e=").append(var11).toString()), true);
-            while (var5.field_a == 0) {
+            var5 = ((PlatformTaskDispatcher) (Object) stackIn_11_0).requestUrlStream(new java.net.URL(stackIn_11_3, ((StringBuilder) (Object) stackIn_11_4).append(stackIn_12_5).append("&v1=").append(PlatformTaskDispatcher.field_v).append("&v2=").append(PlatformTaskDispatcher.field_w).append("&e=").append(var11).toString()), true);
+            while (var5.status == 0) {
               wk.a((byte) -97, 1L);
             }
-            if (1 == var5.field_a) {
-              var6 = (DataInputStream) (var5.field_e);
+            if (1 == var5.status) {
+              var6 = (DataInputStream) (var5.result);
               var6.read();
               var6.close();
             }

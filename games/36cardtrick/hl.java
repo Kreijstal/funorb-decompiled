@@ -48,9 +48,9 @@ class hl extends lk {
         }
     }
 
-    final static boolean a(le param0, int param1) {
+    final static boolean a(PlatformTaskDispatcher param0, int param1) {
         RuntimeException var2 = null;
-        le var3 = null;
+        PlatformTaskDispatcher var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -58,10 +58,10 @@ class hl extends lk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            var3 = (le) null;
-            hl.a((le) null, -15);
+            var3 = (PlatformTaskDispatcher) null;
+            hl.a((PlatformTaskDispatcher) null, -15);
           }
-          stackIn_3_0 = param0.b((byte) -127);
+          stackIn_3_0 = param0.isFullscreenAvailable((byte) -127);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

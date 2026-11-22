@@ -81,7 +81,7 @@ abstract class jb implements vb {
         field_e = null;
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, jk param5, int param6, int param7, int param8) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, int param6, int param7, int param8) {
         try {
           of.field_g = param4;
           ml.field_h = param1;

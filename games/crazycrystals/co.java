@@ -86,20 +86,20 @@ final class co extends qm {
           }
           try {
             if (jh.field_e == 0) {
-              ci.field_k = cc.field_a.a(cb.field_m, false, em.field_g);
+              ci.field_k = cc.field_a.requestDirectSocket(cb.field_m, false, em.field_g);
               jh.field_e = jh.field_e + 1;
             }
             if (jh.field_e == 1) {
-              if (ci.field_k.field_a == 2) {
+              if (ci.field_k.status == 2) {
                 stackIn_16_0 = se.a(-1, (byte) -114);
                 return stackIn_16_0;
               }
-              if (ci.field_k.field_a == 1) {
+              if (ci.field_k.status == 1) {
                 jh.field_e = jh.field_e + 1;
               }
             }
             if (2 == jh.field_e) {
-              so.field_c = new j((java.net.Socket) (ci.field_k.field_b), cc.field_a);
+              so.field_c = new j((java.net.Socket) (ci.field_k.result), cc.field_a);
               var2 = new PacketBuffer(13);
               hn.a(kn.field_q, pj.field_x, 12, var2, fk.field_v);
               var2.writeByte(true, 15);

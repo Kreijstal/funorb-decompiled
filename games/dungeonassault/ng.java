@@ -379,7 +379,7 @@ final class ng extends ck {
                   dj.a(var2, false);
                 }
                 if (param0 != -27088) {
-                  ng.exitFullscreenFrame((qg) null, 86, (java.awt.Frame) null);
+                  ng.exitFullscreenFrame((PlatformTaskDispatcher) null, 86, (java.awt.Frame) null);
                 }
                 var2 = rp.a("mu_options_ratedgametype", 120);
                 if (null != var2) {
@@ -3401,8 +3401,8 @@ final class ng extends ck {
         }
     }
 
-    final static void exitFullscreenFrame(qg param0, int param1, java.awt.Frame param2) {
-        pn var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -3417,9 +3417,9 @@ final class ng extends ck {
             field_K = (String) null;
           }
           scanLoop1: while (true) {
-            var3 = param0.a(param2, (byte) -61);
+            var3 = param0.requestFullscreenExit(param2, (byte) -61);
             while (true) {
-              if (0 == var3.field_c) {
+              if (0 == var3.status) {
                 CombatState.a(0, 10L);
                 if (var4 != 0) {
                   return;
@@ -3428,7 +3428,7 @@ final class ng extends ck {
               }
               break;
             }
-            if (var3.field_c != 1) {
+            if (var3.status != 1) {
               CombatState.a(0, 100L);
               if (var4 == 0) {
                 continue scanLoop1;

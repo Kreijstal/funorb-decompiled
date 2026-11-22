@@ -5,16 +5,16 @@ import java.io.*;
 
 final class qk implements Runnable {
     private java.net.URL field_i;
-    private nl field_d;
+    private PlatformTask field_d;
     static int field_e;
-    private nl field_f;
+    private PlatformTask field_f;
     static mk field_b;
-    private nl field_l;
+    private PlatformTask field_l;
     private PacketBuffer field_j;
     private DataInputStream field_c;
     private int field_a;
     static int field_h;
-    private jk field_g;
+    private PlatformTaskDispatcher field_g;
     static km field_k;
 
     public static void a(boolean param0) {
@@ -29,18 +29,18 @@ final class qk implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_f) {
-          if (this.field_f.field_b != null) {
+          if (this.field_f.result != null) {
             try {
-              ((DataInputStream) (this.field_f.field_b)).close();
+              ((DataInputStream) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_f = null;
         }
         if (null != this.field_l) {
-          if (null != this.field_l.field_b) {
+          if (null != this.field_l.result) {
             try {
-              ((java.net.Socket) (this.field_l.field_b)).close();
+              ((java.net.Socket) (this.field_l.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -68,12 +68,12 @@ final class qk implements Runnable {
         }
         if (this.field_a == 0) {
           if (this.field_f == null) {
-            this.field_f = this.field_g.a((byte) -49, this.field_i);
+            this.field_f = this.field_g.requestUrlStream((byte) -49, this.field_i);
           }
-          if (this.field_f.field_f == 0) {
+          if (this.field_f.status == 0) {
             return false;
           }
-          if (1 != this.field_f.field_f) {
+          if (1 != this.field_f.status) {
             this.field_a = this.field_a + 1;
             this.field_f = null;
             return false;
@@ -81,12 +81,12 @@ final class qk implements Runnable {
         }
         if (1 == this.field_a) {
           if (this.field_l == null) {
-            this.field_l = this.field_g.a(this.field_i.getHost(), false, 443);
+            this.field_l = this.field_g.requestDirectSocket(this.field_i.getHost(), false, 443);
           }
-          if (this.field_l.field_f == 0) {
+          if (this.field_l.status == 0) {
             return false;
           }
-          if (this.field_l.field_f != 1) {
+          if (this.field_l.status != 1) {
             this.field_a = this.field_a + 1;
             this.field_l = null;
             return false;
@@ -95,10 +95,10 @@ final class qk implements Runnable {
         if (null == this.field_c) {
           try {
             if (this.field_a == 0) {
-              this.field_c = (DataInputStream) (this.field_f.field_b);
+              this.field_c = (DataInputStream) (this.field_f.result);
             }
             if (1 == this.field_a) {
-              var4 = (java.net.Socket) (this.field_l.field_b);
+              var4 = (java.net.Socket) (this.field_l.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -117,15 +117,15 @@ final class qk implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_d) {
-              this.field_d = this.field_g.a(5, true, (Runnable) (this));
+              this.field_d = this.field_g.requestThreadStart(5, true, (Runnable) (this));
             }
-            if (0 == this.field_d.field_f) {
+            if (0 == this.field_d.status) {
               return false;
             }
             if (param0 != 17) {
               field_k = (km) null;
             }
-            if (this.field_d.field_f == 1) {
+            if (this.field_d.status == 1) {
               return false;
             }
             this.finalize();
@@ -134,15 +134,15 @@ final class qk implements Runnable {
           }
         }
         if (null == this.field_d) {
-          this.field_d = this.field_g.a(5, true, (Runnable) (this));
+          this.field_d = this.field_g.requestThreadStart(5, true, (Runnable) (this));
         }
-        if (0 == this.field_d.field_f) {
+        if (0 == this.field_d.status) {
           return false;
         }
         if (param0 != 17) {
           field_k = (km) null;
         }
-        if (this.field_d.field_f != 1) {
+        if (this.field_d.status != 1) {
           this.finalize();
           this.field_a = this.field_a + 1;
         }
@@ -193,7 +193,7 @@ final class qk implements Runnable {
         }
     }
 
-    qk(jk param0, java.net.URL param1, int param2) {
+    qk(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_g = param0;
           this.field_i = param1;

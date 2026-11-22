@@ -76,7 +76,7 @@ final class bj extends ak {
         }
     }
 
-    final static void a(PacketBuffer param0, byte param1, int param2, si param3) {
+    final static void a(PacketBuffer param0, byte param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -116,12 +116,12 @@ final class bj extends ak {
             var18 = new hh();
             var18.field_j = param0.readUnsignedByte((byte) -109);
             var18.field_g = param0.readInt(-3);
-            var18.field_n = new mk[var18.field_j];
+            var18.field_n = new PlatformTask[var18.field_j];
             var18.field_o = new int[var18.field_j];
             var18.field_i = new int[var18.field_j];
             var18.field_l = new int[var18.field_j];
             var18.field_m = new byte[var18.field_j][][];
-            var18.field_s = new mk[var18.field_j];
+            var18.field_s = new PlatformTask[var18.field_j];
             if (param1 >= -123) {
               bj.clearStaticReferences(26);
             }
@@ -159,7 +159,7 @@ final class bj extends ak {
                       var12[var17] = pf.a(var10[var17], -1);
                       var17++;
                     }
-                    var18.field_s[var5] = param3.a(var8, pf.a(var20, -1), 8532, var12);
+                    var18.field_s[var5] = param3.requestDeclaredMethod(var8, pf.a(var20, -1), 8532, var12);
                     var18.field_m[var5] = var21;
                   }
                 } else {
@@ -173,7 +173,7 @@ final class bj extends ak {
                   }
                   var18.field_o[var5] = var6_int;
                   var18.field_l[var5] = var9;
-                  var18.field_n[var5] = param3.a(var15, pf.a(var16, -1), (byte) 48);
+                  var18.field_n[var5] = param3.requestDeclaredField(var15, pf.a(var16, -1), (byte) 48);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

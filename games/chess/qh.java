@@ -104,7 +104,7 @@ final class qh {
             fi.field_c[0] = 5;
           } else if (gm.field_f != 2) {
             if (3 == gm.field_f) {
-              if (oc.field_l.field_k) {
+              if (oc.field_l.privilegedTasksEnabled) {
                 var3_int = vm.a(hl.field_a, -9224, vj.field_d, n.field_d, mk.field_a);
               } else {
                 var3_int = vm.a(Chess.field_D, -9224, vj.field_d, n.field_d, mk.field_a);

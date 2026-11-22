@@ -5,7 +5,7 @@ class vc extends wd {
     static AccountRequestState field_F;
     static String field_B;
     private ui field_E;
-    static si field_G;
+    static PlatformTaskDispatcher field_G;
     private bc field_C;
     private String[] field_D;
 
@@ -316,7 +316,7 @@ class vc extends wd {
         var6 = Bounce.field_N;
         var4 = (ui) (this.field_C.a((byte) -57));
         if (param0 != 1) {
-          field_G = (si) null;
+          field_G = (PlatformTaskDispatcher) null;
         }
         while (var4 != null) {
           var5 = var4;

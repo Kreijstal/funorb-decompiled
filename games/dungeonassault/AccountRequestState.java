@@ -4,7 +4,7 @@
 final class AccountRequestState {
     static String field_a;
 
-    final static void a(boolean param0, tc param1, int param2, int param3, java.awt.Component param4, int param5, int param6, qg param7) {
+    final static void a(boolean param0, tc param1, int param2, int param3, java.awt.Component param4, int param5, int param6, PlatformTaskDispatcher param7) {
         try {
           vn.a(param2, param0, 10);
           int var8_int = 6 % ((-86 - param5) / 39);

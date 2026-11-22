@@ -47,13 +47,13 @@ final class gh {
           return "-" + -param0 / 10 + "." + -param0 % 10;
         }
         if (param1 >= -97) {
-          qg var3 = (qg) null;
-          gh.createFullscreenCanvas(101, -9, -53, 62, (qg) null, -6);
+          PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
+          gh.createFullscreenCanvas(101, -9, -53, 62, (PlatformTaskDispatcher) null, -6);
         }
         return param0 / 10 + "." + param0 % 10;
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, qg param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

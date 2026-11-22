@@ -307,20 +307,20 @@ final class cc implements Runnable {
         }
     }
 
-    cc(qg param0) {
-        pn var2 = null;
+    cc(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_h = new up();
         this.field_f = 0;
         this.field_b = false;
         try {
-          var2 = param0.a(-21432, 5, (Runnable) (this));
-          while (var2.field_c == 0) {
+          var2 = param0.requestThreadStart(-21432, 5, (Runnable) (this));
+          while (var2.status == 0) {
             CombatState.a(0, 10L);
           }
-          if (var2.field_c == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_g = (Thread) (var2.field_f);
+          this.field_g = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

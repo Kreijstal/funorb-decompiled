@@ -13,7 +13,7 @@ final class ol extends ma implements nn, mj, wl {
     private bg field_L;
     t field_Y;
     private se field_K;
-    static jk field_N;
+    static PlatformTaskDispatcher field_N;
     private bg field_W;
     private bg field_U;
     static jg field_O;

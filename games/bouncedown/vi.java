@@ -500,20 +500,20 @@ final class vi implements Runnable {
         }
     }
 
-    vi(si param0) {
-        mk var2 = null;
+    vi(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_d = new ml();
         this.field_a = false;
         this.field_b = 0;
         try {
-          var2 = param0.a(5, (byte) -123, (Runnable) (this));
-          while (0 == var2.field_f) {
+          var2 = param0.requestThreadStart(5, (byte) -123, (Runnable) (this));
+          while (0 == var2.status) {
             wh.a(10L, 19406);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_e = (Thread) (var2.field_e);
+          this.field_e = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

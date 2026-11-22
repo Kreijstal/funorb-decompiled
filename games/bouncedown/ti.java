@@ -64,7 +64,7 @@ final class ti extends ba implements wc {
 
     final static void a(Throwable param0, byte param1, String param2) {
         try {
-          si stackIn_15_0;
+          PlatformTaskDispatcher stackIn_15_0;
           java.net.URL stackIn_15_1;
           java.net.URL stackIn_15_2;
           java.net.URL stackIn_15_3;
@@ -75,7 +75,7 @@ final class ti extends ba implements wc {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          mk var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -119,14 +119,14 @@ final class ti extends ba implements wc {
               stackIn_16_2 = null;
               stackIn_16_5 = "" + al.field_h;
             }
-            var4 = ((si) (Object) stackIn_15_0).a(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(si.field_r).append("&v2=").append(si.field_d).append("&e=").append(var10).toString()), false);
-            while (0 == var4.field_f) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).requestUrlStream(new java.net.URL(stackIn_15_3, ((StringBuilder) (Object) stackIn_15_4).append(stackIn_16_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_d).append("&e=").append(var10).toString()), false);
+            while (0 == var4.status) {
               wh.a(1L, 19406);
             }
-            if (1 != var4.field_f) {
+            if (1 != var4.status) {
               return;
             }
-            var5 = (DataInputStream) (var4.field_e);
+            var5 = (DataInputStream) (var4.result);
             var5.read();
             var5.close();
             return;

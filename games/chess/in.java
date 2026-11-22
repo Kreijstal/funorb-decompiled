@@ -13,12 +13,12 @@ final class in {
     static ci field_b;
     static le field_d;
 
-    final static java.awt.Frame a(int param0, int param1, jk param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_26_0 = null;
         java.awt.Frame stackIn_29_0 = null;
-        nl stackIn_32_0 = null;
+        PlatformTask stackIn_32_0 = null;
         Object stackIn_40_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -30,10 +30,10 @@ final class in {
         java.awt.Frame var7 = null;
         int var9 = 0;
         tm[] var10 = null;
-        nl var11 = null;
+        PlatformTask var11 = null;
         var9 = Chess.field_G;
         try {
-          if (!param2.a(true)) {
+          if (!param2.isFullscreenAvailable(true)) {
             return null;
           }
           if (param0 == 0) {
@@ -59,21 +59,21 @@ final class in {
               return (java.awt.Frame) (stackIn_26_0);
             }
           }
-          var11 = param2.a(param1, param5, param4 - 3053, param0, param3);
+          var11 = param2.requestFullscreenEnter(param1, param5, param4 - 3053, param0, param3);
           if (param4 != 3160) {
             stackIn_29_0 = (java.awt.Frame) null;
             return stackIn_29_0;
           }
           stackIn_32_0 = var11;
-          while (stackIn_32_0.field_f == 0) {
+          while (stackIn_32_0.status == 0) {
             bc.a(10L, (byte) -106);
             stackIn_32_0 = var11;
           }
-          var7 = (java.awt.Frame) (var11.field_b);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             return null;
           }
-          if (var11.field_f != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           wf.exitFullscreenFrame(var7, param2, param4 - 3057);

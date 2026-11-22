@@ -4,7 +4,7 @@
 final class vi implements Runnable {
     volatile boolean field_e;
     volatile md[] field_c;
-    jk field_b;
+    PlatformTaskDispatcher field_b;
     volatile boolean field_f;
     static int field_d;
     static String field_a;

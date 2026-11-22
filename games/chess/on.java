@@ -274,20 +274,20 @@ final class on implements Runnable {
         }
     }
 
-    on(jk param0) {
-        nl var2 = null;
+    on(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_g = new ad();
         this.field_f = false;
         this.field_c = 0;
         try {
-          var2 = param0.a(5, true, (Runnable) (this));
-          while (var2.field_f == 0) {
+          var2 = param0.requestThreadStart(5, true, (Runnable) (this));
+          while (var2.status == 0) {
             bc.a(10L, (byte) -109);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_b = (Thread) (var2.field_b);
+          this.field_b = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "on.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

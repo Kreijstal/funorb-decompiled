@@ -320,7 +320,7 @@ class e {
         }
     }
 
-    final static e a(si param0, java.awt.Component param1, int param2, int param3) {
+    final static e a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           ia var4 = null;
           Throwable var4_ref = null;
@@ -360,7 +360,7 @@ class e {
                 field_k == null) {
                 field_k = new dd();
                 field_k.field_d = param0;
-                param0.a(field_l, (byte) 126, (Runnable) ((Object) field_k));
+                param0.requestThreadStart(field_l, (byte) 126, (Runnable) ((Object) field_k));
               }
               if (field_k != null) {
                 if (field_k.field_a[param2] != null) {

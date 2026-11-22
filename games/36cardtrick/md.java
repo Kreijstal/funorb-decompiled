@@ -26,22 +26,22 @@ final class md {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == fe.field_c) {
-            fe.field_c = td.field_b.a(mk.field_k, (byte) -108, MouseInputHandler.field_e);
+            fe.field_c = td.field_b.requestDirectSocket(mk.field_k, (byte) -108, MouseInputHandler.field_e);
           }
           if (param0 <= 47) {
             return true;
           }
-          if (0 == fe.field_c.field_a) {
+          if (0 == fe.field_c.status) {
             return false;
           }
           dupTemp$1 = id.a(94);
           ua.field_E = dupTemp$1;
           uk.field_a = dupTemp$1;
-          if (fe.field_c.field_a != 1) {
+          if (fe.field_c.status != 1) {
             ra.field_b = rk.field_fb;
           } else {
             try {
-              cb.field_j = new jd((java.net.Socket) (fe.field_c.field_e), td.field_b);
+              cb.field_j = new jd((java.net.Socket) (fe.field_c.result), td.field_b);
               var4 = rd.field_j;
               var5 = var4;
               na.field_r.position = 0;

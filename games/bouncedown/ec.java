@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ec extends mh {
-    static mk field_P;
+    static PlatformTask field_P;
     static int field_cb;
     static int field_bb;
 
@@ -23,7 +23,7 @@ final class ec extends mh {
         try {
           mh.a(param5, param18, param19, new oh(param12), param8, param14, param15, param4, param2, param17, param11, (byte) 115, param13, param9, param3, param0, param20, param7, param1, new oh(param16), new oh(param6));
           if (param10 > -27) {
-            field_P = (mk) null;
+            field_P = (PlatformTask) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

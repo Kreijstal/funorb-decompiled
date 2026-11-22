@@ -514,12 +514,12 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
 
     final void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-          si dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
-          mk var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -547,12 +547,12 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               nd.field_E = param4;
               og.field_c = this;
               gk.field_j = vi.b(0);
-              dupTemp$0 = new si(param0, param1, param2, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param0, param1, param2, true);
               ck.field_e = dupTemp$0;
               jj.field_a = dupTemp$0;
-              var8 = ck.field_e.a(1, (byte) -102, (Runnable) (this));
+              var8 = ck.field_e.requestThreadStart(1, (byte) -102, (Runnable) (this));
               while (true) {
-                if (0 == var8.field_f) {
+                if (0 == var8.status) {
                   wh.a(10L, 19406);
                   if (var9 == 0) {
                     continue;
@@ -608,11 +608,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != si.field_r) {
-                var1 = si.field_r.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_r) {
+                var1 = PlatformTaskDispatcher.field_r.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = si.field_d;
+                  var2 = PlatformTaskDispatcher.field_d;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -654,8 +654,8 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (si.field_d != null))) {
-                stackIn_66_0 = si.field_d.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_d != null))) {
+                stackIn_66_0 = PlatformTaskDispatcher.field_d.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -664,8 +664,8 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (si.field_d.length() > var1_int) {
-                    var3 = si.field_d.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_d.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_d.charAt(var1_int);
                     stackIn_82_0 = -49;
                     stackIn_82_1 = ~var3;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -692,7 +692,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 if (a.field_c != null) {
                   var1 = a.field_c;
                 }
-                var2_ref = si.field_w;
+                var2_ref = PlatformTaskDispatcher.field_w;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -789,7 +789,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           }
           if (ck.field_e != null) {
             try {
-              ck.field_e.b((byte) 94);
+              ck.field_e.shutdown((byte) 94);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3_ref = (Exception) (Object) decompiledCaughtException;

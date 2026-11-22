@@ -105,7 +105,7 @@ final class ga extends ip {
         }
     }
 
-    final static java.awt.Frame a(qg param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -123,10 +123,10 @@ final class ga extends ip {
         java.awt.Frame var7 = null;
         int var9 = 0;
         ki[] var10 = null;
-        pn var11 = null;
+        PlatformTask var11 = null;
         var9 = DungeonAssault.field_K;
         try {
-          if (!param0.a(50)) {
+          if (!param0.isFullscreenAvailable(50)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -153,19 +153,19 @@ final class ga extends ip {
               return (java.awt.Frame) (stackIn_24_0);
             }
           }
-          var11 = param0.a((byte) -102, param3, param1, param2, param5);
+          var11 = param0.requestFullscreenEnter((byte) -102, param3, param1, param2, param5);
           if (param4 <= 99) {
             field_o = (cn[]) null;
           }
-          while (var11.field_c == 0) {
+          while (var11.status == 0) {
             CombatState.a(0, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_f);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_31_0 = null;
             return (java.awt.Frame) (stackIn_31_0);
           }
-          if (2 != var11.field_c) {
+          if (2 != var11.status) {
             stackIn_36_0 = var7;
             return stackIn_36_0;
           }

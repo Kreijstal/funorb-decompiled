@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oe extends IntrusiveNode {
-    pn[] field_s;
+    PlatformTask[] field_s;
     static String field_p;
     static ph field_m;
     byte[][][] field_k;
     static int field_i;
-    pn[] field_o;
+    PlatformTask[] field_o;
     int[] field_n;
     int field_q;
     int[] field_r;
@@ -25,7 +25,7 @@ final class oe extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           java.net.MalformedURLException var4_ref = null;
           try {
-            if (qg.field_n.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_n.startsWith("win") &&
               ji.a(param3, -38)) {
               return;
             }

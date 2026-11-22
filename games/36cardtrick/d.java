@@ -8,7 +8,7 @@ final class d {
     byte[][] field_l;
     int[] field_n;
     int[][] field_o;
-    static vi field_a;
+    static PlatformTask field_a;
     private int[][] field_r;
     int field_k;
     int[] field_f;

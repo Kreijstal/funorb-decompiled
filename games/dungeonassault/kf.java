@@ -6,11 +6,11 @@ import java.util.*;
 final class kf extends c implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_l;
     static eh field_j;
-    static pn field_m;
+    static PlatformTask field_m;
     static cn field_k;
     static String field_q;
     static String field_i;
-    static qg field_o;
+    static PlatformTaskDispatcher field_o;
     static ResourceArchive field_p;
     private java.awt.image.ImageConsumer field_n;
 

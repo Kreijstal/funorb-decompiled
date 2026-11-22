@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pi extends IntrusiveNode {
-    gb[] field_m;
+    PlatformTask[] field_m;
     int[] field_n;
     int field_i;
     static nd field_j;
     int[] field_f;
     int field_l;
-    gb[] field_k;
+    PlatformTask[] field_k;
     static int field_o;
     int[] field_g;
     byte[][][] field_h;

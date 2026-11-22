@@ -89,15 +89,15 @@ final class hf {
           }
           try {
             if (ih.field_X == 0) {
-              md.field_q = vc.field_G.a(bd.field_l, a.field_a, 0);
+              md.field_q = vc.field_G.requestDirectSocket(bd.field_l, a.field_a, 0);
               ih.field_X = ih.field_X + 1;
             }
             if (ih.field_X == 1) {
-              if (md.field_q.field_f == 2) {
+              if (md.field_q.status == 2) {
                 stackIn_14_0 = qg.a(-23888, -1);
                 return stackIn_14_0;
               }
-              if (md.field_q.field_f == 1) {
+              if (md.field_q.status == 1) {
                 ih.field_X = ih.field_X + 1;
               }
             }
@@ -105,7 +105,7 @@ final class hf {
               hf.a(true);
             }
             if (ih.field_X == 2) {
-              AccountRequestState.field_a = new pc((java.net.Socket) (md.field_q.field_e), vc.field_G);
+              AccountRequestState.field_a = new pc((java.net.Socket) (md.field_q.result), vc.field_G);
               var2 = new PacketBuffer(13);
               AppletShell.a(pe.field_c, 6, AccountRequestState.field_e, var2, fi.field_c);
               var2.writeByte(15, (byte) 98);

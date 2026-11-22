@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ck implements uh {
-    static si field_e;
+    static PlatformTaskDispatcher field_e;
     static int field_b;
     private long field_d;
     static int field_c;
@@ -67,7 +67,7 @@ abstract class ck implements uh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 77) {
-            field_e = (si) null;
+            field_e = (PlatformTaskDispatcher) null;
           }
           if (0L == param2 &&
             param1 != null) {

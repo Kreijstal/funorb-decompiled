@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class jj {
-    static si field_a;
+    static PlatformTaskDispatcher field_a;
 
     public static void a(boolean param0) {
         if (!param0) {
@@ -20,7 +20,7 @@ final class jj {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (!param1) {
-            field_a = (si) null;
+            field_a = (PlatformTaskDispatcher) null;
           }
           if (dh.field_a != null && (param0 < 0 ||
             pj.field_a == b.field_b)) {
@@ -51,7 +51,7 @@ final class jj {
 
     final static sg a(int param0) {
         if (param0 != 10000) {
-          field_a = (si) null;
+          field_a = (PlatformTaskDispatcher) null;
           return (sg) ((Object) new el());
         }
         return (sg) ((Object) new el());
@@ -116,7 +116,7 @@ final class jj {
         byte[] var2_ref_byte__Lifetime3Lifetime1;
         byte[] var3Lifetime1Lifetime1;
         if (param0 != 10000) {
-          field_a = (si) null;
+          field_a = (PlatformTaskDispatcher) null;
           if (100 != param1) {
             if (param1 == 5000 &&
               hj.field_b > 0) {

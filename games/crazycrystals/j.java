@@ -12,10 +12,10 @@ final class j implements Runnable {
     private java.net.Socket field_c;
     static int field_j;
     private int field_f;
-    private un field_b;
+    private PlatformTaskDispatcher field_b;
     static String field_h;
     private OutputStream field_e;
-    private gb field_l;
+    private PlatformTask field_l;
     private boolean field_k;
     static int[] field_i;
 
@@ -53,7 +53,7 @@ final class j implements Runnable {
               }
             }
             if (null == this.field_l) {
-              this.field_l = this.field_b.a((Runnable) (this), 2, 3);
+              this.field_l = this.field_b.requestThreadStart((Runnable) (this), 2, 3);
             }
             this.notifyAll();
           }
@@ -103,7 +103,7 @@ final class j implements Runnable {
         return 0;
     }
 
-    j(java.net.Socket param0, un param1) throws IOException {
+    j(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -138,12 +138,12 @@ final class j implements Runnable {
             }
           }
           if (null != this.field_l) {
-            while (this.field_l.field_a == 0) {
+            while (this.field_l.status == 0) {
               fh.a(true, 1L);
             }
-            if (this.field_l.field_a == 1) {
+            if (this.field_l.status == 1) {
               try {
-                ((Thread) (this.field_l.field_b)).join();
+                ((Thread) (this.field_l.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (InterruptedException) (Object) decompiledCaughtException;
@@ -319,7 +319,7 @@ final class j implements Runnable {
         return this.field_n.available();
     }
 
-    private j(java.net.Socket param0, un param1, int param2) throws IOException {
+    private j(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_f = 0;
         this.field_g = 0;
         this.field_k = false;

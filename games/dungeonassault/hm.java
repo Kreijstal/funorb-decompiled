@@ -73,7 +73,7 @@ final class hm extends IntrusiveNode {
                                   tl.field_d = false;
                                   a.a(320, IntrusiveNode.field_c.field_N, IntrusiveNode.field_c, true, var4 != 0, 8, 240, 2, 8, IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_N, (cn[]) null, (cn[]) null);
                                   if (null != cm.field_R) {
-                                    i.field_A.a((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
+                                    i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 101, false);
                                   }
                                 } else {
                                   ib.a(930);

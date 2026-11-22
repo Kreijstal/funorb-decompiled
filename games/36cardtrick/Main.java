@@ -7,7 +7,7 @@ public final class Main extends c {
     uh field_cb;
     static int field_G;
     static String field_y;
-    static le field_W;
+    static PlatformTaskDispatcher field_W;
     ad field_P;
     private bk field_X;
     private boolean field_L;
@@ -1164,7 +1164,7 @@ public final class Main extends c {
         }
     }
 
-    final static void a(Object param0, le param1, byte param2) {
+    final static void a(Object param0, PlatformTaskDispatcher param1, byte param2) {
         java.awt.AWTEvent stackIn_8_1 = null;
         Object stackIn_15_0 = null;
         Object stackIn_15_1 = null;
@@ -2624,7 +2624,7 @@ public final class Main extends c {
             }
           }
           if (param0 <= 75) {
-            Main.a((Object) null, (le) null, (byte) 100);
+            Main.a((Object) null, (PlatformTaskDispatcher) null, (byte) 100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

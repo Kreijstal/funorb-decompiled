@@ -43,7 +43,7 @@ final class ak extends IntrusiveNode {
         field_x = null;
     }
 
-    final static void a(jk param0, byte param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, byte param1, Object param2) {
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -113,7 +113,7 @@ final class ak extends IntrusiveNode {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
               if (param0) {
                 var3 = (Object) null;
-                ak.a((jk) null, (byte) 6, (Object) null);
+                ak.a((PlatformTaskDispatcher) null, (byte) 6, (Object) null);
               }
               param1.getAppletContext().showDocument(rh.a(var2, param1, (byte) -87), "_top");
               return;
@@ -278,7 +278,7 @@ final class ak extends IntrusiveNode {
     final static boolean a(boolean param0) {
         if (!param0) {
           Object var2 = (Object) null;
-          ak.a((jk) null, (byte) 23, (Object) null);
+          ak.a((PlatformTaskDispatcher) null, (byte) 23, (Object) null);
           if (!tj.h(105)) {
             return false;
           }

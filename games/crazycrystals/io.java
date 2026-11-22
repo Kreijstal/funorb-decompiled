@@ -66,8 +66,8 @@ final class io extends rf {
           field_I = null;
           return;
         }
-        un var2 = (un) null;
-        io.createFullscreenCanvas(89, 18, -26, (un) null, -101, 42);
+        PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+        io.createFullscreenCanvas(89, 18, -26, (PlatformTaskDispatcher) null, -101, 42);
         field_I = null;
     }
 
@@ -514,7 +514,7 @@ final class io extends rf {
         return;
     }
 
-    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, un param3, int param4, int param5) {
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

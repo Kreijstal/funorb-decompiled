@@ -13,8 +13,8 @@ final class so {
 
     public static void a(int param0) {
         if (param0 != -11774) {
-          un var2 = (un) null;
-          so.a((Object) null, (un) null, false);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          so.a((Object) null, (PlatformTaskDispatcher) null, false);
         }
         field_a = null;
         field_h = null;
@@ -25,7 +25,7 @@ final class so {
         field_c = null;
     }
 
-    final static void a(Object param0, un param1, boolean param2) {
+    final static void a(Object param0, PlatformTaskDispatcher param1, boolean param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

@@ -101,7 +101,7 @@ final class kc extends ii implements vg {
         }
     }
 
-    final static ki[] a(qg param0, int param1) {
+    final static ki[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         ki[] stackIn_3_0 = null;
         ki[] stackIn_9_0 = null;
@@ -115,25 +115,25 @@ final class kc extends ii implements vg {
         ki[] var4 = null;
         ki var6 = null;
         int var7 = 0;
-        qg var8 = null;
-        pn var9 = null;
+        PlatformTaskDispatcher var8 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = DungeonAssault.field_K;
         try {
-          if (!param0.a(param1 + 61)) {
+          if (!param0.isFullscreenAvailable(param1 + 61)) {
             stackIn_3_0 = new ki[]{};
             return stackIn_3_0;
           }
-          var9 = param0.a(false);
-          while (var9.field_c == 0) {
+          var9 = param0.requestDisplayModes(false);
+          while (var9.status == 0) {
             CombatState.a(0, 10L);
           }
-          if (var9.field_c == 2) {
+          if (var9.status == 2) {
             stackIn_9_0 = new ki[]{};
             return stackIn_9_0;
           }
-          var11 = (int[]) (var9.field_f);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new ki[var11.length >> 2];
@@ -146,8 +146,8 @@ final class kc extends ii implements vg {
             var6.field_a = var3[3 + (var5 << 2)];
           }
           if (param1 != 10) {
-            var8 = (qg) null;
-            kc.a((qg) null, 35);
+            var8 = (PlatformTaskDispatcher) null;
+            kc.a((PlatformTaskDispatcher) null, 35);
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;

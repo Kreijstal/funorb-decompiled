@@ -132,7 +132,7 @@ final class rk {
         return vg.field_a[var4];
     }
 
-    final static void a(int param0, int param1, String param2, int param3, int param4, int param5, si param6, int param7, int param8) {
+    final static void a(int param0, int param1, String param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, int param7, int param8) {
         bd.field_l = param2;
         a.field_a = param4;
         if (param3 != 0) {

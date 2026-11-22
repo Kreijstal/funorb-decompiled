@@ -66,7 +66,7 @@ final class ji extends da {
             field_G = (cn) null;
           }
           try {
-            if (!qg.field_n.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_n.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

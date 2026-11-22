@@ -248,7 +248,7 @@ final class jn extends fb {
         ca.field_a.d(var5Lifetime1 - var19.field_v, var6Lifetime1 - var19.field_u, 256);
     }
 
-    final static void a(boolean param0, jk param1, String param2, int param3, int param4, int param5, int param6, long param7, byte param8, int param9, boolean param10, int param11, int param12, int param13) {
+    final static void a(boolean param0, PlatformTaskDispatcher param1, String param2, int param3, int param4, int param5, int param6, long param7, byte param8, int param9, boolean param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;

@@ -101,7 +101,7 @@ abstract class ed {
         return stackIn_5_0;
     }
 
-    private final static lb[] a(int param0, si param1) {
+    private final static lb[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         lb[] stackIn_3_0 = null;
         lb[] stackIn_10_0 = null;
@@ -116,24 +116,24 @@ abstract class ed {
         lb[] var4 = null;
         lb var6 = null;
         int var7 = 0;
-        mk var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Bounce.field_N;
         try {
-          if (!param1.a((byte) 53)) {
+          if (!param1.isFullscreenAvailable((byte) 53)) {
             stackIn_3_0 = new lb[]{};
             return stackIn_3_0;
           }
-          var8 = param1.c((byte) 5);
-          while (var8.field_f == 0) {
+          var8 = param1.requestDisplayModes((byte) 5);
+          while (var8.status == 0) {
             wh.a(10L, param0 + 19396);
           }
-          if (var8.field_f == 2) {
+          if (var8.status == 2) {
             stackIn_10_0 = new lb[]{};
             return stackIn_10_0;
           }
-          var10 = (int[]) (var8.field_e);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           if (param0 != 10) {
@@ -165,7 +165,7 @@ abstract class ed {
         }
     }
 
-    final static java.awt.Frame a(int param0, si param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_28_0 = null;
         Object stackIn_34_0 = null;
@@ -181,10 +181,10 @@ abstract class ed {
         java.awt.Frame var7 = null;
         int var9 = 0;
         lb[] var10 = null;
-        mk var11 = null;
+        PlatformTask var11 = null;
         var9 = Bounce.field_N;
         try {
-          if (!param1.a((byte) 53)) {
+          if (!param1.isFullscreenAvailable((byte) 53)) {
             return null;
           }
           if (param2 == 0) {
@@ -209,16 +209,16 @@ abstract class ed {
               return (java.awt.Frame) (stackIn_28_0);
             }
           }
-          var11 = param1.a(param2, param4, param3, param5, 314572800);
-          while (0 == var11.field_f) {
+          var11 = param1.requestFullscreenEnter(param2, param4, param3, param5, 314572800);
+          while (0 == var11.status) {
             wh.a(10L, 19406);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_34_0 = null;
             return (java.awt.Frame) (stackIn_34_0);
           }
-          if (var11.field_f == 2) {
+          if (var11.status == 2) {
             ib.exitFullscreenFrame(param1, var7, (byte) 115);
             stackIn_37_0 = null;
             return (java.awt.Frame) (stackIn_37_0);

@@ -92,7 +92,7 @@ final class AccountRequestState {
             dd.field_j[0] = 5;
           } else if (2 != v.field_R) {
             if (v.field_R == 3) {
-              if (jk.field_a.field_b) {
+              if (jk.field_a.privilegedTasksEnabled) {
                 var3_int = mh.a(false, rc.field_o, mb.field_a, oj.field_b, ij.field_a);
               } else {
                 var3_int = mh.a(false, rc.field_o, mb.field_a, ll.field_a, ij.field_a);

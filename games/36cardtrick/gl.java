@@ -43,11 +43,11 @@ final class gl extends hl {
           }
           for (var2 = 0; var1.field_o > var2; var2++) {
             if (null != var4.field_p[var2] &&
-              0 == var4.field_p[var2].field_a) {
+              0 == var4.field_p[var2].status) {
               return false;
             }
             if (null != var4.field_r[var2] &&
-              var4.field_r[var2].field_a == 0) {
+              var4.field_r[var2].status == 0) {
               return false;
             }
           }
@@ -75,7 +75,7 @@ final class gl extends hl {
             if (param1 != 873140897) {
               return true;
             }
-            if (!le.field_m.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_m.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

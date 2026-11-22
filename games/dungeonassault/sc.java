@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sc extends ch {
-    static qg field_q;
+    static PlatformTaskDispatcher field_q;
     static String field_p;
 
     public static void b(byte param0) {

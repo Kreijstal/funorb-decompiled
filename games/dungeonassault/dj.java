@@ -33,7 +33,7 @@ final class dj {
         return null;
     }
 
-    final static void a(int param0, int param1, long param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, int param10, boolean param11, byte param12, qg param13) {
+    final static void a(int param0, int param1, long param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, int param10, boolean param11, byte param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -262,8 +262,8 @@ final class dj {
     public static void a(byte param0) {
         field_c = null;
         if (param0 < 22) {
-          qg var2 = (qg) null;
-          dj.a(77, 24, 1L, 66, (String) null, -4, 49, 6, -5, true, 116, false, (byte) 34, (qg) null);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          dj.a(77, 24, 1L, 66, (String) null, -4, 49, 6, -5, true, 116, false, (byte) 34, (PlatformTaskDispatcher) null);
         }
     }
 

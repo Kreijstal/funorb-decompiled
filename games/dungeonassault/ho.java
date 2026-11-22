@@ -125,7 +125,7 @@ final class ho implements Iterator {
         return true;
     }
 
-    final static void a(qg param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         int var3_int = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

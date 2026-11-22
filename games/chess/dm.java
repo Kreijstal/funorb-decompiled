@@ -4,7 +4,7 @@
 abstract class dm {
     static hg field_c;
     static String field_a;
-    static nl field_b;
+    static PlatformTask field_b;
 
     abstract ug b(byte param0);
 

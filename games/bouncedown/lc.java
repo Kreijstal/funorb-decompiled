@@ -268,7 +268,7 @@ class lc extends lk implements ik {
         var4 = Bounce.field_N;
         try {
           try {
-            if (!si.field_a.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_a.startsWith("win")) {
               return false;
             }
             if (!param1.startsWith("http://") &&

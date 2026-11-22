@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ci extends se {
-    static gb field_k;
+    static PlatformTask field_k;
     static String field_j;
     static db field_i;
 

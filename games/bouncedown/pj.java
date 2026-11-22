@@ -4,7 +4,7 @@
 final class pj implements fc {
     static uf field_a;
     static int field_b;
-    static si field_c;
+    static PlatformTaskDispatcher field_c;
 
     final static void a(gk param0, int param1, boolean param2, rb param3) {
         try {

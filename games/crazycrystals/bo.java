@@ -25,7 +25,7 @@ abstract class bo extends pn {
     final f a(int param0, byte param1, int param2) {
         if (param1 != -110) {
           java.awt.Frame var5 = (java.awt.Frame) null;
-          bo.exitFullscreenFrame((un) null, (java.awt.Frame) null, -60);
+          bo.exitFullscreenFrame((PlatformTaskDispatcher) null, (java.awt.Frame) null, -60);
           return (f) (this);
         }
         return (f) (this);
@@ -35,8 +35,8 @@ abstract class bo extends pn {
         super(param0);
     }
 
-    final static void exitFullscreenFrame(un param0, java.awt.Frame param1, int param2) {
-        gb var3 = null;
+    final static void exitFullscreenFrame(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -48,11 +48,11 @@ abstract class bo extends pn {
         var4 = CrazyCrystals.field_B;
         try {
           while (true) {
-            var3 = param0.a(param1, (byte) -116);
-            while (0 == var3.field_a) {
+            var3 = param0.requestFullscreenExit(param1, (byte) -116);
+            while (0 == var3.status) {
               fh.a(true, 10L);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               fh.a(true, 100L);
               continue;
             }

@@ -294,7 +294,7 @@ class vn {
     void b(int param0) throws Exception {
     }
 
-    final static vn a(qg param0, java.awt.Component param1, int param2, int param3) {
+    final static vn a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           wn var4 = null;
           Throwable var4_ref = null;
@@ -334,7 +334,7 @@ class vn {
                 field_e == null) {
                 field_e = new bk();
                 field_e.field_h = param0;
-                param0.a(-21432, field_l, (Runnable) ((Object) field_e));
+                param0.requestThreadStart(-21432, field_l, (Runnable) ((Object) field_e));
               }
               if (field_e != null) {
                 if (field_e.field_g[param2] != null) {

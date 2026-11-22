@@ -203,7 +203,7 @@ final class fe {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (jk.field_c.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_c.startsWith("win") &&
               MouseWheelInput.a(param0, false)) {
               return;
             }

@@ -3,7 +3,7 @@
  */
 final class tl extends ci {
     static di field_Fb;
-    static nl field_Gb;
+    static PlatformTask field_Gb;
     private ci field_Jb;
     static String field_Eb;
     static String field_Ib;
@@ -111,7 +111,7 @@ final class tl extends ci {
         field_Fb = null;
         field_Eb = null;
         if (param0 > -101) {
-          field_Gb = (nl) null;
+          field_Gb = (PlatformTask) null;
         }
     }
 
@@ -120,7 +120,7 @@ final class tl extends ci {
           vn.field_vb.a((IntrusiveNode) (param0), (byte) 119);
           GameAppletShell.a(param0, param2 ^ 14994, param1);
           if (param2 != 117) {
-            field_Gb = (nl) null;
+            field_Gb = (PlatformTask) null;
           }
         } catch (RuntimeException runtimeException) {
           throw fk.a((Throwable) ((Object) runtimeException), "tl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

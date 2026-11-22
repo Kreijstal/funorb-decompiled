@@ -42,7 +42,7 @@ final class bk {
             if (param1 != -25573) {
               return;
             }
-            if (le.field_m.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_m.startsWith("win") &&
               gl.a(param2, 873140897)) {
               return;
             }

@@ -69,7 +69,7 @@ final class GameCanvas extends java.awt.Canvas {
         }
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, int param3, un param4, int param5) {
+    final static java.awt.Frame a(byte param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
         Object stackIn_33_0 = null;
@@ -86,11 +86,11 @@ final class GameCanvas extends java.awt.Canvas {
         int var8 = 0;
         int var9 = 0;
         al[] var10 = null;
-        gb var11 = null;
+        PlatformTask var11 = null;
         int var8Lifetime1;
         var9 = CrazyCrystals.field_B;
         try {
-          if (!param4.b(5)) {
+          if (!param4.isFullscreenAvailable(5)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -116,17 +116,17 @@ final class GameCanvas extends java.awt.Canvas {
               return null;
             }
           }
-          var11 = param4.a(param2, param1, param5, param3, (byte) 4);
-          while (0 == var11.field_a) {
+          var11 = param4.requestFullscreenEnter(param2, param1, param5, param3, (byte) 4);
+          while (0 == var11.status) {
             fh.a(true, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_b);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_33_0 = null;
             return (java.awt.Frame) (stackIn_33_0);
           }
           var8Lifetime1 = 101 % ((param0 - 14) / 62);
-          if (2 != var11.field_a) {
+          if (2 != var11.status) {
             stackIn_38_0 = var7;
             return stackIn_38_0;
           }

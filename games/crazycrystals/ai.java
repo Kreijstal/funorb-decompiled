@@ -4,16 +4,16 @@
 import java.io.*;
 
 final class ai implements Runnable {
-    private gb field_m;
+    private PlatformTask field_m;
     static int[] field_j;
     private PacketBuffer field_k;
-    private gb field_g;
+    private PlatformTask field_g;
     private DataInputStream field_e;
-    private gb field_f;
+    private PlatformTask field_f;
     static int[] field_c;
     static dl field_b;
     private int field_d;
-    private un field_a;
+    private PlatformTaskDispatcher field_a;
     static vc field_h;
     static String field_n;
     static String field_l;
@@ -63,18 +63,18 @@ final class ai implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_g) {
-          if (this.field_g.field_b != null) {
+          if (this.field_g.result != null) {
             try {
-              ((DataInputStream) (this.field_g.field_b)).close();
+              ((DataInputStream) (this.field_g.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_g = null;
         }
         if (this.field_m != null) {
-          if (this.field_m.field_b != null) {
+          if (this.field_m.result != null) {
             try {
-              ((java.net.Socket) (this.field_m.field_b)).close();
+              ((java.net.Socket) (this.field_m.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -124,12 +124,12 @@ final class ai implements Runnable {
         boolean decompiledFrameRemainder0 = true;
         if (this.field_d == 0) {
           if (this.field_g == null) {
-            this.field_g = this.field_a.a(5, this.field_i);
+            this.field_g = this.field_a.requestUrlStream(5, this.field_i);
           }
-          if (0 == this.field_g.field_a) {
+          if (0 == this.field_g.status) {
             return false;
           }
-          if (this.field_g.field_a != 1) {
+          if (this.field_g.status != 1) {
             this.field_g = null;
             decompiledFrameRemainder0 = false;
           }
@@ -137,12 +137,12 @@ final class ai implements Runnable {
         if (decompiledFrameRemainder0) {
           if (this.field_d == 1) {
             if (null == this.field_m) {
-              this.field_m = this.field_a.a(443, false, this.field_i.getHost());
+              this.field_m = this.field_a.requestDirectSocket(443, false, this.field_i.getHost());
             }
-            if (this.field_m.field_a == 0) {
+            if (this.field_m.status == 0) {
               return false;
             }
-            if (this.field_m.field_a != 1) {
+            if (this.field_m.status != 1) {
               this.field_d = this.field_d + 1;
               this.field_m = null;
               return false;
@@ -151,10 +151,10 @@ final class ai implements Runnable {
           if (null == this.field_e) {
             try {
               if (0 == this.field_d) {
-                this.field_e = (DataInputStream) (this.field_g.field_b);
+                this.field_e = (DataInputStream) (this.field_g.result);
               }
               if (this.field_d == 1) {
-                var4 = (java.net.Socket) (this.field_m.field_b);
+                var4 = (java.net.Socket) (this.field_m.result);
                 var4.setSoTimeout(10000);
                 var3 = var4.getOutputStream();
                 var3.write(17);
@@ -171,12 +171,12 @@ final class ai implements Runnable {
             }
           }
           if (this.field_f == null) {
-            this.field_f = this.field_a.a((Runnable) (this), param0 ^ 2, 5);
+            this.field_f = this.field_a.requestThreadStart((Runnable) (this), param0 ^ 2, 5);
           }
-          if (this.field_f.field_a == param0) {
+          if (this.field_f.status == param0) {
             return false;
           }
-          if (this.field_f.field_a == 1) {
+          if (this.field_f.status == 1) {
             return false;
           }
           this.finalize();
@@ -432,7 +432,7 @@ final class ai implements Runnable {
         }
     }
 
-    ai(un param0, java.net.URL param1, int param2) {
+    ai(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_a = param0;
           this.field_i = param1;

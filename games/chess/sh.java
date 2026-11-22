@@ -135,20 +135,20 @@ final class sh {
           }
           try {
             if (vm.field_k == 0) {
-              dm.field_b = ol.field_N.a(ml.field_h, false, of.field_g);
+              dm.field_b = ol.field_N.requestDirectSocket(ml.field_h, false, of.field_g);
               vm.field_k = vm.field_k + 1;
             }
             if (vm.field_k == 1) {
-              if (dm.field_b.field_f == 2) {
+              if (dm.field_b.status == 2) {
                 stackIn_14_0 = ic.a(125, -1);
                 return stackIn_14_0;
               }
-              if (dm.field_b.field_f == 1) {
+              if (dm.field_b.status == 1) {
                 vm.field_k = vm.field_k + 1;
               }
             }
             if (vm.field_k == 2) {
-              jj.field_a = new hn((java.net.Socket) (dm.field_b.field_b), ol.field_N);
+              jj.field_a = new hn((java.net.Socket) (dm.field_b.result), ol.field_N);
               var2 = new PacketBuffer(13);
               dh.a(ue.field_e, 11, uj.field_n, tg.field_t, var2);
               var2.writeByte(15, (byte) 95);
