@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bc extends hi {
-    private String field_p;
+final class AccountNameAvailabilityValidator extends hi {
+    private String checkedName;
     static int[] field_o;
     static String[] field_t;
     static hj[] field_q;
-    private boolean field_n;
+    private boolean nameAvailable;
     static String field_s;
     static int field_r;
 
@@ -27,12 +27,12 @@ final class bc extends hi {
             stackIn_3_0 = vh.field_h;
             return stackIn_3_0;
           }
-          if (!param0.equals(this.field_p)) {
-            var3 = lf.a(param0, true);
+          if (!param0.equals(this.checkedName)) {
+            var3 = lf.pollAccountNameCheck(param0, true);
             if (var3 != null &&
               var3.message == null) {
-              this.field_n = var3.success;
-              this.field_p = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               stackIn_9_0 = uj.field_b;
               return stackIn_9_0;
@@ -41,7 +41,7 @@ final class bc extends hi {
           if (param1 != -99) {
             this.b((byte) -37);
           }
-          if (this.field_n) {
+          if (this.nameAvailable) {
             stackIn_16_0 = nc.field_bb;
           } else {
             stackIn_16_0 = vh.field_h;
@@ -82,18 +82,18 @@ final class bc extends hi {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          if (!param1.equals(this.field_p)) {
-            var4 = lf.a(param1, true);
+          if (!param1.equals(this.checkedName)) {
+            var4 = lf.pollAccountNameCheck(param1, true);
             if (var4 == null) {
               return null;
             }
             if (var4.message != null) {
               return null;
             }
-            this.field_n = var4.success;
-            this.field_p = param1;
+            this.nameAvailable = var4.success;
+            this.checkedName = param1;
           }
-          if (this.field_n) {
+          if (this.nameAvailable) {
             return kf.field_b;
           }
           stackIn_15_0 = j.field_c;
@@ -122,13 +122,13 @@ final class bc extends hi {
         field_q = null;
     }
 
-    bc(vi param0) {
+    AccountNameAvailabilityValidator(vi param0) {
         super(param0);
-        this.field_n = false;
+        this.nameAvailable = false;
     }
 
     final void b(byte param0) {
-        this.field_p = null;
+        this.checkedName = null;
         if (param0 <= 59) {
           field_t = (String[]) null;
         }

@@ -22,7 +22,7 @@ final class pj extends nb implements ue, jk, ag {
         if (param0 != -12) {
           return;
         }
-        ((ol) (this.field_E.a((byte) 3))).e(116);
+        ((AccountNameAvailabilityValidator) (this.field_E.a((byte) 3))).e(116);
     }
 
     public final void a(String param0, byte param1) {
@@ -103,7 +103,7 @@ final class pj extends nb implements ue, jk, ag {
         this.field_D.field_q = r.field_C;
         this.field_M.field_q = ck.field_b;
         this.field_J.field_q = wb.field_c;
-        this.field_E.a(new ol(this.field_E), (byte) 23);
+        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
         this.field_G.a(new pc(this.field_G), (byte) 23);
         this.field_K.a(new jg(this.field_K, this.field_G), (byte) 23);
         this.field_O.a(new va(this.field_O, this.field_E, this.field_G), (byte) 23);

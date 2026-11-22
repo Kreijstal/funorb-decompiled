@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends r {
+final class AccountNameAvailabilityValidator extends r {
     static String field_n;
     static volatile int field_p;
-    private boolean field_q;
-    private String field_o;
+    private boolean nameAvailable;
+    private String checkedName;
 
-    vf(c param0) {
+    AccountNameAvailabilityValidator(c param0) {
         super(param0);
-        this.field_q = false;
+        this.nameAvailable = false;
     }
 
     final String a(byte param0, String param1) {
@@ -33,8 +33,8 @@ final class vf extends r {
             stackIn_3_0 = var3;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_o)) {
-            var4_ref_mk = jd.a(param1, 8947848);
+          if (!param1.equals(this.checkedName)) {
+            var4_ref_mk = jd.pollAccountNameCheck(param1, 8947848);
             if (var4_ref_mk == null) {
               return null;
             }
@@ -42,11 +42,11 @@ final class vf extends r {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
-            this.field_q = var4_ref_mk.success;
-            this.field_o = param1;
+            this.nameAvailable = var4_ref_mk.success;
+            this.checkedName = param1;
           }
           var4 = 47 % ((24 - param0) / 46);
-          if (this.field_q) {
+          if (this.nameAvailable) {
             stackIn_16_0 = lf.field_c;
             return stackIn_16_0;
           }
@@ -69,7 +69,7 @@ final class vf extends r {
     final static boolean c(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -5) {
-          vf.c((byte) -24);
+          AccountNameAvailabilityValidator.c((byte) -24);
         }
         stackIn_6_0 = (null != GzipDecompressor.field_a) && (null != GzipDecompressor.field_a.l(-63));
         return stackIn_6_0;
@@ -86,7 +86,7 @@ final class vf extends r {
         try {
           if (param1 <= 38) {
             var4 = (CharSequence) null;
-            vf.a(-32, (byte) -88, (CharSequence) null);
+            AccountNameAvailabilityValidator.a(-32, (byte) -88, (CharSequence) null);
           }
           stackIn_3_0 = jc.a(param0, 119, true, param2);
           return stackIn_3_0;
@@ -112,7 +112,7 @@ final class vf extends r {
           ResourceArchive.field_c.field_z = new String[wj.field_c[fleas.field_E].length];
           ResourceArchive.field_c.field_t = new boolean[ResourceArchive.field_c.field_z.length];
           if (param0 != -6359) {
-            vf.c(true);
+            AccountNameAvailabilityValidator.c(true);
           }
           for (var1_int = 0; var1_int < ResourceArchive.field_c.field_t.length; var1_int++) {
             var2 = hj.field_a[fleas.field_E] >= var1_int ? 1 : 0;
@@ -141,9 +141,9 @@ final class vf extends r {
 
     final void d(boolean param0) {
         if (!param0) {
-          vf.c(false);
+          AccountNameAvailabilityValidator.c(false);
         }
-        this.field_o = null;
+        this.checkedName = null;
     }
 
     final wd a(int param0, String param1) {
@@ -159,25 +159,25 @@ final class vf extends r {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 160) {
-            this.field_q = true;
+            this.nameAvailable = true;
           }
           var4 = (CharSequence) ((Object) param1);
           if (!ud.a(1560, var4)) {
             stackIn_5_0 = ml.field_K;
             return stackIn_5_0;
           }
-          if (!param1.equals(this.field_o)) {
-            var3 = jd.a(param1, 8947848);
+          if (!param1.equals(this.checkedName)) {
+            var3 = jd.pollAccountNameCheck(param1, 8947848);
             if (var3 != null &&
               null == var3.message) {
-              this.field_q = var3.success;
-              this.field_o = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_12_0 = w.field_e;
               return stackIn_12_0;
             }
           }
-          if (this.field_q) {
+          if (this.nameAvailable) {
             stackIn_17_0 = hm.field_b;
           } else {
             stackIn_17_0 = ml.field_K;

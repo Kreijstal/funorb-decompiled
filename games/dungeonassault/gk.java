@@ -45,7 +45,7 @@ final class gk extends ii implements mg, vg {
     }
 
     public final void a(int param0) {
-        ((kh) (this.field_R.a(-98))).e(true);
+        ((AccountNameAvailabilityValidator) (this.field_R.a(-98))).e(true);
         if (param0 < 121) {
           this.field_M = (ck) null;
         }
@@ -324,7 +324,7 @@ final class gk extends ii implements mg, vg {
         this.field_M = new ck(m.field_g, (pg) null);
         this.field_N = new ck(dc.field_v, (pg) null);
         this.field_R.field_i = ByteStorage.field_d;
-        this.field_R.a(new kh(this.field_R), 10508);
+        this.field_R.a(new AccountNameAvailabilityValidator(this.field_R), 10508);
         this.field_M.field_B = false;
         this.field_M.field_o = (ca) ((Object) new na());
         this.field_N.field_o = (ca) ((Object) new oa());

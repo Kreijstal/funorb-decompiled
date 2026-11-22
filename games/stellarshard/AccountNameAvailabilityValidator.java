@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends lk {
-    private boolean field_o;
+final class AccountNameAvailabilityValidator extends lk {
+    private boolean nameAvailable;
     static th field_m;
     static String field_l;
     static int[] field_n;
-    private String field_k;
+    private String checkedName;
 
-    ge(ae param0) {
+    AccountNameAvailabilityValidator(ae param0) {
         super(param0);
-        this.field_o = false;
+        this.nameAvailable = false;
     }
 
     final static void a(java.awt.Component param0, byte param1) {
@@ -127,20 +127,20 @@ final class ge extends lk {
             return stackIn_2_0;
           }
           if (param0 <= 10) {
-            this.field_k = (String) null;
+            this.checkedName = (String) null;
           }
-          if (!param1.equals(this.field_k)) {
-            var3 = sg.a((byte) -127, param1);
+          if (!param1.equals(this.checkedName)) {
+            var3 = sg.pollAccountNameCheck((byte) -127, param1);
             if (var3 != null &&
               var3.message == null) {
-              this.field_o = var3.success;
-              this.field_k = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_10_0 = vk.field_d;
               return stackIn_10_0;
             }
           }
-          if (this.field_o) {
+          if (this.nameAvailable) {
             stackIn_15_0 = lg.field_c;
           } else {
             stackIn_15_0 = qj.field_c;
@@ -180,18 +180,18 @@ final class ge extends lk {
             stackIn_3_0 = var3;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_k)) {
-            var4_ref_ml = sg.a((byte) -124, param1);
+          if (!param1.equals(this.checkedName)) {
+            var4_ref_ml = sg.pollAccountNameCheck((byte) -124, param1);
             if (var4_ref_ml == null) {
               return null;
             }
             if (null != var4_ref_ml.message) {
               return null;
             }
-            this.field_k = param1;
-            this.field_o = var4_ref_ml.success;
+            this.checkedName = param1;
+            this.nameAvailable = var4_ref_ml.success;
           }
-          if (!this.field_o) {
+          if (!this.nameAvailable) {
             stackIn_14_0 = jb.field_p;
             return stackIn_14_0;
           }
@@ -216,7 +216,7 @@ final class ge extends lk {
         if (param0) {
           return;
         }
-        this.field_k = null;
+        this.checkedName = null;
     }
 
     static {

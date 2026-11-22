@@ -49,12 +49,12 @@ final class nh extends IntrusiveNode {
           }
           var1_intLifetime1 = -117 % ((-69 - param0) / 44);
           for (var2 = 1; var2 < 17; var2++) {
-            hh.field_n[var2 - 1] = new gb(pe.field_d[-1 + var2], pe.field_d[var2], 30.0f);
+            AccountNameAvailabilityValidator.field_n[var2 - 1] = new gb(pe.field_d[-1 + var2], pe.field_d[var2], 30.0f);
           }
           var2Lifetime1 = 16;
           var3 = 1;
           while (var2Lifetime1 < 32) {
-            hh.field_n[var2Lifetime1] = new gb(pe.field_d[var3], 240.0f, (float)(var3 * 30), 2.0f);
+            AccountNameAvailabilityValidator.field_n[var2Lifetime1] = new gb(pe.field_d[var3], 240.0f, (float)(var3 * 30), 2.0f);
             var3++;
             var2Lifetime1++;
           }
@@ -98,7 +98,7 @@ final class nh extends IntrusiveNode {
             stackIn_15_0 = ((1 & var1_intLifetime1) == 0) ? -1 : 1;
             var4 = stackIn_15_0;
             for (var5 = var2Lifetime1; var3 != var5; var5 = var5 + var4) {
-              hh.field_n[var5].c((byte) 122);
+              AccountNameAvailabilityValidator.field_n[var5].c((byte) 122);
             }
           }
           pe.field_d[0].field_e[1] = 0.0f;

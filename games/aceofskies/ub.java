@@ -697,7 +697,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "loading");
                 if (var2 != null) {
-                  mp.field_e = ea.a(0, var2);
+                  AccountNameAvailabilityValidator.field_e = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "offline");
                 if (null != var2) {

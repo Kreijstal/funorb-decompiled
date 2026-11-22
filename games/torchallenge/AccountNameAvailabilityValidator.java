@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class i extends ma {
-    private boolean field_n;
+final class AccountNameAvailabilityValidator extends ma {
+    private boolean nameAvailable;
     static String[] field_p;
     static int field_m;
-    private String field_o;
+    private String checkedName;
     static long field_q;
     static int field_r;
 
@@ -40,18 +40,18 @@ final class i extends ma {
             stackIn_5_0 = (rj) null;
             return stackIn_5_0;
           }
-          if (!param1.equals(this.field_o)) {
-            var3 = wi.a(param1, (byte) 123);
+          if (!param1.equals(this.checkedName)) {
+            var3 = wi.pollAccountNameCheck(param1, (byte) 123);
             if (var3 != null &&
               var3.message == null) {
-              this.field_n = var3.success;
-              this.field_o = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_12_0 = jh.field_c;
               return stackIn_12_0;
             }
           }
-          if (this.field_n) {
+          if (this.nameAvailable) {
             stackIn_17_0 = tf.field_w;
           } else {
             stackIn_17_0 = SpriteLoader.field_c;
@@ -80,7 +80,7 @@ final class i extends ma {
     }
 
     final void f(int param0) {
-        this.field_o = null;
+        this.checkedName = null;
         if (param0 != 0) {
           this.f(-101);
         }
@@ -109,18 +109,18 @@ final class i extends ma {
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }
-          if (!param0.equals(this.field_o)) {
-            var4 = wi.a(param0, (byte) 97);
+          if (!param0.equals(this.checkedName)) {
+            var4 = wi.pollAccountNameCheck(param0, (byte) 97);
             if (var4 == null) {
               return null;
             }
             if (null != var4.message) {
               return null;
             }
-            this.field_n = var4.success;
-            this.field_o = param0;
+            this.nameAvailable = var4.success;
+            this.checkedName = param0;
           }
-          if (this.field_n) {
+          if (this.nameAvailable) {
             return PacketBuffer.field_l;
           }
           stackIn_17_0 = qb.field_f;
@@ -161,7 +161,7 @@ final class i extends ma {
           if (param1 >= 77) {
             return;
           }
-          i.a(31, -60);
+          AccountNameAvailabilityValidator.a(31, -60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -183,9 +183,9 @@ final class i extends ma {
         }
     }
 
-    i(dj param0) {
+    AccountNameAvailabilityValidator(dj param0) {
         super(param0);
-        this.field_n = false;
+        this.nameAvailable = false;
     }
 
     static {

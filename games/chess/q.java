@@ -636,7 +636,7 @@ final class q {
             return;
           }
           jb.a((byte) -89);
-          uh.field_m.a(param2, (byte) 88);
+          AccountNameAvailabilityValidator.field_m.a(param2, (byte) 88);
           if (ol.field_O != null) {
             boolean decompiledSharedTail0 = !(!qf.field_b);
             if (!decompiledSharedTail0) {
@@ -644,7 +644,7 @@ final class q {
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              ol.field_O.a(param0 + 6725, uh.field_m.field_wb, uh.field_m.field_U, param2);
+              ol.field_O.a(param0 + 6725, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U, param2);
             }
           }
           if (param0 != -6844) {

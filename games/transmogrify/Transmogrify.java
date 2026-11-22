@@ -679,8 +679,8 @@ public final class Transmogrify extends SessionGameApplet {
         var10 = field_A ? 1 : 0;
         try {
           if (null != pc.field_a) {
-            if (li.field_k.a((byte) -116) &&
-              li.field_k.a((byte) -98, "basic")) {
+            if (AccountNameAvailabilityValidator.field_k.a((byte) -116) &&
+              AccountNameAvailabilityValidator.field_k.a((byte) -98, "basic")) {
               if (pc.field_a.a((byte) -120) &&
                 pc.field_a.c(param0 ^ -32065)) {
                 if (di.field_h.a((byte) -116) &&
@@ -698,20 +698,20 @@ public final class Transmogrify extends SessionGameApplet {
                         }
                         if (kk.field_a.a((byte) -118) &&
                           kk.field_a.c(32031)) {
-                          if (!li.field_k.a((byte) 126, "arialish12")) {
-                            vf.a((byte) -128, 52.0f, ee.a(ByteStorage.field_a, (byte) 102, i.field_c, li.field_k, "arialish12"));
+                          if (!AccountNameAvailabilityValidator.field_k.a((byte) 126, "arialish12")) {
+                            vf.a((byte) -128, 52.0f, ee.a(ByteStorage.field_a, (byte) 102, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish12"));
                             return false;
                           }
                           if (!SessionGameApplet.field_y.a((byte) 118, "arialish12")) {
-                            vf.a((byte) -125, 52.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, li.field_k, "arialish12"));
+                            vf.a((byte) -125, 52.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish12"));
                             return false;
                           }
-                          if (!li.field_k.a((byte) -13, "arialish20")) {
-                            vf.a((byte) 83, 53.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, li.field_k, "arialish20"));
+                          if (!AccountNameAvailabilityValidator.field_k.a((byte) -13, "arialish20")) {
+                            vf.a((byte) 83, 53.0f, ee.a(ByteStorage.field_a, (byte) 106, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish20"));
                             return false;
                           }
                           if (!SessionGameApplet.field_y.a((byte) 117, "arialish20")) {
-                            vf.a((byte) -123, 53.0f, ee.a(ByteStorage.field_a, (byte) 123, i.field_c, li.field_k, "arialish20"));
+                            vf.a((byte) -123, 53.0f, ee.a(ByteStorage.field_a, (byte) 123, i.field_c, AccountNameAvailabilityValidator.field_k, "arialish20"));
                             return false;
                           }
                           if (l.field_a.a((byte) -124) &&
@@ -757,7 +757,7 @@ public final class Transmogrify extends SessionGameApplet {
               vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, IndexedSpriteState.field_e, pc.field_a, ""));
               return false;
             }
-            vf.a((byte) -121, 0.0f, ee.a(vg.field_a, (byte) 100, aa.field_f, li.field_k, "basic"));
+            vf.a((byte) -121, 0.0f, ee.a(vg.field_a, (byte) 100, aa.field_f, AccountNameAvailabilityValidator.field_k, "basic"));
             return false;
           }
           if (null != di.field_h) {
@@ -809,7 +809,7 @@ public final class Transmogrify extends SessionGameApplet {
             null == IntrusiveNode.field_d) {
             vf.a((byte) -125, 92.0f, ha.field_b);
             this.renderFrame(param0 ^ -15744);
-            gb.field_a = ej.a((byte) -43, li.field_k, "", "arialish20");
+            gb.field_a = ej.a((byte) -43, AccountNameAvailabilityValidator.field_k, "", "arialish20");
             el.b(-6491);
             return false;
           }
@@ -819,15 +819,15 @@ public final class Transmogrify extends SessionGameApplet {
             og.field_a = ua.a(oi.field_g, "", 32, kk.field_a, "arialish20narrow");
             le.field_A = eh.a(gb.field_a, param0 ^ -96, var21, 255, 119);
             le.field_A.field_K[1] = new int[]{0, 16777215, 7829367};
-            hk.field_a = am.a("", li.field_k, (byte) 72, SessionGameApplet.field_y, "arialish12");
+            hk.field_a = am.a("", AccountNameAvailabilityValidator.field_k, (byte) 72, SessionGameApplet.field_y, "arialish12");
             gb.field_a = null;
             IntrusiveNode.field_d.a(ue.field_c, (int[]) null);
             hk.field_a.a(ue.field_c, (int[]) null);
-            ff.field_z = pc.a("basic", "unachieved", li.field_k, param0 ^ 33);
+            ff.field_z = pc.a("basic", "unachieved", AccountNameAvailabilityValidator.field_k, param0 ^ 33);
             nh.a(ff.field_z, (byte) 59);
             var4Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
-            c.field_a = pc.a("basic", "orbcoin", li.field_k, param0 ^ 33);
-            li.field_k = null;
+            c.field_a = pc.a("basic", "orbcoin", AccountNameAvailabilityValidator.field_k, param0 ^ 33);
+            AccountNameAvailabilityValidator.field_k = null;
             SessionGameApplet.field_y = null;
             og.field_b = new Sprite(var4Lifetime1, var4Lifetime1);
             og.field_b.e();
@@ -1357,7 +1357,7 @@ public final class Transmogrify extends SessionGameApplet {
           gh.e(58);
           ab.clearStaticReferences(-2147483648);
           ol.clearStaticReferences(false);
-          li.h(param0 ^ 122);
+          AccountNameAvailabilityValidator.h(param0 ^ 122);
           bg.b((byte) 54);
           vh.b((byte) 118);
           md.clearStaticReferences(true);

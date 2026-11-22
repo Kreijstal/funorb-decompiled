@@ -386,7 +386,7 @@ final class v extends pj implements ra, ke, fh {
     }
 
     public final void a(byte param0) {
-        ((pk) (this.field_K.a((byte) 84))).e((byte) -27);
+        ((AccountNameAvailabilityValidator) (this.field_K.a((byte) 84))).e((byte) -27);
         if (param0 > -23) {
           this.field_Z = (qa) null;
         }
@@ -464,7 +464,7 @@ final class v extends pj implements ra, ke, fh {
         this.field_ab.field_v = ch.field_u;
         this.field_Q.field_v = ci.field_K;
         this.field_T.field_v = dc.field_g;
-        this.field_K.a(new pk(this.field_K), (byte) -57);
+        this.field_K.a(new AccountNameAvailabilityValidator(this.field_K), (byte) -57);
         this.field_P.a(new ni(this.field_P), (byte) -57);
         this.field_J.a(new e(this.field_J, this.field_P), (byte) -57);
         this.field_S.a(new ad(this.field_S, this.field_K, this.field_P), (byte) -57);

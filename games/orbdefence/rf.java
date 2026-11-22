@@ -91,12 +91,12 @@ final class rf extends ta implements ff, ai, bf {
         this.field_F = new s(bi.field_b, (ag) null);
         this.field_B.field_i = bg.field_b;
         this.field_O.field_i = ce.field_b;
-        this.field_G.field_i = bc.field_s;
+        this.field_G.field_i = AccountNameAvailabilityValidator.field_s;
         this.field_D.field_i = ba.field_g;
         this.field_J.field_i = fk.field_a;
         this.field_E.field_i = df.field_c;
         this.field_P.field_i = OrbDefence.field_C;
-        this.field_B.a(new bc(this.field_B), 67);
+        this.field_B.a(new AccountNameAvailabilityValidator(this.field_B), 67);
         this.field_O.a(new wg(this.field_O), 45);
         this.field_G.a(new b(this.field_G, this.field_O), 79);
         this.field_D.a(new em(this.field_D, this.field_B, this.field_O), 34);
@@ -358,7 +358,7 @@ final class rf extends ta implements ff, ai, bf {
 
     public final void a(byte param0) {
         int discarded$0 = 0;
-        ((bc) (this.field_B.a((byte) 65))).b((byte) 77);
+        ((AccountNameAvailabilityValidator) (this.field_B.a((byte) 65))).b((byte) 77);
         if (param0 != -8) {
           String var3 = (String) null;
           discarded$0 = this.a(-125, (pj) null, 66, (byte) 102, (String) null);

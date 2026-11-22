@@ -90,13 +90,13 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             if (jc.field_a == gk.field_a) {
               if (param1) {
                 var10 = (String) null;
-                af.field_o = ie.a(ClientException.field_e, param3, false, (String) null, (byte) -119);
+                AccountNameAvailabilityValidator.field_o = ie.a(ClientException.field_e, param3, false, (String) null, (byte) -119);
               } else {
-                af.field_o = rl.a(20, false, param3, param2);
+                AccountNameAvailabilityValidator.field_o = rl.a(20, false, param3, param2);
               }
               LevelView.field_C.position = 0;
               LevelView.field_C.writeByte(14, (byte) -72);
-              LevelView.field_C.writeByte(af.field_o.a(false).field_b, (byte) -100);
+              LevelView.field_C.writeByte(AccountNameAvailabilityValidator.field_o.a(false).field_b, (byte) -100);
               MovingBlock.a(-1, -1);
               jc.field_a = sg.field_d;
             }
@@ -116,7 +116,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               DiskArchiveStore.a(8, false)) {
               MouseWheelInput.field_d = ne.field_a.readLong((byte) 110);
               ne.field_a.position = 0;
-              md.a(af.field_o, param5, param1, -1, param0);
+              md.a(AccountNameAvailabilityValidator.field_o, param5, param1, -1, param0);
               jc.field_a = ca.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -179,8 +179,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               dd.field_p = r.a(var11, -11133);
               si.field_d = ne.field_a.readUnsignedByte(16383);
               jc.field_a = ka.field_b;
-              if (af.field_o.a(false) != nd.field_M) {
-                if (af.field_o.a(false) == ji.field_a) {
+              if (AccountNameAvailabilityValidator.field_o.a(false) != nd.field_M) {
+                if (AccountNameAvailabilityValidator.field_o.a(false) == ji.field_a) {
                   qi.field_f.a(CachedArchiveSource.b((byte) 77), -4);
                 }
               } else {

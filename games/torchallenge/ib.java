@@ -361,7 +361,7 @@ final class ib extends kj implements tb, sg {
         this.field_J = new ng(jl.field_g, (gg) null);
         this.field_K = new ng(nh.field_fb, (gg) null);
         this.field_P.field_r = ci.field_o;
-        this.field_P.a(-27997, new i(this.field_P));
+        this.field_P.a(-27997, new AccountNameAvailabilityValidator(this.field_P));
         this.field_J.field_F = false;
         this.field_J.field_q = (j) ((Object) new cl());
         this.field_K.field_q = (j) ((Object) new me());
@@ -386,7 +386,7 @@ final class ib extends kj implements tb, sg {
     }
 
     public final void a(int param0) {
-        ((i) (this.field_P.a(param0 + 23025))).f(param0 ^ param0);
+        ((AccountNameAvailabilityValidator) (this.field_P.a(param0 + 23025))).f(param0 ^ param0);
     }
 
     private final boolean f(byte param0) {

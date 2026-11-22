@@ -12,9 +12,9 @@ final class jn {
           !(param2 <= uk.field_a.length)) {
           uk.field_a = new int[2 * param2];
         }
-        if (il.field_o == null ||
-          !(param2 <= il.field_o.length)) {
-          il.field_o = new int[2 * param2];
+        if (AccountNameAvailabilityValidator.field_o == null ||
+          !(param2 <= AccountNameAvailabilityValidator.field_o.length)) {
+          AccountNameAvailabilityValidator.field_o = new int[2 * param2];
         }
         if (null == wh.field_y ||
           !(param2 <= wh.field_y.length)) {

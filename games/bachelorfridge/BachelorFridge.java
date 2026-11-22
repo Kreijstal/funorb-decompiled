@@ -1138,7 +1138,7 @@ public final class BachelorFridge extends NetworkGameClient {
           fm.releaseStatics(101);
           bga.releaseStatics(false);
           mla.a((byte) 93);
-          tt.releaseStatics((byte) 84);
+          AccountNameAvailabilityValidator.releaseStatics((byte) 84);
           wg.releaseStatics(22753);
           el.f((byte) -24);
           hna.releaseStatics(99);

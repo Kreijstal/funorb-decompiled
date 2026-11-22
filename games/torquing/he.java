@@ -10,7 +10,7 @@ final class he {
         field_b = null;
         if (param0 != -1) {
           String var2 = (String) null;
-          he.a(-37, (String) null);
+          he.pollAccountNameCheck(-37, (String) null);
         }
     }
 
@@ -231,7 +231,7 @@ final class he {
         }
     }
 
-    final static AccountServiceResult a(int param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(int param0, String param1) {
         RuntimeException var2 = null;
         AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;

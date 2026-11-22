@@ -34,7 +34,7 @@ final class dg {
           return true;
         }
         if (null == al.field_H) {
-          al.field_H = vl.field_a.a(nj.field_a, (byte) -58, ol.field_n);
+          al.field_H = vl.field_a.a(nj.field_a, (byte) -58, AccountNameAvailabilityValidator.field_n);
         }
         if (0 == al.field_H.field_b) {
           return false;

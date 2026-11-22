@@ -325,7 +325,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         this.field_Q.field_q = jk.field_c;
         this.field_T.field_q = PacketBuffer.field_s;
         this.field_R.field_q = pq.field_b;
-        this.field_H.a(true, new hk(this.field_H));
+        this.field_H.a(true, new AccountNameAvailabilityValidator(this.field_H));
         this.field_F.a(true, new dk(this.field_F));
         this.field_L.a(true, new oa(this.field_L, this.field_F));
         this.field_U.a(true, new wc(this.field_U, this.field_H, this.field_F));
@@ -408,7 +408,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
     }
 
     public final void a(int param0) {
-        ((hk) (this.field_H.a((byte) -5))).h(-1);
+        ((AccountNameAvailabilityValidator) (this.field_H.a((byte) -5))).h(-1);
         if (param0 != -4384) {
           field_K = (String) null;
         }

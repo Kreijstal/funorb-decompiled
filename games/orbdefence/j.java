@@ -72,16 +72,16 @@ final class j {
                 }
                 var6 = stackIn_27_0;
               }
-              if (bc.field_t.length < sj.field_u.length) {
+              if (AccountNameAvailabilityValidator.field_t.length < sj.field_u.length) {
                 stackIn_31_0 = sj.field_u.length;
               } else {
-                stackIn_31_0 = bc.field_t.length;
+                stackIn_31_0 = AccountNameAvailabilityValidator.field_t.length;
               }
               var8 = stackIn_31_0;
               if (var7 + 7 <= var3 &&
                 var3 < var8 + 7 + var7) {
-                if (bc.field_t.length > -7 + var3 - var7) {
-                  stackIn_36_0 = bc.field_t[-var7 + (var3 - 7)];
+                if (AccountNameAvailabilityValidator.field_t.length > -7 + var3 - var7) {
+                  stackIn_36_0 = AccountNameAvailabilityValidator.field_t[-var7 + (var3 - 7)];
                 } else {
                   stackIn_36_0 = "";
                 }

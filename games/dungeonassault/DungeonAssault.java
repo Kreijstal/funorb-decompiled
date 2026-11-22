@@ -256,11 +256,11 @@ public final class DungeonAssault extends NetworkGameClient {
           ib.b((byte) 31);
           mn.a((byte) -42);
           if (ef.field_h) {
-            if (kj.field_n != 0 && (!(5 * kh.field_m.length / 2 <= kj.field_n) ||
+            if (kj.field_n != 0 && (!(5 * AccountNameAvailabilityValidator.field_m.length / 2 <= kj.field_n) ||
               0 == la.field_g)) {
               fieldTemp$0 = kj.field_n + 1;
               kj.field_n = kj.field_n + 1;
-              if (fieldTemp$0 >= 5 * kh.field_m.length) {
+              if (fieldTemp$0 >= 5 * AccountNameAvailabilityValidator.field_m.length) {
                 kj.field_n = 0;
               }
             }
@@ -473,7 +473,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     ik.field_e = new go(true, var21);
                   }
                   gd.a(dc.field_z, 0, -1, false);
-                  kh.field_s = false;
+                  AccountNameAvailabilityValidator.field_s = false;
                   nf.field_A = true;
                   continue scanLoop1;
                 }
@@ -494,7 +494,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     gh.field_f = true;
                   }
                 }
-                kh.field_s = false;
+                AccountNameAvailabilityValidator.field_s = false;
                 continue scanLoop1;
               }
               var2_intLifetime1 = ra.field_c.readUnsignedMedium(-123);
@@ -524,20 +524,20 @@ public final class DungeonAssault extends NetworkGameClient {
                 gm.field_d = null;
               }
               if (var2_intLifetime2 == 1) {
-                kh.field_s = true;
+                AccountNameAvailabilityValidator.field_s = true;
               } else {
                 if (nf.field_A) {
                   gh.field_f = true;
                   gd.a(0, 0, 0, false);
                 }
-                kh.field_s = false;
+                AccountNameAvailabilityValidator.field_s = false;
               }
             }
             var3Lifetime1 = 0;
             if (var2_intLifetime2 == 2) {
               var3Lifetime1 = 1;
             }
-            if (kh.field_s) {
+            if (AccountNameAvailabilityValidator.field_s) {
               var3Lifetime1 = 1;
             }
             if (!dm.c(71)) {
@@ -937,7 +937,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ue.a((byte) 36);
           pi.clearStaticReferences(11877);
           tg.clearStaticReferences(400);
-          kh.e((byte) 102);
+          AccountNameAvailabilityValidator.e((byte) 102);
           vo.e(1);
           qm.clearStaticReferences(false);
           ga.clearStaticReferences((byte) 75);
@@ -1187,7 +1187,7 @@ public final class DungeonAssault extends NetworkGameClient {
             IntrusiveNode.field_c.b((int)(var8 >> 10) + "kb", 4, IntrusiveNode.field_c.field_H * 2 + 8, 16777215, -1);
             IntrusiveNode.field_c.b(tc.field_u, 20, 80, 16777215, 1);
           }
-          var4 = kh.field_m[kj.field_n / 5];
+          var4 = AccountNameAvailabilityValidator.field_m[kj.field_n / 5];
           var5 = jg.field_c[kj.field_n / 5];
           if (hj.field_S != -1) {
             var6 = (int)((3.0 + Math.cos((double)((float)mo.field_a / 20.0f))) * 64.0);

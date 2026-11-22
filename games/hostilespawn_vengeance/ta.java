@@ -58,7 +58,7 @@ final class ta extends me {
           ng.field_k = false;
           Math.random();
           cg.field_b = 0;
-          n.field_o = false;
+          AccountNameAvailabilityValidator.field_o = false;
           dl.field_l = false;
           of.field_d = km.field_A;
           pm.field_d = 26;

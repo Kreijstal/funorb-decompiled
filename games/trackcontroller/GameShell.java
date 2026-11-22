@@ -393,7 +393,7 @@ abstract class GameShell extends GameApplet {
               var5_intLifetime2 = SocketArchiveRequestConnection.a(this.field_v, false, l.h(0), qk.b(false), 113, this.field_B);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  af.a(-114, var5_intLifetime2, fi.field_t);
+                  AccountNameAvailabilityValidator.a(-114, var5_intLifetime2, fi.field_t);
                   fi.field_t = null;
                 } else {
                   fi.field_p = ClientException.field_e;
@@ -415,7 +415,7 @@ abstract class GameShell extends GameApplet {
             }
           }
           if (5 == var4) {
-            af.a(CachedArchiveSource.b((byte) 77), (byte) -9);
+            AccountNameAvailabilityValidator.a(CachedArchiveSource.b((byte) 77), (byte) -9);
           }
           if (var4 == 6 &&
             BufferedSocket.field_d) {
@@ -507,7 +507,7 @@ abstract class GameShell extends GameApplet {
           }
           var3 = 8 % ((param0 + 14) / 33);
           SecondaryNodeDequeIterator.a(-28717);
-          af.a(-100, var2, fi.field_t);
+          AccountNameAvailabilityValidator.a(-100, var2, fi.field_t);
           li.field_i = true;
           rk.field_eb = qg.a(false) + 15000L;
           return var2;
@@ -575,7 +575,7 @@ abstract class GameShell extends GameApplet {
             this.field_s = false;
             GameKeyHandler.a((byte) 112);
             SecondaryNodeDequeIterator.a(-28717);
-            af.a(-93, 2, oc.field_k);
+            AccountNameAvailabilityValidator.a(-93, 2, oc.field_k);
             dk.a(9888);
             li.field_i = true;
             rk.field_eb = 15000L + qg.a(false);
@@ -606,18 +606,18 @@ abstract class GameShell extends GameApplet {
                 if (gj.field_c != 4) {
                   if (2 != gj.field_c) {
                     if (gj.field_c != 5) {
-                      af.a(-107, 256, el.field_J);
+                      AccountNameAvailabilityValidator.a(-107, 256, el.field_J);
                     } else {
-                      af.a(-91, 5, ak.field_a);
+                      AccountNameAvailabilityValidator.a(-91, 5, ak.field_a);
                     }
                   } else {
-                    af.a(-71, 256, wd.field_I);
+                    AccountNameAvailabilityValidator.a(-71, 256, wd.field_I);
                   }
                 } else {
-                  af.a(-76, 256, ProxySocketConnector.field_f);
+                  AccountNameAvailabilityValidator.a(-76, 256, ProxySocketConnector.field_f);
                 }
               } else {
-                af.a(-80, 256, bk.field_G);
+                AccountNameAvailabilityValidator.a(-80, 256, bk.field_G);
               }
               li.field_i = true;
             }

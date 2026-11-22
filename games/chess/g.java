@@ -28,7 +28,7 @@ final class g extends java.awt.Canvas {
             stackIn_4_0 = null;
             return (pm) (stackIn_4_0);
           }
-          var2 = new pm(param0, be.field_a, a.field_c, wm.field_b, b.field_c, uh.field_r, vk.field_d);
+          var2 = new pm(param0, be.field_a, a.field_c, wm.field_b, b.field_c, AccountNameAvailabilityValidator.field_r, vk.field_d);
           ch.k(param1 + 4210625);
           stackIn_6_0 = var2;
           return stackIn_6_0;

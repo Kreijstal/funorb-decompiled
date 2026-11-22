@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends vo {
+final class AccountNameAvailabilityValidator extends vo {
     static RenderSprite titleImage;
     static String field_e;
-    private boolean field_f;
+    private boolean nameAvailable;
     static volatile int field_g;
-    private String field_i;
+    private String checkedName;
 
     final pt a(String param0, int param1) {
         pt stackIn_17_0 = null;
@@ -21,18 +21,18 @@ final class mp extends vo {
             String var4 = (String) null;
             this.a((String) null, (byte) -114);
           }
-          if (!param0.equals(this.field_i)) {
-            AccountServiceResult var3 = hg.a(param1 ^ 2147475455, param0);
+          if (!param0.equals(this.checkedName)) {
+            AccountServiceResult var3 = hg.pollAccountNameCheck(param1 ^ 2147475455, param0);
             if (var3 != null &&
               var3.message == null) {
-              this.field_f = var3.success;
-              this.field_i = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               pt stackIn_12_0 = ce.field_t;
               return stackIn_12_0;
             }
           }
-          if (!this.field_f) {
+          if (!this.nameAvailable) {
             stackIn_17_0 = bt.field_a;
           } else {
             stackIn_17_0 = fd.field_a;
@@ -52,14 +52,14 @@ final class mp extends vo {
         }
     }
 
-    mp(bm param0) {
+    AccountNameAvailabilityValidator(bm param0) {
         super(param0);
-        this.field_f = false;
+        this.nameAvailable = false;
     }
 
     public static void c(byte param0) {
         if (param0 != -11) {
-          mp.c((byte) -28);
+          AccountNameAvailabilityValidator.c((byte) -28);
           field_e = null;
           titleImage = null;
           return;
@@ -69,9 +69,9 @@ final class mp extends vo {
     }
 
     final void e(int param0) {
-        this.field_i = null;
+        this.checkedName = null;
         if (param0 >= -86) {
-          mp.c((byte) 34);
+          AccountNameAvailabilityValidator.c((byte) 34);
         }
     }
 
@@ -88,8 +88,8 @@ final class mp extends vo {
             String stackIn_5_0 = var3;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_i)) {
-            AccountServiceResult var4 = hg.a(2147483647, param0);
+          if (!param0.equals(this.checkedName)) {
+            AccountServiceResult var4 = hg.pollAccountNameCheck(2147483647, param0);
             if (var4 == null) {
               return null;
             }
@@ -97,10 +97,10 @@ final class mp extends vo {
               Object stackIn_12_0 = null;
               return (String) (stackIn_12_0);
             }
-            this.field_f = var4.success;
-            this.field_i = param0;
+            this.nameAvailable = var4.success;
+            this.checkedName = param0;
           }
-          if (this.field_f) {
+          if (this.nameAvailable) {
             String stackIn_18_0 = DiskCacheWorker.field_k;
             return stackIn_18_0;
           }

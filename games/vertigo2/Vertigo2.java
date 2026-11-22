@@ -1144,7 +1144,7 @@ public final class Vertigo2 extends GameShell {
           wi.b(93);
           e.clearStaticReferences(-120);
           lq.a(false);
-          hk.c((byte) -114);
+          AccountNameAvailabilityValidator.c((byte) -114);
           wc.g(3);
           dk.clearStaticReferences((byte) -73);
           oa.g(-118);
@@ -1291,7 +1291,7 @@ public final class Vertigo2 extends GameShell {
           }
           if (kg.h(param0 ^ -111)) {
             var5Lifetime1 = oi.a(-110) + 30;
-            var6Lifetime1 = 30 + hk.a(true);
+            var6Lifetime1 = 30 + AccountNameAvailabilityValidator.a(true);
             rq.a(var6Lifetime1, var5Lifetime1, -(var6Lifetime1 / 2) + 240, -(var5Lifetime1 / 2) + 320, 82, 210);
             eb.b(-14732);
           } else {

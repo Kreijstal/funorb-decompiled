@@ -53,7 +53,7 @@ final class hj {
           }
           if (param2.field_w > 0 &&
             null != param2.field_v) {
-            mg.h((byte) -121);
+            AccountNameAvailabilityValidator.h((byte) -121);
           }
           lb.field_b = 0;
           var8 = 0;
@@ -228,7 +228,7 @@ final class hj {
           }
           if (param2.field_w > 0 &&
             null != param2.field_v) {
-            mg.h((byte) -121);
+            AccountNameAvailabilityValidator.h((byte) -121);
           }
           lb.field_b = 0;
           var8 = 0;

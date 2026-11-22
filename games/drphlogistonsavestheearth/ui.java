@@ -98,7 +98,7 @@ final class ui {
 
     final static void a(ec param0, byte param1, int param2, vj param3) {
         try {
-          wk.field_i = pk.d((byte) 9) * param2 / 1000;
+          wk.field_i = AccountNameAvailabilityValidator.d((byte) 9) * param2 / 1000;
           c.a(false, param3);
           int var4_int = 17 / ((28 - param1) / 32);
           vg.a(param3, false);

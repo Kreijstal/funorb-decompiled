@@ -156,16 +156,16 @@ final class kd {
                 else {
                   if (this.field_o[var9] == 3 &&
                     !param3) {
-                    if (!(bc.field_q.length <= this.field_j[var9])) {
-                      bc.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
+                    if (!(AccountNameAvailabilityValidator.field_q.length <= this.field_j[var9])) {
+                      AccountNameAvailabilityValidator.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
                     if (this.field_o[var9] == 4 &&
                       param3 &&
-                      this.field_j[var9] < bc.field_q.length) {
-                      bc.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
+                      this.field_j[var9] < AccountNameAvailabilityValidator.field_q.length) {
+                      AccountNameAvailabilityValidator.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                   }
                 }

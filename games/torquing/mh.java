@@ -791,7 +791,7 @@ final class mh {
         do {
           if (!(var8.field_y > var9)) {
             h.field_j = var7.a(false);
-            ap.a(ne.field_a, il.field_m[h.field_j]);
+            ap.a(ne.field_a, AccountNameAvailabilityValidator.field_m[h.field_j]);
             im.field_L.a(true, ne.field_a);
             var9 = vf.field_j[h.field_j][0];
             var10 = vf.field_j[h.field_j][1];

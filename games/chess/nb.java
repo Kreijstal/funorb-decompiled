@@ -91,7 +91,7 @@ final class nb extends ci {
         String var12;
         int var6Lifetime1;
         var7 = Chess.field_G;
-        if (null == uh.i(23156)) {
+        if (null == AccountNameAvailabilityValidator.i(23156)) {
           if (param0 == 0) {
             return;
           }
@@ -99,8 +99,8 @@ final class nb extends ci {
           return;
         }
         var3 = null;
-        uh.i(23156).field_t.f(field_Fb.field_y, -1);
-        var4 = uh.i(param0 ^ 23156).field_t.field_K;
+        AccountNameAvailabilityValidator.i(23156).field_t.f(field_Fb.field_y, -1);
+        var4 = AccountNameAvailabilityValidator.i(param0 ^ 23156).field_t.field_K;
         if (var4 == null) {
           var5 = -1;
         } else {
@@ -108,10 +108,10 @@ final class nb extends ci {
             if (((uk) ((Object) var4)).a((byte) 61, 0)) {
               var5 = 1;
             } else {
-              if (!uh.i(param0 ^ 23156).field_B.field_d) {
+              if (!AccountNameAvailabilityValidator.i(param0 ^ 23156).field_B.field_d) {
                 var5 = -1;
               } else {
-                var5 = BoundedRandomAccessFile.a(uh.i(param0 + 23156).field_B.field_l, param0 + 0, uh.i(23156).field_B.field_k);
+                var5 = BoundedRandomAccessFile.a(AccountNameAvailabilityValidator.i(param0 + 23156).field_B.field_l, param0 + 0, AccountNameAvailabilityValidator.i(23156).field_B.field_k);
               }
             }
           } else {

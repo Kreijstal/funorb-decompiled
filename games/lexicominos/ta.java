@@ -91,7 +91,7 @@ final class ta {
         return var2;
     }
 
-    final static AccountServiceResult a(int param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         AccountServiceResult stackIn_8_0 = null;

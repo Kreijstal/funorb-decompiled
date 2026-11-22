@@ -25,7 +25,7 @@ final class AccountServiceResult {
     final static boolean a(int param0) {
         if (param0 != 22084) {
           field_b = (String) null;
-          if (kh.field_n < 10) {
+          if (AccountNameAvailabilityValidator.field_n < 10) {
             return false;
           }
           if (dk.field_c >= 13) {
@@ -33,7 +33,7 @@ final class AccountServiceResult {
           }
           return false;
         }
-        if (kh.field_n < 10) {
+        if (AccountNameAvailabilityValidator.field_n < 10) {
           return false;
         }
         if (dk.field_c >= 13) {
@@ -42,7 +42,7 @@ final class AccountServiceResult {
         return false;
     }
 
-    final static AccountServiceResult a(byte param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(byte param0, String param1) {
         RuntimeException var2 = null;
         AccountServiceResult stackIn_2_0 = null;
         Object stackIn_5_0 = null;

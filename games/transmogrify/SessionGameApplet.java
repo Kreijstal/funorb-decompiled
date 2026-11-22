@@ -533,7 +533,7 @@ abstract class SessionGameApplet extends GameApplet {
           RasterBuffer.field_c = SocketConnector.a(true, (byte) 77, 1, ic.field_a, false);
           wi.field_e = SocketConnector.a(true, (byte) 77, 1, q.field_d, false);
           nd.field_n = SocketConnector.a(true, (byte) 77, 1, rd.field_a, false);
-          li.field_k = RasterBuffer.field_c;
+          AccountNameAvailabilityValidator.field_k = RasterBuffer.field_c;
           bi.field_L = 2;
           field_y = wi.field_e;
         }

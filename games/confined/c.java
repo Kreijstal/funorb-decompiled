@@ -319,7 +319,7 @@ final class c extends sc {
         }
     }
 
-    final static AccountServiceResult a(String param0, int param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_7_0 = null;
         AccountServiceResult stackIn_13_0 = null;
@@ -330,7 +330,7 @@ final class c extends sc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 71) {
-            c.a((String) null, 38);
+            c.pollAccountNameCheck((String) null, 38);
           }
           if (na.field_S == wh.field_fb) {
             stackIn_7_0 = null;

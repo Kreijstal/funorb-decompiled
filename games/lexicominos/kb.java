@@ -1479,7 +1479,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_u13terms");
                 if (var2 != null) {
-                  ol.field_p = ni.a((byte) -55, var2);
+                  AccountNameAvailabilityValidator.field_p = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "login_username_email");
                 if (null != var2) {

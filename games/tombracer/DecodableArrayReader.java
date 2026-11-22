@@ -63,10 +63,10 @@ final class DecodableArrayReader implements DecodableArrayReaderMarker {
                     var9.decode(var10, false);
                     break;
                   case 2:
-                    ((qs) (var9)).decodeElement(var10, true);
+                    ((BitElementDecodable) (var9)).decodeElement(var10, true);
                     break;
                   case 3:
-                    ((fc) (var9)).decode(99, var10);
+                    ((BitElementDecodableWithIntArgument) (var9)).decode(99, var10);
                     break;
                   default:
                     break;

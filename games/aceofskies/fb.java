@@ -13,7 +13,7 @@ final class fb {
         Object var1 = ho.field_b;
         synchronized (var1) {
           oj.field_g = oj.field_g + 1;
-          vu.heldMouseButton = mp.field_g;
+          vu.heldMouseButton = AccountNameAvailabilityValidator.field_g;
           ic.field_b = sj.field_a;
           cf.field_g = qd.field_m;
           uu.pointerMoved = si.field_b;

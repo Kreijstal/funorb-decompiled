@@ -18,7 +18,7 @@ final class ah extends pj implements fh, ke {
         this.field_P = new hf(dc.field_b, (fd) null);
         this.field_N = new hf(vi.field_f, (fd) null);
         this.field_M.field_v = bj.field_c;
-        this.field_M.a(new pk(this.field_M), (byte) -57);
+        this.field_M.a(new AccountNameAvailabilityValidator(this.field_M), (byte) -57);
         this.field_P.field_E = false;
         this.field_P.field_l = (cg) ((Object) new ie());
         this.field_N.field_l = (cg) ((Object) new uk());
@@ -386,7 +386,7 @@ final class ah extends pj implements fh, ke {
     }
 
     public final void a(byte param0) {
-        ((pk) (this.field_M.a((byte) -122))).e((byte) -27);
+        ((AccountNameAvailabilityValidator) (this.field_M.a((byte) -122))).e((byte) -27);
         if (param0 > -23) {
           field_K = 126;
         }

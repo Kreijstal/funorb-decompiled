@@ -598,7 +598,7 @@ final class ca extends gj implements dc, da, pe {
           this.field_M.field_m = a.field_h;
           this.field_S.field_m = va.field_k;
           this.field_T.field_m = gf.field_f;
-          this.field_K.a(true, new vf(this.field_K));
+          this.field_K.a(true, new AccountNameAvailabilityValidator(this.field_K));
           this.field_U.a(true, new ai(this.field_U));
           this.field_H.a(true, new ck(this.field_H, this.field_U));
           this.field_F.a(true, new gh(this.field_F, this.field_K, this.field_U));
@@ -767,7 +767,7 @@ final class ca extends gj implements dc, da, pe {
 
     public final void a(int param0) {
         try {
-          ((vf) (this.field_K.a((byte) -109))).d(true);
+          ((AccountNameAvailabilityValidator) (this.field_K.a((byte) -109))).d(true);
           if (param0 >= -66) {
             field_L = (mf) null;
           }

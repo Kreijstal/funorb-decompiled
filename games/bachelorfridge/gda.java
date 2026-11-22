@@ -36,7 +36,7 @@ final class gda extends WidgetContainer implements uja, WidgetActionListener {
         this.field_F = new InteractiveWidget(ne.field_m, (WidgetListener) null);
         this.field_C = new InteractiveWidget(bga.field_f, (WidgetListener) null);
         this.field_G.tooltip = FloodAnimation.field_z;
-        this.field_G.a(7, new tt(this.field_G));
+        this.field_G.a(7, new AccountNameAvailabilityValidator(this.field_G));
         this.field_F.field_z = false;
         this.field_F.renderer = (WidgetRenderer) ((Object) new ff());
         this.field_C.renderer = (WidgetRenderer) ((Object) new pka());
@@ -61,7 +61,7 @@ final class gda extends WidgetContainer implements uja, WidgetActionListener {
     }
 
     public final void a(int param0) {
-        ((tt) (this.field_G.a(16728128))).d(-116);
+        ((AccountNameAvailabilityValidator) (this.field_G.a(16728128))).d(-116);
         if (param0 != 14322) {
           this.field_F = (InteractiveWidget) null;
         }

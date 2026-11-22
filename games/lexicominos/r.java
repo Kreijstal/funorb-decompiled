@@ -120,7 +120,7 @@ final class r extends nb implements ag, jk {
         if (param0 != -12) {
           return;
         }
-        ((ol) (this.field_E.a((byte) 94))).e(param0 + 95);
+        ((AccountNameAvailabilityValidator) (this.field_E.a((byte) 94))).e(param0 + 95);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -190,8 +190,8 @@ final class r extends nb implements ag, jk {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeKeyListener(ol.field_l);
-          param0.removeFocusListener(ol.field_l);
+          param0.removeKeyListener(AccountNameAvailabilityValidator.field_l);
+          param0.removeFocusListener(AccountNameAvailabilityValidator.field_l);
           vg.field_b = -1;
           if (param1 != 20) {
             df var3 = (df) null;
@@ -308,7 +308,7 @@ final class r extends nb implements ag, jk {
         this.field_G = new kf(va.field_l, (vd) null);
         this.field_B = new kf(he.field_a, (vd) null);
         this.field_E.field_q = cl.field_Q;
-        this.field_E.a(new ol(this.field_E), (byte) 23);
+        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
         this.field_G.field_D = false;
         this.field_G.field_i = (rd) ((Object) new v());
         this.field_B.field_i = (rd) ((Object) new uj());

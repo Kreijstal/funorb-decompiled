@@ -63,7 +63,7 @@ final class vd extends td implements jg, ButtonListener, a {
         this.field_E.field_n = hb.field_d;
         this.field_L.field_n = ti.field_p;
         this.field_O.field_n = pl.field_d;
-        this.field_F.a(1, new af(this.field_F));
+        this.field_F.a(1, new AccountNameAvailabilityValidator(this.field_F));
         this.field_M.a(1, new l(this.field_M));
         this.field_I.a(1, new hd(this.field_I, this.field_M));
         this.field_J.a(1, new ui(this.field_J, this.field_F, this.field_M));
@@ -131,7 +131,7 @@ final class vd extends td implements jg, ButtonListener, a {
 
     public final void a(byte param0) {
         int discarded$0 = 0;
-        ((af) (this.field_F.a((byte) -123))).a(false);
+        ((AccountNameAvailabilityValidator) (this.field_F.a((byte) -123))).a(false);
         if (param0 < 117) {
           UiWidget var3 = (UiWidget) null;
           discarded$0 = this.a(-92, (String) null, -91, 17, (String) null, (UiWidget) null);

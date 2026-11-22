@@ -818,7 +818,7 @@ final class hj {
           var7 = this.field_jb;
           if (var7 == 0) {
             this.i(0);
-            hh.f(8500);
+            AccountNameAvailabilityValidator.f(8500);
             eb.d((byte) -93);
             ff.a(this.field_O, -6961);
             if (ub.field_a) {
@@ -1147,7 +1147,7 @@ final class hj {
                     }
                     nh.b((byte) 107);
                     ff.a(this.field_O, -6961);
-                    hh.f(8500);
+                    AccountNameAvailabilityValidator.f(8500);
                     this.d((byte) 56);
                     if (this.field_u != 2 &&
                       hl.a(1, -ba.field_a[0][0].field_n + (-13 + this.field_k), this.field_M - 100) < 100) {

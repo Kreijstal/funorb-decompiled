@@ -2776,19 +2776,19 @@ final class dl extends PcmStream {
                 }
                 var2 = vj.a("reconnect_lost_seq,0", 24);
                 if (var2 != null) {
-                  n.field_p[0] = nm.a(127, var2);
+                  AccountNameAvailabilityValidator.field_p[0] = nm.a(127, var2);
                 }
                 var2 = vj.a("reconnect_lost_seq,1", 24);
                 if (var2 != null) {
-                  n.field_p[1] = nm.a(124, var2);
+                  AccountNameAvailabilityValidator.field_p[1] = nm.a(124, var2);
                 }
                 var2 = vj.a("reconnect_lost_seq,2", 24);
                 if (null != var2) {
-                  n.field_p[2] = nm.a(124, var2);
+                  AccountNameAvailabilityValidator.field_p[2] = nm.a(124, var2);
                 }
                 var2 = vj.a("reconnect_lost_seq,3", 24);
                 if (null != var2) {
-                  n.field_p[3] = nm.a(124, var2);
+                  AccountNameAvailabilityValidator.field_p[3] = nm.a(124, var2);
                 }
                 var2 = vj.a("reconnect_lost", 24);
                 if (var2 != null) {

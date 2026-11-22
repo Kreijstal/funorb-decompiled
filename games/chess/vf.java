@@ -62,7 +62,7 @@ final class vf implements jm {
           var6_int = param1 + param4.field_u;
           var7 = param4.field_r + param2;
           vj.a(var7, param4.field_C, param4.field_y, (byte) 119, var6_int);
-          var8 = uh.field_p[1];
+          var8 = AccountNameAvailabilityValidator.field_p[1];
           if (param4 instanceof fb &&
             ((fb) (param4)).field_I) {
             var8.d((param4.field_y - var8.field_v >> 1) + (var6_int + 1), (-var8.field_u + param4.field_C >> 1) + 1 + var7, 256);

@@ -2983,7 +2983,7 @@ final class LevelEntity {
                 if (this.field_L != 18) {
                   if (this.field_L != 19) {
                     if (this.field_L == 20) {
-                      i.field_r = 10;
+                      AccountNameAvailabilityValidator.field_r = 10;
                       decompiledFrameRemainder2 = (var7 != 0);
                     }
                     if (decompiledFrameRemainder2) {
@@ -2992,7 +2992,7 @@ final class LevelEntity {
                         this.field_g != 5) {
                         if (12 == this.field_L && (this.field_Q < 0 ||
                           this.field_g == 6)) {
-                          i.field_r = 6;
+                          AccountNameAvailabilityValidator.field_r = 6;
                           decompiledFrameRemainder2 = (var7 != 0);
                         }
                         if (decompiledFrameRemainder2) {
@@ -3006,7 +3006,7 @@ final class LevelEntity {
                                 this.field_Q == 0) {
                                 if (this.field_L == 0 &&
                                   0 == this.field_Q) {
-                                  i.field_r = 0;
+                                  AccountNameAvailabilityValidator.field_r = 0;
                                   decompiledFrameRemainder2 = (var7 != 0);
                                 }
                                 if (decompiledFrameRemainder2) {
@@ -3014,114 +3014,114 @@ final class LevelEntity {
                                     0 == this.field_Q) {
                                     if (this.field_L != 3) {
                                       if (this.field_L == 4) {
-                                        i.field_r = 12;
+                                        AccountNameAvailabilityValidator.field_r = 12;
                                         decompiledFrameRemainder2 = (var7 != 0);
                                       }
                                       if (decompiledFrameRemainder2) {
                                         if (this.field_L == 5) {
-                                          i.field_r = 13;
+                                          AccountNameAvailabilityValidator.field_r = 13;
                                           decompiledFrameRemainder2 = (var7 != 0);
                                         }
                                         if (decompiledFrameRemainder2) {
                                           if (this.field_L != 6) {
                                             if (this.field_L != 7) {
                                               if (this.field_L == 10) {
-                                                i.field_r = 14;
+                                                AccountNameAvailabilityValidator.field_r = 14;
                                                 decompiledFrameRemainder2 = (var7 != 0);
                                               }
                                               if ((decompiledFrameRemainder2) &&
                                                 (decompiledFrameRemainder2 = (this.field_L == 13))) {
-                                                i.field_r = 8;
+                                                AccountNameAvailabilityValidator.field_r = 8;
                                                 decompiledFrameRemainder2 = (var7 != 0);
                                               }
                                             }
                                             if (decompiledFrameRemainder2) {
-                                              i.field_r = 16;
+                                              AccountNameAvailabilityValidator.field_r = 16;
                                               decompiledFrameRemainder2 = (var7 != 0);
                                             }
                                           }
                                           if (decompiledFrameRemainder2) {
-                                            i.field_r = 15;
+                                            AccountNameAvailabilityValidator.field_r = 15;
                                             decompiledFrameRemainder2 = (var7 != 0);
                                           }
                                         }
                                       }
                                     }
                                     if (decompiledFrameRemainder2) {
-                                      i.field_r = 11;
+                                      AccountNameAvailabilityValidator.field_r = 11;
                                       decompiledFrameRemainder2 = (var7 != 0);
                                     }
                                   }
                                   if (decompiledFrameRemainder2) {
-                                    i.field_r = 1;
+                                    AccountNameAvailabilityValidator.field_r = 1;
                                     decompiledFrameRemainder2 = (var7 != 0);
                                   }
                                 }
                               }
                               if (decompiledFrameRemainder2) {
-                                i.field_r = 4;
+                                AccountNameAvailabilityValidator.field_r = 4;
                                 decompiledFrameRemainder2 = (var7 != 0);
                               }
                             }
                             if (decompiledFrameRemainder2) {
-                              i.field_r = 17;
+                              AccountNameAvailabilityValidator.field_r = 17;
                               decompiledFrameRemainder2 = (var7 != 0);
                             }
                           }
                           if (decompiledFrameRemainder2) {
-                            i.field_r = 7;
+                            AccountNameAvailabilityValidator.field_r = 7;
                             decompiledFrameRemainder2 = (var7 != 0);
                           }
                         }
                       }
                       if (decompiledFrameRemainder2) {
-                        i.field_r = 5;
+                        AccountNameAvailabilityValidator.field_r = 5;
                         decompiledFrameRemainder2 = (var7 != 0);
                       }
                     }
                   }
                   if (decompiledFrameRemainder2) {
-                    i.field_r = 9;
+                    AccountNameAvailabilityValidator.field_r = 9;
                     decompiledFrameRemainder2 = (var7 != 0);
                   }
                 }
                 if (decompiledFrameRemainder2) {
-                  i.field_r = 9;
+                  AccountNameAvailabilityValidator.field_r = 9;
                   if (var7 != 0) {
-                    i.field_r = 19;
-                    i.field_r = 2;
-                    i.field_r = 3;
+                    AccountNameAvailabilityValidator.field_r = 19;
+                    AccountNameAvailabilityValidator.field_r = 2;
+                    AccountNameAvailabilityValidator.field_r = 3;
                   }
                 }
               } else {
-                i.field_r = 19;
+                AccountNameAvailabilityValidator.field_r = 19;
                 if (var7 != 0) {
-                  i.field_r = 2;
-                  i.field_r = 3;
+                  AccountNameAvailabilityValidator.field_r = 2;
+                  AccountNameAvailabilityValidator.field_r = 3;
                 }
               }
             } else {
-              i.field_r = 2;
+              AccountNameAvailabilityValidator.field_r = 2;
               if (var7 != 0) {
-                i.field_r = 3;
+                AccountNameAvailabilityValidator.field_r = 3;
               }
             }
           } else {
-            i.field_r = 3;
+            AccountNameAvailabilityValidator.field_r = 3;
           }
           var3_int = vj.field_c;
-          if (this.field_g != i.field_r) {
-            this.field_g = i.field_r;
+          if (this.field_g != AccountNameAvailabilityValidator.field_r) {
+            this.field_g = AccountNameAvailabilityValidator.field_r;
             this.field_p = AccountServiceResult.field_k;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (i.field_r == 3) {
+          if (AccountNameAvailabilityValidator.field_r == 3) {
             if (this.field_L != 2) {
               if (this.field_v) {
                 this.field_v = false;
                 this.field_p = AccountServiceResult.field_k;
               }
-              if ((AccountServiceResult.field_k - this.field_p) > bb.field_k[i.field_r][var3_int]) {
+              if ((AccountServiceResult.field_k - this.field_p) > bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) {
                 this.field_eb = false;
               }
               n.field_jb = 1;
@@ -3134,22 +3134,22 @@ final class LevelEntity {
             }
           }
           if (decompiledFrameRemainder1) {
-            if (i.field_r != 2) {
+            if (AccountNameAvailabilityValidator.field_r != 2) {
               if (!ja.a((byte) 104, this.field_L) && (this.field_L != 0 ||
-                i.field_r != 17)) {
-                n.field_jb = (-this.field_p + AccountServiceResult.field_k) / bb.field_k[i.field_r][var3_int];
-                if (n.field_jb >= -1 + db.field_x[i.field_r][var3_int] &&
-                  !ue.field_i[i.field_r][var3_int]) {
-                  n.field_jb = db.field_x[i.field_r][var3_int] - 1;
+                AccountNameAvailabilityValidator.field_r != 17)) {
+                n.field_jb = (-this.field_p + AccountServiceResult.field_k) / bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int];
+                if (n.field_jb >= -1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int] &&
+                  !ue.field_i[AccountNameAvailabilityValidator.field_r][var3_int]) {
+                  n.field_jb = db.field_x[AccountNameAvailabilityValidator.field_r][var3_int] - 1;
                   if (var7 != 0) {
-                    n.field_jb = n.field_jb % db.field_x[i.field_r][var3_int];
+                    n.field_jb = n.field_jb % db.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                   }
                 } else {
-                  n.field_jb = n.field_jb % db.field_x[i.field_r][var3_int];
+                  n.field_jb = n.field_jb % db.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                 }
-                decompiledFrameRemainder1 = (i.field_r == 1);
+                decompiledFrameRemainder1 = (AccountNameAvailabilityValidator.field_r == 1);
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder1 = ((AccountServiceResult.field_k - this.field_p) % bb.field_k[i.field_r][var3_int] == 0)) &&
+                  (decompiledFrameRemainder1 = ((AccountServiceResult.field_k - this.field_p) % bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int] == 0)) &&
                   (decompiledFrameRemainder1 = !(!ja.field_e[var3_int][n.field_jb]))) {
                   wh.a(vj.field_c, 3, -103);
                   decompiledFrameRemainder1 = (var7 != 0);
@@ -3157,15 +3157,15 @@ final class LevelEntity {
               }
               if (decompiledFrameRemainder1) {
                 n.field_jb = this.field_kb;
-                if (n.field_jb >= (-1 + db.field_x[i.field_r][var3_int])) {
-                  n.field_jb = -1 + db.field_x[i.field_r][var3_int];
+                if (n.field_jb >= (-1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int])) {
+                  n.field_jb = -1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                 }
-                if ((i.field_r == 17) &&
+                if ((AccountNameAvailabilityValidator.field_r == 17) &&
                   (0 == this.field_D) &&
                   (cg.field_h[var3_int][n.field_jb])) {
                   wh.a(vj.field_c, 4, -114);
                   if (var7 != 0) {
-                    if (AccountServiceResult.field_k + (-this.field_p - bb.field_k[i.field_r][var3_int]) <= 0) {
+                    if (AccountServiceResult.field_k + (-this.field_p - bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
                       n.field_jb = 0;
                       n.field_jb = 1;
                     } else {
@@ -3175,7 +3175,7 @@ final class LevelEntity {
                 }
               }
             } else {
-              if (AccountServiceResult.field_k + (-this.field_p - bb.field_k[i.field_r][var3_int]) <= 0) {
+              if (AccountServiceResult.field_k + (-this.field_p - bb.field_k[AccountNameAvailabilityValidator.field_r][var3_int]) <= 0) {
                 n.field_jb = 0;
                 if (var7 != 0) {
                   n.field_jb = 1;
@@ -3563,7 +3563,7 @@ final class LevelEntity {
           var11 = 0;
           var12 = 0;
           var13 = 0;
-          var14 = i.field_r;
+          var14 = AccountNameAvailabilityValidator.field_r;
           var15 = n.field_jb;
           var16 = 7;
           if (param5 != -20861) {
@@ -8597,7 +8597,7 @@ final class LevelEntity {
                 continue;
               }
             }
-            stackIn_24_0 = i.field_r;
+            stackIn_24_0 = AccountNameAvailabilityValidator.field_r;
             stackIn_24_1 = ec.field_b;
             break;
           }
@@ -8607,12 +8607,12 @@ final class LevelEntity {
             ul.field_m == 0) {
             dl.field_n[2] = 0;
             dl.field_n[0] = 0;
-            this.a(ea.field_h, param2, param4, new int[]{this.field_a, i.field_r, n.field_jb, 16777215}, param0, -20861, param3, 1);
+            this.a(ea.field_h, param2, param4, new int[]{this.field_a, AccountNameAvailabilityValidator.field_r, n.field_jb, 16777215}, param0, -20861, param3, 1);
             ea.field_h.d();
             SoftwareRasterizer.d(2, 2, 0, 0, ea.field_h.storedWidth, ea.field_h.storedHeight);
             SectorCacheStore.field_f.bindAsTarget(124);
             ul.field_m = this.field_a;
-            ec.field_b = i.field_r;
+            ec.field_b = AccountNameAvailabilityValidator.field_r;
             fa.field_t = n.field_jb;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -8640,7 +8640,7 @@ final class LevelEntity {
               }
               if (decompiledFrameCompleted0) {
                 LocalizedStrings.field_w[var16 - 1][0] = this.field_a;
-                LocalizedStrings.field_w[-1 + var16][1] = i.field_r;
+                LocalizedStrings.field_w[-1 + var16][1] = AccountNameAvailabilityValidator.field_r;
                 LocalizedStrings.field_w[var16 - 1][2] = n.field_jb;
                 id.field_d[var16 - 1][0] = this.x;
                 id.field_d[var16 - 1][1] = this.field_B;
@@ -8648,7 +8648,7 @@ final class LevelEntity {
                 id.field_d[-1 + var16][3] = this.field_u;
                 if (var19 != 0) {
                   LocalizedStrings.field_w[var15Lifetime1][0] = this.field_a;
-                  LocalizedStrings.field_w[var15Lifetime1][1] = i.field_r;
+                  LocalizedStrings.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
                   LocalizedStrings.field_w[var15Lifetime1][2] = n.field_jb;
                   id.field_d[var15Lifetime1][0] = this.x;
                   id.field_d[var15Lifetime1][1] = this.field_B;
@@ -8658,7 +8658,7 @@ final class LevelEntity {
               }
             } else {
               LocalizedStrings.field_w[var15Lifetime1][0] = this.field_a;
-              LocalizedStrings.field_w[var15Lifetime1][1] = i.field_r;
+              LocalizedStrings.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
               LocalizedStrings.field_w[var15Lifetime1][2] = n.field_jb;
               id.field_d[var15Lifetime1][0] = this.x;
               id.field_d[var15Lifetime1][1] = this.field_B;

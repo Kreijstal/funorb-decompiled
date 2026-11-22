@@ -215,7 +215,7 @@ final class ke extends ga implements ge, el, pg {
 
     public final void a(byte param0) {
         String discarded$0 = null;
-        ((qg) (this.field_R.a((byte) -9))).e(639775169);
+        ((AccountNameAvailabilityValidator) (this.field_R.a((byte) -9))).e(639775169);
         if (param0 > -101) {
           discarded$0 = this.h((byte) -41);
         }
@@ -247,7 +247,7 @@ final class ke extends ga implements ge, el, pg {
         this.field_X.field_C = DualLinkNode.field_m;
         this.field_V.field_C = rm.field_D;
         this.field_bb.field_C = hf.field_U;
-        this.field_R.a(-18312, new qg(this.field_R));
+        this.field_R.a(-18312, new AccountNameAvailabilityValidator(this.field_R));
         this.field_U.a(-18312, new bk(this.field_U));
         this.field_W.a(-18312, new qc(this.field_W, this.field_U));
         this.field_H.a(-18312, new gl(this.field_H, this.field_R, this.field_U));

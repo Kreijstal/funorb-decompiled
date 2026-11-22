@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no extends se {
+final class AccountNameAvailabilityValidator extends se {
     static String field_i;
     static int field_m;
-    private boolean field_j;
+    private boolean nameAvailable;
     static int field_k;
-    private String field_l;
+    private String checkedName;
 
     public static void b(boolean param0) {
         if (!param0) {
-          no.b(true);
+          AccountNameAvailabilityValidator.b(true);
           field_i = null;
           return;
         }
@@ -20,10 +20,10 @@ final class no extends se {
     final void d(int param0) {
         if (param0 != -31626) {
           field_m = -99;
-          this.field_l = null;
+          this.checkedName = null;
           return;
         }
-        this.field_l = null;
+        this.checkedName = null;
     }
 
     final String a(String param0, int param1) {
@@ -47,18 +47,18 @@ final class no extends se {
             stackIn_2_0 = var4;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_l)) {
-            var5 = aj.a(-112, param0);
+          if (!param0.equals(this.checkedName)) {
+            var5 = aj.pollAccountNameCheck(-112, param0);
             if (var5 == null) {
               return null;
             }
             if (var5.message != null) {
               return null;
             }
-            this.field_l = param0;
-            this.field_j = var5.success;
+            this.checkedName = param0;
+            this.nameAvailable = var5.success;
           }
-          if (this.field_j) {
+          if (this.nameAvailable) {
             stackIn_14_0 = ao.field_c;
             return stackIn_14_0;
           }
@@ -82,16 +82,16 @@ final class no extends se {
         try {
           ja.a(param0, param3, param2, false, 1);
           if (param1 != -8383) {
-            no.e((byte) -125);
+            AccountNameAvailabilityValidator.e((byte) -125);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.a((Throwable) ((Object) runtimeException), "no.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    no(ga param0) {
+    AccountNameAvailabilityValidator(ga param0) {
         super(param0);
-        this.field_j = false;
+        this.nameAvailable = false;
     }
 
     final oi a(String param0, byte param1) {
@@ -114,18 +114,18 @@ final class no extends se {
             stackIn_5_0 = rk.field_c;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_l)) {
-            var3 = aj.a(-114, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = aj.pollAccountNameCheck(-114, param0);
             if (var3 != null &&
               null == var3.message) {
-              this.field_j = var3.success;
-              this.field_l = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               stackIn_12_0 = ec.field_h;
               return stackIn_12_0;
             }
           }
-          if (!this.field_j) {
+          if (!this.nameAvailable) {
             stackIn_17_0 = rk.field_c;
           } else {
             stackIn_17_0 = GzipDecompressor.field_b;

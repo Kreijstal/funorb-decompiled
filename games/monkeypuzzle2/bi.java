@@ -664,7 +664,7 @@ abstract class bi extends GameApplet {
               p.b(-79);
             } else {
               if (var2 == 3) {
-                hh.c(true);
+                AccountNameAvailabilityValidator.c(true);
               } else {
                 if (4 == var2) {
                   gd.a((byte) 8);

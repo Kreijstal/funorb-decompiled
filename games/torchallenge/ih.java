@@ -117,7 +117,7 @@ final class ih extends kj implements sg {
         FullscreenFocusCanvas.field_a = true;
         tk.field_P = false;
         bd.field_l = false;
-        i.field_r = 0;
+        AccountNameAvailabilityValidator.field_r = 0;
         qk.field_lb = 0;
         rj.field_d = null;
         PacketBuffer.field_k = false;

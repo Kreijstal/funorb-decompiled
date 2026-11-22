@@ -83,7 +83,7 @@ final class el extends ta implements bf, ai {
     }
 
     public final void a(byte param0) {
-        ((bc) (this.field_C.a((byte) -104))).b((byte) 60);
+        ((AccountNameAvailabilityValidator) (this.field_C.a((byte) -104))).b((byte) 60);
         if (param0 != -8) {
           this.field_J = (s) null;
         }
@@ -175,7 +175,7 @@ final class el extends ta implements bf, ai {
         this.field_J = new s(qk.field_b, (ag) null);
         this.field_H = new s(ob.field_D, (ag) null);
         this.field_C.field_i = bg.field_b;
-        this.field_C.a(new bc(this.field_C), 22);
+        this.field_C.a(new AccountNameAvailabilityValidator(this.field_C), 22);
         this.field_J.field_F = false;
         this.field_J.field_j = (td) ((Object) new vk());
         this.field_H.field_j = (td) ((Object) new qc());

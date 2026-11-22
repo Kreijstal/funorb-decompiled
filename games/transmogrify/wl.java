@@ -35,7 +35,7 @@ final class wl extends aj implements hl, df, tc {
         this.field_x.field_j = gb.field_b;
         this.field_C.field_j = wj.field_l;
         this.field_w.field_j = ia.field_l;
-        this.field_J.a(-86, new li(this.field_J));
+        this.field_J.a(-86, new AccountNameAvailabilityValidator(this.field_J));
         this.field_y.a(120, new vh(this.field_y));
         this.field_E.a(-91, new va(this.field_E, this.field_y));
         this.field_F.a(100, new bg(this.field_F, this.field_J, this.field_y));
@@ -100,7 +100,7 @@ final class wl extends aj implements hl, df, tc {
     }
 
     public final void a(byte param0) {
-        ((li) (this.field_J.a((byte) 125))).g(93);
+        ((AccountNameAvailabilityValidator) (this.field_J.a((byte) 125))).g(93);
         if (param0 != -69) {
           this.field_C = (vc) null;
         }

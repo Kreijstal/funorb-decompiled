@@ -178,7 +178,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (jd) null;
-                      var8.field_g = li.a(false, (String) (var8.field_f), var8.field_b).a(-70);
+                      var8.field_g = AccountNameAvailabilityValidator.a(false, (String) (var8.field_f), var8.field_b).a(-70);
                     } catch (jd decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (jd) (Object) decompiledCaughtException;

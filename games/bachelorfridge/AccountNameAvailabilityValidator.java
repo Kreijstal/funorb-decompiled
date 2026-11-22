@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tt extends aba {
-    private String field_g;
+final class AccountNameAvailabilityValidator extends aba {
+    private String checkedName;
     static String field_h;
-    private boolean field_i;
+    private boolean nameAvailable;
 
-    tt(TextInputWidget param0) {
+    AccountNameAvailabilityValidator(TextInputWidget param0) {
         super(param0);
-        this.field_i = false;
+        this.nameAvailable = false;
     }
 
     final void d(int param0) {
-        this.field_g = null;
+        this.checkedName = null;
         if (param0 >= -106) {
-          this.field_i = false;
+          this.nameAvailable = false;
         }
     }
 
     public static void releaseStatics(byte param0) {
         field_h = null;
         if (param0 != 84) {
-          tt.e(110);
+          AccountNameAvailabilityValidator.e(110);
         }
     }
 
@@ -58,12 +58,12 @@ final class tt extends aba {
             stackIn_3_0 = FoodShopPanel.field_f;
             return stackIn_3_0;
           }
-          if (!param0.equals(this.field_g)) {
-            var3 = du.a(param0, (byte) -43);
+          if (!param0.equals(this.checkedName)) {
+            var3 = du.pollAccountNameCheck(param0, (byte) -43);
             if (var3 != null &&
               var3.message == null) {
-              this.field_g = param0;
-              this.field_i = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_10_0 = ji.field_f;
               return stackIn_10_0;
@@ -72,7 +72,7 @@ final class tt extends aba {
           if (param1) {
             field_h = (String) null;
           }
-          if (!this.field_i) {
+          if (!this.nameAvailable) {
             stackIn_17_0 = FoodShopPanel.field_f;
           } else {
             stackIn_17_0 = cm.field_u;
@@ -112,18 +112,18 @@ final class tt extends aba {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param1.equals(this.field_g)) {
-            var4_ref_eq = du.a(param1, (byte) -43);
+          if (!param1.equals(this.checkedName)) {
+            var4_ref_eq = du.pollAccountNameCheck(param1, (byte) -43);
             if (var4_ref_eq == null) {
               return null;
             }
             if (null != var4_ref_eq.message) {
               return null;
             }
-            this.field_i = var4_ref_eq.success;
-            this.field_g = param1;
+            this.nameAvailable = var4_ref_eq.success;
+            this.checkedName = param1;
           }
-          if (!this.field_i) {
+          if (!this.nameAvailable) {
             stackIn_12_0 = FullHealAnimation.field_A;
             return stackIn_12_0;
           }

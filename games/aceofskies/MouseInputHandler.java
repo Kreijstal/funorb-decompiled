@@ -149,7 +149,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ho.field_b) {
             oj.field_g = 0;
-            mp.field_g = 0;
+            AccountNameAvailabilityValidator.field_g = 0;
             si.field_b = true;
             int var2_int = param0.getModifiers();
             if ((8 & var2_int) != 0) {
@@ -195,10 +195,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             kh.a(-125);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               me.field_b = 2;
-              mp.field_g = 2;
+              AccountNameAvailabilityValidator.field_g = 2;
             } else {
               me.field_b = 1;
-              mp.field_g = 1;
+              AccountNameAvailabilityValidator.field_g = 1;
             }
             int var2_int = param0.getModifiers();
             if ((var2_int & 8) == 0) {
@@ -258,7 +258,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         try {
           if (null != ho.field_b) {
-            mp.field_g = 0;
+            AccountNameAvailabilityValidator.field_g = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

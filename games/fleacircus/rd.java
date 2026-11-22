@@ -111,7 +111,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (sg.field_i != null) {
             m.field_a = 0;
             gd.field_a = param0.getX();
-            vf.field_p = param0.getY();
+            AccountNameAvailabilityValidator.field_p = param0.getY();
             ag.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -157,7 +157,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           m.field_a = 0;
           gd.field_a = param0.getX();
-          vf.field_p = param0.getY();
+          AccountNameAvailabilityValidator.field_p = param0.getY();
           ag.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           m.field_a = 0;
           gd.field_a = -1;
-          vf.field_p = -1;
+          AccountNameAvailabilityValidator.field_p = -1;
           ag.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null != sg.field_i) {
             m.field_a = 0;
             gd.field_a = param0.getX();
-            vf.field_p = param0.getY();
+            AccountNameAvailabilityValidator.field_p = param0.getY();
             ag.field_a = true;
           }
         } catch (RuntimeException runtimeException) {

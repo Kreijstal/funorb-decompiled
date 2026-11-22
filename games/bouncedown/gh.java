@@ -241,7 +241,7 @@ final class gh extends lc implements ki, rc, rf {
         this.field_E.field_q = fd.field_o;
         this.field_J.field_q = jb.field_b;
         this.field_G.field_q = pb.field_g;
-        this.field_F.a(new mg(this.field_F), true);
+        this.field_F.a(new AccountNameAvailabilityValidator(this.field_F), true);
         this.field_B.a(new nj(this.field_B), true);
         this.field_C.a(new cl(this.field_C, this.field_B), true);
         this.field_A.a(new bf(this.field_A, this.field_F, this.field_B), true);
@@ -483,7 +483,7 @@ final class gh extends lc implements ki, rc, rf {
 
     public final void a(int param0) {
         int discarded$0 = 0;
-        ((mg) (this.field_F.a(true))).i((byte) -122);
+        ((AccountNameAvailabilityValidator) (this.field_F.a(true))).i((byte) -122);
         if (param0 != -3814) {
           String var3 = (String) null;
           discarded$0 = this.a((lk) null, -19, -5, false, (String) null);

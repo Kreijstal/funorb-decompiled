@@ -198,7 +198,7 @@ final class ki extends vj {
             var3Lifetime2 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.b(rb.field_a);
             var16 = new Sprite(412, 43);
-            var5_ref_String = MessageKeys.a(new String[]{jh.field_p}, param0 - 28419, ia.field_p);
+            var5_ref_String = MessageKeys.a(new String[]{jh.field_p}, param0 - 28419, AccountNameAvailabilityValidator.field_p);
             jh.field_p = null;
             var16.a();
             ja.field_m.a(var5_ref_String, 3, 3, -6 + var16.field_r, -6 + var16.field_t, 16777215, -1, 0, 1, ja.field_m.field_s + ja.field_m.field_p);

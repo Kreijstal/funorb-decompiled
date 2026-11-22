@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends vm {
+final class AccountNameAvailabilityValidator extends vm {
     static int[] field_w;
     static ci field_m;
-    private boolean field_s;
+    private boolean nameAvailable;
     static int field_l;
     static km[] field_p;
-    private String field_t;
+    private String checkedName;
     static String field_q;
     static String[] field_u;
     static String field_n;
@@ -35,18 +35,18 @@ final class uh extends vm {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_t)) {
-            var4 = sb.b(param0, true);
+          if (!param0.equals(this.checkedName)) {
+            var4 = sb.pollAccountNameCheck(param0, true);
             if (var4 == null) {
               return null;
             }
             if (null != var4.message) {
               return null;
             }
-            this.field_t = param0;
-            this.field_s = var4.success;
+            this.checkedName = param0;
+            this.nameAvailable = var4.success;
           }
-          if (!this.field_s) {
+          if (!this.nameAvailable) {
             stackIn_12_0 = BoundedRandomAccessFile.field_g;
             return stackIn_12_0;
           }
@@ -70,9 +70,9 @@ final class uh extends vm {
         }
     }
 
-    uh(qn param0) {
+    AccountNameAvailabilityValidator(qn param0) {
         super(param0);
-        this.field_s = false;
+        this.nameAvailable = false;
     }
 
     final static un i(int param0) {
@@ -96,7 +96,7 @@ final class uh extends vm {
           var3 = var2 + param1;
           return var3;
         }
-        uh.i(-54);
+        AccountNameAvailabilityValidator.i(-54);
         var3Lifetime1 = var2 + param1;
         return var3Lifetime1;
     }
@@ -115,7 +115,7 @@ final class uh extends vm {
 
     final void h(int param0) {
         int var2 = -52 / ((param0 + 6) / 52);
-        this.field_t = null;
+        this.checkedName = null;
     }
 
     public static void k(int param0) {
@@ -152,18 +152,18 @@ final class uh extends vm {
             stackIn_3_0 = qk.field_b;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_t)) {
-            var4 = sb.b(param1, true);
+          if (!param1.equals(this.checkedName)) {
+            var4 = sb.pollAccountNameCheck(param1, true);
             if (var4 != null &&
               null == var4.message) {
-              this.field_t = param1;
-              this.field_s = var4.success;
+              this.checkedName = param1;
+              this.nameAvailable = var4.success;
             } else {
               stackIn_10_0 = MouseWheelInput.field_d;
               return stackIn_10_0;
             }
           }
-          if (this.field_s) {
+          if (this.nameAvailable) {
             stackIn_15_0 = oa.field_a;
           } else {
             stackIn_15_0 = qk.field_b;

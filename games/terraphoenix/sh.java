@@ -97,8 +97,8 @@ final class sh extends IntrusiveNode {
             var6 = rb.field_d[var3];
             if (pe.field_e == 2 &&
               var2 == 1) {
-              if (ia.field_r.length >= ArchiveIndex.field_c.length) {
-                stackIn_19_0 = ia.field_r.length;
+              if (AccountNameAvailabilityValidator.field_r.length >= ArchiveIndex.field_c.length) {
+                stackIn_19_0 = AccountNameAvailabilityValidator.field_r.length;
               } else {
                 stackIn_19_0 = ArchiveIndex.field_c.length;
               }
@@ -111,8 +111,8 @@ final class sh extends IntrusiveNode {
               var8 = stackIn_22_0;
               if (6 <= var3 &&
                 var3 < 6 + var7) {
-                if (0 <= -var7 + (ia.field_r.length + var3 - 6)) {
-                  stackIn_28_0 = ia.field_r[-var7 + ia.field_r.length + var3 - 6];
+                if (0 <= -var7 + (AccountNameAvailabilityValidator.field_r.length + var3 - 6)) {
+                  stackIn_28_0 = AccountNameAvailabilityValidator.field_r[-var7 + AccountNameAvailabilityValidator.field_r.length + var3 - 6];
                 } else {
                   stackIn_28_0 = "";
                 }

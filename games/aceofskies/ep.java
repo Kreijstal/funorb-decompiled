@@ -55,7 +55,7 @@ final class ep extends ab implements bh, dn {
         this.field_v = new mi(SmokeParticle.field_k, (no) null);
         this.field_y = new mi(dd.field_d, (no) null);
         this.field_w.field_k = ht.field_e;
-        this.field_w.a(new mp(this.field_w), 1472);
+        this.field_w.a(new AccountNameAvailabilityValidator(this.field_w), 1472);
         this.field_v.field_u = false;
         this.field_v.field_e = (ir) ((Object) new qb());
         this.field_y.field_e = (ir) ((Object) new wg());
@@ -81,11 +81,11 @@ final class ep extends ab implements bh, dn {
 
     public final void a(byte param0) {
         if (param0 == -77) {
-          ((mp) (this.field_w.a(0))).e(-104);
+          ((AccountNameAvailabilityValidator) (this.field_w.a(0))).e(-104);
           return;
         }
         boolean discarded$0 = this.h(-43);
-        ((mp) (this.field_w.a(0))).e(-104);
+        ((AccountNameAvailabilityValidator) (this.field_w.a(0))).e(-104);
     }
 
     private final void d(byte param0) {

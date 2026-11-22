@@ -564,7 +564,7 @@ final class b {
           return true;
         }
         if (param0 == 2) {
-          hk.a(param1, (byte) 60, this.field_j);
+          AccountNameAvailabilityValidator.a(param1, (byte) 60, this.field_j);
           return true;
         }
         if (param0 == 3) {

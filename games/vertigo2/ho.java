@@ -95,7 +95,7 @@ final class ho {
             stackIn_4_0 = mp.field_b;
           }
           hq.b(stackIn_4_0, -127);
-          IterableNodeHashTable.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
+          IterableNodeHashTable.field_e.a(0, 14017, AccountNameAvailabilityValidator.field_o.field_Fb, 0, -2 + (-40 + AccountNameAvailabilityValidator.field_o.field_db));
           nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, Archive.field_f, 0, 0);
           stackIn_6_0 = uc.field_a;
           stackIn_6_1 = param0 + 83;
@@ -107,7 +107,7 @@ final class ho {
           ((UiPanel) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + Archive.field_f, 0);
           eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + Archive.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
           vd.field_d.a(2 + Archive.field_f + 20, 2, re.field_k, -22 + (de.field_g.field_db - Archive.field_f), 0, de.field_g.field_Fb, 3124);
-          ne.field_G.a(76, hk.field_o.field_Fb, 40, -40 + hk.field_o.field_db, param0);
+          ne.field_G.a(76, AccountNameAvailabilityValidator.field_o.field_Fb, 40, -40 + AccountNameAvailabilityValidator.field_o.field_db, param0);
           ud.field_x.a(76, lb.field_c.field_Fb, 30, 0, 0);
           fd.field_s.a(108, lb.field_c.field_Fb, -2 + (lb.field_c.field_db - 70), 30, 0);
           var2_int = 3 + ol.field_A;

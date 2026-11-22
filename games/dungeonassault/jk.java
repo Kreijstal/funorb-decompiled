@@ -32,7 +32,7 @@ final class jk extends hf {
           wm.field_c = null;
           im.field_e = null;
           if (!gl.field_Lb) {
-            kh.e(108);
+            AccountNameAvailabilityValidator.e(108);
             ra.c(8);
           } else {
             li.b(-107);

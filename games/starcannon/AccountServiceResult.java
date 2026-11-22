@@ -281,10 +281,10 @@ final class AccountServiceResult {
             }
             ef.field_b = stackIn_113_0 + stackIn_114_1;
           }
-          nd.field_m = GameApplet.field_c - (ef.field_b >> 1);
+          AccountNameAvailabilityValidator.field_m = GameApplet.field_c - (ef.field_b >> 1);
           oh.field_e = new int[DualLinkNode.field_h.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = nd.field_m;
+          var5Lifetime3 = AccountNameAvailabilityValidator.field_m;
           while (DualLinkNode.field_h.length > var4Lifetime3) {
             var6Lifetime1 = eg.field_a[var4Lifetime3];
             if (0 <= var6Lifetime1) {

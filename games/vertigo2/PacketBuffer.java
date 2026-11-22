@@ -548,9 +548,9 @@ class PacketBuffer extends IntrusiveNode {
 
     final static void a(boolean param0, boolean param1) {
         IterableNodeHashTable.field_e = !param0 ? new lb(or.field_k, de.field_g) : new lb(GameKeyHandler.field_c, oi.field_a);
-        hk.field_o = new UiPanel(0L, (UiPanel) null);
-        hk.field_o.b(IterableNodeHashTable.field_e.field_b, 118);
-        hk.field_o.b(ne.field_G, 118);
+        AccountNameAvailabilityValidator.field_o = new UiPanel(0L, (UiPanel) null);
+        AccountNameAvailabilityValidator.field_o.b(IterableNodeHashTable.field_e.field_b, 118);
+        AccountNameAvailabilityValidator.field_o.b(ne.field_G, 118);
         wc.field_m = new UiPanel(0L, hb.field_D);
         lr.field_P = new UiPanel(0L, (UiPanel) null);
         wc.field_m.b(he.field_x, 118);

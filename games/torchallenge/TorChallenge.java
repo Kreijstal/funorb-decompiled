@@ -1607,13 +1607,13 @@ public final class TorChallenge extends GameClientBase {
               }
               DirectByteStorage.field_g = false;
               if (!(kj.field_A >= 0) ||
-                i.field_r == kj.field_A) {
-                i.field_r = 0;
+                AccountNameAvailabilityValidator.field_r == kj.field_A) {
+                AccountNameAvailabilityValidator.field_r = 0;
                 if (var3 != 0) {
-                  i.field_r = kj.field_A;
+                  AccountNameAvailabilityValidator.field_r = kj.field_A;
                 }
               } else {
-                i.field_r = kj.field_A;
+                AccountNameAvailabilityValidator.field_r = kj.field_A;
               }
             }
             if (32 != hk.field_e) {
@@ -2079,7 +2079,7 @@ public final class TorChallenge extends GameClientBase {
           kd.a(8192);
           gj.clearStaticReferences(-909082559);
           qi.a((byte) -81);
-          i.clearStaticReferences(-14298);
+          AccountNameAvailabilityValidator.clearStaticReferences(-14298);
           bh.f(1);
           il.clearStaticReferences(8);
           LocalizedStrings.d((byte) 102);

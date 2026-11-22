@@ -174,7 +174,7 @@ final class g extends hh {
           param0.removeMouseListener(ho.field_b);
           param0.removeMouseMotionListener(ho.field_b);
           param0.removeFocusListener(ho.field_b);
-          mp.field_g = param1;
+          AccountNameAvailabilityValidator.field_g = param1;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "g.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -195,7 +195,7 @@ final class nk {
                       ch.field_h.requestFocus();
                       break regionExit2;
                     }
-                    mg.d(30432);
+                    AccountNameAvailabilityValidator.d(30432);
                     if (param2) {
                       break regionExit2;
                     }

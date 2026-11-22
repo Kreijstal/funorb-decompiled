@@ -110,7 +110,7 @@ final class vd extends he {
           try {
             rd.field_j = new w(param11);
             na.field_r = new w(param7);
-            hj.field_l = param8;
+            AccountNameAvailabilityValidator.field_l = param8;
             MouseInputHandler.field_e = param10;
             MouseInputHandler.field_d = param4;
             nf.field_c = param0;

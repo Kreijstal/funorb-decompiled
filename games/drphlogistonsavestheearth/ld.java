@@ -1645,7 +1645,7 @@ final class ld {
                                                             LoginMenuScreen.g((byte) -104);
                                                           }
                                                           if (this.field_e.b(93)) {
-                                                            pk.e(60);
+                                                            AccountNameAvailabilityValidator.e(60);
                                                           }
                                                         }
                                                       }

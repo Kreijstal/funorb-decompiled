@@ -607,13 +607,13 @@ final class GameScreen {
             }
             DirectByteStorage.field_g = false;
             if (kj.field_A >= 0 &&
-              kj.field_A != i.field_r) {
-              i.field_r = kj.field_A;
+              kj.field_A != AccountNameAvailabilityValidator.field_r) {
+              AccountNameAvailabilityValidator.field_r = kj.field_A;
               if (var4 == 0) {
                 return;
               }
             }
-            i.field_r = 0;
+            AccountNameAvailabilityValidator.field_r = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3707,7 +3707,7 @@ final class GameScreen {
                                               be.a(3, (byte) -103, param0);
                                               LocalizedStrings.field_v = this.screenId;
                                               DirectByteStorage.field_g = true;
-                                              kj.field_A = i.field_r;
+                                              kj.field_A = AccountNameAvailabilityValidator.field_r;
                                               dj.field_Q = n.field_jb;
                                               if (var12 == 0) {
                                                 return;
@@ -4631,8 +4631,8 @@ final class GameScreen {
             vj.field_c = param4;
             ResourceArchive.field_n[param4].b(false, false);
             ResourceArchive.field_n[param4].a(jj.field_a[param4], 32, 128, (int[]) null, 0, -20861, 64, 0);
-            if (db.field_x[i.field_r][param4] - 1 <= ResourceArchive.field_n[param4].field_kb) {
-              ResourceArchive.field_n[param4].field_kb = db.field_x[i.field_r][param4] - 1;
+            if (db.field_x[AccountNameAvailabilityValidator.field_r][param4] - 1 <= ResourceArchive.field_n[param4].field_kb) {
+              ResourceArchive.field_n[param4].field_kb = db.field_x[AccountNameAvailabilityValidator.field_r][param4] - 1;
             }
             var11 = pl.field_e[ResourceArchive.field_n[param4].field_L];
             var12 = a.field_d[param4][var11][ResourceArchive.field_n[param4].field_kb][0];

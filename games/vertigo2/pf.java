@@ -195,11 +195,11 @@ final class pf {
             if (decompiledFrameCompleted0) {
               if (h.field_D.field_Hb.field_tb != 0) {
                 rc.field_d = new un(h.field_D.field_Hb.field_ob, h.field_D.field_Hb.field_C, h.field_D.field_Hb.field_Fb, h.field_D.field_Hb.field_db, kj.field_A, vf.field_B, ee.field_b, ee.field_b);
-                hk.field_n = 0;
+                AccountNameAvailabilityValidator.field_n = 0;
               }
               if (h.field_D.field_Kb.field_tb != 0) {
                 rc.field_d = new un(h.field_D.field_Kb.field_ob, h.field_D.field_Kb.field_C, h.field_D.field_Kb.field_Fb, h.field_D.field_Kb.field_db, ce.field_a, vf.field_B, ee.field_b, ee.field_b);
-                hk.field_n = 1;
+                AccountNameAvailabilityValidator.field_n = 1;
               }
             }
           } else {

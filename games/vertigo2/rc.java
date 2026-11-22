@@ -94,7 +94,7 @@ final class rc {
           var13.a(ue.field_K, 40, var4 * 1 + (130 + var3), 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           va.field_s.a(15637810, (byte) 109, -1, 40, bq.field_H, var5 + 76);
           var13.a(th.field_k, 40, var4 / 2 + var5 + 76, 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
-          va.field_s.a(15637810, (byte) 67, -1, 40, hk.field_r, var5 + 156);
+          va.field_s.a(15637810, (byte) 67, -1, 40, AccountNameAvailabilityValidator.field_r, var5 + 156);
           var13.a(nh.field_i, 40, var4 / 2 + var5 + 156, 540, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           if (var12 == 0) {
             va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));

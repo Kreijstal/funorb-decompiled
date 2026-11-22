@@ -17,7 +17,7 @@ public final class StarCannon extends ag {
           tc.j(param0 ^ -23491);
         }
         lj.field_h = b.a(false, 1);
-        nd.field_p = b.a(false, 2);
+        AccountNameAvailabilityValidator.field_p = b.a(false, 2);
         if (param0 != -23523) {
           return;
         }
@@ -1687,8 +1687,8 @@ public final class StarCannon extends ag {
         if (null == gf.field_c) {
           if (lj.field_h.b((byte) 118) &&
             lj.field_h.a(param1 + 31185)) {
-            if (nd.field_p.b((byte) 95) &&
-              nd.field_p.a(29741)) {
+            if (AccountNameAvailabilityValidator.field_p.b((byte) 95) &&
+              AccountNameAvailabilityValidator.field_p.a(29741)) {
               if (se.field_l.b((byte) 109) &&
                 se.field_l.a(29741)) {
                 if (jg.field_F.b((byte) 119) &&
@@ -1738,26 +1738,26 @@ public final class StarCannon extends ag {
                       gf.field_c[31] = aj.a(lj.field_h, "", "SC_sidecannons_upgrade").a();
                       gf.field_c[46] = aj.a(lj.field_h, "", "SC_xenon_operational").a();
                       gf.field_c[47] = aj.a(lj.field_h, "", "SC_xenonbeamshot").a();
-                      gf.field_c[32] = nj.a(nd.field_p, "", "SC_systems malfunction").c();
-                      gf.field_c[39] = nj.a(nd.field_p, "", "SC_VOC_54321").c();
-                      gf.field_c[40] = nj.a(nd.field_p, "", "SC_VOC_back cannons upgraded").c();
-                      gf.field_c[41] = nj.a(nd.field_p, "", "SC_VOC_hostile mothership approaching").c();
-                      gf.field_c[42] = nj.a(nd.field_p, "", "SC_VOC_powerup collected").c();
-                      gf.field_c[43] = nj.a(nd.field_p, "", "SC_VOC_returning to normal space").c();
-                      gf.field_c[44] = nj.a(nd.field_p, "", "SC_VOC_rewind module activated").c();
-                      gf.field_c[45] = nj.a(nd.field_p, "", "SC_VOC_rewind module installed").c();
-                      gf.field_c[33] = nj.a(nd.field_p, "", "SC_VOC_shield discharged").c();
-                      gf.field_c[34] = nj.a(nd.field_p, "", "SC_VOC_shield rearmed").c();
-                      gf.field_c[35] = nj.a(nd.field_p, "", "SC_VOC_shields upgraded").c();
-                      gf.field_c[36] = nj.a(nd.field_p, "", "SC_VOC_side cannons upgraded").c();
-                      gf.field_c[37] = nj.a(nd.field_p, "", "SC_VOC_thrusters upgraded").c();
-                      gf.field_c[38] = nj.a(nd.field_p, "", "SC_VOC_zenon beam operational").c();
-                      nd.a(272, -3763, 3278, 39);
-                      nd.a(0, -3763, 300, 11);
-                      nd.a(0, -3763, 300, 12);
-                      nd.a(50, -3763, 300, 16);
-                      nd.a(0, param1 - 2319, 100, 17);
-                      nd.a(0, param1 ^ 2833, 100, 18);
+                      gf.field_c[32] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_systems malfunction").c();
+                      gf.field_c[39] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_54321").c();
+                      gf.field_c[40] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_back cannons upgraded").c();
+                      gf.field_c[41] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_hostile mothership approaching").c();
+                      gf.field_c[42] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_powerup collected").c();
+                      gf.field_c[43] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_returning to normal space").c();
+                      gf.field_c[44] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_rewind module activated").c();
+                      gf.field_c[45] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_rewind module installed").c();
+                      gf.field_c[33] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shield discharged").c();
+                      gf.field_c[34] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shield rearmed").c();
+                      gf.field_c[35] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_shields upgraded").c();
+                      gf.field_c[36] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_side cannons upgraded").c();
+                      gf.field_c[37] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_thrusters upgraded").c();
+                      gf.field_c[38] = nj.a(AccountNameAvailabilityValidator.field_p, "", "SC_VOC_zenon beam operational").c();
+                      AccountNameAvailabilityValidator.a(272, -3763, 3278, 39);
+                      AccountNameAvailabilityValidator.a(0, -3763, 300, 11);
+                      AccountNameAvailabilityValidator.a(0, -3763, 300, 12);
+                      AccountNameAvailabilityValidator.a(50, -3763, 300, 16);
+                      AccountNameAvailabilityValidator.a(0, param1 - 2319, 100, 17);
+                      AccountNameAvailabilityValidator.a(0, param1 ^ 2833, 100, 18);
                       tc.j(param1 ^ -1412);
                       return;
                     }
@@ -1773,7 +1773,7 @@ public final class StarCannon extends ag {
               ma.a(SecondaryNodeDeque.a(kc.field_U, se.field_l, (byte) -38, ia.field_l, ""), -13923, 30.0f);
               return;
             }
-            ma.a(SecondaryNodeDeque.a(lc.field_ib, nd.field_p, (byte) -38, bd.field_g, ""), -13923, 20.0f);
+            ma.a(SecondaryNodeDeque.a(lc.field_ib, AccountNameAvailabilityValidator.field_p, (byte) -38, bd.field_g, ""), -13923, 20.0f);
             return;
           }
           ma.a(SecondaryNodeDeque.a(lc.field_ib, lj.field_h, (byte) -38, bd.field_g, ""), param1 ^ 13249, 10.0f);
@@ -1782,11 +1782,11 @@ public final class StarCannon extends ag {
         if (null != se.field_l) {
           ma.a(GzipDecompressor.field_d, -13923, 75.0f);
           this.d((byte) 22);
-          var3_ref = new ja(lj.field_h, nd.field_p);
+          var3_ref = new ja(lj.field_h, AccountNameAvailabilityValidator.field_p);
           fb.field_t = dl.a(var3_ref, (byte) 84, "music/star cannon level 1 final", "", se.field_l);
           qf.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", se.field_l);
           r.field_b = dl.a(var3_ref, (byte) -82, "music/star cannon boss final", "", se.field_l);
-          nd.field_p = null;
+          AccountNameAvailabilityValidator.field_p = null;
           se.field_l = null;
           lj.field_h = null;
           tc.j(32);
@@ -1796,7 +1796,7 @@ public final class StarCannon extends ag {
           ma.a(sj.field_C, -13923, 80.0f);
           this.d((byte) 22);
           gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", jg.field_F);
-          nd.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", jg.field_F);
+          AccountNameAvailabilityValidator.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", jg.field_F);
           qc.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", jg.field_F);
           gf.field_a = SecondaryNodeDequeIterator.a("cannoneer", 116, "", jg.field_F);
           dl.field_c = SecondaryNodeDequeIterator.a("playership", param1 + 1407, "", jg.field_F);
@@ -3403,7 +3403,7 @@ public final class StarCannon extends ag {
         of.clearStaticReferences(true);
         il.clearStaticReferences(2147483647);
         nh.a(false);
-        nd.g(0);
+        AccountNameAvailabilityValidator.g(0);
         cc.clearStaticReferences((byte) -98);
         cf.f(1);
         di.f(24979);

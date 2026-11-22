@@ -2291,7 +2291,7 @@ final class bf extends IntrusiveNode {
                                   sj.field_E[this.field_v].d(-64 + var4, this.field_u - 64, 256);
                                   break regionExit1;
                                 case 12:
-                                  nd.field_j[this.field_v].d(var4 - 16, -16 + (this.field_u - 32), var3);
+                                  AccountNameAvailabilityValidator.field_j[this.field_v].d(var4 - 16, -16 + (this.field_u - 32), var3);
                                   break regionExit1;
                                 case 21:
                                   qc.field_e[this.field_v].d(-48 + var4, -32 + this.field_u, 256);

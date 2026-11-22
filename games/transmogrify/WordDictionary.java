@@ -310,7 +310,7 @@ final class WordDictionary {
                 stackIn_10_1 = 256;
               }
               var7 = stackIn_9_0[stackIn_10_1];
-              var5_int = var7[li.a(var7.length, param1, false)] & 255;
+              var5_int = var7[AccountNameAvailabilityValidator.a(var7.length, param1, false)] & 255;
               param0[var6] = di.a(68, (byte)var5_int);
             }
             if (!this.b((byte) -119, param0)) {

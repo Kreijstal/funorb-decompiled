@@ -604,7 +604,7 @@ public final class OrbDefence extends NetworkGameClient {
         ef.c(param0);
         sa.a((byte) -105);
         ed.a(-1);
-        bc.clearStaticReferences((byte) -97);
+        AccountNameAvailabilityValidator.clearStaticReferences((byte) -97);
         em.d((byte) -15);
         wg.j(-24392);
         b.j(-1);
@@ -1001,7 +1001,7 @@ public final class OrbDefence extends NetworkGameClient {
         fk.field_b = fk.a(bh.field_d, "titleimage", 46, "");
         fk.a(bh.field_d, "orbpilon", 120, "");
         p.a(param1 + 13766, "", bh.field_d, "wall");
-        bc.field_q = p.a(13863, "", bh.field_d, "edging");
+        AccountNameAvailabilityValidator.field_q = p.a(13863, "", bh.field_d, "edging");
         mf.field_b = p.a(13863, "", bh.field_d, "floors_1");
         p.a(param1 ^ 13894, "", bh.field_d, "turrets");
         gd.field_b = p.a(13863, "", bh.field_d, "explosion");

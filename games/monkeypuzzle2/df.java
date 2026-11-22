@@ -20,9 +20,9 @@ final class df extends wj {
           ge.h(80, 0, 560, 480);
           for (var1_int = 0; fg.field_a > var1_int; var1_int++) {
             if (n.field_d[var1_int][0] > 0.0f) {
-              MouseWheelInput.field_a[ul.field_O[var1_int]][hh.field_r[var1_int]].c((int)pl.field_f[var1_int][0], (int)pl.field_f[var1_int][1]);
+              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].c((int)pl.field_f[var1_int][0], (int)pl.field_f[var1_int][1]);
             } else {
-              MouseWheelInput.field_a[ul.field_O[var1_int]][hh.field_r[var1_int]].f((int)pl.field_f[var1_int][0], (int)pl.field_f[var1_int][1]);
+              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].f((int)pl.field_f[var1_int][0], (int)pl.field_f[var1_int][1]);
             }
           }
           ge.h(0, 0, 640, 480);

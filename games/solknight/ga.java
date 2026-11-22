@@ -23,11 +23,11 @@ final class ga extends WidgetContainer implements ge, ka {
 
     public final void a(byte param0) {
         if (param0 == 22) {
-          ((df) (this.field_K.a(87))).a(true);
+          ((AccountNameAvailabilityValidator) (this.field_K.a(87))).a(true);
           return;
         }
         field_H = (String) null;
-        ((df) (this.field_K.a(87))).a(true);
+        ((AccountNameAvailabilityValidator) (this.field_K.a(87))).a(true);
     }
 
     private final void f(byte param0) {
@@ -85,7 +85,7 @@ final class ga extends WidgetContainer implements ge, ka {
         this.field_J = new pj(mf.field_x, (dg) null);
         this.field_I = new pj(nf.field_X, (dg) null);
         this.field_K.field_z = ql.field_u;
-        this.field_K.a(new df(this.field_K), false);
+        this.field_K.a(new AccountNameAvailabilityValidator(this.field_K), false);
         this.field_J.field_B = false;
         this.field_J.field_w = (j) ((Object) new gh());
         this.field_I.field_w = (j) ((Object) new ri());

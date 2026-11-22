@@ -13,7 +13,7 @@ final class hc {
         }
         fn.field_j = bh.field_c;
         wd.field_j = df.field_c;
-        ob.field_l = no.field_k;
+        ob.field_l = AccountNameAvailabilityValidator.field_k;
         mb.field_g = vk.field_I;
         we.field_h = sm.field_e;
         b.field_a = sb.field_F;

@@ -6,7 +6,7 @@ final class ti {
 
     final static hh a(int param0) {
         int var1 = 57 % ((param0 - 33) / 52);
-        return new hh(tt.e(21240), aj.a((byte) -65));
+        return new hh(AccountNameAvailabilityValidator.e(21240), aj.a((byte) -65));
     }
 
     final static String a(byte param0, int param1, long param2, int param3, boolean param4) {

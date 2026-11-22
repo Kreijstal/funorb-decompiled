@@ -82,7 +82,7 @@ final class ci extends IntrusiveNode {
           }
           var1_int = jm.field_c;
           var2 = 0;
-          if (kh.field_t == 2) {
+          if (AccountNameAvailabilityValidator.field_t == 2) {
             var3_long = -GameAppletShell.field_d + kd.c(-2456);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -101,7 +101,7 @@ final class ci extends IntrusiveNode {
               }
             }
             var6 = go.field_A[var3];
-            if (2 == kh.field_t &&
+            if (2 == AccountNameAvailabilityValidator.field_t &&
               var2 == 1) {
               if (sn.field_a.length < mo.field_g.length) {
                 stackIn_19_0 = mo.field_g.length;

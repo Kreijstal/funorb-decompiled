@@ -117,10 +117,10 @@ final class bl {
           lf.field_x = oh.a(hj.field_Z, "", 11091, "menu_chain_ext");
           lf.field_n = oh.a(hj.field_Z, "", 11091, "menu_chain_line");
           hf.field_Ab = oh.a(hj.field_Z, "", 11091, "menu_chain");
-          kh.field_m = kn.a(hj.field_Z, "", "cursor", -49);
-          jg.field_c = new cn[kh.field_m.length];
-          for (var1_intLifetime2 = 0; kh.field_m.length > var1_intLifetime2; var1_intLifetime2++) {
-            jg.field_c[var1_intLifetime2] = rb.a(8, kh.field_m[var1_intLifetime2], 16711680, (byte) 124);
+          AccountNameAvailabilityValidator.field_m = kn.a(hj.field_Z, "", "cursor", -49);
+          jg.field_c = new cn[AccountNameAvailabilityValidator.field_m.length];
+          for (var1_intLifetime2 = 0; AccountNameAvailabilityValidator.field_m.length > var1_intLifetime2; var1_intLifetime2++) {
+            jg.field_c[var1_intLifetime2] = rb.a(8, AccountNameAvailabilityValidator.field_m[var1_intLifetime2], 16711680, (byte) 124);
           }
           bf.field_d = oh.a(hj.field_Z, "", 11091, "smoke");
           bo.field_Kb = oh.a(hj.field_Z, "", 11091, "scrollbar_top");
@@ -324,7 +324,7 @@ final class bl {
           rj.field_k = oh.a(hj.field_Z, "", 11091, "youarehere");
           fj.field_d = kn.a(hj.field_Z, "", "spy_icon", -70);
           bf.field_e = kn.a(hj.field_Z, "", "sac_icon", -44);
-          kh.field_r = oh.a(hj.field_Z, "", 11091, "revive_icon");
+          AccountNameAvailabilityValidator.field_r = oh.a(hj.field_Z, "", 11091, "revive_icon");
           hj.field_T = oh.a(hj.field_Z, "", 11091, "menu_locked");
           n.field_e = pa.a((byte) -103, hj.field_Z, "", "ingot");
           tb.field_a = n.field_e.d();

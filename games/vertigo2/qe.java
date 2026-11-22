@@ -330,7 +330,7 @@ final class qe extends pn {
         }
     }
 
-    final static AccountServiceResult a(String param0, byte param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, byte param1) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_9_0 = null;

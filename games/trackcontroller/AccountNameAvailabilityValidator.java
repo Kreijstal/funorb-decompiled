@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends di {
+final class AccountNameAvailabilityValidator extends di {
     static String field_n;
     static kd field_o;
-    private boolean field_p;
-    private String field_m;
+    private boolean nameAvailable;
+    private String checkedName;
 
     public static void d(byte param0) {
         int var1 = -80 / ((0 - param0) / 46);
@@ -13,9 +13,9 @@ final class af extends di {
         field_o = null;
     }
 
-    af(lb param0) {
+    AccountNameAvailabilityValidator(lb param0) {
         super(param0);
-        this.field_p = false;
+        this.nameAvailable = false;
     }
 
     final ud a(int param0, String param1) {
@@ -40,18 +40,18 @@ final class af extends di {
             stackIn_6_0 = (ud) null;
             return stackIn_6_0;
           }
-          if (!param1.equals(this.field_m)) {
-            var3 = kj.a(param1, 63);
+          if (!param1.equals(this.checkedName)) {
+            var3 = kj.pollAccountNameCheck(param1, 63);
             if (var3 != null &&
               null == var3.message) {
-              this.field_m = param1;
-              this.field_p = var3.success;
+              this.checkedName = param1;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_13_0 = AsyncRequest.field_t;
               return stackIn_13_0;
             }
           }
-          if (this.field_p) {
+          if (this.nameAvailable) {
             stackIn_18_0 = TrackController.field_G;
           } else {
             stackIn_18_0 = ef.field_b;
@@ -190,21 +190,21 @@ final class af extends di {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_m)) {
-            var4 = kj.a(param0, 63);
+          if (!param0.equals(this.checkedName)) {
+            var4 = kj.pollAccountNameCheck(param0, 63);
             if (var4 == null) {
               return null;
             }
             if (var4.message != null) {
               return null;
             }
-            this.field_m = param0;
-            this.field_p = var4.success;
+            this.checkedName = param0;
+            this.nameAvailable = var4.success;
           }
           if (param1 != 426) {
-            this.field_m = (String) null;
+            this.checkedName = (String) null;
           }
-          if (this.field_p) {
+          if (this.nameAvailable) {
             stackIn_17_0 = qk.field_K;
             return stackIn_17_0;
           }
@@ -245,7 +245,7 @@ final class af extends di {
               return true;
             }
             if (param0 != 9819) {
-              af.d((byte) 51);
+              AccountNameAvailabilityValidator.d((byte) 51);
             }
             try {
               var2 = "tuhstatbut";
@@ -287,7 +287,7 @@ final class af extends di {
         if (param0) {
           this.a(true);
         }
-        this.field_m = null;
+        this.checkedName = null;
     }
 
     static {

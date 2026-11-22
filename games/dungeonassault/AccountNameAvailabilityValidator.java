@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh extends ip {
-    private boolean field_p;
-    private String field_o;
+final class AccountNameAvailabilityValidator extends ip {
+    private boolean nameAvailable;
+    private String checkedName;
     private static long[] field_q;
     static cn field_r;
     static int field_t;
@@ -16,7 +16,7 @@ final class kh extends ip {
         if (!param0) {
           return;
         }
-        this.field_o = null;
+        this.checkedName = null;
     }
 
     public static void e(byte param0) {
@@ -167,19 +167,19 @@ final class kh extends ip {
             stackIn_3_0 = pd.field_J;
             return stackIn_3_0;
           }
-          if (!param0.equals(this.field_o)) {
-            var3 = AccountServiceResult.a((byte) -126, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = AccountServiceResult.pollAccountNameCheck((byte) -126, param0);
             if (var3 != null &&
               null == var3.message) {
-              this.field_p = var3.success;
-              this.field_o = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               stackIn_9_0 = oc.field_A;
               return stackIn_9_0;
             }
           }
           var3_int = 108 % ((5 - param1) / 44);
-          if (this.field_p) {
+          if (this.nameAvailable) {
             stackIn_14_0 = c.field_d;
           } else {
             stackIn_14_0 = pd.field_J;
@@ -219,18 +219,18 @@ final class kh extends ip {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param1.equals(this.field_o)) {
-            var4 = AccountServiceResult.a((byte) -126, param1);
+          if (!param1.equals(this.checkedName)) {
+            var4 = AccountServiceResult.pollAccountNameCheck((byte) -126, param1);
             if (var4 == null) {
               return null;
             }
             if (null != var4.message) {
               return null;
             }
-            this.field_p = var4.success;
-            this.field_o = param1;
+            this.nameAvailable = var4.success;
+            this.checkedName = param1;
           }
-          if (!this.field_p) {
+          if (!this.nameAvailable) {
             stackIn_14_0 = fp.field_a;
             return stackIn_14_0;
           }
@@ -254,9 +254,9 @@ final class kh extends ip {
         }
     }
 
-    kh(rm param0) {
+    AccountNameAvailabilityValidator(rm param0) {
         super(param0);
-        this.field_p = false;
+        this.nameAvailable = false;
     }
 
     static {

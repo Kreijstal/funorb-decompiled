@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh extends wj {
+final class AccountNameAvailabilityValidator extends wj {
     static int[] field_r;
     static String field_p;
-    private String field_q;
-    private boolean field_s;
+    private String checkedName;
+    private boolean nameAvailable;
     static gb[] field_n;
     static gg field_u;
     static String field_t;
@@ -21,7 +21,7 @@ final class hh extends wj {
           eb.m(param0 - 8377);
           return;
         }
-        hh.c(true);
+        AccountNameAvailabilityValidator.c(true);
         eb.m(param0 - 8377);
     }
 
@@ -43,20 +43,20 @@ final class hh extends wj {
             return stackIn_2_0;
           }
           if (param1 != 3917) {
-            hh.f(-23);
+            AccountNameAvailabilityValidator.f(-23);
           }
-          if (!param0.equals(this.field_q)) {
-            var3 = UiWidget.b(param0, -84);
+          if (!param0.equals(this.checkedName)) {
+            var3 = UiWidget.pollAccountNameCheck(param0, -84);
             if (var3 != null &&
               null == var3.message) {
-              this.field_q = param0;
-              this.field_s = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_10_0 = f.field_g;
               return stackIn_10_0;
             }
           }
-          if (this.field_s) {
+          if (this.nameAvailable) {
             stackIn_15_0 = wj.field_i;
           } else {
             stackIn_15_0 = ol.field_h;
@@ -76,9 +76,9 @@ final class hh extends wj {
         }
     }
 
-    hh(rj param0) {
+    AccountNameAvailabilityValidator(rj param0) {
         super(param0);
-        this.field_s = false;
+        this.nameAvailable = false;
     }
 
     final static int a(byte param0, String param1, boolean param2) {
@@ -119,12 +119,12 @@ final class hh extends wj {
         field_t = null;
         field_r = null;
         if (param0 != -17202) {
-          hh.c(true);
+          AccountNameAvailabilityValidator.c(true);
         }
     }
 
     final void f(byte param0) {
-        this.field_q = null;
+        this.checkedName = null;
         if (param0 > -51) {
           field_p = (String) null;
         }
@@ -151,8 +151,8 @@ final class hh extends wj {
             stackIn_3_0 = var3;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_q)) {
-            var4 = UiWidget.b(param1, -75);
+          if (!param1.equals(this.checkedName)) {
+            var4 = UiWidget.pollAccountNameCheck(param1, -75);
             if (var4 == null) {
               return null;
             }
@@ -160,14 +160,14 @@ final class hh extends wj {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
-            this.field_s = var4.success;
-            this.field_q = param1;
+            this.nameAvailable = var4.success;
+            this.checkedName = param1;
           }
           if (param0 != 1) {
             var5 = (String) null;
-            hh.$cfr$intArgs$a$590e95718a07(87, (String) null, false);
+            AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(87, (String) null, false);
           }
-          if (this.field_s) {
+          if (this.nameAvailable) {
             stackIn_17_0 = ub.field_c;
             return stackIn_17_0;
           }

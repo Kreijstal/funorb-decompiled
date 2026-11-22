@@ -443,7 +443,7 @@ final class dg extends kj implements tl, sg, tb {
         if (param0 != -23128) {
           return;
         }
-        ((i) (this.field_Q.a(-116))).f(0);
+        ((AccountNameAvailabilityValidator) (this.field_Q.a(-116))).f(0);
     }
 
     final void a(UiComponent param0, int param1, byte param2, int param3) {
@@ -477,7 +477,7 @@ final class dg extends kj implements tl, sg, tb {
         this.field_K.field_r = bi.field_c;
         this.field_S.field_r = SecondaryNodeDeque.field_d;
         this.field_W.field_r = qa.field_c;
-        this.field_Q.a(-27997, new i(this.field_Q));
+        this.field_Q.a(-27997, new AccountNameAvailabilityValidator(this.field_Q));
         this.field_cb.a(-27997, new il(this.field_cb));
         this.field_P.a(-27997, new LocalizedStrings(this.field_P, this.field_cb));
         this.field_X.a(-27997, new bh(this.field_X, this.field_Q, this.field_cb));

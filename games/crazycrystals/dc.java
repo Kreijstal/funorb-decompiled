@@ -77,7 +77,7 @@ final class dc extends og implements im, vd, fd {
         this.field_I.field_t = ad.field_j;
         this.field_z.field_t = tf.field_a;
         this.field_F.field_t = na.field_fb;
-        this.field_N.a(true, new no(this.field_N));
+        this.field_N.a(true, new AccountNameAvailabilityValidator(this.field_N));
         this.field_A.a(true, new hn(this.field_A));
         this.field_K.a(true, new kd(this.field_K, this.field_A));
         this.field_M.a(true, new jn(this.field_M, this.field_N, this.field_A));
@@ -545,7 +545,7 @@ final class dc extends og implements im, vd, fd {
     }
 
     public final void a(int param0) {
-        ((no) (this.field_N.a(-101))).d(-31626);
+        ((AccountNameAvailabilityValidator) (this.field_N.a(-101))).d(-31626);
         if (param0 != 20) {
           this.field_F = (of) null;
         }

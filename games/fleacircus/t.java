@@ -1121,7 +1121,7 @@ final class t {
           if (this.field_b.b(111)) {
             stackIn_48_0 = (var5 == 0) ? 0 : 1;
             fleas.field_E = stackIn_48_0;
-            vf.e(-6359);
+            AccountNameAvailabilityValidator.e(-6359);
             oa.a(8, param0, -67);
           }
         }

@@ -525,7 +525,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -60, "INTRO_MULTIPLAYER_MODE_DEATHMATCH");
                 if (null != var2) {
-                  hk.field_r = in.a(0, var2);
+                  AccountNameAvailabilityValidator.field_r = in.a(0, var2);
                 }
                 var2 = en.a((byte) -67, "INTRO_MULTIPLAYER_PLAYER_RED");
                 if (null != var2) {

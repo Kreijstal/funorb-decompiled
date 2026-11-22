@@ -87,7 +87,7 @@ class af extends ta implements qh {
             if (var5 < 0) {
               var4 = var4 + sa.field_d;
             } else {
-              var6 = hj.a(false, true, me.field_a[var3_int]);
+              var6 = AccountNameAvailabilityValidator.a(false, true, me.field_a[var3_int]);
               var4 = var4 + e.field_i;
               var7 = -(var6 >> 1) + dl.field_g;
               if (ProxyAuthenticationRequiredException.containsPoint(tl.field_b + (a.field_o << 1), param2, param0, var4, var7 - tc.field_b, 0, var6 + (tc.field_b << 1))) {

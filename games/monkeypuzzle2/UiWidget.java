@@ -143,7 +143,7 @@ class UiWidget extends IntrusiveNode {
         this.a(this.field_p, param0 + 13362, this.field_r, this.field_l, this.field_e);
     }
 
-    final static AccountServiceResult b(String param0, int param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;

@@ -289,7 +289,7 @@ public final class MonkeyPuzzle2 extends bi {
           mk.a(8134);
           hc.clearStaticReferences((byte) -105);
           be.clearStaticReferences(true);
-          hh.e(-17202);
+          AccountNameAvailabilityValidator.e(-17202);
           df.g(0);
           uk.e(98);
           fd.e(-28970);

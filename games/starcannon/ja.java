@@ -24,7 +24,7 @@ final class ja {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 0;
-          var4 = nd.field_m;
+          var4 = AccountNameAvailabilityValidator.field_m;
           if (param2 <= 91) {
             stackIn_2_0 = 72;
             return stackIn_2_0;

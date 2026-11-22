@@ -126,7 +126,7 @@ final class oa {
         RuntimeException var2_ref = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (null == n.field_t) {
+          if (null == AccountNameAvailabilityValidator.field_t) {
             return null;
           }
           var3 = -23 / ((34 - param0) / 41);
@@ -135,7 +135,7 @@ final class oa {
           if (var2 == null) {
             var2 = param1;
           }
-          var4 = (vb) (n.field_t.a((long)var2.hashCode(), -30828));
+          var4 = (vb) (AccountNameAvailabilityValidator.field_t.a((long)var2.hashCode(), -30828));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Ib);
             var5 = mf.a(false, var8);
@@ -146,7 +146,7 @@ final class oa {
               stackIn_15_0 = var4;
               return stackIn_15_0;
             }
-            var4 = (vb) (n.field_t.a(83));
+            var4 = (vb) (AccountNameAvailabilityValidator.field_t.a(83));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

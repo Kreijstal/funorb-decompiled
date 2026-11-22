@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CourseLayout implements dv {
+final class CourseLayout implements BitDecodableMarker {
     static int field_a;
     private int[] roomIds;
     static String field_c;

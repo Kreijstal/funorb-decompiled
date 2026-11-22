@@ -201,7 +201,7 @@ final class ia extends rk {
           vj.field_f = param9.field_u;
           b.field_m = param9.field_o;
           lf.field_z = param9.field_k;
-          hk.field_q = param0.field_C;
+          AccountNameAvailabilityValidator.field_q = param0.field_C;
           GameKeyHandler.field_e = param9.field_E;
           ga.field_jb = param9.field_N;
           nq.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (Model) null, param5, param3, param2.field_a);
@@ -212,7 +212,7 @@ final class ia extends rk {
           param0.field_N = qp.field_g;
           param0.field_w = eb.field_b;
           param0.field_T = jd.field_d;
-          param0.field_C = hk.field_q;
+          param0.field_C = AccountNameAvailabilityValidator.field_q;
           param0.field_W = wc.field_n;
           param0.field_i = or.field_e;
           param0.field_A = MouseInputHandler.field_c;

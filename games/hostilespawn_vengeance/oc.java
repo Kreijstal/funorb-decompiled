@@ -100,8 +100,8 @@ final class oc {
           }
           var2 = var1.l(32270);
           if (var2 == 0) {
-            if (null == n.field_t) {
-              n.field_t = new cb(128);
+            if (null == AccountNameAvailabilityValidator.field_t) {
+              AccountNameAvailabilityValidator.field_t = new cb(128);
               vd.field_A = 0;
             }
             stackIn_14_0 = (var1.l(32270) != 1) ? 0 : 1;
@@ -119,12 +119,12 @@ final class oc {
             if (null == var5) {
               var5 = oa.a((byte) 90, var6);
               if (null != var5) {
-                n.field_t.a((long)var7.hashCode(), var5, 320);
+                AccountNameAvailabilityValidator.field_t.a((long)var7.hashCode(), var5, 320);
               }
             }
             if (var5 == null) {
               var5 = new vb();
-              n.field_t.a((long)var7.hashCode(), var5, 320);
+              AccountNameAvailabilityValidator.field_t.a((long)var7.hashCode(), var5, 320);
               fieldTemp$0 = vd.field_A;
               vd.field_A = vd.field_A + 1;
               var5.field_Gb = fieldTemp$0;

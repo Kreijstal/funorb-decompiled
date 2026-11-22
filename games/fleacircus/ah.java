@@ -392,7 +392,7 @@ final class ah {
           if (param0 != -1) {
             field_c = true;
           }
-          if (vf.c((byte) -5)) {
+          if (AccountNameAvailabilityValidator.c((byte) -5)) {
             GzipDecompressor.field_a.a(hm.field_d, param0 + 41, true, bk.field_b);
             GzipDecompressor.field_a.d(true);
             while (SecondaryNodeDeque.b(-113)) {

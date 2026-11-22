@@ -170,7 +170,7 @@ final class vk extends og implements ho, vd {
           fn.field_j = bh.field_c;
           wd.field_j = df.field_c;
           mb.field_g = field_I;
-          ob.field_l = no.field_k;
+          ob.field_l = AccountNameAvailabilityValidator.field_k;
         }
         MouseInputHandler.field_b = (ue) ((Object) var2);
         var3 = null;

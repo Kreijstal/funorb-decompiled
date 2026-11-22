@@ -90,7 +90,7 @@ final class lj extends WidgetContainer implements rf, oi {
     }
 
     public final void a(int param0) {
-        ((ge) (this.field_E.a((byte) 119))).a(false);
+        ((AccountNameAvailabilityValidator) (this.field_E.a((byte) 119))).a(false);
         int var2 = -28 % ((param0 - 63) / 60);
     }
 
@@ -102,7 +102,7 @@ final class lj extends WidgetContainer implements rf, oi {
         this.field_H = new ig(sf.field_e, (lf) null);
         this.field_G = new ig(bb.field_l, (lf) null);
         this.field_E.field_x = fc.field_d;
-        this.field_E.a((byte) -2, new ge(this.field_E));
+        this.field_E.a((byte) -2, new AccountNameAvailabilityValidator(this.field_E));
         this.field_H.field_E = false;
         this.field_H.field_u = (uk) ((Object) new b());
         this.field_G.field_u = (uk) ((Object) new ll());

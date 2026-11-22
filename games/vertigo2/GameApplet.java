@@ -46,7 +46,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               to.field_e = 0;
               bk.field_f = 0;
               gh.field_a = param4;
-              hk.field_m = param4;
+              AccountNameAvailabilityValidator.field_m = param4;
               nh.field_h = ob.e((byte) -106);
               if (param1 < 8) {
                 return;
@@ -828,7 +828,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (lc.field_a > var2.width) {
                   return;
                 }
-                if (var2.height < hk.field_m) {
+                if (var2.height < AccountNameAvailabilityValidator.field_m) {
                   return;
                 }
               }

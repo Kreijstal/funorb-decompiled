@@ -289,9 +289,9 @@ abstract class wl extends DualLinkNode {
           if (j.field_j > 2) {
             j.field_j = 2;
           }
-          no.field_m = 3 & param1;
-          if (no.field_m > 2) {
-            no.field_m = 2;
+          AccountNameAvailabilityValidator.field_m = 3 & param1;
+          if (AccountNameAvailabilityValidator.field_m > 2) {
+            AccountNameAvailabilityValidator.field_m = 2;
           }
           if (param0 != 7) {
             field_o = (dl) null;

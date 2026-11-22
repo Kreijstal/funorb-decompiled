@@ -142,7 +142,7 @@ final class BufferedSocket implements Runnable {
           var6 = 0;
           while (true) {
             if (var6 >= param1.length()) {
-              stackIn_25_0 = li.field_n[-var3_int + param1.length()];
+              stackIn_25_0 = AccountNameAvailabilityValidator.field_n[-var3_int + param1.length()];
               return stackIn_25_0;
             }
             if (var3_int > 2) {
@@ -294,7 +294,7 @@ final class BufferedSocket implements Runnable {
                 return stackIn_17_0;
               }
             } else {
-              if (li.field_o.indexOf(var4) == -1) {
+              if (AccountNameAvailabilityValidator.field_o.indexOf(var4) == -1) {
                 stackIn_20_0 = vc.field_N;
                 return stackIn_20_0;
               }

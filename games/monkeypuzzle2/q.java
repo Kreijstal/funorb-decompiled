@@ -118,7 +118,7 @@ final class q {
           while (pl.field_k.length > var3_int) {
             var5 = gh.field_a[var3_int];
             if (var5 >= 0) {
-              var6 = hh.$cfr$intArgs$a$590e95718a07(74, pl.field_k[var3_int], true);
+              var6 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(74, pl.field_k[var3_int], true);
               var7 = jc.field_b - (var6 >> 1);
               var4 = var4 + ud.field_a;
               if (lf.a(param1 - 19828, param2, param0, hb.field_n + (vf.field_b << 1), (pl.field_h << 1) + var6, -pl.field_h + var7, var4)) {

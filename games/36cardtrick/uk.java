@@ -229,7 +229,7 @@ abstract class uk {
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, gg.field_d, hj.field_j);
+              var9.fillRect(0, 0, gg.field_d, AccountNameAvailabilityValidator.field_j);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
@@ -248,12 +248,12 @@ abstract class uk {
               var10.setFont(hk.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(param4.length() * 6) + 304) / 2, 22);
-              var9.drawImage(ua.field_F, -152 + gg.field_d / 2, hj.field_j / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ua.field_F, -152 + gg.field_d / 2, AccountNameAvailabilityValidator.field_j / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref_Exception = (Exception) (Object) decompiledCaughtException;
               var7 = gg.field_d / 2 - 152;
-              var8 = hj.field_j / 2 - 18;
+              var8 = AccountNameAvailabilityValidator.field_j / 2 - 18;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, var8 + 2, param0 * 3, 30);
@@ -267,7 +267,7 @@ abstract class uk {
             if (null != ub.field_k) {
               var9.setFont(hk.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(ub.field_k, gg.field_d / 2 - 6 * ub.field_k.length() / 2, hj.field_j / 2 - 26);
+              var9.drawString(ub.field_k, gg.field_d / 2 - 6 * ub.field_k.length() / 2, AccountNameAvailabilityValidator.field_j / 2 - 26);
             }
             var6 = -29 % ((-48 - param2) / 46);
           } catch (java.lang.Exception decompiledCaughtParameter1) {

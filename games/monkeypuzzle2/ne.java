@@ -157,7 +157,7 @@ final class ne {
             stackIn_39_0 = 47;
             stackIn_39_1 = var6;
             stackIn_40_2 = !(0 > var4);
-            var7Lifetime1 = hh.$cfr$intArgs$a$590e95718a07(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var7Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + jc.field_b;
             if (var4 >= 0) {
               if (var4 == sj.field_f.field_a) {

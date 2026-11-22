@@ -33,7 +33,7 @@ class PacketBuffer extends IntrusiveNode {
         return ((this.payload[this.position - 2] & 255) << 8) + ((-16777216 & this.payload[-4 + this.position] << 24) + ((255 & this.payload[-3 + this.position]) << 16) + (255 & this.payload[this.position - 1]));
     }
 
-    final static AccountServiceResult a(String param0, byte param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, byte param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;

@@ -1573,7 +1573,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("logging_in", 5236);
                 if (var2 != null) {
-                  no.field_i = fa.a((byte) -76, var2);
+                  AccountNameAvailabilityValidator.field_i = fa.a((byte) -76, var2);
                 }
                 var2 = ah.a("reconnect", 5236);
                 if (var2 != null) {

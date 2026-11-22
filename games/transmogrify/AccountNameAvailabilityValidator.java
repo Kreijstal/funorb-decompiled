@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class li extends me {
+final class AccountNameAvailabilityValidator extends me {
     static volatile boolean field_j;
     static String field_o;
     static int[] field_n;
     static ci field_k;
-    private String field_m;
-    private boolean field_l;
+    private String checkedName;
+    private boolean nameAvailable;
 
     public static void h(int param0) {
         if (param0 > 117) {
@@ -18,7 +18,7 @@ final class li extends me {
           field_k = null;
           return;
         }
-        li.h(106);
+        AccountNameAvailabilityValidator.h(106);
         field_n = null;
         field_o = null;
         field_k = null;
@@ -47,8 +47,8 @@ final class li extends me {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          if (!param1.equals(this.field_m)) {
-            var4 = vl.a(42, param1);
+          if (!param1.equals(this.checkedName)) {
+            var4 = vl.pollAccountNameCheck(42, param1);
             if (var4 == null) {
               return null;
             }
@@ -56,10 +56,10 @@ final class li extends me {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
-            this.field_l = var4.success;
-            this.field_m = param1;
+            this.nameAvailable = var4.success;
+            this.checkedName = param1;
           }
-          if (this.field_l) {
+          if (this.nameAvailable) {
             stackIn_16_0 = lf.field_e;
             return stackIn_16_0;
           }
@@ -112,9 +112,9 @@ final class li extends me {
         }
     }
 
-    li(rg param0) {
+    AccountNameAvailabilityValidator(rg param0) {
         super(param0);
-        this.field_l = false;
+        this.nameAvailable = false;
     }
 
     final rc a(int param0, String param1) {
@@ -137,18 +137,18 @@ final class li extends me {
           if (param0 != 95) {
             field_k = (ci) null;
           }
-          if (!param1.equals(this.field_m)) {
-            var3 = vl.a(param0 - 53, param1);
+          if (!param1.equals(this.checkedName)) {
+            var3 = vl.pollAccountNameCheck(param0 - 53, param1);
             if (var3 != null &&
               var3.message == null) {
-              this.field_l = var3.success;
-              this.field_m = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_11_0 = fi.field_u;
               return stackIn_11_0;
             }
           }
-          if (this.field_l) {
+          if (this.nameAvailable) {
             stackIn_16_0 = hi.field_b;
           } else {
             stackIn_16_0 = SocketConnector.field_d;
@@ -215,7 +215,7 @@ final class li extends me {
 
     final void g(int param0) {
         int var2 = 73 / ((param0 - 9) / 61);
-        this.field_m = null;
+        this.checkedName = null;
     }
 
     static {

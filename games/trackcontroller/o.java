@@ -19,11 +19,11 @@ final class o {
         IntrusiveDeque.field_c[12] = null;
         IntrusiveDeque.field_c[8] = ButtonWidget.field_H;
         IntrusiveDeque.field_c[26] = ag.field_a;
-        IntrusiveDeque.field_c[22] = af.field_n;
+        IntrusiveDeque.field_c[22] = AccountNameAvailabilityValidator.field_n;
         IntrusiveDeque.field_c[7] = ButtonWidget.field_H;
         IntrusiveDeque.field_c[6] = ButtonWidget.field_H;
         if (param0 == -46) {
-          IntrusiveDeque.field_c[21] = af.field_n;
+          IntrusiveDeque.field_c[21] = AccountNameAvailabilityValidator.field_n;
           IntrusiveDeque.field_c[14] = nh.field_d;
           IntrusiveDeque.field_c[13] = ua.field_K;
           IntrusiveDeque.field_c[4] = fj.field_R;
@@ -42,7 +42,7 @@ final class o {
           return;
         }
         o.a((byte) -99);
-        IntrusiveDeque.field_c[21] = af.field_n;
+        IntrusiveDeque.field_c[21] = AccountNameAvailabilityValidator.field_n;
         IntrusiveDeque.field_c[14] = nh.field_d;
         IntrusiveDeque.field_c[13] = ua.field_K;
         IntrusiveDeque.field_c[4] = fj.field_R;

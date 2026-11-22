@@ -13,7 +13,7 @@ class ph extends ag {
     static String field_B;
     private boolean field_E;
 
-    final static AccountServiceResult a(String param0, int param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;

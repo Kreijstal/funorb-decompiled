@@ -252,7 +252,7 @@ abstract class fa extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_x = vf.a(16, (byte) 123, var7);
+                                field_x = AccountNameAvailabilityValidator.a(16, (byte) 123, var7);
                               }
                             } else {
                               field_J = -1;
@@ -262,7 +262,7 @@ abstract class fa extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_J = vf.a(16, (byte) 122, var6);
+                          field_J = AccountNameAvailabilityValidator.a(16, (byte) 122, var6);
                         }
                       } else {
                         field_u = -1;
@@ -272,7 +272,7 @@ abstract class fa extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_u = vf.a(16, (byte) 124, var5);
+                    field_u = AccountNameAvailabilityValidator.a(16, (byte) 124, var5);
                   }
                 } else {
                   field_s = field_C;
@@ -286,7 +286,7 @@ abstract class fa extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_E = vf.a(16, (byte) 97, var3);
+            field_E = AccountNameAvailabilityValidator.a(16, (byte) 97, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

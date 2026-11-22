@@ -323,11 +323,11 @@ final class b {
             field_c[var4Lifetime3] = var17.readUnsignedShort(674914976);
           }
           var17.position = -(h.field_n * 8) - 7 + (param1.length - 3 * (-1 + var3));
-          uh.field_r = new int[var3];
+          AccountNameAvailabilityValidator.field_r = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            uh.field_r[var4Lifetime4] = var17.readUnsignedMedium(1389913160);
-            if (uh.field_r[var4Lifetime4] == 0) {
-              uh.field_r[var4Lifetime4] = 1;
+            AccountNameAvailabilityValidator.field_r[var4Lifetime4] = var17.readUnsignedMedium(1389913160);
+            if (AccountNameAvailabilityValidator.field_r[var4Lifetime4] == 0) {
+              AccountNameAvailabilityValidator.field_r[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

@@ -157,7 +157,7 @@ final class wi {
           mi.field_j = param3;
           g.field_r = param4;
           vc.field_e = param5;
-          pk.field_q = param2;
+          AccountNameAvailabilityValidator.field_q = param2;
           if (param8 < 48) {
             wi.a(88, 114, -72);
           }

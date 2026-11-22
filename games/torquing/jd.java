@@ -91,7 +91,7 @@ final class jd extends jh {
         if (IntrusiveNode.field_d >= dg.field_h + cf.field_e) {
           return -1;
         }
-        return il.field_l;
+        return AccountNameAvailabilityValidator.field_l;
     }
 
     public static void h(int param0) {

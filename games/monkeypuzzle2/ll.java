@@ -49,7 +49,7 @@ final class ll {
                 }
                 var2 = te.a("loginm2", param0 ^ -17);
                 if (var2 != null) {
-                  hh.field_p = be.a(var2, (byte) -94);
+                  AccountNameAvailabilityValidator.field_p = be.a(var2, (byte) -94);
                 }
                 var2 = te.a("loginm1", -19);
                 if (null != var2) {
@@ -1922,7 +1922,7 @@ final class ll {
                 }
                 var2 = te.a("achievements", -116);
                 if (var2 != null) {
-                  hh.field_t = be.a(var2, (byte) 110);
+                  AccountNameAvailabilityValidator.field_t = be.a(var2, (byte) 110);
                 }
                 var2 = te.a("achievementsthisgame", param0 ^ -89);
                 if (null != var2) {

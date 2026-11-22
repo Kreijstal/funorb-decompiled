@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qg extends mf {
-    private boolean field_j;
-    private String field_i;
+final class AccountNameAvailabilityValidator extends mf {
+    private boolean nameAvailable;
+    private String checkedName;
     static pm[] field_k;
     static int field_h;
 
@@ -26,23 +26,23 @@ final class qg extends mf {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_i)) {
-            var4 = c.a(param0, 78);
+          if (!param0.equals(this.checkedName)) {
+            var4 = c.pollAccountNameCheck(param0, 78);
             if (var4 == null) {
               return null;
             }
             if (var4.message != null) {
               return null;
             }
-            this.field_i = param0;
-            this.field_j = var4.success;
+            this.checkedName = param0;
+            this.nameAvailable = var4.success;
           }
-          if (!this.field_j) {
+          if (!this.nameAvailable) {
             stackIn_14_0 = fh.field_c;
             return stackIn_14_0;
           }
           if (!param1) {
-            this.field_i = (String) null;
+            this.checkedName = (String) null;
           }
           stackIn_18_0 = th.field_fb;
           return stackIn_18_0;
@@ -60,9 +60,9 @@ final class qg extends mf {
         }
     }
 
-    qg(ul param0) {
+    AccountNameAvailabilityValidator(ul param0) {
         super(param0);
-        this.field_j = false;
+        this.nameAvailable = false;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -89,10 +89,10 @@ final class qg extends mf {
     }
 
     final void e(int param0) {
-        this.field_i = null;
+        this.checkedName = null;
         if (param0 != 639775169) {
           dj var3 = (dj) null;
-          qg.a(0.5264573121586292, 97, (double[]) null, -2.3170663679572066, (vg) null, (dj) null, -93);
+          AccountNameAvailabilityValidator.a(0.5264573121586292, 97, (double[]) null, -2.3170663679572066, (vg) null, (dj) null, -93);
         }
     }
 
@@ -111,25 +111,25 @@ final class qg extends mf {
         try {
           if (param0 > -44) {
             var4 = (dj) null;
-            qg.a(0.033002690553074567, -88, (double[]) null, 1.6640993038654757, (vg) null, (dj) null, -56);
+            AccountNameAvailabilityValidator.a(0.033002690553074567, -88, (double[]) null, 1.6640993038654757, (vg) null, (dj) null, -56);
           }
           var5 = (CharSequence) ((Object) param1);
           if (!lc.a(var5, 13684)) {
             stackIn_4_0 = fb.field_e;
             return stackIn_4_0;
           }
-          if (!param1.equals(this.field_i)) {
-            var3 = c.a(param1, 117);
+          if (!param1.equals(this.checkedName)) {
+            var3 = c.pollAccountNameCheck(param1, 117);
             if (var3 != null &&
               var3.message == null) {
-              this.field_j = var3.success;
-              this.field_i = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_11_0 = qh.field_x;
               return stackIn_11_0;
             }
           }
-          if (this.field_j) {
+          if (this.nameAvailable) {
             stackIn_16_0 = nn.field_q;
           } else {
             stackIn_16_0 = fb.field_e;

@@ -242,7 +242,7 @@ final class hg extends vk implements qk, ga {
         this.field_E = new dk(rc.field_b, (qg) null);
         this.field_C = new dk(ta.field_d, (qg) null);
         this.field_A.field_p = ld.field_jb;
-        this.field_A.a(new nd(this.field_A), 0);
+        this.field_A.a(new AccountNameAvailabilityValidator(this.field_A), 0);
         this.field_E.field_u = false;
         this.field_E.field_o = (de) ((Object) new gb());
         this.field_C.field_o = (de) ((Object) new wa());
@@ -268,12 +268,12 @@ final class hg extends vk implements qk, ga {
 
     public final void a(int param0) {
         if (param0 == -12920) {
-          ((nd) (this.field_A.a(false))).f(param0 ^ 31293);
+          ((AccountNameAvailabilityValidator) (this.field_A.a(false))).f(param0 ^ 31293);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.a(-86, (byte) 31, (UiWidget) null, (String) null, 79, (String) null);
-        ((nd) (this.field_A.a(false))).f(param0 ^ 31293);
+        ((AccountNameAvailabilityValidator) (this.field_A.a(false))).f(param0 ^ 31293);
     }
 
     final boolean a(UiWidget param0, char param1, byte param2, int param3) {

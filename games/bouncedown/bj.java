@@ -337,7 +337,7 @@ final class bj extends ak {
           for (var2_int = 0; var2_int < q.field_M; var2_int++) {
             w.field_f[var2_int + param1] = var2_int;
           }
-          Bounce.a(mg.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
+          Bounce.a(AccountNameAvailabilityValidator.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
           if (param1 < q.field_M) {
             q.field_M = param1;
           }

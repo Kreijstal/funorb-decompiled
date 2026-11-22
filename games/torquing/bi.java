@@ -115,7 +115,7 @@ final class bi {
           this.field_r = 3000;
           this.field_c = 0;
           this.field_v = this.field_d.a(false);
-          ap.a(ProxySocketConnector.field_i, il.field_m[this.field_v]);
+          ap.a(ProxySocketConnector.field_i, AccountNameAvailabilityValidator.field_m[this.field_v]);
           stackIn_30_1 = (this.field_L == 18);
           this.field_y = stackIn_30_1;
           this.field_J = false;
@@ -1342,11 +1342,11 @@ final class bi {
             var25 = ql.field_u;
             this.field_x = Math.min(512, this.field_x + 10);
             bc.field_a.a(true);
-            var25.a(0.0, 0.0, 1.0, (byte) 51, 3.141592653589793 * (double)(il.field_m[this.field_v][2] * 2) / 2048.0);
+            var25.a(0.0, 0.0, 1.0, (byte) 51, 3.141592653589793 * (double)(AccountNameAvailabilityValidator.field_m[this.field_v][2] * 2) / 2048.0);
             bc.field_a.a(var25, 65536);
-            var25.a(1.0, 0.0, 0.0, (byte) 54, 3.141592653589793 * (double)(2 * il.field_m[this.field_v][0]) / 2048.0);
+            var25.a(1.0, 0.0, 0.0, (byte) 54, 3.141592653589793 * (double)(2 * AccountNameAvailabilityValidator.field_m[this.field_v][0]) / 2048.0);
             bc.field_a.a(var25, 65536);
-            var25.a(0.0, 1.0, 0.0, (byte) 63, (double)(il.field_m[this.field_v][1] * 2) * 3.141592653589793 / 2048.0);
+            var25.a(0.0, 1.0, 0.0, (byte) 63, (double)(AccountNameAvailabilityValidator.field_m[this.field_v][1] * 2) * 3.141592653589793 / 2048.0);
             bc.field_a.a(var25, 65536);
             var25.a(0.0, 0.0, 1.0, (byte) 87, 3.141592653589793 * (double)(2 * -this.field_x) / 2048.0);
             bc.field_a.a(var25, 65536);
@@ -1661,7 +1661,7 @@ final class bi {
           this.field_L = param1;
           if (null == ProxySocketConnector.field_i) {
             ProxySocketConnector.field_i = new int[12];
-            ap.a(ProxySocketConnector.field_i, il.field_m[this.field_v]);
+            ap.a(ProxySocketConnector.field_i, AccountNameAvailabilityValidator.field_m[this.field_v]);
           }
           if (this.field_T == null) {
             var6 = new StringBuilder(104);

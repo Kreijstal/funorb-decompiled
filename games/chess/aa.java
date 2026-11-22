@@ -114,8 +114,8 @@ final class aa {
         if (var3 == 0) {
           ph.a(-7125);
         }
-        if (rn.field_b == 2 && (uh.i(23156) == null ||
-          uh.i(23156).field_g &&
+        if (rn.field_b == 2 && (AccountNameAvailabilityValidator.i(23156) == null ||
+          AccountNameAvailabilityValidator.i(23156).field_g &&
           nc.field_T == 0)) {
           if (null == b.field_a) {
             b.field_a = new km(wb.field_h, wb.field_c);
@@ -161,7 +161,7 @@ final class aa {
           }
         }
         this.f(var2, -7098);
-        if (uh.i(param0 + 23097) != null &&
+        if (AccountNameAvailabilityValidator.i(param0 + 23097) != null &&
           (this.field_c == 1 ||
           2 == this.field_c ||
           this.field_c == 11)) {
@@ -173,9 +173,9 @@ final class aa {
           stackIn_51_4 = 3;
           stackIn_51_5 = 60;
           stackIn_51_6 = 0;
-          stackIn_51_7 = uh.i(23156).field_e / 50;
+          stackIn_51_7 = AccountNameAvailabilityValidator.i(23156).field_e / 50;
           stackIn_51_8 = 3;
-          stackIn_51_9 = uh.i(param0 ^ 23119).field_b;
+          stackIn_51_9 = AccountNameAvailabilityValidator.i(param0 ^ 23119).field_b;
           stackIn_52_10 = (0 == (r.field_Eb / 50 & 1));
           if (stackIn_51_9 | !stackIn_52_10) {
             stackIn_55_9 = 0;
@@ -190,8 +190,8 @@ final class aa {
           stackIn_57_4 = 3;
           stackIn_57_5 = 60;
           stackIn_57_6 = 0;
-          stackIn_57_7 = uh.i(23156).field_v / 50;
-          stackIn_57_8 = uh.i(param0 ^ 23119).field_b;
+          stackIn_57_7 = AccountNameAvailabilityValidator.i(23156).field_v / 50;
+          stackIn_57_8 = AccountNameAvailabilityValidator.i(param0 ^ 23119).field_b;
           stackIn_58_9 = ((r.field_Eb / 50 & 1) == 0);
           if (stackIn_57_8 | stackIn_58_9) {
             stackIn_61_8 = 32;
@@ -275,8 +275,8 @@ final class aa {
         }
         wb.a(var14, var6, var7);
         if (null != b.field_a &&
-          2 == rn.field_b && (uh.i(23156) == null ||
-          uh.i(23156).field_g &&
+          2 == rn.field_b && (AccountNameAvailabilityValidator.i(23156) == null ||
+          AccountNameAvailabilityValidator.i(23156).field_g &&
           nc.field_T == 0)) {
           b.field_a.b(0, 0, var4 << 1);
         }
@@ -1648,8 +1648,8 @@ final class aa {
             if (var7 != null ||
               var11 != 0) {
               var7.c((byte) -119);
-              if (null != uh.i(param1 + 23154)) {
-                var7.field_y = uh.i(param1 ^ 23158).field_t.a((byte) -113);
+              if (null != AccountNameAvailabilityValidator.i(param1 + 23154)) {
+                var7.field_y = AccountNameAvailabilityValidator.i(param1 ^ 23158).field_t.a((byte) -113);
                 if (var7.field_x == -1) {
                   var7.field_x = var7.field_y;
                 }
@@ -1670,11 +1670,11 @@ final class aa {
                 var8 = 1;
               }
               if (var7.field_d &&
-                nb.field_Fb.field_x != uh.i(23156).field_t.field_o) {
+                nb.field_Fb.field_x != AccountNameAvailabilityValidator.i(23156).field_t.field_o) {
                 var8 = 1;
               }
               if (var8 != 0) {
-                uh.i(23156).field_t.field_o = nb.field_Fb.field_x;
+                AccountNameAvailabilityValidator.i(23156).field_t.field_o = nb.field_Fb.field_x;
                 wf.a(ResourceArchive.field_l[0], param1 + 122);
               }
             }
@@ -1686,11 +1686,11 @@ final class aa {
         if (param0 < 108) {
           this.field_d = 116;
         }
-        if (uh.i(23156) != null &&
+        if (AccountNameAvailabilityValidator.i(23156) != null &&
           param1 != 0) {
-          uh.i(23156).field_l = param1;
+          AccountNameAvailabilityValidator.i(23156).field_l = param1;
           qk.field_h = -1;
-          uh.i(23156).a(uh.i(23156).field_u, -111);
+          AccountNameAvailabilityValidator.i(23156).a(AccountNameAvailabilityValidator.i(23156).field_u, -111);
         }
     }
 
@@ -2303,11 +2303,11 @@ final class aa {
         int var9Lifetime1;
         boolean decompiledFrameRemainder1 = true;
         var15 = Chess.field_G;
-        if (uh.i(23156) != null) {
+        if (AccountNameAvailabilityValidator.i(23156) != null) {
           boolean decompiledFrameRemainder0 = true;
-          uh.i(23156).field_t.f(nb.field_Fb.field_y, -1);
+          AccountNameAvailabilityValidator.i(23156).field_t.f(nb.field_Fb.field_y, -1);
           var2 = null;
-          var3 = uh.i(param0 + 5234).field_t.field_K;
+          var3 = AccountNameAvailabilityValidator.i(param0 + 5234).field_t.field_K;
           if (var3 == null) {
             var4 = -1;
             decompiledFrameRemainder0 = (var15 != 0);
@@ -2319,8 +2319,8 @@ final class aa {
                 decompiledFrameRemainder0 = (var15 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (uh.i(23156).field_B.field_d) {
-                  var4 = BoundedRandomAccessFile.a(uh.i(param0 ^ 7286).field_B.field_l, 0, uh.i(23156).field_B.field_k);
+                if (AccountNameAvailabilityValidator.i(23156).field_B.field_d) {
+                  var4 = BoundedRandomAccessFile.a(AccountNameAvailabilityValidator.i(param0 ^ 7286).field_B.field_l, 0, AccountNameAvailabilityValidator.i(23156).field_B.field_k);
                   if (var15 != 0) {
                     var4 = -1;
                     var4 = 0;
@@ -2373,7 +2373,7 @@ final class aa {
           }
           var5 = nb.field_Fb;
           if (var5 != null) {
-            var5.field_y = uh.i(23156).field_t.a((byte) -114);
+            var5.field_y = AccountNameAvailabilityValidator.i(23156).field_t.a((byte) -114);
             if (var5.field_x == -1) {
               var5.field_x = var5.field_y;
             }
@@ -2381,7 +2381,7 @@ final class aa {
           var6 = ec.c((byte) -63) * 2 + 435;
           var7 = ak.field_m[3] + this.field_e.field_f * ak.field_y[this.field_c];
           wb.a(21, 218, 198, var6 - var7, 9, 1, 170);
-          var8 = uh.i(param0 + 5234).field_t.field_L;
+          var8 = AccountNameAvailabilityValidator.i(param0 + 5234).field_t.field_L;
           if (var8 == null ||
             0 == var8.length) {
             var9 = v.field_j.field_t + v.field_j.field_C;
@@ -2408,7 +2408,7 @@ final class aa {
             decompiledFrameRemainder1 = (var15 != 0);
           }
           if (decompiledFrameRemainder1) {
-            uh.i(param0 ^ 7286).field_t.a(true, r.field_Eb, nb.field_Fb.field_x);
+            AccountNameAvailabilityValidator.i(param0 ^ 7286).field_t.a(true, r.field_Eb, nb.field_Fb.field_x);
             var9Lifetime1 = var8.length;
             var11 = -1 + var9Lifetime1;
             var12 = 256;
@@ -2430,13 +2430,13 @@ final class aa {
                 }
               }
               if (decompiledFrameRemainder3) {
-                if (!uh.i(23156).field_b) {
+                if (!AccountNameAvailabilityValidator.i(23156).field_b) {
                   break;
                 }
                 stackIn_51_0 = param0;
                 stackIn_51_1 = 7286;
               }
-              uh.i(stackIn_51_0 ^ stackIn_51_1).c(param0 - 17921, true);
+              AccountNameAvailabilityValidator.i(stackIn_51_0 ^ stackIn_51_1).c(param0 - 17921, true);
               break;
             }
           }
@@ -2457,21 +2457,21 @@ final class aa {
         qe stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
-        if (uh.i(param0 ^ 23286) == null) {
+        if (AccountNameAvailabilityValidator.i(param0 ^ 23286) == null) {
           wb.b(0, 0, 640, 480, 1, 64);
           return;
         }
         if (param0 != 130) {
           field_a = (String) null;
         }
-        boolean decompiledSharedTail0 = !(uh.i(23156).field_g);
+        boolean decompiledSharedTail0 = !(AccountNameAvailabilityValidator.i(23156).field_g);
         if (!decompiledSharedTail0) {
-          uh.i(23156).field_t.h(-78);
+          AccountNameAvailabilityValidator.i(23156).field_t.h(-78);
           decompiledSharedTail0 = (Chess.field_G != 0);
         }
         if (decompiledSharedTail0) {
-          stackIn_10_0 = uh.i(23156).field_t;
-          stackIn_10_1 = uh.i(23156).b(0);
+          stackIn_10_0 = AccountNameAvailabilityValidator.i(23156).field_t;
+          stackIn_10_1 = AccountNameAvailabilityValidator.i(23156).b(0);
           stackIn_11_2 = (jc.field_f == -1);
           ((qe) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2, qb.field_a, 0, (byte) -104, true);
         }

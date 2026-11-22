@@ -1774,7 +1774,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 124, "waitingfor_fonts");
                 if (null != var2) {
-                  mg.field_k = c.a(0, var2);
+                  AccountNameAvailabilityValidator.field_k = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 96, "waitingfor_soundeffects");
                 if (null != var2) {
@@ -2652,7 +2652,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 119, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  mg.field_l = c.a(param0 + 99, var2);
+                  AccountNameAvailabilityValidator.field_l = c.a(param0 + 99, var2);
                 }
                 var2 = hg.a((byte) 106, "fs_button_accept");
                 if (var2 != null) {

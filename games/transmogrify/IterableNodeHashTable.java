@@ -119,8 +119,8 @@ final class IterableNodeHashTable implements Iterable {
           BufferedSocket.field_l = BufferedSocket.field_l + 1;
           PacketBuffer.field_j = fc.field_g;
           bk.field_a = AccountServiceResult.field_i;
-          tl.field_a = li.field_j;
-          li.field_j = false;
+          tl.field_a = AccountNameAvailabilityValidator.field_j;
+          AccountNameAvailabilityValidator.field_j = false;
           tg.field_d = WordDictionary.field_b;
           ol.field_b = dh.field_w;
           nk.field_c = ga.field_b;

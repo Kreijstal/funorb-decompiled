@@ -172,7 +172,7 @@ final class dn extends ii implements jo, vg {
         }
         oj.field_b = true;
         t.a(param0, 0);
-        kh.field_n = 0;
+        AccountNameAvailabilityValidator.field_n = 0;
     }
 
     final static byte[] extractBytes(Object param0, boolean param1, byte param2) {

@@ -37,7 +37,7 @@ final class ng {
         try {
           if (param1 != -128) {
             var12 = (String) null;
-            ng.a((String) null, 126);
+            ng.pollAccountNameCheck((String) null, 126);
           }
           if (this.field_a != null) {
             var3_int = 14 + (int)((long)param0.length * (long)this.field_e / (long)this.field_g);
@@ -100,7 +100,7 @@ final class ng {
         return param0;
     }
 
-    final static AccountServiceResult a(String param0, int param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         AccountServiceResult stackIn_5_0 = null;

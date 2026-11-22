@@ -316,7 +316,7 @@ final class vj extends ql {
           }
           if (le.field_D == 0) {
             le.field_D = 15000;
-            n.field_o = true;
+            AccountNameAvailabilityValidator.field_o = true;
           }
           this.field_n = -1;
         }

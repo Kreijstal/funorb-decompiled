@@ -239,7 +239,7 @@ final class lc extends lk {
             return stackIn_23_0;
           }
           if (ji.a(var6, 95, var4)) {
-            stackIn_27_0 = ge.field_l;
+            stackIn_27_0 = AccountNameAvailabilityValidator.field_l;
             return stackIn_27_0;
           }
           if (!mb.a(var6, (byte) 118, var4)) {

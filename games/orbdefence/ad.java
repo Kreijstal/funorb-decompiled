@@ -75,7 +75,7 @@ final class ad {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = bc.field_o[var9];
+              var11 = AccountNameAvailabilityValidator.field_o[var9];
               var6[0][var10] = qd.field_c[var11];
               var19[0][4 * var10] = tl.field_d[var11];
               var19[0][1 + 4 * var10] = vl.field_g[var11];
@@ -93,7 +93,7 @@ final class ad {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = bc.field_o[var9Lifetime1 + var5];
+              var11Lifetime1 = AccountNameAvailabilityValidator.field_o[var9Lifetime1 + var5];
               var6[1][var14] = qd.field_c[var11Lifetime1];
               var19[1][var14 * 4] = tl.field_d[var11Lifetime1];
               var19[1][1 + 4 * var14] = vl.field_g[var11Lifetime1];

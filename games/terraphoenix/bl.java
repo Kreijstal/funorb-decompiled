@@ -2468,7 +2468,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 113, "exitresearch");
                 if (var2 != null) {
-                  ia.field_n = ll.a(0, var2);
+                  AccountNameAvailabilityValidator.field_n = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 91, "researchtopic");
                 if (null != var2) {

@@ -63,15 +63,15 @@ final class kf {
             if (!(0 >= ko.field_P) ||
               !(0 >= mp.field_b)) {
               if (null == jl.field_g) {
-                stackIn_122_0 = hk.field_o;
+                stackIn_122_0 = AccountNameAvailabilityValidator.field_o;
                 stackIn_123_1 = (param1) && (!im.field_g);
                 ((UiPanel) (Object) stackIn_122_0).b(stackIn_123_1, 0);
                 stackIn_126_0 = lb.field_c;
                 stackIn_127_1 = (param1) && (!im.field_g);
                 ((UiPanel) (Object) stackIn_126_0).b(stackIn_127_1, 0);
               } else {
-                jl.field_g.c(hk.field_o.field_wb, 0);
-                stackIn_131_0 = hk.field_o;
+                jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+                stackIn_131_0 = AccountNameAvailabilityValidator.field_o;
                 stackIn_132_1 = (param1) && (!im.field_g);
                 ((UiPanel) (Object) stackIn_131_0).b(stackIn_132_1, 0);
                 stackIn_135_0 = lb.field_c;
@@ -95,15 +95,15 @@ final class kf {
               return;
             }
             if (null == jl.field_g) {
-              stackIn_97_0 = hk.field_o;
+              stackIn_97_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_98_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_97_0).b(stackIn_98_1, 0);
               stackIn_101_0 = lb.field_c;
               stackIn_102_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_101_0).b(stackIn_102_1, 0);
             } else {
-              jl.field_g.c(hk.field_o.field_wb, 0);
-              stackIn_106_0 = hk.field_o;
+              jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+              stackIn_106_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_107_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_106_0).b(stackIn_107_1, 0);
               stackIn_110_0 = lb.field_c;
@@ -127,9 +127,9 @@ final class kf {
             if (!(0 >= ko.field_P) ||
               !(0 >= mp.field_b)) {
               if (null != jl.field_g) {
-                jl.field_g.c(hk.field_o.field_wb, 0);
+                jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
               }
-              stackIn_19_0 = hk.field_o;
+              stackIn_19_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_20_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_19_0).b(stackIn_20_1, 0);
               stackIn_23_0 = lb.field_c;
@@ -149,15 +149,15 @@ final class kf {
         }
         if (0 < ko.field_P) {
           if (null == jl.field_g) {
-            stackIn_40_0 = hk.field_o;
+            stackIn_40_0 = AccountNameAvailabilityValidator.field_o;
             stackIn_41_1 = (param1) && (!im.field_g);
             ((UiPanel) (Object) stackIn_40_0).b(stackIn_41_1, 0);
             stackIn_44_0 = lb.field_c;
             stackIn_45_1 = (param1) && (!im.field_g);
             ((UiPanel) (Object) stackIn_44_0).b(stackIn_45_1, 0);
           } else {
-            jl.field_g.c(hk.field_o.field_wb, 0);
-            stackIn_49_0 = hk.field_o;
+            jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+            stackIn_49_0 = AccountNameAvailabilityValidator.field_o;
             stackIn_50_1 = (param1) && (!im.field_g);
             ((UiPanel) (Object) stackIn_49_0).b(stackIn_50_1, 0);
             stackIn_53_0 = lb.field_c;
@@ -167,15 +167,15 @@ final class kf {
         } else {
           if (0 < mp.field_b) {
             if (null == jl.field_g) {
-              stackIn_62_0 = hk.field_o;
+              stackIn_62_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_63_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_62_0).b(stackIn_63_1, 0);
               stackIn_66_0 = lb.field_c;
               stackIn_67_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_66_0).b(stackIn_67_1, 0);
             } else {
-              jl.field_g.c(hk.field_o.field_wb, 0);
-              stackIn_71_0 = hk.field_o;
+              jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+              stackIn_71_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_72_1 = (param1) && (!im.field_g);
               ((UiPanel) (Object) stackIn_71_0).b(stackIn_72_1, 0);
               stackIn_75_0 = lb.field_c;

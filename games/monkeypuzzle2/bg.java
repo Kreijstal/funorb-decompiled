@@ -497,12 +497,12 @@ final class bg extends WidgetContainer implements u, ql, sh {
 
     public final void a(int param0) {
         if (param0 == 200) {
-          ((hh) (this.field_N.a(-114))).f((byte) -82);
+          ((AccountNameAvailabilityValidator) (this.field_N.a(-114))).f((byte) -82);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.a(-96, -126, (String) null, 71, (UiWidget) null, 63, (String) null);
-        ((hh) (this.field_N.a(-114))).f((byte) -82);
+        ((AccountNameAvailabilityValidator) (this.field_N.a(-114))).f((byte) -82);
     }
 
     public final void a(String param0, int param1) {
@@ -540,7 +540,7 @@ final class bg extends WidgetContainer implements u, ql, sh {
         this.field_J.field_m = BufferedSocket.field_h;
         this.field_F.field_m = ri.field_d;
         this.field_O.field_m = a.field_j;
-        this.field_N.a(new hh(this.field_N), true);
+        this.field_N.a(new AccountNameAvailabilityValidator(this.field_N), true);
         this.field_D.a(new uk(this.field_D), true);
         this.field_I.a(new fd(this.field_I, this.field_D), true);
         this.field_H.a(new df(this.field_H, this.field_N, this.field_D), true);

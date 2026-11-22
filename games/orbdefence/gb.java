@@ -268,8 +268,8 @@ final class gb {
             }
             pj.field_o = new String[var4];
             mk.a(li.field_c, 0, pj.field_o, 0, var4);
-            bc.field_t = new String[var3_int - var4 - 1];
-            mk.a(li.field_c, 1 + var4, bc.field_t, 0, var3_int + (-var4 - 1));
+            AccountNameAvailabilityValidator.field_t = new String[var3_int - var4 - 1];
+            mk.a(li.field_c, 1 + var4, AccountNameAvailabilityValidator.field_t, 0, var3_int + (-var4 - 1));
             var4 = -1;
             var3_int = th.a(jd.field_a, t.a(-415993727, new String[]{"<br><%0><br>"}, qk.field_c), li.field_c, vi.field_I, -108);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -292,10 +292,10 @@ final class gb {
               stackIn_33_0 = fd.field_e.length;
             }
             var5 = stackIn_33_0;
-            if (sj.field_u.length > bc.field_t.length) {
+            if (sj.field_u.length > AccountNameAvailabilityValidator.field_t.length) {
               stackIn_36_0 = sj.field_u.length;
             } else {
-              stackIn_36_0 = bc.field_t.length;
+              stackIn_36_0 = AccountNameAvailabilityValidator.field_t.length;
             }
             var6 = stackIn_36_0;
             var7 = var6 + (var5 + 7);
@@ -360,7 +360,7 @@ final class gb {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = bc.field_t;
+            var4_ref_String__Lifetime1 = AccountNameAvailabilityValidator.field_t;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = hg.a(false, var12, 0);

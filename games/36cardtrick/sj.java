@@ -196,7 +196,7 @@ final class sj {
             }
             stackIn_40_0 = false;
             stackIn_41_1 = !(var4 < 0);
-            var7Lifetime1 = hj.a(stackIn_40_0, stackIn_41_1, var6);
+            var7Lifetime1 = AccountNameAvailabilityValidator.a(stackIn_40_0, stackIn_41_1, var6);
             var8Lifetime1 = dl.field_g - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + e.field_i;

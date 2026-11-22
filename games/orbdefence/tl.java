@@ -197,9 +197,9 @@ final class tl {
           !(param0 <= rh.field_c.length)) {
           rh.field_c = new int[param0 * 2];
         }
-        if (bc.field_o == null ||
-          !(bc.field_o.length >= param2 + param0)) {
-          bc.field_o = new int[(param2 + param0) * 2];
+        if (AccountNameAvailabilityValidator.field_o == null ||
+          !(AccountNameAvailabilityValidator.field_o.length >= param2 + param0)) {
+          AccountNameAvailabilityValidator.field_o = new int[(param2 + param0) * 2];
         }
         if (null == ql.field_c ||
           !(ql.field_c.length >= param0)) {

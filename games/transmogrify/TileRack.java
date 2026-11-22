@@ -32,7 +32,7 @@ final class TileRack {
         while (var2 > 1) {
           incrementValue$1 = var2;
           var2--;
-          var3 = li.a(incrementValue$1, o.field_o, false);
+          var3 = AccountNameAvailabilityValidator.a(incrementValue$1, o.field_o, false);
           var4 = this.tiles[var3];
           this.tiles[var3] = this.tiles[var2];
           this.tiles[var2] = var4;

@@ -92,7 +92,7 @@ final class ea implements WidgetActionListener {
 
     final static void a(java.math.BigInteger param0, PacketBuffer param1, int param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          ia.a(param2, param4, (byte) -75, param3, param0, param1.position, param1.payload);
+          AccountNameAvailabilityValidator.a(param2, param4, (byte) -75, param3, param0, param1.position, param1.payload);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

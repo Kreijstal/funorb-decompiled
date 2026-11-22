@@ -291,7 +291,7 @@ public final class Confined extends i {
           gg.clearStaticReferences(116);
           pn.a(param0 - 274);
           sd.clearStaticReferences(-15138);
-          qg.clearStaticReferences(-119);
+          AccountNameAvailabilityValidator.clearStaticReferences(-119);
           gl.clearStaticReferences((byte) -11);
           bk.clearStaticReferences(62);
           qc.clearStaticReferences(param0 - 193);

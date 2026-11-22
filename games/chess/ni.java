@@ -29,7 +29,7 @@ final class ni {
         int var9Lifetime1;
         var10 = Chess.field_G;
         try {
-          var7_int = uh.a(false, param1);
+          var7_int = AccountNameAvailabilityValidator.a(false, param1);
           if (null == ae.field_j) {
             ae.field_j = new java.security.SecureRandom();
           }

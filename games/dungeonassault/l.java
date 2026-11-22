@@ -233,10 +233,10 @@ abstract class l {
         if (param0 != -1) {
           l.a(116);
         }
-        if (kh.field_n == 10 ||
+        if (AccountNameAvailabilityValidator.field_n == 10 ||
           !dh.a(false)) {
           tk.a((byte) -86);
-          kh.field_n = 11;
+          AccountNameAvailabilityValidator.field_n = 11;
         }
         u.field_O = true;
     }

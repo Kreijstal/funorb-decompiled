@@ -91,7 +91,7 @@ final class bi {
           }
           stackIn_6_0 = param3 ^ -10;
           stackIn_7_1 = !(wf.field_q >= 13);
-          wl.field_Q = ia.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
+          wl.field_Q = AccountNameAvailabilityValidator.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

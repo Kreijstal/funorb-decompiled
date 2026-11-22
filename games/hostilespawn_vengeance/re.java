@@ -2056,7 +2056,7 @@ final class re {
             hh.field_d = 0;
             this.field_j = 1;
             vj.field_s = 0;
-            n.field_s = 0;
+            AccountNameAvailabilityValidator.field_s = 0;
             kh.field_ab.a(0);
             u.field_e = u.field_e - ei.field_l;
             ja.field_d = ja.field_d + 1;

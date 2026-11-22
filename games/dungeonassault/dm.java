@@ -12,7 +12,7 @@ final class dm {
 
     final static boolean c(int param0) {
         int var1 = -28 % ((param0 + 5) / 62);
-        if (kh.field_n < 10) {
+        if (AccountNameAvailabilityValidator.field_n < 10) {
           return false;
         }
         if (!tl.field_l) {

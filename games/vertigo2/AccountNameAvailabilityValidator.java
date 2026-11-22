@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends da {
+final class AccountNameAvailabilityValidator extends da {
     static int field_m;
-    private String field_l;
+    private String checkedName;
     static int[] field_q;
-    private boolean field_p;
+    private boolean nameAvailable;
     static UiPanel field_o;
     static String field_r;
     static int field_n;
@@ -32,18 +32,18 @@ final class hk extends da {
             var4 = (String) null;
             this.a(86, (String) null);
           }
-          if (!param1.equals(this.field_l)) {
-            var3 = qe.a(param1, (byte) 54);
+          if (!param1.equals(this.checkedName)) {
+            var3 = qe.pollAccountNameCheck(param1, (byte) 54);
             if (var3 != null &&
               var3.message == null) {
-              this.field_p = var3.success;
-              this.field_l = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_10_0 = dj.field_c;
               return stackIn_10_0;
             }
           }
-          if (!this.field_p) {
+          if (!this.nameAvailable) {
             stackIn_15_0 = ir.field_a;
           } else {
             stackIn_15_0 = qm.field_G;
@@ -101,8 +101,8 @@ final class hk extends da {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          if (!param1.equals(this.field_l)) {
-            var4 = qe.a(param1, (byte) 61);
+          if (!param1.equals(this.checkedName)) {
+            var4 = qe.pollAccountNameCheck(param1, (byte) 61);
             if (var4 == null) {
               return null;
             }
@@ -110,10 +110,10 @@ final class hk extends da {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_p = var4.success;
-            this.field_l = param1;
+            this.nameAvailable = var4.success;
+            this.checkedName = param1;
           }
-          if (this.field_p) {
+          if (this.nameAvailable) {
             stackIn_17_0 = sf.field_c;
             return stackIn_17_0;
           }
@@ -134,16 +134,16 @@ final class hk extends da {
     }
 
     final void h(int param0) {
-        this.field_l = null;
+        this.checkedName = null;
         if (param0 != -1) {
           java.awt.Component var3 = (java.awt.Component) null;
-          hk.a(-74, (java.awt.Component) null);
+          AccountNameAvailabilityValidator.a(-74, (java.awt.Component) null);
         }
     }
 
-    hk(kp param0) {
+    AccountNameAvailabilityValidator(kp param0) {
         super(param0);
-        this.field_p = false;
+        this.nameAvailable = false;
     }
 
     final static int a(boolean param0) {
@@ -158,7 +158,7 @@ final class hk extends da {
         field_o = null;
         field_r = null;
         if (param0 >= -61) {
-          hk.a(true);
+          AccountNameAvailabilityValidator.a(true);
           field_q = null;
           return;
         }
@@ -168,7 +168,7 @@ final class hk extends da {
     final static void a(int param0, java.awt.Component param1) {
         try {
           if (param0 != 3) {
-            hk.g(98);
+            AccountNameAvailabilityValidator.g(98);
           }
           param1.addMouseListener(as.field_b);
           param1.addMouseMotionListener(as.field_b);

@@ -390,7 +390,7 @@ public final class Torquing extends tg {
           v.a((byte) 123);
           pf.clearStaticReferences(106);
           mc.a(5);
-          il.c((byte) -124);
+          AccountNameAvailabilityValidator.c((byte) -124);
           ij.f(-99);
           tn.e(0);
           ad.c((byte) 17);
@@ -684,10 +684,10 @@ public final class Torquing extends tg {
                             IsaacPacketBuffer.a(23.0f, param1 ^ 41, c.a(17, fn.field_a, "", WidgetContainer.field_A, bp.field_c));
                             return false;
                           }
-                          IsaacPacketBuffer.a(20.0f, param1 + 110, il.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
+                          IsaacPacketBuffer.a(20.0f, param1 + 110, AccountNameAvailabilityValidator.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
                           return false;
                         }
-                        IsaacPacketBuffer.a(20.0f, 5, il.a(pg.field_a, vp.field_D, mb.field_c, (byte) 113));
+                        IsaacPacketBuffer.a(20.0f, 5, AccountNameAvailabilityValidator.a(pg.field_a, vp.field_D, mb.field_c, (byte) 113));
                         return false;
                       }
                       IsaacPacketBuffer.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, TooltipPanel.field_l));

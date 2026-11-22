@@ -45,7 +45,7 @@ final class rf {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = uh.field_r[ce.a((int) var21[var6], 255)];
+              var10[var6] = AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var6], 255)];
             }
             var1[var2] = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var22);
           } else {
@@ -57,7 +57,7 @@ final class rf {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = s.a(ce.a((int) var15[var7], 255) << 24, uh.field_r[ce.a((int) var21[var7], 255)]);
+              var6_ref_int__[var7] = s.a(ce.a((int) var15[var7], 255) << 24, AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var7], 255)]);
             }
             var1[var2] = (km) ((Object) new wi(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
           }

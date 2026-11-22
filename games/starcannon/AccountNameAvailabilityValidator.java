@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends qf {
+final class AccountNameAvailabilityValidator extends qf {
     static Sprite[] field_j;
     static String field_l;
     static ue field_p;
     static int field_k;
-    private String field_n;
+    private String checkedName;
     static int field_m;
-    private boolean field_o;
+    private boolean nameAvailable;
 
     public static void g(int param0) {
         field_l = null;
@@ -20,9 +20,9 @@ final class nd extends qf {
         field_m = 113;
     }
 
-    nd(fe param0) {
+    AccountNameAvailabilityValidator(fe param0) {
         super(param0);
-        this.field_o = false;
+        this.nameAvailable = false;
     }
 
     final p a(String param0, int param1) {
@@ -43,20 +43,20 @@ final class nd extends qf {
             return stackIn_2_0;
           }
           if (param1 != -26188) {
-            this.field_n = (String) null;
+            this.checkedName = (String) null;
           }
-          if (!param0.equals(this.field_n)) {
-            var3 = tg.a(param1 + 26118, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = tg.pollAccountNameCheck(param1 + 26118, param0);
             if (var3 != null &&
               null == var3.message) {
-              this.field_o = var3.success;
-              this.field_n = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               stackIn_11_0 = cd.field_a;
               return stackIn_11_0;
             }
           }
-          if (this.field_o) {
+          if (this.nameAvailable) {
             stackIn_16_0 = bf.field_x;
           } else {
             stackIn_16_0 = BufferedSocket.field_n;
@@ -104,17 +104,17 @@ final class nd extends qf {
           gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
           return;
         }
-        nd.a(false, -9, -79);
+        AccountNameAvailabilityValidator.a(false, -9, -79);
         gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
     }
 
     final void f(int param0) {
         if (param0 != -18507) {
           field_p = (ue) null;
-          this.field_n = null;
+          this.checkedName = null;
           return;
         }
-        this.field_n = null;
+        this.checkedName = null;
     }
 
     final String a(String param0, boolean param1) {
@@ -141,18 +141,18 @@ final class nd extends qf {
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_n)) {
-            var4 = tg.a(-58, param0);
+          if (!param0.equals(this.checkedName)) {
+            var4 = tg.pollAccountNameCheck(-58, param0);
             if (var4 == null) {
               return null;
             }
             if (null != var4.message) {
               return null;
             }
-            this.field_n = param0;
-            this.field_o = var4.success;
+            this.checkedName = param0;
+            this.nameAvailable = var4.success;
           }
-          if (this.field_o) {
+          if (this.nameAvailable) {
             stackIn_17_0 = ll.field_a;
             return stackIn_17_0;
           }

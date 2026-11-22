@@ -870,7 +870,7 @@ final class pc {
                 }
                 case 82: {
                     try {
-                        stackIn_83_0 = n.field_o ? 1 : 0;
+                        stackIn_83_0 = AccountNameAvailabilityValidator.field_o ? 1 : 0;
                         statePc = 83;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_82) {
@@ -1826,7 +1826,7 @@ final class pc {
                 case 220: {
                     try {
                         var15 = 0;
-                        if (n.field_o) {
+                        if (AccountNameAvailabilityValidator.field_o) {
                             /* Inlined CFG state: 223. */
                             {
                                 var21 = 0;

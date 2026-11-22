@@ -80,7 +80,7 @@ final class da extends ArchiveProvider {
           vm.field_i[4] = 16711935;
           kg.field_P[3] = 16736511;
           kg.field_P[0] = 16764000;
-          uh.field_l = 8421504;
+          AccountNameAvailabilityValidator.field_l = 8421504;
           var12 = new km(4, 4);
           var13 = var12.field_x;
           var14 = var12.field_x;
@@ -91,12 +91,12 @@ final class da extends ArchiveProvider {
           var14[5] = 7368816;
           var16 = new km[9];
           var16[4] = var12;
-          uh.field_m = new ci(0L, param3);
+          AccountNameAvailabilityValidator.field_m = new ci(0L, param3);
           ji.field_N = new ci(0L, param6);
           if (param9) {
             da.a((String) null, (String) null, (ResourceArchive) null, -40);
           }
-          uh.field_m.a((byte) 125, ji.field_N);
+          AccountNameAvailabilityValidator.field_m.a((byte) 125, ji.field_N);
           var17 = new ci(0L, (ci) null);
           var17.field_I = new jc();
           ac.field_j = new nb(0L, var17, param1, param4);
@@ -149,7 +149,7 @@ final class da extends ArchiveProvider {
                 g.field_d[var18].a((byte) 123, ig.field_i[var18]);
                 g.field_d[var18].a((byte) 127, mf.field_l[var18]);
                 g.field_d[var18].h(0);
-                uh.field_m.a((byte) 127, g.field_d[var18]);
+                AccountNameAvailabilityValidator.field_m.a((byte) 127, g.field_d[var18]);
                 qm.field_d = qm.field_d + 1;
               }
               var18++;
@@ -160,7 +160,7 @@ final class da extends ArchiveProvider {
           if (decompiledNaturalLoopExit0) {
             bj.field_jb = new ci(0L, param7);
             bj.field_jb.field_db = ka.field_b;
-            uh.field_m.a((byte) 127, bj.field_jb);
+            AccountNameAvailabilityValidator.field_m.a((byte) 127, bj.field_jb);
             stackIn_31_0 = ub.a(21549) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&

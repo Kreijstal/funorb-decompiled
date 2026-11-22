@@ -38,7 +38,7 @@ final class ed extends PcmStream {
         try {
           int var11_int = -45 / ((param5 - 9) / 47);
           ue.field_e = param0;
-          nd.field_k = param2;
+          AccountNameAvailabilityValidator.field_k = param2;
           w.field_v = param6;
           cb.field_f = param9;
           gi.field_e = param7;

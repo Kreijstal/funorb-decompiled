@@ -125,7 +125,7 @@ final class jn extends fb {
           var6 = param0 - (-this.field_r - (this.field_C >> 1));
           var8 = this.field_O.a(21314);
           if (in.field_g == var8) {
-            var16 = uh.field_p[0];
+            var16 = AccountNameAvailabilityValidator.field_p[0];
             var9 = var16.field_v << 1;
             var10 = var16.field_u << 1;
             if (null == ca.field_a) {
@@ -152,18 +152,18 @@ final class jn extends fb {
           }
           if (var8 != MouseWheelInput.field_d) {
             if (qk.field_b == var8) {
-              var18 = uh.field_p[2];
+              var18 = AccountNameAvailabilityValidator.field_p[2];
               var18.d(var5 - (var18.field_w >> 1), -(var18.field_t >> 1) + var6, 256);
               return;
             }
             if (oa.field_a != var8) {
               return;
             }
-            var17 = uh.field_p[1];
+            var17 = AccountNameAvailabilityValidator.field_p[1];
             var17.d(-(var17.field_w >> 1) + var5, var6 - (var17.field_t >> 1), 256);
             return;
           }
-          var15 = uh.field_p[0];
+          var15 = AccountNameAvailabilityValidator.field_p[0];
           var9Lifetime3 = var15.field_v << 1;
           var10Lifetime3 = var15.field_u << 1;
           if (null != ca.field_a &&
@@ -189,7 +189,7 @@ final class jn extends fb {
         var6Lifetime1 = param0 - (-this.field_r - (this.field_C >> 1));
         var8Lifetime1 = this.field_O.a(21314);
         if (in.field_g == var8Lifetime1) {
-          var20 = uh.field_p[0];
+          var20 = AccountNameAvailabilityValidator.field_p[0];
           var9Lifetime1 = var20.field_v << 1;
           var10Lifetime1 = var20.field_u << 1;
           if (null == ca.field_a) {
@@ -216,18 +216,18 @@ final class jn extends fb {
         }
         if (var8Lifetime1 != MouseWheelInput.field_d) {
           if (qk.field_b == var8Lifetime1) {
-            var22 = uh.field_p[2];
+            var22 = AccountNameAvailabilityValidator.field_p[2];
             var22.d(var5Lifetime1 - (var22.field_w >> 1), -(var22.field_t >> 1) + var6Lifetime1, 256);
             return;
           }
           if (oa.field_a != var8Lifetime1) {
             return;
           }
-          var21 = uh.field_p[1];
+          var21 = AccountNameAvailabilityValidator.field_p[1];
           var21.d(-(var21.field_w >> 1) + var5Lifetime1, var6Lifetime1 - (var21.field_t >> 1), 256);
           return;
         }
-        var19 = uh.field_p[0];
+        var19 = AccountNameAvailabilityValidator.field_p[0];
         var9Lifetime2 = var19.field_v << 1;
         var10Lifetime2 = var19.field_u << 1;
         if (null == ca.field_a) {

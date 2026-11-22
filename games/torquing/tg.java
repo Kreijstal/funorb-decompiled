@@ -23,7 +23,7 @@ abstract class tg extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         ImageProducerRasterBuffer.field_i = this.field_k;
-        il.a((byte) 52, ImageProducerRasterBuffer.field_i);
+        AccountNameAvailabilityValidator.a((byte) 52, ImageProducerRasterBuffer.field_i);
         in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, nk.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
         mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, nk.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
@@ -270,7 +270,7 @@ abstract class tg extends GameApplet {
         if (b.field_x == 11) {
           if (null != rd.field_z && (!rd.field_z.a(-12749) ||
             !rd.field_z.c(-19375))) {
-            IsaacPacketBuffer.a(0.0f, -84, il.a(Torquing.field_w, rd.field_z, DelegatingCanvas.field_b, (byte) 78));
+            IsaacPacketBuffer.a(0.0f, -84, AccountNameAvailabilityValidator.a(Torquing.field_w, rd.field_z, DelegatingCanvas.field_b, (byte) 78));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -359,7 +359,7 @@ abstract class tg extends GameApplet {
           }
           if (1 != var2) {
             if (2 == var2) {
-              il.f(-30593);
+              AccountNameAvailabilityValidator.f(-30593);
             } else {
               if (3 == var2) {
                 vd.a(27912);

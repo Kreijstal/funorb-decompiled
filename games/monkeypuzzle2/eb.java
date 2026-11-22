@@ -229,7 +229,7 @@ final class eb extends WidgetContainer implements sh, ql {
         this.field_D = new ButtonWidget(wi.field_a, (of) null);
         this.field_z = new ButtonWidget(af.field_b, (of) null);
         this.field_G.field_m = oa.field_E;
-        this.field_G.a(new hh(this.field_G), true);
+        this.field_G.a(new AccountNameAvailabilityValidator(this.field_G), true);
         this.field_D.field_w = false;
         this.field_D.field_h = (ml) ((Object) new hd());
         this.field_z.field_h = (ml) ((Object) new lc());
@@ -861,7 +861,7 @@ final class eb extends WidgetContainer implements sh, ql {
     }
 
     public final void a(int param0) {
-        ((hh) (this.field_G.a(-125))).f((byte) -88);
+        ((AccountNameAvailabilityValidator) (this.field_G.a(-125))).f((byte) -88);
         if (param0 != 200) {
           eb.m(63);
         }

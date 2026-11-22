@@ -71,7 +71,7 @@ abstract class ue {
 
     final static void b(byte param0) {
         int var1 = -92 / ((param0 + 58) / 41);
-        no.e((byte) -23);
+        AccountNameAvailabilityValidator.e((byte) -23);
         if (null != jd.field_D) {
           fq.a(-65, jd.field_D);
         }

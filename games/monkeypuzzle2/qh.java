@@ -278,7 +278,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (wf.a(114) > 30000L) {
                 sl.field_n = kj.field_E;
               } else {
-                sl.field_n = hh.field_p;
+                sl.field_n = AccountNameAvailabilityValidator.field_p;
               }
               DequeCursor.field_e = false;
               stackIn_65_0 = 249;

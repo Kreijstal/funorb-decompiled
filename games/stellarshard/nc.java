@@ -157,7 +157,7 @@ final class nc extends UiWidget {
           if (param1 <= 84) {
             return;
           }
-          ge.a((java.awt.Component) ((Object) param0), (byte) -41);
+          AccountNameAvailabilityValidator.a((java.awt.Component) ((Object) param0), (byte) -41);
           if (null != og.field_c) {
             og.field_c.attach((byte) -93, (java.awt.Component) ((Object) param0));
           }

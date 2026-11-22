@@ -898,8 +898,8 @@ class UiWidget extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        if (ge.field_n != null &&
-          ge.field_n.length >= param1) {
+        if (AccountNameAvailabilityValidator.field_n != null &&
+          AccountNameAvailabilityValidator.field_n.length >= param1) {
           if (null == se.field_B) {
             se.field_B = new int[2 * param1];
             if (null == qf.field_g ||
@@ -1062,7 +1062,7 @@ class UiWidget extends IntrusiveNode {
           oe.field_c = -2147483648;
           return;
         }
-        ge.field_n = new int[param1 * 2];
+        AccountNameAvailabilityValidator.field_n = new int[param1 * 2];
         if (null == se.field_B ||
           !(param1 <= se.field_B.length)) {
           se.field_B = new int[2 * param1];

@@ -47,7 +47,7 @@ final class kj extends IntrusiveNode {
         fb.field_a = fb.field_a + 1;
     }
 
-    final static AccountServiceResult a(String param0, int param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         Object stackIn_2_0 = null;
@@ -64,7 +64,7 @@ final class kj extends IntrusiveNode {
           }
           if (param1 != 63) {
             var3 = (String) null;
-            kj.a((String) null, 50);
+            kj.pollAccountNameCheck((String) null, 50);
           }
           if (rk.field_X == cj.field_e &&
             param0.equals(vh.field_p)) {

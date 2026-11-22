@@ -287,7 +287,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var2 = new bd(1, 1);
           ia.field_l[99] = vf.field_H;
           ia.field_l[118] = tb.field_L;
-          ia.field_l[145] = n.field_q;
+          ia.field_l[145] = AccountNameAvailabilityValidator.field_q;
           ia.field_l[141] = ln.field_g;
           ia.field_l[164] = pi.field_c;
           ia.field_l[108] = cn.field_h;
@@ -1350,7 +1350,7 @@ public final class HostileSpawn extends NetworkGameClient {
           jf.clearStaticReferences((byte) -99);
           gm.a(0);
           pm.clearStaticReferences((byte) -12);
-          n.d((byte) -69);
+          AccountNameAvailabilityValidator.d((byte) -69);
           db.clearStaticReferences((byte) -87);
           ka.f(117);
           hd.f(-1);
@@ -2541,7 +2541,7 @@ public final class HostileSpawn extends NetworkGameClient {
           li.field_y = fg.a("", "Scenery_93", vd.field_C, false);
           kc.field_d = fg.a("", "Scenery_94", vd.field_C, false);
           sj.field_b = fg.a("", "Scenery_95", vd.field_C, false);
-          n.field_q = fg.a("", "Scenery_96", vd.field_C, false);
+          AccountNameAvailabilityValidator.field_q = fg.a("", "Scenery_96", vd.field_C, false);
           ml.field_a = fg.a("", "Scenery_97", vd.field_C, false);
           p.field_d = MouseInput.a("", -33, "Scenery_98", vd.field_C);
           wk.field_a = fg.a("", "Scenery_99", vd.field_C, false);

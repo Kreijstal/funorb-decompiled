@@ -268,7 +268,7 @@ final class ol extends ma implements nn, mj, wl {
     }
 
     public final void a(int param0) {
-        ((uh) (this.field_T.a(-108))).h(-121);
+        ((AccountNameAvailabilityValidator) (this.field_T.a(-108))).h(-121);
         if (param0 != 120) {
           ol.a((byte) 99, true);
         }
@@ -465,7 +465,7 @@ final class ol extends ma implements nn, mj, wl {
         this.field_Z.field_j = wk.field_a;
         this.field_W.field_j = fm.field_P;
         this.field_P.field_j = pa.field_k;
-        this.field_T.a(-96, new uh(this.field_T));
+        this.field_T.a(-96, new AccountNameAvailabilityValidator(this.field_T));
         this.field_Q.a(-123, new tj(this.field_Q));
         this.field_L.a(-66, new db(this.field_L, this.field_Q));
         this.field_U.a(-115, new je(this.field_U, this.field_T, this.field_Q));
@@ -488,7 +488,7 @@ final class ol extends ma implements nn, mj, wl {
         var3 = var3 + this.a(true, wh.field_e, var3, 170, this.field_Q);
         var3 = var3 + (this.a(170, qj.field_g, (byte) -71, 20, this.field_L, "", var3) + 5);
         var3 = var3 + this.a(true, di.field_Qb, var3, 170, this.field_U);
-        var3 = var3 + (this.a(fn.field_e, 170, uh.field_q, this.field_Z, 170, var3) + 5);
+        var3 = var3 + (this.a(fn.field_e, 170, AccountNameAvailabilityValidator.field_q, this.field_Z, 170, var3) + 5);
         var3 = var3 + (5 + this.a(tk.field_c, 170, ng.field_d, this.field_T, 170, var3));
         var3 = var3 + this.a(this.field_W, 170, 115, fc.field_a, var3);
         kg var4 = new kg(46, var3, this.field_y - 90, 25, this.field_P, true, this.field_y - 120, 5, rc.field_a, 11579568, li.field_a);

@@ -74,12 +74,12 @@ final class ki extends WidgetContainer implements fp, ng, ba {
 
     public final void a(byte param0) {
         if (param0 > 89) {
-          ((il) (this.field_E.a(-10116))).e(-40);
+          ((AccountNameAvailabilityValidator) (this.field_E.a(-10116))).e(-40);
           return;
         }
         UiWidget var3 = (UiWidget) null;
         this.a(119, (UiWidget) null, '\f', -86);
-        ((il) (this.field_E.a(-10116))).e(-40);
+        ((AccountNameAvailabilityValidator) (this.field_E.a(-10116))).e(-40);
     }
 
     private final String j(int param0) {
@@ -220,7 +220,7 @@ final class ki extends WidgetContainer implements fp, ng, ba {
         this.field_L.field_n = ud.field_j;
         this.field_I.field_n = IsaacPacketBuffer.field_p;
         this.field_F.field_n = l.field_b;
-        this.field_E.a(new il(this.field_E), 112);
+        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), 112);
         this.field_K.a(new tn(this.field_K), 99);
         this.field_G.a(new ad(this.field_G, this.field_K), 110);
         this.field_B.a(new ij(this.field_B, this.field_E, this.field_K), 126);

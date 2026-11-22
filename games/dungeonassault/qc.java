@@ -953,7 +953,7 @@ final class qc extends qe {
           }
           return;
         }
-        if (!kh.field_s ||
+        if (!AccountNameAvailabilityValidator.field_s ||
           !param0) {
           while (ha.b((byte) 47)) {
             if (mm.field_t != 13) {

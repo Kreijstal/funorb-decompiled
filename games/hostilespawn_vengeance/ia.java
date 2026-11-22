@@ -41,7 +41,7 @@ final class ia {
         wa.field_p = this.field_j;
         vj.field_s = 0;
         uf.field_h = this.field_f;
-        n.field_s = 0;
+        AccountNameAvailabilityValidator.field_s = 0;
         eh.field_g = ba.a((byte) 113);
         w.field_r = 0;
     }

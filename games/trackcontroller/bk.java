@@ -136,7 +136,7 @@ final class bk extends td implements a, ButtonListener {
         this.field_F = new ButtonWidget(hb.field_a, (tg) null);
         this.field_H = new ButtonWidget(ta.field_a, (tg) null);
         this.field_K.field_n = ak.field_c;
-        this.field_K.a(1, new af(this.field_K));
+        this.field_K.a(1, new AccountNameAvailabilityValidator(this.field_K));
         this.field_F.field_B = false;
         this.field_F.field_y = (t) ((Object) new dc());
         this.field_H.field_y = (t) ((Object) new ne());
@@ -253,7 +253,7 @@ final class bk extends td implements a, ButtonListener {
     }
 
     public final void a(byte param0) {
-        ((af) (this.field_K.a((byte) -97))).a(false);
+        ((AccountNameAvailabilityValidator) (this.field_K.a((byte) -97))).a(false);
         if (param0 <= 117) {
           UiWidget var3 = (UiWidget) null;
           this.a((byte) -3, 'o', (UiWidget) null, 53);

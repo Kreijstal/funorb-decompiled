@@ -81,7 +81,7 @@ final class bg extends qe {
         pk var6;
         var4 = DungeonAssault.field_K;
         super.c(param0);
-        if (kh.field_s) {
+        if (AccountNameAvailabilityValidator.field_s) {
           return;
         }
         if (!param0) {

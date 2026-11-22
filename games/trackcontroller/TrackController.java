@@ -515,7 +515,7 @@ public final class TrackController extends GameShell {
         ei.e(73);
         qi.clearStaticReferences(param0 ^ param0);
         va.c(20300);
-        af.d((byte) -127);
+        AccountNameAvailabilityValidator.d((byte) -127);
         ui.h(256);
         l.g(param0 ^ 105);
         hd.d((byte) 69);
@@ -594,7 +594,7 @@ public final class TrackController extends GameShell {
                       if (null != AccountCreationResultPanel.field_rb) {
                         oj.a(-84);
                       }
-                      af.a(CachedArchiveSource.b((byte) 77), (byte) -9);
+                      AccountNameAvailabilityValidator.a(CachedArchiveSource.b((byte) 77), (byte) -9);
                     }
                   }
                 }

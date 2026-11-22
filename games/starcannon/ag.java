@@ -40,7 +40,7 @@ abstract class ag extends GameApplet {
             fh.a(5, 8100);
           }
           if (el.field_D[5]) {
-            nd.b(6, (byte) -66);
+            AccountNameAvailabilityValidator.b(6, (byte) -66);
           }
           if (el.field_D[6]) {
             kh.a(param0 ^ -1101, 7);

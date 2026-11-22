@@ -177,7 +177,7 @@ final class aj extends DualLinkNode {
           kc.field_f = lk.field_J;
           m.field_a = m.field_a + 1;
           ag.field_f = gd.field_a;
-          kc.field_b = vf.field_p;
+          kc.field_b = AccountNameAvailabilityValidator.field_p;
           pl.field_c = ag.field_a;
           ag.field_a = false;
           jk.field_r = vk.field_O;

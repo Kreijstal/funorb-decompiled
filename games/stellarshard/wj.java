@@ -154,10 +154,10 @@ final class wj extends fb {
               }
               if (decompiledFrameRemainder0) {
                 ue.field_b = -1;
-                GzipDecompressor.field_d = ge.field_m;
+                GzipDecompressor.field_d = AccountNameAvailabilityValidator.field_m;
               }
             }
-            if (GzipDecompressor.field_d == ge.field_m &&
+            if (GzipDecompressor.field_d == AccountNameAvailabilityValidator.field_m &&
               cd.e((byte) 125)) {
               we.field_a = ae.field_N.readLong(0);
               ph.field_D = ae.field_N.readUnsignedByte(4);

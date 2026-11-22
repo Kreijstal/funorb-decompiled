@@ -1462,7 +1462,7 @@ final class GameScreen {
                                                         if (var6 == 16) {
                                                           if (!(!this.field_e.b(false))) {
                                                             si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                                                            af.a(CachedArchiveSource.b((byte) 77), (byte) -9);
+                                                            AccountNameAvailabilityValidator.a(CachedArchiveSource.b((byte) 77), (byte) -9);
                                                           }
                                                           decompiledFrameRemainder0 = false;
                                                         }

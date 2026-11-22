@@ -868,7 +868,7 @@ final class go extends qe {
         var21 = null;
         var15 = DungeonAssault.field_K;
         this.field_s = -1;
-        if (kh.d(true)) {
+        if (AccountNameAvailabilityValidator.d(true)) {
           var16 = (IntrusiveDeque) null;
           eg.a((IntrusiveDeque) null, true);
           return;
@@ -971,13 +971,13 @@ final class go extends qe {
             if (!this.field_Y.field_p.a(this.field_s, (byte) 105) &&
               this.field_s != 24) {
               var20 = gh.field_i[1];
-              kh.field_u = (en) ((Object) new qf(var20.field_z.toUpperCase(), var20.field_t, var20.field_z));
+              AccountNameAvailabilityValidator.field_u = (en) ((Object) new qf(var20.field_z.toUpperCase(), var20.field_t, var20.field_z));
             } else {
-              kh.field_u = (en) ((Object) new bd(this.field_Y, var19));
+              AccountNameAvailabilityValidator.field_u = (en) ((Object) new bd(this.field_Y, var19));
             }
             AccountCreationResultPanel.field_Pb = var4_ref_ai;
           }
-          uj.a(kh.field_u, 95);
+          uj.a(AccountNameAvailabilityValidator.field_u, 95);
         }
         if (jg.a(false, 10, 112, 112, 57) &&
           this.field_Y.field_u != null) {
@@ -1067,19 +1067,19 @@ final class go extends qe {
               if (!stackIn_130_0 &&
                 24 != var4Lifetime2) {
                 var9 = gh.field_i[1];
-                kh.field_u = (en) ((Object) new qf(var9.field_z.toUpperCase(), var9.field_t, var9.field_z));
+                AccountNameAvailabilityValidator.field_u = (en) ((Object) new qf(var9.field_z.toUpperCase(), var9.field_t, var9.field_z));
                 AccountCreationResultPanel.field_Pb = var21_ref;
-                var7 = kh.field_u;
+                var7 = AccountNameAvailabilityValidator.field_u;
                 uj.a((en) (var7), 95);
                 return;
               }
-              kh.field_u = (en) ((Object) new bd(this.field_Y, var21_ref));
+              AccountNameAvailabilityValidator.field_u = (en) ((Object) new bd(this.field_Y, var21_ref));
               AccountCreationResultPanel.field_Pb = var21_ref;
-              var7 = kh.field_u;
+              var7 = AccountNameAvailabilityValidator.field_u;
               uj.a((en) (var7), 95);
               return;
             }
-            var7 = kh.field_u;
+            var7 = AccountNameAvailabilityValidator.field_u;
           }
           uj.a((en) (var7), 95);
         }
@@ -1672,7 +1672,7 @@ final class go extends qe {
         ln.a(this.field_L, -28711);
         AccountCreationResultPanel.field_Pb = null;
         this.field_R = null;
-        kh.field_u = null;
+        AccountNameAvailabilityValidator.field_u = null;
         System.gc();
     }
 
@@ -2345,9 +2345,9 @@ final class go extends qe {
             this.field_G == -1) {
             if ((((Raider) (var2)).field_o & 4) != 0 &&
               ((Raider) (var2)).field_g > 0) {
-              kh.field_r.h(hj.field_S - 16, eh.field_h - 16);
+              AccountNameAvailabilityValidator.field_r.h(hj.field_S - 16, eh.field_h - 16);
             } else {
-              kh.field_r.e(-16 + hj.field_S, eh.field_h - 16, 4210752);
+              AccountNameAvailabilityValidator.field_r.e(-16 + hj.field_S, eh.field_h - 16, 4210752);
             }
             return true;
           }

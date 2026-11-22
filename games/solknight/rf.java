@@ -199,7 +199,7 @@ final class rf extends WidgetContainer implements re, ka, ge {
         this.field_K.field_z = wi.field_k;
         this.field_S.field_z = ImageProducerRasterBuffer.field_i;
         this.field_L.field_z = wi.field_h;
-        this.field_P.a(new df(this.field_P), false);
+        this.field_P.a(new AccountNameAvailabilityValidator(this.field_P), false);
         this.field_I.a(new dc(this.field_I), false);
         this.field_M.a(new qa(this.field_M, this.field_I), false);
         this.field_O.a(new uk(this.field_O, this.field_P, this.field_I), false);
@@ -252,7 +252,7 @@ final class rf extends WidgetContainer implements re, ka, ge {
     }
 
     public final void a(byte param0) {
-        ((df) (this.field_P.a(param0 + 95))).a(true);
+        ((AccountNameAvailabilityValidator) (this.field_P.a(param0 + 95))).a(true);
         if (param0 != 22) {
           field_H = (String[]) null;
         }

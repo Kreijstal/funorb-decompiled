@@ -221,7 +221,7 @@ final class si extends ic {
           if (!param0) {
             si.a(-13, (int[][]) null, 101, (int[][][]) null, -87, 90);
           }
-          i.field_m = param3;
+          AccountNameAvailabilityValidator.field_m = param3;
           mg.field_d = param2;
           rf.m(62);
         } catch (RuntimeException runtimeException) {

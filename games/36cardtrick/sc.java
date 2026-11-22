@@ -243,7 +243,7 @@ final class sc {
           for (var4Lifetime1 = 0; me.field_a.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_90_0 = false;
             stackIn_91_1 = !(wd.field_d[var4Lifetime1] < 0);
-            var5Lifetime1 = hj.a(stackIn_90_0, stackIn_91_1, me.field_a[var4Lifetime1]);
+            var5Lifetime1 = AccountNameAvailabilityValidator.a(stackIn_90_0, stackIn_91_1, me.field_a[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -253,7 +253,7 @@ final class sc {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var5Lifetime2 < var11.length; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = hj.a(false, false, var12);
+              var7Lifetime1 = AccountNameAvailabilityValidator.a(false, false, var12);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -261,7 +261,7 @@ final class sc {
             var4_ref_String__Lifetime1 = da.field_c;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = hj.a(false, false, var13);
+              var7Lifetime1Lifetime1 = AccountNameAvailabilityValidator.a(false, false, var13);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -287,7 +287,7 @@ final class sc {
           while (var4Lifetime3 < me.field_a.length) {
             var7Lifetime2 = wd.field_d[var4Lifetime3];
             if (var7Lifetime2 >= 0) {
-              var8Lifetime1 = hj.a(false, true, me.field_a[var4Lifetime3]);
+              var8Lifetime1 = AccountNameAvailabilityValidator.a(false, true, me.field_a[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + e.field_i;
               var9 = dl.field_g - (var8Lifetime1 >> 1);
               ud.field_a[var4Lifetime3] = new int[4];

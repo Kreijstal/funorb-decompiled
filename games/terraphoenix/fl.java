@@ -92,7 +92,7 @@ final class fl {
           if (param3 == 255) {
             stackIn_10_0 = 4;
             stackIn_11_1 = !(wf.field_q >= 13);
-            h.field_c = ia.createAccountSuccessResult(stackIn_10_0, stackIn_11_1);
+            h.field_c = AccountNameAvailabilityValidator.createAccountSuccessResult(stackIn_10_0, stackIn_11_1);
             var6 = (String[]) null;
             GameApplet.a(-32202, (String[]) null);
           } else {

@@ -199,7 +199,7 @@ final class op {
             }
           }
           if (pd.field_A == sd.field_G &&
-            kh.d((byte) -75)) {
+            AccountNameAvailabilityValidator.d((byte) -75)) {
             if (hc.field_c != 255) {
               tp.field_v = ra.field_c.readString(-101);
             } else {

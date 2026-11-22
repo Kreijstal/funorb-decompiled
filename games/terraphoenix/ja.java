@@ -230,8 +230,8 @@ final class ja extends IntrusiveNode {
             if (var5 == -1) {
               throw new IllegalStateException();
             }
-            ia.field_r = new String[var5];
-            ka.a(kh.field_F, 0, ia.field_r, 0, var5);
+            AccountNameAvailabilityValidator.field_r = new String[var5];
+            ka.a(kh.field_F, 0, AccountNameAvailabilityValidator.field_r, 0, var5);
             kj.field_c = new String[-1 + (var4 - var5)];
             ka.a(kh.field_F, 1 + var5, kj.field_c, 0, -1 + var4 - var5);
             var4 = af.a(MessageKeys.a(new String[]{"<br><%0><br>"}, -1, wj.field_b), da.field_h, -3, kh.field_F, ch.field_c);
@@ -250,8 +250,8 @@ final class ja extends IntrusiveNode {
             ka.a(kh.field_F, 0, ArchiveIndex.field_c, 0, var5);
             ec.field_d = new String[-1 + var4 - var5];
             ka.a(kh.field_F, var5 + 1, ec.field_d, 0, -var5 + (var4 - 1));
-            if (ia.field_r.length >= ArchiveIndex.field_c.length) {
-              stackIn_58_0 = ia.field_r.length;
+            if (AccountNameAvailabilityValidator.field_r.length >= ArchiveIndex.field_c.length) {
+              stackIn_58_0 = AccountNameAvailabilityValidator.field_r.length;
             } else {
               stackIn_58_0 = ArchiveIndex.field_c.length;
             }
@@ -316,7 +316,7 @@ final class ja extends IntrusiveNode {
             }
           }
           if (2 == pe.field_e) {
-            var11 = ia.field_r;
+            var11 = AccountNameAvailabilityValidator.field_r;
             var5_ref_String__ = var11;
             for (var6Lifetime2 = 0; var11.length > var6Lifetime2; var6Lifetime2++) {
               var12 = var11[var6Lifetime2];

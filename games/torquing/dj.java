@@ -37,10 +37,10 @@ final class dj {
           GameKeyHandler.field_d[2] = param4;
           GameKeyHandler.field_d[1] = param2;
           GameKeyHandler.field_d[0] = param5;
-          il.field_p[1] = param8;
-          il.field_p[0] = param10;
-          il.field_p[2] = param6;
-          g.a(po.field_x, cl.field_e, DirectByteStorage.field_e, GameKeyHandler.field_d, il.field_p);
+          AccountNameAvailabilityValidator.field_p[1] = param8;
+          AccountNameAvailabilityValidator.field_p[0] = param10;
+          AccountNameAvailabilityValidator.field_p[2] = param6;
+          g.a(po.field_x, cl.field_e, DirectByteStorage.field_e, GameKeyHandler.field_d, AccountNameAvailabilityValidator.field_p);
           cd.a(param3, -19729, 3);
           var20 = g.field_b;
           var17 = var20;

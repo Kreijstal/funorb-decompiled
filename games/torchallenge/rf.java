@@ -118,7 +118,7 @@ final class rf extends dj implements uh {
         if (param0 == 62) {
           var1 = fl.f(param0 - 62);
           var2 = o.a(18);
-          gb.field_f.a(var2 + (mg.field_d << 1), jl.field_e - mg.field_d, -1, -i.field_m + LevelEntity.field_R, var1 + (i.field_m << 1));
+          gb.field_f.a(var2 + (mg.field_d << 1), jl.field_e - mg.field_d, -1, -AccountNameAvailabilityValidator.field_m + LevelEntity.field_R, var1 + (AccountNameAvailabilityValidator.field_m << 1));
           m.a((byte) 118);
           return;
         }

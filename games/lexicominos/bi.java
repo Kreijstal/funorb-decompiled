@@ -67,7 +67,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ol.field_l != null) {
+          if (AccountNameAvailabilityValidator.field_l != null) {
             tb.field_b = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -105,7 +105,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (ol.field_l != null) {
+          if (AccountNameAvailabilityValidator.field_l != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
               rf.a((byte) -10, (char) var2_int)) {
@@ -141,7 +141,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (null != ol.field_l) {
+          if (null != AccountNameAvailabilityValidator.field_l) {
             vg.field_b = -1;
           }
         } catch (RuntimeException runtimeException) {
@@ -159,7 +159,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (ol.field_l == null) {
+          if (AccountNameAvailabilityValidator.field_l == null) {
             return;
           }
           tb.field_b = 0;

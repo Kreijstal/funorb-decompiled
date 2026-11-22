@@ -52,7 +52,7 @@ final class af {
           var4 = vk.field_d[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = uh.field_r[ce.a(255, (int) var4[var6])];
+            var5[var6] = AccountNameAvailabilityValidator.field_r[ce.a(255, (int) var4[var6])];
           }
           var1[var2] = new km(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var5);
         }

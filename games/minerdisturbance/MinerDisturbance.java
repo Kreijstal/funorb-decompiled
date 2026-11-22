@@ -191,7 +191,7 @@ public final class MinerDisturbance extends ob {
             return;
           }
           if (!od.e(param0) &&
-            !qi.f(-9202)) {
+            !AccountNameAvailabilityValidator.f(-9202)) {
             if (cm.field_o == 0 &&
               qd.field_S ||
               cm.field_o == 1 &&
@@ -6457,7 +6457,7 @@ public final class MinerDisturbance extends ob {
               c.a((byte) -98);
               PacketBuffer.a(6);
               if (!od.e(false) &&
-                !qi.f(-9202)) {
+                !AccountNameAvailabilityValidator.f(-9202)) {
                 if (!u.a(27443) ||
                   oc.d(75)) {
                   boolean decompiledFrameRemainder0 = true;

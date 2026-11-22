@@ -15,7 +15,7 @@ final class lf {
         int var1 = -2 % ((param0 - 29) / 52);
     }
 
-    final static AccountServiceResult a(String param0, boolean param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, boolean param1) {
         RuntimeException var2 = null;
         AccountServiceResult stackIn_2_0 = null;
         Object stackIn_5_0 = null;

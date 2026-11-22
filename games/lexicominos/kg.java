@@ -50,7 +50,7 @@ final class kg extends nb implements ue, jk {
           this.field_F = param0;
           this.field_E = new kf(n.field_h, (vd) null);
           this.field_E.field_i = (rd) ((Object) new v());
-          var7 = da.a(new String[]{this.e(true), this.h(-6724)}, ol.field_p, false);
+          var7 = da.a(new String[]{this.e(true), this.h(-6724)}, AccountNameAvailabilityValidator.field_p, false);
           var3 = 20;
           var4 = new ik(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
           this.field_B = new bc(var7, var4);

@@ -15,11 +15,11 @@ final class ne extends WidgetContainer implements nc, ij {
 
     public final void a(int param0) {
         if (param0 == -4384) {
-          ((hk) (this.field_H.a((byte) -5))).h(-1);
+          ((AccountNameAvailabilityValidator) (this.field_H.a((byte) -5))).h(-1);
           return;
         }
         field_F = (java.awt.Canvas) null;
-        ((hk) (this.field_H.a((byte) -5))).h(-1);
+        ((AccountNameAvailabilityValidator) (this.field_H.a((byte) -5))).h(-1);
     }
 
     private final void i(int param0) {
@@ -235,7 +235,7 @@ final class ne extends WidgetContainer implements nc, ij {
         this.field_L = new d(bm.field_y, (uf) null);
         this.field_M = new d(mp.field_c, (uf) null);
         this.field_H.field_q = ho.field_d;
-        this.field_H.a(true, new hk(this.field_H));
+        this.field_H.a(true, new AccountNameAvailabilityValidator(this.field_H));
         this.field_L.field_F = false;
         this.field_L.listener = (WidgetListener) ((Object) new vo());
         this.field_M.listener = (WidgetListener) ((Object) new jc());

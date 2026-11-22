@@ -1710,7 +1710,7 @@ public final class Terraphoenix extends GameShell {
             return;
           }
           if (null == IntrusiveDeque.field_c) {
-            DualLinkNode.a(ia.field_q, (byte) -88, 90.0f);
+            DualLinkNode.a(AccountNameAvailabilityValidator.field_q, (byte) -88, 90.0f);
             this.a((byte) -89);
             be.field_u = new Sprite(64, 32);
             be.field_u.a();
@@ -1744,7 +1744,7 @@ public final class Terraphoenix extends GameShell {
             ea.a((byte) 47);
             return;
           }
-          DualLinkNode.a(ia.field_q, (byte) -74, 80.0f);
+          DualLinkNode.a(AccountNameAvailabilityValidator.field_q, (byte) -74, 80.0f);
           this.a((byte) -89);
           var3 = new da(ee.field_G, mi.field_h);
           var4 = new m(22050, PcmPlayerService.field_u);
@@ -4492,7 +4492,7 @@ public final class Terraphoenix extends GameShell {
           vi.clearStaticReferences((byte) -113);
           bd.b(-103);
           em.clearStaticReferences(-119);
-          ia.f((byte) -48);
+          AccountNameAvailabilityValidator.f((byte) -48);
           ph.clearStaticReferences(104682000);
           fi.clearStaticReferences(true);
           ha.g(0);
@@ -7956,7 +7956,7 @@ public final class Terraphoenix extends GameShell {
             SoftwareRasterizer.f(0, 0, 640, 480, 16777215);
             this.field_Cb.c((byte) -107);
             this.c(false);
-            ia.a(0, var2, 0, (byte) 116);
+            AccountNameAvailabilityValidator.a(0, var2, 0, (byte) 116);
             return;
           }
           if (Archive.field_a == 2) {
@@ -8047,7 +8047,7 @@ public final class Terraphoenix extends GameShell {
                   SoftwareRasterizer.d(var4Lifetime5, var5Lifetime4, var6Lifetime3, var7Lifetime2, 16777215, 128);
                 }
               }
-              ia.a(0, var2, 0, (byte) 125);
+              AccountNameAvailabilityValidator.a(0, var2, 0, (byte) 125);
               if (mm.field_e >= 2) {
                 var8_ref_Runtime = Runtime.getRuntime();
                 var9 = (int)(var8_ref_Runtime.totalMemory() - var8_ref_Runtime.freeMemory()) >> 20;
@@ -8565,7 +8565,7 @@ public final class Terraphoenix extends GameShell {
               og.field_f.b("LAUNCHERS", 20, 140, 16777215, 0);
             }
           }
-          ia.a(0, var2, 0, (byte) 125);
+          AccountNameAvailabilityValidator.a(0, var2, 0, (byte) 125);
           if (param0 != -89) {
             this.field_S = (ol) null;
           }
@@ -9500,7 +9500,7 @@ public final class Terraphoenix extends GameShell {
             (464 - this.field_zb.field_i) >= MouseWheelInput.field_b &&
             this.field_jb <= 0) {
             this.field_Eb = new String[1];
-            this.field_Eb[0] = ia.field_n;
+            this.field_Eb[0] = AccountNameAvailabilityValidator.field_n;
             if (ma.field_I == 1) {
               ja.field_i = 1;
               qd.$cfr$intArgs$a$e9dea5688aa5(33, 27);

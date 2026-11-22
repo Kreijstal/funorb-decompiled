@@ -146,12 +146,12 @@ final class mf {
             }
           } else {
             if (var2 != 0 &&
-              kh.field_t != 2) {
+              AccountNameAvailabilityValidator.field_t != 2) {
               AccountCreationResultPanel.q(61270);
             }
           }
           if (0 == var3 &&
-            kh.field_t == 2) {
+            AccountNameAvailabilityValidator.field_t == 2) {
             var4 = -GameAppletShell.field_d + kd.c(param0 ^ -9766);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
@@ -193,7 +193,7 @@ final class mf {
           }
           if (10 <= dk.field_c) {
             if (l.a(true)) {
-              if (kh.field_n == 0) {
+              if (AccountNameAvailabilityValidator.field_n == 0) {
                 mj.a(false, param1, false);
                 ob.a(0, -84, param2, 0);
               } else {

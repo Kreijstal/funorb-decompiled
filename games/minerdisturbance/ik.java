@@ -31,7 +31,7 @@ final class ik extends kn implements be, sh, f {
     }
 
     public final void a(byte param0) {
-        ((qi) (this.field_I.a(35))).b((byte) -78);
+        ((AccountNameAvailabilityValidator) (this.field_I.a(35))).b((byte) -78);
         if (param0 != 47) {
           this.field_U = (ei) null;
         }
@@ -376,7 +376,7 @@ final class ik extends kn implements be, sh, f {
         this.field_O.field_n = sl.field_v;
         this.field_Q.field_n = uf.field_t;
         this.field_V.field_n = ig.field_a;
-        this.field_I.a(new qi(this.field_I), 1048576);
+        this.field_I.a(new AccountNameAvailabilityValidator(this.field_I), 1048576);
         this.field_P.a(new k(this.field_P), 1048576);
         this.field_M.a(new od(this.field_M, this.field_P), 1048576);
         this.field_J.a(new e(this.field_J, this.field_I, this.field_P), 1048576);
@@ -454,7 +454,7 @@ final class ik extends kn implements be, sh, f {
           var2 = Integer.parseInt(this.field_Q.field_s);
         } catch (NumberFormatException numberFormatException) {
         }
-        return qi.a(this.field_I.field_s, var2, this, this.field_V.field_H, param0 ^ 82, this.field_J.field_s, this.field_P.field_s);
+        return AccountNameAvailabilityValidator.a(this.field_I.field_s, var2, this, this.field_V.field_H, param0 ^ 82, this.field_J.field_s, this.field_P.field_s);
     }
 
     final static void n(int param0) {

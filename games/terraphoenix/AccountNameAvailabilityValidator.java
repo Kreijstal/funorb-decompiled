@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends di {
+final class AccountNameAvailabilityValidator extends di {
     static String field_p;
-    private String field_o;
+    private String checkedName;
     static String field_n;
-    private boolean field_m;
+    private boolean nameAvailable;
     static String[] field_r;
     static String field_q;
 
-    ia(ej param0) {
+    AccountNameAvailabilityValidator(ej param0) {
         super(param0);
-        this.field_m = false;
+        this.nameAvailable = false;
     }
 
     final im b(String param0, int param1) {
@@ -34,18 +34,18 @@ final class ia extends di {
             stackIn_5_0 = qf.field_d;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_o)) {
-            var3 = ta.a(true, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = ta.pollAccountNameCheck(true, param0);
             if (var3 != null &&
               var3.message == null) {
-              this.field_o = param0;
-              this.field_m = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_12_0 = oh.field_b;
               return stackIn_12_0;
             }
           }
-          if (!this.field_m) {
+          if (!this.nameAvailable) {
             stackIn_17_0 = qf.field_d;
           } else {
             stackIn_17_0 = dg.field_c;
@@ -86,18 +86,18 @@ final class ia extends di {
             stackIn_2_0 = var4;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_o)) {
-            var5 = ta.a(true, param0);
+          if (!param0.equals(this.checkedName)) {
+            var5 = ta.pollAccountNameCheck(true, param0);
             if (var5 == null) {
               return null;
             }
             if (var5.message != null) {
               return null;
             }
-            this.field_o = param0;
-            this.field_m = var5.success;
+            this.checkedName = param0;
+            this.nameAvailable = var5.success;
           }
-          if (this.field_m) {
+          if (this.nameAvailable) {
             stackIn_15_0 = lk.field_e;
             return stackIn_15_0;
           }
@@ -132,7 +132,7 @@ final class ia extends di {
             k.field_f.a(param2, param0, var4, 101);
             if (param3 <= 103) {
               var5 = (byte[]) null;
-              ia.a(95, (PacketBuffer) null, (byte) 67, (java.math.BigInteger) null, (java.math.BigInteger) null, 39, (byte[]) null);
+              AccountNameAvailabilityValidator.a(95, (PacketBuffer) null, (byte) 67, (java.math.BigInteger) null, (java.math.BigInteger) null, 39, (byte[]) null);
             }
             var4.dispose();
             return;
@@ -196,7 +196,7 @@ final class ia extends di {
     }
 
     final void g(int param0) {
-        this.field_o = null;
+        this.checkedName = null;
         if (param0 != -4328) {
           String var3 = (String) null;
           this.a((String) null, 24);
@@ -340,7 +340,7 @@ final class ia extends di {
           return;
         }
         byte[] var2 = (byte[]) null;
-        ia.a(-110, (PacketBuffer) null, (byte) 46, (java.math.BigInteger) null, (java.math.BigInteger) null, -122, (byte[]) null);
+        AccountNameAvailabilityValidator.a(-110, (PacketBuffer) null, (byte) 46, (java.math.BigInteger) null, (java.math.BigInteger) null, -122, (byte[]) null);
         field_n = null;
         field_r = null;
     }

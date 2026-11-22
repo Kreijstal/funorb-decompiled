@@ -194,7 +194,7 @@ final class nq extends rk {
             !(param14 <= kh.field_c.length)) {
             kh.field_c = new int[param14 + 100];
             MouseInputHandler.field_c = new int[100 + param14];
-            hk.field_q = new int[param14 + 100];
+            AccountNameAvailabilityValidator.field_q = new int[param14 + 100];
           }
           if (vm.field_a == null ||
             !(vm.field_a.length >= param0)) {
@@ -282,7 +282,7 @@ final class nq extends rk {
                   var35 = fieldTemp$1;
                   var24[var40] = fieldTemp$1;
                   kh.field_c[var35] = var43;
-                  hk.field_q[var35] = var44;
+                  AccountNameAvailabilityValidator.field_q[var35] = var44;
                   MouseInputHandler.field_c[var35] = var45;
                 }
                 vm.field_a[var34] = var35;
@@ -293,7 +293,7 @@ final class nq extends rk {
                   var35 = fieldTemp$2;
                   var24[var41] = fieldTemp$2;
                   kh.field_c[var35] = var46;
-                  hk.field_q[var35] = var47;
+                  AccountNameAvailabilityValidator.field_q[var35] = var47;
                   MouseInputHandler.field_c[var35] = var48;
                 }
                 al.field_s[var34] = var35;
@@ -304,7 +304,7 @@ final class nq extends rk {
                   var35 = fieldTemp$3;
                   var24[var42] = fieldTemp$3;
                   kh.field_c[var35] = var49;
-                  hk.field_q[var35] = var50;
+                  AccountNameAvailabilityValidator.field_q[var35] = var50;
                   MouseInputHandler.field_c[var35] = var51;
                 }
                 hm.field_C[var34] = var35;
@@ -320,8 +320,8 @@ final class nq extends rk {
                   qq.a(kh.field_c, 0, var55, 0, jd.field_d);
                   kh.field_c = var55;
                   var55Lifetime4 = new int[var30 + param14 + 104];
-                  qq.a(hk.field_q, 0, var55Lifetime4, 0, jd.field_d);
-                  hk.field_q = var55Lifetime4;
+                  qq.a(AccountNameAvailabilityValidator.field_q, 0, var55Lifetime4, 0, jd.field_d);
+                  AccountNameAvailabilityValidator.field_q = var55Lifetime4;
                   var55Lifetime5 = new int[104 + param14 + var30];
                   qq.a(MouseInputHandler.field_c, 0, var55Lifetime5, 0, jd.field_d);
                   MouseInputHandler.field_c = var55Lifetime5;
@@ -376,7 +376,7 @@ final class nq extends rk {
                     var35 = incrementValue$4;
                     var24[var40] = incrementValue$4;
                     kh.field_c[var35] = var43;
-                    hk.field_q[var35] = var44;
+                    AccountNameAvailabilityValidator.field_q[var35] = var44;
                     MouseInputHandler.field_c[var35] = var45;
                   }
                   var26[0 + var58] = var35;
@@ -410,7 +410,7 @@ final class nq extends rk {
                   var62 = (var45 * var53 - var48 * var52) / var64;
                   var61 = (var44 * var53 - var52 * var47) / var64;
                   kh.field_c[var35] = var60;
-                  hk.field_q[var35] = var61;
+                  AccountNameAvailabilityValidator.field_q[var35] = var61;
                   MouseInputHandler.field_c[var35] = var62;
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var63;
@@ -433,7 +433,7 @@ final class nq extends rk {
                     var35 = incrementValue$8;
                     var24[var41] = incrementValue$8;
                     kh.field_c[var35] = var46;
-                    hk.field_q[var35] = var47;
+                    AccountNameAvailabilityValidator.field_q[var35] = var47;
                     MouseInputHandler.field_c[var35] = var48;
                   }
                   var26[var58 + 0] = var35;
@@ -467,7 +467,7 @@ final class nq extends rk {
                   var62Lifetime1 = (var48 * var54 - var53 * var51) / var64Lifetime1;
                   var60Lifetime1 = (var46 * var54 - var53 * var49) / var64Lifetime1;
                   kh.field_c[var35] = var60Lifetime1;
-                  hk.field_q[var35] = var61Lifetime1;
+                  AccountNameAvailabilityValidator.field_q[var35] = var61Lifetime1;
                   MouseInputHandler.field_c[var35] = var62Lifetime1;
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var63Lifetime1;
@@ -490,7 +490,7 @@ final class nq extends rk {
                     var35 = incrementValue$12;
                     var24[var42] = incrementValue$12;
                     kh.field_c[var35] = var49;
-                    hk.field_q[var35] = var50;
+                    AccountNameAvailabilityValidator.field_q[var35] = var50;
                     MouseInputHandler.field_c[var35] = var51;
                   }
                   var26[var58 + 0] = var35;
@@ -523,7 +523,7 @@ final class nq extends rk {
                   var62Lifetime2 = (var52 * var51 - var54 * var45) / var64Lifetime2;
                   var60Lifetime2 = (var52 * var49 - var43 * var54) / var64Lifetime2;
                   kh.field_c[var35] = var60Lifetime2;
-                  hk.field_q[var35] = var61Lifetime2;
+                  AccountNameAvailabilityValidator.field_q[var35] = var61Lifetime2;
                   MouseInputHandler.field_c[var35] = var62Lifetime2;
                   var26[var58 + 0] = var35;
                   var26[var58 + 8] = var63Lifetime2;
@@ -739,7 +739,7 @@ final class nq extends rk {
                         var35Lifetime1 = fieldTemp$25;
                         var24[var34] = fieldTemp$25;
                         kh.field_c[var35Lifetime1] = param17[var34];
-                        hk.field_q[var35Lifetime1] = param1[var34];
+                        AccountNameAvailabilityValidator.field_q[var35Lifetime1] = param1[var34];
                         MouseInputHandler.field_c[var35Lifetime1] = param6[var34];
                       }
                       qn.field_p.field_M[var39Lifetime1] = (short)var35Lifetime1;
@@ -762,7 +762,7 @@ final class nq extends rk {
                         var35Lifetime1 = fieldTemp$27;
                         var24[var34] = fieldTemp$27;
                         kh.field_c[var35Lifetime1] = param17[var34];
-                        hk.field_q[var35Lifetime1] = param1[var34];
+                        AccountNameAvailabilityValidator.field_q[var35Lifetime1] = param1[var34];
                         MouseInputHandler.field_c[var35Lifetime1] = param6[var34];
                       }
                       qn.field_p.field_P[var39Lifetime1] = (short)var35Lifetime1;
@@ -785,7 +785,7 @@ final class nq extends rk {
                         var35Lifetime1 = fieldTemp$29;
                         var24[var34] = fieldTemp$29;
                         kh.field_c[var35Lifetime1] = param17[var34];
-                        hk.field_q[var35Lifetime1] = param1[var34];
+                        AccountNameAvailabilityValidator.field_q[var35Lifetime1] = param1[var34];
                         MouseInputHandler.field_c[var35Lifetime1] = param6[var34];
                       }
                       qn.field_p.field_F[var39Lifetime1] = (short)var35Lifetime1;
@@ -872,7 +872,7 @@ final class nq extends rk {
                 var35Lifetime1Lifetime1 = fieldTemp$42;
                 var24[var34] = fieldTemp$42;
                 kh.field_c[var35Lifetime1Lifetime1] = param17[var34];
-                hk.field_q[var35Lifetime1Lifetime1] = param1[var34];
+                AccountNameAvailabilityValidator.field_q[var35Lifetime1Lifetime1] = param1[var34];
                 MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
               qp.field_g[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
@@ -895,7 +895,7 @@ final class nq extends rk {
                 var35Lifetime1Lifetime1 = fieldTemp$44;
                 var24[var34] = fieldTemp$44;
                 kh.field_c[var35Lifetime1Lifetime1] = param17[var34];
-                hk.field_q[var35Lifetime1Lifetime1] = param1[var34];
+                AccountNameAvailabilityValidator.field_q[var35Lifetime1Lifetime1] = param1[var34];
                 MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
               pd.field_a[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
@@ -918,7 +918,7 @@ final class nq extends rk {
                 var35Lifetime1Lifetime1 = fieldTemp$46;
                 var24[var34] = fieldTemp$46;
                 kh.field_c[var35Lifetime1Lifetime1] = param17[var34];
-                hk.field_q[var35Lifetime1Lifetime1] = param1[var34];
+                AccountNameAvailabilityValidator.field_q[var35Lifetime1Lifetime1] = param1[var34];
                 MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
               da.field_k[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;

@@ -7,7 +7,7 @@ final class rf {
     static int field_b;
     static String field_a;
 
-    final static AccountServiceResult a(byte param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(byte param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         Object stackIn_9_0 = null;

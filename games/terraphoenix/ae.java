@@ -170,7 +170,7 @@ final class ae extends WidgetContainer implements rg, n {
         this.field_K = new eb(BattleUnit.field_lb, (sc) null);
         this.field_O = new eb(lf.field_d, (sc) null);
         this.field_J.field_x = p.field_g;
-        this.field_J.a(new ia(this.field_J), 5859);
+        this.field_J.a(new AccountNameAvailabilityValidator(this.field_J), 5859);
         this.field_K.field_A = false;
         this.field_K.listener = (WidgetActionListener) ((Object) new ic());
         this.field_O.listener = (WidgetActionListener) ((Object) new qh());
@@ -308,7 +308,7 @@ final class ae extends WidgetContainer implements rg, n {
     }
 
     public final void a(int param0) {
-        ((ia) (this.field_J.a(29730))).g(-4328);
+        ((AccountNameAvailabilityValidator) (this.field_J.a(29730))).g(-4328);
         if (param0 != 50) {
           field_G = (java.awt.Canvas) null;
         }

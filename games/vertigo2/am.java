@@ -1090,7 +1090,7 @@ final class am {
             if (param4.field_w == 2) {
               var39 = new String[4];
               var27 = var39;
-              var27[0] = hk.field_r;
+              var27[0] = AccountNameAvailabilityValidator.field_r;
               var27[1] = Vertigo2.a(new String[]{Integer.toString(param2), Integer.toString(param1)}, qh.field_c, -126);
               var27[3] = de.field_c;
               var27[2] = lh.field_d;

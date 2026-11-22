@@ -239,7 +239,7 @@ final class me extends IntrusiveNode {
     }
 
     final static void c(boolean param0) {
-        bc.field_t = null;
+        AccountNameAvailabilityValidator.field_t = null;
         pj.field_o = null;
         pc.field_db = false;
         fd.field_e = null;

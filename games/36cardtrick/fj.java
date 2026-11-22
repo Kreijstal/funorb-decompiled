@@ -282,7 +282,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
                 }
                 ClientException.detectMaxHeapMegabytes(7400);
                 this.d(-1775094552);
-                gf.field_e = ij.a(-114, (java.awt.Component) ((Object) tb.field_c), hj.field_j, gg.field_d);
+                gf.field_e = ij.a(-114, (java.awt.Component) ((Object) tb.field_c), AccountNameAvailabilityValidator.field_j, gg.field_d);
                 this.c(4405028);
                 MouseInputHandler.field_b = ca.a(false);
                 do {
@@ -477,7 +477,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
             return;
           }
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) tb.field_c));
-          tb.field_c.setSize(gg.field_d, hj.field_j);
+          tb.field_c.setSize(gg.field_d, AccountNameAvailabilityValidator.field_j);
           tb.field_c.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == q.field_g);
           if (!decompiledSharedTail0) {
@@ -534,7 +534,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
           if (fieldTemp$1 > 50) {
             MouseInputHandler.field_f = MouseInputHandler.field_f - 50;
             ii.field_a = true;
-            tb.field_c.setSize(gg.field_d, hj.field_j);
+            tb.field_c.setSize(gg.field_d, AccountNameAvailabilityValidator.field_j);
             tb.field_c.setVisible(true);
             if (q.field_g != null &&
               fg.field_n == null) {
@@ -620,8 +620,8 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
         Object var6 = null;
         try {
           var2_long = id.a(60);
-          var4 = hj.field_n[kh.field_e];
-          hj.field_n[kh.field_e] = var2_long;
+          var4 = AccountNameAvailabilityValidator.field_n[kh.field_e];
+          AccountNameAvailabilityValidator.field_n[kh.field_e] = var2_long;
           if (0L != var4 &&
             var4 < var2_long) {
           }
@@ -1037,7 +1037,7 @@ public abstract class fj extends java.applet.Applet implements Runnable, java.aw
               }
               gg.field_d = param5;
               vk.field_b = param5;
-              hj.field_j = param4;
+              AccountNameAvailabilityValidator.field_j = param4;
               qe.field_I = param4;
               ca.field_d = param3;
               jj.field_a = this;

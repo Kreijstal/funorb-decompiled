@@ -860,7 +860,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           qp.a(param0 + 1095153591);
           pm.a((byte) 35);
           bh.a(param0 ^ -90);
-          no.b(true);
+          AccountNameAvailabilityValidator.b(true);
           jn.d(-31737);
           kd.e((byte) -33);
           ci.d(70);

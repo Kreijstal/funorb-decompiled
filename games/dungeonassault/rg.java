@@ -424,7 +424,7 @@ final class rg extends ii implements pf, vg, mg {
 
     public final void a(int param0) {
         String discarded$0 = null;
-        ((kh) (this.field_R.a(-115))).e(true);
+        ((AccountNameAvailabilityValidator) (this.field_R.a(-115))).e(true);
         if (param0 <= 121) {
           discarded$0 = this.g((byte) 69);
         }
@@ -449,7 +449,7 @@ final class rg extends ii implements pf, vg, mg {
         this.field_L.field_i = lm.field_p;
         this.field_S.field_i = AccountServiceResult.field_h;
         this.field_T.field_i = sa.field_h;
-        this.field_R.a(new kh(this.field_R), 10508);
+        this.field_R.a(new AccountNameAvailabilityValidator(this.field_R), 10508);
         this.field_O.a(new qm(this.field_O), 10508);
         this.field_U.a(new ga(this.field_U, this.field_O), 10508);
         this.field_K.a(new vo(this.field_K, this.field_R, this.field_O), 10508);

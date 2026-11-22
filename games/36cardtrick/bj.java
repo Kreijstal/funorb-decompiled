@@ -29,7 +29,7 @@ final class bj {
 
     final oe c(int param0) {
         this.field_r = gg.field_d;
-        this.field_o = hj.field_j;
+        this.field_o = AccountNameAvailabilityValidator.field_j;
         if (param0 != -1) {
           this.c(-67);
         }
@@ -92,7 +92,7 @@ final class bj {
           sk.field_d = (this.field_c - gg.field_d) / 2;
         }
         if (gg.field_d != this.field_a ||
-          hj.field_j != this.field_j) {
+          AccountNameAvailabilityValidator.field_j != this.field_j) {
           this.field_q.a(-23603, this.field_j, this.field_a);
         }
     }
@@ -138,7 +138,7 @@ final class bj {
           if (var2 != gg.field_d) {
             this.field_q.a(-23603, var3, var2);
           } else {
-            if (hj.field_j != var3) {
+            if (AccountNameAvailabilityValidator.field_j != var3) {
               this.field_q.a(-23603, var3, var2);
             }
           }

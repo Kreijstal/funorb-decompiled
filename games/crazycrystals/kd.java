@@ -33,7 +33,7 @@ final class kd extends se {
           if (!CipherPacketBuffer.l(-81)) {
             if (ph.field_E != null &&
               ph.field_E.field_d) {
-              no.e((byte) -23);
+              AccountNameAvailabilityValidator.e((byte) -23);
               kf.field_h.b(-3264, new gn(kf.field_h, ab.field_A));
             }
             return;

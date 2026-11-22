@@ -93,7 +93,7 @@ class mf extends uda implements WidgetActionListener {
               ((hc) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, -1);
             }
           } else {
-            var6.a(7, tt.field_h, 11);
+            var6.a(7, AccountNameAvailabilityValidator.field_h, 11);
             var6.a(7, uda.field_ab, 17);
           }
           if (param0 == 3) {

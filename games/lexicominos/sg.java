@@ -196,8 +196,8 @@ final class sg {
           if (param1 != 2) {
             sg.a(false);
           }
-          param0.addKeyListener(ol.field_l);
-          param0.addFocusListener(ol.field_l);
+          param0.addKeyListener(AccountNameAvailabilityValidator.field_l);
+          param0.addFocusListener(AccountNameAvailabilityValidator.field_l);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

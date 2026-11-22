@@ -343,7 +343,7 @@ final class ga {
           if (param0 != 7) {
             ga.d(113);
           }
-          ia.a(param1, param2, -74);
+          AccountNameAvailabilityValidator.a(param1, param2, -74);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ga.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -48,7 +48,7 @@ final class tg extends ik {
         return 0;
     }
 
-    final static AccountServiceResult a(int param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(int param0, String param1) {
         RuntimeException var2 = null;
         AccountServiceResult stackIn_5_0 = null;
         AccountServiceResult stackIn_9_0 = null;

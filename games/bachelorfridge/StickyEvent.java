@@ -1149,7 +1149,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "reloadgame");
                 if (null != var2) {
-                  tt.field_h = qq.a(var2, param0);
+                  AccountNameAvailabilityValidator.field_h = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "toserverlist");
                 if (var2 != null) {

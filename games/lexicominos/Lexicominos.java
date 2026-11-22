@@ -1133,7 +1133,7 @@ public final class Lexicominos extends nk {
           rj.clearStaticReferences((byte) 88);
           ij.clearStaticReferences((byte) 66);
           mk.a((byte) -101);
-          ol.clearStaticReferences(false);
+          AccountNameAvailabilityValidator.clearStaticReferences(false);
           va.clearStaticReferences((byte) -113);
           pc.clearStaticReferences((byte) -82);
           jg.e(param0 - 25127);

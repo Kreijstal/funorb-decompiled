@@ -125,7 +125,7 @@ final class hb extends am {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         uk.field_a[vg.field_o] = param5;
         lp.field_g[vg.field_o] = vg.field_o;
-        il.field_o[vg.field_o] = param0;
+        AccountNameAvailabilityValidator.field_o[vg.field_o] = param0;
         if (param0 > mc.field_l) {
           qd.field_g = param0;
         }

@@ -241,8 +241,8 @@ final class pa extends dg {
               return stackIn_60_0;
             }
             var9Lifetime3 = MouseInputHandler.field_e;
-            MouseInputHandler.field_e = hj.field_l;
-            hj.field_l = var9Lifetime3;
+            MouseInputHandler.field_e = AccountNameAvailabilityValidator.field_l;
+            AccountNameAvailabilityValidator.field_l = var9Lifetime3;
             lk.field_w = true;
           }
           if (param5 != 18) {

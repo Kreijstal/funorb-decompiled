@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class MatchState implements dv {
+final class MatchState implements BitDecodableMarker {
     int playerCount;
     PlayerSimulation[] simulations;
     int field_E;

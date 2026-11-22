@@ -20,7 +20,7 @@ final class AccountServiceResult {
     final static void a(int param0, h param1, byte param2, int param3) {
         try {
           mg.field_d = param0;
-          i.field_m = param3;
+          AccountNameAvailabilityValidator.field_m = param3;
           gb.field_f = param1;
           int var4_int = 124 % ((-49 - param2) / 36);
         } catch (RuntimeException runtimeException) {

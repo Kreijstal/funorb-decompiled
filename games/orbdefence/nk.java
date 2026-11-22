@@ -2338,7 +2338,7 @@ final class nk {
           if (-1 + this.field_d.length <= var4Lifetime1) {
             this.field_d[-1 + this.field_d.length] = var3Lifetime2;
             this.field_x = this.field_x - 1;
-            bc.field_r = bc.field_r + this.field_x;
+            AccountNameAvailabilityValidator.field_r = AccountNameAvailabilityValidator.field_r + this.field_x;
             a.field_r = a.field_r + this.field_x;
             stackIn_291_0 = -1;
             stackIn_291_1 = ~(wf.field_c.field_x % 11);
@@ -2392,7 +2392,7 @@ final class nk {
           }
         }
         mm.field_C = mm.field_C - (vl.field_d - ua.field_a);
-        bc.field_r = bc.field_r - ua.field_a;
+        AccountNameAvailabilityValidator.field_r = AccountNameAvailabilityValidator.field_r - ua.field_a;
         a.field_r = a.field_r - vl.field_d;
         if (param1) {
           while (nf.e(32722)) {
@@ -3021,22 +3021,22 @@ final class nk {
           wf.field_c.field_e[0].field_d > 0 &&
           !DirectByteStorage.field_d) {
           if (0 == this.field_b) {
-            mm.field_A = new vg(0, 65535, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
+            mm.field_A = new vg(0, 65535, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }
           if (1 == this.field_b) {
-            mm.field_A = new vg(1, 65534, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{105 * wf.field_c.field_e[0].field_d + wf.field_c.field_x});
+            mm.field_A = new vg(1, 65534, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{105 * wf.field_c.field_e[0].field_d + wf.field_c.field_x});
           }
           if (this.field_b == 2) {
-            mm.field_A = new vg(2, 65533, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            mm.field_A = new vg(2, 65533, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (this.field_b == 3) {
-            mm.field_A = new vg(3, 65532, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
+            mm.field_A = new vg(3, 65532, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_x + wf.field_c.field_e[0].field_d * 105});
           }
           if (this.field_b == 4) {
-            mm.field_A = new vg(4, 65531, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            mm.field_A = new vg(4, 65531, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (5 == this.field_b) {
-            mm.field_A = new vg(5, 65530, bc.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
+            mm.field_A = new vg(5, 65530, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (!n.b((byte) 31)) {
             vl.a(3, 10, mm.field_A);
@@ -3195,7 +3195,7 @@ final class nk {
         this.field_v = new im();
         this.field_i = 0;
         this.field_m = -1;
-        bc.field_r = 0;
+        AccountNameAvailabilityValidator.field_r = 0;
         this.field_o = 0;
         dm.field_f = 0;
         mm.field_C = 0;

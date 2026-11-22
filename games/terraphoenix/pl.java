@@ -120,7 +120,7 @@ final class pl extends WidgetContainer implements jf, n, rg {
         this.field_U.field_x = be.field_y;
         this.field_R.field_x = bl.field_c;
         this.field_W.field_x = hd.field_j;
-        this.field_J.a(new ia(this.field_J), 5859);
+        this.field_J.a(new AccountNameAvailabilityValidator(this.field_J), 5859);
         this.field_S.a(new fi(this.field_S), 5859);
         this.field_I.a(new ha(this.field_I, this.field_S), 5859);
         this.field_H.a(new ph(this.field_H, this.field_J, this.field_S), 5859);
@@ -475,12 +475,12 @@ final class pl extends WidgetContainer implements jf, n, rg {
 
     public final void a(int param0) {
         if (param0 == 50) {
-          ((ia) (this.field_J.a(29730))).g(-4328);
+          ((AccountNameAvailabilityValidator) (this.field_J.a(29730))).g(-4328);
           return;
         }
         UiWidget var3 = (UiWidget) null;
         this.a((UiWidget) null, 45, -116, 19);
-        ((ia) (this.field_J.a(29730))).g(-4328);
+        ((AccountNameAvailabilityValidator) (this.field_J.a(29730))).g(-4328);
     }
 
     private final String g(byte param0) {

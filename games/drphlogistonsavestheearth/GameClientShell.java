@@ -53,7 +53,7 @@ abstract class GameClientShell extends GameAppletShell {
           ma.field_sb = sc.field_e.pollRotation(0);
         }
         if (n.a(64)) {
-          var3 = 1200 * pk.d((byte) 9);
+          var3 = 1200 * AccountNameAvailabilityValidator.d((byte) 9);
           if (this.field_r ||
             !(nf.c(false) <= var3) &&
             !(var3 >= qg.m(12484))) {

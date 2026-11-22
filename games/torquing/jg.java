@@ -190,7 +190,7 @@ final class jg extends am {
             for (var11 = param4; var11 < param6; var11++) {
               var12 = lp.field_g[var11];
               if (param2) {
-                stackIn_26_0 = il.field_o[var12];
+                stackIn_26_0 = AccountNameAvailabilityValidator.field_o[var12];
               } else {
                 stackIn_26_0 = ji.field_a[var12];
               }

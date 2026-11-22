@@ -207,7 +207,7 @@ public final class Main extends c {
           if (null != ue.field_a) {
             qi.a((byte) -87, ue.field_a);
             ue.field_a = null;
-            hj.b((byte) -20);
+            AccountNameAvailabilityValidator.b((byte) -20);
           }
           mh.field_c = aj.a(1, 1);
           id.field_a = aj.a(1, 5);
@@ -716,7 +716,7 @@ public final class Main extends c {
                   if (ff.field_b == 9) {
                     this.p(-97283608);
                     if (var3 != 0) {
-                      hj.a(2, eg.field_f);
+                      AccountNameAvailabilityValidator.a(2, eg.field_f);
                       var2_int = this.b(true, (byte) -51);
                       if (2 == var2_int) {
                         bc.field_a = -2073859829;
@@ -727,14 +727,14 @@ public final class Main extends c {
                       }
                       if (var2_int == 2 ||
                         var2_int == 1) {
-                        hj.b((byte) -34);
+                        AccountNameAvailabilityValidator.b((byte) -34);
                       }
                     }
                   }
                 }
               }
             } else {
-              hj.a(2, eg.field_f);
+              AccountNameAvailabilityValidator.a(2, eg.field_f);
               var2_int = this.b(true, (byte) -51);
               if (2 == var2_int) {
                 bc.field_a = -2073859829;
@@ -745,7 +745,7 @@ public final class Main extends c {
               }
               if (var2_int == 2 ||
                 var2_int == 1) {
-                hj.b((byte) -34);
+                AccountNameAvailabilityValidator.b((byte) -34);
               }
             }
           }
@@ -2268,7 +2268,7 @@ public final class Main extends c {
           gh.clearStaticReferences(256);
           oc.clearStaticReferences(-41);
           di.a(-1);
-          hj.h(param0 ^ 0);
+          AccountNameAvailabilityValidator.h(param0 ^ 0);
           mk.b((byte) 110);
           rd.c(true);
           p.g(param0 ^ 0);

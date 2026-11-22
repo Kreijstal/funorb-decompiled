@@ -37,12 +37,12 @@ final class sl {
         if (param0 == 15000) {
           rm.field_P = true;
           ab.field_a = kd.c(-2456) + 15000L;
-          return 11 == kh.field_n ? true : false;
+          return 11 == AccountNameAvailabilityValidator.field_n ? true : false;
         }
         sl.b(126);
         rm.field_P = true;
         ab.field_a = kd.c(-2456) + 15000L;
-        return 11 == kh.field_n ? true : false;
+        return 11 == AccountNameAvailabilityValidator.field_n ? true : false;
     }
 
     static {

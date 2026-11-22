@@ -703,7 +703,7 @@ final class MenuScreen {
           ah.field_i[this.field_d] = ah.field_i[this.field_d] + dd.field_b;
         }
         if (this.field_d == 9) {
-          df.a(0, true);
+          AccountNameAvailabilityValidator.a(0, true);
         }
         var3Lifetime1 = 0;
         if (9 == this.field_d) {

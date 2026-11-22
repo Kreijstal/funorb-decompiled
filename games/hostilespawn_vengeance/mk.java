@@ -295,7 +295,7 @@ final class mk extends vd implements nk, qk, kn {
         this.field_U.field_i = ke.field_x;
         this.field_F.field_i = s.field_h;
         this.field_G.field_i = ql.field_b;
-        this.field_P.a(new n(this.field_P), (byte) -77);
+        this.field_P.a(new AccountNameAvailabilityValidator(this.field_P), (byte) -77);
         this.field_M.a(new ka(this.field_M), (byte) -52);
         this.field_N.a(new hd(this.field_N, this.field_M), (byte) -84);
         this.field_E.a(new db(this.field_E, this.field_P, this.field_M), (byte) -87);
@@ -395,7 +395,7 @@ final class mk extends vd implements nk, qk, kn {
 
     public final void a(boolean param0) {
         int discarded$0 = 0;
-        ((n) (this.field_P.a((byte) 100))).f(-2);
+        ((AccountNameAvailabilityValidator) (this.field_P.a((byte) 100))).f(-2);
         if (param0) {
           String var3 = (String) null;
           discarded$0 = this.a((String) null, -114, 4, (ag) null, -112, (String) null);

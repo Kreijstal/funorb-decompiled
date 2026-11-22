@@ -336,7 +336,7 @@ final class an {
           if (param1 >= -43) {
             field_f = (String[][]) null;
           }
-          stackIn_73_0 = hk.field_o;
+          stackIn_73_0 = AccountNameAvailabilityValidator.field_o;
           stackIn_73_1 = 0;
           stackIn_74_2 = (param2) && (!param0) && (!im.field_g);
           ((UiPanel) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);

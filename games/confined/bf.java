@@ -139,7 +139,7 @@ final class bf extends ga implements pg, el {
         this.field_Q = new rg(ta.field_a, (uk) null);
         this.field_P = new rg(rb.field_d, (uk) null);
         this.field_O.field_C = ra.field_b;
-        this.field_O.a(-18312, new qg(this.field_O));
+        this.field_O.a(-18312, new AccountNameAvailabilityValidator(this.field_O));
         this.field_Q.field_L = false;
         this.field_Q.field_n = (fe) ((Object) new je());
         this.field_P.field_n = (fe) ((Object) new hk());
@@ -164,7 +164,7 @@ final class bf extends ga implements pg, el {
     }
 
     public final void a(byte param0) {
-        ((qg) (this.field_O.a((byte) -9))).e(639775169);
+        ((AccountNameAvailabilityValidator) (this.field_O.a((byte) -9))).e(639775169);
         if (param0 >= -101) {
           bf.b(false);
         }

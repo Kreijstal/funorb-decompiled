@@ -97,7 +97,7 @@ final class cb {
           si.c(var2_int + 2, var3 + 3, var4, 2, 16772608);
           gj.field_d.e(var2_int, var3);
           al.field_Z.c(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
-          al.field_Z.b(bi.field_c[n.field_s].toUpperCase(), 320, 471, 16776960, -1);
+          al.field_Z.b(bi.field_c[AccountNameAvailabilityValidator.field_s].toUpperCase(), 320, 471, 16776960, -1);
           var5 = el.field_i.toUpperCase();
           var6 = al.field_Z.a(var5);
           al.field_Z.a(var5, param0, 472, 16776960, -1);

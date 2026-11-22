@@ -1574,7 +1574,7 @@ final class lm {
                 }
                 var2 = t.a(15136, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  bc.field_s = bk.a(var2, -12465);
+                  AccountNameAvailabilityValidator.field_s = bk.a(var2, -12465);
                 }
                 var2 = t.a(15136, "create_age_tooltip");
                 if (null != var2) {

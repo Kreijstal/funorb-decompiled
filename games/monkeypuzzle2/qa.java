@@ -18,7 +18,7 @@ final class qa implements Runnable {
     private ic field_c;
 
     final static void a(byte param0, gg param1, int param2, int param3) {
-        hh.field_u = param1;
+        AccountNameAvailabilityValidator.field_u = param1;
         wg.field_h = param2;
         if (param0 != -39) {
           return;

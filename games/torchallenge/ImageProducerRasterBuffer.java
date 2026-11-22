@@ -304,7 +304,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             if (null == je.field_c[ea.field_e]) {
               try {
                 var4 = var2.length;
-                i.a(var2, (byte) 108, var4, new File(cg.levelNames[ea.field_e]));
+                AccountNameAvailabilityValidator.a(var2, (byte) 108, var4, new File(cg.levelNames[ea.field_e]));
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref_Exception = (Exception) (Object) decompiledCaughtException;

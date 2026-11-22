@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ArchiveIndex.a(true);
           om.c(5665);
           nq.field_a = false;
-          dq.loadingMessage = mp.field_e;
+          dq.loadingMessage = AccountNameAvailabilityValidator.field_e;
           OpenGlVertexBuffer.a(false, uj.field_b, oi.field_a, te.field_h, cf.field_f);
           if (OpenGlCubeTexture.field_i ||
             CachedArchiveProvider.field_k != null) {

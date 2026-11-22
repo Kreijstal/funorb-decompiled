@@ -289,7 +289,7 @@ abstract class wm {
           ri.field_k.a((byte) 123, uj.field_j);
           ri.field_k.a((byte) 123, aa.field_g);
           ri.field_k.a((byte) 126, tn.field_j);
-          qf.field_f = new ci(0L, dc.field_s, uh.field_v.toUpperCase());
+          qf.field_f = new ci(0L, dc.field_s, AccountNameAvailabilityValidator.field_v.toUpperCase());
           hn.field_d = new ci(0L, PacketBuffer.field_k, vk.field_f.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

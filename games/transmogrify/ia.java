@@ -479,7 +479,7 @@ final class ia extends IntrusiveNode {
                   }
                 } else {
                   MouseInputHandler.field_c.a((byte) 92, var31);
-                  var5Lifetime2 = li.a(8, o.field_o, false);
+                  var5Lifetime2 = AccountNameAvailabilityValidator.a(8, o.field_o, false);
                   for (var6Lifetime4 = 0; var31.length > var6Lifetime4; var6Lifetime4++) {
                     si.newRack.tiles[var6Lifetime4] = NodeHashTableIterator.a(si.newRack, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
                     stackIn_151_0 = si.newRack.tiles[var6Lifetime4];

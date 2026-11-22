@@ -244,7 +244,7 @@ final class hn implements Runnable {
         ej.field_e = ao.a(param3, "frame_bottom", 2993, "commonui");
         vk.field_a = wk.a(param3, 1, "jagex_logo_grey", "commonui");
         bj.field_db = ao.a(param3, "button", 2993, "commonui");
-        uh.field_p = ol.a(param3, "validation", "commonui", (byte) -117);
+        AccountNameAvailabilityValidator.field_p = ol.a(param3, "validation", "commonui", (byte) -117);
         rc.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
         rb.field_b = (lh) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
         tk.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));

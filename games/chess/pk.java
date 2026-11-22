@@ -68,7 +68,7 @@ abstract class pk {
           var4 = var3 - da.field_F * da.field_F;
           param0 = param0 + var4 * (Chess.field_E - param0) / var3;
         }
-        uh.field_m.a(fl.field_x, 640, -2147483648, 120, param0);
+        AccountNameAvailabilityValidator.field_m.a(fl.field_x, 640, -2147483648, 120, param0);
         ga.a(5, 640, 0, 22478, ri.field_g, Chess.field_E - 24, qc.field_e);
     }
 

@@ -33,13 +33,13 @@ abstract class c extends fj {
                 if (cd.field_e == 0) {
                   discarded$2 = this.a(false, false, 10);
                   if (var3 != 0) {
-                    hj.a(2, eg.field_f);
+                    AccountNameAvailabilityValidator.a(2, eg.field_f);
                     sc.a((byte) 20);
                     stackIn_26_1 = (null != gj.field_a);
                     discarded$3 = this.a(stackIn_26_1, false, 10);
                   }
                 } else {
-                  hj.a(2, eg.field_f);
+                  AccountNameAvailabilityValidator.a(2, eg.field_f);
                   if (var3 != 0) {
                     sc.a((byte) 20);
                     stackIn_26_1 = (null != gj.field_a);
@@ -3542,7 +3542,7 @@ abstract class c extends fj {
                 if (lb.field_a.b(4, "")) {
                   c.a(-106, lb.field_a);
                   lb.field_a = null;
-                  hj.b((byte) -40);
+                  AccountNameAvailabilityValidator.b((byte) -40);
                   if (var5 != 0) {
                     lb.field_a = null;
                   }
@@ -3583,7 +3583,7 @@ abstract class c extends fj {
             jk.field_c = null;
             sg.field_a = null;
             qg.a((java.applet.Applet) (this), 18478);
-            hj.b((byte) -77);
+            AccountNameAvailabilityValidator.b((byte) -77);
             g.field_A = 10;
           }
           if (10 == g.field_A) {

@@ -50,7 +50,7 @@ final class hg extends to {
         }
     }
 
-    final static AccountServiceResult a(int param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(int param0, String param1) {
         String stackIn_14_2 = null;
         try {
           if (param0 != 2147483647) {

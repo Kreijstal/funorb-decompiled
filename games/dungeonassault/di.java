@@ -67,7 +67,7 @@ final class di {
               ra.field_c.position = 0;
               nj.field_b = param0[pp.field_J];
             }
-            if (!kh.d((byte) -117)) {
+            if (!AccountNameAvailabilityValidator.d((byte) -117)) {
               return false;
             }
             if (pm.field_p == 0) {

@@ -313,7 +313,7 @@ final class jd {
         gb.d(param5, param2, param1, param3, param4);
     }
 
-    final static AccountServiceResult a(String param0, int param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         Object stackIn_2_0 = null;
@@ -330,7 +330,7 @@ final class jd {
           }
           if (param1 != 8947848) {
             var3 = (String) null;
-            jd.a((String) null, -64);
+            jd.pollAccountNameCheck((String) null, -64);
           }
           if (ui.field_kb == ui.field_ob &&
             param0.equals(IterableNodeHashTable.field_d)) {

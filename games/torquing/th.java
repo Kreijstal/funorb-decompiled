@@ -96,7 +96,7 @@ final class th extends WidgetContainer implements ba, ng {
     }
 
     public final void a(byte param0) {
-        ((il) (this.field_H.a(-10116))).e(-97);
+        ((AccountNameAvailabilityValidator) (this.field_H.a(-10116))).e(-97);
         if (param0 < 89) {
           this.field_I = (vp) null;
         }
@@ -214,7 +214,7 @@ final class th extends WidgetContainer implements ba, ng {
         this.field_B = new lg(NodeHashTableIterator.field_d, (ca) null);
         this.field_E = new lg(dg.field_j, (ca) null);
         this.field_H.field_n = ag.field_d;
-        this.field_H.a(new il(this.field_H), 83);
+        this.field_H.a(new AccountNameAvailabilityValidator(this.field_H), 83);
         this.field_B.field_x = false;
         this.field_B.renderer = (WidgetRenderer) ((Object) new rf());
         this.field_E.renderer = (WidgetRenderer) ((Object) new je());

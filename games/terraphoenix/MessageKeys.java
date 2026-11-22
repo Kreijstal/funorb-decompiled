@@ -2022,7 +2022,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("unpacking_soundeffects", false);
                 if (null != var2) {
-                  ia.field_q = ll.a(param0 ^ 3, var2);
+                  AccountNameAvailabilityValidator.field_q = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("unpacking_music", false);
                 if (null != var2) {
@@ -2884,7 +2884,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("mb_including_gamename", false);
                 if (var2 != null) {
-                  ia.field_p = ll.a(0, var2);
+                  AccountNameAvailabilityValidator.field_p = ll.a(0, var2);
                 }
                 var2 = bc.a("mb_full_access_1", false);
                 if (null != var2) {

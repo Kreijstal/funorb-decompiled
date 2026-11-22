@@ -549,27 +549,27 @@ final class LocalizedStrings extends ma {
           }
           var2Lifetime74 = MouseInputHandler.a(95, "UNIT_NAMES,0");
           if (var2Lifetime74 != null) {
-            i.field_p[0] = re.a(18990, var2Lifetime74);
+            AccountNameAvailabilityValidator.field_p[0] = re.a(18990, var2Lifetime74);
           }
           var2Lifetime75 = MouseInputHandler.a(95, "UNIT_NAMES,1");
           if (var2Lifetime75 != null) {
-            i.field_p[1] = re.a(18990, var2Lifetime75);
+            AccountNameAvailabilityValidator.field_p[1] = re.a(18990, var2Lifetime75);
           }
           var2Lifetime76 = MouseInputHandler.a(95, "UNIT_NAMES,2");
           if (null != var2Lifetime76) {
-            i.field_p[2] = re.a(18990, var2Lifetime76);
+            AccountNameAvailabilityValidator.field_p[2] = re.a(18990, var2Lifetime76);
           }
           var2Lifetime77 = MouseInputHandler.a(95, "UNIT_NAMES,3");
           if (null != var2Lifetime77) {
-            i.field_p[3] = re.a(param1 + 18990, var2Lifetime77);
+            AccountNameAvailabilityValidator.field_p[3] = re.a(param1 + 18990, var2Lifetime77);
           }
           var2Lifetime78 = MouseInputHandler.a(95, "UNIT_NAMES,4");
           if (null != var2Lifetime78) {
-            i.field_p[4] = re.a(18990, var2Lifetime78);
+            AccountNameAvailabilityValidator.field_p[4] = re.a(18990, var2Lifetime78);
           }
           var2Lifetime79 = MouseInputHandler.a(95, "UNIT_NAMES,5");
           if (var2Lifetime79 != null) {
-            i.field_p[5] = re.a(param1 + 18990, var2Lifetime79);
+            AccountNameAvailabilityValidator.field_p[5] = re.a(param1 + 18990, var2Lifetime79);
           }
           var2Lifetime80 = MouseInputHandler.a(95, "COIN_NAMES,0");
           if (var2Lifetime80 != null) {

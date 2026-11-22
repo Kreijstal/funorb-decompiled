@@ -73,7 +73,7 @@ final class kh extends vk implements dc, ga, qk {
         this.field_G.field_p = lh.field_n;
         this.field_K.field_p = SecondaryNodeDequeIterator.field_a;
         this.field_D.field_p = ej.field_q;
-        this.field_J.a(new nd(this.field_J), 0);
+        this.field_J.a(new AccountNameAvailabilityValidator(this.field_J), 0);
         this.field_z.a(new mh(this.field_z), 0);
         this.field_E.a(new cf(this.field_E, this.field_z), 0);
         this.field_L.a(new cc(this.field_L, this.field_J, this.field_z), 0);
@@ -91,7 +91,7 @@ final class kh extends vk implements dc, ga, qk {
         sh dupTemp$1 = new sh(10000536);
         this.field_G.field_o = (de) ((Object) dupTemp$1);
         this.field_L.field_o = (de) ((Object) dupTemp$1);
-        String var2 = fb.a(nd.field_l, -111, new String[]{this.g((byte) -73), this.j(0)});
+        String var2 = fb.a(AccountNameAvailabilityValidator.field_l, -111, new String[]{this.g((byte) -73), this.j(0)});
         int var3 = 20;
         var3 = var3 + this.a(170, ff.field_q, false, var3, this.field_z);
         var3 = var3 + (this.a((byte) 33, var3, ph.field_mb, "", 20, 170, this.field_E) + 5);
@@ -259,7 +259,7 @@ final class kh extends vk implements dc, ga, qk {
 
     public final void a(int param0) {
         boolean discarded$0 = false;
-        ((nd) (this.field_J.a(false))).f(param0 ^ 31293);
+        ((AccountNameAvailabilityValidator) (this.field_J.a(false))).f(param0 ^ 31293);
         if (param0 != -12920) {
           discarded$0 = this.k(26);
         }

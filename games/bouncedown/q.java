@@ -38,11 +38,11 @@ final class q extends lc implements rf, rc {
 
     public final void a(int param0) {
         if (param0 == -3814) {
-          ((mg) (this.field_E.a(true))).i((byte) -115);
+          ((AccountNameAvailabilityValidator) (this.field_E.a(true))).i((byte) -115);
           return;
         }
         field_F = (tg) null;
-        ((mg) (this.field_E.a(true))).i((byte) -115);
+        ((AccountNameAvailabilityValidator) (this.field_E.a(true))).i((byte) -115);
     }
 
     private final int a(int param0, String param1, int param2, String param3, int param4, lk param5) {
@@ -186,7 +186,7 @@ final class q extends lc implements rf, rc {
         this.field_z = new wd(ClientException.field_b, (sk) null);
         this.field_D = new wd(qa.field_g, (sk) null);
         this.field_E.field_q = ej.field_e;
-        this.field_E.a(new mg(this.field_E), true);
+        this.field_E.a(new AccountNameAvailabilityValidator(this.field_E), true);
         this.field_z.field_y = false;
         this.field_z.field_j = (fc) ((Object) new jh());
         this.field_D.field_j = (fc) ((Object) new r());

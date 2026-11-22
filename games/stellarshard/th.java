@@ -10,7 +10,7 @@ final class th {
         if (param0 != 48) {
           field_b = (String) null;
         }
-        stackIn_8_0 = (this == lb.field_o) || (ge.field_m == this) || (this == la.field_O);
+        stackIn_8_0 = (this == lb.field_o) || (AccountNameAvailabilityValidator.field_m == this) || (this == la.field_O);
         return stackIn_8_0;
     }
 

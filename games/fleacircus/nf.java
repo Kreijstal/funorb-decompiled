@@ -86,7 +86,7 @@ final class nf extends gj implements pe, da {
     }
 
     public final void a(int param0) {
-        ((vf) (this.field_I.a((byte) 76))).d(true);
+        ((AccountNameAvailabilityValidator) (this.field_I.a((byte) 76))).d(true);
         if (param0 > -66) {
           UiComponent var3 = (UiComponent) null;
           this.a(26, 17, (UiComponent) null, '﾿');
@@ -116,7 +116,7 @@ final class nf extends gj implements pe, da {
         this.field_J = new bb(e.field_g, (kd) null);
         this.field_L = new bb(gd.field_d, (kd) null);
         this.field_I.field_m = df.field_c;
-        this.field_I.a(true, new vf(this.field_I));
+        this.field_I.a(true, new AccountNameAvailabilityValidator(this.field_I));
         this.field_J.field_D = false;
         this.field_J.field_p = (ComponentLayout) ((Object) new ri());
         this.field_L.field_p = (ComponentLayout) ((Object) new me());

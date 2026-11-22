@@ -75,11 +75,11 @@ final class bj extends da {
         oj.field_b = true;
         t.a(true, 0);
         if (param0 > 71) {
-          kh.field_n = 0;
+          AccountNameAvailabilityValidator.field_n = 0;
           return;
         }
         bj.h(-16);
-        kh.field_n = 0;
+        AccountNameAvailabilityValidator.field_n = 0;
     }
 
     public static void h(int param0) {

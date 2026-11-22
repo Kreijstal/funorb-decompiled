@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends tj {
+final class AccountNameAvailabilityValidator extends tj {
     static bi field_l;
-    private boolean field_o;
+    private boolean nameAvailable;
     static String field_n;
-    private String field_m;
+    private String checkedName;
     static String field_p;
 
-    ol(rl param0) {
+    AccountNameAvailabilityValidator(rl param0) {
         super(param0);
-        this.field_o = false;
+        this.nameAvailable = false;
     }
 
     final sc a(int param0, String param1) {
@@ -30,21 +30,21 @@ final class ol extends tj {
             stackIn_2_0 = ni.field_b;
             return stackIn_2_0;
           }
-          if (!param1.equals(this.field_m)) {
-            var3 = ta.a(250, param1);
+          if (!param1.equals(this.checkedName)) {
+            var3 = ta.pollAccountNameCheck(250, param1);
             if (var3 != null &&
               null == var3.message) {
-              this.field_m = param1;
-              this.field_o = var3.success;
+              this.checkedName = param1;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_8_0 = be.field_q;
               return stackIn_8_0;
             }
           }
           if (param0 != 0) {
-            this.field_o = false;
+            this.nameAvailable = false;
           }
-          if (this.field_o) {
+          if (this.nameAvailable) {
             stackIn_15_0 = rh.field_p;
           } else {
             stackIn_15_0 = ni.field_b;
@@ -85,8 +85,8 @@ final class ol extends tj {
             stackIn_3_0 = var3;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_m)) {
-            var4 = ta.a(250, param1);
+          if (!param1.equals(this.checkedName)) {
+            var4 = ta.pollAccountNameCheck(250, param1);
             if (var4 == null) {
               return null;
             }
@@ -94,10 +94,10 @@ final class ol extends tj {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
-            this.field_m = param1;
-            this.field_o = var4.success;
+            this.checkedName = param1;
+            this.nameAvailable = var4.success;
           }
-          if (!this.field_o) {
+          if (!this.nameAvailable) {
             stackIn_15_0 = nh.field_b;
             return stackIn_15_0;
           }
@@ -122,9 +122,9 @@ final class ol extends tj {
     }
 
     final void e(int param0) {
-        this.field_m = null;
+        this.checkedName = null;
         if (param0 <= 79) {
-          ol.clearStaticReferences(false);
+          AccountNameAvailabilityValidator.clearStaticReferences(false);
         }
     }
 

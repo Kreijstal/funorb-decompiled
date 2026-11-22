@@ -308,7 +308,7 @@ final class hd extends hi {
                             }
                           } else {
                             stackIn_161_0 = (6 != rl.field_c);
-                            n.field_o = stackIn_161_0;
+                            AccountNameAvailabilityValidator.field_o = stackIn_161_0;
                             qj.a(-126, var13Lifetime1, param1, var40);
                           }
                         } else {

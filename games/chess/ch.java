@@ -125,7 +125,7 @@ final class ch extends k {
         vk.field_d = (byte[][]) null;
         if (param0 == 4210752) {
           b.field_c = null;
-          uh.field_r = null;
+          AccountNameAvailabilityValidator.field_r = null;
           be.field_a = null;
           a.field_c = null;
           wm.field_b = null;
@@ -133,7 +133,7 @@ final class ch extends k {
         }
         field_eb = (String) null;
         b.field_c = null;
-        uh.field_r = null;
+        AccountNameAvailabilityValidator.field_r = null;
         be.field_a = null;
         a.field_c = null;
         wm.field_b = null;

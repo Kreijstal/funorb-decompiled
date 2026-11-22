@@ -29,7 +29,7 @@ final class qc {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = ag.a(param0, var3, false);
-              mg.a(true, param0, var3.toString(), true);
+              AccountNameAvailabilityValidator.a(true, param0, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref2 = (Exception) (Object) decompiledCaughtException;

@@ -32,7 +32,7 @@ final class qk extends og implements fd, vd {
         this.field_B = new pc(hb.field_i, (bi) null);
         this.field_C = new pc(GameAppletShell.field_k, (bi) null);
         this.field_G.field_t = ac.field_k;
-        this.field_G.a(true, new no(this.field_G));
+        this.field_G.a(true, new AccountNameAvailabilityValidator(this.field_G));
         this.field_B.field_x = false;
         this.field_B.field_i = (wo) ((Object) new ve());
         this.field_C.field_i = (wo) ((Object) new ok());
@@ -441,7 +441,7 @@ final class qk extends og implements fd, vd {
         if (param0 != 20) {
           return;
         }
-        ((no) (this.field_G.a(param0 ^ -35))).d(-31626);
+        ((AccountNameAvailabilityValidator) (this.field_G.a(param0 ^ -35))).d(-31626);
     }
 
     static {

@@ -50,7 +50,7 @@ final class sb {
             ua.field_a = param5;
             vl.field_a = param1;
             fa.field_a = param0;
-            ol.field_n = param10;
+            AccountNameAvailabilityValidator.field_n = param10;
             bl.field_b = param6;
             ig.field_b = param7;
             mg.field_y = param2;

@@ -104,7 +104,7 @@ final class mj extends WidgetContainer implements md, oi, rf {
     }
 
     public final void a(int param0) {
-        ((ge) (this.field_N.a((byte) 56))).a(false);
+        ((AccountNameAvailabilityValidator) (this.field_N.a((byte) 56))).a(false);
         int var2 = -120 % ((param0 - 63) / 60);
     }
 
@@ -413,7 +413,7 @@ final class mj extends WidgetContainer implements md, oi, rf {
         this.field_B.field_x = bi.field_t;
         this.field_C.field_x = si.field_B;
         this.field_D.field_x = FrameTimer.field_c;
-        this.field_N.a((byte) -2, new ge(this.field_N));
+        this.field_N.a((byte) -2, new AccountNameAvailabilityValidator(this.field_N));
         this.field_H.a((byte) -2, new qb(this.field_H));
         this.field_K.a((byte) -2, new ef(this.field_K, this.field_H));
         this.field_G.a((byte) -2, new lc(this.field_G, this.field_N, this.field_H));

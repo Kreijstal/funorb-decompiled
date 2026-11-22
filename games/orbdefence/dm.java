@@ -222,7 +222,7 @@ abstract class dm {
             var10 = param1;
             var11 = -75 % ((-46 - param6) / 49);
             for (var12 = param5; param4 > var12; var12++) {
-              var13 = bc.field_o[var12];
+              var13 = AccountNameAvailabilityValidator.field_o[var12];
               if (!param2) {
                 stackIn_23_0 = rh.field_c[var13];
               } else {
@@ -230,13 +230,13 @@ abstract class dm {
               }
               var14 = stackIn_23_0;
               if (var14 > var7_int) {
-                bc.field_o[var12] = bc.field_o[var8];
+                AccountNameAvailabilityValidator.field_o[var12] = AccountNameAvailabilityValidator.field_o[var8];
                 if (var14 < var9) {
                   var9 = var14;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                bc.field_o[incrementValue$0] = var13;
+                AccountNameAvailabilityValidator.field_o[incrementValue$0] = var13;
               } else {
                 if (var10 < var14) {
                   var10 = var14;
@@ -249,11 +249,11 @@ abstract class dm {
           }
           for (var7_intLifetime1 = -1 + param4; param5 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = bc.field_o[var8Lifetime1];
-              var10Lifetime1 = bc.field_o[1 + var8Lifetime1];
+              var9Lifetime1 = AccountNameAvailabilityValidator.field_o[var8Lifetime1];
+              var10Lifetime1 = AccountNameAvailabilityValidator.field_o[1 + var8Lifetime1];
               if (hl.a(param2, -122, var10Lifetime1, var9Lifetime1)) {
-                bc.field_o[var8Lifetime1] = var10Lifetime1;
-                bc.field_o[1 + var8Lifetime1] = var9Lifetime1;
+                AccountNameAvailabilityValidator.field_o[var8Lifetime1] = var10Lifetime1;
+                AccountNameAvailabilityValidator.field_o[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends al {
+final class AccountNameAvailabilityValidator extends al {
     static int[] field_j;
-    private String field_m;
+    private String checkedName;
     static String field_l;
-    private boolean field_o;
+    private boolean nameAvailable;
     static String field_k;
     static int field_n;
 
@@ -27,25 +27,25 @@ final class mg extends al {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 54) {
-            this.field_o = true;
+            this.nameAvailable = true;
           }
           var4 = (CharSequence) ((Object) param0);
           if (!fh.a((byte) 73, var4)) {
             stackIn_5_0 = a.field_e;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_m)) {
-            var3 = pd.a(1059, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = pd.pollAccountNameCheck(1059, param0);
             if (var3 != null &&
               var3.message == null) {
-              this.field_o = var3.success;
-              this.field_m = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               stackIn_12_0 = mi.field_c;
               return stackIn_12_0;
             }
           }
-          if (this.field_o) {
+          if (this.nameAvailable) {
             stackIn_17_0 = mc.field_a;
           } else {
             stackIn_17_0 = a.field_e;
@@ -78,7 +78,7 @@ final class mg extends al {
           var5 = oc.field_a;
           var1 = var5;
           if (param0 != -121) {
-            mg.h((byte) -95);
+            AccountNameAvailabilityValidator.h((byte) -95);
           }
           var2 = 0;
           var3 = var5.length;
@@ -114,7 +114,7 @@ final class mg extends al {
           try {
             if (!param0) {
               var5 = (String) null;
-              mg.a((byte) 33, (String) null);
+              AccountNameAvailabilityValidator.a((byte) 33, (String) null);
             }
             if (si.field_a.startsWith("win") &&
               lc.a(-29935, param2)) {
@@ -173,23 +173,23 @@ final class mg extends al {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_m)) {
-            var4 = pd.a(1059, param0);
+          if (!param0.equals(this.checkedName)) {
+            var4 = pd.pollAccountNameCheck(1059, param0);
             if (var4 == null) {
               return null;
             }
             if (null != var4.message) {
               return null;
             }
-            this.field_m = param0;
-            this.field_o = var4.success;
+            this.checkedName = param0;
+            this.nameAvailable = var4.success;
           }
-          if (!this.field_o) {
+          if (!this.nameAvailable) {
             stackIn_13_0 = ma.field_n;
             return stackIn_13_0;
           }
           if (param1 != -114) {
-            mg.d(36);
+            AccountNameAvailabilityValidator.d(36);
           }
           stackIn_17_0 = ne.field_q;
           return stackIn_17_0;
@@ -246,7 +246,7 @@ final class mg extends al {
     final static void d(int param0) {
         la.a(640, true);
         if (param0 != 30432) {
-          mg.h((byte) -25);
+          AccountNameAvailabilityValidator.h((byte) -25);
         }
     }
 
@@ -254,12 +254,12 @@ final class mg extends al {
         if (param0 >= -106) {
           return;
         }
-        this.field_m = null;
+        this.checkedName = null;
     }
 
-    mg(ba param0) {
+    AccountNameAvailabilityValidator(ba param0) {
         super(param0);
-        this.field_o = false;
+        this.nameAvailable = false;
     }
 
     static {

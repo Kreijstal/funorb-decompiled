@@ -149,7 +149,7 @@ final class ei extends dg {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 114 % ((param1 - 64) / 58);
-          stackIn_1_0 = ge.a((byte) -50, param0, 0, param0.length);
+          stackIn_1_0 = AccountNameAvailabilityValidator.a((byte) -50, param0, 0, param0.length);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

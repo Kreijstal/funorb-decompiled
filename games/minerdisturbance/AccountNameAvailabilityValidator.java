@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends cb {
-    private boolean field_k;
+final class AccountNameAvailabilityValidator extends cb {
+    private boolean nameAvailable;
     static int field_j;
-    private String field_i;
+    private String checkedName;
 
     final static boolean f(int param0) {
         if (param0 != -9202) {
           String var2 = (String) null;
-          qi.a((String) null, -46, (ik) null, true, -5, (String) null, (String) null);
+          AccountNameAvailabilityValidator.a((String) null, -46, (ik) null, true, -5, (String) null, (String) null);
           if (kj.a(false)) {
             return false;
           }
@@ -93,9 +93,9 @@ final class qi extends cb {
         }
     }
 
-    qi(ui param0) {
+    AccountNameAvailabilityValidator(ui param0) {
         super(param0);
-        this.field_k = false;
+        this.nameAvailable = false;
     }
 
     final ag a(String param0, int param1) {
@@ -116,12 +116,12 @@ final class qi extends cb {
             stackIn_2_0 = fg.field_d;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_i)) {
-            var3 = rf.a((byte) -75, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = rf.pollAccountNameCheck((byte) -75, param0);
             if (var3 != null &&
               var3.message == null) {
-              this.field_i = param0;
-              this.field_k = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_9_0 = bm.field_o;
               return stackIn_9_0;
@@ -131,7 +131,7 @@ final class qi extends cb {
             stackIn_13_0 = (ag) null;
             return stackIn_13_0;
           }
-          if (this.field_k) {
+          if (this.nameAvailable) {
             stackIn_17_0 = sc.field_a;
           } else {
             stackIn_17_0 = fg.field_d;
@@ -153,11 +153,11 @@ final class qi extends cb {
 
     final void b(byte param0) {
         if (param0 >= -30) {
-          this.field_k = false;
-          this.field_i = null;
+          this.nameAvailable = false;
+          this.checkedName = null;
           return;
         }
-        this.field_i = null;
+        this.checkedName = null;
     }
 
     final String a(byte param0, String param1) {
@@ -181,8 +181,8 @@ final class qi extends cb {
             stackIn_2_0 = var3;
             return stackIn_2_0;
           }
-          if (!param1.equals(this.field_i)) {
-            var5 = rf.a((byte) -75, param1);
+          if (!param1.equals(this.checkedName)) {
+            var5 = rf.pollAccountNameCheck((byte) -75, param1);
             if (var5 == null) {
               return null;
             }
@@ -190,10 +190,10 @@ final class qi extends cb {
               stackIn_8_0 = null;
               return (String) (stackIn_8_0);
             }
-            this.field_k = var5.success;
-            this.field_i = param1;
+            this.nameAvailable = var5.success;
+            this.checkedName = param1;
           }
-          if (this.field_k) {
+          if (this.nameAvailable) {
             return lg.field_a;
           }
           stackIn_13_0 = hm.field_L;

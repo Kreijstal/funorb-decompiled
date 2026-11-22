@@ -77,7 +77,7 @@ final class kl extends g implements cl, qh, wi {
     }
 
     public final void a(boolean param0) {
-        ((hj) (this.field_D.a(109))).g(102);
+        ((AccountNameAvailabilityValidator) (this.field_D.a(109))).g(102);
         if (!param0) {
           kl.b(-18, 20, -112, 46, -45);
         }
@@ -510,7 +510,7 @@ final class kl extends g implements cl, qh, wi {
         this.field_K.field_n = ja.field_c;
         this.field_I.field_n = cc.field_b;
         this.field_N.field_n = nc.field_c;
-        this.field_D.a((byte) 68, new hj(this.field_D));
+        this.field_D.a((byte) 68, new AccountNameAvailabilityValidator(this.field_D));
         this.field_M.a((byte) 68, new rd(this.field_M));
         this.field_J.a((byte) 68, new p(this.field_J, this.field_M));
         this.field_G.a((byte) 68, new mk(this.field_G, this.field_D, this.field_M));

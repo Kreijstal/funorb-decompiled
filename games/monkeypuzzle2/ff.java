@@ -12,7 +12,7 @@ final class ff implements Runnable {
 
     final static void a(ta param0, Sprite[] param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, int param8, boolean param9, int param10, int param11, int param12, int param13, int param14, ta param15) {
         try {
-          gj.a(param12, wg.field_h, lc.field_e, param2, qj.field_D, rb.field_cb, param10, ki.field_s, param7, param15, param4, param13, param0, param14, hh.field_u, param2 ^ -386, param3, param11, param6, new gg(param1), new gg(param5));
+          gj.a(param12, wg.field_h, lc.field_e, param2, qj.field_D, rb.field_cb, param10, ki.field_s, param7, param15, param4, param13, param0, param14, AccountNameAvailabilityValidator.field_u, param2 ^ -386, param3, param11, param6, new gg(param1), new gg(param5));
           jk.a(-97, param9, param8);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ff.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + (param15 != null ? "{...}" : "null") + ')');
@@ -64,7 +64,7 @@ final class ff implements Runnable {
           if (fg.field_a < (480 - param0) / 10 &&
             20 > fg.field_a) {
             ul.field_O[fg.field_a] = pf.a((byte) -110, 3);
-            hh.field_r[fg.field_a] = 0;
+            AccountNameAvailabilityValidator.field_r[fg.field_a] = 0;
             n.field_d[fg.field_a][0] = (float)(pf.a((byte) 60, 3) - 1);
             n.field_d[fg.field_a][1] = -0.5f;
             pl.field_f[fg.field_a][0] = (float)(pf.a((byte) -88, 480) + 80);
@@ -79,9 +79,9 @@ final class ff implements Runnable {
           }
           for (var3 = 0; var3 < fg.field_a; var3++) {
             if (var2_int != 0) {
-              hh.field_r[var3] = hh.field_r[var3] + 1;
-              if (hh.field_r[var3] == 4) {
-                hh.field_r[var3] = 0;
+              AccountNameAvailabilityValidator.field_r[var3] = AccountNameAvailabilityValidator.field_r[var3] + 1;
+              if (AccountNameAvailabilityValidator.field_r[var3] == 4) {
+                AccountNameAvailabilityValidator.field_r[var3] = 0;
               }
             }
             dupTemp$0 = pl.field_f[var3];

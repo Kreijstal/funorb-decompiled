@@ -271,7 +271,7 @@ final class db extends qe {
               continue;
             }
           } else {
-            if (kh.field_s) {
+            if (AccountNameAvailabilityValidator.field_s) {
               decompiledFrameRemainder0 = !(param0);
               if (decompiledFrameRemainder0) {
                 this.b((byte) -50);

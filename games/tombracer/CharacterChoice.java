@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CharacterChoice implements dv {
+final class CharacterChoice implements BitDecodableMarker {
     private Player player;
     static SpriteData field_c;
     static String field_a;

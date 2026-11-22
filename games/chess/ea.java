@@ -104,18 +104,18 @@ final class ea extends se {
           if (in.field_g != var6 &&
             var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
-              var19 = uh.field_p[2];
+              var19 = AccountNameAvailabilityValidator.field_p[2];
               var19.d(var9, -(var19.field_t >> 1) + var10, 256);
               return;
             }
             if (oa.field_a != var6) {
               return;
             }
-            var20 = uh.field_p[1];
+            var20 = AccountNameAvailabilityValidator.field_p[1];
             var20.d(var9, -(var20.field_t >> 1) + var10, 256);
             return;
           }
-          var21 = uh.field_p[0];
+          var21 = AccountNameAvailabilityValidator.field_p[0];
           var11 = var21.field_v << 1;
           var12 = var21.field_u << 1;
           if (null == this.field_T) {
@@ -154,18 +154,18 @@ final class ea extends se {
           if (in.field_g != var6 &&
             var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
-              var24 = uh.field_p[2];
+              var24 = AccountNameAvailabilityValidator.field_p[2];
               var24.d(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
             if (oa.field_a != var6) {
               return;
             }
-            var25 = uh.field_p[1];
+            var25 = AccountNameAvailabilityValidator.field_p[1];
             var25.d(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
             return;
           }
-          var26 = uh.field_p[0];
+          var26 = AccountNameAvailabilityValidator.field_p[0];
           var11Lifetime1 = var26.field_v << 1;
           var12Lifetime1 = var26.field_u << 1;
           if (null == this.field_T) {
@@ -204,18 +204,18 @@ final class ea extends se {
           if (in.field_g != var6Lifetime1 &&
             var6Lifetime1 != MouseWheelInput.field_d) {
             if (var6Lifetime1 == qk.field_b) {
-              var40 = uh.field_p[2];
+              var40 = AccountNameAvailabilityValidator.field_p[2];
               var40.d(var9Lifetime2, -(var40.field_t >> 1) + var10Lifetime2, 256);
               return;
             }
             if (oa.field_a != var6Lifetime1) {
               return;
             }
-            var41 = uh.field_p[1];
+            var41 = AccountNameAvailabilityValidator.field_p[1];
             var41.d(var9Lifetime2, -(var41.field_t >> 1) + var10Lifetime2, 256);
             return;
           }
-          var42 = uh.field_p[0];
+          var42 = AccountNameAvailabilityValidator.field_p[0];
           var11Lifetime2 = var42.field_v << 1;
           var12Lifetime2 = var42.field_u << 1;
           if (null != this.field_T &&
@@ -248,7 +248,7 @@ final class ea extends se {
         var9Lifetime3 = param3 + this.field_u;
         var10Lifetime3 = var45.a(0, param0, (mf) (this)) + (var45.a((mf) (this), -23159).a((byte) 34) >> 1);
         if (in.field_g == var6Lifetime2) {
-          var29 = uh.field_p[0];
+          var29 = AccountNameAvailabilityValidator.field_p[0];
           var16 = var29;
           var11Lifetime3 = var29.field_v << 1;
           var12Lifetime3 = var29.field_u << 1;
@@ -276,18 +276,18 @@ final class ea extends se {
         }
         if (var6Lifetime2 != MouseWheelInput.field_d) {
           if (var6Lifetime2 == qk.field_b) {
-            var37 = uh.field_p[2];
+            var37 = AccountNameAvailabilityValidator.field_p[2];
             var37.d(var9Lifetime3, -(var37.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           if (oa.field_a != var6Lifetime2) {
             return;
           }
-          var38 = uh.field_p[1];
+          var38 = AccountNameAvailabilityValidator.field_p[1];
           var38.d(var9Lifetime3, -(var38.field_t >> 1) + var10Lifetime3, 256);
           return;
         }
-        var31 = uh.field_p[0];
+        var31 = AccountNameAvailabilityValidator.field_p[0];
         var16Lifetime1 = var31;
         var11Lifetime4 = var31.field_v << 1;
         var12Lifetime4 = var31.field_u << 1;

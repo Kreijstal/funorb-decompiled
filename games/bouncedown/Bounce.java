@@ -305,7 +305,7 @@ public final class Bounce extends GameClient {
           jc.a(true);
           kg.clearStaticReferences((byte) -64);
           bh.clearStaticReferences((byte) 120);
-          mg.clearStaticReferences(0);
+          AccountNameAvailabilityValidator.clearStaticReferences(0);
           bf.clearStaticReferences(0);
           nj.d(22382);
           cl.clearStaticReferences(false);
@@ -428,7 +428,7 @@ public final class Bounce extends GameClient {
           }
           if (fb.field_nb) {
             if (vc.d((byte) -18)) {
-              mg.d(30432);
+              AccountNameAvailabilityValidator.d(30432);
             }
             fb.field_nb = false;
           }
@@ -946,7 +946,7 @@ public final class Bounce extends GameClient {
                   ch.field_h.requestFocus();
                 }
                 if (var2_int == 3) {
-                  mg.d(30432);
+                  AccountNameAvailabilityValidator.d(30432);
                 }
                 if (4 == var2_int) {
                   nl.a((byte) 122);
@@ -1226,7 +1226,7 @@ public final class Bounce extends GameClient {
             }
             if (va.field_c != null && (!va.field_c.c(param1 - 3244) ||
               !va.field_c.a((byte) -46))) {
-              hg.a(fb.a((byte) -92, mg.field_k, vc.field_B, va.field_c, ""), param1 ^ -3159, 80.0f);
+              hg.a(fb.a((byte) -92, AccountNameAvailabilityValidator.field_k, vc.field_B, va.field_c, ""), param1 ^ -3159, 80.0f);
               return;
             }
             if (!param0) {

@@ -126,7 +126,7 @@ final class ScoreSubmission extends IntrusiveNode {
           for (int var2Lifetime19 = 0; var2Lifetime19 < kb.scoreDigitSpriteData.length; var2Lifetime19++) {
             in.scoreDigitSprites[var2Lifetime19] = var6.createSprite(kb.scoreDigitSpriteData[var2Lifetime19], false);
           }
-          mp.titleImage = var6.createSprite(BoundedRandomAccessFile.titleImageData, false);
+          AccountNameAvailabilityValidator.titleImage = var6.createSprite(BoundedRandomAccessFile.titleImageData, false);
           dc.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
           se.bigGameFont = var6.createFont(kn.bigFontMetrics, q.bigFontSpriteData, true);
           kn.titleFont = var6.createFont(ImageProducerRasterBuffer.titleFontMetrics, nc.titleFontSpriteData, true);

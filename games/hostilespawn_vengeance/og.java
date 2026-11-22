@@ -114,10 +114,10 @@ final class og {
         RuntimeException var2 = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (ne) (n.field_v.g(-97));
+          var4 = (ne) (AccountNameAvailabilityValidator.field_v.g(-97));
           while (var4 != null) {
             bl.a(1, var4, param1);
-            var4 = (ne) (n.field_v.a(12684));
+            var4 = (ne) (AccountNameAvailabilityValidator.field_v.a(12684));
           }
           if (param0 != -22248) {
             og.a(-73, 61);

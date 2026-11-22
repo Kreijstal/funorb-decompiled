@@ -87,7 +87,7 @@ final class un {
           }
         }
         var3 = stackIn_10_0;
-        wb.f(0, param0 + uh.field_m.field_wb, 640, 480, 1);
+        wb.f(0, param0 + AccountNameAvailabilityValidator.field_m.field_wb, 640, 480, 1);
         stackIn_12_0 = qh.field_b;
         stackIn_12_1 = qh.field_b;
         stackIn_13_2 = (var3 == 0) ? -2147483647 : -1;
@@ -658,7 +658,7 @@ final class un {
           this.d(125);
         }
         int var3 = 16 % ((-38 - param0) / 55);
-        un var2 = uh.i(23156);
+        un var2 = AccountNameAvailabilityValidator.i(23156);
         if (var2 == null) {
           qk.field_h = 10;
         } else {
@@ -735,7 +735,7 @@ final class un {
           }
           var5 = 0.05000000074505806f * (-0.5f + ((float)var3 - a.field_h));
           a.field_h = a.field_h + var5;
-          qh.field_b.field_k = -2 - qh.field_b.field_c + uh.field_m.field_wb;
+          qh.field_b.field_k = -2 - qh.field_b.field_c + AccountNameAvailabilityValidator.field_m.field_wb;
           qh.field_b.field_i = 5;
           qh.field_b.field_l = qh.field_b.field_c + (int)a.field_h;
         }

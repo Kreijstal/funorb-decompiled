@@ -57,7 +57,7 @@ final class wf extends IntrusiveNode {
 
     final static void c(int param0) {
         dg.field_d = false;
-        ia.field_r = null;
+        AccountNameAvailabilityValidator.field_r = null;
         kj.field_c = null;
         if (param0 != 25501) {
           return;

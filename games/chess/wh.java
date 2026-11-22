@@ -22,7 +22,7 @@ final class wh {
         int var2_intLifetime1;
         var3 = Chess.field_G;
         try {
-          var2_int = uh.field_l;
+          var2_int = AccountNameAvailabilityValidator.field_l;
           if (param1.field_k != 2) {
             if (4 != param1.field_k) {
               if (~gb.field_t == ~param1.field_m) {
@@ -42,7 +42,7 @@ final class wh {
                 var2_intLifetime1 = kg.field_P[param1.field_k];
               }
             } else {
-              var2_intLifetime1 = uh.field_l;
+              var2_intLifetime1 = AccountNameAvailabilityValidator.field_l;
             }
           }
           if (param0 != -1) {

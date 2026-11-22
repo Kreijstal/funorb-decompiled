@@ -772,8 +772,8 @@ public final class Chess extends gb {
         var3 = qm.field_g;
         if (var3 == 1) {
           for (var3 = 1; var3 < var2Lifetime1; var3++) {
-            if (null != uh.field_u[var3]) {
-              this.a(2, "halloween_backgrounds", uh.field_u[var3], true, var3, uh.field_w[var3]);
+            if (null != AccountNameAvailabilityValidator.field_u[var3]) {
+              this.a(2, "halloween_backgrounds", AccountNameAvailabilityValidator.field_u[var3], true, var3, AccountNameAvailabilityValidator.field_w[var3]);
             }
             if (null != tf.field_l[var3]) {
               qe.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
@@ -1358,7 +1358,7 @@ public final class Chess extends gb {
             ji.field_S = ji.field_S + 1;
             if (ji.field_S == 16) {
               if (ga.a(true)) {
-                uh.j(-3750);
+                AccountNameAvailabilityValidator.j(-3750);
               } else {
                 db.h(12082);
               }
@@ -1821,7 +1821,7 @@ public final class Chess extends gb {
         om.c((byte) -126);
         ai.clearStaticReferences(-125);
         fj.a((byte) 126);
-        uh.k(16);
+        AccountNameAvailabilityValidator.k(16);
         tj.i(-19374);
         db.clearStaticReferences(true);
         qi.b((byte) 79);

@@ -28,7 +28,7 @@ final class ta {
         field_b = null;
     }
 
-    final static AccountServiceResult a(boolean param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(boolean param0, String param1) {
         RuntimeException var2 = null;
         AccountServiceResult stackIn_5_0 = null;
         AccountServiceResult stackIn_9_0 = null;

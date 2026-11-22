@@ -196,13 +196,13 @@ final class nb {
           if (qf.field_a != null && (param0 < 0 ||
             qc.field_d == aj.field_c)) {
             if (param1 == ~dk.field_s.position &&
-              ol.a(param1 + 257) > (i.field_q + 10000L)) {
+              ol.a(param1 + 257) > (AccountNameAvailabilityValidator.field_q + 10000L)) {
               dk.field_s.d(25, param0);
             }
             if (0 < dk.field_s.position) {
               try {
                 qf.field_a.a(dk.field_s.position, 0, (byte) 113, dk.field_s.payload);
-                i.field_q = ol.a(256);
+                AccountNameAvailabilityValidator.field_q = ol.a(256);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

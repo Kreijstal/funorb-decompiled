@@ -1568,7 +1568,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_agreeterms", param0 + 23);
                 if (var2 != null) {
-                  nd.field_l = DualLinkNode.a(112, var2);
+                  AccountNameAvailabilityValidator.field_l = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("create_u13terms", param0 - 158);
                 if (var2 != null) {

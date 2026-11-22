@@ -191,8 +191,8 @@ final class ae {
         var9 = DungeonAssault.field_K;
         try {
           nk.field_Hb = true;
-          kh.field_t = param1;
-          if (kh.field_t == 0) {
+          AccountNameAvailabilityValidator.field_t = param1;
+          if (AccountNameAvailabilityValidator.field_t == 0) {
             var3_int = KeyboardInput.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, ql.field_k);
             var4 = var3_int + 3;
             go.field_A = new String[var4];
@@ -211,7 +211,7 @@ final class ae {
             go.field_A[-1 + var4] = sp.field_b;
             to.field_c[var4 - 1] = 1;
             n.field_g[1] = 5;
-          } else if (kh.field_t == 1) {
+          } else if (AccountNameAvailabilityValidator.field_t == 1) {
             var3_int = KeyboardInput.a(n.field_c, (byte) -114, qj.field_e, wa.field_l, ql.field_k);
             var4 = var3_int + 2;
             to.field_c = new int[var4];
@@ -227,8 +227,8 @@ final class ae {
             go.field_A[var4 - 1] = sp.field_b;
             to.field_c[var4 - 1] = 0;
             n.field_g[0] = 5;
-          } else if (kh.field_t != 2) {
-            if (kh.field_t == 3) {
+          } else if (AccountNameAvailabilityValidator.field_t != 2) {
+            if (AccountNameAvailabilityValidator.field_t == 3) {
               if (i.field_A.field_j) {
                 var3_int = KeyboardInput.a(n.field_c, (byte) 120, qj.field_e, wa.field_l, fg.field_g);
               } else {
@@ -248,7 +248,7 @@ final class ae {
               go.field_A[-1 + var4] = sp.field_b;
               to.field_c[-1 + var4] = 0;
               n.field_g[0] = 5;
-            } else if (kh.field_t == 4) {
+            } else if (AccountNameAvailabilityValidator.field_t == 4) {
               var3_int = KeyboardInput.a(n.field_c, (byte) 101, qj.field_e, wa.field_l, jg.field_b);
               var4 = var3_int + 2;
               to.field_c = new int[var4];
@@ -265,7 +265,7 @@ final class ae {
               to.field_c[var4 - 1] = 0;
               n.field_g[0] = 5;
             } else {
-              if (kh.field_t != 5) {
+              if (AccountNameAvailabilityValidator.field_t != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = KeyboardInput.a(n.field_c, (byte) -68, qj.field_e, wa.field_l, id.field_g);
@@ -389,7 +389,7 @@ final class ae {
             }
             var4Lifetime1++;
           }
-          if (kh.field_t == 2) {
+          if (AccountNameAvailabilityValidator.field_t == 2) {
             var10 = sn.field_a;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -441,7 +441,7 @@ final class ae {
             }
             var4Lifetime3++;
           }
-          if (kh.field_t == 2) {
+          if (AccountNameAvailabilityValidator.field_t == 2) {
             d.field_g.a(false, param0, -1, -1);
           } else {
             d.field_g.a(false, param0, 0, ab.a(-776726687, hj.field_S, eh.field_h));

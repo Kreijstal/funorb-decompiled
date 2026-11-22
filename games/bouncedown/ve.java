@@ -91,26 +91,26 @@ final class ve {
               var19 = param1 + var8 * param0 / (var8 + var9);
               var18 = param1 + var8 * param0 / (var8 + var9);
             }
-            na.b(mg.field_j);
+            na.b(AccountNameAvailabilityValidator.field_j);
             if (param2[0] != null) {
               na.c(param5, param1, var16, var18);
               param2[0].a(param5, param1);
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[2]) {
               na.c(var17, param1, var10, var18);
               param2[2].a(var13, param1);
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[6] != null) {
               na.c(param5, var19, var16, var11);
               param2[6].a(param5, var15);
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[8]) {
               na.c(var17, var19, var10, var11);
               param2[8].a(var13, var15);
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[1] != null &&
               0 != param2[1].field_t) {
@@ -118,7 +118,7 @@ final class ve {
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_t) {
                 param2[1].a(var20, param1);
               }
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[7] != null &&
               param2[7].field_t != 0) {
@@ -126,7 +126,7 @@ final class ve {
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param2[7].field_t) {
                 param2[7].a(var20Lifetime1, var15);
               }
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[3] &&
               param2[3].field_o != 0) {
@@ -134,7 +134,7 @@ final class ve {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_o) {
                 param2[3].a(param5, var20Lifetime2);
               }
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[5] != null &&
               param2[5].field_o != 0) {
@@ -142,7 +142,7 @@ final class ve {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_o) {
                 param2[5].a(var13, var20Lifetime3);
               }
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[4] &&
               param2[4].field_t != 0 &&
@@ -153,7 +153,7 @@ final class ve {
                   param2[4].a(var21, var20Lifetime4);
                 }
               }
-              na.a(mg.field_j);
+              na.a(AccountNameAvailabilityValidator.field_j);
               return;
             }
             return;

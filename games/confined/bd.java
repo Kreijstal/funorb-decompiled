@@ -31,10 +31,10 @@ final class bd {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          qg.field_h = param0.readUnsignedShort((byte) 25) << 5;
+          AccountNameAvailabilityValidator.field_h = param0.readUnsignedShort((byte) 25) << 5;
           var2_int = param0.readUnsignedByte(32);
           eh.field_R = (7 & var2_int) << 18;
-          qg.field_h = qg.field_h + (var2_int >> 3);
+          AccountNameAvailabilityValidator.field_h = AccountNameAvailabilityValidator.field_h + (var2_int >> 3);
           eh.field_R = eh.field_R + (param0.readUnsignedShort((byte) 25) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(32);
           eh.field_R = eh.field_R + (var2_intLifetime1 >> 6);

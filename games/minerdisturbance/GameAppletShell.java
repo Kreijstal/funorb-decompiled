@@ -521,12 +521,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             boolean decompiledSharedTail0 = (null != nd.field_f &&
               null == hd.field_h);
             if (!decompiledSharedTail0) {
-              ef.field_c.setLocation(tg.field_f, qi.field_j);
+              ef.field_c.setLocation(tg.field_f, AccountNameAvailabilityValidator.field_j);
               decompiledSharedTail0 = (MinerDisturbance.field_ab != 0);
             }
             if (decompiledSharedTail0) {
               var6 = nd.field_f.getInsets();
-              ef.field_c.setLocation(var6.left + tg.field_f, var6.top + qi.field_j);
+              ef.field_c.setLocation(var6.left + tg.field_f, var6.top + AccountNameAvailabilityValidator.field_j);
             }
           }
           this.b(false);
@@ -658,12 +658,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ef.field_c.setVisible(true);
           if (var2 == nd.field_f) {
             var4 = nd.field_f.getInsets();
-            ef.field_c.setLocation(var4.left + tg.field_f, var4.top + qi.field_j);
+            ef.field_c.setLocation(var4.left + tg.field_f, var4.top + AccountNameAvailabilityValidator.field_j);
             if (var5 != 0) {
-              ef.field_c.setLocation(tg.field_f, qi.field_j);
+              ef.field_c.setLocation(tg.field_f, AccountNameAvailabilityValidator.field_j);
             }
           } else {
-            ef.field_c.setLocation(tg.field_f, qi.field_j);
+            ef.field_c.setLocation(tg.field_f, AccountNameAvailabilityValidator.field_j);
           }
           ef.field_c.addFocusListener((java.awt.event.FocusListener) (this));
           ef.field_c.requestFocus();
@@ -821,7 +821,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               nk.field_x = param0;
               nf.field_h = param0;
               tg.field_f = 0;
-              qi.field_j = 0;
+              AccountNameAvailabilityValidator.field_j = 0;
               if (param3 != 3) {
                 field_m = (Sprite) null;
               }

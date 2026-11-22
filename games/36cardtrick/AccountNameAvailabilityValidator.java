@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends cg {
-    private boolean field_m;
+final class AccountNameAvailabilityValidator extends cg {
+    private boolean nameAvailable;
     static int field_l;
     static long[] field_o;
     static long[] field_n;
-    private String field_p;
+    private String checkedName;
     static long[][] field_k;
     static int field_j;
 
@@ -109,7 +109,7 @@ final class hj extends cg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            hj.h(107);
+            AccountNameAvailabilityValidator.h(107);
           }
           if (!param1) {
             stackIn_6_0 = mb.field_a.a(param2);
@@ -131,13 +131,13 @@ final class hj extends cg {
         }
     }
 
-    hj(hf param0) {
+    AccountNameAvailabilityValidator(hf param0) {
         super(param0);
-        this.field_m = false;
+        this.nameAvailable = false;
     }
 
     final void g(int param0) {
-        this.field_p = null;
+        this.checkedName = null;
         if (param0 <= 70) {
           field_n = (long[]) null;
         }
@@ -161,20 +161,20 @@ final class hj extends cg {
             return stackIn_3_0;
           }
           if (param1 >= -58) {
-            hj.a(-78, 71);
+            AccountNameAvailabilityValidator.a(-78, 71);
           }
-          if (!param0.equals(this.field_p)) {
-            var3 = mh.a(-63, param0);
+          if (!param0.equals(this.checkedName)) {
+            var3 = mh.pollAccountNameCheck(-63, param0);
             if (var3 != null &&
               null == var3.message) {
-              this.field_m = var3.success;
-              this.field_p = param0;
+              this.nameAvailable = var3.success;
+              this.checkedName = param0;
             } else {
               stackIn_12_0 = a.field_n;
               return stackIn_12_0;
             }
           }
-          if (this.field_m) {
+          if (this.nameAvailable) {
             stackIn_17_0 = ii.field_e;
           } else {
             stackIn_17_0 = pe.field_b;
@@ -208,7 +208,7 @@ final class hj extends cg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            this.field_m = false;
+            this.nameAvailable = false;
           }
           var5 = (CharSequence) ((Object) param0);
           var3 = hf.a(var5, (byte) 36);
@@ -216,18 +216,18 @@ final class hj extends cg {
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_p)) {
-            var4 = mh.a(-63, param0);
+          if (!param0.equals(this.checkedName)) {
+            var4 = mh.pollAccountNameCheck(-63, param0);
             if (var4 == null) {
               return null;
             }
             if (null != var4.message) {
               return null;
             }
-            this.field_m = var4.success;
-            this.field_p = param0;
+            this.nameAvailable = var4.success;
+            this.checkedName = param0;
           }
-          if (this.field_m) {
+          if (this.nameAvailable) {
             stackIn_17_0 = vd.field_k;
             return stackIn_17_0;
           }
@@ -250,7 +250,7 @@ final class hj extends cg {
     final static void a(int param0, int param1) {
         if (param0 != 2) {
           String var3 = (String) null;
-          hj.a(true, false, (String) null);
+          AccountNameAvailabilityValidator.a(true, false, (String) null);
         }
         ByteArrayStore.b((byte) 99);
     }

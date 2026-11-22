@@ -104,7 +104,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (!l.a(true)) {
               dh.b(-128);
             } else {
-              if (kh.field_n != 0) {
+              if (AccountNameAvailabilityValidator.field_n != 0) {
                 td.a(CombatState.field_r, param0 + 119);
               } else {
                 discarded$0 = this.a(false, false, false);
@@ -493,7 +493,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (var5_intLifetime2 == 0) {
                   IntrusiveNode.field_g = hg.field_s;
                   bl.b((byte) -97);
-                  kh.field_n = 10;
+                  AccountNameAvailabilityValidator.field_n = 10;
                   tl.field_l = false;
                 } else {
                   nf.a(var5_intLifetime2, true, tp.field_v);
@@ -505,7 +505,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (4 == var4) {
             if (!ld.field_g) {
               tl.field_l = true;
-              kh.field_n = 10;
+              AccountNameAvailabilityValidator.field_n = 10;
             } else {
               pd.a(5189, m.c(true));
             }
@@ -515,7 +515,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (6 == var4 &&
             oj.field_b) {
-            kh.field_n = 10;
+            AccountNameAvailabilityValidator.field_n = 10;
           }
           if (var4 == 7) {
             pa.a(123, m.c(true));
@@ -563,7 +563,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 15) {
-            kh.field_n = 10;
+            AccountNameAvailabilityValidator.field_n = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -629,7 +629,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.field_q = -128;
         }
         if (!ao.a((byte) -116) &&
-          kh.field_n != 11) {
+          AccountNameAvailabilityValidator.field_n != 11) {
           cp.f(-30208);
         }
         if (bn.field_j != null) {
@@ -656,7 +656,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           gm.field_c = fp.a((byte) 70);
           if (var3Lifetime1 != 0 &&
             0 == gm.field_c &&
-            11 == kh.field_n &&
+            11 == AccountNameAvailabilityValidator.field_n &&
             !dm.c(param1 - 7)) {
             bl.b((byte) -97);
           }
@@ -668,7 +668,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (-1 != gm.field_c &&
           gm.field_c != 0) {
           if (10 <= dk.field_c) {
-            if (kh.field_n >= 10) {
+            if (AccountNameAvailabilityValidator.field_n >= 10) {
               l.a(param1 + 73);
               if (3 != gm.field_c) {
                 if (gm.field_c == 4) {
@@ -860,7 +860,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ab.field_a = 15000L + kd.c(-2456);
           return var2;
         }
-        if (kh.field_n == 11 &&
+        if (AccountNameAvailabilityValidator.field_n == 11 &&
           gm.field_c == 0) {
           bl.b((byte) -97);
         }

@@ -76,7 +76,7 @@ abstract class ng {
           !(pg.field_a.length >= param2)) {
           pg.field_a = new boolean[param2 * 2];
         }
-        mg.field_n = 2147483647;
+        AccountNameAvailabilityValidator.field_n = 2147483647;
         va.field_b = 2147483647;
         w.field_d = -2147483648;
         q.field_M = 0;

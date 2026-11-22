@@ -79,7 +79,7 @@ final class s extends IntrusiveNode {
             field_k = (int[]) null;
           }
           dupTemp$1 = ol.a(256);
-          i.field_q = dupTemp$1;
+          AccountNameAvailabilityValidator.field_q = dupTemp$1;
           ac.field_e = dupTemp$1;
           if (gf.field_o.field_d != 1) {
             aj.field_c = pf.field_b;

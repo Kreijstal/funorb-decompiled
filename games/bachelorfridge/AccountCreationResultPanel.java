@@ -80,7 +80,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
               if (5 != param2.statusCode) {
                 var5.a(7, ina.field_s, -1);
               } else {
-                var5.a(7, tt.field_h, 11);
+                var5.a(7, AccountNameAvailabilityValidator.field_h, 11);
                 var5.a(7, uda.field_ab, 17);
               }
             } else {

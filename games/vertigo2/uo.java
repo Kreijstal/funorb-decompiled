@@ -577,7 +577,7 @@ final class uo {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  hk.a(param2, (byte) 60, var12.a((byte) -38));
+                  AccountNameAvailabilityValidator.a(param2, (byte) 60, var12.a((byte) -38));
                 }
               } else {
                 ve.a((byte) 117, var12, var32, param4);

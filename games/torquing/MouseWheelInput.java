@@ -32,10 +32,10 @@ abstract class MouseWheelInput {
           if (ji.field_a[param1] < ji.field_a[param3]) {
             return false;
           }
-          if (il.field_o[param3] < il.field_o[param1]) {
+          if (AccountNameAvailabilityValidator.field_o[param3] < AccountNameAvailabilityValidator.field_o[param1]) {
             return true;
           }
-          if (il.field_o[param1] < il.field_o[param3]) {
+          if (AccountNameAvailabilityValidator.field_o[param1] < AccountNameAvailabilityValidator.field_o[param3]) {
             return false;
           }
           var4 = vp.field_F[param3] + vo.field_d[param3] + wh.field_y[param3];
@@ -52,10 +52,10 @@ abstract class MouseWheelInput {
           field_b = (Sprite) null;
           return !(param3 >= param1);
         }
-        if (il.field_o[param1] > il.field_o[param3]) {
+        if (AccountNameAvailabilityValidator.field_o[param1] > AccountNameAvailabilityValidator.field_o[param3]) {
           return true;
         }
-        if (il.field_o[param3] > il.field_o[param1]) {
+        if (AccountNameAvailabilityValidator.field_o[param3] > AccountNameAvailabilityValidator.field_o[param1]) {
           return false;
         }
         if (ji.field_a[param1] > ji.field_a[param3]) {

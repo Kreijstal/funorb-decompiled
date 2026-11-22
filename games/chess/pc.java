@@ -598,7 +598,7 @@ final class pc extends ci {
               var9 = (2 + ri.field_k.field_M) / 2;
               uj.field_j.a(0, var9 - 2, -2147483648, 40, -40 + ri.field_k.field_pb);
               if (pd.field_Rb.field_Xb < pd.field_Rb.field_hc) {
-                uj.field_j.field_db = uh.field_v.toUpperCase();
+                uj.field_j.field_db = AccountNameAvailabilityValidator.field_v.toUpperCase();
                 uj.field_j.field_tb = true;
                 if (var19 != 0) {
                   uj.field_j.field_db = oj.field_b.toUpperCase();

@@ -692,7 +692,7 @@ final class wj extends ph {
                 cm.a(bm.field_c, 0, rl.field_c);
                 le.field_D = 0;
                 ta.a((byte) 127, rl.field_c + 1);
-                n.b(false, (byte) -97);
+                AccountNameAvailabilityValidator.b(false, (byte) -97);
                 of.field_h = new re(11);
                 return;
               }
@@ -704,7 +704,7 @@ final class wj extends ph {
                   rl.field_c = 0;
                   jf.field_d = 50;
                   le.field_D = 0;
-                  n.b(true, (byte) -89);
+                  AccountNameAvailabilityValidator.b(true, (byte) -89);
                   of.field_h = new re(13);
                   ArchiveProvider.field_e = 0;
                   return;
@@ -716,13 +716,13 @@ final class wj extends ph {
                   ta.a((byte) -100, 3);
                   of.field_h = new re(12);
                   ArchiveProvider.field_e = 0;
-                  n.b(false, (byte) -114);
+                  AccountNameAvailabilityValidator.b(false, (byte) -114);
                   return;
                 }
                 jf.field_d = 50;
                 le.field_D = 0;
                 rl.field_c = 0;
-                n.b(true, (byte) -93);
+                AccountNameAvailabilityValidator.b(true, (byte) -93);
                 ArchiveProvider.field_e = 0;
                 of.field_h = new re(13);
                 return;

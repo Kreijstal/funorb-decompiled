@@ -84,7 +84,7 @@ final class jd extends vc {
               }
               break;
             }
-            ia.a(param1, var4, -118);
+            AccountNameAvailabilityValidator.a(param1, var4, -118);
             var4 = (cc) (qb.field_a.nextBackward((byte) -119));
           } while (var3 == 0);
           var2 = qc.field_a.beginBackward(9272);

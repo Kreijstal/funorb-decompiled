@@ -543,7 +543,7 @@ abstract class GameShell extends GameApplet {
                       if (7 != var2) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            hk.g(3);
+                            AccountNameAvailabilityValidator.g(3);
                           } else {
                             if (11 != var2 &&
                               var2 != 12) {

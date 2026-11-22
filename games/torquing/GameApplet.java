@@ -419,7 +419,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             k.field_d.getParent().remove((java.awt.Component) ((Object) k.field_d));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null == il.field_q) {
+          if (null == AccountNameAvailabilityValidator.field_q) {
             if (null != un.field_b) {
               var2 = un.field_b;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -429,17 +429,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2 = wj.field_g;
                 if (var4 != 0) {
                   var2 = vk.field_B;
-                  var2 = il.field_q;
+                  var2 = AccountNameAvailabilityValidator.field_q;
                 }
               } else {
                 var2 = vk.field_B;
                 if (var4 != 0) {
-                  var2 = il.field_q;
+                  var2 = AccountNameAvailabilityValidator.field_q;
                 }
               }
             }
           } else {
-            var2 = il.field_q;
+            var2 = AccountNameAvailabilityValidator.field_q;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           k.field_d = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
@@ -729,7 +729,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             k.field_d.setSize(wk.field_d, MouseInputHandler.field_a);
             k.field_d.setVisible(true);
             boolean decompiledSharedTail0 = (un.field_b != null &&
-              null == il.field_q);
+              null == AccountNameAvailabilityValidator.field_q);
             if (!decompiledSharedTail0) {
               k.field_d.setLocation(aq.field_d, hg.field_a);
               decompiledSharedTail0 = (Torquing.field_u != 0);

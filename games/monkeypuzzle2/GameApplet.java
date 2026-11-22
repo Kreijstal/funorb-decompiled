@@ -30,7 +30,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          hh.field_o = true;
+          AccountNameAvailabilityValidator.field_o = true;
           gb.field_j = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          hh.field_o = false;
+          AccountNameAvailabilityValidator.field_o = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -835,7 +835,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           fe.field_d = 1 + fe.field_d & 31;
           var6 = this;
           synchronized (var6) {
-            ke.field_a = hh.field_o;
+            ke.field_a = AccountNameAvailabilityValidator.field_o;
           }
           if (param0 >= -52) {
             this.a(false);
@@ -1052,7 +1052,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ie.field_e.addFocusListener((java.awt.event.FocusListener) (this));
           ie.field_e.requestFocus();
           ke.field_a = true;
-          hh.field_o = true;
+          AccountNameAvailabilityValidator.field_o = true;
           gb.field_j = true;
           aj.field_c = param0;
           ah.field_e = pf.a(0);

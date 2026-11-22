@@ -2129,7 +2129,7 @@ final class dj extends ee {
           if (16 <= this.field_fb) {
             var7 = new double[12];
             this.field_jb.a((byte) 37, var7);
-            qg.a(param1, this.field_fb, var7, (double)this.field_fb * 0.015625, param3, this, 64);
+            AccountNameAvailabilityValidator.a(param1, this.field_fb, var7, (double)this.field_fb * 0.015625, param3, this, 64);
           }
           if (this.field_lb >= 16) {
             var7Lifetime1 = new double[12];

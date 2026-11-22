@@ -868,7 +868,7 @@ final class ih extends qe {
         lf var7;
         var5 = DungeonAssault.field_K;
         super.c(param0);
-        if (kh.field_s) {
+        if (AccountNameAvailabilityValidator.field_s) {
           return;
         }
         if (!param0) {

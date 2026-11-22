@@ -44,7 +44,7 @@ final class ec extends dm {
 
     final static int c(byte param0) {
         int var2 = 0;
-        un var1 = uh.i(param0 ^ -23115);
+        un var1 = AccountNameAvailabilityValidator.i(param0 ^ -23115);
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 != -63) {
@@ -55,7 +55,7 @@ final class ec extends dm {
           return var2;
         }
         if (var1.field_b) {
-          var2Lifetime1 = -(480 - uh.field_m.field_wb) / 2;
+          var2Lifetime1 = -(480 - AccountNameAvailabilityValidator.field_m.field_wb) / 2;
           return var2Lifetime1;
         }
         var2Lifetime2 = 0;

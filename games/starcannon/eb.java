@@ -125,9 +125,9 @@ final class eb {
             var3Lifetime1 = ki.field_f;
             ki.a(wc.field_b);
             var14 = fb.a(u.field_a, 114, new String[]{kc.field_N[fc.field_c]});
-            var5 = gi.field_b.c(var14, nd.field_k);
-            var6Lifetime1 = gi.field_b.a(var14, nd.field_k, gi.field_b.field_p + gi.field_b.field_q);
-            var7Lifetime1 = cb.field_f + (nd.field_k - var5) / 2;
+            var5 = gi.field_b.c(var14, AccountNameAvailabilityValidator.field_k);
+            var6Lifetime1 = gi.field_b.a(var14, AccountNameAvailabilityValidator.field_k, gi.field_b.field_p + gi.field_b.field_q);
+            var7Lifetime1 = cb.field_f + (AccountNameAvailabilityValidator.field_k - var5) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
             var8 = ue.field_e + (td.field_p - var6Lifetime1) / 2;
@@ -172,7 +172,7 @@ final class eb {
             re.field_l.f();
             var9 = new Sprite(re.field_l.field_x, re.field_l.field_q);
             var9.e();
-            gi.field_b.a(var14, cb.field_f, ue.field_e, nd.field_k, td.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
+            gi.field_b.a(var14, cb.field_f, ue.field_e, AccountNameAvailabilityValidator.field_k, td.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
             hh.a(0, 0, 3, var9.field_q, false, 1, var9, var9.field_x);
             re.field_l.e();
             var9.e(0, 0);

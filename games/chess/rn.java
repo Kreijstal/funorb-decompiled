@@ -29,7 +29,7 @@ final class rn {
         var14 = Chess.field_G;
         try {
           var6_int = param0 + 493 + param3 + 2 + 8;
-          ji.field_N.a(3, -6 + var6_int, -2147483648, -6 + uh.field_m.field_pb, 3);
+          ji.field_N.a(3, -6 + var6_int, -2147483648, -6 + AccountNameAvailabilityValidator.field_m.field_pb, 3);
           var7 = -5 + ji.field_N.field_pb;
           qj.field_e.a(5, 487 + (param3 + param0), -2147483648, param5, -param5 + var7);
           BoundedRandomAccessFile.field_f.a(param3, -uc.field_c.field_M + (-param3 + qj.field_e.field_M), -2147483648, param5, 0);
@@ -39,7 +39,7 @@ final class rn {
           if (ol.field_O != null) {
             ol.field_O.a(ac.field_j.field_V, 34, ac.field_j.field_pb, ac.field_j.field_M, ac.field_j.field_mb);
           }
-          var8 = -param3 + uh.field_m.field_M - var6_int;
+          var8 = -param3 + AccountNameAvailabilityValidator.field_m.field_M - var6_int;
           var9 = var8 / 2;
           var10 = param2 + (var9 + param3);
           var11 = 0;
@@ -49,9 +49,9 @@ final class rn {
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != g.field_d[var12]) {
-              var13 = 3 + (-6 + uh.field_m.field_pb + 2) * var11 / (qm.field_d + 1);
+              var13 = 3 + (-6 + AccountNameAvailabilityValidator.field_m.field_pb + 2) * var11 / (qm.field_d + 1);
               var11++;
-              var7Lifetime1 = -var13 - 2 + 3 + (-6 + (uh.field_m.field_pb + 2)) * var11 / (1 + qm.field_d);
+              var7Lifetime1 = -var13 - 2 + 3 + (-6 + (AccountNameAvailabilityValidator.field_m.field_pb + 2)) * var11 / (1 + qm.field_d);
               if (var12 < 5) {
                 g.field_d[var12].a(var6_int, var8, -2147483648, var7Lifetime1, var13);
                 t.field_K[var12].a(param3, var9 - param3, -2147483648, var7Lifetime1, 0);

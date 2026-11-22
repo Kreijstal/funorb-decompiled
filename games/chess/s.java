@@ -16,7 +16,7 @@ final class s extends ma implements wl, mj {
         if (param0 != 120) {
           field_R = (String) null;
         }
-        ((uh) (this.field_L.a(-82))).h(-85);
+        ((AccountNameAvailabilityValidator) (this.field_L.a(-82))).h(-85);
     }
 
     private final boolean i(int param0) {
@@ -652,7 +652,7 @@ final class s extends ma implements wl, mj {
                   if (var26Lifetime1 != 0) {
                     var24 = var34 + "<br>" + ca.field_f + (String) (var25);
                   } else {
-                    var24 = var34 + "<br>" + oc.a(uh.field_o, new String[]{(String) (var25)}, (byte) -107);
+                    var24 = var34 + "<br>" + oc.a(AccountNameAvailabilityValidator.field_o, new String[]{(String) (var25)}, (byte) -107);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
@@ -737,7 +737,7 @@ final class s extends ma implements wl, mj {
         this.field_N = new fb(hg.field_a, (rg) null);
         this.field_P = new fb(ue.field_b, (rg) null);
         this.field_L.field_j = vc.field_a;
-        this.field_L.a(-107, new uh(this.field_L));
+        this.field_L.a(-107, new AccountNameAvailabilityValidator(this.field_L));
         this.field_N.field_H = false;
         this.field_N.field_n = (jm) ((Object) new sf());
         this.field_P.field_n = (jm) ((Object) new wj());

@@ -127,7 +127,7 @@ abstract class GameClient extends AppletShell {
         if (param0 <= 42) {
           this.a(false);
         }
-        mg.a(true, vi.b(0), c.a(0, var5), var3 != 0);
+        AccountNameAvailabilityValidator.a(true, vi.b(0), c.a(0, var5), var3 != 0);
     }
 
     private final void i(int param0) {
@@ -170,7 +170,7 @@ abstract class GameClient extends AppletShell {
           va.field_a = hg.field_k.pollRotation(-83);
         }
         if (ej.b(-4)) {
-          var3 = 1200 * mg.f(-118);
+          var3 = 1200 * AccountNameAvailabilityValidator.f(-118);
           if (this.field_o ||
             !(var3 >= jb.a(31083)) &&
             !(var3 >= m.a((byte) 77))) {

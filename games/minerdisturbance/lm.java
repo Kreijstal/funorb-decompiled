@@ -64,7 +64,7 @@ final class lm extends kn implements f, sh {
     }
 
     public final void a(byte param0) {
-        ((qi) (this.field_N.a(35))).b((byte) -82);
+        ((AccountNameAvailabilityValidator) (this.field_N.a(35))).b((byte) -82);
         if (param0 != 47) {
           String var3 = (String) null;
           lm.a((String) null, (String) null, -67);
@@ -218,7 +218,7 @@ final class lm extends kn implements f, sh {
         this.field_P = new hc(he.field_c, (rm) null);
         this.field_J = new hc(u.field_b, (rm) null);
         this.field_N.field_n = vj.field_l;
-        this.field_N.a(new qi(this.field_N), 1048576);
+        this.field_N.a(new AccountNameAvailabilityValidator(this.field_N), 1048576);
         this.field_P.field_E = false;
         this.field_P.field_A = (ad) ((Object) new wi());
         this.field_J.field_A = (ad) ((Object) new nc());

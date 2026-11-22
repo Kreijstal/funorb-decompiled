@@ -537,7 +537,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = dha.a(lha.a((byte) -89), (byte) 53, waa.a(true), jc.f(-24457), tt.e(21240), this.field_p, wk.a(true));
+            var5Lifetime1 = dha.a(lha.a((byte) -89), (byte) 53, waa.a(true), jc.f(-24457), AccountNameAvailabilityValidator.e(21240), this.field_p, wk.a(true));
             if (var5Lifetime1 != -1) {
               PetAttackAnimation.a(true, var5Lifetime1, vt.field_m, WidgetContainer.field_B);
               vt.field_m = null;

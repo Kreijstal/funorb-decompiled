@@ -21,7 +21,7 @@ final class ap {
           if (param1 != -8228) {
             ap.a((byte) -14);
           }
-          hk.a(3, (java.awt.Component) ((Object) param0));
+          AccountNameAvailabilityValidator.a(3, (java.awt.Component) ((Object) param0));
           if (null == th.field_g) {
             return;
           }

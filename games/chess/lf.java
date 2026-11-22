@@ -284,12 +284,12 @@ final class lf extends kn {
         }
         if (0 < an.field_e &&
           fm.field_V) {
-          wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
+          wb.g(0, 0, wb.field_h, AccountNameAvailabilityValidator.field_m.field_wb);
           la.field_c.a(false, param1);
         }
         if ((0 < AccountServiceResult.field_c || ed.field_c > 0) &&
           jh.field_a) {
-          wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
+          wb.g(0, 0, wb.field_h, AccountNameAvailabilityValidator.field_m.field_wb);
           ah.field_i.a(false, param1);
         }
     }

@@ -47,7 +47,7 @@ final class oa extends IntrusiveNode {
           if (bc.field_V != 8) {
             return;
           }
-          vf.e(-6359);
+          AccountNameAvailabilityValidator.e(-6359);
           return;
         }
         if (-2 == bc.field_V) {
@@ -61,7 +61,7 @@ final class oa extends IntrusiveNode {
         if (bc.field_V != 8) {
           return;
         }
-        vf.e(-6359);
+        AccountNameAvailabilityValidator.e(-6359);
     }
 
     final static ob a(String param0, int param1) {

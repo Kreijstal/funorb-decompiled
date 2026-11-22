@@ -1084,6 +1084,14 @@
       "renamedSymbol": "C:InstrumentPatch"
     },
     {
+      "symbol": "C:mp",
+      "originalName": "mp",
+      "to": "AccountNameAvailabilityValidator",
+      "evidence": "Complete instance contract reviewed: constructor plus text/status/reset methods and two private cache fields. Syntax checks precede asynchronous account-name query; completed error-free result cached by exact input, with explicit Name is available/That name is not available diagnostics and valid/invalid/checking result branches. Corresponding already-readable AoG validator is corroborating context, not automatic name transfer. Preserve inherited method names/overrides, every game-specific guard/reset/exception/static helper and default. No native owned/type-use declarations or exact quoted owned class-name literal.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AccountNameAvailabilityValidator"
+    },
+    {
       "symbol": "C:mt",
       "originalName": "mt",
       "to": "IndexedJavaSoftwareSprite",
@@ -3140,12 +3148,28 @@
       "renamedSymbol": "F:Aircraft.fireCooldown:I"
     },
     {
+      "symbol": "F:mp.field_f:Z",
+      "originalName": "field_f",
+      "to": "nameAvailable",
+      "evidence": "Exact private declaration, all four instance bodies and completed/error-free result cache assignments reviewed against available/unavailable diagnostics. nameAvailable stores the checked input or positive availability result; preserve null/false defaults, all conditional resets, guard arithmetic and aliases.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.nameAvailable:Z"
+    },
+    {
       "symbol": "F:mp.field_h:Lpa;",
       "originalName": "field_h",
       "to": "titleImage",
       "evidence": "Reviewed indexed frame encoding, palette/alpha planes, sprite constructors, software pixel addressing/transforms and literal asset loading followed by renderer resource creation.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:mp.titleImage:LRenderSprite;"
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.titleImage:LRenderSprite;"
+    },
+    {
+      "symbol": "F:mp.field_i:Ljava/lang/String;",
+      "originalName": "field_i",
+      "to": "checkedName",
+      "evidence": "Exact private declaration, all four instance bodies and completed/error-free result cache assignments reviewed against available/unavailable diagnostics. checkedName stores the checked input or positive availability result; preserve null/false defaults, all conditional resets, guard arithmetic and aliases.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.checkedName:Ljava/lang/String;"
     },
     {
       "symbol": "F:na.field_c:[Lvd;",
@@ -7610,6 +7634,14 @@
       "evidence": "Reviewed glyph constructors, metric decoding, style tags, baseline placement, wrapping and clipped raster writes; software roles match GeoBlox, while renderer-backed fonts retain their separate metrics/renderer.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BitmapFont.drawCenteredText(Ljava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:hg.a(ILjava/lang/String;)Lfr;",
+      "originalName": "a",
+      "to": "pollAccountNameCheck",
+      "evidence": "Complete query declaration/body and validator constructor/text/status/reset bodies, cache fields and explicit availability diagnostics reviewed. Query wrong int!=MAX_VALUE calls hg.j(-34) before pending/matching-complete/new-request branches; preserve helper failures, exact state/name/cache write order and returned object identity. Text validator wrong byte72 returns null before syntax/query, while state validator wrong int8192 calls text validator(null,-114) before query logic. Reset clears checkedName then may invoke static cleanup; accepted flag default false and all cache/error behavior preserved. Full original argument domains, stale-name handling, pending behavior, shared singleton identity and allocation/error context remain unchanged; identifiers only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;"
     },
     {
       "symbol": "M:hh.a(I)V",
@@ -24188,9 +24220,9 @@
     },
     {
       "symbol": "C:mp",
-      "renamedSymbol": "C:mp",
+      "renamedSymbol": "C:AccountNameAvailabilityValidator",
       "originalName": "mp",
-      "renamedName": "mp",
+      "renamedName": "AccountNameAvailabilityValidator",
       "declaration": {
         "file": "mp.java",
         "start": 50,
@@ -46298,7 +46330,7 @@
     },
     {
       "symbol": "F:mp.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:mp.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -46309,9 +46341,9 @@
     },
     {
       "symbol": "F:mp.field_f:Z",
-      "renamedSymbol": "F:mp.field_f:Z",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.nameAvailable:Z",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "nameAvailable",
       "declaration": {
         "file": "mp.java",
         "start": 136,
@@ -46320,7 +46352,7 @@
     },
     {
       "symbol": "F:mp.field_g:I",
-      "renamedSymbol": "F:mp.field_g:I",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -46331,7 +46363,7 @@
     },
     {
       "symbol": "F:mp.field_h:Lpa;",
-      "renamedSymbol": "F:mp.titleImage:LRenderSprite;",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.titleImage:LRenderSprite;",
       "originalName": "field_h",
       "renamedName": "titleImage",
       "declaration": {
@@ -46342,9 +46374,9 @@
     },
     {
       "symbol": "F:mp.field_i:Ljava/lang/String;",
-      "renamedSymbol": "F:mp.field_i:Ljava/lang/String;",
+      "renamedSymbol": "F:AccountNameAvailabilityValidator.checkedName:Ljava/lang/String;",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "checkedName",
       "declaration": {
         "file": "mp.java",
         "start": 197,
@@ -116181,7 +116213,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#0",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#0",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#0",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -116192,7 +116224,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#1",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#1",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -116203,7 +116235,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#2",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#2",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -116214,7 +116246,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#3",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#3",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -116225,7 +116257,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#4",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#4",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -116236,7 +116268,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#5",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#5",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -116247,7 +116279,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#6",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#6",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#6",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -116258,7 +116290,7 @@
     },
     {
       "symbol": "L:hg.a(ILjava/lang/String;)Lfr;#7",
-      "renamedSymbol": "L:hg.a(ILjava/lang/String;)LAccountServiceResult;#7",
+      "renamedSymbol": "L:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#7",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -152118,7 +152150,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#0",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -152129,7 +152161,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#1",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#1",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -152140,7 +152172,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#10",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#10",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -152151,7 +152183,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#11",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#11",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#11",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -152162,7 +152194,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#12",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#12",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#12",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -152173,7 +152205,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#13",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#13",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#13",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -152184,7 +152216,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#2",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#2",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -152195,7 +152227,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#3",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#3",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -152206,7 +152238,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#4",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#4",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#4",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -152217,7 +152249,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#5",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#5",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -152228,7 +152260,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#6",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#6",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#6",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -152239,7 +152271,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#7",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#7",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#7",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -152250,7 +152282,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#8",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#8",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#8",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -152261,7 +152293,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#9",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;B)Ljava/lang/String;#9",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -152272,7 +152304,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#0",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#0",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#0",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -152283,7 +152315,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#1",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#1",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#1",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -152294,7 +152326,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#10",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#10",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#10",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -152305,7 +152337,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#11",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#11",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#11",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -152316,7 +152348,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#2",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#2",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -152327,7 +152359,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#3",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#3",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -152338,7 +152370,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#4",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#4",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -152349,7 +152381,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#5",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#5",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -152360,7 +152392,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#6",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#6",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#6",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -152371,7 +152403,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#7",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#7",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -152382,7 +152414,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#8",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#8",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -152393,7 +152425,7 @@
     },
     {
       "symbol": "L:mp.a(Ljava/lang/String;I)Lpt;#9",
-      "renamedSymbol": "L:mp.a(Ljava/lang/String;I)Lpt;#9",
+      "renamedSymbol": "L:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#9",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -252867,9 +252899,9 @@
     },
     {
       "symbol": "M:hg.a(ILjava/lang/String;)Lfr;",
-      "renamedSymbol": "M:hg.a(ILjava/lang/String;)LAccountServiceResult;",
+      "renamedSymbol": "M:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountNameCheck",
       "declaration": {
         "file": "hg.java",
         "start": 1966,
@@ -266474,9 +266506,9 @@
     },
     {
       "symbol": "M:mp.<init>(Lbm;)V",
-      "renamedSymbol": "M:mp.<init>(Lbm;)V",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.<init>(Lbm;)V",
       "originalName": "mp",
-      "renamedName": "mp",
+      "renamedName": "AccountNameAvailabilityValidator",
       "declaration": {
         "file": "mp.java",
         "start": 1874,
@@ -266485,7 +266517,7 @@
     },
     {
       "symbol": "M:mp.a(Ljava/lang/String;B)Ljava/lang/String;",
-      "renamedSymbol": "M:mp.a(Ljava/lang/String;B)Ljava/lang/String;",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -266496,7 +266528,7 @@
     },
     {
       "symbol": "M:mp.a(Ljava/lang/String;I)Lpt;",
-      "renamedSymbol": "M:mp.a(Ljava/lang/String;I)Lpt;",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -266507,7 +266539,7 @@
     },
     {
       "symbol": "M:mp.c(B)V",
-      "renamedSymbol": "M:mp.c(B)V",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.c(B)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -266518,7 +266550,7 @@
     },
     {
       "symbol": "M:mp.e(I)V",
-      "renamedSymbol": "M:mp.e(I)V",
+      "renamedSymbol": "M:AccountNameAvailabilityValidator.e(I)V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -315611,7 +315643,7 @@
     },
     {
       "symbol": "P:hg.a(ILjava/lang/String;)Lfr;#0",
-      "renamedSymbol": "P:hg.a(ILjava/lang/String;)LAccountServiceResult;#0",
+      "renamedSymbol": "P:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -315622,7 +315654,7 @@
     },
     {
       "symbol": "P:hg.a(ILjava/lang/String;)Lfr;#1",
-      "renamedSymbol": "P:hg.a(ILjava/lang/String;)LAccountServiceResult;#1",
+      "renamedSymbol": "P:hg.pollAccountNameCheck(ILjava/lang/String;)LAccountServiceResult;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -347852,7 +347884,7 @@
     },
     {
       "symbol": "P:mp.<init>(Lbm;)V#0",
-      "renamedSymbol": "P:mp.<init>(Lbm;)V#0",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.<init>(Lbm;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -347863,7 +347895,7 @@
     },
     {
       "symbol": "P:mp.a(Ljava/lang/String;B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:mp.a(Ljava/lang/String;B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -347874,7 +347906,7 @@
     },
     {
       "symbol": "P:mp.a(Ljava/lang/String;B)Ljava/lang/String;#1",
-      "renamedSymbol": "P:mp.a(Ljava/lang/String;B)Ljava/lang/String;#1",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(Ljava/lang/String;B)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -347885,7 +347917,7 @@
     },
     {
       "symbol": "P:mp.a(Ljava/lang/String;I)Lpt;#0",
-      "renamedSymbol": "P:mp.a(Ljava/lang/String;I)Lpt;#0",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -347896,7 +347928,7 @@
     },
     {
       "symbol": "P:mp.a(Ljava/lang/String;I)Lpt;#1",
-      "renamedSymbol": "P:mp.a(Ljava/lang/String;I)Lpt;#1",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.a(Ljava/lang/String;I)Lpt;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -347907,7 +347939,7 @@
     },
     {
       "symbol": "P:mp.c(B)V#0",
-      "renamedSymbol": "P:mp.c(B)V#0",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.c(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -347918,7 +347950,7 @@
     },
     {
       "symbol": "P:mp.e(I)V#0",
-      "renamedSymbol": "P:mp.e(I)V#0",
+      "renamedSymbol": "P:AccountNameAvailabilityValidator.e(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392472,7 +392504,7 @@
       "original": "AceOfSkies.java",
       "renamed": "AceOfSkies.java",
       "inputSha256": "843b1799447306ff633f2556b6e692205e6ab2c0d56d07fed1685e9c1006df3a",
-      "outputSha256": "c4862a618ab0e007edfc4692d37cda22f13ace744a07f753de1409783556de1d",
+      "outputSha256": "f75d2de41d9dc4aa1f43415e0ec2410126e080973269118cf0b6d1d250599d95",
       "edits": [
         {
           "start": 97,
@@ -395966,6 +395998,13 @@
           "symbol": "M:sc.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 22507,
+          "end": 22509,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 22538,
@@ -411678,7 +411717,7 @@
       "original": "ct.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "06dfae5ee19cf04e2e5b7b0080b19ae1375d692496fe77095c48a6bf42726a54",
-      "outputSha256": "9e071b42c527211f2553911f1d3468221a7eff33de16e892c45352e569b69a27",
+      "outputSha256": "52988b71d52bd6537df9c54980fe35c57dd00132aee479997b74c2741e807299",
       "edits": [
         {
           "start": 53,
@@ -412484,6 +412523,13 @@
           "symbol": "F:dq.field_b:Ljava/lang/String;",
           "original": "field_b",
           "renamed": "loadingMessage"
+        },
+        {
+          "start": 17377,
+          "end": 17379,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 17399,
@@ -422300,7 +422346,7 @@
       "original": "ep.java",
       "renamed": "ep.java",
       "inputSha256": "96dccd5ae81346f3f96326097f08e3449dbd5068e14d18f9ece16944746bc253",
-      "outputSha256": "5df44a9e9567ae568ce3cbd5f2d2da5aec57bcacc7a1babecaf68ae5812b24c3",
+      "outputSha256": "ac4b4b340b826a611e69356305fbf36e9f609cd1ea66b8c1e6524046196f37e0",
       "edits": [
         {
           "start": 119,
@@ -422324,11 +422370,32 @@
           "renamed": "SmokeParticle"
         },
         {
+          "start": 2356,
+          "end": 2358,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
           "start": 2830,
           "end": 2832,
           "symbol": "C:es",
           "original": "es",
           "renamed": "SecondaryKeyHashTable"
+        },
+        {
+          "start": 3530,
+          "end": 3532,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 3645,
+          "end": 3647,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 3834,
@@ -424455,7 +424522,7 @@
       "original": "fb.java",
       "renamed": "fb.java",
       "inputSha256": "e7f4b33ee5c521e0c424cb65f6eb5823ffde7e7c34148f350ba56a1c7171ce97",
-      "outputSha256": "9cf149a94a5dc114ad3dac96ff7b8881085f42aec57594e8e9162699d3c45132",
+      "outputSha256": "aafbcb09b4104e996241bd81905c3dec1411cda16cdcd23ad77a886caea20610",
       "edits": [
         {
           "start": 405,
@@ -424463,6 +424530,13 @@
           "symbol": "F:vu.field_f:I",
           "original": "field_f",
           "renamed": "heldMouseButton"
+        },
+        {
+          "start": 415,
+          "end": 417,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 510,
@@ -426813,7 +426887,7 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "360099c1202cf0caacbb6e28b0c0418390d32fea9412eef1f706a6387c172255",
-      "outputSha256": "235d3d71a72548efecb9c574ca49cf349c9337ddfc5cd621e3f29480d12820bc",
+      "outputSha256": "cc0df62db22a6b45cac991702d79205b1e64056718af9c7287929ebf772ce906",
       "edits": [
         {
           "start": 2910,
@@ -426849,6 +426923,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 14082,
+          "end": 14084,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 14996,
@@ -426891,7 +426972,7 @@
       "original": "ga.java",
       "renamed": "ScoreSubmission.java",
       "inputSha256": "cf8d7a5acbb2db0028e0e97fc9ca65e0890299d9e19cc339cf03bda410a3be5d",
-      "outputSha256": "a312fcec3fb31ccf7824ca7b9c0a14f4f393ec04bb5235a9e43b7d7f57d35ff9",
+      "outputSha256": "ab23b62f7f0968283363c3ca951e9ba9ca27a9009c0253d9db96651e185323ea",
       "edits": [
         {
           "start": 50,
@@ -428362,6 +428443,13 @@
           "symbol": "F:kb.field_D:[Lvd;",
           "original": "field_D",
           "renamed": "scoreDigitSpriteData"
+        },
+        {
+          "start": 6166,
+          "end": 6168,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 6169,
@@ -441113,7 +441201,7 @@
       "original": "hg.java",
       "renamed": "hg.java",
       "inputSha256": "4cdd0636d9ef3bd575dd859078c6b3e2edba64a5191028272e316ae275183e4b",
-      "outputSha256": "844395b4ef3ffb414aa747ce038ff87eeec3d709287c8b013ee6b4fedfd475b8",
+      "outputSha256": "bf10cdc605b431b822261153ed73cc0cf27c188cbb716eced70b16dff0ca3d96",
       "edits": [
         {
           "start": 306,
@@ -441135,6 +441223,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 1966,
+          "end": 1967,
+          "symbol": "M:hg.a(ILjava/lang/String;)Lfr;",
+          "original": "a",
+          "renamed": "pollAccountNameCheck"
         },
         {
           "start": 2148,
@@ -467803,10 +467898,17 @@
     },
     {
       "original": "mp.java",
-      "renamed": "mp.java",
+      "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "f8db24db053d4603eeda653fa0352d2e1c637f5503324b4416def727b7f8f25f",
-      "outputSha256": "74117ba0404102b88bfc9babacf95ed6cfe0abd0d59b7a615dad7b08de0c7023",
+      "outputSha256": "1fcbc549feea440083504d65b612ab2ab787c4a7f7c2aeb98bb3abe6abff791d",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
         {
           "start": 77,
           "end": 79,
@@ -467822,11 +467924,32 @@
           "renamed": "titleImage"
         },
         {
+          "start": 136,
+          "end": 143,
+          "symbol": "F:mp.field_f:Z",
+          "original": "field_f",
+          "renamed": "nameAvailable"
+        },
+        {
+          "start": 197,
+          "end": 204,
+          "symbol": "F:mp.field_i:Ljava/lang/String;",
+          "original": "field_i",
+          "renamed": "checkedName"
+        },
+        {
           "start": 412,
           "end": 414,
           "symbol": "C:qf",
           "original": "qf",
           "renamed": "SmokeParticle"
+        },
+        {
+          "start": 681,
+          "end": 688,
+          "symbol": "F:mp.field_i:Ljava/lang/String;",
+          "original": "field_i",
+          "renamed": "checkedName"
         },
         {
           "start": 705,
@@ -467836,6 +467959,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 718,
+          "end": 719,
+          "symbol": "M:hg.a(ILjava/lang/String;)Lfr;",
+          "original": "a",
+          "renamed": "pollAccountNameCheck"
+        },
+        {
           "start": 801,
           "end": 808,
           "symbol": "F:fr.field_f:Ljava/lang/String;",
@@ -467843,11 +467973,53 @@
           "renamed": "message"
         },
         {
+          "start": 839,
+          "end": 846,
+          "symbol": "F:mp.field_f:Z",
+          "original": "field_f",
+          "renamed": "nameAvailable"
+        },
+        {
           "start": 854,
           "end": 861,
           "symbol": "F:fr.field_b:Z",
           "original": "field_b",
           "renamed": "success"
+        },
+        {
+          "start": 882,
+          "end": 889,
+          "symbol": "F:mp.field_i:Ljava/lang/String;",
+          "original": "field_i",
+          "renamed": "checkedName"
+        },
+        {
+          "start": 1046,
+          "end": 1053,
+          "symbol": "F:mp.field_f:Z",
+          "original": "field_f",
+          "renamed": "nameAvailable"
+        },
+        {
+          "start": 1874,
+          "end": 1876,
+          "symbol": "M:mp.<init>(Lbm;)V",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 1926,
+          "end": 1933,
+          "symbol": "F:mp.field_f:Z",
+          "original": "field_f",
+          "renamed": "nameAvailable"
+        },
+        {
+          "start": 2029,
+          "end": 2031,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 2083,
@@ -467864,11 +468036,39 @@
           "renamed": "titleImage"
         },
         {
+          "start": 2226,
+          "end": 2233,
+          "symbol": "F:mp.field_i:Ljava/lang/String;",
+          "original": "field_i",
+          "renamed": "checkedName"
+        },
+        {
+          "start": 2281,
+          "end": 2283,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 2786,
+          "end": 2793,
+          "symbol": "F:mp.field_i:Ljava/lang/String;",
+          "original": "field_i",
+          "renamed": "checkedName"
+        },
+        {
           "start": 2810,
           "end": 2812,
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 2823,
+          "end": 2824,
+          "symbol": "M:hg.a(ILjava/lang/String;)Lfr;",
+          "original": "a",
+          "renamed": "pollAccountNameCheck"
         },
         {
           "start": 2940,
@@ -467878,11 +468078,32 @@
           "renamed": "message"
         },
         {
+          "start": 3078,
+          "end": 3085,
+          "symbol": "F:mp.field_f:Z",
+          "original": "field_f",
+          "renamed": "nameAvailable"
+        },
+        {
           "start": 3093,
           "end": 3100,
           "symbol": "F:fr.field_b:Z",
           "original": "field_b",
           "renamed": "success"
+        },
+        {
+          "start": 3119,
+          "end": 3126,
+          "symbol": "F:mp.field_i:Ljava/lang/String;",
+          "original": "field_i",
+          "renamed": "checkedName"
+        },
+        {
+          "start": 3168,
+          "end": 3175,
+          "symbol": "F:mp.field_f:Z",
+          "original": "field_f",
+          "renamed": "nameAvailable"
         },
         {
           "start": 3213,
@@ -470094,7 +470315,7 @@
       "original": "nk.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "bfb63792d38bbf3912899aeef2ef08fd1f115a588606a142977b95cca9ac1610",
-      "outputSha256": "7e615127a20836ff4b8bd2751e6691ab0346b50a85e498784ddd977020b83023",
+      "outputSha256": "a300158f667d20e5799b5ead4c7d58dcf95f7bf166a33daa3baf6bec39d3fd76",
       "edits": [
         {
           "start": 50,
@@ -475459,6 +475680,13 @@
           "symbol": "F:nk.field_d:I",
           "original": "field_d",
           "renamed": "screenId"
+        },
+        {
+          "start": 36175,
+          "end": 36177,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 36178,
@@ -527990,7 +528218,7 @@
       "original": "rq.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "5d1d778503fb1671b61bbd414e9cda860ff5e081a25f006003c29f4eb1ebddfc",
-      "outputSha256": "5c175df3b31ae0811bdedbc5fa3494ab69c289a491841028a9356c203c5e502b",
+      "outputSha256": "8e2a3a31906437a2a30a206b4869240faed88ca7557877b0f1fc3cd930154d38",
       "edits": [
         {
           "start": 50,
@@ -528126,6 +528354,13 @@
           "renamed": "obfuscationControl"
         },
         {
+          "start": 5693,
+          "end": 5695,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
           "start": 6827,
           "end": 6829,
           "symbol": "C:rq",
@@ -528138,6 +528373,27 @@
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "SteeringMode"
+        },
+        {
+          "start": 7313,
+          "end": 7315,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 7394,
+          "end": 7396,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 9698,
+          "end": 9700,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         }
       ]
     },
@@ -538646,7 +538902,7 @@
       "original": "ub.java",
       "renamed": "ub.java",
       "inputSha256": "066249495473478cf9d38ca8ac89e7a5e6283473f48918f7bf2cf017094410a7",
-      "outputSha256": "ac815c5ff719460e04123d80e9744dd14e5487ccdf61675e4185281e618ba3f2",
+      "outputSha256": "b7d6ebf13cb5ee400418857c609b6fbef5f821d789620175d7c9ded2fea558b0",
       "edits": [
         {
           "start": 61,
@@ -538745,6 +539001,13 @@
           "symbol": "C:eu",
           "original": "eu",
           "renamed": "Bullet"
+        },
+        {
+          "start": 25387,
+          "end": 25389,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 34852,
@@ -552201,7 +552464,7 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "e348358b529bcf668a3acafb0ef1997771700a8fb3e34746307c860d1687b5a7",
-      "outputSha256": "29fe3388c7ae0dbc8c53b0dbe9ab139410813152993ae3c9a3f8ab4af8f135ac",
+      "outputSha256": "9fce3b6683dff7b7549ef83bf81fa852be90b0064517eaa4d98d2b231c05c192",
       "edits": [
         {
           "start": 235,
@@ -552246,11 +552509,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 9057,
+          "end": 9059,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
           "start": 10492,
           "end": 10494,
           "symbol": "C:md",
           "original": "md",
           "renamed": "Aircraft"
+        },
+        {
+          "start": 10844,
+          "end": 10846,
+          "symbol": "C:mp",
+          "original": "mp",
+          "renamed": "AccountNameAvailabilityValidator"
         },
         {
           "start": 12147,
@@ -558981,10 +559258,10 @@
       "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
       "subdirectory": "games/aceofskies"
     },
-    "rulesSha256": "c8b1442e5c076a033822e0dbfe918f147d55c812aadaf182fb2ddfe1ab67807b",
+    "rulesSha256": "cbbc78568d03162a53880e7107e200d39fbbdb2798724aea989c4837e1a76d1a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
-    "outputTreeSha256": "b2d1321f0a255e583b3fd0f76bb6f3c392ce6f1aca3da5cd92923f53cbcd955e",
+    "outputTreeSha256": "d34c67f7476ef5df3764c7b82ed09e9a0d7eff8d1939e9220831d936e8f80d55",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

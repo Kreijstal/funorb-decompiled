@@ -217,7 +217,7 @@ final class wd extends ab implements ue, dn, bh {
     }
 
     public final void a(byte param0) {
-        ((mp) (this.field_D.a(0))).e(param0 ^ 48);
+        ((AccountNameAvailabilityValidator) (this.field_D.a(0))).e(param0 ^ 48);
         if (param0 != -77) {
           String var3 = (String) null;
           this.a((String) null, 30);
@@ -271,7 +271,7 @@ final class wd extends ab implements ue, dn, bh {
         this.field_F.field_k = nc.field_b;
         this.field_x.field_k = uu.field_h;
         this.field_z.field_k = ai.field_b;
-        this.field_D.a(new mp(this.field_D), 1472);
+        this.field_D.a(new AccountNameAvailabilityValidator(this.field_D), 1472);
         this.field_E.a(new pq(this.field_E), 1472);
         this.field_u.a(new ii(this.field_u, this.field_E), 1472);
         this.field_y.a(new fh(this.field_y, this.field_D, this.field_E), 1472);

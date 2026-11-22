@@ -27,10 +27,10 @@ final class rg {
         if (param0 >= -91) {
           field_c = (int[]) null;
         }
-        if (null != ol.field_l) {
-          var1 = ol.field_l;
+        if (null != AccountNameAvailabilityValidator.field_l) {
+          var1 = AccountNameAvailabilityValidator.field_l;
           synchronized (var1) {
-            ol.field_l = null;
+            AccountNameAvailabilityValidator.field_l = null;
           }
         }
     }

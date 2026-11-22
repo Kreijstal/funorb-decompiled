@@ -701,7 +701,7 @@ final class nj extends IntrusiveNode {
           var9 = new int[var5];
           var10 = td.a(var5 - 1, (byte) 45);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = nd.a(true, var11, var10);
+            var9[var11] = AccountNameAvailabilityValidator.a(true, var11, var10);
           }
           if (var1 == 0) {
             field_G = var6_ref_float__;

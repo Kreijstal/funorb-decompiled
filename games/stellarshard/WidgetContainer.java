@@ -2147,7 +2147,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(108, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  ge.field_l = se.a(0, var2);
+                  AccountNameAvailabilityValidator.field_l = se.a(0, var2);
                 }
                 var2 = ca.a(107, "create_alert_checkname");
                 if (var2 != null) {

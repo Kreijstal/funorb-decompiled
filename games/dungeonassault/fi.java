@@ -132,7 +132,7 @@ final class fi extends qe {
         int var3;
         var3 = DungeonAssault.field_K;
         super.c(param0);
-        if (!kh.field_s ||
+        if (!AccountNameAvailabilityValidator.field_s ||
           !param0) {
           while (ha.b((byte) 47)) {
             if (mm.field_t == 13) {

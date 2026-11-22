@@ -1085,7 +1085,7 @@ final class p extends qe {
         int var3Lifetime1;
         var5 = DungeonAssault.field_K;
         super.c(param0);
-        if (kh.field_s) {
+        if (AccountNameAvailabilityValidator.field_s) {
           return;
         }
         if (!param0) {

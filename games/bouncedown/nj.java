@@ -288,7 +288,7 @@ final class nj extends al {
               m.field_a[var8] = -1;
             }
             m.field_a[1] = 0;
-            se.field_E[0] = mg.field_l;
+            se.field_E[0] = AccountNameAvailabilityValidator.field_l;
             se.field_E[1] = eb.field_F;
             CipherPacketBuffer.field_n = new int[2];
             CipherPacketBuffer.field_n[0] = 5;

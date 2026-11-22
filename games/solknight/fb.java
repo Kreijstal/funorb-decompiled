@@ -83,7 +83,7 @@ final class fb {
           if (null != pc.field_b) {
             pc.field_b.f((byte) -85);
           }
-          df.h(-1);
+          AccountNameAvailabilityValidator.h(-1);
           return;
         }
         fb.a(true);
@@ -93,7 +93,7 @@ final class fb {
         if (null != pc.field_b) {
           pc.field_b.f((byte) -85);
         }
-        df.h(-1);
+        AccountNameAvailabilityValidator.h(-1);
     }
 
     static {

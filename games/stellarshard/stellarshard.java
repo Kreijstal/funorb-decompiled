@@ -3065,7 +3065,7 @@ public final class stellarshard extends rb implements cf {
           mk.a((byte) -64);
           le.a(param0 ^ 63);
           uj.b(0);
-          ge.clearStaticReferences(false);
+          AccountNameAvailabilityValidator.clearStaticReferences(false);
           lc.f(3988);
           qb.g(21403);
           ef.clearStaticReferences(false);

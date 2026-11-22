@@ -8,7 +8,7 @@ final class pj implements fc {
 
     final static void a(gk param0, int param1, boolean param2, rb param3) {
         try {
-          fe.field_i = param1 * mg.f(66) / 1000;
+          fe.field_i = param1 * AccountNameAvailabilityValidator.f(66) / 1000;
           fd.a(param0, -1);
           ci.a((byte) -116, param0);
           ub.a((byte) -32, param0);

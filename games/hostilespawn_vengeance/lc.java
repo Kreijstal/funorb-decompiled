@@ -63,7 +63,7 @@ final class lc {
                   if (mm.field_m[var4].field_i != 27) {
                     mm.field_m[var4].field_I = 0;
                   } else {
-                    n.field_o = false;
+                    AccountNameAvailabilityValidator.field_o = false;
                     if (bm.field_c == 1 &&
                       rl.field_c == 3) {
                       ti.a(231, (byte) -113, 24);

@@ -365,7 +365,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         int var5 = 0;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
-          var1 = ol.field_l;
+          var1 = AccountNameAvailabilityValidator.field_l;
           synchronized (var1) {
             tb.field_b = tb.field_b + 1;
             tj.field_h = sh.field_f;

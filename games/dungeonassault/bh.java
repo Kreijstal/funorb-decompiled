@@ -220,7 +220,7 @@ class bh extends ck {
               field_N = (String[]) null;
             }
             if (k.field_e == pd.field_A &&
-              kh.d((byte) -86)) {
+              AccountNameAvailabilityValidator.d((byte) -86)) {
               hg.field_s = ra.field_c.readLong((byte) 53);
               ResourceArchive.field_k = ra.field_c.readUnsignedByte(true);
               ra.field_c.readUnsignedByte(true);
@@ -292,7 +292,7 @@ class bh extends ck {
               return stackIn_77_0;
             }
             if (pd.field_A == bj.field_K &&
-              kh.d((byte) -60)) {
+              AccountNameAvailabilityValidator.d((byte) -60)) {
               tl.a(-17);
               if (hc.field_c == 7 &&
                 !ResourceArchive.field_e) {

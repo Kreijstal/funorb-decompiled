@@ -27,7 +27,7 @@ abstract class jb implements vb {
           var1 = ug.field_b * ug.field_b;
           var2 = var1 - da.field_F * da.field_F;
           var3 = cb.field_a + var2 * (-cb.field_a + Chess.field_E) / var1;
-          uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
+          AccountNameAvailabilityValidator.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
           ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
           return;
         }
@@ -35,7 +35,7 @@ abstract class jb implements vb {
         var1Lifetime1 = ug.field_b * ug.field_b;
         var2Lifetime1 = var1Lifetime1 - da.field_F * da.field_F;
         var3Lifetime1 = cb.field_a + var2Lifetime1 * (-cb.field_a + Chess.field_E) / var1Lifetime1;
-        uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3Lifetime1);
+        AccountNameAvailabilityValidator.field_m.a(fl.field_x, 640, -2147483648, 120, var3Lifetime1);
         ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
     }
 

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends ei {
+final class AccountNameAvailabilityValidator extends ei {
     static int field_s;
     static int field_q;
-    private String field_r;
-    private boolean field_p;
+    private String checkedName;
+    private boolean nameAvailable;
 
-    pk(kl param0) {
+    AccountNameAvailabilityValidator(kl param0) {
         super(param0);
-        this.field_p = false;
+        this.nameAvailable = false;
     }
 
     final static void e(int param0) {
@@ -39,20 +39,20 @@ final class pk extends ei {
             return stackIn_2_0;
           }
           if (param0 != 8192) {
-            pk.e(69);
+            AccountNameAvailabilityValidator.e(69);
           }
-          if (!param1.equals(this.field_r)) {
-            var3 = ng.a(param1, param0 ^ 11774);
+          if (!param1.equals(this.checkedName)) {
+            var3 = ng.pollAccountNameCheck(param1, param0 ^ 11774);
             if (var3 != null &&
               null == var3.message) {
-              this.field_p = var3.success;
-              this.field_r = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_11_0 = nd.field_P;
               return stackIn_11_0;
             }
           }
-          if (!this.field_p) {
+          if (!this.nameAvailable) {
             stackIn_16_0 = u.field_b;
           } else {
             stackIn_16_0 = ce.field_e;
@@ -93,7 +93,7 @@ final class pk extends ei {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 47) {
-            pk.d((byte) -100);
+            AccountNameAvailabilityValidator.d((byte) -100);
           }
           var5 = (CharSequence) ((Object) param1);
           var3 = vj.a(true, var5);
@@ -101,8 +101,8 @@ final class pk extends ei {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          if (!param1.equals(this.field_r)) {
-            var4 = ng.a(param1, 3582);
+          if (!param1.equals(this.checkedName)) {
+            var4 = ng.pollAccountNameCheck(param1, 3582);
             if (var4 == null) {
               return null;
             }
@@ -110,10 +110,10 @@ final class pk extends ei {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_r = param1;
-            this.field_p = var4.success;
+            this.checkedName = param1;
+            this.nameAvailable = var4.success;
           }
-          if (this.field_p) {
+          if (this.nameAvailable) {
             return fk.field_r;
           }
           stackIn_16_0 = q.field_g;
@@ -133,9 +133,9 @@ final class pk extends ei {
     }
 
     final void e(byte param0) {
-        this.field_r = null;
+        this.checkedName = null;
         if (param0 != -27) {
-          this.field_p = false;
+          this.nameAvailable = false;
         }
     }
 

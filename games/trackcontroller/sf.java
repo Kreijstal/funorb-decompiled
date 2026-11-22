@@ -2061,7 +2061,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "highscores");
                 if (null != var2) {
-                  af.field_n = ta.a(32200, var2);
+                  AccountNameAvailabilityValidator.field_n = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "rankings");
                 if (null != var2) {

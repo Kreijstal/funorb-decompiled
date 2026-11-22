@@ -722,7 +722,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ds.clearStaticReferences(-93);
           sc.clearStaticReferences(126);
           co.a(-13392);
-          mp.c((byte) -11);
+          AccountNameAvailabilityValidator.c((byte) -11);
           fh.clearStaticReferences(true);
           ii.clearStaticReferences((byte) -22);
           vn.c((byte) 101);

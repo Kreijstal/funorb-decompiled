@@ -637,7 +637,7 @@ abstract class jk extends UiWidget implements ga {
             stackIn_91_0 = -108;
             stackIn_91_1 = pl.field_k[var4Lifetime1];
             stackIn_92_2 = !(gh.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = hh.$cfr$intArgs$a$590e95718a07(stackIn_91_0, stackIn_91_1, stackIn_92_2);
+            var5Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(stackIn_91_0, stackIn_91_1, stackIn_92_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -647,7 +647,7 @@ abstract class jk extends UiWidget implements ga {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = hh.$cfr$intArgs$a$590e95718a07(-109, var11, false);
+              var7Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-109, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -655,7 +655,7 @@ abstract class jk extends UiWidget implements ga {
             var4_ref_String__Lifetime1 = ud.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = hh.$cfr$intArgs$a$590e95718a07(-126, var12, false);
+              var7Lifetime1Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-126, var12, false);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -685,7 +685,7 @@ abstract class jk extends UiWidget implements ga {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + gi.field_a;
             } else {
-              var7Lifetime2 = hh.$cfr$intArgs$a$590e95718a07(-115, pl.field_k[var4Lifetime3], true);
+              var7Lifetime2 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-115, pl.field_k[var4Lifetime3], true);
               var8Lifetime1 = jc.field_b - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ud.field_a;
               ja.field_A[var4Lifetime3] = new int[4];

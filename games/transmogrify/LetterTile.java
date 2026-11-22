@@ -182,7 +182,7 @@ final class LetterTile extends IntrusiveNode {
               return;
             }
             if (this.y == this.destinationY) {
-              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
               return;
             }
             return;
@@ -199,7 +199,7 @@ final class LetterTile extends IntrusiveNode {
               return;
             }
             if (this.y == this.destinationY) {
-              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
               return;
             }
             return;
@@ -210,7 +210,7 @@ final class LetterTile extends IntrusiveNode {
             return;
           }
           if (this.y == this.destinationY) {
-            vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+            vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
             return;
           }
           return;
@@ -225,7 +225,7 @@ final class LetterTile extends IntrusiveNode {
               return;
             }
             if (this.y == this.destinationY) {
-              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
               return;
             }
             return;
@@ -238,7 +238,7 @@ final class LetterTile extends IntrusiveNode {
           if (this.y != this.destinationY) {
             return;
           }
-          vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+          vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
           return;
         }
         if (this.destinationY == this.y) {
@@ -253,7 +253,7 @@ final class LetterTile extends IntrusiveNode {
             return;
           }
           if (this.y == this.destinationY) {
-            vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+            vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
             return;
           }
           return;
@@ -264,7 +264,7 @@ final class LetterTile extends IntrusiveNode {
           return;
         }
         if (this.y == this.destinationY) {
-          vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
+          vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + AccountNameAvailabilityValidator.a(3, o.field_o, false)]);
           return;
         }
     }

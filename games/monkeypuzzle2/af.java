@@ -56,7 +56,7 @@ final class af {
 
     final static void a(int param0, Sprite[] param1, int param2, int param3) {
         try {
-          hh.field_u = new gg(param1);
+          AccountNameAvailabilityValidator.field_u = new gg(param1);
           wg.field_h = param0;
           rb.field_cb = param2;
           int var4_int = 69 / ((param3 + 60) / 41);

@@ -21,7 +21,7 @@ final class sg {
         return gk.field_a;
     }
 
-    final static AccountServiceResult a(byte param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;

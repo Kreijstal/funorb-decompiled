@@ -100,11 +100,11 @@ final class sc {
             }
             return new byte[param1];
           }
-          if (pk.field_s > 0) {
-            fieldTemp$17 = pk.field_s - 1;
-            pk.field_s = pk.field_s - 1;
+          if (AccountNameAvailabilityValidator.field_s > 0) {
+            fieldTemp$17 = AccountNameAvailabilityValidator.field_s - 1;
+            AccountNameAvailabilityValidator.field_s = AccountNameAvailabilityValidator.field_s - 1;
             var2_ref_byte__Lifetime5 = eb.field_f[fieldTemp$17];
-            eb.field_f[pk.field_s] = null;
+            eb.field_f[AccountNameAvailabilityValidator.field_s] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (30000 != param1) {
@@ -209,11 +209,11 @@ final class sc {
           }
           return new byte[param1];
         }
-        if (pk.field_s > 0) {
-          fieldTemp$7 = pk.field_s - 1;
-          pk.field_s = pk.field_s - 1;
+        if (AccountNameAvailabilityValidator.field_s > 0) {
+          fieldTemp$7 = AccountNameAvailabilityValidator.field_s - 1;
+          AccountNameAvailabilityValidator.field_s = AccountNameAvailabilityValidator.field_s - 1;
           var2_ref_byte__Lifetime2 = eb.field_f[fieldTemp$7];
-          eb.field_f[pk.field_s] = null;
+          eb.field_f[AccountNameAvailabilityValidator.field_s] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (30000 != param1) {

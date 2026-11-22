@@ -62,11 +62,11 @@ final class fh extends g implements wi, qh {
 
     public final void a(boolean param0) {
         if (param0) {
-          ((hj) (this.field_E.a(-67))).g(80);
+          ((AccountNameAvailabilityValidator) (this.field_E.a(-67))).g(80);
           return;
         }
         this.field_E = (v) null;
-        ((hj) (this.field_E.a(-67))).g(80);
+        ((AccountNameAvailabilityValidator) (this.field_E.a(-67))).g(80);
     }
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
@@ -142,7 +142,7 @@ final class fh extends g implements wi, qh {
         this.field_F = new hl(bl.field_g, (pl) null);
         this.field_H = new hl(cj.field_m, (pl) null);
         this.field_E.field_n = re.field_h;
-        this.field_E.a((byte) 68, new hj(this.field_E));
+        this.field_E.a((byte) 68, new AccountNameAvailabilityValidator(this.field_E));
         this.field_F.field_B = false;
         this.field_F.field_v = (ci) ((Object) new ki());
         this.field_H.field_v = (ci) ((Object) new nb());

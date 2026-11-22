@@ -613,7 +613,7 @@ final class gj extends TextureOperator {
             }
             nb.field_D.field_S = Vertigo2.a(new String[]{Integer.toString(gd.field_j.field_Qb), Integer.toString(gd.field_j.field_uc)}, nq.field_I, 9);
           }
-          stackIn_178_0 = hk.field_o;
+          stackIn_178_0 = AccountNameAvailabilityValidator.field_o;
           stackIn_178_1 = 0;
           stackIn_179_2 = (param4) && (!param2) && (!im.field_g);
           ((UiPanel) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);

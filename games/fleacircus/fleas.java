@@ -1184,7 +1184,7 @@ public final class fleas extends NetworkGameClient {
           oa.clearStaticReferences((byte) -88);
           te.a(false);
           pi.clearStaticReferences((byte) 11);
-          vf.c(false);
+          AccountNameAvailabilityValidator.c(false);
           ai.clearStaticReferences((byte) -10);
           ck.c((byte) 2);
           ga.c((byte) 113);
@@ -1319,10 +1319,10 @@ public final class fleas extends NetworkGameClient {
                   jj.a(15.0f, sa.a(DualLinkNode.field_l, "", gk.field_G, sc.field_c, (byte) 46), true);
                   return false;
                 }
-                jj.a(10.0f, sa.a(ib.field_f, "", fk.field_x, vf.field_n, (byte) 46), true);
+                jj.a(10.0f, sa.a(ib.field_f, "", fk.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
                 return false;
               }
-              jj.a(5.0f, sa.a(pb.field_a, "", fk.field_x, vf.field_n, (byte) 46), true);
+              jj.a(5.0f, sa.a(pb.field_a, "", fk.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
               return false;
             }
             jj.a(3.0f, sa.a(a.field_a, "basic", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
@@ -1606,7 +1606,7 @@ public final class fleas extends NetworkGameClient {
                 wh.a(-98);
                 em.a(param0 - 21512);
                 if (8 == ab.field_b) {
-                  vf.e(-6359);
+                  AccountNameAvailabilityValidator.e(-6359);
                 }
                 decompiledFrameRemainder0 = (ab.field_b == 5);
                 if ((decompiledFrameRemainder0) &&

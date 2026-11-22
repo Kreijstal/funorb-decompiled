@@ -532,7 +532,7 @@ final class a extends ge {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         kk.field_U[rc.field_d] = param0;
-        bc.field_o[rc.field_d] = rc.field_d;
+        AccountNameAvailabilityValidator.field_o[rc.field_d] = rc.field_d;
         tl.field_d[rc.field_d] = param3;
         if (!(param3 <= hc.field_j)) {
           jl.field_d = param3;

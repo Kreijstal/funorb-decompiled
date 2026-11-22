@@ -19,7 +19,7 @@ final class ba extends ag {
         if (param0 <= 53) {
           return -71;
         }
-        return 4 + n.field_s << 4;
+        return 4 + AccountNameAvailabilityValidator.field_s << 4;
     }
 
     final void a(ag param0, int param1, int param2, int param3) {

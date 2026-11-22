@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends hi {
+final class AccountNameAvailabilityValidator extends hi {
     static vl field_v;
     static boolean field_o;
-    private boolean field_r;
+    private boolean nameAvailable;
     static cb field_t;
-    private String field_u;
+    private String checkedName;
     static int field_s;
     static bd field_q;
     static String[] field_p;
@@ -29,19 +29,19 @@ final class n extends hi {
             stackIn_3_0 = bi.field_d;
             return stackIn_3_0;
           }
-          if (!param0.equals(this.field_u)) {
-            var3 = ph.a(param0, -79);
+          if (!param0.equals(this.checkedName)) {
+            var3 = ph.pollAccountNameCheck(param0, -79);
             if (var3 != null &&
               null == var3.message) {
-              this.field_u = param0;
-              this.field_r = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_9_0 = m.field_n;
               return stackIn_9_0;
             }
           }
           var3_int = -71 % ((param1 - 3) / 42);
-          if (this.field_r) {
+          if (this.nameAvailable) {
             stackIn_14_0 = nd.field_d;
           } else {
             stackIn_14_0 = bi.field_d;
@@ -66,16 +66,16 @@ final class n extends hi {
         field_p = null;
         field_q = null;
         if (param0 != -69) {
-          n.d((byte) 14);
+          AccountNameAvailabilityValidator.d((byte) 14);
           field_v = null;
           return;
         }
         field_v = null;
     }
 
-    n(ig param0) {
+    AccountNameAvailabilityValidator(ig param0) {
         super(param0);
-        this.field_r = false;
+        this.nameAvailable = false;
     }
 
     final String a(byte param0, String param1) {
@@ -100,8 +100,8 @@ final class n extends hi {
             stackIn_3_0 = var3;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_u)) {
-            var5 = ph.a(param1, -86);
+          if (!param1.equals(this.checkedName)) {
+            var5 = ph.pollAccountNameCheck(param1, -86);
             if (var5 == null) {
               return null;
             }
@@ -109,10 +109,10 @@ final class n extends hi {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }
-            this.field_u = param1;
-            this.field_r = var5.success;
+            this.checkedName = param1;
+            this.nameAvailable = var5.success;
           }
-          if (this.field_r) {
+          if (this.nameAvailable) {
             stackIn_16_0 = kj.field_a;
             return stackIn_16_0;
           }
@@ -151,9 +151,9 @@ final class n extends hi {
     }
 
     final void f(int param0) {
-        this.field_u = null;
+        this.checkedName = null;
         if (param0 != -2) {
-          n.d((byte) 54);
+          AccountNameAvailabilityValidator.d((byte) 54);
         }
     }
 

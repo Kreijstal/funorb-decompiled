@@ -30,13 +30,13 @@ final class sl {
             if (!sl.a((byte) -40)) {
               SoftwareRasterizer.a();
               ch.a((byte) -79, 240, 320);
-              ia.a(0, param0, 0, (byte) 113);
+              AccountNameAvailabilityValidator.a(0, param0, 0, (byte) 113);
             } else {
               if (q.field_Jb != 0) {
                 ej.a(-12966, param0);
               } else {
                 TutorialController.a(param1, 0, false);
-                ia.a(0, param0, 0, (byte) 126);
+                AccountNameAvailabilityValidator.a(0, param0, 0, (byte) 126);
               }
             }
           }

@@ -154,32 +154,32 @@ final class ij extends vd implements kn, qk {
         }
         vj.field_s = var1;
         var2 = fl.d(-64);
-        if (n.field_s >= var2) {
-          if (var2 < n.field_s) {
+        if (AccountNameAvailabilityValidator.field_s >= var2) {
+          if (var2 < AccountNameAvailabilityValidator.field_s) {
             return 0;
           }
         } else {
           if (um.field_e > 0) {
-            if (var2 < n.field_s) {
+            if (var2 < AccountNameAvailabilityValidator.field_s) {
               return 0;
             }
           } else {
             if (eh.field_g < 0) {
-              if (var2 < n.field_s) {
+              if (var2 < AccountNameAvailabilityValidator.field_s) {
                 return 0;
               }
             } else {
               if (mc.field_I == 4) {
-                if (var2 < n.field_s) {
+                if (var2 < AccountNameAvailabilityValidator.field_s) {
                   return 0;
                 }
               } else {
                 um.field_e = 100;
-                n.field_s = n.field_s + 1;
-                if (n.field_s == 10) {
+                AccountNameAvailabilityValidator.field_s = AccountNameAvailabilityValidator.field_s + 1;
+                if (AccountNameAvailabilityValidator.field_s == 10) {
                   ti.a(252, (byte) -110, 3);
                 }
-                if (n.field_s == 17) {
+                if (AccountNameAvailabilityValidator.field_s == 17) {
                   ti.a(251, (byte) -126, 4);
                 }
                 eh.field_c.a(fg.field_b[18], 100, uh.field_i);
@@ -311,7 +311,7 @@ final class ij extends vd implements kn, qk {
         this.field_E = new ph(GzipDecompressor.field_h, (mh) null);
         this.field_H = new ph(qc.field_C, (mh) null);
         this.field_G.field_i = u.field_g;
-        this.field_G.a(new n(this.field_G), (byte) -105);
+        this.field_G.a(new AccountNameAvailabilityValidator(this.field_G), (byte) -105);
         this.field_E.field_D = false;
         this.field_E.field_h = (nn) ((Object) new ke());
         this.field_H.field_h = (nn) ((Object) new ti());
@@ -349,7 +349,7 @@ final class ij extends vd implements kn, qk {
         if (param0) {
           return;
         }
-        ((n) (this.field_G.a((byte) 124))).f(-2);
+        ((AccountNameAvailabilityValidator) (this.field_G.a((byte) 124))).f(-2);
     }
 
     private final int a(int param0, ag param1, String param2, byte param3, int param4, String param5) {

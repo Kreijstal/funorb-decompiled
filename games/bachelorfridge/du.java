@@ -8,7 +8,7 @@ final class du {
     static IndexedSprite field_b;
     static int[] field_e;
 
-    final static AccountServiceResult a(String param0, byte param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, byte param1) {
         RuntimeException var2 = null;
         String var3 = null;
         Object stackIn_4_0 = null;
@@ -21,7 +21,7 @@ final class du {
         try {
           if (param1 != -43) {
             var3 = (String) null;
-            du.a((String) null, (byte) -83);
+            du.pollAccountNameCheck((String) null, (byte) -83);
           }
           if (ReportAbusePanel.field_G == kq.field_j) {
             stackIn_4_0 = null;

@@ -2036,6 +2036,14 @@
       "renamedSymbol": "C:PlayerSimulation"
     },
     {
+      "symbol": "C:dv",
+      "originalName": "dv",
+      "to": "BitDecodableMarker",
+      "evidence": "Complete empty interface extends BitDecodable and declares no members. All four concrete implementing type headers (CharacterChoice, CommonChooseReward, CourseLayout, MatchState) and every source reference reviewed; name states the exact inherited decoding marker contract without adding a setup/runtime distinction. Existing method names are readable and preserved; no native declarations/type uses or exact quoted owned class-name literals. Identifier edits only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BitDecodableMarker"
+    },
+    {
       "symbol": "C:dva",
       "originalName": "dva",
       "to": "PasswordLengthErrorText",
@@ -2354,6 +2362,14 @@
       "evidence": "Complete class and all exact pool references reviewed: static byte[50][] holds30000-byte array slots consumed/cleared by acquireByteArray; retain unrelated ValidationOutcome/string globals, diagnostic string and already meaningful recursive releaseStatics with repeated null clearing.",
       "confidence": "reviewed",
       "renamedSymbol": "C:LargeByteArrayPoolStorage"
+    },
+    {
+      "symbol": "C:fc",
+      "originalName": "fc",
+      "to": "BitElementDecodableWithIntArgument",
+      "evidence": "Complete interface extends element-decodable interface and adds decode(int,BitPacketBuffer). Every source reference and complete DecodableArrayReader readDecodableArray body reviewed: mode3 casts to this interface and calls decode(99,buffer). Integer meaning beyond the public signature/call is not inferred; readable name states the added integer-argument decoding contract. Preserve99, full int domain, inherited overloads, casts and all failure paths. Existing method names are readable and preserved; no native declarations/type uses or exact quoted owned class-name literals. Identifier edits only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BitElementDecodableWithIntArgument"
     },
     {
       "symbol": "C:fd",
@@ -6026,6 +6042,14 @@
       "evidence": "Abstract phase of a MatchScreen holding the MatchState, the MatchScreen and its MatchProtocol; six concrete phases extend it.",
       "confidence": "reviewed",
       "renamedSymbol": "C:MatchPhase"
+    },
+    {
+      "symbol": "C:qs",
+      "originalName": "qs",
+      "to": "BitElementDecodable",
+      "evidence": "Complete interface extends BitDecodable and adds decodeElement(BitPacketBuffer,boolean). Every source reference and complete DecodableArrayReader readDecodableArray body reviewed: mode2 casts to this interface and calls decodeElement(buffer,true), while mode1 uses inherited decode. Name states that operation; retain inheritance, boolean argument and all casts/dispatch. Existing method names are readable and preserved; no native declarations/type uses or exact quoted owned class-name literals. Identifier edits only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BitElementDecodable"
     },
     {
       "symbol": "C:qsa",
@@ -30569,7 +30593,7 @@
       "to": "decode",
       "evidence": "Reads the element from the BitPacketBuffer; gha.readDecodableArray calls it on each array entry.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:fc.decode(ILBitPacketBuffer;)V"
+      "renamedSymbol": "M:BitElementDecodableWithIntArgument.decode(ILBitPacketBuffer;)V"
     },
     {
       "symbol": "M:fca.a(I)V",
@@ -62281,7 +62305,7 @@
       "to": "decodeElement",
       "evidence": "Reads the element from the BitPacketBuffer; gha.readDecodableArray calls it on each array entry.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qs.decodeElement(LBitPacketBuffer;Z)V"
+      "renamedSymbol": "M:BitElementDecodable.decodeElement(LBitPacketBuffer;Z)V"
     },
     {
       "symbol": "M:qt.a(IIIIIB)V",
@@ -80787,9 +80811,9 @@
     },
     {
       "symbol": "C:dv",
-      "renamedSymbol": "C:dv",
+      "renamedSymbol": "C:BitDecodableMarker",
       "originalName": "dv",
-      "renamedName": "dv",
+      "renamedName": "BitDecodableMarker",
       "declaration": {
         "file": "dv.java",
         "start": 48,
@@ -81381,9 +81405,9 @@
     },
     {
       "symbol": "C:fc",
-      "renamedSymbol": "C:fc",
+      "renamedSymbol": "C:BitElementDecodableWithIntArgument",
       "originalName": "fc",
-      "renamedName": "fc",
+      "renamedName": "BitElementDecodableWithIntArgument",
       "declaration": {
         "file": "fc.java",
         "start": 48,
@@ -87706,9 +87730,9 @@
     },
     {
       "symbol": "C:qs",
-      "renamedSymbol": "C:qs",
+      "renamedSymbol": "C:BitElementDecodable",
       "originalName": "qs",
-      "renamedName": "qs",
+      "renamedName": "BitElementDecodable",
       "declaration": {
         "file": "qs.java",
         "start": 48,
@@ -611119,7 +611143,7 @@
     },
     {
       "symbol": "M:fc.a(ILkh;)V",
-      "renamedSymbol": "M:fc.decode(ILBitPacketBuffer;)V",
+      "renamedSymbol": "M:BitElementDecodableWithIntArgument.decode(ILBitPacketBuffer;)V",
       "originalName": "a",
       "renamedName": "decode",
       "declaration": {
@@ -668121,7 +668145,7 @@
     },
     {
       "symbol": "M:qs.b(Lkh;Z)V",
-      "renamedSymbol": "M:qs.decodeElement(LBitPacketBuffer;Z)V",
+      "renamedSymbol": "M:BitElementDecodable.decodeElement(LBitPacketBuffer;Z)V",
       "originalName": "b",
       "renamedName": "decodeElement",
       "declaration": {
@@ -748465,7 +748489,7 @@
     },
     {
       "symbol": "P:fc.a(ILkh;)V#0",
-      "renamedSymbol": "P:fc.decode(ILBitPacketBuffer;)V#0",
+      "renamedSymbol": "P:BitElementDecodableWithIntArgument.decode(ILBitPacketBuffer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -748476,7 +748500,7 @@
     },
     {
       "symbol": "P:fc.a(ILkh;)V#1",
-      "renamedSymbol": "P:fc.decode(ILBitPacketBuffer;)V#1",
+      "renamedSymbol": "P:BitElementDecodableWithIntArgument.decode(ILBitPacketBuffer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -883644,7 +883668,7 @@
     },
     {
       "symbol": "P:qs.b(Lkh;Z)V#0",
-      "renamedSymbol": "P:qs.decodeElement(LBitPacketBuffer;Z)V#0",
+      "renamedSymbol": "P:BitElementDecodable.decodeElement(LBitPacketBuffer;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -883655,7 +883679,7 @@
     },
     {
       "symbol": "P:qs.b(Lkh;Z)V#1",
-      "renamedSymbol": "P:qs.decodeElement(LBitPacketBuffer;Z)V#1",
+      "renamedSymbol": "P:BitElementDecodable.decodeElement(LBitPacketBuffer;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -1009192,7 +1009216,7 @@
       "original": "cfa.java",
       "renamed": "CommonChooseReward.java",
       "inputSha256": "c762f9c7d29a905c8f5a6020be03bd184a9b32c8ba76523463736f2b8a5094fe",
-      "outputSha256": "8d4dcd59fb06f861efbfe1d3756fa3c849880105edf66e61a518a6e68e8e26a9",
+      "outputSha256": "b9aa39ab8f3dc2cfd56921e0b306cc2069e6af4563427bd60a0e81a38095837f",
       "edits": [
         {
           "start": 50,
@@ -1009200,6 +1009224,13 @@
           "symbol": "C:cfa",
           "original": "cfa",
           "renamed": "CommonChooseReward"
+        },
+        {
+          "start": 65,
+          "end": 67,
+          "symbol": "C:dv",
+          "original": "dv",
+          "renamed": "BitDecodableMarker"
         },
         {
           "start": 86,
@@ -1072389,10 +1072420,17 @@
     },
     {
       "original": "dv.java",
-      "renamed": "dv.java",
+      "renamed": "BitDecodableMarker.java",
       "inputSha256": "371d36c7a0178cc7f3090fc919da5545d736d4f6b145008d116563fc94c8221f",
-      "outputSha256": "bb317c24ad9ffb736e8dd45df9dc9821fe54421de28277262b2151a93753c675",
+      "outputSha256": "3f838f2a5b1c9012b0372d3d01e01adbc8130fe457e6081fce54d1d1cd581011",
       "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:dv",
+          "original": "dv",
+          "renamed": "BitDecodableMarker"
+        },
         {
           "start": 59,
           "end": 62,
@@ -1105490,10 +1105528,24 @@
     },
     {
       "original": "fc.java",
-      "renamed": "fc.java",
+      "renamed": "BitElementDecodableWithIntArgument.java",
       "inputSha256": "123e21c352ff8948c0c78ea70ec72770ec5ddb916c9e3e2a6d43282cfd35daa8",
-      "outputSha256": "f628c755d34b62ab9710f29bae3aeb228bf31b4d5b90989045bcce695f04dc65",
+      "outputSha256": "454d0fa95de2c22cb4d527b48d4c5121e11ca2de1cb9ee6bc855272bd930a3fc",
       "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:fc",
+          "original": "fc",
+          "renamed": "BitElementDecodableWithIntArgument"
+        },
+        {
+          "start": 59,
+          "end": 61,
+          "symbol": "C:qs",
+          "original": "qs",
+          "renamed": "BitElementDecodable"
+        },
         {
           "start": 89,
           "end": 90,
@@ -1111546,7 +1111598,7 @@
       "original": "ff.java",
       "renamed": "MatchState.java",
       "inputSha256": "cc83681dac90aa5b7b2608dfb6f3e4f122a9a32da309f948c5d0ba66fdddbe2e",
-      "outputSha256": "0845f772014dc9232a6724e559682edd2f1a227f3f5375e0c5c0f420cfddff1b",
+      "outputSha256": "d8628b105ab6c2521af854dbec59889f62e8bf463fa3282b7a9de093655dbea5",
       "edits": [
         {
           "start": 71,
@@ -1111554,6 +1111606,13 @@
           "symbol": "C:ff",
           "original": "ff",
           "renamed": "MatchState"
+        },
+        {
+          "start": 85,
+          "end": 87,
+          "symbol": "C:dv",
+          "original": "dv",
+          "renamed": "BitDecodableMarker"
         },
         {
           "start": 98,
@@ -1157797,7 +1157856,7 @@
       "original": "gha.java",
       "renamed": "DecodableArrayReader.java",
       "inputSha256": "212fefec16eb089d64b0db8c158cacc79a523601311fb9a01b5f4406d4c31221",
-      "outputSha256": "7b49bc0e55d36657b54479b8fe69fc6340c8e6de5f9710223573ef4c756f325b",
+      "outputSha256": "a5a1658a3b599bbf90e3fc45c3830ae791ce9151617554e039ada5181b6610f3",
       "edits": [
         {
           "start": 50,
@@ -1157947,11 +1158006,25 @@
           "renamed": "decode"
         },
         {
+          "start": 2136,
+          "end": 2138,
+          "symbol": "C:qs",
+          "original": "qs",
+          "renamed": "BitElementDecodable"
+        },
+        {
           "start": 2148,
           "end": 2149,
           "symbol": "M:qs.b(Lkh;Z)V",
           "original": "b",
           "renamed": "decodeElement"
+        },
+        {
+          "start": 2239,
+          "end": 2241,
+          "symbol": "C:fc",
+          "original": "fc",
+          "renamed": "BitElementDecodableWithIntArgument"
         },
         {
           "start": 2251,
@@ -1477359,10 +1477432,17 @@
     },
     {
       "original": "qs.java",
-      "renamed": "qs.java",
+      "renamed": "BitElementDecodable.java",
       "inputSha256": "ca16589ebf0f887b38b363a8e09378bedb355ff629c58cf95f7e699bd55a91d6",
-      "outputSha256": "ce8b6afdb08214f8ce131a49dd1a52edd33c3dbd2402e4abca89025884a03f77",
+      "outputSha256": "1175538d87e5357cc18c34c4789182618ef3279209d57534fde7679afbce4eb8",
       "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:qs",
+          "original": "qs",
+          "renamed": "BitElementDecodable"
+        },
         {
           "start": 59,
           "end": 62,
@@ -1620836,7 +1620916,7 @@
       "original": "wd.java",
       "renamed": "CharacterChoice.java",
       "inputSha256": "916060f3d8158a21c48b6d8d83e7445574eeab0e50805468d5a3b1972b072941",
-      "outputSha256": "25371f829a38f67d0dd92eecc901b6f136ab97bf42c786fa109d9dca7b0da867",
+      "outputSha256": "a1c477dff8c42ec9285ee7f451d85d3b137c57ef70553841f7acaf1c1e08e997",
       "edits": [
         {
           "start": 50,
@@ -1620844,6 +1620924,13 @@
           "symbol": "C:wd",
           "original": "wd",
           "renamed": "CharacterChoice"
+        },
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:dv",
+          "original": "dv",
+          "renamed": "BitDecodableMarker"
         },
         {
           "start": 81,
@@ -1623359,7 +1623446,7 @@
       "original": "wea.java",
       "renamed": "CourseLayout.java",
       "inputSha256": "e1df48680b2aa7e3f4233f21d8ea87deb598a93ad4ae788c8e671ad030b3ffba",
-      "outputSha256": "4364516962ca7781ec4088691971f18f51384a3a967115ee428888fc2258b941",
+      "outputSha256": "0292122735053dfde30e5234632fa3bac046c09a8e4d90ea5bbbbab3dcf6e73d",
       "edits": [
         {
           "start": 50,
@@ -1623367,6 +1623454,13 @@
           "symbol": "C:wea",
           "original": "wea",
           "renamed": "CourseLayout"
+        },
+        {
+          "start": 65,
+          "end": 67,
+          "symbol": "C:dv",
+          "original": "dv",
+          "renamed": "BitDecodableMarker"
         },
         {
           "start": 112,
@@ -1647612,10 +1647706,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tombracer"
     },
-    "rulesSha256": "cd294f2ccbb9fe5fbe2dca812d8ce02b74e4a856974f5a937337f74a7ed55937",
+    "rulesSha256": "b9b936f4f93d45c723f50c99b3047db411bb5041b6f43faa9e90fff56554cf75",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d",
-    "outputTreeSha256": "b4bc372faf47bcab8c994d9857e627fa0e4c4b4144c14ff3604154b6405d59ca",
+    "outputTreeSha256": "aaa8969f38637ef3fc2844443764fb181c6ebee9b1d6b05790cbc26025129d0e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

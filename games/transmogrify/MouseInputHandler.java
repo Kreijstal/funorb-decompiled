@@ -42,7 +42,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             BufferedSocket.field_l = 0;
             fc.field_g = -1;
             AccountServiceResult.field_i = -1;
-            li.field_j = true;
+            AccountNameAvailabilityValidator.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "qi.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -100,7 +100,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if ((16 & var2_int) != 0) {
             }
-            li.field_j = true;
+            AccountNameAvailabilityValidator.field_j = true;
             if ((var2_int & 4) == 0) {
             }
           }
@@ -129,7 +129,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             BufferedSocket.field_l = 0;
             fc.field_g = param0.getX();
             AccountServiceResult.field_i = param0.getY();
-            li.field_j = true;
+            AccountNameAvailabilityValidator.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "qi.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -142,7 +142,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             BufferedSocket.field_l = 0;
             fc.field_g = param0.getX();
             AccountServiceResult.field_i = param0.getY();
-            li.field_j = true;
+            AccountNameAvailabilityValidator.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "qi.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -162,7 +162,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           BufferedSocket.field_l = 0;
           fc.field_g = param0.getX();
           AccountServiceResult.field_i = param0.getY();
-          li.field_j = true;
+          AccountNameAvailabilityValidator.field_j = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != hi.field_e) {
             BufferedSocket.field_l = 0;
             cg.field_k = 0;
-            li.field_j = true;
+            AccountNameAvailabilityValidator.field_j = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 8) == 0) {
             }

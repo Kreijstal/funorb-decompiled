@@ -117,7 +117,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
 
     public final void a(int param0) {
         boolean discarded$0 = false;
-        ((tt) (this.field_C.a(16728128))).d(-121);
+        ((AccountNameAvailabilityValidator) (this.field_C.a(16728128))).d(-121);
         if (param0 != 14322) {
           mca var3 = (mca) null;
           discarded$0 = this.a(50, (mca) null);
@@ -182,7 +182,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         this.field_F.tooltip = eu.field_a;
         this.field_D.tooltip = wq.field_m;
         this.field_H.tooltip = ala.field_c;
-        this.field_C.a(7, new tt(this.field_C));
+        this.field_C.a(7, new AccountNameAvailabilityValidator(this.field_C));
         this.field_I.a(7, new el(this.field_I));
         this.field_K.a(7, new hna(this.field_K, this.field_I));
         this.field_G.a(7, new wg(this.field_G, this.field_C, this.field_I));

@@ -76,14 +76,14 @@ final class aj extends ig {
     public static void g(int param0) {
         if (param0 <= 6) {
           String var2 = (String) null;
-          aj.a(-69, (String) null);
+          aj.pollAccountNameCheck(-69, (String) null);
           field_s = null;
           return;
         }
         field_s = null;
     }
 
-    final static AccountServiceResult a(int param0, String param1) {
+    final static AccountServiceResult pollAccountNameCheck(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         AccountServiceResult stackIn_6_0 = null;

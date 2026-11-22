@@ -32,21 +32,21 @@ final class mh {
               var4 = rc.field_d.field_S;
             }
             var5 = null;
-            if (hk.field_n == 0) {
+            if (AccountNameAvailabilityValidator.field_n == 0) {
               var5 = ia.a(-113, param2, var4);
             }
-            if (hk.field_n == 1) {
+            if (AccountNameAvailabilityValidator.field_n == 1) {
               var5 = RasterBuffer.a((byte) 96, param2, var4);
             }
-            if (2 == hk.field_n) {
+            if (2 == AccountNameAvailabilityValidator.field_n) {
               var5 = br.a(var4, param2, 100);
             }
-            if (hk.field_n == 3) {
+            if (AccountNameAvailabilityValidator.field_n == 3) {
               var5 = en.a(var4, (byte) -108, var4, param2);
             }
             if (var5 == null) {
               rc.field_d = null;
-              hk.field_n = -1;
+              AccountNameAvailabilityValidator.field_n = -1;
               if (param1 <= -52) {
                 return;
               }
@@ -57,7 +57,7 @@ final class mh {
             ByteStorage.a((byte) -59, (String) (var5), 2, (String) null, 0, var4);
           }
           rc.field_d = null;
-          hk.field_n = -1;
+          AccountNameAvailabilityValidator.field_n = -1;
         }
         if (param1 <= -52) {
           return;

@@ -103,7 +103,7 @@ final class mj {
             return stackIn_23_0;
           }
           if (!kg.field_b.c(96)) {
-            stackIn_26_0 = mg.field_k;
+            stackIn_26_0 = AccountNameAvailabilityValidator.field_k;
             return stackIn_26_0;
           }
           if (!kg.field_b.b("commonui", false)) {

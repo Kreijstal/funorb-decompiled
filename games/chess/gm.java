@@ -419,7 +419,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mu_invite_players", -96);
                 if (var2 != null) {
-                  uh.field_v = ad.a(-29410, var2);
+                  AccountNameAvailabilityValidator.field_v = ad.a(-29410, var2);
                 }
                 var2 = cd.a("close", -92);
                 if (var2 != null) {
@@ -939,7 +939,7 @@ abstract class gm {
                 }
                 var2 = cd.a("gameopt_trychanging1", -100);
                 if (null != var2) {
-                  uh.field_o = ad.a(-29410, var2);
+                  AccountNameAvailabilityValidator.field_o = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_trychanging2", -83);
                 if (var2 != null) {
@@ -1621,7 +1621,7 @@ abstract class gm {
                 }
                 var2 = cd.a("create_password_hint", -79);
                 if (null != var2) {
-                  uh.field_q = ad.a(-29410, var2);
+                  AccountNameAvailabilityValidator.field_q = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_password_confirm_tooltip", -124);
                 if (null != var2) {
@@ -1805,7 +1805,7 @@ abstract class gm {
                 }
                 var2 = cd.a("removeignorefirst", -104);
                 if (null != var2) {
-                  uh.field_n = ad.a(-29410, var2);
+                  AccountNameAvailabilityValidator.field_n = ad.a(-29410, var2);
                 }
                 var2 = cd.a("removefriendfirst", -95);
                 if (var2 != null) {

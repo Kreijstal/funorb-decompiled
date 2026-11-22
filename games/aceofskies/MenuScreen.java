@@ -930,7 +930,7 @@ final class MenuScreen {
             }
           }
           if (this.screenId == 0) {
-            mp.titleImage.draw(44, 30 + verticalOffset);
+            AccountNameAvailabilityValidator.titleImage.draw(44, 30 + verticalOffset);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -45,7 +45,7 @@ final class ji implements Iterable {
         Throwable var2 = null;
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = ol.field_l;
+        var1_ref = AccountNameAvailabilityValidator.field_l;
         synchronized (var1_ref) {
           if (tj.field_h == sh.field_f) {
             return false;

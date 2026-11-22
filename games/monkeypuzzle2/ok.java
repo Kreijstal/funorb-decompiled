@@ -63,7 +63,7 @@ final class ok {
         ma.field_a[2] = lk.field_b;
         ma.field_a[0] = di.field_b;
         ma.field_a[4] = vh.field_F;
-        ma.field_a[13] = hh.field_t;
+        ma.field_a[13] = AccountNameAvailabilityValidator.field_t;
         ma.field_a[11] = rk.field_a;
         ma.field_a[5] = vj.field_c;
         ma.field_a[14] = gg.field_b;

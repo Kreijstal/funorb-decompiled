@@ -312,7 +312,7 @@ final class oa {
           if (param1 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (i.a(17004, param1)) {
+          if (AccountNameAvailabilityValidator.a(17004, param1)) {
             stackIn_7_0 = (int)((4294967295L & (long)param2.nextInt()) * (long)param1 >> 32);
             return stackIn_7_0;
           }

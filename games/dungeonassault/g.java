@@ -151,7 +151,7 @@ final class g extends ok {
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-          if (11 == kh.field_n) {
+          if (11 == AccountNameAvailabilityValidator.field_n) {
             to.b(113);
           }
           if (param1 != 18131) {

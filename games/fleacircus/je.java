@@ -1855,7 +1855,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("loading_soundeffects", 0);
                 if (null != var2) {
-                  vf.field_n = ab.a(0, var2);
+                  AccountNameAvailabilityValidator.field_n = ab.a(0, var2);
                 }
                 var2 = ad.a("loading_music", 0);
                 if (var2 != null) {

@@ -23,7 +23,7 @@ final class sb extends bj {
         return false;
     }
 
-    final static AccountServiceResult b(String param0, boolean param1) {
+    final static AccountServiceResult pollAccountNameCheck(String param0, boolean param1) {
         RuntimeException var2 = null;
         AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
@@ -83,7 +83,7 @@ final class sb extends bj {
           ei.field_u = ei.field_u + 1;
           if (!param1) {
             var4 = (String) null;
-            sb.b((String) null, true);
+            sb.pollAccountNameCheck((String) null, true);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {

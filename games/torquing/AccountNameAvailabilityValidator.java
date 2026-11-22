@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends gf {
+final class AccountNameAvailabilityValidator extends gf {
     static int[][] field_m;
-    private boolean field_n;
+    private boolean nameAvailable;
     static int field_l;
     static int[] field_o;
-    private String field_r;
+    private String checkedName;
     static int[] field_p;
     static java.awt.Frame field_q;
 
@@ -14,7 +14,7 @@ final class il extends gf {
         field_p = null;
         if (param0 > -111) {
           String var2 = (String) null;
-          il.a((String) null, (ResourceArchive) null, (String) null, (byte) 10);
+          AccountNameAvailabilityValidator.a((String) null, (ResourceArchive) null, (String) null, (byte) 10);
         }
         field_o = null;
         field_m = (int[][]) null;
@@ -41,10 +41,10 @@ final class il extends gf {
             return stackIn_3_0;
           }
           if (param0 != -121) {
-            this.field_r = (String) null;
+            this.checkedName = (String) null;
           }
-          if (!param1.equals(this.field_r)) {
-            var4 = he.a(1, param1);
+          if (!param1.equals(this.checkedName)) {
+            var4 = he.pollAccountNameCheck(1, param1);
             if (var4 == null) {
               return null;
             }
@@ -52,10 +52,10 @@ final class il extends gf {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_n = var4.success;
-            this.field_r = param1;
+            this.nameAvailable = var4.success;
+            this.checkedName = param1;
           }
-          if (this.field_n) {
+          if (this.nameAvailable) {
             return rk.field_d;
           }
           stackIn_16_0 = s.field_u;
@@ -75,9 +75,9 @@ final class il extends gf {
     }
 
     final void e(int param0) {
-        this.field_r = null;
+        this.checkedName = null;
         if (param0 >= -38) {
-          il.a((byte) 36, 103);
+          AccountNameAvailabilityValidator.a((byte) 36, 103);
         }
     }
 
@@ -85,15 +85,15 @@ final class il extends gf {
         ip.field_c = Level.field_d[param1];
         if (param0 != 52) {
           String var3 = (String) null;
-          il.a((String) null, (ResourceArchive) null, (String) null, (byte) -45);
+          AccountNameAvailabilityValidator.a((String) null, (ResourceArchive) null, (String) null, (byte) -45);
         }
         Torquing.field_w = in.field_a[param1];
         DelegatingCanvas.field_b = oc.field_a[param1];
     }
 
-    il(tk param0) {
+    AccountNameAvailabilityValidator(tk param0) {
         super(param0);
-        this.field_n = false;
+        this.nameAvailable = false;
     }
 
     final static String a(String param0, ResourceArchive param1, String param2, byte param3) {
@@ -339,18 +339,18 @@ final class il extends gf {
             stackIn_6_0 = (cd) null;
             return stackIn_6_0;
           }
-          if (!param1.equals(this.field_r)) {
-            var3 = he.a(1, param1);
+          if (!param1.equals(this.checkedName)) {
+            var3 = he.pollAccountNameCheck(1, param1);
             if (var3 != null &&
               null == var3.message) {
-              this.field_n = var3.success;
-              this.field_r = param1;
+              this.nameAvailable = var3.success;
+              this.checkedName = param1;
             } else {
               stackIn_13_0 = IsaacCipher.field_h;
               return stackIn_13_0;
             }
           }
-          if (this.field_n) {
+          if (this.nameAvailable) {
             stackIn_18_0 = so.field_s;
           } else {
             stackIn_18_0 = so.field_u;

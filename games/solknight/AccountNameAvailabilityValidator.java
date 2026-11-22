@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df extends a {
-    private String field_j;
-    private boolean field_k;
+final class AccountNameAvailabilityValidator extends a {
+    private String checkedName;
+    private boolean nameAvailable;
 
     final static void a(int param0, boolean param1) {
         we.field_h = 0;
@@ -39,8 +39,8 @@ final class df extends a {
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
-          if (!param0.equals(this.field_j)) {
-            var4 = PacketBuffer.a(param0, (byte) 122);
+          if (!param0.equals(this.checkedName)) {
+            var4 = PacketBuffer.pollAccountNameCheck(param0, (byte) 122);
             if (var4 == null) {
               return null;
             }
@@ -48,10 +48,10 @@ final class df extends a {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_k = var4.success;
-            this.field_j = param0;
+            this.nameAvailable = var4.success;
+            this.checkedName = param0;
           }
-          if (this.field_k) {
+          if (this.nameAvailable) {
             stackIn_17_0 = hj.field_o;
             return stackIn_17_0;
           }
@@ -72,7 +72,7 @@ final class df extends a {
     }
 
     final void a(boolean param0) {
-        this.field_j = null;
+        this.checkedName = null;
         if (!param0) {
           String var3 = (String) null;
           this.a((String) null, true);
@@ -105,12 +105,12 @@ final class df extends a {
             stackIn_2_0 = rg.field_f;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_j)) {
-            var3 = PacketBuffer.a(param0, (byte) 100);
+          if (!param0.equals(this.checkedName)) {
+            var3 = PacketBuffer.pollAccountNameCheck(param0, (byte) 100);
             if (var3 != null &&
               var3.message == null) {
-              this.field_j = param0;
-              this.field_k = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
               stackIn_8_0 = SpriteState.field_u;
               return stackIn_8_0;
@@ -120,7 +120,7 @@ final class df extends a {
             var4 = (String) null;
             this.a((String) null, true);
           }
-          if (!this.field_k) {
+          if (!this.nameAvailable) {
             stackIn_15_0 = rg.field_f;
           } else {
             stackIn_15_0 = ph.field_g;
@@ -140,9 +140,9 @@ final class df extends a {
         }
     }
 
-    df(vg param0) {
+    AccountNameAvailabilityValidator(vg param0) {
         super(param0);
-        this.field_k = false;
+        this.nameAvailable = false;
     }
 
     static {

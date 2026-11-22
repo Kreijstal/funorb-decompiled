@@ -255,9 +255,9 @@ final class ha {
                 return stackIn_95_0;
               }
               var6_intLifetime2 = MouseInputHandler.field_e;
-              MouseInputHandler.field_e = hj.field_l;
+              MouseInputHandler.field_e = AccountNameAvailabilityValidator.field_l;
               lk.field_w = true;
-              hj.field_l = var6_intLifetime2;
+              AccountNameAvailabilityValidator.field_l = var6_intLifetime2;
             }
             stackIn_97_0 = -1;
             return stackIn_97_0;
